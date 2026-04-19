@@ -39,4 +39,29 @@
     </div>
 </div>
 
-<div id="detail-view
+<div id="detail-view" style="display: none;">
+    <button class="back-btn" onclick="showHome()">← Back to Map</button>
+    <div style="display:flex; justify-content:space-between; align-items: center; flex-wrap: wrap;">
+        <h1 id="island-name" style="color:var(--greek-blue); font-size: 2.5rem; margin:0;"></h1>
+        <div class="score-badge">Rating: <span id="island-total-score">0.0</span>/5</div>
+    </div>
+    
+    <div id="island-mini-map"></div>
+    
+    <div id="island-guide"></div>
+    
+    <img id="island-pic" class="island-hero" src="" alt="Island View">
+    
+    <div class="rating-box">
+        <div class="rating-row"><span>🏖️ Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div></div>
+        <div class="rating-row"><span>🏛️ Culture & History</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div></div>
+        <div class="rating-row"><span>🍷 Nightlife</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div></div>
+        <div class="rating-row"><span>🚗 Accessibility</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div></div>
+        <div class="rating-row"><span>💸 Affordability</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div></div>
+    </div>
+</div>
+
+<footer>&copy; 2026 Greek Island Odyssey | <span id="version-display"></span></footer>
+
+</body>
+</html>
