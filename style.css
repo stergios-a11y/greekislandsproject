@@ -1,0 +1,39 @@
+:root { 
+    --greek-blue: #005BAE; --sand: #fdf5e6; --accent: #ff7f50; --star-gold: #ffcc00;
+    --color-vgood: #2ecc71; --color-good: #f1c40f; --color-niche: #e67e22;
+}
+body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-serif; background: var(--sand); overflow-x: hidden; color: #2c3e50; }
+header { background: var(--greek-blue); color: white; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 2000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+header h1 { cursor: pointer; margin: 0; font-size: 1.5rem; }
+.quick-menu { display: flex; justify-content: center; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.vibe-chip { background: rgba(255,255,255,0.2); border: 1px solid white; color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; cursor: pointer; transition: 0.3s; }
+.vibe-chip:hover, .vibe-chip.active { background: var(--accent); border-color: var(--accent); }
+#islandSearch { width: 90%; max-width: 400px; padding: 8px 15px; border-radius: 20px; border: none; outline: none; margin-top: 10px; }
+
+#home-view { height: calc(100vh - 180px); width: 100%; display: block; position: relative; }
+#main-map { height: 100%; width: 100%; background: #aad3df; }
+
+.leaflet-tooltip-island { background: white; border: 2px solid var(--greek-blue); border-radius: 8px; padding: 10px; font-size: 0.9rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+.map-legend { position: absolute; bottom: 30px; left: 20px; z-index: 1000; background: white; padding: 12px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.2); font-size: 0.8rem; }
+.legend-item { display: flex; align-items: center; gap: 8px; margin-top: 5px; }
+.dot-legend { width: 12px; height: 12px; border-radius: 50%; display: inline-block; border: 1px solid #fff; }
+.star-icon { background: transparent; border: none; }
+
+#detail-view { display: none; padding: 2rem; max-width: 900px; margin: 20px auto; background: white; border-radius: 25px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+.back-btn { background: var(--accent); color: white; border: none; padding: 10px 25px; border-radius: 30px; cursor: pointer; font-weight: bold; margin-bottom: 20px; }
+.score-badge { background: var(--greek-blue); color: white; padding: 10px 20px; border-radius: 15px; font-size: 1.4rem; font-weight: bold; }
+
+#island-mini-map { width: 100%; height: 350px; border-radius: 15px; margin: 20px 0; border: 2px solid #eee; }
+.island-hero { width: 100%; height: 400px; object-fit: cover; border-radius: 20px; margin-bottom: 20px; background: #eee; }
+
+.rating-box { background: #fcfaf2; padding: 20px; border-radius: 15px; margin: 20px 0; border: 1px solid #eee; }
+.rating-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #eee; }
+.stars-outer { position: relative; display: inline-block; font-size: 20px; color: #ddd; }
+.stars-inner { position: absolute; top: 0; left: 0; white-space: nowrap; overflow: hidden; width: 0; color: var(--star-gold); }
+.stars-outer::before, .stars-inner::before { content: "★★★★★"; }
+
+.guide-card { background: #f0f7ff; padding: 20px; border-radius: 15px; border-left: 6px solid var(--greek-blue); margin-bottom: 25px; }
+.advice-box { background: #fff5f5; padding: 20px; border-radius: 15px; border-left: 6px solid #e74c3c; margin: 25px 0; }
+.itinerary-step { margin-bottom: 15px; padding-left: 15px; border-left: 2px solid #cbd5e0; }
+
+footer { background: #333; color: #aaa; text-align: center; padding: 10px; font-size: 0.75rem; }
