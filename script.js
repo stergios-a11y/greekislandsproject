@@ -1,161 +1,55 @@
-const VERSION_ID = "v14.0 - JSON Architecture Live";
-let mainMap, miniMap;
-let markerLayerGroup; 
-const markerStore = {}; 
-let currentMode = 'overall';
-let islandData = {}; // Will be filled by the fetch
-
-// 1. FETCH DATA FROM JSON FILE
-window.onload = function() {
-    // Safety check: Only update the version if the element exists
-    const versionEl = document.getElementById('version-display');
-    if (versionEl) {
-        versionEl.innerText = VERSION_ID;
-    }
-
-    // Fetch the data and load the map
-    fetch('data.json?v=' + new Date().getTime())
-        .then(response => response.json())
-        .then(data => {
-            islandData = data;
-            initMap();
-        })
-        .catch(error => {
-            console.error("Error loading island data:", error);
-            alert("Warning: Could not load the island data. Check your data.json file for typos!");
-        });
-};
-
-function initMap() {
-    const bounds = L.latLngBounds([34.0, 18.5], [42.0, 30.5]);
-    mainMap = L.map('main-map', { minZoom: 7, maxZoom: 12, maxBounds: bounds, maxBoundsViscosity: 1.0 }).setView([38.3, 24.5], 7);
-    
-    // NEW MINIMALIST TILE LAYER
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; OpenStreetMap &copy; CARTO'
-    }).addTo(mainMap);
-    
-    markerLayerGroup = L.layerGroup().addTo(mainMap);
-    renderMarkers();
-}
-
-function getColor(score) {
-    if (score >= 4.0) return "#27ae60"; 
-    if (score >= 3.5) return "#2ecc71"; 
-    if (score >= 3.0) return "#f1c40f"; 
-    return "#e67e22"; 
-}
-
-function updateTooltip(marker, data, currentScore) {
-    marker.bindTooltip(`
-        <div class="leaflet-tooltip-island">
-            <strong>${data.name}</strong><br>
-            <span>Rating: ${currentScore}</span>
-        </div>
-    `, { sticky: true });
-}
-
-function renderMarkers() {
-    markerLayerGroup.clearLayers();
-    
-    // UPGRADED STAR: Larger font, heavy black shadow for massive contrast
-    const starIcon = L.divIcon({
-        html: '<div style="font-size: 28px; color: #ffcc00; text-shadow: 2px 2px 5px rgba(0,0,0,0.8);">⭐</div>',
-        className: 'star-icon', 
-        iconSize: [30, 30], 
-        iconAnchor: [15, 15] // Keeps the star perfectly centered on the coordinates
-    });
-
-    Object.keys(islandData).forEach(id => {
-        const d = islandData[id];
-        const score = (currentMode === 'overall') ? d.overall : d[currentMode];
-        
-        // UPGRADED DOTS: Larger radius, dark grey border instead of white, fully opaque
-        let marker = (score >= 4.0) 
-            ? L.marker([d.lat, d.lng], { icon: starIcon }) 
-            : L.circleMarker([d.lat, d.lng], { 
-                radius: 12, 
-                fillColor: getColor(score), 
-                color: "#2c3e50", // Dark slate border for high contrast
-                weight: 3,        // Thicker border
-                fillOpacity: 1.0 
-            });
-
-        marker.addTo(markerLayerGroup);
-        updateTooltip(marker, d, score);
-        marker.on('click', () => showDetail(id));
-        markerStore[id] = { marker, data: d, isStar: (score >= 4.0) };
-    });
-}
-
-function updateMapMode(mode) {
-    showHome(); 
-    currentMode = mode;
-    document.querySelectorAll('.vibe-chip').forEach(el => el.classList.remove('active'));
-    document.getElementById('btn-' + mode).classList.add('active');
-    
-    const titles = {overall: 'Best Overall', beach: 'Beach Lovers', hist: 'Culture Buffs', night: 'Party Animals', access: 'Accessibility', afford: 'Affordability'};
-    document.getElementById('legend-title').innerText = titles[mode];
-    renderMarkers();
-    filterIslands(); 
-}
-
-function showDetail(id) {
-    const d = islandData[id];
-    document.getElementById('home-view').style.display = 'none';
-    document.getElementById('detail-view').style.display = 'block';
-    window.scrollTo(0,0);
-    
-    document.getElementById('island-name').innerText = d.name;
-    document.getElementById('island-total-score').innerText = d.overall;
-    document.getElementById('island-pic').src = d.img || "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=1200";
-    document.getElementById('island-guide').innerHTML = d.guide || "";
-    
-    setStars('star-beach', d.beach); setStars('star-hist', d.hist); setStars('star-night', d.night); setStars('star-access', d.access); setStars('star-afford', d.afford);
-    
-if (miniMap) miniMap.remove();
-    miniMap = L.map('island-mini-map', { zoomControl: false, scrollWheelZoom: false });
-    
-    // NEW MINIMALIST TILE LAYER FOR MINI-MAP
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; OpenStreetMap &copy; CARTO'
-    }).addTo(miniMap);
-
-    // DYNAMIC ITINERARY DRAWING LOGIC
-    if (d.itinerary && d.itinerary.length > 0) {
-        // Extract coordinates into an array
-        const routeCoords = d.itinerary.map(stop => [stop.lat, stop.lng]);
-        
-        // Draw the driving route line
-        const drivingRoute = L.polyline(routeCoords, {
-            color: '#ff7f50', weight: 4, dashArray: '5, 10'
-        }).addTo(miniMap);
-
-        // Drop markers on the stops
-        d.itinerary.forEach(stop => {
-            const stopMarker = L.circleMarker([stop.lat, stop.lng], {
-                radius: 6, fillColor: '#005BAE', color: '#fff', weight: 2, fillOpacity: 1
-            }).addTo(miniMap);
-            stopMarker.bindTooltip(`Day ${stop.day}: ${stop.name}`, {permanent: true, direction: 'right'});
-        });
-
-        // Automatically zoom map to fit the entire route
-        miniMap.fitBounds(drivingRoute.getBounds(), { padding: [30, 30] });
-    } else {
-        // Default behavior if no itinerary exists yet
-        miniMap.setView([d.lat, d.lng], d.zoom || 11);
-        L.marker([d.lat, d.lng]).addTo(miniMap);
-    }
-}
-
-function setStars(id, val) { document.getElementById(id).style.width = (val / 5 * 100) + "%"; }
-function showHome() { document.getElementById('home-view').style.display = 'block'; document.getElementById('detail-view').style.display = 'none'; if(mainMap) setTimeout(() => mainMap.invalidateSize(), 200); }
-function filterIslands() {
-    const q = document.getElementById('islandSearch').value.toLowerCase();
-    Object.keys(markerStore).forEach(k => {
-        const m = markerStore[k].data.name.toLowerCase().includes(q);
-        const item = markerStore[k];
-        if (item.isStar) { item.marker.setOpacity(m ? 1 : 0.1); } 
-        else { item.marker.setStyle({ opacity: m ? 1 : 0.1, fillOpacity: m ? 0.95 : 0.1 }); }
-    });
+{
+    "chania": { "name": "Chania (Crete)", "lat": 35.51, "lng": 24.01, "beach": 5.0, "hist": 4.5, "night": 3.5, "access": 4.5, "afford": 3.0, "overall": 4.1, "zoom": 10 },
+    "rethymno": { "name": "Rethymno (Crete)", "lat": 35.36, "lng": 24.47, "beach": 4.0, "hist": 4.5, "night": 3.5, "access": 3.5, "afford": 4.0, "overall": 3.9, "zoom": 11 },
+    "heraklio": { "name": "Heraklion (Crete)", "lat": 35.33, "lng": 25.13, "beach": 3.0, "hist": 5.0, "night": 4.5, "access": 5.0, "afford": 4.0, "overall": 4.3, "zoom": 10 },
+    "lasithi": { "name": "Lasithi (Crete)", "lat": 35.19, "lng": 25.71, "beach": 4.5, "hist": 3.5, "night": 2.5, "access": 3.0, "afford": 2.5, "overall": 3.2, "zoom": 10 },
+    "lesvos": { "name": "Lesvos (Mytilini)", "lat": 39.2, "lng": 26.2, "beach": 3.5, "hist": 4.0, "night": 2.5, "access": 3.0, "afford": 4.5, "overall": 3.6, "zoom": 10 },
+    "euboea": { "name": "Euboea", "lat": 38.5, "lng": 24.0, "beach": 3.5, "hist": 3.0, "night": 2.0, "access": 5.0, "afford": 4.5, "overall": 3.6, "zoom": 9 },
+    "rhodes": { "name": "Rhodes", "lat": 36.18, "lng": 27.92, "beach": 4.5, "hist": 5.0, "night": 4.5, "access": 5.0, "afford": 4.0, "overall": 4.5, "zoom": 10 },
+    "chios": { "name": "Chios", "lat": 38.4, "lng": 26.1, "beach": 3.5, "hist": 4.0, "night": 2.0, "access": 3.5, "afford": 4.5, "overall": 3.6, "zoom": 10 },
+    "kefalonia": { "name": "Kefalonia", "lat": 38.2, "lng": 20.5, "beach": 4.5, "hist": 3.5, "night": 3.0, "access": 3.5, "afford": 3.5, "overall": 3.6, "zoom": 10 },
+    "corfu": { "name": "Corfu", "lat": 39.62, "lng": 19.85, "beach": 4.0, "hist": 4.0, "night": 4.0, "access": 5.0, "afford": 3.5, "overall": 4.1, "zoom": 10 },
+    "lemnos": { "name": "Lemnos", "lat": 39.9, "lng": 25.2, "beach": 3.0, "hist": 2.5, "night": 1.5, "access": 3.0, "afford": 4.5, "overall": 3.1, "zoom": 11 },
+    "samos": { "name": "Samos", "lat": 37.75, "lng": 26.83, "beach": 4.0, "hist": 3.5, "night": 3.0, "access": 3.5, "afford": 4.0, "overall": 3.7, "zoom": 11 },
+    "naxos": { "name": "Naxos", "lat": 37.10, "lng": 25.48, "beach": 4.5, "hist": 4.0, "night": 3.5, "access": 4.0, "afford": 4.0, "overall": 4.0, "zoom": 11 },
+    "zakynthos": { "name": "Zakynthos", "lat": 37.78, "lng": 20.89, "beach": 4.5, "hist": 2.5, "night": 4.5, "access": 4.5, "afford": 3.0, "overall": 3.8, "zoom": 11 },
+    "thasos": { "name": "Thasos", "lat": 40.7, "lng": 24.6, "beach": 4.0, "hist": 3.0, "night": 2.5, "access": 4.0, "afford": 4.0, "overall": 3.6, "zoom": 11 },
+    "andros": { "name": "Andros", "lat": 37.83, "lng": 24.93, "beach": 3.5, "hist": 3.5, "night": 2.0, "access": 4.5, "afford": 3.5, "overall": 3.5, "zoom": 11 },
+    "lefkada": { "name": "Lefkada", "lat": 38.72, "lng": 20.65, "beach": 5.0, "hist": 2.5, "night": 3.5, "access": 4.5, "afford": 3.5, "overall": 3.9, "zoom": 11 },
+    "karpathos": { "name": "Karpathos", "lat": 35.6, "lng": 27.15, "beach": 4.5, "hist": 2.5, "night": 1.5, "access": 2.5, "afford": 4.0, "overall": 3.1, "zoom": 11 },
+    "kos": { "name": "Kos", "lat": 36.88, "lng": 27.28, "beach": 4.0, "hist": 3.5, "night": 4.0, "access": 5.0, "afford": 3.5, "overall": 4.0, "zoom": 11 },
+    "kythira": { "name": "Kythira", "lat": 36.25, "lng": 23.0, "beach": 3.5, "hist": 3.0, "night": 1.5, "access": 2.5, "afford": 4.0, "overall": 3.1, "zoom": 11 },
+    "ikaria": { "name": "Ikaria", "lat": 37.58, "lng": 26.15, "beach": 3.5, "hist": 3.0, "night": 2.5, "access": 3.0, "afford": 4.5, "overall": 3.3, "zoom": 11 },
+    "skyros": { "name": "Skyros", "lat": 38.86, "lng": 24.54, "beach": 3.0, "hist": 2.5, "night": 1.5, "access": 2.5, "afford": 4.0, "overall": 2.9, "zoom": 11 },
+    "paros": { "name": "Paros", "lat": 37.05, "lng": 25.18, "beach": 4.5, "hist": 3.5, "night": 4.5, "access": 4.5, "afford": 3.0, "overall": 4.0, "zoom": 12 },
+    "tinos": { "name": "Tinos", "lat": 37.58, "lng": 25.13, "beach": 3.5, "hist": 4.5, "night": 2.0, "access": 4.5, "afford": 3.5, "overall": 3.6, "zoom": 12 },
+    "samothrace": { "name": "Samothrace", "lat": 40.47, "lng": 25.58, "beach": 3.0, "hist": 3.5, "night": 1.0, "access": 2.5, "afford": 4.0, "overall": 2.8, "zoom": 11 },
+    "milos": { "name": "Milos", "lat": 36.68, "lng": 24.41, "beach": 5.0, "hist": 3.0, "night": 3.5, "access": 4.0, "afford": 3.0, "overall": 3.8, "zoom": 12 },
+    "kea": { "name": "Kea", "lat": 37.62, "lng": 24.33, "beach": 3.0, "hist": 3.0, "night": 1.5, "access": 5.0, "afford": 3.5, "overall": 3.3, "zoom": 12 },
+    "amorgos": { "name": "Amorgos", "lat": 36.83, "lng": 25.89, "beach": 4.0, "hist": 4.0, "night": 2.0, "access": 3.0, "afford": 3.5, "overall": 3.4, "zoom": 12 },
+    "kalymnos": { "name": "Kalymnos", "lat": 36.98, "lng": 26.98, "beach": 3.5, "hist": 3.0, "night": 2.0, "access": 3.0, "afford": 4.0, "overall": 3.3, "zoom": 12 },
+    "ios": { "name": "Ios", "lat": 36.72, "lng": 25.28, "beach": 4.0, "hist": 2.5, "night": 5.0, "access": 4.5, "afford": 3.0, "overall": 3.8, "zoom": 12 },
+    "kythnos": { "name": "Kythnos", "lat": 37.38, "lng": 24.42, "beach": 3.5, "hist": 2.5, "night": 2.0, "access": 4.5, "afford": 3.5, "overall": 3.3, "zoom": 12 },
+    "astypalaia": { "name": "Astypalaia", "lat": 36.56, "lng": 26.35, "beach": 4.0, "hist": 3.0, "night": 2.0, "access": 3.0, "afford": 3.5, "overall": 3.3, "zoom": 12 },
+    "ithaca": { "name": "Ithaca", "lat": 38.41, "lng": 20.66, "beach": 4.0, "hist": 3.5, "night": 1.5, "access": 3.0, "afford": 3.5, "overall": 3.3, "zoom": 12 },
+    "salamis": { "name": "Salamis", "lat": 37.93, "lng": 23.5, "beach": 2.0, "hist": 2.5, "night": 1.5, "access": 5.0, "afford": 4.5, "overall": 3.0, "zoom": 12 },
+    "skopelos": { "name": "Skopelos", "lat": 39.12, "lng": 23.72, "beach": 4.0, "hist": 3.0, "night": 2.0, "access": 3.5, "afford": 3.5, "overall": 3.3, "zoom": 12 },
+    "mykonos": { "name": "Mykonos", "lat": 37.44, "lng": 25.33, "beach": 4.0, "hist": 2.5, "night": 5.0, "access": 5.0, "afford": 1.5, "overall": 3.8, "zoom": 13 },
+    "syros": { "name": "Syros", "lat": 37.45, "lng": 24.91, "beach": 3.0, "hist": 4.5, "night": 3.0, "access": 4.5, "afford": 3.5, "overall": 3.7, "zoom": 12 },
+    "aegina": { "name": "Aegina", "lat": 37.74, "lng": 23.49, "beach": 2.5, "hist": 3.5, "night": 2.5, "access": 5.0, "afford": 3.5, "overall": 3.4, "zoom": 13 },
+    "santorini": { "name": "Santorini", "lat": 36.41, "lng": 25.42, "beach": 4.5, "hist": 5.0, "night": 4.5, "access": 5.0, "afford": 1.5, "overall": 4.3, "zoom": 13 },
+    "serifos": { "name": "Serifos", "lat": 37.15, "lng": 24.48, "beach": 4.0, "hist": 3.0, "night": 2.0, "access": 3.5, "afford": 3.5, "overall": 3.3, "zoom": 13 },
+    "sifnos": { "name": "Sifnos", "lat": 36.97, "lng": 24.71, "beach": 3.5, "hist": 4.0, "night": 2.5, "access": 3.5, "afford": 3.0, "overall": 3.3, "zoom": 13 },
+    "kasos": { "name": "Kasos", "lat": 35.39, "lng": 26.92, "beach": 3.0, "hist": 2.0, "night": 1.0, "access": 1.5, "afford": 4.5, "overall": 2.7, "zoom": 13 },
+    "alonnisos": { "name": "Alonnisos", "lat": 39.21, "lng": 23.91, "beach": 4.0, "hist": 2.5, "night": 1.5, "access": 3.0, "afford": 3.5, "overall": 3.1, "zoom": 13 },
+    "tilos": { "name": "Tilos", "lat": 36.43, "lng": 27.37, "beach": 3.0, "hist": 2.5, "night": 1.0, "access": 2.0, "afford": 4.0, "overall": 2.8, "zoom": 13 },
+    "symi": { "name": "Symi", "lat": 36.6, "lng": 27.83, "beach": 3.5, "hist": 3.5, "night": 2.0, "access": 3.0, "afford": 3.0, "overall": 3.0, "zoom": 13 },
+    "leros": { "name": "Leros", "lat": 37.14, "lng": 26.84, "beach": 3.0, "hist": 3.0, "night": 2.0, "access": 3.5, "afford": 4.0, "overall": 3.3, "zoom": 13 },
+    "hydra": { "name": "Hydra", "lat": 37.33, "lng": 23.46, "beach": 2.5, "hist": 4.5, "night": 2.5, "access": 4.5, "afford": 2.5, "overall": 3.2, "zoom": 14 },
+    "skiathos": { "name": "Skiathos", "lat": 39.16, "lng": 23.44, "beach": 4.5, "hist": 2.5, "night": 4.5, "access": 4.5, "afford": 3.0, "overall": 3.8, "zoom": 12 },
+    "agios_efstratios": { "name": "Agios Efstratios", "lat": 39.5, "lng": 25.0, "beach": 2.5, "hist": 1.5, "night": 1.0, "access": 1.5, "afford": 4.5, "overall": 2.3, "zoom": 13 },
+    "sikinos": { "name": "Sikinos", "lat": 36.68, "lng": 25.11, "beach": 3.5, "hist": 2.5, "night": 1.0, "access": 2.5, "afford": 3.5, "overall": 2.8, "zoom": 13 },
+    "nisyros": { "name": "Nisyros", "lat": 36.58, "lng": 27.16, "beach": 3.5, "hist": 3.5, "night": 1.5, "access": 2.5, "afford": 3.5, "overall": 3.0, "zoom": 13 },
+    "psara": { "name": "Psara", "lat": 38.5, "lng": 25.6, "beach": 2.5, "hist": 2.0, "night": 1.0, "access": 1.5, "afford": 4.5, "overall": 2.3, "zoom": 13 },
+    "anafi": { "name": "Anafi", "lat": 36.36, "lng": 25.77, "beach": 4.0, "hist": 2.5, "night": 1.0, "access": 2.0, "afford": 3.5, "overall": 3.0, "zoom": 13 }
 }
