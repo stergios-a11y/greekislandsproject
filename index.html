@@ -3,39 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greek Island Odyssey | 5-Star Reviews</title>
+    <title>Greek Island Odyssey | Discovery Engine</title>
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 
     <style>
-        :root { --greek-blue: #005BAE; --sand: #fdf5e6; --accent: #ff7f50; --star-gold: #ffcc00; }
-        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-serif; background: var(--sand); }
-        header { background: var(--greek-blue); color: white; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 2000; }
-        #islandSearch { width: 100%; max-width: 400px; padding: 12px; border-radius: 25px; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.1); outline: none; }
+        :root { 
+            --greek-blue: #005BAE; 
+            --sand: #fdf5e6; 
+            --accent: #ff7f50; 
+            --star-gold: #ffcc00; 
+            --teal: #20B2AA;
+        }
         
-        #home-view { height: calc(100vh - 130px); width: 100%; }
+        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-serif; background: var(--sand); }
+        
+        /* 1. Header is now clickable */
+        header { 
+            background: var(--greek-blue); color: white; padding: 15px; 
+            text-align: center; position: sticky; top: 0; z-index: 2000;
+        }
+        header h1 { cursor: pointer; margin: 0; display: inline-block; }
+
+        /* 2. Quick Menu Styling */
+        .quick-menu { 
+            display: flex; justify-content: center; gap: 10px; margin-top: 15px; flex-wrap: wrap; 
+        }
+        .vibe-chip {
+            background: rgba(255,255,255,0.2); border: 1px solid white; color: white;
+            padding: 6px 15px; border-radius: 20px; font-size: 0.85rem; cursor: pointer; transition: 0.3s;
+        }
+        .vibe-chip:hover { background: var(--accent); border-color: var(--accent); }
+
+        #islandSearch { 
+            width: 90%; max-width: 450px; padding: 10px 20px; border-radius: 25px; 
+            border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.1); outline: none; margin-top: 10px;
+        }
+        
+        #home-view { height: calc(100vh - 180px); width: 100%; }
         #main-map { height: 100%; width: 100%; background: #c5e7ff; }
 
-        #detail-view { display: none; padding: 2rem; max-width: 850px; margin: 30px auto; background: white; border-radius: 25px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        #detail-view { 
+            display: none; padding: 2rem; max-width: 850px; margin: 30px auto; 
+            background: white; border-radius: 25px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); 
+        }
+
         .back-btn { background: var(--accent); color: white; border: none; padding: 10px 25px; border-radius: 30px; cursor: pointer; font-weight: bold; margin-bottom: 20px; }
 
-        /* Star Rating Styles */
+        .rating-box { background: #fcfaf2; padding: 20px; border-radius: 15px; margin: 20px 0; }
         .rating-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; }
-        .stars-outer { position: relative; display: inline-block; font-size: 24px; color: #ccc; }
+        .stars-outer { position: relative; display: inline-block; font-size: 22px; color: #ddd; }
         .stars-inner { position: absolute; top: 0; left: 0; white-space: nowrap; overflow: hidden; width: 0; color: var(--star-gold); }
-        .stars-outer::before { content: "★★★★★"; }
-        .stars-inner::before { content: "★★★★★"; }
+        .stars-outer::before, .stars-inner::before { content: "★★★★★"; }
 
-        .hero-img { width: 100%; height: 300px; object-fit: cover; border-radius: 20px; margin-bottom: 20px; }
-        #island-mini-map { width: 100%; height: 250px; border-radius: 15px; margin-top: 20px; }
+        .hero-img { width: 100%; height: 350px; object-fit: cover; border-radius: 20px; margin-bottom: 20px; }
+        #island-mini-map { width: 100%; height: 250px; border-radius: 15px; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1 style="margin:0 0 10px 0;">Greek Island Odyssey 🏝️</h1>
+    <h1 onclick="showHome()">Greek Island Odyssey 🏝️</h1>
+    
     <input type="text" id="islandSearch" placeholder="Search 50 islands..." onkeyup="filterIslands()">
+    
+    <div class="quick-menu">
+        <span class="vibe-chip" onclick="showDetail('milos')">🌊 Best Beaches</span>
+        <span class="vibe-chip" onclick="showDetail('rhodes')">🏛️ Best History</span>
+        <span class="vibe-chip" onclick="showDetail('mykonos')">💃 Nightlife</span>
+        <span class="vibe-chip" onclick="showDetail('corfu')">✈️ Accessibility</span>
+    </div>
 </header>
 
 <div id="home-view">
@@ -51,103 +89,19 @@
 
     <img id="island-img" class="hero-img" src="" alt="Island">
 
-    <div style="background: #fdfaf0; padding: 20px; border-radius: 15px;">
-        <h3 style="margin-top:0;">Travel Ratings</h3>
-        
-        <div class="rating-row">
-            <span>🏖️ Beach Quality</span>
-            <div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div>
-        </div>
-        <div class="rating-row">
-            <span>🏗️ Infrastructure</span>
-            <div class="stars-outer"><div id="star-infra" class="stars-inner"></div></div>
-        </div>
-        <div class="rating-row">
-            <span>🏛️ History & Culture</span>
-            <div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div>
-        </div>
-        <div class="rating-row">
-            <span>🍷 Nightlife</span>
-            <div class="stars-outer"><div id="star-night" class="stars-inner"></div></div>
-        </div>
+    <div class="rating-box">
+        <h3 style="margin:0 0 10px 0;">Odyssey Scores</h3>
+        <div class="rating-row"><span>🏖️ Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div></div>
+        <div class="rating-row"><span>🏛️ History & Culture</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div></div>
+        <div class="rating-row"><span>🍷 Nightlife</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div></div>
+        <div class="rating-row"><span>🚢 Accessibility</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div></div>
     </div>
 
     <div id="island-mini-map"></div>
 </div>
 
 <script>
-    // DATA: Ratings are now out of 5 (Supports halves like 4.5)
     const islandData = {
-        "lesvos": { name: "Lesvos", greek: "Λέσβος", lat: 39.2, lng: 26.2, img: "https://images.unsplash.com/photo-1570535189332-902263b8296a?w=800", beach: 4.0, infra: 3.5, hist: 5.0, night: 3.0 },
-        "crete": { name: "Crete", greek: "Κρήτη", lat: 35.15, lng: 24.8, img: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800", beach: 5.0, infra: 4.5, hist: 5.0, night: 4.0 },
-        "santorini": { name: "Santorini", greek: "Σαντορίνη", lat: 36.41, lng: 25.42, img: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800", beach: 3.5, infra: 5.0, hist: 4.5, night: 4.5 },
-        "corfu": { name: "Corfu", greek: "Κέρκυρα", lat: 39.62, lng: 19.85, img: "https://images.unsplash.com/photo-1555353540-64580b51c258?w=800", beach: 4.0, infra: 4.0, hist: 4.5, night: 4.5 },
-        "mykonos": { name: "Mykonos", greek: "Μύκονος", lat: 37.44, lng: 25.33, img: "https://images.unsplash.com/photo-1574221160356-91e813f36070?w=800", beach: 4.5, infra: 4.5, hist: 3.0, night: 5.0 },
-        "naxos": { name: "Naxos", greek: "Νάξος", lat: 37.10, lng: 25.48, img: "https://images.unsplash.com/photo-1550966840-349f7e8a9394?w=800", beach: 5.0, infra: 3.5, hist: 4.5, night: 3.5 }
-        // ... (Add others following this format: beach: X, infra: X, hist: X, night: X)
-    };
-
-    let mainMap;
-    const markerStore = {};
-
-    window.onload = function() {
-        mainMap = L.map('main-map').setView([38.3, 24.5], 7);
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png').addTo(mainMap);
-
-        Object.keys(islandData).forEach(key => {
-            const d = islandData[key];
-            const marker = L.circleMarker([d.lat, d.lng], {
-                radius: 11, fillColor: "#005BAE", color: "#fff", weight: 2, fillOpacity: 0.95
-            }).addTo(mainMap);
-
-            marker.on('click', () => showDetail(key));
-            markerStore[key] = { marker, name: d.name.toLowerCase(), greek: d.greek };
-        });
-    };
-
-    function filterIslands() {
-        const query = document.getElementById('islandSearch').value.toLowerCase();
-        Object.keys(markerStore).forEach(key => {
-            const item = markerStore[key];
-            const match = item.name.includes(query) || item.greek.includes(query);
-            item.marker.setStyle({ opacity: match ? 1 : 0.1, fillOpacity: match ? 0.95 : 0.1 });
-        });
-    }
-
-    function setStars(elementId, rating) {
-        // Converts a 0-5 rating to a percentage for the star width
-        const starPercentage = (rating / 5) * 100;
-        document.getElementById(elementId).style.width = starPercentage + "%";
-    }
-
-    let miniMap = null;
-    function showDetail(id) {
-        const data = islandData[id];
-        document.getElementById('home-view').style.display = 'none';
-        document.getElementById('detail-view').style.display = 'block';
-        window.scrollTo(0,0);
-
-        document.getElementById('island-name').innerText = data.name;
-        document.getElementById('island-greek').innerText = data.greek;
-        document.getElementById('island-img').src = data.img;
-
-        // Set the Stars
-        setStars('star-beach', data.beach || 0);
-        setStars('star-infra', data.infra || 0);
-        setStars('star-hist', data.hist || 0);
-        setStars('star-night', data.night || 0);
-
-        if (miniMap) miniMap.remove();
-        miniMap = L.map('island-mini-map', { zoomControl: false }).setView([data.lat, data.lng], 11);
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png').addTo(miniMap);
-    }
-
-    function showHome() {
-        document.getElementById('home-view').style.display = 'block';
-        document.getElementById('detail-view').style.display = 'none';
-        mainMap.invalidateSize();
-    }
-</script>
-
-</body>
-</html>
+        "milos": { name: "Milos", greek: "Μήλος", lat: 36.68, lng: 24.41, img: "https://images.unsplash.com/photo-1551065123-649495147be4?w=800", beach: 5.0, hist: 3.5, night: 2.5, access: 3.5 },
+        "rhodes": { name: "Rhodes", greek: "Ρόδος", lat: 36.18, lng: 27.92, img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800", beach: 4.5, hist: 5.0, night: 4.0, access: 5.0 },
+        "mykonos": { name: "Mykonos", greek: "
