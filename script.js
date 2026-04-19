@@ -29,7 +29,12 @@ window.onload = function() {
 function initMap() {
     const bounds = L.latLngBounds([34.0, 18.5], [42.0, 30.5]);
     mainMap = L.map('main-map', { minZoom: 7, maxZoom: 12, maxBounds: bounds, maxBoundsViscosity: 1.0 }).setView([38.3, 24.5], 7);
-    L.tileLayer('https://tile.opentopomap.org/{z}/{x}/{y}.png').addTo(mainMap);
+    
+    // NEW MINIMALIST TILE LAYER
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; OpenStreetMap &copy; CARTO'
+    }).addTo(mainMap);
+    
     markerLayerGroup = L.layerGroup().addTo(mainMap);
     renderMarkers();
 }
@@ -108,9 +113,13 @@ function showDetail(id) {
     
     setStars('star-beach', d.beach); setStars('star-hist', d.hist); setStars('star-night', d.night); setStars('star-access', d.access); setStars('star-afford', d.afford);
     
-    if (miniMap) miniMap.remove();
+if (miniMap) miniMap.remove();
     miniMap = L.map('island-mini-map', { zoomControl: false, scrollWheelZoom: false });
-    L.tileLayer('https://tile.opentopomap.org/{z}/{x}/{y}.png').addTo(miniMap);
+    
+    // NEW MINIMALIST TILE LAYER FOR MINI-MAP
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; OpenStreetMap &copy; CARTO'
+    }).addTo(miniMap);
 
     // DYNAMIC ITINERARY DRAWING LOGIC
     if (d.itinerary && d.itinerary.length > 0) {
