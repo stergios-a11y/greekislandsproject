@@ -100,19 +100,31 @@ h1 { margin: 0 0 15px 0; cursor: pointer; }
     margin: 20px 0;
 }
 
-/* Ratings & Stars */
+/* Compact Grid for Ratings */
 .rating-box {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
 }
 
 .rating-row {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 15px;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 5px;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+}
+
+.stars-outer {
+    font-size: 14px; /* Smaller stars */
 }
 
 .stars-outer {
