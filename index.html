@@ -31,7 +31,7 @@
 <div id="home-view">
     <div id="main-map"></div>
     <div class="map-legend">
-        <strong id="legend-title">Rating Categories</strong><br>
+        <strong id="legend-title">Best Overall</strong><br>
         <div class="legend-item"><span style="font-size:14px; text-shadow:0 0 2px #000;">⭐</span> 4.1+ (Elite)</div>
         <div class="legend-item"><span class="dot-legend" style="background:#2ecc71"></span> 3.5 - 4.0 (Very Good)</div>
         <div class="legend-item"><span class="dot-legend" style="background:#f1c40f"></span> 3.0 - 3.4 (Good)</div>
@@ -40,28 +40,35 @@
 </div>
 
 <div id="detail-view" style="display: none;">
-    <button class="back-btn" onclick="showHome()">← Back to Map</button>
-    <div style="display:flex; justify-content:space-between; align-items: center; flex-wrap: wrap;">
-        <h1 id="island-name" style="color:var(--greek-blue); font-size: 2.5rem; margin:0;"></h1>
-        <div class="score-badge">Rating: <span id="island-total-score">0.0</span>/5</div>
-    </div>
-    
-    <div id="island-mini-map"></div>
-    
-    <div id="island-guide"></div>
-    
-    <img id="island-pic" class="island-hero" src="" alt="Island View">
-    
-    <div class="rating-box">
-        <div class="rating-row"><span>🏖️ Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div></div>
-        <div class="rating-row"><span>🏛️ Culture & History</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div></div>
-        <div class="rating-row"><span>🍷 Nightlife</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div></div>
-        <div class="rating-row"><span>🚗 Accessibility</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div></div>
-        <div class="rating-row"><span>💸 Affordability</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div></div>
+    <div style="max-width: 900px; margin: 0 auto; padding: 20px;">
+        <button class="back-btn" onclick="showHome()">← Back to Map</button>
+        
+        <div style="display:flex; justify-content:space-between; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
+            <h1 id="island-name" style="color:#005BAE; font-size: 2.5rem; margin:0;"></h1>
+            <div style="background: #005BAE; color: white; padding: 10px 20px; border-radius: 30px; font-weight: bold;">
+                Rating: <span id="island-total-score">0.0</span>/5
+            </div>
+        </div>
+        
+        <div id="island-mini-map"></div>
+        
+        <div id="island-guide"></div>
+        
+        <img id="island-pic" class="island-hero" src="" alt="Island View">
+        
+        <div class="rating-box">
+            <div class="rating-row"><span>🏖️ Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div></div>
+            <div class="rating-row"><span>🏛️ Culture & History</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div></div>
+            <div class="rating-row"><span>🍷 Nightlife</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div></div>
+            <div class="rating-row"><span>🚗 Accessibility</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div></div>
+            <div class="rating-row"><span>💸 Affordability</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div></div>
+        </div>
     </div>
 </div>
 
-<footer>&copy; 2026 Greek Island Odyssey | <span id="version-display"></span></footer>
+<footer>
+    &copy; 2026 Greek Island Odyssey | <span id="version-display">Loading version...</span>
+</footer>
 
 </body>
 </html>
