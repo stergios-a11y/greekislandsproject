@@ -1,3 +1,4 @@
+const VERSION_ID = "v14.0 - JSON Architecture Live";
 let mainMap, miniMap;
 let markerLayerGroup; 
 const markerStore = {}; 
@@ -6,7 +7,11 @@ let islandData = {}; // Will be filled by the fetch
 
 // 1. FETCH DATA FROM JSON FILE
 window.onload = function() {
-    fetch('data.json')
+    // Print the version to the footer immediately
+    document.getElementById('version-display').innerText = VERSION_ID;
+
+    // Load the island data
+    fetch('data.json?v=' + new Date().getTime())
         .then(response => response.json())
         .then(data => {
             islandData = data;
