@@ -7,17 +7,23 @@ let islandData = {}; // Will be filled by the fetch
 
 // 1. FETCH DATA FROM JSON FILE
 window.onload = function() {
-    // Print the version to the footer immediately
-    document.getElementById('version-display').innerText = VERSION_ID;
+    // Safety check: Only update the version if the element exists
+    const versionEl = document.getElementById('version-display');
+    if (versionEl) {
+        versionEl.innerText = VERSION_ID;
+    }
 
-    // Load the island data
+    // Fetch the data and load the map
     fetch('data.json?v=' + new Date().getTime())
         .then(response => response.json())
         .then(data => {
             islandData = data;
             initMap();
         })
-        .catch(error => console.error("Error loading island data:", error));
+        .catch(error => {
+            console.error("Error loading island data:", error);
+            alert("Warning: Could not load the island data. Check your data.json file for typos!");
+        });
 };
 
 function initMap() {
