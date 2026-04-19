@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greek Island Odyssey | Stable Version</title>
+    <title>Greek Island Odyssey | Topo Edition</title>
     
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <style>
-        :root { --greek-blue: #005BAE; --sand: #fdf5e6; --accent: #ff7f50; --star-gold: #ffcc00; }
+        :root { 
+            --greek-blue: #005BAE; 
+            --sand: #fdf5e6; 
+            --accent: #ff7f50; 
+            --star-gold: #ffcc00; 
+        }
         
         body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-serif; background: var(--sand); }
         
@@ -19,10 +24,11 @@
         }
         header h1 { cursor: pointer; margin: 0; }
 
-        .quick-menu { display: flex; justify-content: center; gap: 10px; margin-top: 15px; flex-wrap: wrap; }
+        /* Quick Menu Styling */
+        .quick-menu { display: flex; justify-content: center; gap: 8px; margin-top: 15px; flex-wrap: wrap; }
         .vibe-chip {
             background: rgba(255,255,255,0.2); border: 1px solid white; color: white;
-            padding: 6px 15px; border-radius: 20px; font-size: 0.85rem; cursor: pointer; transition: 0.3s;
+            padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; cursor: pointer; transition: 0.3s;
         }
         .vibe-chip:hover { background: var(--accent); border-color: var(--accent); }
 
@@ -31,13 +37,8 @@
             border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.1); outline: none; margin-top: 10px;
         }
         
-        /* Map Container - Forced visible with background color */
         #home-view { height: calc(100vh - 220px); width: 100%; display: block; position: relative; }
-        #main-map { 
-            height: 100%; 
-            width: 100%; 
-            background: #aad3df; /* If the map is blue, the container is working! */
-        }
+        #main-map { height: 100%; width: 100%; background: #aad3df; }
 
         #detail-view { 
             display: none; padding: 2rem; max-width: 850px; margin: 30px auto; 
@@ -46,7 +47,7 @@
 
         .back-btn { background: var(--accent); color: white; border: none; padding: 10px 25px; border-radius: 30px; cursor: pointer; font-weight: bold; margin-bottom: 20px; }
 
-        .rating-box { background: #fcfaf2; padding: 20px; border-radius: 15px; margin: 20px 0; }
+        .rating-box { background: #fcfaf2; padding: 20px; border-radius: 15px; margin: 20px 0; border: 1px solid #eee; }
         .rating-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; }
         .stars-outer { position: relative; display: inline-block; font-size: 22px; color: #ddd; }
         .stars-inner { position: absolute; top: 0; left: 0; white-space: nowrap; overflow: hidden; width: 0; color: var(--star-gold); }
@@ -59,12 +60,12 @@
 
 <header>
     <h1 onclick="showHome()">Greek Island Odyssey 🏝️</h1>
-    <input type="text" id="islandSearch" placeholder="Search islands..." onkeyup="filterIslands()">
+    <input type="text" id="islandSearch" placeholder="Search for your next adventure..." onkeyup="filterIslands()">
     <div class="quick-menu">
-        <span class="vibe-chip" onclick="showDetail('milos')">🌊 Best Beaches</span>
-        <span class="vibe-chip" onclick="showDetail('rhodes')">🏛️ Best History</span>
-        <span class="vibe-chip" onclick="showDetail('mykonos')">💃 Nightlife</span>
-        <span class="vibe-chip" onclick="showDetail('corfu')">🚢 Accessibility</span>
+        <span class="vibe-chip" onclick="showDetail('milos')">🌊 For Beach Lovers</span>
+        <span class="vibe-chip" onclick="showDetail('rhodes')">🏛️ For History Buffs</span>
+        <span class="vibe-chip" onclick="showDetail('mykonos')">💃 For Party Animals</span>
+        <span class="vibe-chip" onclick="showDetail('santorini')">🚢 For Easy Access</span>
     </div>
 </header>
 
@@ -87,20 +88,33 @@
 </div>
 
 <footer>
-    &copy; 2026 Greek Island Odyssey | <span id="version-display">Checking...</span>
+    &copy; 2026 Greek Island Odyssey | <span id="version-display">Loading...</span>
 </footer>
 
 <script>
-    // NEW VERSION ID
-    const VERSION_ID = "v2.0 - Stabilized Map Engine";
+    // VERSION TRACKER
+    const VERSION_ID = "v2.5 - OpenTopo + 10 New Islands";
 
     const islandData = {
+        // Original 6
         "milos": { name: "Milos", greek: "Μήλος", lat: 36.68, lng: 24.41, beach: 5.0, hist: 3.5, night: 2.5, access: 3.5 },
         "rhodes": { name: "Rhodes", greek: "Ρόδος", lat: 36.18, lng: 27.92, beach: 4.5, hist: 5.0, night: 4.0, access: 5.0 },
         "mykonos": { name: "Mykonos", greek: "Μύκονος", lat: 37.44, lng: 25.33, beach: 4.5, hist: 3.0, night: 5.0, access: 4.5 },
         "corfu": { name: "Corfu", greek: "Κέρκυρα", lat: 39.62, lng: 19.85, beach: 4.0, hist: 5.0, night: 4.0, access: 5.0 },
         "crete": { name: "Crete", greek: "Κρήτη", lat: 35.2, lng: 24.8, beach: 5.0, hist: 5.0, night: 4.0, access: 5.0 },
-        "lesvos": { name: "Lesvos", greek: "Λέσβος", lat: 39.2, lng: 26.2, beach: 4.0, hist: 5.0, night: 3.0, access: 4.0 }
+        "lesvos": { name: "Lesvos", greek: "Λέσβος", lat: 39.2, lng: 26.2, beach: 4.0, hist: 5.0, night: 3.0, access: 4.0 },
+        
+        // 10 NEW ISLANDS
+        "santorini": { name: "Santorini", greek: "Σαντορίνη", lat: 36.41, lng: 25.42, beach: 3.5, hist: 4.5, night: 4.5, access: 5.0 },
+        "naxos": { name: "Naxos", greek: "Νάξος", lat: 37.10, lng: 25.48, beach: 5.0, hist: 4.5, night: 3.5, access: 4.0 },
+        "zakynthos": { name: "Zakynthos", greek: "Ζάκυνθος", lat: 37.78, lng: 20.89, beach: 5.0, hist: 3.0, night: 4.5, access: 4.0 },
+        "samos": { name: "Samos", greek: "Σάμος", lat: 37.75, lng: 26.83, beach: 4.0, hist: 4.5, night: 3.5, access: 4.0 },
+        "kos": { name: "Kos", greek: "Κως", lat: 36.89, lng: 27.28, beach: 4.5, hist: 4.5, night: 4.0, access: 4.5 },
+        "hydra": { name: "Hydra", greek: "Ύδρα", lat: 37.33, lng: 23.46, beach: 3.0, hist: 4.5, night: 4.0, access: 4.0 },
+        "paros": { name: "Paros", greek: "Πάρος", lat: 37.08, lng: 25.15, beach: 4.5, hist: 4.0, night: 4.5, access: 4.5 },
+        "skiathos": { name: "Skiathos", greek: "Σκιάθος", lat: 39.16, lng: 23.48, beach: 5.0, hist: 2.5, night: 4.5, access: 4.0 },
+        "ikaria": { name: "Ikaria", greek: "Ικαρία", lat: 37.60, lng: 26.10, beach: 4.0, hist: 3.5, night: 5.0, access: 3.0 },
+        "ithaca": { name: "Ithaca", greek: "Ιθάκη", lat: 38.41, lng: 20.66, beach: 4.0, hist: 5.0, night: 2.5, access: 3.0 }
     };
 
     let mainMap;
@@ -108,30 +122,27 @@
 
     window.onload = function() {
         document.getElementById('version-display').innerText = "Current Version: " + VERSION_ID;
-        
-        try {
-            console.log("Attempting to load map...");
-            mainMap = L.map('main-map').setView([38.3, 24.5], 7);
-
-            // Switching back to CartoDB Voyager for 100% reliability
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-                attribution: '© OpenStreetMap contributors © CARTO'
-            }).addTo(mainMap);
-
-            Object.keys(islandData).forEach(key => {
-                const d = islandData[key];
-                const marker = L.circleMarker([d.lat, d.lng], {
-                    radius: 12, fillColor: "#005BAE", color: "#fff", weight: 2, fillOpacity: 0.95
-                }).addTo(mainMap);
-                marker.on('click', () => showDetail(key));
-                markerStore[key] = { marker, name: d.name.toLowerCase() };
-            });
-            console.log("Map Loaded Successfully!");
-        } catch (e) {
-            console.error("Map failed to initialize:", e);
-            alert("The map engine failed. Please check your internet connection.");
-        }
+        initMap();
     };
+
+    function initMap() {
+        mainMap = L.map('main-map').setView([38.3, 24.5], 7);
+
+        // DIRECT OPENTOPO LINK (STABLE)
+        L.tileLayer('https://tile.opentopomap.org/{z}/{x}/{y}.png', {
+            maxZoom: 17,
+            attribution: '© OpenTopoMap'
+        }).addTo(mainMap);
+
+        Object.keys(islandData).forEach(key => {
+            const d = islandData[key];
+            const marker = L.circleMarker([d.lat, d.lng], {
+                radius: 12, fillColor: "#005BAE", color: "#fff", weight: 2, fillOpacity: 0.95
+            }).addTo(mainMap);
+            marker.on('click', () => showDetail(key));
+            markerStore[key] = { marker, name: d.name.toLowerCase() };
+        });
+    }
 
     function filterIslands() {
         const query = document.getElementById('islandSearch').value.toLowerCase();
