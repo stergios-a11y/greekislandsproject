@@ -1,0 +1,23 @@
+{
+    "lesvos": { 
+        "name": "Lesvos (Mytilini)", "lat": 39.2, "lng": 26.2, "beach": 3.5, "hist": 4.0, "night": 2.5, "access": 3.0, "afford": 4.5, "overall": 3.6, "zoom": 10, 
+        "img": "https://images.unsplash.com/photo-1570535189332-902263b8296a?w=1200",
+        "itinerary": [
+            { "day": 1, "name": "Mytilene Arrival", "lat": 39.106, "lng": 26.554 },
+            { "day": 1, "name": "Mantamados", "lat": 39.314, "lng": 26.335 },
+            { "day": 1, "name": "Molyvos Castle", "lat": 39.367, "lng": 26.174 },
+            { "day": 3, "name": "Kalloni Salt Flats", "lat": 39.207, "lng": 26.223 },
+            { "day": 3, "name": "Skala Eressos", "lat": 39.137, "lng": 25.933 },
+            { "day": 4, "name": "Plomari", "lat": 38.976, "lng": 26.366 }
+        ],
+        "guide": "<div class='guide-card'><h3>💡 Key facts</h3><ul><li><strong>Car:</strong> Mandatory.</li><li><strong>Strategy:</strong> 2 bases (smarter)</li></ul></div><h3>📅 5-DAY ITINERARY</h3><div class='itinerary-step'><strong>Day 1:</strong> Mytilene → Mantamados → Molyvos</div><div class='itinerary-step'><strong>Day 3:</strong> Cross island to Kalloni → Skala Eressos</div><div class='itinerary-step'><strong>Day 4:</strong> South side to Plomari (Ouzo capital)</div>"
+    },
+    "chania": { 
+        "name": "Chania (Crete)", "lat": 35.51, "lng": 24.01, "beach": 5.0, "hist": 4.5, "night": 3.5, "access": 4.5, "afford": 3.0, "overall": 4.1, "zoom": 10, 
+        "img": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=1200"
+    },
+    "rhodes": { 
+        "name": "Rhodes", "lat": 36.18, "lng": 27.92, "beach": 4.5, "hist": 5.0, "night": 4.5, "access": 5.0, "afford": 4.0, "overall": 4.5, "zoom": 10, 
+        "img": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200"
+    }
+}
