@@ -3,58 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greek Island Odyssey | The Complete Masterpiece</title>
+    <title>Greek Island Odyssey | Version 2.0</title>
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+    
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-    <style>
-        :root { 
-            --greek-blue: #005BAE; --sand: #fdf5e6; --accent: #ff7f50; --star-gold: #ffcc00;
-            --color-vgood: #2ecc71; --color-good: #f1c40f; --color-niche: #e67e22;
-        }
-        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-serif; background: var(--sand); overflow-x: hidden; color: #2c3e50; }
-        header { background: var(--greek-blue); color: white; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 2000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
-        header h1 { cursor: pointer; margin: 0; font-size: 1.5rem; }
-        .quick-menu { display: flex; justify-content: center; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
-        .vibe-chip { background: rgba(255,255,255,0.2); border: 1px solid white; color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; cursor: pointer; transition: 0.3s; }
-        .vibe-chip:hover, .vibe-chip.active { background: var(--accent); border-color: var(--accent); }
-        #islandSearch { width: 90%; max-width: 400px; padding: 8px 15px; border-radius: 20px; border: none; outline: none; margin-top: 10px; }
-        
-        #home-view { height: calc(100vh - 180px); width: 100%; display: block; position: relative; }
-        #main-map { height: 100%; width: 100%; background: #aad3df; }
-        
-        .leaflet-tooltip-island { background: white; border: 2px solid var(--greek-blue); border-radius: 8px; padding: 10px; font-size: 0.9rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-        .map-legend { position: absolute; bottom: 30px; left: 20px; z-index: 1000; background: white; padding: 12px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.2); font-size: 0.8rem; }
-        .legend-item { display: flex; align-items: center; gap: 8px; margin-top: 5px; }
-        .dot-legend { width: 12px; height: 12px; border-radius: 50%; display: inline-block; border: 1px solid #fff; }
-        .star-icon { background: transparent; border: none; }
-        
-        #detail-view { display: none; padding: 2rem; max-width: 900px; margin: 20px auto; background: white; border-radius: 25px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
-        .back-btn { background: var(--accent); color: white; border: none; padding: 10px 25px; border-radius: 30px; cursor: pointer; font-weight: bold; margin-bottom: 20px; }
-        .score-badge { background: var(--greek-blue); color: white; padding: 10px 20px; border-radius: 15px; font-size: 1.4rem; font-weight: bold; }
-        
-        #island-mini-map { width: 100%; height: 300px; border-radius: 15px; margin: 20px 0; border: 2px solid #eee; }
-        .island-hero { width: 100%; height: 400px; object-fit: cover; border-radius: 20px; margin-bottom: 20px; background: #eee; }
-        
-        .rating-box { background: #fcfaf2; padding: 20px; border-radius: 15px; margin: 20px 0; border: 1px solid #eee; }
-        .rating-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #eee; }
-        .stars-outer { position: relative; display: inline-block; font-size: 20px; color: #ddd; }
-        .stars-inner { position: absolute; top: 0; left: 0; white-space: nowrap; overflow: hidden; width: 0; color: var(--star-gold); }
-        .stars-outer::before, .stars-inner::before { content: "★★★★★"; }
-        
-        .guide-card { background: #f0f7ff; padding: 20px; border-radius: 15px; border-left: 6px solid var(--greek-blue); margin-bottom: 25px; }
-        .advice-box { background: #fff5f5; padding: 20px; border-radius: 15px; border-left: 6px solid #e74c3c; margin: 25px 0; }
-        .itinerary-step { margin-bottom: 15px; padding-left: 15px; border-left: 2px solid #cbd5e0; }
-        
-        footer { background: #333; color: #aaa; text-align: center; padding: 10px; font-size: 0.75rem; }
-    </style>
+    <script src="script.js" defer></script>
 </head>
 <body>
 
 <header>
     <h1 onclick="showHome()">Greek Island Odyssey 🏝️</h1>
-    <input type="text" id="islandSearch" placeholder="Search all 53 destinations..." onkeyup="filterIslands()">
+    <input type="text" id="islandSearch" placeholder="Search destinations..." onkeyup="filterIslands()">
     <div class="quick-menu">
         <span class="vibe-chip active" id="btn-overall" onclick="updateMapMode('overall')">🏆 Best Overall</span>
         <span class="vibe-chip" id="btn-beach" onclick="updateMapMode('beach')">🌊 Beach Lovers</span>
@@ -85,7 +46,7 @@
     
     <div id="island-mini-map"></div>
     
-    <img id="island-pic" class="island-hero" src="" alt="Island View" onerror="this.src='https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=1200'">
+    <img id="island-pic" class="island-hero" src="" alt="Island View">
     
     <div class="rating-box">
         <div class="rating-row"><span>🏖️ Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div></div>
@@ -98,244 +59,7 @@
     <div id="island-guide"></div>
 </div>
 
-<footer>&copy; 2026 Greek Island Odyssey | <span id="version-display"></span></footer>
-
-<script>
-    const VERSION_ID = "v13.0 - 100% COMPLETE DATA + STARS + LAYOUT";
-
-    // Reusable image links to ensure every island has a guaranteed photo
-    const imgBeach = "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=1200";
-    const imgTown = "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200";
-    const imgWhite = "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200";
-    const imgNature = "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?w=1200";
-    const imgRuins = "https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?w=1200";
-
-    const islandData = {
-        // Crete Split (4)
-        "chania": { name: "Chania (Crete)", lat: 35.51, lng: 24.01, beach: 5.0, hist: 4.5, night: 3.5, access: 4.5, afford: 3.0, overall: 4.1, zoom: 10, img: imgTown },
-        "rethymno": { name: "Rethymno (Crete)", lat: 35.36, lng: 24.47, beach: 4.0, hist: 4.5, night: 3.5, access: 3.5, afford: 4.0, overall: 3.9, zoom: 11, img: imgNature },
-        "heraklio": { name: "Heraklion (Crete)", lat: 35.33, lng: 25.13, beach: 3.0, hist: 5.0, night: 4.5, access: 5.0, afford: 4.0, overall: 4.3, zoom: 10, img: imgRuins },
-        "lasithi": { name: "Lasithi (Crete)", lat: 35.19, lng: 25.71, beach: 4.5, hist: 3.5, night: 2.5, access: 3.0, afford: 2.5, overall: 3.2, zoom: 10, img: imgBeach },
-        
-        // Lesvos with Guide
-        "lesvos": { 
-            name: "Lesvos (Mytilini)", lat: 39.2, lng: 26.2, beach: 3.5, hist: 4.0, night: 2.5, access: 3.0, afford: 4.5, overall: 3.6, zoom: 10, 
-            img: "https://images.unsplash.com/photo-1570535189332-902263b8296a?w=1200",
-            guide: `
-                <div class="guide-card">
-                    <h3>💡 Key facts (so you don’t mess this up)</h3>
-                    <ul>
-                        <li><strong>Car:</strong> Mandatory unless you stay in one village only. Public transport is unreliable and slow.</li>
-                        <li><strong>Island size:</strong> Large → you will drive a lot</li>
-                        <li><strong>Full loop (with stops):</strong> ~300–400 km for a proper trip</li>
-                        <li><strong>Strategy:</strong> either 1 base (more driving), or 2 bases (smarter)</li>
-                    </ul>
-                </div>
-                <h3>📅 3-DAY ITINERARY (tight but efficient)</h3>
-                <p><strong>Where to stay:</strong> Base: Petra or Molyvos (north) - Best combo of scenery + access + vibe</p>
-                <div class="itinerary-step"><strong>Day 1 — North highlights (easy start):</strong> Route: Mytilene → Petra → Molyvos (Drive: ~60 km / 1.5h). Land in Mytilene → pick up car. Drive north via coastal route. Stop at Mantamados (monastery) and Skala Sykamnias (tiny fishing village). Afternoon: Petra (church on rock) and Molyvos (castle + sunset). Sleep: Petra / Molyvos.</div>
-                <div class="itinerary-step"><strong>Day 2 — Beaches + hot springs:</strong> Driving loop: ~80–100 km. Morning: Eftalou hot springs (quick dip) and North beaches (Anaxos / Petra beach). Midday: Lunch seaside. Afternoon: Explore Molyvos properly (streets, castle). Optional: Chill beach day (don’t overplan).</div>
-                <div class="itinerary-step"><strong>Day 3 — Central + departure:</strong> Route: Petra → Kalloni → Mytilene (~70–90 km total). Stop at: Kalloni salt flats (bird area) and Skala Kallonis (lunch). Back to Mytilene: Castle and Harbor walk. Total driving (3 days): ~220–270 km. Very manageable.</div>
-                <h3>📅 5-DAY ITINERARY (the correct way to do Lesvos)</h3>
-                <p>Now you actually see the island properly.<br><strong>Where to stay (split):</strong> 2 nights: Petra/Molyvos (north) AND 2–3 nights: Skala Eressos OR Plomari (south/west). This reduces stupid backtracking.</p>
-                <div class="itinerary-step"><strong>Day 1 — Arrival + north coast:</strong> Same as 3-day Day 1. Mytilene → Petra/Molyvos (~60 km)</div>
-                <div class="itinerary-step"><strong>Day 2 — North deep dive:</strong> Molyvos castle + old town. Petra + beach. Eftalou hot springs. Optional hiking / boat trip.</div>
-                <div class="itinerary-step"><strong>Day 3 — Cross island (best drive):</strong> Route: North → West (Sigri / Eressos) ~120 km / 2.5–3h. Stops: Kalloni wetlands, Petrified Forest (Sigri – UNESCO geopark). Arrive Skala Eressos (best sunset beach on island). Sleep: Skala Eressos.</div>
-                <div class="itinerary-step"><strong>Day 4 — West + south (wild side):</strong> Driving: ~80–120 km. Options: Lazy beach day (Eressos is perfect) OR explore Vatera beach (longest beach), Plomari (ouzo capital), and Mountain village Agiassos.</div>
-                <div class="itinerary-step"><strong>Day 5 — Return to Mytilene:</strong> Route: South → Mytilene ~60–90 km. Stops: Olive museum / villages. Mytilene town (castle, food, cafés). Total driving (5 days): ~350–450 km. This is realistic for seeing the island properly.</div>
-                <div class="advice-box">
-                    <h3>⚠️ Blunt advice (important)</h3>
-                    <ul>
-                        <li>Don’t stay only in Mytilene → boring for holidays</li>
-                        <li>Don’t skip the west (Sigri/Eressos) → it’s the most unique part</li>
-                        <li>Don’t rely on buses → you’ll regret it within 24h</li>
-                        <li>Don’t overpack your days → distances look small, roads are slow</li>
-                    </ul>
-                </div>
-                <h3>📍 Best areas summarized</h3>
-                <ul>
-                    <li><strong>Molyvos/Petra:</strong> best overall base</li>
-                    <li><strong>Skala Eressos:</strong> best vibe + beach + chill</li>
-                    <li><strong>Plomari:</strong> more local, less polished</li>
-                    <li><strong>Mytilene:</strong> only for arrival/departure</li>
-                </ul>
-            `
-        },
-        
-        // The Remaining 48 Islands
-        "euboea": { name: "Euboea", lat: 38.5, lng: 24.0, beach: 3.5, hist: 3.0, night: 2.0, access: 5.0, afford: 4.5, overall: 3.6, zoom: 9, img: imgNature },
-        "rhodes": { name: "Rhodes", lat: 36.18, lng: 27.92, beach: 4.5, hist: 5.0, night: 4.5, access: 5.0, afford: 4.0, overall: 4.5, zoom: 10, img: imgTown },
-        "chios": { name: "Chios", lat: 38.4, lng: 26.1, beach: 3.5, hist: 4.0, night: 2.0, access: 3.5, afford: 4.5, overall: 3.6, zoom: 10, img: imgTown },
-        "kefalonia": { name: "Kefalonia", lat: 38.2, lng: 20.5, beach: 4.5, hist: 3.5, night: 3.0, access: 3.5, afford: 3.5, overall: 3.6, zoom: 10, img: imgBeach },
-        "corfu": { name: "Corfu", lat: 39.62, lng: 19.85, beach: 4.0, hist: 4.0, night: 4.0, access: 5.0, afford: 3.5, overall: 4.1, zoom: 10, img: imgTown },
-        "lemnos": { name: "Lemnos", lat: 39.9, lng: 25.2, beach: 3.0, hist: 2.5, night: 1.5, access: 3.0, afford: 4.5, overall: 3.1, zoom: 11, img: imgNature },
-        "samos": { name: "Samos", lat: 37.75, lng: 26.83, beach: 4.0, hist: 3.5, night: 3.0, access: 3.5, afford: 4.0, overall: 3.7, zoom: 11, img: imgNature },
-        "naxos": { name: "Naxos", lat: 37.10, lng: 25.48, beach: 4.5, hist: 4.0, night: 3.5, access: 4.0, afford: 4.0, overall: 4.0, zoom: 11, img: imgWhite },
-        "zakynthos": { name: "Zakynthos", lat: 37.78, lng: 20.89, beach: 4.5, hist: 2.5, night: 4.5, access: 4.5, afford: 3.0, overall: 3.8, zoom: 11, img: imgBeach },
-        "thasos": { name: "Thasos", lat: 40.7, lng: 24.6, beach: 4.0, hist: 3.0, night: 2.5, access: 4.0, afford: 4.0, overall: 3.6, zoom: 11, img: imgNature },
-        "andros": { name: "Andros", lat: 37.83, lng: 24.93, beach: 3.5, hist: 3.5, night: 2.0, access: 4.5, afford: 3.5, overall: 3.5, zoom: 11, img: imgWhite },
-        "lefkada": { name: "Lefkada", lat: 38.72, lng: 20.65, beach: 5.0, hist: 2.5, night: 3.5, access: 4.5, afford: 3.5, overall: 3.9, zoom: 11, img: imgBeach },
-        "karpathos": { name: "Karpathos", lat: 35.6, lng: 27.15, beach: 4.5, hist: 2.5, night: 1.5, access: 2.5, afford: 4.0, overall: 3.1, zoom: 11, img: imgNature },
-        "kos": { name: "Kos", lat: 36.88, lng: 27.28, beach: 4.0, hist: 3.5, night: 4.0, access: 5.0, afford: 3.5, overall: 4.0, zoom: 11, img: imgTown },
-        "kythira": { name: "Kythira", lat: 36.25, lng: 23.0, beach: 3.5, hist: 3.0, night: 1.5, access: 2.5, afford: 4.0, overall: 3.1, zoom: 11, img: imgRuins },
-        "ikaria": { name: "Ikaria", lat: 37.58, lng: 26.15, beach: 3.5, hist: 3.0, night: 2.5, access: 3.0, afford: 4.5, overall: 3.3, zoom: 11, img: imgNature },
-        "skyros": { name: "Skyros", lat: 38.86, lng: 24.54, beach: 3.0, hist: 2.5, night: 1.5, access: 2.5, afford: 4.0, overall: 2.9, zoom: 11, img: imgWhite },
-        "paros": { name: "Paros", lat: 37.05, lng: 25.18, beach: 4.5, hist: 3.5, night: 4.5, access: 4.5, afford: 3.0, overall: 4.0, zoom: 12, img: imgWhite },
-        "tinos": { name: "Tinos", lat: 37.58, lng: 25.13, beach: 3.5, hist: 4.5, night: 2.0, access: 4.5, afford: 3.5, overall: 3.6, zoom: 12, img: imgWhite },
-        "samothrace": { name: "Samothrace", lat: 40.47, lng: 25.58, beach: 3.0, hist: 3.5, night: 1.0, access: 2.5, afford: 4.0, overall: 2.8, zoom: 11, img: imgNature },
-        "milos": { name: "Milos", lat: 36.68, lng: 24.41, beach: 5.0, hist: 3.0, night: 3.5, access: 4.0, afford: 3.0, overall: 3.8, zoom: 12, img: imgBeach },
-        "kea": { name: "Kea", lat: 37.62, lng: 24.33, beach: 3.0, hist: 3.0, night: 1.5, access: 5.0, afford: 3.5, overall: 3.3, zoom: 12, img: imgWhite },
-        "amorgos": { name: "Amorgos", lat: 36.83, lng: 25.89, beach: 4.0, hist: 4.0, night: 2.0, access: 3.0, afford: 3.5, overall: 3.4, zoom: 12, img: imgWhite },
-        "kalymnos": { name: "Kalymnos", lat: 36.98, lng: 26.98, beach: 3.5, hist: 3.0, night: 2.0, access: 3.0, afford: 4.0, overall: 3.3, zoom: 12, img: imgNature },
-        "ios": { name: "Ios", lat: 36.72, lng: 25.28, beach: 4.0, hist: 2.5, night: 5.0, access: 4.5, afford: 3.0, overall: 3.8, zoom: 12, img: imgWhite },
-        "kythnos": { name: "Kythnos", lat: 37.38, lng: 24.42, beach: 3.5, hist: 2.5, night: 2.0, access: 4.5, afford: 3.5, overall: 3.3, zoom: 12, img: imgWhite },
-        "astypalaia": { name: "Astypalaia", lat: 36.56, lng: 26.35, beach: 4.0, hist: 3.0, night: 2.0, access: 3.0, afford: 3.5, overall: 3.3, zoom: 12, img: imgWhite },
-        "ithaca": { name: "Ithaca", lat: 38.41, lng: 20.66, beach: 4.0, hist: 3.5, night: 1.5, access: 3.0, afford: 3.5, overall: 3.3, zoom: 12, img: imgNature },
-        "salamis": { name: "Salamis", lat: 37.93, lng: 23.5, beach: 2.0, hist: 2.5, night: 1.5, access: 5.0, afford: 4.5, overall: 3.0, zoom: 12, img: imgTown },
-        "skopelos": { name: "Skopelos", lat: 39.12, lng: 23.72, beach: 4.0, hist: 3.0, night: 2.0, access: 3.5, afford: 3.5, overall: 3.3, zoom: 12, img: imgNature },
-        "mykonos": { name: "Mykonos", lat: 37.44, lng: 25.33, beach: 4.0, hist: 2.5, night: 5.0, access: 5.0, afford: 1.5, overall: 3.8, zoom: 13, img: imgWhite },
-        "syros": { name: "Syros", lat: 37.45, lng: 24.91, beach: 3.0, hist: 4.5, night: 3.0, access: 4.5, afford: 3.5, overall: 3.7, zoom: 12, img: imgTown },
-        "aegina": { name: "Aegina", lat: 37.74, lng: 23.49, beach: 2.5, hist: 3.5, night: 2.5, access: 5.0, afford: 3.5, overall: 3.4, zoom: 13, img: imgTown },
-        "santorini": { name: "Santorini", lat: 36.41, lng: 25.42, beach: 4.5, hist: 5.0, night: 4.5, access: 5.0, afford: 1.5, overall: 4.3, zoom: 13, img: imgWhite },
-        "serifos": { name: "Serifos", lat: 37.15, lng: 24.48, beach: 4.0, hist: 3.0, night: 2.0, access: 3.5, afford: 3.5, overall: 3.3, zoom: 13, img: imgWhite },
-        "sifnos": { name: "Sifnos", lat: 36.97, lng: 24.71, beach: 3.5, hist: 4.0, night: 2.5, access: 3.5, afford: 3.0, overall: 3.3, zoom: 13, img: imgWhite },
-        "kasos": { name: "Kasos", lat: 35.39, lng: 26.92, beach: 3.0, hist: 2.0, night: 1.0, access: 1.5, afford: 4.5, overall: 2.7, zoom: 13, img: imgNature },
-        "alonnisos": { name: "Alonnisos", lat: 39.21, lng: 23.91, beach: 4.0, hist: 2.5, night: 1.5, access: 3.0, afford: 3.5, overall: 3.1, zoom: 13, img: imgNature },
-        "tilos": { name: "Tilos", lat: 36.43, lng: 27.37, beach: 3.0, hist: 2.5, night: 1.0, access: 2.0, afford: 4.0, overall: 2.8, zoom: 13, img: imgNature },
-        "symi": { name: "Symi", lat: 36.6, lng: 27.83, beach: 3.5, hist: 3.5, night: 2.0, access: 3.0, afford: 3.0, overall: 3.0, zoom: 13, img: imgTown },
-        "leros": { name: "Leros", lat: 37.14, lng: 26.84, beach: 3.0, hist: 3.0, night: 2.0, access: 3.5, afford: 4.0, overall: 3.3, zoom: 13, img: imgTown },
-        "hydra": { name: "Hydra", lat: 37.33, lng: 23.46, beach: 2.5, hist: 4.5, night: 2.5, access: 4.5, afford: 2.5, overall: 3.2, zoom: 14, img: imgTown },
-        "skiathos": { name: "Skiathos", lat: 39.16, lng: 23.44, beach: 4.5, hist: 2.5, night: 4.5, access: 4.5, afford: 3.0, overall: 3.8, zoom: 12, img: imgBeach },
-        "agios_efstratios": { name: "Agios Efstratios", lat: 39.5, lng: 25.0, beach: 2.5, hist: 1.5, night: 1.0, access: 1.5, afford: 4.5, overall: 2.3, zoom: 13, img: imgNature },
-        "sikinos": { name: "Sikinos", lat: 36.68, lng: 25.11, beach: 3.5, hist: 2.5, night: 1.0, access: 2.5, afford: 3.5, overall: 2.8, zoom: 13, img: imgWhite },
-        "nisyros": { name: "Nisyros", lat: 36.58, lng: 27.16, beach: 3.5, hist: 3.5, night: 1.5, access: 2.5, afford: 3.5, overall: 3.0, zoom: 13, img: imgRuins },
-        "psara": { name: "Psara", lat: 38.5, lng: 25.6, beach: 2.5, hist: 2.0, night: 1.0, access: 1.5, afford: 4.5, overall: 2.3, zoom: 13, img: imgNature },
-        "anafi": { name: "Anafi", lat: 36.36, lng: 25.77, beach: 4.0, hist: 2.5, night: 1.0, access: 2.0, afford: 3.5, overall: 3.0, zoom: 13, img: imgWhite }
-    };
-
-    let mainMap, miniMap;
-    let markerLayerGroup; // Group to hold all markers for easy redraw
-    const markerStore = {}; // Store for search filtering
-    let currentMode = 'overall';
-
-    window.onload = function() {
-        document.getElementById('version-display').innerText = VERSION_ID;
-        initMap();
-    };
-
-    function initMap() {
-        const bounds = L.latLngBounds([34.0, 18.5], [42.0, 30.5]);
-        mainMap = L.map('main-map', { minZoom: 7, maxZoom: 12, maxBounds: bounds, maxBoundsViscosity: 1.0 }).setView([38.3, 24.5], 7);
-        L.tileLayer('https://tile.opentopomap.org/{z}/{x}/{y}.png').addTo(mainMap);
-        markerLayerGroup = L.layerGroup().addTo(mainMap);
-        renderMarkers();
-    }
-
-    function getColor(score) {
-        if (score >= 4.0) return "#27ae60"; 
-        if (score >= 3.5) return "#2ecc71"; 
-        if (score >= 3.0) return "#f1c40f"; 
-        return "#e67e22"; 
-    }
-
-    function updateTooltip(marker, data, currentScore) {
-        marker.bindTooltip(`
-            <div class="leaflet-tooltip-island">
-                <strong>${data.name}</strong><br>
-                <span>Rating: ${currentScore}</span>
-            </div>
-        `, { sticky: true });
-    }
-
-    function renderMarkers() {
-        // Clear old markers completely to switch between Circles and Stars
-        markerLayerGroup.clearLayers();
-        
-        // Custom Star Icon setup
-        const starIcon = L.divIcon({
-            html: '<div style="font-size: 22px; color: #ffcc00; text-shadow: 1px 1px 3px #000;">⭐</div>',
-            className: 'star-icon',
-            iconSize: [24, 24],
-            iconAnchor: [12, 12]
-        });
-
-        Object.keys(islandData).forEach(id => {
-            const d = islandData[id];
-            const score = (currentMode === 'overall') ? d.overall : d[currentMode];
-            let marker;
-            
-            // THE STAR LOGIC
-            if (score >= 4.0) {
-                marker = L.marker([d.lat, d.lng], { icon: starIcon });
-            } else {
-                marker = L.circleMarker([d.lat, d.lng], { 
-                    radius: 10, fillColor: getColor(score), color: "#fff", weight: 2, fillOpacity: 0.95 
-                });
-            }
-
-            marker.addTo(markerLayerGroup);
-            updateTooltip(marker, d, score);
-            marker.on('click', () => showDetail(id));
-            markerStore[id] = { marker, data: d, isStar: (score >= 4.0) };
-        });
-    }
-
-    function updateMapMode(mode) {
-        showHome(); 
-        currentMode = mode;
-        document.querySelectorAll('.vibe-chip').forEach(el => el.classList.remove('active'));
-        document.getElementById('btn-' + mode).classList.add('active');
-        
-        const titles = {overall: 'Best Overall', beach: 'Beach Lovers', hist: 'Culture Buffs', night: 'Party Animals', access: 'Accessibility', afford: 'Affordability'};
-        document.getElementById('legend-title').innerText = titles[mode];
-
-        // We re-render to turn dots into stars (or stars into dots) based on the new metric
-        renderMarkers();
-        filterIslands(); // Re-apply search filter if user had one typed in
-    }
-
-    function showDetail(id) {
-        const d = islandData[id];
-        document.getElementById('home-view').style.display = 'none';
-        document.getElementById('detail-view').style.display = 'block';
-        window.scrollTo(0,0);
-        
-        document.getElementById('island-name').innerText = d.name;
-        document.getElementById('island-total-score').innerText = d.overall;
-        document.getElementById('island-pic').src = d.img;
-        document.getElementById('island-guide').innerHTML = d.guide || "";
-        
-        setStars('star-beach', d.beach); 
-        setStars('star-hist', d.hist); 
-        setStars('star-night', d.night); 
-        setStars('star-access', d.access); 
-        setStars('star-afford', d.afford);
-        
-        // Mini Map generation (Now at the top of the detail view)
-        if (miniMap) miniMap.remove();
-        miniMap = L.map('island-mini-map', { zoomControl: false, scrollWheelZoom: false }).setView([d.lat, d.lng], d.zoom || 11);
-        L.tileLayer('https://tile.opentopomap.org/{z}/{x}/{y}.png').addTo(miniMap);
-        L.marker([d.lat, d.lng]).addTo(miniMap);
-    }
-
-    function setStars(id, val) { document.getElementById(id).style.width = (val / 5 * 100) + "%"; }
-    function showHome() { document.getElementById('home-view').style.display = 'block'; document.getElementById('detail-view').style.display = 'none'; if(mainMap) setTimeout(() => mainMap.invalidateSize(), 200); }
-    
-    function filterIslands() {
-        const q = document.getElementById('islandSearch').value.toLowerCase();
-        Object.keys(markerStore).forEach(k => {
-            const m = markerStore[k].data.name.toLowerCase().includes(q);
-            const item = markerStore[k];
-            
-            // Different opacity methods for Circle vs DivIcon
-            if (item.isStar) {
-                item.marker.setOpacity(m ? 1 : 0.1);
-            } else {
-                item.marker.setStyle({ opacity: m ? 1 : 0.1, fillOpacity: m ? 0.95 : 0.1 });
-            }
-        });
-    }
-</script>
+<footer>&copy; 2026 Greek Island Odyssey | Powered by JSON Architecture</footer>
 
 </body>
 </html>
