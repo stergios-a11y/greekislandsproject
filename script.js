@@ -1,4 +1,4 @@
-const VERSION_ID = "v15.2 - Bulletproof Map & Lazy Loading";
+const VERSION_ID = "v16.0 - Big Warning Banner";
 
 let mainMap, miniMap;
 let markerLayerGroup; 
@@ -7,26 +7,26 @@ let currentMode = 'overall';
 let islandData = {}; 
 
 window.onload = function() {
-    // 1. Update the version number in the footer if it exists
+    // 1. Update the version number in the footer
     const versionEl = document.getElementById('version-display');
     if (versionEl) versionEl.innerText = VERSION_ID;
 
-    // 2. DRAW THE MAP FIRST (So the screen never goes blank)
+    // 2. DRAW THE MAP FIRST
     initMap();
 
     // 3. FETCH THE MAP DATA
     fetch('map_data.json?v=' + new Date().getTime())
         .then(response => {
-            if (!response.ok) throw new Error("Could not find map_data.json. Did you name it correctly?");
+            if (!response.ok) throw new Error("Could not find map_data.json.");
             return response.json();
         })
         .then(data => {
             islandData = data;
-            renderMarkers(); // Draw the dots and stars once data is secure
+            renderMarkers(); 
         })
         .catch(error => {
             console.error(error);
-            alert("CRITICAL ERROR: Cannot find your map_data.json file! Please check the exact spelling of the file in GitHub.");
+            alert("CRITICAL ERROR: Cannot find your map_data.json file!");
         });
 };
 
@@ -107,23 +107,30 @@ function showDetail(id) {
     window.scrollTo(0,0);
     document.getElementById('island-name').innerText = d_base.name + " (Loading...)";
     
-    // Fetch the specific island file (e.g., islands/lesvos.json)
+    // Fetch the specific island file
     fetch(`islands/${id}.json?v=` + new Date().getTime())
         .then(res => {
             if (!res.ok) throw new Error("Island details not found yet");
             return res.json();
         })
         .then(d_detail => {
-            // Combine the map coordinates with the heavy text
+            // Combine map data with the full guide text
             const d = Object.assign({}, d_base, d_detail);
             renderDetailView(d);
         })
         .catch(err => {
             console.log(err);
-            // Fallback: If you haven't made the file yet, don't crash. Show a placeholder.
+            // FALLBACK SAFETY NET: Shows a massive yellow banner instead of crashing
             const fallbackData = Object.assign({}, d_base, {
                 img: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=1200",
-                guide: "<p style='margin-top:20px; font-style:italic;'>Detailed guide coming soon! Create <code>islands/" + id + ".json</code> to add data.</p>",
+                guide: `
+                    <div style="background-color: #fff3cd; padding: 20px; border-radius: 8px; text-align: center; margin: 20px 0; border: 2px dashed #ffc107;">
+                        <h2 style="color: #856404; margin: 0;">🚧 Guide Coming Soon 🚧</h2>
+                        <p style="color: #856404; margin-top: 10px; font-weight: bold;">
+                            We haven't created the specific data file for ${d_base.name} yet!
+                        </p>
+                    </div>
+                `,
                 itinerary: []
             });
             renderDetailView(fallbackData);
