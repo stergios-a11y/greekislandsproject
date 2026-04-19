@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greek Island Odyssey | The Top 50</title>
+    <title>Greek Island Odyssey | 5-Star Reviews</title>
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 
     <style>
-        :root { --greek-blue: #005BAE; --white: #ffffff; --sand: #fdf5e6; --accent: #ff7f50; --teal: #20B2AA; }
+        :root { --greek-blue: #005BAE; --sand: #fdf5e6; --accent: #ff7f50; --star-gold: #ffcc00; }
         body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-serif; background: var(--sand); }
         header { background: var(--greek-blue); color: white; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 2000; }
         #islandSearch { width: 100%; max-width: 400px; padding: 12px; border-radius: 25px; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.1); outline: none; }
@@ -17,17 +17,18 @@
         #home-view { height: calc(100vh - 130px); width: 100%; }
         #main-map { height: 100%; width: 100%; background: #c5e7ff; }
 
-        #detail-view { display: none; padding: 2rem; max-width: 900px; margin: 30px auto; background: white; border-radius: 25px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
-        .hero-img { width: 100%; height: 350px; object-fit: cover; border-radius: 20px; margin-bottom: 20px; }
-        
-        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin: 20px 0; }
-        .info-card { padding: 12px; border-radius: 10px; background: #f8f9fa; border-bottom: 3px solid var(--greek-blue); }
-        
-        .bar-bg { background: #eee; height: 12px; border-radius: 6px; margin: 8px 0 15px; overflow: hidden; }
-        .bar-fill { height: 100%; background: var(--greek-blue); width: 0%; transition: width 1s ease-out; }
-        
+        #detail-view { display: none; padding: 2rem; max-width: 850px; margin: 30px auto; background: white; border-radius: 25px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
         .back-btn { background: var(--accent); color: white; border: none; padding: 10px 25px; border-radius: 30px; cursor: pointer; font-weight: bold; margin-bottom: 20px; }
-        #island-mini-map { width: 100%; height: 300px; border-radius: 15px; margin: 20px 0; }
+
+        /* Star Rating Styles */
+        .rating-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; }
+        .stars-outer { position: relative; display: inline-block; font-size: 24px; color: #ccc; }
+        .stars-inner { position: absolute; top: 0; left: 0; white-space: nowrap; overflow: hidden; width: 0; color: var(--star-gold); }
+        .stars-outer::before { content: "★★★★★"; }
+        .stars-inner::before { content: "★★★★★"; }
+
+        .hero-img { width: 100%; height: 300px; object-fit: cover; border-radius: 20px; margin-bottom: 20px; }
+        #island-mini-map { width: 100%; height: 250px; border-radius: 15px; margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -44,48 +45,109 @@
 <div id="detail-view">
     <button class="back-btn" onclick="showHome()">← Back to Map</button>
     <div style="display:flex; justify-content:space-between; align-items: baseline;">
-        <h1 id="island-name" style="color:var(--greek-blue); font-size: 3rem; margin:0;"></h1>
+        <h1 id="island-name" style="color:var(--greek-blue); font-size: 2.5rem; margin:0;"></h1>
         <h2 id="island-greek" style="color:#aaa; font-weight:normal;"></h2>
     </div>
-    <p id="island-cluster" style="color:var(--teal); font-weight:bold; text-transform:uppercase; letter-spacing:1px;"></p>
 
     <img id="island-img" class="hero-img" src="" alt="Island">
 
-    <div class="info-grid">
-        <div class="info-card"><strong>📏 Area:</strong><br><span id="island-size"></span></div>
-        <div class="info-card"><strong>🏘️ Cluster:</strong><br><span id="island-cluster-text"></span></div>
-        <div class="info-card"><strong>🏛️ Best For:</strong><br><span id="island-vibe"></span></div>
+    <div style="background: #fdfaf0; padding: 20px; border-radius: 15px;">
+        <h3 style="margin-top:0;">Travel Ratings</h3>
+        
+        <div class="rating-row">
+            <span>🏖️ Beach Quality</span>
+            <div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div>
+        </div>
+        <div class="rating-row">
+            <span>🏗️ Infrastructure</span>
+            <div class="stars-outer"><div id="star-infra" class="stars-inner"></div></div>
+        </div>
+        <div class="rating-row">
+            <span>🏛️ History & Culture</span>
+            <div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div>
+        </div>
+        <div class="rating-row">
+            <span>🍷 Nightlife</span>
+            <div class="stars-outer"><div id="star-night" class="stars-inner"></div></div>
+        </div>
     </div>
 
-    <strong>🏖️ Travel Appeal</strong>
-    <div class="bar-bg"><div id="beach-bar" class="bar-fill"></div></div>
-
     <div id="island-mini-map"></div>
-    <p id="island-desc" style="line-height:1.8; color:#444; font-size:1.1rem;"></p>
 </div>
 
 <script>
+    // DATA: Ratings are now out of 5 (Supports halves like 4.5)
     const islandData = {
-        "crete": { name: "Crete", greek: "Κρήτη", size: "8,336 km²", cluster: "Chetan", lat: 35.15, lng: 24.8, vibe: "History & Nature", img: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800" },
-        "euboea": { name: "Euboea", greek: "Εύβοια", size: "3,670 km²", cluster: "Euboean", lat: 38.5, lng: 24.0, vibe: "Thermal Baths", img: "https://images.unsplash.com/photo-1629115910390-e7f017409249?w=800" },
-        "lesbos": { name: "Lesbos", greek: "Λέσβος", size: "1,633 km²", cluster: "North Aegean", lat: 39.2, lng: 26.2, vibe: "Ouzo & Culture", img: "https://images.unsplash.com/photo-1570535189332-902263b8296a?w=800" },
-        "rhodes": { name: "Rhodes", greek: "Ρόδος", size: "1,401 km²", cluster: "Dodecanese", lat: 36.18, lng: 27.92, vibe: "Medieval History", img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800" },
-        "chios": { name: "Chios", greek: "Χίος", size: "842 km²", cluster: "North Aegean", lat: 38.4, lng: 26.1, vibe: "Mastic Villages", img: "https://images.unsplash.com/photo-1632731885406-8d1979261a86?w=800" },
-        "kefalonia": { name: "Kefalonia", greek: "Κεφαλονιά", size: "781 km²", cluster: "Ionian Islands", lat: 38.2, lng: 20.5, vibe: "Exotic Beaches", img: "https://images.unsplash.com/photo-1514330101481-897587823f33?w=800" },
-        "corfu": { name: "Corfu", greek: "Κέρκυρα", size: "592 km²", cluster: "Ionian Islands", lat: 39.62, lng: 19.85, vibe: "Venetian Style", img: "https://images.unsplash.com/photo-1555353540-64580b51c258?w=800" },
-        "lemnos": { name: "Lemnos", greek: "Λήμνος", size: "477 km²", cluster: "North Aegean", lat: 39.9, lng: 25.2, vibe: "Volcanic Plains", img: "https://images.unsplash.com/photo-1598442308119-9f93933c1626?w=800" },
-        "samos": { name: "Samos", greek: "Σάμος", size: "477 km²", cluster: "North Aegean", lat: 37.75, lng: 26.83, vibe: "Wine & Hiking", img: "https://images.unsplash.com/photo-1628135805527-3725f190e227?w=800" },
-        "naxos": { name: "Naxos", greek: "Νάξος", size: "429 km²", cluster: "Cyclades", lat: 37.10, lng: 25.48, vibe: "Sandy Beaches", img: "https://images.unsplash.com/photo-1550966840-349f7e8a9394?w=800" },
-        "zakynthos": { name: "Zakynthos", greek: "Ζάκυνθος", size: "406 km²", cluster: "Ionian Islands", lat: 37.78, lng: 20.89, vibe: "Shipwreck Bay", img: "https://images.unsplash.com/photo-1588713020668-3e42103f6f1c?w=800" },
-        "thasos": { name: "Thasos", greek: "Θάσος", size: "380 km²", cluster: "North Aegean", lat: 40.7, lng: 24.6, vibe: "Green Forests", img: "https://images.unsplash.com/photo-1596700772297-c79364977467?w=800" },
-        "andros": { name: "Andros", greek: "Άνδρος", size: "380 km²", cluster: "Cyclades", lat: 37.83, lng: 24.93, vibe: "Grand Architecture", img: "https://images.unsplash.com/photo-1627444154466-2895f5145749?w=800" },
-        "lefkada": { name: "Lefkada", greek: "Λευκάδα", size: "303 km²", cluster: "Ionian Islands", lat: 38.72, lng: 20.65, vibe: "Water Sports", img: "https://images.unsplash.com/photo-1587635235552-3ba983059432?w=800" },
-        "karpathos": { name: "Karpathos", greek: "Κάρπαθος", size: "300 km²", cluster: "Dodecanese", lat: 35.60, lng: 27.15, vibe: "Wild Traditions", img: "https://images.unsplash.com/photo-1632731388052-16987e9ec86b?w=800" },
-        "kos": { name: "Kos", greek: "Κως", size: "290 km²", cluster: "Dodecanese", lat: 36.88, lng: 27.28, vibe: "Cycling & History", img: "https://images.unsplash.com/photo-1558231018-97f2674e7978?w=800" },
-        "kythira": { name: "Kythira", greek: "Κύθηρα", size: "279 km²", cluster: "Ionian Islands", lat: 36.25, lng: 23.00, vibe: "Quiet Charm", img: "https://images.unsplash.com/photo-1584988406569-808600862088?w=800" },
-        "ikaria": { name: "Ikaria", greek: "Ικαρία", size: "255 km²", cluster: "North Aegean", lat: 37.58, lng: 26.15, vibe: "Longevity", img: "https://images.unsplash.com/photo-1622340331003-875630664f33?w=800" },
-        "skyros": { name: "Skyros", greek: "Σκύρος", size: "209 km²", cluster: "Sporades", lat: 38.86, lng: 24.54, vibe: "Ponies & Crafts", img: "https://images.unsplash.com/photo-1601673322137-b64ec02c1f03?w=800" },
-        "paros": { name: "Paros", greek: "Πάρος", size: "195 km²", cluster: "Cyclades", lat: 37.05, lng: 25.18, vibe: "Trendy Vibe", img: "https://images.unsplash.com/photo-1590059005707-16058869f379?w=800" },
-        "tinos": { name: "Tinos", greek: "Τήνος", size: "194 km²", cluster: "Cyclades", lat: 37.58, lng: 25.13, vibe: "Marble Arts", img: "https://images.unsplash.com/photo-1627443183592-33068e833446?w=800" },
-        "samothrace": { name: "Samothrace", greek: "Σαμοθράκη", size: "178 km²", cluster: "North Aegean", lat: 40.47, lng: 25.58, vibe: "Waterfalls", img: "https://images.unsplash.com/photo-1628135805527-3725f190e227?w=800" },
-        "milos": { name: "Milos", greek: "Μήλος", size: "151 km²", cluster: "Cyclades", lat: 36.68, lng: 24.41, vibe: "Lunar Rock", img: "
+        "lesvos": { name: "Lesvos", greek: "Λέσβος", lat: 39.2, lng: 26.2, img: "https://images.unsplash.com/photo-1570535189332-902263b8296a?w=800", beach: 4.0, infra: 3.5, hist: 5.0, night: 3.0 },
+        "crete": { name: "Crete", greek: "Κρήτη", lat: 35.15, lng: 24.8, img: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800", beach: 5.0, infra: 4.5, hist: 5.0, night: 4.0 },
+        "santorini": { name: "Santorini", greek: "Σαντορίνη", lat: 36.41, lng: 25.42, img: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800", beach: 3.5, infra: 5.0, hist: 4.5, night: 4.5 },
+        "corfu": { name: "Corfu", greek: "Κέρκυρα", lat: 39.62, lng: 19.85, img: "https://images.unsplash.com/photo-1555353540-64580b51c258?w=800", beach: 4.0, infra: 4.0, hist: 4.5, night: 4.5 },
+        "mykonos": { name: "Mykonos", greek: "Μύκονος", lat: 37.44, lng: 25.33, img: "https://images.unsplash.com/photo-1574221160356-91e813f36070?w=800", beach: 4.5, infra: 4.5, hist: 3.0, night: 5.0 },
+        "naxos": { name: "Naxos", greek: "Νάξος", lat: 37.10, lng: 25.48, img: "https://images.unsplash.com/photo-1550966840-349f7e8a9394?w=800", beach: 5.0, infra: 3.5, hist: 4.5, night: 3.5 }
+        // ... (Add others following this format: beach: X, infra: X, hist: X, night: X)
+    };
+
+    let mainMap;
+    const markerStore = {};
+
+    window.onload = function() {
+        mainMap = L.map('main-map').setView([38.3, 24.5], 7);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png').addTo(mainMap);
+
+        Object.keys(islandData).forEach(key => {
+            const d = islandData[key];
+            const marker = L.circleMarker([d.lat, d.lng], {
+                radius: 11, fillColor: "#005BAE", color: "#fff", weight: 2, fillOpacity: 0.95
+            }).addTo(mainMap);
+
+            marker.on('click', () => showDetail(key));
+            markerStore[key] = { marker, name: d.name.toLowerCase(), greek: d.greek };
+        });
+    };
+
+    function filterIslands() {
+        const query = document.getElementById('islandSearch').value.toLowerCase();
+        Object.keys(markerStore).forEach(key => {
+            const item = markerStore[key];
+            const match = item.name.includes(query) || item.greek.includes(query);
+            item.marker.setStyle({ opacity: match ? 1 : 0.1, fillOpacity: match ? 0.95 : 0.1 });
+        });
+    }
+
+    function setStars(elementId, rating) {
+        // Converts a 0-5 rating to a percentage for the star width
+        const starPercentage = (rating / 5) * 100;
+        document.getElementById(elementId).style.width = starPercentage + "%";
+    }
+
+    let miniMap = null;
+    function showDetail(id) {
+        const data = islandData[id];
+        document.getElementById('home-view').style.display = 'none';
+        document.getElementById('detail-view').style.display = 'block';
+        window.scrollTo(0,0);
+
+        document.getElementById('island-name').innerText = data.name;
+        document.getElementById('island-greek').innerText = data.greek;
+        document.getElementById('island-img').src = data.img;
+
+        // Set the Stars
+        setStars('star-beach', data.beach || 0);
+        setStars('star-infra', data.infra || 0);
+        setStars('star-hist', data.hist || 0);
+        setStars('star-night', data.night || 0);
+
+        if (miniMap) miniMap.remove();
+        miniMap = L.map('island-mini-map', { zoomControl: false }).setView([data.lat, data.lng], 11);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png').addTo(miniMap);
+    }
+
+    function showHome() {
+        document.getElementById('home-view').style.display = 'block';
+        document.getElementById('detail-view').style.display = 'none';
+        mainMap.invalidateSize();
+    }
+</script>
+
+</body>
+</html>
