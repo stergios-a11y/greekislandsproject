@@ -53,17 +53,28 @@ function updateTooltip(marker, data, currentScore) {
 function renderMarkers() {
     markerLayerGroup.clearLayers();
     
+    // UPGRADED STAR: Larger font, heavy black shadow for massive contrast
     const starIcon = L.divIcon({
-        html: '<div style="font-size: 22px; color: #ffcc00; text-shadow: 1px 1px 3px #000;">⭐</div>',
-        className: 'star-icon', iconSize: [24, 24], iconAnchor: [12, 12]
+        html: '<div style="font-size: 28px; color: #ffcc00; text-shadow: 2px 2px 5px rgba(0,0,0,0.8);">⭐</div>',
+        className: 'star-icon', 
+        iconSize: [30, 30], 
+        iconAnchor: [15, 15] // Keeps the star perfectly centered on the coordinates
     });
 
     Object.keys(islandData).forEach(id => {
         const d = islandData[id];
         const score = (currentMode === 'overall') ? d.overall : d[currentMode];
+        
+        // UPGRADED DOTS: Larger radius, dark grey border instead of white, fully opaque
         let marker = (score >= 4.0) 
             ? L.marker([d.lat, d.lng], { icon: starIcon }) 
-            : L.circleMarker([d.lat, d.lng], { radius: 10, fillColor: getColor(score), color: "#fff", weight: 2, fillOpacity: 0.95 });
+            : L.circleMarker([d.lat, d.lng], { 
+                radius: 12, 
+                fillColor: getColor(score), 
+                color: "#2c3e50", // Dark slate border for high contrast
+                weight: 3,        // Thicker border
+                fillOpacity: 1.0 
+            });
 
         marker.addTo(markerLayerGroup);
         updateTooltip(marker, d, score);
