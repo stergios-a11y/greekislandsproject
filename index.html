@@ -3,154 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aegean Explorer - Find Your Island</title>
+    <title>Greek Island Odyssey | Discovery Engine</title>
     
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 
     <style>
         :root {
             --greek-blue: #005BAE;
-            --aegean-teal: #20B2AA;
             --white: #ffffff;
-            --soft-gray: #f4f7f6;
+            --sand: #fdf5e6;
+            --accent: #ff7f50; /* Coral accent */
+            --teal: #20B2AA;
         }
 
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--soft-gray); margin: 0; overflow-x: hidden; }
-        
-        #header { background: var(--greek-blue); color: white; padding: 20px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--sand); overflow-x: hidden; }
 
-        /* Map Container */
-        #main-view { padding: 40px; text-align: center; transition: opacity 0.5s; }
-        
-        svg { background: #e0f2ff; border-radius: 15px; box-shadow: inset 0 0 50px rgba(0,91,174,0.1); }
-        
-        .island { fill: #2dcc70; stroke: #fff; stroke-width: 1.5; cursor: pointer; transition: all 0.3s; }
-        .island:hover { fill: #27ae60; transform: scale(1.05); filter: drop-shadow(0 0 8px rgba(0,0,0,0.3)); }
-
-        /* Hover Popup */
-        #popup {
-            position: absolute; display: none; background: white; padding: 15px; border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2); pointer-events: none; text-align: left; z-index: 1000; width: 200px;
+        header { 
+            background: var(--greek-blue); color: white; padding: 15px 20px; 
+            text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: sticky; top: 0; z-index: 2000;
         }
-        .island-name { font-weight: bold; font-size: 1.2em; color: var(--greek-blue); margin-bottom: 10px; display: block; }
-        .stat-label { font-size: 0.8em; color: #666; margin-top: 5px; display: block; }
-        .stat-bar { height: 6px; background: #eee; border-radius: 3px; overflow: hidden; margin-bottom: 10px; }
-        .stat-fill { height: 100%; background: var(--aegean-teal); transition: width 0.5s ease-out; }
 
-        /* Detailed View */
-        #detail-view { display: none; padding: 20px; text-align: center; }
-        #leaflet-map { width: 90%; height: 600px; margin: 20px auto; border-radius: 15px; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .back-btn { background: var(--greek-blue); color: white; border: none; padding: 12px 25px; border-radius: 25px; cursor: pointer; font-size: 1em; transition: 0.3s; }
-        .back-btn:hover { background: #004080; }
+        .search-container { margin: 10px auto; max-width: 450px; }
+        #islandSearch {
+            width: 100%; padding: 12px 25px; border-radius: 30px; border: none; outline: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); font-size: 1rem;
+        }
+
+        /* HOME VIEW (MAP) */
+        #home-view { height: calc(100vh - 130px); width: 100%; display: block; }
+        #main-map { height: 100%; width: 100%; background: #c5e7ff; }
+
+        /* DETAIL VIEW (ISLAND PAGE) */
+        #detail-view { 
+            display: none; padding: 2rem; max-width: 900px; margin: 30px auto; 
+            background: white; border-radius: 25px; min-height: 80vh; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .hero-img { width: 100%; height: 400px; object-fit: cover; border-radius: 20px; margin: 20px 0; box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 25px 0; }
+        .info-card { padding: 15px; border-radius: 12px; background: #f8f9fa; border-top: 4px solid var(--greek-blue); }
+
+        .rating-section { margin: 30px 0; }
+        .bar-bg { background: #eee; height: 14px; border-radius: 7px; margin: 8px 0 20px; overflow: hidden; }
+        .bar-fill { height: 100%; background: var(--greek-blue); width: 0%; transition: width 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+
+        .highlights-box { border-left: 5px solid var(--accent); padding-left: 20px; margin-top: 30px; background: #fffcf9; padding: 20px; border-radius: 0 15px 15px 0; }
+
+        .back-btn { 
+            background: var(--accent); color: white; border: none; padding: 12px 35px; 
+            border-radius: 50px; cursor: pointer; font-weight: bold; margin-bottom: 25px; transition: 0.3s;
+        }
+        .back-btn:hover { background: #e06a3d; transform: scale(1.05); }
+
+        #island-mini-map { width: 100%; height: 300px; border-radius: 15px; margin: 20px 0; border: 1px solid #ddd; }
     </style>
 </head>
 <body>
 
-    <div id="header">
-        <h1>Aegean Explorer</h1>
-        <p>Discover the magic of the Greek Islands</p>
+<header>
+    <h1 style="margin:0; font-size: 1.8rem;">Aegean Explorer 🏝️</h1>
+    <div class="search-container">
+        <input type="text" id="islandSearch" placeholder="Where do you want to go? (e.g. Lesvos, Crete...)" onkeyup="filterIslands()">
+    </div>
+</header>
+
+<div id="home-view">
+    <div id="main-map"></div>
+</div>
+
+<div id="detail-view">
+    <button class="back-btn" onclick="showHome()">← Back to Greece Map</button>
+    <h1 id="island-name" style="color:var(--greek-blue); font-size: 3.5rem; margin:0;"></h1>
+    <p id="island-tagline" style="font-style:italic; color:#666; font-size:1.4rem; margin-top:5px;"></p>
+
+    <img id="island-img" class="hero-img" src="" alt="Island View">
+
+    <div class="info-grid">
+        <div class="info-card"><strong>👥 Population:</strong><br><span id="island-pop"></span></div>
+        <div class="info-card"><strong>📏 Size:</strong><br><span id="island-size"></span></div>
+        <div class="info-card"><strong>🥃 Famous For:</strong><br><span id="island-fame"></span></div>
     </div>
 
-    <div id="main-view">
-        <div style="position: relative; display: inline-block;">
-            <svg viewBox="0 0 800 600" width="800" height="600">
-                <rect width="800" height="600" fill="#e0f2ff" rx="15" />
-                
-                <path id="lesvos" class="island" d="M600,120 L640,110 L660,140 L640,180 L600,170 Z" />
-                <text x="615" y="150" font-size="12" fill="white" pointer-events="none">Lesvos</text>
-
-                <path id="crete" class="island" d="M300,500 L600,500 L580,540 L320,540 Z" />
-                <text x="430" y="525" font-size="12" fill="white" pointer-events="none">Crete</text>
-
-                <path id="rhodes" class="island" d="M680,400 L710,430 L690,460 L660,430 Z" />
-                
-                <circle id="santorini" class="island" cx="480" cy="380" r="12" />
-                <circle id="mykonos" class="island" cx="490" cy="300" r="10" />
-            </svg>
-
-            <div id="popup">
-                <span id="p-name" class="island-name">Island</span>
-                <span class="stat-label">Beaches</span>
-                <div class="stat-bar"><div id="p-beach" class="stat-fill"></div></div>
-                <span class="stat-label">Nightlife</span>
-                <div class="stat-bar"><div id="p-party" class="stat-fill"></div></div>
-                <span class="stat-label">Activities</span>
-                <div class="stat-bar"><div id="p-act" class="stat-fill"></div></div>
-                <small style="color:#999 italic">Click to explore map</small>
-            </div>
-        </div>
+    <div class="rating-section">
+        <strong>🏖️ Beach Quality</strong>
+        <div class="bar-bg"><div id="beach-bar" class="bar-fill"></div></div>
+        <strong>🏛️ History & Culture</strong>
+        <div class="bar-bg"><div id="act-bar" class="bar-fill" style="background:var(--teal);"></div></div>
     </div>
 
-    <div id="detail-view">
-        <button class="back-btn" onclick="showMainMap()">← Back to Greece Map</button>
-        <h2 id="detail-title" style="color: var(--greek-blue); margin-top: 20px;">Exploring Lesvos</h2>
-        <div id="leaflet-map"></div>
+    <div id="island-mini-map"></div>
+
+    <div class="highlights-box">
+        <p><strong>🏘️ Key Villages:</strong> <span id="island-villages"></span></p>
+        <p><strong>✨ Highlights:</strong> <span id="island-highlights"></span></p>
+        <p><strong>🥗 Local Tastes:</strong> <span id="island-food"></span></p>
     </div>
 
-    <script>
-        const islandData = {
-            "lesvos": { name: "Lesvos", beach: 85, party: 60, act: 95, lat: 39.2, lng: 26.2 },
-            "crete": { name: "Crete", beach: 95, party: 75, act: 90, lat: 35.2, lng: 24.8 },
-            "santorini": { name: "Santorini", beach: 65, party: 85, act: 80, lat: 36.3, lng: 25.4 },
-            "mykonos": { name: "Mykonos", beach: 85, party: 100, act: 50, lat: 37.4, lng: 25.3 },
-            "rhodes": { name: "Rhodes", beach: 88, party: 80, act: 85, lat: 36.2, lng: 27.9 }
-        };
+    <h3 style="margin-top:40px;">Deep Dive</h3>
+    <div id="island-desc" style="line-height:1.8; color:#333; font-size:1.15rem;"></div>
+</div>
 
-        const popup = document.getElementById('popup');
-        let activeMap = null;
+<script>
+    // 1. THE DATA ENGINE
+    const islandData = {
+        "lesvos": { 
+            name: "Lesvos", 
+            tagline: "The Emerald of the Northeast Aegean",
+            b: 85, a: 98, lat: 39.2, lng: 26.2,
+            pop: "83,000", size: "1,633 km²", fame: "World-Class Ouzo",
+            villages: "Mytilene, Molyvos, Plomari, and Agiassos.",
+            highlights: "Petrified Forest, Roman Aqueduct, and Salt Pans (Bird Watching).",
+            food: "Sardines from Kalloni, Ladotyri Cheese, and Premium Olive Oil.",
+            desc: "Lesvos is a mini-continent. From the lush east to the volcanic west, it offers an authentic experience. It is the birthplace of Sappho and remains the undisputed capital of Ouzo culture.",
+            img: "https://images.unsplash.com/photo-1570535189332-902263b8296a?auto=format&fit=crop&w=1000&q=80"
+        },
+        "crete": { 
+            name: "Crete", tagline: "The Island of the Gods",
+            b: 95, a: 100, lat: 35.2, lng: 24.8,
+            pop: "630,000", size: "8,336 km²", fame: "Minoan Civilization",
+            villages: "Chania, Rethymno, Heraklion.", highlights: "Knossos Palace, Samaria Gorge.", food: "Dakos, Raki, Kalitsounia.",
+            desc: "The largest Greek island, offering high mountains and pink sand beaches.",
+            img: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1000&q=80"
+        },
+        "santorini": { 
+            name: "Santorini", tagline: "Volcanic Sunsets",
+            b: 65, a: 95, lat: 36.4, lng: 25.4,
+            pop: "15,500", size: "76 km²", fame: "The Blue Domes",
+            villages: "Oia, Fira, Imerovigli.", highlights: "Caldera Walk, Ammoudi Bay.", food: "Fava, Tomato Keftedes, Assyrtiko Wine.",
+            desc: "One of the most iconic views in the world, built on a dormant volcano.",
+            img: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1000&q=80"
+        }
+        // ADD MORE ISLANDS HERE FOLLOWING THE LESVOS PATTERN!
+    };
 
-        // Hover Logic
-        document.querySelectorAll('.island').forEach(el => {
-            el.addEventListener('mousemove', (e) => {
-                const info = islandData[el.id];
-                if(!info) return;
+    let mainMap;
+    const markerStore = {};
 
-                document.getElementById('p-name').innerText = info.name;
-                document.getElementById('p-beach').style.width = info.beach + '%';
-                document.getElementById('p-party').style.width = info.party + '%';
-                document.getElementById('p-act').style.width = info.act + '%';
-
-                popup.style.display = 'block';
-                popup.style.left = (e.pageX + 20) + 'px';
-                popup.style.top = (e.pageY + 20) + 'px';
-            });
-
-            el.addEventListener('mouseleave', () => popup.style.display = 'none');
-            
-            el.addEventListener('click', () => {
-                if(el.id === 'lesvos') showIslandDetail('lesvos');
-                else alert("Detailed map for " + islandData[el.id].name + " is coming soon!");
-            });
+    // 2. INITIALIZE APP
+    window.onload = function() {
+        mainMap = L.map('main-map', {
+            center: [38.3, 24.5],
+            zoom: 7,
+            minZoom: 6
         });
 
-        function showIslandDetail(id) {
-            document.getElementById('main-view').style.display = 'none';
-            document.getElementById('detail-view').style.display = 'block';
-            
-            const info = islandData[id];
+        // FRIENDLY VOYAGER MAP TILES
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(mainMap);
 
-            // Initialize Leaflet
-            if (activeMap) activeMap.remove(); // Reset map if it exists
-            
-            activeMap = L.map('leaflet-map').setView([info.lat, info.lng], 10);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(activeMap);
+        // CREATE DOTS
+        Object.keys(islandData).forEach(key => {
+            const data = islandData[key];
+            const marker = L.circleMarker([data.lat, data.lng], {
+                radius: 12, fillColor: "#005BAE", color: "#fff", weight: 3, fillOpacity: 0.9
+            }).addTo(mainMap);
 
-            // Add specific markers for Lesvos
-            if(id === 'lesvos') {
-                const spots = [
-                    {n: "Mytilene", c: [39.10, 26.55]},
-                    {n: "Molyvos", c: [39.37, 26.17]},
-                    {n: "Petrified Forest", c: [39.21, 25.85]}
-                ];
-                spots.forEach(s => L.marker(s.c).addTo(activeMap).bindPopup(s.n));
+            marker.bindPopup(`<strong>${data.name}</strong><br>Click to explore!`);
+            marker.on('click', () => showDetail(key));
+
+            markerStore[key] = { marker, name: data.name.toLowerCase() };
+        });
+    };
+
+    // 3. SEARCH ENGINE
+    function filterIslands() {
+        const query = document.getElementById('islandSearch').value.toLowerCase();
+        Object.keys(markerStore).forEach(key => {
+            const item = markerStore[key];
+            if (item.name.includes(query)) {
+                item.marker.setStyle({ opacity: 1, fillOpacity: 0.9 });
+            } else {
+                item.marker.setStyle({ opacity: 0.1, fillOpacity: 0.1 });
             }
-        }
+        });
+    }
 
-        function showMainMap() {
-            document.getElementById('main-view').style.display = 'block';
-            document.getElementById('detail-view').style.display = 'none';
-        }
-    </script>
+    // 4. NAVIGATION
+    let miniMap = null;
+
+    function showDetail(id) {
+        const data = islandData[id];
+        document.getElementById('home-view').style.display = 'none';
+        document.getElementById('detail-view').style.display = 'block';
+        window.scrollTo(0,0);
+
+        // Map Data to UI
+        document.getElementById('island-name').innerText = data.name;
+        document.getElementById('island-tagline').innerText = data.tagline;
+        document.getElementById('island-pop').innerText = data.pop;
+        document.getElementById('island-size').innerText = data.size;
+        document.getElementById('island-fame').innerText = data.fame;
+        document.getElementById('island-desc').innerText = data.desc;
+        document.getElementById('island-villages').innerText = data.villages;
+        document.getElementById('island-highlights').innerText = data.highlights;
+        document.getElementById('island-food').innerText = data.food;
+        document.getElementById('island-img').src = data.img;
+
+        // Animate Bars
+        document.getElementById('beach-bar').style.width = '0%';
+        document.getElementById('act-bar').style.width = '0%';
+        setTimeout(() => {
+            document.getElementById('beach-bar').style.width = data.b + '%';
+            document.getElementById('act-bar').style.width = data.a + '%';
+        }, 100);
+
+        // Mini-Map Logic
+        if (miniMap) miniMap.remove();
+        miniMap = L.map('island-mini-map', { zoomControl: false }).setView([data.lat, data.lng], 11);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png').addTo(miniMap);
+        L.marker([data.lat, data.lng]).addTo(miniMap);
+    }
+
+    function showHome() {
+        document.getElementById('home-view').style.display = 'block';
+        document.getElementById('detail-view').style.display = 'none';
+        mainMap.invalidateSize(); // Fixes Leaflet layout issues
+    }
+</script>
+
 </body>
 </html>
