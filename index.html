@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greek Island Odyssey | Professional Analytics</title>
+    <title>Greek Island Odyssey | Professional Discovery Tool</title>
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -14,9 +14,6 @@
             --sand: #fdf5e6; 
             --accent: #ff7f50; 
             --star-gold: #ffcc00;
-            --rank-high: #2ecc71; 
-            --rank-med: #f1c40f;  
-            --rank-low: #e67e22;  
         }
         
         body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-serif; background: var(--sand); overflow-x: hidden; }
@@ -43,13 +40,22 @@
         #home-view { height: calc(100vh - 180px); width: 100%; display: block; position: relative; }
         #main-map { height: 100%; width: 100%; background: #aad3df; }
 
+        /* TOOLTIP STYLING */
+        .leaflet-tooltip-island {
+            background: rgba(255, 255, 255, 0.98);
+            border: 2px solid var(--greek-blue);
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            color: #333;
+        }
+
         .map-legend {
             position: absolute; bottom: 30px; left: 20px; z-index: 1000;
             background: white; padding: 12px; border-radius: 12px;
             box-shadow: 0 0 15px rgba(0,0,0,0.2); font-size: 0.85rem;
         }
-        .legend-item { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
-        .dot-icon { width: 12px; height: 12px; border-radius: 50%; display: inline-block; border: 1px solid #fff; }
 
         #detail-view { 
             display: none; padding: 2rem; max-width: 850px; margin: 20px auto; 
@@ -65,8 +71,8 @@
         .stars-inner { position: absolute; top: 0; left: 0; white-space: nowrap; overflow: hidden; width: 0; color: var(--star-gold); }
         .stars-outer::before, .stars-inner::before { content: "★★★★★"; }
 
-        .island-hero { width: 100%; height: 300px; object-fit: cover; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        #island-mini-map { width: 100%; height: 250px; border-radius: 15px; margin-top: 20px; }
+        .island-hero { width: 100%; height: 350px; object-fit: cover; border-radius: 20px; margin: 20px 0; background: #ddd; }
+        #island-mini-map { width: 100%; height: 350px; border-radius: 15px; margin-top: 20px; border: 2px solid #eee; }
         footer { background: #333; color: #aaa; text-align: center; padding: 10px; font-size: 0.75rem; }
     </style>
 </head>
@@ -74,7 +80,7 @@
 
 <header>
     <h1 onclick="showHome()">Greek Island Odyssey 🏝️</h1>
-    <input type="text" id="islandSearch" placeholder="Search by name..." onkeyup="filterIslands()">
+    <input type="text" id="islandSearch" placeholder="Search destinations..." onkeyup="filterIslands()">
     
     <div class="quick-menu">
         <span class="vibe-chip active" id="btn-overall" onclick="updateMapMode('overall')">🏆 Best Overall</span>
@@ -90,23 +96,19 @@
     <div id="main-map"></div>
     <div class="map-legend">
         <strong id="legend-title">Best Overall</strong><br>
-        <div class="legend-item"><span class="dot-icon" style="background:#2ecc71"></span> 4.0+ (Elite)</div>
-        <div class="legend-item"><span class="dot-icon" style="background:#f1c40f"></span> 3.0 - 3.9 (Great)</div>
-        <div class="legend-item"><span class="dot-icon" style="background:#e67e22"></span> < 3.0 (Niche)</div>
+        <div style="display:flex; align-items:center; gap:8px; margin-top:4px;"><span style="width:12px; height:12px; border-radius:50%; background:#2ecc71; display:inline-block; border:1px solid #fff;"></span> 4.0+ (Elite)</div>
+        <div style="display:flex; align-items:center; gap:8px; margin-top:4px;"><span style="width:12px; height:12px; border-radius:50%; background:#f1c40f; display:inline-block; border:1px solid #fff;"></span> 3.0-3.9 (Great)</div>
+        <div style="display:flex; align-items:center; gap:8px; margin-top:4px;"><span style="width:12px; height:12px; border-radius:50%; background:#e67e22; display:inline-block; border:1px solid #fff;"></span> < 3.0 (Niche)</div>
     </div>
 </div>
 
 <div id="detail-view">
     <button class="back-btn" onclick="showHome()">← Back to Map</button>
     <div style="display:flex; justify-content:space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-        <div>
-            <h1 id="island-name" style="color:var(--greek-blue); font-size: 2.5rem; margin:0;"></h1>
-        </div>
+        <h1 id="island-name" style="color:var(--greek-blue); font-size: 2.5rem; margin:0;"></h1>
         <div class="score-badge">Rating: <span id="island-total-score">0.0</span>/5</div>
     </div>
-
     <img id="island-pic" class="island-hero" src="" alt="Island View">
-
     <div class="rating-box">
         <div class="rating-row"><span>🏖️ Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div></div>
         <div class="rating-row"><span>🏛️ Culture & History</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div></div>
@@ -122,79 +124,88 @@
 </footer>
 
 <script>
-    const VERSION_ID = "v4.0 - Global Nav + 50 Island Data Sync";
+    const VERSION_ID = "v7.0 - Full 50 Island Regional Edition";
 
     const islandData = {
-        "crete": { name: "Crete", lat: 35.2, lng: 24.8, beach: 5.0, hist: 5.0, night: 4.0, access: 5.0, afford: 4.5, overall: 4.6 },
-        "euboea": { name: "Euboea", lat: 38.5, lng: 24.0, beach: 3.5, hist: 3.0, night: 2.0, access: 5.0, afford: 4.5, overall: 3.6 },
-        "lesbos": { name: "Lesvos", lat: 39.2, lng: 26.2, beach: 3.5, hist: 4.0, night: 2.5, access: 3.0, afford: 4.5, overall: 3.6 },
-        "rhodes": { name: "Rhodes", lat: 36.18, lng: 27.92, beach: 4.5, hist: 5.0, night: 4.5, access: 5.0, afford: 4.0, overall: 4.5 },
-        "chios": { name: "Chios", lat: 38.4, lng: 26.1, beach: 3.5, hist: 4.0, night: 2.0, access: 3.5, afford: 4.5, overall: 3.6 },
-        "kefalonia": { name: "Kefalonia", lat: 38.2, lng: 20.5, beach: 4.5, hist: 3.5, night: 3.0, access: 3.5, afford: 3.5, overall: 3.6 },
-        "corfu": { name: "Corfu", lat: 39.62, lng: 19.85, beach: 4.0, hist: 4.0, night: 4.0, access: 5.0, afford: 3.5, overall: 4.1 },
-        "lemnos": { name: "Lemnos", lat: 39.9, lng: 25.2, beach: 3.0, hist: 2.5, night: 1.5, access: 3.0, afford: 4.5, overall: 3.1 },
-        "samos": { name: "Samos", lat: 37.75, lng: 26.83, beach: 4.0, hist: 3.5, night: 3.0, access: 3.5, afford: 4.0, overall: 3.7 },
-        "naxos": { name: "Naxos", lat: 37.10, lng: 25.48, beach: 4.5, hist: 4.0, night: 3.5, access: 4.0, afford: 4.0, overall: 4.0 },
-        "zakynthos": { name: "Zakynthos", lat: 37.78, lng: 20.89, beach: 4.5, hist: 2.5, night: 4.5, access: 4.5, afford: 3.0, overall: 3.8 },
-        "thasos": { name: "Thasos", lat: 40.7, lng: 24.6, beach: 4.0, hist: 3.0, night: 2.5, access: 4.0, afford: 4.0, overall: 3.6 },
-        "andros": { name: "Andros", lat: 37.83, lng: 24.93, beach: 3.5, hist: 3.5, night: 2.0, access: 4.5, afford: 3.5, overall: 3.5 },
-        "lefkada": { name: "Lefkada", lat: 38.72, lng: 20.65, beach: 5.0, hist: 2.5, night: 3.5, access: 4.5, afford: 3.5, overall: 3.9 },
-        "karpathos": { name: "Karpathos", lat: 35.6, lng: 27.15, beach: 4.5, hist: 2.5, night: 1.5, access: 2.5, afford: 4.0, overall: 3.1 },
-        "kos": { name: "Kos", lat: 36.88, lng: 27.28, beach: 4.0, hist: 3.5, night: 4.0, access: 5.0, afford: 3.5, overall: 4.0 },
-        "kythira": { name: "Kythira", lat: 36.25, lng: 23.0, beach: 3.5, hist: 3.0, night: 1.5, access: 2.5, afford: 4.0, overall: 3.1 },
-        "ikaria": { name: "Ikaria", lat: 37.58, lng: 26.15, beach: 3.5, hist: 3.0, night: 2.5, access: 3.0, afford: 4.5, overall: 3.3 },
-        "skyros": { name: "Skyros", lat: 38.86, lng: 24.54, beach: 3.0, hist: 2.5, night: 1.5, access: 2.5, afford: 4.0, overall: 2.9 },
-        "paros": { name: "Paros", lat: 37.05, lng: 25.18, beach: 4.5, hist: 3.5, night: 4.5, access: 4.5, afford: 3.0, overall: 4.0 },
-        "tinos": { name: "Tinos", lat: 37.58, lng: 25.13, beach: 3.5, hist: 4.5, night: 2.0, access: 4.5, afford: 3.5, overall: 3.6 },
-        "samothrace": { name: "Samothrace", lat: 40.47, lng: 25.58, beach: 3.0, hist: 3.5, night: 1.0, access: 2.5, afford: 4.0, overall: 2.8 },
-        "milos": { name: "Milos", lat: 36.68, lng: 24.41, beach: 5.0, hist: 3.0, night: 3.5, access: 4.0, afford: 3.0, overall: 3.8 },
-        "kea": { name: "Kea", lat: 37.62, lng: 24.33, beach: 3.0, hist: 3.0, night: 1.5, access: 5.0, afford: 3.5, overall: 3.3 },
-        "amorgos": { name: "Amorgos", lat: 36.83, lng: 25.89, beach: 4.0, hist: 4.0, night: 2.0, access: 3.0, afford: 3.5, overall: 3.4 },
-        "kalymnos": { name: "Kalymnos", lat: 36.98, lng: 26.98, beach: 3.5, hist: 3.0, night: 2.0, access: 3.0, afford: 4.0, overall: 3.3 },
-        "ios": { name: "Ios", lat: 36.72, lng: 25.28, beach: 4.0, hist: 2.5, night: 5.0, access: 4.5, afford: 3.0, overall: 3.8 },
-        "kythnos": { name: "Kythnos", lat: 37.38, lng: 24.42, beach: 3.5, hist: 2.5, night: 2.0, access: 4.5, afford: 3.5, overall: 3.3 },
-        "astypalaia": { name: "Astypalaia", lat: 36.56, lng: 26.35, beach: 4.0, hist: 3.0, night: 2.0, access: 3.0, afford: 3.5, overall: 3.3 },
-        "ithaca": { name: "Ithaca", lat: 38.41, lng: 20.66, beach: 4.0, hist: 3.5, night: 1.5, access: 3.0, afford: 3.5, overall: 3.3 },
-        "salamis": { name: "Salamis", lat: 37.93, lng: 23.5, beach: 2.0, hist: 2.5, night: 1.5, access: 5.0, afford: 4.5, overall: 3.0 },
-        "skopelos": { name: "Skopelos", lat: 39.12, lng: 23.72, beach: 4.0, hist: 3.0, night: 2.0, access: 3.5, afford: 3.5, overall: 3.3 },
-        "mykonos": { name: "Mykonos", lat: 37.44, lng: 25.33, beach: 4.0, hist: 2.5, night: 5.0, access: 5.0, afford: 1.5, overall: 3.8 },
-        "syros": { name: "Syros", lat: 37.45, lng: 24.91, beach: 3.0, hist: 4.5, night: 3.0, access: 4.5, afford: 3.5, overall: 3.7 },
-        "aegina": { name: "Aegina", lat: 37.74, lng: 23.49, beach: 2.5, hist: 3.5, night: 2.5, access: 5.0, afford: 3.5, overall: 3.4 },
-        "santorini": { name: "Santorini", lat: 36.41, lng: 25.42, beach: 4.5, hist: 5.0, night: 4.5, access: 5.0, afford: 1.5, overall: 4.3 },
-        "serifos": { name: "Serifos", lat: 37.15, lng: 24.48, beach: 4.0, hist: 3.0, night: 2.0, access: 3.5, afford: 3.5, overall: 3.3 },
-        "sifnos": { name: "Sifnos", lat: 36.97, lng: 24.71, beach: 3.5, hist: 4.0, night: 2.5, access: 3.5, afford: 3.0, overall: 3.3 },
-        "kasos": { name: "Kasos", lat: 35.39, lng: 26.92, beach: 3.0, hist: 2.0, night: 1.0, access: 1.5, afford: 4.5, overall: 2.7 },
-        "alonnisos": { name: "Alonnisos", lat: 39.21, lng: 23.91, beach: 4.0, hist: 2.5, night: 1.5, access: 3.0, afford: 3.5, overall: 3.1 },
-        "tilos": { name: "Tilos", lat: 36.43, lng: 27.37, beach: 3.0, hist: 2.5, night: 1.0, access: 2.0, afford: 4.0, overall: 2.8 },
-        "symi": { name: "Symi", lat: 36.6, lng: 27.83, beach: 3.5, hist: 3.5, night: 2.0, access: 3.0, afford: 3.0, overall: 3.0 },
-        "leros": { name: "Leros", lat: 37.14, lng: 26.84, beach: 3.0, hist: 3.0, night: 2.0, access: 3.5, afford: 4.0, overall: 3.3 },
-        "hydra": { name: "Hydra", lat: 37.33, lng: 23.46, beach: 2.5, hist: 4.5, night: 2.5, access: 4.5, afford: 2.5, overall: 3.2 },
-        "skiathos": { name: "Skiathos", lat: 39.16, lng: 23.44, beach: 4.5, hist: 2.5, night: 4.5, access: 4.5, afford: 3.0, overall: 3.8 },
-        "agios_efstratios": { name: "Agios Efstratios", lat: 39.5, lng: 25.0, beach: 2.5, hist: 1.5, night: 1.0, access: 1.5, afford: 4.5, overall: 2.3 },
-        "sikinos": { name: "Sikinos", lat: 36.68, lng: 25.11, beach: 3.5, hist: 2.5, night: 1.0, access: 2.5, afford: 3.5, overall: 2.8 },
-        "nisyros": { name: "Nisyros", lat: 36.58, lng: 27.16, beach: 3.5, hist: 3.5, night: 1.5, access: 2.5, afford: 3.5, overall: 3.0 },
-        "psara": { name: "Psara", lat: 38.5, lng: 25.6, beach: 2.5, hist: 2.0, night: 1.0, access: 1.5, afford: 4.5, overall: 2.3 },
-        "anafi": { name: "Anafi", lat: 36.36, lng: 25.77, beach: 4.0, hist: 2.5, night: 1.0, access: 2.0, afford: 3.5, overall: 3.0 }
+        // CRETE REGIONS
+        "chania": { name: "Chania (Crete)", lat: 35.51, lng: 24.01, beach: 5.0, hist: 4.5, night: 3.5, access: 4.5, afford: 3.0, overall: 4.1, zoom: 10 },
+        "rethymno": { name: "Rethymno (Crete)", lat: 35.36, lng: 24.47, beach: 4.0, hist: 4.5, night: 3.5, access: 3.5, afford: 4.0, overall: 3.9, zoom: 11 },
+        "heraklio": { name: "Heraklion (Crete)", lat: 35.33, lng: 25.13, beach: 3.0, hist: 5.0, night: 4.5, access: 5.0, afford: 4.0, overall: 4.3, zoom: 10 },
+        "lasithi": { name: "Lasithi (Crete)", lat: 35.19, lng: 25.71, beach: 4.5, hist: 3.5, night: 2.5, access: 3.0, afford: 2.5, overall: 3.2, zoom: 10 },
+        
+        // REMAINING 49 (Totaling 53 points)
+        "euboea": { name: "Euboea", lat: 38.5, lng: 24.0, beach: 3.5, hist: 3.0, night: 2.0, access: 5.0, afford: 4.5, overall: 3.6, zoom: 9 },
+        "lesvos": { name: "Lesvos", lat: 39.2, lng: 26.2, beach: 3.5, hist: 4.0, night: 2.5, access: 3.0, afford: 4.5, overall: 3.6, zoom: 10 },
+        "rhodes": { name: "Rhodes", lat: 36.18, lng: 27.92, beach: 4.5, hist: 5.0, night: 4.5, access: 5.0, afford: 4.0, overall: 4.5, zoom: 10 },
+        "chios": { name: "Chios", lat: 38.4, lng: 26.1, beach: 3.5, hist: 4.0, night: 2.0, access: 3.5, afford: 4.5, overall: 3.6, zoom: 10 },
+        "kefalonia": { name: "Kefalonia", lat: 38.2, lng: 20.5, beach: 4.5, hist: 3.5, night: 3.0, access: 3.5, afford: 3.5, overall: 3.6, zoom: 10 },
+        "corfu": { name: "Corfu", lat: 39.62, lng: 19.85, beach: 4.0, hist: 4.0, night: 4.0, access: 5.0, afford: 3.5, overall: 4.1, zoom: 10 },
+        "lemnos": { name: "Lemnos", lat: 39.9, lng: 25.2, beach: 3.0, hist: 2.5, night: 1.5, access: 3.0, afford: 4.5, overall: 3.1, zoom: 11 },
+        "samos": { name: "Samos", lat: 37.75, lng: 26.83, beach: 4.0, hist: 3.5, night: 3.0, access: 3.5, afford: 4.0, overall: 3.7, zoom: 11 },
+        "naxos": { name: "Naxos", lat: 37.10, lng: 25.48, beach: 4.5, hist: 4.0, night: 3.5, access: 4.0, afford: 4.0, overall: 4.0, zoom: 11 },
+        "zakynthos": { name: "Zakynthos", lat: 37.78, lng: 20.89, beach: 4.5, hist: 2.5, night: 4.5, access: 4.5, afford: 3.0, overall: 3.8, zoom: 11 },
+        "thasos": { name: "Thasos", lat: 40.7, lng: 24.6, beach: 4.0, hist: 3.0, night: 2.5, access: 4.0, afford: 4.0, overall: 3.6, zoom: 11 },
+        "andros": { name: "Andros", lat: 37.83, lng: 24.93, beach: 3.5, hist: 3.5, night: 2.0, access: 4.5, afford: 3.5, overall: 3.5, zoom: 11 },
+        "lefkada": { name: "Lefkada", lat: 38.72, lng: 20.65, beach: 5.0, hist: 2.5, night: 3.5, access: 4.5, afford: 3.5, overall: 3.9, zoom: 11 },
+        "karpathos": { name: "Karpathos", lat: 35.6, lng: 27.15, beach: 4.5, hist: 2.5, night: 1.5, access: 2.5, afford: 4.0, overall: 3.1, zoom: 11 },
+        "kos": { name: "Kos", lat: 36.88, lng: 27.28, beach: 4.0, hist: 3.5, night: 4.0, access: 5.0, afford: 3.5, overall: 4.0, zoom: 11 },
+        "kythira": { name: "Kythira", lat: 36.25, lng: 23.0, beach: 3.5, hist: 3.0, night: 1.5, access: 2.5, afford: 4.0, overall: 3.1, zoom: 11 },
+        "ikaria": { name: "Ikaria", lat: 37.58, lng: 26.15, beach: 3.5, hist: 3.0, night: 2.5, access: 3.0, afford: 4.5, overall: 3.3, zoom: 11 },
+        "skyros": { name: "Skyros", lat: 38.86, lng: 24.54, beach: 3.0, hist: 2.5, night: 1.5, access: 2.5, afford: 4.0, overall: 2.9, zoom: 11 },
+        "paros": { name: "Paros", lat: 37.05, lng: 25.18, beach: 4.5, hist: 3.5, night: 4.5, access: 4.5, afford: 3.0, overall: 4.0, zoom: 12 },
+        "tinos": { name: "Tinos", lat: 37.58, lng: 25.13, beach: 3.5, hist: 4.5, night: 2.0, access: 4.5, afford: 3.5, overall: 3.6, zoom: 12 },
+        "samothrace": { name: "Samothrace", lat: 40.47, lng: 25.58, beach: 3.0, hist: 3.5, night: 1.0, access: 2.5, afford: 4.0, overall: 2.8, zoom: 11 },
+        "milos": { name: "Milos", lat: 36.68, lng: 24.41, beach: 5.0, hist: 3.0, night: 3.5, access: 4.0, afford: 3.0, overall: 3.8, zoom: 12 },
+        "kea": { name: "Kea", lat: 37.62, lng: 24.33, beach: 3.0, hist: 3.0, night: 1.5, access: 5.0, afford: 3.5, overall: 3.3, zoom: 12 },
+        "amorgos": { name: "Amorgos", lat: 36.83, lng: 25.89, beach: 4.0, hist: 4.0, night: 2.0, access: 3.0, afford: 3.5, overall: 3.4, zoom: 12 },
+        "kalymnos": { name: "Kalymnos", lat: 36.98, lng: 26.98, beach: 3.5, hist: 3.0, night: 2.0, access: 3.0, afford: 4.0, overall: 3.3, zoom: 12 },
+        "ios": { name: "Ios", lat: 36.72, lng: 25.28, beach: 4.0, hist: 2.5, night: 5.0, access: 4.5, afford: 3.0, overall: 3.8, zoom: 12 },
+        "kythnos": { name: "Kythnos", lat: 37.38, lng: 24.42, beach: 3.5, hist: 2.5, night: 2.0, access: 4.5, afford: 3.5, overall: 3.3, zoom: 12 },
+        "astypalaia": { name: "Astypalaia", lat: 36.56, lng: 26.35, beach: 4.0, hist: 3.0, night: 2.0, access: 3.0, afford: 3.5, overall: 3.3, zoom: 12 },
+        "ithaca": { name: "Ithaca", lat: 38.41, lng: 20.66, beach: 4.0, hist: 3.5, night: 1.5, access: 3.0, afford: 3.5, overall: 3.3, zoom: 12 },
+        "salamis": { name: "Salamis", lat: 37.93, lng: 23.5, beach: 2.0, hist: 2.5, night: 1.5, access: 5.0, afford: 4.5, overall: 3.0, zoom: 12 },
+        "skopelos": { name: "Skopelos", lat: 39.12, lng: 23.72, beach: 4.0, hist: 3.0, night: 2.0, access: 3.5, afford: 3.5, overall: 3.3, zoom: 12 },
+        "mykonos": { name: "Mykonos", lat: 37.44, lng: 25.33, beach: 4.0, hist: 2.5, night: 5.0, access: 5.0, afford: 1.5, overall: 3.8, zoom: 13 },
+        "syros": { name: "Syros", lat: 37.45, lng: 24.91, beach: 3.0, hist: 4.5, night: 3.0, access: 4.5, afford: 3.5, overall: 3.7, zoom: 12 },
+        "aegina": { name: "Aegina", lat: 37.74, lng: 23.49, beach: 2.5, hist: 3.5, night: 2.5, access: 5.0, afford: 3.5, overall: 3.4, zoom: 13 },
+        "santorini": { name: "Santorini", lat: 36.41, lng: 25.42, beach: 4.5, hist: 5.0, night: 4.5, access: 5.0, afford: 1.5, overall: 4.3, zoom: 13 },
+        "serifos": { name: "Serifos", lat: 37.15, lng: 24.48, beach: 4.0, hist: 3.0, night: 2.0, access: 3.5, afford: 3.5, overall: 3.3, zoom: 13 },
+        "sifnos": { name: "Sifnos", lat: 36.97, lng: 24.71, beach: 3.5, hist: 4.0, night: 2.5, access: 3.5, afford: 3.0, overall: 3.3, zoom: 13 },
+        "kasos": { name: "Kasos", lat: 35.39, lng: 26.92, beach: 3.0, hist: 2.0, night: 1.0, access: 1.5, afford: 4.5, overall: 2.7, zoom: 13 },
+        "alonnisos": { name: "Alonnisos", lat: 39.21, lng: 23.91, beach: 4.0, hist: 2.5, night: 1.5, access: 3.0, afford: 3.5, overall: 3.1, zoom: 13 },
+        "tilos": { name: "Tilos", lat: 36.43, lng: 27.37, beach: 3.0, hist: 2.5, night: 1.0, access: 2.0, afford: 4.0, overall: 2.8, zoom: 13 },
+        "symi": { name: "Symi", lat: 36.6, lng: 27.83, beach: 3.5, hist: 3.5, night: 2.0, access: 3.0, afford: 3.0, overall: 3.0, zoom: 13 },
+        "leros": { name: "Leros", lat: 37.14, lng: 26.84, beach: 3.0, hist: 3.0, night: 2.0, access: 3.5, afford: 4.0, overall: 3.3, zoom: 13 },
+        "hydra": { name: "Hydra", lat: 37.33, lng: 23.46, beach: 2.5, hist: 4.5, night: 2.5, access: 4.5, afford: 2.5, overall: 3.2, zoom: 14 },
+        "skiathos": { name: "Skiathos", lat: 39.16, lng: 23.44, beach: 4.5, hist: 2.5, night: 4.5, access: 4.5, afford: 3.0, overall: 3.8, zoom: 12 },
+        "agios_efstratios": { name: "Agios Efstratios", lat: 39.5, lng: 25.0, beach: 2.5, hist: 1.5, night: 1.0, access: 1.5, afford: 4.5, overall: 2.3, zoom: 13 },
+        "sikinos": { name: "Sikinos", lat: 36.68, lng: 25.11, beach: 3.5, hist: 2.5, night: 1.0, access: 2.5, afford: 3.5, overall: 2.8, zoom: 13 },
+        "nisyros": { name: "Nisyros", lat: 36.58, lng: 27.16, beach: 3.5, hist: 3.5, night: 1.5, access: 2.5, afford: 3.5, overall: 3.0, zoom: 13 },
+        "psara": { name: "Psara", lat: 38.5, lng: 25.6, beach: 2.5, hist: 2.0, night: 1.0, access: 1.5, afford: 4.5, overall: 2.3, zoom: 13 },
+        "anafi": { name: "Anafi", lat: 36.36, lng: 25.77, beach: 4.0, hist: 2.5, night: 1.0, access: 2.0, afford: 3.5, overall: 3.0, zoom: 13 }
     };
 
-    let mainMap;
+    let mainMap, miniMap;
     const markerStore = {};
+    let currentMode = 'overall';
 
     window.onload = function() {
-        document.getElementById('version-display').innerText = "Version: " + VERSION_ID;
+        document.getElementById('version-display').innerText = VERSION_ID;
         initMap();
     };
 
     function initMap() {
-        // Restricted Zoom (6 to 12)
+        // LOCK MAP TO GREECE
+        const greeceBounds = L.latLngBounds([34.0, 18.5], [42.0, 30.5]);
+
         mainMap = L.map('main-map', {
-            minZoom: 6,
-            maxZoom: 12
+            minZoom: 7, 
+            maxZoom: 12,
+            maxBounds: greeceBounds,
+            maxBoundsViscosity: 1.0
         }).setView([38.3, 24.5], 7);
 
-        L.tileLayer('https://tile.opentopomap.org/{z}/{x}/{y}.png', { 
-            attribution: '© OpenTopoMap' 
-        }).addTo(mainMap);
+        L.tileLayer('https://tile.opentopomap.org/{z}/{x}/{y}.png').addTo(mainMap);
 
         Object.keys(islandData).forEach(key => {
             const d = islandData[key];
@@ -202,8 +213,11 @@
                 radius: 12, fillColor: getColor(d.overall), color: "#fff", weight: 2, fillOpacity: 0.95
             }).addTo(mainMap);
             
+            // TOOLTIP INITIALIZATION
+            updateTooltip(marker, d);
+
             marker.on('click', () => showDetail(key));
-            markerStore[key] = { marker, name: d.name.toLowerCase() };
+            markerStore[key] = { marker, data: d };
         });
     }
 
@@ -213,9 +227,19 @@
         return "#e67e22";
     }
 
+    function updateTooltip(marker, data) {
+        const score = (currentMode === 'overall') ? data.overall : data[currentMode];
+        marker.bindTooltip(`
+            <div class="leaflet-tooltip-island">
+                <strong>${data.name}</strong><br>
+                <span>Current Rating: ${score}</span>
+            </div>
+        `, { sticky: true, className: 'leaflet-tooltip-island' });
+    }
+
     function updateMapMode(mode) {
-        // CRITICAL: Pull user back to map if they are on an island page
         showHome();
+        currentMode = mode;
 
         document.querySelectorAll('.vibe-chip').forEach(el => el.classList.remove('active'));
         document.getElementById('btn-' + mode).classList.add('active');
@@ -224,53 +248,48 @@
         document.getElementById('legend-title').innerText = titles[mode];
 
         Object.keys(markerStore).forEach(id => {
-            const d = islandData[id];
+            const d = markerStore[id].data;
             const score = (mode === 'overall') ? d.overall : d[mode];
             markerStore[id].marker.setStyle({ fillColor: getColor(score) });
+            updateTooltip(markerStore[id].marker, d);
         });
     }
 
-    function filterIslands() {
-        const query = document.getElementById('islandSearch').value.toLowerCase();
-        Object.keys(markerStore).forEach(key => {
-            const match = markerStore[key].name.includes(query);
-            markerStore[key].marker.setStyle({ opacity: match ? 1 : 0.1, fillOpacity: match ? 0.95 : 0.1 });
-        });
-    }
-
-    function setStars(elementId, rating) {
-        document.getElementById(elementId).style.width = (rating / 5 * 100) + "%";
-    }
-
-    let miniMap = null;
     function showDetail(id) {
-        const data = islandData[id];
+        const d = islandData[id];
         document.getElementById('home-view').style.display = 'none';
         document.getElementById('detail-view').style.display = 'block';
         window.scrollTo(0,0);
 
-        document.getElementById('island-name').innerText = data.name;
-        document.getElementById('island-total-score').innerText = data.overall;
+        document.getElementById('island-name').innerText = d.name;
+        document.getElementById('island-total-score').innerText = d.overall;
         
-        // DYNAMIC PICTURE (Using Unsplash)
-        document.getElementById('island-pic').src = "https://source.unsplash.com/featured/?island," + data.name;
+        // AUTO IMAGE LOAD
+        document.getElementById('island-pic').src = `https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1000&q=80`; // Reliable base
+        // If you want true variety, use: "https://source.unsplash.com/800x450/?" + d.name.split(' ')[0] + ",greece"
 
-        setStars('star-beach', data.beach);
-        setStars('star-hist', data.hist);
-        setStars('star-night', data.night);
-        setStars('star-access', data.access);
-        setStars('star-afford', data.afford);
+        setStars('star-beach', d.beach);
+        setStars('star-hist', d.hist);
+        setStars('star-night', d.night);
+        setStars('star-access', d.access);
+        setStars('star-afford', d.afford);
 
         if (miniMap) miniMap.remove();
-        miniMap = L.map('island-mini-map', { zoomControl: false }).setView([data.lat, data.lng], 11);
+        // DYNAMIC ZOOM BASED ON DATA
+        miniMap = L.map('island-mini-map', { zoomControl: false }).setView([d.lat, d.lng], d.zoom || 11);
         L.tileLayer('https://tile.opentopomap.org/{z}/{x}/{y}.png').addTo(miniMap);
-        L.marker([data.lat, data.lng]).addTo(miniMap);
+        L.marker([d.lat, d.lng]).addTo(miniMap);
     }
 
-    function showHome() {
-        document.getElementById('home-view').style.display = 'block';
-        document.getElementById('detail-view').style.display = 'none';
-        if(mainMap) setTimeout(() => { mainMap.invalidateSize(); }, 200);
+    function setStars(id, val) { document.getElementById(id).style.width = (val / 5 * 100) + "%"; }
+    function showHome() { document.getElementById('home-view').style.display = 'block'; document.getElementById('detail-view').style.display = 'none'; if(mainMap) setTimeout(() => mainMap.invalidateSize(), 200); }
+    
+    function filterIslands() {
+        const q = document.getElementById('islandSearch').value.toLowerCase();
+        Object.keys(markerStore).forEach(k => {
+            const m = markerStore[k].data.name.toLowerCase().includes(q);
+            markerStore[k].marker.setStyle({ opacity: m ? 1 : 0.1, fillOpacity: m ? 0.95 : 0.1 });
+        });
     }
 </script>
 
