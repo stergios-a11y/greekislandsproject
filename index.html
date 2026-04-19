@@ -3,18 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greek Island Odyssey | OpenTopo Edition</title>
+    <title>Greek Island Odyssey | Stable Version</title>
     
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
     <style>
-        :root { 
-            --greek-blue: #005BAE; 
-            --sand: #fdf5e6; 
-            --accent: #ff7f50; 
-            --star-gold: #ffcc00; 
-        }
+        :root { --greek-blue: #005BAE; --sand: #fdf5e6; --accent: #ff7f50; --star-gold: #ffcc00; }
         
         body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-serif; background: var(--sand); }
         
@@ -36,9 +31,13 @@
             border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.1); outline: none; margin-top: 10px;
         }
         
-        /* Fixed height for the map so it never "disappears" */
-        #home-view { height: calc(100vh - 180px); width: 100%; display: block; }
-        #main-map { height: 100%; width: 100%; background: #aad3df; }
+        /* Map Container - Forced visible with background color */
+        #home-view { height: calc(100vh - 220px); width: 100%; display: block; position: relative; }
+        #main-map { 
+            height: 100%; 
+            width: 100%; 
+            background: #aad3df; /* If the map is blue, the container is working! */
+        }
 
         #detail-view { 
             display: none; padding: 2rem; max-width: 850px; margin: 30px auto; 
@@ -53,8 +52,7 @@
         .stars-inner { position: absolute; top: 0; left: 0; white-space: nowrap; overflow: hidden; width: 0; color: var(--star-gold); }
         .stars-outer::before, .stars-inner::before { content: "★★★★★"; }
 
-        .hero-img { width: 100%; height: 350px; object-fit: cover; border-radius: 20px; margin-bottom: 20px; }
-        #island-mini-map { width: 100%; height: 250px; border-radius: 15px; }
+        footer { background: #333; color: #aaa; text-align: center; padding: 10px; font-size: 0.75rem; }
     </style>
 </head>
 <body>
@@ -77,4 +75,96 @@
 <div id="detail-view">
     <button class="back-btn" onclick="showHome()">← Back to Map</button>
     <div style="display:flex; justify-content:space-between; align-items: baseline;">
-        <h1 id="island-name" style="color:var(--greek-blue); font-size: 2
+        <h1 id="island-name" style="color:var(--greek-blue); font-size: 2.5rem; margin:0;"></h1>
+        <h2 id="island-greek" style="color:#aaa; font-weight:normal;"></h2>
+    </div>
+    <div class="rating-box">
+        <div class="rating-row"><span>🏖️ Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div></div>
+        <div class="rating-row"><span>🏛️ History & Culture</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div></div>
+        <div class="rating-row"><span>🍷 Nightlife</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div></div>
+        <div class="rating-row"><span>🚢 Accessibility</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div></div>
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 Greek Island Odyssey | <span id="version-display">Checking...</span>
+</footer>
+
+<script>
+    // NEW VERSION ID
+    const VERSION_ID = "v2.0 - Stabilized Map Engine";
+
+    const islandData = {
+        "milos": { name: "Milos", greek: "Μήλος", lat: 36.68, lng: 24.41, beach: 5.0, hist: 3.5, night: 2.5, access: 3.5 },
+        "rhodes": { name: "Rhodes", greek: "Ρόδος", lat: 36.18, lng: 27.92, beach: 4.5, hist: 5.0, night: 4.0, access: 5.0 },
+        "mykonos": { name: "Mykonos", greek: "Μύκονος", lat: 37.44, lng: 25.33, beach: 4.5, hist: 3.0, night: 5.0, access: 4.5 },
+        "corfu": { name: "Corfu", greek: "Κέρκυρα", lat: 39.62, lng: 19.85, beach: 4.0, hist: 5.0, night: 4.0, access: 5.0 },
+        "crete": { name: "Crete", greek: "Κρήτη", lat: 35.2, lng: 24.8, beach: 5.0, hist: 5.0, night: 4.0, access: 5.0 },
+        "lesvos": { name: "Lesvos", greek: "Λέσβος", lat: 39.2, lng: 26.2, beach: 4.0, hist: 5.0, night: 3.0, access: 4.0 }
+    };
+
+    let mainMap;
+    const markerStore = {};
+
+    window.onload = function() {
+        document.getElementById('version-display').innerText = "Current Version: " + VERSION_ID;
+        
+        try {
+            console.log("Attempting to load map...");
+            mainMap = L.map('main-map').setView([38.3, 24.5], 7);
+
+            // Switching back to CartoDB Voyager for 100% reliability
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+                attribution: '© OpenStreetMap contributors © CARTO'
+            }).addTo(mainMap);
+
+            Object.keys(islandData).forEach(key => {
+                const d = islandData[key];
+                const marker = L.circleMarker([d.lat, d.lng], {
+                    radius: 12, fillColor: "#005BAE", color: "#fff", weight: 2, fillOpacity: 0.95
+                }).addTo(mainMap);
+                marker.on('click', () => showDetail(key));
+                markerStore[key] = { marker, name: d.name.toLowerCase() };
+            });
+            console.log("Map Loaded Successfully!");
+        } catch (e) {
+            console.error("Map failed to initialize:", e);
+            alert("The map engine failed. Please check your internet connection.");
+        }
+    };
+
+    function filterIslands() {
+        const query = document.getElementById('islandSearch').value.toLowerCase();
+        Object.keys(markerStore).forEach(key => {
+            const item = markerStore[key];
+            const match = item.name.includes(query);
+            item.marker.setStyle({ opacity: match ? 1 : 0.1, fillOpacity: match ? 0.95 : 0.1 });
+        });
+    }
+
+    function setStars(elementId, rating) {
+        document.getElementById(elementId).style.width = (rating / 5 * 100) + "%";
+    }
+
+    function showDetail(id) {
+        const data = islandData[id];
+        document.getElementById('home-view').style.display = 'none';
+        document.getElementById('detail-view').style.display = 'block';
+        window.scrollTo(0,0);
+        document.getElementById('island-name').innerText = data.name;
+        document.getElementById('island-greek').innerText = data.greek;
+        setStars('star-beach', data.beach);
+        setStars('star-hist', data.hist);
+        setStars('star-night', data.night);
+        setStars('star-access', data.access);
+    }
+
+    function showHome() {
+        document.getElementById('home-view').style.display = 'block';
+        document.getElementById('detail-view').style.display = 'none';
+        setTimeout(() => { mainMap.invalidateSize(); }, 200);
+    }
+</script>
+
+</body>
+</html>
