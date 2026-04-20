@@ -3,126 +3,45 @@
     --greek-blue: #005BAE;
     --star-gold: #fbbf24;
     --sea-salt: #f8fafc;
-    --glass: rgba(255, 255, 255, 0.85);
     --shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    background-color: var(--sea-salt);
-    color: var(--primary-navy);
-}
+body { font-family: 'Montserrat', sans-serif; margin: 0; background-color: var(--sea-salt); color: var(--primary-navy); }
 
-/* Hard hide search in any sub-page */
-body.detail-active .search-container { display: none !important; }
+/* Ensure search bar hides when NOT on home view */
+body.subpage-active .search-container { display: none !important; }
 
-header {
-    background: var(--primary-navy);
-    color: white;
-    padding: 12px 24px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
+header { background: var(--primary-navy); color: white; padding: 12px 24px; position: sticky; top: 0; z-index: 1000; }
+.header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
 #site-title { font-size: 1.1rem; margin: 0; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; cursor: pointer; }
 
-.top-nav a {
-    color: #cbd5e1;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    transition: color 0.2s;
-}
-
+.top-nav a { color: #cbd5e1; text-decoration: none; margin-left: 20px; font-size: 0.8rem; font-weight: 600; }
 .top-nav a:hover { color: white; }
 
-/* Obvious Vibe Search UI */
-.search-container {
-    padding: 24px;
-    background: white;
-    border-bottom: 1px solid #e2e8f0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.search-box-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 450px;
-}
-
-.search-icon { position: absolute; left: 15px; top: 10px; color: #94a3b8; }
-
-#islandSearch {
-    width: 100%;
-    padding: 12px 12px 12px 45px;
-    border-radius: 12px;
-    border: 2px solid #f1f5f9;
-    background: #f8fafc;
-    font-size: 0.95rem;
-    box-sizing: border-box;
-}
-
-.vibe-selector-wrapper { text-align: center; }
-.vibe-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #94a3b8; letter-spacing: 1px; margin-bottom: 10px; }
-
+.search-container { padding: 24px; background: white; border-bottom: 1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+#islandSearch { width: 100%; max-width: 400px; padding: 12px 20px; border-radius: 12px; border: 2px solid #f1f5f9; background: #f8fafc; }
+.vibe-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #94a3b8; margin-bottom: 10px; }
 .vibe-filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
+.vibe-chip { padding: 10px 18px; border-radius: 12px; border: 2px solid #f1f5f9; background: white; cursor: pointer; font-size: 0.8rem; font-weight: 700; }
+.vibe-chip.active { background: var(--greek-blue); color: white; border-color: var(--greek-blue); }
 
-.vibe-chip {
-    padding: 10px 18px;
-    border-radius: 12px;
-    border: 2px solid #f1f5f9;
-    background: white;
-    cursor: pointer;
-    font-size: 0.8rem;
-    font-weight: 700;
-    transition: all 0.2s;
-}
+/* Mission Page Styling */
+.content-page { max-width: 750px; margin: 60px auto; padding: 0 24px; line-height: 1.8; }
+.mission-container h1 { font-size: 2.8rem; margin-bottom: 20px; border-bottom: 4px solid var(--greek-blue); display: inline-block; }
+.mission-intro { font-size: 1.4rem; font-weight: 600; color: var(--greek-blue); margin-bottom: 24px; }
+.mission-block { margin: 40px 0; padding: 30px; background: white; border-radius: 16px; box-shadow: var(--shadow); }
+.mission-list { list-style: none; padding: 0; margin: 20px 0; }
+.mission-list li { margin: 10px 0; padding-left: 25px; position: relative; font-weight: 600; }
+.mission-list li::before { content: "•"; color: var(--greek-blue); position: absolute; left: 0; font-size: 1.5rem; }
+.highlight { font-size: 1.3rem; font-weight: 700; color: var(--greek-blue); margin-top: 20px; }
 
-.vibe-chip.active { background: var(--greek-blue); color: white; border-color: var(--greek-blue); box-shadow: 0 4px 6px -1px rgba(0, 91, 174, 0.3); }
-
-/* Content Pages (Mission/Hopping) */
-.content-page {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 24px;
-    text-align: center;
-}
-
-.content-page h1 { font-size: 2.5rem; margin-bottom: 16px; }
-.lead { font-size: 1.2rem; color: #64748b; margin-bottom: 40px; line-height: 1.6; }
-
-.mission-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; text-align: left; }
-.mission-card { background: white; padding: 24px; border-radius: 16px; box-shadow: var(--shadow); }
-
-.hopping-pair { background: white; padding: 30px; border-radius: 20px; box-shadow: var(--shadow); margin-bottom: 24px; text-align: left; border-left: 6px solid var(--greek-blue); }
-
-/* Standard Map/Detail Styles */
+/* Detail/Map View UI */
 #main-map { height: 75vh; width: 100%; }
-#detail-view { max-width: 900px; margin: 0 auto; padding: 24px; background: white; }
-.island-hero { width: 100%; height: 350px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow); margin-bottom: 30px; }
-#island-mini-map { height: 450px; border-radius: 20px; margin-bottom: 30px; }
-
-.rating-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 30px; }
-.rating-tile { background: #f8fafc; padding: 16px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; }
-.rating-label { font-size: 0.7rem; font-weight: 700; color: #64748b; text-transform: uppercase; margin-bottom: 8px; }
-
+.rating-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 30px; }
+.rating-tile { background: #f8fafc; padding: 15px; border-radius: 12px; text-align: center; }
 .stars-outer { font-size: 14px; color: #e2e8f0; position: relative; }
-.stars-inner { position: absolute; top: 0; left: 0; overflow: hidden; color: var(--star-gold); white-space: nowrap; width: 0; }
+.stars-inner { position: absolute; top: 0; left: 0; overflow: hidden; color: var(--star-gold); width: 0; }
 .stars-outer::before, .stars-inner::before { content: "★★★★★"; }
-
-.itinerary-step { border-left: 4px solid var(--greek-blue); padding: 20px; margin: 16px 0; background: #f8fafc; border-radius: 0 12px 12px 0; }
+.island-hero { width: 100%; height: 350px; object-fit: cover; border-radius: 20px; margin-bottom: 30px; }
+#island-mini-map { height: 400px; border-radius: 20px; margin-bottom: 30px; }
 .back-btn { padding: 12px 24px; background: var(--primary-navy); color: white; border: none; border-radius: 10px; cursor: pointer; margin-bottom: 24px; font-weight: 700; }
