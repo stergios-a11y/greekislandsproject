@@ -1,4 +1,4 @@
-const VERSION_ID = "v33.0 - Dynamic UI Filtering";
+const VERSION_ID = "v34.0 - Robust UI Hiding Fix";
 let mainMap, miniMap, markerLayerGroup, legendControl;
 const markerStore = {};
 let currentMode = 'overall';
@@ -19,9 +19,7 @@ window.onload = function() {
 function initMap() {
     mainMap = L.map('main-map', { zoomControl: false }).setView([38.3, 24.5], 7);
     L.control.zoom({ position: 'topright' }).addTo(mainMap);
-    
     L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(mainMap);
-    
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(mainMap);
     markerLayerGroup = L.layerGroup().addTo(mainMap);
 
@@ -71,11 +69,10 @@ function renderMarkers() {
 }
 
 function showDetail(id) {
-    // Hide Main Map and Search/Filters
-    document.getElementById('home-view').style.display = 'none';
-    document.querySelector('.search-container').style.display = 'none';
+    // TOGGLE STATE CLASS
+    document.body.classList.add('detail-active');
     
-    // Show Island Detail
+    document.getElementById('home-view').style.display = 'none';
     document.getElementById('detail-view').style.display = 'block';
     document.getElementById('island-name').innerText = islandData[id].name;
     window.scrollTo(0,0);
@@ -111,9 +108,7 @@ function renderDetailView(d) {
 
     if (miniMap) miniMap.remove();
     miniMap = L.map('island-mini-map', { zoomControl: true, scrollWheelZoom: true });
-    
     L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(miniMap);
-    
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(miniMap);
 
     dayLayerGroups = {};
@@ -196,13 +191,11 @@ function renderDetailView(d) {
 }
 
 function showHome() { 
-    // Show Main Map and Search/Filters
+    // REMOVE STATE CLASS
+    document.body.classList.remove('detail-active');
+    
     document.getElementById('home-view').style.display = 'block'; 
-    document.querySelector('.search-container').style.display = 'flex';
-    
-    // Hide Island Detail
     document.getElementById('detail-view').style.display = 'none'; 
-    
     if(mainMap) setTimeout(() => mainMap.invalidateSize(), 200);
 }
 
