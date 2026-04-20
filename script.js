@@ -1,4 +1,4 @@
-const VERSION_ID = "v18.0 - Pro Transport Hubs";
+const VERSION_ID = "v19.0 - Smart Routing & Zoom Fixed";
 
 let mainMap, miniMap;
 let markerLayerGroup; 
@@ -109,7 +109,12 @@ function renderDetailView(d) {
     setStars('star-afford', d.afford);
     
     if (miniMap) miniMap.remove();
-    miniMap = L.map('island-mini-map', { zoomControl: false, scrollWheelZoom: false });
+    // ENABLE SCROLL ZOOM AND ZOOM CONTROLS
+    miniMap = L.map('island-mini-map', { 
+        zoomControl: true, 
+        scrollWheelZoom: true 
+    });
+    
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(miniMap);
 
     if (d.itinerary && d.itinerary.length > 0) {
@@ -135,14 +140,20 @@ function renderDetailView(d) {
             let iconEmoji = "📍";
             const stopName = stop.name.toLowerCase();
             
-            if (stop.day === "Beach") iconEmoji = "🏖️";
-            if (stopName.includes("airport")) iconEmoji = "✈️";
-            if (stopName.includes("port")) iconEmoji = "⚓";
-            if (stopName.includes("hotel") || stopName.includes("stay")) iconEmoji = "🏨";
+            // PRIORITY ORDER: 1. Airport, 2. Port, 3. Beach, 4. Hotel
+            if (stopName.includes("airport")) {
+                iconEmoji = "✈️";
+            } else if (stopName.includes("port")) {
+                iconEmoji = "⚓";
+            } else if (stop.day === "Beach") {
+                iconEmoji = "🏖️";
+            } else if (stopName.includes("hotel") || stopName.includes("stay")) {
+                iconEmoji = "🏨";
+            }
 
             L.marker([stop.lat, stop.lng], {
                 icon: L.divIcon({
-                    html: `<div style="font-size:22px; filter: drop-shadow(0 0 2px white);">${iconEmoji}</div>`,
+                    html: `<div style="font-size:22px; filter: drop-shadow(0 0 2px white); cursor: pointer;">${iconEmoji}</div>`,
                     className: 'custom-pin',
                     iconAnchor: [11, 11]
                 })
