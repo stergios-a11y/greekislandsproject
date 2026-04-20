@@ -14,9 +14,9 @@
     <div class="header-content">
         <h1 id="site-title" onclick="showHome()">Greek Islands Odyssey</h1>
         <nav class="top-nav">
-            <a href="#" onclick="showHome()">Map</a>
-            <a href="#" onclick="showMission()">Why this site exists</a>
-            <a href="#" onclick="showHopping()">Island Hopping</a>
+            <a href="javascript:void(0)" onclick="showHome()">Map</a>
+            <a href="javascript:void(0)" onclick="showMission()">Why this site exists</a>
+            <a href="javascript:void(0)" onclick="showHopping()">Island Hopping</a>
         </nav>
     </div>
 </header>
@@ -24,7 +24,7 @@
 <div class="search-container">
     <div class="search-box-wrapper">
         <span class="search-icon">🔍</span>
-        <input type="text" id="islandSearch" placeholder="Search by island name..." onkeyup="filterIslands()">
+        <input type="text" id="islandSearch" placeholder="Search islands..." onkeyup="filterIslands()">
     </div>
     <div class="vibe-selector-wrapper">
         <p class="vibe-label">Filter by travel vibe:</p>
@@ -44,50 +44,50 @@
 </main>
 
 <main id="mission-view" class="content-page" style="display:none;">
-    <h1>Why This Site Exists</h1>
-    <p class="lead">
-        Choosing a Greek island shouldn’t feel like a research project. There are too many options, too many opinions, and too much noise. You end up comparing tabs for hours and still second-guessing the decision. 
-        <strong>This site cuts through that.</strong>
-    </p>
-    
-    <div class="mission-grid">
-        <div class="mission-card">
-            <h3>Pick Based on What Matters</h3>
-            <p>Select what you care about, and the site points you to the islands that actually fit. No overthinking, no endless comparisons.</p>
-            <ul style="list-style: none; padding: 0; font-weight: 600; color: #005BAE;">
-                <li>✓ Beaches & Nature</li>
-                <li>✓ History & Culture</li>
-                <li>✓ Nightlife & Energy</li>
-                <li>✓ Accessibility & Price</li>
+    <section class="mission-container">
+        <h1>Why This Site Exists</h1>
+        <p class="mission-intro">Choosing a Greek island shouldn’t feel like a research project.</p>
+        <p>There are too many options, too many opinions, and too much noise. You end up comparing tabs for hours and still second-guessing the decision. <strong>This site cuts through that.</strong></p>
+
+        <div class="mission-block">
+            <h2>Pick Based on What Matters to You</h2>
+            <p>Start with your priorities:</p>
+            <ul class="mission-list">
+                <li>Beaches</li>
+                <li>Culture</li>
+                <li>Nightlife</li>
+                <li>Accessibility</li>
+                <li>Price</li>
+                <li>Overall Balance</li>
             </ul>
+            <p>Select what you care about, and the site points you to the islands that actually fit. No overthinking, no endless comparisons.</p>
         </div>
-        <div class="mission-card">
-            <h3>Then Get a Ready Plan</h3>
-            <p>Once you choose an island, you’re done deciding. You get a complete itinerary including where to stay, what to see, which beaches are worth it, and how to structure your days. <strong>No extra research needed.</strong></p>
+
+        <div class="mission-block">
+            <h2>Then Get a Ready Plan</h2>
+            <p>Once you choose an island, you’re done deciding. You get a complete itinerary:</p>
+            <ul class="mission-list">
+                <li>Where to stay</li>
+                <li>What to see</li>
+                <li>Which beaches are worth it</li>
+                <li>How to structure your days</li>
+            </ul>
+            <p>No extra research needed.</p>
         </div>
-        <div class="mission-card">
-            <h3>The Point</h3>
-            <p>This isn’t about inspiration. It’s about making a clear decision fast—and having a solid plan immediately after. Because planning a trip shouldn’t take longer than the trip itself.</p>
+
+        <div class="mission-footer">
+            <h2>The Point</h2>
+            <p>This isn’t about inspiration. It’s about making a clear decision fast—and having a solid plan immediately after.</p>
+            <p class="highlight">Because planning a trip shouldn’t take longer than the trip itself.</p>
         </div>
-    </div>
+    </section>
 </main>
 
 <main id="hopping-view" class="content-page" style="display:none;">
-    <h1>Perfect Pairings</h1>
-    <p class="lead">Maximize your trip by combining islands that share frequent ferry connections and geographic proximity.</p>
-    
+    <h1>Island Hopping</h1>
     <div class="hopping-pair">
-        <div class="pair-info">
-            <h2>Milos + Kimolos</h2>
-            <p><strong>The Link:</strong> A 20-minute local ferry runs multiple times daily from Pollonia (Milos).</p>
-        </div>
-    </div>
-
-    <div class="hopping-pair">
-        <div class="pair-info">
-            <h2>Paros + Naxos</h2>
-            <p><strong>The Link:</strong> Only 45 minutes by ferry. These two are the best-connected pair in the entire Aegean.</p>
-        </div>
+        <h2>Milos + Kimolos</h2>
+        <p>20-minute local ferry from Pollonia. Perfect for moonscape beaches and seclusion.</p>
     </div>
 </main>
 
