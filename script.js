@@ -1,106 +1,71 @@
-const VERSION_ID = "v37.0 - Mission Page Fix";
-let mainMap, miniMap, markerLayerGroup, legendControl;
-const markerStore = {};
-let currentMode = 'overall';
-let islandData = {};
-
-window.onload = function() {
-    document.getElementById('version-display').innerText = VERSION_ID;
-    initMap();
-    fetch('map_data.json?v=' + new Date().getTime())
-        .then(res => res.json())
-        .then(data => { islandData = data; renderMarkers(); });
-};
-
-function initMap() {
-    mainMap = L.map('main-map', { zoomControl: false }).setView([38.3, 24.5], 7);
-    L.control.zoom({ position: 'topright' }).addTo(mainMap);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(mainMap);
-    markerLayerGroup = L.layerGroup().addTo(mainMap);
-
-    legendControl = L.control({ position: 'bottomleft' }); 
-    legendControl.onAdd = function() {
-        let div = L.DomUtil.create('div', 'info legend');
-        updateLegendContent(div);
-        return div;
-    };
-    legendControl.addTo(mainMap);
+:root {
+    --primary-navy: #0f172a;
+    --greek-blue: #3b82f6; /* Modern Blue for High */
+    --star-gold: #fbbf24;
+    --avg-yellow: #f1c40f;
+    --niche-orange: #e67e22;
+    --sea-salt: #f8fafc;
+    --shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
 }
 
-// UI NAVIGATION FUNCTIONS
-function hideAllViews() {
-    document.getElementById('home-view').style.display = 'none';
-    document.getElementById('detail-view').style.display = 'none';
-    document.getElementById('mission-view').style.display = 'none';
-    document.getElementById('hopping-view').style.display = 'none';
-    document.body.classList.add('subpage-active'); // Hides the search container
+body { font-family: 'Montserrat', sans-serif; margin: 0; background-color: var(--sea-salt); color: var(--primary-navy); }
+
+/* Hard hide search bar in subpages */
+body.subpage-active .search-container { display: none !important; }
+
+header { background: var(--primary-navy); color: white; padding: 12px 24px; position: sticky; top: 0; z-index: 1000; }
+.header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+#site-title { font-size: 1.1rem; margin: 0; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; cursor: pointer; }
+
+.top-nav a { color: #cbd5e1; text-decoration: none; margin-left: 20px; font-size: 0.8rem; font-weight: 600; }
+.top-nav a:hover { color: white; }
+
+.search-container { padding: 24px; background: white; border-bottom: 1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+#islandSearch { width: 100%; max-width: 400px; padding: 12px 20px; border-radius: 12px; border: 2px solid #f1f5f9; background: #f8fafc; }
+.vibe-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #94a3b8; margin-bottom: 10px; }
+.vibe-filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
+.vibe-chip { padding: 10px 18px; border-radius: 12px; border: 2px solid #f1f5f9; background: white; cursor: pointer; font-size: 0.8rem; font-weight: 700; }
+.vibe-chip.active { background: var(--primary-navy); color: white; border-color: var(--primary-navy); }
+
+/* Legend Indicators (The Fix) */
+.dot { 
+    height: 10px; 
+    width: 10px; 
+    margin-right: 10px; 
+    border-radius: 50%; 
+    display: inline-block; 
+    border: 1px solid rgba(0,0,0,0.1); /* Makes them pop */
+    vertical-align: middle;
 }
 
-function showHome() {
-    hideAllViews();
-    document.body.classList.remove('subpage-active'); // Shows the search container
-    document.getElementById('home-view').style.display = 'block';
-    if(mainMap) setTimeout(() => mainMap.invalidateSize(), 200);
+.info.legend {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    box-shadow: var(--shadow);
+    border-radius: 12px;
+    font-size: 0.8rem;
+    line-height: 1.5;
 }
 
-function showMission() {
-    hideAllViews();
-    document.getElementById('mission-view').style.display = 'block';
-    window.scrollTo(0, 0);
-}
+.legend-item { display: flex; align-items: center; font-weight: 600; margin-bottom: 4px; }
 
-function showHopping() {
-    hideAllViews();
-    document.getElementById('hopping-view').style.display = 'block';
-    window.scrollTo(0, 0);
-}
+/* Subpages Content */
+.content-page { max-width: 750px; margin: 60px auto; padding: 0 24px; line-height: 1.8; }
+.mission-container h1 { font-size: 2.8rem; margin-bottom: 20px; border-bottom: 4px solid var(--greek-blue); display: inline-block; }
+.mission-intro { font-size: 1.4rem; font-weight: 600; color: var(--greek-blue); margin-bottom: 24px; }
+.mission-block { margin: 40px 0; padding: 30px; background: white; border-radius: 16px; box-shadow: var(--shadow); }
+.mission-list { list-style: none; padding: 0; margin: 20px 0; }
+.mission-list li { margin: 10px 0; padding-left: 25px; position: relative; font-weight: 600; }
+.mission-list li::before { content: "•"; color: var(--greek-blue); position: absolute; left: 0; font-size: 1.5rem; }
 
-function showDetail(id) {
-    hideAllViews();
-    document.getElementById('detail-view').style.display = 'block';
-    document.getElementById('island-name').innerText = islandData[id].name;
-    window.scrollTo(0, 0);
-    
-    fetch(`islands/${id}.json?v=` + new Date().getTime())
-        .then(res => res.json())
-        .then(d_detail => renderDetailView(Object.assign({}, islandData[id], d_detail)))
-        .catch(() => alert("Guide under development."));
-}
-
-// ... Rest of your renderDetailView, updateMapMode, and filterIslands logic remains the same ...
-
-function updateLegendContent(div) {
-    const title = currentMode.charAt(0).toUpperCase() + currentMode.slice(1);
-    div.innerHTML = `<strong>${title} Level</strong><br>` +
-        `<div class="legend-item">⭐ Elite (4.1+)</div>` +
-        `<div class="legend-item"><span class="dot" style="background:#2ecc71"></span> High (3.5+)</div>` +
-        `<div class="legend-item"><span class="dot" style="background:#f1c40f"></span> Average (3.0+)</div>` +
-        `<div class="legend-item"><span class="dot" style="background:#e67e22"></span> Niche (<3.0)</div>`;
-}
-
-function getColor(score) {
-    if (score >= 4.1) return "#27ae60";
-    if (score >= 3.5) return "#2ecc71";
-    if (score >= 3.0) return "#f1c40f";
-    return "#e67e22";
-}
-
-function renderMarkers() {
-    markerLayerGroup.clearLayers();
-    const starIcon = L.divIcon({
-        html: '<div style="font-size: 26px; color: #fbbf24;">⭐</div>',
-        className: 'star-icon', iconSize: [30, 30], iconAnchor: [15, 15]
-    });
-
-    Object.keys(islandData).forEach(id => {
-        const d = islandData[id];
-        const score = (currentMode === 'overall') ? d.overall : d[currentMode];
-        let marker = (score >= 4.1) 
-            ? L.marker([d.lat, d.lng], { icon: starIcon }) 
-            : L.circleMarker([d.lat, d.lng], { radius: 9, fillColor: getColor(score), color: "#fff", weight: 2, fillOpacity: 1 });
-
-        marker.addTo(markerLayerGroup).on('click', () => showDetail(id));
-        marker.bindTooltip(`<strong>${d.name}</strong>`, { sticky: true });
-        markerStore[id] = { marker, data: d, isStar: (score >= 4.1) };
-    });
-}
+/* Detail/Map View UI */
+#main-map { height: 75vh; width: 100%; }
+.rating-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 30px; }
+.rating-tile { background: #f8fafc; padding: 15px; border-radius: 12px; text-align: center; }
+.stars-outer { font-size: 14px; color: #e2e8f0; position: relative; }
+.stars-inner { position: absolute; top: 0; left: 0; overflow: hidden; color: var(--star-gold); width: 0; }
+.stars-outer::before, .stars-inner::before { content: "★★★★★"; }
+.island-hero { width: 100%; height: 350px; object-fit: cover; border-radius: 20px; margin-bottom: 30px; }
+#island-mini-map { height: 400px; border-radius: 20px; margin-bottom: 30px; }
+.back-btn { padding: 12px 24px; background: var(--primary-navy); color: white; border: none; border-radius: 10px; cursor: pointer; margin-bottom: 24px; font-weight: 700; }
