@@ -1,4 +1,4 @@
-const VERSION_ID = "v31.0 - Legend Scores Restored";
+const VERSION_ID = "v32.0 - Elite Star Legend Fix";
 let mainMap, miniMap, markerLayerGroup, legendControl;
 const markerStore = {};
 let currentMode = 'overall';
@@ -17,11 +17,9 @@ window.onload = function() {
 };
 
 function initMap() {
-    // Initialize Main Map
     mainMap = L.map('main-map', { zoomControl: false }).setView([38.3, 24.5], 7);
     L.control.zoom({ position: 'topright' }).addTo(mainMap);
     
-    // Add Distance Scale (Metric Only)
     L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(mainMap);
     
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(mainMap);
@@ -39,7 +37,7 @@ function initMap() {
 function updateLegendContent(div) {
     const title = currentMode.charAt(0).toUpperCase() + currentMode.slice(1);
     div.innerHTML = `<strong>${title} Level</strong><br>` +
-        `<div class="legend-item"><span class="dot" style="background:#27ae60"></span> Elite (4.1+)</div>` +
+        `<div class="legend-item"><span style="font-size:14px; margin-right:8px;">⭐</span> Elite (4.1+)</div>` +
         `<div class="legend-item"><span class="dot" style="background:#2ecc71"></span> High (3.5+)</div>` +
         `<div class="legend-item"><span class="dot" style="background:#f1c40f"></span> Average (3.0+)</div>` +
         `<div class="legend-item"><span class="dot" style="background:#e67e22"></span> Niche (<3.0)</div>`;
@@ -110,7 +108,6 @@ function renderDetailView(d) {
     if (miniMap) miniMap.remove();
     miniMap = L.map('island-mini-map', { zoomControl: true, scrollWheelZoom: true });
     
-    // Add Distance Scale to Mini Map
     L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(miniMap);
     
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(miniMap);
