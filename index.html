@@ -16,11 +16,18 @@
             <img src="logo.png" id="site-logo" alt="Aegean Blueprint">
             <span id="brand-text">Aegean Blueprint</span>
         </div>
-        <nav class="top-nav">
-            <a href="javascript:void(0)" onclick="switchView('home')">Map</a>
-            <a href="javascript:void(0)" onclick="switchView('mission')">Why this site exists</a>
-            <a href="javascript:void(0)" onclick="switchView('hopping')">Island Hopping</a>
-            <a href="javascript:void(0)" onclick="switchView('data')">Islands Data</a>
+        
+        <div class="menu-toggle" id="mobile-menu-btn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="top-nav" id="main-nav">
+            <a href="javascript:void(0)" onclick="handleNav('home')">Map</a>
+            <a href="javascript:void(0)" onclick="handleNav('data')">Islands Data</a>
+            <a href="javascript:void(0)" onclick="handleNav('hopping')">Island Hopping</a>
+            <a href="javascript:void(0)" onclick="handleNav('mission')">Why this site exists</a>
         </nav>
     </div>
 </header>
@@ -31,7 +38,6 @@
     </div>
     
     <div class="vibe-control-panel">
-        <p class="vibe-label">Filter by travel vibe:</p>
         <div class="vibe-filters">
             <button class="vibe-chip active" id="btn-overall" onclick="updateMapMode('overall')">🏠 Overall</button>
             <button class="vibe-chip" id="btn-beach" onclick="updateMapMode('beach')">🏖️ Beaches</button>
@@ -45,39 +51,6 @@
 
 <main id="view-home" class="view-section">
     <div id="main-map"></div>
-</main>
-
-<main id="view-mission" class="view-section content-page" style="display:none;">
-    <div class="mission-wrapper">
-        <img src="logo.png" class="mission-big-logo" alt="Logo">
-        <h1>Why This Site Exists</h1>
-        <p class="hero-lead">Choosing a Greek island shouldn’t feel like a research project.</p>
-        <div class="mission-grid">
-            <div class="mission-card">
-                <h3>Pick by Priorities</h3>
-                <p>Select what you care about and we point you to the top islands that actually fit.</p>
-            </div>
-            <div class="mission-card">
-                <h3>Ready-to-Go Plans</h3>
-                <p>Once you choose, you get a complete itinerary. No extra research needed.</p>
-            </div>
-        </div>
-        <section class="the-point-highlight">
-            <div class="highlight-inner">
-                <h2>The Point</h2>
-                <p>This is about making a <strong>clear decision fast</strong>—and having a solid plan immediately after.</p>
-                <span class="final-word">Because planning a trip shouldn’t take longer than the trip itself.</span>
-            </div>
-        </section>
-    </div>
-</main>
-
-<main id="view-hopping" class="view-section content-page" style="display:none;">
-    <h1>Perfect Pairings</h1>
-    <div class="hopping-pair">
-        <h2>Milos + Kimolos</h2>
-        <p>A 20-minute local ferry. Perfect for volcanic moonscapes and seclusion.</p>
-    </div>
 </main>
 
 <main id="view-data" class="view-section content-page" style="display:none;">
@@ -94,8 +67,8 @@
                     <th onclick="sortTable(5)">Night ↕️</th>
                     <th onclick="sortTable(6)">Access ↕️</th>
                     <th onclick="sortTable(7)">Price ↕️</th>
-                    <th onclick="sortTable(8)">Area ↕️</th>
-                    <th onclick="sortTable(9)">Pop ↕️</th>
+                    <th onclick="sortTable(8)" class="text-right">Area ↕️</th>
+                    <th onclick="sortTable(9)" class="text-right">Pop ↕️</th>
                 </tr>
             </thead>
             <tbody id="islands-table-body"></tbody>
@@ -103,17 +76,41 @@
     </div>
 </main>
 
+<main id="view-hopping" class="view-section content-page" style="display:none;">
+    <h1>Perfect Pairings</h1>
+    <div class="hopping-pair">
+        <h2>Milos + Kimolos</h2>
+        <p>A 20-minute local ferry. Perfect for volcanic moonscapes and seclusion.</p>
+    </div>
+</main>
+
+<main id="view-mission" class="view-section content-page" style="display:none;">
+    <div class="mission-wrapper">
+        <img src="logo.png" class="mission-big-logo" alt="Logo">
+        <h1>Why This Site Exists</h1>
+        <div class="mission-grid">
+            <div class="mission-card">
+                <h3>Decision over Inspiration</h3>
+                <p>Select your priorities and see the Top 10 islands that fit. No overthinking.</p>
+            </div>
+            <div class="mission-card">
+                <h3>Ready Plans</h3>
+                <p>Get a complete itinerary delivered instantly. No extra research needed.</p>
+            </div>
+        </div>
+        <section class="the-point-highlight">
+            <div class="highlight-inner">
+                <h2>The Point</h2>
+                <p> प्लानिंग a trip shouldn’t take longer than the trip itself.</p>
+            </div>
+        </section>
+    </div>
+</main>
+
 <main id="view-detail" class="view-section" style="display:none;">
     <div class="detail-container">
         <button class="back-btn" onclick="switchView('home')">← Back to Map</button>
         <h1 id="island-name"></h1>
-        <div class="rating-box">
-            <div class="rating-tile"><span class="rating-label">Beach<br>Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div></div>
-            <div class="rating-tile"><span class="rating-label">Culture &<br>History</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div></div>
-            <div class="rating-tile"><span class="rating-label">Night<br>Life</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div></div>
-            <div class="rating-tile"><span class="rating-label">Access<br>Ease</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div></div>
-            <div class="rating-tile"><span class="rating-label">Price<br>Level</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div></div>
-        </div>
         <div id="island-mini-map"></div>
         <div id="island-guide"></div>
     </div>
