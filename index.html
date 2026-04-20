@@ -3,72 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greek Island Odyssey | Version 2.0</title>
-    
+    <title>Greek Island Finder</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    
-    <link rel="stylesheet" href="style.css?v=6" />
-    
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    
-    <script src="script.js?v=6" defer></script>
 </head>
 <body>
 
 <header>
-    <h1 onclick="showHome()">Greek Island Odyssey 🏝️</h1>
-    <input type="text" id="islandSearch" placeholder="Search destinations..." onkeyup="filterIslands()">
-    <div class="quick-menu">
-        <span class="vibe-chip active" id="btn-overall" onclick="updateMapMode('overall')">🏆 Best Overall</span>
-        <span class="vibe-chip" id="btn-beach" onclick="updateMapMode('beach')">🌊 Beach Lovers</span>
-        <span class="vibe-chip" id="btn-hist" onclick="updateMapMode('hist')">🏛️ Culture Buffs</span>
-        <span class="vibe-chip" id="btn-night" onclick="updateMapMode('night')">💃 Party Animals</span>
-        <span class="vibe-chip" id="btn-access" onclick="updateMapMode('access')">🚗 Accessibility</span>
-        <span class="vibe-chip" id="btn-afford" onclick="updateMapMode('afford')">💸 Affordability</span>
-    </div>
+    <h1>GREEK ISLAND FINDER</h1>
+    <div id="version-display"></div>
 </header>
 
-<div id="home-view">
+<div class="search-container">
+    <input type="text" id="islandSearch" placeholder="Search for an island..." onkeyup="filterIslands()">
+    <div class="vibe-filters">
+        <button class="vibe-chip active" id="btn-overall" onclick="updateMapMode('overall')">🏠 Overall</button>
+        <button class="vibe-chip" id="btn-beach" onclick="updateMapMode('beach')">🏖️ Beaches</button>
+        <button class="vibe-chip" id="btn-hist" onclick="updateMapMode('hist')">🏛️ Culture</button>
+        <button class="vibe-chip" id="btn-night" onclick="updateMapMode('night')">🍷 Nightlife</button>
+        <button class="vibe-chip" id="btn-access" onclick="updateMapMode('access')">🚢 Access</button>
+        <button class="vibe-chip" id="btn-afford" onclick="updateMapMode('afford')">💸 Price</button>
+    </div>
+</div>
+
+<main id="home-view">
     <div id="main-map"></div>
-    <div class="map-legend">
-        <strong id="legend-title">Best Overall</strong><br>
-        <div class="legend-item"><span style="font-size:14px; text-shadow:0 0 2px #000;">⭐</span> 4.1+ (Elite)</div>
-        <div class="legend-item"><span class="dot-legend" style="background:#2ecc71"></span> 3.5 - 4.0 (Very Good)</div>
-        <div class="legend-item"><span class="dot-legend" style="background:#f1c40f"></span> 3.0 - 3.4 (Good)</div>
-        <div class="legend-item"><span class="dot-legend" style="background:#e67e22"></span> &lt; 3.0 (Niche)</div>
+    <div class="legend">
+        <strong id="legend-title">Overall Rating</strong>: 
+        <span class="legend-item"><span class="dot" style="background:#27ae60"></span> ⭐ Elite</span>
+        <span class="legend-item"><span class="dot" style="background:#2ecc71"></span> High</span>
+        <span class="legend-item"><span class="dot" style="background:#f1c40f"></span> Average</span>
+        <span class="legend-item"><span class="dot" style="background:#e67e22"></span> Niche</span>
     </div>
-</div>
+</main>
 
-<div id="detail-view" style="display: none;">
-    <div style="max-width: 900px; margin: 0 auto; padding: 20px;">
-        <button class="back-btn" onclick="showHome()">← Back to Map</button>
-        
-        <div style="display:flex; justify-content:space-between; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
-            <h1 id="island-name" style="color:#005BAE; font-size: 2.5rem; margin:0;"></h1>
-            <div style="background: #005BAE; color: white; padding: 10px 20px; border-radius: 30px; font-weight: bold;">
-                Rating: <span id="island-total-score">0.0</span>/5
-            </div>
+<main id="detail-view" style="display:none;">
+    <button class="back-btn" onclick="showHome()">← Back to Map</button>
+    
+    <h1 id="island-name"></h1>
+
+    <div class="rating-box">
+        <div class="rating-row">
+            <span class="rating-label">🏖️ Beach</span>
+            <div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div>
         </div>
-        
-        <div id="island-mini-map"></div>
-        
-        <div id="island-guide"></div>
-        
-        <img id="island-pic" class="island-hero" src="" alt="Island View">
-        
-        <div class="rating-box">
-            <div class="rating-row"><span>🏖️ Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div></div>
-            <div class="rating-row"><span>🏛️ Culture & History</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div></div>
-            <div class="rating-row"><span>🍷 Nightlife</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div></div>
-            <div class="rating-row"><span>🚗 Accessibility</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div></div>
-            <div class="rating-row"><span>💸 Affordability</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div></div>
+        <div class="rating-row">
+            <span class="rating-label">🏛️ Culture</span>
+            <div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div>
+        </div>
+        <div class="rating-row">
+            <span class="rating-label">🍷 Night</span>
+            <div class="stars-outer"><div id="star-night" class="stars-inner"></div></div>
+        </div>
+        <div class="rating-row">
+            <span class="rating-label">🚢 Access</span>
+            <div class="stars-outer"><div id="star-access" class="stars-inner"></div></div>
+        </div>
+        <div class="rating-row">
+            <span class="rating-label">💸 Price</span>
+            <div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div>
         </div>
     </div>
-</div>
 
-<footer>
-    &copy; 2026 Greek Island Odyssey | <span id="version-display">Loading version...</span>
-</footer>
+    <img id="island-pic" class="island-hero" src="" alt="Island Image">
+    
+    <div id="island-mini-map"></div>
+    
+    <div id="island-guide"></div>
+</main>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
