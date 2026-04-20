@@ -1,4 +1,4 @@
-const VERSION_ID = "v53.3 - The Rectangle Fix";
+const VERSION_ID = "v54.1 - Content Restoration Build";
 let mainMap, miniMap, markerLayerGroup, legendControl;
 let currentMode = 'overall';
 let islandData = {};
@@ -18,106 +18,48 @@ window.onload = function() {
             islandData = data; 
             renderMarkers(); 
             generateTable(); 
+            handleInitialRouting();
         });
 };
+
+window.onhashchange = function() { handleInitialRouting(); };
 
 function initMap() {
     mainMap = L.map('main-map', { zoomControl: false, minZoom: 6 }).setView([38.3, 24.5], 7);
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(mainMap);
     markerLayerGroup = L.layerGroup().addTo(mainMap);
+    
     legendControl = L.control({ position: 'bottomleft' }); 
     legendControl.onAdd = () => {
         let div = L.DomUtil.create('div', 'info legend');
-        updateLegendContent(div);
+        // Initial build of legend
+        setTimeout(() => updateLegendContent(div), 100);
         return div;
     };
     legendControl.addTo(mainMap);
 }
 
-function handleNav(t) { 
-    document.querySelectorAll('.view-section').forEach(v => v.style.display = 'none');
-    document.getElementById('home-controls').style.display = (t === 'home') ? 'flex' : 'none';
-    document.getElementById('view-' + t).style.display = 'block';
-    document.getElementById('main-nav').classList.remove('active');
-    
-    if (t === 'home' && mainMap) {
-        setTimeout(() => mainMap.invalidateSize(), 100);
+function handleInitialRouting() {
+    const hash = window.location.hash.replace('#', '');
+    if (!hash || hash === 'home') handleNav('home', false);
+    else if (islandData[hash]) showDetail(hash, false);
+    else {
+        const staticPages = ['data', 'hopping', 'mission'];
+        if (staticPages.includes(hash)) handleNav(hash, false);
+        else handleNav('home', false);
     }
-    window.scrollTo(0,0);
-}
-
-function showDetail(id) { 
-    handleNav('detail'); 
-    const d = islandData[id];
-    document.getElementById('island-name').innerText = d.name; 
-    
-    // Set Stars immediately
-    ['beach','hist','night','access','afford'].forEach(c => {
-        const score = d[c] || 0;
-        document.getElementById(`star-${c}`).style.width = (score/5*100) + "%";
-    });
-
-    // Load Itinerary
-    fetch(`islands/${id}.json?v=` + Date.now())
-        .then(res => res.json())
-        .then(d_detail => {
-            renderDetailView(Object.assign({}, d, d_detail));
-        }).catch(() => {
-            renderDetailView(Object.assign({}, d, { guide: "Full blueprint coming soon." }));
-        });
-}
-
-function renderDetailView(d) {
-    document.getElementById('island-guide').innerHTML = d.guide || "";
-    if (miniMap) miniMap.remove();
-    
-    // FORCE LEAFLET RESET
-    setTimeout(() => {
-        miniMap = L.map('island-mini-map').setView([d.lat, d.lng], 11);
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(miniMap);
-        miniMap.invalidateSize(); // THE FIX
-
-        dayLayerGroups = {};
-        beachLayerGroup = L.layerGroup().addTo(miniMap);
-
-        if (d.itinerary) {
-            const roadTrip = d.itinerary.filter(s => typeof s.day === 'number').sort((a,b) => a.day - b.day);
-            let legHTML = `<div class="legend-item legend-day-link" onclick="filterDay('all')">🗺️ Full Route</div>`;
-            
-            [...new Set(roadTrip.map(s => s.day))].forEach((day, idx) => {
-                const color = dayColors[idx % dayColors.length];
-                dayLayerGroups[day] = L.layerGroup().addTo(miniMap);
-                
-                let segment = roadTrip.filter(s => s.day === day);
-                if (segment.length >= 2) {
-                    const coords = segment.map(p => `${p.lng},${p.lat}`).join(';');
-                    fetch(`https://router.project-osrm.org/route/v1/driving/${coords}?overview=full&geometries=geojson`)
-                        .then(r => r.json()).then(rd => {
-                            L.geoJSON(rd.routes[0].geometry, {style:{color:color, weight:6}}).addTo(dayLayerGroups[day]);
-                        });
-                }
-                legHTML += `<div class="legend-item legend-day-link" onclick="filterDay(${day})"><span class="line-sample" style="background:${color}"></span>Day ${day}</div>`;
-            });
-            const mL = L.control({ position: 'topright' });
-            mL.onAdd = () => { const div = L.DomUtil.create('div', 'mini-legend'); div.innerHTML = legHTML; return div; };
-            mL.addTo(miniMap);
-            miniMap.fitBounds(L.latLngBounds(roadTrip.map(p => [p.lat, p.lng])), { padding: [40, 40] });
-        }
-    }, 200);
-}
-
-function filterDay(day) { 
-    Object.values(dayLayerGroups).forEach(g => miniMap.removeLayer(g)); 
-    if (day === 'all') Object.values(dayLayerGroups).forEach(g => g.addTo(miniMap)); 
-    else dayLayerGroups[day].addTo(miniMap); 
 }
 
 function updateLegendContent(div) {
-    div.innerHTML = `<strong>${currentMode.toUpperCase()} TIER</strong><br>` +
+    // If the div isn't provided (called from updateMapMode), find it in the DOM
+    const target = div || document.querySelector('.info.legend');
+    if (!target) return;
+    const title = currentMode.toUpperCase();
+    target.innerHTML = `<strong>${title} TIER</strong><br>` +
         `<div class="legend-item">⭐ Elite Top 10</div>` +
-        `<div class="legend-item"><span class="dot" style="background:#005BAE"></span> High</div>` +
-        `<div class="legend-item"><span class="dot" style="background:#f1c40f"></span> Avg</div>` +
-        `<div class="legend-item"><span class="dot" style="background:#e67e22"></span> Niche</div>`;
+        `<div class="legend-item"><span class="dot" style="background:#005BAE"></span> High (3.5+)</div>` +
+        `<div class="legend-item"><span class="dot" style="background:#f1c40f"></span> Avg (3.0+)</div>` +
+        `<div class="legend-item"><span class="dot" style="background:#e67e22"></span> Niche (<3.0)</div>`;
 }
 
 function renderMarkers() {
@@ -129,16 +71,71 @@ function renderMarkers() {
     Object.keys(islandData).forEach(id => {
         const d = islandData[id];
         const score = (currentMode === 'overall' ? (d.total || d.overall) : d[currentMode]) || 0;
-        const isElite = top10.includes(id);
         const color = score >= 3.5 ? "#005BAE" : (score >= 3.0 ? "#f1c40f" : "#e67e22");
-        let marker = isElite ? L.marker([d.lat, d.lng], {icon: starIcon}) : L.circleMarker([d.lat, d.lng], {radius:9, fillColor:color, color:"#fff", weight:2, fillOpacity:1});
+        let marker = top10.includes(id) ? L.marker([d.lat, d.lng], {icon: starIcon}) : L.circleMarker([d.lat, d.lng], {radius:9, fillColor:color, color:"#fff", weight:2, fillOpacity:1});
         marker.addTo(markerLayerGroup).on('click', () => showDetail(id));
         marker.bindTooltip(`<strong>${d.name}</strong><br>${currentMode}: ${score.toFixed(1)}`);
         markerStore[id] = { marker, data: d };
     });
 }
 
-function jumpMap(key) { handleNav('home'); mainMap.setView([islandData[key].lat, islandData[key].lng], 11); markerStore[key].marker.openTooltip(); }
+function handleNav(t, updateHash = true) { 
+    document.querySelectorAll('.view-section').forEach(v => v.style.display = 'none');
+    document.getElementById('home-controls').style.display = (t === 'home') ? 'flex' : 'none';
+    const targetView = document.getElementById('view-' + t);
+    if (targetView) targetView.style.display = 'block';
+    document.getElementById('main-nav').classList.remove('active');
+    if (updateHash) window.location.hash = t;
+    if (t === 'home' && mainMap) setTimeout(() => mainMap.invalidateSize(), 100);
+    window.scrollTo(0,0);
+}
+
+function showDetail(id, updateHash = true) { 
+    handleNav('detail', false); 
+    if (updateHash) window.location.hash = id;
+    const d = islandData[id];
+    document.getElementById('island-name').innerText = d.name; 
+    ['beach','hist','night','access','afford'].forEach(c => {
+        const score = d[c] || 0;
+        const bar = document.getElementById(`star-${c}`);
+        if (bar) bar.style.width = (score/5*100) + "%";
+    });
+    fetch(`islands/${id}.json?v=` + Date.now()).then(res => res.json()).then(d_detail => {
+        renderDetailView(Object.assign({}, d, d_detail));
+    }).catch(() => renderDetailView(Object.assign({}, d, { guide: "Blueprint coming soon." })));
+}
+
+function renderDetailView(d) {
+    document.getElementById('island-guide').innerHTML = d.guide || "";
+    if (miniMap) miniMap.remove();
+    setTimeout(() => {
+        miniMap = L.map('island-mini-map').setView([d.lat, d.lng], 11);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(miniMap);
+        miniMap.invalidateSize();
+        dayLayerGroups = {};
+        if (d.itinerary) {
+            const roadTrip = d.itinerary.filter(s => typeof s.day === 'number').sort((a,b) => a.day - b.day);
+            let legHTML = `<div class="legend-item legend-day-link" onclick="filterDay('all')">🗺️ Full Route</div>`;
+            [...new Set(roadTrip.map(s => s.day))].forEach((day, idx) => {
+                const color = dayColors[idx % dayColors.length];
+                dayLayerGroups[day] = L.layerGroup().addTo(miniMap);
+                let segment = roadTrip.filter(s => s.day === day);
+                if (segment.length >= 2) {
+                    const coords = segment.map(p => `${p.lng},${p.lat}`).join(';');
+                    fetch(`https://router.project-osrm.org/route/v1/driving/${coords}?overview=full&geometries=geojson`)
+                        .then(r => r.json()).then(rd => L.geoJSON(rd.routes[0].geometry, {style:{color:color, weight:6}}).addTo(dayLayerGroups[day]));
+                }
+                legHTML += `<div class="legend-item legend-day-link" onclick="filterDay(${day})"><span class="line-sample" style="background:${color}"></span>Day ${day}</div>`;
+            });
+            const mL = L.control({ position: 'topright' });
+            mL.onAdd = () => { const div = L.DomUtil.create('div', 'mini-legend'); div.innerHTML = legHTML; return div; };
+            mL.addTo(miniMap);
+            miniMap.fitBounds(L.latLngBounds(roadTrip.map(p => [p.lat, p.lng])), { padding: [40, 40] });
+        }
+    }, 250);
+}
+
+function filterDay(day) { Object.values(dayLayerGroups).forEach(g => miniMap.removeLayer(g)); if (day === 'all') Object.values(dayLayerGroups).forEach(g => g.addTo(miniMap)); else dayLayerGroups[day].addTo(miniMap); }
 function toggleMenu() { document.getElementById('main-nav').classList.toggle('active'); }
 function generateTable() {
     const tbody = document.getElementById('islands-table-body');
@@ -170,5 +167,6 @@ function sortTable(n) {
     const newData = {}; sorted.forEach(k => newData[k] = islandData[k]);
     islandData = newData; generateTable();
 }
-function updateMapMode(m) { currentMode = m; document.querySelectorAll('.vibe-chip').forEach(el => el.classList.remove('active')); document.getElementById('btn-' + m).classList.add('active'); renderMarkers(); updateLegendContent(document.querySelector('.info.legend')); }
+function jumpMap(key) { handleNav('home'); mainMap.setView([islandData[key].lat, islandData[key].lng], 11); markerStore[key].marker.openTooltip(); }
+function updateMapMode(m) { currentMode = m; document.querySelectorAll('.vibe-chip').forEach(el => el.classList.remove('active')); document.getElementById('btn-' + m).classList.add('active'); renderMarkers(); updateLegendContent(); }
 function filterIslands() { const q = document.getElementById('islandSearch').value.toLowerCase(); Object.keys(markerStore).forEach(k => { markerStore[k].marker.setOpacity(markerStore[k].data.name.toLowerCase().includes(q) ? 1 : 0.1); }); }
