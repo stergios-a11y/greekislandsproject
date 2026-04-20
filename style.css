@@ -19,7 +19,6 @@ header {
 
 #site-title { font-size: 1.4rem; margin: 0; letter-spacing: 1px; }
 
-/* COMPACT Search Container */
 .search-container {
     padding: 10px;
     background: white;
@@ -31,8 +30,8 @@ header {
 }
 
 #islandSearch {
-    width: 60%; /* Reduced width */
-    max-width: 300px; /* More compact */
+    width: 60%;
+    max-width: 300px;
     padding: 8px 15px;
     border-radius: 15px;
     border: 1px solid #ccc;
@@ -57,23 +56,22 @@ header {
 
 .vibe-chip.active { background: var(--greek-blue); color: white; }
 
-/* MAPS */
 #main-map { height: 75vh; width: 100%; border-bottom: 2px solid #ddd; }
-#island-mini-map { height: 350px; width: 100%; border-radius: 12px; margin-bottom: 20px; border: 1px solid #ddd; }
+#island-mini-map { height: 450px; width: 100%; border-radius: 12px; margin-bottom: 20px; border: 1px solid #ddd; position: relative; }
 
-/* IN-MAP LEGEND STYLING */
-.info.legend {
+/* IN-MAP LEGENDS */
+.info.legend, .mini-legend {
     padding: 8px 12px;
     background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 5px;
-    line-height: 1.4;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #333;
 }
 
-.legend-item { display: flex; align-items: center; margin-bottom: 2px; }
+.legend-item { display: flex; align-items: center; margin-bottom: 3px; }
 .dot { height: 10px; width: 10px; border-radius: 50%; display: inline-block; margin-right: 8px; }
+.line-sample { width: 20px; height: 3px; display: inline-block; margin-right: 8px; border-radius: 2px; }
 
 /* DETAIL VIEW */
 #detail-view { max-width: 850px; margin: 0 auto; padding: 20px; background: white; }
@@ -100,5 +98,9 @@ header {
 .beach-table th { background: var(--greek-blue); color: white; padding: 10px; text-align: left; }
 .beach-table td { padding: 8px; border-bottom: 1px solid #eee; }
 
+.itinerary-step { border-left: 4px solid var(--greek-blue); padding: 15px; margin: 15px 0; background: #f1f7ff; border-radius: 0 8px 8px 0; font-size: 0.9rem; }
+
 #site-footer { padding: 20px; text-align: center; background: #fff; border-top: 1px solid #eee; }
 #version-display { font-size: 11px; color: #aaa; }
+
+.back-btn { padding: 8px 16px; background: #f0f0f0; border: none; border-radius: 8px; cursor: pointer; margin-bottom: 15px; font-weight: bold; }
