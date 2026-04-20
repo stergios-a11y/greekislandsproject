@@ -13,14 +13,10 @@
 <header>
     <div class="header-content">
         <div class="logo-wrapper" onclick="handleNav('home')">
-            <img src="logo.png" id="site-logo" alt="Aegean Blueprint">
+            <img src="logo.png" id="site-logo" alt="Logo">
             <span id="brand-text">Aegean Blueprint</span>
         </div>
-        
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <span></span><span></span><span></span>
-        </div>
-
+        <div class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></div>
         <nav class="top-nav" id="main-nav">
             <a href="javascript:void(0)" onclick="handleNav('home')">Map</a>
             <a href="javascript:void(0)" onclick="handleNav('data')">Islands Data</a>
@@ -52,16 +48,16 @@
         <table id="islands-table">
             <thead>
                 <tr>
-                    <th onclick="sortTable(0)">Island ↕️</th>
-                    <th onclick="sortTable(1)">Group ↕️</th>
-                    <th onclick="sortTable(2)">Total ↕️</th>
-                    <th onclick="sortTable(3)">Beach ↕️</th>
-                    <th onclick="sortTable(4)">Hist ↕️</th>
-                    <th onclick="sortTable(5)">Night ↕️</th>
-                    <th onclick="sortTable(6)">Access ↕️</th>
-                    <th onclick="sortTable(7)">Price ↕️</th>
-                    <th onclick="sortTable(8)" class="text-right">Area ↕️</th>
-                    <th onclick="sortTable(9)" class="text-right">Pop ↕️</th>
+                    <th onclick="sortTable(0)">Island ↕</th>
+                    <th onclick="sortTable(1)">Group ↕</th>
+                    <th onclick="sortTable(2)">Total ↕</th>
+                    <th onclick="sortTable(3)">Beach ↕</th>
+                    <th onclick="sortTable(4)">Hist ↕</th>
+                    <th onclick="sortTable(5)">Night ↕</th>
+                    <th onclick="sortTable(6)">Access ↕</th>
+                    <th onclick="sortTable(7)">Price ↕</th>
+                    <th onclick="sortTable(8)" class="text-right">Area ↕</th>
+                    <th onclick="sortTable(9)" class="text-right">Pop ↕</th>
                 </tr>
             </thead>
             <tbody id="islands-table-body"></tbody>
@@ -79,19 +75,20 @@
 
 <main id="view-mission" class="view-section content-page" style="display:none;">
     <div class="mission-wrapper">
-        <img src="logo.png" class="mission-big-logo" alt="Logo">
+        <img src="logo.png" class="mission-big-logo">
         <h1>Why This Site Exists</h1>
+        <p class="mission-lead">Choosing an island shouldn't be a research project.</p>
         <div class="mission-grid">
             <div class="mission-card">
-                <h3>Decision over Inspiration</h3>
-                <p>Select your priorities and see the Top 10 islands that fit. No overthinking.</p>
+                <h3>Decision > Inspiration</h3>
+                <p>We rank 80 islands so you don't have to. Pick your vibe and get your Top 10 instantly.</p>
             </div>
             <div class="mission-card">
-                <h3>Ready Plans</h3>
-                <p>Get a complete itinerary delivered instantly. No extra research needed.</p>
+                <h3>Ready-to-Go</h3>
+                <p>Every Elite island includes a full driving itinerary, beach maps, and culture guides.</p>
             </div>
         </div>
-        <div class="the-point-highlight">
+        <div class="the-point-box">
             <h2>The Point</h2>
             <p>Planning a trip shouldn’t take longer than the trip itself.</p>
         </div>
