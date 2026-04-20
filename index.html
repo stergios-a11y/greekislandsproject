@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aegean Blueprint</title>
+    <title>Aegean Blueprint | The Greek Island Decision Engine</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -77,20 +77,27 @@
     <div class="mission-wrapper">
         <img src="logo.png" class="mission-big-logo">
         <h1>Why This Site Exists</h1>
+        <p class="mission-lead">Choosing a Greek island shouldn’t feel like a research project.</p>
+        <p>There are too many options and noise. <strong>Aegean Blueprint cuts through that.</strong></p>
+        
         <div class="mission-grid">
             <div class="mission-card">
-                <h3>Decision > Inspiration</h3>
-                <p>We rank 80 islands so you don't have to. Pick your vibe and get your Top 10 instantly.</p>
+                <h3>1. Pick by Priorities</h3>
+                <p>Select what you care about—Beaches, Culture, or Price—and we point you to the islands that actually fit. No overthinking.</p>
             </div>
             <div class="mission-card">
-                <h3>Ready Plans</h3>
-                <p>Every Elite island includes a full driving itinerary, beach maps, and culture guides.</p>
+                <h3>2. Ready-to-Go Plans</h3>
+                <p>Once you choose, you’re done deciding. You get a complete itinerary including where to stay, what to see, and daily structures.</p>
             </div>
         </div>
-        <div class="the-point-box">
-            <h2>The Point</h2>
-            <p>Planning a trip shouldn’t take longer than the trip itself.</p>
-        </div>
+
+        <section class="the-point-highlight">
+            <div class="highlight-inner">
+                <h2>The Point</h2>
+                <p>This isn’t about inspiration. It’s about making a <strong>clear decision fast</strong>—and having a solid plan immediately after.</p>
+                <p class="final-word">Because planning a trip shouldn’t take longer than the trip itself.</p>
+            </div>
+        </section>
     </div>
 </main>
 
@@ -98,7 +105,6 @@
     <div class="detail-container">
         <button class="back-btn" onclick="handleNav('home')">← Back to Map</button>
         <h1 id="island-name"></h1>
-        
         <div class="rating-box">
             <div class="rating-tile"><span class="rating-label">Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div></div>
             <div class="rating-tile"><span class="rating-label">Culture & History</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div></div>
@@ -106,7 +112,6 @@
             <div class="rating-tile"><span class="rating-label">Access Ease</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div></div>
             <div class="rating-tile"><span class="rating-label">Price Level</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div></div>
         </div>
-
         <div id="island-mini-map"></div>
         <div id="island-guide"></div>
     </div>
