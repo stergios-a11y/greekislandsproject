@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greek Islands Odyssey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
 
 <header>
-    <h1 id="site-title">Greek Islands Odyssey</h1>
+    <h1 id="site-title" onclick="showHome()" style="cursor: pointer;">Greek Islands Odyssey</h1>
 </header>
 
 <div class="search-container">
@@ -35,23 +36,23 @@
     <h1 id="island-name"></h1>
 
     <div class="rating-box">
-        <div class="rating-row">
+        <div class="rating-tile">
             <span class="rating-label">🏖️ Beach</span>
             <div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div>
         </div>
-        <div class="rating-row">
+        <div class="rating-tile">
             <span class="rating-label">🏛️ Culture</span>
             <div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div>
         </div>
-        <div class="rating-row">
+        <div class="rating-tile">
             <span class="rating-label">🍷 Night</span>
             <div class="stars-outer"><div id="star-night" class="stars-inner"></div></div>
         </div>
-        <div class="rating-row">
+        <div class="rating-tile">
             <span class="rating-label">🚢 Access</span>
             <div class="stars-outer"><div id="star-access" class="stars-inner"></div></div>
         </div>
-        <div class="rating-row">
+        <div class="rating-tile">
             <span class="rating-label">💸 Price</span>
             <div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div>
         </div>
