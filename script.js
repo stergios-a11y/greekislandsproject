@@ -1,24 +1,7 @@
-/* ==========================================================
-   Aegean Blueprint — script.js  v2.0
-   Upgrades included:
-   #1  AI-powered Match Me recommender (quiz + scoring)
-   #2  Island comparison with Chart.js radar chart
-   #3  Auto-generated Island Hopping pairs (proximity + complementarity)
-   #4  Island Group filter chips
-   #5  Duplicate koufonisia_main removed from runtime
-   #6  All event listeners moved here (no inline onclick in HTML)
-   #8  Loading overlay dismissed after data ready
-   #9  Mobile-responsive table (card view < 600px handled via CSS)
-   ========================================================== */
-
 'use strict';
 
-/* ----------------------------------------------------------
-   DATA
----------------------------------------------------------- */
-const VERSION = 'v2.0';
+const VERSION = 'v3.0';
 
-// NOTE: koufonisia_main duplicate (#5) is simply not loaded here.
 const ISLANDS_DATA = {
   "athens":       { name:"Athens (Piraeus)", lat:37.983, lng:23.727, beach:2.0, hist:5.0, night:5.0, access:5.0, afford:3.0, total:3.8, area:39,    pop:664000,  island_group:"Saronic" },
   "paros":        { name:"Paros",            lat:37.085, lng:25.148, beach:5.0, hist:3.8, night:5.0, access:4.5, afford:2.2, total:4.1, area:196,   pop:13700,   island_group:"Cyclades" },
@@ -95,60 +78,43 @@ const ISLANDS_DATA = {
   "gavdos":       { name:"Gavdos",           lat:34.840, lng:24.080, beach:4.8, hist:2.0, night:2.5, access:1.0, afford:4.5, total:2.5, area:33,    pop:152,     island_group:"Crete" }
 };
 
-// Convert to array with key attached
 const ISLANDS = Object.entries(ISLANDS_DATA).map(([key, data]) => ({ key, ...data }));
 
-/* ----------------------------------------------------------
-   STATE
----------------------------------------------------------- */
 let mapInstance = null;
 let mapMarkers = {};
 let miniMapInstance = null;
 let currentMapMode = 'overall';
 let currentGroupFilter = 'all';
-let compareSelection = [null, null]; // [keyA, keyB]
+let compareSelection = [null, null];
 let radarChartInstance = null;
 let sortState = { col: 'total', asc: false };
 
 const SCORE_DIMS = ['beach', 'hist', 'night', 'access', 'afford'];
 const DIM_LABELS = ['Beach', 'Culture', 'Nightlife', 'Access', 'Price'];
-
 const SCORE_COLORS = {
-  beach:  '#378ADD',
-  hist:   '#1D9E75',
-  night:  '#D4537E',
-  access: '#BA7517',
-  afford: '#7F77DD',
+  beach:  '#1B4F8A',
+  hist:   '#5A7A3A',
+  night:  '#C0522A',
+  access: '#C4962A',
+  afford: '#7B5EA7',
 };
 
-/* ----------------------------------------------------------
-   UTILITIES
----------------------------------------------------------- */
 function scoreToColor(s) {
-  if (s >= 4.5) return '#4a9e2f';
-  if (s >= 3.8) return '#378ADD';
-  if (s >= 3.0) return '#BA7517';
-  return '#D85A30';
+  if (s >= 4.5) return '#2E7D32';
+  if (s >= 3.8) return '#1B4F8A';
+  if (s >= 3.0) return '#C4962A';
+  return '#C0522A';
 }
 
 function haversineApprox(a, b) {
-  // Fast Euclidean approx sufficient for ferry-proximity (degrees)
   const dlat = a.lat - b.lat;
   const dlng = a.lng - b.lng;
   return Math.sqrt(dlat * dlat + dlng * dlng);
 }
 
-function fmt(n, decimals = 1) {
-  return Number(n).toFixed(decimals);
-}
+function fmt(n, decimals = 1) { return Number(n).toFixed(decimals); }
+function fmtNum(n) { return Number(n).toLocaleString(); }
 
-function fmtNum(n) {
-  return Number(n).toLocaleString();
-}
-
-/* ----------------------------------------------------------
-   INIT
----------------------------------------------------------- */
 document.addEventListener('DOMContentLoaded', () => {
   setupNav();
   setupDarkMode();
@@ -165,14 +131,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function dismissLoading() {
   const overlay = document.getElementById('loading-overlay');
-  if (overlay) {
-    setTimeout(() => overlay.classList.add('hidden'), 400);
-  }
+  if (overlay) setTimeout(() => overlay.classList.add('hidden'), 400);
 }
 
-/* ----------------------------------------------------------
-   NAVIGATION  (upgrade #6 — no inline onclick)
----------------------------------------------------------- */
 const NAV_VIEWS = {
   'nav-home':    'home',
   'nav-map':     'home',
@@ -188,15 +149,10 @@ function setupNav() {
     const el = document.getElementById(btnId);
     if (el) el.addEventListener('click', (e) => { e.preventDefault(); handleNav(view); });
   });
-
   const menuToggle = document.getElementById('menu-toggle-btn');
-  if (menuToggle) {
-    menuToggle.addEventListener('click', toggleMenu);
-  }
-
+  if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
   const detailBack = document.getElementById('detail-back-btn');
   if (detailBack) detailBack.addEventListener('click', () => handleNav('home'));
-
   const detailCmpBtn = document.getElementById('detail-compare-btn');
   if (detailCmpBtn) {
     detailCmpBtn.addEventListener('click', () => {
@@ -209,29 +165,19 @@ function setupNav() {
 
 function handleNav(view) {
   const homeControls = document.getElementById('home-controls');
-  const views = ['home', 'data', 'compare', 'hopping', 'match', 'mission', 'detail'];
-  views.forEach(v => {
+  ['home', 'data', 'compare', 'hopping', 'match', 'mission', 'detail'].forEach(v => {
     const el = document.getElementById(`view-${v}`);
     if (el) el.style.display = 'none';
   });
-
   const nav = document.getElementById('main-nav');
   if (nav) nav.querySelectorAll('a').forEach(a => a.classList.remove('active'));
-
   const target = document.getElementById(`view-${view}`);
   if (target) target.style.display = '';
-
   homeControls.style.display = (view === 'home') ? '' : 'none';
-
   const navLink = document.getElementById(`nav-${view}`);
   if (navLink) navLink.classList.add('active');
-
   if (nav && nav.classList.contains('open')) nav.classList.remove('open');
-
-  // Invalidate map size when returning to map
-  if (view === 'home' && mapInstance) {
-    setTimeout(() => mapInstance.invalidateSize(), 100);
-  }
+  if (view === 'home' && mapInstance) setTimeout(() => mapInstance.invalidateSize(), 100);
 }
 
 function toggleMenu() {
@@ -239,37 +185,40 @@ function toggleMenu() {
   if (nav) nav.classList.toggle('open');
 }
 
-/* ----------------------------------------------------------
-   DARK MODE  (upgrade #10)
----------------------------------------------------------- */
 function setupDarkMode() {
   const btn = document.getElementById('dark-mode-btn');
   const root = document.documentElement;
-
-  // Respect saved preference
   if (localStorage.getItem('darkMode') === 'true') {
     root.classList.add('dark');
     btn.textContent = '☀';
   }
-
   btn.addEventListener('click', () => {
     const isDark = root.classList.toggle('dark');
     btn.textContent = isDark ? '☀' : '☾';
     localStorage.setItem('darkMode', isDark);
-    // Redraw radar chart if visible
     if (radarChartInstance) renderRadarChart();
   });
 }
 
-/* ----------------------------------------------------------
-   MAP  (Leaflet)
----------------------------------------------------------- */
 function setupMap() {
-  mapInstance = L.map('main-map', { zoomControl: true }).setView([37.8, 24.5], 6);
+  const GREECE_BOUNDS = L.latLngBounds(
+    L.latLng(33.8, 18.5),
+    L.latLng(42.2, 30.2)
+  );
+
+  mapInstance = L.map('main-map', {
+    zoomControl: true,
+    minZoom: 5,
+    maxZoom: 14,
+    maxBounds: GREECE_BOUNDS,
+    maxBoundsViscosity: 0.85,
+  });
+
+  mapInstance.fitBounds(GREECE_BOUNDS);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors',
-    maxZoom: 18,
+    maxZoom: 14,
   }).addTo(mapInstance);
 
   renderMapMarkers();
@@ -279,14 +228,7 @@ function setupMap() {
 }
 
 function getDisplayScore(island) {
-  const modeMap = {
-    overall: 'total',
-    beach:   'beach',
-    hist:    'hist',
-    night:   'night',
-    access:  'access',
-    afford:  'afford',
-  };
+  const modeMap = { overall:'total', beach:'beach', hist:'hist', night:'night', access:'access', afford:'afford' };
   return island[modeMap[currentMapMode] || 'total'];
 }
 
@@ -295,66 +237,32 @@ function makeMarkerIcon(score) {
   const size = Math.round(28 + score * 4);
   return L.divIcon({
     className: 'custom-marker',
-    html: `<div style="
-      background:${color};
-      width:${size}px;height:${size}px;
-      border-radius:50%;
-      border:2px solid #fff;
-      display:flex;align-items:center;justify-content:center;
-      font-size:11px;font-weight:700;color:#fff;
-      box-shadow:0 1px 4px rgba(0,0,0,.35);
-    ">${fmt(score)}</div>`,
+    html: `<div style="background:${color};width:${size}px;height:${size}px;border-radius:50%;border:2.5px solid #fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.3);">${fmt(score)}</div>`,
     iconSize: [size, size],
     iconAnchor: [size / 2, size / 2],
   });
 }
 
 function renderMapMarkers() {
-  // Remove existing markers
   Object.values(mapMarkers).forEach(m => mapInstance.removeLayer(m));
   mapMarkers = {};
-
   const searchTerm = (document.getElementById('islandSearch')?.value || '').toLowerCase();
-
   ISLANDS.forEach(island => {
     if (searchTerm && !island.name.toLowerCase().includes(searchTerm)) return;
     if (currentGroupFilter !== 'all' && island.island_group !== currentGroupFilter) return;
-
     const score = getDisplayScore(island);
     const marker = L.marker([island.lat, island.lng], { icon: makeMarkerIcon(score) })
       .addTo(mapInstance)
-      .bindPopup(`
-        <div style="min-width:160px">
-          <strong>${island.name}</strong><br>
-          <small style="color:#666">${island.island_group}</small><br>
-          <div style="margin-top:6px">Overall: <strong>${fmt(island.total)}</strong></div>
-          <div>Beach: ${fmt(island.beach)} · Culture: ${fmt(island.hist)}</div>
-          <div>Night: ${fmt(island.night)} · Access: ${fmt(island.access)}</div>
-          <div>Price: ${fmt(island.afford)}</div>
-          <button onclick="window._openDetail('${island.key}')" style="margin-top:8px;padding:4px 10px;width:100%;cursor:pointer;">View Details</button>
-        </div>
-      `);
-
+      .bindPopup(`<div style="min-width:160px;font-family:sans-serif"><strong style="font-size:14px">${island.name}</strong><br><small style="color:#888;text-transform:uppercase;letter-spacing:.5px">${island.island_group}</small><div style="margin-top:8px;font-size:13px">Overall: <strong style="color:${scoreToColor(island.total)}">${fmt(island.total)}</strong></div><div style="font-size:12px;color:#666;margin-top:2px">Beach ${fmt(island.beach)} · Culture ${fmt(island.hist)} · Night ${fmt(island.night)}</div><button onclick="window._openDetail('${island.key}')" style="margin-top:10px;padding:6px 12px;width:100%;cursor:pointer;background:#1B4F8A;color:#fff;border:none;border-radius:6px;font-size:12px;font-weight:600">View details</button></div>`);
     marker.on('click', () => openDetail(island.key));
     mapMarkers[island.key] = marker;
   });
 }
 
-// Expose for popup buttons
 window._openDetail = openDetail;
+function filterIslands() { renderMapMarkers(); }
+function updateMapMode(mode) { currentMapMode = mode; renderMapMarkers(); }
 
-function filterIslands() {
-  renderMapMarkers();
-}
-
-function updateMapMode(mode) {
-  currentMapMode = mode;
-  renderMapMarkers();
-}
-
-/* ----------------------------------------------------------
-   VIBE CHIPS  (upgrade #6)
----------------------------------------------------------- */
 function setupVibeChips() {
   const container = document.getElementById('vibe-filters');
   if (!container) return;
@@ -367,19 +275,14 @@ function setupVibeChips() {
   });
 }
 
-/* ----------------------------------------------------------
-   GROUP FILTER  (upgrade #4)
----------------------------------------------------------- */
 function setupGroupFilter() {
   const row = document.getElementById('group-filter-row');
   if (!row) return;
-
   const groups = ['all', ...new Set(ISLANDS.map(i => i.island_group))].sort((a, b) => {
     if (a === 'all') return -1;
     if (b === 'all') return 1;
     return a.localeCompare(b);
   });
-
   groups.forEach(group => {
     const btn = document.createElement('button');
     btn.className = 'group-chip' + (group === 'all' ? ' active' : '');
@@ -395,87 +298,47 @@ function setupGroupFilter() {
   });
 }
 
-/* ----------------------------------------------------------
-   ISLAND DETAIL
----------------------------------------------------------- */
 function openDetail(key) {
   const island = ISLANDS_DATA[key];
   if (!island) return;
-
   handleNav('detail');
-
   document.getElementById('island-name').textContent = island.name;
   document.getElementById('island-meta-info').textContent = `${island.island_group} · ${fmtNum(island.area)} km² · Pop. ${fmtNum(island.pop)}`;
-
   const compareBtn = document.getElementById('detail-compare-btn');
   if (compareBtn) {
     compareBtn.dataset.islandKey = key;
     compareBtn.textContent = compareSelection.includes(key) ? '✓ In Compare' : '＋ Compare';
   }
-
-  // Ratings
   SCORE_DIMS.forEach(dim => {
     const bar = document.getElementById(`star-${dim}`);
     const val = document.getElementById(`val-${dim}`);
-    if (bar) bar.style.width = `${(island[dim] / 5) * 100}%`;
-    if (bar) bar.style.background = SCORE_COLORS[dim];
+    if (bar) { bar.style.width = `${(island[dim] / 5) * 100}%`; bar.style.background = SCORE_COLORS[dim]; }
     if (val) val.textContent = fmt(island[dim]);
   });
-
   document.getElementById('stat-area').textContent = `${fmtNum(island.area)} km²`;
   document.getElementById('stat-pop').textContent = fmtNum(island.pop);
   document.getElementById('stat-group').textContent = island.island_group;
-
-  // Mini map
   const miniMapEl = document.getElementById('island-mini-map');
   if (miniMapEl) {
     if (miniMapInstance) { miniMapInstance.remove(); miniMapInstance = null; }
     miniMapEl.style.height = '220px';
     setTimeout(() => {
-      miniMapInstance = L.map(miniMapEl, { zoomControl: false, attributionControl: false })
-        .setView([island.lat, island.lng], 9);
+      miniMapInstance = L.map(miniMapEl, { zoomControl: false, attributionControl: false }).setView([island.lat, island.lng], 9);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(miniMapInstance);
-      L.marker([island.lat, island.lng]).addTo(miniMapInstance)
-        .bindPopup(island.name).openPopup();
+      L.marker([island.lat, island.lng]).addTo(miniMapInstance).bindPopup(island.name).openPopup();
     }, 50);
   }
-
-  // Guide
   const guide = document.getElementById('island-guide');
   if (guide) {
-    guide.innerHTML = `
-      <div class="island-guide-box">
-        <h3>Blueprint Summary</h3>
-        <p>
-          ${island.name} scores <strong>${fmt(island.total)}/5</strong> overall.
-          ${island.beach >= 4.5 ? 'Outstanding beaches make it a top swimming destination. ' : ''}
-          ${island.hist >= 4.5 ? 'Exceptional historical and cultural depth. ' : ''}
-          ${island.night >= 4.5 ? 'Among the most vibrant nightlife scenes in Greece. ' : ''}
-          ${island.afford >= 4.2 ? 'Very budget-friendly compared to most islands. ' : ''}
-          ${island.afford <= 1.5 ? 'One of the most expensive islands — budget accordingly. ' : ''}
-          ${island.access >= 4.5 ? 'Excellent connections — easy to reach from Athens. ' : ''}
-          ${island.access <= 2.0 ? 'Remote and harder to reach — but that is part of the appeal. ' : ''}
-        </p>
-        <p style="margin-top:8px">
-          <a href="#" onclick="window._addCmpNav('${key}')">Compare with another island →</a>
-        </p>
-      </div>`;
+    guide.innerHTML = `<div class="island-guide-box"><h3>Blueprint Summary</h3><p>${island.name} scores <strong>${fmt(island.total)}/5</strong> overall.${island.beach >= 4.5 ? ' Outstanding beaches.' : ''}${island.hist >= 4.5 ? ' Exceptional culture and history.' : ''}${island.night >= 4.5 ? ' Among the best nightlife in Greece.' : ''}${island.afford >= 4.2 ? ' Very affordable.' : ''}${island.afford <= 1.5 ? ' One of the most expensive islands — budget accordingly.' : ''}${island.access >= 4.5 ? ' Excellent connections from Athens.' : ''}${island.access <= 2.0 ? ' Remote and harder to reach — but worth the effort.' : ''}</p><p style="margin-top:10px"><a href="#" onclick="window._addCmpNav('${key}')">Compare with another island →</a></p></div>`;
   }
 }
 
-window._addCmpNav = function(key) {
-  addToCompare(key);
-  handleNav('compare');
-};
+window._addCmpNav = function(key) { addToCompare(key); handleNav('compare'); };
 
-/* ----------------------------------------------------------
-   DATA TABLE  (upgrades #6, #9)
----------------------------------------------------------- */
 function setupTable() {
   const searchInput = document.getElementById('tableSearchInput');
   if (searchInput) searchInput.addEventListener('input', renderTable);
-
-  // Sort on th click (upgrade #6 — no inline onclick)
   const thead = document.querySelector('#islands-table thead');
   if (thead) {
     thead.querySelectorAll('th[data-col]').forEach(th => {
@@ -487,72 +350,40 @@ function setupTable() {
       });
     });
   }
-
   renderTable();
 }
 
 function renderTable() {
   const query = (document.getElementById('tableSearchInput')?.value || '').toLowerCase();
-  let list = ISLANDS.filter(i =>
-    !query || i.name.toLowerCase().includes(query) || i.island_group.toLowerCase().includes(query)
-  );
-
-  const col = sortState.col;
-  const asc = sortState.asc;
+  let list = ISLANDS.filter(i => !query || i.name.toLowerCase().includes(query) || i.island_group.toLowerCase().includes(query));
+  const col = sortState.col, asc = sortState.asc;
   list.sort((a, b) => {
     const av = a[col], bv = b[col];
     if (typeof av === 'string') return asc ? av.localeCompare(bv) : bv.localeCompare(av);
     return asc ? av - bv : bv - av;
   });
-
   const countLabel = document.getElementById('table-count-label');
   if (countLabel) countLabel.textContent = `${list.length} islands`;
-
   const tbody = document.getElementById('islands-table-body');
   if (!tbody) return;
-
-  tbody.innerHTML = list.map(i => `
-    <tr data-key="${i.key}" class="table-row-clickable">
-      <td data-label="Island" style="font-weight:600">${i.name}</td>
-      <td data-label="Group"><span class="group-tag">${i.island_group}</span></td>
-      <td data-label="Total" style="color:${scoreToColor(i.total)};font-weight:600">${fmt(i.total)}</td>
-      <td data-label="Beach">${fmt(i.beach)}</td>
-      <td data-label="Culture">${fmt(i.hist)}</td>
-      <td data-label="Night">${fmt(i.night)}</td>
-      <td data-label="Access">${fmt(i.access)}</td>
-      <td data-label="Price">${fmt(i.afford)}</td>
-      <td data-label="Area" class="text-right">${fmtNum(i.area)}</td>
-      <td data-label="Pop" class="text-right">${fmtNum(i.pop)}</td>
-    </tr>`
-  ).join('');
-
-  // Row click → detail
+  tbody.innerHTML = list.map(i => `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="Island" style="font-weight:600">${i.name}</td><td data-label="Group"><span class="group-tag">${i.island_group}</span></td><td data-label="Total" style="color:${scoreToColor(i.total)};font-weight:600">${fmt(i.total)}</td><td data-label="Beach">${fmt(i.beach)}</td><td data-label="Culture">${fmt(i.hist)}</td><td data-label="Night">${fmt(i.night)}</td><td data-label="Access">${fmt(i.access)}</td><td data-label="Price">${fmt(i.afford)}</td><td data-label="Area" class="text-right">${fmtNum(i.area)}</td><td data-label="Pop" class="text-right">${fmtNum(i.pop)}</td></tr>`).join('');
   tbody.querySelectorAll('.table-row-clickable').forEach(row => {
     row.addEventListener('click', () => openDetail(row.dataset.key));
   });
 }
 
-/* ----------------------------------------------------------
-   COMPARE  (upgrade #2)
----------------------------------------------------------- */
 function setupCompare() {
   const selA = document.getElementById('compare-select-a');
   const selB = document.getElementById('compare-select-b');
   const clearBtn = document.getElementById('compare-clear-btn');
-
   if (!selA || !selB) return;
-
-  // Populate dropdowns
   const sorted = [...ISLANDS].sort((a, b) => a.name.localeCompare(b.name));
   sorted.forEach(i => {
     [selA, selB].forEach(sel => {
       const opt = document.createElement('option');
-      opt.value = i.key;
-      opt.textContent = i.name;
-      sel.appendChild(opt);
+      opt.value = i.key; opt.textContent = i.name; sel.appendChild(opt);
     });
   });
-
   selA.addEventListener('change', () => { compareSelection[0] = selA.value || null; renderCompareView(); });
   selB.addEventListener('change', () => { compareSelection[1] = selB.value || null; renderCompareView(); });
   if (clearBtn) clearBtn.addEventListener('click', clearCompare);
@@ -562,9 +393,7 @@ function addToCompare(key) {
   if (compareSelection.includes(key)) return;
   if (!compareSelection[0]) compareSelection[0] = key;
   else if (!compareSelection[1]) compareSelection[1] = key;
-  else compareSelection = [key, compareSelection[1]]; // replace A
-
-  // Sync dropdowns if rendered
+  else compareSelection = [key, compareSelection[1]];
   const selA = document.getElementById('compare-select-a');
   const selB = document.getElementById('compare-select-b');
   if (selA && compareSelection[0]) selA.value = compareSelection[0];
@@ -583,20 +412,16 @@ function clearCompare() {
 function renderCompareView() {
   const iA = compareSelection[0] ? ISLANDS_DATA[compareSelection[0]] : null;
   const iB = compareSelection[1] ? ISLANDS_DATA[compareSelection[1]] : null;
-
   const placeholder = document.getElementById('compare-placeholder');
   const content = document.getElementById('compare-content');
-
   if (!iA || !iB) {
     if (placeholder) placeholder.style.display = '';
     if (content) content.style.display = 'none';
     if (radarChartInstance) { radarChartInstance.destroy(); radarChartInstance = null; }
     return;
   }
-
   if (placeholder) placeholder.style.display = 'none';
   if (content) content.style.display = '';
-
   renderRadarChart(iA, iB);
   renderCompareCards(iA, iB);
 }
@@ -607,48 +432,22 @@ function renderRadarChart(iA, iB) {
     iB = compareSelection[1] ? ISLANDS_DATA[compareSelection[1]] : null;
   }
   if (!iA || !iB) return;
-
   const canvas = document.getElementById('compare-radar-chart');
   if (!canvas) return;
-
   if (radarChartInstance) radarChartInstance.destroy();
-
   radarChartInstance = new Chart(canvas, {
     type: 'radar',
     data: {
       labels: DIM_LABELS,
       datasets: [
-        {
-          label: iA.name,
-          data: SCORE_DIMS.map(d => iA[d]),
-          backgroundColor: 'rgba(55,138,221,0.15)',
-          borderColor: '#378ADD',
-          pointBackgroundColor: '#378ADD',
-          pointRadius: 4,
-        },
-        {
-          label: iB.name,
-          data: SCORE_DIMS.map(d => iB[d]),
-          backgroundColor: 'rgba(29,158,117,0.15)',
-          borderColor: '#1D9E75',
-          pointBackgroundColor: '#1D9E75',
-          pointRadius: 4,
-        },
+        { label: iA.name, data: SCORE_DIMS.map(d => iA[d]), backgroundColor: 'rgba(27,79,138,0.12)', borderColor: '#1B4F8A', pointBackgroundColor: '#1B4F8A', pointRadius: 4 },
+        { label: iB.name, data: SCORE_DIMS.map(d => iB[d]), backgroundColor: 'rgba(196,150,42,0.12)', borderColor: '#C4962A', pointBackgroundColor: '#C4962A', pointRadius: 4 },
       ],
     },
     options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      scales: {
-        r: {
-          min: 0, max: 5,
-          ticks: { stepSize: 1, font: { size: 10 } },
-          pointLabels: { font: { size: 12 } },
-        },
-      },
-      plugins: {
-        legend: { position: 'bottom', labels: { font: { size: 12 }, boxWidth: 14 } },
-      },
+      responsive: true, maintainAspectRatio: false,
+      scales: { r: { min: 0, max: 5, ticks: { stepSize: 1, font: { size: 10 } }, pointLabels: { font: { size: 12 } } } },
+      plugins: { legend: { position: 'bottom', labels: { font: { size: 12 }, boxWidth: 14 } } },
     },
   });
 }
@@ -656,246 +455,101 @@ function renderRadarChart(iA, iB) {
 function renderCompareCards(iA, iB) {
   const container = document.getElementById('compare-cards');
   if (!container) return;
-
   const card = (island, other) => {
     const isWinner = island.total > other.total;
-    return `
-      <div class="compare-card${isWinner ? ' compare-winner' : ''}">
-        ${isWinner ? '<div class="winner-label">Higher overall score</div>' : ''}
-        <h2>${island.name}</h2>
-        <div class="compare-meta">${island.island_group} · ${fmtNum(island.area)} km² · Pop. ${fmtNum(island.pop)}</div>
-        <div class="compare-total" style="color:${scoreToColor(island.total)}">${fmt(island.total)}<span>/5</span></div>
-        <div class="compare-bars">
-          ${SCORE_DIMS.map((dim, i) => {
-            const wins = island[dim] >= other[dim];
-            return `<div class="cmp-bar-row">
-              <span class="cmp-dim-label">${DIM_LABELS[i]}</span>
-              <div class="cmp-bar-track">
-                <div class="cmp-bar-fill" style="width:${(island[dim]/5)*100}%;background:${wins ? SCORE_COLORS[dim] : '#aaa'}"></div>
-              </div>
-              <span class="cmp-dim-val ${wins ? 'wins' : ''}">${fmt(island[dim])}</span>
-            </div>`;
-          }).join('')}
-        </div>
-      </div>`;
+    return `<div class="compare-card${isWinner ? ' compare-winner' : ''}">${isWinner ? '<div class="winner-label">Higher overall score</div>' : ''}<h2>${island.name}</h2><div class="compare-meta">${island.island_group} · ${fmtNum(island.area)} km² · Pop. ${fmtNum(island.pop)}</div><div class="compare-total" style="color:${scoreToColor(island.total)}">${fmt(island.total)}<span>/5</span></div><div class="compare-bars">${SCORE_DIMS.map((dim, i) => { const wins = island[dim] >= other[dim]; return `<div class="cmp-bar-row"><span class="cmp-dim-label">${DIM_LABELS[i]}</span><div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:${(island[dim]/5)*100}%;background:${wins ? SCORE_COLORS[dim] : '#bbb'}"></div></div><span class="cmp-dim-val ${wins ? 'wins' : ''}">${fmt(island[dim])}</span></div>`; }).join('')}</div></div>`;
   };
-
   container.innerHTML = card(iA, iB) + card(iB, iA);
 }
 
-/* ----------------------------------------------------------
-   ISLAND HOPPING  (upgrade #3 — auto-generated)
----------------------------------------------------------- */
-function setupHopping() {
-  // Will render on nav
-}
+function setupHopping() {}
 
 function renderHopping() {
   const container = document.getElementById('hopping-list');
   if (!container || container.dataset.rendered) return;
   container.dataset.rendered = '1';
-
   const eligible = ISLANDS.filter(i => i.key !== 'athens' && i.total >= 3.5);
   const pairs = [];
-
   for (let i = 0; i < eligible.length; i++) {
     for (let j = i + 1; j < eligible.length; j++) {
       const a = eligible[i], b = eligible[j];
       const d = haversineApprox(a, b);
       if (d < 0.3 || d > 2.8) continue;
-
-      // Complementarity: islands that are different from each other in interesting ways are better pairs
-      const complementarity =
-        Math.abs(a.beach - b.beach) +
-        Math.abs(a.hist - b.hist) +
-        Math.abs(a.night - b.night);
+      const complementarity = Math.abs(a.beach - b.beach) + Math.abs(a.hist - b.hist) + Math.abs(a.night - b.night);
       const avgTotal = (a.total + b.total) / 2;
-      const score = avgTotal + complementarity * 0.2;
-
-      pairs.push({ a, b, d, score, avgTotal, complementarity });
+      pairs.push({ a, b, d, score: avgTotal + complementarity * 0.2, avgTotal });
     }
   }
-
   pairs.sort((x, y) => y.score - x.score);
-  const top = pairs.slice(0, 14);
-
-  const ferryLabel = d =>
-    d < 0.5 ? 'Short ferry (under 45 min)' :
-    d < 1.0 ? 'Medium ferry (~1.5 hrs)' :
-    d < 1.8 ? 'Ferry ~2–3 hrs' :
-    'Longer ferry (~3–4 hrs)';
-
+  const ferryLabel = d => d < 0.5 ? 'Short ferry (under 45 min)' : d < 1.0 ? 'Medium ferry (~1.5 hrs)' : d < 1.8 ? 'Ferry ~2–3 hrs' : 'Longer ferry (~3–4 hrs)';
   const tags = (a, b) => {
     const t = [];
     if (a.beach >= 4.5 && b.hist >= 4.0) t.push(`${a.name}: beaches · ${b.name}: culture`);
     else if (b.beach >= 4.5 && a.hist >= 4.0) t.push(`${b.name}: beaches · ${a.name}: culture`);
-    else if (Math.abs(a.night - b.night) >= 1.5) {
-      const loud = a.night > b.night ? a : b;
-      const quiet = loud === a ? b : a;
-      t.push(`${loud.name}: nightlife · ${quiet.name}: relaxation`);
-    }
+    else if (Math.abs(a.night - b.night) >= 1.5) { const loud = a.night > b.night ? a : b; const quiet = loud === a ? b : a; t.push(`${loud.name}: nightlife · ${quiet.name}: relaxation`); }
     if ((a.afford + b.afford) / 2 >= 3.8) t.push('Budget-friendly combo');
-    if (a.island_group === b.island_group) t.push(`Both in ${a.island_group}`);
-    else t.push(`${a.island_group} + ${b.island_group}`);
+    t.push(a.island_group === b.island_group ? `Both in ${a.island_group}` : `${a.island_group} + ${b.island_group}`);
     return t.slice(0, 3);
   };
-
-  container.innerHTML = top.map(({ a, b, d, avgTotal }) => `
-    <div class="hopping-pair">
-      <div class="hopping-pair-title">${a.name} + ${b.name}</div>
-      <div class="hopping-pair-meta">
-        Combined score: <strong>${fmt(avgTotal)}</strong> &bull; ${ferryLabel(d)}
-      </div>
-      <div class="hopping-tags">
-        ${tags(a, b).map(tag => `<span class="hopping-tag">${tag}</span>`).join('')}
-      </div>
-    </div>`
-  ).join('');
+  container.innerHTML = pairs.slice(0, 14).map(({ a, b, d, avgTotal }) => `<div class="hopping-pair"><div class="hopping-pair-title">${a.name} + ${b.name}</div><div class="hopping-pair-meta">Combined score: <strong>${fmt(avgTotal)}</strong> &bull; ${ferryLabel(d)}</div><div class="hopping-tags">${tags(a, b).map(tag => `<span class="hopping-tag">${tag}</span>`).join('')}</div></div>`).join('');
 }
 
-// Render hopping when navigated to
-const origHandleNav = handleNav;
 window.addEventListener('DOMContentLoaded', () => {
   const hoppingLink = document.getElementById('nav-hopping');
-  if (hoppingLink) {
-    hoppingLink.addEventListener('click', () => setTimeout(renderHopping, 50));
-  }
+  if (hoppingLink) hoppingLink.addEventListener('click', () => setTimeout(renderHopping, 50));
 });
 
-/* ----------------------------------------------------------
-   MATCH ME QUIZ  (upgrade #1)
----------------------------------------------------------- */
 const QUIZ_QUESTIONS = [
-  {
-    question: 'What kind of trip are you planning?',
-    options: ['Solo adventure', 'Couple getaway', 'Family vacation', 'Friend group'],
-  },
-  {
-    question: 'What matters most to you?',
-    options: ['Beaches & swimming', 'History & culture', 'Nightlife & food', 'Peace & nature'],
-  },
-  {
-    question: 'What is your budget level?',
-    options: ['Budget (backpacker)', 'Mid-range', 'Splurge-ready', 'No limit'],
-  },
-  {
-    question: 'How do you feel about crowds?',
-    options: ['Love the buzz', 'Some is fine', 'Prefer quiet', 'Must be secluded'],
-  },
+  { question: 'What kind of trip are you planning?', options: ['Solo adventure', 'Couple getaway', 'Family vacation', 'Friend group'] },
+  { question: 'What matters most to you?', options: ['Beaches & swimming', 'History & culture', 'Nightlife & food', 'Peace & nature'] },
+  { question: 'What is your budget level?', options: ['Budget (backpacker)', 'Mid-range', 'Splurge-ready', 'No limit'] },
+  { question: 'How do you feel about crowds?', options: ['Love the buzz', 'Some is fine', 'Prefer quiet', 'Must be secluded'] },
 ];
 
 let quizAnswers = {};
 let quizStep = 0;
 
-function setupQuiz() {
-  renderQuizStep();
-}
+function setupQuiz() { renderQuizStep(); }
 
 function renderQuizStep() {
   const container = document.getElementById('quiz-container');
   const results = document.getElementById('quiz-results');
   if (!container) return;
-
   container.style.display = '';
   if (results) results.style.display = 'none';
-
   const q = QUIZ_QUESTIONS[quizStep];
-
-  container.innerHTML = `
-    <div class="quiz-progress">
-      ${QUIZ_QUESTIONS.map((_, i) => `<div class="quiz-dot ${i < quizStep ? 'done' : i === quizStep ? 'current' : ''}"></div>`).join('')}
-      <span class="quiz-step-label">${quizStep + 1} / ${QUIZ_QUESTIONS.length}</span>
-    </div>
-    <div class="quiz-card">
-      <div class="quiz-question">${q.question}</div>
-      <div class="quiz-options">
-        ${q.options.map((opt, i) => `
-          <button class="quiz-option ${quizAnswers[quizStep] === i ? 'selected' : ''}" data-idx="${i}">
-            ${opt}
-          </button>`).join('')}
-      </div>
-      <div class="quiz-nav">
-        ${quizStep > 0 ? `<button class="quiz-back-btn">← Back</button>` : `<span></span>`}
-        <button class="quiz-next-btn ${quizAnswers[quizStep] === undefined ? 'disabled' : ''}" ${quizAnswers[quizStep] === undefined ? 'disabled' : ''}>
-          ${quizStep === QUIZ_QUESTIONS.length - 1 ? 'Find my islands →' : 'Next →'}
-        </button>
-      </div>
-    </div>`;
-
+  container.innerHTML = `<div class="quiz-progress">${QUIZ_QUESTIONS.map((_, i) => `<div class="quiz-dot ${i < quizStep ? 'done' : i === quizStep ? 'current' : ''}"></div>`).join('')}<span class="quiz-step-label">${quizStep + 1} / ${QUIZ_QUESTIONS.length}</span></div><div class="quiz-card"><div class="quiz-question">${q.question}</div><div class="quiz-options">${q.options.map((opt, i) => `<button class="quiz-option ${quizAnswers[quizStep] === i ? 'selected' : ''}" data-idx="${i}">${opt}</button>`).join('')}</div><div class="quiz-nav">${quizStep > 0 ? `<button class="quiz-back-btn">← Back</button>` : `<span></span>`}<button class="quiz-next-btn ${quizAnswers[quizStep] === undefined ? 'disabled' : ''}" ${quizAnswers[quizStep] === undefined ? 'disabled' : ''}>${quizStep === QUIZ_QUESTIONS.length - 1 ? 'Find my islands →' : 'Next →'}</button></div></div>`;
   container.querySelectorAll('.quiz-option').forEach(btn => {
-    btn.addEventListener('click', () => {
-      quizAnswers[quizStep] = parseInt(btn.dataset.idx);
-      renderQuizStep();
-    });
+    btn.addEventListener('click', () => { quizAnswers[quizStep] = parseInt(btn.dataset.idx); renderQuizStep(); });
   });
-
   const nextBtn = container.querySelector('.quiz-next-btn');
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      if (quizAnswers[quizStep] === undefined) return;
-      if (quizStep < QUIZ_QUESTIONS.length - 1) {
-        quizStep++;
-        renderQuizStep();
-      } else {
-        computeQuizResults();
-      }
-    });
-  }
-
+  if (nextBtn) nextBtn.addEventListener('click', () => {
+    if (quizAnswers[quizStep] === undefined) return;
+    if (quizStep < QUIZ_QUESTIONS.length - 1) { quizStep++; renderQuizStep(); } else { computeQuizResults(); }
+  });
   const backBtn = container.querySelector('.quiz-back-btn');
-  if (backBtn) {
-    backBtn.addEventListener('click', () => {
-      if (quizStep > 0) { quizStep--; renderQuizStep(); }
-    });
-  }
+  if (backBtn) backBtn.addEventListener('click', () => { if (quizStep > 0) { quizStep--; renderQuizStep(); } });
 }
 
 function computeQuizResults() {
-  // Priority dim from Q2: beaches, history, nightlife, peaceful (affordable + low crowd)
   const priorityDims = ['beach', 'hist', 'night', 'afford'];
   const priority = priorityDims[quizAnswers[1]] || 'total';
-
-  // Budget modifier: higher afford score = cheaper island
   const budgetMod = [2, 0.5, -0.5, -2][quizAnswers[2]] || 0;
-
-  // Crowd modifier: low pop for secluded preference
-  const crowdPref = quizAnswers[3]; // 0=love buzz, 3=secluded
-
-  const scored = ISLANDS
-    .filter(i => i.key !== 'athens')
-    .map(i => {
-      let s = i[priority] * 2.5 + i.total * 1.5;
-
-      // Budget: reward affordable islands if budget-conscious
-      if (budgetMod > 0) s += budgetMod * i.afford;
-      else if (budgetMod < 0) s += Math.abs(budgetMod) * (5 - i.afford); // reward luxury
-
-      // Crowd: secluded preference rewards small-pop islands
-      if (crowdPref >= 2) {
-        const popScore = Math.max(0, 4 - Math.log10(i.pop + 1));
-        s += crowdPref * popScore * 0.5;
-      }
-
-      // Family preference favours access + no wild nightlife
-      if (quizAnswers[0] === 2) {
-        s += i.access * 0.5;
-        if (i.night > 4) s -= 0.5;
-      }
-
-      return { ...i, matchScore: s };
-    })
-    .sort((a, b) => b.matchScore - a.matchScore)
-    .slice(0, 6);
-
+  const crowdPref = quizAnswers[3];
+  const scored = ISLANDS.filter(i => i.key !== 'athens').map(i => {
+    let s = i[priority] * 2.5 + i.total * 1.5;
+    if (budgetMod > 0) s += budgetMod * i.afford;
+    else if (budgetMod < 0) s += Math.abs(budgetMod) * (5 - i.afford);
+    if (crowdPref >= 2) s += crowdPref * Math.max(0, 4 - Math.log10(i.pop + 1)) * 0.5;
+    if (quizAnswers[0] === 2) { s += i.access * 0.5; if (i.night > 4) s -= 0.5; }
+    return { ...i, matchScore: s };
+  }).sort((a, b) => b.matchScore - a.matchScore).slice(0, 6);
   const container = document.getElementById('quiz-container');
   const results = document.getElementById('quiz-results');
   if (!container || !results) return;
-
   container.style.display = 'none';
   results.style.display = '';
-
-  const dimLabel = ['Beach', 'Culture', 'Nightlife', 'Price-friendly', 'Overall'][quizAnswers[1]] || 'Overall';
-
+  const dimLabel = ['Beach', 'Culture', 'Nightlife', 'Price-friendly'][quizAnswers[1]] || 'Overall';
   const whyText = (island) => {
     const reasons = [];
     if (island[priority] >= 4.5) reasons.push(`Top ${dimLabel.toLowerCase()} score (${fmt(island[priority])})`);
@@ -906,32 +560,7 @@ function computeQuizResults() {
     if (!reasons.length) reasons.push(`Overall score ${fmt(island.total)}`);
     return reasons.slice(0, 2).join(' · ');
   };
-
-  results.innerHTML = `
-    <div class="quiz-results-header">
-      <div class="quiz-results-title">Your top islands</div>
-      <div class="quiz-results-sub">Matched on your preferences — click any to explore</div>
-    </div>
-    ${scored.map((island, idx) => `
-      <div class="result-island-card" data-key="${island.key}">
-        <div class="result-rank">${idx + 1}</div>
-        <div class="result-info">
-          <div class="result-name">${island.name}</div>
-          <div class="result-why">${whyText(island)}</div>
-        </div>
-        <div class="result-score" style="color:${scoreToColor(island.total)}">${fmt(island.total)}</div>
-      </div>`).join('')}
-    <div class="quiz-retake-row">
-      <button class="quiz-retake-btn">Retake quiz</button>
-    </div>`;
-
-  results.querySelectorAll('.result-island-card').forEach(card => {
-    card.addEventListener('click', () => openDetail(card.dataset.key));
-  });
-
-  results.querySelector('.quiz-retake-btn').addEventListener('click', () => {
-    quizAnswers = {};
-    quizStep = 0;
-    renderQuizStep();
-  });
+  results.innerHTML = `<div class="quiz-results-header"><div class="quiz-results-title">Your top islands</div><div class="quiz-results-sub">Matched on your preferences — click any to explore</div></div>${scored.map((island, idx) => `<div class="result-island-card" data-key="${island.key}"><div class="result-rank">${idx + 1}</div><div class="result-info"><div class="result-name">${island.name}</div><div class="result-why">${whyText(island)}</div></div><div class="result-score" style="color:${scoreToColor(island.total)}">${fmt(island.total)}</div></div>`).join('')}<div class="quiz-retake-row"><button class="quiz-retake-btn">Retake quiz</button></div>`;
+  results.querySelectorAll('.result-island-card').forEach(card => { card.addEventListener('click', () => openDetail(card.dataset.key)); });
+  results.querySelector('.quiz-retake-btn').addEventListener('click', () => { quizAnswers = {}; quizStep = 0; renderQuizStep(); });
 }
