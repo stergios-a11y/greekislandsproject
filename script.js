@@ -1,4 +1,4 @@
-const VERSION_ID = "v45.0 - Greek Blue Blueprint";
+const VERSION_ID = "v46.0 PRO - Top 10 Engine";
 let mainMap, miniMap, markerLayerGroup, legendControl;
 const markerStore = {};
 let currentMode = 'overall';
@@ -16,10 +16,17 @@ window.onload = function() {
 };
 
 function initMap() {
-    mainMap = L.map('main-map', { zoomControl: false }).setView([38.3, 24.5], 7);
+    // MAX ZOOM OUT TO SEE GREECE + SLIGHT BUFFER
+    mainMap = L.map('main-map', { 
+        zoomControl: false,
+        minZoom: 6,
+        maxZoom: 14
+    }).setView([38.3, 24.5], 7);
+    
     L.control.zoom({ position: 'topright' }).addTo(mainMap);
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(mainMap);
     markerLayerGroup = L.layerGroup().addTo(mainMap);
+    
     legendControl = L.control({ position: 'bottomleft' }); 
     legendControl.onAdd = function() {
         let div = L.DomUtil.create('div', 'info legend');
@@ -30,12 +37,11 @@ function initMap() {
 }
 
 function updateLegendContent(div) {
-    const title = currentMode.charAt(0).toUpperCase() + currentMode.slice(1);
-    div.innerHTML = `<strong>${title} Tier</strong><br>` +
-        `<div class="legend-item"><span style="font-size:16px; margin-right:6px;">⭐</span> Elite (4.1+)</div>` +
-        `<div class="legend-item"><span class="dot" style="background:#005BAE"></span> High (3.5+)</div>` +
-        `<div class="legend-item"><span class="dot" style="background:#f1c40f"></span> Average (3.0+)</div>` +
-        `<div class="legend-item"><span class="dot" style="background:#e67e22"></span> Niche (<3.0)</div>`;
+    div.innerHTML = `<strong>${currentMode.toUpperCase()}</strong><br>` +
+        `<div class="legend-item"><span style="font-size:14px; margin-right:5px;">⭐</span> Top 10</div>` +
+        `<div class="legend-item"><span class="dot" style="background:#005BAE"></span> High</div>` +
+        `<div class="legend-item"><span class="dot" style="background:#f1c40f"></span> Average</div>` +
+        `<div class="legend-item"><span class="dot" style="background:#e67e22"></span> Niche</div>`;
 }
 
 function getColor(score) {
@@ -47,19 +53,28 @@ function getColor(score) {
 
 function renderMarkers() {
     markerLayerGroup.clearLayers();
+    
+    // MATHEMATICAL TOP 10 CALCULATION
+    const sorted = Object.keys(islandData).sort((a,b) => islandData[b][currentMode] - islandData[a][currentMode]);
+    const top10Ids = sorted.slice(0, 10);
+
     const starIcon = L.divIcon({
-        html: '<div style="font-size: 26px; color: #fbbf24; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">⭐</div>',
+        html: '<div style="font-size: 24px; color: #fbbf24; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">⭐</div>',
         className: 'star-icon', iconSize: [30, 30], iconAnchor: [15, 15]
     });
+
     Object.keys(islandData).forEach(id => {
         const d = islandData[id];
-        const score = (currentMode === 'overall') ? d.overall : d[currentMode];
-        let marker = (score >= 4.1) 
+        const score = d[currentMode];
+        const isElite = top10Ids.includes(id);
+
+        let marker = isElite 
             ? L.marker([d.lat, d.lng], { icon: starIcon }) 
-            : L.circleMarker([d.lat, d.lng], { radius: 9, fillColor: getColor(score), color: "#fff", weight: 2, fillOpacity: 1 });
+            : L.circleMarker([d.lat, d.lng], { radius: 8, fillColor: getColor(score), color: "#fff", weight: 2, fillOpacity: 1 });
+            
         marker.addTo(markerLayerGroup).on('click', () => showDetail(id));
         marker.bindTooltip(`<strong>${d.name}</strong>`, { sticky: true });
-        markerStore[id] = { marker, data: d, isStar: (score >= 4.1) };
+        markerStore[id] = { marker, data: d, isElite };
     });
 }
 
@@ -69,7 +84,10 @@ function showHome() {
     document.getElementById('detail-view').style.display = 'none';
     document.getElementById('mission-view').style.display = 'none';
     document.getElementById('hopping-view').style.display = 'none';
-    if(mainMap) setTimeout(() => mainMap.invalidateSize(), 200);
+    if(mainMap) setTimeout(() => {
+        mainMap.invalidateSize();
+        mainMap.setView([38.3, 24.5], 7); // Reset to "Max zoom out" view
+    }, 200);
 }
 
 function showMission() {
@@ -89,11 +107,11 @@ function showDetail(id) {
     window.scrollTo(0,0);
     fetch(`islands/${id}.json?v=` + new Date().getTime())
         .then(res => res.json())
-        .then(d_detail => renderDetailView(Object.assign({}, islandData[id], d_detail)));
+        .then(d_detail => renderDetailView(Object.assign({}, islandData[id], d_detail)))
+        .catch(() => renderDetailView(Object.assign({}, islandData[id], { guide: "Full blueprint coming soon." })));
 }
 
 function renderDetailView(d) {
-    document.getElementById('island-pic').src = d.img || "";
     document.getElementById('island-guide').innerHTML = d.guide || "";
     ['beach', 'hist', 'night', 'access', 'afford'].forEach(cat => {
         const el = document.getElementById(`star-${cat}`);
@@ -115,13 +133,11 @@ function renderDetailView(d) {
         dayList.forEach((day, index) => {
             const color = dayColors[index % dayColors.length];
             dayLayerGroups[day] = L.layerGroup().addTo(miniMap);
-            
             let segmentPoints = roadTrip.filter(s => s.day === day);
             if (index > 0) {
                 const prev = roadTrip.filter(s => s.day === dayList[index-1]);
                 segmentPoints.unshift(prev[prev.length - 1]);
             }
-
             if (segmentPoints.length >= 2) {
                 const coords = segmentPoints.map(p => `${p.lng},${p.lat}`).join(';');
                 fetch(`https://router.project-osrm.org/route/v1/driving/${coords}?overview=full&geometries=geojson`)
@@ -138,7 +154,7 @@ function renderDetailView(d) {
         d.itinerary.forEach(stop => {
             let emoji = stop.name.toLowerCase().includes("airport") ? "✈️" : (stop.name.toLowerCase().includes("port") ? "⚓" : (stop.day === "Beach" ? "🏖️" : "🏛️"));
             const marker = L.marker([stop.lat, stop.lng], {
-                icon: L.divIcon({ html: `<div style="font-size:22px;">${emoji}</div>`, className: 'custom-pin', iconAnchor: [11, 11] })
+                icon: L.divIcon({ html: `<div style="font-size:20px;">${emoji}</div>`, className: 'custom-pin', iconAnchor: [10, 10] })
             }).bindTooltip(stop.name);
             if (typeof stop.day === 'number') marker.addTo(dayLayerGroups[stop.day]);
             else marker.addTo(beachLayerGroup);
@@ -173,7 +189,6 @@ function filterIslands() {
     Object.keys(markerStore).forEach(k => {
         const match = markerStore[k].data.name.toLowerCase().includes(q);
         const item = markerStore[k];
-        if (item.isStar) item.marker.setOpacity(match ? 1 : 0.1);
-        else item.marker.setStyle({ opacity: match ? 1 : 0.1, fillOpacity: match ? 1 : 0.1 });
+        item.marker.setOpacity(match ? 1 : 0.1);
     });
 }
