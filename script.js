@@ -1,4 +1,4 @@
-const VERSION_ID = "v24.0 - Multi-Color Day Routing";
+const VERSION_ID = "v26.0 - Greek Islands Odyssey Rename";
 let mainMap, miniMap, markerLayerGroup, legendControl;
 const markerStore = {};
 let currentMode = 'overall';
@@ -91,7 +91,6 @@ function renderDetailView(d) {
     if (d.itinerary && d.itinerary.length > 0) {
         const roadTrip = d.itinerary.filter(s => typeof s.day === 'number').sort((a,b) => a.day - b.day);
         
-        // 1. Multi-Color Routing Logic
         if (roadTrip.length >= 2) {
             let miniLegendHTML = `<strong>Itinerary Routes</strong><br>`;
             const dayList = [...new Set(roadTrip.map(s => s.day))];
@@ -100,7 +99,6 @@ function renderDetailView(d) {
                 const color = dayColors[index % dayColors.length];
                 const dayPoints = roadTrip.filter(s => s.day === day);
                 
-                // If it's the start, or we need to connect from the previous day's last point
                 let segmentPoints = [];
                 if (index > 0) {
                     const prevDayPoints = roadTrip.filter(s => s.day === dayList[index - 1]);
@@ -121,7 +119,6 @@ function renderDetailView(d) {
                 miniLegendHTML += `<div class="legend-item"><span class="line-sample" style="background:${color}"></span> Day ${day}</div>`;
             });
 
-            // Add Mini Legend to Map
             const miniLegend = L.control({ position: 'topright' });
             miniLegend.onAdd = () => {
                 const div = L.DomUtil.create('div', 'mini-legend');
@@ -130,12 +127,10 @@ function renderDetailView(d) {
             };
             miniLegend.addTo(miniMap);
 
-            // Set Initial View
             const allCoords = roadTrip.map(p => [p.lat, p.lng]);
-            miniMap.fitBounds(L.latLngBounds(allCoords), { padding: [80, 80] });
+            miniMap.fitBounds(L.latLngBounds(allCoords), { padding: [100, 100] });
         }
 
-        // 2. Drop Markers
         d.itinerary.forEach(stop => {
             let emoji = "🏛️";
             const n = stop.name.toLowerCase();
