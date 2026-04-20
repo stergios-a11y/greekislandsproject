@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greek Islands Odyssey</title>
+    <title>Aegean Blueprint</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -12,7 +12,7 @@
 
 <header>
     <div class="header-content">
-        <h1 id="site-title" onclick="showHome()">Greek Islands Odyssey</h1>
+        <h1 id="site-title" onclick="showHome()">Aegean Blueprint</h1>
         <nav class="top-nav">
             <a href="javascript:void(0)" onclick="showHome()">Map</a>
             <a href="javascript:void(0)" onclick="showMission()">Why this site exists</a>
@@ -24,7 +24,7 @@
 <div class="search-container" id="global-search">
     <div class="search-box-wrapper">
         <span class="search-icon">🔍</span>
-        <input type="text" id="islandSearch" placeholder="Search islands..." onkeyup="filterIslands()">
+        <input type="text" id="islandSearch" placeholder="Search by island name..." onkeyup="filterIslands()">
     </div>
     <div class="vibe-selector-wrapper">
         <p class="vibe-label">Filter by travel vibe:</p>
@@ -46,39 +46,27 @@
 <main id="mission-view" class="content-page" style="display:none;">
     <div class="mission-wrapper">
         <header class="mission-header">
-            <h1>Choosing a Greek island shouldn’t feel like a research project.</h1>
-            <p>There are too many options, too many opinions, and too much noise. You end up comparing tabs for hours and still second-guessing the decision. <strong>This site cuts through that.</strong></p>
+            <h1>Why This Site Exists</h1>
+            <p class="mission-intro">Choosing a Greek island shouldn’t feel like a research project.</p>
+            <p>There are too many options, too many opinions, and too much noise. You end up comparing tabs for hours and still second-guessing the decision. <strong>Aegean Blueprint cuts through that.</strong></p>
         </header>
 
-        <section class="mission-section">
-            <div class="section-card">
-                <h2>1. Pick Based on What Matters</h2>
-                <p>Start with your priorities:</p>
-                <div class="vibe-badges">
-                    <span>Beaches</span> <span>Culture</span> <span>Nightlife</span>
-                    <span>Accessibility</span> <span>Price</span> <span>Balance</span>
-                </div>
-                <p>Select what you care about, and the site points you to the islands that actually fit. No overthinking.</p>
+        <section class="mission-grid">
+            <div class="mission-card">
+                <h3>Pick Based on What Matters</h3>
+                <p>Start with your priorities: Beaches, Culture, Nightlife, Accessibility, Price, or Overall Balance. Select what you care about, and the site points you to the islands that actually fit.</p>
             </div>
-
-            <div class="section-card">
-                <h2>2. Get a Ready Plan</h2>
-                <p>Once you choose an island, you’re done deciding. You get a complete itinerary including:</p>
-                <ul class="check-list">
-                    <li>📍 Where to stay</li>
-                    <li>🏛️ What to see</li>
-                    <li>🏖️ Which beaches are worth it</li>
-                    <li>📅 How to structure your days</li>
-                </ul>
-                <p><strong>No extra research needed.</strong></p>
+            <div class="mission-card">
+                <h3>Ready-to-Go Plans</h3>
+                <p>Once you choose an island, you’re done deciding. You get a complete itinerary: where to stay, what to see, and which beaches are worth the drive.</p>
             </div>
         </section>
 
-        <section class="the-point-highlight">
-            <div class="highlight-inner">
+        <section class="the-point">
+            <div class="point-content">
                 <h2>The Point</h2>
                 <p>This isn’t about inspiration. It’s about making a <strong>clear decision fast</strong>—and having a solid plan immediately after.</p>
-                <p class="final-word">Because planning a trip shouldn’t take longer than the trip itself.</p>
+                <p class="final-statement">Because planning a trip shouldn’t take longer than the trip itself.</p>
             </div>
         </section>
     </div>
@@ -88,23 +76,27 @@
     <h1>Island Hopping</h1>
     <div class="hopping-pair">
         <h2>Milos + Kimolos</h2>
-        <p>20-minute local ferry from Pollonia. The ultimate volcanic escape.</p>
+        <p>A 20-minute ferry link makes this the perfect pairing of volcanic moonscapes and authentic seclusion.</p>
     </div>
 </main>
 
 <main id="detail-view" style="display:none;">
-    <button class="back-btn" onclick="showHome()">← Back to Map</button>
-    <h1 id="island-name"></h1>
-    <div class="rating-box">
-        <div class="rating-tile"><span class="rating-label">🏖️ Beach</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div></div>
-        <div class="rating-tile"><span class="rating-label">🏛️ Culture</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div></div>
-        <div class="rating-tile"><span class="rating-label">🍷 Night</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div></div>
-        <div class="rating-tile"><span class="rating-label">🚢 Access</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div></div>
-        <div class="rating-tile"><span class="rating-label">💸 Price</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div></div>
+    <div class="detail-container">
+        <button class="back-btn" onclick="showHome()">← Back to Map</button>
+        <h1 id="island-name"></h1>
+        
+        <div class="rating-box">
+            <div class="rating-tile"><span class="rating-label">🏖️ Beach</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div></div>
+            <div class="rating-tile"><span class="rating-label">🏛️ Culture</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div></div>
+            <div class="rating-tile"><span class="rating-label">🍷 Night</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div></div>
+            <div class="rating-tile"><span class="rating-label">🚢 Access</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div></div>
+            <div class="rating-tile"><span class="rating-label">💸 Price</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div></div>
+        </div>
+
+        <img id="island-pic" class="island-hero" src="" alt="Island">
+        <div id="island-mini-map"></div>
+        <div id="island-guide"></div>
     </div>
-    <img id="island-pic" class="island-hero" src="" alt="Island Image">
-    <div id="island-mini-map"></div>
-    <div id="island-guide"></div>
 </main>
 
 <footer id="site-footer">
