@@ -2,22 +2,23 @@
     "img": "https://images.unsplash.com/photo-1570535189332-902263b8296a?w=1200",
     "itinerary": [
         { "day": 1, "name": "Mytilene Airport (Arrival)", "lat": 39.056, "lng": 26.598 },
-        { "day": 1, "name": "Mytilene Castle", "lat": 39.110, "lng": 26.554 },
+        { "day": "Hub", "name": "Mytilene Port", "lat": 39.106, "lng": 26.554 },
+        { "day": "Beach", "name": "Vatera", "lat": 39.020, "lng": 26.234 },
+        { "day": "Beach", "name": "Skala Eressou", "lat": 39.129, "lng": 25.932 },
+        { "day": "Beach", "name": "Agios Isidoros", "lat": 38.975, "lng": 26.388 },
+        { "day": "Beach", "name": "Tarti", "lat": 38.973, "lng": 26.505 },
+        { "day": 1, "name": "Mytilene Harbor Walk", "lat": 39.110, "lng": 26.550 },
         { "day": 2, "name": "Thermi Hot Springs", "lat": 39.178, "lng": 26.495 },
-        { "day": 2, "name": "Petra (Panagia Glykofilousa)", "lat": 39.330, "lng": 26.175 },
+        { "day": 2, "name": "Petra Church", "lat": 39.330, "lng": 26.175 },
         { "day": 2, "name": "Molyvos Castle", "lat": 39.367, "lng": 26.174 },
         { "day": 3, "name": "Sigri Museum", "lat": 39.211, "lng": 25.854 },
         { "day": 3, "name": "Petrified Forest", "lat": 39.213, "lng": 25.855 },
-        { "day": "Beach", "name": "Skala Eressou", "lat": 39.129, "lng": 25.932 },
         { "day": 4, "name": "Kalloni Salt Pans", "lat": 39.207, "lng": 26.223 },
-        { "day": 4, "name": "Moni Limonos Monastery", "lat": 39.239, "lng": 26.155 },
-        { "day": 4, "name": "Agiasos Mountain Village", "lat": 39.080, "lng": 26.300 },
+        { "day": 4, "name": "Moni Limonos", "lat": 39.239, "lng": 26.155 },
+        { "day": 4, "name": "Agiasos Village", "lat": 39.080, "lng": 26.300 },
         { "day": 5, "name": "Polichnitos Hot Springs", "lat": 39.098, "lng": 26.182 },
-        { "day": "Beach", "name": "Vatera Beach", "lat": 39.020, "lng": 26.234 },
-        { "day": 6, "name": "Plomari Ouzo Distillery", "lat": 38.976, "lng": 26.366 },
-        { "day": "Beach", "name": "Agios Isidoros", "lat": 38.975, "lng": 26.388 },
-        { "day": "Beach", "name": "Tarti", "lat": 38.973, "lng": 26.505 },
+        { "day": 6, "name": "Plomari Distillery", "lat": 38.976, "lng": 26.366 },
         { "day": 6, "name": "Mytilene Airport (Departure)", "lat": 39.056, "lng": 26.598 }
     ],
-    "guide": "<h3>🏖️ Best Beaches: At a Glance</h3><table class='beach-table'><thead><tr><th>Beach</th><th>Rating</th><th>Type</th><th>Facilities</th></tr></thead><tbody><tr><td><strong>Skala Eressos</strong></td><td>⭐⭐⭐⭐⭐</td><td>Grey Sand</td><td>Bohemian Hub</td></tr><tr><td><strong>Vatera</strong></td><td>⭐⭐⭐⭐⭐</td><td>Long Sand</td><td>Infinite Space</td></tr><tr><td><strong>Agios Isidoros</strong></td><td>⭐⭐⭐⭐⭐</td><td>Pebble</td><td>High-End</td></tr><tr><td><strong>Tarti</strong></td><td>⭐⭐⭐⭐</td><td>Gold Sand</td><td>Fish Tavernas</td></tr></tbody></table><h3>📅 6-Day Odyssey Itinerary</h3><div class='itinerary-step'><strong>Day 1: Mytilene Arrival (~10km).</strong> Collect car and head to the city. Walk Ermou street and visit the massive Castle.</div><div class='itinerary-step'><strong>Day 2: The North (~65km).</strong> Stop at Thermi springs, lunch in Petra, and sunset in the medieval alleys of Molyvos.</div><div class='itinerary-step'><strong>Day 3: The Wild West (~70km).</strong> Drive to Sigri for the Petrified Forest, then stay overnight in the inclusive Skala Eressos.</div><div class='itinerary-step'><strong>Day 4: Inland Transition (~45km).</strong> Flamingos at Kalloni, the sacred Moni Limonos, and the stunning Agiasos mountain village. Base: Plomari.</div><div class='itinerary-step'><strong>Day 5: Deep South (~80km).</strong> Visit the raw Polichnitos springs and spend the day on the massive Vatera beach. No crowds, pure peace.</div><div class='itinerary-step'><strong>Day 6: Ouzo & Departure (~120km).</strong> Visit an ouzo distillery in Plomari, a final swim at Agios Isidoros, then head back to the airport.</div><div class='advice-box'><strong>💡 Why this placement works:</strong> Pairing Vatera with a Plomari base on Day 5 avoids backtracking and keeps the pace relaxed before your flight.</div><div class='advice-box' style='background:#fde8e8; border-color:#f8b4b4;'><strong>⚠️ Reality Check:</strong> Days 3 and 4 have the most intense mountain driving. Day 5 is your reward—a low-effort, high-reward coastal day.</div>"
+    "guide": "<h3>🏖️ Best Beaches: At a Glance</h3><table class='beach-table'><thead><tr><th>Beach</th><th>Rating</th><th>Type</th><th>Facilities</th></tr></thead><tbody><tr><td><strong>Skala Eressos</strong></td><td>⭐⭐⭐⭐⭐</td><td>Grey Sand</td><td>Bohemian Hub</td></tr><tr><td><strong>Vatera</strong></td><td>⭐⭐⭐⭐⭐</td><td>Long Sand</td><td>Infinite Space</td></tr><tr><td><strong>Agios Isidoros</strong></td><td>⭐⭐⭐⭐⭐</td><td>Pebble</td><td>High-End</td></tr><tr><td><strong>Tarti</strong></td><td>⭐⭐⭐⭐</td><td>Gold Sand</td><td>Fish Tavernas</td></tr></tbody></table><h3>📅 6-Day Odyssey Itinerary</h3><div class='itinerary-step'><strong>Day 1: Arrival (~10km).</strong> Collect car at the airport and head to Mytilene city.</div><div class='itinerary-step'><strong>Day 2: The North (~65km).</strong> Drive to the medieval village of Molyvos via the hot springs of Thermi.</div><div class='itinerary-step'><strong>Day 3: The West (~70km).</strong> Visit the Petrified Forest and stay in the bohemian Skala Eressos.</div><div class='itinerary-step'><strong>Day 4: Wetlands & Inland (~45km).</strong> Transition from West to South via Agiasos and Moni Limonos.</div><div class='itinerary-step'><strong>Day 5: Deep South (~80km).</strong> Raw hot springs at Polichnitos and the massive Vatera beach.</div><div class='itinerary-step'><strong>Day 6: The South & Departure (~120km).</strong> Visit Plomari ouzo distilleries, swim at Agios Isidoros, and head back to the airport.</div>"
 }
