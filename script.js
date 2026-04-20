@@ -1,4 +1,4 @@
-const VERSION_ID = "v53.2 - Detail Restore Build";
+const VERSION_ID = "v53.3 - The Rectangle Fix";
 let mainMap, miniMap, markerLayerGroup, legendControl;
 let currentMode = 'overall';
 let islandData = {};
@@ -18,7 +18,7 @@ window.onload = function() {
             islandData = data; 
             renderMarkers(); 
             generateTable(); 
-        }).catch(err => console.error("Database connection lost.", err));
+        });
 };
 
 function initMap() {
@@ -34,44 +34,15 @@ function initMap() {
     legendControl.addTo(mainMap);
 }
 
-function updateLegendContent(div) {
-    div.innerHTML = `<strong>${currentMode.toUpperCase()} TIER</strong><br>` +
-        `<div class="legend-item">⭐ Elite (Top 10)</div>` +
-        `<div class="legend-item"><span class="dot" style="background:#005BAE"></span> High (3.5+)</div>` +
-        `<div class="legend-item"><span class="dot" style="background:#f1c40f"></span> Avg (3.0+)</div>` +
-        `<div class="legend-item"><span class="dot" style="background:#e67e22"></span> Niche (<3.0)</div>`;
-}
-
-function getScore(d, mode) {
-    if (!d) return 0;
-    if (mode === 'overall') return d.total || d.overall || 0;
-    return d[mode] || 0;
-}
-
-function renderMarkers() {
-    if (!markerLayerGroup) return;
-    markerLayerGroup.clearLayers();
-    const sortedIds = Object.keys(islandData).sort((a,b) => getScore(islandData[b], currentMode) - getScore(islandData[a], currentMode));
-    const top10 = sortedIds.slice(0, 10);
-    const starIcon = L.divIcon({ html: '<div style="font-size:24px; color:#fbbf24; text-shadow:0 2px 4px rgba(0,0,0,0.3);">⭐</div>', className:'star-icon', iconSize:[30,30], iconAnchor:[15,15] });
-
-    Object.keys(islandData).forEach(id => {
-        const d = islandData[id];
-        const score = getScore(d, currentMode);
-        const color = score >= 3.5 ? "#005BAE" : (score >= 3.0 ? "#f1c40f" : "#e67e22");
-        let marker = top10.includes(id) ? L.marker([d.lat, d.lng], {icon: starIcon}) : L.circleMarker([d.lat, d.lng], {radius:9, fillColor:color, color:"#fff", weight:2, fillOpacity:1});
-        marker.addTo(markerLayerGroup).on('click', () => showDetail(id));
-        marker.bindTooltip(`<strong>${d.name}</strong><br>${currentMode}: ${score.toFixed(1)}`);
-        markerStore[id] = { marker, data: d };
-    });
-}
-
 function handleNav(t) { 
     document.querySelectorAll('.view-section').forEach(v => v.style.display = 'none');
     document.getElementById('home-controls').style.display = (t === 'home') ? 'flex' : 'none';
     document.getElementById('view-' + t).style.display = 'block';
     document.getElementById('main-nav').classList.remove('active');
-    if (t === 'home' && mainMap) setTimeout(() => mainMap.invalidateSize(), 200);
+    
+    if (t === 'home' && mainMap) {
+        setTimeout(() => mainMap.invalidateSize(), 100);
+    }
     window.scrollTo(0,0);
 }
 
@@ -80,13 +51,13 @@ function showDetail(id) {
     const d = islandData[id];
     document.getElementById('island-name').innerText = d.name; 
     
-    // Set Star Bars
-    const cats = ['beach','hist','night','access','afford'];
-    cats.forEach(c => {
+    // Set Stars immediately
+    ['beach','hist','night','access','afford'].forEach(c => {
         const score = d[c] || 0;
         document.getElementById(`star-${c}`).style.width = (score/5*100) + "%";
     });
 
+    // Load Itinerary
     fetch(`islands/${id}.json?v=` + Date.now())
         .then(res => res.json())
         .then(d_detail => {
@@ -98,64 +69,77 @@ function showDetail(id) {
 
 function renderDetailView(d) {
     document.getElementById('island-guide').innerHTML = d.guide || "";
-    
     if (miniMap) miniMap.remove();
     
-    // Visibility delay for Leaflet stabilization
+    // FORCE LEAFLET RESET
     setTimeout(() => {
         miniMap = L.map('island-mini-map').setView([d.lat, d.lng], 11);
         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(miniMap);
-        
+        miniMap.invalidateSize(); // THE FIX
+
         dayLayerGroups = {};
         beachLayerGroup = L.layerGroup().addTo(miniMap);
 
-        if (d.itinerary && d.itinerary.length > 0) {
+        if (d.itinerary) {
             const roadTrip = d.itinerary.filter(s => typeof s.day === 'number').sort((a,b) => a.day - b.day);
-            const dayList = [...new Set(roadTrip.map(s => s.day))];
-            let legendHTML = `<div class="legend-item legend-day-link" onclick="filterDay('all')">🗺️ Full Route</div>`;
-
-            dayList.forEach((day, index) => {
-                const color = dayColors[index % dayColors.length];
+            let legHTML = `<div class="legend-item legend-day-link" onclick="filterDay('all')">🗺️ Full Route</div>`;
+            
+            [...new Set(roadTrip.map(s => s.day))].forEach((day, idx) => {
+                const color = dayColors[idx % dayColors.length];
                 dayLayerGroups[day] = L.layerGroup().addTo(miniMap);
                 
                 let segment = roadTrip.filter(s => s.day === day);
                 if (segment.length >= 2) {
                     const coords = segment.map(p => `${p.lng},${p.lat}`).join(';');
                     fetch(`https://router.project-osrm.org/route/v1/driving/${coords}?overview=full&geometries=geojson`)
-                        .then(r => r.json())
-                        .then(rd => {
-                            L.geoJSON(rd.routes[0].geometry, {style:{color:color, weight:6, opacity:0.8}}).addTo(dayLayerGroups[day]);
+                        .then(r => r.json()).then(rd => {
+                            L.geoJSON(rd.routes[0].geometry, {style:{color:color, weight:6}}).addTo(dayLayerGroups[day]);
                         });
                 }
-                legendHTML += `<div class="legend-item legend-day-link" onclick="filterDay(${day})"><span class="line-sample" style="background:${color}"></span>Day ${day}</div>`;
+                legHTML += `<div class="legend-item legend-day-link" onclick="filterDay(${day})"><span class="line-sample" style="background:${color}"></span>Day ${day}</div>`;
             });
-
-            d.itinerary.forEach(stop => {
-                let emoji = stop.name.toLowerCase().includes("port") ? "⚓" : (stop.name.toLowerCase().includes("airport") ? "✈️" : (stop.day === "Beach" ? "🏖️" : "🏛️"));
-                const marker = L.marker([stop.lat, stop.lng], {
-                    icon: L.divIcon({ html: `<div style="font-size:22px;">${emoji}</div>`, className: 'custom-pin', iconAnchor: [11, 11] })
-                }).bindTooltip(stop.name);
-                if (typeof stop.day === 'number') marker.addTo(dayLayerGroups[stop.day]);
-                else marker.addTo(beachLayerGroup);
-            });
-
             const mL = L.control({ position: 'topright' });
-            mL.onAdd = () => { const div = L.DomUtil.create('div', 'mini-legend'); div.innerHTML = legendHTML; return div; };
+            mL.onAdd = () => { const div = L.DomUtil.create('div', 'mini-legend'); div.innerHTML = legHTML; return div; };
             mL.addTo(miniMap);
-            miniMap.fitBounds(L.latLngBounds(roadTrip.map(p => [p.lat, p.lng])), { padding: [50, 50] });
+            miniMap.fitBounds(L.latLngBounds(roadTrip.map(p => [p.lat, p.lng])), { padding: [40, 40] });
         }
-    }, 300);
+    }, 200);
 }
 
 function filterDay(day) { 
     Object.values(dayLayerGroups).forEach(g => miniMap.removeLayer(g)); 
-    beachLayerGroup.addTo(miniMap); // Beaches always stay
     if (day === 'all') Object.values(dayLayerGroups).forEach(g => g.addTo(miniMap)); 
     else dayLayerGroups[day].addTo(miniMap); 
 }
 
-function toggleMenu() { document.getElementById('main-nav').classList.toggle('active'); }
+function updateLegendContent(div) {
+    div.innerHTML = `<strong>${currentMode.toUpperCase()} TIER</strong><br>` +
+        `<div class="legend-item">⭐ Elite Top 10</div>` +
+        `<div class="legend-item"><span class="dot" style="background:#005BAE"></span> High</div>` +
+        `<div class="legend-item"><span class="dot" style="background:#f1c40f"></span> Avg</div>` +
+        `<div class="legend-item"><span class="dot" style="background:#e67e22"></span> Niche</div>`;
+}
+
+function renderMarkers() {
+    markerLayerGroup.clearLayers();
+    const sorted = Object.keys(islandData).sort((a,b) => (islandData[b][currentMode === 'overall' ? 'total' : currentMode] || 0) - (islandData[a][currentMode === 'overall' ? 'total' : currentMode] || 0));
+    const top10 = sorted.slice(0, 10);
+    const starIcon = L.divIcon({ html: '<div style="font-size:24px; color:#fbbf24; text-shadow:0 2px 4px rgba(0,0,0,0.3);">⭐</div>', className:'star-icon', iconSize:[30,30], iconAnchor:[15,15] });
+
+    Object.keys(islandData).forEach(id => {
+        const d = islandData[id];
+        const score = (currentMode === 'overall' ? (d.total || d.overall) : d[currentMode]) || 0;
+        const isElite = top10.includes(id);
+        const color = score >= 3.5 ? "#005BAE" : (score >= 3.0 ? "#f1c40f" : "#e67e22");
+        let marker = isElite ? L.marker([d.lat, d.lng], {icon: starIcon}) : L.circleMarker([d.lat, d.lng], {radius:9, fillColor:color, color:"#fff", weight:2, fillOpacity:1});
+        marker.addTo(markerLayerGroup).on('click', () => showDetail(id));
+        marker.bindTooltip(`<strong>${d.name}</strong><br>${currentMode}: ${score.toFixed(1)}`);
+        markerStore[id] = { marker, data: d };
+    });
+}
+
 function jumpMap(key) { handleNav('home'); mainMap.setView([islandData[key].lat, islandData[key].lng], 11); markerStore[key].marker.openTooltip(); }
+function toggleMenu() { document.getElementById('main-nav').classList.toggle('active'); }
 function generateTable() {
     const tbody = document.getElementById('islands-table-body');
     if (!tbody) return;
@@ -165,7 +149,7 @@ function generateTable() {
         const row = tbody.insertRow();
         row.insertCell(0).innerHTML = `<a class="island-link" onclick="jumpMap('${k}')">${d.name}</a>`;
         row.insertCell(1).innerText = d.island_group || '-';
-        row.insertCell(2).innerHTML = renderStars(getScore(d, 'overall'));
+        row.insertCell(2).innerHTML = renderStars(d.total || d.overall || 0);
         row.insertCell(3).innerHTML = renderStars(d.beach);
         row.insertCell(4).innerHTML = renderStars(d.hist);
         row.insertCell(5).innerHTML = renderStars(d.night);
