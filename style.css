@@ -1,16 +1,249 @@
-{
-    "img": "https://images.unsplash.com/photo-1570535189332-902263b8296a?w=1200",
-    "itinerary": [
-        { "day": "Hub", "name": "Mytilene Airport", "lat": 39.056, "lng": 26.598 },
-        { "day": "Hub", "name": "Mytilene Port", "lat": 39.106, "lng": 26.554 },
-        { "day": "Beach", "name": "Vatera", "lat": 38.980, "lng": 26.241 },
-        { "day": "Beach", "name": "Skala Eressou", "lat": 39.129, "lng": 25.932 },
-        { "day": "Beach", "name": "Agios Isidoros", "lat": 38.975, "lng": 26.388 },
-        { "day": "Beach", "name": "Tarti", "lat": 38.973, "lng": 26.505 },
-        { "day": 1, "name": "Mytilene Center", "lat": 39.110, "lng": 26.550 },
-        { "day": 2, "name": "Molyvos", "lat": 39.367, "lng": 26.174 },
-        { "day": 3, "name": "Sigri", "lat": 39.205, "lng": 25.900 },
-        { "day": 5, "name": "Plomari", "lat": 38.976, "lng": 26.366 }
-    ],
-    "guide": "<h3>🏖️ Beach Ratings</h3><div style='overflow-x:auto; margin-bottom:20px;'><table style='width:100%; border-collapse: collapse; font-size: 0.85rem;'><thead><tr style='background:#005BAE; color:white;'><th style='padding:8px;'>Beach</th><th style='padding:8px;'>Rating</th><th style='padding:8px;'>Type</th></tr></thead><tbody><tr><td>Vatera</td><td>⭐⭐⭐⭐⭐</td><td>Sand</td></tr><tr style='background:#f9f9f9;'><td>Eressos</td><td>⭐⭐⭐⭐⭐</td><td>Grey Sand</td></tr><tr><td>Agios Isidoros</td><td>⭐⭐⭐⭐⭐</td><td>Pebble</td></tr></tbody></table></div><h3>📅 5-Day Highlights</h3><div class='itinerary-step'><strong>Day 1-2:</strong> North Coast. <strong>Day 3-4:</strong> Stay in Eressos. <strong>Day 5:</strong> South Coast & Ouzo.</div>"
+:root {
+    --greek-blue: #005BAE;
+    --accent-orange: #ff7f50;
+    --star-gold: #ffcc00;
+    --text-dark: #2c3e50;
+    --bg-light: #f4f7f6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* Header & Navigation */
+header {
+    background: var(--greek-blue);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.search-container {
+    padding: 15px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#islandSearch {
+    width: 80%;
+    max-width: 500px;
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+}
+
+/* Vibe Filter Chips */
+.vibe-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    background: #fdfdfd;
+}
+
+.vibe-chip {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--greek-blue);
+    background: white;
+    color: var(--greek-blue);
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.vibe-chip.active, .vibe-chip:hover {
+    background: var(--greek-blue);
+    color: white;
+}
+
+/* Map Containers */
+#main-map {
+    height: 70vh;
+    width: 100%;
+}
+
+#island-mini-map {
+    height: 400px; /* Taller mini-map to help with zoom-out visibility */
+    width: 100%;
+    border-radius: 12px;
+    margin: 20px 0;
+    z-index: 1;
+    border: 1px solid #ddd;
+}
+
+/* Detail View Layout */
+#detail-view {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    min-height: 100vh;
+}
+
+.back-btn {
+    padding: 10px 20px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.island-hero {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* COMPACT RATINGS (At the top of the details) */
+.rating-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 10px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #eee;
+}
+
+.rating-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.rating-label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #777;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.stars-outer {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    color: var(--star-gold);
+}
+
+.stars-outer::before, .stars-inner::before {
+    content: "★★★★★";
+}
+
+/* BEAUTIFIED BEACH TABLE */
+.beach-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.beach-table th {
+    background: var(--greek-blue);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.beach-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.beach-table tr:nth-child(even) {
+    background-color: #f9fbfd;
+}
+
+.beach-table tr:hover {
+    background-color: #f1f7ff;
+}
+
+/* ITINERARY STEPS */
+.itinerary-step {
+    border-left: 4px solid var(--greek-blue);
+    padding: 15px;
+    margin: 15px 0;
+    background: #f1f7ff;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.advice-box {
+    background: #fff4e5;
+    border: 1px solid #ffe3c2;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 25px;
+}
+
+/* Legend Styling */
+.legend {
+    padding: 20px;
+    background: white;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    .rating-box {
+        grid-template-columns: repeat(3, 1fr); /* 3 per row on mobile */
+    }
+    
+    #islandSearch {
+        width: 90%;
+    }
+    
+    .island-hero {
+        height: 200px;
+    }
+}
+
+#version-display {
+    font-size: 10px;
+    color: #bbb;
+    text-align: center;
+    padding: 20px 0;
 }
