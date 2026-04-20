@@ -1,11 +1,21 @@
 :root { --navy: #0f172a; --blue: #3b82f6; --gold: #fbbf24; --salt: #f8fafc; --shadow: 0 15px 30px -5px rgba(0,0,0,0.2); }
-body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--salt); color: var(--navy); }
+body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--salt); color: var(--navy); overflow-x: hidden; }
 body.subpage-active .search-container { display: none !important; }
 
-header { background: var(--navy); color: white; padding: 15px 25px; position: sticky; top: 0; z-index: 2000; }
+header { background: var(--navy); color: white; padding: 10px 25px; position: sticky; top: 0; z-index: 2000; }
 .header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-#site-title { font-size: 1rem; text-transform: uppercase; font-weight: 700; cursor: pointer; }
-.top-nav a { color: #cbd5e1; text-decoration: none; margin-left: 20px; font-size: 0.8rem; font-weight: 600; }
+
+/* LOGO STYLING */
+#site-logo { 
+    height: 40px; /* Perfectly sized for the nav bar */
+    cursor: pointer; 
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); /* Professional depth */
+    transition: transform 0.2s; 
+}
+#site-logo:hover { transform: scale(1.05); }
+
+.top-nav a { color: #cbd5e1; text-decoration: none; margin-left: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; vertical-align: middle; }
+.top-nav a:hover { color: white; }
 
 .search-container { padding: 25px; background: white; border-bottom: 1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center; gap: 15px; }
 #islandSearch { width: 100%; max-width: 400px; padding: 12px; border-radius: 8px; border: 2px solid #f1f5f9; background: #f8fafc; }
@@ -13,9 +23,9 @@ header { background: var(--navy); color: white; padding: 15px 25px; position: st
 .vibe-chip { padding: 8px 16px; border-radius: 8px; border: 2px solid #f1f5f9; background: white; font-weight: 700; font-size: 0.8rem; cursor: pointer; }
 .vibe-chip.active { background: var(--navy); color: white; border-color: var(--navy); }
 
-#main-map { height: calc(100vh - 180px); width: 100%; }
+#main-map { height: calc(100vh - 180px); width: 100%; z-index: 1; }
 
-/* FLOATING LEGEND FIX */
+/* LEGEND */
 .info.legend { padding: 15px; background: white; border-radius: 12px; box-shadow: var(--shadow); line-height: 2; min-width: 160px; margin-bottom: 30px !important; }
 .legend-item { display: flex; align-items: center; font-size: 0.85rem; font-weight: 700; }
 .dot { height: 12px; width: 12px; border-radius: 50%; display: inline-block; margin-right: 12px; border: 1px solid rgba(0,0,0,0.1); }
