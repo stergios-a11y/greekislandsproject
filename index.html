@@ -1,116 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greek Islands Odyssey</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-</head>
-<body>
-
-<header>
-    <div class="header-content">
-        <h1 id="site-title" onclick="showHome()">Greek Islands Odyssey</h1>
-        <nav class="top-nav">
-            <a href="javascript:void(0)" onclick="showHome()">Map</a>
-            <a href="javascript:void(0)" onclick="showMission()">Why this site exists</a>
-            <a href="javascript:void(0)" onclick="showHopping()">Island Hopping</a>
-        </nav>
-    </div>
-</header>
-
-<div class="search-container">
-    <div class="search-box-wrapper">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="islandSearch" placeholder="Search islands..." onkeyup="filterIslands()">
-    </div>
-    <div class="vibe-selector-wrapper">
-        <p class="vibe-label">Filter by travel vibe:</p>
-        <div class="vibe-filters">
-            <button class="vibe-chip active" id="btn-overall" onclick="updateMapMode('overall')">🏠 Overall</button>
-            <button class="vibe-chip" id="btn-beach" onclick="updateMapMode('beach')">🏖️ Beaches</button>
-            <button class="vibe-chip" id="btn-hist" onclick="updateMapMode('hist')">🏛️ Culture</button>
-            <button class="vibe-chip" id="btn-night" onclick="updateMapMode('night')">🍷 Nightlife</button>
-            <button class="vibe-chip" id="btn-access" onclick="updateMapMode('access')">🚢 Access</button>
-            <button class="vibe-chip" id="btn-afford" onclick="updateMapMode('afford')">💸 Price</button>
-        </div>
-    </div>
-</div>
-
-<main id="home-view">
-    <div id="main-map"></div>
-</main>
-
 <main id="mission-view" class="content-page" style="display:none;">
-    <section class="mission-container">
-        <h1>Why This Site Exists</h1>
-        <p class="mission-intro">Choosing a Greek island shouldn’t feel like a research project.</p>
-        <p>There are too many options, too many opinions, and too much noise. You end up comparing tabs for hours and still second-guessing the decision. <strong>This site cuts through that.</strong></p>
+    <header class="mission-hero">
+        <h1>Why this site exists</h1>
+        <p class="hero-lead">Choosing a Greek island shouldn’t feel like a research project.</p>
+    </header>
 
-        <div class="mission-block">
-            <h2>Pick Based on What Matters to You</h2>
-            <p>Start with your priorities:</p>
-            <ul class="mission-list">
-                <li>Beaches</li>
-                <li>Culture</li>
-                <li>Nightlife</li>
-                <li>Accessibility</li>
-                <li>Price</li>
-                <li>Overall Balance</li>
-            </ul>
-            <p>Select what you care about, and the site points you to the islands that actually fit. No overthinking, no endless comparisons.</p>
-        </div>
-
-        <div class="mission-block">
-            <h2>Then Get a Ready Plan</h2>
-            <p>Once you choose an island, you’re done deciding. You get a complete itinerary:</p>
-            <ul class="mission-list">
-                <li>Where to stay</li>
-                <li>What to see</li>
-                <li>Which beaches are worth it</li>
-                <li>How to structure your days</li>
-            </ul>
-            <p>No extra research needed.</p>
-        </div>
-
-        <div class="mission-footer">
-            <h2>The Point</h2>
-            <p>This isn’t about inspiration. It’s about making a clear decision fast—and having a solid plan immediately after.</p>
-            <p class="highlight">Because planning a trip shouldn’t take longer than the trip itself.</p>
+    <section class="mission-narrative">
+        <div class="narrative-text">
+            <p>There are too many options, too many opinions, and too much noise. You end up comparing tabs for hours and still second-guessing the decision. <strong>This site cuts through that.</strong></p>
         </div>
     </section>
+
+    <section class="mission-features">
+        <div class="feature-header">
+            <h2>1. Pick Based on What Matters to You</h2>
+            <p>Start with your priorities, not a search engine.</p>
+        </div>
+        <div class="vibe-grid">
+            <div class="vibe-item"><span>🏖️</span> Beaches</div>
+            <div class="vibe-item"><span>🏛️</span> Culture</div>
+            <div class="vibe-item"><span>🍷</span> Nightlife</div>
+            <div class="vibe-item"><span>🚢</span> Access</div>
+            <div class="vibe-item"><span>💸</span> Price</div>
+            <div class="vibe-item"><span>⚖️</span> Balance</div>
+        </div>
+        <p class="feature-footer">Select what you care about, and the site points you to the islands that actually fit. No overthinking, no endless comparisons.</p>
+    </section>
+
+    <section class="mission-process">
+        <div class="process-card">
+            <h2>2. Then Get a Ready Plan</h2>
+            <p>Once you choose an island, you’re done deciding. You get a complete itinerary delivered instantly:</p>
+            <div class="itinerary-preview">
+                <div class="p-item">📍 Where to stay</div>
+                <div class="p-item">🏛️ What to see</div>
+                <div class="p-item">🏖️ Worthwhile beaches</div>
+                <div class="p-item">📅 Daily structure</div>
+            </div>
+            <p class="strong">No extra research needed.</p>
+        </div>
+    </section>
+
+    <footer class="mission-statement">
+        <div class="statement-box">
+            <h2>The Point</h2>
+            <p>This isn’t about inspiration. It’s about making a clear decision fast—and having a solid plan immediately after.</p>
+            <p class="cta-line">Because planning a trip shouldn’t take longer than the trip itself.</p>
+        </div>
+    </footer>
 </main>
-
-<main id="hopping-view" class="content-page" style="display:none;">
-    <h1>Island Hopping</h1>
-    <div class="hopping-pair">
-        <h2>Milos + Kimolos</h2>
-        <p>20-minute local ferry from Pollonia. Perfect for moonscape beaches and seclusion.</p>
-    </div>
-</main>
-
-<main id="detail-view" style="display:none;">
-    <button class="back-btn" onclick="showHome()">← Back to Map</button>
-    <h1 id="island-name"></h1>
-    <div class="rating-box">
-        <div class="rating-tile"><span class="rating-label">🏖️ Beach</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div></div>
-        <div class="rating-tile"><span class="rating-label">🏛️ Culture</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div></div>
-        <div class="rating-tile"><span class="rating-label">🍷 Night</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div></div>
-        <div class="rating-tile"><span class="rating-label">🚢 Access</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div></div>
-        <div class="rating-tile"><span class="rating-label">💸 Price</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div></div>
-    </div>
-    <img id="island-pic" class="island-hero" src="" alt="Island Image">
-    <div id="island-mini-map"></div>
-    <div id="island-guide"></div>
-</main>
-
-<footer id="site-footer">
-    <div id="version-display"></div>
-</footer>
-
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="script.js"></script>
-</body>
-</html>
