@@ -10,12 +10,11 @@
 <body>
 
 <header>
-    <h1>GREEK ISLAND FINDER</h1>
-    <div id="version-display"></div>
+    <h1 id="site-title">Greek Island Finder</h1>
 </header>
 
 <div class="search-container">
-    <input type="text" id="islandSearch" placeholder="Search for an island..." onkeyup="filterIslands()">
+    <input type="text" id="islandSearch" placeholder="Search islands..." onkeyup="filterIslands()">
     <div class="vibe-filters">
         <button class="vibe-chip active" id="btn-overall" onclick="updateMapMode('overall')">🏠 Overall</button>
         <button class="vibe-chip" id="btn-beach" onclick="updateMapMode('beach')">🏖️ Beaches</button>
@@ -28,13 +27,6 @@
 
 <main id="home-view">
     <div id="main-map"></div>
-    <div class="legend">
-        <strong id="legend-title">Overall Rating</strong>: 
-        <span class="legend-item"><span class="dot" style="background:#27ae60"></span> ⭐ Elite</span>
-        <span class="legend-item"><span class="dot" style="background:#2ecc71"></span> High</span>
-        <span class="legend-item"><span class="dot" style="background:#f1c40f"></span> Average</span>
-        <span class="legend-item"><span class="dot" style="background:#e67e22"></span> Niche</span>
-    </div>
 </main>
 
 <main id="detail-view" style="display:none;">
@@ -66,11 +58,13 @@
     </div>
 
     <img id="island-pic" class="island-hero" src="" alt="Island Image">
-    
     <div id="island-mini-map"></div>
-    
     <div id="island-guide"></div>
 </main>
+
+<footer id="site-footer">
+    <div id="version-display"></div>
+</footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="script.js"></script>
