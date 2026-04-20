@@ -1,8 +1,11 @@
-const VERSION_ID = "v22.0 - In-Map Legend & Compact UI";
+const VERSION_ID = "v24.0 - Multi-Color Day Routing";
 let mainMap, miniMap, markerLayerGroup, legendControl;
 const markerStore = {};
 let currentMode = 'overall';
 let islandData = {};
+
+// Color palette for itinerary days
+const dayColors = ['#3498db', '#2ecc71', '#9b59b6', '#f39c12', '#e74c3c', '#1abc9c'];
 
 window.onload = function() {
     document.getElementById('version-display').innerText = VERSION_ID;
@@ -17,7 +20,6 @@ function initMap() {
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(mainMap);
     markerLayerGroup = L.layerGroup().addTo(mainMap);
 
-    // Create In-Map Legend
     legendControl = L.control({ position: 'bottomright' });
     legendControl.onAdd = function() {
         let div = L.DomUtil.create('div', 'info legend');
@@ -87,23 +89,61 @@ function renderDetailView(d) {
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(miniMap);
 
     if (d.itinerary && d.itinerary.length > 0) {
-        const roadTrip = d.itinerary.filter(s => typeof s.day === 'number');
+        const roadTrip = d.itinerary.filter(s => typeof s.day === 'number').sort((a,b) => a.day - b.day);
+        
+        // 1. Multi-Color Routing Logic
         if (roadTrip.length >= 2) {
-            const coords = roadTrip.map(p => `${p.lng},${p.lat}`).join(';');
-            fetch(`https://router.project-osrm.org/route/v1/driving/${coords}?overview=full&geometries=geojson`)
-                .then(r => r.json())
-                .then(route => {
-                    const line = L.geoJSON(route.routes[0].geometry, { style: { color: '#ff7f50', weight: 4, dashArray: '8, 12' } }).addTo(miniMap);
-                    miniMap.fitBounds(line.getBounds(), { padding: [100, 100] });
-                });
+            let miniLegendHTML = `<strong>Itinerary Routes</strong><br>`;
+            const dayList = [...new Set(roadTrip.map(s => s.day))];
+            
+            dayList.forEach((day, index) => {
+                const color = dayColors[index % dayColors.length];
+                const dayPoints = roadTrip.filter(s => s.day === day);
+                
+                // If it's the start, or we need to connect from the previous day's last point
+                let segmentPoints = [];
+                if (index > 0) {
+                    const prevDayPoints = roadTrip.filter(s => s.day === dayList[index - 1]);
+                    segmentPoints.push(prevDayPoints[prevDayPoints.length - 1]);
+                }
+                segmentPoints = segmentPoints.concat(dayPoints);
+
+                if (segmentPoints.length >= 2) {
+                    const coords = segmentPoints.map(p => `${p.lng},${p.lat}`).join(';');
+                    fetch(`https://router.project-osrm.org/route/v1/driving/${coords}?overview=full&geometries=geojson`)
+                        .then(r => r.json())
+                        .then(route => {
+                            L.geoJSON(route.routes[0].geometry, { 
+                                style: { color: color, weight: 5, opacity: 0.8 } 
+                            }).addTo(miniMap);
+                        });
+                }
+                miniLegendHTML += `<div class="legend-item"><span class="line-sample" style="background:${color}"></span> Day ${day}</div>`;
+            });
+
+            // Add Mini Legend to Map
+            const miniLegend = L.control({ position: 'topright' });
+            miniLegend.onAdd = () => {
+                const div = L.DomUtil.create('div', 'mini-legend');
+                div.innerHTML = miniLegendHTML;
+                return div;
+            };
+            miniLegend.addTo(miniMap);
+
+            // Set Initial View
+            const allCoords = roadTrip.map(p => [p.lat, p.lng]);
+            miniMap.fitBounds(L.latLngBounds(allCoords), { padding: [80, 80] });
         }
+
+        // 2. Drop Markers
         d.itinerary.forEach(stop => {
-            let emoji = "📍";
+            let emoji = "🏛️";
             const n = stop.name.toLowerCase();
             if (n.includes("airport")) emoji = "✈️";
             else if (n.includes("port") && !n.includes("airport")) emoji = "⚓";
             else if (stop.day === "Beach") emoji = "🏖️";
             else if (n.includes("hotel") || n.includes("stay")) emoji = "🏨";
+            else if (n.includes("forest") || n.includes("salt") || n.includes("wetlands")) emoji = "📷";
 
             L.marker([stop.lat, stop.lng], {
                 icon: L.divIcon({ html: `<div style="font-size:22px; filter: drop-shadow(0 0 2px white);">${emoji}</div>`, className: 'custom-pin', iconAnchor: [11, 11] })
@@ -122,11 +162,8 @@ function updateMapMode(mode) {
     currentMode = mode;
     document.querySelectorAll('.vibe-chip').forEach(el => el.classList.remove('active'));
     document.getElementById('btn-' + mode).classList.add('active');
-    
-    // Refresh Legend Content
     const legendDiv = document.querySelector('.info.legend');
     if (legendDiv) updateLegendContent(legendDiv);
-    
     renderMarkers();
 }
 
