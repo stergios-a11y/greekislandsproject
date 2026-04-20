@@ -1,9 +1,9 @@
-const VERSION_ID = "v42.0 - Routing Engine Restored";
+const VERSION_ID = "v43.0 PRO - Engine Restore";
 let mainMap, miniMap, markerLayerGroup, legendControl;
 const markerStore = {};
 let currentMode = 'overall';
 let islandData = {};
-const dayColors = ['#3498db', '#2ecc71', '#9b59b6', '#f39c12', '#e74c3c', '#1abc9c'];
+const dayColors = ['#3b82f6', '#10b981', '#8b5cf6', '#f59e0b', '#ef4444', '#06b6d4'];
 let dayLayerGroups = {};
 let beachLayerGroup;
 
@@ -31,6 +31,7 @@ function initMap() {
 
 function updateLegendContent(div) {
     const title = currentMode.charAt(0).toUpperCase() + currentMode.slice(1);
+    // Explicitly hardcoded all 4 categories
     div.innerHTML = `<strong>${title} Tier</strong><br>` +
         `<div class="legend-item">⭐ Elite (4.1+)</div>` +
         `<div class="legend-item"><span class="dot" style="background:#3b82f6"></span> High (3.5+)</div>` +
@@ -39,16 +40,16 @@ function updateLegendContent(div) {
 }
 
 function getColor(score) {
-    if (score >= 4.1) return "#27ae60";
-    if (score >= 3.5) return "#3b82f6";
-    if (score >= 3.0) return "#f1c40f";
-    return "#e67e22";
+    if (score >= 4.1) return "#10b981"; // Elite
+    if (score >= 3.5) return "#3b82f6"; // High
+    if (score >= 3.0) return "#f1c40f"; // Average
+    return "#e67e22"; // Niche
 }
 
 function renderMarkers() {
     markerLayerGroup.clearLayers();
     const starIcon = L.divIcon({
-        html: '<div style="font-size: 26px; color: #fbbf24; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">⭐</div>',
+        html: '<div style="font-size: 26px; color: #fbbf24; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">⭐</div>',
         className: 'star-icon', iconSize: [30, 30], iconAnchor: [15, 15]
     });
     Object.keys(islandData).forEach(id => {
@@ -78,6 +79,7 @@ function showMission() {
     document.getElementById('detail-view').style.display = 'none';
     document.getElementById('mission-view').style.display = 'block';
     document.getElementById('hopping-view').style.display = 'none';
+    window.scrollTo(0,0);
 }
 
 function showDetail(id) {
@@ -85,6 +87,7 @@ function showDetail(id) {
     document.getElementById('home-view').style.display = 'none';
     document.getElementById('detail-view').style.display = 'block';
     document.getElementById('island-name').innerText = islandData[id].name;
+    window.scrollTo(0,0);
     fetch(`islands/${id}.json?v=` + new Date().getTime())
         .then(res => res.json())
         .then(d_detail => renderDetailView(Object.assign({}, islandData[id], d_detail)));
@@ -134,7 +137,7 @@ function renderDetailView(d) {
         });
 
         d.itinerary.forEach(stop => {
-            let emoji = stop.name.toLowerCase().includes("port") ? "⚓" : (stop.name.toLowerCase().includes("airport") ? "✈️" : (stop.day === "Beach" ? "🏖️" : "🏛️"));
+            let emoji = stop.name.toLowerCase().includes("airport") ? "✈️" : (stop.name.toLowerCase().includes("port") ? "⚓" : (stop.day === "Beach" ? "🏖️" : "🏛️"));
             const marker = L.marker([stop.lat, stop.lng], {
                 icon: L.divIcon({ html: `<div style="font-size:22px;">${emoji}</div>`, className: 'custom-pin', iconAnchor: [11, 11] })
             }).bindTooltip(stop.name);
@@ -146,6 +149,8 @@ function renderDetailView(d) {
         mL.onAdd = () => { const div = L.DomUtil.create('div', 'mini-legend'); div.innerHTML = miniLegendHTML; return div; };
         mL.addTo(miniMap);
         miniMap.fitBounds(L.latLngBounds(roadTrip.map(p => [p.lat, p.lng])), { padding: [50, 50] });
+    } else {
+        miniMap.setView([d.lat, d.lng], 11);
     }
 }
 
