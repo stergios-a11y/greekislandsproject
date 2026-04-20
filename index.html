@@ -28,7 +28,8 @@
     <div class="search-box-wrapper">
         <input type="text" id="islandSearch" placeholder="Search by island name..." onkeyup="filterIslands()">
     </div>
-    <div class="vibe-selector-wrapper">
+    
+    <div class="vibe-section">
         <p class="vibe-label">Filter by travel vibe:</p>
         <div class="vibe-filters">
             <button class="vibe-chip active" id="btn-overall" onclick="updateMapMode('overall')">🏠 Overall</button>
@@ -45,20 +46,22 @@
 
 <main id="mission-view" class="content-page" style="display:none;">
     <div class="mission-wrapper">
+        <img src="logo.png" class="mission-big-logo" alt="Aegean Blueprint Logo">
+        
         <header class="mission-header">
             <h1>Why This Site Exists</h1>
             <p class="mission-intro">Choosing a Greek island shouldn’t feel like a research project.</p>
-            <p>There are too many options, too many opinions, and too much noise. You end up comparing tabs for hours and still second-guessing the decision. <strong>Aegean Blueprint cuts through that.</strong></p>
+            <p>There are too many options and noise. <strong>Aegean Blueprint cuts through that.</strong></p>
         </header>
 
         <section class="mission-grid">
             <div class="mission-card">
                 <h3>Pick Based on What Matters</h3>
-                <p>Start with your priorities: Beaches, Culture, Nightlife, Accessibility, Price, or Overall Balance. Select what you care about, and the site points you to the islands that actually fit.</p>
+                <p>Select what you care about, and the site points you to the Top 10 islands that actually fit. No overthinking.</p>
             </div>
             <div class="mission-card">
                 <h3>Ready-to-Go Plans</h3>
-                <p>Once you choose an island, you’re done deciding. You get a complete itinerary including where to stay, what to see, and which beaches are worth the drive.</p>
+                <p>Once you choose, you’re done. You get a complete itinerary: where to stay, what to see, and which beaches are worth the drive.</p>
             </div>
         </section>
 
@@ -76,7 +79,7 @@
     <h1>Perfect Pairings</h1>
     <div class="hopping-pair">
         <h2>Milos + Kimolos</h2>
-        <p>A 20-minute local ferry link. Perfect for volcanic moonscapes and seclusion.</p>
+        <p>A 20-minute local ferry. Perfect for moonscape beaches and seclusion.</p>
     </div>
 </main>
 
@@ -91,7 +94,6 @@
             <div class="rating-tile"><span class="rating-label">🚢 Access</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div></div>
             <div class="rating-tile"><span class="rating-label">💸 Price</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div></div>
         </div>
-        <img id="island-pic" class="island-hero" src="" alt="">
         <div id="island-mini-map"></div>
         <div id="island-guide"></div>
     </div>
