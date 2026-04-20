@@ -4,42 +4,45 @@ body.subpage-active .search-container { display: none !important; }
 
 header { background: var(--navy); color: white; padding: 10px 25px; position: sticky; top: 0; z-index: 2000; }
 .header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-
-/* LOGO STYLING */
-#site-logo { 
-    height: 40px; /* Perfectly sized for the nav bar */
-    cursor: pointer; 
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); /* Professional depth */
-    transition: transform 0.2s; 
-}
+#site-logo { height: 45px; cursor: pointer; transition: transform 0.2s; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); }
 #site-logo:hover { transform: scale(1.05); }
 
-.top-nav a { color: #cbd5e1; text-decoration: none; margin-left: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; vertical-align: middle; }
+.top-nav a { color: #cbd5e1; text-decoration: none; margin-left: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; }
 .top-nav a:hover { color: white; }
 
 .search-container { padding: 25px; background: white; border-bottom: 1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center; gap: 15px; }
-#islandSearch { width: 100%; max-width: 400px; padding: 12px; border-radius: 8px; border: 2px solid #f1f5f9; background: #f8fafc; }
+#islandSearch { width: 100%; max-width: 400px; padding: 12px; border-radius: 10px; border: 2px solid #f1f5f9; background: #f8fafc; }
 .vibe-filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
-.vibe-chip { padding: 8px 16px; border-radius: 8px; border: 2px solid #f1f5f9; background: white; font-weight: 700; font-size: 0.8rem; cursor: pointer; }
+.vibe-chip { padding: 10px 18px; border-radius: 10px; border: 2px solid #f1f5f9; background: white; font-weight: 700; font-size: 0.8rem; cursor: pointer; }
 .vibe-chip.active { background: var(--navy); color: white; border-color: var(--navy); }
 
 #main-map { height: calc(100vh - 180px); width: 100%; z-index: 1; }
 
-/* LEGEND */
-.info.legend { padding: 15px; background: white; border-radius: 12px; box-shadow: var(--shadow); line-height: 2; min-width: 160px; margin-bottom: 30px !important; }
+/* FIXED FLOATING LEGEND */
+.info.legend { padding: 15px; background: white; border-radius: 12px; box-shadow: var(--shadow); line-height: 2.2; min-width: 170px; margin-bottom: 40px !important; }
 .legend-item { display: flex; align-items: center; font-size: 0.85rem; font-weight: 700; }
 .dot { height: 12px; width: 12px; border-radius: 50%; display: inline-block; margin-right: 12px; border: 1px solid rgba(0,0,0,0.1); }
 
 /* MISSION PAGE POLISH */
-.mission-wrapper { max-width: 800px; margin: 60px auto; text-align: center; padding: 0 20px; }
-.hero-lead { font-size: 1.4rem; color: var(--blue); font-weight: 600; margin-bottom: 10px; }
-.mission-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 40px 0; }
-.mission-card { background: white; padding: 30px; border-radius: 20px; box-shadow: var(--shadow); text-align: left; }
-.the-point { background: var(--navy); color: white; padding: 60px 40px; border-radius: 30px; margin-top: 60px; }
-.the-point h2 { color: var(--gold); text-transform: uppercase; font-size: 2.2rem; }
-.final-statement { font-size: 1.6rem !important; font-weight: 700; margin-top: 30px; display: block; }
+.mission-wrapper { max-width: 900px; margin: 60px auto; text-align: center; padding: 0 20px; }
+.hero-lead { font-size: 1.5rem; color: var(--blue); font-weight: 600; margin-bottom: 10px; }
+.mission-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 40px 0; }
+.mission-card { background: white; padding: 35px; border-radius: 20px; box-shadow: var(--shadow); text-align: left; }
 
-/* DETAIL PAGE */
+.the-point-highlight { 
+    background: var(--navy); 
+    color: white; 
+    padding: 70px 40px; 
+    border-radius: 30px; 
+    margin-top: 60px; 
+    display: flex; 
+    justify-content: center; 
+}
+.highlight-inner { max-width: 600px; text-align: center; }
+.the-point-highlight h2 { color: var(--gold); text-transform: uppercase; font-size: 2.8rem; letter-spacing: 2px; margin-bottom: 20px; }
+.final-word { font-size: 1.8rem !important; font-weight: 700; margin-top: 30px; display: block; color: white; }
+
+/* DETAIL PAGE FUNCTIONALITY */
 .detail-container { max-width: 850px; margin: 0 auto; padding: 40px 20px; }
 .rating-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 30px; }
 .rating-tile { background: white; padding: 15px; border-radius: 12px; box-shadow: var(--shadow); text-align: center; }
@@ -52,12 +55,9 @@ header { background: var(--navy); color: white; padding: 10px 25px; position: st
 
 .mini-legend { padding: 12px; background: white; border-radius: 12px; box-shadow: var(--shadow); font-size: 0.8rem; }
 .legend-day-link { cursor: pointer; display: flex; align-items: center; padding: 5px; border-radius: 6px; }
-.legend-day-link:hover { background: #f1f5f9; }
-.line-sample { width: 20px; height: 4px; display: inline-block; margin-right: 8px; border-radius: 2px; }
-.day-stats { display: block; font-size: 0.65rem; color: #64748b; margin-left: 28px; }
+.legend-day-link:hover { background: #eff6ff; }
+.line-sample { width: 22px; height: 5px; display: inline-block; margin-right: 10px; border-radius: 2px; }
+.day-stats { display: block; font-size: 0.7rem; color: #64748b; margin-left: 32px; font-weight: 600; }
 
-.itinerary-step { border-left: 4px solid var(--blue); padding: 20px; margin: 15px 0; background: white; border-radius: 0 12px 12px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-.beach-table { width: 100%; border-collapse: collapse; margin: 20px 0; border-radius: 12px; overflow: hidden; }
-.beach-table th { background: var(--navy); color: white; padding: 12px; text-align: left; font-size: 0.75rem; }
-.beach-table td { padding: 12px; border-bottom: 1px solid #f1f5f9; background: white; font-size: 0.85rem; }
-.back-btn { padding: 12px 24px; background: var(--navy); color: white; border: none; border-radius: 8px; cursor: pointer; margin-bottom: 20px; font-weight: 700; }
+.itinerary-step { border-left: 4px solid var(--blue); padding: 25px; margin: 20px 0; background: white; border-radius: 0 12px 12px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.back-btn { padding: 12px 24px; background: var(--navy); color: white; border: none; border-radius: 10px; cursor: pointer; margin-bottom: 24px; font-weight: 700; }
