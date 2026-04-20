@@ -1,4 +1,4 @@
-const VERSION_ID = "v17.0 - Real Road Routing";
+const VERSION_ID = "v18.0 - Pro Transport Hubs";
 
 let mainMap, miniMap;
 let markerLayerGroup; 
@@ -113,11 +113,9 @@ function renderDetailView(d) {
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(miniMap);
 
     if (d.itinerary && d.itinerary.length > 0) {
-        // 1. Separate Road Trip from Beach Markers
         const roadTripPoints = d.itinerary.filter(stop => typeof stop.day === 'number');
-        const beachPoints = d.itinerary.filter(stop => stop.day === 'Beach');
 
-        // 2. Fetch Real Road Routing (OSRM)
+        // Draw Real Road Routing
         if (roadTripPoints.length >= 2) {
             const coordsString = roadTripPoints.map(p => `${p.lng},${p.lat}`).join(';');
             fetch(`https://router.project-osrm.org/route/v1/driving/${coordsString}?overview=full&geometries=geojson`)
@@ -132,16 +130,23 @@ function renderDetailView(d) {
             miniMap.setView([d.lat, d.lng], 10);
         }
 
-        // 3. Add All Markers
+        // Add Markers with Special Symbols
         d.itinerary.forEach(stop => {
-            const isBeach = stop.day === 'Beach';
-            L.circleMarker([stop.lat, stop.lng], {
-                radius: isBeach ? 6 : 8,
-                fillColor: isBeach ? '#2ecc71' : '#005BAE',
-                color: '#fff',
-                weight: 2,
-                fillOpacity: 1
-            }).addTo(miniMap).bindTooltip(`${isBeach ? '🏖️' : '📍 Day ' + stop.day}: ${stop.name}`);
+            let iconEmoji = "📍";
+            const stopName = stop.name.toLowerCase();
+            
+            if (stop.day === "Beach") iconEmoji = "🏖️";
+            if (stopName.includes("airport")) iconEmoji = "✈️";
+            if (stopName.includes("port")) iconEmoji = "⚓";
+            if (stopName.includes("hotel") || stopName.includes("stay")) iconEmoji = "🏨";
+
+            L.marker([stop.lat, stop.lng], {
+                icon: L.divIcon({
+                    html: `<div style="font-size:22px; filter: drop-shadow(0 0 2px white);">${iconEmoji}</div>`,
+                    className: 'custom-pin',
+                    iconAnchor: [11, 11]
+                })
+            }).addTo(miniMap).bindTooltip(`<strong>${stop.name}</strong>`);
         });
     } else {
         miniMap.setView([d.lat, d.lng], 11);
