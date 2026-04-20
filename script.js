@@ -1,4 +1,4 @@
-const VERSION_ID = "v29.0 - Professional Aesthetic & Bento UI";
+const VERSION_ID = "v30.0 - Map Scale & Professional Polish";
 let mainMap, miniMap, markerLayerGroup, legendControl;
 const markerStore = {};
 let currentMode = 'overall';
@@ -17,13 +17,17 @@ window.onload = function() {
 };
 
 function initMap() {
+    // Initialize Main Map
     mainMap = L.map('main-map', { zoomControl: false }).setView([38.3, 24.5], 7);
-    L.control.zoom({ position: 'topright' }).addTo(mainMap); // Moved zoom for cleaner look
+    L.control.zoom({ position: 'topright' }).addTo(mainMap);
+    
+    // Add Distance Scale (Metric Only)
+    L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(mainMap);
     
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(mainMap);
     markerLayerGroup = L.layerGroup().addTo(mainMap);
 
-    legendControl = L.control({ position: 'bottomleft' }); // Moved for aesthetic balance
+    legendControl = L.control({ position: 'bottomleft' }); 
     legendControl.onAdd = function() {
         let div = L.DomUtil.create('div', 'info legend');
         updateLegendContent(div);
@@ -105,6 +109,10 @@ function renderDetailView(d) {
 
     if (miniMap) miniMap.remove();
     miniMap = L.map('island-mini-map', { zoomControl: true, scrollWheelZoom: true });
+    
+    // Add Distance Scale to Mini Map
+    L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(miniMap);
+    
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(miniMap);
 
     dayLayerGroups = {};
