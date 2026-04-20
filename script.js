@@ -1,10 +1,10 @@
-const VERSION_ID = "v26.0 - Greek Islands Odyssey Rename";
+const VERSION_ID = "v27.0 - 6-Day Multi-Color Odyssey";
 let mainMap, miniMap, markerLayerGroup, legendControl;
 const markerStore = {};
 let currentMode = 'overall';
 let islandData = {};
 
-// Color palette for itinerary days
+// 6 Colors for 6 Days
 const dayColors = ['#3498db', '#2ecc71', '#9b59b6', '#f39c12', '#e74c3c', '#1abc9c'];
 
 window.onload = function() {
@@ -92,7 +92,7 @@ function renderDetailView(d) {
         const roadTrip = d.itinerary.filter(s => typeof s.day === 'number').sort((a,b) => a.day - b.day);
         
         if (roadTrip.length >= 2) {
-            let miniLegendHTML = `<strong>Itinerary Routes</strong><br>`;
+            let miniLegendHTML = `<strong>6-Day Journey</strong><br>`;
             const dayList = [...new Set(roadTrip.map(s => s.day))];
             
             dayList.forEach((day, index) => {
@@ -134,11 +134,16 @@ function renderDetailView(d) {
         d.itinerary.forEach(stop => {
             let emoji = "🏛️";
             const n = stop.name.toLowerCase();
+            
+            // PRIORITY ICON LOGIC
             if (n.includes("airport")) emoji = "✈️";
             else if (n.includes("port") && !n.includes("airport")) emoji = "⚓";
             else if (stop.day === "Beach") emoji = "🏖️";
+            else if (n.includes("springs")) emoji = "♨️";
+            else if (n.includes("monastery") || n.includes("moni")) emoji = "⛪";
             else if (n.includes("hotel") || n.includes("stay")) emoji = "🏨";
-            else if (n.includes("forest") || n.includes("salt") || n.includes("wetlands")) emoji = "📷";
+            else if (n.includes("distillery") || n.includes("ouzo")) emoji = "🥃";
+            else if (n.includes("forest") || n.includes("salt") || n.includes("museum")) emoji = "📷";
 
             L.marker([stop.lat, stop.lng], {
                 icon: L.divIcon({ html: `<div style="font-size:22px; filter: drop-shadow(0 0 2px white);">${emoji}</div>`, className: 'custom-pin', iconAnchor: [11, 11] })
