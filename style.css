@@ -1,63 +1,81 @@
-:root { --navy: #0f172a; --blue: #3b82f6; --gold: #fbbf24; --salt: #f8fafc; --shadow: 0 15px 30px -5px rgba(0,0,0,0.2); }
+:root { 
+    --greek-blue: #005BAE; /* Authenticated Greek Flag Blue */
+    --navy: #001f3f; 
+    --gold: #fbbf24; 
+    --salt: #f8fafc; 
+    --shadow: 0 10px 25px -5px rgba(0,0,0,0.15); 
+}
+
 body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--salt); color: var(--navy); overflow-x: hidden; }
 body.subpage-active .search-container { display: none !important; }
 
-header { background: var(--navy); color: white; padding: 10px 25px; position: sticky; top: 0; z-index: 2000; }
+header { background: var(--greek-blue); color: white; padding: 12px 25px; position: sticky; top: 0; z-index: 2000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
 .header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-#site-logo { height: 45px; cursor: pointer; transition: transform 0.2s; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); }
-#site-logo:hover { transform: scale(1.05); }
 
-.top-nav a { color: #cbd5e1; text-decoration: none; margin-left: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; }
+.logo-wrapper { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+#site-logo { height: 42px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.3); }
+#brand-text { font-size: 1.1rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; }
+
+.top-nav a { color: rgba(255,255,255,0.8); text-decoration: none; margin-left: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; }
 .top-nav a:hover { color: white; }
 
-.search-container { padding: 25px; background: white; border-bottom: 1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center; gap: 15px; }
-#islandSearch { width: 100%; max-width: 400px; padding: 12px; border-radius: 10px; border: 2px solid #f1f5f9; background: #f8fafc; }
+.search-container { padding: 30px; background: white; border-bottom: 1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+#islandSearch { width: 100%; max-width: 400px; padding: 12px; border-radius: 8px; border: 2px solid #f1f5f9; background: #f8fafc; font-family: inherit; }
+.vibe-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: #94a3b8; margin-bottom: 5px; }
 .vibe-filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
-.vibe-chip { padding: 10px 18px; border-radius: 10px; border: 2px solid #f1f5f9; background: white; font-weight: 700; font-size: 0.8rem; cursor: pointer; }
-.vibe-chip.active { background: var(--navy); color: white; border-color: var(--navy); }
+.vibe-chip { padding: 10px 18px; border-radius: 8px; border: 2px solid #f1f5f9; background: white; font-weight: 700; font-size: 0.8rem; cursor: pointer; color: var(--navy); }
+.vibe-chip.active { background: var(--greek-blue); color: white; border-color: var(--greek-blue); }
 
-#main-map { height: calc(100vh - 180px); width: 100%; z-index: 1; }
+#main-map { height: calc(100vh - 190px); width: 100%; z-index: 1; }
 
 /* FIXED FLOATING LEGEND */
-.info.legend { padding: 15px; background: white; border-radius: 12px; box-shadow: var(--shadow); line-height: 2.2; min-width: 170px; margin-bottom: 40px !important; }
+.info.legend { 
+    padding: 15px; 
+    background: white; 
+    border-radius: 12px; 
+    box-shadow: var(--shadow); 
+    line-height: 2.4; 
+    min-width: 180px; 
+    margin-bottom: 60px !important; /* Forces it higher above attribution */
+}
 .legend-item { display: flex; align-items: center; font-size: 0.85rem; font-weight: 700; }
 .dot { height: 12px; width: 12px; border-radius: 50%; display: inline-block; margin-right: 12px; border: 1px solid rgba(0,0,0,0.1); }
 
-/* MISSION PAGE POLISH */
+/* MISSION PAGE: "THE POINT" HIGHLIGHT */
 .mission-wrapper { max-width: 900px; margin: 60px auto; text-align: center; padding: 0 20px; }
-.hero-lead { font-size: 1.5rem; color: var(--blue); font-weight: 600; margin-bottom: 10px; }
-.mission-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 40px 0; }
+.mission-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 50px 0; }
 .mission-card { background: white; padding: 35px; border-radius: 20px; box-shadow: var(--shadow); text-align: left; }
 
 .the-point-highlight { 
-    background: var(--navy); 
+    background: var(--greek-blue); 
     color: white; 
-    padding: 70px 40px; 
+    padding: 80px 40px; 
     border-radius: 30px; 
     margin-top: 60px; 
     display: flex; 
     justify-content: center; 
 }
-.highlight-inner { max-width: 600px; text-align: center; }
-.the-point-highlight h2 { color: var(--gold); text-transform: uppercase; font-size: 2.8rem; letter-spacing: 2px; margin-bottom: 20px; }
-.final-word { font-size: 1.8rem !important; font-weight: 700; margin-top: 30px; display: block; color: white; }
+.highlight-inner { max-width: 650px; text-align: center; }
+.the-point-highlight h2 { color: var(--gold); text-transform: uppercase; font-size: 2.8rem; margin-bottom: 25px; }
+.final-word { font-size: 1.8rem !important; font-weight: 700; margin-top: 30px; display: block; }
 
-/* DETAIL PAGE FUNCTIONALITY */
+/* DETAIL VIEW & ITINERARY */
 .detail-container { max-width: 850px; margin: 0 auto; padding: 40px 20px; }
-.rating-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 30px; }
+.rating-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin-bottom: 40px; }
 .rating-tile { background: white; padding: 15px; border-radius: 12px; box-shadow: var(--shadow); text-align: center; }
-.rating-label { font-size: 0.65rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; display: block; }
+.rating-label { font-size: 0.65rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 5px; }
 .stars-outer { font-size: 14px; color: #e2e8f0; position: relative; display: inline-block; }
 .stars-inner { position: absolute; top: 0; left: 0; overflow: hidden; color: var(--gold); width: 0; }
 .stars-outer::before, .stars-inner::before { content: "★★★★★"; }
+
 .island-hero { width: 100%; height: 400px; object-fit: cover; border-radius: 20px; margin-bottom: 30px; box-shadow: var(--shadow); }
 #island-mini-map { height: 450px; border-radius: 20px; margin-bottom: 30px; border: 1px solid #e2e8f0; }
 
-.mini-legend { padding: 12px; background: white; border-radius: 12px; box-shadow: var(--shadow); font-size: 0.8rem; }
-.legend-day-link { cursor: pointer; display: flex; align-items: center; padding: 5px; border-radius: 6px; }
+.mini-legend { padding: 15px; background: white; border-radius: 12px; box-shadow: var(--shadow); font-size: 0.85rem; min-width: 160px; }
+.legend-day-link { cursor: pointer; display: flex; align-items: center; padding: 8px; border-radius: 8px; font-weight: 700; }
 .legend-day-link:hover { background: #eff6ff; }
-.line-sample { width: 22px; height: 5px; display: inline-block; margin-right: 10px; border-radius: 2px; }
-.day-stats { display: block; font-size: 0.7rem; color: #64748b; margin-left: 32px; font-weight: 600; }
+.line-sample { width: 24px; height: 5px; display: inline-block; margin-right: 12px; border-radius: 2px; }
+.day-stats { display: block; font-size: 0.7rem; color: #64748b; margin-left: 36px; font-weight: 600; }
 
-.itinerary-step { border-left: 4px solid var(--blue); padding: 25px; margin: 20px 0; background: white; border-radius: 0 12px 12px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.back-btn { padding: 12px 24px; background: var(--navy); color: white; border: none; border-radius: 10px; cursor: pointer; margin-bottom: 24px; font-weight: 700; }
+.itinerary-step { border-left: 5px solid var(--greek-blue); padding: 25px; margin: 20px 0; background: white; border-radius: 0 15px 15px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.back-btn { padding: 12px 24px; background: var(--greek-blue); color: white; border: none; border-radius: 10px; cursor: pointer; margin-bottom: 24px; font-weight: 700; }
