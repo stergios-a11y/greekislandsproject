@@ -59,19 +59,53 @@ header {
 #main-map { height: 75vh; width: 100%; border-bottom: 2px solid #ddd; }
 #island-mini-map { height: 450px; width: 100%; border-radius: 12px; margin-bottom: 20px; border: 1px solid #ddd; position: relative; }
 
-/* IN-MAP LEGENDS */
+/* INTERACTIVE LEGENDS */
 .info.legend, .mini-legend {
-    padding: 8px 12px;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 5px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 8px;
     font-size: 0.75rem;
     color: #333;
+    border: 1px solid #ccc;
 }
 
-.legend-item { display: flex; align-items: center; margin-bottom: 3px; }
+.mini-legend {
+    max-width: 200px;
+    cursor: default;
+}
+
+.legend-item { 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 5px; 
+    padding: 4px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+/* Clickable day styles */
+.legend-day-link {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.legend-day-link:hover {
+    background: #eef2f3;
+}
+
 .dot { height: 10px; width: 10px; border-radius: 50%; display: inline-block; margin-right: 8px; }
-.line-sample { width: 20px; height: 3px; display: inline-block; margin-right: 8px; border-radius: 2px; }
+.line-sample { width: 25px; height: 4px; display: inline-block; margin-right: 8px; border-radius: 2px; }
+
+.day-stats {
+    display: block;
+    font-size: 0.65rem;
+    color: #666;
+    margin-left: 33px;
+    margin-top: -2px;
+}
 
 /* DETAIL VIEW */
 #detail-view { max-width: 850px; margin: 0 auto; padding: 20px; background: white; }
