@@ -79,7 +79,6 @@
         <h1>Why This Site Exists</h1>
         <p class="mission-lead">Choosing a Greek island shouldn’t feel like a research project.</p>
         <p>There are too many options and noise. <strong>Aegean Blueprint cuts through that.</strong></p>
-        
         <div class="mission-grid">
             <div class="mission-card">
                 <h3>1. Pick by Priorities</h3>
@@ -90,30 +89,47 @@
                 <p>Once you choose, you’re done deciding. You get a complete itinerary including where to stay, what to see, and daily structures.</p>
             </div>
         </div>
-
         <section class="the-point-highlight">
-            <div class="highlight-inner">
-                <h2>The Point</h2>
-                <p>This isn’t about inspiration. It’s about making a <strong>clear decision fast</strong>—and having a solid plan immediately after.</p>
-                <p class="final-word">Because planning a trip shouldn’t take longer than the trip itself.</p>
-            </div>
+            <h2>The Point</h2>
+            <p>This isn’t about inspiration. It’s about making a <strong>clear decision fast</strong>—and having a solid plan immediately after.</p>
+            <p class="final-word">Because planning a trip shouldn’t take longer than the trip itself.</p>
         </section>
     </div>
 </main>
 
 <main id="view-detail" class="view-section" style="display:none;">
     <div class="detail-container">
-        <button class="back-btn" onclick="handleNav('home')">← Back to Map</button>
-        <h1 id="island-name"></h1>
-        <div class="rating-box">
-            <div class="rating-tile"><span class="rating-label">Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div></div>
-            <div class="rating-tile"><span class="rating-label">Culture & History</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div></div>
-            <div class="rating-tile"><span class="rating-label">Night Life</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div></div>
-            <div class="rating-tile"><span class="rating-label">Access Ease</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div></div>
-            <div class="rating-tile"><span class="rating-label">Price Level</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div></div>
+        <div class="detail-header">
+            <button class="back-btn" onclick="handleNav('home')">← Back to Map</button>
+            <h1 id="island-name"></h1>
+            <div class="island-meta-pill" id="island-meta-info"></div>
         </div>
-        <div id="island-mini-map"></div>
-        <div id="island-guide"></div>
+
+        <div class="detail-grid">
+            <div class="detail-main">
+                <div id="island-mini-map"></div>
+                <div id="island-guide"></div>
+            </div>
+            
+            <aside class="detail-sidebar">
+                <div class="sidebar-box">
+                    <h3>Blueprint Ratings</h3>
+                    <div class="rating-list">
+                        <div class="rating-item"><span class="rating-label">Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div></div>
+                        <div class="rating-item"><span class="rating-label">Culture & History</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div></div>
+                        <div class="rating-item"><span class="rating-label">Night Life</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div></div>
+                        <div class="rating-item"><span class="rating-label">Access Ease</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div></div>
+                        <div class="rating-item"><span class="rating-label">Price Level</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div></div>
+                    </div>
+                </div>
+                <div class="sidebar-box" id="sidebar-stats">
+                    <h3>Key Stats</h3>
+                    <div class="stat-line"><span>Land Area:</span> <strong id="stat-area"></strong></div>
+                    <div class="stat-line"><span>Population:</span> <strong id="stat-pop"></strong></div>
+                    <div class="stat-line"><span>Group:</span> <strong id="stat-group"></strong></div>
+                </div>
+            </aside>
+        </div>
     </div>
 </main>
 
