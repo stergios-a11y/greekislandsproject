@@ -1,14 +1,16 @@
 :root {
     --primary-navy: #0f172a;
-    --greek-blue: #005BAE;
+    --greek-blue: #3b82f6; /* Modern Blue for High */
     --star-gold: #fbbf24;
+    --avg-yellow: #f1c40f;
+    --niche-orange: #e67e22;
     --sea-salt: #f8fafc;
     --shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
 }
 
 body { font-family: 'Montserrat', sans-serif; margin: 0; background-color: var(--sea-salt); color: var(--primary-navy); }
 
-/* Ensure search bar hides when NOT on home view */
+/* Hard hide search bar in subpages */
 body.subpage-active .search-container { display: none !important; }
 
 header { background: var(--primary-navy); color: white; padding: 12px 24px; position: sticky; top: 0; z-index: 1000; }
@@ -23,9 +25,32 @@ header { background: var(--primary-navy); color: white; padding: 12px 24px; posi
 .vibe-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #94a3b8; margin-bottom: 10px; }
 .vibe-filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
 .vibe-chip { padding: 10px 18px; border-radius: 12px; border: 2px solid #f1f5f9; background: white; cursor: pointer; font-size: 0.8rem; font-weight: 700; }
-.vibe-chip.active { background: var(--greek-blue); color: white; border-color: var(--greek-blue); }
+.vibe-chip.active { background: var(--primary-navy); color: white; border-color: var(--primary-navy); }
 
-/* Mission Page Styling */
+/* Legend Indicators (The Fix) */
+.dot { 
+    height: 10px; 
+    width: 10px; 
+    margin-right: 10px; 
+    border-radius: 50%; 
+    display: inline-block; 
+    border: 1px solid rgba(0,0,0,0.1); /* Makes them pop */
+    vertical-align: middle;
+}
+
+.info.legend {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    box-shadow: var(--shadow);
+    border-radius: 12px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.legend-item { display: flex; align-items: center; font-weight: 600; margin-bottom: 4px; }
+
+/* Subpages Content */
 .content-page { max-width: 750px; margin: 60px auto; padding: 0 24px; line-height: 1.8; }
 .mission-container h1 { font-size: 2.8rem; margin-bottom: 20px; border-bottom: 4px solid var(--greek-blue); display: inline-block; }
 .mission-intro { font-size: 1.4rem; font-weight: 600; color: var(--greek-blue); margin-bottom: 24px; }
@@ -33,7 +58,6 @@ header { background: var(--primary-navy); color: white; padding: 12px 24px; posi
 .mission-list { list-style: none; padding: 0; margin: 20px 0; }
 .mission-list li { margin: 10px 0; padding-left: 25px; position: relative; font-weight: 600; }
 .mission-list li::before { content: "•"; color: var(--greek-blue); position: absolute; left: 0; font-size: 1.5rem; }
-.highlight { font-size: 1.3rem; font-weight: 700; color: var(--greek-blue); margin-top: 20px; }
 
 /* Detail/Map View UI */
 #main-map { height: 75vh; width: 100%; }
