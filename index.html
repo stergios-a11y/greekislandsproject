@@ -12,15 +12,13 @@
 
 <header>
     <div class="header-content">
-        <div class="logo-wrapper" onclick="switchView('home')">
+        <div class="logo-wrapper" onclick="handleNav('home')">
             <img src="logo.png" id="site-logo" alt="Aegean Blueprint">
             <span id="brand-text">Aegean Blueprint</span>
         </div>
         
-        <div class="menu-toggle" id="mobile-menu-btn" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
         </div>
 
         <nav class="top-nav" id="main-nav">
@@ -33,10 +31,7 @@
 </header>
 
 <div class="search-container" id="home-controls">
-    <div class="search-box-wrapper">
-        <input type="text" id="islandSearch" placeholder="Search islands..." onkeyup="filterIslands()">
-    </div>
-    
+    <input type="text" id="islandSearch" placeholder="Search islands..." onkeyup="filterIslands()">
     <div class="vibe-control-panel">
         <div class="vibe-filters">
             <button class="vibe-chip active" id="btn-overall" onclick="updateMapMode('overall')">🏠 Overall</button>
@@ -49,9 +44,7 @@
     </div>
 </div>
 
-<main id="view-home" class="view-section">
-    <div id="main-map"></div>
-</main>
+<main id="view-home" class="view-section"><div id="main-map"></div></main>
 
 <main id="view-data" class="view-section content-page" style="display:none;">
     <h1>Islands Database</h1>
@@ -59,7 +52,7 @@
         <table id="islands-table">
             <thead>
                 <tr>
-                    <th onclick="sortTable(0)">Name ↕️</th>
+                    <th onclick="sortTable(0)">Island ↕️</th>
                     <th onclick="sortTable(1)">Group ↕️</th>
                     <th onclick="sortTable(2)">Total ↕️</th>
                     <th onclick="sortTable(3)">Beach ↕️</th>
@@ -98,18 +91,16 @@
                 <p>Get a complete itinerary delivered instantly. No extra research needed.</p>
             </div>
         </div>
-        <section class="the-point-highlight">
-            <div class="highlight-inner">
-                <h2>The Point</h2>
-                <p> प्लानिंग a trip shouldn’t take longer than the trip itself.</p>
-            </div>
-        </section>
+        <div class="the-point-highlight">
+            <h2>The Point</h2>
+            <p>Planning a trip shouldn’t take longer than the trip itself.</p>
+        </div>
     </div>
 </main>
 
 <main id="view-detail" class="view-section" style="display:none;">
     <div class="detail-container">
-        <button class="back-btn" onclick="switchView('home')">← Back to Map</button>
+        <button class="back-btn" onclick="handleNav('home')">← Back to Map</button>
         <h1 id="island-name"></h1>
         <div id="island-mini-map"></div>
         <div id="island-guide"></div>
