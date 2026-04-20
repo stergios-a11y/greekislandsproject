@@ -1,4 +1,4 @@
-const VERSION_ID = "v32.0 - Elite Star Legend Fix";
+const VERSION_ID = "v33.0 - Dynamic UI Filtering";
 let mainMap, miniMap, markerLayerGroup, legendControl;
 const markerStore = {};
 let currentMode = 'overall';
@@ -71,7 +71,11 @@ function renderMarkers() {
 }
 
 function showDetail(id) {
+    // Hide Main Map and Search/Filters
     document.getElementById('home-view').style.display = 'none';
+    document.querySelector('.search-container').style.display = 'none';
+    
+    // Show Island Detail
     document.getElementById('detail-view').style.display = 'block';
     document.getElementById('island-name').innerText = islandData[id].name;
     window.scrollTo(0,0);
@@ -192,8 +196,13 @@ function renderDetailView(d) {
 }
 
 function showHome() { 
+    // Show Main Map and Search/Filters
     document.getElementById('home-view').style.display = 'block'; 
+    document.querySelector('.search-container').style.display = 'flex';
+    
+    // Hide Island Detail
     document.getElementById('detail-view').style.display = 'none'; 
+    
     if(mainMap) setTimeout(() => mainMap.invalidateSize(), 200);
 }
 
