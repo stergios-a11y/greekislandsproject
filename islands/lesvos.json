@@ -1,17 +1,18 @@
 {
     "img": "https://images.unsplash.com/photo-1570535189332-902263b8296a?w=1200",
     "itinerary": [
-        { "day": "Hub", "name": "Mytilene Airport", "lat": 39.056, "lng": 26.598 },
+        { "day": 1, "name": "Mytilene Airport (Arrival)", "lat": 39.056, "lng": 26.598 },
         { "day": "Hub", "name": "Mytilene Port", "lat": 39.106, "lng": 26.554 },
-        { "day": "Beach", "name": "Vatera", "lat": 38.980, "lng": 26.241 },
+        { "day": "Beach", "name": "Vatera", "lat": 39.020, "lng": 26.234 },
         { "day": "Beach", "name": "Skala Eressou", "lat": 39.129, "lng": 25.932 },
         { "day": "Beach", "name": "Agios Isidoros", "lat": 38.975, "lng": 26.388 },
         { "day": "Beach", "name": "Tarti", "lat": 38.973, "lng": 26.505 },
-        { "day": 1, "name": "Mytilene Hub", "lat": 39.110, "lng": 26.550 },
+        { "day": 1, "name": "Mytilene Harbor Walk", "lat": 39.110, "lng": 26.550 },
         { "day": 2, "name": "Molyvos Castle", "lat": 39.367, "lng": 26.174 },
-        { "day": 3, "name": "Petrified Forest", "lat": 39.205, "lng": 25.900 },
-        { "day": 3, "name": "Skala Eressou (Stay)", "lat": 39.128, "lng": 25.931 },
-        { "day": 5, "name": "Plomari Center", "lat": 38.976, "lng": 26.366 }
+        { "day": 3, "name": "Petrified Forest", "lat": 39.213, "lng": 25.855 },
+        { "day": 4, "name": "Kalloni Salt Flats", "lat": 39.207, "lng": 26.223 },
+        { "day": 5, "name": "Plomari", "lat": 38.976, "lng": 26.366 },
+        { "day": 5, "name": "Mytilene Airport (Departure)", "lat": 39.056, "lng": 26.598 }
     ],
-    "guide": "<h3>🏖️ Best Beaches: At a Glance</h3><table class='beach-table'><thead><tr><th>Beach</th><th>Rating</th><th>Type</th><th>Facilities</th></tr></thead><tbody><tr><td><strong>Skala Eressos</strong></td><td>⭐⭐⭐⭐⭐</td><td>Grey Sand</td><td>Bohemian Hub</td></tr><tr><td><strong>Vatera</strong></td><td>⭐⭐⭐⭐⭐</td><td>Sand</td><td>Extensive</td></tr><tr><td><strong>Agios Isidoros</strong></td><td>⭐⭐⭐⭐⭐</td><td>Pebble</td><td>Organized</td></tr><tr><td><strong>Tarti</strong></td><td>⭐⭐⭐⭐</td><td>Gold Sand</td><td>Tavernas</td></tr></tbody></table><h3>📅 5-Day Driving Itinerary</h3><div class='itinerary-step'><strong>Day 1: Mytilene (~10km).</strong> Arrival and explore the capital.</div><div class='itinerary-step'><strong>Day 2: The North (~65km).</strong> Molyvos Castle and Eftalou springs.</div><div class='itinerary-step'><strong>Day 3: The West (~70km).</strong> Petrified Forest and stay in Skala Eressos.</div><div class='itinerary-step'><strong>Day 4: Rest Day (0km).</strong> Enjoy Eressos beach.</div><div class='itinerary-step'><strong>Day 5: The South (~110km).</strong> Kalloni flamingos and Plomari Ouzo.</div>"
+    "guide": "<h3>🏖️ Best Beaches: At a Glance</h3><table class='beach-table'><thead><tr><th>Beach</th><th>Rating</th><th>Type</th><th>Facilities</th></tr></thead><tbody><tr><td><strong>Skala Eressos</strong></td><td>⭐⭐⭐⭐⭐</td><td>Grey Sand</td><td>Bohemian Hub</td></tr><tr><td><strong>Vatera</strong></td><td>⭐⭐⭐⭐⭐</td><td>Sand</td><td>Extensive</td></tr><tr><td><strong>Agios Isidoros</strong></td><td>⭐⭐⭐⭐⭐</td><td>Pebble</td><td>Organized</td></tr><tr><td><strong>Tarti</strong></td><td>⭐⭐⭐⭐</td><td>Gold Sand</td><td>Tavernas</td></tr></tbody></table><h3>📅 5-Day Driving Itinerary</h3><div class='itinerary-step'><strong>Day 1: Arrival (~10km).</strong> Collect car at the airport and head to Mytilene city.</div><div class='itinerary-step'><strong>Day 2: The North (~65km).</strong> Drive to the medieval village of Molyvos.</div><div class='itinerary-step'><strong>Day 3: The West (~70km).</strong> Visit the Petrified Forest and stay in the bohemian Skala Eressos.</div><div class='itinerary-step'><strong>Day 4: Wetlands (45km).</strong> Explore the Kalloni salt flats and birdwatching spots.</div><div class='itinerary-step'><strong>Day 5: The South & Departure (~120km).</strong> Visit Plomari, then drive back to the airport.</div>"
 }
