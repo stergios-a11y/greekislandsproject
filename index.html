@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aegean Blueprint | The Greek Island Decision Engine</title>
-
-  <!-- SEO & OG Meta Tags (upgrade #7) -->
   <meta name="description" content="Find your perfect Greek island fast. Filter 83 islands by beaches, culture, nightlife, access and price. Includes AI recommender and side-by-side comparison.">
-  <meta name="theme-color" content="#1a5cad">
+  <meta name="theme-color" content="#1B4F8A">
   <meta property="og:title" content="Aegean Blueprint — The Greek Island Decision Engine">
   <meta property="og:description" content="Filter 83 Greek islands by vibe. Compare them side-by-side. Get AI-matched recommendations in seconds.">
   <meta property="og:image" content="https://stergios-a11y.github.io/greekislandsproject/logo.png">
@@ -15,14 +13,12 @@
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="logo.png" type="image/png">
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
 
-  <!-- LOADING OVERLAY (upgrade #8) -->
   <div id="loading-overlay">
     <div class="loading-inner">
       <img src="logo.png" alt="Aegean Blueprint logo" id="loading-logo">
@@ -46,17 +42,13 @@
         <a href="#" id="nav-match">Match Me</a>
         <a href="#" id="nav-mission">Why This Exists</a>
       </nav>
-      <button class="dark-mode-toggle" id="dark-mode-btn" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
+      <button class="dark-mode-toggle" id="dark-mode-btn" aria-label="Toggle dark mode">☾</button>
     </div>
   </header>
 
-  <!-- MAP VIEW controls -->
   <div class="search-container" id="home-controls">
     <input type="text" id="islandSearch" placeholder="Search islands…" aria-label="Search islands">
-
-    <!-- Island Group Filter (upgrade #4) -->
     <div class="group-filter-row" id="group-filter-row" aria-label="Filter by island group"></div>
-
     <div class="vibe-control-panel">
       <div class="vibe-filters" id="vibe-filters">
         <button class="vibe-chip active" data-mode="overall">🏠 Overall</button>
@@ -69,12 +61,10 @@
     </div>
   </div>
 
-  <!-- MAP VIEW -->
   <main id="view-home" class="view-section">
     <div id="main-map"></div>
   </main>
 
-  <!-- DATA VIEW -->
   <main id="view-data" class="view-section content-page" style="display:none;">
     <h1>Islands Database</h1>
     <div class="table-search-row">
@@ -102,39 +92,32 @@
     </div>
   </main>
 
-  <!-- COMPARE VIEW (upgrade #2) -->
   <main id="view-compare" class="view-section content-page" style="display:none;">
     <h1>Compare Islands</h1>
     <p class="compare-intro">Select two islands to compare side-by-side. Pick from the map using the "＋ Compare" button, or use the dropdowns below.</p>
     <div class="compare-selectors">
-      <select id="compare-select-a" aria-label="Island A">
-        <option value="">— Island A —</option>
-      </select>
+      <select id="compare-select-a" aria-label="Island A"><option value="">— Island A —</option></select>
       <span class="vs-label">vs</span>
-      <select id="compare-select-b" aria-label="Island B">
-        <option value="">— Island B —</option>
-      </select>
+      <select id="compare-select-b" aria-label="Island B"><option value="">— Island B —</option></select>
       <button id="compare-clear-btn" class="secondary-btn">Clear</button>
     </div>
     <div id="compare-container">
       <div id="compare-placeholder" class="compare-placeholder">Select two islands above to start comparing.</div>
       <div id="compare-content" style="display:none;">
         <div class="compare-radar-wrap">
-          <canvas id="compare-radar-chart" role="img" aria-label="Radar chart comparing two islands across five dimensions: beach, culture, nightlife, access, price"></canvas>
+          <canvas id="compare-radar-chart" role="img" aria-label="Radar chart comparing two islands across five dimensions"></canvas>
         </div>
         <div class="compare-cards" id="compare-cards"></div>
       </div>
     </div>
   </main>
 
-  <!-- ISLAND HOPPING VIEW (upgrade #3) -->
   <main id="view-hopping" class="view-section content-page" style="display:none;">
     <h1>Perfect Pairings</h1>
     <p class="hopping-intro">Auto-generated from complementary scores and ferry proximity — not handpicked.</p>
     <div id="hopping-list"></div>
   </main>
 
-  <!-- MATCH ME VIEW (upgrade #1) -->
   <main id="view-match" class="view-section content-page" style="display:none;">
     <h1>Match Me</h1>
     <p class="match-intro">Answer 4 quick questions and we'll recommend your top islands.</p>
@@ -142,40 +125,106 @@
     <div id="quiz-results" style="display:none;"></div>
   </main>
 
-  <!-- MISSION VIEW -->
-  <main id="view-mission" class="view-section content-page" style="display:none;">
-    <div class="mission-wrapper">
-      <img src="logo.png" class="mission-big-logo" alt="Aegean Blueprint logo">
-      <h1>Why This Site Exists</h1>
-      <p class="mission-lead">Choosing a Greek island shouldn't feel like a research project.</p>
-      <p>There are too many options and noise. <strong>Aegean Blueprint cuts through that.</strong></p>
-      <div class="mission-grid">
-        <div class="mission-card">
-          <h3>1. Pick by Priorities</h3>
-          <p>Select what you care about — Beaches, Culture, or Price — and we point you to islands that actually fit.</p>
+  <main id="view-mission" class="view-section" style="display:none;">
+
+    <div class="why-hero">
+      <svg class="why-hero-geometry" viewBox="0 0 1280 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <circle cx="100" cy="60" r="160" fill="none" stroke="#fff" stroke-width="1.5"/>
+        <circle cx="100" cy="60" r="100" fill="none" stroke="#fff" stroke-width="1"/>
+        <circle cx="1180" cy="240" r="140" fill="none" stroke="#fff" stroke-width="1.5"/>
+        <circle cx="1180" cy="240" r="85"  fill="none" stroke="#fff" stroke-width="1"/>
+        <line x1="0" y1="150" x2="1280" y2="150" stroke="#fff" stroke-width="0.8" stroke-dasharray="5 12"/>
+        <line x1="640" y1="0"  x2="640" y2="300" stroke="#fff" stroke-width="0.8" stroke-dasharray="5 12" opacity="0.5"/>
+      </svg>
+      <div class="why-hero-logo-wrap">
+        <img src="logo.png" alt="Aegean Blueprint logo">
+      </div>
+      <h1>Aegean Blueprint</h1>
+      <p class="why-hero-sub">The Greek Island Decision Engine — built for people who want to choose fast and travel well.</p>
+    </div>
+
+    <div class="why-body">
+
+      <p class="why-lead">Choosing a Greek island shouldn't feel like a research project. There are 83 inhabited islands. Too many options, too much noise. We cut through it.</p>
+
+      <div class="why-stats">
+        <div class="why-stat-card accent-aegean">
+          <div class="why-stat-num">83</div>
+          <div class="why-stat-lbl">Islands scored</div>
         </div>
-        <div class="mission-card">
-          <h3>2. Ready-to-Go Plans</h3>
-          <p>Once you choose, you're done deciding. You get a complete itinerary including where to stay, what to see, and daily structures.</p>
+        <div class="why-stat-card accent-gold">
+          <div class="why-stat-num">5</div>
+          <div class="why-stat-lbl">Score dimensions</div>
         </div>
-        <div class="mission-card">
-          <h3>3. Compare Instantly</h3>
-          <p>Pin any two islands and compare them head-to-head with radar charts and score breakdowns.</p>
-        </div>
-        <div class="mission-card">
-          <h3>4. Let AI Match You</h3>
-          <p>Answer 4 quick questions and get a personalised shortlist of islands matched to your travel style.</p>
+        <div class="why-stat-card accent-terra">
+          <div class="why-stat-num">&lt;1 min</div>
+          <div class="why-stat-lbl">To a shortlist</div>
         </div>
       </div>
-      <section class="the-point-highlight">
-        <h2>The Point</h2>
-        <p>This isn't about inspiration. It's about making a <strong>clear decision fast</strong> — and having a solid plan immediately after.</p>
-        <p class="final-word">Because planning a trip shouldn't take longer than the trip itself.</p>
-      </section>
+
+      <div class="why-divider"><span>how it works</span></div>
+
+      <div class="why-philosophy">
+        <div class="phil-step">
+          <div class="phil-icon-line" style="background:var(--aegean)"></div>
+          <div class="phil-label">Score</div>
+          <div class="phil-desc">Every island rated across beaches, culture, nightlife, access &amp; price</div>
+        </div>
+        <div class="phil-step">
+          <div class="phil-icon-line" style="background:var(--gold)"></div>
+          <div class="phil-label">Filter</div>
+          <div class="phil-desc">By vibe, island group, or your own priorities — the map re-ranks instantly</div>
+        </div>
+        <div class="phil-step">
+          <div class="phil-icon-line" style="background:var(--terracotta)"></div>
+          <div class="phil-label">Compare</div>
+          <div class="phil-desc">Radar charts and bar breakdowns for any two islands, side-by-side</div>
+        </div>
+        <div class="phil-step">
+          <div class="phil-icon-line" style="background:var(--olive)"></div>
+          <div class="phil-label">Decide</div>
+          <div class="phil-desc">4 questions match you to your ideal shortlist with a clear rationale</div>
+        </div>
+      </div>
+
+      <div class="why-divider"><span>features</span></div>
+
+      <div class="why-features">
+        <div class="why-feat-card">
+          <div class="why-feat-num">1</div>
+          <div class="why-feat-icon i-aegean">🗺</div>
+          <h3>Pick by priorities</h3>
+          <p>Select beaches, culture, nightlife, access or price — all 83 islands instantly re-rank around what you actually care about. No digging through tabs.</p>
+        </div>
+        <div class="why-feat-card">
+          <div class="why-feat-num">2</div>
+          <div class="why-feat-icon i-gold">⚖</div>
+          <h3>Compare instantly</h3>
+          <p>Pin any two islands. Get a live radar chart and dimension-by-dimension bar breakdown. Santorini vs Milos in ten seconds.</p>
+        </div>
+        <div class="why-feat-card">
+          <div class="why-feat-num">3</div>
+          <div class="why-feat-icon i-terra">⛴</div>
+          <h3>Perfect pairings</h3>
+          <p>Auto-generated island hopping routes ranked by ferry distance and complementarity — a beach island paired with a culture island, close enough to actually combine.</p>
+        </div>
+        <div class="why-feat-card">
+          <div class="why-feat-num">4</div>
+          <div class="why-feat-icon i-olive">✦</div>
+          <h3>Matched to you</h3>
+          <p>Answer 4 quick questions about your travel style, budget, and crowd preference. Get a personalised top-6 with a reason for each recommendation.</p>
+        </div>
+      </div>
+
+      <div class="why-manifesto">
+        <h2>The point</h2>
+        <p>This isn't about inspiration. It's about making a clear decision fast — and having a solid plan immediately after.</p>
+        <span class="why-kicker">Because planning a trip shouldn't take longer than the trip itself.</span>
+      </div>
+
     </div>
   </main>
 
-  <!-- ISLAND DETAIL VIEW -->
   <main id="view-detail" class="view-section" style="display:none;">
     <div class="detail-container">
       <div class="detail-header">
