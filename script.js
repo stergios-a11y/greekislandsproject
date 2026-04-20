@@ -1,8 +1,11 @@
-const VERSION_ID = "v51.0 - Hard Reset Fix";
+const VERSION_ID = "v52.0 - Full Mediterranean Build";
 let mainMap, miniMap, markerLayerGroup, legendControl;
 let currentMode = 'overall';
 let islandData = {};
-let currentSortCol = 2; // Default Total
+const dayColors = ['#005BAE', '#10b981', '#8b5cf6', '#f59e0b', '#ef4444', '#06b6d4'];
+let dayLayerGroups = {};
+let beachLayerGroup;
+let currentSortCol = 2; 
 let sortDir = -1;
 
 window.onload = function() {
@@ -14,7 +17,7 @@ window.onload = function() {
             islandData = data; 
             renderMarkers(); 
             generateTable(); 
-        }).catch(err => console.error("Data Load Fail:", err));
+        }).catch(err => console.error("Database connection lost:", err));
 };
 
 function initMap() {
@@ -31,22 +34,32 @@ function initMap() {
 }
 
 function updateLegendContent(div) {
-    div.innerHTML = `<strong>${currentMode.toUpperCase()} TIER</strong><br>` +
-        `<div class="legend-item">⭐ Elite Top 10</div>` +
+    const title = currentMode.toUpperCase();
+    div.innerHTML = `<strong>${title} TIER</strong><br>` +
+        `<div class="legend-item">⭐ Elite (Top 10)</div>` +
         `<div class="legend-item"><span class="dot" style="background:#005BAE"></span> High (3.5+)</div>` +
         `<div class="legend-item"><span class="dot" style="background:#f1c40f"></span> Avg (3.0+)</div>` +
         `<div class="legend-item"><span class="dot" style="background:#e67e22"></span> Niche (<3.0)</div>`;
 }
 
+function getScore(d, mode) {
+    if (mode === 'overall') return d.total || d.overall || 0;
+    return d[mode] || 0;
+}
+
 function renderMarkers() {
+    if (!markerLayerGroup) return;
     markerLayerGroup.clearLayers();
-    const sorted = Object.keys(islandData).sort((a,b) => (islandData[b][currentMode === 'overall' ? 'total' : currentMode] || 0) - (islandData[a][currentMode === 'overall' ? 'total' : currentMode] || 0));
-    const top10 = sorted.slice(0, 10);
+    
+    // Sort all islands to find Top 10
+    const sortedIds = Object.keys(islandData).sort((a,b) => getScore(islandData[b], currentMode) - getScore(islandData[a], currentMode));
+    const top10 = sortedIds.slice(0, 10);
+
     const starIcon = L.divIcon({ html: '<div style="font-size:24px; color:#fbbf24; text-shadow:0 2px 4px rgba(0,0,0,0.3);">⭐</div>', className:'star-icon', iconSize:[30,30], iconAnchor:[15,15] });
 
     Object.keys(islandData).forEach(id => {
         const d = islandData[id];
-        const score = (currentMode === 'overall' ? d.total : d[currentMode]) || 0;
+        const score = getScore(d, currentMode);
         const isElite = top10.includes(id);
         const color = score >= 3.5 ? "#005BAE" : (score >= 3.0 ? "#f1c40f" : "#e67e22");
 
@@ -55,22 +68,6 @@ function renderMarkers() {
         marker.bindTooltip(`<strong>${d.name}</strong><br>${currentMode}: ${score.toFixed(1)}`);
         markerStore[id] = { marker, data: d };
     });
-}
-
-function handleNav(target) {
-    document.querySelectorAll('.view-section').forEach(v => v.style.display = 'none');
-    document.getElementById('home-controls').style.display = (target === 'home') ? 'flex' : 'none';
-    document.getElementById('view-' + target).style.display = 'block';
-    document.getElementById('main-nav').classList.remove('active');
-    if (target === 'home' && mainMap) setTimeout(() => mainMap.invalidateSize(), 200);
-    window.scrollTo(0,0);
-}
-
-function toggleMenu() { document.getElementById('main-nav').classList.toggle('active'); }
-
-function renderStars(rating) {
-    const rounded = Math.round(rating);
-    return `<span class="table-stars">${"★".repeat(rounded)}${"☆".repeat(5 - rounded)}</span>`;
 }
 
 function generateTable() {
@@ -82,29 +79,60 @@ function generateTable() {
         const row = tbody.insertRow();
         row.insertCell(0).innerHTML = `<a class="island-link" onclick="jumpMap('${k}')">${d.name}</a>`;
         row.insertCell(1).innerText = d.island_group || '-';
-        row.insertCell(2).innerHTML = renderStars(d.total || 0);
-        row.insertCell(3).innerHTML = renderStars(d.beach || 0);
-        row.insertCell(4).innerHTML = renderStars(d.hist || 0);
-        row.insertCell(5).innerHTML = renderStars(d.night || 0);
-        row.insertCell(6).innerHTML = renderStars(d.access || 0);
-        row.insertCell(7).innerHTML = renderStars(d.afford || 0);
+        row.insertCell(2).innerHTML = renderStars(getScore(d, 'overall'));
+        row.insertCell(3).innerHTML = renderStars(d.beach);
+        row.insertCell(4).innerHTML = renderStars(d.hist);
+        row.insertCell(5).innerHTML = renderStars(d.night);
+        row.insertCell(6).innerHTML = renderStars(d.access);
+        row.insertCell(7).innerHTML = renderStars(d.afford);
         const areaCell = row.insertCell(8); areaCell.innerText = d.area ? d.area.toLocaleString() : '-'; areaCell.className = 'text-right';
         const popCell = row.insertCell(9); popCell.innerText = d.pop ? d.pop.toLocaleString() : '-'; popCell.className = 'text-right';
     });
+}
+
+function renderStars(rating) {
+    const r = Math.round(rating || 0);
+    return `<span class="table-stars">${"★".repeat(r)}${"☆".repeat(5-r)}</span>`;
 }
 
 function sortTable(n) {
     if (n === currentSortCol) { sortDir *= -1; } else { currentSortCol = n; sortDir = (n < 2) ? 1 : -1; }
     const keys = ['name','island_group','total','beach','hist','night','access','afford','area','pop'];
     const sorted = Object.keys(islandData).sort((a,b) => {
-        let vA = islandData[a][keys[n]], vB = islandData[b][keys[n]];
-        return (typeof vA === 'string') ? vA.localeCompare(vB) * sortDir : (vA - vB) * sortDir;
+        let vA = islandData[a][keys[n]] || 0, vB = islandData[b][keys[n]] || 0;
+        if (typeof vA === 'string') return vA.localeCompare(vB) * sortDir;
+        return (vA - vB) * sortDir;
     });
     const newData = {}; sorted.forEach(k => newData[k] = islandData[k]);
     islandData = newData; generateTable();
 }
 
-function jumpMap(key) { handleNav('home'); mainMap.setView([islandData[key].lat, islandData[key].lng], 11); }
+function jumpMap(key) { handleNav('home'); mainMap.setView([islandData[key].lat, islandData[key].lng], 11); markerStore[key].marker.openTooltip(); }
+function toggleMenu() { document.getElementById('main-nav').classList.toggle('active'); }
+function handleNav(t) { 
+    document.querySelectorAll('.view-section').forEach(v => v.style.display = 'none');
+    document.getElementById('home-controls').style.display = (t === 'home') ? 'flex' : 'none';
+    document.getElementById('view-' + t).style.display = 'block';
+    document.getElementById('main-nav').classList.remove('active');
+    if (t === 'home' && mainMap) setTimeout(() => mainMap.invalidateSize(), 200);
+    window.scrollTo(0,0);
+}
+
+function showDetail(id) { 
+    handleNav('detail'); 
+    document.getElementById('island-name').innerText = islandData[id].name; 
+    const cats = ['beach','hist','night','access','afford'];
+    cats.forEach(c => {
+        const score = islandData[id][c] || 0;
+        document.getElementById(`star-${c}`).style.width = (score/5*100) + "%";
+    });
+    fetch(`islands/${id}.json?v=`+new Date().getTime()).then(res=>res.json()).then(d_detail=>{
+        document.getElementById('island-guide').innerHTML = d_detail.guide || "";
+        if(miniMap) miniMap.remove();
+        miniMap = L.map('island-mini-map').setView([islandData[id].lat, islandData[id].lng], 11);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(miniMap);
+    }).catch(() => document.getElementById('island-guide').innerHTML = "Guide coming soon.");
+}
+
 function updateMapMode(m) { currentMode = m; document.querySelectorAll('.vibe-chip').forEach(el => el.classList.remove('active')); document.getElementById('btn-' + m).classList.add('active'); renderMarkers(); updateLegendContent(document.querySelector('.info.legend')); }
 function filterIslands() { const q = document.getElementById('islandSearch').value.toLowerCase(); Object.keys(markerStore).forEach(k => { markerStore[k].marker.setOpacity(markerStore[k].data.name.toLowerCase().includes(q) ? 1 : 0.1); }); }
-function showDetail(id) { handleNav('detail'); document.getElementById('island-name').innerText = islandData[id].name; }
