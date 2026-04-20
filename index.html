@@ -1,141 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aegean Blueprint | The Greek Island Decision Engine</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aegean Blueprint | The Greek Island Decision Engine</title>
+
+  <!-- SEO & OG Meta Tags (upgrade #7) -->
+  <meta name="description" content="Find your perfect Greek island fast. Filter 83 islands by beaches, culture, nightlife, access and price. Includes AI recommender and side-by-side comparison.">
+  <meta name="theme-color" content="#1a5cad">
+  <meta property="og:title" content="Aegean Blueprint — The Greek Island Decision Engine">
+  <meta property="og:description" content="Filter 83 Greek islands by vibe. Compare them side-by-side. Get AI-matched recommendations in seconds.">
+  <meta property="og:image" content="https://stergios-a11y.github.io/greekislandsproject/logo.png">
+  <meta property="og:url" content="https://stergios-a11y.github.io/greekislandsproject/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="logo.png" type="image/png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
 
-<header>
+  <!-- LOADING OVERLAY (upgrade #8) -->
+  <div id="loading-overlay">
+    <div class="loading-inner">
+      <img src="logo.png" alt="Aegean Blueprint logo" id="loading-logo">
+      <div class="loading-spinner"></div>
+      <p>Loading islands…</p>
+    </div>
+  </div>
+
+  <header>
     <div class="header-content">
-        <div class="logo-wrapper" onclick="handleNav('home')">
-            <img src="logo.png" id="site-logo" alt="Logo">
-            <span id="brand-text">Aegean Blueprint</span>
-        </div>
-        <div class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></div>
-        <nav class="top-nav" id="main-nav">
-            <a href="javascript:void(0)" onclick="handleNav('home')">Map</a>
-            <a href="javascript:void(0)" onclick="handleNav('data')">Islands Data</a>
-            <a href="javascript:void(0)" onclick="handleNav('hopping')">Island Hopping</a>
-            <a href="javascript:void(0)" onclick="handleNav('mission')">Why this site exists</a>
-        </nav>
+      <div class="logo-wrapper" id="nav-home">
+        <img src="logo.png" id="site-logo" alt="Aegean Blueprint logo">
+        <span id="brand-text">Aegean Blueprint</span>
+      </div>
+      <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>
+      <nav class="top-nav" id="main-nav">
+        <a href="#" id="nav-map">Map</a>
+        <a href="#" id="nav-data">Islands Data</a>
+        <a href="#" id="nav-compare">Compare</a>
+        <a href="#" id="nav-hopping">Island Hopping</a>
+        <a href="#" id="nav-match">Match Me</a>
+        <a href="#" id="nav-mission">Why This Exists</a>
+      </nav>
+      <button class="dark-mode-toggle" id="dark-mode-btn" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
     </div>
-</header>
+  </header>
 
-<div class="search-container" id="home-controls">
-    <input type="text" id="islandSearch" placeholder="Search islands..." onkeyup="filterIslands()">
+  <!-- MAP VIEW controls -->
+  <div class="search-container" id="home-controls">
+    <input type="text" id="islandSearch" placeholder="Search islands…" aria-label="Search islands">
+
+    <!-- Island Group Filter (upgrade #4) -->
+    <div class="group-filter-row" id="group-filter-row" aria-label="Filter by island group"></div>
+
     <div class="vibe-control-panel">
-        <div class="vibe-filters">
-            <button class="vibe-chip active" id="btn-overall" onclick="updateMapMode('overall')">🏠 Overall</button>
-            <button class="vibe-chip" id="btn-beach" onclick="updateMapMode('beach')">🏖️ Beaches</button>
-            <button class="vibe-chip" id="btn-hist" onclick="updateMapMode('hist')">🏛️ Culture</button>
-            <button class="vibe-chip" id="btn-night" onclick="updateMapMode('night')">🍷 Nightlife</button>
-            <button class="vibe-chip" id="btn-access" onclick="updateMapMode('access')">🚢 Access</button>
-            <button class="vibe-chip" id="btn-afford" onclick="updateMapMode('afford')">💸 Price</button>
-        </div>
+      <div class="vibe-filters" id="vibe-filters">
+        <button class="vibe-chip active" data-mode="overall">🏠 Overall</button>
+        <button class="vibe-chip" data-mode="beach">🏖️ Beaches</button>
+        <button class="vibe-chip" data-mode="hist">🏛️ Culture</button>
+        <button class="vibe-chip" data-mode="night">🍷 Nightlife</button>
+        <button class="vibe-chip" data-mode="access">🚢 Access</button>
+        <button class="vibe-chip" data-mode="afford">💸 Price</button>
+      </div>
     </div>
-</div>
+  </div>
 
-<main id="view-home" class="view-section"><div id="main-map"></div></main>
+  <!-- MAP VIEW -->
+  <main id="view-home" class="view-section">
+    <div id="main-map"></div>
+  </main>
 
-<main id="view-data" class="view-section content-page" style="display:none;">
+  <!-- DATA VIEW -->
+  <main id="view-data" class="view-section content-page" style="display:none;">
     <h1>Islands Database</h1>
+    <div class="table-search-row">
+      <input type="text" id="tableSearchInput" placeholder="Filter islands…" aria-label="Filter islands table">
+      <span id="table-count-label" class="table-count"></span>
+    </div>
     <div class="table-container">
-        <table id="islands-table">
-            <thead>
-                <tr>
-                    <th onclick="sortTable(0)">Island ↕</th>
-                    <th onclick="sortTable(1)">Group ↕</th>
-                    <th onclick="sortTable(2)">Total ↕</th>
-                    <th onclick="sortTable(3)">Beach ↕</th>
-                    <th onclick="sortTable(4)">Hist ↕</th>
-                    <th onclick="sortTable(5)">Night ↕</th>
-                    <th onclick="sortTable(6)">Access ↕</th>
-                    <th onclick="sortTable(7)">Price ↕</th>
-                    <th onclick="sortTable(8)" class="text-right">Area ↕</th>
-                    <th onclick="sortTable(9)" class="text-right">Pop ↕</th>
-                </tr>
-            </thead>
-            <tbody id="islands-table-body"></tbody>
-        </table>
+      <table id="islands-table" aria-label="Greek islands data table">
+        <thead>
+          <tr>
+            <th data-col="name">Island ↕</th>
+            <th data-col="island_group">Group ↕</th>
+            <th data-col="total">Total ↕</th>
+            <th data-col="beach">Beach ↕</th>
+            <th data-col="hist">Culture ↕</th>
+            <th data-col="night">Night ↕</th>
+            <th data-col="access">Access ↕</th>
+            <th data-col="afford">Price ↕</th>
+            <th data-col="area" class="text-right">Area ↕</th>
+            <th data-col="pop" class="text-right">Pop ↕</th>
+          </tr>
+        </thead>
+        <tbody id="islands-table-body"></tbody>
+      </table>
     </div>
-</main>
+  </main>
 
-<main id="view-hopping" class="view-section content-page" style="display:none;">
+  <!-- COMPARE VIEW (upgrade #2) -->
+  <main id="view-compare" class="view-section content-page" style="display:none;">
+    <h1>Compare Islands</h1>
+    <p class="compare-intro">Select two islands to compare side-by-side. Pick from the map using the "＋ Compare" button, or use the dropdowns below.</p>
+    <div class="compare-selectors">
+      <select id="compare-select-a" aria-label="Island A">
+        <option value="">— Island A —</option>
+      </select>
+      <span class="vs-label">vs</span>
+      <select id="compare-select-b" aria-label="Island B">
+        <option value="">— Island B —</option>
+      </select>
+      <button id="compare-clear-btn" class="secondary-btn">Clear</button>
+    </div>
+    <div id="compare-container">
+      <div id="compare-placeholder" class="compare-placeholder">Select two islands above to start comparing.</div>
+      <div id="compare-content" style="display:none;">
+        <div class="compare-radar-wrap">
+          <canvas id="compare-radar-chart" role="img" aria-label="Radar chart comparing two islands across five dimensions: beach, culture, nightlife, access, price"></canvas>
+        </div>
+        <div class="compare-cards" id="compare-cards"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ISLAND HOPPING VIEW (upgrade #3) -->
+  <main id="view-hopping" class="view-section content-page" style="display:none;">
     <h1>Perfect Pairings</h1>
-    <div class="hopping-pair">
-        <h2>Milos + Kimolos</h2>
-        <p>A 20-minute local ferry. Perfect for volcanic moonscapes and seclusion.</p>
-    </div>
-</main>
+    <p class="hopping-intro">Auto-generated from complementary scores and ferry proximity — not handpicked.</p>
+    <div id="hopping-list"></div>
+  </main>
 
-<main id="view-mission" class="view-section content-page" style="display:none;">
+  <!-- MATCH ME VIEW (upgrade #1) -->
+  <main id="view-match" class="view-section content-page" style="display:none;">
+    <h1>Match Me</h1>
+    <p class="match-intro">Answer 4 quick questions and we'll recommend your top islands.</p>
+    <div id="quiz-container"></div>
+    <div id="quiz-results" style="display:none;"></div>
+  </main>
+
+  <!-- MISSION VIEW -->
+  <main id="view-mission" class="view-section content-page" style="display:none;">
     <div class="mission-wrapper">
-        <img src="logo.png" class="mission-big-logo">
-        <h1>Why This Site Exists</h1>
-        <p class="mission-lead">Choosing a Greek island shouldn’t feel like a research project.</p>
-        <p>There are too many options and noise. <strong>Aegean Blueprint cuts through that.</strong></p>
-        <div class="mission-grid">
-            <div class="mission-card">
-                <h3>1. Pick by Priorities</h3>
-                <p>Select what you care about—Beaches, Culture, or Price—and we point you to the islands that actually fit. No overthinking.</p>
-            </div>
-            <div class="mission-card">
-                <h3>2. Ready-to-Go Plans</h3>
-                <p>Once you choose, you’re done deciding. You get a complete itinerary including where to stay, what to see, and daily structures.</p>
-            </div>
+      <img src="logo.png" class="mission-big-logo" alt="Aegean Blueprint logo">
+      <h1>Why This Site Exists</h1>
+      <p class="mission-lead">Choosing a Greek island shouldn't feel like a research project.</p>
+      <p>There are too many options and noise. <strong>Aegean Blueprint cuts through that.</strong></p>
+      <div class="mission-grid">
+        <div class="mission-card">
+          <h3>1. Pick by Priorities</h3>
+          <p>Select what you care about — Beaches, Culture, or Price — and we point you to islands that actually fit.</p>
         </div>
-        <section class="the-point-highlight">
-            <h2>The Point</h2>
-            <p>This isn’t about inspiration. It’s about making a <strong>clear decision fast</strong>—and having a solid plan immediately after.</p>
-            <p class="final-word">Because planning a trip shouldn’t take longer than the trip itself.</p>
-        </section>
+        <div class="mission-card">
+          <h3>2. Ready-to-Go Plans</h3>
+          <p>Once you choose, you're done deciding. You get a complete itinerary including where to stay, what to see, and daily structures.</p>
+        </div>
+        <div class="mission-card">
+          <h3>3. Compare Instantly</h3>
+          <p>Pin any two islands and compare them head-to-head with radar charts and score breakdowns.</p>
+        </div>
+        <div class="mission-card">
+          <h3>4. Let AI Match You</h3>
+          <p>Answer 4 quick questions and get a personalised shortlist of islands matched to your travel style.</p>
+        </div>
+      </div>
+      <section class="the-point-highlight">
+        <h2>The Point</h2>
+        <p>This isn't about inspiration. It's about making a <strong>clear decision fast</strong> — and having a solid plan immediately after.</p>
+        <p class="final-word">Because planning a trip shouldn't take longer than the trip itself.</p>
+      </section>
     </div>
-</main>
+  </main>
 
-<main id="view-detail" class="view-section" style="display:none;">
+  <!-- ISLAND DETAIL VIEW -->
+  <main id="view-detail" class="view-section" style="display:none;">
     <div class="detail-container">
-        <div class="detail-header">
-            <button class="back-btn" onclick="handleNav('home')">← Back to Map</button>
-            <h1 id="island-name"></h1>
-            <div class="island-meta-pill" id="island-meta-info"></div>
+      <div class="detail-header">
+        <button class="back-btn" id="detail-back-btn">← Back to Map</button>
+        <h1 id="island-name"></h1>
+        <div class="island-meta-pill" id="island-meta-info"></div>
+        <button class="compare-add-btn" id="detail-compare-btn">＋ Compare</button>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-main">
+          <div id="island-mini-map"></div>
+          <div id="island-guide"></div>
         </div>
-
-        <div class="detail-grid">
-            <div class="detail-main">
-                <div id="island-mini-map"></div>
-                <div id="island-guide"></div>
+        <aside class="detail-sidebar">
+          <div class="sidebar-box">
+            <h3>Blueprint Ratings</h3>
+            <div class="rating-list">
+              <div class="rating-item"><span class="rating-label">Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div><span class="rating-val" id="val-beach"></span></div>
+              <div class="rating-item"><span class="rating-label">Culture &amp; History</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div><span class="rating-val" id="val-hist"></span></div>
+              <div class="rating-item"><span class="rating-label">Night Life</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div><span class="rating-val" id="val-night"></span></div>
+              <div class="rating-item"><span class="rating-label">Access Ease</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div><span class="rating-val" id="val-access"></span></div>
+              <div class="rating-item"><span class="rating-label">Price Level</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div><span class="rating-val" id="val-afford"></span></div>
             </div>
-            
-            <aside class="detail-sidebar">
-                <div class="sidebar-box">
-                    <h3>Blueprint Ratings</h3>
-                    <div class="rating-list">
-                        <div class="rating-item"><span class="rating-label">Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div></div>
-                        <div class="rating-item"><span class="rating-label">Culture & History</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div></div>
-                        <div class="rating-item"><span class="rating-label">Night Life</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div></div>
-                        <div class="rating-item"><span class="rating-label">Access Ease</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div></div>
-                        <div class="rating-item"><span class="rating-label">Price Level</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div></div>
-                    </div>
-                </div>
-                <div class="sidebar-box" id="sidebar-stats">
-                    <h3>Key Stats</h3>
-                    <div class="stat-line"><span>Land Area:</span> <strong id="stat-area"></strong></div>
-                    <div class="stat-line"><span>Population:</span> <strong id="stat-pop"></strong></div>
-                    <div class="stat-line"><span>Group:</span> <strong id="stat-group"></strong></div>
-                </div>
-            </aside>
-        </div>
+          </div>
+          <div class="sidebar-box" id="sidebar-stats">
+            <h3>Key Stats</h3>
+            <div class="stat-line"><span>Land Area:</span> <strong id="stat-area"></strong></div>
+            <div class="stat-line"><span>Population:</span> <strong id="stat-pop"></strong></div>
+            <div class="stat-line"><span>Group:</span> <strong id="stat-group"></strong></div>
+          </div>
+        </aside>
+      </div>
     </div>
-</main>
+  </main>
 
-<footer id="site-footer"><div id="version-display"></div></footer>
+  <footer id="site-footer">
+    <div id="version-display"></div>
+  </footer>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
