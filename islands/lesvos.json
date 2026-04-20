@@ -1,20 +1,17 @@
 {
     "img": "https://images.unsplash.com/photo-1570535189332-902263b8296a?w=1200",
     "itinerary": [
-        { "day": "Hub", "name": "Mytilene Int. Airport", "lat": 39.056, "lng": 26.598 },
-        { "day": "Hub", "name": "Mytilene Central Port", "lat": 39.106, "lng": 26.554 },
+        { "day": "Hub", "name": "Mytilene Airport", "lat": 39.056, "lng": 26.598 },
+        { "day": "Hub", "name": "Mytilene Port", "lat": 39.106, "lng": 26.554 },
         { "day": "Beach", "name": "Vatera", "lat": 38.980, "lng": 26.241 },
+        { "day": "Beach", "name": "Skala Eressou", "lat": 39.129, "lng": 25.932 },
         { "day": "Beach", "name": "Agios Isidoros", "lat": 38.975, "lng": 26.388 },
         { "day": "Beach", "name": "Tarti", "lat": 38.973, "lng": 26.505 },
-        { "day": "Beach", "name": "Anaxos", "lat": 39.324, "lng": 26.152 },
         { "day": 1, "name": "Mytilene Harbor", "lat": 39.110, "lng": 26.550 },
         { "day": 2, "name": "Molyvos Castle", "lat": 39.367, "lng": 26.174 },
-        { "day": 2, "name": "Petra (Panagia Glykofilousa)", "lat": 39.330, "lng": 26.175 },
-        { "day": 3, "name": "Petrified Forest (Sigri)", "lat": 39.205, "lng": 25.900 },
-        { "day": 3, "name": "Skala Eressou (Stay)", "lat": 39.129, "lng": 25.932 },
-        { "day": 5, "name": "Kalloni Salt Flats", "lat": 39.207, "lng": 26.223 },
-        { "day": 5, "name": "Agiassos Village", "lat": 39.080, "lng": 26.300 },
-        { "day": 5, "name": "Plomari (Ouzo Museum)", "lat": 38.976, "lng": 26.366 }
+        { "day": 3, "name": "Sigri Petrified Forest", "lat": 39.205, "lng": 25.900 },
+        { "day": 3, "name": "Skala Eressou (Hotel)", "lat": 39.128, "lng": 25.931 },
+        { "day": 5, "name": "Plomari", "lat": 38.976, "lng": 26.366 }
     ],
-    "guide": "<h3>🏖️ The Best Beaches of Lesvos: At a Glance</h3><div style='overflow-x:auto; margin-bottom: 20px;'><table class='beach-table'><thead><tr><th>Beach</th><th>Rating</th><th>Type</th><th>Depth</th><th>Facilities</th></tr></thead><tbody><tr><td><strong>Skala Eressos</strong></td><td>⭐⭐⭐⭐⭐</td><td>Fine Grey Sand</td><td>Moderate</td><td>Bohemian Hub</td></tr><tr><td><strong>Vatera</strong></td><td>⭐⭐⭐⭐⭐</td><td>Sand / Pebble</td><td>Deep</td><td>Extensive / Bars</td></tr><tr><td><strong>Agios Isidoros</strong></td><td>⭐⭐⭐⭐⭐</td><td>Polished Pebbles</td><td>Deep</td><td>Well-Organized</td></tr><tr><td><strong>Tarti</strong></td><td>⭐⭐⭐⭐⭐</td><td>Golden Sand</td><td>Moderate</td><td>Boutique Fish Tavernas</td></tr><tr><td><strong>Petra</strong></td><td>⭐⭐⭐⭐</td><td>Sand</td><td>Moderate</td><td>Commercial / Shops</td></tr><tr><td><strong>Anaxos</strong></td><td>⭐⭐⭐⭐</td><td>Sand</td><td>Shallow</td><td>Family-Focused</td></tr><tr><td><strong>Molyvos</strong></td><td>⭐⭐⭐</td><td>Pebbles</td><td>Deep</td><td>Village Access</td></tr></tbody></table></div><div class='guide-card'><h3>💡 The 5-Day 'Slow Travel' Logic</h3><p>Lesvos is huge. To enjoy it, we suggest splitting your stay: 2 nights in the North (Molyvos) and 2 nights in the West (Skala Eressos).</p></div><h3>📅 PRO ITINERARY (Total ~310 km)</h3><div class='itinerary-step'><strong>Day 1: Mytilene Arrival.</strong> Collect car at the airport. Explore the neoclassical mansions and the Ottoman old town.</div><div class='itinerary-step'><strong>Day 2: The Medieval North.</strong> Drive to Molyvos. Explore the castle, the stone-paved alleys, and the Eftalou hot springs.</div><div class='itinerary-step'><strong>Day 3: The Wild West.</strong> Journey to Sigri to see the Petrified Forest (UNESCO), then head to Skala Eressos to check into your next base.</div><div class='itinerary-step'><strong>Day 4: Eressos Chill.</strong> A 'car-free' day. Enjoy the bohemian wooden platforms of Eressos and the best sunset in the Aegean.</div><div class='itinerary-step'><strong>Day 5: Wetlands & Spirit.</strong> Drive back via Kalloni (Flamingos) and the mountain village of Agiassos, finishing with an Ouzo tour in Plomari.</div><div class='advice-box'><h3>⚠️ Blunt Driver's Advice</h3><ul><li>Don't underestimate the size; crossing the island takes 2+ hours.</li><li>The roads are winding; avoid driving at night due to livestock on the road.</li></ul></div>"
+    "guide": "<h3>🏖️ Best Beaches: Quick Reference</h3><table class='beach-table'><thead><tr><th>Beach</th><th>Rating</th><th>Type</th><th>Facilities</th></tr></thead><tbody><tr><td><strong>Skala Eressos</strong></td><td>⭐⭐⭐⭐⭐</td><td>Grey Sand</td><td>Full Bohemian</td></tr><tr><td><strong>Vatera</strong></td><td>⭐⭐⭐⭐⭐</td><td>Sand</td><td>Extensive</td></tr><tr><td><strong>Agios Isidoros</strong></td><td>⭐⭐⭐⭐⭐</td><td>Pebble</td><td>High-End</td></tr><tr><td><strong>Tarti</strong></td><td>⭐⭐⭐⭐</td><td>Gold Sand</td><td>Tavernas</td></tr><tr><td><strong>Petra</strong></td><td>⭐⭐⭐⭐</td><td>Sand</td><td>Urban/Shops</td></tr></tbody></table><h3>📅 5-Day Driving Itinerary</h3><div class='itinerary-step'><strong>Day 1: Mytilene (~10km).</strong> Arrival, explore the castle and waterfront.</div><div class='itinerary-step'><strong>Day 2: The North (~65km).</strong> Drive to Molyvos. Visit the castle and Eftalou springs.</div><div class='itinerary-step'><strong>Day 3: The West (~70km).</strong> Drive to Sigri for the Petrified Forest, then settle in Skala Eressos.</div><div class='itinerary-step'><strong>Day 4: Rest Day (0km).</strong> Enjoy Skala Eressos beach and village life.</div><div class='itinerary-step'><strong>Day 5: The South (~110km).</strong> Drive through Kalloni to Agiassos and finally Plomari for Ouzo.</div>"
 }
