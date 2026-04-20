@@ -1,4 +1,4 @@
-const VERSION_ID = "v30.0 - Map Scale & Professional Polish";
+const VERSION_ID = "v31.0 - Legend Scores Restored";
 let mainMap, miniMap, markerLayerGroup, legendControl;
 const markerStore = {};
 let currentMode = 'overall';
@@ -39,10 +39,10 @@ function initMap() {
 function updateLegendContent(div) {
     const title = currentMode.charAt(0).toUpperCase() + currentMode.slice(1);
     div.innerHTML = `<strong>${title} Level</strong><br>` +
-        `<div class="legend-item"><span class="dot" style="background:#27ae60"></span> Elite</div>` +
-        `<div class="legend-item"><span class="dot" style="background:#2ecc71"></span> High</div>` +
-        `<div class="legend-item"><span class="dot" style="background:#f1c40f"></span> Average</div>` +
-        `<div class="legend-item"><span class="dot" style="background:#e67e22"></span> Niche</div>`;
+        `<div class="legend-item"><span class="dot" style="background:#27ae60"></span> Elite (4.1+)</div>` +
+        `<div class="legend-item"><span class="dot" style="background:#2ecc71"></span> High (3.5+)</div>` +
+        `<div class="legend-item"><span class="dot" style="background:#f1c40f"></span> Average (3.0+)</div>` +
+        `<div class="legend-item"><span class="dot" style="background:#e67e22"></span> Niche (<3.0)</div>`;
 }
 
 function getColor(score) {
