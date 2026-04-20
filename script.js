@@ -1,4 +1,4 @@
-const VERSION_ID = "v39.0 - Final Navigation & Map Restore";
+const VERSION_ID = "v40.0 - Full UI Restore & Legend Fix";
 let mainMap, miniMap, markerLayerGroup, legendControl;
 const markerStore = {};
 let currentMode = 'overall';
@@ -7,20 +7,13 @@ let islandData = {};
 window.onload = function() {
     document.getElementById('version-display').innerText = VERSION_ID;
     initMap();
-    // Replace with your actual data fetching if needed, or use the 80 island JSON provided previously
     fetch('map_data.json?v=' + new Date().getTime())
         .then(res => res.json())
-        .then(data => { 
-            islandData = data; 
-            renderMarkers(); 
-        })
-        .catch(err => console.error("Could not load island data:", err));
+        .then(data => { islandData = data; renderMarkers(); })
+        .catch(err => console.error("Error loading islands:", err));
 };
 
 function initMap() {
-    const mapDiv = document.getElementById('main-map');
-    if (!mapDiv) return;
-
     mainMap = L.map('main-map', { zoomControl: false }).setView([38.3, 24.5], 7);
     L.control.zoom({ position: 'topright' }).addTo(mainMap);
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(mainMap);
@@ -35,53 +28,11 @@ function initMap() {
     legendControl.addTo(mainMap);
 }
 
-function hideAll() {
-    document.getElementById('home-view').style.display = 'none';
-    document.getElementById('detail-view').style.display = 'none';
-    document.getElementById('mission-view').style.display = 'none';
-    document.getElementById('hopping-view').style.display = 'none';
-    document.body.classList.add('subpage-active');
-}
-
-function showHome() {
-    hideAll();
-    document.body.classList.remove('subpage-active');
-    document.getElementById('home-view').style.display = 'block';
-    if(mainMap) {
-        setTimeout(() => {
-            mainMap.invalidateSize();
-        }, 200);
-    }
-}
-
-function showMission() {
-    hideAll();
-    document.getElementById('mission-view').style.display = 'block';
-    window.scrollTo(0,0);
-}
-
-function showHopping() {
-    hideAll();
-    document.getElementById('hopping-view').style.display = 'block';
-    window.scrollTo(0,0);
-}
-
-function showDetail(id) {
-    hideAll();
-    document.getElementById('detail-view').style.display = 'block';
-    document.getElementById('island-name').innerText = islandData[id].name;
-    window.scrollTo(0,0);
-    
-    fetch(`islands/${id}.json?v=` + new Date().getTime())
-        .then(res => res.json())
-        .then(d_detail => renderDetailView(Object.assign({}, islandData[id], d_detail)))
-        .catch(() => console.log("Itinerary data not found for " + id));
-}
-
 function updateLegendContent(div) {
     const title = currentMode.charAt(0).toUpperCase() + currentMode.slice(1);
-    div.innerHTML = `<strong>${title} Level</strong><br>` +
-        `<div class="legend-item"><span style="font-size:14px; margin-right:5px;">⭐</span> Elite (4.1+)</div>` +
+    // Explicitly defining all 4 items to prevent rendering "funny"
+    div.innerHTML = `<strong>${title} Tier</strong><br>` +
+        `<div class="legend-item"><span style="font-size:16px; margin-right:6px;">⭐</span> Elite (4.1+)</div>` +
         `<div class="legend-item"><span class="dot" style="background:#3b82f6"></span> High (3.5+)</div>` +
         `<div class="legend-item"><span class="dot" style="background:#f1c40f"></span> Average (3.0+)</div>` +
         `<div class="legend-item"><span class="dot" style="background:#e67e22"></span> Niche (<3.0)</div>`;
@@ -116,6 +67,45 @@ function renderMarkers() {
     });
 }
 
+// NAVIGATION
+function hideAll() {
+    document.getElementById('home-view').style.display = 'none';
+    document.getElementById('detail-view').style.display = 'none';
+    document.getElementById('mission-view').style.display = 'none';
+    document.getElementById('hopping-view').style.display = 'none';
+    document.body.classList.add('subpage-active');
+}
+
+function showHome() {
+    hideAll();
+    document.body.classList.remove('subpage-active');
+    document.getElementById('home-view').style.display = 'block';
+    if(mainMap) setTimeout(() => mainMap.invalidateSize(), 200);
+}
+
+function showMission() {
+    hideAll();
+    document.getElementById('mission-view').style.display = 'block';
+    window.scrollTo(0,0);
+}
+
+function showHopping() {
+    hideAll();
+    document.getElementById('hopping-view').style.display = 'block';
+}
+
+function showDetail(id) {
+    hideAll();
+    document.getElementById('detail-view').style.display = 'block';
+    document.getElementById('island-name').innerText = islandData[id].name;
+    window.scrollTo(0,0);
+    
+    fetch(`islands/${id}.json?v=` + new Date().getTime())
+        .then(res => res.json())
+        .then(d_detail => renderDetailView(Object.assign({}, islandData[id], d_detail)))
+        .catch(() => console.log("Detail not found"));
+}
+
 function updateMapMode(mode) {
     currentMode = mode;
     document.querySelectorAll('.vibe-chip').forEach(el => el.classList.remove('active'));
@@ -146,16 +136,5 @@ function renderDetailView(d) {
     if (miniMap) miniMap.remove();
     miniMap = L.map('island-mini-map', { zoomControl: true });
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(miniMap);
-    
-    // Check if there is itinerary data to plot
-    if (d.itinerary && d.itinerary.length > 0) {
-        const points = d.itinerary.map(p => [p.lat, p.lng]);
-        miniMap.fitBounds(L.latLngBounds(points), { padding: [40, 40] });
-        
-        d.itinerary.forEach(stop => {
-             L.marker([stop.lat, stop.lng]).addTo(miniMap).bindTooltip(stop.name);
-        });
-    } else {
-        miniMap.setView([d.lat, d.lng], 11);
-    }
+    miniMap.setView([d.lat, d.lng], 10);
 }
