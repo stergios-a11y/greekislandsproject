@@ -1,4 +1,4 @@
-const VERSION_ID = "v19.0 - Smart Routing & Zoom Fixed";
+const VERSION_ID = "v20.0 - Icon Priority & Zoom Master";
 
 let mainMap, miniMap;
 let markerLayerGroup; 
@@ -109,45 +109,41 @@ function renderDetailView(d) {
     setStars('star-afford', d.afford);
     
     if (miniMap) miniMap.remove();
-    // ENABLE SCROLL ZOOM AND ZOOM CONTROLS
-    miniMap = L.map('island-mini-map', { 
-        zoomControl: true, 
-        scrollWheelZoom: true 
-    });
-    
+    // ENABLE ZOOM CONTROLS AND SCROLLING
+    miniMap = L.map('island-mini-map', { zoomControl: true, scrollWheelZoom: true });
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(miniMap);
 
     if (d.itinerary && d.itinerary.length > 0) {
         const roadTripPoints = d.itinerary.filter(stop => typeof stop.day === 'number');
 
-        // Draw Real Road Routing
         if (roadTripPoints.length >= 2) {
             const coordsString = roadTripPoints.map(p => `${p.lng},${p.lat}`).join(';');
             fetch(`https://router.project-osrm.org/route/v1/driving/${coordsString}?overview=full&geometries=geojson`)
                 .then(r => r.json())
                 .then(routeData => {
                     const roadLine = L.geoJSON(routeData.routes[0].geometry, {
-                        style: { color: '#ff7f50', weight: 5, opacity: 0.8, dashArray: '10, 15' }
+                        style: { color: '#ff7f50', weight: 4, opacity: 0.8, dashArray: '8, 12' }
                     }).addTo(miniMap);
-                    miniMap.fitBounds(roadLine.getBounds(), { padding: [50, 50] });
+                    
+                    // FORCE ZOOM OUT: high padding ensures we see the whole island instantly
+                    miniMap.fitBounds(roadLine.getBounds(), { padding: [100, 100] });
                 });
         } else {
-            miniMap.setView([d.lat, d.lng], 10);
+            miniMap.setView([d.lat, d.lng], 9);
         }
 
-        // Add Markers with Special Symbols
         d.itinerary.forEach(stop => {
             let iconEmoji = "📍";
             const stopName = stop.name.toLowerCase();
             
-            // PRIORITY ORDER: 1. Airport, 2. Port, 3. Beach, 4. Hotel
+            // THE ICON HIERARCHY
             if (stopName.includes("airport")) {
-                iconEmoji = "✈️";
+                iconEmoji = "✈️"; 
             } else if (stopName.includes("port")) {
-                iconEmoji = "⚓";
+                iconEmoji = "⚓"; 
             } else if (stop.day === "Beach") {
                 iconEmoji = "🏖️";
-            } else if (stopName.includes("hotel") || stopName.includes("stay")) {
+            } else if (stopName.includes("hotel") || stopName.includes("stay") || stopName.includes("base")) {
                 iconEmoji = "🏨";
             }
 
@@ -160,7 +156,7 @@ function renderDetailView(d) {
             }).addTo(miniMap).bindTooltip(`<strong>${stop.name}</strong>`);
         });
     } else {
-        miniMap.setView([d.lat, d.lng], 11);
+        miniMap.setView([d.lat, d.lng], 9);
         L.marker([d.lat, d.lng]).addTo(miniMap);
     }
 }
