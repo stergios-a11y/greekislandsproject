@@ -1,9 +1,9 @@
-const VERSION_ID = "v43.0 PRO - Engine Restore";
+const VERSION_ID = "v45.0 - Greek Blue Blueprint";
 let mainMap, miniMap, markerLayerGroup, legendControl;
 const markerStore = {};
 let currentMode = 'overall';
 let islandData = {};
-const dayColors = ['#3b82f6', '#10b981', '#8b5cf6', '#f59e0b', '#ef4444', '#06b6d4'];
+const dayColors = ['#005BAE', '#10b981', '#8b5cf6', '#f59e0b', '#ef4444', '#06b6d4'];
 let dayLayerGroups = {};
 let beachLayerGroup;
 
@@ -31,19 +31,18 @@ function initMap() {
 
 function updateLegendContent(div) {
     const title = currentMode.charAt(0).toUpperCase() + currentMode.slice(1);
-    // Explicitly hardcoded all 4 categories
     div.innerHTML = `<strong>${title} Tier</strong><br>` +
-        `<div class="legend-item">⭐ Elite (4.1+)</div>` +
-        `<div class="legend-item"><span class="dot" style="background:#3b82f6"></span> High (3.5+)</div>` +
+        `<div class="legend-item"><span style="font-size:16px; margin-right:6px;">⭐</span> Elite (4.1+)</div>` +
+        `<div class="legend-item"><span class="dot" style="background:#005BAE"></span> High (3.5+)</div>` +
         `<div class="legend-item"><span class="dot" style="background:#f1c40f"></span> Average (3.0+)</div>` +
         `<div class="legend-item"><span class="dot" style="background:#e67e22"></span> Niche (<3.0)</div>`;
 }
 
 function getColor(score) {
-    if (score >= 4.1) return "#10b981"; // Elite
-    if (score >= 3.5) return "#3b82f6"; // High
-    if (score >= 3.0) return "#f1c40f"; // Average
-    return "#e67e22"; // Niche
+    if (score >= 4.1) return "#10b981";
+    if (score >= 3.5) return "#005BAE";
+    if (score >= 3.0) return "#f1c40f";
+    return "#e67e22";
 }
 
 function renderMarkers() {
@@ -148,7 +147,7 @@ function renderDetailView(d) {
         const mL = L.control({ position: 'topright' });
         mL.onAdd = () => { const div = L.DomUtil.create('div', 'mini-legend'); div.innerHTML = miniLegendHTML; return div; };
         mL.addTo(miniMap);
-        miniMap.fitBounds(L.latLngBounds(roadTrip.map(p => [p.lat, p.lng])), { padding: [50, 50] });
+        miniMap.fitBounds(L.latLngBounds(roadTrip.map(p => [p.lat, p.lng])), { padding: [40, 40] });
     } else {
         miniMap.setView([d.lat, d.lng], 11);
     }
