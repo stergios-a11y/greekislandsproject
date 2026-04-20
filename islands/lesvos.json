@@ -1,19 +1,16 @@
 {
     "img": "https://images.unsplash.com/photo-1570535189332-902263b8296a?w=1200",
     "itinerary": [
+        { "day": "Hub", "name": "Mytilene Airport", "lat": 39.056, "lng": 26.598 },
+        { "day": "Hub", "name": "Mytilene Port", "lat": 39.106, "lng": 26.554 },
         { "day": "Beach", "name": "Vatera", "lat": 38.980, "lng": 26.241 },
+        { "day": "Beach", "name": "Skala Eressou", "lat": 39.129, "lng": 25.932 },
         { "day": "Beach", "name": "Agios Isidoros", "lat": 38.975, "lng": 26.388 },
         { "day": "Beach", "name": "Tarti", "lat": 38.973, "lng": 26.505 },
-        { "day": "Beach", "name": "Anaxos", "lat": 39.324, "lng": 26.152 },
-        { "day": 1, "name": "Mytilene Arrival", "lat": 39.106, "lng": 26.554 },
-        { "day": 2, "name": "Molyvos Castle", "lat": 39.367, "lng": 26.174 },
-        { "day": 2, "name": "Petra (Panagia Glykofilousa)", "lat": 39.330, "lng": 26.175 },
-        { "day": 3, "name": "Petrified Forest (Sigri)", "lat": 39.205, "lng": 25.900 },
-        { "day": 3, "name": "Skala Eressou (Stay)", "lat": 39.129, "lng": 25.932 },
-        { "day": 4, "name": "Skala Eressou Chill", "lat": 39.128, "lng": 25.931 },
-        { "day": 5, "name": "Kalloni Salt Flats", "lat": 39.207, "lng": 26.223 },
-        { "day": 5, "name": "Agiassos Village", "lat": 39.080, "lng": 26.300 },
+        { "day": 1, "name": "Mytilene Center", "lat": 39.110, "lng": 26.550 },
+        { "day": 2, "name": "Molyvos", "lat": 39.367, "lng": 26.174 },
+        { "day": 3, "name": "Sigri", "lat": 39.205, "lng": 25.900 },
         { "day": 5, "name": "Plomari", "lat": 38.976, "lng": 26.366 }
     ],
-    "guide": "<h3>📅 The 'Grand Loop' 5-Day Road Trip</h3><div style='background:#f1f5f9; padding:15px; border-radius:10px; margin-bottom:20px; display:flex; gap:20px; font-size:0.9rem;'><div>🏁 <strong>Distance:</strong> ~310 km</div><div>🚗 <strong>Pace:</strong> Balanced</div><div>🏨 <strong>Bases:</strong> Molyvos (2n) + Skala Eressos (2n)</div></div><div class='itinerary-step'><strong>Day 1: Mytilene & The East Coast (15 km)</strong><br>Pick up your car. Explore the Genovese castle and the neoclassical mansions of Mytilene.<br>📍 <strong>Stop:</strong> The Teriad Museum (modern art).<br>🛏️ <em>Stay: Mytilene or Molyvos</em></div><div class='itinerary-step'><strong>Day 2: The Medieval North (62 km)</strong><br>Head to the most beautiful village on the island. Walk the stone alleys under the wisteria.<br>📍 <strong>Stops:</strong> Molyvos Castle, sunset cocktails in Petra, and a dip in Eftalou Hot Springs.<br>🛏️ <em>Stay: Molyvos</em></div><div class='itinerary-step'><strong>Day 3: Crossing the Moonscape (65 km)</strong><br>Leave the green north for the volcanic west. The terrain becomes dramatic and dry.<br>📍 <strong>Stops:</strong> Ipsilou Monastery (perched on a volcano), Sigri Petrified Forest (UNESCO Site).<br>🛏️ <em>Stay: Skala Eressos</em></div><div class='itinerary-step'><strong>Day 4: Skala Eressos Deep Dive (0 km)</strong><br>Give the car a rest. Eressos is a world-famous bohemian hub built on the sand.<br>📍 <strong>Vibe:</strong> Yoga on the beach, wooden cafe platforms over the water, and the most inclusive atmosphere in Greece.<br>🛏️ <em>Stay: Skala Eressos</em></div><div class='itinerary-step'><strong>Day 5: The Mountain & The Ouzo (105 km)</strong><br>A long but beautiful drive back via the Gulf of Kalloni.<br>📍 <strong>Stops:</strong> Flamingo watching in Kalloni, the chestnut forests of Agiassos, and Plomari for the Ouzo Museum.<br>🏁 <em>End: Mytilene Airport</em></div><div class='advice-box'><strong>💡 Pro Logic:</strong> By staying in Skala Eressos (Day 3 & 4), you save 5 hours of 'dead driving' time. It is the only way to truly experience the island's best sunset.</div>"
+    "guide": "<h3>🏖️ Beach Ratings</h3><div style='overflow-x:auto; margin-bottom:20px;'><table style='width:100%; border-collapse: collapse; font-size: 0.85rem;'><thead><tr style='background:#005BAE; color:white;'><th style='padding:8px;'>Beach</th><th style='padding:8px;'>Rating</th><th style='padding:8px;'>Type</th></tr></thead><tbody><tr><td>Vatera</td><td>⭐⭐⭐⭐⭐</td><td>Sand</td></tr><tr style='background:#f9f9f9;'><td>Eressos</td><td>⭐⭐⭐⭐⭐</td><td>Grey Sand</td></tr><tr><td>Agios Isidoros</td><td>⭐⭐⭐⭐⭐</td><td>Pebble</td></tr></tbody></table></div><h3>📅 5-Day Highlights</h3><div class='itinerary-step'><strong>Day 1-2:</strong> North Coast. <strong>Day 3-4:</strong> Stay in Eressos. <strong>Day 5:</strong> South Coast & Ouzo.</div>"
 }
