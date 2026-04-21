@@ -1447,16 +1447,17 @@ const SCORE_COLORS = {
 };
 
 /* ---- Lesvos 6-day itinerary data ---- */
+/* POI types: 'city','castle','museum','beach','village','nature','spa','church','distillery','harbour','forest' */
 const LESVOS_DAYS = [
   {
     day: 1,
     title: 'Mytilene & the South',
     color: '#1B4F8A',
     stops: [
-      { name: 'Mytilene Town',        lat: 39.1076, lng: 26.5545, wiki: 'https://en.wikipedia.org/wiki/Mytilene', desc: 'Arrive and settle in. Walk the waterfront promenade and explore the old harbour.' },
-      { name: 'Mytilene Castle',      lat: 39.1128, lng: 26.5580, wiki: 'https://en.wikipedia.org/wiki/Castle_of_Mytilene', desc: 'One of the largest medieval castles in the Aegean, with panoramic harbour views.' },
-      { name: 'Varia Village',        lat: 39.0830, lng: 26.5500, wiki: 'https://en.wikipedia.org/wiki/Th%C3%A9riade', desc: 'Home to the <a href="https://en.wikipedia.org/wiki/Museum_of_Theophilos" target="_blank">Museum of Theophilos</a> and <a href="https://en.wikipedia.org/wiki/Th%C3%A9riade" target="_blank">Tériade Museum</a> — two world-class art collections.' },
-      { name: 'Agios Isidoros Beach', lat: 39.0440, lng: 26.4890, wiki: null, desc: 'Relaxed sandy beach 10 km south of the capital, sheltered and calm. Evening swim.' },
+      { name: 'Mytilene Town',        lat: 39.1076, lng: 26.5545, type: 'city',       wiki: 'https://en.wikipedia.org/wiki/Mytilene',           desc: 'Arrive and settle in. Walk the waterfront promenade and explore the old harbour.' },
+      { name: 'Mytilene Castle',      lat: 39.1128, lng: 26.5612, type: 'castle',     wiki: 'https://en.wikipedia.org/wiki/Castle_of_Mytilene',  desc: 'One of the largest medieval castles in the Aegean, with panoramic harbour views.' },
+      { name: 'Varia Village',        lat: 39.0872, lng: 26.5463, type: 'museum',     wiki: 'https://en.wikipedia.org/wiki/Th%C3%A9riade',       desc: 'Home to the <a href="https://en.wikipedia.org/wiki/Museum_of_Theophilos" target="_blank">Museum of Theophilos</a> and <a href="https://en.wikipedia.org/wiki/Th%C3%A9riade" target="_blank">Tériade Museum</a> — two world-class art collections.' },
+      { name: 'Agios Isidoros Beach', lat: 38.9980, lng: 26.3960, type: 'beach',      wiki: null,                                                desc: 'Relaxed sandy beach on the south coast, sheltered and calm. Evening swim.' },
     ],
   },
   {
@@ -1464,11 +1465,11 @@ const LESVOS_DAYS = [
     title: 'Plomari & Ouzo Country',
     color: '#C0522A',
     stops: [
-      { name: 'Mytilene',             lat: 39.1076, lng: 26.5545, wiki: null, desc: 'Depart south after breakfast via the mountain road.' },
-      { name: 'Agiasos',              lat: 39.0726, lng: 26.3883, wiki: 'https://en.wikipedia.org/wiki/Agiasos', desc: 'Charming mountain village with cobbled lanes, a lively carnival tradition and the 9th-century Church of the Panagia Agiasos.' },
-      { name: 'Plomari',              lat: 38.9795, lng: 26.3710, wiki: 'https://en.wikipedia.org/wiki/Plomari', desc: 'Ouzo capital of Greece. Tour the <a href="https://en.wikipedia.org/wiki/Barbayiannis" target="_blank">Barbayiannis distillery</a> and sample the local product.' },
-      { name: 'Melinda Beach',        lat: 38.9680, lng: 26.3280, wiki: null, desc: 'Secluded fine pebble cove west of Plomari, tucked under a pine-clad hillside. Swim and lunch.' },
-      { name: 'Vatera Beach',         lat: 38.9510, lng: 26.1580, wiki: 'https://en.wikipedia.org/wiki/Vatera', desc: '8 km of uninterrupted golden sand — one of the longest beaches in the Aegean. Stay overnight.' },
+      { name: 'Mytilene',             lat: 39.1076, lng: 26.5545, type: 'city',       wiki: null,                                                desc: 'Depart south after breakfast via the mountain road.' },
+      { name: 'Agiasos',              lat: 39.0726, lng: 26.3883, type: 'village',    wiki: 'https://en.wikipedia.org/wiki/Agiasos',             desc: 'Charming mountain village with cobbled lanes, a lively carnival tradition and the 9th-century Church of the Panagia Agiasos.' },
+      { name: 'Plomari',              lat: 38.9772, lng: 26.3695, type: 'distillery', wiki: 'https://en.wikipedia.org/wiki/Plomari',             desc: 'Ouzo capital of Greece. Tour the <a href="https://en.wikipedia.org/wiki/Barbayiannis" target="_blank">Barbayiannis distillery</a> and sample the local product.' },
+      { name: 'Melinda Beach',        lat: 38.9628, lng: 26.2892, type: 'beach',      wiki: null,                                                desc: 'Secluded fine pebble cove west of Plomari, tucked under a pine-clad hillside. Swim and lunch.' },
+      { name: 'Vatera Beach',         lat: 38.9492, lng: 26.1540, type: 'beach',      wiki: 'https://en.wikipedia.org/wiki/Vatera',             desc: '8 km of uninterrupted golden sand — one of the longest beaches in the Aegean. Stay overnight.' },
     ],
   },
   {
@@ -1476,11 +1477,11 @@ const LESVOS_DAYS = [
     title: 'Sigri & Petrified Forest',
     color: '#5A7A3A',
     stops: [
-      { name: 'Vatera',               lat: 38.9510, lng: 26.1580, wiki: null, desc: 'Depart west along the southern coastal road.' },
-      { name: 'Petrified Forest',     lat: 39.1950, lng: 25.9350, wiki: 'https://en.wikipedia.org/wiki/Lesvos_Petrified_Forest', desc: 'UNESCO-listed <a href="https://en.wikipedia.org/wiki/Lesvos_Petrified_Forest" target="_blank">Petrified Forest</a> — 20 million year old trees turned to stone by volcanic ash.' },
-      { name: 'Sigri',                lat: 39.2090, lng: 25.8570, wiki: 'https://en.wikipedia.org/wiki/Sigri', desc: 'Westernmost village of Lesvos. Tiny whitewashed harbour and the Natural History Museum of the Lesvos Petrified Forest.' },
-      { name: 'Faneromeni Beach',     lat: 39.2160, lng: 25.8840, wiki: null, desc: 'Wild, exposed beach north of Sigri with dramatic sea-carved cliffs and vivid turquoise water.' },
-      { name: 'Skala Eresou',         lat: 39.1720, lng: 25.9650, wiki: 'https://en.wikipedia.org/wiki/Eresos', desc: 'Birthplace of <a href="https://en.wikipedia.org/wiki/Sappho" target="_blank">Sappho</a>. Laid-back beach village with a long sandy shore. Stay the night.' },
+      { name: 'Vatera',               lat: 38.9492, lng: 26.1540, type: 'beach',      wiki: null,                                                desc: 'Depart west along the southern coastal road.' },
+      { name: 'Petrified Forest',     lat: 39.2112, lng: 25.9780, type: 'nature',     wiki: 'https://en.wikipedia.org/wiki/Lesvos_Petrified_Forest', desc: 'UNESCO-listed <a href="https://en.wikipedia.org/wiki/Lesvos_Petrified_Forest" target="_blank">Petrified Forest</a> — 20 million year old trees turned to stone by volcanic ash.' },
+      { name: 'Sigri',                lat: 39.2087, lng: 25.8568, type: 'harbour',    wiki: 'https://en.wikipedia.org/wiki/Sigri',              desc: 'Westernmost village of Lesvos. Tiny whitewashed harbour and the Natural History Museum of the Lesvos Petrified Forest.' },
+      { name: 'Faneromeni Beach',     lat: 39.2280, lng: 25.8950, type: 'beach',      wiki: null,                                                desc: 'Wild, exposed beach north of Sigri with dramatic sea-carved cliffs and vivid turquoise water.' },
+      { name: 'Skala Eresou',         lat: 39.1658, lng: 25.9462, type: 'beach',      wiki: 'https://en.wikipedia.org/wiki/Eresos',             desc: 'Birthplace of <a href="https://en.wikipedia.org/wiki/Sappho" target="_blank">Sappho</a>. Laid-back beach village with a long sandy shore. Stay the night.' },
     ],
   },
   {
@@ -1488,11 +1489,11 @@ const LESVOS_DAYS = [
     title: 'Kalloni & the Gulf',
     color: '#C4962A',
     stops: [
-      { name: 'Skala Eresou',         lat: 39.1720, lng: 25.9650, wiki: null, desc: 'Morning coffee on the beach before heading north.' },
-      { name: 'Kalloni',              lat: 39.2120, lng: 26.2020, wiki: 'https://en.wikipedia.org/wiki/Kalloni', desc: 'Main inland market town. The <a href="https://en.wikipedia.org/wiki/Gulf_of_Kalloni" target="_blank">Gulf of Kalloni</a> sardines are famous across Greece — try them grilled at the port.' },
-      { name: 'Skala Kalloni',        lat: 39.1780, lng: 26.2120, wiki: null, desc: 'Fishing port on the sheltered Gulf of Kalloni, a world-class wetland and birdwatching destination.' },
-      { name: 'Parakila',             lat: 39.2420, lng: 26.2740, wiki: null, desc: 'Quiet village on the northern shore of the gulf, good for a coffee stop.' },
-      { name: 'Molyvos (Mithymna)',   lat: 39.3720, lng: 26.1640, wiki: 'https://en.wikipedia.org/wiki/Molyvos', desc: 'Most photogenic village in Lesvos — a <a href="https://en.wikipedia.org/wiki/Castle_of_Molyvos" target="_blank">Byzantine castle</a> perched above a cobbled harbour. Stay here.' },
+      { name: 'Skala Eresou',         lat: 39.1658, lng: 25.9462, type: 'beach',      wiki: null,                                                desc: 'Morning coffee on the beach before heading north.' },
+      { name: 'Kalloni',              lat: 39.2120, lng: 26.2020, type: 'city',       wiki: 'https://en.wikipedia.org/wiki/Kalloni',            desc: 'Main inland market town. The <a href="https://en.wikipedia.org/wiki/Gulf_of_Kalloni" target="_blank">Gulf of Kalloni</a> sardines are famous across Greece — try them grilled at the port.' },
+      { name: 'Skala Kalloni',        lat: 39.1762, lng: 26.2102, type: 'harbour',    wiki: null,                                                desc: 'Fishing port on the sheltered Gulf of Kalloni, a world-class wetland and birdwatching destination.' },
+      { name: 'Parakila',             lat: 39.2420, lng: 26.2740, type: 'village',    wiki: null,                                                desc: 'Quiet village on the northern shore of the gulf, good for a coffee stop.' },
+      { name: 'Molyvos (Mithymna)',   lat: 39.3718, lng: 26.1647, type: 'castle',     wiki: 'https://en.wikipedia.org/wiki/Molyvos',            desc: 'Most photogenic village in Lesvos — a <a href="https://en.wikipedia.org/wiki/Castle_of_Molyvos" target="_blank">Byzantine castle</a> perched above a cobbled harbour. Stay here.' },
     ],
   },
   {
@@ -1500,11 +1501,11 @@ const LESVOS_DAYS = [
     title: 'Molyvos, Petra & the North',
     color: '#7B5EA7',
     stops: [
-      { name: 'Molyvos Castle',       lat: 39.3762, lng: 26.1662, wiki: 'https://en.wikipedia.org/wiki/Castle_of_Molyvos', desc: 'Morning walk up to the <a href="https://en.wikipedia.org/wiki/Castle_of_Molyvos" target="_blank">Byzantine castle</a>. On clear days you can see the Turkish coast.' },
-      { name: 'Eftalou Hot Springs',  lat: 39.3890, lng: 26.1960, wiki: 'https://en.wikipedia.org/wiki/Eftalou', desc: 'Ottoman-era thermal baths built directly on the beach. The domed stone bathhouse dates to the 19th century.' },
-      { name: 'Petra',                lat: 39.3270, lng: 26.1520, wiki: 'https://en.wikipedia.org/wiki/Petra,_Lesbos', desc: 'Village dominated by a 33-metre monolithic rock with the <a href="https://en.wikipedia.org/wiki/Church_of_the_Sweet-Kissing_Virgin" target="_blank">Church of the Sweet-Kissing Virgin</a> on top.' },
-      { name: 'Anaxos Beach',         lat: 39.3100, lng: 26.1330, wiki: null, desc: 'Long sandy beach facing southwest, with clear views of Molyvos castle. Afternoon swim.' },
-      { name: 'Lepetymnos Summit',    lat: 39.3290, lng: 26.1980, wiki: 'https://en.wikipedia.org/wiki/Lepetymnos', desc: 'The highest peak of northern Lesvos at 968 m. Pine forests, views of both coastlines.' },
+      { name: 'Molyvos Castle',       lat: 39.3748, lng: 26.1671, type: 'castle',     wiki: 'https://en.wikipedia.org/wiki/Castle_of_Molyvos',  desc: 'Morning walk up to the <a href="https://en.wikipedia.org/wiki/Castle_of_Molyvos" target="_blank">Byzantine castle</a>. On clear days you can see the Turkish coast.' },
+      { name: 'Eftalou Hot Springs',  lat: 39.3948, lng: 26.2052, type: 'spa',        wiki: 'https://en.wikipedia.org/wiki/Eftalou',            desc: 'Ottoman-era thermal baths built directly on the beach. The domed stone bathhouse dates to the 19th century.' },
+      { name: 'Petra',                lat: 39.3270, lng: 26.1520, type: 'church',     wiki: 'https://en.wikipedia.org/wiki/Petra,_Lesbos',      desc: 'Village dominated by a 33-metre monolithic rock with the <a href="https://en.wikipedia.org/wiki/Church_of_the_Sweet-Kissing_Virgin" target="_blank">Church of the Sweet-Kissing Virgin</a> on top.' },
+      { name: 'Anaxos Beach',         lat: 39.3072, lng: 26.1298, type: 'beach',      wiki: null,                                                desc: 'Long sandy beach facing southwest, with clear views of Molyvos castle. Afternoon swim.' },
+      { name: 'Lepetymnos Summit',    lat: 39.3290, lng: 26.1980, type: 'nature',     wiki: 'https://en.wikipedia.org/wiki/Lepetymnos',         desc: 'The highest peak of northern Lesvos at 968 m. Pine forests, views of both coastlines.' },
     ],
   },
   {
@@ -1512,36 +1513,47 @@ const LESVOS_DAYS = [
     title: 'Eastern Lesvos & Departure',
     color: '#2E7D32',
     stops: [
-      { name: 'Mandamados',           lat: 39.3080, lng: 26.3340, wiki: 'https://en.wikipedia.org/wiki/Mandamados', desc: 'Famous for the icon of <a href="https://en.wikipedia.org/wiki/Archangel_Michael" target="_blank">Archangel Michael</a> moulded from soil and monks\' blood, and for its local pottery.' },
-      { name: 'Tsonia Beach',         lat: 39.3160, lng: 26.4350, wiki: null, desc: 'Remote northern beach accessible by a dirt road — pristine, empty, and wild.' },
-      { name: 'Thermi',               lat: 39.1640, lng: 26.6090, wiki: 'https://en.wikipedia.org/wiki/Thermi,_Lesbos', desc: 'Spa village with natural thermal springs 12 km north of Mytilene, used since antiquity.' },
-      { name: 'Mytilene Town',        lat: 39.1076, lng: 26.5545, wiki: 'https://en.wikipedia.org/wiki/Mytilene', desc: 'Return to Mytilene. Final lunch at the harbour. Depart by ferry or flight.' },
+      { name: 'Mandamados',           lat: 39.3080, lng: 26.3340, type: 'church',     wiki: 'https://en.wikipedia.org/wiki/Mandamados',         desc: 'Famous for the icon of <a href="https://en.wikipedia.org/wiki/Archangel_Michael" target="_blank">Archangel Michael</a> moulded from soil and monks\' blood, and for its local pottery.' },
+      { name: 'Tsonia Beach',         lat: 39.3210, lng: 26.4480, type: 'beach',      wiki: null,                                                desc: 'Remote northern beach accessible by a dirt road — pristine, empty, and wild.' },
+      { name: 'Thermi',               lat: 39.1520, lng: 26.5780, type: 'spa',        wiki: 'https://en.wikipedia.org/wiki/Thermi,_Lesbos',     desc: 'Spa village with natural thermal springs 12 km north of Mytilene, used since antiquity.' },
+      { name: 'Mytilene Town',        lat: 39.1076, lng: 26.5545, type: 'city',       wiki: 'https://en.wikipedia.org/wiki/Mytilene',           desc: 'Return to Mytilene. Final lunch at the harbour. Depart by ferry or flight.' },
     ],
   },
 ];
 
 const LESVOS_BEACHES = [
   {
+    name: 'Skala Eresou Beach',
+    wiki: 'https://en.wikipedia.org/wiki/Eresos',
+    type: 'Fine dark sand',
+    length: '3 km',
+    depth: 'Shallow to medium — gentle entry',
+    facing: 'South-facing — sheltered, calm in summer',
+    facilities: 'Moderate: beach bars, tavernas, some sunbeds. Village is directly behind the beach.',
+    desc: 'The top beach on Lesvos. A long dark-sand beach in front of the village of Skala Eresou, birthplace of the poet Sappho. Relaxed, bohemian character and far less touristy than the Cyclades. Warm, calm water in summer and one of the most atmospheric settings on the island.',
+    lat: 39.1658, lng: 25.9462,
+  },
+  {
+    name: 'Agios Isidoros Beach',
+    wiki: null,
+    type: 'Fine sand',
+    length: '1.8 km',
+    depth: 'Shallow — gently shelving, safe for children',
+    facing: 'South-facing — well sheltered from north winds',
+    facilities: 'Good: sunbeds, umbrellas, tavernas, parking nearby',
+    desc: 'A fine sandy beach on the south coast, sheltered and consistently calm thanks to its south-facing orientation. Popular with locals but never overcrowded. Clear, warm water and easy access make it one of the best all-round choices on the island.',
+    lat: 38.9980, lng: 26.3960,
+  },
+  {
     name: 'Vatera Beach',
     wiki: 'https://en.wikipedia.org/wiki/Vatera',
-    type: 'Sand',
+    type: 'Fine golden sand',
     length: '8 km',
     depth: 'Shallow to medium — gradually deepening, safe for children',
     facing: 'South-facing — sheltered from the prevailing north winds (meltemi)',
     facilities: 'Well-developed: tavernas, sunbeds & umbrellas, showers, parking, accommodation nearby',
-    desc: 'The longest beach on Lesvos and one of the finest in the Aegean. Golden fine sand stretching 8 uninterrupted kilometres along the southern coast. Exceptionally calm water thanks to its south-facing orientation. The best choice for families or those wanting facilities.',
-    lat: 38.9510, lng: 26.1580,
-  },
-  {
-    name: 'Molyvos (Petra) Beach',
-    wiki: 'https://en.wikipedia.org/wiki/Molyvos',
-    type: 'Pebble and coarse sand mix',
-    length: '1.2 km',
-    depth: 'Medium depth — clear, clean, rocky sea floor',
-    facing: 'West-facing — some afternoon wind exposure, mornings are calm',
-    facilities: 'Good: sunbeds, beach bars, tavernas within walking distance of the village',
-    desc: 'Set beneath the dramatic silhouette of the medieval castle of Molyvos. The pebble-and-sand mix gives the water extraordinary clarity. The village is steps away making it ideal for combining swimming with sightseeing.',
-    lat: 39.3650, lng: 26.1580,
+    desc: 'The longest beach on Lesvos — 8 uninterrupted kilometres of golden fine sand along the southern coast. Exceptionally calm water. The best choice for families or those wanting full facilities and space to spread out.',
+    lat: 38.9492, lng: 26.1540,
   },
   {
     name: 'Anaxos Beach',
@@ -1551,30 +1563,19 @@ const LESVOS_BEACHES = [
     depth: 'Shallow — very gradual slope, excellent for children',
     facing: 'Southwest-facing — protected from north and east winds',
     facilities: 'Well-equipped: sunbeds, umbrellas, beach bars, tavernas, showers, small shops',
-    desc: 'A long, fine sandy beach 5 km south of Petra with stunning views of Molyvos castle on the headland. The shallow, calm water and solid facilities make it a top choice for families. One of the most consistently calm beaches on the island.',
-    lat: 39.3100, lng: 26.1330,
+    desc: 'A long fine sandy beach 5 km south of Petra with stunning views of Molyvos castle on the headland. Shallow, calm water and good facilities. One of the most consistently calm beaches on the island and ideal for families.',
+    lat: 39.3072, lng: 26.1298,
   },
   {
-    name: 'Skala Eresou Beach',
-    wiki: 'https://en.wikipedia.org/wiki/Eresos',
-    type: 'Fine dark sand',
-    length: '3 km',
-    depth: 'Shallow to medium — gentle entry',
-    facing: 'South-facing — sheltered, calm in summer',
-    facilities: 'Moderate: beach bars, tavernas, some sunbeds. Village is directly behind the beach.',
-    desc: 'A long dark-sand beach in front of the village of Skala Eresou, birthplace of the poet Sappho. The beach has a relaxed, bohemian character and is far less touristy than the Cyclades. Warm, calm water in summer. The village behind it is one of the most atmospheric on the island.',
-    lat: 39.1680, lng: 25.9680,
-  },
-  {
-    name: 'Melinda Beach',
-    wiki: null,
-    type: 'Fine pebble',
-    length: '400 m',
-    depth: 'Medium to deep — clear water, rocky bottom visible',
-    facing: 'South-facing — calm and sheltered by the surrounding hills',
-    facilities: 'Basic: one small taverna, no sunbed hire. Access by a narrow road.',
-    desc: 'A secluded pebble cove tucked under pine-clad hills west of Plomari. Small, quiet and unspoiled — no crowds, no umbrellas. The fine pebble bottom gives the water remarkable clarity and a vivid blue-green colour. For those who prefer wild beaches over organised ones.',
-    lat: 38.9680, lng: 26.3280,
+    name: 'Petra Beach',
+    wiki: 'https://en.wikipedia.org/wiki/Petra,_Lesbos',
+    type: 'Sand and fine pebble mix',
+    length: '1.0 km',
+    depth: 'Medium depth — clear water, gradually deepening',
+    facing: 'West-facing — calm in the mornings, some afternoon breeze',
+    facilities: 'Good: sunbeds, beach bars, tavernas a short walk away in the village',
+    desc: 'Set directly in front of the village of Petra, dominated by the extraordinary 33-metre rock with a chapel on top. The sand-and-pebble mix keeps the water crystal clear. A great combination of beautiful setting, good swimming and easy access to one of Lesvos\' most striking villages.',
+    lat: 39.3270, lng: 26.1350,
   },
 ];
 
@@ -2027,6 +2028,24 @@ async function fetchOSRMRoute(coords) {
   return coords;
 }
 
+function poiIcon(type, color) {
+  const icons = {
+    city:       '<path d="M8 2L10 7H14L11 10L12 14L8 11L4 14L5 10L2 7H6Z" fill="' + color + '"/>',
+    castle:     '<rect x="3" y="8" width="3" height="8" fill="' + color + '"/><rect x="11" y="8" width="3" height="8" fill="' + color + '"/><rect x="3" y="4" width="3" height="3" fill="' + color + '"/><rect x="11" y="4" width="3" height="3" fill="' + color + '"/><rect x="6" y="10" width="5" height="6" fill="' + color + '"/><rect x="4" y="2" width="2" height="3" fill="' + color + '"/><rect x="11" y="2" width="2" height="3" fill="' + color + '"/>',
+    beach:      '<path d="M4 14 Q8 6 12 14Z" fill="' + color + '" opacity=".3"/><path d="M8 3 L8 14" stroke="' + color + '" stroke-width="2"/><path d="M8 6 Q11 5 13 8" stroke="' + color + '" stroke-width="1.5" fill="none" stroke-linecap="round"/><ellipse cx="8" cy="14" rx="5" ry="1.5" fill="' + color + '" opacity=".4"/>',
+    village:    '<path d="M8 2L14 8H11V14H5V8H2Z" fill="' + color + '"/>',
+    nature:     '<path d="M8 1L13 9H10L13 14H3L6 9H3Z" fill="' + color + '"/>',
+    spa:        '<circle cx="8" cy="8" r="5" fill="none" stroke="' + color + '" stroke-width="1.5"/><path d="M8 4Q10 6 8 8Q6 10 8 12" stroke="' + color + '" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="8" cy="8" r="1.5" fill="' + color + '"/>',
+    church:     '<rect x="6" y="8" width="4" height="6" fill="' + color + '"/><path d="M4 8H12L8 4Z" fill="' + color + '"/><rect x="7" y="2" width="2" height="4" fill="' + color + '"/><rect x="6" y="3" width="4" height="2" fill="' + color + '"/>',
+    distillery: '<path d="M6 2H10L11 6H5Z" fill="' + color + '"/><rect x="5" y="6" width="6" height="7" rx="3" fill="' + color + '"/><rect x="7" y="13" width="2" height="2" fill="' + color + '"/>',
+    harbour:    '<path d="M2 11Q8 7 14 11" stroke="' + color + '" stroke-width="2" fill="none"/><path d="M8 3V11" stroke="' + color + '" stroke-width="1.5"/><path d="M5 6H11" stroke="' + color + '" stroke-width="1.5"/><path d="M5 13Q8 15 11 13" stroke="' + color + '" stroke-width="1.5" fill="none"/>',
+    museum:     '<rect x="3" y="7" width="10" height="7" fill="' + color + '"/><path d="M2 7H14L8 3Z" fill="' + color + '"/><rect x="6" y="9" width="3" height="5" fill="white" opacity=".35"/>',
+    forest:     '<path d="M8 1L12 8H9.5L12 13H4L6.5 8H4Z" fill="' + color + '"/>',
+  };
+  const shape = icons[type] || icons.village;
+  return '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16" style="filter:drop-shadow(0 1px 4px rgba(0,0,0,.5))">' + shape + '</svg>';
+}
+
 async function initItineraryMap() {
   const mapEl = document.getElementById('itin-map');
   if (!mapEl) return;
@@ -2056,16 +2075,17 @@ async function initItineraryMap() {
 
     day.stops.forEach((stop, i) => {
       const nameHtml = stop.wiki
-        ? `<a href="${stop.wiki}" target="_blank" rel="noopener" style="color:${day.color};font-weight:700">${stop.name}</a>`
-        : `<strong>${stop.name}</strong>`;
+        ? '<a href="' + stop.wiki + '" target="_blank" rel="noopener" style="color:' + day.color + ';font-weight:700">' + stop.name + '</a>'
+        : '<strong>' + stop.name + '</strong>';
+      const typeLabel = stop.type ? stop.type.charAt(0).toUpperCase() + stop.type.slice(1) : 'Stop';
       const icon = L.divIcon({
         className: 'custom-marker',
-        html: `<div style="background:${day.color};width:28px;height:28px;border-radius:50%;border:2.5px solid #fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.35);">${i + 1}</div>`,
-        iconSize: [28, 28], iconAnchor: [14, 14],
+        html: poiIcon(stop.type || 'village', day.color),
+        iconSize: [32, 32], iconAnchor: [16, 16],
       });
       const marker = L.marker([stop.lat, stop.lng], { icon })
         .addTo(itineraryMapInstance)
-        .bindPopup(`<div style="min-width:190px;font-family:sans-serif"><div style="font-size:10px;font-weight:700;color:${day.color};text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px">Day ${day.day} · Stop ${i + 1}</div>${nameHtml}<p style="font-size:12px;color:#555;margin:6px 0 0;line-height:1.55">${stop.desc}</p></div>`);
+        .bindPopup('<div style="min-width:190px;font-family:sans-serif"><div style="font-size:10px;font-weight:700;color:' + day.color + ';text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px">Day ' + day.day + ' · ' + typeLabel + '</div>' + nameHtml + '<p style="font-size:12px;color:#555;margin:6px 0 0;line-height:1.55">' + stop.desc + '</p></div>');
       itinMarkerLayers[day.day].push(marker);
     });
   }
