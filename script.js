@@ -358,6 +358,7 @@ async function renderIslandPage(key) {
       const data = await res.json();
       guide.innerHTML = buildIslandPage(data);
       setTimeout(() => initItineraryMap(data.itinerary.days), 80);
+      if (data.beaches) setTimeout(() => loadBeachPhotos(data.beaches), 150);
       return;
     }
   } catch(e) {
@@ -429,10 +430,17 @@ function buildIslandPage(data) {
     const nameHtml = b.wiki
       ? `<a href="${b.wiki}" target="_blank" rel="noopener" class="beach-name-link">${b.name}</a>`
       : b.name;
+    const photoId = `beach-photo-${i}`;
+    const photoHtml = b.commons
+      ? `<div class="beach-photo-wrap" id="${photoId}-wrap"><div class="beach-photo-placeholder">🏖️</div></div>`
+      : '';
     return `<div class="beach-card">
-      <div class="beach-rank">${i + 1}</div>
-      <div class="beach-content">
-        <div class="beach-name">${nameHtml}</div>
+      ${photoHtml}
+      <div class="beach-card-body">
+        <div class="beach-rank-name">
+          <div class="beach-rank">${i + 1}</div>
+          <div class="beach-name">${nameHtml}</div>
+        </div>
         <p class="beach-desc">${b.desc}</p>
         <div class="beach-specs">
           <div class="beach-spec"><span class="beach-spec-label">Type</span><span class="beach-spec-val">${b.type}</span></div>
@@ -472,6 +480,33 @@ function buildIslandPage(data) {
       <div class="itin-days" id="itin-days-container">${dayCards}</div>
       ${beachSection}
     </div>`;
+}
+
+/* ============================================================
+   BEACH PHOTOS — loaded from Wikimedia Commons API
+============================================================ */
+async function loadBeachPhotos(beaches) {
+  for (let i = 0; i < beaches.length; i++) {
+    const b = beaches[i];
+    if (!b.commons) continue;
+    const wrap = document.getElementById(`beach-photo-${i}-wrap`);
+    if (!wrap) continue;
+    try {
+      const title = 'File:' + b.commons;
+      const url = `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(title)}&prop=pageimages&pithumbsize=800&format=json&origin=*`;
+      const res = await fetch(url);
+      const data = await res.json();
+      const pages = data.query.pages;
+      const page = Object.values(pages)[0];
+      if (page && page.thumbnail && page.thumbnail.source) {
+        wrap.innerHTML = `<img class="beach-photo" src="${page.thumbnail.source}" alt="${b.name}" loading="lazy">`;
+      } else {
+        wrap.style.display = 'none';
+      }
+    } catch(e) {
+      wrap.style.display = 'none';
+    }
+  }
 }
 
 /* ============================================================
@@ -518,21 +553,21 @@ function filterItinDay(day) {
    POI ICONS
 ============================================================ */
 function poiIcon(type, color) {
-  const icons = {
-    city:       `<path d="M8 2L10 7H14L11 10L12 14L8 11L4 14L5 10L2 7H6Z" fill="${color}"/>`,
-    castle:     `<rect x="3" y="8" width="3" height="8" fill="${color}"/><rect x="11" y="8" width="3" height="8" fill="${color}"/><rect x="6" y="10" width="5" height="6" fill="${color}"/><rect x="4" y="2" width="2" height="4" fill="${color}"/><rect x="11" y="2" width="2" height="4" fill="${color}"/><rect x="3" y="5" width="3" height="3" fill="${color}"/><rect x="11" y="5" width="3" height="3" fill="${color}"/>`,
-    beach:      `<path d="M4 14Q8 6 12 14Z" fill="${color}" opacity=".3"/><path d="M8 3L8 14" stroke="${color}" stroke-width="2"/><path d="M8 6Q11 5 13 8" stroke="${color}" stroke-width="1.5" fill="none" stroke-linecap="round"/><ellipse cx="8" cy="14" rx="5" ry="1.5" fill="${color}" opacity=".4"/>`,
-    village:    `<path d="M8 2L14 8H11V14H5V8H2Z" fill="${color}"/>`,
-    nature:     `<path d="M8 1L13 9H10L13 14H3L6 9H3Z" fill="${color}"/>`,
-    spa:        `<circle cx="8" cy="8" r="5" fill="none" stroke="${color}" stroke-width="1.5"/><path d="M8 4Q10 6 8 8Q6 10 8 12" stroke="${color}" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="8" cy="8" r="1.5" fill="${color}"/>`,
-    church:     `<rect x="6" y="8" width="4" height="6" fill="${color}"/><path d="M4 8H12L8 4Z" fill="${color}"/><rect x="7" y="2" width="2" height="4" fill="${color}"/><rect x="6" y="3" width="4" height="2" fill="${color}"/>`,
-    distillery: `<path d="M6 2H10L11 6H5Z" fill="${color}"/><rect x="5" y="6" width="6" height="7" rx="3" fill="${color}"/><rect x="7" y="13" width="2" height="2" fill="${color}"/>`,
-    harbour:    `<path d="M2 11Q8 7 14 11" stroke="${color}" stroke-width="2" fill="none"/><path d="M8 3V11" stroke="${color}" stroke-width="1.5"/><path d="M5 6H11" stroke="${color}" stroke-width="1.5"/><path d="M5 13Q8 15 11 13" stroke="${color}" stroke-width="1.5" fill="none"/>`,
-    museum:     `<rect x="3" y="7" width="10" height="7" fill="${color}"/><path d="M2 7H14L8 3Z" fill="${color}"/><rect x="6" y="9" width="3" height="5" fill="white" opacity=".35"/>`,
-    forest:     `<path d="M8 1L12 8H9.5L12 13H4L6.5 8H4Z" fill="${color}"/>`,
+  const emojis = {
+    city:       '🏙',
+    castle:     '🏰',
+    beach:      '🏖️',
+    village:    '🏘',
+    nature:     '🌿',
+    spa:        '♨️',
+    church:     '⛪',
+    distillery: '🥃',
+    harbour:    '⚓',
+    museum:     '🏛️',
+    forest:     '🌲',
   };
-  const shape = icons[type] || icons.village;
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16" style="filter:drop-shadow(0 1px 4px rgba(0,0,0,.5))">${shape}</svg>`;
+  const emoji = emojis[type] || '📍';
+  return `<div style="font-size:22px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5));text-align:center;width:32px;height:32px;display:flex;align-items:center;justify-content:center;background:white;border-radius:50%;border:2px solid ${color};box-shadow:0 2px 6px rgba(0,0,0,.25);">${emoji}</div>`;
 }
 
 /* ============================================================
