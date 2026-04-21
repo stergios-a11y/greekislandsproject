@@ -244,7 +244,8 @@ header {
 .search-container {
   background: var(--white);
   border-bottom: 1px solid var(--border);
-  padding: 10px 24px;
+  padding: 8px 24px;
+  flex-shrink: 0;
 }
 
 .search-bar-row {
@@ -300,10 +301,14 @@ header {
    script.js handles: map.setMaxBounds and fitBounds
    This just styles the container
 ---------------------------------------------------------- */
-#view-home { max-width: 1280px; margin: 0 auto; }
+#view-home {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--header-height));
+}
 #main-map {
-  height: calc(100vh - var(--header-height) - 142px);
-  min-height: 420px;
+  flex: 1;
+  min-height: 0;
   width: 100%;
   background: var(--aegean-pale);
   position: relative;
@@ -894,7 +899,7 @@ html.dark .why-feat-num { color: var(--marble-3); }
   .quiz-options    { grid-template-columns: 1fr; }
 }
 @media (max-width: 540px) {
-  #main-map { height: calc(100vh - var(--header-height) - 190px); }
+  #main-map { min-height: 300px; }
   .compare-selectors { flex-direction: column; }
   .compare-selectors select { width: 100%; }
   .why-stats       { grid-template-columns: 1fr; }
@@ -1205,6 +1210,7 @@ html.dark .why-feat-num { color: var(--marble-3); }
   transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
   overflow: hidden;
   max-height: 120px;
+  flex-shrink: 0;
 }
 .hero-banner.dismissed {
   max-height: 0;
