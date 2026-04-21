@@ -1078,21 +1078,46 @@ html.dark .why-feat-num { color: var(--marble-3); }
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 18px 20px;
-  display: flex;
-  gap: 16px;
+  overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: border-color 0.15s;
 }
 .beach-card:hover { border-color: var(--aegean-light); }
+.beach-photo-wrap {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: var(--marble-2);
+}
+.beach-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.beach-card:hover .beach-photo { transform: scale(1.03); }
+.beach-photo-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 40px; color: var(--border-2);
+  background: var(--marble-2);
+}
+.beach-card-body {
+  padding: 16px 20px 18px;
+}
+.beach-rank-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
 .beach-rank {
   font-family: var(--serif);
   font-size: 28px; font-weight: 600;
   color: var(--aegean-light);
   flex-shrink: 0; width: 32px;
-  padding-top: 2px;
 }
-.beach-content { flex: 1; }
 .beach-name {
   font-family: var(--serif);
   font-size: 17px; font-weight: 600;
