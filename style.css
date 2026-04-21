@@ -244,19 +244,25 @@ header {
 .search-container {
   background: var(--white);
   border-bottom: 1px solid var(--border);
-  padding: 10px 24px 12px;
+  padding: 10px 24px;
+}
+
+.search-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 #islandSearch {
-  width: 100%;
+  flex: 1;
   padding: 9px 16px;
   font-size: 14px; font-family: var(--sans);
   border: 1.5px solid var(--border-2);
   border-radius: var(--radius);
   background: var(--marble);
   color: var(--ink);
-  margin-bottom: 10px;
   transition: border-color 0.15s, box-shadow 0.15s;
+  min-width: 0;
 }
 #islandSearch:focus {
   outline: none;
@@ -266,64 +272,27 @@ header {
 }
 #islandSearch::placeholder { color: var(--ink-4); }
 
-/* Filter section with label */
-.filter-section {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
-  flex-wrap: wrap;
-}
-.filter-section:last-child { margin-bottom: 0; }
-.filter-label {
-  font-size: 11px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.6px;
-  color: var(--ink-4);
-  white-space: nowrap;
+.filter-select {
+  padding: 9px 12px;
+  font-size: 13px; font-family: var(--sans);
+  border: 1.5px solid var(--border-2);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--ink);
+  cursor: pointer;
   flex-shrink: 0;
-  min-width: 90px;
+  transition: border-color 0.15s;
+  appearance: auto;
+}
+.filter-select:focus {
+  outline: none;
+  border-color: var(--aegean-mid);
 }
 
-/* Group filter chips */
-.group-filter-row {
-  display: flex; flex-wrap: wrap; gap: 5px;
-  flex: 1;
-}
-.group-chip {
-  padding: 3px 11px;
-  font-size: 11px; font-weight: 500; font-family: var(--sans);
-  border: 1px solid var(--border-2);
-  border-radius: 20px;
-  background: var(--white);
-  color: var(--ink-3);
-  cursor: pointer;
-  transition: all 0.15s;
-  letter-spacing: 0.2px;
-}
-.group-chip:hover { border-color: var(--aegean-mid); color: var(--aegean); }
-.group-chip.active {
-  background: var(--aegean);
-  color: #fff;
-  border-color: var(--aegean);
-}
-
-/* Vibe chips */
-.vibe-filters { display: flex; flex-wrap: wrap; gap: 5px; flex: 1; }
-.vibe-chip {
-  padding: 5px 13px;
-  font-size: 12px; font-weight: 500; font-family: var(--sans);
-  border: 1px solid var(--border-2);
-  border-radius: 20px;
-  background: var(--white);
-  color: var(--ink-3);
-  cursor: pointer;
-  transition: all 0.15s;
-}
-.vibe-chip:hover { border-color: var(--aegean-mid); color: var(--aegean); }
-.vibe-chip.active {
-  background: var(--aegean);
-  color: #fff;
-  border-color: var(--aegean);
+@media (max-width: 600px) {
+  .search-bar-row { flex-wrap: wrap; }
+  #islandSearch { min-width: 100%; }
+  .filter-select { flex: 1; font-size: 12px; }
 }
 
 /* ----------------------------------------------------------

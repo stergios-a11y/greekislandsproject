@@ -45,21 +45,19 @@
   </header>
 
   <div class="search-container" id="home-controls">
-    <input type="text" id="islandSearch" placeholder="🔍  Search islands…" aria-label="Search islands">
-    <div class="filter-section">
-      <span class="filter-label">Filter by group</span>
-      <div class="group-filter-row" id="group-filter-row"></div>
-    </div>
-    <div class="filter-section">
-      <span class="filter-label">Rank map by</span>
-      <div class="vibe-filters" id="vibe-filters">
-        <button class="vibe-chip active" data-mode="overall">🏠 Overall</button>
-        <button class="vibe-chip" data-mode="beach">🏖️ Beaches</button>
-        <button class="vibe-chip" data-mode="hist">🏛️ Culture</button>
-        <button class="vibe-chip" data-mode="night">🍷 Nightlife</button>
-        <button class="vibe-chip" data-mode="access">🚢 Access</button>
-        <button class="vibe-chip" data-mode="afford">💸 Price</button>
-      </div>
+    <div class="search-bar-row">
+      <input type="text" id="islandSearch" placeholder="🔍  Search islands…" aria-label="Search islands">
+      <select id="group-select" class="filter-select" aria-label="Filter by island group">
+        <option value="all">All groups</option>
+      </select>
+      <select id="vibe-select" class="filter-select" aria-label="Rank map by">
+        <option value="overall">🏠 Overall</option>
+        <option value="beach">🏖️ Beaches</option>
+        <option value="hist">🏛️ Culture</option>
+        <option value="night">🍷 Nightlife</option>
+        <option value="access">🚢 Access</option>
+        <option value="afford">💸 Price</option>
+      </select>
     </div>
   </div>
 

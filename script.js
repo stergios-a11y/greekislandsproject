@@ -295,35 +295,24 @@ function filterIslands() { renderMapMarkers(); }
 function updateMapMode(mode) { currentMapMode = mode; renderMapMarkers(); }
 
 function setupVibeChips() {
-  const container = document.getElementById('vibe-filters');
-  if (!container) return;
-  container.querySelectorAll('.vibe-chip').forEach(btn => {
-    btn.addEventListener('click', () => {
-      container.querySelectorAll('.vibe-chip').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      updateMapMode(btn.dataset.mode);
-    });
-  });
+  const sel = document.getElementById('vibe-select');
+  if (!sel) return;
+  sel.addEventListener('change', () => updateMapMode(sel.value));
 }
 
 function setupGroupFilter() {
-  const row = document.getElementById('group-filter-row');
-  if (!row) return;
-  const groups = ['all', ...new Set(ISLANDS.map(i => i.island_group))].sort((a, b) => {
-    if (a === 'all') return -1; if (b === 'all') return 1; return a.localeCompare(b);
-  });
+  const sel = document.getElementById('group-select');
+  if (!sel) return;
+  const groups = [...new Set(ISLANDS.map(i => i.island_group))].sort();
   groups.forEach(group => {
-    const btn = document.createElement('button');
-    btn.className = 'group-chip' + (group === 'all' ? ' active' : '');
-    btn.textContent = group === 'all' ? 'All Groups' : group;
-    btn.dataset.group = group;
-    btn.addEventListener('click', () => {
-      row.querySelectorAll('.group-chip').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentGroupFilter = group;
-      renderMapMarkers();
-    });
-    row.appendChild(btn);
+    const opt = document.createElement('option');
+    opt.value = group;
+    opt.textContent = group;
+    sel.appendChild(opt);
+  });
+  sel.addEventListener('change', () => {
+    currentGroupFilter = sel.value;
+    renderMapMarkers();
   });
 }
 
