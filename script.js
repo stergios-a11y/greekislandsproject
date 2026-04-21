@@ -101,351 +101,26 @@ const SCORE_COLORS = {
 };
 
 /* ---- Lesvos 6-day itinerary data ---- */
-const LESVOS_DAYS = [
-  {
-    day: 1,
-    title: 'Mytilene & the South',
-    color: '#1B4F8A',
-    stops: [
-      { name: 'Mytilene Town',        lat: 39.107, lng: 26.554, desc: 'Arrive, settle in. Walk the waterfront, visit the Byzantine castle.' },
-      { name: 'Mytilene Castle',      lat: 39.112, lng: 26.561, desc: 'Medieval fortress with panoramic harbour views.' },
-      { name: 'Varia',                lat: 39.083, lng: 26.553, desc: 'Museum of Theophilos & Tériade — two exceptional art museums.' },
-      { name: 'Agios Isidoros Beach', lat: 39.033, lng: 26.481, desc: 'Relaxed sandy beach south of the capital. Evening swim.' },
-    ],
-  },
-  {
-    day: 2,
-    title: 'Plomari & Ouzo Country',
-    color: '#C0522A',
-    stops: [
-      { name: 'Mytilene',             lat: 39.107, lng: 26.554, desc: 'Depart after breakfast.' },
-      { name: 'Agiasos',              lat: 39.072, lng: 26.388, desc: 'Charming mountain village with cobbled lanes and a lively carnival tradition.' },
-      { name: 'Plomari',              lat: 38.977, lng: 26.371, desc: 'Ouzo capital of Greece. Tour a distillery (Barbayiannis or Varvagiannis).' },
-      { name: 'Melinda Beach',        lat: 38.969, lng: 26.337, desc: 'Secluded pebble cove west of Plomari. Swim & lunch.' },
-      { name: 'Vatera Beach',         lat: 38.949, lng: 26.193, desc: '8 km of uninterrupted sand — one of the finest beaches in the Aegean.' },
-    ],
-  },
-  {
-    day: 3,
-    title: 'Sigri & Petrified Forest',
-    color: '#5A7A3A',
-    stops: [
-      { name: 'Vatera',               lat: 38.949, lng: 26.193, desc: 'Depart west.' },
-      { name: 'Petrified Forest',     lat: 39.193, lng: 25.934, desc: 'UNESCO-listed petrified forest — 20 million year old trees turned to stone.' },
-      { name: 'Sigri',                lat: 39.208, lng: 25.855, desc: 'Westernmost village. Tiny harbour, Natural History Museum of the Lesvos Petrified Forest.' },
-      { name: 'Faneromeni Beach',     lat: 39.218, lng: 25.887, desc: 'Wild, windy beach near Sigri — dramatic cliffs and turquoise water.' },
-      { name: 'Skala Eresou',         lat: 39.170, lng: 25.965, desc: 'Birthplace of Sappho. Laid-back beach village, stay the night.' },
-    ],
-  },
-  {
-    day: 4,
-    title: 'Kalloni & the Gulf',
-    color: '#C4962A',
-    stops: [
-      { name: 'Skala Eresou',         lat: 39.170, lng: 25.965, desc: 'Morning coffee on the beach.' },
-      { name: 'Kalloni',              lat: 39.212, lng: 26.202, desc: 'Main inland town. Kalloni Gulf is famous for sardines — try them grilled at the port.' },
-      { name: 'Skala Kalloni',        lat: 39.178, lng: 26.211, desc: 'Fishing port on the Gulf of Kalloni, a world-class birdwatching site.' },
-      { name: 'Parakila',             lat: 39.242, lng: 26.274, desc: 'Quiet village on the northern shore of the gulf.' },
-      { name: 'Molyvos (Mithymna)',   lat: 39.372, lng: 26.164, desc: 'Most photogenic village in Lesvos — castle above a stone-cobbled harbour. Stay here.' },
-    ],
-  },
-  {
-    day: 5,
-    title: 'Molyvos, Petra & the North',
-    color: '#7B5EA7',
-    stops: [
-      { name: 'Molyvos Castle',       lat: 39.376, lng: 26.166, desc: 'Morning walk up to the Byzantine castle. Views over Turkey.' },
-      { name: 'Eftalou Hot Springs',  lat: 39.388, lng: 26.187, desc: 'Ottoman-era thermal baths right on the beach. Perfect start to the day.' },
-      { name: 'Petra',                lat: 39.327, lng: 26.152, desc: 'Village dominated by a huge rock with a chapel on top — climb for the view.' },
-      { name: 'Anaxos Beach',         lat: 39.310, lng: 26.135, desc: 'Long sandy beach with views of Molyvos. Afternoon swim.' },
-      { name: 'Lepetymnos Forest',    lat: 39.329, lng: 26.198, desc: 'Pine forest hike with views of both coasts of the island.' },
-    ],
-  },
-  {
-    day: 6,
-    title: 'Eastern Lesvos & Departure',
-    color: '#C0522A',
-    stops: [
-      { name: 'Mandamados',           lat: 39.308, lng: 26.334, desc: 'Famous for its black icon of Archangel Michael and local pottery.' },
-      { name: 'Tsonia Beach',         lat: 39.316, lng: 26.415, desc: 'Remote northern beach accessible by dirt road — pristine and empty.' },
-      { name: 'Thermi',               lat: 39.164, lng: 26.611, desc: 'Spa village with natural thermal springs 12 km north of Mytilene.' },
-      { name: 'Mytilene Town',        lat: 39.107, lng: 26.554, desc: 'Return to Mytilene. Final lunch at the harbour, depart.' },
-    ],
-  },
-];
-
-function scoreToColor(s) {
-  if (s >= 4.5) return '#2E7D32';
-  if (s >= 3.8) return '#1B4F8A';
-  if (s >= 3.0) return '#C4962A';
-  return '#C0522A';
-}
-function haversineApprox(a, b) {
-  const dlat = a.lat - b.lat, dlng = a.lng - b.lng;
-  return Math.sqrt(dlat * dlat + dlng * dlng);
-}
-function fmt(n, decimals = 1) { return Number(n).toFixed(decimals); }
-function fmtNum(n) { return Number(n).toLocaleString(); }
 
 /* ============================================================
-   URL ROUTING
-   Maps:  /                   → home (map)
-          /#map                → home
-          /#data               → data
-          /#compare            → compare
-          /#hopping            → hopping
-          /#match              → match
-          /#mission            → mission
-          /#island/lesvos      → island detail page
-          /#island/naxos       → island detail page (generic)
+   ISLAND PAGE — dynamic JSON loader
+   Adding a new island: drop a JSON file in /islands/{key}.json
+   The shared renderer handles everything automatically.
 ============================================================ */
-const VIEW_HASH_MAP = {
-  '':          'home',
-  'map':       'home',
-  'data':      'data',
-  'compare':   'compare',
-  'hopping':   'hopping',
-  'match':     'match',
-  'mission':   'mission',
-};
 
-function parseHash() {
-  const hash = window.location.hash.replace('#', '').trim();
-  if (!hash) return { view: 'home', param: null };
-  if (hash.startsWith('island/')) {
-    return { view: 'island', param: hash.replace('island/', '') };
-  }
-  return { view: VIEW_HASH_MAP[hash] || 'home', param: null };
-}
+let islandPageCache = {};
+let itineraryMapInstance = null;
+let itinActiveDay = 'all';
+let itinRouteLayers = {};
+let itinMarkerLayers = {};
 
-function navigateTo(view, param) {
-  let hash = '';
-  if (view === 'home') hash = '#map';
-  else if (view === 'island') hash = `#island/${param}`;
-  else hash = `#${view}`;
-  if (window.location.hash !== hash) {
-    history.pushState({ view, param }, '', hash);
-  }
-  showView(view, param);
-}
-
-function showView(view, param) {
-  const homeControls = document.getElementById('home-controls');
-  const allViews = ['home', 'data', 'compare', 'hopping', 'match', 'mission', 'detail'];
-  allViews.forEach(v => {
-    const el = document.getElementById(`view-${v}`);
-    if (el) el.style.display = 'none';
-  });
-  const nav = document.getElementById('main-nav');
-  if (nav) nav.querySelectorAll('a').forEach(a => a.classList.remove('active'));
-
-  if (view === 'island') {
-    const el = document.getElementById('view-detail');
-    if (el) el.style.display = '';
-    homeControls.style.display = 'none';
-    if (param) renderIslandPage(param);
-    return;
-  }
-
-  const target = document.getElementById(`view-${view}`);
-  if (target) target.style.display = '';
-  homeControls.style.display = (view === 'home') ? '' : 'none';
-
-  const navLink = document.getElementById(`nav-${view}`);
-  if (navLink) navLink.classList.add('active');
-  if (nav && nav.classList.contains('open')) nav.classList.remove('open');
-  if (view === 'home' && mapInstance) setTimeout(() => mapInstance.invalidateSize(), 100);
-  if (view === 'hopping') setTimeout(renderHopping, 50);
-  if (view === 'match') setupQuizIfNeeded();
-}
-
-/* Alias for backward compat */
-function handleNav(view, param) { navigateTo(view, param); }
-window._openDetail = (key) => navigateTo('island', key);
-window._addCmpNav = function(key) { addToCompare(key); navigateTo('compare'); };
-
-document.addEventListener('DOMContentLoaded', () => {
-  // Hard fallback: always dismiss loading after 3s no matter what
-  const hardFallback = setTimeout(dismissLoading, 3000);
-
-  try { setupNav(); } catch(e) { console.warn('setupNav', e); }
-  try { setupDarkMode(); } catch(e) { console.warn('setupDarkMode', e); }
-  try { setupVibeChips(); } catch(e) { console.warn('setupVibeChips', e); }
-  try { setupGroupFilter(); } catch(e) { console.warn('setupGroupFilter', e); }
-  try { setupMap(); } catch(e) { console.warn('setupMap', e); }
-  try { setupTable(); } catch(e) { console.warn('setupTable', e); }
-  try { setupCompare(); } catch(e) { console.warn('setupCompare', e); }
-
-  const vd = document.getElementById('version-display');
-  if (vd) vd.textContent = `Aegean Blueprint ${VERSION}`;
-
-  clearTimeout(hardFallback);
-  dismissLoading();
-
-  try {
-    const { view, param } = parseHash();
-    showView(view, param);
-  } catch(e) {
-    console.warn('showView on init', e);
-    showView('home', null);
-  }
-});
-
-window.addEventListener('popstate', () => {
-  try {
-    const { view, param } = parseHash();
-    showView(view, param);
-  } catch(e) { showView('home', null); }
-});
-
-function dismissLoading() {
-  const overlay = document.getElementById('loading-overlay');
-  if (overlay) {
-    overlay.classList.add('hidden');
-    // Also force-remove after transition in case classList doesn't trigger CSS
-    setTimeout(() => { if (overlay) overlay.style.display = 'none'; }, 600);
-  }
-}
-
-function setupNav() {
-  const navMap = {
-    'nav-home':    'home',
-    'nav-map':     'home',
-    'nav-data':    'data',
-    'nav-compare': 'compare',
-    'nav-hopping': 'hopping',
-    'nav-match':   'match',
-    'nav-mission': 'mission',
-  };
-  Object.entries(navMap).forEach(([btnId, view]) => {
-    const el = document.getElementById(btnId);
-    if (el) el.addEventListener('click', (e) => { e.preventDefault(); navigateTo(view); });
-  });
-  const menuToggle = document.getElementById('menu-toggle-btn');
-  if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
-  const detailBack = document.getElementById('detail-back-btn');
-  if (detailBack) detailBack.addEventListener('click', () => navigateTo('home'));
-  const detailCmpBtn = document.getElementById('detail-compare-btn');
-  if (detailCmpBtn) {
-    detailCmpBtn.addEventListener('click', () => {
-      const key = detailCmpBtn.dataset.islandKey;
-      if (key) addToCompare(key);
-      navigateTo('compare');
-    });
-  }
-}
-
-function toggleMenu() {
-  const nav = document.getElementById('main-nav');
-  if (nav) nav.classList.toggle('open');
-}
-
-function setupDarkMode() {
-  const btn = document.getElementById('dark-mode-btn');
-  const root = document.documentElement;
-  if (localStorage.getItem('darkMode') === 'true') {
-    root.classList.add('dark');
-    btn.textContent = '☀';
-  }
-  btn.addEventListener('click', () => {
-    const isDark = root.classList.toggle('dark');
-    btn.textContent = isDark ? '☀' : '☾';
-    localStorage.setItem('darkMode', isDark);
-    if (radarChartInstance) renderRadarChart();
-  });
-}
-
-function setupMap() {
-  const GREECE_BOUNDS = L.latLngBounds(L.latLng(33.8, 18.5), L.latLng(42.2, 30.2));
-  mapInstance = L.map('main-map', {
-    zoomControl: true, minZoom: 5, maxZoom: 14,
-    maxBounds: GREECE_BOUNDS, maxBoundsViscosity: 0.85,
-  });
-  mapInstance.fitBounds(GREECE_BOUNDS);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors', maxZoom: 14,
-  }).addTo(mapInstance);
-  renderMapMarkers();
-  const searchInput = document.getElementById('islandSearch');
-  if (searchInput) searchInput.addEventListener('input', filterIslands);
-}
-
-function getDisplayScore(island) {
-  const modeMap = { overall:'total', beach:'beach', hist:'hist', night:'night', access:'access', afford:'afford' };
-  return island[modeMap[currentMapMode] || 'total'];
-}
-
-function makeMarkerIcon(score) {
-  const color = scoreToColor(score);
-  const size = Math.round(28 + score * 4);
-  return L.divIcon({
-    className: 'custom-marker',
-    html: `<div style="background:${color};width:${size}px;height:${size}px;border-radius:50%;border:2.5px solid #fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.3);">${fmt(score)}</div>`,
-    iconSize: [size, size], iconAnchor: [size / 2, size / 2],
-  });
-}
-
-function renderMapMarkers() {
-  Object.values(mapMarkers).forEach(m => mapInstance.removeLayer(m));
-  mapMarkers = {};
-  const searchTerm = (document.getElementById('islandSearch')?.value || '').toLowerCase();
-  ISLANDS.forEach(island => {
-    if (searchTerm && !island.name.toLowerCase().includes(searchTerm)) return;
-    if (currentGroupFilter !== 'all' && island.island_group !== currentGroupFilter) return;
-    const score = getDisplayScore(island);
-    const marker = L.marker([island.lat, island.lng], { icon: makeMarkerIcon(score) })
-      .addTo(mapInstance)
-      .bindPopup(`<div style="min-width:160px;font-family:sans-serif"><strong style="font-size:14px">${island.name}</strong><br><small style="color:#888;text-transform:uppercase;letter-spacing:.5px">${island.island_group}</small><div style="margin-top:8px;font-size:13px">Overall: <strong style="color:${scoreToColor(island.total)}">${fmt(island.total)}</strong></div><div style="font-size:12px;color:#666;margin-top:2px">Beach ${fmt(island.beach)} · Culture ${fmt(island.hist)} · Night ${fmt(island.night)}</div><button onclick="window._openDetail('${island.key}')" style="margin-top:10px;padding:6px 12px;width:100%;cursor:pointer;background:#1B4F8A;color:#fff;border:none;border-radius:6px;font-size:12px;font-weight:600">View details</button></div>`);
-    marker.on('click', () => navigateTo('island', island.key));
-    mapMarkers[island.key] = marker;
-  });
-}
-
-function filterIslands() { renderMapMarkers(); }
-function updateMapMode(mode) { currentMapMode = mode; renderMapMarkers(); }
-
-function setupVibeChips() {
-  const container = document.getElementById('vibe-filters');
-  if (!container) return;
-  container.querySelectorAll('.vibe-chip').forEach(btn => {
-    btn.addEventListener('click', () => {
-      container.querySelectorAll('.vibe-chip').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      updateMapMode(btn.dataset.mode);
-    });
-  });
-}
-
-function setupGroupFilter() {
-  const row = document.getElementById('group-filter-row');
-  if (!row) return;
-  const groups = ['all', ...new Set(ISLANDS.map(i => i.island_group))].sort((a, b) => {
-    if (a === 'all') return -1; if (b === 'all') return 1; return a.localeCompare(b);
-  });
-  groups.forEach(group => {
-    const btn = document.createElement('button');
-    btn.className = 'group-chip' + (group === 'all' ? ' active' : '');
-    btn.textContent = group === 'all' ? 'All Groups' : group;
-    btn.dataset.group = group;
-    btn.addEventListener('click', () => {
-      row.querySelectorAll('.group-chip').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentGroupFilter = group;
-      renderMapMarkers();
-    });
-    row.appendChild(btn);
-  });
-}
-
-/* ============================================================
-   ISLAND DETAIL / ITINERARY PAGE
-============================================================ */
-function renderIslandPage(key) {
+async function renderIslandPage(key) {
   const island = ISLANDS_DATA[key];
   if (!island) return;
 
   document.getElementById('island-name').textContent = island.name;
-  document.getElementById('island-meta-info').textContent = `${island.island_group} · ${fmtNum(island.area)} km² · Pop. ${fmtNum(island.pop)}`;
+  document.getElementById('island-meta-info').textContent =
+    island.island_group + ' · ' + fmtNum(island.area) + ' km² · Pop. ' + fmtNum(island.pop);
 
   const compareBtn = document.getElementById('detail-compare-btn');
   if (compareBtn) {
@@ -454,113 +129,266 @@ function renderIslandPage(key) {
   }
 
   SCORE_DIMS.forEach(dim => {
-    const bar = document.getElementById(`star-${dim}`);
-    const val = document.getElementById(`val-${dim}`);
-    if (bar) { bar.style.width = `${(island[dim] / 5) * 100}%`; bar.style.background = SCORE_COLORS[dim]; }
+    const bar = document.getElementById('star-' + dim);
+    const val = document.getElementById('val-' + dim);
+    if (bar) { bar.style.width = ((island[dim] / 5) * 100) + '%'; bar.style.background = SCORE_COLORS[dim]; }
     if (val) val.textContent = fmt(island[dim]);
   });
-  document.getElementById('stat-area').textContent = `${fmtNum(island.area)} km²`;
+  document.getElementById('stat-area').textContent = fmtNum(island.area) + ' km²';
   document.getElementById('stat-pop').textContent = fmtNum(island.pop);
   document.getElementById('stat-group').textContent = island.island_group;
 
   const guide = document.getElementById('island-guide');
+  const miniMapEl = document.getElementById('island-mini-map');
   if (!guide) return;
 
-  if (key === 'lesvos') {
-    guide.innerHTML = buildLesvosItinerary();
-    setTimeout(() => initItineraryMap(), 80);
+  // Try to load island JSON
+  let data = null;
+  try {
+    if (islandPageCache[key]) {
+      data = islandPageCache[key];
+    } else {
+      const res = await fetch('islands/' + key + '.json');
+      if (res.ok) {
+        data = await res.json();
+        islandPageCache[key] = data;
+      }
+    }
+  } catch(e) {
+    console.warn('No island JSON for', key, e);
+  }
+
+  if (data && (data.days || data.beaches)) {
+    // Rich island page — hide mini map, render full itinerary
+    if (miniMapEl) miniMapEl.style.display = 'none';
+    guide.innerHTML = buildIslandPage(data);
+    setTimeout(() => initItineraryMap(data), 80);
   } else {
-    // Generic mini-map + summary for other islands
-    const miniMapEl = document.getElementById('island-mini-map');
+    // Generic fallback for islands without a JSON file yet
     if (miniMapEl) {
+      miniMapEl.style.display = '';
       if (miniMapInstance) { miniMapInstance.remove(); miniMapInstance = null; }
       miniMapEl.style.height = '220px';
       setTimeout(() => {
-        miniMapInstance = L.map(miniMapEl, { zoomControl: false, attributionControl: false }).setView([island.lat, island.lng], 9);
+        miniMapInstance = L.map(miniMapEl, { zoomControl: false, attributionControl: false })
+          .setView([island.lat, island.lng], 9);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(miniMapInstance);
         L.marker([island.lat, island.lng]).addTo(miniMapInstance).bindPopup(island.name).openPopup();
       }, 50);
     }
-    guide.innerHTML = `<div class="island-guide-box"><h3>Blueprint Summary</h3><p>${island.name} scores <strong>${fmt(island.total)}/5</strong> overall.${island.beach >= 4.5 ? ' Outstanding beaches.' : ''}${island.hist >= 4.5 ? ' Exceptional culture and history.' : ''}${island.night >= 4.5 ? ' Among the best nightlife in Greece.' : ''}${island.afford >= 4.2 ? ' Very affordable.' : ''}${island.afford <= 1.5 ? ' One of the most expensive islands — budget accordingly.' : ''}${island.access >= 4.5 ? ' Excellent connections from Athens.' : ''}${island.access <= 2.0 ? ' Remote and harder to reach — but worth the effort.' : ''}</p><p style="margin-top:10px"><a href="#" onclick="window._addCmpNav('${key}')">Compare with another island →</a></p></div>`;
+    guide.innerHTML = buildGenericSummary(key, island);
   }
 }
 
-function buildLesvosItinerary() {
-  const legendItems = LESVOS_DAYS.map(d =>
-    `<span class="itin-legend-item"><span class="itin-legend-dot" style="background:${d.color}"></span>Day ${d.day}: ${d.title}</span>`
-  ).join('');
+function buildGenericSummary(key, island) {
+  return '<div class="island-guide-box">' +
+    '<h3>Blueprint Summary</h3>' +
+    '<p>' + island.name + ' scores <strong>' + fmt(island.total) + '/5</strong> overall.' +
+    (island.beach >= 4.5 ? ' Outstanding beaches.' : '') +
+    (island.hist >= 4.5 ? ' Exceptional culture and history.' : '') +
+    (island.night >= 4.5 ? ' Among the best nightlife in Greece.' : '') +
+    (island.afford >= 4.2 ? ' Very affordable.' : '') +
+    (island.afford <= 1.5 ? ' One of the most expensive islands — budget accordingly.' : '') +
+    (island.access >= 4.5 ? ' Excellent connections from Athens.' : '') +
+    (island.access <= 2.0 ? ' Remote and harder to reach — but worth the effort.' : '') +
+    '</p>' +
+    '<p style="margin-top:10px"><a href="#" onclick="window._addCmpNav('' + key + '')">Compare with another island →</a></p>' +
+    '</div>';
+}
 
-  const dayCards = LESVOS_DAYS.map(d => {
-    const stops = d.stops.map((s, i) =>
-      `<div class="itin-stop">
-        <div class="itin-stop-num" style="background:${d.color}">${i + 1}</div>
-        <div class="itin-stop-content">
-          <div class="itin-stop-name">${s.name}</div>
-          <div class="itin-stop-desc">${s.desc}</div>
-        </div>
-      </div>`
-    ).join('');
-    return `<div class="itin-day-card">
-      <div class="itin-day-header" style="border-left:4px solid ${d.color}">
-        <span class="itin-day-label" style="color:${d.color}">Day ${d.day}</span>
-        <span class="itin-day-title">${d.title}</span>
-      </div>
-      <div class="itin-stops">${stops}</div>
-    </div>`;
+/* ---- Shared island page builder (works for any island JSON) ---- */
+function buildIslandPage(data) {
+  const days = data.days || [];
+  const beaches = data.beaches || [];
+
+  const dayBtns = [
+    '<button class="itin-day-btn active" data-day="all" onclick="filterItinDay('all')" style="border-color:#888;color:#555">All days</button>',
+    ...days.map(d =>
+      '<button class="itin-day-btn" data-day="' + d.day + '" onclick="filterItinDay(' + d.day + ')" style="border-color:' + d.color + ';color:' + d.color + '">Day ' + d.day + ': ' + d.title + '</button>'
+    )
+  ].join('');
+
+  const dayCards = days.map(d => {
+    const stops = d.stops.map((s, i) => {
+      const nameHtml = s.wiki
+        ? '<a href="' + s.wiki + '" target="_blank" rel="noopener" class="itin-stop-link">' + s.name + '</a>'
+        : s.name;
+      return '<div class="itin-stop">' +
+        '<div class="itin-stop-icon">' + poiIcon(s.type || 'village', d.color) + '</div>' +
+        '<div class="itin-stop-content">' +
+          '<div class="itin-stop-name">' + nameHtml + '</div>' +
+          '<div class="itin-stop-desc">' + s.desc + '</div>' +
+        '</div>' +
+        '</div>';
+    }).join('');
+    return '<div class="itin-day-card" id="itin-day-card-' + d.day + '">' +
+      '<div class="itin-day-header" style="border-left:4px solid ' + d.color + '">' +
+        '<span class="itin-day-label" style="color:' + d.color + '">Day ' + d.day + '</span>' +
+        '<span class="itin-day-title">' + d.title + '</span>' +
+      '</div>' +
+      '<div class="itin-stops">' + stops + '</div>' +
+      '</div>';
   }).join('');
 
-  return `
-    <div class="itin-wrapper">
-      <div class="itin-hero">
-        <h2 class="itin-title">6-Day Lesvos Itinerary</h2>
-        <p class="itin-subtitle">A complete circuit of the island — from the Aegean's ouzo capital to the birthplace of Sappho, medieval castles to petrified forests.</p>
-      </div>
-      <div class="itin-map-wrap">
-        <div id="itin-map"></div>
-        <div class="itin-legend">${legendItems}</div>
-      </div>
-      <div class="itin-days">${dayCards}</div>
-    </div>`;
+  const beachCards = beaches.map((b, i) => {
+    const nameHtml = b.wiki
+      ? '<a href="' + b.wiki + '" target="_blank" rel="noopener" class="beach-name-link">' + b.name + '</a>'
+      : b.name;
+    return '<div class="beach-card">' +
+      '<div class="beach-rank">' + (i + 1) + '</div>' +
+      '<div class="beach-content">' +
+        '<div class="beach-name">' + nameHtml + '</div>' +
+        '<p class="beach-desc">' + b.desc + '</p>' +
+        '<div class="beach-specs">' +
+          '<div class="beach-spec"><span class="beach-spec-label">Type</span><span class="beach-spec-val">' + b.type + '</span></div>' +
+          '<div class="beach-spec"><span class="beach-spec-label">Length</span><span class="beach-spec-val">' + b.length + '</span></div>' +
+          '<div class="beach-spec"><span class="beach-spec-label">Depth</span><span class="beach-spec-val">' + b.depth + '</span></div>' +
+          '<div class="beach-spec"><span class="beach-spec-label">Wind protection</span><span class="beach-spec-val">' + b.facing + '</span></div>' +
+          '<div class="beach-spec beach-spec-full"><span class="beach-spec-label">Facilities</span><span class="beach-spec-val">' + b.facilities + '</span></div>' +
+        '</div>' +
+      '</div>' +
+      '</div>';
+  }).join('');
+
+  const beachSection = beaches.length ? (
+    '<div class="itin-beaches-section">' +
+      '<div class="itin-beaches-header">' +
+        '<h2 class="itin-beaches-title">Top ' + beaches.length + ' Beaches</h2>' +
+        '<p class="itin-beaches-sub">Ranked by overall quality — with details on sand type, depth, wind exposure and facilities.</p>' +
+      '</div>' +
+      '<div class="itin-beaches-list">' + beachCards + '</div>' +
+    '</div>'
+  ) : '';
+
+  return '<div class="itin-wrapper">' +
+    '<div class="itin-hero">' +
+      '<h2 class="itin-title">' + (data.itinerary_title || data.name + ' Itinerary') + '</h2>' +
+      '<p class="itin-subtitle">' + (data.itinerary_subtitle || '') + '</p>' +
+    '</div>' +
+    '<div class="itin-day-filter">' + dayBtns + '</div>' +
+    '<div class="itin-map-wrap"><div id="itin-map"></div></div>' +
+    '<div class="itin-days" id="itin-days-container">' + dayCards + '</div>' +
+    beachSection +
+    '</div>';
 }
 
-function initItineraryMap() {
-  const mapEl = document.getElementById('itin-map');
-  if (!mapEl) return;
-  if (itineraryMapInstance) { itineraryMapInstance.remove(); itineraryMapInstance = null; }
-
-  itineraryMapInstance = L.map(mapEl, { zoomControl: true, attributionControl: true });
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors', maxZoom: 14,
-  }).addTo(itineraryMapInstance);
-
-  const allCoords = LESVOS_DAYS.flatMap(d => d.stops.map(s => [s.lat, s.lng]));
-  const bounds = L.latLngBounds(allCoords);
-  itineraryMapInstance.fitBounds(bounds, { padding: [30, 30] });
-
-  LESVOS_DAYS.forEach(day => {
-    const coords = day.stops.map(s => [s.lat, s.lng]);
-
-    // Draw route polyline for this day
-    L.polyline(coords, {
-      color: day.color,
-      weight: 4,
-      opacity: 0.85,
-      dashArray: null,
-    }).addTo(itineraryMapInstance);
-
-    // Draw stop markers
-    day.stops.forEach((stop, i) => {
-      const icon = L.divIcon({
-        className: 'custom-marker',
-        html: `<div style="background:${day.color};width:28px;height:28px;border-radius:50%;border:2.5px solid #fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.35);">${i + 1}</div>`,
-        iconSize: [28, 28], iconAnchor: [14, 14],
-      });
-      L.marker([stop.lat, stop.lng], { icon })
-        .addTo(itineraryMapInstance)
-        .bindPopup(`<div style="min-width:180px;font-family:sans-serif"><div style="font-size:11px;font-weight:700;color:${day.color};text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Day ${day.day} · Stop ${i + 1}</div><strong style="font-size:14px">${stop.name}</strong><p style="font-size:12px;color:#555;margin:6px 0 0;line-height:1.5">${stop.desc}</p></div>`);
+/* ---- Day filter ---- */
+function filterItinDay(day) {
+  itinActiveDay = day;
+  document.querySelectorAll('.itin-day-btn').forEach(btn => {
+    btn.classList.toggle('active', String(btn.dataset.day) === String(day));
+  });
+  document.querySelectorAll('.itin-day-card').forEach(card => {
+    card.style.display = (day === 'all' || card.id === 'itin-day-card-' + day) ? '' : 'none';
+  });
+  if (!itineraryMapInstance) return;
+  Object.entries(itinRouteLayers).forEach(([d, layers]) => {
+    layers.forEach(l => {
+      if (day === 'all' || String(d) === String(day)) l.addTo(itineraryMapInstance);
+      else itineraryMapInstance.removeLayer(l);
     });
   });
+  Object.entries(itinMarkerLayers).forEach(([d, markers]) => {
+    markers.forEach(m => {
+      if (day === 'all' || String(d) === String(day)) m.addTo(itineraryMapInstance);
+      else itineraryMapInstance.removeLayer(m);
+    });
+  });
+  const targetDay = day === 'all' ? null : (itineraryMapInstance._currentData || {days:[]}).days.find(d2 => d2.day === day);
+  if (day === 'all') {
+    const all = Object.values(itinRouteLayers).flat().map(l => l.getBounds ? l.getBounds() : null).filter(Boolean);
+    if (all.length) itineraryMapInstance.fitBounds(all.reduce((a, b) => a.extend(b)));
+  } else if (targetDay) {
+    const coords = targetDay.stops.map(s => [s.lat, s.lng]);
+    if (coords.length) itineraryMapInstance.fitBounds(L.latLngBounds(coords), { padding: [50, 50] });
+  }
 }
+
+/* ---- OSRM road routing ---- */
+async function fetchOSRMRoute(coords) {
+  const coordStr = coords.map(c => c[1] + ',' + c[0]).join(';');
+  const url = 'https://router.project-osrm.org/route/v1/driving/' + coordStr + '?overview=full&geometries=geojson';
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    if (data.routes && data.routes[0]) {
+      return data.routes[0].geometry.coordinates.map(c => [c[1], c[0]]);
+    }
+  } catch(e) { console.warn('OSRM fallback', e); }
+  return coords;
+}
+
+/* ---- POI type SVG icons ---- */
+function poiIcon(type, color) {
+  const icons = {
+    city:       '<path d="M8 2L10 7H14L11 10L12 14L8 11L4 14L5 10L2 7H6Z" fill="' + color + '"/>',
+    castle:     '<rect x="3" y="8" width="3" height="8" fill="' + color + '"/><rect x="11" y="8" width="3" height="8" fill="' + color + '"/><rect x="3" y="4" width="3" height="3" fill="' + color + '"/><rect x="11" y="4" width="3" height="3" fill="' + color + '"/><rect x="6" y="10" width="5" height="6" fill="' + color + '"/><rect x="4" y="2" width="2" height="3" fill="' + color + '"/><rect x="11" y="2" width="2" height="3" fill="' + color + '"/>',
+    beach:      '<path d="M4 14 Q8 6 12 14Z" fill="' + color + '" opacity=".3"/><path d="M8 3 L8 14" stroke="' + color + '" stroke-width="2"/><path d="M8 6 Q11 5 13 8" stroke="' + color + '" stroke-width="1.5" fill="none" stroke-linecap="round"/><ellipse cx="8" cy="14" rx="5" ry="1.5" fill="' + color + '" opacity=".4"/>',
+    village:    '<path d="M8 2L14 8H11V14H5V8H2Z" fill="' + color + '"/>',
+    nature:     '<path d="M8 1L13 9H10L13 14H3L6 9H3Z" fill="' + color + '"/>',
+    spa:        '<circle cx="8" cy="8" r="5" fill="none" stroke="' + color + '" stroke-width="1.5"/><path d="M8 4Q10 6 8 8Q6 10 8 12" stroke="' + color + '" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="8" cy="8" r="1.5" fill="' + color + '"/>',
+    church:     '<rect x="6" y="8" width="4" height="6" fill="' + color + '"/><path d="M4 8H12L8 4Z" fill="' + color + '"/><rect x="7" y="2" width="2" height="4" fill="' + color + '"/><rect x="6" y="3" width="4" height="2" fill="' + color + '"/>',
+    distillery: '<path d="M6 2H10L11 6H5Z" fill="' + color + '"/><rect x="5" y="6" width="6" height="7" rx="3" fill="' + color + '"/><rect x="7" y="13" width="2" height="2" fill="' + color + '"/>',
+    harbour:    '<path d="M2 11Q8 7 14 11" stroke="' + color + '" stroke-width="2" fill="none"/><path d="M8 3V11" stroke="' + color + '" stroke-width="1.5"/><path d="M5 6H11" stroke="' + color + '" stroke-width="1.5"/><path d="M5 13Q8 15 11 13" stroke="' + color + '" stroke-width="1.5" fill="none"/>',
+    museum:     '<rect x="3" y="7" width="10" height="7" fill="' + color + '"/><path d="M2 7H14L8 3Z" fill="' + color + '"/><rect x="6" y="9" width="3" height="5" fill="white" opacity=".35"/>',
+    forest:     '<path d="M8 1L12 8H9.5L12 13H4L6.5 8H4Z" fill="' + color + '"/>',
+  };
+  const shape = icons[type] || icons.village;
+  return '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16" style="filter:drop-shadow(0 1px 4px rgba(0,0,0,.5))">' + shape + '</svg>';
+}
+
+/* ---- Map initialiser (works for any island data) ---- */
+async function initItineraryMap(data) {
+  const mapEl = document.getElementById('itin-map');
+  if (!mapEl || !data || !data.days) return;
+  if (itineraryMapInstance) { itineraryMapInstance.remove(); itineraryMapInstance = null; }
+  itinRouteLayers = {};
+  itinMarkerLayers = {};
+
+  itineraryMapInstance = L.map(mapEl, { zoomControl: true, attributionControl: true });
+  itineraryMapInstance._currentData = data;
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors', maxZoom: 16,
+  }).addTo(itineraryMapInstance);
+
+  const allCoords = data.days.flatMap(d => d.stops.map(s => [s.lat, s.lng]));
+  itineraryMapInstance.fitBounds(L.latLngBounds(allCoords), { padding: [30, 30] });
+
+  for (const day of data.days) {
+    itinRouteLayers[day.day] = [];
+    itinMarkerLayers[day.day] = [];
+
+    const coords = day.stops.map(s => [s.lat, s.lng]);
+    const routeCoords = await fetchOSRMRoute(coords);
+
+    const polyline = L.polyline(routeCoords, { color: day.color, weight: 5, opacity: 0.88 })
+      .addTo(itineraryMapInstance);
+    itinRouteLayers[day.day].push(polyline);
+
+    day.stops.forEach((stop, i) => {
+      const nameHtml = stop.wiki
+        ? '<a href="' + stop.wiki + '" target="_blank" rel="noopener" style="color:' + day.color + ';font-weight:700">' + stop.name + '</a>'
+        : '<strong>' + stop.name + '</strong>';
+      const typeLabel = stop.type ? stop.type.charAt(0).toUpperCase() + stop.type.slice(1) : 'Stop';
+      const icon = L.divIcon({
+        className: 'custom-marker',
+        html: poiIcon(stop.type || 'village', day.color),
+        iconSize: [32, 32], iconAnchor: [16, 16],
+      });
+      const marker = L.marker([stop.lat, stop.lng], { icon })
+        .addTo(itineraryMapInstance)
+        .bindPopup(
+          '<div style="min-width:190px;font-family:sans-serif">' +
+          '<div style="font-size:10px;font-weight:700;color:' + day.color + ';text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px">Day ' + day.day + ' · ' + typeLabel + '</div>' +
+          nameHtml +
+          '<p style="font-size:12px;color:#555;margin:6px 0 0;line-height:1.55">' + stop.desc + '</p>' +
+          '</div>'
+        );
+      itinMarkerLayers[day.day].push(marker);
+    });
+  }
+}
+
 
 /* ============================================================
    DATA TABLE
