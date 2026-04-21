@@ -439,7 +439,10 @@ function buildIslandPage(data) {
       <div class="beach-card-body">
         <div class="beach-rank-name">
           <div class="beach-rank">${i + 1}</div>
-          <div class="beach-name">${nameHtml}</div>
+          <div class="beach-name-stars">
+            <div class="beach-name">${nameHtml}</div>
+            <div class="beach-stars">${'★'.repeat(b.rating || 4)}${'☆'.repeat(5 - (b.rating || 4))}</div>
+          </div>
         </div>
         <p class="beach-desc">${b.desc}</p>
         <div class="beach-specs">
