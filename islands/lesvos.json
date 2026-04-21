@@ -11,12 +11,16 @@
         "day": 1,
         "title": "Mytilene & the South",
         "color": "#1B4F8A",
+        "km": 55,
+        "drive_mins": 65,
+        "overnight": "Plomari",
         "stops": [
           {
             "name": "Mytilene Town",
             "lat": 39.1076,
             "lng": 26.5545,
             "type": "city",
+            "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Mytilene",
             "desc": "Arrive and settle in. Walk the waterfront promenade and explore the old harbour."
           },
@@ -25,24 +29,45 @@
             "lat": 39.1128,
             "lng": 26.5612,
             "type": "castle",
+            "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Castle_of_Mytilene",
-            "desc": "One of the largest medieval castles in the Aegean, with panoramic harbour views."
+            "desc": "One of the largest medieval castles in the Aegean, with panoramic harbour views. Allow 1 hour."
           },
           {
             "name": "Varia Village",
             "lat": 39.0872,
             "lng": 26.5463,
             "type": "museum",
+            "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Th%C3%A9riade",
             "desc": "Home to the Museum of Theophilos and Tériade Museum — two world-class art collections."
+          },
+          {
+            "name": "Lunch — Ουζερί Αντώνης",
+            "lat": 39.105,
+            "lng": 26.551,
+            "type": "harbour",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "Classic ouzeri in Mytilene harbour. Try the local sardines, ouzo and mezedes."
           },
           {
             "name": "Agios Isidoros Beach",
             "lat": 38.998,
             "lng": 26.396,
             "type": "beach",
+            "time": "16:00",
             "wiki": null,
-            "desc": "Relaxed sandy beach on the south coast, sheltered and calm. Evening swim."
+            "desc": "Relaxed sandy beach on the south coast, sheltered and calm. Afternoon swim."
+          },
+          {
+            "name": "Dinner — Το Kafeneon",
+            "lat": 38.9772,
+            "lng": 26.3695,
+            "type": "village",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "«Το Καφενείον» Meat Stories in Plomari — grilled meats and local wine in a traditional setting. Stay overnight in Plomari."
           }
         ]
       },
@@ -50,46 +75,54 @@
         "day": 2,
         "title": "Plomari & Ouzo Country",
         "color": "#C0522A",
+        "km": 62,
+        "drive_mins": 75,
+        "overnight": "Vatera",
         "stops": [
           {
-            "name": "Mytilene",
-            "lat": 39.1076,
-            "lng": 26.5545,
+            "name": "Plomari",
+            "lat": 38.9772,
+            "lng": 26.3695,
             "type": "city",
-            "wiki": null,
-            "desc": "Depart south after breakfast via the mountain road."
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Plomari",
+            "desc": "Morning coffee on the harbour front before departing."
           },
           {
             "name": "Agiasos",
             "lat": 39.0726,
             "lng": 26.3883,
             "type": "village",
+            "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Agiasos",
-            "desc": "Charming mountain village with cobbled lanes and a lively carnival tradition."
+            "desc": "Charming mountain village with cobbled lanes and a lively carnival tradition. Browse the craft shops."
           },
           {
-            "name": "Plomari",
+            "name": "Barbayiannis Distillery",
             "lat": 38.9772,
             "lng": 26.3695,
             "type": "distillery",
-            "wiki": "https://en.wikipedia.org/wiki/Plomari",
-            "desc": "Ouzo capital of Greece. Tour the Barbayiannis distillery and sample the local product."
+            "time": "12:00",
+            "wiki": "https://en.wikipedia.org/wiki/Barbayiannis",
+            "desc": "Tour the oldest ouzo distillery in Plomari. Tasting included."
           },
           {
             "name": "Melinda Beach",
-            "lat": 38.9628,
-            "lng": 26.2892,
+            "lat": 38.962,
+            "lng": 26.287,
             "type": "beach",
+            "time": "13:30",
             "wiki": null,
-            "desc": "Secluded fine pebble cove west of Plomari, tucked under a pine-clad hillside."
+            "desc": "Secluded pebble cove west of Plomari. Swim and lunch at the small taverna."
           },
           {
             "name": "Vatera Beach",
-            "lat": 38.9492,
-            "lng": 26.154,
+            "lat": 38.952,
+            "lng": 26.162,
             "type": "beach",
+            "time": "16:00",
             "wiki": "https://en.wikipedia.org/wiki/Vatera",
-            "desc": "8 km of uninterrupted golden sand — one of the longest beaches in the Aegean. Stay overnight."
+            "desc": "8 km of uninterrupted golden sand. Long afternoon swim. Stay overnight at Vatera."
           }
         ]
       },
@@ -97,12 +130,16 @@
         "day": 3,
         "title": "Sigri & Petrified Forest",
         "color": "#5A7A3A",
+        "km": 90,
+        "drive_mins": 100,
+        "overnight": "Skala Eresou",
         "stops": [
           {
             "name": "Vatera",
-            "lat": 38.9492,
-            "lng": 26.154,
+            "lat": 38.952,
+            "lng": 26.162,
             "type": "beach",
+            "time": "09:00",
             "wiki": null,
             "desc": "Depart west along the southern coastal road."
           },
@@ -111,32 +148,36 @@
             "lat": 39.2112,
             "lng": 25.978,
             "type": "nature",
+            "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Lesvos_Petrified_Forest",
-            "desc": "UNESCO-listed Petrified Forest — 20 million year old trees turned to stone by volcanic ash."
+            "desc": "UNESCO-listed Petrified Forest — 20 million year old trees turned to stone by volcanic ash. Allow 1.5 hours."
           },
           {
             "name": "Sigri",
             "lat": 39.2087,
             "lng": 25.8568,
             "type": "harbour",
+            "time": "13:00",
             "wiki": "https://en.wikipedia.org/wiki/Sigri",
-            "desc": "Westernmost village of Lesvos. Tiny whitewashed harbour and the Natural History Museum."
+            "desc": "Westernmost village. Lunch at the harbour with fresh fish. Visit the Natural History Museum."
           },
           {
             "name": "Faneromeni Beach",
             "lat": 39.228,
             "lng": 25.895,
             "type": "beach",
+            "time": "15:00",
             "wiki": null,
-            "desc": "Wild, exposed beach north of Sigri with dramatic sea-carved cliffs and vivid turquoise water."
+            "desc": "Wild, exposed beach north of Sigri with dramatic cliffs and vivid turquoise water."
           },
           {
             "name": "Skala Eresou",
-            "lat": 39.1658,
-            "lng": 25.9462,
+            "lat": 39.1333,
+            "lng": 25.9333,
             "type": "beach",
+            "time": "17:30",
             "wiki": "https://en.wikipedia.org/wiki/Eresos",
-            "desc": "Birthplace of Sappho. Laid-back beach village with a long sandy shore. Stay the night."
+            "desc": "Birthplace of Sappho. Laid-back beach village. Sunset on the beach, dinner at a waterfront taverna. Stay overnight."
           }
         ]
       },
@@ -144,12 +185,16 @@
         "day": 4,
         "title": "Kalloni & the Gulf",
         "color": "#C4962A",
+        "km": 75,
+        "drive_mins": 85,
+        "overnight": "Molyvos",
         "stops": [
           {
             "name": "Skala Eresou",
-            "lat": 39.1658,
-            "lng": 25.9462,
+            "lat": 39.1333,
+            "lng": 25.9333,
             "type": "beach",
+            "time": "09:00",
             "wiki": null,
             "desc": "Morning coffee on the beach before heading north."
           },
@@ -158,6 +203,7 @@
             "lat": 39.212,
             "lng": 26.202,
             "type": "city",
+            "time": "10:30",
             "wiki": "https://en.wikipedia.org/wiki/Kalloni",
             "desc": "Main inland market town. The Gulf of Kalloni sardines are famous across Greece."
           },
@@ -166,24 +212,27 @@
             "lat": 39.1762,
             "lng": 26.2102,
             "type": "harbour",
+            "time": "11:30",
             "wiki": null,
-            "desc": "Fishing port on the sheltered Gulf of Kalloni, a world-class birdwatching destination."
+            "desc": "Fishing port on the sheltered Gulf of Kalloni. Grilled sardines at the harbour — a local institution."
           },
           {
             "name": "Parakila",
             "lat": 39.242,
             "lng": 26.274,
             "type": "village",
+            "time": "13:30",
             "wiki": null,
-            "desc": "Quiet village on the northern shore of the gulf."
+            "desc": "Quiet village on the northern shore of the gulf. Coffee stop."
           },
           {
             "name": "Molyvos (Mithymna)",
             "lat": 39.3718,
             "lng": 26.1647,
             "type": "castle",
+            "time": "15:30",
             "wiki": "https://en.wikipedia.org/wiki/Molyvos",
-            "desc": "Most photogenic village in Lesvos — a Byzantine castle perched above a cobbled harbour. Stay here."
+            "desc": "Most photogenic village in Lesvos — Byzantine castle above a cobbled harbour. Explore the old town. Stay overnight."
           }
         ]
       },
@@ -191,12 +240,16 @@
         "day": 5,
         "title": "Molyvos, Petra & the North",
         "color": "#7B5EA7",
+        "km": 40,
+        "drive_mins": 50,
+        "overnight": "Petra",
         "stops": [
           {
             "name": "Molyvos Castle",
             "lat": 39.3748,
             "lng": 26.1671,
             "type": "castle",
+            "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Castle_of_Molyvos",
             "desc": "Morning walk up to the Byzantine castle. On clear days you can see the Turkish coast."
           },
@@ -205,22 +258,25 @@
             "lat": 39.3948,
             "lng": 26.2052,
             "type": "spa",
+            "time": "10:30",
             "wiki": "https://en.wikipedia.org/wiki/Eftalou",
-            "desc": "Ottoman-era thermal baths built directly on the beach. The domed stone bathhouse dates to the 19th century."
+            "desc": "Ottoman-era thermal baths built directly on the beach. The domed bathhouse dates to the 19th century."
           },
           {
             "name": "Petra",
             "lat": 39.327,
             "lng": 26.152,
             "type": "church",
+            "time": "12:30",
             "wiki": "https://en.wikipedia.org/wiki/Petra,_Lesbos",
-            "desc": "Village dominated by a 33-metre monolithic rock with the Church of the Sweet-Kissing Virgin on top."
+            "desc": "Village dominated by a 33-metre rock with the Church of the Sweet-Kissing Virgin on top. Climb for the view."
           },
           {
             "name": "Anaxos Beach",
             "lat": 39.3072,
             "lng": 26.1298,
             "type": "beach",
+            "time": "14:00",
             "wiki": null,
             "desc": "Long sandy beach facing southwest, with clear views of Molyvos castle. Afternoon swim."
           },
@@ -229,8 +285,9 @@
             "lat": 39.329,
             "lng": 26.198,
             "type": "nature",
+            "time": "17:00",
             "wiki": "https://en.wikipedia.org/wiki/Lepetymnos",
-            "desc": "The highest peak of northern Lesvos at 968 m. Pine forests, views of both coastlines."
+            "desc": "The highest peak of northern Lesvos at 968 m. Pine forests, views of both coastlines. Stay overnight in Petra."
           }
         ]
       },
@@ -238,38 +295,45 @@
         "day": 6,
         "title": "Eastern Lesvos & Departure",
         "color": "#2E7D32",
+        "km": 70,
+        "drive_mins": 80,
+        "overnight": null,
         "stops": [
           {
             "name": "Mandamados",
             "lat": 39.308,
             "lng": 26.334,
             "type": "church",
+            "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Mandamados",
-            "desc": "Famous for the icon of Archangel Michael moulded from soil and monks' blood, and for its pottery."
+            "desc": "Famous for the icon of Archangel Michael and for its traditional pottery workshops."
           },
           {
             "name": "Tsonia Beach",
             "lat": 39.321,
             "lng": 26.448,
             "type": "beach",
+            "time": "10:30",
             "wiki": null,
-            "desc": "Remote northern beach accessible by a dirt road — pristine, empty, and wild."
+            "desc": "Remote northern beach accessible by dirt road — pristine, empty, and wild."
           },
           {
             "name": "Thermi",
-            "lat": 39.152,
-            "lng": 26.578,
+            "lat": 39.1799,
+            "lng": 26.4848,
             "type": "spa",
+            "time": "13:00",
             "wiki": "https://en.wikipedia.org/wiki/Thermi,_Lesbos",
-            "desc": "Spa village with natural thermal springs 12 km north of Mytilene, used since antiquity."
+            "desc": "Spa village with natural thermal springs north of Mytilene, used since antiquity. Lunch at a seafront taverna."
           },
           {
             "name": "Mytilene Town",
             "lat": 39.1076,
             "lng": 26.5545,
             "type": "city",
+            "time": "15:00",
             "wiki": "https://en.wikipedia.org/wiki/Mytilene",
-            "desc": "Return to Mytilene. Final lunch at the harbour. Depart by ferry or flight."
+            "desc": "Return to Mytilene. Final coffee at the harbour. Depart by ferry or flight."
           }
         ]
       }
