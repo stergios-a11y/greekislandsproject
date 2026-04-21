@@ -409,18 +409,25 @@ function buildIslandPage(data) {
       const nameHtml = s.wiki
         ? `<a href="${s.wiki}" target="_blank" rel="noopener" class="itin-stop-link">${s.name}</a>`
         : s.name;
+      const timeHtml = s.time ? `<span class="itin-stop-time">${s.time}</span>` : '';
       return `<div class="itin-stop">
         <div class="itin-stop-num" style="background:${d.color}">${i + 1}</div>
         <div class="itin-stop-content">
-          <div class="itin-stop-name">${nameHtml}</div>
+          <div class="itin-stop-name-row">${nameHtml}${timeHtml}</div>
           <div class="itin-stop-desc">${s.desc}</div>
         </div>
       </div>`;
     }).join('');
+    const driveInfo = d.km ? `<span class="itin-day-meta">${d.km} km · ${d.drive_mins} min drive</span>` : '';
+    const overnightHtml = d.overnight ? `<span class="itin-overnight" style="border-color:${d.color};color:${d.color}">🌙 Sleep: ${d.overnight}</span>` : '';
     return `<div class="itin-day-card" id="itin-day-card-${d.day}">
       <div class="itin-day-header" style="border-left:4px solid ${d.color}">
-        <span class="itin-day-label" style="color:${d.color}">Day ${d.day}</span>
-        <span class="itin-day-title">${d.title}</span>
+        <div class="itin-day-header-main">
+          <span class="itin-day-label" style="color:${d.color}">Day ${d.day}</span>
+          <span class="itin-day-title">${d.title}</span>
+          ${driveInfo}
+        </div>
+        ${overnightHtml}
       </div>
       <div class="itin-stops">${stops}</div>
     </div>`;
