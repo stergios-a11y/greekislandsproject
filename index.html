@@ -1041,6 +1041,120 @@ html.dark .why-feat-num { color: var(--marble-3); }
   .itin-days { padding: 0 12px; }
   .itin-title { font-size: 20px; }
 }
+
+.itin-day-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 14px 20px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+.itin-day-btn {
+  padding: 6px 14px;
+  font-size: 12px; font-weight: 600; font-family: var(--sans);
+  border: 1.5px solid;
+  border-radius: 20px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+  opacity: 0.6;
+}
+.itin-day-btn.active { opacity: 1; background: currentColor; color: #fff !important; }
+.itin-day-btn:hover { opacity: 1; }
+
+.itin-stop-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(0,0,0,0.25);
+  text-underline-offset: 2px;
+}
+.itin-stop-link:hover { text-decoration-color: currentColor; }
+
+.itin-beaches-section {
+  margin: 32px 24px 0;
+}
+.itin-beaches-header {
+  margin-bottom: 20px;
+}
+.itin-beaches-title {
+  font-family: var(--serif);
+  font-size: 22px; font-weight: 600;
+  color: var(--ink); margin-bottom: 6px;
+}
+.itin-beaches-sub {
+  font-size: 13px; color: var(--ink-3); margin: 0;
+}
+.itin-beaches-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.beach-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  display: flex;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.15s;
+}
+.beach-card:hover { border-color: var(--aegean-light); }
+.beach-rank {
+  font-family: var(--serif);
+  font-size: 28px; font-weight: 600;
+  color: var(--aegean-light);
+  flex-shrink: 0; width: 32px;
+  padding-top: 2px;
+}
+.beach-content { flex: 1; }
+.beach-name {
+  font-family: var(--serif);
+  font-size: 17px; font-weight: 600;
+  color: var(--ink); margin-bottom: 6px;
+}
+.beach-name-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: rgba(0,0,0,0.2);
+  text-underline-offset: 2px;
+}
+.beach-name-link:hover { color: var(--aegean); text-decoration-color: var(--aegean); }
+.beach-desc {
+  font-size: 13px; color: var(--ink-3);
+  line-height: 1.65; margin: 0 0 12px;
+}
+.beach-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 16px;
+}
+.beach-spec {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.beach-spec-full {
+  grid-column: 1 / -1;
+}
+.beach-spec-label {
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--ink-4);
+}
+.beach-spec-val {
+  font-size: 12px; color: var(--ink-2);
+  line-height: 1.4;
+}
+@media (max-width: 600px) {
+  .beach-card { flex-direction: column; gap: 8px; }
+  .beach-rank { font-size: 20px; }
+  .beach-specs { grid-template-columns: 1fr; }
+  .itin-beaches-section { margin: 24px 12px 0; }
+  .itin-day-filter { padding: 10px 12px; gap: 6px; }
+  .itin-day-btn { font-size: 11px; padding: 5px 10px; }
+}
   </style>
 </head>
 <body>
@@ -1339,10 +1453,10 @@ const LESVOS_DAYS = [
     title: 'Mytilene & the South',
     color: '#1B4F8A',
     stops: [
-      { name: 'Mytilene Town',        lat: 39.107, lng: 26.554, desc: 'Arrive, settle in. Walk the waterfront, visit the Byzantine castle.' },
-      { name: 'Mytilene Castle',      lat: 39.112, lng: 26.561, desc: 'Medieval fortress with panoramic harbour views.' },
-      { name: 'Varia',                lat: 39.083, lng: 26.553, desc: 'Museum of Theophilos & Tériade — two exceptional art museums.' },
-      { name: 'Agios Isidoros Beach', lat: 39.033, lng: 26.481, desc: 'Relaxed sandy beach south of the capital. Evening swim.' },
+      { name: 'Mytilene Town',        lat: 39.1076, lng: 26.5545, wiki: 'https://en.wikipedia.org/wiki/Mytilene', desc: 'Arrive and settle in. Walk the waterfront promenade and explore the old harbour.' },
+      { name: 'Mytilene Castle',      lat: 39.1128, lng: 26.5580, wiki: 'https://en.wikipedia.org/wiki/Castle_of_Mytilene', desc: 'One of the largest medieval castles in the Aegean, with panoramic harbour views.' },
+      { name: 'Varia Village',        lat: 39.0830, lng: 26.5500, wiki: 'https://en.wikipedia.org/wiki/Th%C3%A9riade', desc: 'Home to the <a href="https://en.wikipedia.org/wiki/Museum_of_Theophilos" target="_blank">Museum of Theophilos</a> and <a href="https://en.wikipedia.org/wiki/Th%C3%A9riade" target="_blank">Tériade Museum</a> — two world-class art collections.' },
+      { name: 'Agios Isidoros Beach', lat: 39.0440, lng: 26.4890, wiki: null, desc: 'Relaxed sandy beach 10 km south of the capital, sheltered and calm. Evening swim.' },
     ],
   },
   {
@@ -1350,11 +1464,11 @@ const LESVOS_DAYS = [
     title: 'Plomari & Ouzo Country',
     color: '#C0522A',
     stops: [
-      { name: 'Mytilene',             lat: 39.107, lng: 26.554, desc: 'Depart after breakfast.' },
-      { name: 'Agiasos',              lat: 39.072, lng: 26.388, desc: 'Charming mountain village with cobbled lanes and a lively carnival tradition.' },
-      { name: 'Plomari',              lat: 38.977, lng: 26.371, desc: 'Ouzo capital of Greece. Tour a distillery (Barbayiannis or Varvagiannis).' },
-      { name: 'Melinda Beach',        lat: 38.969, lng: 26.337, desc: 'Secluded pebble cove west of Plomari. Swim & lunch.' },
-      { name: 'Vatera Beach',         lat: 38.949, lng: 26.193, desc: '8 km of uninterrupted sand — one of the finest beaches in the Aegean.' },
+      { name: 'Mytilene',             lat: 39.1076, lng: 26.5545, wiki: null, desc: 'Depart south after breakfast via the mountain road.' },
+      { name: 'Agiasos',              lat: 39.0726, lng: 26.3883, wiki: 'https://en.wikipedia.org/wiki/Agiasos', desc: 'Charming mountain village with cobbled lanes, a lively carnival tradition and the 9th-century Church of the Panagia Agiasos.' },
+      { name: 'Plomari',              lat: 38.9795, lng: 26.3710, wiki: 'https://en.wikipedia.org/wiki/Plomari', desc: 'Ouzo capital of Greece. Tour the <a href="https://en.wikipedia.org/wiki/Barbayiannis" target="_blank">Barbayiannis distillery</a> and sample the local product.' },
+      { name: 'Melinda Beach',        lat: 38.9680, lng: 26.3280, wiki: null, desc: 'Secluded fine pebble cove west of Plomari, tucked under a pine-clad hillside. Swim and lunch.' },
+      { name: 'Vatera Beach',         lat: 38.9510, lng: 26.1580, wiki: 'https://en.wikipedia.org/wiki/Vatera', desc: '8 km of uninterrupted golden sand — one of the longest beaches in the Aegean. Stay overnight.' },
     ],
   },
   {
@@ -1362,11 +1476,11 @@ const LESVOS_DAYS = [
     title: 'Sigri & Petrified Forest',
     color: '#5A7A3A',
     stops: [
-      { name: 'Vatera',               lat: 38.949, lng: 26.193, desc: 'Depart west.' },
-      { name: 'Petrified Forest',     lat: 39.193, lng: 25.934, desc: 'UNESCO-listed petrified forest — 20 million year old trees turned to stone.' },
-      { name: 'Sigri',                lat: 39.208, lng: 25.855, desc: 'Westernmost village. Tiny harbour, Natural History Museum of the Lesvos Petrified Forest.' },
-      { name: 'Faneromeni Beach',     lat: 39.218, lng: 25.887, desc: 'Wild, windy beach near Sigri — dramatic cliffs and turquoise water.' },
-      { name: 'Skala Eresou',         lat: 39.170, lng: 25.965, desc: 'Birthplace of Sappho. Laid-back beach village, stay the night.' },
+      { name: 'Vatera',               lat: 38.9510, lng: 26.1580, wiki: null, desc: 'Depart west along the southern coastal road.' },
+      { name: 'Petrified Forest',     lat: 39.1950, lng: 25.9350, wiki: 'https://en.wikipedia.org/wiki/Lesvos_Petrified_Forest', desc: 'UNESCO-listed <a href="https://en.wikipedia.org/wiki/Lesvos_Petrified_Forest" target="_blank">Petrified Forest</a> — 20 million year old trees turned to stone by volcanic ash.' },
+      { name: 'Sigri',                lat: 39.2090, lng: 25.8570, wiki: 'https://en.wikipedia.org/wiki/Sigri', desc: 'Westernmost village of Lesvos. Tiny whitewashed harbour and the Natural History Museum of the Lesvos Petrified Forest.' },
+      { name: 'Faneromeni Beach',     lat: 39.2160, lng: 25.8840, wiki: null, desc: 'Wild, exposed beach north of Sigri with dramatic sea-carved cliffs and vivid turquoise water.' },
+      { name: 'Skala Eresou',         lat: 39.1720, lng: 25.9650, wiki: 'https://en.wikipedia.org/wiki/Eresos', desc: 'Birthplace of <a href="https://en.wikipedia.org/wiki/Sappho" target="_blank">Sappho</a>. Laid-back beach village with a long sandy shore. Stay the night.' },
     ],
   },
   {
@@ -1374,11 +1488,11 @@ const LESVOS_DAYS = [
     title: 'Kalloni & the Gulf',
     color: '#C4962A',
     stops: [
-      { name: 'Skala Eresou',         lat: 39.170, lng: 25.965, desc: 'Morning coffee on the beach.' },
-      { name: 'Kalloni',              lat: 39.212, lng: 26.202, desc: 'Main inland town. Kalloni Gulf is famous for sardines — try them grilled at the port.' },
-      { name: 'Skala Kalloni',        lat: 39.178, lng: 26.211, desc: 'Fishing port on the Gulf of Kalloni, a world-class birdwatching site.' },
-      { name: 'Parakila',             lat: 39.242, lng: 26.274, desc: 'Quiet village on the northern shore of the gulf.' },
-      { name: 'Molyvos (Mithymna)',   lat: 39.372, lng: 26.164, desc: 'Most photogenic village in Lesvos — castle above a stone-cobbled harbour. Stay here.' },
+      { name: 'Skala Eresou',         lat: 39.1720, lng: 25.9650, wiki: null, desc: 'Morning coffee on the beach before heading north.' },
+      { name: 'Kalloni',              lat: 39.2120, lng: 26.2020, wiki: 'https://en.wikipedia.org/wiki/Kalloni', desc: 'Main inland market town. The <a href="https://en.wikipedia.org/wiki/Gulf_of_Kalloni" target="_blank">Gulf of Kalloni</a> sardines are famous across Greece — try them grilled at the port.' },
+      { name: 'Skala Kalloni',        lat: 39.1780, lng: 26.2120, wiki: null, desc: 'Fishing port on the sheltered Gulf of Kalloni, a world-class wetland and birdwatching destination.' },
+      { name: 'Parakila',             lat: 39.2420, lng: 26.2740, wiki: null, desc: 'Quiet village on the northern shore of the gulf, good for a coffee stop.' },
+      { name: 'Molyvos (Mithymna)',   lat: 39.3720, lng: 26.1640, wiki: 'https://en.wikipedia.org/wiki/Molyvos', desc: 'Most photogenic village in Lesvos — a <a href="https://en.wikipedia.org/wiki/Castle_of_Molyvos" target="_blank">Byzantine castle</a> perched above a cobbled harbour. Stay here.' },
     ],
   },
   {
@@ -1386,23 +1500,81 @@ const LESVOS_DAYS = [
     title: 'Molyvos, Petra & the North',
     color: '#7B5EA7',
     stops: [
-      { name: 'Molyvos Castle',       lat: 39.376, lng: 26.166, desc: 'Morning walk up to the Byzantine castle. Views over Turkey.' },
-      { name: 'Eftalou Hot Springs',  lat: 39.388, lng: 26.187, desc: 'Ottoman-era thermal baths right on the beach. Perfect start to the day.' },
-      { name: 'Petra',                lat: 39.327, lng: 26.152, desc: 'Village dominated by a huge rock with a chapel on top — climb for the view.' },
-      { name: 'Anaxos Beach',         lat: 39.310, lng: 26.135, desc: 'Long sandy beach with views of Molyvos. Afternoon swim.' },
-      { name: 'Lepetymnos Forest',    lat: 39.329, lng: 26.198, desc: 'Pine forest hike with views of both coasts of the island.' },
+      { name: 'Molyvos Castle',       lat: 39.3762, lng: 26.1662, wiki: 'https://en.wikipedia.org/wiki/Castle_of_Molyvos', desc: 'Morning walk up to the <a href="https://en.wikipedia.org/wiki/Castle_of_Molyvos" target="_blank">Byzantine castle</a>. On clear days you can see the Turkish coast.' },
+      { name: 'Eftalou Hot Springs',  lat: 39.3890, lng: 26.1960, wiki: 'https://en.wikipedia.org/wiki/Eftalou', desc: 'Ottoman-era thermal baths built directly on the beach. The domed stone bathhouse dates to the 19th century.' },
+      { name: 'Petra',                lat: 39.3270, lng: 26.1520, wiki: 'https://en.wikipedia.org/wiki/Petra,_Lesbos', desc: 'Village dominated by a 33-metre monolithic rock with the <a href="https://en.wikipedia.org/wiki/Church_of_the_Sweet-Kissing_Virgin" target="_blank">Church of the Sweet-Kissing Virgin</a> on top.' },
+      { name: 'Anaxos Beach',         lat: 39.3100, lng: 26.1330, wiki: null, desc: 'Long sandy beach facing southwest, with clear views of Molyvos castle. Afternoon swim.' },
+      { name: 'Lepetymnos Summit',    lat: 39.3290, lng: 26.1980, wiki: 'https://en.wikipedia.org/wiki/Lepetymnos', desc: 'The highest peak of northern Lesvos at 968 m. Pine forests, views of both coastlines.' },
     ],
   },
   {
     day: 6,
     title: 'Eastern Lesvos & Departure',
-    color: '#C0522A',
+    color: '#2E7D32',
     stops: [
-      { name: 'Mandamados',           lat: 39.308, lng: 26.334, desc: 'Famous for its black icon of Archangel Michael and local pottery.' },
-      { name: 'Tsonia Beach',         lat: 39.316, lng: 26.415, desc: 'Remote northern beach accessible by dirt road — pristine and empty.' },
-      { name: 'Thermi',               lat: 39.164, lng: 26.611, desc: 'Spa village with natural thermal springs 12 km north of Mytilene.' },
-      { name: 'Mytilene Town',        lat: 39.107, lng: 26.554, desc: 'Return to Mytilene. Final lunch at the harbour, depart.' },
+      { name: 'Mandamados',           lat: 39.3080, lng: 26.3340, wiki: 'https://en.wikipedia.org/wiki/Mandamados', desc: 'Famous for the icon of <a href="https://en.wikipedia.org/wiki/Archangel_Michael" target="_blank">Archangel Michael</a> moulded from soil and monks\' blood, and for its local pottery.' },
+      { name: 'Tsonia Beach',         lat: 39.3160, lng: 26.4350, wiki: null, desc: 'Remote northern beach accessible by a dirt road — pristine, empty, and wild.' },
+      { name: 'Thermi',               lat: 39.1640, lng: 26.6090, wiki: 'https://en.wikipedia.org/wiki/Thermi,_Lesbos', desc: 'Spa village with natural thermal springs 12 km north of Mytilene, used since antiquity.' },
+      { name: 'Mytilene Town',        lat: 39.1076, lng: 26.5545, wiki: 'https://en.wikipedia.org/wiki/Mytilene', desc: 'Return to Mytilene. Final lunch at the harbour. Depart by ferry or flight.' },
     ],
+  },
+];
+
+const LESVOS_BEACHES = [
+  {
+    name: 'Vatera Beach',
+    wiki: 'https://en.wikipedia.org/wiki/Vatera',
+    type: 'Sand',
+    length: '8 km',
+    depth: 'Shallow to medium — gradually deepening, safe for children',
+    facing: 'South-facing — sheltered from the prevailing north winds (meltemi)',
+    facilities: 'Well-developed: tavernas, sunbeds & umbrellas, showers, parking, accommodation nearby',
+    desc: 'The longest beach on Lesvos and one of the finest in the Aegean. Golden fine sand stretching 8 uninterrupted kilometres along the southern coast. Exceptionally calm water thanks to its south-facing orientation. The best choice for families or those wanting facilities.',
+    lat: 38.9510, lng: 26.1580,
+  },
+  {
+    name: 'Molyvos (Petra) Beach',
+    wiki: 'https://en.wikipedia.org/wiki/Molyvos',
+    type: 'Pebble and coarse sand mix',
+    length: '1.2 km',
+    depth: 'Medium depth — clear, clean, rocky sea floor',
+    facing: 'West-facing — some afternoon wind exposure, mornings are calm',
+    facilities: 'Good: sunbeds, beach bars, tavernas within walking distance of the village',
+    desc: 'Set beneath the dramatic silhouette of the medieval castle of Molyvos. The pebble-and-sand mix gives the water extraordinary clarity. The village is steps away making it ideal for combining swimming with sightseeing.',
+    lat: 39.3650, lng: 26.1580,
+  },
+  {
+    name: 'Anaxos Beach',
+    wiki: null,
+    type: 'Fine sand',
+    length: '1.5 km',
+    depth: 'Shallow — very gradual slope, excellent for children',
+    facing: 'Southwest-facing — protected from north and east winds',
+    facilities: 'Well-equipped: sunbeds, umbrellas, beach bars, tavernas, showers, small shops',
+    desc: 'A long, fine sandy beach 5 km south of Petra with stunning views of Molyvos castle on the headland. The shallow, calm water and solid facilities make it a top choice for families. One of the most consistently calm beaches on the island.',
+    lat: 39.3100, lng: 26.1330,
+  },
+  {
+    name: 'Skala Eresou Beach',
+    wiki: 'https://en.wikipedia.org/wiki/Eresos',
+    type: 'Fine dark sand',
+    length: '3 km',
+    depth: 'Shallow to medium — gentle entry',
+    facing: 'South-facing — sheltered, calm in summer',
+    facilities: 'Moderate: beach bars, tavernas, some sunbeds. Village is directly behind the beach.',
+    desc: 'A long dark-sand beach in front of the village of Skala Eresou, birthplace of the poet Sappho. The beach has a relaxed, bohemian character and is far less touristy than the Cyclades. Warm, calm water in summer. The village behind it is one of the most atmospheric on the island.',
+    lat: 39.1680, lng: 25.9680,
+  },
+  {
+    name: 'Melinda Beach',
+    wiki: null,
+    type: 'Fine pebble',
+    length: '400 m',
+    depth: 'Medium to deep — clear water, rocky bottom visible',
+    facing: 'South-facing — calm and sheltered by the surrounding hills',
+    facilities: 'Basic: one small taverna, no sunbed hire. Access by a narrow road.',
+    desc: 'A secluded pebble cove tucked under pine-clad hills west of Plomari. Small, quiet and unspoiled — no crowds, no umbrellas. The fine pebble bottom gives the water remarkable clarity and a vivid blue-green colour. For those who prefer wild beaches over organised ones.',
+    lat: 38.9680, lng: 26.3280,
   },
 ];
 
@@ -1717,27 +1889,56 @@ function renderIslandPage(key) {
   }
 }
 
+let itinActiveDay = 'all';
+let itinRouteLayers = {};
+let itinMarkerLayers = {};
+
 function buildLesvosItinerary() {
-  const legendItems = LESVOS_DAYS.map(d =>
-    `<span class="itin-legend-item"><span class="itin-legend-dot" style="background:${d.color}"></span>Day ${d.day}: ${d.title}</span>`
+  const dayBtns = LESVOS_DAYS.map(d =>
+    `<button class="itin-day-btn" data-day="${d.day}" onclick="filterItinDay(${d.day})" style="border-color:${d.color};color:${d.color}">
+      Day ${d.day}: ${d.title}
+    </button>`
   ).join('');
 
   const dayCards = LESVOS_DAYS.map(d => {
-    const stops = d.stops.map((s, i) =>
-      `<div class="itin-stop">
+    const stops = d.stops.map((s, i) => {
+      const nameHtml = s.wiki
+        ? `<a href="${s.wiki}" target="_blank" rel="noopener" class="itin-stop-link">${s.name}</a>`
+        : s.name;
+      return `<div class="itin-stop">
         <div class="itin-stop-num" style="background:${d.color}">${i + 1}</div>
         <div class="itin-stop-content">
-          <div class="itin-stop-name">${s.name}</div>
+          <div class="itin-stop-name">${nameHtml}</div>
           <div class="itin-stop-desc">${s.desc}</div>
         </div>
-      </div>`
-    ).join('');
-    return `<div class="itin-day-card">
+      </div>`;
+    }).join('');
+    return `<div class="itin-day-card" id="itin-day-card-${d.day}">
       <div class="itin-day-header" style="border-left:4px solid ${d.color}">
         <span class="itin-day-label" style="color:${d.color}">Day ${d.day}</span>
         <span class="itin-day-title">${d.title}</span>
       </div>
       <div class="itin-stops">${stops}</div>
+    </div>`;
+  }).join('');
+
+  const beachCards = LESVOS_BEACHES.map((b, i) => {
+    const nameHtml = b.wiki
+      ? `<a href="${b.wiki}" target="_blank" rel="noopener" class="beach-name-link">${b.name}</a>`
+      : b.name;
+    return `<div class="beach-card">
+      <div class="beach-rank">${i + 1}</div>
+      <div class="beach-content">
+        <div class="beach-name">${nameHtml}</div>
+        <p class="beach-desc">${b.desc}</p>
+        <div class="beach-specs">
+          <div class="beach-spec"><span class="beach-spec-label">Type</span><span class="beach-spec-val">${b.type}</span></div>
+          <div class="beach-spec"><span class="beach-spec-label">Length</span><span class="beach-spec-val">${b.length}</span></div>
+          <div class="beach-spec"><span class="beach-spec-label">Depth</span><span class="beach-spec-val">${b.depth}</span></div>
+          <div class="beach-spec"><span class="beach-spec-label">Wind protection</span><span class="beach-spec-val">${b.facing}</span></div>
+          <div class="beach-spec beach-spec-full"><span class="beach-spec-label">Facilities</span><span class="beach-spec-val">${b.facilities}</span></div>
+        </div>
+      </div>
     </div>`;
   }).join('');
 
@@ -1747,51 +1948,127 @@ function buildLesvosItinerary() {
         <h2 class="itin-title">6-Day Lesvos Itinerary</h2>
         <p class="itin-subtitle">A complete circuit of the island — from the Aegean's ouzo capital to the birthplace of Sappho, medieval castles to petrified forests.</p>
       </div>
+
+      <div class="itin-day-filter">
+        <button class="itin-day-btn active" data-day="all" onclick="filterItinDay('all')" style="border-color:#888;color:#555">All days</button>
+        ${dayBtns}
+      </div>
+
       <div class="itin-map-wrap">
         <div id="itin-map"></div>
-        <div class="itin-legend">${legendItems}</div>
       </div>
-      <div class="itin-days">${dayCards}</div>
+
+      <div class="itin-days" id="itin-days-container">${dayCards}</div>
+
+      <div class="itin-beaches-section">
+        <div class="itin-beaches-header">
+          <h2 class="itin-beaches-title">Top 5 Beaches of Lesvos</h2>
+          <p class="itin-beaches-sub">Ranked by overall quality — with details on sand type, depth, wind exposure and facilities.</p>
+        </div>
+        <div class="itin-beaches-list">${beachCards}</div>
+      </div>
     </div>`;
 }
 
-function initItineraryMap() {
+function filterItinDay(day) {
+  itinActiveDay = day;
+  document.querySelectorAll('.itin-day-btn').forEach(btn => {
+    btn.classList.toggle('active', String(btn.dataset.day) === String(day));
+  });
+  document.querySelectorAll('.itin-day-card').forEach(card => {
+    if (day === 'all') {
+      card.style.display = '';
+    } else {
+      card.style.display = card.id === `itin-day-card-${day}` ? '' : 'none';
+    }
+  });
+  Object.entries(itinRouteLayers).forEach(([d, layers]) => {
+    layers.forEach(l => {
+      if (day === 'all' || String(d) === String(day)) {
+        l.addTo(itineraryMapInstance);
+      } else {
+        itineraryMapInstance.removeLayer(l);
+      }
+    });
+  });
+  Object.entries(itinMarkerLayers).forEach(([d, markers]) => {
+    markers.forEach(m => {
+      if (day === 'all' || String(d) === String(day)) {
+        m.addTo(itineraryMapInstance);
+      } else {
+        itineraryMapInstance.removeLayer(m);
+      }
+    });
+  });
+  if (itineraryMapInstance) {
+    if (day === 'all') {
+      const allCoords = LESVOS_DAYS.flatMap(d => d.stops.map(s => [s.lat, s.lng]));
+      itineraryMapInstance.fitBounds(L.latLngBounds(allCoords), { padding: [30, 30] });
+    } else {
+      const dayData = LESVOS_DAYS.find(d => d.day === day);
+      if (dayData) {
+        const coords = dayData.stops.map(s => [s.lat, s.lng]);
+        itineraryMapInstance.fitBounds(L.latLngBounds(coords), { padding: [50, 50] });
+      }
+    }
+  }
+}
+
+async function fetchOSRMRoute(coords) {
+  const coordStr = coords.map(c => `${c[1]},${c[0]}`).join(';');
+  const url = `https://router.project-osrm.org/route/v1/driving/${coordStr}?overview=full&geometries=geojson`;
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    if (data.routes && data.routes[0]) {
+      return data.routes[0].geometry.coordinates.map(c => [c[1], c[0]]);
+    }
+  } catch(e) { console.warn('OSRM failed, falling back to straight lines', e); }
+  return coords;
+}
+
+async function initItineraryMap() {
   const mapEl = document.getElementById('itin-map');
   if (!mapEl) return;
   if (itineraryMapInstance) { itineraryMapInstance.remove(); itineraryMapInstance = null; }
+  itinRouteLayers = {};
+  itinMarkerLayers = {};
 
   itineraryMapInstance = L.map(mapEl, { zoomControl: true, attributionControl: true });
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors', maxZoom: 14,
+    attribution: '© OpenStreetMap contributors', maxZoom: 16,
   }).addTo(itineraryMapInstance);
 
   const allCoords = LESVOS_DAYS.flatMap(d => d.stops.map(s => [s.lat, s.lng]));
-  const bounds = L.latLngBounds(allCoords);
-  itineraryMapInstance.fitBounds(bounds, { padding: [30, 30] });
+  itineraryMapInstance.fitBounds(L.latLngBounds(allCoords), { padding: [30, 30] });
 
-  LESVOS_DAYS.forEach(day => {
+  for (const day of LESVOS_DAYS) {
+    itinRouteLayers[day.day] = [];
+    itinMarkerLayers[day.day] = [];
+
     const coords = day.stops.map(s => [s.lat, s.lng]);
+    const routeCoords = await fetchOSRMRoute(coords);
 
-    // Draw route polyline for this day
-    L.polyline(coords, {
-      color: day.color,
-      weight: 4,
-      opacity: 0.85,
-      dashArray: null,
+    const polyline = L.polyline(routeCoords, {
+      color: day.color, weight: 5, opacity: 0.88,
     }).addTo(itineraryMapInstance);
+    itinRouteLayers[day.day].push(polyline);
 
-    // Draw stop markers
     day.stops.forEach((stop, i) => {
+      const nameHtml = stop.wiki
+        ? `<a href="${stop.wiki}" target="_blank" rel="noopener" style="color:${day.color};font-weight:700">${stop.name}</a>`
+        : `<strong>${stop.name}</strong>`;
       const icon = L.divIcon({
         className: 'custom-marker',
         html: `<div style="background:${day.color};width:28px;height:28px;border-radius:50%;border:2.5px solid #fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.35);">${i + 1}</div>`,
         iconSize: [28, 28], iconAnchor: [14, 14],
       });
-      L.marker([stop.lat, stop.lng], { icon })
+      const marker = L.marker([stop.lat, stop.lng], { icon })
         .addTo(itineraryMapInstance)
-        .bindPopup(`<div style="min-width:180px;font-family:sans-serif"><div style="font-size:11px;font-weight:700;color:${day.color};text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Day ${day.day} · Stop ${i + 1}</div><strong style="font-size:14px">${stop.name}</strong><p style="font-size:12px;color:#555;margin:6px 0 0;line-height:1.5">${stop.desc}</p></div>`);
+        .bindPopup(`<div style="min-width:190px;font-family:sans-serif"><div style="font-size:10px;font-weight:700;color:${day.color};text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px">Day ${day.day} · Stop ${i + 1}</div>${nameHtml}<p style="font-size:12px;color:#555;margin:6px 0 0;line-height:1.55">${stop.desc}</p></div>`);
+      itinMarkerLayers[day.day].push(marker);
     });
-  });
+  }
 }
 
 /* ============================================================
