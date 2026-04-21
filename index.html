@@ -59,7 +59,31 @@
     </div>
   </div>
 
-  <main id="view-home" class="view-section"><div id="main-map"></div></main>
+  <main id="view-home" class="view-section">
+    <div class="hero-banner" id="hero-banner">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Find your perfect Greek island</h1>
+          <p class="hero-sub">83 islands scored across beaches, culture, nightlife, access and price. Click any circle to explore.</p>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><span class="hero-stat-num">83</span><span class="hero-stat-lbl">Islands</span></div>
+          <div class="hero-stat"><span class="hero-stat-num">5</span><span class="hero-stat-lbl">Score dimensions</span></div>
+          <div class="hero-stat"><span class="hero-stat-num">2</span><span class="hero-stat-lbl">Full guides</span></div>
+        </div>
+        <button class="hero-dismiss" onclick="dismissHero()" aria-label="Dismiss">Got it ✕</button>
+      </div>
+    </div>
+    <div id="main-map">
+      <div class="map-legend">
+        <div class="map-legend-row"><span class="map-legend-dot" style="background:#2E7D32;width:18px;height:18px"></span><span>4.5+ Outstanding</span></div>
+        <div class="map-legend-row"><span class="map-legend-dot" style="background:#1B4F8A;width:16px;height:16px"></span><span>3.8–4.5 Great</span></div>
+        <div class="map-legend-row"><span class="map-legend-dot" style="background:#C4962A;width:13px;height:13px"></span><span>3.0–3.8 Good</span></div>
+        <div class="map-legend-row"><span class="map-legend-dot" style="background:#C0522A;width:11px;height:11px"></span><span>Under 3.0</span></div>
+        <div class="map-legend-hint">Circle size = score · Click to explore</div>
+      </div>
+    </div>
+  </main>
 
   <main id="view-data" class="view-section content-page" style="display:none;">
     <h1>Islands Database</h1>

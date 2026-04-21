@@ -166,6 +166,7 @@ window._addCmpNav = function(key) { addToCompare(key); navigateTo('compare'); };
 
 document.addEventListener('DOMContentLoaded', () => {
   const hardFallback = setTimeout(dismissLoading, 3000);
+  if (localStorage.getItem('heroDismissed')) dismissHero();
   try { setupNav(); } catch(e) { console.warn('setupNav', e); }
   try { setupDarkMode(); } catch(e) { console.warn('setupDarkMode', e); }
   try { setupVibeChips(); } catch(e) { console.warn('setupVibeChips', e); }
@@ -185,6 +186,14 @@ window.addEventListener('popstate', () => {
   try { const { view, param } = parseHash(); showView(view, param); }
   catch(e) { showView('home', null); }
 });
+
+function dismissHero() {
+  const banner = document.getElementById('hero-banner');
+  if (banner) {
+    banner.classList.add('dismissed');
+    localStorage.setItem('heroDismissed', '1');
+  }
+}
 
 function dismissLoading() {
   const overlay = document.getElementById('loading-overlay');
