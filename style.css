@@ -1,63 +1,67 @@
 /* ==========================================================
-   Aegean Blueprint — style.css  v3.0
-   Greek color palette: Aegean blue, marble, Cycladic gold,
-   terracotta, olive. Playfair Display serif headings.
+   Aegean Blueprint — style.css  v5.0
+   Mediterranean summer palette: turquoise, coral, warm sand.
+   Nunito rounded sans-serif throughout.
    ========================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;500;600;700&display=swap');
 
 /* ----------------------------------------------------------
-   GREEK COLOR PALETTE + VARIABLES
+   MEDITERRANEAN SUMMER PALETTE
 ---------------------------------------------------------- */
 :root {
-  /* Core Greek palette */
-  --aegean:        #1B4F8A;
-  --aegean-mid:    #2E72B8;
-  --aegean-light:  #D4E8F7;
-  --aegean-pale:   #EEF5FB;
-  --aegean-dark:   #0F2F57;
+  /* Primary — turquoise sea */
+  --aegean:        #0B8FAC;
+  --aegean-mid:    #14A8C8;
+  --aegean-light:  #C8EEF5;
+  --aegean-pale:   #E8F7FB;
+  --aegean-dark:   #076880;
 
-  --marble:        #F8F6F1;
-  --marble-2:      #F0EDE5;
-  --marble-3:      #E4DDD0;
+  /* Warm sand base */
+  --marble:        #FFFBF5;
+  --marble-2:      #FFF4E8;
+  --marble-3:      #FFE8D0;
 
-  --gold:          #C4962A;
-  --gold-light:    #F5E6C0;
-  --gold-pale:     #FBF4E3;
+  /* Coral accent */
+  --gold:          #FF6B6B;
+  --gold-light:    #FFD4D4;
+  --gold-pale:     #FFF0F0;
 
-  --terracotta:    #C0522A;
-  --terra-light:   #F5DDD3;
-  --terra-pale:    #FBF0EB;
+  /* Terracotta */
+  --terracotta:    #E8522A;
+  --terra-light:   #FCDDD3;
+  --terra-pale:    #FEF2EE;
 
-  --olive:         #5A7A3A;
-  --olive-light:   #E4EDD9;
-  --olive-pale:    #EFF5E8;
+  /* Olive / sea grass */
+  --olive:         #3D8B6F;
+  --olive-light:   #C8EBE0;
+  --olive-pale:    #E8F6F1;
 
-  --ink:           #1A1C1E;
-  --ink-2:         #3D4045;
-  --ink-3:         #6B7280;
-  --ink-4:         #9CA3AF;
+  --ink:           #1A2332;
+  --ink-2:         #2E3D50;
+  --ink-3:         #637080;
+  --ink-4:         #A0ADB8;
 
   --white:         #FFFFFF;
-  --border:        #DDD8CE;
-  --border-2:      #C8C2B4;
+  --border:        #EAE4DC;
+  --border-2:      #D8CEC2;
 
-  /* Semantic aliases (score colors) */
-  --score-great:   #2E7D32;
+  /* Semantic score colors */
+  --score-great:   #2E9E6A;
   --score-good:    var(--aegean);
-  --score-mid:     var(--gold);
+  --score-mid:     #F0A500;
   --score-low:     var(--terracotta);
 
-  /* Typography */
-  --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --sans:  'Inter', system-ui, -apple-system, sans-serif;
+  /* Typography — Nunito rounded */
+  --serif: 'Nunito', system-ui, sans-serif;
+  --sans:  'Nunito Sans', system-ui, sans-serif;
 
   /* Sizing */
-  --radius:    10px;
-  --radius-lg: 16px;
-  --radius-xl: 20px;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
-  --shadow:    0 4px 12px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04);
+  --radius:    12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --shadow-sm: 0 2px 8px rgba(11,143,172,0.08), 0 1px 3px rgba(0,0,0,0.04);
+  --shadow:    0 6px 20px rgba(11,143,172,0.12), 0 2px 6px rgba(0,0,0,0.06);
   --header-height: 64px;
 }
 
@@ -65,41 +69,41 @@
    DARK MODE
 ---------------------------------------------------------- */
 html.dark {
-  --aegean:        #5B9CF6;
-  --aegean-mid:    #5B9CF6;
-  --aegean-light:  #1A2B3F;
-  --aegean-pale:   #141E2B;
-  --aegean-dark:   #93BFFA;
+  --aegean:        #22C0E0;
+  --aegean-mid:    #22C0E0;
+  --aegean-light:  #0A2A35;
+  --aegean-pale:   #071820;
+  --aegean-dark:   #60D8F0;
 
-  --marble:        #1A1A1A;
-  --marble-2:      #222222;
-  --marble-3:      #2A2A2A;
+  --marble:        #171C24;
+  --marble-2:      #1F2530;
+  --marble-3:      #283040;
 
-  --gold:          #E8B84B;
-  --gold-light:    #2A2010;
-  --gold-pale:     #1E1A0E;
+  --gold:          #FF8F8F;
+  --gold-light:    #2A1010;
+  --gold-pale:     #1E0E0E;
 
-  --terracotta:    #E07050;
-  --terra-light:   #2A1810;
-  --terra-pale:    #1E130E;
+  --terracotta:    #F07050;
+  --terra-light:   #2A1510;
+  --terra-pale:    #1E100E;
 
-  --olive:         #80A860;
-  --olive-light:   #182010;
-  --olive-pale:    #131A0D;
+  --olive:         #50C090;
+  --olive-light:   #0A2018;
+  --olive-pale:    #071510;
 
-  --ink:           #F0F0F0;
-  --ink-2:         #D0D0D0;
-  --ink-3:         #909090;
-  --ink-4:         #606060;
+  --ink:           #EEF2F5;
+  --ink-2:         #C8D4DC;
+  --ink-3:         #8898A8;
+  --ink-4:         #556070;
 
-  --white:         #252525;
-  --border:        rgba(255,255,255,0.09);
-  --border-2:      rgba(255,255,255,0.16);
+  --white:         #1F2530;
+  --border:        rgba(255,255,255,0.08);
+  --border-2:      rgba(255,255,255,0.14);
 
-  --score-great:   #6ABF6A;
-  --score-good:    #5B9CF6;
-  --score-mid:     #E8B84B;
-  --score-low:     #E07050;
+  --score-great:   #40D090;
+  --score-good:    #22C0E0;
+  --score-mid:     #F0B020;
+  --score-low:     #F07050;
 }
 
 /* ----------------------------------------------------------
@@ -123,9 +127,9 @@ h1, h2, h3, h4 {
   color: var(--ink);
   line-height: 1.25;
 }
-h1 { font-size: 26px; font-weight: 600; margin-bottom: 10px; }
-h2 { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
-h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+h1 { font-size: 26px; font-weight: 800; margin-bottom: 10px; }
+h2 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
 
 p { color: var(--ink-3); line-height: 1.7; }
 a { color: var(--aegean); }
@@ -167,10 +171,11 @@ a:hover { text-decoration: underline; }
    HEADER  — Aegean blue
 ---------------------------------------------------------- */
 header {
-  background: var(--aegean);
-  border-bottom: 1px solid var(--aegean-dark);
+  background: linear-gradient(135deg, var(--aegean) 0%, var(--aegean-dark) 100%);
+  border-bottom: none;
   position: sticky; top: 0; z-index: 100;
   height: var(--header-height);
+  box-shadow: 0 2px 12px rgba(11,143,172,0.25);
 }
 .header-content {
   max-width: 1280px; margin: 0 auto;
@@ -196,9 +201,9 @@ header {
 #brand-text {
   font-family: var(--serif);
   font-size: 19px;
-  font-weight: 600;
+  font-weight: 800;
   color: #fff;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.5px;
 }
 
 /* Nav links on Aegean blue */
@@ -1204,9 +1209,9 @@ html.dark .why-feat-num { color: var(--marble-3); }
    HERO BANNER
 ============================================================ */
 .hero-banner {
-  background: linear-gradient(135deg, var(--aegean) 0%, var(--aegean-dark) 100%);
+  background: linear-gradient(135deg, #0B8FAC 0%, #076880 60%, #E8522A 100%);
   padding: 18px 24px;
-  border-bottom: 1px solid var(--aegean-dark);
+  border-bottom: none;
   transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
   overflow: hidden;
   max-height: 120px;
@@ -1314,7 +1319,7 @@ html.dark .why-feat-num { color: var(--marble-3); }
   .filter-section { gap: 6px; margin-bottom: 7px; }
   .filter-label { min-width: 75px; font-size: 10px; }
   .hero-banner {
-    background: #1B4F8A !important;
+    background: #0B8FAC !important;
     max-height: 180px;
   }
   .hero-content { gap: 10px; }
