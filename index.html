@@ -45,9 +45,13 @@
   </header>
 
   <div class="search-container" id="home-controls">
-    <input type="text" id="islandSearch" placeholder="Search islands…" aria-label="Search islands">
-    <div class="group-filter-row" id="group-filter-row"></div>
-    <div class="vibe-control-panel">
+    <input type="text" id="islandSearch" placeholder="🔍  Search islands…" aria-label="Search islands">
+    <div class="filter-section">
+      <span class="filter-label">Filter by group</span>
+      <div class="group-filter-row" id="group-filter-row"></div>
+    </div>
+    <div class="filter-section">
+      <span class="filter-label">Rank map by</span>
       <div class="vibe-filters" id="vibe-filters">
         <button class="vibe-chip active" data-mode="overall">🏠 Overall</button>
         <button class="vibe-chip" data-mode="beach">🏖️ Beaches</button>
