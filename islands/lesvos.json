@@ -1,13 +1,141 @@
 {
-    "img": "https://images.unsplash.com/photo-1570535189332-902263b8296a?w=1200",
-    "itinerary": [
-        { "day": 1, "name": "Mytilene Arrival", "lat": 39.106, "lng": 26.554 },
-        { "day": 1, "name": "Mantamados", "lat": 39.314, "lng": 26.335 },
-        { "day": 1, "name": "Molyvos Castle", "lat": 39.367, "lng": 26.174 },
-        { "day": 2, "name": "Eftalou Hot Springs", "lat": 39.382, "lng": 26.195 },
-        { "day": 3, "name": "Kalloni Salt Flats", "lat": 39.207, "lng": 26.223 },
-        { "day": 3, "name": "Skala Eressos", "lat": 39.137, "lng": 25.933 },
-        { "day": 4, "name": "Plomari", "lat": 38.976, "lng": 26.366 }
-    ],
-    "guide": "<div class='guide-card'><h3>💡 Key facts (so you don’t mess this up)</h3><ul><li><strong>Car:</strong> Mandatory unless you stay in one village only. Public transport is unreliable and slow.</li><li><strong>Island size:</strong> Large → you will drive a lot</li><li><strong>Full loop (with stops):</strong> ~300–400 km for a proper trip</li><li><strong>Strategy:</strong> either 1 base (more driving), or 2 bases (smarter)</li></ul></div><h3>📅 3-DAY ITINERARY (tight but efficient)</h3><p><strong>Where to stay:</strong> Base: Petra or Molyvos (north) - Best combo of scenery + access + vibe</p><div class='itinerary-step'><strong>Day 1 — North highlights (easy start):</strong> Route: Mytilene → Petra → Molyvos (Drive: ~60 km / 1.5h). Land in Mytilene → pick up car. Drive north via coastal route. Stop at Mantamados (monastery) and Skala Sykamnias (tiny fishing village). Afternoon: Petra (church on rock) and Molyvos (castle + sunset). Sleep: Petra / Molyvos.</div><div class='itinerary-step'><strong>Day 2 — Beaches + hot springs:</strong> Driving loop: ~80–100 km. Morning: Eftalou hot springs (quick dip) and North beaches (Anaxos / Petra beach). Midday: Lunch seaside. Afternoon: Explore Molyvos properly (streets, castle). Optional: Chill beach day (don’t overplan).</div><div class='itinerary-step'><strong>Day 3 — Central + departure:</strong> Route: Petra → Kalloni → Mytilene (~70–90 km total). Stop at: Kalloni salt flats (bird area) and Skala Kallonis (lunch). Back to Mytilene: Castle and Harbor walk. Total driving (3 days): ~220–270 km. Very manageable.</div><h3>📅 5-DAY ITINERARY (the correct way to do Lesvos)</h3><p>Now you actually see the island properly.<br><strong>Where to stay (split):</strong> 2 nights: Petra/Molyvos (north) AND 2–3 nights: Skala Eressos OR Plomari (south/west). This reduces stupid backtracking.</p><div class='itinerary-step'><strong>Day 1 — Arrival + north coast:</strong> Same as 3-day Day 1. Mytilene → Petra/Molyvos (~60 km)</div><div class='itinerary-step'><strong>Day 2 — North deep dive:</strong> Molyvos castle + old town. Petra + beach. Eftalou hot springs. Optional hiking / boat trip.</div><div class='itinerary-step'><strong>Day 3 — Cross island (best drive):</strong> Route: North → West (Sigri / Eressos) ~120 km / 2.5–3h. Stops: Kalloni wetlands, Petrified Forest (Sigri – UNESCO geopark). Arrive Skala Eressos (best sunset beach on island). Sleep: Skala Eressos.</div><div class='itinerary-step'><strong>Day 4 — West + south (wild side):</strong> Driving: ~80–120 km. Options: Lazy beach day (Eressos is perfect) OR explore Vatera beach (longest beach), Plomari (ouzo capital), and Mountain village Agiassos.</div><div class='itinerary-step'><strong>Day 5 — Return to Mytilene:</strong> Route: South → Mytilene ~60–90 km. Stops: Olive museum / villages. Mytilene town (castle, food, cafés). Total driving (5 days): ~350–450 km. This is realistic for seeing the island properly.</div><div class='advice-box'><h3>⚠️ Blunt advice (important)</h3><ul><li>Don’t stay only in Mytilene → boring for holidays</li><li>Don’t skip the west (Sigri/Eressos) → it’s the most unique part</li><li>Don’t rely on buses → you’ll regret it within 24h</li><li>Don’t overpack your days → distances look small, roads are slow</li></ul></div><h3>📍 Best areas summarized</h3><ul><li><strong>Molyvos/Petra:</strong> best overall base</li><li><strong>Skala Eressos:</strong> best vibe + beach + chill</li><li><strong>Plomari:</strong> more local, less polished</li><li><strong>Mytilene:</strong> only for arrival/departure</li></ul>"
+  "key": "lesvos",
+  "name": "Lesvos",
+  "subtitle": "The island of ouzo, Sappho, and petrified forests",
+  "intro": "Greece's third-largest island is one of its most rewarding. Lesvos combines exceptional natural diversity — volcanic landscapes, pine forests, salt marshes — with a deep cultural heritage stretching from ancient Sappho to the Nobel Prize-winning poet Elytis. It rewards slow travel.",
+
+  "itinerary": {
+    "title": "6-Day Lesvos Itinerary",
+    "subtitle": "A complete circuit of the island — from the Aegean's ouzo capital to the birthplace of Sappho, medieval castles to petrified forests.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Mytilene & the South",
+        "color": "#1B4F8A",
+        "stops": [
+          { "name": "Mytilene Town",        "lat": 39.1076, "lng": 26.5545, "type": "city",       "wiki": "https://en.wikipedia.org/wiki/Mytilene",          "desc": "Arrive and settle in. Walk the waterfront promenade and explore the old harbour." },
+          { "name": "Mytilene Castle",      "lat": 39.1128, "lng": 26.5612, "type": "castle",     "wiki": "https://en.wikipedia.org/wiki/Castle_of_Mytilene", "desc": "One of the largest medieval castles in the Aegean, with panoramic harbour views." },
+          { "name": "Varia Village",        "lat": 39.0872, "lng": 26.5463, "type": "museum",     "wiki": "https://en.wikipedia.org/wiki/Th%C3%A9riade",      "desc": "Home to the Museum of Theophilos and Tériade Museum — two world-class art collections." },
+          { "name": "Agios Isidoros Beach", "lat": 38.9980, "lng": 26.3960, "type": "beach",      "wiki": null,                                               "desc": "Relaxed sandy beach on the south coast, sheltered and calm. Evening swim." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Plomari & Ouzo Country",
+        "color": "#C0522A",
+        "stops": [
+          { "name": "Mytilene",             "lat": 39.1076, "lng": 26.5545, "type": "city",       "wiki": null,                                               "desc": "Depart south after breakfast via the mountain road." },
+          { "name": "Agiasos",              "lat": 39.0726, "lng": 26.3883, "type": "village",    "wiki": "https://en.wikipedia.org/wiki/Agiasos",            "desc": "Charming mountain village with cobbled lanes and a lively carnival tradition." },
+          { "name": "Plomari",              "lat": 38.9772, "lng": 26.3695, "type": "distillery", "wiki": "https://en.wikipedia.org/wiki/Plomari",            "desc": "Ouzo capital of Greece. Tour the Barbayiannis distillery and sample the local product." },
+          { "name": "Melinda Beach",        "lat": 38.9628, "lng": 26.2892, "type": "beach",      "wiki": null,                                               "desc": "Secluded fine pebble cove west of Plomari, tucked under a pine-clad hillside." },
+          { "name": "Vatera Beach",         "lat": 38.9492, "lng": 26.1540, "type": "beach",      "wiki": "https://en.wikipedia.org/wiki/Vatera",             "desc": "8 km of uninterrupted golden sand — one of the longest beaches in the Aegean. Stay overnight." }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Sigri & Petrified Forest",
+        "color": "#5A7A3A",
+        "stops": [
+          { "name": "Vatera",               "lat": 38.9492, "lng": 26.1540, "type": "beach",      "wiki": null,                                               "desc": "Depart west along the southern coastal road." },
+          { "name": "Petrified Forest",     "lat": 39.2112, "lng": 25.9780, "type": "nature",     "wiki": "https://en.wikipedia.org/wiki/Lesvos_Petrified_Forest", "desc": "UNESCO-listed Petrified Forest — 20 million year old trees turned to stone by volcanic ash." },
+          { "name": "Sigri",                "lat": 39.2087, "lng": 25.8568, "type": "harbour",    "wiki": "https://en.wikipedia.org/wiki/Sigri",              "desc": "Westernmost village of Lesvos. Tiny whitewashed harbour and the Natural History Museum." },
+          { "name": "Faneromeni Beach",     "lat": 39.2280, "lng": 25.8950, "type": "beach",      "wiki": null,                                               "desc": "Wild, exposed beach north of Sigri with dramatic sea-carved cliffs and vivid turquoise water." },
+          { "name": "Skala Eresou",         "lat": 39.1658, "lng": 25.9462, "type": "beach",      "wiki": "https://en.wikipedia.org/wiki/Eresos",             "desc": "Birthplace of Sappho. Laid-back beach village with a long sandy shore. Stay the night." }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Kalloni & the Gulf",
+        "color": "#C4962A",
+        "stops": [
+          { "name": "Skala Eresou",         "lat": 39.1658, "lng": 25.9462, "type": "beach",      "wiki": null,                                               "desc": "Morning coffee on the beach before heading north." },
+          { "name": "Kalloni",              "lat": 39.2120, "lng": 26.2020, "type": "city",       "wiki": "https://en.wikipedia.org/wiki/Kalloni",            "desc": "Main inland market town. The Gulf of Kalloni sardines are famous across Greece." },
+          { "name": "Skala Kalloni",        "lat": 39.1762, "lng": 26.2102, "type": "harbour",    "wiki": null,                                               "desc": "Fishing port on the sheltered Gulf of Kalloni, a world-class birdwatching destination." },
+          { "name": "Parakila",             "lat": 39.2420, "lng": 26.2740, "type": "village",    "wiki": null,                                               "desc": "Quiet village on the northern shore of the gulf." },
+          { "name": "Molyvos (Mithymna)",   "lat": 39.3718, "lng": 26.1647, "type": "castle",     "wiki": "https://en.wikipedia.org/wiki/Molyvos",            "desc": "Most photogenic village in Lesvos — a Byzantine castle perched above a cobbled harbour. Stay here." }
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Molyvos, Petra & the North",
+        "color": "#7B5EA7",
+        "stops": [
+          { "name": "Molyvos Castle",       "lat": 39.3748, "lng": 26.1671, "type": "castle",     "wiki": "https://en.wikipedia.org/wiki/Castle_of_Molyvos",  "desc": "Morning walk up to the Byzantine castle. On clear days you can see the Turkish coast." },
+          { "name": "Eftalou Hot Springs",  "lat": 39.3948, "lng": 26.2052, "type": "spa",        "wiki": "https://en.wikipedia.org/wiki/Eftalou",            "desc": "Ottoman-era thermal baths built directly on the beach. The domed stone bathhouse dates to the 19th century." },
+          { "name": "Petra",                "lat": 39.3270, "lng": 26.1520, "type": "church",     "wiki": "https://en.wikipedia.org/wiki/Petra,_Lesbos",      "desc": "Village dominated by a 33-metre monolithic rock with the Church of the Sweet-Kissing Virgin on top." },
+          { "name": "Anaxos Beach",         "lat": 39.3072, "lng": 26.1298, "type": "beach",      "wiki": null,                                               "desc": "Long sandy beach facing southwest, with clear views of Molyvos castle. Afternoon swim." },
+          { "name": "Lepetymnos Summit",    "lat": 39.3290, "lng": 26.1980, "type": "nature",     "wiki": "https://en.wikipedia.org/wiki/Lepetymnos",         "desc": "The highest peak of northern Lesvos at 968 m. Pine forests, views of both coastlines." }
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Eastern Lesvos & Departure",
+        "color": "#2E7D32",
+        "stops": [
+          { "name": "Mandamados",           "lat": 39.3080, "lng": 26.3340, "type": "church",     "wiki": "https://en.wikipedia.org/wiki/Mandamados",         "desc": "Famous for the icon of Archangel Michael moulded from soil and monks' blood, and for its pottery." },
+          { "name": "Tsonia Beach",         "lat": 39.3210, "lng": 26.4480, "type": "beach",      "wiki": null,                                               "desc": "Remote northern beach accessible by a dirt road — pristine, empty, and wild." },
+          { "name": "Thermi",               "lat": 39.1520, "lng": 26.5780, "type": "spa",        "wiki": "https://en.wikipedia.org/wiki/Thermi,_Lesbos",     "desc": "Spa village with natural thermal springs 12 km north of Mytilene, used since antiquity." },
+          { "name": "Mytilene Town",        "lat": 39.1076, "lng": 26.5545, "type": "city",       "wiki": "https://en.wikipedia.org/wiki/Mytilene",           "desc": "Return to Mytilene. Final lunch at the harbour. Depart by ferry or flight." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Skala Eresou Beach",
+      "wiki": "https://en.wikipedia.org/wiki/Eresos",
+      "type": "Fine dark sand",
+      "length": "3 km",
+      "depth": "Shallow to medium — gentle entry",
+      "facing": "South-facing — sheltered, calm in summer",
+      "facilities": "Moderate: beach bars, tavernas, some sunbeds. Village is directly behind the beach.",
+      "desc": "The top beach on Lesvos. A long dark-sand beach in front of the village of Skala Eresou, birthplace of the poet Sappho. Relaxed, bohemian character and far less touristy than the Cyclades. Warm, calm water in summer.",
+      "lat": 39.1658, "lng": 25.9462
+    },
+    {
+      "name": "Agios Isidoros Beach",
+      "wiki": null,
+      "type": "Fine sand",
+      "length": "1.8 km",
+      "depth": "Shallow — gently shelving, safe for children",
+      "facing": "South-facing — well sheltered from north winds",
+      "facilities": "Good: sunbeds, umbrellas, tavernas, parking nearby",
+      "desc": "A fine sandy beach on the south coast, sheltered and consistently calm. Popular with locals but never overcrowded. Clear, warm water and easy access make it one of the best all-round choices on the island.",
+      "lat": 38.9980, "lng": 26.3960
+    },
+    {
+      "name": "Vatera Beach",
+      "wiki": "https://en.wikipedia.org/wiki/Vatera",
+      "type": "Fine golden sand",
+      "length": "8 km",
+      "depth": "Shallow to medium — gradually deepening, safe for children",
+      "facing": "South-facing — sheltered from the prevailing north winds (meltemi)",
+      "facilities": "Well-developed: tavernas, sunbeds & umbrellas, showers, parking, accommodation nearby",
+      "desc": "The longest beach on Lesvos — 8 uninterrupted kilometres of golden fine sand. Exceptionally calm water. The best choice for families or those wanting full facilities and space.",
+      "lat": 38.9492, "lng": 26.1540
+    },
+    {
+      "name": "Anaxos Beach",
+      "wiki": null,
+      "type": "Fine sand",
+      "length": "1.5 km",
+      "depth": "Shallow — very gradual slope, excellent for children",
+      "facing": "Southwest-facing — protected from north and east winds",
+      "facilities": "Well-equipped: sunbeds, umbrellas, beach bars, tavernas, showers, small shops",
+      "desc": "A long fine sandy beach 5 km south of Petra with stunning views of Molyvos castle. Shallow, calm water and good facilities. One of the most consistently calm beaches on the island.",
+      "lat": 39.3072, "lng": 26.1298
+    },
+    {
+      "name": "Petra Beach",
+      "wiki": "https://en.wikipedia.org/wiki/Petra,_Lesbos",
+      "type": "Sand and fine pebble mix",
+      "length": "1.0 km",
+      "depth": "Medium depth — clear water, gradually deepening",
+      "facing": "West-facing — calm in the mornings, some afternoon breeze",
+      "facilities": "Good: sunbeds, beach bars, tavernas a short walk away in the village",
+      "desc": "Set directly in front of the village of Petra, dominated by the extraordinary 33-metre rock with a chapel on top. Crystal clear water and easy access to one of Lesvos' most striking villages.",
+      "lat": 39.3270, "lng": 26.1350
+    }
+  ]
 }

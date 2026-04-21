@@ -1139,9 +1139,3 @@ html.dark .why-feat-num { color: var(--marble-3); }
   .itin-day-filter { padding: 10px 12px; gap: 6px; }
   .itin-day-btn { font-size: 11px; padding: 5px 10px; }
 }
-  
-.itin-stop-icon {
-  width: 32px; height: 32px;
-  flex-shrink: 0; margin-top: 2px;
-  display: flex; align-items: center; justify-content: center;
-}
