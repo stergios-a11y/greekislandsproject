@@ -1118,6 +1118,13 @@ html.dark .why-feat-num { color: var(--marble-3); }
   color: var(--aegean-light);
   flex-shrink: 0; width: 32px;
 }
+.beach-name-stars { flex: 1; }
+.beach-stars {
+  font-size: 15px;
+  color: var(--gold);
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
 .beach-name {
   font-family: var(--serif);
   font-size: 17px; font-weight: 600;
@@ -1163,4 +1170,39 @@ html.dark .why-feat-num { color: var(--marble-3); }
   .itin-beaches-section { margin: 24px 12px 0; }
   .itin-day-filter { padding: 10px 12px; gap: 6px; }
   .itin-day-btn { font-size: 11px; padding: 5px 10px; }
+}
+
+/* Itinerary day header extras */
+.itin-day-header {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.itin-day-header-main {
+  display: flex; align-items: center; gap: 10px; flex: 1; flex-wrap: wrap;
+}
+.itin-day-meta {
+  font-size: 11px; font-weight: 500;
+  color: var(--ink-4);
+  letter-spacing: 0.2px;
+  margin-left: auto;
+}
+.itin-overnight {
+  font-size: 11px; font-weight: 600;
+  padding: 3px 10px;
+  border: 1.5px solid;
+  border-radius: 20px;
+  background: var(--white);
+  white-space: nowrap;
+}
+.itin-stop-name-row {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 3px; flex-wrap: wrap;
+}
+.itin-stop-time {
+  font-size: 11px; font-weight: 600;
+  color: var(--ink-4);
+  background: var(--marble-2);
+  padding: 1px 7px;
+  border-radius: 10px;
+  white-space: nowrap;
 }
