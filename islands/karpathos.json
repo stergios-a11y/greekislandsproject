@@ -1,0 +1,109 @@
+{
+  "key": "karpathos",
+  "name": "Karpathos",
+  "subtitle": "Greece's best-kept secret — Apella, Olympos and some of the finest beaches in the Aegean",
+  "intro": "Karpathos is the second-largest Dodecanese island, sitting between Rhodes and Crete — remote enough that it has escaped mass tourism and retained a genuinely traditional character. The northern village of Olympos is the most authentic in Greece: women still wear traditional dress daily, and locals speak a dialect closer to ancient Greek than modern Greek. The beaches — Apella, Kyra Panagia, Diakoftis — are among the most beautiful in the Aegean, and far less crowded than equivalents on more famous islands.",
+
+  "itinerary": {
+    "title": "4-Day Karpathos Itinerary",
+    "subtitle": "Pigadia, the beaches of the east coast, Olympos village in the mountains, and the kitesurfing bays of the south.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Pigadia & the Near Beaches",
+        "color": "#1B4F8A",
+        "km": 15,
+        "drive_mins": 25,
+        "overnight": "Pigadia",
+        "stops": [
+          { "name": "Pigadia", "lat": 35.5092, "lng": 27.2147, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Pigadia", "desc": "The capital and main port — a modern working town on a natural harbour. Not beautiful in a Cycladic sense but authentic and welcoming. Rent a car at the port — essential on Karpathos." },
+          { "name": "Archaeological Museum", "lat": 35.5083, "lng": 27.2133, "type": "museum", "time": "10:00", "wiki": null, "desc": "Small but excellent museum with finds from the island's long Minoan, Mycenaean and Classical history." },
+          { "name": "Amopi Beach", "lat": 35.4789, "lng": 27.2139, "type": "beach", "time": "12:30", "wiki": null, "desc": "Series of small sandy coves south of Pigadia — calm, shallow, family-friendly. The closest good beach to the airport and the town." },
+          { "name": "Kyra Panagia", "lat": 35.6214, "lng": 27.1814, "type": "beach", "time": "15:30", "wiki": null, "desc": "One of the most beautiful beaches in the Aegean — fine white pebble and electric turquoise water beneath steep green cliffs. A 5-minute walk from the small car park. Worth the drive." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Apella & the East Coast",
+        "color": "#C0522A",
+        "km": 35,
+        "drive_mins": 55,
+        "overnight": "Pigadia",
+        "stops": [
+          { "name": "Apella Beach", "lat": 35.6067, "lng": 27.1783, "type": "beach", "time": "10:00", "wiki": null, "desc": "The finest beach in the Aegean according to many rankings — white pebbles, electric turquoise water, pine forest sloping down to the sea. The view from the road above, before you descend, is extraordinary. Arrive before 11am." },
+          { "name": "Achata Beach", "lat": 35.5858, "lng": 27.1889, "type": "beach", "time": "13:00", "wiki": null, "desc": "Another exceptional east-coast beach — white pebbles and emerald water in a sheltered cove. Small snack bar, sunbeds. Combines well with Apella and Kyra Panagia for an east-coast beach tour." },
+          { "name": "Othos Village", "lat": 35.5647, "lng": 27.1656, "type": "village", "time": "15:30", "wiki": null, "desc": "Highest village on the island — traditional mountain settlement with the best wine on Karpathos (sweet, dark red). Several tavernas offer wine tastings." }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Olympos — The Traditional North",
+        "color": "#5A7A3A",
+        "km": 55,
+        "drive_mins": 90,
+        "overnight": "Diafani",
+        "stops": [
+          { "name": "Drive to Olympos", "lat": 35.5917, "lng": 27.1444, "type": "nature", "time": "09:00", "wiki": null, "desc": "The drive to Olympos is one of the most dramatic in Greece — a winding mountain road crossing the spine of the island. Allow 2 hours from Pigadia. The scenery is extraordinary." },
+          { "name": "Olympos Village", "lat": 35.7228, "lng": 27.1886, "type": "village", "time": "11:00", "wiki": "https://en.wikipedia.org/wiki/Olympos,_Karpathos", "desc": "The most authentic traditional village in Greece — women wear traditional dress daily, locals speak an ancient Doric dialect, and the village architecture is unchanged since medieval times. Extraordinary and unmissable." },
+          { "name": "Lunch — Olympos Taverna", "lat": 35.7228, "lng": 27.1886, "type": "village", "time": "13:30", "wiki": null, "desc": "Try the village food — makarounes (homemade pasta with cheese and onions), local goat and the excellent Olympos bread. The oven bakery in the village is the last of its kind." },
+          { "name": "Diafani Harbour", "lat": 35.7383, "lng": 27.2050, "type": "harbour", "time": "16:00", "wiki": null, "desc": "The port below Olympos — a small harbour village that serves as the base for boat trips to Saria island. Quiet, atmospheric, with good tavernas. Stay overnight here." }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Kitesurfing Bays & Departure",
+        "color": "#C4962A",
+        "km": 40,
+        "drive_mins": 60,
+        "overnight": null,
+        "stops": [
+          { "name": "Saria Island Boat Trip", "lat": 35.8400, "lng": 27.2267, "type": "nature", "time": "09:30", "wiki": null, "desc": "The uninhabited island north of Karpathos — boat trips from Diafani include beautiful beaches, an abandoned medieval village and Byzantine church ruins. Half-day trip." },
+          { "name": "Arkassa Beach", "lat": 35.5069, "lng": 27.1156, "type": "beach", "time": "14:00", "wiki": null, "desc": "Sandy beach on the southwest coast — consistent winds make it one of the best windsurfing beaches in Europe. The PWA World Cup is held here. Good for non-surfers in the morning before the wind picks up." },
+          { "name": "Karpathos Airport/Port — Departure", "lat": 35.4200, "lng": 27.1467, "type": "harbour", "time": "17:30", "wiki": null, "desc": "Ferry to Piraeus, Rhodes, or Crete. Karpathos has an airport with flights from Athens and Rhodes." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Apella Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "White pebble",
+      "length": "300 m",
+      "depth": "Medium — deep, crystal clear turquoise water",
+      "facing": "East-facing — sheltered cove surrounded by pine forest",
+      "facilities": "Basic: one small taverna, limited sunbeds. Short walk from the road.",
+      "desc": "Consistently ranked among the finest beaches in the Aegean — white pebbles and electric turquoise water in a sheltered cove below pine-covered cliffs. The view from the road above before descending is as dramatic as Myrtos on Kefalonia. Quieter than any comparable beach in the Cyclades.",
+      "commons": null,
+      "lat": 35.6067, "lng": 27.1783
+    },
+    {
+      "name": "Kyra Panagia Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine white pebble",
+      "length": "200 m",
+      "depth": "Medium — deep, clear water",
+      "facing": "East-facing — sheltered by steep cliffs",
+      "facilities": "Basic: one small taverna, chapel above the beach.",
+      "desc": "One of the most beautiful beaches in the Aegean — a small sandy-pebble cove beneath sheer green-covered cliffs, with a whitewashed chapel on the rocks. The water colour is extraordinary. Accessible by a steep drive or by boat from Pigadia.",
+      "commons": null,
+      "lat": 35.6214, "lng": 27.1814
+    },
+    {
+      "name": "Achata Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "White pebble and sand",
+      "length": "250 m",
+      "depth": "Medium — emerald-green water",
+      "facing": "East-facing — sheltered cove",
+      "facilities": "Basic: small snack bar, limited sunbeds.",
+      "desc": "A beautiful sheltered cove on the east coast with white pebbles and remarkably green-tinted water. Combines perfectly with Apella and Kyra Panagia for a day's east-coast beach tour. Much quieter than the more famous beaches.",
+      "commons": null,
+      "lat": 35.5858, "lng": 27.1889
+    }
+  ]
+}

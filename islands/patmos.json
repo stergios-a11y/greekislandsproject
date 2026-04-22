@@ -1,0 +1,85 @@
+{
+  "key": "patmos",
+  "name": "Patmos",
+  "subtitle": "Where John wrote the Apocalypse — a UNESCO monastery and the most sacred island in Greece",
+  "intro": "Patmos is where St John the Theologian was exiled by the Roman emperor Domitian in 95 AD, and where he received the visions that became the Book of Revelation. The Cave of the Apocalypse and the Monastery of St John above the Chora are jointly a UNESCO World Heritage Site. Today Patmos is a small, quiet, spiritual island with good beaches and exceptional food — the antithesis of the party-island stereotype of the Dodecanese.",
+
+  "itinerary": {
+    "title": "2-Day Patmos Itinerary",
+    "subtitle": "The Cave of the Apocalypse, the Chora and the Monastery of St John, and the best beaches of the north coast.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Chora & the Monastery",
+        "color": "#1B4F8A",
+        "km": 10,
+        "drive_mins": 20,
+        "overnight": "Chora",
+        "stops": [
+          { "name": "Skala (Port)", "lat": 37.3211, "lng": 26.5483, "type": "harbour", "time": "09:00", "wiki": null, "desc": "The main port at sea level — a relaxed harbour town. Cafés and shops line the waterfront. Pick up a rental car or scooter here; the Chora and beaches require wheels." },
+          { "name": "Cave of the Apocalypse", "lat": 37.3089, "lng": 26.5456, "type": "church", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Cave_of_the_Apocalypse", "desc": "The small cave where John received the visions of Revelation around 95 AD. UNESCO World Heritage Site. The crack in the rock where God's voice emerged, and the stone where John rested his head, are preserved. Deeply atmospheric even for non-believers." },
+          { "name": "Chora of Patmos", "lat": 37.3072, "lng": 26.5411, "type": "city", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Patmos", "desc": "The hilltop capital of the island — one of the most beautiful preserved medieval settlements in the Aegean. White lanes, centuries-old mansions, and the great monastery dominating the summit." },
+          { "name": "Monastery of St John", "lat": 37.3083, "lng": 26.5425, "type": "church", "time": "13:00", "wiki": "https://en.wikipedia.org/wiki/Monastery_of_Saint_John_the_Theologian", "desc": "UNESCO-listed Byzantine monastery founded 1088. The treasury holds one of the most important collections of Byzantine manuscripts in the world. The view from the ramparts is extraordinary." },
+          { "name": "Lunch — Pantheon Chora", "lat": 37.3072, "lng": 26.5411, "type": "village", "time": "14:30", "wiki": null, "desc": "Traditional taverna in the Chora with outstanding Dodecanese food — the island produces its own cheeses and wine. Book ahead, popular with the yachting crowd." },
+          { "name": "Skala Harbour Evening", "lat": 37.3211, "lng": 26.5483, "type": "harbour", "time": "20:00", "wiki": null, "desc": "Dinner at one of the harbour tavernas. The fish market at the quay sells what was landed that day." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Beaches & Departure",
+        "color": "#C0522A",
+        "km": 25,
+        "drive_mins": 35,
+        "overnight": null,
+        "stops": [
+          { "name": "Psili Ammos Beach", "lat": 37.2700, "lng": 26.5600, "type": "beach", "time": "09:30", "wiki": null, "desc": "The best beach on Patmos — a sandy cove accessible only by a 30-minute walk or by boat from Skala. Crystal clear water, pine trees, and a good small taverna at the waterline." },
+          { "name": "Lambi Beach", "lat": 37.3683, "lng": 26.5667, "type": "beach", "time": "12:30", "wiki": null, "desc": "Famous for its multicoloured pebbles — the beach is strewn with red, green, yellow and white stones. Good snorkelling in the clear water. Small taverna." },
+          { "name": "Kampos Beach", "lat": 37.3567, "lng": 26.5500, "type": "beach", "time": "14:30", "wiki": null, "desc": "Long sandy beach on the north coast — the most organised beach on the island, with sunbeds and tavernas. Calm, shallow water, good for families." },
+          { "name": "Skala — Departure", "lat": 37.3211, "lng": 26.5483, "type": "harbour", "time": "17:30", "wiki": null, "desc": "Ferry to Piraeus, Kos, Samos or the smaller Dodecanese islands. Patmos is a key stop on the northern Dodecanese ferry route." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Psili Ammos Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine golden sand",
+      "length": "300 m",
+      "depth": "Shallow — crystal clear water",
+      "facing": "South-facing — sheltered, calm",
+      "facilities": "Basic: one small taverna. 30-minute walk or boat access from Skala.",
+      "desc": "The finest beach on Patmos — fine golden sand in a sheltered cove, accessible only on foot or by boat. Crystal clear water, pine trees and a simple taverna. The walking access keeps it quiet even in August.",
+      "commons": null,
+      "lat": 37.2700, "lng": 26.5600
+    },
+    {
+      "name": "Lambi Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Multicoloured pebbles",
+      "length": "400 m",
+      "depth": "Medium — clear water, good snorkelling",
+      "facing": "North-facing — some afternoon winds",
+      "facilities": "Good: small taverna, basic sunbeds.",
+      "desc": "Unique pebble beach on the north coast — the stones are an extraordinary range of colours: red, green, yellow, black and white. The geology alone makes it worth a visit. Good snorkelling.",
+      "commons": null,
+      "lat": 37.3683, "lng": 26.5667
+    },
+    {
+      "name": "Kampos Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "500 m",
+      "depth": "Shallow — family-friendly",
+      "facing": "North-facing — sheltered cove",
+      "facilities": "Good: sunbeds, tavernas, parking. The most developed beach on the island.",
+      "desc": "The most accessible organised beach on Patmos — long sandy north-coast bay with calm water and good facilities. The beach village has the island's best tavernas outside Chora.",
+      "commons": null,
+      "lat": 37.3567, "lng": 26.5500
+    }
+  ]
+}

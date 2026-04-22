@@ -1,0 +1,98 @@
+{
+  "key": "kalymnos",
+  "name": "Kalymnos",
+  "subtitle": "The sponge divers' island — world-class climbing, vertical limestone cliffs and a deep sea tradition",
+  "intro": "Kalymnos has two identities. For millennia it was the sponge-diving capital of the Aegean — men dove to 100m without equipment, many dying of the bends, to fuel a global industry. Since 1997, it has become one of the world's top five sport climbing destinations, with 3000 bolted routes on extraordinary limestone cliffs. Today the island draws climbers from around the world, alongside a quieter tourism drawn by the dramatic mountains, clear water, and small traditional villages.",
+
+  "itinerary": {
+    "title": "3-Day Kalymnos Itinerary",
+    "subtitle": "Pothia's sponge heritage, the climbing villages of the west coast, and the beaches and caves of Telendos.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Pothia & the Sponge Heritage",
+        "color": "#1B4F8A",
+        "km": 10,
+        "drive_mins": 15,
+        "overnight": "Pothia",
+        "stops": [
+          { "name": "Pothia", "lat": 36.9478, "lng": 26.9894, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Pothia", "desc": "The capital — a working Greek port built on the slopes above a natural harbour. The Italian-era waterfront buildings are the finest in the Dodecanese outside Rhodes and Kos. Not pretty in a Cycladic sense but genuinely interesting." },
+          { "name": "Sponge Factory & Museum", "lat": 36.9472, "lng": 26.9900, "type": "museum", "time": "10:00", "wiki": null, "desc": "Working sponge factories line the harbour — buy a genuine Kalymnos sponge. The small Nautical Museum tells the extraordinary and tragic story of the island's sponge-diving industry." },
+          { "name": "Archaeological Museum", "lat": 36.9483, "lng": 26.9867, "type": "museum", "time": "11:30", "wiki": null, "desc": "Small but excellent museum including the Lady of Kalymnos, a magnificent 1st-century BC bronze statue recovered from the sea in 1994. A rare survival." },
+          { "name": "Chora (Old Capital)", "lat": 36.9700, "lng": 27.0000, "type": "village", "time": "14:00", "wiki": null, "desc": "The old Byzantine capital above Pothia — a medieval village with a Knights' castle and views over the island. Quieter and more atmospheric than the modern port." },
+          { "name": "Pothia Waterfront Dinner", "lat": 36.9478, "lng": 26.9894, "type": "harbour", "time": "20:00", "wiki": null, "desc": "The harbour tavernas serve excellent fresh fish. Try the mermizeli (Kalymnos salad with rusks) and oktapodi (octopus)." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Masouri & the Climbing Coast",
+        "color": "#C0522A",
+        "km": 20,
+        "drive_mins": 30,
+        "overnight": "Masouri",
+        "stops": [
+          { "name": "Masouri", "lat": 36.9956, "lng": 26.9458, "type": "village", "time": "09:30", "wiki": null, "desc": "The climbing capital of Kalymnos — a lively village on the west coast entirely built around the sport. Shops selling gear, cafes full of climbers from every country. Even if you don't climb, it's a fascinating scene." },
+          { "name": "Grande Grotta", "lat": 37.0083, "lng": 26.9483, "type": "nature", "time": "11:00", "wiki": null, "desc": "The largest and most famous climbing cave on Kalymnos — a huge overhanging limestone cavern above the coast. Free to visit. Watch the climbers above while swimming below." },
+          { "name": "Myrties Beach", "lat": 37.0117, "lng": 26.9489, "type": "beach", "time": "13:00", "wiki": null, "desc": "Pebble beach next to Masouri, with the islet of Telendos directly opposite — one of the most dramatic views in the Dodecanese. Good tavernas on the waterfront." },
+          { "name": "Emborios Village", "lat": 37.0883, "lng": 26.9450, "type": "village", "time": "16:00", "wiki": null, "desc": "Traditional fishing village at the northern end of the island — small pebble beach, a handful of tavernas, and a refreshingly unhurried pace compared to Masouri." }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Telendos Island & Departure",
+        "color": "#5A7A3A",
+        "km": 5,
+        "drive_mins": 15,
+        "overnight": null,
+        "stops": [
+          { "name": "Telendos Boat", "lat": 37.0117, "lng": 26.9489, "type": "harbour", "time": "10:00", "wiki": null, "desc": "Small boat from Myrties — the crossing takes 10 minutes. Telendos broke off from Kalymnos in an earthquake in 554 AD. No cars on the island." },
+          { "name": "Telendos Village", "lat": 37.0194, "lng": 26.9289, "type": "village", "time": "10:15", "wiki": "https://en.wikipedia.org/wiki/Telendos", "desc": "A tiny car-free village with a few tavernas, a small hotel and the best pebble beach on Kalymnos. Excellent lunch at one of the waterfront tavernas." },
+          { "name": "Hochlakas Beach", "lat": 37.0217, "lng": 26.9283, "type": "beach", "time": "11:30", "wiki": null, "desc": "Pebble beach at Telendos — crystal clear water, no crowds, and views back to Kalymnos. One of the best swimming spots in the Dodecanese." },
+          { "name": "Pothia — Departure", "lat": 36.9478, "lng": 26.9894, "type": "harbour", "time": "16:30", "wiki": null, "desc": "Ferry to Kos (frequent), Leros, Patmos, Piraeus or Rhodes. Kalymnos has its own small airport with Athens flights." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Myrties Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Pebble",
+      "length": "500 m",
+      "depth": "Medium — clear water",
+      "facing": "West-facing — sunset views, Telendos islet opposite",
+      "facilities": "Good: sunbeds, tavernas, water sports. The most developed beach on Kalymnos.",
+      "desc": "The best-known beach on Kalymnos — pebble shoreline with extraordinary views across to the islet of Telendos. The sunset here is one of the best in the Dodecanese. The water is exceptionally clear and the tavernas on the waterfront are excellent.",
+      "commons": null,
+      "lat": 37.0117, "lng": 26.9489
+    },
+    {
+      "name": "Hochlakas Beach (Telendos)",
+      "wiki": null,
+      "rating": 5,
+      "type": "White pebble",
+      "length": "400 m",
+      "depth": "Medium — crystal clear water",
+      "facing": "East-facing — sheltered, views to Kalymnos",
+      "facilities": "Basic: small taverna, no cars on the island.",
+      "desc": "The finest beach on Telendos and arguably in the whole of Kalymnos — white pebble with extraordinary water clarity and views back to Kalymnos. The car-free island adds to the peaceful atmosphere.",
+      "commons": null,
+      "lat": 37.0217, "lng": 26.9283
+    },
+    {
+      "name": "Emborios Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "length": "300 m",
+      "depth": "Medium — clear water",
+      "facing": "North-facing — sheltered bay",
+      "facilities": "Basic: tavernas, small pension hotels. Quiet.",
+      "desc": "A quieter pebble beach at the northern tip of the island, in the traditional fishing village of Emborios. Less crowded than Myrties, good tavernas and a relaxed atmosphere.",
+      "commons": null,
+      "lat": 37.0883, "lng": 26.9450
+    }
+  ]
+}

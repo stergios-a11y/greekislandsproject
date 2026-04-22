@@ -1,0 +1,85 @@
+{
+  "key": "symi",
+  "name": "Symi",
+  "subtitle": "The most beautiful harbour in Greece — neoclassical mansions and deep blue water",
+  "intro": "Symi has the most photographed harbour in Greece — an amphitheatre of neoclassical mansions in ochre, yellow, terracotta and blue, rising up the hills of the Gialos. The island grew wealthy from sponge diving and shipbuilding in the 19th century, and every one of those merchants built a mansion in the harbour. Today it's a tiny island (population 2500) with excellent food, dramatic bays, and the Panormitis monastery in the south. Easy day trip from Rhodes or, better, a 2-night stay.",
+
+  "itinerary": {
+    "title": "2-Day Symi Itinerary",
+    "subtitle": "Gialos harbour, the medieval Chorio, the Panormitis monastery and the hidden beaches of the east coast.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Gialos & Chorio",
+        "color": "#1B4F8A",
+        "km": 5,
+        "drive_mins": 15,
+        "overnight": "Symi Town",
+        "stops": [
+          { "name": "Gialos Harbour", "lat": 36.6150, "lng": 27.8378, "type": "harbour", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Symi", "desc": "Arrive by ferry or day boat from Rhodes (1 hour). The first view of the harbour as you enter is unforgettable — an amphitheatre of painted neoclassical mansions rising from the water." },
+          { "name": "Nautical Museum", "lat": 36.6150, "lng": 27.8383, "type": "museum", "time": "10:00", "wiki": null, "desc": "The story of Symi's extraordinary maritime heritage — sponge diving, shipbuilding, the trade with Egypt. The model ships alone are worth the entry." },
+          { "name": "Kali Strata Steps", "lat": 36.6128, "lng": 27.8378, "type": "city", "time": "11:30", "wiki": null, "desc": "The 500 steps from the harbour up to the old medieval capital of Chorio — one of the most photographed stair climbs in Greece. Take your time; there are cafes to stop at on the way up." },
+          { "name": "Chorio (Medieval Capital)", "lat": 36.6100, "lng": 27.8333, "type": "village", "time": "12:30", "wiki": null, "desc": "The Byzantine capital at the top of the hill — much quieter than the harbour, with views over both sides of the island. The Knights' castle at the summit was destroyed by Allied bombs in WWII but the ruins remain." },
+          { "name": "Nos Beach", "lat": 36.6206, "lng": 27.8367, "type": "beach", "time": "15:00", "wiki": null, "desc": "The closest beach to the harbour — a short walk from Gialos. Pebble beach with clear water and views back to the harbour. Perfect for a late afternoon swim." },
+          { "name": "Dinner — Tholos Restaurant", "lat": 36.6156, "lng": 27.8394, "type": "harbour", "time": "20:30", "wiki": null, "desc": "One of the finest seafood restaurants in the Dodecanese — try the small shrimp (garides symi) that are unique to the island. Book ahead." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Panormitis & Beaches",
+        "color": "#C0522A",
+        "km": 25,
+        "drive_mins": 35,
+        "overnight": null,
+        "stops": [
+          { "name": "Panormitis Monastery", "lat": 36.5583, "lng": 27.8417, "type": "church", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Panormitis", "desc": "The most famous monastery in the Dodecanese — dedicated to the Archangel Michael, patron of sailors. The bell tower is the tallest in the Dodecanese. Beautiful sheltered bay setting in the south of the island." },
+          { "name": "Agios Georgios Dysalona Beach", "lat": 36.6083, "lng": 27.8683, "type": "beach", "time": "12:30", "wiki": null, "desc": "Dramatic pebble beach on the east coast beneath 300m cliffs — accessible only by boat from Gialos (20 min). The water is exceptional. Day cruises stop here." },
+          { "name": "Marathounda Beach", "lat": 36.6167, "lng": 27.8700, "type": "beach", "time": "14:30", "wiki": null, "desc": "Another east-coast beach reached by boat — pebble beach with resident goats that descend to drink seawater. The taverna here serves excellent grilled fish." },
+          { "name": "Gialos — Departure", "lat": 36.6150, "lng": 27.8378, "type": "harbour", "time": "17:00", "wiki": null, "desc": "Ferry back to Rhodes (1 hour) or onward to the other Dodecanese. Regular day-trip boats also return in the evening." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Agios Georgios Dysalona",
+      "wiki": null,
+      "rating": 5,
+      "type": "White pebble",
+      "length": "150 m",
+      "depth": "Medium — crystal clear water",
+      "facing": "East-facing — dramatic 300m cliffs behind",
+      "facilities": "None — boat access only from Gialos (20 min).",
+      "desc": "The most dramatic beach on Symi — a small pebble cove at the base of 300m sheer cliffs, accessible only by boat. The water clarity is extraordinary. Day cruises from Gialos harbour typically stop here for an hour's swimming.",
+      "commons": null,
+      "lat": 36.6083, "lng": 27.8683
+    },
+    {
+      "name": "Nos Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "length": "200 m",
+      "depth": "Medium — deep, clear water",
+      "facing": "Northeast-facing — sheltered by the harbour peninsula",
+      "facilities": "Good: short walk from harbour, sunbeds, tavernas nearby.",
+      "desc": "The easiest beach to reach from Symi Town — a 10-minute walk from Gialos harbour brings you to this pebble beach with clear water and views back over the town. Perfect for a late afternoon swim.",
+      "commons": null,
+      "lat": 36.6206, "lng": 27.8367
+    },
+    {
+      "name": "Marathounda Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "length": "200 m",
+      "depth": "Medium — clear, deep water",
+      "facing": "East-facing — sheltered bay",
+      "facilities": "Basic: one taverna, resident goats.",
+      "desc": "A quiet east-coast beach reached by boat — famous for the resident goats that wander down to lick the salt from the rocks. The taverna here serves excellent fish. Part of most day-cruise itineraries from Gialos.",
+      "commons": null,
+      "lat": 36.6167, "lng": 27.8700
+    }
+  ]
+}
