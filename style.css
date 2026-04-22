@@ -1849,3 +1849,61 @@ html.dark .top-nav.open {
   background: #0A2A35;
   border: 1px solid rgba(255,255,255,0.1);
 }
+
+/* Compact Why This Site Exists page */
+.why-body-compact {
+  max-width: 720px;
+  padding: 48px 32px 60px;
+}
+.why-body-compact .why-lead {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin-bottom: 22px;
+  font-weight: 400;
+}
+.why-body-compact .why-lead strong {
+  color: var(--ink-1);
+  font-weight: 700;
+}
+.why-body-compact .why-manifesto {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.why-body-compact .why-manifesto h2 {
+  font-family: var(--display);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--aegean);
+  margin: 0 0 16px;
+  font-weight: 700;
+}
+.why-body-compact .why-manifesto p {
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--ink-1);
+  margin: 0 0 14px;
+  line-height: 1.4;
+}
+.why-body-compact .why-kicker {
+  display: block;
+  font-size: 14px;
+  color: var(--ink-3);
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .why-body-compact {
+    padding: 32px 20px 40px;
+  }
+  .why-body-compact .why-lead {
+    font-size: 16px;
+  }
+  .why-body-compact .why-manifesto p {
+    font-size: 22px;
+  }
+}
