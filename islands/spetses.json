@@ -1,0 +1,83 @@
+{
+  "key": "spetses",
+  "name": "Spetses",
+  "subtitle": "The horse-drawn Saronic island — Bouboulina, mansions and pine-fringed beaches",
+  "intro": "Spetses is the elegant Saronic island — no cars in the old town, horse-drawn carriages instead of taxis, and a cluster of 19th-century mansions around the harbour built by sea captains made wealthy in the Greek War of Independence. Laskarina Bouboulina, the female admiral who led the Greek fleet against the Ottomans, was born here. The island is almost entirely covered in Aleppo pines running down to the coast.",
+
+  "itinerary": {
+    "title": "2-Day Spetses Itinerary",
+    "subtitle": "Dapia harbour, Bouboulina's house, the coastal path around the island and the best pine-fringed beaches.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Dapia Harbour & Mansions",
+        "color": "#1B4F8A",
+        "km": 8,
+        "drive_mins": 15,
+        "overnight": "Spetses Town",
+        "stops": [
+          { "name": "Dapia Harbour", "lat": 37.2683, "lng": 23.1550, "type": "harbour", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Spetses", "desc": "The main harbour — cannons pointing out to sea and horse-drawn carriages at the quayside. No cars in the old town. Have coffee at one of the harbour cafés." },
+          { "name": "Bouboulina's Museum", "lat": 37.2717, "lng": 23.1567, "type": "museum", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Laskarina_Bouboulina", "desc": "The mansion of Laskarina Bouboulina, the female admiral who commanded a Greek fleet in the War of Independence. Guided tours include her remarkable personal story. One of the most interesting small museums in Greece." },
+          { "name": "Spetses Mexis Museum", "lat": 37.2667, "lng": 23.1533, "type": "museum", "time": "11:30", "wiki": null, "desc": "The Archaeological Museum in the mansion of Hadjigiannis Mexis, the first governor of Spetses. Local archaeology, shipping history and the preserved head of Bouboulina." },
+          { "name": "Agia Marina Beach", "lat": 37.2633, "lng": 23.1783, "type": "beach", "time": "14:00", "wiki": null, "desc": "The closest beach to the town — a short pebble beach with good facilities and very clear water. 20 minutes walk or 5 minutes by horse-drawn carriage." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "The Coastal Loop",
+        "color": "#C0522A",
+        "km": 28,
+        "drive_mins": 60,
+        "overnight": null,
+        "stops": [
+          { "name": "Anargyrios School", "lat": 37.2733, "lng": 23.1567, "type": "museum", "time": "09:30", "wiki": null, "desc": "The grand neoclassical boarding school where John Fowles taught in the 1950s — the setting for his novel The Magus. The building is visible from the coast road, a beautiful sight." },
+          { "name": "Zogeria Beach", "lat": 37.2517, "lng": 23.1017, "type": "beach", "time": "11:00", "wiki": null, "desc": "The finest beach on Spetses — a pine-fringed pebble bay on the west coast with extraordinary water clarity. Accessible by the coastal road bus, water taxi or bicycle. One of the best pine-forest beaches in the Saronic." },
+          { "name": "Xylokeriza Beach", "lat": 37.2417, "lng": 23.1400, "type": "beach", "time": "13:30", "wiki": null, "desc": "Long pine-backed pebble beach on the south coast — calm, clear water and a good taverna. Less developed than Agia Marina." },
+          { "name": "Spetses Town — Departure", "lat": 37.2683, "lng": 23.1550, "type": "harbour", "time": "16:30", "wiki": null, "desc": "Ferry to Piraeus, Hydra or the Argolid coast (Kosta, 10 minutes across the strait)." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Zogeria Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Pebble",
+      "length": "200 m",
+      "depth": "Medium — crystal clear Aegean water",
+      "facing": "West-facing — sheltered bay",
+      "facilities": "Basic: one small taverna. Pine trees provide natural shade.",
+      "desc": "The finest beach on Spetses — a pine-fringed pebble bay on the west coast with extraordinary water clarity. The setting is unusually natural and unspoiled for the Saronic. Accessible by the island bus, water taxi or bicycle along the coastal road.",
+      "commons": null,
+      "lat": 37.2517, "lng": 23.1017
+    },
+    {
+      "name": "Xylokeriza Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble and fine sand",
+      "length": "400 m",
+      "depth": "Shallow — calm water",
+      "facing": "South-facing — sheltered, pine shade",
+      "facilities": "Good: sunbeds, taverna, easy bicycle access from the town.",
+      "desc": "A long pine-backed beach on the south coast — one of the best for spending a full day. Pine trees run to the water's edge and the small taverna has outstanding grilled fish.",
+      "commons": null,
+      "lat": 37.2417, "lng": 23.1400
+    },
+    {
+      "name": "Agia Marina Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine pebble",
+      "length": "150 m",
+      "depth": "Shallow — good swimming",
+      "facing": "East-facing — sheltered bay",
+      "facilities": "Good: sunbeds, beach bar, easy access from town.",
+      "desc": "The town beach — closest to Spetses Town and most convenient. 20 minutes walk or 5 by horse-drawn carriage. Clear water and good facilities.",
+      "commons": null,
+      "lat": 37.2633, "lng": 23.1783
+    }
+  ]
+}

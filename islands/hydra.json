@@ -1,0 +1,83 @@
+{
+  "key": "hydra",
+  "name": "Hydra",
+  "subtitle": "No cars, no noise — the artists' island of the Saronic",
+  "intro": "Hydra bans all motor vehicles — the only way to move is on foot, by donkey, or by water taxi. The result is the most peaceful town in the Saronic gulf: a crescent harbour of stone mansions, an artists' community that includes Leonard Cohen's former house, and rocky swimming platforms instead of sandy beaches. Come here for atmosphere, not sunbathing.",
+
+  "itinerary": {
+    "title": "2-Day Hydra Itinerary",
+    "subtitle": "The harbour town, the coastal path to Vlychos, and the remote beaches of Bisti and Agios Nikolaos.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Hydra Town & Vlychos",
+        "color": "#1B4F8A",
+        "km": 5,
+        "drive_mins": 45,
+        "overnight": "Hydra Town",
+        "stops": [
+          { "name": "Hydra Harbour", "lat": 37.3500, "lng": 23.4667, "type": "harbour", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Hydra_(island)", "desc": "Arrive and settle into the rhythm. No cars means no noise — just donkeys carrying luggage up the lanes. The harbour is one of the most beautiful in Greece." },
+          { "name": "Historical Archive Museum", "lat": 37.3495, "lng": 23.4683, "type": "museum", "time": "10:00", "wiki": null, "desc": "Small but excellent museum in a neoclassical mansion on the harbour — the story of Hydra's extraordinary role in the Greek War of Independence. The island provided more ships than any other." },
+          { "name": "Spilia Swimming Rocks", "lat": 37.3483, "lng": 23.4633, "type": "beach", "time": "11:30", "wiki": null, "desc": "The town's swimming spot — rocky platforms right below the Spilia café. Crystal clear water and cliff-jumping. 5 minutes from the harbour." },
+          { "name": "Lunch — Castello Kamini", "lat": 37.3467, "lng": 23.4583, "type": "village", "time": "13:30", "wiki": null, "desc": "Harbourfront taverna in the tiny fishing village of Kamini. The grilled octopus and the view are both excellent. 15-minute walk from the main harbour." },
+          { "name": "Vlychos Beach", "lat": 37.3450, "lng": 23.4500, "type": "beach", "time": "15:30", "wiki": null, "desc": "Pebble beach 30 minutes walk along the coastal path. Clear water, sunbeds, and the excellent Taverna Marina right behind the beach. The last beach reachable on foot." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Bisti or Mandraki & Departure",
+        "color": "#C0522A",
+        "km": 8,
+        "drive_mins": 20,
+        "overnight": null,
+        "stops": [
+          { "name": "Bisti Beach", "lat": 37.3217, "lng": 23.4100, "type": "beach", "time": "10:00", "wiki": null, "desc": "Secluded pine-fringed pebble beach on the west coast — accessible only by water taxi or beach boat from the harbour (20 min). A diving club operates here." },
+          { "name": "Hydra Town Evening", "lat": 37.3500, "lng": 23.4667, "type": "city", "time": "13:00", "wiki": null, "desc": "Return to town for lunch. Walk the upper lanes to find Leonard Cohen's house (No. 10 Merkouraki lane). The antiquarian bookshops are excellent." },
+          { "name": "Hydra — Departure", "lat": 37.3500, "lng": 23.4667, "type": "harbour", "time": "16:00", "wiki": null, "desc": "Ferry to Piraeus (90 min) or to the other Saronic islands." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Vlychos Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Pebble with some sand",
+      "length": "200 m",
+      "depth": "Shallow to medium — calm, clear water",
+      "facing": "West-facing — sheltered by the coast",
+      "facilities": "Good: sunbeds, two excellent tavernas (Marina and Enalion), drinks served to the beach.",
+      "desc": "The best beach on Hydra accessible on foot — a 30-minute walk along the coastal path from the harbour, past a 17th-century stone bridge. Pebble beach with calm clear water and two of the island's best tavernas immediately behind.",
+      "commons": null,
+      "lat": 37.3450, "lng": 23.4500
+    },
+    {
+      "name": "Bisti Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "length": "150 m",
+      "depth": "Medium — clear water, good for snorkelling",
+      "facing": "South-facing — sheltered bay",
+      "facilities": "Basic: diving club, sunbeds, snack bar, pine shade. Water taxi or beach boat access only.",
+      "desc": "A secluded pebble beach in a sheltered bay on the west coast, run by the island's diving club. Pine trees provide natural shade and the water is exceptionally clear. One of the quietest swimming spots in the Saronic gulf.",
+      "commons": null,
+      "lat": 37.3217, "lng": 23.4100
+    },
+    {
+      "name": "Mandraki Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand (the only sandy beach on Hydra)",
+      "length": "100 m",
+      "depth": "Shallow — very gradual entry",
+      "facing": "Northeast-facing — sheltered cove",
+      "facilities": "Premium: Mandraki Beach Resort with full service, showers, changing rooms. 20-minute walk east from the harbour.",
+      "desc": "The only sandy beach on Hydra — an exclusive resort beach 20 minutes walk east of the harbour. Calm, shallow water and full premium facilities. The setup is expensive but the sandy bottom is unique on the island.",
+      "commons": null,
+      "lat": 37.3583, "lng": 23.4867
+    }
+  ]
+}

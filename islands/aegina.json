@@ -1,0 +1,58 @@
+{
+  "key": "aegina",
+  "name": "Aegina",
+  "subtitle": "The pistachio island — an ancient temple, a traditional town, and Athens's closest escape",
+  "intro": "Aegina is the nearest significant island to Athens — just 40 minutes by hydrofoil from Piraeus. Its capital was briefly the first capital of modern Greece (1828-29). The Temple of Aphaea is one of the best-preserved ancient temples in Greece, forming a 'sacred triangle' with the Parthenon and Sounio. And the pistachios grown here are protected by PDO status and exported across the world. An easy day trip or a peaceful 1-2 night stay.",
+
+  "itinerary": {
+    "title": "1-Day Aegina Itinerary",
+    "subtitle": "A perfect day trip from Athens — the harbour town, the Temple of Aphaea and a swim at Marathonas beach.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Aegina Town, Temple & Beach",
+        "color": "#1B4F8A",
+        "km": 25,
+        "drive_mins": 35,
+        "overnight": null,
+        "stops": [
+          { "name": "Aegina Town", "lat": 37.7467, "lng": 23.4267, "type": "city", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Aegina", "desc": "Arrive by ferry from Piraeus (40 min hydrofoil). The harbour is lined with painted fishing boats and pistachio sellers. The Tower of Markellos in the old town is worth a walk." },
+          { "name": "Temple of Apollo (Kolona)", "lat": 37.7517, "lng": 23.4233, "type": "museum", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Temple_of_Apollo_(Aegina)", "desc": "A single standing column marks the temple of Apollo on a low hill overlooking the harbour. Small but atmospheric site with an excellent museum." },
+          { "name": "Temple of Aphaea", "lat": 37.7533, "lng": 23.5333, "type": "castle", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Temple_of_Aphaea", "desc": "One of the three temples forming the 'sacred triangle' with the Parthenon and Poseidon at Sounio. 5th century BC, outstandingly preserved, on a pine-covered hilltop with sea views on every side. Unmissable." },
+          { "name": "Lunch — Agora Fish Market", "lat": 37.7467, "lng": 23.4267, "type": "harbour", "time": "13:30", "wiki": null, "desc": "Aegina's fish market is the best in the Saronic — come at lunchtime when the tavernas serve what the fishermen landed that morning. Try the pistachios afterwards from any harbour stall." },
+          { "name": "Marathonas Beach", "lat": 37.7350, "lng": 23.4367, "type": "beach", "time": "15:30", "wiki": null, "desc": "The best beach near the town — sandy, shallow and well-organised. 10-minute drive or bus from the harbour." },
+          { "name": "Aegina — Departure", "lat": 37.7467, "lng": 23.4267, "type": "harbour", "time": "18:30", "wiki": null, "desc": "Ferry back to Piraeus — frequent departures until late evening." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Marathonas Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "500 m",
+      "depth": "Shallow — family-friendly",
+      "facing": "Southwest-facing — sheltered, calm water",
+      "facilities": "Good: sunbeds, tavernas, easy access by bus or car from town.",
+      "desc": "The best beach near Aegina Town — sandy, shallow and calm. 10 minutes from the harbour. Good facilities and the most convenient swim on the island.",
+      "commons": null,
+      "lat": 37.7350, "lng": 23.4367
+    },
+    {
+      "name": "Agia Marina Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "600 m",
+      "depth": "Shallow — gentle slope",
+      "facing": "East-facing — sheltered bay",
+      "facilities": "Fully organised: sunbeds, beach bars, water sports, tavernas. Near the Temple of Aphaea.",
+      "desc": "The largest resort beach on Aegina — long sandy stretch on the east coast, near the Temple of Aphaea. Good for combining sightseeing with swimming. Busier than Marathonas but more extensive.",
+      "commons": null,
+      "lat": 37.7417, "lng": 23.5283
+    }
+  ]
+}
