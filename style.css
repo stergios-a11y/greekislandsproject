@@ -1817,3 +1817,35 @@ html.dark #ferry-map {
     grid-template-columns: 1fr;
   }
 }
+
+/* Dark mode header — darker background so nav text stays readable */
+html.dark header {
+  background: linear-gradient(135deg, #0A2A35 0%, #144A5F 100%);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+html.dark .top-nav a {
+  color: rgba(255,255,255,0.85);
+}
+html.dark .top-nav a:hover,
+html.dark .top-nav a.active {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+html.dark #brand-text {
+  color: #fff;
+}
+html.dark #site-logo {
+  background: rgba(255,255,255,0.18);
+}
+html.dark .dark-mode-toggle {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+html.dark .menu-toggle span {
+  background: #fff;
+}
+/* Mobile menu in dark mode */
+html.dark .top-nav.open {
+  background: #0A2A35;
+  border: 1px solid rgba(255,255,255,0.1);
+}

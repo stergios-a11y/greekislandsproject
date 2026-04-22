@@ -1132,6 +1132,12 @@ const FERRY_ROUTES = [
   // Saronic — drawn as one polyline through all 4 ports (Piraeus → Aegina → Poros → Hydra)
   { polyline: ['piraeus', 'aegina', 'poros', 'hydra'], freq: 'high', note: 'Saronic Gulf · 5-12 daily services · Piraeus serves Aegina, Poros, Hydra (and Spetses). Frequent hydrofoils + conventional ferries.' },
 
+  // Sporades — Skiathos/Skopelos/Alonnisos connection
+  { polyline: ['skiathos', 'skopelos', 'alonnisos'], freq: 'high', note: 'Sporades · Multiple daily services · Flying Dolphins hydrofoils + Aegean Flying Cat catamarans · Skiathos ~1 hr to Skopelos, ~30 min more to Alonnisos.' },
+
+  // NE Aegean — Lemnos to Agios Efstratios
+  { from: 'lemnos', to: 'agios-efstratios', freq: 'low', duration: '~2.5 hrs', note: 'Fast Ferries Adamantios Korais · 2-3/week · ~2.5 hrs · The gateway to the most remote island in the Aegean.' },
+
   // Small Cyclades loop (Express Skopelitis) — drawn as one polyline
   { polyline: ['naxos', 'iraklia', 'schinoussa', 'koufonisia', 'donousa', 'amorgos'], freq: 'low', note: 'Small Cyclades Lines · Express Skopelitis · 6 days/week (one service per day) · Naxos ↔ Amorgos via Iraklia, Schinoussa, Koufonisi, Donousa' },
 ];
