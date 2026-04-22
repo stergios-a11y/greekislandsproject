@@ -138,7 +138,7 @@ function navigateTo(view, param) {
 
 function showView(view, param) {
   const homeControls = document.getElementById('home-controls');
-  ['home','data','compare','hopping','match','mission','detail'].forEach(v => {
+  ['home','data','compare','hopping','match','shortlist','mission','detail'].forEach(v => {
     const el = document.getElementById(`view-${v}`);
     if (el) el.style.display = 'none';
   });
@@ -161,6 +161,7 @@ function showView(view, param) {
   if (view === 'home' && mapInstance) setTimeout(() => mapInstance.invalidateSize(), 100);
   if (view === 'hopping') setTimeout(renderHopping, 50);
   if (view === 'match') setupQuizIfNeeded();
+  if (view === 'shortlist') renderShortlist();
 }
 
 function handleNav(view, param) { navigateTo(view, param); }
@@ -171,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hardFallback = setTimeout(dismissLoading, 3000);
   if (localStorage.getItem('heroDismissed')) dismissHero();
   try { setupNav(); } catch(e) { console.warn('setupNav', e); }
+  updateShortlistCount();
   try { setupDarkMode(); } catch(e) { console.warn('setupDarkMode', e); }
   try { setupVibeChips(); } catch(e) { console.warn('setupVibeChips', e); }
   try { setupGroupFilter(); } catch(e) { console.warn('setupGroupFilter', e); }
@@ -237,7 +239,7 @@ function setupNav() {
   const navMap = {
     'nav-home': 'home', 'nav-map': 'home', 'nav-data': 'data',
     'nav-compare': 'compare', 'nav-hopping': 'hopping',
-    'nav-match': 'match', 'nav-mission': 'mission',
+    'nav-match': 'match', 'nav-shortlist': 'shortlist', 'nav-mission': 'mission',
   };
   Object.entries(navMap).forEach(([btnId, view]) => {
     const el = document.getElementById(btnId);
@@ -361,6 +363,7 @@ let currentIslandKey = '';
 
 async function renderIslandPage(key) {
   currentIslandKey = key;
+  setTimeout(updateShortlistButton, 50);
   const island = ISLANDS_DATA[key];
   if (!island) return;
 
@@ -733,6 +736,118 @@ function setupTable() {
   }
   renderTable();
 }
+
+
+/* ============================================================
+   SHORTLIST — save favourite islands to localStorage
+============================================================ */
+function getShortlist() {
+  try { return JSON.parse(localStorage.getItem('islandShortlist') || '[]'); }
+  catch { return []; }
+}
+
+function saveShortlist(list) {
+  localStorage.setItem('islandShortlist', JSON.stringify(list));
+  updateShortlistCount();
+}
+
+function isInShortlist(key) {
+  return getShortlist().includes(key);
+}
+
+function toggleShortlist() {
+  if (!currentIslandKey) return;
+  const list = getShortlist();
+  const idx = list.indexOf(currentIslandKey);
+  if (idx >= 0) {
+    list.splice(idx, 1);
+  } else {
+    list.push(currentIslandKey);
+  }
+  saveShortlist(list);
+  updateShortlistButton();
+}
+
+function updateShortlistButton() {
+  const btn = document.getElementById('detail-shortlist-btn');
+  if (!btn || !currentIslandKey) return;
+  const saved = isInShortlist(currentIslandKey);
+  btn.textContent = saved ? '★ Saved' : '☆ Save';
+  btn.classList.toggle('saved', saved);
+}
+
+function updateShortlistCount() {
+  const count = getShortlist().length;
+  const badge = document.getElementById('shortlist-count');
+  if (badge) {
+    badge.textContent = count > 0 ? `(${count})` : '';
+  }
+}
+
+function renderShortlist() {
+  const container = document.getElementById('shortlist-container');
+  if (!container) return;
+  const list = getShortlist();
+  
+  if (list.length === 0) {
+    container.innerHTML = `
+      <div class="shortlist-empty">
+        <p style="font-size:48px;margin:0 0 16px">☆</p>
+        <p><strong>No islands saved yet.</strong></p>
+        <p>Click the ☆ Save button on any island page to add it here.</p>
+      </div>
+    `;
+    return;
+  }
+  
+  const cards = list.map(key => {
+    const island = ISLANDS_DATA[key];
+    if (!island) return '';
+    return `
+      <div class="shortlist-card" onclick="navigateTo('island','${key}')">
+        <div class="shortlist-card-body">
+          <h3>${island.name}</h3>
+          <div class="shortlist-meta">
+            <span class="group-tag">${island.island_group}</span>
+            <span>${island.days ? island.days + ' days' : ''}</span>
+          </div>
+          <div class="shortlist-rating">${starsHtml(island.total)}</div>
+          <div class="shortlist-dims">
+            Beach ${fmt(island.beach)} · Culture ${fmt(island.hist)} · Night ${fmt(island.night)}
+          </div>
+          <button class="shortlist-remove" onclick="event.stopPropagation();removeFromShortlist('${key}')">✕ Remove</button>
+        </div>
+      </div>
+    `;
+  }).join('');
+  
+  container.innerHTML = `
+    <div class="shortlist-grid">${cards}</div>
+    <div style="text-align:center;margin-top:24px">
+      <button class="shortlist-clear" onclick="clearShortlist()">Clear all</button>
+    </div>
+  `;
+}
+
+function removeFromShortlist(key) {
+  const list = getShortlist().filter(k => k !== key);
+  saveShortlist(list);
+  renderShortlist();
+}
+
+function clearShortlist() {
+  if (confirm('Remove all saved islands?')) {
+    saveShortlist([]);
+    renderShortlist();
+  }
+}
+
+// Expose for inline onclick
+window.toggleShortlist = toggleShortlist;
+window.removeFromShortlist = removeFromShortlist;
+window.clearShortlist = clearShortlist;
+window.navigateTo = navigateTo;
+
 
 /* ============================================================
    BEACH COMMUNITY VOTING — stored in localStorage

@@ -57,6 +57,7 @@
         <a href="#" id="nav-compare">Compare</a>
         <a href="#" id="nav-hopping">Island Hopping</a>
         <a href="#" id="nav-match">Match Me</a>
+        <a href="#" id="nav-shortlist">⭐ My Shortlist <span class="shortlist-count" id="shortlist-count"></span></a>
         <a href="#" id="nav-mission">Why This Exists</a>
       </nav>
       <button class="dark-mode-toggle" id="dark-mode-btn" aria-label="Toggle dark mode">☾</button>
@@ -165,6 +166,12 @@
     <div id="quiz-results" style="display:none;"></div>
   </main>
 
+  <main id="view-shortlist" class="view-section content-page" style="display:none;">
+    <h1>⭐ My Shortlist</h1>
+    <p class="match-intro">Your saved islands — stored in this browser.</p>
+    <div id="shortlist-container"></div>
+  </main>
+
   <main id="view-mission" class="view-section" style="display:none;">
     <div class="why-hero">
       <svg class="why-hero-geometry" viewBox="0 0 1280 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -215,6 +222,7 @@
         <h1 id="island-name"></h1>
         <div class="island-meta-pill" id="island-meta-info"></div>
         <button class="compare-add-btn" id="detail-compare-btn">＋ Compare</button>
+        <button class="shortlist-btn" id="detail-shortlist-btn" onclick="toggleShortlist()">☆ Save</button>
         <button class="share-btn" id="detail-share-btn" onclick="copyIslandLink()">🔗 Copy link</button>
         <a class="ferry-btn" id="detail-ferry-btn" target="_blank" rel="noopener">🚢 Book ferry tickets</a>
       </div>
