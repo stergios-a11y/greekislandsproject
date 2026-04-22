@@ -631,14 +631,14 @@ function buildIslandPage(data) {
   const itin = data.itinerary;
 
   const dayBtns = itin.days.map(d =>
-    `<button class="itin-day-btn" data-day="${d.day}" onclick="filterItinDay(${d.day})" style="border-color:${d.color};color:${d.color}"><span>Day ${d.day}: ${d.title}</span></button>`
+    `<button class="itin-day-btn" data-day="${d.day}" onclick="filterItinDay(${d.day})" style="border-color:${d.color};color:${d.color}"><span>${t("detail.day")} ${d.day}: ${pickLang(d, "title")}</span></button>`
   ).join('');
 
   const dayCards = itin.days.map(d => {
     const stops = d.stops.map((s, i) => {
       const nameHtml = s.wiki
-        ? `<a href="${s.wiki}" target="_blank" rel="noopener" class="itin-stop-link">${s.name}</a>`
-        : s.name;
+        ? `<a href="${s.wiki}" target="_blank" rel="noopener" class="itin-stop-link">${pickLang(s, "name")}</a>`
+        : pickLang(s, "name");
       const timeHtml = s.time ? `<span class="itin-stop-time">${s.time}</span>` : '';
       const hasPhoto = !!s.photo;
       const photoHtml = hasPhoto
@@ -649,19 +649,19 @@ function buildIslandPage(data) {
         <div class="itin-stop-content">
           <div class="itin-stop-text">
             <div class="itin-stop-name-row">${nameHtml}${timeHtml}</div>
-            <div class="itin-stop-desc">${s.desc}</div>
+            <div class="itin-stop-desc">${pickLang(s, "desc")}</div>
           </div>
           ${photoHtml}
         </div>
       </div>`;
     }).join('');
-    const driveInfo = d.km ? `<span class="itin-day-meta">${d.km} km · ${d.drive_mins} min drive</span>` : '';
-    const overnightHtml = d.overnight ? `<span class="itin-overnight" style="border-color:${d.color};color:${d.color}">🌙 Sleep: ${d.overnight}</span>` : '';
+    const driveInfo = d.km ? `<span class="itin-day-meta">${d.km} ${t('common.km')} · ${d.drive_mins} ${t('common.mindrive')}</span>` : '';
+    const overnightHtml = d.overnight ? `<span class="itin-overnight" style="border-color:${d.color};color:${d.color}">🌙 ${t('common.sleep')}: ${pickLang(d, 'overnight')}</span>` : '';
     return `<div class="itin-day-card" id="itin-day-card-${d.day}">
       <div class="itin-day-header" style="border-left:4px solid ${d.color}">
         <div class="itin-day-header-main">
-          <span class="itin-day-label" style="color:${d.color}">Day ${d.day}</span>
-          <span class="itin-day-title">${d.title}</span>
+          <span class="itin-day-label" style="color:${d.color}">${t("detail.day")} ${d.day}</span>
+          <span class="itin-day-title">${pickLang(d, "title")}</span>
           ${driveInfo}
         </div>
         ${overnightHtml}
@@ -672,8 +672,8 @@ function buildIslandPage(data) {
 
   const beachCards = (data.beaches || []).map((b, i) => {
     const nameHtml = b.wiki
-      ? `<a href="${b.wiki}" target="_blank" rel="noopener" class="beach-name-link">${b.name}</a>`
-      : b.name;
+      ? `<a href="${b.wiki}" target="_blank" rel="noopener" class="beach-name-link">${pickLang(b, "name")}</a>`
+      : pickLang(b, "name");
     const photoId = `beach-photo-${i}`;
     // Support direct photo URL (Cloudinary, Unsplash etc) OR Wikimedia commons filename
     const photoHtml = b.photo
@@ -689,11 +689,11 @@ function buildIslandPage(data) {
             <div class="beach-name">${nameHtml}</div>
             <div class="beach-ratings-row">
               <div class="beach-rating-block">
-                <span class="beach-rating-label">Editorial</span>
+                <span class="beach-rating-label">${t("detail.editorial")}</span>
                 <div class="beach-stars">${'\u2605'.repeat(b.rating || 4)}${'\u2606'.repeat(5 - (b.rating || 4))}</div>
               </div>
               <div class="beach-rating-block">
-                <span class="beach-rating-label">Your rating <span class="beach-vote-count" id="vote-count-${beachId}"></span></span>
+                <span class="beach-rating-label">${t("detail.yourrating")} <span class="beach-vote-count" id="vote-count-${beachId}"></span></span>
                 <div class="beach-vote-stars" id="vote-stars-${beachId}" data-beach-id="${beachId}">
                   ${[1,2,3,4,5].map(s => `<span class="vote-star" data-score="${s}" onclick="voteBeach('${beachId}',${s})">☆</span>`).join('')}
                 </div>
@@ -701,24 +701,24 @@ function buildIslandPage(data) {
             </div>
           </div>
         </div>
-        <p class="beach-desc">${b.desc}</p>
+        <p class="beach-desc">${pickLang(b, "desc")}</p>
         <div class="beach-specs">
-          <div class="beach-spec"><span class="beach-spec-label">Type</span><span class="beach-spec-val">${b.type}</span></div>
-          <div class="beach-spec"><span class="beach-spec-label">Length</span><span class="beach-spec-val">${b.length}</span></div>
-          <div class="beach-spec"><span class="beach-spec-label">Depth</span><span class="beach-spec-val">${b.depth}</span></div>
-          <div class="beach-spec"><span class="beach-spec-label">Wind protection</span><span class="beach-spec-val">${b.facing}</span></div>
-          <div class="beach-spec beach-spec-full"><span class="beach-spec-label">Facilities</span><span class="beach-spec-val">${b.facilities}</span></div>
+          <div class="beach-spec"><span class="beach-spec-label">${t("detail.spec.type")}</span><span class="beach-spec-val">${pickLang(b, "type")}</span></div>
+          <div class="beach-spec"><span class="beach-spec-label">${t("detail.spec.length")}</span><span class="beach-spec-val">${pickLang(b, "length")}</span></div>
+          <div class="beach-spec"><span class="beach-spec-label">${t("detail.spec.depth")}</span><span class="beach-spec-val">${pickLang(b, "depth")}</span></div>
+          <div class="beach-spec"><span class="beach-spec-label">${t("detail.spec.wind")}</span><span class="beach-spec-val">${pickLang(b, "facing")}</span></div>
+          <div class="beach-spec beach-spec-full"><span class="beach-spec-label">${t("detail.spec.facilities")}</span><span class="beach-spec-val">${pickLang(b, "facilities")}</span></div>
         </div>
       </div>
     </div>`;
   }).join('');
 
-  const introHtml = data.intro ? `<div class="itin-island-intro"><p>${data.intro}</p></div>` : '';
+  const introHtml = data.intro ? `<div class="itin-island-intro"><p>${pickLang(data, 'intro')}</p></div>` : '';
   const beachSection = beachCards ? `
     <div class="itin-beaches-section">
       <div class="itin-beaches-header">
-        <h2 class="itin-beaches-title">Top Beaches of ${data.name}</h2>
-        <p class="itin-beaches-sub">Ranked by overall quality — with details on sand type, depth, wind exposure and facilities.</p>
+        <h2 class="itin-beaches-title">${t("detail.beaches.title")} ${islandName(currentIslandKey)}</h2>
+        <p class="itin-beaches-sub">${t("detail.beaches.sub")}</p>
       </div>
       <div class="itin-beaches-list">${beachCards}</div>
     </div>` : '';
@@ -726,12 +726,12 @@ function buildIslandPage(data) {
   return `
     <div class="itin-wrapper">
       <div class="itin-hero">
-        <h2 class="itin-title">${itin.title}</h2>
-        <p class="itin-subtitle">${itin.subtitle}</p>
+        <h2 class="itin-title">${pickLang(itin, "title")}</h2>
+        <p class="itin-subtitle">${pickLang(itin, "subtitle")}</p>
       </div>
       ${introHtml}
       <div class="itin-day-filter">
-        <button class="itin-day-btn active" data-day="all" onclick="filterItinDay('all')" style="border-color:#888;color:#555"><span style="color:inherit">All days</span></button>
+        <button class="itin-day-btn active" data-day="all" onclick="filterItinDay('all')" style="border-color:#888;color:#555"><span style="color:inherit">${t("detail.alldays")}</span></button>
         ${dayBtns}
       </div>
       <div class="itin-map-wrap">

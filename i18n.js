@@ -52,7 +52,7 @@ const UI_TEXT = {
   'detail.save': { en: '☆ Save', el: '☆ Αποθήκευση' },
   'detail.saved': { en: '★ Saved', el: '★ Αποθηκεύτηκε' },
   'detail.copylink': { en: '🔗 Copy link', el: '🔗 Αντιγραφή' },
-  'detail.print': { en: '🖨 Print / PDF', el: '🖨 Εκτύπωση / PDF' },
+  'detail.print': { en: '🖨 Print', el: '🖨 Εκτύπωση' },
   'detail.bookferry': { en: '🚢 Book ferry tickets', el: '🚢 Κράτηση πλοίου' },
   'detail.copied': { en: '✓ Copied!', el: '✓ Αντιγράφτηκε!' },
 
@@ -67,6 +67,18 @@ const UI_TEXT = {
   'detail.itinerary': { en: 'Itinerary', el: 'Πρόγραμμα' },
   'detail.alldays': { en: 'All days', el: 'Όλες οι μέρες' },
   'detail.day': { en: 'Day', el: 'Ημέρα' },
+  'common.km': { en: 'km', el: 'χλμ' },
+  'common.mindrive': { en: 'min drive', el: 'λεπτά οδήγηση' },
+  'common.sleep': { en: 'Sleep', el: 'Διανυκτέρευση' },
+  'detail.editorial': { en: 'Editorial', el: 'Εκδοτική' },
+  'detail.yourrating': { en: 'Your rating', el: 'Η βαθμολογία σου' },
+  'detail.spec.type': { en: 'Type', el: 'Τύπος' },
+  'detail.spec.length': { en: 'Length', el: 'Μήκος' },
+  'detail.spec.depth': { en: 'Depth', el: 'Βάθος' },
+  'detail.spec.wind': { en: 'Wind protection', el: 'Προστασία από αέρα' },
+  'detail.spec.facilities': { en: 'Facilities', el: 'Υποδομές' },
+  'detail.beaches.title': { en: 'Top Beaches of', el: 'Κορυφαίες Παραλίες της' },
+  'detail.beaches.sub': { en: 'Ranked by overall quality — with details on sand type, depth, wind exposure and facilities.', el: 'Κατάταξη με βάση τη συνολική ποιότητα — με λεπτομέρειες για τον τύπο άμμου, το βάθος, την έκθεση στον άνεμο και τις υποδομές.' },
   'detail.yourrating': { en: 'Your rating', el: 'Η βαθμολογία σου' },
   'detail.editorial': { en: 'Editorial', el: 'Επιμελητής' },
 
@@ -196,6 +208,14 @@ function t(key) {
   return entry[CURRENT_LANG] || entry.en || key;
 }
 
+// Helper for picking translated content from JSON objects.
+// Usage: pickLang(stop, 'name') returns stop.name_el if Greek and exists, otherwise stop.name
+function pickLang(obj, field) {
+  if (!obj) return '';
+  if (CURRENT_LANG === 'el' && obj[field + '_el']) return obj[field + '_el'];
+  return obj[field] || '';
+}
+
 function islandName(key) {
   if (CURRENT_LANG === 'el' && ISLAND_NAMES_EL[key]) return ISLAND_NAMES_EL[key];
   return ISLANDS_DATA[key] ? ISLANDS_DATA[key].name : key;
@@ -221,6 +241,7 @@ function applyStaticTranslations() {
 
 // Make available globally
 window.t = t;
+window.pickLang = pickLang;
 window.islandName = islandName;
 window.groupName = groupName;
 window.CURRENT_LANG = CURRENT_LANG;
