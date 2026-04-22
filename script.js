@@ -384,6 +384,29 @@ async function renderIslandPage(key) {
   document.getElementById('stat-group').textContent = island.island_group;
   const statDays = document.getElementById('stat-days');
   if (statDays) statDays.textContent = island.days ? `${island.days} days` : '—';
+  
+  // Set ferry booking link based on island
+  const ferryBtn = document.getElementById('detail-ferry-btn');
+  if (ferryBtn) {
+    // Map island keys to Ferryhopper URL slugs where they differ
+    const ferrySlugMap = {
+      'chania': 'chania', 'heraklion': 'heraklion', 'rethymno': 'rethymno',
+      'lasithi': 'agios-nikolaos', // Lasithi region -> Agios Nikolaos is closest
+      'lefkada': 'lefkada', 'kefalonia': 'kefalonia-sami',
+      'zakynthos': 'zakynthos', 'ithaca': 'ithaki',
+      'meganisi': 'meganisi', 'kythira': 'kythira', 'elafonisos': 'elafonisos',
+      'santorini': 'santorini', 'mykonos': 'mykonos', 'naxos': 'naxos',
+      'paros': 'paros', 'milos': 'milos', 'ios': 'ios',
+      'sifnos': 'sifnos', 'folegandros': 'folegandros', 'amorgos': 'amorgos',
+      'rhodes': 'rhodes', 'corfu': 'corfu',
+      'skiathos': 'skiathos', 'skopelos': 'skopelos', 'alonnisos': 'alonnisos',
+      'lesvos': 'mytilene', 'samos': 'samos', 'chios': 'chios', 'ikaria': 'ikaria',
+      'hydra': 'hydra', 'spetses': 'spetses', 'aegina': 'aegina',
+      'poros': 'poros', 'salamis': 'salamina'
+    };
+    const slug = ferrySlugMap[island.key] || island.key;
+    ferryBtn.href = `https://www.ferryhopper.com/en/ferries-to/${slug}`;
+  }
 
   const guide = document.getElementById('island-guide');
   if (!guide) return;

@@ -1441,3 +1441,25 @@ html.dark .why-feat-num { color: var(--marble-3); }
   border-bottom-color: var(--white) !important;
   border-top-color: var(--white) !important;
 }
+
+/* Ferry booking button */
+.ferry-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-family: var(--sans);
+  font-weight: 700;
+  background: var(--accent, #FF6B6B);
+  color: #fff !important;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.ferry-btn:hover {
+  background: var(--terracotta, #E8522A);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(232,82,42,0.25);
+}
