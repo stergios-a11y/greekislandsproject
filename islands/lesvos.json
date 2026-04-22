@@ -22,7 +22,8 @@
             "type": "city",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Mytilene",
-            "desc": "Arrive and settle in. Walk the waterfront promenade and explore the old harbour."
+            "desc": "Arrive and settle in. Walk the waterfront promenade and explore the old harbour.",
+            "photo": ""
           },
           {
             "name": "Mytilene Castle",
@@ -31,7 +32,8 @@
             "type": "castle",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Castle_of_Mytilene",
-            "desc": "One of the largest medieval castles in the Aegean, with panoramic harbour views. Allow 1 hour."
+            "desc": "One of the largest medieval castles in the Aegean, with panoramic harbour views. Allow 1 hour.",
+            "photo": ""
           },
           {
             "name": "Varia Village",
@@ -40,16 +42,18 @@
             "type": "museum",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Th%C3%A9riade",
-            "desc": "Home to the Museum of Theophilos and Tériade Museum — two world-class art collections."
+            "desc": "Home to the Museum of Theophilos and Tériade Museum — two world-class art collections.",
+            "photo": ""
           },
           {
-            "name": "Lunch — Ουζερί Αντώνης",
-            "lat": 39.105,
-            "lng": 26.551,
-            "type": "harbour",
+            "name": "Lunch — Ουζερί Αντώνης (Ταξιάρχες)",
+            "lat": 39.0653,
+            "lng": 26.5639,
+            "type": "village",
             "time": "13:30",
             "wiki": null,
-            "desc": "Classic ouzeri in Mytilene harbour. Try the local sardines, ouzo and mezedes."
+            "desc": "Iconic hilltop ouzeri in the village of Taxiarches (Kagiani), 8 km from Mytilene on the airport road. Sweeping view over the city and the Asia Minor coast. Order the cheese pies, the marinated sardines, the keftedakia with cumin, and the cuttlefish in vinegar.",
+            "photo": ""
           },
           {
             "name": "Agios Isidoros Beach",
@@ -58,16 +62,18 @@
             "type": "beach",
             "time": "16:00",
             "wiki": null,
-            "desc": "Relaxed sandy beach on the south coast, sheltered and calm. Afternoon swim."
+            "desc": "Relaxed sandy beach on the south coast, sheltered and calm. Afternoon swim.",
+            "photo": ""
           },
           {
-            "name": "Dinner — Το Kafeneon",
+            "name": "Dinner — Το Καφενείον",
             "lat": 38.9772,
             "lng": 26.3695,
             "type": "village",
             "time": "20:00",
             "wiki": null,
-            "desc": "«Το Καφενείον» Meat Stories in Plomari — grilled meats and local wine in a traditional setting. Stay overnight in Plomari."
+            "desc": "«Το Καφενείον» Meat Stories in Plomari — grilled meats and local wine in a traditional setting. Stay overnight in Plomari.",
+            "photo": ""
           }
         ]
       },
