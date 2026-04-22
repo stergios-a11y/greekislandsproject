@@ -1,0 +1,112 @@
+{
+  "key": "milos",
+  "name": "Milos",
+  "subtitle": "The volcanic island with 80 beaches and the finest beach scenery in the Cyclades",
+  "intro": "Milos has been called the most beautiful island in Greece, and the beaches make a strong case. Volcanic geology has produced an extraordinary variety — white lunar rock formations at Sarakiniko, inaccessible pirate sea caves at Kleftiko, golden sand framed by coloured cliffs at Firiplaka, and over 70 other coves. Add the painted fishermen's houses at Klima and the 2nd century BC Venus de Milo (found here, now in the Louvre), and Milos rewards every day you give it.",
+
+  "itinerary": {
+    "title": "4-Day Milos Itinerary",
+    "subtitle": "Sarakiniko at sunrise, Kleftiko by boat, the fishing villages of the north coast and the golden beaches of the south.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Sarakiniko & the North",
+        "color": "#1B4F8A",
+        "km": 25,
+        "drive_mins": 30,
+        "overnight": "Adamas or Plaka",
+        "stops": [
+          { "name": "Adamas (Port)", "lat": 36.7217, "lng": 24.4450, "type": "harbour", "time": "09:00", "wiki": null, "desc": "Arrive and pick up your rental car or ATV — essential on Milos. The port has good cafes for breakfast before heading out." },
+          { "name": "Sarakiniko Beach", "lat": 36.7550, "lng": 24.5083, "type": "beach", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Sarakiniko", "desc": "The most iconic beach in the Cyclades — bone-white volcanic rock formations carved into a lunar landscape, dropping into deep turquoise water. Go early for the best light and to avoid the midday crowds. Walk the full extent of the rocks — there are multiple swimming spots and a small cave beach." },
+          { "name": "Papafragas Sea Caves", "lat": 36.7567, "lng": 24.5250, "type": "nature", "time": "11:30", "wiki": null, "desc": "10 minutes from Sarakiniko — a natural sea arch and swimming channel cut into the white volcanic rock. You swim through the narrow channel into a completely enclosed rock pool. One of the best swimming spots on the island." },
+          { "name": "Firopotamos Village", "lat": 36.7650, "lng": 24.4683, "type": "harbour", "time": "13:00", "wiki": null, "desc": "Charming fishing village with brightly painted syrmata — the ground-floor boathouses that are unique to Milos. Lunch at the small taverna on the beach. The church on the headland is perfectly photogenic." },
+          { "name": "Plaka Village", "lat": 36.7283, "lng": 24.4433, "type": "village", "time": "17:00", "wiki": "https://en.wikipedia.org/wiki/Plaka,_Milos", "desc": "The hilltop capital of Milos — a beautiful Cycladic village with a Venetian kastro and extraordinary sunset views over the caldera and the western sea. The best sunset viewpoint on the island." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Kleftiko Boat Trip",
+        "color": "#C0522A",
+        "km": 5,
+        "drive_mins": 10,
+        "overnight": "Adamas",
+        "stops": [
+          { "name": "Adamas — Boat Departure", "lat": 36.7217, "lng": 24.4450, "type": "harbour", "time": "09:30", "wiki": null, "desc": "Full or half-day boat tour from Adamas port — essential for Kleftiko and the inaccessible west coast beaches. Book the night before. Most tours stop at 5-6 locations." },
+          { "name": "Kleftiko Sea Caves", "lat": 36.6567, "lng": 24.3483, "type": "nature", "time": "11:00", "wiki": null, "desc": "The finest sea cave complex in the Cyclades — white rock arches, sea caves and hidden coves at the southwestern tip of Milos. Former pirate hideout. Swim through the caves and snorkel the crystal water. The rock formations are extraordinary." },
+          { "name": "Gerakas Beach", "lat": 36.6783, "lng": 24.3817, "type": "beach", "time": "13:30", "wiki": null, "desc": "White sand and turquoise water in a cove only accessible by boat. One of the finest beaches on the island — boat tours stop here for lunch and swimming." },
+          { "name": "Tsigrado Beach", "lat": 36.6767, "lng": 24.4850, "type": "beach", "time": "15:30", "wiki": null, "desc": "Tiny secluded beach reached by descending a rope ladder through a crack in the cliffs. The access is the adventure — the beach below is tiny but beautiful. Also accessible by boat." }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "South Coast Beaches",
+        "color": "#5A7A3A",
+        "km": 30,
+        "drive_mins": 40,
+        "overnight": "Pollonia",
+        "stops": [
+          { "name": "Firiplaka Beach", "lat": 36.6700, "lng": 24.4783, "type": "beach", "time": "10:00", "wiki": null, "desc": "The best swimming beach on Milos — golden sand framed by dramatic yellow, pink and white volcanic cliffs, with shallow turquoise water. Organised with sunbeds. The most beautiful sandy beach on the island. Go before midday to get a sunbed." },
+          { "name": "Paleochori Beach", "lat": 36.6883, "lng": 24.5283, "type": "beach", "time": "13:00", "wiki": null, "desc": "Sandy south-coast beach with a unique feature — natural thermal vents bubble through the volcanic sand, warming the water and the beach itself. Several good tavernas directly on the beach." },
+          { "name": "Klima Village", "lat": 36.7133, "lng": 24.4333, "type": "village", "time": "16:00", "wiki": null, "desc": "The most photographed fishing village in the Cyclades — two-storey syrmata with boats at ground level and brightly painted upper rooms. A 15-minute drive from Adamas. Walk the seafront at golden hour." },
+          { "name": "Pollonia", "lat": 36.7617, "lng": 24.5383, "type": "harbour", "time": "18:30", "wiki": null, "desc": "Small resort village on the northeast coast with a sandy beach, good restaurants and ferry connections to Kimolos. Stay overnight here for an early start." }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Venus, Catacombs & Departure",
+        "color": "#C4962A",
+        "km": 20,
+        "drive_mins": 25,
+        "overnight": null,
+        "stops": [
+          { "name": "Site of the Venus de Milo", "lat": 36.7183, "lng": 24.4183, "type": "museum", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Venus_de_Milo", "desc": "The exact spot where the 2nd-century BC masterpiece was found in 1820, near the ancient theatre. A replica marks the site. The original is in the Louvre; a cast is in the local museum in Plaka." },
+          { "name": "Catacombs of Milos", "lat": 36.7150, "lng": 24.4183, "type": "church", "time": "10:30", "wiki": "https://en.wikipedia.org/wiki/Catacombs_of_Milos", "desc": "The earliest Christian catacombs outside Rome — 1st-2nd century AD burial galleries carved into the volcanic rock. Guided tours only. Surprisingly moving." },
+          { "name": "Achivadolimni Beach", "lat": 36.7217, "lng": 24.4900, "type": "beach", "time": "13:00", "wiki": null, "desc": "The longest beach on Milos — a long sandy shore on the east coast near Adamas. Protected from the north winds. Good for families." },
+          { "name": "Adamas — Departure", "lat": 36.7217, "lng": 24.4450, "type": "harbour", "time": "16:00", "wiki": null, "desc": "Ferry or flight from Milos. The ferry back to Piraeus sails past the extraordinary west coast — stand on deck for the view." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Sarakiniko",
+      "wiki": "https://en.wikipedia.org/wiki/Sarakiniko",
+      "rating": 5,
+      "type": "White volcanic rock — not a sand beach",
+      "length": "300 m of accessible rock",
+      "depth": "Deep — clear turquoise water, cliff jumping spots",
+      "facing": "North-facing — exposed, can be windy; best on calm days",
+      "facilities": "Basic: small canteen in summer. Free parking a short walk away. No sunbeds.",
+      "desc": "The most photographed place in the Cyclades — bone-white volcanic rock formations carved into a lunar landscape, plunging into vivid turquoise water. Not a swimming beach in the conventional sense but an extraordinary place to spend 2-3 hours. Go at sunrise or sunset for the best light and fewest people.",
+      "commons": "Sarakiniko_beach_Milos.jpg",
+      "lat": 36.7550, "lng": 24.5083
+    },
+    {
+      "name": "Firiplaka Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine golden sand",
+      "length": "600 m",
+      "depth": "Shallow — warm, crystal clear water",
+      "facing": "South-facing — sheltered from north winds (meltemi), calm even when windy elsewhere",
+      "facilities": "Organised: sunbeds, umbrellas, beach bar. Arrive before noon for a sunbed.",
+      "desc": "The finest swimming beach on Milos — golden sand framed by dramatic coloured volcanic cliffs, with shallow turquoise water. The setting is as impressive as the swimming is good. On windy days this south-facing beach is perfectly calm when everywhere else is rough.",
+      "commons": null,
+      "lat": 36.6700, "lng": 24.4783
+    },
+    {
+      "name": "Kleftiko Bay",
+      "wiki": null,
+      "rating": 5,
+      "type": "Rock and sea cave — no sand",
+      "length": "Several coves and caves",
+      "depth": "Deep — outstanding snorkelling",
+      "facing": "Southwest — accessible only by boat from Adamas (1.5 hrs)",
+      "facilities": "None. Boat tours from Adamas include snorkelling equipment.",
+      "desc": "The finest sea cave experience in Greece — white rock arches, sea caves and hidden lagoons at the remote southwest tip of Milos. Former pirate hideout. The combination of rock architecture and water clarity is extraordinary. Book a boat tour — it cannot be reached by road.",
+      "commons": null,
+      "lat": 36.6567, "lng": 24.3483
+    }
+  ]
+}
