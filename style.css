@@ -2408,25 +2408,53 @@ html.dark .author-photo {
 }
 
 /* ============================================================
-   Stop photos in itinerary
+   Stop photos in itinerary — side by side with text (compact)
 ============================================================ */
+
+/* When a stop has a photo, lay text and photo side-by-side */
+.itin-stop.has-photo .itin-stop-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.itin-stop.has-photo .itin-stop-text {
+  flex: 1;
+  min-width: 0; /* allow text to wrap */
+}
 .itin-stop-photo-wrap {
-  margin-top: 10px;
+  flex-shrink: 0;
+  width: 140px;
+  height: 95px;
   border-radius: 8px;
   overflow: hidden;
-  max-width: 320px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  align-self: center;
 }
 .itin-stop-photo {
   width: 100%;
-  height: 180px;
+  height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
+  cursor: zoom-in;
 }
 .itin-stop-photo:hover {
-  transform: scale(1.04);
+  transform: scale(1.06);
 }
 html.dark .itin-stop-photo-wrap {
-  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* On narrower screens, drop the photo below the text */
+@media (max-width: 640px) {
+  .itin-stop.has-photo .itin-stop-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .itin-stop-photo-wrap {
+    width: 100%;
+    max-width: 280px;
+    height: 140px;
+    align-self: flex-start;
+  }
 }

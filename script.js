@@ -640,14 +640,17 @@ function buildIslandPage(data) {
         ? `<a href="${s.wiki}" target="_blank" rel="noopener" class="itin-stop-link">${s.name}</a>`
         : s.name;
       const timeHtml = s.time ? `<span class="itin-stop-time">${s.time}</span>` : '';
-      const photoHtml = s.photo
+      const hasPhoto = !!s.photo;
+      const photoHtml = hasPhoto
         ? `<div class="itin-stop-photo-wrap"><img class="itin-stop-photo" src="${s.photo}" alt="${s.name}" loading="lazy" onerror="this.parentElement.style.display='none'"></div>`
         : '';
-      return `<div class="itin-stop">
+      return `<div class="itin-stop${hasPhoto ? ' has-photo' : ''}">
         <div class="itin-stop-num" style="background:${d.color}">${i + 1}</div>
         <div class="itin-stop-content">
-          <div class="itin-stop-name-row">${nameHtml}${timeHtml}</div>
-          <div class="itin-stop-desc">${s.desc}</div>
+          <div class="itin-stop-text">
+            <div class="itin-stop-name-row">${nameHtml}${timeHtml}</div>
+            <div class="itin-stop-desc">${s.desc}</div>
+          </div>
           ${photoHtml}
         </div>
       </div>`;
