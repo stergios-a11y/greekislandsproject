@@ -442,7 +442,7 @@ function buildIslandPage(data) {
   const itin = data.itinerary;
 
   const dayBtns = itin.days.map(d =>
-    `<button class="itin-day-btn" data-day="${d.day}" onclick="filterItinDay(${d.day})" style="border-color:${d.color};color:${d.color}">Day ${d.day}: ${d.title}</button>`
+    `<button class="itin-day-btn" data-day="${d.day}" onclick="filterItinDay(${d.day})" style="border-color:${d.color};color:${d.color}"><span>Day ${d.day}: ${d.title}</span></button>`
   ).join('');
 
   const dayCards = itin.days.map(d => {
@@ -537,7 +537,7 @@ function buildIslandPage(data) {
       </div>
       ${introHtml}
       <div class="itin-day-filter">
-        <button class="itin-day-btn active" data-day="all" onclick="filterItinDay('all')" style="border-color:#888;color:#555">All days</button>
+        <button class="itin-day-btn active" data-day="all" onclick="filterItinDay('all')" style="border-color:#888;color:#555"><span style="color:inherit">All days</span></button>
         ${dayBtns}
       </div>
       <div class="itin-map-wrap">
@@ -582,7 +582,13 @@ async function loadBeachPhotos(beaches) {
 function filterItinDay(day) {
   itinActiveDay = day;
   document.querySelectorAll('.itin-day-btn').forEach(btn => {
-    btn.classList.toggle('active', String(btn.dataset.day) === String(day));
+    const isActive = String(btn.dataset.day) === String(day);
+    btn.classList.toggle('active', isActive);
+    if (isActive) {
+      btn.style.background = btn.style.color || '#888';
+    } else {
+      btn.style.background = 'transparent';
+    }
   });
   document.querySelectorAll('.itin-day-card').forEach(card => {
     card.style.display = (day === 'all' || card.id === `itin-day-card-${day}`) ? '' : 'none';
