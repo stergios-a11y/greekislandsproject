@@ -464,9 +464,12 @@ function buildIslandPage(data) {
       ? `<a href="${b.wiki}" target="_blank" rel="noopener" class="beach-name-link">${b.name}</a>`
       : b.name;
     const photoId = `beach-photo-${i}`;
-    const photoHtml = b.commons
-      ? `<div class="beach-photo-wrap" id="${photoId}-wrap"><div class="beach-photo-placeholder">🏖️</div></div>`
-      : '';
+    // Support direct photo URL (Cloudinary, Unsplash etc) OR Wikimedia commons filename
+    const photoHtml = b.photo
+      ? `<div class="beach-photo-wrap"><img class="beach-photo" src="${b.photo}" alt="${b.name}" loading="lazy" onerror="this.parentElement.style.display='none'"></div>`
+      : b.commons
+        ? `<div class="beach-photo-wrap" id="${photoId}-wrap"><div class="beach-photo-placeholder">🏖️</div></div>`
+        : '';
     return `<div class="beach-card">
       ${photoHtml}
       <div class="beach-card-body">
@@ -524,6 +527,7 @@ function buildIslandPage(data) {
 async function loadBeachPhotos(beaches) {
   for (let i = 0; i < beaches.length; i++) {
     const b = beaches[i];
+    if (b.photo) continue; // already handled inline
     if (!b.commons) continue;
     const wrap = document.getElementById(`beach-photo-${i}-wrap`);
     if (!wrap) continue;
@@ -656,6 +660,7 @@ async function initItineraryMap(days) {
         ? `<a href="${stop.wiki}" target="_blank" rel="noopener" style="color:${day.color};font-weight:700">${stop.name}</a>`
         : `<strong>${stop.name}</strong>`;
       const typeLabel = stop.type ? stop.type.charAt(0).toUpperCase() + stop.type.slice(1) : 'Stop';
+      const photoLine = stop.photo ? `<img src="${stop.photo}" alt="${stop.name}" style="width:100%;height:120px;object-fit:cover;border-radius:6px;margin-top:8px;display:block" loading="lazy" onerror="this.style.display='none'">` : '';
       const icon = L.divIcon({
         className: 'custom-marker',
         html: poiIcon(stop.type || 'village', day.color),
@@ -663,7 +668,7 @@ async function initItineraryMap(days) {
       });
       const marker = L.marker([stop.lat, stop.lng], { icon })
         .addTo(itineraryMapInstance)
-        .bindPopup(`<div style="min-width:190px;font-family:sans-serif"><div style="font-size:10px;font-weight:700;color:${day.color};text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px">Day ${day.day} · ${typeLabel}</div>${nameHtml}<p style="font-size:12px;color:#555;margin:6px 0 0;line-height:1.55">${stop.desc}</p></div>`);
+        .bindPopup(`<div style="min-width:200px;font-family:sans-serif"><div style="font-size:10px;font-weight:700;color:${day.color};text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px">Day ${day.day} · ${typeLabel}</div>${nameHtml}<p style="font-size:12px;color:#555;margin:6px 0 0;line-height:1.55">${stop.desc}</p>${photoLine}</div>`);
       itinMarkerLayers[day.day].push(marker);
     });
   }
