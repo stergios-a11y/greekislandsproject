@@ -1,0 +1,139 @@
+{
+  "key": "zakynthos",
+  "name": "Zakynthos",
+  "subtitle": "Navagio shipwreck, turtle beaches and the Ionian's wildest scenery",
+  "intro": "Zakynthos punches above its weight for scenery. Navagio — the shipwreck beach enclosed by sheer white cliffs — is the most photographed beach in Greece. The island is also the main nesting ground for loggerhead sea turtles in the Mediterranean, with Laganas Bay protected as a national marine park. Beyond the tourist resorts, the north and west of the island are dramatic and wild.",
+
+  "itinerary": {
+    "title": "4-Day Zakynthos Itinerary",
+    "subtitle": "From the Venetian capital to the sea caves of Keri, the turtle beaches of Laganas and the unmissable Navagio shipwreck.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Zakynthos Town & the East",
+        "color": "#1B4F8A",
+        "km": 20,
+        "drive_mins": 25,
+        "overnight": "Zakynthos Town",
+        "stops": [
+          { "name": "Zakynthos Town", "lat": 37.7900, "lng": 20.8967, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Zakynthos_(city)", "desc": "Rebuilt after the 1953 earthquake in Venetian style. Walk the waterfront, visit the Byzantine Museum with its rescued frescoes, and climb to Bochali castle for views over the bay." },
+          { "name": "Bochali Castle", "lat": 37.7983, "lng": 20.8917, "type": "castle", "time": "10:00", "wiki": null, "desc": "Venetian castle above the town with panoramic views over Zakynthos harbour, the Ionian Sea and the Peloponnese mainland. The ruins are extensive and free to enter." },
+          { "name": "Byzantine Museum", "lat": 37.7900, "lng": 20.8983, "type": "museum", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Byzantine_Museum_of_Zakynthos", "desc": "Outstanding collection of Byzantine and post-Byzantine icons and frescoes rescued from churches destroyed in the 1953 earthquake. One of the finest Byzantine collections in Greece." },
+          { "name": "Lunch — Malanos", "lat": 37.7900, "lng": 20.8967, "type": "village", "time": "13:30", "wiki": null, "desc": "Legendary traditional taverna in Zakynthos Town, run by the same family for generations. Try the stifado and the local Verdea wine — a white wine unique to Zakynthos." },
+          { "name": "Tsilivi Beach", "lat": 37.8333, "lng": 20.9017, "type": "beach", "time": "16:00", "wiki": null, "desc": "Sandy family beach on the east coast near the town. Calm, shallow, well organised. Good for a first-day swim." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Laganas & the Turtle Bays",
+        "color": "#C0522A",
+        "km": 35,
+        "drive_mins": 40,
+        "overnight": "Laganas or Keri",
+        "stops": [
+          { "name": "Laganas Beach", "lat": 37.7217, "lng": 20.8617, "type": "beach", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Laganas", "desc": "Long sandy beach and the main nesting area for loggerhead sea turtles in the Mediterranean. Part of the National Marine Park. Do not go on the beach after dark from June-August — turtles are nesting." },
+          { "name": "National Marine Park", "lat": 37.7000, "lng": 20.8333, "type": "nature", "time": "10:30", "wiki": "https://en.wikipedia.org/wiki/National_Marine_Park_of_Zakynthos", "desc": "The oldest marine park in Greece, protecting the turtle nesting grounds. Boat trips from Laganas allow you to watch turtles swimming in the bay — operators must keep distance." },
+          { "name": "Keri Village", "lat": 37.6917, "lng": 20.8117, "type": "village", "time": "13:00", "wiki": null, "desc": "Traditional village at the southern tip with a lighthouse and extraordinary views of the sea caves below. Lunch at the village taverna." },
+          { "name": "Keri Sea Caves", "lat": 37.6733, "lng": 20.7950, "type": "nature", "time": "15:00", "wiki": null, "desc": "Dramatic sea caves and arches at the southernmost point of Zakynthos. Boat trips from Keri harbour take you through the caves and to the Blue Cave for swimming." },
+          { "name": "Marathonisi Turtle Island", "lat": 37.7050, "lng": 20.8433, "type": "nature", "time": "17:00", "wiki": null, "desc": "Small uninhabited island in Laganas Bay — one of the main turtle nesting beaches. Day trips by boat allow you to swim near the island. No landing on the beach." }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Navagio Shipwreck",
+        "color": "#5A7A3A",
+        "km": 45,
+        "drive_mins": 55,
+        "overnight": "Volimes or Porto Vromi",
+        "stops": [
+          { "name": "Navagio Viewpoint", "lat": 37.8617, "lng": 20.6233, "type": "nature", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Navagio_beach", "desc": "The most spectacular viewpoint in the Ionian — a sheer 200m drop to the shipwreck beach enclosed by white cliffs. Go early for perfect light and fewer people. Fencing at the edge — don't lean over." },
+          { "name": "Navagio Shipwreck Beach", "lat": 37.8600, "lng": 20.6217, "type": "beach", "time": "10:30", "wiki": "https://en.wikipedia.org/wiki/Navagio_beach", "desc": "Greece's most photographed beach — the rusting wreck of the Panagiotis (stranded 1980) on white sand between sheer white cliffs. Accessible only by boat from Porto Vromi or Agios Nikolaos (20 min). Gets very crowded — go before noon." },
+          { "name": "Blue Caves", "lat": 37.9017, "lng": 20.7283, "type": "nature", "time": "13:30", "wiki": "https://en.wikipedia.org/wiki/Blue_Caves,_Zakynthos", "desc": "Sea caves at Cape Skinari where sunlight refracting through the turquoise water turns the caves an electric blue. Boat trips from Agios Nikolaos. The colour is best on sunny mornings." },
+          { "name": "Volimes Village", "lat": 37.8917, "lng": 20.6900, "type": "village", "time": "16:00", "wiki": null, "desc": "Traditional mountain village in the north of the island. Honey, textiles and local produce sold from the roadside. The best local products on the island come from here." }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "West Coast & Departure",
+        "color": "#C4962A",
+        "km": 40,
+        "drive_mins": 50,
+        "overnight": null,
+        "stops": [
+          { "name": "Xigia Beach", "lat": 37.8567, "lng": 20.7617, "type": "beach", "time": "09:30", "wiki": null, "desc": "Small pebble beach where natural sulphur springs bubble up through the seabed — the water has a slightly warm, mineral quality. Unusual and memorable." },
+          { "name": "Makris Gialos Beach", "lat": 37.8167, "lng": 20.7417, "type": "beach", "time": "11:00", "wiki": null, "desc": "Long sandy west-coast beach — less busy than the east coast resorts, with clearer water and better scenery." },
+          { "name": "Alykes Beach", "lat": 37.8683, "lng": 20.8750, "type": "beach", "time": "13:30", "wiki": null, "desc": "Long sandy beach with salt lakes behind it — the name means 'salt pans'. Calm water, family-friendly, and one of the better beaches near the resort strip." },
+          { "name": "Zakynthos Town — Departure", "lat": 37.7900, "lng": 20.8967, "type": "city", "time": "16:00", "wiki": null, "desc": "Return to Zakynthos Town for ferry or flight. Final coffee at the waterfront Plateia Solomou." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Navagio (Shipwreck Beach)",
+      "wiki": "https://en.wikipedia.org/wiki/Navagio_beach",
+      "rating": 5,
+      "type": "Fine white sand",
+      "length": "300 m",
+      "depth": "Shallow to medium — but cold, deep water beyond the sand",
+      "facing": "East-facing — enclosed by cliffs, always sheltered",
+      "facilities": "None on the beach itself. Access only by boat from Porto Vromi or Agios Nikolaos (20 min).",
+      "desc": "The most iconic beach in Greece — the rusting hulk of the Panagiotis cargo ship stranded in 1980, sitting on white sand enclosed by 200m white limestone cliffs. No road access. No facilities. Just the wreck, the sand and the extraordinary blue water. Every visitor to Zakynthos must see it.",
+      "commons": "Navagio_beach_Zakynthos.jpg",
+      "lat": 37.8600, "lng": 20.6217
+    },
+    {
+      "name": "Laganas Beach",
+      "wiki": "https://en.wikipedia.org/wiki/Laganas",
+      "rating": 5,
+      "type": "Fine golden sand",
+      "length": "9 km",
+      "depth": "Shallow — very gradual, perfect for families",
+      "facing": "South-facing — calm, warm water",
+      "facilities": "Fully developed resort beach. National Marine Park restrictions apply — no boats after 19:00, no beach access after dark June-August (turtle nesting).",
+      "desc": "The longest beach in the Ionian islands and the most important loggerhead turtle nesting site in the Mediterranean. A unique combination — excellent swimming and sunbathing by day, turtle nesting by night. The marine park rules are strictly enforced.",
+      "commons": null,
+      "lat": 37.7217, "lng": 20.8617
+    },
+    {
+      "name": "Gerakas Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "600 m",
+      "depth": "Shallow — calm, clear water",
+      "facing": "South-facing — warm, sheltered",
+      "facilities": "Basic: small café, some sunbeds. Beach closes at sunset (turtle nesting area).",
+      "desc": "A beautiful sandy beach at the southeastern tip of Zakynthos, one of the most important turtle nesting beaches in Greece. Clear, calm water and a dramatic headland setting. The beach closes at sunset from June onwards — turtles have priority.",
+      "commons": null,
+      "lat": 37.6933, "lng": 20.9350
+    },
+    {
+      "name": "Porto Zoro Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand and pebble",
+      "length": "400 m",
+      "depth": "Medium — clear water, some rocks",
+      "facing": "East-facing — calm Ionian water",
+      "facilities": "Good: sunbeds, beach bar, taverna nearby.",
+      "desc": "One of the best beaches on the east coast — clear turquoise water, organised facilities and far fewer crowds than the main resort beaches. The rocks at each end are good for snorkelling.",
+      "commons": null,
+      "lat": 37.7383, "lng": 20.9433
+    },
+    {
+      "name": "Banana Beach (Agios Nikolaos)",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "1 km",
+      "depth": "Shallow — safe for children",
+      "facing": "East-facing — calm, warm",
+      "facilities": "Fully organised: sunbeds, water sports, beach bars, showers.",
+      "desc": "Zakynthos's most popular family beach — long, sandy, shallow and well-organised. The banana boat and water sports make it lively. Not the most beautiful setting on the island but excellent for families with young children.",
+      "commons": null,
+      "lat": 37.8283, "lng": 20.8950
+    }
+  ]
+}

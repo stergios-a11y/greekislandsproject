@@ -1,0 +1,109 @@
+{
+  "key": "meganisi",
+  "name": "Meganisi",
+  "subtitle": "Lefkada's secret neighbour — authentic, unhurried and strikingly beautiful",
+  "intro": "Meganisi is one of the most authentic islands in the Ionian — small, unhurried, with a permanent population of about 1,000 and almost no mass tourism. A short ferry from Nydri (Lefkada) brings you to an island of dramatic sea caves, crystalline water and hillside villages that feel unchanged from decades ago. No cars on many of the best paths. No chains, no resorts. Just excellent food, extraordinary swimming and the real Ionian.",
+
+  "itinerary": {
+    "title": "2-Day Meganisi Itinerary",
+    "subtitle": "A short escape from Lefkada to the sea caves, harbour villages and hidden beaches of the Ionian's most authentic small island.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Spartochori & the Sea Caves",
+        "color": "#1B4F8A",
+        "km": 10,
+        "drive_mins": 15,
+        "overnight": "Spartochori or Vathy",
+        "stops": [
+          { "name": "Spartochori", "lat": 38.6483, "lng": 20.7867, "type": "village", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Spartochori", "desc": "The most beautiful village on Meganisi — a hillside settlement of white houses above the main harbour. Extraordinary views over the straits to Lefkada and the surrounding islands. The village feels genuinely untouched." },
+          { "name": "Papanikolis Cave", "lat": 38.6400, "lng": 20.7633, "type": "nature", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Papanikolis_Cave", "desc": "One of the largest sea caves in Greece — named after the submarine that sheltered here in WWII. Accessible by boat. The cave opens into a cathedral-like chamber with extraordinary blue light." },
+          { "name": "Atherinos Beach", "lat": 38.6317, "lng": 20.7783, "type": "beach", "time": "13:30", "wiki": null, "desc": "The best beach on Meganisi — a sandy cove with turquoise water accessible by a short path. Almost always empty. Lunch at the small taverna above." },
+          { "name": "Vathy Harbour", "lat": 38.6567, "lng": 20.7883, "type": "harbour", "time": "17:00", "wiki": null, "desc": "The main harbour village of Meganisi — a small cove lined with tavernas. Dinner here watching the boats. The freshest seafood on the island." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Katomeri & Departure",
+        "color": "#C0522A",
+        "km": 8,
+        "drive_mins": 12,
+        "overnight": null,
+        "stops": [
+          { "name": "Katomeri", "lat": 38.6400, "lng": 20.8000, "type": "village", "time": "09:30", "wiki": null, "desc": "The second village of Meganisi — quieter than Spartochori, with a beautiful square shaded by plane trees and a small church. Morning coffee here before exploring the south of the island." },
+          { "name": "Limonari Beach", "lat": 38.6233, "lng": 20.8033, "type": "beach", "time": "10:30", "wiki": null, "desc": "Remote pebble beach on the south coast, accessible only by boat or a long walk. Crystal clear water and complete solitude." },
+          { "name": "Ftelia Beach", "lat": 38.6650, "lng": 20.8083, "type": "beach", "time": "13:00", "wiki": null, "desc": "Sandy beach on the east coast with views across to the Meganisi straits. Calm, shallow, family-friendly." },
+          { "name": "Nydri Ferry — Departure", "lat": 38.6500, "lng": 20.7833, "type": "harbour", "time": "16:00", "wiki": null, "desc": "Ferry back to Nydri on Lefkada. The 30-minute crossing passes the islands of Skorpios and Sparti." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Atherinos Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Sand and fine pebble",
+      "length": "300 m",
+      "depth": "Shallow to medium — crystal clear",
+      "facing": "Southwest-facing — sheltered, calm",
+      "facilities": "Basic: small taverna above the beach. Short walk from the road.",
+      "desc": "The best beach on Meganisi — a beautiful cove with turquoise water and almost no visitors. The small taverna above serves fresh fish and local wine. One of the most peaceful swimming spots in the Ionian.",
+      "commons": null,
+      "lat": 38.6317, "lng": 20.7783
+    },
+    {
+      "name": "Limonari Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "length": "200 m",
+      "depth": "Medium — deep, clear water",
+      "facing": "South-facing — open Ionian",
+      "facilities": "None — accessible by boat only or long hike.",
+      "desc": "A remote pebble cove on the south coast — accessible only by boat or a substantial walk. The isolation is the attraction. Perfect water clarity.",
+      "commons": null,
+      "lat": 38.6233, "lng": 20.8033
+    },
+    {
+      "name": "Ftelia Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Sand",
+      "length": "250 m",
+      "depth": "Shallow — calm, good for families",
+      "facing": "East-facing — sheltered straits",
+      "facilities": "Basic: accessible by road, small parking area.",
+      "desc": "A sandy east-coast beach with views across the Meganisi straits. Calm, shallow, warm water. The most family-friendly beach on the island.",
+      "commons": null,
+      "lat": 38.6650, "lng": 20.8083
+    },
+    {
+      "name": "Vathy Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "length": "150 m",
+      "depth": "Medium — harbour swimming",
+      "facing": "Northwest-facing — sheltered harbour bay",
+      "facilities": "Good: tavernas directly on the waterfront.",
+      "desc": "The small harbour beach at Vathy — not the island's most beautiful but the most convenient, with excellent tavernas a few steps away. Perfect for a swim before dinner.",
+      "commons": null,
+      "lat": 38.6567, "lng": 20.7883
+    },
+    {
+      "name": "Spilia Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "length": "100 m",
+      "depth": "Deep — sea cave entrance, snorkelling",
+      "facing": "West-facing — sheltered cove",
+      "facilities": "None — accessible by boat only.",
+      "desc": "A tiny cove at the entrance to the Papanikolis sea cave. The cave opens directly off the beach. Snorkelling here is extraordinary — you can swim into the cave from the beach.",
+      "commons": null,
+      "lat": 38.6400, "lng": 20.7633
+    }
+  ]
+}

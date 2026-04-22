@@ -1,0 +1,124 @@
+{
+  "key": "ithaca",
+  "name": "Ithaca",
+  "subtitle": "Homer's island — myth, silence and exceptional clarity",
+  "intro": "Ithaca is small, mountainous and almost entirely free of mass tourism — and that is exactly its appeal. The legendary home of Odysseus has barely changed in centuries: a single main town, a handful of villages, and beaches accessible only on foot or by boat. The water around Ithaca is some of the clearest in Greece. Come here for silence, hiking, and the feeling of being somewhere genuinely apart.",
+
+  "itinerary": {
+    "title": "3-Day Ithaca Itinerary",
+    "subtitle": "Vathy harbour, the Cave of the Nymphs, the northern villages and the hidden beaches only reachable by water taxi.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Vathy & the South",
+        "color": "#1B4F8A",
+        "km": 20,
+        "drive_mins": 25,
+        "overnight": "Vathy",
+        "stops": [
+          { "name": "Vathy", "lat": 38.3700, "lng": 20.7267, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Vathy,_Ithaca", "desc": "One of the most beautiful natural harbours in the Mediterranean — a deep fjord-like bay lined with neoclassical houses and bougainvillea. The most elegant small town in the Ionian." },
+          { "name": "Archaeological Museum Vathy", "lat": 38.3700, "lng": 20.7267, "type": "museum", "time": "10:00", "wiki": null, "desc": "Small but excellent collection of Mycenaean finds, including bronze tripods that may have belonged to Odysseus himself according to Homer's description." },
+          { "name": "Cave of the Nymphs", "lat": 38.3583, "lng": 20.7133, "type": "nature", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Cave_of_the_Nymphs", "desc": "According to the Odyssey, this is where Odysseus hid the treasures he brought back from Troy. A stalactite cave above Dexia Bay. The connection to the epic makes it moving." },
+          { "name": "Dexia Beach", "lat": 38.3600, "lng": 20.7100, "type": "beach", "time": "13:00", "wiki": null, "desc": "Quiet pebble beach in a sheltered bay below the Cave of the Nymphs. One of the closest good swimming spots to Vathy." },
+          { "name": "Filiatro Beach", "lat": 38.3417, "lng": 20.7133, "type": "beach", "time": "15:30", "wiki": null, "desc": "Accessible by a 10-minute walk or by water taxi from Vathy. Clear, calm water in a sheltered bay. One of the best easily accessible beaches on the island." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "The North — Kioni & Frikes",
+        "color": "#C0522A",
+        "km": 30,
+        "drive_mins": 40,
+        "overnight": "Kioni",
+        "stops": [
+          { "name": "Aetos Acropolis", "lat": 38.3733, "lng": 20.6983, "type": "castle", "time": "09:30", "wiki": null, "desc": "The ancient acropolis at the narrow isthmus connecting the two halves of the island. Mycenaean walls, panoramic views north and south. Some archaeologists believe this may be the site of Odysseus's palace." },
+          { "name": "Stavros Village", "lat": 38.4417, "lng": 20.6617, "type": "village", "time": "11:00", "wiki": "https://en.wikipedia.org/wiki/Stavros,_Ithaca", "desc": "Largest village in northern Ithaca with a small museum displaying finds from the nearby site of Pilikata — the most likely candidate for the Palace of Odysseus." },
+          { "name": "Frikes", "lat": 38.4617, "lng": 20.6900, "type": "harbour", "time": "12:30", "wiki": null, "desc": "Tiny fishing harbour in the north with a handful of tavernas at the waterfront. Lunch here — the grilled octopus and local wine are excellent." },
+          { "name": "Kioni", "lat": 38.4400, "lng": 20.7133, "type": "harbour", "time": "15:00", "wiki": "https://en.wikipedia.org/wiki/Kioni", "desc": "The most beautiful village in Ithaca — a miniature harbour of coloured houses and three windmills on the hillside. Swim in the bay, dinner at a waterfront taverna. Stay overnight." }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Hidden Beaches & Departure",
+        "color": "#5A7A3A",
+        "km": 25,
+        "drive_mins": 30,
+        "overnight": null,
+        "stops": [
+          { "name": "Sarakiniko Beach", "lat": 38.3850, "lng": 20.7417, "type": "beach", "time": "09:30", "wiki": null, "desc": "The most beautiful beach on Ithaca — a sheltered sandy cove accessible only on foot (20 min) or by water taxi. Turquoise water, pine trees, and usually quiet even in August." },
+          { "name": "Gidaki Beach", "lat": 38.3967, "lng": 20.7467, "type": "beach", "time": "11:30", "wiki": null, "desc": "Wild, sandy beach accessible only by boat (15 min from Vathy). No facilities, no development — just crystal Ionian water and silence. The best beach on the island." },
+          { "name": "Perachori Village", "lat": 38.3617, "lng": 20.7317, "type": "village", "time": "14:30", "wiki": null, "desc": "The highest village on the island, with extraordinary views over Vathy bay. Ancient ruins and Byzantine churches are scattered through the village." },
+          { "name": "Vathy — Departure", "lat": 38.3700, "lng": 20.7267, "type": "harbour", "time": "17:00", "wiki": null, "desc": "Return to Vathy for the ferry to Kefalonia, Patras or Lefkada. Final ouzo at the harbour." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Gidaki Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine sand",
+      "length": "400 m",
+      "depth": "Medium — crystal clear Ionian water",
+      "facing": "East-facing — calm, sheltered bay",
+      "facilities": "None — completely wild. Accessible only by boat from Vathy (15 min).",
+      "desc": "The finest beach on Ithaca — a pristine sandy cove accessible only by boat, with no development, no facilities and extraordinary water clarity. The absence of a road is what makes it perfect. Water taxi from Vathy harbour runs throughout the day in summer.",
+      "commons": null,
+      "lat": 38.3967, "lng": 20.7467
+    },
+    {
+      "name": "Sarakiniko Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Sand and fine pebble",
+      "length": "200 m",
+      "depth": "Shallow to medium — calm, clear",
+      "facing": "East-facing — sheltered, calm",
+      "facilities": "None. 20-minute walk from the road or short boat ride from Vathy.",
+      "desc": "A beautiful sheltered cove on the east coast — turquoise water, pine trees to the water's edge, and almost no visitors. One of the Ionian's hidden gems. The short walk from the road keeps it peaceful.",
+      "commons": null,
+      "lat": 38.3850, "lng": 20.7417
+    },
+    {
+      "name": "Filiatro Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble and sand",
+      "length": "300 m",
+      "depth": "Shallow to medium",
+      "facing": "South-facing — sheltered bay, calm",
+      "facilities": "Basic: accessible by a 10-minute walk from the road.",
+      "desc": "The most accessible good beach near Vathy — a short walk from the road through olive trees. Clear, calm water in a sheltered bay. Good for families staying in Vathy.",
+      "commons": null,
+      "lat": 38.3417, "lng": 20.7133
+    },
+    {
+      "name": "Kioni Bay Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "length": "150 m",
+      "depth": "Medium — deep, clear Ionian water",
+      "facing": "West-facing — sheltered harbour bay",
+      "facilities": "Basic: tavernas on the waterfront. The village is the main attraction.",
+      "desc": "The small pebbly beach in the harbour of Kioni — the most picturesque village in Ithaca. Swim in the harbour while looking up at the three windmills on the hill. Not the best swimming but the setting is incomparable.",
+      "commons": null,
+      "lat": 38.4400, "lng": 20.7133
+    },
+    {
+      "name": "Dexia Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "length": "200 m",
+      "depth": "Shallow — calm and sheltered",
+      "facing": "Southwest-facing — enclosed bay",
+      "facilities": "Basic: small snack bar in summer.",
+      "desc": "A quiet pebble beach in a sheltered bay just south of Vathy, beneath the Cave of the Nymphs. Calm, clear water and easy access from the town. The mythological connection adds an extra dimension to the swim.",
+      "commons": null,
+      "lat": 38.3600, "lng": 20.7100
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "key": "kefalonia",
+  "name": "Kefalonia",
+  "subtitle": "Myrtos, fir forests and the Ionian's most dramatic island",
+  "intro": "Kefalonia is the largest and most dramatic of the Ionian islands — a rugged landscape of towering fir forests, deep gulfs, sheer cliffs and some of the most spectacular beaches in Greece. Myrtos beach is one of the most photographed in the world. The island has its own wine (Robola), its own breed of turtle (Caretta caretta nesting at Lourdas), and a slow, unhurried pace despite its popularity.",
+
+  "itinerary": {
+    "title": "5-Day Kefalonia Itinerary",
+    "subtitle": "From the Venetian capital of Argostoli to the caves of Melissani, the cliffs above Myrtos and the hidden bays of the south.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Argostoli & the Peninsula",
+        "color": "#1B4F8A",
+        "km": 25,
+        "drive_mins": 30,
+        "overnight": "Argostoli",
+        "stops": [
+          { "name": "Argostoli", "lat": 38.1733, "lng": 20.4883, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Argostoli", "desc": "Capital of Kefalonia rebuilt after the 1953 earthquake in clean Ionian style. The waterfront is one of the best in the islands — walk the causeway bridge and watch the loggerhead turtles in the harbour." },
+          { "name": "Koutavos Lagoon", "lat": 38.1650, "lng": 20.5000, "type": "nature", "time": "10:00", "wiki": null, "desc": "Protected lagoon behind the causeway — a habitat for loggerhead sea turtles and herons. Walk the perimeter path for views of the lagoon and the mountains." },
+          { "name": "Archaeological Museum Argostoli", "lat": 38.1733, "lng": 20.4883, "type": "museum", "time": "11:00", "wiki": null, "desc": "Excellent collection of Mycenaean and Classical finds from across the island. The gold Mycenaean jewellery is outstanding." },
+          { "name": "Lunch — Casa Grec", "lat": 38.1733, "lng": 20.4883, "type": "village", "time": "13:00", "wiki": null, "desc": "One of the best restaurants in Argostoli — Corfiot-inspired cooking with local ingredients. Try the lamb with Robola wine sauce." },
+          { "name": "Lassi Beaches", "lat": 38.1583, "lng": 20.4633, "type": "beach", "time": "15:30", "wiki": null, "desc": "Series of sandy beaches on the Lassi peninsula near Argostoli. Calm, well organised, good for families. The best are Makris Gialos and Platis Gialos." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Myrtos & Assos",
+        "color": "#C0522A",
+        "km": 50,
+        "drive_mins": 60,
+        "overnight": "Fiscardo or Assos",
+        "stops": [
+          { "name": "Myrtos Beach Viewpoint", "lat": 38.2833, "lng": 20.5633, "type": "nature", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Myrtos_beach", "desc": "Stop at the famous viewpoint above Myrtos before descending — the view of the white beach between sheer grey cliffs is one of the iconic images of Greece. Best light in the morning." },
+          { "name": "Myrtos Beach", "lat": 38.2717, "lng": 20.5650, "type": "beach", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Myrtos_beach", "desc": "One of the most dramatic beaches in the world — white pebble and azure water between 300m cliffs. The water is cold, clear and deep. Gets busy by midday. The descent road is steep and narrow." },
+          { "name": "Assos Village", "lat": 38.3667, "lng": 20.5350, "type": "village", "time": "13:00", "wiki": "https://en.wikipedia.org/wiki/Assos,_Kefalonia", "desc": "The most beautiful village in Kefalonia — a tiny isthmus village beneath a Venetian castle. Lunch at one of the harbour tavernas. Perfect swimming in the clear bay." },
+          { "name": "Assos Castle", "lat": 38.3700, "lng": 20.5333, "type": "castle", "time": "15:00", "wiki": null, "desc": "16th-century Venetian castle on the headland above Assos. Walk up through the pine trees for extraordinary views over the village and the bay." },
+          { "name": "Fiscardo", "lat": 38.4533, "lng": 20.5700, "type": "harbour", "time": "17:30", "wiki": "https://en.wikipedia.org/wiki/Fiscardo", "desc": "The only village in Kefalonia that survived the 1953 earthquake intact — a perfect Venetian harbour with colourful houses and superyachts. Most expensive spot on the island. Stay overnight." }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Melissani Cave & Sami",
+        "color": "#5A7A3A",
+        "km": 40,
+        "drive_mins": 50,
+        "overnight": "Sami or Agia Efimia",
+        "stops": [
+          { "name": "Melissani Cave", "lat": 38.2533, "lng": 20.6217, "type": "nature", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Melissani_Cave", "desc": "An underground lake in a partially open cave — when the sun hits the turquoise water through the roof opening at midday, the colour is extraordinary. Boat tour included. Go before 11am for the best light." },
+          { "name": "Drogarati Cave", "lat": 38.2467, "lng": 20.6100, "type": "nature", "time": "11:00", "wiki": "https://en.wikipedia.org/wiki/Drogarati_Cave", "desc": "Spectacular stalactite cave with a large chamber used as a concert hall. The acoustics are renowned — Yanni and Maria Callas have performed here." },
+          { "name": "Sami", "lat": 38.2517, "lng": 20.6467, "type": "harbour", "time": "12:30", "wiki": "https://en.wikipedia.org/wiki/Sami,_Kefalonia", "desc": "Main ferry port of Kefalonia, used as a filming location for Captain Corelli's Mandolin. Pleasant waterfront, good lunch options." },
+          { "name": "Antisamos Beach", "lat": 38.2783, "lng": 20.6683, "type": "beach", "time": "14:30", "wiki": "https://en.wikipedia.org/wiki/Antisamos_beach", "desc": "Gorgeous pebble beach near Sami, also filmed in Captain Corelli's Mandolin. Exceptionally clear, cold water. Surrounded by dense green hills — one of the most beautiful settings in the Ionian." }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Robola Wine Country & the South",
+        "color": "#C4962A",
+        "km": 55,
+        "drive_mins": 65,
+        "overnight": "Skala or Lourdas",
+        "stops": [
+          { "name": "Robola Wine Cooperative", "lat": 38.1617, "lng": 20.5500, "type": "distillery", "time": "10:00", "wiki": null, "desc": "Taste Kefalonia's famous Robola — a crisp, dry white wine made only on this island. The cooperative in Fragata is the best place to taste and buy. Free tasting." },
+          { "name": "Mount Ainos National Park", "lat": 38.1333, "lng": 20.6500, "type": "nature", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Ainos_National_Park", "desc": "Dense forest of Abies cephalonica — a fir tree found only on this island. Drive through the park for views over the entire island and across to the mainland." },
+          { "name": "Lourdas Beach", "lat": 38.0867, "lng": 20.6217, "type": "beach", "time": "14:00", "wiki": null, "desc": "Long, sandy, south-facing beach with Ionian views — one of the best on the island. Loggerhead sea turtles nest here. The tavernas above on the hill have the best view of any restaurant in Kefalonia." },
+          { "name": "Skala Beach", "lat": 38.0617, "lng": 20.7483, "type": "beach", "time": "16:30", "wiki": null, "desc": "Sandy south-coast resort beach. Calm, shallow, family-friendly. Roman villa ruins just behind the beach are free to visit." }
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Poros & the East Coast",
+        "color": "#7B5EA7",
+        "km": 35,
+        "drive_mins": 45,
+        "overnight": null,
+        "stops": [
+          { "name": "Poros", "lat": 38.1483, "lng": 20.7817, "type": "harbour", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Poros,_Kefalonia", "desc": "Small ferry port on the east coast with ferry connections to Kyllini and Zakynthos. Attractive harbour with good tavernas." },
+          { "name": "Katelios Beach", "lat": 38.0783, "lng": 20.7317, "type": "beach", "time": "11:00", "wiki": null, "desc": "Quiet sandy beach in a fishing village on the south coast. One of the main turtle nesting beaches on the island — look but don't disturb." },
+          { "name": "Tzanata", "lat": 38.1100, "lng": 20.7250, "type": "museum", "time": "13:00", "wiki": null, "desc": "Mycenaean tholos tomb discovered in 1992 — one of the most important Bronze Age finds in the Ionian islands. Some scholars believe this area may be the true location of Odysseus's kingdom." },
+          { "name": "Argostoli — Departure", "lat": 38.1733, "lng": 20.4883, "type": "city", "time": "15:30", "wiki": null, "desc": "Return to Argostoli for ferry or flight departure. Final coffee on the waterfront watching the turtles." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Myrtos Beach",
+      "wiki": "https://en.wikipedia.org/wiki/Myrtos_beach",
+      "rating": 5,
+      "type": "White pebble and coarse sand",
+      "length": "800 m",
+      "depth": "Deep — cold, crystal clear water. No gradual entry.",
+      "facing": "West-facing — sheltered by cliffs, afternoon sun",
+      "facilities": "Basic: one beach bar, some sunbeds. Steep narrow descent road — arrive early.",
+      "desc": "One of the most dramatic beaches in the world — dazzling white pebble between sheer 300m grey cliffs, with water of an impossible deep blue. The view from the road above is iconic. The water is cold and deep — not for young children. Everything else is perfect.",
+      "commons": "Myrtos_beach_Kefalonia.jpg",
+      "lat": 38.2717, "lng": 20.5650
+    },
+    {
+      "name": "Antisamos Beach",
+      "wiki": "https://en.wikipedia.org/wiki/Antisamos_beach",
+      "rating": 5,
+      "type": "Fine white pebble",
+      "length": "600 m",
+      "depth": "Medium to deep — very clear, cold water",
+      "facing": "East-facing — sheltered bay, calm",
+      "facilities": "Good: sunbeds, beach bar, taverna, parking. Filmed in Captain Corelli's Mandolin.",
+      "desc": "A stunning pebble beach near Sami surrounded by dense green hills — the setting feels almost tropical despite the Ionian latitude. The water is exceptionally clear and blue. One of the most beautiful beaches in the Ionian islands.",
+      "commons": null,
+      "lat": 38.2783, "lng": 20.6683
+    },
+    {
+      "name": "Lourdas Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "2 km",
+      "depth": "Shallow — excellent for families, turtle nesting beach",
+      "facing": "South-facing — warm, calm Ionian water",
+      "facilities": "Good: sunbeds, tavernas on the hill above, parking. Loggerhead turtle nesting area.",
+      "desc": "A long sandy south-coast beach with extraordinary views over the Ionian Sea. Loggerhead sea turtles nest here from June onwards — look out for nesting markers. The hillside tavernas above have the best panoramic view of any restaurant on the island.",
+      "commons": null,
+      "lat": 38.0867, "lng": 20.6217
+    },
+    {
+      "name": "Petani Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble and coarse sand",
+      "length": "500 m",
+      "depth": "Medium — clear turquoise water",
+      "facing": "West-facing — dramatic cliff scenery, sunset views",
+      "facilities": "Basic: one taverna, limited sunbeds. Reached via narrow road.",
+      "desc": "A remote west-coast beach with the same dramatic cliff scenery as Myrtos but far fewer visitors. White cliffs, turquoise water and a small taverna at the waterline. One of the best alternatives to Myrtos for those wanting the scenery without the crowds.",
+      "commons": null,
+      "lat": 38.3067, "lng": 20.5300
+    },
+    {
+      "name": "Xi Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine red sand",
+      "length": "2 km",
+      "depth": "Shallow — very gradual, safe for children",
+      "facing": "South-facing — calm, warm water, naturally sheltered",
+      "facilities": "Well organised: sunbeds, beach bars, tavernas, parking. Unique red sand from cliff erosion.",
+      "desc": "Kefalonia's most unusual beach — the sand is a distinctive dark red colour from the clay cliffs eroding into it. Shallow, warm and calm. The red sand and blue water contrast is striking. One of the best family beaches on the island.",
+      "commons": null,
+      "lat": 38.1000, "lng": 20.4283
+    }
+  ]
+}
