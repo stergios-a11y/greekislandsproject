@@ -1242,35 +1242,151 @@ function renderFerryMap() {
 }
 
 
-function renderHopping() {
-  renderFerryMap();
+/* ============================================================
+   SUGGESTED ITINERARIES — curated multi-island routes
+============================================================ */
+const ITINERARIES = [
+  {
+    title: 'The Classic Cyclades',
+    duration: '10 days',
+    vibe: 'First-time visitor',
+    description: 'The quintessential Greek island experience — Athens' + "'" + ' nightlife, Mykonos' + "'" + ' glamour, Santorini' + "'" + 's sunsets and Naxos' + "'" + ' beaches. Hits the must-see islands.',
+    stops: ['piraeus', 'mykonos', 'santorini', 'naxos', 'piraeus'],
+    breakdown: [
+      { from: 'Athens', nights: 2, via: 'Fly in' },
+      { from: 'Mykonos', nights: 3, via: 'Fast ferry from Piraeus (~3 hrs)' },
+      { from: 'Santorini', nights: 3, via: 'Fast ferry (2-3 hrs)' },
+      { from: 'Naxos', nights: 2, via: 'Fast ferry (~1.5 hrs)' },
+    ]
+  },
+  {
+    title: 'Quiet Cyclades',
+    duration: '10 days',
+    vibe: 'Beach & culture, away from crowds',
+    description: 'The lesser-known Cyclades — Milos for its moon-landscape beaches, Sifnos for food, Folegandros for cliff views. All the water clarity of Santorini, none of the crowds.',
+    stops: ['piraeus', 'milos', 'sifnos', 'folegandros', 'piraeus'],
+    breakdown: [
+      { from: 'Athens', nights: 1, via: 'Fly in' },
+      { from: 'Milos', nights: 4, via: 'Ferry from Piraeus (~3-5 hrs)' },
+      { from: 'Sifnos', nights: 3, via: 'Ferry (~1 hr)' },
+      { from: 'Folegandros', nights: 2, via: 'Ferry (~1.5 hrs)' },
+    ]
+  },
+  {
+    title: 'Athens + Saronic Week',
+    duration: '7 days',
+    vibe: 'Easy, no long ferries',
+    description: 'Use Athens as a base and hop to the closest islands — Hydra, Poros, Aegina. No long sailings, back to the city most evenings if you want.',
+    stops: ['piraeus', 'aegina', 'poros', 'hydra', 'piraeus'],
+    breakdown: [
+      { from: 'Athens', nights: 3, via: 'Fly in · Acropolis, museums' },
+      { from: 'Aegina', nights: 1, via: 'Hydrofoil (40 min)' },
+      { from: 'Poros', nights: 1, via: 'Hydrofoil (~1 hr)' },
+      { from: 'Hydra', nights: 2, via: 'Hydrofoil (~30 min from Poros)' },
+    ]
+  },
+  {
+    title: 'Dodecanese Highlights',
+    duration: '10 days',
+    vibe: 'History + beaches',
+    description: 'Rhodes for medieval Europe, Symi for the most beautiful harbour in Greece, Kos for long sandy beaches and Hippocrates, Patmos for St John' + "'" + 's cave.',
+    stops: ['rhodes', 'symi', 'kos', 'patmos'],
+    breakdown: [
+      { from: 'Rhodes', nights: 3, via: 'Fly direct to Rhodes' },
+      { from: 'Symi', nights: 2, via: 'Day ferry from Rhodes (~1 hr)' },
+      { from: 'Kos', nights: 3, via: 'Ferry (2-3 hrs)' },
+      { from: 'Patmos', nights: 2, via: 'Ferry (~3 hrs)' },
+    ]
+  },
+  {
+    title: 'The Small Cyclades Escape',
+    duration: '9 days',
+    vibe: 'Off-grid, simple, beachy',
+    description: 'The tiny islands the Express Skopelitis connects — places where life hasn' + "'" + 't changed much in decades. Perfect beaches, no resorts, basic tavernas, total peace.',
+    stops: ['naxos', 'koufonisia', 'amorgos'],
+    breakdown: [
+      { from: 'Naxos', nights: 3, via: 'Fast ferry from Piraeus (3.5 hrs)' },
+      { from: 'Koufonisia', nights: 2, via: 'Skopelitis (~2.5 hrs via Iraklia, Schinoussa)' },
+      { from: 'Amorgos', nights: 3, via: 'Skopelitis (~2 hrs via Donousa)' },
+      { from: 'Return', nights: 1, via: 'Blue Star back to Piraeus or via Paros' },
+    ]
+  },
+  {
+    title: 'Classic Cyclades Triangle',
+    duration: '11 days',
+    vibe: 'Slow pace, Cycladic architecture',
+    description: 'The original Cyclades connection — Syros, Tinos and Mykonos. Ermoupolis on Syros is the most beautiful town in the Aegean. Tinos has 1000 chapels. Then Mykonos for the full contrast.',
+    stops: ['piraeus', 'syros', 'tinos', 'mykonos', 'piraeus'],
+    breakdown: [
+      { from: 'Athens', nights: 1, via: 'Fly in' },
+      { from: 'Syros', nights: 3, via: 'Ferry (~2-4 hrs)' },
+      { from: 'Tinos', nights: 3, via: 'Ferry (~30 min)' },
+      { from: 'Mykonos', nights: 3, via: 'Ferry (~20-30 min)' },
+      { from: 'Return', nights: 1, via: 'Fast ferry to Piraeus (~3 hrs)' },
+    ]
+  },
+  {
+    title: 'Santorini + Milos',
+    duration: '8 days',
+    vibe: 'Two extraordinary islands',
+    description: 'The two most photogenic islands in Greece paired together — Santorini for the caldera, Milos for the lunar beaches. Very different, both unmissable.',
+    stops: ['santorini', 'milos'],
+    breakdown: [
+      { from: 'Athens', nights: 1, via: 'Fly in' },
+      { from: 'Santorini', nights: 4, via: 'Fly direct or fast ferry (~5 hrs)' },
+      { from: 'Milos', nights: 3, via: 'Daily summer ferry (~3 hrs)' },
+    ]
+  },
+  {
+    title: 'Rhodes + Symi',
+    duration: '7 days',
+    vibe: 'Easy pair, one flight',
+    description: 'The simplest Dodecanese combination — fly into Rhodes, three nights in the old town, then a quick ferry to Symi for three nights in the painted harbour. One flight, one ferry.',
+    stops: ['rhodes', 'symi'],
+    breakdown: [
+      { from: 'Rhodes', nights: 4, via: 'Fly direct · Old Town, Lindos, Kallithea' },
+      { from: 'Symi', nights: 3, via: 'Daily ferry from Rhodes port (~1 hr)' },
+    ]
+  },
+];
+
+function renderItineraries() {
   const container = document.getElementById('hopping-list');
   if (!container || container.dataset.rendered) return;
   container.dataset.rendered = '1';
-  const eligible = ISLANDS.filter(i => i.total >= 3.5);
-  const pairs = [];
-  for (let i = 0; i < eligible.length; i++) {
-    for (let j = i + 1; j < eligible.length; j++) {
-      const a = eligible[i], b = eligible[j];
-      const d = haversineApprox(a, b);
-      if (d < 0.3 || d > 2.8) continue;
-      const complementarity = Math.abs(a.beach - b.beach) + Math.abs(a.hist - b.hist) + Math.abs(a.night - b.night);
-      const avgTotal = (a.total + b.total) / 2;
-      pairs.push({ a, b, d, score: avgTotal + complementarity * 0.2, avgTotal });
-    }
-  }
-  pairs.sort((x, y) => y.score - x.score);
-  const ferryLabel = d => d < 0.5 ? 'Short ferry (under 45 min)' : d < 1.0 ? 'Medium ferry (~1.5 hrs)' : d < 1.8 ? 'Ferry ~2–3 hrs' : 'Longer ferry (~3–4 hrs)';
-  const tags = (a, b) => {
-    const t = [];
-    if (a.beach >= 4.5 && b.hist >= 4.0) t.push(`${a.name}: beaches · ${b.name}: culture`);
-    else if (b.beach >= 4.5 && a.hist >= 4.0) t.push(`${b.name}: beaches · ${a.name}: culture`);
-    else if (Math.abs(a.night - b.night) >= 1.5) { const loud = a.night > b.night ? a : b; const quiet = loud === a ? b : a; t.push(`${loud.name}: nightlife · ${quiet.name}: relaxation`); }
-    if ((a.afford + b.afford) / 2 >= 3.8) t.push('Budget-friendly combo');
-    t.push(a.island_group === b.island_group ? `Both in ${a.island_group}` : `${a.island_group} + ${b.island_group}`);
-    return t.slice(0, 3);
-  };
-  container.innerHTML = pairs.slice(0, 14).map(({ a, b, d, avgTotal }) => `<div class="hopping-pair"><div class="hopping-pair-title">${a.name} + ${b.name}</div><div class="hopping-pair-meta">Combined score: <strong>${fmt(avgTotal)}</strong> &bull; ${ferryLabel(d)}</div><div class="hopping-tags">${tags(a, b).map(tag => `<span class="hopping-tag">${tag}</span>`).join('')}</div></div>`).join('');
+  
+  container.innerHTML = ITINERARIES.map((it, idx) => {
+    const stopsLine = it.breakdown.map(b => 
+      `<div class="itin-leg"><div class="itin-leg-place"><strong>${b.from}</strong> <span class="itin-nights">${b.nights} night${b.nights === 1 ? '' : 's'}</span></div><div class="itin-leg-via">${b.via}</div></div>`
+    ).join('');
+    
+    const islandKeys = it.stops.filter(s => s !== 'piraeus' && ISLANDS_DATA[s]);
+    const islandLinks = islandKeys.map(k => 
+      `<a class="itin-island-link" href="#island/${k}" onclick="event.preventDefault();navigateTo('island','${k}')">${ISLANDS_DATA[k].name}</a>`
+    ).join(' · ');
+    
+    return `
+      <div class="itin-card">
+        <div class="itin-card-header">
+          <div>
+            <h3 class="itin-title">${it.title}</h3>
+            <div class="itin-meta">
+              <span class="itin-duration">⏱ ${it.duration}</span>
+              <span class="itin-vibe">${it.vibe}</span>
+            </div>
+          </div>
+        </div>
+        <p class="itin-desc">${it.description}</p>
+        <div class="itin-legs">${stopsLine}</div>
+        ${islandLinks ? `<div class="itin-links">Visit: ${islandLinks}</div>` : ''}
+      </div>
+    `;
+  }).join('');
+}
+
+function renderHopping() {
+  renderFerryMap();
+  renderItineraries();
 }
 
 /* ============================================================
