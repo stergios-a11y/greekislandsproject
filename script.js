@@ -224,6 +224,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const hardFallback = setTimeout(dismissLoading, 3000);
   if (localStorage.getItem('heroDismissed')) dismissHero();
   try { setupNav(); } catch(e) { console.warn('setupNav', e); }
+  try { applyStaticTranslations(); } catch(e) { console.warn('i18n', e); }
+  try { setupLanguageToggle(); } catch(e) { console.warn('langToggle', e); }
   updateShortlistCount();
   try { setupDarkMode(); } catch(e) { console.warn('setupDarkMode', e); }
   try { setupVibeChips(); } catch(e) { console.warn('setupVibeChips', e); }
@@ -396,6 +398,24 @@ function toggleMenu() {
   if (nav) nav.classList.toggle('open');
 }
 
+function setupLanguageToggle() {
+  const btn = document.getElementById('lang-toggle-btn');
+  if (!btn) return;
+  // Highlight current language
+  if (CURRENT_LANG === 'el') btn.classList.add('lang-el');
+  // Click handler — switch between English root and /el/ folder
+  btn.addEventListener('click', () => {
+    const currentHash = window.location.hash;
+    if (CURRENT_LANG === 'el') {
+      // Go from /el/ to root
+      window.location.href = '/' + currentHash;
+    } else {
+      // Go from root to /el/
+      window.location.href = '/el/' + currentHash;
+    }
+  });
+}
+
 function setupDarkMode() {
   const btn = document.getElementById('dark-mode-btn');
   const root = document.documentElement;
@@ -443,15 +463,19 @@ function renderMapMarkers() {
   mapMarkers = {};
   const searchTerm = (document.getElementById('islandSearch')?.value || '').toLowerCase();
   ISLANDS.forEach(island => {
-    if (searchTerm && !island.name.toLowerCase().includes(searchTerm)) return;
+    if (searchTerm) {
+        const enName = island.name.toLowerCase();
+        const elName = (typeof ISLAND_NAMES_EL !== 'undefined' && ISLAND_NAMES_EL[island.key]) ? ISLAND_NAMES_EL[island.key].toLowerCase() : '';
+        if (!enName.includes(searchTerm) && !elName.includes(searchTerm)) return;
+      }
     if (currentGroupFilter !== 'all' && island.island_group !== currentGroupFilter) return;
     const score = getDisplayScore(island);
     const marker = L.marker([island.lat, island.lng], { icon: makeMarkerIcon(score) })
       .addTo(mapInstance)
       .bindTooltip(`
         <div class="island-tooltip-inner">
-          <div class="itt-name">${island.name}</div>
-          <div class="itt-meta">${island.island_group} · ${fmtNum(island.area)} km²</div>
+          <div class="itt-name">${islandName(island.key)}</div>
+          <div class="itt-meta">${groupName(island.island_group)} · ${fmtNum(island.area)} km²</div>
           <div class="itt-overall">Overall: <strong style="color:${scoreToColor(island.total)}">${fmt(island.total)} ★</strong></div>
           <div class="itt-dims">Beach ${fmt(island.beach)} · Culture ${fmt(island.hist)} · Night ${fmt(island.night)}</div>
           ${island.days ? `<div class="itt-days">⏱ ${island.days} days recommended</div>` : ''}
@@ -500,7 +524,7 @@ async function renderIslandPage(key) {
   const island = ISLANDS_DATA[key];
   if (!island) return;
 
-  document.getElementById('island-name').textContent = island.name;
+  document.getElementById('island-name').textContent = islandName(island.key);
   document.getElementById('island-meta-info').textContent = `${island.island_group} · ${fmtNum(island.area)} km² · Pop. ${fmtNum(island.pop)}`;
 
   const compareBtn = document.getElementById('detail-compare-btn');
@@ -554,7 +578,7 @@ async function renderIslandPage(key) {
 
   // Try to fetch the island's JSON page data
   try {
-    const res = await fetch(`islands/${key}.json`);
+    const res = await fetch(`/islands/${key}.json`);
     if (res.ok) {
       const data = await res.json();
       guide.innerHTML = buildIslandPage(data);
@@ -575,7 +599,7 @@ async function renderIslandPage(key) {
     setTimeout(() => {
       miniMapInstance = L.map(miniMapEl, { zoomControl: false, attributionControl: false }).setView([island.lat, island.lng], 9);
       addThemeAwareTiles(miniMapInstance);
-      L.marker([island.lat, island.lng]).addTo(miniMapInstance).bindPopup(island.name).openPopup();
+      L.marker([island.lat, island.lng]).addTo(miniMapInstance).bindPopup(islandName(island.key)).openPopup();
     }, 50);
   }
 
@@ -939,7 +963,7 @@ function renderShortlist() {
     return `
       <div class="shortlist-card" onclick="navigateTo('island','${key}')">
         <div class="shortlist-card-body">
-          <h3>${island.name}</h3>
+          <h3>${islandName(island.key)}</h3>
           <div class="shortlist-meta">
             <span class="group-tag">${island.island_group}</span>
             <span>${island.days ? island.days + ' days' : ''}</span>
@@ -1068,7 +1092,12 @@ function barHtml(val, max, color) {
 
 function renderTable() {
   const query = (document.getElementById('tableSearchInput')?.value || '').toLowerCase();
-  let list = ISLANDS.filter(i => !query || i.name.toLowerCase().includes(query) || i.island_group.toLowerCase().includes(query));
+  let list = ISLANDS.filter(i => {
+    if (!query) return true;
+    const enName = i.name.toLowerCase();
+    const elName = (typeof ISLAND_NAMES_EL !== 'undefined' && ISLAND_NAMES_EL[i.key]) ? ISLAND_NAMES_EL[i.key].toLowerCase() : '';
+    return enName.includes(query) || elName.includes(query) || i.island_group.toLowerCase().includes(query);
+  });
   const col = sortState.col, asc = sortState.asc;
   list.sort((a, b) => {
     const av = a[col], bv = b[col];
@@ -1079,7 +1108,7 @@ function renderTable() {
   if (countLabel) countLabel.textContent = `${list.length} islands`;
   const tbody = document.getElementById('islands-table-body');
   if (!tbody) return;
-  tbody.innerHTML = list.map(i => `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="Island" style="font-weight:600">${i.name}</td><td data-label="Group"><span class="group-tag">${i.island_group}</span></td><td data-label="Rating">${starsHtml(i.total)}</td><td data-label="Beach">${starsHtml(i.beach)}</td><td data-label="Culture">${starsHtml(i.hist)}</td><td data-label="Night">${starsHtml(i.night)}</td><td data-label="Access">${starsHtml(i.access)}</td><td data-label="Affordability">${starsHtml(i.afford)}</td><td data-label="Days" style="font-weight:600;color:var(--aegean)">${i.days ? i.days + ' days' : '—'}</td><td data-label="Area (km²)">${barHtml(i.area, 3684, 'var(--aegean)')}</td><td data-label="Population">${barHtml(i.pop, 200000, 'var(--olive)')}</td></tr>`).join('');
+  tbody.innerHTML = list.map(i => `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="Island" style="font-weight:600">${islandName(i.key)}</td><td data-label="Group"><span class="group-tag">${groupName(i.island_group)}</span></td><td data-label="Rating">${starsHtml(i.total)}</td><td data-label="Beach">${starsHtml(i.beach)}</td><td data-label="Culture">${starsHtml(i.hist)}</td><td data-label="Night">${starsHtml(i.night)}</td><td data-label="Access">${starsHtml(i.access)}</td><td data-label="Affordability">${starsHtml(i.afford)}</td><td data-label="Days" style="font-weight:600;color:var(--aegean)">${i.days ? i.days + ' days' : '—'}</td><td data-label="Area (km²)">${barHtml(i.area, 3684, 'var(--aegean)')}</td><td data-label="Population">${barHtml(i.pop, 200000, 'var(--olive)')}</td></tr>`).join('');
   tbody.querySelectorAll('.table-row-clickable').forEach(row => {
     row.addEventListener('click', () => navigateTo('island', row.dataset.key));
   });
@@ -1097,7 +1126,7 @@ function setupCompare() {
   sorted.forEach(i => {
     [selA, selB].forEach(sel => {
       const opt = document.createElement('option');
-      opt.value = i.key; opt.textContent = i.name; sel.appendChild(opt);
+      opt.value = i.key; opt.textContent = islandName(i.key); sel.appendChild(opt);
     });
   });
   // Apply current compareSelection (defaults: chania + rhodes) to the dropdowns
@@ -1178,8 +1207,7 @@ function renderCompareCards(iA, iB) {
   const container = document.getElementById('compare-cards');
   if (!container) return;
   const card = (island, other) => {
-    const isWinner = island.total > other.total;
-    return `<div class="compare-card${isWinner ? ' compare-winner' : ''}">${isWinner ? '<div class="winner-label">Higher overall score</div>' : ''}<h2>${island.name}</h2><div class="compare-meta">${island.island_group} · ${fmtNum(island.area)} km² · Pop. ${fmtNum(island.pop)}</div><div class="compare-total" style="color:${scoreToColor(island.total)}">${fmt(island.total)}<span>/5</span></div><div class="compare-bars">${SCORE_DIMS.map((dim, i) => { const wins = island[dim] >= other[dim]; return `<div class="cmp-bar-row"><span class="cmp-dim-label">${DIM_LABELS[i]}</span><div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:${(island[dim]/5)*100}%;background:${wins ? SCORE_COLORS[dim] : '#bbb'}"></div></div><span class="cmp-dim-val ${wins ? 'wins' : ''}">${fmt(island[dim])}</span></div>`; }).join('')}</div></div>`;
+    return `<div class="compare-card"><h2>${islandName(island.key)}</h2><div class="compare-meta">${groupName(island.island_group)} · ${fmtNum(island.area)} km² · Pop. ${fmtNum(island.pop)}</div><div class="compare-total" style="color:${scoreToColor(island.total)}">${fmt(island.total)}<span>/5</span></div><div class="compare-bars">${SCORE_DIMS.map((dim, i) => { const wins = island[dim] >= other[dim]; return `<div class="cmp-bar-row"><span class="cmp-dim-label">${DIM_LABELS[i]}</span><div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:${(island[dim]/5)*100}%;background:${SCORE_COLORS[dim]}"></div></div><span class="cmp-dim-val ${wins ? 'wins' : ''}">${fmt(island[dim])}</span></div>`; }).join('')}</div></div>`;
   };
   container.innerHTML = card(iA, iB) + card(iB, iA);
 }
@@ -1580,7 +1608,7 @@ function computeQuizResults() {
     if (!reasons.length) reasons.push(`Overall score ${fmt(island.total)}`);
     return reasons.slice(0, 2).join(' · ');
   };
-  results.innerHTML = `<div class="quiz-results-header"><div class="quiz-results-title">Your top islands</div><div class="quiz-results-sub">Matched on your preferences — click any to explore</div></div>${scored.map((island, idx) => `<div class="result-island-card" data-key="${island.key}"><div class="result-rank">${idx + 1}</div><div class="result-info"><div class="result-name">${island.name}</div><div class="result-why">${whyText(island)}</div></div><div class="result-score" style="color:${scoreToColor(island.total)}">${fmt(island.total)}</div></div>`).join('')}<div class="quiz-retake-row"><button class="quiz-retake-btn">Retake quiz</button></div>`;
+  results.innerHTML = `<div class="quiz-results-header"><div class="quiz-results-title">Your top islands</div><div class="quiz-results-sub">Matched on your preferences — click any to explore</div></div>${scored.map((island, idx) => `<div class="result-island-card" data-key="${island.key}"><div class="result-rank">${idx + 1}</div><div class="result-info"><div class="result-name">${islandName(island.key)}</div><div class="result-why">${whyText(island)}</div></div><div class="result-score" style="color:${scoreToColor(island.total)}">${fmt(island.total)}</div></div>`).join('')}<div class="quiz-retake-row"><button class="quiz-retake-btn">Retake quiz</button></div>`;
   results.querySelectorAll('.result-island-card').forEach(card => { card.addEventListener('click', () => navigateTo('island', card.dataset.key)); });
   results.querySelector('.quiz-retake-btn').addEventListener('click', () => { quizAnswers = {}; quizStep = 0; renderQuizStep(); });
 }
