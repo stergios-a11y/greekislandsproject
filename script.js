@@ -1100,7 +1100,11 @@ function setupHopping() {}
 // Piraeus location (not an island, used as start of many routes)
 const PIRAEUS = { name: 'Piraeus (Athens)', lat: 37.940, lng: 23.643 };
 
+// Rhodes port (not the island centroid)
+const RHODES_PORT = { lat: 36.451, lng: 28.227 };
+
 // Each route: from, to, frequency (high/med/low), duration, note
+// polyline: optional array of keys for multi-stop routes drawn as one line
 const FERRY_ROUTES = [
   // Classic Cyclades triangle
   { from: 'piraeus', to: 'syros', freq: 'high', duration: '~4 hrs', note: 'Daily · ~4 hrs · Blue Star, Golden Star' },
@@ -1115,21 +1119,15 @@ const FERRY_ROUTES = [
   { from: 'santorini', to: 'naxos', freq: 'high', duration: '1.5-2 hrs', note: 'Daily · 1.5-2 hrs' },
   { from: 'santorini', to: 'milos', freq: 'med', duration: '~3 hrs', note: 'Daily in summer · ~3 hrs' },
 
-  // Dodecanese
-  { from: 'rhodes', to: 'symi', freq: 'high', duration: '~1 hr', note: 'Daily · ~1 hr · best day trip from Rhodes' },
-  { from: 'rhodes', to: 'kos', freq: 'high', duration: '2-3 hrs', note: 'Daily · 2-3 hrs' },
+  // Dodecanese (routes start/end at Rhodes port, not island centroid)
+  { from: 'rhodes', to: 'symi', freq: 'high', duration: '~1 hr', note: 'Daily · ~1 hr · best day trip from Rhodes', useRhodesPort: true },
+  { from: 'rhodes', to: 'kos', freq: 'high', duration: '2-3 hrs', note: 'Daily · 2-3 hrs', useRhodesPort: true },
 
-  // Saronic (Athens day trips)
-  { from: 'piraeus', to: 'aegina', freq: 'high', duration: '40-70 min', note: '10-12/day · 40-70 min · easiest Athens escape' },
-  { from: 'piraeus', to: 'hydra', freq: 'high', duration: '~90 min', note: '5-6/day · ~90 min · hydrofoil' },
-  { from: 'piraeus', to: 'poros', freq: 'high', duration: '60-90 min', note: '5-6/day · 60-90 min · hydrofoil' },
+  // Saronic — drawn as one polyline through all 4 ports (Piraeus → Aegina → Poros → Hydra)
+  { polyline: ['piraeus', 'aegina', 'poros', 'hydra'], freq: 'high', note: 'Saronic Gulf · 5-12 daily services · Piraeus serves Aegina, Poros, Hydra (and Spetses). Frequent hydrofoils + conventional ferries.' },
 
-  // Small Cyclades loop (Express Skopelitis) - draw all legs
-  { from: 'naxos', to: 'iraklia', freq: 'low', duration: '~1.5 hrs', note: 'Express Skopelitis · 6/week · Small Cyclades Lines' },
-  { from: 'iraklia', to: 'schinoussa', freq: 'low', duration: '~20 min', note: 'Express Skopelitis · Small Cyclades loop' },
-  { from: 'schinoussa', to: 'koufonisia', freq: 'low', duration: '~30 min', note: 'Express Skopelitis · Small Cyclades loop' },
-  { from: 'koufonisia', to: 'donousa', freq: 'low', duration: '~45 min', note: 'Express Skopelitis · Small Cyclades loop' },
-  { from: 'donousa', to: 'amorgos', freq: 'low', duration: '~1 hr', note: 'Express Skopelitis · to Aegiali port' },
+  // Small Cyclades loop (Express Skopelitis) — drawn as one polyline
+  { polyline: ['naxos', 'iraklia', 'schinoussa', 'koufonisia', 'donousa', 'amorgos'], freq: 'low', note: 'Small Cyclades Lines · Express Skopelitis · 6 days/week (one service per day) · Naxos ↔ Amorgos via Iraklia, Schinoussa, Koufonisi, Donousa' },
 ];
 
 // Small Cyclades islands (some not in the main islands data - just for the map)
@@ -1140,8 +1138,11 @@ const EXTRA_PORTS = {
   'donousa': { name: 'Donousa', lat: 36.107, lng: 25.817 },
 };
 
-function getPortCoords(key) {
+function getPortCoords(key, useRhodesPort) {
   if (key === 'piraeus') return PIRAEUS;
+  if (key === 'rhodes' && useRhodesPort) {
+    return { ...ISLANDS_DATA['rhodes'], lat: RHODES_PORT.lat, lng: RHODES_PORT.lng };
+  }
   if (ISLANDS_DATA[key]) return ISLANDS_DATA[key];
   if (EXTRA_PORTS[key]) return EXTRA_PORTS[key];
   return null;
@@ -1164,20 +1165,46 @@ function renderFerryMap() {
   const freqStyle = {
     high: { color: '#0B8FAC', weight: 4, opacity: 0.85 },
     med:  { color: '#FF6B6B', weight: 3, opacity: 0.75 },
-    low:  { color: '#C4962A', weight: 2, opacity: 0.65 },
+    low:  { color: '#C4962A', weight: 2.5, opacity: 0.7 },
   };
   
   // Draw routes
   const drawnPorts = new Set();
   FERRY_ROUTES.forEach(route => {
-    const from = getPortCoords(route.from);
-    const to = getPortCoords(route.to);
+    const style = freqStyle[route.freq] || freqStyle.low;
+    
+    // Multi-stop polyline route
+    if (route.polyline) {
+      const coords = [];
+      route.polyline.forEach(key => {
+        const port = getPortCoords(key);
+        if (port) {
+          coords.push([port.lat, port.lng]);
+          drawnPorts.add(key);
+        }
+      });
+      if (coords.length < 2) return;
+      
+      const line = L.polyline(coords, {
+        color: style.color, weight: style.weight, opacity: style.opacity,
+        dashArray: route.freq === 'low' ? '8, 6' : null,
+      }).addTo(ferryMap);
+      
+      const firstName = getPortCoords(route.polyline[0]).name;
+      const lastName = getPortCoords(route.polyline[route.polyline.length - 1]).name;
+      const tooltip = `<strong>${firstName} → ${lastName}</strong><br><span style="font-size:11px;color:var(--ink-3)">${route.note}</span>`;
+      line.bindTooltip(tooltip, { sticky: true, opacity: 1, className: 'island-tooltip' });
+      return;
+    }
+    
+    // Simple from→to route
+    const from = getPortCoords(route.from, route.useRhodesPort);
+    const to = getPortCoords(route.to, route.useRhodesPort);
     if (!from || !to) return;
     
-    const style = freqStyle[route.freq] || freqStyle.low;
     const line = L.polyline([[from.lat, from.lng], [to.lat, to.lng]], {
       color: style.color, weight: style.weight, opacity: style.opacity,
-      dashArray: route.freq === 'low' ? '6, 6' : null,
+      dashArray: route.freq === 'low' ? '8, 6' : null,
     }).addTo(ferryMap);
     
     const tooltip = `<strong>${from.name} ↔ ${to.name}</strong><br><span style="font-size:11px;color:var(--ink-3)">${route.note}</span>`;
@@ -1189,7 +1216,10 @@ function renderFerryMap() {
   
   // Draw port markers
   drawnPorts.forEach(key => {
-    const port = getPortCoords(key);
+    // For Rhodes, place the marker at the port (matches where the Dodecanese lines start)
+    const port = key === 'rhodes' 
+      ? { ...ISLANDS_DATA['rhodes'], lat: RHODES_PORT.lat, lng: RHODES_PORT.lng }
+      : getPortCoords(key);
     if (!port) return;
     const isPiraeus = key === 'piraeus';
     const marker = L.circleMarker([port.lat, port.lng], {
