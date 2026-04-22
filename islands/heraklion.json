@@ -1,0 +1,152 @@
+{
+  "key": "heraklion",
+  "name": "Crete (Heraklion)",
+  "subtitle": "Knossos, Minoan civilisation and the heart of the greatest island",
+  "intro": "Heraklion is where Crete's extraordinary history hits hardest. The Palace of Knossos — the largest Bronze Age archaeological site in Greece — sits just 5km from the city centre, and the Heraklion Archaeological Museum holds the world's finest collection of Minoan art. The city itself is underrated: a working Cretan capital with exceptional food, a Venetian fortress and one of the liveliest market streets in Greece.",
+
+  "itinerary": {
+    "title": "5-Day Heraklion Itinerary",
+    "subtitle": "Ancient Minoans at Knossos, the wine villages of Archanes, the dramatic south coast at Matala, and the beach resort of Malia — the full range of central Crete.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Heraklion City",
+        "color": "#1B4F8A",
+        "km": 10,
+        "drive_mins": 20,
+        "overnight": "Heraklion",
+        "stops": [
+          { "name": "Koules Fortress", "lat": 35.3430, "lng": 25.1347, "type": "castle", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Koules_Fortress", "desc": "16th-century Venetian sea fortress at the entrance to Heraklion harbour. Excellent views from the battlements over the old port." },
+          { "name": "Heraklion Archaeological Museum", "lat": 35.3392, "lng": 25.1330, "type": "museum", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Heraklion_Archaeological_Museum", "desc": "The finest collection of Minoan art in the world. The Snake Goddess figurines, the Phaistos Disc, and the Bull-leaping fresco are unmissable. Allow 2 hours minimum." },
+          { "name": "1866 Market Street", "lat": 35.3381, "lng": 25.1335, "type": "city", "time": "12:30", "wiki": null, "desc": "Heraklion's covered market street — the best street food in Crete. Try kalitsounia (cheese pastries), dakos, and fresh honey from local producers." },
+          { "name": "Lunch — Peskesi", "lat": 35.3388, "lng": 25.1342, "type": "museum", "time": "13:30", "wiki": null, "desc": "Award-winning Cretan restaurant sourcing everything from its own farm. Traditional recipes cooked with extraordinary produce. One of the best meals in Greece." },
+          { "name": "Venetian Walls & Martinengo Bastion", "lat": 35.3318, "lng": 25.1295, "type": "castle", "time": "16:00", "wiki": null, "desc": "Walk the 16th-century Venetian walls that surround the old city. El Greco is buried at the Martinengo Bastion — a quiet, little-visited corner of the city." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Knossos & Archanes",
+        "color": "#C0522A",
+        "km": 25,
+        "drive_mins": 35,
+        "overnight": "Heraklion",
+        "stops": [
+          { "name": "Palace of Knossos", "lat": 35.2985, "lng": 25.1631, "type": "museum", "time": "08:30", "wiki": "https://en.wikipedia.org/wiki/Knossos", "desc": "The largest Bronze Age palace in the Aegean — home of the Minoan civilisation and the mythical labyrinth of the Minotaur. Go early to beat the crowds and the heat. Allow 2 hours." },
+          { "name": "Archanes Village", "lat": 35.2375, "lng": 25.1636, "type": "village", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Archanes", "desc": "One of the most beautiful villages in Crete — immaculately preserved Minoan and Venetian architecture. Excellent tavernas and a small but excellent local archaeological museum." },
+          { "name": "Minoan Cemetery of Fourni", "lat": 35.2450, "lng": 25.1600, "type": "nature", "time": "13:00", "wiki": null, "desc": "The most important Minoan cemetery in Crete, just above Archanes. Rarely visited and atmospheric — a quiet counterpoint to the busy Knossos." },
+          { "name": "Peza Wine Village", "lat": 35.2167, "lng": 25.1833, "type": "village", "time": "15:00", "wiki": null, "desc": "Heraklion produces some of the finest wine in Greece. Stop at a local winery for a tasting of Kotsifali and Mandilari — the great Cretan reds." }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "South Coast — Matala & Phaistos",
+        "color": "#5A7A3A",
+        "km": 80,
+        "drive_mins": 90,
+        "overnight": "Matala or Agia Galini",
+        "stops": [
+          { "name": "Phaistos Palace", "lat": 35.0497, "lng": 24.8119, "type": "museum", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Phaistos", "desc": "Second-largest Minoan palace after Knossos, with the added bonus of extraordinary views over the Messara plain and the White Mountains. Far less crowded than Knossos." },
+          { "name": "Matala Beach", "lat": 34.9973, "lng": 24.7481, "type": "beach", "time": "12:00", "wiki": "https://en.wikipedia.org/wiki/Matala,_Heraklion", "desc": "Famous beach with Roman-era cave dwellings carved into the red cliffs — occupied by hippies in the 1960s and 70s, with Joni Mitchell among the residents. Sandy beach, good swimming." },
+          { "name": "Red Beach Matala", "lat": 34.9933, "lng": 24.7450, "type": "beach", "time": "14:30", "wiki": null, "desc": "20-minute walk over the headland from Matala brings you to a dramatic red-cliffed nudist beach only accessible on foot. Worth the effort for solitude." },
+          { "name": "Agia Galini", "lat": 35.0967, "lng": 24.6900, "type": "harbour", "time": "18:00", "wiki": null, "desc": "Picturesque fishing village on the south coast. Stay overnight — excellent fresh fish restaurants on the small harbour." }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Lasithi Plateau & Dikteon Cave",
+        "color": "#C4962A",
+        "km": 65,
+        "drive_mins": 80,
+        "overnight": "Heraklion or Malia",
+        "stops": [
+          { "name": "Lasithi Plateau", "lat": 35.1667, "lng": 25.4667, "type": "nature", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Lasithi_Plateau", "desc": "High mountain plateau at 840m, ringed by peaks. Dotted with windmills, apple orchards and traditional villages. Drive the perimeter road for the best views." },
+          { "name": "Dikteon Cave", "lat": 35.1600, "lng": 25.4667, "type": "nature", "time": "11:00", "wiki": "https://en.wikipedia.org/wiki/Dikteon_Cave", "desc": "According to Greek mythology, the birthplace of Zeus. A spectacular stalactite and stalagmite cave — one of the most important religious sites of ancient Crete." },
+          { "name": "Kritsa Village", "lat": 35.1583, "lng": 25.6400, "type": "village", "time": "14:00", "wiki": null, "desc": "One of the most beautiful mountain villages in Crete, famous for its woven textiles. The Byzantine church of Panagia Kera has the finest frescoes on the island." },
+          { "name": "Malia Beach", "lat": 35.2983, "lng": 25.4567, "type": "beach", "time": "16:30", "wiki": null, "desc": "Long sandy beach on the north coast with a lively resort behind it. Good for a late afternoon swim before returning to Heraklion." }
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Spinalonga & Elounda",
+        "color": "#7B5EA7",
+        "km": 70,
+        "drive_mins": 80,
+        "overnight": null,
+        "stops": [
+          { "name": "Elounda", "lat": 35.2583, "lng": 25.7233, "type": "harbour", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Elounda", "desc": "Elegant resort village on a sheltered gulf — calm, clear water and an upmarket atmosphere. Breakfast at a waterfront café before the boat to Spinalonga." },
+          { "name": "Spinalonga Island", "lat": 35.2733, "lng": 25.7383, "type": "castle", "time": "11:00", "wiki": "https://en.wikipedia.org/wiki/Spinalonga", "desc": "Venetian island fortress and Greece's last active leper colony until 1957. Made famous by Victoria Hislop's novel The Island. Deeply atmospheric. Ferry from Elounda every 30 minutes." },
+          { "name": "Voulisma Beach", "lat": 35.2000, "lng": 25.6933, "type": "beach", "time": "14:00", "wiki": null, "desc": "One of the finest beaches in eastern Crete — long, sandy, clear water, organised facilities. A perfect final beach stop before the drive back to Heraklion." },
+          { "name": "Heraklion Airport", "lat": 35.3397, "lng": 25.1803, "type": "city", "time": "18:00", "wiki": null, "desc": "Return to Heraklion for departure, or stay a final night in the city." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Matala Beach",
+      "wiki": "https://en.wikipedia.org/wiki/Matala,_Heraklion",
+      "rating": 5,
+      "type": "Fine sand",
+      "length": "600 m",
+      "depth": "Medium — good swimming, rocky cliffs on both sides",
+      "facing": "West-facing — warm afternoon sun, calm water",
+      "facilities": "Well organised: sunbeds, tavernas, cafes. The famous cave dwellings in the red cliffs are accessible daily.",
+      "desc": "One of the most atmospheric beaches in Greece — red sandstone cliffs riddled with Roman cave dwellings, where hippies including Joni Mitchell lived in the 1960s. Fine sand, warm water and a relaxed village immediately behind it.",
+      "commons": "Matala_beach_Crete.jpg",
+      "lat": 34.9973, "lng": 24.7481
+    },
+    {
+      "name": "Voulisma Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine golden sand",
+      "length": "800 m",
+      "depth": "Shallow to medium — clean, clear water",
+      "facing": "Northeast-facing — sheltered by hills, very calm",
+      "facilities": "Fully organised: sunbeds, water sports, beach bar, taverna, parking.",
+      "desc": "Widely regarded as one of the best beaches in eastern Crete near Istro. Long, wide, golden sand with extraordinarily clear water. Less famous than the west coast beaches, which means far fewer crowds even in high summer.",
+      "commons": null,
+      "lat": 35.2000, "lng": 25.6933
+    },
+    {
+      "name": "Malia Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Sand and fine pebble mix",
+      "length": "3 km",
+      "depth": "Shallow — very gradual entry, excellent for families",
+      "facing": "North-facing — protected from south winds, some afternoon wind",
+      "facilities": "Fully developed resort beach: every facility available. Lively but can feel crowded in peak season.",
+      "desc": "A long north-coast beach backed by the resort of Malia. Not the most beautiful setting but excellent for families — long, shallow, calm water. The Minoan Palace of Malia is just 3km away, making it a good base for combining beach and archaeology.",
+      "commons": null,
+      "lat": 35.2983, "lng": 25.4567
+    },
+    {
+      "name": "Agia Pelagia Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "400 m",
+      "depth": "Shallow — sheltered bay, no waves",
+      "facing": "North-facing — enclosed bay, calm at all times",
+      "facilities": "Good: sunbeds, beach bars, several hotels immediately behind beach.",
+      "desc": "A sheltered sandy cove in a natural harbour 20km west of Heraklion. One of the best organised and cleanest beaches near the capital, with calm water suitable for families and those wanting facilities close to the city.",
+      "commons": null,
+      "lat": 35.3783, "lng": 25.0283
+    },
+    {
+      "name": "Lendas Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble and sand mix",
+      "length": "500 m",
+      "depth": "Medium to deep — rocky seabed, excellent visibility",
+      "facing": "South-facing — sheltered from north winds, warm water",
+      "facilities": "Basic: small taverna, simple rooms to rent. Primitive and peaceful.",
+      "desc": "A remote south-coast beach reached via a dramatic mountain road near Cape Lithinon. Completely unspoiled, rarely visited by tourists, and strikingly beautiful. The area was an important ancient healing sanctuary. Worth the long drive for those seeking solitude.",
+      "commons": null,
+      "lat": 34.9317, "lng": 24.9183
+    }
+  ]
+}

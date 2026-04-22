@@ -1,0 +1,137 @@
+{
+  "key": "rethymno",
+  "name": "Crete (Rethymno)",
+  "subtitle": "The most beautiful old town in Crete, Preveli and the deep south",
+  "intro": "Rethymno is the most perfectly preserved Venetian town in Crete — a compact old city of minarets, loggia, and fountains, with a fortress rising above the harbour. The region also contains the Preveli palm forest beach, the Kourtaliotiko Gorge, and some of the wildest mountain villages on the island. It feels less touristy than Heraklion or Chania despite being equally beautiful.",
+
+  "itinerary": {
+    "title": "4-Day Rethymno Itinerary",
+    "subtitle": "Venetian old town, the palm beach of Preveli, the Arkadi Monastery and the wild Amari valley.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Rethymno Old Town",
+        "color": "#1B4F8A",
+        "km": 10,
+        "drive_mins": 15,
+        "overnight": "Rethymno",
+        "stops": [
+          { "name": "Fortezza Fortress", "lat": 35.3742, "lng": 24.4679, "type": "castle", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Fortezza", "desc": "The largest Venetian fortress in Crete, dominating the town from its hilltop. The interior holds a mosque, churches and excellent views over the sea and old town." },
+          { "name": "Venetian Harbour", "lat": 35.3727, "lng": 24.4743, "type": "harbour", "time": "10:30", "wiki": null, "desc": "The smallest and most charming Venetian harbour in Crete — a perfect semicircle with a lighthouse at the entrance and fish tavernas lining the quay." },
+          { "name": "Old Town Rethymno", "lat": 35.3717, "lng": 24.4717, "type": "museum", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Rethymno", "desc": "Wander the narrow lanes of the old town — the best-preserved Venetian and Ottoman architecture in Crete. The Rimondi Fountain, the Nerantzes Mosque and the loggia are highlights." },
+          { "name": "Lunch — Avli Restaurant", "lat": 35.3719, "lng": 24.4721, "type": "village", "time": "13:30", "wiki": null, "desc": "Legendary Cretan restaurant in a restored 17th-century Venetian mansion. Garden courtyard, outstanding Cretan cuisine, local wine. A Rethymno institution." },
+          { "name": "Rethymno Beach", "lat": 35.3677, "lng": 24.4867, "type": "beach", "time": "16:30", "wiki": null, "desc": "12km of sandy beach stretching east from the old town. Town beach section is conveniently close and reasonably uncrowded outside peak season." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Preveli & the Palm Beach",
+        "color": "#C0522A",
+        "km": 45,
+        "drive_mins": 55,
+        "overnight": "Plakias or Rethymno",
+        "stops": [
+          { "name": "Kourtaliotiko Gorge", "lat": 35.1533, "lng": 24.5400, "type": "nature", "time": "09:30", "wiki": null, "desc": "Dramatic gorge on the road south to Preveli. Eagles nest in the cliffs, and a small chapel of Agios Nikolaos sits beside a waterfall and springs." },
+          { "name": "Preveli Monastery", "lat": 35.1167, "lng": 24.5533, "type": "church", "time": "10:30", "wiki": "https://en.wikipedia.org/wiki/Preveli_Monastery", "desc": "16th-century monastery perched on a cliff above the Libyan Sea. Played an important role sheltering Allied soldiers during WWII. Museum and church open to visitors." },
+          { "name": "Preveli Beach", "lat": 35.1033, "lng": 24.5500, "type": "beach", "time": "12:00", "wiki": "https://en.wikipedia.org/wiki/Preveli_beach", "desc": "One of the most extraordinary beaches in Greece — a river flanked by Cretan date palms flows into the sea through a gorge, creating a small tropical lagoon. Accessible by boat from Plakias or via a 30-minute hike." },
+          { "name": "Plakias Beach", "lat": 35.1833, "lng": 24.4067, "type": "beach", "time": "15:30", "wiki": null, "desc": "Long sandy beach in a relaxed south-coast resort. Good for a late afternoon swim. The town has excellent tavernas for dinner." }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Arkadi & the Amari Valley",
+        "color": "#5A7A3A",
+        "km": 70,
+        "drive_mins": 90,
+        "overnight": "Rethymno",
+        "stops": [
+          { "name": "Arkadi Monastery", "lat": 35.3183, "lng": 24.6317, "type": "church", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Arkadi_Monastery", "desc": "The most sacred monument in Crete — scene of the 1866 explosion where hundreds of Cretans chose death over surrender to the Ottomans. Magnificent Baroque facade." },
+          { "name": "Amari Valley", "lat": 35.2200, "lng": 24.6167, "type": "nature", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Amari", "desc": "The most beautiful valley in Crete — a fertile basin beneath the Psiloritis summit, dotted with Byzantine chapels, ancient plane trees and traditional villages. Drive the circular route." },
+          { "name": "Thronos Village", "lat": 35.2350, "lng": 24.6050, "type": "village", "time": "13:00", "wiki": null, "desc": "Tiny village in the Amari Valley with a Byzantine mosaic floor beneath the village church. Lunch at the excellent local taverna Aravanes — mountain food at its best." },
+          { "name": "Mount Psiloritis Viewpoint", "lat": 35.2183, "lng": 24.7667, "type": "nature", "time": "15:30", "wiki": "https://en.wikipedia.org/wiki/Mount_Ida_(Crete)", "desc": "Crete's highest peak at 2456m. Drive to the Nida plateau at 1400m for sweeping views — the Ideon Cave (birthplace of Zeus, alternate tradition) is a 20-minute walk from the plateau." }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "East Coast & Bali",
+        "color": "#C4962A",
+        "km": 40,
+        "drive_mins": 45,
+        "overnight": null,
+        "stops": [
+          { "name": "Bali Village", "lat": 35.4117, "lng": 24.7850, "type": "harbour", "time": "09:30", "wiki": null, "desc": "Small resort built around three scenic coves east of Rethymno. The most beautiful of the coves is Livadi, with clear water and a taverna on the beach." },
+          { "name": "Panormo Beach", "lat": 35.4133, "lng": 24.8267, "type": "beach", "time": "11:30", "wiki": null, "desc": "Sandy beach in a quiet village east of Bali. Good facilities, calm water, and a better-value alternative to the more crowded resorts." },
+          { "name": "Rethymno — Final Lunch", "lat": 35.3727, "lng": 24.4743, "type": "city", "time": "14:00", "wiki": null, "desc": "Return to Rethymno for a final lunch at the harbour. The fried gavros (anchovies) and local raki are the perfect send-off." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Preveli Beach",
+      "wiki": "https://en.wikipedia.org/wiki/Preveli_beach",
+      "rating": 5,
+      "type": "Pebble and sand",
+      "length": "300 m",
+      "depth": "Medium to deep — river lagoon on one side, open sea on the other",
+      "facing": "South-facing — sheltered by the gorge, warm Libyan Sea",
+      "facilities": "Basic: small café on the beach. Access by boat from Plakias (30 min) or 30-minute hike from the car park.",
+      "desc": "The most unique beach in Crete — a Cretan date palm forest lines a river that flows through a gorge and meets the sea in a small turquoise lagoon. You can swim in both the river and the sea. Accessible only by boat or on foot, which keeps it wonderfully uncrowded.",
+      "commons": "Preveli_beach_Crete.jpg",
+      "lat": 35.1033, "lng": 24.5500
+    },
+    {
+      "name": "Plakias Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine grey sand",
+      "length": "2 km",
+      "depth": "Medium — good swimming, some wave action from the south",
+      "facing": "South-facing — open to the Libyan Sea, can get waves in strong south wind",
+      "facilities": "Good: sunbeds, tavernas, accommodation. Quiet south-coast resort feel.",
+      "desc": "A long, wide south-coast beach backed by a relaxed village with excellent tavernas. The Libyan Sea is warmer and bluer than the north coast. Base yourself here for easy access to Preveli. One of the best value destinations on the island.",
+      "commons": null,
+      "lat": 35.1833, "lng": 24.4067
+    },
+    {
+      "name": "Bali Livadi Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "length": "200 m",
+      "depth": "Medium to deep — rocky seabed, excellent snorkelling",
+      "facing": "North-facing — calm on most days",
+      "facilities": "Moderate: sunbeds, beach taverna. One of three coves in the Bali resort.",
+      "desc": "The most picturesque of Bali's three coves — a small pebble beach enclosed by hills, with a taverna at the waterline. The water clarity is outstanding. Arrive early as space is limited.",
+      "commons": null,
+      "lat": 35.4133, "lng": 24.7817
+    },
+    {
+      "name": "Rethymno Town Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "12 km",
+      "depth": "Shallow — very gradual, safe for children",
+      "facing": "North-facing — mostly calm, some wind in afternoons",
+      "facilities": "Fully developed: all facilities for 12km. Town section most convenient, eastern section quieter.",
+      "desc": "One of the longest beaches in Greece — 12km of sandy shore stretching east from the old town. The town section is convenient but busy; walk 20 minutes east for more space. Excellent for families with its flat, shallow entry.",
+      "commons": null,
+      "lat": 35.3677, "lng": 24.4867
+    },
+    {
+      "name": "Triopetra Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "1.5 km",
+      "depth": "Medium — open south coast, some wave action",
+      "facing": "South-facing — warm Libyan Sea water",
+      "facilities": "Basic: two small tavernas, some sunbeds. Remote and peaceful.",
+      "desc": "A remote south-coast beach named for three large rocks that protrude from the sea. Long, sandy and almost empty even in peak season. The drive there — through mountain villages and olive groves — is half the pleasure.",
+      "commons": null,
+      "lat": 35.0400, "lng": 24.4767
+    }
+  ]
+}
