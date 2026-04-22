@@ -93,7 +93,7 @@ let miniMapInstance = null;
 let itineraryMapInstance = null;
 let currentMapMode = 'overall';
 let currentGroupFilter = 'all';
-let compareSelection = [null, null];
+let compareSelection = ['chania', 'rhodes'];
 let radarChartInstance = null;
 let sortState = { col: 'total', asc: false };
 let itinActiveDay = 'all';
@@ -213,6 +213,7 @@ function showView(view, param) {
   if (view === 'hopping') setTimeout(renderHopping, 50);
   if (view === 'match') setupQuizIfNeeded();
   if (view === 'shortlist') renderShortlist();
+  if (view === 'compare') setTimeout(renderCompareView, 50);
 }
 
 function handleNav(view, param) { navigateTo(view, param); }
@@ -1099,16 +1100,24 @@ function setupCompare() {
       opt.value = i.key; opt.textContent = i.name; sel.appendChild(opt);
     });
   });
+  // Apply current compareSelection (defaults: chania + rhodes) to the dropdowns
+  if (compareSelection[0]) selA.value = compareSelection[0];
+  if (compareSelection[1]) selB.value = compareSelection[1];
   selA.addEventListener('change', () => { compareSelection[0] = selA.value || null; renderCompareView(); });
   selB.addEventListener('change', () => { compareSelection[1] = selB.value || null; renderCompareView(); });
   if (clearBtn) clearBtn.addEventListener('click', clearCompare);
+  // Initial render so the chart appears immediately on page load
+  renderCompareView();
 }
 
 function addToCompare(key) {
   if (compareSelection.includes(key)) return;
-  if (!compareSelection[0]) compareSelection[0] = key;
-  else if (!compareSelection[1]) compareSelection[1] = key;
-  else compareSelection = [key, compareSelection[1]];
+  // Always set the clicked island as slot A, and ensure slot B has a default
+  // for an immediate chart. If user clicked Rhodes, default the other slot to Chania.
+  compareSelection[0] = key;
+  if (!compareSelection[1] || compareSelection[1] === key) {
+    compareSelection[1] = (key === 'rhodes') ? 'chania' : 'rhodes';
+  }
   const selA = document.getElementById('compare-select-a');
   const selB = document.getElementById('compare-select-b');
   if (selA && compareSelection[0]) selA.value = compareSelection[0];
@@ -1116,10 +1125,12 @@ function addToCompare(key) {
 }
 
 function clearCompare() {
-  compareSelection = [null, null];
+  // Reset to defaults rather than empty so the chart stays visible
+  compareSelection = ['chania', 'rhodes'];
   const selA = document.getElementById('compare-select-a');
   const selB = document.getElementById('compare-select-b');
-  if (selA) selA.value = ''; if (selB) selB.value = '';
+  if (selA) selA.value = 'chania';
+  if (selB) selB.value = 'rhodes';
   renderCompareView();
 }
 
