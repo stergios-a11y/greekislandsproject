@@ -2255,3 +2255,102 @@ html.dark .lang-toggle:hover {
     padding: 5px 10px;
   }
 }
+
+/* ============================================================
+   Compare bar colors — work in both light & dark mode
+============================================================ */
+.cmp-bar-beach  { background: #2196D3; }
+.cmp-bar-hist   { background: #6BB04A; }
+.cmp-bar-night  { background: #E8662C; }
+.cmp-bar-access { background: #DDB13C; }
+.cmp-bar-afford { background: #9B7EC8; }
+
+html.dark .cmp-bar-beach  { background: #4DBEFF; }
+html.dark .cmp-bar-hist   { background: #8FD66B; }
+html.dark .cmp-bar-night  { background: #FF8A52; }
+html.dark .cmp-bar-access { background: #FFCB52; }
+html.dark .cmp-bar-afford { background: #BAA0E8; }
+
+html.dark .cmp-bar-track {
+  background: rgba(255,255,255,0.08);
+}
+
+/* ============================================================
+   Footer cleanup — single line, compact, no version display
+============================================================ */
+#site-footer {
+  text-align: center;
+  padding: 18px 16px;
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--ink-3);
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+  background: transparent;
+}
+#site-footer .footer-copy {
+  margin: 0;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+#version-display { display: none; }
+
+@media print {
+  #site-footer { display: none; }
+}
+
+/* ============================================================
+   Language toggle — flags with selected indicator
+============================================================ */
+.lang-toggle {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  font-size: 18px;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.8);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.lang-toggle .lang-flag {
+  font-size: 18px;
+  filter: grayscale(60%);
+  opacity: 0.55;
+  transition: all 0.15s;
+}
+.lang-toggle .lang-flag.active {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.15);
+}
+.lang-toggle:hover {
+  background: rgba(255,255,255,0.18);
+}
+.lang-toggle:hover .lang-flag {
+  opacity: 0.85;
+}
+.lang-toggle:hover .lang-flag.active {
+  opacity: 1;
+}
+.lang-sep {
+  color: rgba(255,255,255,0.3);
+  font-weight: 300;
+  font-size: 13px;
+}
+
+html.dark .lang-toggle {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.12);
+}
+
+@media (max-width: 768px) {
+  .lang-toggle { padding: 5px 8px; margin-left: 4px; gap: 4px; }
+  .lang-toggle .lang-flag { font-size: 16px; }
+}

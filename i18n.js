@@ -73,6 +73,60 @@ const UI_TEXT = {
   // Footer
   'footer.copyright': { en: '© 2026 Stergios Gousios · Aegean Blueprint', el: '© 2026 Στέργιος Γούσιος · Aegean Blueprint' },
 
+  // Data table page
+  'data.title': { en: 'Islands Database', el: 'Βάση Νησιών' },
+  'data.search': { en: 'Filter islands…', el: 'Φιλτράρισμα νησιών…' },
+  'data.col.island': { en: 'Island ↕', el: 'Νησί ↕' },
+  'data.col.group': { en: 'Group ↕', el: 'Ομάδα ↕' },
+  'data.col.rating': { en: 'Rating ↕', el: 'Βαθμός ↕' },
+  'data.col.beach': { en: 'Beach ↕', el: 'Παραλίες ↕' },
+  'data.col.culture': { en: 'Culture ↕', el: 'Πολιτισμός ↕' },
+  'data.col.night': { en: 'Night ↕', el: 'Νύχτα ↕' },
+  'data.col.access': { en: 'Access ↕', el: 'Πρόσβαση ↕' },
+  'data.col.afford': { en: 'Affordability ↕', el: 'Τιμή ↕' },
+  'data.col.days': { en: 'Days ↕', el: 'Μέρες ↕' },
+  'data.col.area': { en: 'Area (km²) ↕', el: 'Έκταση (km²) ↕' },
+  'data.col.pop': { en: 'Population ↕', el: 'Πληθυσμός ↕' },
+
+  // Compare page
+  'compare.title': { en: 'Compare Islands', el: 'Σύγκριση Νησιών' },
+  'compare.intro': { en: 'Select two islands to compare side-by-side.', el: 'Επίλεξε δύο νησιά για σύγκριση.' },
+  'compare.optionA': { en: '— Island A —', el: '— Νησί Α —' },
+  'compare.optionB': { en: '— Island B —', el: '— Νησί Β —' },
+  'compare.vs': { en: 'vs', el: 'εναντίον' },
+  'compare.clear': { en: 'Clear', el: 'Καθαρισμός' },
+  'compare.placeholder': { en: 'Select two islands above to start comparing.', el: 'Επίλεξε δύο νησιά παραπάνω για να αρχίσει η σύγκριση.' },
+
+  // Hopping page
+  'hopping.title': { en: '🚢 Island Hopping', el: '🚢 Νησοπορία' },
+  'hopping.intro': { en: 'The most iconic Greek ferry routes — the backbone of any island-hopping trip. Hover over a line for details, click a port to open its island page.', el: 'Οι πιο εμβληματικές διαδρομές πλοίων στην Ελλάδα. Πέρνα τον κέρσορα πάνω από μια γραμμή για λεπτομέρειες, πάτα σε ένα λιμάνι για να ανοίξεις τη σελίδα του νησιού.' },
+  'hopping.legend.high': { en: 'High frequency (multiple daily)', el: 'Πολλά δρομολόγια (πολλά ημερησίως)' },
+  'hopping.legend.med': { en: 'Medium (1-2 per day)', el: 'Μέτρια (1-2 ημερησίως)' },
+  'hopping.legend.low': { en: 'About 1/day (Skopelitis route, 6/week)', el: 'Περίπου 1/ημέρα (Σκοπελίτης, 6 φορές/εβδομάδα)' },
+  'hopping.itineraries': { en: 'Suggested Itineraries', el: 'Προτεινόμενες Διαδρομές' },
+  'hopping.itin.intro': { en: 'Eight curated multi-island routes — from the classic Cyclades circuit to the quiet Small Cyclades escape. Each uses real ferry connections and shows approximate nights per stop.', el: 'Δέκα επιλεγμένες διαδρομές πολλαπλών νησιών — από την κλασική διαδρομή των Κυκλάδων μέχρι την ήσυχη απόδραση στις Μικρές Κυκλάδες. Όλες χρησιμοποιούν πραγματικές συνδέσεις πλοίων.' },
+
+  // Match Me / Quiz
+  'match.title': { en: 'Match Me', el: 'Βρες το Νησί σου' },
+  'match.intro': { en: "Answer 4 quick questions and we'll recommend your top islands.", el: 'Απάντησε σε 4 γρήγορες ερωτήσεις και θα σου προτείνουμε τα κορυφαία νησιά για εσένα.' },
+  'match.results.title': { en: 'Your top islands', el: 'Τα κορυφαία σου νησιά' },
+  'match.results.sub': { en: 'Matched on your preferences — click any to explore', el: 'Με βάση τις προτιμήσεις σου — πάτα οποιοδήποτε για εξερεύνηση' },
+  'match.retake': { en: 'Retake quiz', el: 'Επανάληψη quiz' },
+
+  // Mission page
+  'mission.title': { en: 'Why this site exists', el: 'Γιατί υπάρχει αυτή η σελίδα' },
+  'mission.tagline': { en: 'For travellers who want to live the holiday, not plan it.', el: 'Για ταξιδιώτες που θέλουν να ζήσουν τις διακοπές, όχι να τις σχεδιάσουν.' },
+  'mission.lead1': { en: "This site is for people who don't want choices. They want the gist, without the fluff.", el: 'Αυτή η σελίδα είναι για ανθρώπους που δεν θέλουν επιλογές. Θέλουν την ουσία, χωρίς περιττά.' },
+  'mission.lead2': { en: 'Greece has 83 inhabited islands and countless guides, blogs and listicles trying to cover them all. It\'s overwhelming, and most of it is shallow.', el: 'Η Ελλάδα έχει 83 κατοικημένα νησιά και αμέτρητους οδηγούς, blogs και λίστες που προσπαθούν να τα καλύψουν όλα. Είναι κουραστικό, και οι περισσότεροι είναι επιφανειακοί.' },
+  'mission.lead3.before': { en: '', el: '' },
+  'mission.lead3.bold': { en: 'Aegean Blueprint is made by locals who have actually travelled to the islands on the site', el: 'Το Aegean Blueprint φτιάχτηκε από ντόπιους που έχουν ταξιδέψει πραγματικά στα νησιά της σελίδας' },
+  'mission.lead3.after': { en: ' — not curated from search rankings, and not stitched together by AI. Each island page gives you one clear, opinionated recommendation: what to see, where to swim, how long to stay. That\'s it.', el: ' — όχι από αποτελέσματα αναζήτησης, ούτε ραμμένο από AI. Κάθε σελίδα νησιού δίνει μία ξεκάθαρη πρόταση: τι να δεις, πού να κολυμπήσεις, πόσο να μείνεις. Τίποτα παραπάνω.' },
+  'mission.point.label': { en: 'The point', el: 'Η ουσία' },
+  'mission.point.text': { en: 'Pick an island. Pack a bag. Go.', el: 'Διάλεξε ένα νησί. Φτιάξε βαλίτσα. Φύγε.' },
+  'mission.kicker': { en: "Planning a trip shouldn't take longer than the trip itself.", el: 'Ο σχεδιασμός ενός ταξιδιού δεν πρέπει να διαρκεί περισσότερο από το ίδιο το ταξίδι.' },
+
+  // Detail page (back button is already defined above)
+
   // Feedback
   'feedback.btn': { en: '💬 Feedback', el: '💬 Σχόλια' },
   'feedback.title': { en: 'Got feedback?', el: 'Θες να μας πεις κάτι;' },
