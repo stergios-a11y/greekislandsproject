@@ -1,0 +1,58 @@
+{
+  "key": "iraklia",
+  "name": "Iraklia",
+  "subtitle": "The quietest of the Small Cyclades — 140 residents, a cave, deserted beaches",
+  "intro": "Iraklia is the first stop on the Express Skopelitis ferry south from Naxos — a tiny island of 140 residents with a single port, two small beaches near the village, and a third (one of the finest in the Cyclades) reached only on foot. The Cave of Agios Ioannis is the largest cave in the Cyclades. The island has almost no tourist development: a handful of rooms to let, two or three tavernas, no hotels. For travellers who want the authentic Small Cyclades experience without spending a full week.",
+
+  "itinerary": {
+    "title": "1-Day Iraklia Itinerary",
+    "subtitle": "The village of Agios Georgios, Livadi beach, and the hike to Tourkopigado.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Village, Beach & Cave",
+        "color": "#1B4F8A",
+        "km": 12,
+        "drive_mins": 45,
+        "overnight": "Agios Georgios",
+        "stops": [
+          { "name": "Agios Georgios (Port)", "lat": 36.8497, "lng": 25.4706, "type": "harbour", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Iraklia", "desc": "The only village and port — 140 residents, two tavernas, a bakery, a small church. Arrive by Express Skopelitis from Naxos (1.5 hrs) or Amorgos. The village is immediately behind the harbour." },
+          { "name": "Livadi Beach", "lat": 36.8394, "lng": 25.4711, "type": "beach", "time": "10:00", "wiki": null, "desc": "The closest beach to the village — a short walk south. Fine sand, crystal clear shallow water, a handful of sunbeds and a simple beach bar. One of the most unaffected family beaches in the Cyclades." },
+          { "name": "Lunch — Village Taverna", "lat": 36.8494, "lng": 25.4700, "type": "village", "time": "13:00", "wiki": null, "desc": "The village tavernas cook what the local fishermen bring in. Simple, excellent, a third of Mykonos prices. The owner probably knows everyone on the island by name." },
+          { "name": "Tourkopigado Beach", "lat": 36.8200, "lng": 25.4789, "type": "beach", "time": "15:00", "wiki": null, "desc": "The finest beach on Iraklia — a wild south-coast bay with fine pebbles and extraordinary water clarity. Reached by a 40-minute walking path from the village. No facilities, total peace." },
+          { "name": "Cave of Agios Ioannis", "lat": 36.8075, "lng": 25.4586, "type": "nature", "time": "17:00", "wiki": null, "desc": "The largest cave in the Cyclades — a two-chamber cave with stalactites, a chapel at the entrance, and remarkable acoustic properties. Access is only on foot from a trailhead near Panagia. Guided visits on August 29 (local feast day)." },
+          { "name": "Departure or 2nd Night", "lat": 36.8497, "lng": 25.4706, "type": "harbour", "time": "18:00", "wiki": null, "desc": "Skopelitis back to Naxos, onward to Schinoussa, Koufonisia, Donousa and Amorgos. A second night is worth it if you've made the journey this far." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Tourkopigado Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine pebble",
+      "length": "150 m",
+      "depth": "Medium — crystal clear water",
+      "facing": "South-facing — sheltered",
+      "facilities": "None — bring everything. 40-minute walk from the village.",
+      "desc": "The finest beach on Iraklia — a remote south-coast bay reached only on foot. Fine pebbles, extraordinary water clarity, and no facilities of any kind. Among the most peaceful beaches in the entire Cyclades.",
+      "commons": null,
+      "lat": 36.8200, "lng": 25.4789
+    },
+    {
+      "name": "Livadi Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "300 m",
+      "depth": "Shallow — family-friendly",
+      "facing": "Southeast-facing — sheltered",
+      "facilities": "Basic: simple beach bar, some sunbeds, short walk from village.",
+      "desc": "The village beach of Iraklia — fine sand, shallow water, a short walk from Agios Georgios. The easiest beach to combine with a ferry arrival, and better than most beaches on much more famous islands.",
+      "commons": null,
+      "lat": 36.8394, "lng": 25.4711
+    }
+  ]
+}

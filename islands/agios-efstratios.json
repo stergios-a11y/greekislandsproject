@@ -1,0 +1,59 @@
+{
+  "key": "agios-efstratios",
+  "name": "Agios Efstratios",
+  "subtitle": "Ai Stratis — 270 residents, no cars, black sand beaches at the end of the Aegean",
+  "intro": "Agios Efstratios is the most isolated inhabited island in the Aegean — 270 people, no cars, no paved roads, protected by the Natura 2000 network. A volcanic island of black sand beaches, one of the largest oak forests in the Aegean, and sea caves where Mediterranean monk seals breed. Famous in Greek history as a place of exile — the composer Mikis Theodorakis and poet Giannis Ritsos were both interned here in the 1970s. The Museum of Democracy in the old school building tells that story. The island is aiming to become the first zero-emission Greek island. If you've been to the Cyclades five times and want something entirely different, this is it.",
+
+  "itinerary": {
+    "title": "1-Day Agios Efstratios Itinerary",
+    "subtitle": "The village, the museum, a swim at Agios Antonios beach, dinner with the fishermen.",
+    "days": [
+      {
+        "day": 1,
+        "title": "The Village & the Black Sand Beaches",
+        "color": "#1B4F8A",
+        "km": 8,
+        "drive_mins": 0,
+        "overnight": "The village",
+        "stops": [
+          { "name": "Harbour arrival", "lat": 39.5150, "lng": 25.0075, "type": "harbour", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Agios_Efstratios", "desc": "Arrive at the single small harbour on the northwest coast. The village is built directly behind it — 1968 prefabricated houses replacing those destroyed in a catastrophic earthquake. No cars waiting. You walk from here." },
+          { "name": "Museum of Democracy", "lat": 39.5128, "lng": 25.0050, "type": "museum", "time": "10:00", "wiki": null, "desc": "The restored 1909 Maraslios school — one of the few pre-earthquake buildings still standing. Tells the extraordinary story of the island's role as a place of political exile during the Greek Civil War and the 1967-74 junta. Mikis Theodorakis, Yiannis Ritsos, and thousands of other prisoners lived here." },
+          { "name": "Church of Christ", "lat": 39.5122, "lng": 25.0053, "type": "church", "time": "11:00", "wiki": null, "desc": "The traditional church in the village with a prominent belfry — the heart of the tiny community." },
+          { "name": "Village Beach Swim", "lat": 39.5156, "lng": 25.0083, "type": "beach", "time": "12:00", "wiki": null, "desc": "The village beach — black volcanic sand, warm water, a few umbrellas. 3 minutes walk from anywhere in the village." },
+          { "name": "Lunch with the Fishermen", "lat": 39.5139, "lng": 25.0064, "type": "harbour", "time": "14:00", "wiki": null, "desc": "Two or three tiny tavernas operate on the harbour. The menu is whatever was caught that morning — lobster, grouper, crab, sun-dried mackerel (a local specialty). The locals know everyone who comes; conversation is part of the meal." },
+          { "name": "Agios Antonios Beach", "lat": 39.5022, "lng": 24.9800, "type": "beach", "time": "16:00", "wiki": null, "desc": "The finest beach on the island — sand and pebbles, crystal-clear water, oak trees for natural shade. A 40-minute walk on dirt tracks from the village. The sunset here is extraordinary." },
+          { "name": "Depart (or 2nd night)", "lat": 39.5150, "lng": 25.0075, "type": "harbour", "time": "18:30", "wiki": null, "desc": "Boat back to Lemnos (2-3 hrs) or Lavrio (8.5-13.5 hrs depending on route). Consider a second night — this is a genuinely difficult island to reach, and you won't regret slowing down." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Agios Antonios Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Sand and fine pebble",
+      "length": "200 m",
+      "depth": "Shallow — very clear water",
+      "facing": "West-facing — sunset views, oak trees behind",
+      "facilities": "None — bring everything you need. 40-minute walk from the village.",
+      "desc": "The finest beach on Agios Efstratios — a west-coast cove with fine sand, pebbles and extraordinarily clear water, surrounded by the Aegean's largest oak forest. The sunset here is one of the best in Greece. Access is on foot only.",
+      "commons": null,
+      "lat": 39.5022, "lng": 24.9800
+    },
+    {
+      "name": "Alonitsi Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine pebble",
+      "length": "600 m",
+      "depth": "Shallow — safe for children",
+      "facing": "Northeast-facing — winds pick up in afternoon",
+      "facilities": "None — remote beach. Ancient cave of St Efstratios nearby.",
+      "desc": "The longest beach on the island — fine pebble with shallow water. Often windy in afternoons, which draws occasional windsurfers in the low season. Close to the cave where Saint Efstratios lived as a hermit, giving the island its name.",
+      "commons": null,
+      "lat": 39.4992, "lng": 25.0275
+    }
+  ]
+}

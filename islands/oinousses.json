@@ -1,0 +1,58 @@
+{
+  "key": "oinousses",
+  "name": "Oinousses",
+  "subtitle": "The shipowners' island — tiny, wealthy, very quiet, very close to Turkey",
+  "intro": "Oinousses is an extraordinary small island with a curious identity. Despite having only 820 inhabitants, it has produced a disproportionate number of Greece's most prominent shipowning families — Lemos, Pateras, Los, Hadjipateras. The mansions on the harbour are larger and grander than you'd expect of such a small place. It's 2km from Chios and 8km from Turkey. The Greek Naval Academy for merchant shipping is based here. A handful of tavernas, a couple of small hotels, quiet pebble beaches and an island that has defended its character against mass tourism. For travellers who want an island that feels inhabited and real, not touristed.",
+
+  "itinerary": {
+    "title": "1-Day Oinousses Itinerary",
+    "subtitle": "The harbour, the Naval Museum, a swim at Zepaga beach, the shipowners' mansions.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Harbour, Museum & Beach",
+        "color": "#1B4F8A",
+        "km": 5,
+        "drive_mins": 10,
+        "overnight": "The village",
+        "stops": [
+          { "name": "Harbour Arrival", "lat": 38.5200, "lng": 26.2017, "type": "harbour", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Oinousses", "desc": "Arrive by small ferry from Chios (frequent, ~40 min crossing). The harbour is immediately welcoming — well-maintained mansions, a small promenade, the Naval Academy to one side." },
+          { "name": "Naval Museum", "lat": 38.5192, "lng": 26.2028, "type": "museum", "time": "10:30", "wiki": null, "desc": "Small but excellent museum documenting the extraordinary story of how Oinousses families came to dominate Greek and international shipping. Model ships, historic charts, and the names of every shipowning family. A must for anyone interested in how modern Greece works." },
+          { "name": "Shipowners' Mansions Walk", "lat": 38.5200, "lng": 26.2017, "type": "village", "time": "11:30", "wiki": null, "desc": "Walk the village lanes to see the surprisingly grand mansions. Most are summer homes for the families who now live in Athens, London or New York. The scale is striking for a village of 800 people." },
+          { "name": "Lunch — Harbour Taverna", "lat": 38.5192, "lng": 26.2022, "type": "harbour", "time": "13:00", "wiki": null, "desc": "Two or three tavernas on the harbour serve excellent seafood at honest prices. The lobster pasta here is a local specialty." },
+          { "name": "Zepaga Beach", "lat": 38.5144, "lng": 26.1978, "type": "beach", "time": "15:00", "wiki": null, "desc": "The best beach on Oinousses — a pebble cove west of the village with clear water and a view toward Chios. Small, peaceful, a handful of sunbeds." },
+          { "name": "Departure", "lat": 38.5200, "lng": 26.2017, "type": "harbour", "time": "18:30", "wiki": null, "desc": "Small ferry back to Chios (~40 min). Most visitors come as a day trip; those who stay overnight find a very different rhythm." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Zepaga Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine pebble",
+      "length": "150 m",
+      "depth": "Shallow to medium — very clear water",
+      "facing": "Southwest-facing — sheltered cove",
+      "facilities": "Basic: limited sunbeds, walking distance from village.",
+      "desc": "The best beach on Oinousses — a small pebble cove a short walk from the main village. Clear water, views across to Chios, quiet even in high season. One of the calmest swims in the NE Aegean.",
+      "commons": null,
+      "lat": 38.5144, "lng": 26.1978
+    },
+    {
+      "name": "Apiganos Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "length": "100 m",
+      "depth": "Medium — good snorkelling",
+      "facing": "South-facing — sheltered",
+      "facilities": "None — remote, bring own supplies.",
+      "desc": "A quieter beach further from the village — remote, undeveloped, with excellent snorkelling. Requires a 30-minute walk or a small boat.",
+      "commons": null,
+      "lat": 38.5108, "lng": 26.2153
+    }
+  ]
+}

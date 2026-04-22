@@ -1,0 +1,58 @@
+{
+  "key": "psara",
+  "name": "Psara",
+  "subtitle": "The island of heroes — one of the great tragedies of the Greek Revolution",
+  "intro": "Psara is one of the most sacred places in modern Greek history. During the Greek War of Independence (1821-1829), the tiny island contributed a fleet that was instrumental in several major Greek victories. In June 1824, the Ottoman navy attacked Psara. Rather than surrender, local defenders at the summit lit the powder magazine — the entire garrison and their families were killed in the explosion. Of 30,000 Psariots before the revolution, only a few hundred survived. The poet Dionysios Solomos wrote the famous epigram: 'On Psara's black ridge, Glory walks alone.' Today Psara is a quiet fishing island of 450 residents, with black pebble beaches, very few tourists, and a palpable weight of history.",
+
+  "itinerary": {
+    "title": "1-Day Psara Itinerary",
+    "subtitle": "The monument of the black ridge, the village, a swim at Limnos beach.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Black Ridge & the Village",
+        "color": "#1B4F8A",
+        "km": 10,
+        "drive_mins": 20,
+        "overnight": "The village",
+        "stops": [
+          { "name": "Harbour Arrival", "lat": 38.5411, "lng": 25.5603, "type": "harbour", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Psara", "desc": "Arrive at the tiny port on the south coast. The village is directly above it — low stone houses, blue shutters, surprisingly few people. Ferries to Psara are infrequent (a few times a week from Chios)." },
+          { "name": "Black Ridge Monument", "lat": 38.5567, "lng": 25.5614, "type": "castle", "time": "10:30", "wiki": "https://en.wikipedia.org/wiki/Destruction_of_Psara", "desc": "The site of the June 1824 explosion that ended the Greek population of Psara. The monument at the summit is inscribed with Solomos' famous epigram. One of the most haunting historical sites in Greece. The climb from the village takes 40 minutes and the views over the Aegean are vast." },
+          { "name": "Church of Agios Nikolaos", "lat": 38.5408, "lng": 25.5614, "type": "church", "time": "12:00", "wiki": null, "desc": "The main village church — houses relics and icons saved during the 1824 catastrophe. The church itself was rebuilt in the 19th century." },
+          { "name": "Lunch — Harbour Taverna", "lat": 38.5406, "lng": 25.5608, "type": "harbour", "time": "13:30", "wiki": null, "desc": "Three small tavernas operate on the harbour. Fresh fish and traditional Aegean dishes at unhurried, very reasonable prices. The lobster here is excellent and about a third of the Mykonos price." },
+          { "name": "Limnos Beach", "lat": 38.5489, "lng": 25.5347, "type": "beach", "time": "15:30", "wiki": null, "desc": "The best beach on Psara — black pebble, crystal clear water, a handful of sunbeds and a single beach bar. The west-facing location makes this one of the best sunset beaches in the NE Aegean." },
+          { "name": "Departure", "lat": 38.5411, "lng": 25.5603, "type": "harbour", "time": "18:00", "wiki": null, "desc": "Ferry back to Chios (~3-4 hrs) or Piraeus via other islands. Most visitors combine Psara with Chios or Lesvos." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Limnos Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine black pebble",
+      "length": "400 m",
+      "depth": "Medium — crystal clear",
+      "facing": "West-facing — excellent sunsets",
+      "facilities": "Basic: one taverna, limited sunbeds.",
+      "desc": "The finest beach on Psara — a wild west-coast pebble beach with extraordinarily clear water and one of the best sunsets in the NE Aegean. The setting is entirely undeveloped. Getting here requires a scooter or arrangement with the village.",
+      "commons": null,
+      "lat": 38.5489, "lng": 25.5347
+    },
+    {
+      "name": "Kato Gialos",
+      "wiki": null,
+      "rating": 4,
+      "type": "Sand and pebble",
+      "length": "200 m",
+      "depth": "Shallow — family-friendly",
+      "facing": "South-facing — sheltered",
+      "facilities": "Basic: close to village, snack bar.",
+      "desc": "The village beach — short walk from the harbour. Sand and pebble, calm sheltered water, easy facilities. Good for a quick morning or evening swim without organising transport.",
+      "commons": null,
+      "lat": 38.5389, "lng": 25.5611
+    }
+  ]
+}

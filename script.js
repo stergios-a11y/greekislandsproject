@@ -34,6 +34,10 @@ const ISLANDS_DATA = {
 
   "syros":        { name:"Syros",            lat:37.444, lng:24.942, beach:2.8, hist:4.3, night:3.5, access:4.5, afford:3.5, total:3.8, area:84,    pop:21500,   days:2, island_group:"Cyclades" },
   "lemnos":       { name:"Lemnos",           lat:39.916, lng:25.166, beach:4.3, hist:3.5, night:2.2, access:3.0, afford:4.4, total:3.5, area:476,   pop:16900,   days:3, island_group:"NE Aegean" },
+  "agios-efstratios": { name:"Agios Efstratios", lat:39.515, lng:25.007, beach:4.5, hist:2.8, night:1.5, access:1.5, afford:4.5, total:3.3, area:43,    pop:270,     days:1, island_group:"NE Aegean" },
+  "psara":        { name:"Psara",            lat:38.541, lng:25.560, beach:3.8, hist:3.5, night:1.5, access:1.5, afford:4.2, total:3.0, area:40,    pop:450,     days:1, island_group:"NE Aegean" },
+  "oinousses":    { name:"Oinousses",        lat:38.520, lng:26.202, beach:3.5, hist:3.2, night:1.8, access:2.0, afford:4.0, total:3.0, area:14,    pop:820,     days:1, island_group:"NE Aegean" },
+  "iraklia":      { name:"Iraklia",          lat:36.840, lng:25.467, beach:4.2, hist:2.5, night:1.5, access:2.0, afford:4.3, total:3.3, area:18,    pop:140,     days:1, island_group:"Cyclades" },
   "kalymnos":     { name:"Kalymnos",         lat:36.983, lng:26.983, beach:3.5, hist:4.0, night:3.0, access:3.2, afford:4.2, total:3.5, area:110,   pop:16179,   days:3, island_group:"Dodecanese" },
   "thasos":       { name:"Thasos",           lat:40.666, lng:24.666, beach:4.2, hist:3.2, night:3.0, access:3.2, afford:4.1, total:3.7, area:379,   pop:13700,   days:3, island_group:"Other" },
   "aegina":       { name:"Aegina",           lat:37.750, lng:23.500, beach:2.5, hist:4.2, night:3.2, access:5.0, afford:3.5, total:3.4, area:87,    pop:13000,   days:1, island_group:"Saronic" },
@@ -453,7 +457,9 @@ async function renderIslandPage(key) {
       'skiathos': 'skiathos', 'skopelos': 'skopelos', 'alonnisos': 'alonnisos',
       'lesvos': 'mytilene', 'samos': 'samos', 'chios': 'chios', 'ikaria': 'ikaria',
       'hydra': 'hydra', 'spetses': 'spetses', 'aegina': 'aegina',
-      'poros': 'poros', 'salamis': 'salamina'
+      'poros': 'poros', 'salamis': 'salamina',
+      'agios-efstratios': 'agios-efstratios', 'psara': 'psara',
+      'oinousses': 'oinousses', 'iraklia': 'iraklia'
     };
     const slug = ferrySlugMap[island.key] || island.key;
     ferryBtn.href = `https://www.ferryhopper.com/en/ferries-to/${slug}`;
@@ -1132,7 +1138,6 @@ const FERRY_ROUTES = [
 
 // Small Cyclades islands (some not in the main islands data - just for the map)
 const EXTRA_PORTS = {
-  'iraklia': { name: 'Iraklia', lat: 36.840, lng: 25.467 },
   'schinoussa': { name: 'Schinoussa', lat: 36.867, lng: 25.520 },
   'koufonisia': { name: 'Koufonisia', lat: 36.933, lng: 25.597 },
   'donousa': { name: 'Donousa', lat: 36.107, lng: 25.817 },
@@ -1346,6 +1351,30 @@ const ITINERARIES = [
     breakdown: [
       { from: 'Rhodes', nights: 4, via: 'Fly direct · Old Town, Lindos, Kallithea' },
       { from: 'Symi', nights: 3, via: 'Daily ferry from Rhodes port (~1 hr)' },
+    ]
+  },
+  {
+    title: 'The Other Aegean (Sporades)',
+    duration: '9 days',
+    vibe: 'Pine forests, green coastline',
+    description: 'The Sporades — an entirely different kind of Aegean island. Pine forest running to the sea, no whitewashed cubes, lush green hills. Alonnisos is the heart of the National Marine Park, where monk seals live. Very different from anything in the Cyclades.',
+    stops: ['skiathos', 'skopelos', 'alonnisos'],
+    breakdown: [
+      { from: 'Skiathos', nights: 3, via: 'Fly direct · sandy beaches, lively town' },
+      { from: 'Skopelos', nights: 3, via: 'Frequent ferries (~1 hr) · Mamma Mia filming location' },
+      { from: 'Alonnisos', nights: 3, via: 'Ferry from Skopelos (~30 min) · marine park, snorkelling' },
+    ]
+  },
+  {
+    title: 'Ultimate Off the Beaten Path',
+    duration: '7 days',
+    vibe: 'True island isolation',
+    description: 'For travellers who have already done Santorini and Mykonos. Lemnos is Greece' + "'" + 's underrated northern island — long empty beaches, wine traditions, military history. Agios Efstratios has 270 residents, no cars, black volcanic sand beaches and the oak forest of the Aegean. No crowds because no one comes.',
+    stops: ['lemnos', 'agios-efstratios'],
+    breakdown: [
+      { from: 'Athens', nights: 1, via: 'Fly in' },
+      { from: 'Lemnos', nights: 4, via: 'Fly direct (~1 hr) · beaches, wine villages' },
+      { from: 'Agios Efstratios', nights: 2, via: 'Ferry from Lemnos (~2-3 hrs) · true isolation' },
     ]
   },
 ];
