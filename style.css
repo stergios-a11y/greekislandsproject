@@ -2354,3 +2354,55 @@ html.dark .lang-toggle {
   .lang-toggle { padding: 5px 8px; margin-left: 4px; gap: 4px; }
   .lang-toggle .lang-flag { font-size: 16px; }
 }
+
+/* ============================================================
+   Author photo block on mission page
+============================================================ */
+.author-photo-block {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+  margin: 28px 0;
+  background: var(--marble-2, rgba(11,143,172,0.05));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.author-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  border: 3px solid var(--white);
+}
+html.dark .author-photo {
+  border-color: var(--marble-3);
+}
+.author-photo-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.author-name {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ink-1);
+}
+.author-role {
+  font-size: 13px;
+  color: var(--ink-3);
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .author-photo-block {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    padding: 18px 16px;
+  }
+  .author-photo { width: 80px; height: 80px; }
+}

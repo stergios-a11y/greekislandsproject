@@ -124,6 +124,7 @@ const UI_TEXT = {
   'mission.point.label': { en: 'The point', el: 'Η ουσία' },
   'mission.point.text': { en: 'Pick an island. Pack a bag. Go.', el: 'Διάλεξε ένα νησί. Φτιάξε βαλίτσα. Φύγε.' },
   'mission.kicker': { en: "Planning a trip shouldn't take longer than the trip itself.", el: 'Ο σχεδιασμός ενός ταξιδιού δεν πρέπει να διαρκεί περισσότερο από το ίδιο το ταξίδι.' },
+  'mission.author.role': { en: 'Founder · Athens', el: 'Δημιουργός · Αθήνα' },
 
   // Detail page (back button is already defined above)
 
