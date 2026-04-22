@@ -313,7 +313,15 @@ function renderMapMarkers() {
     const score = getDisplayScore(island);
     const marker = L.marker([island.lat, island.lng], { icon: makeMarkerIcon(score) })
       .addTo(mapInstance)
-      .bindPopup(`<div style="min-width:160px;font-family:sans-serif"><strong style="font-size:14px">${island.name}</strong><br><small style="color:#888;text-transform:uppercase;letter-spacing:.5px">${island.island_group}</small><div style="margin-top:8px;font-size:13px">Overall: <strong style="color:${scoreToColor(island.total)}">${fmt(island.total)}</strong></div><div style="font-size:12px;color:#666;margin-top:2px">Beach ${fmt(island.beach)} · Culture ${fmt(island.hist)} · Night ${fmt(island.night)}</div><button onclick="window._openDetail('${island.key}')" style="margin-top:10px;padding:6px 12px;width:100%;cursor:pointer;background:#1B4F8A;color:#fff;border:none;border-radius:6px;font-size:12px;font-weight:600">View details</button></div>`);
+      .bindTooltip(`
+        <div style="font-family:sans-serif;min-width:140px">
+          <div style="font-weight:700;font-size:13px;color:#1a2332">${island.name}</div>
+          <div style="font-size:11px;color:#888;margin:2px 0">${island.island_group} · ${fmtNum(island.area)} km²</div>
+          <div style="margin-top:5px;font-size:12px">Overall: <strong style="color:${scoreToColor(island.total)}">${fmt(island.total)} ★</strong></div>
+          <div style="font-size:11px;color:#666;margin-top:2px">Beach ${fmt(island.beach)} · Culture ${fmt(island.hist)} · Night ${fmt(island.night)}</div>
+          <div style="margin-top:5px;font-size:11px;color:var(--aegean,#0B8FAC)">Click to explore →</div>
+        </div>
+      `, { sticky: false, opacity: 1, className: 'island-tooltip' });
     marker.on('click', () => navigateTo('island', island.key));
     mapMarkers[island.key] = marker;
   });

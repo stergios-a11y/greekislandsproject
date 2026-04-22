@@ -1419,3 +1419,21 @@ html.dark .why-feat-num { color: var(--marble-3); }
   color: var(--ink-4);
   margin-top: 4px;
 }
+
+/* Island hover tooltip */
+.island-tooltip {
+  background: var(--white) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow) !important;
+  padding: 10px 14px !important;
+  font-family: var(--sans) !important;
+}
+.island-tooltip::before {
+  display: none !important;
+}
+.leaflet-tooltip-bottom.island-tooltip::before,
+.leaflet-tooltip-top.island-tooltip::before {
+  border-bottom-color: var(--white) !important;
+  border-top-color: var(--white) !important;
+}
