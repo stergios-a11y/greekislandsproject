@@ -3,7 +3,13 @@
 const VERSION = 'v4.0';
 
 const ISLANDS_DATA = {
-  "athens":       { name:"Athens (Piraeus)", lat:37.983, lng:23.727, beach:2.0, hist:5.0, night:5.0, access:5.0, afford:3.0, total:3.8, area:39,    pop:664000,  island_group:"Saronic" },
+  "lefkada":      { name:"Lefkada",          lat:38.706, lng:20.648, beach:4.9, hist:2.5, night:3.2, access:4.5, afford:4.0, total:3.9, area:335,   pop:22600,   island_group:"Ionian" },
+  "meganisi":     { name:"Meganisi",         lat:38.643, lng:20.783, beach:4.0, hist:2.5, night:2.8, access:3.2, afford:3.2, total:3.5, area:22,    pop:1041,    island_group:"Ionian" },
+  "ithaca":       { name:"Ithaca",           lat:38.366, lng:20.716, beach:3.8, hist:4.9, night:2.5, access:2.5, afford:3.5, total:3.8, area:96,    pop:3231,    island_group:"Ionian" },
+  "kefalonia":    { name:"Kefalonia",        lat:38.175, lng:20.569, beach:4.7, hist:3.2, night:3.2, access:3.5, afford:3.8, total:4.1, area:773,   pop:35800,   island_group:"Ionian" },
+  "zakynthos":    { name:"Zakynthos",        lat:37.787, lng:20.899, beach:4.8, hist:2.5, night:4.5, access:3.7, afford:3.5, total:4.1, area:405,   pop:40700,   island_group:"Ionian" },
+  "kythira":      { name:"Kythira",          lat:36.250, lng:23.000, beach:4.2, hist:4.5, night:2.5, access:2.5, afford:3.8, total:3.7, area:279,   pop:3973,    island_group:"Ionian" },
+  "elafonisos":   { name:"Elafonisos",       lat:36.480, lng:22.980, beach:5.0, hist:2.0, night:2.5, access:2.5, afford:3.8, total:4.0, area:19,    pop:1041,    island_group:"Other" },
   "paros":        { name:"Paros",            lat:37.085, lng:25.148, beach:5.0, hist:3.8, night:5.0, access:4.5, afford:2.2, total:4.1, area:196,   pop:13700,   island_group:"Cyclades" },
   "chania":       { name:"Crete (Chania)",   lat:35.512, lng:24.018, beach:5.0, hist:4.7, night:4.0, access:4.5, afford:3.4, total:4.9, area:2376,  pop:108000,  island_group:"Crete" },
   "heraklion":    { name:"Crete (Heraklion)",lat:35.338, lng:25.131, beach:3.5, hist:5.0, night:4.7, access:5.0, afford:3.5, total:4.3, area:2641,  pop:173000,  island_group:"Crete" },
@@ -15,8 +21,8 @@ const ISLANDS_DATA = {
   "naxos":        { name:"Naxos",            lat:37.105, lng:25.376, beach:4.8, hist:4.4, night:3.5, access:3.8, afford:4.0, total:4.5, area:429,   pop:18900,   island_group:"Cyclades" },
   "mykonos":      { name:"Mykonos",          lat:37.446, lng:25.328, beach:4.3, hist:3.0, night:5.0, access:4.8, afford:0.5, total:4.3, area:85,    pop:10100,   island_group:"Cyclades" },
   "corfu":        { name:"Corfu",            lat:39.624, lng:19.921, beach:3.9, hist:4.8, night:4.2, access:4.7, afford:3.2, total:4.2, area:593,   pop:102000,  island_group:"Ionian" },
-  "zakynthos":    { name:"Zakynthos",        lat:37.787, lng:20.899, beach:4.8, hist:2.5, night:4.5, access:3.7, afford:3.5, total:4.1, area:405,   pop:40700,   island_group:"Ionian" },
-  "kefalonia":    { name:"Kefalonia",        lat:38.175, lng:20.569, beach:4.7, hist:3.2, night:3.2, access:3.5, afford:3.8, total:4.1, area:773,   pop:35800,   island_group:"Ionian" },
+
+
   "hydra":        { name:"Hydra",            lat:37.350, lng:23.466, beach:2.2, hist:4.2, night:3.8, access:4.2, afford:1.8, total:4.1, area:52,    pop:2700,    island_group:"Saronic" },
   "folegandros":  { name:"Folegandros",      lat:36.630, lng:24.900, beach:3.9, hist:3.8, night:3.5, access:2.8, afford:2.2, total:4.0, area:32,    pop:765,     island_group:"Cyclades" },
   "koufonisia":   { name:"Koufonisia",       lat:36.930, lng:25.600, beach:5.0, hist:2.0, night:4.0, access:3.0, afford:3.0, total:4.0, area:26,    pop:399,     island_group:"Cyclades" },
@@ -25,7 +31,7 @@ const ISLANDS_DATA = {
   "chios":        { name:"Chios",            lat:38.368, lng:26.135, beach:3.2, hist:4.7, night:2.5, access:3.2, afford:4.5, total:3.6, area:842,   pop:51000,   island_group:"NE Aegean" },
   "kos":          { name:"Kos",              lat:36.891, lng:27.287, beach:4.0, hist:4.2, night:4.0, access:4.6, afford:3.8, total:3.7, area:287,   pop:33300,   island_group:"Dodecanese" },
   "samos":        { name:"Samos",            lat:37.757, lng:26.702, beach:3.5, hist:4.6, night:3.0, access:3.5, afford:4.2, total:3.3, area:477,   pop:32900,   island_group:"NE Aegean" },
-  "lefkada":      { name:"Lefkada",          lat:38.706, lng:20.648, beach:4.9, hist:2.5, night:3.2, access:4.5, afford:4.0, total:3.9, area:335,   pop:22600,   island_group:"Ionian" },
+
   "syros":        { name:"Syros",            lat:37.444, lng:24.942, beach:2.8, hist:4.3, night:3.5, access:4.5, afford:3.5, total:3.8, area:84,    pop:21500,   island_group:"Cyclades" },
   "lemnos":       { name:"Lemnos",           lat:39.916, lng:25.166, beach:4.3, hist:3.5, night:2.2, access:3.0, afford:4.4, total:3.5, area:476,   pop:16900,   island_group:"NE Aegean" },
   "kalymnos":     { name:"Kalymnos",         lat:36.983, lng:26.983, beach:3.5, hist:4.0, night:3.0, access:3.2, afford:4.2, total:3.5, area:110,   pop:16179,   island_group:"Dodecanese" },
@@ -38,12 +44,11 @@ const ISLANDS_DATA = {
   "karpathos":    { name:"Karpathos",        lat:35.583, lng:27.133, beach:4.4, hist:4.0, night:2.2, access:2.0, afford:3.8, total:3.8, area:300,   pop:6200,    island_group:"Dodecanese" },
   "skiathos":     { name:"Skiathos",         lat:39.163, lng:23.490, beach:4.6, hist:2.0, night:4.7, access:4.5, afford:3.0, total:3.9, area:49,    pop:6088,    island_group:"Sporades" },
   "skopelos":     { name:"Skopelos",         lat:39.121, lng:23.726, beach:4.2, hist:3.2, night:2.5, access:2.5, afford:3.8, total:3.6, area:96,    pop:4960,    island_group:"Sporades" },
-  "kythira":      { name:"Kythira",          lat:36.250, lng:23.000, beach:4.2, hist:4.5, night:2.5, access:2.5, afford:3.8, total:3.7, area:279,   pop:3973,    island_group:"Other" },
   "patmos":       { name:"Patmos",           lat:37.322, lng:26.545, beach:3.0, hist:4.8, night:2.8, access:2.2, afford:2.5, total:3.6, area:34,    pop:3047,    island_group:"Dodecanese" },
   "poros":        { name:"Poros",            lat:37.510, lng:23.470, beach:3.0, hist:4.2, night:3.5, access:4.8, afford:3.2, total:3.5, area:23,    pop:3993,    island_group:"Saronic" },
   "alonnisos":    { name:"Alonnisos",        lat:39.216, lng:23.916, beach:4.4, hist:3.0, night:2.5, access:2.5, afford:4.0, total:3.8, area:64,    pop:2750,    island_group:"Sporades" },
   "skyros":       { name:"Skyros",           lat:38.866, lng:24.533, beach:4.0, hist:3.8, night:2.8, access:2.5, afford:4.2, total:3.4, area:209,   pop:2994,    island_group:"Sporades" },
-  "ithaca":       { name:"Ithaca",           lat:38.366, lng:20.716, beach:3.8, hist:4.9, night:2.5, access:2.5, afford:3.5, total:3.8, area:96,    pop:3231,    island_group:"Ionian" },
+
   "sifnos":       { name:"Sifnos",           lat:36.966, lng:24.716, beach:3.8, hist:4.0, night:3.2, access:3.5, afford:3.5, total:3.9, area:73,    pop:2625,    island_group:"Cyclades" },
   "symi":         { name:"Symi",             lat:36.583, lng:27.833, beach:3.0, hist:4.8, night:3.5, access:3.5, afford:2.5, total:3.8, area:58,    pop:2590,    island_group:"Dodecanese" },
   "paxos":        { name:"Paxos",            lat:39.200, lng:20.150, beach:4.2, hist:3.0, night:3.5, access:2.8, afford:2.5, total:4.0, area:19,    pop:2300,    island_group:"Ionian" },
@@ -60,14 +65,13 @@ const ISLANDS_DATA = {
   "kastellorizo": { name:"Kastellorizo",     lat:36.140, lng:29.580, beach:2.0, hist:5.0, night:2.8, access:1.2, afford:3.5, total:4.0, area:12,    pop:492,     island_group:"Dodecanese" },
   "sikinos":      { name:"Sikinos",          lat:36.683, lng:25.116, beach:3.5, hist:4.2, night:2.2, access:2.5, afford:4.0, total:3.4, area:42,    pop:273,     island_group:"Cyclades" },
   "anafi":        { name:"Anafi",            lat:36.366, lng:25.766, beach:4.5, hist:3.2, night:2.5, access:2.0, afford:4.2, total:3.9, area:38,    pop:271,     island_group:"Cyclades" },
-  "elafonisos":   { name:"Elafonisos",       lat:36.480, lng:22.980, beach:5.0, hist:2.0, night:2.5, access:2.5, afford:3.8, total:4.0, area:19,    pop:1041,    island_group:"Other" },
+,
   "samothrace":   { name:"Samothrace",       lat:40.466, lng:25.533, beach:3.0, hist:4.1, night:2.5, access:1.8, afford:4.5, total:3.2, area:178,   pop:2859,    island_group:"Other" },
   "fournoi":      { name:"Fournoi",          lat:37.580, lng:26.500, beach:3.8, hist:3.0, night:1.8, access:2.0, afford:4.5, total:3.2, area:45,    pop:1459,    island_group:"Other" },
   "spetses":      { name:"Spetses",          lat:37.260, lng:23.130, beach:2.8, hist:4.2, night:4.2, access:4.2, afford:2.0, total:3.7, area:22,    pop:4027,    island_group:"Saronic" },
   "tilos":        { name:"Tilos",            lat:36.416, lng:27.366, beach:3.8, hist:3.5, night:2.0, access:2.2, afford:4.2, total:3.5, area:61,    pop:780,     island_group:"Dodecanese" },
   "leipsoi":      { name:"Leipsoi",          lat:37.300, lng:26.750, beach:4.0, hist:3.0, night:2.0, access:2.5, afford:4.5, total:3.4, area:16,    pop:790,     island_group:"Dodecanese" },
   "halki":        { name:"Halki",            lat:36.220, lng:27.610, beach:3.8, hist:4.0, night:2.0, access:2.5, afford:4.0, total:3.6, area:28,    pop:478,     island_group:"Dodecanese" },
-  "meganisi":     { name:"Meganisi",         lat:38.660, lng:20.780, beach:4.0, hist:2.5, night:2.8, access:3.2, afford:3.2, total:3.5, area:22,    pop:1041,    island_group:"Ionian" },
   "ammouliani":   { name:"Ammouliani",       lat:40.332, lng:23.916, beach:4.5, hist:2.0, night:3.0, access:3.0, afford:4.0, total:3.5, area:4,     pop:547,     island_group:"Other" },
   "salamis":      { name:"Salamis",          lat:37.933, lng:23.500, beach:2.0, hist:3.5, night:3.0, access:5.0, afford:4.5, total:2.8, area:95,    pop:39283,   island_group:"Saronic" },
   "therasia":     { name:"Therasia",         lat:36.433, lng:25.350, beach:3.0, hist:3.5, night:1.5, access:3.0, afford:3.5, total:3.1, area:9,     pop:319,     island_group:"Cyclades" },
@@ -252,9 +256,10 @@ function setupDarkMode() {
 ============================================================ */
 function setupMap() {
   const GREECE_BOUNDS = L.latLngBounds(L.latLng(33.8, 18.5), L.latLng(42.2, 30.2));
-  mapInstance = L.map('main-map', { zoomControl: true, minZoom: 5, maxZoom: 14, maxBounds: GREECE_BOUNDS, maxBoundsViscosity: 0.85 });
+  mapInstance = L.map('main-map', { zoomControl: true, minZoom: 6, maxZoom: 14, maxBounds: GREECE_BOUNDS, maxBoundsViscosity: 0.85 });
   mapInstance.fitBounds(GREECE_BOUNDS);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap contributors', maxZoom: 14 }).addTo(mapInstance);
+  L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(mapInstance);
   renderMapMarkers();
   const searchInput = document.getElementById('islandSearch');
   if (searchInput) searchInput.addEventListener('input', filterIslands);
@@ -267,10 +272,10 @@ function getDisplayScore(island) {
 
 function makeMarkerIcon(score) {
   const color = scoreToColor(score);
-  const size = Math.round(28 + score * 4);
+  const size = Math.round(20 + score * 2);
   return L.divIcon({
     className: 'custom-marker',
-    html: `<div style="background:${color};width:${size}px;height:${size}px;border-radius:50%;border:2.5px solid #fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.3);">${fmt(score)}</div>`,
+    html: `<div style="background:${color};width:${size}px;height:${size}px;border-radius:50%;border:2px solid #fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.3);">${fmt(score)}</div>`,
     iconSize: [size, size], iconAnchor: [size / 2, size / 2],
   });
 }
@@ -608,6 +613,7 @@ async function initItineraryMap(days) {
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors', maxZoom: 16,
   }).addTo(itineraryMapInstance);
+  L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(itineraryMapInstance);
 
   const allCoords = days.flatMap(d => d.stops.map(s => [s.lat, s.lng]));
   itineraryMapInstance.fitBounds(L.latLngBounds(allCoords), { padding: [30, 30] });
@@ -777,7 +783,7 @@ function renderHopping() {
   const container = document.getElementById('hopping-list');
   if (!container || container.dataset.rendered) return;
   container.dataset.rendered = '1';
-  const eligible = ISLANDS.filter(i => i.key !== 'athens' && i.total >= 3.5);
+  const eligible = ISLANDS.filter(i => i.total >= 3.5);
   const pairs = [];
   for (let i = 0; i < eligible.length; i++) {
     for (let j = i + 1; j < eligible.length; j++) {
@@ -845,7 +851,7 @@ function computeQuizResults() {
   const priority = priorityDims[quizAnswers[1]] || 'total';
   const budgetMod = [2, 0.5, -0.5, -2][quizAnswers[2]] || 0;
   const crowdPref = quizAnswers[3];
-  const scored = ISLANDS.filter(i => i.key !== 'athens').map(i => {
+  const scored = ISLANDS.map(i => {
     let s = i[priority] * 2.5 + i.total * 1.5;
     if (budgetMod > 0) s += budgetMod * i.afford;
     else if (budgetMod < 0) s += Math.abs(budgetMod) * (5 - i.afford);
