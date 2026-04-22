@@ -97,7 +97,7 @@ let itinRouteLayers = {};
 let itinMarkerLayers = {};
 
 const SCORE_DIMS = ['beach', 'hist', 'night', 'access', 'afford'];
-const DIM_LABELS = ['Beach', 'Culture', 'Nightlife', 'Access', 'Price'];
+const DIM_LABELS = ['Beach', 'Culture', 'Nightlife', 'Access', 'Affordability'];
 const SCORE_COLORS = {
   beach: '#1B4F8A', hist: '#5A7A3A', night: '#C0522A', access: '#C4962A', afford: '#7B5EA7',
 };
@@ -807,7 +807,7 @@ function renderTable() {
   if (countLabel) countLabel.textContent = `${list.length} islands`;
   const tbody = document.getElementById('islands-table-body');
   if (!tbody) return;
-  tbody.innerHTML = list.map(i => `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="Island" style="font-weight:600">${i.name}</td><td data-label="Group"><span class="group-tag">${i.island_group}</span></td><td data-label="Rating">${starsHtml(i.total)}</td><td data-label="Beach">${starsHtml(i.beach)}</td><td data-label="Culture">${starsHtml(i.hist)}</td><td data-label="Night">${starsHtml(i.night)}</td><td data-label="Access">${starsHtml(i.access)}</td><td data-label="Price">${starsHtml(i.afford)}</td><td data-label="Area (km²)">${barHtml(i.area, 3684, 'var(--aegean)')}</td><td data-label="Population">${barHtml(i.pop, 200000, 'var(--olive)')}</td></tr>`).join('');
+  tbody.innerHTML = list.map(i => `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="Island" style="font-weight:600">${i.name}</td><td data-label="Group"><span class="group-tag">${i.island_group}</span></td><td data-label="Rating">${starsHtml(i.total)}</td><td data-label="Beach">${starsHtml(i.beach)}</td><td data-label="Culture">${starsHtml(i.hist)}</td><td data-label="Night">${starsHtml(i.night)}</td><td data-label="Access">${starsHtml(i.access)}</td><td data-label="Affordability">${starsHtml(i.afford)}</td><td data-label="Area (km²)">${barHtml(i.area, 3684, 'var(--aegean)')}</td><td data-label="Population">${barHtml(i.pop, 200000, 'var(--olive)')}</td></tr>`).join('');
   tbody.querySelectorAll('.table-row-clickable').forEach(row => {
     row.addEventListener('click', () => navigateTo('island', row.dataset.key));
   });

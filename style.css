@@ -1413,3 +1413,9 @@ html.dark .why-feat-num { color: var(--marble-3); }
 @media (max-width: 600px) {
   .beach-ratings-row { gap: 10px; }
 }
+
+.footer-copy {
+  font-size: 12px;
+  color: var(--ink-4);
+  margin-top: 4px;
+}
