@@ -694,6 +694,27 @@ function setupTable() {
   renderTable();
 }
 
+function starsHtml(score) {
+  const full = Math.floor(score);
+  const half = score - full >= 0.25 && score - full < 0.75;
+  const empty = 5 - full - (half ? 1 : 0);
+  const isFive = score >= 4.75;
+  const color = isFive ? '#E8522A' : '#C4962A';
+  let html = '';
+  for (let i = 0; i < full; i++) html += `<span style="color:${color}">★</span>`;
+  if (half) html += `<span style="color:${color}">½</span>`;
+  for (let i = 0; i < empty; i++) html += `<span style="color:#DDD">★</span>`;
+  return `<span class="star-rating" title="${score}">${html}</span>`;
+}
+
+const MAX_AREA = 3684; // Euboea
+const MAX_POP = 664000; // removed Athens but keep scale reasonable — use 200000
+
+function barHtml(val, max, color) {
+  const pct = Math.min(100, Math.round((val / max) * 100));
+  return `<div class="table-bar-wrap"><div class="table-bar-fill" style="width:${pct}%;background:${color}"></div><span class="table-bar-label">${fmtNum(val)}</span></div>`;
+}
+
 function renderTable() {
   const query = (document.getElementById('tableSearchInput')?.value || '').toLowerCase();
   let list = ISLANDS.filter(i => !query || i.name.toLowerCase().includes(query) || i.island_group.toLowerCase().includes(query));
@@ -707,7 +728,7 @@ function renderTable() {
   if (countLabel) countLabel.textContent = `${list.length} islands`;
   const tbody = document.getElementById('islands-table-body');
   if (!tbody) return;
-  tbody.innerHTML = list.map(i => `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="Island" style="font-weight:600">${i.name}</td><td data-label="Group"><span class="group-tag">${i.island_group}</span></td><td data-label="Total" style="color:${scoreToColor(i.total)};font-weight:600">${fmt(i.total)}</td><td data-label="Beach">${fmt(i.beach)}</td><td data-label="Culture">${fmt(i.hist)}</td><td data-label="Night">${fmt(i.night)}</td><td data-label="Access">${fmt(i.access)}</td><td data-label="Price">${fmt(i.afford)}</td><td data-label="Area" class="text-right">${fmtNum(i.area)}</td><td data-label="Pop" class="text-right">${fmtNum(i.pop)}</td></tr>`).join('');
+  tbody.innerHTML = list.map(i => `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="Island" style="font-weight:600">${i.name}</td><td data-label="Group"><span class="group-tag">${i.island_group}</span></td><td data-label="Rating">${starsHtml(i.total)}</td><td data-label="Beach">${starsHtml(i.beach)}</td><td data-label="Culture">${starsHtml(i.hist)}</td><td data-label="Night">${starsHtml(i.night)}</td><td data-label="Access">${starsHtml(i.access)}</td><td data-label="Price">${starsHtml(i.afford)}</td><td data-label="Area (km²)">${barHtml(i.area, 3684, 'var(--aegean)')}</td><td data-label="Population">${barHtml(i.pop, 200000, 'var(--olive)')}</td></tr>`).join('');
   tbody.querySelectorAll('.table-row-clickable').forEach(row => {
     row.addEventListener('click', () => navigateTo('island', row.dataset.key));
   });
