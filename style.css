@@ -1907,3 +1907,307 @@ html.dark .top-nav.open {
     font-size: 22px;
   }
 }
+
+/* Print/PDF button on detail page */
+.print-btn {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-family: var(--sans);
+  font-weight: 600;
+  border: 1.5px solid var(--border);
+  color: var(--ink-2);
+  background: transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.print-btn:hover {
+  background: var(--ink-1);
+  color: var(--white);
+  border-color: var(--ink-1);
+}
+
+/* Print stylesheet — strips chrome for clean PDF output */
+@media print {
+  /* Hide navigation, maps, action buttons, footer */
+  header,
+  #site-footer,
+  .menu-toggle,
+  .top-nav,
+  .dark-mode-toggle,
+  #itinerary-map,
+  #island-mini-map,
+  .back-btn,
+  .compare-add-btn,
+  .shortlist-btn,
+  .share-btn,
+  .print-btn,
+  .ferry-btn,
+  .itin-day-btn-row,
+  .leaflet-container,
+  .beach-vote-stars,
+  #home-controls,
+  #loading-overlay,
+  #hero-banner {
+    display: none !important;
+  }
+  
+  /* Reset backgrounds and forced colors for clean print */
+  html, body, .view-section, #view-detail, .detail-container, .detail-grid, .detail-main, .detail-sidebar {
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
+  }
+  
+  body {
+    font-size: 11pt;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  /* Page setup */
+  @page {
+    size: A4;
+    margin: 18mm 16mm;
+  }
+  
+  /* Show URL after links so the PDF has clickable references */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #666;
+    font-weight: normal;
+  }
+  /* But don't print URLs after navigation/in-page links */
+  a[href^="#"]:after,
+  .nav-link:after {
+    content: "";
+  }
+  
+  /* Headings */
+  h1 { font-size: 22pt; margin: 0 0 6pt; color: #000; }
+  h2 { font-size: 14pt; margin: 18pt 0 8pt; color: #000; page-break-after: avoid; }
+  h3 { font-size: 12pt; margin: 12pt 0 6pt; color: #000; page-break-after: avoid; }
+  
+  /* Detail page layout — single column */
+  .detail-grid {
+    display: block !important;
+    grid-template-columns: none !important;
+  }
+  .detail-main, .detail-sidebar {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Keep itinerary stops on same page when possible */
+  .stop-card,
+  .beach-card,
+  .itin-day {
+    page-break-inside: avoid;
+  }
+  
+  /* Beach photos — keep small in print to save ink and pages */
+  .beach-photo {
+    max-height: 120px !important;
+    object-fit: cover;
+  }
+  
+  /* Compact ratings/stars */
+  .star-rating { color: #444 !important; }
+  
+  /* Footer note for PDF identifying source */
+  .detail-container::after {
+    content: "Source: aegeanblueprint.com — © 2026 Stergios Gousios";
+    display: block;
+    margin-top: 24pt;
+    padding-top: 12pt;
+    border-top: 1px solid #ccc;
+    font-size: 9pt;
+    color: #666;
+    text-align: center;
+  }
+  
+  /* Hide stops we filtered out — make sure all show in print */
+  .stop-card[style*="display: none"] {
+    display: block !important;
+  }
+}
+
+/* ============================================================
+   FEEDBACK BUTTON & MODAL
+============================================================ */
+
+/* Floating feedback button — fixed bottom-right */
+#feedback-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  padding: 12px 20px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--aegean) 0%, var(--aegean-dark) 100%);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(11,143,172,0.35);
+  transition: all 0.2s;
+}
+#feedback-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(11,143,172,0.45);
+}
+
+/* Hide feedback button on print */
+@media print {
+  #feedback-btn, .feedback-modal { display: none !important; }
+}
+
+/* Modal backdrop */
+.feedback-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* Modal content */
+.feedback-content {
+  background: var(--white);
+  color: var(--ink-1);
+  border-radius: 18px;
+  padding: 32px 32px 28px;
+  max-width: 480px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.25s;
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.feedback-content h2 {
+  margin: 0 0 8px;
+  font-family: var(--display);
+  font-size: 24px;
+  color: var(--ink-1);
+}
+.feedback-content > p {
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: var(--ink-3);
+  line-height: 1.6;
+}
+
+.feedback-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--marble-2, #f0f0f0);
+  color: var(--ink-2);
+  font-size: 22px;
+  font-weight: 300;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+.feedback-close:hover {
+  background: var(--accent, #FF6B6B);
+  color: #fff;
+}
+
+/* Form */
+#feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+#feedback-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+#feedback-form select,
+#feedback-form textarea,
+#feedback-form input {
+  padding: 10px 12px;
+  font-family: var(--sans);
+  font-size: 14px;
+  background: var(--marble, #fff);
+  color: var(--ink-1);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  transition: border 0.15s;
+  font-weight: 400;
+}
+#feedback-form select:focus,
+#feedback-form textarea:focus,
+#feedback-form input:focus {
+  outline: none;
+  border-color: var(--aegean);
+}
+#feedback-form textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: var(--sans);
+}
+
+.feedback-submit {
+  margin-top: 6px;
+  padding: 12px 20px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--aegean) 0%, var(--aegean-dark) 100%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.feedback-submit:hover {
+  transform: translateY(-1px);
+}
+
+.feedback-note {
+  margin: 4px 0 0;
+  font-size: 11px !important;
+  color: var(--ink-4) !important;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  #feedback-btn {
+    bottom: 16px;
+    right: 16px;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+  .feedback-content {
+    padding: 24px 20px;
+  }
+  .feedback-content h2 { font-size: 20px; }
+}

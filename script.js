@@ -243,6 +243,86 @@ window.addEventListener('popstate', () => {
   catch(e) { showView('home', null); }
 });
 
+function printIsland() {
+  // Use the browser's native print -> Save as PDF dialog
+  // The print stylesheet (in style.css) strips nav, maps, and buttons.
+  window.print();
+}
+
+window.printIsland = printIsland;
+
+/* ============================================================
+   FEEDBACK MODAL — opens email client with prefilled message
+============================================================ */
+function openFeedback() {
+  const modal = document.getElementById('feedback-modal');
+  if (modal) {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeFeedback() {
+  const modal = document.getElementById('feedback-modal');
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+}
+
+function submitFeedback(event) {
+  event.preventDefault();
+  const form = event.target;
+  const topic = form.topic.value;
+  const message = form.message.value;
+  const email = form.email.value || '(not provided)';
+  const currentUrl = window.location.href;
+  
+  const topicLabels = {
+    'suggestion': 'Suggestion',
+    'error': 'Error / correction',
+    'missing-island': 'Missing island',
+    'missing-restaurant': 'Missing restaurant or beach',
+    'other': 'Other'
+  };
+  const topicLabel = topicLabels[topic] || 'Feedback';
+  
+  const subject = `[Aegean Blueprint] ${topicLabel}`;
+  const body = `Topic: ${topicLabel}\n\nMessage:\n${message}\n\nFrom: ${email}\nPage: ${currentUrl}\n\n---\nSent from aegeanblueprint.com`;
+  
+  const mailtoLink = `mailto:stergiosgousios@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailtoLink;
+  
+  // Close modal after a brief delay
+  setTimeout(() => {
+    closeFeedback();
+    form.reset();
+  }, 500);
+}
+
+// Close modal when clicking outside the content area
+document.addEventListener('click', (e) => {
+  const modal = document.getElementById('feedback-modal');
+  if (modal && e.target === modal) {
+    closeFeedback();
+  }
+});
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const modal = document.getElementById('feedback-modal');
+    if (modal && modal.style.display === 'flex') {
+      closeFeedback();
+    }
+  }
+});
+
+window.openFeedback = openFeedback;
+window.closeFeedback = closeFeedback;
+window.submitFeedback = submitFeedback;
+
+
 function copyIslandLink() {
   const url = 'https://aegeanblueprint.com/' + window.location.hash;
   navigator.clipboard.writeText(url).then(() => {

@@ -217,6 +217,7 @@
         <button class="compare-add-btn" id="detail-compare-btn">＋ Compare</button>
         <button class="shortlist-btn" id="detail-shortlist-btn" onclick="toggleShortlist()">☆ Save</button>
         <button class="share-btn" id="detail-share-btn" onclick="copyIslandLink()">🔗 Copy link</button>
+        <button class="print-btn" id="detail-print-btn" onclick="printIsland()">🖨 Print / PDF</button>
         <a class="ferry-btn" id="detail-ferry-btn" target="_blank" rel="noopener">🚢 Book ferry tickets</a>
       </div>
       <div class="detail-grid">
@@ -248,6 +249,40 @@
   </main>
 
   <footer id="site-footer"><div id="version-display"></div><div class="footer-copy">© 2026 Stergios Gousios · Aegean Blueprint</div></footer>
+
+  <!-- Floating feedback button -->
+  <button id="feedback-btn" onclick="openFeedback()" title="Send feedback">💬 Feedback</button>
+
+  <!-- Feedback modal -->
+  <div id="feedback-modal" class="feedback-modal" style="display:none;">
+    <div class="feedback-content">
+      <button class="feedback-close" onclick="closeFeedback()">×</button>
+      <h2>Got feedback?</h2>
+      <p>Spotted an error? Have a suggestion? Want to recommend an island, beach, or restaurant we should add? Tell us — we read everything.</p>
+      <form id="feedback-form" onsubmit="submitFeedback(event)">
+        <label>
+          What's this about?
+          <select name="topic" required>
+            <option value="suggestion">💡 Suggestion or feature idea</option>
+            <option value="error">🐛 Error or correction</option>
+            <option value="missing-island">🏝 Island we should add</option>
+            <option value="missing-restaurant">🍴 Restaurant or beach to add</option>
+            <option value="other">💬 Something else</option>
+          </select>
+        </label>
+        <label>
+          Your message
+          <textarea name="message" rows="5" placeholder="Tell us what's on your mind..." required></textarea>
+        </label>
+        <label>
+          Your email (optional — only if you want a reply)
+          <input type="email" name="email" placeholder="you@example.com">
+        </label>
+        <button type="submit" class="feedback-submit">Send via email</button>
+        <p class="feedback-note">This will open your email app with the message ready to send.</p>
+      </form>
+    </div>
+  </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
