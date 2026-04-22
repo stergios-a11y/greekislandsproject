@@ -772,11 +772,13 @@ function initBeachVotes() {
 }
 
 function starsHtml(score) {
-  const full = Math.floor(score);
-  const half = score - full >= 0.25 && score - full < 0.75;
+  // Round to nearest 0.5
+  const rounded = Math.round(score * 2) / 2;
+  const full = Math.floor(rounded);
+  const half = rounded % 1 !== 0;
   const empty = 5 - full - (half ? 1 : 0);
-  const isFive = score >= 4.75;
-  const color = isFive ? '#E8522A' : '#C4962A';
+  const isFiveStars = rounded >= 5;
+  const color = isFiveStars ? '#E8522A' : '#C4962A';
   let html = '';
   for (let i = 0; i < full; i++) html += `<span style="color:${color}">★</span>`;
   if (half) html += `<span style="color:${color}">½</span>`;
