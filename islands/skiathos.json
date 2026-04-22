@@ -1,0 +1,96 @@
+{
+  "key": "skiathos",
+  "name": "Skiathos",
+  "subtitle": "The party Sporade — pine forests, turquoise water and 60 beaches",
+  "intro": "Skiathos is tiny — 12km long — but packs in 60 beaches, dense pine forest running to the water's edge, and the liveliest nightlife in the Sporades. Koukounaries is one of the finest sandy beaches in Greece. The old town is genuinely attractive. Planes land metres above the beach at the runway — a spectacle in itself. Come here for beaches and nightlife, not culture.",
+
+  "itinerary": {
+    "title": "3-Day Skiathos Itinerary",
+    "subtitle": "Beach-hopping by boat, the old town lanes, Koukounaries lagoon and the monastery of Evangelistria.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Skiathos Town & the East",
+        "color": "#1B4F8A",
+        "km": 15,
+        "drive_mins": 20,
+        "overnight": "Skiathos Town",
+        "stops": [
+          { "name": "Skiathos Town", "lat": 39.1617, "lng": 23.4917, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Skiathos_(city)", "desc": "The most attractive town in the Sporades — two hills, a Venetian castle, pine-shaded lanes and a bustling harbour. Walk the Papadiamantis Street and have breakfast at the old port." },
+          { "name": "Bourtzi Fortress", "lat": 39.1617, "lng": 23.4900, "type": "castle", "time": "10:00", "wiki": null, "desc": "Small Venetian fortress on a pine-wooded islet in the harbour mouth. Walk across the causeway for views over the town and the channel." },
+          { "name": "Evangelistria Monastery", "lat": 39.1783, "lng": 23.4650, "type": "church", "time": "11:00", "wiki": "https://en.wikipedia.org/wiki/Evangelistria_Monastery,_Skiathos", "desc": "18th-century monastery in the pine forest above the town — the first Greek flag was raised here in 1807. Beautiful setting, small museum, excellent views." },
+          { "name": "Koukounaries Beach", "lat": 39.1517, "lng": 23.3717, "type": "beach", "time": "14:30", "wiki": "https://en.wikipedia.org/wiki/Koukounaries", "desc": "One of the finest beaches in Greece — 1.2km of golden sand framed by a dense pine forest and a protected lagoon behind it. Arrive by 14:00 for a sunbed. The lagoon behind is a protected wetland." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Beach Boat Tour",
+        "color": "#C0522A",
+        "km": 5,
+        "drive_mins": 10,
+        "overnight": "Skiathos Town",
+        "stops": [
+          { "name": "Old Port — Boat Departure", "lat": 39.1617, "lng": 23.4917, "type": "harbour", "time": "09:30", "wiki": null, "desc": "Full-day boat tour around the island — the only way to reach the best beaches on the north coast. Boats depart from the old port daily in summer." },
+          { "name": "Lalaria Beach", "lat": 39.2000, "lng": 23.4533, "type": "beach", "time": "11:00", "wiki": "https://en.wikipedia.org/wiki/Lalaria_beach", "desc": "The most dramatic beach in the Sporades — white oval pebbles under sheer white limestone cliffs with a natural rock arch. Accessible only by boat. Crystal clear water." },
+          { "name": "Blue Cave (Skotini Spilia)", "lat": 39.2033, "lng": 23.4417, "type": "nature", "time": "12:30", "wiki": null, "desc": "Sea cave on the north coast where the water glows blue from the sunlight refraction. Swim in from the boat." },
+          { "name": "Kastro (Abandoned Town)", "lat": 39.1967, "lng": 23.4483, "type": "castle", "time": "14:00", "wiki": "https://en.wikipedia.org/wiki/Kastro,_Skiathos", "desc": "The abandoned medieval capital of Skiathos on a sea cliff — the entire population moved to the current town in 1829. Ruins of 300 houses and 22 churches. Boat stop with a short hike up." }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "West Beaches & Departure",
+        "color": "#5A7A3A",
+        "km": 20,
+        "drive_mins": 25,
+        "overnight": null,
+        "stops": [
+          { "name": "Banana Beach", "lat": 39.1533, "lng": 23.3817, "type": "beach", "time": "09:30", "wiki": null, "desc": "Two beaches side by side west of Koukounaries — Big Banana (organised, lively) and Little Banana (clothing-optional, quieter). Both have clear, shallow water." },
+          { "name": "Agia Eleni Beach", "lat": 39.1683, "lng": 23.3867, "type": "beach", "time": "12:00", "wiki": null, "desc": "Wild, sandy north-coast beach accessible via a path through pine forest. Far quieter than the south coast beaches, excellent water." },
+          { "name": "Skiathos Town — Departure", "lat": 39.1617, "lng": 23.4917, "type": "harbour", "time": "16:00", "wiki": null, "desc": "Ferry to Volos, Thessaloniki or the other Sporades. The runway is right next to the town port — watch planes land metres overhead from the waterfront." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Koukounaries Beach",
+      "wiki": "https://en.wikipedia.org/wiki/Koukounaries",
+      "rating": 5,
+      "type": "Fine golden sand",
+      "length": "1.2 km",
+      "depth": "Shallow — very gradual, safe for children",
+      "facing": "South-facing — sheltered by the pine forest, calm water",
+      "facilities": "Fully organised: sunbeds, beach bars, water sports, tavernas. Protected lagoon behind.",
+      "desc": "Consistently ranked one of the best beaches in Greece — fine golden sand framed by dense umbrella pine forest, with a crystal-clear lagoon behind it. Arrive early for a sunbed. The pine trees provide natural shade that no other Cycladic beach can offer.",
+      "commons": "Koukounaries_beach_Skiathos.jpg",
+      "lat": 39.1517, "lng": 23.3717
+    },
+    {
+      "name": "Lalaria Beach",
+      "wiki": "https://en.wikipedia.org/wiki/Lalaria_beach",
+      "rating": 5,
+      "type": "White oval pebbles",
+      "length": "400 m",
+      "depth": "Deep — crystal clear, cold water",
+      "facing": "North-facing — accessible only by boat",
+      "facilities": "None — boat access only from Skiathos Town (45 min).",
+      "desc": "The most spectacular beach in the Sporades — white oval pebbles beneath sheer white limestone cliffs with a natural arch. The boat journey along the dramatic north coast is half the experience. Unmissable.",
+      "commons": null,
+      "lat": 39.2000, "lng": 23.4533
+    },
+    {
+      "name": "Banana Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "600 m (two beaches)",
+      "depth": "Shallow — calm water",
+      "facing": "South-facing — sheltered",
+      "facilities": "Big Banana: fully organised. Little Banana: basic, clothing-optional.",
+      "desc": "Two contrasting beaches side by side — lively and organised on one side, quiet and naturist on the other. Both have good clear water. The pine forest backdrop makes them more attractive than the typical resort beach.",
+      "commons": null,
+      "lat": 39.1533, "lng": 23.3817
+    }
+  ]
+}

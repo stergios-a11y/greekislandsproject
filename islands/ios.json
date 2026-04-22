@@ -1,0 +1,81 @@
+{
+  "key": "ios",
+  "name": "Ios",
+  "subtitle": "The party Cyclades — Mylopotas beach, Homer's tomb and the finest nightlife in the archipelago",
+  "intro": "Ios has been the party island of the Cyclades since the 1970s. Mylopotas is one of the longest and finest sandy beaches in Greece. The Chora is beautiful — a hill of white lanes and blue domes that most visitors miss entirely because they stay on the beach. Homer is said to be buried here. Come for the beach and the night out, and don't overlook the surprisingly beautiful town above it.",
+
+  "itinerary": {
+    "title": "3-Day Ios Itinerary",
+    "subtitle": "Mylopotas beach, Ios Chora by day and night, Homer's tomb and the quieter beaches of the north.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Chora & Mylopotas",
+        "color": "#1B4F8A",
+        "km": 10,
+        "drive_mins": 15,
+        "overnight": "Ios Chora",
+        "stops": [
+          { "name": "Ios Chora", "lat": 36.7217, "lng": 25.2817, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Ios_Town", "desc": "The hilltop capital — far more beautiful than its party reputation suggests. Walk the white lanes before the bars open. The view from the windmills at the top over the caldera is excellent." },
+          { "name": "Skarkos Hill", "lat": 36.7267, "lng": 25.2817, "type": "museum", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Skarkos", "desc": "Early Bronze Age settlement (3rd millennium BC) on a hill above the Chora — one of the best-preserved prehistoric sites in the Cyclades. Views over the whole island." },
+          { "name": "Mylopotas Beach", "lat": 36.7033, "lng": 25.2883, "type": "beach", "time": "12:00", "wiki": "https://en.wikipedia.org/wiki/Mylopotas_beach", "desc": "One of the finest beaches in the Cyclades — 1.5km of fine golden sand, shallow turquoise water and the most energetic beach-bar scene in Greece. Everything is here: water sports, beach clubs, excellent tavernas. The party starts at the beach." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Homer's Tomb & the North",
+        "color": "#C0522A",
+        "km": 20,
+        "drive_mins": 25,
+        "overnight": "Ios Chora",
+        "stops": [
+          { "name": "Homer's Tomb", "lat": 36.7583, "lng": 25.2717, "type": "museum", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Ios", "desc": "The ancient tomb said to belong to Homer — a simple structure on a hillside in the north of the island. Whether it really is his grave is disputed, but the hill and the view are worth the drive." },
+          { "name": "Plakoto Beach", "lat": 36.7700, "lng": 25.2933, "type": "beach", "time": "11:30", "wiki": null, "desc": "Remote wild beach on the north coast — pebble, crystal clear, no facilities. The antidote to Mylopotas. Almost always empty." },
+          { "name": "Theodotis Beach", "lat": 36.7483, "lng": 25.3250, "type": "beach", "time": "14:00", "wiki": null, "desc": "Sandy beach on the northeast coast accessible by a rough road — calm, clear and far quieter than the south coast. Good for those wanting to escape the Mylopotas crowds." },
+          { "name": "Ios Chora Night", "lat": 36.7217, "lng": 25.2817, "type": "city", "time": "23:00", "wiki": null, "desc": "The Chora at night — the most concentrated bar scene in the Cyclades in a genuinely beautiful Cycladic village. Three streets of bars, good music, and crowds from across Europe." }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Manganari & Departure",
+        "color": "#5A7A3A",
+        "km": 25,
+        "drive_mins": 35,
+        "overnight": null,
+        "stops": [
+          { "name": "Manganari Beach", "lat": 36.6700, "lng": 25.3150, "type": "beach", "time": "10:00", "wiki": null, "desc": "The finest beach on Ios — a series of sandy coves at the southern tip, accessible by boat from the port or by a rough road. Clear, warm, turquoise water and far fewer people than Mylopotas." },
+          { "name": "Ios Port (Gialos)", "lat": 36.7217, "lng": 25.2733, "type": "harbour", "time": "15:30", "wiki": null, "desc": "Ferry from Ios to Piraeus, Santorini, Naxos or Folegandros." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Mylopotas Beach",
+      "wiki": "https://en.wikipedia.org/wiki/Mylopotas_beach",
+      "rating": 5,
+      "type": "Fine golden sand",
+      "length": "1.5 km",
+      "depth": "Shallow — perfect for swimming",
+      "facing": "Southwest-facing — sheltered bay, calm water",
+      "facilities": "Everything: beach clubs, water sports, tavernas, accommodation. The most developed beach in the Cyclades after Mykonos.",
+      "desc": "One of the finest beaches in the Cyclades — 1.5km of golden sand with turquoise water and the best beach-club energy in Greece outside Mykonos. The water is genuinely excellent. Come for the swimming in the morning and the scene in the afternoon.",
+      "commons": "Mylopotas_beach_Ios.jpg",
+      "lat": 36.7033, "lng": 25.2883
+    },
+    {
+      "name": "Manganari Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine sand",
+      "length": "Several coves totalling 1 km",
+      "depth": "Shallow — warm, turquoise water",
+      "facing": "South-facing — sheltered, calm",
+      "facilities": "Basic: one beach bar, accessible by boat or rough road.",
+      "desc": "The finest and quietest beach on Ios — a series of sandy coves at the southern tip with warm, turquoise water. The boat trip from the port adds to the appeal. This is where the islanders themselves swim.",
+      "commons": null,
+      "lat": 36.6700, "lng": 25.3150
+    }
+  ]
+}

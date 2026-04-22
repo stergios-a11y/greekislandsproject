@@ -1329,3 +1329,13 @@ html.dark .why-feat-num { color: var(--marble-3); }
   .hero-sub { font-size: 12px; }
   .map-legend { display: none; }
 }
+
+/* Share button */
+.share-btn {
+  padding: 8px 16px; font-size: 13px; font-family: var(--sans); font-weight: 600;
+  border: 1.5px solid var(--aegean-mid);
+  color: var(--aegean); background: var(--aegean-pale);
+  border-radius: var(--radius); cursor: pointer;
+  transition: all 0.15s;
+}
+.share-btn:hover { background: var(--aegean); color: #fff; }

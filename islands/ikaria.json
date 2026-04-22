@@ -1,0 +1,109 @@
+{
+  "key": "ikaria",
+  "name": "Ikaria",
+  "subtitle": "The Blue Zone island — where people forget to die, and panigiri parties last till dawn",
+  "intro": "Ikaria is one of the world's five Blue Zones — regions where people live measurably longer than anywhere else. The islanders attribute this to red wine, dancing, afternoon naps and a complete indifference to schedules. Ferries are notoriously late. Shops open when they feel like it. The famous panigiri village festivals go all night and half the morning. The beaches are wild and beautiful. Come here to slow down completely.",
+
+  "itinerary": {
+    "title": "4-Day Ikaria Itinerary",
+    "subtitle": "Thermal hot springs, wild beaches, the Raches night villages and a panigiri festival if you're lucky enough to be there for one.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Agios Kirykos & the Hot Springs",
+        "color": "#1B4F8A",
+        "km": 15,
+        "drive_mins": 20,
+        "overnight": "Agios Kirykos",
+        "stops": [
+          { "name": "Agios Kirykos", "lat": 37.6233, "lng": 26.2733, "type": "city", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Agios_Kirykos", "desc": "The capital — a relaxed port town with a good waterfront. Nobody rushes here. Have a long breakfast and settle into Ikarian time." },
+          { "name": "Therma Hot Springs", "lat": 37.6283, "lng": 26.2650, "type": "spa", "time": "11:30", "wiki": null, "desc": "Natural radioactive thermal springs used since antiquity for treating arthritis and rheumatism. The open-air sea pools where the spring water mixes with the sea are unique. One of the most therapeutic swims in Greece." },
+          { "name": "Faros Beach", "lat": 37.6100, "lng": 26.2867, "type": "beach", "time": "14:30", "wiki": null, "desc": "Wild pebble beach south of Agios Kirykos — clear water, dramatic cliffs, no development. The lighthouse (faros) gives it its name." },
+          { "name": "Evening at the Port", "lat": 37.6233, "lng": 26.2733, "type": "harbour", "time": "20:00", "wiki": null, "desc": "The port comes alive late — Ikarians eat dinner at 22:00, socialise until 02:00 and sleep late. Join the rhythm rather than fight it." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Raches & the Night Villages",
+        "color": "#C0522A",
+        "km": 40,
+        "drive_mins": 55,
+        "overnight": "Armenistis",
+        "stops": [
+          { "name": "Christos Raches", "lat": 37.6167, "lng": 26.1367, "type": "village", "time": "11:00", "wiki": "https://en.wikipedia.org/wiki/Christos_Raches", "desc": "The famous night village — shops and cafes here open from 23:00 to dawn and are closed during the day. The village sleeps in the morning and lives at night. The surrounding forests are beautiful." },
+          { "name": "Langada Gorge", "lat": 37.6083, "lng": 26.1050, "type": "nature", "time": "13:00", "wiki": null, "desc": "Wild gorge cutting through the mountains of central Ikaria. The drive through it is spectacular — waterfalls in spring, cool shade in summer." },
+          { "name": "Nas Beach", "lat": 37.6383, "lng": 26.0633, "type": "beach", "time": "15:30", "wiki": "https://en.wikipedia.org/wiki/Nas,_Ikaria", "desc": "The most famous beach on Ikaria — a river flows through ancient ruins (temple of Artemis) and into the sea at a pebble cove. Wild, unorganised and beautiful. The currents can be strong." },
+          { "name": "Armenistis", "lat": 37.6400, "lng": 26.0867, "type": "harbour", "time": "18:00", "wiki": null, "desc": "The most attractive village on the north coast — a small harbour with good tavernas and the feel of a working fishing village. Stay here for the night." }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "North Coast Beaches",
+        "color": "#5A7A3A",
+        "km": 25,
+        "drive_mins": 35,
+        "overnight": "Armenistis",
+        "stops": [
+          { "name": "Livadi Beach", "lat": 37.6417, "lng": 26.0900, "type": "beach", "time": "10:00", "wiki": null, "desc": "Long sandy beach below Armenistis — the best organised beach on the north coast. Clear, shallow water and good facilities. Often windy in the afternoon." },
+          { "name": "Messakti Beach", "lat": 37.6433, "lng": 26.1033, "type": "beach", "time": "12:00", "wiki": null, "desc": "Wild sandy beach just east of Livadi — same quality but no facilities and fewer people. Consistent waves make it popular with surfers." },
+          { "name": "Evdilos", "lat": 37.6583, "lng": 26.1783, "type": "harbour", "time": "16:00", "wiki": "https://en.wikipedia.org/wiki/Evdilos", "desc": "The second port of Ikaria — a prettier harbour than Agios Kirykos with excellent fish tavernas. The small Byzantine Museum is worth a quick visit." }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Wine, Honey & Departure",
+        "color": "#C4962A",
+        "km": 30,
+        "drive_mins": 40,
+        "overnight": null,
+        "stops": [
+          { "name": "Ikarian Wine Tasting", "lat": 37.6167, "lng": 26.1367, "type": "distillery", "time": "10:00", "wiki": null, "desc": "Ikarian red wine — pramnios oinos — was praised by Homer and is still made here in small quantities. Visit a local producer in the Raches area for a tasting. The wine is strong, rustic and remarkable." },
+          { "name": "Seychelles Beach", "lat": 37.6150, "lng": 26.2117, "type": "beach", "time": "12:30", "wiki": null, "desc": "Remote beach in the south accessible only on foot or by boat — named by locals for its Caribbean-like clarity. One of the finest wild beaches in the eastern Aegean." },
+          { "name": "Agios Kirykos — Departure", "lat": 37.6233, "lng": 26.2733, "type": "harbour", "time": "17:00", "wiki": null, "desc": "Ferry to Piraeus, Samos or Mykonos. The ferry is probably late. This is Ikaria — relax and order another coffee." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Nas Beach",
+      "wiki": "https://en.wikipedia.org/wiki/Nas,_Ikaria",
+      "rating": 5,
+      "type": "Pebble",
+      "length": "200 m",
+      "depth": "Medium — river current, strong at river mouth",
+      "facing": "North-facing — open sea",
+      "facilities": "Basic: one taverna. Ancient ruins of Artemis temple at the river mouth. No sunbeds.",
+      "desc": "The most atmospheric beach in the eastern Aegean — a river flows through 2500-year-old ruins of the Temple of Artemis and into the sea at a wild pebble cove. Swim in the river pool above the beach to avoid the current at the sea entrance. Unforgettable.",
+      "commons": null,
+      "lat": 37.6383, "lng": 26.0633
+    },
+    {
+      "name": "Livadi Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "600 m",
+      "depth": "Shallow to medium — waves in the afternoon",
+      "facing": "North-facing — open Aegean",
+      "facilities": "Good: sunbeds, beach bar, tavernas nearby. Best organised beach on the north coast.",
+      "desc": "The best accessible beach on Ikaria — long sandy north-coast beach below Armenistis. Clear water, organised facilities and the relaxed Ikarian atmosphere. Afternoon winds make it good for those who like a bit of wave.",
+      "commons": null,
+      "lat": 37.6417, "lng": 26.0900
+    },
+    {
+      "name": "Seychelles Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble and sand",
+      "length": "150 m",
+      "depth": "Medium — crystal clear water",
+      "facing": "South-facing — sheltered cove",
+      "facilities": "None — foot or boat access only.",
+      "desc": "A remote cove in the south named for the Caribbean clarity of its water. The effort required to reach it keeps it almost deserted. One of the hidden gems of the eastern Aegean.",
+      "commons": null,
+      "lat": 37.6150, "lng": 26.2117
+    }
+  ]
+}

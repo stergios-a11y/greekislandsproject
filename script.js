@@ -190,6 +190,30 @@ window.addEventListener('popstate', () => {
   catch(e) { showView('home', null); }
 });
 
+function copyIslandLink() {
+  const url = 'https://aegeanblueprint.com/' + window.location.hash;
+  navigator.clipboard.writeText(url).then(() => {
+    const btn = document.getElementById('detail-share-btn');
+    if (btn) {
+      btn.textContent = '✓ Copied!';
+      setTimeout(() => { btn.textContent = '🔗 Copy link'; }, 2000);
+    }
+  }).catch(() => {
+    // Fallback for older browsers
+    const el = document.createElement('textarea');
+    el.value = url;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    const btn = document.getElementById('detail-share-btn');
+    if (btn) {
+      btn.textContent = '✓ Copied!';
+      setTimeout(() => { btn.textContent = '🔗 Copy link'; }, 2000);
+    }
+  });
+}
+
 function dismissHero() {
   const banner = document.getElementById('hero-banner');
   if (banner) {

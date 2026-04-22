@@ -1,0 +1,110 @@
+{
+  "key": "samos",
+  "name": "Samos",
+  "subtitle": "Pythagoras, Hera and the greenest island in the eastern Aegean",
+  "intro": "Samos is the birthplace of Pythagoras and Epicurus, and home to the Heraion — one of the most important ancient sanctuaries in Greece. The island is unusually green for the Aegean — forested mountains, vineyards producing the famous Muscat wine, and a lush landscape that contrasts with the rocky Cyclades nearby. The east coast is only 1.4km from Turkey. Less famous than it deserves to be.",
+
+  "itinerary": {
+    "title": "4-Day Samos Itinerary",
+    "subtitle": "The Heraion sanctuary, the Pythagorion harbour, Mount Kerkis and the best beaches of the south coast.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Vathy & the North",
+        "color": "#1B4F8A",
+        "km": 20,
+        "drive_mins": 25,
+        "overnight": "Vathy",
+        "stops": [
+          { "name": "Vathy (Samos Town)", "lat": 37.7550, "lng": 26.9733, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Vathy,_Samos", "desc": "Capital of Samos — a deep natural harbour with a handsome neoclassical waterfront. The Archaeological Museum is one of the finest in the Aegean." },
+          { "name": "Samos Archaeological Museum", "lat": 37.7550, "lng": 26.9733, "type": "museum", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Archaeological_Museum_of_Samos", "desc": "Outstanding collection — the 5.5-metre kouros from the Heraion is one of the largest surviving ancient Greek statues. The Archaic finds from the sanctuary are world-class." },
+          { "name": "Kokkari Village", "lat": 37.7700, "lng": 26.9033, "type": "village", "time": "12:00", "wiki": null, "desc": "The most attractive village on the north coast — a fishing harbour with pebble beaches and good tavernas. Popular with windsurfers for its consistent afternoon winds." },
+          { "name": "Tsabou Beach", "lat": 37.7783, "lng": 26.8983, "type": "beach", "time": "15:00", "wiki": null, "desc": "Organised pebble beach near Kokkari with crystal clear water and good facilities. One of the better beaches on the north coast." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Heraion & Pythagorion",
+        "color": "#C0522A",
+        "km": 35,
+        "drive_mins": 45,
+        "overnight": "Pythagorion",
+        "stops": [
+          { "name": "Heraion Sanctuary", "lat": 37.6617, "lng": 26.8967, "type": "museum", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Heraion_of_Samos", "desc": "UNESCO-listed sanctuary of Hera — one of the largest temples in ancient Greece, with a single column still standing from what was once a forest of 155. The site is vast and atmospheric." },
+          { "name": "Pythagorion", "lat": 37.6883, "lng": 26.9417, "type": "harbour", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Pythagoreion", "desc": "UNESCO-listed ancient harbour town — birthplace of Pythagoras, with a Roman tunnel built by the engineer Eupalinos still walkable today. The marble-paved waterfront is the finest in the eastern Aegean." },
+          { "name": "Eupalinos Tunnel", "lat": 37.6933, "lng": 26.9383, "type": "museum", "time": "13:00", "wiki": "https://en.wikipedia.org/wiki/Tunnel_of_Eupalinos", "desc": "UNESCO-listed 6th-century BC aqueduct tunnel — 1km long, dug from both ends simultaneously with remarkable precision. One of the great engineering achievements of the ancient world." },
+          { "name": "Psili Ammos Beach", "lat": 37.6583, "lng": 26.9983, "type": "beach", "time": "16:00", "wiki": null, "desc": "The finest beach on Samos — fine white sand and shallow turquoise water in a sheltered bay near the southeastern tip. Calm, organised and beautiful." }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Mount Kerkis & the West",
+        "color": "#5A7A3A",
+        "km": 50,
+        "drive_mins": 65,
+        "overnight": "Karlovasi",
+        "stops": [
+          { "name": "Karlovasi", "lat": 37.7883, "lng": 26.7050, "type": "city", "time": "09:00", "wiki": null, "desc": "The second town of Samos — a relaxed, untouristy university town with a beautiful neoclassical quarter. The old tannery district is atmospheric." },
+          { "name": "Potami Beach & Waterfall", "lat": 37.7917, "lng": 26.7100, "type": "beach", "time": "10:00", "wiki": null, "desc": "Sandy beach where a river meets the sea, with a waterfall and Byzantine ruins in the gorge behind. A 30-minute walk up the river brings you to the falls. Unique combination." },
+          { "name": "Mount Kerkis Foothills", "lat": 37.7283, "lng": 26.6867, "type": "nature", "time": "13:30", "wiki": "https://en.wikipedia.org/wiki/Mount_Kerkis", "desc": "The 1434m summit dominates western Samos. Drive to the monastery of Evangelistria for views and a starting point for hikes into the forest." },
+          { "name": "Sea Cave of Pythagoras", "lat": 37.7000, "lng": 26.6683, "type": "nature", "time": "16:00", "wiki": null, "desc": "Sea cave on the southwest coast where Pythagoras is said to have lived and taught. Accessible by boat from Karlovasi or by a coastal path." }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Muscat Wine & Departure",
+        "color": "#C4962A",
+        "km": 30,
+        "drive_mins": 35,
+        "overnight": null,
+        "stops": [
+          { "name": "Samos Wine Cooperative", "lat": 37.7550, "lng": 26.9733, "type": "distillery", "time": "10:00", "wiki": null, "desc": "The famous Samos Muscat — one of the most celebrated dessert wines in the world, praised by Byron and Napoleon. The cooperative in Vathy offers tastings and bottles at excellent prices." },
+          { "name": "Marathokampos Beach", "lat": 37.6867, "lng": 26.7017, "type": "beach", "time": "12:00", "wiki": null, "desc": "Long sandy beach on the south coast near Votsalakia. Calm water facing Turkey, good facilities, one of the better family beaches on the island." },
+          { "name": "Vathy — Departure", "lat": 37.7550, "lng": 26.9733, "type": "harbour", "time": "16:00", "wiki": null, "desc": "Ferry to Piraeus, Chios, Ikaria or Kusadasi (Turkey, 1.5 hours). The ferry from Vathy is spectacular — it passes within metres of the Turkish coast." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Psili Ammos Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine white sand",
+      "length": "600 m",
+      "depth": "Shallow — calm, turquoise water",
+      "facing": "South-facing — sheltered bay, warm water",
+      "facilities": "Good: sunbeds, beach bar, taverna. Best beach on the island.",
+      "desc": "The finest beach on Samos — fine white sand and shallow turquoise water near the southeastern tip. The most photogenic beach on the island and consistently the calmest. The view toward Turkey from the water is striking.",
+      "commons": null,
+      "lat": 37.6583, "lng": 26.9983
+    },
+    {
+      "name": "Potami Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand and pebble",
+      "length": "400 m",
+      "depth": "Shallow — river and sea meet",
+      "facing": "Northwest-facing — sheltered bay",
+      "facilities": "Basic: taverna nearby. River gorge with waterfall behind the beach.",
+      "desc": "A unique beach where a river flows through a gorge and meets the sea — Byzantine ruins and a waterfall are accessible on a 30-minute walk upstream. One of the most interesting beach settings in the Aegean.",
+      "commons": null,
+      "lat": 37.7917, "lng": 26.7100
+    },
+    {
+      "name": "Marathokampos Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Sand and fine pebble",
+      "length": "2 km",
+      "depth": "Shallow — calm south coast",
+      "facing": "South-facing — views toward Turkey, calm water",
+      "facilities": "Good: sunbeds, tavernas, parking. Family-friendly.",
+      "desc": "Long south-coast beach facing Turkey — calm, organised and good for families. The Kerkis mountain backdrop makes it one of the most dramatic beach settings on the island.",
+      "commons": null,
+      "lat": 37.6867, "lng": 26.7017
+    }
+  ]
+}

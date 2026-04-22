@@ -1,0 +1,110 @@
+{
+  "key": "chios",
+  "name": "Chios",
+  "subtitle": "The mastic island — medieval villages, Byzantine monasteries and the only mastic trees in the world",
+  "intro": "Chios produces something found nowhere else on earth — mastic resin from the Pistacia lentiscus tree, used for 3000 years as chewing gum, medicine and varnish. The medieval mastic villages of the south are some of the most architecturally extraordinary settlements in Greece — built by the Genoese in the 14th century with a unique geometric defensive design. The island is genuinely off the beaten track despite its size.",
+
+  "itinerary": {
+    "title": "4-Day Chios Itinerary",
+    "subtitle": "The Genoese castle, the medieval mastic villages, the Nea Moni monastery and the volcanic beaches of the south.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Chios Town",
+        "color": "#1B4F8A",
+        "km": 10,
+        "drive_mins": 15,
+        "overnight": "Chios Town",
+        "stops": [
+          { "name": "Chios Town", "lat": 38.3683, "lng": 26.1367, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Chios_(city)", "desc": "The capital — a working port city with a Genoese castle, an Ottoman quarter and one of the finest archaeological museums in the eastern Aegean. Genuine and untouristy." },
+          { "name": "Genoese Castle", "lat": 38.3733, "lng": 26.1350, "type": "castle", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Castle_of_Chios", "desc": "14th-century Genoese fortress enclosing the old Muslim quarter — the only intact Ottoman neighbourhood in the Aegean. Mosques, fountains and the grave of Kara Ali are within the walls." },
+          { "name": "Chios Archaeological Museum", "lat": 38.3683, "lng": 26.1367, "type": "museum", "time": "11:00", "wiki": null, "desc": "Excellent collection of finds from ancient Chios — vases, coins and sculptures from the island's prosperous ancient period as a major trading city." },
+          { "name": "Karfas Beach", "lat": 38.3233, "lng": 26.1433, "type": "beach", "time": "15:00", "wiki": null, "desc": "The main organised beach near Chios Town — sandy, calm and well-equipped. Not remarkable but convenient for a first-day swim." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Nea Moni & Pyrgi",
+        "color": "#C0522A",
+        "km": 50,
+        "drive_mins": 65,
+        "overnight": "Chios Town",
+        "stops": [
+          { "name": "Nea Moni Monastery", "lat": 38.3667, "lng": 26.0617, "type": "church", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Nea_Moni", "desc": "UNESCO-listed 11th-century Byzantine monastery — the finest Byzantine mosaics surviving anywhere in Greece. Built by Constantine IX after he became emperor. The gold and coloured glass tesserae are extraordinary." },
+          { "name": "Anavatos Village", "lat": 38.3600, "lng": 26.0433, "type": "village", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Anavatos", "desc": "The most dramatic village in Chios — a near-abandoned clifftop settlement where villagers threw themselves off the cliff rather than surrender to Ottoman forces in 1822. Haunting and beautiful." },
+          { "name": "Pyrgi Village", "lat": 38.2450, "lng": 26.0733, "type": "village", "time": "14:00", "wiki": "https://en.wikipedia.org/wiki/Pyrgi,_Chios", "desc": "The most extraordinary village in the Aegean — every surface of every building covered in the xysta geometric pattern (black and white scraffito). A living medieval fortress village." },
+          { "name": "Emporios Beach", "lat": 38.2017, "lng": 26.0867, "type": "beach", "time": "16:30", "wiki": null, "desc": "Black volcanic pebble beach in the ancient harbour of Emporios — crystal clear water, dramatic cliff scenery. Far less visited than it deserves." }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Mastic Villages",
+        "color": "#5A7A3A",
+        "km": 40,
+        "drive_mins": 50,
+        "overnight": "Mesta",
+        "stops": [
+          { "name": "Mesta Village", "lat": 38.2617, "lng": 25.9967, "type": "village", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Mesta", "desc": "The best-preserved medieval mastic village — a Genoese fortress-village where every house is part of the defensive wall. Walk the labyrinthine interior lanes. Stay overnight in one of the converted tower houses." },
+          { "name": "Mastic Museum", "lat": 38.2133, "lng": 26.0467, "type": "museum", "time": "11:30", "wiki": null, "desc": "The story of mastic — the resin that built Chios's extraordinary wealth for 600 years. The Genoese monopoly, the Ottoman prize, and the modern production are all explained. Tasting included." },
+          { "name": "Olympi Village", "lat": 38.2433, "lng": 26.0200, "type": "village", "time": "13:30", "wiki": null, "desc": "Another intact mastic village with a central defensive tower. Walk the perimeter walls and visit the underground Byzantine church." },
+          { "name": "Komi Beach", "lat": 38.2167, "lng": 26.1000, "type": "beach", "time": "16:00", "wiki": null, "desc": "Sandy beach near the mastic villages — the best organised beach in southern Chios. Good for a swim after a day of medieval villages." }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "North Chios & Departure",
+        "color": "#C4962A",
+        "km": 40,
+        "drive_mins": 50,
+        "overnight": null,
+        "stops": [
+          { "name": "Volissos Village", "lat": 38.4717, "lng": 25.9283, "type": "castle", "time": "09:30", "wiki": null, "desc": "Medieval village in the northwest dominated by a Byzantine castle. The surrounding landscape of olive groves and mastic trees is the most unspoiled on the island." },
+          { "name": "Limnos Beach", "lat": 38.4633, "lng": 25.8983, "type": "beach", "time": "11:30", "wiki": null, "desc": "Sandy beach below Volissos — calm, clear water and almost always empty. One of the finest uncrowded beaches in the northern Aegean." },
+          { "name": "Chios Town — Departure", "lat": 38.3683, "lng": 26.1367, "type": "harbour", "time": "16:00", "wiki": null, "desc": "Ferry to Piraeus, Lesvos, Samos or Cesme (Turkey, 45 minutes)." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Emporios Beach (Mavra Volia)",
+      "wiki": null,
+      "rating": 5,
+      "type": "Black volcanic pebble",
+      "length": "400 m",
+      "depth": "Medium — crystal clear water",
+      "facing": "South-facing — sheltered ancient harbour",
+      "facilities": "Basic: small taverna. Spectacular cliff scenery.",
+      "desc": "One of the most striking beaches in the Aegean — black volcanic pebbles in the ancient harbour of Emporios, with sheer dark cliffs and water of extraordinary clarity. The volcanic landscape gives it a completely different character to any other beach in Greece.",
+      "commons": null,
+      "lat": 38.2017, "lng": 26.0867
+    },
+    {
+      "name": "Komi Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "600 m",
+      "depth": "Shallow — calm, clear",
+      "facing": "East-facing — sheltered",
+      "facilities": "Good: sunbeds, tavernas, parking. Best organised beach in the south.",
+      "desc": "The best sandy beach in southern Chios — convenient for those exploring the mastic villages, with good facilities and calm, clear water.",
+      "commons": null,
+      "lat": 38.2167, "lng": 26.1000
+    },
+    {
+      "name": "Limnos Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "500 m",
+      "depth": "Shallow — calm, warm",
+      "facing": "West-facing — sheltered by headland",
+      "facilities": "Basic: small taverna. Very quiet even in summer.",
+      "desc": "A remote sandy beach below the medieval village of Volissos in northwest Chios. Almost always empty — most visitors never make it this far. The setting, with the castle above and olive groves behind, is one of the most picturesque on the island.",
+      "commons": null,
+      "lat": 38.4633, "lng": 25.8983
+    }
+  ]
+}

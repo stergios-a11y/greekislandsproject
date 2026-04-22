@@ -1,0 +1,96 @@
+{
+  "key": "skopelos",
+  "name": "Skopelos",
+  "subtitle": "Mamma Mia island — hillside churches, dense forest and wild beaches",
+  "intro": "Skopelos is the greenest island in the Aegean — almost entirely covered in dense pine, olive and plum orchards. The hilltop town of Skopelos is one of the most beautiful in Greece, with 123 churches climbing the hillside. The island was the filming location for Mamma Mia, and the clifftop church of Agios Ioannis has become a pilgrimage for fans. Quieter and more authentic than Skiathos next door.",
+
+  "itinerary": {
+    "title": "3-Day Skopelos Itinerary",
+    "subtitle": "The hilltop town, the Mamma Mia chapel, Panormos beach and the green interior.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Skopelos Town",
+        "color": "#1B4F8A",
+        "km": 10,
+        "drive_mins": 15,
+        "overnight": "Skopelos Town",
+        "stops": [
+          { "name": "Skopelos Town", "lat": 39.1217, "lng": 23.7267, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Skopelos_(city)", "desc": "One of the most beautiful towns in the Aegean — 123 churches on a hillside above a Venetian harbour. Walk up through the white lanes to the kastro at the top for views over the whole island." },
+          { "name": "Kastro of Skopelos", "lat": 39.1250, "lng": 23.7233, "type": "castle", "time": "10:00", "wiki": null, "desc": "Venetian fortress at the summit of the town with a single surviving church inside. The views over the Sporades are extraordinary." },
+          { "name": "Folklore Museum", "lat": 39.1217, "lng": 23.7267, "type": "museum", "time": "11:00", "wiki": null, "desc": "Small but excellent museum of Skopelos traditional life — local costumes, weaving, the famous Skopelos plum products and the island's sea captains' heritage." },
+          { "name": "Stafylos Beach", "lat": 39.1000, "lng": 23.7500, "type": "beach", "time": "14:00", "wiki": null, "desc": "Pine-fringed pebble beach 4km south of town — the closest organised beach to Skopelos Town. Clear water, good taverna, lovely setting." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Agios Ioannis & Panormos",
+        "color": "#C0522A",
+        "km": 35,
+        "drive_mins": 45,
+        "overnight": "Skopelos Town",
+        "stops": [
+          { "name": "Agios Ioannis Chapel", "lat": 39.1683, "lng": 23.6717, "type": "church", "time": "09:30", "wiki": null, "desc": "The Mamma Mia chapel — perched on a sheer rock above the sea on the northwest coast. 112 steps cut into the rock. The view from the top is extraordinary and the chapel itself is beautiful. Go early before the tour groups arrive." },
+          { "name": "Glossa Village", "lat": 39.1733, "lng": 23.6700, "type": "village", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Glossa,_Skopelos", "desc": "The second village of Skopelos — a traditional settlement on a hilltop in the northwest with the finest views on the island. Breakfast or coffee at the village square." },
+          { "name": "Panormos Beach", "lat": 39.1317, "lng": 23.6867, "type": "beach", "time": "13:30", "wiki": null, "desc": "The finest beach on Skopelos — a sheltered pebble bay framed by pine forest. Crystal clear water and a good beach taverna. One of the best beach settings in the Sporades." },
+          { "name": "Milia Beach", "lat": 39.1367, "lng": 23.6783, "type": "beach", "time": "16:00", "wiki": null, "desc": "Wild pebble beach north of Panormos — quieter, backed by dense pine forest, crystal clear water. No facilities, completely natural." }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Monasteries & Departure",
+        "color": "#5A7A3A",
+        "km": 20,
+        "drive_mins": 25,
+        "overnight": null,
+        "stops": [
+          { "name": "Evangelistria Monastery", "lat": 39.1150, "lng": 23.7133, "type": "church", "time": "09:30", "wiki": null, "desc": "The most beautiful monastery on the island — 18th century, in a pine forest above the town. The frescoes and the setting are both outstanding." },
+          { "name": "Limnonari Beach", "lat": 39.0917, "lng": 23.7617, "type": "beach", "time": "11:30", "wiki": null, "desc": "Remote sandy beach in the south — accessible via a forest path or by boat. Fine sand, clear water, almost always quiet. One of the few sandy beaches on the island." },
+          { "name": "Skopelos Town — Departure", "lat": 39.1217, "lng": 23.7267, "type": "harbour", "time": "16:00", "wiki": null, "desc": "Ferry to Skiathos, Alonnisos, Volos or Thessaloniki." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Panormos Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Pebble",
+      "length": "400 m",
+      "depth": "Medium — crystal clear water",
+      "facing": "West-facing — sheltered bay, calm",
+      "facilities": "Good: beach taverna, some sunbeds. Pine forest behind the beach.",
+      "desc": "The finest beach on Skopelos — a sheltered pebble bay completely enclosed by pine forest. The water clarity is exceptional and the setting is one of the most beautiful in the Sporades. A good taverna on the beach makes it easy to spend the whole day.",
+      "commons": null,
+      "lat": 39.1317, "lng": 23.6867
+    },
+    {
+      "name": "Limnonari Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "300 m",
+      "depth": "Shallow — calm, clear water",
+      "facing": "South-facing — sheltered cove",
+      "facilities": "Basic: small taverna in summer. Access via forest path (20 min) or by boat.",
+      "desc": "One of the few sandy beaches on Skopelos — a quiet, sheltered cove in the south accessible by a forest path. Fine sand and calm, clear water. Almost always uncrowded.",
+      "commons": null,
+      "lat": 39.0917, "lng": 23.7617
+    },
+    {
+      "name": "Stafylos Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "length": "300 m",
+      "depth": "Medium — clear, blue water",
+      "facing": "South-facing — sheltered",
+      "facilities": "Good: taverna, sunbeds, easy road access 4km from town.",
+      "desc": "The most convenient organised beach near Skopelos Town — a pine-fringed pebble cove with clear blue water and a good taverna. Named after the Mycenaean king Staphylos, whose tomb was found nearby.",
+      "commons": null,
+      "lat": 39.1000, "lng": 23.7500
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "key": "sifnos",
+  "name": "Sifnos",
+  "subtitle": "The gourmet Cycladic island — pottery, chickpea soup and the finest food in the archipelago",
+  "intro": "Sifnos has a reputation entirely disproportionate to its size — the best food in the Cyclades, a tradition of pottery going back 4000 years, a string of beautiful Venetian villages, and excellent beaches. The slow-cooked revithada (chickpea soup, cooked overnight in a ceramic pot in the village bakery) is the local dish. The island rewards slow travel — walk the old mule-path network between villages rather than driving.",
+
+  "itinerary": {
+    "title": "3-Day Sifnos Itinerary",
+    "subtitle": "Apollonia's lanes, the hilltop monastery of Chrysopigi, the beaches of Platis Gialos and the pottery village of Artemonas.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Apollonia & Artemonas",
+        "color": "#1B4F8A",
+        "km": 15,
+        "drive_mins": 20,
+        "overnight": "Apollonia",
+        "stops": [
+          { "name": "Apollonia", "lat": 36.9767, "lng": 24.7300, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Apollonia,_Sifnos", "desc": "The capital — a beautiful hilltop town of white lanes, blue-domed churches and bougainvillea. Walk the main pedestrian street to Artemonas. The folk museum is excellent." },
+          { "name": "Artemonas", "lat": 36.9833, "lng": 24.7283, "type": "village", "time": "10:30", "wiki": null, "desc": "The most elegant village on Sifnos — Venetian mansions and the finest pottery on the island. Several workshops sell hand-thrown Sifniot ceramics in the traditional geometric patterns." },
+          { "name": "Kastro (Medieval Capital)", "lat": 36.9833, "lng": 24.7467, "type": "castle", "time": "12:00", "wiki": "https://en.wikipedia.org/wiki/Kastro,_Sifnos", "desc": "The medieval capital of Sifnos — a Venetian fortress-village on a sea cliff with extraordinary views. The houses form the outer wall. The Archaeological Museum inside is small but excellent." },
+          { "name": "Platis Gialos Beach", "lat": 36.9533, "lng": 24.7167, "type": "beach", "time": "15:00", "wiki": null, "desc": "The best beach on the island — long, sandy, shallow and well-organised. The most popular beach on Sifnos but large enough to never feel overcrowded." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Chrysopigi & the South",
+        "color": "#C0522A",
+        "km": 25,
+        "drive_mins": 30,
+        "overnight": "Apollonia",
+        "stops": [
+          { "name": "Chrysopigi Monastery", "lat": 36.9367, "lng": 24.7417, "type": "church", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Chrysopigi_Monastery", "desc": "The most beautiful monastery in the Cyclades — a 17th-century whitewashed complex on a tiny rocky peninsula connected by a causeway. The setting is extraordinary." },
+          { "name": "Apokofto Beach", "lat": 36.9367, "lng": 24.7383, "type": "beach", "time": "11:00", "wiki": null, "desc": "Sandy beach directly below the Chrysopigi monastery — the monastery visible on the rocks above makes this one of the most picturesque beach settings in the Cyclades." },
+          { "name": "Faros Village", "lat": 36.9400, "lng": 24.7433, "type": "village", "time": "13:00", "wiki": null, "desc": "Traditional fishing village with three small coves and the best fish tavernas on the island. Lunch here — the grilled fish and local white wine are outstanding." },
+          { "name": "Vathy Beach", "lat": 36.9617, "lng": 24.6900, "type": "beach", "time": "16:00", "wiki": null, "desc": "Remote sandy beach in a deep bay on the west coast — the most unspoiled beach on Sifnos, accessible by a long winding road. Beautiful and quiet." }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Walking the Mule Paths",
+        "color": "#5A7A3A",
+        "km": 10,
+        "drive_mins": 15,
+        "overnight": null,
+        "stops": [
+          { "name": "Kato Petali to Kastro Walk", "lat": 36.9767, "lng": 24.7300, "type": "nature", "time": "09:00", "wiki": null, "desc": "The finest walk on Sifnos — the old mule path from Apollonia to Kastro through olive groves and Cycladic chapels. 45 minutes, flat and beautiful." },
+          { "name": "Kamares Beach", "lat": 36.9983, "lng": 24.6950, "type": "beach", "time": "11:30", "wiki": null, "desc": "The port beach — long, sandy and sheltered in the harbour bay. Good facilities and a lively waterfront with cafes. The best beach for people-watching." },
+          { "name": "Apollonia — Departure", "lat": 36.9767, "lng": 24.7300, "type": "harbour", "time": "15:30", "wiki": null, "desc": "Ferry from Kamares port to Piraeus, Milos, Serifos or Paros." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Platis Gialos Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine sand",
+      "length": "900 m",
+      "depth": "Shallow — calm, clear water",
+      "facing": "South-facing — sheltered, warm",
+      "facilities": "Well organised: sunbeds, beach bars, tavernas, water sports.",
+      "desc": "The best beach on Sifnos — long, sandy and shallow with excellent facilities. The most popular on the island but large enough to absorb the crowds. The tavernas at the back of the beach serve outstanding Sifniot food.",
+      "commons": null,
+      "lat": 36.9533, "lng": 24.7167
+    },
+    {
+      "name": "Apokofto Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine sand",
+      "length": "300 m",
+      "depth": "Shallow — calm, clear",
+      "facing": "Southeast-facing — sheltered cove",
+      "facilities": "Basic: the Chrysopigi monastery taverna nearby. Beautiful setting.",
+      "desc": "The most photogenic beach in the Cyclades — fine sand directly below the whitewashed Chrysopigi monastery on its rocky peninsula. The setting is extraordinary. One of those beaches where the surroundings matter as much as the swimming.",
+      "commons": null,
+      "lat": 36.9367, "lng": 24.7383
+    },
+    {
+      "name": "Vathy Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "400 m",
+      "depth": "Shallow — calm bay",
+      "facing": "East-facing — enclosed bay, sheltered",
+      "facilities": "Basic: small taverna, limited sunbeds. Remote — long winding road access.",
+      "desc": "The most remote and peaceful beach on Sifnos — a sandy cove in a deep bay on the west coast. The long drive keeps it quiet. A small taverna, calm water and beautiful surroundings.",
+      "commons": null,
+      "lat": 36.9617, "lng": 24.6900
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "key": "amorgos",
+  "name": "Amorgos",
+  "subtitle": "The Big Blue island — a clifftop monastery, wild hiking and the remotest Cyclades",
+  "intro": "Amorgos is the eastern anchor of the Cyclades — long, thin, mountainous and magnificently remote. The Chozoviotissa monastery, plastered white against a sheer 300m cliff above the sea, is the most dramatic building in Greece. The island was the filming location for Luc Besson's The Big Blue. The hiking trails are exceptional. The two towns — Katapola in the west and Aegiali in the north — could not be more different in character.",
+
+  "itinerary": {
+    "title": "4-Day Amorgos Itinerary",
+    "subtitle": "Chozoviotissa monastery, the Minoan town of Minoa, the beaches of Aegiali and the clifftop Chora.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Katapola & Chora",
+        "color": "#1B4F8A",
+        "km": 10,
+        "drive_mins": 15,
+        "overnight": "Chora",
+        "stops": [
+          { "name": "Katapola", "lat": 36.8367, "lng": 25.8633, "type": "harbour", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Katapola", "desc": "The main port — a beautiful triple harbour of three villages. The ancient city of Minoa is on the hill above." },
+          { "name": "Ancient Minoa", "lat": 36.8400, "lng": 25.8667, "type": "museum", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Minoa,_Amorgos", "desc": "Archaic city ruins above Katapola with remains of a gymnasium, temples and a stadium. The views over the three harbours are extraordinary." },
+          { "name": "Amorgos Chora", "lat": 36.8317, "lng": 25.8883, "type": "city", "time": "12:00", "wiki": "https://en.wikipedia.org/wiki/Chora,_Amorgos", "desc": "One of the most beautiful Cycladic capitals — a Venetian castle on a pinnacle above a white village, with windmills and superb views. Walk every lane." },
+          { "name": "Agia Anna Beach", "lat": 36.8083, "lng": 25.8883, "type": "beach", "time": "15:30", "wiki": null, "desc": "The small beach below the Chozoviotissa monastery — pebble, clear, beautiful setting. Made famous as the filming location for The Big Blue." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Chozoviotissa Monastery",
+        "color": "#C0522A",
+        "km": 15,
+        "drive_mins": 20,
+        "overnight": "Chora",
+        "stops": [
+          { "name": "Chozoviotissa Monastery", "lat": 36.8133, "lng": 25.8900, "type": "church", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Monastery_of_Panagia_Chozoviotissa", "desc": "The most dramatic building in Greece — an 11th-century monastery plastered white against a sheer 300m cliff, visible from miles away. Access via 300 steps cut into the rock. The monks serve visitors loukoumades and rakomelo. Modest dress required." },
+          { "name": "Agia Anna Beach", "lat": 36.8083, "lng": 25.8883, "type": "beach", "time": "11:30", "wiki": null, "desc": "Swim below the monastery — the cliff and the white church above make this one of the most memorable beach settings in Greece." },
+          { "name": "Maltezi Beach", "lat": 36.8050, "lng": 25.8933, "type": "beach", "time": "14:00", "wiki": null, "desc": "Quieter pebble beach south of Agia Anna — accessible by a short path. Usually empty." },
+          { "name": "Chora Sunset", "lat": 36.8317, "lng": 25.8883, "type": "village", "time": "19:00", "wiki": null, "desc": "The Chora at golden hour — the light on the white buildings is extraordinary. Dinner at one of the village square tavernas." }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Aegiali & the North",
+        "color": "#5A7A3A",
+        "km": 30,
+        "drive_mins": 40,
+        "overnight": "Aegiali",
+        "stops": [
+          { "name": "Aegiali", "lat": 36.8983, "lng": 25.8967, "type": "harbour", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Aegiali", "desc": "The northern resort — a completely different character to the south. Relaxed, with a good sandy beach and the most hiking trails on the island. The bay is beautiful." },
+          { "name": "Aegiali Beach", "lat": 36.8983, "lng": 25.9000, "type": "beach", "time": "11:00", "wiki": null, "desc": "The best organised beach on Amorgos — sandy, shallow and calm. The backdrop of the mountains and the clear water make it one of the finest beach settings in the eastern Cyclades." },
+          { "name": "Tholaria & Lagkada Villages", "lat": 36.9083, "lng": 25.8917, "type": "village", "time": "15:00", "wiki": null, "desc": "Two beautiful traditional villages above Aegiali — walk the path between them for views over the bay and the island. The finest hiking on Amorgos is in this area." }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Hiking & Departure",
+        "color": "#C4962A",
+        "km": 15,
+        "drive_mins": 20,
+        "overnight": null,
+        "stops": [
+          { "name": "Kalotaritissa Beach", "lat": 36.7817, "lng": 25.8467, "type": "beach", "time": "09:30", "wiki": null, "desc": "Remote wild beach in the southwest — accessible only by a rough track or boat. White sand, turquoise water, completely deserted. The finest wild beach on the island." },
+          { "name": "Katapola — Departure", "lat": 36.8367, "lng": 25.8633, "type": "harbour", "time": "15:00", "wiki": null, "desc": "Ferry to Piraeus, Naxos or the Small Cyclades. Amorgos is the end of the Cyclades line — the ferry connections are fewer but the island rewards the extra effort." }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Aegiali Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine sand",
+      "length": "600 m",
+      "depth": "Shallow — calm, clear water",
+      "facing": "North-facing — sheltered bay",
+      "facilities": "Good: sunbeds, beach bars, tavernas in the village behind.",
+      "desc": "The finest organised beach on Amorgos — sandy, shallow and calm in a beautiful bay surrounded by mountains. The best base for those who want both hiking and swimming.",
+      "commons": null,
+      "lat": 36.8983, "lng": 25.9000
+    },
+    {
+      "name": "Agia Anna Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Pebble",
+      "length": "100 m",
+      "depth": "Medium — clear, cold water",
+      "facing": "East-facing — below the monastery cliff",
+      "facilities": "None — the monastery and the cliff are the attraction.",
+      "desc": "The most atmospheric beach in the Cyclades — a small pebble cove directly below the sheer cliff and the white monastery of Chozoviotissa. Filming location for The Big Blue. The setting is incomparable.",
+      "commons": "Agia_Anna_beach_Amorgos.jpg",
+      "lat": 36.8083, "lng": 25.8883
+    },
+    {
+      "name": "Kalotaritissa Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "White sand",
+      "length": "300 m",
+      "depth": "Shallow — warm, turquoise water",
+      "facing": "West-facing — remote and sheltered",
+      "facilities": "None — rough track or boat access only.",
+      "desc": "The wildest and most beautiful beach on Amorgos — white sand and turquoise water in a completely isolated bay. The effort required keeps it empty. One of the finest undiscovered beaches in the Cyclades.",
+      "commons": null,
+      "lat": 36.7817, "lng": 25.8467
+    }
+  ]
+}
