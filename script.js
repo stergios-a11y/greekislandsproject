@@ -348,7 +348,10 @@ function setupGroupFilter() {
    ISLAND DETAIL PAGE
    Fetches islands/{key}.json — falls back to generic summary
 ============================================================ */
+let currentIslandKey = '';
+
 async function renderIslandPage(key) {
+  currentIslandKey = key;
   const island = ISLANDS_DATA[key];
   if (!island) return;
 
@@ -385,6 +388,7 @@ async function renderIslandPage(key) {
       guide.innerHTML = buildIslandPage(data);
       setTimeout(() => initItineraryMap(data.itinerary.days), 80);
       if (data.beaches) setTimeout(() => loadBeachPhotos(data.beaches), 150);
+      setTimeout(() => initBeachVotes(), 200);
       return;
     }
   } catch(e) {
@@ -470,6 +474,7 @@ function buildIslandPage(data) {
       : b.commons
         ? `<div class="beach-photo-wrap" id="${photoId}-wrap"><div class="beach-photo-placeholder">🏖️</div></div>`
         : '';
+    const beachId = (currentIslandKey + '_' + b.name).replace(/[^a-z0-9]/gi, '_').toLowerCase();
     return `<div class="beach-card">
       ${photoHtml}
       <div class="beach-card-body">
@@ -477,7 +482,18 @@ function buildIslandPage(data) {
           <div class="beach-rank">${i + 1}</div>
           <div class="beach-name-stars">
             <div class="beach-name">${nameHtml}</div>
-            <div class="beach-stars">${'\u2605'.repeat(b.rating || 4)}${'\u2606'.repeat(5 - (b.rating || 4))}</div>
+            <div class="beach-ratings-row">
+              <div class="beach-rating-block">
+                <span class="beach-rating-label">Editorial</span>
+                <div class="beach-stars">${'\u2605'.repeat(b.rating || 4)}${'\u2606'.repeat(5 - (b.rating || 4))}</div>
+              </div>
+              <div class="beach-rating-block">
+                <span class="beach-rating-label">Community <span class="beach-vote-count" id="vote-count-${beachId}"></span></span>
+                <div class="beach-vote-stars" id="vote-stars-${beachId}" data-beach-id="${beachId}">
+                  ${[1,2,3,4,5].map(s => `<span class="vote-star" data-score="${s}" onclick="voteBeach('${beachId}',${s})">☆</span>`).join('')}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <p class="beach-desc">${b.desc}</p>
@@ -692,6 +708,67 @@ function setupTable() {
     });
   }
   renderTable();
+}
+
+/* ============================================================
+   BEACH COMMUNITY VOTING — stored in localStorage
+============================================================ */
+function voteBeach(beachId, score) {
+  // Save this user's vote
+  const votes = JSON.parse(localStorage.getItem('beachVotes') || '{}');
+  const userVotes = JSON.parse(localStorage.getItem('beachUserVotes') || '{}');
+  const prevVote = userVotes[beachId] || 0;
+
+  if (!votes[beachId]) votes[beachId] = { total: 0, count: 0 };
+
+  // Adjust for previous vote
+  if (prevVote > 0) {
+    votes[beachId].total -= prevVote;
+    votes[beachId].count -= 1;
+  }
+
+  votes[beachId].total += score;
+  votes[beachId].count += 1;
+  userVotes[beachId] = score;
+
+  localStorage.setItem('beachVotes', JSON.stringify(votes));
+  localStorage.setItem('beachUserVotes', JSON.stringify(userVotes));
+
+  renderBeachVotes(beachId);
+}
+
+function renderBeachVotes(beachId) {
+  const votes = JSON.parse(localStorage.getItem('beachVotes') || '{}');
+  const userVotes = JSON.parse(localStorage.getItem('beachUserVotes') || '{}');
+  const starsEl = document.getElementById(`vote-stars-${beachId}`);
+  const countEl = document.getElementById(`vote-count-${beachId}`);
+  if (!starsEl) return;
+
+  const data = votes[beachId];
+  const userScore = userVotes[beachId] || 0;
+  const avg = data && data.count > 0 ? data.total / data.count : 0;
+  const displayScore = userScore > 0 ? userScore : avg;
+
+  // Update stars
+  starsEl.querySelectorAll('.vote-star').forEach(star => {
+    const s = parseInt(star.dataset.score);
+    star.textContent = s <= Math.round(displayScore) ? '★' : '☆';
+    star.style.color = userScore > 0 ? 'var(--aegean)' : 'var(--gold)';
+    star.classList.toggle('voted', userScore > 0);
+  });
+
+  // Update count
+  if (countEl && data && data.count > 0) {
+    const avgStr = (data.total / data.count).toFixed(1);
+    countEl.textContent = `${avgStr} (${data.count} vote${data.count !== 1 ? 's' : ''})`;
+  }
+}
+
+function initBeachVotes() {
+  // Render all vote stars on the page
+  document.querySelectorAll('.beach-vote-stars').forEach(el => {
+    renderBeachVotes(el.dataset.beachId);
+  });
 }
 
 function starsHtml(score) {
