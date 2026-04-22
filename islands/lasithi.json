@@ -3,7 +3,6 @@
   "name": "Crete (Lasithi)",
   "subtitle": "Spinalonga, Vai palm forest and the wild east of Crete",
   "intro": "Lasithi is the most off-the-beaten-path of Crete's four regions — and the most rewarding for those who make the effort. The eastern tip of Crete has Vai, Europe's only natural palm forest beach, the haunting leper colony island of Spinalonga, the elegant town of Agios Nikolaos, and the Minoan harbour of Zakros at the far east. The landscape becomes increasingly dramatic and undeveloped the further east you go.",
-
   "itinerary": {
     "title": "4-Day Lasithi Itinerary",
     "subtitle": "From the cosmopolitan gulf of Agios Nikolaos to the wild east — Spinalonga, Vai, the Minoan palace of Zakros and the gorge of the dead.",
@@ -16,11 +15,51 @@
         "drive_mins": 25,
         "overnight": "Agios Nikolaos or Elounda",
         "stops": [
-          { "name": "Agios Nikolaos Town", "lat": 35.1905, "lng": 25.7157, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Agios_Nikolaos,_Lasithi", "desc": "The most elegant town in Crete — a cosmopolitan harbour built around a bottomless lake connected to the sea by a channel. Excellent cafes, restaurants and a Archaeological Museum." },
-          { "name": "Lake Voulismeni", "lat": 35.1895, "lng": 25.7152, "type": "nature", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Lake_Voulismeni", "desc": "The famous bottomless lake at the heart of Agios Nikolaos. According to legend, Athena and Artemis bathed here. Lined with cafes — the best coffee spot in the region." },
-          { "name": "Elounda", "lat": 35.2583, "lng": 25.7233, "type": "harbour", "time": "11:00", "wiki": "https://en.wikipedia.org/wiki/Elounda", "desc": "Upmarket resort village on a sheltered gulf with calm, crystal-clear water. Base for the Spinalonga boat trip. The sunken city of Olous is visible underwater at the causeway." },
-          { "name": "Schisma Beach Elounda", "lat": 35.2617, "lng": 25.7183, "type": "beach", "time": "14:00", "wiki": null, "desc": "Calm sandy beach in the sheltered gulf of Elounda. The water here is noticeably warmer and calmer than the open sea. Ideal for families." },
-          { "name": "Dinner — Ferryman Elounda", "lat": 35.2583, "lng": 25.7233, "type": "harbour", "time": "20:00", "wiki": null, "desc": "One of the best seafood restaurants in Lasithi, right on the Elounda waterfront. Try the lobster pasta — a local speciality." }
+          {
+            "name": "Agios Nikolaos Town",
+            "lat": 35.1905,
+            "lng": 25.7157,
+            "type": "city",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Agios_Nikolaos,_Lasithi",
+            "desc": "The most elegant town in Crete — a cosmopolitan harbour built around a bottomless lake connected to the sea by a channel. Excellent cafes, restaurants and a Archaeological Museum."
+          },
+          {
+            "name": "Lake Voulismeni",
+            "lat": 35.1895,
+            "lng": 25.7152,
+            "type": "nature",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Lake_Voulismeni",
+            "desc": "The famous bottomless lake at the heart of Agios Nikolaos. According to legend, Athena and Artemis bathed here. Lined with cafes — the best coffee spot in the region."
+          },
+          {
+            "name": "Elounda",
+            "lat": 35.2583,
+            "lng": 25.7233,
+            "type": "harbour",
+            "time": "11:00",
+            "wiki": "https://en.wikipedia.org/wiki/Elounda",
+            "desc": "Upmarket resort village on a sheltered gulf with calm, crystal-clear water. Base for the Spinalonga boat trip. The sunken city of Olous is visible underwater at the causeway."
+          },
+          {
+            "name": "Schisma Beach Elounda",
+            "lat": 35.2617,
+            "lng": 25.7183,
+            "type": "beach",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Calm sandy beach in the sheltered gulf of Elounda. The water here is noticeably warmer and calmer than the open sea. Ideal for families."
+          },
+          {
+            "name": "Dinner — Ferryman Elounda",
+            "lat": 35.2583,
+            "lng": 25.7233,
+            "type": "harbour",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "One of the best seafood restaurants in Lasithi, right on the Elounda waterfront. Try the lobster pasta — a local speciality."
+          }
         ]
       },
       {
@@ -31,10 +70,42 @@
         "drive_mins": 35,
         "overnight": "Agios Nikolaos",
         "stops": [
-          { "name": "Spinalonga Island", "lat": 35.2733, "lng": 25.7383, "type": "castle", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Spinalonga", "desc": "Greece's last active leper colony, closed in 1957. The Venetian fortress walls, abandoned streets and the church of Agios Georgios create one of the most atmospheric sites in the Aegean. Boats from Elounda and Plaka every 30 minutes." },
-          { "name": "Kritsa Village", "lat": 35.1583, "lng": 25.6400, "type": "village", "time": "12:30", "wiki": "https://en.wikipedia.org/wiki/Kritsa", "desc": "One of the largest and most beautiful traditional villages in Crete. Famous for woven lace textiles and the Byzantine church of Panagia Kera — the finest Byzantine frescoes on the island." },
-          { "name": "Ancient Lato", "lat": 35.1717, "lng": 25.6467, "type": "museum", "time": "14:30", "wiki": "https://en.wikipedia.org/wiki/Lato", "desc": "Remarkably preserved Dorian city-state perched on a twin-peaked hill above Kritsa. Rarely visited, free entry, and extraordinary views over the gulf of Agios Nikolaos." },
-          { "name": "Almyros Beach", "lat": 35.2050, "lng": 25.7300, "type": "beach", "time": "16:30", "wiki": null, "desc": "Long sandy beach 2km south of Agios Nikolaos. A freshwater river runs into the sea here, creating a natural lagoon — flamingoes visit in spring." }
+          {
+            "name": "Spinalonga Island",
+            "lat": 35.2733,
+            "lng": 25.7383,
+            "type": "castle",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Spinalonga",
+            "desc": "Greece's last active leper colony, closed in 1957. The Venetian fortress walls, abandoned streets and the church of Agios Georgios create one of the most atmospheric sites in the Aegean. Boats from Elounda and Plaka every 30 minutes."
+          },
+          {
+            "name": "Kritsa Village",
+            "lat": 35.1583,
+            "lng": 25.64,
+            "type": "village",
+            "time": "12:30",
+            "wiki": "https://en.wikipedia.org/wiki/Kritsa",
+            "desc": "One of the largest and most beautiful traditional villages in Crete. Famous for woven lace textiles and the Byzantine church of Panagia Kera — the finest Byzantine frescoes on the island."
+          },
+          {
+            "name": "Ancient Lato",
+            "lat": 35.1717,
+            "lng": 25.6467,
+            "type": "museum",
+            "time": "14:30",
+            "wiki": "https://en.wikipedia.org/wiki/Lato",
+            "desc": "Remarkably preserved Dorian city-state perched on a twin-peaked hill above Kritsa. Rarely visited, free entry, and extraordinary views over the gulf of Agios Nikolaos."
+          },
+          {
+            "name": "Almyros Beach",
+            "lat": 35.1842,
+            "lng": 25.7322,
+            "type": "beach",
+            "time": "16:30",
+            "wiki": null,
+            "desc": "Long sandy beach 2km south of Agios Nikolaos. A freshwater river runs into the sea here, creating a natural lagoon — flamingoes visit in spring."
+          }
         ]
       },
       {
@@ -45,10 +116,42 @@
         "drive_mins": 120,
         "overnight": "Sitia or Palekastro",
         "stops": [
-          { "name": "Sitia Town", "lat": 35.2067, "lng": 26.1033, "type": "city", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Sitia", "desc": "Relaxed, unspoiled town on the far east coast. Visit the Archaeological Museum for the extraordinary Palaikastro Kouros — the finest Minoan ivory statuette ever found." },
-          { "name": "Vai Beach", "lat": 35.2483, "lng": 26.2550, "type": "beach", "time": "11:00", "wiki": "https://en.wikipedia.org/wiki/Vai", "desc": "Europe's only natural palm forest beach — 5000 Cretan date palms line a sandy cove at the far northeast tip of Crete. Unique and spectacular. Can get very crowded in high summer — go before 10am." },
-          { "name": "Itanos Ruins", "lat": 35.2700, "lng": 26.2733, "type": "museum", "time": "13:00", "wiki": null, "desc": "Ancient city ruins on the headland just north of Vai. Scattered columns, cisterns and walls above a wild pebble beach. Free, unguarded and completely empty." },
-          { "name": "Palekastro", "lat": 35.2017, "lng": 26.2483, "type": "village", "time": "15:00", "wiki": null, "desc": "Quiet village near an extensive Minoan settlement. The nearby Kouremenos beach is the windsurfing capital of Crete." }
+          {
+            "name": "Sitia Town",
+            "lat": 35.2067,
+            "lng": 26.1033,
+            "type": "city",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Sitia",
+            "desc": "Relaxed, unspoiled town on the far east coast. Visit the Archaeological Museum for the extraordinary Palaikastro Kouros — the finest Minoan ivory statuette ever found."
+          },
+          {
+            "name": "Vai Beach",
+            "lat": 35.2547,
+            "lng": 26.2661,
+            "type": "beach",
+            "time": "11:00",
+            "wiki": "https://en.wikipedia.org/wiki/Vai",
+            "desc": "Europe's only natural palm forest beach — 5000 Cretan date palms line a sandy cove at the far northeast tip of Crete. Unique and spectacular. Can get very crowded in high summer — go before 10am."
+          },
+          {
+            "name": "Itanos Ruins",
+            "lat": 35.27,
+            "lng": 26.2733,
+            "type": "museum",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "Ancient city ruins on the headland just north of Vai. Scattered columns, cisterns and walls above a wild pebble beach. Free, unguarded and completely empty."
+          },
+          {
+            "name": "Palekastro",
+            "lat": 35.2017,
+            "lng": 26.2483,
+            "type": "village",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Quiet village near an extensive Minoan settlement. The nearby Kouremenos beach is the windsurfing capital of Crete."
+          }
         ]
       },
       {
@@ -59,15 +162,46 @@
         "drive_mins": 70,
         "overnight": null,
         "stops": [
-          { "name": "Kato Zakros Palace", "lat": 35.0983, "lng": 26.2667, "type": "museum", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Zakros", "desc": "The fourth great Minoan palace of Crete, excavated in 1962. Uniquely, it was never looted in antiquity — treasures found intact are now in the Heraklion museum. Set directly on the sea at a dramatic cove." },
-          { "name": "Gorge of the Dead", "lat": 35.1150, "lng": 26.2483, "type": "nature", "time": "11:00", "wiki": "https://en.wikipedia.org/wiki/Gorge_of_the_Dead", "desc": "Wild 8km gorge from the upper village to the palace. Minoan cave tombs are carved into the cliff walls. A 2.5-hour walk, much quieter than the Samaria Gorge." },
-          { "name": "Xerokampos Beach", "lat": 35.0583, "lng": 26.2300, "type": "beach", "time": "14:00", "wiki": null, "desc": "Series of remote, undeveloped beaches south of Zakros. Clear, warm Libyan Sea water, almost no tourists. The furthest you can get from the crowds in Crete." },
-          { "name": "Makrigialos Beach", "lat": 35.0167, "lng": 25.9733, "type": "beach", "time": "16:30", "wiki": null, "desc": "Long, organised beach on the south coast on the drive back west. Good for a final swim before the return journey." }
+          {
+            "name": "Kato Zakros Palace",
+            "lat": 35.0983,
+            "lng": 26.2667,
+            "type": "museum",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Zakros",
+            "desc": "The fourth great Minoan palace of Crete, excavated in 1962. Uniquely, it was never looted in antiquity — treasures found intact are now in the Heraklion museum. Set directly on the sea at a dramatic cove."
+          },
+          {
+            "name": "Gorge of the Dead",
+            "lat": 35.115,
+            "lng": 26.2483,
+            "type": "nature",
+            "time": "11:00",
+            "wiki": "https://en.wikipedia.org/wiki/Gorge_of_the_Dead",
+            "desc": "Wild 8km gorge from the upper village to the palace. Minoan cave tombs are carved into the cliff walls. A 2.5-hour walk, much quieter than the Samaria Gorge."
+          },
+          {
+            "name": "Xerokampos Beach",
+            "lat": 35.0625,
+            "lng": 26.2342,
+            "type": "beach",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Series of remote, undeveloped beaches south of Zakros. Clear, warm Libyan Sea water, almost no tourists. The furthest you can get from the crowds in Crete."
+          },
+          {
+            "name": "Makrigialos Beach",
+            "lat": 35.0167,
+            "lng": 25.9733,
+            "type": "beach",
+            "time": "16:30",
+            "wiki": null,
+            "desc": "Long, organised beach on the south coast on the drive back west. Good for a final swim before the return journey."
+          }
         ]
       }
     ]
   },
-
   "beaches": [
     {
       "name": "Vai Beach",
@@ -80,7 +214,8 @@
       "facilities": "Organised: sunbeds, umbrellas, restaurant, parking (paid). Protected national park — no camping.",
       "desc": "The only natural palm forest beach in Europe — 5000 Cretan date palms line a golden sand cove at the very tip of Crete. The combination of tropical vegetation and Aegean blue water is unlike anywhere else in Greece. Arrive early — it gets extremely busy by midday in summer.",
       "commons": "Vai_beach_Crete.jpg",
-      "lat": 35.2483, "lng": 26.2550
+      "lat": 35.2547,
+      "lng": 26.2661
     },
     {
       "name": "Voulisma Beach",
@@ -93,7 +228,8 @@
       "facilities": "Fully organised: sunbeds, water sports, taverna. One of the best-equipped beaches in the east.",
       "desc": "The finest beach near Agios Nikolaos — a wide crescent of golden sand with crystalline water near Istro. Consistently ranked among the best beaches in eastern Crete, yet surprisingly uncrowded compared to the west coast beaches.",
       "commons": null,
-      "lat": 35.2000, "lng": 25.6933
+      "lat": 35.1075,
+      "lng": 25.7678
     },
     {
       "name": "Xerokampos Beach",
@@ -106,7 +242,8 @@
       "facilities": "Very basic: one small taverna-rooms. No sunbeds. Accessible only by rough road.",
       "desc": "Three remote, wild beaches in the far southeast of Crete, reachable only by rough road. Almost no tourists even in August. The Libyan Sea here is the warmest water in Crete. For those who want complete solitude in a dramatically beautiful setting.",
       "commons": null,
-      "lat": 35.0583, "lng": 26.2300
+      "lat": 35.0625,
+      "lng": 26.2342
     },
     {
       "name": "Almyros Beach",
@@ -119,7 +256,8 @@
       "facilities": "Good: sunbeds, tavernas, easy parking. Close to Agios Nikolaos.",
       "desc": "Long sandy beach just south of Agios Nikolaos where a freshwater river meets the sea, creating a natural lagoon. Flamingoes sometimes visit in spring. Calm, warm water and convenient location make it the best easy beach in the region.",
       "commons": null,
-      "lat": 35.2050, "lng": 25.7300
+      "lat": 35.1842,
+      "lng": 25.7322
     },
     {
       "name": "Kouremenos Beach",
@@ -132,7 +270,8 @@
       "facilities": "Moderate: two windsurfing schools, taverna, simple rooms. Not ideal for sunbathing.",
       "desc": "The windsurfing capital of Crete near Palekastro — consistent winds and a long pebble beach make it world-class for water sports. The water is exceptionally clear. Not for those seeking a quiet beach day, but perfect for kitesurfers and windsurfers.",
       "commons": null,
-      "lat": 35.2100, "lng": 26.2583
+      "lat": 35.2133,
+      "lng": 26.2642
     }
   ]
 }

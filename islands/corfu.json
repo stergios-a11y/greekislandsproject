@@ -3,7 +3,6 @@
   "name": "Corfu",
   "subtitle": "Ionian emerald — palaces, olive groves and turquoise coves",
   "intro": "Corfu is the greenest island in Greece — a landscape of ancient olive groves, Venetian hill towns and Ionian sea that shifts from turquoise to deep cobalt depending on the light. It was the only part of Greece never occupied by the Ottomans, which gives it a uniquely Venetian and British colonial character. The old town is a UNESCO World Heritage Site. The west coast has the finest sandy beaches in the Ionian islands.",
-
   "itinerary": {
     "title": "5-Day Corfu Itinerary",
     "subtitle": "From the UNESCO old town and Achilleion Palace to the cliffs of Paleokastritsa, the love channel of Sidari, and the golden sweep of Glyfada.",
@@ -16,12 +15,60 @@
         "drive_mins": 20,
         "overnight": "Corfu Town",
         "stops": [
-          { "name": "Old Fortress Corfu", "lat": 39.6244, "lng": 19.9258, "type": "castle", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Old_Fortress_of_Corfu", "desc": "16th-century Venetian fortress on a rocky promontory — the symbol of Corfu. The views from the lighthouse tower over the old town and the Albanian coast are extraordinary." },
-          { "name": "Liston Promenade", "lat": 39.6217, "lng": 19.9219, "type": "city", "time": "10:30", "wiki": "https://en.wikipedia.org/wiki/Liston,_Corfu", "desc": "The elegant arcaded promenade modelled on the Rue de Rivoli in Paris, built during French occupation. The best coffee in Corfu, overlooking the Spianada — the largest square in the Balkans." },
-          { "name": "Corfu Old Town (UNESCO)", "lat": 39.6228, "lng": 19.9200, "type": "museum", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Old_Town_of_Corfu", "desc": "UNESCO-listed old town — narrow Venetian lanes called kantounia, Byzantine churches, and the extraordinary Museum of Asian Art (the finest in the Balkans). Allow 2 hours." },
-          { "name": "Lunch — To Dimarchio", "lat": 39.6222, "lng": 19.9208, "type": "village", "time": "13:30", "wiki": null, "desc": "Classic Corfiot restaurant under the trees near Dimarchion Square. Try the sofrito (Corfu's signature veal dish) and bourdeto (spicy fish stew)." },
-          { "name": "New Fortress", "lat": 39.6261, "lng": 19.9183, "type": "castle", "time": "16:00", "wiki": "https://en.wikipedia.org/wiki/New_Fortress_of_Corfu", "desc": "16th-century Venetian fortress on the hill above the new port. Labyrinthine underground passages and excellent views. Far fewer visitors than the Old Fortress." },
-          { "name": "Kanoni & Mouse Island", "lat": 39.6017, "lng": 19.9200, "type": "church", "time": "17:30", "wiki": "https://en.wikipedia.org/wiki/Kanoni", "desc": "The most photographed spot in Corfu — a tiny church on a rocky islet in the Halikiopoulou Lagoon. The causeway and the planes landing over the lagoon make for a surreal and memorable scene." }
+          {
+            "name": "Old Fortress Corfu",
+            "lat": 39.6244,
+            "lng": 19.9258,
+            "type": "castle",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Old_Fortress_of_Corfu",
+            "desc": "16th-century Venetian fortress on a rocky promontory — the symbol of Corfu. The views from the lighthouse tower over the old town and the Albanian coast are extraordinary."
+          },
+          {
+            "name": "Liston Promenade",
+            "lat": 39.6217,
+            "lng": 19.9219,
+            "type": "city",
+            "time": "10:30",
+            "wiki": "https://en.wikipedia.org/wiki/Liston,_Corfu",
+            "desc": "The elegant arcaded promenade modelled on the Rue de Rivoli in Paris, built during French occupation. The best coffee in Corfu, overlooking the Spianada — the largest square in the Balkans."
+          },
+          {
+            "name": "Corfu Old Town (UNESCO)",
+            "lat": 39.6228,
+            "lng": 19.92,
+            "type": "museum",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Old_Town_of_Corfu",
+            "desc": "UNESCO-listed old town — narrow Venetian lanes called kantounia, Byzantine churches, and the extraordinary Museum of Asian Art (the finest in the Balkans). Allow 2 hours."
+          },
+          {
+            "name": "Lunch — To Dimarchio",
+            "lat": 39.6222,
+            "lng": 19.9208,
+            "type": "village",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "Classic Corfiot restaurant under the trees near Dimarchion Square. Try the sofrito (Corfu's signature veal dish) and bourdeto (spicy fish stew)."
+          },
+          {
+            "name": "New Fortress",
+            "lat": 39.6261,
+            "lng": 19.9183,
+            "type": "castle",
+            "time": "16:00",
+            "wiki": "https://en.wikipedia.org/wiki/New_Fortress_of_Corfu",
+            "desc": "16th-century Venetian fortress on the hill above the new port. Labyrinthine underground passages and excellent views. Far fewer visitors than the Old Fortress."
+          },
+          {
+            "name": "Kanoni & Mouse Island",
+            "lat": 39.6017,
+            "lng": 19.92,
+            "type": "church",
+            "time": "17:30",
+            "wiki": "https://en.wikipedia.org/wiki/Kanoni",
+            "desc": "The most photographed spot in Corfu — a tiny church on a rocky islet in the Halikiopoulou Lagoon. The causeway and the planes landing over the lagoon make for a surreal and memorable scene."
+          }
         ]
       },
       {
@@ -32,10 +79,42 @@
         "drive_mins": 65,
         "overnight": "Corfu Town or Benitses",
         "stops": [
-          { "name": "Achilleion Palace", "lat": 39.5667, "lng": 19.9217, "type": "museum", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Achilleion_(Corfu)", "desc": "Extraordinary neoclassical palace built by Empress Elisabeth of Austria (Sisi) in 1890, later owned by Kaiser Wilhelm II. The terraced gardens and statues of Achilles are magnificent." },
-          { "name": "Benitses Village", "lat": 39.5500, "lng": 19.9183, "type": "village", "time": "11:30", "wiki": null, "desc": "Traditional fishing village that was Corfu's first tourist resort in the 1970s. It has returned to its quiet roots. Roman baths and a small aquarium are worth a stop." },
-          { "name": "Kavos Beach", "lat": 39.3767, "lng": 20.0617, "type": "beach", "time": "13:30", "wiki": null, "desc": "Long sandy beach at the southern tip of Corfu. Calm, shallow, warm water. The resort behind it is geared toward young people and nightlife — the beach itself is excellent." },
-          { "name": "Arkoudilas Beach", "lat": 39.3900, "lng": 20.0183, "type": "beach", "time": "16:00", "wiki": null, "desc": "Wild, empty sandy beach in a protected nature reserve near the south tip. No facilities, no development — just sand, sea and olive groves. One of the hidden gems of the south." }
+          {
+            "name": "Achilleion Palace",
+            "lat": 39.5667,
+            "lng": 19.9217,
+            "type": "museum",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Achilleion_(Corfu)",
+            "desc": "Extraordinary neoclassical palace built by Empress Elisabeth of Austria (Sisi) in 1890, later owned by Kaiser Wilhelm II. The terraced gardens and statues of Achilles are magnificent."
+          },
+          {
+            "name": "Benitses Village",
+            "lat": 39.55,
+            "lng": 19.9183,
+            "type": "village",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "Traditional fishing village that was Corfu's first tourist resort in the 1970s. It has returned to its quiet roots. Roman baths and a small aquarium are worth a stop."
+          },
+          {
+            "name": "Kavos Beach",
+            "lat": 39.3767,
+            "lng": 20.0617,
+            "type": "beach",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "Long sandy beach at the southern tip of Corfu. Calm, shallow, warm water. The resort behind it is geared toward young people and nightlife — the beach itself is excellent."
+          },
+          {
+            "name": "Arkoudilas Beach",
+            "lat": 39.39,
+            "lng": 20.0183,
+            "type": "beach",
+            "time": "16:00",
+            "wiki": null,
+            "desc": "Wild, empty sandy beach in a protected nature reserve near the south tip. No facilities, no development — just sand, sea and olive groves. One of the hidden gems of the south."
+          }
         ]
       },
       {
@@ -46,11 +125,51 @@
         "drive_mins": 55,
         "overnight": "Paleokastritsa or nearby",
         "stops": [
-          { "name": "Paleokastritsa Monastery", "lat": 39.6667, "lng": 19.7050, "type": "church", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Paleokastritsa_Monastery", "desc": "13th-century monastery perched on a headland above the bays. Small museum of icons and ecclesiastical objects. Extraordinary views over the turquoise coves below." },
-          { "name": "Paleokastritsa Beach", "lat": 39.6617, "lng": 19.7067, "type": "beach", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Paleokastritsa", "desc": "Six coves of extraordinary clarity, emerald water and dramatic cliff scenery — the most beautiful coastline in Corfu. Rent a small boat to explore the sea caves and hidden coves inaccessible by land." },
-          { "name": "Angelokastro", "lat": 39.6833, "lng": 19.6867, "type": "castle", "time": "13:30", "wiki": "https://en.wikipedia.org/wiki/Angelokastro", "desc": "13th-century Byzantine castle on a sheer sea cliff — the most dramatic castle site in the Ionian islands. Views north along the entire Albanian and Greek coastline." },
-          { "name": "Agios Georgios Beach (North)", "lat": 39.7050, "lng": 19.6683, "type": "beach", "time": "15:30", "wiki": null, "desc": "Long, sandy north Corfu beach with far fewer crowds than Paleokastritsa. Clear water, some waves, and spectacular sunset views. The village has good tavernas." },
-          { "name": "Porto Timoni", "lat": 39.7117, "lng": 19.7367, "type": "beach", "time": "17:30", "wiki": null, "desc": "A stunning double bay accessible only on foot (45-min hike). Two beaches side by side facing opposite directions — the most photographed spot on the island after Kanoni." }
+          {
+            "name": "Paleokastritsa Monastery",
+            "lat": 39.6667,
+            "lng": 19.705,
+            "type": "church",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Paleokastritsa_Monastery",
+            "desc": "13th-century monastery perched on a headland above the bays. Small museum of icons and ecclesiastical objects. Extraordinary views over the turquoise coves below."
+          },
+          {
+            "name": "Paleokastritsa Beach",
+            "lat": 39.6717,
+            "lng": 19.7075,
+            "type": "beach",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Paleokastritsa",
+            "desc": "Six coves of extraordinary clarity, emerald water and dramatic cliff scenery — the most beautiful coastline in Corfu. Rent a small boat to explore the sea caves and hidden coves inaccessible by land."
+          },
+          {
+            "name": "Angelokastro",
+            "lat": 39.6833,
+            "lng": 19.6867,
+            "type": "castle",
+            "time": "13:30",
+            "wiki": "https://en.wikipedia.org/wiki/Angelokastro",
+            "desc": "13th-century Byzantine castle on a sheer sea cliff — the most dramatic castle site in the Ionian islands. Views north along the entire Albanian and Greek coastline."
+          },
+          {
+            "name": "Agios Georgios Beach (North)",
+            "lat": 39.705,
+            "lng": 19.6683,
+            "type": "beach",
+            "time": "15:30",
+            "wiki": null,
+            "desc": "Long, sandy north Corfu beach with far fewer crowds than Paleokastritsa. Clear water, some waves, and spectacular sunset views. The village has good tavernas."
+          },
+          {
+            "name": "Porto Timoni",
+            "lat": 39.7089,
+            "lng": 19.6611,
+            "type": "beach",
+            "time": "17:30",
+            "wiki": null,
+            "desc": "A stunning double bay accessible only on foot (45-min hike). Two beaches side by side facing opposite directions — the most photographed spot on the island after Kanoni."
+          }
         ]
       },
       {
@@ -61,10 +180,42 @@
         "drive_mins": 55,
         "overnight": "Sidari or Acharavi",
         "stops": [
-          { "name": "Roda Beach", "lat": 39.7917, "lng": 19.8767, "type": "beach", "time": "09:30", "wiki": null, "desc": "Long sandy north-coast beach — calm, shallow, family-friendly. One of the best beaches on the north coast with good facilities and a lovely village behind it." },
-          { "name": "Canal d'Amour", "lat": 39.7900, "lng": 19.7033, "type": "beach", "time": "11:30", "wiki": null, "desc": "The most famous spot in Sidari — dramatic sandstone cliffs carved into channels and caves by centuries of sea erosion. Local legend says couples who swim through the channel together will marry. Unique and unmissable." },
-          { "name": "Sidari Beach", "lat": 39.7883, "lng": 19.7133, "type": "beach", "time": "13:00", "wiki": null, "desc": "Long sandy beach adjoining the canal d'Amour. Golden sand, gently shelving into the sea. Good for children. The resort behind it is lively with restaurants and bars." },
-          { "name": "Acharavi Beach", "lat": 39.7867, "lng": 19.8333, "type": "beach", "time": "15:30", "wiki": null, "desc": "Long, wide, sandy beach that never gets overcrowded. Shallow and calm — the best family beach on the north coast. A local favourite rather than a tourist hub." }
+          {
+            "name": "Roda Beach",
+            "lat": 39.7917,
+            "lng": 19.8767,
+            "type": "beach",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "Long sandy north-coast beach — calm, shallow, family-friendly. One of the best beaches on the north coast with good facilities and a lovely village behind it."
+          },
+          {
+            "name": "Canal d'Amour",
+            "lat": 39.7906,
+            "lng": 19.7025,
+            "type": "beach",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "The most famous spot in Sidari — dramatic sandstone cliffs carved into channels and caves by centuries of sea erosion. Local legend says couples who swim through the channel together will marry. Unique and unmissable."
+          },
+          {
+            "name": "Sidari Beach",
+            "lat": 39.7883,
+            "lng": 19.7133,
+            "type": "beach",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "Long sandy beach adjoining the canal d'Amour. Golden sand, gently shelving into the sea. Good for children. The resort behind it is lively with restaurants and bars."
+          },
+          {
+            "name": "Acharavi Beach",
+            "lat": 39.7867,
+            "lng": 19.8333,
+            "type": "beach",
+            "time": "15:30",
+            "wiki": null,
+            "desc": "Long, wide, sandy beach that never gets overcrowded. Shallow and calm — the best family beach on the north coast. A local favourite rather than a tourist hub."
+          }
         ]
       },
       {
@@ -75,15 +226,46 @@
         "drive_mins": 45,
         "overnight": null,
         "stops": [
-          { "name": "Glyfada Beach", "lat": 39.5917, "lng": 19.7617, "type": "beach", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Glyfada,_Corfu", "desc": "Widely regarded as the most beautiful sandy beach in Corfu — a broad golden bay framed by green hills, with calm Ionian water. Arrive early for a sunbed. Water sports, beach bars, good facilities." },
-          { "name": "Mirtiotissa Beach", "lat": 39.6100, "lng": 19.7417, "type": "beach", "time": "12:00", "wiki": "https://en.wikipedia.org/wiki/Myrtiotissa", "desc": "A stunning hidden beach accessible only via a steep 30-minute walk through olive groves. Almost deserted despite its beauty. Lawrence Durrell called it the most beautiful beach in the world." },
-          { "name": "Agios Gordios Beach", "lat": 39.5583, "lng": 19.7617, "type": "beach", "time": "14:30", "wiki": null, "desc": "A wide, dramatic sandy beach backed by green cliffs and a rocky pinnacle. One of the most scenic beaches on the island, with a long stretch of sand and good facilities." },
-          { "name": "Corfu Town — Farewell Dinner", "lat": 39.6217, "lng": 19.9219, "type": "city", "time": "19:00", "wiki": null, "desc": "Return to Corfu Town for a final dinner at the Liston. Order the pastitsada (Corfiot pasta with cockerel) and a glass of Robola wine." }
+          {
+            "name": "Glyfada Beach",
+            "lat": 39.585,
+            "lng": 19.76,
+            "type": "beach",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Glyfada,_Corfu",
+            "desc": "Widely regarded as the most beautiful sandy beach in Corfu — a broad golden bay framed by green hills, with calm Ionian water. Arrive early for a sunbed. Water sports, beach bars, good facilities."
+          },
+          {
+            "name": "Mirtiotissa Beach",
+            "lat": 39.6156,
+            "lng": 19.7439,
+            "type": "beach",
+            "time": "12:00",
+            "wiki": "https://en.wikipedia.org/wiki/Myrtiotissa",
+            "desc": "A stunning hidden beach accessible only via a steep 30-minute walk through olive groves. Almost deserted despite its beauty. Lawrence Durrell called it the most beautiful beach in the world."
+          },
+          {
+            "name": "Agios Gordios Beach",
+            "lat": 39.5583,
+            "lng": 19.7617,
+            "type": "beach",
+            "time": "14:30",
+            "wiki": null,
+            "desc": "A wide, dramatic sandy beach backed by green cliffs and a rocky pinnacle. One of the most scenic beaches on the island, with a long stretch of sand and good facilities."
+          },
+          {
+            "name": "Corfu Town — Farewell Dinner",
+            "lat": 39.6217,
+            "lng": 19.9219,
+            "type": "city",
+            "time": "19:00",
+            "wiki": null,
+            "desc": "Return to Corfu Town for a final dinner at the Liston. Order the pastitsada (Corfiot pasta with cockerel) and a glass of Robola wine."
+          }
         ]
       }
     ]
   },
-
   "beaches": [
     {
       "name": "Paleokastritsa Beach",
@@ -96,7 +278,8 @@
       "facilities": "Well organised: sunbeds, beach bars, boat and kayak hire, tavernas. Monastery above.",
       "desc": "The most dramatic coastline in Corfu — six emerald coves carved into limestone cliffs, with a Byzantine monastery on the headland above. The water is extraordinarily clear and cold. Rent a small boat to discover the sea caves and hidden beaches inaccessible from land.",
       "commons": "Paleokastritsa_Corfu.jpg",
-      "lat": 39.6617, "lng": 19.7067
+      "lat": 39.6717,
+      "lng": 19.7075
     },
     {
       "name": "Glyfada Beach",
@@ -109,7 +292,8 @@
       "facilities": "Well organised: sunbeds, umbrellas, water sports, beach bars, restaurant, parking.",
       "desc": "The finest sandy beach in Corfu — a broad golden bay framed by green hills, with the warm Ionian Sea. Consistently clear, calm water. Glyfada hits the sweet spot between beautiful setting, good facilities and manageable crowds.",
       "commons": "Glyfada_beach_Corfu.jpg",
-      "lat": 39.5917, "lng": 19.7617
+      "lat": 39.585,
+      "lng": 19.76
     },
     {
       "name": "Canal d'Amour",
@@ -122,7 +306,8 @@
       "facilities": "Moderate: some sunbeds, beach bars nearby. Gets very busy in summer.",
       "desc": "Unlike any beach in Greece — sandstone cliffs sculpted into channels, arches and caves by millennia of sea erosion. The narrow channel (canal) is the focal point. Swim through it with someone you love — local legend guarantees marriage follows. The surrounding rock formations are extraordinary.",
       "commons": null,
-      "lat": 39.7900, "lng": 19.7033
+      "lat": 39.7906,
+      "lng": 19.7025
     },
     {
       "name": "Mirtiotissa Beach",
@@ -135,7 +320,8 @@
       "facilities": "Basic: one small beach café. Access via steep 30-minute walk only — no vehicles.",
       "desc": "Lawrence Durrell called it the most beautiful beach in the world in Prospero's Cell. A hidden sandy cove beneath towering cliffs, reachable only on foot. The walk keeps it uncrowded. The combination of complete seclusion and extraordinary setting makes it worth every step.",
       "commons": null,
-      "lat": 39.6100, "lng": 19.7417
+      "lat": 39.6156,
+      "lng": 19.7439
     },
     {
       "name": "Porto Timoni",
@@ -148,7 +334,8 @@
       "facilities": "None — completely unorganised. Access only via 45-minute hike from Afionas village.",
       "desc": "The most photographed spot in Corfu after Kanoni — a double bay where two beaches face in opposite directions, separated by a narrow rocky headland. The hike from Afionas is steep but the view from the top before you descend is among the best in the Ionian islands.",
       "commons": null,
-      "lat": 39.7117, "lng": 19.7367
+      "lat": 39.7089,
+      "lng": 19.6611
     }
   ]
 }

@@ -3,7 +3,6 @@
   "name": "Rhodes",
   "subtitle": "The island of knights, ancient acropolis and emerald bays",
   "intro": "The largest of the Dodecanese, Rhodes packs an extraordinary range into one island: a UNESCO-listed medieval city, the cliff-top Acropolis of Lindos, castle ruins at dramatic viewpoints, mountain villages making wine and honey, and some of the finest beaches in Greece along its sheltered east coast. More than 300 days of sunshine a year make it the sunniest place in the country.",
-
   "itinerary": {
     "title": "5-Day Rhodes Itinerary",
     "subtitle": "From the medieval streets of Rhodes Town to the white lanes of Lindos, the knights' castles of the interior and the wild southern tip — a complete circuit of the island.",
@@ -16,12 +15,60 @@
         "drive_mins": 30,
         "overnight": "Rhodes Town",
         "stops": [
-          { "name": "Mandraki Harbour", "lat": 36.4497, "lng": 28.2274, "type": "harbour", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Mandraki_harbour", "desc": "The ancient harbour where the Colossus of Rhodes once stood. Start your day with coffee watching the sailboats." },
-          { "name": "Palace of the Grand Master", "lat": 36.4452, "lng": 28.2225, "type": "castle", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Palace_of_the_Grand_Master_of_the_Knights_of_Rhodes", "desc": "The finest example of Gothic architecture in Greece. Former seat of the Knights of St John. Impressive mosaics inside." },
-          { "name": "Street of the Knights", "lat": 36.4440, "lng": 28.2237, "type": "museum", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Street_of_the_Knights,_Rhodes", "desc": "The best-preserved medieval street in Europe. Each section was occupied by a different langue of the Knights Hospitaller." },
-          { "name": "Lunch — Nireas Restaurant", "lat": 36.4435, "lng": 28.2255, "type": "harbour", "time": "13:30", "wiki": null, "desc": "One of the best seafood restaurants in the Old Town. Try the grilled octopus and local wine in the courtyard." },
-          { "name": "Kallithea Springs", "lat": 36.3833, "lng": 28.2500, "type": "spa", "time": "16:00", "wiki": "https://en.wikipedia.org/wiki/Kallithea_Springs", "desc": "Stunning Italian-built thermal spa complex from the 1920s on the coast. Beautiful architecture and a clear swimming cove." },
-          { "name": "Elli Beach", "lat": 36.4530, "lng": 28.2265, "type": "beach", "time": "18:30", "wiki": null, "desc": "Town beach just north of the Old Town. Evening swim, then dinner in the old town." }
+          {
+            "name": "Mandraki Harbour",
+            "lat": 36.4497,
+            "lng": 28.2274,
+            "type": "harbour",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Mandraki_harbour",
+            "desc": "The ancient harbour where the Colossus of Rhodes once stood. Start your day with coffee watching the sailboats."
+          },
+          {
+            "name": "Palace of the Grand Master",
+            "lat": 36.4452,
+            "lng": 28.2225,
+            "type": "castle",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Palace_of_the_Grand_Master_of_the_Knights_of_Rhodes",
+            "desc": "The finest example of Gothic architecture in Greece. Former seat of the Knights of St John. Impressive mosaics inside."
+          },
+          {
+            "name": "Street of the Knights",
+            "lat": 36.444,
+            "lng": 28.2237,
+            "type": "museum",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Street_of_the_Knights,_Rhodes",
+            "desc": "The best-preserved medieval street in Europe. Each section was occupied by a different langue of the Knights Hospitaller."
+          },
+          {
+            "name": "Lunch — Nireas Restaurant",
+            "lat": 36.4435,
+            "lng": 28.2255,
+            "type": "harbour",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "One of the best seafood restaurants in the Old Town. Try the grilled octopus and local wine in the courtyard."
+          },
+          {
+            "name": "Kallithea Springs",
+            "lat": 36.3833,
+            "lng": 28.25,
+            "type": "spa",
+            "time": "16:00",
+            "wiki": "https://en.wikipedia.org/wiki/Kallithea_Springs",
+            "desc": "Stunning Italian-built thermal spa complex from the 1920s on the coast. Beautiful architecture and a clear swimming cove."
+          },
+          {
+            "name": "Elli Beach",
+            "lat": 36.4547,
+            "lng": 28.2269,
+            "type": "beach",
+            "time": "18:30",
+            "wiki": null,
+            "desc": "Town beach just north of the Old Town. Evening swim, then dinner in the old town."
+          }
         ]
       },
       {
@@ -32,12 +79,60 @@
         "drive_mins": 65,
         "overnight": "Archangelos or Kolymbia",
         "stops": [
-          { "name": "Rhodes Town", "lat": 36.4413, "lng": 28.2226, "type": "city", "time": "09:00", "wiki": null, "desc": "Depart south along the scenic east coast road." },
-          { "name": "Anthony Quinn Bay", "lat": 36.3383, "lng": 28.2133, "type": "beach", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Anthony_Quinn_Bay", "desc": "Iconic emerald cove named after the actor who filmed The Guns of Navarone here. Extraordinary clarity — bring a snorkel." },
-          { "name": "Ladiko Beach", "lat": 36.3367, "lng": 28.2117, "type": "beach", "time": "11:30", "wiki": null, "desc": "Secluded pebble bay just 5 minutes walk from Anthony Quinn. Rocky seabed excellent for snorkelling, fewer crowds." },
-          { "name": "Tsambika Beach", "lat": 36.2750, "lng": 28.1583, "type": "beach", "time": "13:30", "wiki": "https://en.wikipedia.org/wiki/Tsambika_beach", "desc": "The best family beach on Rhodes — long golden sand, shallow water, excellent facilities. Lunch at one of the beach tavernas." },
-          { "name": "Tsambika Monastery", "lat": 36.2800, "lng": 28.1617, "type": "church", "time": "16:00", "wiki": null, "desc": "Climb the 300 steps to the hilltop Byzantine monastery for sweeping views over the coast and beach below." },
-          { "name": "Archangelos Village", "lat": 36.2133, "lng": 28.1183, "type": "village", "time": "17:30", "wiki": "https://en.wikipedia.org/wiki/Archangelos,_Rhodes", "desc": "Traditional village famous for handmade leather goods and ceramics. Browse the craft workshops. Stay overnight nearby." }
+          {
+            "name": "Rhodes Town",
+            "lat": 36.4413,
+            "lng": 28.2226,
+            "type": "city",
+            "time": "09:00",
+            "wiki": null,
+            "desc": "Depart south along the scenic east coast road."
+          },
+          {
+            "name": "Anthony Quinn Bay",
+            "lat": 36.3481,
+            "lng": 28.2189,
+            "type": "beach",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Anthony_Quinn_Bay",
+            "desc": "Iconic emerald cove named after the actor who filmed The Guns of Navarone here. Extraordinary clarity — bring a snorkel."
+          },
+          {
+            "name": "Ladiko Beach",
+            "lat": 36.3489,
+            "lng": 28.2183,
+            "type": "beach",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "Secluded pebble bay just 5 minutes walk from Anthony Quinn. Rocky seabed excellent for snorkelling, fewer crowds."
+          },
+          {
+            "name": "Tsambika Beach",
+            "lat": 36.2294,
+            "lng": 28.1642,
+            "type": "beach",
+            "time": "13:30",
+            "wiki": "https://en.wikipedia.org/wiki/Tsambika_beach",
+            "desc": "The best family beach on Rhodes — long golden sand, shallow water, excellent facilities. Lunch at one of the beach tavernas."
+          },
+          {
+            "name": "Tsambika Monastery",
+            "lat": 36.28,
+            "lng": 28.1617,
+            "type": "church",
+            "time": "16:00",
+            "wiki": null,
+            "desc": "Climb the 300 steps to the hilltop Byzantine monastery for sweeping views over the coast and beach below."
+          },
+          {
+            "name": "Archangelos Village",
+            "lat": 36.2133,
+            "lng": 28.1183,
+            "type": "village",
+            "time": "17:30",
+            "wiki": "https://en.wikipedia.org/wiki/Archangelos,_Rhodes",
+            "desc": "Traditional village famous for handmade leather goods and ceramics. Browse the craft workshops. Stay overnight nearby."
+          }
         ]
       },
       {
@@ -48,12 +143,60 @@
         "drive_mins": 40,
         "overnight": "Lindos",
         "stops": [
-          { "name": "Agathi Beach", "lat": 36.1917, "lng": 28.0983, "type": "beach", "time": "09:00", "wiki": null, "desc": "Golden sand and crystal clear water beneath Feraklos Castle. One of the finest beaches on the island. Morning swim before the crowds arrive." },
-          { "name": "Lindos Acropolis", "lat": 36.0917, "lng": 28.0867, "type": "castle", "time": "11:00", "wiki": "https://en.wikipedia.org/wiki/Acropolis_of_Lindos", "desc": "3rd century BC acropolis with a Doric temple of Athena Lindia perched above a sheer 116-metre cliff. One of the most dramatic ancient sites in Greece." },
-          { "name": "Lindos Village", "lat": 36.0908, "lng": 28.0861, "type": "village", "time": "12:30", "wiki": "https://en.wikipedia.org/wiki/Lindos", "desc": "Dazzling white cubist houses in maze-like lanes. Browse the galleries and craftshops before lunch." },
-          { "name": "Lunch — Mavrikios Restaurant", "lat": 36.0908, "lng": 28.0855, "type": "museum", "time": "13:30", "wiki": null, "desc": "Regarded as the best restaurant on Rhodes. Family-run since 1933. Book ahead for the terrace table with Acropolis views." },
-          { "name": "St Paul's Bay", "lat": 36.0867, "lng": 28.0867, "type": "beach", "time": "16:00", "wiki": "https://en.wikipedia.org/wiki/Agios_Pavlos_beach", "desc": "Heart-shaped bay just south of Lindos with crystal water and the Acropolis looming above. One of the most beautiful spots in Greece." },
-          { "name": "Lindos Beach", "lat": 36.0933, "lng": 28.0900, "type": "beach", "time": "18:00", "wiki": null, "desc": "Sandy beach below the village with perfect Acropolis views. Evening swim then dinner in Lindos. Stay overnight." }
+          {
+            "name": "Agathi Beach",
+            "lat": 36.1739,
+            "lng": 28.0653,
+            "type": "beach",
+            "time": "09:00",
+            "wiki": null,
+            "desc": "Golden sand and crystal clear water beneath Feraklos Castle. One of the finest beaches on the island. Morning swim before the crowds arrive."
+          },
+          {
+            "name": "Lindos Acropolis",
+            "lat": 36.0917,
+            "lng": 28.0867,
+            "type": "castle",
+            "time": "11:00",
+            "wiki": "https://en.wikipedia.org/wiki/Acropolis_of_Lindos",
+            "desc": "3rd century BC acropolis with a Doric temple of Athena Lindia perched above a sheer 116-metre cliff. One of the most dramatic ancient sites in Greece."
+          },
+          {
+            "name": "Lindos Village",
+            "lat": 36.0908,
+            "lng": 28.0861,
+            "type": "village",
+            "time": "12:30",
+            "wiki": "https://en.wikipedia.org/wiki/Lindos",
+            "desc": "Dazzling white cubist houses in maze-like lanes. Browse the galleries and craftshops before lunch."
+          },
+          {
+            "name": "Lunch — Mavrikios Restaurant",
+            "lat": 36.0908,
+            "lng": 28.0855,
+            "type": "museum",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "Regarded as the best restaurant on Rhodes. Family-run since 1933. Book ahead for the terrace table with Acropolis views."
+          },
+          {
+            "name": "St Paul's Bay",
+            "lat": 36.0853,
+            "lng": 28.0883,
+            "type": "beach",
+            "time": "16:00",
+            "wiki": "https://en.wikipedia.org/wiki/Agios_Pavlos_beach",
+            "desc": "Heart-shaped bay just south of Lindos with crystal water and the Acropolis looming above. One of the most beautiful spots in Greece."
+          },
+          {
+            "name": "Lindos Beach",
+            "lat": 36.0922,
+            "lng": 28.0864,
+            "type": "beach",
+            "time": "18:00",
+            "wiki": null,
+            "desc": "Sandy beach below the village with perfect Acropolis views. Evening swim then dinner in Lindos. Stay overnight."
+          }
         ]
       },
       {
@@ -64,12 +207,60 @@
         "drive_mins": 130,
         "overnight": "Monolithos or Siana",
         "stops": [
-          { "name": "Lindos", "lat": 36.0908, "lng": 28.0861, "type": "city", "time": "08:30", "wiki": null, "desc": "Early departure south — longest driving day of the trip." },
-          { "name": "Glystra Beach", "lat": 36.0067, "lng": 27.9250, "type": "beach", "time": "10:00", "wiki": null, "desc": "Sheltered sandy cove in the south with shallow, warm water. One of the least crowded excellent beaches on the island." },
-          { "name": "Prasonisi Peninsula", "lat": 35.8883, "lng": 27.7567, "type": "nature", "time": "12:00", "wiki": "https://en.wikipedia.org/wiki/Prasonisi", "desc": "The dramatic southern tip of Rhodes where the Aegean and Mediterranean seas meet. A sandbar connects the peninsula at low tide. World-class windsurfing." },
-          { "name": "Siana Village", "lat": 36.1367, "lng": 27.8317, "type": "village", "time": "15:00", "wiki": null, "desc": "Mountain village famous for souma (local spirit) and thyme honey. Stop at a local shop for tastings — both are exceptional." },
-          { "name": "Monolithos Castle", "lat": 36.1200, "lng": 27.7417, "type": "castle", "time": "16:30", "wiki": "https://en.wikipedia.org/wiki/Monolithos_Castle", "desc": "15th century Knights' castle perched on a 240-metre rock pinnacle with sheer drop views to the sea. The finest sunset viewpoint on Rhodes." },
-          { "name": "Dinner — Christos Corner", "lat": 36.1200, "lng": 27.7433, "type": "village", "time": "20:00", "wiki": null, "desc": "Legendary family taverna in Monolithos. Ask the owner to show you the kitchen. Legendary slow-cooked lamb and local wine." }
+          {
+            "name": "Lindos",
+            "lat": 36.0908,
+            "lng": 28.0861,
+            "type": "city",
+            "time": "08:30",
+            "wiki": null,
+            "desc": "Early departure south — longest driving day of the trip."
+          },
+          {
+            "name": "Glystra Beach",
+            "lat": 36.0103,
+            "lng": 27.9492,
+            "type": "beach",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Sheltered sandy cove in the south with shallow, warm water. One of the least crowded excellent beaches on the island."
+          },
+          {
+            "name": "Prasonisi Peninsula",
+            "lat": 35.8883,
+            "lng": 27.7567,
+            "type": "nature",
+            "time": "12:00",
+            "wiki": "https://en.wikipedia.org/wiki/Prasonisi",
+            "desc": "The dramatic southern tip of Rhodes where the Aegean and Mediterranean seas meet. A sandbar connects the peninsula at low tide. World-class windsurfing."
+          },
+          {
+            "name": "Siana Village",
+            "lat": 36.1367,
+            "lng": 27.8317,
+            "type": "village",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Mountain village famous for souma (local spirit) and thyme honey. Stop at a local shop for tastings — both are exceptional."
+          },
+          {
+            "name": "Monolithos Castle",
+            "lat": 36.12,
+            "lng": 27.7417,
+            "type": "castle",
+            "time": "16:30",
+            "wiki": "https://en.wikipedia.org/wiki/Monolithos_Castle",
+            "desc": "15th century Knights' castle perched on a 240-metre rock pinnacle with sheer drop views to the sea. The finest sunset viewpoint on Rhodes."
+          },
+          {
+            "name": "Dinner — Christos Corner",
+            "lat": 36.12,
+            "lng": 27.7433,
+            "type": "village",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "Legendary family taverna in Monolithos. Ask the owner to show you the kitchen. Legendary slow-cooked lamb and local wine."
+          }
         ]
       },
       {
@@ -80,16 +271,55 @@
         "drive_mins": 95,
         "overnight": null,
         "stops": [
-          { "name": "Kritinia Castle", "lat": 36.2583, "lng": 27.8333, "type": "castle", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Kritinia_Castle", "desc": "Ruined Knights' castle on a hilltop with panoramic sea views toward Turkey. Free entry. Small cafe at the base with wine and honey tastings." },
-          { "name": "Valley of the Butterflies", "lat": 36.3333, "lng": 28.0000, "type": "nature", "time": "10:30", "wiki": "https://en.wikipedia.org/wiki/Valley_of_the_Butterflies,_Rhodes", "desc": "Unique valley where thousands of Jersey tiger moths gather in summer on the sweet storax trees. Shaded walks beside streams." },
-          { "name": "Ancient Kamiros", "lat": 36.3367, "lng": 27.9183, "type": "museum", "time": "12:30", "wiki": "https://en.wikipedia.org/wiki/Kameiros", "desc": "Ruins of one of the three ancient city-states of Rhodes — temples, stoas and a Hellenistic reservoir. Far less visited than Lindos but equally impressive." },
-          { "name": "Lunch — Kamiros Beach Taverna", "lat": 36.3383, "lng": 27.9167, "type": "harbour", "time": "14:00", "wiki": null, "desc": "Simple fish taverna below the ancient site on the west coast. Fresh catch, house wine, sea views." },
-          { "name": "Rhodes Town", "lat": 36.4413, "lng": 28.2226, "type": "city", "time": "16:30", "wiki": "https://en.wikipedia.org/wiki/Rhodes", "desc": "Return to Rhodes Town. Final evening in the Old Town — walk the moat, have dinner in Hippocrates Square. Depart by ferry or flight." }
+          {
+            "name": "Kritinia Castle",
+            "lat": 36.2583,
+            "lng": 27.8333,
+            "type": "castle",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Kritinia_Castle",
+            "desc": "Ruined Knights' castle on a hilltop with panoramic sea views toward Turkey. Free entry. Small cafe at the base with wine and honey tastings."
+          },
+          {
+            "name": "Valley of the Butterflies",
+            "lat": 36.3333,
+            "lng": 28.0,
+            "type": "nature",
+            "time": "10:30",
+            "wiki": "https://en.wikipedia.org/wiki/Valley_of_the_Butterflies,_Rhodes",
+            "desc": "Unique valley where thousands of Jersey tiger moths gather in summer on the sweet storax trees. Shaded walks beside streams."
+          },
+          {
+            "name": "Ancient Kamiros",
+            "lat": 36.3367,
+            "lng": 27.9183,
+            "type": "museum",
+            "time": "12:30",
+            "wiki": "https://en.wikipedia.org/wiki/Kameiros",
+            "desc": "Ruins of one of the three ancient city-states of Rhodes — temples, stoas and a Hellenistic reservoir. Far less visited than Lindos but equally impressive."
+          },
+          {
+            "name": "Lunch — Kamiros Beach Taverna",
+            "lat": 36.3383,
+            "lng": 27.9167,
+            "type": "harbour",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Simple fish taverna below the ancient site on the west coast. Fresh catch, house wine, sea views."
+          },
+          {
+            "name": "Rhodes Town",
+            "lat": 36.4413,
+            "lng": 28.2226,
+            "type": "city",
+            "time": "16:30",
+            "wiki": "https://en.wikipedia.org/wiki/Rhodes",
+            "desc": "Return to Rhodes Town. Final evening in the Old Town — walk the moat, have dinner in Hippocrates Square. Depart by ferry or flight."
+          }
         ]
       }
     ]
   },
-
   "beaches": [
     {
       "name": "Tsambika Beach",
@@ -102,7 +332,8 @@
       "facilities": "Fully organised: sunbeds, umbrellas, water sports, beach bars, tavernas, showers, parking",
       "desc": "The finest beach on Rhodes — a sweeping arc of golden sand framed by mountains, with the hilltop monastery above. Exceptionally shallow and calm water making it ideal for families. The best all-round beach on the island.",
       "commons": "Tsambika_beach_Rhodes.jpg",
-      "lat": 36.2750, "lng": 28.1583
+      "lat": 36.2294,
+      "lng": 28.1642
     },
     {
       "name": "Anthony Quinn Bay",
@@ -115,7 +346,8 @@
       "facilities": "Basic: one beach bar, sunbeds. No parking on beach — park above and walk down.",
       "desc": "The most iconic cove on Rhodes, named after the actor who filmed The Guns of Navarone here and briefly owned the bay. The water is an otherworldly emerald-green colour. Best for snorkelling — the rocky seabed teems with fish. Arrive early; it fills up quickly.",
       "commons": "Anthony_Quinn_Bay_Rhodes.jpg",
-      "lat": 36.3383, "lng": 28.2133
+      "lat": 36.3481,
+      "lng": 28.2189
     },
     {
       "name": "St Paul's Bay (Agios Pavlos)",
@@ -128,7 +360,8 @@
       "facilities": "Organised: sunbeds and umbrellas (pricey), beach bar, water taxi from Lindos",
       "desc": "A near-perfectly enclosed bay just south of Lindos with the Acropolis visible on the cliff above. Described by many visitors as the most beautiful beach setting in Greece. The combination of crystal water, white rock and the ancient ruins overhead is unforgettable.",
       "commons": null,
-      "lat": 36.0867, "lng": 28.0867
+      "lat": 36.0853,
+      "lng": 28.0883
     },
     {
       "name": "Agathi Beach",
@@ -141,7 +374,8 @@
       "facilities": "Good: sunbeds, umbrellas, beach bar, taverna. Feraklos Castle visible above.",
       "desc": "A beautiful crescent of fine golden sand in the shadow of the ruined Feraklos Castle near Haraki. Clear, shallow water and fewer crowds than the main tourist beaches. One of the best-kept secrets on the east coast.",
       "commons": null,
-      "lat": 36.1917, "lng": 28.0983
+      "lat": 36.1739,
+      "lng": 28.0653
     },
     {
       "name": "Glystra Beach",
@@ -154,7 +388,8 @@
       "facilities": "Basic: small family beach cafe, some sunbeds. Quiet and unspoiled.",
       "desc": "A sheltered sandy cove in the relatively undeveloped south of Rhodes near Kiotari. Crystal clear, warm, shallow water and a relaxed family atmosphere. Far fewer tourists than the northern beaches. A superb half-day stop on the southern loop.",
       "commons": null,
-      "lat": 36.0067, "lng": 27.9250
+      "lat": 36.0103,
+      "lng": 27.9492
     }
   ]
 }

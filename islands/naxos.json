@@ -3,7 +3,6 @@
   "name": "Naxos",
   "subtitle": "The Cyclades done properly — marble mountains, ancient temples and Europe's best beaches",
   "intro": "Naxos is the largest and most self-sufficient of the Cyclades — a proper island with a mountain interior, ancient marble quarries, Venetian towers, Byzantine churches and the finest sandy beaches in Greece. Unlike Santorini or Mykonos, Naxos has everything: history, nature, food and beaches. Plaka and Agios Prokopios are among the longest, finest white-sand beaches in the Aegean. The island also produces excellent wine, cheese, and potatoes.",
-
   "itinerary": {
     "title": "4-Day Naxos Itinerary",
     "subtitle": "Naxos Town's Venetian castle, the Temple of Apollo, the marble villages of the interior, and the extraordinary west-coast beaches.",
@@ -16,10 +15,42 @@
         "drive_mins": 20,
         "overnight": "Naxos Town",
         "stops": [
-          { "name": "Portara (Temple of Apollo)", "lat": 37.1050, "lng": 25.3717, "type": "museum", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Portara", "desc": "The 6th-century BC marble gateway to an unfinished Temple of Apollo on a small island connected to Naxos Town by a causeway. The most iconic image of the island. Extraordinary at sunset." },
-          { "name": "Naxos Old Town (Kastro)", "lat": 37.1033, "lng": 25.3750, "type": "castle", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Naxos", "desc": "Venetian castle crowning the old town — a maze of arched lanes, Catholic churches and Venetian towers. The Archaeological Museum inside the kastro has superb Cycladic marble figurines." },
-          { "name": "Naxos Market Street", "lat": 37.1033, "lng": 25.3767, "type": "city", "time": "12:00", "wiki": null, "desc": "The main commercial street below the kastro — excellent local produce: Naxian cheese (graviera), thyme honey, Kitron liqueur made from citron leaves, local potatoes. Buy supplies for the beach." },
-          { "name": "Agios Prokopios Beach", "lat": 37.0633, "lng": 25.3433, "type": "beach", "time": "15:00", "wiki": null, "desc": "One of the finest beaches in the Cyclades — fine white sand, clear shallow water, well organised. A 10-minute drive from the town. The water here is the best swimming in the northern section." }
+          {
+            "name": "Portara (Temple of Apollo)",
+            "lat": 37.105,
+            "lng": 25.3717,
+            "type": "museum",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Portara",
+            "desc": "The 6th-century BC marble gateway to an unfinished Temple of Apollo on a small island connected to Naxos Town by a causeway. The most iconic image of the island. Extraordinary at sunset."
+          },
+          {
+            "name": "Naxos Old Town (Kastro)",
+            "lat": 37.1033,
+            "lng": 25.375,
+            "type": "castle",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Naxos",
+            "desc": "Venetian castle crowning the old town — a maze of arched lanes, Catholic churches and Venetian towers. The Archaeological Museum inside the kastro has superb Cycladic marble figurines."
+          },
+          {
+            "name": "Naxos Market Street",
+            "lat": 37.1033,
+            "lng": 25.3767,
+            "type": "city",
+            "time": "12:00",
+            "wiki": null,
+            "desc": "The main commercial street below the kastro — excellent local produce: Naxian cheese (graviera), thyme honey, Kitron liqueur made from citron leaves, local potatoes. Buy supplies for the beach."
+          },
+          {
+            "name": "Agios Prokopios Beach",
+            "lat": 37.0628,
+            "lng": 25.3761,
+            "type": "beach",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "One of the finest beaches in the Cyclades — fine white sand, clear shallow water, well organised. A 10-minute drive from the town. The water here is the best swimming in the northern section."
+          }
         ]
       },
       {
@@ -30,10 +61,42 @@
         "drive_mins": 25,
         "overnight": "Naxos Town or Plaka",
         "stops": [
-          { "name": "Agios Georgios Beach", "lat": 37.0933, "lng": 25.3533, "type": "beach", "time": "09:30", "wiki": null, "desc": "Town beach immediately south of Naxos Town — long, sandy, shallow and extremely convenient. The resort area behind it has every facility. Good for families staying in the town." },
-          { "name": "Plaka Beach", "lat": 37.0150, "lng": 25.3283, "type": "beach", "time": "11:00", "wiki": "https://en.wikipedia.org/wiki/Plaka_beach,_Naxos", "desc": "The finest beach in the Cyclades — 5km of uninterrupted fine white sand with crystal clear, shallow turquoise water. The entire beach is backed by dunes and tamarisk trees providing natural shade. The southern end is less developed and more peaceful." },
-          { "name": "Kastraki Beach", "lat": 36.9950, "lng": 25.3250, "type": "beach", "time": "14:30", "wiki": null, "desc": "Quieter continuation of Plaka south — same quality sand and water but fewer facilities and people. Wild camping permitted in the dunes. The most unspoiled section of the long west-coast beach." },
-          { "name": "Vivlos Village", "lat": 37.0133, "lng": 25.4500, "type": "village", "time": "18:00", "wiki": null, "desc": "Traditional inland village above the west coast. The views over Plaka beach and the sunset are exceptional. Several good tavernas with local Naxian dishes." }
+          {
+            "name": "Agios Georgios Beach",
+            "lat": 37.0886,
+            "lng": 25.3722,
+            "type": "beach",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "Town beach immediately south of Naxos Town — long, sandy, shallow and extremely convenient. The resort area behind it has every facility. Good for families staying in the town."
+          },
+          {
+            "name": "Plaka Beach",
+            "lat": 37.0219,
+            "lng": 25.3444,
+            "type": "beach",
+            "time": "11:00",
+            "wiki": "https://en.wikipedia.org/wiki/Plaka_beach,_Naxos",
+            "desc": "The finest beach in the Cyclades — 5km of uninterrupted fine white sand with crystal clear, shallow turquoise water. The entire beach is backed by dunes and tamarisk trees providing natural shade. The southern end is less developed and more peaceful."
+          },
+          {
+            "name": "Kastraki Beach",
+            "lat": 36.9919,
+            "lng": 25.3219,
+            "type": "beach",
+            "time": "14:30",
+            "wiki": null,
+            "desc": "Quieter continuation of Plaka south — same quality sand and water but fewer facilities and people. Wild camping permitted in the dunes. The most unspoiled section of the long west-coast beach."
+          },
+          {
+            "name": "Vivlos Village",
+            "lat": 37.0133,
+            "lng": 25.45,
+            "type": "village",
+            "time": "18:00",
+            "wiki": null,
+            "desc": "Traditional inland village above the west coast. The views over Plaka beach and the sunset are exceptional. Several good tavernas with local Naxian dishes."
+          }
         ]
       },
       {
@@ -44,10 +107,42 @@
         "drive_mins": 80,
         "overnight": "Halki or Filoti",
         "stops": [
-          { "name": "Halki Village", "lat": 37.0467, "lng": 25.4967, "type": "village", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Chalki,_Naxos", "desc": "The finest village in the Naxos interior — Venetian towers, Byzantine churches and a distillery producing Kitron liqueur from the island's unique citron fruit. Breakfast at a village café." },
-          { "name": "Panagia Drosiani", "lat": 37.0517, "lng": 25.5000, "type": "church", "time": "10:30", "wiki": "https://en.wikipedia.org/wiki/Panagia_Drosiani", "desc": "One of the oldest Byzantine churches in the Cyclades (7th century), with rare early Christian frescoes surviving inside. Rarely visited and genuinely moving." },
-          { "name": "Apeiranthos Village", "lat": 37.0667, "lng": 25.5617, "type": "village", "time": "12:00", "wiki": "https://en.wikipedia.org/wiki/Apeiranthos", "desc": "The most dramatic mountain village in the Cyclades — marble-paved streets, marble doorways and a fiercely independent character. The village has five small museums. Lunch at the village square." },
-          { "name": "Mount Zeus (Zas)", "lat": 36.9950, "lng": 25.5150, "type": "nature", "time": "15:30", "wiki": "https://en.wikipedia.org/wiki/Mount_Zeus_(Naxos)", "desc": "The highest peak in the Cyclades at 1001m. A 3-hour return hike through the fir forest past the Cave of Zeus. The view from the summit over the entire Cyclades archipelago is unbeatable on a clear day." }
+          {
+            "name": "Halki Village",
+            "lat": 37.0467,
+            "lng": 25.4967,
+            "type": "village",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Chalki,_Naxos",
+            "desc": "The finest village in the Naxos interior — Venetian towers, Byzantine churches and a distillery producing Kitron liqueur from the island's unique citron fruit. Breakfast at a village café."
+          },
+          {
+            "name": "Panagia Drosiani",
+            "lat": 37.0517,
+            "lng": 25.5,
+            "type": "church",
+            "time": "10:30",
+            "wiki": "https://en.wikipedia.org/wiki/Panagia_Drosiani",
+            "desc": "One of the oldest Byzantine churches in the Cyclades (7th century), with rare early Christian frescoes surviving inside. Rarely visited and genuinely moving."
+          },
+          {
+            "name": "Apeiranthos Village",
+            "lat": 37.0667,
+            "lng": 25.5617,
+            "type": "village",
+            "time": "12:00",
+            "wiki": "https://en.wikipedia.org/wiki/Apeiranthos",
+            "desc": "The most dramatic mountain village in the Cyclades — marble-paved streets, marble doorways and a fiercely independent character. The village has five small museums. Lunch at the village square."
+          },
+          {
+            "name": "Mount Zeus (Zas)",
+            "lat": 36.995,
+            "lng": 25.515,
+            "type": "nature",
+            "time": "15:30",
+            "wiki": "https://en.wikipedia.org/wiki/Mount_Zeus_(Naxos)",
+            "desc": "The highest peak in the Cyclades at 1001m. A 3-hour return hike through the fir forest past the Cave of Zeus. The view from the summit over the entire Cyclades archipelago is unbeatable on a clear day."
+          }
         ]
       },
       {
@@ -58,14 +153,37 @@
         "drive_mins": 35,
         "overnight": null,
         "stops": [
-          { "name": "Kouros of Apollonas", "lat": 37.1467, "lng": 25.5133, "type": "museum", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Kouros_of_Apollonas", "desc": "A 10.5-metre unfinished marble kouros statue abandoned in the ancient marble quarry — too large to move, it has lain here since the 7th century BC. Free, unguarded, and extraordinary." },
-          { "name": "Apollonas Beach", "lat": 37.1533, "lng": 25.5167, "type": "beach", "time": "11:00", "wiki": null, "desc": "Sandy beach in the fishing village of Apollonas on the north coast. Calm, clear water, good tavernas. Less visited than the west coast." },
-          { "name": "Naxos Town — Departure", "lat": 37.1050, "lng": 25.3717, "type": "city", "time": "15:00", "wiki": null, "desc": "Return to Naxos Town for the ferry. Buy Naxian cheese and honey for the boat." }
+          {
+            "name": "Kouros of Apollonas",
+            "lat": 37.1467,
+            "lng": 25.5133,
+            "type": "museum",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Kouros_of_Apollonas",
+            "desc": "A 10.5-metre unfinished marble kouros statue abandoned in the ancient marble quarry — too large to move, it has lain here since the 7th century BC. Free, unguarded, and extraordinary."
+          },
+          {
+            "name": "Apollonas Beach",
+            "lat": 37.1736,
+            "lng": 25.5847,
+            "type": "beach",
+            "time": "11:00",
+            "wiki": null,
+            "desc": "Sandy beach in the fishing village of Apollonas on the north coast. Calm, clear water, good tavernas. Less visited than the west coast."
+          },
+          {
+            "name": "Naxos Town — Departure",
+            "lat": 37.105,
+            "lng": 25.3717,
+            "type": "city",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Return to Naxos Town for the ferry. Buy Naxian cheese and honey for the boat."
+          }
         ]
       }
     ]
   },
-
   "beaches": [
     {
       "name": "Plaka Beach",
@@ -78,7 +196,8 @@
       "facilities": "Northern section well organised; southern section wilder. Natural shade from tamarisk trees. Camping in the dunes permitted.",
       "desc": "Arguably the finest beach in the Cyclades — 5km of uninterrupted fine white sand and turquoise water with natural shade from tamarisk trees. The southern end is wilder and more private. One of the longest, least-developed quality beaches in Greece.",
       "commons": "Plaka_beach_Naxos.jpg",
-      "lat": 37.0150, "lng": 25.3283
+      "lat": 37.0219,
+      "lng": 25.3444
     },
     {
       "name": "Agios Prokopios Beach",
@@ -91,7 +210,8 @@
       "facilities": "Well organised: sunbeds, beach bars, water sports, tavernas. Best facilities of the west-coast beaches.",
       "desc": "Consistently voted one of the best beaches in Greece — fine white sand, clear shallow water and excellent facilities, just 10 minutes from Naxos Town. The combination of easy access and quality makes it the most popular beach on the island.",
       "commons": null,
-      "lat": 37.0633, "lng": 25.3433
+      "lat": 37.0628,
+      "lng": 25.3761
     },
     {
       "name": "Kastraki Beach",
@@ -104,7 +224,8 @@
       "facilities": "Basic to moderate — a few beach bars and tavernas, less developed than Plaka or Agios Prokopios.",
       "desc": "The wild continuation of Plaka beach southward — same quality white sand and turquoise water but fewer people and facilities. Wild camping is permitted in the dunes. The most natural and unspoiled stretch of Naxos's extraordinary west coast.",
       "commons": null,
-      "lat": 36.9950, "lng": 25.3250
+      "lat": 36.9919,
+      "lng": 25.3219
     }
   ]
 }

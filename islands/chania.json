@@ -3,7 +3,6 @@
   "name": "Crete (Chania)",
   "subtitle": "Balos, Elafonisi and the wild west of Greece's greatest island",
   "intro": "The Chania region is the most dramatic corner of Crete — and arguably the most dramatic in all of Greece. The White Mountains rise to over 2400m behind a coastline that holds two of the world's most famous beaches: the pink-sand lagoon of Elafonisi and the Caribbean-blue Balos. Add a Venetian old town, the deepest gorge in Europe, and some of the best food on the island, and Chania is impossible to do in less than 5 days.",
-
   "itinerary": {
     "title": "5-Day Chania Itinerary",
     "subtitle": "From the Venetian harbour of Chania Town to the wild beaches of the west — Balos, Elafonisi, the Samaria Gorge and the sunset cliffs of Falasarna.",
@@ -16,12 +15,60 @@
         "drive_mins": 25,
         "overnight": "Chania Town",
         "stops": [
-          { "name": "Venetian Harbour", "lat": 35.5186, "lng": 24.0178, "type": "harbour", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Chania", "desc": "The most beautiful harbour in Crete — a sweeping arc of Venetian architecture, the 16th-century lighthouse, and crystal water. Walk the waterfront at your own pace." },
-          { "name": "Chania Old Town", "lat": 35.5163, "lng": 24.0194, "type": "museum", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Chania", "desc": "Labyrinthine lanes of the old Venetian and Ottoman quarter. Browse the leather market on Skridlof Street, the covered market, and the Byzantine museum." },
-          { "name": "Kastelli Hill", "lat": 35.5180, "lng": 24.0210, "type": "castle", "time": "11:30", "wiki": null, "desc": "The oldest part of Chania, with Minoan ruins beneath Venetian walls. Superb views over the harbour and the White Mountains." },
-          { "name": "Lunch — To Maridaki", "lat": 35.5175, "lng": 24.0175, "type": "harbour", "time": "13:30", "wiki": null, "desc": "Best fish taverna in Chania Town, right on the Venetian harbour. Grilled fish, local wine, incredible setting. Book ahead in summer." },
-          { "name": "Nea Chora Beach", "lat": 35.5127, "lng": 23.9997, "type": "beach", "time": "16:30", "wiki": null, "desc": "Town beach 15 minutes walk from the old town. Sandy, shallow, family-friendly. Good for an evening swim before dinner." },
-          { "name": "Dinner — Tamam", "lat": 35.5168, "lng": 24.0188, "type": "village", "time": "20:00", "wiki": null, "desc": "Award-winning Cretan-Ottoman fusion restaurant in a converted Turkish bathhouse in the old town. Outstanding mezedes. Book ahead." }
+          {
+            "name": "Venetian Harbour",
+            "lat": 35.5186,
+            "lng": 24.0178,
+            "type": "harbour",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Chania",
+            "desc": "The most beautiful harbour in Crete — a sweeping arc of Venetian architecture, the 16th-century lighthouse, and crystal water. Walk the waterfront at your own pace."
+          },
+          {
+            "name": "Chania Old Town",
+            "lat": 35.5163,
+            "lng": 24.0194,
+            "type": "museum",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Chania",
+            "desc": "Labyrinthine lanes of the old Venetian and Ottoman quarter. Browse the leather market on Skridlof Street, the covered market, and the Byzantine museum."
+          },
+          {
+            "name": "Kastelli Hill",
+            "lat": 35.518,
+            "lng": 24.021,
+            "type": "castle",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "The oldest part of Chania, with Minoan ruins beneath Venetian walls. Superb views over the harbour and the White Mountains."
+          },
+          {
+            "name": "Lunch — To Maridaki",
+            "lat": 35.5175,
+            "lng": 24.0175,
+            "type": "harbour",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "Best fish taverna in Chania Town, right on the Venetian harbour. Grilled fish, local wine, incredible setting. Book ahead in summer."
+          },
+          {
+            "name": "Nea Chora Beach",
+            "lat": 35.5127,
+            "lng": 23.9997,
+            "type": "beach",
+            "time": "16:30",
+            "wiki": null,
+            "desc": "Town beach 15 minutes walk from the old town. Sandy, shallow, family-friendly. Good for an evening swim before dinner."
+          },
+          {
+            "name": "Dinner — Tamam",
+            "lat": 35.5168,
+            "lng": 24.0188,
+            "type": "village",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "Award-winning Cretan-Ottoman fusion restaurant in a converted Turkish bathhouse in the old town. Outstanding mezedes. Book ahead."
+          }
         ]
       },
       {
@@ -32,10 +79,42 @@
         "drive_mins": 70,
         "overnight": "Kissamos or Chania",
         "stops": [
-          { "name": "Kissamos Port", "lat": 35.5049, "lng": 23.6518, "type": "harbour", "time": "09:00", "wiki": null, "desc": "Take the morning ferry from Kissamos port to Balos — the easiest way to reach the lagoon without the dirt road. Tickets from the port office." },
-          { "name": "Gramvousa Island", "lat": 35.6097, "lng": 23.5803, "type": "castle", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Gramvousa", "desc": "The ferry stops at Gramvousa first. Climb to the 16th-century Venetian fortress at the summit for panoramic views over the lagoon below." },
-          { "name": "Balos Lagoon", "lat": 35.5037, "lng": 23.5772, "type": "beach", "time": "12:00", "wiki": "https://en.wikipedia.org/wiki/Balos_Beach", "desc": "One of the most beautiful beaches in Europe — white sand, shallow turquoise lagoon, with Gramvousa island and fortress as a backdrop. Swim, snorkel, and explore. Return ferry at 16:30." },
-          { "name": "Kissamos Town", "lat": 35.5049, "lng": 23.6518, "type": "city", "time": "17:30", "wiki": null, "desc": "Relaxed town with a good Archaeological Museum. Evening dinner at one of the harbour tavernas — fresh catch and local wine." }
+          {
+            "name": "Kissamos Port",
+            "lat": 35.5049,
+            "lng": 23.6518,
+            "type": "harbour",
+            "time": "09:00",
+            "wiki": null,
+            "desc": "Take the morning ferry from Kissamos port to Balos — the easiest way to reach the lagoon without the dirt road. Tickets from the port office."
+          },
+          {
+            "name": "Gramvousa Island",
+            "lat": 35.6097,
+            "lng": 23.5803,
+            "type": "castle",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Gramvousa",
+            "desc": "The ferry stops at Gramvousa first. Climb to the 16th-century Venetian fortress at the summit for panoramic views over the lagoon below."
+          },
+          {
+            "name": "Balos Lagoon",
+            "lat": 35.5953,
+            "lng": 23.5881,
+            "type": "beach",
+            "time": "12:00",
+            "wiki": "https://en.wikipedia.org/wiki/Balos_Beach",
+            "desc": "One of the most beautiful beaches in Europe — white sand, shallow turquoise lagoon, with Gramvousa island and fortress as a backdrop. Swim, snorkel, and explore. Return ferry at 16:30."
+          },
+          {
+            "name": "Kissamos Town",
+            "lat": 35.5049,
+            "lng": 23.6518,
+            "type": "city",
+            "time": "17:30",
+            "wiki": null,
+            "desc": "Relaxed town with a good Archaeological Museum. Evening dinner at one of the harbour tavernas — fresh catch and local wine."
+          }
         ]
       },
       {
@@ -46,9 +125,33 @@
         "drive_mins": 60,
         "overnight": "Falasarna or Kissamos",
         "stops": [
-          { "name": "Falasarna Beach", "lat": 35.5102, "lng": 23.5671, "type": "beach", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Falasarna", "desc": "Five consecutive beaches of golden sand on the west coast. The main Pachia Ammos beach is 1km long. Warm turquoise water, consistent waves, spectacular west-facing sunsets." },
-          { "name": "Ancient Falasarna", "lat": 35.5133, "lng": 23.5700, "type": "museum", "time": "13:00", "wiki": null, "desc": "Ruins of the ancient Minoan and Hellenistic port city. The ancient harbour wall has risen several metres due to tectonic activity — a fascinating geological record." },
-          { "name": "Sunset at Falasarna", "lat": 35.5102, "lng": 23.5671, "type": "nature", "time": "18:00", "wiki": null, "desc": "Falasarna faces due west — the sunsets here are among the best in Greece. Grab a drink at one of the clifftop bars and watch the sun drop into the sea." }
+          {
+            "name": "Falasarna Beach",
+            "lat": 35.5144,
+            "lng": 23.5733,
+            "type": "beach",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Falasarna",
+            "desc": "Five consecutive beaches of golden sand on the west coast. The main Pachia Ammos beach is 1km long. Warm turquoise water, consistent waves, spectacular west-facing sunsets."
+          },
+          {
+            "name": "Ancient Falasarna",
+            "lat": 35.5133,
+            "lng": 23.57,
+            "type": "museum",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "Ruins of the ancient Minoan and Hellenistic port city. The ancient harbour wall has risen several metres due to tectonic activity — a fascinating geological record."
+          },
+          {
+            "name": "Sunset at Falasarna",
+            "lat": 35.5102,
+            "lng": 23.5671,
+            "type": "nature",
+            "time": "18:00",
+            "wiki": null,
+            "desc": "Falasarna faces due west — the sunsets here are among the best in Greece. Grab a drink at one of the clifftop bars and watch the sun drop into the sea."
+          }
         ]
       },
       {
@@ -59,10 +162,42 @@
         "drive_mins": 90,
         "overnight": "Chania or Paleochora",
         "stops": [
-          { "name": "Topolia Gorge", "lat": 35.3750, "lng": 23.7420, "type": "nature", "time": "09:30", "wiki": null, "desc": "Drive through the dramatic Topolia Gorge — towering limestone cliffs and a small cave chapel. A spectacular route that most tourists miss." },
-          { "name": "Elafonisi Beach", "lat": 35.2683, "lng": 23.5358, "type": "beach", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Elafonisi", "desc": "Ranked world's best beach by TripAdvisor. Pink-tinged sand from crushed seashells, shallow emerald lagoon, small island accessible on foot at low tide. Arrive before noon for a sunbed." },
-          { "name": "Kedrodasos Beach", "lat": 35.2700, "lng": 23.5430, "type": "beach", "time": "15:00", "wiki": null, "desc": "Secluded wild beach 1km east of Elafonisi through a protected juniper forest. Pristine, unorganised, far fewer people. Worth the short walk." },
-          { "name": "Paleochora", "lat": 35.2330, "lng": 23.6830, "type": "city", "time": "18:00", "wiki": "https://en.wikipedia.org/wiki/Paleochora", "desc": "Laid-back south-coast town with beaches on both sides of a headland. Dinner at a waterfront taverna — the seafood here is excellent and inexpensive." }
+          {
+            "name": "Topolia Gorge",
+            "lat": 35.375,
+            "lng": 23.742,
+            "type": "nature",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "Drive through the dramatic Topolia Gorge — towering limestone cliffs and a small cave chapel. A spectacular route that most tourists miss."
+          },
+          {
+            "name": "Elafonisi Beach",
+            "lat": 35.2722,
+            "lng": 23.5361,
+            "type": "beach",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Elafonisi",
+            "desc": "Ranked world's best beach by TripAdvisor. Pink-tinged sand from crushed seashells, shallow emerald lagoon, small island accessible on foot at low tide. Arrive before noon for a sunbed."
+          },
+          {
+            "name": "Kedrodasos Beach",
+            "lat": 35.27,
+            "lng": 23.5283,
+            "type": "beach",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Secluded wild beach 1km east of Elafonisi through a protected juniper forest. Pristine, unorganised, far fewer people. Worth the short walk."
+          },
+          {
+            "name": "Paleochora",
+            "lat": 35.233,
+            "lng": 23.683,
+            "type": "city",
+            "time": "18:00",
+            "wiki": "https://en.wikipedia.org/wiki/Paleochora",
+            "desc": "Laid-back south-coast town with beaches on both sides of a headland. Dinner at a waterfront taverna — the seafood here is excellent and inexpensive."
+          }
         ]
       },
       {
@@ -73,15 +208,46 @@
         "drive_mins": 55,
         "overnight": null,
         "stops": [
-          { "name": "Xyloskalo (Gorge Entry)", "lat": 35.2967, "lng": 23.9697, "type": "nature", "time": "07:30", "wiki": "https://en.wikipedia.org/wiki/Samaria_Gorge", "desc": "Enter the deepest gorge in Europe at dawn to beat the crowds. The descent from 1200m begins steeply. Allow 4-5 hours for the full 16km walk." },
-          { "name": "Iron Gates", "lat": 35.2583, "lng": 23.9667, "type": "nature", "time": "10:30", "wiki": null, "desc": "The most dramatic point in the gorge — the walls narrow to just 3.5 metres apart and rise 300 metres overhead. Eerie and spectacular." },
-          { "name": "Agia Roumeli Beach", "lat": 35.2283, "lng": 23.9717, "type": "beach", "time": "13:00", "wiki": null, "desc": "The gorge exits at this remote south-coast village with a small beach. Only accessible on foot or by ferry. Swim in the cold clear water — you've earned it. Ferry back to Chora Sfakion (45 min)." },
-          { "name": "Chora Sfakion", "lat": 35.2500, "lng": 24.1167, "type": "harbour", "time": "15:30", "wiki": null, "desc": "Ferry arrival point on the south coast. Bus back to Chania through the mountains. Final dinner in Chania Old Town." }
+          {
+            "name": "Xyloskalo (Gorge Entry)",
+            "lat": 35.2967,
+            "lng": 23.9697,
+            "type": "nature",
+            "time": "07:30",
+            "wiki": "https://en.wikipedia.org/wiki/Samaria_Gorge",
+            "desc": "Enter the deepest gorge in Europe at dawn to beat the crowds. The descent from 1200m begins steeply. Allow 4-5 hours for the full 16km walk."
+          },
+          {
+            "name": "Iron Gates",
+            "lat": 35.2583,
+            "lng": 23.9667,
+            "type": "nature",
+            "time": "10:30",
+            "wiki": null,
+            "desc": "The most dramatic point in the gorge — the walls narrow to just 3.5 metres apart and rise 300 metres overhead. Eerie and spectacular."
+          },
+          {
+            "name": "Agia Roumeli Beach",
+            "lat": 35.2283,
+            "lng": 23.9717,
+            "type": "beach",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "The gorge exits at this remote south-coast village with a small beach. Only accessible on foot or by ferry. Swim in the cold clear water — you've earned it. Ferry back to Chora Sfakion (45 min)."
+          },
+          {
+            "name": "Chora Sfakion",
+            "lat": 35.25,
+            "lng": 24.1167,
+            "type": "harbour",
+            "time": "15:30",
+            "wiki": null,
+            "desc": "Ferry arrival point on the south coast. Bus back to Chania through the mountains. Final dinner in Chania Old Town."
+          }
         ]
       }
     ]
   },
-
   "beaches": [
     {
       "name": "Balos Lagoon",
@@ -94,7 +260,8 @@
       "facilities": "Basic: small snack bar, no sunbeds. Accessible by ferry from Kissamos or via dirt road + 20min hike.",
       "desc": "Possibly the most photographed beach in Greece — a white sand lagoon between the mainland and Gramvousa island, with a 16th-century Venetian fortress on the peak above. The water colour is an impossible turquoise. Effort required to get here, but nothing in Greece compares to the first view from the hilltop.",
       "commons": "Balos_Beach_Crete.jpg",
-      "lat": 35.5037, "lng": 23.5772
+      "lat": 35.5953,
+      "lng": 23.5881
     },
     {
       "name": "Elafonisi Beach",
@@ -107,7 +274,8 @@
       "facilities": "Moderate: some sunbeds and umbrellas, snack bars, large car park. Gets very crowded July-August.",
       "desc": "Ranked world's best beach by TripAdvisor. A shallow pink-sand lagoon at the far southwest tip of Crete, with a small island reachable on foot at low tide. The colour of the water — shifting from turquoise to emerald to deep blue — is extraordinary. Arrive before 10am in peak season.",
       "commons": "Elafonisi_beach_Crete.jpg",
-      "lat": 35.2683, "lng": 23.5358
+      "lat": 35.2722,
+      "lng": 23.5361
     },
     {
       "name": "Falasarna Beach",
@@ -120,7 +288,8 @@
       "facilities": "Well organised: sunbeds, umbrellas, beach bars, water sports, several tavernas. Good parking.",
       "desc": "Five consecutive golden sand beaches on the wild west coast, repeatedly named best beach in Crete. The wide open bay, warm water and legendary sunsets make it unforgettable. Best in the morning when the wind is calm — afternoons can get breezy, which makes it perfect for water sports.",
       "commons": "Falasarna_beach_Crete.jpg",
-      "lat": 35.5102, "lng": 23.5671
+      "lat": 35.5144,
+      "lng": 23.5733
     },
     {
       "name": "Stavros Beach",
@@ -133,7 +302,8 @@
       "facilities": "Good: sunbeds, tavernas, beach bars. Famous as the filming location for Zorba the Greek.",
       "desc": "A perfectly circular enclosed bay near Akrotiri peninsula, filmed in the famous dance scene of Zorba the Greek. Remarkably calm water at all times — wind from any direction has no effect here. One of the best family beaches in the Chania region and far less crowded than Elafonisi.",
       "commons": null,
-      "lat": 35.5933, "lng": 24.1400
+      "lat": 35.5983,
+      "lng": 24.0789
     },
     {
       "name": "Kedrodasos Beach",
@@ -146,7 +316,8 @@
       "facilities": "None — completely unorganised. Access via 1km walk through protected juniper forest from Elafonisi.",
       "desc": "The secret beach next to Elafonisi — accessible only on foot through a protected juniper forest. Pristine, uncrowded, and completely undeveloped. The contrast with the busy Elafonisi nearby is striking. The juniper trees are endangered — do not touch them.",
       "commons": null,
-      "lat": 35.2700, "lng": 23.5430
+      "lat": 35.27,
+      "lng": 23.5283
     }
   ]
 }

@@ -3,7 +3,6 @@
   "name": "Poros",
   "subtitle": "The pine-forest Saronic — a bell tower, a clock tower and a 400-metre strait to the Peloponnese",
   "intro": "Poros is separated from the Peloponnese by only 400 metres of water — you can see from the harbour across the strait to the town of Galatas on the mainland. The island is entirely covered in Aleppo pine forest, and its capital is one of the prettiest small ports in the Saronic — a hillside of whitewashed houses topped by the distinctive blue-domed clock tower. An easy, relaxed, unpretentious destination that Athenians have loved for generations.",
-
   "itinerary": {
     "title": "1-Day Poros Itinerary",
     "subtitle": "The clock tower, Love Bay, the pine forest and the temple of Poseidon.",
@@ -16,17 +15,64 @@
         "drive_mins": 25,
         "overnight": null,
         "stops": [
-          { "name": "Poros Town", "lat": 37.5000, "lng": 23.4567, "type": "city", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Poros", "desc": "The hillside capital — a cascade of white houses topped by the iconic 1920s blue-domed clock tower. Walk up through the lanes to the summit for the best view in the Saronic." },
-          { "name": "Clock Tower Viewpoint", "lat": 37.5033, "lng": 23.4583, "type": "nature", "time": "10:30", "wiki": null, "desc": "The landmark of Poros — a 1920s clock tower at the summit of the town. The view over the straits, the pine forest and the Peloponnese beyond is one of the most beautiful in Greece." },
-          { "name": "Temple of Poseidon", "lat": 37.5183, "lng": 23.4750, "type": "museum", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Temple_of_Poseidon_at_Poros", "desc": "Modest remains of a 6th-century BC temple — the setting in a pine forest with sea views on both sides is the draw. The orator Demosthenes took poison here rather than surrender to Macedon." },
-          { "name": "Lunch — Harbour Taverna", "lat": 37.5000, "lng": 23.4567, "type": "harbour", "time": "13:00", "wiki": null, "desc": "The harbour tavernas serve excellent grilled fish watching the boats from Galatas cross the straits. The crossing takes only 5 minutes." },
-          { "name": "Love Bay", "lat": 37.4917, "lng": 23.4433, "type": "beach", "time": "15:00", "wiki": null, "desc": "The best beach on Poros — a sheltered sandy cove surrounded by pine forest. Clear, calm water and a romantic setting. 10 minutes from the town." },
-          { "name": "Poros — Departure", "lat": 37.5000, "lng": 23.4567, "type": "harbour", "time": "18:00", "wiki": null, "desc": "Ferry to Piraeus, Hydra or the other Saronic islands. Frequent connections." }
+          {
+            "name": "Poros Town",
+            "lat": 37.5,
+            "lng": 23.4567,
+            "type": "city",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Poros",
+            "desc": "The hillside capital — a cascade of white houses topped by the iconic 1920s blue-domed clock tower. Walk up through the lanes to the summit for the best view in the Saronic."
+          },
+          {
+            "name": "Clock Tower Viewpoint",
+            "lat": 37.5033,
+            "lng": 23.4583,
+            "type": "nature",
+            "time": "10:30",
+            "wiki": null,
+            "desc": "The landmark of Poros — a 1920s clock tower at the summit of the town. The view over the straits, the pine forest and the Peloponnese beyond is one of the most beautiful in Greece."
+          },
+          {
+            "name": "Temple of Poseidon",
+            "lat": 37.5183,
+            "lng": 23.475,
+            "type": "museum",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Temple_of_Poseidon_at_Poros",
+            "desc": "Modest remains of a 6th-century BC temple — the setting in a pine forest with sea views on both sides is the draw. The orator Demosthenes took poison here rather than surrender to Macedon."
+          },
+          {
+            "name": "Lunch — Harbour Taverna",
+            "lat": 37.5,
+            "lng": 23.4567,
+            "type": "harbour",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "The harbour tavernas serve excellent grilled fish watching the boats from Galatas cross the straits. The crossing takes only 5 minutes."
+          },
+          {
+            "name": "Love Bay",
+            "lat": 37.4992,
+            "lng": 23.4469,
+            "type": "beach",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "The best beach on Poros — a sheltered sandy cove surrounded by pine forest. Clear, calm water and a romantic setting. 10 minutes from the town."
+          },
+          {
+            "name": "Poros — Departure",
+            "lat": 37.5,
+            "lng": 23.4567,
+            "type": "harbour",
+            "time": "18:00",
+            "wiki": null,
+            "desc": "Ferry to Piraeus, Hydra or the other Saronic islands. Frequent connections."
+          }
         ]
       }
     ]
   },
-
   "beaches": [
     {
       "name": "Love Bay",
@@ -39,7 +85,8 @@
       "facilities": "Good: sunbeds, beach bar, taverna. Pine trees provide shade.",
       "desc": "The finest beach on Poros — a small sheltered sandy cove surrounded entirely by pine forest. The water is calm and clear, the setting is intimate and picturesque. One of the most romantic small beaches in the Saronic.",
       "commons": null,
-      "lat": 37.4917, "lng": 23.4433
+      "lat": 37.4992,
+      "lng": 23.4469
     },
     {
       "name": "Askeli Beach",
@@ -52,7 +99,8 @@
       "facilities": "Fully organised: sunbeds, water sports, tavernas, hotels. The main resort beach.",
       "desc": "The largest and most developed beach on Poros — long, sandy and family-friendly. Less intimate than Love Bay but with more facilities and space. Base for most resort hotels on the island.",
       "commons": null,
-      "lat": 37.5117, "lng": 23.4833
+      "lat": 37.5069,
+      "lng": 23.4833
     }
   ]
 }

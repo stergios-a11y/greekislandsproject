@@ -3,7 +3,6 @@
   "name": "Santorini",
   "subtitle": "The caldera, the sunset and the world's most famous view",
   "intro": "Santorini is not primarily a beach island — come for the caldera, the architecture, the wine and the sunsets. The beaches exist and are worth visiting, but they are volcanic black and red, not the white sand of other Cyclades. Oia at sunset, the caldera from Fira, a boat tour around the volcano, and a glass of Assyrtiko white wine looking west: these are the reasons to come.",
-
   "itinerary": {
     "title": "3-Day Santorini Itinerary",
     "subtitle": "The caldera villages, the volcano, the black sand beaches and the best sunset in the Aegean.",
@@ -16,11 +15,51 @@
         "drive_mins": 20,
         "overnight": "Fira or Imerovigli",
         "stops": [
-          { "name": "Fira", "lat": 36.4169, "lng": 25.4320, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Fira", "desc": "The capital — perched on the caldera rim 300m above the sea. Walk the clifftop path north toward Imerovigli for the best caldera views on the island." },
-          { "name": "Archaeological Museum Fira", "lat": 36.4169, "lng": 25.4320, "type": "museum", "time": "10:00", "wiki": null, "desc": "Small but excellent — prehistoric finds from the ancient city of Akrotiri and the Minoan eruption. The frescoes here are extraordinary." },
-          { "name": "Caldera Path (Fira to Imerovigli)", "lat": 36.4317, "lng": 25.4267, "type": "nature", "time": "11:30", "wiki": null, "desc": "The finest walk in Santorini — 4km along the caldera edge from Fira to Imerovigli. The views of the volcano, the sea and the Cycladic architecture are unbeatable. Allow 1.5 hours." },
-          { "name": "Lunch — Skaros Rock", "lat": 36.4383, "lng": 25.4233, "type": "castle", "time": "13:30", "wiki": "https://en.wikipedia.org/wiki/Skaros", "desc": "The medieval rock fortress below Imerovigli. Scramble out to the chapel at the tip for the best caldera view on the island. Lunch at a taverna above it." },
-          { "name": "Perissa Beach", "lat": 36.3517, "lng": 25.4783, "type": "beach", "time": "16:00", "wiki": null, "desc": "Santorini's finest black sand beach, 3km long beneath the cliffs of Mesa Vouno. Good swimming, excellent tavernas, very lively in the evening." }
+          {
+            "name": "Fira",
+            "lat": 36.4169,
+            "lng": 25.432,
+            "type": "city",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Fira",
+            "desc": "The capital — perched on the caldera rim 300m above the sea. Walk the clifftop path north toward Imerovigli for the best caldera views on the island."
+          },
+          {
+            "name": "Archaeological Museum Fira",
+            "lat": 36.4169,
+            "lng": 25.432,
+            "type": "museum",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Small but excellent — prehistoric finds from the ancient city of Akrotiri and the Minoan eruption. The frescoes here are extraordinary."
+          },
+          {
+            "name": "Caldera Path (Fira to Imerovigli)",
+            "lat": 36.4317,
+            "lng": 25.4267,
+            "type": "nature",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "The finest walk in Santorini — 4km along the caldera edge from Fira to Imerovigli. The views of the volcano, the sea and the Cycladic architecture are unbeatable. Allow 1.5 hours."
+          },
+          {
+            "name": "Lunch — Skaros Rock",
+            "lat": 36.4383,
+            "lng": 25.4233,
+            "type": "castle",
+            "time": "13:30",
+            "wiki": "https://en.wikipedia.org/wiki/Skaros",
+            "desc": "The medieval rock fortress below Imerovigli. Scramble out to the chapel at the tip for the best caldera view on the island. Lunch at a taverna above it."
+          },
+          {
+            "name": "Perissa Beach",
+            "lat": 36.3583,
+            "lng": 25.4814,
+            "type": "beach",
+            "time": "16:00",
+            "wiki": null,
+            "desc": "Santorini's finest black sand beach, 3km long beneath the cliffs of Mesa Vouno. Good swimming, excellent tavernas, very lively in the evening."
+          }
         ]
       },
       {
@@ -31,11 +70,51 @@
         "drive_mins": 25,
         "overnight": "Oia",
         "stops": [
-          { "name": "Nea Kameni Volcano", "lat": 36.4017, "lng": 25.3933, "type": "nature", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Nea_Kameni", "desc": "Boat from Fira old port to the active volcanic island in the caldera. Walk up the crater — the last eruption was 1950. Still venting sulphur. One of the best active volcano experiences in Europe." },
-          { "name": "Palea Kameni Hot Springs", "lat": 36.3917, "lng": 25.3767, "type": "spa", "time": "11:00", "wiki": null, "desc": "Swim in the thermal hot springs that bubble up from the sea floor near Palea Kameni. The water is warm and orange with minerals. Swim from the boat." },
-          { "name": "Red Beach", "lat": 36.3517, "lng": 25.3967, "type": "beach", "time": "13:30", "wiki": "https://en.wikipedia.org/wiki/Red_Beach,_Santorini", "desc": "Dramatic red volcanic cliffs above black and red pebble beach near Akrotiri. Rockfall risk — view from the platform above rather than walking under the cliffs. Best photographed from the sea." },
-          { "name": "Akrotiri Excavations", "lat": 36.3517, "lng": 25.4033, "type": "museum", "time": "15:00", "wiki": "https://en.wikipedia.org/wiki/Akrotiri_(Santorini)", "desc": "The Pompeii of the Aegean — a Minoan city buried by the 1600 BC volcanic eruption. Extraordinarily preserved under a modern roof. The painted frescoes found here are in the National Museum in Athens." },
-          { "name": "Oia Sunset", "lat": 36.4617, "lng": 25.3750, "type": "village", "time": "18:30", "wiki": "https://en.wikipedia.org/wiki/Oia,_Santorini", "desc": "The most famous sunset in the world. The entire village fills with people from 19:00 — arrive by 18:30 and claim your spot. The kastro ruins at the north end give the best unobstructed view." }
+          {
+            "name": "Nea Kameni Volcano",
+            "lat": 36.4017,
+            "lng": 25.3933,
+            "type": "nature",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Nea_Kameni",
+            "desc": "Boat from Fira old port to the active volcanic island in the caldera. Walk up the crater — the last eruption was 1950. Still venting sulphur. One of the best active volcano experiences in Europe."
+          },
+          {
+            "name": "Palea Kameni Hot Springs",
+            "lat": 36.3917,
+            "lng": 25.3767,
+            "type": "spa",
+            "time": "11:00",
+            "wiki": null,
+            "desc": "Swim in the thermal hot springs that bubble up from the sea floor near Palea Kameni. The water is warm and orange with minerals. Swim from the boat."
+          },
+          {
+            "name": "Red Beach",
+            "lat": 36.3481,
+            "lng": 25.3939,
+            "type": "beach",
+            "time": "13:30",
+            "wiki": "https://en.wikipedia.org/wiki/Red_Beach,_Santorini",
+            "desc": "Dramatic red volcanic cliffs above black and red pebble beach near Akrotiri. Rockfall risk — view from the platform above rather than walking under the cliffs. Best photographed from the sea."
+          },
+          {
+            "name": "Akrotiri Excavations",
+            "lat": 36.3517,
+            "lng": 25.4033,
+            "type": "museum",
+            "time": "15:00",
+            "wiki": "https://en.wikipedia.org/wiki/Akrotiri_(Santorini)",
+            "desc": "The Pompeii of the Aegean — a Minoan city buried by the 1600 BC volcanic eruption. Extraordinarily preserved under a modern roof. The painted frescoes found here are in the National Museum in Athens."
+          },
+          {
+            "name": "Oia Sunset",
+            "lat": 36.4617,
+            "lng": 25.375,
+            "type": "village",
+            "time": "18:30",
+            "wiki": "https://en.wikipedia.org/wiki/Oia,_Santorini",
+            "desc": "The most famous sunset in the world. The entire village fills with people from 19:00 — arrive by 18:30 and claim your spot. The kastro ruins at the north end give the best unobstructed view."
+          }
         ]
       },
       {
@@ -46,15 +125,46 @@
         "drive_mins": 40,
         "overnight": null,
         "stops": [
-          { "name": "Santo Wines", "lat": 36.3983, "lng": 25.4450, "type": "distillery", "time": "09:30", "wiki": null, "desc": "The finest winery on Santorini, perched on the caldera rim. Taste Assyrtiko — the island's extraordinary white wine made from pre-phylloxera vines in volcanic soil. The caldera view from the terrace is spectacular." },
-          { "name": "Pyrgos Village", "lat": 36.3800, "lng": 25.4517, "type": "village", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Pyrgos,_Santorini", "desc": "The most authentic village in Santorini — a medieval settlement with a Venetian castle at the summit, completely free of tourist shops. The view from the top is 360° over the whole island." },
-          { "name": "Vlychada Beach", "lat": 36.3317, "lng": 25.4433, "type": "beach", "time": "14:00", "wiki": null, "desc": "The most unusual beach on the island — 1.5km of black sand beneath extraordinary white pumice cliffs carved by the wind into lunar formations. Far less crowded than Perissa. The cliff scenery is the best on the island." },
-          { "name": "Fira — Departure", "lat": 36.4169, "lng": 25.4320, "type": "city", "time": "17:00", "wiki": null, "desc": "Return to Fira for the ferry or airport. Final Assyrtiko at a caldera bar." }
+          {
+            "name": "Santo Wines",
+            "lat": 36.3983,
+            "lng": 25.445,
+            "type": "distillery",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "The finest winery on Santorini, perched on the caldera rim. Taste Assyrtiko — the island's extraordinary white wine made from pre-phylloxera vines in volcanic soil. The caldera view from the terrace is spectacular."
+          },
+          {
+            "name": "Pyrgos Village",
+            "lat": 36.38,
+            "lng": 25.4517,
+            "type": "village",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Pyrgos,_Santorini",
+            "desc": "The most authentic village in Santorini — a medieval settlement with a Venetian castle at the summit, completely free of tourist shops. The view from the top is 360° over the whole island."
+          },
+          {
+            "name": "Vlychada Beach",
+            "lat": 36.335,
+            "lng": 25.4428,
+            "type": "beach",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "The most unusual beach on the island — 1.5km of black sand beneath extraordinary white pumice cliffs carved by the wind into lunar formations. Far less crowded than Perissa. The cliff scenery is the best on the island."
+          },
+          {
+            "name": "Fira — Departure",
+            "lat": 36.4169,
+            "lng": 25.432,
+            "type": "city",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Return to Fira for the ferry or airport. Final Assyrtiko at a caldera bar."
+          }
         ]
       }
     ]
   },
-
   "beaches": [
     {
       "name": "Perissa Beach",
@@ -67,7 +177,8 @@
       "facilities": "Fully organised: sunbeds, beach bars, tavernas, water sports, hotels behind the beach.",
       "desc": "Santorini's best beach — 3km of black volcanic sand beneath the towering cliffs of Mesa Vouno. The black sand gets scorching hot midday so bring sandals. Good swimming, excellent beach bars and the liveliest evening scene of any beach on the island. The Ancient Thera ruins are a 45-minute hike up the cliff above.",
       "commons": "Perissa_beach_Santorini.jpg",
-      "lat": 36.3517, "lng": 25.4783
+      "lat": 36.3583,
+      "lng": 25.4814
     },
     {
       "name": "Vlychada Beach",
@@ -80,7 +191,8 @@
       "facilities": "Basic: one beach bar at the south end. Quiet and far less crowded than Perissa.",
       "desc": "The most visually striking beach on the island — lunar white pumice cliffs carved by wind erosion tower over black sand. Often called the 'moon beach'. Far quieter than Perissa and Kamari. The small harbour at the south end has fishing boats and the surreal Tomato Industrial Museum.",
       "commons": null,
-      "lat": 36.3317, "lng": 25.4433
+      "lat": 36.335,
+      "lng": 25.4428
     },
     {
       "name": "Red Beach",
@@ -93,7 +205,8 @@
       "facilities": "Basic: one beach bar. NOTE: Do not walk under the red cliffs — active rockfall. View from the platform above or swim from a boat.",
       "desc": "The most photographed beach in Santorini — dramatic deep red volcanic cliffs above black and red pebbles. The colour contrast is extraordinary. Best viewed from the platform above or approached by boat. The close path under the cliffs carries rockfall risk and should be avoided.",
       "commons": "Red_Beach_Santorini.jpg",
-      "lat": 36.3517, "lng": 25.3967
+      "lat": 36.3481,
+      "lng": 25.3939
     }
   ]
 }
