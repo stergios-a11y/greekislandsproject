@@ -482,9 +482,7 @@ function buildIslandPage(data) {
     // Support direct photo URL (Cloudinary, Unsplash etc) OR Wikimedia commons filename
     const photoHtml = b.photo
       ? `<div class="beach-photo-wrap"><img class="beach-photo" src="${b.photo}" alt="${b.name}" loading="lazy" onerror="this.parentElement.style.display='none'"></div>`
-      : b.commons
-        ? `<div class="beach-photo-wrap" id="${photoId}-wrap"><div class="beach-photo-placeholder">🏖️</div></div>`
-        : '';
+      : '';
     const beachId = (currentIslandKey + '_' + b.name).replace(/[^a-z0-9]/gi, '_').toLowerCase();
     return `<div class="beach-card">
       ${photoHtml}
@@ -499,7 +497,7 @@ function buildIslandPage(data) {
                 <div class="beach-stars">${'\u2605'.repeat(b.rating || 4)}${'\u2606'.repeat(5 - (b.rating || 4))}</div>
               </div>
               <div class="beach-rating-block">
-                <span class="beach-rating-label">Community <span class="beach-vote-count" id="vote-count-${beachId}"></span></span>
+                <span class="beach-rating-label">Your rating <span class="beach-vote-count" id="vote-count-${beachId}"></span></span>
                 <div class="beach-vote-stars" id="vote-stars-${beachId}" data-beach-id="${beachId}">
                   ${[1,2,3,4,5].map(s => `<span class="vote-star" data-score="${s}" onclick="voteBeach('${beachId}',${s})">☆</span>`).join('')}
                 </div>
@@ -549,30 +547,16 @@ function buildIslandPage(data) {
 }
 
 /* ============================================================
-   BEACH PHOTOS — loaded from Wikimedia Commons API
+   BEACH PHOTOS — Cloudinary URLs only (fast, no API calls)
 ============================================================ */
+// Legacy commons field support: if a beach has 'commons' but no 'photo',
+// hide the placeholder since we no longer fetch from Wikimedia.
 async function loadBeachPhotos(beaches) {
   for (let i = 0; i < beaches.length; i++) {
     const b = beaches[i];
-    if (b.photo) continue; // already handled inline
-    if (!b.commons) continue;
+    if (b.photo) continue;
     const wrap = document.getElementById(`beach-photo-${i}-wrap`);
-    if (!wrap) continue;
-    try {
-      const title = 'File:' + b.commons;
-      const url = `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(title)}&prop=pageimages&pithumbsize=800&format=json&origin=*`;
-      const res = await fetch(url);
-      const data = await res.json();
-      const pages = data.query.pages;
-      const page = Object.values(pages)[0];
-      if (page && page.thumbnail && page.thumbnail.source) {
-        wrap.innerHTML = `<img class="beach-photo" src="${page.thumbnail.source}" alt="${b.name}" loading="lazy">`;
-      } else {
-        wrap.style.display = 'none';
-      }
-    } catch(e) {
-      wrap.style.display = 'none';
-    }
+    if (wrap) wrap.style.display = 'none';
   }
 }
 
