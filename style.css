@@ -1625,3 +1625,85 @@ html.dark .leaflet-popup-tip {
 html.dark .leaflet-popup-content {
   color: var(--ink-1, #e8ecf1) !important;
 }
+
+/* Ferry Routes Map — legend and styling */
+.ferry-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 16px 20px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+  font-size: 13px;
+  color: var(--ink-2);
+  font-family: var(--sans);
+}
+.ferry-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ferry-legend-line {
+  display: inline-block;
+  width: 40px;
+  height: 0;
+  border-top-style: solid;
+  border-top-width: 4px;
+}
+.ferry-freq-high {
+  border-top-color: #0B8FAC;
+  border-top-width: 4px;
+}
+.ferry-freq-med {
+  border-top-color: #FF6B6B;
+  border-top-width: 3px;
+}
+.ferry-freq-low {
+  border-top-color: #C4962A;
+  border-top-width: 2px;
+  border-top-style: dashed;
+}
+
+/* Ferry map container */
+#ferry-map {
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+html.dark #ferry-map {
+  border-color: var(--border);
+}
+
+/* Mobile legend stacking */
+@media (max-width: 640px) {
+  .ferry-legend {
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 16px;
+  }
+  .ferry-legend-item { font-size: 12px; }
+  #ferry-map { height: 500px !important; }
+}
+
+/* Hopping intro */
+.hopping-intro {
+  color: var(--ink-3);
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.hopping-header h1 {
+  margin-bottom: 6px;
+}
+
+/* Boost complementary pairings heading */
+#view-hopping h2 {
+  font-family: var(--display);
+  font-size: 24px;
+  color: var(--ink-1);
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}

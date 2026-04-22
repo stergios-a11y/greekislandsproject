@@ -154,8 +154,18 @@
   </main>
 
   <main id="view-hopping" class="view-section content-page" style="display:none;">
-    <h1>Perfect Pairings</h1>
-    <p class="hopping-intro">Auto-generated from complementary scores and ferry proximity.</p>
+    <div class="hopping-header">
+      <h1>🚢 Island Hopping</h1>
+      <p class="hopping-intro">The most travelled Greek ferry routes — the backbone of any island-hopping trip. Hover over a line for details, click a port to open its island page. Colour shows frequency: <strong style="color:#0B8FAC">turquoise</strong> = many per day, <strong style="color:#FF6B6B">coral</strong> = one or two per day, <strong style="color:#C4962A">gold dashed</strong> = a few times per week.</p>
+    </div>
+    <div id="ferry-map" style="height:600px;border-radius:16px;overflow:hidden;margin-bottom:20px;"></div>
+    <div class="ferry-legend">
+      <span class="ferry-legend-item"><span class="ferry-legend-line ferry-freq-high"></span>High frequency (daily, multiple)</span>
+      <span class="ferry-legend-item"><span class="ferry-legend-line ferry-freq-med"></span>Medium (1-2 per day)</span>
+      <span class="ferry-legend-item"><span class="ferry-legend-line ferry-freq-low"></span>Low (few per week)</span>
+    </div>
+    <h2 style="margin-top:40px">Complementary Island Pairings</h2>
+    <p class="hopping-intro">Beyond the ferry map — these are islands that work well together as a 2-island trip. We pick pairs based on short ferry distance plus complementary strengths (e.g. a beach island paired with a culture-heavy one).</p>
     <div id="hopping-list"></div>
   </main>
 

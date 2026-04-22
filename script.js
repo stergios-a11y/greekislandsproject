@@ -1092,7 +1092,128 @@ function renderCompareCards(iA, iB) {
 ============================================================ */
 function setupHopping() {}
 
+
+
+/* ============================================================
+   FERRY ROUTES MAP — 15 most popular Greek ferry connections
+============================================================ */
+// Piraeus location (not an island, used as start of many routes)
+const PIRAEUS = { name: 'Piraeus (Athens)', lat: 37.940, lng: 23.643 };
+
+// Each route: from, to, frequency (high/med/low), duration, note
+const FERRY_ROUTES = [
+  // Classic Cyclades triangle
+  { from: 'piraeus', to: 'syros', freq: 'high', duration: '~4 hrs', note: 'Daily · ~4 hrs · Blue Star, Golden Star' },
+  { from: 'syros', to: 'tinos', freq: 'high', duration: '~30 min', note: '6/week · ~30 min · Fast ferry' },
+  { from: 'tinos', to: 'mykonos', freq: 'high', duration: '~20-30 min', note: 'Daily · short fast-ferry hop' },
+  { from: 'mykonos', to: 'paros', freq: 'high', duration: '~45 min', note: 'Daily multiple · ~45 min' },
+  { from: 'naxos', to: 'paros', freq: 'high', duration: '~30-45 min', note: 'Daily multiple · shortest major Cyclades hop' },
+
+  // Santorini hub
+  { from: 'santorini', to: 'mykonos', freq: 'high', duration: '2-3 hrs', note: 'Daily · 2-3 hrs · the iconic Cyclades hop' },
+  { from: 'santorini', to: 'ios', freq: 'high', duration: '40-60 min', note: 'Daily · 40-60 min' },
+  { from: 'santorini', to: 'naxos', freq: 'high', duration: '1.5-2 hrs', note: 'Daily · 1.5-2 hrs' },
+  { from: 'santorini', to: 'milos', freq: 'med', duration: '~3 hrs', note: 'Daily in summer · ~3 hrs' },
+
+  // Dodecanese
+  { from: 'rhodes', to: 'symi', freq: 'high', duration: '~1 hr', note: 'Daily · ~1 hr · best day trip from Rhodes' },
+  { from: 'rhodes', to: 'kos', freq: 'high', duration: '2-3 hrs', note: 'Daily · 2-3 hrs' },
+
+  // Saronic (Athens day trips)
+  { from: 'piraeus', to: 'aegina', freq: 'high', duration: '40-70 min', note: '10-12/day · 40-70 min · easiest Athens escape' },
+  { from: 'piraeus', to: 'hydra', freq: 'high', duration: '~90 min', note: '5-6/day · ~90 min · hydrofoil' },
+  { from: 'piraeus', to: 'poros', freq: 'high', duration: '60-90 min', note: '5-6/day · 60-90 min · hydrofoil' },
+
+  // Small Cyclades loop (Express Skopelitis) - draw all legs
+  { from: 'naxos', to: 'iraklia', freq: 'low', duration: '~1.5 hrs', note: 'Express Skopelitis · 6/week · Small Cyclades Lines' },
+  { from: 'iraklia', to: 'schinoussa', freq: 'low', duration: '~20 min', note: 'Express Skopelitis · Small Cyclades loop' },
+  { from: 'schinoussa', to: 'koufonisia', freq: 'low', duration: '~30 min', note: 'Express Skopelitis · Small Cyclades loop' },
+  { from: 'koufonisia', to: 'donousa', freq: 'low', duration: '~45 min', note: 'Express Skopelitis · Small Cyclades loop' },
+  { from: 'donousa', to: 'amorgos', freq: 'low', duration: '~1 hr', note: 'Express Skopelitis · to Aegiali port' },
+];
+
+// Small Cyclades islands (some not in the main islands data - just for the map)
+const EXTRA_PORTS = {
+  'iraklia': { name: 'Iraklia', lat: 36.840, lng: 25.467 },
+  'schinoussa': { name: 'Schinoussa', lat: 36.867, lng: 25.520 },
+  'koufonisia': { name: 'Koufonisia', lat: 36.933, lng: 25.597 },
+  'donousa': { name: 'Donousa', lat: 36.107, lng: 25.817 },
+};
+
+function getPortCoords(key) {
+  if (key === 'piraeus') return PIRAEUS;
+  if (ISLANDS_DATA[key]) return ISLANDS_DATA[key];
+  if (EXTRA_PORTS[key]) return EXTRA_PORTS[key];
+  return null;
+}
+
+function renderFerryMap() {
+  const mapEl = document.getElementById('ferry-map');
+  if (!mapEl || mapEl._map) return; // already rendered
+  
+  const ferryMap = L.map('ferry-map', {
+    zoomControl: true, minZoom: 6, maxZoom: 10,
+    maxBounds: [[34.5, 19.0], [41.0, 29.5]], maxBoundsViscosity: 0.85
+  }).setView([37.5, 25.2], 7);
+  
+  mapEl._map = ferryMap;
+  addThemeAwareTiles(ferryMap, { maxZoom: 10 });
+  L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(ferryMap);
+  
+  // Frequency colours & weights
+  const freqStyle = {
+    high: { color: '#0B8FAC', weight: 4, opacity: 0.85 },
+    med:  { color: '#FF6B6B', weight: 3, opacity: 0.75 },
+    low:  { color: '#C4962A', weight: 2, opacity: 0.65 },
+  };
+  
+  // Draw routes
+  const drawnPorts = new Set();
+  FERRY_ROUTES.forEach(route => {
+    const from = getPortCoords(route.from);
+    const to = getPortCoords(route.to);
+    if (!from || !to) return;
+    
+    const style = freqStyle[route.freq] || freqStyle.low;
+    const line = L.polyline([[from.lat, from.lng], [to.lat, to.lng]], {
+      color: style.color, weight: style.weight, opacity: style.opacity,
+      dashArray: route.freq === 'low' ? '6, 6' : null,
+    }).addTo(ferryMap);
+    
+    const tooltip = `<strong>${from.name} ↔ ${to.name}</strong><br><span style="font-size:11px;color:var(--ink-3)">${route.note}</span>`;
+    line.bindTooltip(tooltip, { sticky: true, opacity: 1, className: 'island-tooltip' });
+    
+    drawnPorts.add(route.from);
+    drawnPorts.add(route.to);
+  });
+  
+  // Draw port markers
+  drawnPorts.forEach(key => {
+    const port = getPortCoords(key);
+    if (!port) return;
+    const isPiraeus = key === 'piraeus';
+    const marker = L.circleMarker([port.lat, port.lng], {
+      radius: isPiraeus ? 8 : 6,
+      color: isPiraeus ? '#E8522A' : '#076880',
+      fillColor: isPiraeus ? '#FF6B6B' : '#0B8FAC',
+      fillOpacity: 0.9,
+      weight: 2,
+    }).addTo(ferryMap);
+    
+    marker.bindTooltip(`<strong>${port.name}</strong>`, { 
+      direction: 'top', opacity: 1, className: 'island-tooltip' 
+    });
+    
+    // Click to navigate to island if it has a page
+    if (ISLANDS_DATA[key]) {
+      marker.on('click', () => navigateTo('island', key));
+    }
+  });
+}
+
+
 function renderHopping() {
+  renderFerryMap();
   const container = document.getElementById('hopping-list');
   if (!container || container.dataset.rendered) return;
   container.dataset.rendered = '1';
