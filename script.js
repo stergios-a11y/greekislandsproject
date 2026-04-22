@@ -130,6 +130,53 @@ function parseHash() {
   return { view: VIEW_HASH_MAP[hash] || 'home', param: null };
 }
 
+
+/* ============================================================
+   MAP TILES — switch between light and dark tiles based on theme
+============================================================ */
+function getTileUrl() {
+  const isDark = document.documentElement.classList.contains('dark');
+  return isDark
+    ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'
+    : 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+}
+
+function getTileAttribution() {
+  const isDark = document.documentElement.classList.contains('dark');
+  return isDark
+    ? '© OpenStreetMap contributors © CARTO'
+    : '© OpenStreetMap contributors';
+}
+
+// Track active tile layers so we can swap them when theme changes
+const _activeTileLayers = [];
+
+function addThemeAwareTiles(map, options = {}) {
+  const isDark = document.documentElement.classList.contains('dark');
+  const layer = L.tileLayer(getTileUrl(), {
+    attribution: getTileAttribution(),
+    maxZoom: options.maxZoom || 14,
+    subdomains: isDark ? 'abcd' : 'abc'
+  });
+  layer.addTo(map);
+  _activeTileLayers.push({ map, layer, options });
+  return layer;
+}
+
+function swapAllTiles() {
+  const isDark = document.documentElement.classList.contains('dark');
+  _activeTileLayers.forEach(entry => {
+    entry.map.removeLayer(entry.layer);
+    entry.layer = L.tileLayer(getTileUrl(), {
+      attribution: getTileAttribution(),
+      maxZoom: entry.options.maxZoom || 14,
+      subdomains: isDark ? 'abcd' : 'abc'
+    });
+    entry.layer.addTo(entry.map);
+  });
+}
+
+
 function navigateTo(view, param) {
   const hash = view === 'home' ? '#map' : view === 'island' ? `#island/${param}` : `#${view}`;
   if (window.location.hash !== hash) history.pushState({ view, param }, '', hash);
@@ -273,6 +320,7 @@ function setupDarkMode() {
     btn.textContent = isDark ? '☀' : '☾';
     localStorage.setItem('darkMode', isDark);
     if (radarChartInstance) renderRadarChart();
+    swapAllTiles();
   });
 }
 
@@ -283,7 +331,7 @@ function setupMap() {
   const GREECE_BOUNDS = L.latLngBounds(L.latLng(33.8, 18.5), L.latLng(42.2, 30.2));
   mapInstance = L.map('main-map', { zoomControl: true, minZoom: 6, maxZoom: 14, maxBounds: GREECE_BOUNDS, maxBoundsViscosity: 0.85 });
   mapInstance.fitBounds(GREECE_BOUNDS);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap contributors', maxZoom: 14 }).addTo(mapInstance);
+  addThemeAwareTiles(mapInstance, { maxZoom: 14 });
   L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(mapInstance);
   renderMapMarkers();
   const searchInput = document.getElementById('islandSearch');
@@ -316,13 +364,13 @@ function renderMapMarkers() {
     const marker = L.marker([island.lat, island.lng], { icon: makeMarkerIcon(score) })
       .addTo(mapInstance)
       .bindTooltip(`
-        <div style="font-family:sans-serif;min-width:140px">
-          <div style="font-weight:700;font-size:13px;color:#1a2332">${island.name}</div>
-          <div style="font-size:11px;color:#888;margin:2px 0">${island.island_group} · ${fmtNum(island.area)} km²</div>
-          <div style="margin-top:5px;font-size:12px">Overall: <strong style="color:${scoreToColor(island.total)}">${fmt(island.total)} ★</strong></div>
-          <div style="font-size:11px;color:#666;margin-top:2px">Beach ${fmt(island.beach)} · Culture ${fmt(island.hist)} · Night ${fmt(island.night)}</div>
-          ${island.days ? `<div style="margin-top:5px;font-size:11px;font-weight:700;color:var(--aegean,#0B8FAC)">⏱ ${island.days} days recommended</div>` : ''}
-          <div style="margin-top:3px;font-size:11px;color:var(--aegean,#0B8FAC)">Click to explore →</div>
+        <div class="island-tooltip-inner">
+          <div class="itt-name">${island.name}</div>
+          <div class="itt-meta">${island.island_group} · ${fmtNum(island.area)} km²</div>
+          <div class="itt-overall">Overall: <strong style="color:${scoreToColor(island.total)}">${fmt(island.total)} ★</strong></div>
+          <div class="itt-dims">Beach ${fmt(island.beach)} · Culture ${fmt(island.hist)} · Night ${fmt(island.night)}</div>
+          ${island.days ? `<div class="itt-days">⏱ ${island.days} days recommended</div>` : ''}
+          <div class="itt-cta">Click to explore →</div>
         </div>
       `, { sticky: false, opacity: 1, className: 'island-tooltip' });
     marker.on('click', () => navigateTo('island', island.key));
@@ -439,7 +487,7 @@ async function renderIslandPage(key) {
     miniMapEl.style.height = '220px';
     setTimeout(() => {
       miniMapInstance = L.map(miniMapEl, { zoomControl: false, attributionControl: false }).setView([island.lat, island.lng], 9);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(miniMapInstance);
+      addThemeAwareTiles(miniMapInstance);
       L.marker([island.lat, island.lng]).addTo(miniMapInstance).bindPopup(island.name).openPopup();
     }, 50);
   }
@@ -680,9 +728,7 @@ async function initItineraryMap(days) {
   itinMarkerLayers = {};
 
   itineraryMapInstance = L.map(mapEl, { zoomControl: true, attributionControl: true });
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors', maxZoom: 16,
-  }).addTo(itineraryMapInstance);
+  addThemeAwareTiles(itineraryMapInstance, { maxZoom: 16 });
   L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(itineraryMapInstance);
 
   const allCoords = days.flatMap(d => d.stops.map(s => [s.lat, s.lng]));
