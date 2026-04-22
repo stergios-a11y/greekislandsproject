@@ -3,7 +3,6 @@
   "name": "Elafonisos",
   "subtitle": "The Caribbean of the Peloponnese — Simos beach and electric blue water",
   "intro": "Elafonisos is a tiny island just off the southern Peloponnese — separated from the mainland by a 500-metre strait. It has one village, a handful of tavernas, and Simos beach: a double bay of pale pink-white sand and turquoise water that regularly ranks among the best beaches in Europe. The whole island takes 30 minutes to cross on foot. Come here for the beach and nothing else — it is extraordinary.",
-
   "itinerary": {
     "title": "2-Day Elafonisos Itinerary",
     "subtitle": "A short, focused escape to one of Greece's finest beaches — Simos, the village harbour and the quiet coves of the north coast.",
@@ -16,11 +15,51 @@
         "drive_mins": 10,
         "overnight": "Elafonisos Village",
         "stops": [
-          { "name": "Elafonisos Ferry", "lat": 36.4983, "lng": 22.9733, "type": "harbour", "time": "09:00", "wiki": null, "desc": "Ferry from Pounta on the mainland — 5 minutes across the strait. Cars can cross but the island is best explored on foot or by bicycle." },
-          { "name": "Elafonisos Village", "lat": 36.4983, "lng": 22.9817, "type": "city", "time": "09:15", "wiki": "https://en.wikipedia.org/wiki/Elafonisos", "desc": "The only settlement on the island — a small fishing village with whitewashed houses, a harbour, and a handful of tavernas and rooms. Quiet, genuine and unhurried." },
-          { "name": "Simos Beach", "lat": 36.4667, "lng": 22.9617, "type": "beach", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Simos_Beach", "desc": "Consistently one of the best beaches in Europe — a double bay of pink-white sand with Caribbean-blue water, separated by a low sand dune. Both bays have a completely different character. The water colour is extraordinary." },
-          { "name": "Lunch — Harbour Taverna", "lat": 36.4983, "lng": 22.9817, "type": "harbour", "time": "14:30", "wiki": null, "desc": "Return to the village for lunch. The fresh fish here is exceptional — grilled octopus, grilled sea bream, local wine. Inexpensive and very good." },
-          { "name": "Simos Sunset", "lat": 36.4667, "lng": 22.9617, "type": "beach", "time": "18:00", "wiki": null, "desc": "Return to Simos for the late afternoon — the beach empties as day trippers leave, and the water turns from turquoise to gold. The best time of day." }
+          {
+            "name": "Elafonisos Ferry",
+            "lat": 36.4983,
+            "lng": 22.9733,
+            "type": "harbour",
+            "time": "09:00",
+            "wiki": null,
+            "desc": "Ferry from Pounta on the mainland — 5 minutes across the strait. Cars can cross but the island is best explored on foot or by bicycle."
+          },
+          {
+            "name": "Elafonisos Village",
+            "lat": 36.4983,
+            "lng": 22.9817,
+            "type": "city",
+            "time": "09:15",
+            "wiki": "https://en.wikipedia.org/wiki/Elafonisos",
+            "desc": "The only settlement on the island — a small fishing village with whitewashed houses, a harbour, and a handful of tavernas and rooms. Quiet, genuine and unhurried."
+          },
+          {
+            "name": "Simos Beach",
+            "lat": 36.4667,
+            "lng": 22.9617,
+            "type": "beach",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Simos_Beach",
+            "desc": "Consistently one of the best beaches in Europe — a double bay of pink-white sand with Caribbean-blue water, separated by a low sand dune. Both bays have a completely different character. The water colour is extraordinary."
+          },
+          {
+            "name": "Lunch — Harbour Taverna",
+            "lat": 36.4983,
+            "lng": 22.9817,
+            "type": "harbour",
+            "time": "14:30",
+            "wiki": null,
+            "desc": "Return to the village for lunch. The fresh fish here is exceptional — grilled octopus, grilled sea bream, local wine. Inexpensive and very good."
+          },
+          {
+            "name": "Simos Sunset",
+            "lat": 36.4667,
+            "lng": 22.9617,
+            "type": "beach",
+            "time": "18:00",
+            "wiki": null,
+            "desc": "Return to Simos for the late afternoon — the beach empties as day trippers leave, and the water turns from turquoise to gold. The best time of day."
+          }
         ]
       },
       {
@@ -31,15 +70,46 @@
         "drive_mins": 8,
         "overnight": null,
         "stops": [
-          { "name": "Kalogeros Beach", "lat": 36.5033, "lng": 22.9783, "type": "beach", "time": "09:30", "wiki": null, "desc": "Small pebble beach on the north coast near the village — calm, clear water, usually very quiet. Good for a morning swim before leaving." },
-          { "name": "Panagia Beach", "lat": 36.4900, "lng": 22.9983, "type": "beach", "time": "11:00", "wiki": null, "desc": "Quiet sandy beach on the east side of the island. Less spectacular than Simos but calm, uncrowded and peaceful." },
-          { "name": "Simos — Final Swim", "lat": 36.4667, "lng": 22.9617, "type": "beach", "time": "12:30", "wiki": null, "desc": "One final swim at Simos before the ferry back. The beach is quieter in the late morning before the day trippers arrive from the mainland." },
-          { "name": "Ferry to Mainland", "lat": 36.4983, "lng": 22.9733, "type": "harbour", "time": "15:00", "wiki": null, "desc": "Ferry back to Pounta. The 5-minute crossing is the shortest sea journey to leave one of Europe's best beaches behind." }
+          {
+            "name": "Kalogeros Beach",
+            "lat": 36.5033,
+            "lng": 22.9783,
+            "type": "beach",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "Small pebble beach on the north coast near the village — calm, clear water, usually very quiet. Good for a morning swim before leaving."
+          },
+          {
+            "name": "Panagia Beach",
+            "lat": 36.49,
+            "lng": 22.9983,
+            "type": "beach",
+            "time": "11:00",
+            "wiki": null,
+            "desc": "Quiet sandy beach on the east side of the island. Less spectacular than Simos but calm, uncrowded and peaceful."
+          },
+          {
+            "name": "Simos — Final Swim",
+            "lat": 36.4667,
+            "lng": 22.9617,
+            "type": "beach",
+            "time": "12:30",
+            "wiki": null,
+            "desc": "One final swim at Simos before the ferry back. The beach is quieter in the late morning before the day trippers arrive from the mainland."
+          },
+          {
+            "name": "Ferry to Mainland",
+            "lat": 36.4983,
+            "lng": 22.9733,
+            "type": "harbour",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Ferry back to Pounta. The 5-minute crossing is the shortest sea journey to leave one of Europe's best beaches behind."
+          }
         ]
       }
     ]
   },
-
   "beaches": [
     {
       "name": "Simos Beach",
@@ -52,7 +122,8 @@
       "facilities": "Moderate: sunbeds and umbrellas (one organiser), beach bar, basic snack shack. No large resort development.",
       "desc": "One of the finest beaches in Europe — a double bay of white-pink sand and water that shifts from pale turquoise to deep cobalt depending on depth. The two bays are separated by a low dune and have completely different characters. No overdevelopment. The morning and evening light here is extraordinary.",
       "commons": "Simos_beach_Elafonisos.jpg",
-      "lat": 36.4667, "lng": 22.9617
+      "lat": 36.4667,
+      "lng": 22.9617
     },
     {
       "name": "Kalogeros Beach",
@@ -65,7 +136,8 @@
       "facilities": "Basic: close to the village, easy walk.",
       "desc": "The village beach — a short walk from the harbour. Calm, clear water in the sheltered strait between Elafonisos and the mainland. Good for a quick morning swim.",
       "commons": null,
-      "lat": 36.5033, "lng": 22.9783
+      "lat": 36.5033,
+      "lng": 22.9783
     },
     {
       "name": "Panagia Beach",
@@ -78,7 +150,8 @@
       "facilities": "Basic: accessible by a short walk from the village.",
       "desc": "A quiet sandy beach on the east coast — less dramatic than Simos but calm, clear and almost always uncrowded. A good option if Simos is too busy.",
       "commons": null,
-      "lat": 36.4900, "lng": 22.9983
+      "lat": 36.49,
+      "lng": 22.9983
     },
     {
       "name": "Simos West Bay",
@@ -91,7 +164,8 @@
       "facilities": "Minimal — the wilder of the two Simos bays, fewer sunbeds.",
       "desc": "The western bay of Simos — the quieter, wilder of the two bays. Longer, shallower, with fewer sunbeds and more space. The water colour here, especially in the late afternoon, is the best on the island.",
       "commons": null,
-      "lat": 36.4650, "lng": 22.9567
+      "lat": 36.465,
+      "lng": 22.9567
     },
     {
       "name": "Fragou Alona",
@@ -104,7 +178,8 @@
       "facilities": "None — accessible by a rough path or by boat.",
       "desc": "A remote pebble cove on the southwest coast of the island accessible only on foot or by boat. Deep, clear water and complete solitude. For those wanting to escape even the relatively modest crowds at Simos.",
       "commons": null,
-      "lat": 36.4583, "lng": 22.9500
+      "lat": 36.4583,
+      "lng": 22.95
     }
   ]
 }

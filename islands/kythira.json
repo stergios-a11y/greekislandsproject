@@ -3,7 +3,6 @@
   "name": "Kythira",
   "subtitle": "The forgotten island — Venetian castles, wild gorges and deserted beaches",
   "intro": "Kythira sits between the Ionian and Aegean worlds, administratively part of the Ionian islands but geographically alone south of the Peloponnese. It is one of the least-visited significant islands in Greece — largely because it's hard to reach — and that is precisely its magic. Venetian architecture, Byzantine monasteries, dramatic gorges, and beaches that are almost always empty. The Australian community here (thousands emigrated in the 1950s) gives the island a distinct cultural character.",
-
   "itinerary": {
     "title": "4-Day Kythira Itinerary",
     "subtitle": "Chora's Venetian castle, the cave of Agia Sofia, the waterfall gorge of Milopotamos and the deserted beaches of the south coast.",
@@ -16,11 +15,51 @@
         "drive_mins": 20,
         "overnight": "Chora",
         "stops": [
-          { "name": "Chora (Kythira Town)", "lat": 36.1417, "lng": 23.0183, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Chora,_Kythira", "desc": "One of the most beautiful Venetian towns in Greece — a narrow ridge of blue-doored whitewashed houses below a 13th-century Venetian castle. The views from the castle over the sea are extraordinary." },
-          { "name": "Venetian Castle of Kythira", "lat": 36.1433, "lng": 23.0167, "type": "castle", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Kythira_Castle", "desc": "Well-preserved 13th-century Venetian fortress with a complete enceinte wall and internal streets. Below the castle, the sea drops sheer 100m to the water." },
-          { "name": "Archaeological Museum Kythira", "lat": 36.1417, "lng": 23.0183, "type": "museum", "time": "11:30", "wiki": null, "desc": "Excellent collection tracing the island's extraordinary history — Minoan, Phoenician, Byzantine and Venetian. Kythira was a major trade crossroads for 3000 years." },
-          { "name": "Kapsali Beach", "lat": 36.1317, "lng": 23.0100, "type": "beach", "time": "14:00", "wiki": null, "desc": "Twin coves below Chora — the port beach with clear water. The castle is visible on the cliff above. Good tavernas, calm water." },
-          { "name": "Dinner in Chora", "lat": 36.1417, "lng": 23.0183, "type": "village", "time": "20:00", "wiki": null, "desc": "Dinner at one of the tavernas in the Chora lanes. Try the local honey (thyme honey from Kythira is outstanding), the cheese pies, and the local wine." }
+          {
+            "name": "Chora (Kythira Town)",
+            "lat": 36.1417,
+            "lng": 23.0183,
+            "type": "city",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Chora,_Kythira",
+            "desc": "One of the most beautiful Venetian towns in Greece — a narrow ridge of blue-doored whitewashed houses below a 13th-century Venetian castle. The views from the castle over the sea are extraordinary."
+          },
+          {
+            "name": "Venetian Castle of Kythira",
+            "lat": 36.1433,
+            "lng": 23.0167,
+            "type": "castle",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Kythira_Castle",
+            "desc": "Well-preserved 13th-century Venetian fortress with a complete enceinte wall and internal streets. Below the castle, the sea drops sheer 100m to the water."
+          },
+          {
+            "name": "Archaeological Museum Kythira",
+            "lat": 36.1417,
+            "lng": 23.0183,
+            "type": "museum",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "Excellent collection tracing the island's extraordinary history — Minoan, Phoenician, Byzantine and Venetian. Kythira was a major trade crossroads for 3000 years."
+          },
+          {
+            "name": "Kapsali Beach",
+            "lat": 36.1317,
+            "lng": 23.01,
+            "type": "beach",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Twin coves below Chora — the port beach with clear water. The castle is visible on the cliff above. Good tavernas, calm water."
+          },
+          {
+            "name": "Dinner in Chora",
+            "lat": 36.1417,
+            "lng": 23.0183,
+            "type": "village",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "Dinner at one of the tavernas in the Chora lanes. Try the local honey (thyme honey from Kythira is outstanding), the cheese pies, and the local wine."
+          }
         ]
       },
       {
@@ -29,12 +68,44 @@
         "color": "#C0522A",
         "km": 30,
         "drive_mins": 40,
-        "overnight": "Milopotamos or Chora",
+        "overnight": "Chora",
         "stops": [
-          { "name": "Milopotamos Village", "lat": 36.2433, "lng": 22.9900, "type": "village", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Milopotamos,_Kythira", "desc": "The most beautiful village in Kythira — a Venetian settlement above a river gorge, with a waterfall, plane trees and an extraordinary abandoned lower village (Kato Chora) with Venetian walls intact." },
-          { "name": "Neraida Waterfall", "lat": 36.2400, "lng": 22.9883, "type": "nature", "time": "10:30", "wiki": null, "desc": "Walk down through the village to the waterfall — a small but beautiful cascade into a natural pool surrounded by oleanders. One of the most unexpected spots in the Ionian islands." },
-          { "name": "Cave of Agia Sofia", "lat": 36.2317, "lng": 22.9750, "type": "church", "time": "12:00", "wiki": "https://en.wikipedia.org/wiki/Cave_of_Agia_Sofia", "desc": "A spectacular sea cave with a Byzantine church inside — frescos from the 12th-13th century survive on the cave walls. One of the most unusual religious sites in Greece. Guided tours from the village." },
-          { "name": "Limnaria Beach", "lat": 36.2217, "lng": 22.9650, "type": "beach", "time": "15:00", "wiki": null, "desc": "Remote pebble beach below Milopotamos, accessible by a steep path or by boat. Extremely clear water, dramatic cliff scenery, almost always deserted." }
+          {
+            "name": "Milopotamos Village",
+            "lat": 36.2433,
+            "lng": 22.99,
+            "type": "village",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Milopotamos,_Kythira",
+            "desc": "The most beautiful village in Kythira — a Venetian settlement above a river gorge, with a waterfall, plane trees and an extraordinary abandoned lower village (Kato Chora) with Venetian walls intact."
+          },
+          {
+            "name": "Neraida Waterfall",
+            "lat": 36.24,
+            "lng": 22.9883,
+            "type": "nature",
+            "time": "10:30",
+            "wiki": null,
+            "desc": "Walk down through the village to the waterfall — a small but beautiful cascade into a natural pool surrounded by oleanders. One of the most unexpected spots in the Ionian islands."
+          },
+          {
+            "name": "Cave of Agia Sofia",
+            "lat": 36.2317,
+            "lng": 22.975,
+            "type": "church",
+            "time": "12:00",
+            "wiki": "https://en.wikipedia.org/wiki/Cave_of_Agia_Sofia",
+            "desc": "A spectacular sea cave with a Byzantine church inside — frescos from the 12th-13th century survive on the cave walls. One of the most unusual religious sites in Greece. Guided tours from the village."
+          },
+          {
+            "name": "Limnaria Beach",
+            "lat": 36.2217,
+            "lng": 22.965,
+            "type": "beach",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Remote pebble beach below Milopotamos, accessible by a steep path or by boat. Extremely clear water, dramatic cliff scenery, almost always deserted."
+          }
         ]
       },
       {
@@ -45,10 +116,42 @@
         "drive_mins": 45,
         "overnight": "Avlemonas",
         "stops": [
-          { "name": "Paleopolis Beach", "lat": 36.1867, "lng": 23.0783, "type": "beach", "time": "09:30", "wiki": null, "desc": "Long sandy beach near the ancient city of Scandeia — one of the longest on the island. Sandy, calm and rarely crowded. The ancient harbour ruins are visible offshore." },
-          { "name": "Avlemonas", "lat": 36.1633, "lng": 23.0967, "type": "harbour", "time": "12:00", "wiki": "https://en.wikipedia.org/wiki/Avlemonas", "desc": "The most atmospheric harbour in Kythira — a Venetian fortress above a tiny circular fishing harbour. Lunch at one of the waterfront tavernas. Exceptional fresh fish." },
-          { "name": "Fyri Ammos Beach", "lat": 36.1433, "lng": 23.0983, "type": "beach", "time": "14:30", "wiki": null, "desc": "The finest beach on the east coast — fine red sand (fyri ammos means 'red sand') in a sheltered bay. Clear, calm water. Accessible by a dirt track." },
-          { "name": "Kaladi Beach", "lat": 36.1317, "lng": 23.1033, "type": "beach", "time": "16:30", "wiki": null, "desc": "Small, wild pebble beach accessible only on foot (30 min walk). Deep turquoise water and complete solitude. One of the best wild beaches in the Ionian." }
+          {
+            "name": "Paleopolis Beach",
+            "lat": 36.1867,
+            "lng": 23.0783,
+            "type": "beach",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "Long sandy beach near the ancient city of Scandeia — one of the longest on the island. Sandy, calm and rarely crowded. The ancient harbour ruins are visible offshore."
+          },
+          {
+            "name": "Avlemonas",
+            "lat": 36.1633,
+            "lng": 23.0967,
+            "type": "harbour",
+            "time": "12:00",
+            "wiki": "https://en.wikipedia.org/wiki/Avlemonas",
+            "desc": "The most atmospheric harbour in Kythira — a Venetian fortress above a tiny circular fishing harbour. Lunch at one of the waterfront tavernas. Exceptional fresh fish."
+          },
+          {
+            "name": "Fyri Ammos Beach",
+            "lat": 36.1433,
+            "lng": 23.0983,
+            "type": "beach",
+            "time": "14:30",
+            "wiki": null,
+            "desc": "The finest beach on the east coast — fine red sand (fyri ammos means 'red sand') in a sheltered bay. Clear, calm water. Accessible by a dirt track."
+          },
+          {
+            "name": "Kaladi Beach",
+            "lat": 36.1317,
+            "lng": 23.1033,
+            "type": "beach",
+            "time": "16:30",
+            "wiki": null,
+            "desc": "Small, wild pebble beach accessible only on foot (30 min walk). Deep turquoise water and complete solitude. One of the best wild beaches in the Ionian."
+          }
         ]
       },
       {
@@ -59,14 +162,37 @@
         "drive_mins": 50,
         "overnight": null,
         "stops": [
-          { "name": "Potamos Village", "lat": 36.2733, "lng": 22.9967, "type": "village", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Potamos,_Kythira", "desc": "The largest village on the island and the main commercial centre. Sunday market is the social event of the Kythira calendar — locals from across the island come to shop and socialise." },
-          { "name": "Agia Pelagia Beach", "lat": 36.3100, "lng": 23.0450, "type": "beach", "time": "11:00", "wiki": null, "desc": "Sandy beach at the northern ferry port. Calm, organised, good facilities. The ferry to Piraeus and the Peloponnese leaves from here." },
-          { "name": "Diakofti Port — Departure", "lat": 36.1883, "lng": 23.1033, "type": "harbour", "time": "15:00", "wiki": null, "desc": "Main ferry port in the east — connections to Neapoli, Piraeus and the other Ionian islands. The ferry ride south reveals Kythira's dramatic coastline from the sea." }
+          {
+            "name": "Potamos Village",
+            "lat": 36.2733,
+            "lng": 22.9967,
+            "type": "village",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Potamos,_Kythira",
+            "desc": "The largest village on the island and the main commercial centre. Sunday market is the social event of the Kythira calendar — locals from across the island come to shop and socialise."
+          },
+          {
+            "name": "Agia Pelagia Beach",
+            "lat": 36.31,
+            "lng": 23.045,
+            "type": "beach",
+            "time": "11:00",
+            "wiki": null,
+            "desc": "Sandy beach at the northern ferry port. Calm, organised, good facilities. The ferry to Piraeus and the Peloponnese leaves from here."
+          },
+          {
+            "name": "Diakofti Port — Departure",
+            "lat": 36.1883,
+            "lng": 23.1033,
+            "type": "harbour",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Main ferry port in the east — connections to Neapoli, Piraeus and the other Ionian islands. The ferry ride south reveals Kythira's dramatic coastline from the sea."
+          }
         ]
       }
     ]
   },
-
   "beaches": [
     {
       "name": "Fyri Ammos Beach",
@@ -79,7 +205,8 @@
       "facilities": "Basic: accessible by dirt track. Small beach bar in summer.",
       "desc": "The most beautiful beach on Kythira — distinctive red-orange sand (fyri ammos = red sand) in a sheltered bay on the east coast. The unusual sand colour and crystal clear water make it unforgettable. Almost always quiet.",
       "commons": null,
-      "lat": 36.1433, "lng": 23.0983
+      "lat": 36.1433,
+      "lng": 23.0983
     },
     {
       "name": "Paleopolis Beach",
@@ -92,7 +219,8 @@
       "facilities": "Good: sunbeds, taverna, parking. Ancient harbour ruins visible offshore.",
       "desc": "The longest beach on Kythira near the ancient city of Scandeia. Sandy, calm and almost always uncrowded. The underwater ruins of the ancient harbour are visible when the water is clear.",
       "commons": null,
-      "lat": 36.1867, "lng": 23.0783
+      "lat": 36.1867,
+      "lng": 23.0783
     },
     {
       "name": "Kapsali Beach",
@@ -105,7 +233,8 @@
       "facilities": "Good: sunbeds, tavernas, boat hire. Chora castle visible above.",
       "desc": "Twin coves directly below the castle of Chora — the most convenient beach on the island for those staying in the capital. Clear water and the extraordinary backdrop of the Venetian castle make it special.",
       "commons": null,
-      "lat": 36.1317, "lng": 23.0100
+      "lat": 36.1317,
+      "lng": 23.01
     },
     {
       "name": "Limnaria Beach",
@@ -118,7 +247,8 @@
       "facilities": "None — steep path or boat access only.",
       "desc": "A remote pebble beach below the gorge of Milopotamos, accessible only on foot via a steep path or by boat. Dramatic cliff scenery and exceptional water clarity. Almost always completely empty.",
       "commons": null,
-      "lat": 36.2217, "lng": 22.9650
+      "lat": 36.2217,
+      "lng": 22.965
     },
     {
       "name": "Kaladi Beach",
@@ -131,7 +261,8 @@
       "facilities": "None — 30-minute walk on foot only.",
       "desc": "A wild, isolated pebble cove accessible only on foot. Deep turquoise water and complete solitude. One of the finest swimming spots in the south Ionian for those willing to walk.",
       "commons": null,
-      "lat": 36.1317, "lng": 23.1033
+      "lat": 36.1317,
+      "lng": 23.1033
     }
   ]
 }

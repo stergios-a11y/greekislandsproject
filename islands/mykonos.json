@@ -3,7 +3,6 @@
   "name": "Mykonos",
   "subtitle": "The party island — but also windmills, Little Venice and the Delos ruins",
   "intro": "Mykonos is the most expensive and most hedonistic island in Greece — come for the nightlife, the beach clubs, the fashion and the extraordinary people-watching. But don't overlook the genuinely beautiful Cycladic architecture of Mykonos Town (Chora), and above all don't miss Delos — the uninhabited sacred island 30 minutes away by boat, with some of the finest ancient ruins in the Aegean. The beaches are good but it's the energy and the architecture that make Mykonos.",
-
   "itinerary": {
     "title": "3-Day Mykonos Itinerary",
     "subtitle": "Mykonos Town's windmills and Little Venice, the sacred ruins of Delos, and the beach clubs of the south coast.",
@@ -16,11 +15,51 @@
         "drive_mins": 15,
         "overnight": "Mykonos Town",
         "stops": [
-          { "name": "Windmills (Kato Mili)", "lat": 37.4450, "lng": 25.3267, "type": "village", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Windmills_of_Mykonos", "desc": "The iconic 16th-century windmills on the hilltop above the town — the symbol of Mykonos. Best photographed in the late afternoon with the light from the west. The view over the harbour is excellent." },
-          { "name": "Little Venice (Alefkandra)", "lat": 37.4450, "lng": 25.3250, "type": "city", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Mykonos_Town", "desc": "The most photographed neighbourhood in Mykonos — waterfront houses built directly over the sea, with balconies extending over the water. Have a coffee here and watch the waves crash below." },
-          { "name": "Mykonos Town (Chora)", "lat": 37.4467, "lng": 25.3283, "type": "city", "time": "11:00", "wiki": "https://en.wikipedia.org/wiki/Mykonos_Town", "desc": "The labyrinthine lanes of Chora — deliberately confusing to disorient pirates. Whitewashed with colourful doors, pelicans wandering the streets, and the finest designer boutiques in the islands. Get lost deliberately." },
-          { "name": "Lunch — M-Eating", "lat": 37.4467, "lng": 25.3283, "type": "village", "time": "14:00", "wiki": null, "desc": "One of the best value restaurants in Mykonos — excellent Greek food at non-outrageous prices. Try the fresh fish and local wine. Book ahead." },
-          { "name": "Psarou Beach", "lat": 37.4183, "lng": 25.3317, "type": "beach", "time": "17:00", "wiki": null, "desc": "The most exclusive beach on Mykonos — small, sheltered, with the most expensive sunbeds in Greece. Worth a visit for the people-watching even if you don't pay for a sunbed." }
+          {
+            "name": "Windmills (Kato Mili)",
+            "lat": 37.445,
+            "lng": 25.3267,
+            "type": "village",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Windmills_of_Mykonos",
+            "desc": "The iconic 16th-century windmills on the hilltop above the town — the symbol of Mykonos. Best photographed in the late afternoon with the light from the west. The view over the harbour is excellent."
+          },
+          {
+            "name": "Little Venice (Alefkandra)",
+            "lat": 37.445,
+            "lng": 25.325,
+            "type": "city",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Mykonos_Town",
+            "desc": "The most photographed neighbourhood in Mykonos — waterfront houses built directly over the sea, with balconies extending over the water. Have a coffee here and watch the waves crash below."
+          },
+          {
+            "name": "Mykonos Town (Chora)",
+            "lat": 37.4467,
+            "lng": 25.3283,
+            "type": "city",
+            "time": "11:00",
+            "wiki": "https://en.wikipedia.org/wiki/Mykonos_Town",
+            "desc": "The labyrinthine lanes of Chora — deliberately confusing to disorient pirates. Whitewashed with colourful doors, pelicans wandering the streets, and the finest designer boutiques in the islands. Get lost deliberately."
+          },
+          {
+            "name": "Lunch — M-Eating",
+            "lat": 37.4467,
+            "lng": 25.3283,
+            "type": "village",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "One of the best value restaurants in Mykonos — excellent Greek food at non-outrageous prices. Try the fresh fish and local wine. Book ahead."
+          },
+          {
+            "name": "Psarou Beach",
+            "lat": 37.4183,
+            "lng": 25.3317,
+            "type": "beach",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "The most exclusive beach on Mykonos — small, sheltered, with the most expensive sunbeds in Greece. Worth a visit for the people-watching even if you don't pay for a sunbed."
+          }
         ]
       },
       {
@@ -31,10 +70,42 @@
         "drive_mins": 10,
         "overnight": "Mykonos Town",
         "stops": [
-          { "name": "Mykonos Old Port — Delos Boat", "lat": 37.4467, "lng": 25.3283, "type": "harbour", "time": "09:00", "wiki": null, "desc": "Boats to Delos depart from the old port at 09:00 and 10:00. The trip takes 30 minutes. Return boats at 13:00 and 15:00. Buy tickets at the port." },
-          { "name": "Ancient Delos", "lat": 37.3950, "lng": 25.2667, "type": "museum", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Delos", "desc": "One of the most important archaeological sites in Greece — the birthplace of Apollo and Artemis, sacred to the entire ancient world, inhabited from 3000 BC to the 1st century BC. The Terrace of the Lions is iconic. Allow 3 hours." },
-          { "name": "Delos Museum", "lat": 37.3950, "lng": 25.2667, "type": "museum", "time": "12:00", "wiki": null, "desc": "Extraordinary finds from the excavations — marble statues, mosaics and the famous frieze. The island cannot be inhabited (sacred site) so all finds are displayed here on-site." },
-          { "name": "Super Paradise Beach", "lat": 37.4083, "lng": 25.3667, "type": "beach", "time": "15:30", "wiki": null, "desc": "Mykonos's most famous party beach — a beautiful cove with a legendary beach club. Accessible by boat from Mykonos Town or by ATV. The party peaks from 16:00 onwards." }
+          {
+            "name": "Mykonos Old Port — Delos Boat",
+            "lat": 37.4467,
+            "lng": 25.3283,
+            "type": "harbour",
+            "time": "09:00",
+            "wiki": null,
+            "desc": "Boats to Delos depart from the old port at 09:00 and 10:00. The trip takes 30 minutes. Return boats at 13:00 and 15:00. Buy tickets at the port."
+          },
+          {
+            "name": "Ancient Delos",
+            "lat": 37.395,
+            "lng": 25.2667,
+            "type": "museum",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Delos",
+            "desc": "One of the most important archaeological sites in Greece — the birthplace of Apollo and Artemis, sacred to the entire ancient world, inhabited from 3000 BC to the 1st century BC. The Terrace of the Lions is iconic. Allow 3 hours."
+          },
+          {
+            "name": "Delos Museum",
+            "lat": 37.395,
+            "lng": 25.2667,
+            "type": "museum",
+            "time": "12:00",
+            "wiki": null,
+            "desc": "Extraordinary finds from the excavations — marble statues, mosaics and the famous frieze. The island cannot be inhabited (sacred site) so all finds are displayed here on-site."
+          },
+          {
+            "name": "Super Paradise Beach",
+            "lat": 37.4083,
+            "lng": 25.3667,
+            "type": "beach",
+            "time": "15:30",
+            "wiki": null,
+            "desc": "Mykonos's most famous party beach — a beautiful cove with a legendary beach club. Accessible by boat from Mykonos Town or by ATV. The party peaks from 16:00 onwards."
+          }
         ]
       },
       {
@@ -45,15 +116,46 @@
         "drive_mins": 30,
         "overnight": null,
         "stops": [
-          { "name": "Ornos Beach", "lat": 37.4233, "lng": 25.3200, "type": "beach", "time": "10:00", "wiki": null, "desc": "The most family-friendly beach on Mykonos — sheltered bay with calm water, good facilities, water taxis to the other south-coast beaches. Less hedonistic than the party beaches." },
-          { "name": "Elia Beach", "lat": 37.3983, "lng": 25.3700, "type": "beach", "time": "12:00", "wiki": null, "desc": "The longest beach on Mykonos — a broad sandy bay that's slightly more relaxed than Paradise or Super Paradise, but with similar facilities. The gay beach section at one end is legendary." },
-          { "name": "Paradise Beach", "lat": 37.4050, "lng": 25.3650, "type": "beach", "time": "14:30", "wiki": "https://en.wikipedia.org/wiki/Paradise_Beach,_Mykonos", "desc": "The original party beach of Mykonos — famous since the 1970s and still one of the most energetic beach club scenes in Europe. The music starts at noon and goes until late." },
-          { "name": "Mykonos Town — Departure", "lat": 37.4467, "lng": 25.3283, "type": "harbour", "time": "18:00", "wiki": null, "desc": "Return to Mykonos Town for the ferry. The new port is 2km from the old town — allow 20 minutes." }
+          {
+            "name": "Ornos Beach",
+            "lat": 37.4233,
+            "lng": 25.32,
+            "type": "beach",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "The most family-friendly beach on Mykonos — sheltered bay with calm water, good facilities, water taxis to the other south-coast beaches. Less hedonistic than the party beaches."
+          },
+          {
+            "name": "Elia Beach",
+            "lat": 37.3983,
+            "lng": 25.37,
+            "type": "beach",
+            "time": "12:00",
+            "wiki": null,
+            "desc": "The longest beach on Mykonos — a broad sandy bay that's slightly more relaxed than Paradise or Super Paradise, but with similar facilities. The gay beach section at one end is legendary."
+          },
+          {
+            "name": "Paradise Beach",
+            "lat": 37.405,
+            "lng": 25.365,
+            "type": "beach",
+            "time": "14:30",
+            "wiki": "https://en.wikipedia.org/wiki/Paradise_Beach,_Mykonos",
+            "desc": "The original party beach of Mykonos — famous since the 1970s and still one of the most energetic beach club scenes in Europe. The music starts at noon and goes until late."
+          },
+          {
+            "name": "Mykonos Town — Departure",
+            "lat": 37.4467,
+            "lng": 25.3283,
+            "type": "harbour",
+            "time": "18:00",
+            "wiki": null,
+            "desc": "Return to Mykonos Town for the ferry. The new port is 2km from the old town — allow 20 minutes."
+          }
         ]
       }
     ]
   },
-
   "beaches": [
     {
       "name": "Super Paradise Beach",
@@ -66,7 +168,8 @@
       "facilities": "Premium: expensive sunbeds (book ahead), beach club, bar, restaurant. Accessible by boat from Ornos.",
       "desc": "The most famous beach cove in Mykonos — a beautiful sheltered bay with the island's most celebrated beach club. The crowd, the music and the atmosphere from 16:00 are an experience in themselves. One of the legendary beach party scenes of Europe.",
       "commons": "Super_Paradise_Beach_Mykonos.jpg",
-      "lat": 37.4083, "lng": 25.3667
+      "lat": 37.4083,
+      "lng": 25.3667
     },
     {
       "name": "Psarou Beach",
@@ -79,7 +182,8 @@
       "facilities": "Premium: the most expensive sunbeds on the island. Superyachts anchor in the bay.",
       "desc": "Mykonos's celebrity beach — small, sheltered and exclusive. The sunbeds are eye-wateringly expensive. The water is calm and clear. Come for the atmosphere and spectacle rather than the swimming.",
       "commons": null,
-      "lat": 37.4183, "lng": 25.3317
+      "lat": 37.4183,
+      "lng": 25.3317
     },
     {
       "name": "Elia Beach",
@@ -92,7 +196,8 @@
       "facilities": "Well organised: sunbeds, beach bars, water sports, tavernas. Accessible by boat from Ornos.",
       "desc": "The longest beach on Mykonos and slightly more relaxed than Paradise. Good swimming, full facilities, and the best balance between beach quality and party atmosphere on the south coast.",
       "commons": null,
-      "lat": 37.3983, "lng": 25.3700
+      "lat": 37.3983,
+      "lng": 25.37
     }
   ]
 }
