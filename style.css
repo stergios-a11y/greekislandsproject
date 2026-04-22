@@ -2436,7 +2436,6 @@ html.dark .author-photo {
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
-  cursor: zoom-in;
 }
 .itin-stop-photo:hover {
   transform: scale(1.06);
