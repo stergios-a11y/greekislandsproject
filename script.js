@@ -480,6 +480,8 @@ function renderMapMarkers() {
       }
     if (currentGroupFilter !== 'all' && island.island_group !== currentGroupFilter) return;
     const score = getDisplayScore(island);
+    const carWords = ['', t('car.none'), t('car.helpful'), t('car.useful'), t('car.recommended'), t('car.essential')];
+    const carLabel = carWords[Math.round(island.car_need || 0)] || '—';
     const marker = L.marker([island.lat, island.lng], { icon: makeMarkerIcon(score) })
       .addTo(mapInstance)
       .bindTooltip(`
@@ -487,8 +489,14 @@ function renderMapMarkers() {
           <div class="itt-name">${islandName(island.key)}</div>
           <div class="itt-meta">${groupName(island.island_group)} · ${fmtNum(island.area)} km²</div>
           <div class="itt-overall">${t('tooltip.overall')}: <strong style="color:${scoreToColor(island.total)}">${fmt(island.total)} ★</strong></div>
-          <div class="itt-dims">${t('dim.beach')} ${fmt(island.beach)} · ${t('dim.culture')} ${fmt(island.hist)} · ${t('dim.night')} ${fmt(island.night)}</div>
-          <div class="itt-car">🚗 ${t('dim.car')}: <strong>${Math.round(island.car_need || 0)}/5</strong></div>
+          <div class="itt-ratings">
+            <div class="itt-rating-row"><span class="itt-rating-label">🏖️ ${t('dim.beach')}</span><span class="itt-rating-bar"><span class="itt-rating-fill itt-fill-beach" style="width:${(island.beach/5)*100}%"></span></span><span class="itt-rating-val">${fmt(island.beach)}</span></div>
+            <div class="itt-rating-row"><span class="itt-rating-label">🏛️ ${t('dim.culture')}</span><span class="itt-rating-bar"><span class="itt-rating-fill itt-fill-hist" style="width:${(island.hist/5)*100}%"></span></span><span class="itt-rating-val">${fmt(island.hist)}</span></div>
+            <div class="itt-rating-row"><span class="itt-rating-label">🍷 ${t('dim.night')}</span><span class="itt-rating-bar"><span class="itt-rating-fill itt-fill-night" style="width:${(island.night/5)*100}%"></span></span><span class="itt-rating-val">${fmt(island.night)}</span></div>
+            <div class="itt-rating-row"><span class="itt-rating-label">🚢 ${t('dim.access')}</span><span class="itt-rating-bar"><span class="itt-rating-fill itt-fill-access" style="width:${(island.access/5)*100}%"></span></span><span class="itt-rating-val">${fmt(island.access)}</span></div>
+            <div class="itt-rating-row"><span class="itt-rating-label">💸 ${t('dim.afford')}</span><span class="itt-rating-bar"><span class="itt-rating-fill itt-fill-afford" style="width:${(island.afford/5)*100}%"></span></span><span class="itt-rating-val">${fmt(island.afford)}</span></div>
+          </div>
+          <div class="itt-car">🚗 ${t('dim.car')}: <strong>${carLabel}</strong></div>
           ${island.days ? `<div class="itt-days">⏱ ${island.days} ${t('common.days')} ${t('tooltip.recommended')}</div>` : ''}
           <div class="itt-cta">${t('tooltip.click')}</div>
         </div>
@@ -1164,7 +1172,7 @@ function renderTable() {
   if (countLabel) countLabel.textContent = `${list.length} islands`;
   const tbody = document.getElementById('islands-table-body');
   if (!tbody) return;
-  tbody.innerHTML = list.map(i => `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="Island" style="font-weight:600">${islandName(i.key)}</td><td data-label="Group"><span class="group-tag">${groupName(i.island_group)}</span></td><td data-label="Rating">${starsHtml(i.total)}</td><td data-label="Beach" class="td-dim">${starsHtml(i.beach)}</td><td data-label="Culture" class="td-dim">${starsHtml(i.hist)}</td><td data-label="Night" class="td-dim">${starsHtml(i.night)}</td><td data-label="Access" class="td-dim">${starsHtml(i.access)}</td><td data-label="Affordability" class="td-dim">${starsHtml(i.afford)}</td><td data-label="Car" class="td-dim" title="${t('dim.car.hint')}">${carNeedHtml(i.car_need)}</td><td data-label="Days" style="font-weight:600;color:var(--aegean)">${i.days ? i.days + ' ' + t('common.days') : '—'}</td><td data-label="Area (km²)">${barHtml(i.area, 3684, 'var(--aegean)')}</td><td data-label="Population">${barHtml(i.pop, 200000, 'var(--olive)')}</td></tr>`).join('');
+  tbody.innerHTML = list.map(i => `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="Island" style="font-weight:600">${islandName(i.key)}</td><td data-label="Group"><span class="group-tag">${groupName(i.island_group)}</span></td><td data-label="Rating">${starsHtml(i.total)}</td><td data-label="Beach" class="td-dim">${starsHtml(i.beach)}</td><td data-label="Culture" class="td-dim">${starsHtml(i.hist)}</td><td data-label="Night" class="td-dim">${starsHtml(i.night)}</td><td data-label="Access" class="td-dim">${starsHtml(i.access)}</td><td data-label="Affordability" class="td-dim">${starsHtml(i.afford)}</td><td data-label="Days" style="font-weight:600;color:var(--aegean)">${i.days ? i.days + ' ' + t('common.days') : '—'}</td><td data-label="Area (km²)">${barHtml(i.area, 3684, 'var(--aegean)')}</td><td data-label="Population">${barHtml(i.pop, 200000, 'var(--olive)')}</td></tr>`).join('');
   tbody.querySelectorAll('.table-row-clickable').forEach(row => {
     row.addEventListener('click', () => navigateTo('island', row.dataset.key));
   });

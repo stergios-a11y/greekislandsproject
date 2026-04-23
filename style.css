@@ -1577,7 +1577,7 @@ html.dark .why-feat-num { color: var(--marble-3); }
 /* Island tooltip — content styles that respond to dark mode */
 .island-tooltip-inner {
   font-family: var(--sans);
-  min-width: 140px;
+  min-width: 200px;
 }
 .itt-name {
   font-weight: 700;
@@ -2572,3 +2572,72 @@ body:has(#islands-table.show-dims) .table-hint-row {
   }
   .table-hint-text { font-size: 12px; }
 }
+
+/* ============================================================
+   MAP TOOLTIP — compact ratings bars
+============================================================ */
+.itt-ratings {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 6px 0;
+  padding: 6px 0;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.itt-rating-row {
+  display: grid;
+  grid-template-columns: 76px 1fr 24px;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  line-height: 1.2;
+}
+.itt-rating-label {
+  color: var(--ink-2, #555);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.itt-rating-bar {
+  height: 5px;
+  background: rgba(0,0,0,0.08);
+  border-radius: 3px;
+  overflow: hidden;
+  display: block;
+}
+.itt-rating-fill {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+}
+.itt-rating-val {
+  font-weight: 700;
+  color: var(--ink-1, #111);
+  text-align: right;
+  font-size: 11px;
+}
+.itt-fill-beach  { background: #2196D3; }
+.itt-fill-hist   { background: #6BB04A; }
+.itt-fill-night  { background: #E8662C; }
+.itt-fill-access { background: #DDB13C; }
+.itt-fill-afford { background: #9B7EC8; }
+
+/* Dark-mode tooltip bars */
+html.dark .itt-ratings {
+  border-color: rgba(255,255,255,0.15);
+}
+html.dark .itt-rating-bar {
+  background: rgba(255,255,255,0.12);
+}
+html.dark .itt-rating-label {
+  color: rgba(255,255,255,0.75);
+}
+html.dark .itt-rating-val {
+  color: rgba(255,255,255,0.95);
+}
+html.dark .itt-fill-beach  { background: #4DBEFF; }
+html.dark .itt-fill-hist   { background: #8FD66B; }
+html.dark .itt-fill-night  { background: #FF8A52; }
+html.dark .itt-fill-access { background: #FFCB52; }
+html.dark .itt-fill-afford { background: #BAA0E8; }

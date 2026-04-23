@@ -54,6 +54,11 @@ const UI_TEXT = {
   'dim.afford': { en: 'Affordability', el: 'Προσιτή τιμή' },
   'dim.car': { en: 'Car needed', el: 'Αυτοκίνητο' },
   'dim.car.hint': { en: 'Car needed: 1 = useless, 5 = essential', el: 'Ανάγκη αυτοκινήτου: 1 = άχρηστο, 5 = απαραίτητο' },
+  'car.none': { en: 'Not needed', el: 'Περιττό' },
+  'car.helpful': { en: 'Helpful', el: 'Βοηθάει' },
+  'car.useful': { en: 'Useful', el: 'Χρήσιμο' },
+  'car.recommended': { en: 'Recommended', el: 'Προτείνεται' },
+  'car.essential': { en: 'Essential', el: 'Απαραίτητο' },
 
   // Detail page buttons
   'detail.back': { en: '← Back to Map', el: '← Πίσω στον Χάρτη' },
@@ -121,7 +126,7 @@ const UI_TEXT = {
   'data.col.scores': { en: 'Scores', el: 'Βαθμολογίες' },
   'data.showdims': { en: '📊 Show scores', el: '📊 Εμφάνιση βαθμολογιών' },
   'data.hidedims': { en: '📊 Hide scores', el: '📊 Απόκρυψη βαθμολογιών' },
-  'data.hinttext': { en: 'See the 6 dimensions we rate each island on — beaches, culture, nightlife, access, price, car need.', el: 'Δες τις 6 διαστάσεις που βαθμολογούμε σε κάθε νησί — παραλίες, πολιτισμός, νυχτερινή ζωή, πρόσβαση, τιμή, ανάγκη αυτοκινήτου.' },
+  'data.hinttext': { en: 'See the 5 dimensions we rate each island on — beaches, culture, nightlife, access, price.', el: 'Δες τις 5 διαστάσεις που βαθμολογούμε σε κάθε νησί — παραλίες, πολιτισμός, νυχτερινή ζωή, πρόσβαση, τιμή.' },
 
   // Compare page
   'compare.title': { en: 'Compare Islands', el: 'Σύγκριση Νησιών' },
