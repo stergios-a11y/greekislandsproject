@@ -3011,3 +3011,123 @@ html.dark .airport-yes {
 html.dark .itt-airport {
   color: #4DBEFF;
 }
+
+/* ============================================================
+   INTERNATIONAL ESCAPES — route cards
+============================================================ */
+.intl-country-heading {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink-1);
+  margin: 32px 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--aegean);
+}
+
+.intl-route-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-bottom: 14px;
+  transition: all 0.15s;
+}
+.intl-route-card:hover {
+  border-color: var(--aegean);
+  box-shadow: 0 4px 14px rgba(11,143,172,0.1);
+}
+
+.intl-route-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.intl-route-title {
+  font-family: var(--sans);
+  font-size: 17px;
+  color: var(--ink-1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.intl-flag-from,
+.intl-flag-to { font-size: 20px; }
+.intl-arrow {
+  color: var(--ink-4);
+  font-weight: 400;
+  margin: 0 4px;
+}
+
+.intl-freq-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.intl-freq-badge.freq-high {
+  background: rgba(11,143,172,0.12);
+  color: var(--aegean);
+}
+.intl-freq-badge.freq-med {
+  background: rgba(255,107,107,0.15);
+  color: #D04545;
+}
+.intl-freq-badge.freq-low {
+  background: rgba(196,150,42,0.15);
+  color: #A07820;
+}
+
+.intl-route-meta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.intl-meta-item {
+  font-size: 13px;
+  color: var(--ink-2);
+}
+
+.intl-route-note {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: var(--ink-3);
+  line-height: 1.55;
+  font-style: italic;
+}
+
+/* Dark mode */
+html.dark .intl-route-card {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.1);
+}
+html.dark .intl-route-card:hover {
+  border-color: #4DBEFF;
+  box-shadow: 0 4px 14px rgba(77,190,255,0.15);
+}
+html.dark .intl-country-heading {
+  color: rgba(255,255,255,0.95);
+  border-color: #4DBEFF;
+}
+html.dark .intl-route-title { color: rgba(255,255,255,0.95); }
+html.dark .intl-meta-item { color: rgba(255,255,255,0.8); }
+html.dark .intl-route-note { color: rgba(255,255,255,0.65); }
+html.dark .intl-freq-badge.freq-high {
+  background: rgba(77,190,255,0.2);
+  color: #4DBEFF;
+}
+html.dark .intl-freq-badge.freq-med {
+  background: rgba(255,138,82,0.2);
+  color: #FF8A52;
+}
+html.dark .intl-freq-badge.freq-low {
+  background: rgba(255,203,82,0.2);
+  color: #FFCB52;
+}

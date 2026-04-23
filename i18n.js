@@ -23,6 +23,7 @@ const UI_TEXT = {
   'nav.data': { en: 'Islands Data', el: 'Στοιχεία Νησιών' },
   'nav.compare': { en: 'Compare', el: 'Σύγκριση' },
   'nav.hopping': { en: 'Island Hopping', el: 'Νησοπορία' },
+  'nav.international': { en: 'International', el: 'Διεθνώς' },
   'nav.match': { en: 'Match Me', el: 'Βρες το Νησί σου' },
   'nav.shortlist': { en: '⭐ My Shortlist', el: '⭐ Η Λίστα μου' },
   'nav.mission': { en: 'Mission', el: 'Στόχος' },
@@ -166,6 +167,16 @@ const UI_TEXT = {
   'hopping.night': { en: 'night', el: 'βράδυ' },
   'hopping.nights': { en: 'nights', el: 'βράδια' },
   'hopping.visit': { en: 'Visit:', el: 'Επισκέψου:' },
+
+  // International Escapes page
+  'international.title': { en: '🌍 International Escapes', el: '🌍 Διεθνείς Αποδράσεις' },
+  'international.intro': { en: "Greek islands are closer to foreign shores than you think. From Corfu, Albania is 30 minutes away. From the east Aegean, Turkey is a short ferry across. Here are the proven international ferry connections from Greek islands — a different kind of island-hopping.", el: 'Τα ελληνικά νησιά είναι πιο κοντά σε ξένες ακτές απ\'όσο νομίζεις. Από την Κέρκυρα, η Αλβανία απέχει 30 λεπτά. Από το Ανατολικό Αιγαίο, η Τουρκία είναι σύντομη διαδρομή. Εδώ είναι οι αξιόπιστες διεθνείς συνδέσεις πλοίων από ελληνικά νησιά — ένα διαφορετικό είδος νησοπορίας.' },
+  'international.legend.daily': { en: 'Daily (multiple crossings per day)', el: 'Καθημερινά (πολλά δρομολόγια)' },
+  'international.legend.frequent': { en: 'Frequent in summer (4-7/week)', el: 'Συχνά το καλοκαίρι (4-7/εβδ)' },
+  'international.legend.seasonal': { en: 'Seasonal / limited', el: 'Εποχιακό / περιορισμένο' },
+  'international.routes.title': { en: 'All Routes', el: 'Όλες οι Διαδρομές' },
+  'international.country.albania': { en: 'Albania', el: 'Αλβανία' },
+  'international.country.turkey': { en: 'Turkey', el: 'Τουρκία' },
 
   // Match Me / Quiz
   'match.title': { en: 'Match Me', el: 'Βρες το Νησί σου' },

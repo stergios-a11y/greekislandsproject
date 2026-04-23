@@ -129,7 +129,7 @@ function fmtNum(n) { return Number(n).toLocaleString(); }
 ============================================================ */
 const VIEW_HASH_MAP = {
   '': 'home', 'map': 'home', 'data': 'data', 'compare': 'compare',
-  'hopping': 'hopping', 'match': 'match', 'mission': 'mission',
+  'hopping': 'hopping', 'international': 'international', 'match': 'match', 'mission': 'mission',
 };
 
 function parseHash() {
@@ -194,7 +194,7 @@ function navigateTo(view, param) {
 
 function showView(view, param) {
   const homeControls = document.getElementById('home-controls');
-  ['home','data','compare','hopping','match','shortlist','mission','detail'].forEach(v => {
+  ['home','data','compare','hopping','international','match','shortlist','mission','detail'].forEach(v => {
     const el = document.getElementById(`view-${v}`);
     if (el) el.style.display = 'none';
   });
@@ -221,6 +221,7 @@ function showView(view, param) {
   if (nav && nav.classList.contains('open')) nav.classList.remove('open');
   if (view === 'home' && mapInstance) setTimeout(() => mapInstance.invalidateSize(), 100);
   if (view === 'hopping') setTimeout(renderHopping, 50);
+  if (view === 'international') setTimeout(renderInternational, 50);
   if (view === 'match') setupQuizIfNeeded();
   if (view === 'shortlist') renderShortlist();
   if (view === 'compare') setTimeout(renderCompareView, 50);
@@ -416,6 +417,7 @@ function setupNav() {
   const navMap = {
     'nav-home': 'home', 'nav-map': 'home', 'nav-data': 'data',
     'nav-compare': 'compare', 'nav-hopping': 'hopping',
+    'nav-international': 'international',
     'nav-match': 'match', 'nav-shortlist': 'shortlist', 'nav-mission': 'mission',
   };
   Object.entries(navMap).forEach(([btnId, view]) => {
@@ -1752,6 +1754,307 @@ function renderHopping() {
   renderFerryMap();
   renderItineraries();
 }
+
+/* ============================================================
+   INTERNATIONAL ESCAPES — ferry routes to Turkey & Albania
+============================================================ */
+
+// Foreign ports (not in ISLANDS_DATA)
+const FOREIGN_PORTS = {
+  'saranda':      { name: 'Saranda',      name_el: 'Αγ. Σαράντα', country: 'Albania',  country_el: 'Αλβανία', lat: 39.8753, lng: 20.0056 },
+  'ayvalik':      { name: 'Ayvalık',      name_el: 'Αϊβαλί',     country: 'Turkey',   country_el: 'Τουρκία', lat: 39.3095, lng: 26.6930 },
+  'cesme':        { name: 'Çeşme',        name_el: 'Τσεσμές',    country: 'Turkey',   country_el: 'Τουρκία', lat: 38.3236, lng: 26.3042 },
+  'kusadasi':     { name: 'Kuşadası',     name_el: 'Κουσάντασι', country: 'Turkey',   country_el: 'Τουρκία', lat: 37.8600, lng: 27.2561 },
+  'seferihisar':  { name: 'Seferihisar',  name_el: 'Σεφέριχισαρ',country: 'Turkey',   country_el: 'Τουρκία', lat: 38.1962, lng: 26.8379 },
+  'bodrum':       { name: 'Bodrum',       name_el: 'Μπόντρουμ',  country: 'Turkey',   country_el: 'Τουρκία', lat: 37.0344, lng: 27.4305 },
+  'turgutreis':   { name: 'Turgutreis',   name_el: 'Τουργκούτ',  country: 'Turkey',   country_el: 'Τουρκία', lat: 37.0164, lng: 27.2556 },
+  'marmaris':     { name: 'Marmaris',     name_el: 'Μαρμαρίς',   country: 'Turkey',   country_el: 'Τουρκία', lat: 36.8550, lng: 28.2700 },
+  'fethiye':      { name: 'Fethiye',      name_el: 'Φετχιγιέ',   country: 'Turkey',   country_el: 'Τουρκία', lat: 36.6214, lng: 29.1128 },
+  'kas':          { name: 'Kaş',          name_el: 'Κας',        country: 'Turkey',   country_el: 'Τουρκία', lat: 36.2020, lng: 29.6420 },
+  'datca':        { name: 'Datça',        name_el: 'Ντατσά',     country: 'Turkey',   country_el: 'Τουρκία', lat: 36.7310, lng: 27.6844 },
+};
+
+const INTERNATIONAL_ROUTES = [
+  // Corfu ↔ Saranda (Albania)
+  {
+    from: 'corfu', to: 'saranda',
+    country: 'Albania', country_el: 'Αλβανία',
+    duration: '30–90 min', duration_el: '30–90 λεπτά',
+    frequency: 'high',
+    frequency_label: 'Up to 30 daily in summer', frequency_label_el: 'Έως 30 ημερησίως το καλοκαίρι',
+    price: '€15–€25',
+    operators: 'Finikas Lines · Ionian Seaways · Albania Luxury Ferries',
+    note: 'Day trip to Butrint UNESCO ruins or Ksamil beaches. No rental cars allowed on the crossing.',
+    note_el: 'Μονοήμερη για τα ερείπια UNESCO της Βουθρωτής ή τις παραλίες του Ξαμίλ. Δεν επιτρέπονται τα ενοικιαζόμενα αυτοκίνητα στο πέρασμα.',
+  },
+  // Lesvos ↔ Ayvalık
+  {
+    from: 'lesvos', to: 'ayvalik',
+    country: 'Turkey', country_el: 'Τουρκία',
+    duration: '90 min', duration_el: '90 λεπτά',
+    frequency: 'med',
+    frequency_label: 'Daily in summer', frequency_label_el: 'Καθημερινά το καλοκαίρι',
+    price: '€25–€45',
+    operators: 'Jale Tour · Turyol',
+    note: 'Closest port to ancient Pergamon and the Aeolian coast.',
+    note_el: 'Το πλησιέστερο λιμάνι στην αρχαία Πέργαμο και στην Αιολική ακτή.',
+  },
+  // Chios ↔ Çeşme
+  {
+    from: 'chios', to: 'cesme',
+    country: 'Turkey', country_el: 'Τουρκία',
+    duration: '45 min', duration_el: '45 λεπτά',
+    frequency: 'high',
+    frequency_label: 'Multiple daily in summer', frequency_label_el: 'Πολλά ημερησίως το καλοκαίρι',
+    price: '€25–€35',
+    operators: 'ERTURK · Miniotis Lines · Turyol',
+    note: 'Çeşme is a resort town 85 km from İzmir — continue by bus/train to Ephesus.',
+    note_el: 'Το Çeşme είναι τουριστικό θέρετρο, 85 χλμ από τη Σμύρνη — συνεχίστε με λεωφορείο στην Έφεσο.',
+  },
+  // Samos ↔ Kuşadası
+  {
+    from: 'samos', to: 'kusadasi',
+    country: 'Turkey', country_el: 'Τουρκία',
+    duration: '90 min', duration_el: '90 λεπτά',
+    frequency: 'high',
+    frequency_label: 'Daily in summer, 4-5/week in shoulder', frequency_label_el: 'Καθημερινά το καλοκαίρι',
+    price: '€35–€55',
+    operators: 'Meander Travel · Sea Dreams',
+    note: 'Kuşadası is the gateway to Ephesus — one of the most important ancient sites in the world. Day trip doable but tight.',
+    note_el: 'Το Κουσάντασι είναι η πύλη για την Έφεσο — από τους σημαντικότερους αρχαιολογικούς χώρους.',
+  },
+  // Samos ↔ Seferihisar (new route)
+  {
+    from: 'samos', to: 'seferihisar',
+    country: 'Turkey', country_el: 'Τουρκία',
+    duration: '60 min', duration_el: '60 λεπτά',
+    frequency: 'med',
+    frequency_label: '~7/week in summer', frequency_label_el: '~7 εβδομαδιαίως το καλοκαίρι',
+    price: '€30',
+    operators: 'Sunrise Lines',
+    note: 'Newer route. Seferihisar is a slow-food certified town, great for food travelers.',
+    note_el: 'Πιο πρόσφατη διαδρομή. Το Seferihisar είναι slow-food πόλη, ιδανική για γαστρονομικά ταξίδια.',
+  },
+  // Kos ↔ Bodrum
+  {
+    from: 'kos', to: 'bodrum',
+    country: 'Turkey', country_el: 'Τουρκία',
+    duration: '30 min', duration_el: '30 λεπτά',
+    frequency: 'high',
+    frequency_label: 'Multiple daily in summer', frequency_label_el: 'Πολλά ημερησίως το καλοκαίρι',
+    price: '€25–€45',
+    operators: 'Bodrum Express Lines · Yeşil Marmaris',
+    note: 'Shortest Greek-Turkey crossing. Bodrum has the Castle of St Peter, Halicarnassus ruins, and great nightlife.',
+    note_el: 'Η συντομότερη διαδρομή Ελλάδας-Τουρκίας. Το Μπόντρουμ έχει το Κάστρο του Αγίου Πέτρου και τα ερείπια της Αλικαρνασσού.',
+  },
+  // Kos ↔ Turgutreis
+  {
+    from: 'kos', to: 'turgutreis',
+    country: 'Turkey', country_el: 'Τουρκία',
+    duration: '30 min', duration_el: '30 λεπτά',
+    frequency: 'low',
+    frequency_label: 'Seasonal — check before booking', frequency_label_el: 'Εποχιακό — ελέγξτε πριν κλείσετε',
+    price: '€21',
+    operators: 'Bodrum Express Lines',
+    note: 'Smaller port than Bodrum, reaches the quieter Bodrum peninsula villages.',
+    note_el: 'Μικρότερο λιμάνι από το Μπόντρουμ, οδηγεί στα πιο ήσυχα χωριά της χερσονήσου.',
+  },
+  // Rhodes ↔ Marmaris
+  {
+    from: 'rhodes', to: 'marmaris',
+    country: 'Turkey', country_el: 'Τουρκία',
+    duration: '50 min (hydrofoil) – 2h', duration_el: '50 λεπτά (ιπτάμενο) – 2 ώρες',
+    frequency: 'high',
+    frequency_label: '5-7 crossings per week', frequency_label_el: '5-7 δρομολόγια ανά εβδομάδα',
+    price: '€45–€65',
+    operators: 'Yeşil Marmaris · Sky Marine',
+    note: 'Marmaris is a resort town with a fine old quarter and fast access to the Lycian coast.',
+    note_el: 'Το Μαρμαρίς είναι τουριστικό θέρετρο με ωραία παλιά πόλη και εύκολη πρόσβαση στη Λυκιακή ακτή.',
+  },
+  // Rhodes ↔ Fethiye
+  {
+    from: 'rhodes', to: 'fethiye',
+    country: 'Turkey', country_el: 'Τουρκία',
+    duration: '1h 40min', duration_el: '1 ώρα 40 λεπτά',
+    frequency: 'med',
+    frequency_label: '1-2 daily in summer', frequency_label_el: '1-2 ημερησίως το καλοκαίρι',
+    price: '€35–€55',
+    operators: 'Yeşil Marmaris · Sky Marine',
+    note: 'Fethiye is the gateway to the Lycian Way hiking trail and Ölüdeniz beach.',
+    note_el: 'Το Fethiye είναι η είσοδος στο μονοπάτι Lycian Way και στην παραλία Ölüdeniz.',
+  },
+  // Rhodes ↔ Bodrum
+  {
+    from: 'rhodes', to: 'bodrum',
+    country: 'Turkey', country_el: 'Τουρκία',
+    duration: '2h', duration_el: '2 ώρες',
+    frequency: 'med',
+    frequency_label: '3-5 per week in summer', frequency_label_el: '3-5 ανά εβδομάδα το καλοκαίρι',
+    price: '€55',
+    operators: 'Yeşil Marmaris',
+    note: 'Seasonal route — summer only.',
+    note_el: 'Εποχιακή διαδρομή — μόνο το καλοκαίρι.',
+  },
+  // Symi ↔ Datça
+  {
+    from: 'symi', to: 'datca',
+    country: 'Turkey', country_el: 'Τουρκία',
+    duration: '1h 30min', duration_el: '1,5 ώρα',
+    frequency: 'low',
+    frequency_label: '2-3 per week in summer', frequency_label_el: '2-3 ανά εβδομάδα το καλοκαίρι',
+    price: '€45',
+    operators: 'Datça Seyahat',
+    note: 'Datça is a peaceful peninsula on the way to the ancient city of Knidos.',
+    note_el: 'Το Datça είναι ήρεμη χερσόνησος που οδηγεί στην αρχαία πόλη Κνίδο.',
+  },
+  // Kastellorizo ↔ Kaş
+  {
+    from: 'kastellorizo', to: 'kas',
+    country: 'Turkey', country_el: 'Τουρκία',
+    duration: '20 min', duration_el: '20 λεπτά',
+    frequency: 'high',
+    frequency_label: 'Daily in summer', frequency_label_el: 'Καθημερινά το καλοκαίρι',
+    price: '€20–€35',
+    operators: 'Meis Express',
+    note: 'Shortest and one of the oldest Greek-Turkish crossings. Kastellorizo lies literally opposite the Turkish coast.',
+    note_el: 'Η συντομότερη και μία από τις παλιότερες διαδρομές. Το Καστελλόριζο βρίσκεται ακριβώς απέναντι από την τουρκική ακτή.',
+  },
+];
+
+function renderInternational() {
+  renderInternationalMap();
+  renderInternationalList();
+}
+
+function renderInternationalMap() {
+  const container = document.getElementById('international-map');
+  if (!container) return;
+  container.innerHTML = ''; // reset in case of re-render
+
+  const map = L.map(container, {
+    zoomControl: true,
+    attributionControl: true,
+    minZoom: 6, maxZoom: 10,
+  }).setView([38.5, 26.0], 6);
+
+  if (typeof addThemeAwareTiles === 'function') {
+    addThemeAwareTiles(map, { attribution: '© OpenStreetMap · CARTO' });
+  } else {
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+      subdomains: 'abcd',
+      attribution: '© OpenStreetMap · CARTO',
+    }).addTo(map);
+  }
+
+  // Frequency → line style
+  const STYLES = {
+    high: { color: '#0B8FAC', weight: 4, opacity: 0.9 },
+    med:  { color: '#FF6B6B', weight: 3, opacity: 0.9 },
+    low:  { color: '#C4962A', weight: 2.5, opacity: 0.85, dashArray: '6, 4' },
+  };
+
+  // Draw each route
+  INTERNATIONAL_ROUTES.forEach(r => {
+    const from = ISLANDS_DATA[r.from];
+    const to = FOREIGN_PORTS[r.to];
+    if (!from || !to) return;
+    const line = L.polyline(
+      [[from.lat, from.lng], [to.lat, to.lng]],
+      STYLES[r.frequency] || STYLES.med
+    ).addTo(map);
+    line.bindTooltip(
+      `<div style="font-family:sans-serif;font-size:12px;min-width:180px">
+        <div style="font-weight:700;color:var(--ink-1)">${islandName(r.from)} ↔ ${pickLang(to, 'name')}</div>
+        <div style="color:var(--ink-3);margin-top:2px">${pickLang(r, 'duration')} · ${pickLang(r, 'frequency_label')}</div>
+        <div style="color:var(--aegean);font-weight:600;margin-top:2px">${r.price}</div>
+      </div>`,
+      { sticky: true }
+    );
+  });
+
+  // Greek island markers (clickable → island page)
+  const greekPorts = new Set(INTERNATIONAL_ROUTES.map(r => r.from));
+  greekPorts.forEach(key => {
+    const isl = ISLANDS_DATA[key];
+    if (!isl) return;
+    const marker = L.circleMarker([isl.lat, isl.lng], {
+      radius: 8,
+      fillColor: '#0B8FAC',
+      color: '#fff',
+      weight: 2,
+      opacity: 1,
+      fillOpacity: 1,
+    }).addTo(map);
+    marker.bindTooltip(`🇬🇷 ${islandName(key)}`, { permanent: false, direction: 'top' });
+    marker.on('click', () => navigateTo('island', key));
+  });
+
+  // Foreign port markers (not clickable)
+  Object.entries(FOREIGN_PORTS).forEach(([key, port]) => {
+    // Only draw ports that appear in routes
+    if (!INTERNATIONAL_ROUTES.some(r => r.to === key)) return;
+    const flag = port.country === 'Albania' ? '🇦🇱' : '🇹🇷';
+    L.circleMarker([port.lat, port.lng], {
+      radius: 7,
+      fillColor: port.country === 'Albania' ? '#E8522A' : '#C4962A',
+      color: '#fff',
+      weight: 2,
+      opacity: 1,
+      fillOpacity: 1,
+    }).bindTooltip(`${flag} ${pickLang(port, 'name')}, ${pickLang(port, 'country')}`, { direction: 'top' }).addTo(map);
+  });
+}
+
+function renderInternationalList() {
+  const container = document.getElementById('international-list');
+  if (!container) return;
+
+  // Group routes by country
+  const albaniaRoutes = INTERNATIONAL_ROUTES.filter(r => r.country === 'Albania');
+  const turkeyRoutes = INTERNATIONAL_ROUTES.filter(r => r.country === 'Turkey');
+
+  const renderRoute = (r) => {
+    const from = ISLANDS_DATA[r.from];
+    const to = FOREIGN_PORTS[r.to];
+    if (!from || !to) return '';
+    const flag = r.country === 'Albania' ? '🇦🇱' : '🇹🇷';
+    const freqClass = r.frequency === 'high' ? 'freq-high' : r.frequency === 'med' ? 'freq-med' : 'freq-low';
+    return `
+      <div class="intl-route-card">
+        <div class="intl-route-header">
+          <div class="intl-route-title">
+            <span class="intl-flag-from">🇬🇷</span>
+            <strong>${islandName(r.from)}</strong>
+            <span class="intl-arrow">↔</span>
+            <strong>${pickLang(to, 'name')}</strong>
+            <span class="intl-flag-to">${flag}</span>
+          </div>
+          <span class="intl-freq-badge ${freqClass}">${pickLang(r, 'frequency_label')}</span>
+        </div>
+        <div class="intl-route-meta">
+          <span class="intl-meta-item">⏱ ${pickLang(r, 'duration')}</span>
+          <span class="intl-meta-item">💶 ${r.price}</span>
+          <span class="intl-meta-item">🚢 ${r.operators}</span>
+        </div>
+        <p class="intl-route-note">${pickLang(r, 'note')}</p>
+      </div>
+    `;
+  };
+
+  const albaniaSection = albaniaRoutes.length ? `
+    <h3 class="intl-country-heading">🇦🇱 ${t('international.country.albania')}</h3>
+    ${albaniaRoutes.map(renderRoute).join('')}
+  ` : '';
+
+  const turkeySection = turkeyRoutes.length ? `
+    <h3 class="intl-country-heading">🇹🇷 ${t('international.country.turkey')}</h3>
+    ${turkeyRoutes.map(renderRoute).join('')}
+  ` : '';
+
+  container.innerHTML = albaniaSection + turkeySection;
+}
+
+window.renderInternational = renderInternational;
 
 /* ============================================================
    QUIZ
