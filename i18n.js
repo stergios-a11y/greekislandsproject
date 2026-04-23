@@ -209,33 +209,104 @@ const UI_TEXT = {
   // Mission page
   'mission.title': { en: 'Mission', el: 'Στόχος' },
   'mission.tagline': { en: 'For travellers who want to live the holiday, not plan it.', el: 'Για ταξιδιώτες που θέλουν να ζήσουν τις διακοπές, όχι να τις σχεδιάσουν.' },
-  'mission.lead1': { en: "This site is for people who don't want choices. They want the gist, without the fluff.", el: 'Αυτή η σελίδα είναι για ανθρώπους που δεν θέλουν επιλογές. Θέλουν την ουσία, χωρίς περιττά.' },
-  'mission.lead2': { en: 'Greece has 83 inhabited islands and countless guides, blogs and listicles trying to cover them all. It\'s overwhelming, and most of it is shallow.', el: 'Η Ελλάδα έχει 83 κατοικημένα νησιά και αμέτρητους οδηγούς, blogs και λίστες που προσπαθούν να τα καλύψουν όλα. Είναι κουραστικό, και οι περισσότεροι είναι επιφανειακοί.' },
-  'mission.lead3.before': { en: '', el: '' },
-  'mission.lead3.bold': { en: 'Aegean Blueprint is made by locals who have actually travelled to the islands on the site', el: 'Το Aegean Blueprint φτιάχτηκε από ντόπιους που έχουν ταξιδέψει πραγματικά στα νησιά της σελίδας' },
-  'mission.lead3.after': { en: ' — not curated from search rankings, and not stitched together by AI. Each island page gives you one clear, opinionated recommendation: what to see, where to swim, how long to stay. That\'s it.', el: ' — όχι από αποτελέσματα αναζήτησης, ούτε ραμμένο από AI. Κάθε σελίδα νησιού δίνει μία ξεκάθαρη πρόταση: τι να δεις, πού να κολυμπήσεις, πόσο να μείνεις. Τίποτα παραπάνω.' },
-  'mission.point.label': { en: 'The point', el: 'Η ουσία' },
-  'mission.point.text': { en: 'Pick an island. Pack a bag. Go.', el: 'Διάλεξε ένα νησί. Φτιάξε βαλίτσα. Φύγε.' },
-  'mission.kicker': { en: "Planning a trip shouldn't take longer than the trip itself.", el: 'Ο σχεδιασμός ενός ταξιδιού δεν πρέπει να διαρκεί περισσότερο από το ίδιο το ταξίδι.' },
+
+  // Section 1 — Why this site exists
+  'mission.why.title': { en: 'Why this site exists', el: 'Γιατί υπάρχει αυτή η σελίδα' },
+  'mission.why.p1': { en: 'Greece has 83 inhabited islands. Most guides try to cover all of them, and end up saying nothing useful about any. Search results give you the same twenty stock photos of Oia and a PR-written paragraph that could be about any island in the Aegean. AI-generated lists read like they were written by someone who has never tasted a tomato.', el: 'Η Ελλάδα έχει 83 κατοικημένα νησιά. Οι περισσότεροι οδηγοί προσπαθούν να τα καλύψουν όλα, και καταλήγουν να μη λένε τίποτα χρήσιμο για κανένα. Τα αποτελέσματα αναζήτησης σού δίνουν τις ίδιες είκοσι φωτογραφίες της Οίας και μια παράγραφο-PR που θα μπορούσε να είναι για οποιοδήποτε νησί του Αιγαίου. Οι λίστες από AI διαβάζονται σαν να γράφτηκαν από κάποιον που δεν έχει δοκιμάσει ντομάτα.' },
+  'mission.why.quote': { en: "This site is for people who don't want choices. They want the gist, without the fluff.", el: 'Αυτή η σελίδα είναι για ανθρώπους που δεν θέλουν επιλογές. Θέλουν την ουσία, χωρίς περιττά.' },
+  'mission.why.p2': { en: 'Each island page gives you one opinionated recommendation: where to stay, what to do for 2 to 5 days, where to swim, where to eat. Not ten options ranked by affiliate payout. One. The one the person who built this site would pick.', el: 'Κάθε σελίδα νησιού σού δίνει μία πρόταση με άποψη: πού να μείνεις, τι να κάνεις σε 2 έως 5 μέρες, πού να κολυμπήσεις, πού να φας. Όχι δέκα επιλογές ταξινομημένες με βάση την προμήθεια. Μία. Αυτή που θα διάλεγε ο άνθρωπος που έφτιαξε τη σελίδα.' },
+
+  // Section 2 — Built by one person
+  'mission.author.title': { en: 'Built by one person', el: 'Φτιαγμένο από έναν άνθρωπο' },
   'mission.author.role': { en: 'Founder · Athens', el: 'Δημιουργός · Αθήνα' },
+  'mission.author.role2': { en: 'Founder · Athens', el: 'Δημιουργός · Αθήνα' },
+  'mission.author.bio': { en: 'Greek, based in Athens, 50+ islands visited over 20+ years. Not a travel influencer, not a PR-sponsored blog. A single person writing down what he actually thinks.', el: 'Έλληνας, Αθηναίος, έχω επισκεφθεί 50+ νησιά σε 20+ χρόνια. Δεν είμαι influencer, ούτε blog με χορηγίες. Ένας άνθρωπος που γράφει αυτό που πραγματικά πιστεύει.' },
+  'mission.author.note': { en: 'This matters because the alternative is what everyone else does: aggregate reviews from TripAdvisor, run them through an SEO mill, translate the output into every language, and publish it as a "guide." The writing reads fine. The advice is worthless.', el: 'Αυτό μετράει γιατί η εναλλακτική είναι αυτό που κάνουν όλοι οι άλλοι: συλλογή κριτικών από το TripAdvisor, πέρασμα από SEO μηχανή, μετάφραση σε όλες τις γλώσσες, και δημοσίευση ως «οδηγός». Το κείμενο διαβάζεται μια χαρά. Η συμβουλή είναι άχρηστη.' },
+
+  // Section 3 — The one-recommendation principle
+  'mission.principle.title': { en: 'The one-recommendation principle', el: 'Η αρχή της μίας πρότασης' },
+  'mission.principle.intro': { en: 'For each island, this site picks exactly one of each:', el: 'Για κάθε νησί, η σελίδα διαλέγει ακριβώς ένα από τα παρακάτω:' },
+  'mission.principle.hotel.label': { en: 'One hotel', el: 'Ένα ξενοδοχείο' },
+  'mission.principle.hotel.text': { en: 'With a budget alternative if the top pick is too expensive. Linked to Booking.com so you can check availability in one click.', el: 'Με μια οικονομικότερη εναλλακτική αν η πρώτη επιλογή είναι ακριβή. Σύνδεσμος στο Booking.com για να δεις τη διαθεσιμότητα με ένα κλικ.' },
+  'mission.principle.route.label': { en: 'One itinerary', el: 'Ένα δρομολόγιο' },
+  'mission.principle.route.text': { en: '2 to 5 days depending on the island, mapped with driving distances. Beaches, villages, archaeological sites, places to eat. No "optional side-trips."', el: '2 έως 5 μέρες ανάλογα με το νησί, χαρτογραφημένο με αποστάσεις. Παραλίες, χωριά, αρχαιολογικοί χώροι, εστιατόρια. Χωρίς «προαιρετικές εκδρομές».' },
+  'mission.principle.dinner.label': { en: 'One dinner spot per night', el: 'Ένα εστιατόριο ανά βράδυ' },
+  'mission.principle.dinner.text': { en: "Named, linked, often with a phone number to book ahead. Where I'd take a friend who had one night on the island.", el: 'Με όνομα, σύνδεσμο, συχνά και τηλέφωνο για κράτηση. Εκεί που θα πήγαινα έναν φίλο που έχει μόνο μία βραδιά στο νησί.' },
+  'mission.principle.kicker': { en: 'Pick an island. Pack a bag. Go.', el: 'Διάλεξε ένα νησί. Φτιάξε βαλίτσα. Φύγε.' },
+
+  // Section 4 — How we score
   'mission.scoring.title': { en: 'How we score', el: 'Πώς βαθμολογούμε' },
-  'mission.scoring.lead': { en: 'Every island on this site gets rated 1–5 on five dimensions. These numbers aren\'t an algorithm. They\'re one person\'s judgment — Stergios\'s — based on having actually been to these islands, read everything written about the rest, and thought carefully about what each one is actually good for.', el: 'Κάθε νησί στη σελίδα βαθμολογείται από 1 έως 5 σε πέντε διαστάσεις. Αυτοί οι αριθμοί δεν είναι αλγόριθμος. Είναι η κρίση ενός ανθρώπου — του Στέργιου — που έχει ταξιδέψει στα νησιά αυτά, έχει διαβάσει όσα έχουν γραφτεί για τα υπόλοιπα, και έχει σκεφτεί προσεκτικά για τι είναι πραγματικά καλό το καθένα.' },
-  'mission.scoring.honest': { en: 'We think that\'s more useful than a "proprietary weighted index" stitched from TripAdvisor stars and hotel counts. But it\'s not objective, and we won\'t pretend it is. If you want to know why Milos is a 4.6 and Tinos is a 3.9, the short answer is: Stergios thinks so, for the reasons below. The longer answer is: disagree with us — we\'d rather have that conversation than a fake one about formulas.', el: 'Πιστεύουμε ότι αυτό είναι πιο χρήσιμο από έναν «ιδιόκτητο σταθμισμένο δείκτη» ραμμένο από αστεράκια TripAdvisor και αριθμούς ξενοδοχείων. Αλλά δεν είναι αντικειμενικό, και δεν θα το παραστήσουμε. Αν θέλεις να ξέρεις γιατί η Μήλος είναι 4.6 και η Τήνος 3.9, η σύντομη απάντηση είναι: έτσι το κρίνει ο Στέργιος, για τους λόγους που ακολουθούν. Η μακριά απάντηση είναι: διαφώνησε μαζί μας — καλύτερα αυτή η συζήτηση, παρά μια ψεύτικη για φόρμουλες.' },
-  'mission.scoring.dims.title': { en: 'The five dimensions', el: 'Οι πέντε διαστάσεις' },
-  'mission.scoring.beach.term': { en: '🏖 Beach', el: '🏖 Παραλία' },
-  'mission.scoring.beach.def': { en: 'How good the swimming is. A 5 means you\'d pick this island <em>because</em> of the water — Milos, Elafonisos, Lefkada. A 3 means good beaches exist but they\'re not the reason to come. A 1 means swim at your hotel pool instead.', el: 'Πόσο καλό είναι το μπάνιο. Το 5 σημαίνει ότι θα διάλεγες το νησί <em>για</em> τα νερά του — Μήλος, Ελαφόνησος, Λευκάδα. Το 3 σημαίνει καλές παραλίες υπάρχουν αλλά δεν είναι ο λόγος να έρθεις. Το 1 σημαίνει κολύμπα καλύτερα στην πισίνα του ξενοδοχείου.' },
-  'mission.scoring.hist.term': { en: '🏛 Culture', el: '🏛 Πολιτισμός' },
-  'mission.scoring.hist.def': { en: 'Archaeology, museums, churches, old towns, living tradition. A 5 rewards depth, not just tourist-brochure ruins — Delos, Rhodes Old Town, Patmos. A 3 means one or two good sites. A 1 means the island\'s story is "we have a beach."', el: 'Αρχαιολογία, μουσεία, εκκλησίες, παλιές πόλεις, ζωντανή παράδοση. Το 5 ανταμείβει το βάθος, όχι απλά ερείπια τουριστικού φυλλαδίου — Δήλος, Παλιά Πόλη Ρόδου, Πάτμος. Το 3 σημαίνει ένα-δύο καλά σημεία. Το 1 σημαίνει η ιστορία του νησιού είναι «έχουμε παραλία».' },
-  'mission.scoring.night.term': { en: '🌃 Nightlife', el: '🌃 Νυχτερινή ζωή' },
-  'mission.scoring.night.def': { en: 'From beach clubs to dinner-and-a-walk. A 5 is party-destination-level (Mykonos, Ios). A 3 means you can find good food and a few bars. A 1 means dinner ends at 10pm and the village sleeps.', el: 'Από beach clubs μέχρι φαγητό-και-βόλτα. Το 5 είναι επίπεδο party-προορισμού (Μύκονος, Ίος). Το 3 σημαίνει βρίσκεις καλό φαγητό και λίγα μπαρ. Το 1 σημαίνει το δείπνο τελειώνει στις 10 και το χωριό κοιμάται.' },
-  'mission.scoring.access.term': { en: '🚢 Access', el: '🚢 Πρόσβαση' },
-  'mission.scoring.access.def': { en: 'How hard it is to get there from Athens, and how far it is to the next island. A 5 has an airport and fast ferries (Santorini, Rhodes, Corfu). A 3 means one reliable ferry a day in summer. A 1 means you need to really want to go.', el: 'Πόσο δύσκολο είναι να φτάσεις από την Αθήνα, και πόσο μακριά από το επόμενο νησί. Το 5 έχει αεροδρόμιο και γρήγορα πλοία (Σαντορίνη, Ρόδος, Κέρκυρα). Το 3 σημαίνει ένα αξιόπιστο πλοίο τη μέρα το καλοκαίρι. Το 1 σημαίνει πρέπει πραγματικά να το θες.' },
-  'mission.scoring.afford.term': { en: '💶 Affordability', el: '💶 Οικονομικά' },
-  'mission.scoring.afford.def': { en: 'What a week costs for two people in August, hotel + food + getting around. A 5 is genuinely cheap (Ikaria, Samothrace). A 3 is normal Greek-island pricing. A 1 is Mykonos/Santorini territory where dinner alone can clear €200.', el: 'Πόσο κοστίζει μία εβδομάδα για δύο τον Αύγουστο, ξενοδοχείο + φαγητό + μετακινήσεις. Το 5 είναι γνήσια φθηνά (Ικαρία, Σαμοθράκη). Το 3 είναι κανονικές τιμές ελληνικού νησιού. Το 1 είναι επίπεδο Μυκόνου/Σαντορίνης όπου μόνο το δείπνο ξεπερνά τα 200€.' },
-  'mission.scoring.overall.title': { en: 'The overall number', el: 'Ο συνολικός αριθμός' },
-  'mission.scoring.overall.text': { en: 'The overall rating is a weighted mix of the five, tilted toward Beach and Culture because that\'s what most people come to the Greek islands for. It\'s still a judgment call, not a calculation — the weights themselves are a choice, and someone whose holiday is all about nightlife would weight it differently. Use the five underlying numbers. The single number is for sorting the table.', el: 'Η συνολική βαθμολογία είναι ένας σταθμισμένος μέσος όρος των πέντε, με έμφαση στην Παραλία και τον Πολιτισμό, γιατί γι\'αυτά έρχονται οι περισσότεροι στα ελληνικά νησιά. Παραμένει κρίση, όχι υπολογισμός — τα ίδια τα βάρη είναι επιλογή, και κάποιος με διακοπές εξ ολοκλήρου για νυχτερινή ζωή θα τα ζύγιζε αλλιώς. Χρησιμοποίησε τις πέντε επιμέρους διαστάσεις. Ο ένας αριθμός είναι για να ταξινομείς τον πίνακα.' },
-  'mission.scoring.disagree.title': { en: 'Think we got one wrong?', el: 'Πιστεύεις πως κάναμε λάθος;' },
-  'mission.scoring.disagree.text': { en: 'Tell us. Hit the <strong>💬 Feedback</strong> button at the bottom right of any page and pick "Suggest a rating correction." Explain what you\'d change and why. We read everything — and if you make a good case, we\'ll update the number. The five dimensions and the rationale stay in the open.', el: 'Πες μας. Πάτα το κουμπί <strong>💬 Σχόλια</strong> κάτω δεξιά σε οποιαδήποτε σελίδα και διάλεξε «Πρόταση διόρθωσης βαθμολογίας». Εξήγησε τι θα άλλαζες και γιατί. Διαβάζουμε τα πάντα — και αν έχεις καλό επιχείρημα, θα ενημερώσουμε τον αριθμό. Οι πέντε διαστάσεις και η λογική παραμένουν δημόσιες.' },
+  'mission.scoring.lead': { en: "Every island gets rated 1 to 5 on five dimensions, plus one overall number. These aren't computed by an algorithm and they aren't scraped from TripAdvisor. They're one person's informed judgment — mine — based on having been there, or on careful research and local contacts for the few I haven't.", el: 'Κάθε νησί βαθμολογείται από 1 έως 5 σε πέντε διαστάσεις, συν έναν συνολικό αριθμό. Δεν υπολογίζονται από αλγόριθμο και δεν έρχονται από το TripAdvisor. Είναι η ενημερωμένη κρίση ενός ανθρώπου — η δική μου — βασισμένη σε προσωπική επίσκεψη, ή σε προσεκτική έρευνα και ντόπιες γνωριμίες για τα λίγα που δεν έχω ακόμα επισκεφθεί.' },
+  'mission.scoring.honest': { en: "If you want to know why Milos is 4.6 and Tinos is 3.9, the short answer is: I think so, for the reasons below. The longer answer is: disagree with me — I'd rather have that conversation than pretend there's a formula.", el: 'Αν θες να ξέρεις γιατί η Μήλος είναι 4.6 και η Τήνος 3.9, η σύντομη απάντηση είναι: έτσι το κρίνω, για τους παρακάτω λόγους. Η μακριά απάντηση: διαφώνησε μαζί μου — καλύτερα αυτή η συζήτηση, παρά μια ψεύτικη για φόρμουλες.' },
+
+  // Sources
+  'mission.sources.title': { en: 'Where the information comes from', el: 'Από πού έρχονται οι πληροφορίες' },
+  'mission.sources.visited.t': { en: 'Personal visits.', el: 'Προσωπικές επισκέψεις.' },
+  'mission.sources.visited.d': { en: " 50+ of the 76 islands on this site I've been to in person, most more than once. The itineraries, beaches and restaurants for those islands come from my own experience.", el: ' Πάνω από 50 από τα 76 νησιά της σελίδας τα έχω επισκεφθεί, τα περισσότερα περισσότερες από μία φορές. Τα δρομολόγια, οι παραλίες και τα εστιατόρια γι\'αυτά έρχονται από δική μου εμπειρία.' },
+  'mission.sources.local.t': { en: 'Local contacts.', el: 'Ντόπιες γνωριμίες.' },
+  'mission.sources.local.d': { en: ' Friends, family and acquaintances who live or summer on specific islands. Kalymnos, Ikaria, Lemnos, Skyros — when I call someone who lives there, their answer beats any guidebook.', el: ' Φίλοι, συγγενείς και γνωστοί που ζουν ή παραθερίζουν σε συγκεκριμένα νησιά. Κάλυμνος, Ικαρία, Λήμνος, Σκύρος — όταν τηλεφωνώ σε κάποιον που ζει εκεί, η απάντησή του κερδίζει κάθε οδηγό.' },
+  'mission.sources.official.t': { en: 'Official data.', el: 'Επίσημες πηγές.' },
+  'mission.sources.official.d': { en: ' Ferry schedules from Ferryhopper and the operators themselves. Opening hours and prices from the actual restaurant, winery and museum websites. Wikipedia for historical facts. Not from SEO-farm aggregators.', el: ' Δρομολόγια πλοίων από το Ferryhopper και τους ίδιους τους μεταφορείς. Ωράρια και τιμές από τα ίδια τα sites εστιατορίων, οινοποιείων, μουσείων. Wikipedia για ιστορικά στοιχεία. Όχι από SEO-farm συλλογείς.' },
+  'mission.sources.feedback.t': { en: 'Reader corrections.', el: 'Διορθώσεις αναγνωστών.' },
+  'mission.sources.feedback.d': { en: " When someone emails to say a restaurant closed or a ferry route changed, the page is updated. That loop is explicit — it's the Feedback button.", el: ' Όταν μου γράφει κάποιος ότι έκλεισε ένα εστιατόριο ή άλλαξε μια ακτοπλοϊκή γραμμή, η σελίδα ενημερώνεται. Ο κύκλος είναι ρητός — είναι το κουμπί Σχόλια.' },
+
+  // Rubric
+  'mission.rubric.title': { en: 'The rubric', el: 'Η κλίμακα' },
+  'mission.rubric.intro': { en: "Five dimensions. Each scored 1 to 5. Here's what those numbers actually mean.", el: 'Πέντε διαστάσεις. Κάθε μία βαθμολογείται 1 έως 5. Να τι σημαίνουν πραγματικά αυτοί οι αριθμοί.' },
+
+  'mission.rubric.beach.name': { en: 'Beach', el: 'Παραλία' },
+  'mission.rubric.beach.desc': { en: 'How good the swimming is.', el: 'Πόσο καλό είναι το μπάνιο.' },
+  'mission.rubric.beach.5': { en: "You'd pick the island because of the water. Milos, Elafonisos, Lefkada.", el: 'Θα διάλεγες το νησί για τα νερά του. Μήλος, Ελαφόνησος, Λευκάδα.' },
+  'mission.rubric.beach.3': { en: "Good beaches exist but they're not the reason to come.", el: 'Καλές παραλίες υπάρχουν αλλά δεν είναι ο λόγος να έρθεις.' },
+  'mission.rubric.beach.1': { en: 'Swim at the hotel pool instead.', el: 'Κολύμπα καλύτερα στην πισίνα του ξενοδοχείου.' },
+
+  'mission.rubric.hist.name': { en: 'Culture', el: 'Πολιτισμός' },
+  'mission.rubric.hist.desc': { en: 'Archaeology, museums, churches, old towns, living tradition.', el: 'Αρχαιολογία, μουσεία, εκκλησίες, παλιές πόλεις, ζωντανή παράδοση.' },
+  'mission.rubric.hist.5': { en: 'Serious depth. Delos, Rhodes Old Town, Patmos.', el: 'Σοβαρό βάθος. Δήλος, Παλιά Πόλη Ρόδου, Πάτμος.' },
+  'mission.rubric.hist.3': { en: 'One or two good sites, worth a half-day.', el: 'Ένα-δύο καλά σημεία, αξίζουν μισή μέρα.' },
+  'mission.rubric.hist.1': { en: 'The island\'s story is "we have a beach."', el: 'Η ιστορία του νησιού είναι «έχουμε παραλία».' },
+
+  'mission.rubric.night.name': { en: 'Nightlife', el: 'Νυχτερινή ζωή' },
+  'mission.rubric.night.desc': { en: 'From beach clubs to late dinners.', el: 'Από beach clubs μέχρι αργά δείπνα.' },
+  'mission.rubric.night.5': { en: 'Party-destination level. Mykonos, Ios.', el: 'Επίπεδο party-προορισμού. Μύκονος, Ίος.' },
+  'mission.rubric.night.3': { en: 'Good food, a few bars, things happen after midnight.', el: 'Καλό φαγητό, λίγα μπαρ, κάτι γίνεται μετά τα μεσάνυχτα.' },
+  'mission.rubric.night.1': { en: 'Dinner ends at 10pm and the village sleeps.', el: 'Το δείπνο τελειώνει στις 10 και το χωριό κοιμάται.' },
+
+  'mission.rubric.access.name': { en: 'Access', el: 'Πρόσβαση' },
+  'mission.rubric.access.desc': { en: 'How hard to reach from Athens, and onward.', el: 'Πόσο δύσκολο να φτάσεις από την Αθήνα, και παραπέρα.' },
+  'mission.rubric.access.5': { en: 'Airport plus fast ferries. Santorini, Rhodes, Corfu.', el: 'Αεροδρόμιο και γρήγορα πλοία. Σαντορίνη, Ρόδος, Κέρκυρα.' },
+  'mission.rubric.access.3': { en: 'One reliable ferry a day in summer.', el: 'Ένα αξιόπιστο πλοίο τη μέρα το καλοκαίρι.' },
+  'mission.rubric.access.1': { en: 'You need to really want to go.', el: 'Πρέπει πραγματικά να το θες.' },
+
+  'mission.rubric.afford.name': { en: 'Affordability', el: 'Οικονομικά' },
+  'mission.rubric.afford.desc': { en: 'Week for two in August: hotel + food + getting around.', el: 'Εβδομάδα για δύο τον Αύγουστο: ξενοδοχείο + φαγητό + μετακινήσεις.' },
+  'mission.rubric.afford.5': { en: 'Genuinely cheap. Ikaria, Samothrace, Lemnos.', el: 'Γνήσια φθηνά. Ικαρία, Σαμοθράκη, Λήμνος.' },
+  'mission.rubric.afford.3': { en: 'Normal Greek-island pricing.', el: 'Κανονικές τιμές ελληνικού νησιού.' },
+  'mission.rubric.afford.1': { en: 'Mykonos/Santorini territory. Dinner alone can clear €200.', el: 'Επίπεδο Μυκόνου/Σαντορίνης. Μόνο το δείπνο ξεπερνά τα 200€.' },
+
+  // Overall
+  'mission.overall.title': { en: 'The overall number', el: 'Ο συνολικός αριθμός' },
+  'mission.overall.p1': { en: "There's a sixth number on every island — the one that shows up in the map tooltip and sorts the table. I'll be honest about what it is: a gut-check overall rating, also set by me.", el: 'Υπάρχει κι ένας έκτος αριθμός για κάθε νησί — αυτός που εμφανίζεται στο tooltip του χάρτη και ταξινομεί τον πίνακα. Θα είμαι ειλικρινής για το τι είναι: μια συνολική βαθμολογία-ενστίκτου, την οποία ορίζω κι αυτή εγώ.' },
+  'mission.overall.p2': { en: 'It correlates most with Beach and Culture — those are the two things most people come to the Greek islands for — but it\'s not a formula. A quiet, affordable island with one good beach and one good ruin can out-rate a pretty but generic one. I set the totals by feel, then check them against how I actually ranked islands against each other in my own head.', el: 'Συσχετίζεται κυρίως με την Παραλία και τον Πολιτισμό — αυτά είναι που φέρνουν τους περισσότερους στα ελληνικά νησιά — αλλά δεν είναι φόρμουλα. Ένα ήσυχο, οικονομικό νησί με μία καλή παραλία και ένα καλό μνημείο μπορεί να κερδίσει ένα όμορφο αλλά γενικό. Ορίζω τους αριθμούς στο αυτί, και τους ελέγχω με βάση το πώς κατατάσσω τα νησιά μεταξύ τους στο μυαλό μου.' },
+  'mission.overall.p3': { en: 'Use the five underlying numbers if your trip has a specific goal. The overall is for sorting the table when you don\'t yet know what you want.', el: 'Χρησιμοποίησε τις πέντε επιμέρους διαστάσεις αν το ταξίδι σου έχει συγκεκριμένο στόχο. Η συνολική βαθμολογία είναι για να ταξινομείς τον πίνακα όταν δεν ξέρεις ακόμα τι θες.' },
+
+  // Updates
+  'mission.updates.title': { en: 'How often this changes', el: 'Πόσο συχνά αλλάζει' },
+  'mission.updates.p1': { en: "Restaurants close. Ferry operators swap routes. A hotel changes hands and quality drops. Scores themselves rarely shift — an island's personality doesn't change in a season — but the specifics on a page do.", el: 'Τα εστιατόρια κλείνουν. Οι ακτοπλοϊκές αλλάζουν γραμμές. Ένα ξενοδοχείο αλλάζει χέρια και η ποιότητα πέφτει. Οι ίδιες οι βαθμολογίες σπάνια αλλάζουν — ο χαρακτήρας ενός νησιού δεν αλλάζει σε μια σεζόν — αλλά οι λεπτομέρειες στη σελίδα αλλάζουν.' },
+  'mission.updates.p2': { en: 'When I get reader feedback or visit an island again, the page updates. When a restaurant I recommended closes, the link comes down within a week. The goal is not to be an encyclopedia — it\'s to be the most current opinionated recommendation you can trust for the next 6 months.', el: 'Όταν παίρνω σχόλια από αναγνώστες ή επισκέπτομαι ξανά ένα νησί, η σελίδα ενημερώνεται. Όταν κλείνει ένα εστιατόριο που πρότεινα, ο σύνδεσμος κατεβαίνει μέσα σε μια εβδομάδα. Στόχος δεν είναι να γίνουμε εγκυκλοπαίδεια — αλλά η πιο ενημερωμένη πρόταση με άποψη που μπορείς να εμπιστευτείς για τους επόμενους 6 μήνες.' },
+
+  // Limits
+  'mission.limits.title': { en: "What the scores can't capture", el: 'Τι δεν μπορούν να δείξουν οι βαθμολογίες' },
+  'mission.limits.lead': { en: "Five numbers can't describe an island. A few things they miss:", el: 'Πέντε αριθμοί δεν περιγράφουν ένα νησί. Κάποια πράγματα που χάνουν:' },
+  'mission.limits.season': { en: "Season. Ios in July is a 5 for nightlife; Ios in April is a 1. The score reflects the peak.", el: 'Εποχή. Η Ίος τον Ιούλιο είναι 5 στη νυχτερινή ζωή· τον Απρίλιο είναι 1. Ο αριθμός δείχνει την κορύφωση.' },
+  'mission.limits.taste': { en: "Personal taste. If you hate parties, Mykonos's high Nightlife score is a warning, not a selling point.", el: 'Προσωπικό γούστο. Αν μισείς τα πάρτι, η ψηλή βαθμολογία Νυχτερινής Ζωής της Μυκόνου είναι προειδοποίηση, όχι πλεονέκτημα.' },
+  'mission.limits.crowds': { en: "Crowds. Santorini scores well across the board but feels different when six cruise ships dock the same day. The pages mention this; the numbers don't reflect it.", el: 'Τουριστικός συνωστισμός. Η Σαντορίνη βαθμολογείται καλά παντού, αλλά έχει άλλη αίσθηση όταν δένουν έξι κρουαζιερόπλοια την ίδια μέρα. Οι σελίδες το αναφέρουν, οι αριθμοί όχι.' },
+  'mission.limits.drift': { en: "Drift. A \"must-eat\" restaurant can coast for years on reviews after the original chef leaves. I try to catch these but I'm one person.", el: 'Μετατόπιση. Ένα «must-eat» εστιατόριο μπορεί να εξακολουθεί να συστήνεται χρόνια μετά την αποχώρηση του αρχικού σεφ. Προσπαθώ να τα πιάνω αλλά είμαι ένας άνθρωπος.' },
+
+  // Disagree
+  'mission.disagree.title': { en: 'Think I got one wrong?', el: 'Πιστεύεις πως έκανα λάθος;' },
+  'mission.disagree.text': { en: 'Hit the <strong>💬 Feedback</strong> button at the bottom right of any page and pick <em>"Suggest a rating correction."</em> Explain what you\'d change and why. If you make a good case, I\'ll update the number. The five dimensions and the reasoning stay in the open.', el: 'Πάτα το κουμπί <strong>💬 Σχόλια</strong> κάτω δεξιά σε οποιαδήποτε σελίδα και διάλεξε <em>«Πρόταση διόρθωσης βαθμολογίας»</em>. Εξήγησε τι θα άλλαζες και γιατί. Αν έχεις καλό επιχείρημα, θα ενημερώσω τον αριθμό. Οι πέντε διαστάσεις και η λογική παραμένουν δημόσιες.' },
+
   'scoring.howlink': { en: 'how we score', el: 'πώς βαθμολογούμε' },
   'feedback.topic.rating': { en: '⭐ Suggest a rating correction', el: '⭐ Πρόταση διόρθωσης βαθμολογίας' },
 

@@ -68,7 +68,7 @@
   <link rel="icon" href="/logo.png" type="image/png">
   <link rel="apple-touch-icon" href="/logo.png">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="/style.css?v=18">
+  <link rel="stylesheet" href="/style.css?v=19">
 </head>
 <body>
 
@@ -262,59 +262,178 @@
         <line x1="0" y1="150" x2="1280" y2="150" stroke="#fff" stroke-width="0.8" stroke-dasharray="5 12"/>
         <line x1="640" y1="0" x2="640" y2="300" stroke="#fff" stroke-width="0.8" stroke-dasharray="5 12" opacity="0.5"/>
       </svg>
-      <div class="why-hero-logo-wrap"><img src="/logo.png" alt="Aegean Blueprint logo"></div>
+      <div class="why-hero-logo-wrap"><img src="logo.png" alt="Aegean Blueprint logo"></div>
       <h1 data-i18n="mission.title">Mission</h1>
       <p class="why-hero-sub" data-i18n="mission.tagline">For travellers who want to live the holiday, not plan it.</p>
     </div>
-    <div class="why-body why-body-compact">
-      <p class="why-lead" data-i18n="mission.lead1">This site is for people who don't want choices. They want the gist, without the fluff.</p>
-      <p class="why-lead" data-i18n="mission.lead2">Greece has 83 inhabited islands and countless guides, blogs and listicles trying to cover them all. It's overwhelming, and most of it is shallow.</p>
-      <div class="author-photo-block">
-        <img src="https://res.cloudinary.com/dothbs5hs/image/upload/w_400,q_auto,f_auto/v1776894159/SAM_2285_1_ecrp5l.jpg" alt="Stergios Gousios" class="author-photo">
-        <div class="author-photo-caption">
-          <div class="author-name">Stergios Gousios</div>
-          <div class="author-role" data-i18n="mission.author.role">Founder · Athens</div>
+
+    <div class="mission-body">
+
+      <!-- SECTION 1: Why this site exists -->
+      <section class="mission-section">
+        <h2 class="mission-section-title" data-i18n="mission.why.title">Why this site exists</h2>
+        <p class="mission-para" data-i18n="mission.why.p1">Greece has 83 inhabited islands. Most guides try to cover all of them, and end up saying nothing useful about any. Search results give you the same twenty stock photos of Oia and a PR-written paragraph that could be about any island in the Aegean. AI-generated lists read like they were written by someone who has never tasted a tomato.</p>
+        <blockquote class="mission-pullquote" data-i18n="mission.why.quote">This site is for people who don't want choices. They want the gist, without the fluff.</blockquote>
+        <p class="mission-para" data-i18n="mission.why.p2">Each island page gives you one opinionated recommendation: where to stay, what to do for 2 to 5 days, where to swim, where to eat. Not ten options ranked by affiliate payout. One. The one the person who built this site would pick.</p>
+      </section>
+
+      <!-- SECTION 2: Built by one person -->
+      <section class="mission-section mission-author-section">
+        <h2 class="mission-section-title" data-i18n="mission.author.title">Built by one person</h2>
+        <div class="mission-author-card">
+          <img src="https://res.cloudinary.com/dothbs5hs/image/upload/w_400,q_auto,f_auto/v1776894159/SAM_2285_1_ecrp5l.jpg" alt="Stergios Gousios" class="mission-author-photo">
+          <div class="mission-author-text">
+            <div class="mission-author-name">Stergios Gousios</div>
+            <div class="mission-author-role" data-i18n="mission.author.role2">Founder · Athens</div>
+            <p class="mission-author-bio" data-i18n="mission.author.bio">Greek, based in Athens, 50+ islands visited over 20+ years. Not a travel influencer, not a PR-sponsored blog. A single person writing down what he actually thinks.</p>
+          </div>
         </div>
-      </div>
-      <p class="why-lead" id="mission-lead3"><strong data-i18n="mission.lead3.bold">Aegean Blueprint is made by locals who have actually travelled to the islands on the site</strong><span data-i18n="mission.lead3.after"> — not curated from search rankings, and not stitched together by AI. Each island page gives you one clear, opinionated recommendation: what to see, where to swim, how long to stay. That's it.</span></p>
-      <div class="why-manifesto">
-        <h2 data-i18n="mission.point.label">The point</h2>
-        <p data-i18n="mission.point.text">Pick an island. Pack a bag. Go.</p>
-        <span class="why-kicker" data-i18n="mission.kicker">Planning a trip shouldn't take longer than the trip itself.</span>
-      </div>
+        <p class="mission-para" data-i18n="mission.author.note">This matters because the alternative is what everyone else does: aggregate reviews from TripAdvisor, run them through an SEO mill, translate the output into every language, and publish it as a "guide." The writing reads fine. The advice is worthless.</p>
+      </section>
 
-      <div class="why-scoring" id="how-we-score">
-        <h2 data-i18n="mission.scoring.title">How we score</h2>
+      <!-- SECTION 3: The one-recommendation principle -->
+      <section class="mission-section">
+        <h2 class="mission-section-title" data-i18n="mission.principle.title">The one-recommendation principle</h2>
+        <p class="mission-para" data-i18n="mission.principle.intro">For each island, this site picks exactly one of each:</p>
+        <div class="mission-triptych">
+          <div class="mission-triptych-card">
+            <div class="mission-triptych-icon">🏨</div>
+            <div class="mission-triptych-label" data-i18n="mission.principle.hotel.label">One hotel</div>
+            <p class="mission-triptych-text" data-i18n="mission.principle.hotel.text">With a budget alternative if the top pick is too expensive. Linked to Booking.com so you can check availability in one click.</p>
+          </div>
+          <div class="mission-triptych-card">
+            <div class="mission-triptych-icon">🗺</div>
+            <div class="mission-triptych-label" data-i18n="mission.principle.route.label">One itinerary</div>
+            <p class="mission-triptych-text" data-i18n="mission.principle.route.text">2 to 5 days depending on the island, mapped with driving distances. Beaches, villages, archaeological sites, places to eat. No "optional side-trips."</p>
+          </div>
+          <div class="mission-triptych-card">
+            <div class="mission-triptych-icon">🍽</div>
+            <div class="mission-triptych-label" data-i18n="mission.principle.dinner.label">One dinner spot per night</div>
+            <p class="mission-triptych-text" data-i18n="mission.principle.dinner.text">Named, linked, often with a phone number to book ahead. Where I'd take a friend who had one night on the island.</p>
+          </div>
+        </div>
+        <p class="mission-kicker-line" data-i18n="mission.principle.kicker">Pick an island. Pack a bag. Go.</p>
+      </section>
 
-        <p class="why-lead" data-i18n="mission.scoring.lead">Every island on this site gets rated 1–5 on five dimensions. These numbers aren't an algorithm. They're one person's judgment — Stergios's — based on having actually been to these islands, read everything written about the rest, and thought carefully about what each one is actually good for.</p>
+      <!-- SECTION 4: How we score -->
+      <section class="mission-section mission-score-section" id="how-we-score">
+        <h2 class="mission-section-title" data-i18n="mission.scoring.title">How we score</h2>
 
-        <p class="why-lead" data-i18n="mission.scoring.honest">We think that's more useful than a "proprietary weighted index" stitched from TripAdvisor stars and hotel counts. But it's not objective, and we won't pretend it is. If you want to know why Milos is a 4.6 and Tinos is a 3.9, the short answer is: Stergios thinks so, for the reasons below. The longer answer is: disagree with us — we'd rather have that conversation than a fake one about formulas.</p>
+        <p class="mission-para" data-i18n="mission.scoring.lead">Every island gets rated 1 to 5 on five dimensions, plus one overall number. These aren't computed by an algorithm and they aren't scraped from TripAdvisor. They're one person's informed judgment — mine — based on having been there, or on careful research and local contacts for the few I haven't.</p>
 
-        <h3 data-i18n="mission.scoring.dims.title">The five dimensions</h3>
+        <p class="mission-para" data-i18n="mission.scoring.honest">If you want to know why Milos is 4.6 and Tinos is 3.9, the short answer is: I think so, for the reasons below. The longer answer is: disagree with me — I'd rather have that conversation than pretend there's a formula.</p>
 
-        <dl class="why-dims">
-          <dt data-i18n="mission.scoring.beach.term">🏖 Beach</dt>
-          <dd data-i18n="mission.scoring.beach.def">How good the swimming is. A 5 means you'd pick this island <em>because</em> of the water — Milos, Elafonisos, Lefkada. A 3 means good beaches exist but they're not the reason to come. A 1 means swim at your hotel pool instead.</dd>
+        <!-- Sources sub-section -->
+        <h3 class="mission-subsection-title" data-i18n="mission.sources.title">Where the information comes from</h3>
+        <ul class="mission-sources-list">
+          <li><strong data-i18n="mission.sources.visited.t">Personal visits.</strong><span data-i18n="mission.sources.visited.d"> 50+ of the 76 islands on this site I've been to in person, most more than once. The itineraries, beaches and restaurants for those islands come from my own experience.</span></li>
+          <li><strong data-i18n="mission.sources.local.t">Local contacts.</strong><span data-i18n="mission.sources.local.d"> Friends, family and acquaintances who live or summer on specific islands. Kalymnos, Ikaria, Lemnos, Skyros — when I call someone who lives there, their answer beats any guidebook.</span></li>
+          <li><strong data-i18n="mission.sources.official.t">Official data.</strong><span data-i18n="mission.sources.official.d"> Ferry schedules from Ferryhopper and the operators themselves. Opening hours and prices from the actual restaurant, winery and museum websites. Wikipedia for historical facts. Not from SEO-farm aggregators.</span></li>
+          <li><strong data-i18n="mission.sources.feedback.t">Reader corrections.</strong><span data-i18n="mission.sources.feedback.d"> When someone emails to say a restaurant closed or a ferry route changed, the page is updated. That loop is explicit — it's the Feedback button.</span></li>
+        </ul>
 
-          <dt data-i18n="mission.scoring.hist.term">🏛 Culture</dt>
-          <dd data-i18n="mission.scoring.hist.def">Archaeology, museums, churches, old towns, living tradition. A 5 rewards depth, not just tourist-brochure ruins — Delos, Rhodes Old Town, Patmos. A 3 means one or two good sites. A 1 means the island's story is "we have a beach."</dd>
+        <!-- Rubric sub-section -->
+        <h3 class="mission-subsection-title" data-i18n="mission.rubric.title">The rubric</h3>
+        <p class="mission-para mission-rubric-intro" data-i18n="mission.rubric.intro">Five dimensions. Each scored 1 to 5. Here's what those numbers actually mean.</p>
 
-          <dt data-i18n="mission.scoring.night.term">🌃 Nightlife</dt>
-          <dd data-i18n="mission.scoring.night.def">From beach clubs to dinner-and-a-walk. A 5 is party-destination-level (Mykonos, Ios). A 3 means you can find good food and a few bars. A 1 means dinner ends at 10pm and the village sleeps.</dd>
+        <div class="mission-rubric-grid">
 
-          <dt data-i18n="mission.scoring.access.term">🚢 Access</dt>
-          <dd data-i18n="mission.scoring.access.def">How hard it is to get there from Athens, and how far it is to the next island. A 5 has an airport and fast ferries (Santorini, Rhodes, Corfu). A 3 means one reliable ferry a day in summer. A 1 means you need to really want to go.</dd>
+          <div class="mission-rubric-card">
+            <div class="mission-rubric-head">
+              <span class="mission-rubric-icon">🏖</span>
+              <span class="mission-rubric-name" data-i18n="mission.rubric.beach.name">Beach</span>
+            </div>
+            <p class="mission-rubric-desc" data-i18n="mission.rubric.beach.desc">How good the swimming is.</p>
+            <div class="mission-rubric-anchors">
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-5">5</span><span data-i18n="mission.rubric.beach.5">You'd pick the island because of the water. Milos, Elafonisos, Lefkada.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-3">3</span><span data-i18n="mission.rubric.beach.3">Good beaches exist but they're not the reason to come.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-1">1</span><span data-i18n="mission.rubric.beach.1">Swim at the hotel pool instead.</span></div>
+            </div>
+          </div>
 
-          <dt data-i18n="mission.scoring.afford.term">💶 Affordability</dt>
-          <dd data-i18n="mission.scoring.afford.def">What a week costs for two people in August, hotel + food + getting around. A 5 is genuinely cheap (Ikaria, Samothrace). A 3 is normal Greek-island pricing. A 1 is Mykonos/Santorini territory where dinner alone can clear €200.</dd>
-        </dl>
+          <div class="mission-rubric-card">
+            <div class="mission-rubric-head">
+              <span class="mission-rubric-icon">🏛</span>
+              <span class="mission-rubric-name" data-i18n="mission.rubric.hist.name">Culture</span>
+            </div>
+            <p class="mission-rubric-desc" data-i18n="mission.rubric.hist.desc">Archaeology, museums, churches, old towns, living tradition.</p>
+            <div class="mission-rubric-anchors">
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-5">5</span><span data-i18n="mission.rubric.hist.5">Serious depth. Delos, Rhodes Old Town, Patmos.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-3">3</span><span data-i18n="mission.rubric.hist.3">One or two good sites, worth a half-day.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-1">1</span><span data-i18n="mission.rubric.hist.1">The island's story is "we have a beach."</span></div>
+            </div>
+          </div>
 
-        <h3 data-i18n="mission.scoring.overall.title">The overall number</h3>
-        <p class="why-lead" data-i18n="mission.scoring.overall.text">The overall rating is a weighted mix of the five, tilted toward Beach and Culture because that's what most people come to the Greek islands for. It's still a judgment call, not a calculation — the weights themselves are a choice, and someone whose holiday is all about nightlife would weight it differently. Use the five underlying numbers. The single number is for sorting the table.</p>
+          <div class="mission-rubric-card">
+            <div class="mission-rubric-head">
+              <span class="mission-rubric-icon">🌃</span>
+              <span class="mission-rubric-name" data-i18n="mission.rubric.night.name">Nightlife</span>
+            </div>
+            <p class="mission-rubric-desc" data-i18n="mission.rubric.night.desc">From beach clubs to late dinners.</p>
+            <div class="mission-rubric-anchors">
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-5">5</span><span data-i18n="mission.rubric.night.5">Party-destination level. Mykonos, Ios.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-3">3</span><span data-i18n="mission.rubric.night.3">Good food, a few bars, things happen after midnight.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-1">1</span><span data-i18n="mission.rubric.night.1">Dinner ends at 10pm and the village sleeps.</span></div>
+            </div>
+          </div>
 
-        <h3 data-i18n="mission.scoring.disagree.title">Think we got one wrong?</h3>
-        <p class="why-lead" data-i18n="mission.scoring.disagree.text">Tell us. Hit the <strong>💬 Feedback</strong> button at the bottom right of any page and pick "Suggest a rating correction." Explain what you'd change and why. We read everything — and if you make a good case, we'll update the number. The five dimensions and the rationale stay in the open.</p>
-      </div>
+          <div class="mission-rubric-card">
+            <div class="mission-rubric-head">
+              <span class="mission-rubric-icon">🚢</span>
+              <span class="mission-rubric-name" data-i18n="mission.rubric.access.name">Access</span>
+            </div>
+            <p class="mission-rubric-desc" data-i18n="mission.rubric.access.desc">How hard to reach from Athens, and onward.</p>
+            <div class="mission-rubric-anchors">
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-5">5</span><span data-i18n="mission.rubric.access.5">Airport plus fast ferries. Santorini, Rhodes, Corfu.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-3">3</span><span data-i18n="mission.rubric.access.3">One reliable ferry a day in summer.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-1">1</span><span data-i18n="mission.rubric.access.1">You need to really want to go.</span></div>
+            </div>
+          </div>
+
+          <div class="mission-rubric-card">
+            <div class="mission-rubric-head">
+              <span class="mission-rubric-icon">💶</span>
+              <span class="mission-rubric-name" data-i18n="mission.rubric.afford.name">Affordability</span>
+            </div>
+            <p class="mission-rubric-desc" data-i18n="mission.rubric.afford.desc">Week for two in August: hotel + food + getting around.</p>
+            <div class="mission-rubric-anchors">
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-5">5</span><span data-i18n="mission.rubric.afford.5">Genuinely cheap. Ikaria, Samothrace, Lemnos.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-3">3</span><span data-i18n="mission.rubric.afford.3">Normal Greek-island pricing.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-1">1</span><span data-i18n="mission.rubric.afford.1">Mykonos/Santorini territory. Dinner alone can clear €200.</span></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Overall number -->
+        <h3 class="mission-subsection-title" data-i18n="mission.overall.title">The overall number</h3>
+        <p class="mission-para" data-i18n="mission.overall.p1">There's a sixth number on every island — the one that shows up in the map tooltip and sorts the table. I'll be honest about what it is: a gut-check overall rating, also set by me.</p>
+        <p class="mission-para" data-i18n="mission.overall.p2">It correlates most with Beach and Culture — those are the two things most people come to the Greek islands for — but it's not a formula. A quiet, affordable island with one good beach and one good ruin can out-rate a pretty but generic one. I set the totals by feel, then check them against how I actually ranked islands against each other in my own head.</p>
+        <p class="mission-para mission-para-emphasis" data-i18n="mission.overall.p3">Use the five underlying numbers if your trip has a specific goal. The overall is for sorting the table when you don't yet know what you want.</p>
+
+        <!-- Update cadence -->
+        <h3 class="mission-subsection-title" data-i18n="mission.updates.title">How often this changes</h3>
+        <p class="mission-para" data-i18n="mission.updates.p1">Restaurants close. Ferry operators swap routes. A hotel changes hands and quality drops. Scores themselves rarely shift — an island's personality doesn't change in a season — but the specifics on a page do.</p>
+        <p class="mission-para" data-i18n="mission.updates.p2">When I get reader feedback or visit an island again, the page updates. When a restaurant I recommended closes, the link comes down within a week. The goal is not to be an encyclopedia — it's to be the most current opinionated recommendation you can trust for the next 6 months.</p>
+
+        <!-- Limitations -->
+        <h3 class="mission-subsection-title" data-i18n="mission.limits.title">What the scores can't capture</h3>
+        <p class="mission-para" data-i18n="mission.limits.lead">Five numbers can't describe an island. A few things they miss:</p>
+        <ul class="mission-limits-list">
+          <li data-i18n="mission.limits.season">Season. Ios in July is a 5 for nightlife; Ios in April is a 1. The score reflects the peak.</li>
+          <li data-i18n="mission.limits.taste">Personal taste. If you hate parties, Mykonos's high Nightlife score is a warning, not a selling point.</li>
+          <li data-i18n="mission.limits.crowds">Crowds. Santorini scores well across the board but feels different when six cruise ships dock the same day. The pages mention this; the numbers don't reflect it.</li>
+          <li data-i18n="mission.limits.drift">Drift. A "must-eat" restaurant can coast for years on reviews after the original chef leaves. I try to catch these but I'm one person.</li>
+        </ul>
+
+        <!-- Disagree -->
+        <div class="mission-disagree-box">
+          <h3 class="mission-disagree-title" data-i18n="mission.disagree.title">Think I got one wrong?</h3>
+          <p class="mission-para" data-i18n="mission.disagree.text">Hit the <strong>💬 Feedback</strong> button at the bottom right of any page and pick <em>"Suggest a rating correction."</em> Explain what you'd change and why. If you make a good case, I'll update the number. The five dimensions and the reasoning stay in the open.</p>
+        </div>
+
+      </section>
+
     </div>
   </main>
 
@@ -400,7 +519,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-  <script src="/i18n.js?v=20"></script>
-  <script src="/script.js?v=29"></script>
+  <script src="/i18n.js?v=21"></script>
+  <script src="/script.js?v=30"></script>
 </body>
 </html>

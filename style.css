@@ -3374,3 +3374,343 @@ html.dark .intl-star.on { color: #FFCB52; }
   .why-scoring .why-lead { font-size: 15.5px; }
   .why-dims dd { font-size: 14.5px; }
 }
+
+/* ============================================================
+   MISSION PAGE — v2 (redesigned)
+============================================================ */
+.mission-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 48px 32px 80px;
+}
+
+.mission-section {
+  margin-bottom: 64px;
+}
+
+.mission-section-title {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--ink-1);
+  margin: 0 0 20px;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.mission-subsection-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink-1);
+  margin: 40px 0 14px;
+  letter-spacing: -0.01em;
+}
+
+.mission-para {
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin: 0 0 16px;
+}
+.mission-para strong { color: var(--ink-1); font-weight: 700; }
+.mission-para em { font-style: italic; color: var(--ink-1); }
+
+.mission-para-emphasis {
+  font-style: italic;
+  color: var(--ink-1);
+  padding-left: 16px;
+  border-left: 3px solid var(--aegean);
+  margin-top: 20px;
+}
+
+.mission-pullquote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.4;
+  color: var(--ink-1);
+  margin: 28px 0;
+  padding: 20px 24px;
+  border-left: 4px solid var(--aegean);
+  background: var(--aegean-pale);
+  border-radius: 0 8px 8px 0;
+}
+
+/* Author card */
+.mission-author-section .mission-author-card {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 24px;
+  background: var(--marble-2);
+  border-radius: 12px;
+  margin: 20px 0 24px;
+}
+.mission-author-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid var(--white);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.mission-author-text { flex: 1; min-width: 0; }
+.mission-author-name {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink-1);
+  letter-spacing: -0.01em;
+}
+.mission-author-role {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink-3);
+  margin: 2px 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+.mission-author-bio {
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  margin: 0;
+}
+
+/* Triptych (one hotel / one itinerary / one dinner) */
+.mission-triptych {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin: 24px 0 32px;
+}
+.mission-triptych-card {
+  background: var(--marble);
+  border: 1px solid var(--ink-5);
+  border-radius: 12px;
+  padding: 20px 18px;
+  text-align: center;
+}
+.mission-triptych-icon {
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.mission-triptych-label {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-1);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.mission-triptych-text {
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  margin: 0;
+}
+.mission-kicker-line {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 20px;
+  color: var(--ink-1);
+  text-align: center;
+  margin: 24px 0 0;
+}
+
+/* Scoring section — anchor offset for #how-we-score link */
+.mission-score-section { scroll-margin-top: 100px; }
+
+/* Sources list */
+.mission-sources-list {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 8px;
+}
+.mission-sources-list li {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  padding: 12px 16px 12px 44px;
+  margin-bottom: 8px;
+  background: var(--marble-2);
+  border-left: 3px solid var(--aegean);
+  border-radius: 0 8px 8px 0;
+  position: relative;
+}
+.mission-sources-list li::before {
+  content: "→";
+  position: absolute;
+  left: 16px;
+  top: 12px;
+  color: var(--aegean);
+  font-weight: 700;
+  font-size: 16px;
+}
+.mission-sources-list li strong {
+  color: var(--ink-1);
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+/* Rubric grid */
+.mission-rubric-intro {
+  font-size: 15px;
+  color: var(--ink-3);
+  margin-bottom: 20px;
+}
+.mission-rubric-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 20px 0 32px;
+}
+.mission-rubric-card {
+  background: var(--marble);
+  border: 1px solid var(--ink-5);
+  border-radius: 12px;
+  padding: 18px 18px 14px;
+}
+.mission-rubric-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.mission-rubric-icon {
+  font-size: 22px;
+}
+.mission-rubric-name {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--ink-1);
+  letter-spacing: -0.01em;
+}
+.mission-rubric-desc {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink-3);
+  margin: 0 0 12px;
+  line-height: 1.4;
+  font-style: italic;
+}
+.mission-rubric-anchors {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.mission-rubric-anchor {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-family: var(--sans);
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+.mission-rubric-score {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--white);
+  font-family: var(--sans);
+}
+.mrs-5 { background: #1B5E20; } /* deep green */
+.mrs-3 { background: #C4962A; } /* gold */
+.mrs-1 { background: #C0522A; } /* terracotta */
+
+/* Limits list */
+.mission-limits-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+.mission-limits-list li {
+  font-family: var(--sans);
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  padding: 10px 14px 10px 34px;
+  margin-bottom: 6px;
+  position: relative;
+  background: transparent;
+}
+.mission-limits-list li::before {
+  content: "⚠";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: var(--terracotta);
+  font-size: 14px;
+}
+
+/* Disagree box */
+.mission-disagree-box {
+  margin-top: 48px;
+  padding: 28px 28px 24px;
+  background: linear-gradient(135deg, var(--aegean-pale) 0%, var(--marble-2) 100%);
+  border-radius: 16px;
+  border: 1px solid var(--aegean-light);
+}
+.mission-disagree-title {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ink-1);
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
+}
+
+/* Mobile adjustments */
+@media (max-width: 700px) {
+  .mission-body { padding: 32px 20px 56px; }
+  .mission-section { margin-bottom: 48px; }
+  .mission-section-title { font-size: 26px; }
+  .mission-subsection-title { font-size: 19px; margin-top: 32px; }
+  .mission-para { font-size: 16px; }
+  .mission-pullquote { font-size: 19px; padding: 16px 18px; }
+  .mission-author-card { flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 20px; }
+  .mission-author-photo { width: 100px; height: 100px; }
+  .mission-triptych { grid-template-columns: 1fr; gap: 12px; }
+  .mission-rubric-grid { grid-template-columns: 1fr; gap: 12px; }
+  .mission-disagree-box { padding: 22px 20px 18px; }
+  .mission-disagree-title { font-size: 20px; }
+}
+
+/* Dark mode */
+html.dark .mission-pullquote {
+  background: rgba(11, 143, 172, 0.12);
+  color: var(--ink-1);
+}
+html.dark .mission-author-section .mission-author-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--ink-5);
+}
+html.dark .mission-triptych-card,
+html.dark .mission-rubric-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: var(--ink-5);
+}
+html.dark .mission-sources-list li {
+  background: rgba(255, 255, 255, 0.04);
+}
+html.dark .mission-disagree-box {
+  background: linear-gradient(135deg, rgba(11, 143, 172, 0.15) 0%, rgba(255, 255, 255, 0.04) 100%);
+  border-color: rgba(11, 143, 172, 0.3);
+}
