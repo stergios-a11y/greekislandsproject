@@ -1,0 +1,141 @@
+{
+  "name": "Kythnos",
+  "intro": "Kythnos is the first Cycladic island you reach from the Athens Riviera, yet it remains one of the least visited. It has no airport, one main ferry link, and a population of just 1,500. The draw: 99 beaches, ancient thermal springs that have drawn bathers for 2,000 years, and an absolutely pristine double-ended beach at Kolona that looks photoshopped.",
+  "subtitle": "Thermal springs, empty beaches, and the magical Kolona",
+  "itinerary": {
+    "title": "2-day Itinerary for Kythnos",
+    "subtitle": "Thermal springs, empty beaches, and the magical Kolona",
+    "days": [
+      {
+        "day": 1,
+        "title": "Chora & Thermal Springs",
+        "km": 20,
+        "drive_mins": 45,
+        "overnight": "Loutra",
+        "color": "#0B8FAC",
+        "stops": [
+          {
+            "name": "Merichas (port)",
+            "lat": 37.3904,
+            "lng": 24.3886,
+            "type": "harbour",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Small ferry port with a horseshoe sandy beach and tavernas on the waterfront."
+          },
+          {
+            "name": "Chora (Messaria)",
+            "lat": 37.4158,
+            "lng": 24.4285,
+            "type": "village",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Kythnos",
+            "desc": "Main inland village — maze of narrow whitewashed lanes. Walk the main artery end-to-end."
+          },
+          {
+            "name": "Katafyki Cave",
+            "lat": 37.4253,
+            "lng": 24.4365,
+            "type": "museum",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "Old iron mine turned geological attraction. Short guided tours in summer."
+          },
+          {
+            "name": "Loutra Thermal Baths",
+            "lat": 37.4482,
+            "lng": 24.4352,
+            "type": "village",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Ancient thermal springs (52°C) — bathed in since antiquity, housed in a 19th-century spa hotel. Day passes available."
+          },
+          {
+            "name": "Dinner — Karnagio",
+            "lat": 37.4483,
+            "lng": 24.4366,
+            "type": "village",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Friendly taverna on the Loutra waterfront. Fresh fish straight from the pier."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Kolona & Beaches",
+        "km": 15,
+        "drive_mins": 40,
+        "overnight": "Departure",
+        "color": "#3D8B6F",
+        "stops": [
+          {
+            "name": "Kolona Beach",
+            "lat": 37.4438,
+            "lng": 24.3921,
+            "type": "beach",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "The famous double beach — a sand spit connecting the main island to the tiny Agios Loukas islet. Swim in two sides at once. Arrive early to beat the crowds."
+          },
+          {
+            "name": "Apokrousi Beach",
+            "lat": 37.4425,
+            "lng": 24.3916,
+            "type": "beach",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "Larger sandy bay adjacent to Kolona. Usually less crowded, still gorgeous."
+          },
+          {
+            "name": "Dryopida",
+            "lat": 37.399,
+            "lng": 24.4335,
+            "type": "village",
+            "time": "16:00",
+            "wiki": null,
+            "desc": "Red-tiled roofs (unusual in the Cyclades) and a tiny folk museum. Lunch at one of the two village tavernas."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Kolona",
+      "lat": 37.4438,
+      "lng": 24.3921,
+      "type": "Fine white sand",
+      "length": "150 m sandbar",
+      "depth": "Shallow on both sides",
+      "facing": "Double-sided",
+      "facilities": "One canteen in summer, no umbrellas",
+      "wiki": null,
+      "desc": "Kythnos' icon beach. A narrow white sandbar connecting the island to a small rocky islet — you can swim simultaneously on two different sides."
+    },
+    {
+      "name": "Apokrousi",
+      "lat": 37.4425,
+      "lng": 24.3916,
+      "type": "Fine sand",
+      "length": "400 m",
+      "depth": "Gradual",
+      "facing": "Northwest",
+      "facilities": "Beach bar, umbrellas",
+      "wiki": null,
+      "desc": "Longer sandy beach right next to Kolona. More space, still very blue water."
+    },
+    {
+      "name": "Episkopi",
+      "lat": 37.3807,
+      "lng": 24.4134,
+      "type": "Sand",
+      "length": "300 m",
+      "depth": "Shallow",
+      "facing": "South — protected",
+      "facilities": "Taverna, rooms",
+      "wiki": null,
+      "desc": "Long sandy south coast beach. Local favorite, calm water, great for children."
+    }
+  ]
+}

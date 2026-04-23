@@ -1,0 +1,187 @@
+{
+  "name": "Serifos",
+  "intro": "Serifos is the wildest of the western Cyclades — stark, treeless, and topped by one of the most dramatic villages in Greece: Chora climbs up a volcanic cone like a staircase of white cubes. Iron mining gave the island prosperity until 1963; now abandoned mines and rusted piers give the coastline a post-industrial beauty. The beaches are empty, the villages stuck in time.",
+  "subtitle": "Dramatic white Chora and empty west coast beaches",
+  "itinerary": {
+    "title": "3-day Itinerary for Serifos",
+    "subtitle": "Dramatic white Chora and empty west coast beaches",
+    "days": [
+      {
+        "day": 1,
+        "title": "Chora & Livadi",
+        "km": 10,
+        "drive_mins": 25,
+        "overnight": "Chora",
+        "color": "#0B8FAC",
+        "stops": [
+          {
+            "name": "Livadi (port)",
+            "lat": 37.1464,
+            "lng": 24.5195,
+            "type": "harbour",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Main port and the only real village on the coast. Small but lively with tavernas along the bay."
+          },
+          {
+            "name": "Livadakia Beach",
+            "lat": 37.143,
+            "lng": 24.5165,
+            "type": "beach",
+            "time": "11:00",
+            "wiki": null,
+            "desc": "Sandy beach 5 min walk south of Livadi. Family-friendly with tamarisk shade and tavernas."
+          },
+          {
+            "name": "Chora (Upper Village)",
+            "lat": 37.1541,
+            "lng": 24.5069,
+            "type": "village",
+            "time": "16:00",
+            "wiki": "https://en.wikipedia.org/wiki/Serifos",
+            "desc": "White-cubed village crowning a pyramid-shaped hill. The climb from the bus stop is steep but magical at dusk."
+          },
+          {
+            "name": "Chora Castle ruins",
+            "lat": 37.1556,
+            "lng": 24.5073,
+            "type": "castle",
+            "time": "18:00",
+            "wiki": null,
+            "desc": "At the top of Chora — 360° views over the Aegean at sunset."
+          },
+          {
+            "name": "Dinner — Stou Stratou",
+            "lat": 37.1549,
+            "lng": 24.5064,
+            "type": "village",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Iconic Chora restaurant on the main square. Modern Cycladic cuisine with creative meze."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Northern Coast & Mines",
+        "km": 30,
+        "drive_mins": 70,
+        "overnight": "Chora",
+        "color": "#3D8B6F",
+        "stops": [
+          {
+            "name": "Megalo Livadi",
+            "lat": 37.1288,
+            "lng": 24.4443,
+            "type": "harbour",
+            "time": "10:30",
+            "wiki": null,
+            "desc": "Abandoned mining harbor on the west coast. Eerie industrial ruins and a pebble beach. The 1916 miners' strike monument is here."
+          },
+          {
+            "name": "Koutalas Beach",
+            "lat": 37.1221,
+            "lng": 24.4706,
+            "type": "beach",
+            "time": "12:00",
+            "wiki": null,
+            "desc": "Long sandy bay on the south coast. Peaceful, excellent water clarity."
+          },
+          {
+            "name": "Mega Chorio (abandoned)",
+            "lat": 37.1765,
+            "lng": 24.47,
+            "type": "village",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Semi-abandoned mining village in the island's interior. Tall narrow stone houses."
+          },
+          {
+            "name": "Panagia",
+            "lat": 37.1701,
+            "lng": 24.4809,
+            "type": "village",
+            "time": "16:30",
+            "wiki": null,
+            "desc": "Quiet village with one of the oldest churches in the Cyclades (10th-century Byzantine)."
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "East Coast Beaches",
+        "km": 25,
+        "drive_mins": 60,
+        "overnight": "Departure",
+        "color": "#C4962A",
+        "stops": [
+          {
+            "name": "Psili Ammos",
+            "lat": 37.161,
+            "lng": 24.5417,
+            "type": "beach",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "The most photogenic beach on Serifos — golden sand, turquoise water, perfectly arced bay."
+          },
+          {
+            "name": "Agios Sostis",
+            "lat": 37.1533,
+            "lng": 24.5385,
+            "type": "beach",
+            "time": "12:30",
+            "wiki": null,
+            "desc": "Small sandy cove with a whitewashed church on the rocky headland. Very few people."
+          },
+          {
+            "name": "Lunch — Takis",
+            "lat": 37.1465,
+            "lng": 24.5205,
+            "type": "village",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Local-favorite taverna on Livadi's waterfront. Fresh fish, Serifos chickpea stew (revithada)."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Psili Ammos",
+      "lat": 37.161,
+      "lng": 24.5417,
+      "type": "Fine sand",
+      "length": "250 m",
+      "depth": "Shallow",
+      "facing": "East — protected",
+      "facilities": "Two tavernas, umbrellas",
+      "wiki": null,
+      "desc": "The postcard beach of Serifos. Voted among Greece's top beaches multiple times."
+    },
+    {
+      "name": "Livadakia",
+      "lat": 37.143,
+      "lng": 24.5165,
+      "type": "Fine sand",
+      "length": "250 m",
+      "depth": "Gradual",
+      "facing": "South — protected",
+      "facilities": "Full: tavernas, umbrellas, rooms",
+      "wiki": null,
+      "desc": "Family-friendly main beach, 5 min walk from the port. Shaded by tamarisk trees."
+    },
+    {
+      "name": "Agios Ioannis",
+      "lat": 37.1727,
+      "lng": 24.5393,
+      "type": "Coarse sand & pebbles",
+      "length": "400 m",
+      "depth": "Moderate",
+      "facing": "East — exposed",
+      "facilities": "One taverna, umbrellas",
+      "wiki": null,
+      "desc": "Wide, wild northeast coast beach. Striking views, few crowds."
+    }
+  ]
+}

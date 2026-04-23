@@ -1,0 +1,150 @@
+{
+  "name": "Kea (Tzia)",
+  "intro": "Kea — locally called Tzia — is the Cycladic island closest to Athens, reached only from Lavrio (not Piraeus). It has no airport and only weekend ferries, so it stays quiet. Athenians come here for long hikes on the island's 80 km of marked paths, for the Lion of Kea (an 8 m archaic stone sculpture carved directly into the hillside), and for tavernas where you see more locals than tourists.",
+  "subtitle": "The weekend hideaway of Athenians",
+  "itinerary": {
+    "title": "2-day Itinerary for Kea (Tzia)",
+    "subtitle": "The weekend hideaway of Athenians",
+    "days": [
+      {
+        "day": 1,
+        "title": "Ioulida & the Lion",
+        "km": 15,
+        "drive_mins": 35,
+        "overnight": "Ioulida",
+        "color": "#0B8FAC",
+        "stops": [
+          {
+            "name": "Korissia (port)",
+            "lat": 37.6677,
+            "lng": 24.33,
+            "type": "harbour",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Ferry port on the west coast. Small sandy beach right at the port. Coffee at Aristos on the waterfront."
+          },
+          {
+            "name": "Ioulida (Chora)",
+            "lat": 37.632,
+            "lng": 24.3428,
+            "type": "village",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Ioulis",
+            "desc": "Car-free hilltop capital. Gorgeous amphitheatrical layout, flat-roofed houses with red tiles. Walk the main pedestrian street."
+          },
+          {
+            "name": "Lion of Kea",
+            "lat": 37.6379,
+            "lng": 24.3435,
+            "type": "museum",
+            "time": "13:00",
+            "wiki": "https://en.wikipedia.org/wiki/Lion_of_Kea",
+            "desc": "6th-century BC archaic stone lion carved directly into the hillside. 30-min walk from Ioulida via a marked trail."
+          },
+          {
+            "name": "Lunch — Rolando",
+            "lat": 37.632,
+            "lng": 24.3429,
+            "type": "village",
+            "time": "14:30",
+            "wiki": null,
+            "desc": "Traditional Kean cuisine — excellent loutza (cured pork), fava (split pea puree), local wine."
+          },
+          {
+            "name": "Otzias Beach",
+            "lat": 37.6783,
+            "lng": 24.3612,
+            "type": "beach",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Enclosed sandy bay on the north coast. Family-friendly, shallow water, tavernas."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Southern Beaches & Monastery",
+        "km": 30,
+        "drive_mins": 70,
+        "overnight": "Departure",
+        "color": "#3D8B6F",
+        "stops": [
+          {
+            "name": "Vourkari Harbour",
+            "lat": 37.6742,
+            "lng": 24.3261,
+            "type": "harbour",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "Yacht marina 2 km from Korissia. Chic waterfront cafes, the place where Athenians moor their boats."
+          },
+          {
+            "name": "Panagia Kastriani Monastery",
+            "lat": 37.7066,
+            "lng": 24.3755,
+            "type": "church",
+            "time": "11:00",
+            "wiki": null,
+            "desc": "Mountain monastery on a cliff edge on the north coast. Breathtaking views, basic guesthouse."
+          },
+          {
+            "name": "Pisses Beach",
+            "lat": 37.6033,
+            "lng": 24.2958,
+            "type": "beach",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "Largest sandy beach on Kea, in a fertile valley with an ancient olive grove behind. Lunch at Akroygiali taverna."
+          },
+          {
+            "name": "Koundouros",
+            "lat": 37.5692,
+            "lng": 24.3214,
+            "type": "beach",
+            "time": "16:00",
+            "wiki": null,
+            "desc": "Small sheltered cove at the island's southwest tip. Crystal water, rocky entry."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Pisses",
+      "lat": 37.6033,
+      "lng": 24.2958,
+      "type": "Fine sand",
+      "length": "500 m",
+      "depth": "Gradual",
+      "facing": "West — exposed in afternoon",
+      "facilities": "Tavernas, campsite, umbrellas",
+      "wiki": null,
+      "desc": "Kea's largest beach, framed by ancient olive trees. Great sunsets, good family beach."
+    },
+    {
+      "name": "Otzias",
+      "lat": 37.6783,
+      "lng": 24.3612,
+      "type": "Fine sand",
+      "length": "400 m",
+      "depth": "Very shallow",
+      "facing": "North — protected",
+      "facilities": "Tavernas, umbrellas",
+      "wiki": null,
+      "desc": "Sheltered bay on the north coast. Calm, warm water, very family-friendly."
+    },
+    {
+      "name": "Koundouros",
+      "lat": 37.5692,
+      "lng": 24.3214,
+      "type": "Small pebbles",
+      "length": "150 m",
+      "depth": "Moderate",
+      "facing": "Southwest",
+      "facilities": "Hotel, beach bar",
+      "wiki": null,
+      "desc": "Quiet cove with crystal-clear water. More upscale area with luxury hotels behind."
+    }
+  ]
+}

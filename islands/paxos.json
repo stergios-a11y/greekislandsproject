@@ -1,0 +1,150 @@
+{
+  "name": "Paxos",
+  "intro": "Paxos is a tiny emerald island just south of Corfu — 19 km², 2,300 residents, blanketed in ancient olive groves that produce some of Greece's finest oil. The island has no airport, only ferries from Corfu, and just three tiny harbor villages. This is sailing-and-swimming Greece, with water so clear that boats appear to float on air. Offshore lies Antipaxos, home to the most translucent water in the Ionian.",
+  "subtitle": "Emerald olive groves and the Ionian's clearest water",
+  "itinerary": {
+    "title": "2-day Itinerary for Paxos",
+    "subtitle": "Emerald olive groves and the Ionian's clearest water",
+    "days": [
+      {
+        "day": 1,
+        "title": "Gaios & the East Coast",
+        "km": 10,
+        "drive_mins": 25,
+        "overnight": "Gaios",
+        "color": "#0B8FAC",
+        "stops": [
+          {
+            "name": "Gaios (port)",
+            "lat": 39.2042,
+            "lng": 20.1847,
+            "type": "harbour",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Gaios",
+            "desc": "Main village on the east coast. Sheltered natural harbor formed by two offshore islets. Pastel Venetian-style buildings ring the quay."
+          },
+          {
+            "name": "Agios Nikolaos islet",
+            "lat": 39.2067,
+            "lng": 20.188,
+            "type": "church",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "Tiny islet in the harbor with Venetian fort ruins and a chapel. 5-min rowboat from the quay."
+          },
+          {
+            "name": "Lunch — Volcano",
+            "lat": 39.2046,
+            "lng": 20.1854,
+            "type": "village",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "Seafood taverna on Gaios' main square. Fresh catch of the day, excellent Ionian wines."
+          },
+          {
+            "name": "Mongonissi Beach",
+            "lat": 39.1751,
+            "lng": 20.1997,
+            "type": "beach",
+            "time": "16:00",
+            "wiki": null,
+            "desc": "Sheltered sandy bay at the southern tip, 4 km from Gaios. Calmest swimming on Paxos."
+          },
+          {
+            "name": "Dinner — Taka Taka Mam",
+            "lat": 39.2051,
+            "lng": 20.1848,
+            "type": "village",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Tiny family-run spot, dining in a lemon grove. Grilled meats, garden-fresh vegetables."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "West Coast Cliffs & Antipaxos",
+        "km": 25,
+        "drive_mins": 60,
+        "overnight": "Departure",
+        "color": "#3D8B6F",
+        "stops": [
+          {
+            "name": "Lakka",
+            "lat": 39.2453,
+            "lng": 20.1306,
+            "type": "harbour",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Prettiest village on Paxos — tiny horseshoe harbor at the northern tip. Great for swimming right from the quay."
+          },
+          {
+            "name": "Erimitis Cliffs",
+            "lat": 39.2361,
+            "lng": 20.1206,
+            "type": "beach",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "Dramatic white cliffs on the west coast. Walk the cliff path from Lakka for panoramic views."
+          },
+          {
+            "name": "Longos",
+            "lat": 39.22,
+            "lng": 20.1519,
+            "type": "village",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "Tiny fishing village halfway down the east coast. Lunch at O Gios with bay views."
+          },
+          {
+            "name": "Antipaxos boat trip (Voutoumi)",
+            "lat": 39.1574,
+            "lng": 20.2321,
+            "type": "beach",
+            "time": "15:30",
+            "wiki": "https://en.wikipedia.org/wiki/Antipaxos",
+            "desc": "Day boat from Gaios (15 min). Voutoumi and Vrika beaches have water so clear and blue you won't believe the photos."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Voutoumi (Antipaxos)",
+      "lat": 39.1574,
+      "lng": 20.2321,
+      "type": "White pebbles",
+      "length": "400 m",
+      "depth": "Moderate, crystal clear",
+      "facing": "Northeast — protected",
+      "facilities": "Two tavernas on cliff above",
+      "wiki": null,
+      "desc": "Famous for the clearest water in the Ionian. Reached by boat from Gaios."
+    },
+    {
+      "name": "Vrika (Antipaxos)",
+      "lat": 39.1694,
+      "lng": 20.2358,
+      "type": "Fine sand",
+      "length": "150 m",
+      "depth": "Shallow",
+      "facing": "North — protected",
+      "facilities": "One taverna",
+      "wiki": null,
+      "desc": "Smaller sandy beach on Antipaxos. Gradual entry, family-friendly, stunning color."
+    },
+    {
+      "name": "Mongonissi",
+      "lat": 39.1751,
+      "lng": 20.1997,
+      "type": "Sand",
+      "length": "100 m",
+      "depth": "Very shallow",
+      "facing": "South — fully protected",
+      "facilities": "Beach bar, umbrellas",
+      "wiki": null,
+      "desc": "Paxos' only true sandy beach on the main island. Very calm, great for young kids."
+    }
+  ]
+}

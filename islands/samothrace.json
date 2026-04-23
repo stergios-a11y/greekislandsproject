@@ -1,0 +1,187 @@
+{
+  "name": "Samothrace",
+  "intro": "Samothrace is an island of waterfalls, wild mountain pools, and ancient mystery. Mount Saos rises straight from the sea to 1,611 m, the highest peak in any Aegean island. The Sanctuary of the Great Gods was the most important secret religious cult in antiquity, attended by everyone from Herodotus to Philip II of Macedon. The Winged Victory of Samothrace (now in the Louvre) was found here. Today the island remains stubbornly untouristy — no airport, strong winds, goat-dotted mountainsides.",
+  "subtitle": "Waterfalls, ancient mysteries, and the highest peak in the Aegean",
+  "itinerary": {
+    "title": "3-day Itinerary for Samothrace",
+    "subtitle": "Waterfalls, ancient mysteries, and the highest peak in the Aegean",
+    "days": [
+      {
+        "day": 1,
+        "title": "Ancient Sanctuary & Chora",
+        "km": 25,
+        "drive_mins": 60,
+        "overnight": "Chora",
+        "color": "#0B8FAC",
+        "stops": [
+          {
+            "name": "Kamariotissa (port)",
+            "lat": 40.4829,
+            "lng": 25.4724,
+            "type": "harbour",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Ferry port. No particular charm but a good base for picking up a rental car."
+          },
+          {
+            "name": "Sanctuary of the Great Gods",
+            "lat": 40.5061,
+            "lng": 25.5254,
+            "type": "museum",
+            "time": "11:00",
+            "wiki": "https://en.wikipedia.org/wiki/Sanctuary_of_the_Great_Gods",
+            "desc": "The most important mystery cult in antiquity. Extensive ruins of temples and initiation sites. The famous Winged Victory was found here."
+          },
+          {
+            "name": "Archaeological Museum",
+            "lat": 40.5062,
+            "lng": 25.5243,
+            "type": "museum",
+            "time": "12:30",
+            "wiki": null,
+            "desc": "Small museum at the sanctuary entrance with excellent finds from the site."
+          },
+          {
+            "name": "Chora",
+            "lat": 40.4712,
+            "lng": 25.5307,
+            "type": "village",
+            "time": "15:00",
+            "wiki": "https://en.wikipedia.org/wiki/Chora_(Samothrace)",
+            "desc": "Medieval capital tucked into a mountain ravine — invisible from the sea. Stone-and-slate houses, Byzantine castle ruins."
+          },
+          {
+            "name": "Dinner — Lefkada",
+            "lat": 40.4711,
+            "lng": 25.5312,
+            "type": "village",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Traditional taverna in Chora. Goat stew, local cheese, Samothracian herbs."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Waterfalls & Vathres",
+        "km": 30,
+        "drive_mins": 80,
+        "overnight": "Therma",
+        "color": "#3D8B6F",
+        "stops": [
+          {
+            "name": "Therma (Loutra)",
+            "lat": 40.5092,
+            "lng": 25.597,
+            "type": "village",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Spa village with sulfur hot springs. The trailhead for most waterfall hikes."
+          },
+          {
+            "name": "Fonias River Vathres",
+            "lat": 40.5124,
+            "lng": 25.6158,
+            "type": "beach",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "The famous waterfall pools (vathres). Hike 30 min along the river past ice-cold swimming pools and cascades. Unique in the Aegean."
+          },
+          {
+            "name": "Lunch — 1900",
+            "lat": 40.5093,
+            "lng": 25.5973,
+            "type": "village",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Therma taverna serving kid goat, local goat cheese, and wild greens."
+          },
+          {
+            "name": "Therma Thermal Springs",
+            "lat": 40.5112,
+            "lng": 25.5958,
+            "type": "village",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Public outdoor thermal baths in the village. Small fee, open until late."
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Southern Coast & Pachia Ammos",
+        "km": 35,
+        "drive_mins": 90,
+        "overnight": "Departure",
+        "color": "#C4962A",
+        "stops": [
+          {
+            "name": "Pachia Ammos",
+            "lat": 40.4162,
+            "lng": 25.5361,
+            "type": "beach",
+            "time": "10:30",
+            "wiki": null,
+            "desc": "Samothrace's only proper sandy beach, on the south coast. Long, wild, 30-min drive from Chora."
+          },
+          {
+            "name": "Kremasto Waterfall",
+            "lat": 40.4229,
+            "lng": 25.5563,
+            "type": "beach",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "Spectacular 35-m waterfall that drops into the sea. Walk along the beach for 15 min. Peculiar to Samothrace."
+          },
+          {
+            "name": "Lakkoma Beach",
+            "lat": 40.439,
+            "lng": 25.4858,
+            "type": "beach",
+            "time": "15:30",
+            "wiki": null,
+            "desc": "Pebble beach on the southwest coast. A few tavernas, good for late lunch before the ferry."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Pachia Ammos",
+      "lat": 40.4162,
+      "lng": 25.5361,
+      "type": "Fine sand",
+      "length": "700 m",
+      "depth": "Gradual",
+      "facing": "South — can be windy",
+      "facilities": "Canteen, umbrellas",
+      "wiki": null,
+      "desc": "Samothrace's only long sandy beach. Golden dunes, rarely crowded."
+    },
+    {
+      "name": "Vatos",
+      "lat": 40.4132,
+      "lng": 25.5675,
+      "type": "Pebbles",
+      "length": "250 m",
+      "depth": "Deep",
+      "facing": "South",
+      "facilities": "None — naturist friendly",
+      "wiki": null,
+      "desc": "Remote south coast pebble beach. Clear water, accessed by a rough 4x4 track."
+    },
+    {
+      "name": "Kipos",
+      "lat": 40.5011,
+      "lng": 25.6587,
+      "type": "Large pebbles",
+      "length": "400 m",
+      "depth": "Deep",
+      "facing": "East",
+      "facilities": "One taverna",
+      "wiki": null,
+      "desc": "End-of-the-road beach with views across to Turkey. Powerful currents — experienced swimmers only."
+    }
+  ]
+}

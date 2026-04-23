@@ -1,0 +1,205 @@
+{
+  "name": "Andros",
+  "intro": "Andros is the northernmost and second-largest Cycladic island, but it feels like nowhere else in the Cyclades. Spring-fed streams, oak forests, and stone-paved hiking trails make it more Tuscan than Aegean. The main town, Chora, is elegantly neoclassical — home to the largest contemporary art museum in the Aegean. Serious hikers come for the Andros Route, a 100 km trail across the island.",
+  "subtitle": "Hiking trails, oak forests, and neoclassical Chora",
+  "itinerary": {
+    "title": "3-day Itinerary for Andros",
+    "subtitle": "Hiking trails, oak forests, and neoclassical Chora",
+    "days": [
+      {
+        "day": 1,
+        "title": "Chora & the East",
+        "km": 20,
+        "drive_mins": 40,
+        "overnight": "Chora",
+        "color": "#0B8FAC",
+        "stops": [
+          {
+            "name": "Andros Town (Chora)",
+            "lat": 37.8379,
+            "lng": 24.9452,
+            "type": "city",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Andros_(town)",
+            "desc": "Neoclassical sea-captains' town on a narrow promontory. Marble-paved main street runs to the sea."
+          },
+          {
+            "name": "Goulandris Museum of Contemporary Art",
+            "lat": 37.8383,
+            "lng": 24.9434,
+            "type": "museum",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Museum_of_Contemporary_Art_Andros",
+            "desc": "Major contemporary art museum — hosts world-class summer exhibitions."
+          },
+          {
+            "name": "Archaeological Museum",
+            "lat": 37.838,
+            "lng": 24.9449,
+            "type": "museum",
+            "time": "12:30",
+            "wiki": null,
+            "desc": "Small but excellent, with the famous Hermes of Andros statue."
+          },
+          {
+            "name": "Lunch — Nonna's",
+            "lat": 37.8382,
+            "lng": 24.9446,
+            "type": "village",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Casual spot with Andros specialties: fourtalia omelet, local cheeses, sausage."
+          },
+          {
+            "name": "Paraporti Beach",
+            "lat": 37.8362,
+            "lng": 24.9416,
+            "type": "beach",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Sandy beach right below Chora. Family-friendly, walking distance from town."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Hiking & Waterfalls",
+        "km": 35,
+        "drive_mins": 80,
+        "overnight": "Chora",
+        "color": "#3D8B6F",
+        "stops": [
+          {
+            "name": "Apikia",
+            "lat": 37.8665,
+            "lng": 24.8989,
+            "type": "village",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "Mountain village 6 km inland from Chora. Famous Sariza springs — Andros' drinking water source."
+          },
+          {
+            "name": "Pythara Waterfalls",
+            "lat": 37.8766,
+            "lng": 24.896,
+            "type": "beach",
+            "time": "10:30",
+            "wiki": null,
+            "desc": "Natural pools fed by waterfalls, a 15-min walk through oak forest from Apikia. Cold swim, worth it."
+          },
+          {
+            "name": "Ano Mesaria",
+            "lat": 37.7995,
+            "lng": 24.8739,
+            "type": "village",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "Village with the 12th-century Byzantine Taxiarches church. Lunch at a kafenio on the main square."
+          },
+          {
+            "name": "Agios Nikolaos Monastery",
+            "lat": 37.8143,
+            "lng": 24.8414,
+            "type": "church",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Fortified monastery with views over the Paleopolis valley, where Andros' ancient capital once stood."
+          },
+          {
+            "name": "Batsi (sunset)",
+            "lat": 37.8595,
+            "lng": 24.7852,
+            "type": "village",
+            "time": "18:30",
+            "wiki": null,
+            "desc": "West coast port village with a curved sandy bay. Dinner on the waterfront."
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "West Coast",
+        "km": 45,
+        "drive_mins": 90,
+        "overnight": "Departure",
+        "color": "#C4962A",
+        "stops": [
+          {
+            "name": "Gavrio (port)",
+            "lat": 37.8844,
+            "lng": 24.7393,
+            "type": "harbour",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "The main ferry port. Small but functional; a kafenio on the waterfront serves excellent frappé."
+          },
+          {
+            "name": "Tourlitis Lighthouse viewpoint",
+            "lat": 37.8392,
+            "lng": 24.95,
+            "type": "beach",
+            "time": "11:00",
+            "wiki": "https://en.wikipedia.org/wiki/Tourlitis_Lighthouse",
+            "desc": "The only lighthouse in the world built on a sea-rock. Photographed from the Chora waterfront."
+          },
+          {
+            "name": "Stenies",
+            "lat": 37.865,
+            "lng": 24.9399,
+            "type": "village",
+            "time": "12:30",
+            "wiki": null,
+            "desc": "Lush green sea-captains' village 5 km from Chora. Neoclassical mansions in a wooded valley."
+          },
+          {
+            "name": "Gialia Beach",
+            "lat": 37.8659,
+            "lng": 24.9528,
+            "type": "beach",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Quiet pebble beach below Stenies with stunning clear water. Reach via path from the village."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Chrissi Ammos",
+      "lat": 37.877,
+      "lng": 24.7561,
+      "type": "Golden sand",
+      "length": "800 m",
+      "depth": "Gradual",
+      "facing": "Southwest — protected",
+      "facilities": "Good: tavernas, umbrellas, watersports",
+      "wiki": null,
+      "desc": "Andros' most famous beach. Fine golden sand, excellent amenities, perfect for families."
+    },
+    {
+      "name": "Achla Beach",
+      "lat": 37.8934,
+      "lng": 24.9041,
+      "type": "Coarse sand",
+      "length": "300 m",
+      "depth": "Moderate",
+      "facing": "East — exposed",
+      "facilities": "Natural — no facilities",
+      "wiki": null,
+      "desc": "Remote northeast beach reached only by boat or rough dirt track. Emerald green water fed by a stream."
+    },
+    {
+      "name": "Vitali Beach",
+      "lat": 37.9099,
+      "lng": 24.8995,
+      "type": "Large pebbles",
+      "length": "250 m",
+      "depth": "Deep quickly",
+      "facing": "North — exposed to meltemi",
+      "facilities": "Simple taverna",
+      "wiki": null,
+      "desc": "Dramatic northern pebble cove with crystal water. A taverna on the beach serves ouzo at sunset."
+    }
+  ]
+}

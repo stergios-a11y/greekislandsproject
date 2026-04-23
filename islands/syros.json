@@ -1,0 +1,205 @@
+{
+  "name": "Syros",
+  "intro": "Syros is the administrative capital of the Cyclades — and it looks nothing like one. Ermoupoli, its pastel neoclassical harbor town, was once Greece's busiest port and the city still feels grand, cultured, lived-in. This is a year-round working island, not a seasonal resort. You come here for the architecture, the opera house, the marble-paved squares, and the best rembetiko music in Greece.",
+  "subtitle": "The neoclassical capital of the Cyclades",
+  "itinerary": {
+    "title": "3-day Itinerary for Syros",
+    "subtitle": "The neoclassical capital of the Cyclades",
+    "days": [
+      {
+        "day": 1,
+        "title": "Ermoupoli & Ano Syros",
+        "km": 12,
+        "drive_mins": 30,
+        "overnight": "Ermoupoli",
+        "color": "#0B8FAC",
+        "stops": [
+          {
+            "name": "Miaouli Square",
+            "lat": 37.4439,
+            "lng": 24.944,
+            "type": "city",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Ermoupoli",
+            "desc": "Grand central square with marble pavement and the 19th-century Town Hall. Heart of Ermoupoli."
+          },
+          {
+            "name": "Apollon Theater",
+            "lat": 37.4443,
+            "lng": 24.9428,
+            "type": "museum",
+            "time": "10:30",
+            "wiki": "https://en.wikipedia.org/wiki/Apollon_Theater_(Syros)",
+            "desc": "Miniature replica of La Scala — the first opera house in modern Greece, opened 1864."
+          },
+          {
+            "name": "Ano Syros (climb)",
+            "lat": 37.4496,
+            "lng": 24.9392,
+            "type": "village",
+            "time": "12:00",
+            "wiki": "https://en.wikipedia.org/wiki/Ano_Syros",
+            "desc": "Medieval Catholic settlement perched above Ermoupoli. Steep climb, stunning views. Visit St George cathedral at the top."
+          },
+          {
+            "name": "Lunch — Lilis Taverna",
+            "lat": 37.4496,
+            "lng": 24.9385,
+            "type": "village",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Classic taverna in Ano Syros with panoramic terrace. Famous for Syrian sausage (loukaniko) and local goat cheese."
+          },
+          {
+            "name": "Vaporia Neighborhood",
+            "lat": 37.4426,
+            "lng": 24.9461,
+            "type": "city",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Neoclassical sea-captains' district of pastel mansions that drop straight into the sea. Swim right off the rocks here."
+          },
+          {
+            "name": "Agios Nikolaos (sunset)",
+            "lat": 37.4421,
+            "lng": 24.9469,
+            "type": "church",
+            "time": "19:30",
+            "wiki": null,
+            "desc": "Grand blue-domed church with the best sunset view in Ermoupoli."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "South Coast Beaches",
+        "km": 30,
+        "drive_mins": 60,
+        "overnight": "Ermoupoli",
+        "color": "#3D8B6F",
+        "stops": [
+          {
+            "name": "Galissas",
+            "lat": 37.4228,
+            "lng": 24.8966,
+            "type": "beach",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Long sandy bay on the west coast. Family-friendly, many tavernas, shallow water."
+          },
+          {
+            "name": "Finikas",
+            "lat": 37.4005,
+            "lng": 24.8974,
+            "type": "beach",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "Chic fishing village-cum-beach on the south coast. Lunch at one of the waterfront tavernas."
+          },
+          {
+            "name": "Poseidonia (Della Grazia)",
+            "lat": 37.4013,
+            "lng": 24.9107,
+            "type": "village",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Aristocratic summer village of neoclassical villas. Walk through for architecture."
+          },
+          {
+            "name": "Vari Beach",
+            "lat": 37.4063,
+            "lng": 24.9357,
+            "type": "beach",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Horseshoe bay with shallow water — the warmest beach on Syros."
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "North Syros & Rembetiko",
+        "km": 35,
+        "drive_mins": 80,
+        "overnight": "Departure",
+        "color": "#C4962A",
+        "stops": [
+          {
+            "name": "Kini",
+            "lat": 37.4551,
+            "lng": 24.8839,
+            "type": "village",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Fishing village on the west coast with a long sandy beach. Best sunsets on Syros."
+          },
+          {
+            "name": "Delfini Beach",
+            "lat": 37.4661,
+            "lng": 24.8878,
+            "type": "beach",
+            "time": "12:00",
+            "wiki": null,
+            "desc": "Quiet beach north of Kini. Reached on a short dirt road. Peaceful."
+          },
+          {
+            "name": "Lunch — Allou Yialou",
+            "lat": 37.4551,
+            "lng": 24.8835,
+            "type": "village",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Modern taverna in Kini — excellent fresh catch and Cycladic wines."
+          },
+          {
+            "name": "Ermoupoli — Rembetiko Evening",
+            "lat": 37.4439,
+            "lng": 24.944,
+            "type": "city",
+            "time": "21:00",
+            "wiki": null,
+            "desc": "Syros is the birthplace of Markos Vamvakaris, the \"patriarch of rembetiko.\" Live bouzouki at Rembetiki Istoria in the port until late."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Kini Beach",
+      "lat": 37.4551,
+      "lng": 24.8837,
+      "type": "Fine sand",
+      "length": "500 m",
+      "depth": "Gradual",
+      "facing": "West — famous for sunsets",
+      "facilities": "Good: tavernas, umbrellas, water sports",
+      "wiki": null,
+      "desc": "The sunset beach of Syros. Long sandy bay with western exposure and an arc of tavernas."
+    },
+    {
+      "name": "Galissas",
+      "lat": 37.4226,
+      "lng": 24.8968,
+      "type": "Fine sand",
+      "length": "600 m",
+      "depth": "Shallow",
+      "facing": "West",
+      "facilities": "Full: hotels, restaurants, watersports",
+      "wiki": null,
+      "desc": "Syros' biggest beach. Lively, family-friendly, well-developed. Great for all ages."
+    },
+    {
+      "name": "Vari",
+      "lat": 37.4063,
+      "lng": 24.9356,
+      "type": "Fine sand",
+      "length": "400 m",
+      "depth": "Very shallow",
+      "facing": "South — protected",
+      "facilities": "Good: tavernas, umbrellas",
+      "wiki": null,
+      "desc": "Protected horseshoe bay with the calmest, warmest water on Syros. Ideal for kids."
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "name": "Skyros",
+  "intro": "Skyros is the largest and most isolated of the Sporades, geographically closer to Euboea but culturally a world of its own. Its two halves are dramatically different: a barren, rocky south where wild Skyrian horses roam (a distinct breed, smaller than ponies), and a lush, wooded north with Skyros Town, the prettiest village in the Sporades. In antiquity, this is where Achilles was hidden before Troy, and in 1915 where the English poet Rupert Brooke was buried.",
+  "subtitle": "Wild horses, poet's graves, and a unique cultural isolation",
+  "itinerary": {
+    "title": "3-day Itinerary for Skyros",
+    "subtitle": "Wild horses, poet's graves, and a unique cultural isolation",
+    "days": [
+      {
+        "day": 1,
+        "title": "Skyros Town & Castle",
+        "km": 10,
+        "drive_mins": 25,
+        "overnight": "Skyros Town",
+        "color": "#0B8FAC",
+        "stops": [
+          {
+            "name": "Linaria (port)",
+            "lat": 38.8406,
+            "lng": 24.5403,
+            "type": "harbour",
+            "time": "11:00",
+            "wiki": null,
+            "desc": "Tiny pretty port on the west coast. Arrival tradition: a ship's horn salutes every ferry. One hour from the main town."
+          },
+          {
+            "name": "Skyros Town (Chora)",
+            "lat": 38.9,
+            "lng": 24.5612,
+            "type": "village",
+            "time": "12:30",
+            "wiki": "https://en.wikipedia.org/wiki/Skyros",
+            "desc": "Cycladic-style whitewashed village on a cliff, unique to the Sporades. The main marble-paved pedestrian street climbs to the castle."
+          },
+          {
+            "name": "Byzantine Castle of Skyros",
+            "lat": 38.9015,
+            "lng": 24.5631,
+            "type": "castle",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Ancient acropolis turned Venetian/Byzantine fort. 360° views over the town and the Aegean."
+          },
+          {
+            "name": "Lunch — Anemos",
+            "lat": 38.899,
+            "lng": 24.5614,
+            "type": "village",
+            "time": "15:30",
+            "wiki": null,
+            "desc": "Small taverna with panoramic terrace. Excellent lobster pasta (Skyros is famous for lobster)."
+          },
+          {
+            "name": "Faltaits Folklore Museum",
+            "lat": 38.9006,
+            "lng": 24.5625,
+            "type": "museum",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "In a 19th-century mansion. Skyrian embroidery, carved wooden furniture, Byzantine icons. Best folk museum in Greece."
+          },
+          {
+            "name": "Magazia Beach (sunset)",
+            "lat": 38.9038,
+            "lng": 24.5722,
+            "type": "beach",
+            "time": "19:30",
+            "wiki": null,
+            "desc": "Long sandy beach right below Chora. Walk down for a swim before dinner."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "North: Rupert Brooke & Beaches",
+        "km": 40,
+        "drive_mins": 100,
+        "overnight": "Skyros Town",
+        "color": "#3D8B6F",
+        "stops": [
+          {
+            "name": "Molos Beach",
+            "lat": 38.9088,
+            "lng": 24.5716,
+            "type": "beach",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Continuation of Magazia beach. Organized with umbrellas, tavernas; becomes wilder further north."
+          },
+          {
+            "name": "Palamari Archaeological Site",
+            "lat": 38.9373,
+            "lng": 24.5606,
+            "type": "museum",
+            "time": "12:00",
+            "wiki": null,
+            "desc": "Early Bronze Age settlement (2500 BC). Small but important site with defensive walls still visible."
+          },
+          {
+            "name": "Atsitsa Beach",
+            "lat": 38.9122,
+            "lng": 24.4889,
+            "type": "beach",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Pine-shaded pebble beach on the west coast. Hippy vibe, yoga retreat nearby. Lunch at the beach taverna."
+          },
+          {
+            "name": "Pefkos Beach",
+            "lat": 38.8769,
+            "lng": 24.5123,
+            "type": "beach",
+            "time": "16:30",
+            "wiki": null,
+            "desc": "Shallow sandy bay backed by a pine forest. Calm, family-friendly."
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "South: Wild Horses & Rupert Brooke",
+        "km": 50,
+        "drive_mins": 120,
+        "overnight": "Departure",
+        "color": "#C4962A",
+        "stops": [
+          {
+            "name": "Kalamitsa Beach",
+            "lat": 38.8214,
+            "lng": 24.553,
+            "type": "beach",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "Beautiful sandy bay 10 min from Linaria. Shallow water, good for a morning swim."
+          },
+          {
+            "name": "Rupert Brooke's Grave",
+            "lat": 38.7861,
+            "lng": 24.5659,
+            "type": "church",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Rupert_Brooke",
+            "desc": "Isolated olive grove at Tris Boukes bay where the English WWI poet was buried in 1915. Quiet, moving. Rough dirt track for the last 2 km."
+          },
+          {
+            "name": "Skyrian Horse reserve",
+            "lat": 38.8057,
+            "lng": 24.577,
+            "type": "village",
+            "time": "14:00",
+            "wiki": "https://en.wikipedia.org/wiki/Skyros_pony",
+            "desc": "See the island's unique native pony breed — among the smallest horses in the world, nearly extinct. Volunteers run a small sanctuary open to visitors."
+          },
+          {
+            "name": "Back to Linaria",
+            "lat": 38.8406,
+            "lng": 24.5403,
+            "type": "harbour",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Return to port. Coffee at Almyra before your ferry."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Magazia & Molos",
+      "lat": 38.9063,
+      "lng": 24.5719,
+      "type": "Fine sand",
+      "length": "2 km combined",
+      "depth": "Gradual",
+      "facing": "East",
+      "facilities": "Full: hotels, tavernas, umbrellas",
+      "wiki": null,
+      "desc": "Skyros' main beach strip below Chora. Organized section in the middle, quieter at both ends."
+    },
+    {
+      "name": "Atsitsa",
+      "lat": 38.9122,
+      "lng": 24.4889,
+      "type": "Small pebbles",
+      "length": "200 m",
+      "depth": "Moderate",
+      "facing": "West — sunset",
+      "facilities": "Taverna, umbrellas",
+      "wiki": null,
+      "desc": "Pine forest runs down to the sea. Clean water, unusual setting for the Aegean."
+    },
+    {
+      "name": "Kalamitsa",
+      "lat": 38.8214,
+      "lng": 24.553,
+      "type": "Sand",
+      "length": "400 m",
+      "depth": "Shallow",
+      "facing": "Southwest — protected",
+      "facilities": "Tavernas, umbrellas",
+      "wiki": null,
+      "desc": "Calm sandy beach 10 min from the port. Mix of organized and wild, family-friendly."
+    }
+  ]
+}

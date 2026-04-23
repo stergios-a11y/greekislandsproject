@@ -651,7 +651,10 @@ async function renderIslandPage(key) {
       'hydra': 'hydra', 'spetses': 'spetses', 'aegina': 'aegina',
       'poros': 'poros', 'salamis': 'salamina',
       'agios-efstratios': 'agios-efstratios', 'psara': 'psara',
-      'oinousses': 'oinousses', 'iraklia': 'iraklia'
+      'oinousses': 'oinousses', 'iraklia': 'iraklia',
+      'tinos': 'tinos', 'syros': 'syros', 'andros': 'andros', 'serifos': 'serifos',
+      'kythnos': 'kythnos', 'kea': 'kea-tzia', 'paxos': 'paxos',
+      'thasos': 'thassos', 'samothrace': 'samothraki', 'skyros': 'skyros'
     };
     const slug = ferrySlugMap[island.key] || island.key;
     ferryBtn.href = `https://www.ferryhopper.com/en/ferries-to/${slug}`;
@@ -1198,8 +1201,8 @@ const MAX_POP = 664000; // removed Athens but keep scale reasonable — use 2000
 function carNeedCompactHtml(score) {
   if (score == null || isNaN(score)) return '<span style="color:var(--ink-4)">—</span>';
   const n = Math.round(score);
-  const labelsEN = ['', 'Useless', 'Moped', 'Useful', 'Very useful', 'Essential'];
-  const labelsEL = ['', 'Άχρηστο', 'Μηχανάκι', 'Χρήσιμο', 'Πολύ χρήσιμο', 'Απαραίτητο'];
+  const labelsEN = ['', 'Useless', 'E-scooter', 'Useful', 'Very useful', 'Essential'];
+  const labelsEL = ['', 'Άχρηστο', 'Πατίνι', 'Χρήσιμο', 'Πολύ χρήσιμο', 'Απαραίτητο'];
   const labels = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? labelsEL : labelsEN;
   const colors = ['', '#6B7280', '#8B8B8B', '#A58A3A', '#D17A2B', '#C0522A'];
   const col = colors[n] || '#888';
@@ -1210,8 +1213,8 @@ function carNeedHtml(score) {
   // 1 = car useless, 5 = car essential. Display as a labeled pill.
   if (score == null || isNaN(score)) return '<span style="color:var(--ink-4)">—</span>';
   const n = Math.round(score);
-  const labelsEN = ['', 'Useless', 'Moped', 'Useful', 'Very useful', 'Essential'];
-  const labelsEL = ['', 'Άχρηστο', 'Μηχανάκι', 'Χρήσιμο', 'Πολύ χρήσιμο', 'Απαραίτητο'];
+  const labelsEN = ['', 'Useless', 'E-scooter', 'Useful', 'Very useful', 'Essential'];
+  const labelsEL = ['', 'Άχρηστο', 'Πατίνι', 'Χρήσιμο', 'Πολύ χρήσιμο', 'Απαραίτητο'];
   const labels = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? labelsEL : labelsEN;
   const colors = ['', '#6B7280', '#8B8B8B', '#A58A3A', '#D17A2B', '#C0522A'];
   const col = colors[n] || '#888';

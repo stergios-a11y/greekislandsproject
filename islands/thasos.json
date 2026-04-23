@@ -1,0 +1,217 @@
+{
+  "name": "Thasos",
+  "intro": "Thasos is the northernmost Greek island — closer to Bulgaria than to Athens — and it looks nothing like the Cyclades. Dense pine and plane forests cover the mountains, rivers feed marble quarries, and the east coast has long white-sand beaches. In antiquity, Thasos was famously wealthy from its gold and marble; today the marble is still exported, and the ancient Agora in the main town is one of the most complete in Greece.",
+  "subtitle": "Northern forests, marble beaches, and ancient Agora",
+  "itinerary": {
+    "title": "3-day Itinerary for Thasos",
+    "subtitle": "Northern forests, marble beaches, and ancient Agora",
+    "days": [
+      {
+        "day": 1,
+        "title": "Thasos Town & Ancient Agora",
+        "km": 20,
+        "drive_mins": 45,
+        "overnight": "Thasos Town",
+        "color": "#0B8FAC",
+        "stops": [
+          {
+            "name": "Thasos Town (Limenas)",
+            "lat": 40.781,
+            "lng": 24.7122,
+            "type": "city",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Thasos_(city)",
+            "desc": "Main port and capital. The old town sits on top of the ancient city — you'll see ancient ruins in people's gardens."
+          },
+          {
+            "name": "Ancient Agora",
+            "lat": 40.7811,
+            "lng": 24.7104,
+            "type": "museum",
+            "time": "11:00",
+            "wiki": "https://en.wikipedia.org/wiki/Thasos#Archaeology",
+            "desc": "One of the best-preserved Agoras in Greece — paved Roman plazas, stoas, Hellenistic temples. Right next to the archaeological museum."
+          },
+          {
+            "name": "Ancient Theatre of Thasos",
+            "lat": 40.7834,
+            "lng": 24.7152,
+            "type": "museum",
+            "time": "12:30",
+            "wiki": null,
+            "desc": "15-min climb through pine forest to the 4th-century BC theatre carved into the hillside. Still used for summer performances."
+          },
+          {
+            "name": "Lunch — Simi Restaurant",
+            "lat": 40.7818,
+            "lng": 24.713,
+            "type": "village",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Elegant waterfront spot with fresh fish and the best Thasian wine list."
+          },
+          {
+            "name": "Chrysi Ammoudia (Golden Beach)",
+            "lat": 40.7217,
+            "lng": 24.8026,
+            "type": "beach",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Long sandy east-coast beach. Pine forest runs right to the sand."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Mountain Villages & Marble",
+        "km": 50,
+        "drive_mins": 120,
+        "overnight": "Thasos Town",
+        "color": "#3D8B6F",
+        "stops": [
+          {
+            "name": "Panagia Village",
+            "lat": 40.7136,
+            "lng": 24.7592,
+            "type": "village",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Traditional stone-built village with slate roofs and a spring running through the main square. Old-world Thasos."
+          },
+          {
+            "name": "Potamia",
+            "lat": 40.7134,
+            "lng": 24.787,
+            "type": "village",
+            "time": "11:00",
+            "wiki": null,
+            "desc": "Home of sculptor Polygnotos Vagis — small museum in the village celebrating his work."
+          },
+          {
+            "name": "Aliki Archaeological Site",
+            "lat": 40.5933,
+            "lng": 24.7729,
+            "type": "museum",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "Ancient marble quarry on the southeast coast. Twin harbors, 7th-century BC temples, quarry cuts visible in the cliff face."
+          },
+          {
+            "name": "Lunch — Armenaki",
+            "lat": 40.5923,
+            "lng": 24.7746,
+            "type": "village",
+            "time": "14:30",
+            "wiki": null,
+            "desc": "Taverna in the Aliki double bay. Fresh catch, grilled over charcoal."
+          },
+          {
+            "name": "Theologos",
+            "lat": 40.6183,
+            "lng": 24.6981,
+            "type": "village",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Old capital of Thasos, high in the mountains. Traditional stone houses, best preserved village on the island."
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "West Coast Beaches",
+        "km": 40,
+        "drive_mins": 90,
+        "overnight": "Departure",
+        "color": "#C4962A",
+        "stops": [
+          {
+            "name": "Limenaria",
+            "lat": 40.622,
+            "lng": 24.5742,
+            "type": "harbour",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Second-largest town on Thasos. Working fishing port on the southwest coast."
+          },
+          {
+            "name": "Giola Lagoon",
+            "lat": 40.5938,
+            "lng": 24.6094,
+            "type": "beach",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "Natural rock pool carved by the sea — a cliff-enclosed pool you dive into from 3 meters. Must-see on Thasos."
+          },
+          {
+            "name": "Potos",
+            "lat": 40.5983,
+            "lng": 24.6458,
+            "type": "harbour",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Lively resort village with a long sandy beach and dozens of tavernas on the promenade."
+          },
+          {
+            "name": "Marble Beach (Saliara)",
+            "lat": 40.7857,
+            "lng": 24.7625,
+            "type": "beach",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Reached by 4x4 or boat. White marble pebbles and turquoise water — the most photogenic beach on Thasos."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Marble Beach (Saliara)",
+      "lat": 40.7857,
+      "lng": 24.7625,
+      "type": "White marble pebbles",
+      "length": "200 m",
+      "depth": "Moderate",
+      "facing": "North — protected",
+      "facilities": "Beach bar in summer, limited",
+      "wiki": null,
+      "desc": "Marble quarry remnants create this almost otherworldly white beach. Reached by 4x4 track or boat."
+    },
+    {
+      "name": "Giola Lagoon",
+      "lat": 40.5938,
+      "lng": 24.6094,
+      "type": "Natural rock pool",
+      "length": "25 m",
+      "depth": "Deep (3+ m)",
+      "facing": "South — enclosed",
+      "facilities": "None — natural site",
+      "wiki": null,
+      "desc": "Natural pool carved from the cliff by the sea. Swim, dive, climb the rock walls."
+    },
+    {
+      "name": "Chrysi Ammoudia",
+      "lat": 40.7217,
+      "lng": 24.8026,
+      "type": "Fine golden sand",
+      "length": "1.2 km",
+      "depth": "Gradual",
+      "facing": "East",
+      "facilities": "Full: hotels, tavernas, watersports",
+      "wiki": null,
+      "desc": "Thasos' biggest and most popular beach. Long stretch backed by pine forest."
+    },
+    {
+      "name": "Paradise Beach",
+      "lat": 40.6955,
+      "lng": 24.8179,
+      "type": "Fine sand",
+      "length": "300 m",
+      "depth": "Shallow",
+      "facing": "East",
+      "facilities": "Tavernas, umbrellas",
+      "wiki": null,
+      "desc": "Quieter east-coast beach tucked into a cove. Turquoise water, pine shade."
+    }
+  ]
+}

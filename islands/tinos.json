@@ -1,0 +1,205 @@
+{
+  "name": "Tinos",
+  "intro": "Tinos is the Cyclades' spiritual heart — home to the Evangelistria church, the most important pilgrimage site in Greek Orthodoxy. Beyond the pilgrimage, the island hides 40 immaculate marble-paved villages built against granite hills, white dovecotes dotting terraced valleys, and some of the best food in the Cyclades. It escaped mass tourism because everyone was rushing to Mykonos next door.",
+  "subtitle": "Marble villages, dovecotes, and the Cyclades' spiritual heart",
+  "itinerary": {
+    "title": "3-day Itinerary for Tinos",
+    "subtitle": "Marble villages, dovecotes, and the Cyclades' spiritual heart",
+    "days": [
+      {
+        "day": 1,
+        "title": "Chora & the South",
+        "km": 25,
+        "drive_mins": 45,
+        "overnight": "Tinos Town",
+        "color": "#0B8FAC",
+        "stops": [
+          {
+            "name": "Tinos Town (Chora)",
+            "lat": 37.5406,
+            "lng": 25.1604,
+            "type": "city",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Tinos_(city)",
+            "desc": "Port town with marble-paved alleys. Walk up the main pedestrian street leading to the Evangelistria church."
+          },
+          {
+            "name": "Panagia Evangelistria",
+            "lat": 37.5451,
+            "lng": 25.1596,
+            "type": "church",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Panagia_Evangelistria,_Tinos",
+            "desc": "The most important Orthodox pilgrimage site in Greece. The miraculous icon was found here in 1822. Visit even if you're not religious — the marble architecture is stunning."
+          },
+          {
+            "name": "Agios Fokas Beach",
+            "lat": 37.5318,
+            "lng": 25.1665,
+            "type": "beach",
+            "time": "12:30",
+            "wiki": null,
+            "desc": "Sandy beach 2 km south of Chora with tavernas. Calm water, family-friendly."
+          },
+          {
+            "name": "Lunch — Tarsanas",
+            "lat": 37.5406,
+            "lng": 25.1615,
+            "type": "village",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Seafood taverna in the harbor. Fresh fish, carafes of tsipouro, the quintessential Tinian experience."
+          },
+          {
+            "name": "Kionia Beach",
+            "lat": 37.5429,
+            "lng": 25.1355,
+            "type": "beach",
+            "time": "16:30",
+            "wiki": null,
+            "desc": "Long pebble beach with ancient ruins nearby. Sunset views back toward Chora."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "The Mountain Villages",
+        "km": 55,
+        "drive_mins": 110,
+        "overnight": "Tinos Town",
+        "color": "#3D8B6F",
+        "stops": [
+          {
+            "name": "Pyrgos",
+            "lat": 37.6385,
+            "lng": 25.1124,
+            "type": "village",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Pyrgos,_Tinos",
+            "desc": "The most beautiful marble village in Greece. Birthplace of Greece's greatest sculptors. Marble everything: fountains, benches, doorframes."
+          },
+          {
+            "name": "Museum of Marble Crafts",
+            "lat": 37.6391,
+            "lng": 25.1132,
+            "type": "museum",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "Small but essential museum showing Tinos' marble-carving tradition, which still produces master craftsmen."
+          },
+          {
+            "name": "Panormos Port",
+            "lat": 37.6484,
+            "lng": 25.1056,
+            "type": "harbour",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "Tiny fishing harbor 5 min from Pyrgos. Lunch at one of two tavernas on the water."
+          },
+          {
+            "name": "Volax",
+            "lat": 37.6119,
+            "lng": 25.1611,
+            "type": "village",
+            "time": "16:00",
+            "wiki": null,
+            "desc": "Village surrounded by an otherworldly field of massive round granite boulders. Walk the short loop around the village."
+          },
+          {
+            "name": "Dinner — Metaxi Mas",
+            "lat": 37.5406,
+            "lng": 25.161,
+            "type": "village",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "Modern Tinian cuisine in Chora. Book ahead — tables fill fast."
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "The Dovecote Valleys",
+        "km": 40,
+        "drive_mins": 90,
+        "overnight": "Departure",
+        "color": "#C4962A",
+        "stops": [
+          {
+            "name": "Tarabados (dovecotes)",
+            "lat": 37.5785,
+            "lng": 25.1419,
+            "type": "village",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Valley with 50+ traditional dovecotes — intricate marble lattice-work. Walk the 1 km trail through the terraces."
+          },
+          {
+            "name": "Kardiani",
+            "lat": 37.5993,
+            "lng": 25.1121,
+            "type": "village",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "Stunning cliff-hugging village with panoramic views over the Aegean. Quiet, very local."
+          },
+          {
+            "name": "Livada Beach",
+            "lat": 37.6279,
+            "lng": 25.2102,
+            "type": "beach",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Wild beach on the windward east coast. Strong winds in July-August, perfect for kitesurfing."
+          },
+          {
+            "name": "Back to Tinos Town",
+            "lat": 37.5406,
+            "lng": 25.1604,
+            "type": "harbour",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Return to port for your ferry. Quick stop at Lehrni cafe for a frappé before leaving."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Kolymbithra Beach",
+      "lat": 37.6194,
+      "lng": 25.2125,
+      "type": "Fine sand",
+      "length": "400 m",
+      "depth": "Gradual, moderate",
+      "facing": "North — exposed to meltemi winds",
+      "facilities": "Good: beach bars, surf school, umbrellas",
+      "wiki": null,
+      "desc": "Surfing mecca of the Cyclades. The northern half is wild, the southern half has beach bars and umbrellas."
+    },
+    {
+      "name": "Pachia Ammos",
+      "lat": 37.5635,
+      "lng": 25.234,
+      "type": "Golden sand",
+      "length": "300 m",
+      "depth": "Shallow",
+      "facing": "South — protected",
+      "facilities": "Natural — no facilities, bring water",
+      "wiki": null,
+      "desc": "Remote south-coast beach reached via dirt road. Golden dunes, crystal water, rarely crowded."
+    },
+    {
+      "name": "Agios Romanos",
+      "lat": 37.5763,
+      "lng": 25.119,
+      "type": "Sand & pebbles",
+      "length": "250 m",
+      "depth": "Moderate",
+      "facing": "West — afternoon sun",
+      "facilities": "Moderate: taverna, umbrellas",
+      "wiki": null,
+      "desc": "Quiet family beach on the west coast. Great for sunset swims."
+    }
+  ]
+}
