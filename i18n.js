@@ -100,7 +100,7 @@ const UI_TEXT = {
   'sidebar.night': { en: 'Night Life', el: 'Νυχτερινή ζωή' },
   'sidebar.access': { en: 'Access Ease', el: 'Ευκολία Πρόσβασης' },
   'sidebar.afford': { en: 'Price Level', el: 'Κόστος' },
-  'sidebar.car': { en: '🚗 Car reliance', el: '🚗 Χρησιμότητα οχήματος' },
+  'sidebar.car': { en: 'Car reliance', el: 'Χρησιμότητα οχήματος' },
   'tooltip.overall': { en: 'Overall', el: 'Συνολικά' },
   'tooltip.recommended': { en: 'recommended', el: 'συνιστώμενες' },
   'tooltip.click': { en: 'Click to explore →', el: 'Πάτα για εξερεύνηση →' },
