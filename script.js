@@ -1198,15 +1198,12 @@ const MAX_POP = 664000; // removed Athens but keep scale reasonable — use 2000
 function carNeedCompactHtml(score) {
   if (score == null || isNaN(score)) return '<span style="color:var(--ink-4)">—</span>';
   const n = Math.round(score);
+  const labelsEN = ['', 'Useless', 'Slight', 'Useful', 'Very useful', 'Essential'];
+  const labelsEL = ['', 'Άχρηστο', 'Λίγο', 'Χρήσιμο', 'Πολύ χρήσιμο', 'Απαραίτητο'];
+  const labels = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? labelsEL : labelsEN;
   const colors = ['', '#6B7280', '#8B8B8B', '#A58A3A', '#D17A2B', '#C0522A'];
   const col = colors[n] || '#888';
-  return `<span class="car-compact" style="color:${col}">
-    <span class="car-dot ${n >= 1 ? 'on' : ''}"></span>
-    <span class="car-dot ${n >= 2 ? 'on' : ''}"></span>
-    <span class="car-dot ${n >= 3 ? 'on' : ''}"></span>
-    <span class="car-dot ${n >= 4 ? 'on' : ''}"></span>
-    <span class="car-dot ${n >= 5 ? 'on' : ''}"></span>
-  </span>`;
+  return `<span class="car-compact-pill" style="background:${col}20;color:${col};border:1px solid ${col}40">${n} · ${labels[n]}</span>`;
 }
 
 function carNeedHtml(score) {

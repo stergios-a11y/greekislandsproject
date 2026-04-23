@@ -2964,25 +2964,14 @@ html.dark .help-modal-close {
   height: 14px;
 }
 
-/* Car-need compact dots (5 filled/empty dots) */
-.car-compact {
-  display: inline-flex;
-  gap: 2px;
-  align-items: center;
-}
-.car-dot {
+/* Car-need compact pill (table cell) */
+.car-compact-pill {
   display: inline-block;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.12);
-  transition: background 0.15s;
-}
-.car-dot.on {
-  background: currentColor;
-}
-html.dark .car-dot {
-  background: rgba(255,255,255,0.15);
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 @media (max-width: 640px) {
