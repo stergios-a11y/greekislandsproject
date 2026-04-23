@@ -961,8 +961,8 @@ function renderShortlist() {
     container.innerHTML = `
       <div class="shortlist-empty">
         <p style="font-size:48px;margin:0 0 16px">☆</p>
-        <p><strong>No islands saved yet.</strong></p>
-        <p>Click the ☆ Save button on any island page to add it here.</p>
+        <p><strong>${t('shortlist.empty')}</strong></p>
+        <p>${t('shortlist.howto')}</p>
       </div>
     `;
     return;
@@ -974,16 +974,16 @@ function renderShortlist() {
     return `
       <div class="shortlist-card" onclick="navigateTo('island','${key}')">
         <div class="shortlist-card-body">
-          <h3>${islandName(island.key)}</h3>
+          <h3>${islandName(key)}</h3>
           <div class="shortlist-meta">
-            <span class="group-tag">${island.island_group}</span>
-            <span>${island.days ? island.days + ' days' : ''}</span>
+            <span class="group-tag">${groupName(island.island_group)}</span>
+            <span>${island.days ? island.days + ' ' + t('common.days') : ''}</span>
           </div>
           <div class="shortlist-rating">${starsHtml(island.total)}</div>
           <div class="shortlist-dims">
-            Beach ${fmt(island.beach)} · Culture ${fmt(island.hist)} · Night ${fmt(island.night)}
+            ${t('shortlist.dim.beach')} ${fmt(island.beach)} · ${t('shortlist.dim.culture')} ${fmt(island.hist)} · ${t('shortlist.dim.night')} ${fmt(island.night)}
           </div>
-          <button class="shortlist-remove" onclick="event.stopPropagation();removeFromShortlist('${key}')">✕ Remove</button>
+          <button class="shortlist-remove" onclick="event.stopPropagation();removeFromShortlist('${key}')">${t('shortlist.remove')}</button>
         </div>
       </div>
     `;
@@ -992,7 +992,7 @@ function renderShortlist() {
   container.innerHTML = `
     <div class="shortlist-grid">${cards}</div>
     <div style="text-align:center;margin-top:24px">
-      <button class="shortlist-clear" onclick="clearShortlist()">Clear all</button>
+      <button class="shortlist-clear" onclick="clearShortlist()">${t('shortlist.clearall')}</button>
     </div>
   `;
 }
@@ -1620,10 +1620,30 @@ function renderHopping() {
    QUIZ
 ============================================================ */
 const QUIZ_QUESTIONS = [
-  { question: 'What kind of trip are you planning?', options: ['Solo adventure', 'Couple getaway', 'Family vacation', 'Friend group'] },
-  { question: 'What matters most to you?', options: ['Beaches & swimming', 'History & culture', 'Nightlife & food', 'Peace & nature'] },
-  { question: 'What is your budget level?', options: ['Budget (backpacker)', 'Mid-range', 'Splurge-ready', 'No limit'] },
-  { question: 'How do you feel about crowds?', options: ['Love the buzz', 'Some is fine', 'Prefer quiet', 'Must be secluded'] },
+  {
+    question: 'What kind of trip are you planning?',
+    question_el: 'Τι είδους ταξίδι σχεδιάζεις;',
+    options: ['Solo adventure', 'Couple getaway', 'Family vacation', 'Friend group'],
+    options_el: ['Μόνος/-η περιπέτεια', 'Ζευγάρι', 'Οικογενειακές διακοπές', 'Παρέα φίλων']
+  },
+  {
+    question: 'What matters most to you?',
+    question_el: 'Τι σε ενδιαφέρει περισσότερο;',
+    options: ['Beaches & swimming', 'History & culture', 'Nightlife & food', 'Peace & nature'],
+    options_el: ['Παραλίες & μπάνιο', 'Ιστορία & πολιτισμός', 'Νυχτερινή ζωή & φαγητό', 'Ηρεμία & φύση']
+  },
+  {
+    question: 'What is your budget level?',
+    question_el: 'Ποιο είναι το μπάτζετ σου;',
+    options: ['Budget (backpacker)', 'Mid-range', 'Splurge-ready', 'No limit'],
+    options_el: ['Οικονομικό', 'Μεσαίο', 'Γενναιόδωρο', 'Χωρίς όριο']
+  },
+  {
+    question: 'How do you feel about crowds?',
+    question_el: 'Πώς νιώθεις με τον κόσμο;',
+    options: ['Love the buzz', 'Some is fine', 'Prefer quiet', 'Must be secluded'],
+    options_el: ['Μου αρέσει η ζωντάνια', 'Λίγο είναι ωραίο', 'Προτιμώ ηρεμία', 'Πρέπει να είναι απομονωμένο']
+  },
 ];
 let quizAnswers = {};
 let quizStep = 0;
@@ -1640,7 +1660,12 @@ function renderQuizStep() {
   container.style.display = '';
   if (results) results.style.display = 'none';
   const q = QUIZ_QUESTIONS[quizStep];
-  container.innerHTML = `<div class="quiz-progress">${QUIZ_QUESTIONS.map((_, i) => `<div class="quiz-dot ${i < quizStep ? 'done' : i === quizStep ? 'current' : ''}"></div>`).join('')}<span class="quiz-step-label">${quizStep + 1} / ${QUIZ_QUESTIONS.length}</span></div><div class="quiz-card"><div class="quiz-question">${q.question}</div><div class="quiz-options">${q.options.map((opt, i) => `<button class="quiz-option ${quizAnswers[quizStep] === i ? 'selected' : ''}" data-idx="${i}">${opt}</button>`).join('')}</div><div class="quiz-nav">${quizStep > 0 ? `<button class="quiz-back-btn">← Back</button>` : `<span></span>`}<button class="quiz-next-btn ${quizAnswers[quizStep] === undefined ? 'disabled' : ''}" ${quizAnswers[quizStep] === undefined ? 'disabled' : ''}>${quizStep === QUIZ_QUESTIONS.length - 1 ? 'Find my islands →' : 'Next →'}</button></div></div>`;
+  const questionText = pickLang(q, 'question');
+  const options = (CURRENT_LANG === 'el' && q.options_el) ? q.options_el : q.options;
+  const backLabel = t('quiz.back');
+  const nextLabel = t('quiz.next');
+  const findLabel = t('quiz.find');
+  container.innerHTML = `<div class="quiz-progress">${QUIZ_QUESTIONS.map((_, i) => `<div class="quiz-dot ${i < quizStep ? 'done' : i === quizStep ? 'current' : ''}"></div>`).join('')}<span class="quiz-step-label">${quizStep + 1} / ${QUIZ_QUESTIONS.length}</span></div><div class="quiz-card"><div class="quiz-question">${questionText}</div><div class="quiz-options">${options.map((opt, i) => `<button class="quiz-option ${quizAnswers[quizStep] === i ? 'selected' : ''}" data-idx="${i}">${opt}</button>`).join('')}</div><div class="quiz-nav">${quizStep > 0 ? `<button class="quiz-back-btn">← ${backLabel}</button>` : `<span></span>`}<button class="quiz-next-btn ${quizAnswers[quizStep] === undefined ? 'disabled' : ''}" ${quizAnswers[quizStep] === undefined ? 'disabled' : ''}>${quizStep === QUIZ_QUESTIONS.length - 1 ? findLabel : nextLabel}</button></div></div>`;
   container.querySelectorAll('.quiz-option').forEach(btn => {
     btn.addEventListener('click', () => { quizAnswers[quizStep] = parseInt(btn.dataset.idx); renderQuizStep(); });
   });
@@ -1670,15 +1695,18 @@ function computeQuizResults() {
   const results = document.getElementById('quiz-results');
   if (!container || !results) return;
   container.style.display = 'none'; results.style.display = '';
-  const dimLabel = ['Beach', 'Culture', 'Nightlife', 'Price-friendly'][quizAnswers[1]] || 'Overall';
+  const dimLabels = (CURRENT_LANG === 'el')
+    ? ['Παραλία', 'Πολιτισμός', 'Νυχτερινή ζωή', 'Φιλικό στο πορτοφόλι']
+    : ['Beach', 'Culture', 'Nightlife', 'Price-friendly'];
+  const dimLabel = dimLabels[quizAnswers[1]] || (CURRENT_LANG === 'el' ? 'Συνολικά' : 'Overall');
   const whyText = (island) => {
     const reasons = [];
-    if (island[priority] >= 4.5) reasons.push(`Top ${dimLabel.toLowerCase()} score (${fmt(island[priority])})`);
-    else if (island[priority] >= 3.8) reasons.push(`Strong ${dimLabel.toLowerCase()} (${fmt(island[priority])})`);
-    if (budgetMod > 0 && island.afford >= 4) reasons.push('Very affordable');
-    if (crowdPref >= 2 && island.pop < 5000) reasons.push('Low crowds');
-    if (island.access >= 4.5) reasons.push('Easy to reach');
-    if (!reasons.length) reasons.push(`Overall score ${fmt(island.total)}`);
+    if (island[priority] >= 4.5) reasons.push(`${t('quiz.why.top')} ${dimLabel.toLowerCase()} (${fmt(island[priority])})`);
+    else if (island[priority] >= 3.8) reasons.push(`${t('quiz.why.strong')} ${dimLabel.toLowerCase()} (${fmt(island[priority])})`);
+    if (budgetMod > 0 && island.afford >= 4) reasons.push(t('quiz.why.affordable'));
+    if (crowdPref >= 2 && island.pop < 5000) reasons.push(t('quiz.why.lowcrowds'));
+    if (island.access >= 4.5) reasons.push(t('quiz.why.easy'));
+    if (!reasons.length) reasons.push(`${t('quiz.why.overall')} ${fmt(island.total)}`);
     return reasons.slice(0, 2).join(' · ');
   };
   results.innerHTML = `<div class="quiz-results-header"><div class="quiz-results-title">${t('match.results.title')}</div><div class="quiz-results-sub">${t('match.results.sub')}</div></div>${scored.map((island, idx) => `<div class="result-island-card" data-key="${island.key}"><div class="result-rank">${idx + 1}</div><div class="result-info"><div class="result-name">${islandName(island.key)}</div><div class="result-why">${whyText(island)}</div></div><div class="result-score" style="color:${scoreToColor(island.total)}">${fmt(island.total)}</div></div>`).join('')}<div class="quiz-retake-row"><button class="quiz-retake-btn">${t('match.retake')}</button></div>`;

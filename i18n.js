@@ -126,7 +126,21 @@ const UI_TEXT = {
   'match.intro': { en: "Answer 4 quick questions and we'll recommend your top islands.", el: 'Απάντησε σε 4 γρήγορες ερωτήσεις και θα σου προτείνουμε τα κορυφαία νησιά για εσένα.' },
   'match.results.title': { en: 'Your top islands', el: 'Τα κορυφαία σου νησιά' },
   'match.results.sub': { en: 'Matched on your preferences — click any to explore', el: 'Με βάση τις προτιμήσεις σου — πάτα οποιοδήποτε για εξερεύνηση' },
-  'match.retake': { en: 'Retake quiz', el: 'Επανάληψη quiz' },
+  'match.retake': { en: 'Retake quiz', el: 'Επανάληψη' },
+  'quiz.back': { en: 'Back', el: 'Πίσω' },
+  'quiz.next': { en: 'Next →', el: 'Επόμενο →' },
+  'quiz.find': { en: 'Find my islands →', el: 'Βρες τα νησιά μου →' },
+  'quiz.why.top': { en: 'Top', el: 'Κορυφαία' },
+  'quiz.why.strong': { en: 'Strong', el: 'Ισχυρή' },
+  'quiz.why.affordable': { en: 'Very affordable', el: 'Πολύ προσιτό' },
+  'quiz.why.lowcrowds': { en: 'Low crowds', el: 'Λίγος κόσμος' },
+  'quiz.why.easy': { en: 'Easy to reach', el: 'Εύκολη πρόσβαση' },
+  'quiz.why.overall': { en: 'Overall score', el: 'Συνολική βαθμολογία' },
+
+  // Shortlist dimensions (in card)
+  'shortlist.dim.beach': { en: 'Beach', el: 'Παραλία' },
+  'shortlist.dim.culture': { en: 'Culture', el: 'Πολιτισμός' },
+  'shortlist.dim.night': { en: 'Night', el: 'Νυχτερινή' },
 
   // Mission page
   'mission.title': { en: 'Why this site exists', el: 'Γιατί υπάρχει αυτή η σελίδα' },
