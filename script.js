@@ -1210,11 +1210,11 @@ function carNeedCompactHtml(score) {
 }
 
 function carNeedHtml(score) {
-  // 1 = car useless, 5 = car essential. Display as filled cars out of 5.
+  // 1 = car useless, 5 = car essential. Display as a labeled pill.
   if (score == null || isNaN(score)) return '<span style="color:var(--ink-4)">—</span>';
   const n = Math.round(score);
-  const labelsEN = ['', 'Not needed', 'Helpful', 'Useful', 'Recommended', 'Essential'];
-  const labelsEL = ['', 'Άχρηστο', 'Χρήσιμο', 'Βοηθάει', 'Προτείνεται', 'Απαραίτητο'];
+  const labelsEN = ['', 'Useless', 'Slightly useful', 'Useful', 'Very useful', 'Essential'];
+  const labelsEL = ['', 'Άχρηστο', 'Λίγο χρήσιμο', 'Χρήσιμο', 'Πολύ χρήσιμο', 'Απαραίτητο'];
   const labels = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? labelsEL : labelsEN;
   const colors = ['', '#6B7280', '#8B8B8B', '#A58A3A', '#D17A2B', '#C0522A'];
   const col = colors[n] || '#888';
