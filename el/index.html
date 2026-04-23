@@ -35,7 +35,7 @@
   <link rel="icon" href="/logo.png" type="image/png">
   <link rel="apple-touch-icon" href="/logo.png">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="/style.css?v=5">
+  <link rel="stylesheet" href="/style.css?v=6">
 </head>
 <body>
 
@@ -85,6 +85,7 @@
         <option value="night" data-i18n="filter.night">🍷 Nightlife</option>
         <option value="access" data-i18n="filter.access">🚢 Access</option>
         <option value="afford" data-i18n="filter.afford">💸 Price</option>
+        <option value="car_need" data-i18n="filter.car">🚗 Car needed</option>
       </select>
     </div>
   </div>
@@ -127,11 +128,17 @@
           <th data-col="name" data-i18n="data.col.island">Island ↕</th>
           <th data-col="island_group" data-i18n="data.col.group">Group ↕</th>
           <th data-col="total" data-i18n="data.col.rating">Rating ↕</th>
-          <th data-col="beach" data-i18n="data.col.beach">Beach ↕</th>
-          <th data-col="hist" data-i18n="data.col.culture">Culture ↕</th>
-          <th data-col="night" data-i18n="data.col.night">Night ↕</th>
-          <th data-col="access" data-i18n="data.col.access">Access ↕</th>
-          <th data-col="afford" data-i18n="data.col.afford">Affordability ↕</th>
+          <th class="th-scores" title="Sort by: click a bar below">
+            <span data-i18n="data.col.scores">Scores</span>
+            <div class="th-scores-legend">
+              <span class="th-score-chip th-score-beach" data-col="beach" title="Sort by Beach"></span>
+              <span class="th-score-chip th-score-hist" data-col="hist" title="Sort by Culture"></span>
+              <span class="th-score-chip th-score-night" data-col="night" title="Sort by Nightlife"></span>
+              <span class="th-score-chip th-score-access" data-col="access" title="Sort by Access"></span>
+              <span class="th-score-chip th-score-afford" data-col="afford" title="Sort by Affordability"></span>
+              <span class="th-score-chip th-score-car" data-col="car_need" title="Sort by Car need (1=useless, 5=essential)"></span>
+            </div>
+          </th>
           <th data-col="days" data-i18n="data.col.days">Days ↕</th>
           <th data-col="area" data-i18n="data.col.area">Area (km²) ↕</th>
           <th data-col="pop" data-i18n="data.col.pop">Population ↕</th>
@@ -241,21 +248,22 @@
         </div>
         <aside class="detail-sidebar">
           <div class="sidebar-box">
-            <h3>Blueprint Ratings</h3>
+            <h3 data-i18n="detail.ratings">Blueprint Ratings</h3>
             <div class="rating-list">
-              <div class="rating-item"><span class="rating-label">Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div><span class="rating-val" id="val-beach"></span></div>
-              <div class="rating-item"><span class="rating-label">Culture &amp; History</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div><span class="rating-val" id="val-hist"></span></div>
-              <div class="rating-item"><span class="rating-label">Night Life</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div><span class="rating-val" id="val-night"></span></div>
-              <div class="rating-item"><span class="rating-label">Access Ease</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div><span class="rating-val" id="val-access"></span></div>
-              <div class="rating-item"><span class="rating-label">Price Level</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div><span class="rating-val" id="val-afford"></span></div>
+              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.beach">Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div><span class="rating-val" id="val-beach"></span></div>
+              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.culture">Culture &amp; History</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div><span class="rating-val" id="val-hist"></span></div>
+              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.night">Night Life</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div><span class="rating-val" id="val-night"></span></div>
+              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.access">Access Ease</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div><span class="rating-val" id="val-access"></span></div>
+              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.afford">Price Level</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div><span class="rating-val" id="val-afford"></span></div>
+              <div class="rating-item rating-item-car" title="" id="rating-item-car"><span class="rating-label" data-i18n="sidebar.car">🚗 Car needed</span><span class="rating-val" id="val-car"></span></div>
             </div>
           </div>
           <div class="sidebar-box" id="sidebar-stats">
-            <h3>Key Stats</h3>
-            <div class="stat-line"><span>Land Area:</span> <strong id="stat-area"></strong></div>
-            <div class="stat-line"><span>Population:</span> <strong id="stat-pop"></strong></div>
-            <div class="stat-line"><span>Group:</span> <strong id="stat-group"></strong></div>
-            <div class="stat-line"><span>Suggested stay:</span> <strong id="stat-days"></strong></div>
+            <h3 data-i18n="detail.keystats">Key Stats</h3>
+            <div class="stat-line"><span data-i18n="detail.area">Land Area:</span> <strong id="stat-area"></strong></div>
+            <div class="stat-line"><span data-i18n="detail.population">Population:</span> <strong id="stat-pop"></strong></div>
+            <div class="stat-line"><span data-i18n="detail.group">Group:</span> <strong id="stat-group"></strong></div>
+            <div class="stat-line"><span data-i18n="detail.suggestedstay">Suggested stay:</span> <strong id="stat-days"></strong></div>
           </div>
         </aside>
       </div>
@@ -300,7 +308,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-  <script src="/i18n.js?v=5"></script>
-  <script src="/script.js?v=10"></script>
+  <script src="/i18n.js?v=6"></script>
+  <script src="/script.js?v=11"></script>
 </body>
 </html>

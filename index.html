@@ -35,7 +35,7 @@
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="apple-touch-icon" href="logo.png">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 
@@ -128,12 +128,17 @@
           <th data-col="name" data-i18n="data.col.island">Island ↕</th>
           <th data-col="island_group" data-i18n="data.col.group">Group ↕</th>
           <th data-col="total" data-i18n="data.col.rating">Rating ↕</th>
-          <th data-col="beach" data-i18n="data.col.beach">Beach ↕</th>
-          <th data-col="hist" data-i18n="data.col.culture">Culture ↕</th>
-          <th data-col="night" data-i18n="data.col.night">Night ↕</th>
-          <th data-col="access" data-i18n="data.col.access">Access ↕</th>
-          <th data-col="afford" data-i18n="data.col.afford">Affordability ↕</th>
-          <th data-col="car_need" data-i18n="data.col.car" title="1 = car useless, 5 = car essential">🚗 Car ↕</th>
+          <th class="th-scores" title="Sort by: click a bar below">
+            <span data-i18n="data.col.scores">Scores</span>
+            <div class="th-scores-legend">
+              <span class="th-score-chip th-score-beach" data-col="beach" title="Sort by Beach"></span>
+              <span class="th-score-chip th-score-hist" data-col="hist" title="Sort by Culture"></span>
+              <span class="th-score-chip th-score-night" data-col="night" title="Sort by Nightlife"></span>
+              <span class="th-score-chip th-score-access" data-col="access" title="Sort by Access"></span>
+              <span class="th-score-chip th-score-afford" data-col="afford" title="Sort by Affordability"></span>
+              <span class="th-score-chip th-score-car" data-col="car_need" title="Sort by Car need (1=useless, 5=essential)"></span>
+            </div>
+          </th>
           <th data-col="days" data-i18n="data.col.days">Days ↕</th>
           <th data-col="area" data-i18n="data.col.area">Area (km²) ↕</th>
           <th data-col="pop" data-i18n="data.col.pop">Population ↕</th>
@@ -303,7 +308,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-  <script src="i18n.js?v=5"></script>
-  <script src="script.js?v=10"></script>
+  <script src="i18n.js?v=6"></script>
+  <script src="script.js?v=11"></script>
 </body>
 </html>

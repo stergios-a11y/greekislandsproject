@@ -118,6 +118,7 @@ const UI_TEXT = {
   'data.col.days': { en: 'Days ↕', el: 'Μέρες ↕' },
   'data.col.area': { en: 'Area (km²) ↕', el: 'Έκταση (km²) ↕' },
   'data.col.pop': { en: 'Population ↕', el: 'Πληθυσμός ↕' },
+  'data.col.scores': { en: 'Scores', el: 'Βαθμολογίες' },
 
   // Compare page
   'compare.title': { en: 'Compare Islands', el: 'Σύγκριση Νησιών' },

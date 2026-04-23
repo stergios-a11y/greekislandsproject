@@ -909,9 +909,20 @@ function setupTable() {
   if (searchInput) searchInput.addEventListener('input', renderTable);
   const thead = document.querySelector('#islands-table thead');
   if (thead) {
+    // Regular column headers with data-col
     thead.querySelectorAll('th[data-col]').forEach(th => {
       th.addEventListener('click', () => {
         const col = th.dataset.col;
+        if (sortState.col === col) sortState.asc = !sortState.asc;
+        else { sortState.col = col; sortState.asc = false; }
+        renderTable();
+      });
+    });
+    // Sparkline chips inside the Scores header — sort by that dimension
+    thead.querySelectorAll('.th-score-chip[data-col]').forEach(chip => {
+      chip.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const col = chip.dataset.col;
         if (sortState.col === col) sortState.asc = !sortState.asc;
         else { sortState.col = col; sortState.asc = false; }
         renderTable();
@@ -1148,7 +1159,17 @@ function renderTable() {
   if (countLabel) countLabel.textContent = `${list.length} islands`;
   const tbody = document.getElementById('islands-table-body');
   if (!tbody) return;
-  tbody.innerHTML = list.map(i => `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="Island" style="font-weight:600">${islandName(i.key)}</td><td data-label="Group"><span class="group-tag">${groupName(i.island_group)}</span></td><td data-label="Rating">${starsHtml(i.total)}</td><td data-label="Beach">${starsHtml(i.beach)}</td><td data-label="Culture">${starsHtml(i.hist)}</td><td data-label="Night">${starsHtml(i.night)}</td><td data-label="Access">${starsHtml(i.access)}</td><td data-label="Affordability">${starsHtml(i.afford)}</td><td data-label="Car" title="${t('dim.car.hint')}">${carNeedHtml(i.car_need)}</td><td data-label="Days" style="font-weight:600;color:var(--aegean)">${i.days ? i.days + ' ' + t('common.days') : '—'}</td><td data-label="Area (km²)">${barHtml(i.area, 3684, 'var(--aegean)')}</td><td data-label="Population">${barHtml(i.pop, 200000, 'var(--olive)')}</td></tr>`).join('');
+  tbody.innerHTML = list.map(i => {
+    const sparkBars = `<div class="spark-row" title="${t('dim.beach')}: ${fmt(i.beach)} · ${t('dim.culture')}: ${fmt(i.hist)} · ${t('dim.night')}: ${fmt(i.night)} · ${t('dim.access')}: ${fmt(i.access)} · ${t('dim.afford')}: ${fmt(i.afford)} · ${t('dim.car')}: ${fmt(i.car_need)}">
+      <span class="spark-bar-wrap"><span class="spark-bar spark-beach" style="height:${(i.beach/5)*100}%"></span></span>
+      <span class="spark-bar-wrap"><span class="spark-bar spark-hist" style="height:${(i.hist/5)*100}%"></span></span>
+      <span class="spark-bar-wrap"><span class="spark-bar spark-night" style="height:${(i.night/5)*100}%"></span></span>
+      <span class="spark-bar-wrap"><span class="spark-bar spark-access" style="height:${(i.access/5)*100}%"></span></span>
+      <span class="spark-bar-wrap"><span class="spark-bar spark-afford" style="height:${(i.afford/5)*100}%"></span></span>
+      <span class="spark-bar-wrap"><span class="spark-bar spark-car" style="height:${(i.car_need/5)*100}%"></span></span>
+    </div>`;
+    return `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="Island" style="font-weight:600">${islandName(i.key)}</td><td data-label="Group"><span class="group-tag">${groupName(i.island_group)}</span></td><td data-label="Rating">${starsHtml(i.total)}</td><td data-label="Scores" class="td-scores">${sparkBars}</td><td data-label="Days" style="font-weight:600;color:var(--aegean)">${i.days ? i.days + ' ' + t('common.days') : '—'}</td><td data-label="Area (km²)">${barHtml(i.area, 3684, 'var(--aegean)')}</td><td data-label="Population">${barHtml(i.pop, 200000, 'var(--olive)')}</td></tr>`;
+  }).join('');
   tbody.querySelectorAll('.table-row-clickable').forEach(row => {
     row.addEventListener('click', () => navigateTo('island', row.dataset.key));
   });
