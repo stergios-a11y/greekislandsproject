@@ -2264,12 +2264,14 @@ html.dark .lang-toggle:hover {
 .cmp-bar-night  { background: #E8662C; }
 .cmp-bar-access { background: #DDB13C; }
 .cmp-bar-afford { background: #9B7EC8; }
+.cmp-bar-car_need { background: #6B7280; }
 
 html.dark .cmp-bar-beach  { background: #4DBEFF; }
 html.dark .cmp-bar-hist   { background: #8FD66B; }
 html.dark .cmp-bar-night  { background: #FF8A52; }
 html.dark .cmp-bar-access { background: #FFCB52; }
 html.dark .cmp-bar-afford { background: #BAA0E8; }
+html.dark .cmp-bar-car_need { background: #9CA3AF; }
 
 html.dark .cmp-bar-track {
   background: rgba(255,255,255,0.14);
@@ -2456,4 +2458,27 @@ html.dark .itin-stop-photo-wrap {
     height: 140px;
     align-self: flex-start;
   }
+}
+
+/* ============================================================
+   Car-need pill (inverted scale: 1=useless, 5=essential)
+============================================================ */
+.car-need-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.car-need-icon { font-size: 12px; line-height: 1; }
+.car-need-score { font-weight: 800; font-size: 11px; }
+.car-need-label { font-size: 10px; opacity: 0.9; }
+
+/* Hide the text label on narrower screens to save space */
+@media (max-width: 900px) {
+  .car-need-label { display: none; }
 }

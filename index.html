@@ -85,6 +85,7 @@
         <option value="night" data-i18n="filter.night">🍷 Nightlife</option>
         <option value="access" data-i18n="filter.access">🚢 Access</option>
         <option value="afford" data-i18n="filter.afford">💸 Price</option>
+        <option value="car_need" data-i18n="filter.car">🚗 Car needed</option>
       </select>
     </div>
   </div>
@@ -132,6 +133,7 @@
           <th data-col="night" data-i18n="data.col.night">Night ↕</th>
           <th data-col="access" data-i18n="data.col.access">Access ↕</th>
           <th data-col="afford" data-i18n="data.col.afford">Affordability ↕</th>
+          <th data-col="car_need" data-i18n="data.col.car" title="1 = car useless, 5 = car essential">🚗 Car ↕</th>
           <th data-col="days" data-i18n="data.col.days">Days ↕</th>
           <th data-col="area" data-i18n="data.col.area">Area (km²) ↕</th>
           <th data-col="pop" data-i18n="data.col.pop">Population ↕</th>
@@ -241,21 +243,22 @@
         </div>
         <aside class="detail-sidebar">
           <div class="sidebar-box">
-            <h3>Blueprint Ratings</h3>
+            <h3 data-i18n="detail.ratings">Blueprint Ratings</h3>
             <div class="rating-list">
-              <div class="rating-item"><span class="rating-label">Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div><span class="rating-val" id="val-beach"></span></div>
-              <div class="rating-item"><span class="rating-label">Culture &amp; History</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div><span class="rating-val" id="val-hist"></span></div>
-              <div class="rating-item"><span class="rating-label">Night Life</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div><span class="rating-val" id="val-night"></span></div>
-              <div class="rating-item"><span class="rating-label">Access Ease</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div><span class="rating-val" id="val-access"></span></div>
-              <div class="rating-item"><span class="rating-label">Price Level</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div><span class="rating-val" id="val-afford"></span></div>
+              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.beach">Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div><span class="rating-val" id="val-beach"></span></div>
+              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.culture">Culture &amp; History</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div><span class="rating-val" id="val-hist"></span></div>
+              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.night">Night Life</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div><span class="rating-val" id="val-night"></span></div>
+              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.access">Access Ease</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div><span class="rating-val" id="val-access"></span></div>
+              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.afford">Price Level</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div><span class="rating-val" id="val-afford"></span></div>
+              <div class="rating-item rating-item-car" title="" id="rating-item-car"><span class="rating-label" data-i18n="sidebar.car">🚗 Car needed</span><span class="rating-val" id="val-car"></span></div>
             </div>
           </div>
           <div class="sidebar-box" id="sidebar-stats">
-            <h3>Key Stats</h3>
-            <div class="stat-line"><span>Land Area:</span> <strong id="stat-area"></strong></div>
-            <div class="stat-line"><span>Population:</span> <strong id="stat-pop"></strong></div>
-            <div class="stat-line"><span>Group:</span> <strong id="stat-group"></strong></div>
-            <div class="stat-line"><span>Suggested stay:</span> <strong id="stat-days"></strong></div>
+            <h3 data-i18n="detail.keystats">Key Stats</h3>
+            <div class="stat-line"><span data-i18n="detail.area">Land Area:</span> <strong id="stat-area"></strong></div>
+            <div class="stat-line"><span data-i18n="detail.population">Population:</span> <strong id="stat-pop"></strong></div>
+            <div class="stat-line"><span data-i18n="detail.group">Group:</span> <strong id="stat-group"></strong></div>
+            <div class="stat-line"><span data-i18n="detail.suggestedstay">Suggested stay:</span> <strong id="stat-days"></strong></div>
           </div>
         </aside>
       </div>
