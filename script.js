@@ -99,6 +99,7 @@ let sortState = { col: 'total', asc: false };
 let itinActiveDay = 'all';
 let itinRouteLayers = {};
 let itinMarkerLayers = {};
+let itinBeachMarkers = [];
 
 const SCORE_DIMS = ['beach', 'hist', 'night', 'access', 'afford', 'car_need'];
 // For the compare page we exclude car_need from the chart/histogram — it's shown below as a label
@@ -682,7 +683,7 @@ async function renderIslandPage(key) {
     if (res.ok) {
       const data = await res.json();
       guide.innerHTML = buildIslandPage(data);
-      setTimeout(() => initItineraryMap(data.itinerary.days), 80);
+      setTimeout(() => initItineraryMap(data.itinerary.days, data.beaches || []), 80);
       if (data.beaches) setTimeout(() => loadBeachPhotos(data.beaches), 150);
       setTimeout(() => initBeachVotes(), 200);
       return;
@@ -827,7 +828,7 @@ function buildIslandPage(data) {
       </div>
       ${introHtml}
       <div class="itin-day-filter">
-        <button class="itin-day-btn active" data-day="all" onclick="filterItinDay('all')" style="border-color:#888;color:#555"><span style="color:inherit">${t("detail.alldays")}</span></button>
+        <button class="itin-day-btn active" data-day="all" onclick="filterItinDay('all')" style="border-color:var(--ink-2);color:var(--ink-1)"><span style="color:inherit">${t("detail.alldays")}</span></button>
         ${dayBtns}
       </div>
       <div class="itin-map-wrap">
@@ -860,11 +861,8 @@ function filterItinDay(day) {
   document.querySelectorAll('.itin-day-btn').forEach(btn => {
     const isActive = String(btn.dataset.day) === String(day);
     btn.classList.toggle('active', isActive);
-    if (isActive) {
-      btn.style.background = btn.style.color || '#888';
-    } else {
-      btn.style.background = 'transparent';
-    }
+    // Active state is handled by CSS (.itin-day-btn.active) — no inline override
+    btn.style.background = '';
   });
   document.querySelectorAll('.itin-day-card').forEach(card => {
     card.style.display = (day === 'all' || card.id === `itin-day-card-${day}`) ? '' : 'none';
@@ -880,6 +878,11 @@ function filterItinDay(day) {
       if (day === 'all' || String(d) === String(day)) m.addTo(itineraryMapInstance);
       else itineraryMapInstance.removeLayer(m);
     });
+  });
+  // Beach markers: only visible on "All days" view (they're island-wide POIs, not per-day)
+  itinBeachMarkers.forEach(m => {
+    if (day === 'all') m.addTo(itineraryMapInstance);
+    else itineraryMapInstance.removeLayer(m);
   });
   if (!itineraryMapInstance) return;
   if (day === 'all') {
@@ -938,7 +941,7 @@ async function fetchOSRMRoute(coords) {
 /* ============================================================
    ITINERARY MAP INIT — accepts days array from JSON
 ============================================================ */
-async function initItineraryMap(days) {
+async function initItineraryMap(days, beaches = []) {
   const mapEl = document.getElementById('itin-map');
   if (!mapEl) return;
   if (itineraryMapInstance) { itineraryMapInstance.remove(); itineraryMapInstance = null; }
@@ -949,8 +952,10 @@ async function initItineraryMap(days) {
   addThemeAwareTiles(itineraryMapInstance, { maxZoom: 16 });
   L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(itineraryMapInstance);
 
-  const allCoords = days.flatMap(d => d.stops.map(s => [s.lat, s.lng]));
-  itineraryMapInstance.fitBounds(L.latLngBounds(allCoords), { padding: [30, 30] });
+  const stopCoords = days.flatMap(d => d.stops.map(s => [s.lat, s.lng]));
+  const beachCoords = beaches.filter(b => b.lat && b.lng).map(b => [b.lat, b.lng]);
+  const allCoords = [...stopCoords, ...beachCoords];
+  if (allCoords.length) itineraryMapInstance.fitBounds(L.latLngBounds(allCoords), { padding: [30, 30] });
 
   for (const day of days) {
     itinRouteLayers[day.day] = [];
@@ -979,6 +984,32 @@ async function initItineraryMap(days) {
       itinMarkerLayers[day.day].push(marker);
     });
   }
+
+  // Beach markers: separate always-visible layer (doesn't belong to any day)
+  // Shown when "All days" is active; hidden when a specific day is selected.
+  itinBeachMarkers = [];
+  const BEACH_COLOR = '#0B8FAC';
+  beaches.forEach(b => {
+    if (!b.lat || !b.lng) return;
+    const name = pickLang(b, 'name');
+    const desc = pickLang(b, 'desc');
+    const type = pickLang(b, 'type');
+    const icon = L.divIcon({
+      className: 'custom-marker',
+      html: poiIcon('beach', BEACH_COLOR),
+      iconSize: [32, 32], iconAnchor: [16, 16],
+    });
+    const popupHtml = `<div style="min-width:200px;font-family:sans-serif">
+      <div style="font-size:10px;font-weight:700;color:${BEACH_COLOR};text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px">${t('detail.beach')}</div>
+      <strong>${name}</strong>
+      ${type ? `<div style="font-size:11px;color:#777;margin-top:2px">${type}</div>` : ''}
+      <p style="font-size:12px;color:#555;margin:6px 0 0;line-height:1.55">${desc}</p>
+    </div>`;
+    const marker = L.marker([b.lat, b.lng], { icon, zIndexOffset: -100 })
+      .addTo(itineraryMapInstance)
+      .bindPopup(popupHtml);
+    itinBeachMarkers.push(marker);
+  });
 }
 
 /* ============================================================

@@ -109,6 +109,7 @@ const UI_TEXT = {
   'detail.group': { en: 'Group:', el: 'Ομάδα:' },
   'detail.suggestedstay': { en: 'Suggested stay:', el: 'Συνιστώμενη παραμονή:' },
   'detail.beaches': { en: 'Top Beaches', el: 'Καλύτερες Παραλίες' },
+  'detail.beach': { en: 'Beach', el: 'Παραλία' },
   'detail.itinerary': { en: 'Itinerary', el: 'Πρόγραμμα' },
   'detail.alldays': { en: 'All days', el: 'Όλες οι μέρες' },
   'detail.day': { en: 'Day', el: 'Ημέρα' },

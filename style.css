@@ -1040,14 +1040,20 @@ html.dark .why-feat-num { color: var(--marble-3); }
   background: transparent;
   cursor: pointer;
   transition: all 0.15s;
-  opacity: 0.6;
+  opacity: 0.75;
 }
 .itin-day-btn.active {
   opacity: 1;
+  background: var(--ink-1);
   color: #fff !important;
-  filter: none;
+  border-color: var(--ink-1) !important;
 }
 .itin-day-btn:hover { opacity: 1; }
+html.dark .itin-day-btn.active {
+  background: rgba(255,255,255,0.9);
+  color: #111 !important;
+  border-color: rgba(255,255,255,0.9) !important;
+}
 
 .itin-stop-link {
   color: inherit;
