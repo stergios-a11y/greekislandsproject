@@ -1131,7 +1131,6 @@ function renderTable() {
 function setupCompare() {
   const selA = document.getElementById('compare-select-a');
   const selB = document.getElementById('compare-select-b');
-  const clearBtn = document.getElementById('compare-clear-btn');
   if (!selA || !selB) return;
   const sorted = [...ISLANDS].sort((a, b) => a.name.localeCompare(b.name));
   sorted.forEach(i => {
@@ -1145,7 +1144,6 @@ function setupCompare() {
   if (compareSelection[1]) selB.value = compareSelection[1];
   selA.addEventListener('change', () => { compareSelection[0] = selA.value || null; renderCompareView(); });
   selB.addEventListener('change', () => { compareSelection[1] = selB.value || null; renderCompareView(); });
-  if (clearBtn) clearBtn.addEventListener('click', clearCompare);
   // Initial render so the chart appears immediately on page load
   renderCompareView();
 }
@@ -1162,16 +1160,6 @@ function addToCompare(key) {
   const selB = document.getElementById('compare-select-b');
   if (selA && compareSelection[0]) selA.value = compareSelection[0];
   if (selB && compareSelection[1]) selB.value = compareSelection[1];
-}
-
-function clearCompare() {
-  // Reset to defaults rather than empty so the chart stays visible
-  compareSelection = ['chania', 'rhodes'];
-  const selA = document.getElementById('compare-select-a');
-  const selB = document.getElementById('compare-select-b');
-  if (selA) selA.value = 'chania';
-  if (selB) selB.value = 'rhodes';
-  renderCompareView();
 }
 
 function renderCompareView() {
@@ -1199,19 +1187,49 @@ function renderRadarChart(iA, iB) {
   const canvas = document.getElementById('compare-radar-chart');
   if (!canvas) return;
   if (radarChartInstance) radarChartInstance.destroy();
+  const isDark = document.documentElement.classList.contains('dark');
+  const gridColor = isDark ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.1)';
+  const labelColor = isDark ? 'rgba(255,255,255,0.85)' : 'rgba(0,0,0,0.7)';
+  const tickBg = 'transparent';
   radarChartInstance = new Chart(canvas, {
     type: 'radar',
     data: {
       labels: DIM_LABELS,
       datasets: [
-        { label: islandName(iA.key), data: SCORE_DIMS.map(d => iA[d]), backgroundColor: 'rgba(27,79,138,0.12)', borderColor: '#1B4F8A', pointBackgroundColor: '#1B4F8A', pointRadius: 4 },
-        { label: islandName(iB.key), data: SCORE_DIMS.map(d => iB[d]), backgroundColor: 'rgba(196,150,42,0.12)', borderColor: '#C4962A', pointBackgroundColor: '#C4962A', pointRadius: 4 },
+        { label: islandName(iA.key), data: SCORE_DIMS.map(d => iA[d]), backgroundColor: isDark ? 'rgba(77,190,255,0.15)' : 'rgba(27,79,138,0.12)', borderColor: isDark ? '#4DBEFF' : '#1B4F8A', pointBackgroundColor: isDark ? '#4DBEFF' : '#1B4F8A', pointRadius: 4 },
+        { label: islandName(iB.key), data: SCORE_DIMS.map(d => iB[d]), backgroundColor: isDark ? 'rgba(255,203,82,0.15)' : 'rgba(196,150,42,0.12)', borderColor: isDark ? '#FFCB52' : '#C4962A', pointBackgroundColor: isDark ? '#FFCB52' : '#C4962A', pointRadius: 4 },
       ],
     },
     options: {
       responsive: true, maintainAspectRatio: false,
-      scales: { r: { min: 0, max: 5, ticks: { stepSize: 1, font: { size: 10 } }, pointLabels: { font: { size: 12 } } } },
-      plugins: { legend: { position: 'bottom', labels: { font: { size: 12 }, boxWidth: 14 } } },
+      scales: {
+        r: {
+          min: 0, max: 5,
+          ticks: {
+            stepSize: 1,
+            font: { size: 10 },
+            color: labelColor,
+            backdropColor: tickBg,
+            showLabelBackdrop: false
+          },
+          pointLabels: {
+            font: { size: 12 },
+            color: labelColor
+          },
+          grid: { color: gridColor },
+          angleLines: { color: gridColor }
+        }
+      },
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: {
+            font: { size: 12 },
+            boxWidth: 14,
+            color: labelColor
+          }
+        }
+      },
     },
   });
 }
