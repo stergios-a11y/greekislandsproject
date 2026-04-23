@@ -1783,18 +1783,96 @@ function renderHopping() {
 ============================================================ */
 
 // Foreign ports (not in ISLANDS_DATA)
+// rating: 1-5 how worth visiting. context: single-sentence insider summary
 const FOREIGN_PORTS = {
-  'saranda':      { name: 'Saranda',      name_el: 'Αγ. Σαράντα', country: 'Albania',  country_el: 'Αλβανία', lat: 39.8753, lng: 20.0056 },
-  'ayvalik':      { name: 'Ayvalık',      name_el: 'Αϊβαλί',     country: 'Turkey',   country_el: 'Τουρκία', lat: 39.3095, lng: 26.6930 },
-  'cesme':        { name: 'Çeşme',        name_el: 'Τσεσμές',    country: 'Turkey',   country_el: 'Τουρκία', lat: 38.3236, lng: 26.3042 },
-  'kusadasi':     { name: 'Kuşadası',     name_el: 'Κουσάντασι', country: 'Turkey',   country_el: 'Τουρκία', lat: 37.8600, lng: 27.2561 },
-  'seferihisar':  { name: 'Seferihisar',  name_el: 'Σεφέριχισαρ',country: 'Turkey',   country_el: 'Τουρκία', lat: 38.1962, lng: 26.8379 },
-  'bodrum':       { name: 'Bodrum',       name_el: 'Μπόντρουμ',  country: 'Turkey',   country_el: 'Τουρκία', lat: 37.0344, lng: 27.4305 },
-  'turgutreis':   { name: 'Turgutreis',   name_el: 'Τουργκούτ',  country: 'Turkey',   country_el: 'Τουρκία', lat: 37.0164, lng: 27.2556 },
-  'marmaris':     { name: 'Marmaris',     name_el: 'Μαρμαρίς',   country: 'Turkey',   country_el: 'Τουρκία', lat: 36.8550, lng: 28.2700 },
-  'fethiye':      { name: 'Fethiye',      name_el: 'Φετχιγιέ',   country: 'Turkey',   country_el: 'Τουρκία', lat: 36.6214, lng: 29.1128 },
-  'kas':          { name: 'Kaş',          name_el: 'Κας',        country: 'Turkey',   country_el: 'Τουρκία', lat: 36.2020, lng: 29.6420 },
-  'datca':        { name: 'Datça',        name_el: 'Ντατσά',     country: 'Turkey',   country_el: 'Τουρκία', lat: 36.7310, lng: 27.6844 },
+  'saranda': {
+    name: 'Saranda', name_el: 'Αγ. Σαράντα',
+    country: 'Albania', country_el: 'Αλβανία',
+    lat: 39.8753, lng: 20.0056,
+    rating: 4,
+    context: 'Mediocre seafront town, but the gateway to Butrint UNESCO site (30 min south) and the Ksamil beaches — among the best in the Balkans.',
+    context_el: 'Μέτρια παραλιακή πόλη, αλλά πύλη για τον αρχαιολογικό χώρο UNESCO της Βουθρωτής (30 λεπτά νότια) και τις παραλίες Ksamil — από τις καλύτερες στα Βαλκάνια.',
+  },
+  'ayvalik': {
+    name: 'Ayvalık', name_el: 'Αϊβαλί',
+    country: 'Turkey', country_el: 'Τουρκία',
+    lat: 39.3095, lng: 26.6930,
+    rating: 4,
+    context: 'Beautiful old Greek-Ottoman town with preserved 19th-century stone houses. Base for day trips to ancient Pergamon.',
+    context_el: 'Όμορφη παλιά ελληνοτουρκική πόλη με διατηρημένες πέτρινες κατοικίες του 19ου αιώνα. Βάση για εκδρομές στην αρχαία Πέργαμο.',
+  },
+  'cesme': {
+    name: 'Çeşme', name_el: 'Τσεσμές',
+    country: 'Turkey', country_el: 'Τουρκία',
+    lat: 38.3236, lng: 26.3042,
+    rating: 3,
+    context: 'Upscale beach resort with an Ottoman fortress, thermal springs, and some of the best windsurfing in the Aegean. Lively but touristy in summer.',
+    context_el: 'Κοσμοπολίτικο θέρετρο με οθωμανικό κάστρο, ιαματικές πηγές, και από το καλύτερο windsurfing του Αιγαίου. Ζωντανό αλλά τουριστικό το καλοκαίρι.',
+  },
+  'kusadasi': {
+    name: 'Kuşadası', name_el: 'Κουσάντασι',
+    country: 'Turkey', country_el: 'Τουρκία',
+    lat: 37.8600, lng: 27.2561,
+    rating: 4,
+    context: 'Main gateway to Ephesus (18 km inland) — one of the most important ancient cities in the world. The town itself is packed with cruise-ship crowds.',
+    context_el: 'Η κύρια πύλη για την Έφεσο (18 χλμ εσωτερικά) — μία από τις σημαντικότερες αρχαίες πόλεις στον κόσμο. Η ίδια η πόλη γεμάτη κρουαζιερόπλοια.',
+  },
+  'seferihisar': {
+    name: 'Seferihisar', name_el: 'Σεφέριχισαρ',
+    country: 'Turkey', country_el: 'Τουρκία',
+    lat: 38.1962, lng: 26.8379,
+    rating: 3,
+    context: 'Turkey\'s first official "Slow Food" town. Beautiful Sigacik marina, a restored citadel, and the ruins of ancient Teos nearby.',
+    context_el: 'Η πρώτη επίσημη "Slow Food" πόλη της Τουρκίας. Όμορφη μαρίνα Sigacik, αναπαλαιωμένη ακρόπολη, και τα ερείπια της αρχαίας Τέω κοντά.',
+  },
+  'bodrum': {
+    name: 'Bodrum', name_el: 'Μπόντρουμ',
+    country: 'Turkey', country_el: 'Τουρκία',
+    lat: 37.0344, lng: 27.4305,
+    rating: 5,
+    context: 'The most beautiful port town on the Turkish Aegean — a crusader Castle of St Peter dominates the harbor, the old town is whitewashed, the nightlife is legendary. Halicarnassus was here.',
+    context_el: 'Η πιο όμορφη παραλιακή πόλη του τουρκικού Αιγαίου — το σταυροφορικό Κάστρο του Αγίου Πέτρου δεσπόζει στο λιμάνι, η παλιά πόλη είναι ασπρισμένη, η νυχτερινή ζωή θρυλική. Η Αλικαρνασσός ήταν εδώ.',
+  },
+  'turgutreis': {
+    name: 'Turgutreis', name_el: 'Τουργκούτ',
+    country: 'Turkey', country_el: 'Τουρκία',
+    lat: 37.0164, lng: 27.2556,
+    rating: 3,
+    context: 'Quieter beach town on the Bodrum peninsula with a long sandy beach and one of Turkey\'s best sunset viewpoints.',
+    context_el: 'Πιο ήσυχη παραλιακή πόλη στη χερσόνησο του Μπόντρουμ με μεγάλη αμμουδιά και από τα καλύτερα ηλιοβασιλέματα της Τουρκίας.',
+  },
+  'marmaris': {
+    name: 'Marmaris', name_el: 'Μαρμαρίς',
+    country: 'Turkey', country_el: 'Τουρκία',
+    lat: 36.8550, lng: 28.2700,
+    rating: 3,
+    context: 'Large resort town with a pretty harbor and pine-wooded bay. Best used as a gateway to the Dalyan mud baths or the Lycian coast.',
+    context_el: 'Μεγάλο θέρετρο με γραφικό λιμάνι και πευκόφυτο κόλπο. Καλύτερη χρήση ως πύλη για τις λουτροθεραπείες Dalyan ή την ακτή της Λυκίας.',
+  },
+  'fethiye': {
+    name: 'Fethiye', name_el: 'Φετχιγιέ',
+    country: 'Turkey', country_el: 'Τουρκία',
+    lat: 36.6214, lng: 29.1128,
+    rating: 5,
+    context: 'Stunning harbor town and gateway to Ölüdeniz lagoon — one of the most photographed beaches in the world — and the 540 km Lycian Way hiking trail.',
+    context_el: 'Εκπληκτική παραλιακή πόλη και πύλη για τη λιμνοθάλασσα Ölüdeniz — μία από τις πιο φωτογραφημένες παραλίες στον κόσμο — και το μονοπάτι Lycian Way.',
+  },
+  'kas': {
+    name: 'Kaş', name_el: 'Κας',
+    country: 'Turkey', country_el: 'Τουρκία',
+    lat: 36.2020, lng: 29.6420,
+    rating: 5,
+    context: 'Charming bohemian Lycian town with Greek-style architecture, reachable only by winding coastal road. Incredible diving and paragliding. Kastellorizo visible from the harbor.',
+    context_el: 'Γοητευτική μποέμικη Λυκιακή πόλη με ελληνικού τύπου αρχιτεκτονική, προσβάσιμη μόνο μέσω κυκλικού παραλιακού δρόμου. Εκπληκτικές καταδύσεις και paragliding. Το Καστελλόριζο φαίνεται από το λιμάνι.',
+  },
+  'datca': {
+    name: 'Datça', name_el: 'Ντατσά',
+    country: 'Turkey', country_el: 'Τουρκία',
+    lat: 36.7310, lng: 27.6844,
+    rating: 4,
+    context: 'Peaceful peninsula town, "where Aegean meets Mediterranean." Ancient Knidos ruins at the peninsula\'s tip, almond groves, uncrowded beaches.',
+    context_el: 'Ήσυχη πόλη σε χερσόνησο, "όπου το Αιγαίο συναντά τη Μεσόγειο." Τα ερείπια της αρχαίας Κνίδου στην άκρη της χερσονήσου, αμυγδαλιές, άδειες παραλίες.',
+  },
 };
 
 const INTERNATIONAL_ROUTES = [
@@ -1985,13 +2063,33 @@ function renderInternationalMap() {
     low:  { color: '#C4962A', weight: 2.5, opacity: 0.85, dashArray: '6, 4' },
   };
 
+  // For multi-port islands, use the actual ferry port coordinate (not the island centroid).
+  // This matters for large islands where ferries depart from a specific town.
+  const PORT_OVERRIDES = {
+    'rhodes': { lat: 36.4512, lng: 28.2244 },  // Rhodes Town commercial port (Akandia / Mandraki)
+    'lesvos': { lat: 39.1080, lng: 26.5543 },  // Mytilene port
+    'symi':   { lat: 36.6167, lng: 27.8394 },  // Yialos port (Symi town)
+    'samos':  { lat: 37.754,  lng: 26.977 },   // Vathi (Samos Town) — already the main coord
+    'kos':    { lat: 36.8936, lng: 27.2925 },  // Kos Town port
+    'chios':  { lat: 38.3696, lng: 26.1356 },  // Chios Town port
+    'corfu':  { lat: 39.6270, lng: 19.9212 },  // Corfu New Port
+    'kastellorizo': { lat: 36.1455, lng: 29.5928 },
+  };
+
+  const portCoord = (key) => {
+    const o = PORT_OVERRIDES[key];
+    if (o) return [o.lat, o.lng];
+    const isl = ISLANDS_DATA[key];
+    return isl ? [isl.lat, isl.lng] : null;
+  };
+
   // Draw each route
   INTERNATIONAL_ROUTES.forEach(r => {
-    const from = ISLANDS_DATA[r.from];
+    const from = portCoord(r.from);
     const to = FOREIGN_PORTS[r.to];
     if (!from || !to) return;
     const line = L.polyline(
-      [[from.lat, from.lng], [to.lat, to.lng]],
+      [from, [to.lat, to.lng]],
       STYLES[r.frequency] || STYLES.med
     ).addTo(map);
     line.bindTooltip(
@@ -2007,9 +2105,9 @@ function renderInternationalMap() {
   // Greek island markers (clickable → island page)
   const greekPorts = new Set(INTERNATIONAL_ROUTES.map(r => r.from));
   greekPorts.forEach(key => {
-    const isl = ISLANDS_DATA[key];
-    if (!isl) return;
-    const marker = L.circleMarker([isl.lat, isl.lng], {
+    const coord = portCoord(key);
+    if (!coord) return;
+    const marker = L.circleMarker(coord, {
       radius: 8,
       fillColor: '#0B8FAC',
       color: '#fff',
@@ -2028,7 +2126,7 @@ function renderInternationalMap() {
     const flag = port.country === 'Albania' ? '🇦🇱' : '🇹🇷';
     L.circleMarker([port.lat, port.lng], {
       radius: 7,
-      fillColor: port.country === 'Albania' ? '#E8522A' : '#C4962A',
+      fillColor: '#C0522A',
       color: '#fff',
       weight: 2,
       opacity: 1,
@@ -2051,6 +2149,12 @@ function renderInternationalList() {
     if (!from || !to) return '';
     const flag = r.country === 'Albania' ? '🇦🇱' : '🇹🇷';
     const freqClass = r.frequency === 'high' ? 'freq-high' : r.frequency === 'med' ? 'freq-med' : 'freq-low';
+    const rating = to.rating || 0;
+    const stars = Array.from({length: 5}, (_, i) =>
+      `<span class="intl-star ${i < rating ? 'on' : ''}">★</span>`
+    ).join('');
+    // Ferryhopper search-URL pattern (works as search prefill)
+    const ferryhopperUrl = `https://www.ferryhopper.com/en/ferry-routes/direct/${r.from}-${r.to}`;
     return `
       <div class="intl-route-card">
         <div class="intl-route-header">
@@ -2068,7 +2172,17 @@ function renderInternationalList() {
           <span class="intl-meta-item">💶 ${r.price}</span>
           <span class="intl-meta-item">🚢 ${r.operators}</span>
         </div>
-        <p class="intl-route-note">${pickLang(r, 'note')}</p>
+        <div class="intl-destination-block">
+          <div class="intl-destination-top">
+            <span class="intl-destination-label">${pickLang(to, 'name')} — ${t('international.destination.worth')}</span>
+            <span class="intl-stars">${stars}</span>
+          </div>
+          <p class="intl-destination-context">${pickLang(to, 'context')}</p>
+        </div>
+        <div class="intl-route-footer">
+          <p class="intl-route-note">${pickLang(r, 'note')}</p>
+          <a class="intl-schedule-btn" href="${ferryhopperUrl}" target="_blank" rel="noopener">🗓 ${t('international.schedule.btn')}</a>
+        </div>
       </div>
     `;
   };

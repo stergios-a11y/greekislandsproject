@@ -180,6 +180,9 @@ const UI_TEXT = {
   'international.routes.title': { en: 'All Routes', el: 'Όλες οι Διαδρομές' },
   'international.country.albania': { en: 'Albania', el: 'Αλβανία' },
   'international.country.turkey': { en: 'Turkey', el: 'Τουρκία' },
+  'international.destination.worth': { en: 'worth the trip?', el: 'αξίζει το ταξίδι;' },
+  'international.schedule.btn': { en: 'See schedules', el: 'Δες δρομολόγια' },
+  'international.prebook': { en: '💡 <strong>No need to pre-book.</strong> For all routes below, you can buy your ferry ticket on the spot at the port on the same day. Summer is busier — arrive 60–90 min before departure to secure your seat.', el: '💡 <strong>Δεν χρειάζεται προκράτηση.</strong> Για όλες τις παρακάτω διαδρομές, μπορείς να αγοράσεις το εισιτήριο επί τόπου στο λιμάνι την ίδια μέρα. Το καλοκαίρι έχει κίνηση — έλα 60–90 λεπτά πριν την αναχώρηση για να εξασφαλίσεις θέση.' },
 
   // Match Me / Quiz
   'match.title': { en: 'Match Me', el: 'Βρες το Νησί σου' },

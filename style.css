@@ -3169,3 +3169,102 @@ html.dark .cmp-info-row { color: rgba(255,255,255,0.8); }
 html.dark .cmp-info-label { color: rgba(255,255,255,0.6); }
 html.dark .cmp-info-val { color: rgba(255,255,255,0.95); }
 html.dark .cmp-info-val strong { color: #4DBEFF; }
+
+/* ============================================================
+   INTERNATIONAL — pre-book notice, rating stars, schedule btn
+============================================================ */
+.intl-prebook-notice {
+  margin: 14px 0 24px;
+  padding: 12px 18px;
+  background: rgba(76, 175, 80, 0.08);
+  border-left: 4px solid #4CAF50;
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+.intl-prebook-notice strong { color: var(--ink-1); }
+html.dark .intl-prebook-notice {
+  background: rgba(76, 175, 80, 0.12);
+  color: rgba(255,255,255,0.85);
+}
+html.dark .intl-prebook-notice strong { color: rgba(255,255,255,0.95); }
+
+.intl-destination-block {
+  margin: 14px 0 10px;
+  padding: 12px 14px;
+  background: rgba(11, 143, 172, 0.05);
+  border-radius: 10px;
+}
+.intl-destination-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+.intl-destination-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.intl-stars {
+  display: inline-flex;
+  gap: 1px;
+  font-size: 14px;
+}
+.intl-star { color: rgba(0,0,0,0.15); }
+.intl-star.on { color: #DDB13C; }
+.intl-destination-context {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+html.dark .intl-destination-block {
+  background: rgba(77, 190, 255, 0.08);
+}
+html.dark .intl-destination-context { color: rgba(255,255,255,0.8); }
+html.dark .intl-destination-label { color: rgba(255,255,255,0.6); }
+html.dark .intl-star { color: rgba(255,255,255,0.2); }
+html.dark .intl-star.on { color: #FFCB52; }
+
+.intl-route-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.intl-route-footer .intl-route-note {
+  flex: 1;
+  margin: 0;
+  min-width: 200px;
+}
+.intl-schedule-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, var(--aegean) 0%, var(--aegean-dark) 100%);
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 6px rgba(11,143,172,0.25);
+}
+.intl-schedule-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(11,143,172,0.4);
+  color: #fff;
+  text-decoration: none;
+}
