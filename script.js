@@ -135,6 +135,12 @@ const VIEW_HASH_MAP = {
 };
 
 function parseHash() {
+  // First check URL path — supports the pre-rendered SEO pages at /island/{key}/
+  const path = window.location.pathname.replace(/^\/el\//, '/').replace(/\/$/, '');
+  const pathMatch = path.match(/^\/island\/([a-z-]+)$/);
+  if (pathMatch) return { view: 'island', param: pathMatch[1] };
+
+  // Fall back to hash routing (the SPA's native navigation)
   const hash = window.location.hash.replace('#', '').trim();
   if (!hash) return { view: 'home', param: null };
   if (hash.startsWith('island/')) return { view: 'island', param: hash.replace('island/', '') };
