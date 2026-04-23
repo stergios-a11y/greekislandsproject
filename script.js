@@ -205,6 +205,8 @@ function showView(view, param) {
     const el = document.getElementById('view-detail');
     if (el) el.style.display = '';
     homeControls.style.display = 'none';
+    const helpBtn = document.getElementById('help-btn');
+    if (helpBtn) helpBtn.style.display = 'none';
     if (param) renderIslandPage(param);
     return;
   }
@@ -213,6 +215,9 @@ function showView(view, param) {
   homeControls.style.display = (view === 'home') ? '' : 'none';
   const navLink = document.getElementById(`nav-${view}`);
   if (navLink) navLink.classList.add('active');
+  // Help button is only relevant on the home/map view
+  const helpBtn = document.getElementById('help-btn');
+  if (helpBtn) helpBtn.style.display = (view === 'home') ? '' : 'none';
   if (nav && nav.classList.contains('open')) nav.classList.remove('open');
   if (view === 'home' && mapInstance) setTimeout(() => mapInstance.invalidateSize(), 100);
   if (view === 'hopping') setTimeout(renderHopping, 50);
