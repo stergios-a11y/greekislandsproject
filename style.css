@@ -2487,15 +2487,50 @@ html.dark .itin-stop-photo-wrap {
    TABLE DIMENSION TOGGLE — Show/Hide score columns
 ============================================================ */
 
-/* By default, hide the 6 dimension columns on the data table */
+/* By default: show Island + main columns, hide dimension columns */
 #islands-table .th-dim,
 #islands-table .td-dim {
   display: none;
 }
-/* When table has .show-dims class, reveal them */
+
+/* When .show-dims is active: show only Island + dimensions, hide everything else */
+#islands-table.show-dims .th-main,
+#islands-table.show-dims .td-main {
+  display: none;
+}
 #islands-table.show-dims .th-dim,
 #islands-table.show-dims .td-dim {
   display: table-cell;
+}
+
+/* Stacked bar for area/population: number on top, bar below (saves horizontal space) */
+.table-bar-stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 70px;
+}
+.table-bar-stacked-num {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-2);
+  line-height: 1;
+}
+.table-bar-stacked-track {
+  height: 5px;
+  background: rgba(0,0,0,0.07);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.table-bar-stacked-fill {
+  height: 100%;
+  border-radius: 3px;
+}
+html.dark .table-bar-stacked-num {
+  color: rgba(255,255,255,0.85);
+}
+html.dark .table-bar-stacked-track {
+  background: rgba(255,255,255,0.1);
 }
 
 /* Callout row under search — makes the expansion affordance obvious */
@@ -2643,46 +2678,72 @@ html.dark .itt-fill-access { background: #FFCB52; }
 html.dark .itt-fill-afford { background: #BAA0E8; }
 
 /* ============================================================
-   HELP / HOW TO — floating button + modal
+   FLOATING ACTION BUTTONS (bottom-right) — Help + Feedback
 ============================================================ */
 
-.help-btn {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  z-index: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
+/* Shared FAB style */
+.fab-btn {
+  padding: 12px 20px;
   font-family: var(--sans);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   color: #fff;
   background: linear-gradient(135deg, var(--aegean) 0%, var(--aegean-dark) 100%);
   border: none;
   border-radius: 999px;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(11,143,172,0.4);
+  box-shadow: 0 4px 16px rgba(11,143,172,0.35);
   transition: all 0.2s;
+  white-space: nowrap;
 }
-.help-btn:hover {
+.fab-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(11,143,172,0.5);
-}
-.help-btn-icon {
-  font-size: 14px;
+  box-shadow: 0 6px 20px rgba(11,143,172,0.45);
 }
 
+/* Position the two FABs stacked at bottom-right */
+#feedback-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+}
+#help-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 180px; /* sits left of feedback */
+  z-index: 1000;
+  background: linear-gradient(135deg, #3D8B6F 0%, #2A6B54 100%);
+  box-shadow: 0 4px 16px rgba(61,139,111,0.35);
+}
+#help-btn:hover {
+  box-shadow: 0 6px 20px rgba(61,139,111,0.45);
+}
+
+/* Hide on print */
+@media print {
+  #help-btn, #feedback-btn, .help-modal { display: none !important; }
+}
+
+/* Mobile — stack vertically, smaller */
 @media (max-width: 640px) {
-  .help-btn {
-    top: 12px;
-    right: 12px;
-    padding: 6px 10px;
-    font-size: 12px;
+  #feedback-btn {
+    bottom: 16px;
+    right: 16px;
+    padding: 10px 16px;
+    font-size: 13px;
   }
-  .help-btn-text { display: none; }
-  .help-btn-icon { font-size: 16px; }
+  #help-btn {
+    bottom: 70px;
+    right: 16px;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
+/* Kill the old .help-btn absolute positioning on the map page */
+.help-btn {
+  position: static !important;
 }
 
 /* Modal overlay */

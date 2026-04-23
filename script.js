@@ -1200,6 +1200,11 @@ function barHtml(val, max, color) {
   return `<div class="table-bar-wrap"><div class="table-bar-fill" style="width:${pct}%;background:${color}"></div><span class="table-bar-label">${fmtNum(val)}</span></div>`;
 }
 
+function barStackedHtml(val, max, color) {
+  const pct = Math.min(100, Math.round((val / max) * 100));
+  return `<div class="table-bar-stacked"><span class="table-bar-stacked-num">${fmtNum(val)}</span><div class="table-bar-stacked-track"><div class="table-bar-stacked-fill" style="width:${pct}%;background:${color}"></div></div></div>`;
+}
+
 function renderTable() {
   const query = (document.getElementById('tableSearchInput')?.value || '').toLowerCase();
   let list = ISLANDS.filter(i => {
@@ -1218,7 +1223,7 @@ function renderTable() {
   if (countLabel) countLabel.textContent = `${list.length} islands`;
   const tbody = document.getElementById('islands-table-body');
   if (!tbody) return;
-  tbody.innerHTML = list.map(i => `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="Island" style="font-weight:600">${islandName(i.key)}</td><td data-label="Group"><span class="group-tag">${groupName(i.island_group)}</span></td><td data-label="Rating">${starsHtml(i.total)}</td><td data-label="Beach" class="td-dim">${starsHtml(i.beach)}</td><td data-label="Culture" class="td-dim">${starsHtml(i.hist)}</td><td data-label="Night" class="td-dim">${starsHtml(i.night)}</td><td data-label="Access" class="td-dim">${starsHtml(i.access)}</td><td data-label="Affordability" class="td-dim">${starsHtml(i.afford)}</td><td data-label="Car" class="td-dim td-car" title="${t('dim.car.hint')}">${carNeedCompactHtml(i.car_need)}</td><td data-label="Days" style="font-weight:600;color:var(--aegean)">${i.days ? i.days + ' ' + t('common.days') : '—'}</td><td data-label="Area (km²)">${barHtml(i.area, 3684, 'var(--aegean)')}</td><td data-label="Population">${barHtml(i.pop, 200000, 'var(--olive)')}</td></tr>`).join('');
+  tbody.innerHTML = list.map(i => `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="Island" style="font-weight:600">${islandName(i.key)}</td><td data-label="Group" class="td-main"><span class="group-tag">${groupName(i.island_group)}</span></td><td data-label="Rating" class="td-main">${starsHtml(i.total)}</td><td data-label="Beach" class="td-dim">${starsHtml(i.beach)}</td><td data-label="Culture" class="td-dim">${starsHtml(i.hist)}</td><td data-label="Night" class="td-dim">${starsHtml(i.night)}</td><td data-label="Access" class="td-dim">${starsHtml(i.access)}</td><td data-label="Affordability" class="td-dim">${starsHtml(i.afford)}</td><td data-label="Car" class="td-dim td-car" title="${t('dim.car.hint')}">${carNeedCompactHtml(i.car_need)}</td><td data-label="Days" class="td-main" style="font-weight:600;color:var(--aegean)">${i.days ? i.days + ' ' + t('common.days') : '—'}</td><td data-label="Area (km²)" class="td-main">${barStackedHtml(i.area, 3684, 'var(--aegean)')}</td><td data-label="Population" class="td-main">${barStackedHtml(i.pop, 200000, 'var(--olive)')}</td></tr>`).join('');
   tbody.querySelectorAll('.table-row-clickable').forEach(row => {
     row.addEventListener('click', () => navigateTo('island', row.dataset.key));
   });

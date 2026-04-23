@@ -25,7 +25,7 @@ const UI_TEXT = {
   'nav.hopping': { en: 'Island Hopping', el: 'Νησοπορία' },
   'nav.match': { en: 'Match Me', el: 'Βρες το Νησί σου' },
   'nav.shortlist': { en: '⭐ My Shortlist', el: '⭐ Η Λίστα μου' },
-  'nav.mission': { en: 'Why This Exists', el: 'Γιατί Υπάρχει' },
+  'nav.mission': { en: 'Mission', el: 'Στόχος' },
 
   // Hero / homepage
   'hero.title': { en: 'Find your perfect Greek island', el: 'Βρες το ιδανικό σου ελληνικό νησί' },
@@ -138,7 +138,7 @@ const UI_TEXT = {
   'data.col.area': { en: 'Area (km²) ↕', el: 'Έκταση (km²) ↕' },
   'data.col.pop': { en: 'Population ↕', el: 'Πληθυσμός ↕' },
   'data.col.scores': { en: 'Scores', el: 'Βαθμολογίες' },
-  'data.showdims': { en: '📊 Show scores', el: '📊 Εμφάνιση βαθμολογιών' },
+  'data.showdims': { en: '📊 Detailed scores', el: '📊 Αναλυτικές βαθμολογίες' },
   'data.hidedims': { en: '📊 Hide scores', el: '📊 Απόκρυψη βαθμολογιών' },
   'data.hinttext': { en: 'See the 5 dimensions we rate each island on — beaches, culture, nightlife, access, price.', el: 'Δες τις 5 διαστάσεις που βαθμολογούμε σε κάθε νησί — παραλίες, πολιτισμός, νυχτερινή ζωή, πρόσβαση, τιμή.' },
 
@@ -185,7 +185,7 @@ const UI_TEXT = {
   'shortlist.dim.night': { en: 'Night', el: 'Νυχτερινή' },
 
   // Mission page
-  'mission.title': { en: 'Why this site exists', el: 'Γιατί υπάρχει αυτή η σελίδα' },
+  'mission.title': { en: 'Mission', el: 'Στόχος' },
   'mission.tagline': { en: 'For travellers who want to live the holiday, not plan it.', el: 'Για ταξιδιώτες που θέλουν να ζήσουν τις διακοπές, όχι να τις σχεδιάσουν.' },
   'mission.lead1': { en: "This site is for people who don't want choices. They want the gist, without the fluff.", el: 'Αυτή η σελίδα είναι για ανθρώπους που δεν θέλουν επιλογές. Θέλουν την ουσία, χωρίς περιττά.' },
   'mission.lead2': { en: 'Greece has 83 inhabited islands and countless guides, blogs and listicles trying to cover them all. It\'s overwhelming, and most of it is shallow.', el: 'Η Ελλάδα έχει 83 κατοικημένα νησιά και αμέτρητους οδηγούς, blogs και λίστες που προσπαθούν να τα καλύψουν όλα. Είναι κουραστικό, και οι περισσότεροι είναι επιφανειακοί.' },
