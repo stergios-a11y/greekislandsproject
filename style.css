@@ -637,6 +637,10 @@ header {
   border: 1px solid var(--border); margin-bottom: 16px;
   box-shadow: var(--shadow-sm);
 }
+/* Collapse to nothing when no map content has been rendered into it */
+#island-mini-map:empty {
+  display: none;
+}
 .island-guide-box {
   background: var(--white); border: 1px solid var(--border);
   border-radius: var(--radius-lg); padding: 18px 20px;

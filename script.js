@@ -626,6 +626,22 @@ async function renderIslandPage(key) {
   const island = ISLANDS_DATA[key];
   if (!island) return;
 
+  // Always tear down any stale mini map from a previous island.
+  // The generic-fallback path below conditionally creates a Leaflet instance in
+  // #island-mini-map, but the JSON-rich path doesn't — and it returns early
+  // before the cleanup. Without this, navigating from a JSON-less island to a
+  // JSON-rich one would leave the previous map visible at the top of the page.
+  if (miniMapInstance) {
+    try { miniMapInstance.remove(); } catch(e) {}
+    miniMapInstance = null;
+  }
+  const miniMapElTop = document.getElementById('island-mini-map');
+  if (miniMapElTop) {
+    miniMapElTop.innerHTML = '';
+    miniMapElTop.style.height = '';
+    miniMapElTop.style.display = '';
+  }
+
   document.getElementById('island-name').textContent = islandName(island.key);
   document.getElementById('island-meta-info').textContent = `${island.island_group} · ${fmtNum(island.area)} km² · Pop. ${fmtNum(island.pop)}`;
 
