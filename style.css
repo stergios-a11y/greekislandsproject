@@ -3131,3 +3131,41 @@ html.dark .intl-freq-badge.freq-low {
   background: rgba(255,203,82,0.2);
   color: #FFCB52;
 }
+
+/* ============================================================
+   COMPARE card info panel (car, airport, days below bars)
+============================================================ */
+.cmp-info-panel {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cmp-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--ink-2);
+}
+.cmp-info-label {
+  font-weight: 500;
+  color: var(--ink-3);
+}
+.cmp-info-val {
+  font-weight: 600;
+  color: var(--ink-1);
+}
+.cmp-info-val strong {
+  color: var(--aegean);
+}
+html.dark .cmp-info-panel {
+  border-top-color: rgba(255,255,255,0.12);
+}
+html.dark .cmp-info-row { color: rgba(255,255,255,0.8); }
+html.dark .cmp-info-label { color: rgba(255,255,255,0.6); }
+html.dark .cmp-info-val { color: rgba(255,255,255,0.95); }
+html.dark .cmp-info-val strong { color: #4DBEFF; }

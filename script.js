@@ -101,6 +101,8 @@ let itinRouteLayers = {};
 let itinMarkerLayers = {};
 
 const SCORE_DIMS = ['beach', 'hist', 'night', 'access', 'afford', 'car_need'];
+// For the compare page we exclude car_need from the chart/histogram — it's shown below as a label
+const COMPARE_DIMS = ['beach', 'hist', 'night', 'access', 'afford'];
 // DIM_LABELS is now a function — gets translated labels at call time
 function getDimLabels() {
   return [t('dim.beach'), t('dim.culture'), t('dim.night'), t('dim.access'), t('dim.afford'), t('dim.car')];
@@ -1327,10 +1329,13 @@ function renderRadarChart(iA, iB) {
   radarChartInstance = new Chart(canvas, {
     type: 'radar',
     data: {
-      labels: getDimLabels(),
+      labels: COMPARE_DIMS.map(d => {
+        const labels = { beach: t('dim.beach'), hist: t('dim.culture'), night: t('dim.night'), access: t('dim.access'), afford: t('dim.afford') };
+        return labels[d];
+      }),
       datasets: [
-        { label: islandName(iA.key), data: SCORE_DIMS.map(d => iA[d]), backgroundColor: isDark ? 'rgba(77,190,255,0.15)' : 'rgba(27,79,138,0.12)', borderColor: isDark ? '#4DBEFF' : '#1B4F8A', pointBackgroundColor: isDark ? '#4DBEFF' : '#1B4F8A', pointRadius: 4 },
-        { label: islandName(iB.key), data: SCORE_DIMS.map(d => iB[d]), backgroundColor: isDark ? 'rgba(255,203,82,0.15)' : 'rgba(196,150,42,0.12)', borderColor: isDark ? '#FFCB52' : '#C4962A', pointBackgroundColor: isDark ? '#FFCB52' : '#C4962A', pointRadius: 4 },
+        { label: islandName(iA.key), data: COMPARE_DIMS.map(d => iA[d]), backgroundColor: isDark ? 'rgba(77,190,255,0.15)' : 'rgba(27,79,138,0.12)', borderColor: isDark ? '#4DBEFF' : '#1B4F8A', pointBackgroundColor: isDark ? '#4DBEFF' : '#1B4F8A', pointRadius: 4 },
+        { label: islandName(iB.key), data: COMPARE_DIMS.map(d => iB[d]), backgroundColor: isDark ? 'rgba(255,203,82,0.15)' : 'rgba(196,150,42,0.12)', borderColor: isDark ? '#FFCB52' : '#C4962A', pointBackgroundColor: isDark ? '#FFCB52' : '#C4962A', pointRadius: 4 },
       ],
     },
     options: {
@@ -1370,15 +1375,33 @@ function renderRadarChart(iA, iB) {
 function renderCompareCards(iA, iB) {
   const container = document.getElementById('compare-cards');
   if (!container) return;
+
+  const carWords = ['', t('car.none'), t('car.helpful'), t('car.useful'), t('car.recommended'), t('car.essential')];
+  const dimLabels = { beach: t('dim.beach'), hist: t('dim.culture'), night: t('dim.night'), access: t('dim.access'), afford: t('dim.afford') };
+
   const card = (island, other) => {
-    return `<div class="compare-card"><h2>${islandName(island.key)}</h2><div class="compare-meta">${groupName(island.island_group)} · ${fmtNum(island.area)} km² · Pop. ${fmtNum(island.pop)}</div><div class="compare-total" style="color:${scoreToColor(island.total)}">${fmt(island.total)}<span>/5</span></div><div class="compare-bars">${SCORE_DIMS.map((dim, i) => {
-      if (dim === 'car_need') {
-        return `<div class="cmp-bar-row"><span class="cmp-dim-label">${DIM_LABELS[i]}</span><div class="cmp-bar-track"><div class="cmp-bar-fill cmp-bar-${dim}" style="width:${(island[dim]/5)*100}%"></div></div><span class="cmp-dim-val" title="${t('dim.car.hint')}">${fmt(island[dim])}/5</span></div>`;
-      }
+    const barsHtml = COMPARE_DIMS.map(dim => {
       const wins = island[dim] >= other[dim];
-      return `<div class="cmp-bar-row"><span class="cmp-dim-label">${DIM_LABELS[i]}</span><div class="cmp-bar-track"><div class="cmp-bar-fill cmp-bar-${dim}" style="width:${(island[dim]/5)*100}%"></div></div><span class="cmp-dim-val ${wins ? 'wins' : ''}">${fmt(island[dim])}</span></div>`;
-    }).join('')}</div></div>`;
+      return `<div class="cmp-bar-row"><span class="cmp-dim-label">${dimLabels[dim]}</span><div class="cmp-bar-track"><div class="cmp-bar-fill cmp-bar-${dim}" style="width:${(island[dim]/5)*100}%"></div></div><span class="cmp-dim-val ${wins ? 'wins' : ''}">${fmt(island[dim])}</span></div>`;
+    }).join('');
+
+    const carLabel = carWords[Math.round(island.car_need || 0)] || '—';
+    const airportRow = island.has_airport ? `<div class="cmp-info-row"><span class="cmp-info-label">✈ ${t('tooltip.hasairport')}</span><span class="cmp-info-val">${t('common.yes')}</span></div>` : '';
+    const daysRow = island.days ? `<div class="cmp-info-row"><span class="cmp-info-label">⏱ ${t('tooltip.suggesteddays')}</span><span class="cmp-info-val">${island.days} ${t('common.days')}</span></div>` : '';
+
+    return `<div class="compare-card">
+      <h2>${islandName(island.key)}</h2>
+      <div class="compare-meta">${groupName(island.island_group)} · ${fmtNum(island.area)} km² · ${t('compare.pop')}. ${fmtNum(island.pop)}</div>
+      <div class="compare-total" style="color:${scoreToColor(island.total)}">${fmt(island.total)}<span>/5</span></div>
+      <div class="compare-bars">${barsHtml}</div>
+      <div class="cmp-info-panel">
+        <div class="cmp-info-row"><span class="cmp-info-label">🚗 ${t('dim.car')}</span><span class="cmp-info-val"><strong>${carLabel}</strong></span></div>
+        ${airportRow}
+        ${daysRow}
+      </div>
+    </div>`;
   };
+
   container.innerHTML = card(iA, iB) + card(iB, iA);
 }
 
