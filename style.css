@@ -152,14 +152,15 @@ a:hover { text-decoration: underline; }
 #loading-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; display: none; }
 .loading-inner { display: flex; flex-direction: column; align-items: center; gap: 20px; }
 
-/* BIGGER LOGO in loading */
+/* Loading splash logo: turquoise SVG mark on white circle, on turquoise overlay */
 #loading-logo {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  border-radius: 50%;
+  width: 96px;
+  height: 96px;
   background: var(--white);
-  padding: 8px;
+  border-radius: 50%;
+  padding: 0;
+  display: block;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
 }
 .loading-spinner {
   width: 36px; height: 36px;
@@ -193,15 +194,12 @@ header {
   cursor: pointer; text-decoration: none; flex-shrink: 0;
 }
 #site-logo {
-  width: 48px;          /* was 36px — bigger logo (#1) */
+  width: 48px;
   height: 48px;
-  object-fit: contain;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.15);
-  padding: 4px;
-  transition: background 0.2s;
+  display: block;
+  transition: opacity 0.2s;
 }
-.logo-wrapper:hover #site-logo { background: rgba(255,255,255,0.25); }
+.logo-wrapper:hover #site-logo { opacity: 0.85; }
 #brand-text {
   font-family: var(--serif);
   font-size: 19px;
@@ -685,18 +683,14 @@ header {
   pointer-events: none; opacity: 0.06;
 }
 .why-hero-logo-wrap {
-  width: 96px;        /* big logo on Why page */
-  height: 96px;
+  width: 110px;
+  height: 110px;
   margin: 0 auto 24px;
   position: relative;
 }
 .why-hero-logo-wrap img {
-  width: 96px;
-  height: 96px;
-  object-fit: contain;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.15);
-  padding: 8px;
+  width: 110px;
+  height: 110px;
   display: block;
 }
 .why-hero h1 {
