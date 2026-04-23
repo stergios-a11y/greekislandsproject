@@ -507,7 +507,7 @@ function setupGroupFilter() {
   groups.forEach(group => {
     const opt = document.createElement('option');
     opt.value = group;
-    opt.textContent = group;
+    opt.textContent = groupName(group);
     sel.appendChild(opt);
   });
   sel.addEventListener('change', () => {
@@ -1409,161 +1409,203 @@ function renderFerryMap() {
 const ITINERARIES = [
   {
     title: 'The Classic Cyclades',
+    title_el: 'Οι Κλασικές Κυκλάδες',
     duration: '10 days',
+    duration_el: '10 μέρες',
     vibe: 'First-time visitor',
+    vibe_el: 'Για πρώτη φορά στην Ελλάδα',
     description: 'The quintessential Greek island experience — Athens' + "'" + ' nightlife, Mykonos' + "'" + ' glamour, Santorini' + "'" + 's sunsets and Naxos' + "'" + ' beaches. Hits the must-see islands.',
+    description_el: 'Η απόλυτη εμπειρία ελληνικού νησιού — νυχτερινή ζωή Αθήνας, λάμψη Μυκόνου, ηλιοβασιλέματα Σαντορίνης και παραλίες Νάξου. Τα νησιά-σταθμοί.',
     stops: ['piraeus', 'mykonos', 'santorini', 'naxos', 'piraeus'],
     breakdown: [
-      { from: 'Athens', nights: 2, via: 'Fly in' },
-      { from: 'Mykonos', nights: 3, via: 'Fast ferry from Piraeus (~3 hrs)' },
-      { from: 'Santorini', nights: 3, via: 'Fast ferry (2-3 hrs)' },
-      { from: 'Naxos', nights: 2, via: 'Fast ferry (~1.5 hrs)' },
+      { from: 'Athens', from_el: 'Αθήνα', nights: 2, via: 'Fly in', via_el: 'Πτήση εισόδου' },
+      { from: 'Mykonos', from_el: 'Μύκονος', nights: 3, via: 'Fast ferry from Piraeus (~3 hrs)', via_el: 'Ταχύπλοο από Πειραιά (~3 ώρες)' },
+      { from: 'Santorini', from_el: 'Σαντορίνη', nights: 3, via: 'Fast ferry (2-3 hrs)', via_el: 'Ταχύπλοο (2-3 ώρες)' },
+      { from: 'Naxos', from_el: 'Νάξος', nights: 2, via: 'Fast ferry (~1.5 hrs)', via_el: 'Ταχύπλοο (~1,5 ώρα)' },
     ]
   },
   {
     title: 'Quiet Cyclades',
+    title_el: 'Ήσυχες Κυκλάδες',
     duration: '10 days',
+    duration_el: '10 μέρες',
     vibe: 'Beach & culture, away from crowds',
+    vibe_el: 'Παραλία & πολιτισμός, μακριά από πλήθη',
     description: 'The lesser-known Cyclades — Milos for its moon-landscape beaches, Sifnos for food, Folegandros for cliff views. All the water clarity of Santorini, none of the crowds.',
+    description_el: 'Οι λιγότερο γνωστές Κυκλάδες — Μήλος για σεληνιακές παραλίες, Σίφνος για φαγητό, Φολέγανδρος για βραχώδεις θέες. Όλη η διαύγεια της Σαντορίνης, χωρίς το πλήθος.',
     stops: ['piraeus', 'milos', 'sifnos', 'folegandros', 'piraeus'],
     breakdown: [
-      { from: 'Athens', nights: 1, via: 'Fly in' },
-      { from: 'Milos', nights: 4, via: 'Ferry from Piraeus (~3-5 hrs)' },
-      { from: 'Sifnos', nights: 3, via: 'Ferry (~1 hr)' },
-      { from: 'Folegandros', nights: 2, via: 'Ferry (~1.5 hrs)' },
+      { from: 'Athens', from_el: 'Αθήνα', nights: 1, via: 'Fly in', via_el: 'Πτήση εισόδου' },
+      { from: 'Milos', from_el: 'Μήλος', nights: 4, via: 'Ferry from Piraeus (~3-5 hrs)', via_el: 'Πλοίο από Πειραιά (~3-5 ώρες)' },
+      { from: 'Sifnos', from_el: 'Σίφνος', nights: 3, via: 'Ferry (~1 hr)', via_el: 'Πλοίο (~1 ώρα)' },
+      { from: 'Folegandros', from_el: 'Φολέγανδρος', nights: 2, via: 'Ferry (~1.5 hrs)', via_el: 'Πλοίο (~1,5 ώρα)' },
     ]
   },
   {
     title: 'Athens + Saronic Week',
+    title_el: 'Αθήνα + Εβδομάδα στον Σαρωνικό',
     duration: '7 days',
+    duration_el: '7 μέρες',
     vibe: 'Easy, no long ferries',
+    vibe_el: 'Εύκολο, χωρίς μεγάλες διαδρομές',
     description: 'Use Athens as a base and hop to the closest islands — Hydra, Poros, Aegina. No long sailings, back to the city most evenings if you want.',
+    description_el: 'Χρησιμοποίησε την Αθήνα ως βάση και πήγαινε στα πιο κοντινά νησιά — Ύδρα, Πόρο, Αίγινα. Χωρίς μακρινές διαδρομές, επιστροφή στην πόλη αν θέλεις.',
     stops: ['piraeus', 'aegina', 'poros', 'hydra', 'piraeus'],
     breakdown: [
-      { from: 'Athens', nights: 3, via: 'Fly in · Acropolis, museums' },
-      { from: 'Aegina', nights: 1, via: 'Hydrofoil (40 min)' },
-      { from: 'Poros', nights: 1, via: 'Hydrofoil (~1 hr)' },
-      { from: 'Hydra', nights: 2, via: 'Hydrofoil (~30 min from Poros)' },
+      { from: 'Athens', from_el: 'Αθήνα', nights: 3, via: 'Fly in · Acropolis, museums', via_el: 'Πτήση εισόδου · Ακρόπολη, μουσεία' },
+      { from: 'Aegina', from_el: 'Αίγινα', nights: 1, via: 'Hydrofoil (40 min)', via_el: 'Δελφίνι (40 λεπτά)' },
+      { from: 'Poros', from_el: 'Πόρος', nights: 1, via: 'Hydrofoil (~1 hr)', via_el: 'Δελφίνι (~1 ώρα)' },
+      { from: 'Hydra', from_el: 'Ύδρα', nights: 2, via: 'Hydrofoil (~30 min from Poros)', via_el: 'Δελφίνι (~30 λεπτά από Πόρο)' },
     ]
   },
   {
     title: 'Dodecanese Highlights',
+    title_el: 'Κορυφαίες Στιγμές Δωδεκανήσων',
     duration: '10 days',
+    duration_el: '10 μέρες',
     vibe: 'History + beaches',
+    vibe_el: 'Ιστορία + παραλίες',
     description: 'Rhodes for medieval Europe, Symi for the most beautiful harbour in Greece, Kos for long sandy beaches and Hippocrates, Patmos for St John' + "'" + 's cave.',
+    description_el: 'Ρόδος για μεσαιωνική Ευρώπη, Σύμη για το ομορφότερο λιμάνι της Ελλάδας, Κως για μεγάλες αμμουδιές και Ιπποκράτη, Πάτμος για τη σπηλιά του Ιωάννη.',
     stops: ['rhodes', 'symi', 'kos', 'patmos'],
     breakdown: [
-      { from: 'Rhodes', nights: 3, via: 'Fly direct to Rhodes' },
-      { from: 'Symi', nights: 2, via: 'Day ferry from Rhodes (~1 hr)' },
-      { from: 'Kos', nights: 3, via: 'Ferry (2-3 hrs)' },
-      { from: 'Patmos', nights: 2, via: 'Ferry (~3 hrs)' },
+      { from: 'Rhodes', from_el: 'Ρόδος', nights: 3, via: 'Fly direct to Rhodes', via_el: 'Απευθείας πτήση στη Ρόδο' },
+      { from: 'Symi', from_el: 'Σύμη', nights: 2, via: 'Day ferry from Rhodes (~1 hr)', via_el: 'Πλοίο ημέρας από Ρόδο (~1 ώρα)' },
+      { from: 'Kos', from_el: 'Κως', nights: 3, via: 'Ferry (2-3 hrs)', via_el: 'Πλοίο (2-3 ώρες)' },
+      { from: 'Patmos', from_el: 'Πάτμος', nights: 2, via: 'Ferry (~3 hrs)', via_el: 'Πλοίο (~3 ώρες)' },
     ]
   },
   {
     title: 'The Small Cyclades Escape',
+    title_el: 'Απόδραση στις Μικρές Κυκλάδες',
     duration: '9 days',
+    duration_el: '9 μέρες',
     vibe: 'Off-grid, simple, beachy',
+    vibe_el: 'Εκτός δικτύου, απλό, παραλιακό',
     description: 'The tiny islands the Express Skopelitis connects — places where life hasn' + "'" + 't changed much in decades. Perfect beaches, no resorts, basic tavernas, total peace.',
+    description_el: 'Τα μικρά νησιά που συνδέει ο Εξπρές Σκοπελίτης — μέρη όπου η ζωή δεν έχει αλλάξει εδώ και δεκαετίες. Υπέροχες παραλίες, ούτε ένα ρεσόρτ, ταβερνάκια, απόλυτη ηρεμία.',
     stops: ['naxos', 'koufonisia', 'amorgos'],
     breakdown: [
-      { from: 'Naxos', nights: 3, via: 'Fast ferry from Piraeus (3.5 hrs)' },
-      { from: 'Koufonisia', nights: 2, via: 'Skopelitis (~2.5 hrs via Iraklia, Schinoussa)' },
-      { from: 'Amorgos', nights: 3, via: 'Skopelitis (~2 hrs via Donousa)' },
-      { from: 'Return', nights: 1, via: 'Blue Star back to Piraeus or via Paros' },
+      { from: 'Naxos', from_el: 'Νάξος', nights: 3, via: 'Fast ferry from Piraeus (3.5 hrs)', via_el: 'Ταχύπλοο από Πειραιά (3,5 ώρες)' },
+      { from: 'Koufonisia', from_el: 'Κουφονήσια', nights: 2, via: 'Skopelitis (~2.5 hrs via Iraklia, Schinoussa)', via_el: 'Σκοπελίτης (~2,5 ώρες μέσω Ηρακλειάς, Σχοινούσας)' },
+      { from: 'Amorgos', from_el: 'Αμοργός', nights: 3, via: 'Skopelitis (~2 hrs via Donousa)', via_el: 'Σκοπελίτης (~2 ώρες μέσω Δονούσας)' },
+      { from: 'Return', from_el: 'Επιστροφή', nights: 1, via: 'Blue Star back to Piraeus or via Paros', via_el: 'Blue Star επιστροφή στον Πειραιά ή μέσω Πάρου' },
     ]
   },
   {
     title: 'Classic Cyclades Triangle',
+    title_el: 'Κλασικό Τρίγωνο Κυκλάδων',
     duration: '11 days',
+    duration_el: '11 μέρες',
     vibe: 'Slow pace, Cycladic architecture',
+    vibe_el: 'Αργός ρυθμός, κυκλαδίτικη αρχιτεκτονική',
     description: 'The original Cyclades connection — Syros, Tinos and Mykonos. Ermoupolis on Syros is the most beautiful town in the Aegean. Tinos has 1000 chapels. Then Mykonos for the full contrast.',
+    description_el: 'Η αρχική σύνδεση των Κυκλάδων — Σύρος, Τήνος και Μύκονος. Η Ερμούπολη της Σύρου είναι η πιο όμορφη πόλη του Αιγαίου. Η Τήνος έχει 1000 εκκλησάκια. Μετά η Μύκονος για την πλήρη αντίθεση.',
     stops: ['piraeus', 'syros', 'tinos', 'mykonos', 'piraeus'],
     breakdown: [
-      { from: 'Athens', nights: 1, via: 'Fly in' },
-      { from: 'Syros', nights: 3, via: 'Ferry (~2-4 hrs)' },
-      { from: 'Tinos', nights: 3, via: 'Ferry (~30 min)' },
-      { from: 'Mykonos', nights: 3, via: 'Ferry (~20-30 min)' },
-      { from: 'Return', nights: 1, via: 'Fast ferry to Piraeus (~3 hrs)' },
+      { from: 'Athens', from_el: 'Αθήνα', nights: 1, via: 'Fly in', via_el: 'Πτήση εισόδου' },
+      { from: 'Syros', from_el: 'Σύρος', nights: 3, via: 'Ferry (~2-4 hrs)', via_el: 'Πλοίο (~2-4 ώρες)' },
+      { from: 'Tinos', from_el: 'Τήνος', nights: 3, via: 'Ferry (~30 min)', via_el: 'Πλοίο (~30 λεπτά)' },
+      { from: 'Mykonos', from_el: 'Μύκονος', nights: 3, via: 'Ferry (~20-30 min)', via_el: 'Πλοίο (~20-30 λεπτά)' },
+      { from: 'Return', from_el: 'Επιστροφή', nights: 1, via: 'Fast ferry to Piraeus (~3 hrs)', via_el: 'Ταχύπλοο στον Πειραιά (~3 ώρες)' },
     ]
   },
   {
     title: 'Santorini + Milos',
+    title_el: 'Σαντορίνη + Μήλος',
     duration: '8 days',
+    duration_el: '8 μέρες',
     vibe: 'Two extraordinary islands',
+    vibe_el: 'Δύο εξαιρετικά νησιά',
     description: 'The two most photogenic islands in Greece paired together — Santorini for the caldera, Milos for the lunar beaches. Very different, both unmissable.',
+    description_el: 'Τα δύο πιο φωτογενή νησιά της Ελλάδας μαζί — Σαντορίνη για την καλντέρα, Μήλος για τις σεληνιακές παραλίες. Πολύ διαφορετικά, και τα δύο αναντικατάστατα.',
     stops: ['santorini', 'milos'],
     breakdown: [
-      { from: 'Athens', nights: 1, via: 'Fly in' },
-      { from: 'Santorini', nights: 4, via: 'Fly direct or fast ferry (~5 hrs)' },
-      { from: 'Milos', nights: 3, via: 'Daily summer ferry (~3 hrs)' },
+      { from: 'Athens', from_el: 'Αθήνα', nights: 1, via: 'Fly in', via_el: 'Πτήση εισόδου' },
+      { from: 'Santorini', from_el: 'Σαντορίνη', nights: 4, via: 'Fly direct or fast ferry (~5 hrs)', via_el: 'Απευθείας πτήση ή ταχύπλοο (~5 ώρες)' },
+      { from: 'Milos', from_el: 'Μήλος', nights: 3, via: 'Daily summer ferry (~3 hrs)', via_el: 'Καθημερινό θερινό πλοίο (~3 ώρες)' },
     ]
   },
   {
     title: 'Rhodes + Symi',
+    title_el: 'Ρόδος + Σύμη',
     duration: '7 days',
+    duration_el: '7 μέρες',
     vibe: 'Easy pair, one flight',
+    vibe_el: 'Εύκολο ζεύγος, μια πτήση',
     description: 'The simplest Dodecanese combination — fly into Rhodes, three nights in the old town, then a quick ferry to Symi for three nights in the painted harbour. One flight, one ferry.',
+    description_el: 'Ο πιο απλός συνδυασμός Δωδεκανήσων — πτήση στη Ρόδο, τρία βράδια στην παλιά πόλη, μετά γρήγορο πλοίο στη Σύμη για τρία βράδια στο πολύχρωμο λιμάνι. Μία πτήση, ένα πλοίο.',
     stops: ['rhodes', 'symi'],
     breakdown: [
-      { from: 'Rhodes', nights: 4, via: 'Fly direct · Old Town, Lindos, Kallithea' },
-      { from: 'Symi', nights: 3, via: 'Daily ferry from Rhodes port (~1 hr)' },
+      { from: 'Rhodes', from_el: 'Ρόδος', nights: 4, via: 'Fly direct · Old Town, Lindos, Kallithea', via_el: 'Απευθείας πτήση · Παλιά Πόλη, Λίνδος, Καλλιθέα' },
+      { from: 'Symi', from_el: 'Σύμη', nights: 3, via: 'Daily ferry from Rhodes port (~1 hr)', via_el: 'Καθημερινό πλοίο από λιμάνι Ρόδου (~1 ώρα)' },
     ]
   },
   {
     title: 'The Other Aegean (Sporades)',
+    title_el: 'Το Άλλο Αιγαίο (Σποράδες)',
     duration: '9 days',
+    duration_el: '9 μέρες',
     vibe: 'Pine forests, green coastline',
+    vibe_el: 'Πευκοδάση, καταπράσινες ακτές',
     description: 'The Sporades — an entirely different kind of Aegean island. Pine forest running to the sea, no whitewashed cubes, lush green hills. Alonnisos is the heart of the National Marine Park, where monk seals live. Very different from anything in the Cyclades.',
+    description_el: 'Οι Σποράδες — εντελώς διαφορετικό είδος νησιού Αιγαίου. Πευκοδάση που κατεβαίνουν στη θάλασσα, καθόλου κυβάκια λευκά, κατάπρασινοι λόφοι. Η Αλόννησος είναι το κέντρο του Θαλάσσιου Πάρκου, όπου ζουν οι φώκιες μοναχούς. Πολύ διαφορετικό από οτιδήποτε στις Κυκλάδες.',
     stops: ['skiathos', 'skopelos', 'alonnisos'],
     breakdown: [
-      { from: 'Skiathos', nights: 3, via: 'Fly direct · sandy beaches, lively town' },
-      { from: 'Skopelos', nights: 3, via: 'Frequent ferries (~1 hr) · Mamma Mia filming location' },
-      { from: 'Alonnisos', nights: 3, via: 'Ferry from Skopelos (~30 min) · marine park, snorkelling' },
+      { from: 'Skiathos', from_el: 'Σκιάθος', nights: 3, via: 'Fly direct · sandy beaches, lively town', via_el: 'Απευθείας πτήση · αμμουδιές, ζωντανή πόλη' },
+      { from: 'Skopelos', from_el: 'Σκόπελος', nights: 3, via: 'Frequent ferries (~1 hr) · Mamma Mia filming location', via_el: 'Συχνά πλοία (~1 ώρα) · τοποθεσία γυρισμάτων Mamma Mia' },
+      { from: 'Alonnisos', from_el: 'Αλόννησος', nights: 3, via: 'Ferry from Skopelos (~30 min) · marine park, snorkelling', via_el: 'Πλοίο από Σκόπελο (~30 λεπτά) · θαλάσσιο πάρκο, κατάδυση' },
     ]
   },
   {
     title: 'Ultimate Off the Beaten Path',
+    title_el: 'Η Απόλυτη Εκτός Πεπατημένης',
     duration: '7 days',
+    duration_el: '7 μέρες',
     vibe: 'True island isolation',
+    vibe_el: 'Πραγματική νησιωτική απομόνωση',
     description: 'For travellers who have already done Santorini and Mykonos. Lemnos is Greece' + "'" + 's underrated northern island — long empty beaches, wine traditions, military history. Agios Efstratios has 270 residents, no cars, black volcanic sand beaches and the oak forest of the Aegean. No crowds because no one comes.',
+    description_el: 'Για ταξιδιώτες που έχουν ήδη επισκεφτεί Σαντορίνη και Μύκονο. Η Λήμνος είναι το υποτιμημένο βόρειο νησί της Ελλάδας — μακριές άδειες παραλίες, παραδόσεις κρασιού, στρατιωτική ιστορία. Ο Άγιος Ευστράτιος έχει 270 κατοίκους, κανένα αυτοκίνητο, μαύρες ηφαιστειακές παραλίες και το δάσος βελανιδιάς του Αιγαίου. Ούτε ένα πλήθος γιατί δεν έρχεται κανείς.',
     stops: ['lemnos', 'agios-efstratios'],
     breakdown: [
-      { from: 'Athens', nights: 1, via: 'Fly in' },
-      { from: 'Lemnos', nights: 4, via: 'Fly direct (~1 hr) · beaches, wine villages' },
-      { from: 'Agios Efstratios', nights: 2, via: 'Ferry from Lemnos (~2-3 hrs) · true isolation' },
+      { from: 'Athens', from_el: 'Αθήνα', nights: 1, via: 'Fly in', via_el: 'Πτήση εισόδου' },
+      { from: 'Lemnos', from_el: 'Λήμνος', nights: 4, via: 'Fly direct (~1 hr) · beaches, wine villages', via_el: 'Απευθείας πτήση (~1 ώρα) · παραλίες, χωριά κρασιού' },
+      { from: 'Agios Efstratios', from_el: 'Άγιος Ευστράτιος', nights: 2, via: 'Ferry from Lemnos (~2-3 hrs) · true isolation', via_el: 'Πλοίο από Λήμνο (~2-3 ώρες) · πραγματική απομόνωση' },
     ]
   },
 ];
 
 function renderItineraries() {
   const container = document.getElementById('hopping-list');
-  if (!container || container.dataset.rendered) return;
-  container.dataset.rendered = '1';
+  if (!container) return;
   
   container.innerHTML = ITINERARIES.map((it, idx) => {
-    const stopsLine = it.breakdown.map(b => 
-      `<div class="itin-leg"><div class="itin-leg-place"><strong>${b.from}</strong> <span class="itin-nights">${b.nights} night${b.nights === 1 ? '' : 's'}</span></div><div class="itin-leg-via">${b.via}</div></div>`
-    ).join('');
-    
+    const stopsLine = it.breakdown.map(b => {
+      const fromText = pickLang(b, 'from');
+      const viaText = pickLang(b, 'via');
+      const nightsLabel = b.nights === 1 ? t('hopping.night') : t('hopping.nights');
+      return `<div class="itin-leg"><div class="itin-leg-place"><strong>${fromText}</strong> <span class="itin-nights">${b.nights} ${nightsLabel}</span></div><div class="itin-leg-via">${viaText}</div></div>`;
+    }).join('');
+
     const islandKeys = it.stops.filter(s => s !== 'piraeus' && ISLANDS_DATA[s]);
-    const islandLinks = islandKeys.map(k => 
-      `<a class="itin-island-link" href="#island/${k}" onclick="event.preventDefault();navigateTo('island','${k}')">${ISLANDS_DATA[k].name}</a>`
+    const islandLinks = islandKeys.map(k =>
+      `<a class="itin-island-link" href="#island/${k}" onclick="event.preventDefault();navigateTo('island','${k}')">${islandName(k)}</a>`
     ).join(' · ');
-    
+
     return `
       <div class="itin-card">
         <div class="itin-card-header">
           <div>
-            <h3 class="itin-title">${it.title}</h3>
+            <h3 class="itin-title">${pickLang(it, 'title')}</h3>
             <div class="itin-meta">
-              <span class="itin-duration">⏱ ${it.duration}</span>
-              <span class="itin-vibe">${it.vibe}</span>
+              <span class="itin-duration">⏱ ${pickLang(it, 'duration')}</span>
+              <span class="itin-vibe">${pickLang(it, 'vibe')}</span>
             </div>
           </div>
         </div>
-        <p class="itin-desc">${it.description}</p>
+        <p class="itin-desc">${pickLang(it, 'description')}</p>
         <div class="itin-legs">${stopsLine}</div>
-        ${islandLinks ? `<div class="itin-links">Visit: ${islandLinks}</div>` : ''}
+        ${islandLinks ? `<div class="itin-links">${t('hopping.visit')} ${islandLinks}</div>` : ''}
       </div>
     `;
   }).join('');

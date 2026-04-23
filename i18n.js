@@ -36,15 +36,15 @@ const UI_TEXT = {
   'hero.stat.minutes': { en: 'Minutes', el: 'Λεπτά' },
 
   // Search/filter
-  'search.placeholder': { en: 'Search islands...', el: 'Αναζήτηση νησιών...' },
+  'search.placeholder': { en: '🔍  Search islands…', el: '🔍  Αναζήτηση νησιών…' },
   'filter.allgroups': { en: 'All groups', el: 'Όλες οι ομάδες' },
   'filter.rankby': { en: 'Rank map by', el: 'Ταξινόμηση κατά' },
-  'filter.overall': { en: 'Overall', el: 'Συνολικά' },
-  'filter.beach': { en: 'Beaches', el: 'Παραλίες' },
-  'filter.culture': { en: 'Culture', el: 'Πολιτισμός' },
-  'filter.night': { en: 'Nightlife', el: 'Νυχτερινή ζωή' },
-  'filter.access': { en: 'Access', el: 'Πρόσβαση' },
-  'filter.afford': { en: 'Affordability', el: 'Προσιτή τιμή' },
+  'filter.overall': { en: '🏠 Overall', el: '🏠 Συνολικά' },
+  'filter.beach': { en: '🏖️ Beaches', el: '🏖️ Παραλίες' },
+  'filter.culture': { en: '🏛️ Culture', el: '🏛️ Πολιτισμός' },
+  'filter.night': { en: '🍷 Nightlife', el: '🍷 Νυχτερινή ζωή' },
+  'filter.access': { en: '🚢 Access', el: '🚢 Πρόσβαση' },
+  'filter.afford': { en: '💸 Price', el: '💸 Τιμή' },
 
   // Detail page buttons
   'detail.back': { en: '← Back to Map', el: '← Πίσω στον Χάρτη' },
@@ -117,6 +117,9 @@ const UI_TEXT = {
   'hopping.legend.low': { en: 'About 1/day (Skopelitis route, 6/week)', el: 'Περίπου 1/ημέρα (Σκοπελίτης, 6 φορές/εβδομάδα)' },
   'hopping.itineraries': { en: 'Suggested Itineraries', el: 'Προτεινόμενες Διαδρομές' },
   'hopping.itin.intro': { en: 'Eight curated multi-island routes — from the classic Cyclades circuit to the quiet Small Cyclades escape. Each uses real ferry connections and shows approximate nights per stop.', el: 'Δέκα επιλεγμένες διαδρομές πολλαπλών νησιών — από την κλασική διαδρομή των Κυκλάδων μέχρι την ήσυχη απόδραση στις Μικρές Κυκλάδες. Όλες χρησιμοποιούν πραγματικές συνδέσεις πλοίων.' },
+  'hopping.night': { en: 'night', el: 'βράδυ' },
+  'hopping.nights': { en: 'nights', el: 'βράδια' },
+  'hopping.visit': { en: 'Visit:', el: 'Επισκέψου:' },
 
   // Match Me / Quiz
   'match.title': { en: 'Match Me', el: 'Βρες το Νησί σου' },
