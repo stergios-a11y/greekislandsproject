@@ -116,6 +116,26 @@ def esc(s):
     """Escape HTML in a string for safe insertion."""
     return html.escape(str(s)) if s is not None else ''
 
+def safe_html(s):
+    """Allow simple <a href="...">, <strong>, and <em> tags in descriptions,
+    escape everything else. This lets island authors include real hyperlinks
+    and emphasis inline without exposing them to XSS."""
+    if s is None:
+        return ''
+    escaped = html.escape(str(s))
+    # Restore <a href="..."> (href is the only allowed attribute)
+    escaped = re.sub(
+        r'&lt;a\s+href=(?:&quot;|")([^&"]+)(?:&quot;|")\s*(?:target=(?:&quot;|")_blank(?:&quot;|")\s*)?(?:rel=(?:&quot;|")[^&"]*(?:&quot;|")\s*)?&gt;',
+        r'<a href="\1" target="_blank" rel="noopener noreferrer">',
+        escaped
+    )
+    escaped = escaped.replace('&lt;/a&gt;', '</a>')
+    # Restore <strong> and <em> as-is
+    for tag in ('strong', 'em', 'b', 'i'):
+        escaped = escaped.replace(f'&lt;{tag}&gt;', f'<{tag}>')
+        escaped = escaped.replace(f'&lt;/{tag}&gt;', f'</{tag}>')
+    return escaped
+
 def localized_name(key, data, meta, lang='en'):
     """Return the display name for an island in the target language."""
     if lang == 'el' and key in GREEK_NAMES:
@@ -277,7 +297,7 @@ def render_body(key, data, meta, lang='en'):
             stop_items = []
             for s in stops:
                 sname = esc(pick(s, 'name', lang))
-                sdesc = esc(pick(s, 'desc', lang))
+                sdesc = safe_html(pick(s, 'desc', lang))
                 stime = esc(s.get('time', ''))
                 stop_items.append(f'<li><strong>{stime} · {sname}</strong><br>{sdesc}</li>')
 
@@ -302,7 +322,7 @@ def render_body(key, data, meta, lang='en'):
         beach_blocks = []
         for b in beaches:
             bname = esc(pick(b, 'name', lang))
-            bdesc = esc(pick(b, 'desc', lang))
+            bdesc = safe_html(pick(b, 'desc', lang))
             btype = esc(pick(b, 'type', lang))
             blen = esc(pick(b, 'length', lang))
             bdepth = esc(pick(b, 'depth', lang))
@@ -349,7 +369,7 @@ def render_body(key, data, meta, lang='en'):
     {rating_text}
   </header>
   <section class="seo-intro">
-    <p>{esc(intro)}</p>
+    <p>{safe_html(intro)}</p>
   </section>
   {itinerary_html}
   {beaches_html}
