@@ -30,7 +30,7 @@ const ISLANDS_DATA = {
   "lesvos":       { name:"Lesvos",           lat:39.21,  lng:26.21,  beach:4.0, hist:4.7, night:3.0, access:3.5, afford:4.6, car_need:5.0, has_airport:true, total:4.0, area:1633,  pop:83000,   days:6, island_group:"NE Aegean" },
   "chios":        { name:"Chios",            lat:38.368, lng:26.135, beach:3.2, hist:4.7, night:2.5, access:3.2, afford:4.5, car_need:4.0, has_airport:true, total:3.6, area:842,   pop:51000,   days:4, island_group:"NE Aegean" },
   "kos":          { name:"Kos",              lat:36.891, lng:27.287, beach:4.0, hist:4.2, night:4.0, access:4.6, afford:3.8, car_need:4.0, has_airport:true, total:3.7, area:287,   pop:33300,   days:4, island_group:"Dodecanese" },
-  "samos":        { name:"Samos",            lat:37.757, lng:26.702, beach:3.5, hist:4.6, night:3.0, access:3.5, afford:4.2, car_need:4.0, has_airport:true, total:3.3, area:477,   pop:32900,   days:4, island_group:"NE Aegean" },
+  "samos":        { name:"Samos",            lat:37.754, lng:26.977, beach:3.5, hist:4.6, night:3.0, access:3.5, afford:4.2, car_need:4.0, has_airport:true, total:3.3, area:477,   pop:32900,   days:4, island_group:"NE Aegean" },
 
   "syros":        { name:"Syros",            lat:37.444, lng:24.942, beach:2.8, hist:4.3, night:3.5, access:4.5, afford:3.5, car_need:3.0, has_airport:true, total:3.8, area:84,    pop:21500,   days:2, island_group:"Cyclades" },
   "lemnos":       { name:"Lemnos",           lat:39.916, lng:25.166, beach:4.3, hist:3.5, night:2.2, access:3.0, afford:4.4, car_need:4.0, has_airport:true, total:3.5, area:476,   pop:16900,   days:3, island_group:"NE Aegean" },
@@ -114,10 +114,10 @@ const SCORE_COLORS = {
 };
 
 function scoreToColor(s) {
-  if (s >= 4.5) return '#2E7D32';
-  if (s >= 3.8) return '#1B4F8A';
-  if (s >= 3.0) return '#C4962A';
-  return '#C0522A';
+  if (s >= 4.5) return '#1B5E20'; // deep green (best)
+  if (s >= 3.8) return '#4CAF50'; // green
+  if (s >= 3.0) return '#C4962A'; // gold/yellow
+  return '#C0522A';               // red/terracotta
 }
 function haversineApprox(a, b) {
   const dlat = a.lat - b.lat, dlng = a.lng - b.lng;
@@ -1949,16 +1949,25 @@ function renderInternational() {
   renderInternationalList();
 }
 
+let internationalMapInstance = null;
+
 function renderInternationalMap() {
   const container = document.getElementById('international-map');
   if (!container) return;
-  container.innerHTML = ''; // reset in case of re-render
+
+  // Clean up any prior Leaflet instance before re-creating
+  if (internationalMapInstance) {
+    try { internationalMapInstance.remove(); } catch(e) {}
+    internationalMapInstance = null;
+  }
+  container.innerHTML = '';
 
   const map = L.map(container, {
     zoomControl: true,
     attributionControl: true,
     minZoom: 6, maxZoom: 10,
   }).setView([38.5, 26.0], 6);
+  internationalMapInstance = map;
 
   if (typeof addThemeAwareTiles === 'function') {
     addThemeAwareTiles(map, { attribution: '© OpenStreetMap · CARTO' });
