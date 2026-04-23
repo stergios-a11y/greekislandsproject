@@ -35,7 +35,7 @@
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="apple-touch-icon" href="logo.png">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 
@@ -91,18 +91,24 @@
   </div>
 
   <main id="view-home" class="view-section">
-    <div class="hero-banner" id="hero-banner">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1 class="hero-title">Find your perfect Greek island</h1>
-          <p class="hero-sub">83 islands scored across beaches, culture, nightlife, access and price. Click any circle to explore.</p>
-        </div>
+    <button class="help-btn" id="help-btn" onclick="openHelp()" aria-label="How to use" title="How to use this site"><span class="help-btn-icon">❓</span><span class="help-btn-text" data-i18n="help.btn">How to</span></button>
+    <div class="help-modal" id="help-modal" style="display:none;">
+      <div class="help-modal-content">
+        <button class="help-modal-close" onclick="closeHelp()" aria-label="Close">×</button>
+        <h2 class="hero-title" data-i18n="hero.title">Find your perfect Greek island</h2>
+        <p class="hero-sub" data-i18n="hero.sub">83 islands scored across beaches, culture, nightlife, access and price. Click any circle to explore.</p>
         <div class="hero-stats">
-          <div class="hero-stat"><span class="hero-stat-num">83</span><span class="hero-stat-lbl">Islands</span></div>
-          <div class="hero-stat"><span class="hero-stat-num">5</span><span class="hero-stat-lbl">Score dimensions</span></div>
-          <div class="hero-stat"><span class="hero-stat-num">2</span><span class="hero-stat-lbl">Full guides</span></div>
+          <div class="hero-stat"><span class="hero-stat-num">83</span><span class="hero-stat-lbl" data-i18n="hero.stat.islands">Islands</span></div>
+          <div class="hero-stat"><span class="hero-stat-num">6</span><span class="hero-stat-lbl" data-i18n="hero.stat.dimensions">Score dimensions</span></div>
+          <div class="hero-stat"><span class="hero-stat-num">43</span><span class="hero-stat-lbl" data-i18n="hero.stat.guides">Full guides</span></div>
         </div>
-        <button class="hero-dismiss" onclick="dismissHero()" aria-label="Dismiss">Got it ✕</button>
+        <div class="help-steps">
+          <div class="help-step"><span class="help-step-num">1</span><div class="help-step-text"><strong data-i18n="help.step1.title">Explore the map</strong><span data-i18n="help.step1.desc">Click any circle to open the island's full guide. Bigger circles = higher overall rating.</span></div></div>
+          <div class="help-step"><span class="help-step-num">2</span><div class="help-step-text"><strong data-i18n="help.step2.title">Filter and rank</strong><span data-i18n="help.step2.desc">Use the dropdowns to filter by island group or rank by what matters to you — beaches, culture, nightlife.</span></div></div>
+          <div class="help-step"><span class="help-step-num">3</span><div class="help-step-text"><strong data-i18n="help.step3.title">Take the quiz</strong><span data-i18n="help.step3.desc">Not sure where to go? Answer 5 quick questions and we'll match you to your top islands.</span></div></div>
+          <div class="help-step"><span class="help-step-num">4</span><div class="help-step-text"><strong data-i18n="help.step4.title">Save & compare</strong><span data-i18n="help.step4.desc">Star islands to your shortlist, or put two side-by-side with Compare.</span></div></div>
+        </div>
+        <button class="help-close-btn" onclick="closeHelp()" data-i18n="help.close">Got it — let me explore</button>
       </div>
     </div>
     <div id="main-map">
@@ -137,6 +143,7 @@
           <th data-col="night" class="th-dim" data-i18n="data.col.night">Night ↕</th>
           <th data-col="access" class="th-dim" data-i18n="data.col.access">Access ↕</th>
           <th data-col="afford" class="th-dim" data-i18n="data.col.afford">Affordability ↕</th>
+          <th data-col="car_need" class="th-dim" data-i18n="data.col.car" title="1 = car useless, 5 = car essential">🚗 Car ↕</th>
           <th data-col="days" data-i18n="data.col.days">Days ↕</th>
           <th data-col="area" data-i18n="data.col.area">Area (km²) ↕</th>
           <th data-col="pop" data-i18n="data.col.pop">Population ↕</th>
@@ -306,7 +313,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-  <script src="i18n.js?v=9"></script>
-  <script src="script.js?v=14"></script>
+  <script src="i18n.js?v=10"></script>
+  <script src="script.js?v=15"></script>
 </body>
 </html>

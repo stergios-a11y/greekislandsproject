@@ -2641,3 +2641,290 @@ html.dark .itt-fill-hist   { background: #8FD66B; }
 html.dark .itt-fill-night  { background: #FF8A52; }
 html.dark .itt-fill-access { background: #FFCB52; }
 html.dark .itt-fill-afford { background: #BAA0E8; }
+
+/* ============================================================
+   HELP / HOW TO — floating button + modal
+============================================================ */
+
+.help-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--aegean) 0%, var(--aegean-dark) 100%);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(11,143,172,0.4);
+  transition: all 0.2s;
+}
+.help-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(11,143,172,0.5);
+}
+.help-btn-icon {
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .help-btn {
+    top: 12px;
+    right: 12px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  .help-btn-text { display: none; }
+  .help-btn-icon { font-size: 16px; }
+}
+
+/* Modal overlay */
+.help-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 2500;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s;
+}
+.help-modal-content {
+  background: var(--white);
+  color: var(--ink-1);
+  border-radius: 20px;
+  padding: 36px 32px 28px;
+  max-width: 540px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s;
+}
+.help-modal-content .hero-title {
+  margin: 0 0 6px;
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--ink-1);
+}
+.help-modal-content .hero-sub {
+  margin: 0 0 22px;
+  font-size: 14px;
+  color: var(--ink-3);
+  line-height: 1.55;
+}
+.help-modal-content .hero-stats {
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+  margin: 0 -8px 22px;
+  padding: 16px 0;
+  background: linear-gradient(90deg, rgba(11,143,172,0.06), rgba(11,143,172,0.02));
+  border-radius: 12px;
+}
+.help-modal-content .hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+.help-modal-content .hero-stat-num {
+  font-family: var(--display);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--aegean);
+  line-height: 1;
+}
+.help-modal-content .hero-stat-lbl {
+  font-size: 11px;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-top: 4px;
+}
+
+.help-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--marble-2, #f0f0f0);
+  color: var(--ink-2);
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+.help-modal-close:hover {
+  background: var(--accent, #FF6B6B);
+  color: #fff;
+}
+
+.help-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.help-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.help-step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--aegean) 0%, var(--aegean-dark) 100%);
+  color: #fff;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.help-step-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  padding-top: 4px;
+}
+.help-step-text strong {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-1);
+}
+.help-step-text span {
+  font-size: 13px;
+  color: var(--ink-3);
+  line-height: 1.5;
+}
+
+.help-close-btn {
+  width: 100%;
+  padding: 13px 20px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--aegean) 0%, var(--aegean-dark) 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.help-close-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Dark mode */
+html.dark .help-modal-content {
+  background: var(--marble-3, #1a2a33);
+  color: rgba(255,255,255,0.9);
+}
+html.dark .help-modal-content .hero-title {
+  color: rgba(255,255,255,0.95);
+}
+html.dark .help-modal-content .hero-sub,
+html.dark .help-step-text span {
+  color: rgba(255,255,255,0.7);
+}
+html.dark .help-step-text strong {
+  color: rgba(255,255,255,0.95);
+}
+html.dark .help-modal-content .hero-stats {
+  background: rgba(77,190,255,0.08);
+}
+html.dark .help-modal-content .hero-stat-num {
+  color: #4DBEFF;
+}
+html.dark .help-modal-close {
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.8);
+}
+
+@media (max-width: 640px) {
+  .help-modal-content {
+    padding: 26px 20px 20px;
+    border-radius: 16px;
+  }
+  .help-modal-content .hero-title { font-size: 22px; }
+  .help-modal-content .hero-stat-num { font-size: 22px; }
+}
+
+/* Hide the legacy hero banner in case any cached version references it */
+.hero-banner { display: none !important; }
+
+/* ============================================================
+   CONDENSED TABLE — tighter rows, smaller text
+============================================================ */
+#islands-table {
+  font-size: 13px;
+}
+#islands-table th {
+  padding: 8px 10px !important;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+}
+#islands-table td {
+  padding: 6px 10px !important;
+  vertical-align: middle;
+}
+#islands-table .group-tag {
+  font-size: 10px;
+  padding: 2px 7px;
+}
+/* Tighten star ratings in table */
+#islands-table .stars-outer,
+#islands-table .stars-inner {
+  font-size: 13px;
+}
+/* Compact bar charts for area/pop */
+#islands-table .table-bar-wrap {
+  height: 14px;
+}
+
+/* Car-need compact dots (5 filled/empty dots) */
+.car-compact {
+  display: inline-flex;
+  gap: 2px;
+  align-items: center;
+}
+.car-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.12);
+  transition: background 0.15s;
+}
+.car-dot.on {
+  background: currentColor;
+}
+html.dark .car-dot {
+  background: rgba(255,255,255,0.15);
+}
+
+@media (max-width: 640px) {
+  #islands-table { font-size: 12px; }
+  #islands-table td { padding: 5px 8px !important; }
+}

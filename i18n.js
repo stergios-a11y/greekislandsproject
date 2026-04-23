@@ -28,12 +28,26 @@ const UI_TEXT = {
   'nav.mission': { en: 'Why This Exists', el: 'Γιατί Υπάρχει' },
 
   // Hero / homepage
-  'hero.title': { en: 'Aegean Blueprint', el: 'Aegean Blueprint' },
+  'hero.title': { en: 'Find your perfect Greek island', el: 'Βρες το ιδανικό σου ελληνικό νησί' },
+  'hero.sub': { en: '83 islands scored across beaches, culture, nightlife, access and price. Click any circle to explore.', el: '83 νησιά βαθμολογημένα σε παραλίες, πολιτισμό, νυχτερινή ζωή, πρόσβαση και τιμή. Πάτα οποιοδήποτε σημείο για εξερεύνηση.' },
   'hero.tagline': { en: 'The Greek Island Decision Engine', el: 'Ο οδηγός για το Ελληνικό νησί που σας ταιριάζει' },
   'hero.dismiss': { en: 'Got it', el: 'Έγινε' },
   'hero.stat.islands': { en: 'Islands', el: 'Νησιά' },
-  'hero.stat.dimensions': { en: 'Dimensions', el: 'Διαστάσεις' },
+  'hero.stat.dimensions': { en: 'Score dimensions', el: 'Διαστάσεις' },
+  'hero.stat.guides': { en: 'Full guides', el: 'Πλήρεις οδηγοί' },
   'hero.stat.minutes': { en: 'Minutes', el: 'Λεπτά' },
+
+  // Help modal
+  'help.btn': { en: 'How to', el: 'Οδηγίες' },
+  'help.step1.title': { en: 'Explore the map', el: 'Εξερεύνησε τον χάρτη' },
+  'help.step1.desc': { en: "Click any circle to open the island's full guide. Bigger circles = higher overall rating.", el: 'Πάτα σε οποιοδήποτε κυκλάκι για τον πλήρη οδηγό του νησιού. Μεγαλύτερο κυκλάκι = υψηλότερη βαθμολογία.' },
+  'help.step2.title': { en: 'Filter and rank', el: 'Φιλτράρισμα και ταξινόμηση' },
+  'help.step2.desc': { en: 'Use the dropdowns to filter by island group or rank by what matters to you — beaches, culture, nightlife.', el: 'Χρησιμοποίησε τα φίλτρα για να διαλέξεις νησιωτικό σύμπλεγμα ή να ταξινομήσεις κατά παραλίες, πολιτισμό, νυχτερινή ζωή.' },
+  'help.step3.title': { en: 'Take the quiz', el: 'Κάνε το quiz' },
+  'help.step3.desc': { en: "Not sure where to go? Answer 5 quick questions and we'll match you to your top islands.", el: 'Δεν είσαι σίγουρος; Απάντησε σε 5 γρήγορες ερωτήσεις και θα σου προτείνουμε τα κορυφαία νησιά.' },
+  'help.step4.title': { en: 'Save & compare', el: 'Αποθήκευση & σύγκριση' },
+  'help.step4.desc': { en: 'Star islands to your shortlist, or put two side-by-side with Compare.', el: 'Αποθήκευσε νησιά στη λίστα σου, ή σύγκρινε δύο δίπλα-δίπλα.' },
+  'help.close': { en: 'Got it — let me explore', el: 'Έγινε — ας εξερευνήσω' },
 
   // Search/filter
   'search.placeholder': { en: '🔍  Search islands…', el: '🔍  Αναζήτηση νησιών…' },

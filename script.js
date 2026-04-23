@@ -227,7 +227,10 @@ window._addCmpNav = function(key) { addToCompare(key); navigateTo('compare'); };
 
 document.addEventListener('DOMContentLoaded', () => {
   const hardFallback = setTimeout(dismissLoading, 3000);
-  if (localStorage.getItem('heroDismissed')) dismissHero();
+  if (!localStorage.getItem('heroDismissed')) {
+    // First-time visitor: open the help modal automatically
+    setTimeout(() => openHelp(), 600);
+  }
   try { setupNav(); } catch(e) { console.warn('setupNav', e); }
   try { applyStaticTranslations(); } catch(e) { console.warn('i18n', e); }
   try { DIM_LABELS = getDimLabels(); } catch(e) { console.warn('dimLabels', e); }
@@ -356,13 +359,42 @@ function copyIslandLink() {
   });
 }
 
-function dismissHero() {
-  const banner = document.getElementById('hero-banner');
-  if (banner) {
-    banner.classList.add('dismissed');
+function openHelp() {
+  const modal = document.getElementById('help-modal');
+  if (modal) {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeHelp() {
+  const modal = document.getElementById('help-modal');
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
     localStorage.setItem('heroDismissed', '1');
   }
 }
+
+// Back-compat
+function dismissHero() { closeHelp(); }
+
+window.openHelp = openHelp;
+window.closeHelp = closeHelp;
+
+// Close modal on backdrop click
+document.addEventListener('click', (e) => {
+  const modal = document.getElementById('help-modal');
+  if (modal && e.target === modal) closeHelp();
+});
+
+// Close modal on Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const modal = document.getElementById('help-modal');
+    if (modal && modal.style.display === 'flex') closeHelp();
+  }
+});
 
 function dismissLoading() {
   const overlay = document.getElementById('loading-overlay');
@@ -1136,6 +1168,20 @@ function starsHtml(score) {
 const MAX_AREA = 3684; // Euboea
 const MAX_POP = 664000; // removed Athens but keep scale reasonable — use 200000
 
+function carNeedCompactHtml(score) {
+  if (score == null || isNaN(score)) return '<span style="color:var(--ink-4)">—</span>';
+  const n = Math.round(score);
+  const colors = ['', '#6B7280', '#8B8B8B', '#A58A3A', '#D17A2B', '#C0522A'];
+  const col = colors[n] || '#888';
+  return `<span class="car-compact" style="color:${col}">
+    <span class="car-dot ${n >= 1 ? 'on' : ''}"></span>
+    <span class="car-dot ${n >= 2 ? 'on' : ''}"></span>
+    <span class="car-dot ${n >= 3 ? 'on' : ''}"></span>
+    <span class="car-dot ${n >= 4 ? 'on' : ''}"></span>
+    <span class="car-dot ${n >= 5 ? 'on' : ''}"></span>
+  </span>`;
+}
+
 function carNeedHtml(score) {
   // 1 = car useless, 5 = car essential. Display as filled cars out of 5.
   if (score == null || isNaN(score)) return '<span style="color:var(--ink-4)">—</span>';
@@ -1172,7 +1218,7 @@ function renderTable() {
   if (countLabel) countLabel.textContent = `${list.length} islands`;
   const tbody = document.getElementById('islands-table-body');
   if (!tbody) return;
-  tbody.innerHTML = list.map(i => `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="Island" style="font-weight:600">${islandName(i.key)}</td><td data-label="Group"><span class="group-tag">${groupName(i.island_group)}</span></td><td data-label="Rating">${starsHtml(i.total)}</td><td data-label="Beach" class="td-dim">${starsHtml(i.beach)}</td><td data-label="Culture" class="td-dim">${starsHtml(i.hist)}</td><td data-label="Night" class="td-dim">${starsHtml(i.night)}</td><td data-label="Access" class="td-dim">${starsHtml(i.access)}</td><td data-label="Affordability" class="td-dim">${starsHtml(i.afford)}</td><td data-label="Days" style="font-weight:600;color:var(--aegean)">${i.days ? i.days + ' ' + t('common.days') : '—'}</td><td data-label="Area (km²)">${barHtml(i.area, 3684, 'var(--aegean)')}</td><td data-label="Population">${barHtml(i.pop, 200000, 'var(--olive)')}</td></tr>`).join('');
+  tbody.innerHTML = list.map(i => `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="Island" style="font-weight:600">${islandName(i.key)}</td><td data-label="Group"><span class="group-tag">${groupName(i.island_group)}</span></td><td data-label="Rating">${starsHtml(i.total)}</td><td data-label="Beach" class="td-dim">${starsHtml(i.beach)}</td><td data-label="Culture" class="td-dim">${starsHtml(i.hist)}</td><td data-label="Night" class="td-dim">${starsHtml(i.night)}</td><td data-label="Access" class="td-dim">${starsHtml(i.access)}</td><td data-label="Affordability" class="td-dim">${starsHtml(i.afford)}</td><td data-label="Car" class="td-dim td-car" title="${t('dim.car.hint')}">${carNeedCompactHtml(i.car_need)}</td><td data-label="Days" style="font-weight:600;color:var(--aegean)">${i.days ? i.days + ' ' + t('common.days') : '—'}</td><td data-label="Area (km²)">${barHtml(i.area, 3684, 'var(--aegean)')}</td><td data-label="Population">${barHtml(i.pop, 200000, 'var(--olive)')}</td></tr>`).join('');
   tbody.querySelectorAll('.table-row-clickable').forEach(row => {
     row.addEventListener('click', () => navigateTo('island', row.dataset.key));
   });
