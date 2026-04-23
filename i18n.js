@@ -46,7 +46,7 @@ const UI_TEXT = {
   'help.step2.desc': { en: 'Use the dropdowns to filter by island group or rank by what matters to you — beaches, culture, nightlife.', el: 'Χρησιμοποίησε τα φίλτρα για να διαλέξεις νησιωτικό σύμπλεγμα ή να ταξινομήσεις κατά παραλίες, πολιτισμό, νυχτερινή ζωή.' },
   'help.step3.title': { en: 'Take the quiz', el: 'Κάνε το quiz' },
   'help.step3.desc': { en: "Not sure where to go? Answer 5 quick questions and we'll match you to your top islands.", el: 'Δεν είσαι σίγουρος; Απάντησε σε 5 γρήγορες ερωτήσεις και θα σου προτείνουμε τα κορυφαία νησιά.' },
-  'help.step4.title': { en: 'Save & compare', el: 'Αποθήκευση & σύγκριση' },
+  'help.step4.title': { en: 'Save &amp; compare', el: 'Αποθήκευση &amp; σύγκριση' },
   'help.step4.desc': { en: 'Star islands to your shortlist, or put two side-by-side with Compare.', el: 'Αποθήκευσε νησιά στη λίστα σου, ή σύγκρινε δύο δίπλα-δίπλα.' },
   'help.close': { en: 'Got it — let me explore', el: 'Έγινε — ας εξερευνήσω' },
 
@@ -96,7 +96,7 @@ const UI_TEXT = {
   'detail.ratings': { en: 'Blueprint Ratings', el: 'Βαθμολογίες' },
   'detail.keystats': { en: 'Key Stats', el: 'Βασικά Στοιχεία' },
   'sidebar.beach': { en: 'Beach Quality', el: 'Ποιότητα Παραλιών' },
-  'sidebar.culture': { en: 'Culture & History', el: 'Πολιτισμός & Ιστορία' },
+  'sidebar.culture': { en: 'Culture &amp; History', el: 'Πολιτισμός &amp; Ιστορία' },
   'sidebar.night': { en: 'Night Life', el: 'Νυχτερινή ζωή' },
   'sidebar.access': { en: 'Access Ease', el: 'Ευκολία Πρόσβασης' },
   'sidebar.afford': { en: 'Price Level', el: 'Κόστος' },
@@ -430,11 +430,14 @@ function groupName(group) {
   return group;
 }
 
-// Apply translations to static UI elements on page load
+// Apply translations to static UI elements on page load.
+// Uses innerHTML rather than textContent so translations can include simple
+// formatting tags (<strong>, <em>, <br>). All translation strings are
+// hard-coded in TRANSLATIONS — no user input ever reaches this path.
 function applyStaticTranslations() {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
-    el.textContent = t(key);
+    el.innerHTML = t(key);
   });
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.dataset.i18nPlaceholder;
