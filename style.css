@@ -2989,3 +2989,36 @@ html.dark .car-dot {
   #islands-table { font-size: 12px; }
   #islands-table td { padding: 5px 8px !important; }
 }
+
+/* ============================================================
+   AIRPORT column in data table + tooltip line
+============================================================ */
+.td-airport {
+  text-align: center;
+  font-size: 16px;
+}
+.airport-yes {
+  color: var(--aegean);
+  font-size: 18px;
+  font-weight: 700;
+}
+.airport-no {
+  color: var(--ink-4);
+  opacity: 0.4;
+}
+html.dark .airport-yes {
+  color: #4DBEFF;
+}
+
+/* Tooltip airport row */
+.itt-airport {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--aegean);
+}
+.itt-airport strong {
+  font-weight: 600;
+}
+html.dark .itt-airport {
+  color: #4DBEFF;
+}

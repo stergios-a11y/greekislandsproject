@@ -51,7 +51,11 @@ const UI_TEXT = {
 
   // Search/filter
   'search.placeholder': { en: '🔍  Search islands…', el: '🔍  Αναζήτηση νησιών…' },
-  'filter.allgroups': { en: 'All groups', el: 'Όλες οι ομάδες' },
+  'filter.allgroups': { en: 'All islands', el: 'Όλα τα νησιά' },
+  'filter.withairport': { en: '✈ With airport', el: '✈ Με αεροδρόμιο' },
+  'filter.withoutairport': { en: 'Without airport', el: 'Χωρίς αεροδρόμιο' },
+  'data.col.airport': { en: '✈ Airport ↕', el: '✈ Αεροδρόμιο ↕' },
+  'tooltip.hasairport': { en: 'Commercial airport', el: 'Εμπορικό αεροδρόμιο' },
   'filter.rankby': { en: 'Rank map by', el: 'Ταξινόμηση κατά' },
   'filter.overall': { en: '🏠 Overall', el: '🏠 Συνολικά' },
   'filter.beach': { en: '🏖️ Beaches', el: '🏖️ Παραλίες' },

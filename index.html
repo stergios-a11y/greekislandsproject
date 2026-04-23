@@ -35,7 +35,7 @@
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="apple-touch-icon" href="logo.png">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
 </head>
 <body>
 
@@ -76,7 +76,7 @@
     <div class="search-bar-row">
       <input type="text" id="islandSearch" placeholder="🔍  Search islands…" aria-label="Search islands" data-i18n-placeholder="search.placeholder">
       <select id="group-select" class="filter-select" aria-label="Filter by island group">
-        <option value="all" data-i18n="filter.allgroups">All groups</option>
+        <option value="all" data-i18n="filter.allgroups">All islands</option>
       </select>
       <select id="vibe-select" class="filter-select" aria-label="Rank map by">
         <option value="overall" data-i18n="filter.overall">🏠 Overall</option>
@@ -144,6 +144,7 @@
           <th data-col="afford" class="th-dim" data-i18n="data.col.afford">Affordability ↕</th>
           <th data-col="car_need" class="th-dim" data-i18n="data.col.car" title="1 = car useless, 5 = car essential">🚗 Car ↕</th>
           <th data-col="days" class="th-main" data-i18n="data.col.days">Days ↕</th>
+          <th data-col="has_airport" class="th-main" data-i18n="data.col.airport" title="Commercial airport on the island">✈ Airport ↕</th>
           <th data-col="area" class="th-main" data-i18n="data.col.area">Area (km²) ↕</th>
           <th data-col="pop" class="th-main" data-i18n="data.col.pop">Population ↕</th>
         </tr></thead>
@@ -313,7 +314,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-  <script src="i18n.js?v=11"></script>
-  <script src="script.js?v=17"></script>
+  <script src="i18n.js?v=12"></script>
+  <script src="script.js?v=18"></script>
 </body>
 </html>
