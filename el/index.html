@@ -35,7 +35,7 @@
   <link rel="icon" href="/logo.png" type="image/png">
   <link rel="apple-touch-icon" href="/logo.png">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="/style.css?v=7">
+  <link rel="stylesheet" href="/style.css?v=8">
 </head>
 <body>
 
@@ -120,8 +120,11 @@
     <h1 data-i18n="data.title">Islands Database</h1>
     <div class="table-search-row">
       <input type="text" id="tableSearchInput" placeholder="Filter islands…" data-i18n-placeholder="data.search">
-      <button id="toggle-dims-btn" class="toggle-dims-btn" onclick="toggleDimensions()" data-i18n="data.showdims">📊 Show scores</button>
       <span id="table-count-label" class="table-count"></span>
+    </div>
+    <div class="table-hint-row" id="table-hint-row" onclick="toggleDimensions()">
+      <button id="toggle-dims-btn" class="toggle-dims-btn" onclick="event.stopPropagation();toggleDimensions()" data-i18n="data.showdims">📊 Show scores</button>
+      <span class="table-hint-text" data-i18n="data.hinttext">See the 6 dimensions we rate each island on — beaches, culture, nightlife, access, price, car need.</span>
     </div>
     <div class="table-container">
       <table id="islands-table">
@@ -304,7 +307,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-  <script src="/i18n.js?v=7"></script>
-  <script src="/script.js?v=12"></script>
+  <script src="/i18n.js?v=8"></script>
+  <script src="/script.js?v=13"></script>
 </body>
 </html>

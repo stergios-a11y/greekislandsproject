@@ -2498,31 +2498,77 @@ html.dark .itin-stop-photo-wrap {
   display: table-cell;
 }
 
+/* Callout row under search — makes the expansion affordance obvious */
+.table-hint-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, rgba(11,143,172,0.06) 0%, rgba(11,143,172,0.02) 100%);
+  border: 1px dashed rgba(11,143,172,0.3);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.table-hint-row:hover {
+  background: linear-gradient(90deg, rgba(11,143,172,0.12) 0%, rgba(11,143,172,0.05) 100%);
+  border-color: rgba(11,143,172,0.55);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 10px rgba(11,143,172,0.15);
+}
+.table-hint-text {
+  flex: 1;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+html.dark .table-hint-row {
+  background: linear-gradient(90deg, rgba(77,190,255,0.08) 0%, rgba(77,190,255,0.02) 100%);
+  border-color: rgba(77,190,255,0.3);
+}
+html.dark .table-hint-row:hover {
+  background: linear-gradient(90deg, rgba(77,190,255,0.15) 0%, rgba(77,190,255,0.05) 100%);
+  border-color: rgba(77,190,255,0.55);
+}
+html.dark .table-hint-text {
+  color: rgba(255,255,255,0.8);
+}
+
+/* When dims are showing, soften the hint */
+#islands-table.show-dims ~ .table-hint-row,
+body:has(#islands-table.show-dims) .table-hint-row {
+  opacity: 0.7;
+}
+
 /* Show/Hide scores button */
 .toggle-dims-btn {
   padding: 8px 14px;
   font-family: var(--sans);
   font-size: 13px;
   font-weight: 600;
-  color: var(--ink-2);
-  background: transparent;
-  border: 1.5px solid var(--border);
+  color: #fff;
+  background: linear-gradient(135deg, var(--aegean) 0%, var(--aegean-dark) 100%);
+  border: none;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.15s;
   white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(11,143,172,0.25);
 }
 .toggle-dims-btn:hover {
-  background: var(--aegean);
-  color: #fff;
-  border-color: var(--aegean);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(11,143,172,0.4);
 }
-html.dark .toggle-dims-btn {
-  color: rgba(255,255,255,0.85);
-  border-color: rgba(255,255,255,0.2);
-}
-html.dark .toggle-dims-btn:hover {
-  background: var(--aegean);
-  border-color: var(--aegean);
-  color: #fff;
+
+/* Mobile: stack button + hint text vertically */
+@media (max-width: 640px) {
+  .table-hint-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .table-hint-text { font-size: 12px; }
 }

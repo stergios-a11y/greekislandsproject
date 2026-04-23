@@ -121,6 +121,7 @@ const UI_TEXT = {
   'data.col.scores': { en: 'Scores', el: 'Βαθμολογίες' },
   'data.showdims': { en: '📊 Show scores', el: '📊 Εμφάνιση βαθμολογιών' },
   'data.hidedims': { en: '📊 Hide scores', el: '📊 Απόκρυψη βαθμολογιών' },
+  'data.hinttext': { en: 'See the 6 dimensions we rate each island on — beaches, culture, nightlife, access, price, car need.', el: 'Δες τις 6 διαστάσεις που βαθμολογούμε σε κάθε νησί — παραλίες, πολιτισμός, νυχτερινή ζωή, πρόσβαση, τιμή, ανάγκη αυτοκινήτου.' },
 
   // Compare page
   'compare.title': { en: 'Compare Islands', el: 'Σύγκριση Νησιών' },
