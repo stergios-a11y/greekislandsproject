@@ -68,7 +68,7 @@
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="apple-touch-icon" href="logo.png">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="style.css?v=17">
+  <link rel="stylesheet" href="style.css?v=18">
 </head>
 <body>
 
@@ -164,6 +164,7 @@
     <div class="table-hint-row" id="table-hint-row" onclick="toggleDimensions()">
       <button id="toggle-dims-btn" class="toggle-dims-btn" onclick="event.stopPropagation();toggleDimensions()" data-i18n="data.showdims">📊 Detailed scores</button>
       <span class="table-hint-text" data-i18n="data.hinttext">See the 6 dimensions we rate each island on — beaches, culture, nightlife, access, price, car need.</span>
+      <a href="#how-we-score" class="how-we-score-link table-how-link" onclick="event.stopPropagation();navMission(event)" data-i18n="scoring.howlink">how we score</a>
     </div>
     <div class="table-container">
       <table id="islands-table">
@@ -281,6 +282,39 @@
         <p data-i18n="mission.point.text">Pick an island. Pack a bag. Go.</p>
         <span class="why-kicker" data-i18n="mission.kicker">Planning a trip shouldn't take longer than the trip itself.</span>
       </div>
+
+      <div class="why-scoring" id="how-we-score">
+        <h2 data-i18n="mission.scoring.title">How we score</h2>
+
+        <p class="why-lead" data-i18n="mission.scoring.lead">Every island on this site gets rated 1–5 on five dimensions. These numbers aren't an algorithm. They're one person's judgment — Stergios's — based on having actually been to these islands, read everything written about the rest, and thought carefully about what each one is actually good for.</p>
+
+        <p class="why-lead" data-i18n="mission.scoring.honest">We think that's more useful than a "proprietary weighted index" stitched from TripAdvisor stars and hotel counts. But it's not objective, and we won't pretend it is. If you want to know why Milos is a 4.6 and Tinos is a 3.9, the short answer is: Stergios thinks so, for the reasons below. The longer answer is: disagree with us — we'd rather have that conversation than a fake one about formulas.</p>
+
+        <h3 data-i18n="mission.scoring.dims.title">The five dimensions</h3>
+
+        <dl class="why-dims">
+          <dt data-i18n="mission.scoring.beach.term">🏖 Beach</dt>
+          <dd data-i18n="mission.scoring.beach.def">How good the swimming is. A 5 means you'd pick this island <em>because</em> of the water — Milos, Elafonisos, Lefkada. A 3 means good beaches exist but they're not the reason to come. A 1 means swim at your hotel pool instead.</dd>
+
+          <dt data-i18n="mission.scoring.hist.term">🏛 Culture</dt>
+          <dd data-i18n="mission.scoring.hist.def">Archaeology, museums, churches, old towns, living tradition. A 5 rewards depth, not just tourist-brochure ruins — Delos, Rhodes Old Town, Patmos. A 3 means one or two good sites. A 1 means the island's story is "we have a beach."</dd>
+
+          <dt data-i18n="mission.scoring.night.term">🌃 Nightlife</dt>
+          <dd data-i18n="mission.scoring.night.def">From beach clubs to dinner-and-a-walk. A 5 is party-destination-level (Mykonos, Ios). A 3 means you can find good food and a few bars. A 1 means dinner ends at 10pm and the village sleeps.</dd>
+
+          <dt data-i18n="mission.scoring.access.term">🚢 Access</dt>
+          <dd data-i18n="mission.scoring.access.def">How hard it is to get there from Athens, and how far it is to the next island. A 5 has an airport and fast ferries (Santorini, Rhodes, Corfu). A 3 means one reliable ferry a day in summer. A 1 means you need to really want to go.</dd>
+
+          <dt data-i18n="mission.scoring.afford.term">💶 Affordability</dt>
+          <dd data-i18n="mission.scoring.afford.def">What a week costs for two people in August, hotel + food + getting around. A 5 is genuinely cheap (Ikaria, Samothrace). A 3 is normal Greek-island pricing. A 1 is Mykonos/Santorini territory where dinner alone can clear €200.</dd>
+        </dl>
+
+        <h3 data-i18n="mission.scoring.overall.title">The overall number</h3>
+        <p class="why-lead" data-i18n="mission.scoring.overall.text">The overall rating is a weighted mix of the five, tilted toward Beach and Culture because that's what most people come to the Greek islands for. It's still a judgment call, not a calculation — the weights themselves are a choice, and someone whose holiday is all about nightlife would weight it differently. Use the five underlying numbers. The single number is for sorting the table.</p>
+
+        <h3 data-i18n="mission.scoring.disagree.title">Think we got one wrong?</h3>
+        <p class="why-lead" data-i18n="mission.scoring.disagree.text">Tell us. Hit the <strong>💬 Feedback</strong> button at the bottom right of any page and pick "Suggest a rating correction." Explain what you'd change and why. We read everything — and if you make a good case, we'll update the number. The five dimensions and the rationale stay in the open.</p>
+      </div>
     </div>
   </main>
 
@@ -304,6 +338,7 @@
         <aside class="detail-sidebar">
           <div class="sidebar-box">
             <h3 data-i18n="detail.ratings">Blueprint Ratings</h3>
+            <a href="#how-we-score" onclick="navMission(event)" class="how-we-score-link" data-i18n="scoring.howlink">how we score</a>
             <div class="rating-list">
               <div class="rating-item"><span class="rating-label" data-i18n="sidebar.beach">Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div><span class="rating-val" id="val-beach"></span></div>
               <div class="rating-item"><span class="rating-label" data-i18n="sidebar.culture">Culture &amp; History</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div><span class="rating-val" id="val-hist"></span></div>
@@ -343,6 +378,7 @@
           <select name="topic" required>
             <option value="suggestion">💡 Suggestion or feature idea</option>
             <option value="error">🐛 Error or correction</option>
+            <option value="rating">⭐ Suggest a rating correction</option>
             <option value="missing-island">🏝 Island we should add</option>
             <option value="missing-restaurant">🍴 Restaurant or beach to add</option>
             <option value="other">💬 Something else</option>
@@ -364,7 +400,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-  <script src="i18n.js?v=19"></script>
-  <script src="script.js?v=28"></script>
+  <script src="i18n.js?v=20"></script>
+  <script src="script.js?v=29"></script>
 </body>
 </html>

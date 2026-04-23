@@ -38,9 +38,11 @@
   --olive-pale:    #E8F6F1;
 
   --ink:           #1A2332;
+  --ink-1:         #1A2332;
   --ink-2:         #2E3D50;
   --ink-3:         #637080;
   --ink-4:         #A0ADB8;
+  --ink-5:         #E4E8ED;
 
   --white:         #FFFFFF;
   --border:        #EAE4DC;
@@ -92,9 +94,11 @@ html.dark {
   --olive-pale:    #071510;
 
   --ink:           #EEF2F5;
+  --ink-1:         #EEF2F5;
   --ink-2:         #C8D4DC;
   --ink-3:         #8898A8;
   --ink-4:         #556070;
+  --ink-5:         #2A3545;
 
   --white:         #1F2530;
   --border:        rgba(255,255,255,0.08);
@@ -3273,4 +3277,100 @@ html.dark .intl-star.on { color: #FFCB52; }
   box-shadow: 0 4px 12px rgba(11,143,172,0.4);
   color: #fff;
   text-decoration: none;
+}
+
+/* ============================================================
+   HOW WE SCORE — Mission page section
+============================================================ */
+.why-scoring {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--ink-5);
+  scroll-margin-top: 100px; /* so that anchor scroll doesn't hide header */
+}
+.why-scoring h2 {
+  font-family: var(--serif);
+  font-size: 32px;
+  margin: 0 0 20px;
+  color: var(--ink-1);
+  letter-spacing: -0.02em;
+}
+.why-scoring h3 {
+  font-family: var(--serif);
+  font-size: 22px;
+  margin: 32px 0 12px;
+  color: var(--ink-1);
+  letter-spacing: -0.01em;
+}
+.why-scoring .why-lead {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin: 0 0 18px;
+}
+.why-dims {
+  margin: 20px 0 8px;
+  padding: 0;
+}
+.why-dims dt {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ink-1);
+  margin: 18px 0 6px;
+  letter-spacing: 0.01em;
+}
+.why-dims dt:first-child {
+  margin-top: 4px;
+}
+.why-dims dd {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  margin: 0;
+  padding-left: 0;
+}
+.why-dims dd em {
+  font-style: italic;
+  color: var(--ink-1);
+}
+.why-scoring strong {
+  color: var(--ink-1);
+  font-weight: 700;
+}
+
+/* "how we score" link — appears near ratings on detail page and data table */
+.how-we-score-link {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--aegean);
+  text-decoration: underline;
+  text-decoration-color: rgba(11, 143, 172, 0.4);
+  text-underline-offset: 2px;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+  transition: opacity 0.15s, text-decoration-color 0.15s;
+  margin: 2px 0 10px;
+}
+.how-we-score-link:hover {
+  opacity: 1;
+  text-decoration-color: rgba(11, 143, 172, 1);
+}
+/* Inside the detail sidebar, place it immediately under the h3 */
+.sidebar-box h3 + .how-we-score-link {
+  margin-top: -6px;
+  margin-bottom: 12px;
+}
+/* On the data table hint row */
+.how-we-score-link.table-how-link {
+  margin-left: 6px;
+}
+
+@media (max-width: 640px) {
+  .why-scoring h2 { font-size: 26px; }
+  .why-scoring h3 { font-size: 18px; margin-top: 24px; }
+  .why-scoring .why-lead { font-size: 15.5px; }
+  .why-dims dd { font-size: 14.5px; }
 }

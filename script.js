@@ -201,6 +201,18 @@ function navigateTo(view, param) {
   showView(view, param);
 }
 
+// Navigate to the Mission page and scroll to the How We Score section.
+// Used by "how we score" links throughout the site.
+function navMission(event) {
+  if (event && event.preventDefault) event.preventDefault();
+  navigateTo('mission');
+  setTimeout(() => {
+    const target = document.getElementById('how-we-score');
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 120);
+}
+window.navMission = navMission;
+
 function showView(view, param) {
   const homeControls = document.getElementById('home-controls');
   ['home','data','compare','hopping','international','match','shortlist','mission','detail'].forEach(v => {
@@ -308,6 +320,7 @@ function submitFeedback(event) {
   const topicLabels = {
     'suggestion': 'Suggestion',
     'error': 'Error / correction',
+    'rating': 'Rating correction',
     'missing-island': 'Missing island',
     'missing-restaurant': 'Missing restaurant or beach',
     'other': 'Other'
