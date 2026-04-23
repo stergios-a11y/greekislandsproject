@@ -909,7 +909,6 @@ function setupTable() {
   if (searchInput) searchInput.addEventListener('input', renderTable);
   const thead = document.querySelector('#islands-table thead');
   if (thead) {
-    // Regular column headers with data-col
     thead.querySelectorAll('th[data-col]').forEach(th => {
       th.addEventListener('click', () => {
         const col = th.dataset.col;
@@ -918,19 +917,25 @@ function setupTable() {
         renderTable();
       });
     });
-    // Sparkline chips inside the Scores header — sort by that dimension
-    thead.querySelectorAll('.th-score-chip[data-col]').forEach(chip => {
-      chip.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const col = chip.dataset.col;
-        if (sortState.col === col) sortState.asc = !sortState.asc;
-        else { sortState.col = col; sortState.asc = false; }
-        renderTable();
-      });
-    });
+  }
+  // Restore prior preference for dimension visibility
+  if (localStorage.getItem('tableShowDims') === 'true') {
+    document.getElementById('islands-table')?.classList.add('show-dims');
+    const btn = document.getElementById('toggle-dims-btn');
+    if (btn) btn.textContent = t('data.hidedims');
   }
   renderTable();
 }
+
+function toggleDimensions() {
+  const table = document.getElementById('islands-table');
+  if (!table) return;
+  const isShowing = table.classList.toggle('show-dims');
+  const btn = document.getElementById('toggle-dims-btn');
+  if (btn) btn.textContent = isShowing ? t('data.hidedims') : t('data.showdims');
+  localStorage.setItem('tableShowDims', isShowing);
+}
+window.toggleDimensions = toggleDimensions;
 
 
 /* ============================================================
@@ -967,7 +972,7 @@ function updateShortlistButton() {
   const btn = document.getElementById('detail-shortlist-btn');
   if (!btn || !currentIslandKey) return;
   const saved = isInShortlist(currentIslandKey);
-  btn.textContent = saved ? '★ Saved' : '☆ Save';
+  btn.textContent = saved ? t('detail.saved') : t('detail.save');
   btn.classList.toggle('saved', saved);
 }
 
@@ -1159,17 +1164,7 @@ function renderTable() {
   if (countLabel) countLabel.textContent = `${list.length} islands`;
   const tbody = document.getElementById('islands-table-body');
   if (!tbody) return;
-  tbody.innerHTML = list.map(i => {
-    const sparkBars = `<div class="spark-row" title="${t('dim.beach')}: ${fmt(i.beach)} · ${t('dim.culture')}: ${fmt(i.hist)} · ${t('dim.night')}: ${fmt(i.night)} · ${t('dim.access')}: ${fmt(i.access)} · ${t('dim.afford')}: ${fmt(i.afford)} · ${t('dim.car')}: ${fmt(i.car_need)}">
-      <span class="spark-bar-wrap"><span class="spark-bar spark-beach" style="height:${(i.beach/5)*100}%"></span></span>
-      <span class="spark-bar-wrap"><span class="spark-bar spark-hist" style="height:${(i.hist/5)*100}%"></span></span>
-      <span class="spark-bar-wrap"><span class="spark-bar spark-night" style="height:${(i.night/5)*100}%"></span></span>
-      <span class="spark-bar-wrap"><span class="spark-bar spark-access" style="height:${(i.access/5)*100}%"></span></span>
-      <span class="spark-bar-wrap"><span class="spark-bar spark-afford" style="height:${(i.afford/5)*100}%"></span></span>
-      <span class="spark-bar-wrap"><span class="spark-bar spark-car" style="height:${(i.car_need/5)*100}%"></span></span>
-    </div>`;
-    return `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="Island" style="font-weight:600">${islandName(i.key)}</td><td data-label="Group"><span class="group-tag">${groupName(i.island_group)}</span></td><td data-label="Rating">${starsHtml(i.total)}</td><td data-label="Scores" class="td-scores">${sparkBars}</td><td data-label="Days" style="font-weight:600;color:var(--aegean)">${i.days ? i.days + ' ' + t('common.days') : '—'}</td><td data-label="Area (km²)">${barHtml(i.area, 3684, 'var(--aegean)')}</td><td data-label="Population">${barHtml(i.pop, 200000, 'var(--olive)')}</td></tr>`;
-  }).join('');
+  tbody.innerHTML = list.map(i => `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="Island" style="font-weight:600">${islandName(i.key)}</td><td data-label="Group"><span class="group-tag">${groupName(i.island_group)}</span></td><td data-label="Rating">${starsHtml(i.total)}</td><td data-label="Beach" class="td-dim">${starsHtml(i.beach)}</td><td data-label="Culture" class="td-dim">${starsHtml(i.hist)}</td><td data-label="Night" class="td-dim">${starsHtml(i.night)}</td><td data-label="Access" class="td-dim">${starsHtml(i.access)}</td><td data-label="Affordability" class="td-dim">${starsHtml(i.afford)}</td><td data-label="Car" class="td-dim" title="${t('dim.car.hint')}">${carNeedHtml(i.car_need)}</td><td data-label="Days" style="font-weight:600;color:var(--aegean)">${i.days ? i.days + ' ' + t('common.days') : '—'}</td><td data-label="Area (km²)">${barHtml(i.area, 3684, 'var(--aegean)')}</td><td data-label="Population">${barHtml(i.pop, 200000, 'var(--olive)')}</td></tr>`).join('');
   tbody.querySelectorAll('.table-row-clickable').forEach(row => {
     row.addEventListener('click', () => navigateTo('island', row.dataset.key));
   });
@@ -1698,7 +1693,13 @@ const QUIZ_QUESTIONS = [
     question: 'How do you feel about crowds?',
     question_el: 'Πώς νιώθεις με τον κόσμο;',
     options: ['Love the buzz', 'Some is fine', 'Prefer quiet', 'Must be secluded'],
-    options_el: ['Μου αρέσει η ζωντάνια', 'Λίγο είναι ωραίο', 'Προτιμώ ηρεμία', 'Πρέπει να είναι απομονωμένο']
+    options_el: ['Μου αρέσει η ζωντάνια', 'Παν μέτρον άριστον', 'Προτιμώ ηρεμία', 'Θέλω απομόνωση']
+  },
+  {
+    question: 'Will you have a car on the island?',
+    question_el: 'Θα έχεις αυτοκίνητο στο νησί;',
+    options: ['Yes, I want to rent one', 'No, I prefer walking / public transport'],
+    options_el: ['Ναι, θα νοικιάσω', 'Όχι, προτιμώ περπάτημα / ΜΜΜ']
   },
 ];
 let quizAnswers = {};
@@ -1745,6 +1746,14 @@ function computeQuizResults() {
     else if (budgetMod < 0) s += Math.abs(budgetMod) * (5 - i.afford);
     if (crowdPref >= 2) s += crowdPref * Math.max(0, 4 - Math.log10(i.pop + 1)) * 0.5;
     if (quizAnswers[0] === 2) { s += i.access * 0.5; if (i.night > 4) s -= 0.5; }
+    // Q5: car preference. 0 = Yes (will rent), 1 = No car
+    // If user doesn't want a car, strongly penalize islands where car is essential (car_need >= 4)
+    if (quizAnswers[4] === 1 && i.car_need) {
+      s -= Math.max(0, i.car_need - 2) * 0.8;
+    } else if (quizAnswers[4] === 0 && i.car_need) {
+      // If user has a car, lightly favor bigger islands where having a car pays off
+      s += Math.min(i.car_need, 5) * 0.1;
+    }
     return { ...i, matchScore: s };
   }).sort((a, b) => b.matchScore - a.matchScore).slice(0, 6);
   const container = document.getElementById('quiz-container');

@@ -2484,101 +2484,45 @@ html.dark .itin-stop-photo-wrap {
 }
 
 /* ============================================================
-   TABLE SPARKLINE — compact "Scores" column
+   TABLE DIMENSION TOGGLE — Show/Hide score columns
 ============================================================ */
 
-.th-scores {
-  min-width: 140px;
-  text-align: center;
-  cursor: default;
+/* By default, hide the 6 dimension columns on the data table */
+#islands-table .th-dim,
+#islands-table .td-dim {
+  display: none;
 }
-.th-scores > span[data-i18n] {
-  display: block;
-  margin-bottom: 4px;
+/* When table has .show-dims class, reveal them */
+#islands-table.show-dims .th-dim,
+#islands-table.show-dims .td-dim {
+  display: table-cell;
 }
-.th-scores-legend {
-  display: flex;
-  justify-content: center;
-  gap: 3px;
-  height: 8px;
-}
-.th-score-chip {
-  display: inline-block;
-  width: 14px;
-  height: 6px;
-  border-radius: 2px;
+
+/* Show/Hide scores button */
+.toggle-dims-btn {
+  padding: 8px 14px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2);
+  background: transparent;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
   cursor: pointer;
-  opacity: 0.85;
-  transition: opacity 0.15s, transform 0.15s;
+  transition: all 0.15s;
+  white-space: nowrap;
 }
-.th-score-chip:hover {
-  opacity: 1;
-  transform: scaleY(1.6);
+.toggle-dims-btn:hover {
+  background: var(--aegean);
+  color: #fff;
+  border-color: var(--aegean);
 }
-.th-score-beach  { background: #2196D3; }
-.th-score-hist   { background: #6BB04A; }
-.th-score-night  { background: #E8662C; }
-.th-score-access { background: #DDB13C; }
-.th-score-afford { background: #9B7EC8; }
-.th-score-car    { background: #6B7280; }
-
-/* Sparkline cell */
-.td-scores {
-  padding: 6px 10px !important;
-  min-width: 140px;
+html.dark .toggle-dims-btn {
+  color: rgba(255,255,255,0.85);
+  border-color: rgba(255,255,255,0.2);
 }
-.spark-row {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 4px;
-  height: 32px;
-  cursor: help;
-}
-.spark-bar-wrap {
-  display: flex;
-  align-items: flex-end;
-  width: 14px;
-  height: 100%;
-  background: rgba(0,0,0,0.05);
-  border-radius: 2px;
-  overflow: hidden;
-}
-.spark-bar {
-  width: 100%;
-  border-radius: 2px 2px 0 0;
-  min-height: 2px;
-  transition: all 0.2s;
-}
-.spark-beach  { background: #2196D3; }
-.spark-hist   { background: #6BB04A; }
-.spark-night  { background: #E8662C; }
-.spark-access { background: #DDB13C; }
-.spark-afford { background: #9B7EC8; }
-.spark-car    { background: #6B7280; }
-
-/* Dark mode */
-html.dark .spark-bar-wrap {
-  background: rgba(255,255,255,0.08);
-}
-html.dark .spark-beach  { background: #4DBEFF; }
-html.dark .spark-hist   { background: #8FD66B; }
-html.dark .spark-night  { background: #FF8A52; }
-html.dark .spark-access { background: #FFCB52; }
-html.dark .spark-afford { background: #BAA0E8; }
-html.dark .spark-car    { background: #9CA3AF; }
-
-html.dark .th-score-beach  { background: #4DBEFF; }
-html.dark .th-score-hist   { background: #8FD66B; }
-html.dark .th-score-night  { background: #FF8A52; }
-html.dark .th-score-access { background: #FFCB52; }
-html.dark .th-score-afford { background: #BAA0E8; }
-html.dark .th-score-car    { background: #9CA3AF; }
-
-/* Mobile — keep sparkline tight */
-@media (max-width: 640px) {
-  .spark-bar-wrap { width: 10px; }
-  .spark-row { gap: 3px; height: 28px; }
-  .th-scores { min-width: 100px; }
-  .td-scores { min-width: 100px; }
+html.dark .toggle-dims-btn:hover {
+  background: var(--aegean);
+  border-color: var(--aegean);
+  color: #fff;
 }
