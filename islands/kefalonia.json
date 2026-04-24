@@ -22,7 +22,9 @@
             "type": "city",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Argostoli",
-            "desc": "Capital of Kefalonia rebuilt after the 1953 earthquake in clean Ionian style. The waterfront is one of the best in the islands — walk the causeway bridge and watch the loggerhead turtles in the harbour."
+            "desc": "Capital of Kefalonia rebuilt after the 1953 earthquake in clean Ionian style. The waterfront is one of the best in the islands — walk the causeway bridge and watch the loggerhead turtles in the harbour.",
+            "name_el": "Αργοστόλι",
+            "desc_el": "Πρωτεύουσα της Κεφαλονιάς, ξαναχτισμένη μετά τον σεισμό του 1953 σε καθαρό επτανησιακό στυλ. Η παραλιακή είναι από τις καλύτερες των νησιών — περπάτησε τη γέφυρα Δράπανο και κοίτα τις χελώνες καρέτα-καρέτα στο λιμάνι."
           },
           {
             "name": "Koutavos Lagoon",
@@ -31,7 +33,9 @@
             "type": "nature",
             "time": "10:00",
             "wiki": null,
-            "desc": "Protected lagoon behind the causeway — a habitat for loggerhead sea turtles and herons. Walk the perimeter path for views of the lagoon and the mountains."
+            "desc": "Protected lagoon behind the causeway — a habitat for loggerhead sea turtles and herons. Walk the perimeter path for views of the lagoon and the mountains.",
+            "name_el": "Λιμνοθάλασσα Κούταβος",
+            "desc_el": "Προστατευμένη λιμνοθάλασσα πίσω από τη γέφυρα — βιότοπος για τις θαλάσσιες χελώνες καρέτα και ερωδιούς. Περπάτησε το περιφερειακό μονοπάτι για θέα στη λιμνοθάλασσα και τα βουνά."
           },
           {
             "name": "Archaeological Museum Argostoli",
@@ -40,7 +44,9 @@
             "type": "museum",
             "time": "11:00",
             "wiki": null,
-            "desc": "Excellent collection of Mycenaean and Classical finds from across the island. The gold Mycenaean jewellery is outstanding."
+            "desc": "Excellent collection of Mycenaean and Classical finds from across the island. The gold Mycenaean jewellery is outstanding.",
+            "name_el": "Αρχαιολογικό Μουσείο Αργοστολίου",
+            "desc_el": "Εξαιρετική συλλογή Μυκηναϊκών και Κλασικών ευρημάτων από όλο το νησί. Τα χρυσά μυκηναϊκά κοσμήματα είναι εξαιρετικά."
           },
           {
             "name": "Lunch — Casa Grec",
@@ -49,7 +55,9 @@
             "type": "village",
             "time": "13:00",
             "wiki": null,
-            "desc": "One of the best restaurants in Argostoli — Corfiot-inspired cooking with local ingredients. Try the lamb with Robola wine sauce."
+            "desc": "One of the best restaurants in Argostoli — Corfiot-inspired cooking with local ingredients. Try the lamb with Robola wine sauce.",
+            "name_el": "Μεσημεριανό — Casa Grec",
+            "desc_el": "Ένα από τα καλύτερα εστιατόρια στο Αργοστόλι — μαγειρική με κερκυραϊκή έμπνευση και τοπικά υλικά. Δοκίμασε αρνί με σάλτσα κρασιού Ροπόλα."
           },
           {
             "name": "Lassi Beaches",
@@ -58,7 +66,9 @@
             "type": "beach",
             "time": "15:30",
             "wiki": null,
-            "desc": "Series of sandy beaches on the Lassi peninsula near Argostoli. Calm, well organised, good for families. The best are Makris Gialos and Platis Gialos."
+            "desc": "Series of sandy beaches on the Lassi peninsula near Argostoli. Calm, well organised, good for families. The best are Makris Gialos and Platis Gialos.",
+            "name_el": "Παραλίες Λάσσης",
+            "desc_el": "Σειρά αμμωδών παραλιών στη χερσόνησο της Λάσσης κοντά στο Αργοστόλι. Ήρεμες, καλά οργανωμένες, καλές για οικογένειες. Οι καλύτερες είναι ο Μακρύς Γιαλός και ο Πλατύς Γιαλός."
           }
         ]
       },
@@ -77,16 +87,20 @@
             "type": "nature",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Myrtos_beach",
-            "desc": "Stop at the famous viewpoint above Myrtos before descending — the view of the white beach between sheer grey cliffs is one of the iconic images of Greece. Best light in the morning."
+            "desc": "Stop at the famous viewpoint above Myrtos before descending — the view of the white beach between sheer grey cliffs is one of the iconic images of Greece. Best light in the morning.",
+            "name_el": "Παρατηρητήριο Παραλίας Μύρτου",
+            "desc_el": "Σταμάτησε στο διάσημο παρατηρητήριο πάνω από τον Μύρτο πριν κατέβεις — η θέα της λευκής παραλίας ανάμεσα σε κατακόρυφους γκρίζους γκρεμούς είναι μία από τις εμβληματικές εικόνες της Ελλάδας. Καλύτερο φως το πρωί."
           },
           {
             "name": "Myrtos Beach",
-            "lat": 38.2717,
-            "lng": 20.565,
+            "lat": 38.3425,
+            "lng": 20.5386,
             "type": "beach",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Myrtos_beach",
-            "desc": "One of the most dramatic beaches in the world — white pebble and azure water between 300m cliffs. The water is cold, clear and deep. Gets busy by midday. The descent road is steep and narrow."
+            "desc": "One of the most dramatic beaches in the world — white pebble and azure water between 300m cliffs. The water is cold, clear and deep. Gets busy by midday. The descent road is steep and narrow.",
+            "name_el": "Παραλία Μύρτος",
+            "desc_el": "Μία από τις πιο εντυπωσιακές παραλίες του κόσμου — λευκό βότσαλο και αζούρ νερά ανάμεσα σε γκρεμούς 300 μέτρων. Τα νερά είναι κρύα, διαυγή και βαθιά. Γεμίζει μέχρι το μεσημέρι. Ο δρόμος καθόδου είναι απότομος και στενός."
           },
           {
             "name": "Assos Village",
@@ -95,7 +109,9 @@
             "type": "village",
             "time": "13:00",
             "wiki": "https://en.wikipedia.org/wiki/Assos,_Kefalonia",
-            "desc": "The most beautiful village in Kefalonia — a tiny isthmus village beneath a Venetian castle. Lunch at one of the harbour tavernas. Perfect swimming in the clear bay."
+            "desc": "The most beautiful village in Kefalonia — a tiny isthmus village beneath a Venetian castle. Lunch at one of the harbour tavernas. Perfect swimming in the clear bay.",
+            "name_el": "Χωριό Άσσος",
+            "desc_el": "Το ομορφότερο χωριό της Κεφαλονιάς — ένα μικρό χωριό σε ισθμό κάτω από βενετσιάνικο κάστρο. Μεσημεριανό σε μία από τις ταβέρνες του λιμανιού. Τέλειο μπάνιο στον διαυγή κόλπο."
           },
           {
             "name": "Assos Castle",
@@ -104,7 +120,9 @@
             "type": "castle",
             "time": "15:00",
             "wiki": null,
-            "desc": "16th-century Venetian castle on the headland above Assos. Walk up through the pine trees for extraordinary views over the village and the bay."
+            "desc": "16th-century Venetian castle on the headland above Assos. Walk up through the pine trees for extraordinary views over the village and the bay.",
+            "name_el": "Κάστρο Άσσου",
+            "desc_el": "Βενετσιάνικο κάστρο του 16ου αιώνα στο ακρωτήρι πάνω από τον Άσσο. Ανέβα μέσα από τα πεύκα για εκπληκτική θέα στο χωριό και τον κόλπο."
           },
           {
             "name": "Fiscardo",
@@ -113,7 +131,9 @@
             "type": "harbour",
             "time": "17:30",
             "wiki": "https://en.wikipedia.org/wiki/Fiscardo",
-            "desc": "The only village in Kefalonia that survived the 1953 earthquake intact — a perfect Venetian harbour with colourful houses and superyachts. Most expensive spot on the island. Stay overnight."
+            "desc": "The only village in Kefalonia that survived the 1953 earthquake intact — a perfect Venetian harbour with colourful houses and superyachts. Most expensive spot on the island. Stay overnight.",
+            "name_el": "Φισκάρδο",
+            "desc_el": "Το μόνο χωριό της Κεφαλονιάς που σώθηκε άθικτο από τον σεισμό του 1953 — ένα τέλειο βενετσιάνικο λιμάνι με χρωματιστά σπίτια και superyachts. Το πιο ακριβό σημείο του νησιού. Διανυκτέρευση εδώ."
           }
         ]
       },
@@ -132,7 +152,9 @@
             "type": "nature",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Melissani_Cave",
-            "desc": "An underground lake in a partially open cave — when the sun hits the turquoise water through the roof opening at midday, the colour is extraordinary. Boat tour included. Go before 11am for the best light."
+            "desc": "An underground lake in a partially open cave — when the sun hits the turquoise water through the roof opening at midday, the colour is extraordinary. Boat tour included. Go before 11am for the best light.",
+            "name_el": "Σπήλαιο Μελισσάνη",
+            "desc_el": "Μια υπόγεια λίμνη σε εν μέρει ανοιχτή σπηλιά — όταν ο ήλιος χτυπά τα τιρκουάζ νερά μέσα από το άνοιγμα της οροφής το μεσημέρι, το χρώμα είναι εκπληκτικό. Περιλαμβάνεται βαρκάδα. Πήγαινε πριν τις 11 π.μ. για το καλύτερο φως."
           },
           {
             "name": "Drogarati Cave",
@@ -141,7 +163,9 @@
             "type": "nature",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Drogarati_Cave",
-            "desc": "Spectacular stalactite cave with a large chamber used as a concert hall. The acoustics are renowned — Yanni and Maria Callas have performed here."
+            "desc": "Spectacular stalactite cave with a large chamber used as a concert hall. The acoustics are renowned — Yanni and Maria Callas have performed here.",
+            "name_el": "Σπήλαιο Δρογκαράτη",
+            "desc_el": "Εντυπωσιακό σπήλαιο σταλακτιτών με μεγάλο θάλαμο που χρησιμοποιείται ως αίθουσα συναυλιών. Η ακουστική είναι περίφημη — ο Yanni και η Μαρία Κάλλας έχουν δώσει συναυλίες εδώ."
           },
           {
             "name": "Sami",
@@ -150,16 +174,20 @@
             "type": "harbour",
             "time": "12:30",
             "wiki": "https://en.wikipedia.org/wiki/Sami,_Kefalonia",
-            "desc": "Main ferry port of Kefalonia, used as a filming location for Captain Corelli's Mandolin. Pleasant waterfront, good lunch options."
+            "desc": "Main ferry port of Kefalonia, used as a filming location for Captain Corelli's Mandolin. Pleasant waterfront, good lunch options.",
+            "name_el": "Σάμη",
+            "desc_el": "Κύριο ακτοπλοϊκό λιμάνι της Κεφαλονιάς, που χρησιμοποιήθηκε ως τοποθεσία γυρισμάτων για το Captain Corelli's Mandolin. Ευχάριστη παραλιακή, καλές επιλογές για μεσημεριανό."
           },
           {
             "name": "Antisamos Beach",
-            "lat": 38.2783,
-            "lng": 20.6683,
+            "lat": 38.25,
+            "lng": 20.6789,
             "type": "beach",
             "time": "14:30",
             "wiki": "https://en.wikipedia.org/wiki/Antisamos_beach",
-            "desc": "Gorgeous pebble beach near Sami, also filmed in Captain Corelli's Mandolin. Exceptionally clear, cold water. Surrounded by dense green hills — one of the most beautiful settings in the Ionian."
+            "desc": "Gorgeous pebble beach near Sami, also filmed in Captain Corelli's Mandolin. Exceptionally clear, cold water. Surrounded by dense green hills — one of the most beautiful settings in the Ionian.",
+            "name_el": "Παραλία Αντίσαμος",
+            "desc_el": "Υπέροχη παραλία βότσαλου κοντά στη Σάμη, επίσης γυρισμένη στο Captain Corelli's Mandolin. Εξαιρετικά διαυγή, κρύα νερά. Περιτριγυρισμένη από πυκνούς πράσινους λόφους — ένα από τα ομορφότερα σκηνικά του Ιονίου."
           }
         ]
       },
@@ -178,7 +206,9 @@
             "type": "distillery",
             "time": "10:00",
             "wiki": null,
-            "desc": "Taste Kefalonia's famous Robola — a crisp, dry white wine made only on this island. The cooperative in Fragata is the best place to taste and buy. Free tasting."
+            "desc": "Taste Kefalonia's famous Robola — a crisp, dry white wine made only on this island. The cooperative in Fragata is the best place to taste and buy. Free tasting.",
+            "name_el": "Συνεταιρισμός Κρασιού Ρόπολα",
+            "desc_el": "Δοκίμασε τη διάσημη Ροπόλα της Κεφαλονιάς — ένα ξηρό, τραγανό λευκό κρασί που παράγεται μόνο σε αυτό το νησί. Ο συνεταιρισμός στα Φραγκάτα είναι το καλύτερο σημείο για γευσιγνωσία και αγορά. Δωρεάν δοκιμή."
           },
           {
             "name": "Mount Ainos National Park",
@@ -187,16 +217,20 @@
             "type": "nature",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Ainos_National_Park",
-            "desc": "Dense forest of Abies cephalonica — a fir tree found only on this island. Drive through the park for views over the entire island and across to the mainland."
+            "desc": "Dense forest of Abies cephalonica — a fir tree found only on this island. Drive through the park for views over the entire island and across to the mainland.",
+            "name_el": "Εθνικός Δρυμός Αίνου",
+            "desc_el": "Πυκνό δάσος Abies cephalonica — ένα είδος ελάτου που υπάρχει μόνο σε αυτό το νησί. Οδήγησε μέσα από το πάρκο για θέα σε ολόκληρο το νησί και απέναντι στην ηπειρωτική χώρα."
           },
           {
             "name": "Lourdas Beach",
-            "lat": 38.0867,
-            "lng": 20.6217,
+            "lat": 38.1247,
+            "lng": 20.61,
             "type": "beach",
             "time": "14:00",
             "wiki": null,
-            "desc": "Long, sandy, south-facing beach with Ionian views — one of the best on the island. Loggerhead sea turtles nest here. The tavernas above on the hill have the best view of any restaurant in Kefalonia."
+            "desc": "Long, sandy, south-facing beach with Ionian views — one of the best on the island. Loggerhead sea turtles nest here. The tavernas above on the hill have the best view of any restaurant in Kefalonia.",
+            "name_el": "Παραλία Λουρδάτα",
+            "desc_el": "Μακριά, αμμώδης, νότια παραλία με θέα στο Ιόνιο — μία από τις καλύτερες του νησιού. Θαλάσσιες χελώνες καρέτα γεννούν εδώ. Οι ταβέρνες ψηλά στον λόφο έχουν την καλύτερη θέα από κάθε εστιατόριο της Κεφαλονιάς."
           },
           {
             "name": "Skala Beach",
@@ -205,7 +239,9 @@
             "type": "beach",
             "time": "16:30",
             "wiki": null,
-            "desc": "Sandy south-coast resort beach. Calm, shallow, family-friendly. Roman villa ruins just behind the beach are free to visit."
+            "desc": "Sandy south-coast resort beach. Calm, shallow, family-friendly. Roman villa ruins just behind the beach are free to visit.",
+            "name_el": "Παραλία Σκάλας",
+            "desc_el": "Αμμώδης παραλία θερέτρου της νότιας ακτής. Ήρεμη, ρηχή, οικογενειακή. Ερείπια ρωμαϊκής βίλας ακριβώς πίσω από την παραλία είναι δωρεάν επισκέψιμα."
           }
         ]
       },
@@ -224,7 +260,9 @@
             "type": "harbour",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Poros,_Kefalonia",
-            "desc": "Small ferry port on the east coast with ferry connections to Kyllini and Zakynthos. Attractive harbour with good tavernas."
+            "desc": "Small ferry port on the east coast with ferry connections to Kyllini and Zakynthos. Attractive harbour with good tavernas.",
+            "name_el": "Πόρος",
+            "desc_el": "Μικρό ακτοπλοϊκό λιμάνι στην ανατολική ακτή με συνδέσεις προς Κυλλήνη και Ζάκυνθο. Ελκυστικό λιμάνι με καλές ταβέρνες."
           },
           {
             "name": "Katelios Beach",
@@ -233,7 +271,9 @@
             "type": "beach",
             "time": "11:00",
             "wiki": null,
-            "desc": "Quiet sandy beach in a fishing village on the south coast. One of the main turtle nesting beaches on the island — look but don't disturb."
+            "desc": "Quiet sandy beach in a fishing village on the south coast. One of the main turtle nesting beaches on the island — look but don't disturb.",
+            "name_el": "Παραλία Κατελειού",
+            "desc_el": "Ήσυχη αμμώδης παραλία σε ψαροχώρι της νότιας ακτής. Μία από τις κύριες παραλίες αναπαραγωγής χελώνας του νησιού — κοίτα αλλά μην ενοχλείς."
           },
           {
             "name": "Tzanata",
@@ -242,7 +282,9 @@
             "type": "museum",
             "time": "13:00",
             "wiki": null,
-            "desc": "Mycenaean tholos tomb discovered in 1992 — one of the most important Bronze Age finds in the Ionian islands. Some scholars believe this area may be the true location of Odysseus's kingdom."
+            "desc": "Mycenaean tholos tomb discovered in 1992 — one of the most important Bronze Age finds in the Ionian islands. Some scholars believe this area may be the true location of Odysseus's kingdom.",
+            "name_el": "Τζαννάτα",
+            "desc_el": "Μυκηναϊκός θολωτός τάφος που ανακαλύφθηκε το 1992 — ένα από τα σημαντικότερα ευρήματα της Εποχής του Χαλκού στο Ιόνιο. Κάποιοι μελετητές πιστεύουν ότι αυτή η περιοχή μπορεί να είναι η πραγματική τοποθεσία του βασιλείου του Οδυσσέα."
           },
           {
             "name": "Argostoli — Departure",
@@ -251,7 +293,9 @@
             "type": "city",
             "time": "15:30",
             "wiki": null,
-            "desc": "Return to Argostoli for ferry or flight departure. Final coffee on the waterfront watching the turtles."
+            "desc": "Return to Argostoli for ferry or flight departure. Final coffee on the waterfront watching the turtles.",
+            "name_el": "Αργοστόλι — Αναχώρηση",
+            "desc_el": "Επιστροφή στο Αργοστόλι για αναχώρηση πλοίου ή πτήσης. Τελευταίος καφές στην παραλιακή κοιτάζοντας τις χελώνες."
           }
         ]
       }
@@ -269,8 +313,14 @@
       "facilities": "Basic: one beach bar, some sunbeds. Steep narrow descent road — arrive early.",
       "desc": "One of the most dramatic beaches in the world — dazzling white pebble between sheer 300m grey cliffs, with water of an impossible deep blue. The view from the road above is iconic. The water is cold and deep — not for young children. Everything else is perfect.",
       "commons": "Myrtos_beach_Kefalonia.jpg",
-      "lat": 38.2717,
-      "lng": 20.565
+      "lat": 38.3425,
+      "lng": 20.5386,
+      "name_el": "Παραλία Μύρτος",
+      "type_el": "Λευκό βότσαλο και χονδρή άμμος",
+      "depth_el": "Βαθιά — κρύα, κρυστάλλινα νερά. Χωρίς σταδιακή είσοδο.",
+      "facing_el": "Δυτική — προστατευμένη από γκρεμούς, απογευματινός ήλιος",
+      "facilities_el": "Στοιχειώδεις: ένα beach bar, κάποιες ξαπλώστρες. Απότομος στενός δρόμος καθόδου — φτάσε νωρίς.",
+      "desc_el": "Μία από τις πιο εντυπωσιακές παραλίες του κόσμου — εκθαμβωτικό λευκό βότσαλο ανάμεσα σε κατακόρυφους γκρίζους γκρεμούς 300 μέτρων, με νερά αδύνατου βαθιού μπλε. Η θέα από τον δρόμο πάνω είναι εμβληματική. Τα νερά είναι κρύα και βαθιά — όχι για μικρά παιδιά. Όλα τα άλλα είναι τέλεια."
     },
     {
       "name": "Antisamos Beach",
@@ -283,8 +333,14 @@
       "facilities": "Good: sunbeds, beach bar, taverna, parking. Filmed in Captain Corelli's Mandolin.",
       "desc": "A stunning pebble beach near Sami surrounded by dense green hills — the setting feels almost tropical despite the Ionian latitude. The water is exceptionally clear and blue. One of the most beautiful beaches in the Ionian islands.",
       "commons": null,
-      "lat": 38.2783,
-      "lng": 20.6683
+      "lat": 38.25,
+      "lng": 20.6789,
+      "name_el": "Παραλία Αντίσαμος",
+      "type_el": "Λεπτό λευκό βότσαλο",
+      "depth_el": "Μέτριο έως βαθύ — πολύ καθαρά, κρύα νερά",
+      "facing_el": "Ανατολική — προστατευμένος κόλπος, ήρεμος",
+      "facilities_el": "Καλές: ξαπλώστρες, beach bar, ταβέρνα, parking. Γυρισμένη στο Captain Corelli's Mandolin.",
+      "desc_el": "Μια εκπληκτική παραλία βότσαλου κοντά στη Σάμη περιτριγυρισμένη από πυκνούς πράσινους λόφους — το σκηνικό φαίνεται σχεδόν τροπικό παρά το γεωγραφικό πλάτος του Ιονίου. Τα νερά είναι εξαιρετικά καθαρά και μπλε. Μία από τις ομορφότερες παραλίες των Επτανήσων."
     },
     {
       "name": "Lourdas Beach",
@@ -297,8 +353,14 @@
       "facilities": "Good: sunbeds, tavernas on the hill above, parking. Loggerhead turtle nesting area.",
       "desc": "A long sandy south-coast beach with extraordinary views over the Ionian Sea. Loggerhead sea turtles nest here from June onwards — look out for nesting markers. The hillside tavernas above have the best panoramic view of any restaurant on the island.",
       "commons": null,
-      "lat": 38.0867,
-      "lng": 20.6217
+      "lat": 38.1247,
+      "lng": 20.61,
+      "name_el": "Παραλία Λουρδάτα",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχό — εξαιρετικό για οικογένειες, παραλία αναπαραγωγής χελώνας",
+      "facing_el": "Νότια — ζεστά, ήρεμα νερά Ιονίου",
+      "facilities_el": "Καλές: ξαπλώστρες, ταβέρνες στον λόφο πάνω, parking. Περιοχή αναπαραγωγής χελώνας καρέτα.",
+      "desc_el": "Μια μακριά αμμώδης νότια παραλία με εξαιρετική θέα στο Ιόνιο. Θαλάσσιες χελώνες καρέτα γεννούν εδώ από τον Ιούνιο και μετά — πρόσεχε τα σήματα φωλιών. Οι ταβέρνες στον λόφο πάνω έχουν την καλύτερη πανοραμική θέα από κάθε εστιατόριο του νησιού."
     },
     {
       "name": "Petani Beach",
@@ -311,8 +373,14 @@
       "facilities": "Basic: one taverna, limited sunbeds. Reached via narrow road.",
       "desc": "A remote west-coast beach with the same dramatic cliff scenery as Myrtos but far fewer visitors. White cliffs, turquoise water and a small taverna at the waterline. One of the best alternatives to Myrtos for those wanting the scenery without the crowds.",
       "commons": null,
-      "lat": 38.3067,
-      "lng": 20.53
+      "lat": 38.3217,
+      "lng": 20.4314,
+      "name_el": "Παραλία Πετάνι",
+      "type_el": "Βότσαλο και χονδρή άμμος",
+      "depth_el": "Μέτριο — διαυγή τιρκουάζ νερά",
+      "facing_el": "Δυτική — εντυπωσιακό σκηνικό γκρεμού, θέα στο ηλιοβασίλεμα",
+      "facilities_el": "Στοιχειώδεις: μία ταβέρνα, περιορισμένες ξαπλώστρες. Πρόσβαση μέσω στενού δρόμου.",
+      "desc_el": "Μια απομακρυσμένη παραλία της δυτικής ακτής με το ίδιο εντυπωσιακό σκηνικό γκρεμού όπως ο Μύρτος αλλά πολύ λιγότερους επισκέπτες. Λευκοί γκρεμοί, τιρκουάζ νερά και μια μικρή ταβέρνα στην παραλία. Μία από τις καλύτερες εναλλακτικές του Μύρτου για όσους θέλουν το σκηνικό χωρίς τα πλήθη."
     },
     {
       "name": "Xi Beach",
@@ -325,8 +393,17 @@
       "facilities": "Well organised: sunbeds, beach bars, tavernas, parking. Unique red sand from cliff erosion.",
       "desc": "Kefalonia's most unusual beach — the sand is a distinctive dark red colour from the clay cliffs eroding into it. Shallow, warm and calm. The red sand and blue water contrast is striking. One of the best family beaches on the island.",
       "commons": null,
-      "lat": 38.1,
-      "lng": 20.4283
+      "lat": 38.1372,
+      "lng": 20.4,
+      "name_el": "Παραλία Ξι",
+      "type_el": "Λεπτή κόκκινη άμμος",
+      "depth_el": "Ρηχό — πολύ σταδιακό, ασφαλές για παιδιά",
+      "facing_el": "Νότια — ήρεμα, ζεστά νερά, φυσικά προστατευμένη",
+      "facilities_el": "Καλά οργανωμένη: ξαπλώστρες, beach bars, ταβέρνες, parking. Μοναδική κόκκινη άμμος από διάβρωση γκρεμού.",
+      "desc_el": "Η πιο ασυνήθιστη παραλία της Κεφαλονιάς — η άμμος έχει χαρακτηριστικό σκούρο κόκκινο χρώμα από τους πηλώδεις γκρεμούς που διαβρώνονται μέσα της. Ρηχή, ζεστή και ήρεμη. Η αντίθεση κόκκινης άμμου και μπλε νερού είναι εντυπωσιακή. Μία από τις καλύτερες οικογενειακές παραλίες του νησιού."
     }
-  ]
+  ],
+  "name_el": "Κεφαλονιά",
+  "subtitle_el": "Μύρτος, ελατοδάση και το πιο εντυπωσιακό νησί του Ιονίου",
+  "intro_el": "Η Κεφαλονιά είναι το μεγαλύτερο και πιο εντυπωσιακό νησί του Ιονίου — ένα τραχύ τοπίο από επιβλητικά ελατοδάση, βαθιούς κόλπους, κατακόρυφους γκρεμούς και μερικές από τις πιο εντυπωσιακές παραλίες της Ελλάδας. Η παραλία Μύρτος είναι μία από τις πιο φωτογραφημένες στον κόσμο. Το νησί έχει το δικό του κρασί (Ροπόλα), τη δική του φυλή χελώνας (Caretta caretta που γεννά στα Λουρδάτα), και έναν αργό, ξεκούραστο ρυθμό παρά τη δημοτικότητά του."
 }

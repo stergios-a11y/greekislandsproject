@@ -22,7 +22,9 @@
             "type": "city",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Agios_Nikolaos,_Lasithi",
-            "desc": "The most elegant town in Crete — a cosmopolitan harbour built around a bottomless lake connected to the sea by a channel. Excellent cafes, restaurants and a Archaeological Museum."
+            "desc": "The most elegant town in Crete — a cosmopolitan harbour built around a bottomless lake connected to the sea by a channel. Excellent cafes, restaurants and a Archaeological Museum.",
+            "name_el": "Πόλη Αγίου Νικολάου",
+            "desc_el": "Η πιο κομψή πόλη της Κρήτης — ένα κοσμοπολίτικο λιμάνι χτισμένο γύρω από μια αβυσσαλέα λίμνη που συνδέεται με τη θάλασσα μέσω καναλιού. Εξαιρετικά καφέ, εστιατόρια και Αρχαιολογικό Μουσείο."
           },
           {
             "name": "Lake Voulismeni",
@@ -31,7 +33,9 @@
             "type": "nature",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Lake_Voulismeni",
-            "desc": "The famous bottomless lake at the heart of Agios Nikolaos. According to legend, Athena and Artemis bathed here. Lined with cafes — the best coffee spot in the region."
+            "desc": "The famous bottomless lake at the heart of Agios Nikolaos. According to legend, Athena and Artemis bathed here. Lined with cafes — the best coffee spot in the region.",
+            "name_el": "Λίμνη Βουλισμένη",
+            "desc_el": "Η περίφημη αβυσσαλέα λίμνη στην καρδιά του Αγίου Νικολάου. Σύμφωνα με τον μύθο, η Αθηνά και η Άρτεμις λούστηκαν εδώ. Περιτριγυρισμένη από καφέ — το καλύτερο σημείο για καφέ στην περιοχή."
           },
           {
             "name": "Elounda",
@@ -40,7 +44,9 @@
             "type": "harbour",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Elounda",
-            "desc": "Upmarket resort village on a sheltered gulf with calm, crystal-clear water. Base for the Spinalonga boat trip. The sunken city of Olous is visible underwater at the causeway."
+            "desc": "Upmarket resort village on a sheltered gulf with calm, crystal-clear water. Base for the Spinalonga boat trip. The sunken city of Olous is visible underwater at the causeway.",
+            "name_el": "Ελούντα",
+            "desc_el": "Αναβαθμισμένο παραθαλάσσιο χωριό σε προστατευμένο κόλπο με ήρεμα, κρυστάλλινα νερά. Βάση για το ταξίδι με βάρκα στη Σπιναλόγκα. Η βυθισμένη πόλη της Ολούντας είναι ορατή κάτω από το νερό στο μώλο."
           },
           {
             "name": "Schisma Beach Elounda",
@@ -49,7 +55,9 @@
             "type": "beach",
             "time": "14:00",
             "wiki": null,
-            "desc": "Calm sandy beach in the sheltered gulf of Elounda. The water here is noticeably warmer and calmer than the open sea. Ideal for families."
+            "desc": "Calm sandy beach in the sheltered gulf of Elounda. The water here is noticeably warmer and calmer than the open sea. Ideal for families.",
+            "name_el": "Παραλία Σχίσμα Ελούντας",
+            "desc_el": "Ήρεμη αμμώδης παραλία στον προστατευμένο κόλπο της Ελούντας. Τα νερά εδώ είναι αισθητά πιο ζεστά και πιο ήρεμα από την ανοιχτή θάλασσα. Ιδανική για οικογένειες."
           },
           {
             "name": "Dinner — Ferryman Elounda",
@@ -58,7 +66,9 @@
             "type": "harbour",
             "time": "20:00",
             "wiki": null,
-            "desc": "One of the best seafood restaurants in Lasithi, right on the Elounda waterfront. Try the lobster pasta — a local speciality."
+            "desc": "One of the best seafood restaurants in Lasithi, right on the Elounda waterfront. Try the lobster pasta — a local speciality.",
+            "name_el": "Δείπνο — Ferryman Elounda",
+            "desc_el": "Ένα από τα καλύτερα ψαροεστιατόρια του Λασιθίου, ακριβώς στην παραλιακή της Ελούντας. Δοκίμασε τη μακαρονάδα με αστακό — τοπική σπεσιαλιτέ."
           }
         ]
       },
@@ -77,7 +87,9 @@
             "type": "castle",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Spinalonga",
-            "desc": "Greece's last active leper colony, closed in 1957. The Venetian fortress walls, abandoned streets and the church of Agios Georgios create one of the most atmospheric sites in the Aegean. Boats from Elounda and Plaka every 30 minutes."
+            "desc": "Greece's last active leper colony, closed in 1957. The Venetian fortress walls, abandoned streets and the church of Agios Georgios create one of the most atmospheric sites in the Aegean. Boats from Elounda and Plaka every 30 minutes.",
+            "name_el": "Νησί Σπιναλόγκα",
+            "desc_el": "Η τελευταία ενεργή λεπροκομία της Ελλάδας, που έκλεισε το 1957. Τα βενετσιάνικα τείχη του φρουρίου, οι εγκαταλελειμμένοι δρόμοι και η εκκλησία του Αγίου Γεωργίου δημιουργούν έναν από τους πιο ατμοσφαιρικούς χώρους του Αιγαίου. Βάρκες από Ελούντα και Πλάκα κάθε 30 λεπτά."
           },
           {
             "name": "Kritsa Village",
@@ -86,7 +98,9 @@
             "type": "village",
             "time": "12:30",
             "wiki": "https://en.wikipedia.org/wiki/Kritsa",
-            "desc": "One of the largest and most beautiful traditional villages in Crete. Famous for woven lace textiles and the Byzantine church of Panagia Kera — the finest Byzantine frescoes on the island."
+            "desc": "One of the largest and most beautiful traditional villages in Crete. Famous for woven lace textiles and the Byzantine church of Panagia Kera — the finest Byzantine frescoes on the island.",
+            "name_el": "Χωριό Κριτσά",
+            "desc_el": "Ένα από τα μεγαλύτερα και ομορφότερα παραδοσιακά χωριά της Κρήτης. Διάσημο για τα υφαντά δαντελωτά υφάσματα και τη βυζαντινή εκκλησία της Παναγίας Κεράς — οι καλύτερες βυζαντινές τοιχογραφίες του νησιού."
           },
           {
             "name": "Ancient Lato",
@@ -95,7 +109,9 @@
             "type": "museum",
             "time": "14:30",
             "wiki": "https://en.wikipedia.org/wiki/Lato",
-            "desc": "Remarkably preserved Dorian city-state perched on a twin-peaked hill above Kritsa. Rarely visited, free entry, and extraordinary views over the gulf of Agios Nikolaos."
+            "desc": "Remarkably preserved Dorian city-state perched on a twin-peaked hill above Kritsa. Rarely visited, free entry, and extraordinary views over the gulf of Agios Nikolaos.",
+            "name_el": "Αρχαία Λατώ",
+            "desc_el": "Εξαιρετικά διατηρημένη Δωρική πόλη-κράτος σε λόφο με δύο κορυφές πάνω από την Κριτσά. Σπάνια επισκέψιμη, δωρεάν είσοδος, και εξαιρετική θέα στον κόλπο του Αγίου Νικολάου."
           },
           {
             "name": "Almyros Beach",
@@ -104,7 +120,9 @@
             "type": "beach",
             "time": "16:30",
             "wiki": null,
-            "desc": "Long sandy beach 2km south of Agios Nikolaos. A freshwater river runs into the sea here, creating a natural lagoon — flamingoes visit in spring."
+            "desc": "Long sandy beach 2km south of Agios Nikolaos. A freshwater river runs into the sea here, creating a natural lagoon — flamingoes visit in spring.",
+            "name_el": "Παραλία Αλμυρός",
+            "desc_el": "Μακριά αμμώδης παραλία 2 χλμ νότια του Αγίου Νικολάου. Ένα ποτάμι γλυκού νερού εκβάλλει στη θάλασσα εδώ, δημιουργώντας μια φυσική λιμνοθάλασσα — φλαμίνγκο επισκέπτονται την άνοιξη."
           }
         ]
       },
@@ -123,7 +141,9 @@
             "type": "city",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Sitia",
-            "desc": "Relaxed, unspoiled town on the far east coast. Visit the Archaeological Museum for the extraordinary Palaikastro Kouros — the finest Minoan ivory statuette ever found."
+            "desc": "Relaxed, unspoiled town on the far east coast. Visit the Archaeological Museum for the extraordinary Palaikastro Kouros — the finest Minoan ivory statuette ever found.",
+            "name_el": "Πόλη Σητείας",
+            "desc_el": "Χαλαρή, ανέγγιχτη πόλη στην ανατολική ακτή. Επισκέψου το Αρχαιολογικό Μουσείο για τον εξαιρετικό Κούρο του Παλαικάστρου — το καλύτερο μινωικό ελεφάντινο αγαλματίδιο που έχει βρεθεί ποτέ."
           },
           {
             "name": "Vai Beach",
@@ -132,7 +152,9 @@
             "type": "beach",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Vai",
-            "desc": "Europe's only natural palm forest beach — 5000 Cretan date palms line a sandy cove at the far northeast tip of Crete. Unique and spectacular. Can get very crowded in high summer — go before 10am."
+            "desc": "Europe's only natural palm forest beach — 5000 Cretan date palms line a sandy cove at the far northeast tip of Crete. Unique and spectacular. Can get very crowded in high summer — go before 10am.",
+            "name_el": "Παραλία Βάι",
+            "desc_el": "Η μοναδική φυσική παραλία με φοινικόδασος της Ευρώπης — 5000 κρητικοί φοίνικες πλαισιώνουν έναν αμμώδη κόλπο στην βορειοανατολική άκρη της Κρήτης. Μοναδική και εντυπωσιακή. Μπορεί να γεμίσει πολύ τον Αύγουστο — πήγαινε πριν τις 10 π.μ."
           },
           {
             "name": "Itanos Ruins",
@@ -141,7 +163,9 @@
             "type": "museum",
             "time": "13:00",
             "wiki": null,
-            "desc": "Ancient city ruins on the headland just north of Vai. Scattered columns, cisterns and walls above a wild pebble beach. Free, unguarded and completely empty."
+            "desc": "Ancient city ruins on the headland just north of Vai. Scattered columns, cisterns and walls above a wild pebble beach. Free, unguarded and completely empty.",
+            "name_el": "Ερείπια Ιτάνου",
+            "desc_el": "Ερείπια αρχαίας πόλης στο ακρωτήρι ακριβώς βόρεια του Βάι. Διάσπαρτες κολώνες, στέρνες και τείχη πάνω από μια άγρια παραλία με βότσαλα. Δωρεάν, χωρίς φύλακες, εντελώς άδεια."
           },
           {
             "name": "Palekastro",
@@ -150,7 +174,9 @@
             "type": "village",
             "time": "15:00",
             "wiki": null,
-            "desc": "Quiet village near an extensive Minoan settlement. The nearby Kouremenos beach is the windsurfing capital of Crete."
+            "desc": "Quiet village near an extensive Minoan settlement. The nearby Kouremenos beach is the windsurfing capital of Crete.",
+            "name_el": "Παλαίκαστρο",
+            "desc_el": "Ήσυχο χωριό κοντά σε εκτεταμένο μινωικό οικισμό. Η κοντινή παραλία Κουρεμένος είναι η πρωτεύουσα του windsurf στην Κρήτη."
           }
         ]
       },
@@ -169,7 +195,9 @@
             "type": "museum",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Zakros",
-            "desc": "The fourth great Minoan palace of Crete, excavated in 1962. Uniquely, it was never looted in antiquity — treasures found intact are now in the Heraklion museum. Set directly on the sea at a dramatic cove."
+            "desc": "The fourth great Minoan palace of Crete, excavated in 1962. Uniquely, it was never looted in antiquity — treasures found intact are now in the Heraklion museum. Set directly on the sea at a dramatic cove.",
+            "name_el": "Ανάκτορο Κάτω Ζάκρου",
+            "desc_el": "Το τέταρτο μεγάλο μινωικό ανάκτορο της Κρήτης, που ανασκάφηκε το 1962. Μοναδικά, δεν λεηλατήθηκε ποτέ στην αρχαιότητα — οι θησαυροί που βρέθηκαν ανέπαφοι βρίσκονται τώρα στο μουσείο Ηρακλείου. Χτισμένο ακριβώς δίπλα στη θάλασσα σε εντυπωσιακό κόλπο."
           },
           {
             "name": "Gorge of the Dead",
@@ -178,7 +206,9 @@
             "type": "nature",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Gorge_of_the_Dead",
-            "desc": "Wild 8km gorge from the upper village to the palace. Minoan cave tombs are carved into the cliff walls. A 2.5-hour walk, much quieter than the Samaria Gorge."
+            "desc": "Wild 8km gorge from the upper village to the palace. Minoan cave tombs are carved into the cliff walls. A 2.5-hour walk, much quieter than the Samaria Gorge.",
+            "name_el": "Φαράγγι των Νεκρών",
+            "desc_el": "Άγριο φαράγγι 8 χλμ από το άνω χωριό μέχρι το ανάκτορο. Μινωικοί τάφοι σπηλιές είναι σκαλισμένοι στα τοιχώματα του γκρεμού. Πεζοπορία 2,5 ωρών, πολύ πιο ήσυχη από το Φαράγγι της Σαμαριάς."
           },
           {
             "name": "Xerokampos Beach",
@@ -187,7 +217,9 @@
             "type": "beach",
             "time": "14:00",
             "wiki": null,
-            "desc": "Series of remote, undeveloped beaches south of Zakros. Clear, warm Libyan Sea water, almost no tourists. The furthest you can get from the crowds in Crete."
+            "desc": "Series of remote, undeveloped beaches south of Zakros. Clear, warm Libyan Sea water, almost no tourists. The furthest you can get from the crowds in Crete.",
+            "name_el": "Παραλία Ξερόκαμπος",
+            "desc_el": "Σειρά από απομακρυσμένες, ανέγγιχτες παραλίες νότια της Ζάκρου. Καθαρά, ζεστά νερά του Λιβυκού πελάγους, σχεδόν καθόλου τουρίστες. Η μεγαλύτερη απόσταση που μπορείς να πάρεις από τα πλήθη στην Κρήτη."
           },
           {
             "name": "Makrigialos Beach",
@@ -196,7 +228,9 @@
             "type": "beach",
             "time": "16:30",
             "wiki": null,
-            "desc": "Long, organised beach on the south coast on the drive back west. Good for a final swim before the return journey."
+            "desc": "Long, organised beach on the south coast on the drive back west. Good for a final swim before the return journey.",
+            "name_el": "Παραλία Μακρύγιαλος",
+            "desc_el": "Μακριά, οργανωμένη παραλία στη νότια ακτή στη διαδρομή πίσω προς τα δυτικά. Καλή για ένα τελευταίο μπάνιο πριν την επιστροφή."
           }
         ]
       }
@@ -215,7 +249,13 @@
       "desc": "The only natural palm forest beach in Europe — 5000 Cretan date palms line a golden sand cove at the very tip of Crete. The combination of tropical vegetation and Aegean blue water is unlike anywhere else in Greece. Arrive early — it gets extremely busy by midday in summer.",
       "commons": "Vai_beach_Crete.jpg",
       "lat": 35.2547,
-      "lng": 26.2661
+      "lng": 26.2661,
+      "name_el": "Παραλία Βάι",
+      "type_el": "Λεπτή χρυσή άμμος",
+      "depth_el": "Ρηχό έως μέτριο — ήρεμα, διαυγή νερά",
+      "facing_el": "Βορειοανατολική — προστατευμένος κόλπος, ήρεμος τον περισσότερο χρόνο",
+      "facilities_el": "Οργανωμένη: ξαπλώστρες, ομπρέλες, εστιατόριο, parking (επί πληρωμή). Προστατευμένο εθνικό πάρκο — χωρίς camping.",
+      "desc_el": "Η μοναδική φυσική παραλία με φοινικόδασος της Ευρώπης — 5000 κρητικοί φοίνικες πλαισιώνουν έναν κόλπο χρυσής άμμου στην άκρη της Κρήτης. Ο συνδυασμός τροπικής βλάστησης και αιγαιοπελαγίτικων νερών δεν συναντάται πουθενά αλλού στην Ελλάδα. Φτάσε νωρίς — γεμίζει υπερβολικά μέχρι το μεσημέρι το καλοκαίρι."
     },
     {
       "name": "Voulisma Beach",
@@ -229,7 +269,13 @@
       "desc": "The finest beach near Agios Nikolaos — a wide crescent of golden sand with crystalline water near Istro. Consistently ranked among the best beaches in eastern Crete, yet surprisingly uncrowded compared to the west coast beaches.",
       "commons": null,
       "lat": 35.1075,
-      "lng": 25.7678
+      "lng": 25.7678,
+      "name_el": "Παραλία Βουλίσμα",
+      "type_el": "Λεπτή χρυσή άμμος",
+      "depth_el": "Ρηχό έως μέτριο — διαυγή, ζεστά νερά",
+      "facing_el": "Βορειοανατολική — προστατευμένη, ήρεμη",
+      "facilities_el": "Πλήρως οργανωμένη: ξαπλώστρες, θαλάσσια σπορ, ταβέρνα. Μία από τις καλύτερα εξοπλισμένες παραλίες της ανατολικής Κρήτης.",
+      "desc_el": "Η καλύτερη παραλία κοντά στον Άγιο Νικόλαο — μια πλατιά ημισέληνος χρυσής άμμου με κρυστάλλινα νερά κοντά στο Ίστρο. Σταθερά κατατάσσεται ανάμεσα στις καλύτερες παραλίες της ανατολικής Κρήτης, αλλά εκπληκτικά λιγότερο πολυσύχναστη από τις παραλίες της δυτικής ακτής."
     },
     {
       "name": "Xerokampos Beach",
@@ -243,7 +289,13 @@
       "desc": "Three remote, wild beaches in the far southeast of Crete, reachable only by rough road. Almost no tourists even in August. The Libyan Sea here is the warmest water in Crete. For those who want complete solitude in a dramatically beautiful setting.",
       "commons": null,
       "lat": 35.0625,
-      "lng": 26.2342
+      "lng": 26.2342,
+      "name_el": "Παραλία Ξερόκαμπος",
+      "type_el": "Άμμος και λεπτό βότσαλο",
+      "depth_el": "Μέτριο — ζεστό Λιβυκό πέλαγος, εξαιρετική ορατότητα",
+      "facing_el": "Νότια — ανοιχτό Λιβυκό πέλαγος, ζεστό και ήρεμο το καλοκαίρι",
+      "facilities_el": "Πολύ στοιχειώδεις: μία μικρή ταβέρνα-δωμάτια. Χωρίς ξαπλώστρες. Πρόσβαση μόνο με κακό δρόμο.",
+      "desc_el": "Τρεις απομακρυσμένες, άγριες παραλίες στο μακρινό νοτιοανατολικό άκρο της Κρήτης, προσβάσιμες μόνο με κακό δρόμο. Σχεδόν καθόλου τουρίστες ακόμα και τον Αύγουστο. Το Λιβυκό πέλαγος εδώ είναι το ζεστότερο νερό της Κρήτης. Για όσους θέλουν απόλυτη μοναξιά σε εντυπωσιακά όμορφο σκηνικό."
     },
     {
       "name": "Almyros Beach",
@@ -257,7 +309,13 @@
       "desc": "Long sandy beach just south of Agios Nikolaos where a freshwater river meets the sea, creating a natural lagoon. Flamingoes sometimes visit in spring. Calm, warm water and convenient location make it the best easy beach in the region.",
       "commons": null,
       "lat": 35.1842,
-      "lng": 25.7322
+      "lng": 25.7322,
+      "name_el": "Παραλία Αλμυρός",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχό — πηγή γλυκού νερού δημιουργεί τμήμα λιμνοθάλασσας",
+      "facing_el": "Ανατολική — προστατευμένος κόλπος, πολύ ήρεμη",
+      "facilities_el": "Καλές: ξαπλώστρες, ταβέρνες, εύκολο parking. Κοντά στον Άγιο Νικόλαο.",
+      "desc_el": "Μακριά αμμώδης παραλία ακριβώς νότια του Αγίου Νικολάου όπου ένα ποτάμι γλυκού νερού συναντά τη θάλασσα, δημιουργώντας μια φυσική λιμνοθάλασσα. Φλαμίνγκο επισκέπτονται μερικές φορές την άνοιξη. Ήρεμα, ζεστά νερά και βολική τοποθεσία την κάνουν την καλύτερη εύκολη παραλία της περιοχής."
     },
     {
       "name": "Kouremenos Beach",
@@ -271,7 +329,16 @@
       "desc": "The windsurfing capital of Crete near Palekastro — consistent winds and a long pebble beach make it world-class for water sports. The water is exceptionally clear. Not for those seeking a quiet beach day, but perfect for kitesurfers and windsurfers.",
       "commons": null,
       "lat": 35.2133,
-      "lng": 26.2642
+      "lng": 26.2642,
+      "name_el": "Παραλία Κουρεμένος",
+      "type_el": "Βότσαλο",
+      "depth_el": "Μέτριο — διαυγές, κρύο, εξαιρετικό για windsurfing",
+      "facing_el": "Ανατολική — δυνατοί αξιόπιστοι άνεμοι, ιδανική για θαλάσσια σπορ",
+      "facilities_el": "Μέτριες: δύο σχολές windsurfing, ταβέρνα, απλά δωμάτια. Όχι ιδανική για ηλιοθεραπεία.",
+      "desc_el": "Η πρωτεύουσα του windsurfing στην Κρήτη κοντά στο Παλαίκαστρο — σταθεροί άνεμοι και μια μακριά παραλία βότσαλου την κάνουν παγκοσμίου επιπέδου για θαλάσσια σπορ. Τα νερά είναι εξαιρετικά διαυγή. Όχι για όσους ψάχνουν μια ήσυχη μέρα στην παραλία, αλλά ιδανική για kitesurfers και windsurfers."
     }
-  ]
+  ],
+  "name_el": "Κρήτη (Λασίθι)",
+  "subtitle_el": "Σπιναλόγκα, φοινικόδασος του Βάι και η άγρια ανατολική Κρήτη",
+  "intro_el": "Το Λασίθι είναι το πιο μακριά από τους πεπατημένους δρόμους από τις τέσσερις περιοχές της Κρήτης — και το πιο ανταποδοτικό για όσους κάνουν την προσπάθεια. Η ανατολική άκρη της Κρήτης φιλοξενεί το Βάι, τη μοναδική φυσική παραλία με φοινικόδασος της Ευρώπης, το συγκλονιστικό νησί-λεπροκομία της Σπιναλόγκας, την κομψή πόλη του Αγίου Νικολάου και το μινωικό λιμάνι της Ζάκρου στο μακρινό ανατολικό άκρο. Το τοπίο γίνεται όλο και πιο εντυπωσιακό και ανέγγιχτο όσο πας προς τα ανατολικά."
 }

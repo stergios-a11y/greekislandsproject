@@ -22,7 +22,9 @@
             "type": "harbour",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Chania",
-            "desc": "The most beautiful harbour in Crete — a sweeping arc of Venetian architecture, the 16th-century lighthouse, and crystal water. Walk the waterfront at your own pace."
+            "desc": "The most beautiful harbour in Crete — a sweeping arc of Venetian architecture, the 16th-century lighthouse, and crystal water. Walk the waterfront at your own pace.",
+            "name_el": "Βενετσιάνικο Λιμάνι",
+            "desc_el": "Το ομορφότερο λιμάνι της Κρήτης — ένα σαρωτικό τόξο βενετσιάνικης αρχιτεκτονικής, ο φάρος του 16ου αιώνα και κρυστάλλινα νερά. Περπάτησε στην παραλιακή με τον ρυθμό σου."
           },
           {
             "name": "Chania Old Town",
@@ -31,7 +33,9 @@
             "type": "museum",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Chania",
-            "desc": "Labyrinthine lanes of the old Venetian and Ottoman quarter. Browse the leather market on Skridlof Street, the covered market, and the Byzantine museum."
+            "desc": "Labyrinthine lanes of the old Venetian and Ottoman quarter. Browse the leather market on Skridlof Street, the covered market, and the Byzantine museum.",
+            "name_el": "Παλιά Πόλη Χανίων",
+            "desc_el": "Λαβυρινθώδη δρομάκια της παλιάς βενετσιάνικης και οθωμανικής συνοικίας. Δες τη δερμάτινη αγορά στην οδό Σκρίδλωφ, τη σκεπαστή αγορά και το Βυζαντινό μουσείο."
           },
           {
             "name": "Kastelli Hill",
@@ -40,7 +44,9 @@
             "type": "castle",
             "time": "11:30",
             "wiki": null,
-            "desc": "The oldest part of Chania, with Minoan ruins beneath Venetian walls. Superb views over the harbour and the White Mountains."
+            "desc": "The oldest part of Chania, with Minoan ruins beneath Venetian walls. Superb views over the harbour and the White Mountains.",
+            "name_el": "Λόφος Καστέλι",
+            "desc_el": "Το παλαιότερο μέρος των Χανίων, με μινωικά ερείπια κάτω από βενετσιάνικα τείχη. Εξαιρετική θέα προς το λιμάνι και τα Λευκά Όρη."
           },
           {
             "name": "Lunch — To Maridaki",
@@ -49,7 +55,9 @@
             "type": "harbour",
             "time": "13:30",
             "wiki": null,
-            "desc": "Best fish taverna in Chania Town, right on the Venetian harbour. Grilled fish, local wine, incredible setting. Book ahead in summer."
+            "desc": "Best fish taverna in Chania Town, right on the Venetian harbour. Grilled fish, local wine, incredible setting. Book ahead in summer.",
+            "name_el": "Μεσημεριανό — Το Μαριδάκι",
+            "desc_el": "Η καλύτερη ψαροταβέρνα στα Χανιά, ακριβώς στο Βενετσιάνικο λιμάνι. Ψάρι στη σχάρα, τοπικό κρασί, εκπληκτικό σκηνικό. Κάνε κράτηση το καλοκαίρι."
           },
           {
             "name": "Nea Chora Beach",
@@ -58,7 +66,9 @@
             "type": "beach",
             "time": "16:30",
             "wiki": null,
-            "desc": "Town beach 15 minutes walk from the old town. Sandy, shallow, family-friendly. Good for an evening swim before dinner."
+            "desc": "Town beach 15 minutes walk from the old town. Sandy, shallow, family-friendly. Good for an evening swim before dinner.",
+            "name_el": "Παραλία Νέα Χώρα",
+            "desc_el": "Παραλία της πόλης 15 λεπτά με τα πόδια από την παλιά πόλη. Αμμώδης, ρηχή, οικογενειακή. Καλή για ένα απογευματινό μπάνιο πριν το δείπνο."
           },
           {
             "name": "Dinner — Tamam",
@@ -67,7 +77,9 @@
             "type": "village",
             "time": "20:00",
             "wiki": null,
-            "desc": "Award-winning Cretan-Ottoman fusion restaurant in a converted Turkish bathhouse in the old town. Outstanding mezedes. Book ahead."
+            "desc": "Award-winning Cretan-Ottoman fusion restaurant in a converted Turkish bathhouse in the old town. Outstanding mezedes. Book ahead.",
+            "name_el": "Δείπνο — Ταμάμ",
+            "desc_el": "Βραβευμένο εστιατόριο κρητικής-οθωμανικής κουζίνας σε ανακαινισμένο τουρκικό χαμάμ στην παλιά πόλη. Εξαιρετικοί μεζέδες. Κάνε κράτηση."
           }
         ]
       },
@@ -86,7 +98,9 @@
             "type": "harbour",
             "time": "09:00",
             "wiki": null,
-            "desc": "Take the morning ferry from Kissamos port to Balos — the easiest way to reach the lagoon without the dirt road. Tickets from the port office."
+            "desc": "Take the morning ferry from Kissamos port to Balos — the easiest way to reach the lagoon without the dirt road. Tickets from the port office.",
+            "name_el": "Λιμάνι Κισσάμου",
+            "desc_el": "Πάρε το πρωινό πλοίο από το λιμάνι της Κισσάμου για τον Μπάλο — ο ευκολότερος τρόπος να φτάσεις στη λιμνοθάλασσα χωρίς τον χωματόδρομο. Εισιτήρια από το γραφείο του λιμανιού."
           },
           {
             "name": "Gramvousa Island",
@@ -95,7 +109,9 @@
             "type": "castle",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Gramvousa",
-            "desc": "The ferry stops at Gramvousa first. Climb to the 16th-century Venetian fortress at the summit for panoramic views over the lagoon below."
+            "desc": "The ferry stops at Gramvousa first. Climb to the 16th-century Venetian fortress at the summit for panoramic views over the lagoon below.",
+            "name_el": "Νησί Γραμβούσα",
+            "desc_el": "Το πλοίο σταματά πρώτα στη Γραμβούσα. Ανέβα στο βενετσιάνικο φρούριο του 16ου αιώνα στην κορυφή για πανοραμική θέα στη λιμνοθάλασσα από κάτω."
           },
           {
             "name": "Balos Lagoon",
@@ -104,7 +120,9 @@
             "type": "beach",
             "time": "12:00",
             "wiki": "https://en.wikipedia.org/wiki/Balos_Beach",
-            "desc": "One of the most beautiful beaches in Europe — white sand, shallow turquoise lagoon, with Gramvousa island and fortress as a backdrop. Swim, snorkel, and explore. Return ferry at 16:30."
+            "desc": "One of the most beautiful beaches in Europe — white sand, shallow turquoise lagoon, with Gramvousa island and fortress as a backdrop. Swim, snorkel, and explore. Return ferry at 16:30.",
+            "name_el": "Λιμνοθάλασσα Μπάλος",
+            "desc_el": "Μία από τις ομορφότερες παραλίες της Ευρώπης — λευκή άμμος, ρηχή τιρκουάζ λιμνοθάλασσα, με τη Γραμβούσα και το φρούριο για φόντο. Κολύμπησε, κάνε snorkel και εξερεύνησε. Επιστροφή με το πλοίο στις 16:30."
           },
           {
             "name": "Kissamos Town",
@@ -113,7 +131,9 @@
             "type": "city",
             "time": "17:30",
             "wiki": null,
-            "desc": "Relaxed town with a good Archaeological Museum. Evening dinner at one of the harbour tavernas — fresh catch and local wine."
+            "desc": "Relaxed town with a good Archaeological Museum. Evening dinner at one of the harbour tavernas — fresh catch and local wine.",
+            "name_el": "Πόλη Κισσάμου",
+            "desc_el": "Χαλαρή πόλη με ένα καλό Αρχαιολογικό Μουσείο. Δείπνο σε μια από τις ταβέρνες του λιμανιού — φρέσκο ψάρι και τοπικό κρασί."
           }
         ]
       },
@@ -132,7 +152,9 @@
             "type": "beach",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Falasarna",
-            "desc": "Five consecutive beaches of golden sand on the west coast. The main Pachia Ammos beach is 1km long. Warm turquoise water, consistent waves, spectacular west-facing sunsets."
+            "desc": "Five consecutive beaches of golden sand on the west coast. The main Pachia Ammos beach is 1km long. Warm turquoise water, consistent waves, spectacular west-facing sunsets.",
+            "name_el": "Παραλία Φαλάσαρνα",
+            "desc_el": "Πέντε διαδοχικές παραλίες χρυσής άμμου στη δυτική ακτή. Η κύρια παραλία Παχιά Άμμος έχει μήκος 1 χλμ. Ζεστά τιρκουάζ νερά, σταθερά κύματα, εντυπωσιακά δυτικά ηλιοβασιλέματα."
           },
           {
             "name": "Ancient Falasarna",
@@ -141,7 +163,9 @@
             "type": "museum",
             "time": "13:00",
             "wiki": null,
-            "desc": "Ruins of the ancient Minoan and Hellenistic port city. The ancient harbour wall has risen several metres due to tectonic activity — a fascinating geological record."
+            "desc": "Ruins of the ancient Minoan and Hellenistic port city. The ancient harbour wall has risen several metres due to tectonic activity — a fascinating geological record.",
+            "name_el": "Αρχαία Φαλάσαρνα",
+            "desc_el": "Ερείπια της αρχαίας μινωικής και ελληνιστικής λιμενικής πόλης. Το αρχαίο τείχος του λιμανιού έχει ανέβει αρκετά μέτρα λόγω τεκτονικής δραστηριότητας — ένα συναρπαστικό γεωλογικό αρχείο."
           },
           {
             "name": "Sunset at Falasarna",
@@ -150,7 +174,9 @@
             "type": "nature",
             "time": "18:00",
             "wiki": null,
-            "desc": "Falasarna faces due west — the sunsets here are among the best in Greece. Grab a drink at one of the clifftop bars and watch the sun drop into the sea."
+            "desc": "Falasarna faces due west — the sunsets here are among the best in Greece. Grab a drink at one of the clifftop bars and watch the sun drop into the sea.",
+            "name_el": "Ηλιοβασίλεμα στη Φαλάσαρνα",
+            "desc_el": "Η Φαλάσαρνα είναι στραμμένη ακριβώς δυτικά — τα ηλιοβασιλέματα εδώ είναι από τα καλύτερα της Ελλάδας. Πιες ένα ποτό σε ένα από τα μπαρ στον γκρεμό και κοίτα τον ήλιο να βυθίζεται στη θάλασσα."
           }
         ]
       },
@@ -169,7 +195,9 @@
             "type": "nature",
             "time": "09:30",
             "wiki": null,
-            "desc": "Drive through the dramatic Topolia Gorge — towering limestone cliffs and a small cave chapel. A spectacular route that most tourists miss."
+            "desc": "Drive through the dramatic Topolia Gorge — towering limestone cliffs and a small cave chapel. A spectacular route that most tourists miss.",
+            "name_el": "Φαράγγι Τοπολίων",
+            "desc_el": "Οδήγησε μέσα από το εντυπωσιακό φαράγγι των Τοπολίων — επιβλητικοί ασβεστολιθικοί βράχοι και ένα μικρό σπήλαιο-εκκλησάκι. Μια εντυπωσιακή διαδρομή που οι περισσότεροι τουρίστες χάνουν."
           },
           {
             "name": "Elafonisi Beach",
@@ -178,7 +206,9 @@
             "type": "beach",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Elafonisi",
-            "desc": "Ranked world's best beach by TripAdvisor. Pink-tinged sand from crushed seashells, shallow emerald lagoon, small island accessible on foot at low tide. Arrive before noon for a sunbed."
+            "desc": "Ranked world's best beach by TripAdvisor. Pink-tinged sand from crushed seashells, shallow emerald lagoon, small island accessible on foot at low tide. Arrive before noon for a sunbed.",
+            "name_el": "Παραλία Ελαφονήσι",
+            "desc_el": "Κατατάχθηκε ως η καλύτερη παραλία του κόσμου από το TripAdvisor. Ροζ άμμος από συντριμμένα κοχύλια, ρηχή σμαραγδένια λιμνοθάλασσα, μικρό νησί προσβάσιμο με τα πόδια στην άμπωτη. Φτάσε πριν το μεσημέρι για ξαπλώστρα."
           },
           {
             "name": "Kedrodasos Beach",
@@ -187,7 +217,9 @@
             "type": "beach",
             "time": "15:00",
             "wiki": null,
-            "desc": "Secluded wild beach 1km east of Elafonisi through a protected juniper forest. Pristine, unorganised, far fewer people. Worth the short walk."
+            "desc": "Secluded wild beach 1km east of Elafonisi through a protected juniper forest. Pristine, unorganised, far fewer people. Worth the short walk.",
+            "name_el": "Παραλία Κεδρόδασος",
+            "desc_el": "Απομονωμένη άγρια παραλία 1 χλμ ανατολικά του Ελαφονησίου μέσα από προστατευμένο δάσος κέδρων. Παρθένα, ανοργάνωτη, πολύ λιγότερος κόσμος. Αξίζει την μικρή πεζοπορία."
           },
           {
             "name": "Paleochora",
@@ -196,7 +228,9 @@
             "type": "city",
             "time": "18:00",
             "wiki": "https://en.wikipedia.org/wiki/Paleochora",
-            "desc": "Laid-back south-coast town with beaches on both sides of a headland. Dinner at a waterfront taverna — the seafood here is excellent and inexpensive."
+            "desc": "Laid-back south-coast town with beaches on both sides of a headland. Dinner at a waterfront taverna — the seafood here is excellent and inexpensive.",
+            "name_el": "Παλαιόχωρα",
+            "desc_el": "Χαλαρή πόλη της νότιας ακτής με παραλίες και στις δύο πλευρές ενός ακρωτηρίου. Δείπνο σε μια ταβέρνα στο νερό — τα θαλασσινά εδώ είναι εξαιρετικά και προσιτά."
           }
         ]
       },
@@ -215,7 +249,9 @@
             "type": "nature",
             "time": "07:30",
             "wiki": "https://en.wikipedia.org/wiki/Samaria_Gorge",
-            "desc": "Enter the deepest gorge in Europe at dawn to beat the crowds. The descent from 1200m begins steeply. Allow 4-5 hours for the full 16km walk."
+            "desc": "Enter the deepest gorge in Europe at dawn to beat the crowds. The descent from 1200m begins steeply. Allow 4-5 hours for the full 16km walk.",
+            "name_el": "Ξυλόσκαλο (Είσοδος Φαραγγιού)",
+            "desc_el": "Μπες στο βαθύτερο φαράγγι της Ευρώπης την αυγή για να αποφύγεις τα πλήθη. Η κατάβαση από τα 1200 μέτρα ξεκινά απότομα. Υπολόγισε 4-5 ώρες για το πλήρες πεζοπορικό 16 χλμ."
           },
           {
             "name": "Iron Gates",
@@ -224,7 +260,9 @@
             "type": "nature",
             "time": "10:30",
             "wiki": null,
-            "desc": "The most dramatic point in the gorge — the walls narrow to just 3.5 metres apart and rise 300 metres overhead. Eerie and spectacular."
+            "desc": "The most dramatic point in the gorge — the walls narrow to just 3.5 metres apart and rise 300 metres overhead. Eerie and spectacular.",
+            "name_el": "Σιδηρόπορτες",
+            "desc_el": "Το πιο εντυπωσιακό σημείο του φαραγγιού — τα τοιχώματα στενεύουν στα μόλις 3,5 μέτρα και υψώνονται 300 μέτρα πάνω από το κεφάλι σου. Μυστηριώδες και εντυπωσιακό."
           },
           {
             "name": "Agia Roumeli Beach",
@@ -233,7 +271,9 @@
             "type": "beach",
             "time": "13:00",
             "wiki": null,
-            "desc": "The gorge exits at this remote south-coast village with a small beach. Only accessible on foot or by ferry. Swim in the cold clear water — you've earned it. Ferry back to Chora Sfakion (45 min)."
+            "desc": "The gorge exits at this remote south-coast village with a small beach. Only accessible on foot or by ferry. Swim in the cold clear water — you've earned it. Ferry back to Chora Sfakion (45 min).",
+            "name_el": "Παραλία Αγίας Ρουμέλης",
+            "desc_el": "Το φαράγγι βγαίνει σε αυτό το απομακρυσμένο χωριό της νότιας ακτής με μια μικρή παραλία. Προσβάσιμο μόνο με τα πόδια ή με πλοίο. Κολύμπησε στο κρύο διαυγές νερό — το έχεις κερδίσει. Πλοίο πίσω στη Χώρα Σφακίων (45 λεπτά)."
           },
           {
             "name": "Chora Sfakion",
@@ -242,7 +282,9 @@
             "type": "harbour",
             "time": "15:30",
             "wiki": null,
-            "desc": "Ferry arrival point on the south coast. Bus back to Chania through the mountains. Final dinner in Chania Old Town."
+            "desc": "Ferry arrival point on the south coast. Bus back to Chania through the mountains. Final dinner in Chania Old Town.",
+            "name_el": "Χώρα Σφακίων",
+            "desc_el": "Σημείο άφιξης του πλοίου στη νότια ακτή. Λεωφορείο πίσω στα Χανιά μέσα από τα βουνά. Τελευταίο δείπνο στην Παλιά Πόλη."
           }
         ]
       }
@@ -261,7 +303,13 @@
       "desc": "Possibly the most photographed beach in Greece — a white sand lagoon between the mainland and Gramvousa island, with a 16th-century Venetian fortress on the peak above. The water colour is an impossible turquoise. Effort required to get here, but nothing in Greece compares to the first view from the hilltop.",
       "commons": "Balos_Beach_Crete.jpg",
       "lat": 35.5953,
-      "lng": 23.5881
+      "lng": 23.5881,
+      "name_el": "Λιμνοθάλασσα Μπάλος",
+      "type_el": "Λεπτή λευκή άμμος και θρύμματα κοχυλιών",
+      "depth_el": "Ρηχή λιμνοθάλασσα — μέχρι το γόνατο στο μεγαλύτερο μέρος, βαθύτερα στην ανοιχτή πλευρά",
+      "facing_el": "Βορειοδυτική — προστατευμένη λιμνοθάλασσα, εκπληκτικό τιρκουάζ χρώμα",
+      "facilities_el": "Στοιχειώδεις: μικρό μπαρ, χωρίς ξαπλώστρες. Πρόσβαση με πλοίο από την Κίσσαμο ή με χωματόδρομο και 20λεπτη πεζοπορία.",
+      "desc_el": "Πιθανώς η πιο φωτογραφημένη παραλία της Ελλάδας — μια λιμνοθάλασσα λευκής άμμου ανάμεσα στην ηπειρωτική Κρήτη και το νησί της Γραμβούσας, με βενετσιάνικο φρούριο του 16ου αιώνα στην κορυφή. Το χρώμα του νερού είναι ένα αδύνατο τιρκουάζ. Χρειάζεται προσπάθεια για να φτάσεις, αλλά τίποτα στην Ελλάδα δεν συγκρίνεται με την πρώτη ματιά από ψηλά."
     },
     {
       "name": "Elafonisi Beach",
@@ -275,7 +323,13 @@
       "desc": "Ranked world's best beach by TripAdvisor. A shallow pink-sand lagoon at the far southwest tip of Crete, with a small island reachable on foot at low tide. The colour of the water — shifting from turquoise to emerald to deep blue — is extraordinary. Arrive before 10am in peak season.",
       "commons": "Elafonisi_beach_Crete.jpg",
       "lat": 35.2722,
-      "lng": 23.5361
+      "lng": 23.5361,
+      "name_el": "Παραλία Ελαφονήσι",
+      "type_el": "Λεπτή άμμος με ροζ απόχρωση από συντριμμένα κοχύλια",
+      "depth_el": "Πολύ ρηχή λιμνοθάλασσα — μέχρι το γόνατο σχεδόν παντού, βαθύτερα προς το νησί",
+      "facing_el": "Δυτική και νότια — ζεστά, ήρεμα νερά όλο το καλοκαίρι",
+      "facilities_el": "Μέτριες: κάποιες ξαπλώστρες και ομπρέλες, μπαρ-σνακ, μεγάλο πάρκινγκ. Γεμίζει πολύ τον Ιούλιο-Αύγουστο.",
+      "desc_el": "Κατατάχθηκε ως η καλύτερη παραλία του κόσμου από το TripAdvisor. Μια ρηχή λιμνοθάλασσα με ροζ άμμο στη νοτιοδυτική άκρη της Κρήτης, με ένα μικρό νησί προσβάσιμο με τα πόδια στην άμπωτη. Το χρώμα του νερού — που μεταβάλλεται από τιρκουάζ σε σμαραγδένιο και βαθύ μπλε — είναι εξαιρετικό. Φτάσε πριν τις 10 το πρωί την αιχμή της σεζόν."
     },
     {
       "name": "Falasarna Beach",
@@ -289,7 +343,13 @@
       "desc": "Five consecutive golden sand beaches on the wild west coast, repeatedly named best beach in Crete. The wide open bay, warm water and legendary sunsets make it unforgettable. Best in the morning when the wind is calm — afternoons can get breezy, which makes it perfect for water sports.",
       "commons": "Falasarna_beach_Crete.jpg",
       "lat": 35.5144,
-      "lng": 23.5733
+      "lng": 23.5733,
+      "name_el": "Παραλία Φαλάσαρνα",
+      "type_el": "Χρυσή λεπτή άμμος",
+      "depth_el": "Μέτριο — καλό για κολύμπι, λίγα κύματα τις πιο ανεμώδεις μέρες",
+      "facing_el": "Δυτική — εντυπωσιακά ηλιοβασιλέματα, πιο εκτεθειμένη στον αέρα από τις νότιες παραλίες",
+      "facilities_el": "Καλά οργανωμένη: ξαπλώστρες, ομπρέλες, beach bars, θαλάσσια σπορ, αρκετές ταβέρνες. Καλό πάρκινγκ.",
+      "desc_el": "Πέντε διαδοχικές παραλίες χρυσής άμμου στην άγρια δυτική ακτή, που έχουν ψηφιστεί επανειλημμένα ως η καλύτερη παραλία της Κρήτης. Ο μεγάλος ανοιχτός κόλπος, τα ζεστά νερά και τα θρυλικά ηλιοβασιλέματα την κάνουν αξέχαστη. Καλύτερα το πρωί που ο αέρας είναι ήρεμος — τα απογεύματα μπορεί να φυσάει, που την κάνει τέλεια για θαλάσσια σπορ."
     },
     {
       "name": "Stavros Beach",
@@ -303,7 +363,13 @@
       "desc": "A perfectly circular enclosed bay near Akrotiri peninsula, filmed in the famous dance scene of Zorba the Greek. Remarkably calm water at all times — wind from any direction has no effect here. One of the best family beaches in the Chania region and far less crowded than Elafonisi.",
       "commons": null,
       "lat": 35.5983,
-      "lng": 24.0789
+      "lng": 24.0789,
+      "name_el": "Παραλία Σταυρός",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Πολύ ρηχό — απόλυτα ήρεμο, κλειστός κόλπος",
+      "facing_el": "Βορειοανατολική — εντελώς κλειστή, χωρίς ποτέ κύματα",
+      "facilities_el": "Καλές: ξαπλώστρες, ταβέρνες, beach bars. Διάσημη ως τοποθεσία γυρισμάτων του Ζορμπά του Έλληνα.",
+      "desc_el": "Ένας απόλυτα κυκλικός κλειστός κόλπος κοντά στο Ακρωτήρι, όπου γυρίστηκε η περίφημη σκηνή του χορού στον Ζορμπά τον Έλληνα. Εντυπωσιακά ήρεμα νερά ανά πάσα στιγμή — ο αέρας από οποιαδήποτε κατεύθυνση δεν έχει επίδραση εδώ. Μία από τις καλύτερες οικογενειακές παραλίες των Χανίων και πολύ λιγότερο πολυσύχναστη από το Ελαφονήσι."
     },
     {
       "name": "Kedrodasos Beach",
@@ -317,7 +383,16 @@
       "desc": "The secret beach next to Elafonisi — accessible only on foot through a protected juniper forest. Pristine, uncrowded, and completely undeveloped. The contrast with the busy Elafonisi nearby is striking. The juniper trees are endangered — do not touch them.",
       "commons": null,
       "lat": 35.27,
-      "lng": 23.5283
+      "lng": 23.5283,
+      "name_el": "Παραλία Κεδρόδασος",
+      "type_el": "Λεπτή λευκή άμμος",
+      "depth_el": "Ρηχό έως μέτριο — καθαρός αμμώδης βυθός",
+      "facing_el": "Νότια — προστατευμένη, ήρεμη",
+      "facilities_el": "Καμία — εντελώς ανοργάνωτη. Πρόσβαση με 1χλμ πεζοπορία μέσα από προστατευμένο δάσος κέδρων από το Ελαφονήσι.",
+      "desc_el": "Η μυστική παραλία δίπλα στο Ελαφονήσι — προσβάσιμη μόνο με τα πόδια μέσα από προστατευμένο δάσος κέδρων. Παρθένα, χωρίς πλήθη, εντελώς ανέγγιχτη. Η αντίθεση με το πολυσύχναστο Ελαφονήσι δίπλα είναι εντυπωσιακή. Οι κέδροι είναι απειλούμενο είδος — μην τους αγγίζεις."
     }
-  ]
+  ],
+  "name_el": "Κρήτη (Χανιά)",
+  "subtitle_el": "Μπάλος, Ελαφονήσι και η άγρια δύση του μεγαλύτερου νησιού της Ελλάδας",
+  "intro_el": "Η περιοχή των Χανίων είναι η πιο εντυπωσιακή γωνιά της Κρήτης — και ίσως ολόκληρης της Ελλάδας. Τα Λευκά Όρη υψώνονται πάνω από 2400 μέτρα πίσω από μια ακτογραμμή που φιλοξενεί δύο από τις διασημότερες παραλίες του κόσμου: τη ροζ λιμνοθάλασσα του Ελαφονησίου και τον γαλάζιο Μπάλο. Πρόσθεσε μια βενετσιάνικη παλιά πόλη, το βαθύτερο φαράγγι της Ευρώπης και μερικά από τα καλύτερα φαγητά του νησιού, και τα Χανιά είναι αδύνατον να γίνουν σε λιγότερο από 5 μέρες."
 }

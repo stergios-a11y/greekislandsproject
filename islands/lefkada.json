@@ -22,7 +22,9 @@
             "type": "city",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Lefkada",
-            "desc": "Charming Ionian town with distinctive earthquake-resistant architecture — upper floors clad in corrugated metal and painted wood. Walk the pedestrian main street and the seafront."
+            "desc": "Charming Ionian town with distinctive earthquake-resistant architecture — upper floors clad in corrugated metal and painted wood. Walk the pedestrian main street and the seafront.",
+            "name_el": "Πόλη Λευκάδας",
+            "desc_el": "Γοητευτική επτανησιακή πόλη με χαρακτηριστική αντισεισμική αρχιτεκτονική — οι όροφοι ντυμένοι με κυματοειδές μέταλλο και βαμμένο ξύλο. Περπάτησε τον πεζοδρομημένο κεντρικό δρόμο και την παραλιακή."
           },
           {
             "name": "Santa Maura Fortress",
@@ -31,7 +33,9 @@
             "type": "castle",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Santa_Maura_Castle",
-            "desc": "14th-century Venetian fortress at the causeway entrance. The saltwater lagoon and the floating bridge make for an extraordinary approach to the island."
+            "desc": "14th-century Venetian fortress at the causeway entrance. The saltwater lagoon and the floating bridge make for an extraordinary approach to the island.",
+            "name_el": "Φρούριο Αγίας Μαύρας",
+            "desc_el": "Βενετσιάνικο φρούριο του 14ου αιώνα στην είσοδο του μώλου. Η αλμυρή λιμνοθάλασσα και η πλωτή γέφυρα δημιουργούν μια εκπληκτική προσέγγιση στο νησί."
           },
           {
             "name": "Gyra Lagoon",
@@ -40,7 +44,9 @@
             "type": "nature",
             "time": "11:00",
             "wiki": null,
-            "desc": "The salt lagoon on the west side of the causeway — a protected wetland with flamingoes, herons and windmills. The beach on the outer side has calm shallow water."
+            "desc": "The salt lagoon on the west side of the causeway — a protected wetland with flamingoes, herons and windmills. The beach on the outer side has calm shallow water.",
+            "name_el": "Λιμνοθάλασσα Γύρας",
+            "desc_el": "Η αλμυρή λιμνοθάλασσα στη δυτική πλευρά του μώλου — προστατευμένος υγρότοπος με φλαμίνγκο, ερωδιούς και ανεμόμυλους. Η παραλία στην εξωτερική πλευρά έχει ήρεμα ρηχά νερά."
           },
           {
             "name": "Agios Nikitas",
@@ -49,16 +55,20 @@
             "type": "village",
             "time": "13:30",
             "wiki": null,
-            "desc": "The most picturesque village on the west coast — a tiny car-free harbour with excellent fish tavernas. Lunch here then walk to the hidden Milos beach below."
+            "desc": "The most picturesque village on the west coast — a tiny car-free harbour with excellent fish tavernas. Lunch here then walk to the hidden Milos beach below.",
+            "name_el": "Άγιος Νικήτας",
+            "desc_el": "Το πιο γραφικό χωριό της δυτικής ακτής — ένα μικροσκοπικό λιμάνι χωρίς αυτοκίνητα με εξαιρετικές ψαροταβέρνες. Μεσημεριανό εδώ και μετά πεζοπορία στην κρυφή παραλία Μύλος από κάτω."
           },
           {
             "name": "Kathisma Beach",
-            "lat": 38.7333,
-            "lng": 20.63,
+            "lat": 38.7361,
+            "lng": 20.6297,
             "type": "beach",
             "time": "16:00",
             "wiki": null,
-            "desc": "Long sandy beach on the west coast with dramatic cliffs at the southern end. One of the finest beaches in the northern half of the island."
+            "desc": "Long sandy beach on the west coast with dramatic cliffs at the southern end. One of the finest beaches in the northern half of the island.",
+            "name_el": "Παραλία Κάθισμα",
+            "desc_el": "Μακριά αμμώδης παραλία στη δυτική ακτή με εντυπωσιακούς γκρεμούς στο νότιο άκρο. Μία από τις καλύτερες παραλίες του βορείου τμήματος του νησιού."
           }
         ]
       },
@@ -77,7 +87,9 @@
             "type": "harbour",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Nydri",
-            "desc": "Main resort town on the east coast with views over the Ionian islands of Meganisi, Skorpios and Sparti. Boat trips depart from here to the surrounding islands."
+            "desc": "Main resort town on the east coast with views over the Ionian islands of Meganisi, Skorpios and Sparti. Boat trips depart from here to the surrounding islands.",
+            "name_el": "Νυδρί",
+            "desc_el": "Κύρια παραθεριστική πόλη της ανατολικής ακτής με θέα στα νησιά του Ιονίου: Μεγανήσι, Σκορπιό και Σπάρτη. Από εδώ φεύγουν ταξίδια με βάρκα προς τα γύρω νησιά."
           },
           {
             "name": "Skorpios Island Cruise",
@@ -86,7 +98,9 @@
             "type": "nature",
             "time": "10:30",
             "wiki": "https://en.wikipedia.org/wiki/Skorpios",
-            "desc": "Day cruise around Onassis's private island Skorpios — you can swim in the crystal coves around it. Boats depart from Nydri harbour every morning."
+            "desc": "Day cruise around Onassis's private island Skorpios — you can swim in the crystal coves around it. Boats depart from Nydri harbour every morning.",
+            "name_el": "Κρουαζιέρα στον Σκορπιό",
+            "desc_el": "Ημερήσια κρουαζιέρα γύρω από το ιδιωτικό νησί του Ωνάση, τον Σκορπιό — μπορείς να κολυμπήσεις στους κρυστάλλινους κολπίσκους γύρω του. Οι βάρκες φεύγουν από το λιμάνι του Νυδριού κάθε πρωί."
           },
           {
             "name": "Meganisi Island",
@@ -95,7 +109,9 @@
             "type": "village",
             "time": "13:00",
             "wiki": "https://en.wikipedia.org/wiki/Meganisi",
-            "desc": "Short ferry from Nydri to the beautiful neighbouring island. The harbour village of Spartochori is one of the most authentic in the Ionian. Excellent lunch at a waterfront taverna."
+            "desc": "Short ferry from Nydri to the beautiful neighbouring island. The harbour village of Spartochori is one of the most authentic in the Ionian. Excellent lunch at a waterfront taverna.",
+            "name_el": "Νησί Μεγανήσι",
+            "desc_el": "Σύντομο πλοίο από το Νυδρί στο όμορφο γειτονικό νησί. Το χωριό-λιμάνι του Σπαρτοχωρίου είναι ένα από τα πιο αυθεντικά του Ιονίου. Εξαιρετικό μεσημεριανό σε ταβέρνα στο νερό."
           },
           {
             "name": "Vassiliki",
@@ -104,7 +120,9 @@
             "type": "harbour",
             "time": "17:00",
             "wiki": "https://en.wikipedia.org/wiki/Vassiliki,_Lefkada",
-            "desc": "World-famous windsurfing village at the southern tip. The afternoon thermal winds are legendary among windsurfers. Even non-surfers enjoy the dramatic setting and excellent seafood tavernas."
+            "desc": "World-famous windsurfing village at the southern tip. The afternoon thermal winds are legendary among windsurfers. Even non-surfers enjoy the dramatic setting and excellent seafood tavernas.",
+            "name_el": "Βασιλικός",
+            "desc_el": "Παγκοσμίως διάσημο χωριό windsurfing στο νότιο άκρο. Οι απογευματινοί θερμικοί άνεμοι είναι θρυλικοί ανάμεσα στους windsurfers. Ακόμα και οι μη-windsurfers απολαμβάνουν το εντυπωσιακό σκηνικό και τις εξαιρετικές ψαροταβέρνες."
           }
         ]
       },
@@ -118,21 +136,25 @@
         "stops": [
           {
             "name": "Egremni Beach",
-            "lat": 38.6183,
-            "lng": 20.5983,
+            "lat": 38.6167,
+            "lng": 20.5975,
             "type": "beach",
             "time": "09:30",
             "wiki": null,
-            "desc": "One of the longest and most dramatic beaches in Greece — 1.5km of white pebble beneath sheer white cliffs, accessible only by 350 steps or by boat from Vassiliki. Completely wild and unorganised."
+            "desc": "One of the longest and most dramatic beaches in Greece — 1.5km of white pebble beneath sheer white cliffs, accessible only by 350 steps or by boat from Vassiliki. Completely wild and unorganised.",
+            "name_el": "Παραλία Εγκρεμνοί",
+            "desc_el": "Μία από τις μακρύτερες και πιο εντυπωσιακές παραλίες της Ελλάδας — 1,5 χλμ λευκού βότσαλου κάτω από κατακόρυφους λευκούς γκρεμούς, προσβάσιμη μόνο με 350 σκαλοπάτια ή με βάρκα από τον Βασιλικό. Εντελώς άγρια και ανοργάνωτη."
           },
           {
             "name": "Porto Katsiki",
-            "lat": 38.5983,
-            "lng": 20.5867,
+            "lat": 38.6128,
+            "lng": 20.5811,
             "type": "beach",
             "time": "12:00",
             "wiki": "https://en.wikipedia.org/wiki/Porto_Katsiki",
-            "desc": "Consistently ranked one of the best beaches in Europe — sheer white limestone cliffs 100m high dropping to turquoise water. Access via 100 steps. Arrive by 11am for a sunbed. Unmissable."
+            "desc": "Consistently ranked one of the best beaches in Europe — sheer white limestone cliffs 100m high dropping to turquoise water. Access via 100 steps. Arrive by 11am for a sunbed. Unmissable.",
+            "name_el": "Πόρτο Κατσίκι",
+            "desc_el": "Σταθερά μια από τις καλύτερες παραλίες της Ευρώπης — κατακόρυφοι λευκοί ασβεστολιθικοί γκρεμοί 100 μέτρων που πέφτουν σε τιρκουάζ νερά. Πρόσβαση μέσω 100 σκαλοπατιών. Φτάσε μέχρι τις 11 π.μ. για ξαπλώστρα. Αδιαπραγμάτευτη."
           },
           {
             "name": "Athani Village",
@@ -141,7 +163,9 @@
             "type": "village",
             "time": "15:00",
             "wiki": null,
-            "desc": "Tiny clifftop village above Porto Katsiki with spectacular views. The local taverna serves the best food in southern Lefkada — lamb from the hillside farms, local wine."
+            "desc": "Tiny clifftop village above Porto Katsiki with spectacular views. The local taverna serves the best food in southern Lefkada — lamb from the hillside farms, local wine.",
+            "name_el": "Χωριό Αθάνι",
+            "desc_el": "Μικροσκοπικό χωριό σε γκρεμό πάνω από το Πόρτο Κατσίκι με εντυπωσιακή θέα. Η τοπική ταβέρνα σερβίρει το καλύτερο φαγητό της νότιας Λευκάδας — αρνί από τα φάρμα του βουνού, τοπικό κρασί."
           },
           {
             "name": "Cape Lefkatas",
@@ -150,7 +174,9 @@
             "type": "nature",
             "time": "17:30",
             "wiki": "https://en.wikipedia.org/wiki/Cape_Lefkatas",
-            "desc": "The southernmost tip of Lefkada — a sheer white cape where, according to legend, Sappho threw herself into the sea for unrequited love. Lighthouse and extraordinary sunset views."
+            "desc": "The southernmost tip of Lefkada — a sheer white cape where, according to legend, Sappho threw herself into the sea for unrequited love. Lighthouse and extraordinary sunset views.",
+            "name_el": "Ακρωτήριο Λευκάτας",
+            "desc_el": "Το νοτιότερο άκρο της Λευκάδας — ένα κατακόρυφο λευκό ακρωτήρι όπου, σύμφωνα με τον μύθο, η Σαπφώ ρίχτηκε στη θάλασσα από ανεκπλήρωτο έρωτα. Φάρος και εκπληκτική θέα στο ηλιοβασίλεμα."
           }
         ]
       },
@@ -169,7 +195,9 @@
             "type": "beach",
             "time": "09:30",
             "wiki": null,
-            "desc": "Remote west-coast beach accessible only by a narrow road. Long, pebbly, wild and almost always empty. One of the hidden beaches of the island."
+            "desc": "Remote west-coast beach accessible only by a narrow road. Long, pebbly, wild and almost always empty. One of the hidden beaches of the island.",
+            "name_el": "Παραλία Πόρος",
+            "desc_el": "Απομακρυσμένη παραλία της δυτικής ακτής προσβάσιμη μόνο με στενό δρόμο. Μακριά, με βότσαλο, άγρια και σχεδόν πάντα άδεια. Μία από τις κρυφές παραλίες του νησιού."
           },
           {
             "name": "Gialos Beach",
@@ -178,7 +206,9 @@
             "type": "beach",
             "time": "11:00",
             "wiki": null,
-            "desc": "Quiet pebble beach on the west coast — calm, clear water and a small taverna. Much less visited than the famous southern beaches."
+            "desc": "Quiet pebble beach on the west coast — calm, clear water and a small taverna. Much less visited than the famous southern beaches.",
+            "name_el": "Παραλία Γιαλός",
+            "desc_el": "Ήσυχη παραλία βότσαλου στη δυτική ακτή — ήρεμα, καθαρά νερά και μια μικρή ταβέρνα. Πολύ λιγότερο επισκέψιμη από τις διάσημες νότιες παραλίες."
           },
           {
             "name": "Agios Petros Village",
@@ -187,7 +217,9 @@
             "type": "village",
             "time": "13:00",
             "wiki": null,
-            "desc": "Traditional inland village with a good local taverna. Try the local cheeses and the Lefkada sausage (loukanika) before the drive north."
+            "desc": "Traditional inland village with a good local taverna. Try the local cheeses and the Lefkada sausage (loukanika) before the drive north.",
+            "name_el": "Χωριό Άγιος Πέτρος",
+            "desc_el": "Παραδοσιακό χωριό στο εσωτερικό με μια καλή τοπική ταβέρνα. Δοκίμασε τα τοπικά τυριά και το λουκάνικο της Λευκάδας πριν την οδική επιστροφή προς τον βορρά."
           },
           {
             "name": "Lefkada Town — Departure",
@@ -196,7 +228,9 @@
             "type": "city",
             "time": "15:30",
             "wiki": null,
-            "desc": "Return across the floating bridge to the mainland. No ferry needed — Lefkada is the only Greek island you can drive to and from."
+            "desc": "Return across the floating bridge to the mainland. No ferry needed — Lefkada is the only Greek island you can drive to and from.",
+            "name_el": "Πόλη Λευκάδας — Αναχώρηση",
+            "desc_el": "Επιστροφή πάνω από την πλωτή γέφυρα στην ηπειρωτική χώρα. Δεν χρειάζεται πλοίο — η Λευκάδα είναι το μοναδικό ελληνικό νησί όπου μπορείς να πας και να γυρίσεις με αυτοκίνητο."
           }
         ]
       }
@@ -214,8 +248,14 @@
       "facilities": "Basic: one beach bar, sunbeds (pricey). 100 steps down from the car park. Boat access from Vassiliki.",
       "desc": "Consistently ranked one of the best beaches in Europe — sheer white limestone cliffs 100m high drop into water of an extraordinary turquoise-blue. The setting is almost theatrical. One of those beaches where the first view from the top of the steps genuinely takes your breath away.",
       "commons": "Porto_Katsiki_Lefkada.jpg",
-      "lat": 38.5983,
-      "lng": 20.5867
+      "lat": 38.6128,
+      "lng": 20.5811,
+      "name_el": "Πόρτο Κατσίκι",
+      "type_el": "Λευκό βότσαλο και χονδρή άμμος",
+      "depth_el": "Μέτριο έως βαθύ — εντυπωσιακή πτώση, εξαιρετική διαύγεια",
+      "facing_el": "Δυτική — προστατευμένη από τους γκρεμούς, ήρεμα νερά τις περισσότερες μέρες",
+      "facilities_el": "Στοιχειώδεις: ένα beach bar, ξαπλώστρες (ακριβές). 100 σκαλοπάτια κάτω από το πάρκινγκ. Πρόσβαση με βάρκα από τον Βασιλικό.",
+      "desc_el": "Σταθερά μια από τις καλύτερες παραλίες της Ευρώπης — κατακόρυφοι λευκοί ασβεστολιθικοί γκρεμοί 100 μέτρων πέφτουν σε νερά εκπληκτικού τιρκουάζ-μπλε. Το σκηνικό είναι σχεδόν θεατρικό. Μία από αυτές τις παραλίες όπου η πρώτη ματιά από την κορυφή των σκαλοπατιών σου κόβει πραγματικά την ανάσα."
     },
     {
       "name": "Egremni Beach",
@@ -228,8 +268,14 @@
       "facilities": "None — completely wild. 350 steps from the road or boat from Vassiliki (20 min).",
       "desc": "The wilder sibling of Porto Katsiki — a vast sweep of white pebble beneath sheer cliffs, 1.5km long and almost entirely empty because of the 350-step descent. The effort is the price of solitude. The water is some of the clearest in Greece.",
       "commons": null,
-      "lat": 38.6183,
-      "lng": 20.5983
+      "lat": 38.6167,
+      "lng": 20.5975,
+      "name_el": "Παραλία Εγκρεμνοί",
+      "type_el": "Λευκό βότσαλο",
+      "depth_el": "Μέτριο έως βαθύ — κρυστάλλινα νερά Ιονίου",
+      "facing_el": "Δυτική — ανοιχτή θάλασσα, καλύτερα σε ήρεμο καιρό",
+      "facilities_el": "Καμία — εντελώς άγρια. 350 σκαλοπάτια από τον δρόμο ή βάρκα από τον Βασιλικό (20 λεπτά).",
+      "desc_el": "Το πιο άγριο αδερφάκι του Πόρτο Κατσίκι — μια τεράστια έκταση λευκού βότσαλου κάτω από κατακόρυφους γκρεμούς, 1,5 χλμ μήκος και σχεδόν εντελώς άδεια λόγω της κατάβασης 350 σκαλοπατιών. Η προσπάθεια είναι το αντίτιμο της μοναξιάς. Τα νερά είναι από τα πιο διαυγή της Ελλάδας."
     },
     {
       "name": "Kathisma Beach",
@@ -242,8 +288,14 @@
       "facilities": "Good: sunbeds, beach bars, taverna, parking. Dramatic cliffs at the southern end.",
       "desc": "The best easily accessible beach on the west coast — a long sandy stretch with dramatic cliff scenery at one end and a relaxed beach bar atmosphere. Much less crowded than Porto Katsiki and far more family-friendly.",
       "commons": null,
-      "lat": 38.7333,
-      "lng": 20.63
+      "lat": 38.7361,
+      "lng": 20.6297,
+      "name_el": "Παραλία Κάθισμα",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχό έως μέτριο — καλό για όλους τους κολυμβητές",
+      "facing_el": "Δυτική — απογευματινός ήλιος και ηλιοβασιλέματα",
+      "facilities_el": "Καλές: ξαπλώστρες, beach bars, ταβέρνα, parking. Εντυπωσιακοί γκρεμοί στο νότιο άκρο.",
+      "desc_el": "Η καλύτερη εύκολα προσβάσιμη παραλία της δυτικής ακτής — μια μακριά αμμώδης έκταση με εντυπωσιακό σκηνικό γκρεμού στο ένα άκρο και χαλαρή ατμόσφαιρα beach bar. Πολύ λιγότερο πολυσύχναστη από το Πόρτο Κατσίκι και πολύ πιο φιλική για οικογένειες."
     },
     {
       "name": "Milos Beach (Agios Nikitas)",
@@ -256,8 +308,14 @@
       "facilities": "Basic: one taverna on the beach. Access on foot from Agios Nikitas (15 min walk) or by water taxi.",
       "desc": "A beautiful hidden pebble cove below the village of Agios Nikitas, inaccessible by car. The 15-minute walk keeps it quiet. Crystal clear water, a small taverna, and the prettiest village on the island directly above.",
       "commons": null,
-      "lat": 38.7583,
-      "lng": 20.6367
+      "lat": 38.7714,
+      "lng": 20.6367,
+      "name_el": "Παραλία Μύλος (Άγιος Νικήτας)",
+      "type_el": "Λεπτό βότσαλο",
+      "depth_el": "Μέτριο — διαυγή, βαθύ μπλε νερά Ιονίου",
+      "facing_el": "Δυτική — ήρεμη το πρωί",
+      "facilities_el": "Στοιχειώδεις: μία ταβέρνα στην παραλία. Πρόσβαση με τα πόδια από τον Άγιο Νικήτα (15λεπτη πεζοπορία) ή με θαλάσσιο ταξί.",
+      "desc_el": "Ένας όμορφος κρυφός κολπίσκος βότσαλου κάτω από το χωριό του Αγίου Νικήτα, απρόσιτος με αυτοκίνητο. Η 15λεπτη πεζοπορία την κρατάει ήσυχη. Κρυστάλλινα νερά, μια μικρή ταβέρνα, και το ομορφότερο χωριό του νησιού ακριβώς από πάνω."
     },
     {
       "name": "Pefkoulia Beach",
@@ -270,8 +328,17 @@
       "facilities": "Basic: small beach bar, limited sunbeds. Quiet and uncrowded.",
       "desc": "A long, relatively uncrowded beach just south of Agios Nikitas. Cedar trees provide natural shade at the back of the beach. The water is calm and clear. One of the best spots on the island for watching the sun set over the Ionian.",
       "commons": null,
-      "lat": 38.745,
-      "lng": 20.6317
+      "lat": 38.7472,
+      "lng": 20.6336,
+      "name_el": "Παραλία Πευκούλια",
+      "type_el": "Λεπτή άμμος και βότσαλο",
+      "depth_el": "Ρηχό έως μέτριο",
+      "facing_el": "Δυτική — ανοιχτή, όμορφη θέα στο ηλιοβασίλεμα",
+      "facilities_el": "Στοιχειώδεις: μικρό beach bar, περιορισμένες ξαπλώστρες. Ήσυχη και χωρίς πλήθη.",
+      "desc_el": "Μια μακριά, σχετικά ήσυχη παραλία ακριβώς νότια του Αγίου Νικήτα. Κέδροι παρέχουν φυσική σκιά στο πίσω μέρος της παραλίας. Τα νερά είναι ήρεμα και διαυγή. Ένα από τα καλύτερα σημεία του νησιού για να δεις τον ήλιο να δύει πάνω από το Ιόνιο."
     }
-  ]
+  ],
+  "name_el": "Λευκάδα",
+  "subtitle_el": "Το νησί που πας με αυτοκίνητο — λευκοί γκρεμοί, τιρκουάζ λιμνοθάλασσες και οι καλύτερες παραλίες του Ιονίου",
+  "intro_el": "Η Λευκάδα είναι μοναδική ανάμεσα στα νησιά του Ιονίου — συνδέεται με την ηπειρωτική χώρα με πλωτή γέφυρα, οπότε δεν χρειάζεται πλοίο. Παρά την εύκολη πρόσβαση, νιώθει πραγματικά απομονωμένη, ειδικά στον νότο όπου κατακόρυφοι λευκοί ασβεστολιθικοί γκρεμοί βυθίζονται σε νερά αδύνατου μπλε-πράσινου. Το Πόρτο Κατσίκι και ο Εγκρεμνός βρίσκονται σταθερά ανάμεσα στις καλύτερες παραλίες της Ευρώπης. Το νησί είναι επίσης η πρωτεύουσα του windsurfing της Ελλάδας στο Βασιλικό."
 }

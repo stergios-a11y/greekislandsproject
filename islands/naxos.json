@@ -22,7 +22,9 @@
             "type": "museum",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Portara",
-            "desc": "The 6th-century BC marble gateway to an unfinished Temple of Apollo on a small island connected to Naxos Town by a causeway. The most iconic image of the island. Extraordinary at sunset."
+            "desc": "The 6th-century BC marble gateway to an unfinished Temple of Apollo on a small island connected to Naxos Town by a causeway. The most iconic image of the island. Extraordinary at sunset.",
+            "name_el": "Πορτάρα (Ναός Απόλλωνα)",
+            "desc_el": "Η μαρμάρινη πύλη του 6ου αιώνα π.Χ. ενός ημιτελούς Ναού του Απόλλωνα σε ένα μικρό νησάκι που συνδέεται με τη Χώρα της Νάξου με μώλο. Η πιο εμβληματική εικόνα του νησιού. Εκπληκτική στο ηλιοβασίλεμα."
           },
           {
             "name": "Naxos Old Town (Kastro)",
@@ -31,7 +33,9 @@
             "type": "castle",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Naxos",
-            "desc": "Venetian castle crowning the old town — a maze of arched lanes, Catholic churches and Venetian towers. The Archaeological Museum inside the kastro has superb Cycladic marble figurines."
+            "desc": "Venetian castle crowning the old town — a maze of arched lanes, Catholic churches and Venetian towers. The Archaeological Museum inside the kastro has superb Cycladic marble figurines.",
+            "name_el": "Παλιά Πόλη Νάξου (Κάστρο)",
+            "desc_el": "Βενετσιάνικο κάστρο που στέφει την παλιά πόλη — ένας λαβύρινθος από τοξωτά δρομάκια, καθολικές εκκλησίες και βενετσιάνικους πύργους. Το Αρχαιολογικό Μουσείο μέσα στο κάστρο έχει εξαιρετικά Κυκλαδικά μαρμάρινα ειδώλια."
           },
           {
             "name": "Naxos Market Street",
@@ -40,7 +44,9 @@
             "type": "city",
             "time": "12:00",
             "wiki": null,
-            "desc": "The main commercial street below the kastro — excellent local produce: Naxian cheese (graviera), thyme honey, Kitron liqueur made from citron leaves, local potatoes. Buy supplies for the beach."
+            "desc": "The main commercial street below the kastro — excellent local produce: Naxian cheese (graviera), thyme honey, Kitron liqueur made from citron leaves, local potatoes. Buy supplies for the beach.",
+            "name_el": "Αγορά της Νάξου",
+            "desc_el": "Ο κύριος εμπορικός δρόμος κάτω από το κάστρο — εξαιρετικά τοπικά προϊόντα: ναξιώτικη γραβιέρα, θυμαρίσιο μέλι, λικέρ Κίτρο από φύλλα κιτριάς, τοπικές πατάτες. Αγόρασε προμήθειες για την παραλία."
           },
           {
             "name": "Agios Prokopios Beach",
@@ -49,7 +55,9 @@
             "type": "beach",
             "time": "15:00",
             "wiki": null,
-            "desc": "One of the finest beaches in the Cyclades — fine white sand, clear shallow water, well organised. A 10-minute drive from the town. The water here is the best swimming in the northern section."
+            "desc": "One of the finest beaches in the Cyclades — fine white sand, clear shallow water, well organised. A 10-minute drive from the town. The water here is the best swimming in the northern section.",
+            "name_el": "Παραλία Αγίου Προκοπίου",
+            "desc_el": "Μία από τις καλύτερες παραλίες των Κυκλάδων — λεπτή λευκή άμμος, καθαρά ρηχά νερά, καλά οργανωμένη. 10 λεπτά οδικώς από την πόλη. Τα νερά εδώ είναι το καλύτερο μπάνιο του βορείου τμήματος."
           }
         ]
       },
@@ -68,7 +76,9 @@
             "type": "beach",
             "time": "09:30",
             "wiki": null,
-            "desc": "Town beach immediately south of Naxos Town — long, sandy, shallow and extremely convenient. The resort area behind it has every facility. Good for families staying in the town."
+            "desc": "Town beach immediately south of Naxos Town — long, sandy, shallow and extremely convenient. The resort area behind it has every facility. Good for families staying in the town.",
+            "name_el": "Παραλία Αγίου Γεωργίου",
+            "desc_el": "Παραλία της πόλης ακριβώς νότια από τη Χώρα της Νάξου — μακριά, αμμώδης, ρηχή και εξαιρετικά βολική. Η περιοχή του θερέτρου πίσω της έχει κάθε υπηρεσία. Καλή για οικογένειες που μένουν στην πόλη."
           },
           {
             "name": "Plaka Beach",
@@ -77,7 +87,9 @@
             "type": "beach",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Plaka_beach,_Naxos",
-            "desc": "The finest beach in the Cyclades — 5km of uninterrupted fine white sand with crystal clear, shallow turquoise water. The entire beach is backed by dunes and tamarisk trees providing natural shade. The southern end is less developed and more peaceful."
+            "desc": "The finest beach in the Cyclades — 5km of uninterrupted fine white sand with crystal clear, shallow turquoise water. The entire beach is backed by dunes and tamarisk trees providing natural shade. The southern end is less developed and more peaceful.",
+            "name_el": "Παραλία Πλάκα",
+            "desc_el": "Η καλύτερη παραλία των Κυκλάδων — 5 χλμ ασταμάτητης λεπτής λευκής άμμου με κρυστάλλινα, ρηχά τιρκουάζ νερά. Όλη η παραλία πλαισιώνεται από αμμόλοφους και αλμυρίκια που προσφέρουν φυσική σκιά. Το νότιο τμήμα είναι λιγότερο ανεπτυγμένο και πιο ήσυχο."
           },
           {
             "name": "Kastraki Beach",
@@ -86,7 +98,9 @@
             "type": "beach",
             "time": "14:30",
             "wiki": null,
-            "desc": "Quieter continuation of Plaka south — same quality sand and water but fewer facilities and people. Wild camping permitted in the dunes. The most unspoiled section of the long west-coast beach."
+            "desc": "Quieter continuation of Plaka south — same quality sand and water but fewer facilities and people. Wild camping permitted in the dunes. The most unspoiled section of the long west-coast beach.",
+            "name_el": "Παραλία Καστράκι",
+            "desc_el": "Η ησυχότερη συνέχεια της Πλάκας προς νότο — ίδιας ποιότητας άμμος και νερό αλλά λιγότερες υπηρεσίες και κόσμος. Επιτρέπεται το άγριο camping στους αμμόλοφους. Το πιο ανέγγιχτο τμήμα της μακριάς παραλίας της δυτικής ακτής."
           },
           {
             "name": "Vivlos Village",
@@ -95,7 +109,9 @@
             "type": "village",
             "time": "18:00",
             "wiki": null,
-            "desc": "Traditional inland village above the west coast. The views over Plaka beach and the sunset are exceptional. Several good tavernas with local Naxian dishes."
+            "desc": "Traditional inland village above the west coast. The views over Plaka beach and the sunset are exceptional. Several good tavernas with local Naxian dishes.",
+            "name_el": "Χωριό Βίβλος",
+            "desc_el": "Παραδοσιακό ορεινό χωριό πάνω από τη δυτική ακτή. Η θέα προς την παραλία της Πλάκας και το ηλιοβασίλεμα είναι εξαιρετικά. Αρκετές καλές ταβέρνες με τοπικά ναξιώτικα πιάτα."
           }
         ]
       },
@@ -114,7 +130,9 @@
             "type": "village",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Chalki,_Naxos",
-            "desc": "The finest village in the Naxos interior — Venetian towers, Byzantine churches and a distillery producing Kitron liqueur from the island's unique citron fruit. Breakfast at a village café."
+            "desc": "The finest village in the Naxos interior — Venetian towers, Byzantine churches and a distillery producing Kitron liqueur from the island's unique citron fruit. Breakfast at a village café.",
+            "name_el": "Χωριό Χάλκι",
+            "desc_el": "Το καλύτερο χωριό στο εσωτερικό της Νάξου — βενετσιάνικοι πύργοι, βυζαντινές εκκλησίες και ένα αποστακτήριο που παράγει το λικέρ Κίτρο από το μοναδικό κίτρο του νησιού. Πρωινό σε καφέ του χωριού."
           },
           {
             "name": "Panagia Drosiani",
@@ -123,7 +141,9 @@
             "type": "church",
             "time": "10:30",
             "wiki": "https://en.wikipedia.org/wiki/Panagia_Drosiani",
-            "desc": "One of the oldest Byzantine churches in the Cyclades (7th century), with rare early Christian frescoes surviving inside. Rarely visited and genuinely moving."
+            "desc": "One of the oldest Byzantine churches in the Cyclades (7th century), with rare early Christian frescoes surviving inside. Rarely visited and genuinely moving.",
+            "name_el": "Παναγία Δροσιανή",
+            "desc_el": "Μία από τις παλαιότερες βυζαντινές εκκλησίες των Κυκλάδων (7ος αιώνας), με σπάνιες πρώιμες χριστιανικές τοιχογραφίες που σώζονται μέσα. Σπάνια επισκέψιμη και πραγματικά συγκινητική."
           },
           {
             "name": "Apeiranthos Village",
@@ -132,7 +152,9 @@
             "type": "village",
             "time": "12:00",
             "wiki": "https://en.wikipedia.org/wiki/Apeiranthos",
-            "desc": "The most dramatic mountain village in the Cyclades — marble-paved streets, marble doorways and a fiercely independent character. The village has five small museums. Lunch at the village square."
+            "desc": "The most dramatic mountain village in the Cyclades — marble-paved streets, marble doorways and a fiercely independent character. The village has five small museums. Lunch at the village square.",
+            "name_el": "Χωριό Απείρανθος",
+            "desc_el": "Το πιο εντυπωσιακό ορεινό χωριό των Κυκλάδων — μαρμάρινα δρομάκια, μαρμάρινες πόρτες και έντονα ανεξάρτητος χαρακτήρας. Το χωριό έχει πέντε μικρά μουσεία. Μεσημεριανό στην πλατεία του χωριού."
           },
           {
             "name": "Mount Zeus (Zas)",
@@ -141,7 +163,9 @@
             "type": "nature",
             "time": "15:30",
             "wiki": "https://en.wikipedia.org/wiki/Mount_Zeus_(Naxos)",
-            "desc": "The highest peak in the Cyclades at 1001m. A 3-hour return hike through the fir forest past the Cave of Zeus. The view from the summit over the entire Cyclades archipelago is unbeatable on a clear day."
+            "desc": "The highest peak in the Cyclades at 1001m. A 3-hour return hike through the fir forest past the Cave of Zeus. The view from the summit over the entire Cyclades archipelago is unbeatable on a clear day.",
+            "name_el": "Όρος Ζευς (Ζας)",
+            "desc_el": "Η ψηλότερη κορυφή των Κυκλάδων στα 1001 μέτρα. Πεζοπορία 3 ωρών μετ' επιστροφής μέσα από ελατόδασος, περνώντας από το Σπήλαιο του Ζα. Η θέα από την κορυφή σε όλο το αρχιπέλαγος των Κυκλάδων είναι αξεπέραστη μια καθαρή μέρα."
           }
         ]
       },
@@ -160,7 +184,9 @@
             "type": "museum",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Kouros_of_Apollonas",
-            "desc": "A 10.5-metre unfinished marble kouros statue abandoned in the ancient marble quarry — too large to move, it has lain here since the 7th century BC. Free, unguarded, and extraordinary."
+            "desc": "A 10.5-metre unfinished marble kouros statue abandoned in the ancient marble quarry — too large to move, it has lain here since the 7th century BC. Free, unguarded, and extraordinary.",
+            "name_el": "Κούρος Απόλλωνα",
+            "desc_el": "Ένας ημιτελής μαρμάρινος Κούρος 10,5 μέτρων εγκαταλελειμμένος στο αρχαίο λατομείο μαρμάρου — πολύ μεγάλος για να μετακινηθεί, βρίσκεται εδώ από τον 7ο αιώνα π.Χ. Δωρεάν, χωρίς φύλακες και εκπληκτικός."
           },
           {
             "name": "Apollonas Beach",
@@ -169,7 +195,9 @@
             "type": "beach",
             "time": "11:00",
             "wiki": null,
-            "desc": "Sandy beach in the fishing village of Apollonas on the north coast. Calm, clear water, good tavernas. Less visited than the west coast."
+            "desc": "Sandy beach in the fishing village of Apollonas on the north coast. Calm, clear water, good tavernas. Less visited than the west coast.",
+            "name_el": "Παραλία Απόλλωνα",
+            "desc_el": "Αμμώδης παραλία στο ψαροχώρι του Απόλλωνα στη βόρεια ακτή. Ήρεμα, καθαρά νερά, καλές ταβέρνες. Λιγότερο επισκέψιμη από τη δυτική ακτή."
           },
           {
             "name": "Naxos Town — Departure",
@@ -178,7 +206,9 @@
             "type": "city",
             "time": "15:00",
             "wiki": null,
-            "desc": "Return to Naxos Town for the ferry. Buy Naxian cheese and honey for the boat."
+            "desc": "Return to Naxos Town for the ferry. Buy Naxian cheese and honey for the boat.",
+            "name_el": "Χώρα Νάξου — Αναχώρηση",
+            "desc_el": "Επιστροφή στη Χώρα της Νάξου για το πλοίο. Αγόρασε ναξιώτικο τυρί και μέλι για το ταξίδι."
           }
         ]
       }
@@ -197,7 +227,13 @@
       "desc": "Arguably the finest beach in the Cyclades — 5km of uninterrupted fine white sand and turquoise water with natural shade from tamarisk trees. The southern end is wilder and more private. One of the longest, least-developed quality beaches in Greece.",
       "commons": "Plaka_beach_Naxos.jpg",
       "lat": 37.0219,
-      "lng": 25.3444
+      "lng": 25.3444,
+      "name_el": "Παραλία Πλάκα",
+      "type_el": "Λεπτή λευκή άμμος",
+      "depth_el": "Ρηχό — πολύ σταδιακή είσοδος, εξαιρετικό για όλους τους κολυμβητές",
+      "facing_el": "Δυτική — προστατευμένη από το νησί από ανατολικούς ανέμους, ήρεμα νερά",
+      "facilities_el": "Το βόρειο τμήμα καλά οργανωμένο· το νότιο πιο άγριο. Φυσική σκιά από αλμυρίκια. Επιτρέπεται το camping στους αμμόλοφους.",
+      "desc_el": "Πιθανώς η καλύτερη παραλία των Κυκλάδων — 5 χλμ ασταμάτητης λεπτής λευκής άμμου και τιρκουάζ νερών με φυσική σκιά από αλμυρίκια. Το νότιο άκρο είναι πιο άγριο και πιο ιδιωτικό. Μία από τις μακρύτερες, λιγότερο ανεπτυγμένες ποιοτικές παραλίες της Ελλάδας."
     },
     {
       "name": "Agios Prokopios Beach",
@@ -211,7 +247,13 @@
       "desc": "Consistently voted one of the best beaches in Greece — fine white sand, clear shallow water and excellent facilities, just 10 minutes from Naxos Town. The combination of easy access and quality makes it the most popular beach on the island.",
       "commons": null,
       "lat": 37.0628,
-      "lng": 25.3761
+      "lng": 25.3761,
+      "name_el": "Παραλία Αγίου Προκοπίου",
+      "type_el": "Λεπτή λευκή άμμος",
+      "depth_el": "Ρηχό — κρυστάλλινα νερά, ήπια κλίση",
+      "facing_el": "Δυτική — ήρεμα, τιρκουάζ νερά",
+      "facilities_el": "Καλά οργανωμένη: ξαπλώστρες, beach bars, θαλάσσια σπορ, ταβέρνες. Οι καλύτερες υπηρεσίες των δυτικών παραλιών.",
+      "desc_el": "Σταθερά ψηφισμένη ανάμεσα στις καλύτερες παραλίες της Ελλάδας — λεπτή λευκή άμμος, καθαρά ρηχά νερά και εξαιρετικές υπηρεσίες, μόλις 10 λεπτά από τη Χώρα της Νάξου. Ο συνδυασμός εύκολης πρόσβασης και ποιότητας την κάνει τη δημοφιλέστερη παραλία του νησιού."
     },
     {
       "name": "Kastraki Beach",
@@ -225,7 +267,16 @@
       "desc": "The wild continuation of Plaka beach southward — same quality white sand and turquoise water but fewer people and facilities. Wild camping is permitted in the dunes. The most natural and unspoiled stretch of Naxos's extraordinary west coast.",
       "commons": null,
       "lat": 36.9919,
-      "lng": 25.3219
+      "lng": 25.3219,
+      "name_el": "Παραλία Καστράκι",
+      "type_el": "Λεπτή λευκή άμμος",
+      "depth_el": "Ρηχό — ανοιχτός αμμώδης βυθός",
+      "facing_el": "Δυτική — ίδιες συνθήκες με την Πλάκα, πιο άγριος χαρακτήρας",
+      "facilities_el": "Στοιχειώδεις έως μέτριες — λίγα beach bars και ταβέρνες, λιγότερο ανεπτυγμένη από την Πλάκα ή τον Άγιο Προκόπιο.",
+      "desc_el": "Η άγρια συνέχεια της παραλίας Πλάκας προς νότο — ίδιας ποιότητας λευκή άμμος και τιρκουάζ νερά αλλά λιγότερος κόσμος και υπηρεσίες. Επιτρέπεται το άγριο camping στους αμμόλοφους. Το πιο φυσικό και ανέγγιχτο κομμάτι της εξαιρετικής δυτικής ακτής της Νάξου."
     }
-  ]
+  ],
+  "name_el": "Νάξος",
+  "subtitle_el": "Οι Κυκλάδες όπως πρέπει — μαρμάρινα βουνά, αρχαίοι ναοί και οι καλύτερες παραλίες της Ευρώπης",
+  "intro_el": "Η Νάξος είναι το μεγαλύτερο και πιο αυτάρκες νησί των Κυκλάδων — ένα κανονικό νησί με ορεινό εσωτερικό, αρχαία λατομεία μαρμάρου, βενετσιάνικους πύργους, βυζαντινές εκκλησίες και τις καλύτερες αμμώδεις παραλίες της Ελλάδας. Σε αντίθεση με τη Σαντορίνη ή τη Μύκονο, η Νάξος έχει τα πάντα: ιστορία, φύση, φαγητό και παραλίες. Η Πλάκα και ο Άγιος Προκόπιος είναι ανάμεσα στις μακρύτερες, καλύτερες παραλίες λευκής άμμου του Αιγαίου. Το νησί παράγει επίσης εξαιρετικό κρασί, τυρί και πατάτες."
 }
