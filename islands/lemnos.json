@@ -1,0 +1,235 @@
+{
+  "key": "lemnos",
+  "name": "Lemnos",
+  "name_el": "Λήμνος",
+  "subtitle": "Greek mythology's forge — Hephaestus's volcanic island, the oldest settlement in Europe at Poliochni, sand dunes and over 30 sandy beaches",
+  "subtitle_el": "Το αμόνι της ελληνικής μυθολογίας — το ηφαιστειογενές νησί του Ηφαίστου, ο αρχαιότερος οικισμός της Ευρώπης στην Πολιόχνη, αμμοθίνες και πάνω από 30 αμμώδεις παραλίες",
+  "intro": "Lemnos is Greece's 8th-largest island and its quietest 8th-largest by a long margin — 477 km² of volcanic plains, sand dunes, salt flats and more than 30 sandy beaches, with about 17,000 year-round residents. In Greek mythology this is where Zeus threw Hephaestus when he was cast out of Olympus, and the god of metalwork supposedly set up his forge here. Poliochni on the east coast is one of the oldest settlements in Europe (4000 BC, predating Troy) and its 'Bouleuterion' may be the oldest known assembly building anywhere. The capital Myrina sits beneath an enormous Byzantine castle where deer roam free. The northeastern beaches at Keros are a windsurfing capital. Three days lets you see the highlights without rushing; an airport east of Myrina makes the island unusually accessible for somewhere this far north.",
+  "intro_el": "Η Λήμνος είναι το 8ο μεγαλύτερο νησί της Ελλάδας και το πιο ήσυχο 8ο μεγαλύτερο με διαφορά — 477 τ.χλμ. ηφαιστειακών πεδίων, αμμοθίνων, αλυκών και πάνω από 30 αμμώδεις παραλίες, με περίπου 17.000 μόνιμους κατοίκους. Στην ελληνική μυθολογία εδώ έριξε ο Δίας τον Ήφαιστο όταν εκδιώχθηκε από τον Όλυμπο, και ο θεός της μεταλλουργίας λέγεται ότι έστησε εδώ το αμόνι του. Η Πολιόχνη στην ανατολική ακτή είναι ένας από τους αρχαιότερους οικισμούς της Ευρώπης (4000 π.Χ., παλαιότερος από την Τροία) και το Βουλευτήριό της μπορεί να είναι το αρχαιότερο γνωστό κτίριο συνέλευσης οπουδήποτε. Η πρωτεύουσα Μύρινα βρίσκεται κάτω από ένα τεράστιο βυζαντινό κάστρο όπου περιφέρονται ελεύθερα ελάφια. Οι βορειοανατολικές παραλίες στον Κέρο είναι παγκόσμια πρωτεύουσα windsurfing. Τρεις μέρες σου επιτρέπουν να δεις τα κύρια χωρίς βιασύνη· αεροδρόμιο ανατολικά της Μύρινας κάνει το νησί ασυνήθιστα προσβάσιμο για κάπου τόσο μακριά βόρεια.",
+
+  "itinerary": {
+    "title": "3-Day Lemnos Itinerary",
+    "subtitle": "Myrina and the western beaches Day 1, the central archaeology Day 2, north and east windsurfing coast Day 3.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Myrina, the Castle & Western Beaches",
+        "color": "#1B4F8A",
+        "stops": [
+          {
+            "name": "Myrina (Capital)",
+            "name_el": "Μύρινα (Πρωτεύουσα)",
+            "lat": 39.8736,
+            "lng": 25.0589,
+            "type": "city",
+            "wiki": "https://en.wikipedia.org/wiki/Myrina,_Lemnos",
+            "desc": "The capital and main port, split into Romeikos Gialos (Greek waterfront, where the elegant stone mansions are) and Tourkikos Gialos (Turkish waterfront, the working port). Slab-paved alleys, hand-painted ceramics in the boutiques, the Archaeological Museum in a neoclassical 19th-century building. The base for the entire trip.",
+            "desc_el": "Η πρωτεύουσα και κύριο λιμάνι, χωρισμένη σε Ρωμέικο Γιαλό (την ελληνική παραλιακή, όπου είναι τα κομψά πέτρινα αρχοντικά) και Τουρκικό Γιαλό (την τουρκική παραλιακή, το εργαζόμενο λιμάνι). Πλακόστρωτα δρομάκια, χειροποίητη κεραμική στα μπουτίκ, το Αρχαιολογικό Μουσείο σε νεοκλασικό κτίριο του 19ου αιώνα. Η βάση για όλο το ταξίδι."
+          },
+          {
+            "name": "Castle of Myrina",
+            "name_el": "Κάστρο Μύρινας",
+            "lat": 39.8742,
+            "lng": 25.0567,
+            "type": "castle",
+            "desc": "The defining sight of Myrina — a vast Byzantine castle on a rocky precipice between the two harbours. Built by Andronikos I Komnenos in 1186, expanded by the Venetian Megadux Filocalo Navigajoso in the 13th century, repaired by the Ottomans in the 16th. Free entry, easy 20-minute climb. Deer live inside the walls — descendants of stock released by the Greek royal family.",
+            "desc_el": "Το κύριο αξιοθέατο της Μύρινας — τεράστιο βυζαντινό κάστρο σε βραχώδες ακρωτήρι ανάμεσα στα δύο λιμάνια. Χτίστηκε από τον Ανδρόνικο Α' Κομνηνό το 1186, επεκτάθηκε από τον Βενετό Μεγαδούκα Φιλόκαλο Ναβιγκαζόζο τον 13ο αιώνα, επισκευάστηκε από τους Οθωμανούς τον 16ο. Δωρεάν είσοδος, εύκολη ανάβαση 20 λεπτών. Ελάφια ζουν μέσα στα τείχη — απόγονοι ζώων που είχε αφήσει η ελληνική βασιλική οικογένεια."
+          },
+          {
+            "name": "Plati Beach",
+            "name_el": "Παραλία Πλατύ",
+            "lat": 39.8542,
+            "lng": 25.0633,
+            "type": "beach",
+            "desc": "2km south of Myrina — 700m of fine yellow sand, the most organised beach on the island. Beach bars, water sports, sunbeds, restaurants. The default for swimming when based in Myrina, easy walking distance from town.",
+            "desc_el": "2 χλμ νότια της Μύρινας — 700 μέτρα λεπτής κίτρινης άμμου, η πιο οργανωμένη παραλία του νησιού. Beach bars, θαλάσσια σπορ, ξαπλώστρες, εστιατόρια. Η προεπιλογή για κολύμπι όταν είσαι στη Μύρινα, εύκολη απόσταση πεζοπορίας από την πόλη."
+          },
+          {
+            "name": "Thanos Beach",
+            "name_el": "Παραλία Θάνους",
+            "lat": 39.8389,
+            "lng": 25.0703,
+            "type": "beach",
+            "desc": "4km south of Myrina — thick yellow sand and azure water set against a wild barren backdrop. Less developed than Plati but with a couple of tavernas. The contrast between the lush sand and the arid landscape behind is what makes it.",
+            "desc_el": "4 χλμ νότια της Μύρινας — παχιά κίτρινη άμμος και γαλάζια νερά σε άγριο γυμνό φόντο. Λιγότερο ανεπτυγμένη από το Πλατύ αλλά με μερικές ταβέρνες. Η αντίθεση ανάμεσα στην πλούσια άμμο και το ξηρό τοπίο πίσω είναι αυτό που την κάνει."
+          },
+          {
+            "name": "Sunset at Romeikos Gialos",
+            "name_el": "Ηλιοβασίλεμα στον Ρωμέικο Γιαλό",
+            "lat": 39.8742,
+            "lng": 25.0589,
+            "type": "village",
+            "desc": "Back in Myrina — the western waterfront with its row of stone mansions catches the sunset directly. Café terraces line the seafront, the castle silhouettes against the sky. Dinner at one of the harbour-side tavernas — sea urchin, fresh fish, Lemnian Muscat wine.",
+            "desc_el": "Πίσω στη Μύρινα — η δυτική παραλιακή με τη σειρά των πέτρινων αρχοντικών πιάνει κατευθείαν το ηλιοβασίλεμα. Βεράντες καφέ στη σειρά κατά μήκος της προκυμαίας, το κάστρο σιλουέτα στον ουρανό. Δείπνο σε μία από τις ταβέρνες του λιμανιού — αχινός, φρέσκο ψάρι, λημνιακό Μοσχάτο κρασί."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Poliochni, Hephaestia & Central Lemnos",
+        "color": "#C0522A",
+        "stops": [
+          {
+            "name": "Poliochni Archaeological Site",
+            "name_el": "Αρχαιολογικός Χώρος Πολιόχνης",
+            "lat": 39.8964,
+            "lng": 25.3878,
+            "type": "ruin",
+            "wiki": "https://en.wikipedia.org/wiki/Poliochni",
+            "desc": "30km east of Myrina, on the east coast. One of the oldest settlements in Europe — continuous occupation from 4000 BC. Four colour-coded layers of building (Blue, Green, Red, Yellow). Houses, paved streets, drainage, and a stepped-bench Bouleuterion that may be the world's oldest assembly building. Italian-led excavation; entry €4.",
+            "desc_el": "30 χλμ ανατολικά της Μύρινας, στην ανατολική ακτή. Από τους αρχαιότερους οικισμούς της Ευρώπης — συνεχής κατοίκηση από το 4000 π.Χ. Τέσσερις χρωματικά κωδικοποιημένες στρώσεις (Μπλε, Πράσινη, Κόκκινη, Κίτρινη). Σπίτια, λιθόστρωτοι δρόμοι, αποχέτευση, και ένα βουλευτήριο με σκαλωτά παγκάκια που μπορεί να είναι το αρχαιότερο κτίριο συνέλευσης στον κόσμο. Ιταλική ανασκαφή· είσοδος 4€."
+          },
+          {
+            "name": "Ancient Hephaestia",
+            "name_el": "Αρχαία Ηφαιστία",
+            "lat": 39.9883,
+            "lng": 25.3300,
+            "type": "ruin",
+            "desc": "On a peninsula north of Poliochni — the second great ancient city of Lemnos, named after Hephaestus and the most important town in classical times. Hellenistic-Roman theatre, palace foundations, a sanctuary of the Great Goddess of Lemnos (later identified with Artemis), Christian basilica. Free entry.",
+            "desc_el": "Σε χερσόνησο βόρεια της Πολιόχνης — η δεύτερη μεγάλη αρχαία πόλη της Λήμνου, ονομασμένη από τον Ήφαιστο και η σημαντικότερη πόλη στους κλασικούς χρόνους. Ελληνιστικο-ρωμαϊκό θέατρο, θεμέλια ανακτόρου, ιερό της Μεγάλης Θεάς της Λήμνου (αργότερα ταυτισμένη με την Άρτεμη), χριστιανική βασιλική. Δωρεάν είσοδος."
+          },
+          {
+            "name": "Sanctuary of Kavirio & Cave of Philoctetes",
+            "name_el": "Ιερό Καβειρίων & Σπηλιά Φιλοκτήτη",
+            "lat": 39.9986,
+            "lng": 25.3411,
+            "type": "ruin",
+            "desc": "1km from Hephaestia — 7th-century BC sanctuary where the secret Kabeirian Mysteries were held, dedicated to the Cabeiri (chthonic deities associated with Hephaestus). The nearby sea cave is mythologically the spot where the Greeks abandoned the wounded Philoctetes on their way to Troy. Atmospheric and rarely crowded.",
+            "desc_el": "1 χλμ από την Ηφαιστία — ιερό του 7ου αιώνα π.Χ. όπου τελούνταν τα μυστικά Καβείρια μυστήρια, αφιερωμένο στους Καβείρους (χθόνιες θεότητες συνδεδεμένες με τον Ήφαιστο). Η κοντινή θαλάσσια σπηλιά είναι μυθολογικά το σημείο όπου οι Έλληνες εγκατέλειψαν τον τραυματισμένο Φιλοκτήτη στον δρόμο τους για την Τροία. Ατμοσφαιρικό και σπάνια πολυσύχναστο."
+          },
+          {
+            "name": "Moudros & Bay",
+            "name_el": "Μούδρος & Κόλπος",
+            "lat": 39.8728,
+            "lng": 25.2522,
+            "type": "village",
+            "desc": "Second-largest town on Lemnos, on the deep central bay. The harbour is one of the most sheltered in the Mediterranean — used as the Allied naval base in WWI, where the Armistice of Moudros that ended Ottoman participation was signed in 1918. Fanaraki and Mikro Fanaraki beaches nearby. Sardine festival in August.",
+            "desc_el": "Δεύτερη μεγαλύτερη πόλη της Λήμνου, στον βαθύ κεντρικό κόλπο. Το λιμάνι είναι από τα πιο προστατευμένα της Μεσογείου — χρησιμοποιήθηκε ως ναυτική βάση των Συμμάχων στον Α' Παγκόσμιο Πόλεμο, όπου υπογράφηκε η Ανακωχή του Μούδρου που τερμάτισε τη συμμετοχή των Οθωμανών το 1918. Παραλίες Φαναράκι και Μικρό Φαναράκι κοντά. Φεστιβάλ σαρδέλας τον Αύγουστο."
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "North Coast — Sand Dunes & Keros Windsurfing",
+        "color": "#5A7A3A",
+        "stops": [
+          {
+            "name": "Pachies Ammoudes Sand Dunes",
+            "name_el": "Αμμοθίνες Παχιές Αμμουδιές",
+            "lat": 39.9961,
+            "lng": 25.0792,
+            "type": "viewpoint",
+            "desc": "North of Katalakkos village by Gomati cove — vast sand dunes on the side of a mountain, with a landscape that looks like a slice of the Sahara dropped into the Aegean. Sandboarding is possible. Constantly reshaping with the wind. Surreal and almost always empty.",
+            "desc_el": "Βόρεια του χωριού Κατάλακκος στον κόλπο Γωμάτι — τεράστιες αμμοθίνες στην πλαγιά βουνού, με τοπίο που μοιάζει με κομμάτι Σαχάρας πεταγμένο στο Αιγαίο. Είναι δυνατό sandboarding. Συνεχώς αλλάζουν σχήμα με τον άνεμο. Σουρεαλιστικό και σχεδόν πάντα άδειο."
+          },
+          {
+            "name": "Panagia Kakkaviotissa Chapel",
+            "name_el": "Παναγία Κακκαβιώτισσα",
+            "lat": 39.9056,
+            "lng": 25.1244,
+            "type": "monastery",
+            "desc": "10km southeast of Myrina — small chapel sheltered under a giant overhanging rock instead of having a roof. The only roofless chapel in Greece. Steep but short hike up the mountain. Sunrise or late-afternoon visits are best for the light.",
+            "desc_el": "10 χλμ νοτιοανατολικά της Μύρινας — μικρό εκκλησάκι προστατευμένο κάτω από έναν γιγάντιο επικρεμασμένο βράχο αντί να έχει στέγη. Το μοναδικό εκκλησάκι χωρίς στέγη στην Ελλάδα. Απότομη αλλά σύντομη πεζοπορία στο βουνό. Επισκέψεις στην ανατολή του ηλίου ή αργά το απόγευμα είναι οι καλύτερες για το φως."
+          },
+          {
+            "name": "Keros Beach",
+            "name_el": "Παραλία Κέρος",
+            "lat": 39.9264,
+            "lng": 25.4144,
+            "type": "beach",
+            "desc": "On the windswept east coast — a 1.5km sandy crescent that is one of the best windsurfing and kitesurfing spots in the Mediterranean. Two kite schools operate here. Beginners' lessons available. Even non-surfers find the wild dune-backed beach worth the drive.",
+            "desc_el": "Στην ανεμόπληκτη ανατολική ακτή — μια αμμώδης ημισέληνος 1,5 χλμ που είναι από τα καλύτερα σημεία windsurfing και kitesurfing της Μεσογείου. Δύο σχολές kite λειτουργούν εδώ. Διαθέσιμα μαθήματα για αρχάριους. Ακόμα και οι μη surfers βρίσκουν την άγρια αμμοθινική παραλία αντάξια της οδικής διαδρομής."
+          },
+          {
+            "name": "Therma Hot Springs",
+            "name_el": "Λουτρά Θέρμα",
+            "lat": 39.9217,
+            "lng": 25.1608,
+            "type": "village",
+            "desc": "Near Kornos village, 8.5km northeast of Myrina — natural hot mineral springs (39-43°C) used since antiquity. Modern therapeutic spa facilities operate seasonally. The kind of finishing soak that makes the whole trip end well.",
+            "desc_el": "Κοντά στο χωριό Κορνός, 8,5 χλμ βορειοανατολικά της Μύρινας — φυσικές ζεστές μεταλλικές πηγές (39-43°C) που χρησιμοποιούνται από την αρχαιότητα. Σύγχρονες θεραπευτικές εγκαταστάσεις spa λειτουργούν εποχικά. Από τα τελειωτικά μπάνια που κάνουν το ταξίδι να τελειώνει καλά."
+          }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Plati Beach",
+      "name_el": "Παραλία Πλατύ",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine yellow sand",
+      "type_el": "Λεπτή κίτρινη άμμος",
+      "length": "700 m",
+      "depth": "Shallow to medium — gradual",
+      "depth_el": "Ρηχό έως μέτριο — σταδιακό",
+      "facing": "Southwest-facing — sheltered, usually calm",
+      "facing_el": "Νοτιοδυτική — προστατευμένη, συνήθως ήρεμη",
+      "facilities": "Fully organised: beach bars, water sports, sunbeds, tavernas. 2km walk from Myrina.",
+      "facilities_el": "Πλήρως οργανωμένη: beach bars, θαλάσσια σπορ, ξαπλώστρες, ταβέρνες. 2 χλμ με τα πόδια από τη Μύρινα.",
+      "desc": "The default beach of Lemnos and the most accessible — long, sandy, well-equipped, walking distance from Myrina. Family-friendly with shallow water and water sports. Busiest in August but never overrun.",
+      "desc_el": "Η προεπιλογή της Λήμνου και η πιο προσβάσιμη — μακριά, αμμώδης, καλά εξοπλισμένη, σε απόσταση πεζοπορίας από τη Μύρινα. Οικογενειακή με ρηχά νερά και θαλάσσια σπορ. Πιο πολυσύχναστη τον Αύγουστο αλλά ποτέ συντριπτική.",
+      "lat": 39.8542,
+      "lng": 25.0633
+    },
+    {
+      "name": "Keros Beach",
+      "name_el": "Παραλία Κέρος",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine sand",
+      "type_el": "Λεπτή άμμος",
+      "length": "1.5 km",
+      "depth": "Shallow",
+      "depth_el": "Ρηχό",
+      "facing": "Northeast-facing — exposed to the meltemi (perfect for windsurfing)",
+      "facing_el": "Βορειοανατολική — εκτεθειμένη στο μελτέμι (τέλεια για windsurfing)",
+      "facilities": "Two kite/windsurf schools, a couple of beach bars. 40km from Myrina.",
+      "facilities_el": "Δύο σχολές kite/windsurf, μερικά beach bars. 40 χλμ από τη Μύρινα.",
+      "desc": "The Mediterranean's premier windsurfing beach — long sandy crescent backed by dunes, with reliable cross-shore winds 90% of summer days. Schools rent equipment and offer lessons. Even if you don't surf, the wild dune landscape is worth the drive.",
+      "desc_el": "Η κορυφαία παραλία windsurfing της Μεσογείου — μακριά αμμώδης ημισέληνος με αμμοθίνες πίσω, με αξιόπιστους πλευρικούς ανέμους το 90% των καλοκαιρινών ημερών. Σχολές νοικιάζουν εξοπλισμό και προσφέρουν μαθήματα. Ακόμα και αν δεν κάνεις surf, το άγριο τοπίο των αμμοθινών αξίζει την οδική διαδρομή.",
+      "lat": 39.9264,
+      "lng": 25.4144
+    },
+    {
+      "name": "Thanos Beach",
+      "name_el": "Παραλία Θάνους",
+      "wiki": null,
+      "rating": 4,
+      "type": "Thick yellow sand",
+      "type_el": "Παχιά κίτρινη άμμος",
+      "length": "300 m",
+      "depth": "Medium",
+      "depth_el": "Μέτριο",
+      "facing": "Southwest-facing — sheltered",
+      "facing_el": "Νοτιοδυτική — προστατευμένη",
+      "facilities": "Light: a couple of seasonal tavernas. 4km south of Myrina.",
+      "facilities_el": "Ελαφριές: μερικές εποχικές ταβέρνες. 4 χλμ νότια της Μύρινας.",
+      "desc": "Quieter alternative to Plati on the southwest coast — thick yellow sand, azure water, and a wild barren backdrop that looks more dramatic than the nearby family beaches. Less developed; bring your own umbrella.",
+      "desc_el": "Πιο ήσυχη εναλλακτική του Πλατύ στη νοτιοδυτική ακτή — παχιά κίτρινη άμμος, γαλάζια νερά, και ένα άγριο γυμνό φόντο που φαίνεται πιο εντυπωσιακό από τις κοντινές οικογενειακές παραλίες. Λιγότερο ανεπτυγμένη· φέρε τη δική σου ομπρέλα.",
+      "lat": 39.8389,
+      "lng": 25.0703
+    },
+    {
+      "name": "Gomati Beach & Dunes",
+      "name_el": "Παραλία & Αμμοθίνες Γωμάτι",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "type_el": "Λεπτή άμμος",
+      "length": "500 m",
+      "depth": "Shallow",
+      "depth_el": "Ρηχό",
+      "facing": "North-facing — exposed",
+      "facing_el": "Βόρεια — εκτεθειμένη",
+      "facilities": "None. Reached by dirt road north of Katalakkos village.",
+      "facilities_el": "Καμία. Προσβάσιμη με χωματόδρομο βόρεια του χωριού Κατάλακκος.",
+      "desc": "On the north coast at the foot of the Pachies Ammoudes sand-dune mountain — the most surreal landscape on Lemnos, where Sahara-like dunes drop directly to the sea. Almost always empty. Bring everything; the experience is the dunes more than the swim.",
+      "desc_el": "Στη βόρεια ακτή στους πρόποδες του βουνού αμμοθινών Παχιές Αμμουδιές — το πιο σουρεαλιστικό τοπίο της Λήμνου, όπου αμμοθίνες σαν τη Σαχάρα πέφτουν κατευθείαν στη θάλασσα. Σχεδόν πάντα άδεια. Φέρε τα πάντα· η εμπειρία είναι οι αμμοθίνες περισσότερο από το μπάνιο.",
+      "lat": 39.9961,
+      "lng": 25.0792
+    }
+  ]
+}

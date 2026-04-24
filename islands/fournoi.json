@@ -1,0 +1,200 @@
+{
+  "key": "fournoi",
+  "name": "Fournoi",
+  "name_el": "Φούρνοι",
+  "subtitle": "Pirate archipelago between Samos and Ikaria — ancient marble quarries, fishing fleet, three windmills and a 600-step descent to the best taverna",
+  "subtitle_el": "Πειρατικό αρχιπέλαγος ανάμεσα σε Σάμο και Ικαρία — αρχαία λατομεία μαρμάρου, αλιευτικός στόλος, τρεις ανεμόμυλοι και μια κατάβαση 600 σκαλοπατιών στην καλύτερη ταβέρνα",
+  "intro": "Fournoi (full name Fournoi Korseon, the 'Korassioi islands' of antiquity) is an archipelago of two inhabited islands and over twenty barren islets between Samos and Ikaria. Deserted in the Middle Ages because pirates used it as a base — Barbarossa anchored here — it was resettled in the 19th century by Dodecanese refugees. Today around 1,400 people live mostly in Chora (Kambos), with smaller settlements at Kampi and the corkscrew-road harbour of Chrysomilia in the north. The marble quarries at Petrokopio supplied ancient Miletus and Ephesus, and recent underwater archaeology has discovered one of the densest concentrations of shipwrecks in the world. Two days lets you do both peninsulas; bring scooter or car, since there's no bus.",
+  "intro_el": "Οι Φούρνοι (επίσημο όνομα Φούρνοι Κορσεών, τα \"Κορασσιακά νησιά\" της αρχαιότητας) είναι αρχιπέλαγος δύο κατοικημένων νησιών και πάνω από είκοσι έρημων νησίδων ανάμεσα σε Σάμο και Ικαρία. Εγκαταλελειμμένα τον Μεσαίωνα γιατί οι πειρατές τα χρησιμοποιούσαν ως βάση — ο Μπαρμπαρόσα αγκυροβολούσε εδώ — επανεγκαταστάθηκαν τον 19ο αιώνα από Δωδεκανήσιους πρόσφυγες. Σήμερα γύρω στους 1.400 κατοίκους ζουν κυρίως στη Χώρα (Κάμπος), με μικρότερους οικισμούς στο Καμπί και τη Χρυσομηλιά στον βορρά. Τα λατομεία μαρμάρου του Πετροκόπιου τροφοδοτούσαν την αρχαία Μίλητο και Έφεσο, και η πρόσφατη υποβρύχια αρχαιολογία ανακάλυψε μία από τις πυκνότερες συγκεντρώσεις ναυαγίων του κόσμου. Δύο μέρες σου αρκούν να κάνεις και τις δύο χερσονήσους· φέρε σκούτερ ή αυτοκίνητο, γιατί δεν υπάρχει λεωφορείο.",
+
+  "itinerary": {
+    "title": "2-Day Fournoi Itinerary",
+    "subtitle": "Chora and the southern peninsula on Day 1, Chrysomilia and Thymaina on Day 2.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Chora, Kampi & the Southern Beaches",
+        "color": "#1B4F8A",
+        "stops": [
+          {
+            "name": "Chora (Kambos)",
+            "name_el": "Χώρα (Κάμπος)",
+            "lat": 37.5783,
+            "lng": 26.4961,
+            "type": "village",
+            "wiki": "https://en.wikipedia.org/wiki/Fournoi_Korseon",
+            "desc": "The main settlement and port — whitewashed houses on tiers above the harbour, mulberry trees in the central square, a soft-drink bottling workshop that makes the local 'Lagou' orange juice everyone drinks here. Cafés, bakeries (fournoi means 'ovens' in Greek), and the largest fishing fleet in the Aegean tied up at the quay.",
+            "desc_el": "Ο κύριος οικισμός και λιμάνι — ασβεστωμένα σπίτια σε επίπεδα πάνω από το λιμάνι, μουριές στην κεντρική πλατεία, ένα εργαστήριο εμφιάλωσης αναψυκτικών που φτιάχνει την τοπική πορτοκαλάδα \"Λαγού\" που πίνουν όλοι εδώ. Καφέ, φούρνοι, και ο μεγαλύτερος αλιευτικός στόλος του Αιγαίου δεμένος στην προβλήτα."
+          },
+          {
+            "name": "Agios Georgios Acropolis",
+            "name_el": "Ακρόπολη Αγίου Γεωργίου",
+            "lat": 37.5814,
+            "lng": 26.4933,
+            "type": "ruin",
+            "desc": "On the hill above Chora — sections of a Cyclopean wall from a prehistoric castle, with a classical-era acropolis built on top. Inscriptions reference the gods of Samothrace and Hermes. Free, no fence, panoramic views over the harbour and Ikaria across the strait.",
+            "desc_el": "Στον λόφο πάνω από τη Χώρα — τμήματα κυκλώπειου τείχους από προϊστορικό κάστρο, με κλασική ακρόπολη χτισμένη επάνω. Επιγραφές αναφέρονται στους θεούς της Σαμοθράκης και τον Ερμή. Δωρεάν, χωρίς φράχτη, πανοραμική θέα στο λιμάνι και την Ικαρία απέναντι από το κανάλι."
+          },
+          {
+            "name": "Kampi Village & the Three Windmills",
+            "name_el": "Χωριό Καμπί & οι Τρεις Ανεμόμυλοι",
+            "lat": 37.5703,
+            "lng": 26.4886,
+            "type": "village",
+            "desc": "1km south of Chora — small settlement with the island's signature trio of stone windmills on the ridge above. The Kampi Beach Bar is the only proper organised beach service on Fournoi. Sandy beach, salt cedars for shade, an easy first swim.",
+            "desc_el": "1 χλμ νότια της Χώρας — μικρός οικισμός με τους χαρακτηριστικούς τρεις πέτρινους ανεμόμυλους στην κορυφογραμμή από πάνω. Το Kampi Beach Bar είναι η μόνη κανονική οργανωμένη παραλιακή υπηρεσία στους Φούρνους. Αμμώδης παραλία, αλμυρίκια για σκιά, εύκολο πρώτο μπάνιο."
+          },
+          {
+            "name": "Petrokopio Beach & Ancient Quarry",
+            "name_el": "Παραλία Πετροκόπιο & Αρχαίο Λατομείο",
+            "lat": 37.5594,
+            "lng": 26.4661,
+            "type": "ruin",
+            "desc": "4km southwest, on the western coast. White marble pebbles cover the beach — debris from the ancient quarries that supplied Miletus and Ephesus. Intact columns and pedestals still lying around. Reach by trail or boat. Tamarisk shade, no facilities, often nudist.",
+            "desc_el": "4 χλμ νοτιοδυτικά, στη δυτική ακτή. Λευκά μαρμάρινα βότσαλα καλύπτουν την παραλία — υπολείμματα από τα αρχαία λατομεία που τροφοδοτούσαν τη Μίλητο και την Έφεσο. Ακέραιες κολώνες και βάθρα ακόμα κείτονται γύρω. Πρόσβαση με μονοπάτι ή βάρκα. Σκιά αλμυρικιών, χωρίς υπηρεσίες, συχνά γυμνιστική."
+          },
+          {
+            "name": "Kasidi Beach",
+            "name_el": "Παραλία Κασίδι",
+            "lat": 37.5500,
+            "lng": 26.4778,
+            "type": "beach",
+            "desc": "Southwestern coast, accessible only by boat or rough track. Fine white sand, turquoise water, complete seclusion. Common nudist beach. Bring water, food, shade.",
+            "desc_el": "Νοτιοδυτική ακτή, προσβάσιμη μόνο με βάρκα ή κακή χωμάτινη διαδρομή. Λεπτή λευκή άμμος, τιρκουάζ νερά, απόλυτη απομόνωση. Συνηθισμένη γυμνιστική παραλία. Φέρε νερό, φαγητό, σκιά."
+          },
+          {
+            "name": "Dinner — Almyra Taverna",
+            "name_el": "Δείπνο — Ταβέρνα Άλμυρα",
+            "lat": 37.5786,
+            "lng": 26.4965,
+            "type": "village",
+            "desc": "Beach-rustic taverna on the Chora harbour serving fish and seafood straight from the boats moored ten metres away. Order whatever was caught that morning — and the lobster, if it's listed. Fratzesca's next door is the alternative.",
+            "desc_el": "Παραθαλάσσια ταβέρνα στο λιμάνι της Χώρας που σερβίρει ψάρι και θαλασσινά κατευθείαν από τις βάρκες δεμένες δέκα μέτρα μακριά. Παράγγειλε ό,τι πιάστηκε το πρωί — και αστακό, αν είναι στο μενού. Η Φραντζέσκας δίπλα είναι η εναλλακτική."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Chrysomilia & Thymaina",
+        "color": "#C0522A",
+        "stops": [
+          {
+            "name": "Drive to Chrysomilia",
+            "name_el": "Διαδρομή προς Χρυσομηλιά",
+            "lat": 37.6383,
+            "lng": 26.4781,
+            "type": "viewpoint",
+            "desc": "15km north on a road that climbs and dives along the spine of the northern peninsula. Views over the entire archipelago. The road ends with a 'corkscrew' descent to the village — or you can park up top and take the 600-step walkway down.",
+            "desc_el": "15 χλμ βόρεια σε δρόμο που ανεβοκατεβαίνει στη ραχοκοκαλιά της βόρειας χερσονήσου. Θέες σε όλο το αρχιπέλαγος. Ο δρόμος τελειώνει με μια \"τιρμπουσόν\" κατάβαση στο χωριό — ή μπορείς να παρκάρεις πάνω και να πάρεις τον πεζόδρομο των 600 σκαλοπατιών."
+          },
+          {
+            "name": "Chrysomilia Harbour",
+            "name_el": "Λιμάνι Χρυσομηλιάς",
+            "lat": 37.6461,
+            "lng": 26.4867,
+            "type": "village",
+            "desc": "The most picturesque fishing harbour in the Aegean — that's not a brochure claim, multiple Greek travel writers say it. Traditional caïques moored against a tiny stone harbour, a handful of houses behind, the Tower of Agia Triada with the ancient sanctuary to Poseidon on the hill above.",
+            "desc_el": "Το πιο γραφικό αλιευτικό λιμάνι του Αιγαίου — δεν είναι ισχυρισμός φυλλαδίου, πολλοί Έλληνες ταξιδιωτικοί συγγραφείς το λένε. Παραδοσιακά καΐκια δεμένα σε μικροσκοπικό πέτρινο λιμάνι, μερικά σπίτια πίσω, ο Πύργος της Αγίας Τριάδας με το αρχαίο ιερό του Ποσειδώνα στον λόφο από πάνω."
+          },
+          {
+            "name": "Chrysomilia Beach",
+            "name_el": "Παραλία Χρυσομηλιάς",
+            "lat": 37.6450,
+            "lng": 26.4853,
+            "type": "beach",
+            "desc": "Long sandy north-coast beach next to the harbour. Shallow, calm, family-friendly because the water is sheltered from the meltemi. The taverna at the seaside (the one at the bottom of the steps) is the lunch reward for the descent.",
+            "desc_el": "Μακριά αμμώδης παραλία της βόρειας ακτής δίπλα στο λιμάνι. Ρηχή, ήρεμη, οικογενειακή γιατί τα νερά είναι προστατευμένα από το μελτέμι. Η ταβέρνα στην παραλία (αυτή στο τέλος των σκαλοπατιών) είναι η ανταμοιβή για το μεσημεριανό μετά την κατάβαση."
+          },
+          {
+            "name": "Boat to Thymaina",
+            "name_el": "Βάρκα προς Θύμαινα",
+            "lat": 37.5894,
+            "lng": 26.4322,
+            "type": "village",
+            "desc": "Daily small ferry from Chora to the second inhabited island of the archipelago — 30 minutes. Single fishing village, one or two tavernas, the long sandy Keramidou Beach. O Kottaras Taverna at the far end of Keramidou is one of the most genuinely good lunch spots in the eastern Aegean.",
+            "desc_el": "Καθημερινό μικρό πλοίο από τη Χώρα προς το δεύτερο κατοικημένο νησί του αρχιπελάγους — 30 λεπτά. Ένα μόνο αλιευτικό χωριό, μία-δύο ταβέρνες, η μακριά αμμώδης παραλία Κεραμίδου. Η ταβέρνα του Κοτταρά στο μακρινό άκρο της Κεραμίδου είναι ένα από τα πιο γνήσια καλά μεσημεριανά σημεία του ανατολικού Αιγαίου."
+          }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Petrokopio Beach",
+      "name_el": "Παραλία Πετροκόπιο",
+      "wiki": null,
+      "rating": 5,
+      "type": "White marble pebble",
+      "type_el": "Λευκό μαρμάρινο βότσαλο",
+      "length": "200 m",
+      "depth": "Medium — exceptionally clear",
+      "depth_el": "Μέτριο — εξαιρετικά διαυγές",
+      "facing": "West-facing — sunset views",
+      "facing_el": "Δυτική — θέα στο ηλιοβασίλεμα",
+      "facilities": "None. Tamarisk shade, ancient quarry behind. Reached on foot or by boat. Often nudist.",
+      "facilities_el": "Καμία. Σκιά αλμυρικιών, αρχαίο λατομείο πίσω. Πρόσβαση με τα πόδια ή με βάρκα. Συχνά γυμνιστική.",
+      "desc": "The most distinctive beach on Fournoi — the entire shoreline is white marble debris from the ancient quarry above, where the columns of Miletus and Ephesus were cut and shipped. Intact column pieces still lie on the sand. Turquoise water, complete isolation, the rare beach where you swim in literal history.",
+      "desc_el": "Η πιο χαρακτηριστική παραλία των Φούρνων — όλη η ακτογραμμή είναι λευκά μαρμάρινα υπολείμματα από το αρχαίο λατομείο από πάνω, όπου κόπηκαν και φορτώθηκαν οι κολώνες της Μιλήτου και της Εφέσου. Ακέραια κομμάτια κολωνών ακόμα κείτονται στην άμμο. Τιρκουάζ νερά, απόλυτη απομόνωση, η σπάνια παραλία όπου κολυμπάς μέσα σε κυριολεκτική ιστορία.",
+      "lat": 37.5594,
+      "lng": 26.4661
+    },
+    {
+      "name": "Kasidi Beach",
+      "name_el": "Παραλία Κασίδι",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine white sand",
+      "type_el": "Λεπτή λευκή άμμος",
+      "length": "150 m",
+      "depth": "Shallow to medium — turquoise, clear",
+      "depth_el": "Ρηχό έως μέτριο — τιρκουάζ, διαυγές",
+      "facing": "South-facing — sheltered",
+      "facing_el": "Νότια — προστατευμένη",
+      "facilities": "None. Reached by boat or 4WD-friendly track. Common nudist beach.",
+      "facilities_el": "Καμία. Πρόσβαση με βάρκα ή διαδρομή κατάλληλη για 4x4. Συνηθισμένη γυμνιστική παραλία.",
+      "desc": "The hidden gem of the southern peninsula — fine white sand and turquoise water, completely undeveloped, almost always empty. Bring water and an umbrella. The remoteness is the appeal: you'll have it to yourself even in August.",
+      "desc_el": "Το κρυμμένο διαμάντι της νότιας χερσονήσου — λεπτή λευκή άμμος και τιρκουάζ νερά, εντελώς ανέγγιχτη, σχεδόν πάντα άδεια. Φέρε νερό και ομπρέλα. Η απομόνωση είναι το πλεονέκτημα: θα την έχεις για σένα ακόμα και τον Αύγουστο.",
+      "lat": 37.5500,
+      "lng": 26.4778
+    },
+    {
+      "name": "Chrysomilia Beach",
+      "name_el": "Παραλία Χρυσομηλιάς",
+      "wiki": null,
+      "rating": 4,
+      "type": "Sand",
+      "type_el": "Άμμος",
+      "length": "300 m",
+      "depth": "Shallow — gradual",
+      "depth_el": "Ρηχό — σταδιακό",
+      "facing": "North-facing — sheltered by the bay",
+      "facing_el": "Βόρεια — προστατευμένη από τον κόλπο",
+      "facilities": "Light: a seasonal taverna at the bottom of the steps. 15km drive from Chora plus 600-step descent (or by boat).",
+      "facilities_el": "Ελαφριές: εποχική ταβέρνα στο τέλος των σκαλοπατιών. 15 χλμ οδικώς από τη Χώρα συν κατάβαση 600 σκαλοπατιών (ή με βάρκα).",
+      "desc": "The northern beach — sandy, sheltered, with the most picturesque fishing harbour in the Aegean as backdrop. Family-friendly. The 600-step walkway down (and back up) keeps the casual visitor away. The taverna at the seaside makes the climb back up worth it.",
+      "desc_el": "Η βόρεια παραλία — αμμώδης, προστατευμένη, με το πιο γραφικό αλιευτικό λιμάνι του Αιγαίου ως φόντο. Οικογενειακή. Ο πεζόδρομος των 600 σκαλοπατιών (κάτω και πάνω) κρατά τον περιστασιακό επισκέπτη μακριά. Η ταβέρνα στην παραλία αξίζει την ανάβαση πίσω.",
+      "lat": 37.6450,
+      "lng": 26.4853
+    },
+    {
+      "name": "Kampi Beach",
+      "name_el": "Παραλία Καμπί",
+      "wiki": null,
+      "rating": 4,
+      "type": "Sand and pebble",
+      "type_el": "Άμμος και βότσαλο",
+      "length": "150 m",
+      "depth": "Shallow",
+      "depth_el": "Ρηχό",
+      "facing": "South-facing — sheltered",
+      "facing_el": "Νότια — προστατευμένη",
+      "facilities": "Light: Kampi Beach Bar (the only properly organised beach service on Fournoi). Salt-cedar shade. 1km south of Chora.",
+      "facilities_el": "Ελαφριές: Kampi Beach Bar (η μόνη κανονικά οργανωμένη παραλιακή υπηρεσία στους Φούρνους). Σκιά αλμυρικιών. 1 χλμ νότια της Χώρας.",
+      "desc": "The default convenience beach — close to Chora, the only one with proper sunbeds and a bar serving snacks and cocktails. The view back to the three windmills on the ridge above is the photograph everyone takes home.",
+      "desc_el": "Η προεπιλεγμένη παραλία ευκολίας — κοντά στη Χώρα, η μόνη με κανονικές ξαπλώστρες και μπαρ που σερβίρει σνακ και κοκτέιλ. Η θέα πίσω στους τρεις ανεμόμυλους στην κορυφογραμμή από πάνω είναι η φωτογραφία που παίρνουν όλοι σπίτι.",
+      "lat": 37.5703,
+      "lng": 26.4886
+    }
+  ]
+}
