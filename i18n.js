@@ -30,7 +30,7 @@ const UI_TEXT = {
 
   // Hero / homepage
   'hero.title': { en: 'Find your perfect Greek island', el: 'Βρες το ιδανικό σου ελληνικό νησί' },
-  'hero.sub': { en: '83 islands scored across beaches, culture, nightlife, access and price. Click any circle to explore.', el: '83 νησιά βαθμολογημένα σε παραλίες, πολιτισμό, νυχτερινή ζωή, πρόσβαση και τιμή. Πάτα οποιοδήποτε σημείο για εξερεύνηση.' },
+  'hero.sub': { en: '76 islands scored across beaches, culture, nightlife, access and price. Click any circle to explore.', el: '76 νησιά βαθμολογημένα σε παραλίες, πολιτισμό, νυχτερινή ζωή, πρόσβαση και τιμή. Πάτα οποιοδήποτε σημείο για εξερεύνηση.' },
   'hero.tagline': { en: 'The Greek Island Decision Engine', el: 'Ο οδηγός για το Ελληνικό νησί που σας ταιριάζει' },
   'hero.dismiss': { en: 'Got it', el: 'Έγινε' },
   'hero.stat.islands': { en: 'Islands', el: 'Νησιά' },
@@ -210,7 +210,7 @@ const UI_TEXT = {
 
   // Section 1 — Why this site exists
   'mission.why.title': { en: 'Why this site exists', el: 'Γιατί υπάρχει αυτή η σελίδα' },
-  'mission.why.p1': { en: 'Greece has 83 inhabited islands. Most guides try to cover all of them, and end up saying nothing useful about any. Search results give you the same twenty stock photos of Oia and a PR-written paragraph that could be about any island in the Aegean. AI-generated lists read like they were written by someone who has never tasted a tomato.', el: 'Η Ελλάδα έχει 83 κατοικημένα νησιά. Οι περισσότεροι οδηγοί προσπαθούν να τα καλύψουν όλα, και καταλήγουν να μη λένε τίποτα χρήσιμο για κανένα. Τα αποτελέσματα αναζήτησης σού δίνουν τις ίδιες είκοσι φωτογραφίες της Οίας και μια παράγραφο-PR που θα μπορούσε να είναι για οποιοδήποτε νησί του Αιγαίου. Οι λίστες από AI διαβάζονται σαν να γράφτηκαν από κάποιον που δεν έχει δοκιμάσει ντομάτα.' },
+  'mission.why.p1': { en: 'There are 76 islands on Aegean Blueprint. Most guides try to cover all of them, and end up saying nothing useful about any. Search results give you the same twenty stock photos of Oia and a PR-written paragraph that could be about any island in the Aegean. AI-generated lists read like they were written by someone who has never tasted a tomato.', el: 'Στο Aegean Blueprint υπάρχουν 76 νησιά. Οι περισσότεροι οδηγοί προσπαθούν να τα καλύψουν όλα, και καταλήγουν να μη λένε τίποτα χρήσιμο για κανένα. Τα αποτελέσματα αναζήτησης σού δίνουν τις ίδιες είκοσι φωτογραφίες της Οίας και μια παράγραφο-PR που θα μπορούσε να είναι για οποιοδήποτε νησί του Αιγαίου. Οι λίστες από AI διαβάζονται σαν να γράφτηκαν από κάποιον που δεν έχει δοκιμάσει ντομάτα.' },
   'mission.why.quote': { en: "This site is for people who don't want choices. They want the gist, without the fluff.", el: 'Αυτή η σελίδα είναι για ανθρώπους που δεν θέλουν επιλογές. Θέλουν την ουσία, χωρίς περιττά.' },
   'mission.why.p2': { en: 'Each island page gives you one opinionated recommendation: where to stay, what to do for 2 to 5 days, where to swim, where to eat. Not ten options ranked by affiliate payout. One. The one the person who built this site would pick.', el: 'Κάθε σελίδα νησιού σού δίνει μία πρόταση με άποψη: πού να μείνεις, τι να κάνεις σε 2 έως 5 μέρες, πού να κολυμπήσεις, πού να φας. Όχι δέκα επιλογές ταξινομημένες με βάση την προμήθεια. Μία. Αυτή που θα διάλεγε ο άνθρωπος που έφτιαξε τη σελίδα.' },
 

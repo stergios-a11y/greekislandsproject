@@ -1,0 +1,258 @@
+{
+  "key": "astypalaia",
+  "name": "Astypalaia",
+  "name_el": "Αστυπάλαια",
+  "subtitle": "A Cycladic-looking island in the Dodecanese — whitewashed Chora under a Venetian castle",
+  "subtitle_el": "Ένα νησί που μοιάζει με Κυκλάδα στα Δωδεκάνησα — ασπρισμένη Χώρα κάτω από βενετικό κάστρο",
+  "intro": "Astypalaia is shaped like a butterfly — two roughly circular landmasses joined by a thin isthmus 100 m wide. Geographically it's in the Dodecanese, but visually it belongs to the Cyclades: blinding-white cubic houses cascading down a hill under a 13th-century Venetian castle, the kind of skyline most people travel to Santorini to see, here without the cruise ships. The island has been the EU's first \"smart green island,\" which in practice means good electric scooter rentals and a public transport pilot. Most visitors stay 3 days: one for Chora and the windmills, one for the western butterfly-wing beaches, one for the eastern wing including the famous Kaminakia. Direct flights from Athens (45 min) make it surprisingly accessible.",
+  "intro_el": "Η Αστυπάλαια έχει σχήμα πεταλούδας — δύο περίπου κυκλικές ξηρές ενωμένες από έναν λεπτό ισθμό 100 μέτρων. Γεωγραφικά είναι στα Δωδεκάνησα, αλλά οπτικά ανήκει στις Κυκλάδες: εκθαμβωτικά λευκά κυβικά σπίτια που κατεβαίνουν σε λόφο κάτω από ένα βενετικό κάστρο του 13ου αιώνα, ο τύπος ορίζοντα που οι περισσότεροι ταξιδεύουν στη Σαντορίνη για να δουν, εδώ χωρίς τα κρουαζιερόπλοια. Το νησί ήταν το πρώτο «έξυπνο πράσινο νησί» της ΕΕ, που στην πράξη σημαίνει καλά ηλεκτρικά σκούτερ και πιλοτικό σύστημα δημόσιας μεταφοράς. Οι περισσότεροι επισκέπτες μένουν 3 μέρες: μία για τη Χώρα και τους ανεμόμυλους, μία για τις παραλίες της δυτικής πτέρυγας, μία για την ανατολική πτέρυγα συμπεριλαμβανομένης της περίφημης Καμινάκιας. Απευθείας πτήσεις από Αθήνα (45 λεπτά) την κάνουν εκπληκτικά προσβάσιμη.",
+  "itinerary": {
+    "title": "3-Day Astypalaia Itinerary",
+    "subtitle": "Chora and the castle, the wild beaches of the eastern wing, the sheltered coves of the west, and the windmill ridge for sunset.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Chora, Castle & Windmills",
+        "color": "#1B4F8A",
+        "km": 8,
+        "drive_mins": 20,
+        "overnight": "Chora",
+        "stops": [
+          {
+            "name": "Skala (Port)",
+            "lat": 36.5408,
+            "lng": 26.3508,
+            "type": "harbour",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Arrive by ferry from Piraeus (10–12 hours overnight) or by the daily 45-minute flight from Athens. Skala is the small port at the foot of the Chora hill — pick up a rental car or scooter here. Most accommodation is up in Chora, a 5-minute drive uphill.",
+            "name_el": "Σκάλα (Λιμάνι)",
+            "desc_el": "Άφιξη με πλοίο από Πειραιά (10–12 ώρες νυχτερινό) ή με την καθημερινή 45λεπτη πτήση από Αθήνα. Η Σκάλα είναι το μικρό λιμάνι στους πρόποδες του λόφου της Χώρας — νοίκιασε αυτοκίνητο ή σκούτερ εδώ. Τα περισσότερα καταλύματα είναι πάνω στη Χώρα, 5λεπτη οδήγηση ανηφορική."
+          },
+          {
+            "name": "Querini Castle",
+            "lat": 36.5436,
+            "lng": 26.3553,
+            "type": "site",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Astypalaia",
+            "desc": "The 13th-century Venetian castle that crowns Chora — built by the Querini family who ruled the island for 300 years. Houses were built into the castle walls themselves; you can still see the stone window frames embedded in the fortifications. The two churches inside, Panagia tou Kastrou and Agios Georgios, are still active. Free entry; views are spectacular in all directions.",
+            "name_el": "Κάστρο Querini",
+            "desc_el": "Το βενετικό κάστρο του 13ου αιώνα που στεφανώνει τη Χώρα — χτισμένο από την οικογένεια Querini που κυβέρνησε το νησί για 300 χρόνια. Σπίτια χτίστηκαν μέσα στα ίδια τα τείχη του κάστρου· μπορείς ακόμα να δεις τις πέτρινες κορνίζες παραθύρων ενσωματωμένες στις οχυρώσεις. Οι δύο εκκλησίες μέσα, Παναγία του Κάστρου και Άγιος Γεώργιος, είναι ακόμα ενεργές. Δωρεάν είσοδος· οι θέες είναι εντυπωσιακές προς όλες τις κατευθύνσεις."
+          },
+          {
+            "name": "The Eight Windmills",
+            "lat": 36.5439,
+            "lng": 26.3578,
+            "type": "site",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "A row of eight stone windmills along the ridge between Chora and the modern village — most restored, most photographed at sunset. Walk along the ridge top from the castle. The light at dusk on the windmills with the white village below is the postcard image of the island.",
+            "name_el": "Οι Οκτώ Ανεμόμυλοι",
+            "desc_el": "Μια σειρά από οκτώ πέτρινους ανεμόμυλους κατά μήκος της κορυφογραμμής μεταξύ της Χώρας και του σύγχρονου χωριού — οι περισσότεροι αναστηλωμένοι, οι περισσότεροι φωτογραφημένοι στο ηλιοβασίλεμα. Περπάτα κατά μήκος της κορυφογραμμής από το κάστρο. Το φως στο δείλι στους ανεμόμυλους με το λευκό χωριό από κάτω είναι η εικόνα-καρτ-ποστάλ του νησιού."
+          },
+          {
+            "name": "Livadi Beach",
+            "lat": 36.5275,
+            "lng": 26.3267,
+            "type": "beach",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "The closest organised beach to Chora — a long sweep of pebbles in a green valley with citrus trees behind. A few tavernas along the back, sunbeds, the family-friendly choice. Good for an afternoon swim before heading back up to Chora for dinner.",
+            "name_el": "Παραλία Λιβάδι",
+            "desc_el": "Η πιο κοντινή οργανωμένη παραλία στη Χώρα — μια μακριά λωρίδα βότσαλων σε μια πράσινη κοιλάδα με εσπεριδοειδή πίσω. Μερικές ταβέρνες στο πίσω μέρος, ξαπλώστρες, η οικογενειακή επιλογή. Καλό για απογευματινό μπάνιο πριν επιστρέψεις στη Χώρα για δείπνο."
+          },
+          {
+            "name": "Sunset from the Castle Walls",
+            "lat": 36.5436,
+            "lng": 26.3553,
+            "type": "site",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "Walk back up to the castle for sunset. The light on the white houses and the windmills is at its best 30 minutes before the sun drops. Bring a drink from one of the cafes on the way up.",
+            "name_el": "Ηλιοβασίλεμα από τα Τείχη του Κάστρου",
+            "desc_el": "Ανέβα πάλι στο κάστρο για το ηλιοβασίλεμα. Το φως στα λευκά σπίτια και στους ανεμόμυλους είναι στο καλύτερό του 30 λεπτά πριν πέσει ο ήλιος. Πάρε ένα ποτό από ένα από τα καφέ στον δρόμο."
+          },
+          {
+            "name": "Dinner — Astropelos, Chora",
+            "lat": 36.5447,
+            "lng": 26.3561,
+            "type": "village",
+            "time": "21:30",
+            "wiki": null,
+            "desc": "One of the better tavernas in Chora — try the local lambriano (lamb stuffed with rice and herbs, an island specialty) or the saffron-spiked goat. Booking advised in summer.",
+            "name_el": "Δείπνο — Αστροπελός, Χώρα",
+            "desc_el": "Μία από τις καλύτερες ταβέρνες στη Χώρα — δοκίμασε το τοπικό λαμπριανό (αρνί γεμιστό με ρύζι και αρωματικά, σπεσιαλιτέ του νησιού) ή το γιδάκι με ζαφορά. Η κράτηση συνιστάται το καλοκαίρι."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Eastern Wing — Wild Beaches",
+        "color": "#C0522A",
+        "km": 45,
+        "drive_mins": 90,
+        "overnight": "Chora",
+        "stops": [
+          {
+            "name": "Drive to Vatses",
+            "lat": 36.4956,
+            "lng": 26.4081,
+            "type": "city",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "The road to the eastern wing is narrow and winds through empty hills. About 25 km from Chora; allow an hour. The last 3 km to Vatses is dirt road but manageable in a regular car.",
+            "name_el": "Διαδρομή προς Βάτσες",
+            "desc_el": "Ο δρόμος προς την ανατολική πτέρυγα είναι στενός και ελίσσεται μέσα από άδειους λόφους. Περίπου 25 χλμ από τη Χώρα· υπολόγισε μία ώρα. Τα τελευταία 3 χλμ προς τις Βάτσες είναι χωμάτινος δρόμος αλλά διαβατός με κανονικό αυτοκίνητο."
+          },
+          {
+            "name": "Vatses Beach",
+            "lat": 36.4969,
+            "lng": 26.4042,
+            "type": "beach",
+            "time": "11:00",
+            "wiki": null,
+            "desc": "A long pebble beach in a wide bay with a single excellent taverna (Linda's) at the end. Few sunbeds; mostly wild. The water is exceptional — turquoise in the shallows, deep blue further out. Stay long enough to have lunch at the taverna.",
+            "name_el": "Παραλία Βάτσες",
+            "desc_el": "Μια μακριά παραλία με βότσαλα σε φαρδύ κόλπο με μία εξαιρετική ταβέρνα (Λίντα) στην άκρη. Λίγες ξαπλώστρες· κυρίως άγρια. Τα νερά είναι εξαιρετικά — τιρκουάζ στα ρηχά, βαθύ μπλε πιο πέρα. Μείνε αρκετά για μεσημεριανό στην ταβέρνα."
+          },
+          {
+            "name": "Kaminakia Beach",
+            "lat": 36.4814,
+            "lng": 26.3922,
+            "type": "beach",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "The most remote beach on Astypalaia and arguably the best — fine grey-white pebbles, glass-clear water, framed by red volcanic cliffs. Reached by a 4 km dirt road that's bumpy but passable; many do it by ATV. Single seasonal taverna serves grilled fish caught that morning. Stay for the swim, eat at the taverna, leave before dark — the road is no fun at night.",
+            "name_el": "Παραλία Καμινάκια",
+            "desc_el": "Η πιο απομακρυσμένη παραλία της Αστυπάλαιας και αναμφισβήτητα η καλύτερη — λεπτά γκριζόλευκα βότσαλα, κρυστάλλινα νερά, πλαισιωμένα από κόκκινους ηφαιστειακούς γκρεμούς. Προσβάσιμη με χωμάτινο δρόμο 4 χλμ ανώμαλο αλλά διαβατό· πολλοί το κάνουν με ATV. Μία εποχιακή ταβέρνα σερβίρει ψητό ψάρι πιασμένο εκείνο το πρωί. Μείνε για το μπάνιο, φάε στην ταβέρνα, φύγε πριν νυχτώσει — ο δρόμος δεν είναι ευχάριστος τη νύχτα."
+          },
+          {
+            "name": "Negros Beach",
+            "lat": 36.5042,
+            "lng": 26.4583,
+            "type": "beach",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "On the way back to Chora, a different kind of beach — dark sand and pebbles, sheltered, popular with families because of the calm shallow water. A relaxing finish to a beach day.",
+            "name_el": "Παραλία Νέγρος",
+            "desc_el": "Επιστρέφοντας στη Χώρα, ένα διαφορετικό είδος παραλίας — σκούρα άμμος και βότσαλα, προστατευμένη, δημοφιλής σε οικογένειες λόγω των ήρεμων ρηχών νερών. Ένα χαλαρωτικό τέλος μιας παραλιακής ημέρας."
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Western Wing & Maltezana",
+        "color": "#0B8FAC",
+        "km": 35,
+        "drive_mins": 70,
+        "overnight": null,
+        "stops": [
+          {
+            "name": "Maltezana (Analipsi)",
+            "lat": 36.5611,
+            "lng": 26.4014,
+            "type": "village",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "The second main settlement on the island, on the eastern wing's south coast — relaxed, low-rise, no Cycladic prettiness but a working village with a beach and a few tavernas. Worth a coffee stop. The Roman mosaics at the small Tallaras baths nearby are an unexpected find — 5th century, well preserved, free.",
+            "name_el": "Μαλτεζάνα (Ανάληψη)",
+            "desc_el": "Ο δεύτερος κύριος οικισμός του νησιού, στη νότια ακτή της ανατολικής πτέρυγας — χαλαρός, χαμηλής δόμησης, χωρίς κυκλαδική ομορφιά αλλά ένα λειτουργικό χωριό με παραλία και μερικές ταβέρνες. Αξίζει μια στάση για καφέ. Τα ρωμαϊκά μωσαϊκά στα μικρά λουτρά Ταλλάρα κοντά είναι μια απρόσμενη ανακάλυψη — 5ος αιώνας, καλά διατηρημένα, δωρεάν."
+          },
+          {
+            "name": "Schinontas Beach",
+            "lat": 36.5556,
+            "lng": 26.3833,
+            "type": "beach",
+            "time": "12:00",
+            "wiki": null,
+            "desc": "A small sheltered cove between Maltezana and the airport — sand, calm water, almost no one. The road in is short but unsigned; ask locally. Bring lunch.",
+            "name_el": "Παραλία Σχοίνοντας",
+            "desc_el": "Ένας μικρός προστατευμένος κόλπος μεταξύ Μαλτεζάνας και αεροδρομίου — άμμος, ήρεμα νερά, σχεδόν κανείς. Ο δρόμος μέσα είναι σύντομος αλλά ασημείωτος· ρώτα τους ντόπιους. Πάρε φαγητό."
+          },
+          {
+            "name": "Agios Konstantinos Beach",
+            "lat": 36.5236,
+            "lng": 26.3197,
+            "type": "beach",
+            "time": "14:30",
+            "wiki": null,
+            "desc": "Back on the western wing, south of Livadi — a quieter pebble beach with a single beachfront taverna. Tamarisk trees give natural shade. Better swimming than Livadi, and far fewer people in August.",
+            "name_el": "Παραλία Άγιος Κωνσταντίνος",
+            "desc_el": "Πίσω στη δυτική πτέρυγα, νότια από το Λιβάδι — μια πιο ήσυχη παραλία με βότσαλα και μία μόνο παραλιακή ταβέρνα. Αρμυρίκια δίνουν φυσική σκιά. Καλύτερο κολύμπι από το Λιβάδι, και πολύ λιγότεροι άνθρωποι τον Αύγουστο."
+          },
+          {
+            "name": "Departure",
+            "lat": 36.5408,
+            "lng": 26.3508,
+            "type": "harbour",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Skala for the ferry, or the airport (5 km east of Chora) for the flight to Athens. If you have one more meal, the harbour tavernas in Skala are honest and good — try Maïstrali for fresh fish.",
+            "name_el": "Αναχώρηση",
+            "desc_el": "Σκάλα για το πλοίο, ή αεροδρόμιο (5 χλμ ανατολικά της Χώρας) για την πτήση προς Αθήνα. Αν έχεις ένα ακόμα γεύμα, οι ταβέρνες του λιμανιού στη Σκάλα είναι ειλικρινείς και καλές — δοκίμασε στο Μαϊστράλι για φρέσκο ψάρι."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Kaminakia",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine grey-white pebbles",
+      "type_el": "Λεπτά γκριζόλευκα βότσαλα",
+      "length": "150 m",
+      "depth": "Medium — glass-clear water, deepens gradually",
+      "depth_el": "Μέτρια — κρυστάλλινα νερά, βαθαίνει σταδιακά",
+      "facing": "South-facing — sheltered by red volcanic cliffs",
+      "facing_el": "Νότια — προστατευμένη από κόκκινους ηφαιστειακούς γκρεμούς",
+      "facilities": "One seasonal taverna with grilled fish. No sunbeds. 4 km dirt road in.",
+      "facilities_el": "Μία εποχιακή ταβέρνα με ψητό ψάρι. Χωρίς ξαπλώστρες. 4 χλμ χωμάτινος δρόμος.",
+      "desc": "The most beautiful beach on Astypalaia and one of the best in the Dodecanese — fine pale pebbles, exceptional water clarity, framed by tall red cliffs. The dirt road in keeps the crowds away. The single taverna serves whatever the boat brought in that morning. Don't leave the island without coming here.",
+      "desc_el": "Η πιο όμορφη παραλία της Αστυπάλαιας και μία από τις καλύτερες των Δωδεκανήσων — λεπτά απαλά βότσαλα, εξαιρετική διαύγεια νερού, πλαισιωμένη από ψηλούς κόκκινους γκρεμούς. Ο χωμάτινος δρόμος κρατάει τα πλήθη μακριά. Η μοναδική ταβέρνα σερβίρει ό,τι έφερε η βάρκα εκείνο το πρωί. Μη φύγεις από το νησί χωρίς να έρθεις εδώ.",
+      "commons": null,
+      "lat": 36.4814,
+      "lng": 26.3922
+    },
+    {
+      "name": "Vatses",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebbles and coarse sand",
+      "type_el": "Βότσαλα και χονδρή άμμος",
+      "length": "300 m",
+      "depth": "Medium — turquoise shallows, deeper centre",
+      "depth_el": "Μέτρια — τιρκουάζ ρηχά, βαθύτερο κέντρο",
+      "facing": "South-facing — wide bay, light afternoon breeze",
+      "facing_el": "Νότια — φαρδύς κόλπος, ελαφρύ απογευματινό αεράκι",
+      "facilities": "Linda's taverna at the end — excellent food. A few sunbeds. Last 3 km is dirt road.",
+      "facilities_el": "Ταβέρνα Λίντα στην άκρη — εξαιρετικό φαγητό. Λίγες ξαπλώστρες. Τα τελευταία 3 χλμ είναι χωμάτινος δρόμος.",
+      "desc": "A long bay on the eastern wing's south coast — wilder than Livadi, calmer than Kaminakia, with a single excellent taverna at the western end. Most people stay all day: swim, eat, swim, repeat.",
+      "desc_el": "Ένας μακρύς κόλπος στη νότια ακτή της ανατολικής πτέρυγας — πιο άγριος από το Λιβάδι, πιο ήρεμος από τα Καμινάκια, με μία εξαιρετική ταβέρνα στο δυτικό άκρο. Οι περισσότεροι μένουν όλη μέρα: κολύμπι, φαγητό, κολύμπι, επανάληψη.",
+      "commons": null,
+      "lat": 36.4969,
+      "lng": 26.4042
+    },
+    {
+      "name": "Livadi",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebbles",
+      "type_el": "Βότσαλα",
+      "length": "500 m",
+      "depth": "Shallow — gradual entry, family-friendly",
+      "depth_el": "Ρηχή — σταδιακή είσοδος, οικογενειακή",
+      "facing": "South-facing — protected by the valley behind",
+      "facing_el": "Νότια — προστατευμένη από την κοιλάδα πίσω",
+      "facilities": "Several tavernas, sunbeds, organised. Closest beach to Chora.",
+      "facilities_el": "Αρκετές ταβέρνες, ξαπλώστρες, οργανωμένη. Πιο κοντινή παραλία στη Χώρα.",
+      "desc": "The default beach — long, organised, easy to reach (10 minutes by car from Chora), with a string of tavernas in the citrus grove behind. Not the prettiest beach on the island but the most convenient. Come in the late afternoon.",
+      "desc_el": "Η προεπιλεγμένη παραλία — μακριά, οργανωμένη, εύκολα προσβάσιμη (10 λεπτά με αυτοκίνητο από τη Χώρα), με σειρά από ταβέρνες στον περιβολά εσπεριδοειδών πίσω. Όχι η πιο όμορφη παραλία του νησιού αλλά η πιο βολική. Έλα το απομεσήμερο.",
+      "commons": null,
+      "lat": 36.5275,
+      "lng": 26.3267
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "key": "halki",
+  "name": "Halki",
+  "name_el": "Χάλκη",
+  "subtitle": "A neoclassical sponge-divers' harbour, 90 minutes from Rhodes — and almost no cars",
+  "subtitle_el": "Ένα νεοκλασικό λιμάνι σφουγγαράδων, 90 λεπτά από τη Ρόδο — και σχεδόν χωρίς αυτοκίνητα",
+  "intro": "Halki (also written Chalki) is a small island just off the west coast of Rhodes — 30 km of coastline, 500 residents, one settlement. The harbour, Emporio, is one of the prettiest in the Dodecanese: a row of restored neoclassical mansions in pinks, yellows and pale blues, originally built by sponge merchants in the 19th century. After the sponge industry collapsed most of the population emigrated to Tarpon Springs, Florida, leaving the houses to fall down; UNESCO funded a restoration in the 1980s and the result is the harbour you see today. There are essentially no cars — the island has one road, a few municipal vehicles, and bikes. Most visitors stay 2 nights: a slow day in the harbour, a boat trip to one of the beaches, an evening on Tarpon Springs Boulevard (the main waterfront strip, named for the émigré community).",
+  "intro_el": "Η Χάλκη είναι ένα μικρό νησί ακριβώς δυτικά από τη Ρόδο — 30 χλμ ακτογραμμή, 500 κάτοικοι, ένας οικισμός. Το λιμάνι, Εμπορείο, είναι ένα από τα πιο όμορφα των Δωδεκανήσων: μια σειρά από αναστηλωμένα νεοκλασικά αρχοντικά σε ροζ, κίτρινα και απαλά μπλε, αρχικά χτισμένα από εμπόρους σφουγγαριών τον 19ο αιώνα. Μετά την κατάρρευση της βιομηχανίας σφουγγαριών οι περισσότεροι μετανάστευσαν στο Τάρπον Σπρινγκς της Φλόριντα, αφήνοντας τα σπίτια να καταρρεύσουν· η UNESCO χρηματοδότησε αναστήλωση τη δεκαετία του '80 και το αποτέλεσμα είναι το λιμάνι που βλέπεις σήμερα. Δεν υπάρχουν ουσιαστικά αυτοκίνητα — το νησί έχει έναν δρόμο, μερικά δημοτικά οχήματα, και ποδήλατα. Οι περισσότεροι μένουν 2 βραδιές: μια αργή μέρα στο λιμάνι, μια εκδρομή με βάρκα σε μία από τις παραλίες, μια βραδιά στη Λεωφόρο Τάρπον Σπρινγκς (το κύριο παραθαλάσσιο, με όνομα της κοινότητας μεταναστών).",
+  "itinerary": {
+    "title": "2-Day Halki Itinerary",
+    "subtitle": "The painted harbour, the abandoned medieval Chorio above it, and a boat day to the western beaches.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Emporio Harbour & Old Chorio",
+        "color": "#1B4F8A",
+        "km": 5,
+        "drive_mins": 15,
+        "overnight": "Emporio",
+        "stops": [
+          {
+            "name": "Emporio Harbour",
+            "lat": 36.2236,
+            "lng": 27.6094,
+            "type": "harbour",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Halki_(Greece)",
+            "desc": "Arrive by ferry from Kamiros Skala on Rhodes (90 minutes, twice daily) or the small Dodekanisos Seaways catamaran. The first sight of the harbour as the ferry rounds the headland — a neoclassical amphitheatre painted in pastels — is the moment the island earns its reputation. Walk a slow lap before doing anything else.",
+            "name_el": "Λιμάνι Εμπορείο",
+            "desc_el": "Άφιξη με πλοίο από τον Κάμιρο Σκάλα της Ρόδου (90 λεπτά, δύο φορές τη μέρα) ή με το μικρό καταμαράν Dodekanisos Seaways. Η πρώτη θέα του λιμανιού καθώς το πλοίο στρίβει το ακρωτήριο — ένα νεοκλασικό αμφιθέατρο βαμμένο σε παστέλ — είναι η στιγμή που το νησί κερδίζει τη φήμη του. Κάνε έναν αργό γύρο πριν κάνεις οτιδήποτε άλλο."
+          },
+          {
+            "name": "Agios Nikolaos Church",
+            "lat": 36.2244,
+            "lng": 27.6086,
+            "type": "church",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "The main church on the harbour, with the tallest bell tower in the Dodecanese (38 m). Black and white pebble mosaic floor in the courtyard, intricate marble carvings inside. The bell tower is climbable on certain days; ask at the church door.",
+            "name_el": "Εκκλησία Αγίου Νικολάου",
+            "desc_el": "Η κύρια εκκλησία στο λιμάνι, με το ψηλότερο καμπαναριό των Δωδεκανήσων (38 μέτρα). Δάπεδο από μαύρα και λευκά βότσαλα στην αυλή, περίτεχνες μαρμάρινες σκαλιστές διακοσμήσεις στο εσωτερικό. Το καμπαναριό είναι αναβατό ορισμένες μέρες· ρώτα στην πόρτα της εκκλησίας."
+          },
+          {
+            "name": "Old Chorio (Medieval Capital)",
+            "lat": 36.2167,
+            "lng": 27.5961,
+            "type": "village",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "The original capital, abandoned in the 19th century when the population moved to Emporio for the sea trade. A 4 km walk uphill from the harbour (or short drive on the only road) — ruined houses, a small Knights' castle on the summit, and views over both coasts. Best done in the late afternoon when the heat lifts. Bring water; there's nothing up there.",
+            "name_el": "Παλιό Χωριό (Μεσαιωνική Πρωτεύουσα)",
+            "desc_el": "Η αρχική πρωτεύουσα, εγκαταλελειμμένη τον 19ο αιώνα όταν ο πληθυσμός μετακινήθηκε στο Εμπορείο για το θαλάσσιο εμπόριο. 4 χλμ πεζοπορίας ανηφορική από το λιμάνι (ή σύντομη οδήγηση στον μοναδικό δρόμο) — ερειπωμένα σπίτια, ένα μικρό κάστρο των Ιπποτών στην κορυφή, και θέες σε αμφότερες τις ακτές. Γίνεται καλύτερα το απομεσήμερο όταν φεύγει η ζέστη. Πάρε νερό· δεν υπάρχει τίποτα εκεί."
+          },
+          {
+            "name": "Pondamos Beach",
+            "lat": 36.2233,
+            "lng": 27.6017,
+            "type": "beach",
+            "time": "16:00",
+            "wiki": null,
+            "desc": "The closest beach to Emporio — 10 minutes' walk west along the coast road. Coarse sand and pebbles, calm water, a single beachfront taverna (Nick's). Sunbeds available. Most island visitors come here at least once.",
+            "name_el": "Παραλία Πόνταμος",
+            "desc_el": "Η πιο κοντινή παραλία στο Εμπορείο — 10 λεπτά πεζοπορίας δυτικά κατά μήκος του παράκτιου δρόμου. Χονδρή άμμος και βότσαλα, ήρεμα νερά, μία παραλιακή ταβέρνα (Nick's). Διαθέσιμες ξαπλώστρες. Οι περισσότεροι επισκέπτες έρχονται εδώ τουλάχιστον μία φορά."
+          },
+          {
+            "name": "Dinner — Magefseis (Tarpon Springs Blvd)",
+            "lat": 36.224,
+            "lng": 27.6092,
+            "type": "harbour",
+            "time": "21:00",
+            "wiki": null,
+            "desc": "One of the better tavernas on the harbour strip. Try the local goat in tomato sauce or whatever fish came in that day. The waterfront strip is officially named Tarpon Springs Boulevard after the émigré Halki community in Florida.",
+            "name_el": "Δείπνο — Μαγεύσεις (Λεωφόρος Τάρπον Σπρινγκς)",
+            "desc_el": "Μία από τις καλύτερες ταβέρνες στο παραλιακό. Δοκίμασε το τοπικό κατσίκι σε σάλτσα ντομάτας ή ό,τι ψάρι ήρθε εκείνη τη μέρα. Το παραλιακό λέγεται επίσημα Λεωφόρος Τάρπον Σπρινγκς προς τιμήν της κοινότητας Χαλκίτων μεταναστών στη Φλόριντα."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Boat Day — Western Beaches",
+        "color": "#0B8FAC",
+        "km": 0,
+        "drive_mins": 0,
+        "overnight": null,
+        "stops": [
+          {
+            "name": "Boat Departure — Emporio",
+            "lat": 36.2236,
+            "lng": 27.6094,
+            "type": "harbour",
+            "time": "10:30",
+            "wiki": null,
+            "desc": "The west-coast beaches are reachable by foot via long mountain paths, but the standard way is by boat — small caïques leave the harbour around 10:30 and return at 16:00. Buy your ticket the night before from one of the boats moored on the strip; €15–€20 per person.",
+            "name_el": "Αναχώρηση Σκάφους — Εμπορείο",
+            "desc_el": "Οι παραλίες της δυτικής ακτής είναι προσβάσιμες με τα πόδια μέσω μακριών ορεινών μονοπατιών, αλλά ο συνηθισμένος τρόπος είναι με βάρκα — μικρά καΐκια φεύγουν από το λιμάνι γύρω στις 10:30 και επιστρέφουν στις 16:00. Αγόρασε εισιτήριο το προηγούμενο βράδυ από ένα από τα σκάφη στο παραλιακό· €15–€20 ανά άτομο."
+          },
+          {
+            "name": "Trachia Beach",
+            "lat": 36.2014,
+            "lng": 27.5378,
+            "type": "beach",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "A double-sided beach on a narrow isthmus on the south coast — sand and pebbles on both sides, depending on which way the wind is blowing one of them is always sheltered. No facilities. Often the first stop on the boat circuit.",
+            "name_el": "Παραλία Τραχιά",
+            "desc_el": "Μια αμφίπλευρη παραλία σε στενό ισθμό στη νότια ακτή — άμμος και βότσαλα και στις δύο πλευρές, ανάλογα με τη διεύθυνση του ανέμου η μία είναι πάντα προστατευμένη. Χωρίς υποδομές. Συχνά η πρώτη στάση στη βόλτα."
+          },
+          {
+            "name": "Areta Beach",
+            "lat": 36.2189,
+            "lng": 27.5258,
+            "type": "beach",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "The most beautiful beach on Halki — a deep narrow fjord-like bay flanked by tall cliffs, with a small pebble beach at the head. Boats anchor in the bay; you swim in. The water clarity is exceptional. Take a packed lunch — there's nothing here.",
+            "name_el": "Παραλία Αρετά",
+            "desc_el": "Η πιο όμορφη παραλία της Χάλκης — ένας βαθύς στενός κόλπος σαν φιόρδ πλαισιωμένος από ψηλούς γκρεμούς, με μικρή βότσαλη παραλία στην άκρη. Τα σκάφη αγκυροβολούν στον κόλπο· κολυμπάς μέσα. Η διαύγεια του νερού είναι εξαιρετική. Πάρε φαγητό μαζί σου — δεν υπάρχει τίποτα εδώ."
+          },
+          {
+            "name": "Alimia Islet (Optional)",
+            "lat": 36.2722,
+            "lng": 27.7253,
+            "type": "site",
+            "time": "15:00",
+            "wiki": "https://en.wikipedia.org/wiki/Alimia",
+            "desc": "Some boats include a stop at the abandoned island of Alimia just north of Halki — a former Italian submarine base in WWII, now uninhabited. The harbour bay has crystal water and ruined Italian military buildings on shore. Worth it if your boat goes; otherwise skip.",
+            "name_el": "Νησίδα Αλιμιά (Προαιρετικό)",
+            "desc_el": "Μερικά σκάφη περιλαμβάνουν στάση στην εγκαταλελειμμένη νησίδα Αλιμιά λίγο βόρεια της Χάλκης — πρώην ιταλική βάση υποβρυχίων στον Β' ΠΠ, τώρα ακατοίκητη. Ο κόλπος του λιμανιού έχει κρυστάλλινα νερά και ερειπωμένα ιταλικά στρατιωτικά κτίρια στην ακτή. Αξίζει αν το σκάφος σου πηγαίνει· αλλιώς παράλειψε."
+          },
+          {
+            "name": "Departure",
+            "lat": 36.2236,
+            "lng": 27.6094,
+            "type": "harbour",
+            "time": "17:30",
+            "wiki": null,
+            "desc": "Last ferry to Rhodes typically leaves around 17:30 — check the schedule, it changes. If you're staying another night, the harbour at sunset turns gold and is the best time of day for photographs.",
+            "name_el": "Αναχώρηση",
+            "desc_el": "Το τελευταίο πλοίο προς Ρόδο συνήθως φεύγει γύρω στις 17:30 — έλεγξε το πρόγραμμα, αλλάζει. Αν μένεις άλλη μια βραδιά, το λιμάνι στο ηλιοβασίλεμα παίρνει χρυσές αποχρώσεις και είναι η καλύτερη ώρα της μέρας για φωτογραφίες."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Areta",
+      "wiki": null,
+      "rating": 5,
+      "type": "Pebbles in a fjord-like bay",
+      "type_el": "Βότσαλα σε κόλπο σαν φιόρδ",
+      "length": "60 m",
+      "depth": "Deep — drops away quickly, exceptional clarity",
+      "depth_el": "Βαθιά — βαθαίνει γρήγορα, εξαιρετική διαύγεια",
+      "facing": "North-facing — sheltered by tall cliffs on both sides",
+      "facing_el": "Βόρεια — προστατευμένη από ψηλούς γκρεμούς και στις δύο πλευρές",
+      "facilities": "None. Boat access only — no road, no taverna.",
+      "facilities_el": "Καμία. Πρόσβαση μόνο με βάρκα — χωρίς δρόμο, χωρίς ταβέρνα.",
+      "desc": "The most extraordinary beach on Halki — a deep narrow bay between sheer cliffs, with a small pebble beach at its head. Reached only by boat from Emporio. The water inside the bay is among the clearest in the Dodecanese. Bring everything you'll need; there's nothing here at all.",
+      "desc_el": "Η πιο εξαιρετική παραλία της Χάλκης — ένας βαθύς στενός κόλπος μεταξύ κάθετων γκρεμών, με μικρή βότσαλη παραλία στην άκρη. Προσβάσιμη μόνο με βάρκα από το Εμπορείο. Τα νερά μέσα στον κόλπο είναι από τα πιο διαυγή των Δωδεκανήσων. Πάρε ό,τι θα χρειαστείς· δεν υπάρχει απολύτως τίποτα εδώ.",
+      "commons": null,
+      "lat": 36.2189,
+      "lng": 27.5258
+    },
+    {
+      "name": "Pondamos",
+      "wiki": null,
+      "rating": 4,
+      "type": "Coarse sand and pebbles",
+      "type_el": "Χονδρή άμμος και βότσαλα",
+      "length": "150 m",
+      "depth": "Shallow — gradual entry, family-friendly",
+      "depth_el": "Ρηχή — σταδιακή είσοδος, οικογενειακή",
+      "facing": "Southwest-facing — afternoon sun, sheltered cove",
+      "facing_el": "Νοτιοδυτικά — απογευματινός ήλιος, προστατευμένος κόλπος",
+      "facilities": "Nick's taverna with sunbeds, a few umbrellas. 10 min walk from harbour.",
+      "facilities_el": "Ταβέρνα Nick's με ξαπλώστρες, μερικές ομπρέλες. 10 λεπτά πεζοπορίας από το λιμάνι.",
+      "desc": "The default beach — easy walk from the harbour, organised, calm water, a beachfront taverna serving honest food. Not the most beautiful beach on the island but the most practical. Come in the late afternoon when the harbour starts to feel hot.",
+      "desc_el": "Η προεπιλεγμένη παραλία — εύκολη πεζοπορία από το λιμάνι, οργανωμένη, ήρεμα νερά, παραλιακή ταβέρνα με ειλικρινές φαγητό. Όχι η πιο όμορφη παραλία του νησιού αλλά η πιο πρακτική. Έλα το απομεσήμερο όταν το λιμάνι αρχίζει να ζεσταίνεται.",
+      "commons": null,
+      "lat": 36.2233,
+      "lng": 27.6017
+    },
+    {
+      "name": "Ftenagia",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebbles",
+      "type_el": "Βότσαλα",
+      "length": "80 m",
+      "depth": "Medium — clear water, deeper centre",
+      "depth_el": "Μέτρια — διαυγή νερά, βαθύτερο κέντρο",
+      "facing": "South-facing — sheltered, calm",
+      "facing_el": "Νότια — προστατευμένη, ήρεμη",
+      "facilities": "Single seasonal taverna. Sunbeds. 20 min walk east of harbour.",
+      "facilities_el": "Μία εποχιακή ταβέρνα. Ξαπλώστρες. 20 λεπτά πεζοπορίας ανατολικά από το λιμάνι.",
+      "desc": "A small pebble cove east of Emporio with a single taverna and a quieter feel than Pondamos. Walk along the coast road past the harbour for about 20 minutes; the path drops down to the cove. Excellent water; bring goggles.",
+      "desc_el": "Ένας μικρός κόλπος με βότσαλα ανατολικά του Εμπορείου με μία ταβέρνα και πιο ήσυχη ατμόσφαιρα από τον Πόνταμο. Περπάτα στον παράκτιο δρόμο πέρα από το λιμάνι για περίπου 20 λεπτά· το μονοπάτι κατεβαίνει στον κόλπο. Εξαιρετικά νερά· πάρε γυαλιά.",
+      "commons": null,
+      "lat": 36.2275,
+      "lng": 27.62
+    }
+  ]
+}

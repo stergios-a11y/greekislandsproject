@@ -1,0 +1,161 @@
+{
+  "key": "nisyros",
+  "name": "Nisyros",
+  "name_el": "Νίσυρος",
+  "subtitle": "An active volcano you can walk inside — and a hilltop village frozen in the 18th century",
+  "subtitle_el": "Ένα ενεργό ηφαίστειο που μπορείς να περπατήσεις μέσα — και ένα ορεινό χωριό σταματημένο στον 18ο αιώνα",
+  "intro": "Nisyros is the youngest volcano in Greece and the only one you can stand inside. The Stefanos crater — 330 metres across, hissing sulphur fumes from its ochre floor — is reached by a short walk down from the rim. The island wraps around the caldera: a thin populated coastline at sea level, a vast empty volcanic plain in the middle, and the jewel of the island, Nikia village, perched on the eastern rim with the entire crater spread out below. Most visitors come as a day trip from Kos (1 hour by ferry). Stay overnight and you get the volcano without the crowds, plus the medieval port of Mandraki to yourself in the evening.",
+  "intro_el": "Η Νίσυρος είναι το νεότερο ηφαίστειο της Ελλάδας και το μόνο μέσα στο οποίο μπορείς να σταθείς. Ο κρατήρας του Στέφανου — 330 μέτρα διάμετρος, με θειούχους ατμούς να ξεφεύγουν από το ώχρινο δάπεδο — είναι προσβάσιμος με σύντομη πεζοπορία από το χείλος. Το νησί τυλίγεται γύρω από την καλντέρα: μια λεπτή κατοικημένη ακτή στη θάλασσα, μια απέραντη άδεια ηφαιστειακή πεδιάδα στο μέσον, και το κόσμημα του νησιού, το χωριό Νικιά, σκαρφαλωμένο στο ανατολικό χείλος με ολόκληρο τον κρατήρα απλωμένο από κάτω. Οι περισσότεροι επισκέπτες έρχονται ημερήσια από την Κω (1 ώρα με πλοίο). Διανυκτέρευσε και έχεις το ηφαίστειο χωρίς πλήθη, συν το μεσαιωνικό λιμάνι του Μανδρακίου μόνο για σένα το βράδυ.",
+  "itinerary": {
+    "title": "1-Day Nisyros Itinerary",
+    "subtitle": "Mandraki harbour at breakfast, the volcano crater at midday, lunch in Nikia with the caldera at your feet, an afternoon swim at Pali, dinner back in Mandraki.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Volcano, Nikia & Mandraki",
+        "color": "#C0522A",
+        "km": 35,
+        "drive_mins": 70,
+        "overnight": "Mandraki",
+        "stops": [
+          {
+            "name": "Mandraki (Port)",
+            "lat": 36.6094,
+            "lng": 27.1372,
+            "type": "harbour",
+            "time": "08:30",
+            "wiki": "https://en.wikipedia.org/wiki/Mandraki",
+            "desc": "The capital and only port of any size — a row of whitewashed and ochre houses pressed against the sea, with a small Venetian castle above and the cliff-top monastery of Panagia Spiliani built into a cave. Pick up a rental car or scooter at the port. The day-trip boats from Kos arrive around 09:30; leave before then to have the island to yourself.",
+            "name_el": "Μανδράκι (Λιμάνι)",
+            "desc_el": "Η πρωτεύουσα και το μόνο λιμάνι μεγέθους — μια σειρά από ασπρισμένα και ώχρινα σπίτια κολλημένα στη θάλασσα, με ένα μικρό βενετικό κάστρο από πάνω και τη μονή Παναγίας Σπηλιανής χτισμένη μέσα σε σπηλιά στον γκρεμό. Νοίκιασε αυτοκίνητο ή σκούτερ στο λιμάνι. Τα ημερήσια σκάφη από την Κω φτάνουν γύρω στις 09:30· φύγε νωρίτερα για να έχεις το νησί δικό σου."
+          },
+          {
+            "name": "Stefanos Crater (Volcano)",
+            "lat": 36.5833,
+            "lng": 27.1667,
+            "type": "site",
+            "time": "10:30",
+            "wiki": "https://en.wikipedia.org/wiki/Nisyros",
+            "desc": "Park at the volcano car park and walk 5 minutes down into the main crater — Stefanos, 330 m wide and 30 m deep. The floor is cracked yellow and white, sulphurous steam hisses out of fumaroles, and the smell of rotten eggs is unmistakable. You can walk freely across it. There are smaller satellite craters nearby (Polyvotis is the most dramatic). Wear good shoes and don't go in flip-flops — the ground is sharp.",
+            "name_el": "Κρατήρας Στέφανος (Ηφαίστειο)",
+            "desc_el": "Πάρκαρε στον χώρο στάθμευσης του ηφαιστείου και περπάτησε 5 λεπτά προς τα κάτω στον κύριο κρατήρα — Στέφανος, 330 μέτρα πλάτος και 30 μέτρα βάθος. Το δάπεδο είναι ραγισμένο σε κίτρινα και λευκά, θειούχοι ατμοί ξεφεύγουν από φουμαρόλες, και η μυρωδιά χαλασμένων αυγών είναι αλάθητη. Μπορείς να περπατήσεις ελεύθερα. Υπάρχουν μικρότεροι δορυφορικοί κρατήρες κοντά (ο Πολυβώτης είναι ο πιο εντυπωσιακός). Φόρα καλά παπούτσια και μην πας με σαγιονάρες — το έδαφος είναι αιχμηρό."
+          },
+          {
+            "name": "Nikia Village",
+            "lat": 36.5847,
+            "lng": 27.1842,
+            "type": "village",
+            "time": "12:30",
+            "wiki": null,
+            "desc": "Perched 400 m above sea level on the eastern rim of the caldera, Nikia is the most photographed village in the Dodecanese after Lindos. The central square (Porta) has a unique mosaic floor of black and white pebbles, and from the edge of the village the entire volcanic plain spreads out below. Have lunch at Porta restaurant on the square — the views are unbeatable.",
+            "name_el": "Χωριό Νικιά",
+            "desc_el": "Σκαρφαλωμένο 400 μέτρα πάνω από τη θάλασσα στο ανατολικό χείλος της καλντέρας, το Νικιά είναι το πιο φωτογραφημένο χωριό των Δωδεκανήσων μετά τη Λίνδο. Η κεντρική πλατεία (Πόρτα) έχει μοναδικό μωσαϊκό δάπεδο από μαύρα και λευκά βότσαλα, και από την άκρη του χωριού ολόκληρη η ηφαιστειακή πεδιάδα απλώνεται από κάτω. Μεσημεριανό στο εστιατόριο Πόρτα στην πλατεία — οι θέες είναι ανυπέρβλητες."
+          },
+          {
+            "name": "Emporios Village",
+            "lat": 36.6028,
+            "lng": 27.1731,
+            "type": "village",
+            "time": "14:30",
+            "wiki": null,
+            "desc": "The other clifftop village on the caldera rim, almost abandoned and being slowly restored. Quieter than Nikia, with a few houses converted to holiday homes and a single taverna. The view down into the volcano is just as good. Walk through the lanes, then drive down to the coast.",
+            "name_el": "Χωριό Εμπορείος",
+            "desc_el": "Το άλλο ορεινό χωριό στο χείλος της καλντέρας, σχεδόν εγκαταλελειμμένο και σιγά-σιγά αναστηλώνεται. Πιο ήσυχο από το Νικιά, με μερικά σπίτια μετατρεπόμενα σε εξοχικά και μια μόνο ταβέρνα. Η θέα στο ηφαίστειο είναι εξίσου καλή. Περπάτα στα στενά, μετά κατέβα προς την ακτή."
+          },
+          {
+            "name": "Pali — Lies Beach",
+            "lat": 36.6253,
+            "lng": 27.1639,
+            "type": "beach",
+            "time": "15:30",
+            "wiki": null,
+            "desc": "The fishing village of Pali is 4 km east of Mandraki and has the island's small marina. Just past it is Lies Beach — black volcanic sand, calm water, a couple of tavernas. Not a glamorous beach but a satisfying swim after the dust of the volcano.",
+            "name_el": "Πάλοι — Παραλία Λιες",
+            "desc_el": "Το ψαροχώρι Πάλοι είναι 4 χλμ ανατολικά από το Μανδράκι και έχει τη μικρή μαρίνα του νησιού. Λίγο πιο πέρα είναι η παραλία Λιες — μαύρη ηφαιστειακή άμμος, ήρεμα νερά, δύο ταβέρνες. Όχι λαμπερή παραλία αλλά ένα ικανοποιητικό μπάνιο μετά τη σκόνη του ηφαιστείου."
+          },
+          {
+            "name": "Panagia Spiliani Monastery",
+            "lat": 36.6108,
+            "lng": 27.1361,
+            "type": "church",
+            "time": "18:00",
+            "wiki": null,
+            "desc": "Built into a cave in the cliff above Mandraki, the monastery is a 15-minute uphill walk from the port through whitewashed lanes. The icon of the Virgin is said to have been hidden here from iconoclasts in the 8th century. Sunset from the courtyard is excellent.",
+            "name_el": "Μονή Παναγίας Σπηλιανής",
+            "desc_el": "Χτισμένη μέσα σε σπηλιά στον γκρεμό πάνω από το Μανδράκι, η μονή είναι 15 λεπτά ανηφορική πεζοπορία από το λιμάνι μέσα από ασπρισμένα στενά. Η εικόνα της Παναγίας λέγεται ότι κρύφτηκε εδώ από τους εικονομάχους τον 8ο αιώνα. Το ηλιοβασίλεμα από την αυλή είναι εξαιρετικό."
+          },
+          {
+            "name": "Dinner — Irini Square, Mandraki",
+            "lat": 36.6086,
+            "lng": 27.1389,
+            "type": "harbour",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "The main square of Mandraki, Plateia Ilikiomenis (locally just 'Irini'), is shaded by an enormous ficus tree and ringed with tavernas. Try Irini Restaurant for traditional Nisyrian dishes — pitia (chickpea fritters) and soumada, the local almond drink, are both island specialities.",
+            "name_el": "Δείπνο — Πλατεία Ηλικιωμένης, Μανδράκι",
+            "desc_el": "Η κεντρική πλατεία του Μανδρακίου, Πλατεία Ηλικιωμένης (τοπικά απλώς «Ειρήνης»), σκιάζεται από έναν τεράστιο φίκο και κυκλώνεται από ταβέρνες. Δοκίμασε στο Εστιατόριο Ειρήνης τα παραδοσιακά νισύρικα — πιτιά (τηγανίτες ρεβιθιού) και σουμάδα, το τοπικό ποτό αμυγδάλου, είναι και τα δύο σπεσιαλιτέ του νησιού."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Pachia Ammos",
+      "wiki": null,
+      "rating": 4,
+      "type": "Black volcanic sand and pebbles",
+      "type_el": "Μαύρη ηφαιστειακή άμμος και βότσαλα",
+      "length": "300 m",
+      "depth": "Medium — clear water, no waves",
+      "depth_el": "Μέτρια — διαυγή νερά, χωρίς κύματα",
+      "facing": "North-facing — exposed but rarely rough",
+      "facing_el": "Βόρεια — εκτεθειμένη αλλά σπάνια ταραγμένη",
+      "facilities": "None — wild beach, no taverna, no shade. Bring water.",
+      "facilities_el": "Καμία — άγρια παραλία, χωρίς ταβέρνα, χωρίς σκιά. Πάρε νερό.",
+      "desc": "The largest beach on Nisyros — a long sweep of dark volcanic sand on the south coast, 30 minutes' drive from Mandraki on a rough road. Completely undeveloped. The contrast between the black sand and the turquoise water is striking. Best for solitude, not for facilities.",
+      "desc_el": "Η μεγαλύτερη παραλία της Νισύρου — μια μακριά λωρίδα σκούρας ηφαιστειακής άμμου στη νότια ακτή, 30 λεπτά οδήγηση από το Μανδράκι σε χαλασμένο δρόμο. Εντελώς ανέπαφη. Η αντίθεση ανάμεσα στη μαύρη άμμο και στα τιρκουάζ νερά είναι εντυπωσιακή. Καλύτερη για μοναξιά, όχι για υποδομές.",
+      "commons": null,
+      "lat": 36.5697,
+      "lng": 27.1486
+    },
+    {
+      "name": "Lies Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Dark sand and pebbles",
+      "type_el": "Σκούρα άμμος και βότσαλα",
+      "length": "200 m",
+      "depth": "Shallow — calm, warm water",
+      "depth_el": "Ρηχή — ήρεμα, ζεστά νερά",
+      "facing": "Northeast-facing — sheltered cove",
+      "facing_el": "Βορειοανατολικά — προστατευμένος κόλπος",
+      "facilities": "Two tavernas, a few sunbeds in summer.",
+      "facilities_el": "Δύο ταβέρνες, μερικές ξαπλώστρες το καλοκαίρι.",
+      "desc": "The most accessible beach on the island — 6 km east of Mandraki, just past the fishing village of Pali. Dark volcanic pebbles, very calm water, and a small taverna serving fresh fish from the boats next door. Walking distance to the more secluded Pachia Ammos if you want solitude.",
+      "desc_el": "Η πιο προσβάσιμη παραλία του νησιού — 6 χλμ ανατολικά του Μανδρακίου, λίγο μετά το ψαροχώρι Πάλοι. Σκούρα ηφαιστειακά βότσαλα, πολύ ήρεμα νερά, και μια μικρή ταβέρνα που σερβίρει φρέσκα ψάρια από τα διπλανά καΐκια. Με τα πόδια από εκεί στην πιο απομονωμένη Παχιά Άμμο αν θέλεις μοναξιά.",
+      "commons": null,
+      "lat": 36.6253,
+      "lng": 27.1639
+    },
+    {
+      "name": "Hochlakoi",
+      "wiki": null,
+      "rating": 3,
+      "type": "Smooth black pebbles",
+      "type_el": "Λεία μαύρα βότσαλα",
+      "length": "100 m",
+      "depth": "Deep — water deepens quickly",
+      "depth_el": "Βαθιά — τα νερά βαθαίνουν γρήγορα",
+      "facing": "West-facing — sunset spot",
+      "facing_el": "Δυτικά — σημείο για ηλιοβασίλεμα",
+      "facilities": "None — short walk from Mandraki, no shade.",
+      "facilities_el": "Καμία — σύντομη πεζοπορία από το Μανδράκι, χωρίς σκιά.",
+      "desc": "A small black-pebble beach 15 minutes' walk west of Mandraki along a coastal path. Polished round stones, deep water for swimming, and a great spot for sunset. No facilities — bring everything you need.",
+      "desc_el": "Μια μικρή παραλία με μαύρα βότσαλα, 15 λεπτά πεζοπορία δυτικά του Μανδρακίου κατά μήκος ενός παράκτιου μονοπατιού. Γυαλισμένες στρογγυλές πέτρες, βαθιά νερά για κολύμπι, και εξαιρετικό σημείο για ηλιοβασίλεμα. Χωρίς υποδομές — πάρε ό,τι χρειάζεσαι.",
+      "commons": null,
+      "lat": 36.6092,
+      "lng": 27.1297
+    }
+  ]
+}

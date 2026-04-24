@@ -1,0 +1,204 @@
+{
+  "key": "kasos",
+  "name": "Kasos",
+  "name_el": "Κάσος",
+  "subtitle": "The southernmost Dodecanese — a working island with a Cretan accent and a difficult history",
+  "subtitle_el": "Το νοτιότερο των Δωδεκανήσων — ένα εργατικό νησί με κρητική προφορά και δύσκολη ιστορία",
+  "intro": "Kasos sits between Karpathos and Crete, closer to Crete in dialect and food, and almost entirely off the tourist circuit. The island has 1000 residents and an enormous diaspora — many Kasiots emigrated to Egypt and the United States after the 1824 massacre by Ottoman and Egyptian forces, in which most of the population was killed or enslaved. The story is told at the small museum in Fry, the capital. The island is mountainous, low-rise, with five small villages, a couple of organised beaches, and the spectacular uninhabited islet of Armathia just across the strait — pure white sand, turquoise water, day-trip by boat. Stay 2 days: one for the villages and the museum, one for Armathia. The food is Cretan-influenced and very good.",
+  "intro_el": "Η Κάσος βρίσκεται ανάμεσα σε Κάρπαθο και Κρήτη, πιο κοντά στην Κρήτη σε διάλεκτο και φαγητό, και σχεδόν εντελώς εκτός τουριστικού κυκλώματος. Το νησί έχει 1000 κατοίκους και τεράστια διασπορά — πολλοί Κάσιοι μετανάστευσαν στην Αίγυπτο και τις ΗΠΑ μετά τη σφαγή του 1824 από οθωμανικές και αιγυπτιακές δυνάμεις, στην οποία ο περισσότερος πληθυσμός σκοτώθηκε ή υποδουλώθηκε. Η ιστορία λέγεται στο μικρό μουσείο στο Φρυ, την πρωτεύουσα. Το νησί είναι ορεινό, χαμηλής δόμησης, με πέντε μικρά χωριά, μερικές οργανωμένες παραλίες, και την εντυπωσιακή ακατοίκητη νησίδα Αρμάθια ακριβώς απέναντι — καθαρή λευκή άμμος, τιρκουάζ νερά, ημερήσια εκδρομή με βάρκα. Μείνε 2 μέρες: μία για τα χωριά και το μουσείο, μία για την Αρμάθια. Το φαγητό έχει κρητική επιρροή και είναι πολύ καλό.",
+  "itinerary": {
+    "title": "2-Day Kasos Itinerary",
+    "subtitle": "Fry village and the 1824 history museum, the five villages of the interior, and the day boat to the white-sand islet of Armathia.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Fry, the Villages & History",
+        "color": "#1B4F8A",
+        "km": 30,
+        "drive_mins": 75,
+        "overnight": "Fry",
+        "stops": [
+          {
+            "name": "Fry (Capital)",
+            "lat": 35.4172,
+            "lng": 26.9269,
+            "type": "harbour",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Kasos",
+            "desc": "Arrive by ferry from Karpathos (1 hour) or by the small daily flight from Karpathos or Sitia. Fry is the capital — a small low-rise village wrapped around a fishing harbour, with the protected inner harbour of Bouka just behind. Pick up a rental car at the port; the island has one main road around the inhabited north coast.",
+            "name_el": "Φρυ (Πρωτεύουσα)",
+            "desc_el": "Άφιξη με πλοίο από Κάρπαθο (1 ώρα) ή με τη μικρή καθημερινή πτήση από Κάρπαθο ή Σητεία. Το Φρυ είναι η πρωτεύουσα — ένα μικρό χαμηλό χωριό τυλιγμένο γύρω από ψαρολίμανο, με το προστατευμένο εσωτερικό λιμανάκι της Μπούκας ακριβώς πίσω. Νοίκιασε αυτοκίνητο στο λιμάνι· το νησί έχει έναν κύριο δρόμο γύρω από την κατοικημένη βόρεια ακτή."
+          },
+          {
+            "name": "Bouka Harbour",
+            "lat": 35.4178,
+            "lng": 26.9261,
+            "type": "harbour",
+            "time": "11:00",
+            "wiki": null,
+            "desc": "The tiny inner harbour of Fry — a cup of pale stone holding a handful of caïques, photographed at every angle. The cafes around it are the centre of village life. Have coffee here at any time of day and watch the boats.",
+            "name_el": "Λιμανάκι Μπούκα",
+            "desc_el": "Το μικροσκοπικό εσωτερικό λιμανάκι του Φρυ — ένα κύπελλο από ωχρή πέτρα που κρατάει μια χούφτα καΐκια, φωτογραφημένο από κάθε γωνία. Τα καφενεία γύρω είναι το κέντρο της ζωής του χωριού. Πιες καφέ εδώ οποιαδήποτε ώρα και παρακολούθησε τα σκάφη."
+          },
+          {
+            "name": "Archaeological Museum",
+            "lat": 35.4181,
+            "lng": 26.9281,
+            "type": "museum",
+            "time": "12:00",
+            "wiki": null,
+            "desc": "A small but well-curated museum in Fry. The most affecting room covers the 1824 destruction: Ottoman and Egyptian forces invaded as a punishment for Kasiot ships supporting the Greek Revolution; about 7000 islanders were killed and 2000 women and children sold into slavery. The diaspora that resulted is why Kasos has communities in Alexandria, New York and Florida today. €3 entry; allow 45 minutes.",
+            "name_el": "Αρχαιολογικό Μουσείο",
+            "desc_el": "Ένα μικρό αλλά καλά επιμελημένο μουσείο στο Φρυ. Ο πιο συγκινητικός χώρος καλύπτει την καταστροφή του 1824: οθωμανικές και αιγυπτιακές δυνάμεις εισέβαλαν ως τιμωρία επειδή κάσικα σκάφη υποστήριζαν την Ελληνική Επανάσταση· περίπου 7000 νησιώτες σκοτώθηκαν και 2000 γυναίκες και παιδιά πουλήθηκαν στη δουλεία. Η διασπορά που προέκυψε είναι ο λόγος που η Κάσος έχει κοινότητες στην Αλεξάνδρεια, στη Νέα Υόρκη και στη Φλόριντα σήμερα. €3 είσοδος· υπολόγισε 45 λεπτά."
+          },
+          {
+            "name": "Agia Marina",
+            "lat": 35.4153,
+            "lng": 26.9111,
+            "type": "village",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "The largest of the inland villages — 2 km uphill from Fry. Whitewashed neoclassical houses, a beautiful main church, and the only village on Kasos that retains a sense of grandeur from its 19th-century shipping wealth. Quiet during the day; come for a coffee.",
+            "name_el": "Αγία Μαρίνα",
+            "desc_el": "Το μεγαλύτερο από τα εσωτερικά χωριά — 2 χλμ ανηφορική από το Φρυ. Ασπρισμένα νεοκλασικά σπίτια, μια όμορφη κύρια εκκλησία, και το μοναδικό χωριό στην Κάσο που διατηρεί την αίσθηση του μεγαλείου από τον ναυτιλιακό πλούτο του 19ου αιώνα. Ήσυχο τη μέρα· έλα για καφέ."
+          },
+          {
+            "name": "Poli Village",
+            "lat": 35.4097,
+            "lng": 26.9189,
+            "type": "village",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "The medieval capital, on a ridge above Agia Marina — the population moved down to the coast in the 19th century. A few houses still inhabited, the remains of a Knights' tower at the summit, and a sweeping view over the entire north of the island. 15 minutes' drive from Fry.",
+            "name_el": "Πόλη",
+            "desc_el": "Η μεσαιωνική πρωτεύουσα, σε κορυφογραμμή πάνω από την Αγία Μαρίνα — ο πληθυσμός μετακινήθηκε στην ακτή τον 19ο αιώνα. Μερικά σπίτια ακόμα κατοικημένα, τα ερείπια ενός πύργου των Ιπποτών στην κορυφή, και μια πανοραμική θέα πάνω σε ολόκληρο τον βορρά του νησιού. 15 λεπτά οδήγησης από το Φρυ."
+          },
+          {
+            "name": "Helatros Beach (Optional)",
+            "lat": 35.3722,
+            "lng": 26.9281,
+            "type": "beach",
+            "time": "16:30",
+            "wiki": null,
+            "desc": "The most remote beach on Kasos — a wild pebble cove on the south coast, reached by 10 km of dirt road. Spectacular if you want solitude; skip if Armathia tomorrow is enough boating for you. Bring everything.",
+            "name_el": "Παραλία Χέλατρος (Προαιρετικό)",
+            "desc_el": "Η πιο απομακρυσμένη παραλία της Κάσου — ένας άγριος βότσαλος κόλπος στη νότια ακτή, προσβάσιμος με 10 χλμ χωμάτινου δρόμου. Εντυπωσιακή αν θέλεις μοναξιά· παράλειψε αν η Αρμάθια αύριο είναι αρκετή θαλάσσια εμπειρία. Πάρε ό,τι χρειάζεσαι."
+          },
+          {
+            "name": "Dinner — Mylos, Fry",
+            "lat": 35.4175,
+            "lng": 26.9272,
+            "type": "harbour",
+            "time": "21:00",
+            "wiki": null,
+            "desc": "Best taverna on the harbour — Cretan-Kasiot cooking with a Mediterranean lightness. Try the local makarounes (handmade pasta with caramelised onions and cheese, an island specialty). The fish is whatever came in that morning.",
+            "name_el": "Δείπνο — Μύλος, Φρυ",
+            "desc_el": "Καλύτερη ταβέρνα στο λιμάνι — κρητικο-κασιώτικη μαγειρική με μεσογειακή ελαφρότητα. Δοκίμασε τις τοπικές μακαρούνες (χειροποίητα ζυμαρικά με καραμελωμένα κρεμμύδια και τυρί, σπεσιαλιτέ του νησιού). Το ψάρι είναι ό,τι ήρθε εκείνο το πρωί."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Day Trip to Armathia",
+        "color": "#0B8FAC",
+        "km": 0,
+        "drive_mins": 0,
+        "overnight": null,
+        "stops": [
+          {
+            "name": "Boat Departure — Fry",
+            "lat": 35.4172,
+            "lng": 26.9269,
+            "type": "harbour",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "The day boat to Armathia leaves around 10:00 from Fry harbour — €15–€20 round trip, sometimes including lunch. Buy your ticket the night before from one of the kiosks on the harbour. Bring a hat, water, and sunscreen — there's no shade on Armathia.",
+            "name_el": "Αναχώρηση Σκάφους — Φρυ",
+            "desc_el": "Το ημερήσιο σκάφος προς Αρμάθια φεύγει γύρω στις 10:00 από το λιμάνι του Φρυ — €15–€20 με επιστροφή, μερικές φορές περιλαμβάνει και μεσημεριανό. Αγόρασε εισιτήριο το προηγούμενο βράδυ από ένα από τα κιόσκια στο λιμάνι. Πάρε καπέλο, νερό και αντηλιακό — δεν υπάρχει σκιά στην Αρμάθια."
+          },
+          {
+            "name": "Armathia Islet",
+            "lat": 35.4567,
+            "lng": 26.8819,
+            "type": "beach",
+            "time": "10:45",
+            "wiki": "https://en.wikipedia.org/wiki/Armathia",
+            "desc": "The reason most people come to Kasos. Armathia is uninhabited — pure white sand, turquoise water, no buildings, no electricity, no shade. The boat anchors off the main beach (Marmara) and you swim or wade in. Several smaller coves are reachable by walking around the islet. Pack a picnic; some boats sell drinks but otherwise nothing exists here. Allow at least 4 hours.",
+            "name_el": "Νησίδα Αρμάθια",
+            "desc_el": "Ο λόγος που οι περισσότεροι έρχονται στην Κάσο. Η Αρμάθια είναι ακατοίκητη — καθαρή λευκή άμμος, τιρκουάζ νερά, χωρίς κτίρια, χωρίς ρεύμα, χωρίς σκιά. Το σκάφος αγκυροβολεί έξω από την κύρια παραλία (Μάρμαρα) και κολυμπάς ή περπατάς στο νερό. Πολλοί μικρότεροι κόλποι είναι προσβάσιμοι περπατώντας γύρω από τη νησίδα. Πάρε πικνίκ· μερικά σκάφη πουλάνε ποτά αλλά αλλιώς δεν υπάρχει τίποτα εδώ. Υπολόγισε τουλάχιστον 4 ώρες."
+          },
+          {
+            "name": "Return to Fry",
+            "lat": 35.4172,
+            "lng": 26.9269,
+            "type": "harbour",
+            "time": "16:00",
+            "wiki": null,
+            "desc": "Boats typically return around 16:00. Walk along the harbour to one of the cafes for an iced coffee, then dinner before the night ferry to Karpathos or Crete.",
+            "name_el": "Επιστροφή στο Φρυ",
+            "desc_el": "Τα σκάφη συνήθως επιστρέφουν γύρω στις 16:00. Περπάτα στο λιμάνι σε ένα από τα καφενεία για παγωμένο καφέ, μετά δείπνο πριν το νυχτερινό πλοίο για Κάρπαθο ή Κρήτη."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Armathia (islet)",
+      "wiki": "https://en.wikipedia.org/wiki/Armathia",
+      "rating": 5,
+      "type": "Pure white sand",
+      "type_el": "Καθαρή λευκή άμμος",
+      "length": "400 m of main beach + smaller coves",
+      "depth": "Shallow — turquoise water for 30 m out",
+      "depth_el": "Ρηχή — τιρκουάζ νερά για 30 μέτρα προς τα έξω",
+      "facing": "South-facing — sheltered by the islet itself",
+      "facing_el": "Νότια — προστατευμένη από την ίδια τη νησίδα",
+      "facilities": "None whatsoever — uninhabited islet, boat access only.",
+      "facilities_el": "Καμία απολύτως — ακατοίκητη νησίδα, πρόσβαση μόνο με βάρκα.",
+      "desc": "The defining beach experience of Kasos and one of the best islet day-trips in the Dodecanese. Pure white sand, water that goes from clear to turquoise to deep blue, no buildings or facilities of any kind. The boat from Fry takes 30 minutes; you spend 4–5 hours on the islet. Bring everything you need.",
+      "desc_el": "Η καθοριστική παραλιακή εμπειρία της Κάσου και μία από τις καλύτερες ημερήσιες εκδρομές σε νησίδα στα Δωδεκάνησα. Καθαρή λευκή άμμος, νερά που πηγαίνουν από διαυγή σε τιρκουάζ σε βαθύ μπλε, χωρίς κτίρια ή υποδομές κανενός είδους. Το σκάφος από το Φρυ παίρνει 30 λεπτά· περνάς 4–5 ώρες στη νησίδα. Πάρε ό,τι χρειάζεσαι.",
+      "commons": null,
+      "lat": 35.4567,
+      "lng": 26.8819
+    },
+    {
+      "name": "Helatros",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebbles and coarse sand",
+      "type_el": "Βότσαλα και χονδρή άμμος",
+      "length": "200 m",
+      "depth": "Medium — clear, deep water",
+      "depth_el": "Μέτρια — διαυγή, βαθιά νερά",
+      "facing": "South-facing — sheltered by tall cliffs",
+      "facing_el": "Νότια — προστατευμένη από ψηλούς γκρεμούς",
+      "facilities": "None — 10 km dirt road in. Bring everything.",
+      "facilities_el": "Καμία — 10 χλμ χωμάτινος δρόμος. Πάρε ό,τι χρειάζεσαι.",
+      "desc": "The wildest beach you can drive to on Kasos — a long dirt road through the empty south of the island ends at this dramatic pebble cove between sheer cliffs. Almost no one comes. The water clarity is exceptional. A 4WD makes the road easier but a regular rental car will manage if driven carefully.",
+      "desc_el": "Η πιο άγρια παραλία που μπορείς να προσεγγίσεις με αυτοκίνητο στην Κάσο — ένας μακρύς χωμάτινος δρόμος μέσα από τον άδειο νότο του νησιού καταλήγει σε αυτόν τον δραματικό βότσαλο κόλπο μεταξύ κάθετων γκρεμών. Σχεδόν κανείς δεν έρχεται. Η διαύγεια του νερού είναι εξαιρετική. Ένα 4WD κάνει τον δρόμο πιο εύκολο αλλά ένα κανονικό ενοικιαζόμενο αυτοκίνητο θα τα καταφέρει αν οδηγηθεί προσεκτικά.",
+      "commons": null,
+      "lat": 35.3722,
+      "lng": 26.9281
+    },
+    {
+      "name": "Avlaki",
+      "wiki": null,
+      "rating": 3,
+      "type": "Pebbles",
+      "type_el": "Βότσαλα",
+      "length": "100 m",
+      "depth": "Medium — calm water",
+      "depth_el": "Μέτρια — ήρεμα νερά",
+      "facing": "North-facing — short walk from Fry",
+      "facing_el": "Βόρεια — σύντομη πεζοπορία από το Φρυ",
+      "facilities": "Basic — sometimes a small canteen in summer.",
+      "facilities_el": "Στοιχειώδεις — μερικές φορές μικρή καντίνα το καλοκαίρι.",
+      "desc": "The closest swimmable beach to Fry — 15 minutes' walk west along the coast. Pebbles, calm water, almost no one. Not the most beautiful beach on the island but the easiest if you don't have transport.",
+      "desc_el": "Η πιο κοντινή παραλία για κολύμπι στο Φρυ — 15 λεπτά πεζοπορίας δυτικά κατά μήκος της ακτής. Βότσαλα, ήρεμα νερά, σχεδόν κανείς. Όχι η πιο όμορφη παραλία του νησιού αλλά η πιο εύκολη αν δεν έχεις μεταφορικό μέσο.",
+      "commons": null,
+      "lat": 35.4194,
+      "lng": 26.9203
+    }
+  ]
+}

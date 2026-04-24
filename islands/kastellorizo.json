@@ -1,0 +1,204 @@
+{
+  "key": "kastellorizo",
+  "name": "Kastellorizo",
+  "name_el": "Καστελλόριζο",
+  "subtitle": "Greece's easternmost island — a single painted harbour 2 km off the Turkish coast",
+  "subtitle_el": "Το ανατολικότερο νησί της Ελλάδας — ένα μόνο χρωματιστό λιμάνι 2 χλμ από την τουρκική ακτή",
+  "intro": "Kastellorizo is closer to Antalya than to Rhodes. The island is essentially one beautiful harbour — a U-shaped bay framed by 19th-century mansions painted in pinks, ochres, and sienna, the houses pressed shoulder to shoulder against the water. The population is around 500 in summer, fewer in winter. The Italian film Mediterraneo (1991) made it briefly famous; the rest of the time it stays gloriously off the main tourist track. The big draw beyond the harbour itself is the Blue Cave (Galazio Spilio) — accessible only by boat, with light refracting through the water into the most extraordinary blue. Two days is right: one for the harbour and the cave, one for the Lycian rock tombs and an evening watching the lights of Kaş come on across the water in Turkey.",
+  "intro_el": "Το Καστελλόριζο είναι πιο κοντά στην Αττάλεια απ' ό,τι στη Ρόδο. Το νησί είναι ουσιαστικά ένα όμορφο λιμάνι — ένας κόλπος σε σχήμα U πλαισιωμένος από αρχοντικά του 19ου αιώνα βαμμένα σε ροζ, ώχρα και σιένα, τα σπίτια κολλημένα ώμο με ώμο στο νερό. Ο πληθυσμός είναι περίπου 500 το καλοκαίρι, λιγότεροι τον χειμώνα. Η ιταλική ταινία Mediterraneo (1991) το έκανε για λίγο διάσημο· τον υπόλοιπο καιρό μένει ένδοξα έξω από τον κύριο τουριστικό δρόμο. Το μεγάλο ενδιαφέρον πέρα από το ίδιο το λιμάνι είναι το Γαλάζιο Σπήλαιο — προσβάσιμο μόνο με βάρκα, με το φως να διαθλάται μέσα από το νερό στο πιο εξαιρετικό μπλε. Δύο μέρες είναι σωστά: μία για το λιμάνι και τη σπηλιά, μία για τους λυκιακούς λαξευτούς τάφους και μια βραδιά παρακολουθώντας τα φώτα του Κας να ανάβουν απέναντι, στην Τουρκία.",
+  "itinerary": {
+    "title": "2-Day Kastellorizo Itinerary",
+    "subtitle": "The painted harbour, the Blue Cave by boat, the Lycian tombs across the water in Turkey, and a sunset on the cliffs above the town.",
+    "days": [
+      {
+        "day": 1,
+        "title": "The Harbour & Blue Cave",
+        "color": "#1B4F8A",
+        "km": 5,
+        "drive_mins": 10,
+        "overnight": "Megisti (Town)",
+        "stops": [
+          {
+            "name": "Megisti Harbour",
+            "lat": 36.1494,
+            "lng": 29.5917,
+            "type": "harbour",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Kastellorizo",
+            "desc": "Arrive by ferry from Rhodes (4–6 hours) or by the small daily flight (45 minutes). The first sight of the harbour as the boat rounds the headland is the moment people remember — a perfect U of pastel mansions reflected in calm water. Walk a slow lap around the bay before doing anything else.",
+            "name_el": "Λιμάνι Μεγίστης",
+            "desc_el": "Άφιξη με πλοίο από τη Ρόδο (4–6 ώρες) ή με τη μικρή καθημερινή πτήση (45 λεπτά). Η πρώτη θέα του λιμανιού καθώς το πλοίο στρίβει το ακρωτήριο είναι η στιγμή που μένει — ένα τέλειο U από παστέλ αρχοντικά καθρεφτισμένα στο ήρεμο νερό. Κάνε έναν αργό γύρο γύρω από τον κόλπο πριν κάνεις οτιδήποτε άλλο."
+          },
+          {
+            "name": "Archaeological Museum",
+            "lat": 36.1503,
+            "lng": 29.5933,
+            "type": "museum",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "Housed in a restored Ottoman building near the Knights' castle, the small museum tells the story of the island from antiquity through the Ottoman period to the Italian occupation. Free entry. Worth 30 minutes — particularly the section on the 1944 evacuation when the entire population was moved to British Mandate Palestine.",
+            "name_el": "Αρχαιολογικό Μουσείο",
+            "desc_el": "Στεγαζόμενο σε αναστηλωμένο οθωμανικό κτίριο κοντά στο κάστρο των Ιπποτών, το μικρό μουσείο διηγείται την ιστορία του νησιού από την αρχαιότητα μέχρι την οθωμανική περίοδο και την ιταλική κατοχή. Δωρεάν είσοδος. Αξίζει 30 λεπτά — ιδιαίτερα το τμήμα για την εκκένωση του 1944 όταν ολόκληρος ο πληθυσμός μεταφέρθηκε στην Παλαιστίνη υπό βρετανική εντολή."
+          },
+          {
+            "name": "Knights of St John Castle",
+            "lat": 36.1497,
+            "lng": 29.5928,
+            "type": "site",
+            "time": "12:30",
+            "wiki": null,
+            "desc": "The reddish-brown castle that gave the island its Italian name (Castellorosso = Red Castle) sits on a low headland above the harbour. Mostly ruined, but the climb up gives the best photograph of the harbour from above.",
+            "name_el": "Κάστρο των Ιπποτών του Αγίου Ιωάννου",
+            "desc_el": "Το κοκκινοκάστανο κάστρο που έδωσε στο νησί το ιταλικό όνομά του (Castellorosso = Κόκκινο Κάστρο) βρίσκεται σε χαμηλό ακρωτήρι πάνω από το λιμάνι. Κυρίως ερειπωμένο, αλλά η ανάβαση δίνει την καλύτερη φωτογραφία του λιμανιού από ψηλά."
+          },
+          {
+            "name": "Blue Cave (Galazio Spilio)",
+            "lat": 36.1378,
+            "lng": 29.6342,
+            "type": "site",
+            "time": "15:00",
+            "wiki": "https://en.wikipedia.org/wiki/Blue_Grotto_(Kastellorizo)",
+            "desc": "The single most extraordinary thing on Kastellorizo. Boats leave the harbour around 14:30 — book in the morning. The cave entrance is just under a metre high so you have to lie flat in the boat to get in; once inside, the chamber opens up to 20 m high and the entire interior glows electric blue from light refracted through the underwater entrance. About 15 minutes inside. Bring a swimsuit — many trips include a swim outside the cave.",
+            "name_el": "Γαλάζιο Σπήλαιο",
+            "desc_el": "Το μοναδικό πιο εξαιρετικό πράγμα στο Καστελλόριζο. Τα σκάφη φεύγουν από το λιμάνι γύρω στις 14:30 — κάνε κράτηση το πρωί. Η είσοδος της σπηλιάς είναι μόλις κάτω από ένα μέτρο ψηλή έτσι πρέπει να ξαπλώσεις στο σκάφος για να μπεις· μόλις μέσα, ο θάλαμος ανοίγει σε 20 μέτρα ύψος και ολόκληρο το εσωτερικό λάμπει σε ηλεκτρικό μπλε από το φως που διαθλάται μέσα από την υποβρύχια είσοδο. Περίπου 15 λεπτά μέσα. Πάρε μαγιό — πολλά ταξίδια περιλαμβάνουν μπάνιο έξω από τη σπηλιά."
+          },
+          {
+            "name": "Dinner — Alexandra's, Harbour",
+            "lat": 36.149,
+            "lng": 29.5919,
+            "type": "harbour",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "One of the harbour-front tavernas with tables right at the water's edge. Try the local katoumari — pasta in a sweet cinnamon syrup, an island dessert that has nothing to do with anywhere else in Greece. Watch the lights come on across the water in Kaş, Turkey — close enough that you can see individual cars driving along the shore.",
+            "name_el": "Δείπνο — Αλεξάνδρα, Λιμάνι",
+            "desc_el": "Μία από τις ταβέρνες στο λιμάνι με τραπέζια ακριβώς στην άκρη του νερού. Δοκίμασε το τοπικό κατουμάρι — ζυμαρικά σε γλυκό σιρόπι κανέλας, νησιωτικό επιδόρπιο που δεν έχει σχέση με πουθενά αλλού στην Ελλάδα. Δες τα φώτα να ανάβουν απέναντι στο νερό στο Κας, Τουρκία — αρκετά κοντά για να δεις μεμονωμένα αυτοκίνητα να οδηγούν κατά μήκος της ακτής."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Lycian Tombs & Mandraki",
+        "color": "#C0522A",
+        "km": 8,
+        "drive_mins": 20,
+        "overnight": null,
+        "stops": [
+          {
+            "name": "Lycian Rock Tomb",
+            "lat": 36.1539,
+            "lng": 29.5928,
+            "type": "site",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "A genuine Lycian tomb cut into the cliff above the harbour — 4th century BC. The Lycians lived across the water in what is now Turkey, and the tomb shows how culturally connected the island was to the mainland in antiquity. Cement steps up the cliff face take you right to the carved doorway. 15 minutes; combine with the walk up to the Knights' castle.",
+            "name_el": "Λυκιακός Λαξευτός Τάφος",
+            "desc_el": "Ένας αυθεντικός λυκιακός τάφος λαξευμένος στον γκρεμό πάνω από το λιμάνι — 4ος αιώνας π.Χ. Οι Λύκιοι ζούσαν απέναντι στο νερό στο σημερινό τουρκικό έδαφος, και ο τάφος δείχνει πόσο πολιτισμικά συνδεδεμένο ήταν το νησί με την ηπειρωτική χώρα στην αρχαιότητα. Τσιμεντένια σκαλιά στον γκρεμό σε φέρνουν ακριβώς στη λαξευμένη είσοδο. 15 λεπτά· συνδύασέ το με την ανάβαση στο κάστρο των Ιπποτών."
+          },
+          {
+            "name": "Mandraki Bay",
+            "lat": 36.1453,
+            "lng": 29.5878,
+            "type": "village",
+            "time": "10:30",
+            "wiki": null,
+            "desc": "The smaller, quieter bay on the other side of the headland from Megisti — a 10-minute walk. Mostly ruined houses, a few being restored, no shops. Excellent swimming off the rocks at the far end. The neighbourhood feels like Megisti looked 80 years ago.",
+            "name_el": "Κόλπος Μανδρακίου",
+            "desc_el": "Ο μικρότερος, πιο ήσυχος κόλπος στην άλλη πλευρά του ακρωτηρίου από τη Μεγίστη — 10λεπτη πεζοπορία. Κυρίως ερειπωμένα σπίτια, μερικά αναστηλώνονται, χωρίς μαγαζιά. Εξαιρετικό κολύμπι από τα βράχια στην άλλη άκρη. Η γειτονιά μοιάζει με τη Μεγίστη πριν 80 χρόνια."
+          },
+          {
+            "name": "Profitis Ilias Monastery",
+            "lat": 36.1392,
+            "lng": 29.5908,
+            "type": "church",
+            "time": "12:00",
+            "wiki": null,
+            "desc": "On the highest point of the island (270 m) — a small whitewashed monastery with sweeping views of the entire island, the Turkish coast, and the offshore islet of Ro (where the famous \"Lady of Ro\" raised the Greek flag every day from 1943 to 1982). 1 km uphill walk from town; bring water.",
+            "name_el": "Μονή Προφήτη Ηλία",
+            "desc_el": "Στο ψηλότερο σημείο του νησιού (270 μέτρα) — ένα μικρό ασπρισμένο μοναστήρι με πανοραμικές θέες σε ολόκληρο το νησί, την τουρκική ακτή, και την υπεράκτια νησίδα Ρω (όπου η περίφημη «Κυρά της Ρω» ύψωνε την ελληνική σημαία κάθε μέρα από το 1943 ως το 1982). 1 χλμ ανηφορική πεζοπορία από την πόλη· πάρε νερό."
+          },
+          {
+            "name": "Plakes — Swimming Rocks",
+            "lat": 36.143,
+            "lng": 29.585,
+            "type": "beach",
+            "time": "14:30",
+            "wiki": null,
+            "desc": "There are no sand beaches on Kastellorizo. The locals swim from the flat rocks (\"plakes\") on the western edge of town — a small concrete platform with steps into deep, glass-clear water. Quiet in the morning, social by mid-afternoon. The water is exceptional.",
+            "name_el": "Πλάκες — Βράχια για Κολύμπι",
+            "desc_el": "Δεν υπάρχουν παραλίες με άμμο στο Καστελλόριζο. Οι ντόπιοι κολυμπούν από τις επίπεδες πέτρες («πλάκες») στη δυτική άκρη της πόλης — μια μικρή τσιμεντένια πλατφόρμα με σκαλιά σε βαθιά, κρυστάλλινα νερά. Ήσυχα το πρωί, με κόσμο το απομεσήμερο. Τα νερά είναι εξαιρετικά."
+          },
+          {
+            "name": "Departure",
+            "lat": 36.1494,
+            "lng": 29.5917,
+            "type": "harbour",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Ferry back to Rhodes (4–6 hours, mostly overnight) or the small Olympic flight. If you have an extra evening, a day-trip to Kaş in Turkey (1 hour by speedboat) is straightforward — bring your passport.",
+            "name_el": "Αναχώρηση",
+            "desc_el": "Πλοίο επιστροφής στη Ρόδο (4–6 ώρες, κυρίως νυχτερινό) ή η μικρή πτήση της Ολυμπιακής. Αν έχεις παραπάνω βραδιά, μια ημερήσια εκδρομή στο Κας στην Τουρκία (1 ώρα με ταχύπλοο) είναι απλή — πάρε το διαβατήριό σου."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Plakes (Swimming Rocks)",
+      "wiki": null,
+      "rating": 4,
+      "type": "Flat rocks with concrete platform",
+      "type_el": "Επίπεδες πέτρες με τσιμεντένια πλατφόρμα",
+      "length": "50 m of platform",
+      "depth": "Deep — drops away immediately, glass-clear water",
+      "depth_el": "Βαθιά — βαθαίνει αμέσως, κρυστάλλινα νερά",
+      "facing": "West-facing — late afternoon sun, good for sunset swims",
+      "facing_el": "Δυτικά — απογευματινός ήλιος, καλό για ηλιοβασίλεμα",
+      "facilities": "Steps into the water, no sunbeds. Tavernas a 5-minute walk away.",
+      "facilities_el": "Σκαλιά μέσα στο νερό, χωρίς ξαπλώστρες. Ταβέρνες με 5 λεπτά πεζοπορία.",
+      "desc": "The main swimming spot on Kastellorizo and the closest thing the island has to a beach. Locals come at the end of the day; visitors discover it on day two. Bring goggles — the visibility is among the best in Greece, with fish visible 10 m down.",
+      "desc_el": "Το κύριο σημείο κολύμβησης στο Καστελλόριζο και το πιο κοντινό στο νησί που μοιάζει με παραλία. Οι ντόπιοι έρχονται στο τέλος της μέρας· οι επισκέπτες το ανακαλύπτουν τη δεύτερη μέρα. Πάρε γυαλιά — η ορατότητα είναι από τις καλύτερες στην Ελλάδα, με ψάρια ορατά 10 μέτρα κάτω.",
+      "commons": null,
+      "lat": 36.143,
+      "lng": 29.585
+    },
+    {
+      "name": "Faros (East Side Cove)",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebbles and rocks",
+      "type_el": "Βότσαλα και πέτρες",
+      "length": "80 m",
+      "depth": "Medium — clear water, deepens gradually",
+      "depth_el": "Μέτρια — διαυγή νερά, βαθαίνει σταδιακά",
+      "facing": "East-facing — morning sun, sheltered from prevailing winds",
+      "facing_el": "Ανατολικά — πρωινός ήλιος, προστατευμένη από τους επικρατούντες ανέμους",
+      "facilities": "None. 20-minute walk from town along the coast road.",
+      "facilities_el": "Καμία. 20λεπτη πεζοπορία από την πόλη κατά μήκος του παράκτιου δρόμου.",
+      "desc": "A small pebble cove past the lighthouse on the east side of the island. Almost no one goes — most visitors don't realise it's there. Walk along the coast road past the cemetery; the cove is signed. Excellent swimming, no shade.",
+      "desc_el": "Ένας μικρός κόλπος με βότσαλα μετά τον φάρο στην ανατολική πλευρά του νησιού. Σχεδόν κανείς δεν πηγαίνει — οι περισσότεροι επισκέπτες δεν συνειδητοποιούν ότι υπάρχει. Περπάτα στον παράκτιο δρόμο πέρα από το κοιμητήριο· ο κόλπος είναι σηματοδοτημένος. Εξαιρετικό κολύμπι, χωρίς σκιά.",
+      "commons": null,
+      "lat": 36.1481,
+      "lng": 29.6042
+    },
+    {
+      "name": "Mandraki Cove",
+      "wiki": null,
+      "rating": 3,
+      "type": "Rocks and small pebble strips",
+      "type_el": "Πέτρες και μικρές λωρίδες βότσαλων",
+      "length": "Various small entry points",
+      "depth": "Deep — sheltered bay water",
+      "depth_el": "Βαθιά — νερό προστατευμένου κόλπου",
+      "facing": "South-facing — sheltered, almost always calm",
+      "facing_el": "Νότια — προστατευμένη, σχεδόν πάντα ήρεμη",
+      "facilities": "None — old houses, no commercial life.",
+      "facilities_el": "Καμία — παλιά σπίτια, χωρίς εμπορική ζωή.",
+      "desc": "The bay on the other side of town from Megisti has several small swimming spots off the rocks. The setting is haunting — a bay of half-ruined houses being slowly restored, with calm sheltered water and almost no one around. Swim, then walk back along the headland for the harbour view.",
+      "desc_el": "Ο κόλπος στην άλλη πλευρά της πόλης από τη Μεγίστη έχει αρκετά μικρά σημεία κολύμβησης από τα βράχια. Το σκηνικό είναι μαγευτικό — ένας κόλπος μισοερειπωμένων σπιτιών που σιγά-σιγά αναστηλώνονται, με ήρεμα προστατευμένα νερά και σχεδόν κανέναν γύρω. Κολύμπησε, μετά περπάτα πίσω κατά μήκος του ακρωτηρίου για τη θέα του λιμανιού.",
+      "commons": null,
+      "lat": 36.1453,
+      "lng": 29.5878
+    }
+  ]
+}
