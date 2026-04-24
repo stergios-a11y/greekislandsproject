@@ -3,7 +3,6 @@
   "name": "Alonnisos",
   "subtitle": "The wildest Sporade — a marine park, monk seals and deserted beaches",
   "intro": "Alonnisos is the least-developed major island in the Aegean — mostly car-free lanes, dense maquis, and a marine park protecting the last monk seal population in Europe. The island was devastated by a 1965 earthquake and the population mostly moved away, leaving the old hilltop village abandoned. Today it's the most peaceful and wild island in the Sporades, with beaches accessible only by boat and water of extraordinary clarity.",
-
   "itinerary": {
     "title": "3-Day Alonnisos Itinerary",
     "subtitle": "The old village, the marine park boat trip, and the deserted beaches of the north coast.",
@@ -16,11 +15,53 @@
         "drive_mins": 15,
         "overnight": "Patitiri",
         "stops": [
-          { "name": "Patitiri", "lat": 39.1533, "lng": 23.8667, "type": "harbour", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Patitiri", "desc": "The main port — a small, relaxed harbour town with good tavernas and a helpful boat-trip booking office. Pick up a rental scooter or car here." },
-          { "name": "Chora (Old Village)", "lat": 39.1650, "lng": 23.8567, "type": "village", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Alonnisos", "desc": "The abandoned hilltop village slowly being restored by hippies and artists who moved here in the 1970s. Extraordinary views, medieval lanes, and a completely different atmosphere to the port." },
-          { "name": "History & Folklore Museum", "lat": 39.1533, "lng": 23.8667, "type": "museum", "time": "12:00", "wiki": null, "desc": "Small museum in Patitiri covering the island's fishing and seafaring heritage. The exhibits on the monk seal and marine park are worth seeing before the boat trip." },
-          { "name": "Roussoum Beach", "lat": 39.1483, "lng": 23.8650, "type": "beach", "time": "15:00", "wiki": null, "desc": "Pebble beach just south of Patitiri — calm, clear water, easy access. Good for a first-day swim while you find your feet." }
-        ]
+          {
+            "name": "Patitiri",
+            "lat": 39.1533,
+            "lng": 23.8667,
+            "type": "harbour",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Patitiri",
+            "desc": "The main port — a small, relaxed harbour town with good tavernas and a helpful boat-trip booking office. Pick up a rental scooter or car here.",
+            "name_el": "Πατητήρι",
+            "desc_el": "Το κύριο λιμάνι — μικρή, χαλαρή λιμενική πόλη με καλές ταβέρνες και εξυπηρετικό γραφείο κρατήσεων εκδρομών. Νοίκιασε σκούτερ ή αυτοκίνητο εδώ."
+          },
+          {
+            "name": "Chora (Old Village)",
+            "lat": 39.165,
+            "lng": 23.8567,
+            "type": "village",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Alonnisos",
+            "desc": "The abandoned hilltop village slowly being restored by hippies and artists who moved here in the 1970s. Extraordinary views, medieval lanes, and a completely different atmosphere to the port.",
+            "name_el": "Χώρα (Παλιό Χωριό)",
+            "desc_el": "Το εγκαταλελειμμένο ορεινό χωριό που σιγά-σιγά αναστηλώνεται από χίπηδες και καλλιτέχνες που μετακόμισαν εδώ τη δεκαετία του 1970. Εξαιρετικές θέες, μεσαιωνικά στενά, και εντελώς διαφορετική ατμόσφαιρα από το λιμάνι."
+          },
+          {
+            "name": "History & Folklore Museum",
+            "lat": 39.1533,
+            "lng": 23.8667,
+            "type": "museum",
+            "time": "12:00",
+            "wiki": null,
+            "desc": "Small museum in Patitiri covering the island's fishing and seafaring heritage. The exhibits on the monk seal and marine park are worth seeing before the boat trip.",
+            "name_el": "Ιστορικό & Λαογραφικό Μουσείο",
+            "desc_el": "Μικρό μουσείο στο Πατητήρι που καλύπτει την αλιευτική και ναυτική κληρονομιά του νησιού. Τα εκθέματα για τη μεσογειακή φώκια και το θαλάσσιο πάρκο αξίζει να δεις πριν την εκδρομή με σκάφος."
+          },
+          {
+            "name": "Roussoum Beach",
+            "lat": 39.1483,
+            "lng": 23.865,
+            "type": "beach",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Pebble beach just south of Patitiri — calm, clear water, easy access. Good for a first-day swim while you find your feet.",
+            "name_el": "Παραλία Ρούσσουμ",
+            "desc_el": "Βότσαλη παραλία ακριβώς νότια του Πατητηρίου — ήρεμα, διαυγή νερά, εύκολη πρόσβαση. Καλή για πρώτο μπάνιο ενώ βρίσκεις τη θέση σου."
+          }
+        ],
+        "title_el": "Πατητήρι & Παλιό Χωριό",
+        "overnight_el": "Πατητήρι"
       },
       {
         "day": 2,
@@ -30,11 +71,53 @@
         "drive_mins": 10,
         "overnight": "Patitiri",
         "stops": [
-          { "name": "Patitiri — Boat Departure", "lat": 39.1533, "lng": 23.8667, "type": "harbour", "time": "09:30", "wiki": null, "desc": "Full-day boat trip into the National Marine Park — the largest protected marine area in Europe and home to the Mediterranean monk seal. Book from the harbour the day before." },
-          { "name": "Gioura Island", "lat": 39.3667, "lng": 24.0833, "type": "nature", "time": "11:00", "wiki": null, "desc": "Wild uninhabited island in the marine park. The cave here is claimed to be the cave of the Cyclops Polyphemus from the Odyssey. Extraordinary wildlife — wild goats, rare birds." },
-          { "name": "Peristera Island", "lat": 39.1233, "lng": 23.9167, "type": "beach", "time": "14:00", "wiki": null, "desc": "Uninhabited island opposite Alonnisos with deserted sandy beaches and crystal water. Most boat tours stop here for swimming and snorkelling." },
-          { "name": "Monk Seal Spotting", "lat": 39.2000, "lng": 23.9500, "type": "nature", "time": "16:00", "wiki": "https://en.wikipedia.org/wiki/Mediterranean_monk_seal", "desc": "The waters around Alonnisos have the highest concentration of Mediterranean monk seals in the world — about 40 individuals. Patient boat skippers often spot them in the late afternoon." }
-        ]
+          {
+            "name": "Patitiri — Boat Departure",
+            "lat": 39.1533,
+            "lng": 23.8667,
+            "type": "harbour",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "Full-day boat trip into the National Marine Park — the largest protected marine area in Europe and home to the Mediterranean monk seal. Book from the harbour the day before.",
+            "name_el": "Πατητήρι — Αναχώρηση Σκάφους",
+            "desc_el": "Ημερήσια εκδρομή με σκάφος στο Εθνικό Θαλάσσιο Πάρκο — η μεγαλύτερη προστατευόμενη θαλάσσια περιοχή της Ευρώπης και σπίτι της μεσογειακής φώκιας. Κράτηση στο λιμάνι την προηγούμενη μέρα."
+          },
+          {
+            "name": "Gioura Island",
+            "lat": 39.3667,
+            "lng": 24.0833,
+            "type": "nature",
+            "time": "11:00",
+            "wiki": null,
+            "desc": "Wild uninhabited island in the marine park. The cave here is claimed to be the cave of the Cyclops Polyphemus from the Odyssey. Extraordinary wildlife — wild goats, rare birds.",
+            "name_el": "Γιούρα",
+            "desc_el": "Άγριο ακατοίκητο νησί στο θαλάσσιο πάρκο. Η σπηλιά εδώ υποστηρίζεται ότι είναι η σπηλιά του Κύκλωπα Πολύφημου από την Οδύσσεια. Εξαιρετική άγρια ζωή — άγρια κατσίκια, σπάνια πτηνά."
+          },
+          {
+            "name": "Peristera Island",
+            "lat": 39.1233,
+            "lng": 23.9167,
+            "type": "beach",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Uninhabited island opposite Alonnisos with deserted sandy beaches and crystal water. Most boat tours stop here for swimming and snorkelling.",
+            "name_el": "Περιστέρα",
+            "desc_el": "Ακατοίκητο νησί απέναντι από την Αλόννησο με έρημες αμμώδεις παραλίες και κρυστάλλινα νερά. Οι περισσότερες εκδρομές με σκάφος σταματούν εδώ για κολύμπι και ψαροντούφεκο."
+          },
+          {
+            "name": "Monk Seal Spotting",
+            "lat": 39.2,
+            "lng": 23.95,
+            "type": "nature",
+            "time": "16:00",
+            "wiki": "https://en.wikipedia.org/wiki/Mediterranean_monk_seal",
+            "desc": "The waters around Alonnisos have the highest concentration of Mediterranean monk seals in the world — about 40 individuals. Patient boat skippers often spot them in the late afternoon.",
+            "name_el": "Εντοπισμός Μεσογειακής Φώκιας",
+            "desc_el": "Τα νερά γύρω από την Αλόννησο έχουν τη μεγαλύτερη συγκέντρωση μεσογειακών φωκιών στον κόσμο — περίπου 40 άτομα. Υπομονετικοί καπετάνιοι συχνά τις εντοπίζουν το απομεσήμερο."
+          }
+        ],
+        "title_el": "Εκδρομή στο Θαλάσσιο Πάρκο",
+        "overnight_el": "Πατητήρι"
       },
       {
         "day": 3,
@@ -44,14 +127,46 @@
         "drive_mins": 35,
         "overnight": null,
         "stops": [
-          { "name": "Agios Dimitrios Beach", "lat": 39.2183, "lng": 23.8717, "type": "beach", "time": "10:00", "wiki": null, "desc": "Remote sandy beach on the north coast — accessible by a rough road or by boat. White sand, crystal water, almost always empty. One of the finest beaches in the Sporades." },
-          { "name": "Leftos Gialos Beach", "lat": 39.1883, "lng": 23.8567, "type": "beach", "time": "12:30", "wiki": null, "desc": "Sandy beach midway up the west coast — calmer than the north coast beaches and slightly easier to reach. Good swimming and a small taverna." },
-          { "name": "Patitiri — Departure", "lat": 39.1533, "lng": 23.8667, "type": "harbour", "time": "16:30", "wiki": null, "desc": "Ferry to Skopelos, Skiathos, Volos or Thessaloniki. Alonnisos is the end of the Sporades line — ferries are less frequent than on the other islands, check timetables." }
-        ]
+          {
+            "name": "Agios Dimitrios Beach",
+            "lat": 39.2183,
+            "lng": 23.8717,
+            "type": "beach",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Remote sandy beach on the north coast — accessible by a rough road or by boat. White sand, crystal water, almost always empty. One of the finest beaches in the Sporades.",
+            "name_el": "Παραλία Αγίου Δημητρίου",
+            "desc_el": "Απομακρυσμένη αμμώδης παραλία στη βόρεια ακτή — προσβάσιμη με χωματόδρομο ή με βάρκα. Λευκή άμμος, κρυστάλλινα νερά, σχεδόν πάντα άδεια. Μία από τις καλύτερες παραλίες των Σποράδων."
+          },
+          {
+            "name": "Leftos Gialos Beach",
+            "lat": 39.1883,
+            "lng": 23.8567,
+            "type": "beach",
+            "time": "12:30",
+            "wiki": null,
+            "desc": "Sandy beach midway up the west coast — calmer than the north coast beaches and slightly easier to reach. Good swimming and a small taverna.",
+            "name_el": "Παραλία Λευτός Γιαλός",
+            "desc_el": "Αμμώδης παραλία στη μέση της δυτικής ακτής — πιο ήρεμη από τις παραλίες του βορρά και λίγο πιο εύκολα προσβάσιμη. Καλό κολύμπι και μικρή ταβέρνα."
+          },
+          {
+            "name": "Patitiri — Departure",
+            "lat": 39.1533,
+            "lng": 23.8667,
+            "type": "harbour",
+            "time": "16:30",
+            "wiki": null,
+            "desc": "Ferry to Skopelos, Skiathos, Volos or Thessaloniki. Alonnisos is the end of the Sporades line — ferries are less frequent than on the other islands, check timetables.",
+            "name_el": "Πατητήρι — Αναχώρηση",
+            "desc_el": "Πλοίο για Σκόπελο, Σκιάθο, Βόλο ή Θεσσαλονίκη. Η Αλόννησος είναι το τέλος της γραμμής των Σποράδων — τα πλοία είναι λιγότερο συχνά από τα άλλα νησιά, έλεγξε τα δρομολόγια."
+          }
+        ],
+        "title_el": "Βόρειες Παραλίες & Αναχώρηση"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 3 Ημερών στην Αλόννησο",
+    "subtitle_el": "Το παλιό χωριό, η εκδρομή με σκάφος στο θαλάσσιο πάρκο, και οι έρημες παραλίες της βόρειας ακτής."
   },
-
   "beaches": [
     {
       "name": "Agios Dimitrios Beach",
@@ -64,7 +179,14 @@
       "facilities": "None — rough road access or boat only.",
       "desc": "The finest beach on Alonnisos — white sand, turquoise water, almost always empty. The rough road access keeps the crowds away. This is what Greek beaches looked like before tourism.",
       "commons": null,
-      "lat": 39.2183, "lng": 23.8717
+      "lat": 39.2183,
+      "lng": 23.8717,
+      "name_el": "Παραλία Αγίου Δημητρίου",
+      "type_el": "Λευκή άμμος",
+      "depth_el": "Ρηχή έως μέτρια — κρυστάλλινα νερά",
+      "facing_el": "Βόρεια — απομακρυσμένη, άγρια",
+      "facilities_el": "Καμία — πρόσβαση μόνο με χωματόδρομο ή βάρκα.",
+      "desc_el": "Η καλύτερη παραλία της Αλοννήσου — λευκή άμμος, τιρκουάζ νερά, σχεδόν πάντα άδεια. Ο χωματόδρομος κρατάει τα πλήθη μακριά. Έτσι ήταν οι ελληνικές παραλίες πριν τον τουρισμό."
     },
     {
       "name": "Leftos Gialos Beach",
@@ -77,7 +199,14 @@
       "facilities": "Basic: small taverna, accessible by road.",
       "desc": "The most accessible good beach on Alonnisos — a sandy cove on the west coast with a small taverna and calm, clear water. A relaxed spot that captures the island's peaceful character.",
       "commons": null,
-      "lat": 39.1883, "lng": 23.8567
+      "lat": 39.1883,
+      "lng": 23.8567,
+      "name_el": "Παραλία Λευτός Γιαλός",
+      "type_el": "Άμμος και λεπτά βότσαλα",
+      "depth_el": "Ρηχή — ήρεμα, διαυγή",
+      "facing_el": "Δυτικά — προστατευμένη",
+      "facilities_el": "Στοιχειώδεις: μικρή ταβέρνα, πρόσβαση με δρόμο.",
+      "desc_el": "Η πιο προσβάσιμη καλή παραλία της Αλοννήσου — αμμώδης κόλπος στη δυτική ακτή με μικρή ταβέρνα και ήρεμα, διαυγή νερά. Χαλαρό σημείο που αποτυπώνει τον ήσυχο χαρακτήρα του νησιού."
     },
     {
       "name": "Chrisi Milia Beach",
@@ -90,7 +219,17 @@
       "facilities": "Good: small hotel and taverna behind the beach.",
       "desc": "A beautiful sandy beach in a sheltered bay south of Patitiri — the best organised beach on the island. Clear water and a good taverna make it ideal for a full day.",
       "commons": null,
-      "lat": 39.1383, "lng": 23.8733
+      "lat": 39.1383,
+      "lng": 23.8733,
+      "name_el": "Παραλία Χρυσή Μηλιά",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχή — ήρεμα, ζεστά",
+      "facing_el": "Ανατολικά — προστατευμένος κόλπος",
+      "facilities_el": "Καλές: μικρό ξενοδοχείο και ταβέρνα πίσω από την παραλία.",
+      "desc_el": "Μια όμορφη αμμώδης παραλία σε προστατευμένο κόλπο νότια του Πατητηρίου — η καλύτερη οργανωμένη παραλία του νησιού. Διαυγή νερά και καλή ταβέρνα την κάνουν ιδανική για ολόκληρη μέρα."
     }
-  ]
+  ],
+  "name_el": "Αλόννησος",
+  "subtitle_el": "Η πιο άγρια των Σποράδων — θαλάσσιο πάρκο, μεσογειακές φώκιες και έρημες παραλίες",
+  "intro_el": "Η Αλόννησος είναι το λιγότερο αναπτυγμένο μεγάλο νησί του Αιγαίου — κυρίως στενά χωρίς αυτοκίνητα, πυκνή μακία, και θαλάσσιο πάρκο που προστατεύει τον τελευταίο πληθυσμό μεσογειακών φωκιών στην Ευρώπη. Το νησί καταστράφηκε από σεισμό το 1965 και ο πληθυσμός κυρίως μετακινήθηκε, αφήνοντας το παλιό ορεινό χωριό εγκαταλελειμμένο. Σήμερα είναι το πιο ήσυχο και άγριο νησί των Σποράδων, με παραλίες προσβάσιμες μόνο με βάρκα και νερά εξαιρετικής διαύγειας."
 }

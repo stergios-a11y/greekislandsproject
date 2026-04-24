@@ -21,7 +21,9 @@
             "type": "harbour",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Gaios",
-            "desc": "Main village on the east coast. Sheltered natural harbor formed by two offshore islets. Pastel Venetian-style buildings ring the quay."
+            "desc": "Main village on the east coast. Sheltered natural harbor formed by two offshore islets. Pastel Venetian-style buildings ring the quay.",
+            "name_el": "Γάιος (Λιμάνι)",
+            "desc_el": "Το κύριο χωριό στην ανατολική ακτή. Προστατευμένο φυσικό λιμάνι που σχηματίζεται από δύο υπεράκτιες νησίδες. Παστέλ κτίρια ενετικού στυλ περικυκλώνουν την προκυμαία."
           },
           {
             "name": "Agios Nikolaos islet",
@@ -30,7 +32,9 @@
             "type": "church",
             "time": "11:30",
             "wiki": null,
-            "desc": "Tiny islet in the harbor with Venetian fort ruins and a chapel. 5-min rowboat from the quay."
+            "desc": "Tiny islet in the harbor with Venetian fort ruins and a chapel. 5-min rowboat from the quay.",
+            "name_el": "Νησίδα Άγιος Νικόλαος",
+            "desc_el": "Μικροσκοπική νησίδα στο λιμάνι με ερείπια ενετικού οχυρού και εκκλησάκι. 5 λεπτά με βαρκούλα από την προκυμαία."
           },
           {
             "name": "Lunch — Volcano",
@@ -39,7 +43,9 @@
             "type": "village",
             "time": "13:30",
             "wiki": null,
-            "desc": "Seafood taverna on Gaios' main square. Fresh catch of the day, excellent Ionian wines."
+            "desc": "Seafood taverna on Gaios' main square. Fresh catch of the day, excellent Ionian wines.",
+            "name_el": "Μεσημεριανό — Volcano",
+            "desc_el": "Ψαροταβέρνα στην κύρια πλατεία του Γάιου. Φρέσκια ψαριά της ημέρας, εξαιρετικά ιόνια κρασιά."
           },
           {
             "name": "Mongonissi Beach",
@@ -48,7 +54,9 @@
             "type": "beach",
             "time": "16:00",
             "wiki": null,
-            "desc": "Sheltered sandy bay at the southern tip, 4 km from Gaios. Calmest swimming on Paxos."
+            "desc": "Sheltered sandy bay at the southern tip, 4 km from Gaios. Calmest swimming on Paxos.",
+            "name_el": "Παραλία Μογγονήσι",
+            "desc_el": "Προστατευμένος αμμώδης κόλπος στο νότιο άκρο, 4 χλμ από τον Γάιο. Το πιο ήρεμο κολύμπι στους Παξούς."
           },
           {
             "name": "Dinner — Taka Taka Mam",
@@ -57,9 +65,13 @@
             "type": "village",
             "time": "20:30",
             "wiki": null,
-            "desc": "Tiny family-run spot, dining in a lemon grove. Grilled meats, garden-fresh vegetables."
+            "desc": "Tiny family-run spot, dining in a lemon grove. Grilled meats, garden-fresh vegetables.",
+            "name_el": "Δείπνο — Taka Taka Mam",
+            "desc_el": "Μικροσκοπικό οικογενειακό στέκι, φαγητό σε λεμονόδεντρα. Ψητά κρέατα, λαχανικά του κήπου."
           }
-        ]
+        ],
+        "title_el": "Γάιος & η Ανατολική Ακτή",
+        "overnight_el": "Γάιος"
       },
       {
         "day": 2,
@@ -76,7 +88,9 @@
             "type": "harbour",
             "time": "10:00",
             "wiki": null,
-            "desc": "Prettiest village on Paxos — tiny horseshoe harbor at the northern tip. Great for swimming right from the quay."
+            "desc": "Prettiest village on Paxos — tiny horseshoe harbor at the northern tip. Great for swimming right from the quay.",
+            "name_el": "Λάκκα",
+            "desc_el": "Το πιο όμορφο χωριό των Παξών — μικροσκοπικό πεταλοειδές λιμάνι στο βόρειο άκρο. Εξαιρετικό για κολύμπι κατευθείαν από την προκυμαία."
           },
           {
             "name": "Erimitis Cliffs",
@@ -85,7 +99,9 @@
             "type": "beach",
             "time": "11:30",
             "wiki": null,
-            "desc": "Dramatic white cliffs on the west coast. Walk the cliff path from Lakka for panoramic views."
+            "desc": "Dramatic white cliffs on the west coast. Walk the cliff path from Lakka for panoramic views.",
+            "name_el": "Γκρεμοί Ερημίτης",
+            "desc_el": "Δραματικοί λευκοί γκρεμοί στη δυτική ακτή. Περπάτα το μονοπάτι των γκρεμών από τη Λάκκα για πανοραμικές θέες."
           },
           {
             "name": "Longos",
@@ -94,7 +110,9 @@
             "type": "village",
             "time": "13:30",
             "wiki": null,
-            "desc": "Tiny fishing village halfway down the east coast. Lunch at O Gios with bay views."
+            "desc": "Tiny fishing village halfway down the east coast. Lunch at O Gios with bay views.",
+            "name_el": "Λόγγος",
+            "desc_el": "Μικροσκοπικό ψαροχώρι στη μέση της ανατολικής ακτής. Μεσημεριανό στο Ο Γιος με θέα στον κόλπο."
           },
           {
             "name": "Antipaxos boat trip (Voutoumi)",
@@ -103,11 +121,17 @@
             "type": "beach",
             "time": "15:30",
             "wiki": "https://en.wikipedia.org/wiki/Antipaxos",
-            "desc": "Day boat from Gaios (15 min). Voutoumi and Vrika beaches have water so clear and blue you won't believe the photos."
+            "desc": "Day boat from Gaios (15 min). Voutoumi and Vrika beaches have water so clear and blue you won't believe the photos.",
+            "name_el": "Εκδρομή με Σκάφος στους Αντίπαξους (Βουτούμι)",
+            "desc_el": "Ημερήσιο σκάφος από τον Γάιο (15 λεπτά). Οι παραλίες Βουτούμι και Βρίκα έχουν νερά τόσο διαυγή και μπλε που δεν θα πιστέψεις τις φωτογραφίες."
           }
-        ]
+        ],
+        "title_el": "Γκρεμοί Δυτικής Ακτής & Αντίπαξοι",
+        "overnight_el": "Αναχώρηση"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 2 Ημερών στους Παξούς",
+    "subtitle_el": "Σμαραγδένιοι ελαιώνες και τα πιο διαυγή νερά του Ιονίου"
   },
   "beaches": [
     {
@@ -120,7 +144,13 @@
       "facing": "Northeast — protected",
       "facilities": "Two tavernas on cliff above",
       "wiki": null,
-      "desc": "Famous for the clearest water in the Ionian. Reached by boat from Gaios."
+      "desc": "Famous for the clearest water in the Ionian. Reached by boat from Gaios.",
+      "name_el": "Βουτούμι (Αντίπαξοι)",
+      "type_el": "Λευκά βότσαλα",
+      "depth_el": "Μέτρια, κρυστάλλινα",
+      "facing_el": "Βορειοανατολικά — προστατευμένη",
+      "facilities_el": "Δύο ταβέρνες στον γκρεμό από πάνω",
+      "desc_el": "Διάσημη για τα πιο διαυγή νερά του Ιονίου. Προσβάσιμη με σκάφος από τον Γάιο."
     },
     {
       "name": "Vrika (Antipaxos)",
@@ -132,7 +162,13 @@
       "facing": "North — protected",
       "facilities": "One taverna",
       "wiki": null,
-      "desc": "Smaller sandy beach on Antipaxos. Gradual entry, family-friendly, stunning color."
+      "desc": "Smaller sandy beach on Antipaxos. Gradual entry, family-friendly, stunning color.",
+      "name_el": "Βρίκα (Αντίπαξοι)",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχή",
+      "facing_el": "Βόρεια — προστατευμένη",
+      "facilities_el": "Μία ταβέρνα",
+      "desc_el": "Μικρότερη αμμώδης παραλία στους Αντίπαξους. Σταδιακή είσοδος, κατάλληλη για οικογένειες, εντυπωσιακό χρώμα."
     },
     {
       "name": "Mongonissi",
@@ -144,7 +180,16 @@
       "facing": "South — fully protected",
       "facilities": "Beach bar, umbrellas",
       "wiki": null,
-      "desc": "Paxos' only true sandy beach on the main island. Very calm, great for young kids."
+      "desc": "Paxos' only true sandy beach on the main island. Very calm, great for young kids.",
+      "name_el": "Μογγονήσι",
+      "type_el": "Άμμος",
+      "depth_el": "Πολύ ρηχή",
+      "facing_el": "Νότια — απόλυτα προστατευμένη",
+      "facilities_el": "Beach bar, ομπρέλες",
+      "desc_el": "Η μοναδική πραγματική αμμώδης παραλία στο κύριο νησί των Παξών. Πολύ ήρεμη, εξαιρετική για μικρά παιδιά."
     }
-  ]
+  ],
+  "name_el": "Παξοί",
+  "subtitle_el": "Σμαραγδένιοι ελαιώνες και τα πιο διαυγή νερά του Ιονίου",
+  "intro_el": "Οι Παξοί είναι ένα μικροσκοπικό σμαραγδένιο νησί ακριβώς νότια από την Κέρκυρα — 19 χλμ², 2.300 κάτοικοι, καλυμμένο σε αιωνόβιους ελαιώνες που παράγουν μερικό από το καλύτερο λάδι της Ελλάδας. Το νησί δεν έχει αεροδρόμιο, μόνο πλοία από την Κέρκυρα, και μόνο τρία μικροσκοπικά λιμενικά χωριά. Αυτή είναι η Ελλάδα του ιστιοπλόου και του κολυμβητή, με νερά τόσο διαυγή που τα σκάφη φαίνονται να επιπλέουν στον αέρα. Απέναντι βρίσκονται οι Αντίπαξοι, σπίτι των πιο διαφανών νερών του Ιονίου."
 }

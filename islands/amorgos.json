@@ -3,7 +3,6 @@
   "name": "Amorgos",
   "subtitle": "The Big Blue island — a clifftop monastery, wild hiking and the remotest Cyclades",
   "intro": "Amorgos is the eastern anchor of the Cyclades — long, thin, mountainous and magnificently remote. The Chozoviotissa monastery, plastered white against a sheer 300m cliff above the sea, is the most dramatic building in Greece. The island was the filming location for Luc Besson's The Big Blue. The hiking trails are exceptional. The two towns — Katapola in the west and Aegiali in the north — could not be more different in character.",
-
   "itinerary": {
     "title": "4-Day Amorgos Itinerary",
     "subtitle": "Chozoviotissa monastery, the Minoan town of Minoa, the beaches of Aegiali and the clifftop Chora.",
@@ -16,11 +15,53 @@
         "drive_mins": 15,
         "overnight": "Chora",
         "stops": [
-          { "name": "Katapola", "lat": 36.8367, "lng": 25.8633, "type": "harbour", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Katapola", "desc": "The main port — a beautiful triple harbour of three villages. The ancient city of Minoa is on the hill above." },
-          { "name": "Ancient Minoa", "lat": 36.8400, "lng": 25.8667, "type": "museum", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Minoa,_Amorgos", "desc": "Archaic city ruins above Katapola with remains of a gymnasium, temples and a stadium. The views over the three harbours are extraordinary." },
-          { "name": "Amorgos Chora", "lat": 36.8317, "lng": 25.8883, "type": "city", "time": "12:00", "wiki": "https://en.wikipedia.org/wiki/Chora,_Amorgos", "desc": "One of the most beautiful Cycladic capitals — a Venetian castle on a pinnacle above a white village, with windmills and superb views. Walk every lane." },
-          { "name": "Agia Anna Beach", "lat": 36.8083, "lng": 25.8883, "type": "beach", "time": "15:30", "wiki": null, "desc": "The small beach below the Chozoviotissa monastery — pebble, clear, beautiful setting. Made famous as the filming location for The Big Blue." }
-        ]
+          {
+            "name": "Katapola",
+            "lat": 36.8367,
+            "lng": 25.8633,
+            "type": "harbour",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Katapola",
+            "desc": "The main port — a beautiful triple harbour of three villages. The ancient city of Minoa is on the hill above.",
+            "name_el": "Κατάπολα",
+            "desc_el": "Το κύριο λιμάνι — ένα όμορφο τριπλό λιμάνι τριών χωριών. Η αρχαία πόλη της Μινώας βρίσκεται στον λόφο από πάνω."
+          },
+          {
+            "name": "Ancient Minoa",
+            "lat": 36.84,
+            "lng": 25.8667,
+            "type": "museum",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Minoa,_Amorgos",
+            "desc": "Archaic city ruins above Katapola with remains of a gymnasium, temples and a stadium. The views over the three harbours are extraordinary.",
+            "name_el": "Αρχαία Μινώα",
+            "desc_el": "Ερείπια αρχαϊκής πόλης πάνω από την Κατάπολα με υπολείμματα γυμνασίου, ναών και σταδίου. Οι θέες πάνω από τα τρία λιμάνια είναι εξαιρετικές."
+          },
+          {
+            "name": "Amorgos Chora",
+            "lat": 36.8317,
+            "lng": 25.8883,
+            "type": "city",
+            "time": "12:00",
+            "wiki": "https://en.wikipedia.org/wiki/Chora,_Amorgos",
+            "desc": "One of the most beautiful Cycladic capitals — a Venetian castle on a pinnacle above a white village, with windmills and superb views. Walk every lane.",
+            "name_el": "Χώρα Αμοργού",
+            "desc_el": "Μία από τις πιο όμορφες κυκλαδίτικες πρωτεύουσες — ενετικό κάστρο σε κορυφή πάνω από λευκό χωριό, με ανεμόμυλους και εξαιρετικές θέες. Περπάτα κάθε στενό."
+          },
+          {
+            "name": "Agia Anna Beach",
+            "lat": 36.8083,
+            "lng": 25.8883,
+            "type": "beach",
+            "time": "15:30",
+            "wiki": null,
+            "desc": "The small beach below the Chozoviotissa monastery — pebble, clear, beautiful setting. Made famous as the filming location for The Big Blue.",
+            "name_el": "Παραλία Αγίας Άννας",
+            "desc_el": "Η μικρή παραλία κάτω από τη Μονή Χοζοβιώτισσας — βότσαλα, διαυγή νερά, όμορφο σκηνικό. Έγινε διάσημη ως τοποθεσία γυρισμάτων για το Big Blue."
+          }
+        ],
+        "title_el": "Κατάπολα & Χώρα",
+        "overnight_el": "Χώρα"
       },
       {
         "day": 2,
@@ -30,11 +71,53 @@
         "drive_mins": 20,
         "overnight": "Chora",
         "stops": [
-          { "name": "Chozoviotissa Monastery", "lat": 36.8133, "lng": 25.8900, "type": "church", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Monastery_of_Panagia_Chozoviotissa", "desc": "The most dramatic building in Greece — an 11th-century monastery plastered white against a sheer 300m cliff, visible from miles away. Access via 300 steps cut into the rock. The monks serve visitors loukoumades and rakomelo. Modest dress required." },
-          { "name": "Agia Anna Beach", "lat": 36.8083, "lng": 25.8883, "type": "beach", "time": "11:30", "wiki": null, "desc": "Swim below the monastery — the cliff and the white church above make this one of the most memorable beach settings in Greece." },
-          { "name": "Maltezi Beach", "lat": 36.8050, "lng": 25.8933, "type": "beach", "time": "14:00", "wiki": null, "desc": "Quieter pebble beach south of Agia Anna — accessible by a short path. Usually empty." },
-          { "name": "Chora Sunset", "lat": 36.8317, "lng": 25.8883, "type": "village", "time": "19:00", "wiki": null, "desc": "The Chora at golden hour — the light on the white buildings is extraordinary. Dinner at one of the village square tavernas." }
-        ]
+          {
+            "name": "Chozoviotissa Monastery",
+            "lat": 36.8133,
+            "lng": 25.89,
+            "type": "church",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Monastery_of_Panagia_Chozoviotissa",
+            "desc": "The most dramatic building in Greece — an 11th-century monastery plastered white against a sheer 300m cliff, visible from miles away. Access via 300 steps cut into the rock. The monks serve visitors loukoumades and rakomelo. Modest dress required.",
+            "name_el": "Μονή Χοζοβιώτισσας",
+            "desc_el": "Το πιο δραματικό κτίριο της Ελλάδας — μοναστήρι του 11ου αιώνα ασπρισμένο πάνω σε κατακόρυφο γκρεμό 300 μέτρων, ορατό από χιλιόμετρα μακριά. Πρόσβαση μέσω 300 σκαλοπατιών λαξευμένων στον βράχο. Οι μοναχοί προσφέρουν λουκουμάδες και ρακόμελο. Απαιτείται κόσμιο ντύσιμο."
+          },
+          {
+            "name": "Agia Anna Beach",
+            "lat": 36.8083,
+            "lng": 25.8883,
+            "type": "beach",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "Swim below the monastery — the cliff and the white church above make this one of the most memorable beach settings in Greece.",
+            "name_el": "Παραλία Αγίας Άννας",
+            "desc_el": "Η μικρή παραλία κάτω από τη Μονή Χοζοβιώτισσας — βότσαλα, διαυγή νερά, όμορφο σκηνικό. Έγινε διάσημη ως τοποθεσία γυρισμάτων για το Big Blue."
+          },
+          {
+            "name": "Maltezi Beach",
+            "lat": 36.805,
+            "lng": 25.8933,
+            "type": "beach",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Quieter pebble beach south of Agia Anna — accessible by a short path. Usually empty.",
+            "name_el": "Παραλία Μαλτέζι",
+            "desc_el": "Πιο ήσυχη βότσαλη παραλία νότια της Αγίας Άννας — προσβάσιμη με σύντομο μονοπάτι. Συνήθως άδεια."
+          },
+          {
+            "name": "Chora Sunset",
+            "lat": 36.8317,
+            "lng": 25.8883,
+            "type": "village",
+            "time": "19:00",
+            "wiki": null,
+            "desc": "The Chora at golden hour — the light on the white buildings is extraordinary. Dinner at one of the village square tavernas.",
+            "name_el": "Ηλιοβασίλεμα στη Χώρα",
+            "desc_el": "Η Χώρα στη χρυσή ώρα — το φως στα λευκά κτίρια είναι εξαιρετικό. Δείπνο σε μία από τις ταβέρνες της πλατείας του χωριού."
+          }
+        ],
+        "title_el": "Μονή Χοζοβιώτισσας",
+        "overnight_el": "Χώρα"
       },
       {
         "day": 3,
@@ -44,10 +127,42 @@
         "drive_mins": 40,
         "overnight": "Aegiali",
         "stops": [
-          { "name": "Aegiali", "lat": 36.8983, "lng": 25.8967, "type": "harbour", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Aegiali", "desc": "The northern resort — a completely different character to the south. Relaxed, with a good sandy beach and the most hiking trails on the island. The bay is beautiful." },
-          { "name": "Aegiali Beach", "lat": 36.8983, "lng": 25.9000, "type": "beach", "time": "11:00", "wiki": null, "desc": "The best organised beach on Amorgos — sandy, shallow and calm. The backdrop of the mountains and the clear water make it one of the finest beach settings in the eastern Cyclades." },
-          { "name": "Tholaria & Lagkada Villages", "lat": 36.9083, "lng": 25.8917, "type": "village", "time": "15:00", "wiki": null, "desc": "Two beautiful traditional villages above Aegiali — walk the path between them for views over the bay and the island. The finest hiking on Amorgos is in this area." }
-        ]
+          {
+            "name": "Aegiali",
+            "lat": 36.8983,
+            "lng": 25.8967,
+            "type": "harbour",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Aegiali",
+            "desc": "The northern resort — a completely different character to the south. Relaxed, with a good sandy beach and the most hiking trails on the island. The bay is beautiful.",
+            "name_el": "Αιγιάλη",
+            "desc_el": "Το βόρειο θέρετρο — εντελώς διαφορετικός χαρακτήρας από τον νότο. Χαλαρή, με καλή αμμώδη παραλία και τα περισσότερα μονοπάτια πεζοπορίας του νησιού. Ο κόλπος είναι πανέμορφος."
+          },
+          {
+            "name": "Aegiali Beach",
+            "lat": 36.8983,
+            "lng": 25.9,
+            "type": "beach",
+            "time": "11:00",
+            "wiki": null,
+            "desc": "The best organised beach on Amorgos — sandy, shallow and calm. The backdrop of the mountains and the clear water make it one of the finest beach settings in the eastern Cyclades.",
+            "name_el": "Παραλία Αιγιάλης",
+            "desc_el": "Η καλύτερα οργανωμένη παραλία της Αμοργού — αμμώδης, ρηχή και ήρεμη. Το φόντο των βουνών και τα διαυγή νερά την κάνουν ένα από τα πιο όμορφα παραλιακά σκηνικά στις ανατολικές Κυκλάδες."
+          },
+          {
+            "name": "Tholaria & Lagkada Villages",
+            "lat": 36.9083,
+            "lng": 25.8917,
+            "type": "village",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Two beautiful traditional villages above Aegiali — walk the path between them for views over the bay and the island. The finest hiking on Amorgos is in this area.",
+            "name_el": "Θολάρια & Λαγκάδα",
+            "desc_el": "Δύο όμορφα παραδοσιακά χωριά πάνω από την Αιγιάλη — περπάτα το μονοπάτι ανάμεσά τους για θέες πάνω στον κόλπο και στο νησί. Η καλύτερη πεζοπορία της Αμοργού είναι σε αυτή την περιοχή."
+          }
+        ],
+        "title_el": "Αιγιάλη & ο Βορράς",
+        "overnight_el": "Αιγιάλη"
       },
       {
         "day": 4,
@@ -57,13 +172,35 @@
         "drive_mins": 20,
         "overnight": null,
         "stops": [
-          { "name": "Kalotaritissa Beach", "lat": 36.7817, "lng": 25.8467, "type": "beach", "time": "09:30", "wiki": null, "desc": "Remote wild beach in the southwest — accessible only by a rough track or boat. White sand, turquoise water, completely deserted. The finest wild beach on the island." },
-          { "name": "Katapola — Departure", "lat": 36.8367, "lng": 25.8633, "type": "harbour", "time": "15:00", "wiki": null, "desc": "Ferry to Piraeus, Naxos or the Small Cyclades. Amorgos is the end of the Cyclades line — the ferry connections are fewer but the island rewards the extra effort." }
-        ]
+          {
+            "name": "Kalotaritissa Beach",
+            "lat": 36.7817,
+            "lng": 25.8467,
+            "type": "beach",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "Remote wild beach in the southwest — accessible only by a rough track or boat. White sand, turquoise water, completely deserted. The finest wild beach on the island.",
+            "name_el": "Παραλία Καλοταρίτισσα",
+            "desc_el": "Απομακρυσμένη άγρια παραλία στα νοτιοδυτικά — προσβάσιμη μόνο με χωματόδρομο ή με βάρκα. Λευκή άμμος, τιρκουάζ νερά, εντελώς έρημη. Η καλύτερη άγρια παραλία του νησιού."
+          },
+          {
+            "name": "Katapola — Departure",
+            "lat": 36.8367,
+            "lng": 25.8633,
+            "type": "harbour",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Ferry to Piraeus, Naxos or the Small Cyclades. Amorgos is the end of the Cyclades line — the ferry connections are fewer but the island rewards the extra effort.",
+            "name_el": "Κατάπολα — Αναχώρηση",
+            "desc_el": "Πλοίο για Πειραιά, Νάξο ή τις Μικρές Κυκλάδες. Η Αμοργός είναι το τέλος της γραμμής των Κυκλάδων — οι πλοϊκές συνδέσεις είναι λιγότερες αλλά το νησί ανταμείβει την παραπάνω προσπάθεια."
+          }
+        ],
+        "title_el": "Πεζοπορία & Αναχώρηση"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 4 Ημερών στην Αμοργό",
+    "subtitle_el": "Η Μονή της Χοζοβιώτισσας, η Μινωική πόλη της Μινώας, οι παραλίες της Αιγιάλης και η ορεινή Χώρα."
   },
-
   "beaches": [
     {
       "name": "Aegiali Beach",
@@ -76,7 +213,14 @@
       "facilities": "Good: sunbeds, beach bars, tavernas in the village behind.",
       "desc": "The finest organised beach on Amorgos — sandy, shallow and calm in a beautiful bay surrounded by mountains. The best base for those who want both hiking and swimming.",
       "commons": null,
-      "lat": 36.8983, "lng": 25.9000
+      "lat": 36.8983,
+      "lng": 25.9,
+      "name_el": "Παραλία Αιγιάλης",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχή — ήρεμα, διαυγή νερά",
+      "facing_el": "Βόρεια — προστατευμένος κόλπος",
+      "facilities_el": "Καλές: ξαπλώστρες, beach bars, ταβέρνες στο χωριό πίσω.",
+      "desc_el": "Η καλύτερη οργανωμένη παραλία της Αμοργού — αμμώδης, ρηχή και ήρεμη σε όμορφο κόλπο που περιβάλλεται από βουνά. Η καλύτερη βάση για όσους θέλουν και πεζοπορία και κολύμπι."
     },
     {
       "name": "Agia Anna Beach",
@@ -89,7 +233,14 @@
       "facilities": "None — the monastery and the cliff are the attraction.",
       "desc": "The most atmospheric beach in the Cyclades — a small pebble cove directly below the sheer cliff and the white monastery of Chozoviotissa. Filming location for The Big Blue. The setting is incomparable.",
       "commons": "Agia_Anna_beach_Amorgos.jpg",
-      "lat": 36.8083, "lng": 25.8883
+      "lat": 36.8083,
+      "lng": 25.8883,
+      "name_el": "Παραλία Αγίας Άννας",
+      "type_el": "Βότσαλα",
+      "depth_el": "Μέτρια — διαυγή, κρύα νερά",
+      "facing_el": "Ανατολικά — κάτω από τον γκρεμό της μονής",
+      "facilities_el": "Καμία — η μονή και ο γκρεμός είναι το αξιοθέατο.",
+      "desc_el": "Η πιο ατμοσφαιρική παραλία των Κυκλάδων — μικρός βότσαλος κόλπος ακριβώς κάτω από τον κάθετο γκρεμό και τη λευκή Μονή της Χοζοβιώτισσας. Τοποθεσία γυρισμάτων για το Big Blue. Το σκηνικό είναι ασύγκριτο."
     },
     {
       "name": "Kalotaritissa Beach",
@@ -102,7 +253,17 @@
       "facilities": "None — rough track or boat access only.",
       "desc": "The wildest and most beautiful beach on Amorgos — white sand and turquoise water in a completely isolated bay. The effort required keeps it empty. One of the finest undiscovered beaches in the Cyclades.",
       "commons": null,
-      "lat": 36.7817, "lng": 25.8467
+      "lat": 36.7817,
+      "lng": 25.8467,
+      "name_el": "Παραλία Καλοταρίτισσα",
+      "type_el": "Λευκή άμμος",
+      "depth_el": "Ρηχή — ζεστά, τιρκουάζ νερά",
+      "facing_el": "Δυτικά — απομακρυσμένη και προστατευμένη",
+      "facilities_el": "Καμία — πρόσβαση μόνο με χωματόδρομο ή βάρκα.",
+      "desc_el": "Η πιο άγρια και όμορφη παραλία της Αμοργού — λευκή άμμος και τιρκουάζ νερά σε εντελώς απομονωμένο κόλπο. Η απαιτούμενη προσπάθεια την κρατάει άδεια. Μία από τις καλύτερες ανακαλύψιμες παραλίες των Κυκλάδων."
     }
-  ]
+  ],
+  "name_el": "Αμοργός",
+  "subtitle_el": "Το νησί του Big Blue — ένα μοναστήρι πάνω σε γκρεμό, άγρια πεζοπορία και οι πιο απομακρυσμένες Κυκλάδες",
+  "intro_el": "Η Αμοργός είναι η ανατολική άκρη των Κυκλάδων — μακρόστενη, ορεινή και μαγευτικά απομακρυσμένη. Η Μονή της Χοζοβιώτισσας, ασπρισμένη πάνω σε κατακόρυφο γκρεμό 300 μέτρων πάνω από τη θάλασσα, είναι το πιο δραματικό κτίριο της Ελλάδας. Το νησί ήταν τοποθεσία γυρισμάτων για το Big Blue του Λυκ Μπεσόν. Τα μονοπάτια πεζοπορίας είναι εξαιρετικά. Οι δύο πόλεις — η Κατάπολα στα δυτικά και η Αιγιάλη στα βόρεια — δεν θα μπορούσαν να είναι πιο διαφορετικές σε χαρακτήρα."
 }

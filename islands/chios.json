@@ -3,7 +3,6 @@
   "name": "Chios",
   "subtitle": "The mastic island — medieval villages, Byzantine monasteries and the only mastic trees in the world",
   "intro": "Chios produces something found nowhere else on earth — mastic resin from the Pistacia lentiscus tree, used for 3000 years as chewing gum, medicine and varnish. The medieval mastic villages of the south are some of the most architecturally extraordinary settlements in Greece — built by the Genoese in the 14th century with a unique geometric defensive design. The island is genuinely off the beaten track despite its size.",
-
   "itinerary": {
     "title": "4-Day Chios Itinerary",
     "subtitle": "The Genoese castle, the medieval mastic villages, the Nea Moni monastery and the volcanic beaches of the south.",
@@ -16,11 +15,53 @@
         "drive_mins": 15,
         "overnight": "Chios Town",
         "stops": [
-          { "name": "Chios Town", "lat": 38.3683, "lng": 26.1367, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Chios_(city)", "desc": "The capital — a working port city with a Genoese castle, an Ottoman quarter and one of the finest archaeological museums in the eastern Aegean. Genuine and untouristy." },
-          { "name": "Genoese Castle", "lat": 38.3733, "lng": 26.1350, "type": "castle", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Castle_of_Chios", "desc": "14th-century Genoese fortress enclosing the old Muslim quarter — the only intact Ottoman neighbourhood in the Aegean. Mosques, fountains and the grave of Kara Ali are within the walls." },
-          { "name": "Chios Archaeological Museum", "lat": 38.3683, "lng": 26.1367, "type": "museum", "time": "11:00", "wiki": null, "desc": "Excellent collection of finds from ancient Chios — vases, coins and sculptures from the island's prosperous ancient period as a major trading city." },
-          { "name": "Karfas Beach", "lat": 38.3233, "lng": 26.1433, "type": "beach", "time": "15:00", "wiki": null, "desc": "The main organised beach near Chios Town — sandy, calm and well-equipped. Not remarkable but convenient for a first-day swim." }
-        ]
+          {
+            "name": "Chios Town",
+            "lat": 38.3683,
+            "lng": 26.1367,
+            "type": "city",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Chios_(city)",
+            "desc": "The capital — a working port city with a Genoese castle, an Ottoman quarter and one of the finest archaeological museums in the eastern Aegean. Genuine and untouristy.",
+            "name_el": "Πόλη της Χίου",
+            "desc_el": "Η πρωτεύουσα — εργατική λιμενική πόλη με γενουατικό κάστρο, οθωμανική συνοικία και ένα από τα καλύτερα αρχαιολογικά μουσεία του ανατολικού Αιγαίου. Αυθεντική και μη τουριστική."
+          },
+          {
+            "name": "Genoese Castle",
+            "lat": 38.3733,
+            "lng": 26.135,
+            "type": "castle",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Castle_of_Chios",
+            "desc": "14th-century Genoese fortress enclosing the old Muslim quarter — the only intact Ottoman neighbourhood in the Aegean. Mosques, fountains and the grave of Kara Ali are within the walls.",
+            "name_el": "Γενουατικό Κάστρο",
+            "desc_el": "Γενουατικό φρούριο του 14ου αιώνα που περιβάλλει την παλιά μουσουλμανική συνοικία — η μοναδική ανέπαφη οθωμανική γειτονιά στο Αιγαίο. Τζαμιά, κρήνες και ο τάφος του Καρά Αλή βρίσκονται μέσα στα τείχη."
+          },
+          {
+            "name": "Chios Archaeological Museum",
+            "lat": 38.3683,
+            "lng": 26.1367,
+            "type": "museum",
+            "time": "11:00",
+            "wiki": null,
+            "desc": "Excellent collection of finds from ancient Chios — vases, coins and sculptures from the island's prosperous ancient period as a major trading city.",
+            "name_el": "Αρχαιολογικό Μουσείο Χίου",
+            "desc_el": "Εξαιρετική συλλογή ευρημάτων από την αρχαία Χίο — αγγεία, νομίσματα και γλυπτά από την ευημερή αρχαία περίοδο του νησιού ως σπουδαίας εμπορικής πόλης."
+          },
+          {
+            "name": "Karfas Beach",
+            "lat": 38.3233,
+            "lng": 26.1433,
+            "type": "beach",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "The main organised beach near Chios Town — sandy, calm and well-equipped. Not remarkable but convenient for a first-day swim.",
+            "name_el": "Παραλία Καρφάς",
+            "desc_el": "Η κύρια οργανωμένη παραλία κοντά στην Πόλη της Χίου — αμμώδης, ήρεμη και καλά εξοπλισμένη. Όχι εξαιρετική αλλά βολική για πρώτο μπάνιο."
+          }
+        ],
+        "title_el": "Πόλη της Χίου",
+        "overnight_el": "Χώρα Χίου"
       },
       {
         "day": 2,
@@ -30,11 +71,53 @@
         "drive_mins": 65,
         "overnight": "Chios Town",
         "stops": [
-          { "name": "Nea Moni Monastery", "lat": 38.3667, "lng": 26.0617, "type": "church", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Nea_Moni", "desc": "UNESCO-listed 11th-century Byzantine monastery — the finest Byzantine mosaics surviving anywhere in Greece. Built by Constantine IX after he became emperor. The gold and coloured glass tesserae are extraordinary." },
-          { "name": "Anavatos Village", "lat": 38.3600, "lng": 26.0433, "type": "village", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Anavatos", "desc": "The most dramatic village in Chios — a near-abandoned clifftop settlement where villagers threw themselves off the cliff rather than surrender to Ottoman forces in 1822. Haunting and beautiful." },
-          { "name": "Pyrgi Village", "lat": 38.2450, "lng": 26.0733, "type": "village", "time": "14:00", "wiki": "https://en.wikipedia.org/wiki/Pyrgi,_Chios", "desc": "The most extraordinary village in the Aegean — every surface of every building covered in the xysta geometric pattern (black and white scraffito). A living medieval fortress village." },
-          { "name": "Emporios Beach", "lat": 38.2017, "lng": 26.0867, "type": "beach", "time": "16:30", "wiki": null, "desc": "Black volcanic pebble beach in the ancient harbour of Emporios — crystal clear water, dramatic cliff scenery. Far less visited than it deserves." }
-        ]
+          {
+            "name": "Nea Moni Monastery",
+            "lat": 38.3667,
+            "lng": 26.0617,
+            "type": "church",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Nea_Moni",
+            "desc": "UNESCO-listed 11th-century Byzantine monastery — the finest Byzantine mosaics surviving anywhere in Greece. Built by Constantine IX after he became emperor. The gold and coloured glass tesserae are extraordinary.",
+            "name_el": "Μονή Νέας Μονής",
+            "desc_el": "Βυζαντινό μοναστήρι του 11ου αιώνα υπό την προστασία της UNESCO — τα καλύτερα βυζαντινά ψηφιδωτά που επιβιώνουν οπουδήποτε στην Ελλάδα. Χτισμένο από τον Κωνσταντίνο Θ' αφού έγινε αυτοκράτορας. Οι χρυσές και χρωματιστές γυάλινες ψηφίδες είναι εξαιρετικές."
+          },
+          {
+            "name": "Anavatos Village",
+            "lat": 38.36,
+            "lng": 26.0433,
+            "type": "village",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Anavatos",
+            "desc": "The most dramatic village in Chios — a near-abandoned clifftop settlement where villagers threw themselves off the cliff rather than surrender to Ottoman forces in 1822. Haunting and beautiful.",
+            "name_el": "Χωριό Ανάβατος",
+            "desc_el": "Το πιο δραματικό χωριό της Χίου — σχεδόν εγκαταλελειμμένος οικισμός σε γκρεμό όπου οι κάτοικοι έπεσαν από τον γκρεμό αντί να παραδοθούν στις οθωμανικές δυνάμεις το 1822. Στοιχειωτικό και όμορφο."
+          },
+          {
+            "name": "Pyrgi Village",
+            "lat": 38.245,
+            "lng": 26.0733,
+            "type": "village",
+            "time": "14:00",
+            "wiki": "https://en.wikipedia.org/wiki/Pyrgi,_Chios",
+            "desc": "The most extraordinary village in the Aegean — every surface of every building covered in the xysta geometric pattern (black and white scraffito). A living medieval fortress village.",
+            "name_el": "Χωριό Πυργί",
+            "desc_el": "Το πιο εξαιρετικό χωριό του Αιγαίου — κάθε επιφάνεια κάθε κτιρίου καλυμμένη με το γεωμετρικό μοτίβο των ξυστών (μαύρο και λευκό sgraffito). Ένα ζωντανό μεσαιωνικό οχυρωμένο χωριό."
+          },
+          {
+            "name": "Emporios Beach",
+            "lat": 38.2017,
+            "lng": 26.0867,
+            "type": "beach",
+            "time": "16:30",
+            "wiki": null,
+            "desc": "Black volcanic pebble beach in the ancient harbour of Emporios — crystal clear water, dramatic cliff scenery. Far less visited than it deserves.",
+            "name_el": "Παραλία Εμπορειός",
+            "desc_el": "Παραλία από μαύρα ηφαιστειακά βότσαλα στο αρχαίο λιμάνι του Εμπορειού — κρυστάλλινα νερά, δραματικό σκηνικό γκρεμών. Πολύ λιγότερο επισκεπτόμενη απ' όσο αξίζει."
+          }
+        ],
+        "title_el": "Νέα Μονή & Πυργί",
+        "overnight_el": "Χώρα Χίου"
       },
       {
         "day": 3,
@@ -44,11 +127,53 @@
         "drive_mins": 50,
         "overnight": "Mesta",
         "stops": [
-          { "name": "Mesta Village", "lat": 38.2617, "lng": 25.9967, "type": "village", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Mesta", "desc": "The best-preserved medieval mastic village — a Genoese fortress-village where every house is part of the defensive wall. Walk the labyrinthine interior lanes. Stay overnight in one of the converted tower houses." },
-          { "name": "Mastic Museum", "lat": 38.2133, "lng": 26.0467, "type": "museum", "time": "11:30", "wiki": null, "desc": "The story of mastic — the resin that built Chios's extraordinary wealth for 600 years. The Genoese monopoly, the Ottoman prize, and the modern production are all explained. Tasting included." },
-          { "name": "Olympi Village", "lat": 38.2433, "lng": 26.0200, "type": "village", "time": "13:30", "wiki": null, "desc": "Another intact mastic village with a central defensive tower. Walk the perimeter walls and visit the underground Byzantine church." },
-          { "name": "Komi Beach", "lat": 38.2167, "lng": 26.1000, "type": "beach", "time": "16:00", "wiki": null, "desc": "Sandy beach near the mastic villages — the best organised beach in southern Chios. Good for a swim after a day of medieval villages." }
-        ]
+          {
+            "name": "Mesta Village",
+            "lat": 38.2617,
+            "lng": 25.9967,
+            "type": "village",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Mesta",
+            "desc": "The best-preserved medieval mastic village — a Genoese fortress-village where every house is part of the defensive wall. Walk the labyrinthine interior lanes. Stay overnight in one of the converted tower houses.",
+            "name_el": "Χωριό Μεστά",
+            "desc_el": "Το καλύτερα διατηρημένο μεσαιωνικό μαστιχοχώρι — γενουατικό οχυρωμένο χωριό όπου κάθε σπίτι είναι μέρος του αμυντικού τείχους. Περπάτα τα λαβυρινθώδη εσωτερικά στενά. Μείνε τη νύχτα σε ένα από τα μετατραπέντα πυργόσπιτα."
+          },
+          {
+            "name": "Mastic Museum",
+            "lat": 38.2133,
+            "lng": 26.0467,
+            "type": "museum",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "The story of mastic — the resin that built Chios's extraordinary wealth for 600 years. The Genoese monopoly, the Ottoman prize, and the modern production are all explained. Tasting included.",
+            "name_el": "Μουσείο Μαστίχας",
+            "desc_el": "Η ιστορία της μαστίχας — της ρητίνης που έχτισε τον εξαιρετικό πλούτο της Χίου για 600 χρόνια. Το γενουατικό μονοπώλιο, το οθωμανικό έπαθλο, και η σύγχρονη παραγωγή εξηγούνται. Περιλαμβάνεται γευσιγνωσία."
+          },
+          {
+            "name": "Olympi Village",
+            "lat": 38.2433,
+            "lng": 26.02,
+            "type": "village",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "Another intact mastic village with a central defensive tower. Walk the perimeter walls and visit the underground Byzantine church.",
+            "name_el": "Χωριό Ολύμποι",
+            "desc_el": "Άλλο ένα ανέπαφο μαστιχοχώρι με κεντρικό αμυντικό πύργο. Περπάτα τα περιμετρικά τείχη και επισκέψου την υπόγεια βυζαντινή εκκλησία."
+          },
+          {
+            "name": "Komi Beach",
+            "lat": 38.2167,
+            "lng": 26.1,
+            "type": "beach",
+            "time": "16:00",
+            "wiki": null,
+            "desc": "Sandy beach near the mastic villages — the best organised beach in southern Chios. Good for a swim after a day of medieval villages.",
+            "name_el": "Παραλία Κώμη",
+            "desc_el": "Αμμώδης παραλία κοντά στα μαστιχοχώρια — η καλύτερη οργανωμένη παραλία στη νότια Χίο. Καλή για μπάνιο μετά από μέρα μεσαιωνικών χωριών."
+          }
+        ],
+        "title_el": "Μαστιχοχώρια",
+        "overnight_el": "Μεστά"
       },
       {
         "day": 4,
@@ -58,14 +183,46 @@
         "drive_mins": 50,
         "overnight": null,
         "stops": [
-          { "name": "Volissos Village", "lat": 38.4717, "lng": 25.9283, "type": "castle", "time": "09:30", "wiki": null, "desc": "Medieval village in the northwest dominated by a Byzantine castle. The surrounding landscape of olive groves and mastic trees is the most unspoiled on the island." },
-          { "name": "Limnos Beach", "lat": 38.4633, "lng": 25.8983, "type": "beach", "time": "11:30", "wiki": null, "desc": "Sandy beach below Volissos — calm, clear water and almost always empty. One of the finest uncrowded beaches in the northern Aegean." },
-          { "name": "Chios Town — Departure", "lat": 38.3683, "lng": 26.1367, "type": "harbour", "time": "16:00", "wiki": null, "desc": "Ferry to Piraeus, Lesvos, Samos or Cesme (Turkey, 45 minutes)." }
-        ]
+          {
+            "name": "Volissos Village",
+            "lat": 38.4717,
+            "lng": 25.9283,
+            "type": "castle",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "Medieval village in the northwest dominated by a Byzantine castle. The surrounding landscape of olive groves and mastic trees is the most unspoiled on the island.",
+            "name_el": "Χωριό Βολισσός",
+            "desc_el": "Μεσαιωνικό χωριό στα βορειοδυτικά που κυριαρχείται από βυζαντινό κάστρο. Το γύρω τοπίο από ελαιώνες και δέντρα μαστίχας είναι το πιο απαράλλακτο του νησιού."
+          },
+          {
+            "name": "Limnos Beach",
+            "lat": 38.4633,
+            "lng": 25.8983,
+            "type": "beach",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "Sandy beach below Volissos — calm, clear water and almost always empty. One of the finest uncrowded beaches in the northern Aegean.",
+            "name_el": "Παραλία Λήμνος",
+            "desc_el": "Αμμώδης παραλία κάτω από τη Βολισσό — ήρεμα, διαυγή νερά και σχεδόν πάντα άδεια. Μία από τις καλύτερες μη πολυσύχναστες παραλίες του βόρειου Αιγαίου."
+          },
+          {
+            "name": "Chios Town — Departure",
+            "lat": 38.3683,
+            "lng": 26.1367,
+            "type": "harbour",
+            "time": "16:00",
+            "wiki": null,
+            "desc": "Ferry to Piraeus, Lesvos, Samos or Cesme (Turkey, 45 minutes).",
+            "name_el": "Χώρα Χίου — Αναχώρηση",
+            "desc_el": "Πλοίο για Πειραιά, Λέσβο, Σάμο ή Τσεσμέ (Τουρκία, 45 λεπτά)."
+          }
+        ],
+        "title_el": "Βόρεια Χίος & Αναχώρηση"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 4 Ημερών στη Χίο",
+    "subtitle_el": "Το γενουατικό κάστρο, τα μεσαιωνικά μαστιχοχώρια, η Νέα Μονή και οι ηφαιστειακές παραλίες του νότου."
   },
-
   "beaches": [
     {
       "name": "Emporios Beach (Mavra Volia)",
@@ -78,7 +235,14 @@
       "facilities": "Basic: small taverna. Spectacular cliff scenery.",
       "desc": "One of the most striking beaches in the Aegean — black volcanic pebbles in the ancient harbour of Emporios, with sheer dark cliffs and water of extraordinary clarity. The volcanic landscape gives it a completely different character to any other beach in Greece.",
       "commons": null,
-      "lat": 38.2017, "lng": 26.0867
+      "lat": 38.2017,
+      "lng": 26.0867,
+      "name_el": "Παραλία Εμπορειός (Μαύρα Βόλια)",
+      "type_el": "Μαύρα ηφαιστειακά βότσαλα",
+      "depth_el": "Μέτρια — κρυστάλλινα νερά",
+      "facing_el": "Νότια — προστατευμένο αρχαίο λιμάνι",
+      "facilities_el": "Στοιχειώδεις: μικρή ταβέρνα. Εντυπωσιακό σκηνικό γκρεμών.",
+      "desc_el": "Μία από τις πιο εντυπωσιακές παραλίες του Αιγαίου — μαύρα ηφαιστειακά βότσαλα στο αρχαίο λιμάνι του Εμπορειού, με κάθετους σκούρους γκρεμούς και νερά εξαιρετικής διαύγειας. Το ηφαιστειακό τοπίο της δίνει εντελώς διαφορετικό χαρακτήρα από κάθε άλλη παραλία στην Ελλάδα."
     },
     {
       "name": "Komi Beach",
@@ -91,7 +255,14 @@
       "facilities": "Good: sunbeds, tavernas, parking. Best organised beach in the south.",
       "desc": "The best sandy beach in southern Chios — convenient for those exploring the mastic villages, with good facilities and calm, clear water.",
       "commons": null,
-      "lat": 38.2167, "lng": 26.1000
+      "lat": 38.2167,
+      "lng": 26.1,
+      "name_el": "Παραλία Κώμη",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχή — ήρεμη, διαυγής",
+      "facing_el": "Ανατολικά — προστατευμένη",
+      "facilities_el": "Καλές: ξαπλώστρες, ταβέρνες, parking. Η καλύτερη οργανωμένη παραλία του νότου.",
+      "desc_el": "Η καλύτερη αμμώδης παραλία της νότιας Χίου — βολική για όσους εξερευνούν τα μαστιχοχώρια, με καλές υποδομές και ήρεμα, διαυγή νερά."
     },
     {
       "name": "Limnos Beach",
@@ -104,7 +275,17 @@
       "facilities": "Basic: small taverna. Very quiet even in summer.",
       "desc": "A remote sandy beach below the medieval village of Volissos in northwest Chios. Almost always empty — most visitors never make it this far. The setting, with the castle above and olive groves behind, is one of the most picturesque on the island.",
       "commons": null,
-      "lat": 38.4633, "lng": 25.8983
+      "lat": 38.4633,
+      "lng": 25.8983,
+      "name_el": "Παραλία Λήμνος",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχή — ήρεμη, ζεστή",
+      "facing_el": "Δυτικά — προστατευμένη από ακρωτήριο",
+      "facilities_el": "Στοιχειώδεις: μικρή ταβέρνα. Πολύ ήσυχη ακόμα και το καλοκαίρι.",
+      "desc_el": "Μια απομακρυσμένη αμμώδης παραλία κάτω από το μεσαιωνικό χωριό της Βολισσού στη βορειοδυτική Χίο. Σχεδόν πάντα άδεια — οι περισσότεροι επισκέπτες δεν φτάνουν τόσο μακριά. Το σκηνικό, με το κάστρο από πάνω και τους ελαιώνες πίσω, είναι από τα πιο γραφικά του νησιού."
     }
-  ]
+  ],
+  "name_el": "Χίος",
+  "subtitle_el": "Το νησί της μαστίχας — μεσαιωνικά χωριά, βυζαντινά μοναστήρια και τα μοναδικά δέντρα μαστίχας στον κόσμο",
+  "intro_el": "Η Χίος παράγει κάτι που δεν υπάρχει πουθενά αλλού στη Γη — ρητίνη μαστίχας από το δέντρο της σχίνου, που χρησιμοποιείται 3000 χρόνια ως τσίχλα, φάρμακο και βερνίκι. Τα μεσαιωνικά μαστιχοχώρια του νότου είναι από τους πιο αρχιτεκτονικά εξαιρετικούς οικισμούς της Ελλάδας — χτισμένοι από τους Γενουάτες τον 14ο αιώνα με μοναδικό γεωμετρικό αμυντικό σχεδιασμό. Το νησί είναι πραγματικά μακριά από τον πολυσύχναστο τουρισμό παρά το μέγεθός του."
 }

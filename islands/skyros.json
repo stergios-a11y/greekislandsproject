@@ -21,7 +21,9 @@
             "type": "harbour",
             "time": "11:00",
             "wiki": null,
-            "desc": "Tiny pretty port on the west coast. Arrival tradition: a ship's horn salutes every ferry. One hour from the main town."
+            "desc": "Tiny pretty port on the west coast. Arrival tradition: a ship's horn salutes every ferry. One hour from the main town.",
+            "name_el": "Λιναριά (Λιμάνι)",
+            "desc_el": "Μικρό όμορφο λιμάνι στη δυτική ακτή. Παράδοση άφιξης: μια σφυρίχτρα πλοίου χαιρετίζει κάθε πλοίο. Μία ώρα από την κύρια πόλη."
           },
           {
             "name": "Skyros Town (Chora)",
@@ -30,7 +32,9 @@
             "type": "village",
             "time": "12:30",
             "wiki": "https://en.wikipedia.org/wiki/Skyros",
-            "desc": "Cycladic-style whitewashed village on a cliff, unique to the Sporades. The main marble-paved pedestrian street climbs to the castle."
+            "desc": "Cycladic-style whitewashed village on a cliff, unique to the Sporades. The main marble-paved pedestrian street climbs to the castle.",
+            "name_el": "Χώρα Σκύρου",
+            "desc_el": "Κυκλαδίτικου στυλ ασπρισμένο χωριό σε γκρεμό, μοναδικό στις Σποράδες. Ο κύριος μαρμαροστρωμένος πεζόδρομος ανεβαίνει στο κάστρο."
           },
           {
             "name": "Byzantine Castle of Skyros",
@@ -39,7 +43,9 @@
             "type": "castle",
             "time": "14:00",
             "wiki": null,
-            "desc": "Ancient acropolis turned Venetian/Byzantine fort. 360° views over the town and the Aegean."
+            "desc": "Ancient acropolis turned Venetian/Byzantine fort. 360° views over the town and the Aegean.",
+            "name_el": "Βυζαντινό Κάστρο της Σκύρου",
+            "desc_el": "Αρχαία ακρόπολη μετατραπείσα σε ενετικό/βυζαντινό φρούριο. Θέες 360° πάνω από την πόλη και το Αιγαίο."
           },
           {
             "name": "Lunch — Anemos",
@@ -48,7 +54,9 @@
             "type": "village",
             "time": "15:30",
             "wiki": null,
-            "desc": "Small taverna with panoramic terrace. Excellent lobster pasta (Skyros is famous for lobster)."
+            "desc": "Small taverna with panoramic terrace. Excellent lobster pasta (Skyros is famous for lobster).",
+            "name_el": "Μεσημεριανό — Άνεμος",
+            "desc_el": "Μικρή ταβέρνα με πανοραμική βεράντα. Εξαιρετικά ζυμαρικά με αστακό (η Σκύρος φημίζεται για τον αστακό)."
           },
           {
             "name": "Faltaits Folklore Museum",
@@ -57,7 +65,9 @@
             "type": "museum",
             "time": "17:00",
             "wiki": null,
-            "desc": "In a 19th-century mansion. Skyrian embroidery, carved wooden furniture, Byzantine icons. Best folk museum in Greece."
+            "desc": "In a 19th-century mansion. Skyrian embroidery, carved wooden furniture, Byzantine icons. Best folk museum in Greece.",
+            "name_el": "Λαογραφικό Μουσείο Φαλτάιτς",
+            "desc_el": "Σε αρχοντικό του 19ου αιώνα. Σκυριανό κέντημα, σκαλιστά ξύλινα έπιπλα, βυζαντινές εικόνες. Το καλύτερο λαογραφικό μουσείο της Ελλάδας."
           },
           {
             "name": "Magazia Beach (sunset)",
@@ -66,9 +76,13 @@
             "type": "beach",
             "time": "19:30",
             "wiki": null,
-            "desc": "Long sandy beach right below Chora. Walk down for a swim before dinner."
+            "desc": "Long sandy beach right below Chora. Walk down for a swim before dinner.",
+            "name_el": "Παραλία Μαγαζιά (Ηλιοβασίλεμα)",
+            "desc_el": "Μακριά αμμώδης παραλία ακριβώς κάτω από τη Χώρα. Κατέβα για μπάνιο πριν το δείπνο."
           }
-        ]
+        ],
+        "title_el": "Χώρα & Κάστρο Σκύρου",
+        "overnight_el": "Χώρα Σκύρου"
       },
       {
         "day": 2,
@@ -85,7 +99,9 @@
             "type": "beach",
             "time": "10:00",
             "wiki": null,
-            "desc": "Continuation of Magazia beach. Organized with umbrellas, tavernas; becomes wilder further north."
+            "desc": "Continuation of Magazia beach. Organized with umbrellas, tavernas; becomes wilder further north.",
+            "name_el": "Παραλία Μόλος",
+            "desc_el": "Συνέχεια της παραλίας Μαγαζιά. Οργανωμένη με ομπρέλες, ταβέρνες· γίνεται πιο άγρια όσο πας βορειότερα."
           },
           {
             "name": "Palamari Archaeological Site",
@@ -94,7 +110,9 @@
             "type": "museum",
             "time": "12:00",
             "wiki": null,
-            "desc": "Early Bronze Age settlement (2500 BC). Small but important site with defensive walls still visible."
+            "desc": "Early Bronze Age settlement (2500 BC). Small but important site with defensive walls still visible.",
+            "name_el": "Αρχαιολογικός Χώρος Παλαμάρι",
+            "desc_el": "Οικισμός Πρωτοελλαδικής Εποχής (2500 π.Χ.). Μικρός αλλά σημαντικός χώρος με ορατά αμυντικά τείχη."
           },
           {
             "name": "Atsitsa Beach",
@@ -103,7 +121,9 @@
             "type": "beach",
             "time": "14:00",
             "wiki": null,
-            "desc": "Pine-shaded pebble beach on the west coast. Hippy vibe, yoga retreat nearby. Lunch at the beach taverna."
+            "desc": "Pine-shaded pebble beach on the west coast. Hippy vibe, yoga retreat nearby. Lunch at the beach taverna.",
+            "name_el": "Παραλία Ατσίτσα",
+            "desc_el": "Βότσαλη παραλία στη σκιά πεύκων στη δυτική ακτή. Χίπικη ατμόσφαιρα, κέντρο γιόγκα κοντά. Μεσημεριανό στην παραλιακή ταβέρνα."
           },
           {
             "name": "Pefkos Beach",
@@ -112,9 +132,13 @@
             "type": "beach",
             "time": "16:30",
             "wiki": null,
-            "desc": "Shallow sandy bay backed by a pine forest. Calm, family-friendly."
+            "desc": "Shallow sandy bay backed by a pine forest. Calm, family-friendly.",
+            "name_el": "Παραλία Πεύκος",
+            "desc_el": "Ρηχός αμμώδης κόλπος με πευκοδάσος πίσω. Ήρεμη, κατάλληλη για οικογένειες."
           }
-        ]
+        ],
+        "title_el": "Βορράς: Ρούπερτ Μπρουκ & Παραλίες",
+        "overnight_el": "Χώρα Σκύρου"
       },
       {
         "day": 3,
@@ -131,7 +155,9 @@
             "type": "beach",
             "time": "09:30",
             "wiki": null,
-            "desc": "Beautiful sandy bay 10 min from Linaria. Shallow water, good for a morning swim."
+            "desc": "Beautiful sandy bay 10 min from Linaria. Shallow water, good for a morning swim.",
+            "name_el": "Παραλία Καλαμίτσα",
+            "desc_el": "Όμορφος αμμώδης κόλπος 10 λεπτά από τη Λιναριά. Ρηχά νερά, καλός για πρωινό μπάνιο."
           },
           {
             "name": "Rupert Brooke's Grave",
@@ -140,7 +166,9 @@
             "type": "church",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Rupert_Brooke",
-            "desc": "Isolated olive grove at Tris Boukes bay where the English WWI poet was buried in 1915. Quiet, moving. Rough dirt track for the last 2 km."
+            "desc": "Isolated olive grove at Tris Boukes bay where the English WWI poet was buried in 1915. Quiet, moving. Rough dirt track for the last 2 km.",
+            "name_el": "Τάφος του Ρούπερτ Μπρουκ",
+            "desc_el": "Απομονωμένος ελαιώνας στον κόλπο Τρεις Μπούκες όπου θάφτηκε ο Άγγλος ποιητής του Α' ΠΠ το 1915. Ήσυχο, συγκινητικό. Δύσβατος χωματόδρομος τα τελευταία 2 χλμ."
           },
           {
             "name": "Skyrian Horse reserve",
@@ -149,7 +177,9 @@
             "type": "village",
             "time": "14:00",
             "wiki": "https://en.wikipedia.org/wiki/Skyros_pony",
-            "desc": "See the island's unique native pony breed — among the smallest horses in the world, nearly extinct. Volunteers run a small sanctuary open to visitors."
+            "desc": "See the island's unique native pony breed — among the smallest horses in the world, nearly extinct. Volunteers run a small sanctuary open to visitors.",
+            "name_el": "Καταφύγιο Σκυριανών Αλόγων",
+            "desc_el": "Δες τη μοναδική γηγενή φυλή πόνι του νησιού — από τα μικρότερα άλογα στον κόσμο, σχεδόν εξαφανισμένη. Εθελοντές διαχειρίζονται μικρό καταφύγιο ανοιχτό σε επισκέπτες."
           },
           {
             "name": "Back to Linaria",
@@ -158,11 +188,17 @@
             "type": "harbour",
             "time": "17:00",
             "wiki": null,
-            "desc": "Return to port. Coffee at Almyra before your ferry."
+            "desc": "Return to port. Coffee at Almyra before your ferry.",
+            "name_el": "Επιστροφή στη Λιναριά",
+            "desc_el": "Επιστροφή στο λιμάνι. Καφές στην Αλμύρα πριν το πλοίο."
           }
-        ]
+        ],
+        "title_el": "Νότος: Άγρια Άλογα & Ρούπερτ Μπρουκ",
+        "overnight_el": "Αναχώρηση"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 3 Ημερών στη Σκύρο",
+    "subtitle_el": "Άγρια άλογα, τάφος ποιητή, και μοναδική πολιτισμική απομόνωση"
   },
   "beaches": [
     {
@@ -175,7 +211,13 @@
       "facing": "East",
       "facilities": "Full: hotels, tavernas, umbrellas",
       "wiki": null,
-      "desc": "Skyros' main beach strip below Chora. Organized section in the middle, quieter at both ends."
+      "desc": "Skyros' main beach strip below Chora. Organized section in the middle, quieter at both ends.",
+      "name_el": "Μαγαζιά & Μόλος",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Σταδιακή",
+      "facing_el": "Ανατολικά",
+      "facilities_el": "Πλήρεις: ξενοδοχεία, ταβέρνες, ομπρέλες",
+      "desc_el": "Η κύρια παραλιακή λωρίδα της Σκύρου κάτω από τη Χώρα. Οργανωμένο τμήμα στη μέση, πιο ήσυχη στα δύο άκρα."
     },
     {
       "name": "Atsitsa",
@@ -187,7 +229,13 @@
       "facing": "West — sunset",
       "facilities": "Taverna, umbrellas",
       "wiki": null,
-      "desc": "Pine forest runs down to the sea. Clean water, unusual setting for the Aegean."
+      "desc": "Pine forest runs down to the sea. Clean water, unusual setting for the Aegean.",
+      "name_el": "Ατσίτσα",
+      "type_el": "Μικρά βότσαλα",
+      "depth_el": "Μέτρια",
+      "facing_el": "Δυτικά — ηλιοβασίλεμα",
+      "facilities_el": "Ταβέρνα, ομπρέλες",
+      "desc_el": "Πευκοδάσος κατεβαίνει ως τη θάλασσα. Καθαρά νερά, ασυνήθιστο σκηνικό για το Αιγαίο."
     },
     {
       "name": "Kalamitsa",
@@ -199,7 +247,16 @@
       "facing": "Southwest — protected",
       "facilities": "Tavernas, umbrellas",
       "wiki": null,
-      "desc": "Calm sandy beach 10 min from the port. Mix of organized and wild, family-friendly."
+      "desc": "Calm sandy beach 10 min from the port. Mix of organized and wild, family-friendly.",
+      "name_el": "Καλαμίτσα",
+      "type_el": "Άμμος",
+      "depth_el": "Ρηχή",
+      "facing_el": "Νοτιοδυτικά — προστατευμένη",
+      "facilities_el": "Ταβέρνες, ομπρέλες",
+      "desc_el": "Ήρεμη αμμώδης παραλία 10 λεπτά από το λιμάνι. Μίξη οργανωμένου και άγριου, κατάλληλη για οικογένειες."
     }
-  ]
+  ],
+  "name_el": "Σκύρος",
+  "subtitle_el": "Άγρια άλογα, τάφος ποιητή, και μοναδική πολιτισμική απομόνωση",
+  "intro_el": "Η Σκύρος είναι η μεγαλύτερη και πιο απομονωμένη των Σποράδων, γεωγραφικά πιο κοντά στην Εύβοια αλλά πολιτισμικά ένας κόσμος δικός της. Τα δύο μισά του νησιού διαφέρουν δραματικά: ένας γυμνός, βραχώδης νότος όπου περιπλανώνται άγρια σκυριανά άλογα (ξεχωριστή φυλή, μικρότερη από πόνι), και ένας καταπράσινος, δασώδης βορράς με τη Χώρα της Σκύρου, το ομορφότερο χωριό των Σποράδων. Στην αρχαιότητα, εδώ κρύφτηκε ο Αχιλλέας πριν την Τροία, και το 1915 εδώ θάφτηκε ο Άγγλος ποιητής Ρούπερτ Μπρουκ."
 }

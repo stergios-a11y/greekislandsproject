@@ -21,7 +21,9 @@
             "type": "city",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Andros_(town)",
-            "desc": "Neoclassical sea-captains' town on a narrow promontory. Marble-paved main street runs to the sea."
+            "desc": "Neoclassical sea-captains' town on a narrow promontory. Marble-paved main street runs to the sea.",
+            "name_el": "Χώρα Άνδρου",
+            "desc_el": "Νεοκλασική πόλη καπεταναίων σε στενό ακρωτήρι. Κύριος μαρμαροστρωμένος δρόμος φτάνει ως τη θάλασσα."
           },
           {
             "name": "Goulandris Museum of Contemporary Art",
@@ -30,7 +32,9 @@
             "type": "museum",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Museum_of_Contemporary_Art_Andros",
-            "desc": "Major contemporary art museum — hosts world-class summer exhibitions."
+            "desc": "Major contemporary art museum — hosts world-class summer exhibitions.",
+            "name_el": "Μουσείο Σύγχρονης Τέχνης Γουλανδρή",
+            "desc_el": "Σημαντικό μουσείο σύγχρονης τέχνης — φιλοξενεί καλοκαιρινές εκθέσεις παγκόσμιας κλάσης."
           },
           {
             "name": "Archaeological Museum",
@@ -39,7 +43,9 @@
             "type": "museum",
             "time": "12:30",
             "wiki": null,
-            "desc": "Small but excellent, with the famous Hermes of Andros statue."
+            "desc": "Small but excellent, with the famous Hermes of Andros statue.",
+            "name_el": "Αρχαιολογικό Μουσείο",
+            "desc_el": "Μικρό αλλά εξαιρετικό, με το διάσημο άγαλμα του Ερμή της Άνδρου."
           },
           {
             "name": "Lunch — Nonna's",
@@ -48,7 +54,9 @@
             "type": "village",
             "time": "14:00",
             "wiki": null,
-            "desc": "Casual spot with Andros specialties: fourtalia omelet, local cheeses, sausage."
+            "desc": "Casual spot with Andros specialties: fourtalia omelet, local cheeses, sausage.",
+            "name_el": "Μεσημεριανό — Νόννα",
+            "desc_el": "Χαλαρό μέρος με σπεσιαλιτέ της Άνδρου: φουρτάλια (ομελέτα), ντόπια τυριά, λουκάνικο."
           },
           {
             "name": "Paraporti Beach",
@@ -57,9 +65,13 @@
             "type": "beach",
             "time": "17:00",
             "wiki": null,
-            "desc": "Sandy beach right below Chora. Family-friendly, walking distance from town."
+            "desc": "Sandy beach right below Chora. Family-friendly, walking distance from town.",
+            "name_el": "Παραλία Παραπόρτι",
+            "desc_el": "Αμμώδης παραλία ακριβώς κάτω από τη Χώρα. Φιλική σε οικογένειες, με τα πόδια από την πόλη."
           }
-        ]
+        ],
+        "title_el": "Χώρα & η Ανατολή",
+        "overnight_el": "Χώρα"
       },
       {
         "day": 2,
@@ -76,7 +88,9 @@
             "type": "village",
             "time": "09:30",
             "wiki": null,
-            "desc": "Mountain village 6 km inland from Chora. Famous Sariza springs — Andros' drinking water source."
+            "desc": "Mountain village 6 km inland from Chora. Famous Sariza springs — Andros' drinking water source.",
+            "name_el": "Απίκια",
+            "desc_el": "Ορεινό χωριό 6 χλμ στο εσωτερικό από τη Χώρα. Διάσημες οι πηγές Σαρίζα — η πηγή πόσιμου νερού της Άνδρου."
           },
           {
             "name": "Pythara Waterfalls",
@@ -85,7 +99,9 @@
             "type": "beach",
             "time": "10:30",
             "wiki": null,
-            "desc": "Natural pools fed by waterfalls, a 15-min walk through oak forest from Apikia. Cold swim, worth it."
+            "desc": "Natural pools fed by waterfalls, a 15-min walk through oak forest from Apikia. Cold swim, worth it.",
+            "name_el": "Καταρράκτες Πυθάρας",
+            "desc_el": "Φυσικές πισίνες που τροφοδοτούνται από καταρράκτες, 15 λεπτά πεζοπορίας μέσα από δρύινο δάσος από τα Απίκια. Κρύο μπάνιο, αξίζει."
           },
           {
             "name": "Ano Mesaria",
@@ -94,7 +110,9 @@
             "type": "village",
             "time": "13:00",
             "wiki": null,
-            "desc": "Village with the 12th-century Byzantine Taxiarches church. Lunch at a kafenio on the main square."
+            "desc": "Village with the 12th-century Byzantine Taxiarches church. Lunch at a kafenio on the main square.",
+            "name_el": "Άνω Μεσαριά",
+            "desc_el": "Χωριό με την βυζαντινή εκκλησία των Ταξιαρχών του 12ου αιώνα. Μεσημεριανό σε καφενείο στην κεντρική πλατεία."
           },
           {
             "name": "Agios Nikolaos Monastery",
@@ -103,7 +121,9 @@
             "type": "church",
             "time": "15:00",
             "wiki": null,
-            "desc": "Fortified monastery with views over the Paleopolis valley, where Andros' ancient capital once stood."
+            "desc": "Fortified monastery with views over the Paleopolis valley, where Andros' ancient capital once stood.",
+            "name_el": "Μονή Αγίου Νικολάου",
+            "desc_el": "Οχυρωμένο μοναστήρι με θέες πάνω στην κοιλάδα της Παλαιόπολης, όπου κάποτε στεκόταν η αρχαία πρωτεύουσα της Άνδρου."
           },
           {
             "name": "Batsi (sunset)",
@@ -112,9 +132,13 @@
             "type": "village",
             "time": "18:30",
             "wiki": null,
-            "desc": "West coast port village with a curved sandy bay. Dinner on the waterfront."
+            "desc": "West coast port village with a curved sandy bay. Dinner on the waterfront.",
+            "name_el": "Μπατσί (Ηλιοβασίλεμα)",
+            "desc_el": "Λιμενικό χωριό της δυτικής ακτής με καμπυλωτό αμμώδη κόλπο. Δείπνο στο παραλιακό."
           }
-        ]
+        ],
+        "title_el": "Πεζοπορία & Καταρράκτες",
+        "overnight_el": "Χώρα"
       },
       {
         "day": 3,
@@ -131,7 +155,9 @@
             "type": "harbour",
             "time": "09:30",
             "wiki": null,
-            "desc": "The main ferry port. Small but functional; a kafenio on the waterfront serves excellent frappé."
+            "desc": "The main ferry port. Small but functional; a kafenio on the waterfront serves excellent frappé.",
+            "name_el": "Γαύριο (Λιμάνι)",
+            "desc_el": "Το κύριο λιμάνι. Μικρό αλλά λειτουργικό· ένα καφενείο στο παραλιακό σερβίρει εξαιρετικό φραπέ."
           },
           {
             "name": "Tourlitis Lighthouse viewpoint",
@@ -140,7 +166,9 @@
             "type": "beach",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Tourlitis_Lighthouse",
-            "desc": "The only lighthouse in the world built on a sea-rock. Photographed from the Chora waterfront."
+            "desc": "The only lighthouse in the world built on a sea-rock. Photographed from the Chora waterfront.",
+            "name_el": "Θέα στον Φάρο Τουρλίτη",
+            "desc_el": "Ο μοναδικός φάρος στον κόσμο χτισμένος πάνω σε θαλάσσιο βράχο. Φωτογραφημένος από το παραλιακό της Χώρας."
           },
           {
             "name": "Stenies",
@@ -149,7 +177,9 @@
             "type": "village",
             "time": "12:30",
             "wiki": null,
-            "desc": "Lush green sea-captains' village 5 km from Chora. Neoclassical mansions in a wooded valley."
+            "desc": "Lush green sea-captains' village 5 km from Chora. Neoclassical mansions in a wooded valley.",
+            "name_el": "Στένιες",
+            "desc_el": "Καταπράσινο χωριό καπεταναίων 5 χλμ από τη Χώρα. Νεοκλασικά αρχοντικά σε δασώδη κοιλάδα."
           },
           {
             "name": "Gialia Beach",
@@ -158,11 +188,17 @@
             "type": "beach",
             "time": "14:00",
             "wiki": null,
-            "desc": "Quiet pebble beach below Stenies with stunning clear water. Reach via path from the village."
+            "desc": "Quiet pebble beach below Stenies with stunning clear water. Reach via path from the village.",
+            "name_el": "Παραλία Γιάλια",
+            "desc_el": "Ήσυχη βότσαλη παραλία κάτω από τις Στένιες με εντυπωσιακά διαυγή νερά. Πρόσβαση με μονοπάτι από το χωριό."
           }
-        ]
+        ],
+        "title_el": "Δυτική Ακτή",
+        "overnight_el": "Αναχώρηση"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 3 Ημερών στην Άνδρο",
+    "subtitle_el": "Μονοπάτια πεζοπορίας, δρύινα δάση και νεοκλασική Χώρα"
   },
   "beaches": [
     {
@@ -175,7 +211,13 @@
       "facing": "Southwest — protected",
       "facilities": "Good: tavernas, umbrellas, watersports",
       "wiki": null,
-      "desc": "Andros' most famous beach. Fine golden sand, excellent amenities, perfect for families."
+      "desc": "Andros' most famous beach. Fine golden sand, excellent amenities, perfect for families.",
+      "name_el": "Χρυσή Άμμος",
+      "type_el": "Χρυσή άμμος",
+      "depth_el": "Σταδιακή",
+      "facing_el": "Νοτιοδυτικά — προστατευμένη",
+      "facilities_el": "Καλές: ταβέρνες, ομπρέλες, watersports",
+      "desc_el": "Η πιο διάσημη παραλία της Άνδρου. Λεπτή χρυσή άμμος, εξαιρετικές υποδομές, τέλεια για οικογένειες."
     },
     {
       "name": "Achla Beach",
@@ -187,7 +229,13 @@
       "facing": "East — exposed",
       "facilities": "Natural — no facilities",
       "wiki": null,
-      "desc": "Remote northeast beach reached only by boat or rough dirt track. Emerald green water fed by a stream."
+      "desc": "Remote northeast beach reached only by boat or rough dirt track. Emerald green water fed by a stream.",
+      "name_el": "Παραλία Άχλα",
+      "type_el": "Χονδρή άμμος",
+      "depth_el": "Μέτρια",
+      "facing_el": "Ανατολικά — εκτεθειμένη",
+      "facilities_el": "Φυσική — καμία υποδομή",
+      "desc_el": "Απομακρυσμένη βορειοανατολική παραλία προσβάσιμη μόνο με βάρκα ή δύσβατο χωματόδρομο. Σμαραγδοπράσινα νερά τροφοδοτούμενα από ρέμα."
     },
     {
       "name": "Vitali Beach",
@@ -199,7 +247,16 @@
       "facing": "North — exposed to meltemi",
       "facilities": "Simple taverna",
       "wiki": null,
-      "desc": "Dramatic northern pebble cove with crystal water. A taverna on the beach serves ouzo at sunset."
+      "desc": "Dramatic northern pebble cove with crystal water. A taverna on the beach serves ouzo at sunset.",
+      "name_el": "Παραλία Βιτάλι",
+      "type_el": "Μεγάλα βότσαλα",
+      "depth_el": "Βαθαίνει γρήγορα",
+      "facing_el": "Βόρεια — εκτεθειμένη στο μελτέμι",
+      "facilities_el": "Απλή ταβέρνα",
+      "desc_el": "Δραματικός βόρειος βότσαλος κόλπος με κρυστάλλινα νερά. Μια ταβέρνα στην παραλία σερβίρει ούζο στο ηλιοβασίλεμα."
     }
-  ]
+  ],
+  "name_el": "Άνδρος",
+  "subtitle_el": "Μονοπάτια πεζοπορίας, δρύινα δάση και νεοκλασική Χώρα",
+  "intro_el": "Η Άνδρος είναι το βορειότερο και δεύτερο μεγαλύτερο κυκλαδίτικο νησί, αλλά μοιάζει πουθενά αλλού στις Κυκλάδες. Ρέματα με πηγαίο νερό, δρύινα δάση και πετρόστρωτα μονοπάτια πεζοπορίας την κάνουν πιο τοσκανική παρά αιγαιακή. Η κύρια πόλη, η Χώρα, είναι κομψά νεοκλασική — σπίτι του μεγαλύτερου μουσείου σύγχρονης τέχνης στο Αιγαίο. Σοβαροί πεζοπόροι έρχονται για τη Διαδρομή της Άνδρου, ένα μονοπάτι 100 χλμ που διασχίζει το νησί."
 }
