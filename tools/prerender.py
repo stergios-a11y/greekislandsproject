@@ -616,39 +616,53 @@ def main():
     print(f'✓ Sitemap regenerated with {len(keys)} islands + static pages')
 
 def generate_sitemap(island_keys):
-    """Build a comprehensive sitemap with the new clean URLs."""
-    static_paths = [
-        ('', 1.0),           # homepage
-        ('data', 0.8),       # islands data table
-        ('compare', 0.7),
-        ('hopping', 0.8),
-        ('international', 0.7),
-        ('match', 0.6),
-        ('mission', 0.4),
+    """Build a sitemap with proper hreflang alternates per Google's guidelines.
+
+    Each unique URL gets its own <url> entry whose <loc> matches that URL.
+    Hash-fragment URLs (e.g. /#data) are NOT included — Google ignores
+    everything after '#', so they're treated as duplicates of the homepage.
+    Internal SPA views are reachable from the homepage and don't need
+    separate sitemap entries.
+    """
+    # Static pages: just the two language homepages. The internal SPA views
+    # (/#data, /#compare, etc.) are NOT separate URLs to a search engine.
+    static_pages = [
+        ('/', '/el/', 1.0),
     ]
+    # Mission has its own meaningful entry-point — link directly to /#mission
+    # is NOT a separate URL, but if we ever give it a clean path we can add it.
+
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">')
 
-    for path, prio in static_paths:
-        url_en = f'{SITE_URL}/' if not path else f'{SITE_URL}/#{path}'
-        url_el = f'{SITE_URL}/el/' if not path else f'{SITE_URL}/el/#{path}'
+    def add_url_pair(en_path, el_path, priority):
+        """Emit two <url> entries (one EN, one EL) with reciprocal hreflang alternates."""
+        url_en = f'{SITE_URL}{en_path}'
+        url_el = f'{SITE_URL}{el_path}'
+        # English entry
         lines.append('  <url>')
         lines.append(f'    <loc>{url_en}</loc>')
-        lines.append(f'    <priority>{prio}</priority>')
+        lines.append(f'    <priority>{priority}</priority>')
         lines.append(f'    <xhtml:link rel="alternate" hreflang="en" href="{url_en}"/>')
         lines.append(f'    <xhtml:link rel="alternate" hreflang="el" href="{url_el}"/>')
+        lines.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{url_en}"/>')
+        lines.append('  </url>')
+        # Greek entry — its OWN entry, with its OWN <loc>
+        lines.append('  <url>')
+        lines.append(f'    <loc>{url_el}</loc>')
+        lines.append(f'    <priority>{priority}</priority>')
+        lines.append(f'    <xhtml:link rel="alternate" hreflang="en" href="{url_en}"/>')
+        lines.append(f'    <xhtml:link rel="alternate" hreflang="el" href="{url_el}"/>')
+        lines.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{url_en}"/>')
         lines.append('  </url>')
 
-    # Islands — use the new clean URLs
+    # Static homepages (EN + EL)
+    for en_path, el_path, prio in static_pages:
+        add_url_pair(en_path, el_path, prio)
+
+    # Islands — each one gets BOTH an EN entry and an EL entry
     for key in sorted(island_keys):
-        url_en = f'{SITE_URL}/island/{key}/'
-        url_el = f'{SITE_URL}/el/island/{key}/'
-        lines.append('  <url>')
-        lines.append(f'    <loc>{url_en}</loc>')
-        lines.append(f'    <priority>0.7</priority>')
-        lines.append(f'    <xhtml:link rel="alternate" hreflang="en" href="{url_en}"/>')
-        lines.append(f'    <xhtml:link rel="alternate" hreflang="el" href="{url_el}"/>')
-        lines.append('  </url>')
+        add_url_pair(f'/island/{key}/', f'/el/island/{key}/', 0.7)
 
     lines.append('</urlset>')
     SITEMAP_PATH.write_text('\n'.join(lines) + '\n')
