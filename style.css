@@ -178,7 +178,7 @@ a:hover { text-decoration: underline; }
 header {
   background: linear-gradient(135deg, var(--aegean) 0%, var(--aegean-dark) 100%);
   border-bottom: none;
-  position: sticky; top: 0; z-index: 100;
+  position: sticky; top: 0; z-index: 1000;
   height: var(--header-height);
   box-shadow: 0 2px 12px rgba(11,143,172,0.25);
 }
