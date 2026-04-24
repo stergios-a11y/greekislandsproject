@@ -22,7 +22,9 @@
             "type": "castle",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Fortezza",
-            "desc": "The largest Venetian fortress in Crete, dominating the town from its hilltop. The interior holds a mosque, churches and excellent views over the sea and old town."
+            "desc": "The largest Venetian fortress in Crete, dominating the town from its hilltop. The interior holds a mosque, churches and excellent views over the sea and old town.",
+            "name_el": "Φρούριο Φορτέτζα",
+            "desc_el": "Το μεγαλύτερο ενετικό φρούριο της Κρήτης, κυριαρχεί στην πόλη από την κορυφή του λόφου. Το εσωτερικό περιέχει ένα τζαμί, εκκλησίες και εξαιρετικές θέες πάνω στη θάλασσα και την πόλη."
           },
           {
             "name": "Venetian Harbour",
@@ -31,7 +33,9 @@
             "type": "harbour",
             "time": "10:30",
             "wiki": null,
-            "desc": "The smallest and most charming Venetian harbour in Crete — a perfect semicircle with a lighthouse at the entrance and fish tavernas lining the quay."
+            "desc": "The smallest and most charming Venetian harbour in Crete — a perfect semicircle with a lighthouse at the entrance and fish tavernas lining the quay.",
+            "name_el": "Ενετικό Λιμάνι",
+            "desc_el": "Το μικρότερο και πιο γραφικό ενετικό λιμάνι της Κρήτης — τέλειο ημικύκλιο με φάρο στην είσοδο και ψαροταβέρνες στην προκυμαία."
           },
           {
             "name": "Old Town Rethymno",
@@ -40,7 +44,9 @@
             "type": "museum",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Rethymno",
-            "desc": "Wander the narrow lanes of the old town — the best-preserved Venetian and Ottoman architecture in Crete. The Rimondi Fountain, the Nerantzes Mosque and the loggia are highlights."
+            "desc": "Wander the narrow lanes of the old town — the best-preserved Venetian and Ottoman architecture in Crete. The Rimondi Fountain, the Nerantzes Mosque and the loggia are highlights.",
+            "name_el": "Παλιά Πόλη Ρεθύμνου",
+            "desc_el": "Περιπλανήσου στα στενά της παλιάς πόλης — η καλύτερα διατηρημένη ενετική και οθωμανική αρχιτεκτονική της Κρήτης. Η Κρήνη Ριμόντι, το Τζαμί Νερατζέ και τα στενά με τα κέδρινα μπαλκόνια είναι η καρδιά της."
           },
           {
             "name": "Lunch — Avli Restaurant",
@@ -49,7 +55,9 @@
             "type": "village",
             "time": "13:30",
             "wiki": null,
-            "desc": "Legendary Cretan restaurant in a restored 17th-century Venetian mansion. Garden courtyard, outstanding Cretan cuisine, local wine. A Rethymno institution."
+            "desc": "Legendary Cretan restaurant in a restored 17th-century Venetian mansion. Garden courtyard, outstanding Cretan cuisine, local wine. A Rethymno institution.",
+            "name_el": "Μεσημεριανό — Εστιατόριο Αυλή",
+            "desc_el": "Θρυλικό κρητικό εστιατόριο σε αναστηλωμένο ενετικό αρχοντικό του 17ου αιώνα. Αυλή κήπος, εξαιρετική κρητική κουζίνα, ντόπιο κρασί. Θεσμός του Ρεθύμνου."
           },
           {
             "name": "Rethymno Beach",
@@ -58,9 +66,13 @@
             "type": "beach",
             "time": "16:30",
             "wiki": null,
-            "desc": "12km of sandy beach stretching east from the old town. Town beach section is conveniently close and reasonably uncrowded outside peak season."
+            "desc": "12km of sandy beach stretching east from the old town. Town beach section is conveniently close and reasonably uncrowded outside peak season.",
+            "name_el": "Παραλία Ρεθύμνου",
+            "desc_el": "12 χλμ αμμώδους παραλίας που εκτείνονται ανατολικά από την παλιά πόλη. Το τμήμα της παραλίας της πόλης είναι βολικά κοντινό και αρκετά ήσυχο εκτός αιχμής."
           }
-        ]
+        ],
+        "title_el": "Παλιά Πόλη & Φορτέτζα",
+        "overnight_el": "Παλιά Πόλη"
       },
       {
         "day": 2,
@@ -77,7 +89,9 @@
             "type": "nature",
             "time": "09:30",
             "wiki": null,
-            "desc": "Dramatic gorge on the road south to Preveli. Eagles nest in the cliffs, and a small chapel of Agios Nikolaos sits beside a waterfall and springs."
+            "desc": "Dramatic gorge on the road south to Preveli. Eagles nest in the cliffs, and a small chapel of Agios Nikolaos sits beside a waterfall and springs.",
+            "name_el": "Φαράγγι Κουρταλιώτικο",
+            "desc_el": "Δραματικό φαράγγι στον δρόμο προς την Πρέβελη. Αετοί φωλιάζουν στους γκρεμούς, και ένα μικρό εκκλησάκι του Αγίου Νικολάου βρίσκεται δίπλα σε καταρράκτη και πηγές."
           },
           {
             "name": "Preveli Monastery",
@@ -86,7 +100,9 @@
             "type": "church",
             "time": "10:30",
             "wiki": "https://en.wikipedia.org/wiki/Preveli_Monastery",
-            "desc": "16th-century monastery perched on a cliff above the Libyan Sea. Played an important role sheltering Allied soldiers during WWII. Museum and church open to visitors."
+            "desc": "16th-century monastery perched on a cliff above the Libyan Sea. Played an important role sheltering Allied soldiers during WWII. Museum and church open to visitors.",
+            "name_el": "Μονή Πρέβελη",
+            "desc_el": "Σπουδαία μοναστική μονή του 16ου αιώνα — γνωστή για τον ρόλο της στην απόκρυψη συμμαχικών στρατιωτών μετά τη Μάχη της Κρήτης το 1941. Όμορφη θέα στη Λιβυκή Θάλασσα, μικρό μουσείο με εκκλησιαστικά κειμήλια. €3 είσοδος. Το παρακείμενο φοινικόδασος της Πρέβελης είναι δωρεάν."
           },
           {
             "name": "Preveli Beach",
@@ -95,7 +111,9 @@
             "type": "beach",
             "time": "12:00",
             "wiki": "https://en.wikipedia.org/wiki/Preveli_beach",
-            "desc": "One of the most extraordinary beaches in Greece — a river flanked by Cretan date palms flows into the sea through a gorge, creating a small tropical lagoon. Accessible by boat from Plakias or via a 30-minute hike."
+            "desc": "One of the most extraordinary beaches in Greece — a river flanked by Cretan date palms flows into the sea through a gorge, creating a small tropical lagoon. Accessible by boat from Plakias or via a 30-minute hike.",
+            "name_el": "Παραλία Πρέβελη",
+            "desc_el": "Η πιο διάσημη παραλία της νότιας Κρήτης — λεπτή χρυσή άμμος στην εκβολή ποταμού Μεγάλου που ρέει μέσα σε φυσικό φοινικόδασος. Πρόσβαση είτε με 20λεπτη πεζοπορία κάτω από βραχώδες μονοπάτι, είτε με σκάφος από την Πλακιά. Συνδύασε κολύμπι στη θάλασσα και κωπηλασία στο ποτάμι. Πολυσύχναστη το καλοκαίρι."
           },
           {
             "name": "Plakias Beach",
@@ -104,9 +122,13 @@
             "type": "beach",
             "time": "15:30",
             "wiki": null,
-            "desc": "Long sandy beach in a relaxed south-coast resort. Good for a late afternoon swim. The town has excellent tavernas for dinner."
+            "desc": "Long sandy beach in a relaxed south-coast resort. Good for a late afternoon swim. The town has excellent tavernas for dinner.",
+            "name_el": "Παραλία Πλακιάς",
+            "desc_el": "Μακριά αμμώδης παραλία σε χαλαρό θέρετρο της νότιας ακτής. Καλό για απογευματινό μπάνιο. Η πόλη έχει εξαιρετικές ταβέρνες για δείπνο."
           }
-        ]
+        ],
+        "title_el": "Νότια Ακτή — Πρέβελη & Δαμνώνι",
+        "overnight_el": "Παλιά Πόλη"
       },
       {
         "day": 3,
@@ -123,7 +145,9 @@
             "type": "church",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Arkadi_Monastery",
-            "desc": "The most sacred monument in Crete — scene of the 1866 explosion where hundreds of Cretans chose death over surrender to the Ottomans. Magnificent Baroque facade."
+            "desc": "The most sacred monument in Crete — scene of the 1866 explosion where hundreds of Cretans chose death over surrender to the Ottomans. Magnificent Baroque facade.",
+            "name_el": "Μονή Αρκαδίου",
+            "desc_el": "Το πιο σημαντικό σύμβολο της κρητικής αντίστασης — εδώ, το 1866, εκατοντάδες Κρήτες και Ρωσοι πρόσφυγες ανατινάχτηκαν με τη μπαρουταποθήκη παρά να παραδοθούν στους Τούρκους. Η εκκλησία του 1587 είναι ένα από τα ομορφότερα βενετικά κτίρια της Κρήτης. €3 είσοδος, υπολόγισε 1 ώρα."
           },
           {
             "name": "Amari Valley",
@@ -132,7 +156,9 @@
             "type": "nature",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Amari",
-            "desc": "The most beautiful valley in Crete — a fertile basin beneath the Psiloritis summit, dotted with Byzantine chapels, ancient plane trees and traditional villages. Drive the circular route."
+            "desc": "The most beautiful valley in Crete — a fertile basin beneath the Psiloritis summit, dotted with Byzantine chapels, ancient plane trees and traditional villages. Drive the circular route.",
+            "name_el": "Κοιλάδα Αμαρίου",
+            "desc_el": "Η πιο όμορφη κοιλάδα της Κρήτης — εύφορη λεκάνη κάτω από την κορυφή του Ψηλορείτη, διάσπαρτη με βυζαντινά εκκλησάκια, αιωνόβιες πλατάνια και παραδοσιακά χωριά."
           },
           {
             "name": "Thronos Village",
@@ -141,7 +167,9 @@
             "type": "village",
             "time": "13:00",
             "wiki": null,
-            "desc": "Tiny village in the Amari Valley with a Byzantine mosaic floor beneath the village church. Lunch at the excellent local taverna Aravanes — mountain food at its best."
+            "desc": "Tiny village in the Amari Valley with a Byzantine mosaic floor beneath the village church. Lunch at the excellent local taverna Aravanes — mountain food at its best.",
+            "name_el": "Χωριό Θρόνος",
+            "desc_el": "Μικρό χωριό στην Κοιλάδα του Αμαρίου με βυζαντινό μωσαϊκό δάπεδο κάτω από την εκκλησία του χωριού. Μεσημεριανό στην εξαιρετική τοπική ταβέρνα Αραβανές — βουνίσιο φαγητό."
           },
           {
             "name": "Mount Psiloritis Viewpoint",
@@ -150,9 +178,13 @@
             "type": "nature",
             "time": "15:30",
             "wiki": "https://en.wikipedia.org/wiki/Mount_Ida_(Crete)",
-            "desc": "Crete's highest peak at 2456m. Drive to the Nida plateau at 1400m for sweeping views — the Ideon Cave (birthplace of Zeus, alternate tradition) is a 20-minute walk from the plateau."
+            "desc": "Crete's highest peak at 2456m. Drive to the Nida plateau at 1400m for sweeping views — the Ideon Cave (birthplace of Zeus, alternate tradition) is a 20-minute walk from the plateau.",
+            "name_el": "Θέα στον Ψηλορείτη",
+            "desc_el": "Η ψηλότερη κορυφή της Κρήτης, στα 2456 μ. Οδήγα ως το οροπέδιο Νίδα στα 1400 μ για πανοραμικές θέες — η Ιδαία Σπηλιά (τόπος γέννησης του Δία, κατά μία παράδοση) είναι 20 λεπτά πεζοπορία από εκεί."
           }
-        ]
+        ],
+        "title_el": "Μονή Αρκαδίου & Ορεινά Χωριά Αμαρίου",
+        "overnight_el": "Παλιά Πόλη"
       },
       {
         "day": 4,
@@ -169,7 +201,9 @@
             "type": "harbour",
             "time": "09:30",
             "wiki": null,
-            "desc": "Small resort built around three scenic coves east of Rethymno. The most beautiful of the coves is Livadi, with clear water and a taverna on the beach."
+            "desc": "Small resort built around three scenic coves east of Rethymno. The most beautiful of the coves is Livadi, with clear water and a taverna on the beach.",
+            "name_el": "Χωριό Μπαλί",
+            "desc_el": "Μικρό θέρετρο χτισμένο γύρω από τρεις γραφικούς κόλπους ανατολικά του Ρεθύμνου. Ο ομορφότερος από τους κόλπους είναι το Λιβάδι, με διαυγή νερά και ταβέρνα στην παραλία."
           },
           {
             "name": "Panormo Beach",
@@ -178,7 +212,9 @@
             "type": "beach",
             "time": "11:30",
             "wiki": null,
-            "desc": "Sandy beach in a quiet village east of Bali. Good facilities, calm water, and a better-value alternative to the more crowded resorts."
+            "desc": "Sandy beach in a quiet village east of Bali. Good facilities, calm water, and a better-value alternative to the more crowded resorts.",
+            "name_el": "Παραλία Πάνορμος",
+            "desc_el": "Αμμώδης παραλία σε ήσυχο χωριό ανατολικά του Μπαλί. Καλές υποδομές, ήρεμα νερά, και καλύτερη αξία σε σύγκριση με τα πιο πολυσύχναστα θέρετρα."
           },
           {
             "name": "Rethymno — Final Lunch",
@@ -187,11 +223,16 @@
             "type": "city",
             "time": "14:00",
             "wiki": null,
-            "desc": "Return to Rethymno for a final lunch at the harbour. The fried gavros (anchovies) and local raki are the perfect send-off."
+            "desc": "Return to Rethymno for a final lunch at the harbour. The fried gavros (anchovies) and local raki are the perfect send-off.",
+            "name_el": "Ρέθυμνο — Τελευταίο Μεσημεριανό",
+            "desc_el": "Επιστροφή στο Ρέθυμνο για τελευταίο μεσημεριανό στο λιμάνι. Ο τηγανητός γαύρος και το ντόπιο ρακί είναι το τέλειο αντίο."
           }
-        ]
+        ],
+        "title_el": "Παραλίες & Αναχώρηση"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 4 Ημερών στο Ρέθυμνο",
+    "subtitle_el": "Η ενετική παλιά πόλη και το Φρούριο Φορτέτζα, ο νότος και η Πρέβελη, η Μονή Αρκαδίου, και τα ορεινά χωριά του Αμαρίου."
   },
   "beaches": [
     {
@@ -206,7 +247,13 @@
       "desc": "The most unique beach in Crete — a Cretan date palm forest lines a river that flows through a gorge and meets the sea in a small turquoise lagoon. You can swim in both the river and the sea. Accessible only by boat or on foot, which keeps it wonderfully uncrowded.",
       "commons": "Preveli_beach_Crete.jpg",
       "lat": 35.1528,
-      "lng": 24.4733
+      "lng": 24.4733,
+      "name_el": "Παραλία Πρέβελη",
+      "type_el": "Λεπτή άμμος με ποτάμι και φοινικόδεντρα",
+      "depth_el": "Σταδιακή — τιρκουάζ λιμνούλα",
+      "facing_el": "Νότια — Λιβυκή Θάλασσα",
+      "facilities_el": "Στοιχειώδεις: μικρή καντίνα, ξαπλώστρες, πρόσβαση δύσκολη.",
+      "desc_el": "Η πιο μοναδική παραλία της Κρήτης — κρητικό φοινικοδάσος πλαισιώνει ποτάμι που ρέει μέσα από φαράγγι και συναντά τη θάλασσα σε μικρή τιρκουάζ λιμνούλα. Μπορείς να κολυμπήσεις στο ποτάμι κάτω από τα φοινικόδεντρα πριν την εκβολή."
     },
     {
       "name": "Plakias Beach",
@@ -220,7 +267,13 @@
       "desc": "A long, wide south-coast beach backed by a relaxed village with excellent tavernas. The Libyan Sea is warmer and bluer than the north coast. Base yourself here for easy access to Preveli. One of the best value destinations on the island.",
       "commons": null,
       "lat": 35.1839,
-      "lng": 24.4008
+      "lng": 24.4008,
+      "name_el": "Παραλία Πλακιάς",
+      "type_el": "Λεπτή χρυσή άμμος",
+      "depth_el": "Σταδιακή είσοδος",
+      "facing_el": "Νότια — Λιβυκή Θάλασσα",
+      "facilities_el": "Πολύ καλές: ταβέρνες, ξαπλώστρες, watersports, χαλαρό χωριό πίσω.",
+      "desc_el": "Μακριά, πλατιά παραλία της νότιας ακτής με χαλαρό χωριό πίσω με εξαιρετικές ταβέρνες. Η Λιβυκή Θάλασσα είναι πιο ζεστή και πιο μπλε από τη βόρεια ακτή. Κάνε βάση σου εδώ για να εξερευνήσεις τις παραλίες της νότιας ακτής."
     },
     {
       "name": "Bali Livadi Beach",
@@ -234,7 +287,13 @@
       "desc": "The most picturesque of Bali's three coves — a small pebble beach enclosed by hills, with a taverna at the waterline. The water clarity is outstanding. Arrive early as space is limited.",
       "commons": null,
       "lat": 35.4192,
-      "lng": 24.7806
+      "lng": 24.7806,
+      "name_el": "Παραλία Λιβάδι (Μπαλί)",
+      "type_el": "Βότσαλα και λίγη άμμος",
+      "depth_el": "Μέτρια — εξαιρετική διαύγεια",
+      "facing_el": "Βόρεια — προστατευμένος κόλπος",
+      "facilities_el": "Καλές: μία παραλιακή ταβέρνα, ξαπλώστρες.",
+      "desc_el": "Ο πιο γραφικός από τους τρεις κόλπους του Μπαλί — μικρή βότσαλη παραλία κλεισμένη από λόφους, με ταβέρνα στη γραμμή του νερού. Η διαύγεια των νερών είναι εξαιρετική."
     },
     {
       "name": "Rethymno Town Beach",
@@ -248,7 +307,13 @@
       "desc": "One of the longest beaches in Greece — 12km of sandy shore stretching east from the old town. The town section is convenient but busy; walk 20 minutes east for more space. Excellent for families with its flat, shallow entry.",
       "commons": null,
       "lat": 35.3731,
-      "lng": 24.4847
+      "lng": 24.4847,
+      "name_el": "Παραλία της Πόλης του Ρεθύμνου",
+      "type_el": "Λεπτή χρυσή άμμος",
+      "depth_el": "Ρηχή — πολύ σταδιακή",
+      "facing_el": "Βόρεια — εκτεθειμένη",
+      "facilities_el": "Πολύ καλές: εστιατόρια, ξαπλώστρες, duches, watersports.",
+      "desc_el": "Μία από τις μακρύτερες παραλίες της Ελλάδας — 12 χλμ αμμώδους ακτής που εκτείνονται ανατολικά από την παλιά πόλη. Το τμήμα της πόλης είναι βολικό αλλά πολυσύχναστο· περπάτα 20 λεπτά ανατολικά για πιο ήσυχο χώρο."
     },
     {
       "name": "Triopetra Beach",
@@ -262,7 +327,16 @@
       "desc": "A remote south-coast beach named for three large rocks that protrude from the sea. Long, sandy and almost empty even in peak season. The drive there — through mountain villages and olive groves — is half the pleasure.",
       "commons": null,
       "lat": 35.1128,
-      "lng": 24.5056
+      "lng": 24.5056,
+      "name_el": "Παραλία Τριόπετρα",
+      "type_el": "Μακριά χρυσή άμμος",
+      "depth_el": "Σταδιακή",
+      "facing_el": "Νότια — Λιβυκή Θάλασσα, εκτεθειμένη",
+      "facilities_el": "Στοιχειώδεις: δύο-τρεις ταβέρνες, ξαπλώστρες σε τμήματα.",
+      "desc_el": "Απομακρυσμένη παραλία της νότιας ακτής, ονομασμένη από τρεις μεγάλους βράχους που εξέχουν από τη θάλασσα. Μακριά, αμμώδης και σχεδόν άδεια ακόμα και στην αιχμή. Η διαδρομή προς τα εκεί είναι μέρος της εμπειρίας — ελισσόμενος δρόμος μέσα από ορεινά χωριά."
     }
-  ]
+  ],
+  "name_el": "Κρήτη (Ρέθυμνο)",
+  "subtitle_el": "Η ομορφότερη παλιά πόλη της Κρήτης, η Πρέβελη και ο βαθύς νότος",
+  "intro_el": "Το Ρέθυμνο έχει την πιο καλά διατηρημένη ενετικο-οθωμανική παλιά πόλη της Κρήτης — λαβύρινθος στενών δρόμων με μπαλκόνια από κέδρο, μιναρέδες, ένα τεράστιο φρούριο πάνω από τη θάλασσα, και την ατμόσφαιρα μιας πόλης που δεν έχει χτιστεί για τους τουρίστες, αλλά τους δέχεται. Ο νομός εκτείνεται από τη βόρεια ακτή με τις 12 χλμ παραλίες ως το άγριο νότιο τμήμα όπου η Πρέβελη και η Δαμνώνι κρύβουν μερικές από τις καλύτερες παραλίες της Κρήτης. Ο ορεινός όγκος του Ψηλορείτη (2456 μ) δεσπόζει στο εσωτερικό. 4 μέρες είναι σωστά: μία για την παλιά πόλη, μία για την Πρέβελη και τον νότο, μία για τη Σπίνα Λόνγκα και την Αρκαδία στον δρόμο προς Ηράκλειο, μία για τα ορεινά χωριά και το Σαμαριά (αν δεν θα πας από τα Χανιά)."
 }

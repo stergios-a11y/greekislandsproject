@@ -3,7 +3,6 @@
   "name": "Kalymnos",
   "subtitle": "The sponge divers' island — world-class climbing, vertical limestone cliffs and a deep sea tradition",
   "intro": "Kalymnos has two identities. For millennia it was the sponge-diving capital of the Aegean — men dove to 100m without equipment, many dying of the bends, to fuel a global industry. Since 1997, it has become one of the world's top five sport climbing destinations, with 3000 bolted routes on extraordinary limestone cliffs. Today the island draws climbers from around the world, alongside a quieter tourism drawn by the dramatic mountains, clear water, and small traditional villages.",
-
   "itinerary": {
     "title": "3-Day Kalymnos Itinerary",
     "subtitle": "Pothia's sponge heritage, the climbing villages of the west coast, and the beaches and caves of Telendos.",
@@ -16,12 +15,64 @@
         "drive_mins": 15,
         "overnight": "Pothia",
         "stops": [
-          { "name": "Pothia", "lat": 36.9478, "lng": 26.9894, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Pothia", "desc": "The capital — a working Greek port built on the slopes above a natural harbour. The Italian-era waterfront buildings are the finest in the Dodecanese outside Rhodes and Kos. Not pretty in a Cycladic sense but genuinely interesting." },
-          { "name": "Sponge Factory & Museum", "lat": 36.9472, "lng": 26.9900, "type": "museum", "time": "10:00", "wiki": null, "desc": "Working sponge factories line the harbour — buy a genuine Kalymnos sponge. The small Nautical Museum tells the extraordinary and tragic story of the island's sponge-diving industry." },
-          { "name": "Archaeological Museum", "lat": 36.9483, "lng": 26.9867, "type": "museum", "time": "11:30", "wiki": null, "desc": "Small but excellent museum including the Lady of Kalymnos, a magnificent 1st-century BC bronze statue recovered from the sea in 1994. A rare survival." },
-          { "name": "Chora (Old Capital)", "lat": 36.9700, "lng": 27.0000, "type": "village", "time": "14:00", "wiki": null, "desc": "The old Byzantine capital above Pothia — a medieval village with a Knights' castle and views over the island. Quieter and more atmospheric than the modern port." },
-          { "name": "Pothia Waterfront Dinner", "lat": 36.9478, "lng": 26.9894, "type": "harbour", "time": "20:00", "wiki": null, "desc": "The harbour tavernas serve excellent fresh fish. Try the mermizeli (Kalymnos salad with rusks) and oktapodi (octopus)." }
-        ]
+          {
+            "name": "Pothia",
+            "lat": 36.9478,
+            "lng": 26.9894,
+            "type": "city",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Pothia",
+            "desc": "The capital — a working Greek port built on the slopes above a natural harbour. The Italian-era waterfront buildings are the finest in the Dodecanese outside Rhodes and Kos. Not pretty in a Cycladic sense but genuinely interesting.",
+            "name_el": "Πόθια",
+            "desc_el": "Η πρωτεύουσα — ένα εργατικό ελληνικό λιμάνι χτισμένο στις πλαγιές πάνω από φυσικό λιμενίσκο. Τα κτίρια του παραλιακού από την ιταλική περίοδο είναι τα καλύτερα στα Δωδεκάνησα."
+          },
+          {
+            "name": "Sponge Factory & Museum",
+            "lat": 36.9472,
+            "lng": 26.99,
+            "type": "museum",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Working sponge factories line the harbour — buy a genuine Kalymnos sponge. The small Nautical Museum tells the extraordinary and tragic story of the island's sponge-diving industry.",
+            "name_el": "Εργοστάσιο & Μουσείο Σφουγγαριών",
+            "desc_el": "Ενεργά εργοστάσια σφουγγαριών παρατάσσονται στο λιμάνι — αγόρασε αυθεντικό σφουγγάρι Καλύμνου. Το μικρό Ναυτικό Μουσείο διηγείται την εξαιρετική και τραγική ιστορία της σφουγγαρικής βιομηχανίας του νησιού."
+          },
+          {
+            "name": "Archaeological Museum",
+            "lat": 36.9483,
+            "lng": 26.9867,
+            "type": "museum",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "Small but excellent museum including the Lady of Kalymnos, a magnificent 1st-century BC bronze statue recovered from the sea in 1994. A rare survival.",
+            "name_el": "Αρχαιολογικό Μουσείο",
+            "desc_el": "Μικρό αλλά εξαιρετικό μουσείο που περιλαμβάνει την Κυρία της Καλύμνου, εντυπωσιακό χάλκινο άγαλμα του 1ου π.Χ. αιώνα που ανασύρθηκε από τη θάλασσα το 1994. Σπάνιο εύρημα."
+          },
+          {
+            "name": "Chora (Old Capital)",
+            "lat": 36.97,
+            "lng": 27.0,
+            "type": "village",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "The old Byzantine capital above Pothia — a medieval village with a Knights' castle and views over the island. Quieter and more atmospheric than the modern port.",
+            "name_el": "Χώρα (Παλιά Πρωτεύουσα)",
+            "desc_el": "Η παλιά βυζαντινή πρωτεύουσα πάνω από την Πόθια — μεσαιωνικό χωριό με κάστρο των Ιπποτών και θέες πάνω στο νησί. Πιο ήσυχη και πιο ατμοσφαιρική από τη σύγχρονη πρωτεύουσα."
+          },
+          {
+            "name": "Pothia Waterfront Dinner",
+            "lat": 36.9478,
+            "lng": 26.9894,
+            "type": "harbour",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "The harbour tavernas serve excellent fresh fish. Try the mermizeli (Kalymnos salad with rusks) and oktapodi (octopus).",
+            "name_el": "Δείπνο στο Παραλιακό της Πόθιας",
+            "desc_el": "Οι ταβέρνες του λιμανιού σερβίρουν εξαιρετικό φρέσκο ψάρι. Δοκίμασε το μερμίζελι (καλύμνικη σαλάτα με παξιμάδια) και το χταπόδι."
+          }
+        ],
+        "title_el": "Πόθια & Μουσεία Σφουγγαριών",
+        "overnight_el": "Πόθια"
       },
       {
         "day": 2,
@@ -31,11 +82,53 @@
         "drive_mins": 30,
         "overnight": "Masouri",
         "stops": [
-          { "name": "Masouri", "lat": 36.9956, "lng": 26.9458, "type": "village", "time": "09:30", "wiki": null, "desc": "The climbing capital of Kalymnos — a lively village on the west coast entirely built around the sport. Shops selling gear, cafes full of climbers from every country. Even if you don't climb, it's a fascinating scene." },
-          { "name": "Grande Grotta", "lat": 37.0083, "lng": 26.9483, "type": "nature", "time": "11:00", "wiki": null, "desc": "The largest and most famous climbing cave on Kalymnos — a huge overhanging limestone cavern above the coast. Free to visit. Watch the climbers above while swimming below." },
-          { "name": "Myrties Beach", "lat": 37.0117, "lng": 26.9489, "type": "beach", "time": "13:00", "wiki": null, "desc": "Pebble beach next to Masouri, with the islet of Telendos directly opposite — one of the most dramatic views in the Dodecanese. Good tavernas on the waterfront." },
-          { "name": "Emborios Village", "lat": 37.0883, "lng": 26.9450, "type": "village", "time": "16:00", "wiki": null, "desc": "Traditional fishing village at the northern end of the island — small pebble beach, a handful of tavernas, and a refreshingly unhurried pace compared to Masouri." }
-        ]
+          {
+            "name": "Masouri",
+            "lat": 36.9956,
+            "lng": 26.9458,
+            "type": "village",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "The climbing capital of Kalymnos — a lively village on the west coast entirely built around the sport. Shops selling gear, cafes full of climbers from every country. Even if you don't climb, it's a fascinating scene.",
+            "name_el": "Μασσούρι",
+            "desc_el": "Η αναρριχητική πρωτεύουσα της Καλύμνου — ζωντανό χωριό στη δυτική ακτή εντελώς χτισμένο γύρω από το άθλημα. Μαγαζιά με εξοπλισμό, καφενεία γεμάτα αναρριχητές από παντού στον κόσμο."
+          },
+          {
+            "name": "Grande Grotta",
+            "lat": 37.0083,
+            "lng": 26.9483,
+            "type": "nature",
+            "time": "11:00",
+            "wiki": null,
+            "desc": "The largest and most famous climbing cave on Kalymnos — a huge overhanging limestone cavern above the coast. Free to visit. Watch the climbers above while swimming below.",
+            "name_el": "Μεγάλη Σπηλιά (Grande Grotta)",
+            "desc_el": "Η μεγαλύτερη και πιο διάσημη αναρριχητική σπηλιά της Καλύμνου — τεράστιος ασβεστολιθικός κρεμαστός θόλος πάνω από την ακτή. Δωρεάν επίσκεψη. Παρακολούθησε τους αναρριχητές πάνω σου."
+          },
+          {
+            "name": "Myrties Beach",
+            "lat": 37.0117,
+            "lng": 26.9489,
+            "type": "beach",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "Pebble beach next to Masouri, with the islet of Telendos directly opposite — one of the most dramatic views in the Dodecanese. Good tavernas on the waterfront.",
+            "name_el": "Παραλία Μυρτιές",
+            "desc_el": "Η κύρια παραλία της δυτικής ακτής — βότσαλα και λίγη άμμος, καλά οργανωμένη με ξαπλώστρες και ταβέρνες. Σταδιακή είσοδος, καλή για παιδιά. Καλή θέα προς την Τέλενδο."
+          },
+          {
+            "name": "Emborios Village",
+            "lat": 37.0883,
+            "lng": 26.945,
+            "type": "village",
+            "time": "16:00",
+            "wiki": null,
+            "desc": "Traditional fishing village at the northern end of the island — small pebble beach, a handful of tavernas, and a refreshingly unhurried pace compared to Masouri.",
+            "name_el": "Χωριό Εμπορειός",
+            "desc_el": "Παραδοσιακό ψαροχώρι στο βόρειο άκρο του νησιού — μικρή βότσαλη παραλία, λίγες ταβέρνες, και δροσιστικά αβίαστος ρυθμός σε σύγκριση με τον πιο τουριστικό νότο."
+          }
+        ],
+        "title_el": "Μασσούρι, Αναρρίχηση & Παραλίες",
+        "overnight_el": "Μασσούρι"
       },
       {
         "day": 3,
@@ -45,15 +138,57 @@
         "drive_mins": 15,
         "overnight": null,
         "stops": [
-          { "name": "Telendos Boat", "lat": 37.0117, "lng": 26.9489, "type": "harbour", "time": "10:00", "wiki": null, "desc": "Small boat from Myrties — the crossing takes 10 minutes. Telendos broke off from Kalymnos in an earthquake in 554 AD. No cars on the island." },
-          { "name": "Telendos Village", "lat": 37.0194, "lng": 26.9289, "type": "village", "time": "10:15", "wiki": "https://en.wikipedia.org/wiki/Telendos", "desc": "A tiny car-free village with a few tavernas, a small hotel and the best pebble beach on Kalymnos. Excellent lunch at one of the waterfront tavernas." },
-          { "name": "Hochlakas Beach", "lat": 37.0217, "lng": 26.9283, "type": "beach", "time": "11:30", "wiki": null, "desc": "Pebble beach at Telendos — crystal clear water, no crowds, and views back to Kalymnos. One of the best swimming spots in the Dodecanese." },
-          { "name": "Pothia — Departure", "lat": 36.9478, "lng": 26.9894, "type": "harbour", "time": "16:30", "wiki": null, "desc": "Ferry to Kos (frequent), Leros, Patmos, Piraeus or Rhodes. Kalymnos has its own small airport with Athens flights." }
-        ]
+          {
+            "name": "Telendos Boat",
+            "lat": 37.0117,
+            "lng": 26.9489,
+            "type": "harbour",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Small boat from Myrties — the crossing takes 10 minutes. Telendos broke off from Kalymnos in an earthquake in 554 AD. No cars on the island.",
+            "name_el": "Σκάφος προς Τέλενδο",
+            "desc_el": "Μικρό σκάφος από τις Μυρτιές — το πέρασμα παίρνει 10 λεπτά. Η Τέλενδος αποκόπηκε από την Κάλυμνο σε σεισμό το 554 μ.Χ. Χωρίς αυτοκίνητα στο νησί."
+          },
+          {
+            "name": "Telendos Village",
+            "lat": 37.0194,
+            "lng": 26.9289,
+            "type": "village",
+            "time": "10:15",
+            "wiki": "https://en.wikipedia.org/wiki/Telendos",
+            "desc": "A tiny car-free village with a few tavernas, a small hotel and the best pebble beach on Kalymnos. Excellent lunch at one of the waterfront tavernas.",
+            "name_el": "Χωριό Τέλενδος",
+            "desc_el": "Ένα μικροσκοπικό χωριό χωρίς αυτοκίνητα με λίγες ταβέρνες, ένα μικρό ξενοδοχείο και την καλύτερη βότσαλη παραλία της Καλύμνου. Εξαιρετικό μεσημεριανό σε μία από τις παραλιακές ταβέρνες."
+          },
+          {
+            "name": "Hochlakas Beach",
+            "lat": 37.0217,
+            "lng": 26.9283,
+            "type": "beach",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "Pebble beach at Telendos — crystal clear water, no crowds, and views back to Kalymnos. One of the best swimming spots in the Dodecanese.",
+            "name_el": "Παραλία Χοχλακάς",
+            "desc_el": "Βότσαλη παραλία στην Τέλενδο — κρυστάλλινα νερά, χωρίς πλήθη, και θέες πίσω προς την Κάλυμνο. Ένα από τα καλύτερα σημεία κολύμβησης των Δωδεκανήσων."
+          },
+          {
+            "name": "Pothia — Departure",
+            "lat": 36.9478,
+            "lng": 26.9894,
+            "type": "harbour",
+            "time": "16:30",
+            "wiki": null,
+            "desc": "Ferry to Kos (frequent), Leros, Patmos, Piraeus or Rhodes. Kalymnos has its own small airport with Athens flights.",
+            "name_el": "Πόθια — Αναχώρηση",
+            "desc_el": "Πλοίο από την Πόθια για Κω, Ρόδο ή τα άλλα Δωδεκάνησα. Δεν υπάρχει αεροδρόμιο στην Κάλυμνο — η πιο γρήγορη πτήση είναι από Κω."
+          }
+        ],
+        "title_el": "Τέλενδος & Αναχώρηση"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 3 Ημερών στην Κάλυμνο",
+    "subtitle_el": "Η Πόθια και τα μουσεία σφουγγαριών, η αναρρίχηση και οι παραλίες της Μασσούρης, και το ηλιοβασίλεμα από την Τέλενδο."
   },
-
   "beaches": [
     {
       "name": "Myrties Beach",
@@ -66,7 +201,14 @@
       "facilities": "Good: sunbeds, tavernas, water sports. The most developed beach on Kalymnos.",
       "desc": "The best-known beach on Kalymnos — pebble shoreline with extraordinary views across to the islet of Telendos. The sunset here is one of the best in the Dodecanese. The water is exceptionally clear and the tavernas on the waterfront are excellent.",
       "commons": null,
-      "lat": 37.0117, "lng": 26.9489
+      "lat": 37.0117,
+      "lng": 26.9489,
+      "name_el": "Παραλία Μυρτιές",
+      "type_el": "Βότσαλα και λίγη άμμος",
+      "depth_el": "Ρηχά — οικογενειακή",
+      "facing_el": "Δυτικά — απογευματινός ήλιος",
+      "facilities_el": "Πολύ καλές: αρκετές ταβέρνες, ξαπλώστρες, watersports.",
+      "desc_el": "Η κύρια παραλία της δυτικής ακτής — βότσαλα και λίγη άμμος, καλά οργανωμένη με αρκετές ταβέρνες και ξαπλώστρες. Σταδιακή είσοδος στη θάλασσα την κάνει δημοφιλή σε οικογένειες. Όμορφη θέα προς την απέναντι Τέλενδο, ειδικά στο ηλιοβασίλεμα."
     },
     {
       "name": "Hochlakas Beach (Telendos)",
@@ -79,7 +221,14 @@
       "facilities": "Basic: small taverna, no cars on the island.",
       "desc": "The finest beach on Telendos and arguably in the whole of Kalymnos — white pebble with extraordinary water clarity and views back to Kalymnos. The car-free island adds to the peaceful atmosphere.",
       "commons": null,
-      "lat": 37.0217, "lng": 26.9283
+      "lat": 37.0217,
+      "lng": 26.9283,
+      "name_el": "Παραλία Χοχλακάς (Τέλενδος)",
+      "type_el": "Λευκά βότσαλα",
+      "depth_el": "Μέτρια — εξαιρετική διαύγεια",
+      "facing_el": "Ανατολικά — προστατευμένη από το γύρω βουνό",
+      "facilities_el": "Στοιχειώδεις: λίγες ξαπλώστρες, παραλιακή ταβέρνα στο χωριό κοντά.",
+      "desc_el": "Η καλύτερη παραλία στην Τέλενδο και αναμφισβήτητα σε όλη την Κάλυμνο — λευκά βότσαλα με εξαιρετική διαύγεια νερού και θέες πίσω προς την Κάλυμνο. Το χωριό χωρίς αυτοκίνητα πίσω έχει μερικές καλές ταβέρνες."
     },
     {
       "name": "Emborios Beach",
@@ -92,7 +241,17 @@
       "facilities": "Basic: tavernas, small pension hotels. Quiet.",
       "desc": "A quieter pebble beach at the northern tip of the island, in the traditional fishing village of Emborios. Less crowded than Myrties, good tavernas and a relaxed atmosphere.",
       "commons": null,
-      "lat": 37.0883, "lng": 26.9450
+      "lat": 37.0883,
+      "lng": 26.945,
+      "name_el": "Παραλία Εμπορειός",
+      "type_el": "Βότσαλα",
+      "depth_el": "Σταδιακή — ήρεμα νερά",
+      "facing_el": "Δυτικά — προστατευμένη σε παραδοσιακό κόλπο",
+      "facilities_el": "Καλές: 2-3 ταβέρνες, ξαπλώστρες, ησυχία.",
+      "desc_el": "Μια πιο ήσυχη βότσαλη παραλία στο βόρειο άκρο του νησιού, στο παραδοσιακό ψαροχώρι του Εμπορειού. Λιγότερο πολυσύχναστη από τις Μυρτιές, καλές ταβέρνες και ήρεμος ρυθμός."
     }
-  ]
+  ],
+  "name_el": "Κάλυμνος",
+  "subtitle_el": "Το νησί των σφουγγαράδων — αναρρίχηση παγκόσμιας κλάσης, κάθετοι ασβεστολιθικοί γκρεμοί και βαθιά θαλάσσια παράδοση",
+  "intro_el": "Η Κάλυμνος έγινε πλούσια από το σφουγγάρι — οι σφουγγαράδες της δούλευαν σε όλη τη Μεσόγειο μέχρι τη Λιβύη. Σήμερα η οικονομία έχει αλλάξει, αλλά η ταυτότητα παραμένει: σκληρή, εργατική, βαθιά συνδεδεμένη με τη θάλασσα. Από τη δεκαετία του 2000 το νησί έγινε ένας από τους σπουδαιότερους προορισμούς αναρρίχησης βράχου στον κόσμο — οι κάθετοι ασβεστολιθικοί γκρεμοί έχουν περισσότερες από 3000 διαδρομές, και τον Οκτώβριο γεμίζει αναρριχητές από όλη την Ευρώπη. Δεν χρειάζεται να αναρριχάς για να επισκεφτείς — η Πόθια είναι όμορφο νεοκλασικό λιμάνι, η ορεινή Χώρα διατηρεί μεσαιωνικό χαρακτήρα, και η Τέλενδος (μικρό νησί απέναντι) προσφέρει την καλύτερη θέα ηλιοβασιλέματος των Δωδεκανήσων."
 }

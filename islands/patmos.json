@@ -3,7 +3,6 @@
   "name": "Patmos",
   "subtitle": "Where John wrote the Apocalypse — a UNESCO monastery and the most sacred island in Greece",
   "intro": "Patmos is where St John the Theologian was exiled by the Roman emperor Domitian in 95 AD, and where he received the visions that became the Book of Revelation. The Cave of the Apocalypse and the Monastery of St John above the Chora are jointly a UNESCO World Heritage Site. Today Patmos is a small, quiet, spiritual island with good beaches and exceptional food — the antithesis of the party-island stereotype of the Dodecanese.",
-
   "itinerary": {
     "title": "2-Day Patmos Itinerary",
     "subtitle": "The Cave of the Apocalypse, the Chora and the Monastery of St John, and the best beaches of the north coast.",
@@ -16,13 +15,75 @@
         "drive_mins": 20,
         "overnight": "Chora",
         "stops": [
-          { "name": "Skala (Port)", "lat": 37.3211, "lng": 26.5483, "type": "harbour", "time": "09:00", "wiki": null, "desc": "The main port at sea level — a relaxed harbour town. Cafés and shops line the waterfront. Pick up a rental car or scooter here; the Chora and beaches require wheels." },
-          { "name": "Cave of the Apocalypse", "lat": 37.3089, "lng": 26.5456, "type": "church", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Cave_of_the_Apocalypse", "desc": "The small cave where John received the visions of Revelation around 95 AD. UNESCO World Heritage Site. The crack in the rock where God's voice emerged, and the stone where John rested his head, are preserved. Deeply atmospheric even for non-believers." },
-          { "name": "Chora of Patmos", "lat": 37.3072, "lng": 26.5411, "type": "city", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Patmos", "desc": "The hilltop capital of the island — one of the most beautiful preserved medieval settlements in the Aegean. White lanes, centuries-old mansions, and the great monastery dominating the summit." },
-          { "name": "Monastery of St John", "lat": 37.3083, "lng": 26.5425, "type": "church", "time": "13:00", "wiki": "https://en.wikipedia.org/wiki/Monastery_of_Saint_John_the_Theologian", "desc": "UNESCO-listed Byzantine monastery founded 1088. The treasury holds one of the most important collections of Byzantine manuscripts in the world. The view from the ramparts is extraordinary." },
-          { "name": "Lunch — Pantheon Chora", "lat": 37.3072, "lng": 26.5411, "type": "village", "time": "14:30", "wiki": null, "desc": "Traditional taverna in the Chora with outstanding Dodecanese food — the island produces its own cheeses and wine. Book ahead, popular with the yachting crowd." },
-          { "name": "Skala Harbour Evening", "lat": 37.3211, "lng": 26.5483, "type": "harbour", "time": "20:00", "wiki": null, "desc": "Dinner at one of the harbour tavernas. The fish market at the quay sells what was landed that day." }
-        ]
+          {
+            "name": "Skala (Port)",
+            "lat": 37.3211,
+            "lng": 26.5483,
+            "type": "harbour",
+            "time": "09:00",
+            "wiki": null,
+            "desc": "The main port at sea level — a relaxed harbour town. Cafés and shops line the waterfront. Pick up a rental car or scooter here; the Chora and beaches require wheels.",
+            "name_el": "Σκάλα (Λιμάνι)",
+            "desc_el": "Άφιξη με πλοίο από Πειραιά (νυχτερινό, 7–9 ώρες) ή από τα γύρω νησιά. Η Σκάλα είναι η κύρια οικισμός — ζωντανό λιμάνι με καλά καφέ και εστιατόρια. Νοίκιασε αυτοκίνητο ή σκούτερ· τα δημόσια λεωφορεία υπάρχουν αλλά είναι περιορισμένα."
+          },
+          {
+            "name": "Cave of the Apocalypse",
+            "lat": 37.3089,
+            "lng": 26.5456,
+            "type": "church",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Cave_of_the_Apocalypse",
+            "desc": "The small cave where John received the visions of Revelation around 95 AD. UNESCO World Heritage Site. The crack in the rock where God's voice emerged, and the stone where John rested his head, are preserved. Deeply atmospheric even for non-believers.",
+            "name_el": "Σπηλιά της Αποκάλυψης",
+            "desc_el": "Η σπηλιά όπου, σύμφωνα με την παράδοση, ο Ιωάννης ο Θεολόγος έλαβε τα οράματα της Αποκάλυψης. Σήμερα είναι μικρή εκκλησία ενσωματωμένη μέσα στο βράχο — μπορείς ακόμα να δεις την αυλακιά στην πέτρα όπου ο Ιωάννης έβαζε το χέρι του για να σταθεί. Δωρεάν είσοδος, δωρεά εκτιμάται. Σιωπή σεβαστή — είναι ενεργός χώρος προσκυνήματος."
+          },
+          {
+            "name": "Chora of Patmos",
+            "lat": 37.3072,
+            "lng": 26.5411,
+            "type": "city",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Patmos",
+            "desc": "The hilltop capital of the island — one of the most beautiful preserved medieval settlements in the Aegean. White lanes, centuries-old mansions, and the great monastery dominating the summit.",
+            "name_el": "Χώρα της Πάτμου",
+            "desc_el": "Η ορεινή πρωτεύουσα του νησιού — ένας από τους πιο όμορφα διατηρημένους μεσαιωνικούς οικισμούς του Αιγαίου. Λευκά στενά, αιωνόβια αρχοντικά, και το επιβλητικό φρούριο-μοναστήρι στην κορυφή. Μνημείο παγκόσμιας κληρονομιάς της UNESCO."
+          },
+          {
+            "name": "Monastery of St John",
+            "lat": 37.3083,
+            "lng": 26.5425,
+            "type": "church",
+            "time": "13:00",
+            "wiki": "https://en.wikipedia.org/wiki/Monastery_of_Saint_John_the_Theologian",
+            "desc": "UNESCO-listed Byzantine monastery founded 1088. The treasury holds one of the most important collections of Byzantine manuscripts in the world. The view from the ramparts is extraordinary.",
+            "name_el": "Μονή Αγίου Ιωάννου",
+            "desc_el": "Βυζαντινή μονή του 1088 υπό την προστασία της UNESCO. Το θησαυροφυλάκιό της περιέχει μία από τις σημαντικότερες συλλογές βυζαντινών χειρογράφων στον κόσμο. Οι θέες από τις επάλξεις απλώνονται πάνω από όλο το νησί."
+          },
+          {
+            "name": "Lunch — Pantheon Chora",
+            "lat": 37.3072,
+            "lng": 26.5411,
+            "type": "village",
+            "time": "14:30",
+            "wiki": null,
+            "desc": "Traditional taverna in the Chora with outstanding Dodecanese food — the island produces its own cheeses and wine. Book ahead, popular with the yachting crowd.",
+            "name_el": "Μεσημεριανό — Πάνθεον, Χώρα",
+            "desc_el": "Παραδοσιακή ταβέρνα στη Χώρα με εξαιρετικό δωδεκανησιακό φαγητό — το νησί παράγει δικά του τυριά και κρασί. Κάνε κράτηση, είναι δημοφιλής στις πληρωμές σκαφών."
+          },
+          {
+            "name": "Skala Harbour Evening",
+            "lat": 37.3211,
+            "lng": 26.5483,
+            "type": "harbour",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "Dinner at one of the harbour tavernas. The fish market at the quay sells what was landed that day.",
+            "name_el": "Βραδιά στο Λιμάνι της Σκάλας",
+            "desc_el": "Δείπνο σε μία από τις παραλιακές ταβέρνες. Η ιχθυαγορά στην προκυμαία πουλάει ό,τι πιάστηκε εκείνη τη μέρα."
+          }
+        ],
+        "title_el": "Σπηλιά της Αποκάλυψης & Χώρα",
+        "overnight_el": "Σκάλα ή Χώρα"
       },
       {
         "day": 2,
@@ -32,15 +93,57 @@
         "drive_mins": 35,
         "overnight": null,
         "stops": [
-          { "name": "Psili Ammos Beach", "lat": 37.2700, "lng": 26.5600, "type": "beach", "time": "09:30", "wiki": null, "desc": "The best beach on Patmos — a sandy cove accessible only by a 30-minute walk or by boat from Skala. Crystal clear water, pine trees, and a good small taverna at the waterline." },
-          { "name": "Lambi Beach", "lat": 37.3683, "lng": 26.5667, "type": "beach", "time": "12:30", "wiki": null, "desc": "Famous for its multicoloured pebbles — the beach is strewn with red, green, yellow and white stones. Good snorkelling in the clear water. Small taverna." },
-          { "name": "Kampos Beach", "lat": 37.3567, "lng": 26.5500, "type": "beach", "time": "14:30", "wiki": null, "desc": "Long sandy beach on the north coast — the most organised beach on the island, with sunbeds and tavernas. Calm, shallow water, good for families." },
-          { "name": "Skala — Departure", "lat": 37.3211, "lng": 26.5483, "type": "harbour", "time": "17:30", "wiki": null, "desc": "Ferry to Piraeus, Kos, Samos or the smaller Dodecanese islands. Patmos is a key stop on the northern Dodecanese ferry route." }
-        ]
+          {
+            "name": "Psili Ammos Beach",
+            "lat": 37.27,
+            "lng": 26.56,
+            "type": "beach",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "The best beach on Patmos — a sandy cove accessible only by a 30-minute walk or by boat from Skala. Crystal clear water, pine trees, and a good small taverna at the waterline.",
+            "name_el": "Παραλία Ψιλή Άμμος",
+            "desc_el": "Η μόνη πραγματική αμμώδης παραλία της Πάτμου — απομονωμένη στο νότιο άκρο του νησιού. Φτάνεις είτε με βάρκα από τη Σκάλα (30 λεπτά) είτε οδηγώντας μέχρι το τέλος του δρόμου και μετά 20 λεπτά πεζοπορία. Μία εποχιακή ταβέρνα. Πάρε νερό."
+          },
+          {
+            "name": "Lambi Beach",
+            "lat": 37.3683,
+            "lng": 26.5667,
+            "type": "beach",
+            "time": "12:30",
+            "wiki": null,
+            "desc": "Famous for its multicoloured pebbles — the beach is strewn with red, green, yellow and white stones. Good snorkelling in the clear water. Small taverna.",
+            "name_el": "Παραλία Λάμπη",
+            "desc_el": "Στο βόρειο άκρο του νησιού — διάσημη για τα πολύχρωμα βότσαλά της, σε αποχρώσεις πορφυρές, ροζ και πράσινες. Καλά οργανωμένη με δύο ταβέρνες. 30 λεπτά οδήγηση από τη Σκάλα. Δες τα βότσαλα αλλά μην τα παίρνεις — προστατεύονται."
+          },
+          {
+            "name": "Kampos Beach",
+            "lat": 37.3567,
+            "lng": 26.55,
+            "type": "beach",
+            "time": "14:30",
+            "wiki": null,
+            "desc": "Long sandy beach on the north coast — the most organised beach on the island, with sunbeds and tavernas. Calm, shallow water, good for families.",
+            "name_el": "Παραλία Κάμπος",
+            "desc_el": "Μακριά αμμώδης παραλία στη βόρεια ακτή — η πιο οργανωμένη παραλία του νησιού, με ξαπλώστρες και ταβέρνες. Ήρεμα, ρηχά νερά, καλή για οικογένειες."
+          },
+          {
+            "name": "Skala — Departure",
+            "lat": 37.3211,
+            "lng": 26.5483,
+            "type": "harbour",
+            "time": "17:30",
+            "wiki": null,
+            "desc": "Ferry to Piraeus, Kos, Samos or the smaller Dodecanese islands. Patmos is a key stop on the northern Dodecanese ferry route.",
+            "name_el": "Σκάλα — Αναχώρηση",
+            "desc_el": "Πλοίο για Πειραιά ή για τα άλλα Δωδεκάνησα. Δεν υπάρχει αεροδρόμιο στην Πάτμο."
+          }
+        ],
+        "title_el": "Παραλίες του Βορρά"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 2 Ημερών στην Πάτμο",
+    "subtitle_el": "Η Σπηλιά της Αποκάλυψης, η μοναστική Χώρα στην κορυφή του βουνού, και οι παραλίες του βόρειου τμήματος του νησιού."
   },
-
   "beaches": [
     {
       "name": "Psili Ammos Beach",
@@ -53,7 +156,14 @@
       "facilities": "Basic: one small taverna. 30-minute walk or boat access from Skala.",
       "desc": "The finest beach on Patmos — fine golden sand in a sheltered cove, accessible only on foot or by boat. Crystal clear water, pine trees and a simple taverna. The walking access keeps it quiet even in August.",
       "commons": null,
-      "lat": 37.2700, "lng": 26.5600
+      "lat": 37.27,
+      "lng": 26.56,
+      "name_el": "Παραλία Ψιλή Άμμος",
+      "type_el": "Λεπτή χρυσή άμμος",
+      "depth_el": "Ρηχή — κρυστάλλινα νερά",
+      "facing_el": "Νότια — προστατευμένος κόλπος",
+      "facilities_el": "Στοιχειώδεις: μία απλή ταβέρνα, πεύκα για σκιά.",
+      "desc_el": "Η καλύτερη παραλία της Πάτμου — λεπτή χρυσή άμμος σε προστατευμένο κόλπο, προσβάσιμη μόνο με τα πόδια ή με σκάφος. Κρυστάλλινα νερά, πεύκα και μία απλή ταβέρνα. Η 30λεπτη πεζοπορία αποτρέπει τα πλήθη."
     },
     {
       "name": "Lambi Beach",
@@ -66,7 +176,14 @@
       "facilities": "Good: small taverna, basic sunbeds.",
       "desc": "Unique pebble beach on the north coast — the stones are an extraordinary range of colours: red, green, yellow, black and white. The geology alone makes it worth a visit. Good snorkelling.",
       "commons": null,
-      "lat": 37.3683, "lng": 26.5667
+      "lat": 37.3683,
+      "lng": 26.5667,
+      "name_el": "Παραλία Λάμπη",
+      "type_el": "Πολύχρωμα γυαλισμένα βότσαλα (πορφυρά, ροζ, πράσινα)",
+      "depth_el": "Μέτρια — διαυγή νερά",
+      "facing_el": "Βόρεια — εκτεθειμένη, μπορεί να φυσάει",
+      "facilities_el": "Καλές: δύο ταβέρνες, ξαπλώστρες, αρκετός χώρος.",
+      "desc_el": "Διάσημη για τα μοναδικά πολύχρωμα βότσαλά της — γυαλισμένες πέτρες σε αποχρώσεις πορφυρές, ροζ και πράσινες, σχηματισμένες από αιώνες κυμάτων στην ηφαιστειακή πέτρα. Στο βόρειο άκρο του νησιού, προσβάσιμη με αυτοκίνητο. Δύο ταβέρνες. Σεβάσου την προστασία — μην παίρνεις βότσαλα μαζί σου."
     },
     {
       "name": "Kampos Beach",
@@ -79,7 +196,17 @@
       "facilities": "Good: sunbeds, tavernas, parking. The most developed beach on the island.",
       "desc": "The most accessible organised beach on Patmos — long sandy north-coast bay with calm water and good facilities. The beach village has the island's best tavernas outside Chora.",
       "commons": null,
-      "lat": 37.3567, "lng": 26.5500
+      "lat": 37.3567,
+      "lng": 26.55,
+      "name_el": "Παραλία Κάμπος",
+      "type_el": "Λεπτή χρυσή άμμος",
+      "depth_el": "Ρηχή — οικογενειακή",
+      "facing_el": "Βόρεια — προστατευμένη από τη γύρω γεωγραφία",
+      "facilities_el": "Πολύ καλές: αρκετές ταβέρνες, ξαπλώστρες, watersports.",
+      "desc_el": "Η πιο προσβάσιμη οργανωμένη παραλία της Πάτμου — μακρύς αμμώδης κόλπος στη βόρεια ακτή με ήρεμα νερά και καλές υποδομές. Το παραλιακό χωριό έχει τις καλύτερες ψαροταβέρνες του νησιού, ειδικά τον Παντελή."
     }
-  ]
+  ],
+  "name_el": "Πάτμος",
+  "subtitle_el": "Όπου ο Ιωάννης έγραψε την Αποκάλυψη — μνημείο UNESCO και το πιο ιερό νησί της Ελλάδας",
+  "intro_el": "Η Πάτμος είναι η Ιερουσαλήμ του Αιγαίου. Σύμφωνα με την παράδοση, ο Ιωάννης έγραψε εδώ το Βιβλίο της Αποκάλυψης μέσα σε σπηλιά γύρω στο 95 μ.Χ., εξορισμένος από τους Ρωμαίους. Η Μονή του Αγίου Ιωάννη του Θεολόγου — επιβλητικό φρούριο του 11ου αιώνα στην κορυφή του βουνού — και το γύρω μεσαιωνικό χωριό της Χώρας έχουν ανακηρυχθεί μνημείο παγκόσμιας κληρονομιάς της UNESCO. Παρά τη βαριά πνευματική του φόρτιση, το νησί είναι καθόλου σοβαροφανές: ωραίες παραλίες, εξαιρετικό φαγητό, και πολύ ζωντανή σκηνή το βράδυ στη Σκάλα. Η ιδιαίτερη δυσκολία πρόσβασης (καμία πτήση, μόνο πλοίο) κρατάει τον κόσμο επιλεκτικό."
 }
