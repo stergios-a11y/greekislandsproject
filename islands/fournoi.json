@@ -6,7 +6,6 @@
   "subtitle_el": "Πειρατικό αρχιπέλαγος ανάμεσα σε Σάμο και Ικαρία — αρχαία λατομεία μαρμάρου, αλιευτικός στόλος, τρεις ανεμόμυλοι και μια κατάβαση 600 σκαλοπατιών στην καλύτερη ταβέρνα",
   "intro": "Fournoi (full name Fournoi Korseon, the 'Korassioi islands' of antiquity) is an archipelago of two inhabited islands and over twenty barren islets between Samos and Ikaria. Deserted in the Middle Ages because pirates used it as a base — Barbarossa anchored here — it was resettled in the 19th century by Dodecanese refugees. Today around 1,400 people live mostly in Chora (Kambos), with smaller settlements at Kampi and the corkscrew-road harbour of Chrysomilia in the north. The marble quarries at Petrokopio supplied ancient Miletus and Ephesus, and recent underwater archaeology has discovered one of the densest concentrations of shipwrecks in the world. Two days lets you do both peninsulas; bring scooter or car, since there's no bus.",
   "intro_el": "Οι Φούρνοι (επίσημο όνομα Φούρνοι Κορσεών, τα \"Κορασσιακά νησιά\" της αρχαιότητας) είναι αρχιπέλαγος δύο κατοικημένων νησιών και πάνω από είκοσι έρημων νησίδων ανάμεσα σε Σάμο και Ικαρία. Εγκαταλελειμμένα τον Μεσαίωνα γιατί οι πειρατές τα χρησιμοποιούσαν ως βάση — ο Μπαρμπαρόσα αγκυροβολούσε εδώ — επανεγκαταστάθηκαν τον 19ο αιώνα από Δωδεκανήσιους πρόσφυγες. Σήμερα γύρω στους 1.400 κατοίκους ζουν κυρίως στη Χώρα (Κάμπος), με μικρότερους οικισμούς στο Καμπί και τη Χρυσομηλιά στον βορρά. Τα λατομεία μαρμάρου του Πετροκόπιου τροφοδοτούσαν την αρχαία Μίλητο και Έφεσο, και η πρόσφατη υποβρύχια αρχαιολογία ανακάλυψε μία από τις πυκνότερες συγκεντρώσεις ναυαγίων του κόσμου. Δύο μέρες σου αρκούν να κάνεις και τις δύο χερσονήσους· φέρε σκούτερ ή αυτοκίνητο, γιατί δεν υπάρχει λεωφορείο.",
-
   "itinerary": {
     "title": "2-Day Fournoi Itinerary",
     "subtitle": "Chora and the southern peninsula on Day 1, Chrysomilia and Thymaina on Day 2.",
@@ -56,7 +55,7 @@
           {
             "name": "Kasidi Beach",
             "name_el": "Παραλία Κασίδι",
-            "lat": 37.5500,
+            "lat": 37.55,
             "lng": 26.4778,
             "type": "beach",
             "desc": "Southwestern coast, accessible only by boat or rough track. Fine white sand, turquoise water, complete seclusion. Common nudist beach. Bring water, food, shade.",
@@ -71,7 +70,8 @@
             "desc": "Beach-rustic taverna on the Chora harbour serving fish and seafood straight from the boats moored ten metres away. Order whatever was caught that morning — and the lobster, if it's listed. Fratzesca's next door is the alternative.",
             "desc_el": "Παραθαλάσσια ταβέρνα στο λιμάνι της Χώρας που σερβίρει ψάρι και θαλασσινά κατευθείαν από τις βάρκες δεμένες δέκα μέτρα μακριά. Παράγγειλε ό,τι πιάστηκε το πρωί — και αστακό, αν είναι στο μενού. Η Φραντζέσκας δίπλα είναι η εναλλακτική."
           }
-        ]
+        ],
+        "title_el": "Χώρα, Καμπί & οι Νότιες Παραλίες"
       },
       {
         "day": 2,
@@ -99,7 +99,7 @@
           {
             "name": "Chrysomilia Beach",
             "name_el": "Παραλία Χρυσομηλιάς",
-            "lat": 37.6450,
+            "lat": 37.645,
             "lng": 26.4853,
             "type": "beach",
             "desc": "Long sandy north-coast beach next to the harbour. Shallow, calm, family-friendly because the water is sheltered from the meltemi. The taverna at the seaside (the one at the bottom of the steps) is the lunch reward for the descent.",
@@ -114,11 +114,13 @@
             "desc": "Daily small ferry from Chora to the second inhabited island of the archipelago — 30 minutes. Single fishing village, one or two tavernas, the long sandy Keramidou Beach. O Kottaras Taverna at the far end of Keramidou is one of the most genuinely good lunch spots in the eastern Aegean.",
             "desc_el": "Καθημερινό μικρό πλοίο από τη Χώρα προς το δεύτερο κατοικημένο νησί του αρχιπελάγους — 30 λεπτά. Ένα μόνο αλιευτικό χωριό, μία-δύο ταβέρνες, η μακριά αμμώδης παραλία Κεραμίδου. Η ταβέρνα του Κοτταρά στο μακρινό άκρο της Κεραμίδου είναι ένα από τα πιο γνήσια καλά μεσημεριανά σημεία του ανατολικού Αιγαίου."
           }
-        ]
+        ],
+        "title_el": "Χρυσομηλιά & Θύμαινα"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 2 Ημερών στους Φούρνους",
+    "subtitle_el": "Χώρα και η νότια χερσόνησος την 1η ημέρα, Χρυσομηλιά και Θύμαινα τη 2η."
   },
-
   "beaches": [
     {
       "name": "Petrokopio Beach",
@@ -155,7 +157,7 @@
       "facilities_el": "Καμία. Πρόσβαση με βάρκα ή διαδρομή κατάλληλη για 4x4. Συνηθισμένη γυμνιστική παραλία.",
       "desc": "The hidden gem of the southern peninsula — fine white sand and turquoise water, completely undeveloped, almost always empty. Bring water and an umbrella. The remoteness is the appeal: you'll have it to yourself even in August.",
       "desc_el": "Το κρυμμένο διαμάντι της νότιας χερσονήσου — λεπτή λευκή άμμος και τιρκουάζ νερά, εντελώς ανέγγιχτη, σχεδόν πάντα άδεια. Φέρε νερό και ομπρέλα. Η απομόνωση είναι το πλεονέκτημα: θα την έχεις για σένα ακόμα και τον Αύγουστο.",
-      "lat": 37.5500,
+      "lat": 37.55,
       "lng": 26.4778
     },
     {
@@ -174,7 +176,7 @@
       "facilities_el": "Ελαφριές: εποχική ταβέρνα στο τέλος των σκαλοπατιών. 15 χλμ οδικώς από τη Χώρα συν κατάβαση 600 σκαλοπατιών (ή με βάρκα).",
       "desc": "The northern beach — sandy, sheltered, with the most picturesque fishing harbour in the Aegean as backdrop. Family-friendly. The 600-step walkway down (and back up) keeps the casual visitor away. The taverna at the seaside makes the climb back up worth it.",
       "desc_el": "Η βόρεια παραλία — αμμώδης, προστατευμένη, με το πιο γραφικό αλιευτικό λιμάνι του Αιγαίου ως φόντο. Οικογενειακή. Ο πεζόδρομος των 600 σκαλοπατιών (κάτω και πάνω) κρατά τον περιστασιακό επισκέπτη μακριά. Η ταβέρνα στην παραλία αξίζει την ανάβαση πίσω.",
-      "lat": 37.6450,
+      "lat": 37.645,
       "lng": 26.4853
     },
     {

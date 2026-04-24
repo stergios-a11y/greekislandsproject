@@ -78,7 +78,7 @@
 
   <div id="loading-overlay">
     <div class="loading-inner">
-      <img src="/logo.svg" alt="Aegean Blueprint logo" id="loading-logo">
+      <img src="/logo.svg" alt="Aegean Blueprint logo" data-i18n-alt="a11y.logo_alt" id="loading-logo">
       <div class="loading-spinner"></div>
       <p>Loading islands…</p>
     </div>
@@ -87,7 +87,7 @@
   <header>
     <div class="header-content">
       <div class="logo-wrapper" id="nav-home">
-        <img src="/logo-hero.svg" id="site-logo" alt="Aegean Blueprint logo">
+        <img src="/logo-hero.svg" id="site-logo" alt="Aegean Blueprint logo" data-i18n-alt="a11y.logo_alt">
         <span id="brand-text"><span class="brand-word">Aegean</span> <span class="brand-word">Blueprint</span></span>
       </div>
       <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>
@@ -102,7 +102,7 @@
         <a href="#" id="nav-mission" data-i18n="nav.mission">Mission</a>
       </nav>
       <div class="lang-dropdown" id="lang-dropdown">
-        <button class="lang-toggle" id="lang-toggle-btn" aria-label="Switch language" aria-haspopup="true" aria-expanded="false">
+        <button class="lang-toggle" id="lang-toggle-btn" aria-label="Switch language" data-i18n-aria-label="a11y.switch_language" aria-haspopup="true" aria-expanded="false">
           <span class="lang-globe">🌐</span>
           <span class="lang-current" id="lang-current">EN</span>
           <span class="lang-caret">▾</span>
@@ -112,17 +112,17 @@
           <a href="#" class="lang-option" data-lang="el" role="menuitem"><span class="lang-option-flag">🇬🇷</span> Ελληνικά</a>
         </div>
       </div>
-      <button class="dark-mode-toggle" id="dark-mode-btn" aria-label="Toggle dark mode">☾</button>
+      <button class="dark-mode-toggle" id="dark-mode-btn" aria-label="Toggle dark mode" data-i18n-aria-label="a11y.toggle_dark">☾</button>
     </div>
   </header>
 
   <div class="search-container" id="home-controls">
     <div class="search-bar-row">
-      <input type="text" id="islandSearch" placeholder="🔍  Search islands…" aria-label="Search islands" data-i18n-placeholder="search.placeholder">
-      <select id="group-select" class="filter-select" aria-label="Filter by island group">
+      <input type="text" id="islandSearch" placeholder="🔍  Search islands…" aria-label="Search islands" data-i18n-aria-label="a11y.search_islands" data-i18n-placeholder="search.placeholder">
+      <select id="group-select" class="filter-select" aria-label="Filter by island group" data-i18n-aria-label="a11y.filter_group">
         <option value="all" data-i18n="filter.allgroups">All islands</option>
       </select>
-      <select id="vibe-select" class="filter-select" aria-label="Rank map by">
+      <select id="vibe-select" class="filter-select" aria-label="Rank map by" data-i18n-aria-label="a11y.rank_map_by">
         <option value="overall" data-i18n="filter.overall">🏠 Overall</option>
         <option value="beach" data-i18n="filter.beach">🏖️ Beaches</option>
         <option value="hist" data-i18n="filter.culture">🏛️ Culture</option>
@@ -187,9 +187,9 @@
           <th data-col="night" class="th-dim" data-i18n="data.col.night">Night ↕</th>
           <th data-col="access" class="th-dim" data-i18n="data.col.access">Access ↕</th>
           <th data-col="afford" class="th-dim" data-i18n="data.col.afford">Affordability ↕</th>
-          <th data-col="car_need" class="th-dim" data-i18n="data.col.car" title="1 = car useless, 5 = car essential">🚗 Car ↕</th>
+          <th data-col="car_need" class="th-dim" data-i18n="data.col.car" title="1 = car useless, 5 = car essential" data-i18n-title="a11y.car_scale">🚗 Car ↕</th>
           <th data-col="days" class="th-main" data-i18n="data.col.days">Days ↕</th>
-          <th data-col="has_airport" class="th-main" data-i18n="data.col.airport" title="Commercial airport on the island">✈ Airport ↕</th>
+          <th data-col="has_airport" class="th-main" data-i18n="data.col.airport" title="Commercial airport on the island" data-i18n-title="a11y.has_airport">✈ Airport ↕</th>
           <th data-col="area" class="th-main" data-i18n="data.col.area">Area (km²) ↕</th>
           <th data-col="pop" class="th-main" data-i18n="data.col.pop">Population ↕</th>
         </tr></thead>
@@ -210,7 +210,7 @@
       <div id="compare-placeholder" class="compare-placeholder" data-i18n="compare.placeholder">Select two islands above to start comparing.</div>
       <div id="compare-content" style="display:none;">
         <div class="compare-radar-wrap">
-          <canvas id="compare-radar-chart" role="img" aria-label="Radar chart comparing two islands"></canvas>
+          <canvas id="compare-radar-chart" role="img" aria-label="Radar chart comparing two islands" data-i18n-aria-label="a11y.radar_compare"></canvas>
         </div>
         <div class="compare-cards" id="compare-cards"></div>
       </div>
@@ -272,7 +272,7 @@
         <line x1="0" y1="150" x2="1280" y2="150" stroke="#fff" stroke-width="0.8" stroke-dasharray="5 12"/>
         <line x1="640" y1="0" x2="640" y2="300" stroke="#fff" stroke-width="0.8" stroke-dasharray="5 12" opacity="0.5"/>
       </svg>
-      <div class="why-hero-logo-wrap"><img src="/logo-hero.svg" alt="Aegean Blueprint logo"></div>
+      <div class="why-hero-logo-wrap"><img src="/logo-hero.svg" alt="Aegean Blueprint logo" data-i18n-alt="a11y.logo_alt"></div>
       <h1 data-i18n="mission.title">Mission</h1>
       <p class="why-hero-sub" data-i18n="mission.tagline">For travellers who want to live the holiday, not plan it.</p>
     </div>
@@ -492,8 +492,8 @@
   <footer id="site-footer"><div class="footer-copy" data-i18n="footer.copyright">© 2026 Stergios Gousios · Aegean Blueprint</div></footer>
 
   <!-- Floating action buttons (bottom-right) -->
-  <button id="help-btn" class="fab-btn fab-help" onclick="openHelp()" title="How to use this site" data-i18n="help.btn">❓ How to</button>
-  <button id="feedback-btn" class="fab-btn" onclick="openFeedback()" title="Send feedback" data-i18n="feedback.btn">💬 Feedback</button>
+  <button id="help-btn" class="fab-btn fab-help" onclick="openHelp()" title="How to use this site" data-i18n-title="a11y.how_to_use" data-i18n="help.btn">❓ How to</button>
+  <button id="feedback-btn" class="fab-btn" onclick="openFeedback()" title="Send feedback" data-i18n-title="a11y.send_feedback" data-i18n="feedback.btn">💬 Feedback</button>
 
   <!-- Feedback modal -->
   <div id="feedback-modal" class="feedback-modal" style="display:none;">

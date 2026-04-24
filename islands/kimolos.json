@@ -6,7 +6,6 @@
   "subtitle_el": "Η πιο ήσυχη γειτόνισσα της Μήλου — καραϊβικές λιμνοθάλασσες, ένας βράχος-μανιτάρι και μια βυθισμένη αρχαία πόλη",
   "intro": "800 metres across the strait from Milos but a different planet in pace, Kimolos is what the western Cyclades looked like before social media. The single Chora — locally called Chorio, not Chora — sits on a hill 1km from the port, walled by the remains of a 16th-century Venetian castle. The beach at Prassa on the north coast is the headline draw, with white sand from nearby chalk and bentonite mines and water that earns its Caribbean comparisons. Inland, a 30-minute hike across volcanic plateau leads to Skiadi, a 4-metre mushroom-shaped rock sculpted by millennia of wind erosion. The island's name comes from the Greek word for chalk.",
   "intro_el": "800 μέτρα απέναντι από τη Μήλο αλλά ένας διαφορετικός πλανήτης σε ρυθμό, η Κίμωλος είναι αυτό που έμοιαζαν οι δυτικές Κυκλάδες πριν τα social media. Η μοναδική Χώρα — που οι ντόπιοι λένε Χωριό, όχι Χώρα — βρίσκεται σε λόφο 1 χλμ από το λιμάνι, περιφραγμένη από τα ερείπια ενός βενετσιάνικου κάστρου του 16ου αιώνα. Η παραλία στο Πράσσα στη βόρεια ακτή είναι το κύριο σημείο, με λευκή άμμο από τα κοντινά ορυχεία γύψου και μπεντονίτη και νερά που δικαιολογούν τις συγκρίσεις με την Καραϊβική. Στο εσωτερικό, μια πεζοπορία 30 λεπτών μέσα από ηφαιστειακό οροπέδιο οδηγεί στο Σκιάδι, έναν 4μετρο βράχο σε σχήμα μανιταριού λαξευμένο από χιλιετίες διάβρωσης από τον άνεμο. Το όνομα του νησιού προέρχεται από τη λέξη κιμωλία.",
-
   "itinerary": {
     "title": "2-Day Kimolos Itinerary",
     "subtitle": "Chorio and Prassa on Day 1, Skiadi and the south coast on Day 2.",
@@ -62,7 +61,8 @@
             "desc": "Restaurant just south of Prassa lagoon. More expensive than the average island taverna but considered the best food on Kimolos. Fantastic view of the turquoise bay below.",
             "desc_el": "Εστιατόριο ακριβώς νότια της λιμνοθάλασσας Πράσσα. Πιο ακριβό από τη μέση ταβέρνα του νησιού αλλά θεωρείται το καλύτερο φαγητό της Κιμώλου. Φανταστική θέα στον τιρκουάζ κόλπο από κάτω."
           }
-        ]
+        ],
+        "title_el": "Χωριό, το Κάστρο & η Λιμνοθάλασσα Πράσσα"
       },
       {
         "day": 2,
@@ -73,7 +73,7 @@
             "name": "Skiadi Mushroom Rock",
             "name_el": "Βράχος-Μανιτάρι Σκιάδι",
             "lat": 36.8087,
-            "lng": 24.5550,
+            "lng": 24.555,
             "type": "viewpoint",
             "desc": "30-minute hike from a parking bay 3km north of Chorio along an old mule track. A 4-metre rock shaped like a mushroom by millennia of wind erosion — the soft base eroded faster than the hard volcanic top. One of the protected geological monuments of the Aegean.",
             "desc_el": "Πεζοπορία 30 λεπτών από στάθμευση 3 χλμ βόρεια του Χωριού κατά μήκος ενός παλιού μονοπατιού για μουλάρια. Ένας βράχος 4 μέτρων σε σχήμα μανιταριού από χιλιετίες διάβρωσης από τον άνεμο — η μαλακή βάση διαβρώθηκε γρηγορότερα από την σκληρή ηφαιστειακή κορυφή. Ένα από τα προστατευμένα γεωλογικά μνημεία του Αιγαίου."
@@ -100,16 +100,18 @@
             "name": "Polyaigos Boat Trip (Optional)",
             "name_el": "Εκδρομή με Βάρκα στην Πολύαιγο (Προαιρετικό)",
             "lat": 36.7333,
-            "lng": 24.6500,
+            "lng": 24.65,
             "type": "viewpoint",
             "desc": "If you have a third day or skip Skiadi, take the boat trip to uninhabited Polyaigos — the largest uninhabited island in Greece, NATURA 2000-protected. Mediterranean monk seals breed in the sea caves. Departures from Psathi.",
             "desc_el": "Αν έχεις τρίτη μέρα ή παραλείπεις το Σκιάδι, πάρε την εκδρομή με βάρκα στην ακατοίκητη Πολύαιγο — το μεγαλύτερο ακατοίκητο νησί της Ελλάδας, προστατευμένο από το NATURA 2000. Φώκιες monachus monachus αναπαράγονται στις θαλάσσιες σπηλιές. Αναχωρήσεις από το Ψάθη."
           }
-        ]
+        ],
+        "title_el": "Σκιάδι & οι Νότιες Παραλίες"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 2 Ημερών στην Κίμωλο",
+    "subtitle_el": "Χωριό και Πράσσα την 1η ημέρα, Σκιάδι και η νότια ακτή τη 2η."
   },
-
   "beaches": [
     {
       "name": "Prassa Beach (Agios Georgios)",

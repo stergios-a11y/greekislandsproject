@@ -6,7 +6,6 @@
   "subtitle_el": "Ο πρωταγωνιστής των Μικρών Κυκλάδων — τιρκουάζ λιμνοθάλασσες, χωρίς αυτοκίνητα, και ένα παραλιακό μονοπάτι που συνδέει όλες τις παραλίες που θα χρειαστείς",
   "intro": "Pano Koufonisi is 4 square kilometres of flat island with one Chora, one road, no cars worth mentioning, and a coastal walking path that connects the entire south and east shores in about an hour. Along that path are some of the cleanest beaches in Greece: Finikas, Fanos, Italida, the natural rock pool of Pisina, and finally Pori — a turquoise lagoon often described as the most beautiful in the Cyclades. Across a 200-metre channel sits uninhabited Kato Koufonisi, reached by hourly water taxi, with wilder beaches and a single legendary taverna. The island had no electricity until the 1980s. It still feels like that's the most recent change worth mentioning.",
   "intro_el": "Το Πάνω Κουφονήσι είναι 4 τετραγωνικά χιλιόμετρα επίπεδου νησιού με μία Χώρα, έναν δρόμο, σχεδόν κανένα αυτοκίνητο, και ένα παραλιακό μονοπάτι που συνδέει όλη τη νότια και ανατολική ακτή σε περίπου μία ώρα. Πάνω σε αυτό το μονοπάτι βρίσκονται μερικές από τις πιο καθαρές παραλίες της Ελλάδας: Φοίνικας, Φανός, Ιταλίδα, η φυσική πέτρινη πισίνα και τέλος το Πόρι — μια τιρκουάζ λιμνοθάλασσα που συχνά περιγράφεται ως η ομορφότερη των Κυκλάδων. Απέναντι από ένα κανάλι 200 μέτρων βρίσκεται το ακατοίκητο Κάτω Κουφονήσι, προσβάσιμο με ωριαίο θαλάσσιο ταξί, με πιο άγριες παραλίες και μία θρυλική ταβέρνα. Το νησί δεν είχε ηλεκτρικό μέχρι τη δεκαετία του 1980. Νιώθει ακόμα ότι αυτή είναι η πιο πρόσφατη αλλαγή που αξίζει να αναφερθεί.",
-
   "itinerary": {
     "title": "3-Day Koufonisia Itinerary",
     "subtitle": "Walk the south coast on Day 1, push to Pori on Day 2, take the boat to Kato Koufonisi on Day 3.",
@@ -66,12 +65,13 @@
             "name": "Sunset Drinks at the Harbour",
             "name_el": "Ποτό Ηλιοβασιλέματος στο Λιμάνι",
             "lat": 36.9354,
-            "lng": 25.5820,
+            "lng": 25.582,
             "type": "village",
             "desc": "Walk back to Chora for a sunset drink at Sorokos on the harbour or Mylos (an old windmill turned bar) on the heights between the port and the shipyard. The sun drops directly behind Naxos.",
             "desc_el": "Επιστροφή στη Χώρα για ποτό ηλιοβασιλέματος στο Σόροκος στο λιμάνι ή στο Μύλος (ένας παλιός μύλος μετατραμμένος σε μπαρ) στις ψηλές περιοχές ανάμεσα στο λιμάνι και το ναυπηγείο. Ο ήλιος βυθίζεται κατευθείαν πίσω από τη Νάξο."
           }
-        ]
+        ],
+        "title_el": "Χώρα & οι Κοντινές Παραλίες"
       },
       {
         "day": 2,
@@ -100,7 +100,7 @@
             "name": "Pori Beach",
             "name_el": "Παραλία Πόρι",
             "lat": 36.9425,
-            "lng": 25.6160,
+            "lng": 25.616,
             "type": "beach",
             "desc": "The destination of the walk — a long, deep, north-facing turquoise lagoon. About an hour on foot from Chora, or take the small boat from the harbour (€5 all-day pass). Two beach restaurants: Kalofego is the better one. Strong wind on meltemi days; otherwise paradisical.",
             "desc_el": "Ο προορισμός της πεζοπορίας — μια μακριά, βαθιά, βόρεια τιρκουάζ λιμνοθάλασσα. Περίπου μία ώρα με τα πόδια από τη Χώρα, ή πάρε τη μικρή βάρκα από το λιμάνι (5€ για ολοήμερο πάσο). Δύο εστιατόρια στην παραλία: το Καλόφεγο είναι το καλύτερο. Δυνατός αέρας σε ημέρες μελτεμιού· διαφορετικά παραδεισένιο."
@@ -114,7 +114,8 @@
             "desc": "100m beyond the Pori headland — sea caves carved into the cliffs that you can swim into when calm. Photogenic and rarely crowded because most visitors stop at Pori itself.",
             "desc_el": "100 μέτρα πέρα από το ακρωτήρι του Πόρι — θαλάσσιες σπηλιές λαξευμένες στους γκρεμούς που μπορείς να κολυμπήσεις μέσα όταν είναι ήρεμα. Φωτογενείς και σπάνια πολυσύχναστες γιατί οι περισσότεροι επισκέπτες σταματούν στο ίδιο το Πόρι."
           }
-        ]
+        ],
+        "title_el": "Ο Μακρύς Δρόμος προς τον Πόρι"
       },
       {
         "day": 3,
@@ -125,7 +126,7 @@
             "name": "Boat to Kato Koufonisi",
             "name_el": "Βάρκα προς Κάτω Κουφονήσι",
             "lat": 36.9347,
-            "lng": 25.5790,
+            "lng": 25.579,
             "type": "village",
             "desc": "Hourly small boat from Chora harbour, 10-minute crossing. €5 return. Last boat back is around 6pm. The island has a single taverna and a series of wild beaches connected by goat tracks. Nothing else.",
             "desc_el": "Ωριαία μικρή βάρκα από το λιμάνι της Χώρας, 10λεπτη διαδρομή. 5€ μετ' επιστροφής. Η τελευταία βάρκα γυρνά γύρω στις 6 μ.μ. Το νησί έχει μία μόνο ταβέρνα και μια σειρά από άγριες παραλίες συνδεδεμένες με μονοπάτια για κατσίκες. Τίποτα άλλο."
@@ -157,11 +158,13 @@
             "desc": "Walk further south past Nero — Pezoulia and Detis are pebbly coves with crystalline water, separated by small rocky headlands. Almost guaranteed to have one to yourself even in August. Catch the late boat back to Chora.",
             "desc_el": "Περπάτησε πιο νότια από το Νερό — η Πεζούλια και ο Δέτης είναι κολπίσκοι με βότσαλο και κρυστάλλινα νερά, χωρισμένοι από μικρά βραχώδη ακρωτήρια. Σχεδόν εγγυημένα θα έχεις έναν μόνο για σένα ακόμα και τον Αύγουστο. Πρόλαβε την αργή βάρκα πίσω στη Χώρα."
           }
-        ]
+        ],
+        "title_el": "Κάτω Κουφονήσι & Αναχώρηση"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 3 Ημερών στα Κουφονήσια",
+    "subtitle_el": "Περπατήστε τη νότια ακτή την 1η ημέρα, συνεχίστε ως τον Πόρι τη 2η, πάρτε το σκάφος για το Κάτω Κουφονήσι την 3η."
   },
-
   "beaches": [
     {
       "name": "Pori Beach",
@@ -180,7 +183,7 @@
       "desc": "The signature beach of the Small Cyclades — a long turquoise lagoon at the eastern tip of Pano Koufonisi, with golden sand and water so shallow you can walk 50 metres out. North-facing means it can be windy when the meltemi blows; pick a calm day for the full effect. The walk along the coastal path from Chora is one of the best half-day experiences in the Cyclades.",
       "desc_el": "Η εμβληματική παραλία των Μικρών Κυκλάδων — μια μακριά τιρκουάζ λιμνοθάλασσα στο ανατολικό άκρο του Πάνω Κουφονησίου, με χρυσή άμμο και νερά τόσο ρηχά που μπορείς να περπατήσεις 50 μέτρα μέσα. Ο βόρειος προσανατολισμός σημαίνει ότι μπορεί να φυσάει όταν φυσά το μελτέμι· διάλεξε μια ήρεμη μέρα για το πλήρες αποτέλεσμα. Η πεζοπορία στο παραλιακό μονοπάτι από τη Χώρα είναι μία από τις καλύτερες ημερήσιες εμπειρίες των Κυκλάδων.",
       "lat": 36.9425,
-      "lng": 25.6160
+      "lng": 25.616
     },
     {
       "name": "Italida Beach",

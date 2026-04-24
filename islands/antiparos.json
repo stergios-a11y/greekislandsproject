@@ -6,7 +6,6 @@
   "subtitle_el": "Η ήσυχη γειτόνισσα της Πάρου — κυκλαδίτικη Χώρα, αρχαία Δεσποτικού και το σπήλαιο με τον αρχαιότερο σταλαγμίτη της Ευρώπης",
   "intro": "Just a 7-minute ferry from Paros, Antiparos is what Paros was thirty years ago — slower, smaller, with a single Chora built around a 15th-century Venetian castro and one main pedestrian street where the day's life happens. The famous cave on Agios Ioannis hill plunges 85 metres into the earth and contains the oldest known stalagmite in Europe. Boats from Agios Georgios cross to the uninhabited island of Despotiko, where ongoing excavations of an Archaic-era Apollo sanctuary continue to surface new finds. Tom Hanks owns a house here. So do a lot of quietly wealthy Athenians. The island has been discovered, but it hasn't been spoiled.",
   "intro_el": "Μόλις 7 λεπτά με πλοίο από την Πάρο, η Αντίπαρος είναι αυτό που ήταν η Πάρος πριν τριάντα χρόνια — πιο αργή, πιο μικρή, με μία Χώρα χτισμένη γύρω από βενετσιάνικο κάστρο του 15ου αιώνα και έναν κεντρικό πεζόδρομο όπου εκτυλίσσεται όλη η ζωή της ημέρας. Το διάσημο σπήλαιο στο λόφο του Αγίου Ιωάννη βυθίζεται 85 μέτρα στη γη και περιέχει τον αρχαιότερο γνωστό σταλαγμίτη της Ευρώπης. Βάρκες από τον Άγιο Γεώργιο διασχίζουν για το ακατοίκητο νησί της Δεσποτικού, όπου οι ανασκαφές ενός αρχαϊκού ιερού του Απόλλωνα συνεχίζουν να φέρνουν νέα ευρήματα. Ο Τομ Χανκς έχει σπίτι εδώ. Όπως και αρκετοί ήσυχα εύποροι Αθηναίοι. Το νησί ανακαλύφθηκε, αλλά δεν αλλοιώθηκε.",
-
   "itinerary": {
     "title": "2-Day Antiparos Itinerary",
     "subtitle": "Chora and the cave on Day 1, Despotiko and the south-coast beaches on Day 2.",
@@ -38,7 +37,7 @@
           {
             "name": "Lunch — Taverna Yorgis",
             "name_el": "Μεσημεριανό — Ταβέρνα Γιώργης",
-            "lat": 36.9930,
+            "lat": 36.993,
             "lng": 25.0768,
             "type": "village",
             "desc": "Family-run taverna in a small flagged side-street near the main square. Octopus, fava, lamb chops, homemade tsipouro at the end. The kind of place where Jenny will tell you what's freshly made today.",
@@ -47,7 +46,7 @@
           {
             "name": "Cave of Antiparos",
             "name_el": "Σπήλαιο Αντιπάρου",
-            "lat": 36.9540,
+            "lat": 36.954,
             "lng": 25.0792,
             "type": "castle",
             "wiki": "https://en.wikipedia.org/wiki/Cave_of_Antiparos",
@@ -67,12 +66,13 @@
             "name": "Sunset — Sifneiko Café",
             "name_el": "Ηλιοβασίλεμα — Σιφνέικο Καφέ",
             "lat": 36.9938,
-            "lng": 25.0750,
+            "lng": 25.075,
             "type": "village",
             "desc": "Behind the main town on Sifneikos Gialos. The west-facing cove gets the best sunsets on the island. Order a drink and stay for dinner — the food is decent if you can grab a table.",
             "desc_el": "Πίσω από την κύρια πόλη, στον Σιφνέικο Γιαλό. Ο δυτικός κόλπος έχει τα καλύτερα ηλιοβασιλέματα του νησιού. Παράγγειλε ένα ποτό και μείνε για δείπνο — το φαγητό είναι αξιοπρεπές αν προλάβεις τραπέζι."
           }
-        ]
+        ],
+        "title_el": "Χώρα, το Κάστρο & το Σπήλαιο"
       },
       {
         "day": 2,
@@ -83,7 +83,7 @@
             "name": "Agios Georgios",
             "name_el": "Άγιος Γεώργιος",
             "lat": 36.9293,
-            "lng": 25.0270,
+            "lng": 25.027,
             "type": "village",
             "desc": "Tiny resort village 12km south of Chora — a handful of tavernas on the waterfront and the small boat harbour for crossings to Despotiko. The beach itself is fine but you're really here for the boat.",
             "desc_el": "Μικροσκοπικό παραθεριστικό χωριό 12 χλμ νότια της Χώρας — μερικές ταβέρνες στην παραλία και το μικρό λιμανάκι για τη μετάβαση στη Δεσποτικό. Η παραλία είναι αξιοπρεπής αλλά ο λόγος που είσαι εδώ είναι η βάρκα."
@@ -116,11 +116,13 @@
             "desc": "Classic fish taverna on the Agios Georgios waterfront, where they dry the day's catch — octopus and fish — outside the kitchen. Order what's hanging. House wine, sea view, no pretensions.",
             "desc_el": "Κλασική ψαροταβέρνα στην παραλιακή του Αγίου Γεωργίου, όπου στεγνώνουν την ψαριά της ημέρας — χταπόδι και ψάρι — έξω από την κουζίνα. Παράγγειλε αυτό που κρέμεται. Χύμα κρασί, θέα στη θάλασσα, χωρίς επιδείξεις."
           }
-        ]
+        ],
+        "title_el": "Δεσποτικό & οι Νότιες Παραλίες"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 2 Ημερών στην Αντίπαρο",
+    "subtitle_el": "Χώρα και το σπήλαιο την 1η ημέρα, Δεσποτικό και οι παραλίες του νότου τη 2η."
   },
-
   "beaches": [
     {
       "name": "Soros Beach",

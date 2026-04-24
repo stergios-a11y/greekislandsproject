@@ -315,6 +315,19 @@ const UI_TEXT = {
   'feedback.message.placeholder': { en: "Tell us what's on your mind...", el: 'Πες μας τι σκέφτεσαι...' },
   'feedback.email.placeholder': { en: 'you@example.com', el: 'you@example.com' },
 
+  // Accessibility: aria-label / title / alt attributes
+  'a11y.search_islands': { en: 'Search islands', el: 'Αναζήτηση νησιών' },
+  'a11y.filter_group': { en: 'Filter by island group', el: 'Φιλτράρισμα ανά νησιωτικό σύμπλεγμα' },
+  'a11y.rank_map_by': { en: 'Rank map by', el: 'Ταξινόμηση χάρτη κατά' },
+  'a11y.radar_compare': { en: 'Radar chart comparing two islands', el: 'Διάγραμμα ράνταρ που συγκρίνει δύο νησιά' },
+  'a11y.switch_language': { en: 'Switch language', el: 'Αλλαγή γλώσσας' },
+  'a11y.toggle_dark': { en: 'Toggle dark mode', el: 'Εναλλαγή σκοτεινής λειτουργίας' },
+  'a11y.car_scale': { en: '1 = car useless, 5 = car essential', el: '1 = το αυτοκίνητο περιττό, 5 = το αυτοκίνητο απαραίτητο' },
+  'a11y.has_airport': { en: 'Commercial airport on the island', el: 'Εμπορικό αεροδρόμιο στο νησί' },
+  'a11y.how_to_use': { en: 'How to use this site', el: 'Πώς να χρησιμοποιήσετε αυτόν τον ιστότοπο' },
+  'a11y.send_feedback': { en: 'Send feedback', el: 'Αποστολή σχολίων' },
+  'a11y.logo_alt': { en: 'Aegean Blueprint logo', el: 'Λογότυπο Aegean Blueprint' },
+
   // Detail page (back button is already defined above)
 
   // Feedback
@@ -446,6 +459,18 @@ function applyStaticTranslations() {
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.dataset.i18nPlaceholder;
     el.placeholder = t(key);
+  });
+  document.querySelectorAll('[data-i18n-title]').forEach(el => {
+    const key = el.dataset.i18nTitle;
+    el.title = t(key);
+  });
+  document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+    const key = el.dataset.i18nAriaLabel;
+    el.setAttribute('aria-label', t(key));
+  });
+  document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+    const key = el.dataset.i18nAlt;
+    el.alt = t(key);
   });
   document.documentElement.lang = CURRENT_LANG;
 }

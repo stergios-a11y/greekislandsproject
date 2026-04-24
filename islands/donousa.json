@@ -6,7 +6,6 @@
   "subtitle_el": "Το ανατολικότερο Μικρό Κυκλαδίτικο νησί — ναυάγιο του Β' Παγκοσμίου, ορεινή πηγή στη Μερσίνη και μια τιρκουάζ ημισέληνος που λέγεται Κέδρος",
   "intro": "Donousa sits at the far eastern end of the Cyclades, between Naxos and Amorgos, with about 200 year-round residents spread across four villages — Stavros (the port and Chora), Mersini, Mesaria and Kalotaritissa. The headline beach is Kedros, a turquoise lagoon with a German WWII shipwreck visible just offshore. The mountain village of Mersini has the only natural spring on the island and a panoramic clifftop chapel of Agia Sofia. Free camping was banned a few years ago — the island is no longer the budget backpacker rite it once was, but it still asks nothing of you and rewards everything you give it.",
   "intro_el": "Η Δονούσα βρίσκεται στο μακρινό ανατολικό άκρο των Κυκλάδων, ανάμεσα σε Νάξο και Αμοργό, με περίπου 200 μόνιμους κατοίκους σε τέσσερα χωριά — Σταυρός (το λιμάνι και η Χώρα), Μερσίνη, Μεσαριά και Καλοταρίτισσα. Η κύρια παραλία είναι ο Κέδρος, μια τιρκουάζ λιμνοθάλασσα με γερμανικό ναυάγιο του Β' Παγκοσμίου ορατό στα ανοιχτά. Το ορεινό χωριό της Μερσίνης έχει τη μοναδική φυσική πηγή του νησιού και ένα πανοραμικό εκκλησάκι της Αγίας Σοφίας στον γκρεμό. Το άγριο camping απαγορεύτηκε πριν μερικά χρόνια — το νησί δεν είναι πλέον το οικονομικό πέρασμα backpackers που κάποτε ήταν, αλλά συνεχίζει να μην σου ζητά τίποτα και να ανταμείβει ό,τι του δίνεις.",
-
   "itinerary": {
     "title": "2-Day Donousa Itinerary",
     "subtitle": "The east-coast walking trail to Kedros and Mersini on Day 1, Kalotaritissa and the north on Day 2.",
@@ -62,7 +61,8 @@
             "desc": "Steep climb up from Livadi (160m elevation). The only village with a natural spring on Donousa — water from a plane tree, locals fill bottles for the week. The clifftop chapel of Agia Sofia has the best view on the island, looking out to Amorgos in the distance.",
             "desc_el": "Απότομη ανηφόρα από το Λιβάδι (160 μέτρα υψόμετρο). Το μόνο χωριό με φυσική πηγή στη Δονούσα — νερό από ένα πλάτανο, οι ντόπιοι γεμίζουν μπουκάλια για την εβδομάδα. Το εκκλησάκι της Αγίας Σοφίας στον γκρεμό έχει την καλύτερη θέα του νησιού, με την Αμοργό στο βάθος."
           }
-        ]
+        ],
+        "title_el": "Σταυρός, Κέδρος & Μερσίνη"
       },
       {
         "day": 2,
@@ -72,7 +72,7 @@
           {
             "name": "Kalotaritissa Village",
             "name_el": "Χωριό Καλοταρίτισσα",
-            "lat": 36.9230,
+            "lat": 36.923,
             "lng": 25.7856,
             "type": "village",
             "desc": "The northernmost settlement on Donousa, reached by an asphalt road climbing high above the sea. Three small beaches in a row (Sapounochoma, Mesa Ammos, Tripiti) and the Mitsos taverna — keftedes that justify the trip on their own.",
@@ -90,7 +90,7 @@
           {
             "name": "Fokospilia Sea Cave",
             "name_el": "Σπηλιά Φωκόσπηλια",
-            "lat": 36.9180,
+            "lat": 36.918,
             "lng": 25.8075,
             "type": "viewpoint",
             "desc": "Reachable only by boat. A dramatic sea cave at Cape Moschonas — once a Mediterranean monk seal breeding site (Greek 'fokia' = seal). Local boat excursions from Stavros include it.",
@@ -105,11 +105,13 @@
             "desc": "Easy 2km flat coastal path west from Stavros to a wild limestone cape. Almost no elevation, no shade, but constant Aegean views. The best easy walk on the island.",
             "desc_el": "Εύκολο επίπεδο παραλιακό μονοπάτι 2 χλμ δυτικά του Σταυρού σε άγριο ασβεστολιθικό ακρωτήρι. Σχεδόν καθόλου υψομετρική διαφορά, καθόλου σκιά, αλλά συνεχής θέα στο Αιγαίο. Η καλύτερη εύκολη πεζοπορία του νησιού."
           }
-        ]
+        ],
+        "title_el": "Καλοταρίτισσα & ο Βορράς"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 2 Ημερών στη Δονούσα",
+    "subtitle_el": "Το μονοπάτι της ανατολικής ακτής προς Κέδρος και Μερσίνη την 1η ημέρα, Καλοταρίτισσα και ο βορράς τη 2η."
   },
-
   "beaches": [
     {
       "name": "Kedros Beach",
@@ -165,7 +167,7 @@
       "facilities_el": "Η ταβέρνα του Μήτσου ακριβώς πίσω. Εύκολη πρόσβαση με αυτοκίνητο.",
       "desc": "The main beach of the northernmost village. Less spectacular than Kedros but the easy car access and Mitsos's taverna with its legendary keftedes make it the default day-trip from Stavros.",
       "desc_el": "Η κύρια παραλία του βορειότερου χωριού. Λιγότερο εντυπωσιακή από τον Κέδρο αλλά η εύκολη πρόσβαση με αυτοκίνητο και η ταβέρνα του Μήτσου με τα θρυλικά της κεφτεδάκια την κάνουν την προεπιλογή για ημερήσια εκδρομή από τον Σταυρό.",
-      "lat": 36.9230,
+      "lat": 36.923,
       "lng": 25.7856
     },
     {

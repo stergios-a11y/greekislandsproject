@@ -6,7 +6,6 @@
   "subtitle_el": "Το νησί των νάνων ελεφάντων — εγκαταλελειμμένο μεσαιωνικό χωριό-φάντασμα, το πρώτο 100% ανανεώσιμο ενεργειακά νησί της Ελλάδας και ένα διάσημο νυχτερινό μπαρ στα ερείπια",
   "intro": "Tilos is 63 km² of hills and coves between Nisyros and Halki, with roughly 500 year-round residents in two working villages: Livadia (the port) and Megalo Chorio (the traditional capital, on the slopes of Mount Stefanos). In between them, the ghost village of Mikro Chorio — 15th-century, abandoned after WWII, with one working church and one legendary bar that only opens after 23:00 with a free shuttle from Livadia. The island is paleontologically famous: Charkadio Cave in the middle of the island was where fossilised dwarf elephants were discovered in the 1970s, some only 1.2m tall, extinct around 4,000 BC. Tilos is also the first fully renewable-energy island in Greece (solar + wind + storage covers all electricity needs since 2018). Two days — one for each half of the island.",
   "intro_el": "Η Τήλος είναι 63 τ.χλμ. λόφων και κόλπων ανάμεσα σε Νίσυρο και Χάλκη, με περίπου 500 μόνιμους κατοίκους σε δύο λειτουργικά χωριά: τη Λιβαδιά (το λιμάνι) και το Μεγάλο Χωριό (η παραδοσιακή πρωτεύουσα, στις πλαγιές του Όρους Στεφάνου). Ανάμεσά τους, το χωριό-φάντασμα Μικρό Χωριό — του 15ου αιώνα, εγκαταλελειμμένο μετά τον Β' Παγκόσμιο, με μία λειτουργική εκκλησία και ένα θρυλικό μπαρ που ανοίγει μόνο μετά τις 23:00 με δωρεάν πούλμαν από τη Λιβαδιά. Το νησί είναι παλαιοντολογικά διάσημο: η Σπηλιά Χαρκαδιό στη μέση του νησιού ήταν όπου ανακαλύφθηκαν απολιθώματα νάνων ελεφάντων τη δεκαετία του 1970, κάποιοι μόλις 1,2μ ψηλοί, εξαφανισμένοι γύρω στο 4.000 π.Χ. Η Τήλος είναι επίσης το πρώτο πλήρως ανανεώσιμο ενεργειακά νησί της Ελλάδας (ηλιακή + αιολική + αποθήκευση καλύπτουν όλες τις ηλεκτρικές ανάγκες από το 2018). Δύο μέρες — μία για κάθε μισό του νησιού.",
-
   "itinerary": {
     "title": "2-Day Tilos Itinerary",
     "subtitle": "Livadia, Mikro Chorio ghost village and the abandoned bar Day 1, Megalo Chorio, the castle and Eristos Day 2.",
@@ -62,7 +61,8 @@
             "desc": "One of the most atmospheric bars in Greece — operates only in summer, only after 23:00, in the ruins of an abandoned medieval village. Free shuttle bus from Livadia. No neighbours means no noise complaints. Drinks are a bit pricier than average but the experience is unmatched.",
             "desc_el": "Ένα από τα πιο ατμοσφαιρικά μπαρ της Ελλάδας — λειτουργεί μόνο το καλοκαίρι, μόνο μετά τις 23:00, στα ερείπια ενός εγκαταλελειμμένου μεσαιωνικού χωριού. Δωρεάν πούλμαν από τη Λιβαδιά. Καθόλου γείτονες σημαίνει καθόλου παράπονα για θόρυβο. Τα ποτά είναι λίγο πιο ακριβά από τον μέσο όρο αλλά η εμπειρία είναι ασύγκριτη."
           }
-        ]
+        ],
+        "title_el": "Λιβάδια, Περίπατος Λεθρά & το Μπαρ του Εγκαταλελειμμένου Χωριού"
       },
       {
         "day": 2,
@@ -81,8 +81,8 @@
           {
             "name": "Megalo Chorio (Capital)",
             "name_el": "Μεγάλο Χωριό (Πρωτεύουσα)",
-            "lat": 36.4550,
-            "lng": 27.3450,
+            "lat": 36.455,
+            "lng": 27.345,
             "type": "village",
             "desc": "The traditional capital on the slopes of Mount Stefanos. Whitewashed houses, bougainvillea, narrow alley-labyrinth, pebble-paved church courtyards. Until the early 18th century the entire population of Tilos lived within the castle walls above. The main church of Taxiarchis Michael has western architectural influences and a carved iconostasis by Smyrna craftsmen.",
             "desc_el": "Η παραδοσιακή πρωτεύουσα στις πλαγιές του Όρους Στεφάνου. Ασβεστωμένα σπίτια, μπουκαμβίλιες, στενός λαβύρινθος δρομακιών, πλακόστρωτες αυλές εκκλησιών. Μέχρι τις αρχές του 18ου αιώνα ολόκληρος ο πληθυσμός της Τήλου ζούσε μέσα στα τείχη του κάστρου από πάνω. Η κύρια εκκλησία των Ταξιαρχών Μιχαήλ έχει δυτικές αρχιτεκτονικές επιρροές και λαξευμένο τέμπλο από μάστορες της Σμύρνης."
@@ -108,7 +108,7 @@
           {
             "name": "Agios Antonios & Plaka Beach",
             "name_el": "Άγιος Αντώνιος & Παραλία Πλάκα",
-            "lat": 36.4650,
+            "lat": 36.465,
             "lng": 27.3456,
             "type": "village",
             "desc": "Small fishing village on the north coast with good taverns and a peaceful bay. Just beyond it, Plaka beach with its resident peacocks — pine trees for shade, pebbles, no sunbeds, no café. The oddest-but-wonderful sight on the island: peacocks walking the pebbles.",
@@ -117,17 +117,19 @@
           {
             "name": "Dinner at Kastro Taverna",
             "name_el": "Δείπνο στην Ταβέρνα Κάστρο",
-            "lat": 36.4550,
-            "lng": 27.3450,
+            "lat": 36.455,
+            "lng": 27.345,
             "type": "village",
             "desc": "In Megalo Chorio — grilled meat, simple local dishes, family-run. The evening view from the square with the castle illuminated above is the reason to linger. Back to Livadia by bus afterwards, or stay in one of the small rooms in Megalo Chorio.",
             "desc_el": "Στο Μεγάλο Χωριό — κρέας στη σχάρα, απλά τοπικά πιάτα, οικογενειακή. Η βραδινή θέα από την πλατεία με το κάστρο φωτισμένο από πάνω είναι ο λόγος να μείνεις. Πίσω στη Λιβαδιά με λεωφορείο μετά, ή μείνε σε ένα από τα μικρά δωμάτια στο Μεγάλο Χωριό."
           }
-        ]
+        ],
+        "title_el": "Σπήλαιο Χαρκαδιού, Κάστρο Μεγάλου Χωριού & Έριστος"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 2 Ημερών στην Τήλο",
+    "subtitle_el": "Λιβάδια, το εγκαταλελειμμένο Μικρό Χωριό και το παρατημένο μπαρ την 1η ημέρα, Μεγάλο Χωριό, το κάστρο και ο Έριστος τη 2η."
   },
-
   "beaches": [
     {
       "name": "Eristos Beach",
@@ -202,7 +204,7 @@
       "facilities_el": "Ελαφριές: ταβέρνες στο μικρό αλιευτικό χωριό πίσω, κάποιες ξαπλώστρες. Λεωφορείο από τη Λιβαδιά.",
       "desc": "North-coast fishing-village beach with palm trees and calm water — longer and easier to reach than Eristos, with genuine tavernas behind. Less spectacular but practical. The sunset view from the waterfront tavern is worth staying for dinner.",
       "desc_el": "Παραλία αλιευτικού χωριού στη βόρεια ακτή με φοίνικες και ήρεμα νερά — μεγαλύτερη και πιο εύκολη πρόσβαση από τον Εριστό, με γνήσιες ταβέρνες πίσω. Λιγότερο εντυπωσιακή αλλά πρακτική. Η θέα στο ηλιοβασίλεμα από την ταβέρνα στην προκυμαία αξίζει να μείνεις για δείπνο.",
-      "lat": 36.4650,
+      "lat": 36.465,
       "lng": 27.3456
     }
   ]

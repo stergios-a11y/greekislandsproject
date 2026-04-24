@@ -6,7 +6,6 @@
   "subtitle_el": "Η ήσυχη γειτόνισσα της Σαντορίνης — ο δεύτερος ψηλότερος μονόλιθος της Ευρώπης και παραλίες χωρίς πατημασιές",
   "intro": "Two hours by ferry east of Santorini, Anafi gets a fraction of the visitors and asks nothing of them. There's one Chora at 200m above the sea, around 300 year-round residents, no airport, no resorts, and a silence that feels like it must be illegal somewhere. The defining feature is Mount Kalamos — a 460-metre limestone monolith that's the second-largest in Europe after Gibraltar, with a clifftop monastery you reach by a 90-minute hike. The beaches on the south coast are wild, sheltered from the meltemi, and almost always empty. Come here when you've had enough of being entertained.",
   "intro_el": "Δύο ώρες με πλοίο ανατολικά της Σαντορίνης, η Ανάφη δέχεται μικρό κλάσμα των επισκεπτών και δεν τους ζητάει τίποτα. Μία Χώρα στα 200 μέτρα πάνω από τη θάλασσα, περίπου 300 μόνιμοι κάτοικοι, χωρίς αεροδρόμιο, χωρίς θέρετρα, και μια σιωπή που μοιάζει σαν να είναι παράνομη κάπου. Το χαρακτηριστικό του νησιού είναι ο Κάλαμος — ένας ασβεστολιθικός μονόλιθος 460 μέτρων που είναι ο δεύτερος μεγαλύτερος της Ευρώπης μετά τον Γιβραλτάρ, με μοναστήρι στην κορυφή που φτάνεις με 90 λεπτά πεζοπορίας. Οι παραλίες στη νότια ακτή είναι άγριες, προστατευμένες από το μελτέμι και σχεδόν πάντα άδειες. Έλα εδώ όταν έχεις βαρεθεί να σε ψυχαγωγούν.",
-
   "itinerary": {
     "title": "2-Day Anafi Itinerary",
     "subtitle": "Chora and the south-coast beaches on Day 1, the monolith hike on Day 2.",
@@ -38,7 +37,7 @@
           {
             "name": "Klisidi Beach",
             "name_el": "Παραλία Κλεισίδι",
-            "lat": 36.3580,
+            "lat": 36.358,
             "lng": 25.7782,
             "type": "beach",
             "desc": "The closest beach to the port — 15 minutes' walk down. Sandy, tamarisk-shaded, family-friendly. Margarita's at the back serves the best lunch on the south coast: simple, fresh, honest. Free camping was banned a few years ago; now there are a handful of small hotels.",
@@ -71,7 +70,8 @@
             "desc": "Back to Chora for dinner. The sunset over the Aegean from the Chora terraces is one of the best in the Cyclades — better than most of Santorini, and you don't need a reservation to see it.",
             "desc_el": "Επιστροφή στη Χώρα για δείπνο. Το ηλιοβασίλεμα πάνω από το Αιγαίο από τις βεράντες της Χώρας είναι από τα καλύτερα των Κυκλάδων — καλύτερο από τα περισσότερα της Σαντορίνης, και δεν χρειάζεσαι κράτηση για να το δεις."
           }
-        ]
+        ],
+        "title_el": "Χώρα & το Μονοπάτι των Παραλιών"
       },
       {
         "day": 2,
@@ -91,7 +91,7 @@
             "name": "Kalamos Monolith Hike",
             "name_el": "Πεζοπορία Μονόλιθου Καλάμου",
             "lat": 36.3403,
-            "lng": 25.8430,
+            "lng": 25.843,
             "type": "viewpoint",
             "desc": "1.5-hour ascent up the second-largest monolith in Europe (460m). Steep, exposed, with railings on the dangerous sections. Don't attempt in strong wind. Time it for late afternoon — the heat is brutal in midday and the view is best in the warm light.",
             "desc_el": "1,5 ώρα ανάβασης πάνω στον δεύτερο μεγαλύτερο μονόλιθο της Ευρώπης (460μ). Απότομη, εκτεθειμένη, με κάγκελα στα επικίνδυνα σημεία. Μην το δοκιμάσεις σε δυνατό αέρα. Συγχρόνισε για αργά το απόγευμα — η ζέστη είναι σκληρή το μεσημέρι και η θέα είναι καλύτερη στο ζεστό φως."
@@ -114,11 +114,13 @@
             "desc": "On the way back, the wildest beach on Anafi with the best view of the Kalamos monolith from sea level. One huge tamarisk tree for shade. The bus passes nearby — 10-minute walk down. No facilities at all.",
             "desc_el": "Στην επιστροφή, η πιο άγρια παραλία της Ανάφης με την καλύτερη θέα στον μονόλιθο του Καλάμου από τη θάλασσα. Ένα τεράστιο αλμυρίκι για σκιά. Το λεωφορείο περνά κοντά — 10 λεπτά με τα πόδια κάτω. Χωρίς υπηρεσίες."
           }
-        ]
+        ],
+        "title_el": "Ο Μονόλιθος & η Μονή Καλαμιώτισσας"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 2 Ημερών στην Ανάφη",
+    "subtitle_el": "Χώρα και οι παραλίες της νότιας ακτής την 1η ημέρα, η πεζοπορία στον μονόλιθο τη 2η."
   },
-
   "beaches": [
     {
       "name": "Roukounas Beach",
@@ -155,7 +157,7 @@
       "facilities_el": "Ελαφριές: η ολοήμερη ταβέρνα της Μαργαρίτας και η παραδοσιακή ταβέρνα της Βιβής. Αλμυρίκια, λίγα δωμάτια στο πίσω μέρος. 15 λεπτά με τα πόδια από το λιμάνι.",
       "desc": "The closest beach to the port and the easiest base if you don't want to climb to Chora every day. Sandy crescent with a small white chapel above. The water is calm and shallow, the food at Margarita's is genuinely good. A bit busier than Roukounas but still empty by mainland standards.",
       "desc_el": "Η πλησιέστερη παραλία στο λιμάνι και η ευκολότερη βάση αν δεν θέλεις να ανεβαίνεις στη Χώρα κάθε μέρα. Αμμώδης ημισέληνος με μικρό λευκό εκκλησάκι από πάνω. Τα νερά είναι ήρεμα και ρηχά, το φαγητό στη Μαργαρίτα είναι πραγματικά καλό. Λίγο πιο πολυσύχναστη από τον Ρουκουνά αλλά ακόμα άδεια με τα μέτρα της ηπειρωτικής χώρας.",
-      "lat": 36.3580,
+      "lat": 36.358,
       "lng": 25.7782
     },
     {

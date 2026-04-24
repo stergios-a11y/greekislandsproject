@@ -6,7 +6,6 @@
   "subtitle_el": "Η μικρότερη των Μικρών Κυκλάδων — το \"Νησί του Ήλιου\", το πιο ξηρό μέρος της Ελλάδας, αμμώδεις παραλίες και εξαιρετικές ταβέρνες",
   "intro": "8.5 square kilometres of arid limestone between Naxos and Koufonisia, Schoinoussa is locally nicknamed the 'Island of the Sun' because it gets less rain than anywhere else in Greece. The single Chora sits 1km from the port at Mersini bay — a 10-minute walk uphill. The whole island is walkable: every beach is within a 35-minute walk of Chora, the highest point is 133 metres, the topography is gentle. Reputation alert: the food here is shockingly good. The half-dozen tavernas in Chora consistently outperform what an island this small should be able to deliver.",
   "intro_el": "8,5 τετραγωνικά χιλιόμετρα ξηρού ασβεστόλιθου ανάμεσα σε Νάξο και Κουφονήσια, η Σχοινούσα ονομάζεται τοπικά \"Νησί του Ήλιου\" γιατί δέχεται λιγότερη βροχή από οπουδήποτε αλλού στην Ελλάδα. Η μόνη Χώρα βρίσκεται 1 χλμ από το λιμάνι στον κόλπο της Μερσίνης — 10 λεπτά πεζοπορίας προς τα πάνω. Όλο το νησί είναι πεζοπορητό: κάθε παραλία είναι σε απόσταση 35 λεπτών με τα πόδια από τη Χώρα, το υψηλότερο σημείο είναι στα 133 μέτρα, η τοπογραφία είναι ήπια. Προειδοποίηση φήμης: το φαγητό εδώ είναι εκπληκτικά καλό. Τα μισή ντουζίνα ταβέρνες της Χώρας ξεπερνούν συστηματικά αυτό που θα έπρεπε να μπορεί να παραδώσει ένα τόσο μικρό νησί.",
-
   "itinerary": {
     "title": "2-Day Schoinoussa Itinerary",
     "subtitle": "Chora and the eastern beaches on Day 1, the south coast on Day 2.",
@@ -19,7 +18,7 @@
           {
             "name": "Mersini Port",
             "name_el": "Λιμάνι Μερσίνης",
-            "lat": 36.8530,
+            "lat": 36.853,
             "lng": 25.5275,
             "type": "village",
             "wiki": "https://en.wikipedia.org/wiki/Schoinoussa",
@@ -62,7 +61,8 @@
             "desc": "The food on Schoinoussa is the highlight. Fava (yellow split pea purée), local goat, koftes, fresh seafood. Walk into Chora and pick whichever taverna catches your eye — the standard is uniformly high.",
             "desc_el": "Το φαγητό στη Σχοινούσα είναι το υψηλό σημείο. Φάβα, ντόπιο κατσίκι, κοφτές, φρέσκα θαλασσινά. Μπες στη Χώρα και διάλεξε όποια ταβέρνα σε τραβήξει — το επίπεδο είναι ομοιόμορφα υψηλό."
           }
-        ]
+        ],
+        "title_el": "Χώρα & οι Ανατολικές Παραλίες"
       },
       {
         "day": 2,
@@ -81,7 +81,7 @@
           {
             "name": "Aligaria Beach",
             "name_el": "Παραλία Αλιγαριά",
-            "lat": 36.8420,
+            "lat": 36.842,
             "lng": 25.5183,
             "type": "beach",
             "desc": "2km south of Chora via narrow trail to the southernmost bay. Sandy, very quiet, with two other small beaches (Kambos and Gagavi) in the same bay.",
@@ -99,17 +99,19 @@
           {
             "name": "Boat to Iraklia or Koufonisia",
             "name_el": "Βάρκα προς Ηρακλειά ή Κουφονήσια",
-            "lat": 36.8530,
+            "lat": 36.853,
             "lng": 25.5275,
             "type": "village",
             "desc": "If you have a third day, the Express Skopelitis ferry runs between all four Small Cyclades islands daily in summer. Iraklia is closer (sleepier, with the impressive Cave of Agios Ioannis); Koufonisia is more developed but with the famous Pori beach.",
             "desc_el": "Αν έχεις τρίτη μέρα, το Express Skopelitis κάνει δρομολόγια ανάμεσα στα τέσσερα Μικρά Κυκλαδίτικα νησιά καθημερινά το καλοκαίρι. Η Ηρακλειά είναι πιο κοντά (πιο νυσταγμένη, με το εντυπωσιακό Σπήλαιο Αγίου Ιωάννη)· τα Κουφονήσια είναι πιο ανεπτυγμένα αλλά με τη διάσημη παραλία Πόρι."
           }
-        ]
+        ],
+        "title_el": "Ψιλή Άμμος & η Νότια Ακτή"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 2 Ημερών στη Σχοινούσα",
+    "subtitle_el": "Χώρα και οι ανατολικές παραλίες την 1η ημέρα, η νότια ακτή τη 2η."
   },
-
   "beaches": [
     {
       "name": "Tsigouri Beach",
@@ -165,7 +167,7 @@
       "facilities_el": "Δύο ψαροταβέρνες στο νερό. Ακριβώς στο λιμάνι — βολική σε μέρες άφιξης/αναχώρησης.",
       "desc": "The port doubles as a beach — almost lagoon-calm because of the natural harbour shape. Not the most scenic but ideal for paddle-boarding and an effortless first/last swim of the trip without leaving the harbour.",
       "desc_el": "Το λιμάνι λειτουργεί και ως παραλία — σχεδόν ήρεμη ως λιμνοθάλασσα λόγω του φυσικού σχήματος του λιμανιού. Όχι η πιο γραφική αλλά ιδανική για paddle-boarding και ένα αβίαστο πρώτο/τελευταίο μπάνιο του ταξιδιού χωρίς να φύγεις από το λιμάνι.",
-      "lat": 36.8530,
+      "lat": 36.853,
       "lng": 25.5275
     },
     {

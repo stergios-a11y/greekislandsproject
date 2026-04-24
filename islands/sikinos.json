@@ -6,7 +6,6 @@
   "subtitle_el": "Παραβλεμμένη ανάμεσα σε Ίο και Φολέγανδρο — διπλά χωριά Χώρα-Κάστρο, ένα ρωμαϊκό μαυσωλείο που έγινε εκκλησία και παραλίες όπου πας με τα πόδια",
   "intro": "Sikinos is the quietest island in this part of the Cyclades — overshadowed by Ios to the east (parties) and Folegandros to the west (Instagram). The single inhabited area is the twin settlement of Chora and Kastro on a hill 3.5km above the port at Alopronia. The defining sight is Episkopi: a 3rd-century Roman mausoleum-temple that was converted into a Byzantine church in the 7th century. The whole structure is unusual enough to be classed as a UNESCO-tentative monument. Beaches are few, mostly reached by boat or trail, and almost always empty. Sikinos asks nothing and gives back the rare gift of being unbothered.",
   "intro_el": "Η Σίκινος είναι το πιο ήσυχο νησί αυτού του τμήματος των Κυκλάδων — επισκιασμένη από την Ίο ανατολικά (πάρτι) και τη Φολέγανδρο δυτικά (Instagram). Η μόνη κατοικημένη περιοχή είναι ο διπλός οικισμός Χώρας και Κάστρου σε λόφο 3,5 χλμ πάνω από το λιμάνι στην Αλοπρόνοια. Το χαρακτηριστικό αξιοθέατο είναι η Επισκοπή: ένα ρωμαϊκό μαυσωλείο-ναός του 3ου αιώνα που μετατράπηκε σε βυζαντινή εκκλησία τον 7ο αιώνα. Όλη η κατασκευή είναι αρκετά ασυνήθιστη ώστε να κατατάσσεται ως υποψήφια στην UNESCO. Οι παραλίες είναι λίγες, οι περισσότερες προσβάσιμες με βάρκα ή μονοπάτι, και σχεδόν πάντα άδειες. Η Σίκινος δεν ζητά τίποτα και ανταποδίδει το σπάνιο δώρο του να μην σε ενοχλούν.",
-
   "itinerary": {
     "title": "2-Day Sikinos Itinerary",
     "subtitle": "Chora and Episkopi on Day 1, the south-coast beaches on Day 2.",
@@ -19,7 +18,7 @@
           {
             "name": "Alopronia Port",
             "name_el": "Λιμάνι Αλοπρόνοιας",
-            "lat": 36.7250,
+            "lat": 36.725,
             "lng": 25.1486,
             "type": "village",
             "wiki": "https://en.wikipedia.org/wiki/Sikinos",
@@ -62,7 +61,8 @@
             "desc": "Family-run winery 2km southwest of Chora producing assyrtiko and an unusual local Sikinian variety. The oldest organised winemaking on the island. Tastings by appointment in summer.",
             "desc_el": "Οικογενειακό οινοποιείο 2 χλμ νοτιοδυτικά της Χώρας που παράγει ασύρτικο και μια ασυνήθιστη τοπική ποικιλία της Σικίνου. Η παλαιότερη οργανωμένη οινοπαραγωγή του νησιού. Γευσιγνωσίες κατόπιν ραντεβού το καλοκαίρι."
           }
-        ]
+        ],
+        "title_el": "Χώρα, Κάστρο & Επισκοπή"
       },
       {
         "day": 2,
@@ -72,7 +72,7 @@
           {
             "name": "Alopronia Beach",
             "name_el": "Παραλία Αλοπρόνοιας",
-            "lat": 36.7250,
+            "lat": 36.725,
             "lng": 25.1486,
             "type": "beach",
             "desc": "The port beach — sandy, sheltered, with a couple of waterfront tavernas. The only beach you can reach without walking or boating. Surprisingly clean and clear given the easy access.",
@@ -105,11 +105,13 @@
             "desc": "Walk back up to Chora for sunset from the terraces below the Pantanassa church. The view west takes in Folegandros and beyond. Dinner at one of the tavernas in the central square.",
             "desc_el": "Ανέβα ξανά στη Χώρα για ηλιοβασίλεμα από τις βεράντες κάτω από την εκκλησία Παντάνασσα. Η θέα δυτικά πιάνει τη Φολέγανδρο και πέρα. Δείπνο σε μία από τις ταβέρνες στην κεντρική πλατεία."
           }
-        ]
+        ],
+        "title_el": "Παραλίες & Εκδρομή με Σκάφος"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 2 Ημερών στη Σίκινο",
+    "subtitle_el": "Χώρα και Επισκοπή την 1η ημέρα, οι παραλίες της νότιας ακτής τη 2η."
   },
-
   "beaches": [
     {
       "name": "Alopronia Beach",
@@ -127,7 +129,7 @@
       "facilities_el": "Ελαφριές: μερικές ταβέρνες στο νερό, χωρίς οργανωμένες ξαπλώστρες. Ακριβώς στο λιμάνι.",
       "desc": "The port beach — sandy, calm, sheltered. The only beach you can walk to without effort. Surprisingly clean for a port beach. Ideal for a quick swim before or after a ferry.",
       "desc_el": "Η παραλία του λιμανιού — αμμώδης, ήρεμη, προστατευμένη. Η μόνη παραλία που μπορείς να περπατήσεις χωρίς προσπάθεια. Εκπληκτικά καθαρή για παραλία λιμανιού. Ιδανική για ένα γρήγορο μπάνιο πριν ή μετά από πλοίο.",
-      "lat": 36.7250,
+      "lat": 36.725,
       "lng": 25.1486
     },
     {
