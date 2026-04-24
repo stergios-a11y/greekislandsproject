@@ -3,7 +3,6 @@
   "name": "Salamina",
   "subtitle": "The battle that saved Europe — 480 BC, 20 minutes from Piraeus",
   "intro": "Salamina (ancient Salamis) is where the Greek fleet destroyed the Persian armada in 480 BC — arguably the most consequential naval battle in Western history. Today it's a quiet island of 39,000 residents just 20 minutes by ferry from Piraeus, a popular weekend escape for Athenians who come for the seafood tavernas, the small sandy beaches and the Faneromeni monastery. Not a tourist destination in the conventional sense — a genuine working Greek island close to the capital.",
-
   "itinerary": {
     "title": "1-Day Salamina Itinerary",
     "subtitle": "The Battle of Salamis viewpoint, Faneromeni monastery, Kanakia beach and the old capital.",
@@ -16,17 +15,76 @@
         "drive_mins": 50,
         "overnight": null,
         "stops": [
-          { "name": "Paloukia Ferry Port", "lat": 37.9567, "lng": 23.5100, "type": "harbour", "time": "09:30", "wiki": null, "desc": "Arrive by ferry from Perama (10 minutes). The crossing itself passes through the narrow strait where the battle was fought. Rent a car at the port — the island is larger than it looks." },
-          { "name": "Battle of Salamis Viewpoint", "lat": 37.9533, "lng": 23.5167, "type": "museum", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Battle_of_Salamis", "desc": "Look out from the ferry port across the strait to Piraeus — this is where the 480 BC battle was fought. Xerxes watched from the mainland as his fleet was destroyed. A monument marks the viewpoint." },
-          { "name": "Faneromeni Monastery", "lat": 37.9983, "lng": 23.4517, "type": "church", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Faneromeni_Monastery_(Salamis)", "desc": "17th-century monastery on a pine-covered hill on the west coast — the most important religious site on the island. The interior frescoes cover every surface. Beautiful setting overlooking the sea." },
-          { "name": "Lunch — Eantio Tavernas", "lat": 37.9617, "lng": 23.4867, "type": "village", "time": "13:30", "wiki": null, "desc": "Eantio, the main town on the west coast, has the best fish tavernas on the island. Athenians drive here at weekends for the lunch. Very reasonable prices." },
-          { "name": "Kanakia Beach", "lat": 37.9133, "lng": 23.4567, "type": "beach", "time": "15:00", "wiki": null, "desc": "The best organised beach on Salamina — sandy, shallow, family-friendly, with good facilities on the southwest coast. The sunset here is excellent." },
-          { "name": "Paloukia — Departure", "lat": 37.9567, "lng": 23.5100, "type": "harbour", "time": "18:00", "wiki": null, "desc": "Ferry back to Perama for the bus or metro to Athens. Ferries run every 10-15 minutes throughout the day and evening." }
+          {
+            "name": "Paloukia Ferry Port",
+            "lat": 37.9567,
+            "lng": 23.51,
+            "type": "harbour",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "Arrive by ferry from Perama (10 minutes). The crossing itself passes through the narrow strait where the battle was fought. Rent a car at the port — the island is larger than it looks.",
+            "name_el": "Λιμάνι Παλούκια",
+            "desc_el": "Άφιξη με πλοίο από το Πέραμα (10 λεπτά). Το ίδιο το πέρασμα διασχίζει το στενό όπου έγινε η μάχη. Νοίκιασε αυτοκίνητο στο λιμάνι — το νησί είναι μεγαλύτερο από ό,τι φαίνεται."
+          },
+          {
+            "name": "Battle of Salamis Viewpoint",
+            "lat": 37.9533,
+            "lng": 23.5167,
+            "type": "museum",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Battle_of_Salamis",
+            "desc": "Look out from the ferry port across the strait to Piraeus — this is where the 480 BC battle was fought. Xerxes watched from the mainland as his fleet was destroyed. A monument marks the viewpoint.",
+            "name_el": "Σημείο Θέασης Ναυμαχίας της Σαλαμίνας",
+            "desc_el": "Κοίτα από το λιμάνι απέναντι από το στενό προς τον Πειραιά — εδώ έγινε η ναυμαχία του 480 π.Χ. Ο Ξέρξης παρακολούθησε από την ηπειρωτική χώρα καθώς ο στόλος του καταστράφηκε. Μνημείο σηματοδοτεί το σημείο θέασης."
+          },
+          {
+            "name": "Faneromeni Monastery",
+            "lat": 37.9983,
+            "lng": 23.4517,
+            "type": "church",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Faneromeni_Monastery_(Salamis)",
+            "desc": "17th-century monastery on a pine-covered hill on the west coast — the most important religious site on the island. The interior frescoes cover every surface. Beautiful setting overlooking the sea.",
+            "name_el": "Μονή Φανερωμένης",
+            "desc_el": "Μονή του 17ου αιώνα σε πευκόφυτο λόφο στη δυτική ακτή — ο σημαντικότερος θρησκευτικός τόπος του νησιού. Οι εσωτερικές τοιχογραφίες καλύπτουν κάθε επιφάνεια. Όμορφο σκηνικό με θέα στη θάλασσα."
+          },
+          {
+            "name": "Lunch — Eantio Tavernas",
+            "lat": 37.9617,
+            "lng": 23.4867,
+            "type": "village",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "Eantio, the main town on the west coast, has the best fish tavernas on the island. Athenians drive here at weekends for the lunch. Very reasonable prices.",
+            "name_el": "Μεσημεριανό — Ταβέρνες Αιάντειου",
+            "desc_el": "Το Αιάντειο, η κύρια πόλη στη δυτική ακτή, έχει τις καλύτερες ψαροταβέρνες του νησιού. Οι Αθηναίοι οδηγούν εδώ τα σαββατοκύριακα για μεσημεριανό. Πολύ λογικές τιμές."
+          },
+          {
+            "name": "Kanakia Beach",
+            "lat": 37.9133,
+            "lng": 23.4567,
+            "type": "beach",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "The best organised beach on Salamina — sandy, shallow, family-friendly, with good facilities on the southwest coast. The sunset here is excellent.",
+            "name_el": "Παραλία Κανάκια",
+            "desc_el": "Η καλύτερη οργανωμένη παραλία της Σαλαμίνας — αμμώδης, ρηχή, οικογενειακή, με καλές ανέσεις στη νοτιοδυτική ακτή. Το ηλιοβασίλεμα εδώ είναι εξαιρετικό."
+          },
+          {
+            "name": "Paloukia — Departure",
+            "lat": 37.9567,
+            "lng": 23.51,
+            "type": "harbour",
+            "time": "18:00",
+            "wiki": null,
+            "desc": "Ferry back to Perama for the bus or metro to Athens. Ferries run every 10-15 minutes throughout the day and evening.",
+            "name_el": "Παλούκια — Αναχώρηση",
+            "desc_el": "Πλοίο επιστροφής στο Πέραμα για το λεωφορείο ή το μετρό προς την Αθήνα. Τα πλοία εκτελούν δρομολόγια κάθε 10-15 λεπτά όλη μέρα και βράδυ."
+          }
         ]
       }
     ]
   },
-
   "beaches": [
     {
       "name": "Kanakia Beach",
@@ -39,7 +97,14 @@
       "facilities": "Good: sunbeds, beach bar, tavernas, parking.",
       "desc": "The best organised beach on Salamina — sandy, shallow and well-equipped on the southwest coast. Popular with Athenian weekend day-trippers. The sunset over the Saronic is a good reason to stay late.",
       "commons": null,
-      "lat": 37.9133, "lng": 23.4567
+      "lat": 37.9133,
+      "lng": 23.4567,
+      "name_el": "Παραλία Κανάκια",
+      "desc_el": "Η καλύτερη οργανωμένη παραλία της Σαλαμίνας — αμμώδης, ρηχή και καλά εξοπλισμένη στη νοτιοδυτική ακτή. Δημοφιλής στους Αθηναίους σαββατοκυριακάτικους ημερήσιους επισκέπτες. Το ηλιοβασίλεμα πάνω από τον Σαρωνικό είναι καλός λόγος να μείνεις μέχρι αργά.",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχά — ασφαλές για παιδιά",
+      "facing_el": "Νοτιοδυτικό προσανατολισμό — ανοιχτή θάλασσα, καλά ηλιοβασιλέματα",
+      "facilities_el": "Καλές: ξαπλώστρες, beach bar, ταβέρνες, parking."
     },
     {
       "name": "Peristeria Beach",
@@ -52,7 +117,17 @@
       "facilities": "Basic: small taverna, some sunbeds. Quieter than Kanakia.",
       "desc": "A smaller, quieter beach on the west coast — sandy and calm, with fewer visitors than Kanakia. Good alternative when Kanakia is crowded on summer weekends.",
       "commons": null,
-      "lat": 37.9317, "lng": 23.4350
+      "lat": 37.9317,
+      "lng": 23.435,
+      "name_el": "Παραλία Περιστέρια",
+      "desc_el": "Μια μικρότερη, πιο ήσυχη παραλία στη δυτική ακτή — αμμώδης και ήρεμη, με λιγότερους επισκέπτες από τα Κανάκια. Καλή εναλλακτική όταν τα Κανάκια είναι πολυσύχναστα τα σαββατοκύριακα του καλοκαιριού.",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχά — ήρεμα",
+      "facing_el": "Δυτικό προσανατολισμό — προστατευμένος κόλπος",
+      "facilities_el": "Βασικές: μικρή ταβέρνα, κάποιες ξαπλώστρες. Πιο ήσυχη από τα Κανάκια."
     }
-  ]
+  ],
+  "name_el": "Σαλαμίνα",
+  "subtitle_el": "Η μάχη που έσωσε την Ευρώπη — 480 π.Χ., 20 λεπτά από τον Πειραιά",
+  "intro_el": "Η Σαλαμίνα (αρχαία Σαλαμίς) είναι ο τόπος όπου ο ελληνικός στόλος κατέστρεψε την περσική αρμάδα το 480 π.Χ. — αναμφισβήτητα η πιο καθοριστική ναυμαχία της δυτικής ιστορίας. Σήμερα είναι ένα ήσυχο νησί με 39.000 κατοίκους, μόλις 20 λεπτά με πλοίο από τον Πειραιά, δημοφιλής σαββατοκυριακάτικη απόδραση για τους Αθηναίους που έρχονται για τις ψαροταβέρνες, τις μικρές αμμώδεις παραλίες και τη μονή της Φανερωμένης. Δεν είναι τουριστικός προορισμός με τη συμβατική έννοια — ένα γνήσιο εργαζόμενο ελληνικό νησί κοντά στην πρωτεύουσα."
 }

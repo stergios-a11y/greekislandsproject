@@ -21,7 +21,9 @@
             "type": "harbour",
             "time": "10:00",
             "wiki": null,
-            "desc": "Ferry port. No particular charm but a good base for picking up a rental car."
+            "desc": "Ferry port. No particular charm but a good base for picking up a rental car.",
+            "name_el": "Καμαριώτισσα (λιμάνι)",
+            "desc_el": "Λιμάνι πλοίων. Χωρίς ιδιαίτερη γοητεία αλλά καλή βάση για να νοικιάσεις αυτοκίνητο."
           },
           {
             "name": "Sanctuary of the Great Gods",
@@ -30,7 +32,9 @@
             "type": "museum",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Sanctuary_of_the_Great_Gods",
-            "desc": "The most important mystery cult in antiquity. Extensive ruins of temples and initiation sites. The famous Winged Victory was found here."
+            "desc": "The most important mystery cult in antiquity. Extensive ruins of temples and initiation sites. The famous Winged Victory was found here.",
+            "name_el": "Ιερό των Μεγάλων Θεών",
+            "desc_el": "Η σημαντικότερη μυστηριακή λατρεία της αρχαιότητας. Εκτεταμένα ερείπια ναών και τόπων μύησης. Η διάσημη Νίκη βρέθηκε εδώ."
           },
           {
             "name": "Archaeological Museum",
@@ -39,7 +43,9 @@
             "type": "museum",
             "time": "12:30",
             "wiki": null,
-            "desc": "Small museum at the sanctuary entrance with excellent finds from the site."
+            "desc": "Small museum at the sanctuary entrance with excellent finds from the site.",
+            "name_el": "Αρχαιολογικό Μουσείο",
+            "desc_el": "Μικρό μουσείο στην είσοδο του ιερού με εξαιρετικά ευρήματα από τον χώρο."
           },
           {
             "name": "Chora",
@@ -48,7 +54,9 @@
             "type": "village",
             "time": "15:00",
             "wiki": "https://en.wikipedia.org/wiki/Chora_(Samothrace)",
-            "desc": "Medieval capital tucked into a mountain ravine — invisible from the sea. Stone-and-slate houses, Byzantine castle ruins."
+            "desc": "Medieval capital tucked into a mountain ravine — invisible from the sea. Stone-and-slate houses, Byzantine castle ruins.",
+            "name_el": "Χώρα",
+            "desc_el": "Μεσαιωνική πρωτεύουσα χωμένη σε ορεινή χαράδρα — αόρατη από τη θάλασσα. Σπίτια από πέτρα και σχιστόλιθο, ερείπια βυζαντινού κάστρου."
           },
           {
             "name": "Dinner — Lefkada",
@@ -57,7 +65,9 @@
             "type": "village",
             "time": "20:30",
             "wiki": null,
-            "desc": "Traditional taverna in Chora. Goat stew, local cheese, Samothracian herbs."
+            "desc": "Traditional taverna in Chora. Goat stew, local cheese, Samothracian herbs.",
+            "name_el": "Δείπνο — Λευκάδα",
+            "desc_el": "Παραδοσιακή ταβέρνα στη Χώρα. Κατσίκι στιφάδο, τοπικό τυρί, σαμοθρακίτικα βότανα."
           }
         ]
       },
@@ -76,7 +86,9 @@
             "type": "village",
             "time": "10:00",
             "wiki": null,
-            "desc": "Spa village with sulfur hot springs. The trailhead for most waterfall hikes."
+            "desc": "Spa village with sulfur hot springs. The trailhead for most waterfall hikes.",
+            "name_el": "Θέρμα (Λουτρά)",
+            "desc_el": "Ιαματικό χωριό με θειούχες ιαματικές πηγές. Η αρχή για τις περισσότερες πεζοπορίες σε καταρράκτες."
           },
           {
             "name": "Fonias River Vathres",
@@ -85,7 +97,9 @@
             "type": "beach",
             "time": "11:30",
             "wiki": null,
-            "desc": "The famous waterfall pools (vathres). Hike 30 min along the river past ice-cold swimming pools and cascades. Unique in the Aegean."
+            "desc": "The famous waterfall pools (vathres). Hike 30 min along the river past ice-cold swimming pools and cascades. Unique in the Aegean.",
+            "name_el": "Βάθρες Φωνιά",
+            "desc_el": "Οι διάσημες πισίνες καταρράκτη (βάθρες). Πεζοπορία 30 λεπτών στο ποτάμι περνώντας παγωμένες πισίνες κολύμβησης και καταρράκτες. Μοναδικό στο Αιγαίο."
           },
           {
             "name": "Lunch — 1900",
@@ -94,7 +108,9 @@
             "type": "village",
             "time": "15:00",
             "wiki": null,
-            "desc": "Therma taverna serving kid goat, local goat cheese, and wild greens."
+            "desc": "Therma taverna serving kid goat, local goat cheese, and wild greens.",
+            "name_el": "Μεσημεριανό — 1900",
+            "desc_el": "Ταβέρνα των Θέρμων που σερβίρει κατσικάκι, τοπικό κατσικίσιο τυρί και άγρια χόρτα."
           },
           {
             "name": "Therma Thermal Springs",
@@ -103,7 +119,9 @@
             "type": "village",
             "time": "17:00",
             "wiki": null,
-            "desc": "Public outdoor thermal baths in the village. Small fee, open until late."
+            "desc": "Public outdoor thermal baths in the village. Small fee, open until late.",
+            "name_el": "Ιαματικές Πηγές Θερμών",
+            "desc_el": "Δημόσια υπαίθρια ιαματικά λουτρά στο χωριό. Μικρή αμοιβή, ανοιχτά μέχρι αργά."
           }
         ]
       },
@@ -122,7 +140,9 @@
             "type": "beach",
             "time": "10:30",
             "wiki": null,
-            "desc": "Samothrace's only proper sandy beach, on the south coast. Long, wild, 30-min drive from Chora."
+            "desc": "Samothrace's only proper sandy beach, on the south coast. Long, wild, 30-min drive from Chora.",
+            "name_el": "Παχιά Άμμος",
+            "desc_el": "Η μοναδική κανονική αμμώδης παραλία της Σαμοθράκης, στη νότια ακτή. Μακρά, άγρια, 30 λεπτά οδήγηση από τη Χώρα."
           },
           {
             "name": "Kremasto Waterfall",
@@ -131,7 +151,9 @@
             "type": "beach",
             "time": "13:30",
             "wiki": null,
-            "desc": "Spectacular 35-m waterfall that drops into the sea. Walk along the beach for 15 min. Peculiar to Samothrace."
+            "desc": "Spectacular 35-m waterfall that drops into the sea. Walk along the beach for 15 min. Peculiar to Samothrace.",
+            "name_el": "Καταρράκτης Κρεμαστός",
+            "desc_el": "Εντυπωσιακός καταρράκτης 35 μέτρων που πέφτει στη θάλασσα. Περπάτησε στην παραλία 15 λεπτά. Χαρακτηριστικός της Σαμοθράκης."
           },
           {
             "name": "Lakkoma Beach",
@@ -140,7 +162,9 @@
             "type": "beach",
             "time": "15:30",
             "wiki": null,
-            "desc": "Pebble beach on the southwest coast. A few tavernas, good for late lunch before the ferry."
+            "desc": "Pebble beach on the southwest coast. A few tavernas, good for late lunch before the ferry.",
+            "name_el": "Παραλία Λάκκωμα",
+            "desc_el": "Βότσαλη παραλία στη νοτιοδυτική ακτή. Μερικές ταβέρνες, καλή για όψιμο μεσημεριανό πριν το πλοίο."
           }
         ]
       }
@@ -157,7 +181,13 @@
       "facing": "South — can be windy",
       "facilities": "Canteen, umbrellas",
       "wiki": null,
-      "desc": "Samothrace's only long sandy beach. Golden dunes, rarely crowded."
+      "desc": "Samothrace's only long sandy beach. Golden dunes, rarely crowded.",
+      "name_el": "Παχιά Άμμος",
+      "desc_el": "Η μοναδική μακρά αμμώδης παραλία της Σαμοθράκης. Χρυσές αμμοθίνες, σπάνια πολυσύχναστη.",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Σταδιακή",
+      "facing_el": "Νότια — μπορεί να είναι ανεμώδης",
+      "facilities_el": "Καντίνα, ομπρέλες"
     },
     {
       "name": "Vatos",
@@ -169,7 +199,13 @@
       "facing": "South",
       "facilities": "None — naturist friendly",
       "wiki": null,
-      "desc": "Remote south coast pebble beach. Clear water, accessed by a rough 4x4 track."
+      "desc": "Remote south coast pebble beach. Clear water, accessed by a rough 4x4 track.",
+      "name_el": "Βάτος",
+      "desc_el": "Απομακρυσμένη βότσαλη παραλία της νότιας ακτής. Διαυγή νερά, προσβάσιμη με κακή 4x4 διαδρομή.",
+      "type_el": "Βότσαλα",
+      "depth_el": "Βαθιά",
+      "facing_el": "Νότια",
+      "facilities_el": "Καμία — φιλική προς γυμνιστές"
     },
     {
       "name": "Kipos",
@@ -181,7 +217,16 @@
       "facing": "East",
       "facilities": "One taverna",
       "wiki": null,
-      "desc": "End-of-the-road beach with views across to Turkey. Powerful currents — experienced swimmers only."
+      "desc": "End-of-the-road beach with views across to Turkey. Powerful currents — experienced swimmers only.",
+      "name_el": "Κήπος",
+      "desc_el": "Παραλία στο τέλος του δρόμου με θέες απέναντι στην Τουρκία. Ισχυρά ρεύματα — μόνο για έμπειρους κολυμβητές.",
+      "type_el": "Μεγάλα βότσαλα",
+      "depth_el": "Βαθιά",
+      "facing_el": "Ανατολικά",
+      "facilities_el": "Μία ταβέρνα"
     }
-  ]
+  ],
+  "name_el": "Σαμοθράκη",
+  "subtitle_el": "Καταρράκτες, αρχαία μυστήρια, και η ψηλότερη κορυφή του Αιγαίου",
+  "intro_el": "Η Σαμοθράκη είναι ένα νησί με καταρράκτες, άγριες ορεινές πισίνες και αρχαίο μυστήριο. Το Όρος Σάος υψώνεται κατευθείαν από τη θάλασσα στα 1.611 μέτρα, η ψηλότερη κορυφή κάθε αιγαιοπελαγίτικου νησιού. Το Ιερό των Μεγάλων Θεών ήταν η σημαντικότερη μυστική θρησκευτική λατρεία της αρχαιότητας, στην οποία συμμετείχαν όλοι από τον Ηρόδοτο μέχρι τον Φίλιππο Β' της Μακεδονίας. Η Νίκη της Σαμοθράκης (τώρα στο Λούβρο) βρέθηκε εδώ. Σήμερα το νησί παραμένει πεισματικά μη τουριστικό — χωρίς αεροδρόμιο, ισχυροί άνεμοι, βουνοπλαγιές με κατσίκες."
 }
