@@ -2,80 +2,191 @@
   "key": "ios",
   "name": "Ios",
   "subtitle": "The party Cyclades — Mylopotas beach, Homer's tomb and the finest nightlife in the archipelago",
-  "intro": "Ios has been the party island of the Cyclades since the 1970s. Mylopotas is one of the longest and finest sandy beaches in Greece. The Chora is beautiful — a hill of white lanes and blue domes that most visitors miss entirely because they stay on the beach. Homer is said to be buried here. Come for the beach and the night out, and don't overlook the surprisingly beautiful town above it.",
-
+  "intro": "Ios has the strongest reputation-gap in the Cyclades. Its 1970s hippie-trail legacy and 1990s Australian party scene gave it a 'just for drunk 19-year-olds' image that's wildly out of date. The truth: Ios has one of the most beautiful Chora in Greece — a white Cycladic village ringed by 12 surviving windmills, 3500 years of archaeology (Skarkos is a UNESCO-candidate Early Cycladic site), and Homer's reputed tomb on the northern cliffs. It also has two of the finest beaches in the Cyclades: Mylopotas (1.5km of golden sand, Blue Flag, family-friendly despite the reputation) and Manganari (a string of sheltered sandy coves on the south coast). Yes, Chora turns loud after midnight in August — but the village is genuinely beautiful before then, and everything outside Chora is quiet and lovely. Come for the beaches; stay for the archaeology; maybe go out late on the last night.",
   "itinerary": {
     "title": "3-Day Ios Itinerary",
     "subtitle": "Mylopotas beach, Ios Chora by day and night, Homer's tomb and the quieter beaches of the north.",
     "days": [
       {
         "day": 1,
-        "title": "Chora & Mylopotas",
-        "color": "#1B4F8A",
-        "km": 10,
-        "drive_mins": 15,
-        "overnight": "Ios Chora",
         "stops": [
-          { "name": "Ios Chora", "lat": 36.7217, "lng": 25.2817, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Ios_Town", "desc": "The hilltop capital — far more beautiful than its party reputation suggests. Walk the white lanes before the bars open. The view from the windmills at the top over the caldera is excellent." },
-          { "name": "Skarkos Hill", "lat": 36.7267, "lng": 25.2817, "type": "museum", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Skarkos", "desc": "Early Bronze Age settlement (3rd millennium BC) on a hill above the Chora — one of the best-preserved prehistoric sites in the Cyclades. Views over the whole island." },
-          { "name": "Mylopotas Beach", "lat": 36.7033, "lng": 25.2883, "type": "beach", "time": "12:00", "wiki": "https://en.wikipedia.org/wiki/Mylopotas_beach", "desc": "One of the finest beaches in the Cyclades — 1.5km of fine golden sand, shallow turquoise water and the most energetic beach-bar scene in Greece. Everything is here: water sports, beach clubs, excellent tavernas. The party starts at the beach." }
+          {
+            "name": "Ios Port (Gialos)",
+            "name_el": "Λιμάνι Ίου (Γιαλός)",
+            "desc": "Ferries land at this small working port. Much quieter than Chora above — a dozen tavernas along the harbor, hotels, the long Gialos beach at the port's edge (5-min walk). Octopus Tree is a tiny harbor-front taverna beloved by returning visitors — no indoor seating, closes by late September, great fried small fish. Rent a scooter or car here; Ios is small but the good beaches need wheels.",
+            "desc_el": "Τα πλοία φτάνουν σε αυτό το μικρό εργαζόμενο λιμάνι. Πολύ πιο ήσυχο από τη Χώρα από πάνω — μια ντουζίνα ταβέρνες κατά μήκος του λιμανιού, ξενοδοχεία, η μακριά παραλία Γιαλός στην άκρη του λιμανιού (5 λεπτά με τα πόδια). Το Octopus Tree είναι μια μικροσκοπική ταβέρνα στο λιμάνι αγαπητή σε όσους επιστρέφουν — χωρίς εσωτερική καθισιά, κλείνει μέχρι τα τέλη Σεπτεμβρίου, εξαιρετικά τηγανιτά μαριδάκια. Νοίκιασε σκούτερ ή αυτοκίνητο εδώ· η Ίος είναι μικρή αλλά οι καλές παραλίες θέλουν τροχούς.",
+            "lat": 36.7217,
+            "lng": 25.2733
+          },
+          {
+            "name": "Ios Chora (village)",
+            "name_el": "Χώρα Ίου",
+            "desc": "One of the most beautiful Chora in the Cyclades, though most partiers never notice. Whitewashed, car-free, terraced up a small hill, topped by the windmills. During the day (up to ~10pm) it's genuinely charming: stone-paved alleys, marble steps, cats, bougainvillea. After midnight in August the bar scene is extreme. Walk the entire village from port-side entrance to the windmill square at sunset; grab a table at any café. The Elytis Theatre is a stone amphitheater carved into the hill, free to visit.",
+            "desc_el": "Μία από τις ομορφότερες Χώρες των Κυκλάδων, αν και οι περισσότεροι πάρτι-κόσμος δεν το προσέχουν. Ασβεστωμένη, χωρίς αυτοκίνητα, αναβαθμισμένη σε μικρό λόφο, με τους ανεμόμυλους στην κορυφή. Κατά τη διάρκεια της ημέρας (μέχρι ~10μμ) είναι γνήσια γοητευτική: πλακόστρωτα δρομάκια, μαρμάρινα σκαλιά, γάτες, μπουκαμβίλιες. Μετά τα μεσάνυχτα τον Αύγουστο η σκηνή μπαρ είναι ακραία. Περπάτα όλο το χωριό από την είσοδο-λιμάνι μέχρι την πλατεία των ανεμόμυλων στο ηλιοβασίλεμα· πιάσε τραπέζι σε οποιοδήποτε café. Το Θέατρο Ελύτη είναι ένα πέτρινο αμφιθέατρο λαξευμένο στον λόφο, δωρεάν επίσκεψη.",
+            "lat": 36.7217,
+            "lng": 25.2817
+          },
+          {
+            "name": "Panagia Gremiotissa (cliff church)",
+            "name_el": "Παναγία Γκρεμιώτισσα",
+            "desc": "A whitewashed chapel perched on Chora's highest cliff since 1797. The icon here is said to have floated in from Smyrna, which gave rise to the tradition of pilgrims bringing icons back from Asia Minor. Palm trees in the courtyard are unusual for a Cycladic church; the panoramic sunset view over Mylopotas bay is the real reason most people climb up. Go 30 min before sunset for the best light on Chora below.",
+            "desc_el": "Ένα ασβεστωμένο εκκλησάκι σκαρφαλωμένο στον ψηλότερο γκρεμό της Χώρας από το 1797. Η εικόνα εδώ λέγεται ότι επέπλευσε από τη Σμύρνη, που γέννησε την παράδοση των προσκυνητών να φέρνουν εικόνες πίσω από τη Μικρά Ασία. Οι φοίνικες στην αυλή είναι ασυνήθιστοι για κυκλαδίτικη εκκλησία· η πανοραμική θέα ηλιοβασιλέματος πάνω από τον κόλπο του Μυλοπότα είναι ο αληθινός λόγος που σκαρφαλώνει ο περισσότερος κόσμος. Πήγαινε 30 λεπτά πριν το ηλιοβασίλεμα για το καλύτερο φως στη Χώρα από κάτω.",
+            "lat": 36.7233,
+            "lng": 25.2825
+          },
+          {
+            "name": "Windmill Square (sunset point)",
+            "name_el": "Πλατεία Ανεμόμυλων (σημείο ηλιοβασιλέματος)",
+            "desc": "At the top of Chora, 12 surviving windmills ring a small plaza — restored ones alongside romantically decaying ones. They ground wheat and barley for the island until the 1960s. The view extends across valleys to the sea; this and Gremiotissa are the two classic sunset spots. Steps Bar spills down the marble stairs beside the square with pillows and handmade carpets — a perfect pre-dinner drink.",
+            "desc_el": "Στην κορυφή της Χώρας, 12 σωζόμενοι ανεμόμυλοι περιβάλλουν μια μικρή πλατεία — αναστηλωμένοι δίπλα σε ρομαντικά ερειπωμένους. Άλεθαν σιτάρι και κριθάρι για το νησί μέχρι τη δεκαετία του 1960. Η θέα εκτείνεται στις κοιλάδες μέχρι τη θάλασσα· αυτό και η Γκρεμιώτισσα είναι τα δύο κλασικά σημεία ηλιοβασιλέματος. Το Steps Bar χύνεται στα μαρμάρινα σκαλιά δίπλα στην πλατεία με μαξιλάρια και χειροποίητα χαλιά — τέλειο ποτό πριν το δείπνο.",
+            "lat": 36.7228,
+            "lng": 25.282
+          },
+          {
+            "name": "Dinner — Katogi (Chora)",
+            "name_el": "Δείπνο — Κατώγι (Χώρα)",
+            "desc": "The standout modern restaurant on Ios, in a cozy stone-walled room in Chora. Creative Greek meze — modern takes on classics, short rotating menu, exceptional wine list. Book ahead (2-3 days in August). For something more traditional at lower prices, The Nest in the main street does reliable Greek classics; for a true taverna experience, Lord Byron around the corner has been a Chora fixture since 1995.",
+            "desc_el": "Το κορυφαίο σύγχρονο εστιατόριο της Ίου, σε ένα ζεστό δωμάτιο με πέτρινους τοίχους στη Χώρα. Δημιουργικοί ελληνικοί μεζέδες — σύγχρονες εκδοχές κλασικών, σύντομο εναλλασσόμενο μενού, εξαιρετική λίστα κρασιών. Κάνε κράτηση (2-3 ημέρες τον Αύγουστο). Για κάτι πιο παραδοσιακό σε χαμηλότερες τιμές, το The Nest στον κεντρικό δρόμο κάνει αξιόπιστα ελληνικά κλασικά· για γνήσια ταβέρνα-εμπειρία, το Lord Byron στη γωνία είναι σταθερός κάτοικος της Χώρας από το 1995.",
+            "lat": 36.7217,
+            "lng": 25.2817
+          }
         ]
       },
       {
         "day": 2,
-        "title": "Homer's Tomb & the North",
-        "color": "#C0522A",
-        "km": 20,
-        "drive_mins": 25,
-        "overnight": "Ios Chora",
         "stops": [
-          { "name": "Homer's Tomb", "lat": 36.7583, "lng": 25.2717, "type": "museum", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Ios", "desc": "The ancient tomb said to belong to Homer — a simple structure on a hillside in the north of the island. Whether it really is his grave is disputed, but the hill and the view are worth the drive." },
-          { "name": "Plakoto Beach", "lat": 36.7700, "lng": 25.2933, "type": "beach", "time": "11:30", "wiki": null, "desc": "Remote wild beach on the north coast — pebble, crystal clear, no facilities. The antidote to Mylopotas. Almost always empty." },
-          { "name": "Theodotis Beach", "lat": 36.7483, "lng": 25.3250, "type": "beach", "time": "14:00", "wiki": null, "desc": "Sandy beach on the northeast coast accessible by a rough road — calm, clear and far quieter than the south coast. Good for those wanting to escape the Mylopotas crowds." },
-          { "name": "Ios Chora Night", "lat": 36.7217, "lng": 25.2817, "type": "city", "time": "23:00", "wiki": null, "desc": "The Chora at night — the most concentrated bar scene in the Cyclades in a genuinely beautiful Cycladic village. Three streets of bars, good music, and crowds from across Europe." }
+          {
+            "name": "Skarkos archaeological site",
+            "name_el": "Αρχαιολογικός χώρος Σκάρκος",
+            "desc": "A 40-minute walk from Chora (or short drive) to this Early Cycladic Bronze Age settlement — 2700-2300 BC. Discovered in 1984, it's one of the most complete early Cycladic sites anywhere: a full town with streets, two-story houses, workshops, drainage. The Europa Nostra award-winning restoration lets you walk through the ancient street grid. Small site, 30 minutes is enough. Open 8:30-15:30, closed Tuesdays.",
+            "desc_el": "Μια 40λεπτη πεζοπορία από τη Χώρα (ή σύντομη διαδρομή με αυτοκίνητο) σε αυτόν τον Πρωτοκυκλαδικό οικισμό της Εποχής του Χαλκού — 2700-2300 π.Χ. Ανακαλύφθηκε το 1984, είναι ένας από τους πληρέστερους πρωτοκυκλαδικούς χώρους οπουδήποτε: μια πλήρης πόλη με δρόμους, διώροφα σπίτια, εργαστήρια, αποχέτευση. Η βραβευμένη με Europa Nostra αναστήλωση σου επιτρέπει να περπατήσεις μέσα από το αρχαίο οδικό δίκτυο. Μικρός χώρος, 30 λεπτά αρκούν. Ανοιχτός 8:30-15:30, κλειστός Τρίτες.",
+            "lat": 36.7267,
+            "lng": 25.2817
+          },
+          {
+            "name": "Homer's Tomb (Plakotos)",
+            "name_el": "Τάφος Ομήρου (Πλακωτός)",
+            "desc": "At the northern tip of the island, above the ruined village of Plakotos, stand the remains of a Hellenistic tower on the hill of Psathopyrgos — traditionally identified as Homer's burial place. Pausanias recorded the Delphic oracle's prophecy that Homer would be buried on Ios, where his mother Klymene was from. The identification is legend, not proof, but the spot is stunning: cliffs plunging to the Aegean, Sikinos visible across the channel, absolute silence. Rough 15-min road from the nearest parking.",
+            "desc_el": "Στο βόρειο άκρο του νησιού, πάνω από το ερειπωμένο χωριό Πλακωτός, βρίσκονται τα υπολείμματα ενός ελληνιστικού πύργου στον λόφο του Ψαθόπυργου — παραδοσιακά ταυτισμένος ως ο τόπος ταφής του Ομήρου. Ο Παυσανίας κατέγραψε την προφητεία του Δελφικού μαντείου ότι ο Όμηρος θα θαφτεί στην Ίο, από όπου καταγόταν η μητέρα του Κλυμένη. Η ταύτιση είναι θρύλος, όχι απόδειξη, αλλά το σημείο είναι εντυπωσιακό: γκρεμοί που βυθίζονται στο Αιγαίο, ορατή η Σίκινος απέναντι από το κανάλι, απόλυτη σιωπή. Ανώμαλη 15λεπτη διαδρομή από το πλησιέστερο parking.",
+            "lat": 36.7583,
+            "lng": 25.2717
+          },
+          {
+            "name": "Paleokastro (Venetian castle)",
+            "name_el": "Παλαιόκαστρο",
+            "desc": "A dramatic cliff-top Venetian fortress in the island's remote northeast, built by Marco Crispo in 1397 on top of an earlier Byzantine stronghold. Originally guarded the sea routes to Crete. Outer walls and the chapel of Panagia Paleokastritsa survive. The trail to the top runs along cliff edges with sweeping views toward Naxos, Amorgos, and Paros. Good half-day outing combined with Agia Theodoti beach below.",
+            "desc_el": "Ένα δραματικό βενετσιάνικο φρούριο στην κορυφή γκρεμού στον απομακρυσμένο βορειοανατολικό του νησιού, χτισμένο από τον Μάρκο Κρίσπο το 1397 πάνω σε προηγούμενο βυζαντινό οχυρό. Αρχικά φύλαγε τις θαλάσσιες διαδρομές προς την Κρήτη. Τα εξωτερικά τείχη και το εκκλησάκι της Παναγίας Παλαιοκαστρίτσας σώζονται. Το μονοπάτι προς την κορυφή τρέχει κατά μήκος γκρεμών με σαρωτικές θέες προς Νάξο, Αμοργό και Πάρο. Καλή εκδρομή μισής ημέρας σε συνδυασμό με την παραλία της Αγίας Θεοδοτής από κάτω.",
+            "lat": 36.7525,
+            "lng": 25.3175
+          },
+          {
+            "name": "Lunch — Polydoros (Koumbara Beach)",
+            "name_el": "Μεσημεριανό — Πολύδωρος (Παραλία Κουμπάρα)",
+            "desc": "Open since 1986, this family-run taverna on the small beach north of the port has survived Ios's every trend. Outdoor tables face the sea; the menu rotates with what's available — stuffed pork rolls, oven-baked eggplant with cheese, fresh grilled fish. Honest, tested, reasonably priced by Cycladic standards. Combine with a swim at Koumbara, a rocky golden-sand cove with clearer water than Mylopotas.",
+            "desc_el": "Ανοιχτό από το 1986, αυτή η οικογενειακή ταβέρνα στη μικρή παραλία βόρεια του λιμανιού έχει επιβιώσει κάθε τάση της Ίου. Εξωτερικά τραπέζια κοιτούν τη θάλασσα· το μενού εναλλάσσεται με ό,τι είναι διαθέσιμο — ρολά χοιρινού γεμιστά, μελιτζάνα φούρνου με τυρί, φρέσκο ψάρι στη σχάρα. Τίμιο, δοκιμασμένο, σε λογικές τιμές με κυκλαδίτικα μέτρα. Συνδύασε με μπάνιο στην Κουμπάρα, έναν βραχώδη κόλπο με χρυσή άμμο με καθαρότερα νερά από τον Μυλοπότα.",
+            "lat": 36.7239,
+            "lng": 25.2694
+          },
+          {
+            "name": "Mylopotas Beach (afternoon)",
+            "name_el": "Παραλία Μυλοπότας",
+            "desc": "1.5km of golden sand, 8 minutes south of Chora by car. This is both Ios's best beach and its most developed — beach bars, water sports, family-friendly shallow water. Blue Flag certified. The scene is livelier here than Chora during the day and calmer after dark. Drakos at the far (south) end has been a family-run seafood taverna since 1963 — octopus on the rope outside, seafood pasta, whole fresh fish. The single best place to eat on the entire bay.",
+            "desc_el": "1,5 χλμ χρυσής άμμου, 8 λεπτά νότια της Χώρας με αυτοκίνητο. Αυτή είναι και η καλύτερη παραλία της Ίου και η πιο ανεπτυγμένη — beach bars, θαλάσσια σπορ, οικογενειακά ρηχά νερά. Πιστοποιημένη με Γαλάζια Σημαία. Η σκηνή είναι πιο ζωντανή εδώ από τη Χώρα την ημέρα και πιο ήρεμη το βράδυ. Το Drakos στο μακρινό (νότιο) άκρο είναι οικογενειακή ψαροταβέρνα από το 1963 — χταπόδι στο σκοινί έξω, θαλασσινά ζυμαρικά, φρέσκο ψάρι ολόκληρο. Το καλύτερο σημείο για φαγητό σε όλο τον κόλπο.",
+            "lat": 36.7083,
+            "lng": 25.2928
+          }
         ]
       },
       {
         "day": 3,
-        "title": "Manganari & Departure",
-        "color": "#5A7A3A",
-        "km": 25,
-        "drive_mins": 35,
-        "overnight": null,
         "stops": [
-          { "name": "Manganari Beach", "lat": 36.6700, "lng": 25.3150, "type": "beach", "time": "10:00", "wiki": null, "desc": "The finest beach on Ios — a series of sandy coves at the southern tip, accessible by boat from the port or by a rough road. Clear, warm, turquoise water and far fewer people than Mylopotas." },
-          { "name": "Ios Port (Gialos)", "lat": 36.7217, "lng": 25.2733, "type": "harbour", "time": "15:30", "wiki": null, "desc": "Ferry from Ios to Piraeus, Santorini, Naxos or Folegandros." }
+          {
+            "name": "Manganari Beach (south coast)",
+            "name_el": "Παραλία Μαγγανάρι",
+            "desc": "The finest beach on Ios — a string of four sheltered sandy coves on the southern tip, reached by a 25-min scenic drive from Chora or a summer boat from Mylopotas. Crystal-clear turquoise water, gradual shallow entry, and far fewer people than Mylopotas. Venus Restaurant and Bar, family-run, sits in the middle of the beach with fresh homemade food and cool shade. Plan a full day.",
+            "desc_el": "Η καλύτερη παραλία της Ίου — σειρά τεσσάρων προστατευμένων αμμώδων κόλπων στο νότιο άκρο, προσβάσιμη με 25λεπτη γραφική διαδρομή από τη Χώρα ή καλοκαιρινή βάρκα από τον Μυλοπότα. Κρυστάλλινα τιρκουάζ νερά, σταδιακή ρηχή είσοδος, και πολύ λιγότερος κόσμος από τον Μυλοπότα. Το Venus Restaurant and Bar, οικογενειακό, βρίσκεται στη μέση της παραλίας με φρέσκο σπιτικό φαγητό και δροσερή σκιά. Σχεδίασε ολόκληρη ημέρα.",
+            "lat": 36.6675,
+            "lng": 25.3178
+          },
+          {
+            "name": "Return to port — Departure",
+            "name_el": "Επιστροφή στο λιμάνι — Αναχώρηση",
+            "desc": "Back to Gialos for the ferry. Ios sits squarely on the main Cycladic line: frequent fast boats to Santorini (45 min), Mykonos (1h 30min), Paros (1h 15min), and Piraeus (6h direct, 8h via Paros). Last frappe at the harbor — Yialou Beach Bar on Gialos beach has the best cheeseburger on the island if you have time before the boat.",
+            "desc_el": "Επιστροφή στον Γιαλό για το πλοίο. Η Ίος κάθεται ακριβώς στην κύρια κυκλαδίτικη γραμμή: συχνά γρήγορα σκάφη προς Σαντορίνη (45 λεπτά), Μύκονο (1ώρα 30λεπτά), Πάρο (1ώρα 15λεπτά), και Πειραιά (6 ώρες απευθείας, 8 ώρες μέσω Πάρου). Τελευταίος φραπές στο λιμάνι — το Yialou Beach Bar στην παραλία Γιαλός έχει το καλύτερο cheeseburger του νησιού αν έχεις χρόνο πριν το πλοίο.",
+            "lat": 36.7217,
+            "lng": 25.2733
+          }
         ]
       }
     ]
   },
-
   "beaches": [
     {
       "name": "Mylopotas Beach",
-      "wiki": "https://en.wikipedia.org/wiki/Mylopotas_beach",
-      "rating": 5,
+      "name_el": "Παραλία Μυλοπότας",
+      "desc": "Ios's signature beach — 1.5km of golden sand, Blue Flag certified, backed by a strip of beach bars and hotels. Wide and long enough that it never feels cramped despite being the most popular beach. Family-friendly shallow water that stays knee-deep far out. 8 minutes south of Chora by car, or 20 min on foot via the cliffside path. Drakos at the south end is the legendary seafood taverna; Far Out Beach Club at the north is the liveliest bar.",
+      "desc_el": "Η παραλία-σήμα της Ίου — 1,5 χλμ χρυσής άμμου, πιστοποιημένη με Γαλάζια Σημαία, με μια λωρίδα από beach bars και ξενοδοχεία πίσω. Αρκετά φαρδιά και μακριά ώστε να μη νιώθει ποτέ στριμωγμένη παρά το ότι είναι η πιο δημοφιλής παραλία. Οικογενειακά ρηχά νερά που παραμένουν στο βάθος των γονάτων πολύ μακριά. 8 λεπτά νότια της Χώρας με αυτοκίνητο, ή 20 λεπτά με τα πόδια μέσω του παραλιακού μονοπατιού. Το Drakos στο νότιο άκρο είναι η θρυλική ψαροταβέρνα· το Far Out Beach Club στο βόρειο είναι το πιο ζωντανό μπαρ.",
       "type": "Fine golden sand",
-      "length": "1.5 km",
-      "depth": "Shallow — perfect for swimming",
-      "facing": "Southwest-facing — sheltered bay, calm water",
-      "facilities": "Everything: beach clubs, water sports, tavernas, accommodation. The most developed beach in the Cyclades after Mykonos.",
-      "desc": "One of the finest beaches in the Cyclades — 1.5km of golden sand with turquoise water and the best beach-club energy in Greece outside Mykonos. The water is genuinely excellent. Come for the swimming in the morning and the scene in the afternoon.",
-      "commons": "Mylopotas_beach_Ios.jpg",
-      "lat": 36.7033, "lng": 25.2883
+      "type_el": "Λεπτή χρυσή άμμος",
+      "depth": "Very shallow for a long way",
+      "depth_el": "Πολύ ρηχά για μεγάλη απόσταση",
+      "facing": "West — afternoon sun and sunset",
+      "facing_el": "Δυτικά — απογευματινός ήλιος και ηλιοβασίλεμα",
+      "facilities": "Extensive: beach bars, water sports, taverns, umbrellas, lifeguards in summer",
+      "facilities_el": "Εκτεταμένες: beach bars, θαλάσσια σπορ, ταβέρνες, ομπρέλες, ναυαγοσώστες το καλοκαίρι",
+      "lat": 36.7083,
+      "lng": 25.2928
     },
     {
       "name": "Manganari Beach",
-      "wiki": null,
-      "rating": 5,
-      "type": "Fine sand",
-      "length": "Several coves totalling 1 km",
-      "depth": "Shallow — warm, turquoise water",
-      "facing": "South-facing — sheltered, calm",
-      "facilities": "Basic: one beach bar, accessible by boat or rough road.",
-      "desc": "The finest and quietest beach on Ios — a series of sandy coves at the southern tip with warm, turquoise water. The boat trip from the port adds to the appeal. This is where the islanders themselves swim.",
-      "commons": null,
-      "lat": 36.6700, "lng": 25.3150
+      "name_el": "Παραλία Μαγγανάρι",
+      "desc": "A string of four sheltered sandy coves on the southern tip — the finest beach complex on Ios. Crystal-clear turquoise water, gradual shallow entry, and a fraction of Mylopotas's crowds. 25-min drive from Chora via a scenic road, or seasonal boat from Mylopotas. Venus Restaurant, family-run, sits mid-beach with shade and homemade food. This is where Ios locals go when they want a real beach day.",
+      "desc_el": "Σειρά τεσσάρων προστατευμένων αμμώδων κόλπων στο νότιο άκρο — το καλύτερο σύμπλεγμα παραλιών της Ίου. Κρυστάλλινα τιρκουάζ νερά, σταδιακή ρηχή είσοδος, και ένα κλάσμα του κόσμου του Μυλοπότα. 25 λεπτά με αυτοκίνητο από τη Χώρα μέσω γραφικού δρόμου, ή εποχιακή βάρκα από τον Μυλοπότα. Το Venus Restaurant, οικογενειακό, βρίσκεται στη μέση της παραλίας με σκιά και σπιτικό φαγητό. Εδώ πηγαίνουν οι ντόπιοι της Ίου όταν θέλουν πραγματική ημέρα παραλίας.",
+      "type": "Fine white-gold sand",
+      "type_el": "Λεπτή λευκο-χρυσή άμμος",
+      "depth": "Gradual shallow — safe for kids",
+      "depth_el": "Σταδιακά ρηχά — ασφαλές για παιδιά",
+      "facing": "South — protected bay, calm water",
+      "facing_el": "Νότια — προστατευμένος κόλπος, ήρεμα νερά",
+      "facilities": "Moderate: 2-3 tavernas incl. Venus, umbrella rental, minimal development",
+      "facilities_el": "Μέτριες: 2-3 ταβέρνες συμπ. Venus, ενοικίαση ομπρελών, ελάχιστη ανάπτυξη",
+      "lat": 36.6675,
+      "lng": 25.3178
+    },
+    {
+      "name": "Agia Theodoti Beach",
+      "name_el": "Παραλία Αγία Θεοδοτή",
+      "desc": "A long quiet sandy beach on the northeast coast, below Paleokastro fortress. Far fewer people than south-coast beaches because of the rough access road. The oldest church on Ios sits at the south end — a small stone chapel dating from the early Byzantine period, lending its name to the beach. Clear water, some exposed wind days (less protected than south-coast bays). One seasonal taverna.",
+      "desc_el": "Μια μακριά ήσυχη αμμώδης παραλία στη βορειοανατολική ακτή, κάτω από το φρούριο Παλαιόκαστρο. Πολύ λιγότερος κόσμος από τις παραλίες της νότιας ακτής λόγω του ανώμαλου δρόμου πρόσβασης. Η παλαιότερη εκκλησία της Ίου βρίσκεται στο νότιο άκρο — ένα μικρό πέτρινο εκκλησάκι από την πρώιμη βυζαντινή περίοδο, που της δίνει το όνομα. Διαυγή νερά, κάποιες εκτεθειμένες ανεμώδεις ημέρες (λιγότερο προστατευμένη από τους κόλπους της νότιας ακτής). Μία εποχιακή ταβέρνα.",
+      "type": "Golden sand",
+      "type_el": "Χρυσή άμμος",
+      "depth": "Gradual — mostly shallow",
+      "depth_el": "Σταδιακά — κυρίως ρηχά",
+      "facing": "East — morning sun, some Meltemi exposure",
+      "facing_el": "Ανατολικά — πρωινός ήλιος, κάποια έκθεση στο μελτέμι",
+      "facilities": "Basic: one seasonal taverna, minimal crowds. Rough road.",
+      "facilities_el": "Βασικές: μία εποχιακή ταβέρνα, ελάχιστος κόσμος. Ανώμαλος δρόμος.",
+      "lat": 36.7483,
+      "lng": 25.325
+    },
+    {
+      "name": "Kalamos Beach",
+      "name_el": "Παραλία Κάλαμος",
+      "desc": "The remote-beach purists' pick on Ios — a soft golden-sand cove on the southwest coast backed by scrubland, with no road access. Reach it by summer boat from Mylopotas port, or a tough 40-min hike from the nearest road. The sand is finer than Mylopotas, water is exceptionally clear, and the solitude is real. No facilities whatsoever. Consistently rated among the most beautiful in the Cyclades by Ios regulars.",
+      "desc_el": "Η επιλογή των οπαδών απομακρυσμένων παραλιών στην Ίο — ένας απαλός κόλπος με χρυσή άμμο στη νοτιοδυτική ακτή με χαμηλή βλάστηση πίσω, χωρίς πρόσβαση από δρόμο. Φτάσε εκεί με καλοκαιρινή βάρκα από το λιμάνι του Μυλοπότα, ή με δύσκολη 40λεπτη πεζοπορία από τον πλησιέστερο δρόμο. Η άμμος είναι πιο λεπτή από του Μυλοπότα, τα νερά εξαιρετικά διαυγή, και η μοναξιά πραγματική. Καμία απολύτως ανέση. Συστηματικά αξιολογείται μεταξύ των ομορφότερων στις Κυκλάδες από τους τακτικούς επισκέπτες της Ίου.",
+      "type": "Very fine golden sand",
+      "type_el": "Πολύ λεπτή χρυσή άμμος",
+      "depth": "Shallow turquoise — exceptional clarity",
+      "depth_el": "Ρηχά τιρκουάζ — εξαιρετική διαύγεια",
+      "facing": "Southwest — protected",
+      "facing_el": "Νοτιοδυτικά — προστατευμένη",
+      "facilities": "None. Boat from Mylopotas or 40-min hike. Bring everything.",
+      "facilities_el": "Καμία. Βάρκα από τον Μυλοπότα ή 40 λεπτά πεζοπορία. Φέρε τα πάντα.",
+      "lat": 36.685,
+      "lng": 25.25
     }
-  ]
+  ],
+  "name_el": "Ίος",
+  "subtitle_el": "Οι Κυκλάδες του πάρτι — παραλία Μυλοπότα, ο τάφος του Ομήρου και η καλύτερη νυχτερινή ζωή του αρχιπελάγους",
+  "intro_el": "Η Ίος έχει το ισχυρότερο χάσμα φήμης στις Κυκλάδες. Η κληρονομιά της ως χίπικος προορισμός της δεκαετίας του 1970 και η αυστραλέζικη σκηνή πάρτι της δεκαετίας του 1990 της έδωσαν εικόνα 'μόνο για μεθυσμένους 19χρονους' που είναι εξαιρετικά ξεπερασμένη. Η αλήθεια: η Ίος έχει μία από τις ομορφότερες Χώρες στην Ελλάδα — ένα λευκό κυκλαδίτικο χωριό περιτριγυρισμένο από 12 σωζόμενους ανεμόμυλους, 3500 χρόνια αρχαιολογίας (ο Σκάρκος είναι υποψήφιος χώρος UNESCO της Πρωτοκυκλαδικής εποχής), και τον υποτιθέμενο τάφο του Ομήρου στους βόρειους γκρεμούς. Έχει επίσης δύο από τις καλύτερες παραλίες των Κυκλάδων: τον Μυλοπότα (1,5 χλμ χρυσής άμμου, Γαλάζια Σημαία, οικογενειακός παρά τη φήμη) και τον Μαγγανάρι (σειρά από προστατευμένους αμμώδεις κόλπους στη νότια ακτή). Ναι, η Χώρα γίνεται θορυβώδης μετά τα μεσάνυχτα τον Αύγουστο — αλλά το χωριό είναι γνήσια όμορφο πριν τότε, και όλα έξω από τη Χώρα είναι ήσυχα και γοητευτικά. Έλα για τις παραλίες· μείνε για την αρχαιολογία· ίσως βγες αργά την τελευταία νύχτα."
 }

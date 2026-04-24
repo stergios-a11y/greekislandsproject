@@ -1,6 +1,6 @@
 {
   "name": "Tinos",
-  "intro": "Tinos is the Cyclades' spiritual heart — home to the Evangelistria church, the most important pilgrimage site in Greek Orthodoxy. Beyond the pilgrimage, the island hides 40 immaculate marble-paved villages built against granite hills, white dovecotes dotting terraced valleys, and some of the best food in the Cyclades. It escaped mass tourism because everyone was rushing to Mykonos next door.",
+  "intro": "Tinos has quietly become the Cyclades' most interesting island. It holds 740 ornate dovecotes (more than any other Greek island), more than 40 marble-laced mountain villages, and the religious heart of Greek Orthodoxy — Panagia Evangelistria, where every August 15th pilgrims crawl on their knees from the port to the church. The marble tradition runs deeper than anywhere else in Greece: Pyrgos has produced the country's most celebrated sculptors for 300 years, and you still see master craftsmen at work. The food scene has exploded in the last decade — there's a genuinely good restaurant in nearly every village, unusual for a Cycladic island. The beaches are mostly south-facing, which shields them from the Meltemi that hammers the island from mid-July through August; Kolymbithra on the north is the exception and is one of the few real surf beaches in Greece. 40 minutes by ferry from Mykonos, a different planet culturally.",
   "subtitle": "Marble villages, dovecotes, and the Cyclades' spiritual heart",
   "itinerary": {
     "title": "3-day Itinerary for Tinos",
@@ -8,185 +8,128 @@
     "days": [
       {
         "day": 1,
-        "title": "Chora & the South",
-        "km": 25,
-        "drive_mins": 45,
-        "overnight": "Tinos Town",
-        "color": "#0B8FAC",
         "stops": [
           {
             "name": "Tinos Town (Chora)",
-            "lat": 37.5406,
-            "lng": 25.1604,
-            "type": "city",
-            "time": "09:00",
-            "wiki": "https://en.wikipedia.org/wiki/Tinos_(city)",
-            "desc": "Port town with marble-paved alleys. Walk up the main pedestrian street leading to the Evangelistria church.",
             "name_el": "Πόλη Τήνου (Χώρα)",
-            "desc_el": "Λιμενική πόλη με μαρμαρόστρωτα δρομάκια. Περπάτησε τον κύριο πεζόδρομο που οδηγεί στην εκκλησία της Ευαγγελίστριας."
+            "desc": "The island's capital stretches along the harbor with marble pavements and a long uphill pedestrian street leading to Panagia Evangelistria. Unlike Mykonos Town a ferry-ride away, this is a working Greek town — supermarkets and bakeries open year-round, ordinary locals going about their business. The harbor waterfront has the island's best seafood tavernas. Base yourself here for easy access to everything.",
+            "desc_el": "Η πρωτεύουσα του νησιού απλώνεται στο λιμάνι με μαρμάρινα πεζοδρόμια και έναν μακρύ ανηφορικό πεζόδρομο που οδηγεί στην Παναγία Ευαγγελίστρια. Σε αντίθεση με την Πόλη της Μυκόνου ένα πλοίο μακριά, αυτή είναι μια εργαζόμενη ελληνική πόλη — σούπερ μάρκετ και φούρνοι ανοιχτά όλο τον χρόνο, απλοί ντόπιοι στις δουλειές τους. Η παραλιακή του λιμανιού έχει τις καλύτερες ψαροταβέρνες του νησιού. Κάνε βάση εδώ για εύκολη πρόσβαση σε όλα.",
+            "lat": 37.5406,
+            "lng": 25.1604
           },
           {
             "name": "Panagia Evangelistria",
-            "lat": 37.5451,
-            "lng": 25.1596,
-            "type": "church",
-            "time": "10:00",
-            "wiki": "https://en.wikipedia.org/wiki/Panagia_Evangelistria,_Tinos",
-            "desc": "The most important Orthodox pilgrimage site in Greece. The miraculous icon was found here in 1822. Visit even if you're not religious — the marble architecture is stunning.",
             "name_el": "Παναγία Ευαγγελίστρια",
-            "desc_el": "Ο σημαντικότερος ορθόδοξος προσκυνηματικός τόπος της Ελλάδας. Η θαυματουργή εικόνα βρέθηκε εδώ το 1822. Επισκέψου την ακόμα και αν δεν είσαι θρησκευόμενος — η μαρμάρινη αρχιτεκτονική είναι εντυπωσιακή."
+            "desc": "The most important pilgrimage site in Greek Orthodoxy. The miraculous icon was found here in 1822 following a nun's vision; it has been credited with healings ever since. On August 15 (Dormition of the Virgin), the crowd is genuinely overwhelming — thousands make the uphill walk from the port, some on their knees. Outside the feast the building is calm, with a courtyard of marble columns and an art gallery of votive offerings. Modest dress required. Free entry.",
+            "desc_el": "Ο σημαντικότερος προσκυνηματικός τόπος της Ελληνικής Ορθοδοξίας. Η θαυματουργή εικόνα βρέθηκε εδώ το 1822 μετά από όραμα μοναχής· έκτοτε της αποδίδονται θεραπείες. Στις 15 Αυγούστου (Κοίμηση της Θεοτόκου), ο κόσμος είναι γνήσια συντριπτικός — χιλιάδες κάνουν την ανηφόρα από το λιμάνι, κάποιοι γονατιστοί. Εκτός γιορτής το κτίριο είναι ήρεμο, με αυλή μαρμάρινων κιόνων και γκαλερί αναθηματικών προσφορών. Απαιτείται ευπρεπής ενδυμασία. Δωρεάν είσοδος.",
+            "lat": 37.5451,
+            "lng": 25.1596
+          },
+          {
+            "name": "Lunch — Marathia (Agios Fokas)",
+            "name_el": "Μεσημεριανό — Μαραθιά (Άγιος Φωκάς)",
+            "desc": "A 10-minute walk south of Chora brings you to Agios Fokas beach, backed by a row of reliable tavernas. Marathia is the local-favorite — grilled whole fish (sea bream, sea bass), fresh octopus, and the Cycladic basics done correctly. Sea views, fair prices by Cycladic standards. Open lunch through late dinner in summer.",
+            "desc_el": "Μια 10λεπτη πεζοπορία νότια της Χώρας σε φέρνει στην παραλία Αγίου Φωκά, με σειρά αξιόπιστων ταβερνών πίσω. Η Μαραθιά είναι η αγαπημένη των ντόπιων — ψάρι στη σχάρα (τσιπούρα, λαβράκι), φρέσκο χταπόδι, και τα κυκλαδίτικα βασικά καμωμένα σωστά. Θέα στη θάλασσα, δίκαιες τιμές με κυκλαδίτικα μέτρα. Ανοιχτή από το μεσημέρι μέχρι αργά το βράδυ το καλοκαίρι.",
+            "lat": 37.5318,
+            "lng": 25.1665
           },
           {
             "name": "Agios Fokas Beach",
-            "lat": 37.5318,
-            "lng": 25.1665,
-            "type": "beach",
-            "time": "12:30",
-            "wiki": null,
-            "desc": "Sandy beach 2 km south of Chora with tavernas. Calm water, family-friendly.",
             "name_el": "Παραλία Αγίου Φωκά",
-            "desc_el": "Αμμώδης παραλία 2 χλμ νότια της Χώρας με ταβέρνες. Ήρεμα νερά, οικογενειακή."
+            "desc": "The closest real beach to Chora — 10 minutes on foot. Long, sandy, organized, with shallow water. Family-friendly, reliable, nothing spectacular but does the job when you just want to swim after lunch. Gets busy in August — go earlier or later.",
+            "desc_el": "Η πιο κοντινή πραγματική παραλία στη Χώρα — 10 λεπτά με τα πόδια. Μακρά, αμμώδης, οργανωμένη, με ρηχά νερά. Οικογενειακή, αξιόπιστη, τίποτα εντυπωσιακό αλλά κάνει τη δουλειά όταν θες απλώς να κολυμπήσεις μετά το μεσημεριανό. Έχει κίνηση τον Αύγουστο — πήγαινε νωρίτερα ή αργότερα.",
+            "lat": 37.5318,
+            "lng": 25.1665
           },
           {
-            "name": "Lunch — Tarsanas",
-            "lat": 37.5406,
-            "lng": 25.1615,
-            "type": "village",
-            "time": "14:00",
-            "wiki": null,
-            "desc": "Seafood taverna in the harbor. Fresh fish, carafes of tsipouro, the quintessential Tinian experience.",
-            "name_el": "Μεσημεριανό — Ταρσανάς",
-            "desc_el": "Ψαροταβέρνα στο λιμάνι. Φρέσκο ψάρι, καράφες τσίπουρου, η κβιντεσενσιακή τηνιακή εμπειρία."
-          },
-          {
-            "name": "Kionia Beach",
-            "lat": 37.5429,
-            "lng": 25.1355,
-            "type": "beach",
-            "time": "16:30",
-            "wiki": null,
-            "desc": "Long pebble beach with ancient ruins nearby. Sunset views back toward Chora.",
-            "name_el": "Παραλία Κιόνια",
-            "desc_el": "Μακρά βότσαλη παραλία με αρχαία ερείπια κοντά. Θέα ηλιοβασιλέματος πίσω προς τη Χώρα."
+            "name": "Sunset drive through the dovecote villages",
+            "name_el": "Ηλιοβασίλεμα μέσα από τα χωριά των περιστεριώνων",
+            "desc": "As light softens, drive north from Chora through Tripotamos, Agapi, and Tarabados — the villages with the highest concentration of Venetian-era dovecotes. Stop anywhere you see a whitewashed tower covered in stone-embroidery geometric patterns. Most date from the 18th and 19th centuries; some are still in use. Golden hour light makes the geometry glow.",
+            "desc_el": "Καθώς το φως μαλακώνει, οδήγησε βόρεια από τη Χώρα μέσα από τον Τριπόταμο, την Αγάπη, και τον Ταρμπάδο — τα χωριά με τη μεγαλύτερη συγκέντρωση βενετσιάνικων περιστεριώνων. Σταμάτα όπου δεις ασβεστωμένο πύργο καλυμμένο με γεωμετρικά πατρόν πέτρινου κεντήματος. Οι περισσότεροι χρονολογούνται από τον 18ο και 19ο αιώνα· κάποιοι ακόμα σε χρήση. Το φως της χρυσής ώρας κάνει τη γεωμετρία να λάμπει.",
+            "lat": 37.5785,
+            "lng": 25.1419
           }
         ]
       },
       {
         "day": 2,
-        "title": "The Mountain Villages",
-        "km": 55,
-        "drive_mins": 110,
-        "overnight": "Tinos Town",
-        "color": "#3D8B6F",
         "stops": [
           {
-            "name": "Pyrgos",
+            "name": "Pyrgos Village",
+            "name_el": "Χωριό Πύργος",
+            "desc": "The most important marble-carving village in Greece. Birthplace of sculptors Giannoulis Halepas, Nikiforos Lytras, and Dimitrios Filippotis. Everything is marble — fountains, benches, door frames, tombstones in the cemetery. Three essential museums cluster here: Museum of Marble Crafts (large, architect-designed, 45min), Museum of Tinian Artists (joint ticket ~€3), and the Giannoulis Halepas Museum in his old home. Park at the edge and walk in.",
+            "desc_el": "Το πιο σημαντικό χωριό μαρμαρογλυπτικής στην Ελλάδα. Γενέτειρα των γλυπτών Γιαννούλη Χαλεπά, Νικηφόρου Λύτρα, και Δημητρίου Φιλιππότη. Όλα είναι μάρμαρο — κρήνες, παγκάκια, κασέ πορτών, επιτύμβιες στήλες στο κοιμητήριο. Τρία απαραίτητα μουσεία συγκεντρώνονται εδώ: το Μουσείο Μαρμαροτεχνίας (μεγάλο, σχεδιασμένο από αρχιτέκτονα, 45 λεπτά), το Μουσείο Τήνιων Καλλιτεχνών (κοινό εισιτήριο ~3€), και το Μουσείο Γιαννούλη Χαλεπά στο παλιό του σπίτι. Παρκάρισε στην άκρη και μπες με τα πόδια.",
             "lat": 37.6385,
-            "lng": 25.1124,
-            "type": "village",
-            "time": "10:00",
-            "wiki": "https://en.wikipedia.org/wiki/Pyrgos,_Tinos",
-            "desc": "The most beautiful marble village in Greece. Birthplace of Greece's greatest sculptors. Marble everything: fountains, benches, doorframes.",
-            "name_el": "Πύργος",
-            "desc_el": "Το ομορφότερο μαρμάρινο χωριό της Ελλάδας. Γενέτειρα των σημαντικότερων Ελλήνων γλυπτών. Μάρμαρο παντού: κρήνες, παγκάκια, κασέ πορτών."
+            "lng": 25.1124
           },
           {
-            "name": "Museum of Marble Crafts",
-            "lat": 37.6391,
-            "lng": 25.1132,
-            "type": "museum",
-            "time": "11:30",
-            "wiki": null,
-            "desc": "Small but essential museum showing Tinos' marble-carving tradition, which still produces master craftsmen.",
-            "name_el": "Μουσείο Μαρμαροτεχνίας",
-            "desc_el": "Μικρό αλλά απαραίτητο μουσείο που παρουσιάζει τη μαρμαρογλυπτική παράδοση της Τήνου, η οποία ακόμα παράγει μάστορες."
+            "name": "Lunch in Pyrgos main square",
+            "name_el": "Μεσημεριανό στην πλατεία του Πύργου",
+            "desc": "O Megalos Kafenes, the oldest café on the island, sits in the main square under a huge plane tree with marble-top tables. Coffee, galaktoboureko, and people-watching. For a proper meal, Athmar in the same square serves homemade regional dishes — chickpea stews, stuffed peppers, local cheese — in a shaded, unhurried setting. Sima is the modern standout if you want something more creative.",
+            "desc_el": "Το Μεγάλο Καφενές, το παλαιότερο καφέ του νησιού, βρίσκεται στην κεντρική πλατεία κάτω από ένα τεράστιο πλατάνι με μαρμάρινα τραπέζια. Καφές, γαλακτομπούρεκο, και παρατήρηση κόσμου. Για ένα κανονικό γεύμα, το Athmar στην ίδια πλατεία σερβίρει σπιτικά τοπικά πιάτα — ρεβιθάδες, γεμιστά, τοπικό τυρί — σε σκιασμένο, χαλαρό σκηνικό. Το Sima είναι η σύγχρονη επιλογή αν θες κάτι πιο δημιουργικό.",
+            "lat": 37.6385,
+            "lng": 25.1124
           },
           {
             "name": "Panormos Port",
-            "lat": 37.6484,
-            "lng": 25.1056,
-            "type": "harbour",
-            "time": "13:00",
-            "wiki": null,
-            "desc": "Tiny fishing harbor 5 min from Pyrgos. Lunch at one of two tavernas on the water.",
             "name_el": "Λιμάνι Πανόρμου",
-            "desc_el": "Μικροσκοπικό αλιευτικό λιμάνι 5 λεπτά από τον Πύργο. Μεσημεριανό σε μία από τις δύο ταβέρνες στο νερό."
+            "desc": "5 minutes down the hill from Pyrgos — the island's oldest working port, where local marble was exported for centuries. A small crescent of fishing boats, a handful of seafood tavernas on the water. Quieter than Chora's waterfront with the same quality. Combine lunch at Pyrgos with a swim here.",
+            "desc_el": "5 λεπτά κάτω από τον λόφο από τον Πύργο — το παλαιότερο εργαζόμενο λιμάνι του νησιού, απ' όπου εξαγόταν το τοπικό μάρμαρο επί αιώνες. Ένα μικρό ημικύκλιο αλιευτικών σκαφών, μερικές ψαροταβέρνες στο νερό. Πιο ήσυχο από την προκυμαία της Χώρας με την ίδια ποιότητα. Συνδύασε μεσημεριανό στον Πύργο με μπάνιο εδώ.",
+            "lat": 37.6484,
+            "lng": 25.1056
           },
           {
-            "name": "Volax",
-            "lat": 37.6119,
-            "lng": 25.1611,
-            "type": "village",
-            "time": "16:00",
-            "wiki": null,
-            "desc": "Village surrounded by an otherworldly field of massive round granite boulders. Walk the short loop around the village.",
+            "name": "Volax (boulder village)",
             "name_el": "Βωλάξ",
-            "desc_el": "Χωριό περιτριγυρισμένο από έναν εξωγήινο κάμπο τεράστιων στρογγυλών γρανιτένιων βράχων. Περπάτησε τη σύντομη διαδρομή γύρω από το χωριό."
-          },
-          {
-            "name": "Dinner — Metaxi Mas",
-            "lat": 37.5406,
-            "lng": 25.161,
-            "type": "village",
-            "time": "20:00",
-            "wiki": null,
-            "desc": "Modern Tinian cuisine in Chora. Book ahead — tables fill fast.",
-            "name_el": "Δείπνο — Μεταξύ Μας",
-            "desc_el": "Σύγχρονη τηνιακή κουζίνα στη Χώρα. Κάνε κράτηση εκ των προτέρων — τα τραπέζια γεμίζουν γρήγορα."
+            "desc": "One of Greece's strangest settlements — a village surrounded by a plain of giant spherical granite boulders (volakes) that look almost lunar. Legend says they're debris from a Titan battle; geologists say glacial erosion. Either way the landscape is like nowhere else in the Aegean. The village itself is a basket-weaving center (ask at the small workshops), with poetry hand-painted on walls. Bouldering enthusiasts come from across Europe for the rocks.",
+            "desc_el": "Ένας από τους πιο παράξενους οικισμούς της Ελλάδας — ένα χωριό περιτριγυρισμένο από έναν κάμπο τεράστιων σφαιρικών γρανιτένιων βράχων (βωλάκες) που μοιάζουν σχεδόν σεληνιακοί. Ο θρύλος λέει ότι είναι συντρίμμια από μάχη Τιτάνων· οι γεωλόγοι λένε παγετωνική διάβρωση. Σε κάθε περίπτωση το τοπίο δεν μοιάζει με κανένα άλλο στο Αιγαίο. Το ίδιο το χωριό είναι κέντρο καλαθοπλεκτικής (ρώτα στα μικρά εργαστήρια), με ποίηση ζωγραφισμένη στους τοίχους. Λάτρεις του bouldering έρχονται από όλη την Ευρώπη για τους βράχους.",
+            "lat": 37.6119,
+            "lng": 25.1611
           }
         ]
       },
       {
         "day": 3,
-        "title": "The Dovecote Valleys",
-        "km": 40,
-        "drive_mins": 90,
-        "overnight": "Departure",
-        "color": "#C4962A",
         "stops": [
           {
-            "name": "Tarabados (dovecotes)",
-            "lat": 37.5785,
-            "lng": 25.1419,
-            "type": "village",
-            "time": "10:00",
-            "wiki": null,
-            "desc": "Valley with 50+ traditional dovecotes — intricate marble lattice-work. Walk the 1 km trail through the terraces.",
-            "name_el": "Ταραμπάδος (περιστεριώνες)",
-            "desc_el": "Κοιλάδα με 50+ παραδοσιακούς περιστεριώνες — περίτεχνο μαρμάρινο πλέγμα. Περπάτησε το μονοπάτι 1 χλμ μέσα στις αναβαθμίδες."
-          },
-          {
-            "name": "Kardiani",
+            "name": "Dinner — To Perivoli tis Kardianis (Kardiani)",
+            "name_el": "Δείπνο — Το Περιβόλι της Καρδιανής",
+            "desc": "Drive west through Ysternia and Kardiani as the sun sets. Kardiani is the greenest village on Tinos — plane trees, olive groves, dramatic cliffside views. Dinner at To Perivoli tis Kardianis is the classic Tinos experience: a garden terrace overlooking the Aegean, updated versions of regional dishes, good wine list. Book ahead in August. For something more casual, Mpeee in nearby Arnados is a local favorite at half the price.",
+            "desc_el": "Οδήγησε δυτικά μέσα από τα Υστέρνια και την Καρδιανή καθώς δύει ο ήλιος. Η Καρδιανή είναι το πιο πράσινο χωριό της Τήνου — πλατάνια, ελαιώνες, δραματικές θέες σε γκρεμό. Το δείπνο στο Περιβόλι της Καρδιανής είναι η κλασική τηνιακή εμπειρία: βεράντα-κήπος με θέα στο Αιγαίο, επικαιροποιημένες εκδοχές τοπικών πιάτων, καλή λίστα κρασιών. Κάνε κράτηση τον Αύγουστο. Για κάτι πιο χαλαρό, το Μπεεε στους γειτονικούς Αρνάδους είναι αγαπημένο των ντόπιων στη μισή τιμή.",
             "lat": 37.5993,
-            "lng": 25.1121,
-            "type": "village",
-            "time": "11:30",
-            "wiki": null,
-            "desc": "Stunning cliff-hugging village with panoramic views over the Aegean. Quiet, very local.",
-            "name_el": "Καρδιανή",
-            "desc_el": "Εντυπωσιακό χωριό σκαρφαλωμένο στον γκρεμό με πανοραμικές θέες στο Αιγαίο. Ήσυχο, πολύ τοπικό."
+            "lng": 25.1121
           },
           {
-            "name": "Livada Beach",
-            "lat": 37.6279,
-            "lng": 25.2102,
-            "type": "beach",
-            "time": "14:00",
-            "wiki": null,
-            "desc": "Wild beach on the windward east coast. Strong winds in July-August, perfect for kitesurfing.",
-            "name_el": "Παραλία Λιβάδα",
-            "desc_el": "Άγρια παραλία στην ανεμοδαρμένη ανατολική ακτή. Ισχυροί άνεμοι τον Ιούλιο-Αύγουστο, τέλεια για kitesurfing."
+            "name": "Tarabados dovecote trail",
+            "name_el": "Μονοπάτι περιστεριώνων Ταρμπάδου",
+            "desc": "Morning hike down from Tarabados village to the dovecote valley below. The 1km marked trail passes 50+ traditional dovecotes (peristeriones) in a single terraced valley — the densest concentration on the island. Built by Venetian landowners in the 18th-19th centuries to house pigeons for manure and meat. The geometric patterns are a form of folk art; each village had its own style. Easy, 45 minutes round trip.",
+            "desc_el": "Πρωινή πεζοπορία κάτω από το χωριό Ταρμπάδος στην κοιλάδα των περιστεριώνων. Το σημασμένο μονοπάτι 1 χλμ περνά από 50+ παραδοσιακούς περιστεριώνες σε μία αναβαθμισμένη κοιλάδα — η πυκνότερη συγκέντρωση στο νησί. Χτισμένοι από Βενετσιάνους γαιοκτήμονες τον 18ο-19ο αιώνα για να στεγάσουν περιστέρια για κοπριά και κρέας. Τα γεωμετρικά πατρόν είναι μορφή λαϊκής τέχνης· κάθε χωριό είχε το δικό του στυλ. Εύκολο, 45 λεπτά συνολικά.",
+            "lat": 37.5785,
+            "lng": 25.1419
+          },
+          {
+            "name": "Kolymbithra Beach (surf beach)",
+            "name_el": "Παραλία Κολυμπήθρα",
+            "desc": "The island's unique surf beach — a double bay on the north coast that catches the Meltemi full-on. The northern half is wild and undeveloped; the southern half has a bohemian beach bar scene with hammocks strung between tamarisk trees and a VW-van café. A surf school operates here in summer; this is the best place in the Cyclades to learn. Windy most days July-August, calmer in June and September.",
+            "desc_el": "Η μοναδική surf παραλία του νησιού — ένας διπλός κόλπος στη βόρεια ακτή που πιάνει το μελτέμι κατάκοπα. Το βόρειο μισό είναι άγριο και ανέγγιχτο· το νότιο έχει μποέμικη σκηνή beach bar με αιώρες ανάμεσα στα αλμυρίκια και ένα café σε VW βαν. Μια σχολή surf λειτουργεί εδώ το καλοκαίρι· αυτό είναι το καλύτερο μέρος στις Κυκλάδες για να μάθεις. Ανεμώδης τις περισσότερες μέρες Ιούλιο-Αύγουστο, πιο ήρεμη Ιούνιο και Σεπτέμβριο.",
+            "lat": 37.6194,
+            "lng": 25.2125
+          },
+          {
+            "name": "Lunch — Sta Fys Aera (Aetofolia)",
+            "name_el": "Μεσημεριανό — Στα Φυσ' Αέρα (Αετοφωλιά)",
+            "desc": "On the way back south, detour to the tiny inland village of Aetofolia. Sta Fys Aera is a small, family-run taverna with no pretension — seasonal vegetables from their own garden, wild greens, local cheese, slow-cooked meat. Strong signals of authenticity: few tables, handwritten menu, no tourist trappings. Call ahead on weekends: +30 22830 41100.",
+            "desc_el": "Στον δρόμο επιστροφής νότια, κάνε παράκαμψη στο μικροσκοπικό εσωτερικό χωριό Αετοφωλιά. Τα Στα Φυσ' Αέρα είναι μια μικρή, οικογενειακή ταβέρνα χωρίς προσχήματα — εποχιακά λαχανικά από τον δικό τους κήπο, άγρια χόρτα, τοπικό τυρί, κρέας σιγομαγειρεμένο. Ισχυρά σημάδια αυθεντικότητας: λίγα τραπέζια, χειρόγραφο μενού, χωρίς τουριστικές παγίδες. Τηλεφώνησε πριν τα σαββατοκύριακα: +30 22830 41100.",
+            "lat": 37.6215,
+            "lng": 25.1558
           },
           {
             "name": "Back to Tinos Town",
+            "name_el": "Επιστροφή στην Πόλη της Τήνου",
+            "desc": "Return to the harbor for the ferry. One last frappe at a waterfront café — Mikro Karavi or the no-name kafenion next to the ferry ticket office — while watching the boats come in. Ferries run frequently to Mykonos (40 min), Rafina (3.5h), or south to Andros/Syros/Paros.",
+            "desc_el": "Επιστροφή στο λιμάνι για το πλοίο. Ένας τελευταίος φραπές σε παραλιακό café — το Μικρό Καράβι ή το ανώνυμο καφενείο δίπλα στο πρακτορείο — παρακολουθώντας τα πλοία να φτάνουν. Τα πλοία εκτελούν συχνά δρομολόγια προς Μύκονο (40 λεπτά), Ραφήνα (3,5 ώρες), ή νότια προς Άνδρο/Σύρο/Πάρο.",
             "lat": 37.5406,
-            "lng": 25.1604,
-            "type": "harbour",
-            "time": "17:00",
-            "wiki": null,
-            "desc": "Return to port for your ferry. Quick stop at Lehrni cafe for a frappé before leaving.",
-            "name_el": "Επιστροφή στην Πόλη Τήνου",
-            "desc_el": "Επιστροφή στο λιμάνι για το πλοίο σου. Γρήγορη στάση στο καφέ Lehrni για φραπέ πριν την αναχώρηση."
+            "lng": 25.1604
           }
         ]
       }
@@ -195,60 +138,70 @@
   "beaches": [
     {
       "name": "Kolymbithra Beach",
-      "lat": 37.6194,
-      "lng": 25.2125,
-      "type": "Fine sand",
-      "length": "400 m",
-      "depth": "Gradual, moderate",
-      "facing": "North — exposed to meltemi winds",
-      "facilities": "Good: beach bars, surf school, umbrellas",
-      "wiki": null,
-      "desc": "Surfing mecca of the Cyclades. The northern half is wild, the southern half has beach bars and umbrellas.",
       "name_el": "Παραλία Κολυμπήθρα",
-      "desc_el": "Μέκκα του surfing στις Κυκλάδες. Το βόρειο μισό είναι άγριο, το νότιο μισό έχει beach bars και ομπρέλες.",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Σταδιακή, μέτρια",
-      "facing_el": "Βόρεια — εκτεθειμένη στα μελτέμια",
-      "facilities_el": "Καλές: beach bars, σχολή surf, ομπρέλες"
+      "desc": "Tinos's most atmospheric beach and one of Greece's rare surf spots. A double bay on the exposed north coast; the south bay has the bohemian beach bar scene (hammocks in tamarisk trees, VW-van café) while the north bay is wild and undeveloped. Golden sand, good swells for surfing when Meltemi blows (July-August). On calmer days in June and September the bay reverts to a regular swimming beach with very clean water.",
+      "desc_el": "Η πιο ατμοσφαιρική παραλία της Τήνου και ένα από τα σπάνια σημεία surf της Ελλάδας. Ένας διπλός κόλπος στην εκτεθειμένη βόρεια ακτή· ο νότιος κόλπος έχει τη μποέμικη σκηνή beach bar (αιώρες σε αλμυρίκια, café σε VW βαν) ενώ ο βόρειος κόλπος είναι άγριος και ανέγγιχτος. Χρυσή άμμος, καλά κύματα για surf όταν φυσά μελτέμι (Ιούλιος-Αύγουστος). Σε πιο ήρεμες μέρες τον Ιούνιο και Σεπτέμβριο ο κόλπος γίνεται κανονική παραλία κολύμβησης με πολύ καθαρά νερά.",
+      "type": "Fine golden sand",
+      "type_el": "Λεπτή χρυσή άμμος",
+      "depth": "Shallow with good waves when windy",
+      "depth_el": "Ρηχά με καλά κύματα όταν έχει αέρα",
+      "facing": "North-facing — catches Meltemi winds, great for surf",
+      "facing_el": "Βόρειο προσανατολισμό — πιάνει το μελτέμι, καλό για surf",
+      "facilities": "Good: bohemian beach bar, surf school, hammocks, umbrellas. Parking at the top.",
+      "facilities_el": "Καλές: μποέμικο beach bar, σχολή surf, αιώρες, ομπρέλες. Parking στην κορυφή.",
+      "lat": 37.6194,
+      "lng": 25.2125
     },
     {
       "name": "Pachia Ammos",
-      "lat": 37.5635,
-      "lng": 25.234,
-      "type": "Golden sand",
-      "length": "300 m",
-      "depth": "Shallow",
-      "facing": "South — protected",
-      "facilities": "Natural — no facilities, bring water",
-      "wiki": null,
-      "desc": "Remote south-coast beach reached via dirt road. Golden dunes, crystal water, rarely crowded.",
       "name_el": "Παχιά Άμμος",
-      "desc_el": "Απομακρυσμένη παραλία νότιας ακτής προσβάσιμη με χωματόδρομο. Χρυσές αμμοθίνες, κρυστάλλινα νερά, σπάνια πολυσύχναστη.",
-      "type_el": "Χρυσή άμμος",
-      "depth_el": "Ρηχά",
-      "facing_el": "Νότια — προστατευμένη",
-      "facilities_el": "Φυσική — χωρίς ανέσεις, φέρε νερό"
+      "desc": "A remote southern beach reached by a bumpy dirt road through scrubland — the effort keeps it quiet. Thick golden sand dunes back the beach, crystal-clear shallow water fronts it. South-facing means protection from Meltemi — calm swimming most days in summer. One basic canteen; otherwise bring everything you need. One of the few genuinely wild beaches still accessible by (rough) road on Tinos.",
+      "desc_el": "Μια απομακρυσμένη νότια παραλία προσβάσιμη με ανώμαλο χωματόδρομο μέσα από χαμηλή βλάστηση — η προσπάθεια την κρατά ήσυχη. Χοντρές χρυσές αμμοθίνες πίσω από την παραλία, κρυστάλλινα ρηχά νερά μπροστά. Νότιος προσανατολισμός σημαίνει προστασία από το μελτέμι — ήρεμη κολύμβηση τις περισσότερες μέρες το καλοκαίρι. Μία βασική καντίνα· αλλιώς φέρε ό,τι χρειάζεσαι. Μία από τις λίγες γνήσια άγριες παραλίες ακόμα προσβάσιμες με (χωματό)δρόμο στην Τήνο.",
+      "type": "Thick golden sand with dunes",
+      "type_el": "Χοντρή χρυσή άμμος με αμμοθίνες",
+      "depth": "Shallow and calm — south-facing protection",
+      "depth_el": "Ρηχά και ήρεμα — προστασία νότιου προσανατολισμού",
+      "facing": "South — protected from Meltemi, calm most days",
+      "facing_el": "Νότια — προστατευμένη από το μελτέμι, ήρεμη τις περισσότερες μέρες",
+      "facilities": "Minimal: one canteen. Bring water, shade, towels. Rough dirt road access.",
+      "facilities_el": "Ελάχιστες: μία καντίνα. Φέρε νερό, σκιά, πετσέτες. Πρόσβαση με κακό χωματόδρομο.",
+      "lat": 37.5635,
+      "lng": 25.234
     },
     {
       "name": "Agios Romanos",
-      "lat": 37.5763,
-      "lng": 25.119,
-      "type": "Sand & pebbles",
-      "length": "250 m",
-      "depth": "Moderate",
-      "facing": "West — afternoon sun",
-      "facilities": "Moderate: taverna, umbrellas",
-      "wiki": null,
-      "desc": "Quiet family beach on the west coast. Great for sunset swims.",
       "name_el": "Άγιος Ρωμανός",
-      "desc_el": "Ήσυχη οικογενειακή παραλία στη δυτική ακτή. Εξαιρετική για μπάνια στο ηλιοβασίλεμα.",
-      "type_el": "Άμμος και βότσαλο",
-      "depth_el": "Μέτρια",
-      "facing_el": "Δυτικά — απογευματινός ήλιος",
-      "facilities_el": "Μέτριες: ταβέρνα, ομπρέλες"
+      "desc": "A quiet west-coast beach known locally for the best sunsets on Tinos. Mix of sand and pebbles, gradually deepening water, a taverna at each end. Less developed than the south-coast beaches near Chora, more than the wild ones on the north. A good balance — reliable facilities without the crowds. Late-afternoon arrivals catch the evening light across the water toward Syros.",
+      "desc_el": "Μια ήσυχη παραλία δυτικής ακτής γνωστή τοπικά για τα καλύτερα ηλιοβασιλέματα της Τήνου. Μείγμα άμμου και βότσαλου, νερά που βαθαίνουν σταδιακά, μία ταβέρνα σε κάθε άκρο. Λιγότερο ανεπτυγμένη από τις παραλίες της νότιας ακτής κοντά στη Χώρα, περισσότερο από τις άγριες του βορρά. Καλή ισορροπία — αξιόπιστες ανέσεις χωρίς τον συνωστισμό. Όσοι φτάνουν αργά το απόγευμα πιάνουν το βραδινό φως πάνω από το νερό προς τη Σύρο.",
+      "type": "Mixed sand and small pebbles",
+      "type_el": "Μείγμα άμμου και μικρών βότσαλων",
+      "depth": "Gradual shallow to moderate",
+      "depth_el": "Σταδιακά ρηχά έως μέτρια",
+      "facing": "West — best sunsets on Tinos",
+      "facing_el": "Δυτικά — τα καλύτερα ηλιοβασιλέματα της Τήνου",
+      "facilities": "Moderate: two tavernas, umbrellas, quiet crowd",
+      "facilities_el": "Μέτριες: δύο ταβέρνες, ομπρέλες, ήσυχος κόσμος",
+      "lat": 37.5763,
+      "lng": 25.119
+    },
+    {
+      "name": "Livada Beach",
+      "name_el": "Παραλία Λιβάδα",
+      "desc": "Tinos's most dramatic beach — a wild, wind-blasted eastern bay reached by a long dirt track through the Exombourgo foothills. The setting is bare, huge, and elemental: no tavernas, no umbrellas, just a vast curve of grey sand and the open Aegean. The wind here is exceptional, which makes it a top Greek kitesurfing destination. Not for lazy beach days — for the wild-nature experience. Bring everything.",
+      "desc_el": "Η πιο δραματική παραλία της Τήνου — ένας άγριος, ανεμοδαρμένος ανατολικός κόλπος προσβάσιμος με μακρύ χωματόδρομο μέσα από τους πρόποδες του Εξωμβούργου. Το σκηνικό είναι γυμνό, τεράστιο, και στοιχειώδες: καμία ταβέρνα, καμία ομπρέλα, μόνο μια τεράστια καμπύλη γκρίζας άμμου και το ανοιχτό Αιγαίο. Ο άνεμος εδώ είναι εξαιρετικός, που την κάνει κορυφαίο ελληνικό προορισμό kitesurfing. Όχι για τεμπέλικες μέρες παραλίας — για την εμπειρία της άγριας φύσης. Φέρε τα πάντα.",
+      "type": "Dark coarse sand, huge open bay",
+      "type_el": "Σκούρα χονδρή άμμος, τεράστιος ανοιχτός κόλπος",
+      "depth": "Deep quickly, strong currents",
+      "depth_el": "Βαθαίνει γρήγορα, ισχυρά ρεύματα",
+      "facing": "East — exposed, fully open Aegean",
+      "facing_el": "Ανατολικά — εκτεθειμένη, εντελώς ανοιχτό Αιγαίο",
+      "facilities": "None. Kitesurfers only in strong winds. Rough access road.",
+      "facilities_el": "Καμία. Kitesurfers μόνο σε ισχυρούς ανέμους. Κακός δρόμος πρόσβασης.",
+      "lat": 37.6279,
+      "lng": 25.2102
     }
   ],
   "name_el": "Τήνος",
   "subtitle_el": "Μαρμάρινα χωριά, περιστεριώνες, και η πνευματική καρδιά των Κυκλάδων",
-  "intro_el": "Η Τήνος είναι η πνευματική καρδιά των Κυκλάδων — σπίτι της Παναγίας της Ευαγγελίστριας, του σημαντικότερου προσκυνηματικού τόπου της Ελληνικής Ορθοδοξίας. Πέρα από το προσκύνημα, το νησί κρύβει 40 άψογα μαρμαρόστρωτα χωριά χτισμένα πάνω σε γρανιτένιους λόφους, λευκούς περιστεριώνες διάσπαρτους σε αναβαθμισμένες κοιλάδες, και κάποιο από το καλύτερο φαγητό των Κυκλάδων. Ξέφυγε από τον μαζικό τουρισμό επειδή όλοι έσπευσαν στη γειτονική Μύκονο."
+  "intro_el": "Η Τήνος έχει σιωπηλά γίνει το πιο ενδιαφέρον νησί των Κυκλάδων. Φιλοξενεί 740 περιστεριώνες (περισσότερους από κάθε άλλο ελληνικό νησί), πάνω από 40 μαρμαρόκτιστα ορεινά χωριά, και τη θρησκευτική καρδιά της Ελληνικής Ορθοδοξίας — την Παναγία Ευαγγελίστρια, όπου κάθε 15η Αυγούστου οι προσκυνητές ανεβαίνουν γονατιστοί από το λιμάνι στην εκκλησία. Η παράδοση του μαρμάρου εδώ είναι βαθύτερη από οπουδήποτε αλλού στην Ελλάδα: ο Πύργος παράγει τους πιο φημισμένους γλύπτες της χώρας επί 300 χρόνια, και ακόμα βλέπεις μάστορες στη δουλειά. Η γαστρονομική σκηνή απογειώθηκε την τελευταία δεκαετία — υπάρχει γνήσια καλό εστιατόριο σχεδόν σε κάθε χωριό, ασυνήθιστο για κυκλαδίτικο νησί. Οι παραλίες έχουν κυρίως νότιο προσανατολισμό, προστατευμένες από το μελτέμι που χτυπά το νησί από τα μέσα Ιουλίου μέχρι τον Αύγουστο· η Κολυμπήθρα στον βορρά είναι η εξαίρεση και μία από τις λίγες πραγματικές παραλίες surf στην Ελλάδα. 40 λεπτά με πλοίο από τη Μύκονο, άλλος πλανήτης πολιτισμικά."
 }
