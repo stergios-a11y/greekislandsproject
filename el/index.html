@@ -101,11 +101,17 @@
         <a href="#" id="nav-shortlist" id="nav-shortlist"><span data-i18n="nav.shortlist">⭐ My Shortlist</span> <span class="shortlist-count" id="shortlist-count"></span></a>
         <a href="#" id="nav-mission" data-i18n="nav.mission">Mission</a>
       </nav>
-      <button class="lang-toggle" id="lang-toggle-btn" aria-label="Switch language">
-        <span class="lang-flag" id="lang-flag-en">🇬🇧</span>
-        <span class="lang-sep">|</span>
-        <span class="lang-flag" id="lang-flag-el">🇬🇷</span>
-      </button>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <button class="lang-toggle" id="lang-toggle-btn" aria-label="Switch language" aria-haspopup="true" aria-expanded="false">
+          <span class="lang-globe">🌐</span>
+          <span class="lang-current" id="lang-current">EN</span>
+          <span class="lang-caret">▾</span>
+        </button>
+        <div class="lang-menu" id="lang-menu" role="menu">
+          <a href="#" class="lang-option" data-lang="en" role="menuitem"><span class="lang-option-flag">🇬🇧</span> English</a>
+          <a href="#" class="lang-option" data-lang="el" role="menuitem"><span class="lang-option-flag">🇬🇷</span> Ελληνικά</a>
+        </div>
+      </div>
       <button class="dark-mode-toggle" id="dark-mode-btn" aria-label="Toggle dark mode">☾</button>
     </div>
   </header>
