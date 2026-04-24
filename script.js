@@ -228,6 +228,7 @@ function showView(view, param) {
     homeControls.style.display = 'none';
     const helpBtn = document.getElementById('help-btn');
     if (helpBtn) helpBtn.style.display = 'none';
+    document.body.classList.remove('home-view-active');
     if (param) renderIslandPage(param);
     return;
   }
@@ -239,6 +240,8 @@ function showView(view, param) {
   // Help button is only relevant on the home/map view
   const helpBtn = document.getElementById('help-btn');
   if (helpBtn) helpBtn.style.display = (view === 'home') ? '' : 'none';
+  // Lock body scroll when on home view (map shouldn't be scrollable)
+  document.body.classList.toggle('home-view-active', view === 'home');
   if (nav && nav.classList.contains('open')) nav.classList.remove('open');
   if (view === 'home' && mapInstance) setTimeout(() => mapInstance.invalidateSize(), 100);
   if (view === 'hopping') setTimeout(renderHopping, 50);
@@ -467,22 +470,48 @@ function toggleMenu() {
 
 function setupLanguageToggle() {
   const btn = document.getElementById('lang-toggle-btn');
-  if (!btn) return;
-  // Highlight active flag
-  const flagEN = document.getElementById('lang-flag-en');
-  const flagEL = document.getElementById('lang-flag-el');
-  if (CURRENT_LANG === 'el') {
-    if (flagEL) flagEL.classList.add('active');
-  } else {
-    if (flagEN) flagEN.classList.add('active');
-  }
-  // Click handler
-  btn.addEventListener('click', () => {
-    const currentHash = window.location.hash;
-    if (CURRENT_LANG === 'el') {
-      window.location.href = '/' + currentHash;
-    } else {
-      window.location.href = '/el/' + currentHash;
+  const menu = document.getElementById('lang-menu');
+  const currentLabel = document.getElementById('lang-current');
+  if (!btn || !menu) return;
+
+  // Set current lang label and mark active option
+  const labels = { en: 'EN', el: 'ΕΛ' };
+  if (currentLabel) currentLabel.textContent = labels[CURRENT_LANG] || 'EN';
+  menu.querySelectorAll('.lang-option').forEach(a => {
+    if (a.dataset.lang === CURRENT_LANG) a.classList.add('active');
+  });
+
+  // Toggle menu on button click
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  // Handle option selection
+  menu.querySelectorAll('.lang-option').forEach(a => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetLang = a.dataset.lang;
+      if (targetLang === CURRENT_LANG) {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        return;
+      }
+      const currentHash = window.location.hash;
+      if (targetLang === 'el') {
+        window.location.href = '/el/' + currentHash;
+      } else {
+        window.location.href = '/' + currentHash;
+      }
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#lang-dropdown')) {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
     }
   });
 }

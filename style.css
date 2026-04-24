@@ -312,6 +312,11 @@ header {
   display: flex;
   flex-direction: column;
   height: calc(100vh - var(--header-height));
+  overflow: hidden;
+}
+/* When home view is active (body has class), lock body scroll */
+body.home-view-active {
+  overflow: hidden;
 }
 #main-map {
   flex: 1;
@@ -740,7 +745,7 @@ html.dark .why-feat-num { color: var(--marble-3); }
     display: flex; flex-direction: column;
     position: absolute; top: var(--header-height); left: 0; right: 0;
     background: var(--aegean); border-bottom: 1px solid var(--aegean-dark);
-    padding: 12px; gap: 4px; z-index: 200;
+    padding: 12px; gap: 4px; z-index: 2500;
     box-shadow: 0 8px 24px rgba(0,0,0,0.2);
   }
   .top-nav.open a { padding: 11px 16px; font-size: 14px; color: rgba(255,255,255,0.8); }
@@ -2001,47 +2006,78 @@ html.dark .top-nav.open {
 }
 
 /* ============================================================
-   LANGUAGE TOGGLE BUTTON in header
+   LANGUAGE DROPDOWN — globe with menu
 ============================================================ */
+.lang-dropdown {
+  position: relative;
+  margin-left: 8px;
+  display: inline-block;
+}
 .lang-toggle {
   background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255,255,255,0.2);
   color: rgba(255,255,255,0.9);
   font-family: var(--sans);
-  font-size: 12px;
-  font-weight: 700;
-  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 10px;
   border-radius: 8px;
   cursor: pointer;
-  margin-left: 8px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1;
 }
-.lang-toggle:hover {
+.lang-toggle:hover, .lang-toggle[aria-expanded="true"] {
   background: rgba(255,255,255,0.2);
 }
-.lang-toggle.lang-el {
-  background: rgba(255,255,255,0.25);
-  color: #fff;
-}
+.lang-globe { font-size: 16px; line-height: 1; }
+.lang-current { font-weight: 700; }
+.lang-caret { font-size: 10px; opacity: 0.7; transition: transform 0.15s; }
+.lang-toggle[aria-expanded="true"] .lang-caret { transform: rotate(180deg); }
 
-/* Dark mode language toggle */
-html.dark .lang-toggle {
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.15);
-  color: rgba(255,255,255,0.85);
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  min-width: 140px;
+  padding: 4px 0;
+  display: none;
+  z-index: 3000;
 }
-html.dark .lang-toggle:hover {
-  background: rgba(255,255,255,0.2);
+.lang-menu.open { display: block; }
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  font-size: 14px;
+  color: var(--ink-1);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.1s;
 }
+.lang-option:hover { background: var(--tile-bg); }
+.lang-option.active { background: var(--aegean-light); color: var(--aegean); font-weight: 700; }
+.lang-option-flag { font-size: 18px; line-height: 1; }
 
-/* Mobile: hide nav text but keep toggle button visible */
+html.dark .lang-menu {
+  background: var(--dark-card);
+  border-color: rgba(255,255,255,0.12);
+}
+html.dark .lang-option { color: rgba(255,255,255,0.85); }
+html.dark .lang-option:hover { background: rgba(255,255,255,0.06); }
+
 @media (max-width: 768px) {
-  .lang-toggle {
-    margin-left: 4px;
-    font-size: 11px;
-    padding: 5px 10px;
-  }
+  .lang-dropdown { margin-left: 4px; }
+  .lang-toggle { padding: 5px 8px; font-size: 12px; }
+  .lang-globe { font-size: 14px; }
 }
 
 /* ============================================================
@@ -2090,60 +2126,8 @@ html.dark .cmp-bar-track {
 }
 
 /* ============================================================
-   Language toggle — flags with selected indicator
+   (Legacy lang toggle styles removed — replaced by .lang-dropdown)
 ============================================================ */
-.lang-toggle {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.18);
-  font-size: 18px;
-  line-height: 1;
-  padding: 6px 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-left: 8px;
-  transition: all 0.15s;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: rgba(255,255,255,0.8);
-  font-weight: 600;
-  letter-spacing: 0;
-}
-.lang-toggle .lang-flag {
-  font-size: 18px;
-  filter: grayscale(60%);
-  opacity: 0.55;
-  transition: all 0.15s;
-}
-.lang-toggle .lang-flag.active {
-  filter: none;
-  opacity: 1;
-  transform: scale(1.15);
-}
-.lang-toggle:hover {
-  background: rgba(255,255,255,0.18);
-}
-.lang-toggle:hover .lang-flag {
-  opacity: 0.85;
-}
-.lang-toggle:hover .lang-flag.active {
-  opacity: 1;
-}
-.lang-sep {
-  color: rgba(255,255,255,0.3);
-  font-weight: 300;
-  font-size: 13px;
-}
-
-html.dark .lang-toggle {
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(255,255,255,0.12);
-}
-
-@media (max-width: 768px) {
-  .lang-toggle { padding: 5px 8px; margin-left: 4px; gap: 4px; }
-  .lang-toggle .lang-flag { font-size: 16px; }
-}
 
 /* ============================================================
    Author photo block on mission page
@@ -2498,19 +2482,43 @@ html.dark .itt-fill-afford { background: #BAA0E8; }
   #help-btn, #feedback-btn, .help-modal { display: none !important; }
 }
 
-/* Mobile — stack vertically, smaller */
+/* Mobile — stack vertically, smaller icon-only circles */
 @media (max-width: 640px) {
   #feedback-btn {
     bottom: 16px;
     right: 16px;
-    padding: 10px 16px;
-    font-size: 13px;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Hide text on mobile — keep only emoji */
+    font-size: 0;
+  }
+  #feedback-btn::before {
+    content: "💬";
+    font-size: 20px;
+    line-height: 1;
   }
   #help-btn {
-    bottom: 70px;
+    bottom: 76px;
     right: 16px;
-    padding: 10px 16px;
-    font-size: 13px;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    font-size: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #help-btn::before {
+    content: "❓";
+    font-size: 20px;
+    line-height: 1;
   }
 }
 

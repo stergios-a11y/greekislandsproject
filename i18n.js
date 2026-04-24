@@ -75,7 +75,7 @@ const UI_TEXT = {
   'dim.access': { en: 'Access', el: 'Πρόσβαση' },
   'dim.afford': { en: 'Affordability', el: 'Προσιτή τιμή' },
   'dim.car': { en: 'Car reliance', el: 'Χρησιμότητα οχήματος' },
-  'dim.car.hint': { en: 'Car reliance: 1=useless, 2=e-scooter works, 5=essential', el: 'Χρησιμότητα οχήματος: 1=άχρηστη, 2=πατίνι αρκεί, 5=απαραίτητη' },
+  'dim.car.hint': { en: 'Car reliance: 1=useless, 2=e-scooter works, 5=essential', el: 'Χρησιμότητα οχήματος: 1=περιττή, 2=e-scooter αρκεί, 5=απαραίτητη' },
   'car.none': { en: 'Useless', el: 'Άχρηστο' },
   'car.helpful': { en: 'E-scooter', el: 'Πατίνι' },
   'car.useful': { en: 'Useful', el: 'Χρήσιμο' },
