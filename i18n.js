@@ -125,8 +125,6 @@ const UI_TEXT = {
   'detail.spec.facilities': { en: 'Facilities', el: 'Υποδομές' },
   'detail.beaches.title': { en: 'Top Beaches of', el: 'Κορυφαίες Παραλίες της' },
   'detail.beaches.sub': { en: 'Ranked by overall quality — with details on sand type, depth, wind exposure and facilities.', el: 'Κατάταξη με βάση τη συνολική ποιότητα — με λεπτομέρειες για τον τύπο άμμου, το βάθος, την έκθεση στον άνεμο και τις υποδομές.' },
-  'detail.yourrating': { en: 'Your rating', el: 'Η βαθμολογία σου' },
-  'detail.editorial': { en: 'Editorial', el: 'Επιμελητής' },
 
   // Footer
   'footer.copyright': { en: '© 2026 Stergios Gousios · Aegean Blueprint', el: '© 2026 Στέργιος Γούσιος · Aegean Blueprint' },
@@ -340,7 +338,6 @@ const UI_TEXT = {
   // Common
   'common.days': { en: 'days', el: 'μέρες' },
   'common.day': { en: 'day', el: 'μέρα' },
-  'common.km': { en: 'km', el: 'χλμ' },
   'common.min': { en: 'min', el: 'λεπτά' },
   'common.hr': { en: 'hr', el: 'ώρα' },
   'common.hrs': { en: 'hrs', el: 'ώρες' },
