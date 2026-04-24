@@ -3,7 +3,6 @@
   "name": "Symi",
   "subtitle": "The most beautiful harbour in Greece — neoclassical mansions and deep blue water",
   "intro": "Symi has the most photographed harbour in Greece — an amphitheatre of neoclassical mansions in ochre, yellow, terracotta and blue, rising up the hills of the Gialos. The island grew wealthy from sponge diving and shipbuilding in the 19th century, and every one of those merchants built a mansion in the harbour. Today it's a tiny island (population 2500) with excellent food, dramatic bays, and the Panormitis monastery in the south. Easy day trip from Rhodes or, better, a 2-night stay.",
-
   "itinerary": {
     "title": "2-Day Symi Itinerary",
     "subtitle": "Gialos harbour, the medieval Chorio, the Panormitis monastery and the hidden beaches of the east coast.",
@@ -16,12 +15,72 @@
         "drive_mins": 15,
         "overnight": "Symi Town",
         "stops": [
-          { "name": "Gialos Harbour", "lat": 36.6150, "lng": 27.8378, "type": "harbour", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Symi", "desc": "Arrive by ferry or day boat from Rhodes (1 hour). The first view of the harbour as you enter is unforgettable — an amphitheatre of painted neoclassical mansions rising from the water." },
-          { "name": "Nautical Museum", "lat": 36.6150, "lng": 27.8383, "type": "museum", "time": "10:00", "wiki": null, "desc": "The story of Symi's extraordinary maritime heritage — sponge diving, shipbuilding, the trade with Egypt. The model ships alone are worth the entry." },
-          { "name": "Kali Strata Steps", "lat": 36.6128, "lng": 27.8378, "type": "city", "time": "11:30", "wiki": null, "desc": "The 500 steps from the harbour up to the old medieval capital of Chorio — one of the most photographed stair climbs in Greece. Take your time; there are cafes to stop at on the way up." },
-          { "name": "Chorio (Medieval Capital)", "lat": 36.6100, "lng": 27.8333, "type": "village", "time": "12:30", "wiki": null, "desc": "The Byzantine capital at the top of the hill — much quieter than the harbour, with views over both sides of the island. The Knights' castle at the summit was destroyed by Allied bombs in WWII but the ruins remain." },
-          { "name": "Nos Beach", "lat": 36.6206, "lng": 27.8367, "type": "beach", "time": "15:00", "wiki": null, "desc": "The closest beach to the harbour — a short walk from Gialos. Pebble beach with clear water and views back to the harbour. Perfect for a late afternoon swim." },
-          { "name": "Dinner — Tholos Restaurant", "lat": 36.6156, "lng": 27.8394, "type": "harbour", "time": "20:30", "wiki": null, "desc": "One of the finest seafood restaurants in the Dodecanese — try the small shrimp (garides symi) that are unique to the island. Book ahead." }
+          {
+            "name": "Gialos Harbour",
+            "lat": 36.615,
+            "lng": 27.8378,
+            "type": "harbour",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Symi",
+            "desc": "Arrive by ferry or day boat from Rhodes (1 hour). The first view of the harbour as you enter is unforgettable — an amphitheatre of painted neoclassical mansions rising from the water.",
+            "name_el": "Λιμάνι Γιαλός",
+            "desc_el": "Άφιξη με πλοίο ή ημερήσια βάρκα από τη Ρόδο (1 ώρα). Η πρώτη θέα του λιμανιού καθώς μπαίνεις είναι αξέχαστη — ένα αμφιθέατρο χρωματισμένων νεοκλασικών αρχοντικών που υψώνεται από το νερό."
+          },
+          {
+            "name": "Nautical Museum",
+            "lat": 36.615,
+            "lng": 27.8383,
+            "type": "museum",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "The story of Symi's extraordinary maritime heritage — sponge diving, shipbuilding, the trade with Egypt. The model ships alone are worth the entry.",
+            "name_el": "Ναυτικό Μουσείο",
+            "desc_el": "Η ιστορία της εξαιρετικής ναυτικής κληρονομιάς της Σύμης — σφουγγαράδικη αλιεία, ναυπηγική, το εμπόριο με την Αίγυπτο. Τα μοντέλα πλοίων και μόνο αξίζουν την είσοδο."
+          },
+          {
+            "name": "Kali Strata Steps",
+            "lat": 36.6128,
+            "lng": 27.8378,
+            "type": "city",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "The 500 steps from the harbour up to the old medieval capital of Chorio — one of the most photographed stair climbs in Greece. Take your time; there are cafes to stop at on the way up.",
+            "name_el": "Σκαλιά Καλή Στράτα",
+            "desc_el": "Τα 500 σκαλιά από το λιμάνι πάνω στην παλιά μεσαιωνική πρωτεύουσα του Χωριού — μια από τις πιο φωτογραφημένες ανηφόρες σκαλοπατιών στην Ελλάδα. Πάρε τον χρόνο σου· υπάρχουν καφέ όπου μπορείς να σταματήσεις στον δρόμο."
+          },
+          {
+            "name": "Chorio (Medieval Capital)",
+            "lat": 36.61,
+            "lng": 27.8333,
+            "type": "village",
+            "time": "12:30",
+            "wiki": null,
+            "desc": "The Byzantine capital at the top of the hill — much quieter than the harbour, with views over both sides of the island. The Knights' castle at the summit was destroyed by Allied bombs in WWII but the ruins remain.",
+            "name_el": "Χωριό (Μεσαιωνική Πρωτεύουσα)",
+            "desc_el": "Η βυζαντινή πρωτεύουσα στην κορυφή του λόφου — πολύ πιο ήσυχη από το λιμάνι, με θέες πάνω και από τις δύο πλευρές του νησιού. Το κάστρο των Ιπποτών στην κορυφή καταστράφηκε από συμμαχικούς βομβαρδισμούς στον Β' ΠΠ αλλά τα ερείπια παραμένουν."
+          },
+          {
+            "name": "Nos Beach",
+            "lat": 36.6206,
+            "lng": 27.8367,
+            "type": "beach",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "The closest beach to the harbour — a short walk from Gialos. Pebble beach with clear water and views back to the harbour. Perfect for a late afternoon swim.",
+            "name_el": "Παραλία Νως",
+            "desc_el": "Η πιο κοντινή παραλία στο λιμάνι — σύντομη πεζοπορία από τον Γιαλό. Βότσαλη παραλία με διαυγή νερά και θέες πίσω στο λιμάνι. Τέλεια για απογευματινό μπάνιο."
+          },
+          {
+            "name": "Dinner — Tholos Restaurant",
+            "lat": 36.6156,
+            "lng": 27.8394,
+            "type": "harbour",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "One of the finest seafood restaurants in the Dodecanese — try the small shrimp (garides symi) that are unique to the island. Book ahead.",
+            "name_el": "Δείπνο — Εστιατόριο Θόλος",
+            "desc_el": "Ένα από τα καλύτερα εστιατόρια θαλασσινών των Δωδεκανήσων — δοκίμασε τις μικρές γαρίδες (γαρίδες Σύμης) που είναι μοναδικές στο νησί. Κάνε κράτηση εκ των προτέρων."
+          }
         ]
       },
       {
@@ -32,15 +91,54 @@
         "drive_mins": 35,
         "overnight": null,
         "stops": [
-          { "name": "Panormitis Monastery", "lat": 36.5583, "lng": 27.8417, "type": "church", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Panormitis", "desc": "The most famous monastery in the Dodecanese — dedicated to the Archangel Michael, patron of sailors. The bell tower is the tallest in the Dodecanese. Beautiful sheltered bay setting in the south of the island." },
-          { "name": "Agios Georgios Dysalona Beach", "lat": 36.6083, "lng": 27.8683, "type": "beach", "time": "12:30", "wiki": null, "desc": "Dramatic pebble beach on the east coast beneath 300m cliffs — accessible only by boat from Gialos (20 min). The water is exceptional. Day cruises stop here." },
-          { "name": "Marathounda Beach", "lat": 36.6167, "lng": 27.8700, "type": "beach", "time": "14:30", "wiki": null, "desc": "Another east-coast beach reached by boat — pebble beach with resident goats that descend to drink seawater. The taverna here serves excellent grilled fish." },
-          { "name": "Gialos — Departure", "lat": 36.6150, "lng": 27.8378, "type": "harbour", "time": "17:00", "wiki": null, "desc": "Ferry back to Rhodes (1 hour) or onward to the other Dodecanese. Regular day-trip boats also return in the evening." }
+          {
+            "name": "Panormitis Monastery",
+            "lat": 36.5583,
+            "lng": 27.8417,
+            "type": "church",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Panormitis",
+            "desc": "The most famous monastery in the Dodecanese — dedicated to the Archangel Michael, patron of sailors. The bell tower is the tallest in the Dodecanese. Beautiful sheltered bay setting in the south of the island.",
+            "name_el": "Μονή Πανορμίτη",
+            "desc_el": "Η πιο διάσημη μονή των Δωδεκανήσων — αφιερωμένη στον Αρχάγγελο Μιχαήλ, προστάτη των ναυτικών. Το καμπαναριό είναι το ψηλότερο των Δωδεκανήσων. Όμορφο σκηνικό προστατευμένου κόλπου στον νότο του νησιού."
+          },
+          {
+            "name": "Agios Georgios Dysalona Beach",
+            "lat": 36.6083,
+            "lng": 27.8683,
+            "type": "beach",
+            "time": "12:30",
+            "wiki": null,
+            "desc": "Dramatic pebble beach on the east coast beneath 300m cliffs — accessible only by boat from Gialos (20 min). The water is exceptional. Day cruises stop here.",
+            "name_el": "Παραλία Άγιος Γεώργιος Δυσάλωνας",
+            "desc_el": "Δραματική βότσαλη παραλία στην ανατολική ακτή κάτω από γκρεμούς 300 μέτρων — προσβάσιμη μόνο με βάρκα από τον Γιαλό (20 λεπτά). Τα νερά είναι εξαιρετικά. Οι ημερήσιες κρουαζιέρες σταματούν εδώ."
+          },
+          {
+            "name": "Marathounda Beach",
+            "lat": 36.6167,
+            "lng": 27.87,
+            "type": "beach",
+            "time": "14:30",
+            "wiki": null,
+            "desc": "Another east-coast beach reached by boat — pebble beach with resident goats that descend to drink seawater. The taverna here serves excellent grilled fish.",
+            "name_el": "Παραλία Μαραθούντα",
+            "desc_el": "Άλλη μια παραλία της ανατολικής ακτής προσβάσιμη με βάρκα — βότσαλη παραλία με μόνιμα κατσίκια που κατεβαίνουν για να πιουν θαλασσινό νερό. Η ταβέρνα εδώ σερβίρει εξαιρετικό ψητό ψάρι."
+          },
+          {
+            "name": "Gialos — Departure",
+            "lat": 36.615,
+            "lng": 27.8378,
+            "type": "harbour",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Ferry back to Rhodes (1 hour) or onward to the other Dodecanese. Regular day-trip boats also return in the evening.",
+            "name_el": "Γιαλός — Αναχώρηση",
+            "desc_el": "Πλοίο επιστροφής στη Ρόδο (1 ώρα) ή συνέχεια στα άλλα Δωδεκανήσια. Τακτικά ημερήσια σκάφη επιστρέφουν επίσης το βράδυ."
+          }
         ]
       }
     ]
   },
-
   "beaches": [
     {
       "name": "Agios Georgios Dysalona",
@@ -53,7 +151,14 @@
       "facilities": "None — boat access only from Gialos (20 min).",
       "desc": "The most dramatic beach on Symi — a small pebble cove at the base of 300m sheer cliffs, accessible only by boat. The water clarity is extraordinary. Day cruises from Gialos harbour typically stop here for an hour's swimming.",
       "commons": null,
-      "lat": 36.6083, "lng": 27.8683
+      "lat": 36.6083,
+      "lng": 27.8683,
+      "name_el": "Άγιος Γεώργιος Δυσάλωνας",
+      "desc_el": "Η πιο δραματική παραλία της Σύμης — ένας μικρός βότσαλος κόλπος στη βάση κάθετων γκρεμών 300 μέτρων, προσβάσιμος μόνο με βάρκα. Η διαύγεια των νερών είναι εξαιρετική. Οι ημερήσιες κρουαζιέρες από το λιμάνι Γιαλός συνήθως σταματούν εδώ για μία ώρα κολύμβησης.",
+      "type_el": "Λευκό βότσαλο",
+      "depth_el": "Μέτρια — κρυστάλλινα νερά",
+      "facing_el": "Ανατολικό προσανατολισμό — δραματικοί γκρεμοί 300 μέτρων πίσω",
+      "facilities_el": "Καμία — πρόσβαση μόνο με βάρκα από τον Γιαλό (20 λεπτά)."
     },
     {
       "name": "Nos Beach",
@@ -66,7 +171,14 @@
       "facilities": "Good: short walk from harbour, sunbeds, tavernas nearby.",
       "desc": "The easiest beach to reach from Symi Town — a 10-minute walk from Gialos harbour brings you to this pebble beach with clear water and views back over the town. Perfect for a late afternoon swim.",
       "commons": null,
-      "lat": 36.6206, "lng": 27.8367
+      "lat": 36.6206,
+      "lng": 27.8367,
+      "name_el": "Παραλία Νως",
+      "desc_el": "Η πιο εύκολα προσβάσιμη παραλία από την Πόλη της Σύμης — 10λεπτη πεζοπορία από το λιμάνι Γιαλός σε φέρνει σε αυτή τη βότσαλη παραλία με διαυγή νερά και θέες πίσω στην πόλη. Τέλεια για απογευματινό μπάνιο.",
+      "type_el": "Βότσαλο",
+      "depth_el": "Μέτρια — βαθιά, διαυγή νερά",
+      "facing_el": "Βορειοανατολικό προσανατολισμό — προστατευμένη από τη χερσόνησο του λιμανιού",
+      "facilities_el": "Καλές: σύντομη πεζοπορία από το λιμάνι, ξαπλώστρες, ταβέρνες κοντά."
     },
     {
       "name": "Marathounda Beach",
@@ -79,7 +191,17 @@
       "facilities": "Basic: one taverna, resident goats.",
       "desc": "A quiet east-coast beach reached by boat — famous for the resident goats that wander down to lick the salt from the rocks. The taverna here serves excellent fish. Part of most day-cruise itineraries from Gialos.",
       "commons": null,
-      "lat": 36.6167, "lng": 27.8700
+      "lat": 36.6167,
+      "lng": 27.87,
+      "name_el": "Παραλία Μαραθούντα",
+      "desc_el": "Μια ήσυχη παραλία της ανατολικής ακτής προσβάσιμη με βάρκα — διάσημη για τα μόνιμα κατσίκια που κατεβαίνουν να γλείψουν το αλάτι από τα βράχια. Η ταβέρνα εδώ σερβίρει εξαιρετικό ψάρι. Μέρος των περισσότερων ημερήσιων κρουαζιέρων από τον Γιαλό.",
+      "type_el": "Βότσαλο",
+      "depth_el": "Μέτρια — διαυγή, βαθιά νερά",
+      "facing_el": "Ανατολικό προσανατολισμό — προστατευμένος κόλπος",
+      "facilities_el": "Βασικές: μία ταβέρνα, μόνιμα κατσίκια."
     }
-  ]
+  ],
+  "name_el": "Σύμη",
+  "subtitle_el": "Το ομορφότερο λιμάνι της Ελλάδας — νεοκλασικά αρχοντικά και βαθιά γαλάζια νερά",
+  "intro_el": "Η Σύμη έχει το πιο φωτογραφημένο λιμάνι της Ελλάδας — ένα αμφιθέατρο νεοκλασικών αρχοντικών σε ώχρα, κίτρινο, τερακότα και μπλε, που ανεβαίνει στους λόφους του Γιαλού. Το νησί πλούτισε από τη σφουγγαράδικη αλιεία και τη ναυπηγική τον 19ο αιώνα, και κάθε ένας από αυτούς τους εμπόρους έχτισε ένα αρχοντικό στο λιμάνι. Σήμερα είναι ένα μικροσκοπικό νησί (πληθυσμός 2.500) με εξαιρετικό φαγητό, δραματικούς κόλπους, και τη μονή του Πανορμίτη στον νότο. Εύκολη ημερήσια εκδρομή από τη Ρόδο ή, καλύτερα, διαμονή 2 νυχτών."
 }

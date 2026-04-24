@@ -3,7 +3,6 @@
   "name": "Skiathos",
   "subtitle": "The party Sporade — pine forests, turquoise water and 60 beaches",
   "intro": "Skiathos is tiny — 12km long — but packs in 60 beaches, dense pine forest running to the water's edge, and the liveliest nightlife in the Sporades. Koukounaries is one of the finest sandy beaches in Greece. The old town is genuinely attractive. Planes land metres above the beach at the runway — a spectacle in itself. Come here for beaches and nightlife, not culture.",
-
   "itinerary": {
     "title": "3-Day Skiathos Itinerary",
     "subtitle": "Beach-hopping by boat, the old town lanes, Koukounaries lagoon and the monastery of Evangelistria.",
@@ -16,10 +15,50 @@
         "drive_mins": 20,
         "overnight": "Skiathos Town",
         "stops": [
-          { "name": "Skiathos Town", "lat": 39.1617, "lng": 23.4917, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Skiathos_(city)", "desc": "The most attractive town in the Sporades — two hills, a Venetian castle, pine-shaded lanes and a bustling harbour. Walk the Papadiamantis Street and have breakfast at the old port." },
-          { "name": "Bourtzi Fortress", "lat": 39.1617, "lng": 23.4900, "type": "castle", "time": "10:00", "wiki": null, "desc": "Small Venetian fortress on a pine-wooded islet in the harbour mouth. Walk across the causeway for views over the town and the channel." },
-          { "name": "Evangelistria Monastery", "lat": 39.1783, "lng": 23.4650, "type": "church", "time": "11:00", "wiki": "https://en.wikipedia.org/wiki/Evangelistria_Monastery,_Skiathos", "desc": "18th-century monastery in the pine forest above the town — the first Greek flag was raised here in 1807. Beautiful setting, small museum, excellent views." },
-          { "name": "Koukounaries Beach", "lat": 39.1517, "lng": 23.3717, "type": "beach", "time": "14:30", "wiki": "https://en.wikipedia.org/wiki/Koukounaries", "desc": "One of the finest beaches in Greece — 1.2km of golden sand framed by a dense pine forest and a protected lagoon behind it. Arrive by 14:00 for a sunbed. The lagoon behind is a protected wetland." }
+          {
+            "name": "Skiathos Town",
+            "lat": 39.1617,
+            "lng": 23.4917,
+            "type": "city",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Skiathos_(city)",
+            "desc": "The most attractive town in the Sporades — two hills, a Venetian castle, pine-shaded lanes and a bustling harbour. Walk the Papadiamantis Street and have breakfast at the old port.",
+            "name_el": "Πόλη Σκιάθου",
+            "desc_el": "Η πιο ελκυστική πόλη των Σποράδων — δύο λόφοι, ένα βενετσιάνικο κάστρο, πεύκο-σκιασμένα δρομάκια και ένα γεμάτο λιμάνι. Περπάτησε την οδό Παπαδιαμάντη και πάρε πρωινό στο παλιό λιμάνι."
+          },
+          {
+            "name": "Bourtzi Fortress",
+            "lat": 39.1617,
+            "lng": 23.49,
+            "type": "castle",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Small Venetian fortress on a pine-wooded islet in the harbour mouth. Walk across the causeway for views over the town and the channel.",
+            "name_el": "Φρούριο Μπούρτζι",
+            "desc_el": "Μικρό βενετσιάνικο φρούριο σε πευκόφυτη νησίδα στο στόμιο του λιμανιού. Περπάτησε το προστατευτικό μονοπάτι για θέες στην πόλη και το κανάλι."
+          },
+          {
+            "name": "Evangelistria Monastery",
+            "lat": 39.1783,
+            "lng": 23.465,
+            "type": "church",
+            "time": "11:00",
+            "wiki": "https://en.wikipedia.org/wiki/Evangelistria_Monastery,_Skiathos",
+            "desc": "18th-century monastery in the pine forest above the town — the first Greek flag was raised here in 1807. Beautiful setting, small museum, excellent views.",
+            "name_el": "Μονή Ευαγγελίστριας",
+            "desc_el": "Μονή του 18ου αιώνα μέσα στο πευκοδάσος πάνω από την πόλη — εδώ υψώθηκε η πρώτη ελληνική σημαία το 1807. Όμορφο σκηνικό, μικρό μουσείο, εξαιρετικές θέες."
+          },
+          {
+            "name": "Koukounaries Beach",
+            "lat": 39.1614,
+            "lng": 23.3589,
+            "type": "beach",
+            "time": "14:30",
+            "wiki": "https://en.wikipedia.org/wiki/Koukounaries",
+            "desc": "One of the finest beaches in Greece — 1.2km of golden sand framed by a dense pine forest and a protected lagoon behind it. Arrive by 14:00 for a sunbed. The lagoon behind is a protected wetland.",
+            "name_el": "Παραλία Κουκουναριές",
+            "desc_el": "Μία από τις καλύτερες παραλίες της Ελλάδας — 1,2 χλμ χρυσής άμμου πλαισιωμένης από πυκνό πευκοδάσος και μια προστατευμένη λιμνοθάλασσα πίσω. Φτάσε μέχρι τις 14:00 για ξαπλώστρα. Η λιμνοθάλασσα πίσω είναι προστατευμένος υγρότοπος."
+          }
         ]
       },
       {
@@ -30,10 +69,50 @@
         "drive_mins": 10,
         "overnight": "Skiathos Town",
         "stops": [
-          { "name": "Old Port — Boat Departure", "lat": 39.1617, "lng": 23.4917, "type": "harbour", "time": "09:30", "wiki": null, "desc": "Full-day boat tour around the island — the only way to reach the best beaches on the north coast. Boats depart from the old port daily in summer." },
-          { "name": "Lalaria Beach", "lat": 39.2000, "lng": 23.4533, "type": "beach", "time": "11:00", "wiki": "https://en.wikipedia.org/wiki/Lalaria_beach", "desc": "The most dramatic beach in the Sporades — white oval pebbles under sheer white limestone cliffs with a natural rock arch. Accessible only by boat. Crystal clear water." },
-          { "name": "Blue Cave (Skotini Spilia)", "lat": 39.2033, "lng": 23.4417, "type": "nature", "time": "12:30", "wiki": null, "desc": "Sea cave on the north coast where the water glows blue from the sunlight refraction. Swim in from the boat." },
-          { "name": "Kastro (Abandoned Town)", "lat": 39.1967, "lng": 23.4483, "type": "castle", "time": "14:00", "wiki": "https://en.wikipedia.org/wiki/Kastro,_Skiathos", "desc": "The abandoned medieval capital of Skiathos on a sea cliff — the entire population moved to the current town in 1829. Ruins of 300 houses and 22 churches. Boat stop with a short hike up." }
+          {
+            "name": "Old Port — Boat Departure",
+            "lat": 39.1617,
+            "lng": 23.4917,
+            "type": "harbour",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "Full-day boat tour around the island — the only way to reach the best beaches on the north coast. Boats depart from the old port daily in summer.",
+            "name_el": "Παλιό Λιμάνι — Αναχώρηση με Βάρκα",
+            "desc_el": "Ημερήσια εκδρομή με βάρκα γύρω από το νησί — ο μόνος τρόπος να φτάσεις στις καλύτερες παραλίες της βόρειας ακτής. Οι βάρκες αναχωρούν από το παλιό λιμάνι καθημερινά το καλοκαίρι."
+          },
+          {
+            "name": "Lalaria Beach",
+            "lat": 39.1933,
+            "lng": 23.4864,
+            "type": "beach",
+            "time": "11:00",
+            "wiki": "https://en.wikipedia.org/wiki/Lalaria_beach",
+            "desc": "The most dramatic beach in the Sporades — white oval pebbles under sheer white limestone cliffs with a natural rock arch. Accessible only by boat. Crystal clear water.",
+            "name_el": "Παραλία Λαλάρια",
+            "desc_el": "Η πιο δραματική παραλία των Σποράδων — λευκά ωοειδή βότσαλα κάτω από κάθετους λευκούς ασβεστολιθικούς γκρεμούς με φυσική βραχώδη αψίδα. Προσβάσιμη μόνο με βάρκα. Κρυστάλλινα νερά."
+          },
+          {
+            "name": "Blue Cave (Skotini Spilia)",
+            "lat": 39.2033,
+            "lng": 23.4417,
+            "type": "nature",
+            "time": "12:30",
+            "wiki": null,
+            "desc": "Sea cave on the north coast where the water glows blue from the sunlight refraction. Swim in from the boat.",
+            "name_el": "Γαλάζια Σπηλιά (Σκοτεινή Σπηλιά)",
+            "desc_el": "Θαλάσσια σπηλιά στη βόρεια ακτή όπου τα νερά λάμπουν μπλε από τη διάθλαση του ηλιακού φωτός. Κολύμπησε μέσα από τη βάρκα."
+          },
+          {
+            "name": "Kastro (Abandoned Town)",
+            "lat": 39.1967,
+            "lng": 23.4483,
+            "type": "castle",
+            "time": "14:00",
+            "wiki": "https://en.wikipedia.org/wiki/Kastro,_Skiathos",
+            "desc": "The abandoned medieval capital of Skiathos on a sea cliff — the entire population moved to the current town in 1829. Ruins of 300 houses and 22 churches. Boat stop with a short hike up.",
+            "name_el": "Κάστρο (Εγκαταλελειμμένη Πόλη)",
+            "desc_el": "Η εγκαταλελειμμένη μεσαιωνική πρωτεύουσα της Σκιάθου σε θαλάσσιο γκρεμό — ολόκληρος ο πληθυσμός μετακινήθηκε στη σημερινή πόλη το 1829. Ερείπια 300 σπιτιών και 22 εκκλησιών. Στάση με βάρκα και σύντομη πεζοπορία."
+          }
         ]
       },
       {
@@ -44,14 +123,43 @@
         "drive_mins": 25,
         "overnight": null,
         "stops": [
-          { "name": "Banana Beach", "lat": 39.1533, "lng": 23.3817, "type": "beach", "time": "09:30", "wiki": null, "desc": "Two beaches side by side west of Koukounaries — Big Banana (organised, lively) and Little Banana (clothing-optional, quieter). Both have clear, shallow water." },
-          { "name": "Agia Eleni Beach", "lat": 39.1683, "lng": 23.3867, "type": "beach", "time": "12:00", "wiki": null, "desc": "Wild, sandy north-coast beach accessible via a path through pine forest. Far quieter than the south coast beaches, excellent water." },
-          { "name": "Skiathos Town — Departure", "lat": 39.1617, "lng": 23.4917, "type": "harbour", "time": "16:00", "wiki": null, "desc": "Ferry to Volos, Thessaloniki or the other Sporades. The runway is right next to the town port — watch planes land metres overhead from the waterfront." }
+          {
+            "name": "Banana Beach",
+            "lat": 39.1633,
+            "lng": 23.355,
+            "type": "beach",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "Two beaches side by side west of Koukounaries — Big Banana (organised, lively) and Little Banana (clothing-optional, quieter). Both have clear, shallow water.",
+            "name_el": "Παραλία Μπανάνα",
+            "desc_el": "Δύο παραλίες δίπλα-δίπλα δυτικά των Κουκουναριών — Μεγάλη Μπανάνα (οργανωμένη, ζωντανή) και Μικρή Μπανάνα (προαιρετικού ντυσίματος, πιο ήσυχη). Και οι δύο έχουν διαυγή, ρηχά νερά."
+          },
+          {
+            "name": "Agia Eleni Beach",
+            "lat": 39.1683,
+            "lng": 23.3867,
+            "type": "beach",
+            "time": "12:00",
+            "wiki": null,
+            "desc": "Wild, sandy north-coast beach accessible via a path through pine forest. Far quieter than the south coast beaches, excellent water.",
+            "name_el": "Παραλία Αγία Ελένη",
+            "desc_el": "Άγρια, αμμώδης παραλία της βόρειας ακτής προσβάσιμη με μονοπάτι μέσα από πευκοδάσος. Πολύ πιο ήσυχη από τις παραλίες της νότιας ακτής, εξαιρετικά νερά."
+          },
+          {
+            "name": "Skiathos Town — Departure",
+            "lat": 39.1617,
+            "lng": 23.4917,
+            "type": "harbour",
+            "time": "16:00",
+            "wiki": null,
+            "desc": "Ferry to Volos, Thessaloniki or the other Sporades. The runway is right next to the town port — watch planes land metres overhead from the waterfront.",
+            "name_el": "Πόλη Σκιάθου — Αναχώρηση",
+            "desc_el": "Πλοίο προς Βόλο, Θεσσαλονίκη ή τις άλλες Σποράδες. Ο διάδρομος είναι ακριβώς δίπλα στο λιμάνι της πόλης — παρακολούθησε αεροπλάνα να προσγειώνονται μέτρα από πάνω από την προκυμαία."
+          }
         ]
       }
     ]
   },
-
   "beaches": [
     {
       "name": "Koukounaries Beach",
@@ -64,7 +172,14 @@
       "facilities": "Fully organised: sunbeds, beach bars, water sports, tavernas. Protected lagoon behind.",
       "desc": "Consistently ranked one of the best beaches in Greece — fine golden sand framed by dense umbrella pine forest, with a crystal-clear lagoon behind it. Arrive early for a sunbed. The pine trees provide natural shade that no other Cycladic beach can offer.",
       "commons": "Koukounaries_beach_Skiathos.jpg",
-      "lat": 39.1517, "lng": 23.3717
+      "lat": 39.1614,
+      "lng": 23.3589,
+      "name_el": "Παραλία Κουκουναριές",
+      "desc_el": "Σταθερά κατατάσσεται ως μία από τις καλύτερες παραλίες της Ελλάδας — λεπτή χρυσή άμμος πλαισιωμένη από πυκνό πευκοδάσος, με μια κρυστάλλινη λιμνοθάλασσα πίσω. Φτάσε νωρίς για ξαπλώστρα. Τα πεύκα παρέχουν φυσική σκιά που καμία άλλη κυκλαδίτικη παραλία δεν προσφέρει.",
+      "type_el": "Λεπτή χρυσή άμμος",
+      "depth_el": "Ρηχά — πολύ σταδιακά, ασφαλές για παιδιά",
+      "facing_el": "Νότιο προσανατολισμό — προστατευμένη από το πευκοδάσος, ήρεμα νερά",
+      "facilities_el": "Πλήρως οργανωμένη: ξαπλώστρες, beach bars, θαλάσσια σπορ, ταβέρνες. Προστατευμένη λιμνοθάλασσα πίσω."
     },
     {
       "name": "Lalaria Beach",
@@ -77,7 +192,14 @@
       "facilities": "None — boat access only from Skiathos Town (45 min).",
       "desc": "The most spectacular beach in the Sporades — white oval pebbles beneath sheer white limestone cliffs with a natural arch. The boat journey along the dramatic north coast is half the experience. Unmissable.",
       "commons": null,
-      "lat": 39.2000, "lng": 23.4533
+      "lat": 39.1933,
+      "lng": 23.4864,
+      "name_el": "Παραλία Λαλάρια",
+      "desc_el": "Η πιο εντυπωσιακή παραλία των Σποράδων — λευκά ωοειδή βότσαλα κάτω από κάθετους λευκούς ασβεστολιθικούς γκρεμούς με φυσική αψίδα. Το ταξίδι με βάρκα κατά μήκος της δραματικής βόρειας ακτής είναι το μισό της εμπειρίας. Αναπόφευκτη.",
+      "type_el": "Λευκά ωοειδή βότσαλα",
+      "depth_el": "Βαθιά — κρυστάλλινα, κρύα νερά",
+      "facing_el": "Βόρειο προσανατολισμό — προσβάσιμη μόνο με βάρκα",
+      "facilities_el": "Καμία — πρόσβαση μόνο με βάρκα από την Πόλη της Σκιάθου (45 λεπτά)."
     },
     {
       "name": "Banana Beach",
@@ -90,7 +212,17 @@
       "facilities": "Big Banana: fully organised. Little Banana: basic, clothing-optional.",
       "desc": "Two contrasting beaches side by side — lively and organised on one side, quiet and naturist on the other. Both have good clear water. The pine forest backdrop makes them more attractive than the typical resort beach.",
       "commons": null,
-      "lat": 39.1533, "lng": 23.3817
+      "lat": 39.1633,
+      "lng": 23.355,
+      "name_el": "Παραλία Μπανάνα",
+      "desc_el": "Δύο αντιθετικές παραλίες δίπλα-δίπλα — ζωντανή και οργανωμένη από τη μία πλευρά, ήσυχη και γυμνιστική από την άλλη. Και οι δύο έχουν καλά διαυγή νερά. Το φόντο του πευκοδάσους τις κάνει πιο ελκυστικές από μια τυπική παραλία θερέτρου.",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχά — ήρεμα νερά",
+      "facing_el": "Νότιο προσανατολισμό — προστατευμένη",
+      "facilities_el": "Μεγάλη Μπανάνα: πλήρως οργανωμένη. Μικρή Μπανάνα: βασική, προαιρετικού ντυσίματος."
     }
-  ]
+  ],
+  "name_el": "Σκιάθος",
+  "subtitle_el": "Η Σποράδα του πάρτι — πευκοδάση, τιρκουάζ νερά και 60 παραλίες",
+  "intro_el": "Η Σκιάθος είναι μικροσκοπική — 12 χλμ μήκος — αλλά συμπυκνώνει 60 παραλίες, πυκνό πευκοδάσος που φτάνει μέχρι το νερό, και την πιο ζωντανή νυχτερινή ζωή των Σποράδων. Οι Κουκουναριές είναι από τις καλύτερες αμμώδεις παραλίες της Ελλάδας. Η παλιά πόλη είναι γνήσια ελκυστική. Τα αεροπλάνα προσγειώνονται μέτρα πάνω από την παραλία στον διάδρομο — θέαμα από μόνο του. Έλα εδώ για παραλίες και νυχτερινή ζωή, όχι για πολιτισμό."
 }

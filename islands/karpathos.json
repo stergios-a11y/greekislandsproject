@@ -3,7 +3,6 @@
   "name": "Karpathos",
   "subtitle": "Greece's best-kept secret — Apella, Olympos and some of the finest beaches in the Aegean",
   "intro": "Karpathos is the second-largest Dodecanese island, sitting between Rhodes and Crete — remote enough that it has escaped mass tourism and retained a genuinely traditional character. The northern village of Olympos is the most authentic in Greece: women still wear traditional dress daily, and locals speak a dialect closer to ancient Greek than modern Greek. The beaches — Apella, Kyra Panagia, Diakoftis — are among the most beautiful in the Aegean, and far less crowded than equivalents on more famous islands.",
-
   "itinerary": {
     "title": "4-Day Karpathos Itinerary",
     "subtitle": "Pigadia, the beaches of the east coast, Olympos village in the mountains, and the kitesurfing bays of the south.",
@@ -16,10 +15,50 @@
         "drive_mins": 25,
         "overnight": "Pigadia",
         "stops": [
-          { "name": "Pigadia", "lat": 35.5092, "lng": 27.2147, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Pigadia", "desc": "The capital and main port — a modern working town on a natural harbour. Not beautiful in a Cycladic sense but authentic and welcoming. Rent a car at the port — essential on Karpathos." },
-          { "name": "Archaeological Museum", "lat": 35.5083, "lng": 27.2133, "type": "museum", "time": "10:00", "wiki": null, "desc": "Small but excellent museum with finds from the island's long Minoan, Mycenaean and Classical history." },
-          { "name": "Amopi Beach", "lat": 35.4789, "lng": 27.2139, "type": "beach", "time": "12:30", "wiki": null, "desc": "Series of small sandy coves south of Pigadia — calm, shallow, family-friendly. The closest good beach to the airport and the town." },
-          { "name": "Kyra Panagia", "lat": 35.6214, "lng": 27.1814, "type": "beach", "time": "15:30", "wiki": null, "desc": "One of the most beautiful beaches in the Aegean — fine white pebble and electric turquoise water beneath steep green cliffs. A 5-minute walk from the small car park. Worth the drive." }
+          {
+            "name": "Pigadia",
+            "lat": 35.5092,
+            "lng": 27.2147,
+            "type": "city",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Pigadia",
+            "desc": "The capital and main port — a modern working town on a natural harbour. Not beautiful in a Cycladic sense but authentic and welcoming. Rent a car at the port — essential on Karpathos.",
+            "name_el": "Πηγάδια",
+            "desc_el": "Η πρωτεύουσα και κύριο λιμάνι — μια σύγχρονη εργαζόμενη πόλη σε φυσικό λιμάνι. Όχι όμορφη με κυκλαδίτικη έννοια αλλά αυθεντική και φιλική. Νοίκιασε αυτοκίνητο στο λιμάνι — απαραίτητο στην Κάρπαθο."
+          },
+          {
+            "name": "Archaeological Museum",
+            "lat": 35.5083,
+            "lng": 27.2133,
+            "type": "museum",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Small but excellent museum with finds from the island's long Minoan, Mycenaean and Classical history.",
+            "name_el": "Αρχαιολογικό Μουσείο",
+            "desc_el": "Μικρό αλλά εξαιρετικό μουσείο με ευρήματα από τη μακρά μινωική, μυκηναϊκή και κλασική ιστορία του νησιού."
+          },
+          {
+            "name": "Amopi Beach",
+            "lat": 35.4789,
+            "lng": 27.2139,
+            "type": "beach",
+            "time": "12:30",
+            "wiki": null,
+            "desc": "Series of small sandy coves south of Pigadia — calm, shallow, family-friendly. The closest good beach to the airport and the town.",
+            "name_el": "Παραλία Άμμοπη",
+            "desc_el": "Σειρά από μικρούς αμμώδεις κολπίσκους νότια των Πηγαδιών — ήρεμοι, ρηχοί, οικογενειακοί. Η πιο κοντινή καλή παραλία στο αεροδρόμιο και στην πόλη."
+          },
+          {
+            "name": "Kyra Panagia",
+            "lat": 35.6214,
+            "lng": 27.1814,
+            "type": "beach",
+            "time": "15:30",
+            "wiki": null,
+            "desc": "One of the most beautiful beaches in the Aegean — fine white pebble and electric turquoise water beneath steep green cliffs. A 5-minute walk from the small car park. Worth the drive.",
+            "name_el": "Παραλία Κυρά Παναγιά",
+            "desc_el": "Μία από τις ομορφότερες παραλίες του Αιγαίου — λεπτό λευκό βότσαλο και ηλεκτρικό τιρκουάζ νερό κάτω από απότομα πράσινα βράχια. 5λεπτη πεζοπορία από το μικρό parking. Αξίζει την οδική διαδρομή."
+          }
         ]
       },
       {
@@ -30,9 +69,39 @@
         "drive_mins": 55,
         "overnight": "Pigadia",
         "stops": [
-          { "name": "Apella Beach", "lat": 35.6067, "lng": 27.1783, "type": "beach", "time": "10:00", "wiki": null, "desc": "The finest beach in the Aegean according to many rankings — white pebbles, electric turquoise water, pine forest sloping down to the sea. The view from the road above, before you descend, is extraordinary. Arrive before 11am." },
-          { "name": "Achata Beach", "lat": 35.5858, "lng": 27.1889, "type": "beach", "time": "13:00", "wiki": null, "desc": "Another exceptional east-coast beach — white pebbles and emerald water in a sheltered cove. Small snack bar, sunbeds. Combines well with Apella and Kyra Panagia for an east-coast beach tour." },
-          { "name": "Othos Village", "lat": 35.5647, "lng": 27.1656, "type": "village", "time": "15:30", "wiki": null, "desc": "Highest village on the island — traditional mountain settlement with the best wine on Karpathos (sweet, dark red). Several tavernas offer wine tastings." }
+          {
+            "name": "Apella Beach",
+            "lat": 35.6067,
+            "lng": 27.1783,
+            "type": "beach",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "The finest beach in the Aegean according to many rankings — white pebbles, electric turquoise water, pine forest sloping down to the sea. The view from the road above, before you descend, is extraordinary. Arrive before 11am.",
+            "name_el": "Παραλία Άπελλα",
+            "desc_el": "Η καλύτερη παραλία του Αιγαίου σύμφωνα με πολλές κατατάξεις — λευκά βότσαλα, ηλεκτρικό τιρκουάζ νερό, πευκοδάσος που κατεβαίνει προς τη θάλασσα. Η θέα από τον δρόμο από πάνω, πριν κατέβεις, είναι εξαιρετική. Έλα πριν τις 11:00."
+          },
+          {
+            "name": "Achata Beach",
+            "lat": 35.5858,
+            "lng": 27.1889,
+            "type": "beach",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "Another exceptional east-coast beach — white pebbles and emerald water in a sheltered cove. Small snack bar, sunbeds. Combines well with Apella and Kyra Panagia for an east-coast beach tour.",
+            "name_el": "Παραλία Άχατα",
+            "desc_el": "Άλλη μια εξαιρετική παραλία ανατολικής ακτής — λευκά βότσαλα και σμαραγδένια νερά σε προστατευμένο κόλπο. Μικρό σνακ μπαρ, ξαπλώστρες. Συνδυάζεται καλά με την Άπελλα και την Κυρά Παναγιά για μια περιήγηση παραλιών της ανατολικής ακτής."
+          },
+          {
+            "name": "Othos Village",
+            "lat": 35.5647,
+            "lng": 27.1656,
+            "type": "village",
+            "time": "15:30",
+            "wiki": null,
+            "desc": "Highest village on the island — traditional mountain settlement with the best wine on Karpathos (sweet, dark red). Several tavernas offer wine tastings.",
+            "name_el": "Χωριό Όθος",
+            "desc_el": "Το πιο ψηλό χωριό του νησιού — παραδοσιακός ορεινός οικισμός με το καλύτερο κρασί της Καρπάθου (γλυκό, σκούρο κόκκινο). Πολλές ταβέρνες προσφέρουν γευσιγνωσίες κρασιού."
+          }
         ]
       },
       {
@@ -43,10 +112,50 @@
         "drive_mins": 90,
         "overnight": "Diafani",
         "stops": [
-          { "name": "Drive to Olympos", "lat": 35.5917, "lng": 27.1444, "type": "nature", "time": "09:00", "wiki": null, "desc": "The drive to Olympos is one of the most dramatic in Greece — a winding mountain road crossing the spine of the island. Allow 2 hours from Pigadia. The scenery is extraordinary." },
-          { "name": "Olympos Village", "lat": 35.7228, "lng": 27.1886, "type": "village", "time": "11:00", "wiki": "https://en.wikipedia.org/wiki/Olympos,_Karpathos", "desc": "The most authentic traditional village in Greece — women wear traditional dress daily, locals speak an ancient Doric dialect, and the village architecture is unchanged since medieval times. Extraordinary and unmissable." },
-          { "name": "Lunch — Olympos Taverna", "lat": 35.7228, "lng": 27.1886, "type": "village", "time": "13:30", "wiki": null, "desc": "Try the village food — makarounes (homemade pasta with cheese and onions), local goat and the excellent Olympos bread. The oven bakery in the village is the last of its kind." },
-          { "name": "Diafani Harbour", "lat": 35.7383, "lng": 27.2050, "type": "harbour", "time": "16:00", "wiki": null, "desc": "The port below Olympos — a small harbour village that serves as the base for boat trips to Saria island. Quiet, atmospheric, with good tavernas. Stay overnight here." }
+          {
+            "name": "Drive to Olympos",
+            "lat": 35.5917,
+            "lng": 27.1444,
+            "type": "nature",
+            "time": "09:00",
+            "wiki": null,
+            "desc": "The drive to Olympos is one of the most dramatic in Greece — a winding mountain road crossing the spine of the island. Allow 2 hours from Pigadia. The scenery is extraordinary.",
+            "name_el": "Διαδρομή προς Όλυμπο",
+            "desc_el": "Η διαδρομή προς την Όλυμπο είναι από τις πιο δραματικές της Ελλάδας — ένας φιδογυριστός ορεινός δρόμος που διασχίζει τη ραχοκοκαλιά του νησιού. Υπολόγισε 2 ώρες από τα Πηγάδια. Το τοπίο είναι εξαιρετικό."
+          },
+          {
+            "name": "Olympos Village",
+            "lat": 35.7228,
+            "lng": 27.1886,
+            "type": "village",
+            "time": "11:00",
+            "wiki": "https://en.wikipedia.org/wiki/Olympos,_Karpathos",
+            "desc": "The most authentic traditional village in Greece — women wear traditional dress daily, locals speak an ancient Doric dialect, and the village architecture is unchanged since medieval times. Extraordinary and unmissable.",
+            "name_el": "Χωριό Όλυμπος",
+            "desc_el": "Το πιο αυθεντικό παραδοσιακό χωριό της Ελλάδας — οι γυναίκες φορούν παραδοσιακή ενδυμασία καθημερινά, οι ντόπιοι μιλούν αρχαία δωρική διάλεκτο, και η αρχιτεκτονική του χωριού παραμένει αμετάβλητη από μεσαιωνικούς χρόνους. Εξαιρετικό και αναπόφευκτο."
+          },
+          {
+            "name": "Lunch — Olympos Taverna",
+            "lat": 35.7228,
+            "lng": 27.1886,
+            "type": "village",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "Try the village food — makarounes (homemade pasta with cheese and onions), local goat and the excellent Olympos bread. The oven bakery in the village is the last of its kind.",
+            "name_el": "Μεσημεριανό — Ταβέρνα Ολύμπου",
+            "desc_el": "Δοκίμασε το φαγητό του χωριού — μακαρούνες (σπιτικά ζυμαρικά με τυρί και κρεμμύδια), τοπικό κατσίκι και το εξαιρετικό ψωμί Ολύμπου. Ο παραδοσιακός φούρνος στο χωριό είναι ο τελευταίος του είδους του."
+          },
+          {
+            "name": "Diafani Harbour",
+            "lat": 35.7383,
+            "lng": 27.205,
+            "type": "harbour",
+            "time": "16:00",
+            "wiki": null,
+            "desc": "The port below Olympos — a small harbour village that serves as the base for boat trips to Saria island. Quiet, atmospheric, with good tavernas. Stay overnight here.",
+            "name_el": "Λιμάνι Διαφάνι",
+            "desc_el": "Το λιμάνι κάτω από την Όλυμπο — ένα μικρό λιμενικό χωριό που χρησιμεύει ως βάση για εκδρομές με βάρκα στο νησί Σαρία. Ήσυχο, ατμοσφαιρικό, με καλές ταβέρνες. Διανυκτέρευσε εδώ."
+          }
         ]
       },
       {
@@ -57,14 +166,43 @@
         "drive_mins": 60,
         "overnight": null,
         "stops": [
-          { "name": "Saria Island Boat Trip", "lat": 35.8400, "lng": 27.2267, "type": "nature", "time": "09:30", "wiki": null, "desc": "The uninhabited island north of Karpathos — boat trips from Diafani include beautiful beaches, an abandoned medieval village and Byzantine church ruins. Half-day trip." },
-          { "name": "Arkassa Beach", "lat": 35.5069, "lng": 27.1156, "type": "beach", "time": "14:00", "wiki": null, "desc": "Sandy beach on the southwest coast — consistent winds make it one of the best windsurfing beaches in Europe. The PWA World Cup is held here. Good for non-surfers in the morning before the wind picks up." },
-          { "name": "Karpathos Airport/Port — Departure", "lat": 35.4200, "lng": 27.1467, "type": "harbour", "time": "17:30", "wiki": null, "desc": "Ferry to Piraeus, Rhodes, or Crete. Karpathos has an airport with flights from Athens and Rhodes." }
+          {
+            "name": "Saria Island Boat Trip",
+            "lat": 35.84,
+            "lng": 27.2267,
+            "type": "nature",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "The uninhabited island north of Karpathos — boat trips from Diafani include beautiful beaches, an abandoned medieval village and Byzantine church ruins. Half-day trip.",
+            "name_el": "Εκδρομή με Βάρκα στο Νησί Σαρία",
+            "desc_el": "Το ακατοίκητο νησί βόρεια της Καρπάθου — εκδρομές με βάρκα από το Διαφάνι περιλαμβάνουν όμορφες παραλίες, εγκαταλελειμμένο μεσαιωνικό χωριό και ερείπια βυζαντινής εκκλησίας. Μισής μέρας εκδρομή."
+          },
+          {
+            "name": "Arkassa Beach",
+            "lat": 35.5069,
+            "lng": 27.1156,
+            "type": "beach",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Sandy beach on the southwest coast — consistent winds make it one of the best windsurfing beaches in Europe. The PWA World Cup is held here. Good for non-surfers in the morning before the wind picks up.",
+            "name_el": "Παραλία Αρκάσσα",
+            "desc_el": "Αμμώδης παραλία στη νοτιοδυτική ακτή — συνεχείς άνεμοι την κάνουν μία από τις καλύτερες παραλίες windsurfing της Ευρώπης. Το PWA World Cup γίνεται εδώ. Καλή για μη surfers το πρωί πριν σηκωθεί ο άνεμος."
+          },
+          {
+            "name": "Karpathos Airport/Port — Departure",
+            "lat": 35.42,
+            "lng": 27.1467,
+            "type": "harbour",
+            "time": "17:30",
+            "wiki": null,
+            "desc": "Ferry to Piraeus, Rhodes, or Crete. Karpathos has an airport with flights from Athens and Rhodes.",
+            "name_el": "Αεροδρόμιο/Λιμάνι Καρπάθου — Αναχώρηση",
+            "desc_el": "Πλοίο προς Πειραιά, Ρόδο, ή Κρήτη. Η Κάρπαθος έχει αεροδρόμιο με πτήσεις από Αθήνα και Ρόδο."
+          }
         ]
       }
     ]
   },
-
   "beaches": [
     {
       "name": "Apella Beach",
@@ -77,7 +215,14 @@
       "facilities": "Basic: one small taverna, limited sunbeds. Short walk from the road.",
       "desc": "Consistently ranked among the finest beaches in the Aegean — white pebbles and electric turquoise water in a sheltered cove below pine-covered cliffs. The view from the road above before descending is as dramatic as Myrtos on Kefalonia. Quieter than any comparable beach in the Cyclades.",
       "commons": null,
-      "lat": 35.6067, "lng": 27.1783
+      "lat": 35.6067,
+      "lng": 27.1783,
+      "name_el": "Παραλία Άπελλα",
+      "desc_el": "Σταθερά κατατάσσεται μεταξύ των καλύτερων παραλιών του Αιγαίου — λευκά βότσαλα και ηλεκτρικό τιρκουάζ νερό σε προστατευμένο κόλπο κάτω από πευκοκαλυμμένα βράχια. Η θέα από τον δρόμο πριν κατέβεις είναι το ίδιο δραματική με τον Μύρτο στην Κεφαλονιά. Πιο ήσυχη από κάθε συγκρίσιμη παραλία των Κυκλάδων.",
+      "type_el": "Λευκό βότσαλο",
+      "depth_el": "Μέτρια — βαθιά, κρυστάλλινα τιρκουάζ νερά",
+      "facing_el": "Ανατολικό προσανατολισμό — προστατευμένος κόλπος περιτριγυρισμένος από πευκοδάσος",
+      "facilities_el": "Βασικές: μία μικρή ταβέρνα, λίγες ξαπλώστρες. Σύντομη πεζοπορία από τον δρόμο."
     },
     {
       "name": "Kyra Panagia Beach",
@@ -90,7 +235,14 @@
       "facilities": "Basic: one small taverna, chapel above the beach.",
       "desc": "One of the most beautiful beaches in the Aegean — a small sandy-pebble cove beneath sheer green-covered cliffs, with a whitewashed chapel on the rocks. The water colour is extraordinary. Accessible by a steep drive or by boat from Pigadia.",
       "commons": null,
-      "lat": 35.6214, "lng": 27.1814
+      "lat": 35.6214,
+      "lng": 27.1814,
+      "name_el": "Παραλία Κυρά Παναγιά",
+      "desc_el": "Μία από τις ομορφότερες παραλίες του Αιγαίου — ένας μικρός αμμώδης-βότσαλος κόλπος κάτω από κάθετα πρασινοσκεπασμένα βράχια, με ένα ασβεστωμένο εκκλησάκι στους βράχους. Το χρώμα των νερών είναι εξαιρετικό. Προσβάσιμη με απότομη διαδρομή ή με βάρκα από τα Πηγάδια.",
+      "type_el": "Λεπτό λευκό βότσαλο",
+      "depth_el": "Μέτρια — βαθιά, διαυγή νερά",
+      "facing_el": "Ανατολικό προσανατολισμό — προστατευμένη από απότομα βράχια",
+      "facilities_el": "Βασικές: μία μικρή ταβέρνα, εκκλησάκι πάνω από την παραλία."
     },
     {
       "name": "Achata Beach",
@@ -103,7 +255,17 @@
       "facilities": "Basic: small snack bar, limited sunbeds.",
       "desc": "A beautiful sheltered cove on the east coast with white pebbles and remarkably green-tinted water. Combines perfectly with Apella and Kyra Panagia for a day's east-coast beach tour. Much quieter than the more famous beaches.",
       "commons": null,
-      "lat": 35.5858, "lng": 27.1889
+      "lat": 35.5858,
+      "lng": 27.1889,
+      "name_el": "Παραλία Άχατα",
+      "desc_el": "Ένας όμορφος προστατευμένος κόλπος στην ανατολική ακτή με λευκά βότσαλα και αξιοσημείωτα πράσινα νερά. Συνδυάζεται τέλεια με την Άπελλα και την Κυρά Παναγιά για μια ημέρα περιήγησης παραλιών ανατολικής ακτής. Πολύ πιο ήσυχη από τις πιο διάσημες παραλίες.",
+      "type_el": "Λευκό βότσαλο και άμμος",
+      "depth_el": "Μέτρια — σμαραγδένια-πράσινα νερά",
+      "facing_el": "Ανατολικό προσανατολισμό — προστατευμένος κόλπος",
+      "facilities_el": "Βασικές: μικρό σνακ μπαρ, λίγες ξαπλώστρες."
     }
-  ]
+  ],
+  "name_el": "Κάρπαθος",
+  "subtitle_el": "Το καλύτερα φυλαγμένο μυστικό της Ελλάδας — Άπελλα, Όλυμπος και κάποιες από τις καλύτερες παραλίες του Αιγαίου",
+  "intro_el": "Η Κάρπαθος είναι το δεύτερο μεγαλύτερο νησί των Δωδεκανήσων, μεταξύ Ρόδου και Κρήτης — αρκετά απομακρυσμένο ώστε να έχει ξεφύγει από τον μαζικό τουρισμό και να έχει διατηρήσει γνήσια παραδοσιακό χαρακτήρα. Το βόρειο χωριό της Ολύμπου είναι το πιο αυθεντικό στην Ελλάδα: οι γυναίκες ακόμα φορούν παραδοσιακή ενδυμασία καθημερινά, και οι ντόπιοι μιλούν διάλεκτο πιο κοντά στα αρχαία ελληνικά παρά στα σύγχρονα. Οι παραλίες — Άπελλα, Κυρά Παναγιά, Διακόφτης — είναι από τις ομορφότερες του Αιγαίου, και πολύ λιγότερο πολυσύχναστες από αντίστοιχες σε πιο διάσημα νησιά."
 }

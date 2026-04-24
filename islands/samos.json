@@ -3,7 +3,6 @@
   "name": "Samos",
   "subtitle": "Pythagoras, Hera and the greenest island in the eastern Aegean",
   "intro": "Samos is the birthplace of Pythagoras and Epicurus, and home to the Heraion — one of the most important ancient sanctuaries in Greece. The island is unusually green for the Aegean — forested mountains, vineyards producing the famous Muscat wine, and a lush landscape that contrasts with the rocky Cyclades nearby. The east coast is only 1.4km from Turkey. Less famous than it deserves to be.",
-
   "itinerary": {
     "title": "4-Day Samos Itinerary",
     "subtitle": "The Heraion sanctuary, the Pythagorion harbour, Mount Kerkis and the best beaches of the south coast.",
@@ -16,10 +15,50 @@
         "drive_mins": 25,
         "overnight": "Vathy",
         "stops": [
-          { "name": "Vathy (Samos Town)", "lat": 37.7550, "lng": 26.9733, "type": "city", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Vathy,_Samos", "desc": "Capital of Samos — a deep natural harbour with a handsome neoclassical waterfront. The Archaeological Museum is one of the finest in the Aegean." },
-          { "name": "Samos Archaeological Museum", "lat": 37.7550, "lng": 26.9733, "type": "museum", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Archaeological_Museum_of_Samos", "desc": "Outstanding collection — the 5.5-metre kouros from the Heraion is one of the largest surviving ancient Greek statues. The Archaic finds from the sanctuary are world-class." },
-          { "name": "Kokkari Village", "lat": 37.7700, "lng": 26.9033, "type": "village", "time": "12:00", "wiki": null, "desc": "The most attractive village on the north coast — a fishing harbour with pebble beaches and good tavernas. Popular with windsurfers for its consistent afternoon winds." },
-          { "name": "Tsabou Beach", "lat": 37.7783, "lng": 26.8983, "type": "beach", "time": "15:00", "wiki": null, "desc": "Organised pebble beach near Kokkari with crystal clear water and good facilities. One of the better beaches on the north coast." }
+          {
+            "name": "Vathy (Samos Town)",
+            "lat": 37.755,
+            "lng": 26.9733,
+            "type": "city",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Vathy,_Samos",
+            "desc": "Capital of Samos — a deep natural harbour with a handsome neoclassical waterfront. The Archaeological Museum is one of the finest in the Aegean.",
+            "name_el": "Βαθύ (Σάμος Πόλη)",
+            "desc_el": "Η πρωτεύουσα της Σάμου — ένα βαθύ φυσικό λιμάνι με όμορφη νεοκλασική προκυμαία. Το Αρχαιολογικό Μουσείο είναι από τα καλύτερα του Αιγαίου."
+          },
+          {
+            "name": "Samos Archaeological Museum",
+            "lat": 37.755,
+            "lng": 26.9733,
+            "type": "museum",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Archaeological_Museum_of_Samos",
+            "desc": "Outstanding collection — the 5.5-metre kouros from the Heraion is one of the largest surviving ancient Greek statues. The Archaic finds from the sanctuary are world-class.",
+            "name_el": "Αρχαιολογικό Μουσείο Σάμου",
+            "desc_el": "Εξαιρετική συλλογή — ο Κούρος ύψους 5,5 μέτρων από το Ηραίο είναι ένα από τα μεγαλύτερα σωζόμενα αρχαία ελληνικά αγάλματα. Τα αρχαϊκά ευρήματα από το ιερό είναι παγκοσμίου κλάσης."
+          },
+          {
+            "name": "Kokkari Village",
+            "lat": 37.77,
+            "lng": 26.9033,
+            "type": "village",
+            "time": "12:00",
+            "wiki": null,
+            "desc": "The most attractive village on the north coast — a fishing harbour with pebble beaches and good tavernas. Popular with windsurfers for its consistent afternoon winds.",
+            "name_el": "Χωριό Κοκκάρι",
+            "desc_el": "Το πιο ελκυστικό χωριό της βόρειας ακτής — αλιευτικό λιμάνι με βότσαλες παραλίες και καλές ταβέρνες. Δημοφιλές στους windsurfers για τους σταθερούς απογευματινούς ανέμους του."
+          },
+          {
+            "name": "Tsabou Beach",
+            "lat": 37.7744,
+            "lng": 26.8969,
+            "type": "beach",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Organised pebble beach near Kokkari with crystal clear water and good facilities. One of the better beaches on the north coast.",
+            "name_el": "Παραλία Τσαμπού",
+            "desc_el": "Οργανωμένη βότσαλη παραλία κοντά στο Κοκκάρι με κρυστάλλινα νερά και καλές ανέσεις. Μία από τις καλύτερες παραλίες της βόρειας ακτής."
+          }
         ]
       },
       {
@@ -30,10 +69,50 @@
         "drive_mins": 45,
         "overnight": "Pythagorion",
         "stops": [
-          { "name": "Heraion Sanctuary", "lat": 37.6617, "lng": 26.8967, "type": "museum", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Heraion_of_Samos", "desc": "UNESCO-listed sanctuary of Hera — one of the largest temples in ancient Greece, with a single column still standing from what was once a forest of 155. The site is vast and atmospheric." },
-          { "name": "Pythagorion", "lat": 37.6883, "lng": 26.9417, "type": "harbour", "time": "11:30", "wiki": "https://en.wikipedia.org/wiki/Pythagoreion", "desc": "UNESCO-listed ancient harbour town — birthplace of Pythagoras, with a Roman tunnel built by the engineer Eupalinos still walkable today. The marble-paved waterfront is the finest in the eastern Aegean." },
-          { "name": "Eupalinos Tunnel", "lat": 37.6933, "lng": 26.9383, "type": "museum", "time": "13:00", "wiki": "https://en.wikipedia.org/wiki/Tunnel_of_Eupalinos", "desc": "UNESCO-listed 6th-century BC aqueduct tunnel — 1km long, dug from both ends simultaneously with remarkable precision. One of the great engineering achievements of the ancient world." },
-          { "name": "Psili Ammos Beach", "lat": 37.6583, "lng": 26.9983, "type": "beach", "time": "16:00", "wiki": null, "desc": "The finest beach on Samos — fine white sand and shallow turquoise water in a sheltered bay near the southeastern tip. Calm, organised and beautiful." }
+          {
+            "name": "Heraion Sanctuary",
+            "lat": 37.6617,
+            "lng": 26.8967,
+            "type": "museum",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Heraion_of_Samos",
+            "desc": "UNESCO-listed sanctuary of Hera — one of the largest temples in ancient Greece, with a single column still standing from what was once a forest of 155. The site is vast and atmospheric.",
+            "name_el": "Ηραίο",
+            "desc_el": "Ιερό της Ήρας στη λίστα της UNESCO — ένας από τους μεγαλύτερους ναούς της αρχαίας Ελλάδας, με μία μόνο κολώνα ακόμα όρθια από αυτό που ήταν κάποτε ένα δάσος 155 κολωνών. Ο χώρος είναι τεράστιος και ατμοσφαιρικός."
+          },
+          {
+            "name": "Pythagorion",
+            "lat": 37.6883,
+            "lng": 26.9417,
+            "type": "harbour",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Pythagoreion",
+            "desc": "UNESCO-listed ancient harbour town — birthplace of Pythagoras, with a Roman tunnel built by the engineer Eupalinos still walkable today. The marble-paved waterfront is the finest in the eastern Aegean.",
+            "name_el": "Πυθαγόρειο",
+            "desc_el": "Αρχαία λιμενική πόλη στη λίστα της UNESCO — γενέτειρα του Πυθαγόρα, με μια ρωμαϊκή σήραγγα χτισμένη από τον μηχανικό Ευπαλίνο που ακόμα βαδίζεται σήμερα. Η μαρμαρόστρωτη παραλιακή είναι η καλύτερη του ανατολικού Αιγαίου."
+          },
+          {
+            "name": "Eupalinos Tunnel",
+            "lat": 37.6933,
+            "lng": 26.9383,
+            "type": "museum",
+            "time": "13:00",
+            "wiki": "https://en.wikipedia.org/wiki/Tunnel_of_Eupalinos",
+            "desc": "UNESCO-listed 6th-century BC aqueduct tunnel — 1km long, dug from both ends simultaneously with remarkable precision. One of the great engineering achievements of the ancient world.",
+            "name_el": "Ευπαλίνειο Όρυγμα",
+            "desc_el": "Υδραγωγείο του 6ου αιώνα π.Χ. στη λίστα της UNESCO — 1 χλμ μήκους, σκαμμένο ταυτόχρονα από τις δύο άκρες με αξιοσημείωτη ακρίβεια. Ένα από τα μεγάλα μηχανικά επιτεύγματα του αρχαίου κόσμου."
+          },
+          {
+            "name": "Psili Ammos Beach",
+            "lat": 37.6836,
+            "lng": 27.0175,
+            "type": "beach",
+            "time": "16:00",
+            "wiki": null,
+            "desc": "The finest beach on Samos — fine white sand and shallow turquoise water in a sheltered bay near the southeastern tip. Calm, organised and beautiful.",
+            "name_el": "Παραλία Ψιλή Άμμος",
+            "desc_el": "Η καλύτερη παραλία της Σάμου — λεπτή λευκή άμμος και ρηχά τιρκουάζ νερά σε προστατευμένο κόλπο κοντά στο νοτιοανατολικό άκρο. Ήρεμη, οργανωμένη και όμορφη."
+          }
         ]
       },
       {
@@ -44,10 +123,50 @@
         "drive_mins": 65,
         "overnight": "Karlovasi",
         "stops": [
-          { "name": "Karlovasi", "lat": 37.7883, "lng": 26.7050, "type": "city", "time": "09:00", "wiki": null, "desc": "The second town of Samos — a relaxed, untouristy university town with a beautiful neoclassical quarter. The old tannery district is atmospheric." },
-          { "name": "Potami Beach & Waterfall", "lat": 37.7917, "lng": 26.7100, "type": "beach", "time": "10:00", "wiki": null, "desc": "Sandy beach where a river meets the sea, with a waterfall and Byzantine ruins in the gorge behind. A 30-minute walk up the river brings you to the falls. Unique combination." },
-          { "name": "Mount Kerkis Foothills", "lat": 37.7283, "lng": 26.6867, "type": "nature", "time": "13:30", "wiki": "https://en.wikipedia.org/wiki/Mount_Kerkis", "desc": "The 1434m summit dominates western Samos. Drive to the monastery of Evangelistria for views and a starting point for hikes into the forest." },
-          { "name": "Sea Cave of Pythagoras", "lat": 37.7000, "lng": 26.6683, "type": "nature", "time": "16:00", "wiki": null, "desc": "Sea cave on the southwest coast where Pythagoras is said to have lived and taught. Accessible by boat from Karlovasi or by a coastal path." }
+          {
+            "name": "Karlovasi",
+            "lat": 37.7883,
+            "lng": 26.705,
+            "type": "city",
+            "time": "09:00",
+            "wiki": null,
+            "desc": "The second town of Samos — a relaxed, untouristy university town with a beautiful neoclassical quarter. The old tannery district is atmospheric.",
+            "name_el": "Καρλόβασι",
+            "desc_el": "Η δεύτερη πόλη της Σάμου — μια χαλαρή, μη τουριστική πανεπιστημιούπολη με όμορφη νεοκλασική συνοικία. Η συνοικία του παλιού βυρσοδεψείου είναι ατμοσφαιρική."
+          },
+          {
+            "name": "Potami Beach & Waterfall",
+            "lat": 37.7964,
+            "lng": 26.6983,
+            "type": "beach",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Sandy beach where a river meets the sea, with a waterfall and Byzantine ruins in the gorge behind. A 30-minute walk up the river brings you to the falls. Unique combination.",
+            "name_el": "Παραλία & Καταρράκτης Ποτάμι",
+            "desc_el": "Αμμώδης παραλία όπου ένα ποτάμι συναντά τη θάλασσα, με καταρράκτη και βυζαντινά ερείπια στο φαράγγι πίσω. Μια 30λεπτη πεζοπορία πάνω στο ποτάμι σε φέρνει στους καταρράκτες. Μοναδικός συνδυασμός."
+          },
+          {
+            "name": "Mount Kerkis Foothills",
+            "lat": 37.7283,
+            "lng": 26.6867,
+            "type": "nature",
+            "time": "13:30",
+            "wiki": "https://en.wikipedia.org/wiki/Mount_Kerkis",
+            "desc": "The 1434m summit dominates western Samos. Drive to the monastery of Evangelistria for views and a starting point for hikes into the forest.",
+            "name_el": "Πρόποδες Όρους Κέρκι",
+            "desc_el": "Η κορυφή των 1434 μέτρων δεσπόζει στη δυτική Σάμο. Οδήγησε στη μονή Ευαγγελίστριας για θέες και σημείο εκκίνησης για πεζοπορίες στο δάσος."
+          },
+          {
+            "name": "Sea Cave of Pythagoras",
+            "lat": 37.7,
+            "lng": 26.6683,
+            "type": "nature",
+            "time": "16:00",
+            "wiki": null,
+            "desc": "Sea cave on the southwest coast where Pythagoras is said to have lived and taught. Accessible by boat from Karlovasi or by a coastal path.",
+            "name_el": "Θαλάσσια Σπηλιά του Πυθαγόρα",
+            "desc_el": "Θαλάσσια σπηλιά στη νοτιοδυτική ακτή όπου λέγεται ότι έζησε και δίδαξε ο Πυθαγόρας. Προσβάσιμη με βάρκα από το Καρλόβασι ή με παράκτιο μονοπάτι."
+          }
         ]
       },
       {
@@ -58,14 +177,43 @@
         "drive_mins": 35,
         "overnight": null,
         "stops": [
-          { "name": "Samos Wine Cooperative", "lat": 37.7550, "lng": 26.9733, "type": "distillery", "time": "10:00", "wiki": null, "desc": "The famous Samos Muscat — one of the most celebrated dessert wines in the world, praised by Byron and Napoleon. The cooperative in Vathy offers tastings and bottles at excellent prices." },
-          { "name": "Marathokampos Beach", "lat": 37.6867, "lng": 26.7017, "type": "beach", "time": "12:00", "wiki": null, "desc": "Long sandy beach on the south coast near Votsalakia. Calm water facing Turkey, good facilities, one of the better family beaches on the island." },
-          { "name": "Vathy — Departure", "lat": 37.7550, "lng": 26.9733, "type": "harbour", "time": "16:00", "wiki": null, "desc": "Ferry to Piraeus, Chios, Ikaria or Kusadasi (Turkey, 1.5 hours). The ferry from Vathy is spectacular — it passes within metres of the Turkish coast." }
+          {
+            "name": "Samos Wine Cooperative",
+            "lat": 37.755,
+            "lng": 26.9733,
+            "type": "distillery",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "The famous Samos Muscat — one of the most celebrated dessert wines in the world, praised by Byron and Napoleon. The cooperative in Vathy offers tastings and bottles at excellent prices.",
+            "name_el": "Οινοποιητικός Συνεταιρισμός Σάμου",
+            "desc_el": "Το διάσημο μοσχάτο Σάμου — ένα από τα πιο φημισμένα επιδόρπια κρασιά του κόσμου, επαινεμένο από τον Βύρωνα και τον Ναπολέοντα. Ο συνεταιρισμός στο Βαθύ προσφέρει γευσιγνωσίες και φιάλες σε εξαιρετικές τιμές."
+          },
+          {
+            "name": "Marathokampos Beach",
+            "lat": 37.7044,
+            "lng": 26.7286,
+            "type": "beach",
+            "time": "12:00",
+            "wiki": null,
+            "desc": "Long sandy beach on the south coast near Votsalakia. Calm water facing Turkey, good facilities, one of the better family beaches on the island.",
+            "name_el": "Παραλία Μαραθόκαμπου",
+            "desc_el": "Μακρά αμμώδης παραλία στη νότια ακτή κοντά στα Βοτσαλάκια. Ήρεμα νερά με όψη στην Τουρκία, καλές ανέσεις, μία από τις καλύτερες οικογενειακές παραλίες του νησιού."
+          },
+          {
+            "name": "Vathy — Departure",
+            "lat": 37.755,
+            "lng": 26.9733,
+            "type": "harbour",
+            "time": "16:00",
+            "wiki": null,
+            "desc": "Ferry to Piraeus, Chios, Ikaria or Kusadasi (Turkey, 1.5 hours). The ferry from Vathy is spectacular — it passes within metres of the Turkish coast.",
+            "name_el": "Βαθύ — Αναχώρηση",
+            "desc_el": "Πλοίο προς Πειραιά, Χίο, Ικαρία ή Κουσάντασι (Τουρκία, 1,5 ώρα). Το πλοίο από το Βαθύ είναι εντυπωσιακό — περνά μέσα σε μέτρα από την τουρκική ακτή."
+          }
         ]
       }
     ]
   },
-
   "beaches": [
     {
       "name": "Psili Ammos Beach",
@@ -78,7 +226,14 @@
       "facilities": "Good: sunbeds, beach bar, taverna. Best beach on the island.",
       "desc": "The finest beach on Samos — fine white sand and shallow turquoise water near the southeastern tip. The most photogenic beach on the island and consistently the calmest. The view toward Turkey from the water is striking.",
       "commons": null,
-      "lat": 37.6583, "lng": 26.9983
+      "lat": 37.6836,
+      "lng": 27.0175,
+      "name_el": "Παραλία Ψιλή Άμμος",
+      "desc_el": "Η καλύτερη παραλία της Σάμου — λεπτή λευκή άμμος και ρηχά τιρκουάζ νερά κοντά στο νοτιοανατολικό άκρο. Η πιο φωτογενής παραλία του νησιού και σταθερά η πιο ήρεμη. Η θέα προς την Τουρκία από το νερό είναι εντυπωσιακή.",
+      "type_el": "Λεπτή λευκή άμμος",
+      "depth_el": "Ρηχά — ήρεμα, τιρκουάζ νερά",
+      "facing_el": "Νότιο προσανατολισμό — προστατευμένος κόλπος, ζεστά νερά",
+      "facilities_el": "Καλές: ξαπλώστρες, beach bar, ταβέρνα. Η καλύτερη παραλία του νησιού."
     },
     {
       "name": "Potami Beach",
@@ -91,7 +246,14 @@
       "facilities": "Basic: taverna nearby. River gorge with waterfall behind the beach.",
       "desc": "A unique beach where a river flows through a gorge and meets the sea — Byzantine ruins and a waterfall are accessible on a 30-minute walk upstream. One of the most interesting beach settings in the Aegean.",
       "commons": null,
-      "lat": 37.7917, "lng": 26.7100
+      "lat": 37.7964,
+      "lng": 26.6983,
+      "name_el": "Παραλία Ποτάμι",
+      "desc_el": "Μια μοναδική παραλία όπου ένα ποτάμι ρέει μέσα από φαράγγι και συναντά τη θάλασσα — βυζαντινά ερείπια και καταρράκτης προσβάσιμα με 30λεπτη πεζοπορία πάνω στο ποτάμι. Ένα από τα πιο ενδιαφέροντα παραλιακά σκηνικά του Αιγαίου.",
+      "type_el": "Λεπτή άμμος και βότσαλο",
+      "depth_el": "Ρηχά — ποτάμι και θάλασσα συναντιούνται",
+      "facing_el": "Βορειοδυτικό προσανατολισμό — προστατευμένος κόλπος",
+      "facilities_el": "Βασικές: ταβέρνα κοντά. Φαράγγι ποταμού με καταρράκτη πίσω από την παραλία."
     },
     {
       "name": "Marathokampos Beach",
@@ -104,7 +266,17 @@
       "facilities": "Good: sunbeds, tavernas, parking. Family-friendly.",
       "desc": "Long south-coast beach facing Turkey — calm, organised and good for families. The Kerkis mountain backdrop makes it one of the most dramatic beach settings on the island.",
       "commons": null,
-      "lat": 37.6867, "lng": 26.7017
+      "lat": 37.7044,
+      "lng": 26.7286,
+      "name_el": "Παραλία Μαραθόκαμπου",
+      "desc_el": "Μακρά παραλία της νότιας ακτής με όψη στην Τουρκία — ήρεμη, οργανωμένη και καλή για οικογένειες. Το φόντο του βουνού Κέρκι την κάνει ένα από τα πιο δραματικά παραλιακά σκηνικά του νησιού.",
+      "type_el": "Άμμος και λεπτό βότσαλο",
+      "depth_el": "Ρηχά — ήρεμη νότια ακτή",
+      "facing_el": "Νότιο προσανατολισμό — θέα προς Τουρκία, ήρεμα νερά",
+      "facilities_el": "Καλές: ξαπλώστρες, ταβέρνες, parking. Οικογενειακή."
     }
-  ]
+  ],
+  "name_el": "Σάμος",
+  "subtitle_el": "Ο Πυθαγόρας, η Ήρα και το πιο πράσινο νησί του ανατολικού Αιγαίου",
+  "intro_el": "Η Σάμος είναι η γενέτειρα του Πυθαγόρα και του Επίκουρου, και σπίτι του Ηραίου — ενός από τα σημαντικότερα αρχαία ιερά της Ελλάδας. Το νησί είναι ασυνήθιστα πράσινο για το Αιγαίο — δασωμένα βουνά, αμπελώνες που παράγουν το διάσημο μοσχάτο κρασί, και ένα πλούσιο τοπίο που αντιτίθεται στις βραχώδεις Κυκλάδες κοντά. Η ανατολική ακτή είναι μόλις 1,4 χλμ από την Τουρκία. Λιγότερο διάσημη από όσο της αξίζει."
 }
