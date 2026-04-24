@@ -1,0 +1,157 @@
+{
+  "key": "agathonisi",
+  "name": "Agathonisi",
+  "name_el": "Αγαθονήσι",
+  "subtitle": "The northernmost Dodecanese — 185 residents, three villages, 11th-century Byzantine domes and a single ferry a week off-season",
+  "subtitle_el": "Το βορειότερο Δωδεκανησιακό — 185 κάτοικοι, τρία χωριά, βυζαντινές θόλοι του 11ου αιώνα και ένα πλοίο την εβδομάδα εκτός σεζόν",
+  "intro": "Agathonisi is the northernmost of the Dodecanese, closer to Samos than to any other inhabited Greek island. 13.5 km² of thorny limestone with about 185 year-round residents — locals call the island Gaidaro ('donkey') because of the shape. Three settlements: Agios Georgios (the small port at the only sheltered harbour), Megalo Chorio (the old capital, hidden 2km inland from pirate sight-lines), and nearly-empty Mikro Chorio. No cars you'd notice. No ATM. The 11th-century stone-domed buildings called Tholi near the chapel of Agios Nikolaos are the oldest standing structures — probably Byzantine food stores. A day is enough to walk the island; longer means you wanted to slow all the way down.",
+  "intro_el": "Το Αγαθονήσι είναι το βορειότερο των Δωδεκανήσων, πιο κοντά στη Σάμο παρά σε οποιοδήποτε άλλο κατοικημένο ελληνικό νησί. 13,5 τ.χλμ. ασβεστολιθικής θαμνώδους γης με περίπου 185 μόνιμους κατοίκους — οι ντόπιοι λένε το νησί Γάιδαρο λόγω του σχήματος. Τρεις οικισμοί: ο Άγιος Γεώργιος (το μικρό λιμάνι στο μοναδικό προστατευμένο αγκυροβόλιο), το Μεγάλο Χωριό (η παλιά πρωτεύουσα, κρυμμένη 2 χλμ στην ενδοχώρα από τη θέαση των πειρατών), και το σχεδόν άδειο Μικρό Χωριό. Αυτοκίνητα που θα προσέξεις κανένα. Χωρίς ATM. Οι πέτρινες θολωτές κατασκευές του 11ου αιώνα που λέγονται Θόλοι κοντά στο εκκλησάκι του Αγίου Νικολάου είναι τα αρχαιότερα όρθια κτίσματα — πιθανότατα βυζαντινές αποθήκες τροφίμων. Μία μέρα φτάνει για να περπατήσεις το νησί· παραπάνω σημαίνει ότι ήθελες να επιβραδύνεις τελείως.",
+
+  "itinerary": {
+    "title": "1-Day Agathonisi Itinerary",
+    "subtitle": "Ferry morning in, walk the three villages, swim at Spilia, dinner at Atsidas.",
+    "days": [
+      {
+        "day": 1,
+        "title": "The Three Villages & Spilia Beach",
+        "color": "#1B4F8A",
+        "stops": [
+          {
+            "name": "Agios Georgios Port",
+            "name_el": "Λιμάνι Αγίου Γεωργίου",
+            "lat": 37.4550,
+            "lng": 26.9597,
+            "type": "village",
+            "wiki": "https://en.wikipedia.org/wiki/Agathonisi",
+            "desc": "The only harbour — a sheltered south-facing bay with a wide new pier (yachts moor here), colourful fishing boats, a handful of tavernas and rooms-to-let. The town beach is right at the port: sand and fine pebbles, sparklingly clear water, a handful of tamarisks for shade.",
+            "desc_el": "Το μοναδικό λιμάνι — προστατευμένος νότιος κόλπος με φαρδύ νέο μώλο (αγκυροβολούν γιοτ εδώ), πολύχρωμα αλιευτικά σκάφη, λίγες ταβέρνες και ενοικιαζόμενα δωμάτια. Η παραλία της πόλης είναι ακριβώς στο λιμάνι: άμμος και λεπτό βότσαλο, λαμπερά διαυγή νερά, λίγα αλμυρίκια για σκιά."
+          },
+          {
+            "name": "Spilia Beach",
+            "name_el": "Παραλία Σπηλιά",
+            "lat": 37.4486,
+            "lng": 26.9608,
+            "type": "beach",
+            "desc": "900m south of the port along a coastal path. Sand and fine pebble, turquoise water like a natural swimming pool, and a sea cave at the southeastern end that gives the beach its name. Tamarisks bend toward the water. Goats occasionally come down to drink from the sea — their bells breaking the silence.",
+            "desc_el": "900 μέτρα νότια του λιμανιού σε παραλιακό μονοπάτι. Άμμος και λεπτό βότσαλο, τιρκουάζ νερά σαν φυσική πισίνα, και μια θαλάσσια σπηλιά στο νοτιοανατολικό άκρο που δίνει στην παραλία το όνομά της. Τα αλμυρίκια γέρνουν προς το νερό. Κατσίκες κατεβαίνουν περιστασιακά να πιουν από τη θάλασσα — τα κουδούνια τους σπάνε τη σιωπή."
+          },
+          {
+            "name": "Megalo Chorio",
+            "name_el": "Μεγάλο Χωριό",
+            "lat": 37.4625,
+            "lng": 26.9611,
+            "type": "village",
+            "desc": "The old capital — 2km uphill from the port, deliberately built invisible from the sea as protection from pirate raids. Stone houses with high whitewashed walls, a mosaic-paved central square with a map of the island inlaid in stone, three churches (Zoodochos Pigi, Agios Ioannis Theologos, Agios Rafail). 168 of the island's 185 residents live here.",
+            "desc_el": "Η παλιά πρωτεύουσα — 2 χλμ ανηφόρα από το λιμάνι, σκόπιμα χτισμένη αόρατη από τη θάλασσα ως προστασία από πειρατικές επιδρομές. Πέτρινα σπίτια με ψηλά ασβεστωμένα τείχη, κεντρική πλατεία με μωσαϊκό όπου είναι σχεδιασμένος με πέτρα ο χάρτης του νησιού, τρεις εκκλησίες (Ζωοδόχος Πηγή, Άγιος Ιωάννης Θεολόγος, Άγιος Ραφαήλ). 168 από τους 185 κατοίκους του νησιού ζουν εδώ."
+          },
+          {
+            "name": "Mikro Chorio & Agios Panteleimonas",
+            "name_el": "Μικρό Χωριό & Άγιος Παντελεήμονας",
+            "lat": 37.4644,
+            "lng": 26.9494,
+            "type": "village",
+            "desc": "Opposite Megalo Chorio — the smaller village, only 17 permanent residents. Whitewashed houses around a tiny square. Climb the 100m-high hill above for the Agios Panteleimonas chapel — panoramic view of both villages, the sea, and on clear days Samos to the north and Leros/Kalymnos to the south.",
+            "desc_el": "Απέναντι από το Μεγάλο Χωριό — το μικρότερο χωριό, μόνο 17 μόνιμοι κάτοικοι. Ασβεστωμένα σπίτια γύρω από μια μικρή πλατεία. Ανέβα τον λόφο 100μ από πάνω για το εκκλησάκι του Αγίου Παντελεήμονα — πανοραμική θέα και στα δύο χωριά, στη θάλασσα, και σε καθαρές μέρες στη Σάμο βόρεια και στη Λέρο/Κάλυμνο νότια."
+          },
+          {
+            "name": "The Tholi Domes",
+            "name_el": "Οι Θόλοι",
+            "lat": 37.4583,
+            "lng": 26.9800,
+            "type": "ruin",
+            "desc": "Eastern side of the island near the chapel of Agios Nikolaos — stone-built domed constructions from the 11th century, likely Byzantine food warehouses (they have airways at the roofs). Protected by barbed wire but you can get close. Combine with a walk down to Vathy Pigadi beach below.",
+            "desc_el": "Ανατολική πλευρά του νησιού κοντά στο εκκλησάκι του Αγίου Νικολάου — πέτρινες θολωτές κατασκευές του 11ου αιώνα, πιθανότατα βυζαντινές αποθήκες τροφίμων (έχουν εξαερισμούς στις στέγες). Προστατεύονται με συρμάτινο πλέγμα αλλά πλησιάζεις. Συνδύασε με κατάβαση στην παραλία Βαθύ Πηγάδι από κάτω."
+          },
+          {
+            "name": "Dinner — Atsidas Taverna",
+            "name_el": "Δείπνο — Ταβέρνα Ατσίδας",
+            "lat": 37.4625,
+            "lng": 26.9611,
+            "type": "village",
+            "desc": "In Megalo Chorio with panoramic harbour views. Stews, grilled meat cooked to order, catch of the day. Order the myzithra pies (small handmade cheese pies), goat with macaroni, and the homemade local cheese. This is the reason to have stayed overnight rather than day-tripped.",
+            "desc_el": "Στο Μεγάλο Χωριό με πανοραμική θέα στο λιμάνι. Κατσαρόλες, κρέας στη σχάρα έτοιμο κατά παραγγελία, το ψάρι της ημέρας. Παράγγειλε τις μυζηθρόπιτες (μικρές χειροποίητες τυρόπιτες), κατσίκι με μακαρόνια, και το σπιτικό τοπικό τυρί. Αυτός είναι ο λόγος που διανυκτέρευσες αντί να κάνεις ημερήσια."
+          }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Spilia Beach",
+      "name_el": "Παραλία Σπηλιά",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine sand and pebble",
+      "type_el": "Λεπτή άμμος και βότσαλο",
+      "length": "100 m",
+      "depth": "Shallow — turquoise pool-like water",
+      "depth_el": "Ρηχό — τιρκουάζ νερά σαν πισίνα",
+      "facing": "South-facing — sheltered",
+      "facing_el": "Νότια — προστατευμένη",
+      "facilities": "None. Tamarisk shade. 15-minute walk south from the port along a coastal path.",
+      "facilities_el": "Καμία. Σκιά αλμυρικιών. 15 λεπτά με τα πόδια νότια από το λιμάνι σε παραλιακό μονοπάτι.",
+      "desc": "The best beach on Agathonisi — fine sand and pebble, water so clear it looks like a swimming pool, a natural sea cave at one end. Tamarisk trees bend to the water. Wild goats come down to drink from the sea, their bells breaking the stillness. Bring water; there is nothing here.",
+      "desc_el": "Η καλύτερη παραλία του Αγαθονησίου — λεπτή άμμος και βότσαλο, νερά τόσο διαυγή που μοιάζουν με πισίνα, μια φυσική θαλάσσια σπηλιά στη μία άκρη. Τα αλμυρίκια γέρνουν στο νερό. Άγριες κατσίκες κατεβαίνουν να πιουν από τη θάλασσα, τα κουδούνια τους σπάνε την ηρεμία. Φέρε νερό· δεν υπάρχει τίποτα εδώ.",
+      "lat": 37.4486,
+      "lng": 26.9608
+    },
+    {
+      "name": "Gaidouravlako Beach",
+      "name_el": "Παραλία Γαϊδουρόλακκος",
+      "wiki": null,
+      "rating": 5,
+      "type": "Colourful pebble",
+      "type_el": "Πολύχρωμο βότσαλο",
+      "length": "80 m",
+      "depth": "Medium — calm sheltered cove",
+      "depth_el": "Μέτριο — ήρεμος προστατευμένος κόλπος",
+      "facing": "South-facing — protected from the meltemi",
+      "facing_el": "Νότια — προστατευμένη από το μελτέμι",
+      "facilities": "None. 20 minutes further along the path from Spilia, or reached by boat from Agios Georgios.",
+      "facilities_el": "Καμία. 20 λεπτά πιο μακριά στο μονοπάτι από τη Σπηλιά, ή προσβάσιμη με βάρκα από τον Άγιο Γεώργιο.",
+      "desc": "The island's most emblematic beach — a small pebble cove with colourful stones and calm turquoise water protected from the winds. Surrounding vegetation gives a bit of shade. Almost always empty. The reward for the 35-minute coastal walk from the port.",
+      "desc_el": "Η πιο εμβληματική παραλία του νησιού — μικρός βότσαλος κολπίσκος με πολύχρωμες πέτρες και ήρεμα τιρκουάζ νερά προστατευμένα από τους ανέμους. Η γύρω βλάστηση δίνει λίγη σκιά. Σχεδόν πάντα άδεια. Η ανταμοιβή για τη 35λεπτη παραλιακή πεζοπορία από το λιμάνι.",
+      "lat": 37.4450,
+      "lng": 26.9639
+    },
+    {
+      "name": "Agios Georgios Beach",
+      "name_el": "Παραλία Άγιος Γεώργιος",
+      "wiki": null,
+      "rating": 4,
+      "type": "Sand and fine pebble",
+      "type_el": "Άμμος και λεπτό βότσαλο",
+      "length": "150 m",
+      "depth": "Shallow — gradual",
+      "depth_el": "Ρηχό — σταδιακό",
+      "facing": "South-facing — fully sheltered harbour",
+      "facing_el": "Νότια — πλήρως προστατευμένο λιμάνι",
+      "facilities": "Organised: tavernas, cafés, rooms-to-let steps away. Right at the port.",
+      "facilities_el": "Οργανωμένη: ταβέρνες, καφέ, ενοικιαζόμενα δωμάτια ένα βήμα μακριά. Ακριβώς στο λιμάνι.",
+      "desc": "The port beach — sand and fine pebbles, sparkling water, the easiest swim on the island. Directly in front of the harbour tavernas, so you can drink a frappé between swims. Not spectacular, but on an island this small, convenient is valuable.",
+      "desc_el": "Η παραλία του λιμανιού — άμμος και λεπτά βότσαλα, λαμπερό νερό, το πιο εύκολο μπάνιο του νησιού. Ακριβώς μπροστά από τις ταβέρνες του λιμανιού, οπότε πίνεις φραπέ ανάμεσα στα μπάνια. Όχι εντυπωσιακή, αλλά σε ένα νησί τόσο μικρό, η ευκολία είναι πολύτιμη.",
+      "lat": 37.4550,
+      "lng": 26.9597
+    },
+    {
+      "name": "Vathy Pigadi Beach",
+      "name_el": "Παραλία Βαθύ Πηγάδι",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "type_el": "Βότσαλο",
+      "length": "80 m",
+      "depth": "Medium — clear",
+      "depth_el": "Μέτριο — διαυγές",
+      "facing": "East-facing",
+      "facing_el": "Ανατολική",
+      "facilities": "None. Below the Tholi domes on the east coast. Reached by dirt track or on foot.",
+      "facilities_el": "Καμία. Κάτω από τους Θόλους στην ανατολική ακτή. Προσβάσιμη με χωματόδρομο ή με τα πόδια.",
+      "desc": "East-coast pebble beach below the 11th-century Byzantine Tholi domes. Layered pebbles, turquoise water, the combination of archaeology and swim is what makes it worth the effort. The chapel of Agios Nikolaos sits on the hill above.",
+      "desc_el": "Βότσαλη παραλία της ανατολικής ακτής κάτω από τους βυζαντινούς Θόλους του 11ου αιώνα. Στρωματοποιημένο βότσαλο, τιρκουάζ νερά, ο συνδυασμός αρχαιολογίας και μπάνιου είναι αυτό που αξίζει την προσπάθεια. Το εκκλησάκι του Αγίου Νικολάου στέκεται στον λόφο από πάνω.",
+      "lat": 37.4597,
+      "lng": 26.9811
+    }
+  ]
+}

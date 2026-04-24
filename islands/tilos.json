@@ -1,0 +1,209 @@
+{
+  "key": "tilos",
+  "name": "Tilos",
+  "name_el": "Τήλος",
+  "subtitle": "The dwarf-elephant island — abandoned medieval ghost village, Greece's first 100% renewable-energy island and a famous late-night bar in the ruins",
+  "subtitle_el": "Το νησί των νάνων ελεφάντων — εγκαταλελειμμένο μεσαιωνικό χωριό-φάντασμα, το πρώτο 100% ανανεώσιμο ενεργειακά νησί της Ελλάδας και ένα διάσημο νυχτερινό μπαρ στα ερείπια",
+  "intro": "Tilos is 63 km² of hills and coves between Nisyros and Halki, with roughly 500 year-round residents in two working villages: Livadia (the port) and Megalo Chorio (the traditional capital, on the slopes of Mount Stefanos). In between them, the ghost village of Mikro Chorio — 15th-century, abandoned after WWII, with one working church and one legendary bar that only opens after 23:00 with a free shuttle from Livadia. The island is paleontologically famous: Charkadio Cave in the middle of the island was where fossilised dwarf elephants were discovered in the 1970s, some only 1.2m tall, extinct around 4,000 BC. Tilos is also the first fully renewable-energy island in Greece (solar + wind + storage covers all electricity needs since 2018). Two days — one for each half of the island.",
+  "intro_el": "Η Τήλος είναι 63 τ.χλμ. λόφων και κόλπων ανάμεσα σε Νίσυρο και Χάλκη, με περίπου 500 μόνιμους κατοίκους σε δύο λειτουργικά χωριά: τη Λιβαδιά (το λιμάνι) και το Μεγάλο Χωριό (η παραδοσιακή πρωτεύουσα, στις πλαγιές του Όρους Στεφάνου). Ανάμεσά τους, το χωριό-φάντασμα Μικρό Χωριό — του 15ου αιώνα, εγκαταλελειμμένο μετά τον Β' Παγκόσμιο, με μία λειτουργική εκκλησία και ένα θρυλικό μπαρ που ανοίγει μόνο μετά τις 23:00 με δωρεάν πούλμαν από τη Λιβαδιά. Το νησί είναι παλαιοντολογικά διάσημο: η Σπηλιά Χαρκαδιό στη μέση του νησιού ήταν όπου ανακαλύφθηκαν απολιθώματα νάνων ελεφάντων τη δεκαετία του 1970, κάποιοι μόλις 1,2μ ψηλοί, εξαφανισμένοι γύρω στο 4.000 π.Χ. Η Τήλος είναι επίσης το πρώτο πλήρως ανανεώσιμο ενεργειακά νησί της Ελλάδας (ηλιακή + αιολική + αποθήκευση καλύπτουν όλες τις ηλεκτρικές ανάγκες από το 2018). Δύο μέρες — μία για κάθε μισό του νησιού.",
+
+  "itinerary": {
+    "title": "2-Day Tilos Itinerary",
+    "subtitle": "Livadia, Mikro Chorio ghost village and the abandoned bar Day 1, Megalo Chorio, the castle and Eristos Day 2.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Livadia, Lethra Walk & the Ghost Village Bar",
+        "color": "#1B4F8A",
+        "stops": [
+          {
+            "name": "Livadia Port",
+            "name_el": "Λιμάνι Λιβαδιά",
+            "lat": 36.4217,
+            "lng": 27.3881,
+            "type": "village",
+            "wiki": "https://en.wikipedia.org/wiki/Tilos",
+            "desc": "The main port and most developed village — a mix of old and new on first glance, but lively in the late afternoon when the square fills up. Pedestrian-only beachfront walkway, tavernas, bakery, cafés, the pebbled town beach right at the harbour. 500 of the island's residents live here.",
+            "desc_el": "Το κύριο λιμάνι και πιο ανεπτυγμένο χωριό — ένα μείγμα παλιού και νέου με την πρώτη ματιά, αλλά ζωντανό αργά το απόγευμα όταν η πλατεία γεμίζει. Πεζόδρομος παραλιακής, ταβέρνες, φούρνος, καφέ, η βότσαλη παραλία της πόλης ακριβώς στο λιμάνι. 500 από τους κατοίκους του νησιού ζουν εδώ."
+          },
+          {
+            "name": "Agiosykia Castle",
+            "name_el": "Κάστρο Αγιοσυκιάς",
+            "lat": 36.4281,
+            "lng": 27.3844,
+            "type": "castle",
+            "desc": "On the hill directly above Livadia harbour — 15th-century Knights of St. John fortress, given to Barello Assanti d'Ischia to fortify the island against pirates. Only the defensive walls survive, but the panoramic view over Livadia bay and the open Aegean is the reward for a short climb.",
+            "desc_el": "Στον λόφο ακριβώς πάνω από το λιμάνι της Λιβαδιάς — φρούριο των Ιωαννιτών Ιπποτών του 15ου αιώνα, που δόθηκε στον Barello Assanti d'Ischia να οχυρώσει το νησί κατά των πειρατών. Μόνο τα αμυντικά τείχη επιβιώνουν, αλλά η πανοραμική θέα στον κόλπο της Λιβαδιάς και το ανοιχτό Αιγαίο είναι η ανταμοιβή για μια σύντομη ανάβαση."
+          },
+          {
+            "name": "Livadia to Lethra Walk",
+            "name_el": "Πεζοπορία Λιβαδιά-Λέθρα",
+            "lat": 36.4394,
+            "lng": 27.4003,
+            "type": "viewpoint",
+            "desc": "45-minute waymarked coastal path north from Livadia through small valleys to Lethra beach — pebble, quiet, often completely empty. The best easy hike on the island, with views across to Nisyros. Return the same way or loop via Mikro Chorio.",
+            "desc_el": "45λεπτο σηματοδοτημένο παραλιακό μονοπάτι βόρεια από τη Λιβαδιά μέσα από μικρές κοιλάδες στην παραλία Λέθρα — βότσαλο, ήσυχη, συχνά εντελώς άδεια. Η καλύτερη εύκολη πεζοπορία του νησιού, με θέα προς τη Νίσυρο. Επιστροφή από τον ίδιο δρόμο ή βρόγχος μέσω Μικρού Χωριού."
+          },
+          {
+            "name": "Mikro Chorio (Ghost Village)",
+            "name_el": "Μικρό Χωριό (Χωριό-Φάντασμα)",
+            "lat": 36.4231,
+            "lng": 27.3686,
+            "type": "ruin",
+            "desc": "3km from Livadia — a 15th-century village that housed 700 people, abandoned after WWII when residents moved down to the port. Stone houses in various states of collapse, a working church, a medieval castle ruin. Best time: late afternoon for photography; after 23:00 for the bar (see next stop).",
+            "desc_el": "3 χλμ από τη Λιβαδιά — ένα χωριό του 15ου αιώνα που φιλοξενούσε 700 ανθρώπους, εγκαταλελειμμένο μετά τον Β' Παγκόσμιο όταν οι κάτοικοι μετακόμισαν στο λιμάνι. Πέτρινα σπίτια σε διάφορες καταστάσεις κατάρρευσης, μια λειτουργική εκκλησία, ένα ερείπιο μεσαιωνικού κάστρου. Καλύτερη ώρα: αργά το απόγευμα για φωτογραφία· μετά τις 23:00 για το μπαρ (δες επόμενη στάση)."
+          },
+          {
+            "name": "Mikro Chorio Bar",
+            "name_el": "Μπαρ Μικρού Χωριού",
+            "lat": 36.4231,
+            "lng": 27.3686,
+            "type": "village",
+            "desc": "One of the most atmospheric bars in Greece — operates only in summer, only after 23:00, in the ruins of an abandoned medieval village. Free shuttle bus from Livadia. No neighbours means no noise complaints. Drinks are a bit pricier than average but the experience is unmatched.",
+            "desc_el": "Ένα από τα πιο ατμοσφαιρικά μπαρ της Ελλάδας — λειτουργεί μόνο το καλοκαίρι, μόνο μετά τις 23:00, στα ερείπια ενός εγκαταλελειμμένου μεσαιωνικού χωριού. Δωρεάν πούλμαν από τη Λιβαδιά. Καθόλου γείτονες σημαίνει καθόλου παράπονα για θόρυβο. Τα ποτά είναι λίγο πιο ακριβά από τον μέσο όρο αλλά η εμπειρία είναι ασύγκριτη."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Charkadio Cave, Megalo Chorio Castle & Eristos",
+        "color": "#C0522A",
+        "stops": [
+          {
+            "name": "Charkadio Cave & Museum",
+            "name_el": "Σπηλιά & Μουσείο Χαρκαδιό",
+            "lat": 36.4444,
+            "lng": 27.3478,
+            "type": "ruin",
+            "desc": "Between Mikro Chorio and Megalo Chorio — the cave where fossilised dwarf elephants were discovered in the 1970s. The cave itself is closed to visitors but the small Paleontology Museum next door houses two skeletons of the 1.2m-tall elephants, plus fossils and skulls from the nearby Agios Antonios ancient cemetery. Unique in the Aegean.",
+            "desc_el": "Ανάμεσα σε Μικρό και Μεγάλο Χωριό — η σπηλιά όπου ανακαλύφθηκαν απολιθώματα νάνων ελεφάντων τη δεκαετία του 1970. Η ίδια η σπηλιά είναι κλειστή για τους επισκέπτες αλλά το μικρό Παλαιοντολογικό Μουσείο δίπλα φιλοξενεί δύο σκελετούς των 1,2μ ψηλών ελεφάντων, συν απολιθώματα και κρανία από το κοντινό αρχαίο νεκροταφείο του Αγίου Αντωνίου. Μοναδικό στο Αιγαίο."
+          },
+          {
+            "name": "Megalo Chorio (Capital)",
+            "name_el": "Μεγάλο Χωριό (Πρωτεύουσα)",
+            "lat": 36.4550,
+            "lng": 27.3450,
+            "type": "village",
+            "desc": "The traditional capital on the slopes of Mount Stefanos. Whitewashed houses, bougainvillea, narrow alley-labyrinth, pebble-paved church courtyards. Until the early 18th century the entire population of Tilos lived within the castle walls above. The main church of Taxiarchis Michael has western architectural influences and a carved iconostasis by Smyrna craftsmen.",
+            "desc_el": "Η παραδοσιακή πρωτεύουσα στις πλαγιές του Όρους Στεφάνου. Ασβεστωμένα σπίτια, μπουκαμβίλιες, στενός λαβύρινθος δρομακιών, πλακόστρωτες αυλές εκκλησιών. Μέχρι τις αρχές του 18ου αιώνα ολόκληρος ο πληθυσμός της Τήλου ζούσε μέσα στα τείχη του κάστρου από πάνω. Η κύρια εκκλησία των Ταξιαρχών Μιχαήλ έχει δυτικές αρχιτεκτονικές επιρροές και λαξευμένο τέμπλο από μάστορες της Σμύρνης."
+          },
+          {
+            "name": "Castle of the Knights (Megalo Chorio)",
+            "name_el": "Κάστρο των Ιπποτών (Μεγάλο Χωριό)",
+            "lat": 36.4567,
+            "lng": 27.3475,
+            "type": "castle",
+            "desc": "15th-century Knights of St. John fortress on the natural peak of Mount Stefanos, built on the ancient acropolis. 20-30 minute steep hike up a rough path from Megalo Chorio — not for kids, no railings. The reward: the half-ruined Church of Agios Taxiarchis with original frescoes, ancient water tanks, ruins of the medieval town, and 360° views over Eristos Bay and Agios Antonios.",
+            "desc_el": "Φρούριο των Ιωαννιτών του 15ου αιώνα στην κορυφή του Όρους Στεφάνου, χτισμένο πάνω στην αρχαία ακρόπολη. 20-30 λεπτά απότομης ανάβασης σε τραχύ μονοπάτι από το Μεγάλο Χωριό — όχι για παιδιά, χωρίς κάγκελα. Η ανταμοιβή: η μισοερειπωμένη Εκκλησία του Αγίου Ταξιάρχη με αυθεντικές τοιχογραφίες, αρχαίες στέρνες, ερείπια της μεσαιωνικής πόλης, και 360° θέα στον κόλπο Εριστού και τον Άγιο Αντώνιο."
+          },
+          {
+            "name": "Eristos Beach",
+            "name_el": "Παραλία Εριστός",
+            "lat": 36.4394,
+            "lng": 27.3392,
+            "type": "beach",
+            "desc": "2.5km south of Megalo Chorio — the headline beach of the island. Long wide crescent of fine sand mixed with pebbles, tamarisk trees behind for shade, emerald water. Free campers pitch tents under the tamarisks. A canteen and beach café in summer; no sunbeds. Easily the most popular beach on Tilos.",
+            "desc_el": "2,5 χλμ νότια του Μεγάλου Χωριού — η κύρια παραλία του νησιού. Μακριά φαρδιά ημισέληνος λεπτής άμμου ανάμεικτης με βότσαλα, αλμυρίκια πίσω για σκιά, σμαραγδένια νερά. Ελεύθεροι κατασκηνωτές στήνουν σκηνές κάτω από τα αλμυρίκια. Μία καντίνα και beach café το καλοκαίρι· χωρίς ξαπλώστρες. Εύκολα η πιο δημοφιλής παραλία της Τήλου."
+          },
+          {
+            "name": "Agios Antonios & Plaka Beach",
+            "name_el": "Άγιος Αντώνιος & Παραλία Πλάκα",
+            "lat": 36.4650,
+            "lng": 27.3456,
+            "type": "village",
+            "desc": "Small fishing village on the north coast with good taverns and a peaceful bay. Just beyond it, Plaka beach with its resident peacocks — pine trees for shade, pebbles, no sunbeds, no café. The oddest-but-wonderful sight on the island: peacocks walking the pebbles.",
+            "desc_el": "Μικρό αλιευτικό χωριό στη βόρεια ακτή με καλές ταβέρνες και ήρεμο κόλπο. Λίγο πιο πέρα, η παραλία Πλάκα με τα μόνιμα παγώνια της — πεύκα για σκιά, βότσαλο, χωρίς ξαπλώστρες, χωρίς καφέ. Το πιο περίεργο-αλλά-υπέροχο θέαμα του νησιού: παγώνια που περπατούν στο βότσαλο."
+          },
+          {
+            "name": "Dinner at Kastro Taverna",
+            "name_el": "Δείπνο στην Ταβέρνα Κάστρο",
+            "lat": 36.4550,
+            "lng": 27.3450,
+            "type": "village",
+            "desc": "In Megalo Chorio — grilled meat, simple local dishes, family-run. The evening view from the square with the castle illuminated above is the reason to linger. Back to Livadia by bus afterwards, or stay in one of the small rooms in Megalo Chorio.",
+            "desc_el": "Στο Μεγάλο Χωριό — κρέας στη σχάρα, απλά τοπικά πιάτα, οικογενειακή. Η βραδινή θέα από την πλατεία με το κάστρο φωτισμένο από πάνω είναι ο λόγος να μείνεις. Πίσω στη Λιβαδιά με λεωφορείο μετά, ή μείνε σε ένα από τα μικρά δωμάτια στο Μεγάλο Χωριό."
+          }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Eristos Beach",
+      "name_el": "Παραλία Εριστός",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine sand and small pebble",
+      "type_el": "Λεπτή άμμος και μικρό βότσαλο",
+      "length": "800 m",
+      "depth": "Shallow to medium — emerald water",
+      "depth_el": "Ρηχό έως μέτριο — σμαραγδένια νερά",
+      "facing": "South-facing — sheltered",
+      "facing_el": "Νότια — προστατευμένη",
+      "facilities": "Light: a summer canteen, a beach café. Tamarisk shade, free camping tolerated. Bus from Livadia (30 min).",
+      "facilities_el": "Ελαφριές: καλοκαιρινή καντίνα, ένα beach café. Σκιά αλμυρικιών, ελεύθερο camping ανεκτό. Λεωφορείο από τη Λιβαδιά (30 λεπτά).",
+      "desc": "The signature beach of Tilos — a long wide crescent of fine sand, emerald water, tamarisk trees that keep the shade even in August. A path on the left side ends in two secluded red-earth coves. Popular with free campers. The default full beach day on the island.",
+      "desc_el": "Η κύρια παραλία της Τήλου — μια μακριά φαρδιά ημισέληνος λεπτής άμμου, σμαραγδένια νερά, αλμυρίκια που κρατούν τη σκιά ακόμα και τον Αύγουστο. Ένα μονοπάτι στην αριστερή πλευρά τελειώνει σε δύο απομονωμένους κολπίσκους με κόκκινη γη. Δημοφιλής στους ελεύθερους κατασκηνωτές. Η προεπιλογή για ολόκληρη ημέρα παραλίας στο νησί.",
+      "lat": 36.4394,
+      "lng": 27.3392
+    },
+    {
+      "name": "Plaka Beach",
+      "name_el": "Παραλία Πλάκα",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "type_el": "Βότσαλο",
+      "length": "200 m",
+      "depth": "Medium — clear",
+      "depth_el": "Μέτριο — διαυγές",
+      "facing": "North-facing",
+      "facing_el": "Βόρεια",
+      "facilities": "None. Pine tree shade, wild peacocks. 30-40 min walk from Agios Antonios bus stop.",
+      "facilities_el": "Καμία. Σκιά πεύκων, άγρια παγώνια. 30-40 λεπτά πεζοπορίας από τη στάση του Αγίου Αντωνίου.",
+      "desc": "Quiet pebble beach on the north coast — famous for its resident peacocks that wander the pebbles, an unexpected sight on a Greek island. Pine trees for a little shade, no facilities. Bring water and snacks. Peaceful even in August.",
+      "desc_el": "Ήσυχη βότσαλη παραλία στη βόρεια ακτή — διάσημη για τα μόνιμα παγώνια της που περιπλανιούνται στο βότσαλο, ένα απρόσμενο θέαμα σε ελληνικό νησί. Πεύκα για λίγη σκιά, χωρίς υπηρεσίες. Φέρε νερό και σνακ. Ήρεμη ακόμα και τον Αύγουστο.",
+      "lat": 36.4683,
+      "lng": 27.3458
+    },
+    {
+      "name": "Lethra Beach",
+      "name_el": "Παραλία Λέθρα",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "type_el": "Βότσαλο",
+      "length": "150 m",
+      "depth": "Medium — clear water",
+      "depth_el": "Μέτριο — διαυγή νερά",
+      "facing": "East-facing",
+      "facing_el": "Ανατολική",
+      "facilities": "None. Reached only by 45-minute hike from Livadia or by boat.",
+      "facilities_el": "Καμία. Προσβάσιμη μόνο με 45λεπτη πεζοπορία από τη Λιβαδιά ή με βάρκα.",
+      "desc": "The hiker's beach — a rough wild pebble cove on the east coast reached only by the signed coastal path from Livadia or by excursion boat. Clear deep water, complete solitude. The hike itself is the reward as much as the beach.",
+      "desc_el": "Η παραλία των πεζοπόρων — άγριος βραχώδης βότσαλος κολπίσκος στην ανατολική ακτή, προσβάσιμος μόνο με το σημασμένο παραλιακό μονοπάτι από τη Λιβαδιά ή με εκδρομικό σκάφος. Διαυγή βαθιά νερά, απόλυτη απομόνωση. Η ίδια η πεζοπορία είναι η ανταμοιβή όσο και η παραλία.",
+      "lat": 36.4394,
+      "lng": 27.4003
+    },
+    {
+      "name": "Agios Antonios Beach",
+      "name_el": "Παραλία Άγιος Αντώνιος",
+      "wiki": null,
+      "rating": 3,
+      "type": "Sand and pebble",
+      "type_el": "Άμμος και βότσαλο",
+      "length": "300 m",
+      "depth": "Shallow",
+      "depth_el": "Ρηχό",
+      "facing": "Northwest-facing — sheltered bay",
+      "facing_el": "Βορειοδυτική — προστατευμένος κόλπος",
+      "facilities": "Light: tavernas in the small fishing village behind, some sunbeds. Bus from Livadia.",
+      "facilities_el": "Ελαφριές: ταβέρνες στο μικρό αλιευτικό χωριό πίσω, κάποιες ξαπλώστρες. Λεωφορείο από τη Λιβαδιά.",
+      "desc": "North-coast fishing-village beach with palm trees and calm water — longer and easier to reach than Eristos, with genuine tavernas behind. Less spectacular but practical. The sunset view from the waterfront tavern is worth staying for dinner.",
+      "desc_el": "Παραλία αλιευτικού χωριού στη βόρεια ακτή με φοίνικες και ήρεμα νερά — μεγαλύτερη και πιο εύκολη πρόσβαση από τον Εριστό, με γνήσιες ταβέρνες πίσω. Λιγότερο εντυπωσιακή αλλά πρακτική. Η θέα στο ηλιοβασίλεμα από την ταβέρνα στην προκυμαία αξίζει να μείνεις για δείπνο.",
+      "lat": 36.4650,
+      "lng": 27.3456
+    }
+  ]
+}
