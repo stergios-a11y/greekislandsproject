@@ -1,0 +1,202 @@
+{
+  "key": "antiparos",
+  "name": "Antiparos",
+  "name_el": "Αντίπαρος",
+  "subtitle": "Paros's quiet neighbour — Cycladic Chora, Despotiko ruins and the cave with the oldest stalagmite in Europe",
+  "subtitle_el": "Η ήσυχη γειτόνισσα της Πάρου — κυκλαδίτικη Χώρα, αρχαία Δεσποτικού και το σπήλαιο με τον αρχαιότερο σταλαγμίτη της Ευρώπης",
+  "intro": "Just a 7-minute ferry from Paros, Antiparos is what Paros was thirty years ago — slower, smaller, with a single Chora built around a 15th-century Venetian castro and one main pedestrian street where the day's life happens. The famous cave on Agios Ioannis hill plunges 85 metres into the earth and contains the oldest known stalagmite in Europe. Boats from Agios Georgios cross to the uninhabited island of Despotiko, where ongoing excavations of an Archaic-era Apollo sanctuary continue to surface new finds. Tom Hanks owns a house here. So do a lot of quietly wealthy Athenians. The island has been discovered, but it hasn't been spoiled.",
+  "intro_el": "Μόλις 7 λεπτά με πλοίο από την Πάρο, η Αντίπαρος είναι αυτό που ήταν η Πάρος πριν τριάντα χρόνια — πιο αργή, πιο μικρή, με μία Χώρα χτισμένη γύρω από βενετσιάνικο κάστρο του 15ου αιώνα και έναν κεντρικό πεζόδρομο όπου εκτυλίσσεται όλη η ζωή της ημέρας. Το διάσημο σπήλαιο στο λόφο του Αγίου Ιωάννη βυθίζεται 85 μέτρα στη γη και περιέχει τον αρχαιότερο γνωστό σταλαγμίτη της Ευρώπης. Βάρκες από τον Άγιο Γεώργιο διασχίζουν για το ακατοίκητο νησί της Δεσποτικού, όπου οι ανασκαφές ενός αρχαϊκού ιερού του Απόλλωνα συνεχίζουν να φέρνουν νέα ευρήματα. Ο Τομ Χανκς έχει σπίτι εδώ. Όπως και αρκετοί ήσυχα εύποροι Αθηναίοι. Το νησί ανακαλύφθηκε, αλλά δεν αλλοιώθηκε.",
+
+  "itinerary": {
+    "title": "2-Day Antiparos Itinerary",
+    "subtitle": "Chora and the cave on Day 1, Despotiko and the south-coast beaches on Day 2.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Chora, the Castro & the Cave",
+        "color": "#1B4F8A",
+        "stops": [
+          {
+            "name": "Antiparos Port",
+            "name_el": "Λιμάνι Αντιπάρου",
+            "lat": 36.9931,
+            "lng": 25.0775,
+            "type": "village",
+            "desc": "Arrive on the small ferry from Pounta or Parikia. The port spills directly into the main pedestrian street. Drop your bags and start walking up — everything in Chora is within 5 minutes.",
+            "desc_el": "Φτάνεις με το μικρό πλοίο από την Πούντα ή την Παροικιά. Το λιμάνι περνά κατευθείαν στον κεντρικό πεζόδρομο. Άσε τις αποσκευές και άρχισε να περπατάς — όλα στη Χώρα είναι σε 5 λεπτά."
+          },
+          {
+            "name": "Castro of Antiparos",
+            "name_el": "Κάστρο Αντιπάρου",
+            "lat": 36.9929,
+            "lng": 25.0762,
+            "type": "castle",
+            "wiki": "https://en.wikipedia.org/wiki/Antiparos",
+            "desc": "The 15th-century Venetian castro built by the Loredano family — a fortified settlement where houses share their outer walls as the castle wall. Most original structures still inhabited. Walk the inner square and the four medieval gates.",
+            "desc_el": "Το βενετσιάνικο κάστρο του 15ου αιώνα χτισμένο από την οικογένεια Λορεντάνο — ένας οχυρωμένος οικισμός όπου τα σπίτια μοιράζονται τους εξωτερικούς τοίχους τους ως τείχος του κάστρου. Τα περισσότερα αρχικά κτίρια είναι ακόμα κατοικημένα. Περπάτησε στην εσωτερική πλατεία και τις τέσσερις μεσαιωνικές πύλες."
+          },
+          {
+            "name": "Lunch — Taverna Yorgis",
+            "name_el": "Μεσημεριανό — Ταβέρνα Γιώργης",
+            "lat": 36.9930,
+            "lng": 25.0768,
+            "type": "village",
+            "desc": "Family-run taverna in a small flagged side-street near the main square. Octopus, fava, lamb chops, homemade tsipouro at the end. The kind of place where Jenny will tell you what's freshly made today.",
+            "desc_el": "Οικογενειακή ταβέρνα σε ένα μικρό πλακόστρωτο δρομάκι κοντά στην κεντρική πλατεία. Χταπόδι, φάβα, παϊδάκια, σπιτικό τσίπουρο στο τέλος. Από αυτά τα μέρη όπου η Τζένη θα σου πει τι είναι φρέσκο σήμερα."
+          },
+          {
+            "name": "Cave of Antiparos",
+            "name_el": "Σπήλαιο Αντιπάρου",
+            "lat": 36.9540,
+            "lng": 25.0792,
+            "type": "castle",
+            "wiki": "https://en.wikipedia.org/wiki/Cave_of_Antiparos",
+            "desc": "10km south of Chora, on Agios Ioannis Hill. A vertical cave plunging 85 metres into the rock — 411 steps down. Contains the oldest known stalagmite in Europe (45 million years). Lord Byron carved his name on a wall in 1810. Open 10am-3pm in summer.",
+            "desc_el": "10 χλμ νότια της Χώρας, στον λόφο του Αγίου Ιωάννη. Ένα κατακόρυφο σπήλαιο που βυθίζεται 85 μέτρα στον βράχο — 411 σκαλοπάτια προς τα κάτω. Περιέχει τον αρχαιότερο γνωστό σταλαγμίτη της Ευρώπης (45 εκατομμύρια χρόνια). Ο Λόρδος Βύρων χάραξε το όνομά του σε έναν τοίχο το 1810. Ανοιχτά 10π.μ.-3μ.μ. το καλοκαίρι."
+          },
+          {
+            "name": "Soros Beach",
+            "name_el": "Παραλία Σώρος",
+            "lat": 36.9603,
+            "lng": 25.1021,
+            "type": "beach",
+            "desc": "On the way back from the cave. Long sandy crescent on the southeast coast — deeper water than most island beaches, so good for actual swimming rather than wading. A taverna or two at the back.",
+            "desc_el": "Στον δρόμο της επιστροφής από το σπήλαιο. Μακριά αμμώδης ημισέληνος στη νοτιοανατολική ακτή — πιο βαθιά νερά από τις περισσότερες παραλίες του νησιού, οπότε καλή για πραγματικό κολύμπι. Μία-δύο ταβέρνες στο πίσω μέρος."
+          },
+          {
+            "name": "Sunset — Sifneiko Café",
+            "name_el": "Ηλιοβασίλεμα — Σιφνέικο Καφέ",
+            "lat": 36.9938,
+            "lng": 25.0750,
+            "type": "village",
+            "desc": "Behind the main town on Sifneikos Gialos. The west-facing cove gets the best sunsets on the island. Order a drink and stay for dinner — the food is decent if you can grab a table.",
+            "desc_el": "Πίσω από την κύρια πόλη, στον Σιφνέικο Γιαλό. Ο δυτικός κόλπος έχει τα καλύτερα ηλιοβασιλέματα του νησιού. Παράγγειλε ένα ποτό και μείνε για δείπνο — το φαγητό είναι αξιοπρεπές αν προλάβεις τραπέζι."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Despotiko & the South Beaches",
+        "color": "#C0522A",
+        "stops": [
+          {
+            "name": "Agios Georgios",
+            "name_el": "Άγιος Γεώργιος",
+            "lat": 36.9293,
+            "lng": 25.0270,
+            "type": "village",
+            "desc": "Tiny resort village 12km south of Chora — a handful of tavernas on the waterfront and the small boat harbour for crossings to Despotiko. The beach itself is fine but you're really here for the boat.",
+            "desc_el": "Μικροσκοπικό παραθεριστικό χωριό 12 χλμ νότια της Χώρας — μερικές ταβέρνες στην παραλία και το μικρό λιμανάκι για τη μετάβαση στη Δεσποτικό. Η παραλία είναι αξιοπρεπής αλλά ο λόγος που είσαι εδώ είναι η βάρκα."
+          },
+          {
+            "name": "Despotiko Sanctuary of Apollo",
+            "name_el": "Ιερό Απόλλωνα Δεσποτικού",
+            "lat": 36.9544,
+            "lng": 25.0006,
+            "type": "ruin",
+            "wiki": "https://en.wikipedia.org/wiki/Despotiko",
+            "desc": "Uninhabited island a 15-minute boat ride from Agios Georgios. Major Archaic-era sanctuary of Apollo dating to the 7th century BC, still actively excavated. Marble columns and reconstructed temple walls in extraordinary isolation. Boats run hourly in summer.",
+            "desc_el": "Ακατοίκητο νησί 15 λεπτά με βάρκα από τον Άγιο Γεώργιο. Σημαντικό αρχαϊκό ιερό του Απόλλωνα που χρονολογείται από τον 7ο αιώνα π.Χ., ακόμα ενεργές οι ανασκαφές. Μαρμάρινες κολώνες και ανακατασκευασμένα τείχη ναού σε εξαιρετική απομόνωση. Βάρκες ανά ώρα το καλοκαίρι."
+          },
+          {
+            "name": "Livadi Beach (Despotiko)",
+            "name_el": "Παραλία Λιβάδι (Δεσποτικό)",
+            "lat": 36.9512,
+            "lng": 25.0028,
+            "type": "beach",
+            "desc": "Silver-white sand beach on Despotiko, just south of the sanctuary. No facilities, no shade — bring water and a hat. The water clarity is among the best in the Cyclades. The boat back leaves at 4pm.",
+            "desc_el": "Παραλία ασημί-λευκής άμμου στο Δεσποτικό, λίγο νότια του ιερού. Χωρίς υπηρεσίες, χωρίς σκιά — φέρε νερό και καπέλο. Η διαύγεια του νερού είναι ανάμεσα στις καλύτερες των Κυκλάδων. Η βάρκα της επιστροφής φεύγει στις 4 μ.μ."
+          },
+          {
+            "name": "Captain Pipinos",
+            "name_el": "Καπτάν Πιπίνος",
+            "lat": 36.9292,
+            "lng": 25.0277,
+            "type": "village",
+            "desc": "Classic fish taverna on the Agios Georgios waterfront, where they dry the day's catch — octopus and fish — outside the kitchen. Order what's hanging. House wine, sea view, no pretensions.",
+            "desc_el": "Κλασική ψαροταβέρνα στην παραλιακή του Αγίου Γεωργίου, όπου στεγνώνουν την ψαριά της ημέρας — χταπόδι και ψάρι — έξω από την κουζίνα. Παράγγειλε αυτό που κρέμεται. Χύμα κρασί, θέα στη θάλασσα, χωρίς επιδείξεις."
+          }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Soros Beach",
+      "name_el": "Παραλία Σώρος",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine sand",
+      "type_el": "Λεπτή άμμος",
+      "length": "500 m",
+      "depth": "Medium to deep — proper swimming, not wading",
+      "depth_el": "Μέτριο έως βαθύ — κανονικό κολύμπι, όχι παφλασμός",
+      "facing": "Southeast-facing — sheltered from the meltemi north winds",
+      "facing_el": "Νοτιοανατολική — προστατευμένη από το βόρειο μελτέμι",
+      "facilities": "Moderate: a couple of tavernas, some sunbeds, parking. Less developed than the western beaches.",
+      "facilities_el": "Μέτριες: μία-δύο ταβέρνες, κάποιες ξαπλώστρες, parking. Λιγότερο ανεπτυγμένη από τις δυτικές παραλίες.",
+      "desc": "The best swimming beach on Antiparos — long, sandy, with deeper water than most Cycladic shallows so you can actually swim rather than wade. Sheltered from the north winds when the rest of the island is windswept. The southeast position means morning sun.",
+      "desc_el": "Η καλύτερη παραλία για κολύμπι στην Αντίπαρο — μακριά, αμμώδης, με πιο βαθιά νερά από τις περισσότερες κυκλαδίτικες ρηχές, οπότε μπορείς πραγματικά να κολυμπήσεις. Προστατευμένη από τους βόρειους ανέμους όταν το υπόλοιπο νησί είναι ανεμόπληκτο. Η νοτιοανατολική θέση σημαίνει πρωινό ήλιο.",
+      "lat": 36.9603,
+      "lng": 25.1021
+    },
+    {
+      "name": "Apantima Beach",
+      "name_el": "Παραλία Απάντημα",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "type_el": "Λεπτή άμμος",
+      "length": "400 m",
+      "depth": "Shallow to medium — gradual sandy entry",
+      "depth_el": "Ρηχό έως μέτριο — σταδιακή αμμώδης είσοδος",
+      "facing": "East-facing — calm in the morning, can pick up wind in the afternoon",
+      "facing_el": "Ανατολική — ήρεμη το πρωί, μπορεί να πιάσει αέρα το απόγευμα",
+      "facilities": "Well organised: Beach House Antiparos club with sunbeds, restaurant and full service. Pricey but the setting earns it.",
+      "facilities_el": "Καλά οργανωμένη: το Beach House Antiparos με ξαπλώστρες, εστιατόριο και πλήρεις υπηρεσίες. Ακριβή αλλά το σκηνικό το αξίζει.",
+      "desc": "Quieter east-coast beach with the famous Beach House Antiparos club at one end. Soft golden sand, calm shallow water in the morning. The club is one of the more expensive day-bed setups in the Cyclades but the views and the scene make it the most photographed beach on the island.",
+      "desc_el": "Πιο ήσυχη παραλία της ανατολικής ακτής με το διάσημο Beach House Antiparos στο ένα άκρο. Απαλή χρυσή άμμος, ήρεμα ρηχά νερά το πρωί. Το beach club είναι από τα πιο ακριβά της σειράς στις Κυκλάδες αλλά η θέα και η σκηνή το κάνουν την πιο φωτογραφημένη παραλία του νησιού.",
+      "lat": 36.9686,
+      "lng": 25.0863
+    },
+    {
+      "name": "Psaralyki Beaches (I & II)",
+      "name_el": "Παραλίες Ψαραλύκι (Α & Β)",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "type_el": "Λεπτή άμμος",
+      "length": "300 m + 200 m",
+      "depth": "Very shallow — perfect for children",
+      "depth_el": "Πολύ ρηχό — ιδανικό για παιδιά",
+      "facing": "South-facing — warm and calm",
+      "facing_el": "Νότια — ζεστή και ήρεμη",
+      "facilities": "Fully organised: tavernas, sunbeds, water sports. 10-minute walk south of Chora.",
+      "facilities_el": "Πλήρως οργανωμένες: ταβέρνες, ξαπλώστρες, θαλάσσια σπορ. 10 λεπτά με τα πόδια νότια της Χώρας.",
+      "desc": "Two consecutive sandy coves separated by a small headland, both walkable from town. The shallow water and full facilities make this the default family beach. Psaralyki II is the wilder of the two and has fewer crowds.",
+      "desc_el": "Δύο διαδοχικοί αμμώδεις κολπίσκοι χωρισμένοι από ένα μικρό ακρωτήρι, και οι δύο προσβάσιμοι με τα πόδια από την πόλη. Τα ρηχά νερά και οι πλήρεις υπηρεσίες την κάνουν την προεπιλογή για οικογένειες. Το Ψαραλύκι Β είναι το πιο άγριο από τα δύο και έχει λιγότερα πλήθη.",
+      "lat": 36.9871,
+      "lng": 25.0758
+    },
+    {
+      "name": "Livadia Beach",
+      "name_el": "Παραλία Λιβάδια",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand and pebble",
+      "type_el": "Λεπτή άμμος και βότσαλο",
+      "length": "300 m",
+      "depth": "Shallow to medium",
+      "depth_el": "Ρηχό έως μέτριο",
+      "facing": "East-facing — sheltered, calm",
+      "facing_el": "Ανατολική — προστατευμένη, ήρεμη",
+      "facilities": "Quiet — no organised beach service. The Rooster Hotel sits in the hills above.",
+      "facilities_el": "Ήσυχη — χωρίς οργανωμένη παραλιακή υπηρεσία. Το ξενοδοχείο The Rooster βρίσκεται στους λόφους από πάνω.",
+      "desc": "Unspoiled east-coast beach reached by a short drive from Chora. The Rooster Hotel — one of the best small luxury properties in the Cyclades — is built into the hillside above with private access. Otherwise mostly empty even in August.",
+      "desc_el": "Ανέγγιχτη παραλία της ανατολικής ακτής προσβάσιμη με σύντομη οδική απόσταση από τη Χώρα. Το ξενοδοχείο The Rooster — ένα από τα καλύτερα μικρά luxury καταλύματα των Κυκλάδων — είναι χτισμένο στην πλαγιά από πάνω με ιδιωτική πρόσβαση. Πέρα απ' αυτό, σχεδόν άδεια ακόμα και τον Αύγουστο.",
+      "lat": 37.0095,
+      "lng": 25.0805
+    }
+  ]
+}

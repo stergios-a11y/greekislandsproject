@@ -1,0 +1,147 @@
+{
+  "key": "therasia",
+  "name": "Therasia",
+  "name_el": "Θηρασία",
+  "subtitle": "Santorini's quiet neighbour across the caldera — same cliffs, same sunset, almost no people",
+  "subtitle_el": "Η ήσυχη γειτόνισσα της Σαντορίνης απέναντι από την καλντέρα — οι ίδιοι γκρεμοί, το ίδιο ηλιοβασίλεμα, σχεδόν καθένας",
+  "intro": "Therasia is the small island that sits across the caldera from Santorini — visible from every Oia sunset photo, but essentially unvisited. About 250 year-round residents live in three settlements: Manolas (the cliff-top capital, opposite Imerovigli), Potamos (an inland village of cave houses), and Riva (the harbour). The cruise ships don't stop here. The fast ferries skip it. You get there on a small boat from Ammoudi, climb 263 steps from Korfos to Manolas, and find yourself in the Cyclades that existed before your grandparents were born. One day is enough to walk the length of it.",
+  "intro_el": "Η Θηρασία είναι το μικρό νησί που βρίσκεται απέναντι από τη Σαντορίνη, απέναντι από την καλντέρα — ορατή σε κάθε φωτογραφία ηλιοβασιλέματος της Οίας, αλλά ουσιαστικά αόρατη στους τουρίστες. Περίπου 250 μόνιμοι κάτοικοι ζουν σε τρεις οικισμούς: Μανωλάς (η πρωτεύουσα πάνω στον γκρεμό, απέναντι από το Ημεροβίγλι), Ποταμός (χωριό στην ενδοχώρα με σπίτια σπηλιές), και Ρίβα (το λιμάνι). Τα κρουαζιερόπλοια δεν σταματούν εδώ. Τα ταχύπλοα την παραλείπουν. Φτάνεις με μικρή βάρκα από την Αμμούδι, ανεβαίνεις 263 σκαλοπάτια από τον Κορφό στον Μανωλά, και βρίσκεσαι στις Κυκλάδες που υπήρχαν πριν γεννηθούν οι παππούδες σου. Μία μέρα αρκεί για να την περπατήσεις από άκρη σε άκρη.",
+
+  "itinerary": {
+    "title": "1-Day Therasia Itinerary",
+    "subtitle": "Cross from Ammoudi in the morning, walk Manolas to Potamos to Riva, return by sunset.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Manolas, Potamos & Korfos",
+        "color": "#1B4F8A",
+        "stops": [
+          {
+            "name": "Korfos Harbour",
+            "name_el": "Λιμάνι Κορφός",
+            "lat": 36.4392,
+            "lng": 25.3794,
+            "type": "village",
+            "wiki": "https://en.wikipedia.org/wiki/Therasia",
+            "desc": "Tiny harbour at the foot of the cliffs — boats from Ammoudi (Santorini) dock here every couple of hours in summer. Three small fish tavernas at the water that are some of the best in the caldera. Lunch here either before or after the climb.",
+            "desc_el": "Μικροσκοπικό λιμάνι στους πρόποδες των γκρεμών — οι βάρκες από την Αμμούδι (Σαντορίνη) δένουν εδώ κάθε δύο ώρες το καλοκαίρι. Τρεις μικρές ψαροταβέρνες στο νερό που είναι από τις καλύτερες της καλντέρας. Μεσημεριανό εδώ είτε πριν είτε μετά την ανάβαση."
+          },
+          {
+            "name": "263 Steps to Manolas",
+            "name_el": "263 Σκαλοπάτια προς Μανωλά",
+            "lat": 36.4400,
+            "lng": 25.3789,
+            "type": "viewpoint",
+            "desc": "The traditional climb up — stepped switchbacks zigzagging up the caldera face. About 20-30 minutes at a steady pace. Donkeys available if you don't fancy the climb. The view back down to Korfos and across to Santorini gets better with every step.",
+            "desc_el": "Η παραδοσιακή ανάβαση — σκαλοπάτια σε zigzag στην πλαγιά της καλντέρας. Περίπου 20-30 λεπτά σε σταθερό ρυθμό. Γαϊδούρια διαθέσιμα αν δεν θέλεις την ανάβαση. Η θέα προς τα κάτω στον Κορφό και απέναντι στη Σαντορίνη γίνεται καλύτερη με κάθε βήμα."
+          },
+          {
+            "name": "Manolas Village",
+            "name_el": "Χωριό Μανωλάς",
+            "lat": 36.4419,
+            "lng": 25.3781,
+            "type": "village",
+            "desc": "The cliff-top capital, built on the very edge of the caldera directly opposite Imerovigli on Santorini. White cube houses, blue-domed churches, and one main path along the rim. Every house has the caldera view. A few cafés serve the same sunset that costs €30 in Oia for the price of a frappe.",
+            "desc_el": "Η πρωτεύουσα πάνω στον γκρεμό, χτισμένη στην ίδια την άκρη της καλντέρας, ακριβώς απέναντι από το Ημεροβίγλι της Σαντορίνης. Λευκά κυβικά σπίτια, εκκλησίες με γαλάζιο τρούλο, και ένα κύριο μονοπάτι κατά μήκος της κορυφής. Κάθε σπίτι έχει θέα στην καλντέρα. Λίγα καφέ σερβίρουν το ίδιο ηλιοβασίλεμα που κοστίζει €30 στην Οία για την τιμή ενός φραπέ."
+          },
+          {
+            "name": "Potamos Village",
+            "name_el": "Χωριό Ποταμός",
+            "lat": 36.4286,
+            "lng": 25.3717,
+            "type": "village",
+            "desc": "Inland village 2km south of Manolas — entirely cave houses carved into the soft pumice. Five blue-domed churches in the central square. Almost completely uninhabited in winter, sleepy even in August. The walk between Manolas and Potamos is the best in Therasia.",
+            "desc_el": "Χωριό στην ενδοχώρα 2 χλμ νότια του Μανωλά — αποτελείται εξ ολοκλήρου από σπίτια-σπηλιές λαξευμένα στο μαλακό κίσηρι. Πέντε εκκλησίες με γαλάζιο τρούλο στην κεντρική πλατεία. Σχεδόν εντελώς ακατοίκητο τον χειμώνα, νυσταγμένο ακόμα και τον Αύγουστο. Η πεζοπορία ανάμεσα σε Μανωλά και Ποταμό είναι η καλύτερη της Θηρασίας."
+          },
+          {
+            "name": "Agrillia Abandoned Village",
+            "name_el": "Εγκαταλελειμμένο Χωριό Αγριλιά",
+            "lat": 36.4222,
+            "lng": 25.3669,
+            "type": "ruin",
+            "desc": "1km south of Potamos. The oldest and once-largest settlement on Therasia, abandoned in the 20th century. Cave houses and cellars overtaken by vegetation. Atmospheric and free; nobody else there.",
+            "desc_el": "1 χλμ νότια του Ποταμού. Ο παλαιότερος και κάποτε μεγαλύτερος οικισμός της Θηρασίας, εγκαταλελειμμένος τον 20ό αιώνα. Σπίτια-σπηλιές και κελάρια κατακτημένα από τη βλάστηση. Ατμοσφαιρικός και δωρεάν· κανένας άλλος εκεί."
+          },
+          {
+            "name": "Korfos Beach",
+            "name_el": "Παραλία Κορφός",
+            "lat": 36.4400,
+            "lng": 25.3819,
+            "type": "beach",
+            "desc": "Small black-pebble and pumice beach at the harbour — the easy swim before catching the boat back to Ammoudi. Translucent turquoise water with the dramatic Santorini caldera cliffs across the strait.",
+            "desc_el": "Μικρή παραλία με μαύρο βότσαλο και κίσηρι στο λιμάνι — το εύκολο μπάνιο πριν πάρεις τη βάρκα πίσω στην Αμμούδι. Διάφανα τιρκουάζ νερά με τους εντυπωσιακούς γκρεμούς της καλντέρας της Σαντορίνης απέναντι."
+          },
+          {
+            "name": "Sunset Boat to Santorini",
+            "name_el": "Βάρκα Ηλιοβασιλέματος για Σαντορίνη",
+            "lat": 36.4392,
+            "lng": 25.3794,
+            "type": "village",
+            "desc": "If you stay until the late boat, the return crossing to Ammoudi at sunset is one of the most memorable experiences in the Cyclades — you watch the sun drop behind Therasia from the water itself. Check the day's last departure when you arrive.",
+            "desc_el": "Αν μείνεις μέχρι την αργή βάρκα, η επιστροφή προς την Αμμούδι στο ηλιοβασίλεμα είναι μία από τις πιο αξέχαστες εμπειρίες των Κυκλάδων — βλέπεις τον ήλιο να βυθίζεται πίσω από τη Θηρασία από το ίδιο το νερό. Έλεγξε την τελευταία αναχώρηση της ημέρας όταν φτάσεις."
+          }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Korfos Beach",
+      "name_el": "Παραλία Κορφός",
+      "wiki": null,
+      "rating": 4,
+      "type": "Black pebble and pumice",
+      "type_el": "Μαύρο βότσαλο και κίσηρι",
+      "length": "100 m",
+      "depth": "Medium — sudden drop-off",
+      "depth_el": "Μέτριο — απότομη πτώση",
+      "facing": "East-facing — sheltered by the caldera cliffs",
+      "facing_el": "Ανατολική — προστατευμένη από τους γκρεμούς της καλντέρας",
+      "facilities": "Three small fish tavernas at the harbour right behind. No sunbeds.",
+      "facilities_el": "Τρεις μικρές ψαροταβέρνες στο λιμάνι ακριβώς πίσω. Χωρίς ξαπλώστρες.",
+      "desc": "The harbour beach — black volcanic pebbles and pumice with translucent turquoise water and the dramatic Santorini caldera cliffs visible across the 4km strait. The view is what you came for; the swim itself is straightforward but cold (the water here stays cool from caldera depths).",
+      "desc_el": "Η παραλία του λιμανιού — μαύρα ηφαιστειακά βότσαλα και κίσηρι με διάφανα τιρκουάζ νερά και τους εντυπωσιακούς γκρεμούς της καλντέρας της Σαντορίνης ορατούς απέναντι από το κανάλι 4 χλμ. Η θέα είναι αυτό για το οποίο ήρθες· το ίδιο το κολύμπι είναι απλό αλλά κρύο (τα νερά εδώ μένουν δροσερά από τα βάθη της καλντέρας).",
+      "lat": 36.4400,
+      "lng": 25.3819
+    },
+    {
+      "name": "Riva Beach",
+      "name_el": "Παραλία Ρίβα",
+      "wiki": null,
+      "rating": 3,
+      "type": "Dark sand and black pebble",
+      "type_el": "Σκούρα άμμος και μαύρο βότσαλο",
+      "length": "150 m",
+      "depth": "Medium",
+      "depth_el": "Μέτριο",
+      "facing": "Southeast-facing",
+      "facing_el": "Νοτιοανατολική",
+      "facilities": "Light: one summer taverna at the harbour, parking. Reachable by car from Manolas.",
+      "facilities_el": "Ελαφριές: μία καλοκαιρινή ταβέρνα στο λιμάνι, parking. Προσβάσιμη με αυτοκίνητο από τον Μανωλά.",
+      "desc": "The southern harbour beach — mixed dark sand and black pebbles with crystal-clear blue water. Quieter than Korfos and the only beach you can drive to. Less spectacular setting but easier swimming.",
+      "desc_el": "Η νότια παραλία του λιμανιού — ανάμεικτη σκούρα άμμος και μαύρα βότσαλα με κρυστάλλινα μπλε νερά. Πιο ήσυχη από τον Κορφό και η μόνη παραλία που φτάνεις με αυτοκίνητο. Λιγότερο εντυπωσιακό σκηνικό αλλά πιο εύκολο κολύμπι.",
+      "lat": 36.4253,
+      "lng": 25.3697
+    },
+    {
+      "name": "Ammoudi (Therasia side)",
+      "name_el": "Αμμούδι (πλευρά Θηρασίας)",
+      "wiki": null,
+      "rating": 3,
+      "type": "Black pebble",
+      "type_el": "Μαύρο βότσαλο",
+      "length": "50 m",
+      "depth": "Deep — sudden drop-off",
+      "depth_el": "Βαθύ — απότομη πτώση",
+      "facing": "West-facing",
+      "facing_el": "Δυτική",
+      "facilities": "None — accessible only by boat or hike from Manolas.",
+      "facilities_el": "Καμία — προσβάσιμη μόνο με βάρκα ή πεζοπορία από τον Μανωλά.",
+      "desc": "Tiny pebble cove on the western side of Therasia, opposite the more famous Ammoudi of Oia. Crystal water, complete isolation. Reached on foot from Manolas via a steep trail or by private boat.",
+      "desc_el": "Μικροσκοπικός κολπίσκος με βότσαλο στη δυτική πλευρά της Θηρασίας, απέναντι από το πιο διάσημο Αμμούδι της Οίας. Κρυστάλλινα νερά, απόλυτη απομόνωση. Προσβάσιμη με τα πόδια από τον Μανωλά μέσω απότομου μονοπατιού ή με ιδιωτική βάρκα.",
+      "lat": 36.4444,
+      "lng": 25.3658
+    }
+  ]
+}

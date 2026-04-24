@@ -1,0 +1,243 @@
+{
+  "key": "koufonisia",
+  "name": "Koufonisia",
+  "name_el": "Κουφονήσια",
+  "subtitle": "The Small Cyclades' headline act — turquoise lagoons, no cars, and a coastal walk that strings together every beach you'll need",
+  "subtitle_el": "Ο πρωταγωνιστής των Μικρών Κυκλάδων — τιρκουάζ λιμνοθάλασσες, χωρίς αυτοκίνητα, και ένα παραλιακό μονοπάτι που συνδέει όλες τις παραλίες που θα χρειαστείς",
+  "intro": "Pano Koufonisi is 4 square kilometres of flat island with one Chora, one road, no cars worth mentioning, and a coastal walking path that connects the entire south and east shores in about an hour. Along that path are some of the cleanest beaches in Greece: Finikas, Fanos, Italida, the natural rock pool of Pisina, and finally Pori — a turquoise lagoon often described as the most beautiful in the Cyclades. Across a 200-metre channel sits uninhabited Kato Koufonisi, reached by hourly water taxi, with wilder beaches and a single legendary taverna. The island had no electricity until the 1980s. It still feels like that's the most recent change worth mentioning.",
+  "intro_el": "Το Πάνω Κουφονήσι είναι 4 τετραγωνικά χιλιόμετρα επίπεδου νησιού με μία Χώρα, έναν δρόμο, σχεδόν κανένα αυτοκίνητο, και ένα παραλιακό μονοπάτι που συνδέει όλη τη νότια και ανατολική ακτή σε περίπου μία ώρα. Πάνω σε αυτό το μονοπάτι βρίσκονται μερικές από τις πιο καθαρές παραλίες της Ελλάδας: Φοίνικας, Φανός, Ιταλίδα, η φυσική πέτρινη πισίνα και τέλος το Πόρι — μια τιρκουάζ λιμνοθάλασσα που συχνά περιγράφεται ως η ομορφότερη των Κυκλάδων. Απέναντι από ένα κανάλι 200 μέτρων βρίσκεται το ακατοίκητο Κάτω Κουφονήσι, προσβάσιμο με ωριαίο θαλάσσιο ταξί, με πιο άγριες παραλίες και μία θρυλική ταβέρνα. Το νησί δεν είχε ηλεκτρικό μέχρι τη δεκαετία του 1980. Νιώθει ακόμα ότι αυτή είναι η πιο πρόσφατη αλλαγή που αξίζει να αναφερθεί.",
+
+  "itinerary": {
+    "title": "3-Day Koufonisia Itinerary",
+    "subtitle": "Walk the south coast on Day 1, push to Pori on Day 2, take the boat to Kato Koufonisi on Day 3.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Chora & the Near Beaches",
+        "color": "#1B4F8A",
+        "stops": [
+          {
+            "name": "Chora",
+            "name_el": "Χώρα",
+            "lat": 36.9356,
+            "lng": 25.5824,
+            "type": "village",
+            "wiki": "https://en.wikipedia.org/wiki/Koufonisia",
+            "desc": "The single village, spread along the small port. Whitewashed alleys, bougainvillea, two bakeries, two supermarkets, a few boutiques (Thoosa, Kares, To Perasma) and roughly 20 tavernas. Sleepy by day, alive at night. Walk it slowly — it takes 15 minutes end to end.",
+            "desc_el": "Το μοναδικό χωριό, απλωμένο γύρω από το μικρό λιμάνι. Ασβεστωμένα δρομάκια, μπουκαμβίλιες, δύο φούρνοι, δύο σούπερ μάρκετ, μερικά μπουτίκ (Θόσα, Καρές, Το Πέρασμα) και περίπου 20 ταβέρνες. Νυσταγμένη τη μέρα, ζωντανή τη νύχτα. Περπάτησέ τη αργά — παίρνει 15 λεπτά από άκρη σε άκρη."
+          },
+          {
+            "name": "Ammos Beach",
+            "name_el": "Παραλία Άμμος",
+            "lat": 36.9342,
+            "lng": 25.5841,
+            "type": "beach",
+            "desc": "The town beach, 200m from the port. Sandy, calm, sheltered from the meltemi by the headland, and looking straight out at the uninhabited rocky island of Keros. Surprisingly good given how easy it is.",
+            "desc_el": "Η παραλία της πόλης, 200 μέτρα από το λιμάνι. Αμμώδης, ήρεμη, προστατευμένη από το μελτέμι από το ακρωτήρι, με κατευθείαν θέα στο ακατοίκητο βραχώδες νησί της Κέρου. Εκπληκτικά καλή για το πόσο εύκολη είναι."
+          },
+          {
+            "name": "Lunch — Capetan Nikolas",
+            "name_el": "Μεσημεριανό — Καπετάν Νικόλας",
+            "lat": 36.9355,
+            "lng": 25.5818,
+            "type": "village",
+            "desc": "Family-run tavern open since 1988, large terrace with windmill and harbour views. Best place to get the day going at 2pm. Reasonable prices for the island and the seafood is what to order.",
+            "desc_el": "Οικογενειακή ταβέρνα από το 1988, μεγάλη βεράντα με θέα στον ανεμόμυλο και το λιμάνι. Το καλύτερο μέρος για να ξεκινήσεις τη μέρα στις 2 μ.μ. Λογικές τιμές για το νησί και τα θαλασσινά είναι αυτά που πρέπει να παραγγείλεις."
+          },
+          {
+            "name": "Finikas Beach (Charokopou)",
+            "name_el": "Παραλία Φοίνικας (Χαροκοπού)",
+            "lat": 36.9342,
+            "lng": 25.5894,
+            "type": "beach",
+            "desc": "20 minutes east on the coastal path. Long sandy beach with the Finikas taverna right behind it. Turquoise water, golden sand, gentle slope. The taverna is a Greek-cuisine institution — book ahead for dinner if you stay late.",
+            "desc_el": "20 λεπτά ανατολικά στο παραλιακό μονοπάτι. Μακριά αμμώδης παραλία με την ταβέρνα Φοίνικας ακριβώς πίσω της. Τιρκουάζ νερά, χρυσή άμμος, ήπια κλίση. Η ταβέρνα είναι θεσμός της ελληνικής κουζίνας — κάνε κράτηση για δείπνο αν μείνεις αργά."
+          },
+          {
+            "name": "Fanos Beach",
+            "name_el": "Παραλία Φανός",
+            "lat": 36.9347,
+            "lng": 25.5938,
+            "type": "beach",
+            "desc": "Continue east 10 minutes. Fanos is the rare Koufonisia beach with sunbeds and a beach café. Sandy, family-friendly, slightly busier than the wilder coves further along.",
+            "desc_el": "Συνέχισε ανατολικά 10 λεπτά. Ο Φανός είναι η σπάνια παραλία της Κουφονησίας με ξαπλώστρες και beach café. Αμμώδης, οικογενειακή, λίγο πιο πολυσύχναστη από τους πιο άγριους κόλπους που ακολουθούν."
+          },
+          {
+            "name": "Sunset Drinks at the Harbour",
+            "name_el": "Ποτό Ηλιοβασιλέματος στο Λιμάνι",
+            "lat": 36.9354,
+            "lng": 25.5820,
+            "type": "village",
+            "desc": "Walk back to Chora for a sunset drink at Sorokos on the harbour or Mylos (an old windmill turned bar) on the heights between the port and the shipyard. The sun drops directly behind Naxos.",
+            "desc_el": "Επιστροφή στη Χώρα για ποτό ηλιοβασιλέματος στο Σόροκος στο λιμάνι ή στο Μύλος (ένας παλιός μύλος μετατραμμένος σε μπαρ) στις ψηλές περιοχές ανάμεσα στο λιμάνι και το ναυπηγείο. Ο ήλιος βυθίζεται κατευθείαν πίσω από τη Νάξο."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "The Long Walk to Pori",
+        "color": "#C0522A",
+        "stops": [
+          {
+            "name": "Italida Beach (Platia Pounta)",
+            "name_el": "Παραλία Ιταλίδα (Πλάτια Πούντα)",
+            "lat": 36.9377,
+            "lng": 25.6028,
+            "type": "beach",
+            "desc": "Continue east on the coastal path beyond Fanos. Italida is what most visitors agree is the most beautiful beach on the island — a perfect golden crescent with the most turquoise water you'll see in Greece. No facilities. Bring water and snacks. Common nudist beach.",
+            "desc_el": "Συνέχισε ανατολικά στο παραλιακό μονοπάτι πέρα από τον Φανό. Η Ιταλίδα είναι αυτό που οι περισσότεροι επισκέπτες συμφωνούν ότι είναι η ομορφότερη παραλία του νησιού — μια τέλεια χρυσή ημισέληνος με τα πιο τιρκουάζ νερά που θα δεις στην Ελλάδα. Χωρίς υπηρεσίες. Φέρε νερό και σνακ. Συνηθισμένη γυμνιστική παραλία."
+          },
+          {
+            "name": "Pisina (Natural Rock Pool)",
+            "name_el": "Πισίνα (Φυσική Πέτρινη Πισίνα)",
+            "lat": 36.9395,
+            "lng": 25.6088,
+            "type": "viewpoint",
+            "desc": "Halfway between Italida and Pori, the path passes a deep emerald natural pool carved into the limestone by the sea. Cliff jumping spot for the brave (check depth first, currents can be strong). The best swimming hole on the island.",
+            "desc_el": "Στα μισά της διαδρομής ανάμεσα στην Ιταλίδα και το Πόρι, το μονοπάτι περνά από μια βαθιά σμαραγδένια φυσική πισίνα λαξευμένη στον ασβεστόλιθο από τη θάλασσα. Σημείο για βουτιές για τους τολμηρούς (έλεγξε το βάθος πρώτα, τα ρεύματα μπορεί να είναι δυνατά). Η καλύτερη φυσική πισίνα του νησιού."
+          },
+          {
+            "name": "Pori Beach",
+            "name_el": "Παραλία Πόρι",
+            "lat": 36.9425,
+            "lng": 25.6160,
+            "type": "beach",
+            "desc": "The destination of the walk — a long, deep, north-facing turquoise lagoon. About an hour on foot from Chora, or take the small boat from the harbour (€5 all-day pass). Two beach restaurants: Kalofego is the better one. Strong wind on meltemi days; otherwise paradisical.",
+            "desc_el": "Ο προορισμός της πεζοπορίας — μια μακριά, βαθιά, βόρεια τιρκουάζ λιμνοθάλασσα. Περίπου μία ώρα με τα πόδια από τη Χώρα, ή πάρε τη μικρή βάρκα από το λιμάνι (5€ για ολοήμερο πάσο). Δύο εστιατόρια στην παραλία: το Καλόφεγο είναι το καλύτερο. Δυνατός αέρας σε ημέρες μελτεμιού· διαφορετικά παραδεισένιο."
+          },
+          {
+            "name": "Xylopatis Sea Caves",
+            "name_el": "Θαλάσσιες Σπηλιές Ξυλοπάτι",
+            "lat": 36.9447,
+            "lng": 25.6178,
+            "type": "viewpoint",
+            "desc": "100m beyond the Pori headland — sea caves carved into the cliffs that you can swim into when calm. Photogenic and rarely crowded because most visitors stop at Pori itself.",
+            "desc_el": "100 μέτρα πέρα από το ακρωτήρι του Πόρι — θαλάσσιες σπηλιές λαξευμένες στους γκρεμούς που μπορείς να κολυμπήσεις μέσα όταν είναι ήρεμα. Φωτογενείς και σπάνια πολυσύχναστες γιατί οι περισσότεροι επισκέπτες σταματούν στο ίδιο το Πόρι."
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Kato Koufonisi & Departure",
+        "color": "#5A7A3A",
+        "stops": [
+          {
+            "name": "Boat to Kato Koufonisi",
+            "name_el": "Βάρκα προς Κάτω Κουφονήσι",
+            "lat": 36.9347,
+            "lng": 25.5790,
+            "type": "village",
+            "desc": "Hourly small boat from Chora harbour, 10-minute crossing. €5 return. Last boat back is around 6pm. The island has a single taverna and a series of wild beaches connected by goat tracks. Nothing else.",
+            "desc_el": "Ωριαία μικρή βάρκα από το λιμάνι της Χώρας, 10λεπτη διαδρομή. 5€ μετ' επιστροφής. Η τελευταία βάρκα γυρνά γύρω στις 6 μ.μ. Το νησί έχει μία μόνο ταβέρνα και μια σειρά από άγριες παραλίες συνδεδεμένες με μονοπάτια για κατσίκες. Τίποτα άλλο."
+          },
+          {
+            "name": "Nero Beach (Kato Koufonisi)",
+            "name_el": "Παραλία Νερό (Κάτω Κουφονήσι)",
+            "lat": 36.9242,
+            "lng": 25.5824,
+            "type": "beach",
+            "desc": "The first beach south of the boat landing. Pebbly, crystal water, almost always empty. Walk the 15 minutes south from the harbour.",
+            "desc_el": "Η πρώτη παραλία νότια από την αποβίβαση. Με βότσαλο, κρυστάλλινα νερά, σχεδόν πάντα άδεια. Περπάτησε 15 λεπτά νότια από το λιμάνι."
+          },
+          {
+            "name": "Lunch — Venetsanos Taverna",
+            "name_el": "Μεσημεριανό — Ταβέρνα Βενετσάνος",
+            "lat": 36.9258,
+            "lng": 25.5808,
+            "type": "village",
+            "desc": "The only taverna on Kato Koufonisi, near the boat landing. Local goat dishes (the meat comes from Keros), fresh fish, sometimes impromptu Greek music. The kind of meal you remember.",
+            "desc_el": "Η μόνη ταβέρνα στο Κάτω Κουφονήσι, κοντά στο λιμανάκι. Πιάτα με κατσίκι από την Κέρο, φρέσκο ψάρι, μερικές φορές αυθόρμητη ελληνική μουσική. Από τα γεύματα που θυμάσαι."
+          },
+          {
+            "name": "Pezoulia & Detis Beaches",
+            "name_el": "Παραλίες Πεζούλια & Δέτης",
+            "lat": 36.9215,
+            "lng": 25.5755,
+            "type": "beach",
+            "desc": "Walk further south past Nero — Pezoulia and Detis are pebbly coves with crystalline water, separated by small rocky headlands. Almost guaranteed to have one to yourself even in August. Catch the late boat back to Chora.",
+            "desc_el": "Περπάτησε πιο νότια από το Νερό — η Πεζούλια και ο Δέτης είναι κολπίσκοι με βότσαλο και κρυστάλλινα νερά, χωρισμένοι από μικρά βραχώδη ακρωτήρια. Σχεδόν εγγυημένα θα έχεις έναν μόνο για σένα ακόμα και τον Αύγουστο. Πρόλαβε την αργή βάρκα πίσω στη Χώρα."
+          }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Pori Beach",
+      "name_el": "Παραλία Πόρι",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine golden sand",
+      "type_el": "Λεπτή χρυσή άμμος",
+      "length": "500 m",
+      "depth": "Shallow lagoon — wade-deep for most of the bay",
+      "depth_el": "Ρηχή λιμνοθάλασσα — μέχρι το γόνατο για το μεγαλύτερο μέρος του κόλπου",
+      "facing": "North-facing — exposed to the meltemi, can get windy",
+      "facing_el": "Βόρεια — εκτεθειμένη στο μελτέμι, μπορεί να πιάσει αέρα",
+      "facilities": "Two beach restaurants (Kalofego is the better) and seasonal sunbeds. Reachable by boat (€5 day pass) or 1-hour walk from Chora.",
+      "facilities_el": "Δύο εστιατόρια παραλίας (το Καλόφεγο είναι το καλύτερο) και εποχικές ξαπλώστρες. Προσβάσιμη με βάρκα (5€ για ολοήμερο πάσο) ή με ωριαία πεζοπορία από τη Χώρα.",
+      "desc": "The signature beach of the Small Cyclades — a long turquoise lagoon at the eastern tip of Pano Koufonisi, with golden sand and water so shallow you can walk 50 metres out. North-facing means it can be windy when the meltemi blows; pick a calm day for the full effect. The walk along the coastal path from Chora is one of the best half-day experiences in the Cyclades.",
+      "desc_el": "Η εμβληματική παραλία των Μικρών Κυκλάδων — μια μακριά τιρκουάζ λιμνοθάλασσα στο ανατολικό άκρο του Πάνω Κουφονησίου, με χρυσή άμμο και νερά τόσο ρηχά που μπορείς να περπατήσεις 50 μέτρα μέσα. Ο βόρειος προσανατολισμός σημαίνει ότι μπορεί να φυσάει όταν φυσά το μελτέμι· διάλεξε μια ήρεμη μέρα για το πλήρες αποτέλεσμα. Η πεζοπορία στο παραλιακό μονοπάτι από τη Χώρα είναι μία από τις καλύτερες ημερήσιες εμπειρίες των Κυκλάδων.",
+      "lat": 36.9425,
+      "lng": 25.6160
+    },
+    {
+      "name": "Italida Beach",
+      "name_el": "Παραλία Ιταλίδα",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine golden sand",
+      "type_el": "Λεπτή χρυσή άμμος",
+      "length": "200 m",
+      "depth": "Shallow to medium — gradual sandy entry",
+      "depth_el": "Ρηχό έως μέτριο — σταδιακή αμμώδης είσοδος",
+      "facing": "Southeast-facing — sheltered from the meltemi",
+      "facing_el": "Νοτιοανατολική — προστατευμένη από το μελτέμι",
+      "facilities": "None — no taverna, no sunbeds. Bring water, food, and shade. 30-minute walk east from Chora.",
+      "facilities_el": "Καμία — χωρίς ταβέρνα, χωρίς ξαπλώστρες. Φέρε νερό, φαγητό και σκιά. 30 λεπτά με τα πόδια ανατολικά από τη Χώρα.",
+      "desc": "The most photogenic beach on Pano Koufonisi — a perfect golden crescent with water so transparent you can see your shadow on the sandy bottom from 5 metres up. Sheltered from the meltemi when Pori is windswept. Common nudist beach. Often considered the most beautiful beach in the Small Cyclades.",
+      "desc_el": "Η πιο φωτογενής παραλία του Πάνω Κουφονησίου — μια τέλεια χρυσή ημισέληνος με νερά τόσο διαφανή που βλέπεις τη σκιά σου στον αμμώδη βυθό από 5 μέτρα ψηλά. Προστατευμένη από το μελτέμι όταν το Πόρι είναι ανεμόπληκτο. Συνηθισμένη γυμνιστική παραλία. Συχνά θεωρείται η ομορφότερη παραλία των Μικρών Κυκλάδων.",
+      "lat": 36.9377,
+      "lng": 25.6028
+    },
+    {
+      "name": "Fanos Beach",
+      "name_el": "Παραλία Φανός",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "type_el": "Λεπτή άμμος",
+      "length": "150 m",
+      "depth": "Shallow — family-friendly",
+      "depth_el": "Ρηχό — οικογενειακή",
+      "facing": "South-facing — calm, sheltered",
+      "facing_el": "Νότια — ήρεμη, προστατευμένη",
+      "facilities": "Light: a beach café and a few sunbeds. The most equipped beach on the south coast.",
+      "facilities_el": "Ελαφριές: ένα beach café και λίγες ξαπλώστρες. Η πιο εξοπλισμένη παραλία της νότιας ακτής.",
+      "desc": "The default family beach on Koufonisia — sandy, calm, with one of the few proper beach cafés on the island. Fills up by midday in August but never feels packed. Good base for the start of the coastal walk to Italida and Pori.",
+      "desc_el": "Η προεπιλογή για οικογένειες στην Κουφονησία — αμμώδης, ήρεμη, με ένα από τα λίγα κανονικά beach cafés του νησιού. Γεμίζει μέχρι το μεσημέρι τον Αύγουστο αλλά ποτέ δεν φαίνεται πιεσμένη. Καλή βάση για την αρχή της παραλιακής πεζοπορίας προς την Ιταλίδα και το Πόρι.",
+      "lat": 36.9347,
+      "lng": 25.5938
+    },
+    {
+      "name": "Ammos Beach",
+      "name_el": "Παραλία Άμμος",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "type_el": "Λεπτή άμμος",
+      "length": "200 m",
+      "depth": "Shallow — very gradual",
+      "depth_el": "Ρηχό — πολύ σταδιακό",
+      "facing": "South-facing — sheltered from the meltemi by the headland",
+      "facing_el": "Νότια — προστατευμένη από το μελτέμι από το ακρωτήρι",
+      "facilities": "Several waterfront tavernas immediately behind. 200m walk from the port.",
+      "facilities_el": "Αρκετές ταβέρνες στο νερό ακριβώς πίσω. 200 μέτρα από το λιμάνι.",
+      "desc": "The town beach — directly in front of Chora and a 5-minute walk from the port. Surprisingly clean and clear given how easy it is to access, with the rocky island of Keros visible across the strait. The default for a quick swim before lunch.",
+      "desc_el": "Η παραλία της πόλης — ακριβώς μπροστά από τη Χώρα και 5 λεπτά με τα πόδια από το λιμάνι. Εκπληκτικά καθαρή και διαυγής για το πόσο εύκολη είναι η πρόσβαση, με το βραχώδες νησί της Κέρου ορατό στο κανάλι. Η προεπιλογή για ένα γρήγορο μπάνιο πριν το μεσημεριανό.",
+      "lat": 36.9342,
+      "lng": 25.5841
+    }
+  ]
+}

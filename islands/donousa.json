@@ -1,0 +1,191 @@
+{
+  "key": "donousa",
+  "name": "Donousa",
+  "name_el": "Δονούσα",
+  "subtitle": "The easternmost Small Cycladic island — World War II shipwreck, mountain spring at Mersini and a turquoise crescent called Kedros",
+  "subtitle_el": "Το ανατολικότερο Μικρό Κυκλαδίτικο νησί — ναυάγιο του Β' Παγκοσμίου, ορεινή πηγή στη Μερσίνη και μια τιρκουάζ ημισέληνος που λέγεται Κέδρος",
+  "intro": "Donousa sits at the far eastern end of the Cyclades, between Naxos and Amorgos, with about 200 year-round residents spread across four villages — Stavros (the port and Chora), Mersini, Mesaria and Kalotaritissa. The headline beach is Kedros, a turquoise lagoon with a German WWII shipwreck visible just offshore. The mountain village of Mersini has the only natural spring on the island and a panoramic clifftop chapel of Agia Sofia. Free camping was banned a few years ago — the island is no longer the budget backpacker rite it once was, but it still asks nothing of you and rewards everything you give it.",
+  "intro_el": "Η Δονούσα βρίσκεται στο μακρινό ανατολικό άκρο των Κυκλάδων, ανάμεσα σε Νάξο και Αμοργό, με περίπου 200 μόνιμους κατοίκους σε τέσσερα χωριά — Σταυρός (το λιμάνι και η Χώρα), Μερσίνη, Μεσαριά και Καλοταρίτισσα. Η κύρια παραλία είναι ο Κέδρος, μια τιρκουάζ λιμνοθάλασσα με γερμανικό ναυάγιο του Β' Παγκοσμίου ορατό στα ανοιχτά. Το ορεινό χωριό της Μερσίνης έχει τη μοναδική φυσική πηγή του νησιού και ένα πανοραμικό εκκλησάκι της Αγίας Σοφίας στον γκρεμό. Το άγριο camping απαγορεύτηκε πριν μερικά χρόνια — το νησί δεν είναι πλέον το οικονομικό πέρασμα backpackers που κάποτε ήταν, αλλά συνεχίζει να μην σου ζητά τίποτα και να ανταμείβει ό,τι του δίνεις.",
+
+  "itinerary": {
+    "title": "2-Day Donousa Itinerary",
+    "subtitle": "The east-coast walking trail to Kedros and Mersini on Day 1, Kalotaritissa and the north on Day 2.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Stavros, Kedros & Mersini",
+        "color": "#1B4F8A",
+        "stops": [
+          {
+            "name": "Stavros (Chora)",
+            "name_el": "Σταυρός (Χώρα)",
+            "lat": 36.9015,
+            "lng": 25.7858,
+            "type": "village",
+            "wiki": "https://en.wikipedia.org/wiki/Donousa",
+            "desc": "The port and main village, with a sandy crescent beach right next to the harbour. Walk the alleys uphill — the tavernas, mini-market and a few small hotels are all here. Most visitors base themselves in Stavros and walk out from there.",
+            "desc_el": "Το λιμάνι και το κύριο χωριό, με μια αμμώδη ημισέληνο παραλίας ακριβώς δίπλα στο λιμάνι. Περπάτησε τα δρομάκια προς τα πάνω — οι ταβέρνες, το μίνι μάρκετ και μερικά μικρά ξενοδοχεία είναι όλα εδώ. Οι περισσότεροι επισκέπτες βασίζονται στον Σταυρό και εξορμούν από εκεί."
+          },
+          {
+            "name": "Kedros Beach",
+            "name_el": "Παραλία Κέδρος",
+            "lat": 36.9012,
+            "lng": 25.7958,
+            "type": "beach",
+            "desc": "20-minute walk east of Stavros along the coastal path. The largest and most beautiful beach on Donousa — fine yellow sand and turquoise water. The wreck of a German WWII ship lies in shallow water just offshore (visible by snorkel). One beach bar that serves genuinely good food.",
+            "desc_el": "20 λεπτά με τα πόδια ανατολικά του Σταυρού στο παραλιακό μονοπάτι. Η μεγαλύτερη και ομορφότερη παραλία της Δονούσας — λεπτή κίτρινη άμμος και τιρκουάζ νερά. Το ναυάγιο γερμανικού πλοίου του Β' Παγκοσμίου βρίσκεται σε ρηχά νερά λίγο πιο πέρα (ορατό με snorkel). Ένα beach bar που σερβίρει πραγματικά καλό φαγητό."
+          },
+          {
+            "name": "Vathy Limenari",
+            "name_el": "Βαθύ Λιμενάρι",
+            "lat": 36.9043,
+            "lng": 25.8023,
+            "type": "beach",
+            "desc": "Continue 1km east on the path. Deep turquoise bay with white coarse pebbles. Geometric-period ruins on the surrounding hills — once a pirate hideout. Quieter than Kedros.",
+            "desc_el": "Συνέχισε 1 χλμ ανατολικά στο μονοπάτι. Βαθύς τιρκουάζ κόλπος με λευκό χονδρό βότσαλο. Ερείπια Γεωμετρικής περιόδου στους γύρω λόφους — κάποτε κρησφύγετο πειρατών. Πιο ήσυχη από τον Κέδρο."
+          },
+          {
+            "name": "Livadi Beach",
+            "name_el": "Παραλία Λιβάδι",
+            "lat": 36.9097,
+            "lng": 25.8131,
+            "type": "beach",
+            "desc": "The most photogenic beach on the island — emerald water and dazzling white sand reached only by the trail from Mersini (or by boat). Nudist-friendly. No facilities. Bring everything.",
+            "desc_el": "Η πιο φωτογενής παραλία του νησιού — σμαραγδένια νερά και εκθαμβωτική λευκή άμμος, προσβάσιμη μόνο μέσω του μονοπατιού από τη Μερσίνη (ή με βάρκα). Φιλική προς γυμνιστές. Χωρίς υπηρεσίες. Φέρε τα πάντα."
+          },
+          {
+            "name": "Mersini Village & Spring",
+            "name_el": "Χωριό & Πηγή Μερσίνης",
+            "lat": 36.9117,
+            "lng": 25.8088,
+            "type": "village",
+            "desc": "Steep climb up from Livadi (160m elevation). The only village with a natural spring on Donousa — water from a plane tree, locals fill bottles for the week. The clifftop chapel of Agia Sofia has the best view on the island, looking out to Amorgos in the distance.",
+            "desc_el": "Απότομη ανηφόρα από το Λιβάδι (160 μέτρα υψόμετρο). Το μόνο χωριό με φυσική πηγή στη Δονούσα — νερό από ένα πλάτανο, οι ντόπιοι γεμίζουν μπουκάλια για την εβδομάδα. Το εκκλησάκι της Αγίας Σοφίας στον γκρεμό έχει την καλύτερη θέα του νησιού, με την Αμοργό στο βάθος."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Kalotaritissa & the North",
+        "color": "#C0522A",
+        "stops": [
+          {
+            "name": "Kalotaritissa Village",
+            "name_el": "Χωριό Καλοταρίτισσα",
+            "lat": 36.9230,
+            "lng": 25.7856,
+            "type": "village",
+            "desc": "The northernmost settlement on Donousa, reached by an asphalt road climbing high above the sea. Three small beaches in a row (Sapounochoma, Mesa Ammos, Tripiti) and the Mitsos taverna — keftedes that justify the trip on their own.",
+            "desc_el": "Ο βορειότερος οικισμός της Δονούσας, προσβάσιμος με ασφαλτόδρομο που ανεβαίνει ψηλά πάνω από τη θάλασσα. Τρεις μικρές παραλίες στη σειρά (Σαπουνόχωμα, Μέσα Άμμος, Τρυπητή) και η ταβέρνα του Μήτσου — κεφτεδάκια που αξίζουν μόνα τους το ταξίδι."
+          },
+          {
+            "name": "Tripiti Beach",
+            "name_el": "Παραλία Τρυπητή",
+            "lat": 36.9248,
+            "lng": 25.7888,
+            "type": "beach",
+            "desc": "Short path from the far end of Kalotaritissa beach. Sandy, nudist-friendly, almost always empty. The third and most secluded of the Kalotaritissa beaches.",
+            "desc_el": "Σύντομο μονοπάτι από την άκρη της παραλίας Καλοταρίτισσας. Αμμώδης, φιλική προς γυμνιστές, σχεδόν πάντα άδεια. Η τρίτη και πιο απομονωμένη από τις παραλίες της Καλοταρίτισσας."
+          },
+          {
+            "name": "Fokospilia Sea Cave",
+            "name_el": "Σπηλιά Φωκόσπηλια",
+            "lat": 36.9180,
+            "lng": 25.8075,
+            "type": "viewpoint",
+            "desc": "Reachable only by boat. A dramatic sea cave at Cape Moschonas — once a Mediterranean monk seal breeding site (Greek 'fokia' = seal). Local boat excursions from Stavros include it.",
+            "desc_el": "Προσβάσιμη μόνο με βάρκα. Μια εντυπωσιακή θαλάσσια σπηλιά στο Ακρωτήριο Μοσχονά — κάποτε σημείο αναπαραγωγής φωκών. Οι τοπικές εκδρομές με βάρκα από τον Σταυρό την περιλαμβάνουν."
+          },
+          {
+            "name": "Aspros Kavos Walk",
+            "name_el": "Πεζοπορία Άσπρος Κάβος",
+            "lat": 36.8998,
+            "lng": 25.7723,
+            "type": "viewpoint",
+            "desc": "Easy 2km flat coastal path west from Stavros to a wild limestone cape. Almost no elevation, no shade, but constant Aegean views. The best easy walk on the island.",
+            "desc_el": "Εύκολο επίπεδο παραλιακό μονοπάτι 2 χλμ δυτικά του Σταυρού σε άγριο ασβεστολιθικό ακρωτήρι. Σχεδόν καθόλου υψομετρική διαφορά, καθόλου σκιά, αλλά συνεχής θέα στο Αιγαίο. Η καλύτερη εύκολη πεζοπορία του νησιού."
+          }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Kedros Beach",
+      "name_el": "Παραλία Κέδρος",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine yellow sand",
+      "type_el": "Λεπτή κίτρινη άμμος",
+      "length": "300 m",
+      "depth": "Shallow to medium — clear sandy bottom",
+      "depth_el": "Ρηχό έως μέτριο — καθαρός αμμώδης βυθός",
+      "facing": "South-facing — sheltered from the meltemi",
+      "facing_el": "Νότια — προστατευμένη από το μελτέμι",
+      "facilities": "One beach bar with surprisingly good food (Kedros Bar). 20-min walk from Stavros.",
+      "facilities_el": "Ένα beach bar με εκπληκτικά καλό φαγητό (Kedros Bar). 20 λεπτά με τα πόδια από τον Σταυρό.",
+      "desc": "The largest and best beach on Donousa — turquoise water, fine yellow sand, with a sunken German WWII ship visible just offshore for snorkelers. Reachable on foot from Stavros along the coastal path. The beach bar at the back is the social centre of the island in summer.",
+      "desc_el": "Η μεγαλύτερη και καλύτερη παραλία της Δονούσας — τιρκουάζ νερά, λεπτή κίτρινη άμμος, με βυθισμένο γερμανικό πλοίο του Β' Παγκοσμίου ορατό στα ανοιχτά για όσους κάνουν snorkel. Προσβάσιμη με τα πόδια από τον Σταυρό κατά μήκος του παραλιακού μονοπατιού. Το beach bar στο πίσω μέρος είναι το κοινωνικό κέντρο του νησιού το καλοκαίρι.",
+      "lat": 36.9012,
+      "lng": 25.7958
+    },
+    {
+      "name": "Livadi Beach",
+      "name_el": "Παραλία Λιβάδι",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine white sand",
+      "type_el": "Λεπτή λευκή άμμος",
+      "length": "200 m",
+      "depth": "Shallow to medium",
+      "depth_el": "Ρηχό έως μέτριο",
+      "facing": "South-facing — sheltered",
+      "facing_el": "Νότια — προστατευμένη",
+      "facilities": "None at all. Reached by a steep 900m trail from Mersini (160m descent) or by boat. Nudist-friendly.",
+      "facilities_el": "Καμία. Προσβάσιμη με απότομο μονοπάτι 900μ από τη Μερσίνη (κατάβαση 160μ) ή με βάρκα. Φιλική προς γυμνιστές.",
+      "desc": "The most photogenic beach on Donousa — emerald water, white sand, completely undeveloped. The walk down from Mersini is steep and shadeless but the beach below earns it. No facilities, no shade — bring water, an umbrella, and food. The kind of beach that justifies the whole trip.",
+      "desc_el": "Η πιο φωτογενής παραλία της Δονούσας — σμαραγδένια νερά, λευκή άμμος, εντελώς ανέγγιχτη. Η κατάβαση από τη Μερσίνη είναι απότομη και χωρίς σκιά αλλά η παραλία από κάτω την αξίζει. Χωρίς υπηρεσίες, χωρίς σκιά — φέρε νερό, ομπρέλα και φαγητό. Από αυτές τις παραλίες που δικαιολογούν όλο το ταξίδι.",
+      "lat": 36.9097,
+      "lng": 25.8131
+    },
+    {
+      "name": "Kalotaritissa Beach",
+      "name_el": "Παραλία Καλοταρίτισσα",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine pebble and sand",
+      "type_el": "Λεπτό βότσαλο και άμμος",
+      "length": "200 m",
+      "depth": "Shallow",
+      "depth_el": "Ρηχό",
+      "facing": "North-facing — exposed to the meltemi, can be windy",
+      "facing_el": "Βόρεια — εκτεθειμένη στο μελτέμι, μπορεί να φυσάει",
+      "facilities": "The Mitsos taverna right behind. Easy car access.",
+      "facilities_el": "Η ταβέρνα του Μήτσου ακριβώς πίσω. Εύκολη πρόσβαση με αυτοκίνητο.",
+      "desc": "The main beach of the northernmost village. Less spectacular than Kedros but the easy car access and Mitsos's taverna with its legendary keftedes make it the default day-trip from Stavros.",
+      "desc_el": "Η κύρια παραλία του βορειότερου χωριού. Λιγότερο εντυπωσιακή από τον Κέδρο αλλά η εύκολη πρόσβαση με αυτοκίνητο και η ταβέρνα του Μήτσου με τα θρυλικά της κεφτεδάκια την κάνουν την προεπιλογή για ημερήσια εκδρομή από τον Σταυρό.",
+      "lat": 36.9230,
+      "lng": 25.7856
+    },
+    {
+      "name": "Vathy Limenari Beach",
+      "name_el": "Παραλία Βαθύ Λιμενάρι",
+      "wiki": null,
+      "rating": 4,
+      "type": "White coarse pebble",
+      "type_el": "Λευκό χονδρό βότσαλο",
+      "length": "100 m",
+      "depth": "Deep — sudden drop-off",
+      "depth_el": "Βαθύ — απότομη πτώση",
+      "facing": "South-facing — sheltered",
+      "facing_el": "Νότια — προστατευμένη",
+      "facilities": "None. 1km east of Kedros on the coastal path.",
+      "facilities_el": "Καμία. 1 χλμ ανατολικά του Κέδρου στο παραλιακό μονοπάτι.",
+      "desc": "Wild pebble cove with deep turquoise water and the ruins of a Geometric-period settlement on the surrounding hills — once a pirate base. Reached only on foot from Kedros. Quieter than Kedros, deeper water, no shade.",
+      "desc_el": "Άγριος κολπίσκος με βότσαλο και βαθιά τιρκουάζ νερά, με ερείπια οικισμού Γεωμετρικής περιόδου στους γύρω λόφους — κάποτε βάση πειρατών. Προσβάσιμη μόνο με τα πόδια από τον Κέδρο. Πιο ήσυχη από τον Κέδρο, βαθύτερα νερά, χωρίς σκιά.",
+      "lat": 36.9043,
+      "lng": 25.8023
+    }
+  ]
+}

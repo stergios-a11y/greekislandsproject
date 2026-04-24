@@ -1,0 +1,191 @@
+{
+  "key": "sikinos",
+  "name": "Sikinos",
+  "name_el": "Σικίνος",
+  "subtitle": "Overlooked between Ios and Folegandros — twin Chora-Kastro villages, a Roman mausoleum-turned-church and beaches you walk to",
+  "subtitle_el": "Παραβλεμμένη ανάμεσα σε Ίο και Φολέγανδρο — διπλά χωριά Χώρα-Κάστρο, ένα ρωμαϊκό μαυσωλείο που έγινε εκκλησία και παραλίες όπου πας με τα πόδια",
+  "intro": "Sikinos is the quietest island in this part of the Cyclades — overshadowed by Ios to the east (parties) and Folegandros to the west (Instagram). The single inhabited area is the twin settlement of Chora and Kastro on a hill 3.5km above the port at Alopronia. The defining sight is Episkopi: a 3rd-century Roman mausoleum-temple that was converted into a Byzantine church in the 7th century. The whole structure is unusual enough to be classed as a UNESCO-tentative monument. Beaches are few, mostly reached by boat or trail, and almost always empty. Sikinos asks nothing and gives back the rare gift of being unbothered.",
+  "intro_el": "Η Σίκινος είναι το πιο ήσυχο νησί αυτού του τμήματος των Κυκλάδων — επισκιασμένη από την Ίο ανατολικά (πάρτι) και τη Φολέγανδρο δυτικά (Instagram). Η μόνη κατοικημένη περιοχή είναι ο διπλός οικισμός Χώρας και Κάστρου σε λόφο 3,5 χλμ πάνω από το λιμάνι στην Αλοπρόνοια. Το χαρακτηριστικό αξιοθέατο είναι η Επισκοπή: ένα ρωμαϊκό μαυσωλείο-ναός του 3ου αιώνα που μετατράπηκε σε βυζαντινή εκκλησία τον 7ο αιώνα. Όλη η κατασκευή είναι αρκετά ασυνήθιστη ώστε να κατατάσσεται ως υποψήφια στην UNESCO. Οι παραλίες είναι λίγες, οι περισσότερες προσβάσιμες με βάρκα ή μονοπάτι, και σχεδόν πάντα άδειες. Η Σίκινος δεν ζητά τίποτα και ανταποδίδει το σπάνιο δώρο του να μην σε ενοχλούν.",
+
+  "itinerary": {
+    "title": "2-Day Sikinos Itinerary",
+    "subtitle": "Chora and Episkopi on Day 1, the south-coast beaches on Day 2.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Chora, Kastro & Episkopi",
+        "color": "#1B4F8A",
+        "stops": [
+          {
+            "name": "Alopronia Port",
+            "name_el": "Λιμάνι Αλοπρόνοιας",
+            "lat": 36.7250,
+            "lng": 25.1486,
+            "type": "village",
+            "wiki": "https://en.wikipedia.org/wiki/Sikinos",
+            "desc": "The small port settlement, with the only beach you can walk to from the harbour (Alopronia Beach is right there). A bus runs to Chora to meet most ferries.",
+            "desc_el": "Ο μικρός λιμενικός οικισμός, με τη μοναδική παραλία που μπορείς να περπατήσεις από το λιμάνι (η παραλία Αλοπρόνοιας είναι ακριβώς εκεί). Λεωφορείο πάει στη Χώρα να συναντήσει τα περισσότερα πλοία."
+          },
+          {
+            "name": "Chora & Kastro",
+            "name_el": "Χώρα & Κάστρο",
+            "lat": 36.6953,
+            "lng": 25.1467,
+            "type": "village",
+            "desc": "Twin medieval settlements on the same hill, locally called Pano Meria. Kastro is the older, fortified Venetian core; Chora is the more recent expansion downhill. White houses, vaulted alleys, a few tavernas at the central square (Plateia). One of the prettiest unphotographed Choras in the Cyclades.",
+            "desc_el": "Διπλοί μεσαιωνικοί οικισμοί στον ίδιο λόφο, που τοπικά λέγονται Πάνω Μεριά. Το Κάστρο είναι ο παλαιότερος, οχυρωμένος βενετσιάνικος πυρήνας· η Χώρα είναι η πιο πρόσφατη επέκταση προς τα κάτω. Λευκά σπίτια, θολωτά δρομάκια, μερικές ταβέρνες στην κεντρική Πλατεία. Από τις ομορφότερες αφωτογράφητες Χώρες των Κυκλάδων."
+          },
+          {
+            "name": "Pantanassa Church",
+            "name_el": "Εκκλησία Παντάνασσα",
+            "lat": 36.6961,
+            "lng": 25.1463,
+            "type": "monastery",
+            "desc": "Domed 17th-century Byzantine church at the heart of Kastro, the local pilgrimage site. The interior preserves a wood-carved iconostasis and 18th-century icons.",
+            "desc_el": "Θολωτή βυζαντινή εκκλησία του 17ου αιώνα στην καρδιά του Κάστρου, ο τοπικός προσκυνηματικός χώρος. Το εσωτερικό διατηρεί ξυλόγλυπτο τέμπλο και εικόνες του 18ου αιώνα."
+          },
+          {
+            "name": "Episkopi",
+            "name_el": "Επισκοπή",
+            "lat": 36.6939,
+            "lng": 25.1306,
+            "type": "ruin",
+            "desc": "1.5km west of Chora on a marked path or short drive. A 3rd-century Roman mausoleum-temple with extraordinarily well-preserved Doric columns and pediment, converted to a church (Koimisi tis Theotokou) in the 7th century. The most unusual ancient structure in the Small Cyclades. Free entry.",
+            "desc_el": "1,5 χλμ δυτικά της Χώρας σε σημασμένο μονοπάτι ή σύντομη οδική απόσταση. Ένα ρωμαϊκό μαυσωλείο-ναός του 3ου αιώνα με εξαιρετικά διατηρημένες δωρικές κολώνες και αέτωμα, μετατραμμένο σε εκκλησία (Κοίμηση της Θεοτόκου) τον 7ο αιώνα. Η πιο ασυνήθιστη αρχαία κατασκευή των Μικρών Κυκλάδων. Δωρεάν είσοδος."
+          },
+          {
+            "name": "Manalis Winery",
+            "name_el": "Οινοποιείο Μανάλη",
+            "lat": 36.6878,
+            "lng": 25.1364,
+            "type": "village",
+            "desc": "Family-run winery 2km southwest of Chora producing assyrtiko and an unusual local Sikinian variety. The oldest organised winemaking on the island. Tastings by appointment in summer.",
+            "desc_el": "Οικογενειακό οινοποιείο 2 χλμ νοτιοδυτικά της Χώρας που παράγει ασύρτικο και μια ασυνήθιστη τοπική ποικιλία της Σικίνου. Η παλαιότερη οργανωμένη οινοπαραγωγή του νησιού. Γευσιγνωσίες κατόπιν ραντεβού το καλοκαίρι."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Beaches & Boat Trip",
+        "color": "#C0522A",
+        "stops": [
+          {
+            "name": "Alopronia Beach",
+            "name_el": "Παραλία Αλοπρόνοιας",
+            "lat": 36.7250,
+            "lng": 25.1486,
+            "type": "beach",
+            "desc": "The port beach — sandy, sheltered, with a couple of waterfront tavernas. The only beach you can reach without walking or boating. Surprisingly clean and clear given the easy access.",
+            "desc_el": "Η παραλία του λιμανιού — αμμώδης, προστατευμένη, με μερικές ταβέρνες στο νερό. Η μόνη παραλία που φτάνεις χωρίς πεζοπορία ή βάρκα. Εκπληκτικά καθαρή και διαυγής για το πόσο εύκολη είναι η πρόσβαση."
+          },
+          {
+            "name": "Agios Georgios Beach",
+            "name_el": "Παραλία Αγίου Γεωργίου",
+            "lat": 36.7311,
+            "lng": 25.1572,
+            "type": "beach",
+            "desc": "Small sandy beach 1km east of Alopronia along the coastal path. A whitewashed chapel above. No facilities. Often empty.",
+            "desc_el": "Μικρή αμμώδης παραλία 1 χλμ ανατολικά της Αλοπρόνοιας στο παραλιακό μονοπάτι. Ένα ασβεστωμένο εκκλησάκι από πάνω. Χωρίς υπηρεσίες. Συχνά άδεια."
+          },
+          {
+            "name": "Boat to Karra Beach",
+            "name_el": "Βάρκα προς Παραλία Κάρρα",
+            "lat": 36.7186,
+            "lng": 25.1228,
+            "type": "beach",
+            "desc": "Small daily boat from Alopronia to the southern beaches inaccessible by land. Karra is the most beautiful — sandy, deep clear water, completely undeveloped. Ask at the port the morning of.",
+            "desc_el": "Μικρή ημερήσια βάρκα από την Αλοπρόνοια στις νότιες παραλίες που δεν προσεγγίζονται οδικώς. Η Κάρρα είναι η ομορφότερη — αμμώδης, βαθιά διαυγή νερά, εντελώς ανέγγιχτη. Ρώτα στο λιμάνι το πρωί."
+          },
+          {
+            "name": "Sunset at Pantanassa",
+            "name_el": "Ηλιοβασίλεμα στην Παντάνασσα",
+            "lat": 36.6953,
+            "lng": 25.1467,
+            "type": "viewpoint",
+            "desc": "Walk back up to Chora for sunset from the terraces below the Pantanassa church. The view west takes in Folegandros and beyond. Dinner at one of the tavernas in the central square.",
+            "desc_el": "Ανέβα ξανά στη Χώρα για ηλιοβασίλεμα από τις βεράντες κάτω από την εκκλησία Παντάνασσα. Η θέα δυτικά πιάνει τη Φολέγανδρο και πέρα. Δείπνο σε μία από τις ταβέρνες στην κεντρική πλατεία."
+          }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Alopronia Beach",
+      "name_el": "Παραλία Αλοπρόνοιας",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "type_el": "Λεπτή άμμος",
+      "length": "200 m",
+      "depth": "Shallow — sheltered harbour",
+      "depth_el": "Ρηχό — προστατευμένο λιμάνι",
+      "facing": "Southwest-facing — sheltered from the meltemi",
+      "facing_el": "Νοτιοδυτική — προστατευμένη από το μελτέμι",
+      "facilities": "Light: a couple of waterfront tavernas, no organised sunbeds. Right at the port.",
+      "facilities_el": "Ελαφριές: μερικές ταβέρνες στο νερό, χωρίς οργανωμένες ξαπλώστρες. Ακριβώς στο λιμάνι.",
+      "desc": "The port beach — sandy, calm, sheltered. The only beach you can walk to without effort. Surprisingly clean for a port beach. Ideal for a quick swim before or after a ferry.",
+      "desc_el": "Η παραλία του λιμανιού — αμμώδης, ήρεμη, προστατευμένη. Η μόνη παραλία που μπορείς να περπατήσεις χωρίς προσπάθεια. Εκπληκτικά καθαρή για παραλία λιμανιού. Ιδανική για ένα γρήγορο μπάνιο πριν ή μετά από πλοίο.",
+      "lat": 36.7250,
+      "lng": 25.1486
+    },
+    {
+      "name": "Agios Georgios Beach",
+      "name_el": "Παραλία Αγίου Γεωργίου",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand and pebble",
+      "type_el": "Λεπτή άμμος και βότσαλο",
+      "length": "150 m",
+      "depth": "Medium",
+      "depth_el": "Μέτριο",
+      "facing": "Southeast-facing — sheltered",
+      "facing_el": "Νοτιοανατολική — προστατευμένη",
+      "facilities": "None. 1km coastal walk east of Alopronia.",
+      "facilities_el": "Καμία. 1 χλμ παραλιακό περπάτημα ανατολικά της Αλοπρόνοιας.",
+      "desc": "Small wild cove with a chapel above and clear water. Reached on foot from the port in 20 minutes. The easy escape from the slightly busier Alopronia.",
+      "desc_el": "Μικρός άγριος κολπίσκος με εκκλησάκι από πάνω και διαυγή νερά. Προσβάσιμος με τα πόδια από το λιμάνι σε 20 λεπτά. Η εύκολη απόδραση από την λίγο πιο πολυσύχναστη Αλοπρόνοια.",
+      "lat": 36.7311,
+      "lng": 25.1572
+    },
+    {
+      "name": "Karra Beach",
+      "name_el": "Παραλία Κάρρα",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "type_el": "Λεπτή άμμος",
+      "length": "100 m",
+      "depth": "Medium to deep — clear, swimmable",
+      "depth_el": "Μέτριο έως βαθύ — διαυγές, κολυμπίσιμο",
+      "facing": "South-facing — sheltered",
+      "facing_el": "Νότια — προστατευμένη",
+      "facilities": "None — accessible only by boat from Alopronia.",
+      "facilities_el": "Καμία — προσβάσιμη μόνο με βάρκα από την Αλοπρόνοια.",
+      "desc": "The most beautiful beach on Sikinos — sandy, completely undeveloped, on the southwestern coast. Reached only by the small daily boat from Alopronia. Bring everything.",
+      "desc_el": "Η ομορφότερη παραλία της Σικίνου — αμμώδης, εντελώς ανέγγιχτη, στη νοτιοδυτική ακτή. Προσβάσιμη μόνο με τη μικρή ημερήσια βάρκα από την Αλοπρόνοια. Φέρε τα πάντα.",
+      "lat": 36.7186,
+      "lng": 25.1228
+    },
+    {
+      "name": "Dialiskari Beach",
+      "name_el": "Παραλία Διαλισκάρι",
+      "wiki": null,
+      "rating": 3,
+      "type": "Pebble",
+      "type_el": "Βότσαλο",
+      "length": "50 m",
+      "depth": "Medium",
+      "depth_el": "Μέτριο",
+      "facing": "South-facing",
+      "facing_el": "Νότια",
+      "facilities": "None. Reached only by boat or 1-hour hike.",
+      "facilities_el": "Καμία. Προσβάσιμη μόνο με βάρκα ή 1ωρη πεζοπορία.",
+      "desc": "Tiny pebble cove on the south coast. Crystal water, complete solitude. Worth the effort if you're craving total isolation; not worth it if you just want a swim.",
+      "desc_el": "Μικροσκοπικός κολπίσκος με βότσαλο στη νότια ακτή. Κρυστάλλινα νερά, απόλυτη μοναξιά. Αξίζει την προσπάθεια αν λαχταράς απόλυτη απομόνωση· δεν αξίζει αν θέλεις απλώς ένα μπάνιο.",
+      "lat": 36.7222,
+      "lng": 25.1342
+    }
+  ]
+}

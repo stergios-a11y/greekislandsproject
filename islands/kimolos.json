@@ -1,0 +1,191 @@
+{
+  "key": "kimolos",
+  "name": "Kimolos",
+  "name_el": "Κίμωλος",
+  "subtitle": "Milos's quieter neighbour — Caribbean lagoons, a mushroom-shaped rock and a sunken ancient city",
+  "subtitle_el": "Η πιο ήσυχη γειτόνισσα της Μήλου — καραϊβικές λιμνοθάλασσες, ένας βράχος-μανιτάρι και μια βυθισμένη αρχαία πόλη",
+  "intro": "800 metres across the strait from Milos but a different planet in pace, Kimolos is what the western Cyclades looked like before social media. The single Chora — locally called Chorio, not Chora — sits on a hill 1km from the port, walled by the remains of a 16th-century Venetian castle. The beach at Prassa on the north coast is the headline draw, with white sand from nearby chalk and bentonite mines and water that earns its Caribbean comparisons. Inland, a 30-minute hike across volcanic plateau leads to Skiadi, a 4-metre mushroom-shaped rock sculpted by millennia of wind erosion. The island's name comes from the Greek word for chalk.",
+  "intro_el": "800 μέτρα απέναντι από τη Μήλο αλλά ένας διαφορετικός πλανήτης σε ρυθμό, η Κίμωλος είναι αυτό που έμοιαζαν οι δυτικές Κυκλάδες πριν τα social media. Η μοναδική Χώρα — που οι ντόπιοι λένε Χωριό, όχι Χώρα — βρίσκεται σε λόφο 1 χλμ από το λιμάνι, περιφραγμένη από τα ερείπια ενός βενετσιάνικου κάστρου του 16ου αιώνα. Η παραλία στο Πράσσα στη βόρεια ακτή είναι το κύριο σημείο, με λευκή άμμο από τα κοντινά ορυχεία γύψου και μπεντονίτη και νερά που δικαιολογούν τις συγκρίσεις με την Καραϊβική. Στο εσωτερικό, μια πεζοπορία 30 λεπτών μέσα από ηφαιστειακό οροπέδιο οδηγεί στο Σκιάδι, έναν 4μετρο βράχο σε σχήμα μανιταριού λαξευμένο από χιλιετίες διάβρωσης από τον άνεμο. Το όνομα του νησιού προέρχεται από τη λέξη κιμωλία.",
+
+  "itinerary": {
+    "title": "2-Day Kimolos Itinerary",
+    "subtitle": "Chorio and Prassa on Day 1, Skiadi and the south coast on Day 2.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Chorio, the Castle & Prassa Lagoon",
+        "color": "#1B4F8A",
+        "stops": [
+          {
+            "name": "Psathi Port",
+            "name_el": "Λιμάνι Ψάθη",
+            "lat": 36.7869,
+            "lng": 24.5733,
+            "type": "village",
+            "desc": "The port and second settlement, 1km below Chorio. A few tavernas on the waterfront, the bus to Chorio meets every ferry. Most visitors transfer up immediately.",
+            "desc_el": "Το λιμάνι και ο δεύτερος οικισμός, 1 χλμ κάτω από το Χωριό. Μερικές ταβέρνες στην παραλία, το λεωφορείο για το Χωριό συναντά κάθε πλοίο. Οι περισσότεροι επισκέπτες μετακινούνται αμέσως πάνω."
+          },
+          {
+            "name": "Chorio (Chora)",
+            "name_el": "Χωριό (Χώρα)",
+            "lat": 36.7886,
+            "lng": 24.5694,
+            "type": "village",
+            "wiki": "https://en.wikipedia.org/wiki/Kimolos",
+            "desc": "The main village and home to 90% of the island's 800 residents. A medieval Venetian Kastro at its heart, with the 16th-century Church of the Nativity built into the castle walls. Whitewashed alleys, traditional kafeneia, two small museums (Archaeological + Folk Maritime).",
+            "desc_el": "Το κύριο χωριό και κατοικία του 90% των 800 κατοίκων του νησιού. Στην καρδιά του ένα μεσαιωνικό βενετσιάνικο Κάστρο, με την εκκλησία της Γέννησης του 16ου αιώνα χτισμένη στα τείχη του κάστρου. Ασβεστωμένα δρομάκια, παραδοσιακά καφενεία, δύο μικρά μουσεία (Αρχαιολογικό + Λαογραφικό-Ναυτικό)."
+          },
+          {
+            "name": "Archaeological Museum",
+            "name_el": "Αρχαιολογικό Μουσείο",
+            "lat": 36.7884,
+            "lng": 24.5697,
+            "type": "ruin",
+            "desc": "Small but well-curated. Houses finds from the sunken ancient city of Ellinika on the west coast — Mycenaean, Classical and Roman pieces. Open mornings and evenings in summer.",
+            "desc_el": "Μικρό αλλά καλά επιμελημένο. Φιλοξενεί ευρήματα από τη βυθισμένη αρχαία πόλη της Ελληνικής στη δυτική ακτή — μυκηναϊκά, κλασικά και ρωμαϊκά κομμάτια. Ανοιχτό πρωινά και απογεύματα το καλοκαίρι."
+          },
+          {
+            "name": "Prassa Beach",
+            "name_el": "Παραλία Πράσσα",
+            "lat": 36.8323,
+            "lng": 24.6086,
+            "type": "beach",
+            "desc": "Drive 9km north on a road that turns to gravel near the perlite mines. White sand from the nearby chalk deposits, water shading from turquoise to deep blue. A small bar in summer; otherwise unspoiled. Natural thermal springs emerge directly through the sand.",
+            "desc_el": "Οδήγησε 9 χλμ βόρεια σε δρόμο που γίνεται χωματόδρομος κοντά στα ορυχεία περλίτη. Λευκή άμμος από τις κοντινές αποθέσεις γύψου, νερά που σκιάζουν από τιρκουάζ σε βαθύ μπλε. Ένα μικρό μπαρ το καλοκαίρι· διαφορετικά ανέγγιχτη. Φυσικές θερμικές πηγές αναβλύζουν κατευθείαν μέσα από την άμμο."
+          },
+          {
+            "name": "Lunch — Prasonisi",
+            "name_el": "Μεσημεριανό — Πρασονήσι",
+            "lat": 36.8298,
+            "lng": 24.6055,
+            "type": "village",
+            "desc": "Restaurant just south of Prassa lagoon. More expensive than the average island taverna but considered the best food on Kimolos. Fantastic view of the turquoise bay below.",
+            "desc_el": "Εστιατόριο ακριβώς νότια της λιμνοθάλασσας Πράσσα. Πιο ακριβό από τη μέση ταβέρνα του νησιού αλλά θεωρείται το καλύτερο φαγητό της Κιμώλου. Φανταστική θέα στον τιρκουάζ κόλπο από κάτω."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Skiadi & the Southern Beaches",
+        "color": "#C0522A",
+        "stops": [
+          {
+            "name": "Skiadi Mushroom Rock",
+            "name_el": "Βράχος-Μανιτάρι Σκιάδι",
+            "lat": 36.8087,
+            "lng": 24.5550,
+            "type": "viewpoint",
+            "desc": "30-minute hike from a parking bay 3km north of Chorio along an old mule track. A 4-metre rock shaped like a mushroom by millennia of wind erosion — the soft base eroded faster than the hard volcanic top. One of the protected geological monuments of the Aegean.",
+            "desc_el": "Πεζοπορία 30 λεπτών από στάθμευση 3 χλμ βόρεια του Χωριού κατά μήκος ενός παλιού μονοπατιού για μουλάρια. Ένας βράχος 4 μέτρων σε σχήμα μανιταριού από χιλιετίες διάβρωσης από τον άνεμο — η μαλακή βάση διαβρώθηκε γρηγορότερα από την σκληρή ηφαιστειακή κορυφή. Ένα από τα προστατευμένα γεωλογικά μνημεία του Αιγαίου."
+          },
+          {
+            "name": "Ellinika & Mavrospilia Beaches",
+            "name_el": "Παραλίες Ελληνικά & Μαυροσπηλιά",
+            "lat": 36.7944,
+            "lng": 24.5358,
+            "type": "beach",
+            "desc": "Continue on the same hiking trail past Skiadi to reach two southwestern beaches. Ellinika is above the submerged ruins of an ancient city — bring a snorkel to see the foundations underwater. Mavrospilia next door has white volcanic rock formations.",
+            "desc_el": "Συνέχισε στο ίδιο μονοπάτι πέρα από το Σκιάδι για να φτάσεις σε δύο νοτιοδυτικές παραλίες. Η Ελληνική είναι πάνω από τα βυθισμένα ερείπια αρχαίας πόλης — φέρε snorkel για να δεις τα θεμέλια κάτω από το νερό. Η Μαυροσπηλιά δίπλα έχει λευκούς ηφαιστειακούς βραχώδεις σχηματισμούς."
+          },
+          {
+            "name": "Bonatsa Beach",
+            "name_el": "Παραλία Μπονάτσα",
+            "lat": 36.7747,
+            "lng": 24.5589,
+            "type": "beach",
+            "desc": "South-coast sandy beach with tamarisk shade and a couple of tavernas. Family-friendly, very calm water, much easier to access than Prassa. The default afternoon swim if you don't want to drive.",
+            "desc_el": "Νότια αμμώδης παραλία με σκιά αλμυρικιών και μερικές ταβέρνες. Οικογενειακή, πολύ ήρεμα νερά, πολύ ευκολότερη πρόσβαση από το Πράσσα. Η προεπιλογή για απογευματινό μπάνιο αν δεν θέλεις να οδηγήσεις."
+          },
+          {
+            "name": "Polyaigos Boat Trip (Optional)",
+            "name_el": "Εκδρομή με Βάρκα στην Πολύαιγο (Προαιρετικό)",
+            "lat": 36.7333,
+            "lng": 24.6500,
+            "type": "viewpoint",
+            "desc": "If you have a third day or skip Skiadi, take the boat trip to uninhabited Polyaigos — the largest uninhabited island in Greece, NATURA 2000-protected. Mediterranean monk seals breed in the sea caves. Departures from Psathi.",
+            "desc_el": "Αν έχεις τρίτη μέρα ή παραλείπεις το Σκιάδι, πάρε την εκδρομή με βάρκα στην ακατοίκητη Πολύαιγο — το μεγαλύτερο ακατοίκητο νησί της Ελλάδας, προστατευμένο από το NATURA 2000. Φώκιες monachus monachus αναπαράγονται στις θαλάσσιες σπηλιές. Αναχωρήσεις από το Ψάθη."
+          }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Prassa Beach (Agios Georgios)",
+      "name_el": "Παραλία Πράσσα (Άγιος Γεώργιος)",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine white sand",
+      "type_el": "Λεπτή λευκή άμμος",
+      "length": "200 m",
+      "depth": "Shallow lagoon — gradual entry, swimming pool calm",
+      "depth_el": "Ρηχή λιμνοθάλασσα — σταδιακή είσοδος, ηρεμία πισίνας",
+      "facing": "Northeast-facing — sheltered by Prasonisi islet",
+      "facing_el": "Βορειοανατολική — προστατευμένη από το νησάκι Πρασονήσι",
+      "facilities": "Light: a small summer beach bar, the Prasonisi restaurant nearby. Natural thermal springs through the sand. Reachable by car (gravel road last km) or boat tour.",
+      "facilities_el": "Ελαφριές: ένα μικρό beach bar το καλοκαίρι, το εστιατόριο Πρασονήσι κοντά. Φυσικές θερμικές πηγές μέσα από την άμμο. Προσβάσιμη με αυτοκίνητο (τα τελευταία χλμ χωματόδρομος) ή βάρκα.",
+      "desc": "The defining beach of Kimolos and one of the most photographed in the western Cyclades. White sand from the surrounding chalk and bentonite deposits, water that genuinely earns the 'Caribbean' comparison. Sheltered by the small island of Prasonisi. The thermal springs that bubble up through the sand are an unexpected bonus. In winter the beach is a refuge for monk seals.",
+      "desc_el": "Η χαρακτηριστική παραλία της Κιμώλου και μία από τις πιο φωτογραφημένες των δυτικών Κυκλάδων. Λευκή άμμος από τις γύρω αποθέσεις γύψου και μπεντονίτη, νερά που πραγματικά δικαιολογούν τη σύγκριση με την Καραϊβική. Προστατευμένη από το μικρό νησί Πρασονήσι. Οι θερμικές πηγές που αναβλύζουν μέσα από την άμμο είναι ένα απρόσμενο μπόνους. Τον χειμώνα η παραλία είναι καταφύγιο φωκών monachus monachus.",
+      "lat": 36.8323,
+      "lng": 24.6086
+    },
+    {
+      "name": "Bonatsa Beach",
+      "name_el": "Παραλία Μπονάτσα",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "type_el": "Λεπτή άμμος",
+      "length": "300 m",
+      "depth": "Shallow — very gradual",
+      "depth_el": "Ρηχό — πολύ σταδιακό",
+      "facing": "South-facing — sheltered from the meltemi",
+      "facing_el": "Νότια — προστατευμένη από το μελτέμι",
+      "facilities": "Tamarisk shade, a couple of tavernas immediately behind. Easy car access.",
+      "facilities_el": "Σκιά αλμυρικιών, μερικές ταβέρνες ακριβώς πίσω. Εύκολη πρόσβαση με αυτοκίνητο.",
+      "desc": "The default family beach on the south coast — long, sandy, calm and shaded by tamarisk trees. Less spectacular than Prassa but vastly easier to reach and with proper food at the tavernas behind. The sweet spot for a relaxed beach day without the drive.",
+      "desc_el": "Η προεπιλογή για οικογένειες στη νότια ακτή — μακριά, αμμώδης, ήρεμη και σκιασμένη από αλμυρίκια. Λιγότερο εντυπωσιακή από το Πράσσα αλλά πολύ ευκολότερη πρόσβαση και με κανονικό φαγητό στις ταβέρνες πίσω. Το γλυκό σημείο για χαλαρή μέρα παραλίας χωρίς οδική κούραση.",
+      "lat": 36.7747,
+      "lng": 24.5589
+    },
+    {
+      "name": "Ellinika Beach",
+      "name_el": "Παραλία Ελληνικά",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "type_el": "Λεπτή άμμος",
+      "length": "200 m",
+      "depth": "Shallow — visibility excellent for snorkelling",
+      "depth_el": "Ρηχό — εξαιρετική ορατότητα για snorkelling",
+      "facing": "West-facing — sunset views",
+      "facing_el": "Δυτική — θέα στο ηλιοβασίλεμα",
+      "facilities": "None. Reached by hiking trail (1.5 hr from Chorio) or rough road.",
+      "facilities_el": "Καμία. Προσβάσιμη με πεζοπορικό μονοπάτι (1,5 ώρα από το Χωριό) ή κακό δρόμο.",
+      "desc": "Quiet sandy beach on the west coast above the submerged ruins of an ancient city. Bring a snorkel — you can see the foundations of houses and tombs underwater just metres from shore. The tomb of a 1st-century child was excavated here in 2002. Almost always empty.",
+      "desc_el": "Ήσυχη αμμώδης παραλία στη δυτική ακτή πάνω από τα βυθισμένα ερείπια αρχαίας πόλης. Φέρε snorkel — βλέπεις τα θεμέλια σπιτιών και τάφων κάτω από το νερό μόλις λίγα μέτρα από την ακτή. Τάφος παιδιού του 1ου αιώνα ανασκάφηκε εδώ το 2002. Σχεδόν πάντα άδεια.",
+      "lat": 36.7944,
+      "lng": 24.5358
+    },
+    {
+      "name": "Kalamitsi Beach",
+      "name_el": "Παραλία Καλαμίτσι",
+      "wiki": null,
+      "rating": 3,
+      "type": "Fine sand and pebble",
+      "type_el": "Λεπτή άμμος και βότσαλο",
+      "length": "150 m",
+      "depth": "Shallow",
+      "depth_el": "Ρηχό",
+      "facing": "South-facing",
+      "facing_el": "Νότια",
+      "facilities": "Light — a single seasonal taverna, tamarisk shade.",
+      "facilities_el": "Ελαφριές — μία εποχική ταβέρνα, σκιά αλμυρικιών.",
+      "desc": "Small south-coast cove between Bonatsa and Aliki, near the road from Chorio to the southwest. Easy access, family-friendly, calmer than the western beaches. Goes well as a half-day stop combined with one of the more remote beaches.",
+      "desc_el": "Μικρός νότιος κολπίσκος ανάμεσα σε Μπονάτσα και Αλυκή, κοντά στον δρόμο από το Χωριό στη νοτιοδύση. Εύκολη πρόσβαση, οικογενειακή, πιο ήρεμη από τις δυτικές παραλίες. Πάει καλά ως ημερήσια στάση σε συνδυασμό με μία από τις πιο απομακρυσμένες παραλίες.",
+      "lat": 36.7811,
+      "lng": 24.5742
+    }
+  ]
+}

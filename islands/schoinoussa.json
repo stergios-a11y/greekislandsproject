@@ -1,0 +1,191 @@
+{
+  "key": "schoinoussa",
+  "name": "Schoinoussa",
+  "name_el": "Σχοινούσα",
+  "subtitle": "The smallest Small Cycladic — the 'Island of the Sun', driest place in Greece, sandy beaches and exceptional tavernas",
+  "subtitle_el": "Η μικρότερη των Μικρών Κυκλάδων — το \"Νησί του Ήλιου\", το πιο ξηρό μέρος της Ελλάδας, αμμώδεις παραλίες και εξαιρετικές ταβέρνες",
+  "intro": "8.5 square kilometres of arid limestone between Naxos and Koufonisia, Schoinoussa is locally nicknamed the 'Island of the Sun' because it gets less rain than anywhere else in Greece. The single Chora sits 1km from the port at Mersini bay — a 10-minute walk uphill. The whole island is walkable: every beach is within a 35-minute walk of Chora, the highest point is 133 metres, the topography is gentle. Reputation alert: the food here is shockingly good. The half-dozen tavernas in Chora consistently outperform what an island this small should be able to deliver.",
+  "intro_el": "8,5 τετραγωνικά χιλιόμετρα ξηρού ασβεστόλιθου ανάμεσα σε Νάξο και Κουφονήσια, η Σχοινούσα ονομάζεται τοπικά \"Νησί του Ήλιου\" γιατί δέχεται λιγότερη βροχή από οπουδήποτε αλλού στην Ελλάδα. Η μόνη Χώρα βρίσκεται 1 χλμ από το λιμάνι στον κόλπο της Μερσίνης — 10 λεπτά πεζοπορίας προς τα πάνω. Όλο το νησί είναι πεζοπορητό: κάθε παραλία είναι σε απόσταση 35 λεπτών με τα πόδια από τη Χώρα, το υψηλότερο σημείο είναι στα 133 μέτρα, η τοπογραφία είναι ήπια. Προειδοποίηση φήμης: το φαγητό εδώ είναι εκπληκτικά καλό. Τα μισή ντουζίνα ταβέρνες της Χώρας ξεπερνούν συστηματικά αυτό που θα έπρεπε να μπορεί να παραδώσει ένα τόσο μικρό νησί.",
+
+  "itinerary": {
+    "title": "2-Day Schoinoussa Itinerary",
+    "subtitle": "Chora and the eastern beaches on Day 1, the south coast on Day 2.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Chora & the Eastern Beaches",
+        "color": "#1B4F8A",
+        "stops": [
+          {
+            "name": "Mersini Port",
+            "name_el": "Λιμάνι Μερσίνης",
+            "lat": 36.8530,
+            "lng": 25.5275,
+            "type": "village",
+            "wiki": "https://en.wikipedia.org/wiki/Schoinoussa",
+            "desc": "The natural-harbour port — one of the safest in the Cyclades. Two seafood tavernas at the water and the bay itself doubles as Mersini Beach (calm enough for paddle-boarding). 10-min walk uphill to Chora.",
+            "desc_el": "Το φυσικό λιμάνι — από τα ασφαλέστερα των Κυκλάδων. Δύο ψαροταβέρνες στο νερό και ο ίδιος ο κόλπος λειτουργεί ως παραλία Μερσίνης (αρκετά ήρεμη για paddle-boarding). 10 λεπτά πεζοπορίας προς τα πάνω για τη Χώρα."
+          },
+          {
+            "name": "Chora",
+            "name_el": "Χώρα",
+            "lat": 36.8567,
+            "lng": 25.5189,
+            "type": "village",
+            "desc": "The main village on the highest point — small Cycladic settlement of whitewashed houses, narrow alleys, half a dozen tavernas, two mini-markets. Walk it end to end in 5 minutes. The food scene here is the surprise of the island.",
+            "desc_el": "Το κύριο χωριό στο ψηλότερο σημείο — μικρός κυκλαδίτικος οικισμός από ασβεστωμένα σπίτια, στενά δρομάκια, μισή ντουζίνα ταβέρνες, δύο μίνι μάρκετ. Περπάτησέ το από άκρη σε άκρη σε 5 λεπτά. Η κουζίνα εδώ είναι η έκπληξη του νησιού."
+          },
+          {
+            "name": "Tsigouri Beach",
+            "name_el": "Παραλία Τσιγκούρι",
+            "lat": 36.8517,
+            "lng": 25.5213,
+            "type": "beach",
+            "desc": "10-minute walk south of Chora down stairs. Long sandy beach with calm shallow water. Site of an early Christian basilica and Hellenistic-Roman ruins. The most popular beach on the island and reasonably equipped.",
+            "desc_el": "10 λεπτά με τα πόδια νότια της Χώρας κατεβαίνοντας σκαλιά. Μακριά αμμώδης παραλία με ήρεμα ρηχά νερά. Σημείο πρωτοχριστιανικής βασιλικής και ελληνιστικών-ρωμαϊκών ερειπίων. Η πιο δημοφιλής παραλία του νησιού και αρκετά εξοπλισμένη."
+          },
+          {
+            "name": "Almyros Beach",
+            "name_el": "Παραλία Αλμυρός",
+            "lat": 36.8489,
+            "lng": 25.5314,
+            "type": "beach",
+            "desc": "15-minute walk east of Chora. The shallowest and most sheltered beach on Schoinoussa — perfect for kids. Less developed than Tsigouri.",
+            "desc_el": "15 λεπτά με τα πόδια ανατολικά της Χώρας. Η πιο ρηχή και πιο προστατευμένη παραλία της Σχοινούσας — ιδανική για παιδιά. Λιγότερο ανεπτυγμένη από το Τσιγκούρι."
+          },
+          {
+            "name": "Dinner in Chora",
+            "name_el": "Δείπνο στη Χώρα",
+            "lat": 36.8567,
+            "lng": 25.5189,
+            "type": "village",
+            "desc": "The food on Schoinoussa is the highlight. Fava (yellow split pea purée), local goat, koftes, fresh seafood. Walk into Chora and pick whichever taverna catches your eye — the standard is uniformly high.",
+            "desc_el": "Το φαγητό στη Σχοινούσα είναι το υψηλό σημείο. Φάβα, ντόπιο κατσίκι, κοφτές, φρέσκα θαλασσινά. Μπες στη Χώρα και διάλεξε όποια ταβέρνα σε τραβήξει — το επίπεδο είναι ομοιόμορφα υψηλό."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Psili Ammos & the South Coast",
+        "color": "#C0522A",
+        "stops": [
+          {
+            "name": "Psili Ammos Beach",
+            "name_el": "Παραλία Ψιλή Άμμος",
+            "lat": 36.8628,
+            "lng": 25.5275,
+            "type": "beach",
+            "desc": "30-minute walk northeast of Chora. The best beach on the island — long, sandy, with crystal-clear water. North-facing so it can be windy when the meltemi blows; otherwise paradise. No facilities.",
+            "desc_el": "30 λεπτά με τα πόδια βορειοανατολικά της Χώρας. Η καλύτερη παραλία του νησιού — μακριά, αμμώδης, με κρυστάλλινα νερά. Βόρεια οπότε μπορεί να φυσάει όταν φυσά το μελτέμι· διαφορετικά παράδεισος. Χωρίς υπηρεσίες."
+          },
+          {
+            "name": "Aligaria Beach",
+            "name_el": "Παραλία Αλιγαριά",
+            "lat": 36.8420,
+            "lng": 25.5183,
+            "type": "beach",
+            "desc": "2km south of Chora via narrow trail to the southernmost bay. Sandy, very quiet, with two other small beaches (Kambos and Gagavi) in the same bay.",
+            "desc_el": "2 χλμ νότια της Χώρας μέσω στενού μονοπατιού στον νοτιότερο κόλπο. Αμμώδης, πολύ ήσυχη, με δύο άλλες μικρές παραλίες (Κάμπος και Γκαγκάβι) στον ίδιο κόλπο."
+          },
+          {
+            "name": "Messaria Village",
+            "name_el": "Χωριό Μεσαριά",
+            "lat": 36.8589,
+            "lng": 25.5083,
+            "type": "village",
+            "desc": "Small inland village 1km west of Chora — only a few permanent residents. A handful of traditional houses, a couple of churches. Worth a 15-minute walk to see how the agricultural inland of the island works.",
+            "desc_el": "Μικρό χωριό στην ενδοχώρα 1 χλμ δυτικά της Χώρας — μόνο λίγοι μόνιμοι κάτοικοι. Μερικά παραδοσιακά σπίτια, λίγες εκκλησίες. Αξίζει 15 λεπτά πεζοπορίας για να δεις πώς λειτουργεί η αγροτική ενδοχώρα του νησιού."
+          },
+          {
+            "name": "Boat to Iraklia or Koufonisia",
+            "name_el": "Βάρκα προς Ηρακλειά ή Κουφονήσια",
+            "lat": 36.8530,
+            "lng": 25.5275,
+            "type": "village",
+            "desc": "If you have a third day, the Express Skopelitis ferry runs between all four Small Cyclades islands daily in summer. Iraklia is closer (sleepier, with the impressive Cave of Agios Ioannis); Koufonisia is more developed but with the famous Pori beach.",
+            "desc_el": "Αν έχεις τρίτη μέρα, το Express Skopelitis κάνει δρομολόγια ανάμεσα στα τέσσερα Μικρά Κυκλαδίτικα νησιά καθημερινά το καλοκαίρι. Η Ηρακλειά είναι πιο κοντά (πιο νυσταγμένη, με το εντυπωσιακό Σπήλαιο Αγίου Ιωάννη)· τα Κουφονήσια είναι πιο ανεπτυγμένα αλλά με τη διάσημη παραλία Πόρι."
+          }
+        ]
+      }
+    ]
+  },
+
+  "beaches": [
+    {
+      "name": "Tsigouri Beach",
+      "name_el": "Παραλία Τσιγκούρι",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine sand",
+      "type_el": "Λεπτή άμμος",
+      "length": "300 m",
+      "depth": "Shallow — calm, family-friendly",
+      "depth_el": "Ρηχό — ήρεμο, οικογενειακό",
+      "facing": "South-facing — sheltered",
+      "facing_el": "Νότια — προστατευμένη",
+      "facilities": "Reasonable: a few sunbeds, taverna behind. 10-min walk from Chora.",
+      "facilities_el": "Λογικές: λίγες ξαπλώστρες, ταβέρνα στο πίσω μέρος. 10 λεπτά με τα πόδια από τη Χώρα.",
+      "desc": "The default beach of Schoinoussa — long, sandy, calm, with the ruins of an early Christian basilica and a Hellenistic-Roman settlement just behind. Close enough to walk from Chora for a swim before lunch and back for siesta. Gets a bit busy by Schoinoussa standards in August.",
+      "desc_el": "Η προεπιλογή της Σχοινούσας — μακριά, αμμώδης, ήρεμη, με ερείπια πρωτοχριστιανικής βασιλικής και ελληνιστικού-ρωμαϊκού οικισμού ακριβώς πίσω. Αρκετά κοντά για να περπατήσεις από τη Χώρα για ένα μπάνιο πριν το μεσημεριανό και πίσω για σιέστα. Γεμίζει λίγο με τα μέτρα της Σχοινούσας τον Αύγουστο.",
+      "lat": 36.8517,
+      "lng": 25.5213
+    },
+    {
+      "name": "Psili Ammos Beach",
+      "name_el": "Παραλία Ψιλή Άμμος",
+      "wiki": null,
+      "rating": 5,
+      "type": "Very fine white sand",
+      "type_el": "Πολύ λεπτή λευκή άμμος",
+      "length": "200 m",
+      "depth": "Shallow — gradual sandy entry",
+      "depth_el": "Ρηχό — σταδιακή αμμώδης είσοδος",
+      "facing": "Northeast-facing — exposed to the meltemi",
+      "facing_el": "Βορειοανατολική — εκτεθειμένη στο μελτέμι",
+      "facilities": "None. Bring water, food, shade. 30-min walk northeast from Chora.",
+      "facilities_el": "Καμία. Φέρε νερό, φαγητό, σκιά. 30 λεπτά με τα πόδια βορειοανατολικά από τη Χώρα.",
+      "desc": "The most beautiful beach on Schoinoussa — fine white sand, water that shifts from emerald to deep blue. Open to the meltemi from the north, so check the wind forecast before walking out. On a calm day there is nowhere better on the island.",
+      "desc_el": "Η ομορφότερη παραλία της Σχοινούσας — λεπτή λευκή άμμος, νερά που μεταβάλλονται από σμαραγδένια σε βαθύ μπλε. Εκτεθειμένη στο μελτέμι από τον βορρά, οπότε έλεγξε την πρόγνωση πριν περπατήσεις. Σε μια ήρεμη μέρα δεν υπάρχει καλύτερο μέρος στο νησί.",
+      "lat": 36.8628,
+      "lng": 25.5275
+    },
+    {
+      "name": "Mersini Beach",
+      "name_el": "Παραλία Μερσίνη",
+      "wiki": null,
+      "rating": 4,
+      "type": "Sand and pebble",
+      "type_el": "Άμμος και βότσαλο",
+      "length": "150 m",
+      "depth": "Shallow — perfectly sheltered natural harbour",
+      "depth_el": "Ρηχό — απόλυτα προστατευμένο φυσικό λιμάνι",
+      "facing": "Southwest-facing — fully enclosed bay",
+      "facing_el": "Νοτιοδυτική — εντελώς κλειστός κόλπος",
+      "facilities": "Two seafood tavernas at the water. Right at the port — convenient on arrival/departure days.",
+      "facilities_el": "Δύο ψαροταβέρνες στο νερό. Ακριβώς στο λιμάνι — βολική σε μέρες άφιξης/αναχώρησης.",
+      "desc": "The port doubles as a beach — almost lagoon-calm because of the natural harbour shape. Not the most scenic but ideal for paddle-boarding and an effortless first/last swim of the trip without leaving the harbour.",
+      "desc_el": "Το λιμάνι λειτουργεί και ως παραλία — σχεδόν ήρεμη ως λιμνοθάλασσα λόγω του φυσικού σχήματος του λιμανιού. Όχι η πιο γραφική αλλά ιδανική για paddle-boarding και ένα αβίαστο πρώτο/τελευταίο μπάνιο του ταξιδιού χωρίς να φύγεις από το λιμάνι.",
+      "lat": 36.8530,
+      "lng": 25.5275
+    },
+    {
+      "name": "Almyros Beach",
+      "name_el": "Παραλία Αλμυρός",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "type_el": "Λεπτή άμμος",
+      "length": "150 m",
+      "depth": "Very shallow — safest for children",
+      "depth_el": "Πολύ ρηχό — το πιο ασφαλές για παιδιά",
+      "facing": "South-facing — sheltered",
+      "facing_el": "Νότια — προστατευμένη",
+      "facilities": "None. 15-min walk east of Chora.",
+      "facilities_el": "Καμία. 15 λεπτά με τα πόδια ανατολικά της Χώρας.",
+      "desc": "The shallowest and most sheltered beach on the island — wade-deep for 30 metres out, perfect calm. The default family beach, almost always quieter than Tsigouri.",
+      "desc_el": "Η πιο ρηχή και πιο προστατευμένη παραλία του νησιού — μέχρι το γόνατο για 30 μέτρα, απόλυτη ηρεμία. Η προεπιλογή για οικογένειες, σχεδόν πάντα πιο ήσυχη από το Τσιγκούρι.",
+      "lat": 36.8489,
+      "lng": 25.5314
+    }
+  ]
+}
