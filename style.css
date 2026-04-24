@@ -382,7 +382,6 @@ header {
 }
 #islands-table tbody tr:last-child td { border-bottom: none; }
 #islands-table tbody tr:hover td { background: var(--aegean-pale); cursor: pointer; }
-.text-right { text-align: right !important; }
 .group-tag {
   font-size: 11px; font-weight: 500;
   padding: 2px 9px;
@@ -431,13 +430,6 @@ header {
   background: var(--white); color: var(--ink);
 }
 .vs-label { font-weight: 700; color: var(--ink-4); flex-shrink: 0; font-size: 13px; }
-.secondary-btn {
-  padding: 9px 16px; font-size: 13px; font-family: var(--sans); font-weight: 500;
-  border: 1.5px solid var(--border-2); border-radius: var(--radius);
-  background: var(--white); color: var(--ink-3); cursor: pointer; flex-shrink: 0;
-  transition: all 0.15s;
-}
-.secondary-btn:hover { background: var(--marble-2); }
 .compare-placeholder {
   text-align: center; padding: 64px 20px;
   color: var(--ink-4); font-size: 14px;
@@ -462,13 +454,6 @@ header {
   box-shadow: var(--shadow-sm);
 }
 .compare-card.compare-winner { border: 2px solid var(--aegean-mid); }
-.winner-label {
-  font-size: 11px; font-weight: 600;
-  color: var(--aegean); background: var(--aegean-pale);
-  padding: 3px 10px; border-radius: 20px;
-  display: inline-block; margin-bottom: 10px;
-  letter-spacing: 0.2px;
-}
 .compare-card h2 { font-family: var(--serif); font-size: 18px; margin-bottom: 4px; }
 .compare-meta { font-size: 12px; color: var(--ink-3); margin-bottom: 12px; }
 .compare-total { font-family: var(--serif); font-size: 34px; font-weight: 600; margin-bottom: 16px; }
@@ -493,30 +478,6 @@ header {
    ISLAND HOPPING
 ---------------------------------------------------------- */
 .hopping-intro { margin-bottom: 24px; font-size: 14px; }
-.hopping-pair {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 18px 20px; margin-bottom: 12px;
-  box-shadow: var(--shadow-sm);
-  transition: border-color 0.15s;
-}
-.hopping-pair:hover { border-color: var(--aegean-light); }
-.hopping-pair-title {
-  font-family: var(--serif);
-  font-size: 17px; font-weight: 600;
-  margin-bottom: 4px; color: var(--ink);
-}
-.hopping-pair-meta { font-size: 13px; color: var(--ink-3); margin-bottom: 10px; }
-.hopping-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.hopping-tag {
-  font-size: 11px; font-weight: 500;
-  padding: 3px 10px;
-  background: var(--aegean-pale);
-  border-radius: 20px;
-  color: var(--aegean);
-  letter-spacing: 0.2px;
-}
 
 /* ----------------------------------------------------------
    MATCH ME QUIZ
@@ -710,52 +671,16 @@ header {
 }
 
 /* Body */
-.why-body {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 40px 24px 60px;
-}
-.why-lead {
-  font-family: var(--serif);
-  font-size: 18px; color: var(--ink-2);
-  text-align: center; margin-bottom: 36px;
-  line-height: 1.65;
-}
 
 /* Stats strip */
-.why-stats {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 12px; margin-bottom: 40px;
-}
-.why-stat-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 20px 16px; text-align: center;
-  box-shadow: var(--shadow-sm);
-  position: relative; overflow: hidden;
-}
 .why-stat-card::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
 }
 .why-stat-card.accent-aegean::before { background: var(--aegean); }
 .why-stat-card.accent-gold::before   { background: var(--gold); }
 .why-stat-card.accent-terra::before  { background: var(--terracotta); }
-.why-stat-num {
-  font-family: var(--serif);
-  font-size: 36px; font-weight: 600;
-  color: var(--aegean); line-height: 1; margin-bottom: 6px;
-}
-.why-stat-lbl {
-  font-size: 12px; font-weight: 600;
-  color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.5px;
-}
 
 /* Section divider */
-.why-divider {
-  display: flex; align-items: center; gap: 14px;
-  margin: 36px 0 28px; color: var(--ink-4);
-}
 .why-divider::before, .why-divider::after {
   content: ''; flex: 1; height: 1px; background: var(--border);
 }
@@ -765,65 +690,9 @@ header {
 }
 
 /* Philosophy row */
-.why-philosophy {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: 0; margin-bottom: 40px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: var(--white);
-  box-shadow: var(--shadow-sm);
-}
-.phil-step {
-  padding: 20px 16px;
-  text-align: center;
-  border-right: 1px solid var(--border);
-}
-.phil-step:last-child { border-right: none; }
-.phil-icon-line {
-  width: 36px; height: 3px;
-  border-radius: 2px; margin: 0 auto 14px;
-}
-.phil-label {
-  font-family: var(--serif);
-  font-size: 15px; font-weight: 600;
-  color: var(--ink); margin-bottom: 6px;
-}
-.phil-desc { font-size: 12px; color: var(--ink-3); line-height: 1.55; }
 
 /* Feature cards */
-.why-features {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 14px; margin-bottom: 36px;
-}
-.why-feat-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 20px; position: relative; overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-.why-feat-card:hover {
-  border-color: var(--aegean-light);
-  box-shadow: var(--shadow);
-}
-.why-feat-num {
-  position: absolute; top: 16px; right: 18px;
-  font-family: var(--serif); font-size: 40px; font-weight: 600;
-  color: var(--marble-2); line-height: 1; pointer-events: none;
-}
 html.dark .why-feat-num { color: var(--marble-3); }
-.why-feat-icon {
-  width: 38px; height: 38px;
-  border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 17px; margin-bottom: 14px;
-}
-.why-feat-icon.i-aegean { background: var(--aegean-pale); }
-.why-feat-icon.i-gold   { background: var(--gold-pale); }
-.why-feat-icon.i-terra  { background: var(--terra-pale); }
-.why-feat-icon.i-olive  { background: var(--olive-pale); }
 .why-feat-card h3 {
   font-family: var(--serif); font-size: 15px; font-weight: 600;
   margin-bottom: 8px; color: var(--ink);
@@ -831,13 +700,6 @@ html.dark .why-feat-num { color: var(--marble-3); }
 .why-feat-card p { font-size: 13px; color: var(--ink-3); line-height: 1.65; margin: 0; }
 
 /* Manifesto block */
-.why-manifesto {
-  background: var(--aegean);
-  border-radius: var(--radius-xl);
-  padding: 32px 28px;
-  text-align: center;
-  position: relative; overflow: hidden;
-}
 .why-manifesto h2 {
   font-family: var(--serif); font-size: 22px;
   color: #fff; margin-bottom: 12px;
@@ -855,22 +717,9 @@ html.dark .why-feat-num { color: var(--marble-3); }
 /* ----------------------------------------------------------
    MISSION PAGE (old layout — keep working)
 ---------------------------------------------------------- */
-.mission-wrapper { max-width: 700px; margin: 0 auto; }
-.mission-big-logo { width: 80px; display: block; margin-bottom: 16px; }
-.mission-lead { font-family: var(--serif); font-size: 17px; color: var(--ink-2); margin-bottom: 8px; font-weight: 600; }
-.mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
-.mission-card {
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: var(--radius-lg); padding: 16px;
-}
 .mission-card h3 { font-family: var(--serif); margin-bottom: 6px; }
 .mission-card p  { font-size: 13px; margin: 0; }
-.the-point-highlight {
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: var(--radius-lg); padding: 20px;
-}
 .the-point-highlight h2 { font-family: var(--serif); margin-bottom: 10px; }
-.final-word { font-style: italic; font-weight: 600; color: var(--aegean); }
 
 /* ----------------------------------------------------------
    FOOTER
@@ -947,23 +796,6 @@ html.dark .why-feat-num { color: var(--marble-3); }
   height: 480px;
   width: 100%;
   background: var(--aegean-pale);
-}
-.itin-legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 16px;
-  padding: 12px 16px;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-top: none;
-}
-.itin-legend-item {
-  display: flex; align-items: center; gap: 7px;
-  font-size: 12px; font-weight: 500; color: var(--ink-2);
-}
-.itin-legend-dot {
-  width: 12px; height: 12px;
-  border-radius: 50%; flex-shrink: 0;
 }
 
 .itin-days { padding: 0 24px; }
@@ -1107,12 +939,6 @@ html.dark .itin-day-btn.active {
   transition: transform 0.3s ease;
 }
 .beach-card:hover .beach-photo { transform: scale(1.03); }
-.beach-photo-placeholder {
-  width: 100%; height: 100%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 40px; color: var(--border-2);
-  background: var(--marble-2);
-}
 .beach-card-body {
   padding: 16px 20px 18px;
 }
@@ -1220,31 +1046,6 @@ html.dark .itin-day-btn.active {
 /* ============================================================
    HERO BANNER
 ============================================================ */
-.hero-banner {
-  background: linear-gradient(135deg, #0B8FAC 0%, #076880 60%, #E8522A 100%);
-  padding: 18px 24px;
-  border-bottom: none;
-  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
-  overflow: hidden;
-  max-height: 120px;
-  flex-shrink: 0;
-}
-.hero-banner.dismissed {
-  max-height: 0;
-  opacity: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  pointer-events: none;
-}
-.hero-content {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-.hero-text { flex: 1; min-width: 200px; }
 .hero-title {
   font-family: var(--serif);
   font-size: 20px; font-weight: 600;
@@ -1274,18 +1075,6 @@ html.dark .itin-day-btn.active {
   text-transform: uppercase; letter-spacing: 0.5px;
   white-space: nowrap;
 }
-.hero-dismiss {
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 8px;
-  padding: 6px 14px;
-  font-size: 12px; font-weight: 600; font-family: var(--sans);
-  color: rgba(255,255,255,0.8);
-  cursor: pointer;
-  flex-shrink: 0;
-  transition: background 0.15s;
-}
-.hero-dismiss:hover { background: rgba(255,255,255,0.22); color: #fff; }
 
 /* MAP LEGEND */
 .map-legend {
@@ -1602,11 +1391,6 @@ html.dark .itin-day-btn.active {
   font-size: 12px;
   color: var(--ink-2);
 }
-.itt-dims {
-  font-size: 11px;
-  color: var(--ink-3);
-  margin-top: 2px;
-}
 .itt-days {
   margin-top: 5px;
   font-size: 11px;
@@ -1859,10 +1643,6 @@ html.dark .top-nav.open {
 }
 
 /* Compact Why This Site Exists page */
-.why-body-compact {
-  max-width: 720px;
-  padding: 48px 32px 60px;
-}
 .why-body-compact .why-lead {
   font-size: 18px;
   line-height: 1.7;
@@ -2368,16 +2148,6 @@ html.dark .lang-toggle {
 /* ============================================================
    Author photo block on mission page
 ============================================================ */
-.author-photo-block {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding: 20px;
-  margin: 28px 0;
-  background: var(--marble-2, rgba(11,143,172,0.05));
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-}
 .author-photo {
   width: 90px;
   height: 90px;
@@ -2389,11 +2159,6 @@ html.dark .lang-toggle {
 }
 html.dark .author-photo {
   border-color: var(--marble-3);
-}
-.author-photo-caption {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
 }
 .author-name {
   font-family: var(--display);
@@ -2941,7 +2706,6 @@ html.dark .help-modal-close {
 }
 
 /* Hide the legacy hero banner in case any cached version references it */
-.hero-banner { display: none !important; }
 
 /* ============================================================
    CONDENSED TABLE — tighter rows, smaller text
@@ -3280,12 +3044,6 @@ html.dark .intl-star.on { color: #FFCB52; }
 /* ============================================================
    HOW WE SCORE — Mission page section
 ============================================================ */
-.why-scoring {
-  margin-top: 48px;
-  padding-top: 32px;
-  border-top: 1px solid var(--ink-5);
-  scroll-margin-top: 100px; /* so that anchor scroll doesn't hide header */
-}
 .why-scoring h2 {
   font-family: var(--serif);
   font-size: 32px;
@@ -3305,10 +3063,6 @@ html.dark .intl-star.on { color: #FFCB52; }
   line-height: 1.7;
   color: var(--ink-2);
   margin: 0 0 18px;
-}
-.why-dims {
-  margin: 20px 0 8px;
-  padding: 0;
 }
 .why-dims dt {
   font-family: var(--sans);
