@@ -21,7 +21,9 @@
             "type": "harbour",
             "time": "10:00",
             "wiki": null,
-            "desc": "Ferry port on the west coast. Small sandy beach right at the port. Coffee at Aristos on the waterfront."
+            "desc": "Ferry port on the west coast. Small sandy beach right at the port. Coffee at Aristos on the waterfront.",
+            "name_el": "Κορησσία (Λιμάνι)",
+            "desc_el": "Λιμάνι πλοίων στη δυτική ακτή. Μικρή αμμώδης παραλία ακριβώς στο λιμάνι. Καφές στον Αρίστο στο παραλιακό."
           },
           {
             "name": "Ioulida (Chora)",
@@ -30,7 +32,9 @@
             "type": "village",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Ioulis",
-            "desc": "Car-free hilltop capital. Gorgeous amphitheatrical layout, flat-roofed houses with red tiles. Walk the main pedestrian street."
+            "desc": "Car-free hilltop capital. Gorgeous amphitheatrical layout, flat-roofed houses with red tiles. Walk the main pedestrian street.",
+            "name_el": "Ιουλίδα (Χώρα)",
+            "desc_el": "Ορεινή πρωτεύουσα χωρίς αυτοκίνητα. Εξαιρετική αμφιθεατρική διάταξη, σπίτια με κεραμωμένες στέγες. Περπάτα τον κύριο πεζόδρομο."
           },
           {
             "name": "Lion of Kea",
@@ -39,7 +43,9 @@
             "type": "museum",
             "time": "13:00",
             "wiki": "https://en.wikipedia.org/wiki/Lion_of_Kea",
-            "desc": "6th-century BC archaic stone lion carved directly into the hillside. 30-min walk from Ioulida via a marked trail."
+            "desc": "6th-century BC archaic stone lion carved directly into the hillside. 30-min walk from Ioulida via a marked trail.",
+            "name_el": "Λέων της Κέας",
+            "desc_el": "Αρχαϊκό λίθινο λιοντάρι του 6ου αιώνα π.Χ. λαξευμένο απευθείας στον λόφο. 30 λεπτά πεζοπορίας από την Ιουλίδα μέσω σηματοδοτημένου μονοπατιού."
           },
           {
             "name": "Lunch — Rolando",
@@ -48,7 +54,9 @@
             "type": "village",
             "time": "14:30",
             "wiki": null,
-            "desc": "Traditional Kean cuisine — excellent loutza (cured pork), fava (split pea puree), local wine."
+            "desc": "Traditional Kean cuisine — excellent loutza (cured pork), fava (split pea puree), local wine.",
+            "name_el": "Μεσημεριανό — Ρολάνδο",
+            "desc_el": "Παραδοσιακή κεϊκή κουζίνα — εξαιρετική λούτζα (παστό χοιρινό), φάβα, ντόπιο κρασί."
           },
           {
             "name": "Otzias Beach",
@@ -57,9 +65,13 @@
             "type": "beach",
             "time": "17:00",
             "wiki": null,
-            "desc": "Enclosed sandy bay on the north coast. Family-friendly, shallow water, tavernas."
+            "desc": "Enclosed sandy bay on the north coast. Family-friendly, shallow water, tavernas.",
+            "name_el": "Παραλία Οτζιάς",
+            "desc_el": "Κλειστός αμμώδης κόλπος στη βόρεια ακτή. Φιλικός σε οικογένειες, ρηχά νερά, ταβέρνες."
           }
-        ]
+        ],
+        "title_el": "Ιουλίδα & ο Λέων",
+        "overnight_el": "Ιουλίδα"
       },
       {
         "day": 2,
@@ -76,7 +88,9 @@
             "type": "harbour",
             "time": "09:30",
             "wiki": null,
-            "desc": "Yacht marina 2 km from Korissia. Chic waterfront cafes, the place where Athenians moor their boats."
+            "desc": "Yacht marina 2 km from Korissia. Chic waterfront cafes, the place where Athenians moor their boats.",
+            "name_el": "Λιμάνι Βουρκαρίου",
+            "desc_el": "Μαρίνα σκαφών 2 χλμ από την Κορησσία. Κομψά παραλιακά καφέ, το μέρος όπου οι Αθηναίοι δένουν τα σκάφη τους."
           },
           {
             "name": "Panagia Kastriani Monastery",
@@ -85,7 +99,9 @@
             "type": "church",
             "time": "11:00",
             "wiki": null,
-            "desc": "Mountain monastery on a cliff edge on the north coast. Breathtaking views, basic guesthouse."
+            "desc": "Mountain monastery on a cliff edge on the north coast. Breathtaking views, basic guesthouse.",
+            "name_el": "Μονή Παναγίας Καστριανής",
+            "desc_el": "Ορεινό μοναστήρι σε άκρη γκρεμού στη βόρεια ακτή. Εντυπωσιακές θέες, απλός ξενώνας."
           },
           {
             "name": "Pisses Beach",
@@ -94,7 +110,9 @@
             "type": "beach",
             "time": "13:00",
             "wiki": null,
-            "desc": "Largest sandy beach on Kea, in a fertile valley with an ancient olive grove behind. Lunch at Akroygiali taverna."
+            "desc": "Largest sandy beach on Kea, in a fertile valley with an ancient olive grove behind. Lunch at Akroygiali taverna.",
+            "name_el": "Παραλία Πίσσες",
+            "desc_el": "Η μεγαλύτερη αμμώδης παραλία της Κέας, σε εύφορη κοιλάδα με αρχαίο ελαιώνα πίσω. Μεσημεριανό στην ταβέρνα Ακρογιάλι."
           },
           {
             "name": "Koundouros",
@@ -103,11 +121,17 @@
             "type": "beach",
             "time": "16:00",
             "wiki": null,
-            "desc": "Small sheltered cove at the island's southwest tip. Crystal water, rocky entry."
+            "desc": "Small sheltered cove at the island's southwest tip. Crystal water, rocky entry.",
+            "name_el": "Κούνδουρος",
+            "desc_el": "Μικρός προστατευμένος κόλπος στο νοτιοδυτικό άκρο του νησιού. Κρυστάλλινα νερά, βραχώδης είσοδος."
           }
-        ]
+        ],
+        "title_el": "Νότιες Παραλίες & Μοναστήρι",
+        "overnight_el": "Αναχώρηση"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 2 Ημερών στην Κέα (Τζια)",
+    "subtitle_el": "Το σαββατοκυριακάτικο καταφύγιο των Αθηναίων"
   },
   "beaches": [
     {
@@ -120,7 +144,13 @@
       "facing": "West — exposed in afternoon",
       "facilities": "Tavernas, campsite, umbrellas",
       "wiki": null,
-      "desc": "Kea's largest beach, framed by ancient olive trees. Great sunsets, good family beach."
+      "desc": "Kea's largest beach, framed by ancient olive trees. Great sunsets, good family beach.",
+      "name_el": "Πίσσες",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Σταδιακή",
+      "facing_el": "Δυτικά — εκτεθειμένη το απόγευμα",
+      "facilities_el": "Ταβέρνες, κάμπινγκ, ομπρέλες",
+      "desc_el": "Η μεγαλύτερη παραλία της Κέας, πλαισιωμένη από αρχαίους ελαιώνες. Εξαιρετικά ηλιοβασιλέματα, καλή οικογενειακή παραλία."
     },
     {
       "name": "Otzias",
@@ -132,7 +162,13 @@
       "facing": "North — protected",
       "facilities": "Tavernas, umbrellas",
       "wiki": null,
-      "desc": "Sheltered bay on the north coast. Calm, warm water, very family-friendly."
+      "desc": "Sheltered bay on the north coast. Calm, warm water, very family-friendly.",
+      "name_el": "Οτζιάς",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Πολύ ρηχή",
+      "facing_el": "Βόρεια — προστατευμένη",
+      "facilities_el": "Ταβέρνες, ομπρέλες",
+      "desc_el": "Προστατευμένος κόλπος στη βόρεια ακτή. Ήρεμα, ζεστά νερά, πολύ φιλικός σε οικογένειες."
     },
     {
       "name": "Koundouros",
@@ -144,7 +180,16 @@
       "facing": "Southwest",
       "facilities": "Hotel, beach bar",
       "wiki": null,
-      "desc": "Quiet cove with crystal-clear water. More upscale area with luxury hotels behind."
+      "desc": "Quiet cove with crystal-clear water. More upscale area with luxury hotels behind.",
+      "name_el": "Κούνδουρος",
+      "type_el": "Μικρά βότσαλα",
+      "depth_el": "Μέτρια",
+      "facing_el": "Νοτιοδυτικά",
+      "facilities_el": "Ξενοδοχείο, beach bar",
+      "desc_el": "Ήσυχος κόλπος με κρυστάλλινα νερά. Πιο εκλεπτυσμένη περιοχή με πολυτελή ξενοδοχεία πίσω."
     }
-  ]
+  ],
+  "name_el": "Κέα",
+  "subtitle_el": "Το σαββατοκυριακάτικο καταφύγιο των Αθηναίων",
+  "intro_el": "Η Κέα — τοπικά λέγεται Τζια — είναι το κυκλαδίτικο νησί πιο κοντά στην Αθήνα, προσβάσιμο μόνο από το Λαύριο (όχι από τον Πειραιά). Δεν έχει αεροδρόμιο και μόνο σαββατοκυριακάτικα πλοία, οπότε παραμένει ήσυχη. Οι Αθηναίοι έρχονται εδώ για μακριές πεζοπορίες στα 80 χλμ σηματοδοτημένων μονοπατιών του νησιού, για τον Λέοντα της Κέας (αρχαϊκή λίθινη γλυπτική 8 μέτρων λαξευμένη απευθείας στον λόφο), και για ταβέρνες όπου βλέπεις περισσότερους ντόπιους παρά τουρίστες."
 }

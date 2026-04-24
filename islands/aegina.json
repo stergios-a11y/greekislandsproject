@@ -22,7 +22,9 @@
             "type": "city",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Aegina",
-            "desc": "Arrive by ferry from Piraeus (40 min hydrofoil). The harbour is lined with painted fishing boats and pistachio sellers. The Tower of Markellos in the old town is worth a walk."
+            "desc": "Arrive by ferry from Piraeus (40 min hydrofoil). The harbour is lined with painted fishing boats and pistachio sellers. The Tower of Markellos in the old town is worth a walk.",
+            "name_el": "Χώρα Αίγινας",
+            "desc_el": "Άφιξη με πλοίο από τον Πειραιά (40 λεπτά με ιπτάμενο δελφίνι). Το λιμάνι γεμίζει από βαμμένα ψαροκάικα και φιστικοπωλεία. Ο Πύργος του Μαρκέλλου στην παλιά πόλη αξίζει έναν περίπατο."
           },
           {
             "name": "Temple of Apollo (Kolona)",
@@ -31,7 +33,9 @@
             "type": "museum",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Temple_of_Apollo_(Aegina)",
-            "desc": "A single standing column marks the temple of Apollo on a low hill overlooking the harbour. Small but atmospheric site with an excellent museum."
+            "desc": "A single standing column marks the temple of Apollo on a low hill overlooking the harbour. Small but atmospheric site with an excellent museum.",
+            "name_el": "Ναός του Απόλλωνος (Κολώνα)",
+            "desc_el": "Μία μόνη όρθια κολώνα σηματοδοτεί τον ναό του Απόλλωνος σε χαμηλό λόφο πάνω από το λιμάνι. Μικρός αλλά ατμοσφαιρικός χώρος με εξαιρετικό μουσείο."
           },
           {
             "name": "Temple of Aphaea",
@@ -40,7 +44,9 @@
             "type": "castle",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Temple_of_Aphaea",
-            "desc": "One of the three temples forming the 'sacred triangle' with the Parthenon and Poseidon at Sounio. 5th century BC, outstandingly preserved, on a pine-covered hilltop with sea views on every side. Unmissable."
+            "desc": "One of the three temples forming the 'sacred triangle' with the Parthenon and Poseidon at Sounio. 5th century BC, outstandingly preserved, on a pine-covered hilltop with sea views on every side. Unmissable.",
+            "name_el": "Ναός της Αφαίας",
+            "desc_el": "Ένας από τους τρεις ναούς που σχηματίζουν το «ιερό τρίγωνο» με τον Παρθενώνα και τον Ποσειδώνα στο Σούνιο. 5ος αιώνας π.Χ., εξαιρετικά διατηρημένος, σε κορυφή λόφου καλυμμένη με πεύκα με θέα στη θάλασσα από κάθε πλευρά. Αναντικατάστατος."
           },
           {
             "name": "Lunch — Agora Fish Market",
@@ -49,7 +55,9 @@
             "type": "harbour",
             "time": "13:30",
             "wiki": null,
-            "desc": "Aegina's fish market is the best in the Saronic — come at lunchtime when the tavernas serve what the fishermen landed that morning. Try the pistachios afterwards from any harbour stall."
+            "desc": "Aegina's fish market is the best in the Saronic — come at lunchtime when the tavernas serve what the fishermen landed that morning. Try the pistachios afterwards from any harbour stall.",
+            "name_el": "Μεσημεριανό — Ψαραγορά",
+            "desc_el": "Η ιχθυαγορά της Αίγινας είναι η καλύτερη στον Σαρωνικό — έλα το μεσημέρι όταν οι ταβέρνες σερβίρουν ό,τι πιάστηκε το πρωί. Μετά, δοκίμασε τα φιστίκια από οποιοδήποτε πάγκο του λιμανιού."
           },
           {
             "name": "Marathonas Beach",
@@ -58,7 +66,9 @@
             "type": "beach",
             "time": "15:30",
             "wiki": null,
-            "desc": "The best beach near the town — sandy, shallow and well-organised. 10-minute drive or bus from the harbour."
+            "desc": "The best beach near the town — sandy, shallow and well-organised. 10-minute drive or bus from the harbour.",
+            "name_el": "Παραλία Μαραθώνα",
+            "desc_el": "Η καλύτερη παραλία κοντά στην πόλη — αμμώδης, ρηχή και καλά οργανωμένη. 10 λεπτά με αυτοκίνητο ή λεωφορείο από το λιμάνι."
           },
           {
             "name": "Aegina — Departure",
@@ -67,11 +77,16 @@
             "type": "harbour",
             "time": "18:30",
             "wiki": null,
-            "desc": "Ferry back to Piraeus — frequent departures until late evening."
+            "desc": "Ferry back to Piraeus — frequent departures until late evening.",
+            "name_el": "Αίγινα — Αναχώρηση",
+            "desc_el": "Πλοίο πίσω στον Πειραιά — συχνές αναχωρήσεις μέχρι αργά το βράδυ."
           }
-        ]
+        ],
+        "title_el": "Χώρα Αίγινας, Ναός & Παραλία"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 1 Ημέρας στην Αίγινα",
+    "subtitle_el": "Μια τέλεια ημερήσια εκδρομή από την Αθήνα — η λιμενική πόλη, ο Ναός της Αφαίας και μπάνιο στην παραλία Μαραθώνα."
   },
   "beaches": [
     {
@@ -86,7 +101,13 @@
       "desc": "The best beach near Aegina Town — sandy, shallow and calm. 10 minutes from the harbour. Good facilities and the most convenient swim on the island.",
       "commons": null,
       "lat": 37.73,
-      "lng": 23.4131
+      "lng": 23.4131,
+      "name_el": "Παραλία Μαραθώνα",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχή — οικογενειακή",
+      "facing_el": "Νοτιοδυτικά — προστατευμένη, ήρεμα νερά",
+      "facilities_el": "Καλές: ξαπλώστρες, ταβέρνες, εύκολη πρόσβαση με λεωφορείο ή αυτοκίνητο από την πόλη.",
+      "desc_el": "Η καλύτερη παραλία κοντά στη Χώρα Αίγινας — αμμώδης, ρηχή και ήρεμη. 10 λεπτά από το λιμάνι. Καλές υποδομές και το πιο βολικό μπάνιο του νησιού."
     },
     {
       "name": "Agia Marina Beach",
@@ -100,7 +121,16 @@
       "desc": "The largest resort beach on Aegina — long sandy stretch on the east coast, near the Temple of Aphaea. Good for combining sightseeing with swimming. Busier than Marathonas but more extensive.",
       "commons": null,
       "lat": 37.7444,
-      "lng": 23.5347
+      "lng": 23.5347,
+      "name_el": "Παραλία Αγία Μαρίνα",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχή — απαλή κλίση",
+      "facing_el": "Ανατολικά — προστατευμένος κόλπος",
+      "facilities_el": "Πλήρως οργανωμένη: ξαπλώστρες, beach bars, watersports, ταβέρνες. Κοντά στον Ναό της Αφαίας.",
+      "desc_el": "Η μεγαλύτερη παραλία θερέτρου της Αίγινας — μακριά αμμώδης λωρίδα στην ανατολική ακτή, κοντά στον Ναό της Αφαίας. Καλή για τον συνδυασμό αξιοθέατων και κολύμβησης. Πιο πολυσύχναστη από τη Μαραθώνα αλλά πιο εκτεταμένη."
     }
-  ]
+  ],
+  "name_el": "Αίγινα",
+  "subtitle_el": "Το νησί του φιστικιού — αρχαίος ναός, παραδοσιακή πόλη, και η πιο κοντινή απόδραση της Αθήνας",
+  "intro_el": "Η Αίγινα είναι το πιο κοντινό σημαντικό νησί στην Αθήνα — μόλις 40 λεπτά με ιπτάμενο δελφίνι από τον Πειραιά. Η πρωτεύουσά της ήταν για λίγο η πρώτη πρωτεύουσα της σύγχρονης Ελλάδας (1828-29). Ο Ναός της Αφαίας είναι ένας από τους καλύτερα διατηρημένους αρχαίους ναούς στην Ελλάδα, σχηματίζοντας «ιερό τρίγωνο» με τον Παρθενώνα και το Σούνιο. Και τα φιστίκια που καλλιεργούνται εδώ προστατεύονται με χαρακτηρισμό ΠΟΠ και εξάγονται σε όλο τον κόσμο. Εύκολη ημερήσια εκδρομή ή ήσυχη διαμονή 1-2 νυχτών."
 }

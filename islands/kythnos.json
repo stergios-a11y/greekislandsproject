@@ -21,7 +21,9 @@
             "type": "harbour",
             "time": "10:00",
             "wiki": null,
-            "desc": "Small ferry port with a horseshoe sandy beach and tavernas on the waterfront."
+            "desc": "Small ferry port with a horseshoe sandy beach and tavernas on the waterfront.",
+            "name_el": "Μέριχας (Λιμάνι)",
+            "desc_el": "Μικρό λιμάνι πλοίων με πεταλοειδή αμμώδη παραλία και ταβέρνες στο παραλιακό."
           },
           {
             "name": "Chora (Messaria)",
@@ -30,7 +32,9 @@
             "type": "village",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Kythnos",
-            "desc": "Main inland village — maze of narrow whitewashed lanes. Walk the main artery end-to-end."
+            "desc": "Main inland village — maze of narrow whitewashed lanes. Walk the main artery end-to-end.",
+            "name_el": "Χώρα (Μεσσαριά)",
+            "desc_el": "Το κύριο εσωτερικό χωριό — λαβύρινθος στενών ασπρισμένων δρόμων. Περπάτα τον κεντρικό άξονα από άκρη σε άκρη."
           },
           {
             "name": "Katafyki Cave",
@@ -39,7 +43,9 @@
             "type": "museum",
             "time": "13:00",
             "wiki": null,
-            "desc": "Old iron mine turned geological attraction. Short guided tours in summer."
+            "desc": "Old iron mine turned geological attraction. Short guided tours in summer.",
+            "name_el": "Σπηλιά Καταφύκι",
+            "desc_el": "Παλιό σιδηρωρυχείο μετατραπέν σε γεωλογικό αξιοθέατο. Σύντομες ξεναγήσεις το καλοκαίρι."
           },
           {
             "name": "Loutra Thermal Baths",
@@ -48,7 +54,9 @@
             "type": "village",
             "time": "17:00",
             "wiki": null,
-            "desc": "Ancient thermal springs (52°C) — bathed in since antiquity, housed in a 19th-century spa hotel. Day passes available."
+            "desc": "Ancient thermal springs (52°C) — bathed in since antiquity, housed in a 19th-century spa hotel. Day passes available.",
+            "name_el": "Ιαματικά Λουτρά",
+            "desc_el": "Αρχαίες ιαματικές πηγές (52°C) — χρησιμοποιούνται από την αρχαιότητα, στεγάζονται σε λουτρικό ξενοδοχείο του 19ου αιώνα. Διαθέσιμα ημερήσια εισιτήρια."
           },
           {
             "name": "Dinner — Karnagio",
@@ -57,9 +65,13 @@
             "type": "village",
             "time": "20:30",
             "wiki": null,
-            "desc": "Friendly taverna on the Loutra waterfront. Fresh fish straight from the pier."
+            "desc": "Friendly taverna on the Loutra waterfront. Fresh fish straight from the pier.",
+            "name_el": "Δείπνο — Καρνάγιο",
+            "desc_el": "Φιλική ταβέρνα στο παραλιακό των Λουτρών. Φρέσκο ψάρι κατευθείαν από την προκυμαία."
           }
-        ]
+        ],
+        "title_el": "Χώρα & Ιαματικά Λουτρά",
+        "overnight_el": "Λουτρά"
       },
       {
         "day": 2,
@@ -76,7 +88,9 @@
             "type": "beach",
             "time": "10:00",
             "wiki": null,
-            "desc": "The famous double beach — a sand spit connecting the main island to the tiny Agios Loukas islet. Swim in two sides at once. Arrive early to beat the crowds."
+            "desc": "The famous double beach — a sand spit connecting the main island to the tiny Agios Loukas islet. Swim in two sides at once. Arrive early to beat the crowds.",
+            "name_el": "Παραλία Κολώνα",
+            "desc_el": "Η διάσημη διπλή παραλία — αμμώδης λωρίδα που συνδέει το κύριο νησί με τη μικροσκοπική νησίδα του Αγίου Λουκά. Κολύμπα σε δύο πλευρές ταυτόχρονα. Φτάσε νωρίς για να προλάβεις τα πλήθη."
           },
           {
             "name": "Apokrousi Beach",
@@ -85,7 +99,9 @@
             "type": "beach",
             "time": "13:00",
             "wiki": null,
-            "desc": "Larger sandy bay adjacent to Kolona. Usually less crowded, still gorgeous."
+            "desc": "Larger sandy bay adjacent to Kolona. Usually less crowded, still gorgeous.",
+            "name_el": "Παραλία Αποκρούσι",
+            "desc_el": "Μεγαλύτερος αμμώδης κόλπος δίπλα στην Κολώνα. Συνήθως λιγότερο πολυσύχναστη, εξίσου υπέροχη."
           },
           {
             "name": "Dryopida",
@@ -94,11 +110,17 @@
             "type": "village",
             "time": "16:00",
             "wiki": null,
-            "desc": "Red-tiled roofs (unusual in the Cyclades) and a tiny folk museum. Lunch at one of the two village tavernas."
+            "desc": "Red-tiled roofs (unusual in the Cyclades) and a tiny folk museum. Lunch at one of the two village tavernas.",
+            "name_el": "Δρυοπίδα",
+            "desc_el": "Κεραμοσκεπές (ασυνήθιστες στις Κυκλάδες) και μικροσκοπικό λαογραφικό μουσείο. Μεσημεριανό σε μία από τις δύο ταβέρνες του χωριού."
           }
-        ]
+        ],
+        "title_el": "Κολώνα & Παραλίες",
+        "overnight_el": "Αναχώρηση"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 2 Ημερών στην Κύθνο",
+    "subtitle_el": "Ιαματικά λουτρά, άδειες παραλίες και η μαγική Κολώνα"
   },
   "beaches": [
     {
@@ -111,7 +133,13 @@
       "facing": "Double-sided",
       "facilities": "One canteen in summer, no umbrellas",
       "wiki": null,
-      "desc": "Kythnos' icon beach. A narrow white sandbar connecting the island to a small rocky islet — you can swim simultaneously on two different sides."
+      "desc": "Kythnos' icon beach. A narrow white sandbar connecting the island to a small rocky islet — you can swim simultaneously on two different sides.",
+      "name_el": "Κολώνα",
+      "type_el": "Λεπτή λευκή άμμος",
+      "depth_el": "Ρηχή και στις δύο πλευρές",
+      "facing_el": "Αμφίπλευρη",
+      "facilities_el": "Μία καντίνα το καλοκαίρι, χωρίς ομπρέλες",
+      "desc_el": "Η εμβληματική παραλία της Κύθνου. Μια στενή λευκή αμμολωρίδα που συνδέει το νησί με μικρή βραχώδη νησίδα — μπορείς να κολυμπήσεις ταυτόχρονα σε δύο διαφορετικές πλευρές."
     },
     {
       "name": "Apokrousi",
@@ -123,7 +151,13 @@
       "facing": "Northwest",
       "facilities": "Beach bar, umbrellas",
       "wiki": null,
-      "desc": "Longer sandy beach right next to Kolona. More space, still very blue water."
+      "desc": "Longer sandy beach right next to Kolona. More space, still very blue water.",
+      "name_el": "Αποκρούσι",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Σταδιακή",
+      "facing_el": "Βορειοδυτικά",
+      "facilities_el": "Beach bar, ομπρέλες",
+      "desc_el": "Μακρύτερη αμμώδης παραλία ακριβώς δίπλα στην Κολώνα. Περισσότερος χώρος, ακόμα πολύ μπλε νερά."
     },
     {
       "name": "Episkopi",
@@ -135,7 +169,16 @@
       "facing": "South — protected",
       "facilities": "Taverna, rooms",
       "wiki": null,
-      "desc": "Long sandy south coast beach. Local favorite, calm water, great for children."
+      "desc": "Long sandy south coast beach. Local favorite, calm water, great for children.",
+      "name_el": "Επισκοπή",
+      "type_el": "Άμμος",
+      "depth_el": "Ρηχή",
+      "facing_el": "Νότια — προστατευμένη",
+      "facilities_el": "Ταβέρνα, δωμάτια",
+      "desc_el": "Μακριά αμμώδης παραλία της νότιας ακτής. Αγαπημένη των ντόπιων, ήρεμα νερά, εξαιρετική για παιδιά."
     }
-  ]
+  ],
+  "name_el": "Κύθνος",
+  "subtitle_el": "Ιαματικά λουτρά, άδειες παραλίες και η μαγική Κολώνα",
+  "intro_el": "Η Κύθνος είναι το πρώτο κυκλαδίτικο νησί που συναντάς από την Αθηναϊκή Ριβιέρα, αλλά παραμένει ένα από τα λιγότερο επισκεπτόμενα. Δεν έχει αεροδρόμιο, μία κύρια πλοϊκή σύνδεση, και πληθυσμό μόλις 1.500. Η έλξη: 99 παραλίες, αρχαία ιαματικά λουτρά που προσελκύουν λουόμενους εδώ και 2.000 χρόνια, και μια απολύτως ανέπαφη αμφίπλευρη παραλία στην Κολώνα που φαίνεται φωτοσοπαρισμένη."
 }

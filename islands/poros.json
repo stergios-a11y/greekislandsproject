@@ -22,7 +22,9 @@
             "type": "city",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Poros",
-            "desc": "The hillside capital — a cascade of white houses topped by the iconic 1920s blue-domed clock tower. Walk up through the lanes to the summit for the best view in the Saronic."
+            "desc": "The hillside capital — a cascade of white houses topped by the iconic 1920s blue-domed clock tower. Walk up through the lanes to the summit for the best view in the Saronic.",
+            "name_el": "Χώρα Πόρου",
+            "desc_el": "Η ορεινή πρωτεύουσα — ένας καταρράκτης από λευκά σπίτια που στεφανώνεται από τον εμβληματικό μπλε τρουλωτό πύργο του ρολογιού του 1920. Περπάτα μέσα από τα στενά μέχρι την κορυφή για την καλύτερη θέα του Σαρωνικού."
           },
           {
             "name": "Clock Tower Viewpoint",
@@ -31,7 +33,9 @@
             "type": "nature",
             "time": "10:30",
             "wiki": null,
-            "desc": "The landmark of Poros — a 1920s clock tower at the summit of the town. The view over the straits, the pine forest and the Peloponnese beyond is one of the most beautiful in Greece."
+            "desc": "The landmark of Poros — a 1920s clock tower at the summit of the town. The view over the straits, the pine forest and the Peloponnese beyond is one of the most beautiful in Greece.",
+            "name_el": "Θέα από τον Πύργο του Ρολογιού",
+            "desc_el": "Το σύμβολο του Πόρου — ένας πύργος ρολογιού του 1920 στην κορυφή της πόλης. Η θέα πάνω στα στενά, στο πευκοδάσος και στην Πελοπόννησο πίσω είναι μία από τις πιο όμορφες στην Ελλάδα."
           },
           {
             "name": "Temple of Poseidon",
@@ -40,7 +44,9 @@
             "type": "museum",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Temple_of_Poseidon_at_Poros",
-            "desc": "Modest remains of a 6th-century BC temple — the setting in a pine forest with sea views on both sides is the draw. The orator Demosthenes took poison here rather than surrender to Macedon."
+            "desc": "Modest remains of a 6th-century BC temple — the setting in a pine forest with sea views on both sides is the draw. The orator Demosthenes took poison here rather than surrender to Macedon.",
+            "name_el": "Ναός του Ποσειδώνα",
+            "desc_el": "Μετρίου μεγέθους υπολείμματα ναού του 6ου αιώνα π.Χ. — το σκηνικό σε πευκοδάσος με θέα στη θάλασσα και στις δύο πλευρές είναι το ενδιαφέρον. Ο ρήτορας Δημοσθένης ήπιε δηλητήριο εδώ αντί να παραδοθεί στους Μακεδόνες."
           },
           {
             "name": "Lunch — Harbour Taverna",
@@ -49,7 +55,9 @@
             "type": "harbour",
             "time": "13:00",
             "wiki": null,
-            "desc": "The harbour tavernas serve excellent grilled fish watching the boats from Galatas cross the straits. The crossing takes only 5 minutes."
+            "desc": "The harbour tavernas serve excellent grilled fish watching the boats from Galatas cross the straits. The crossing takes only 5 minutes.",
+            "name_el": "Μεσημεριανό — Ταβέρνα Λιμανιού",
+            "desc_el": "Οι ταβέρνες του λιμανιού σερβίρουν εξαιρετικό ψητό ψάρι ενώ παρακολουθείς τα σκάφη από τους Γαλατάδες να διασχίζουν τα στενά. Το πέρασμα παίρνει μόνο 5 λεπτά."
           },
           {
             "name": "Love Bay",
@@ -58,7 +66,9 @@
             "type": "beach",
             "time": "15:00",
             "wiki": null,
-            "desc": "The best beach on Poros — a sheltered sandy cove surrounded by pine forest. Clear, calm water and a romantic setting. 10 minutes from the town."
+            "desc": "The best beach on Poros — a sheltered sandy cove surrounded by pine forest. Clear, calm water and a romantic setting. 10 minutes from the town.",
+            "name_el": "Όρμος Αγάπης",
+            "desc_el": "Η καλύτερη παραλία του Πόρου — ένας προστατευμένος αμμώδης κόλπος περικυκλωμένος από πευκοδάσος. Διαυγή, ήρεμα νερά και ρομαντικό σκηνικό. 10 λεπτά από την πόλη."
           },
           {
             "name": "Poros — Departure",
@@ -67,11 +77,16 @@
             "type": "harbour",
             "time": "18:00",
             "wiki": null,
-            "desc": "Ferry to Piraeus, Hydra or the other Saronic islands. Frequent connections."
+            "desc": "Ferry to Piraeus, Hydra or the other Saronic islands. Frequent connections.",
+            "name_el": "Πόρος — Αναχώρηση",
+            "desc_el": "Πλοίο για Πειραιά, Ύδρα ή τα άλλα νησιά του Σαρωνικού. Συχνές συνδέσεις."
           }
-        ]
+        ],
+        "title_el": "Πόρος, Όρμος Αγάπης & Ναός"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 1 Ημέρας στον Πόρο",
+    "subtitle_el": "Ο πύργος του ρολογιού, ο Όρμος Αγάπης, το πευκοδάσος και ο ναός του Ποσειδώνα."
   },
   "beaches": [
     {
@@ -86,7 +101,13 @@
       "desc": "The finest beach on Poros — a small sheltered sandy cove surrounded entirely by pine forest. The water is calm and clear, the setting is intimate and picturesque. One of the most romantic small beaches in the Saronic.",
       "commons": null,
       "lat": 37.4992,
-      "lng": 23.4469
+      "lng": 23.4469,
+      "name_el": "Όρμος Αγάπης",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχή — ήρεμα, διαυγή νερά",
+      "facing_el": "Βόρεια — προστατευμένη από τους πευκοκαλυμμένους λόφους",
+      "facilities_el": "Καλές: ξαπλώστρες, beach bar, ταβέρνα. Τα πεύκα προσφέρουν σκιά.",
+      "desc_el": "Η καλύτερη παραλία του Πόρου — μικρός προστατευμένος αμμώδης κόλπος εντελώς περικυκλωμένος από πευκοδάσος. Τα νερά είναι ήρεμα και διαυγή, το σκηνικό οικείο και γραφικό. Μία από τις πιο ρομαντικές μικρές παραλίες στον Σαρωνικό."
     },
     {
       "name": "Askeli Beach",
@@ -100,7 +121,16 @@
       "desc": "The largest and most developed beach on Poros — long, sandy and family-friendly. Less intimate than Love Bay but with more facilities and space. Base for most resort hotels on the island.",
       "commons": null,
       "lat": 37.5069,
-      "lng": 23.4833
+      "lng": 23.4833,
+      "name_el": "Παραλία Άσκελι",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχή — ασφαλής για παιδιά",
+      "facing_el": "Βόρεια — ήρεμα νερά",
+      "facilities_el": "Πλήρως οργανωμένη: ξαπλώστρες, watersports, ταβέρνες, ξενοδοχεία. Η κύρια παραλία θερέτρου.",
+      "desc_el": "Η μεγαλύτερη και πιο αναπτυγμένη παραλία του Πόρου — μακριά, αμμώδης και φιλική σε οικογένειες. Λιγότερο οικεία από τον Όρμο Αγάπης αλλά με περισσότερες υποδομές και χώρο. Βάση για τα περισσότερα ξενοδοχεία θερέτρου του νησιού."
     }
-  ]
+  ],
+  "name_el": "Πόρος",
+  "subtitle_el": "Ο πευκοφυτεμένος Σαρωνικός — ένα καμπαναριό, ένας πύργος ρολογιού και στενό 400 μέτρων από την Πελοπόννησο",
+  "intro_el": "Ο Πόρος χωρίζεται από την Πελοπόννησο μόνο με 400 μέτρα νερού — από το λιμάνι βλέπεις απέναντι στο στενό την πόλη των Γαλατάδων στην ηπειρωτική χώρα. Το νησί καλύπτεται εντελώς από πευκοδάσος Χαλέπιου, και η πρωτεύουσά του είναι ένα από τα πιο όμορφα μικρά λιμάνια στον Σαρωνικό — μια πλαγιά από ασπρισμένα σπίτια που στεφανώνεται από τον χαρακτηριστικό μπλε τρουλωτό πύργο του ρολογιού. Εύκολος, χαλαρός, χωρίς αξιώσεις προορισμός που οι Αθηναίοι αγαπούν εδώ και γενιές."
 }
