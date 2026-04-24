@@ -1,274 +1,283 @@
 {
-    "key": "santorini",
-    "name": "Santorini",
-    "name_el": "Σαντορίνη",
-    "subtitle": "The caldera, the sunset and the world's most famous view",
-    "subtitle_el": "Η καλντέρα, το ηλιοβασίλεμα και η πιο διάσημη θέα στον κόσμο",
-    "intro": "Santorini is not primarily a beach island — come for the caldera, the architecture, the wine and the sunsets. The beaches exist and are worth visiting, but they are volcanic black and red, not the white sand of other Cyclades. Oia at sunset, the caldera from Fira, a boat tour around the volcano, and a glass of Assyrtiko white wine looking west: these are the reasons to come. <strong>Where to stay:</strong> Our pick is <a href=\"https://www.booking.com/hotel/gr/aenaon-villas.html\" target=\"_blank\" rel=\"noopener noreferrer\">Aenaon Villas</a> in Imerovigli — sitting midway between Imerovigli and Oia on the caldera's highest point, with both villages in view. Luxurious without being outrageously priced, quiet, and perfectly placed for the Fira-to-Oia cliff walk. For better value, <a href=\"https://www.booking.com/hotel/gr/absolute-bliss-imerovigli-suites.html\" target=\"_blank\" rel=\"noopener noreferrer\">Absolute Bliss Imerovigli</a> has the same caldera views at a fraction of the cost.",
-    "intro_el": "Η Σαντορίνη δεν είναι κυρίως νησί παραλιών — έλα για την καλντέρα, την αρχιτεκτονική, το κρασί και τα ηλιοβασιλέματα. Οι παραλίες υπάρχουν και αξίζουν, αλλά είναι ηφαιστειακές μαύρες και κόκκινες, όχι η λευκή άμμος των άλλων Κυκλάδων. Η Οία στο ηλιοβασίλεμα, η καλντέρα από τα Φηρά, μια βόλτα με σκάφος γύρω από το ηφαίστειο, και ένα ποτήρι Ασύρτικο κοιτάζοντας δυτικά: αυτοί είναι οι λόγοι να έρθεις. <strong>Πού να μείνεις:</strong> Η πρότασή μας είναι τα <a href=\"https://www.booking.com/hotel/gr/aenaon-villas.html\" target=\"_blank\" rel=\"noopener noreferrer\">Aenaon Villas</a> στο Ημεροβίγλι — στο πιο ψηλό σημείο της καλντέρας, μισή απόσταση μεταξύ Ημεροβιγλίου και Οίας, με θέα και στα δύο. Πολυτελές αλλά όχι εξωφρενικά ακριβό, ήσυχο, ιδανικό για την πεζοπορία στην καλντέρα. Για καλύτερη σχέση τιμής-ποιότητας, το <a href=\"https://www.booking.com/hotel/gr/absolute-bliss-imerovigli-suites.html\" target=\"_blank\" rel=\"noopener noreferrer\">Absolute Bliss Imerovigli</a> προσφέρει την ίδια θέα σε κλάσμα του κόστους.",
-    "itinerary": {
-        "title": "3-Day Santorini Itinerary",
-        "title_el": "Τριήμερο Δρομολόγιο — Σαντορίνη",
-        "subtitle": "The caldera villages, the volcano, the black sand beaches and the best sunset in the Aegean.",
-        "subtitle_el": "Τα χωριά της καλντέρας, το ηφαίστειο, οι μαύρες παραλίες και το καλύτερο ηλιοβασίλεμα του Αιγαίου.",
-        "days": [
-            {
-                "day": 1,
-                "title": "Fira, Imerovigli & the Caldera Walk",
-                "title_el": "Φηρά, Ημεροβίγλι & η διαδρομή της καλντέρας",
-                "color": "#1B4F8A",
-                "km": 10,
-                "drive_mins": 15,
-                "overnight": "Aenaon Villas, Imerovigli",
-                "overnight_el": "Aenaon Villas, Ημεροβίγλι",
-                "stops": [
-                    {
-                        "name": "Fira",
-                        "lat": 36.4169,
-                        "lng": 25.4320,
-                        "type": "city",
-                        "time": "09:00",
-                        "wiki": "https://en.wikipedia.org/wiki/Fira",
-                        "desc": "The capital — perched on the caldera rim 300 m above the sea. Start early with a coffee on the main square before the cruise crowds arrive (around 10:30).",
-                        "desc_el": "Η πρωτεύουσα — στην άκρη της καλντέρας, 300 μ. πάνω από τη θάλασσα. Ξεκίνα νωρίς με έναν καφέ στην κεντρική πλατεία πριν φτάσουν τα κρουαζιερόπλοια (γύρω στις 10:30)."
-                    },
-                    {
-                        "name": "Museum of Prehistoric Thera",
-                        "lat": 36.4162,
-                        "lng": 25.4313,
-                        "type": "museum",
-                        "time": "10:00",
-                        "wiki": "https://en.wikipedia.org/wiki/Museum_of_Prehistoric_Thera",
-                        "desc": "Small but extraordinary. Holds the Minoan frescoes from Akrotiri — among the most important Bronze Age artworks ever found. €6 entry. Spend 90 minutes.",
-                        "desc_el": "Μικρό αλλά εξαιρετικό. Στεγάζει τις μινωικές τοιχογραφίες από το Ακρωτήρι — από τα σημαντικότερα έργα της Εποχής του Χαλκού. 6€ είσοδος. Αφιέρωσε 90 λεπτά."
-                    },
-                    {
-                        "name": "Caldera Path — Fira to Imerovigli",
-                        "lat": 36.4317,
-                        "lng": 25.4267,
-                        "type": "nature",
-                        "time": "11:30",
-                        "wiki": null,
-                        "desc": "The finest walk in Santorini — a flat, well-paved cliff path (1.5 km, 30 min) along the caldera edge. Unbeatable views of the volcano and Thirassia the whole way. End at your hotel to drop bags.",
-                        "desc_el": "Η ωραιότερη διαδρομή της Σαντορίνης — επίπεδο, πλακόστρωτο μονοπάτι (1,5 χλμ, 30 λεπτά) στην άκρη της καλντέρας. Ασύγκριτη θέα στο ηφαίστειο και τη Θηρασιά σε όλη τη διαδρομή. Κατάληξε στο ξενοδοχείο για να αφήσεις τις βαλίτσες."
-                    },
-                    {
-                        "name": "Lunch at Avocado Restaurant",
-                        "lat": 36.4328,
-                        "lng": 25.4268,
-                        "type": "village",
-                        "time": "13:30",
-                        "wiki": null,
-                        "desc": "Local favourite for a light lunch in Imerovigli — creative Mediterranean plates and a small, sunlit terrace. Reservations via <a href=\"https://www.avocado-restaurant.gr/\" target=\"_blank\" rel=\"noopener noreferrer\">their website</a>. Expect €35-50/person.",
-                        "desc_el": "Τοπικό αγαπημένο για ελαφρύ μεσημεριανό στο Ημεροβίγλι — δημιουργικά μεσογειακά πιάτα και μικρό, ηλιόλουστο τερρατσάκι. Κρατήσεις μέσω της <a href=\"https://www.avocado-restaurant.gr/\" target=\"_blank\" rel=\"noopener noreferrer\">ιστοσελίδας τους</a>. Υπολόγισε 35-50€/άτομο."
-                    },
-                    {
-                        "name": "Skaros Rock",
-                        "lat": 36.4383,
-                        "lng": 25.4233,
-                        "type": "castle",
-                        "time": "16:00",
-                        "wiki": "https://en.wikipedia.org/wiki/Skaros",
-                        "desc": "The medieval rock fortress promontory below Imerovigli. Descend the stone steps (15 min down, 20 min up), scramble to the chapel at the tip. 360° caldera views that beat anything else on the island. Wear trainers.",
-                        "desc_el": "Ο μεσαιωνικός βραχώδης προμαχώνας κάτω από το Ημεροβίγλι. Κατέβασε τα πέτρινα σκαλιά (15 λεπτά κάτω, 20 λεπτά πάνω), σκαρφάλωσε μέχρι το ξωκλήσι στην άκρη. Πανοραμική θέα 360° που ξεπερνά οτιδήποτε άλλο στο νησί. Φόρα αθλητικά."
-                    },
-                    {
-                        "name": "Sunset & Dinner — Athenian House",
-                        "lat": 36.4340,
-                        "lng": 25.4260,
-                        "type": "village",
-                        "time": "20:00",
-                        "wiki": null,
-                        "desc": "Our dinner pick for night one — <a href=\"https://www.athenianhouse.gr/\" target=\"_blank\" rel=\"noopener noreferrer\">Athenian House</a> has the same sunset as Oia without the crowds. Book 1-2 weeks ahead for a 20:00 table facing west. Expect €80-120/person.",
-                        "desc_el": "Επιλογή δείπνου για την πρώτη βραδιά — το <a href=\"https://www.athenianhouse.gr/\" target=\"_blank\" rel=\"noopener noreferrer\">Athenian House</a> έχει το ίδιο ηλιοβασίλεμα με την Οία χωρίς τον συνωστισμό. Κλείσε 1-2 εβδομάδες πριν για τραπέζι στις 20:00 με θέα δυτικά. Υπολόγισε 80-120€/άτομο."
-                    }
-                ]
-            },
-            {
-                "day": 2,
-                "title": "Volcano, Hot Springs & Ammoudi Bay",
-                "title_el": "Ηφαίστειο, ιαματικές πηγές & κόλπος Αμμούδι",
-                "color": "#C0522A",
-                "km": 12,
-                "drive_mins": 25,
-                "overnight": "Aenaon Villas, Imerovigli",
-                "overnight_el": "Aenaon Villas, Ημεροβίγλι",
-                "stops": [
-                    {
-                        "name": "Volcano boat tour — from Fira Old Port",
-                        "lat": 36.4133,
-                        "lng": 25.4239,
-                        "type": "harbour",
-                        "time": "09:00",
-                        "wiki": null,
-                        "desc": "Walk or cable-car down to Fira Old Port (taxi from Imerovigli: 10 min, €15). Boats leave around 09:30 — half-day tours cover Nea Kameni volcano, the Palea Kameni hot springs and Thirassia. Book the <a href=\"https://www.getyourguide.com/santorini-l793/volcano-sulphur-hot-springs-and-thirasia-boat-tour-t48884/\" target=\"_blank\" rel=\"noopener noreferrer\">combined tour</a> (~€30-45/person, 5 hours).",
-                        "desc_el": "Περπάτα ή πάρε το τελεφερίκ στο Παλιό Λιμάνι των Φηρών (ταξί από Ημεροβίγλι: 10 λεπτά, 15€). Τα σκάφη φεύγουν γύρω στις 09:30 — η μισή μέρα καλύπτει τη Νέα Καμένη, τις ιαματικές πηγές της Παλιάς Καμένης και τη Θηρασιά. Κλείσε την <a href=\"https://www.getyourguide.com/santorini-l793/volcano-sulphur-hot-springs-and-thirasia-boat-tour-t48884/\" target=\"_blank\" rel=\"noopener noreferrer\">συνδυαστική εκδρομή</a> (~30-45€/άτομο, 5 ώρες)."
-                    },
-                    {
-                        "name": "Nea Kameni Volcano walk",
-                        "lat": 36.4017,
-                        "lng": 25.3933,
-                        "type": "nature",
-                        "time": "10:00",
-                        "wiki": "https://en.wikipedia.org/wiki/Nea_Kameni",
-                        "desc": "Walk up to the crater of the still-active volcano (last eruption 1950). Bring sturdy shoes — the path is loose volcanic scree. €5 cash entry to the volcanic park. 45 min round-trip.",
-                        "desc_el": "Ανέβα στον κρατήρα του ενεργού ηφαιστείου (τελευταία έκρηξη 1950). Φόρα γερά παπούτσια — το μονοπάτι είναι από χαλαρή ηφαιστειακή πέτρα. 5€ μετρητά είσοδος στο ηφαιστειακό πάρκο. 45 λεπτά πήγαινε-έλα."
-                    },
-                    {
-                        "name": "Palea Kameni Hot Springs",
-                        "lat": 36.4037,
-                        "lng": 25.3796,
-                        "type": "beach",
-                        "time": "11:30",
-                        "wiki": "https://en.wikipedia.org/wiki/Palaia_Kameni",
-                        "desc": "The boat anchors offshore — you swim to the sulphur hot springs, where hot water bubbles from underwater vents. Water is tepid (yellow-orange from the iron) and stains swimsuits. Bring an old one.",
-                        "desc_el": "Το σκάφος αγκυροβολεί και κολυμπάς ως τις θειούχες πηγές, όπου ζεστό νερό αναβλύζει από υποθαλάσσιους κρατήρες. Το νερό είναι χλιαρό (κίτρινο-πορτοκαλί από το σίδερο) και βάφει τα μαγιό. Φόρεσε κάτι παλιό."
-                    },
-                    {
-                        "name": "Oia village",
-                        "lat": 36.4618,
-                        "lng": 25.3753,
-                        "type": "city",
-                        "time": "16:00",
-                        "wiki": "https://en.wikipedia.org/wiki/Oia,_Greece",
-                        "desc": "Taxi or bus from Fira (15 min). Walk the pedestrian main street — whitewashed alleys, the Maritime Museum, the blue-domed churches. Crowded after 17:00 as sunset tourists arrive.",
-                        "desc_el": "Ταξί ή λεωφορείο από Φηρά (15 λεπτά). Περπάτα τον πεζόδρομο — ασπρισμένα σοκάκια, το Ναυτικό Μουσείο, οι γαλάζιοι τρούλοι. Συνωστισμός μετά τις 17:00 καθώς φτάνουν οι τουρίστες του ηλιοβασιλέματος."
-                    },
-                    {
-                        "name": "Dinner at Ammoudi Bay — Dimitris",
-                        "lat": 36.4651,
-                        "lng": 25.3708,
-                        "type": "harbour",
-                        "time": "19:30",
-                        "wiki": null,
-                        "desc": "Skip the sunset-point crowds in Oia. Instead descend the 300 steps (or take a donkey, €10) to Ammoudi Bay — the tiny port below Oia — and have dinner at <a href=\"https://dimitrisammoudi.gr/\" target=\"_blank\" rel=\"noopener noreferrer\">Dimitris</a>. Fresh fish sold by the kilo, feet in the water, red cliffs turning gold as the sun sets. €60-90/person.",
-                        "desc_el": "Απέφυγε τον συνωστισμό στο σημείο ηλιοβασιλέματος της Οίας. Κατέβα τα 300 σκαλιά (ή πάρε γαϊδούρι, 10€) στον κόλπο Αμμούδι — το μικρό λιμάνι κάτω από την Οία — και δείπνησε στου <a href=\"https://dimitrisammoudi.gr/\" target=\"_blank\" rel=\"noopener noreferrer\">Δημήτρη</a>. Φρέσκο ψάρι με το κιλό, τα πόδια στο νερό, τα κόκκινα βράχια χρυσίζουν στο ηλιοβασίλεμα. 60-90€/άτομο."
-                    }
-                ]
-            },
-            {
-                "day": 3,
-                "title": "Wine, Pyrgos & the Red Beach",
-                "title_el": "Κρασί, Πύργος & Κόκκινη Παραλία",
-                "color": "#5A7A3A",
-                "km": 35,
-                "drive_mins": 70,
-                "overnight": null,
-                "stops": [
-                    {
-                        "name": "Santo Wines Winery",
-                        "lat": 36.3910,
-                        "lng": 25.4413,
-                        "type": "village",
-                        "time": "10:00",
-                        "wiki": null,
-                        "desc": "The cooperative winery outside Pyrgos with the best caldera views of any winery on the island. Tasting flights from €25 (12 wines + small plates). <a href=\"https://santowines.gr/book-online\" target=\"_blank\" rel=\"noopener noreferrer\">Book online</a> — request the 10:00 slot, much quieter.",
-                        "desc_el": "Ο συνεταιριστικός οινοποιητικός έξω από τον Πύργο με την καλύτερη θέα στην καλντέρα από κάθε οινοποιείο του νησιού. Δοκιμές από 25€ (12 κρασιά + πιατάκια). <a href=\"https://santowines.gr/book-online\" target=\"_blank\" rel=\"noopener noreferrer\">Κλείσε online</a> — ζήτα θέση για τις 10:00, πολύ πιο ήσυχα."
-                    },
-                    {
-                        "name": "Pyrgos village",
-                        "lat": 36.3783,
-                        "lng": 25.4464,
-                        "type": "village",
-                        "time": "11:30",
-                        "wiki": "https://en.wikipedia.org/wiki/Pyrgos_Kallistis",
-                        "desc": "The highest village on Santorini and the oldest — a Venetian hill town of whitewashed alleys climbing to a ruined castle. Five minutes' walk from end to end but worth an hour. Far less crowded than Fira or Oia.",
-                        "desc_el": "Το πιο ψηλό χωριό της Σαντορίνης και το παλαιότερο — ενετική ακρόπολη με ασπρισμένα σοκάκια που ανεβαίνουν σε κάστρο σε ερείπια. Πέντε λεπτά περπάτημα από άκρη σε άκρη αλλά αξίζει μία ώρα. Πολύ λιγότερος κόσμος από Φηρά ή Οία."
-                    },
-                    {
-                        "name": "Lunch — Metaxi Mas",
-                        "lat": 36.3806,
-                        "lng": 25.4622,
-                        "type": "village",
-                        "time": "13:30",
-                        "wiki": null,
-                        "desc": "In nearby Exo Gonia, behind the Agios Charalambos church. <a href=\"https://www.metaximas.gr/\" target=\"_blank\" rel=\"noopener noreferrer\">Metaxi Mas</a> is consistently ranked the best restaurant on the island — Cretan-Santorinian cooking, a vineyard terrace. <strong>Book 1 week ahead</strong>: +30 22860 31323. Around €50-70/person.",
-                        "desc_el": "Στην Έξω Γωνιά, πίσω από την εκκλησία του Αγίου Χαραλάμπους. Το <a href=\"https://www.metaximas.gr/\" target=\"_blank\" rel=\"noopener noreferrer\">Μεταξύ Μας</a> κατατάσσεται συστηματικά ως το καλύτερο εστιατόριο του νησιού — κρητική-σαντορινιά κουζίνα, βεράντα σε αμπέλι. <strong>Κλείσε 1 εβδομάδα πριν</strong>: +30 22860 31323. Γύρω στα 50-70€/άτομο."
-                    },
-                    {
-                        "name": "Akrotiri Archaeological Site",
-                        "lat": 36.3519,
-                        "lng": 25.4033,
-                        "type": "museum",
-                        "time": "15:30",
-                        "wiki": "https://en.wikipedia.org/wiki/Akrotiri_(prehistoric_city)",
-                        "desc": "The 'Pompeii of the Aegean' — a Bronze Age town buried by the Minoan eruption around 1600 BCE and preserved under ash. Covered walkway over multi-story buildings. €12 entry, allow 1 hour.",
-                        "desc_el": "Η «Πομπηία του Αιγαίου» — πόλη της Εποχής του Χαλκού θαμμένη από τη μινωική έκρηξη γύρω στο 1600 π.Χ. και διατηρημένη κάτω από στάχτη. Στεγασμένη πεζογέφυρα πάνω από πολυώροφα κτήρια. 12€ είσοδος, 1 ώρα."
-                    },
-                    {
-                        "name": "Red Beach",
-                        "lat": 36.3486,
-                        "lng": 25.3953,
-                        "type": "beach",
-                        "time": "17:00",
-                        "wiki": "https://en.wikipedia.org/wiki/Red_Beach,_Santorini",
-                        "desc": "A 5-min walk from Akrotiri. Spectacular red volcanic cliffs and dark red pebble sand. Swimming requires caution (rockfalls possible) and the path is now partly restricted — the view from above is the real reward.",
-                        "desc_el": "5 λεπτά με τα πόδια από το Ακρωτήρι. Εντυπωσιακοί κόκκινοι ηφαιστειακοί βράχοι και σκούρα κόκκινη παραλία. Το κολύμπι χρειάζεται προσοχή (κίνδυνος πτώσης βράχων) και το μονοπάτι είναι εν μέρει κλειστό — η θέα από πάνω είναι η πραγματική ανταμοιβή."
-                    }
-                ]
-            }
+  "key": "santorini",
+  "name": "Santorini",
+  "name_el": "Σαντορίνη",
+  "subtitle": "The caldera, the sunset and the world's most famous view",
+  "subtitle_el": "Η καλντέρα, το ηλιοβασίλεμα και η πιο διάσημη θέα στον κόσμο",
+  "intro": "Santorini is not primarily a beach island — come for the caldera, the architecture, the wine and the sunsets. The beaches exist and are worth visiting, but they are volcanic black and red, not the white sand of other Cyclades. Oia at sunset, the caldera from Fira, a boat tour around the volcano, and a glass of Assyrtiko white wine looking west: these are the reasons to come. <strong>Where to stay:</strong> Our pick is <a href=\"https://www.booking.com/hotel/gr/aenaon-villas.html\" target=\"_blank\" rel=\"noopener noreferrer\">Aenaon Villas</a> in Imerovigli — sitting midway between Imerovigli and Oia on the caldera's highest point, with both villages in view. Luxurious without being outrageously priced, quiet, and perfectly placed for the Fira-to-Oia cliff walk. For better value, <a href=\"https://www.booking.com/hotel/gr/absolute-bliss-imerovigli-suites.html\" target=\"_blank\" rel=\"noopener noreferrer\">Absolute Bliss Imerovigli</a> has the same caldera views at a fraction of the cost.",
+  "intro_el": "Η Σαντορίνη δεν είναι κυρίως νησί παραλιών — έλα για την καλντέρα, την αρχιτεκτονική, το κρασί και τα ηλιοβασιλέματα. Οι παραλίες υπάρχουν και αξίζουν, αλλά είναι ηφαιστειακές μαύρες και κόκκινες, όχι η λευκή άμμος των άλλων Κυκλάδων. Η Οία στο ηλιοβασίλεμα, η καλντέρα από τα Φηρά, μια βόλτα με σκάφος γύρω από το ηφαίστειο, και ένα ποτήρι Ασύρτικο κοιτάζοντας δυτικά: αυτοί είναι οι λόγοι να έρθεις. <strong>Πού να μείνεις:</strong> Η πρότασή μας είναι τα <a href=\"https://www.booking.com/hotel/gr/aenaon-villas.html\" target=\"_blank\" rel=\"noopener noreferrer\">Aenaon Villas</a> στο Ημεροβίγλι — στο πιο ψηλό σημείο της καλντέρας, μισή απόσταση μεταξύ Ημεροβιγλίου και Οίας, με θέα και στα δύο. Πολυτελές αλλά όχι εξωφρενικά ακριβό, ήσυχο, ιδανικό για την πεζοπορία στην καλντέρα. Για καλύτερη σχέση τιμής-ποιότητας, το <a href=\"https://www.booking.com/hotel/gr/absolute-bliss-imerovigli-suites.html\" target=\"_blank\" rel=\"noopener noreferrer\">Absolute Bliss Imerovigli</a> προσφέρει την ίδια θέα σε κλάσμα του κόστους.",
+  "itinerary": {
+    "title": "3-Day Santorini Itinerary",
+    "title_el": "Τριήμερο Δρομολόγιο — Σαντορίνη",
+    "subtitle": "The caldera villages, the volcano, the black sand beaches and the best sunset in the Aegean.",
+    "subtitle_el": "Τα χωριά της καλντέρας, το ηφαίστειο, οι μαύρες παραλίες και το καλύτερο ηλιοβασίλεμα του Αιγαίου.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Fira, Imerovigli & the Caldera Walk",
+        "title_el": "Φηρά, Ημεροβίγλι & η διαδρομή της καλντέρας",
+        "color": "#1B4F8A",
+        "km": 10,
+        "drive_mins": 15,
+        "overnight": "Aenaon Villas, Imerovigli",
+        "overnight_el": "Aenaon Villas, Ημεροβίγλι",
+        "stops": [
+          {
+            "name": "Fira",
+            "lat": 36.4169,
+            "lng": 25.432,
+            "type": "city",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Fira",
+            "desc": "The capital — perched on the caldera rim 300 m above the sea. Start early with a coffee on the main square before the cruise crowds arrive (around 10:30).",
+            "desc_el": "Η πρωτεύουσα — στην άκρη της καλντέρας, 300 μ. πάνω από τη θάλασσα. Ξεκίνα νωρίς με έναν καφέ στην κεντρική πλατεία πριν φτάσουν τα κρουαζιερόπλοια (γύρω στις 10:30).",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776992198/santo1_rw0mdz.jpg"
+          },
+          {
+            "name": "Museum of Prehistoric Thera",
+            "lat": 36.4162,
+            "lng": 25.4313,
+            "type": "museum",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Museum_of_Prehistoric_Thera",
+            "desc": "Small but extraordinary. Holds the Minoan frescoes from Akrotiri — among the most important Bronze Age artworks ever found. €6 entry. Spend 90 minutes.",
+            "desc_el": "Μικρό αλλά εξαιρετικό. Στεγάζει τις μινωικές τοιχογραφίες από το Ακρωτήρι — από τα σημαντικότερα έργα της Εποχής του Χαλκού. 6€ είσοδος. Αφιέρωσε 90 λεπτά.",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776992197/%CF%83%CE%B1%CE%BD%CF%84%CE%BF2_umhorl.jpg"
+          },
+          {
+            "name": "Caldera Path — Fira to Imerovigli",
+            "lat": 36.4317,
+            "lng": 25.4267,
+            "type": "nature",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "The finest walk in Santorini — a flat, well-paved cliff path (1.5 km, 30 min) along the caldera edge. Unbeatable views of the volcano and Thirassia the whole way. End at your hotel to drop bags.",
+            "desc_el": "Η ωραιότερη διαδρομή της Σαντορίνης — επίπεδο, πλακόστρωτο μονοπάτι (1,5 χλμ, 30 λεπτά) στην άκρη της καλντέρας. Ασύγκριτη θέα στο ηφαίστειο και τη Θηρασιά σε όλη τη διαδρομή. Κατάληξε στο ξενοδοχείο για να αφήσεις τις βαλίτσες.",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776992197/thumb-imerovigli-new_aytgzl.jpg"
+          },
+          {
+            "name": "Lunch at Avocado Restaurant",
+            "lat": 36.4328,
+            "lng": 25.4268,
+            "type": "village",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "Local favourite for a light lunch in Imerovigli — creative Mediterranean plates and a small, sunlit terrace. Reservations via <a href=\"https://www.avocado-restaurant.gr/\" target=\"_blank\" rel=\"noopener noreferrer\">their website</a>. Expect €35-50/person.",
+            "desc_el": "Τοπικό αγαπημένο για ελαφρύ μεσημεριανό στο Ημεροβίγλι — δημιουργικά μεσογειακά πιάτα και μικρό, ηλιόλουστο τερρατσάκι. Κρατήσεις μέσω της <a href=\"https://www.avocado-restaurant.gr/\" target=\"_blank\" rel=\"noopener noreferrer\">ιστοσελίδας τους</a>. Υπολόγισε 35-50€/άτομο.",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776992197/santo_4_wrbawd.jpg"
+          },
+          {
+            "name": "Skaros Rock",
+            "lat": 36.4383,
+            "lng": 25.4233,
+            "type": "castle",
+            "time": "16:00",
+            "wiki": "https://en.wikipedia.org/wiki/Skaros",
+            "desc": "The medieval rock fortress promontory below Imerovigli. Descend the stone steps (15 min down, 20 min up), scramble to the chapel at the tip. 360° caldera views that beat anything else on the island. Wear trainers.",
+            "desc_el": "Ο μεσαιωνικός βραχώδης προμαχώνας κάτω από το Ημεροβίγλι. Κατέβασε τα πέτρινα σκαλιά (15 λεπτά κάτω, 20 λεπτά πάνω), σκαρφάλωσε μέχρι το ξωκλήσι στην άκρη. Πανοραμική θέα 360° που ξεπερνά οτιδήποτε άλλο στο νησί. Φόρα αθλητικά.",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776992196/santo_5_dfnqcl.jpg"
+          },
+          {
+            "name": "Sunset & Dinner — Athenian House",
+            "lat": 36.434,
+            "lng": 25.426,
+            "type": "village",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "Our dinner pick for night one — <a href=\"https://www.athenianhouse.gr/\" target=\"_blank\" rel=\"noopener noreferrer\">Athenian House</a> has the same sunset as Oia without the crowds. Book 1-2 weeks ahead for a 20:00 table facing west. Expect €80-120/person.",
+            "desc_el": "Επιλογή δείπνου για την πρώτη βραδιά — το <a href=\"https://www.athenianhouse.gr/\" target=\"_blank\" rel=\"noopener noreferrer\">Athenian House</a> έχει το ίδιο ηλιοβασίλεμα με την Οία χωρίς τον συνωστισμό. Κλείσε 1-2 εβδομάδες πριν για τραπέζι στις 20:00 με θέα δυτικά. Υπολόγισε 80-120€/άτομο.",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776992196/santo_6_vs9gyn.jpg"
+          }
         ]
-    },
-    "beaches": [
-        {
-            "name": "Vlychada Beach",
-            "name_el": "Παραλία Βλυχάδα",
+      },
+      {
+        "day": 2,
+        "title": "Volcano, Hot Springs & Ammoudi Bay",
+        "title_el": "Ηφαίστειο, ιαματικές πηγές & κόλπος Αμμούδι",
+        "color": "#C0522A",
+        "km": 12,
+        "drive_mins": 25,
+        "overnight": "Aenaon Villas, Imerovigli",
+        "overnight_el": "Aenaon Villas, Ημεροβίγλι",
+        "stops": [
+          {
+            "name": "Volcano boat tour — from Fira Old Port",
+            "lat": 36.4133,
+            "lng": 25.4239,
+            "type": "harbour",
+            "time": "09:00",
             "wiki": null,
-            "rating": 5,
-            "type": "Fine grey-white volcanic sand",
-            "type_el": "Λεπτή γκρι-λευκή ηφαιστειακή άμμος",
-            "length": "800 m",
-            "depth": "Shallow",
-            "depth_el": "Ρηχά",
-            "facing": "South — exposed",
-            "facing_el": "Νότια — εκτεθειμένη",
-            "facilities": "Moderate — a few beach bars, the excellent Theros Wave Bar at the east end",
-            "facilities_el": "Μέτριες — μερικά beach bars, και το εξαιρετικό Theros Wave Bar στο ανατολικό άκρο",
-            "desc": "The most surreal beach on Santorini. Lunar-white volcanic cliffs wind- and water-carved into shapes like a natural sculpture garden, backed by long grey sand. Far quieter than Perissa. Excellent for a late-afternoon swim and a sunset drink at <a href=\"https://www.theo-restaurant.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Theros Wave Bar</a>.",
-            "desc_el": "Η πιο σουρεαλιστική παραλία της Σαντορίνης. Σεληνιακοί λευκοί βράχοι λαξεμένοι από αέρα και νερό σαν φυσικό γλυπτοπάρκο, με μακριά γκρι άμμο πίσω. Πολύ πιο ήσυχη από την Περίσσα. Εξαιρετική για βραδινό μπάνιο και ηλιοβασίλεμα με ποτό στο <a href=\"https://www.theo-restaurant.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Theros Wave Bar</a>.",
-            "commons": null,
-            "lat": 36.3431,
-            "lng": 25.4420
-        },
-        {
+            "desc": "Walk or cable-car down to Fira Old Port (taxi from Imerovigli: 10 min, €15). Boats leave around 09:30 — half-day tours cover Nea Kameni volcano, the Palea Kameni hot springs and Thirassia. Book the <a href=\"https://www.getyourguide.com/santorini-l793/volcano-sulphur-hot-springs-and-thirasia-boat-tour-t48884/\" target=\"_blank\" rel=\"noopener noreferrer\">combined tour</a> (~€30-45/person, 5 hours).",
+            "desc_el": "Περπάτα ή πάρε το τελεφερίκ στο Παλιό Λιμάνι των Φηρών (ταξί από Ημεροβίγλι: 10 λεπτά, 15€). Τα σκάφη φεύγουν γύρω στις 09:30 — η μισή μέρα καλύπτει τη Νέα Καμένη, τις ιαματικές πηγές της Παλιάς Καμένης και τη Θηρασιά. Κλείσε την <a href=\"https://www.getyourguide.com/santorini-l793/volcano-sulphur-hot-springs-and-thirasia-boat-tour-t48884/\" target=\"_blank\" rel=\"noopener noreferrer\">συνδυαστική εκδρομή</a> (~30-45€/άτομο, 5 ώρες)."
+          },
+          {
+            "name": "Nea Kameni Volcano walk",
+            "lat": 36.4017,
+            "lng": 25.3933,
+            "type": "nature",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Nea_Kameni",
+            "desc": "Walk up to the crater of the still-active volcano (last eruption 1950). Bring sturdy shoes — the path is loose volcanic scree. €5 cash entry to the volcanic park. 45 min round-trip.",
+            "desc_el": "Ανέβα στον κρατήρα του ενεργού ηφαιστείου (τελευταία έκρηξη 1950). Φόρα γερά παπούτσια — το μονοπάτι είναι από χαλαρή ηφαιστειακή πέτρα. 5€ μετρητά είσοδος στο ηφαιστειακό πάρκο. 45 λεπτά πήγαινε-έλα."
+          },
+          {
+            "name": "Palea Kameni Hot Springs",
+            "lat": 36.4037,
+            "lng": 25.3796,
+            "type": "beach",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Palaia_Kameni",
+            "desc": "The boat anchors offshore — you swim to the sulphur hot springs, where hot water bubbles from underwater vents. Water is tepid (yellow-orange from the iron) and stains swimsuits. Bring an old one.",
+            "desc_el": "Το σκάφος αγκυροβολεί και κολυμπάς ως τις θειούχες πηγές, όπου ζεστό νερό αναβλύζει από υποθαλάσσιους κρατήρες. Το νερό είναι χλιαρό (κίτρινο-πορτοκαλί από το σίδερο) και βάφει τα μαγιό. Φόρεσε κάτι παλιό."
+          },
+          {
+            "name": "Oia village",
+            "lat": 36.4618,
+            "lng": 25.3753,
+            "type": "city",
+            "time": "16:00",
+            "wiki": "https://en.wikipedia.org/wiki/Oia,_Greece",
+            "desc": "Taxi or bus from Fira (15 min). Walk the pedestrian main street — whitewashed alleys, the Maritime Museum, the blue-domed churches. Crowded after 17:00 as sunset tourists arrive.",
+            "desc_el": "Ταξί ή λεωφορείο από Φηρά (15 λεπτά). Περπάτα τον πεζόδρομο — ασπρισμένα σοκάκια, το Ναυτικό Μουσείο, οι γαλάζιοι τρούλοι. Συνωστισμός μετά τις 17:00 καθώς φτάνουν οι τουρίστες του ηλιοβασιλέματος."
+          },
+          {
+            "name": "Dinner at Ammoudi Bay — Dimitris",
+            "lat": 36.4651,
+            "lng": 25.3708,
+            "type": "harbour",
+            "time": "19:30",
+            "wiki": null,
+            "desc": "Skip the sunset-point crowds in Oia. Instead descend the 300 steps (or take a donkey, €10) to Ammoudi Bay — the tiny port below Oia — and have dinner at <a href=\"https://dimitrisammoudi.gr/\" target=\"_blank\" rel=\"noopener noreferrer\">Dimitris</a>. Fresh fish sold by the kilo, feet in the water, red cliffs turning gold as the sun sets. €60-90/person.",
+            "desc_el": "Απέφυγε τον συνωστισμό στο σημείο ηλιοβασιλέματος της Οίας. Κατέβα τα 300 σκαλιά (ή πάρε γαϊδούρι, 10€) στον κόλπο Αμμούδι — το μικρό λιμάνι κάτω από την Οία — και δείπνησε στου <a href=\"https://dimitrisammoudi.gr/\" target=\"_blank\" rel=\"noopener noreferrer\">Δημήτρη</a>. Φρέσκο ψάρι με το κιλό, τα πόδια στο νερό, τα κόκκινα βράχια χρυσίζουν στο ηλιοβασίλεμα. 60-90€/άτομο."
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Wine, Pyrgos & the Red Beach",
+        "title_el": "Κρασί, Πύργος & Κόκκινη Παραλία",
+        "color": "#5A7A3A",
+        "km": 35,
+        "drive_mins": 70,
+        "overnight": null,
+        "stops": [
+          {
+            "name": "Santo Wines Winery",
+            "lat": 36.391,
+            "lng": 25.4413,
+            "type": "village",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "The cooperative winery outside Pyrgos with the best caldera views of any winery on the island. Tasting flights from €25 (12 wines + small plates). <a href=\"https://santowines.gr/book-online\" target=\"_blank\" rel=\"noopener noreferrer\">Book online</a> — request the 10:00 slot, much quieter.",
+            "desc_el": "Ο συνεταιριστικός οινοποιητικός έξω από τον Πύργο με την καλύτερη θέα στην καλντέρα από κάθε οινοποιείο του νησιού. Δοκιμές από 25€ (12 κρασιά + πιατάκια). <a href=\"https://santowines.gr/book-online\" target=\"_blank\" rel=\"noopener noreferrer\">Κλείσε online</a> — ζήτα θέση για τις 10:00, πολύ πιο ήσυχα."
+          },
+          {
+            "name": "Pyrgos village",
+            "lat": 36.3783,
+            "lng": 25.4464,
+            "type": "village",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Pyrgos_Kallistis",
+            "desc": "The highest village on Santorini and the oldest — a Venetian hill town of whitewashed alleys climbing to a ruined castle. Five minutes' walk from end to end but worth an hour. Far less crowded than Fira or Oia.",
+            "desc_el": "Το πιο ψηλό χωριό της Σαντορίνης και το παλαιότερο — ενετική ακρόπολη με ασπρισμένα σοκάκια που ανεβαίνουν σε κάστρο σε ερείπια. Πέντε λεπτά περπάτημα από άκρη σε άκρη αλλά αξίζει μία ώρα. Πολύ λιγότερος κόσμος από Φηρά ή Οία."
+          },
+          {
+            "name": "Lunch — Metaxi Mas",
+            "lat": 36.3806,
+            "lng": 25.4622,
+            "type": "village",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "In nearby Exo Gonia, behind the Agios Charalambos church. <a href=\"https://www.metaximas.gr/\" target=\"_blank\" rel=\"noopener noreferrer\">Metaxi Mas</a> is consistently ranked the best restaurant on the island — Cretan-Santorinian cooking, a vineyard terrace. <strong>Book 1 week ahead</strong>: +30 22860 31323. Around €50-70/person.",
+            "desc_el": "Στην Έξω Γωνιά, πίσω από την εκκλησία του Αγίου Χαραλάμπους. Το <a href=\"https://www.metaximas.gr/\" target=\"_blank\" rel=\"noopener noreferrer\">Μεταξύ Μας</a> κατατάσσεται συστηματικά ως το καλύτερο εστιατόριο του νησιού — κρητική-σαντορινιά κουζίνα, βεράντα σε αμπέλι. <strong>Κλείσε 1 εβδομάδα πριν</strong>: +30 22860 31323. Γύρω στα 50-70€/άτομο."
+          },
+          {
+            "name": "Akrotiri Archaeological Site",
+            "lat": 36.3519,
+            "lng": 25.4033,
+            "type": "museum",
+            "time": "15:30",
+            "wiki": "https://en.wikipedia.org/wiki/Akrotiri_(prehistoric_city)",
+            "desc": "The 'Pompeii of the Aegean' — a Bronze Age town buried by the Minoan eruption around 1600 BCE and preserved under ash. Covered walkway over multi-story buildings. €12 entry, allow 1 hour.",
+            "desc_el": "Η «Πομπηία του Αιγαίου» — πόλη της Εποχής του Χαλκού θαμμένη από τη μινωική έκρηξη γύρω στο 1600 π.Χ. και διατηρημένη κάτω από στάχτη. Στεγασμένη πεζογέφυρα πάνω από πολυώροφα κτήρια. 12€ είσοδος, 1 ώρα."
+          },
+          {
             "name": "Red Beach",
-            "name_el": "Κόκκινη Παραλία",
-            "wiki": "https://en.wikipedia.org/wiki/Red_Beach,_Santorini",
-            "rating": 4,
-            "type": "Dark red volcanic pebbles and sand",
-            "type_el": "Σκούρο κόκκινο ηφαιστειακό βότσαλο και άμμος",
-            "length": "200 m",
-            "depth": "Shallow to medium",
-            "depth_el": "Ρηχά έως μέτρια",
-            "facing": "South — protected from the meltemi (the dry northerly summer winds that blow across the Aegean from May to September)",
-            "facing_el": "Νότια — προστατευμένη από το μελτέμι (τους ξηρούς βόρειους καλοκαιρινούς ανέμους του Αιγαίου, από Μάιο έως Σεπτέμβριο)",
-            "facilities": "Minimal — snack bar only, few umbrellas",
-            "facilities_el": "Ελάχιστες — μόνο snack bar, λίγες ομπρέλες",
-            "desc": "The most photographed beach on Santorini — dramatic red volcanic cliffs framing dark red sand. <strong>Note:</strong> rockfalls are a real hazard and the direct access path has been partly restricted since 2023. The safest way to see it is from the overlook above, or by boat tour from Akrotiri port.",
-            "desc_el": "Η πιο φωτογραφισμένη παραλία της Σαντορίνης — εντυπωσιακοί κόκκινοι ηφαιστειακοί βράχοι που πλαισιώνουν σκούρα κόκκινη άμμο. <strong>Σημείωση:</strong> οι πτώσεις βράχων είναι πραγματικός κίνδυνος και η άμεση πρόσβαση έχει περιοριστεί από το 2023. Ο ασφαλέστερος τρόπος είναι από το παρατηρητήριο από πάνω ή με σκάφος από το λιμάνι Ακρωτηρίου.",
-            "commons": null,
             "lat": 36.3486,
-            "lng": 25.3953
-        },
-        {
-            "name": "Perissa Beach",
-            "name_el": "Παραλία Περίσσα",
-            "wiki": null,
-            "rating": 4,
-            "type": "Fine black volcanic sand",
-            "type_el": "Λεπτή μαύρη ηφαιστειακή άμμος",
-            "length": "3 km",
-            "depth": "Shallow — gradual entry",
-            "depth_el": "Ρηχά — σταδιακή είσοδος",
-            "facing": "Southeast — can be windy in afternoon",
-            "facing_el": "Νοτιοανατολικά — πιθανός αέρας το απόγευμα",
-            "facilities": "Full: sunbeds, water sports, dozens of beachfront tavernas",
-            "facilities_el": "Πλήρεις: ξαπλώστρες, θαλάσσια σπορ, δεκάδες ταβέρνες στην άμμο",
-            "desc": "Santorini's finest long black-sand beach, stretched under the towering cliffs of Ancient Thera on Mesa Vouno. Hot sand in summer — bring flip-flops. Good swimming, wide choice of tavernas. Much less pretentious than the caldera-side beaches.",
-            "desc_el": "Η ωραιότερη μακριά παραλία με μαύρη άμμο της Σαντορίνης, απλωμένη κάτω από τους επιβλητικούς βράχους της Αρχαίας Θήρας στη Μέσα Βουνό. Η άμμος καίει το καλοκαίρι — φόρα σαγιονάρες. Καλό κολύμπι, μεγάλη ποικιλία ταβερνών. Πολύ λιγότερο εξεζητημένη από τις παραλίες της καλντέρας.",
-            "commons": null,
-            "lat": 36.3583,
-            "lng": 25.4814
-        }
+            "lng": 25.3953,
+            "type": "beach",
+            "time": "17:00",
+            "wiki": "https://en.wikipedia.org/wiki/Red_Beach,_Santorini",
+            "desc": "A 5-min walk from Akrotiri. Spectacular red volcanic cliffs and dark red pebble sand. Swimming requires caution (rockfalls possible) and the path is now partly restricted — the view from above is the real reward.",
+            "desc_el": "5 λεπτά με τα πόδια από το Ακρωτήρι. Εντυπωσιακοί κόκκινοι ηφαιστειακοί βράχοι και σκούρα κόκκινη παραλία. Το κολύμπι χρειάζεται προσοχή (κίνδυνος πτώσης βράχων) και το μονοπάτι είναι εν μέρει κλειστό — η θέα από πάνω είναι η πραγματική ανταμοιβή."
+          }
+        ]
+      }
     ]
+  },
+  "beaches": [
+    {
+      "name": "Vlychada Beach",
+      "name_el": "Παραλία Βλυχάδα",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine grey-white volcanic sand",
+      "type_el": "Λεπτή γκρι-λευκή ηφαιστειακή άμμος",
+      "length": "800 m",
+      "depth": "Shallow",
+      "depth_el": "Ρηχά",
+      "facing": "South — exposed",
+      "facing_el": "Νότια — εκτεθειμένη",
+      "facilities": "Moderate — a few beach bars, the excellent Theros Wave Bar at the east end",
+      "facilities_el": "Μέτριες — μερικά beach bars, και το εξαιρετικό Theros Wave Bar στο ανατολικό άκρο",
+      "desc": "The most surreal beach on Santorini. Lunar-white volcanic cliffs wind- and water-carved into shapes like a natural sculpture garden, backed by long grey sand. Far quieter than Perissa. Excellent for a late-afternoon swim and a sunset drink at <a href=\"https://www.theo-restaurant.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Theros Wave Bar</a>.",
+      "desc_el": "Η πιο σουρεαλιστική παραλία της Σαντορίνης. Σεληνιακοί λευκοί βράχοι λαξεμένοι από αέρα και νερό σαν φυσικό γλυπτοπάρκο, με μακριά γκρι άμμο πίσω. Πολύ πιο ήσυχη από την Περίσσα. Εξαιρετική για βραδινό μπάνιο και ηλιοβασίλεμα με ποτό στο <a href=\"https://www.theo-restaurant.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Theros Wave Bar</a>.",
+      "commons": null,
+      "lat": 36.3431,
+      "lng": 25.442,
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776992185/sanbeach1_mxjxix.webp"
+    },
+    {
+      "name": "Red Beach",
+      "name_el": "Κόκκινη Παραλία",
+      "wiki": "https://en.wikipedia.org/wiki/Red_Beach,_Santorini",
+      "rating": 4,
+      "type": "Dark red volcanic pebbles and sand",
+      "type_el": "Σκούρο κόκκινο ηφαιστειακό βότσαλο και άμμος",
+      "length": "200 m",
+      "depth": "Shallow to medium",
+      "depth_el": "Ρηχά έως μέτρια",
+      "facing": "South — protected from the meltemi (the dry northerly summer winds that blow across the Aegean from May to September)",
+      "facing_el": "Νότια — προστατευμένη από το μελτέμι (τους ξηρούς βόρειους καλοκαιρινούς ανέμους του Αιγαίου, από Μάιο έως Σεπτέμβριο)",
+      "facilities": "Minimal — snack bar only, few umbrellas",
+      "facilities_el": "Ελάχιστες — μόνο snack bar, λίγες ομπρέλες",
+      "desc": "The most photographed beach on Santorini — dramatic red volcanic cliffs framing dark red sand. <strong>Note:</strong> rockfalls are a real hazard and the direct access path has been partly restricted since 2023. The safest way to see it is from the overlook above, or by boat tour from Akrotiri port.",
+      "desc_el": "Η πιο φωτογραφισμένη παραλία της Σαντορίνης — εντυπωσιακοί κόκκινοι ηφαιστειακοί βράχοι που πλαισιώνουν σκούρα κόκκινη άμμο. <strong>Σημείωση:</strong> οι πτώσεις βράχων είναι πραγματικός κίνδυνος και η άμεση πρόσβαση έχει περιοριστεί από το 2023. Ο ασφαλέστερος τρόπος είναι από το παρατηρητήριο από πάνω ή με σκάφος από το λιμάνι Ακρωτηρίου.",
+      "commons": null,
+      "lat": 36.3486,
+      "lng": 25.3953,
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776992184/santobeach2_mpjsc6.jpg"
+    },
+    {
+      "name": "Perissa Beach",
+      "name_el": "Παραλία Περίσσα",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine black volcanic sand",
+      "type_el": "Λεπτή μαύρη ηφαιστειακή άμμος",
+      "length": "3 km",
+      "depth": "Shallow — gradual entry",
+      "depth_el": "Ρηχά — σταδιακή είσοδος",
+      "facing": "Southeast — can be windy in afternoon",
+      "facing_el": "Νοτιοανατολικά — πιθανός αέρας το απόγευμα",
+      "facilities": "Full: sunbeds, water sports, dozens of beachfront tavernas",
+      "facilities_el": "Πλήρεις: ξαπλώστρες, θαλάσσια σπορ, δεκάδες ταβέρνες στην άμμο",
+      "desc": "Santorini's finest long black-sand beach, stretched under the towering cliffs of Ancient Thera on Mesa Vouno. Hot sand in summer — bring flip-flops. Good swimming, wide choice of tavernas. Much less pretentious than the caldera-side beaches.",
+      "desc_el": "Η ωραιότερη μακριά παραλία με μαύρη άμμο της Σαντορίνης, απλωμένη κάτω από τους επιβλητικούς βράχους της Αρχαίας Θήρας στη Μέσα Βουνό. Η άμμος καίει το καλοκαίρι — φόρα σαγιονάρες. Καλό κολύμπι, μεγάλη ποικιλία ταβερνών. Πολύ λιγότερο εξεζητημένη από τις παραλίες της καλντέρας.",
+      "commons": null,
+      "lat": 36.3583,
+      "lng": 25.4814,
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776992184/santobeach3_eoofui.jpg"
+    }
+  ]
 }
