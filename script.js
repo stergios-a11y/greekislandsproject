@@ -733,7 +733,7 @@ async function renderIslandPage(key) {
   if (!guide) return;
 
   // Show loading state
-  guide.innerHTML = `<div class="island-guide-box" style="text-align:center;padding:40px;color:var(--ink-3)">Loading ${island.name} guide…</div>`;
+  guide.innerHTML = `<div class="island-guide-box" style="text-align:center;padding:40px;color:var(--ink-3)">${t('fallback.loading').replace('{NAME}', islandName(key))}</div>`;
 
   // Try to fetch the island's JSON page data
   try {
@@ -764,18 +764,18 @@ async function renderIslandPage(key) {
 
   guide.innerHTML = `
     <div class="island-guide-box">
-      <h3>Blueprint Summary</h3>
-      <p>${island.name} scores <strong>${fmt(island.total)}/5</strong> overall.
-      ${island.beach >= 4.5 ? ' Outstanding beaches.' : ''}
-      ${island.hist >= 4.5 ? ' Exceptional culture and history.' : ''}
-      ${island.night >= 4.5 ? ' Among the best nightlife in Greece.' : ''}
-      ${island.afford >= 4.2 ? ' Very affordable.' : ''}
-      ${island.afford <= 1.5 ? ' One of the most expensive islands — budget accordingly.' : ''}
-      ${island.access >= 4.5 ? ' Excellent connections from Athens.' : ''}
-      ${island.access <= 2.0 ? ' Remote and harder to reach — but worth the effort.' : ''}
+      <h3>${t('fallback.summary')}</h3>
+      <p>${islandName(key)} ${t('fallback.scores').replace('{SCORE}', fmt(island.total))}
+      ${island.beach >= 4.5 ? t('fallback.beach') : ''}
+      ${island.hist >= 4.5 ? t('fallback.hist') : ''}
+      ${island.night >= 4.5 ? t('fallback.night') : ''}
+      ${island.afford >= 4.2 ? t('fallback.afford_high') : ''}
+      ${island.afford <= 1.5 ? t('fallback.afford_low') : ''}
+      ${island.access >= 4.5 ? t('fallback.access_high') : ''}
+      ${island.access <= 2.0 ? t('fallback.access_low') : ''}
       </p>
-      <p style="margin-top:12px;font-size:13px;color:var(--ink-3)">Full itinerary and beach guide coming soon.</p>
-      <p style="margin-top:10px"><a href="#" onclick="window._addCmpNav('${key}')">Compare with another island →</a></p>
+      <p style="margin-top:12px;font-size:13px;color:var(--ink-3)">${t('fallback.coming_soon')}</p>
+      <p style="margin-top:10px"><a href="#" onclick="window._addCmpNav('${key}')">${t('fallback.compare_link')}</a></p>
     </div>`;
 }
 

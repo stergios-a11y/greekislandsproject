@@ -83,14 +83,28 @@ const UI_TEXT = {
   'car.essential': { en: 'Essential', el: 'Απαραίτητο' },
 
   // Detail page buttons
-  'detail.back': { en: '← Back to Map', el: '← Πίσω στον Χάρτη' },
+  'detail.back': { en: '← Back to Map', el: '← Χάρτης' },
   'detail.compare': { en: '＋ Compare', el: '＋ Σύγκριση' },
-  'detail.save': { en: '☆ Save', el: '☆ Αποθήκευση' },
-  'detail.saved': { en: '★ Saved', el: '★ Αποθηκεύτηκε' },
+  'detail.save': { en: '☆ Save', el: '☆ Λίστα' },
+  'detail.saved': { en: '★ Saved', el: '★ Στη λίστα' },
   'detail.copylink': { en: '🔗 Copy link', el: '🔗 Αντιγραφή' },
   'detail.print': { en: '🖨 Print', el: '🖨 Εκτύπωση' },
-  'detail.bookferry': { en: '🚢 Book ferry tickets', el: '🚢 Κράτηση πλοίου' },
+  'detail.bookferry': { en: '🚢 Book ferry tickets', el: '🚢 Κράτηση' },
   'detail.copied': { en: '✓ Copied!', el: '✓ Αντιγράφτηκε!' },
+
+  // Generic fallback (ghost islands / failed JSON fetch)
+  'fallback.summary': { en: 'Blueprint Summary', el: 'Σύνοψη Aegean Blueprint' },
+  'fallback.scores': { en: 'scores <strong>{SCORE}/5</strong> overall.', el: 'βαθμολογείται συνολικά με <strong>{SCORE}/5</strong>.' },
+  'fallback.beach': { en: ' Outstanding beaches.', el: ' Εξαιρετικές παραλίες.' },
+  'fallback.hist': { en: ' Exceptional culture and history.', el: ' Εξαιρετικός πολιτισμός και ιστορία.' },
+  'fallback.night': { en: ' Among the best nightlife in Greece.', el: ' Από τις καλύτερες νυχτερινές διασκεδάσεις στην Ελλάδα.' },
+  'fallback.afford_high': { en: ' Very affordable.', el: ' Πολύ οικονομικό.' },
+  'fallback.afford_low': { en: ' One of the most expensive islands — budget accordingly.', el: ' Από τα πιο ακριβά νησιά — προγραμμάτισε τον προϋπολογισμό σου.' },
+  'fallback.access_high': { en: ' Excellent connections from Athens.', el: ' Εξαιρετικές συνδέσεις από Αθήνα.' },
+  'fallback.access_low': { en: ' Remote and harder to reach — but worth the effort.', el: ' Απομακρυσμένο και δύσκολο στην πρόσβαση — αλλά αξίζει τον κόπο.' },
+  'fallback.coming_soon': { en: 'Full itinerary and beach guide coming soon.', el: 'Πλήρες πρόγραμμα και οδηγός παραλιών σύντομα.' },
+  'fallback.compare_link': { en: 'Compare with another island →', el: 'Σύγκριση με άλλο νησί →' },
+  'fallback.loading': { en: 'Loading {NAME} guide…', el: 'Φόρτωση οδηγού για {NAME}…' },
 
   // Detail sidebar
   'detail.ratings': { en: 'Blueprint Ratings', el: 'Βαθμολογίες' },
