@@ -308,7 +308,14 @@ const UI_TEXT = {
   'mission.disagree.text': { en: 'Hit the <strong>💬 Feedback</strong> button at the bottom right of any page and pick <em>"Suggest a rating correction."</em> Explain what you\'d change and why. If you make a good case, I\'ll update the number. The five dimensions and the reasoning stay in the open.', el: 'Πάτα το κουμπί <strong>💬 Σχόλια</strong> κάτω δεξιά σε οποιαδήποτε σελίδα και διάλεξε <em>«Πρόταση διόρθωσης βαθμολογίας»</em>. Εξήγησε τι θα άλλαζες και γιατί. Αν έχεις καλό επιχείρημα, θα ενημερώσω τον αριθμό. Οι πέντε διαστάσεις και η λογική παραμένουν δημόσιες.' },
 
   'scoring.howlink': { en: 'how we score', el: 'πώς βαθμολογούμε' },
+  'feedback.topic.suggestion': { en: '💡 Suggestion or feature idea', el: '💡 Πρόταση ή ιδέα' },
+  'feedback.topic.error': { en: '🐛 Error or correction', el: '🐛 Λάθος ή διόρθωση' },
   'feedback.topic.rating': { en: '⭐ Suggest a rating correction', el: '⭐ Πρόταση διόρθωσης βαθμολογίας' },
+  'feedback.topic.missing-island': { en: '🏝 Island we should add', el: '🏝 Νησί που πρέπει να προσθέσουμε' },
+  'feedback.topic.missing-restaurant': { en: '🍴 Restaurant or beach to add', el: '🍴 Εστιατόριο ή παραλία να προσθέσουμε' },
+  'feedback.topic.other': { en: '💬 Something else', el: '💬 Κάτι άλλο' },
+  'feedback.message.placeholder': { en: "Tell us what's on your mind...", el: 'Πες μας τι σκέφτεσαι...' },
+  'feedback.email.placeholder': { en: 'you@example.com', el: 'you@example.com' },
 
   // Detail page (back button is already defined above)
 

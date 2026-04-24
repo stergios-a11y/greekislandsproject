@@ -500,21 +500,21 @@
         <label>
           <span data-i18n="feedback.topic">What's this about?</span>
           <select name="topic" required>
-            <option value="suggestion">💡 Suggestion or feature idea</option>
-            <option value="error">🐛 Error or correction</option>
-            <option value="rating">⭐ Suggest a rating correction</option>
-            <option value="missing-island">🏝 Island we should add</option>
-            <option value="missing-restaurant">🍴 Restaurant or beach to add</option>
-            <option value="other">💬 Something else</option>
+            <option value="suggestion" data-i18n="feedback.topic.suggestion">💡 Πρόταση ή ιδέα</option>
+            <option value="error" data-i18n="feedback.topic.error">🐛 Λάθος ή διόρθωση</option>
+            <option value="rating" data-i18n="feedback.topic.rating">⭐ Πρόταση διόρθωσης βαθμολογίας</option>
+            <option value="missing-island" data-i18n="feedback.topic.missing-island">🏝 Νησί που πρέπει να προσθέσουμε</option>
+            <option value="missing-restaurant" data-i18n="feedback.topic.missing-restaurant">🍴 Εστιατόριο ή παραλία να προσθέσουμε</option>
+            <option value="other" data-i18n="feedback.topic.other">💬 Κάτι άλλο</option>
           </select>
         </label>
         <label>
-          <span data-i18n="feedback.message">Your message</span>
-          <textarea name="message" rows="5" placeholder="Tell us what's on your mind..." required></textarea>
+          <span data-i18n="feedback.message">Το μήνυμά σου</span>
+          <textarea name="message" rows="5" placeholder="Πες μας τι σκέφτεσαι..." data-i18n-placeholder="feedback.message.placeholder" required></textarea>
         </label>
         <label>
-          <span data-i18n="feedback.email">Your email (optional — only if you want a reply)</span>
-          <input type="email" name="email" placeholder="you@example.com">
+          <span data-i18n="feedback.email">Το email σου (προαιρετικά)</span>
+          <input type="email" name="email" placeholder="you@example.com" data-i18n-placeholder="feedback.email.placeholder">
         </label>
         <button type="submit" class="feedback-submit" data-i18n="feedback.submit">Send via email</button>
         <p class="feedback-note" data-i18n="feedback.note">This will open your email app with the message ready to send.</p>
@@ -524,7 +524,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-  <script src="/i18n.js?v=23"></script>
+  <script src="/i18n.js?v=24"></script>
   <script src="/script.js?v=32"></script>
 </body>
 </html>
