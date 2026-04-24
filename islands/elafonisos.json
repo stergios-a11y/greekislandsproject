@@ -22,7 +22,9 @@
             "type": "harbour",
             "time": "09:00",
             "wiki": null,
-            "desc": "Ferry from Pounta on the mainland — 5 minutes across the strait. Cars can cross but the island is best explored on foot or by bicycle."
+            "desc": "Ferry from Pounta on the mainland — 5 minutes across the strait. Cars can cross but the island is best explored on foot or by bicycle.",
+            "name_el": "Πλοίο Ελαφονήσου",
+            "desc_el": "Πλοίο από την Πούντα στην ηπειρωτική χώρα — 5 λεπτά για να διασχίσεις το στενό. Αυτοκίνητα μπορούν να περάσουν αλλά το νησί εξερευνάται καλύτερα με τα πόδια ή με ποδήλατο."
           },
           {
             "name": "Elafonisos Village",
@@ -31,7 +33,9 @@
             "type": "city",
             "time": "09:15",
             "wiki": "https://en.wikipedia.org/wiki/Elafonisos",
-            "desc": "The only settlement on the island — a small fishing village with whitewashed houses, a harbour, and a handful of tavernas and rooms. Quiet, genuine and unhurried."
+            "desc": "The only settlement on the island — a small fishing village with whitewashed houses, a harbour, and a handful of tavernas and rooms. Quiet, genuine and unhurried.",
+            "name_el": "Χωριό Ελαφονήσου",
+            "desc_el": "Ο μοναδικός οικισμός του νησιού — μικρό ψαροχώρι με ασπρισμένα σπίτια, λιμάνι, και μια χούφτα ταβέρνες και δωμάτια. Ήσυχο, αυθεντικό και αβίαστο."
           },
           {
             "name": "Simos Beach",
@@ -40,7 +44,9 @@
             "type": "beach",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Simos_Beach",
-            "desc": "Consistently one of the best beaches in Europe — a double bay of pink-white sand with Caribbean-blue water, separated by a low sand dune. Both bays have a completely different character. The water colour is extraordinary."
+            "desc": "Consistently one of the best beaches in Europe — a double bay of pink-white sand with Caribbean-blue water, separated by a low sand dune. Both bays have a completely different character. The water colour is extraordinary.",
+            "name_el": "Παραλία Σίμος",
+            "desc_el": "Σταθερά μία από τις καλύτερες παραλίες της Ευρώπης — διπλός κόλπος με ροζ-λευκή άμμο και νερά σε καραϊβικό μπλε, χωρισμένος από χαμηλό αμμώδη αμμόλοφο. Οι δύο κόλποι έχουν εντελώς διαφορετικό χαρακτήρα. Το χρώμα του νερού είναι εξαιρετικό."
           },
           {
             "name": "Lunch — Harbour Taverna",
@@ -49,7 +55,9 @@
             "type": "harbour",
             "time": "14:30",
             "wiki": null,
-            "desc": "Return to the village for lunch. The fresh fish here is exceptional — grilled octopus, grilled sea bream, local wine. Inexpensive and very good."
+            "desc": "Return to the village for lunch. The fresh fish here is exceptional — grilled octopus, grilled sea bream, local wine. Inexpensive and very good.",
+            "name_el": "Μεσημεριανό — Ταβέρνα Λιμανιού",
+            "desc_el": "Επιστροφή στο χωριό για μεσημεριανό. Το φρέσκο ψάρι εδώ είναι εξαιρετικό — ψητό χταπόδι, ψητή τσιπούρα, ντόπιο κρασί. Προσιτό και πολύ καλό."
           },
           {
             "name": "Simos Sunset",
@@ -58,9 +66,13 @@
             "type": "beach",
             "time": "18:00",
             "wiki": null,
-            "desc": "Return to Simos for the late afternoon — the beach empties as day trippers leave, and the water turns from turquoise to gold. The best time of day."
+            "desc": "Return to Simos for the late afternoon — the beach empties as day trippers leave, and the water turns from turquoise to gold. The best time of day.",
+            "name_el": "Ηλιοβασίλεμα στον Σίμο",
+            "desc_el": "Επιστροφή στον Σίμο το απογευματινό — η παραλία αδειάζει καθώς οι ημερήσιοι επισκέπτες φεύγουν, και τα νερά μετατρέπονται από τιρκουάζ σε χρυσά. Η καλύτερη ώρα της μέρας."
           }
-        ]
+        ],
+        "title_el": "Παραλία Σίμος & το Χωριό",
+        "overnight_el": "Χωριό Ελαφονήσου"
       },
       {
         "day": 2,
@@ -77,7 +89,9 @@
             "type": "beach",
             "time": "09:30",
             "wiki": null,
-            "desc": "Small pebble beach on the north coast near the village — calm, clear water, usually very quiet. Good for a morning swim before leaving."
+            "desc": "Small pebble beach on the north coast near the village — calm, clear water, usually very quiet. Good for a morning swim before leaving.",
+            "name_el": "Παραλία Καλόγερος",
+            "desc_el": "Μικρή βότσαλη παραλία στη βόρεια ακτή κοντά στο χωριό — ήρεμα, διαυγή νερά, συνήθως πολύ ήσυχη. Καλή για πρωινό μπάνιο πριν φύγεις."
           },
           {
             "name": "Panagia Beach",
@@ -86,7 +100,9 @@
             "type": "beach",
             "time": "11:00",
             "wiki": null,
-            "desc": "Quiet sandy beach on the east side of the island. Less spectacular than Simos but calm, uncrowded and peaceful."
+            "desc": "Quiet sandy beach on the east side of the island. Less spectacular than Simos but calm, uncrowded and peaceful.",
+            "name_el": "Παραλία Παναγία",
+            "desc_el": "Ήσυχη αμμώδης παραλία στην ανατολική πλευρά του νησιού. Λιγότερο εντυπωσιακή από τον Σίμο αλλά ήρεμη, χωρίς πλήθη και ειρηνική."
           },
           {
             "name": "Simos — Final Swim",
@@ -95,7 +111,9 @@
             "type": "beach",
             "time": "12:30",
             "wiki": null,
-            "desc": "One final swim at Simos before the ferry back. The beach is quieter in the late morning before the day trippers arrive from the mainland."
+            "desc": "One final swim at Simos before the ferry back. The beach is quieter in the late morning before the day trippers arrive from the mainland.",
+            "name_el": "Σίμος — Τελευταίο Μπάνιο",
+            "desc_el": "Ένα τελευταίο μπάνιο στον Σίμο πριν το πλοίο της επιστροφής. Η παραλία είναι πιο ήσυχη αργά το πρωί πριν φτάσουν οι ημερήσιοι επισκέπτες από την ηπειρωτική χώρα."
           },
           {
             "name": "Ferry to Mainland",
@@ -104,11 +122,16 @@
             "type": "harbour",
             "time": "15:00",
             "wiki": null,
-            "desc": "Ferry back to Pounta. The 5-minute crossing is the shortest sea journey to leave one of Europe's best beaches behind."
+            "desc": "Ferry back to Pounta. The 5-minute crossing is the shortest sea journey to leave one of Europe's best beaches behind.",
+            "name_el": "Πλοίο στην Ηπειρωτική Χώρα",
+            "desc_el": "Πλοίο πίσω στην Πούντα. Το 5λεπτο πέρασμα είναι το μικρότερο θαλάσσιο ταξίδι για να αφήσεις πίσω σου μία από τις καλύτερες παραλίες της Ευρώπης."
           }
-        ]
+        ],
+        "title_el": "Βόρεια Ακτή & Αναχώρηση"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 2 Ημερών στην Ελαφόνησο",
+    "subtitle_el": "Μια σύντομη, εστιασμένη απόδραση σε μία από τις καλύτερες παραλίες της Ελλάδας — τον Σίμο, το λιμάνι του χωριού και τους ήσυχους κόλπους της βόρειας ακτής."
   },
   "beaches": [
     {
@@ -123,7 +146,13 @@
       "desc": "One of the finest beaches in Europe — a double bay of white-pink sand and water that shifts from pale turquoise to deep cobalt depending on depth. The two bays are separated by a low dune and have completely different characters. No overdevelopment. The morning and evening light here is extraordinary.",
       "commons": "Simos_beach_Elafonisos.jpg",
       "lat": 36.4612,
-      "lng": 22.981
+      "lng": 22.981,
+      "name_el": "Παραλία Σίμος",
+      "type_el": "Λεπτή λευκή και ροζ άμμος",
+      "depth_el": "Πολύ ρηχή — βάθος λιμνοθάλασσας στα περισσότερα σημεία, τέλεια για παιδιά",
+      "facing_el": "Νότια — προστατευμένη, ζεστά, ήρεμα νερά",
+      "facilities_el": "Μέτριες: ξαπλώστρες και ομπρέλες (ένας οργανωτής), beach bar, απλή καντίνα. Χωρίς μεγάλη ανάπτυξη θερέτρου.",
+      "desc_el": "Μία από τις καλύτερες παραλίες της Ευρώπης — διπλός κόλπος λευκής-ροζ άμμου και νερά που αλλάζουν από απαλό τιρκουάζ σε βαθύ κοβάλτιο ανάλογα με το βάθος. Οι δύο κόλποι είναι χωρισμένοι από χαμηλό αμμόλοφο και έχουν εντελώς διαφορετικούς χαρακτήρες. Χωρίς υπερανάπτυξη. Το πρωινό και απογευματινό φως εδώ είναι εξαιρετικό."
     },
     {
       "name": "Kalogeros Beach",
@@ -137,7 +166,13 @@
       "desc": "The village beach — a short walk from the harbour. Calm, clear water in the sheltered strait between Elafonisos and the mainland. Good for a quick morning swim.",
       "commons": null,
       "lat": 36.5014,
-      "lng": 22.98
+      "lng": 22.98,
+      "name_el": "Παραλία Καλόγερος",
+      "type_el": "Βότσαλα και άμμος",
+      "depth_el": "Ρηχή — ήρεμα λιμενικά νερά",
+      "facing_el": "Βόρεια — προστατευμένο στενό, πολύ ήρεμη",
+      "facilities_el": "Στοιχειώδεις: κοντά στο χωριό, εύκολη πεζοπορία.",
+      "desc_el": "Η παραλία του χωριού — σύντομη πεζοπορία από το λιμάνι. Ήρεμα, διαυγή νερά στο προστατευμένο στενό ανάμεσα στην Ελαφόνησο και την ηπειρωτική χώρα. Καλή για σύντομο πρωινό μπάνιο."
     },
     {
       "name": "Panagia Beach",
@@ -151,7 +186,13 @@
       "desc": "A quiet sandy beach on the east coast — less dramatic than Simos but calm, clear and almost always uncrowded. A good option if Simos is too busy.",
       "commons": null,
       "lat": 36.485,
-      "lng": 22.9989
+      "lng": 22.9989,
+      "name_el": "Παραλία Παναγία",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχή — ήρεμα, ζεστά νερά",
+      "facing_el": "Ανατολικά — προστατευμένη",
+      "facilities_el": "Στοιχειώδεις: προσβάσιμη με σύντομη πεζοπορία από το χωριό.",
+      "desc_el": "Μια ήσυχη αμμώδης παραλία στην ανατολική ακτή — λιγότερο εντυπωσιακή από τον Σίμο αλλά ήρεμη, διαυγής και σχεδόν πάντα χωρίς πλήθη. Καλή επιλογή αν ο Σίμος είναι πολυσύχναστος."
     },
     {
       "name": "Simos West Bay",
@@ -165,7 +206,13 @@
       "desc": "The western bay of Simos — the quieter, wilder of the two bays. Longer, shallower, with fewer sunbeds and more space. The water colour here, especially in the late afternoon, is the best on the island.",
       "commons": null,
       "lat": 36.4598,
-      "lng": 22.9755
+      "lng": 22.9755,
+      "name_el": "Δυτικός Κόλπος Σίμος",
+      "type_el": "Λεπτή λευκή άμμος",
+      "depth_el": "Πολύ ρηχή — τέλεια για παιδιά",
+      "facing_el": "Νοτιοδυτικά — ζεστή, προστατευμένη",
+      "facilities_el": "Ελάχιστες — ο πιο άγριος από τους δύο κόλπους του Σίμος, λιγότερες ξαπλώστρες.",
+      "desc_el": "Ο δυτικός κόλπος του Σίμος — ο πιο ήσυχος, πιο άγριος από τους δύο κόλπους. Μακρύτερος, πιο ρηχός, με λιγότερες ξαπλώστρες και περισσότερο χώρο. Το χρώμα του νερού εδώ, ειδικά αργά το απογευματινό, είναι το καλύτερο στο νησί."
     },
     {
       "name": "Fragou Alona",
@@ -179,7 +226,16 @@
       "desc": "A remote pebble cove on the southwest coast of the island accessible only on foot or by boat. Deep, clear water and complete solitude. For those wanting to escape even the relatively modest crowds at Simos.",
       "commons": null,
       "lat": 36.4583,
-      "lng": 22.95
+      "lng": 22.95,
+      "name_el": "Φράγκου Αλώνα",
+      "type_el": "Βότσαλα",
+      "depth_el": "Μέτρια — βαθιά, διαυγή νερά",
+      "facing_el": "Νοτιοδυτικά",
+      "facilities_el": "Καμία — πρόσβαση με δύσβατο μονοπάτι ή βάρκα.",
+      "desc_el": "Ένας απομακρυσμένος βότσαλος κόλπος στη νοτιοδυτική ακτή του νησιού προσβάσιμος μόνο με τα πόδια ή βάρκα. Βαθιά, διαυγή νερά και απόλυτη μοναξιά. Για όσους θέλουν να αποφύγουν ακόμα και τα σχετικά μέτρια πλήθη του Σίμος."
     }
-  ]
+  ],
+  "name_el": "Ελαφόνησος",
+  "subtitle_el": "Η Καραϊβική της Πελοποννήσου — η παραλία Σίμος και τα ηλεκτρικά μπλε νερά",
+  "intro_el": "Η Ελαφόνησος είναι ένα μικροσκοπικό νησί ακριβώς στα νότια της Πελοποννήσου — χωρισμένο από την ηπειρωτική χώρα από στενό 500 μέτρων. Έχει ένα χωριό, μια χούφτα ταβέρνες, και την παραλία Σίμος: ένας διπλός κόλπος ωχρής ροζ-λευκής άμμου και τιρκουάζ νερών που τακτικά κατατάσσεται ανάμεσα στις καλύτερες παραλίες της Ευρώπης. Ολόκληρο το νησί το διασχίζεις με τα πόδια σε 30 λεπτά. Έλα εδώ για την παραλία και τίποτα άλλο — είναι εξαιρετική."
 }

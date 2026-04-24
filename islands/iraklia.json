@@ -3,7 +3,6 @@
   "name": "Iraklia",
   "subtitle": "The quietest of the Small Cyclades — 140 residents, a cave, deserted beaches",
   "intro": "Iraklia is the first stop on the Express Skopelitis ferry south from Naxos — a tiny island of 140 residents with a single port, two small beaches near the village, and a third (one of the finest in the Cyclades) reached only on foot. The Cave of Agios Ioannis is the largest cave in the Cyclades. The island has almost no tourist development: a handful of rooms to let, two or three tavernas, no hotels. For travellers who want the authentic Small Cyclades experience without spending a full week.",
-
   "itinerary": {
     "title": "1-Day Iraklia Itinerary",
     "subtitle": "The village of Agios Georgios, Livadi beach, and the hike to Tourkopigado.",
@@ -16,17 +15,80 @@
         "drive_mins": 45,
         "overnight": "Agios Georgios",
         "stops": [
-          { "name": "Agios Georgios (Port)", "lat": 36.8497, "lng": 25.4706, "type": "harbour", "time": "09:00", "wiki": "https://en.wikipedia.org/wiki/Iraklia", "desc": "The only village and port — 140 residents, two tavernas, a bakery, a small church. Arrive by Express Skopelitis from Naxos (1.5 hrs) or Amorgos. The village is immediately behind the harbour." },
-          { "name": "Livadi Beach", "lat": 36.8394, "lng": 25.4711, "type": "beach", "time": "10:00", "wiki": null, "desc": "The closest beach to the village — a short walk south. Fine sand, crystal clear shallow water, a handful of sunbeds and a simple beach bar. One of the most unaffected family beaches in the Cyclades." },
-          { "name": "Lunch — Village Taverna", "lat": 36.8494, "lng": 25.4700, "type": "village", "time": "13:00", "wiki": null, "desc": "The village tavernas cook what the local fishermen bring in. Simple, excellent, a third of Mykonos prices. The owner probably knows everyone on the island by name." },
-          { "name": "Tourkopigado Beach", "lat": 36.8200, "lng": 25.4789, "type": "beach", "time": "15:00", "wiki": null, "desc": "The finest beach on Iraklia — a wild south-coast bay with fine pebbles and extraordinary water clarity. Reached by a 40-minute walking path from the village. No facilities, total peace." },
-          { "name": "Cave of Agios Ioannis", "lat": 36.8075, "lng": 25.4586, "type": "nature", "time": "17:00", "wiki": null, "desc": "The largest cave in the Cyclades — a two-chamber cave with stalactites, a chapel at the entrance, and remarkable acoustic properties. Access is only on foot from a trailhead near Panagia. Guided visits on August 29 (local feast day)." },
-          { "name": "Departure or 2nd Night", "lat": 36.8497, "lng": 25.4706, "type": "harbour", "time": "18:00", "wiki": null, "desc": "Skopelitis back to Naxos, onward to Schinoussa, Koufonisia, Donousa and Amorgos. A second night is worth it if you've made the journey this far." }
-        ]
+          {
+            "name": "Agios Georgios (Port)",
+            "lat": 36.8497,
+            "lng": 25.4706,
+            "type": "harbour",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Iraklia",
+            "desc": "The only village and port — 140 residents, two tavernas, a bakery, a small church. Arrive by Express Skopelitis from Naxos (1.5 hrs) or Amorgos. The village is immediately behind the harbour.",
+            "name_el": "Άγιος Γεώργιος (Λιμάνι)",
+            "desc_el": "Το μοναδικό χωριό και λιμάνι — 140 κάτοικοι, δύο ταβέρνες, φούρνος, μικρή εκκλησία. Άφιξη με Express Σκοπελίτη από τη Νάξο (1,5 ώρα) ή την Αμοργό. Το χωριό είναι ακριβώς πίσω από το λιμάνι."
+          },
+          {
+            "name": "Livadi Beach",
+            "lat": 36.8394,
+            "lng": 25.4711,
+            "type": "beach",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "The closest beach to the village — a short walk south. Fine sand, crystal clear shallow water, a handful of sunbeds and a simple beach bar. One of the most unaffected family beaches in the Cyclades.",
+            "name_el": "Παραλία Λιβάδι",
+            "desc_el": "Η πιο κοντινή παραλία στο χωριό — σύντομη πεζοπορία νότια. Λεπτή άμμος, κρυστάλλινα ρηχά νερά, μια χούφτα ξαπλώστρες και ένα απλό beach bar. Μία από τις πιο ανεπηρέαστες οικογενειακές παραλίες των Κυκλάδων."
+          },
+          {
+            "name": "Lunch — Village Taverna",
+            "lat": 36.8494,
+            "lng": 25.47,
+            "type": "village",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "The village tavernas cook what the local fishermen bring in. Simple, excellent, a third of Mykonos prices. The owner probably knows everyone on the island by name.",
+            "name_el": "Μεσημεριανό — Ταβέρνα του Χωριού",
+            "desc_el": "Οι ταβέρνες του χωριού μαγειρεύουν ό,τι φέρνουν οι ντόπιοι ψαράδες. Απλά, εξαιρετικά, με τιμές το ένα τρίτο της Μυκόνου. Ο ιδιοκτήτης μάλλον ξέρει όλους στο νησί με το όνομά τους."
+          },
+          {
+            "name": "Tourkopigado Beach",
+            "lat": 36.82,
+            "lng": 25.4789,
+            "type": "beach",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "The finest beach on Iraklia — a wild south-coast bay with fine pebbles and extraordinary water clarity. Reached by a 40-minute walking path from the village. No facilities, total peace.",
+            "name_el": "Παραλία Τουρκοπηγάδο",
+            "desc_el": "Η καλύτερη παραλία της Ηρακλειάς — ένας άγριος νότιος κόλπος με λεπτά βότσαλα και εξαιρετική διαύγεια νερού. Προσβάσιμη με 40λεπτη πεζοπορία από το χωριό. Χωρίς υποδομές, απόλυτη ηρεμία."
+          },
+          {
+            "name": "Cave of Agios Ioannis",
+            "lat": 36.8075,
+            "lng": 25.4586,
+            "type": "nature",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "The largest cave in the Cyclades — a two-chamber cave with stalactites, a chapel at the entrance, and remarkable acoustic properties. Access is only on foot from a trailhead near Panagia. Guided visits on August 29 (local feast day).",
+            "name_el": "Σπηλιά του Αγίου Ιωάννη",
+            "desc_el": "Η μεγαλύτερη σπηλιά των Κυκλάδων — σπηλιά δύο θαλάμων με σταλακτίτες, εκκλησάκι στην είσοδο, και αξιοθαύμαστες ακουστικές ιδιότητες. Η πρόσβαση είναι μόνο με τα πόδια από μονοπάτι κοντά στην Παναγιά. Ξεναγήσεις στις 29 Αυγούστου (τοπικό πανηγύρι)."
+          },
+          {
+            "name": "Departure or 2nd Night",
+            "lat": 36.8497,
+            "lng": 25.4706,
+            "type": "harbour",
+            "time": "18:00",
+            "wiki": null,
+            "desc": "Skopelitis back to Naxos, onward to Schinoussa, Koufonisia, Donousa and Amorgos. A second night is worth it if you've made the journey this far.",
+            "name_el": "Αναχώρηση ή Δεύτερη Βραδιά",
+            "desc_el": "Σκοπελίτης πίσω στη Νάξο, συνέχεια προς Σχοινούσα, Κουφονήσια, Δονούσα και Αμοργό. Μια δεύτερη βραδιά αξίζει αν έχεις κάνει τόσο δρόμο."
+          }
+        ],
+        "title_el": "Χωριό, Παραλία & Σπηλιά",
+        "overnight_el": "Άγιος Γεώργιος"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 1 Ημέρας στην Ηρακλειά",
+    "subtitle_el": "Το χωριό του Αγίου Γεωργίου, η παραλία Λιβάδι, και η πεζοπορία στο Τουρκοπηγάδο."
   },
-
   "beaches": [
     {
       "name": "Tourkopigado Beach",
@@ -39,7 +101,14 @@
       "facilities": "None — bring everything. 40-minute walk from the village.",
       "desc": "The finest beach on Iraklia — a remote south-coast bay reached only on foot. Fine pebbles, extraordinary water clarity, and no facilities of any kind. Among the most peaceful beaches in the entire Cyclades.",
       "commons": null,
-      "lat": 36.8200, "lng": 25.4789
+      "lat": 36.82,
+      "lng": 25.4789,
+      "name_el": "Παραλία Τουρκοπηγάδο",
+      "type_el": "Λεπτά βότσαλα",
+      "depth_el": "Μέτρια — κρυστάλλινα νερά",
+      "facing_el": "Νότια — προστατευμένη",
+      "facilities_el": "Καμία — πάρε ό,τι χρειάζεσαι. 40 λεπτά πεζοπορίας από το χωριό.",
+      "desc_el": "Η καλύτερη παραλία της Ηρακλειάς — ένας απομακρυσμένος νότιος κόλπος προσβάσιμος μόνο με τα πόδια. Λεπτά βότσαλα, εξαιρετική διαύγεια νερού, και καμία υποδομή. Ανάμεσα στις πιο ήσυχες παραλίες ολόκληρων των Κυκλάδων."
     },
     {
       "name": "Livadi Beach",
@@ -52,7 +121,17 @@
       "facilities": "Basic: simple beach bar, some sunbeds, short walk from village.",
       "desc": "The village beach of Iraklia — fine sand, shallow water, a short walk from Agios Georgios. The easiest beach to combine with a ferry arrival, and better than most beaches on much more famous islands.",
       "commons": null,
-      "lat": 36.8394, "lng": 25.4711
+      "lat": 36.8394,
+      "lng": 25.4711,
+      "name_el": "Παραλία Λιβάδι",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχή — οικογενειακή",
+      "facing_el": "Νοτιοανατολικά — προστατευμένη",
+      "facilities_el": "Στοιχειώδεις: απλό beach bar, μερικές ξαπλώστρες, σύντομη πεζοπορία από το χωριό.",
+      "desc_el": "Η παραλία του χωριού της Ηρακλειάς — λεπτή άμμος, ρηχά νερά, σύντομη πεζοπορία από τον Άγιο Γεώργιο. Η πιο εύκολη παραλία να συνδυαστεί με άφιξη πλοίου, και καλύτερη από τις περισσότερες παραλίες σε πολύ πιο διάσημα νησιά."
     }
-  ]
+  ],
+  "name_el": "Ηρακλειά",
+  "subtitle_el": "Το πιο ήσυχο από τις Μικρές Κυκλάδες — 140 κάτοικοι, μια σπηλιά, έρημες παραλίες",
+  "intro_el": "Η Ηρακλειά είναι η πρώτη στάση του Express Σκοπελίτης νότια από τη Νάξο — ένα μικροσκοπικό νησί 140 κατοίκων με ένα μοναδικό λιμάνι, δύο μικρές παραλίες κοντά στο χωριό, και μια τρίτη (μία από τις καλύτερες των Κυκλάδων) προσβάσιμη μόνο με τα πόδια. Η Σπηλιά του Αγίου Ιωάννη είναι η μεγαλύτερη σπηλιά των Κυκλάδων. Το νησί δεν έχει σχεδόν καθόλου τουριστική ανάπτυξη: μια χούφτα δωμάτια, δύο ή τρεις ταβέρνες, χωρίς ξενοδοχεία. Για ταξιδιώτες που θέλουν την αυθεντική εμπειρία Μικρών Κυκλάδων χωρίς να ξοδέψουν ολόκληρη εβδομάδα."
 }

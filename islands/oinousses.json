@@ -3,7 +3,6 @@
   "name": "Oinousses",
   "subtitle": "The shipowners' island — tiny, wealthy, very quiet, very close to Turkey",
   "intro": "Oinousses is an extraordinary small island with a curious identity. Despite having only 820 inhabitants, it has produced a disproportionate number of Greece's most prominent shipowning families — Lemos, Pateras, Los, Hadjipateras. The mansions on the harbour are larger and grander than you'd expect of such a small place. It's 2km from Chios and 8km from Turkey. The Greek Naval Academy for merchant shipping is based here. A handful of tavernas, a couple of small hotels, quiet pebble beaches and an island that has defended its character against mass tourism. For travellers who want an island that feels inhabited and real, not touristed.",
-
   "itinerary": {
     "title": "1-Day Oinousses Itinerary",
     "subtitle": "The harbour, the Naval Museum, a swim at Zepaga beach, the shipowners' mansions.",
@@ -16,17 +15,80 @@
         "drive_mins": 10,
         "overnight": "The village",
         "stops": [
-          { "name": "Harbour Arrival", "lat": 38.5200, "lng": 26.2017, "type": "harbour", "time": "10:00", "wiki": "https://en.wikipedia.org/wiki/Oinousses", "desc": "Arrive by small ferry from Chios (frequent, ~40 min crossing). The harbour is immediately welcoming — well-maintained mansions, a small promenade, the Naval Academy to one side." },
-          { "name": "Naval Museum", "lat": 38.5192, "lng": 26.2028, "type": "museum", "time": "10:30", "wiki": null, "desc": "Small but excellent museum documenting the extraordinary story of how Oinousses families came to dominate Greek and international shipping. Model ships, historic charts, and the names of every shipowning family. A must for anyone interested in how modern Greece works." },
-          { "name": "Shipowners' Mansions Walk", "lat": 38.5200, "lng": 26.2017, "type": "village", "time": "11:30", "wiki": null, "desc": "Walk the village lanes to see the surprisingly grand mansions. Most are summer homes for the families who now live in Athens, London or New York. The scale is striking for a village of 800 people." },
-          { "name": "Lunch — Harbour Taverna", "lat": 38.5192, "lng": 26.2022, "type": "harbour", "time": "13:00", "wiki": null, "desc": "Two or three tavernas on the harbour serve excellent seafood at honest prices. The lobster pasta here is a local specialty." },
-          { "name": "Zepaga Beach", "lat": 38.5144, "lng": 26.1978, "type": "beach", "time": "15:00", "wiki": null, "desc": "The best beach on Oinousses — a pebble cove west of the village with clear water and a view toward Chios. Small, peaceful, a handful of sunbeds." },
-          { "name": "Departure", "lat": 38.5200, "lng": 26.2017, "type": "harbour", "time": "18:30", "wiki": null, "desc": "Small ferry back to Chios (~40 min). Most visitors come as a day trip; those who stay overnight find a very different rhythm." }
-        ]
+          {
+            "name": "Harbour Arrival",
+            "lat": 38.52,
+            "lng": 26.2017,
+            "type": "harbour",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Oinousses",
+            "desc": "Arrive by small ferry from Chios (frequent, ~40 min crossing). The harbour is immediately welcoming — well-maintained mansions, a small promenade, the Naval Academy to one side.",
+            "name_el": "Άφιξη στο Λιμάνι",
+            "desc_el": "Άφιξη με μικρό πλοίο από τη Χίο (συχνά, πέρασμα ~40 λεπτών). Το λιμάνι είναι αμέσως φιλόξενο — καλοσυντηρημένα αρχοντικά, μικρός περίπατος, η Ναυτική Ακαδημία στη μία πλευρά."
+          },
+          {
+            "name": "Naval Museum",
+            "lat": 38.5192,
+            "lng": 26.2028,
+            "type": "museum",
+            "time": "10:30",
+            "wiki": null,
+            "desc": "Small but excellent museum documenting the extraordinary story of how Oinousses families came to dominate Greek and international shipping. Model ships, historic charts, and the names of every shipowning family. A must for anyone interested in how modern Greece works.",
+            "name_el": "Ναυτικό Μουσείο",
+            "desc_el": "Μικρό αλλά εξαιρετικό μουσείο που τεκμηριώνει την εξαιρετική ιστορία του πώς οι οικογένειες των Οινουσσών έφτασαν να κυριαρχούν στην ελληνική και διεθνή ναυτιλία. Μοντέλα πλοίων, ιστορικοί χάρτες, και τα ονόματα κάθε εφοπλιστικής οικογένειας. Απαραίτητο για όποιον ενδιαφέρεται για το πώς δουλεύει η σύγχρονη Ελλάδα."
+          },
+          {
+            "name": "Shipowners' Mansions Walk",
+            "lat": 38.52,
+            "lng": 26.2017,
+            "type": "village",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "Walk the village lanes to see the surprisingly grand mansions. Most are summer homes for the families who now live in Athens, London or New York. The scale is striking for a village of 800 people.",
+            "name_el": "Περίπατος στα Αρχοντικά των Εφοπλιστών",
+            "desc_el": "Περπάτα τα στενά του χωριού για να δεις τα εκπληκτικά επιβλητικά αρχοντικά. Τα περισσότερα είναι εξοχικά για οικογένειες που τώρα ζουν στην Αθήνα, το Λονδίνο ή τη Νέα Υόρκη. Η κλίμακα εντυπωσιάζει για χωριό 800 κατοίκων."
+          },
+          {
+            "name": "Lunch — Harbour Taverna",
+            "lat": 38.5192,
+            "lng": 26.2022,
+            "type": "harbour",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "Two or three tavernas on the harbour serve excellent seafood at honest prices. The lobster pasta here is a local specialty.",
+            "name_el": "Μεσημεριανό — Ταβέρνα Λιμανιού",
+            "desc_el": "Δύο ή τρεις ταβέρνες στο λιμάνι σερβίρουν εξαιρετικά θαλασσινά σε ειλικρινείς τιμές. Τα ζυμαρικά με αστακό εδώ είναι τοπική σπεσιαλιτέ."
+          },
+          {
+            "name": "Zepaga Beach",
+            "lat": 38.5144,
+            "lng": 26.1978,
+            "type": "beach",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "The best beach on Oinousses — a pebble cove west of the village with clear water and a view toward Chios. Small, peaceful, a handful of sunbeds.",
+            "name_el": "Παραλία Ζεπάγα",
+            "desc_el": "Η καλύτερη παραλία των Οινουσσών — βότσαλος κόλπος δυτικά του χωριού με διαυγή νερά και θέα προς τη Χίο. Μικρή, ειρηνική, μια χούφτα ξαπλώστρες."
+          },
+          {
+            "name": "Departure",
+            "lat": 38.52,
+            "lng": 26.2017,
+            "type": "harbour",
+            "time": "18:30",
+            "wiki": null,
+            "desc": "Small ferry back to Chios (~40 min). Most visitors come as a day trip; those who stay overnight find a very different rhythm.",
+            "name_el": "Αναχώρηση",
+            "desc_el": "Μικρό πλοίο πίσω στη Χίο (~40 λεπτά). Οι περισσότεροι επισκέπτες έρχονται ως ημερήσια εκδρομή· όσοι μένουν βραδιά βρίσκουν εντελώς διαφορετικό ρυθμό."
+          }
+        ],
+        "title_el": "Λιμάνι, Μουσείο & Παραλία",
+        "overnight_el": "Στο χωριό"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 1 Ημέρας στις Οινούσσες",
+    "subtitle_el": "Το λιμάνι, το Ναυτικό Μουσείο, ένα μπάνιο στην παραλία Ζεπάγα, τα αρχοντικά των εφοπλιστών."
   },
-
   "beaches": [
     {
       "name": "Zepaga Beach",
@@ -39,7 +101,14 @@
       "facilities": "Basic: limited sunbeds, walking distance from village.",
       "desc": "The best beach on Oinousses — a small pebble cove a short walk from the main village. Clear water, views across to Chios, quiet even in high season. One of the calmest swims in the NE Aegean.",
       "commons": null,
-      "lat": 38.5144, "lng": 26.1978
+      "lat": 38.5144,
+      "lng": 26.1978,
+      "name_el": "Παραλία Ζεπάγα",
+      "type_el": "Λεπτά βότσαλα",
+      "depth_el": "Ρηχή έως μέτρια — πολύ διαυγή νερά",
+      "facing_el": "Νοτιοδυτικά — προστατευμένος κόλπος",
+      "facilities_el": "Στοιχειώδεις: περιορισμένες ξαπλώστρες, με τα πόδια από το χωριό.",
+      "desc_el": "Η καλύτερη παραλία των Οινουσσών — ένας μικρός βότσαλος κόλπος σύντομη πεζοπορία από το κύριο χωριό. Διαυγή νερά, θέες απέναντι προς τη Χίο, ήσυχη ακόμα και στην υψηλή περίοδο. Ένα από τα πιο ήρεμα μπάνια στο ΒΑ Αιγαίο."
     },
     {
       "name": "Apiganos Beach",
@@ -52,7 +121,17 @@
       "facilities": "None — remote, bring own supplies.",
       "desc": "A quieter beach further from the village — remote, undeveloped, with excellent snorkelling. Requires a 30-minute walk or a small boat.",
       "commons": null,
-      "lat": 38.5108, "lng": 26.2153
+      "lat": 38.5108,
+      "lng": 26.2153,
+      "name_el": "Παραλία Απίγανος",
+      "type_el": "Βότσαλα",
+      "depth_el": "Μέτρια — καλό ψαροντούφεκο",
+      "facing_el": "Νότια — προστατευμένη",
+      "facilities_el": "Καμία — απομακρυσμένη, πάρε προμήθειες.",
+      "desc_el": "Μια πιο ήσυχη παραλία μακρύτερα από το χωριό — απομακρυσμένη, ανέπαφη, με εξαιρετικό ψαροντούφεκο. Απαιτεί 30λεπτη πεζοπορία ή μικρή βάρκα."
     }
-  ]
+  ],
+  "name_el": "Οινούσσες",
+  "subtitle_el": "Το νησί των εφοπλιστών — μικροσκοπικό, πλούσιο, πολύ ήσυχο, πολύ κοντά στην Τουρκία",
+  "intro_el": "Οι Οινούσσες είναι ένα εξαιρετικό μικρό νησί με περίεργη ταυτότητα. Παρά τους μόλις 820 κατοίκους, έχει παραγάγει δυσανάλογο αριθμό από τις πιο εξέχουσες εφοπλιστικές οικογένειες της Ελλάδας — Λαιμός, Πατέρας, Λος, Χατζηπατέρας. Τα αρχοντικά στο λιμάνι είναι μεγαλύτερα και πιο επιβλητικά από ό,τι θα περίμενε κανείς από ένα τόσο μικρό μέρος. Απέχει 2 χλμ από τη Χίο και 8 χλμ από την Τουρκία. Η Ακαδημία Εμπορικού Ναυτικού βρίσκεται εδώ. Μια χούφτα ταβέρνες, δύο μικρά ξενοδοχεία, ήσυχες βότσαλες παραλίες και ένα νησί που υπερασπίζεται τον χαρακτήρα του απέναντι στον μαζικό τουρισμό. Για ταξιδιώτες που θέλουν νησί που μοιάζει κατοικημένο και πραγματικό, όχι τουριστικοποιημένο."
 }

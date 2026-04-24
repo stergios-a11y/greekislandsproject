@@ -3,7 +3,6 @@
   "name": "Psara",
   "subtitle": "The island of heroes — one of the great tragedies of the Greek Revolution",
   "intro": "Psara is one of the most sacred places in modern Greek history. During the Greek War of Independence (1821-1829), the tiny island contributed a fleet that was instrumental in several major Greek victories. In June 1824, the Ottoman navy attacked Psara. Rather than surrender, local defenders at the summit lit the powder magazine — the entire garrison and their families were killed in the explosion. Of 30,000 Psariots before the revolution, only a few hundred survived. The poet Dionysios Solomos wrote the famous epigram: 'On Psara's black ridge, Glory walks alone.' Today Psara is a quiet fishing island of 450 residents, with black pebble beaches, very few tourists, and a palpable weight of history.",
-
   "itinerary": {
     "title": "1-Day Psara Itinerary",
     "subtitle": "The monument of the black ridge, the village, a swim at Limnos beach.",
@@ -16,17 +15,80 @@
         "drive_mins": 20,
         "overnight": "The village",
         "stops": [
-          { "name": "Harbour Arrival", "lat": 38.5411, "lng": 25.5603, "type": "harbour", "time": "09:30", "wiki": "https://en.wikipedia.org/wiki/Psara", "desc": "Arrive at the tiny port on the south coast. The village is directly above it — low stone houses, blue shutters, surprisingly few people. Ferries to Psara are infrequent (a few times a week from Chios)." },
-          { "name": "Black Ridge Monument", "lat": 38.5567, "lng": 25.5614, "type": "castle", "time": "10:30", "wiki": "https://en.wikipedia.org/wiki/Destruction_of_Psara", "desc": "The site of the June 1824 explosion that ended the Greek population of Psara. The monument at the summit is inscribed with Solomos' famous epigram. One of the most haunting historical sites in Greece. The climb from the village takes 40 minutes and the views over the Aegean are vast." },
-          { "name": "Church of Agios Nikolaos", "lat": 38.5408, "lng": 25.5614, "type": "church", "time": "12:00", "wiki": null, "desc": "The main village church — houses relics and icons saved during the 1824 catastrophe. The church itself was rebuilt in the 19th century." },
-          { "name": "Lunch — Harbour Taverna", "lat": 38.5406, "lng": 25.5608, "type": "harbour", "time": "13:30", "wiki": null, "desc": "Three small tavernas operate on the harbour. Fresh fish and traditional Aegean dishes at unhurried, very reasonable prices. The lobster here is excellent and about a third of the Mykonos price." },
-          { "name": "Limnos Beach", "lat": 38.5489, "lng": 25.5347, "type": "beach", "time": "15:30", "wiki": null, "desc": "The best beach on Psara — black pebble, crystal clear water, a handful of sunbeds and a single beach bar. The west-facing location makes this one of the best sunset beaches in the NE Aegean." },
-          { "name": "Departure", "lat": 38.5411, "lng": 25.5603, "type": "harbour", "time": "18:00", "wiki": null, "desc": "Ferry back to Chios (~3-4 hrs) or Piraeus via other islands. Most visitors combine Psara with Chios or Lesvos." }
-        ]
+          {
+            "name": "Harbour Arrival",
+            "lat": 38.5411,
+            "lng": 25.5603,
+            "type": "harbour",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Psara",
+            "desc": "Arrive at the tiny port on the south coast. The village is directly above it — low stone houses, blue shutters, surprisingly few people. Ferries to Psara are infrequent (a few times a week from Chios).",
+            "name_el": "Άφιξη στο Λιμάνι",
+            "desc_el": "Άφιξη στο μικροσκοπικό λιμάνι της νότιας ακτής. Το χωριό είναι ακριβώς από πάνω — χαμηλά πέτρινα σπίτια, μπλε παντζούρια, εκπληκτικά λίγοι άνθρωποι. Τα πλοία για τα Ψαρά είναι αραιά (λίγες φορές την εβδομάδα από τη Χίο)."
+          },
+          {
+            "name": "Black Ridge Monument",
+            "lat": 38.5567,
+            "lng": 25.5614,
+            "type": "castle",
+            "time": "10:30",
+            "wiki": "https://en.wikipedia.org/wiki/Destruction_of_Psara",
+            "desc": "The site of the June 1824 explosion that ended the Greek population of Psara. The monument at the summit is inscribed with Solomos' famous epigram. One of the most haunting historical sites in Greece. The climb from the village takes 40 minutes and the views over the Aegean are vast.",
+            "name_el": "Μνημείο Μαύρης Ράχης",
+            "desc_el": "Η θέση της έκρηξης του Ιουνίου 1824 που έκλεισε την ελληνική παρουσία στα Ψαρά. Το μνημείο στην κορυφή φέρει χαραγμένο το διάσημο επίγραμμα του Σολωμού. Ένας από τους πιο στοιχειωμένους ιστορικούς χώρους της Ελλάδας. Η ανάβαση από το χωριό παίρνει 40 λεπτά και οι θέες πάνω από το Αιγαίο είναι αχανείς."
+          },
+          {
+            "name": "Church of Agios Nikolaos",
+            "lat": 38.5408,
+            "lng": 25.5614,
+            "type": "church",
+            "time": "12:00",
+            "wiki": null,
+            "desc": "The main village church — houses relics and icons saved during the 1824 catastrophe. The church itself was rebuilt in the 19th century.",
+            "name_el": "Εκκλησία Αγίου Νικολάου",
+            "desc_el": "Η κύρια εκκλησία του χωριού — φιλοξενεί λείψανα και εικόνες που σώθηκαν κατά την καταστροφή του 1824. Η ίδια η εκκλησία αναχτίστηκε τον 19ο αιώνα."
+          },
+          {
+            "name": "Lunch — Harbour Taverna",
+            "lat": 38.5406,
+            "lng": 25.5608,
+            "type": "harbour",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "Three small tavernas operate on the harbour. Fresh fish and traditional Aegean dishes at unhurried, very reasonable prices. The lobster here is excellent and about a third of the Mykonos price.",
+            "name_el": "Μεσημεριανό — Ταβέρνα Λιμανιού",
+            "desc_el": "Τρεις μικρές ταβέρνες λειτουργούν στο λιμάνι. Φρέσκο ψάρι και παραδοσιακά αιγαιοπελαγίτικα πιάτα σε αβίαστες, πολύ λογικές τιμές. Ο αστακός εδώ είναι εξαιρετικός και περίπου στο ένα τρίτο της τιμής της Μυκόνου."
+          },
+          {
+            "name": "Limnos Beach",
+            "lat": 38.5489,
+            "lng": 25.5347,
+            "type": "beach",
+            "time": "15:30",
+            "wiki": null,
+            "desc": "The best beach on Psara — black pebble, crystal clear water, a handful of sunbeds and a single beach bar. The west-facing location makes this one of the best sunset beaches in the NE Aegean.",
+            "name_el": "Παραλία Λήμνος",
+            "desc_el": "Η καλύτερη παραλία των Ψαρών — μαύρα βότσαλα, κρυστάλλινα νερά, μια χούφτα ξαπλώστρες και ένα μόνο beach bar. Η δυτική διάθεση την κάνει μία από τις καλύτερες παραλίες ηλιοβασιλέματος του ΒΑ Αιγαίου."
+          },
+          {
+            "name": "Departure",
+            "lat": 38.5411,
+            "lng": 25.5603,
+            "type": "harbour",
+            "time": "18:00",
+            "wiki": null,
+            "desc": "Ferry back to Chios (~3-4 hrs) or Piraeus via other islands. Most visitors combine Psara with Chios or Lesvos.",
+            "name_el": "Αναχώρηση",
+            "desc_el": "Πλοίο πίσω στη Χίο (~3-4 ώρες) ή στον Πειραιά μέσω άλλων νησιών. Οι περισσότεροι επισκέπτες συνδυάζουν τα Ψαρά με τη Χίο ή τη Λέσβο."
+          }
+        ],
+        "title_el": "Μαύρη Ράχη & το Χωριό",
+        "overnight_el": "Στο χωριό"
       }
-    ]
+    ],
+    "title_el": "Πρόγραμμα 1 Ημέρας στα Ψαρά",
+    "subtitle_el": "Το μνημείο στη μαύρη ράχη, το χωριό, ένα μπάνιο στην παραλία Λήμνος."
   },
-
   "beaches": [
     {
       "name": "Limnos Beach",
@@ -39,7 +101,14 @@
       "facilities": "Basic: one taverna, limited sunbeds.",
       "desc": "The finest beach on Psara — a wild west-coast pebble beach with extraordinarily clear water and one of the best sunsets in the NE Aegean. The setting is entirely undeveloped. Getting here requires a scooter or arrangement with the village.",
       "commons": null,
-      "lat": 38.5489, "lng": 25.5347
+      "lat": 38.5489,
+      "lng": 25.5347,
+      "name_el": "Παραλία Λήμνος",
+      "type_el": "Λεπτά μαύρα βότσαλα",
+      "depth_el": "Μέτρια — κρυστάλλινη",
+      "facing_el": "Δυτικά — εξαιρετικά ηλιοβασιλέματα",
+      "facilities_el": "Στοιχειώδεις: μία ταβέρνα, περιορισμένες ξαπλώστρες.",
+      "desc_el": "Η καλύτερη παραλία των Ψαρών — άγρια βότσαλη παραλία της δυτικής ακτής με εξαιρετικά διαυγή νερά και ένα από τα καλύτερα ηλιοβασιλέματα στο ΒΑ Αιγαίο. Το σκηνικό είναι εντελώς ανέπαφο. Η πρόσβαση εδώ απαιτεί σκούτερ ή συμφωνία με το χωριό."
     },
     {
       "name": "Kato Gialos",
@@ -52,7 +121,17 @@
       "facilities": "Basic: close to village, snack bar.",
       "desc": "The village beach — short walk from the harbour. Sand and pebble, calm sheltered water, easy facilities. Good for a quick morning or evening swim without organising transport.",
       "commons": null,
-      "lat": 38.5389, "lng": 25.5611
+      "lat": 38.5389,
+      "lng": 25.5611,
+      "name_el": "Κάτω Γιαλός",
+      "type_el": "Άμμος και βότσαλα",
+      "depth_el": "Ρηχή — οικογενειακή",
+      "facing_el": "Νότια — προστατευμένη",
+      "facilities_el": "Στοιχειώδεις: κοντά στο χωριό, σνακ μπαρ.",
+      "desc_el": "Η παραλία του χωριού — σύντομη πεζοπορία από το λιμάνι. Άμμος και βότσαλα, ήρεμα προστατευμένα νερά, εύκολες υποδομές. Καλή για σύντομο πρωινό ή βραδινό μπάνιο χωρίς οργάνωση μεταφοράς."
     }
-  ]
+  ],
+  "name_el": "Ψαρά",
+  "subtitle_el": "Το νησί των ηρώων — μία από τις μεγάλες τραγωδίες της Ελληνικής Επανάστασης",
+  "intro_el": "Τα Ψαρά είναι ένα από τα πιο ιερά σημεία στη σύγχρονη ελληνική ιστορία. Κατά την Ελληνική Επανάσταση (1821-1829), το μικροσκοπικό νησί συνεισέφερε στόλο που ήταν καθοριστικός σε αρκετές μεγάλες ελληνικές νίκες. Τον Ιούνιο του 1824, ο οθωμανικός στόλος επιτέθηκε στα Ψαρά. Αντί να παραδοθούν, οι τοπικοί υπερασπιστές στην κορυφή άναψαν την πυριτιδαποθήκη — ολόκληρη η φρουρά και οι οικογένειές τους σκοτώθηκαν στην έκρηξη. Από τους 30.000 Ψαριανούς πριν την επανάσταση, επέζησαν μόνο λίγες εκατοντάδες. Ο ποιητής Διονύσιος Σολωμός έγραψε το διάσημο επίγραμμα: «Στων Ψαρών την ολόμαυρη ράχη, περπατώντας η Δόξα μονάχη». Σήμερα τα Ψαρά είναι ένα ήσυχο ψαρονήσι με 450 κατοίκους, μαύρες βότσαλες παραλίες, πολύ λίγους τουρίστες, και αισθητό βάρος ιστορίας."
 }
