@@ -13,7 +13,7 @@
         "color": "#1B4F8A",
         "km": 20,
         "drive_mins": 25,
-        "overnight": "Agios Nikolaos or Elounda",
+        "overnight": "Agios Nikolaos",
         "stops": [
           {
             "name": "Agios Nikolaos Town",
@@ -66,13 +66,13 @@
             "type": "harbour",
             "time": "20:00",
             "wiki": null,
-            "desc": "One of the best seafood restaurants in Lasithi, right on the Elounda waterfront. Try the lobster pasta — a local speciality.",
+            "desc": "One of the best seafood restaurants in Lasithi, right on the Elounda waterfront. Try the lobster pasta — a local speciality. Then drive back to Agios Nikolaos for the night, just 15 minutes east.",
             "name_el": "Δείπνο — Ferryman Elounda",
-            "desc_el": "Ένα από τα καλύτερα ψαροεστιατόρια του Λασιθίου, ακριβώς στην παραλιακή της Ελούντας. Δοκίμασε τη μακαρονάδα με αστακό — τοπική σπεσιαλιτέ."
+            "desc_el": "Ένα από τα καλύτερα εστιατόρια ψαρικών στο Λασίθι, στην παραλιακή της Ελούντας. Δοκίμασε τα μακαρόνια με αστακό — τοπική σπεσιαλιτέ. Μετά πίσω στον Άγιο Νικόλαο για διανυκτέρευση, μόλις 15 λεπτά ανατολικά."
           }
         ],
         "title_el": "Άγιος Νικόλαος & Ελούντα",
-        "overnight_el": "Άγιος Νικόλαος ή Ελούντα"
+        "overnight_el": "Άγιος Νικόλαος"
       },
       {
         "day": 2,
@@ -136,7 +136,7 @@
         "color": "#5A7A3A",
         "km": 110,
         "drive_mins": 120,
-        "overnight": "Sitia or Palekastro",
+        "overnight": "Sitia",
         "stops": [
           {
             "name": "Sitia Town",
@@ -178,20 +178,20 @@
             "type": "village",
             "time": "15:00",
             "wiki": null,
-            "desc": "Quiet village near an extensive Minoan settlement. The nearby Kouremenos beach is the windsurfing capital of Crete.",
+            "desc": "Quiet village near an extensive Minoan settlement. The nearby Kouremenos beach is the windsurfing capital of Crete — worth a stop on the way back to Sitia for the night.",
             "name_el": "Παλαίκαστρο",
-            "desc_el": "Ήσυχο χωριό κοντά σε εκτεταμένο μινωικό οικισμό. Η κοντινή παραλία Κουρεμένος είναι η πρωτεύουσα του windsurf στην Κρήτη."
+            "desc_el": "Ήσυχο χωριό κοντά σε εκτεταμένο μινωικό οικισμό. Η κοντινή παραλία Κουρεμένος είναι η πρωτεύουσα του windsurf στην Κρήτη — αξίζει στάση στον δρόμο προς τη Σητεία για διανυκτέρευση."
           }
         ],
         "title_el": "Φοινικόδασος του Βάι & Άπω Ανατολή",
-        "overnight_el": "Σητεία ή Παλαίκαστρο"
+        "overnight_el": "Σητεία"
       },
       {
         "day": 4,
         "title": "Zakros & the Valley of the Dead",
         "color": "#C4962A",
-        "km": 60,
-        "drive_mins": 70,
+        "km": 210,
+        "drive_mins": 210,
         "overnight": null,
         "stops": [
           {
@@ -232,14 +232,26 @@
             "lat": 35.0167,
             "lng": 25.9733,
             "type": "beach",
-            "time": "16:30",
+            "time": "15:30",
             "wiki": null,
-            "desc": "Long, organised beach on the south coast on the drive back west. Good for a final swim before the return journey.",
+            "desc": "Long, organised beach on the south coast — a good final swim before the long drive west. From here it's about 110 km / 1.5 hours back to Heraklion airport along the coastal road.",
             "name_el": "Παραλία Μακρύγιαλος",
-            "desc_el": "Μακριά, οργανωμένη παραλία στη νότια ακτή στη διαδρομή πίσω προς τα δυτικά. Καλή για ένα τελευταίο μπάνιο πριν την επιστροφή."
+            "desc_el": "Μακριά οργανωμένη παραλία στη νότια ακτή — καλή τελευταία βουτιά πριν τη μακριά δυτική διαδρομή. Από εδώ είναι περίπου 110 χλμ. / 1.5 ώρα πίσω στο αεροδρόμιο Ηρακλείου, παράλληλα με την ακτή."
+          },
+          {
+            "name": "Heraklion — Departure",
+            "name_el": "Ηράκλειο — Αναχώρηση",
+            "time": "18:00",
+            "type": "departure",
+            "desc": "Arrive at Heraklion for ferry or flight. The longest single drive of the trip — but the Libyan Sea on your right the whole way back makes it bearable.",
+            "desc_el": "Άφιξη στο Ηράκλειο για πλοίο ή αεροπλάνο. Η μακρύτερη συνεχόμενη οδική διαδρομή του ταξιδιού — αλλά το Λιβυκό Πέλαγος στα δεξιά σου όλο τον δρόμο κάνει την επιστροφή υποφερτή.",
+            "lat": 35.3387,
+            "lng": 25.1442,
+            "wiki": "https://en.wikipedia.org/wiki/Heraklion"
           }
         ],
-        "title_el": "Ζάκρος & το Φαράγγι των Νεκρών"
+        "title_el": "Ζάκρος & το Φαράγγι των Νεκρών",
+        "overnight_el": null
       }
     ],
     "title_el": "Πρόγραμμα 4 Ημερών στο Λασίθι",

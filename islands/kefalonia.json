@@ -76,11 +76,67 @@
       },
       {
         "day": 2,
-        "title": "Myrtos & Assos",
+        "title": "Robola Wine Country & the South",
+        "color": "#C4962A",
+        "km": 55,
+        "drive_mins": 65,
+        "overnight": "Argostoli",
+        "stops": [
+          {
+            "name": "Robola Wine Cooperative",
+            "lat": 38.1617,
+            "lng": 20.55,
+            "type": "distillery",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Taste Kefalonia's famous Robola — a crisp, dry white wine made only on this island. The cooperative in Fragata is the best place to taste and buy. Free tasting.",
+            "name_el": "Συνεταιρισμός Κρασιού Ρόπολα",
+            "desc_el": "Δοκίμασε τη διάσημη Ροπόλα της Κεφαλονιάς — ένα ξηρό, τραγανό λευκό κρασί που παράγεται μόνο σε αυτό το νησί. Ο συνεταιρισμός στα Φραγκάτα είναι το καλύτερο σημείο για γευσιγνωσία και αγορά. Δωρεάν δοκιμή."
+          },
+          {
+            "name": "Mount Ainos National Park",
+            "lat": 38.1333,
+            "lng": 20.65,
+            "type": "nature",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Ainos_National_Park",
+            "desc": "Dense forest of Abies cephalonica — a fir tree found only on this island. Drive through the park for views over the entire island and across to the mainland.",
+            "name_el": "Εθνικός Δρυμός Αίνου",
+            "desc_el": "Πυκνό δάσος Abies cephalonica — ένα είδος ελάτου που υπάρχει μόνο σε αυτό το νησί. Οδήγησε μέσα από το πάρκο για θέα σε ολόκληρο το νησί και απέναντι στην ηπειρωτική χώρα."
+          },
+          {
+            "name": "Lourdas Beach",
+            "lat": 38.1247,
+            "lng": 20.61,
+            "type": "beach",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Long, sandy, south-facing beach with Ionian views — one of the best on the island. Loggerhead sea turtles nest here. The tavernas above on the hill have the best view of any restaurant in Kefalonia.",
+            "name_el": "Παραλία Λουρδάτα",
+            "desc_el": "Μακριά, αμμώδης, νότια παραλία με θέα στο Ιόνιο — μία από τις καλύτερες του νησιού. Θαλάσσιες χελώνες καρέτα γεννούν εδώ. Οι ταβέρνες ψηλά στον λόφο έχουν την καλύτερη θέα από κάθε εστιατόριο της Κεφαλονιάς."
+          },
+          {
+            "name": "Skala Beach",
+            "lat": 38.0617,
+            "lng": 20.7483,
+            "type": "beach",
+            "time": "16:30",
+            "wiki": null,
+            "desc": "Sandy south-coast resort beach. Calm, shallow, family-friendly. Roman villa ruins just behind the beach are free to visit.",
+            "name_el": "Παραλία Σκάλας",
+            "desc_el": "Αμμώδης παραλία θερέτρου της νότιας ακτής. Ήρεμη, ρηχή, οικογενειακή. Ερείπια ρωμαϊκής βίλας ακριβώς πίσω από την παραλία είναι δωρεάν επισκέψιμα."
+          }
+        ],
+        "title_el": "Οινοχώρα Ρομπόλας & ο Νότος",
+        "overnight_el": "Αργοστόλι"
+      },
+      {
+        "day": 3,
+        "title": "Myrtos, Assos & Fiscardo",
         "color": "#C0522A",
-        "km": 50,
-        "drive_mins": 60,
-        "overnight": "Fiscardo",
+        "km": 85,
+        "drive_mins": 110,
+        "overnight": "Sami",
         "stops": [
           {
             "name": "Myrtos Beach Viewpoint",
@@ -133,20 +189,20 @@
             "type": "harbour",
             "time": "17:30",
             "wiki": "https://en.wikipedia.org/wiki/Fiscardo",
-            "desc": "The only village in Kefalonia that survived the 1953 earthquake intact — a perfect Venetian harbour with colourful houses and superyachts. Most expensive spot on the island. Stay overnight.",
+            "desc": "The only village in Kefalonia that survived the 1953 earthquake intact — a perfect Venetian harbour with colourful houses and superyachts. Most expensive spot on the island. Coffee or an early dinner before the drive on to Sami.",
             "name_el": "Φισκάρδο",
-            "desc_el": "Το μόνο χωριό της Κεφαλονιάς που σώθηκε άθικτο από τον σεισμό του 1953 — ένα τέλειο βενετσιάνικο λιμάνι με χρωματιστά σπίτια και superyachts. Το πιο ακριβό σημείο του νησιού. Διανυκτέρευση εδώ."
+            "desc_el": "Το μόνο χωριό της Κεφαλονιάς που σώθηκε άθικτο από τον σεισμό του 1953 — ένα τέλειο βενετσιάνικο λιμάνι με χρωματιστά σπίτια και superyachts. Το πιο ακριβό σημείο του νησιού. Καφές ή νωρίτερο δείπνο, πριν οδηγήσεις προς τη Σάμη."
           }
         ],
-        "title_el": "Μύρτος & Άσσος",
-        "overnight_el": "Φισκάρδο"
+        "title_el": "Μύρτος, Άσσος & Φισκάρδο",
+        "overnight_el": "Σάμη"
       },
       {
-        "day": 3,
+        "day": 4,
         "title": "Melissani Cave & Sami",
         "color": "#5A7A3A",
-        "km": 40,
-        "drive_mins": 50,
+        "km": 25,
+        "drive_mins": 35,
         "overnight": "Sami",
         "stops": [
           {
@@ -198,67 +254,11 @@
         "overnight_el": "Σάμη"
       },
       {
-        "day": 4,
-        "title": "Robola Wine Country & the South",
-        "color": "#C4962A",
-        "km": 55,
-        "drive_mins": 65,
-        "overnight": "Skala",
-        "stops": [
-          {
-            "name": "Robola Wine Cooperative",
-            "lat": 38.1617,
-            "lng": 20.55,
-            "type": "distillery",
-            "time": "10:00",
-            "wiki": null,
-            "desc": "Taste Kefalonia's famous Robola — a crisp, dry white wine made only on this island. The cooperative in Fragata is the best place to taste and buy. Free tasting.",
-            "name_el": "Συνεταιρισμός Κρασιού Ρόπολα",
-            "desc_el": "Δοκίμασε τη διάσημη Ροπόλα της Κεφαλονιάς — ένα ξηρό, τραγανό λευκό κρασί που παράγεται μόνο σε αυτό το νησί. Ο συνεταιρισμός στα Φραγκάτα είναι το καλύτερο σημείο για γευσιγνωσία και αγορά. Δωρεάν δοκιμή."
-          },
-          {
-            "name": "Mount Ainos National Park",
-            "lat": 38.1333,
-            "lng": 20.65,
-            "type": "nature",
-            "time": "11:30",
-            "wiki": "https://en.wikipedia.org/wiki/Ainos_National_Park",
-            "desc": "Dense forest of Abies cephalonica — a fir tree found only on this island. Drive through the park for views over the entire island and across to the mainland.",
-            "name_el": "Εθνικός Δρυμός Αίνου",
-            "desc_el": "Πυκνό δάσος Abies cephalonica — ένα είδος ελάτου που υπάρχει μόνο σε αυτό το νησί. Οδήγησε μέσα από το πάρκο για θέα σε ολόκληρο το νησί και απέναντι στην ηπειρωτική χώρα."
-          },
-          {
-            "name": "Lourdas Beach",
-            "lat": 38.1247,
-            "lng": 20.61,
-            "type": "beach",
-            "time": "14:00",
-            "wiki": null,
-            "desc": "Long, sandy, south-facing beach with Ionian views — one of the best on the island. Loggerhead sea turtles nest here. The tavernas above on the hill have the best view of any restaurant in Kefalonia.",
-            "name_el": "Παραλία Λουρδάτα",
-            "desc_el": "Μακριά, αμμώδης, νότια παραλία με θέα στο Ιόνιο — μία από τις καλύτερες του νησιού. Θαλάσσιες χελώνες καρέτα γεννούν εδώ. Οι ταβέρνες ψηλά στον λόφο έχουν την καλύτερη θέα από κάθε εστιατόριο της Κεφαλονιάς."
-          },
-          {
-            "name": "Skala Beach",
-            "lat": 38.0617,
-            "lng": 20.7483,
-            "type": "beach",
-            "time": "16:30",
-            "wiki": null,
-            "desc": "Sandy south-coast resort beach. Calm, shallow, family-friendly. Roman villa ruins just behind the beach are free to visit.",
-            "name_el": "Παραλία Σκάλας",
-            "desc_el": "Αμμώδης παραλία θερέτρου της νότιας ακτής. Ήρεμη, ρηχή, οικογενειακή. Ερείπια ρωμαϊκής βίλας ακριβώς πίσω από την παραλία είναι δωρεάν επισκέψιμα."
-          }
-        ],
-        "title_el": "Οινοχώρα Ρομπόλας & ο Νότος",
-        "overnight_el": "Σκάλα"
-      },
-      {
         "day": 5,
         "title": "Poros & the East Coast",
         "color": "#7B5EA7",
-        "km": 35,
-        "drive_mins": 45,
+        "km": 50,
+        "drive_mins": 60,
         "overnight": null,
         "stops": [
           {
@@ -306,7 +306,8 @@
             "desc_el": "Επιστροφή στο Αργοστόλι για αναχώρηση πλοίου ή πτήσης. Τελευταίος καφές στην παραλιακή κοιτάζοντας τις χελώνες."
           }
         ],
-        "title_el": "Πόρος & η Ανατολική Ακτή"
+        "title_el": "Πόρος & η Ανατολική Ακτή",
+        "overnight_el": null
       }
     ],
     "title_el": "Πρόγραμμα 5 Ημερών στην Κεφαλονιά",

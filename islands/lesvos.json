@@ -9,7 +9,7 @@
     "days": [
       {
         "day": 1,
-        "title": "Mytilene & the South",
+        "title": "Mytilini & the East → Plomari",
         "color": "#1B4F8A",
         "km": 55,
         "drive_mins": 65,
@@ -88,16 +88,16 @@
             "desc_el": "«Το Καφενείον» Meat Stories στο Πλωμάρι — ψητά κρέατα και τοπικό κρασί σε παραδοσιακή ατμόσφαιρα. Διανυκτέρευση στο Πλωμάρι."
           }
         ],
-        "title_el": "Μυτιλήνη & Νότος",
+        "title_el": "Μυτιλήνη & η Ανατολή → Πλωμάρι",
         "overnight_el": "Πλωμάρι"
       },
       {
         "day": 2,
-        "title": "Plomari & Ouzo Country",
+        "title": "Plomari, Ouzo & West to Skala Eresou",
         "color": "#C0522A",
-        "km": 62,
-        "drive_mins": 75,
-        "overnight": "Vatera",
+        "km": 115,
+        "drive_mins": 130,
+        "overnight": "Skala Eresou",
         "stops": [
           {
             "name": "Plomari",
@@ -154,41 +154,40 @@
             "type": "beach",
             "time": "16:00",
             "wiki": "https://en.wikipedia.org/wiki/Vatera",
-            "desc": "8 km of uninterrupted golden sand. Long afternoon swim. Stay overnight at Vatera.",
+            "desc": "8 km of uninterrupted golden sand. Long afternoon swim, then drive west along the southern coast to Skala Eresou — about 50 minutes.",
             "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776895439/vatera_f641je.jpg",
             "name_el": "Παραλία Βατερών",
-            "desc_el": "Η μεγαλύτερη οργανωμένη παραλία του νησιού — 8 χλμ άμμου. Τα απογεύματα μαζεύει τους ντόπιους. Διανυκτέρευση εδώ."
+            "desc_el": "8 χιλιόμετρα συνεχόμενης χρυσής άμμου. Μακρύ απογευματινό μπάνιο, και μετά οδική διαδρομή δυτικά κατά μήκος της νότιας ακτής προς τη Σκάλα Ερεσού — περίπου 50 λεπτά."
+          },
+          {
+            "name": "Skala Eresou",
+            "name_el": "Σκάλα Ερεσού",
+            "time": "18:30",
+            "type": "arrival",
+            "desc": "Arrive at the birthplace of Sappho — a laid-back beach village on a long sandy bay facing the open Aegean. Settle in, then drinks at Parasol on the seafront before dinner.",
+            "desc_el": "Άφιξη στη γενέτειρα της Σαπφούς — χαλαρό παραλιακό χωριό σε μακρύ αμμώδη κόλπο που κοιτάζει το ανοιχτό Αιγαίο. Τακτοποίηση, και μετά ποτό στο Parasol στην παραλία πριν το δείπνο.",
+            "lat": 39.1474,
+            "lng": 25.9272,
+            "wiki": "https://en.wikipedia.org/wiki/Eresos"
           }
         ],
-        "title_el": "Πλωμάρι & η Χώρα του Ούζου",
-        "overnight_el": "Βατερά"
+        "title_el": "Πλωμάρι, Ούζο & Δυτικά προς τη Σκάλα Ερεσού",
+        "overnight_el": "Σκάλα Ερεσού"
       },
       {
         "day": 3,
         "title": "Sigri & Petrified Forest",
         "color": "#5A7A3A",
-        "km": 90,
-        "drive_mins": 100,
+        "km": 75,
+        "drive_mins": 85,
         "overnight": "Skala Eresou",
         "stops": [
-          {
-            "name": "Vatera",
-            "lat": 38.9432,
-            "lng": 26.1872,
-            "type": "beach",
-            "time": "09:00",
-            "wiki": null,
-            "desc": "Depart west along the southern coastal road.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776896535/vatera_2_bc2fsl.jpg",
-            "name_el": "Βατερά",
-            "desc_el": "Πρωινό μπάνιο πριν ξεκινήσεις δυτικά. Πάρε μαζί νερό — η διαδρομή είναι ερημική."
-          },
           {
             "name": "Petrified Forest",
             "lat": 39.2112,
             "lng": 25.978,
             "type": "nature",
-            "time": "11:00",
+            "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Lesvos_Petrified_Forest",
             "desc": "UNESCO-listed Petrified Forest — 20 million year old trees turned to stone by volcanic ash. Allow 1.5 hours.",
             "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776895441/petrifiedforest_elzmpo.webp",
@@ -200,7 +199,7 @@
             "lat": 39.2087,
             "lng": 25.8568,
             "type": "harbour",
-            "time": "13:00",
+            "time": "12:30",
             "wiki": "https://en.wikipedia.org/wiki/Sigri",
             "desc": "Westernmost village. Lunch at the harbour with fresh fish. Visit the Natural History Museum.",
             "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776895436/sigri_wgxpx5.jpg",
@@ -212,7 +211,7 @@
             "lat": 39.2089,
             "lng": 25.8533,
             "type": "beach",
-            "time": "15:00",
+            "time": "14:30",
             "wiki": null,
             "desc": "Wild, exposed beach north of Sigri with dramatic cliffs and vivid turquoise water.",
             "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776896653/faneromeni_tgemf6.jpg",
@@ -224,12 +223,12 @@
             "lat": 39.1489,
             "lng": 25.9381,
             "type": "beach",
-            "time": "17:30",
+            "time": "17:00",
             "wiki": "https://en.wikipedia.org/wiki/Eresos",
-            "desc": "Birthplace of the poet Sappho. Laid-back beach village with a long sandy bay facing the open Aegean. Drinks at Parasol on the waterfront for the sunset, then dinner at a beachfront taverna. Stay overnight.",
+            "desc": "Return to Skala Eresou for a final swim on the long beach. Dinner on the seafront — the village has the best sunsets in Lesvos.",
             "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776880593/lesvos-eressos_xdd7yf.jpg",
             "name_el": "Σκάλα Ερεσού",
-            "desc_el": "Γενέτειρα της ποιήτριας Σαπφούς. Χαλαρό παραθαλάσσιο χωριό με μεγάλη αμμώδη παραλία που βλέπει στο ανοιχτό Αιγαίο. Ποτό στο Parasol στην παραλία για το ηλιοβασίλεμα, μετά βραδινό σε ταβέρνα πάνω στην άμμο. Διανυκτέρευση."
+            "desc_el": "Επιστροφή στη Σκάλα Ερεσού για μια τελευταία βουτιά στη μακρά παραλία. Δείπνο στην παραλία — το χωριό έχει τα καλύτερα ηλιοβασιλέματα στη Λέσβο."
           }
         ],
         "title_el": "Σίγρι & Πετρωμένο Δάσος",
@@ -308,7 +307,7 @@
         "color": "#7B5EA7",
         "km": 40,
         "drive_mins": 50,
-        "overnight": "Petra",
+        "overnight": "Molyvos",
         "stops": [
           {
             "name": "Molyvos Castle",
@@ -361,9 +360,9 @@
             "type": "nature",
             "time": "17:00",
             "wiki": "https://en.wikipedia.org/wiki/Lepetymnos",
-            "desc": "The highest peak of northern Lesvos at 968 m. Pine forests, views of both coastlines. Stay overnight in Petra.",
+            "desc": "The highest peak of northern Lesvos at 968 m. Pine forests, views of both coastlines and across to Turkey on a clear day. Drive back down to Molyvos for dinner under the castle walls.",
             "name_el": "Κορυφή Λεπέτυμνου",
-            "desc_el": "Η υψηλότερη κορυφή της βόρειας Λέσβου στα 968 μ. Πευκοδάση, θέα 360°. Περίπου μία ώρα από τον Μόλυβο με αυτοκίνητο."
+            "desc_el": "Η ψηλότερη κορυφή της βόρειας Λέσβου στα 968 μ. Πευκοδάση, θέα και προς τις δύο ακτές και προς την Τουρκία τις καθαρές μέρες. Οδική διαδρομή πίσω στον Μόλυβο για δείπνο κάτω από τα τείχη του κάστρου."
           }
         ],
         "title_el": "Μόλυβος, Πέτρα & ο Βορράς",
@@ -423,7 +422,7 @@
           }
         ],
         "title_el": "Ανατολική Λέσβος & Αναχώρηση",
-        "overnight_el": "—"
+        "overnight_el": null
       }
     ],
     "title_el": "6-ήμερη Περιήγηση Λέσβου",

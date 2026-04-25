@@ -304,10 +304,14 @@ def render_body(key, data, meta, lang='en'):
             overnight_label = 'Overnight' if lang == 'en' else 'Διανυκτέρευση'
             drive_label = 'Drive' if lang == 'en' else 'Οδήγηση'
             day_label = 'Day' if lang == 'en' else 'Μέρα'
+            if overnight:
+                meta_line = f'{overnight_label}: <strong>{overnight}</strong> · {drive_label}: {km} km, ~{drive_mins} min'
+            else:
+                meta_line = f'{drive_label}: {km} km, ~{drive_mins} min'
             day_blocks.append(f'''
 <section class="seo-day">
   <h3>{day_label} {day_num}: {day_title}</h3>
-  <p class="seo-day-meta">{overnight_label}: <strong>{overnight}</strong> · {drive_label}: {km} km, ~{drive_mins} min</p>
+  <p class="seo-day-meta">{meta_line}</p>
   <ol class="seo-stops">
     {"".join(stop_items)}
   </ol>

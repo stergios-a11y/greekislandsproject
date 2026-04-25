@@ -83,249 +83,15 @@
           }
         ],
         "title_el": "Παλιά Πόλη της Ρόδου & ο Βορράς",
-        "overnight_el": "Πόλη Ρόδου"
+        "overnight_el": "Πόλη της Ρόδου"
       },
       {
         "day": 2,
-        "title": "East Coast — Anthony Quinn to Tsambika",
-        "color": "#C0522A",
-        "km": 55,
-        "drive_mins": 65,
-        "overnight": "Archangelos or Kolymbia",
-        "stops": [
-          {
-            "name": "Rhodes Town",
-            "lat": 36.4413,
-            "lng": 28.2226,
-            "type": "city",
-            "time": "09:00",
-            "wiki": null,
-            "desc": "Depart south along the scenic east coast road.",
-            "name_el": "Πόλη Ρόδου",
-            "desc_el": "Αναχώρηση νότια κατά μήκος του γραφικού δρόμου της ανατολικής ακτής."
-          },
-          {
-            "name": "Anthony Quinn Bay",
-            "lat": 36.3481,
-            "lng": 28.2189,
-            "type": "beach",
-            "time": "10:00",
-            "wiki": "https://en.wikipedia.org/wiki/Anthony_Quinn_Bay",
-            "desc": "Iconic emerald cove named after the actor who filmed The Guns of Navarone here. Extraordinary clarity — bring a snorkel.",
-            "name_el": "Όρμος Άντονι Κουίν",
-            "desc_el": "Εμβληματικός σμαραγδένιος κόλπος που ονομάστηκε από τον ηθοποιό που γύρισε εδώ Τα Κανόνια του Ναβαρόνε. Εκπληκτική διαύγεια — φέρε snorkel."
-          },
-          {
-            "name": "Ladiko Beach",
-            "lat": 36.3489,
-            "lng": 28.2183,
-            "type": "beach",
-            "time": "11:30",
-            "wiki": null,
-            "desc": "Secluded pebble bay just 5 minutes walk from Anthony Quinn. Rocky seabed excellent for snorkelling, fewer crowds.",
-            "name_el": "Παραλία Λαδικό",
-            "desc_el": "Απομονωμένος κόλπος με βότσαλο μόλις 5 λεπτά με τα πόδια από τον Άντονι Κουίν. Βραχώδης βυθός εξαιρετικός για snorkelling, λιγότερα πλήθη."
-          },
-          {
-            "name": "Tsambika Beach",
-            "lat": 36.2294,
-            "lng": 28.1642,
-            "type": "beach",
-            "time": "13:30",
-            "wiki": "https://en.wikipedia.org/wiki/Tsambika_beach",
-            "desc": "The best family beach on Rhodes — long golden sand, shallow water, excellent facilities. Lunch at one of the beach tavernas.",
-            "name_el": "Παραλία Τσαμπίκα",
-            "desc_el": "Η καλύτερη οικογενειακή παραλία της Ρόδου — μακριά χρυσή άμμος, ρηχά νερά, εξαιρετικές υπηρεσίες. Μεσημεριανό σε μία από τις παραλιακές ταβέρνες."
-          },
-          {
-            "name": "Tsambika Monastery",
-            "lat": 36.28,
-            "lng": 28.1617,
-            "type": "church",
-            "time": "16:00",
-            "wiki": null,
-            "desc": "Climb the 300 steps to the hilltop Byzantine monastery for sweeping views over the coast and beach below.",
-            "name_el": "Μοναστήρι Τσαμπίκας",
-            "desc_el": "Ανέβα τα 300 σκαλοπάτια στο βυζαντινό μοναστήρι στην κορυφή του λόφου για σαρωτική θέα στην ακτή και την παραλία από κάτω."
-          },
-          {
-            "name": "Archangelos Village",
-            "lat": 36.2133,
-            "lng": 28.1183,
-            "type": "village",
-            "time": "17:30",
-            "wiki": "https://en.wikipedia.org/wiki/Archangelos,_Rhodes",
-            "desc": "Traditional village famous for handmade leather goods and ceramics. Browse the craft workshops. Stay overnight nearby.",
-            "name_el": "Χωριό Αρχάγγελος",
-            "desc_el": "Παραδοσιακό χωριό διάσημο για τα χειροποίητα δερμάτινα και την κεραμική. Δες τα εργαστήρια χειροτεχνίας. Διανυκτέρευση κοντά."
-          }
-        ],
-        "title_el": "Ανατολική Ακτή — Αντώνης Κουίν προς Τσαμπίκα",
-        "overnight_el": "Αρχάγγελος ή Κολύμπια"
-      },
-      {
-        "day": 3,
-        "title": "Lindos — Acropolis & St Paul's Bay",
-        "color": "#5A7A3A",
-        "km": 35,
-        "drive_mins": 40,
-        "overnight": "Lindos",
-        "stops": [
-          {
-            "name": "Agathi Beach",
-            "lat": 36.1739,
-            "lng": 28.0653,
-            "type": "beach",
-            "time": "09:00",
-            "wiki": null,
-            "desc": "Golden sand and crystal clear water beneath Feraklos Castle. One of the finest beaches on the island. Morning swim before the crowds arrive.",
-            "name_el": "Παραλία Αγάθη",
-            "desc_el": "Χρυσή άμμος και κρυστάλλινα νερά κάτω από το Κάστρο Φερακλού. Μία από τις καλύτερες παραλίες του νησιού. Πρωινό μπάνιο πριν φτάσουν τα πλήθη."
-          },
-          {
-            "name": "Lindos Acropolis",
-            "lat": 36.0917,
-            "lng": 28.0867,
-            "type": "castle",
-            "time": "11:00",
-            "wiki": "https://en.wikipedia.org/wiki/Acropolis_of_Lindos",
-            "desc": "3rd century BC acropolis with a Doric temple of Athena Lindia perched above a sheer 116-metre cliff. One of the most dramatic ancient sites in Greece.",
-            "name_el": "Ακρόπολη της Λίνδου",
-            "desc_el": "Ακρόπολη του 3ου αιώνα π.Χ. με δωρικό ναό της Αθηνάς Λινδίας γκρεμισμένο πάνω σε κατακόρυφο γκρεμό 116 μέτρων. Ένας από τους πιο εντυπωσιακούς αρχαίους χώρους της Ελλάδας."
-          },
-          {
-            "name": "Lindos Village",
-            "lat": 36.0908,
-            "lng": 28.0861,
-            "type": "village",
-            "time": "12:30",
-            "wiki": "https://en.wikipedia.org/wiki/Lindos",
-            "desc": "Dazzling white cubist houses in maze-like lanes. Browse the galleries and craftshops before lunch.",
-            "name_el": "Χωριό Λίνδος",
-            "desc_el": "Εκθαμβωτικά λευκά κυβιστικά σπίτια σε λαβυρινθώδη δρομάκια. Δες τις γκαλερί και τα μαγαζιά χειροτεχνίας πριν το μεσημεριανό."
-          },
-          {
-            "name": "Lunch — Mavrikios Restaurant",
-            "lat": 36.0908,
-            "lng": 28.0855,
-            "type": "museum",
-            "time": "13:30",
-            "wiki": null,
-            "desc": "Regarded as the best restaurant on Rhodes. Family-run since 1933. Book ahead for the terrace table with Acropolis views.",
-            "name_el": "Μεσημεριανό — Μαυρίκιος",
-            "desc_el": "Θεωρείται το καλύτερο εστιατόριο της Ρόδου. Οικογενειακή επιχείρηση από το 1933. Κάνε κράτηση για το τραπέζι της βεράντας με θέα στην Ακρόπολη."
-          },
-          {
-            "name": "St Paul's Bay",
-            "lat": 36.0853,
-            "lng": 28.0883,
-            "type": "beach",
-            "time": "16:00",
-            "wiki": "https://en.wikipedia.org/wiki/Agios_Pavlos_beach",
-            "desc": "Heart-shaped bay just south of Lindos with crystal water and the Acropolis looming above. One of the most beautiful spots in Greece.",
-            "name_el": "Όρμος Αγίου Παύλου",
-            "desc_el": "Καρδιόσχημος κόλπος ακριβώς νότια της Λίνδου με κρυστάλλινα νερά και την Ακρόπολη να επιβλέπει από πάνω. Ένα από τα ομορφότερα σημεία της Ελλάδας."
-          },
-          {
-            "name": "Lindos Beach",
-            "lat": 36.0922,
-            "lng": 28.0864,
-            "type": "beach",
-            "time": "18:00",
-            "wiki": null,
-            "desc": "Sandy beach below the village with perfect Acropolis views. Evening swim then dinner in Lindos. Stay overnight.",
-            "name_el": "Παραλία Λίνδου",
-            "desc_el": "Αμμώδης παραλία κάτω από το χωριό με τέλεια θέα στην Ακρόπολη. Απογευματινό μπάνιο και μετά δείπνο στη Λίνδο. Διανυκτέρευση."
-          }
-        ],
-        "title_el": "Λίνδος — Ακρόπολη & ο Κόλπος του Αγίου Παύλου",
-        "overnight_el": "Λίνδος"
-      },
-      {
-        "day": 4,
-        "title": "The South — Prasonisi & Monolithos",
-        "color": "#C4962A",
-        "km": 120,
-        "drive_mins": 130,
-        "overnight": "Monolithos or Siana",
-        "stops": [
-          {
-            "name": "Lindos",
-            "lat": 36.0908,
-            "lng": 28.0861,
-            "type": "city",
-            "time": "08:30",
-            "wiki": null,
-            "desc": "Early departure south — longest driving day of the trip.",
-            "name_el": "Λίνδος",
-            "desc_el": "Πρώιμη αναχώρηση νότια — η μεγαλύτερη οδική μέρα του ταξιδιού."
-          },
-          {
-            "name": "Glystra Beach",
-            "lat": 36.0103,
-            "lng": 27.9492,
-            "type": "beach",
-            "time": "10:00",
-            "wiki": null,
-            "desc": "Sheltered sandy cove in the south with shallow, warm water. One of the least crowded excellent beaches on the island.",
-            "name_el": "Παραλία Γλύστρα",
-            "desc_el": "Προστατευμένος αμμώδης κολπίσκος στον νότο με ρηχά, ζεστά νερά. Μία από τις λιγότερο πολυσύχναστες εξαιρετικές παραλίες του νησιού."
-          },
-          {
-            "name": "Prasonisi Peninsula",
-            "lat": 35.8883,
-            "lng": 27.7567,
-            "type": "nature",
-            "time": "12:00",
-            "wiki": "https://en.wikipedia.org/wiki/Prasonisi",
-            "desc": "The dramatic southern tip of Rhodes where the Aegean and Mediterranean seas meet. A sandbar connects the peninsula at low tide. World-class windsurfing.",
-            "name_el": "Χερσόνησος Πρασονήσι",
-            "desc_el": "Το εντυπωσιακό νότιο άκρο της Ρόδου όπου συναντώνται το Αιγαίο και η Μεσόγειος. Μια αμμώδης λωρίδα συνδέει τη χερσόνησο στην άμπωτη. Παγκοσμίου επιπέδου windsurfing."
-          },
-          {
-            "name": "Siana Village",
-            "lat": 36.1367,
-            "lng": 27.8317,
-            "type": "village",
-            "time": "15:00",
-            "wiki": null,
-            "desc": "Mountain village famous for souma (local spirit) and thyme honey. Stop at a local shop for tastings — both are exceptional.",
-            "name_el": "Χωριό Σιάννα",
-            "desc_el": "Ορεινό χωριό διάσημο για τη σούμα (τοπικό απόσταγμα) και το θυμαρίσιο μέλι. Σταμάτησε σε ένα τοπικό μαγαζί για γευσιγνωσία — και τα δύο είναι εξαιρετικά."
-          },
-          {
-            "name": "Monolithos Castle",
-            "lat": 36.12,
-            "lng": 27.7417,
-            "type": "castle",
-            "time": "16:30",
-            "wiki": "https://en.wikipedia.org/wiki/Monolithos_Castle",
-            "desc": "15th century Knights' castle perched on a 240-metre rock pinnacle with sheer drop views to the sea. The finest sunset viewpoint on Rhodes.",
-            "name_el": "Κάστρο Μονόλιθος",
-            "desc_el": "Κάστρο των Ιπποτών του 15ου αιώνα γκρεμισμένο σε βραχώδη κορυφή 240 μέτρων με κατακόρυφη θέα στη θάλασσα. Το καλύτερο σημείο για ηλιοβασίλεμα στη Ρόδο."
-          },
-          {
-            "name": "Dinner — Christos Corner",
-            "lat": 36.12,
-            "lng": 27.7433,
-            "type": "village",
-            "time": "20:00",
-            "wiki": null,
-            "desc": "Legendary family taverna in Monolithos. Ask the owner to show you the kitchen. Legendary slow-cooked lamb and local wine.",
-            "name_el": "Δείπνο — Christos Corner",
-            "desc_el": "Θρυλική οικογενειακή ταβέρνα στον Μονόλιθο. Ζήτα από τον ιδιοκτήτη να σου δείξει την κουζίνα. Θρυλικό αρνί σιγομαγειρεμένο και τοπικό κρασί."
-          }
-        ],
-        "title_el": "Ο Νότος — Πρασονήσι & Μονόλιθος",
-        "overnight_el": "Μονόλιθος ή Σιάννα"
-      },
-      {
-        "day": 5,
-        "title": "Kritinia, Butterflies & Kamiros",
+        "title": "West Side — Kamiros, Butterflies & Kritinia",
         "color": "#7B5EA7",
         "km": 85,
         "drive_mins": 95,
-        "overnight": null,
+        "overnight": "Rhodes Town",
         "stops": [
           {
             "name": "Kritinia Castle",
@@ -376,14 +142,238 @@
             "lat": 36.4413,
             "lng": 28.2226,
             "type": "city",
-            "time": "16:30",
+            "time": "17:00",
             "wiki": "https://en.wikipedia.org/wiki/Rhodes",
-            "desc": "Return to Rhodes Town. Final evening in the Old Town — walk the moat, have dinner in Hippocrates Square. Depart by ferry or flight.",
+            "desc": "Return to Rhodes Town for the night. Dinner in the Old Town.",
             "name_el": "Πόλη Ρόδου",
-            "desc_el": "Επιστροφή στην Πόλη της Ρόδου. Τελευταίο βράδυ στην Παλιά Πόλη — περπάτησε την τάφρο, δείπνο στην πλατεία Ιπποκράτους. Αναχώρηση με πλοίο ή πτήση."
+            "desc_el": "Επιστροφή στην Πόλη της Ρόδου για διανυκτέρευση. Δείπνο στην Παλιά Πόλη."
           }
         ],
-        "title_el": "Κρητηνία, Πεταλούδες & Κάμειρος"
+        "title_el": "Δυτική Πλευρά — Κάμειρος, Πεταλούδες & Κρητηνία",
+        "overnight_el": "Πόλη της Ρόδου"
+      },
+      {
+        "day": 3,
+        "title": "The South — Monolithos & Siana",
+        "color": "#C4962A",
+        "km": 140,
+        "drive_mins": 150,
+        "overnight": "Rhodes Town",
+        "stops": [
+          {
+            "name": "Rhodes Town",
+            "lat": 36.444,
+            "lng": 28.224,
+            "type": "city",
+            "time": "08:30",
+            "wiki": "https://en.wikipedia.org/wiki/Rhodes_(city)",
+            "desc": "Early departure heading south down the west coast — the longest driving day of the trip.",
+            "name_el": "Πόλη της Ρόδου",
+            "desc_el": "Ξεκίνα νωρίς προς τα νότια κατά μήκος της δυτικής ακτής — η πιο μακρά διαδρομή του ταξιδιού."
+          },
+          {
+            "name": "Glystra Beach",
+            "lat": 36.0103,
+            "lng": 27.9492,
+            "type": "beach",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Sheltered sandy cove in the south with shallow, warm water. One of the least crowded excellent beaches on the island. Add 80 km round-trip if you want to push on to Prasonisi at the southern tip — a dramatic sandbar where the Aegean and Mediterranean meet, world-class for windsurfing.",
+            "name_el": "Παραλία Γλύστρα",
+            "desc_el": "Προστατευμένος αμμώδης κολπίσκος στον νότο με ρηχά, ζεστά νερά. Μία από τις λιγότερο πολυσύχναστες εξαιρετικές παραλίες του νησιού. Πρόσθεσε 80 χλμ. μετ' επιστροφής αν θες να φτάσεις μέχρι το Πρασονήσι στο νότιο άκρο — μια εντυπωσιακή λωρίδα άμμου όπου συναντιούνται Αιγαίο και Μεσόγειος, παγκόσμιας κλάσης για windsurf."
+          },
+          {
+            "name": "Siana Village",
+            "lat": 36.1367,
+            "lng": 27.8317,
+            "type": "village",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Mountain village famous for souma (local spirit) and thyme honey. Stop at a local shop for tastings — both are exceptional.",
+            "name_el": "Χωριό Σιάννα",
+            "desc_el": "Ορεινό χωριό διάσημο για τη σούμα (τοπικό απόσταγμα) και το θυμαρίσιο μέλι. Σταμάτησε σε ένα τοπικό μαγαζί για γευσιγνωσία — και τα δύο είναι εξαιρετικά."
+          },
+          {
+            "name": "Monolithos Castle",
+            "lat": 36.12,
+            "lng": 27.7417,
+            "type": "castle",
+            "time": "16:30",
+            "wiki": "https://en.wikipedia.org/wiki/Monolithos_Castle",
+            "desc": "15th century Knights' castle perched on a 240-metre rock pinnacle with sheer drop views to the sea. The finest sunset viewpoint on Rhodes.",
+            "name_el": "Κάστρο Μονόλιθος",
+            "desc_el": "Κάστρο των Ιπποτών του 15ου αιώνα γκρεμισμένο σε βραχώδη κορυφή 240 μέτρων με κατακόρυφη θέα στη θάλασσα. Το καλύτερο σημείο για ηλιοβασίλεμα στη Ρόδο."
+          },
+          {
+            "name": "Dinner — Christos Corner",
+            "lat": 36.12,
+            "lng": 27.7433,
+            "type": "village",
+            "time": "19:30",
+            "wiki": null,
+            "desc": "Legendary family taverna in Monolithos. Ask the owner to show you the kitchen. Slow-cooked lamb and local wine before the drive back to Rhodes Town — about 80 km, take it slow on the mountain road.",
+            "name_el": "Δείπνο — Christos Corner",
+            "desc_el": "Θρυλική οικογενειακή ταβέρνα στον Μονόλιθο. Ζήτα από τον ιδιοκτήτη να σου δείξει την κουζίνα. Σιγομαγειρεμένο αρνί και ντόπιο κρασί, πριν την επιστροφή στην Πόλη — περίπου 80 χλμ., πάρτο ήρεμα στον ορεινό δρόμο."
+          }
+        ],
+        "title_el": "Ο Νότος — Μονόλιθος & Σιάννα",
+        "overnight_el": "Πόλη της Ρόδου"
+      },
+      {
+        "day": 4,
+        "title": "East Coast → Lindos",
+        "color": "#C0522A",
+        "km": 75,
+        "drive_mins": 90,
+        "overnight": "Lindos",
+        "stops": [
+          {
+            "name": "Rhodes Town",
+            "lat": 36.4413,
+            "lng": 28.2226,
+            "type": "city",
+            "time": "09:00",
+            "wiki": null,
+            "desc": "Depart south along the scenic east coast road.",
+            "name_el": "Πόλη Ρόδου",
+            "desc_el": "Αναχώρηση νότια κατά μήκος του γραφικού δρόμου της ανατολικής ακτής."
+          },
+          {
+            "name": "Anthony Quinn Bay",
+            "lat": 36.3481,
+            "lng": 28.2189,
+            "type": "beach",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Anthony_Quinn_Bay",
+            "desc": "Iconic emerald cove named after the actor who filmed The Guns of Navarone here. Extraordinary clarity — bring a snorkel.",
+            "name_el": "Όρμος Άντονι Κουίν",
+            "desc_el": "Εμβληματικός σμαραγδένιος κόλπος που ονομάστηκε από τον ηθοποιό που γύρισε εδώ Τα Κανόνια του Ναβαρόνε. Εκπληκτική διαύγεια — φέρε snorkel."
+          },
+          {
+            "name": "Ladiko Beach",
+            "lat": 36.3489,
+            "lng": 28.2183,
+            "type": "beach",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "Secluded pebble bay just 5 minutes walk from Anthony Quinn. Rocky seabed excellent for snorkelling, fewer crowds.",
+            "name_el": "Παραλία Λαδικό",
+            "desc_el": "Απομονωμένος κόλπος με βότσαλο μόλις 5 λεπτά με τα πόδια από τον Άντονι Κουίν. Βραχώδης βυθός εξαιρετικός για snorkelling, λιγότερα πλήθη."
+          },
+          {
+            "name": "Tsambika Beach",
+            "lat": 36.2294,
+            "lng": 28.1642,
+            "type": "beach",
+            "time": "13:30",
+            "wiki": "https://en.wikipedia.org/wiki/Tsambika_beach",
+            "desc": "The best family beach on Rhodes — long golden sand, shallow water, excellent facilities. Lunch at one of the beach tavernas.",
+            "name_el": "Παραλία Τσαμπίκα",
+            "desc_el": "Η καλύτερη οικογενειακή παραλία της Ρόδου — μακριά χρυσή άμμος, ρηχά νερά, εξαιρετικές υπηρεσίες. Μεσημεριανό σε μία από τις παραλιακές ταβέρνες."
+          },
+          {
+            "name": "Tsambika Monastery",
+            "lat": 36.28,
+            "lng": 28.1617,
+            "type": "church",
+            "time": "15:30",
+            "wiki": null,
+            "desc": "Climb the 300 steps to the hilltop Byzantine monastery for sweeping views over the coast and beach below.",
+            "name_el": "Μοναστήρι Τσαμπίκας",
+            "desc_el": "Ανέβα τα 300 σκαλοπάτια στο βυζαντινό μοναστήρι στην κορυφή του λόφου για σαρωτική θέα στην ακτή και την παραλία από κάτω."
+          },
+          {
+            "name": "Agathi Beach",
+            "lat": 36.1739,
+            "lng": 28.0653,
+            "type": "beach",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Golden sand and crystal clear water beneath Feraklos Castle. One of the finest beaches on the island. Morning swim before the crowds arrive.",
+            "name_el": "Παραλία Αγάθη",
+            "desc_el": "Χρυσή άμμος και κρυστάλλινα νερά κάτω από το Κάστρο Φερακλού. Μία από τις καλύτερες παραλίες του νησιού. Πρωινό μπάνιο πριν φτάσουν τα πλήθη."
+          },
+          {
+            "name": "Lindos",
+            "name_el": "Λίνδος",
+            "desc": "Arrive in Lindos in the late afternoon. Check in, then walk down to the village for dinner with the Acropolis lit up above.",
+            "desc_el": "Άφιξη στη Λίνδο αργά το απόγευμα. Τακτοποίησε στο κατάλυμα, και κατέβα στο χωριό για δείπνο με την Ακρόπολη φωτισμένη από πάνω.",
+            "time": "18:30",
+            "type": "arrival",
+            "lat": 36.0916,
+            "lng": 28.0876,
+            "wiki": "https://en.wikipedia.org/wiki/Lindos"
+          }
+        ],
+        "title_el": "Ανατολική Ακτή → Λίνδος",
+        "overnight_el": "Λίνδος"
+      },
+      {
+        "day": 5,
+        "title": "Lindos & Departure",
+        "color": "#5A7A3A",
+        "km": 70,
+        "drive_mins": 80,
+        "overnight": null,
+        "stops": [
+          {
+            "name": "Lindos Acropolis",
+            "lat": 36.0917,
+            "lng": 28.0867,
+            "type": "castle",
+            "time": "11:00",
+            "wiki": "https://en.wikipedia.org/wiki/Acropolis_of_Lindos",
+            "desc": "3rd century BC acropolis with a Doric temple of Athena Lindia perched above a sheer 116-metre cliff. One of the most dramatic ancient sites in Greece.",
+            "name_el": "Ακρόπολη της Λίνδου",
+            "desc_el": "Ακρόπολη του 3ου αιώνα π.Χ. με δωρικό ναό της Αθηνάς Λινδίας γκρεμισμένο πάνω σε κατακόρυφο γκρεμό 116 μέτρων. Ένας από τους πιο εντυπωσιακούς αρχαίους χώρους της Ελλάδας."
+          },
+          {
+            "name": "Lindos Village",
+            "lat": 36.0908,
+            "lng": 28.0861,
+            "type": "village",
+            "time": "12:30",
+            "wiki": "https://en.wikipedia.org/wiki/Lindos",
+            "desc": "Dazzling white cubist houses in maze-like lanes. Browse the galleries and craftshops before lunch.",
+            "name_el": "Χωριό Λίνδος",
+            "desc_el": "Εκθαμβωτικά λευκά κυβιστικά σπίτια σε λαβυρινθώδη δρομάκια. Δες τις γκαλερί και τα μαγαζιά χειροτεχνίας πριν το μεσημεριανό."
+          },
+          {
+            "name": "Lunch — Mavrikios Restaurant",
+            "lat": 36.0908,
+            "lng": 28.0855,
+            "type": "museum",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "Regarded as the best restaurant on Rhodes. Family-run since 1933. Book ahead for the terrace table with Acropolis views.",
+            "name_el": "Μεσημεριανό — Μαυρίκιος",
+            "desc_el": "Θεωρείται το καλύτερο εστιατόριο της Ρόδου. Οικογενειακή επιχείρηση από το 1933. Κάνε κράτηση για το τραπέζι της βεράντας με θέα στην Ακρόπολη."
+          },
+          {
+            "name": "St Paul's Bay",
+            "lat": 36.0853,
+            "lng": 28.0883,
+            "type": "beach",
+            "time": "16:00",
+            "wiki": "https://en.wikipedia.org/wiki/Agios_Pavlos_beach",
+            "desc": "Heart-shaped bay just south of Lindos with crystal water and the Acropolis looming above. One of the most beautiful spots in Greece.",
+            "name_el": "Όρμος Αγίου Παύλου",
+            "desc_el": "Καρδιόσχημος κόλπος ακριβώς νότια της Λίνδου με κρυστάλλινα νερά και την Ακρόπολη να επιβλέπει από πάνω. Ένα από τα ομορφότερα σημεία της Ελλάδας."
+          },
+          {
+            "name": "Rhodes Town — Departure",
+            "name_el": "Πόλη της Ρόδου — Αναχώρηση",
+            "desc": "Drive back to Rhodes Town for ferry or flight departure. Final coffee at Mandraki harbour.",
+            "desc_el": "Επιστροφή στην Πόλη της Ρόδου για αναχώρηση με πλοίο ή αεροπλάνο. Τελευταίος καφές στο λιμάνι του Μανδρακίου.",
+            "time": "17:00",
+            "type": "departure",
+            "lat": 36.444,
+            "lng": 28.224,
+            "wiki": "https://en.wikipedia.org/wiki/Rhodes_(city)"
+          }
+        ],
+        "title_el": "Λίνδος & Αναχώρηση",
+        "overnight_el": null
       }
     ],
     "title_el": "Πρόγραμμα 5 Ημερών στη Ρόδο",

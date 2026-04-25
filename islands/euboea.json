@@ -8,65 +8,11 @@
   "intro_el": "Η Εύβοια είναι 3.684 τ.χλμ. βουνών, φαραγγιών, ιαματικών πηγών και αιγαιοπελαγίτικη ακτογραμμή που εκτείνεται για 680 χλμ — και σχεδόν κανείς εκτός Ελλάδας δεν την έχει ακούσει. Συνδεδεμένη με την ηπειρωτική χώρα με γέφυρα στη Χαλκίδα, είναι μια εύκολη 90λεπτη οδική απόσταση από την Αθήνα, χωρίς πλοίο. Το μέγεθος αλλάζει το πώς την επισκέπτεσαι: δεν \"κάνεις\" την Εύβοια σε μία μέρα. Ο νότος περιστρέφεται γύρω από την Κάρυστο, το Όρος Όχη και το Φαράγγι Δημοσάρη· το κέντρο γύρω από τη Χαλκίδα και το αλπικό χωριό Στενή κάτω από τη Δίρφη (1.743μ)· ο βορράς γύρω από τη λουτρόπολη της Αιδηψού και τα παραθαλάσσια χωριά Λίμνη και Αγία Άννα. Τρεις μέρες σου επιτρέπουν να δοκιμάσεις μία περιοχή τη μέρα. Μία εβδομάδα να αρχίσεις να την ξέρεις.",
   "itinerary": {
     "title": "3-Day Euboea Itinerary",
-    "subtitle": "South Euboea (Karystos & Mt. Ochi) Day 1, central (Chalkida & Steni) Day 2, north (Edipsos & Limni) Day 3.",
+    "subtitle": "Across the Chalkida bridge to the central plain Day 1, the thermal springs and quiet villages of the north Day 2, the rugged southern peaks and Karystos for departure Day 3.",
     "days": [
       {
         "day": 1,
-        "title": "South — Karystos, Dragon Houses & Dimosari",
-        "color": "#1B4F8A",
-        "stops": [
-          {
-            "name": "Karystos",
-            "name_el": "Κάρυστος",
-            "lat": 38.0156,
-            "lng": 24.4203,
-            "type": "village",
-            "wiki": "https://en.wikipedia.org/wiki/Karystos",
-            "desc": "Easygoing seaside town on the southern shore — long sandy beach, sunny central square lined with cafés, the 14th-century Venetian Bourtzi tower right on the waterfront. Ferry arrivals from Marmari (next door) connect to Rafina near Athens.",
-            "desc_el": "Χαλαρή παραθαλάσσια πόλη στη νότια ακτή — μακριά αμμώδης παραλία, ηλιόλουστη κεντρική πλατεία με καφέ, ο βενετσιάνικος πύργος Μπούρτζι του 14ου αιώνα ακριβώς στην παραλιακή. Άφιξη πλοίου από το Μαρμάρι (δίπλα) που συνδέει με τη Ραφήνα κοντά στην Αθήνα."
-          },
-          {
-            "name": "Castello Rosso",
-            "name_el": "Καστέλο Ρόσσο",
-            "lat": 38.0319,
-            "lng": 24.4322,
-            "type": "castle",
-            "desc": "11th-century Venetian-Frankish castle on a hillside above Karystos, overlooking the Gulf of Karystos with Mt. Ochi as backdrop. Imposing red-walled ruin, free entry, panoramic views.",
-            "desc_el": "Φραγκο-βενετσιάνικο κάστρο του 11ου αιώνα στην πλαγιά πάνω από την Κάρυστο, με θέα στον Κόλπο της Καρύστου με το Όρος Όχη για φόντο. Επιβλητικό ερείπιο με κόκκινους τοίχους, δωρεάν είσοδος, πανοραμικές θέες."
-          },
-          {
-            "name": "Dragon Houses (Drakospita)",
-            "name_el": "Δρακόσπιτα",
-            "lat": 38.0444,
-            "lng": 24.4453,
-            "type": "ruin",
-            "desc": "23 rectangular megalithic structures built of limestone slabs, attributed to the pre-Hellenic Dryopes around the 5th century BC. The largest sits at the summit of Mt. Ochi (1,398m) — its 10-ton roof slabs are an unsolved engineering mystery. Reach the easier sites at Palli Lakka, near Styra.",
-            "desc_el": "23 ορθογώνιες μεγαλιθικές κατασκευές χτισμένες από ασβεστολιθικές πλάκες, αποδιδόμενες στους προελληνικούς Δρύοπες γύρω στον 5ο αιώνα π.Χ. Το μεγαλύτερο βρίσκεται στην κορυφή της Όχης (1.398μ) — οι πλάκες οροφής 10 τόνων είναι άλυτο μηχανικό μυστήριο. Πιο εύκολη πρόσβαση στα δρακόσπιτα Πάλλη Λάκκα, κοντά στα Στύρα."
-          },
-          {
-            "name": "Dimosari Gorge Hike",
-            "name_el": "Πεζοπορία Φαραγγιού Δημοσάρη",
-            "lat": 38.0556,
-            "lng": 24.4942,
-            "type": "viewpoint",
-            "desc": "10km / 4-hour descent from the highlands of Mt. Ochi to the sea. Plane trees, pears, chestnuts; natural pools, wooden bridges, waterfalls. Ends at Kallianos beach where you can swim. One of the best gorge hikes in Greece, far less crowded than Samaria.",
-            "desc_el": "10χλμ / 4 ωρών κατάβαση από τα υψίπεδα της Όχης προς τη θάλασσα. Πλατάνια, αχλαδιές, καστανιές· φυσικές πισίνες, ξύλινες γέφυρες, καταρράκτες. Τελειώνει στην παραλία Καλλιανού όπου μπορείς να κολυμπήσεις. Μία από τις καλύτερες πεζοπορίες φαραγγιού στην Ελλάδα, πολύ λιγότερο πολυσύχναστη από τη Σαμαριά."
-          },
-          {
-            "name": "Dinner — Cavo d'Oro",
-            "name_el": "Δείπνο — Cavo d'Oro",
-            "lat": 38.0156,
-            "lng": 24.4205,
-            "type": "village",
-            "desc": "Karystos taverna doing southern Euboean home cooking — octopus in red wine, grilled halloumi, the local spanakorizo (rice with spinach). The kind of place where the menu reflects what was bought that morning.",
-            "desc_el": "Ταβέρνα στην Κάρυστο που σερβίρει σπιτική κουζίνα της νότιας Εύβοιας — χταπόδι κρασάτο, χαλούμι σχάρας, το τοπικό σπανακόρυζο. Από τα μέρη όπου το μενού αντικατοπτρίζει αυτό που αγοράστηκε το πρωί."
-          }
-        ],
-        "title_el": "Νότος — Κάρυστος, Δρακόσπιτα & Δημοσάρη"
-      },
-      {
-        "day": 2,
-        "title": "Central — Chalkida, Eretria & Mt. Dirfys",
+        "title": "Chalkida, Mt Dirfys & the East Coast",
         "color": "#C0522A",
         "stops": [
           {
@@ -77,7 +23,8 @@
             "type": "city",
             "wiki": "https://en.wikipedia.org/wiki/Chalcis",
             "desc": "The capital — 100,000 residents, lively waterfront, the famous Euripus tidal phenomenon: the current under the Old Bridge reverses direction every 6 hours and Aristotle reportedly died trying to explain why. Walk the bridge, watch the water flip.",
-            "desc_el": "Η πρωτεύουσα — 100.000 κάτοικοι, ζωντανή παραλιακή, το διάσημο παλιρροιακό φαινόμενο του Ευρίπου: το ρεύμα κάτω από την Παλιά Γέφυρα αλλάζει κατεύθυνση κάθε 6 ώρες και ο Αριστοτέλης λέγεται ότι πέθανε προσπαθώντας να εξηγήσει το γιατί. Περπάτησε τη γέφυρα, παρακολούθησε το νερό να αναποδογυρίζει."
+            "desc_el": "Η πρωτεύουσα — 100.000 κάτοικοι, ζωντανή παραλιακή, το διάσημο παλιρροιακό φαινόμενο του Ευρίπου: το ρεύμα κάτω από την Παλιά Γέφυρα αλλάζει κατεύθυνση κάθε 6 ώρες και ο Αριστοτέλης λέγεται ότι πέθανε προσπαθώντας να εξηγήσει το γιατί. Περπάτησε τη γέφυρα, παρακολούθησε το νερό να αναποδογυρίζει.",
+            "time": "10:00"
           },
           {
             "name": "Karababa Castle",
@@ -86,16 +33,8 @@
             "lng": 23.5811,
             "type": "castle",
             "desc": "Turk-Venetian fortress on a hill across the strait from Chalkida (Boeotian side). Free entry, panoramic views over the bridge, the strait, and Mount Dirfys to the east.",
-            "desc_el": "Τουρκο-βενετσιάνικο φρούριο σε λόφο απέναντι από τη Χαλκίδα (πλευρά Βοιωτίας). Δωρεάν είσοδος, πανοραμικές θέες πάνω από τη γέφυρα, το στενό, και τη Δίρφη ανατολικά."
-          },
-          {
-            "name": "Ancient Eretria",
-            "name_el": "Αρχαία Ερέτρια",
-            "lat": 38.3989,
-            "lng": 23.7861,
-            "type": "ruin",
-            "desc": "20km south of Chalkida — important classical city-state from the 9th century BC, mentioned by Homer as one of the cities sending ships to Troy. The 5th-century BC theatre is the highlight, with palace foundations, baths and mosaics. Small archaeological museum on site.",
-            "desc_el": "20 χλμ νότια της Χαλκίδας — σημαντική κλασική πόλη-κράτος από τον 9ο αιώνα π.Χ., που αναφέρεται από τον Όμηρο ως μία από τις πόλεις που έστειλαν πλοία στην Τροία. Το θέατρο του 5ου αιώνα π.Χ. είναι το κύριο, με θεμέλια ανακτόρου, λουτρά και ψηφιδωτά. Μικρό αρχαιολογικό μουσείο στον χώρο."
+            "desc_el": "Τουρκο-βενετσιάνικο φρούριο σε λόφο απέναντι από τη Χαλκίδα (πλευρά Βοιωτίας). Δωρεάν είσοδος, πανοραμικές θέες πάνω από τη γέφυρα, το στενό, και τη Δίρφη ανατολικά.",
+            "time": "11:30"
           },
           {
             "name": "Steni Village (Mt. Dirfys)",
@@ -104,7 +43,8 @@
             "lng": 23.8378,
             "type": "village",
             "desc": "30km east of Chalkida, in the alpine foothills of Mt. Dirfys (1,743m, the highest peak on Euboea). Cool mountain springs, plane-shaded squares, rustic tavernas serving wild boar and lamb. The trailhead for the Dirfys hike. Tavernas Kissos and Platanos for lunch.",
-            "desc_el": "30 χλμ ανατολικά της Χαλκίδας, στους αλπικούς πρόποδες της Δίρφης (1.743μ, η ψηλότερη κορυφή της Εύβοιας). Δροσερές ορεινές πηγές, πλατείες σκιασμένες από πλατάνια, παραδοσιακές ταβέρνες με αγριογούρουνο και αρνί. Η αρχή του μονοπατιού για την πεζοπορία στη Δίρφη. Ταβέρνες Κισσός και Πλάτανος για μεσημεριανό."
+            "desc_el": "30 χλμ ανατολικά της Χαλκίδας, στους αλπικούς πρόποδες της Δίρφης (1.743μ, η ψηλότερη κορυφή της Εύβοιας). Δροσερές ορεινές πηγές, πλατείες σκιασμένες από πλατάνια, παραδοσιακές ταβέρνες με αγριογούρουνο και αρνί. Η αρχή του μονοπατιού για την πεζοπορία στη Δίρφη. Ταβέρνες Κισσός και Πλάτανος για μεσημεριανό.",
+            "time": "13:00"
           },
           {
             "name": "Chiliadou Beach",
@@ -113,24 +53,62 @@
             "lng": 23.9625,
             "type": "beach",
             "desc": "1 hour northeast of Chalkida via a mountain road. Wild pebbly beach with emerald water, backed by green hills, with caves and a small church nearby. Featured in the 2022 film Triangle of Sadness. Some snack bars; otherwise unspoiled.",
-            "desc_el": "1 ώρα βορειοανατολικά της Χαλκίδας μέσω ορεινού δρόμου. Άγρια βότσαλη παραλία με σμαραγδένια νερά, με πράσινους λόφους πίσω, με σπηλιές και ένα μικρό εκκλησάκι κοντά. Εμφανίστηκε στην ταινία 2022 Triangle of Sadness. Κάποια σνακ μπαρ· διαφορετικά ανέγγιχτη."
+            "desc_el": "1 ώρα βορειοανατολικά της Χαλκίδας μέσω ορεινού δρόμου. Άγρια βότσαλη παραλία με σμαραγδένια νερά, με πράσινους λόφους πίσω, με σπηλιές και ένα μικρό εκκλησάκι κοντά. Εμφανίστηκε στην ταινία 2022 Triangle of Sadness. Κάποια σνακ μπαρ· διαφορετικά ανέγγιχτη.",
+            "time": "15:00"
+          },
+          {
+            "name": "Agia Anna Beach",
+            "name_el": "Παραλία Αγίας Άννας",
+            "time": "16:30",
+            "type": "beach",
+            "desc": "Long pebbly beach with crystal blue water and a backing pine forest, on the east coast about 1 hour north of Chiliadou. Cars park far from the sand, so the beach itself stays peaceful — the most natural-feeling beach on Evia.",
+            "desc_el": "Μακρά παραλία με βότσαλα, κρυστάλλινα γαλάζια νερά και πευκοδάσος πίσω, στην ανατολική ακτή περίπου 1 ώρα βόρεια από τον Χιλιαδού. Τα αυτοκίνητα παρκάρουν μακριά από την άμμο, οπότε η ίδια η παραλία παραμένει ήρεμη — η πιο φυσική παραλία της Εύβοιας.",
+            "lat": 38.8597,
+            "lng": 23.5078,
+            "wiki": ""
+          },
+          {
+            "name": "Chalkida — Evening",
+            "name_el": "Χαλκίδα — Βράδυ",
+            "time": "20:30",
+            "type": "overnight",
+            "desc": "Return to Chalkida for the night. Dinner on the Euripus waterfront — watch the famous tides reverse under the bridge.",
+            "desc_el": "Επιστροφή στη Χαλκίδα για διανυκτέρευση. Δείπνο στην παραλιακή του Ευρίπου — δες τα διάσημα νερά να αλλάζουν φορά κάτω από τη γέφυρα.",
+            "lat": 38.463,
+            "lng": 23.5953,
+            "wiki": "https://en.wikipedia.org/wiki/Chalcis"
           }
         ],
-        "title_el": "Κέντρο — Χαλκίδα, Ερέτρια & Δίρφυς"
+        "title_el": "Χαλκίδα, Δίρφυς & η Ανατολική Ακτή",
+        "overnight": "Chalkida",
+        "overnight_el": "Χαλκίδα",
+        "km": 180,
+        "drive_mins": 200
       },
       {
-        "day": 3,
-        "title": "North — Edipsos Hot Springs & Limni",
+        "day": 2,
+        "title": "North — Limni, Lichadonisia & Edipsos Springs",
         "color": "#5A7A3A",
         "stops": [
+          {
+            "name": "Limni Village",
+            "name_el": "Χωριό Λίμνη",
+            "lat": 38.7714,
+            "lng": 23.3167,
+            "type": "village",
+            "desc": "Picture-perfect seaside village 40km southeast of Edipsos — terra-cotta-roofed houses, bougainvillea, narrow alleys spilling toward the sea. Coffee on the harbour, a quick walk through the lanes, then north to Edipsos.",
+            "desc_el": "Παραμυθένιο παραθαλάσσιο χωριό 40 χλμ. νοτιοανατολικά της Αιδηψού — πορτοκαλί κεραμοσκεπές, βουκαμβίλιες, στενά δρομάκια που κατεβαίνουν προς τη θάλασσα. Καφές στο λιμάνι, μια γρήγορη βόλτα στα στενά, και μετά βόρεια προς την Αιδηψό.",
+            "time": "10:30"
+          },
           {
             "name": "Edipsos Thermal Springs",
             "name_el": "Λουτρά Αιδηψού",
             "lat": 38.8533,
             "lng": 23.0444,
             "type": "village",
-            "desc": "One of the oldest spa towns in Europe — Aristotle, Sulla, Hadrian, Greta Garbo, Winston Churchill, Onassis all came here. Free seaside hot pools where the spring water meets the Aegean (temperatures 30-86°C); upmarket Thermae Sylla Spa Hotel for a proper soak in neoclassical luxury.",
-            "desc_el": "Μία από τις παλαιότερες λουτροπόλεις της Ευρώπης — ο Αριστοτέλης, ο Σύλλας, ο Αδριανός, η Γκρέτα Γκάρμπο, ο Τσώρτσιλ, ο Ωνάσης ήρθαν όλοι εδώ. Δωρεάν παραλιακές θερμές πισίνες όπου το νερό της πηγής συναντά το Αιγαίο (θερμοκρασίες 30-86°C)· πολυτελές Thermae Sylla Spa Hotel για ένα κανονικό μπάνιο σε νεοκλασική πολυτέλεια."
+            "desc": "One of the oldest spa towns in Europe — Aristotle, Sulla, Hadrian, Greta Garbo, Winston Churchill, Onassis all came here. Free seaside hot pools where the spring water meets the Aegean (temperatures 30-86°C); upmarket Thermae Sylla Spa Hotel for a proper soak in neoclassical luxury. Arrive midday, drop bags, then continue west to Lichadonisia for the afternoon — return for the springs in the evening.",
+            "desc_el": "Μία από τις παλαιότερες λουτροπόλεις της Ευρώπης — ο Αριστοτέλης, ο Σύλλας, ο Αδριανός, η Γκρέτα Γκάρμπο, ο Τσώρτσιλ, ο Ωνάσης ήρθαν όλοι εδώ. Δωρεάν παραλιακές θερμές πισίνες όπου το νερό της πηγής συναντά το Αιγαίο (θερμοκρασίες 30-86°C)· πολυτελές Thermae Sylla Spa Hotel για ένα κανονικό μπάνιο σε νεοκλασική πολυτέλεια. Άφιξη το μεσημέρι, άφησε αποσκευές, και συνέχισε δυτικά προς τα Λιχαδονήσια για το απόγευμα — επιστροφή για τις πηγές το βράδυ.",
+            "time": "13:30"
           },
           {
             "name": "Lichadonisia Islets",
@@ -139,32 +117,126 @@
             "lng": 22.8719,
             "type": "viewpoint",
             "desc": "20 minutes west of Edipsos at Loutra Gialtron. A small archipelago accessible only by boat — uninhabited islets with shallow turquoise water that some travel writers have called 'the Greek Maldives.' Half-day boat trips from Gialtra harbour.",
-            "desc_el": "20 λεπτά δυτικά της Αιδηψού στα Λουτρά Γιάλτρων. Ένα μικρό αρχιπέλαγος προσβάσιμο μόνο με βάρκα — ακατοίκητες νησίδες με ρηχά τιρκουάζ νερά που κάποιοι ταξιδιωτικοί αρθρογράφοι έχουν αποκαλέσει \"τις Ελληνικές Μαλδίβες.\" Μισής μέρας εκδρομές με βάρκα από το λιμάνι των Γιάλτρων."
+            "desc_el": "20 λεπτά δυτικά της Αιδηψού στα Λουτρά Γιάλτρων. Ένα μικρό αρχιπέλαγος προσβάσιμο μόνο με βάρκα — ακατοίκητες νησίδες με ρηχά τιρκουάζ νερά που κάποιοι ταξιδιωτικοί αρθρογράφοι έχουν αποκαλέσει \"τις Ελληνικές Μαλδίβες.\" Μισής μέρας εκδρομές με βάρκα από το λιμάνι των Γιάλτρων.",
+            "time": "15:00"
           },
           {
-            "name": "Limni Village",
-            "name_el": "Χωριό Λίμνη",
-            "lat": 38.7714,
-            "lng": 23.3167,
-            "type": "village",
-            "desc": "Picture-perfect seaside village 40km southeast of Edipsos — terra-cotta-roofed houses, bougainvillea, narrow alleys spilling toward the harbour. The Galataki Monastery 6km south is one of the oldest in Greece. Lunch at one of the harbour tavernas.",
-            "desc_el": "Φωτογενέστατο παραθαλάσσιο χωριό 40 χλμ νοτιοανατολικά της Αιδηψού — σπίτια με κεραμοσκεπές, μπουκαμβίλιες, στενά δρομάκια που κατεβαίνουν προς το λιμάνι. Η Μονή Γαλατάκη 6 χλμ νότια είναι από τις παλαιότερες της Ελλάδας. Μεσημεριανό σε μία από τις ταβέρνες του λιμανιού."
-          },
-          {
-            "name": "Agia Anna Beach",
-            "name_el": "Παραλία Αγίας Άννας",
-            "lat": 38.8672,
-            "lng": 23.4639,
-            "type": "beach",
-            "desc": "1.5 hours northeast of Chalkida — long pebbly beach with crystal blue water and a backing pine forest. Cars park far from the sand, so it feels island-like. Beach bars, tavernas and a popular campsite. The northern Aegean coast at its best.",
-            "desc_el": "1,5 ώρα βορειοανατολικά της Χαλκίδας — μακριά βότσαλη παραλία με κρυστάλλινα μπλε νερά και πευκόφυτο φόντο. Τα αυτοκίνητα παρκάρουν μακριά από την άμμο, οπότε νιώθεις σαν σε νησί. Beach bars, ταβέρνες και δημοφιλές camping. Η βόρεια αιγαιοπελαγίτικη ακτή στα καλύτερά της."
+            "name": "Edipsos Thermal Spa — Evening Soak",
+            "name_el": "Λουτρά Αιδηψού — Βραδινή Βουτιά",
+            "time": "19:00",
+            "type": "spa",
+            "desc": "Back at Edipsos for the main event — the open-air thermal pools where the hot mineral water meets the sea. Dinner in town; the spa hotels here have pools that stay open late.",
+            "desc_el": "Πίσω στην Αιδηψό για το κυρίως θέαμα — οι υπαίθριες ιαματικές πισίνες όπου τα ζεστά μεταλλικά νερά συναντούν τη θάλασσα. Δείπνο στην πόλη· τα spa ξενοδοχεία εδώ έχουν πισίνες που μένουν ανοιχτές μέχρι αργά.",
+            "lat": 38.8569,
+            "lng": 23.0367,
+            "wiki": "https://en.wikipedia.org/wiki/Edipsos"
           }
         ],
-        "title_el": "Βορράς — Ιαματικά Λουτρά Αιδηψού & Λίμνη"
+        "title_el": "Βορράς — Λίμνη, Λιχαδονήσια & Ιαματικά Λουτρά Αιδηψού",
+        "overnight": "Edipsos",
+        "overnight_el": "Αιδηψός",
+        "km": 140,
+        "drive_mins": 160
+      },
+      {
+        "day": 3,
+        "title": "South — Karystos, Dragon Houses & Departure",
+        "color": "#1B4F8A",
+        "stops": [
+          {
+            "name": "Edipsos → Karystos",
+            "name_el": "Αιδηψός → Κάρυστος",
+            "time": "08:00",
+            "type": "transit",
+            "desc": "The long drive south — about 210 km, almost the full length of the island. Coffee at the start, take it slow on the central mountain road. Stop at Eretria along the way to break up the transit.",
+            "desc_el": "Η μακρά διαδρομή νότια — περίπου 210 χλμ., σχεδόν όλο το μήκος του νησιού. Καφές πριν ξεκινήσεις, πάρ'το ήρεμα στον κεντρικό ορεινό δρόμο. Στάση στην Ερέτρια στη διαδρομή για να σπάσει η διαδρομή.",
+            "lat": 38.8569,
+            "lng": 23.0367,
+            "wiki": ""
+          },
+          {
+            "name": "Ancient Eretria",
+            "name_el": "Αρχαία Ερέτρια",
+            "time": "10:30",
+            "type": "archaeological",
+            "desc": "Important classical city-state from the 9th century BC, mentioned by Homer as one of the cities sending ships to Troy. The site is right on the road south, ~10 km past Chalkida — a 45-minute stop breaks up the long transit.",
+            "desc_el": "Σημαντική κλασική πόλη-κράτος από τον 9ο αιώνα π.Χ., αναφέρεται από τον Όμηρο ως μία από τις πόλεις που έστειλαν πλοία στην Τροία. Ο χώρος είναι ακριβώς πάνω στο δρόμο για νότια, ~10 χλμ. μετά τη Χαλκίδα — μια στάση 45 λεπτών σπάει τη μακρά διαδρομή.",
+            "lat": 38.4044,
+            "lng": 23.7906,
+            "wiki": "https://en.wikipedia.org/wiki/Eretria"
+          },
+          {
+            "name": "Karystos",
+            "name_el": "Κάρυστος",
+            "lat": 38.0156,
+            "lng": 24.4203,
+            "type": "village",
+            "wiki": "https://en.wikipedia.org/wiki/Karystos",
+            "desc": "Easygoing seaside town on the southern shore — long sandy beach, sunny central square lined with cafés, the 14th-century Venetian Bourtzi tower right on the waterfront. Ferry arrivals from Marmari (next door) connect to Rafina near Athens.",
+            "desc_el": "Χαλαρή παραθαλάσσια πόλη στη νότια ακτή — μακριά αμμώδης παραλία, ηλιόλουστη κεντρική πλατεία με καφέ, ο βενετσιάνικος πύργος Μπούρτζι του 14ου αιώνα ακριβώς στην παραλιακή. Άφιξη πλοίου από το Μαρμάρι (δίπλα) που συνδέει με τη Ραφήνα κοντά στην Αθήνα.",
+            "time": "12:30"
+          },
+          {
+            "name": "Castello Rosso",
+            "name_el": "Καστέλο Ρόσσο",
+            "lat": 38.0319,
+            "lng": 24.4322,
+            "type": "castle",
+            "desc": "11th-century Venetian-Frankish castle on a hillside above Karystos, overlooking the Gulf of Karystos with Mt. Ochi as backdrop. Imposing red-walled ruin, free entry, panoramic views.",
+            "desc_el": "Φραγκο-βενετσιάνικο κάστρο του 11ου αιώνα στην πλαγιά πάνω από την Κάρυστο, με θέα στον Κόλπο της Καρύστου με το Όρος Όχη για φόντο. Επιβλητικό ερείπιο με κόκκινους τοίχους, δωρεάν είσοδος, πανοραμικές θέες.",
+            "time": "13:30"
+          },
+          {
+            "name": "Dragon Houses (Drakospita)",
+            "name_el": "Δρακόσπιτα",
+            "lat": 38.0444,
+            "lng": 24.4453,
+            "type": "ruin",
+            "desc": "23 rectangular megalithic structures built of limestone slabs, attributed to the pre-Hellenic Dryopes around the 5th century BC. The largest sits at the summit of Mt. Ochi (1,398m) — its 10-ton roof slabs are an unsolved engineering mystery. Reach the easier sites at Palli Lakka, near Styra.",
+            "desc_el": "23 ορθογώνιες μεγαλιθικές κατασκευές χτισμένες από ασβεστολιθικές πλάκες, αποδιδόμενες στους προελληνικούς Δρύοπες γύρω στον 5ο αιώνα π.Χ. Το μεγαλύτερο βρίσκεται στην κορυφή της Όχης (1.398μ) — οι πλάκες οροφής 10 τόνων είναι άλυτο μηχανικό μυστήριο. Πιο εύκολη πρόσβαση στα δρακόσπιτα Πάλλη Λάκκα, κοντά στα Στύρα.",
+            "time": "15:00"
+          },
+          {
+            "name": "Dimosari Gorge Hike",
+            "name_el": "Πεζοπορία Φαραγγιού Δημοσάρη",
+            "lat": 38.0556,
+            "lng": 24.4942,
+            "type": "viewpoint",
+            "desc": "10km, 4-hour descent from the highlands of Mt. Ochi to the sea — too long for the departure day, but worth driving up to the trailhead viewpoint for a short walk and the panorama back over Karystos. Return to Karystos for an early dinner.",
+            "desc_el": "Διαδρομή 10 χλμ., 4 ωρών κατάβασης από τα ψηλά της Όχης ως τη θάλασσα — πολύ μακριά για ημέρα αναχώρησης, αλλά αξίζει να ανέβεις στην αρχή του μονοπατιού για σύντομη βόλτα και τη θέα προς την Κάρυστο. Επιστροφή στην Κάρυστο για νωρίς δείπνο.",
+            "time": "16:00"
+          },
+          {
+            "name": "Dinner — Cavo d'Oro",
+            "name_el": "Δείπνο — Cavo d'Oro",
+            "lat": 38.0156,
+            "lng": 24.4205,
+            "type": "village",
+            "desc": "Karystos taverna doing southern Euboean home cooking — octopus in red wine, grilled halloumi, the local spanakorizo (rice with spinach). Early dinner before the ferry.",
+            "desc_el": "Ταβέρνα της Καρύστου με σπιτική νότια ευβοϊκή κουζίνα — χταπόδι κρασάτο, σαγανάκι, τοπικό σπανακόρυζο. Νωρίς δείπνο πριν το πλοίο.",
+            "time": "17:30"
+          },
+          {
+            "name": "Marmari Ferry — Departure",
+            "name_el": "Πλοίο Μαρμάρι — Αναχώρηση",
+            "time": "19:30",
+            "type": "departure",
+            "desc": "Drive 10km west to Marmari port. Ferry to Rafina takes about 1 hour — much faster than driving back. Several departures daily; check schedules on Ferryhopper.",
+            "desc_el": "Οδική διαδρομή 10 χλμ. δυτικά στο λιμάνι του Μαρμαρίου. Το πλοίο για τη Ραφήνα διαρκεί περίπου 1 ώρα — πολύ πιο γρήγορα από την επιστροφή με αυτοκίνητο. Πολλά δρομολόγια ημερησίως· δες πρόγραμμα στο Ferryhopper.",
+            "lat": 38.0549,
+            "lng": 24.3294,
+            "wiki": ""
+          }
+        ],
+        "title_el": "Νότος — Κάρυστος, Δρακόσπιτα & Αναχώρηση",
+        "overnight": null,
+        "overnight_el": null,
+        "km": 260,
+        "drive_mins": 290
       }
     ],
     "title_el": "Πρόγραμμα 3 Ημερών στην Εύβοια",
-    "subtitle_el": "Νότια Εύβοια (Κάρυστος & Όχη) την 1η ημέρα, κέντρο (Χαλκίδα & Στένη) τη 2η, βορράς (Αιδηψός & Λίμνη) την 3η."
+    "subtitle_el": "Από τη γέφυρα της Χαλκίδας στο κεντρικό κάμπο τη 1η ημέρα, στα ιαματικά λουτρά και τα ήσυχα χωριά του Βορρά τη 2η, στους τραχείς νότιους ορεινούς και την Κάρυστο για αναχώρηση τη 3η."
   },
   "beaches": [
     {

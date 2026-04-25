@@ -5,7 +5,7 @@
   "intro": "The Chania region is the most dramatic corner of Crete — and arguably the most dramatic in all of Greece. The White Mountains rise to over 2400m behind a coastline that holds two of the world's most famous beaches: the pink-sand lagoon of Elafonisi and the Caribbean-blue Balos. Add a Venetian old town, the deepest gorge in Europe, and some of the best food on the island, and Chania is impossible to do in less than 5 days.",
   "itinerary": {
     "title": "5-Day Chania Itinerary",
-    "subtitle": "From the Venetian harbour of Chania Town to the wild beaches of the west — Balos, Elafonisi, the Samaria Gorge and the sunset cliffs of Falasarna.",
+    "subtitle": "From the Venetian harbour of Chania Town to the great gorge of Samaria, the lagoons of Balos and Elafonisi, and the south-coast quiet of Paleochora.",
     "days": [
       {
         "day": 1,
@@ -89,9 +89,9 @@
         "day": 2,
         "title": "Balos Lagoon & Gramvousa",
         "color": "#C0522A",
-        "km": 55,
-        "drive_mins": 70,
-        "overnight": "Kissamos or Chania",
+        "km": 110,
+        "drive_mins": 130,
+        "overnight": "Chania Town",
         "stops": [
           {
             "name": "Kissamos Port",
@@ -133,122 +133,21 @@
             "type": "city",
             "time": "17:30",
             "wiki": null,
-            "desc": "Relaxed town with a good Archaeological Museum. Evening dinner at one of the harbour tavernas — fresh catch and local wine.",
+            "desc": "Stop in Kissamos on the way back — relaxed harbour town with a good Archaeological Museum if you have time. Then drive back to Chania for dinner in the Old Town.",
             "name_el": "Πόλη Κισσάμου",
-            "desc_el": "Χαλαρή πόλη με ένα καλό Αρχαιολογικό Μουσείο. Δείπνο σε μια από τις ταβέρνες του λιμανιού — φρέσκο ψάρι και τοπικό κρασί."
+            "desc_el": "Στάση στο Καστέλι Κισσάμου στην επιστροφή — χαλαρή κωμόπολη με αξιόλογο Αρχαιολογικό Μουσείο αν υπάρχει χρόνος. Μετά επιστροφή στα Χανιά για δείπνο στην Παλιά Πόλη."
           }
         ],
         "title_el": "Λιμνοθάλασσα Μπάλος & Γραμβούσα",
-        "overnight_el": "Κίσσαμος ή Χανιά"
+        "overnight_el": "Χανιά"
       },
       {
         "day": 3,
-        "title": "Falasarna & the Sunset Coast",
-        "color": "#5A7A3A",
-        "km": 50,
-        "drive_mins": 60,
-        "overnight": "Falasarna or Kissamos",
-        "stops": [
-          {
-            "name": "Falasarna Beach",
-            "lat": 35.5144,
-            "lng": 23.5733,
-            "type": "beach",
-            "time": "10:00",
-            "wiki": "https://en.wikipedia.org/wiki/Falasarna",
-            "desc": "Five consecutive beaches of golden sand on the west coast. The main Pachia Ammos beach is 1km long. Warm turquoise water, consistent waves, spectacular west-facing sunsets.",
-            "name_el": "Παραλία Φαλάσαρνα",
-            "desc_el": "Πέντε διαδοχικές παραλίες χρυσής άμμου στη δυτική ακτή. Η κύρια παραλία Παχιά Άμμος έχει μήκος 1 χλμ. Ζεστά τιρκουάζ νερά, σταθερά κύματα, εντυπωσιακά δυτικά ηλιοβασιλέματα."
-          },
-          {
-            "name": "Ancient Falasarna",
-            "lat": 35.5133,
-            "lng": 23.57,
-            "type": "museum",
-            "time": "13:00",
-            "wiki": null,
-            "desc": "Ruins of the ancient Minoan and Hellenistic port city. The ancient harbour wall has risen several metres due to tectonic activity — a fascinating geological record.",
-            "name_el": "Αρχαία Φαλάσαρνα",
-            "desc_el": "Ερείπια της αρχαίας μινωικής και ελληνιστικής λιμενικής πόλης. Το αρχαίο τείχος του λιμανιού έχει ανέβει αρκετά μέτρα λόγω τεκτονικής δραστηριότητας — ένα συναρπαστικό γεωλογικό αρχείο."
-          },
-          {
-            "name": "Sunset at Falasarna",
-            "lat": 35.5102,
-            "lng": 23.5671,
-            "type": "nature",
-            "time": "18:00",
-            "wiki": null,
-            "desc": "Falasarna faces due west — the sunsets here are among the best in Greece. Grab a drink at one of the clifftop bars and watch the sun drop into the sea.",
-            "name_el": "Ηλιοβασίλεμα στη Φαλάσαρνα",
-            "desc_el": "Η Φαλάσαρνα είναι στραμμένη ακριβώς δυτικά — τα ηλιοβασιλέματα εδώ είναι από τα καλύτερα της Ελλάδας. Πιες ένα ποτό σε ένα από τα μπαρ στον γκρεμό και κοίτα τον ήλιο να βυθίζεται στη θάλασσα."
-          }
-        ],
-        "title_el": "Φαλάσαρνα & η Ακτή του Ηλιοβασιλέματος",
-        "overnight_el": "Φαλάσαρνα ή Κίσσαμος"
-      },
-      {
-        "day": 4,
-        "title": "Elafonisi — Pink Sand Lagoon",
-        "color": "#C4962A",
-        "km": 75,
-        "drive_mins": 90,
-        "overnight": "Chania or Paleochora",
-        "stops": [
-          {
-            "name": "Topolia Gorge",
-            "lat": 35.375,
-            "lng": 23.742,
-            "type": "nature",
-            "time": "09:30",
-            "wiki": null,
-            "desc": "Drive through the dramatic Topolia Gorge — towering limestone cliffs and a small cave chapel. A spectacular route that most tourists miss.",
-            "name_el": "Φαράγγι Τοπολίων",
-            "desc_el": "Οδήγησε μέσα από το εντυπωσιακό φαράγγι των Τοπολίων — επιβλητικοί ασβεστολιθικοί βράχοι και ένα μικρό σπήλαιο-εκκλησάκι. Μια εντυπωσιακή διαδρομή που οι περισσότεροι τουρίστες χάνουν."
-          },
-          {
-            "name": "Elafonisi Beach",
-            "lat": 35.2722,
-            "lng": 23.5361,
-            "type": "beach",
-            "time": "11:30",
-            "wiki": "https://en.wikipedia.org/wiki/Elafonisi",
-            "desc": "Ranked world's best beach by TripAdvisor. Pink-tinged sand from crushed seashells, shallow emerald lagoon, small island accessible on foot at low tide. Arrive before noon for a sunbed.",
-            "name_el": "Παραλία Ελαφονήσι",
-            "desc_el": "Κατατάχθηκε ως η καλύτερη παραλία του κόσμου από το TripAdvisor. Ροζ άμμος από συντριμμένα κοχύλια, ρηχή σμαραγδένια λιμνοθάλασσα, μικρό νησί προσβάσιμο με τα πόδια στην άμπωτη. Φτάσε πριν το μεσημέρι για ξαπλώστρα."
-          },
-          {
-            "name": "Kedrodasos Beach",
-            "lat": 35.27,
-            "lng": 23.5283,
-            "type": "beach",
-            "time": "15:00",
-            "wiki": null,
-            "desc": "Secluded wild beach 1km east of Elafonisi through a protected juniper forest. Pristine, unorganised, far fewer people. Worth the short walk.",
-            "name_el": "Παραλία Κεδρόδασος",
-            "desc_el": "Απομονωμένη άγρια παραλία 1 χλμ ανατολικά του Ελαφονησίου μέσα από προστατευμένο δάσος κέδρων. Παρθένα, ανοργάνωτη, πολύ λιγότερος κόσμος. Αξίζει την μικρή πεζοπορία."
-          },
-          {
-            "name": "Paleochora",
-            "lat": 35.233,
-            "lng": 23.683,
-            "type": "city",
-            "time": "18:00",
-            "wiki": "https://en.wikipedia.org/wiki/Paleochora",
-            "desc": "Laid-back south-coast town with beaches on both sides of a headland. Dinner at a waterfront taverna — the seafood here is excellent and inexpensive.",
-            "name_el": "Παλαιόχωρα",
-            "desc_el": "Χαλαρή πόλη της νότιας ακτής με παραλίες και στις δύο πλευρές ενός ακρωτηρίου. Δείπνο σε μια ταβέρνα στο νερό — τα θαλασσινά εδώ είναι εξαιρετικά και προσιτά."
-          }
-        ],
-        "title_el": "Ελαφονήσι — Η Ροζ Άμμος",
-        "overnight_el": "Χανιά ή Παλαιόχωρα"
-      },
-      {
-        "day": 5,
         "title": "Samaria Gorge",
         "color": "#7B5EA7",
-        "km": 45,
-        "drive_mins": 55,
-        "overnight": null,
+        "km": 80,
+        "drive_mins": 100,
+        "overnight": "Chania Town",
         "stops": [
           {
             "name": "Xyloskalo (Gorge Entry)",
@@ -290,16 +189,140 @@
             "type": "harbour",
             "time": "15:30",
             "wiki": null,
-            "desc": "Ferry arrival point on the south coast. Bus back to Chania through the mountains. Final dinner in Chania Old Town.",
+            "desc": "Ferry arrival point on the south coast. Catch the bus back to Chania over the mountain road — about 90 minutes, panoramic. Dinner in the Old Town.",
             "name_el": "Χώρα Σφακίων",
-            "desc_el": "Σημείο άφιξης του πλοίου στη νότια ακτή. Λεωφορείο πίσω στα Χανιά μέσα από τα βουνά. Τελευταίο δείπνο στην Παλιά Πόλη."
+            "desc_el": "Σημείο άφιξης του πλοίου στη νότια ακτή. Πάρε το λεωφορείο πίσω στα Χανιά πάνω από τα βουνά — περίπου 90 λεπτά, με πανοραμική θέα. Δείπνο στην Παλιά Πόλη."
           }
         ],
-        "title_el": "Φαράγγι Σαμαριάς"
+        "title_el": "Φαράγγι Σαμαριάς",
+        "overnight_el": "Χανιά"
+      },
+      {
+        "day": 4,
+        "title": "Falasarna, Elafonisi & Paleochora",
+        "title_el": "Φαλάσαρνα, Ελαφονήσι & Παλαιόχωρα",
+        "color": "#C4962A",
+        "km": 130,
+        "drive_mins": 160,
+        "overnight": "Paleochora",
+        "overnight_el": "Παλαιόχωρα",
+        "stops": [
+          {
+            "name": "Falasarna Beach",
+            "lat": 35.5144,
+            "lng": 23.5733,
+            "type": "beach",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Falasarna",
+            "desc": "Five consecutive beaches of golden sand on the west coast. The main Pachia Ammos beach is 1km long. Warm turquoise water, consistent waves, spectacular west-facing sunsets. Morning is best — fewer people, softer light.",
+            "name_el": "Παραλία Φαλάσαρνα",
+            "desc_el": "Πέντε διαδοχικές παραλίες χρυσής άμμου στη δυτική ακτή. Η κύρια παραλία Παχιά Άμμος έχει μήκος 1 χλμ. Ζεστά τιρκουάζ νερά, σταθερά κύματα, εντυπωσιακά δυτικά ηλιοβασιλέματα. Το πρωί είναι το καλύτερο — λιγότερος κόσμος, πιο μαλακό φως."
+          },
+          {
+            "name": "Ancient Falasarna",
+            "lat": 35.5133,
+            "lng": 23.57,
+            "type": "museum",
+            "time": "11:00",
+            "wiki": null,
+            "desc": "Ruins of the ancient Minoan and Hellenistic port city. The ancient harbour wall has risen several metres due to tectonic activity — a fascinating geological record.",
+            "name_el": "Αρχαία Φαλάσαρνα",
+            "desc_el": "Ερείπια της αρχαίας μινωικής και ελληνιστικής λιμενικής πόλης. Το αρχαίο τείχος του λιμανιού έχει ανέβει αρκετά μέτρα λόγω τεκτονικής δραστηριότητας — ένα συναρπαστικό γεωλογικό αρχείο."
+          },
+          {
+            "name": "Topolia Gorge",
+            "lat": 35.375,
+            "lng": 23.742,
+            "type": "nature",
+            "time": "12:30",
+            "wiki": null,
+            "desc": "Drive through the dramatic Topolia Gorge — towering limestone cliffs and a small cave chapel. A spectacular route that most tourists miss.",
+            "name_el": "Φαράγγι Τοπολίων",
+            "desc_el": "Οδήγησε μέσα από το εντυπωσιακό φαράγγι των Τοπολίων — επιβλητικοί ασβεστολιθικοί βράχοι και ένα μικρό σπήλαιο-εκκλησάκι. Μια εντυπωσιακή διαδρομή που οι περισσότεροι τουρίστες χάνουν."
+          },
+          {
+            "name": "Elafonisi Beach",
+            "lat": 35.2722,
+            "lng": 23.5361,
+            "type": "beach",
+            "time": "13:30",
+            "wiki": "https://en.wikipedia.org/wiki/Elafonisi",
+            "desc": "Ranked world's best beach by TripAdvisor. Pink-tinged sand from crushed seashells, shallow emerald lagoon, small island accessible on foot at low tide. Arrive before noon for a sunbed.",
+            "name_el": "Παραλία Ελαφονήσι",
+            "desc_el": "Κατατάχθηκε ως η καλύτερη παραλία του κόσμου από το TripAdvisor. Ροζ άμμος από συντριμμένα κοχύλια, ρηχή σμαραγδένια λιμνοθάλασσα, μικρό νησί προσβάσιμο με τα πόδια στην άμπωτη. Φτάσε πριν το μεσημέρι για ξαπλώστρα."
+          },
+          {
+            "name": "Kedrodasos Beach",
+            "lat": 35.27,
+            "lng": 23.5283,
+            "type": "beach",
+            "time": "15:30",
+            "wiki": null,
+            "desc": "Secluded wild beach 1km east of Elafonisi through a protected juniper forest. Pristine, unorganised, far fewer people. Worth the short walk.",
+            "name_el": "Παραλία Κεδρόδασος",
+            "desc_el": "Απομονωμένη άγρια παραλία 1 χλμ ανατολικά του Ελαφονησίου μέσα από προστατευμένο δάσος κέδρων. Παρθένα, ανοργάνωτη, πολύ λιγότερος κόσμος. Αξίζει την μικρή πεζοπορία."
+          },
+          {
+            "name": "Paleochora",
+            "lat": 35.233,
+            "lng": 23.683,
+            "type": "city",
+            "time": "18:30",
+            "wiki": "https://en.wikipedia.org/wiki/Paleochora",
+            "desc": "Laid-back south-coast town with beaches on both sides of a headland. Arrive in the late afternoon, settle in, and have dinner at a waterfront taverna — the seafood here is excellent. Stay overnight.",
+            "name_el": "Παλαιόχωρα",
+            "desc_el": "Χαλαρή πόλη στη νότια ακτή με παραλίες και στις δύο πλευρές μιας χερσονήσου. Άφιξη αργά το απόγευμα, τακτοποίηση, και δείπνο σε ταβέρνα στην παραλία — τα ψαρικά εδώ είναι εξαιρετικά. Διανυκτέρευση."
+          }
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Paleochora & Departure",
+        "title_el": "Παλαιόχωρα & Αναχώρηση",
+        "color": "#7B5EA7",
+        "km": 80,
+        "drive_mins": 100,
+        "overnight": null,
+        "overnight_el": null,
+        "stops": [
+          {
+            "name": "Pahia Ammos Beach",
+            "name_el": "Παχιά Άμμος",
+            "time": "09:00",
+            "type": "beach",
+            "desc": "Paleochora's main sandy beach on the western side of the headland — long, soft golden sand, shallow turquoise water. Morning swim before the day heats up.",
+            "desc_el": "Η κύρια αμμώδης παραλία της Παλαιόχωρας στη δυτική πλευρά της χερσονήσου — μακριά, μαλακή χρυσαφένια άμμος, ρηχά τιρκουάζ νερά. Πρωινό μπάνιο πριν ζεστάνει η μέρα.",
+            "lat": 35.235,
+            "lng": 23.677,
+            "wiki": ""
+          },
+          {
+            "name": "Paleochora Old Town",
+            "name_el": "Παλιά Παλαιόχωρα",
+            "time": "11:00",
+            "type": "town",
+            "desc": "Walk the headland — a small Venetian castle ruin sits at the tip with views in all directions. Coffee at one of the shaded squares, then last lunch.",
+            "desc_el": "Περπάτησε στη χερσόνησο — στην άκρη υπάρχουν τα ερείπια ενός μικρού βενετσιάνικου κάστρου με θέα προς όλες τις κατευθύνσεις. Καφές σε μία από τις σκιερές πλατείες, και τελευταίο γεύμα.",
+            "lat": 35.231,
+            "lng": 23.679,
+            "wiki": "https://en.wikipedia.org/wiki/Paleochora"
+          },
+          {
+            "name": "Chania — Departure",
+            "name_el": "Χανιά — Αναχώρηση",
+            "time": "15:00",
+            "type": "departure",
+            "desc": "Drive back to Chania for ferry or flight. About 75 km — give yourself 90 minutes for the mountain road. Final coffee at the Venetian harbour if time allows.",
+            "desc_el": "Επιστροφή στα Χανιά για πλοίο ή αεροπλάνο. Περίπου 75 χλμ. — υπολόγισε 90 λεπτά για τον ορεινό δρόμο. Τελευταίος καφές στο Βενετσιάνικο λιμάνι αν προλαβαίνεις.",
+            "lat": 35.5138,
+            "lng": 24.0179,
+            "wiki": "https://en.wikipedia.org/wiki/Chania"
+          }
+        ]
       }
     ],
     "title_el": "Πρόγραμμα 5 Ημερών στα Χανιά",
-    "subtitle_el": "Από το ενετικό λιμάνι των Χανίων ως τις άγριες παραλίες της δύσης — Μπάλος, Ελαφονήσι, το Φαράγγι της Σαμαριάς και οι γκρεμοί ηλιοβασιλέματος της Φαλάσαρνας."
+    "subtitle_el": "Από το Βενετσιάνικο λιμάνι των Χανίων μέχρι το μεγάλο φαράγγι της Σαμαριάς, τις λιμνοθάλασσες του Μπάλου και του Ελαφονησιού, και τη νοτιακή ηρεμία της Παλαιόχωρας."
   },
   "beaches": [
     {

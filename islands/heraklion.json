@@ -5,7 +5,7 @@
   "intro": "Heraklion is where Crete's extraordinary history hits hardest. The Palace of Knossos — the largest Bronze Age archaeological site in Greece — sits just 5km from the city centre, and the Heraklion Archaeological Museum holds the world's finest collection of Minoan art. The city itself is underrated: a working Cretan capital with exceptional food, a Venetian fortress and one of the liveliest market streets in Greece.",
   "itinerary": {
     "title": "5-Day Heraklion Itinerary",
-    "subtitle": "Ancient Minoans at Knossos, the wine villages of Archanes, the dramatic south coast at Matala, and the beach resort of Malia — the full range of central Crete.",
+    "subtitle": "Ancient Minoans at Knossos, the wine villages of Archanes, the high mountain plateau of Lasithi and the dramatic south coast at Matala — the full range of central Crete.",
     "days": [
       {
         "day": 1,
@@ -132,67 +132,11 @@
       },
       {
         "day": 3,
-        "title": "South Coast — Matala & Phaistos",
-        "color": "#5A7A3A",
-        "km": 80,
-        "drive_mins": 90,
-        "overnight": "Matala or Agia Galini",
-        "stops": [
-          {
-            "name": "Phaistos Palace",
-            "lat": 35.0497,
-            "lng": 24.8119,
-            "type": "museum",
-            "time": "09:30",
-            "wiki": "https://en.wikipedia.org/wiki/Phaistos",
-            "desc": "Second-largest Minoan palace after Knossos, with the added bonus of extraordinary views over the Messara plain and the White Mountains. Far less crowded than Knossos.",
-            "name_el": "Ανάκτορο της Φαιστού",
-            "desc_el": "Το δεύτερο μεγαλύτερο Μινωικό ανάκτορο μετά την Κνωσό, με το επιπλέον προτέρημα της εξαιρετικής θέας στην πεδιάδα της Μεσαράς και τα Λευκά Όρη. Πολύ λιγότερο πολυσύχναστο από την Κνωσό."
-          },
-          {
-            "name": "Matala Beach",
-            "lat": 34.9969,
-            "lng": 24.7472,
-            "type": "beach",
-            "time": "12:00",
-            "wiki": "https://en.wikipedia.org/wiki/Matala,_Heraklion",
-            "desc": "Famous beach with Roman-era cave dwellings carved into the red cliffs — occupied by hippies in the 1960s and 70s, with Joni Mitchell among the residents. Sandy beach, good swimming.",
-            "name_el": "Παραλία Μάταλα",
-            "desc_el": "Διάσημη παραλία με ρωμαϊκές κατοικίες-σπηλιές σκαλισμένες στους κόκκινους βράχους — κατοικήθηκαν από χίπις τις δεκαετίες του 1960 και 1970, με τη Joni Mitchell ανάμεσα στους ένοικους. Αμμώδης παραλία, καλό μπάνιο."
-          },
-          {
-            "name": "Red Beach Matala",
-            "lat": 34.9969,
-            "lng": 24.7472,
-            "type": "beach",
-            "time": "14:30",
-            "wiki": null,
-            "desc": "20-minute walk over the headland from Matala brings you to a dramatic red-cliffed nudist beach only accessible on foot. Worth the effort for solitude.",
-            "name_el": "Κόκκινη Παραλία Μάταλας",
-            "desc_el": "Πεζοπορία 20 λεπτών πάνω από το ακρωτήριο των Μάταλων σε φέρνει σε μια εντυπωσιακή κόκκινη παραλία γυμνιστών, προσβάσιμη μόνο με τα πόδια. Αξίζει τον κόπο για τη μοναξιά."
-          },
-          {
-            "name": "Agia Galini",
-            "lat": 35.0967,
-            "lng": 24.69,
-            "type": "harbour",
-            "time": "18:00",
-            "wiki": null,
-            "desc": "Picturesque fishing village on the south coast. Stay overnight — excellent fresh fish restaurants on the small harbour.",
-            "name_el": "Αγία Γαλήνη",
-            "desc_el": "Γραφικό ψαροχώρι στη νότια ακτή. Διανυκτέρευση εδώ — εξαιρετικά εστιατόρια με φρέσκο ψάρι στο μικρό λιμάνι."
-          }
-        ],
-        "title_el": "Νότια Ακτή — Μάταλα & Φαιστός",
-        "overnight_el": "Μάταλα ή Αγία Γαλήνη"
-      },
-      {
-        "day": 4,
         "title": "Lasithi Plateau & Dikteon Cave",
         "color": "#C4962A",
         "km": 65,
         "drive_mins": 80,
-        "overnight": "Heraklion or Malia",
+        "overnight": "Heraklion",
         "stops": [
           {
             "name": "Lasithi Plateau",
@@ -240,66 +184,123 @@
           }
         ],
         "title_el": "Οροπέδιο Λασιθίου & Δικταίο Άντρο",
-        "overnight_el": "Ηράκλειο ή Μάλια"
+        "overnight_el": "Ηράκλειο"
+      },
+      {
+        "day": 4,
+        "title": "South to Matala — Phaistos & Red Beach",
+        "color": "#5A7A3A",
+        "km": 80,
+        "drive_mins": 90,
+        "overnight": "Matala",
+        "stops": [
+          {
+            "name": "Phaistos Palace",
+            "lat": 35.0497,
+            "lng": 24.8119,
+            "type": "museum",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Phaistos",
+            "desc": "Second-largest Minoan palace after Knossos, with the added bonus of extraordinary views over the Messara plain and the White Mountains. Far less crowded than Knossos.",
+            "name_el": "Ανάκτορο της Φαιστού",
+            "desc_el": "Το δεύτερο μεγαλύτερο Μινωικό ανάκτορο μετά την Κνωσό, με το επιπλέον προτέρημα της εξαιρετικής θέας στην πεδιάδα της Μεσαράς και τα Λευκά Όρη. Πολύ λιγότερο πολυσύχναστο από την Κνωσό."
+          },
+          {
+            "name": "Matala Beach",
+            "lat": 34.9969,
+            "lng": 24.7472,
+            "type": "beach",
+            "time": "12:00",
+            "wiki": "https://en.wikipedia.org/wiki/Matala,_Heraklion",
+            "desc": "Famous beach with Roman-era cave dwellings carved into the red cliffs — occupied by hippies in the 1960s and 70s, with Joni Mitchell among the residents. Sandy beach, good swimming.",
+            "name_el": "Παραλία Μάταλα",
+            "desc_el": "Διάσημη παραλία με ρωμαϊκές κατοικίες-σπηλιές σκαλισμένες στους κόκκινους βράχους — κατοικήθηκαν από χίπις τις δεκαετίες του 1960 και 1970, με τη Joni Mitchell ανάμεσα στους ένοικους. Αμμώδης παραλία, καλό μπάνιο."
+          },
+          {
+            "name": "Red Beach Matala",
+            "lat": 34.9969,
+            "lng": 24.7472,
+            "type": "beach",
+            "time": "14:30",
+            "wiki": null,
+            "desc": "20-minute walk over the headland from Matala brings you to a dramatic red-cliffed nudist beach only accessible on foot. Worth the effort for solitude.",
+            "name_el": "Κόκκινη Παραλία Μάταλας",
+            "desc_el": "Πεζοπορία 20 λεπτών πάνω από το ακρωτήριο των Μάταλων σε φέρνει σε μια εντυπωσιακή κόκκινη παραλία γυμνιστών, προσβάσιμη μόνο με τα πόδια. Αξίζει τον κόπο για τη μοναξιά."
+          },
+          {
+            "name": "Agia Galini",
+            "lat": 35.0967,
+            "lng": 24.69,
+            "type": "harbour",
+            "time": "19:00",
+            "wiki": null,
+            "desc": "Picturesque fishing village 35 minutes west of Matala — the best sunset and seafood combo on this stretch of coast. Drive over for dinner at one of the harbour tavernas, then back to Matala for the night.",
+            "name_el": "Αγία Γαλήνη",
+            "desc_el": "Γραφικό ψαροχώρι 35 λεπτά δυτικά από τα Μάταλα — ο καλύτερος συνδυασμός ηλιοβασιλέματος και ψαρικών στην περιοχή. Πήγαινε για δείπνο σε ταβέρνα στο λιμάνι, και επιστροφή στα Μάταλα για διανυκτέρευση."
+          }
+        ],
+        "title_el": "Νότια στα Μάταλα — Φαιστός & Κόκκινη Παραλία",
+        "overnight_el": "Μάταλα"
       },
       {
         "day": 5,
-        "title": "Spinalonga & Elounda",
+        "title": "Matala Morning, Gortyna & Departure",
+        "title_el": "Πρωινό στα Μάταλα, Γόρτυνα & Αναχώρηση",
         "color": "#7B5EA7",
-        "km": 70,
-        "drive_mins": 80,
+        "km": 75,
+        "drive_mins": 90,
         "overnight": null,
+        "overnight_el": null,
         "stops": [
           {
-            "name": "Elounda",
-            "lat": 35.2583,
-            "lng": 25.7233,
-            "type": "harbour",
-            "time": "09:30",
-            "wiki": "https://en.wikipedia.org/wiki/Elounda",
-            "desc": "Elegant resort village on a sheltered gulf — calm, clear water and an upmarket atmosphere. Breakfast at a waterfront café before the boat to Spinalonga.",
-            "name_el": "Ελούντα",
-            "desc_el": "Κομψό παραθαλάσσιο χωριό σε προστατευμένο κόλπο — ήρεμα, καθαρά νερά και αναβαθμισμένη ατμόσφαιρα. Πρωινό σε καφέ στο νερό πριν τη βάρκα για τη Σπιναλόγκα."
-          },
-          {
-            "name": "Spinalonga Island",
-            "lat": 35.2733,
-            "lng": 25.7383,
-            "type": "castle",
-            "time": "11:00",
-            "wiki": "https://en.wikipedia.org/wiki/Spinalonga",
-            "desc": "Venetian island fortress and Greece's last active leper colony until 1957. Made famous by Victoria Hislop's novel The Island. Deeply atmospheric. Ferry from Elounda every 30 minutes.",
-            "name_el": "Νησάκι της Σπιναλόγκας",
-            "desc_el": "Βενετσιάνικο νησιωτικό φρούριο και η τελευταία ενεργή λεπροκομία της Ελλάδας μέχρι το 1957. Έγινε διάσημη από το μυθιστόρημα Το Νησί της Victoria Hislop. Βαθιά ατμοσφαιρική. Ferry από την Ελούντα κάθε 30 λεπτά."
-          },
-          {
-            "name": "Voulisma Beach",
-            "lat": 35.1075,
-            "lng": 25.7678,
+            "name": "Matala Beach",
+            "name_el": "Παραλία Μάταλα",
+            "time": "08:30",
             "type": "beach",
-            "time": "14:00",
-            "wiki": null,
-            "desc": "One of the finest beaches in eastern Crete — long, sandy, clear water, organised facilities. A perfect final beach stop before the drive back to Heraklion.",
-            "name_el": "Παραλία Βουλίσμα",
-            "desc_el": "Μία από τις καλύτερες παραλίες της ανατολικής Κρήτης — μακριά, αμμώδης, καθαρά νερά, οργανωμένες υπηρεσίες. Η τέλεια τελευταία παραλιακή στάση πριν την επιστροφή στο Ηράκλειο."
+            "desc": "Last morning swim before the crowds arrive — the cave-pocked cliff is at its best in the early light. Coffee on the beach, then north.",
+            "desc_el": "Τελευταίο πρωινό μπάνιο πριν έρθει ο κόσμος — οι βραχώδεις σπηλιές δείχνουν καλύτερα στο πρωινό φως. Καφές στην παραλία, και μετά βόρεια.",
+            "lat": 34.9956,
+            "lng": 24.7494,
+            "wiki": "https://en.wikipedia.org/wiki/Matala"
           },
           {
-            "name": "Heraklion Airport",
-            "lat": 35.3397,
-            "lng": 25.1803,
-            "type": "city",
-            "time": "18:00",
-            "wiki": null,
-            "desc": "Return to Heraklion for departure, or stay a final night in the city.",
-            "name_el": "Αεροδρόμιο Ηρακλείου",
-            "desc_el": "Επιστροφή στο Ηράκλειο για αναχώρηση, ή διανυκτέρευση μιας τελευταίας βραδιάς στην πόλη."
+            "name": "Gortyna",
+            "name_el": "Γόρτυνα",
+            "time": "11:00",
+            "type": "archaeological",
+            "desc": "Roman capital of Crete and one of the great archaeological sites of the island. The Code of Gortyn, carved in stone here in the 5th century BC, is the oldest written law code in Europe. Less visited than Knossos, equally substantial — and right on the road back to Heraklion.",
+            "desc_el": "Η ρωμαϊκή πρωτεύουσα της Κρήτης και ένας από τους σημαντικότερους αρχαιολογικούς χώρους του νησιού. Ο Νόμος της Γόρτυνας, χαραγμένος σε πέτρα τον 5ο αιώνα π.Χ., είναι ο αρχαιότερος γραπτός νομικός κώδικας της Ευρώπης. Λιγότερο επισκέψιμη από την Κνωσό, εξίσου ουσιαστική — και στη διαδρομή της επιστροφής προς το Ηράκλειο.",
+            "lat": 35.0631,
+            "lng": 24.9522,
+            "wiki": "https://en.wikipedia.org/wiki/Gortyna"
+          },
+          {
+            "name": "Lunch — Vori or Heraklion",
+            "name_el": "Γεύμα — Βώροι ή Ηράκλειο",
+            "time": "13:30",
+            "type": "food",
+            "desc": "Vori village is 10 minutes from Gortyna and has good tavernas — or push on to Heraklion for a final lunch on the harbour. Both work depending on departure time.",
+            "desc_el": "Το χωριό Βώροι είναι 10 λεπτά από τη Γόρτυνα και έχει καλές ταβέρνες — ή συνέχισε προς το Ηράκλειο για τελευταίο γεύμα στο λιμάνι. Και τα δύο δουλεύουν, ανάλογα με την ώρα αναχώρησης.",
+            "lat": 35.0492,
+            "lng": 24.8656,
+            "wiki": ""
+          },
+          {
+            "name": "Heraklion — Departure",
+            "name_el": "Ηράκλειο — Αναχώρηση",
+            "time": "16:00",
+            "type": "departure",
+            "desc": "Return to Heraklion for ferry or flight. The airport is east of the city; the port is in the centre. Final coffee at Lions Square if time allows.",
+            "desc_el": "Επιστροφή στο Ηράκλειο για πλοίο ή αεροπλάνο. Το αεροδρόμιο είναι ανατολικά της πόλης· το λιμάνι στο κέντρο. Τελευταίος καφές στην πλατεία Λεόντων αν προλαβαίνεις.",
+            "lat": 35.3387,
+            "lng": 25.1442,
+            "wiki": "https://en.wikipedia.org/wiki/Heraklion"
           }
-        ],
-        "title_el": "Σπιναλόγκα & Ελούντα"
+        ]
       }
     ],
     "title_el": "Πρόγραμμα 5 Ημερών στο Ηράκλειο",
-    "subtitle_el": "Οι αρχαίοι Μινωίτες στην Κνωσό, τα οινοπαραγωγά χωριά των Αρχανών, η δραματική νότια ακτή στα Μάταλα, και το παραθαλάσσιο θέρετρο των Μαλίων — όλο το εύρος της κεντρικής Κρήτης."
+    "subtitle_el": "Αρχαίοι Μινωίτες στην Κνωσό, τα οινοχώρια των Αρχανών, το ορεινό οροπέδιο του Λασιθίου και η εντυπωσιακή νότια ακτή στα Μάταλα — όλη η ποικιλία της κεντρικής Κρήτης."
   },
   "beaches": [
     {
