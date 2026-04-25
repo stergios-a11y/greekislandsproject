@@ -405,5 +405,49 @@
   ],
   "name_el": "Κρήτη (Ηράκλειο)",
   "subtitle_el": "Κνωσός, Μινωικός πολιτισμός και η καρδιά του μεγαλύτερου νησιού",
-  "intro_el": "Το Ηράκλειο είναι το σημείο όπου η εξαιρετική ιστορία της Κρήτης χτυπάει πιο δυνατά. Το Ανάκτορο της Κνωσού — ο μεγαλύτερος αρχαιολογικός χώρος της Εποχής του Χαλκού στην Ελλάδα — βρίσκεται μόλις 5 χλμ από το κέντρο της πόλης, και το Αρχαιολογικό Μουσείο Ηρακλείου φιλοξενεί την καλύτερη συλλογή Μινωικής τέχνης στον κόσμο. Η ίδια η πόλη υποτιμάται: μια ζωντανή κρητική πρωτεύουσα με εξαιρετικό φαγητό, βενετσιάνικο φρούριο και μία από τις πιο πολύβουες αγορές της Ελλάδας."
+  "intro_el": "Το Ηράκλειο είναι το σημείο όπου η εξαιρετική ιστορία της Κρήτης χτυπάει πιο δυνατά. Το Ανάκτορο της Κνωσού — ο μεγαλύτερος αρχαιολογικός χώρος της Εποχής του Χαλκού στην Ελλάδα — βρίσκεται μόλις 5 χλμ από το κέντρο της πόλης, και το Αρχαιολογικό Μουσείο Ηρακλείου φιλοξενεί την καλύτερη συλλογή Μινωικής τέχνης στον κόσμο. Η ίδια η πόλη υποτιμάται: μια ζωντανή κρητική πρωτεύουσα με εξαιρετικό φαγητό, βενετσιάνικο φρούριο και μία από τις πιο πολύβουες αγορές της Ελλάδας.",
+  "specialties": [
+    {
+      "name": "Dakos",
+      "name_el": "Ντάκος",
+      "desc": "Hard barley rusk topped with grated tomato, mizithra cheese, olive oil and oregano. The Cretan tapas. Found everywhere — best at no-frills village tavernas.",
+      "desc_el": "Σκληρό κριθαρένιο παξιμάδι με τριμμένη ντομάτα, μυζήθρα, ελαιόλαδο και ρίγανη. Το κρητικό μεζεδάκι. Παντού — καλύτερο σε απλές χωριάτικες ταβέρνες."
+    },
+    {
+      "name": "Cretan raki/tsikoudia",
+      "name_el": "Ρακή Κρήτης (τσικουδιά)",
+      "desc": "Pomace-distilled spirit served everywhere as a welcome and farewell. Each village has its own. Buy at any small shop or distillery; supermarket versions are inferior.",
+      "desc_el": "Απόσταγμα από στέμφυλα, σερβίρεται παντού ως υποδοχή και αποχαιρετισμός. Κάθε χωριό έχει το δικό του. Σε μικρά μαγαζιά ή αποστακτήρια· οι εκδοχές σούπερ μάρκετ είναι κατώτερες."
+    },
+    {
+      "name": "Graviera Kritis",
+      "name_el": "Γραβιέρα Κρήτης",
+      "desc": "PDO hard sheep's-milk cheese, the most famous Cretan cheese. Buy direct from village producers in Anogeia or Zaros for top quality.",
+      "desc_el": "Σκληρή πρόβεια γραβιέρα ΠΟΠ, το πιο διάσημο κρητικό τυρί. Απευθείας από παραγωγούς σε Ανώγεια και Ζαρό για κορυφαία ποιότητα."
+    },
+    {
+      "name": "Bougatsa Kritis",
+      "name_el": "Μπουγάτσα Κρήτης",
+      "desc": "Cretan cheese pie eaten for breakfast — flaky pastry, fresh creamy mizithra, dusted with sugar and cinnamon. Kirkor in Heraklion's Lions Square is the institution.",
+      "desc_el": "Κρητική μπουγάτσα για πρωινό — τραγανή ζύμη, φρέσκια κρεμώδης μυζήθρα, με ζάχαρη και κανέλα. Ο Κίρκορ στην πλατεία Λιονταριών είναι ο θεσμός."
+    }
+  ],
+  "crafts": [
+    {
+      "name": "Cretan knife (machairi)",
+      "name_el": "Κρητικό μαχαίρι",
+      "desc": "Traditional shepherd's knife with engraved verse. Custom-made in Heraklion's old craft shops on Daedalou street. Genuine ones are expensive but heritage-grade.",
+      "desc_el": "Παραδοσιακό κρητικό μαχαίρι με χαραγμένη μαντινάδα. Παραγγελία σε παλιά εργαστήρια στην οδό Δαιδάλου του Ηρακλείου. Τα γνήσια είναι ακριβά αλλά κληρονομιά."
+    }
+  ],
+  "festivals": [
+    {
+      "name": "Wine festival of Daphnes",
+      "name_el": "Γιορτή Κρασιού Δαφνών",
+      "when": "Mid-August",
+      "when_el": "Μέσα Αυγούστου",
+      "desc": "Wine festival in the village of Daphnes, the heart of Heraklion's wine country. Tastings of local Liatiko, Vidiano, Mandilari. Dates vary; check the village municipality.",
+      "desc_el": "Γιορτή κρασιού στο χωριό Δαφνές, στην καρδιά του οινικού Ηρακλείου. Γευσιγνωσίες τοπικών Λιάτικου, Βιδιανού, Μανδηλαριάς. Οι ημερομηνίες αλλάζουν."
+    }
+  ]
 }

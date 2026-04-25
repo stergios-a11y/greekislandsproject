@@ -405,5 +405,41 @@
   ],
   "name_el": "Κρήτη (Χανιά)",
   "subtitle_el": "Μπάλος, Ελαφονήσι και η άγρια δύση του μεγαλύτερου νησιού της Ελλάδας",
-  "intro_el": "Η περιοχή των Χανίων είναι η πιο εντυπωσιακή γωνιά της Κρήτης — και ίσως ολόκληρης της Ελλάδας. Τα Λευκά Όρη υψώνονται πάνω από 2400 μέτρα πίσω από μια ακτογραμμή που φιλοξενεί δύο από τις διασημότερες παραλίες του κόσμου: τη ροζ λιμνοθάλασσα του Ελαφονησίου και τον γαλάζιο Μπάλο. Πρόσθεσε μια βενετσιάνικη παλιά πόλη, το βαθύτερο φαράγγι της Ευρώπης και μερικά από τα καλύτερα φαγητά του νησιού, και τα Χανιά είναι αδύνατον να γίνουν σε λιγότερο από 5 μέρες."
+  "intro_el": "Η περιοχή των Χανίων είναι η πιο εντυπωσιακή γωνιά της Κρήτης — και ίσως ολόκληρης της Ελλάδας. Τα Λευκά Όρη υψώνονται πάνω από 2400 μέτρα πίσω από μια ακτογραμμή που φιλοξενεί δύο από τις διασημότερες παραλίες του κόσμου: τη ροζ λιμνοθάλασσα του Ελαφονησίου και τον γαλάζιο Μπάλο. Πρόσθεσε μια βενετσιάνικη παλιά πόλη, το βαθύτερο φαράγγι της Ευρώπης και μερικά από τα καλύτερα φαγητά του νησιού, και τα Χανιά είναι αδύνατον να γίνουν σε λιγότερο από 5 μέρες.",
+  "specialties": [
+    {
+      "name": "Chaniotiko boureki",
+      "name_el": "Χανιώτικο μπουρέκι",
+      "desc": "Layered zucchini, potato, and mizithra cheese pie — Chaniotic specialty. Found at most village tavernas; the version at Tamam in Chania old town is celebrated.",
+      "desc_el": "Πίτα σε στρώσεις με κολοκυθάκια, πατάτα και μυζήθρα — χανιώτικη σπεσιαλιτέ. Σε ταβέρνες χωριών· η εκδοχή στο Ταμάμ στην παλιά πόλη είναι διάσημη."
+    },
+    {
+      "name": "Apaki",
+      "name_el": "Απάκι",
+      "desc": "Smoked pork, vinegar-cured then smoked over aromatic herbs. Eaten cold in slices with raki. A Chaniotic specialty, available at village butchers.",
+      "desc_el": "Καπνιστό χοιρινό, ξιδάτο και μετά καπνισμένο σε αρωματικά βότανα. Σερβίρεται κρύο σε φέτες με ρακή. Χανιώτικη σπεσιαλιτέ σε χωριάτικους χασάπηδες."
+    },
+    {
+      "name": "Chaniotiko cheese",
+      "name_el": "Χανιώτικο τυρί",
+      "desc": "Region-wide tradition: graviera, mizithra, anthotyros, malaka — each with PDO status. The cheese cooperative in Chania town has the full range.",
+      "desc_el": "Παραδοσιακά τυριά της περιοχής: γραβιέρα, μυζήθρα, ανθότυρος, μαλάκα — όλα με ΠΟΠ. Ο συνεταιρισμός τυριών στα Χανιά έχει όλη τη γκάμα."
+    },
+    {
+      "name": "Sfakianopita",
+      "name_el": "Σφακιανόπιτα",
+      "desc": "Sphakian cheese pie — thin pastry filled with myzithra, fried, drizzled with honey. The signature dish of Sfakia in southern Chania. Try at Sfakia village or any Chaniotic taverna.",
+      "desc_el": "Σφακιανόπιτα — λεπτή ζύμη με μυζήθρα, τηγανητή, με μέλι. Το πιο χαρακτηριστικό φαγητό των Σφακίων στη νότια Χανιά. Στα Σφακιά ή σε χανιώτικες ταβέρνες."
+    }
+  ],
+  "festivals": [
+    {
+      "name": "Battle of Crete commemoration",
+      "name_el": "Επέτειος της Μάχης της Κρήτης",
+      "when": "Late May",
+      "when_el": "Τέλη Μαΐου",
+      "desc": "Week of events around 20–27 May commemorating the WWII battle. Most events centred on the cemetery at Souda and various villages where the resistance was fiercest.",
+      "desc_el": "Εβδομάδα εκδηλώσεων γύρω από τις 20–27 Μαΐου για την επέτειο της μάχης του Β' ΠΠ. Κυρίως στο νεκροταφείο της Σούδας και στα χωριά όπου η αντίσταση ήταν πιο σκληρή."
+    }
+  ]
 }

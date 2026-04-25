@@ -258,5 +258,43 @@
   ],
   "name_el": "Σκύρος",
   "subtitle_el": "Άγρια άλογα, τάφος ποιητή, και μοναδική πολιτισμική απομόνωση",
-  "intro_el": "Η Σκύρος είναι η μεγαλύτερη και πιο απομονωμένη των Σποράδων, γεωγραφικά πιο κοντά στην Εύβοια αλλά πολιτισμικά ένας κόσμος δικός της. Τα δύο μισά του νησιού διαφέρουν δραματικά: ένας γυμνός, βραχώδης νότος όπου περιπλανώνται άγρια σκυριανά άλογα (ξεχωριστή φυλή, μικρότερη από πόνι), και ένας καταπράσινος, δασώδης βορράς με τη Χώρα της Σκύρου, το ομορφότερο χωριό των Σποράδων. Στην αρχαιότητα, εδώ κρύφτηκε ο Αχιλλέας πριν την Τροία, και το 1915 εδώ θάφτηκε ο Άγγλος ποιητής Ρούπερτ Μπρουκ."
+  "intro_el": "Η Σκύρος είναι η μεγαλύτερη και πιο απομονωμένη των Σποράδων, γεωγραφικά πιο κοντά στην Εύβοια αλλά πολιτισμικά ένας κόσμος δικός της. Τα δύο μισά του νησιού διαφέρουν δραματικά: ένας γυμνός, βραχώδης νότος όπου περιπλανώνται άγρια σκυριανά άλογα (ξεχωριστή φυλή, μικρότερη από πόνι), και ένας καταπράσινος, δασώδης βορράς με τη Χώρα της Σκύρου, το ομορφότερο χωριό των Σποράδων. Στην αρχαιότητα, εδώ κρύφτηκε ο Αχιλλέας πριν την Τροία, και το 1915 εδώ θάφτηκε ο Άγγλος ποιητής Ρούπερτ Μπρουκ.",
+  "specialties": [
+    {
+      "name": "Skyrian lobster",
+      "name_el": "Αστακός Σκύρου",
+      "desc": "The Aegean lobster (astakos) is celebrated everywhere on Skyros — usually served with handmade pasta. The version at Anemos in Chora is famous.",
+      "desc_el": "Ο αιγαιοπελαγίτικος αστακός εορτάζεται σε όλη τη Σκύρο — συνήθως με χειροποίητα ζυμαρικά. Η εκδοχή στο Άνεμος στη Χώρα είναι διάσημη."
+    },
+    {
+      "name": "Skyrian goat (giouvetsi)",
+      "name_el": "Σκυριανό κατσικάκι",
+      "desc": "Local goat slow-cooked with pasta and cheese — Skyrian Easter dish, served year-round. Try at the village tavernas of Magazia.",
+      "desc_el": "Τοπικό κατσικάκι σιγομαγειρεμένο με ζυμαρικά και τυρί — σκυριανό πασχαλινό φαγητό όλο τον χρόνο. Σε ταβέρνες των Μαγαζιών."
+    }
+  ],
+  "crafts": [
+    {
+      "name": "Skyrian carved furniture",
+      "name_el": "Σκυριανά σκαλιστά έπιπλα",
+      "desc": "Distinctive carved low chairs and tables, originally made for the small Skyrian houses. The Faltaits Museum sells reproductions; small workshops in Chora have originals.",
+      "desc_el": "Ξεχωριστά σκαλιστά χαμηλά έπιπλα, αρχικά για τα μικρά σκυριανά σπίτια. Το Μουσείο Φαλτάιτς πουλάει αντίγραφα· μικρά εργαστήρια στη Χώρα έχουν αυθεντικά."
+    },
+    {
+      "name": "Skyrian embroidery and ceramics",
+      "name_el": "Σκυριανό κέντημα και κεραμική",
+      "desc": "Traditional Skyrian textiles use a unique colour palette and motifs of birds and ships. Pottery from the same tradition has the same iconography.",
+      "desc_el": "Παραδοσιακά σκυριανά υφαντά με μοναδική παλέτα χρωμάτων και μοτίβα από πουλιά και πλοία. Η κεραμική της ίδιας παράδοσης έχει την ίδια εικονογραφία."
+    }
+  ],
+  "festivals": [
+    {
+      "name": "Skyrian Carnival (Apokries)",
+      "name_el": "Αποκριές Σκύρου",
+      "when": "Pre-Lent (movable, Feb–March)",
+      "when_el": "Πριν τη Σαρακοστή (κινητή, Φεβ–Μαρ)",
+      "desc": "Among the most distinctive carnivals in Greece — the 'Yeros' figure dressed in goat skins and bells dances through the village. Pre-Christian roots, deeply Skyrian.",
+      "desc_el": "Από τις πιο ξεχωριστές απόκριες της Ελλάδας — η μορφή του «Γέρου» ντυμένου με κατσικίσιες προβιές και κουδούνια χορεύει στους δρόμους του χωριού. Προχριστιανικές ρίζες, βαθιά σκυριανές."
+    }
+  ]
 }

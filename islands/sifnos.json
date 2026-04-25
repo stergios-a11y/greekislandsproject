@@ -231,5 +231,57 @@
   ],
   "name_el": "Σίφνος",
   "subtitle_el": "Το γκουρμέ κυκλαδίτικο νησί — κεραμική, ρεβιθάδα και το καλύτερο φαγητό του αρχιπελάγους",
-  "intro_el": "Η Σίφνος έχει φήμη εντελώς δυσανάλογη με το μέγεθός της — το καλύτερο φαγητό των Κυκλάδων, μια παράδοση κεραμικής που πηγαίνει πίσω 4000 χρόνια, μια σειρά από όμορφα βενετσιάνικα χωριά, και εξαιρετικές παραλίες. Η σιγοβρασμένη ρεβιθάδα (μαγειρεμένη μια νύχτα σε κεραμικό σκεύος στον φούρνο του χωριού) είναι το τοπικό πιάτο. Το νησί ανταμείβει την αργή ταξιδιωτική εμπειρία — περπάτησε το παλιό δίκτυο μονοπατιών με μουλάρια μεταξύ των χωριών αντί να οδηγήσεις."
+  "intro_el": "Η Σίφνος έχει φήμη εντελώς δυσανάλογη με το μέγεθός της — το καλύτερο φαγητό των Κυκλάδων, μια παράδοση κεραμικής που πηγαίνει πίσω 4000 χρόνια, μια σειρά από όμορφα βενετσιάνικα χωριά, και εξαιρετικές παραλίες. Η σιγοβρασμένη ρεβιθάδα (μαγειρεμένη μια νύχτα σε κεραμικό σκεύος στον φούρνο του χωριού) είναι το τοπικό πιάτο. Το νησί ανταμείβει την αργή ταξιδιωτική εμπειρία — περπάτησε το παλιό δίκτυο μονοπατιών με μουλάρια μεταξύ των χωριών αντί να οδηγήσεις.",
+  "specialties": [
+    {
+      "name": "Mastelo",
+      "name_el": "Μαστέλο",
+      "desc": "Lamb or goat slow-cooked in a clay pot (the mastelo) with red wine and dill, traditionally for Easter. Found year-round at To Steki in Apollonia and most village tavernas.",
+      "desc_el": "Αρνί ή κατσίκι σιγομαγειρεμένο σε πήλινο σκεύος (μαστέλο) με κόκκινο κρασί και άνηθο, παραδοσιακά για το Πάσχα. Όλο τον χρόνο στο Στέκι στην Απολλωνία και στις περισσότερες ταβέρνες."
+    },
+    {
+      "name": "Revithada",
+      "name_el": "Ρεβιθάδα",
+      "desc": "Chickpea stew slow-baked overnight in a clay pot in the village wood-fired oven. A Sunday tradition. Available at most island tavernas; best in Artemonas and Kastro.",
+      "desc_el": "Ρεβίθια στιφάδο σιγοψημένα όλη νύχτα σε πήλινο σκεύος στον ξυλόφουρνο του χωριού. Παράδοση Κυριακής. Στις περισσότερες ταβέρνες· καλύτερα στον Αρτεμώνα και στο Κάστρο."
+    },
+    {
+      "name": "Manoura cheese",
+      "name_el": "Μανούρα",
+      "desc": "Hard aged Sifnian cheese rolled in wine sediment, giving a purple rind. Sharp and salty. Buy at any village shop or the cooperative in Apollonia.",
+      "desc_el": "Σκληρή ξινομανούρα τυλιγμένη σε τρυγία, με μωβ φλούδα. Πικάντικη και αλμυρή. Σε κάθε χωριάτικο μαγαζί ή στον συνεταιρισμό στην Απολλωνία."
+    },
+    {
+      "name": "Ammoudaki almond cookies",
+      "name_el": "Αμυγδαλωτά Σίφνου",
+      "desc": "Soft almond cookies dusted with rose water and powdered sugar. The Theodorou family bakery in Artemonas is the classic source.",
+      "desc_el": "Μαλακά αμυγδαλωτά αρωματισμένα με ροδόνερο και ζάχαρη άχνη. Ο φούρνος της οικογένειας Θεοδώρου στον Αρτεμώνα είναι η κλασική αναφορά."
+    }
+  ],
+  "crafts": [
+    {
+      "name": "Pottery",
+      "name_el": "Κεραμική",
+      "desc": "Sifnos has been producing pottery for 5,000 years and is still doing it. The mastelo clay pot itself is a souvenir worth taking home. Workshops in Vathy and Kamares; the Apollonia pottery has the broadest selection.",
+      "desc_el": "Η Σίφνος παράγει κεραμικά εδώ και 5.000 χρόνια και συνεχίζει. Το ίδιο το μαστέλο είναι αναμνηστικό που αξίζει. Εργαστήρια σε Βαθύ και Καμάρες· το κεραμοποιείο στην Απολλωνία έχει την πιο ευρεία γκάμα."
+    }
+  ],
+  "festivals": [
+    {
+      "name": "Panagia Chrysopigi",
+      "name_el": "Παναγία Χρυσοπηγή",
+      "when": "Pentecost (movable, May–June)",
+      "when_el": "Αγίου Πνεύματος (κινητή, Μάιος–Ιούνιος)",
+      "desc": "Sifnos's biggest festival, at the cliff-top monastery. The icon is paraded; tavernas serve free chickpea stew and lamb to all comers.",
+      "desc_el": "Το μεγαλύτερο πανηγύρι του νησιού, στο μοναστήρι πάνω στον γκρεμό. Η εικόνα περιφέρεται· οι ταβέρνες σερβίρουν δωρεάν ρεβιθάδα και αρνί σε όλους."
+    },
+    {
+      "name": "Profitis Ilias",
+      "name_el": "Προφήτη Ηλία",
+      "when": "20 July",
+      "when_el": "20 Ιουλίου",
+      "desc": "Pilgrimage on foot to the highest point of the island (680m), where a small chapel sits on the summit. Locals walk up before dawn.",
+      "desc_el": "Πεζοπορία στην ψηλότερη κορυφή του νησιού (680μ), όπου βρίσκεται μικρό εκκλησάκι. Οι ντόπιοι ανεβαίνουν πριν την αυγή."
+    }
+  ]
 }

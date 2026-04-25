@@ -234,5 +234,41 @@
       "lat": 39.9961,
       "lng": 25.0792
     }
+  ],
+  "specialties": [
+    {
+      "name": "Kalathaki Limnou",
+      "name_el": "Καλαθάκι Λήμνου",
+      "desc": "PDO sheep's-milk cheese aged in small woven baskets that leave their pattern on the rind. Sharper than feta, drier. The cooperative shop in Myrina has the best.",
+      "desc_el": "Πρόβειο τυρί ΠΟΠ ωριμασμένο σε μικρά καλάθια που αφήνουν το σχέδιό τους στην πέτσα. Πιο πικάντικο από φέτα, πιο στεγνό. Στο μαγαζί του συνεταιρισμού στη Μύρινα."
+    },
+    {
+      "name": "Melichloro cheese",
+      "name_el": "Μελίχλωρο",
+      "desc": "Soft, slightly sweet cheese eaten with honey or in pies. Lemnian specialty. Find at any village shop.",
+      "desc_el": "Μαλακό, ελαφρώς γλυκό τυρί που τρώγεται με μέλι ή σε πίτες. Λημνιακή σπεσιαλιτέ. Σε κάθε χωριάτικο μαγαζί."
+    },
+    {
+      "name": "Lemnos wines",
+      "name_el": "Κρασιά Λήμνου",
+      "desc": "PDO wines made from the indigenous Limnio (red) and Muscat of Alexandria (white) grapes — the Limnio is among Greece's oldest cultivated varieties. The Lemnos Cooperative and several smaller wineries offer tastings.",
+      "desc_el": "Κρασιά ΠΟΠ από τις γηγενείς ποικιλίες Λημνιό (ερυθρό) και Μοσχάτο Αλεξανδρείας (λευκό) — το Λημνιό είναι από τις παλαιότερες καλλιεργημένες ποικιλίες της Ελλάδας. Ο Συνεταιρισμός Λήμνου και αρκετά μικρότερα οινοποιεία προσφέρουν γευσιγνωσίες."
+    },
+    {
+      "name": "Flomaria pasta",
+      "name_el": "Φλωμάρια",
+      "desc": "Hand-rolled Lemnian egg pasta, served with butter and grated kalathaki. A Sunday meal at home. Find at village shops and tavernas.",
+      "desc_el": "Χειροποίητα λημνιακά αυγοζυμαρικά, με βούτυρο και τριμμένο καλαθάκι. Κυριακάτικο φαγητό σπιτιού. Σε χωριάτικα μαγαζιά και ταβέρνες."
+    }
+  ],
+  "festivals": [
+    {
+      "name": "Saint Sozon",
+      "name_el": "Άγιος Σώζων",
+      "when": "7 September",
+      "when_el": "7 Σεπτεμβρίου",
+      "desc": "Patron saint of Lemnos. Pilgrimage to the church at Akti and surrounding panigiri.",
+      "desc_el": "Προστάτης άγιος της Λήμνου. Προσκύνημα στην εκκλησία στην Ακτή και πανηγύρι."
+    }
   ]
 }

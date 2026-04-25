@@ -416,5 +416,35 @@
   ],
   "name_el": "Κεφαλονιά",
   "subtitle_el": "Μύρτος, ελατοδάση και το πιο εντυπωσιακό νησί του Ιονίου",
-  "intro_el": "Η Κεφαλονιά είναι το μεγαλύτερο και πιο εντυπωσιακό νησί του Ιονίου — ένα τραχύ τοπίο από επιβλητικά ελατοδάση, βαθιούς κόλπους, κατακόρυφους γκρεμούς και μερικές από τις πιο εντυπωσιακές παραλίες της Ελλάδας. Η παραλία Μύρτος είναι μία από τις πιο φωτογραφημένες στον κόσμο. Το νησί έχει το δικό του κρασί (Ροπόλα), τη δική του φυλή χελώνας (Caretta caretta που γεννά στα Λουρδάτα), και έναν αργό, ξεκούραστο ρυθμό παρά τη δημοτικότητά του."
+  "intro_el": "Η Κεφαλονιά είναι το μεγαλύτερο και πιο εντυπωσιακό νησί του Ιονίου — ένα τραχύ τοπίο από επιβλητικά ελατοδάση, βαθιούς κόλπους, κατακόρυφους γκρεμούς και μερικές από τις πιο εντυπωσιακές παραλίες της Ελλάδας. Η παραλία Μύρτος είναι μία από τις πιο φωτογραφημένες στον κόσμο. Το νησί έχει το δικό του κρασί (Ροπόλα), τη δική του φυλή χελώνας (Caretta caretta που γεννά στα Λουρδάτα), και έναν αργό, ξεκούραστο ρυθμό παρά τη δημοτικότητά του.",
+  "specialties": [
+    {
+      "name": "Robola wine",
+      "name_el": "Ρομπόλα Κεφαλονιάς",
+      "desc": "PDO white wine from limestone soils on the slopes of Mount Ainos. Crisp, mineral, distinctly Kefalonian. The Robola Cooperative in Omala valley offers tastings.",
+      "desc_el": "Λευκό κρασί ΠΟΠ από ασβεστολιθικά εδάφη στις πλαγιές του Αίνου. Φρέσκο, με μεταλλικά αρώματα, ξεχωριστά κεφαλονίτικο. Ο Συνεταιρισμός Ρομπόλας στην κοιλάδα Ομαλών προσφέρει γευσιγνωσίες."
+    },
+    {
+      "name": "Kefalonian meat pie (kreatopita)",
+      "name_el": "Κεφαλονίτικη κρεατόπιτα",
+      "desc": "Layered pastry with rice, meat, vegetables, and cheese — distinctively Kefalonian. Found at every island bakery; the version at Casa Grec in Argostoli is excellent.",
+      "desc_el": "Πίτα σε στρώσεις με ρύζι, κρέας, λαχανικά και τυρί — ξεχωριστά κεφαλονίτικη. Σε κάθε φούρνο του νησιού· η εκδοχή του Casa Grec στο Αργοστόλι είναι εξαιρετική."
+    },
+    {
+      "name": "Mandolato",
+      "name_el": "Μαντολάτο",
+      "desc": "Almond-and-honey nougat — the islands of the Ionian all make this, but Kefalonia's version (with rosewater) is distinctive. Buy at any pastry shop in Argostoli.",
+      "desc_el": "Μαντολάτο με αμύγδαλα και μέλι — όλα τα Επτάνησα φτιάχνουν, αλλά η κεφαλονίτικη εκδοχή (με ροδόνερο) ξεχωρίζει. Σε κάθε ζαχαροπλαστείο στο Αργοστόλι."
+    }
+  ],
+  "festivals": [
+    {
+      "name": "Saint Gerasimos",
+      "name_el": "Άγιος Γεράσιμος",
+      "when": "16 August (and 20 October)",
+      "when_el": "16 Αυγούστου (και 20 Οκτωβρίου)",
+      "desc": "Patron saint of Kefalonia. Major pilgrimage to the monastery in Omala valley; the saint's relics are paraded. The 16/8 procession is the larger of the two annual events.",
+      "desc_el": "Προστάτης της Κεφαλονιάς. Μεγάλο προσκύνημα στο μοναστήρι της κοιλάδας Ομαλών· τα λείψανα του αγίου περιφέρονται. Η λιτανεία της 16ης Αυγούστου είναι η μεγαλύτερη από τις δύο ετήσιες εκδηλώσεις."
+    }
+  ]
 }

@@ -349,5 +349,49 @@
   ],
   "name_el": "Λευκάδα",
   "subtitle_el": "Το νησί που πας με αυτοκίνητο — λευκοί γκρεμοί, τιρκουάζ λιμνοθάλασσες και οι καλύτερες παραλίες του Ιονίου",
-  "intro_el": "Η Λευκάδα είναι μοναδική ανάμεσα στα νησιά του Ιονίου — συνδέεται με την ηπειρωτική χώρα με πλωτή γέφυρα, οπότε δεν χρειάζεται πλοίο. Παρά την εύκολη πρόσβαση, νιώθει πραγματικά απομονωμένη, ειδικά στον νότο όπου κατακόρυφοι λευκοί ασβεστολιθικοί γκρεμοί βυθίζονται σε νερά αδύνατου μπλε-πράσινου. Το Πόρτο Κατσίκι και ο Εγκρεμνός βρίσκονται σταθερά ανάμεσα στις καλύτερες παραλίες της Ευρώπης. Το νησί είναι επίσης η πρωτεύουσα του windsurfing της Ελλάδας στο Βασιλικό."
+  "intro_el": "Η Λευκάδα είναι μοναδική ανάμεσα στα νησιά του Ιονίου — συνδέεται με την ηπειρωτική χώρα με πλωτή γέφυρα, οπότε δεν χρειάζεται πλοίο. Παρά την εύκολη πρόσβαση, νιώθει πραγματικά απομονωμένη, ειδικά στον νότο όπου κατακόρυφοι λευκοί ασβεστολιθικοί γκρεμοί βυθίζονται σε νερά αδύνατου μπλε-πράσινου. Το Πόρτο Κατσίκι και ο Εγκρεμνός βρίσκονται σταθερά ανάμεσα στις καλύτερες παραλίες της Ευρώπης. Το νησί είναι επίσης η πρωτεύουσα του windsurfing της Ελλάδας στο Βασιλικό.",
+  "specialties": [
+    {
+      "name": "Lefkadian salami",
+      "name_el": "Σαλάμι Λευκάδας",
+      "desc": "PGI-protected dry-cured pork salami, made for centuries. Distinctively spiced. Sold at every village butcher and shop.",
+      "desc_el": "Παστό χοιρινό σαλάμι ΠΓΕ, παράγεται εδώ και αιώνες. Ξεχωριστά αρωματισμένο. Σε κάθε χωριάτικο χασάπη και μαγαζί."
+    },
+    {
+      "name": "Sofigado",
+      "name_el": "Σοφιγάδο",
+      "desc": "Slow-cooked beef with quinces and Vertzami red wine — Lefkadian winter dish. Find at Frini Sto Molo and the village tavernas of Karya.",
+      "desc_el": "Σιγομαγειρεμένο μοσχαράκι με κυδώνια και κρασί Βερτζάμι — λευκαδίτικο χειμωνιάτικο φαγητό. Στο Φρύνι Στο Μώλο και σε ταβέρνες της Καρυάς."
+    },
+    {
+      "name": "Mandolato",
+      "name_el": "Μαντολάτο Λευκάδας",
+      "desc": "Lefkadian version of the Ionian almond-honey nougat. Less rosewater than Kefalonia's version; harder texture.",
+      "desc_el": "Λευκαδίτικη εκδοχή του ιονικού μαντολάτου. Λιγότερο ροδόνερο από το κεφαλονίτικο· πιο σκληρή υφή."
+    },
+    {
+      "name": "Vertzami wine",
+      "name_el": "Κρασί Βερτζάμι",
+      "desc": "Indigenous deep-purple grape variety. Dark, tannic, distinctive. The local cooperative in Lygia and small producers across the island offer tastings.",
+      "desc_el": "Γηγενής βαθιά μωβ ποικιλία. Σκούρο, τανικό, ξεχωριστό. Ο τοπικός συνεταιρισμός στη Λυγιά και μικροί παραγωγοί προσφέρουν γευσιγνωσίες."
+    }
+  ],
+  "crafts": [
+    {
+      "name": "Karsaniko embroidery",
+      "name_el": "Καρσάνικο κέντημα",
+      "desc": "Traditional embroidery from Karya village. The Karya museum sells works by local women that follow patterns passed down for generations.",
+      "desc_el": "Παραδοσιακό κέντημα από την Καρυά. Το μουσείο της Καρυάς πουλάει έργα τοπικών γυναικών που ακολουθούν μοτίβα γενεών."
+    }
+  ],
+  "festivals": [
+    {
+      "name": "International Folklore Festival",
+      "name_el": "Διεθνές Φεστιβάλ Λόγου και Τέχνης",
+      "when": "Late August",
+      "when_el": "Τέλη Αυγούστου",
+      "desc": "Major folklore and arts festival in Lefkada town with international dance troupes, music, and theatre. Dates vary year to year.",
+      "desc_el": "Μεγάλο φολκλορικό και καλλιτεχνικό φεστιβάλ στη Χώρα της Λευκάδας με διεθνή χορευτικά συγκροτήματα, μουσική και θέατρο. Οι ημερομηνίες αλλάζουν."
+    }
+  ]
 }

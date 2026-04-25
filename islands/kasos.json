@@ -208,5 +208,29 @@
       "lng": 26.9203,
       "name_el": "Αυλάκι"
     }
+  ],
+  "specialties": [
+    {
+      "name": "Makarounes (Kasian)",
+      "name_el": "Μακαρούνες Κάσου",
+      "desc": "Like the Karpathian dish but with the Kasian variant — the pasta is shaped slightly differently and the cheese topping is local sitaka rather than mizithra. Try at the village tavernas in Fry.",
+      "desc_el": "Όπως το καρπαθίτικο, με κασιώτικη παραλλαγή — τα ζυμαρικά είναι ελαφρώς διαφορετικά σε σχήμα και το τυρί είναι κασιώτικη σίτακα αντί για μυζήθρα. Σε ταβέρνες του χωριού στο Φρυ."
+    },
+    {
+      "name": "Pougkia",
+      "name_el": "Πουγκιά",
+      "desc": "Sweet cheese pouches — fried pastries filled with fresh cheese, honey and cinnamon. Easter and panigiri specialty, available year-round at the village bakery.",
+      "desc_el": "Γλυκές τυρόπιτες — τηγανητά πιτάκια γεμάτα φρέσκο τυρί, μέλι και κανέλα. Πασχαλινό και πανηγυριώτικο γλυκό, όλο τον χρόνο στον φούρνο."
+    }
+  ],
+  "festivals": [
+    {
+      "name": "Holocaust of Kasos commemoration",
+      "name_el": "Ολοκαύτωμα της Κάσου",
+      "when": "7 June",
+      "when_el": "7 Ιουνίου",
+      "desc": "Memorial of the 1824 destruction of the island by Egyptian-Ottoman forces. Solemn, not festive — but historically the most important date in the Kasos calendar.",
+      "desc_el": "Μνήμη της καταστροφής του 1824 από αιγυπτιο-οθωμανικές δυνάμεις. Σοβαρό, όχι εορταστικό — αλλά ιστορικά η σημαντικότερη ημερομηνία του ημερολογίου της Κάσου."
+    }
   ]
 }

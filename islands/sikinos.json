@@ -189,5 +189,29 @@
       "lat": 36.7222,
       "lng": 25.1342
     }
+  ],
+  "specialties": [
+    {
+      "name": "Manoura cheese",
+      "name_el": "Μανούρα Σικίνου",
+      "desc": "Hard aged sheep cheese, sharper than its more famous Sifnian cousin. Made by a handful of producers; ask at the village shop in Chora.",
+      "desc_el": "Σκληρή πρόβεια μανούρα, πιο πικάντικη από τη σιφνέικη ξαδέρφη της. Παράγεται από μερικούς παραγωγούς· ρώτα στο χωριάτικο μαγαζί στη Χώρα."
+    },
+    {
+      "name": "Sikinos wine",
+      "name_el": "Κρασί Σικίνου",
+      "desc": "Tiny ancient vineyard tradition revived since the 1990s. The Manalis Winery near Episkopi is the only commercial producer — visit for tastings of dry whites and reds.",
+      "desc_el": "Παλαιά αμπελοκαλλιέργεια αναβιωμένη από τη δεκαετία του 1990. Το οινοποιείο Μανάλη κοντά στην Επισκοπή είναι ο μόνος εμπορικός παραγωγός — επισκέψου για γευσιγνωσία ξηρών λευκών και κόκκινων."
+    }
+  ],
+  "festivals": [
+    {
+      "name": "Panagia Pantanassa",
+      "name_el": "Παναγία Παντάνασσα",
+      "when": "15 August",
+      "when_el": "15 Αυγούστου",
+      "desc": "The big island festival at the church above Chora. Music until dawn — entirely local, almost no tourists.",
+      "desc_el": "Το μεγάλο πανηγύρι του νησιού στην εκκλησία πάνω από τη Χώρα. Μουσική μέχρι το πρωί — εντελώς τοπικό, σχεδόν χωρίς τουρίστες."
+    }
   ]
 }

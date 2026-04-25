@@ -164,5 +164,35 @@
       "lng": 27.1297,
       "name_el": "Χοχλάκοι"
     }
+  ],
+  "specialties": [
+    {
+      "name": "Soumada",
+      "name_el": "Σουμάδα",
+      "desc": "Almond drink — sweet, milky, served cold. Made only on Nisyros from local almonds. The defining island drink. Available at the Mandraki tavernas.",
+      "desc_el": "Αμυγδαλόγαλα — γλυκό, γαλακτώδες, σερβίρεται κρύο. Παράγεται μόνο στη Νίσυρο από τοπικά αμύγδαλα. Το χαρακτηριστικό ποτό του νησιού. Στις ταβέρνες του Μανδρακίου."
+    },
+    {
+      "name": "Pitia",
+      "name_el": "Πιτιά",
+      "desc": "Chickpea fritters — small, savoury, fried. Nisyrian specialty. Try at the harbour tavernas or order with ouzo as a starter.",
+      "desc_el": "Πιτιά — μικρές αλμυρές τηγανητές ρεβιθοκεφτέδες. Νισυρώτικη σπεσιαλιτέ. Στις ταβέρνες του λιμανιού ή ως ορεκτικό με ούζο."
+    },
+    {
+      "name": "Kapamas",
+      "name_el": "Καπαμάς",
+      "desc": "Goat slow-cooked with cinnamon, cloves, and tomato — Nisyrian wedding and panigiri dish. Find at family tavernas in Nikia and Emporios.",
+      "desc_el": "Κατσικάκι σιγομαγειρεμένο με κανέλα, γαρύφαλλο και ντομάτα — νισυρώτικο γαμήλιο και πανηγυριώτικο πιάτο. Σε οικογενειακές ταβέρνες στα Νικιά και τον Εμπορειό."
+    }
+  ],
+  "festivals": [
+    {
+      "name": "Panagia Spiliani",
+      "name_el": "Παναγία Σπηλιανή",
+      "when": "15 August",
+      "when_el": "15 Αυγούστου",
+      "desc": "Pilgrimage to the cave-monastery above Mandraki. Major island festival; processions and an all-night panigiri.",
+      "desc_el": "Προσκύνημα στο μοναστήρι-σπηλιά πάνω από το Μανδράκι. Μεγάλο πανηγύρι του νησιού· λιτανείες και ολονύχτιο γλέντι."
+    }
   ]
 }

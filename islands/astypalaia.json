@@ -264,5 +264,29 @@
       "lng": 26.3267,
       "name_el": "Λιβάδι"
     }
+  ],
+  "specialties": [
+    {
+      "name": "Lambriano",
+      "name_el": "Λαμπριανό",
+      "desc": "Lamb stuffed with rice, liver, and herbs, slow-roasted whole. The Astypalaian Easter dish, available at festival tavernas year-round. Try at Astropelos in Chora.",
+      "desc_el": "Αρνί γεμιστό με ρύζι, συκώτια και βότανα, σιγοψημένο ολόκληρο. Το πασχαλινό φαγητό της Αστυπάλαιας, διαθέσιμο όλο τον χρόνο σε ταβέρνες. Στο Αστροπέλο στη Χώρα."
+    },
+    {
+      "name": "Saffron-spiked goat",
+      "name_el": "Κατσικάκι με ζαφορά",
+      "desc": "Wild saffron grows on Astypalaia and goes into local goat stews. Subtle, aromatic, distinctly Astypalaian. Look for it at panigiri-time tavernas.",
+      "desc_el": "Άγρια ζαφορά φύεται στην Αστυπάλαια και μπαίνει στα τοπικά κατσικιστά φαγητά. Λεπτή, αρωματική, ξεχωριστά αστυπαλιώτικη. Σε ταβέρνες την ώρα πανηγυριών."
+    }
+  ],
+  "festivals": [
+    {
+      "name": "Panagia Portaitissa",
+      "name_el": "Παναγία Πορταΐτισσα",
+      "when": "15 August",
+      "when_el": "15 Αυγούστου",
+      "desc": "The big island festival at the Portaitissa church just below the castle. Procession, music, lamb on the spit.",
+      "desc_el": "Το μεγάλο πανηγύρι του νησιού στην εκκλησία της Πορταΐτισσας ακριβώς κάτω από το κάστρο. Λιτανεία, μουσική, αρνί στη σούβλα."
+    }
   ]
 }

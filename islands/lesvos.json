@@ -548,5 +548,41 @@
   ],
   "intro_el": "Η Λέσβος (Μυτιλήνη) είναι το τρίτο μεγαλύτερο νησί της Ελλάδας — μια γη από αμέτρητους ελαιώνες, θερμές πηγές και μικρά ορεινά χωριά που αρνούνται να αλλάξουν. Έχει ρυθμό δικό της. Ουζερί, καστροπολιτείες, αρχαία πετρωμένα δάση, μακριές παραλίες που σχεδόν πάντα έχεις για σένα. Δεν είναι Σαντορίνη και δεν θέλει να γίνει. Έρχεσαι εδώ για τη Λέσβο.",
   "name_el": "Λέσβος",
-  "subtitle_el": "Το νησί του ούζου, της Σαπφώς και των απολιθωμένων δασών"
+  "subtitle_el": "Το νησί του ούζου, της Σαπφώς και των απολιθωμένων δασών",
+  "specialties": [
+    {
+      "name": "Plomari ouzo",
+      "name_el": "Ούζο Πλωμαρίου",
+      "desc": "PGI-protected, the most respected ouzo in Greece. Distilleries open for tours in Plomari town — Barbayanni, Plomari Isidoros Arvanitis. Buy at source for fraction of mainland prices.",
+      "desc_el": "Με ΠΓΕ, το πιο σεβαστό ούζο της Ελλάδας. Αποστακτήρια ανοιχτά για ξεναγήσεις στο Πλωμάρι — Μπαρμπαγιάννη, Πλωμαρίου Ισίδωρος Αρβανίτης. Αγόρα στην πηγή σε κλάσμα της τιμής της ηπειρωτικής χώρας."
+    },
+    {
+      "name": "Lesvos sardines",
+      "name_el": "Σαρδέλες Λέσβου",
+      "desc": "Salted sardines from Kalloni Bay — PGI-protected. Eaten with ouzo and bread. The classic combination.",
+      "desc_el": "Παστές σαρδέλες από τον Κόλπο Καλλονής — με ΠΓΕ. Τρώγονται με ούζο και ψωμί. Ο κλασικός συνδυασμός."
+    },
+    {
+      "name": "Mytilene olive oil",
+      "name_el": "Ελαιόλαδο Μυτιλήνης",
+      "desc": "PGI-protected oil from the world's oldest olive grove (some trees over 1,500 years old). Buy direct from the cooperatives in Plomari and Agia Paraskevi.",
+      "desc_el": "Ελαιόλαδο ΠΓΕ από το αρχαιότερο ελαιοτόπι του κόσμου (μερικά δέντρα πάνω από 1.500 ετών). Απευθείας από τους συνεταιρισμούς στο Πλωμάρι και την Αγία Παρασκευή."
+    },
+    {
+      "name": "Petra cheese pies",
+      "name_el": "Τυρόπιτες της Πέτρας",
+      "desc": "Famous flat cheese pies from the village of Petra in northern Lesvos — yeast dough, fried, generous filling. The Petra Women's Cooperative is the source.",
+      "desc_el": "Διάσημες πλατιές τυρόπιτες από το χωριό Πέτρα της βόρειας Λέσβου — ζύμη με μαγιά, τηγανητές, γενναίο γέμισμα. Ο Συνεταιρισμός Γυναικών Πέτρας είναι η πηγή."
+    }
+  ],
+  "festivals": [
+    {
+      "name": "Bull sacrifice (Tavros) of Saint Charalambos",
+      "name_el": "Ταυροσφαγία του Αγίου Χαραλάμπους",
+      "when": "Whitsun (Pentecost) — movable",
+      "when_el": "Αγίου Πνεύματος — κινητή γιορτή",
+      "desc": "In Agia Paraskevi village, an ancient and unusual ritual: a bull is paraded, blessed, then ritually slaughtered and shared communally. Pre-Christian roots, controversial in modern times, but among Greece's most extraordinary surviving folk traditions.",
+      "desc_el": "Στο χωριό Αγία Παρασκευή, αρχαία και ασυνήθιστη τελετή: ένας ταύρος περιφέρεται, ευλογείται, μετά θυσιάζεται και μοιράζεται κοινοτικά. Προχριστιανικές ρίζες, αμφιλεγόμενη στην εποχή μας, αλλά από τις πιο ξεχωριστές επιβιώνουσες λαϊκές παραδόσεις της Ελλάδας."
+    }
+  ]
 }

@@ -258,5 +258,41 @@
   ],
   "name_el": "Άνδρος",
   "subtitle_el": "Μονοπάτια πεζοπορίας, δρύινα δάση και νεοκλασική Χώρα",
-  "intro_el": "Η Άνδρος είναι το βορειότερο και δεύτερο μεγαλύτερο κυκλαδίτικο νησί, αλλά μοιάζει πουθενά αλλού στις Κυκλάδες. Ρέματα με πηγαίο νερό, δρύινα δάση και πετρόστρωτα μονοπάτια πεζοπορίας την κάνουν πιο τοσκανική παρά αιγαιακή. Η κύρια πόλη, η Χώρα, είναι κομψά νεοκλασική — σπίτι του μεγαλύτερου μουσείου σύγχρονης τέχνης στο Αιγαίο. Σοβαροί πεζοπόροι έρχονται για τη Διαδρομή της Άνδρου, ένα μονοπάτι 100 χλμ που διασχίζει το νησί."
+  "intro_el": "Η Άνδρος είναι το βορειότερο και δεύτερο μεγαλύτερο κυκλαδίτικο νησί, αλλά μοιάζει πουθενά αλλού στις Κυκλάδες. Ρέματα με πηγαίο νερό, δρύινα δάση και πετρόστρωτα μονοπάτια πεζοπορίας την κάνουν πιο τοσκανική παρά αιγαιακή. Η κύρια πόλη, η Χώρα, είναι κομψά νεοκλασική — σπίτι του μεγαλύτερου μουσείου σύγχρονης τέχνης στο Αιγαίο. Σοβαροί πεζοπόροι έρχονται για τη Διαδρομή της Άνδρου, ένα μονοπάτι 100 χλμ που διασχίζει το νησί.",
+  "specialties": [
+    {
+      "name": "Fourtalia",
+      "name_el": "Φουρτάλια",
+      "desc": "Andriotic omelette with potatoes, local sausage, and wild fennel — heartier than the Tinian version. Try at Nonna's in Chora or the village tavernas of Apoikia.",
+      "desc_el": "Ανδριώτικη ομελέτα με πατάτες, τοπικό λουκάνικο και άγριο μάραθο — πιο γερό φαγητό από την τηνιακή. Στη Νόννα στη Χώρα ή σε ταβέρνες της Αποικίας."
+    },
+    {
+      "name": "Sariza spring water",
+      "name_el": "Νερό Σάριζα",
+      "desc": "Greece's most famous bottled spring water comes from Apoikia. You can drink it directly from the public tap in the village. Bring an empty bottle.",
+      "desc_el": "Το πιο διάσημο εμφιαλωμένο νερό της Ελλάδας από την Αποικία. Μπορείς να γεμίσεις απευθείας από τη βρύση στο χωριό. Πάρε ένα άδειο μπουκάλι."
+    },
+    {
+      "name": "Kaltsounia",
+      "name_el": "Καλτσούνια",
+      "desc": "Sweet cheese pies — small fried pastries filled with fresh cheese and honey. A breakfast or dessert specialty. Best at the kafeneia of Apoikia and Aprovato.",
+      "desc_el": "Γλυκές τυρόπιτες — μικρά τηγανητά πιτάκια γεμάτα φρέσκο τυρί και μέλι. Πρωινό ή επιδόρπιο. Καλύτερα στα καφενεία της Αποικίας και του Αμολόχου."
+    },
+    {
+      "name": "Amygdalota",
+      "name_el": "Αμυγδαλωτά",
+      "desc": "Dense almond cookies with rose water — Andriotic in style, slightly different from the Hydraiotika. Sold at every bakery in Chora.",
+      "desc_el": "Πυκνά αμυγδαλωτά με ροδόνερο — ανδριώτικου τύπου, διαφέρει ελαφρώς από τα υδραίικα. Σε κάθε φούρνο στη Χώρα."
+    }
+  ],
+  "festivals": [
+    {
+      "name": "Panagia of Panachrantou",
+      "name_el": "Παναγία της Παναχράντου",
+      "when": "15 August",
+      "when_el": "15 Αυγούστου",
+      "desc": "Pilgrimage to the cliff-top monastery above Korthi. The icon is revered for healing properties; villages across the island send delegations.",
+      "desc_el": "Προσκύνημα στο μοναστήρι πάνω από το Κόρθι. Η εικόνα τιμάται για τις θαυματουργές ιδιότητες· χωριά από όλο το νησί στέλνουν αντιπροσωπείες."
+    }
+  ]
 }

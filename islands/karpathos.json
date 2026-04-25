@@ -276,5 +276,51 @@
   ],
   "name_el": "Κάρπαθος",
   "subtitle_el": "Το καλύτερα φυλαγμένο μυστικό της Ελλάδας — Άπελλα, Όλυμπος και κάποιες από τις καλύτερες παραλίες του Αιγαίου",
-  "intro_el": "Η Κάρπαθος είναι το δεύτερο μεγαλύτερο νησί των Δωδεκανήσων, μεταξύ Ρόδου και Κρήτης — αρκετά απομακρυσμένο ώστε να έχει ξεφύγει από τον μαζικό τουρισμό και να έχει διατηρήσει γνήσια παραδοσιακό χαρακτήρα. Το βόρειο χωριό της Ολύμπου είναι το πιο αυθεντικό στην Ελλάδα: οι γυναίκες ακόμα φορούν παραδοσιακή ενδυμασία καθημερινά, και οι ντόπιοι μιλούν διάλεκτο πιο κοντά στα αρχαία ελληνικά παρά στα σύγχρονα. Οι παραλίες — Άπελλα, Κυρά Παναγιά, Διακόφτης — είναι από τις ομορφότερες του Αιγαίου, και πολύ λιγότερο πολυσύχναστες από αντίστοιχες σε πιο διάσημα νησιά."
+  "intro_el": "Η Κάρπαθος είναι το δεύτερο μεγαλύτερο νησί των Δωδεκανήσων, μεταξύ Ρόδου και Κρήτης — αρκετά απομακρυσμένο ώστε να έχει ξεφύγει από τον μαζικό τουρισμό και να έχει διατηρήσει γνήσια παραδοσιακό χαρακτήρα. Το βόρειο χωριό της Ολύμπου είναι το πιο αυθεντικό στην Ελλάδα: οι γυναίκες ακόμα φορούν παραδοσιακή ενδυμασία καθημερινά, και οι ντόπιοι μιλούν διάλεκτο πιο κοντά στα αρχαία ελληνικά παρά στα σύγχρονα. Οι παραλίες — Άπελλα, Κυρά Παναγιά, Διακόφτης — είναι από τις ομορφότερες του Αιγαίου, και πολύ λιγότερο πολυσύχναστες από αντίστοιχες σε πιο διάσημα νησιά.",
+  "specialties": [
+    {
+      "name": "Makarounes",
+      "name_el": "Μακαρούνες",
+      "desc": "Hand-rolled Karpathian pasta, served with caramelized onions and fresh mizithra cheese. Defining island dish. Found across the island; best in Olympos village tavernas.",
+      "desc_el": "Χειροποίητα καρπαθίτικα ζυμαρικά, με καραμελωμένα κρεμμύδια και φρέσκια μυζήθρα. Το χαρακτηριστικό πιάτο του νησιού. Παντού στο νησί· καλύτερο στις ταβέρνες της Ολύμπου."
+    },
+    {
+      "name": "Olympos sourdough bread",
+      "name_el": "Ψωμί Ολύμπου",
+      "desc": "Round, dark, dense sourdough baked in communal wood ovens in the village of Olympos. Worth the trip up the mountain just for this.",
+      "desc_el": "Στρογγυλό, σκούρο, πυκνό ψωμί με προζύμι, ψημένο σε κοινοτικούς ξυλόφουρνους στην Όλυμπο. Αξίζει η ανηφόρα μόνο γι' αυτό."
+    },
+    {
+      "name": "Sitaka",
+      "name_el": "Σίτακα",
+      "desc": "Karpathian butter-cream made by simmering whey for hours — used as a spread or to enrich sauces. A specialty you won't find anywhere else.",
+      "desc_el": "Καρπαθίτικη βουτυρόκρεμα από βραστό τυρόγαλα — ως άλειμμα ή για εμπλουτισμό σαλτσών. Σπεσιαλιτέ που δεν υπάρχει αλλού."
+    }
+  ],
+  "crafts": [
+    {
+      "name": "Olympos costumes and embroidery",
+      "name_el": "Φορεσιές και κεντήματα Ολύμπου",
+      "desc": "Olympos village still has women wearing the traditional costume daily — among the last villages in Greece where this is true. Embroidered linens, tablecloths, and small folk-art pieces are sold in the village.",
+      "desc_el": "Στην Όλυμπο ακόμα φοριούνται καθημερινά οι παραδοσιακές φορεσιές — από τα τελευταία χωριά στην Ελλάδα όπου συμβαίνει. Κεντήματα, τραπεζομάντηλα και μικρά λαϊκά τεχνουργήματα στο χωριό."
+    }
+  ],
+  "festivals": [
+    {
+      "name": "Karpathian wedding (Olympos)",
+      "name_el": "Καρπαθίτικος γάμος (Όλυμπος)",
+      "when": "Summer (varies)",
+      "when_el": "Καλοκαίρι (μεταβλητή)",
+      "desc": "Three-day traditional weddings in Olympos still happen in the original form — costumes, music, lyra. If you're in Karpathos and a wedding is happening, all visitors welcome.",
+      "desc_el": "Τριήμεροι παραδοσιακοί γάμοι στην Όλυμπο γίνονται ακόμα στην αρχική μορφή — φορεσιές, μουσική, λύρα. Αν είσαι στην Κάρπαθο και τυχαίνει γάμος, όλοι οι επισκέπτες είναι καλοδεχούμενοι."
+    },
+    {
+      "name": "Panagia",
+      "name_el": "Παναγία",
+      "when": "15 August",
+      "when_el": "15 Αυγούστου",
+      "desc": "Three-day panigiria in Olympos and Othos villages with traditional dancing.",
+      "desc_el": "Τριήμερα πανηγύρια σε Όλυμπο και Όθος με παραδοσιακό χορό."
+    }
+  ]
 }
