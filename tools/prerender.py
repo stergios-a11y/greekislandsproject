@@ -460,7 +460,13 @@ def render_page(key, data, meta, lang='en'):
   .seo-day-meta {{ color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }}
   .seo-stops {{ padding-left: 20px; }}
   .seo-stops li {{ margin-bottom: 10px; font-size: var(--text-body, 16px); }}
-  .seo-beach {{ margin-bottom: 24px; padding: 18px; background: rgba(11,143,172,0.05); border-radius: 10px; }}
+  .seo-beach {{
+    margin: 0 -24px;
+    padding: 18px 24px;
+    background: rgba(11,143,172,0.05);
+    border-top: 1px solid rgba(11,143,172,0.12);
+  }}
+  .seo-beach:last-of-type {{ border-bottom: 1px solid rgba(11,143,172,0.12); }}
   .seo-beach h3 {{ margin: 0 0 8px; font-size: var(--text-sub, 18px); }}
   .seo-beach p {{ margin: 0 0 12px; }}
   .seo-beach dl {{ display: grid; grid-template-columns: 120px 1fr; gap: 4px 12px; font-size: var(--text-meta, 13px); margin: 0; }}
