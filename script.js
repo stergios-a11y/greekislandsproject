@@ -894,6 +894,44 @@ function buildIslandPage(data) {
       </div>
       <div class="itin-days" id="itin-days-container">${dayCards}</div>
       ${beachSection}
+      ${buildLocalSection(data)}
+    </div>`;
+}
+
+/* ============================================================
+   LOCAL & SEASONAL SECTION
+   Renders only if specialties / crafts / festivals are present.
+============================================================ */
+function buildLocalSection(data) {
+  const specs = data.specialties || [];
+  const crafts = data.crafts || [];
+  const fests = data.festivals || [];
+  if (!specs.length && !crafts.length && !fests.length) return '';
+
+  const renderItem = (item) => {
+    const name = pickLang(item, 'name') || '';
+    const desc = pickLang(item, 'desc') || '';
+    const when = pickLang(item, 'when') || '';
+    const whenHtml = when ? `<span class="local-when">${when}</span>` : '';
+    return `
+      <div class="local-item">
+        <div class="local-item-name">${name}${whenHtml}</div>
+        ${desc ? `<div class="local-item-desc">${desc}</div>` : ''}
+      </div>`;
+  };
+
+  const block = (title, items, icon) => items.length ? `
+    <div class="local-block">
+      <h4 class="local-heading"><span class="local-icon">${icon}</span>${title}</h4>
+      <div class="local-items">${items.map(renderItem).join('')}</div>
+    </div>` : '';
+
+  return `
+    <div class="local-section">
+      <h3 class="local-section-title">${t('local.section_title')}</h3>
+      ${block(t('local.specialties'), specs, '🍽')}
+      ${block(t('local.crafts'), crafts, '🧵')}
+      ${block(t('local.festivals'), fests, '🎉')}
     </div>`;
 }
 

@@ -1087,6 +1087,87 @@ html.dark .itin-day-btn.active {
   white-space: nowrap;
 }
 
+/* ============================================================
+   LOCAL & SEASONAL — specialties / crafts / festivals
+============================================================ */
+.local-section {
+  margin-top: 28px;
+  padding: 24px 18px 28px;
+  background: var(--marble);
+  border-top: 1px solid var(--border);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+.local-section-title {
+  font-family: var(--serif);
+  font-size: 22px; font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 18px;
+}
+.local-block {
+  margin-bottom: 22px;
+}
+.local-block:last-child { margin-bottom: 0; }
+.local-heading {
+  font-family: var(--serif);
+  font-size: 15px; font-weight: 600;
+  color: var(--ink-2);
+  margin: 0 0 12px;
+  display: flex; align-items: center; gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.local-icon {
+  font-size: 16px;
+  display: inline-block;
+}
+.local-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+}
+.local-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.local-item:hover {
+  border-color: var(--aegean-light);
+}
+.local-item-name {
+  font-family: var(--serif);
+  font-size: 14px; font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+  display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;
+}
+.local-when {
+  font-family: var(--sans);
+  font-size: 11px; font-weight: 500;
+  color: var(--aegean-dark);
+  background: var(--aegean-pale);
+  padding: 2px 7px;
+  border-radius: 999px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.local-item-desc {
+  font-size: 12.5px;
+  color: var(--ink-3);
+  line-height: 1.55;
+}
+
+@media (max-width: 600px) {
+  .local-section { padding: 20px 14px 24px; }
+  .local-section-title { font-size: 19px; }
+  .local-items { grid-template-columns: 1fr; }
+}
+
+html.dark .local-section { background: var(--ink-1); border-top-color: var(--ink-2); }
+html.dark .local-item { background: var(--bg); border-color: var(--ink-2); }
+html.dark .local-when { background: var(--ink-2); color: #fff; }
+
 /* MAP LEGEND */
 .map-legend {
   position: absolute;

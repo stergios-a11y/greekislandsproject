@@ -106,6 +106,12 @@ const UI_TEXT = {
   'fallback.compare_link': { en: 'Compare with another island →', el: 'Σύγκριση με άλλο νησί →' },
   'fallback.loading': { en: 'Loading {NAME} guide…', el: 'Φόρτωση οδηγού για {NAME}…' },
 
+  // Local & Seasonal section
+  'local.section_title': { en: 'Local & Seasonal', el: 'Τοπικά & Εποχιακά' },
+  'local.specialties': { en: 'Local Specialties', el: 'Τοπικά Προϊόντα' },
+  'local.crafts': { en: 'Crafts & Souvenirs', el: 'Χειροτεχνία & Αναμνηστικά' },
+  'local.festivals': { en: 'Festivals & Events', el: 'Πανηγύρια & Εκδηλώσεις' },
+
   // Detail sidebar
   'detail.ratings': { en: 'Blueprint Ratings', el: 'Βαθμολογίες' },
   'detail.keystats': { en: 'Key Stats', el: 'Βασικά Στοιχεία' },
