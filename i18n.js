@@ -230,16 +230,16 @@ const UI_TEXT = {
 
   // Section 1 — Why this site exists
   'mission.why.title': { en: 'Why this site exists', el: 'Γιατί υπάρχει αυτή η σελίδα' },
-  'mission.why.p1': { en: 'There are 76 islands on Aegean Blueprint. Most guides try to cover all of them, and end up saying nothing useful about any. Search results give you the same twenty stock photos of Oia and a PR-written paragraph that could be about any island in the Aegean. AI-generated lists read like they were written by someone who has never tasted a tomato.', el: 'Στο Aegean Blueprint υπάρχουν 76 νησιά. Οι περισσότεροι οδηγοί προσπαθούν να τα καλύψουν όλα, και καταλήγουν να μη λένε τίποτα χρήσιμο για κανένα. Τα αποτελέσματα αναζήτησης σού δίνουν τις ίδιες είκοσι φωτογραφίες της Οίας και μια παράγραφο-PR που θα μπορούσε να είναι για οποιοδήποτε νησί του Αιγαίου. Οι λίστες από AI διαβάζονται σαν να γράφτηκαν από κάποιον που δεν έχει δοκιμάσει ντομάτα.' },
+  'mission.why.p1': { en: 'There are 76 islands on Aegean Blueprint. Most guides try to cover all of them, and end up saying nothing useful about any. AI-generated lists read like they were written by someone who has never tasted a tomato.', el: 'Στο Aegean Blueprint υπάρχουν 76 νησιά. Οι περισσότεροι οδηγοί τα καλύπτουν όλα — και καταλήγουν να μη λένε τίποτα χρήσιμο για κανένα. Οι λίστες από AI διαβάζονται σαν να τις έγραψε άνθρωπος που δεν έχει δοκιμάσει ποτέ ντομάτα.' },
   'mission.why.quote': { en: "This site is for people who don't want choices. They want the gist, without the fluff.", el: 'Αυτή η σελίδα είναι για ανθρώπους που δεν θέλουν επιλογές. Θέλουν την ουσία, χωρίς περιττά.' },
-  'mission.why.p2': { en: 'Each island page gives you one opinionated recommendation: where to stay, what to do for 2 to 5 days, where to swim, where to eat. Not ten options ranked by affiliate payout. One. The one the person who built this site would pick.', el: 'Κάθε σελίδα νησιού σού δίνει μία πρόταση με άποψη: πού να μείνεις, τι να κάνεις σε 2 έως 5 μέρες, πού να κολυμπήσεις, πού να φας. Όχι δέκα επιλογές ταξινομημένες με βάση την προμήθεια. Μία. Αυτή που θα διάλεγε ο άνθρωπος που έφτιαξε τη σελίδα.' },
+  'mission.why.p2': { en: 'Each island page gives you one opinionated recommendation: where to stay, what to do for 2 to 5 days, where to swim, where to eat. Not ten options. One. The one I would pick.', el: 'Κάθε σελίδα νησιού σού δίνει μία πρόταση με άποψη: πού να μείνεις, τι να κάνεις σε 2 έως 5 μέρες, πού να κολυμπήσεις, πού να φας. Όχι δέκα επιλογές. Μία. Αυτή που θα διάλεγα ο ίδιος.' },
 
   // Section 2 — Built by one person
   'mission.author.title': { en: 'Built by one person', el: 'Φτιαγμένο από έναν άνθρωπο' },
   'mission.author.role': { en: 'Founder · Athens', el: 'Δημιουργός · Αθήνα' },
   'mission.author.role2': { en: 'Founder · Athens', el: 'Δημιουργός · Αθήνα' },
-  'mission.author.bio': { en: 'Greek, based in Athens, 50+ islands visited over 20+ years. Not a travel influencer, not a PR-sponsored blog. A single person writing down what he actually thinks.', el: 'Έλληνας, Αθηναίος, έχω επισκεφθεί 50+ νησιά σε 20+ χρόνια. Δεν είμαι influencer, ούτε blog με χορηγίες. Ένας άνθρωπος που γράφει αυτό που πραγματικά πιστεύει.' },
-  'mission.author.note': { en: 'This matters because the alternative is what everyone else does: aggregate reviews from TripAdvisor, run them through an SEO mill, translate the output into every language, and publish it as a "guide." The writing reads fine. The advice is worthless.', el: 'Αυτό μετράει γιατί η εναλλακτική είναι αυτό που κάνουν όλοι οι άλλοι: συλλογή κριτικών από το TripAdvisor, πέρασμα από SEO μηχανή, μετάφραση σε όλες τις γλώσσες, και δημοσίευση ως «οδηγός». Το κείμενο διαβάζεται μια χαρά. Η συμβουλή είναι άχρηστη.' },
+  'mission.author.bio': { en: 'Greek, based in Athens. 50+ islands visited over 20+ years. Not a travel influencer, not a sponsored blog. One person writing what he actually thinks.', el: 'Έλληνας, ζω στην Αθήνα. 50+ νησιά σε 20+ χρόνια. Δεν είμαι influencer, ούτε blog με χορηγίες. Ένας άνθρωπος που γράφει αυτό που πραγματικά πιστεύει.' },
+  'mission.author.note': { en: 'The alternative is what everyone else does: aggregate TripAdvisor reviews, run them through an SEO mill, translate the output, and call it a "guide." The writing reads fine. The advice is worthless.', el: 'Η εναλλακτική είναι αυτό που κάνουν όλοι: κριτικές από TripAdvisor, πέρασμα από SEO μηχανή, μετάφραση σε όλες τις γλώσσες, και το λένε «οδηγό». Το κείμενο διαβάζεται μια χαρά. Η συμβουλή έχει μικρή χρησιμότητα.' },
 
   // Section 3 — The one-recommendation principle
   'mission.principle.title': { en: 'The one-recommendation principle', el: 'Η αρχή της μίας πρότασης' },
@@ -254,19 +254,19 @@ const UI_TEXT = {
 
   // Section 4 — How we score
   'mission.scoring.title': { en: 'How we score', el: 'Πώς βαθμολογούμε' },
-  'mission.scoring.lead': { en: "Every island gets rated 1 to 5 on five dimensions, plus one overall number. These aren't computed by an algorithm and they aren't scraped from TripAdvisor. They're one person's informed judgment — mine — based on having been there, or on careful research and local contacts for the few I haven't.", el: 'Κάθε νησί βαθμολογείται από 1 έως 5 σε πέντε διαστάσεις, συν έναν συνολικό αριθμό. Δεν υπολογίζονται από αλγόριθμο και δεν έρχονται από το TripAdvisor. Είναι η ενημερωμένη κρίση ενός ανθρώπου — η δική μου — βασισμένη σε προσωπική επίσκεψη, ή σε προσεκτική έρευνα και ντόπιες γνωριμίες για τα λίγα που δεν έχω ακόμα επισκεφθεί.' },
+  'mission.scoring.lead': { en: 'Every island gets rated 1 to 5 on five dimensions, plus an overall number. None of these are computed by an algorithm or scraped from elsewhere — they\'re my own informed judgment, based on having been to most of them or talking to people who live on the rest.', el: 'Κάθε νησί παίρνει βαθμολογία 1 έως 5 σε πέντε διαστάσεις, συν έναν συνολικό αριθμό. Κανένα από αυτά δεν υπολογίζεται με αλγόριθμο και κανένα δεν είναι παρμένο από αλλού — είναι η δική μου κρίση, με βάση το ότι έχω πάει στα περισσότερα ή ότι μιλάω με ανθρώπους που ζουν στα υπόλοιπα.' },
   'mission.scoring.honest': { en: "If you want to know why Milos is 4.6 and Tinos is 3.9, the short answer is: I think so, for the reasons below. The longer answer is: disagree with me — I'd rather have that conversation than pretend there's a formula.", el: 'Αν θες να ξέρεις γιατί η Μήλος είναι 4.6 και η Τήνος 3.9, η σύντομη απάντηση είναι: έτσι το κρίνω, για τους παρακάτω λόγους. Η μακριά απάντηση: διαφώνησε μαζί μου — καλύτερα αυτή η συζήτηση, παρά μια ψεύτικη για φόρμουλες.' },
 
   // Sources
   'mission.sources.title': { en: 'Where the information comes from', el: 'Από πού έρχονται οι πληροφορίες' },
   'mission.sources.visited.t': { en: 'Personal visits.', el: 'Προσωπικές επισκέψεις.' },
-  'mission.sources.visited.d': { en: " 50+ of the 76 islands on this site I've been to in person, most more than once. The itineraries, beaches and restaurants for those islands come from my own experience.", el: ' Πάνω από 50 από τα 76 νησιά της σελίδας τα έχω επισκεφθεί, τα περισσότερα περισσότερες από μία φορές. Τα δρομολόγια, οι παραλίες και τα εστιατόρια γι\'αυτά έρχονται από δική μου εμπειρία.' },
+  'mission.sources.visited.d': { en: ' 50+ of the 76 islands, most more than once.', el: ' 50+ από τα 76 νησιά, τα περισσότερα παραπάνω από μία φορές.' },
   'mission.sources.local.t': { en: 'Local contacts.', el: 'Ντόπιες γνωριμίες.' },
-  'mission.sources.local.d': { en: ' Friends, family and acquaintances who live or summer on specific islands. Kalymnos, Ikaria, Lemnos, Skyros — when I call someone who lives there, their answer beats any guidebook.', el: ' Φίλοι, συγγενείς και γνωστοί που ζουν ή παραθερίζουν σε συγκεκριμένα νησιά. Κάλυμνος, Ικαρία, Λήμνος, Σκύρος — όταν τηλεφωνώ σε κάποιον που ζει εκεί, η απάντησή του κερδίζει κάθε οδηγό.' },
+  'mission.sources.local.d': { en: ' Friends and family who live or summer on specific islands. Kalymnos, Ikaria, Lemnos, Skyros — when I call someone who lives there, their answer beats any guidebook.', el: ' Φίλοι και συγγενείς που ζουν ή παραθερίζουν σε συγκεκριμένα νησιά. Κάλυμνος, Ικαρία, Λήμνος, Σκύρος — όταν παίρνω τηλέφωνο σε κάποιον που ζει εκεί, η απάντησή του κερδίζει κάθε οδηγό.' },
   'mission.sources.official.t': { en: 'Official data.', el: 'Επίσημες πηγές.' },
-  'mission.sources.official.d': { en: ' Ferry schedules from Ferryhopper and the operators themselves. Opening hours and prices from the actual restaurant, winery and museum websites. Wikipedia for historical facts. Not from SEO-farm aggregators.', el: ' Δρομολόγια πλοίων από το Ferryhopper και τους ίδιους τους μεταφορείς. Ωράρια και τιμές από τα ίδια τα sites εστιατορίων, οινοποιείων, μουσείων. Wikipedia για ιστορικά στοιχεία. Όχι από SEO-farm συλλογείς.' },
+  'mission.sources.official.d': { en: ' Ferry schedules from operators directly. Opening hours from the actual restaurant or museum. Wikipedia for historical facts. Not from SEO-farm aggregators.', el: ' Δρομολόγια απευθείας από τους μεταφορείς. Ωράρια από τα ίδια τα εστιατόρια και τα μουσεία. Wikipedia για ιστορικά στοιχεία. Όχι από SEO-farm συλλογείς.' },
   'mission.sources.feedback.t': { en: 'Reader corrections.', el: 'Διορθώσεις αναγνωστών.' },
-  'mission.sources.feedback.d': { en: " When someone emails to say a restaurant closed or a ferry route changed, the page is updated. That loop is explicit — it's the Feedback button.", el: ' Όταν μου γράφει κάποιος ότι έκλεισε ένα εστιατόριο ή άλλαξε μια ακτοπλοϊκή γραμμή, η σελίδα ενημερώνεται. Ο κύκλος είναι ρητός — είναι το κουμπί Σχόλια.' },
+  'mission.sources.feedback.d': { en: ' When someone emails to say a restaurant closed, the page updates. The Feedback button is the loop.', el: ' Όταν μου γράφει κάποιος ότι έκλεισε ένα εστιατόριο, η σελίδα ενημερώνεται. Το κουμπί Σχόλια είναι ο κύκλος.' },
 
   // Rubric
   'mission.rubric.title': { en: 'The rubric', el: 'Η κλίμακα' },
@@ -304,9 +304,8 @@ const UI_TEXT = {
 
   // Overall
   'mission.overall.title': { en: 'The overall number', el: 'Ο συνολικός αριθμός' },
-  'mission.overall.p1': { en: "There's a sixth number on every island — the one that shows up in the map tooltip and sorts the table. I'll be honest about what it is: a gut-check overall rating, also set by me.", el: 'Υπάρχει κι ένας έκτος αριθμός για κάθε νησί — αυτός που εμφανίζεται στο tooltip του χάρτη και ταξινομεί τον πίνακα. Θα είμαι ειλικρινής για το τι είναι: μια συνολική βαθμολογία-ενστίκτου, την οποία ορίζω κι αυτή εγώ.' },
-  'mission.overall.p2': { en: 'It correlates most with Beach and Culture — those are the two things most people come to the Greek islands for — but it\'s not a formula. A quiet, affordable island with one good beach and one good ruin can out-rate a pretty but generic one. I set the totals by feel, then check them against how I actually ranked islands against each other in my own head.', el: 'Στο τελικό σκορ μετράνε πιο πολύ η Παραλία και ο Πολιτισμός — γιατί γι\' αυτά έρχονται οι περισσότεροι στα ελληνικά νησιά. Αλλά δεν υπάρχει μαθηματικός τύπος από πίσω. Ένα ήσυχο νησί με χαμηλό κόστος, μία εξαιρετική παραλία και ένα αληθινό αξιοθέατο μπορεί άνετα να βγει μπροστά από ένα διάσημο που δεν προσφέρει κάτι μοναδικό. Βάζω τους αριθμούς με την κρίση μου, και τους ξαναβλέπω συγκρίνοντας τα νησιά μεταξύ τους.' },
-  'mission.overall.p3': { en: 'Use the five underlying numbers if your trip has a specific goal. The overall is for sorting the table when you don\'t yet know what you want.', el: 'Χρησιμοποίησε τις πέντε επιμέρους διαστάσεις αν το ταξίδι σου έχει συγκεκριμένο στόχο. Η συνολική βαθμολογία είναι για να ταξινομείς τον πίνακα όταν δεν ξέρεις ακόμα τι θες.' },
+  'mission.overall.p1': { en: 'The overall number leans most on Beach and Culture — that\'s what most people come for — but it\'s not a formula. A quiet, affordable island with one great beach and one real ruin can outscore a famous one that doesn\'t offer anything unique. <strong>Milos is {milos.total}, Tinos is {tinos.total}.</strong> I set numbers by judgment, then check them by ranking islands against each other in my head.', el: 'Ο συνολικός αριθμός γέρνει περισσότερο προς την Παραλία και τον Πολιτισμό — γι\' αυτά έρχεται ο περισσότερος κόσμος εδώ — αλλά δεν είναι φόρμουλα. Ένα ήσυχο, οικονομικό νησί με μία πραγματικά ωραία παραλία και ένα αληθινό μνημείο μπορεί να βγει μπροστά από ένα διάσημο που δεν προσφέρει κάτι μοναδικό. <strong>Η Μήλος είναι {milos.total}, η Τήνος {tinos.total}.</strong> Βάζω τους αριθμούς με την κρίση μου, και τους ξαναβλέπω συγκρίνοντας τα νησιά μεταξύ τους στο μυαλό μου.' },
+  'mission.overall.p3': { en: 'Use the five underlying numbers if your trip has a specific goal. The overall is for sorting the table when you don\'t yet know what you want.', el: 'Χρησιμοποίησε τις πέντε επιμέρους διαστάσεις αν το ταξίδι σου έχει συγκεκριμένο στόχο. Τη συνολική βαθμολογία όταν ταξινομείς τον πίνακα και δεν έχεις ακόμα αποφασίσει τι ψάχνεις.' },
 
   // Updates
   'mission.updates.title': { en: 'How often this changes', el: 'Πόσο συχνά αλλάζει' },
@@ -474,25 +473,41 @@ function groupName(group) {
 function applyStaticTranslations() {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
-    el.innerHTML = t(key);
+    el.innerHTML = applyDataTokens(t(key));
   });
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.dataset.i18nPlaceholder;
-    el.placeholder = t(key);
+    el.placeholder = applyDataTokens(t(key));
   });
   document.querySelectorAll('[data-i18n-title]').forEach(el => {
     const key = el.dataset.i18nTitle;
-    el.title = t(key);
+    el.title = applyDataTokens(t(key));
   });
   document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
     const key = el.dataset.i18nAriaLabel;
-    el.setAttribute('aria-label', t(key));
+    el.setAttribute('aria-label', applyDataTokens(t(key)));
   });
   document.querySelectorAll('[data-i18n-alt]').forEach(el => {
     const key = el.dataset.i18nAlt;
-    el.alt = t(key);
+    el.alt = applyDataTokens(t(key));
   });
   document.documentElement.lang = CURRENT_LANG;
+}
+
+/* Replace {islandkey.field} tokens in a string by looking up
+   ISLANDS_DATA. Example: "Milos is {milos.total}" -> "Milos is 4.6"
+   If ISLANDS_DATA isn't loaded yet, leaves tokens as-is. */
+function applyDataTokens(text) {
+  if (!text || typeof text !== 'string') return text;
+  if (text.indexOf('{') === -1) return text;
+  if (typeof ISLANDS_DATA === 'undefined') return text;
+  return text.replace(/\{([a-z_-]+)\.([a-z_]+)\}/g, (match, key, field) => {
+    const island = ISLANDS_DATA[key];
+    if (!island) return match;
+    const val = island[field];
+    if (val === undefined || val === null) return match;
+    return typeof val === 'number' ? val.toFixed(1) : String(val);
+  });
 }
 
 // Make available globally
