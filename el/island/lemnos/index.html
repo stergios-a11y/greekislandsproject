@@ -41,25 +41,25 @@
     line-height: 1.65;
   }
   .seo-island-content h1 {
-    font-family: var(--display, serif); font-size: 42px; margin: 0 0 6px;
+    font-family: var(--display, serif); font-size: var(--text-hero, 32px); margin: 0 0 6px;
   }
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
-  .seo-rating { color: var(--ink-2, #333); font-size: 14px; }
-  .seo-intro p { font-size: 17px; }
+  .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
+  .seo-intro p { font-size: var(--text-sub, 18px); }
   .seo-itinerary, .seo-beaches, .seo-related { margin-top: 36px; }
   .seo-itinerary h2, .seo-beaches h2, .seo-related h2 {
-    font-family: var(--display, serif); font-size: 28px; margin: 0 0 16px;
+    font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
   .seo-day { margin-bottom: 24px; }
-  .seo-day h3 { font-size: 20px; margin: 0 0 4px; }
-  .seo-day-meta { color: var(--ink-3, #555); font-size: 13px; margin: 0 0 10px; }
+  .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
+  .seo-day-meta { color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }
   .seo-stops { padding-left: 20px; }
-  .seo-stops li { margin-bottom: 10px; font-size: 15px; }
+  .seo-stops li { margin-bottom: 10px; font-size: var(--text-body, 16px); }
   .seo-beach { margin-bottom: 24px; padding: 18px; background: rgba(11,143,172,0.05); border-radius: 10px; }
-  .seo-beach h3 { margin: 0 0 8px; font-size: 19px; }
+  .seo-beach h3 { margin: 0 0 8px; font-size: var(--text-sub, 18px); }
   .seo-beach p { margin: 0 0 12px; }
-  .seo-beach dl { display: grid; grid-template-columns: 120px 1fr; gap: 4px 12px; font-size: 13px; margin: 0; }
+  .seo-beach dl { display: grid; grid-template-columns: 120px 1fr; gap: 4px 12px; font-size: var(--text-meta, 13px); margin: 0; }
   .seo-beach dt { font-weight: 600; color: var(--ink-3, #555); }
   .seo-beach dd { margin: 0; }
   .seo-related a { color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }
@@ -73,16 +73,16 @@
   }
   .seo-nav-brand {
     display: flex; align-items: center; gap: 10px;
-    text-decoration: none; color: #111; font-weight: 700; font-size: 17px;
+    text-decoration: none; color: #111; font-weight: 700; font-size: var(--text-sub, 18px);
   }
   .seo-nav-links { display: flex; gap: 20px; }
   .seo-nav-links a {
-    color: #0B8FAC; text-decoration: none; font-weight: 600; font-size: 14px;
+    color: #0B8FAC; text-decoration: none; font-weight: 600; font-size: var(--text-small, 14px);
   }
   .seo-nav-links a:hover { text-decoration: underline; }
   @media (max-width: 600px) {
     .seo-nav { flex-direction: column; gap: 12px; }
-    .seo-nav-links { gap: 14px; font-size: 13px; }
+    .seo-nav-links { gap: 14px; font-size: var(--text-meta, 13px); }
   }
 
   /* CTA box */
@@ -91,12 +91,12 @@
     background: linear-gradient(135deg, rgba(11,143,172,0.08), rgba(11,143,172,0.02));
     border-radius: 14px; text-align: center; font-family: var(--sans, sans-serif);
   }
-  .seo-cta-box h3 { font-family: var(--display, serif); font-size: 24px; margin: 0 0 8px; color: #111; }
+  .seo-cta-box h3 { font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 8px; color: #111; }
   .seo-cta-box p { color: #555; margin: 0 0 20px; }
   .seo-cta-buttons { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
   .seo-cta-btn {
     display: inline-block; padding: 12px 20px; background: #0B8FAC; color: #fff;
-    text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 14px;
+    text-decoration: none; border-radius: 10px; font-weight: 600; font-size: var(--text-small, 14px);
     transition: transform 0.15s;
   }
   .seo-cta-btn:hover { transform: translateY(-2px); color: #fff; text-decoration: none; }
@@ -105,7 +105,7 @@
   .seo-footer {
     max-width: 900px; margin: 40px auto 20px; padding: 20px 24px;
     border-top: 1px solid #e5e5e5; text-align: center;
-    color: #777; font-size: 13px; font-family: var(--sans, sans-serif);
+    color: #777; font-size: var(--text-meta, 13px); font-family: var(--sans, sans-serif);
   }
   .seo-footer a { color: #0B8FAC; text-decoration: none; }
   .seo-footer p { margin: 4px 0; }
