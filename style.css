@@ -1129,7 +1129,7 @@ html.dark .itin-day-btn.active {
 ============================================================ */
 .local-section {
   margin-top: 28px;
-  padding: 24px 18px 28px;
+  padding: 24px 0 28px;
   background: var(--marble);
   border-top: 1px solid var(--border);
   border-radius: 0 0 var(--radius-lg) var(--radius-lg);
@@ -1138,7 +1138,7 @@ html.dark .itin-day-btn.active {
   font-family: var(--serif);
   font-size: var(--text-sub); font-weight: 600;
   color: var(--ink);
-  margin: 0 0 18px;
+  margin: 0 18px 18px;
 }
 .local-block {
   margin-bottom: 22px;
@@ -1148,7 +1148,7 @@ html.dark .itin-day-btn.active {
   font-family: var(--serif);
   font-size: var(--text-body); font-weight: 600;
   color: var(--ink-2);
-  margin: 0 0 12px;
+  margin: 0 18px 12px;
   display: flex; align-items: center; gap: 8px;
   text-transform: uppercase;
   letter-spacing: 0.6px;
@@ -1196,8 +1196,9 @@ html.dark .itin-day-btn.active {
 }
 
 @media (max-width: 600px) {
-  .local-section { padding: 20px 14px 24px; }
-  .local-section-title { font-size: var(--text-sub); }
+  .local-section { padding: 20px 0 24px; }
+  .local-section-title { font-size: var(--text-sub); margin-left: 14px; margin-right: 14px; }
+  .local-heading { margin-left: 14px; margin-right: 14px; }
   .local-items { grid-template-columns: 1fr; }
 }
 
