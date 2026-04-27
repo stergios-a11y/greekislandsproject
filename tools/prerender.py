@@ -307,14 +307,18 @@ def render_body(key, data, meta, lang='en'):
             overnight_label = 'Overnight' if lang == 'en' else 'Διανυκτέρευση'
             drive_label = 'Drive' if lang == 'en' else 'Οδήγηση'
             day_label = 'Day' if lang == 'en' else 'Μέρα'
+
+            meta_parts = []
             if overnight:
-                meta_line = f'{overnight_label}: <strong>{overnight}</strong> · {drive_label}: {km} km, ~{drive_mins} min'
-            else:
-                meta_line = f'{drive_label}: {km} km, ~{drive_mins} min'
+                meta_parts.append(f'{overnight_label}: <strong>{overnight}</strong>')
+            if km not in (None, '', 0) and drive_mins not in (None, '', 0):
+                meta_parts.append(f'{drive_label}: {km} km, ~{drive_mins} min')
+            meta_line_html = f'<p class="seo-day-meta">{" · ".join(meta_parts)}</p>' if meta_parts else ''
+
             day_blocks.append(f'''
 <section class="seo-day">
   <h3>{day_label} {day_num}: {day_title}</h3>
-  <p class="seo-day-meta">{meta_line}</p>
+  {meta_line_html}
   <ol class="seo-stops">
     {"".join(stop_items)}
   </ol>
@@ -370,11 +374,11 @@ def render_body(key, data, meta, lang='en'):
     subtitle_html = f'<p class="seo-subtitle">{esc(subtitle)}</p>' if subtitle else ''
     return f'''
 <article class="seo-island-content">
-  <header>
+  <div class="seo-header">
     <h1>{esc(name)}</h1>
     {subtitle_html}
     {rating_text}
-  </header>
+  </div>
   <section class="seo-intro">
     <p>{safe_html(intro)}</p>
   </section>
