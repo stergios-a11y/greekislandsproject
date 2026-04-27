@@ -209,11 +209,17 @@ def build_structured_data(key, data, meta, lang='en'):
             "@type": "TouristTrip",
             "name": f"{len(days)}-day {name} itinerary",
             "description": pick(data.get('itinerary', {}), 'subtitle', lang) or intro_plain[:200],
-            "itinerary": itinerary_list,
+            "itinerary": {
+                "@type": "ItemList",
+                "numberOfItems": len(itinerary_list),
+                "itemListElement": itinerary_list,
+            },
             "touristType": "leisure",
         }
 
-    # Breadcrumb
+    # Breadcrumb — two levels (Home → Island). The "group" mid-level was removed
+    # because it pointed at the same URL as Home, which broke Google's breadcrumb
+    # validation ("Invalid object type for field <parent_node>").
     breadcrumbs = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -221,10 +227,7 @@ def build_structured_data(key, data, meta, lang='en'):
             {"@type": "ListItem", "position": 1,
              "name": "Home" if lang == 'en' else 'Αρχική',
              "item": SITE_URL + ('/' if lang == 'en' else '/el/')},
-            {"@type": "ListItem", "position": 2,
-             "name": GREEK_GROUPS.get(meta['group'], meta['group']) if lang == 'el' else meta['group'],
-             "item": SITE_URL + ('/' if lang == 'en' else '/el/')},
-            {"@type": "ListItem", "position": 3, "name": name, "item": url},
+            {"@type": "ListItem", "position": 2, "name": name, "item": url},
         ],
     }
 

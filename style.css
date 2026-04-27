@@ -946,7 +946,7 @@ html.dark .itin-day-btn.active {
 .itin-stop-link:hover { text-decoration-color: currentColor; }
 
 .itin-beaches-section {
-  margin: 32px 24px 0;
+  margin: 32px 0 0;
 }
 .itin-beaches-header {
   margin-bottom: 20px;
@@ -1051,7 +1051,7 @@ html.dark .itin-day-btn.active {
   .beach-card { flex-direction: column; gap: 8px; }
   .beach-rank { font-size: var(--text-sub); }
   .beach-specs { grid-template-columns: 1fr; }
-  .itin-beaches-section { margin: 24px 12px 0; }
+  .itin-beaches-section { margin: 24px 0 0; }
   .itin-day-filter { padding: 10px 12px; gap: 6px; }
   .itin-day-btn { font-size: var(--text-tiny); padding: 5px 10px; }
 }
