@@ -24,29 +24,41 @@
           {
             "time": "10:00",
             "name": "Drive Athens → Arkitsa → Ferry → Edipsos",
-            "name_el": "Διαδρομή Αθήνα → Αρκίτσα → Πλοίο → Αιδηψός",
+            "lat": 38.866,
+            "lng": 23.039,
+            "type": "arrival",
             "desc": "Drive 1h45 north to Arkitsa, then a 40-minute ferry crossing puts you in Edipsos. Faster than driving via the Chalkida bridge.",
+            "name_el": "Διαδρομή Αθήνα → Αρκίτσα → Πλοίο → Αιδηψός",
             "desc_el": "Οδική διαδρομή 1ω45 βόρεια ως την Αρκίτσα, μετά 40λεπτο πλοίο σε φέρνει στην Αιδηψό. Πιο γρήγορα από τη διαδρομή μέσω Χαλκίδας."
           },
           {
             "time": "13:30",
             "name": "Lunch — Captain's Restaurant",
-            "name_el": "Μεσημεριανό — Captain's",
+            "lat": 38.864,
+            "lng": 23.038,
+            "type": "harbour",
             "desc": "Waterfront seafood in the heart of Edipsos. Order the fresh fish of the day — they grill it on charcoal in front of you.",
+            "name_el": "Μεσημεριανό — Captain's",
             "desc_el": "Ψαροφαγία στην προκυμαία της Αιδηψού. Παράγγειλε το φρέσκο ψάρι της ημέρας — το ψήνουν στα κάρβουνα μπροστά σου."
           },
           {
             "time": "15:30",
             "name": "Edipsos Thermal Springs",
-            "name_el": "Ιαματικά Λουτρά Αιδηψού",
+            "lat": 38.866,
+            "lng": 23.041,
+            "type": "spa",
             "desc": "The free public springs (Cave of Sulla) flow into the sea — bring a swimsuit. Or pay €15-25 at Thermae Sylla or Galini hotels for a private hot pool.",
+            "name_el": "Ιαματικά Λουτρά Αιδηψού",
             "desc_el": "Οι δημόσιες πηγές (Σπήλαιο του Σύλλα) χύνονται στη θάλασσα — φόρα μαγιό. Ή πλήρωσε €15-25 στα Thermae Sylla ή Galini για ιδιωτική πισίνα."
           },
           {
             "time": "19:00",
             "name": "Sunset stroll — Edipsos seafront",
-            "name_el": "Ηλιοβασίλεμα — προκυμαία Αιδηψού",
+            "lat": 38.866,
+            "lng": 23.039,
+            "type": "viewpoint",
             "desc": "The promenade is lined with Belle Époque hotels and shaded cafés. Walk it slowly, end at one of the older kafeneia for ouzo.",
+            "name_el": "Ηλιοβασίλεμα — προκυμαία Αιδηψού",
             "desc_el": "Η προκυμαία γεμάτη Belle Époque ξενοδοχεία και σκιερά καφενεία. Περπάτησέ την αργά, κατάλαβε σε ένα παλιό για ουζάκι."
           }
         ]
@@ -63,29 +75,41 @@
           {
             "time": "09:30",
             "name": "Lichadonisia Day-Trip Boat",
-            "name_el": "Σκάφος για Λιχαδονήσους",
+            "lat": 38.815,
+            "lng": 22.838,
+            "type": "nature",
             "desc": "From Agios Georgios (15 min from Edipsos), boats run all day to the Lichadonisia islets. Turquoise water you don't expect this far north — Greece's answer to a Caribbean lagoon.",
+            "name_el": "Σκάφος για Λιχαδονήσους",
             "desc_el": "Από τον Άγιο Γεώργιο (15 λεπτά από Αιδηψό), σκάφη όλη μέρα για τους Λιχαδονήσους. Τιρκουάζ νερά που δεν περιμένεις τόσο βόρεια — η ελληνική απάντηση σε λιμνοθάλασσα Καραϊβικής."
           },
           {
             "time": "14:00",
             "name": "Lunch on the islets — Manolas",
-            "name_el": "Μεσημεριανό — Manolas",
+            "lat": 38.815,
+            "lng": 22.838,
+            "type": "village",
             "desc": "Beach taverna right where the boats anchor. Octopus, fried squid, Greek salad. Nothing fancy, exactly what you want after swimming.",
+            "name_el": "Μεσημεριανό — Manolas",
             "desc_el": "Παραλιακή ταβέρνα όπου αράζουν τα σκάφη. Χταπόδι, καλαμαράκια, χωριάτικη. Τίποτα φανταχτερό — ακριβώς αυτό που θες μετά το μπάνιο."
           },
           {
             "time": "17:00",
             "name": "Limni Village",
-            "name_el": "Λίμνη",
+            "lat": 38.766,
+            "lng": 23.319,
+            "type": "village",
             "desc": "Sleepy fishing village 30 minutes south of Edipsos. Stone houses, narrow lanes, working fishermen. Walk to Galataki Monastery (10 min drive) for the views.",
+            "name_el": "Λίμνη",
             "desc_el": "Νυσταγμένο ψαροχώρι 30 λεπτά νότια από Αιδηψό. Πέτρινα σπίτια, στενά σοκάκια, ψαράδες. Πήγαινε στο Μοναστήρι του Γαλατάκη (10 λεπτά οδικώς) για τη θέα."
           },
           {
             "time": "20:00",
             "name": "Dinner — Iliopoulou (Limni)",
-            "name_el": "Δείπνο — Ηλιοπούλου (Λίμνη)",
+            "lat": 38.766,
+            "lng": 23.319,
+            "type": "village",
             "desc": "Tiny family taverna at the harbour. Dinner on a tiny terrace looking at fishing boats. Order whatever the owner says was caught that morning.",
+            "name_el": "Δείπνο — Ηλιοπούλου (Λίμνη)",
             "desc_el": "Μικρή οικογενειακή ταβέρνα στο λιμάνι. Φαγητό σε μικρή βεράντα με θέα τα ψαράδικα. Παράγγειλε ό,τι λέει ο ιδιοκτήτης πως πιάστηκε το πρωί."
           }
         ]
@@ -102,22 +126,31 @@
           {
             "time": "10:00",
             "name": "Drive south to Agia Anna",
-            "name_el": "Οδική διαδρομή προς Αγία Άννα",
+            "lat": 38.866,
+            "lng": 23.421,
+            "type": "village",
             "desc": "1h15 south through pine forests on the wilder Aegean side. Stop at Pefki on the way — small fishing harbour with two good kafeneia.",
+            "name_el": "Οδική διαδρομή προς Αγία Άννα",
             "desc_el": "1ω15 νότια μέσα από πευκοδάση στην άγρια αιγαιοπελαγίτικη πλευρά. Στάση στο Πευκί στον δρόμο — μικρό ψαρολίμανο με δύο καλά καφενεία."
           },
           {
             "time": "12:00",
             "name": "Agia Anna Beach",
-            "name_el": "Παραλία Αγίας Άννας",
+            "lat": 38.876,
+            "lng": 23.43,
+            "type": "beach",
             "desc": "1.5km of fine sand and cedar trees right next to the water. One of Evia's longest beaches, never crowded outside August. Few tavernas at the south end for lunch.",
+            "name_el": "Παραλία Αγίας Άννας",
             "desc_el": "1.5 χλμ. ψιλή άμμος και κέδροι ως το νερό. Από τις μακρύτερες παραλίες της Εύβοιας, ποτέ γεμάτη εκτός Αυγούστου. Λίγες ταβέρνες στη νότια άκρη."
           },
           {
             "time": "16:00",
             "name": "Drive back via Chalkida → Athens",
-            "name_el": "Επιστροφή μέσω Χαλκίδας → Αθήνα",
+            "lat": 38.464,
+            "lng": 23.595,
+            "type": "departure",
             "desc": "From Agia Anna, the fastest way home is south through Chalkida (2h to Athens). The bridge crossing at sunset is a nice closing image.",
+            "name_el": "Επιστροφή μέσω Χαλκίδας → Αθήνα",
             "desc_el": "Από Αγία Άννα, ο πιο γρήγορος δρόμος για πίσω είναι νότια μέσω Χαλκίδας (2ω για Αθήνα). Η γέφυρα στο ηλιοβασίλεμα είναι ωραίο κλείσιμο."
           }
         ]

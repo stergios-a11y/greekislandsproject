@@ -24,29 +24,41 @@
           {
             "time": "10:00",
             "name": "Drive Athens → Rafina → Ferry to Marmari",
-            "name_el": "Διαδρομή Αθήνα → Ραφήνα → Πλοίο Μαρμάρι",
+            "lat": 38.04,
+            "lng": 24.336,
+            "type": "arrival",
             "desc": "30min drive to Rafina, then 1h ferry to Marmari (frequent crossings, takes cars). Marmari to Karystos is another 15 min drive.",
+            "name_el": "Διαδρομή Αθήνα → Ραφήνα → Πλοίο Μαρμάρι",
             "desc_el": "30λ οδικώς στη Ραφήνα, μετά 1ω πλοίο για Μαρμάρι (συχνά δρομολόγια, παίρνει αυτοκίνητα). Από Μαρμάρι στην Κάρυστο άλλα 15 λεπτά."
           },
           {
             "time": "13:30",
             "name": "Lunch — Cavo D'Oro (Karystos seafront)",
-            "name_el": "Μεσημεριανό — Cavo D'Oro (προκυμαία Καρύστου)",
+            "lat": 38.013,
+            "lng": 24.42,
+            "type": "harbour",
             "desc": "Right on the harbour, tables almost in the water. Order grilled octopus and the local kavourosalata (crab salad).",
+            "name_el": "Μεσημεριανό — Cavo D'Oro (προκυμαία Καρύστου)",
             "desc_el": "Πάνω στο λιμάνι, τραπέζια σχεδόν μέσα στο νερό. Παράγγειλε χταπόδι σχάρας και την τοπική καβουροσαλάτα."
           },
           {
             "time": "16:00",
             "name": "Castello Rosso (Bourtzi)",
-            "name_el": "Castello Rosso (Μπούρτζι)",
+            "lat": 38.013,
+            "lng": 24.42,
+            "type": "castle",
             "desc": "13th-century Venetian-built castle on the hill above Karystos. 30-minute climb up — sunset views over the bay are the reward. The lower 'Bourtzi' tower in town is also worth the 15 minutes.",
+            "name_el": "Castello Rosso (Μπούρτζι)",
             "desc_el": "Βενετσιάνικο κάστρο του 13ου αιώνα στον λόφο πάνω από την Κάρυστο. 30λ ανάβαση — η θέα στο ηλιοβασίλεμα είναι η ανταμοιβή. Ο πύργος Μπούρτζι κάτω στην πόλη επίσης αξίζει 15 λεπτά."
           },
           {
             "time": "20:00",
             "name": "Dinner — Stou Reuma (Karystos)",
-            "name_el": "Δείπνο — Στου Ρεύμα (Κάρυστος)",
+            "lat": 38.013,
+            "lng": 24.42,
+            "type": "village",
             "desc": "Slightly inland from the harbour, family-run, traditional. The lamb in lemon and the bourdeto (spicy fish stew) are why people drive over from Athens.",
+            "name_el": "Δείπνο — Στου Ρεύμα (Κάρυστος)",
             "desc_el": "Λίγο πιο μέσα από το λιμάνι, οικογενειακή, παραδοσιακή. Το αρνί λεμονάτο και το μπουρδέτο είναι ο λόγος που οδηγούν από Αθήνα."
           }
         ]
@@ -63,36 +75,51 @@
           {
             "time": "08:30",
             "name": "Drive to the Mt Ochi trailhead (Mili village)",
-            "name_el": "Διαδρομή στην αρχή μονοπατιού Όχης (Μύλοι)",
+            "lat": 38.066,
+            "lng": 24.421,
+            "type": "village",
             "desc": "30min drive northeast to Mili — the village at the foot of Mt Ochi where the trail begins. Park, fill water bottles at the village spring.",
+            "name_el": "Διαδρομή στην αρχή μονοπατιού Όχης (Μύλοι)",
             "desc_el": "30λ οδικώς ΒΑ στους Μύλους — το χωριό στους πρόποδες της Όχης απ' όπου ξεκινάει το μονοπάτι. Παρκάρισμα, γέμισμα παγουριών στη βρύση."
           },
           {
             "time": "10:00",
             "name": "Hike Mt Ochi → Dragon Houses",
-            "name_el": "Πεζοπορία Όχη → Δρακόσπιτα",
+            "lat": 38.084,
+            "lng": 24.466,
+            "type": "ruin",
             "desc": "3-hour hike to the summit (1,398m). The reward is the prehistoric Drakospita — massive stone structures of unknown origin from ~600 BC. Views across to Andros and the open Aegean.",
+            "name_el": "Πεζοπορία Όχη → Δρακόσπιτα",
             "desc_el": "3 ώρες πεζοπορία στην κορυφή (1.398μ). Η ανταμοιβή είναι τα προϊστορικά Δρακόσπιτα — τεράστιες πέτρινες κατασκευές αγνώστου προελεύσεως από ~600 π.Χ. Θέα ως την Άνδρο και το ανοιχτό Αιγαίο."
           },
           {
             "time": "14:00",
             "name": "Lunch — Mili village taverna",
-            "name_el": "Μεσημεριανό — ταβέρνα στους Μύλους",
+            "lat": 38.066,
+            "lng": 24.421,
+            "type": "village",
             "desc": "Back at the trailhead. Whatever the family has cooked that day — lamb on the spit, wild greens, mountain potatoes. Closes when the food runs out.",
+            "name_el": "Μεσημεριανό — ταβέρνα στους Μύλους",
             "desc_el": "Πίσω στην αρχή του μονοπατιού. Ό,τι έχει μαγειρέψει η οικογένεια — αρνί σούβλας, χόρτα, ορεινές πατάτες. Κλείνει όταν τελειώσει το φαγητό."
           },
           {
             "time": "16:30",
             "name": "Kallianos Beach (or rest)",
-            "name_el": "Παραλία Καλλιανού (ή ξεκούραση)",
+            "lat": 38.063,
+            "lng": 24.445,
+            "type": "beach",
             "desc": "If you have legs left — drive 30min to Kallianos for an afternoon swim. Or back to Karystos for an iced coffee on the harbour.",
+            "name_el": "Παραλία Καλλιανού (ή ξεκούραση)",
             "desc_el": "Αν έχεις πόδια — 30λ οδικώς στην Καλλιανού για απογευματινό μπάνιο. Ή πίσω στην Κάρυστο για παγωμένο καφέ στο λιμάνι."
           },
           {
             "time": "20:30",
             "name": "Dinner — Marina (Karystos)",
-            "name_el": "Δείπνο — Marina (Κάρυστος)",
+            "lat": 38.013,
+            "lng": 24.42,
+            "type": "village",
             "desc": "Modern fish taverna at the marina end of town. Lighter than Stou Reuma — fresh sashimi-style raw fish, ouzo with mezedes, local wine.",
+            "name_el": "Δείπνο — Marina (Κάρυστος)",
             "desc_el": "Σύγχρονη ψαροταβέρνα στο τέλος της προκυμαίας. Πιο ελαφρύ από το Στου Ρεύμα — φρέσκο ωμό ψάρι, ουζάκι με μεζέδες, τοπικό κρασί."
           }
         ]
@@ -109,29 +136,41 @@
           {
             "time": "09:00",
             "name": "Drive to Lenosaioi village (Dimosari trailhead)",
-            "name_el": "Διαδρομή στους Λενοσαίους (αρχή Δημοσάρη)",
+            "lat": 38.085,
+            "lng": 24.397,
+            "type": "village",
             "desc": "40min drive northeast through the mountains to Lenosaioi — the village where the gorge walk starts. Or hire a 4x4 transfer; the locals know.",
+            "name_el": "Διαδρομή στους Λενοσαίους (αρχή Δημοσάρη)",
             "desc_el": "40λ οδικώς ΒΑ μέσα από τα βουνά στους Λενοσαίους — το χωριό απ' όπου ξεκινάει η διαδρομή του φαραγγιού. Ή νοίκιασε 4x4 transfer· οι ντόπιοι ξέρουν."
           },
           {
             "time": "10:00",
             "name": "Walk Dimosari Gorge",
-            "name_el": "Διάβαση Φαραγγιού Δημοσάρη",
+            "lat": 38.078,
+            "lng": 24.42,
+            "type": "nature",
             "desc": "3-hour walk through one of Greece's prettiest gorges — running water year-round, plane trees, small natural pools to swim in along the way. Ends at Kallianou beach.",
+            "name_el": "Διάβαση Φαραγγιού Δημοσάρη",
             "desc_el": "3 ώρες διάβαση μέσα από ένα από τα πιο όμορφα φαράγγια της Ελλάδας — τρεχούμενα νερά όλο τον χρόνο, πλατάνια, μικρές φυσικές πισίνες για μπάνιο. Καταλήγει στην Καλλιανού."
           },
           {
             "time": "13:30",
             "name": "Lunch & swim — Kallianou Beach",
-            "name_el": "Μεσημεριανό & μπάνιο — Καλλιανού",
+            "lat": 38.063,
+            "lng": 24.445,
+            "type": "beach",
             "desc": "The gorge spits you out at one of the wildest beaches on the island — rocks, clear water, no development. Two seasonal canteens for cold beer and grilled fish.",
+            "name_el": "Μεσημεριανό & μπάνιο — Καλλιανού",
             "desc_el": "Το φαράγγι σε βγάζει σε μία από τις πιο άγριες παραλίες του νησιού — βράχια, διαφανή νερά, χωρίς ανάπτυξη. Δύο εποχιακές καντίνες για κρύα μπίρα και ψητό ψάρι."
           },
           {
             "time": "17:00",
             "name": "Drive back to Marmari → Ferry → Athens",
-            "name_el": "Επιστροφή Μαρμάρι → Πλοίο → Αθήνα",
+            "lat": 38.04,
+            "lng": 24.336,
+            "type": "departure",
             "desc": "1h drive back, 1h ferry to Rafina, 30min drive to Athens. Total ~3h door to door. Book the ferry in advance for summer weekends.",
+            "name_el": "Επιστροφή Μαρμάρι → Πλοίο → Αθήνα",
             "desc_el": "1ω οδικώς πίσω, 1ω πλοίο στη Ραφήνα, 30λ Αθήνα. Σύνολο ~3ω. Κλείσε εισιτήριο πλοίου από πριν για καλοκαιρινά Σαββατοκύριακα."
           }
         ]

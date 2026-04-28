@@ -9,8 +9,8 @@
   "itinerary": {
     "title": "3-Day Central Evia Itinerary",
     "title_el": "Δρομολόγιο 3 ημερών — Κεντρική Εύβοια",
-    "subtitle": "Chalkida as your base. The Euripus tides, Mt Dirfys mountain villages, ancient Eretria, and a day on the wild east coast at Kymi and Chiliadou.",
-    "subtitle_el": "Με βάση τη Χαλκίδα. Ο Εύριπος, τα ορεινά χωριά της Δίρφης, η αρχαία Ερέτρια, και μέρα στην άγρια ανατολική ακτή στην Κύμη και τη Χιλιαδού.",
+    "subtitle": "Chalkida as your base. The Euripus tides, Mt Dirfys mountain villages, ancient Eretria, and a day on the east coast at Kymi and Mourteri Beach.",
+    "subtitle_el": "Με βάση τη Χαλκίδα. Ο Εύριπος, τα ορεινά χωριά της Δίρφης, η αρχαία Ερέτρια, και μέρα στην ανατολική ακτή στην Κύμη και την παραλία Μουρτερή.",
     "days": [
       {
         "day": 1,
@@ -24,36 +24,51 @@
           {
             "time": "09:30",
             "name": "Drive Athens → Chalkida",
-            "name_el": "Διαδρομή Αθήνα → Χαλκίδα",
+            "lat": 38.464,
+            "lng": 23.595,
+            "type": "arrival",
             "desc": "1h on the highway. Cross the old bridge into the city — that's the Euripus, where the current changes direction every 6 hours.",
+            "name_el": "Διαδρομή Αθήνα → Χαλκίδα",
             "desc_el": "1 ώρα στην εθνική. Πέρασε την παλιά γέφυρα — εκεί είναι ο Εύριπος, όπου το ρεύμα αλλάζει κατεύθυνση κάθε 6 ώρες."
           },
           {
             "time": "11:00",
             "name": "Karababa Castle",
-            "name_el": "Κάστρο Καράμπαμπα",
+            "lat": 38.469,
+            "lng": 23.591,
+            "type": "castle",
             "desc": "17th-century Ottoman fortress on the mainland side. Free entry, panoramic views over the strait and the city. 30 min, gives you the geography in a glance.",
+            "name_el": "Κάστρο Καράμπαμπα",
             "desc_el": "Οθωμανικό φρούριο του 17ου αιώνα στην απέναντι όχθη. Δωρεάν, πανοραμική θέα στον πορθμό και την πόλη. 30 λεπτά, σου δείχνει τη γεωγραφία."
           },
           {
             "time": "13:00",
             "name": "Lunch — Apanemia (Chalkida seafront)",
-            "name_el": "Μεσημεριανό — Απάνεμη (Χαλκίδα)",
+            "lat": 38.464,
+            "lng": 23.595,
+            "type": "harbour",
             "desc": "Old-school fish taverna right on the strait. Watch the current change while you eat — it actually does, in front of you.",
+            "name_el": "Μεσημεριανό — Απάνεμη (Χαλκίδα)",
             "desc_el": "Παραδοσιακή ψαροταβέρνα στον πορθμό. Παρακολουθείς το ρεύμα να αλλάζει την ώρα που τρως — αληθινά, μπροστά σου."
           },
           {
             "time": "15:30",
             "name": "Drive up to Steni (Mt Dirfys)",
-            "name_el": "Ανάβαση στη Στενή (Δίρφη)",
+            "lat": 38.557,
+            "lng": 23.776,
+            "type": "village",
             "desc": "45-minute drive up the mountain to Steni — alpine village at 480m, plane trees, mountain springs, the temperature drop is immediate. The trailhead for Mt Dirfys (1,743m) is here.",
+            "name_el": "Ανάβαση στη Στενή (Δίρφη)",
             "desc_el": "45 λεπτά ανάβαση στη Στενή — αλπικό χωριό στα 480μ, πλατάνια, ορεινές πηγές, η θερμοκρασία πέφτει άμεσα. Από εδώ ξεκινάει το μονοπάτι για τη Δίρφη (1.743μ)."
           },
           {
             "time": "19:30",
             "name": "Dinner — Liaskos Taverna (Steni)",
-            "name_el": "Δείπνο — Λιάσκος (Στενή)",
+            "lat": 38.557,
+            "lng": 23.776,
+            "type": "village",
             "desc": "The classic Steni mountain taverna. Spit-roasted goat, wild greens, locally-pressed wine. They cook over wood — you smell it from outside.",
+            "name_el": "Δείπνο — Λιάσκος (Στενή)",
             "desc_el": "Το κλασικό ορεινό σαλοόνι της Στενής. Κατσικάκι σούβλας, χόρτα, ντόπιο κρασί. Μαγειρεύουν στα ξύλα — το μυρίζεις από έξω."
           }
         ]
@@ -70,46 +85,61 @@
           {
             "time": "10:00",
             "name": "Ancient Eretria",
-            "name_el": "Αρχαία Ερέτρια",
+            "lat": 38.402,
+            "lng": 23.794,
+            "type": "ruin",
             "desc": "20km southeast of Chalkida. Major archaeological site of one of ancient Greece's most powerful city-states. Theatre, gymnasium, House of Mosaics — and the dedicated museum is excellent.",
+            "name_el": "Αρχαία Ερέτρια",
             "desc_el": "20 χλμ. ΝΑ Χαλκίδας. Σημαντικός αρχαιολογικός χώρος μιας από τις πιο ισχυρές αρχαίες ελληνικές πόλεις. Θέατρο, γυμνάσιο, Οικία των Ψηφιδωτών — και το ειδικό μουσείο εξαιρετικό."
           },
           {
             "time": "13:00",
             "name": "Lunch — Cavo D'Oro (Eretria)",
-            "name_el": "Μεσημεριανό — Cavo D'Oro (Ερέτρια)",
+            "lat": 38.401,
+            "lng": 23.793,
+            "type": "harbour",
             "desc": "Seafront lunch with view to the mainland. Octopus and fava are the moves; the wine list has Evia varieties hard to find elsewhere.",
+            "name_el": "Μεσημεριανό — Cavo D'Oro (Ερέτρια)",
             "desc_el": "Παραλιακό φαγητό με θέα την ηπειρωτική. Χταπόδι και φάβα οι κινήσεις· η λίστα κρασιών έχει ευβοϊκές ποικιλίες δύσκολο να βρεις αλλού."
           },
           {
             "time": "15:30",
             "name": "Folklore Museum of Chalkida (or Aliveri vineyards)",
-            "name_el": "Λαογραφικό Μουσείο Χαλκίδας (ή αμπελώνες Αλιβερίου)",
+            "lat": 38.464,
+            "lng": 23.594,
+            "type": "museum",
             "desc": "If museums: the Folklore Museum (in Chalkida) is small but excellent on Evia's textile traditions. If wine: drive 25min east to Aliveri's wineries (Lykos, Avantis) for tastings — Evia is an underrated wine region.",
+            "name_el": "Λαογραφικό Μουσείο Χαλκίδας (ή αμπελώνες Αλιβερίου)",
             "desc_el": "Αν μουσεία: το Λαογραφικό (Χαλκίδα) μικρό αλλά εξαιρετικό για ευβοϊκή υφαντική. Αν κρασί: 25λ ανατολικά στα οινοποιεία Αλιβερίου (Λύκος, Avantis) για γευσιγνωσία — η Εύβοια είναι υποτιμημένη οινική περιοχή."
           },
           {
             "time": "20:00",
             "name": "Dinner — Stavento (Chalkida)",
-            "name_el": "Δείπνο — Stavento (Χαλκίδα)",
+            "lat": 38.464,
+            "lng": 23.595,
+            "type": "city",
             "desc": "Modern Greek on the strait, sit outside if the weather lets you. Fresh fish, creative mezedes, good list of Greek wines.",
+            "name_el": "Δείπνο — Stavento (Χαλκίδα)",
             "desc_el": "Μοντέρνα ελληνική κουζίνα στον πορθμό, κάτσε έξω αν επιτρέπει ο καιρός. Φρέσκο ψάρι, δημιουργικοί μεζέδες, καλή λίστα ελληνικών κρασιών."
           }
         ]
       },
       {
         "day": 3,
-        "title": "Kymi & Chiliadou Coast",
-        "title_el": "Κύμη & Παραλία Χιλιαδούς",
+        "title": "Kymi & Mourteri Beach",
+        "title_el": "Κύμη & Παραλία Μουρτερή",
         "overnight": null,
         "overnight_el": null,
-        "drive_km": 220,
-        "drive_min": 270,
+        "drive_km": 200,
+        "drive_min": 240,
         "stops": [
           {
             "time": "09:30",
             "name": "Drive Chalkida → Kymi",
             "name_el": "Διαδρομή Χαλκίδα → Κύμη",
+            "lat": 38.629,
+            "lng": 24.108,
+            "type": "village",
             "desc": "1h45 east through the centre of the island, climbing into Kymi which sits 250m up on a cliff with the open Aegean below.",
             "desc_el": "1ω45 ανατολικά στο κέντρο του νησιού, ανεβαίνοντας στην Κύμη που βρίσκεται στα 250μ σε γκρεμό με ανοιχτό Αιγαίο από κάτω."
           },
@@ -117,6 +147,9 @@
             "time": "11:30",
             "name": "Kymi Old Town & the port",
             "name_el": "Παλιά Κύμη & το λιμάνι",
+            "lat": 38.629,
+            "lng": 24.108,
+            "type": "village",
             "desc": "Walk the old quarter — neoclassical sea-captain houses, the Folklore Museum, the views down to Paralia Kymis (the port) where the Skyros ferry leaves from.",
             "desc_el": "Περπάτα την παλιά συνοικία — νεοκλασικά αρχοντικά καπεταναίων, το Λαογραφικό, τη θέα κάτω στην Παραλία Κύμης (το λιμάνι) απ' όπου φεύγει το πλοίο για Σκύρο."
           },
@@ -124,22 +157,31 @@
             "time": "13:30",
             "name": "Lunch — To Steki tou Yianni (Kymi)",
             "name_el": "Μεσημεριανό — Το Στέκι του Γιάννη (Κύμη)",
+            "lat": 38.629,
+            "lng": 24.108,
+            "type": "village",
             "desc": "Old kafeneion-taverna in upper Kymi. Spetzofai (sausage with peppers), revithada chickpea stew, the kind of place where the menu is what's cooked today.",
             "desc_el": "Παλιό καφενείο-ταβέρνα στην πάνω Κύμη. Σπετζοφάι, ρεβιθάδα — το είδος του μέρους όπου ο κατάλογος είναι ό,τι μαγειρεύτηκε σήμερα."
           },
           {
             "time": "16:00",
-            "name": "Chiliadou Beach",
-            "name_el": "Παραλία Χιλιαδούς",
-            "desc": "Drive 35min south to one of Evia's wildest beaches — 1km of pebbles below sheer cliffs, hidden coves, the kind of swim that ends a road trip well.",
-            "desc_el": "35λ νότια σε μία από τις πιο άγριες παραλίες της Εύβοιας — 1 χλμ. βότσαλο κάτω από κατακόρυφους γκρεμούς, κρυφούς όρμους — το είδος του μπάνιου που κλείνει ταξίδι όμορφα."
+            "name": "Mourteri Beach",
+            "name_el": "Παραλία Μουρτερή",
+            "lat": 38.5634,
+            "lng": 24.1643,
+            "type": "beach",
+            "desc": "15 minutes south of Kymi, signposted off the Lepoura road at Orio village. A 4km stretch of fine pebbles and coarse sand facing the open Aegean — long, wide, almost no shade. Wind-and-kite-surfers love it; on a calm day it's a long peaceful swim. The beach bar Bourboulithres serves cold drinks; the village taverna Kyma does fresh fish at lunch.",
+            "desc_el": "15 λεπτά νότια της Κύμης, με ταμπέλα στον δρόμο για Λέπουρα στο χωριό Ώριο. Παραλία 4 χλμ. με λεπτό βότσαλο και χοντρή άμμο, ανοιχτή στο Αιγαίο — μακριά, φαρδιά, σχεδόν χωρίς σκιά. Τη λατρεύουν kite- και windsurfers· σε ημέρα νηνεμίας είναι ένα μακρύ ήρεμο μπάνιο. Το beach bar Μπουρμπουλίθρες έχει κρύα ποτά· η ταβέρνα του χωριού Κύμα φρέσκο ψάρι το μεσημέρι."
           },
           {
-            "time": "19:00",
+            "time": "18:30",
             "name": "Drive back to Athens via Chalkida",
             "name_el": "Επιστροφή στην Αθήνα μέσω Χαλκίδας",
-            "desc": "2h45 from Chiliadou back to Athens. Cross the Euripus bridge for the last time as the sun sets behind it.",
-            "desc_el": "2ω45 από Χιλιαδού στην Αθήνα. Πέρασε τη γέφυρα του Ευρίπου για τελευταία φορά καθώς ο ήλιος βασιλεύει."
+            "lat": 38.464,
+            "lng": 23.595,
+            "type": "departure",
+            "desc": "2h30 from Mourteri back to Athens via Lepoura and Chalkida. Cross the Euripus bridge for the last time as the sun sets behind it.",
+            "desc_el": "2ω30 από Μουρτερή στην Αθήνα μέσω Λέπουρα και Χαλκίδας. Πέρασε τη γέφυρα του Ευρίπου για τελευταία φορά καθώς ο ήλιος βασιλεύει."
           }
         ]
       }
@@ -147,11 +189,12 @@
   },
   "beaches": [
     {
-      "name": "Chiliadou Beach",
-      "summary": "1km of pebbles below sheer cliffs on the east coast — Evia's most dramatic beach.",
-      "summary_el": "1 χλμ. βότσαλο κάτω από κατακόρυφους γκρεμούς στην ανατολική ακτή — η πιο δραματική παραλία της Εύβοιας.",
-      "lat": 38.617,
-      "lng": 24.13,
+      "name": "Mourteri Beach",
+      "name_el": "Παραλία Μουρτερή",
+      "summary": "4km of fine pebbles and sand on the east coast, 15 minutes south of Kymi. Wide, exposed, almost shadeless — the Meltemi can whip it into a kite-surf paradise; on a calm day it's one of Evia's biggest, emptiest swims.",
+      "summary_el": "4 χλμ. λεπτό βότσαλο και άμμο στην ανατολική ακτή, 15 λεπτά νότια της Κύμης. Φαρδιά, εκτεθειμένη, σχεδόν χωρίς σκιά — το μελτέμι την κάνει παράδεισο για kite-surf· σε ημέρα νηνεμίας ένα από τα μεγαλύτερα, πιο άδεια μπάνια της Εύβοιας.",
+      "lat": 38.5634,
+      "lng": 24.1643,
       "type": "pebbly"
     },
     {
