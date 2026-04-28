@@ -1,0 +1,169 @@
+{
+  "key": "evia-north",
+  "name": "Evia (North)",
+  "name_el": "Εύβοια (Βόρεια)",
+  "subtitle": "Thermal springs, Lichadonisia islets and the wild northern coast — Edipsos is the base",
+  "subtitle_el": "Ιαματικές πηγές, οι Λιχαδονήσοι και η άγρια βόρεια ακτή — βάση η Αιδηψός",
+  "intro": "Northern Evia is the Greece of mineral hot springs and forested coastlines — quieter than the south, more therapeutic than touristic. Edipsos has been a thermal-bath destination since Homer; today it's a faded resort town that's exactly the right kind of faded. Limni is a sleepy fishing village next door. North of Limni, the Lichadonisia islets give you turquoise water that looks Caribbean. And the seaside villages of Agia Anna, Pefki and Rovies give you the wilder, less-developed Aegean side. Three days is enough to bathe, swim, and drive the loop without rushing.",
+  "intro_el": "Η βόρεια Εύβοια είναι η Ελλάδα των ιαματικών πηγών και των δασωμένων ακτών — πιο ήσυχη από τον νότο, πιο θεραπευτική παρά τουριστική. Η Αιδηψός είναι λουτρόπολη από την εποχή του Ομήρου· σήμερα είναι μια ξεθωριασμένη παραθαλάσσια πόλη με τη σωστή δόση παρακμής. Η Λίμνη είναι ένα νυσταγμένο ψαροχώρι δίπλα. Βόρεια της Λίμνης, οι Λιχαδονήσοι σου δίνουν νερά που μοιάζουν Καραϊβική. Και τα παραθαλάσσια χωριά Αγία Άννα, Πευκί και Ροβιές σου δίνουν την πιο άγρια, λιγότερο αναπτυγμένη αιγαιοπελαγίτικη πλευρά. Τρεις μέρες αρκούν για μπάνια, ιαματικά και να κάνεις τη βόρεια διαδρομή χωρίς βιασύνη.",
+  "itinerary": {
+    "title": "3-Day North Evia Itinerary",
+    "title_el": "Δρομολόγιο 3 ημερών — Βόρεια Εύβοια",
+    "subtitle": "Edipsos as your base for two nights of thermal springs, the Lichadonisia day-trip, and the wild north Aegean coast.",
+    "subtitle_el": "Με βάση την Αιδηψό για δύο νύχτες ιαματικών, εκδρομή στους Λιχαδονήσους και την άγρια βόρεια αιγαιοπελαγίτικη ακτή.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Athens → Edipsos & the Springs",
+        "title_el": "Αθήνα → Αιδηψός & Πηγές",
+        "overnight": "Edipsos",
+        "overnight_el": "Αιδηψός",
+        "drive_km": 165,
+        "drive_min": 165,
+        "stops": [
+          {
+            "time": "10:00",
+            "name": "Drive Athens → Arkitsa → Ferry → Edipsos",
+            "name_el": "Διαδρομή Αθήνα → Αρκίτσα → Πλοίο → Αιδηψός",
+            "desc": "Drive 1h45 north to Arkitsa, then a 40-minute ferry crossing puts you in Edipsos. Faster than driving via the Chalkida bridge.",
+            "desc_el": "Οδική διαδρομή 1ω45 βόρεια ως την Αρκίτσα, μετά 40λεπτο πλοίο σε φέρνει στην Αιδηψό. Πιο γρήγορα από τη διαδρομή μέσω Χαλκίδας."
+          },
+          {
+            "time": "13:30",
+            "name": "Lunch — Captain's Restaurant",
+            "name_el": "Μεσημεριανό — Captain's",
+            "desc": "Waterfront seafood in the heart of Edipsos. Order the fresh fish of the day — they grill it on charcoal in front of you.",
+            "desc_el": "Ψαροφαγία στην προκυμαία της Αιδηψού. Παράγγειλε το φρέσκο ψάρι της ημέρας — το ψήνουν στα κάρβουνα μπροστά σου."
+          },
+          {
+            "time": "15:30",
+            "name": "Edipsos Thermal Springs",
+            "name_el": "Ιαματικά Λουτρά Αιδηψού",
+            "desc": "The free public springs (Cave of Sulla) flow into the sea — bring a swimsuit. Or pay €15-25 at Thermae Sylla or Galini hotels for a private hot pool.",
+            "desc_el": "Οι δημόσιες πηγές (Σπήλαιο του Σύλλα) χύνονται στη θάλασσα — φόρα μαγιό. Ή πλήρωσε €15-25 στα Thermae Sylla ή Galini για ιδιωτική πισίνα."
+          },
+          {
+            "time": "19:00",
+            "name": "Sunset stroll — Edipsos seafront",
+            "name_el": "Ηλιοβασίλεμα — προκυμαία Αιδηψού",
+            "desc": "The promenade is lined with Belle Époque hotels and shaded cafés. Walk it slowly, end at one of the older kafeneia for ouzo.",
+            "desc_el": "Η προκυμαία γεμάτη Belle Époque ξενοδοχεία και σκιερά καφενεία. Περπάτησέ την αργά, κατάλαβε σε ένα παλιό για ουζάκι."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Lichadonisia & Limni",
+        "title_el": "Λιχαδονήσοι & Λίμνη",
+        "overnight": "Edipsos",
+        "overnight_el": "Αιδηψός",
+        "drive_km": 70,
+        "drive_min": 90,
+        "stops": [
+          {
+            "time": "09:30",
+            "name": "Lichadonisia Day-Trip Boat",
+            "name_el": "Σκάφος για Λιχαδονήσους",
+            "desc": "From Agios Georgios (15 min from Edipsos), boats run all day to the Lichadonisia islets. Turquoise water you don't expect this far north — Greece's answer to a Caribbean lagoon.",
+            "desc_el": "Από τον Άγιο Γεώργιο (15 λεπτά από Αιδηψό), σκάφη όλη μέρα για τους Λιχαδονήσους. Τιρκουάζ νερά που δεν περιμένεις τόσο βόρεια — η ελληνική απάντηση σε λιμνοθάλασσα Καραϊβικής."
+          },
+          {
+            "time": "14:00",
+            "name": "Lunch on the islets — Manolas",
+            "name_el": "Μεσημεριανό — Manolas",
+            "desc": "Beach taverna right where the boats anchor. Octopus, fried squid, Greek salad. Nothing fancy, exactly what you want after swimming.",
+            "desc_el": "Παραλιακή ταβέρνα όπου αράζουν τα σκάφη. Χταπόδι, καλαμαράκια, χωριάτικη. Τίποτα φανταχτερό — ακριβώς αυτό που θες μετά το μπάνιο."
+          },
+          {
+            "time": "17:00",
+            "name": "Limni Village",
+            "name_el": "Λίμνη",
+            "desc": "Sleepy fishing village 30 minutes south of Edipsos. Stone houses, narrow lanes, working fishermen. Walk to Galataki Monastery (10 min drive) for the views.",
+            "desc_el": "Νυσταγμένο ψαροχώρι 30 λεπτά νότια από Αιδηψό. Πέτρινα σπίτια, στενά σοκάκια, ψαράδες. Πήγαινε στο Μοναστήρι του Γαλατάκη (10 λεπτά οδικώς) για τη θέα."
+          },
+          {
+            "time": "20:00",
+            "name": "Dinner — Iliopoulou (Limni)",
+            "name_el": "Δείπνο — Ηλιοπούλου (Λίμνη)",
+            "desc": "Tiny family taverna at the harbour. Dinner on a tiny terrace looking at fishing boats. Order whatever the owner says was caught that morning.",
+            "desc_el": "Μικρή οικογενειακή ταβέρνα στο λιμάνι. Φαγητό σε μικρή βεράντα με θέα τα ψαράδικα. Παράγγειλε ό,τι λέει ο ιδιοκτήτης πως πιάστηκε το πρωί."
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Agia Anna Coast & Departure",
+        "title_el": "Ακτή Αγίας Άννας & Αναχώρηση",
+        "overnight": null,
+        "overnight_el": null,
+        "drive_km": 200,
+        "drive_min": 240,
+        "stops": [
+          {
+            "time": "10:00",
+            "name": "Drive south to Agia Anna",
+            "name_el": "Οδική διαδρομή προς Αγία Άννα",
+            "desc": "1h15 south through pine forests on the wilder Aegean side. Stop at Pefki on the way — small fishing harbour with two good kafeneia.",
+            "desc_el": "1ω15 νότια μέσα από πευκοδάση στην άγρια αιγαιοπελαγίτικη πλευρά. Στάση στο Πευκί στον δρόμο — μικρό ψαρολίμανο με δύο καλά καφενεία."
+          },
+          {
+            "time": "12:00",
+            "name": "Agia Anna Beach",
+            "name_el": "Παραλία Αγίας Άννας",
+            "desc": "1.5km of fine sand and cedar trees right next to the water. One of Evia's longest beaches, never crowded outside August. Few tavernas at the south end for lunch.",
+            "desc_el": "1.5 χλμ. ψιλή άμμος και κέδροι ως το νερό. Από τις μακρύτερες παραλίες της Εύβοιας, ποτέ γεμάτη εκτός Αυγούστου. Λίγες ταβέρνες στη νότια άκρη."
+          },
+          {
+            "time": "16:00",
+            "name": "Drive back via Chalkida → Athens",
+            "name_el": "Επιστροφή μέσω Χαλκίδας → Αθήνα",
+            "desc": "From Agia Anna, the fastest way home is south through Chalkida (2h to Athens). The bridge crossing at sunset is a nice closing image.",
+            "desc_el": "Από Αγία Άννα, ο πιο γρήγορος δρόμος για πίσω είναι νότια μέσω Χαλκίδας (2ω για Αθήνα). Η γέφυρα στο ηλιοβασίλεμα είναι ωραίο κλείσιμο."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Agia Anna Beach",
+      "summary": "1.5km of fine sand backed by cedar trees, on the wilder Aegean coast. The headline beach of north Evia.",
+      "summary_el": "1.5 χλμ. ψιλή άμμος με κέδρους, στη πιο άγρια αιγαιοπελαγίτικη ακτή. Η κορυφαία παραλία της βόρειας Εύβοιας.",
+      "lat": 38.871,
+      "lng": 23.487,
+      "type": "sandy"
+    },
+    {
+      "name": "Lichadonisia",
+      "summary": "A cluster of small islets off the northwest tip — Caribbean-grade turquoise water. Reached by day-boat from Agios Georgios.",
+      "summary_el": "Σύμπλεγμα μικρών νησίδων στη ΒΔ άκρη — τιρκουάζ νερά Καραϊβικής. Με ημερήσιο σκάφος από Άγιο Γεώργιο.",
+      "lat": 38.831,
+      "lng": 22.829,
+      "type": "rocky"
+    },
+    {
+      "name": "Pefki Beach",
+      "summary": "Small pine-fringed beach in front of the village — calm, family-friendly, good tavernas right behind.",
+      "summary_el": "Μικρή παραλία με πεύκα μπροστά από το χωριό — ήσυχη, οικογενειακή, καλές ταβέρνες ακριβώς πίσω.",
+      "lat": 39.001,
+      "lng": 23.22,
+      "type": "sandy"
+    }
+  ],
+  "getting_there": {
+    "pills": [
+      "🚗 Drive 1h45 from Athens",
+      "⛵ Arkitsa ferry 40min",
+      "€11–18"
+    ],
+    "pills_el": [
+      "🚗 Οδικώς 1ω45 από Αθήνα",
+      "⛵ Πλοίο Αρκίτσας 40λ",
+      "€11–18"
+    ],
+    "summary": "North Evia is reached from Athens via Arkitsa (mainland) — drive 1h45 north, then a 40-minute ferry to Edipsos. Faster than going via the Chalkida bridge plus the long internal drive. Frequent crossings, takes cars.",
+    "summary_el": "Η βόρεια Εύβοια προσεγγίζεται από Αθήνα μέσω Αρκίτσας (ηπειρωτική) — οδικώς 1ω45 βόρεια, μετά 40λεπτο πλοίο στην Αιδηψό. Πιο γρήγορα από τη γέφυρα Χαλκίδας + τη μεγάλη εσωτερική διαδρομή. Συχνά δρομολόγια, παίρνει αυτοκίνητα.",
+    "tip": "Use the Arkitsa ferry, not the Chalkida bridge — saves 90 minutes and the Aegean crossing is part of the trip.",
+    "tip_el": "Χρησιμοποίησε το πλοίο Αρκίτσας, όχι τη γέφυρα Χαλκίδας — γλυτώνεις 90 λεπτά και το πέρασμα είναι μέρος του ταξιδιού."
+  }
+}

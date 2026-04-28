@@ -30,7 +30,7 @@ const UI_TEXT = {
 
   // Hero / homepage
   'hero.title': { en: 'Find your perfect Greek island', el: 'Βρες το ιδανικό σου ελληνικό νησί' },
-  'hero.sub': { en: '76 islands scored across beaches, culture, nightlife, access and price. Click any circle to explore.', el: '76 νησιά βαθμολογημένα σε παραλίες, πολιτισμό, νυχτερινή ζωή, πρόσβαση και τιμή. Πάτα οποιοδήποτε σημείο για εξερεύνηση.' },
+  'hero.sub': { en: '78 islands scored across beaches, culture, nightlife, access and price. Click any circle to explore.', el: '78 νησιά βαθμολογημένα σε παραλίες, πολιτισμό, νυχτερινή ζωή, πρόσβαση και τιμή. Πάτα οποιοδήποτε σημείο για εξερεύνηση.' },
   'hero.tagline': { en: 'The Greek Island Decision Engine', el: 'Ο οδηγός για το Ελληνικό νησί που σας ταιριάζει' },
   'hero.dismiss': { en: 'Got it', el: 'Έγινε' },
   'hero.stat.islands': { en: 'Islands', el: 'Νησιά' },
@@ -41,7 +41,7 @@ const UI_TEXT = {
   // Help modal
   'help.btn': { en: 'How to', el: 'Οδηγίες' },
   'help.step1.title': { en: 'Explore the map', el: 'Εξερεύνησε τον χάρτη' },
-  'help.step1.desc': { en: "Click any circle to open the island's full guide. Bigger circles = higher overall rating.", el: 'Πάτα σε οποιοδήποτε κυκλάκι για τον πλήρη οδηγό του νησιού. Μεγαλύτερο κυκλάκι = υψηλότερη βαθμολογία.' },
+  'help.step1.desc': { en: "Click any circle to open the island's full guide.", el: 'Πάτα σε οποιοδήποτε κυκλάκι για τον πλήρη οδηγό του νησιού.' },
   'help.step2.title': { en: 'Filter and rank', el: 'Φιλτράρισμα και ταξινόμηση' },
   'help.step2.desc': { en: 'Use the dropdowns to filter by island group or rank by what matters to you — beaches, culture, nightlife.', el: 'Χρησιμοποίησε τα φίλτρα για να διαλέξεις νησιωτικό σύμπλεγμα ή να ταξινομήσεις κατά παραλίες, πολιτισμό, νυχτερινή ζωή.' },
   'help.step3.title': { en: 'Take the quiz', el: 'Κάνε το quiz' },
@@ -234,7 +234,7 @@ const UI_TEXT = {
 
   // Section 1 — Why this site exists
   'mission.why.title': { en: 'Why this site exists', el: 'Γιατί υπάρχει αυτή η σελίδα' },
-  'mission.why.p1': { en: 'There are 76 islands on Aegean Blueprint. Most guides try to cover all of them, and end up saying nothing useful about any. AI-generated lists read like they were written by someone who has never tasted a tomato.', el: 'Στο Aegean Blueprint υπάρχουν 76 νησιά. Οι περισσότεροι οδηγοί τα καλύπτουν όλα — και καταλήγουν να μη λένε τίποτα χρήσιμο για κανένα. Οι λίστες από AI διαβάζονται σαν να τις έγραψε άνθρωπος που δεν έχει δοκιμάσει ποτέ ντομάτα.' },
+  'mission.why.p1': { en: 'There are 78 islands on Aegean Blueprint. Most guides try to cover all of them, and end up saying nothing useful about any. AI-generated lists read like they were written by someone who has never tasted a tomato.', el: 'Στο Aegean Blueprint υπάρχουν 78 νησιά. Οι περισσότεροι οδηγοί τα καλύπτουν όλα — και καταλήγουν να μη λένε τίποτα χρήσιμο για κανένα. Οι λίστες από AI διαβάζονται σαν να τις έγραψε άνθρωπος που δεν έχει δοκιμάσει ποτέ ντομάτα.' },
   'mission.why.quote': { en: "This site is for people who don't want choices. They want the gist, without the fluff.", el: 'Αυτή η σελίδα είναι για ανθρώπους που δεν θέλουν επιλογές. Θέλουν την ουσία, χωρίς περιττά.' },
   'mission.why.p2': { en: 'Each island page gives you one opinionated recommendation: where to stay, what to do for 2 to 5 days, where to swim, where to eat. Not ten options. One. The one I would pick.', el: 'Κάθε σελίδα νησιού σού δίνει μία πρόταση με άποψη: πού να μείνεις, τι να κάνεις σε 2 έως 5 μέρες, πού να κολυμπήσεις, πού να φας. Όχι δέκα επιλογές. Μία. Αυτή που θα διάλεγα ο ίδιος.' },
 
@@ -264,7 +264,7 @@ const UI_TEXT = {
   // Sources
   'mission.sources.title': { en: 'Where the information comes from', el: 'Από πού έρχονται οι πληροφορίες' },
   'mission.sources.visited.t': { en: 'Personal visits.', el: 'Προσωπικές επισκέψεις.' },
-  'mission.sources.visited.d': { en: ' 50+ of the 76 islands, most more than once.', el: ' 50+ από τα 76 νησιά, τα περισσότερα παραπάνω από μία φορές.' },
+  'mission.sources.visited.d': { en: ' 50+ of the 78 islands, most more than once.', el: ' 50+ από τα 78 νησιά, τα περισσότερα παραπάνω από μία φορές.' },
   'mission.sources.local.t': { en: 'Local contacts.', el: 'Ντόπιες γνωριμίες.' },
   'mission.sources.local.d': { en: ' Friends and family who live or summer on specific islands. Kalymnos, Ikaria, Lemnos, Skyros — when I call someone who lives there, their answer beats any guidebook.', el: ' Φίλοι και συγγενείς που ζουν ή παραθερίζουν σε συγκεκριμένα νησιά. Κάλυμνος, Ικαρία, Λήμνος, Σκύρος — όταν παίρνω τηλέφωνο σε κάποιον που ζει εκεί, η απάντησή του κερδίζει κάθε οδηγό.' },
   'mission.sources.official.t': { en: 'Official data.', el: 'Επίσημες πηγές.' },
@@ -408,7 +408,9 @@ const ISLAND_NAMES_EL = {
   'antiparos': 'Αντίπαρος',
   'astypalaia': 'Αστυπάλαια',
   'donousa': 'Δονούσα',
-  'euboea': 'Εύβοια',
+  'evia-north': 'Εύβοια (Βόρεια)',
+  'evia-central': 'Εύβοια (Κεντρική)',
+  'evia-south': 'Εύβοια (Νότια)',
   'fournoi': 'Φούρνοι',
   'gavdos': 'Γαύδος',
   'halki': 'Χάλκη',

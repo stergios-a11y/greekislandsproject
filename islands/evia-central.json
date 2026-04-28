@@ -1,0 +1,188 @@
+{
+  "key": "evia-central",
+  "name": "Evia (Central)",
+  "name_el": "Εύβοια (Κεντρική)",
+  "subtitle": "The capital, Mt Dirfys' alpine villages, ancient Eretria and the cliff-paths of Kymi",
+  "subtitle_el": "Η πρωτεύουσα, τα αλπικά χωριά της Δίρφης, η αρχαία Ερέτρια και τα μονοπάτια της Κύμης",
+  "intro": "Central Evia is the working spine of the island — Chalkida the capital, Mt Dirfys (1,743m) and its alpine villages, the ancient ruins of Eretria, and the dramatic cliff-side town of Kymi on the east coast. It's the most varied region: in three days you can see a tidal phenomenon (the Euripus current reverses direction every 6 hours), eat at a mountain village taverna at 800m altitude, walk through ancient theatres, and watch the ferry sail off to Skyros from a town built on a cliff. The base is Chalkida — 1 hour from Athens, big enough for hotel choice, small enough to feel like Evia.",
+  "intro_el": "Η κεντρική Εύβοια είναι η εργατική ραχοκοκαλιά του νησιού — η Χαλκίδα η πρωτεύουσα, η Δίρφη (1.743μ) και τα αλπικά της χωριά, τα ερείπια της αρχαίας Ερέτριας, και η δραματική πόλη της Κύμης στις ανατολικές ακτές. Είναι η πιο ποικίλη περιοχή: σε τρεις μέρες βλέπεις φαινόμενο παλίρροιας (ο Εύριπος αλλάζει κατεύθυνση κάθε 6 ώρες), τρως σε ορεινή ταβέρνα στα 800μ, περπατάς αρχαία θέατρα, και βλέπεις το πλοίο να φεύγει για Σκύρο από πόλη χτισμένη σε γκρεμό. Η βάση είναι η Χαλκίδα — 1 ώρα από Αθήνα, αρκετά μεγάλη για επιλογές ξενοδοχείων, αρκετά μικρή για να νιώθεις Εύβοια.",
+  "itinerary": {
+    "title": "3-Day Central Evia Itinerary",
+    "title_el": "Δρομολόγιο 3 ημερών — Κεντρική Εύβοια",
+    "subtitle": "Chalkida as your base. The Euripus tides, Mt Dirfys mountain villages, ancient Eretria, and a day on the wild east coast at Kymi and Chiliadou.",
+    "subtitle_el": "Με βάση τη Χαλκίδα. Ο Εύριπος, τα ορεινά χωριά της Δίρφης, η αρχαία Ερέτρια, και μέρα στην άγρια ανατολική ακτή στην Κύμη και τη Χιλιαδού.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Athens → Chalkida & Mt Dirfys",
+        "title_el": "Αθήνα → Χαλκίδα & Δίρφη",
+        "overnight": "Chalkida",
+        "overnight_el": "Χαλκίδα",
+        "drive_km": 130,
+        "drive_min": 165,
+        "stops": [
+          {
+            "time": "09:30",
+            "name": "Drive Athens → Chalkida",
+            "name_el": "Διαδρομή Αθήνα → Χαλκίδα",
+            "desc": "1h on the highway. Cross the old bridge into the city — that's the Euripus, where the current changes direction every 6 hours.",
+            "desc_el": "1 ώρα στην εθνική. Πέρασε την παλιά γέφυρα — εκεί είναι ο Εύριπος, όπου το ρεύμα αλλάζει κατεύθυνση κάθε 6 ώρες."
+          },
+          {
+            "time": "11:00",
+            "name": "Karababa Castle",
+            "name_el": "Κάστρο Καράμπαμπα",
+            "desc": "17th-century Ottoman fortress on the mainland side. Free entry, panoramic views over the strait and the city. 30 min, gives you the geography in a glance.",
+            "desc_el": "Οθωμανικό φρούριο του 17ου αιώνα στην απέναντι όχθη. Δωρεάν, πανοραμική θέα στον πορθμό και την πόλη. 30 λεπτά, σου δείχνει τη γεωγραφία."
+          },
+          {
+            "time": "13:00",
+            "name": "Lunch — Apanemia (Chalkida seafront)",
+            "name_el": "Μεσημεριανό — Απάνεμη (Χαλκίδα)",
+            "desc": "Old-school fish taverna right on the strait. Watch the current change while you eat — it actually does, in front of you.",
+            "desc_el": "Παραδοσιακή ψαροταβέρνα στον πορθμό. Παρακολουθείς το ρεύμα να αλλάζει την ώρα που τρως — αληθινά, μπροστά σου."
+          },
+          {
+            "time": "15:30",
+            "name": "Drive up to Steni (Mt Dirfys)",
+            "name_el": "Ανάβαση στη Στενή (Δίρφη)",
+            "desc": "45-minute drive up the mountain to Steni — alpine village at 480m, plane trees, mountain springs, the temperature drop is immediate. The trailhead for Mt Dirfys (1,743m) is here.",
+            "desc_el": "45 λεπτά ανάβαση στη Στενή — αλπικό χωριό στα 480μ, πλατάνια, ορεινές πηγές, η θερμοκρασία πέφτει άμεσα. Από εδώ ξεκινάει το μονοπάτι για τη Δίρφη (1.743μ)."
+          },
+          {
+            "time": "19:30",
+            "name": "Dinner — Liaskos Taverna (Steni)",
+            "name_el": "Δείπνο — Λιάσκος (Στενή)",
+            "desc": "The classic Steni mountain taverna. Spit-roasted goat, wild greens, locally-pressed wine. They cook over wood — you smell it from outside.",
+            "desc_el": "Το κλασικό ορεινό σαλοόνι της Στενής. Κατσικάκι σούβλας, χόρτα, ντόπιο κρασί. Μαγειρεύουν στα ξύλα — το μυρίζεις από έξω."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Eretria & the Petrified Forest",
+        "title_el": "Ερέτρια & Απολιθωμένο Δάσος",
+        "overnight": "Chalkida",
+        "overnight_el": "Χαλκίδα",
+        "drive_km": 80,
+        "drive_min": 110,
+        "stops": [
+          {
+            "time": "10:00",
+            "name": "Ancient Eretria",
+            "name_el": "Αρχαία Ερέτρια",
+            "desc": "20km southeast of Chalkida. Major archaeological site of one of ancient Greece's most powerful city-states. Theatre, gymnasium, House of Mosaics — and the dedicated museum is excellent.",
+            "desc_el": "20 χλμ. ΝΑ Χαλκίδας. Σημαντικός αρχαιολογικός χώρος μιας από τις πιο ισχυρές αρχαίες ελληνικές πόλεις. Θέατρο, γυμνάσιο, Οικία των Ψηφιδωτών — και το ειδικό μουσείο εξαιρετικό."
+          },
+          {
+            "time": "13:00",
+            "name": "Lunch — Cavo D'Oro (Eretria)",
+            "name_el": "Μεσημεριανό — Cavo D'Oro (Ερέτρια)",
+            "desc": "Seafront lunch with view to the mainland. Octopus and fava are the moves; the wine list has Evia varieties hard to find elsewhere.",
+            "desc_el": "Παραλιακό φαγητό με θέα την ηπειρωτική. Χταπόδι και φάβα οι κινήσεις· η λίστα κρασιών έχει ευβοϊκές ποικιλίες δύσκολο να βρεις αλλού."
+          },
+          {
+            "time": "15:30",
+            "name": "Folklore Museum of Chalkida (or Aliveri vineyards)",
+            "name_el": "Λαογραφικό Μουσείο Χαλκίδας (ή αμπελώνες Αλιβερίου)",
+            "desc": "If museums: the Folklore Museum (in Chalkida) is small but excellent on Evia's textile traditions. If wine: drive 25min east to Aliveri's wineries (Lykos, Avantis) for tastings — Evia is an underrated wine region.",
+            "desc_el": "Αν μουσεία: το Λαογραφικό (Χαλκίδα) μικρό αλλά εξαιρετικό για ευβοϊκή υφαντική. Αν κρασί: 25λ ανατολικά στα οινοποιεία Αλιβερίου (Λύκος, Avantis) για γευσιγνωσία — η Εύβοια είναι υποτιμημένη οινική περιοχή."
+          },
+          {
+            "time": "20:00",
+            "name": "Dinner — Stavento (Chalkida)",
+            "name_el": "Δείπνο — Stavento (Χαλκίδα)",
+            "desc": "Modern Greek on the strait, sit outside if the weather lets you. Fresh fish, creative mezedes, good list of Greek wines.",
+            "desc_el": "Μοντέρνα ελληνική κουζίνα στον πορθμό, κάτσε έξω αν επιτρέπει ο καιρός. Φρέσκο ψάρι, δημιουργικοί μεζέδες, καλή λίστα ελληνικών κρασιών."
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Kymi & Chiliadou Coast",
+        "title_el": "Κύμη & Παραλία Χιλιαδούς",
+        "overnight": null,
+        "overnight_el": null,
+        "drive_km": 220,
+        "drive_min": 270,
+        "stops": [
+          {
+            "time": "09:30",
+            "name": "Drive Chalkida → Kymi",
+            "name_el": "Διαδρομή Χαλκίδα → Κύμη",
+            "desc": "1h45 east through the centre of the island, climbing into Kymi which sits 250m up on a cliff with the open Aegean below.",
+            "desc_el": "1ω45 ανατολικά στο κέντρο του νησιού, ανεβαίνοντας στην Κύμη που βρίσκεται στα 250μ σε γκρεμό με ανοιχτό Αιγαίο από κάτω."
+          },
+          {
+            "time": "11:30",
+            "name": "Kymi Old Town & the port",
+            "name_el": "Παλιά Κύμη & το λιμάνι",
+            "desc": "Walk the old quarter — neoclassical sea-captain houses, the Folklore Museum, the views down to Paralia Kymis (the port) where the Skyros ferry leaves from.",
+            "desc_el": "Περπάτα την παλιά συνοικία — νεοκλασικά αρχοντικά καπεταναίων, το Λαογραφικό, τη θέα κάτω στην Παραλία Κύμης (το λιμάνι) απ' όπου φεύγει το πλοίο για Σκύρο."
+          },
+          {
+            "time": "13:30",
+            "name": "Lunch — To Steki tou Yianni (Kymi)",
+            "name_el": "Μεσημεριανό — Το Στέκι του Γιάννη (Κύμη)",
+            "desc": "Old kafeneion-taverna in upper Kymi. Spetzofai (sausage with peppers), revithada chickpea stew, the kind of place where the menu is what's cooked today.",
+            "desc_el": "Παλιό καφενείο-ταβέρνα στην πάνω Κύμη. Σπετζοφάι, ρεβιθάδα — το είδος του μέρους όπου ο κατάλογος είναι ό,τι μαγειρεύτηκε σήμερα."
+          },
+          {
+            "time": "16:00",
+            "name": "Chiliadou Beach",
+            "name_el": "Παραλία Χιλιαδούς",
+            "desc": "Drive 35min south to one of Evia's wildest beaches — 1km of pebbles below sheer cliffs, hidden coves, the kind of swim that ends a road trip well.",
+            "desc_el": "35λ νότια σε μία από τις πιο άγριες παραλίες της Εύβοιας — 1 χλμ. βότσαλο κάτω από κατακόρυφους γκρεμούς, κρυφούς όρμους — το είδος του μπάνιου που κλείνει ταξίδι όμορφα."
+          },
+          {
+            "time": "19:00",
+            "name": "Drive back to Athens via Chalkida",
+            "name_el": "Επιστροφή στην Αθήνα μέσω Χαλκίδας",
+            "desc": "2h45 from Chiliadou back to Athens. Cross the Euripus bridge for the last time as the sun sets behind it.",
+            "desc_el": "2ω45 από Χιλιαδού στην Αθήνα. Πέρασε τη γέφυρα του Ευρίπου για τελευταία φορά καθώς ο ήλιος βασιλεύει."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Chiliadou Beach",
+      "summary": "1km of pebbles below sheer cliffs on the east coast — Evia's most dramatic beach.",
+      "summary_el": "1 χλμ. βότσαλο κάτω από κατακόρυφους γκρεμούς στην ανατολική ακτή — η πιο δραματική παραλία της Εύβοιας.",
+      "lat": 38.617,
+      "lng": 24.13,
+      "type": "pebbly"
+    },
+    {
+      "name": "Kalamos Beach",
+      "summary": "Long sandy beach south of Eretria, family-friendly, well-organised. The closest 'real' beach to Chalkida.",
+      "summary_el": "Μακριά αμμώδης παραλία νότια Ερέτριας, οικογενειακή, οργανωμένη. Η πιο κοντινή 'αληθινή' παραλία στη Χαλκίδα.",
+      "lat": 38.354,
+      "lng": 24.082,
+      "type": "sandy"
+    },
+    {
+      "name": "Paralia Kymis",
+      "summary": "The Kymi port beach — pebbles, calm water, ferry view. Watch the Skyros ferry pull in for free entertainment.",
+      "summary_el": "Η παραλία του λιμανιού της Κύμης — βότσαλο, ήρεμα νερά, θέα στο πλοίο. Δες το πλοίο για Σκύρο να μπαίνει.",
+      "lat": 38.625,
+      "lng": 24.117,
+      "type": "pebbly"
+    }
+  ],
+  "getting_there": {
+    "pills": [
+      "🚗 Drive 1h from Athens",
+      "⛵ Agia Marina ferry 30min"
+    ],
+    "pills_el": [
+      "🚗 Οδικώς 1h από Αθήνα",
+      "⛵ Πλοίο Αγίας Μαρίνας 30λ"
+    ],
+    "summary": "The simplest entry to Evia. Drive from Athens to Chalkida in 1 hour over the bridge — no ferry needed. Alternatively, the Agia Marina ferry to Nea Styra (~30 min) shortcuts to the southern half if you're heading to Eretria first.",
+    "summary_el": "Η πιο απλή είσοδος στην Εύβοια. Οδικώς από Αθήνα στη Χαλκίδα σε 1 ώρα μέσω γέφυρας — δεν χρειάζεται πλοίο. Εναλλακτικά, το πλοίο Αγίας Μαρίνας προς Νέα Στύρα (~30λ) συντομεύει αν πας πρώτα Ερέτρια.",
+    "tip": "If you've got time, take the old narrow Euripus bridge into Chalkida instead of the modern highway one — better arrival, same time.",
+    "tip_el": "Αν έχεις χρόνο, πέρασε από την παλιά στενή γέφυρα του Ευρίπου, όχι τη μοντέρνα — καλύτερη άφιξη, ίδιος χρόνος."
+  }
+}

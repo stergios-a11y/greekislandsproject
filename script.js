@@ -26,7 +26,9 @@ const ISLANDS_DATA = {
   "hydra":        { name:"Hydra",            lat:37.350, lng:23.466, beach:2.2, hist:4.2, night:3.8, access:4.2, afford:1.8, car_need:1.0, has_airport:false, total:4.1, area:52,    pop:2700,    days:2, island_group:"Saronic" },
   "folegandros":  { name:"Folegandros",      lat:36.630, lng:24.900, beach:3.9, hist:3.8, night:3.5, access:2.8, afford:2.2, car_need:3.0, has_airport:false, total:4.0, area:32,    pop:765,     days:3, island_group:"Cyclades" },
   "koufonisia":   { name:"Koufonisia",       lat:36.930, lng:25.600, beach:5.0, hist:2.0, night:4.0, access:3.0, afford:3.0, car_need:1.0, has_airport:false, total:4.0, area:26,    pop:399,     days:3, island_group:"Cyclades" },
-  "euboea":       { name:"Euboea",           lat:38.5,   lng:24.0,   beach:3.8, hist:4.0, night:3.0, access:4.9, afford:4.8, car_need:5.0, has_airport:false, total:3.8, area:3684,  pop:210000,  days:3, island_group:"Other" },
+  "evia-north":   { name:"Evia (North)",     lat:38.857, lng:23.037, beach:3.8, hist:3.5, night:2.5, access:4.5, afford:4.8, car_need:5.0, has_airport:false, total:3.7, area:1200,  pop:48000,   days:3, island_group:"Evia" },
+  "evia-central": { name:"Evia (Central)",   lat:38.463, lng:23.595, beach:3.5, hist:4.5, night:3.5, access:5.0, afford:4.6, car_need:5.0, has_airport:false, total:3.9, area:1700,  pop:120000,  days:3, island_group:"Evia" },
+  "evia-south":   { name:"Evia (South)",     lat:38.016, lng:24.420, beach:4.2, hist:3.5, night:2.5, access:4.5, afford:4.5, car_need:5.0, has_airport:false, total:3.9, area:780,   pop:42000,   days:3, island_group:"Evia" },
   "lesvos":       { name:"Lesvos",           lat:39.21,  lng:26.21,  beach:4.0, hist:4.7, night:3.0, access:3.5, afford:4.6, car_need:5.0, has_airport:true, total:4.0, area:1633,  pop:83000,   days:6, island_group:"NE Aegean" },
   "chios":        { name:"Chios",            lat:38.368, lng:26.135, beach:3.2, hist:4.7, night:2.5, access:3.2, afford:4.5, car_need:4.0, has_airport:true, total:3.6, area:842,   pop:51000,   days:4, island_group:"NE Aegean" },
   "kos":          { name:"Kos",              lat:36.891, lng:27.287, beach:4.0, hist:4.2, night:4.0, access:4.6, afford:3.8, car_need:4.0, has_airport:true, total:3.7, area:287,   pop:33300,   days:4, island_group:"Dodecanese" },
@@ -1410,7 +1412,7 @@ function starsHtml(score) {
   return `<span class="star-rating" title="${score}">${html}</span>`;
 }
 
-const MAX_AREA = 3684; // Euboea
+const MAX_AREA = 2641; // Crete (Heraklion prefecture) — largest single entry
 const MAX_POP = 664000; // removed Athens but keep scale reasonable — use 200000
 
 function carNeedCompactHtml(score) {

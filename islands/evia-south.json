@@ -1,0 +1,189 @@
+{
+  "key": "evia-south",
+  "name": "Evia (South)",
+  "name_el": "Εύβοια (Νότια)",
+  "subtitle": "Karystos, the Dragon Houses, Mt Ochi and the Dimosari Gorge — south Evia is the wild end",
+  "subtitle_el": "Κάρυστος, τα Δρακόσπιτα, το Όρος Όχη και το Φαράγγι Δημοσάρη — η νότια Εύβοια είναι η άγρια άκρη",
+  "intro": "South Evia is the island's most dramatic third — Mt Ochi (1,398m) rising sharply from the sea, the prehistoric \"Dragon Houses\" stone monuments at the summit, the Dimosari Gorge cutting north to south, and Karystos as the base — a low-key Aegean town with a Venetian castle. The water is warmer here than the rest of Evia, the beaches are sandier, and the road network is gloriously underdeveloped. Reach south Evia from Athens via the Marmari ferry (1h crossing from Rafina) — much faster than driving via the Chalkida bridge and down the length of the island.",
+  "intro_el": "Η νότια Εύβοια είναι το πιο δραματικό τρίτο του νησιού — το Όρος Όχη (1.398μ) ξεπροβάλλει απότομα από τη θάλασσα, τα προϊστορικά \"Δρακόσπιτα\" στην κορυφή, το Φαράγγι Δημοσάρη που κόβει το νησί από βορρά σε νότο, και η Κάρυστος ως βάση — ήσυχη αιγαιοπελαγίτικη πόλη με βενετσιάνικο κάστρο. Τα νερά εδώ είναι πιο ζεστά από την υπόλοιπη Εύβοια, οι παραλίες πιο αμμώδεις, και ο οδικός χάρτης ευτυχώς υπανάπτυκτος. Από Αθήνα μέσω πλοίου Μαρμαρίου (1ω από Ραφήνα) — πολύ πιο γρήγορα από οδική διαδρομή μέσω Χαλκίδας.",
+  "itinerary": {
+    "title": "3-Day South Evia Itinerary",
+    "title_el": "Δρομολόγιο 3 ημερών — Νότια Εύβοια",
+    "subtitle": "Karystos as your base. The Castello Rosso, the Dragon Houses on Mt Ochi, the full Dimosari Gorge walk, and three of Evia's best beaches.",
+    "subtitle_el": "Με βάση την Κάρυστο. Το Castello Rosso, τα Δρακόσπιτα στην Όχη, η διάβαση του Δημοσάρη, και τρεις από τις καλύτερες παραλίες της Εύβοιας.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Athens → Karystos & Castello Rosso",
+        "title_el": "Αθήνα → Κάρυστος & Castello Rosso",
+        "overnight": "Karystos",
+        "overnight_el": "Κάρυστος",
+        "drive_km": 70,
+        "drive_min": 180,
+        "stops": [
+          {
+            "time": "10:00",
+            "name": "Drive Athens → Rafina → Ferry to Marmari",
+            "name_el": "Διαδρομή Αθήνα → Ραφήνα → Πλοίο Μαρμάρι",
+            "desc": "30min drive to Rafina, then 1h ferry to Marmari (frequent crossings, takes cars). Marmari to Karystos is another 15 min drive.",
+            "desc_el": "30λ οδικώς στη Ραφήνα, μετά 1ω πλοίο για Μαρμάρι (συχνά δρομολόγια, παίρνει αυτοκίνητα). Από Μαρμάρι στην Κάρυστο άλλα 15 λεπτά."
+          },
+          {
+            "time": "13:30",
+            "name": "Lunch — Cavo D'Oro (Karystos seafront)",
+            "name_el": "Μεσημεριανό — Cavo D'Oro (προκυμαία Καρύστου)",
+            "desc": "Right on the harbour, tables almost in the water. Order grilled octopus and the local kavourosalata (crab salad).",
+            "desc_el": "Πάνω στο λιμάνι, τραπέζια σχεδόν μέσα στο νερό. Παράγγειλε χταπόδι σχάρας και την τοπική καβουροσαλάτα."
+          },
+          {
+            "time": "16:00",
+            "name": "Castello Rosso (Bourtzi)",
+            "name_el": "Castello Rosso (Μπούρτζι)",
+            "desc": "13th-century Venetian-built castle on the hill above Karystos. 30-minute climb up — sunset views over the bay are the reward. The lower 'Bourtzi' tower in town is also worth the 15 minutes.",
+            "desc_el": "Βενετσιάνικο κάστρο του 13ου αιώνα στον λόφο πάνω από την Κάρυστο. 30λ ανάβαση — η θέα στο ηλιοβασίλεμα είναι η ανταμοιβή. Ο πύργος Μπούρτζι κάτω στην πόλη επίσης αξίζει 15 λεπτά."
+          },
+          {
+            "time": "20:00",
+            "name": "Dinner — Stou Reuma (Karystos)",
+            "name_el": "Δείπνο — Στου Ρεύμα (Κάρυστος)",
+            "desc": "Slightly inland from the harbour, family-run, traditional. The lamb in lemon and the bourdeto (spicy fish stew) are why people drive over from Athens.",
+            "desc_el": "Λίγο πιο μέσα από το λιμάνι, οικογενειακή, παραδοσιακή. Το αρνί λεμονάτο και το μπουρδέτο είναι ο λόγος που οδηγούν από Αθήνα."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Mt Ochi & the Dragon Houses",
+        "title_el": "Όρος Όχη & Δρακόσπιτα",
+        "overnight": "Karystos",
+        "overnight_el": "Κάρυστος",
+        "drive_km": 60,
+        "drive_min": 240,
+        "stops": [
+          {
+            "time": "08:30",
+            "name": "Drive to the Mt Ochi trailhead (Mili village)",
+            "name_el": "Διαδρομή στην αρχή μονοπατιού Όχης (Μύλοι)",
+            "desc": "30min drive northeast to Mili — the village at the foot of Mt Ochi where the trail begins. Park, fill water bottles at the village spring.",
+            "desc_el": "30λ οδικώς ΒΑ στους Μύλους — το χωριό στους πρόποδες της Όχης απ' όπου ξεκινάει το μονοπάτι. Παρκάρισμα, γέμισμα παγουριών στη βρύση."
+          },
+          {
+            "time": "10:00",
+            "name": "Hike Mt Ochi → Dragon Houses",
+            "name_el": "Πεζοπορία Όχη → Δρακόσπιτα",
+            "desc": "3-hour hike to the summit (1,398m). The reward is the prehistoric Drakospita — massive stone structures of unknown origin from ~600 BC. Views across to Andros and the open Aegean.",
+            "desc_el": "3 ώρες πεζοπορία στην κορυφή (1.398μ). Η ανταμοιβή είναι τα προϊστορικά Δρακόσπιτα — τεράστιες πέτρινες κατασκευές αγνώστου προελεύσεως από ~600 π.Χ. Θέα ως την Άνδρο και το ανοιχτό Αιγαίο."
+          },
+          {
+            "time": "14:00",
+            "name": "Lunch — Mili village taverna",
+            "name_el": "Μεσημεριανό — ταβέρνα στους Μύλους",
+            "desc": "Back at the trailhead. Whatever the family has cooked that day — lamb on the spit, wild greens, mountain potatoes. Closes when the food runs out.",
+            "desc_el": "Πίσω στην αρχή του μονοπατιού. Ό,τι έχει μαγειρέψει η οικογένεια — αρνί σούβλας, χόρτα, ορεινές πατάτες. Κλείνει όταν τελειώσει το φαγητό."
+          },
+          {
+            "time": "16:30",
+            "name": "Kallianos Beach (or rest)",
+            "name_el": "Παραλία Καλλιανού (ή ξεκούραση)",
+            "desc": "If you have legs left — drive 30min to Kallianos for an afternoon swim. Or back to Karystos for an iced coffee on the harbour.",
+            "desc_el": "Αν έχεις πόδια — 30λ οδικώς στην Καλλιανού για απογευματινό μπάνιο. Ή πίσω στην Κάρυστο για παγωμένο καφέ στο λιμάνι."
+          },
+          {
+            "time": "20:30",
+            "name": "Dinner — Marina (Karystos)",
+            "name_el": "Δείπνο — Marina (Κάρυστος)",
+            "desc": "Modern fish taverna at the marina end of town. Lighter than Stou Reuma — fresh sashimi-style raw fish, ouzo with mezedes, local wine.",
+            "desc_el": "Σύγχρονη ψαροταβέρνα στο τέλος της προκυμαίας. Πιο ελαφρύ από το Στου Ρεύμα — φρέσκο ωμό ψάρι, ουζάκι με μεζέδες, τοπικό κρασί."
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Dimosari Gorge & Departure",
+        "title_el": "Φαράγγι Δημοσάρη & Αναχώρηση",
+        "overnight": null,
+        "overnight_el": null,
+        "drive_km": 90,
+        "drive_min": 240,
+        "stops": [
+          {
+            "time": "09:00",
+            "name": "Drive to Lenosaioi village (Dimosari trailhead)",
+            "name_el": "Διαδρομή στους Λενοσαίους (αρχή Δημοσάρη)",
+            "desc": "40min drive northeast through the mountains to Lenosaioi — the village where the gorge walk starts. Or hire a 4x4 transfer; the locals know.",
+            "desc_el": "40λ οδικώς ΒΑ μέσα από τα βουνά στους Λενοσαίους — το χωριό απ' όπου ξεκινάει η διαδρομή του φαραγγιού. Ή νοίκιασε 4x4 transfer· οι ντόπιοι ξέρουν."
+          },
+          {
+            "time": "10:00",
+            "name": "Walk Dimosari Gorge",
+            "name_el": "Διάβαση Φαραγγιού Δημοσάρη",
+            "desc": "3-hour walk through one of Greece's prettiest gorges — running water year-round, plane trees, small natural pools to swim in along the way. Ends at Kallianou beach.",
+            "desc_el": "3 ώρες διάβαση μέσα από ένα από τα πιο όμορφα φαράγγια της Ελλάδας — τρεχούμενα νερά όλο τον χρόνο, πλατάνια, μικρές φυσικές πισίνες για μπάνιο. Καταλήγει στην Καλλιανού."
+          },
+          {
+            "time": "13:30",
+            "name": "Lunch & swim — Kallianou Beach",
+            "name_el": "Μεσημεριανό & μπάνιο — Καλλιανού",
+            "desc": "The gorge spits you out at one of the wildest beaches on the island — rocks, clear water, no development. Two seasonal canteens for cold beer and grilled fish.",
+            "desc_el": "Το φαράγγι σε βγάζει σε μία από τις πιο άγριες παραλίες του νησιού — βράχια, διαφανή νερά, χωρίς ανάπτυξη. Δύο εποχιακές καντίνες για κρύα μπίρα και ψητό ψάρι."
+          },
+          {
+            "time": "17:00",
+            "name": "Drive back to Marmari → Ferry → Athens",
+            "name_el": "Επιστροφή Μαρμάρι → Πλοίο → Αθήνα",
+            "desc": "1h drive back, 1h ferry to Rafina, 30min drive to Athens. Total ~3h door to door. Book the ferry in advance for summer weekends.",
+            "desc_el": "1ω οδικώς πίσω, 1ω πλοίο στη Ραφήνα, 30λ Αθήνα. Σύνολο ~3ω. Κλείσε εισιτήριο πλοίου από πριν για καλοκαιρινά Σαββατοκύριακα."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Agia Paraskevi (Karystos)",
+      "summary": "1.5km sandy beach right next to Karystos town — easy, family-friendly, with the Venetian castle as your backdrop.",
+      "summary_el": "1.5 χλμ. αμμώδης παραλία δίπλα στην Κάρυστο — εύκολη, οικογενειακή, με το βενετσιάνικο κάστρο για φόντο.",
+      "lat": 38.018,
+      "lng": 24.413,
+      "type": "sandy"
+    },
+    {
+      "name": "Kallianou Beach",
+      "summary": "The wild end of the Dimosari Gorge — pebbles, clear water, no development. Reach by foot through the gorge or 4x4 only.",
+      "summary_el": "Η άγρια άκρη του Δημοσάρη — βότσαλο, διαφανές νερό, χωρίς ανάπτυξη. Προσέγγιση πεζοπορώντας στο φαράγγι ή με 4x4.",
+      "lat": 38.11,
+      "lng": 24.512,
+      "type": "pebbly"
+    },
+    {
+      "name": "Marmari Beach",
+      "summary": "Sandy beach right at Marmari — the ferry port — convenient for swimming before/after the crossing. Calm, kid-friendly water.",
+      "summary_el": "Αμμώδης παραλία στο Μαρμάρι — το λιμάνι — βολική για μπάνιο πριν/μετά το πλοίο. Ήρεμα, οικογενειακά νερά.",
+      "lat": 38.052,
+      "lng": 24.33,
+      "type": "sandy"
+    },
+    {
+      "name": "Kallianos Beach",
+      "summary": "Crystal water and dramatic cliffs 25min north of Karystos. Pebble entrance, sandy seabed once you're in.",
+      "summary_el": "Κρυστάλλινα νερά και δραματικοί γκρεμοί 25λ βόρεια Καρύστου. Βότσαλο στην είσοδο, αμμουδιά μέσα.",
+      "lat": 38.087,
+      "lng": 24.345,
+      "type": "pebbly"
+    }
+  ],
+  "getting_there": {
+    "pills": [
+      "⛵ Rafina ferry 1h",
+      "🚗 Drive 30min Athens → Rafina"
+    ],
+    "pills_el": [
+      "⛵ Πλοίο Ραφήνας 1h",
+      "🚗 Οδικώς 30λ Αθήνα → Ραφήνα"
+    ],
+    "summary": "South Evia is reached from Rafina (30 min east of Athens) via the Marmari ferry — frequent daily crossings, ~1 hour, takes cars. Karystos is a 15-minute drive from Marmari port. The Chalkida route is much slower (3+ hours of internal driving).",
+    "summary_el": "Η νότια Εύβοια προσεγγίζεται από Ραφήνα (30λ ανατολικά Αθήνας) με το πλοίο Μαρμαρίου — συχνά καθημερινά δρομολόγια, ~1 ώρα, παίρνει αυτοκίνητα. Από το λιμάνι Μαρμαρίου στην Κάρυστο 15 λεπτά. Η διαδρομή Χαλκίδας είναι πολύ πιο αργή (3ω+ εσωτερικής οδήγησης).",
+    "tip": "Book the ferry in advance for summer weekends — Athenians flood Karystos and the boat sells out.",
+    "tip_el": "Κλείσε πλοίο από πριν για καλοκαιρινά Σαββατοκύριακα — οι Αθηναίοι ξεχύνονται στην Κάρυστο και το πλοίο γεμίζει."
+  }
+}
