@@ -169,16 +169,8 @@ function getMapTileAttribution() {
 // Esri World Imagery — satellite, no API key required, free for non-commercial use
 const SATELLITE_TILE_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
 const SATELLITE_ATTRIBUTION = 'Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community';
-
-// Persist user preference across pages
-function getPreferredBaseLayer() {
-  try {
-    return localStorage.getItem('ab_baselayer') || 'map';
-  } catch { return 'map'; }
-}
-function setPreferredBaseLayer(name) {
-  try { localStorage.setItem('ab_baselayer', name); } catch {}
-}
+// Esri Reference labels overlay — adds place names + boundaries on top of satellite imagery (= "Hybrid")
+const SATELLITE_LABELS_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}';
 
 // Track active map registrations so theme swap and toggle persistence work
 const _activeMapEntries = [];
@@ -194,11 +186,16 @@ function addThemeAwareTiles(map, options = {}) {
     subdomains: isDark ? 'abcd' : 'abc',
   });
 
-  // Satellite layer (single source, theme-independent)
-  const satLayer = L.tileLayer(SATELLITE_TILE_URL, {
+  // Hybrid satellite: Esri imagery + Esri labels/boundaries overlay
+  const satImagery = L.tileLayer(SATELLITE_TILE_URL, {
     attribution: SATELLITE_ATTRIBUTION,
     maxZoom: 19,
   });
+  const satLabels = L.tileLayer(SATELLITE_LABELS_URL, {
+    maxZoom: 19,
+    pane: 'overlayPane',  // labels render above the imagery
+  });
+  const satLayer = L.layerGroup([satImagery, satLabels]);
 
   const labelMap = (typeof t === 'function') ? t('map.layer.map') : 'Map';
   const labelSat = (typeof t === 'function') ? t('map.layer.satellite') : 'Satellite';
@@ -207,11 +204,10 @@ function addThemeAwareTiles(map, options = {}) {
   baseLayers[labelMap] = mapLayer;
   baseLayers[labelSat] = satLayer;
 
-  const preferred = getPreferredBaseLayer();
-  const startLayer = preferred === 'satellite' ? satLayer : mapLayer;
-  startLayer.addTo(map);
+  // Always start on Map, regardless of any previous user choice. No persistence.
+  mapLayer.addTo(map);
 
-  // Track layer control for swap-on-theme-change
+  // Layer control (top-right) — user can toggle in-session, but we don't remember the choice
   let layerControl = null;
   if (!options.hideLayerControl) {
     layerControl = L.control.layers(baseLayers, null, {
@@ -219,11 +215,6 @@ function addThemeAwareTiles(map, options = {}) {
       collapsed: true,
     }).addTo(map);
   }
-
-  // Persist user choice
-  map.on('baselayerchange', (e) => {
-    setPreferredBaseLayer(e.name === labelSat ? 'satellite' : 'map');
-  });
 
   _activeMapEntries.push({ map, mapLayer, satLayer, options, labelMap, labelSat, layerControl });
   return mapLayer;
@@ -993,10 +984,17 @@ function buildLocalSection(data) {
     const desc = pickLang(item, 'desc') || '';
     const when = pickLang(item, 'when') || '';
     const whenHtml = when ? `<span class="local-when">${when}</span>` : '';
+    const image = item.image || '';
+    const imageHtml = image
+      ? `<img class="local-item-image" src="${image}" alt="${name.replace(/"/g, '&quot;')}" loading="lazy" width="80" height="80">`
+      : '';
     return `
-      <div class="local-item">
-        <div class="local-item-name">${name}${whenHtml}</div>
-        ${desc ? `<div class="local-item-desc">${desc}</div>` : ''}
+      <div class="local-item${image ? ' local-item-with-image' : ''}">
+        ${imageHtml}
+        <div class="local-item-text">
+          <div class="local-item-name">${name}${whenHtml}</div>
+          ${desc ? `<div class="local-item-desc">${desc}</div>` : ''}
+        </div>
       </div>`;
   };
 

@@ -1246,11 +1246,37 @@ html.dark .itin-day-btn.active {
   line-height: 1.55;
 }
 
+/* Image-variant: card becomes a flex row with thumbnail on the left */
+.local-item-with-image {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+}
+.local-item-image {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--marble-2, var(--marble));
+  display: block;
+}
+.local-item-text {
+  flex: 1;
+  min-width: 0;
+}
+/* Plain (no-image) variant keeps existing block layout */
+.local-item:not(.local-item-with-image) > .local-item-text {
+  display: contents;
+}
+
 @media (max-width: 600px) {
   .local-section { padding: 20px 0 24px; }
   .local-section-title { font-size: var(--text-sub); margin-left: 14px; margin-right: 14px; }
   .local-heading { margin-left: 14px; margin-right: 14px; }
   .local-items { grid-template-columns: 1fr; }
+  .local-item-image { width: 64px; height: 64px; }
 }
 
 html.dark .local-section { background: var(--ink-1); border-top-color: var(--ink-2); }
