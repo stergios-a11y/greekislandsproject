@@ -485,39 +485,19 @@
   "subtitle_el": "Το νησί των ιπποτών, της αρχαίας ακρόπολης και των σμαραγδένιων κόλπων",
   "intro_el": "Το μεγαλύτερο νησί των Δωδεκανήσων, η Ρόδος συγκεντρώνει εξαιρετική ποικιλία σε ένα νησί: μια μεσαιωνική πόλη χαρακτηρισμένη από την UNESCO, την Ακρόπολη της Λίνδου σε γκρεμό, ερείπια κάστρων σε εντυπωσιακά σημεία, ορεινά χωριά που παράγουν κρασί και μέλι, και μερικές από τις καλύτερες παραλίες της Ελλάδας στην προστατευμένη ανατολική ακτή. Πάνω από 300 ηλιόλουστες μέρες τον χρόνο την κάνουν το πιο ηλιόλουστο μέρος της χώρας.",
   "getting_there": {
-    "airport": "Yes — major: domestic + international (Aegean, Sky Express, Ryanair, charters); largest in Dodecanese",
-    "airport_el": "Ναι — μεγάλο αεροδρόμιο: εσωτερικές + διεθνείς πτήσεις (Aegean, Sky Express, Ryanair, charters)· το μεγαλύτερο των Δωδεκανήσων",
-    "ports": [
-      {
-        "name": "Rhodes Town Port",
-        "note": "main commercial port — all Piraeus ferries and most inter-island connections"
-      }
+    "pills": [
+      "✈ Airport (intl)",
+      "⛵ Piraeus 13–18h",
+      "€55–180"
     ],
-    "ports_el": [
-      {
-        "name": "Λιμάνι Ρόδου",
-        "note": "κύριο εμπορικό λιμάνι — όλα τα πλοία από Πειραιά και οι περισσότερες νησιώτικες συνδέσεις"
-      }
+    "pills_el": [
+      "✈ Αεροδρόμιο (διεθνές)",
+      "⛵ Πειραιάς 13–18h",
+      "€55–180"
     ],
-    "from_piraeus": {
-      "duration": "13–18 hours overnight",
-      "price": "€55–95 deck, €100–180 cabin",
-      "freq": "daily year-round, evening departure",
-      "note": "Blue Star runs the long Dodecanese line — cabin essential for overnight"
-    },
-    "from_piraeus_el": {
-      "duration": "13–18 ώρες, νυχτερινό",
-      "price": "€55–95 κατάστρωμα, €100–180 καμπίνα",
-      "freq": "καθημερινά όλο τον χρόνο, βραδινή αναχώρηση",
-      "note": "Blue Star εξυπηρετεί τη μακρά γραμμή Δωδεκανήσων — η καμπίνα είναι απαραίτητη"
-    },
-    "alt_gateways": [
-      "Direct flights — by far the fastest and often cheapest",
-      "Marmaris (Turkey) — daily summer hydrofoil, ~1h"
-    ],
-    "alt_gateways_el": [
-      "Απευθείας πτήσεις — μακράν το γρηγορότερο και συχνά φθηνότερο",
-      "Μαρμαρίδα (Τουρκία) — καθημερινό υδροπτέρυγο το καλοκαίρι, ~1 ώρα"
-    ]
+    "summary": "Largest Dodecanese airport — Aegean, Sky Express, Ryanair, charters. Ferries from Piraeus dock at Rhodes Town port — Blue Star overnight, daily, €55–95 deck or €100–180 cabin. Direct flights are usually faster and similar cost to a cabin.",
+    "summary_el": "Το μεγαλύτερο αεροδρόμιο των Δωδεκανήσων — Aegean, Sky Express, Ryanair, charters. Τα πλοία από Πειραιά δένουν στο λιμάνι Ρόδου — Blue Star νυχτερινό, καθημερινά, €55–95 κατάστρωμα ή €100–180 καμπίνα. Οι απευθείας πτήσεις είναι συνήθως πιο γρήγορες και κοστίζουν όσο μια καμπίνα.",
+    "tip": "Daily summer hydrofoil to Marmaris (Turkey) takes ~1h — easy add-on.",
+    "tip_el": "Καθημερινό καλοκαιρινό υδροπτέρυγο προς Μαρμαρίδα Τουρκίας ~1 ώρα — εύκολο add-on."
   }
 }

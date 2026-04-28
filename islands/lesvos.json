@@ -585,49 +585,19 @@
     }
   ],
   "getting_there": {
-    "airport": "Yes — domestic + summer charters (Aegean, Sky Express, charters); large airport at Mytilini",
-    "airport_el": "Ναι — εσωτερικές + καλοκαιρινές charter πτήσεις (Aegean, Sky Express, charters)· μεγάλο αεροδρόμιο στη Μυτιλήνη",
-    "ports": [
-      {
-        "name": "Mytilini Port",
-        "note": "main commercial port — all Piraeus ferries"
-      },
-      {
-        "name": "Sigri (west)",
-        "note": "small port — only seasonal local connections"
-      }
+    "pills": [
+      "✈ Airport",
+      "⛵ Piraeus 8–13h overnight",
+      "€42–80"
     ],
-    "ports_el": [
-      {
-        "name": "Λιμάνι Μυτιλήνης",
-        "note": "κύριο εμπορικό λιμάνι — όλα τα πλοία από Πειραιά"
-      },
-      {
-        "name": "Σίγρι (δυτικά)",
-        "note": "μικρό λιμάνι — μόνο εποχιακές τοπικές συνδέσεις"
-      }
+    "pills_el": [
+      "✈ Αεροδρόμιο",
+      "⛵ Πειραιάς 8–13h νυχτερινό",
+      "€42–80"
     ],
-    "from_piraeus": {
-      "duration": "8–13 hours overnight",
-      "price": "€42–80",
-      "freq": "daily, year-round, evening departure",
-      "note": "Blue Star and NEL Lines — overnight via Chios"
-    },
-    "from_piraeus_el": {
-      "duration": "8–13 ώρες, νυχτερινό",
-      "price": "€42–80",
-      "freq": "καθημερινά όλο τον χρόνο, βραδινή αναχώρηση",
-      "note": "Blue Star και NEL Lines — νυχτερινό μέσω Χίου"
-    },
-    "alt_gateways": [
-      "Direct flights — fastest option",
-      "Ayvalik (Turkey) — daily summer ferry, ~1.5h",
-      "Chios — frequent inter-island connections"
-    ],
-    "alt_gateways_el": [
-      "Απευθείας πτήσεις — η πιο γρήγορη επιλογή",
-      "Αϊβαλί (Τουρκία) — καθημερινό καλοκαιρινό πλοίο, ~1.5 ώρα",
-      "Χίος — συχνές συνδέσεις μεταξύ νησιών"
-    ]
+    "summary": "Domestic + summer charter airport at Mytilini — Aegean, Sky Express, charters. Ferries from Piraeus dock at Mytilini Port, overnight via Chios. Daily year-round.",
+    "summary_el": "Αεροδρόμιο εσωτερικού + καλοκαιρινές charter στη Μυτιλήνη — Aegean, Sky Express, charters. Τα πλοία από Πειραιά δένουν στο λιμάνι Μυτιλήνης, νυχτερινό μέσω Χίου. Καθημερινά όλο τον χρόνο.",
+    "tip": "Daily summer ferry to Ayvalik (Turkey) takes ~1.5h — easy add-on.",
+    "tip_el": "Καθημερινό καλοκαιρινό πλοίο προς Αϊβαλί Τουρκίας ~1.5 ώρα — εύκολο add-on."
   }
 }

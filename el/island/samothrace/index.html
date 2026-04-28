@@ -51,20 +51,36 @@
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
-  .seo-getting-there dl {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
-    margin: 0;
+  .seo-gt-pills {
+    display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px;
+  }
+  .seo-gt-pill {
+    background: rgba(11,143,172,0.08);
+    color: var(--aegean, #0B8FAC);
+    font-size: var(--text-tiny, 12px);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+  .seo-gt-summary {
+    margin: 0 0 10px;
     font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    line-height: 1.6;
   }
-  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
-  .seo-getting-there dd { margin: 0; }
-  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
-  @media (max-width: 600px) {
-    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
-    .seo-getting-there dt { margin-top: 8px; }
+  .seo-gt-tip {
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(11,143,172,0.04);
+    border-left: 3px solid var(--aegean, #0B8FAC);
+    border-radius: 0 4px 4px 0;
+    font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    font-style: italic;
+    line-height: 1.5;
   }
+  .seo-gt-tip strong { font-style: normal; color: var(--aegean, #0B8FAC); }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
   .seo-day-meta { color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }
@@ -158,7 +174,7 @@
   <section class="seo-intro">
     <p>Η Σαμοθράκη είναι ένα νησί με καταρράκτες, άγριες ορεινές πισίνες και αρχαίο μυστήριο. Το Όρος Σάος υψώνεται κατευθείαν από τη θάλασσα στα 1.611 μέτρα, η ψηλότερη κορυφή κάθε αιγαιοπελαγίτικου νησιού. Το Ιερό των Μεγάλων Θεών ήταν η σημαντικότερη μυστική θρησκευτική λατρεία της αρχαιότητας, στην οποία συμμετείχαν όλοι από τον Ηρόδοτο μέχρι τον Φίλιππο Β&#x27; της Μακεδονίας. Η Νίκη της Σαμοθράκης (τώρα στο Λούβρο) βρέθηκε εδώ. Σήμερα το νησί παραμένει πεισματικά μη τουριστικό — χωρίς αεροδρόμιο, ισχυροί άνεμοι, βουνοπλαγιές με κατσίκες.</p>
   </section>
-  <section class="seo-getting-there"><h2>Πώς θα φτάσεις</h2><p>Προσέγγιση Σαμοθράκης από Αλεξανδρούπολη (ηπειρωτική ΒΑ) — καθημερινό πλοίο, ~2.5 ώρες. Όχι από Πειραιά</p></section>
+  <section class="seo-getting-there"><h2>Πώς θα φτάσεις</h2><div class="seo-gt-pills"><span class="seo-gt-pill">⛵ Αλεξανδρούπολη 2.5h</span><span class="seo-gt-pill">€15–22</span></div><p class="seo-gt-summary">Χωρίς αεροδρόμιο. Χωρίς πλοίο από Πειραιά. Προσέγγιση από Αλεξανδρούπολη (ηπειρωτική ΒΑ, ~10 ώρες από Αθήνα ή πτήση) — καθημερινό πλοίο, ~2.5 ώρες.</p><p class="seo-gt-tip"><strong>Συμβουλή:</strong> Πτήση στην Αλεξανδρούπολη πρώτα — οδικώς από Αθήνα τρώει δύο μέρες.</p></section>
   <section class="seo-itinerary"><h2>Δρομολόγιο 3 ημερών — Σαμοθράκη</h2>
 <section class="seo-day">
   <h3>Μέρα 1: Παλαιόπολη &amp; το Ιερό</h3>

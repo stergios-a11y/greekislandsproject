@@ -429,41 +429,19 @@
   "subtitle_el": "Ιόνιο σμαράγδι — παλάτια, ελαιώνες και τιρκουάζ κολπίσκοι",
   "intro_el": "Η Κέρκυρα είναι το πιο πράσινο νησί της Ελλάδας — ένα τοπίο από αρχαίους ελαιώνες, βενετσιάνικες ορεινές πόλεις και Ιόνια θάλασσα που μεταβάλλεται από τιρκουάζ σε βαθύ κοβάλτιο ανάλογα με το φως. Ήταν το μόνο τμήμα της Ελλάδας που δεν κατακτήθηκε ποτέ από τους Οθωμανούς, πράγμα που της δίνει έναν μοναδικό βενετσιάνικο και βρετανικό αποικιακό χαρακτήρα. Η παλιά πόλη είναι Μνημείο Παγκόσμιας Πολιτιστικής Κληρονομιάς της UNESCO. Η δυτική ακτή έχει τις καλύτερες αμμώδεις παραλίες του Ιονίου.",
   "getting_there": {
-    "airport": "Yes — major: domestic + international (Aegean, Sky Express, Ryanair, EasyJet, charters)",
-    "airport_el": "Ναι — μεγάλο αεροδρόμιο: εσωτερικές + διεθνείς πτήσεις (Aegean, Sky Express, Ryanair, EasyJet, charters)",
-    "ports": [
-      {
-        "name": "Corfu Port (New Port)",
-        "note": "main port — international ferries from Italy and the Igoumenitsa shuttle"
-      }
+    "pills": [
+      "✈ Airport (intl)",
+      "⛵ Igoumenitsa 1.5h",
+      "€11–18"
     ],
-    "ports_el": [
-      {
-        "name": "Λιμάνι Κέρκυρας (Νέο Λιμάνι)",
-        "note": "κύριο λιμάνι — διεθνή πλοία από Ιταλία και η σύνδεση Ηγουμενίτσας"
-      }
+    "pills_el": [
+      "✈ Αεροδρόμιο (διεθνές)",
+      "⛵ Ηγουμενίτσα 1.5h",
+      "€11–18"
     ],
-    "from_piraeus": {
-      "duration": "No direct ferry from Piraeus",
-      "price": "—",
-      "freq": "—",
-      "note": "reach Corfu via Igoumenitsa (mainland NW) or fly direct"
-    },
-    "from_piraeus_el": {
-      "duration": "Δεν υπάρχει απευθείας πλοίο από Πειραιά",
-      "price": "—",
-      "freq": "—",
-      "note": "φτάσε στην Κέρκυρα μέσω Ηγουμενίτσας (ηπειρωτική ΒΔ) ή πέτα απευθείας"
-    },
-    "alt_gateways": [
-      "Igoumenitsa — frequent shuttle, ~1.5h, €11–18",
-      "Direct flights from Athens — usually fastest",
-      "Ferries from Bari/Ancona/Venice (Italy) — for travelling overland"
-    ],
-    "alt_gateways_el": [
-      "Ηγουμενίτσα — συχνή σύνδεση, ~1.5 ώρα, €11–18",
-      "Απευθείας πτήσεις από Αθήνα — συνήθως οι γρηγορότερες",
-      "Πλοία από Μπάρι/Ανκόνα/Βενετία (Ιταλία) — για χερσαίο ταξίδι"
-    ]
+    "summary": "Major international airport — Aegean, Sky Express, Ryanair, EasyJet, charters. No Piraeus ferry — reach Corfu via Igoumenitsa (mainland NW) by frequent shuttle, or fly direct. Italy ferries also available (Bari, Ancona, Venice).",
+    "summary_el": "Μεγάλο διεθνές αεροδρόμιο — Aegean, Sky Express, Ryanair, EasyJet, charters. Δεν υπάρχει πλοίο από Πειραιά — προσέγγιση μέσω Ηγουμενίτσας (ηπειρωτική ΒΔ) με συχνή σύνδεση, ή απευθείας πτήση. Πλοία και από Ιταλία (Μπάρι, Ανκόνα, Βενετία).",
+    "tip": "Direct flight is fastest. Italy ferry routes are great if you are coming overland from Europe.",
+    "tip_el": "Η απευθείας πτήση είναι πιο γρήγορη. Οι γραμμές Ιταλίας ιδανικές αν έρχεσαι οδικώς από Ευρώπη."
   }
 }

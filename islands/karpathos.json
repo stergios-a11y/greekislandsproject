@@ -324,47 +324,19 @@
     }
   ],
   "getting_there": {
-    "airport": "Yes — domestic + summer international charters (Olympic, Sky Express, charters)",
-    "airport_el": "Ναι — εσωτερικές + καλοκαιρινές charter πτήσεις (Olympic, Sky Express, charters)",
-    "ports": [
-      {
-        "name": "Pigadia (Karpathos Town)",
-        "note": "the main port and capital — most ferries dock here"
-      },
-      {
-        "name": "Diafani",
-        "note": "small port on north — only summer hydrofoil to Rhodes/Halki"
-      }
+    "pills": [
+      "✈ Airport (intl charter)",
+      "⛵ Piraeus 17–20h",
+      "€55–95"
     ],
-    "ports_el": [
-      {
-        "name": "Πηγάδια (Χώρα Καρπάθου)",
-        "note": "το κύριο λιμάνι και πρωτεύουσα — εκεί δένουν τα περισσότερα πλοία"
-      },
-      {
-        "name": "Διαφάνι",
-        "note": "μικρό λιμάνι στον βορρά — μόνο καλοκαιρινό υδροπτέρυγο για Ρόδο/Χάλκη"
-      }
+    "pills_el": [
+      "✈ Αεροδρόμιο (charter)",
+      "⛵ Πειραιάς 17–20h",
+      "€55–95"
     ],
-    "from_piraeus": {
-      "duration": "17–20 hours overnight",
-      "price": "€55–95",
-      "freq": "2–3× weekly",
-      "note": "long ferry — most travellers fly via Athens or Rhodes"
-    },
-    "from_piraeus_el": {
-      "duration": "17–20 ώρες, νυχτερινό",
-      "price": "€55–95",
-      "freq": "2–3 τη βδομάδα",
-      "note": "πολύ μακρύ ταξίδι — οι περισσότεροι πετάνε μέσω Αθήνας ή Ρόδου"
-    },
-    "alt_gateways": [
-      "Direct flights — fastest option, usually best price",
-      "Rhodes — short flight or ferry connection (~3h ferry)"
-    ],
-    "alt_gateways_el": [
-      "Απευθείας πτήσεις — η πιο γρήγορη επιλογή, συνήθως καλύτερη τιμή",
-      "Ρόδος — μικρή πτήση ή πλοίο (~3 ώρες πλοίο)"
-    ]
+    "summary": "Domestic airport with summer international charters — Olympic, Sky Express. Ferries from Piraeus take 17–20h overnight (2–3× weekly) — most travellers fly via Athens or Rhodes.",
+    "summary_el": "Αεροδρόμιο εσωτερικού με καλοκαιρινές διεθνείς charter — Olympic, Sky Express. Τα πλοία από Πειραιά παίρνουν 17–20 ώρες νυχτερινό (2–3 τη βδομάδα) — οι περισσότεροι πετάνε μέσω Αθήνας ή Ρόδου.",
+    "tip": "Direct charter flights from Europe in summer — skip Athens entirely.",
+    "tip_el": "Απευθείας charters από Ευρώπη το καλοκαίρι — παρακάμπτεις την Αθήνα."
   }
 }

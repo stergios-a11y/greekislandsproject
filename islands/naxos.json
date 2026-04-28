@@ -333,39 +333,19 @@
     }
   ],
   "getting_there": {
-    "airport": "Yes — domestic only (Olympic, Sky Express)",
-    "airport_el": "Ναι — μόνο εσωτερικές πτήσεις (Olympic, Sky Express)",
-    "ports": [
-      {
-        "name": "Naxos Town (Chora)",
-        "note": "the only port — all ferries dock at the main waterfront"
-      }
+    "pills": [
+      "✈ Airport (domestic)",
+      "⛵ Piraeus 3.5–6h",
+      "€38–55"
     ],
-    "ports_el": [
-      {
-        "name": "Χώρα Νάξου",
-        "note": "το μόνο λιμάνι — όλα τα πλοία δένουν στην κεντρική προκυμαία"
-      }
+    "pills_el": [
+      "✈ Αεροδρόμιο (εσωτερικό)",
+      "⛵ Πειραιάς 3.5–6h",
+      "€38–55"
     ],
-    "from_piraeus": {
-      "duration": "3.5–6 hours",
-      "price": "€38–55",
-      "freq": "multiple daily in summer, daily year-round",
-      "note": "fast ferries (~3.5h) and conventional Blue Star (~5–6h)"
-    },
-    "from_piraeus_el": {
-      "duration": "3.5–6 ώρες",
-      "price": "€38–55",
-      "freq": "πολλά καθημερινά το καλοκαίρι, καθημερινά όλο τον χρόνο",
-      "note": "γρήγορα πλοία (~3.5 ώρες) και συμβατικά Blue Star (~5–6)"
-    },
-    "alt_gateways": [
-      "Rafina — also serves Naxos directly",
-      "Santorini / Mykonos / Paros — frequent connections, Paros only 30 min"
-    ],
-    "alt_gateways_el": [
-      "Ραφήνα — εξυπηρετεί επίσης απευθείας τη Νάξο",
-      "Σαντορίνη / Μύκονος / Πάρος — συχνές συνδέσεις, η Πάρος μόλις 30 λεπτά"
-    ]
+    "summary": "Small domestic airport (Olympic, Sky Express). Ferries dock at Naxos Town. Fast ferries from Piraeus ~3.5h, Blue Star conventional ~5–6h, multiple daily year-round. Also served from Rafina.",
+    "summary_el": "Μικρό αεροδρόμιο εσωτερικού (Olympic, Sky Express). Τα πλοία δένουν στη Χώρα. Γρήγορα πλοία από Πειραιά ~3.5 ώρες, συμβατικά Blue Star ~5–6 ώρες, πολλά καθημερινά όλο τον χρόνο. Εξυπηρετείται και από Ραφήνα.",
+    "tip": "Naxos and Paros are 30 minutes apart — easy to combine.",
+    "tip_el": "Νάξος και Πάρος είναι 30 λεπτά μακριά — εύκολος συνδυασμός."
   }
 }

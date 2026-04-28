@@ -51,20 +51,36 @@
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
-  .seo-getting-there dl {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
-    margin: 0;
+  .seo-gt-pills {
+    display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px;
+  }
+  .seo-gt-pill {
+    background: rgba(11,143,172,0.08);
+    color: var(--aegean, #0B8FAC);
+    font-size: var(--text-tiny, 12px);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+  .seo-gt-summary {
+    margin: 0 0 10px;
     font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    line-height: 1.6;
   }
-  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
-  .seo-getting-there dd { margin: 0; }
-  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
-  @media (max-width: 600px) {
-    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
-    .seo-getting-there dt { margin-top: 8px; }
+  .seo-gt-tip {
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(11,143,172,0.04);
+    border-left: 3px solid var(--aegean, #0B8FAC);
+    border-radius: 0 4px 4px 0;
+    font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    font-style: italic;
+    line-height: 1.5;
   }
+  .seo-gt-tip strong { font-style: normal; color: var(--aegean, #0B8FAC); }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
   .seo-day-meta { color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }
@@ -158,7 +174,7 @@
   <section class="seo-intro">
     <p>Η Πάρος είναι το νησί όπου οι Κυκλάδες λειτουργούν καλύτερα ως πλήρες πακέτο. Έχει τη Νάουσσα — το ομορφότερο ψαρολίμανο του αρχιπελάγους, εξαιρετική νυχτερινή ζωή στην Παροικιά, μερικά από τα καλύτερα δείγματα μαρμάρινης αρχιτεκτονικής στην Ελλάδα (η Εκατονταπυλιανή είναι του 4ου αιώνα), εξαιρετικές παραλίες και εύκολες ακτοπλοϊκές συνδέσεις παντού. Είναι το πιο ισορροπημένο νησί των Κυκλάδων — όχι το πιο ακραίο σε τίποτα, αλλά σταθερά εξαιρετικό σε όλα.</p>
   </section>
-  <section class="seo-getting-there"><h2>Πώς θα φτάσεις</h2><dl><dt>Αεροδρόμιο</dt><dd>Ναι — μόνο εσωτερικές πτήσεις (Olympic, Sky Express)· νέο αεροδρόμιο από το 2016</dd><dt>Λιμάνια</dt><dd><strong>Παροικιά</strong> — το κύριο λιμάνι — όλα τα πλοία από Πειραιά και οι περισσότερες νησιώτικες συνδέσεις; <strong>Νάουσα</strong> — μικρό λιμάνι στον βορρά — μόνο εποχιακές συνδέσεις με ταχύπλοα</dd><dt>Από Πειραιά</dt><dd>3–5 ώρες · €36–55 · πολλά καθημερινά όλο τον χρόνο. γρήγορα πλοία (~3 ώρες) και συμβατικά Blue Star (~5)</dd><dt>Άλλες πύλες</dt><dd>Ραφήνα — καθημερινά, συχνά φθηνότερα<br>Νάξος — 30 λεπτά, δεκάδες καθημερινά πλοία το καλοκαίρι</dd></dl></section>
+  <section class="seo-getting-there"><h2>Πώς θα φτάσεις</h2><div class="seo-gt-pills"><span class="seo-gt-pill">✈ Αεροδρόμιο (εσωτερικό)</span><span class="seo-gt-pill">⛵ Πειραιάς 3–5h</span><span class="seo-gt-pill">€36–55</span></div><p class="seo-gt-summary">Μικρό αεροδρόμιο εσωτερικού από το 2016 (Olympic, Sky Express). Τα πλοία δένουν στην Παροικιά. Γρήγορα πλοία από Πειραιά ~3 ώρες, συμβατικά Blue Star ~5 ώρες, πολλά καθημερινά. Το λιμάνι της Νάουσας εξυπηρετεί μόνο εποχιακά ταχύπλοα.</p><p class="seo-gt-tip"><strong>Συμβουλή:</strong> Η Ραφήνα είναι κάποιες φορές φθηνότερη για Πάρο — αξίζει να το ψάξεις πριν κλείσεις.</p></section>
   <section class="seo-itinerary"><h2>Δρομολόγιο 3 ημερών — Πάρος</h2>
 <section class="seo-day">
   <h3>Μέρα 1: Παροικιά &amp; η Δύση</h3>

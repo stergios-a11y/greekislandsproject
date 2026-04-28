@@ -226,47 +226,19 @@
     }
   ],
   "getting_there": {
-    "airport": "Yes — small, domestic only (Olympic, Sky Express)",
-    "airport_el": "Ναι — μικρό, μόνο εσωτερικές πτήσεις (Olympic, Sky Express)",
-    "ports": [
-      {
-        "name": "Lakki",
-        "note": "main commercial port (the art-deco harbour) — all Piraeus ferries"
-      },
-      {
-        "name": "Agia Marina",
-        "note": "smaller port — used for excursions and some inter-island hydrofoils"
-      }
+    "pills": [
+      "✈ Airport (small)",
+      "⛵ Piraeus 8–11h",
+      "€48–80"
     ],
-    "ports_el": [
-      {
-        "name": "Λακκί",
-        "note": "κύριο εμπορικό λιμάνι (το art-deco) — όλα τα πλοία από Πειραιά"
-      },
-      {
-        "name": "Αγία Μαρίνα",
-        "note": "μικρότερο λιμάνι — για εκδρομές και νησιώτικα υδροπτέρυγα"
-      }
+    "pills_el": [
+      "✈ Αεροδρόμιο (μικρό)",
+      "⛵ Πειραιάς 8–11h",
+      "€48–80"
     ],
-    "from_piraeus": {
-      "duration": "8–11 hours overnight",
-      "price": "€48–80",
-      "freq": "daily in summer",
-      "note": "Blue Star Dodecanese line"
-    },
-    "from_piraeus_el": {
-      "duration": "8–11 ώρες, νυχτερινό",
-      "price": "€48–80",
-      "freq": "καθημερινά το καλοκαίρι",
-      "note": "Blue Star Δωδεκανήσων"
-    },
-    "alt_gateways": [
-      "Kos / Patmos / Kalymnos — frequent inter-island ferries",
-      "Leros airport — small, daily flights from Athens"
-    ],
-    "alt_gateways_el": [
-      "Κως / Πάτμος / Κάλυμνος — συχνά πλοία μεταξύ νησιών",
-      "Αεροδρόμιο Λέρου — μικρό, καθημερινές πτήσεις από Αθήνα"
-    ]
+    "summary": "Small domestic airport (Olympic, Sky Express). Ferries from Piraeus dock at Lakki (the art-deco port). Blue Star Dodecanese line, daily in summer.",
+    "summary_el": "Μικρό αεροδρόμιο εσωτερικού (Olympic, Sky Express). Τα πλοία από Πειραιά δένουν στο Λακκί (το art-deco λιμάνι). Blue Star Δωδεκανήσων, καθημερινά το καλοκαίρι.",
+    "tip": "Lakki, Pandeli, Agia Marina, Krithoni — pick a base by character before booking.",
+    "tip_el": "Λακκί, Παντέλι, Αγία Μαρίνα, Κριθώνι — διάλεξε βάση ανάλογα με την ατμόσφαιρα."
   }
 }

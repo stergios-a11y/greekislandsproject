@@ -392,47 +392,19 @@
     }
   ],
   "getting_there": {
-    "airport": "Yes — domestic + heavy summer international charters (Aegean, Sky Express, Ryanair, charters)",
-    "airport_el": "Ναι — εσωτερικές + πολλές charter διεθνείς πτήσεις το καλοκαίρι (Aegean, Sky Express, Ryanair, charters)",
-    "ports": [
-      {
-        "name": "Zakynthos Town Port",
-        "note": "the main port — ferry from Kyllini docks here"
-      },
-      {
-        "name": "Agios Nikolaos (north)",
-        "note": "smaller — seasonal Kefalonia connections only"
-      }
+    "pills": [
+      "✈ Airport (intl charter)",
+      "⛵ Kyllini 1h",
+      "€10–14"
     ],
-    "ports_el": [
-      {
-        "name": "Λιμάνι Ζακύνθου",
-        "note": "το κύριο λιμάνι — εδώ δένει το πλοίο από Κυλλήνη"
-      },
-      {
-        "name": "Άγιος Νικόλαος (βόρεια)",
-        "note": "μικρότερο — μόνο εποχιακή σύνδεση Κεφαλονιάς"
-      }
+    "pills_el": [
+      "✈ Αεροδρόμιο (charter)",
+      "⛵ Κυλλήνη 1 ώρα",
+      "€10–14"
     ],
-    "from_piraeus": {
-      "duration": "No direct ferry from Piraeus",
-      "price": "—",
-      "freq": "—",
-      "note": "reach Zakynthos via Kyllini (Peloponnese, ~3h drive from Athens) or fly direct"
-    },
-    "from_piraeus_el": {
-      "duration": "Δεν υπάρχει απευθείας πλοίο από Πειραιά",
-      "price": "—",
-      "freq": "—",
-      "note": "φτάσε στη Ζάκυνθο μέσω Κυλλήνης (Πελοπόννησος, ~3 ώρες από Αθήνα) ή πέτα απευθείας"
-    },
-    "alt_gateways": [
-      "Kyllini — frequent ferry, ~1h, €10–14",
-      "Direct flights from Athens — fastest; many summer charters from Europe"
-    ],
-    "alt_gateways_el": [
-      "Κυλλήνη — συχνό πλοίο, ~1 ώρα, €10–14",
-      "Απευθείας πτήσεις από Αθήνα — οι γρηγορότερες· πολλά καλοκαιρινά charters από Ευρώπη"
-    ]
+    "summary": "Heavy summer charter airport — Aegean, Sky Express, Ryanair, charters from across Europe. No Piraeus ferry — reach Zakynthos via Kyllini (Peloponnese, ~3h drive from Athens). Frequent crossings.",
+    "summary_el": "Πολύ ενεργό αεροδρόμιο charter — Aegean, Sky Express, Ryanair, charters από όλη την Ευρώπη. Δεν υπάρχει πλοίο από Πειραιά — προσέγγιση μέσω Κυλλήνης (Πελοπόννησος, ~3 ώρες από Αθήνα). Συχνά δρομολόγια.",
+    "tip": "Ryanair runs cheap direct flights from London/Manchester in summer — check before booking via Athens.",
+    "tip_el": "Η Ryanair έχει φθηνές απευθείας από Λονδίνο/Μάντσεστερ το καλοκαίρι — δες πριν κλείσεις μέσω Αθήνας."
   }
 }

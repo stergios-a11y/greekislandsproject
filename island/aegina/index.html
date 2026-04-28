@@ -51,20 +51,36 @@
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
-  .seo-getting-there dl {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
-    margin: 0;
+  .seo-gt-pills {
+    display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px;
+  }
+  .seo-gt-pill {
+    background: rgba(11,143,172,0.08);
+    color: var(--aegean, #0B8FAC);
+    font-size: var(--text-tiny, 12px);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+  .seo-gt-summary {
+    margin: 0 0 10px;
     font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    line-height: 1.6;
   }
-  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
-  .seo-getting-there dd { margin: 0; }
-  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
-  @media (max-width: 600px) {
-    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
-    .seo-getting-there dt { margin-top: 8px; }
+  .seo-gt-tip {
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(11,143,172,0.04);
+    border-left: 3px solid var(--aegean, #0B8FAC);
+    border-radius: 0 4px 4px 0;
+    font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    font-style: italic;
+    line-height: 1.5;
   }
+  .seo-gt-tip strong { font-style: normal; color: var(--aegean, #0B8FAC); }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
   .seo-day-meta { color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }
@@ -158,7 +174,7 @@
   <section class="seo-intro">
     <p>Aegina is the nearest significant island to Athens — just 40 minutes by hydrofoil from Piraeus. Its capital was briefly the first capital of modern Greece (1828-29). The Temple of Aphaea is one of the best-preserved ancient temples in Greece, forming a &#x27;sacred triangle&#x27; with the Parthenon and Sounio. And the pistachios grown here are protected by PDO status and exported across the world. An easy day trip or a peaceful 1-2 night stay.</p>
   </section>
-  <section class="seo-getting-there"><h2>Getting there</h2><p>Reach Aegina from Piraeus — frequent ferry, ~40 min fast or 1.5h conventional, €10-15</p></section>
+  <section class="seo-getting-there"><h2>Getting there</h2><div class="seo-gt-pills"><span class="seo-gt-pill">⛵ Piraeus 40min–1.5h</span><span class="seo-gt-pill">€10–15</span></div><p class="seo-gt-summary">No airport. Closest &quot;real&quot; island to Athens — frequent ferries from Piraeus throughout the day. Fast catamaran ~40 min, conventional ~1.5h.</p><p class="seo-gt-tip"><strong>Tip:</strong> Easy day trip from Athens — but staying overnight gets you the calmer evening atmosphere.</p></section>
   <section class="seo-itinerary"><h2>1-day itinerary for Aegina</h2>
 <section class="seo-day">
   <h3>Day 1: Aegina Town, Temple &amp; Beach</h3>

@@ -284,9 +284,19 @@
     }
   ],
   "getting_there": {
-    "stub": true,
-    "via": "lesvos",
-    "note": "Reachable from Piraeus (~16-20h overnight) or via Kavala (mainland NE, faster). Small airport with daily Athens flights",
-    "note_el": "Προσβάσιμη από τον Πειραιά (~16-20 ώρες, νυχτερινό) ή μέσω Καβάλας (ηπειρωτική ΒΑ, πιο γρήγορα). Μικρό αεροδρόμιο με καθημερινές πτήσεις από Αθήνα"
+    "pills": [
+      "✈ Airport (small)",
+      "⛵ Piraeus 16–20h overnight",
+      "€45–80"
+    ],
+    "pills_el": [
+      "✈ Αεροδρόμιο (μικρό)",
+      "⛵ Πειραιάς 16–20h νυχτερινό",
+      "€45–80"
+    ],
+    "summary": "Small domestic airport with daily Athens flights (Olympic, Sky Express). Direct Piraeus ferry is long (16–20h overnight). Faster option: ferry from Kavala (mainland NE, ~5h).",
+    "summary_el": "Μικρό αεροδρόμιο εσωτερικού με καθημερινές πτήσεις Αθήνας (Olympic, Sky Express). Απευθείας πλοίο από Πειραιά είναι μακρύ (16–20 ώρες νυχτερινό). Πιο γρήγορα: πλοίο από Καβάλα (ηπειρωτική ΒΑ, ~5 ώρες).",
+    "tip": "For a week trip, fly. The 20h ferry is for travellers with patience and a car.",
+    "tip_el": "Για εβδομαδιαίο ταξίδι, πτήση. Το 20-ωρο πλοίο είναι για όσους έχουν υπομονή και αυτοκίνητο."
   }
 }

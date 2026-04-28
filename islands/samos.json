@@ -319,57 +319,19 @@
     }
   ],
   "getting_there": {
-    "airport": "Yes — domestic + summer international charters (Aegean, Sky Express, charters)",
-    "airport_el": "Ναι — εσωτερικές + καλοκαιρινές charter πτήσεις (Aegean, Sky Express, charters)",
-    "ports": [
-      {
-        "name": "Vathy (Samos Town)",
-        "note": "main port — most Piraeus ferries dock here"
-      },
-      {
-        "name": "Karlovasi",
-        "note": "second port on the north coast — alternate Piraeus arrival, sometimes more convenient for west Samos"
-      },
-      {
-        "name": "Pythagoreio",
-        "note": "small south port — seasonal connections to nearby Dodecanese islands and Turkey"
-      }
+    "pills": [
+      "✈ Airport",
+      "⛵ Piraeus 7–13h overnight",
+      "€40–75"
     ],
-    "ports_el": [
-      {
-        "name": "Βαθύ (Σάμος)",
-        "note": "κύριο λιμάνι — εκεί δένουν τα περισσότερα πλοία από Πειραιά"
-      },
-      {
-        "name": "Καρλόβασι",
-        "note": "δεύτερο λιμάνι στη βόρεια ακτή — εναλλακτική άφιξη από Πειραιά, καμιά φορά πιο βολική για τη δυτική Σάμο"
-      },
-      {
-        "name": "Πυθαγόρειο",
-        "note": "μικρό νότιο λιμάνι — εποχιακές συνδέσεις με κοντινά Δωδεκάνησα και Τουρκία"
-      }
+    "pills_el": [
+      "✈ Αεροδρόμιο",
+      "⛵ Πειραιάς 7–13h νυχτερινό",
+      "€40–75"
     ],
-    "from_piraeus": {
-      "duration": "7–13 hours overnight",
-      "price": "€40–75",
-      "freq": "daily in summer",
-      "note": "Blue Star — Vathy is the main arrival, but Karlovasi is closer if you are heading west"
-    },
-    "from_piraeus_el": {
-      "duration": "7–13 ώρες, νυχτερινό",
-      "price": "€40–75",
-      "freq": "καθημερινά το καλοκαίρι",
-      "note": "Blue Star — το Βαθύ είναι η κύρια άφιξη, αλλά το Καρλόβασι είναι πιο κοντά αν πας δυτικά"
-    },
-    "alt_gateways": [
-      "Direct flights — fastest, daily from Athens",
-      "Kusadasi (Turkey) — daily summer ferry, ~1.5h",
-      "Patmos / Ikaria / Fournoi — frequent regional connections from Pythagoreio or Vathy"
-    ],
-    "alt_gateways_el": [
-      "Απευθείας πτήσεις — οι γρηγορότερες, καθημερινά από Αθήνα",
-      "Κουσάντασι (Τουρκία) — καθημερινό καλοκαιρινό πλοίο, ~1.5 ώρα",
-      "Πάτμος / Ικαρία / Φούρνοι — συχνές περιφερειακές συνδέσεις από Πυθαγόρειο ή Βαθύ"
-    ]
+    "summary": "Domestic + summer charter airport — Aegean, Sky Express. Three ports: Vathy (main, Piraeus), Karlovasi (alternate Piraeus arrival, closer to west Samos), Pythagoreio (south, Dodecanese & Turkey connections).",
+    "summary_el": "Αεροδρόμιο εσωτερικού + καλοκαιρινές charter — Aegean, Sky Express. Τρία λιμάνια: Βαθύ (κύριο, Πειραιάς), Καρλόβασι (εναλλακτική άφιξη Πειραιά, πιο κοντά στη δυτική Σάμο), Πυθαγόρειο (νότια, Δωδεκάνησα & Τουρκία).",
+    "tip": "Pick the port that matches your base — Karlovasi if west, Vathy if east, Pythagoreio if south.",
+    "tip_el": "Διάλεξε λιμάνι ανάλογα με τη βάση σου — Καρλόβασι δυτικά, Βαθύ ανατολικά, Πυθαγόρειο νότια."
   }
 }

@@ -395,47 +395,17 @@
     }
   ],
   "getting_there": {
-    "airport": null,
-    "airport_el": null,
-    "ports": [
-      {
-        "name": "Nidri",
-        "note": "main port — ferries to Meganisi, Kefalonia, Ithaca"
-      },
-      {
-        "name": "Vasiliki (south)",
-        "note": "smaller — seasonal Kefalonia/Ithaca connections"
-      }
+    "pills": [
+      "🚗 Drive 4h from Athens",
+      "✈ Aktion (PVK) 30min north"
     ],
-    "ports_el": [
-      {
-        "name": "Νυδρί",
-        "note": "κύριο λιμάνι — πλοία προς Μεγανήσι, Κεφαλονιά, Ιθάκη"
-      },
-      {
-        "name": "Βασιλική (νότια)",
-        "note": "μικρότερο — εποχιακές συνδέσεις Κεφαλονιάς/Ιθάκης"
-      }
+    "pills_el": [
+      "🚗 Οδικώς 4h από Αθήνα",
+      "✈ Άκτιο (PVK) 30λ βόρεια"
     ],
-    "from_piraeus": {
-      "duration": "No ferry — Lefkada is connected to mainland by bridge",
-      "price": "—",
-      "freq": "—",
-      "note": "drive from Athens (~4h via Rio-Antirrio bridge); the only Greek island reachable by car"
-    },
-    "from_piraeus_el": {
-      "duration": "Δεν υπάρχει πλοίο — η Λευκάδα συνδέεται με την ηπειρωτική με γέφυρα",
-      "price": "—",
-      "freq": "—",
-      "note": "οδική διαδρομή από Αθήνα (~4 ώρες μέσω γέφυρας Ρίου-Αντιρρίου)· το μόνο ελληνικό νησί προσβάσιμο με αυτοκίνητο"
-    },
-    "alt_gateways": [
-      "Drive from Athens — 4–5h via Rio-Antirrio bridge",
-      "Aktion (Preveza) airport — 30 minutes north, summer charters"
-    ],
-    "alt_gateways_el": [
-      "Οδική διαδρομή από Αθήνα — 4–5 ώρες μέσω γέφυρας Ρίου-Αντιρρίου",
-      "Αεροδρόμιο Ακτίου (Πρέβεζα) — 30 λεπτά βόρεια, καλοκαιρινές charter"
-    ]
+    "summary": "The only Greek island connected by bridge — no ferry needed. Drive from Athens (~4h via Rio-Antirrio). Aktion airport (Preveza, PVK) is 30 minutes north of the island and runs summer charters from Europe.",
+    "summary_el": "Το μόνο ελληνικό νησί συνδεδεμένο με γέφυρα — δεν χρειάζεται πλοίο. Οδική διαδρομή από Αθήνα (~4 ώρες μέσω Ρίου-Αντιρρίου). Το αεροδρόμιο Ακτίου (Πρέβεζα, PVK) είναι 30 λεπτά βόρεια και έχει καλοκαιρινές charters από Ευρώπη.",
+    "tip": "If you fly in, look at Aktion before Athens — direct from London, Manchester, German cities.",
+    "tip_el": "Αν πετάς, κοίτα Άκτιο πριν Αθήνα — απευθείας από Λονδίνο, Μάντσεστερ, γερμανικές πόλεις."
   }
 }

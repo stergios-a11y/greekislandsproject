@@ -340,39 +340,17 @@
   "subtitle_el": "Η ομορφότερη παλιά πόλη της Κρήτης, η Πρέβελη και ο βαθύς νότος",
   "intro_el": "Το Ρέθυμνο έχει την πιο καλά διατηρημένη ενετικο-οθωμανική παλιά πόλη της Κρήτης — λαβύρινθος στενών δρόμων με μπαλκόνια από κέδρο, μιναρέδες, ένα τεράστιο φρούριο πάνω από τη θάλασσα, και την ατμόσφαιρα μιας πόλης που δεν έχει χτιστεί για τους τουρίστες, αλλά τους δέχεται. Ο νομός εκτείνεται από τη βόρεια ακτή με τις 12 χλμ παραλίες ως το άγριο νότιο τμήμα όπου η Πρέβελη και η Δαμνώνι κρύβουν μερικές από τις καλύτερες παραλίες της Κρήτης. Ο ορεινός όγκος του Ψηλορείτη (2456 μ) δεσπόζει στο εσωτερικό. 4 μέρες είναι σωστά: μία για την παλιά πόλη, μία για την Πρέβελη και τον νότο, μία για τη Σπίνα Λόνγκα και την Αρκαδία στον δρόμο προς Ηράκλειο, μία για τα ορεινά χωριά και το Σαμαριά (αν δεν θα πας από τα Χανιά).",
   "getting_there": {
-    "airport": null,
-    "airport_el": null,
-    "ports": [
-      {
-        "name": "Rethymno Old Port",
-        "note": "tiny — used only for excursion boats, not ferries"
-      }
+    "pills": [
+      "✈ via Chania/Heraklion",
+      "⛵ no port"
     ],
-    "ports_el": [
-      {
-        "name": "Παλιό Λιμάνι Ρεθύμνου",
-        "note": "μικρό — μόνο για τουριστικές εκδρομές, όχι ferry"
-      }
+    "pills_el": [
+      "✈ μέσω Χανίων/Ηρακλείου",
+      "⛵ χωρίς λιμάνι"
     ],
-    "from_piraeus": {
-      "duration": "No ferries to Rethymno port",
-      "price": "—",
-      "freq": "—",
-      "note": "reach Rethymno via Heraklion (1h drive east) or Chania (1h drive west)"
-    },
-    "from_piraeus_el": {
-      "duration": "Δεν φτάνουν πλοία στο λιμάνι Ρεθύμνου",
-      "price": "—",
-      "freq": "—",
-      "note": "φτάσε στο Ρέθυμνο μέσω Ηρακλείου (1 ώρα ανατολικά) ή Χανίων (1 ώρα δυτικά)"
-    },
-    "alt_gateways": [
-      "Chania airport — closest, 1h drive west",
-      "Heraklion airport — 1h drive east, more flight options"
-    ],
-    "alt_gateways_el": [
-      "Αεροδρόμιο Χανίων — πιο κοντά, 1 ώρα δυτικά",
-      "Αεροδρόμιο Ηρακλείου — 1 ώρα ανατολικά, περισσότερες πτήσεις"
-    ]
+    "summary": "Rethymno has no airport and no commercial ferry port. Arrive via Chania (1h drive west) or Heraklion (1h drive east). The old port handles only excursion boats.",
+    "summary_el": "Το Ρέθυμνο δεν έχει αεροδρόμιο ούτε εμπορικό λιμάνι. Άφιξη μέσω Χανίων (1 ώρα οδικώς δυτικά) ή Ηρακλείου (1 ώρα ανατολικά). Το παλιό λιμάνι είναι μόνο για εκδρομικά.",
+    "tip": "Chania airport is closer and usually has cheaper flights than Heraklion.",
+    "tip_el": "Το αεροδρόμιο Χανίων είναι πιο κοντά και συνήθως πιο φθηνό από το Ηράκλειο."
   }
 }

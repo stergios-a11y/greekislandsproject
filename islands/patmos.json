@@ -242,39 +242,17 @@
     }
   ],
   "getting_there": {
-    "airport": null,
-    "airport_el": null,
-    "ports": [
-      {
-        "name": "Skala",
-        "note": "the main port and main settlement — all ferries dock here"
-      }
+    "pills": [
+      "⛵ Piraeus 7–9h",
+      "€48–80"
     ],
-    "ports_el": [
-      {
-        "name": "Σκάλα",
-        "note": "το κύριο λιμάνι και ο κύριος οικισμός — όλα τα πλοία δένουν εδώ"
-      }
+    "pills_el": [
+      "⛵ Πειραιάς 7–9h",
+      "€48–80"
     ],
-    "from_piraeus": {
-      "duration": "7–9 hours",
-      "price": "€48–80",
-      "freq": "daily in summer, 4× weekly winter",
-      "note": "Blue Star Dodecanese line — Patmos is roughly halfway down"
-    },
-    "from_piraeus_el": {
-      "duration": "7–9 ώρες",
-      "price": "€48–80",
-      "freq": "καθημερινά το καλοκαίρι, 4 τη βδομάδα τον χειμώνα",
-      "note": "Blue Star Δωδεκανήσων — η Πάτμος είναι περίπου στη μέση της γραμμής"
-    },
-    "alt_gateways": [
-      "Kos / Leros / Samos — frequent inter-island ferries",
-      "Samos airport — closest air gateway, then 2h ferry"
-    ],
-    "alt_gateways_el": [
-      "Κως / Λέρος / Σάμος — συχνά πλοία μεταξύ νησιών",
-      "Αεροδρόμιο Σάμου — το πιο κοντινό αεροδρόμιο, μετά 2 ώρες πλοίο"
-    ]
+    "summary": "No airport. Ferries dock at Skala (the main settlement) on the Blue Star Dodecanese line. Daily in summer, 4× weekly in winter. Patmos is roughly halfway down the line.",
+    "summary_el": "Χωρίς αεροδρόμιο. Τα πλοία δένουν στη Σκάλα (κύριος οικισμός) στη γραμμή Blue Star Δωδεκανήσων. Καθημερινά το καλοκαίρι, 4 τη βδομάδα τον χειμώνα. Η Πάτμος είναι περίπου στη μέση της γραμμής.",
+    "tip": "Closest air gateway is Samos — fly there, then 2h ferry south.",
+    "tip_el": "Πιο κοντινό αεροδρόμιο είναι η Σάμος — πτήση εκεί, μετά 2 ώρες πλοίο νότια."
   }
 }

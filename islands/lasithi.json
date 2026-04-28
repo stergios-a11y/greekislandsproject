@@ -363,47 +363,19 @@
   "subtitle_el": "Σπιναλόγκα, φοινικόδασος του Βάι και η άγρια ανατολική Κρήτη",
   "intro_el": "Το Λασίθι είναι το πιο μακριά από τους πεπατημένους δρόμους από τις τέσσερις περιοχές της Κρήτης — και το πιο ανταποδοτικό για όσους κάνουν την προσπάθεια. Η ανατολική άκρη της Κρήτης φιλοξενεί το Βάι, τη μοναδική φυσική παραλία με φοινικόδασος της Ευρώπης, το συγκλονιστικό νησί-λεπροκομία της Σπιναλόγκας, την κομψή πόλη του Αγίου Νικολάου και το μινωικό λιμάνι της Ζάκρου στο μακρινό ανατολικό άκρο. Το τοπίο γίνεται όλο και πιο εντυπωσιακό και ανέγγιχτο όσο πας προς τα ανατολικά.",
   "getting_there": {
-    "airport": null,
-    "airport_el": null,
-    "ports": [
-      {
-        "name": "Sitia",
-        "note": "small port on the far east — fewer connections than Heraklion"
-      },
-      {
-        "name": "Agios Nikolaos",
-        "note": "small port — limited ferry connections, mainly Piraeus and Cyclades"
-      }
+    "pills": [
+      "✈ Sitia (small)",
+      "⛵ Sitia 11–14h",
+      "€40–80"
     ],
-    "ports_el": [
-      {
-        "name": "Σητεία",
-        "note": "μικρό λιμάνι στα ανατολικά — λιγότερες συνδέσεις από το Ηράκλειο"
-      },
-      {
-        "name": "Άγιος Νικόλαος",
-        "note": "μικρό λιμάνι — περιορισμένες συνδέσεις, κυρίως με Πειραιά και Κυκλάδες"
-      }
+    "pills_el": [
+      "✈ Σητεία (μικρό)",
+      "⛵ Σητεία 11–14h",
+      "€40–80"
     ],
-    "from_piraeus": {
-      "duration": "11–14 hours overnight (to Sitia)",
-      "price": "€40–80",
-      "freq": "3–4× weekly to Sitia",
-      "note": "most travellers fly to Heraklion (1.5h drive) or Sitia (small airport, domestic only)"
-    },
-    "from_piraeus_el": {
-      "duration": "11–14 ώρες, νυχτερινό (προς Σητεία)",
-      "price": "€40–80",
-      "freq": "3–4 τη βδομάδα προς Σητεία",
-      "note": "οι περισσότεροι πετούν στο Ηράκλειο (1.5 ώρα οδική διαδρομή) ή στη Σητεία (μικρό αεροδρόμιο, μόνο εσωτερικά)"
-    },
-    "alt_gateways": [
-      "Sitia airport — small, domestic only (Olympic, Sky Express)",
-      "Heraklion — major airport, drive 1.5–2h east to Agios Nikolaos"
-    ],
-    "alt_gateways_el": [
-      "Αεροδρόμιο Σητείας — μικρό, μόνο εσωτερικές πτήσεις (Olympic, Sky Express)",
-      "Ηράκλειο — μεγάλο αεροδρόμιο, 1.5–2 ώρες ανατολικά για Άγιο Νικόλαο"
-    ]
+    "summary": "Sitia has a small domestic airport (Olympic, Sky Express). Ferries to Sitia from Piraeus 3–4× weekly. Most travellers fly to Heraklion (1.5–2h drive east to Agios Nikolaos) since flight options are richer.",
+    "summary_el": "Η Σητεία έχει μικρό αεροδρόμιο εσωτερικού (Olympic, Sky Express). Πλοία από Πειραιά για Σητεία 3–4 τη βδομάδα. Οι περισσότεροι πετούν στο Ηράκλειο (1.5–2 ώρες οδικώς ανατολικά για Άγιο Νικόλαο) γιατί έχει περισσότερες πτήσεις.",
+    "tip": "Heraklion airport beats Sitia for flight options — drive east in 1.5h.",
+    "tip_el": "Το αεροδρόμιο Ηρακλείου έχει καλύτερες πτήσεις — οδική διαδρομή 1.5h ανατολικά."
   }
 }

@@ -51,20 +51,36 @@
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
-  .seo-getting-there dl {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
-    margin: 0;
+  .seo-gt-pills {
+    display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px;
+  }
+  .seo-gt-pill {
+    background: rgba(11,143,172,0.08);
+    color: var(--aegean, #0B8FAC);
+    font-size: var(--text-tiny, 12px);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+  .seo-gt-summary {
+    margin: 0 0 10px;
     font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    line-height: 1.6;
   }
-  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
-  .seo-getting-there dd { margin: 0; }
-  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
-  @media (max-width: 600px) {
-    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
-    .seo-getting-there dt { margin-top: 8px; }
+  .seo-gt-tip {
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(11,143,172,0.04);
+    border-left: 3px solid var(--aegean, #0B8FAC);
+    border-radius: 0 4px 4px 0;
+    font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    font-style: italic;
+    line-height: 1.5;
   }
+  .seo-gt-tip strong { font-style: normal; color: var(--aegean, #0B8FAC); }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
   .seo-day-meta { color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }
@@ -158,7 +174,7 @@
   <section class="seo-intro">
     <p>Kythira sits between the Ionian and Aegean worlds, administratively part of the Ionian islands but geographically alone south of the Peloponnese. It is one of the least-visited significant islands in Greece — largely because it&#x27;s hard to reach — and that is precisely its magic. Venetian architecture, Byzantine monasteries, dramatic gorges, and beaches that are almost always empty. The Australian community here (thousands emigrated in the 1950s) gives the island a distinct cultural character.</p>
   </section>
-  <section class="seo-getting-there"><h2>Getting there</h2><p>Reach Kythira from Neapoli (Peloponnese, ~5h drive from Athens) — frequent ferry, ~1h. Also small airport with daily Athens flights</p></section>
+  <section class="seo-getting-there"><h2>Getting there</h2><div class="seo-gt-pills"><span class="seo-gt-pill">✈ Airport (small)</span><span class="seo-gt-pill">⛵ Neapoli 1h</span><span class="seo-gt-pill">€10–18</span></div><p class="seo-gt-summary">Small airport with daily Athens flights (Olympic, Sky Express). No Piraeus ferry — reach Kythira from Neapoli (Peloponnese SE, ~5h drive from Athens) by frequent ferry, ~1h.</p><p class="seo-gt-tip"><strong>Tip:</strong> For a short trip, fly. The Peloponnese drive only makes sense if you want to see Mani too.</p></section>
   <section class="seo-itinerary"><h2>4-day itinerary for Kythira</h2>
 <section class="seo-day">
   <h3>Day 1: Chora &amp; the Castle</h3>

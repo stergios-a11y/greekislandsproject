@@ -51,20 +51,36 @@
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
-  .seo-getting-there dl {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
-    margin: 0;
+  .seo-gt-pills {
+    display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px;
+  }
+  .seo-gt-pill {
+    background: rgba(11,143,172,0.08);
+    color: var(--aegean, #0B8FAC);
+    font-size: var(--text-tiny, 12px);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+  .seo-gt-summary {
+    margin: 0 0 10px;
     font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    line-height: 1.6;
   }
-  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
-  .seo-getting-there dd { margin: 0; }
-  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
-  @media (max-width: 600px) {
-    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
-    .seo-getting-there dt { margin-top: 8px; }
+  .seo-gt-tip {
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(11,143,172,0.04);
+    border-left: 3px solid var(--aegean, #0B8FAC);
+    border-radius: 0 4px 4px 0;
+    font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    font-style: italic;
+    line-height: 1.5;
   }
+  .seo-gt-tip strong { font-style: normal; color: var(--aegean, #0B8FAC); }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
   .seo-day-meta { color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }
@@ -158,7 +174,7 @@
   <section class="seo-intro">
     <p>Skiathos is tiny — 12km long — but packs in 60 beaches, dense pine forest running to the water&#x27;s edge, and the liveliest nightlife in the Sporades. Koukounaries is one of the finest sandy beaches in Greece. The old town is genuinely attractive. Planes land metres above the beach at the runway — a spectacle in itself. Come here for beaches and nightlife, not culture.</p>
   </section>
-  <section class="seo-getting-there"><h2>Getting there</h2><p>Reach Skiathos from Volos or Agios Konstantinos (mainland) — frequent ferries, 2-3h. Has international airport with summer charters</p></section>
+  <section class="seo-getting-there"><h2>Getting there</h2><div class="seo-gt-pills"><span class="seo-gt-pill">✈ Airport (intl charter)</span><span class="seo-gt-pill">⛵ Volos 2–3h</span><span class="seo-gt-pill">€20–35</span></div><p class="seo-gt-summary">International airport with summer charters from Europe. No Piraeus ferry — reach Skiathos from Volos or Agios Konstantinos (mainland, ~3h drive from Athens). Frequent ferries.</p><p class="seo-gt-tip"><strong>Tip:</strong> Direct charter from London/Manchester is the fastest option — skip Athens.</p></section>
   <section class="seo-itinerary"><h2>3-day itinerary for Skiathos</h2>
 <section class="seo-day">
   <h3>Day 1: Skiathos Town &amp; the East</h3>

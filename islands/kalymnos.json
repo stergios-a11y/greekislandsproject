@@ -255,47 +255,19 @@
   "subtitle_el": "Το νησί των σφουγγαράδων — αναρρίχηση παγκόσμιας κλάσης, κάθετοι ασβεστολιθικοί γκρεμοί και βαθιά θαλάσσια παράδοση",
   "intro_el": "Η Κάλυμνος έγινε πλούσια από το σφουγγάρι — οι σφουγγαράδες της δούλευαν σε όλη τη Μεσόγειο μέχρι τη Λιβύη. Σήμερα η οικονομία έχει αλλάξει, αλλά η ταυτότητα παραμένει: σκληρή, εργατική, βαθιά συνδεδεμένη με τη θάλασσα. Από τη δεκαετία του 2000 το νησί έγινε ένας από τους σπουδαιότερους προορισμούς αναρρίχησης βράχου στον κόσμο — οι κάθετοι ασβεστολιθικοί γκρεμοί έχουν περισσότερες από 3000 διαδρομές, και τον Οκτώβριο γεμίζει αναρριχητές από όλη την Ευρώπη. Δεν χρειάζεται να αναρριχάς για να επισκεφτείς — η Πόθια είναι όμορφο νεοκλασικό λιμάνι, η ορεινή Χώρα διατηρεί μεσαιωνικό χαρακτήρα, και η Τέλενδος (μικρό νησί απέναντι) προσφέρει την καλύτερη θέα ηλιοβασιλέματος των Δωδεκανήσων.",
   "getting_there": {
-    "airport": "Yes — small, domestic only (Sky Express)",
-    "airport_el": "Ναι — μικρό, μόνο εσωτερικές πτήσεις (Sky Express)",
-    "ports": [
-      {
-        "name": "Pothia",
-        "note": "the main port and capital — all major ferries"
-      },
-      {
-        "name": "Mastichari shuttle",
-        "note": "frequent daily shuttle from Mastichari (Kos) — the most common entry point"
-      }
+    "pills": [
+      "✈ Airport (small)",
+      "⛵ via Kos shuttle",
+      "€10–20"
     ],
-    "ports_el": [
-      {
-        "name": "Πόθια",
-        "note": "το κύριο λιμάνι και πρωτεύουσα — όλα τα μεγάλα πλοία"
-      },
-      {
-        "name": "Σύνδεση Μαστιχαρίου",
-        "note": "συχνή καθημερινή σύνδεση από το Μαστιχάρι (Κως) — η πιο συνηθισμένη είσοδος"
-      }
+    "pills_el": [
+      "✈ Αεροδρόμιο (μικρό)",
+      "⛵ μέσω Κω σύνδεση",
+      "€10–20"
     ],
-    "from_piraeus": {
-      "duration": "10–13 hours overnight",
-      "price": "€48–85",
-      "freq": "daily in summer",
-      "note": "Blue Star Dodecanese line"
-    },
-    "from_piraeus_el": {
-      "duration": "10–13 ώρες, νυχτερινό",
-      "price": "€48–85",
-      "freq": "καθημερινά το καλοκαίρι",
-      "note": "Blue Star Δωδεκανήσων"
-    },
-    "alt_gateways": [
-      "Kos — fly to Kos, 30-min shuttle ferry from Mastichari",
-      "Leros / Patmos — frequent inter-island connections"
-    ],
-    "alt_gateways_el": [
-      "Κως — πτήση στην Κω, μετά 30 λεπτά πλοίο από Μαστιχάρι",
-      "Λέρος / Πάτμος — συχνές συνδέσεις μεταξύ νησιών"
-    ]
+    "summary": "Small domestic airport (Sky Express). Direct Piraeus ferry exists (10–13h overnight), but the most common entry is flying to Kos and taking the 30-minute shuttle from Mastichari. Frequent daily.",
+    "summary_el": "Μικρό αεροδρόμιο εσωτερικού (Sky Express). Υπάρχει απευθείας από Πειραιά (10–13 ώρες νυχτερινό), αλλά η πιο συνηθισμένη είσοδος είναι πτήση Κως + σύνδεση 30 λεπτών από Μαστιχάρι. Συχνά καθημερινά.",
+    "tip": "For the climbing season (Oct–Apr) the Kos shuttle is your friend — direct ferries thin out.",
+    "tip_el": "Για την περίοδο αναρρίχησης (Οκτ–Απρ) η σύνδεση Κω είναι σωτηρία — τα απευθείας αραιώνουν."
   }
 }

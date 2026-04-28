@@ -317,9 +317,17 @@
     }
   ],
   "getting_there": {
-    "stub": true,
-    "via": "athens",
-    "note": "Evia is connected to mainland by bridge at Chalkida — drive from Athens, ~1h. Also two ferries: Rafina–Marmari and Agia Marina–Nea Styra",
-    "note_el": "Η Εύβοια συνδέεται με την ηπειρωτική με γέφυρα στη Χαλκίδα — οδικώς από Αθήνα, ~1 ώρα. Επίσης δύο πλοία: Ραφήνα–Μαρμάρι και Αγία Μαρίνα–Νέα Στύρα"
+    "pills": [
+      "🚗 Drive 1h from Athens",
+      "⛵ Rafina/Agia Marina too"
+    ],
+    "pills_el": [
+      "🚗 Οδικώς 1h από Αθήνα",
+      "⛵ Ραφήνα/Αγία Μαρίνα επίσης"
+    ],
+    "summary": "Connected to mainland by bridge at Chalkida — drive from Athens, ~1h. Two ferry shortcuts also exist: Rafina–Marmari (south Evia, ~1h) and Agia Marina–Nea Styra (~30min).",
+    "summary_el": "Συνδέεται με ηπειρωτική με γέφυρα στη Χαλκίδα — οδικώς από Αθήνα, ~1 ώρα. Υπάρχουν και δύο συντομότερες γραμμές: Ραφήνα–Μαρμάρι (νότια Εύβοια, ~1 ώρα) και Αγία Μαρίνα–Νέα Στύρα (~30 λεπτά).",
+    "tip": "For southern Evia (Karystos), the Marmari ferry beats the Chalkida drive every time.",
+    "tip_el": "Για νότια Εύβοια (Κάρυστος), το πλοίο Μαρμαρίου νικάει τη διαδρομή Χαλκίδας κάθε φορά."
   }
 }

@@ -51,20 +51,36 @@
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
-  .seo-getting-there dl {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
-    margin: 0;
+  .seo-gt-pills {
+    display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px;
+  }
+  .seo-gt-pill {
+    background: rgba(11,143,172,0.08);
+    color: var(--aegean, #0B8FAC);
+    font-size: var(--text-tiny, 12px);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+  .seo-gt-summary {
+    margin: 0 0 10px;
     font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    line-height: 1.6;
   }
-  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
-  .seo-getting-there dd { margin: 0; }
-  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
-  @media (max-width: 600px) {
-    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
-    .seo-getting-there dt { margin-top: 8px; }
+  .seo-gt-tip {
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(11,143,172,0.04);
+    border-left: 3px solid var(--aegean, #0B8FAC);
+    border-radius: 0 4px 4px 0;
+    font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    font-style: italic;
+    line-height: 1.5;
   }
+  .seo-gt-tip strong { font-style: normal; color: var(--aegean, #0B8FAC); }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
   .seo-day-meta { color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }
@@ -158,7 +174,7 @@
   <section class="seo-intro">
     <p>Ammouliani is a 4.5 km² island in the Athos bay between the Sithonia and Athos peninsulas of Halkidiki — the only inhabited island in Central Macedonia. Until 1925 it belonged to the Vatopedi monastery on Mount Athos and was farmed by monks. After the Asia Minor catastrophe, the island was granted to refugees from the Sea of Marmara, who brought their fishing knowledge and their cooking with them. The 600 year-round residents live in one village around the port. The water is clear, the sand is golden, and Mount Athos rises directly across the channel — the view at sunset is unlike anywhere else in Greece. Combined with the Drenia islets just off the southeast coast, two days here goes a long way.</p>
   </section>
-  <section class="seo-getting-there"><h2>Getting there</h2><p>Reach Ammouliani from Tripiti (Halkidiki, mainland NE) — frequent shuttle, ~15 min. Not from Piraeus</p></section>
+  <section class="seo-getting-there"><h2>Getting there</h2><div class="seo-gt-pills"><span class="seo-gt-pill">⛵ Tripiti 15min</span><span class="seo-gt-pill">€2–4</span></div><p class="seo-gt-summary">No airport. No Piraeus ferry. Reach Ammouliani from Tripiti (Halkidiki, ~7h drive from Athens or fly Thessaloniki + 2h drive) — frequent shuttle, ~15 minutes, takes cars.</p><p class="seo-gt-tip"><strong>Tip:</strong> Closest Greek island to Mt. Athos — view across the channel is the reason to come.</p></section>
   <section class="seo-itinerary"><h2>2-day itinerary for Ammouliani</h2>
 <section class="seo-day">
   <h3>Day 1: The Village &amp; the Beaches</h3>

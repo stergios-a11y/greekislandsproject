@@ -947,7 +947,7 @@ function buildIslandPage(data) {
 
 function buildGettingThereSection(data) {
   const gt = data.getting_there;
-  if (!gt) return '';
+  if (!gt || !gt.pills) return '';
 
   const lang = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
   const escHtml = (s) => String(s == null ? '' : s)
@@ -955,52 +955,26 @@ function buildGettingThereSection(data) {
     .replace(/"/g, '&quot;');
 
   const title = t('getting_there.title');
+  const tipLabel = t('getting_there.tip');
 
-  if (gt.stub) {
-    const note = (lang === 'el' ? gt.note_el : gt.note) || '';
-    return `
-      <section class="itin-getting-there">
-        <h3 class="itin-getting-there-title">${escHtml(title)}</h3>
-        <p class="itin-getting-there-stub">${escHtml(note)}</p>
-      </section>`;
-  }
+  const pills = (lang === 'el' ? gt.pills_el : gt.pills) || [];
+  const summary = (lang === 'el' ? gt.summary_el : gt.summary) || '';
+  const tip = lang === 'el' ? gt.tip_el : gt.tip;
 
-  const labels = {
-    airport:        t('getting_there.airport'),
-    airport_no:     t('getting_there.airport_no'),
-    port:           t('getting_there.port'),
-    ports:          t('getting_there.ports'),
-    from_piraeus:   t('getting_there.from_piraeus'),
-    alt_gateways:   t('getting_there.alt_gateways'),
-  };
+  const pillHtml = pills.length
+    ? `<div class="itin-gt-pills">${pills.map(p => `<span class="itin-gt-pill">${escHtml(p)}</span>`).join('')}</div>`
+    : '';
+  const summaryHtml = summary ? `<p class="itin-gt-summary">${escHtml(summary)}</p>` : '';
+  const tipHtml = tip ? `<p class="itin-gt-tip"><strong>${escHtml(tipLabel)}:</strong> ${escHtml(tip)}</p>` : '';
 
-  const rows = [];
-  const airport = lang === 'el' ? gt.airport_el : gt.airport;
-  rows.push(`<dt>${escHtml(labels.airport)}</dt><dd>${airport ? escHtml(airport) : escHtml(labels.airport_no)}</dd>`);
-
-  const ports = (lang === 'el' ? gt.ports_el : gt.ports) || [];
-  if (ports.length) {
-    const portLines = ports.map(p => `<strong>${escHtml(p.name)}</strong> — ${escHtml(p.note)}`).join('; ');
-    rows.push(`<dt>${escHtml(ports.length > 1 ? labels.ports : labels.port)}</dt><dd>${portLines}</dd>`);
-  }
-
-  const fp = (lang === 'el' ? gt.from_piraeus_el : gt.from_piraeus) || {};
-  if (fp.duration || fp.price || fp.freq || fp.note) {
-    const parts = [fp.duration, fp.price, fp.freq].filter(Boolean).map(escHtml).join(' · ');
-    const noteHtml = fp.note ? `. ${escHtml(fp.note)}` : '';
-    rows.push(`<dt>${escHtml(labels.from_piraeus)}</dt><dd>${parts}${noteHtml}</dd>`);
-  }
-
-  const alts = (lang === 'el' ? gt.alt_gateways_el : gt.alt_gateways) || [];
-  if (alts.length) {
-    const altText = alts.map(escHtml).join('<br>');
-    rows.push(`<dt>${escHtml(labels.alt_gateways)}</dt><dd>${altText}</dd>`);
-  }
+  if (!pillHtml && !summaryHtml) return '';
 
   return `
     <section class="itin-getting-there">
       <h3 class="itin-getting-there-title">${escHtml(title)}</h3>
-      <dl class="itin-getting-there-list">${rows.join('')}</dl>
+      ${pillHtml}
+      ${summaryHtml}
+      ${tipHtml}
     </section>`;
 }
 

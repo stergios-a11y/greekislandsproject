@@ -297,39 +297,17 @@
     }
   ],
   "getting_there": {
-    "airport": null,
-    "airport_el": null,
-    "ports": [
-      {
-        "name": "Tinos Town (Chora)",
-        "note": "the main and only port — all ferries dock here"
-      }
+    "pills": [
+      "⛵ Rafina 2h fast",
+      "€30–45"
     ],
-    "ports_el": [
-      {
-        "name": "Χώρα Τήνου",
-        "note": "το κύριο και μόνο λιμάνι — όλα τα πλοία δένουν εδώ"
-      }
+    "pills_el": [
+      "⛵ Ραφήνα 2 ώρες γρήγορο",
+      "€30–45"
     ],
-    "from_piraeus": {
-      "duration": "4–5 hours",
-      "price": "€38–55",
-      "freq": "daily in summer, less in winter",
-      "note": "most travellers use Rafina instead — much faster"
-    },
-    "from_piraeus_el": {
-      "duration": "4–5 ώρες",
-      "price": "€38–55",
-      "freq": "καθημερινά το καλοκαίρι, λιγότερα τον χειμώνα",
-      "note": "οι περισσότεροι ταξιδιώτες προτιμούν τη Ραφήνα — πολύ πιο γρήγορα"
-    },
-    "alt_gateways": [
-      "Rafina — main gateway, ~2h fast ferry, €30–45, multiple daily",
-      "Mykonos — 30-minute crossing, dozens of daily connections"
-    ],
-    "alt_gateways_el": [
-      "Ραφήνα — η κύρια πύλη, ~2 ώρες γρήγορο πλοίο, €30–45, πολλά καθημερινά",
-      "Μύκονος — 30 λεπτά, δεκάδες καθημερινές συνδέσεις"
-    ]
+    "summary": "No airport. Most travellers use Rafina (1h east of Athens), not Piraeus — fast ferry ~2h, multiple daily. Piraeus also runs but takes 4–5h. Ferries dock at Tinos Town.",
+    "summary_el": "Χωρίς αεροδρόμιο. Οι περισσότεροι χρησιμοποιούν Ραφήνα (1 ώρα ανατολικά Αθήνας), όχι Πειραιά — γρήγορο πλοίο ~2 ώρες, πολλά καθημερινά. Πειραιάς υπάρχει αλλά παίρνει 4–5 ώρες. Τα πλοία δένουν στη Χώρα.",
+    "tip": "Tinos and Mykonos are 30 minutes apart — pair them.",
+    "tip_el": "Τήνος και Μύκονος είναι 30 λεπτά μακριά — συνδύασέ τα."
   }
 }

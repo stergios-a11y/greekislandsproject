@@ -449,57 +449,19 @@
     }
   ],
   "getting_there": {
-    "airport": "Yes — domestic + summer international charters (Olympic, Sky Express, charters)",
-    "airport_el": "Ναι — εσωτερικές + καλοκαιρινές charter πτήσεις (Olympic, Sky Express, charters)",
-    "ports": [
-      {
-        "name": "Sami",
-        "note": "main port — ferries to/from Patras, Italy, and Ithaca"
-      },
-      {
-        "name": "Poros",
-        "note": "smaller south coast port — connects to Kyllini on mainland"
-      },
-      {
-        "name": "Argostoli",
-        "note": "capital — small ferry to Lixouri only, no major connections"
-      }
+    "pills": [
+      "✈ Airport (intl charter)",
+      "⛵ Kyllini 1.5h",
+      "€11–18"
     ],
-    "ports_el": [
-      {
-        "name": "Σάμη",
-        "note": "κύριο λιμάνι — πλοία από/προς Πάτρα, Ιταλία και Ιθάκη"
-      },
-      {
-        "name": "Πόρος",
-        "note": "μικρότερο νότιο λιμάνι — συνδέεται με Κυλλήνη στην ηπειρωτική"
-      },
-      {
-        "name": "Αργοστόλι",
-        "note": "πρωτεύουσα — μόνο μικρό πλοίο για Ληξούρι, χωρίς μεγάλες συνδέσεις"
-      }
+    "pills_el": [
+      "✈ Αεροδρόμιο (charter)",
+      "⛵ Κυλλήνη 1.5h",
+      "€11–18"
     ],
-    "from_piraeus": {
-      "duration": "No direct ferry from Piraeus",
-      "price": "—",
-      "freq": "—",
-      "note": "reach Kefalonia via Kyllini (Peloponnese, ~3h drive from Athens), Patras, or fly direct"
-    },
-    "from_piraeus_el": {
-      "duration": "Δεν υπάρχει απευθείας πλοίο από Πειραιά",
-      "price": "—",
-      "freq": "—",
-      "note": "φτάσε στην Κεφαλονιά μέσω Κυλλήνης (Πελοπόννησος, ~3 ώρες από Αθήνα), Πάτρας, ή πέτα απευθείας"
-    },
-    "alt_gateways": [
-      "Kyllini → Poros — frequent ferry, ~1.5h, €11–18",
-      "Patras → Sami — daily ferry, ~3h",
-      "Direct flights from Athens — fastest, charters from Europe in summer"
-    ],
-    "alt_gateways_el": [
-      "Κυλλήνη → Πόρος — συχνό πλοίο, ~1.5 ώρα, €11–18",
-      "Πάτρα → Σάμη — καθημερινό πλοίο, ~3 ώρες",
-      "Απευθείας πτήσεις από Αθήνα — οι γρηγορότερες, charters από Ευρώπη το καλοκαίρι"
-    ]
+    "summary": "Domestic airport with summer international charters — Olympic, Sky Express. No Piraeus ferry — reach Kefalonia via Kyllini (Peloponnese, ~3h drive from Athens) to Poros, or via Patras to Sami.",
+    "summary_el": "Αεροδρόμιο εσωτερικού με καλοκαιρινές διεθνείς charter — Olympic, Sky Express. Δεν υπάρχει πλοίο από Πειραιά — προσέγγιση μέσω Κυλλήνης (Πελοπόννησος, ~3 ώρες από Αθήνα) προς Πόρο, ή Πάτρας προς Σάμη.",
+    "tip": "Sami connects to Ithaca too — easy to do both islands together.",
+    "tip_el": "Η Σάμη συνδέεται και με Ιθάκη — εύκολος συνδυασμός δύο νησιών."
   }
 }

@@ -274,47 +274,19 @@
     }
   ],
   "getting_there": {
-    "airport": "Yes — domestic only (Olympic, Sky Express); new airport opened 2016",
-    "airport_el": "Ναι — μόνο εσωτερικές πτήσεις (Olympic, Sky Express)· νέο αεροδρόμιο από το 2016",
-    "ports": [
-      {
-        "name": "Parikia",
-        "note": "the main port — all Piraeus and most inter-island ferries"
-      },
-      {
-        "name": "Naoussa",
-        "note": "small port on the north — only seasonal high-speed connections"
-      }
+    "pills": [
+      "✈ Airport (domestic)",
+      "⛵ Piraeus 3–5h",
+      "€36–55"
     ],
-    "ports_el": [
-      {
-        "name": "Παροικιά",
-        "note": "το κύριο λιμάνι — όλα τα πλοία από Πειραιά και οι περισσότερες νησιώτικες συνδέσεις"
-      },
-      {
-        "name": "Νάουσα",
-        "note": "μικρό λιμάνι στον βορρά — μόνο εποχιακές συνδέσεις με ταχύπλοα"
-      }
+    "pills_el": [
+      "✈ Αεροδρόμιο (εσωτερικό)",
+      "⛵ Πειραιάς 3–5h",
+      "€36–55"
     ],
-    "from_piraeus": {
-      "duration": "3–5 hours",
-      "price": "€36–55",
-      "freq": "multiple daily year-round",
-      "note": "fast ferries (~3h) and conventional Blue Star (~5h)"
-    },
-    "from_piraeus_el": {
-      "duration": "3–5 ώρες",
-      "price": "€36–55",
-      "freq": "πολλά καθημερινά όλο τον χρόνο",
-      "note": "γρήγορα πλοία (~3 ώρες) και συμβατικά Blue Star (~5)"
-    },
-    "alt_gateways": [
-      "Rafina — daily, sometimes cheaper",
-      "Naxos — 30-minute crossing, dozens of daily ferries in summer"
-    ],
-    "alt_gateways_el": [
-      "Ραφήνα — καθημερινά, συχνά φθηνότερα",
-      "Νάξος — 30 λεπτά, δεκάδες καθημερινά πλοία το καλοκαίρι"
-    ]
+    "summary": "Small domestic airport opened 2016 (Olympic, Sky Express). Ferries dock at Parikia. Fast ferries from Piraeus ~3h, Blue Star ~5h, multiple daily year-round. Naoussa port handles only seasonal high-speed connections.",
+    "summary_el": "Μικρό αεροδρόμιο εσωτερικού από το 2016 (Olympic, Sky Express). Τα πλοία δένουν στην Παροικιά. Γρήγορα πλοία από Πειραιά ~3 ώρες, συμβατικά Blue Star ~5 ώρες, πολλά καθημερινά. Το λιμάνι της Νάουσας εξυπηρετεί μόνο εποχιακά ταχύπλοα.",
+    "tip": "Rafina is sometimes cheaper for Paros — worth checking before you book.",
+    "tip_el": "Η Ραφήνα είναι κάποιες φορές φθηνότερη για Πάρο — αξίζει να το ψάξεις πριν κλείσεις."
   }
 }

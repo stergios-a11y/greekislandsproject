@@ -323,47 +323,19 @@
     }
   ],
   "getting_there": {
-    "airport": "Yes — domestic + heavy summer international (Aegean, Sky Express, EasyJet, Ryanair, charters)",
-    "airport_el": "Ναι — εσωτερικές + πολλές διεθνείς πτήσεις το καλοκαίρι (Aegean, Sky Express, EasyJet, Ryanair, charters)",
-    "ports": [
-      {
-        "name": "New Port (Tourlos)",
-        "note": "all ferries from Piraeus, Rafina, and other islands dock here — 2 km north of town"
-      },
-      {
-        "name": "Old Port (Chora)",
-        "note": "small excursions to Delos and Rinia only"
-      }
+    "pills": [
+      "✈ Airport (intl)",
+      "⛵ Rafina/Piraeus 2.5–5h",
+      "€30–65"
     ],
-    "ports_el": [
-      {
-        "name": "Νέο Λιμάνι (Τούρλος)",
-        "note": "όλα τα πλοία από Πειραιά, Ραφήνα και άλλα νησιά — 2 χλμ. βόρεια της Χώρας"
-      },
-      {
-        "name": "Παλιό Λιμάνι (Χώρα)",
-        "note": "μόνο μικρές εκδρομές προς Δήλο και Ρήνεια"
-      }
+    "pills_el": [
+      "✈ Αεροδρόμιο (διεθνές)",
+      "⛵ Ραφήνα/Πειραιάς 2.5–5h",
+      "€30–65"
     ],
-    "from_piraeus": {
-      "duration": "2.5–5 hours",
-      "price": "€40–65",
-      "freq": "multiple daily in summer",
-      "note": "fast ferries (~2.5h) cost more; conventional ferries 4.5–5h"
-    },
-    "from_piraeus_el": {
-      "duration": "2.5–5 ώρες",
-      "price": "€40–65",
-      "freq": "πολλά καθημερινά το καλοκαίρι",
-      "note": "τα γρήγορα πλοία (~2.5 ώρες) κοστίζουν περισσότερο· τα συμβατικά 4.5–5"
-    },
-    "alt_gateways": [
-      "Rafina — faster (~2h fast ferry), often cheaper than Piraeus",
-      "Santorini / Naxos / Paros — daily inter-island connections"
-    ],
-    "alt_gateways_el": [
-      "Ραφήνα — πιο γρήγορα (~2 ώρες με γρήγορο), συχνά πιο φθηνά από τον Πειραιά",
-      "Σαντορίνη / Νάξος / Πάρος — καθημερινές συνδέσεις μεταξύ νησιών"
-    ]
+    "summary": "International airport with heavy summer traffic — Aegean, Sky Express, EasyJet, Ryanair, charters. Ferries dock at the New Port (Tourlos, 2km north of Chora). Fast ferries from Rafina (~2.5h) are usually faster and cheaper than Piraeus.",
+    "summary_el": "Διεθνές αεροδρόμιο με μεγάλη καλοκαιρινή κίνηση — Aegean, Sky Express, EasyJet, Ryanair, charters. Τα πλοία δένουν στο Νέο Λιμάνι (Τούρλος, 2 χλμ. βόρεια Χώρας). Τα γρήγορα πλοία από Ραφήνα (~2.5 ώρες) είναι συνήθως πιο γρήγορα και φθηνά από τον Πειραιά.",
+    "tip": "Use Rafina, not Piraeus — same crossing in less time, often cheaper.",
+    "tip_el": "Ραφήνα, όχι Πειραιάς — ίδια διαδρομή σε λιγότερο χρόνο, συχνά φθηνότερα."
   }
 }

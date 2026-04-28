@@ -906,10 +906,10 @@ html.dark .why-feat-num { color: var(--marble-3); }
   .itin-title { font-size: var(--text-sub); }
 }
 
-/* Getting-there section — sits between intro and the day filter */
+/* Getting-there section v2 — pills + summary + tip */
 .itin-getting-there {
-  margin: 24px 0;
-  padding: 18px 20px;
+  margin: 20px 0;
+  padding: 16px 18px;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -917,36 +917,44 @@ html.dark .why-feat-num { color: var(--marble-3); }
 .itin-getting-there-title {
   font-family: var(--serif);
   font-size: var(--text-sub); font-weight: 600;
-  color: var(--ink); margin: 0 0 12px;
+  color: var(--ink); margin: 0 0 10px;
 }
-.itin-getting-there-list {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 8px 16px;
-  margin: 0;
-  font-size: var(--text-small);
+.itin-gt-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 12px;
 }
-.itin-getting-there-list dt {
+.itin-gt-pill {
+  background: rgba(11,143,172,0.08);
+  color: var(--aegean);
+  font-size: var(--text-tiny);
   font-weight: 600;
-  color: var(--ink-3);
-  margin: 0;
+  padding: 3px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
 }
-.itin-getting-there-list dd {
-  margin: 0;
-  color: var(--ink-2);
-  line-height: 1.5;
-}
-.itin-getting-there-stub {
-  margin: 0;
+.itin-gt-summary {
+  margin: 0 0 10px;
   font-size: var(--text-small);
   color: var(--ink-2);
+  line-height: 1.6;
+}
+.itin-gt-tip {
+  margin: 0;
+  padding: 8px 12px;
+  background: rgba(11,143,172,0.04);
+  border-left: 3px solid var(--aegean);
+  border-radius: 0 4px 4px 0;
+  font-size: var(--text-small);
+  color: var(--ink-2);
+  font-style: italic;
   line-height: 1.5;
 }
+.itin-gt-tip strong { font-style: normal; color: var(--aegean); }
 @media (max-width: 600px) {
-  .itin-getting-there { padding: 14px 16px; }
-  .itin-getting-there-list { grid-template-columns: 1fr; gap: 2px 0; }
-  .itin-getting-there-list dt { margin-top: 6px; }
-  .itin-getting-there-list dt:first-child { margin-top: 0; }
+  .itin-getting-there { padding: 12px 14px; margin: 16px 0; }
+  .itin-getting-there-title { font-size: var(--text-body); }
 }
 
 .itin-day-filter {

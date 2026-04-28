@@ -290,39 +290,19 @@
     }
   ],
   "getting_there": {
-    "airport": "Yes — small, domestic only (Olympic)",
-    "airport_el": "Ναι — μικρό, μόνο εσωτερικές πτήσεις (Olympic)",
-    "ports": [
-      {
-        "name": "Skala (Pera Gialos)",
-        "note": "the only port — under the iconic Chora castle"
-      }
+    "pills": [
+      "✈ Airport (small)",
+      "⛵ Piraeus 10–14h",
+      "€50–85"
     ],
-    "ports_el": [
-      {
-        "name": "Σκάλα (Πέρα Γιαλός)",
-        "note": "το μόνο λιμάνι — κάτω από το εμβληματικό Κάστρο της Χώρας"
-      }
+    "pills_el": [
+      "✈ Αεροδρόμιο (μικρό)",
+      "⛵ Πειραιάς 10–14h",
+      "€50–85"
     ],
-    "from_piraeus": {
-      "duration": "10–14 hours overnight",
-      "price": "€50–85",
-      "freq": "2–4× weekly",
-      "note": "remote — limited frequency, plan around the schedule"
-    },
-    "from_piraeus_el": {
-      "duration": "10–14 ώρες, νυχτερινό",
-      "price": "€50–85",
-      "freq": "2–4 τη βδομάδα",
-      "note": "απομονωμένη — περιορισμένη συχνότητα, οργανώσου με το πρόγραμμα"
-    },
-    "alt_gateways": [
-      "Astypalea airport — small, daily flight from Athens",
-      "Kos — seasonal summer ferries (~3h)"
-    ],
-    "alt_gateways_el": [
-      "Αεροδρόμιο Αστυπάλαιας — μικρό, καθημερινή πτήση από Αθήνα",
-      "Κως — εποχιακά καλοκαιρινά πλοία (~3 ώρες)"
-    ]
+    "summary": "Small domestic airport (Olympic) — daily flight from Athens. Direct Piraeus ferry 10–14h, 2–4× weekly. Remote enough that schedule planning matters.",
+    "summary_el": "Μικρό αεροδρόμιο εσωτερικού (Olympic) — καθημερινή πτήση από Αθήνα. Απευθείας πλοίο από Πειραιά 10–14 ώρες, 2–4 τη βδομάδα. Αρκετά απομονωμένο, χρειάζεται προγραμματισμός.",
+    "tip": "For 2–3 day trips, fly. The ferry only makes sense if you have a week.",
+    "tip_el": "Για 2–3 ημέρες, πτήση. Το πλοίο έχει νόημα μόνο για εβδομαδιαίο ταξίδι."
   }
 }

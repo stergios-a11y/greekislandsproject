@@ -51,20 +51,36 @@
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
-  .seo-getting-there dl {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
-    margin: 0;
+  .seo-gt-pills {
+    display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px;
+  }
+  .seo-gt-pill {
+    background: rgba(11,143,172,0.08);
+    color: var(--aegean, #0B8FAC);
+    font-size: var(--text-tiny, 12px);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+  .seo-gt-summary {
+    margin: 0 0 10px;
     font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    line-height: 1.6;
   }
-  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
-  .seo-getting-there dd { margin: 0; }
-  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
-  @media (max-width: 600px) {
-    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
-    .seo-getting-there dt { margin-top: 8px; }
+  .seo-gt-tip {
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(11,143,172,0.04);
+    border-left: 3px solid var(--aegean, #0B8FAC);
+    border-radius: 0 4px 4px 0;
+    font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    font-style: italic;
+    line-height: 1.5;
   }
+  .seo-gt-tip strong { font-style: normal; color: var(--aegean, #0B8FAC); }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
   .seo-day-meta { color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }
@@ -158,7 +174,7 @@
   <section class="seo-intro">
     <p>Η Μύκονος είναι το πιο ακριβό και πιο ηδονιστικό νησί της Ελλάδας — έλα για τη νυχτερινή ζωή, τα beach clubs, τη μόδα και το εξαιρετικό people-watching. Αλλά μην προσπεράσεις τη γνήσια όμορφη κυκλαδίτικη αρχιτεκτονική της Χώρας, το ήσυχο εσωτερικό χωριό της Άνω Μεράς, και πάνω απ&#x27;όλα μη χάσεις τη Δήλο — το ακατοίκητο ιερό νησί 30 λεπτά μακριά με σκάφος, με μερικά από τα ωραιότερα αρχαία ερείπια του Αιγαίου. Οι νότιες party beaches τραβούν όλη τη δημοσιότητα, αλλά η πραγματική μαγεία είναι σε πιο ήσυχα μέρη όπως το Καλό Λιβάδι ή η άγρια, απομακρυσμένη παραλία του Φωκού. <strong>Πού να μείνεις:</strong> Για πολυτέλεια κοντά στη Χώρα, το <a href="https://www.booking.com/hotel/gr/belvedere-mykonos.html" target="_blank" rel="noopener noreferrer">Belvedere Mykonos</a> είναι λίγα λεπτά από τη Μικρή Βενετία, με πισίνα και εστιατόριο Matsuhisa. Για παραλιακή εμπειρία, το <a href="https://www.booking.com/hotel/gr/nomad-mykonos.html" target="_blank" rel="noopener noreferrer">Nomad Mykonos</a> στο Καλό Λιβάδι (μέλος Small Luxury Hotels).</p>
   </section>
-  <section class="seo-getting-there"><h2>Πώς θα φτάσεις</h2><dl><dt>Αεροδρόμιο</dt><dd>Ναι — εσωτερικές + πολλές διεθνείς πτήσεις το καλοκαίρι (Aegean, Sky Express, EasyJet, Ryanair, charters)</dd><dt>Λιμάνια</dt><dd><strong>Νέο Λιμάνι (Τούρλος)</strong> — όλα τα πλοία από Πειραιά, Ραφήνα και άλλα νησιά — 2 χλμ. βόρεια της Χώρας; <strong>Παλιό Λιμάνι (Χώρα)</strong> — μόνο μικρές εκδρομές προς Δήλο και Ρήνεια</dd><dt>Από Πειραιά</dt><dd>2.5–5 ώρες · €40–65 · πολλά καθημερινά το καλοκαίρι. τα γρήγορα πλοία (~2.5 ώρες) κοστίζουν περισσότερο· τα συμβατικά 4.5–5</dd><dt>Άλλες πύλες</dt><dd>Ραφήνα — πιο γρήγορα (~2 ώρες με γρήγορο), συχνά πιο φθηνά από τον Πειραιά<br>Σαντορίνη / Νάξος / Πάρος — καθημερινές συνδέσεις μεταξύ νησιών</dd></dl></section>
+  <section class="seo-getting-there"><h2>Πώς θα φτάσεις</h2><div class="seo-gt-pills"><span class="seo-gt-pill">✈ Αεροδρόμιο (διεθνές)</span><span class="seo-gt-pill">⛵ Ραφήνα/Πειραιάς 2.5–5h</span><span class="seo-gt-pill">€30–65</span></div><p class="seo-gt-summary">Διεθνές αεροδρόμιο με μεγάλη καλοκαιρινή κίνηση — Aegean, Sky Express, EasyJet, Ryanair, charters. Τα πλοία δένουν στο Νέο Λιμάνι (Τούρλος, 2 χλμ. βόρεια Χώρας). Τα γρήγορα πλοία από Ραφήνα (~2.5 ώρες) είναι συνήθως πιο γρήγορα και φθηνά από τον Πειραιά.</p><p class="seo-gt-tip"><strong>Συμβουλή:</strong> Ραφήνα, όχι Πειραιάς — ίδια διαδρομή σε λιγότερο χρόνο, συχνά φθηνότερα.</p></section>
   <section class="seo-itinerary"><h2>Δρομολόγιο 3 ημερών — Μύκονος</h2>
 <section class="seo-day">
   <h3>Μέρα 1: Χώρα Μυκόνου</h3>

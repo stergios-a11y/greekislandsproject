@@ -51,20 +51,36 @@
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
-  .seo-getting-there dl {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
-    margin: 0;
+  .seo-gt-pills {
+    display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px;
+  }
+  .seo-gt-pill {
+    background: rgba(11,143,172,0.08);
+    color: var(--aegean, #0B8FAC);
+    font-size: var(--text-tiny, 12px);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+  .seo-gt-summary {
+    margin: 0 0 10px;
     font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    line-height: 1.6;
   }
-  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
-  .seo-getting-there dd { margin: 0; }
-  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
-  @media (max-width: 600px) {
-    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
-    .seo-getting-there dt { margin-top: 8px; }
+  .seo-gt-tip {
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(11,143,172,0.04);
+    border-left: 3px solid var(--aegean, #0B8FAC);
+    border-radius: 0 4px 4px 0;
+    font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    font-style: italic;
+    line-height: 1.5;
   }
+  .seo-gt-tip strong { font-style: normal; color: var(--aegean, #0B8FAC); }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
   .seo-day-meta { color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }
@@ -158,7 +174,7 @@
   <section class="seo-intro">
     <p>Η περιοχή των Χανίων είναι η πιο εντυπωσιακή γωνιά της Κρήτης — και ίσως ολόκληρης της Ελλάδας. Τα Λευκά Όρη υψώνονται πάνω από 2400 μέτρα πίσω από μια ακτογραμμή που φιλοξενεί δύο από τις διασημότερες παραλίες του κόσμου: τη ροζ λιμνοθάλασσα του Ελαφονησίου και τον γαλάζιο Μπάλο. Πρόσθεσε μια βενετσιάνικη παλιά πόλη, το βαθύτερο φαράγγι της Ευρώπης και μερικά από τα καλύτερα φαγητά του νησιού, και τα Χανιά είναι αδύνατον να γίνουν σε λιγότερο από 5 μέρες.</p>
   </section>
-  <section class="seo-getting-there"><h2>Πώς θα φτάσεις</h2><dl><dt>Αεροδρόμιο</dt><dd>Ναι — μεγάλο αεροδρόμιο: εσωτερικές + διεθνείς πτήσεις το καλοκαίρι (Aegean, Sky Express, Ryanair, EasyJet, charters)</dd><dt>Λιμάνι</dt><dd><strong>Σούδα</strong> — 7 χλμ. ανατολικά της πόλης των Χανίων — όλα τα πλοία από Πειραιά δένουν εδώ, συχνό λεωφορείο για την πόλη</dd><dt>Από Πειραιά</dt><dd>8–9 ώρες, νυχτερινό · €40–70 κατάστρωμα, €70–120 καμπίνα · καθημερινά όλο τον χρόνο, βραδινή αναχώρηση. Anek και Minoan λειτουργούν τη γραμμή — ίδιο μοτίβο με Ηράκλειο</dd><dt>Άλλες πύλες</dt><dd>Απευθείας πτήσεις — συνήθως γρηγορότερες και παρόμοια στο κόστος με την καμπίνα<br>Ηράκλειο — οδική διαδρομή 2.5 ωρών δυτικά μόλις φτάσεις στην Κρήτη</dd></dl></section>
+  <section class="seo-getting-there"><h2>Πώς θα φτάσεις</h2><div class="seo-gt-pills"><span class="seo-gt-pill">✈ Αεροδρόμιο (διεθνές)</span><span class="seo-gt-pill">⛵ Σούδα 8–9h νυχτερινό</span><span class="seo-gt-pill">€40–120</span></div><p class="seo-gt-summary">Διεθνές αεροδρόμιο με καλοκαιρινές charter — Aegean, Sky Express, Ryanair, EasyJet. Τα πλοία από Πειραιά δένουν στη Σούδα (7 χλμ. ανατολικά της πόλης, τακτικό λεωφορείο). Νυχτερινό, καθημερινά.</p><p class="seo-gt-tip"><strong>Συμβουλή:</strong> Απευθείας πτήση στα Χανιά είναι συνήθως πιο γρήγορα από Ηράκλειο + 2.5h οδικώς δυτικά.</p></section>
   <section class="seo-itinerary"><h2>Δρομολόγιο 5 ημερών — Χανιά</h2>
 <section class="seo-day">
   <h3>Μέρα 1: Παλιά Πόλη Χανίων</h3>

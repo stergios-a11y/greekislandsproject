@@ -51,20 +51,36 @@
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
-  .seo-getting-there dl {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
-    margin: 0;
+  .seo-gt-pills {
+    display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px;
+  }
+  .seo-gt-pill {
+    background: rgba(11,143,172,0.08);
+    color: var(--aegean, #0B8FAC);
+    font-size: var(--text-tiny, 12px);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+  .seo-gt-summary {
+    margin: 0 0 10px;
     font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    line-height: 1.6;
   }
-  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
-  .seo-getting-there dd { margin: 0; }
-  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
-  @media (max-width: 600px) {
-    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
-    .seo-getting-there dt { margin-top: 8px; }
+  .seo-gt-tip {
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(11,143,172,0.04);
+    border-left: 3px solid var(--aegean, #0B8FAC);
+    border-radius: 0 4px 4px 0;
+    font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    font-style: italic;
+    line-height: 1.5;
   }
+  .seo-gt-tip strong { font-style: normal; color: var(--aegean, #0B8FAC); }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
   .seo-day-meta { color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }
@@ -158,7 +174,7 @@
   <section class="seo-intro">
     <p>Tinos has quietly become the Cyclades&#x27; most interesting island. It holds 740 ornate dovecotes (more than any other Greek island), more than 40 marble-laced mountain villages, and the religious heart of Greek Orthodoxy — Panagia Evangelistria, where every August 15th pilgrims crawl on their knees from the port to the church. The marble tradition runs deeper than anywhere else in Greece: Pyrgos has produced the country&#x27;s most celebrated sculptors for 300 years, and you still see master craftsmen at work. The food scene has exploded in the last decade — there&#x27;s a genuinely good restaurant in nearly every village, unusual for a Cycladic island. The beaches are mostly south-facing, which shields them from the Meltemi that hammers the island from mid-July through August; Kolymbithra on the north is the exception and is one of the few real surf beaches in Greece. 40 minutes by ferry from Mykonos, a different planet culturally.</p>
   </section>
-  <section class="seo-getting-there"><h2>Getting there</h2><dl><dt>Airport</dt><dd>No airport — ferry only</dd><dt>Port</dt><dd><strong>Tinos Town (Chora)</strong> — the main and only port — all ferries dock here</dd><dt>From Piraeus</dt><dd>4–5 hours · €38–55 · daily in summer, less in winter. most travellers use Rafina instead — much faster</dd><dt>Other gateways</dt><dd>Rafina — main gateway, ~2h fast ferry, €30–45, multiple daily<br>Mykonos — 30-minute crossing, dozens of daily connections</dd></dl></section>
+  <section class="seo-getting-there"><h2>Getting there</h2><div class="seo-gt-pills"><span class="seo-gt-pill">⛵ Rafina 2h fast</span><span class="seo-gt-pill">€30–45</span></div><p class="seo-gt-summary">No airport. Most travellers use Rafina (1h east of Athens), not Piraeus — fast ferry ~2h, multiple daily. Piraeus also runs but takes 4–5h. Ferries dock at Tinos Town.</p><p class="seo-gt-tip"><strong>Tip:</strong> Tinos and Mykonos are 30 minutes apart — pair them.</p></section>
   <section class="seo-itinerary"><h2>3-day itinerary for Tinos</h2>
 <section class="seo-day">
   <h3>Day 1: Tinos Town, Panagia &amp; the Dovecote Villages</h3>

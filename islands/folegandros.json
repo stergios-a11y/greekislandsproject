@@ -252,39 +252,17 @@
     }
   ],
   "getting_there": {
-    "airport": null,
-    "airport_el": null,
-    "ports": [
-      {
-        "name": "Karavostasi",
-        "note": "the only port, on the east coast — 4 km from Chora"
-      }
+    "pills": [
+      "⛵ Piraeus 4–9h",
+      "€40–60"
     ],
-    "ports_el": [
-      {
-        "name": "Καραβοστάσι",
-        "note": "το μόνο λιμάνι, στην ανατολική ακτή — 4 χλμ. από τη Χώρα"
-      }
+    "pills_el": [
+      "⛵ Πειραιάς 4–9h",
+      "€40–60"
     ],
-    "from_piraeus": {
-      "duration": "4–9 hours",
-      "price": "€40–60",
-      "freq": "daily in summer, 2–4× weekly in winter",
-      "note": "fast ferry (~4h) or conventional (~9h via several stops)"
-    },
-    "from_piraeus_el": {
-      "duration": "4–9 ώρες",
-      "price": "€40–60",
-      "freq": "καθημερινά το καλοκαίρι, 2–4 τη βδομάδα τον χειμώνα",
-      "note": "γρήγορο πλοίο (~4 ώρες) ή συμβατικό (~9 ώρες με στάσεις)"
-    },
-    "alt_gateways": [
-      "Santorini / Milos / Sikinos — daily summer connections",
-      "Sifnos / Ios — seasonal direct ferries"
-    ],
-    "alt_gateways_el": [
-      "Σαντορίνη / Μήλος / Σίκινος — καθημερινές καλοκαιρινές συνδέσεις",
-      "Σίφνος / Ίος — εποχιακά απευθείας πλοία"
-    ]
+    "summary": "No airport. Ferries dock at Karavostasi on the east coast, 4km below Chora. Fast ferry from Piraeus ~4h, conventional ~9h (with stops). Daily in summer.",
+    "summary_el": "Χωρίς αεροδρόμιο. Τα πλοία δένουν στο Καραβοστάσι στην ανατολική ακτή, 4 χλμ. κάτω από τη Χώρα. Γρήγορο από Πειραιά ~4 ώρες, συμβατικό ~9 ώρες (με στάσεις). Καθημερινά το καλοκαίρι.",
+    "tip": "The Western Cyclades line connects Folegandros to Sikinos, Ios, Santorini, Milos — perfect for island-hopping.",
+    "tip_el": "Η γραμμή Δυτικών Κυκλάδων συνδέει τη Φολέγανδρο με Σίκινο, Ίο, Σαντορίνη, Μήλο — ιδανική για island-hopping."
   }
 }

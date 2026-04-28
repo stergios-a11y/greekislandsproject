@@ -284,49 +284,34 @@ def render_body(key, data, meta, lang='en'):
         else:
             rating_text = f'<p class="seo-rating">Overall rating: <strong>{rating:.1f}/5</strong> · {int(meta["area"]) if meta.get("area") else ""} km² · {int(meta["pop"]) if meta.get("pop") else ""} residents</p>'
 
-    # Getting-there section (between intro and itinerary)
+    # Getting-there section (between intro and itinerary) — v2 schema: pills + summary + tip
     getting_there_html = ''
     gt = data.get('getting_there')
-    if gt:
+    if gt and gt.get('pills'):
         gt_label = 'Getting there' if lang == 'en' else 'Πώς θα φτάσεις'
-        rows = []
-        if gt.get('stub'):
-            note = gt.get('note_el' if lang == 'el' else 'note', '')
-            if note:
-                rows.append(f'<p>{esc(note)}</p>')
-        else:
-            airport_label = 'Airport' if lang == 'en' else 'Αεροδρόμιο'
-            airport_no = 'No airport — ferry only' if lang == 'en' else 'Χωρίς αεροδρόμιο — μόνο πλοίο'
-            ports_label = 'Port' if lang == 'en' else 'Λιμάνι'
-            ports_label_pl = 'Ports' if lang == 'en' else 'Λιμάνια'
-            piraeus_label = 'From Piraeus' if lang == 'en' else 'Από Πειραιά'
-            alt_label = 'Other gateways' if lang == 'en' else 'Άλλες πύλες'
+        tip_label = 'Tip' if lang == 'en' else 'Συμβουλή'
 
-            airport = gt.get('airport_el' if lang == 'el' else 'airport')
-            rows.append(f'<dt>{airport_label}</dt><dd>{esc(airport) if airport else airport_no}</dd>')
+        pills = gt.get('pills_el' if lang == 'el' else 'pills', [])
+        summary = gt.get('summary_el' if lang == 'el' else 'summary', '')
+        tip = gt.get('tip_el' if lang == 'el' else 'tip')
 
-            ports = gt.get('ports_el' if lang == 'el' else 'ports', [])
-            if ports:
-                port_lines = '; '.join(f'<strong>{esc(p["name"])}</strong> — {esc(p["note"])}' for p in ports)
-                rows.append(f'<dt>{ports_label_pl if len(ports) > 1 else ports_label}</dt><dd>{port_lines}</dd>')
+        pill_html = ''
+        if pills:
+            pill_spans = ''.join(f'<span class="seo-gt-pill">{esc(p)}</span>' for p in pills)
+            pill_html = f'<div class="seo-gt-pills">{pill_spans}</div>'
 
-            fp = gt.get('from_piraeus_el' if lang == 'el' else 'from_piraeus', {})
-            if fp:
-                fp_text = f'{esc(fp.get("duration", ""))} · {esc(fp.get("price", ""))} · {esc(fp.get("freq", ""))}'
-                if fp.get('note'):
-                    fp_text += f'. {esc(fp["note"])}'
-                rows.append(f'<dt>{piraeus_label}</dt><dd>{fp_text}</dd>')
+        summary_html = f'<p class="seo-gt-summary">{esc(summary)}</p>' if summary else ''
+        tip_html = f'<p class="seo-gt-tip"><strong>{tip_label}:</strong> {esc(tip)}</p>' if tip else ''
 
-            alts = gt.get('alt_gateways_el' if lang == 'el' else 'alt_gateways', [])
-            if alts:
-                alt_text = '<br>'.join(esc(a) for a in alts)
-                rows.append(f'<dt>{alt_label}</dt><dd>{alt_text}</dd>')
-
-        if rows:
-            if gt.get('stub'):
-                getting_there_html = f'<section class="seo-getting-there"><h2>{gt_label}</h2>{"".join(rows)}</section>'
-            else:
-                getting_there_html = f'<section class="seo-getting-there"><h2>{gt_label}</h2><dl>{"".join(rows)}</dl></section>'
+        if pill_html or summary_html:
+            getting_there_html = (
+                f'<section class="seo-getting-there">'
+                f'<h2>{gt_label}</h2>'
+                f'{pill_html}'
+                f'{summary_html}'
+                f'{tip_html}'
+                f'</section>'
+            )
 
     # Itinerary section
     itinerary_html = ''
@@ -511,20 +496,36 @@ def render_page(key, data, meta, lang='en'):
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }}
-  .seo-getting-there dl {{
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
-    margin: 0;
+  .seo-gt-pills {{
+    display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px;
+  }}
+  .seo-gt-pill {{
+    background: rgba(11,143,172,0.08);
+    color: var(--aegean, #0B8FAC);
+    font-size: var(--text-tiny, 12px);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }}
+  .seo-gt-summary {{
+    margin: 0 0 10px;
     font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    line-height: 1.6;
   }}
-  .seo-getting-there dt {{ font-weight: 600; color: var(--ink-3, #555); margin: 0; }}
-  .seo-getting-there dd {{ margin: 0; }}
-  .seo-getting-there p {{ margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }}
-  @media (max-width: 600px) {{
-    .seo-getting-there dl {{ grid-template-columns: 1fr; gap: 2px 0; }}
-    .seo-getting-there dt {{ margin-top: 8px; }}
+  .seo-gt-tip {{
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(11,143,172,0.04);
+    border-left: 3px solid var(--aegean, #0B8FAC);
+    border-radius: 0 4px 4px 0;
+    font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    font-style: italic;
+    line-height: 1.5;
   }}
+  .seo-gt-tip strong {{ font-style: normal; color: var(--aegean, #0B8FAC); }}
   .seo-day {{ margin-bottom: 24px; }}
   .seo-day h3 {{ font-size: var(--text-sub, 18px); margin: 0 0 4px; }}
   .seo-day-meta {{ color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }}

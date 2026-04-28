@@ -234,39 +234,17 @@
     }
   ],
   "getting_there": {
-    "airport": null,
-    "airport_el": null,
-    "ports": [
-      {
-        "name": "Yialos (Symi Town)",
-        "note": "the only port — all ferries dock at the spectacular harbour"
-      }
+    "pills": [
+      "⛵ via Rhodes 50min",
+      "€15–25"
     ],
-    "ports_el": [
-      {
-        "name": "Γιαλός (Χώρα Σύμης)",
-        "note": "το μόνο λιμάνι — όλα τα πλοία δένουν στο εντυπωσιακό λιμάνι"
-      }
+    "pills_el": [
+      "⛵ μέσω Ρόδου 50λ",
+      "€15–25"
     ],
-    "from_piraeus": {
-      "duration": "14–17 hours overnight",
-      "price": "€55–95",
-      "freq": "2–3× weekly direct",
-      "note": "most travellers come via Rhodes — much faster"
-    },
-    "from_piraeus_el": {
-      "duration": "14–17 ώρες, νυχτερινό",
-      "price": "€55–95",
-      "freq": "2–3 τη βδομάδα απευθείας",
-      "note": "οι περισσότεροι έρχονται μέσω Ρόδου — πολύ πιο γρήγορα"
-    },
-    "alt_gateways": [
-      "Rhodes — daily fast ferries (~50 min, €15–25), the standard route",
-      "Kos — daily summer connections"
-    ],
-    "alt_gateways_el": [
-      "Ρόδος — καθημερινά γρήγορα πλοία (~50 λεπτά, €15–25), η συνηθισμένη διαδρομή",
-      "Κως — καθημερινές καλοκαιρινές συνδέσεις"
-    ]
+    "summary": "No airport. Direct from Piraeus exists (14–17h, 2–3× weekly) but most travellers come via Rhodes — daily fast ferries take ~50 minutes, the standard route. Spectacular harbour arrival.",
+    "summary_el": "Χωρίς αεροδρόμιο. Υπάρχει απευθείας από Πειραιά (14–17 ώρες, 2–3 τη βδομάδα) αλλά οι περισσότεροι έρχονται μέσω Ρόδου — καθημερινά γρήγορα πλοία σε ~50 λεπτά. Εντυπωσιακή είσοδος στο λιμάνι.",
+    "tip": "Day trip from Rhodes is fine, but staying overnight is the experience.",
+    "tip_el": "Επίσκεψη ημέρας από Ρόδο είναι εντάξει, αλλά διανυκτέρευση είναι η εμπειρία."
   }
 }

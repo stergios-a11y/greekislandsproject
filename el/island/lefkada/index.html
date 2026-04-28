@@ -51,20 +51,36 @@
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
-  .seo-getting-there dl {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
-    margin: 0;
+  .seo-gt-pills {
+    display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px;
+  }
+  .seo-gt-pill {
+    background: rgba(11,143,172,0.08);
+    color: var(--aegean, #0B8FAC);
+    font-size: var(--text-tiny, 12px);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+  .seo-gt-summary {
+    margin: 0 0 10px;
     font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    line-height: 1.6;
   }
-  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
-  .seo-getting-there dd { margin: 0; }
-  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
-  @media (max-width: 600px) {
-    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
-    .seo-getting-there dt { margin-top: 8px; }
+  .seo-gt-tip {
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(11,143,172,0.04);
+    border-left: 3px solid var(--aegean, #0B8FAC);
+    border-radius: 0 4px 4px 0;
+    font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    font-style: italic;
+    line-height: 1.5;
   }
+  .seo-gt-tip strong { font-style: normal; color: var(--aegean, #0B8FAC); }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
   .seo-day-meta { color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }
@@ -158,7 +174,7 @@
   <section class="seo-intro">
     <p>Η Λευκάδα είναι μοναδική ανάμεσα στα νησιά του Ιονίου — συνδέεται με την ηπειρωτική χώρα με πλωτή γέφυρα, οπότε δεν χρειάζεται πλοίο. Παρά την εύκολη πρόσβαση, νιώθει πραγματικά απομονωμένη, ειδικά στον νότο όπου κατακόρυφοι λευκοί ασβεστολιθικοί γκρεμοί βυθίζονται σε νερά αδύνατου μπλε-πράσινου. Το Πόρτο Κατσίκι και ο Εγκρεμνός βρίσκονται σταθερά ανάμεσα στις καλύτερες παραλίες της Ευρώπης. Το νησί είναι επίσης η πρωτεύουσα του windsurfing της Ελλάδας στο Βασιλικό.</p>
   </section>
-  <section class="seo-getting-there"><h2>Πώς θα φτάσεις</h2><dl><dt>Αεροδρόμιο</dt><dd>Χωρίς αεροδρόμιο — μόνο πλοίο</dd><dt>Λιμάνια</dt><dd><strong>Νυδρί</strong> — κύριο λιμάνι — πλοία προς Μεγανήσι, Κεφαλονιά, Ιθάκη; <strong>Βασιλική (νότια)</strong> — μικρότερο — εποχιακές συνδέσεις Κεφαλονιάς/Ιθάκης</dd><dt>Από Πειραιά</dt><dd>Δεν υπάρχει πλοίο — η Λευκάδα συνδέεται με την ηπειρωτική με γέφυρα · — · —. οδική διαδρομή από Αθήνα (~4 ώρες μέσω γέφυρας Ρίου-Αντιρρίου)· το μόνο ελληνικό νησί προσβάσιμο με αυτοκίνητο</dd><dt>Άλλες πύλες</dt><dd>Οδική διαδρομή από Αθήνα — 4–5 ώρες μέσω γέφυρας Ρίου-Αντιρρίου<br>Αεροδρόμιο Ακτίου (Πρέβεζα) — 30 λεπτά βόρεια, καλοκαιρινές charter</dd></dl></section>
+  <section class="seo-getting-there"><h2>Πώς θα φτάσεις</h2><div class="seo-gt-pills"><span class="seo-gt-pill">🚗 Οδικώς 4h από Αθήνα</span><span class="seo-gt-pill">✈ Άκτιο (PVK) 30λ βόρεια</span></div><p class="seo-gt-summary">Το μόνο ελληνικό νησί συνδεδεμένο με γέφυρα — δεν χρειάζεται πλοίο. Οδική διαδρομή από Αθήνα (~4 ώρες μέσω Ρίου-Αντιρρίου). Το αεροδρόμιο Ακτίου (Πρέβεζα, PVK) είναι 30 λεπτά βόρεια και έχει καλοκαιρινές charters από Ευρώπη.</p><p class="seo-gt-tip"><strong>Συμβουλή:</strong> Αν πετάς, κοίτα Άκτιο πριν Αθήνα — απευθείας από Λονδίνο, Μάντσεστερ, γερμανικές πόλεις.</p></section>
   <section class="seo-itinerary"><h2>Δρομολόγιο 4 ημερών — Λευκάδα</h2>
 <section class="seo-day">
   <h3>Μέρα 1: Χώρα Λευκάδας &amp; η Λιμνοθάλασσα</h3>

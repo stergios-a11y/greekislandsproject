@@ -339,41 +339,19 @@
     }
   ],
   "getting_there": {
-    "airport": "Yes — domestic only (Aegean, Sky Express)",
-    "airport_el": "Ναι — μόνο εσωτερικές πτήσεις (Aegean, Sky Express)",
-    "ports": [
-      {
-        "name": "Chios Town Port",
-        "note": "the main and only major port — all ferries"
-      }
+    "pills": [
+      "✈ Airport (domestic)",
+      "⛵ Piraeus 7–10h overnight",
+      "€38–70"
     ],
-    "ports_el": [
-      {
-        "name": "Λιμάνι Χώρας Χίου",
-        "note": "το κύριο και μόνο μεγάλο λιμάνι — όλα τα πλοία"
-      }
+    "pills_el": [
+      "✈ Αεροδρόμιο (εσωτερικό)",
+      "⛵ Πειραιάς 7–10h νυχτερινό",
+      "€38–70"
     ],
-    "from_piraeus": {
-      "duration": "7–10 hours overnight",
-      "price": "€38–70",
-      "freq": "daily, year-round",
-      "note": "Blue Star and NEL Lines — overnight"
-    },
-    "from_piraeus_el": {
-      "duration": "7–10 ώρες, νυχτερινό",
-      "price": "€38–70",
-      "freq": "καθημερινά όλο τον χρόνο",
-      "note": "Blue Star και NEL Lines — νυχτερινό"
-    },
-    "alt_gateways": [
-      "Direct flights — fastest",
-      "Cesme (Turkey) — daily ferry, ~30 min",
-      "Lesvos — frequent connections"
-    ],
-    "alt_gateways_el": [
-      "Απευθείας πτήσεις — οι γρηγορότερες",
-      "Τσεσμέ (Τουρκία) — καθημερινό πλοίο, ~30 λεπτά",
-      "Λέσβος — συχνές συνδέσεις"
-    ]
+    "summary": "Domestic airport — Aegean, Sky Express. Ferries from Piraeus dock at Chios Town port, overnight, daily.",
+    "summary_el": "Αεροδρόμιο εσωτερικού — Aegean, Sky Express. Τα πλοία από Πειραιά δένουν στο λιμάνι Χώρας Χίου, νυχτερινό, καθημερινά.",
+    "tip": "Daily summer ferry to Cesme (Turkey) takes 30 minutes — closest Greek island to mainland Turkey.",
+    "tip_el": "Καθημερινό καλοκαιρινό πλοίο προς Τσεσμέ Τουρκίας 30 λεπτά — το πιο κοντινό ελληνικό νησί στην Τουρκία."
   }
 }

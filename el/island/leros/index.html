@@ -51,20 +51,36 @@
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
-  .seo-getting-there dl {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
-    margin: 0;
+  .seo-gt-pills {
+    display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px;
+  }
+  .seo-gt-pill {
+    background: rgba(11,143,172,0.08);
+    color: var(--aegean, #0B8FAC);
+    font-size: var(--text-tiny, 12px);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+  .seo-gt-summary {
+    margin: 0 0 10px;
     font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    line-height: 1.6;
   }
-  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
-  .seo-getting-there dd { margin: 0; }
-  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
-  @media (max-width: 600px) {
-    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
-    .seo-getting-there dt { margin-top: 8px; }
+  .seo-gt-tip {
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(11,143,172,0.04);
+    border-left: 3px solid var(--aegean, #0B8FAC);
+    border-radius: 0 4px 4px 0;
+    font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    font-style: italic;
+    line-height: 1.5;
   }
+  .seo-gt-tip strong { font-style: normal; color: var(--aegean, #0B8FAC); }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
   .seo-day-meta { color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }
@@ -158,7 +174,7 @@
   <section class="seo-intro">
     <p>Η Λέρος είναι 54 τ.χλμ. φυσικών λιμανιών και ιταλικής αποικιακής αρχιτεκτονικής — η πιο αρχιτεκτονικά ασυνήθιστη απ&#x27; όλα τα Δωδεκάνησα. Όταν η Ιταλία του Μουσολίνι έλεγχε τα νησιά, οι αρχιτέκτονες Rodolfo Petracco και Armando Bernabiti έχτισαν το Λακκί το 1933-38 ως &quot;Portolago&quot;, τον κύριο ναυτικό σταθμό της ανατολικής Μεσογείου. Η πόλη στέκεται σε μεγάλο βαθμό ανέγγιχτη: φαρδιές λεωφόροι, art deco σινεμά, κυκλική αγορά, ένας πύργος ρολογιού, φοίνικες που φυτρώνουν μέσα από μισανοιχτούς τρούλους. Το παραδοσιακό πρόσωπο του νησιού βρίσκεται στην άλλη πλευρά: Πλάτανος (η πρωτεύουσα) με το βυζαντινό κάστρο του 10ου αιώνα από πάνω, το αλιευτικό χωριό Παντελή από κάτω, το νεοκλασικό λιμάνι της Αγίας Μαρίνας. Η Μάχη της Λέρου του 1943 ενέπνευσε το μυθιστόρημα και την ταινία Τα Κανόνια του Ναβαρόνε· το μουσείο του Β&#x27; Παγκοσμίου στο τούνελ κάτω από το Λακκί είναι ανέγγιχτο. Δύο μέρες καλύπτουν και τις δύο όψεις με χρόνο για μπάνια.</p>
   </section>
-  <section class="seo-getting-there"><h2>Πώς θα φτάσεις</h2><dl><dt>Αεροδρόμιο</dt><dd>Ναι — μικρό, μόνο εσωτερικές πτήσεις (Olympic, Sky Express)</dd><dt>Λιμάνια</dt><dd><strong>Λακκί</strong> — κύριο εμπορικό λιμάνι (το art-deco) — όλα τα πλοία από Πειραιά; <strong>Αγία Μαρίνα</strong> — μικρότερο λιμάνι — για εκδρομές και νησιώτικα υδροπτέρυγα</dd><dt>Από Πειραιά</dt><dd>8–11 ώρες, νυχτερινό · €48–80 · καθημερινά το καλοκαίρι. Blue Star Δωδεκανήσων</dd><dt>Άλλες πύλες</dt><dd>Κως / Πάτμος / Κάλυμνος — συχνά πλοία μεταξύ νησιών<br>Αεροδρόμιο Λέρου — μικρό, καθημερινές πτήσεις από Αθήνα</dd></dl></section>
+  <section class="seo-getting-there"><h2>Πώς θα φτάσεις</h2><div class="seo-gt-pills"><span class="seo-gt-pill">✈ Αεροδρόμιο (μικρό)</span><span class="seo-gt-pill">⛵ Πειραιάς 8–11h</span><span class="seo-gt-pill">€48–80</span></div><p class="seo-gt-summary">Μικρό αεροδρόμιο εσωτερικού (Olympic, Sky Express). Τα πλοία από Πειραιά δένουν στο Λακκί (το art-deco λιμάνι). Blue Star Δωδεκανήσων, καθημερινά το καλοκαίρι.</p><p class="seo-gt-tip"><strong>Συμβουλή:</strong> Λακκί, Παντέλι, Αγία Μαρίνα, Κριθώνι — διάλεξε βάση ανάλογα με την ατμόσφαιρα.</p></section>
   <section class="seo-itinerary"><h2>Δρομολόγιο 2 ημερών — Λέρος</h2>
 <section class="seo-day">
   <h3>Μέρα 1: Λακκί — Ιταλικό Αρ Ντεκό &amp; το Τούνελ του Β&#x27; ΠΠ</h3>

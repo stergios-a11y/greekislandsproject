@@ -452,39 +452,19 @@
     }
   ],
   "getting_there": {
-    "airport": "Yes — major: domestic + international (Aegean, Sky Express, Ryanair, EasyJet, charters); largest in Crete",
-    "airport_el": "Ναι — μεγάλο αεροδρόμιο: εσωτερικές + διεθνείς πτήσεις (Aegean, Sky Express, Ryanair, EasyJet, charters)· το μεγαλύτερο της Κρήτης",
-    "ports": [
-      {
-        "name": "Heraklion Port",
-        "note": "central port for ferries from Piraeus, Cyclades, and the Dodecanese"
-      }
+    "pills": [
+      "✈ Airport (intl)",
+      "⛵ Piraeus 8–9h overnight",
+      "€40–120"
     ],
-    "ports_el": [
-      {
-        "name": "Λιμάνι Ηρακλείου",
-        "note": "κεντρικό λιμάνι για πλοία από Πειραιά, Κυκλάδες και Δωδεκάνησα"
-      }
+    "pills_el": [
+      "✈ Αεροδρόμιο (διεθνές)",
+      "⛵ Πειραιάς 8–9h νυχτερινό",
+      "€40–120"
     ],
-    "from_piraeus": {
-      "duration": "8–9 hours overnight",
-      "price": "€40–70 deck, €70–120 cabin",
-      "freq": "daily, year-round, evening departure",
-      "note": "overnight ferry is the standard — Minoan Lines and Anek; cabins recommended"
-    },
-    "from_piraeus_el": {
-      "duration": "8–9 ώρες, νυχτερινό",
-      "price": "€40–70 κατάστρωμα, €70–120 καμπίνα",
-      "freq": "καθημερινά όλο τον χρόνο, βραδινή αναχώρηση",
-      "note": "το νυχτερινό πλοίο είναι ο κανόνας — Minoan και Anek· συστήνεται καμπίνα"
-    },
-    "alt_gateways": [
-      "Direct flights are usually faster and similarly priced",
-      "Santorini — daily fast ferry, ~2h"
-    ],
-    "alt_gateways_el": [
-      "Οι απευθείας πτήσεις είναι συνήθως γρηγορότερες και παρόμοια στο κόστος",
-      "Σαντορίνη — καθημερινό γρήγορο πλοίο, ~2 ώρες"
-    ]
+    "summary": "Largest airport in Crete — Aegean, Sky Express, Ryanair, EasyJet, charters. Overnight ferries from Piraeus (Minoan, Anek), evening departures, daily year-round. €40–70 deck, €70–120 cabin.",
+    "summary_el": "Το μεγαλύτερο αεροδρόμιο της Κρήτης — Aegean, Sky Express, Ryanair, EasyJet, charters. Νυχτερινά πλοία από Πειραιά (Minoan, Anek), βραδινές αναχωρήσεις, καθημερινά όλο τον χρόνο. €40–70 κατάστρωμα, €70–120 καμπίνα.",
+    "tip": "Cabin recommended on the overnight — budget around the same as a flight, sleep there.",
+    "tip_el": "Η καμπίνα συστήνεται στο νυχτερινό — κοστίζει όσο πτήση, αλλά κοιμάσαι εκεί."
   }
 }

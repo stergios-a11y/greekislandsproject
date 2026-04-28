@@ -51,20 +51,36 @@
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
-  .seo-getting-there dl {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
-    margin: 0;
+  .seo-gt-pills {
+    display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px;
+  }
+  .seo-gt-pill {
+    background: rgba(11,143,172,0.08);
+    color: var(--aegean, #0B8FAC);
+    font-size: var(--text-tiny, 12px);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+  .seo-gt-summary {
+    margin: 0 0 10px;
     font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    line-height: 1.6;
   }
-  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
-  .seo-getting-there dd { margin: 0; }
-  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
-  @media (max-width: 600px) {
-    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
-    .seo-getting-there dt { margin-top: 8px; }
+  .seo-gt-tip {
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(11,143,172,0.04);
+    border-left: 3px solid var(--aegean, #0B8FAC);
+    border-radius: 0 4px 4px 0;
+    font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    font-style: italic;
+    line-height: 1.5;
   }
+  .seo-gt-tip strong { font-style: normal; color: var(--aegean, #0B8FAC); }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
   .seo-day-meta { color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }
@@ -158,7 +174,7 @@
   <section class="seo-intro">
     <p>Syros is the administrative capital of the Cyclades — and it looks nothing like one. Ermoupoli, its pastel neoclassical harbor town, was once Greece&#x27;s busiest port and the city still feels grand, cultured, lived-in. This is a year-round working island, not a seasonal resort. You come here for the architecture, the opera house, the marble-paved squares, and the best rembetiko music in Greece.</p>
   </section>
-  <section class="seo-getting-there"><h2>Getting there</h2><p>Reachable from Piraeus (~3-5h, €30-50) — capital of the Cyclades, hub on the Eastern Cyclades line. Frequent connections from Mykonos and Tinos</p></section>
+  <section class="seo-getting-there"><h2>Getting there</h2><div class="seo-gt-pills"><span class="seo-gt-pill">⛵ Piraeus 2–4h</span><span class="seo-gt-pill">€30–50</span></div><p class="seo-gt-summary">Small domestic airport (Olympic). Capital of the Cyclades — Ermoupoli is a real working town. Ferries dock at Ermoupoli port. Major hub on the Eastern Cyclades line — frequent connections to Tinos and Mykonos.</p><p class="seo-gt-tip"><strong>Tip:</strong> Syros runs year-round — you can visit in November and the town still works.</p></section>
   <section class="seo-itinerary"><h2>3-day itinerary for Syros</h2>
 <section class="seo-day">
   <h3>Day 1: Ermoupoli &amp; Ano Syros</h3>

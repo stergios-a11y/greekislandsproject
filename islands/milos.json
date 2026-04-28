@@ -311,39 +311,19 @@
   "subtitle_el": "Το ηφαιστειακό νησί με 80 παραλίες και τα καλύτερα παραλιακά τοπία των Κυκλάδων",
   "intro_el": "Η Μήλος έχει χαρακτηριστεί το ομορφότερο νησί της Ελλάδας, και οι παραλίες υποστηρίζουν δυναμικά αυτή τη θέση. Η ηφαιστειακή γεωλογία έχει παράγει εξαιρετική ποικιλία — λευκούς σεληνιακούς βραχώδεις σχηματισμούς στο Σαρακήνικο, απρόσιτες πειρατικές θαλάσσιες σπηλιές στο Κλέφτικο, χρυσή άμμο πλαισιωμένη από χρωματιστούς βράχους στη Φυριπλάκα, και πάνω από 70 άλλους κολπίσκους. Πρόσθεσε τα ζωγραφισμένα ψαρόσπιτα στα Κλήμα και την Αφροδίτη της Μήλου του 2ου αιώνα π.Χ. (που βρέθηκε εδώ, τώρα στο Λούβρο), και η Μήλος ανταμείβει κάθε μέρα που της δίνεις.",
   "getting_there": {
-    "airport": "Yes — domestic only (Olympic), small terminal",
-    "airport_el": "Ναι — μόνο εσωτερικές πτήσεις (Olympic), μικρός σταθμός",
-    "ports": [
-      {
-        "name": "Adamas",
-        "note": "the only ferry port — all arrivals dock at the main waterfront"
-      }
+    "pills": [
+      "✈ Airport (domestic)",
+      "⛵ Piraeus 3–7h",
+      "€38–60"
     ],
-    "ports_el": [
-      {
-        "name": "Αδάμας",
-        "note": "το μόνο λιμάνι — όλα τα πλοία δένουν στην κεντρική προκυμαία"
-      }
+    "pills_el": [
+      "✈ Αεροδρόμιο (εσωτερικό)",
+      "⛵ Πειραιάς 3–7h",
+      "€38–60"
     ],
-    "from_piraeus": {
-      "duration": "3–7 hours",
-      "price": "€38–60",
-      "freq": "daily in summer, 3–5× weekly in winter",
-      "note": "Seajets fast ferry (~3h, €60) or conventional (~7h, €40)"
-    },
-    "from_piraeus_el": {
-      "duration": "3–7 ώρες",
-      "price": "€38–60",
-      "freq": "καθημερινά το καλοκαίρι, 3–5 τη βδομάδα τον χειμώνα",
-      "note": "γρήγορο Seajets (~3 ώρες, €60) ή συμβατικό (~7 ώρες, €40)"
-    },
-    "alt_gateways": [
-      "Sifnos / Kimolos / Folegandros — daily inter-island ferries",
-      "Santorini — seasonal direct fast ferry"
-    ],
-    "alt_gateways_el": [
-      "Σίφνος / Κίμωλος / Φολέγανδρος — καθημερινά πλοία μεταξύ νησιών",
-      "Σαντορίνη — εποχιακό απευθείας γρήγορο πλοίο"
-    ]
+    "summary": "Small domestic airport (Olympic). Ferries dock at Adamas. Seajets fast ferry from Piraeus ~3h (€60), conventional ~7h (€40). Daily in summer, 3–5× weekly in winter.",
+    "summary_el": "Μικρό αεροδρόμιο εσωτερικού (Olympic). Τα πλοία δένουν στον Αδάμαντα. Seajets γρήγορο από Πειραιά ~3 ώρες (€60), συμβατικό ~7 ώρες (€40). Καθημερινά το καλοκαίρι, 3–5 τη βδομάδα τον χειμώνα.",
+    "tip": "Combining with Santorini? Direct seasonal fast ferry beats routing back via Piraeus.",
+    "tip_el": "Συνδυάζεις με Σαντορίνη; Το εποχιακό απευθείας γρήγορο πλοίο είναι πιο γρήγορο από επιστροφή μέσω Πειραιά."
   }
 }

@@ -51,20 +51,36 @@
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
-  .seo-getting-there dl {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
-    margin: 0;
+  .seo-gt-pills {
+    display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px;
+  }
+  .seo-gt-pill {
+    background: rgba(11,143,172,0.08);
+    color: var(--aegean, #0B8FAC);
+    font-size: var(--text-tiny, 12px);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+  .seo-gt-summary {
+    margin: 0 0 10px;
     font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    line-height: 1.6;
   }
-  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
-  .seo-getting-there dd { margin: 0; }
-  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
-  @media (max-width: 600px) {
-    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
-    .seo-getting-there dt { margin-top: 8px; }
+  .seo-gt-tip {
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(11,143,172,0.04);
+    border-left: 3px solid var(--aegean, #0B8FAC);
+    border-radius: 0 4px 4px 0;
+    font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    font-style: italic;
+    line-height: 1.5;
   }
+  .seo-gt-tip strong { font-style: normal; color: var(--aegean, #0B8FAC); }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
   .seo-day-meta { color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }
@@ -158,7 +174,7 @@
   <section class="seo-intro">
     <p>Kalymnos has two identities. For millennia it was the sponge-diving capital of the Aegean — men dove to 100m without equipment, many dying of the bends, to fuel a global industry. Since 1997, it has become one of the world&#x27;s top five sport climbing destinations, with 3000 bolted routes on extraordinary limestone cliffs. Today the island draws climbers from around the world, alongside a quieter tourism drawn by the dramatic mountains, clear water, and small traditional villages.</p>
   </section>
-  <section class="seo-getting-there"><h2>Getting there</h2><dl><dt>Airport</dt><dd>Yes — small, domestic only (Sky Express)</dd><dt>Ports</dt><dd><strong>Pothia</strong> — the main port and capital — all major ferries; <strong>Mastichari shuttle</strong> — frequent daily shuttle from Mastichari (Kos) — the most common entry point</dd><dt>From Piraeus</dt><dd>10–13 hours overnight · €48–85 · daily in summer. Blue Star Dodecanese line</dd><dt>Other gateways</dt><dd>Kos — fly to Kos, 30-min shuttle ferry from Mastichari<br>Leros / Patmos — frequent inter-island connections</dd></dl></section>
+  <section class="seo-getting-there"><h2>Getting there</h2><div class="seo-gt-pills"><span class="seo-gt-pill">✈ Airport (small)</span><span class="seo-gt-pill">⛵ via Kos shuttle</span><span class="seo-gt-pill">€10–20</span></div><p class="seo-gt-summary">Small domestic airport (Sky Express). Direct Piraeus ferry exists (10–13h overnight), but the most common entry is flying to Kos and taking the 30-minute shuttle from Mastichari. Frequent daily.</p><p class="seo-gt-tip"><strong>Tip:</strong> For the climbing season (Oct–Apr) the Kos shuttle is your friend — direct ferries thin out.</p></section>
   <section class="seo-itinerary"><h2>3-day itinerary for Kalymnos</h2>
 <section class="seo-day">
   <h3>Day 1: Pothia &amp; the Sponge Heritage</h3>

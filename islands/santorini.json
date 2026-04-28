@@ -297,47 +297,19 @@
     }
   ],
   "getting_there": {
-    "airport": "Yes — major: domestic + international charters (Aegean, Sky Express, Volotea, EasyJet, Ryanair, etc.)",
-    "airport_el": "Ναι — μεγάλο αεροδρόμιο: εσωτερικές + διεθνείς πτήσεις (Aegean, Sky Express, Volotea, EasyJet, Ryanair κ.α.)",
-    "ports": [
-      {
-        "name": "Athinios",
-        "note": "the main commercial port for ferries — all Piraeus boats dock here"
-      },
-      {
-        "name": "Old Port (Fira)",
-        "note": "cruise ships and small excursions only — no ferries"
-      }
+    "pills": [
+      "✈ Airport (intl)",
+      "⛵ Piraeus 5–8h",
+      "€40–90"
     ],
-    "ports_el": [
-      {
-        "name": "Αθηνιός",
-        "note": "το κύριο εμπορικό λιμάνι — εδώ φτάνουν τα πλοία από Πειραιά"
-      },
-      {
-        "name": "Παλιό Λιμάνι (Φηρά)",
-        "note": "μόνο κρουαζιερόπλοια και μικρές εκδρομές — δεν δένουν φέρι"
-      }
+    "pills_el": [
+      "✈ Αεροδρόμιο (διεθνές)",
+      "⛵ Πειραιάς 5–8h",
+      "€40–90"
     ],
-    "from_piraeus": {
-      "duration": "5–8 hours",
-      "price": "€40–65 economy, €60–90 fast ferry",
-      "freq": "multiple daily in summer, 3–4× weekly in winter",
-      "note": "fast ferries (Blue Star, Seajets) take ~5h; conventional ferries 7–8h"
-    },
-    "from_piraeus_el": {
-      "duration": "5–8 ώρες",
-      "price": "€40–65 οικονομική, €60–90 γρήγορο πλοίο",
-      "freq": "πολλά καθημερινά το καλοκαίρι, 3–4 τη βδομάδα τον χειμώνα",
-      "note": "τα γρήγορα πλοία (Blue Star, Seajets) κάνουν ~5 ώρες· τα συμβατικά 7–8"
-    },
-    "alt_gateways": [
-      "Heraklion (Crete) — daily fast ferry, ~2h",
-      "Mykonos / Naxos / Ios — frequent inter-island connections"
-    ],
-    "alt_gateways_el": [
-      "Ηράκλειο (Κρήτης) — καθημερινό γρήγορο πλοίο, ~2 ώρες",
-      "Μύκονος / Νάξος / Ίος — συχνές νησιώτικες συνδέσεις"
-    ]
+    "summary": "Major international airport — Aegean, Sky Express, Ryanair, EasyJet plus heavy summer charters. Ferries dock at Athinios (the commercial port, 10km south of Fira). Fast ferries from Piraeus take ~5h (€60–90), conventional ferries 7–8h (€40–65), multiple daily in summer.",
+    "summary_el": "Μεγάλο διεθνές αεροδρόμιο — Aegean, Sky Express, Ryanair, EasyJet και πολλές charter πτήσεις το καλοκαίρι. Τα πλοία δένουν στον Αθηνιό (εμπορικό λιμάνι, 10 χλμ. νότια των Φηρών). Γρήγορα πλοία από Πειραιά ~5 ώρες (€60–90), συμβατικά 7–8 ώρες (€40–65), πολλά καθημερινά το καλοκαίρι.",
+    "tip": "Combining with Crete? Daily fast ferry to Heraklion takes ~2h.",
+    "tip_el": "Συνδυάζεις με Κρήτη; Το καθημερινό γρήγορο πλοίο για Ηράκλειο κάνει ~2 ώρες."
   }
 }

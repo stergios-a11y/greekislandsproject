@@ -51,20 +51,36 @@
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
-  .seo-getting-there dl {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
-    margin: 0;
+  .seo-gt-pills {
+    display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px;
+  }
+  .seo-gt-pill {
+    background: rgba(11,143,172,0.08);
+    color: var(--aegean, #0B8FAC);
+    font-size: var(--text-tiny, 12px);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+  .seo-gt-summary {
+    margin: 0 0 10px;
     font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    line-height: 1.6;
   }
-  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
-  .seo-getting-there dd { margin: 0; }
-  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
-  @media (max-width: 600px) {
-    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
-    .seo-getting-there dt { margin-top: 8px; }
+  .seo-gt-tip {
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(11,143,172,0.04);
+    border-left: 3px solid var(--aegean, #0B8FAC);
+    border-radius: 0 4px 4px 0;
+    font-size: var(--text-small, 14px);
+    color: var(--ink-2, #333);
+    font-style: italic;
+    line-height: 1.5;
   }
+  .seo-gt-tip strong { font-style: normal; color: var(--aegean, #0B8FAC); }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
   .seo-day-meta { color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }
@@ -158,7 +174,7 @@
   <section class="seo-intro">
     <p>Just a 7-minute ferry from Paros, Antiparos is what Paros was thirty years ago — slower, smaller, with a single Chora built around a 15th-century Venetian castro and one main pedestrian street where the day&#x27;s life happens. The famous cave on Agios Ioannis hill plunges 85 metres into the earth and contains the oldest known stalagmite in Europe. Boats from Agios Georgios cross to the uninhabited island of Despotiko, where ongoing excavations of an Archaic-era Apollo sanctuary continue to surface new finds. Tom Hanks owns a house here. So do a lot of quietly wealthy Athenians. The island has been discovered, but it hasn&#x27;t been spoiled.</p>
   </section>
-  <section class="seo-getting-there"><h2>Getting there</h2><p>Reach Antiparos via Paros — 10-minute shuttle ferry from Pounta (Paros southwest), runs every 30 min</p></section>
+  <section class="seo-getting-there"><h2>Getting there</h2><div class="seo-gt-pills"><span class="seo-gt-pill">⛵ via Paros 10min</span><span class="seo-gt-pill">€2–4</span></div><p class="seo-gt-summary">No airport, no direct Piraeus ferry. Reach Antiparos via Paros — a 10-minute shuttle ferry from Pounta (Paros southwest) runs every 30 minutes year-round. Cars cross too.</p><p class="seo-gt-tip"><strong>Tip:</strong> Get to Paros first, then drive across. The ferry is part of the Paros experience.</p></section>
   <section class="seo-itinerary"><h2>2-day itinerary for Antiparos</h2>
 <section class="seo-day">
   <h3>Day 1: Chora, the Castro &amp; the Cave</h3>

@@ -212,9 +212,17 @@
     }
   ],
   "getting_there": {
-    "stub": true,
-    "via": "piraeus",
-    "note": "Reach Hydra from Piraeus — frequent fast ferry only (no cars), ~1.5h, €25-35",
-    "note_el": "Προσέγγιση Ύδρας από Πειραιά — συχνό γρήγορο πλοίο μόνο (όχι αυτοκίνητα), ~1.5 ώρα, €25-35"
+    "pills": [
+      "⛵ Piraeus 1.5h fast (no cars)",
+      "€25–35"
+    ],
+    "pills_el": [
+      "⛵ Πειραιάς 1.5h γρήγορο (όχι αυτοκίνητα)",
+      "€25–35"
+    ],
+    "summary": "No airport. No cars on the island. Fast catamaran from Piraeus, ~1.5h, multiple daily.",
+    "summary_el": "Χωρίς αεροδρόμιο. Δεν επιτρέπονται αυτοκίνητα. Γρήγορο καταμαράν από Πειραιά, ~1.5 ώρα, πολλά καθημερινά.",
+    "tip": "No cars means donkeys carry your luggage from port to hotel — expect a small tip.",
+    "tip_el": "Χωρίς αυτοκίνητα σημαίνει γαϊδούρια κουβαλούν τις βαλίτσες — υπολόγισε φιλοδώρημα."
   }
 }
