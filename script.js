@@ -152,45 +152,90 @@ function parseHash() {
 /* ============================================================
    MAP TILES — switch between light and dark tiles based on theme
 ============================================================ */
-function getTileUrl() {
+function getMapTileUrl() {
   const isDark = document.documentElement.classList.contains('dark');
   return isDark
     ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'
     : 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 }
 
-function getTileAttribution() {
+function getMapTileAttribution() {
   const isDark = document.documentElement.classList.contains('dark');
   return isDark
     ? '© OpenStreetMap contributors © CARTO'
     : '© OpenStreetMap contributors';
 }
 
-// Track active tile layers so we can swap them when theme changes
-const _activeTileLayers = [];
+// Esri World Imagery — satellite, no API key required, free for non-commercial use
+const SATELLITE_TILE_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+const SATELLITE_ATTRIBUTION = 'Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community';
+
+// Persist user preference across pages
+function getPreferredBaseLayer() {
+  try {
+    return localStorage.getItem('ab_baselayer') || 'map';
+  } catch { return 'map'; }
+}
+function setPreferredBaseLayer(name) {
+  try { localStorage.setItem('ab_baselayer', name); } catch {}
+}
+
+// Track active map registrations so theme swap and toggle persistence work
+const _activeMapEntries = [];
 
 function addThemeAwareTiles(map, options = {}) {
   const isDark = document.documentElement.classList.contains('dark');
-  const layer = L.tileLayer(getTileUrl(), {
-    attribution: getTileAttribution(),
-    maxZoom: options.maxZoom || 14,
-    subdomains: isDark ? 'abcd' : 'abc'
+  const maxZoom = options.maxZoom || 18;
+
+  // Map (theme-aware) layer
+  const mapLayer = L.tileLayer(getMapTileUrl(), {
+    attribution: options.attribution || getMapTileAttribution(),
+    maxZoom: maxZoom,
+    subdomains: isDark ? 'abcd' : 'abc',
   });
-  layer.addTo(map);
-  _activeTileLayers.push({ map, layer, options });
-  return layer;
+
+  // Satellite layer (single source, theme-independent)
+  const satLayer = L.tileLayer(SATELLITE_TILE_URL, {
+    attribution: SATELLITE_ATTRIBUTION,
+    maxZoom: 19,
+  });
+
+  const labelMap = (typeof t === 'function') ? t('map.layer.map') : 'Map';
+  const labelSat = (typeof t === 'function') ? t('map.layer.satellite') : 'Satellite';
+
+  const baseLayers = {};
+  baseLayers[labelMap] = mapLayer;
+  baseLayers[labelSat] = satLayer;
+
+  const preferred = getPreferredBaseLayer();
+  const startLayer = preferred === 'satellite' ? satLayer : mapLayer;
+  startLayer.addTo(map);
+
+  // Track layer control for swap-on-theme-change
+  let layerControl = null;
+  if (!options.hideLayerControl) {
+    layerControl = L.control.layers(baseLayers, null, {
+      position: options.layerControlPosition || 'topright',
+      collapsed: true,
+    }).addTo(map);
+  }
+
+  // Persist user choice
+  map.on('baselayerchange', (e) => {
+    setPreferredBaseLayer(e.name === labelSat ? 'satellite' : 'map');
+  });
+
+  _activeMapEntries.push({ map, mapLayer, satLayer, options, labelMap, labelSat, layerControl });
+  return mapLayer;
 }
 
 function swapAllTiles() {
+  // Theme changed — point the existing "map" layer at the new theme's tiles.
+  // (Satellite layer is theme-independent, no change needed.)
   const isDark = document.documentElement.classList.contains('dark');
-  _activeTileLayers.forEach(entry => {
-    entry.map.removeLayer(entry.layer);
-    entry.layer = L.tileLayer(getTileUrl(), {
-      attribution: getTileAttribution(),
-      maxZoom: entry.options.maxZoom || 14,
-      subdomains: isDark ? 'abcd' : 'abc'
-    });
-    entry.layer.addTo(entry.map);
+  _activeMapEntries.forEach(entry => {
+    entry.mapLayer.options.subdomains = isDark ? 'abcd' : 'abc';
+    entry.mapLayer.setUrl(getMapTileUrl());
   });
 }
 
