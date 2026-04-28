@@ -46,10 +46,24 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
+  }
+  .seo-getting-there dl {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 8px 16px;
+    margin: 0;
+    font-size: var(--text-small, 14px);
+  }
+  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
+  .seo-getting-there dd { margin: 0; }
+  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
+  @media (max-width: 600px) {
+    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
+    .seo-getting-there dt { margin-top: 8px; }
   }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
@@ -144,6 +158,7 @@
   <section class="seo-intro">
     <p>The largest of the Dodecanese, Rhodes packs an extraordinary range into one island: a UNESCO-listed medieval city, the cliff-top Acropolis of Lindos, castle ruins at dramatic viewpoints, mountain villages making wine and honey, and some of the finest beaches in Greece along its sheltered east coast. More than 300 days of sunshine a year make it the sunniest place in the country.</p>
   </section>
+  <section class="seo-getting-there"><h2>Getting there</h2><dl><dt>Airport</dt><dd>Yes — major: domestic + international (Aegean, Sky Express, Ryanair, charters); largest in Dodecanese</dd><dt>Port</dt><dd><strong>Rhodes Town Port</strong> — main commercial port — all Piraeus ferries and most inter-island connections</dd><dt>From Piraeus</dt><dd>13–18 hours overnight · €55–95 deck, €100–180 cabin · daily year-round, evening departure. Blue Star runs the long Dodecanese line — cabin essential for overnight</dd><dt>Other gateways</dt><dd>Direct flights — by far the fastest and often cheapest<br>Marmaris (Turkey) — daily summer hydrofoil, ~1h</dd></dl></section>
   <section class="seo-itinerary"><h2>5-day itinerary for Rhodes</h2>
 <section class="seo-day">
   <h3>Day 1: Rhodes Old Town &amp; the North</h3>

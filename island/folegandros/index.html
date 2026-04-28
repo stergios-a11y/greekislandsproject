@@ -46,10 +46,24 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
+  }
+  .seo-getting-there dl {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 8px 16px;
+    margin: 0;
+    font-size: var(--text-small, 14px);
+  }
+  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
+  .seo-getting-there dd { margin: 0; }
+  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
+  @media (max-width: 600px) {
+    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
+    .seo-getting-there dt { margin-top: 8px; }
   }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
@@ -144,6 +158,7 @@
   <section class="seo-intro">
     <p>Folegandros is the Cyclades as they were 30 years ago. The island is 19 square kilometers, has a population of 765, one main road, no airport, and three villages that together contain every restaurant, hotel, and bar you&#x27;ll need. Chora, the capital, perches on a 200-meter cliff and is one of the most beautiful villages in Greece — a medieval Kastro surrounded by four interconnected car-free squares, each with its own atmosphere. There are no chain stores, no clubs, and essentially no nightlife beyond late dinners that turn into long conversations. The beaches are all either reached by boat or by walking — no car can drive directly to any of them. This is the island for travelers who&#x27;ve already done Mykonos and Santorini and want something radically quieter. Best May-June and September; August is still calm by Cyclades standards but Chora gets busy.</p>
   </section>
+  <section class="seo-getting-there"><h2>Getting there</h2><dl><dt>Airport</dt><dd>No airport — ferry only</dd><dt>Port</dt><dd><strong>Karavostasi</strong> — the only port, on the east coast — 4 km from Chora</dd><dt>From Piraeus</dt><dd>4–9 hours · €40–60 · daily in summer, 2–4× weekly in winter. fast ferry (~4h) or conventional (~9h via several stops)</dd><dt>Other gateways</dt><dd>Santorini / Milos / Sikinos — daily summer connections<br>Sifnos / Ios — seasonal direct ferries</dd></dl></section>
   <section class="seo-itinerary"><h2>3-day itinerary for Folegandros</h2>
 <section class="seo-day">
   <h3>Day 1: Chora, Kastro &amp; Panagia</h3>

@@ -583,5 +583,51 @@
       "desc": "In Agia Paraskevi village, an ancient and unusual ritual: a bull is paraded, blessed, then ritually slaughtered and shared communally. Pre-Christian roots, controversial in modern times, but among Greece's most extraordinary surviving folk traditions.",
       "desc_el": "Στο χωριό Αγία Παρασκευή, αρχαία και ασυνήθιστη τελετή: ένας ταύρος περιφέρεται, ευλογείται, μετά θυσιάζεται και μοιράζεται κοινοτικά. Προχριστιανικές ρίζες, αμφιλεγόμενη στην εποχή μας, αλλά από τις πιο ξεχωριστές επιβιώνουσες λαϊκές παραδόσεις της Ελλάδας."
     }
-  ]
+  ],
+  "getting_there": {
+    "airport": "Yes — domestic + summer charters (Aegean, Sky Express, charters); large airport at Mytilini",
+    "airport_el": "Ναι — εσωτερικές + καλοκαιρινές charter πτήσεις (Aegean, Sky Express, charters)· μεγάλο αεροδρόμιο στη Μυτιλήνη",
+    "ports": [
+      {
+        "name": "Mytilini Port",
+        "note": "main commercial port — all Piraeus ferries"
+      },
+      {
+        "name": "Sigri (west)",
+        "note": "small port — only seasonal local connections"
+      }
+    ],
+    "ports_el": [
+      {
+        "name": "Λιμάνι Μυτιλήνης",
+        "note": "κύριο εμπορικό λιμάνι — όλα τα πλοία από Πειραιά"
+      },
+      {
+        "name": "Σίγρι (δυτικά)",
+        "note": "μικρό λιμάνι — μόνο εποχιακές τοπικές συνδέσεις"
+      }
+    ],
+    "from_piraeus": {
+      "duration": "8–13 hours overnight",
+      "price": "€42–80",
+      "freq": "daily, year-round, evening departure",
+      "note": "Blue Star and NEL Lines — overnight via Chios"
+    },
+    "from_piraeus_el": {
+      "duration": "8–13 ώρες, νυχτερινό",
+      "price": "€42–80",
+      "freq": "καθημερινά όλο τον χρόνο, βραδινή αναχώρηση",
+      "note": "Blue Star και NEL Lines — νυχτερινό μέσω Χίου"
+    },
+    "alt_gateways": [
+      "Direct flights — fastest option",
+      "Ayvalik (Turkey) — daily summer ferry, ~1.5h",
+      "Chios — frequent inter-island connections"
+    ],
+    "alt_gateways_el": [
+      "Απευθείας πτήσεις — η πιο γρήγορη επιλογή",
+      "Αϊβαλί (Τουρκία) — καθημερινό καλοκαιρινό πλοίο, ~1.5 ώρα",
+      "Χίος — συχνές συνδέσεις μεταξύ νησιών"
+    ]
+  }
 }

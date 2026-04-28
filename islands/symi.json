@@ -232,5 +232,41 @@
       "desc": "Patron saint feast at the cliffside Monastery of Archangel Michael at Panormitis bay. Pilgrims arrive from across the Dodecanese; the saint is said to grant wishes left in messages tied to floating bottles.",
       "desc_el": "Γιορτή του προστάτη αγίου στο μοναστήρι του Αρχάγγελου Μιχαήλ στον κόλπο του Πανορμίτη. Προσκυνητές από όλα τα Δωδεκάνησα· ο άγιος λέγεται ότι εκπληρώνει ευχές αφημένες σε μηνύματα δεμένα σε επιπλέοντα μπουκάλια."
     }
-  ]
+  ],
+  "getting_there": {
+    "airport": null,
+    "airport_el": null,
+    "ports": [
+      {
+        "name": "Yialos (Symi Town)",
+        "note": "the only port — all ferries dock at the spectacular harbour"
+      }
+    ],
+    "ports_el": [
+      {
+        "name": "Γιαλός (Χώρα Σύμης)",
+        "note": "το μόνο λιμάνι — όλα τα πλοία δένουν στο εντυπωσιακό λιμάνι"
+      }
+    ],
+    "from_piraeus": {
+      "duration": "14–17 hours overnight",
+      "price": "€55–95",
+      "freq": "2–3× weekly direct",
+      "note": "most travellers come via Rhodes — much faster"
+    },
+    "from_piraeus_el": {
+      "duration": "14–17 ώρες, νυχτερινό",
+      "price": "€55–95",
+      "freq": "2–3 τη βδομάδα απευθείας",
+      "note": "οι περισσότεροι έρχονται μέσω Ρόδου — πολύ πιο γρήγορα"
+    },
+    "alt_gateways": [
+      "Rhodes — daily fast ferries (~50 min, €15–25), the standard route",
+      "Kos — daily summer connections"
+    ],
+    "alt_gateways_el": [
+      "Ρόδος — καθημερινά γρήγορα πλοία (~50 λεπτά, €15–25), η συνηθισμένη διαδρομή",
+      "Κως — καθημερινές καλοκαιρινές συνδέσεις"
+    ]
+  }
 }

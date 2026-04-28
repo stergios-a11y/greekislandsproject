@@ -464,5 +464,41 @@
       "desc": "Week of events around 20–27 May commemorating the WWII battle. Most events centred on the cemetery at Souda and various villages where the resistance was fiercest.",
       "desc_el": "Εβδομάδα εκδηλώσεων γύρω από τις 20–27 Μαΐου για την επέτειο της μάχης του Β' ΠΠ. Κυρίως στο νεκροταφείο της Σούδας και στα χωριά όπου η αντίσταση ήταν πιο σκληρή."
     }
-  ]
+  ],
+  "getting_there": {
+    "airport": "Yes — major: domestic + summer international (Aegean, Sky Express, Ryanair, EasyJet, charters)",
+    "airport_el": "Ναι — μεγάλο αεροδρόμιο: εσωτερικές + διεθνείς πτήσεις το καλοκαίρι (Aegean, Sky Express, Ryanair, EasyJet, charters)",
+    "ports": [
+      {
+        "name": "Souda",
+        "note": "7 km east of Chania town — all Piraeus ferries dock here, regular bus to town"
+      }
+    ],
+    "ports_el": [
+      {
+        "name": "Σούδα",
+        "note": "7 χλμ. ανατολικά της πόλης των Χανίων — όλα τα πλοία από Πειραιά δένουν εδώ, συχνό λεωφορείο για την πόλη"
+      }
+    ],
+    "from_piraeus": {
+      "duration": "8–9 hours overnight",
+      "price": "€40–70 deck, €70–120 cabin",
+      "freq": "daily, year-round, evening departure",
+      "note": "Anek and Minoan run the route — same overnight pattern as Heraklion"
+    },
+    "from_piraeus_el": {
+      "duration": "8–9 ώρες, νυχτερινό",
+      "price": "€40–70 κατάστρωμα, €70–120 καμπίνα",
+      "freq": "καθημερινά όλο τον χρόνο, βραδινή αναχώρηση",
+      "note": "Anek και Minoan λειτουργούν τη γραμμή — ίδιο μοτίβο με Ηράκλειο"
+    },
+    "alt_gateways": [
+      "Direct flights — usually fastest and similarly priced as ferry cabin",
+      "Heraklion — drive west 2.5h once on the island"
+    ],
+    "alt_gateways_el": [
+      "Απευθείας πτήσεις — συνήθως γρηγορότερες και παρόμοια στο κόστος με την καμπίνα",
+      "Ηράκλειο — οδική διαδρομή 2.5 ωρών δυτικά μόλις φτάσεις στην Κρήτη"
+    ]
+  }
 }

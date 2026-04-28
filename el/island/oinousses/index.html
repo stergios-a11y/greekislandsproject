@@ -46,10 +46,24 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
+  }
+  .seo-getting-there dl {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 8px 16px;
+    margin: 0;
+    font-size: var(--text-small, 14px);
+  }
+  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
+  .seo-getting-there dd { margin: 0; }
+  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
+  @media (max-width: 600px) {
+    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
+    .seo-getting-there dt { margin-top: 8px; }
   }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
@@ -144,6 +158,7 @@
   <section class="seo-intro">
     <p>Οι Οινούσσες είναι ένα εξαιρετικό μικρό νησί με περίεργη ταυτότητα. Παρά τους μόλις 820 κατοίκους, έχει παραγάγει δυσανάλογο αριθμό από τις πιο εξέχουσες εφοπλιστικές οικογένειες της Ελλάδας — Λαιμός, Πατέρας, Λος, Χατζηπατέρας. Τα αρχοντικά στο λιμάνι είναι μεγαλύτερα και πιο επιβλητικά από ό,τι θα περίμενε κανείς από ένα τόσο μικρό μέρος. Απέχει 2 χλμ από τη Χίο και 8 χλμ από την Τουρκία. Η Ακαδημία Εμπορικού Ναυτικού βρίσκεται εδώ. Μια χούφτα ταβέρνες, δύο μικρά ξενοδοχεία, ήσυχες βότσαλες παραλίες και ένα νησί που υπερασπίζεται τον χαρακτήρα του απέναντι στον μαζικό τουρισμό. Για ταξιδιώτες που θέλουν νησί που μοιάζει κατοικημένο και πραγματικό, όχι τουριστικοποιημένο.</p>
   </section>
+  <section class="seo-getting-there"><h2>Πώς θα φτάσεις</h2><p>Προσέγγιση Οινουσσών μέσω Χίου — μικρό καθημερινό πλοίο από τη Χώρα Χίου, ~1 ώρα</p></section>
   <section class="seo-itinerary"><h2>Δρομολόγιο 1 ημερών — Οινούσσες</h2>
 <section class="seo-day">
   <h3>Μέρα 1: Λιμάνι, Μουσείο &amp; Παραλία</h3>

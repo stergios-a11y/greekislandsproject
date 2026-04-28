@@ -331,5 +331,41 @@
       "desc": "Major panigiri across the inland villages, especially Filoti — three days of music, food and dancing. The biggest celebration on the island.",
       "desc_el": "Μεγάλο πανηγύρι στα ορεινά χωριά, ιδιαίτερα στο Φιλώτι — τρεις μέρες μουσική, φαγητό και χορό. Η μεγαλύτερη γιορτή του νησιού."
     }
-  ]
+  ],
+  "getting_there": {
+    "airport": "Yes — domestic only (Olympic, Sky Express)",
+    "airport_el": "Ναι — μόνο εσωτερικές πτήσεις (Olympic, Sky Express)",
+    "ports": [
+      {
+        "name": "Naxos Town (Chora)",
+        "note": "the only port — all ferries dock at the main waterfront"
+      }
+    ],
+    "ports_el": [
+      {
+        "name": "Χώρα Νάξου",
+        "note": "το μόνο λιμάνι — όλα τα πλοία δένουν στην κεντρική προκυμαία"
+      }
+    ],
+    "from_piraeus": {
+      "duration": "3.5–6 hours",
+      "price": "€38–55",
+      "freq": "multiple daily in summer, daily year-round",
+      "note": "fast ferries (~3.5h) and conventional Blue Star (~5–6h)"
+    },
+    "from_piraeus_el": {
+      "duration": "3.5–6 ώρες",
+      "price": "€38–55",
+      "freq": "πολλά καθημερινά το καλοκαίρι, καθημερινά όλο τον χρόνο",
+      "note": "γρήγορα πλοία (~3.5 ώρες) και συμβατικά Blue Star (~5–6)"
+    },
+    "alt_gateways": [
+      "Rafina — also serves Naxos directly",
+      "Santorini / Mykonos / Paros — frequent connections, Paros only 30 min"
+    ],
+    "alt_gateways_el": [
+      "Ραφήνα — εξυπηρετεί επίσης απευθείας τη Νάξο",
+      "Σαντορίνη / Μύκονος / Πάρος — συχνές συνδέσεις, η Πάρος μόλις 30 λεπτά"
+    ]
+  }
 }

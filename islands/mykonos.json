@@ -321,5 +321,49 @@
       "lng": 25.4333,
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776980076/4b_j64dfb.jpg"
     }
-  ]
+  ],
+  "getting_there": {
+    "airport": "Yes — domestic + heavy summer international (Aegean, Sky Express, EasyJet, Ryanair, charters)",
+    "airport_el": "Ναι — εσωτερικές + πολλές διεθνείς πτήσεις το καλοκαίρι (Aegean, Sky Express, EasyJet, Ryanair, charters)",
+    "ports": [
+      {
+        "name": "New Port (Tourlos)",
+        "note": "all ferries from Piraeus, Rafina, and other islands dock here — 2 km north of town"
+      },
+      {
+        "name": "Old Port (Chora)",
+        "note": "small excursions to Delos and Rinia only"
+      }
+    ],
+    "ports_el": [
+      {
+        "name": "Νέο Λιμάνι (Τούρλος)",
+        "note": "όλα τα πλοία από Πειραιά, Ραφήνα και άλλα νησιά — 2 χλμ. βόρεια της Χώρας"
+      },
+      {
+        "name": "Παλιό Λιμάνι (Χώρα)",
+        "note": "μόνο μικρές εκδρομές προς Δήλο και Ρήνεια"
+      }
+    ],
+    "from_piraeus": {
+      "duration": "2.5–5 hours",
+      "price": "€40–65",
+      "freq": "multiple daily in summer",
+      "note": "fast ferries (~2.5h) cost more; conventional ferries 4.5–5h"
+    },
+    "from_piraeus_el": {
+      "duration": "2.5–5 ώρες",
+      "price": "€40–65",
+      "freq": "πολλά καθημερινά το καλοκαίρι",
+      "note": "τα γρήγορα πλοία (~2.5 ώρες) κοστίζουν περισσότερο· τα συμβατικά 4.5–5"
+    },
+    "alt_gateways": [
+      "Rafina — faster (~2h fast ferry), often cheaper than Piraeus",
+      "Santorini / Naxos / Paros — daily inter-island connections"
+    ],
+    "alt_gateways_el": [
+      "Ραφήνα — πιο γρήγορα (~2 ώρες με γρήγορο), συχνά πιο φθηνά από τον Πειραιά",
+      "Σαντορίνη / Νάξος / Πάρος — καθημερινές συνδέσεις μεταξύ νησιών"
+    ]
+  }
 }

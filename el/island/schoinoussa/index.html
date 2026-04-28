@@ -46,10 +46,24 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
+  }
+  .seo-getting-there dl {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 8px 16px;
+    margin: 0;
+    font-size: var(--text-small, 14px);
+  }
+  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
+  .seo-getting-there dd { margin: 0; }
+  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
+  @media (max-width: 600px) {
+    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
+    .seo-getting-there dt { margin-top: 8px; }
   }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
@@ -144,6 +158,7 @@
   <section class="seo-intro">
     <p>8,5 τετραγωνικά χιλιόμετρα ξηρού ασβεστόλιθου ανάμεσα σε Νάξο και Κουφονήσια, η Σχοινούσα ονομάζεται τοπικά &quot;Νησί του Ήλιου&quot; γιατί δέχεται λιγότερη βροχή από οπουδήποτε αλλού στην Ελλάδα. Η μόνη Χώρα βρίσκεται 1 χλμ από το λιμάνι στον κόλπο της Μερσίνης — 10 λεπτά πεζοπορίας προς τα πάνω. Όλο το νησί είναι πεζοπορητό: κάθε παραλία είναι σε απόσταση 35 λεπτών με τα πόδια από τη Χώρα, το υψηλότερο σημείο είναι στα 133 μέτρα, η τοπογραφία είναι ήπια. Προειδοποίηση φήμης: το φαγητό εδώ είναι εκπληκτικά καλό. Τα μισή ντουζίνα ταβέρνες της Χώρας ξεπερνούν συστηματικά αυτό που θα έπρεπε να μπορεί να παραδώσει ένα τόσο μικρό νησί.</p>
   </section>
+  <section class="seo-getting-there"><h2>Πώς θα φτάσεις</h2><p>Προσβάσιμη στη γραμμή Μικρών Κυκλάδων από Πειραιά ή Νάξο</p></section>
   <section class="seo-itinerary"><h2>Δρομολόγιο 2 ημερών — Σχοινούσα</h2>
 <section class="seo-day">
   <h3>Μέρα 1: Χώρα &amp; οι Ανατολικές Παραλίες</h3>

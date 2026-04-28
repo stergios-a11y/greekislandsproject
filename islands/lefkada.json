@@ -393,5 +393,49 @@
       "desc": "Major folklore and arts festival in Lefkada town with international dance troupes, music, and theatre. Dates vary year to year.",
       "desc_el": "Μεγάλο φολκλορικό και καλλιτεχνικό φεστιβάλ στη Χώρα της Λευκάδας με διεθνή χορευτικά συγκροτήματα, μουσική και θέατρο. Οι ημερομηνίες αλλάζουν."
     }
-  ]
+  ],
+  "getting_there": {
+    "airport": null,
+    "airport_el": null,
+    "ports": [
+      {
+        "name": "Nidri",
+        "note": "main port — ferries to Meganisi, Kefalonia, Ithaca"
+      },
+      {
+        "name": "Vasiliki (south)",
+        "note": "smaller — seasonal Kefalonia/Ithaca connections"
+      }
+    ],
+    "ports_el": [
+      {
+        "name": "Νυδρί",
+        "note": "κύριο λιμάνι — πλοία προς Μεγανήσι, Κεφαλονιά, Ιθάκη"
+      },
+      {
+        "name": "Βασιλική (νότια)",
+        "note": "μικρότερο — εποχιακές συνδέσεις Κεφαλονιάς/Ιθάκης"
+      }
+    ],
+    "from_piraeus": {
+      "duration": "No ferry — Lefkada is connected to mainland by bridge",
+      "price": "—",
+      "freq": "—",
+      "note": "drive from Athens (~4h via Rio-Antirrio bridge); the only Greek island reachable by car"
+    },
+    "from_piraeus_el": {
+      "duration": "Δεν υπάρχει πλοίο — η Λευκάδα συνδέεται με την ηπειρωτική με γέφυρα",
+      "price": "—",
+      "freq": "—",
+      "note": "οδική διαδρομή από Αθήνα (~4 ώρες μέσω γέφυρας Ρίου-Αντιρρίου)· το μόνο ελληνικό νησί προσβάσιμο με αυτοκίνητο"
+    },
+    "alt_gateways": [
+      "Drive from Athens — 4–5h via Rio-Antirrio bridge",
+      "Aktion (Preveza) airport — 30 minutes north, summer charters"
+    ],
+    "alt_gateways_el": [
+      "Οδική διαδρομή από Αθήνα — 4–5 ώρες μέσω γέφυρας Ρίου-Αντιρρίου",
+      "Αεροδρόμιο Ακτίου (Πρέβεζα) — 30 λεπτά βόρεια, καλοκαιρινές charter"
+    ]
+  }
 }

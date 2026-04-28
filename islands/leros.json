@@ -224,5 +224,49 @@
       "lat": 37.1517,
       "lng": 26.7908
     }
-  ]
+  ],
+  "getting_there": {
+    "airport": "Yes — small, domestic only (Olympic, Sky Express)",
+    "airport_el": "Ναι — μικρό, μόνο εσωτερικές πτήσεις (Olympic, Sky Express)",
+    "ports": [
+      {
+        "name": "Lakki",
+        "note": "main commercial port (the art-deco harbour) — all Piraeus ferries"
+      },
+      {
+        "name": "Agia Marina",
+        "note": "smaller port — used for excursions and some inter-island hydrofoils"
+      }
+    ],
+    "ports_el": [
+      {
+        "name": "Λακκί",
+        "note": "κύριο εμπορικό λιμάνι (το art-deco) — όλα τα πλοία από Πειραιά"
+      },
+      {
+        "name": "Αγία Μαρίνα",
+        "note": "μικρότερο λιμάνι — για εκδρομές και νησιώτικα υδροπτέρυγα"
+      }
+    ],
+    "from_piraeus": {
+      "duration": "8–11 hours overnight",
+      "price": "€48–80",
+      "freq": "daily in summer",
+      "note": "Blue Star Dodecanese line"
+    },
+    "from_piraeus_el": {
+      "duration": "8–11 ώρες, νυχτερινό",
+      "price": "€48–80",
+      "freq": "καθημερινά το καλοκαίρι",
+      "note": "Blue Star Δωδεκανήσων"
+    },
+    "alt_gateways": [
+      "Kos / Patmos / Kalymnos — frequent inter-island ferries",
+      "Leros airport — small, daily flights from Athens"
+    ],
+    "alt_gateways_el": [
+      "Κως / Πάτμος / Κάλυμνος — συχνά πλοία μεταξύ νησιών",
+      "Αεροδρόμιο Λέρου — μικρό, καθημερινές πτήσεις από Αθήνα"
+    ]
+  }
 }

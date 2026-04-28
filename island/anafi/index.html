@@ -46,10 +46,24 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
+  }
+  .seo-getting-there dl {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 8px 16px;
+    margin: 0;
+    font-size: var(--text-small, 14px);
+  }
+  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
+  .seo-getting-there dd { margin: 0; }
+  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
+  @media (max-width: 600px) {
+    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
+    .seo-getting-there dt { margin-top: 8px; }
   }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
@@ -144,6 +158,7 @@
   <section class="seo-intro">
     <p>Two hours by ferry east of Santorini, Anafi gets a fraction of the visitors and asks nothing of them. There&#x27;s one Chora at 200m above the sea, around 300 year-round residents, no airport, no resorts, and a silence that feels like it must be illegal somewhere. The defining feature is Mount Kalamos — a 460-metre limestone monolith that&#x27;s the second-largest in Europe after Gibraltar, with a clifftop monastery you reach by a 90-minute hike. The beaches on the south coast are wild, sheltered from the meltemi, and almost always empty. Come here when you&#x27;ve had enough of being entertained.</p>
   </section>
+  <section class="seo-getting-there"><h2>Getting there</h2><p>Reach Anafi via Santorini — short ferry connection, several times weekly</p></section>
   <section class="seo-itinerary"><h2>2-day itinerary for Anafi</h2>
 <section class="seo-day">
   <h3>Day 1: Chora &amp; the Beach Path</h3>

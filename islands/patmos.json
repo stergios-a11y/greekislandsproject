@@ -240,5 +240,41 @@
       "desc": "Feast of the patron saint at the Monastery of Saint John. Pilgrimage and procession.",
       "desc_el": "Γιορτή του προστάτη αγίου στο μοναστήρι του Αγίου Ιωάννου. Προσκύνημα και λιτανεία."
     }
-  ]
+  ],
+  "getting_there": {
+    "airport": null,
+    "airport_el": null,
+    "ports": [
+      {
+        "name": "Skala",
+        "note": "the main port and main settlement — all ferries dock here"
+      }
+    ],
+    "ports_el": [
+      {
+        "name": "Σκάλα",
+        "note": "το κύριο λιμάνι και ο κύριος οικισμός — όλα τα πλοία δένουν εδώ"
+      }
+    ],
+    "from_piraeus": {
+      "duration": "7–9 hours",
+      "price": "€48–80",
+      "freq": "daily in summer, 4× weekly winter",
+      "note": "Blue Star Dodecanese line — Patmos is roughly halfway down"
+    },
+    "from_piraeus_el": {
+      "duration": "7–9 ώρες",
+      "price": "€48–80",
+      "freq": "καθημερινά το καλοκαίρι, 4 τη βδομάδα τον χειμώνα",
+      "note": "Blue Star Δωδεκανήσων — η Πάτμος είναι περίπου στη μέση της γραμμής"
+    },
+    "alt_gateways": [
+      "Kos / Leros / Samos — frequent inter-island ferries",
+      "Samos airport — closest air gateway, then 2h ferry"
+    ],
+    "alt_gateways_el": [
+      "Κως / Λέρος / Σάμος — συχνά πλοία μεταξύ νησιών",
+      "Αεροδρόμιο Σάμου — το πιο κοντινό αεροδρόμιο, μετά 2 ώρες πλοίο"
+    ]
+  }
 }

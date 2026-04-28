@@ -283,5 +283,41 @@
       "desc": "Pilgrimage on foot to the highest point of the island (680m), where a small chapel sits on the summit. Locals walk up before dawn.",
       "desc_el": "Πεζοπορία στην ψηλότερη κορυφή του νησιού (680μ), όπου βρίσκεται μικρό εκκλησάκι. Οι ντόπιοι ανεβαίνουν πριν την αυγή."
     }
-  ]
+  ],
+  "getting_there": {
+    "airport": null,
+    "airport_el": null,
+    "ports": [
+      {
+        "name": "Kamares",
+        "note": "the only port — all ferries dock at the western bay, 5 km from Apollonia"
+      }
+    ],
+    "ports_el": [
+      {
+        "name": "Καμάρες",
+        "note": "το μόνο λιμάνι — όλα τα πλοία δένουν στον δυτικό κόλπο, 5 χλμ. από την Απολλωνία"
+      }
+    ],
+    "from_piraeus": {
+      "duration": "2.5–5 hours",
+      "price": "€38–55",
+      "freq": "daily year-round",
+      "note": "Seajets fast ferry (~2.5h) or conventional (~5h)"
+    },
+    "from_piraeus_el": {
+      "duration": "2.5–5 ώρες",
+      "price": "€38–55",
+      "freq": "καθημερινά όλο τον χρόνο",
+      "note": "γρήγορο Seajets (~2.5 ώρες) ή συμβατικό (~5)"
+    },
+    "alt_gateways": [
+      "Serifos / Milos / Kimolos — daily on the same Western Cyclades line",
+      "Folegandros / Santorini — seasonal connections"
+    ],
+    "alt_gateways_el": [
+      "Σέριφος / Μήλος / Κίμωλος — καθημερινά στην ίδια γραμμή Δυτικών Κυκλάδων",
+      "Φολέγανδρος / Σαντορίνη — εποχιακές συνδέσεις"
+    ]
+  }
 }

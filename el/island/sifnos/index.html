@@ -46,10 +46,24 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
+  }
+  .seo-getting-there dl {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 8px 16px;
+    margin: 0;
+    font-size: var(--text-small, 14px);
+  }
+  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
+  .seo-getting-there dd { margin: 0; }
+  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
+  @media (max-width: 600px) {
+    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
+    .seo-getting-there dt { margin-top: 8px; }
   }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
@@ -144,6 +158,7 @@
   <section class="seo-intro">
     <p>Η Σίφνος έχει φήμη εντελώς δυσανάλογη με το μέγεθός της — το καλύτερο φαγητό των Κυκλάδων, μια παράδοση κεραμικής που πηγαίνει πίσω 4000 χρόνια, μια σειρά από όμορφα βενετσιάνικα χωριά, και εξαιρετικές παραλίες. Η σιγοβρασμένη ρεβιθάδα (μαγειρεμένη μια νύχτα σε κεραμικό σκεύος στον φούρνο του χωριού) είναι το τοπικό πιάτο. Το νησί ανταμείβει την αργή ταξιδιωτική εμπειρία — περπάτησε το παλιό δίκτυο μονοπατιών με μουλάρια μεταξύ των χωριών αντί να οδηγήσεις.</p>
   </section>
+  <section class="seo-getting-there"><h2>Πώς θα φτάσεις</h2><dl><dt>Αεροδρόμιο</dt><dd>Χωρίς αεροδρόμιο — μόνο πλοίο</dd><dt>Λιμάνι</dt><dd><strong>Καμάρες</strong> — το μόνο λιμάνι — όλα τα πλοία δένουν στον δυτικό κόλπο, 5 χλμ. από την Απολλωνία</dd><dt>Από Πειραιά</dt><dd>2.5–5 ώρες · €38–55 · καθημερινά όλο τον χρόνο. γρήγορο Seajets (~2.5 ώρες) ή συμβατικό (~5)</dd><dt>Άλλες πύλες</dt><dd>Σέριφος / Μήλος / Κίμωλος — καθημερινά στην ίδια γραμμή Δυτικών Κυκλάδων<br>Φολέγανδρος / Σαντορίνη — εποχιακές συνδέσεις</dd></dl></section>
   <section class="seo-itinerary"><h2>Δρομολόγιο 3 ημερών — Σίφνος</h2>
 <section class="seo-day">
   <h3>Μέρα 1: Απολλωνία &amp; Αρτεμώνας</h3>

@@ -295,5 +295,41 @@
       "desc": "Second great Marian feast at the Church of Panagia. Smaller than August but still significant — and this is when the icon was discovered in 1823.",
       "desc_el": "Η δεύτερη μεγάλη μαριανή γιορτή στην Παναγία. Μικρότερη του Αυγούστου αλλά σημαντική — εδώ βρέθηκε η εικόνα το 1823."
     }
-  ]
+  ],
+  "getting_there": {
+    "airport": null,
+    "airport_el": null,
+    "ports": [
+      {
+        "name": "Tinos Town (Chora)",
+        "note": "the main and only port — all ferries dock here"
+      }
+    ],
+    "ports_el": [
+      {
+        "name": "Χώρα Τήνου",
+        "note": "το κύριο και μόνο λιμάνι — όλα τα πλοία δένουν εδώ"
+      }
+    ],
+    "from_piraeus": {
+      "duration": "4–5 hours",
+      "price": "€38–55",
+      "freq": "daily in summer, less in winter",
+      "note": "most travellers use Rafina instead — much faster"
+    },
+    "from_piraeus_el": {
+      "duration": "4–5 ώρες",
+      "price": "€38–55",
+      "freq": "καθημερινά το καλοκαίρι, λιγότερα τον χειμώνα",
+      "note": "οι περισσότεροι ταξιδιώτες προτιμούν τη Ραφήνα — πολύ πιο γρήγορα"
+    },
+    "alt_gateways": [
+      "Rafina — main gateway, ~2h fast ferry, €30–45, multiple daily",
+      "Mykonos — 30-minute crossing, dozens of daily connections"
+    ],
+    "alt_gateways_el": [
+      "Ραφήνα — η κύρια πύλη, ~2 ώρες γρήγορο πλοίο, €30–45, πολλά καθημερινά",
+      "Μύκονος — 30 λεπτά, δεκάδες καθημερινές συνδέσεις"
+    ]
+  }
 }

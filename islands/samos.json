@@ -317,5 +317,59 @@
       "desc": "Cultural festival at the ancient Heraion sanctuary — concerts, theatre, and historical commemorations of the goddess Hera, ancient patroness of Samos. Dates vary; check the local municipality.",
       "desc_el": "Πολιτιστικό φεστιβάλ στο αρχαίο Ηραίο — συναυλίες, θέατρο, ιστορικές αναμνήσεις της θεάς Ήρας, αρχαίας προστάτιδας της Σάμου. Οι ημερομηνίες αλλάζουν· έλεγξε τον δήμο."
     }
-  ]
+  ],
+  "getting_there": {
+    "airport": "Yes — domestic + summer international charters (Aegean, Sky Express, charters)",
+    "airport_el": "Ναι — εσωτερικές + καλοκαιρινές charter πτήσεις (Aegean, Sky Express, charters)",
+    "ports": [
+      {
+        "name": "Vathy (Samos Town)",
+        "note": "main port — most Piraeus ferries dock here"
+      },
+      {
+        "name": "Karlovasi",
+        "note": "second port on the north coast — alternate Piraeus arrival, sometimes more convenient for west Samos"
+      },
+      {
+        "name": "Pythagoreio",
+        "note": "small south port — seasonal connections to nearby Dodecanese islands and Turkey"
+      }
+    ],
+    "ports_el": [
+      {
+        "name": "Βαθύ (Σάμος)",
+        "note": "κύριο λιμάνι — εκεί δένουν τα περισσότερα πλοία από Πειραιά"
+      },
+      {
+        "name": "Καρλόβασι",
+        "note": "δεύτερο λιμάνι στη βόρεια ακτή — εναλλακτική άφιξη από Πειραιά, καμιά φορά πιο βολική για τη δυτική Σάμο"
+      },
+      {
+        "name": "Πυθαγόρειο",
+        "note": "μικρό νότιο λιμάνι — εποχιακές συνδέσεις με κοντινά Δωδεκάνησα και Τουρκία"
+      }
+    ],
+    "from_piraeus": {
+      "duration": "7–13 hours overnight",
+      "price": "€40–75",
+      "freq": "daily in summer",
+      "note": "Blue Star — Vathy is the main arrival, but Karlovasi is closer if you are heading west"
+    },
+    "from_piraeus_el": {
+      "duration": "7–13 ώρες, νυχτερινό",
+      "price": "€40–75",
+      "freq": "καθημερινά το καλοκαίρι",
+      "note": "Blue Star — το Βαθύ είναι η κύρια άφιξη, αλλά το Καρλόβασι είναι πιο κοντά αν πας δυτικά"
+    },
+    "alt_gateways": [
+      "Direct flights — fastest, daily from Athens",
+      "Kusadasi (Turkey) — daily summer ferry, ~1.5h",
+      "Patmos / Ikaria / Fournoi — frequent regional connections from Pythagoreio or Vathy"
+    ],
+    "alt_gateways_el": [
+      "Απευθείας πτήσεις — οι γρηγορότερες, καθημερινά από Αθήνα",
+      "Κουσάντασι (Τουρκία) — καθημερινό καλοκαιρινό πλοίο, ~1.5 ώρα",
+      "Πάτμος / Ικαρία / Φούρνοι — συχνές περιφερειακές συνδέσεις από Πυθαγόρειο ή Βαθύ"
+    ]
+  }
 }

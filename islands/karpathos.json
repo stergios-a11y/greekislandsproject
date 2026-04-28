@@ -322,5 +322,49 @@
       "desc": "Three-day panigiria in Olympos and Othos villages with traditional dancing.",
       "desc_el": "Τριήμερα πανηγύρια σε Όλυμπο και Όθος με παραδοσιακό χορό."
     }
-  ]
+  ],
+  "getting_there": {
+    "airport": "Yes — domestic + summer international charters (Olympic, Sky Express, charters)",
+    "airport_el": "Ναι — εσωτερικές + καλοκαιρινές charter πτήσεις (Olympic, Sky Express, charters)",
+    "ports": [
+      {
+        "name": "Pigadia (Karpathos Town)",
+        "note": "the main port and capital — most ferries dock here"
+      },
+      {
+        "name": "Diafani",
+        "note": "small port on north — only summer hydrofoil to Rhodes/Halki"
+      }
+    ],
+    "ports_el": [
+      {
+        "name": "Πηγάδια (Χώρα Καρπάθου)",
+        "note": "το κύριο λιμάνι και πρωτεύουσα — εκεί δένουν τα περισσότερα πλοία"
+      },
+      {
+        "name": "Διαφάνι",
+        "note": "μικρό λιμάνι στον βορρά — μόνο καλοκαιρινό υδροπτέρυγο για Ρόδο/Χάλκη"
+      }
+    ],
+    "from_piraeus": {
+      "duration": "17–20 hours overnight",
+      "price": "€55–95",
+      "freq": "2–3× weekly",
+      "note": "long ferry — most travellers fly via Athens or Rhodes"
+    },
+    "from_piraeus_el": {
+      "duration": "17–20 ώρες, νυχτερινό",
+      "price": "€55–95",
+      "freq": "2–3 τη βδομάδα",
+      "note": "πολύ μακρύ ταξίδι — οι περισσότεροι πετάνε μέσω Αθήνας ή Ρόδου"
+    },
+    "alt_gateways": [
+      "Direct flights — fastest option, usually best price",
+      "Rhodes — short flight or ferry connection (~3h ferry)"
+    ],
+    "alt_gateways_el": [
+      "Απευθείας πτήσεις — η πιο γρήγορη επιλογή, συνήθως καλύτερη τιμή",
+      "Ρόδος — μικρή πτήση ή πλοίο (~3 ώρες πλοίο)"
+    ]
+  }
 }

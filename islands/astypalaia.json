@@ -288,5 +288,41 @@
       "desc": "The big island festival at the Portaitissa church just below the castle. Procession, music, lamb on the spit.",
       "desc_el": "Το μεγάλο πανηγύρι του νησιού στην εκκλησία της Πορταΐτισσας ακριβώς κάτω από το κάστρο. Λιτανεία, μουσική, αρνί στη σούβλα."
     }
-  ]
+  ],
+  "getting_there": {
+    "airport": "Yes — small, domestic only (Olympic)",
+    "airport_el": "Ναι — μικρό, μόνο εσωτερικές πτήσεις (Olympic)",
+    "ports": [
+      {
+        "name": "Skala (Pera Gialos)",
+        "note": "the only port — under the iconic Chora castle"
+      }
+    ],
+    "ports_el": [
+      {
+        "name": "Σκάλα (Πέρα Γιαλός)",
+        "note": "το μόνο λιμάνι — κάτω από το εμβληματικό Κάστρο της Χώρας"
+      }
+    ],
+    "from_piraeus": {
+      "duration": "10–14 hours overnight",
+      "price": "€50–85",
+      "freq": "2–4× weekly",
+      "note": "remote — limited frequency, plan around the schedule"
+    },
+    "from_piraeus_el": {
+      "duration": "10–14 ώρες, νυχτερινό",
+      "price": "€50–85",
+      "freq": "2–4 τη βδομάδα",
+      "note": "απομονωμένη — περιορισμένη συχνότητα, οργανώσου με το πρόγραμμα"
+    },
+    "alt_gateways": [
+      "Astypalea airport — small, daily flight from Athens",
+      "Kos — seasonal summer ferries (~3h)"
+    ],
+    "alt_gateways_el": [
+      "Αεροδρόμιο Αστυπάλαιας — μικρό, καθημερινή πτήση από Αθήνα",
+      "Κως — εποχιακά καλοκαιρινά πλοία (~3 ώρες)"
+    ]
+  }
 }

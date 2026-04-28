@@ -46,10 +46,24 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
+  }
+  .seo-getting-there dl {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 8px 16px;
+    margin: 0;
+    font-size: var(--text-small, 14px);
+  }
+  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
+  .seo-getting-there dd { margin: 0; }
+  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
+  @media (max-width: 600px) {
+    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
+    .seo-getting-there dt { margin-top: 8px; }
   }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
@@ -144,6 +158,7 @@
   <section class="seo-intro">
     <p>Οι Παξοί είναι ένα μικροσκοπικό σμαραγδένιο νησί ακριβώς νότια από την Κέρκυρα — 19 χλμ², 2.300 κάτοικοι, καλυμμένο σε αιωνόβιους ελαιώνες που παράγουν μερικό από το καλύτερο λάδι της Ελλάδας. Το νησί δεν έχει αεροδρόμιο, μόνο πλοία από την Κέρκυρα, και μόνο τρία μικροσκοπικά λιμενικά χωριά. Αυτή είναι η Ελλάδα του ιστιοπλόου και του κολυμβητή, με νερά τόσο διαυγή που τα σκάφη φαίνονται να επιπλέουν στον αέρα. Απέναντι βρίσκονται οι Αντίπαξοι, σπίτι των πιο διαφανών νερών του Ιονίου.</p>
   </section>
+  <section class="seo-getting-there"><h2>Πώς θα φτάσεις</h2><p>Προσέγγιση Παξών μέσω Κέρκυρας (καθημερινό καλοκαιρινό πλοίο, ~1 ώρα) ή Ηγουμενίτσας/Πάτρας (λιγότερο συχνά)</p></section>
   <section class="seo-itinerary"><h2>Δρομολόγιο 2 ημερών — Παξοί</h2>
 <section class="seo-day">
   <h3>Μέρα 1: Γάιος &amp; η Ανατολική Ακτή</h3>

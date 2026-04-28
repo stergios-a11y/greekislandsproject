@@ -250,5 +250,41 @@
       "desc": "The icon of the Panagia is carried from house to house across the island for the week after Easter — a procession unique to Folegandros, with locals hosting the icon overnight in turn.",
       "desc_el": "Η εικόνα της Παναγίας περιφέρεται από σπίτι σε σπίτι σε όλο το νησί την εβδομάδα μετά το Πάσχα — λιτανεία μοναδική στη Φολέγανδρο, με τους ντόπιους να φιλοξενούν την εικόνα διανυκτέρευσης με τη σειρά."
     }
-  ]
+  ],
+  "getting_there": {
+    "airport": null,
+    "airport_el": null,
+    "ports": [
+      {
+        "name": "Karavostasi",
+        "note": "the only port, on the east coast — 4 km from Chora"
+      }
+    ],
+    "ports_el": [
+      {
+        "name": "Καραβοστάσι",
+        "note": "το μόνο λιμάνι, στην ανατολική ακτή — 4 χλμ. από τη Χώρα"
+      }
+    ],
+    "from_piraeus": {
+      "duration": "4–9 hours",
+      "price": "€40–60",
+      "freq": "daily in summer, 2–4× weekly in winter",
+      "note": "fast ferry (~4h) or conventional (~9h via several stops)"
+    },
+    "from_piraeus_el": {
+      "duration": "4–9 ώρες",
+      "price": "€40–60",
+      "freq": "καθημερινά το καλοκαίρι, 2–4 τη βδομάδα τον χειμώνα",
+      "note": "γρήγορο πλοίο (~4 ώρες) ή συμβατικό (~9 ώρες με στάσεις)"
+    },
+    "alt_gateways": [
+      "Santorini / Milos / Sikinos — daily summer connections",
+      "Sifnos / Ios — seasonal direct ferries"
+    ],
+    "alt_gateways_el": [
+      "Σαντορίνη / Μήλος / Σίκινος — καθημερινές καλοκαιρινές συνδέσεις",
+      "Σίφνος / Ίος — εποχιακά απευθείας πλοία"
+    ]
+  }
 }

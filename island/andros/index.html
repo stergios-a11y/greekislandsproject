@@ -46,10 +46,24 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
+  }
+  .seo-getting-there dl {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 8px 16px;
+    margin: 0;
+    font-size: var(--text-small, 14px);
+  }
+  .seo-getting-there dt { font-weight: 600; color: var(--ink-3, #555); margin: 0; }
+  .seo-getting-there dd { margin: 0; }
+  .seo-getting-there p { margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }
+  @media (max-width: 600px) {
+    .seo-getting-there dl { grid-template-columns: 1fr; gap: 2px 0; }
+    .seo-getting-there dt { margin-top: 8px; }
   }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
@@ -144,6 +158,7 @@
   <section class="seo-intro">
     <p>Andros is the northernmost and second-largest Cycladic island, but it feels like nowhere else in the Cyclades. Spring-fed streams, oak forests, and stone-paved hiking trails make it more Tuscan than Aegean. The main town, Chora, is elegantly neoclassical — home to the largest contemporary art museum in the Aegean. Serious hikers come for the Andros Route, a 100 km trail across the island.</p>
   </section>
+  <section class="seo-getting-there"><h2>Getting there</h2><dl><dt>Airport</dt><dd>No airport — ferry only</dd><dt>Port</dt><dd><strong>Gavrio</strong> — the only ferry port, on the northwest coast — connects to Rafina, not Piraeus</dd><dt>From Piraeus</dt><dd>No direct ferry from Piraeus · — · —. Andros is served exclusively from Rafina (1 hour east of Athens)</dd><dt>Other gateways</dt><dd>Rafina — main gateway, ~2h ferry, €18–35, multiple daily<br>Tinos / Mykonos — frequent connections on the Cyclades NE line</dd></dl></section>
   <section class="seo-itinerary"><h2>3-day itinerary for Andros</h2>
 <section class="seo-day">
   <h3>Day 1: Chora &amp; the East</h3>

@@ -284,6 +284,50 @@ def render_body(key, data, meta, lang='en'):
         else:
             rating_text = f'<p class="seo-rating">Overall rating: <strong>{rating:.1f}/5</strong> · {int(meta["area"]) if meta.get("area") else ""} km² · {int(meta["pop"]) if meta.get("pop") else ""} residents</p>'
 
+    # Getting-there section (between intro and itinerary)
+    getting_there_html = ''
+    gt = data.get('getting_there')
+    if gt:
+        gt_label = 'Getting there' if lang == 'en' else 'Πώς θα φτάσεις'
+        rows = []
+        if gt.get('stub'):
+            note = gt.get('note_el' if lang == 'el' else 'note', '')
+            if note:
+                rows.append(f'<p>{esc(note)}</p>')
+        else:
+            airport_label = 'Airport' if lang == 'en' else 'Αεροδρόμιο'
+            airport_no = 'No airport — ferry only' if lang == 'en' else 'Χωρίς αεροδρόμιο — μόνο πλοίο'
+            ports_label = 'Port' if lang == 'en' else 'Λιμάνι'
+            ports_label_pl = 'Ports' if lang == 'en' else 'Λιμάνια'
+            piraeus_label = 'From Piraeus' if lang == 'en' else 'Από Πειραιά'
+            alt_label = 'Other gateways' if lang == 'en' else 'Άλλες πύλες'
+
+            airport = gt.get('airport_el' if lang == 'el' else 'airport')
+            rows.append(f'<dt>{airport_label}</dt><dd>{esc(airport) if airport else airport_no}</dd>')
+
+            ports = gt.get('ports_el' if lang == 'el' else 'ports', [])
+            if ports:
+                port_lines = '; '.join(f'<strong>{esc(p["name"])}</strong> — {esc(p["note"])}' for p in ports)
+                rows.append(f'<dt>{ports_label_pl if len(ports) > 1 else ports_label}</dt><dd>{port_lines}</dd>')
+
+            fp = gt.get('from_piraeus_el' if lang == 'el' else 'from_piraeus', {})
+            if fp:
+                fp_text = f'{esc(fp.get("duration", ""))} · {esc(fp.get("price", ""))} · {esc(fp.get("freq", ""))}'
+                if fp.get('note'):
+                    fp_text += f'. {esc(fp["note"])}'
+                rows.append(f'<dt>{piraeus_label}</dt><dd>{fp_text}</dd>')
+
+            alts = gt.get('alt_gateways_el' if lang == 'el' else 'alt_gateways', [])
+            if alts:
+                alt_text = '<br>'.join(esc(a) for a in alts)
+                rows.append(f'<dt>{alt_label}</dt><dd>{alt_text}</dd>')
+
+        if rows:
+            if gt.get('stub'):
+                getting_there_html = f'<section class="seo-getting-there"><h2>{gt_label}</h2>{"".join(rows)}</section>'
+            else:
+                getting_there_html = f'<section class="seo-getting-there"><h2>{gt_label}</h2><dl>{"".join(rows)}</dl></section>'
+
     # Itinerary section
     itinerary_html = ''
     if days_count:
@@ -382,6 +426,7 @@ def render_body(key, data, meta, lang='en'):
   <section class="seo-intro">
     <p>{safe_html(intro)}</p>
   </section>
+  {getting_there_html}
   {itinerary_html}
   {beaches_html}
   {related_html}
@@ -461,10 +506,24 @@ def render_page(key, data, meta, lang='en'):
   .seo-subtitle {{ color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }}
   .seo-rating {{ color: var(--ink-2, #333); font-size: var(--text-small, 14px); }}
   .seo-intro p {{ font-size: var(--text-sub, 18px); }}
-  .seo-itinerary, .seo-beaches, .seo-related {{ margin-top: 36px; }}
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2 {{
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there {{ margin-top: 36px; }}
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {{
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
+  }}
+  .seo-getting-there dl {{
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 8px 16px;
+    margin: 0;
+    font-size: var(--text-small, 14px);
+  }}
+  .seo-getting-there dt {{ font-weight: 600; color: var(--ink-3, #555); margin: 0; }}
+  .seo-getting-there dd {{ margin: 0; }}
+  .seo-getting-there p {{ margin: 0; font-size: var(--text-small, 14px); color: var(--ink-2, #333); }}
+  @media (max-width: 600px) {{
+    .seo-getting-there dl {{ grid-template-columns: 1fr; gap: 2px 0; }}
+    .seo-getting-there dt {{ margin-top: 8px; }}
   }}
   .seo-day {{ margin-bottom: 24px; }}
   .seo-day h3 {{ font-size: var(--text-sub, 18px); margin: 0 0 4px; }}

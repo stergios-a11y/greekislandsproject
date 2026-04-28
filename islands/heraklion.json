@@ -450,5 +450,41 @@
       "desc": "Wine festival in the village of Daphnes, the heart of Heraklion's wine country. Tastings of local Liatiko, Vidiano, Mandilari. Dates vary; check the village municipality.",
       "desc_el": "Γιορτή κρασιού στο χωριό Δαφνές, στην καρδιά του οινικού Ηρακλείου. Γευσιγνωσίες τοπικών Λιάτικου, Βιδιανού, Μανδηλαριάς. Οι ημερομηνίες αλλάζουν."
     }
-  ]
+  ],
+  "getting_there": {
+    "airport": "Yes — major: domestic + international (Aegean, Sky Express, Ryanair, EasyJet, charters); largest in Crete",
+    "airport_el": "Ναι — μεγάλο αεροδρόμιο: εσωτερικές + διεθνείς πτήσεις (Aegean, Sky Express, Ryanair, EasyJet, charters)· το μεγαλύτερο της Κρήτης",
+    "ports": [
+      {
+        "name": "Heraklion Port",
+        "note": "central port for ferries from Piraeus, Cyclades, and the Dodecanese"
+      }
+    ],
+    "ports_el": [
+      {
+        "name": "Λιμάνι Ηρακλείου",
+        "note": "κεντρικό λιμάνι για πλοία από Πειραιά, Κυκλάδες και Δωδεκάνησα"
+      }
+    ],
+    "from_piraeus": {
+      "duration": "8–9 hours overnight",
+      "price": "€40–70 deck, €70–120 cabin",
+      "freq": "daily, year-round, evening departure",
+      "note": "overnight ferry is the standard — Minoan Lines and Anek; cabins recommended"
+    },
+    "from_piraeus_el": {
+      "duration": "8–9 ώρες, νυχτερινό",
+      "price": "€40–70 κατάστρωμα, €70–120 καμπίνα",
+      "freq": "καθημερινά όλο τον χρόνο, βραδινή αναχώρηση",
+      "note": "το νυχτερινό πλοίο είναι ο κανόνας — Minoan και Anek· συστήνεται καμπίνα"
+    },
+    "alt_gateways": [
+      "Direct flights are usually faster and similarly priced",
+      "Santorini — daily fast ferry, ~2h"
+    ],
+    "alt_gateways_el": [
+      "Οι απευθείας πτήσεις είναι συνήθως γρηγορότερες και παρόμοια στο κόστος",
+      "Σαντορίνη — καθημερινό γρήγορο πλοίο, ~2 ώρες"
+    ]
+  }
 }

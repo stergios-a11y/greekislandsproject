@@ -914,6 +914,7 @@ function buildIslandPage(data) {
   }).join('');
 
   const introHtml = data.intro ? `<div class="itin-island-intro"><p>${pickLang(data, 'intro')}</p></div>` : '';
+  const gettingThereHtml = buildGettingThereSection(data);
   const beachSection = beachCards ? `
     <div class="itin-beaches-section">
       <div class="itin-beaches-header">
@@ -930,6 +931,7 @@ function buildIslandPage(data) {
         <p class="itin-subtitle">${pickLang(itin, "subtitle")}</p>
       </div>
       ${introHtml}
+      ${gettingThereHtml}
       <div class="itin-day-filter">
         <button class="itin-day-btn active" data-day="all" onclick="filterItinDay('all')" style="border-color:var(--ink-2);color:var(--ink-1)"><span style="color:inherit">${t("detail.alldays")}</span></button>
         ${dayBtns}
@@ -941,6 +943,65 @@ function buildIslandPage(data) {
       ${beachSection}
       ${buildLocalSection(data)}
     </div>`;
+}
+
+function buildGettingThereSection(data) {
+  const gt = data.getting_there;
+  if (!gt) return '';
+
+  const lang = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
+  const escHtml = (s) => String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+
+  const title = t('getting_there.title');
+
+  if (gt.stub) {
+    const note = (lang === 'el' ? gt.note_el : gt.note) || '';
+    return `
+      <section class="itin-getting-there">
+        <h3 class="itin-getting-there-title">${escHtml(title)}</h3>
+        <p class="itin-getting-there-stub">${escHtml(note)}</p>
+      </section>`;
+  }
+
+  const labels = {
+    airport:        t('getting_there.airport'),
+    airport_no:     t('getting_there.airport_no'),
+    port:           t('getting_there.port'),
+    ports:          t('getting_there.ports'),
+    from_piraeus:   t('getting_there.from_piraeus'),
+    alt_gateways:   t('getting_there.alt_gateways'),
+  };
+
+  const rows = [];
+  const airport = lang === 'el' ? gt.airport_el : gt.airport;
+  rows.push(`<dt>${escHtml(labels.airport)}</dt><dd>${airport ? escHtml(airport) : escHtml(labels.airport_no)}</dd>`);
+
+  const ports = (lang === 'el' ? gt.ports_el : gt.ports) || [];
+  if (ports.length) {
+    const portLines = ports.map(p => `<strong>${escHtml(p.name)}</strong> — ${escHtml(p.note)}`).join('; ');
+    rows.push(`<dt>${escHtml(ports.length > 1 ? labels.ports : labels.port)}</dt><dd>${portLines}</dd>`);
+  }
+
+  const fp = (lang === 'el' ? gt.from_piraeus_el : gt.from_piraeus) || {};
+  if (fp.duration || fp.price || fp.freq || fp.note) {
+    const parts = [fp.duration, fp.price, fp.freq].filter(Boolean).map(escHtml).join(' · ');
+    const noteHtml = fp.note ? `. ${escHtml(fp.note)}` : '';
+    rows.push(`<dt>${escHtml(labels.from_piraeus)}</dt><dd>${parts}${noteHtml}</dd>`);
+  }
+
+  const alts = (lang === 'el' ? gt.alt_gateways_el : gt.alt_gateways) || [];
+  if (alts.length) {
+    const altText = alts.map(escHtml).join('<br>');
+    rows.push(`<dt>${escHtml(labels.alt_gateways)}</dt><dd>${altText}</dd>`);
+  }
+
+  return `
+    <section class="itin-getting-there">
+      <h3 class="itin-getting-there-title">${escHtml(title)}</h3>
+      <dl class="itin-getting-there-list">${rows.join('')}</dl>
+    </section>`;
 }
 
 /* ============================================================
