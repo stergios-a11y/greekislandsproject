@@ -23,6 +23,7 @@
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Chania",
             "desc": "The most beautiful harbour in Crete — a sweeping arc of Venetian architecture, the 16th-century lighthouse, and crystal water. Walk the waterfront at your own pace.",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1777442840/1_rn4rno.jpg",
             "name_el": "Βενετσιάνικο Λιμάνι",
             "desc_el": "Το ομορφότερο λιμάνι της Κρήτης — ένα σαρωτικό τόξο βενετσιάνικης αρχιτεκτονικής, ο φάρος του 16ου αιώνα και κρυστάλλινα νερά. Περπάτησε στην παραλιακή με τον ρυθμό σου."
           },
@@ -34,6 +35,7 @@
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Chania",
             "desc": "Labyrinthine lanes of the old Venetian and Ottoman quarter. Browse the leather market on Skridlof Street, the covered market, and the Byzantine museum.",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1777442841/6_vpjdvm.jpg",
             "name_el": "Παλιά Πόλη Χανίων",
             "desc_el": "Λαβυρινθώδη δρομάκια της παλιάς βενετσιάνικης και οθωμανικής συνοικίας. Δες τη δερμάτινη αγορά στην οδό Σκρίδλωφ, τη σκεπαστή αγορά και το Βυζαντινό μουσείο."
           },
@@ -45,6 +47,7 @@
             "time": "11:30",
             "wiki": null,
             "desc": "The oldest part of Chania, with Minoan ruins beneath Venetian walls. Superb views over the harbour and the White Mountains.",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1777442840/3_tbkquk.jpg",
             "name_el": "Λόφος Καστέλι",
             "desc_el": "Το παλαιότερο μέρος των Χανίων, με μινωικά ερείπια κάτω από βενετσιάνικα τείχη. Εξαιρετική θέα προς το λιμάνι και τα Λευκά Όρη."
           },
@@ -56,6 +59,7 @@
             "time": "13:30",
             "wiki": null,
             "desc": "Best fish taverna in Chania Town, right on the Venetian harbour. Grilled fish, local wine, incredible setting. Book ahead in summer.",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1777442841/4_xogzfz.jpg",
             "name_el": "Μεσημεριανό — Το Μαριδάκι",
             "desc_el": "Η καλύτερη ψαροταβέρνα στα Χανιά, ακριβώς στο Βενετσιάνικο λιμάνι. Ψάρι στη σχάρα, τοπικό κρασί, εκπληκτικό σκηνικό. Κάνε κράτηση το καλοκαίρι."
           },
@@ -67,6 +71,7 @@
             "time": "16:30",
             "wiki": null,
             "desc": "Town beach 15 minutes walk from the old town. Sandy, shallow, family-friendly. Good for an evening swim before dinner.",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1777442840/5_kyw3i0.jpg",
             "name_el": "Παραλία Νέα Χώρα",
             "desc_el": "Παραλία της πόλης 15 λεπτά με τα πόδια από την παλιά πόλη. Αμμώδης, ρηχή, οικογενειακή. Καλή για ένα απογευματινό μπάνιο πριν το δείπνο."
           },
@@ -346,6 +351,26 @@
       "desc_el": "Πιθανώς η πιο φωτογραφημένη παραλία της Ελλάδας — μια λιμνοθάλασσα λευκής άμμου ανάμεσα στην ηπειρωτική Κρήτη και το νησί της Γραμβούσας, με βενετσιάνικο φρούριο του 16ου αιώνα στην κορυφή. Το χρώμα του νερού είναι ένα αδύνατο τιρκουάζ. Χρειάζεται προσπάθεια για να φτάσεις, αλλά τίποτα στην Ελλάδα δεν συγκρίνεται με την πρώτη ματιά από ψηλά."
     },
     {
+      "name": "Kedrodasos Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine white sand",
+      "length": "300 m",
+      "depth": "Shallow to medium — clean sandy bottom",
+      "facing": "South-facing — sheltered, calm",
+      "facilities": "None — completely unorganised. Access via 1km walk through protected juniper forest from Elafonisi.",
+      "desc": "The secret beach next to Elafonisi — accessible only on foot through a protected juniper forest. Pristine, uncrowded, and completely undeveloped. The contrast with the busy Elafonisi nearby is striking. The juniper trees are endangered — do not touch them.",
+      "commons": null,
+      "lat": 35.27,
+      "lng": 23.5283,
+      "name_el": "Παραλία Κεδρόδασος",
+      "type_el": "Λεπτή λευκή άμμος",
+      "depth_el": "Ρηχό έως μέτριο — καθαρός αμμώδης βυθός",
+      "facing_el": "Νότια — προστατευμένη, ήρεμη",
+      "facilities_el": "Καμία — εντελώς ανοργάνωτη. Πρόσβαση με 1χλμ πεζοπορία μέσα από προστατευμένο δάσος κέδρων από το Ελαφονήσι.",
+      "desc_el": "Η μυστική παραλία δίπλα στο Ελαφονήσι — προσβάσιμη μόνο με τα πόδια μέσα από προστατευμένο δάσος κέδρων. Παρθένα, χωρίς πλήθη, εντελώς ανέγγιχτη. Η αντίθεση με το πολυσύχναστο Ελαφονήσι δίπλα είναι εντυπωσιακή. Οι κέδροι είναι απειλούμενο είδος — μην τους αγγίζεις."
+    },
+    {
       "name": "Elafonisi Beach",
       "wiki": "https://en.wikipedia.org/wiki/Elafonisi",
       "rating": 5,
@@ -375,6 +400,7 @@
       "facing": "West-facing — spectacular sunsets, more exposed to wind than south-facing beaches",
       "facilities": "Well organised: sunbeds, umbrellas, beach bars, water sports, several tavernas. Good parking.",
       "desc": "Five consecutive golden sand beaches on the wild west coast, repeatedly named best beach in Crete. The wide open bay, warm water and legendary sunsets make it unforgettable. Best in the morning when the wind is calm — afternoons can get breezy, which makes it perfect for water sports.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1777443193/falas_y0bw1v.jpg",
       "commons": "Falasarna_beach_Crete.jpg",
       "lat": 35.5144,
       "lng": 23.5733,
@@ -404,26 +430,6 @@
       "facing_el": "Βορειοανατολική — εντελώς κλειστή, χωρίς ποτέ κύματα",
       "facilities_el": "Καλές: ξαπλώστρες, ταβέρνες, beach bars. Διάσημη ως τοποθεσία γυρισμάτων του Ζορμπά του Έλληνα.",
       "desc_el": "Ένας απόλυτα κυκλικός κλειστός κόλπος κοντά στο Ακρωτήρι, όπου γυρίστηκε η περίφημη σκηνή του χορού στον Ζορμπά τον Έλληνα. Εντυπωσιακά ήρεμα νερά ανά πάσα στιγμή — ο αέρας από οποιαδήποτε κατεύθυνση δεν έχει επίδραση εδώ. Μία από τις καλύτερες οικογενειακές παραλίες των Χανίων και πολύ λιγότερο πολυσύχναστη από το Ελαφονήσι."
-    },
-    {
-      "name": "Kedrodasos Beach",
-      "wiki": null,
-      "rating": 4,
-      "type": "Fine white sand",
-      "length": "300 m",
-      "depth": "Shallow to medium — clean sandy bottom",
-      "facing": "South-facing — sheltered, calm",
-      "facilities": "None — completely unorganised. Access via 1km walk through protected juniper forest from Elafonisi.",
-      "desc": "The secret beach next to Elafonisi — accessible only on foot through a protected juniper forest. Pristine, uncrowded, and completely undeveloped. The contrast with the busy Elafonisi nearby is striking. The juniper trees are endangered — do not touch them.",
-      "commons": null,
-      "lat": 35.27,
-      "lng": 23.5283,
-      "name_el": "Παραλία Κεδρόδασος",
-      "type_el": "Λεπτή λευκή άμμος",
-      "depth_el": "Ρηχό έως μέτριο — καθαρός αμμώδης βυθός",
-      "facing_el": "Νότια — προστατευμένη, ήρεμη",
-      "facilities_el": "Καμία — εντελώς ανοργάνωτη. Πρόσβαση με 1χλμ πεζοπορία μέσα από προστατευμένο δάσος κέδρων από το Ελαφονήσι.",
-      "desc_el": "Η μυστική παραλία δίπλα στο Ελαφονήσι — προσβάσιμη μόνο με τα πόδια μέσα από προστατευμένο δάσος κέδρων. Παρθένα, χωρίς πλήθη, εντελώς ανέγγιχτη. Η αντίθεση με το πολυσύχναστο Ελαφονήσι δίπλα είναι εντυπωσιακή. Οι κέδροι είναι απειλούμενο είδος — μην τους αγγίζεις."
     }
   ],
   "name_el": "Κρήτη (Χανιά)",
