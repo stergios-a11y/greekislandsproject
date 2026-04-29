@@ -4233,10 +4233,8 @@ html.dark .mission-disagree-box {
 ============================================================ */
 .wtv-ribbon-wrap {
   margin: 0 0 16px;
-  /* mobile horizontal scroll wrapper */
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
+  padding: 0 60px;              /* room for pill overflow into edges, no scrollbar */
+  overflow: visible;
 }
 .wtv-ribbon {
   display: grid;
@@ -4247,9 +4245,15 @@ html.dark .mission-disagree-box {
   min-width: 100%;
   overflow: visible;            /* let caption pills bleed outside grid bounds */
 }
-/* On mobile we set a min-width that forces horizontal scroll */
+/* On mobile, allow horizontal scroll if needed */
 @media (max-width: 700px) {
-  .wtv-ribbon { min-width: 720px; }
+  .wtv-ribbon-wrap {
+    padding: 0 30px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  .wtv-ribbon { min-width: 660px; }
 }
 
 /* Caption cells — span 2 ribbon cells each so text gets ~100px breathing room.
@@ -4275,10 +4279,11 @@ html.dark .mission-disagree-box {
    We nudge the pill so it sits mostly in the open (empty) neighbour slot. */
 .wtv-cap-text {
   position: absolute;
-  /* sizing */
-  width: 120%;                  /* 120% of 2-col span ≈ 2.4 cell-widths — fits trimmed captions without overlap */
+  /* sizing — fixed 2-line height for uniform pills */
+  width: 100%;                  /* 100% of 2-col span = exactly 1 month-pair wide */
+  height: 48px;                 /* exactly 2 lines tall (line-height 1.35 × 2 + padding) */
   box-sizing: border-box;
-  padding: 5px 10px;
+  padding: 5px 8px;
   /* appearance */
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -4289,11 +4294,13 @@ html.dark .mission-disagree-box {
   line-height: 1.35;
   text-align: center;
   color: var(--ink-1);
-  /* clamp at 2 lines */
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  /* always render as 2 lines — flex centring gives uniform look whether text fills 1 or 2 lines */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
+  /* allow text wrap onto 2 lines but no more */
+  word-break: break-word;
 }
 /* Above: tick at 25% of 2-col span — pill centred on tick */
 .wtv-cap-above .wtv-cap-text {
