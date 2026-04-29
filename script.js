@@ -2091,7 +2091,7 @@ const ISLAND_FERRY_PORTS = {
   'kythira': { lat: 36.144, lng: 23.011 },
   'kythnos': { lat: 37.388, lng: 24.408 },
   'lasithi': { lat: 35.197, lng: 25.722 },
-  'lefkada': { lat: 38.832, lng: 20.706 },
+  'lefkada': { lat: 38.700, lng: 20.713 },
   'leipsoi': { lat: 37.301, lng: 26.762 },
   'lemnos': { lat: 39.876, lng: 25.067 },
   'leros': { lat: 37.139, lng: 26.802 },
@@ -2104,7 +2104,7 @@ const ISLAND_FERRY_PORTS = {
   'oinousses': { lat: 38.518, lng: 26.22 },
   'paros': { lat: 37.084, lng: 25.15 },
   'patmos': { lat: 37.31, lng: 26.554 },
-  'paxos': { lat: 39.205, lng: 20.184 },
+  'paxos': { lat: 39.196, lng: 20.187 },
   'poros': { lat: 37.499, lng: 23.451 },
   'psara': { lat: 38.534, lng: 25.561 },
   'rethymno': { lat: 35.367, lng: 24.487 },
@@ -2119,7 +2119,7 @@ const ISLAND_FERRY_PORTS = {
   'sikinos': { lat: 36.694, lng: 25.128 },
   'skiathos': { lat: 39.165, lng: 23.49 },
   'skopelos': { lat: 39.122, lng: 23.728 },
-  'skyros': { lat: 38.91, lng: 24.567 },
+  'skyros': { lat: 38.840, lng: 24.534 },
   'spetses': { lat: 37.262, lng: 23.157 },
   'symi': { lat: 36.617, lng: 27.842 },
   'syros': { lat: 37.444, lng: 24.943 },
@@ -2135,16 +2135,15 @@ const FERRY_GRAPH = [
   { a: 'aegina', b: 'poros', dur: 60, freq: 'high', plo: 10, phi: 16, note: "multiple daily" },
   { a: 'agathonisi', b: 'patmos', dur: 60, freq: 'low', plo: 8, phi: 14, note: "2-3/week" },
   { a: 'agathonisi', b: 'samos', dur: 90, freq: 'low', plo: 10, phi: 16, note: "2-3/week" },
-  { a: 'agia-marina', b: 'evia-central', dur: 30, freq: 'high', plo: 4, phi: 8, note: "frequent ferry" },
+  { a: 'agia-marina', b: 'nea-styra', dur: 30, freq: 'high', plo: 4, phi: 8, note: "frequent ferry to Nea Styra" },
   { a: 'alexandroupoli', b: 'samothrace', dur: 150, freq: 'med', plo: 12, phi: 22, note: "6/week" },
   { a: 'amorgos', b: 'astypalaia', dur: 180, freq: 'low', plo: 18, phi: 28, note: "2-3/week" },
   { a: 'andros', b: 'mykonos', dur: 135, freq: 'med', plo: 18, phi: 28, note: "most days" },
   { a: 'andros', b: 'syros', dur: 150, freq: 'med', plo: 14, phi: 24, note: "most days" },
   { a: 'andros', b: 'tinos', dur: 105, freq: 'high', plo: 12, phi: 20, note: "daily" },
-  { a: 'arkitsa', b: 'evia-north', dur: 40, freq: 'high', plo: 5, phi: 10, note: "every 1-2h" },
+  { a: 'arkitsa', b: 'aidipsos', dur: 40, freq: 'high', plo: 5, phi: 10, note: "every 1-2h to Loutra Aidipsou" },
   { a: 'astypalaia', b: 'kalymnos', dur: 180, freq: 'low', plo: 14, phi: 22, note: "2-3/week" },
   { a: 'astypalaia', b: 'kos', dur: 240, freq: 'low', plo: 18, phi: 28, note: "3-4/week" },
-  { a: 'chania', b: 'piraeus', dur: 540, freq: 'high', plo: 40, phi: 120, note: "overnight daily Anek" },
   { a: 'chios', b: 'lesvos', dur: 180, freq: 'med', plo: 18, phi: 28, note: "6/week" },
   { a: 'chios', b: 'oinousses', dur: 60, freq: 'high', plo: 4, phi: 8, note: "daily small ferry" },
   { a: 'chios', b: 'psara', dur: 240, freq: 'low', plo: 10, phi: 18, note: "2-3/week" },
@@ -2312,6 +2311,43 @@ const FERRY_GRAPH = [
   { a: 'paros', b: 'serifos', dur: 135, freq: 'low', plo: 16, phi: 24, note: "few/week" },
 ];
 
+
+
+// Multi-stop visual polylines for the ferry map. These represent ferries that make
+// multiple stops on the same route (e.g. Volos→Skiathos→Skopelos→Alonnisos is one boat).
+// The map renderer draws these as a single curved path through all stops; the
+// individual edges between consecutive stops are skipped to avoid double-drawing.
+// Pathfinding is unaffected — the FERRY_GRAPH still contains all individual edges.
+const FERRY_VISUAL_LINES = [
+  { stops: ['volos', 'skiathos', 'skopelos', 'alonnisos'],         freq: 'high' },
+  { stops: ['rafina', 'andros', 'tinos', 'mykonos'],               freq: 'high' },
+  { stops: ['lavrio', 'kea', 'kythnos'],                           freq: 'high' },
+  { stops: ['serifos', 'sifnos', 'milos'],                         freq: 'high' },
+  { stops: ['paros', 'naxos'],                                     freq: 'high' },
+  { stops: ['piraeus', 'chios', 'lesvos'],                         freq: 'med' },
+  { stops: ['piraeus', 'syros', 'tinos', 'mykonos'],               freq: 'high' },
+  { stops: ['piraeus', 'paros', 'naxos'],                          freq: 'high' },
+  { stops: ['piraeus', 'naxos', 'ios', 'santorini'],               freq: 'high' },
+  { stops: ['naxos', 'iraklia', 'schoinoussa', 'koufonisia', 'donousa', 'amorgos'],   freq: 'low' },
+  { stops: ['piraeus', 'aegina', 'poros', 'hydra', 'spetses'],     freq: 'high' },
+  { stops: ['skiathos', 'skopelos', 'alonnisos'],                  freq: 'high' },
+];
+
+// Helper: returns a Set of "a~b" keys (sorted) for every consecutive-stop pair
+// that lives inside a visual polyline. Used to skip drawing those individual edges.
+function buildVisualEdgeSet() {
+  const s = new Set();
+  FERRY_VISUAL_LINES.forEach(line => {
+    for (let i = 0; i < line.stops.length - 1; i++) {
+      const a = line.stops[i], b = line.stops[i + 1];
+      const key = [a, b].sort().join('~');
+      s.add(key);
+    }
+  });
+  return s;
+}
+const FERRY_VISUAL_EDGE_SET = buildVisualEdgeSet();
+
 const MAINLAND_PORTS = {
   'piraeus': { name: 'Piraeus (Athens)', name_el: 'Πειραιάς (Αθήνα)', lat: 37.94, lng: 23.643 },
   'rafina': { name: 'Rafina (Athens)', name_el: 'Ραφήνα (Αθήνα)', lat: 38.024, lng: 24.005 },
@@ -2322,7 +2358,7 @@ const MAINLAND_PORTS = {
   'volos': { name: 'Volos', name_el: 'Βόλος', lat: 39.366, lng: 22.946 },
   'kymi': { name: 'Kymi (Evia)', name_el: 'Κύμη (Εύβοια)', lat: 38.625, lng: 24.114 },
   'neapoli': { name: 'Neapoli (Pelop.)', name_el: 'Νεάπολη (Πελοπ.)', lat: 36.512, lng: 23.057 },
-  'pounta': { name: 'Pounta', name_el: 'Πούντα', lat: 36.474, lng: 22.978 },
+  'pounta': { name: 'Pounta', name_el: 'Πούντα', lat: 36.500, lng: 22.929 },
   'kavala': { name: 'Kavala', name_el: 'Καβάλα', lat: 40.939, lng: 24.412 },
   'keramoti': { name: 'Keramoti', name_el: 'Κεραμωτή', lat: 40.853, lng: 24.708 },
   'alexandroupoli': { name: 'Alexandroupoli', name_el: 'Αλεξανδρούπολη', lat: 40.847, lng: 25.872 },
@@ -2332,6 +2368,8 @@ const MAINLAND_PORTS = {
   'arkitsa': { name: 'Arkitsa', name_el: 'Αρκίτσα', lat: 38.755, lng: 23.013 },
   'sfakia': { name: 'Sfakia (Crete)', name_el: 'Σφακιά (Κρήτη)', lat: 35.201, lng: 24.137 },
   'sitia': { name: 'Sitia (Crete)', name_el: 'Σητεία (Κρήτη)', lat: 35.207, lng: 26.107 },
+  'aidipsos':  { name: 'Loutra Aidipsou (Evia)',     name_el: 'Λουτρά Αιδηψού (Εύβοια)',  lat: 38.860, lng: 23.043 },
+  'nea-styra': { name: 'Nea Styra (Evia)',           name_el: 'Νέα Στύρα (Εύβοια)',       lat: 38.077, lng: 24.218 },
   'souda': { name: 'Souda (Chania)', name_el: 'Σούδα (Χανιά)', lat: 35.491, lng: 24.08 },
 };
 
@@ -2783,10 +2821,19 @@ function renderFerryMap() {
 
   // Draw all edges in FERRY_GRAPH that pass the filter.
   // If FERRY_FOCUS_PORT is set, only render edges touching that port.
+  // Skip edges that are part of a visual polyline — those get drawn separately below.
   const drawnPorts = new Set();
   FERRY_GRAPH.forEach(edge => {
     if (!FERRY_MAP_FILTERS.has(edge.freq)) return;
     if (FERRY_FOCUS_PORT && edge.a !== FERRY_FOCUS_PORT && edge.b !== FERRY_FOCUS_PORT) return;
+    // Skip if this edge is a consecutive-stop pair inside a visual polyline
+    const edgeKey = [edge.a, edge.b].sort().join('~');
+    if (!FERRY_FOCUS_PORT && FERRY_VISUAL_EDGE_SET.has(edgeKey)) {
+      // Still record the ports so markers render
+      drawnPorts.add(edge.a);
+      drawnPorts.add(edge.b);
+      return;
+    }
     const from = getFerryPortCoords(edge.a);
     const to   = getFerryPortCoords(edge.b);
     if (!from || !to) return;
@@ -2813,6 +2860,41 @@ function renderFerryMap() {
     drawnPorts.add(edge.a);
     drawnPorts.add(edge.b);
   });
+
+  // Draw each visual polyline as one continuous curved path
+  if (!FERRY_FOCUS_PORT) {
+    FERRY_VISUAL_LINES.forEach(line => {
+      if (!FERRY_MAP_FILTERS.has(line.freq)) return;
+      const coords = [];
+      for (let i = 0; i < line.stops.length - 1; i++) {
+        const a = getFerryPortCoords(line.stops[i]);
+        const b = getFerryPortCoords(line.stops[i + 1]);
+        if (!a || !b) continue;
+        const segment = curvedRouteCoords(a.lat, a.lng, b.lat, b.lng, 10);
+        if (i === 0) coords.push(...segment);
+        else coords.push(...segment.slice(1));     // skip duplicate start point
+        drawnPorts.add(line.stops[i]);
+        drawnPorts.add(line.stops[i + 1]);
+      }
+      if (coords.length < 2) return;
+      const style = freqStyle[line.freq] || freqStyle.low;
+      const polyline = L.polyline(coords, {
+        color: style.color,
+        weight: style.weight + 0.4,           // slightly thicker so multi-stop reads as one route
+        opacity: style.opacity,
+        dashArray: style.dashArray,
+        smoothFactor: 1.2,
+      }).addTo(ferryMapLayer);
+      const firstName = ferryPortDisplayName(line.stops[0]);
+      const lastName  = ferryPortDisplayName(line.stops[line.stops.length - 1]);
+      const stopsLabel = line.stops.map(s => ferryPortDisplayName(s)).join(' → ');
+      polyline.bindTooltip(
+        `<strong>${firstName} → ${lastName}</strong><br>` +
+        `<span style="font-size:11px;color:var(--ink-3)">${stopsLabel}</span>`,
+        { sticky: true, opacity: 1, className: 'island-tooltip' }
+      );
+    });
+  }
 
   // Port markers — different size/colour for mainland vs island.
   // In focus mode: drawnPorts holds the focused port + its neighbours; also render
@@ -2877,12 +2959,16 @@ function updateFerryFocusBanner() {
   const guideBtn = isIsland
     ? `<button class="ferry-focus-btn" onclick="navigateTo('island', '${FERRY_FOCUS_PORT}')">${t('hopping.focus.guide')}</button>`
     : '';
+  const bookBtn = isIsland
+    ? `<a class="ferry-focus-btn" href="https://www.ferryhopper.com/en/ferries-to/${ferryhopperSlug(FERRY_FOCUS_PORT)}" target="_blank" rel="noopener">${t('detail.bookferry')}</a>`
+    : '';
   banner.innerHTML = `
     <div class="ferry-focus-text">
       <strong>${name}</strong>
       <span class="ferry-focus-count">${countLabel}</span>
     </div>
     <div class="ferry-focus-actions">
+      ${bookBtn}
       ${guideBtn}
       <button class="ferry-focus-clear" onclick="clearFerryFocus()">${t('hopping.focus.clear')}</button>
     </div>`;
