@@ -2900,8 +2900,9 @@ const QUIZ_QUESTIONS = [
   {
     question: 'When are you travelling?',
     question_el: 'Πότε ταξιδεύεις;',
-    options: ['Mar – May', 'Jun – Aug', 'Sep – Nov', 'Dec – Feb'],
-    options_el: ['Μαρ – Μάι', 'Ιουν – Αυγ', 'Σεπ – Νοε', 'Δεκ – Φεβ']
+    options: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+    options_el: ['Ιαν','Φεβ','Μαρ','Απρ','Μάι','Ιουν','Ιουλ','Αυγ','Σεπ','Οκτ','Νοε','Δεκ'],
+    month_picker: true
   },
   {
     question: 'How are you getting there?',
@@ -2919,6 +2920,7 @@ const QUIZ_QUESTIONS = [
 let quizAnswers = {};
 let quizStep = 0;
 let quizInitialized = false;
+let quizDirection = 1; // 1 = forward, -1 = back
 
 function setupQuizIfNeeded() {
   if (!quizInitialized) { quizInitialized = true; renderQuizStep(); }
@@ -2934,13 +2936,26 @@ function renderQuizStep() {
   const questionText = pickLang(q, 'question');
   const options = (CURRENT_LANG === 'el' && q.options_el) ? q.options_el : q.options;
   const backLabel = t('quiz.back');
-  const nextLabel = t('quiz.next');
-  const findLabel = t('quiz.find');
-  container.innerHTML = `<div class="quiz-progress">${QUIZ_QUESTIONS.map((_, i) => `<div class="quiz-dot ${i < quizStep ? 'done' : i === quizStep ? 'current' : ''}"></div>`).join('')}<span class="quiz-step-label">${quizStep + 1} / ${QUIZ_QUESTIONS.length}</span></div><div class="quiz-card"><div class="quiz-question">${questionText}</div><div class="quiz-options">${options.map((opt, i) => `<button class="quiz-option ${quizAnswers[quizStep] === i ? 'selected' : ''}" data-idx="${i}">${opt}</button>`).join('')}</div>${quizStep > 0 ? `<div class="quiz-nav-back"><button class="quiz-back-btn">← ${backLabel}</button></div>` : ''}</div>`;
+  const isMonthPicker = !!q.month_picker;
+
+  // Options HTML — month picker gets a compact 4-col grid
+  const optionsHtml = isMonthPicker
+    ? `<div class="quiz-options quiz-month-grid">${options.map((opt, i) => `<button class="quiz-option quiz-month-btn ${quizAnswers[quizStep] === i ? 'selected' : ''}" data-idx="${i}">${opt}</button>`).join('')}</div>`
+    : `<div class="quiz-options">${options.map((opt, i) => `<button class="quiz-option ${quizAnswers[quizStep] === i ? 'selected' : ''}" data-idx="${i}">${opt}</button>`).join('')}</div>`;
+
+  container.innerHTML = `<div class="quiz-progress">${QUIZ_QUESTIONS.map((_, i) => `<div class="quiz-dot ${i < quizStep ? 'done' : i === quizStep ? 'current' : ''}"></div>`).join('')}<span class="quiz-step-label">${quizStep + 1} / ${QUIZ_QUESTIONS.length}</span></div><div class="quiz-card quiz-card-entering quiz-card-from-${quizDirection > 0 ? 'right' : 'left'}"><div class="quiz-question">${questionText}</div>${optionsHtml}${quizStep > 0 ? `<div class="quiz-nav-back"><button class="quiz-back-btn">← ${backLabel}</button></div>` : ''}</div>`;
+
+  // Trigger animation: remove entering class after one frame so transition fires
+  requestAnimationFrame(() => {
+    const card = container.querySelector('.quiz-card');
+    if (card) card.classList.remove('quiz-card-entering');
+  });
+
   container.querySelectorAll('.quiz-option').forEach(btn => {
     btn.addEventListener('click', () => {
       quizAnswers[quizStep] = parseInt(btn.dataset.idx);
       if (quizStep < QUIZ_QUESTIONS.length - 1) {
+        quizDirection = 1;
         quizStep++;
         renderQuizStep();
       } else {
@@ -2949,7 +2964,9 @@ function renderQuizStep() {
     });
   });
   const backBtn = container.querySelector('.quiz-back-btn');
-  if (backBtn) backBtn.addEventListener('click', () => { if (quizStep > 0) { quizStep--; renderQuizStep(); } });
+  if (backBtn) backBtn.addEventListener('click', () => {
+    if (quizStep > 0) { quizDirection = -1; quizStep--; renderQuizStep(); }
+  });
 }
 
 function computeQuizResults() {
@@ -2958,10 +2975,13 @@ function computeQuizResults() {
   const budgetMod = [2, 0.5, -0.5, -2][quizAnswers[2]] || 0;
   const crowdPref = quizAnswers[3];
 
-  // Q5 season → representative month indices per bracket
-  // Mar-May=1, Jun-Aug=2, Sep-Nov=3, Dec-Feb=0
-  const seasonMonths = { 0: [2,3,4], 1: [5,6,7], 2: [8,9,10], 3: [11,0,1] };
+  // Q5 season — now a single month index (0=Jan … 11=Dec)
+  // Use the chosen month plus neighbours for scoring to be more forgiving
   const seasonIdx = quizAnswers[4];
+  const seasonMonths = {};
+  for (let m = 0; m < 12; m++) {
+    seasonMonths[m] = [m]; // single month — exact match
+  }
 
   // Q6 transport: 0=car/bridge, 1=short ferry <2h, 2=long ferry ok, 3=fly
   const transportPref = quizAnswers[5];
