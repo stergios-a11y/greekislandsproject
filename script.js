@@ -1159,6 +1159,20 @@ function buildWhenToVisitSection(data) {
     .map(t => `<span class="wtv-legend-item"><span class="wtv-legend-swatch wtv-${t}"></span>${legendLabels[t]}</span>`)
     .join('');
 
+  // Build mobile vertical list — 12 rows, one per month, with tag swatch + caption
+  const tagLabels = lang === 'el'
+    ? { perfect: 'Τέλεια', great: 'Καλά', ok: 'Μέτρια', avoid: 'Απόφυγε' }
+    : { perfect: 'Perfect', great: 'Great', ok: 'OK', avoid: 'Avoid' };
+  const verticalRows = w.months.map((m, i) => {
+    const tag = (m.tag || 'ok').toLowerCase();
+    const why = pickLang(m, 'why') || '';
+    return `<div class="wtv-vrow wtv-v-${tag}">
+      <div class="wtv-vmonth">${monthNames[i]}</div>
+      <div class="wtv-vbar wtv-${tag}" title="${tagLabels[tag] || ''}"></div>
+      <div class="wtv-vwhy">${why}</div>
+    </div>`;
+  }).join('');
+
   return `
     <section class="wtv-section">
       <h3 class="wtv-title">${t('wtv.title')}</h3>
@@ -1170,6 +1184,7 @@ function buildWhenToVisitSection(data) {
           ${belowCaps.join('')}
         </div>
       </div>
+      <div class="wtv-vertical">${verticalRows}</div>
       <div class="wtv-legend">${legend}</div>
     </section>`;
 }

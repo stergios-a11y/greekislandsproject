@@ -4233,27 +4233,62 @@ html.dark .mission-disagree-box {
 ============================================================ */
 .wtv-ribbon-wrap {
   margin: 0 0 16px;
-  padding: 0 60px;              /* room for pill overflow into edges, no scrollbar */
+  padding: 0 60px;              /* room for JAN / DEC pill overflow into edges */
   overflow: visible;
 }
 .wtv-ribbon {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto auto auto;  /* above-captions / ribbon / below-captions */
+  grid-template-rows: auto auto auto;
   column-gap: 0;
   row-gap: 0;
   min-width: 100%;
-  overflow: visible;            /* let caption pills bleed outside grid bounds */
+  overflow: visible;
 }
-/* On mobile, allow horizontal scroll if needed */
+/* Vertical layout — used only on mobile */
+.wtv-vertical { display: none; }
+
+/* Mobile: hide horizontal ribbon, show clean vertical list */
 @media (max-width: 700px) {
-  .wtv-ribbon-wrap {
-    padding: 0 30px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
+  .wtv-ribbon-wrap { display: none; }
+  .wtv-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0 0 16px;
   }
-  .wtv-ribbon { min-width: 660px; }
+  .wtv-vrow {
+    display: grid;
+    grid-template-columns: 44px 6px 1fr;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .wtv-vrow:last-child { border-bottom: none; }
+  .wtv-vmonth {
+    font-family: var(--sans);
+    font-size: var(--text-meta);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--ink-2);
+  }
+  .wtv-vbar {
+    height: 28px;
+    border-radius: 3px;
+  }
+  .wtv-vwhy {
+    font-family: var(--sans);
+    font-size: var(--text-meta);
+    color: var(--ink-1);
+    line-height: 1.4;
+  }
+  .wtv-v-perfect .wtv-vwhy { font-weight: 700; }
+  .wtv-v-avoid   .wtv-vwhy { color: var(--ink-3); }
+  .wtv-v-ok      .wtv-vwhy { color: var(--ink-3); }
+  .wtv-section { padding: 16px 14px; }
+  .wtv-vrow { grid-template-columns: 38px 5px 1fr; gap: 8px; padding: 6px 0; }
 }
 
 /* Caption cells — span 2 ribbon cells each so text gets ~100px breathing room.

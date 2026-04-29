@@ -216,11 +216,26 @@ def build_when_to_visit_html(data, lang='en'):
 
     ribbon_inner = ''.join(above_caps) + ''.join(ribbon_cells) + ''.join(below_caps)
 
+    # Vertical layout for mobile — 12 rows, one per month
+    vertical_rows = []
+    for i, m in enumerate(w['months']):
+        tag = (m.get('tag') or 'ok').lower()
+        why = pick(m, 'why', lang) or ''
+        vertical_rows.append(
+            f'<div class="wtv-vrow wtv-v-{esc(tag)}">'
+            f'<div class="wtv-vmonth">{esc(labels["months"][i])}</div>'
+            f'<div class="wtv-vbar wtv-{esc(tag)}" title="{esc(labels["tags"].get(tag, ""))}"></div>'
+            f'<div class="wtv-vwhy">{esc(why)}</div>'
+            f'</div>'
+        )
+    vertical_inner = ''.join(vertical_rows)
+
     return (
         f'<section class="seo-wtv wtv-section">'
         f'<h2 class="wtv-title">{esc(labels["title"])}</h2>'
         f'{summary_html}'
         f'<div class="wtv-ribbon-wrap"><div class="wtv-ribbon">{ribbon_inner}</div></div>'
+        f'<div class="wtv-vertical">{vertical_inner}</div>'
         f'<div class="wtv-legend">{legend_items}</div>'
         f'</section>'
     )
