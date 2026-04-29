@@ -2349,40 +2349,115 @@ function allFerryPorts() {
   return { mainland, islands };
 }
 
+// Compute all reachable destinations from a node, returning {key: bestDurationMin}.
+// Uses simple BFS-ish exploration with hop limit so we get realistic destinations.
+function reachableFrom(fromKey, maxHops = 3) {
+  if (!FERRY_ADJ[fromKey]) return {};
+  const best = { [fromKey]: 0 };
+  const queue = [{ node: fromKey, cost: 0, hops: 0 }];
+  while (queue.length) {
+    queue.sort((a, b) => a.cost - b.cost);
+    const cur = queue.shift();
+    if (cur.hops >= maxHops) continue;
+    for (const edge of FERRY_ADJ[cur.node] || []) {
+      const xfer = cur.hops > 0 ? TRANSFER_PENALTY : 0;
+      const newCost = cur.cost + edge.dur + xfer;
+      if (best[edge.to] === undefined || newCost < best[edge.to]) {
+        best[edge.to] = newCost;
+        queue.push({ node: edge.to, cost: newCost, hops: cur.hops + 1 });
+      }
+    }
+  }
+  delete best[fromKey];
+  return best;
+}
+
 // Render the planner panel (called on demand from the hopping view)
 function renderFerryPlanner() {
   const el = document.getElementById('ferry-planner');
   if (!el) return;
+
   const { mainland, islands } = allFerryPorts();
-  const sortedIslands = islands.map(k => ({ k, name: islandName(k) })).sort((a, b) => a.name.localeCompare(b.name));
+  const sortedIslands  = islands.map(k => ({ k, name: islandName(k) })).sort((a, b) => a.name.localeCompare(b.name));
   const sortedMainland = mainland.map(k => ({ k, name: portDisplayName(k) })).sort((a, b) => a.name.localeCompare(b.name));
 
-  const buildOptions = (selected) => {
-    const mainlandGroup = `<optgroup label="${t('planner.mainland')}">${sortedMainland.map(p => `<option value="${p.k}"${p.k === selected ? ' selected' : ''}>${p.name}</option>`).join('')}</optgroup>`;
-    const islandGroup = `<optgroup label="${t('planner.islands')}">${sortedIslands.map(p => `<option value="${p.k}"${p.k === selected ? ' selected' : ''}>${p.name}</option>`).join('')}</optgroup>`;
-    return `<option value="">— ${t('planner.choose')} —</option>${mainlandGroup}${islandGroup}`;
-  };
+  // FROM dropdown — full list (mainland + islands)
+  const fromOptionsHtml = `<option value="">— ${t('planner.choose')} —</option>` +
+    `<optgroup label="${t('planner.mainland')}">${sortedMainland.map(p => `<option value="${p.k}"${p.k === plannerState.from ? ' selected' : ''}>${p.name}</option>`).join('')}</optgroup>` +
+    `<optgroup label="${t('planner.islands')}">${sortedIslands.map(p => `<option value="${p.k}"${p.k === plannerState.from ? ' selected' : ''}>${p.name}</option>`).join('')}</optgroup>`;
 
   el.innerHTML = `
     <div class="planner-card">
       <div class="planner-row">
         <div class="planner-field">
           <label for="planner-from">${t('planner.from')}</label>
-          <select id="planner-from" class="planner-select">${buildOptions(plannerState.from)}</select>
+          <select id="planner-from" class="planner-select">${fromOptionsHtml}</select>
         </div>
         <div class="planner-arrow" aria-hidden="true">→</div>
         <div class="planner-field">
           <label for="planner-to">${t('planner.to')}</label>
-          <select id="planner-to" class="planner-select">${buildOptions(plannerState.to)}</select>
+          <select id="planner-to" class="planner-select" disabled>
+            <option value="">— ${t('planner.pickfromfirst')} —</option>
+          </select>
         </div>
       </div>
-      <button id="planner-go" class="planner-go-btn">${t('planner.find')}</button>
+      <button id="planner-go" class="planner-go-btn" disabled>${t('planner.find')}</button>
       <div id="planner-result" class="planner-result"></div>
     </div>`;
 
-  document.getElementById('planner-from').addEventListener('change', (e) => { plannerState.from = e.target.value; });
-  document.getElementById('planner-to').addEventListener('change', (e) => { plannerState.to = e.target.value; });
+  document.getElementById('planner-from').addEventListener('change', (e) => {
+    plannerState.from = e.target.value;
+    plannerState.to = '';
+    refreshDestinationDropdown();
+    document.getElementById('planner-result').innerHTML = '';
+  });
+  document.getElementById('planner-to').addEventListener('change', (e) => {
+    plannerState.to = e.target.value;
+    document.getElementById('planner-go').disabled = !plannerState.to;
+  });
   document.getElementById('planner-go').addEventListener('click', () => runPlannerSearch());
+
+  if (plannerState.from) refreshDestinationDropdown();
+}
+
+// Update the destination dropdown to only show reachable ports, sorted by travel time
+function refreshDestinationDropdown() {
+  const toSelect = document.getElementById('planner-to');
+  const goBtn = document.getElementById('planner-go');
+  if (!toSelect) return;
+
+  if (!plannerState.from) {
+    toSelect.innerHTML = `<option value="">— ${t('planner.pickfromfirst')} —</option>`;
+    toSelect.disabled = true;
+    if (goBtn) goBtn.disabled = true;
+    return;
+  }
+
+  const reachable = reachableFrom(plannerState.from);
+  // Sort destinations by total minutes ascending
+  const entries = Object.keys(reachable)
+    .map(k => ({ k, cost: reachable[k], name: portDisplayName(k) }))
+    .sort((a, b) => a.cost - b.cost);
+
+  // Group by mainland vs island, but keep travel-time order within each group
+  const mainlandDests = entries.filter(e => MAINLAND_PORTS[e.k]);
+  const islandDests   = entries.filter(e => ISLANDS_DATA[e.k]);
+
+  const formatOption = (e) => {
+    const durLabel = formatDuration(Math.round(e.cost));
+    return `<option value="${e.k}">${e.name} · ${durLabel}</option>`;
+  };
+
+  let html = `<option value="">— ${t('planner.choose')} —</option>`;
+  if (islandDests.length) {
+    html += `<optgroup label="${t('planner.islands')}">${islandDests.map(formatOption).join('')}</optgroup>`;
+  }
+  if (mainlandDests.length) {
+    html += `<optgroup label="${t('planner.mainland')}">${mainlandDests.map(formatOption).join('')}</optgroup>`;
+  }
+  toSelect.innerHTML = html;
+  toSelect.disabled = false;
+  if (goBtn) goBtn.disabled = !plannerState.to;
 }
 
 const plannerState = { from: '', to: '' };

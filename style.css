@@ -686,7 +686,18 @@ body.home-view-active #site-footer {
   cursor: pointer;
   transition: background 0.15s;
 }
-.planner-go-btn:hover { background: var(--aegean-dark); }
+.planner-go-btn:hover:not(:disabled) { background: var(--aegean-dark); }
+.planner-go-btn:disabled {
+  background: var(--marble-3);
+  color: var(--ink-4);
+  cursor: not-allowed;
+}
+.planner-select:disabled {
+  background: var(--marble-2);
+  color: var(--ink-4);
+  cursor: not-allowed;
+  opacity: 0.65;
+}
 .planner-result:empty { display: none; }
 .planner-result { margin-top: 18px; }
 

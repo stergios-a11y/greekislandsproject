@@ -206,6 +206,7 @@ const UI_TEXT = {
   'planner.from':        { en: 'From', el: 'Από' },
   'planner.to':          { en: 'To', el: 'Προς' },
   'planner.choose':      { en: 'choose', el: 'επίλεξε' },
+  'planner.pickfromfirst':{ en: 'pick a starting point first', el: 'διάλεξε πρώτα σημείο εκκίνησης' },
   'planner.find':        { en: 'Find route', el: 'Βρες διαδρομή' },
   'planner.mainland':    { en: 'Mainland ports', el: 'Λιμάνια στεριάς' },
   'planner.islands':     { en: 'Islands', el: 'Νησιά' },
