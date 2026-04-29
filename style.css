@@ -4295,17 +4295,17 @@ html.dark .mission-disagree-box {
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
-/* Above (tick at 25% of 2-col): left edge of pill starts at tick, grows rightward */
+/* Above: tick at 25% of 2-col span — pill centred on tick */
 .wtv-cap-above .wtv-cap-text {
   bottom: 10px;
   left: 25%;
-  transform: translateX(-30%);  /* nudge left so tick is ~30% into pill */
+  transform: translateX(-50%);
 }
-/* Below (tick at 75% of 2-col): right edge of pill ends at tick, grows leftward */
+/* Below: tick at 75% of 2-col span — pill centred on tick */
 .wtv-cap-below .wtv-cap-text {
   top: 10px;
   left: 75%;
-  transform: translateX(-70%);  /* nudge left so tick is ~70% into pill */
+  transform: translateX(-50%);
 }
 
 /* Tick marks */
