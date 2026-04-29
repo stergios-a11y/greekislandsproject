@@ -4276,7 +4276,7 @@ html.dark .mission-disagree-box {
 .wtv-cap-text {
   position: absolute;
   /* sizing */
-  width: 160%;                  /* 160% of 2-col span ≈ 3.2 cell-widths */
+  width: 120%;                  /* 120% of 2-col span ≈ 2.4 cell-widths — fits trimmed captions without overlap */
   box-sizing: border-box;
   padding: 5px 10px;
   /* appearance */
