@@ -622,6 +622,196 @@ body.home-view-active #site-footer {
 ---------------------------------------------------------- */
 .hopping-intro { margin-bottom: 24px; font-size: var(--text-small); }
 
+/* ============================================================
+   FERRY PLANNER
+============================================================ */
+.planner-title {
+  margin: 32px 0 8px;
+}
+#ferry-planner { margin-bottom: 28px; }
+.planner-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+.planner-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 14px;
+  align-items: end;
+  margin-bottom: 16px;
+}
+.planner-field { display: flex; flex-direction: column; gap: 4px; }
+.planner-field label {
+  font-size: var(--text-meta);
+  font-weight: 600;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.planner-select {
+  padding: 10px 12px;
+  font-size: var(--text-small);
+  font-family: var(--sans);
+  border: 1.5px solid var(--border-2);
+  border-radius: var(--radius);
+  background: var(--marble);
+  color: var(--ink);
+  cursor: pointer;
+}
+.planner-select:focus {
+  outline: none;
+  border-color: var(--aegean);
+  background: var(--white);
+}
+.planner-arrow {
+  font-size: var(--text-section);
+  color: var(--aegean);
+  font-weight: 700;
+  padding-bottom: 6px;
+}
+.planner-go-btn {
+  display: block;
+  width: 100%;
+  padding: 12px 24px;
+  font-size: var(--text-body);
+  font-family: var(--sans);
+  font-weight: 700;
+  background: var(--aegean);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.planner-go-btn:hover { background: var(--aegean-dark); }
+.planner-result:empty { display: none; }
+.planner-result { margin-top: 18px; }
+
+.planner-msg {
+  padding: 12px 16px;
+  background: var(--marble-2);
+  border-left: 3px solid var(--aegean);
+  border-radius: var(--radius);
+  font-size: var(--text-small);
+  color: var(--ink-2);
+}
+.planner-msg-warn {
+  border-left-color: #C25450;
+  background: rgba(194, 84, 80, 0.07);
+}
+
+.planner-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 14px 0;
+  margin-bottom: 16px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.planner-summary-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.planner-stat-num {
+  font-family: var(--serif);
+  font-size: var(--text-sub);
+  font-weight: 700;
+  color: var(--aegean-dark);
+  line-height: 1.1;
+}
+.planner-stat-lbl {
+  font-size: var(--text-meta);
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 4px;
+}
+
+.planner-hops {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.planner-hop {
+  padding: 12px 14px;
+  background: var(--marble);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.planner-hop-route {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--text-body);
+  margin-bottom: 6px;
+}
+.planner-hop-arrow {
+  color: var(--aegean);
+  font-size: var(--text-small);
+}
+.planner-hop-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 4px;
+  font-size: var(--text-meta);
+}
+.planner-hop-dur {
+  color: var(--ink-2);
+  font-weight: 600;
+}
+.planner-hop-freq {
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.planner-freq-high { background: rgba(11, 143, 172, 0.15); color: var(--aegean-dark); }
+.planner-freq-med  { background: rgba(255, 107, 107, 0.15); color: #B33E3E; }
+.planner-freq-low  { background: rgba(196, 150, 42, 0.15); color: #8B6A1A; }
+.planner-freq-seasonal { background: rgba(196, 150, 42, 0.15); color: #8B6A1A; }
+.planner-hop-price { color: var(--ink-3); }
+.planner-hop-note {
+  font-size: var(--text-meta);
+  color: var(--ink-3);
+  font-style: italic;
+}
+
+.planner-disclaimer {
+  margin-top: 14px;
+  padding: 10px 14px;
+  background: rgba(11, 143, 172, 0.04);
+  border-radius: var(--radius);
+  font-size: var(--text-meta);
+  color: var(--ink-3);
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .planner-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .planner-arrow {
+    text-align: center;
+    transform: rotate(90deg);
+    padding: 0;
+  }
+  .planner-summary { grid-template-columns: 1fr; gap: 8px; }
+  .planner-summary-stat { flex-direction: row; justify-content: space-between; align-items: baseline; }
+  .planner-stat-lbl { margin-top: 0; }
+}
+
+html.dark .planner-card { background: var(--marble); }
+html.dark .planner-hop { background: rgba(255,255,255,0.04); }
+html.dark .planner-msg { background: rgba(255,255,255,0.04); }
+html.dark .planner-disclaimer { background: rgba(11, 143, 172, 0.10); }
+
 /* ----------------------------------------------------------
    MATCH ME QUIZ
 ---------------------------------------------------------- */

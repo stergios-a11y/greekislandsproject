@@ -282,7 +282,7 @@ function showView(view, param) {
   document.body.classList.toggle('home-view-active', view === 'home');
   if (nav && nav.classList.contains('open')) nav.classList.remove('open');
   if (view === 'home' && mapInstance) setTimeout(() => mapInstance.invalidateSize(), 100);
-  if (view === 'hopping') setTimeout(renderHopping, 50);
+  if (view === 'hopping') { setTimeout(renderHopping, 50); setTimeout(renderFerryPlanner, 50); }
   if (view === 'international') setTimeout(renderInternational, 50);
   if (view === 'match') setupQuizIfNeeded();
   if (view === 'shortlist') renderShortlist();
@@ -2040,6 +2040,414 @@ const RHODES_PORT = { lat: 36.451, lng: 28.227 };
 
 // Each route: from, to, frequency (high/med/low), duration, note
 // polyline: optional array of keys for multi-stop routes drawn as one line
+// ============================================================
+//  FERRY PLANNER — graph + Dijkstra pathfinding
+//  ~170 island↔island and mainland→island routes for shortest-path queries.
+//  See: findFerryRoute(fromKey, toKey) below.
+// ============================================================
+
+const FERRY_GRAPH = [
+  { a: 'aegina', b: 'agistri', dur: 15, freq: 'high', plo: 3, phi: 5, note: "multiple daily" },
+  { a: 'aegina', b: 'poros', dur: 60, freq: 'high', plo: 10, phi: 16, note: "multiple daily" },
+  { a: 'agathonisi', b: 'patmos', dur: 60, freq: 'low', plo: 8, phi: 14, note: "2-3/week" },
+  { a: 'agathonisi', b: 'samos', dur: 90, freq: 'low', plo: 10, phi: 16, note: "2-3/week" },
+  { a: 'agia-marina', b: 'evia-central', dur: 30, freq: 'high', plo: 4, phi: 8, note: "frequent ferry" },
+  { a: 'alexandroupoli', b: 'samothrace', dur: 150, freq: 'med', plo: 12, phi: 22, note: "6/week" },
+  { a: 'amorgos', b: 'astypalaia', dur: 180, freq: 'low', plo: 18, phi: 28, note: "2-3/week" },
+  { a: 'andros', b: 'mykonos', dur: 135, freq: 'med', plo: 18, phi: 28, note: "most days" },
+  { a: 'andros', b: 'syros', dur: 150, freq: 'med', plo: 14, phi: 24, note: "most days" },
+  { a: 'andros', b: 'tinos', dur: 105, freq: 'high', plo: 12, phi: 20, note: "daily" },
+  { a: 'arkitsa', b: 'evia-north', dur: 40, freq: 'high', plo: 5, phi: 10, note: "every 1-2h" },
+  { a: 'astypalaia', b: 'kalymnos', dur: 180, freq: 'low', plo: 14, phi: 22, note: "2-3/week" },
+  { a: 'astypalaia', b: 'kos', dur: 240, freq: 'low', plo: 18, phi: 28, note: "3-4/week" },
+  { a: 'chania', b: 'piraeus', dur: 540, freq: 'high', plo: 40, phi: 120, note: "overnight daily Anek" },
+  { a: 'chios', b: 'lesvos', dur: 180, freq: 'med', plo: 18, phi: 28, note: "6/week" },
+  { a: 'chios', b: 'oinousses', dur: 60, freq: 'high', plo: 4, phi: 8, note: "daily small ferry" },
+  { a: 'chios', b: 'psara', dur: 240, freq: 'low', plo: 10, phi: 18, note: "2-3/week" },
+  { a: 'chios', b: 'samos', dur: 240, freq: 'low', plo: 18, phi: 28, note: "3-4/week" },
+  { a: 'corfu', b: 'paxos', dur: 90, freq: 'med', plo: 14, phi: 22, note: "4-5/week summer" },
+  { a: 'donousa', b: 'amorgos', dur: 60, freq: 'med', plo: 8, phi: 14, note: "Skopelitis to Aegiali" },
+  { a: 'folegandros', b: 'ios', dur: 45, freq: 'med', plo: 10, phi: 16, note: "most days" },
+  { a: 'folegandros', b: 'milos', dur: 90, freq: 'med', plo: 12, phi: 20, note: "daily summer" },
+  { a: 'folegandros', b: 'santorini', dur: 90, freq: 'med', plo: 14, phi: 22, note: "most days" },
+  { a: 'folegandros', b: 'sikinos', dur: 30, freq: 'med', plo: 6, phi: 12, note: "most days" },
+  { a: 'fournoi', b: 'ikaria', dur: 60, freq: 'med', plo: 6, phi: 12, note: "most days" },
+  { a: 'halki', b: 'tilos', dur: 90, freq: 'low', plo: 12, phi: 18, note: "2-3/week" },
+  { a: 'heraklion', b: 'ios', dur: 135, freq: 'med', plo: 28, phi: 45, note: "most days summer" },
+  { a: 'heraklion', b: 'karpathos', dur: 420, freq: 'low', plo: 25, phi: 40, note: "2-3/week" },
+  { a: 'heraklion', b: 'kasos', dur: 360, freq: 'low', plo: 22, phi: 35, note: "2-3/week" },
+  { a: 'heraklion', b: 'mykonos', dur: 165, freq: 'med', plo: 35, phi: 60, note: "most days summer" },
+  { a: 'heraklion', b: 'naxos', dur: 150, freq: 'med', plo: 30, phi: 50, note: "most days summer" },
+  { a: 'heraklion', b: 'paros', dur: 180, freq: 'med', plo: 30, phi: 50, note: "most days summer" },
+  { a: 'heraklion', b: 'rhodes', dur: 720, freq: 'low', plo: 35, phi: 60, note: "2-3/week" },
+  { a: 'heraklion', b: 'santorini', dur: 105, freq: 'high', plo: 30, phi: 50, note: "daily SeaJets" },
+  { a: 'hydra', b: 'spetses', dur: 30, freq: 'high', plo: 14, phi: 22, note: "multiple daily" },
+  { a: 'igoumenitsa', b: 'corfu', dur: 90, freq: 'high', plo: 11, phi: 18, note: "multiple daily" },
+  { a: 'igoumenitsa', b: 'paxos', dur: 90, freq: 'low', plo: 14, phi: 22, note: "few/week" },
+  { a: 'ios', b: 'santorini', dur: 50, freq: 'high', plo: 18, phi: 28, note: "daily" },
+  { a: 'iraklia', b: 'schoinoussa', dur: 30, freq: 'med', plo: 4, phi: 8, note: "Skopelitis" },
+  { a: 'kalymnos', b: 'leros', dur: 45, freq: 'high', plo: 8, phi: 14, note: "daily" },
+  { a: 'karpathos', b: 'kasos', dur: 60, freq: 'med', plo: 8, phi: 14, note: "4-5/week" },
+  { a: 'kasos', b: 'rhodes', dur: 300, freq: 'low', plo: 22, phi: 38, note: "2-3/week" },
+  { a: 'kavala', b: 'thasos', dur: 80, freq: 'high', plo: 7, phi: 12, note: "every 1-2h, also Keramoti 35min" },
+  { a: 'kefalonia', b: 'ithaca', dur: 30, freq: 'high', plo: 4, phi: 7, note: "multiple daily" },
+  { a: 'kefalonia', b: 'zakynthos', dur: 90, freq: 'low', plo: 12, phi: 18, note: "summer-only via Pesada" },
+  { a: 'keramoti', b: 'thasos', dur: 35, freq: 'high', plo: 4, phi: 7, note: "every 30-60min" },
+  { a: 'kos', b: 'kalymnos', dur: 45, freq: 'high', plo: 8, phi: 14, note: "daily catamaran + Mastichari shuttle" },
+  { a: 'kos', b: 'leros', dur: 90, freq: 'high', plo: 12, phi: 20, note: "daily" },
+  { a: 'kos', b: 'nisyros', dur: 75, freq: 'med', plo: 10, phi: 18, note: "most days" },
+  { a: 'kos', b: 'patmos', dur: 150, freq: 'high', plo: 18, phi: 28, note: "daily" },
+  { a: 'koufonisia', b: 'amorgos', dur: 75, freq: 'med', plo: 10, phi: 16, note: "Skopelitis" },
+  { a: 'koufonisia', b: 'donousa', dur: 60, freq: 'med', plo: 6, phi: 12, note: "Skopelitis" },
+  { a: 'kyllini', b: 'kefalonia', dur: 90, freq: 'high', plo: 11, phi: 18, note: "to Poros, multiple daily" },
+  { a: 'kyllini', b: 'zakynthos', dur: 60, freq: 'high', plo: 9, phi: 15, note: "multiple daily" },
+  { a: 'kymi', b: 'skyros', dur: 90, freq: 'med', plo: 12, phi: 22, note: "2/day" },
+  { a: 'kythnos', b: 'kea', dur: 90, freq: 'low', plo: 8, phi: 14, note: "2-3/week" },
+  { a: 'kythnos', b: 'serifos', dur: 60, freq: 'med', plo: 8, phi: 14, note: "most days" },
+  { a: 'lavrio', b: 'kea', dur: 60, freq: 'high', plo: 10, phi: 16, note: "multiple daily" },
+  { a: 'lavrio', b: 'kythnos', dur: 150, freq: 'med', plo: 16, phi: 24, note: "daily" },
+  { a: 'lefkada', b: 'ithaca', dur: 75, freq: 'med', plo: 10, phi: 16, note: "summer" },
+  { a: 'lefkada', b: 'kefalonia', dur: 90, freq: 'med', plo: 10, phi: 16, note: "from Vassiliki to Fiskardo, summer" },
+  { a: 'lefkada', b: 'meganisi', dur: 25, freq: 'high', plo: 4, phi: 7, note: "multiple daily from Nydri" },
+  { a: 'leipsoi', b: 'agathonisi', dur: 60, freq: 'low', plo: 8, phi: 12, note: "2-3/week" },
+  { a: 'lemnos', b: 'agios-efstratios', dur: 150, freq: 'low', plo: 8, phi: 14, note: "2-3/week" },
+  { a: 'lemnos', b: 'kavala', dur: 360, freq: 'low', plo: 22, phi: 35, note: "2-3/week" },
+  { a: 'leros', b: 'leipsoi', dur: 30, freq: 'med', plo: 6, phi: 10, note: "most days" },
+  { a: 'leros', b: 'patmos', dur: 60, freq: 'high', plo: 10, phi: 16, note: "daily" },
+  { a: 'lesvos', b: 'lemnos', dur: 360, freq: 'low', plo: 22, phi: 35, note: "2/week" },
+  { a: 'milos', b: 'kimolos', dur: 30, freq: 'high', plo: 4, phi: 8, note: "daily" },
+  { a: 'mykonos', b: 'santorini', dur: 150, freq: 'high', plo: 35, phi: 65, note: "daily" },
+  { a: 'naxos', b: 'amorgos', dur: 180, freq: 'med', plo: 16, phi: 28, note: "daily" },
+  { a: 'naxos', b: 'ios', dur: 90, freq: 'high', plo: 18, phi: 28, note: "daily" },
+  { a: 'naxos', b: 'iraklia', dur: 90, freq: 'med', plo: 10, phi: 16, note: "Skopelitis, 6/week" },
+  { a: 'naxos', b: 'mykonos', dur: 90, freq: 'high', plo: 22, phi: 35, note: "daily" },
+  { a: 'naxos', b: 'santorini', dur: 120, freq: 'high', plo: 28, phi: 50, note: "daily" },
+  { a: 'neapoli', b: 'kythira', dur: 60, freq: 'high', plo: 12, phi: 18, note: "multiple daily" },
+  { a: 'paros', b: 'antiparos', dur: 10, freq: 'high', plo: 1, phi: 2, note: "continuous shuttle" },
+  { a: 'paros', b: 'ios', dur: 90, freq: 'high', plo: 18, phi: 28, note: "daily" },
+  { a: 'paros', b: 'mykonos', dur: 45, freq: 'high', plo: 18, phi: 30, note: "multiple daily" },
+  { a: 'paros', b: 'naxos', dur: 30, freq: 'high', plo: 8, phi: 14, note: "shortest major hop, 8+/day" },
+  { a: 'paros', b: 'santorini', dur: 150, freq: 'high', plo: 30, phi: 55, note: "daily" },
+  { a: 'patmos', b: 'ikaria', dur: 120, freq: 'med', plo: 14, phi: 22, note: "most days" },
+  { a: 'patmos', b: 'leipsoi', dur: 30, freq: 'high', plo: 5, phi: 9, note: "multiple daily summer" },
+  { a: 'patmos', b: 'samos', dur: 105, freq: 'med', plo: 14, phi: 22, note: "most days" },
+  { a: 'patras', b: 'ithaca', dur: 210, freq: 'med', plo: 14, phi: 22, note: "to Pisaetos, daily" },
+  { a: 'patras', b: 'kefalonia', dur: 180, freq: 'med', plo: 14, phi: 22, note: "to Sami, daily" },
+  { a: 'perama', b: 'salamis', dur: 15, freq: 'high', plo: 1, phi: 2, note: "every 15min" },
+  { a: 'piraeus', b: 'aegina', dur: 60, freq: 'high', plo: 10, phi: 15, note: "Hellenic Seaways, Saronic Ferries · multiple daily" },
+  { a: 'piraeus', b: 'agistri', dur: 75, freq: 'high', plo: 10, phi: 15, note: "via Aegina, multiple daily" },
+  { a: 'piraeus', b: 'amorgos', dur: 540, freq: 'med', plo: 40, phi: 55, note: "via Naxos, daily" },
+  { a: 'piraeus', b: 'anafi', dur: 540, freq: 'low', plo: 42, phi: 65, note: "via Santorini, 3-4/week" },
+  { a: 'piraeus', b: 'andros', dur: 240, freq: 'med', plo: 28, phi: 42, note: "via Rafina more direct" },
+  { a: 'piraeus', b: 'astypalaia', dur: 660, freq: 'low', plo: 45, phi: 65, note: "2-3/week" },
+  { a: 'piraeus', b: 'chios', dur: 480, freq: 'med', plo: 38, phi: 60, note: "overnight daily" },
+  { a: 'piraeus', b: 'donousa', dur: 540, freq: 'low', plo: 38, phi: 55, note: "via Naxos" },
+  { a: 'piraeus', b: 'folegandros', dur: 360, freq: 'med', plo: 40, phi: 60, note: "daily summer" },
+  { a: 'piraeus', b: 'heraklion', dur: 540, freq: 'high', plo: 40, phi: 90, note: "overnight daily, Minoan/Anek" },
+  { a: 'piraeus', b: 'hydra', dur: 120, freq: 'high', plo: 28, phi: 35, note: "Flying Cat hydrofoil" },
+  { a: 'piraeus', b: 'ikaria', dur: 540, freq: 'med', plo: 40, phi: 60, note: "daily summer" },
+  { a: 'piraeus', b: 'ios', dur: 420, freq: 'high', plo: 40, phi: 65, note: "multiple daily summer" },
+  { a: 'piraeus', b: 'iraklia', dur: 480, freq: 'low', plo: 38, phi: 55, note: "via Naxos, Express Skopelitis" },
+  { a: 'piraeus', b: 'kalymnos', dur: 720, freq: 'med', plo: 48, phi: 75, note: "daily" },
+  { a: 'piraeus', b: 'karpathos', dur: 1020, freq: 'low', plo: 50, phi: 90, note: "2-3/week, via Crete" },
+  { a: 'piraeus', b: 'kasos', dur: 1080, freq: 'low', plo: 50, phi: 90, note: "2-3/week, via Crete" },
+  { a: 'piraeus', b: 'kimolos', dur: 270, freq: 'med', plo: 32, phi: 50, note: "via Milos most days" },
+  { a: 'piraeus', b: 'kos', dur: 780, freq: 'med', plo: 50, phi: 80, note: "daily Blue Star" },
+  { a: 'piraeus', b: 'koufonisia', dur: 510, freq: 'low', plo: 38, phi: 55, note: "via Naxos" },
+  { a: 'piraeus', b: 'kythira', dur: 420, freq: 'low', plo: 35, phi: 55, note: "2-3/week" },
+  { a: 'piraeus', b: 'kythnos', dur: 150, freq: 'high', plo: 22, phi: 32, note: "multiple daily" },
+  { a: 'piraeus', b: 'lemnos', dur: 1080, freq: 'low', plo: 45, phi: 80, note: "overnight, 2-3/week" },
+  { a: 'piraeus', b: 'leros', dur: 660, freq: 'med', plo: 45, phi: 70, note: "daily Blue Star" },
+  { a: 'piraeus', b: 'lesvos', dur: 720, freq: 'med', plo: 40, phi: 70, note: "overnight daily" },
+  { a: 'piraeus', b: 'milos', dur: 240, freq: 'high', plo: 35, phi: 55, note: "Adamantios Korais, SeaJets" },
+  { a: 'piraeus', b: 'mykonos', dur: 285, freq: 'high', plo: 30, phi: 65, note: "Hellenic Seaways, SeaJets · daily" },
+  { a: 'piraeus', b: 'naxos', dur: 300, freq: 'high', plo: 38, phi: 55, note: "Blue Star, SeaJets · multiple daily" },
+  { a: 'piraeus', b: 'paros', dur: 240, freq: 'high', plo: 36, phi: 55, note: "Blue Star, SeaJets · multiple daily" },
+  { a: 'piraeus', b: 'patmos', dur: 540, freq: 'med', plo: 42, phi: 65, note: "daily Blue Star" },
+  { a: 'piraeus', b: 'poros', dur: 90, freq: 'high', plo: 14, phi: 22, note: "multiple daily" },
+  { a: 'piraeus', b: 'rhodes', dur: 960, freq: 'med', plo: 55, phi: 180, note: "daily, 13-18h" },
+  { a: 'piraeus', b: 'salamis', dur: 15, freq: 'high', plo: 1, phi: 2, note: "from Perama, very frequent" },
+  { a: 'piraeus', b: 'samos', dur: 720, freq: 'med', plo: 42, phi: 70, note: "overnight" },
+  { a: 'piraeus', b: 'santorini', dur: 450, freq: 'high', plo: 40, phi: 90, note: "Blue Star, SeaJets · daily" },
+  { a: 'piraeus', b: 'schoinoussa', dur: 510, freq: 'low', plo: 38, phi: 55, note: "via Naxos" },
+  { a: 'piraeus', b: 'serifos', dur: 180, freq: 'high', plo: 30, phi: 42, note: "daily" },
+  { a: 'piraeus', b: 'sifnos', dur: 210, freq: 'high', plo: 32, phi: 48, note: "daily" },
+  { a: 'piraeus', b: 'sikinos', dur: 420, freq: 'med', plo: 38, phi: 58, note: "via Folegandros" },
+  { a: 'piraeus', b: 'spetses', dur: 130, freq: 'high', plo: 35, phi: 45, note: "Flying Cat" },
+  { a: 'piraeus', b: 'syros', dur: 240, freq: 'high', plo: 28, phi: 38, note: "Blue Star, Golden Star · daily" },
+  { a: 'piraeus', b: 'tinos', dur: 270, freq: 'high', plo: 30, phi: 50, note: "via Syros" },
+  { a: 'poros', b: 'hydra', dur: 30, freq: 'high', plo: 12, phi: 18, note: "multiple daily" },
+  { a: 'pounta', b: 'elafonisos', dur: 10, freq: 'high', plo: 1, phi: 2, note: "every 30 min" },
+  { a: 'rafina', b: 'andros', dur: 120, freq: 'high', plo: 18, phi: 28, note: "multiple daily Hellenic Seaways" },
+  { a: 'rafina', b: 'evia-south', dur: 60, freq: 'high', plo: 6, phi: 12, note: "to Marmari, multiple daily" },
+  { a: 'rafina', b: 'mykonos', dur: 165, freq: 'high', plo: 28, phi: 50, note: "fast daily" },
+  { a: 'rafina', b: 'naxos', dur: 225, freq: 'med', plo: 35, phi: 55, note: "fast daily summer" },
+  { a: 'rafina', b: 'paros', dur: 195, freq: 'med', plo: 32, phi: 50, note: "fast daily summer" },
+  { a: 'rafina', b: 'tinos', dur: 165, freq: 'high', plo: 22, phi: 35, note: "multiple daily" },
+  { a: 'rhodes', b: 'halki', dur: 60, freq: 'high', plo: 10, phi: 18, note: "daily small ferry" },
+  { a: 'rhodes', b: 'karpathos', dur: 240, freq: 'med', plo: 22, phi: 38, note: "most days" },
+  { a: 'rhodes', b: 'kastellorizo', dur: 180, freq: 'low', plo: 18, phi: 30, note: "3-4/week" },
+  { a: 'rhodes', b: 'kos', dur: 150, freq: 'high', plo: 22, phi: 38, note: "daily Dodekanisos Express" },
+  { a: 'rhodes', b: 'nisyros', dur: 180, freq: 'low', plo: 18, phi: 28, note: "2-3/week direct, more via Kos" },
+  { a: 'rhodes', b: 'symi', dur: 60, freq: 'high', plo: 12, phi: 22, note: "daily Dodekanisos Pride" },
+  { a: 'rhodes', b: 'tilos', dur: 105, freq: 'med', plo: 14, phi: 24, note: "most days" },
+  { a: 'samos', b: 'fournoi', dur: 90, freq: 'med', plo: 8, phi: 14, note: "most days" },
+  { a: 'samos', b: 'ikaria', dur: 90, freq: 'med', plo: 12, phi: 20, note: "daily" },
+  { a: 'santorini', b: 'anafi', dur: 90, freq: 'med', plo: 15, phi: 25, note: "5-6/week" },
+  { a: 'santorini', b: 'milos', dur: 180, freq: 'med', plo: 28, phi: 42, note: "daily summer" },
+  { a: 'santorini', b: 'therasia', dur: 20, freq: 'high', plo: 3, phi: 5, note: "small boats from Ammoudi/Athinios" },
+  { a: 'schoinoussa', b: 'koufonisia', dur: 30, freq: 'med', plo: 4, phi: 8, note: "Skopelitis" },
+  { a: 'serifos', b: 'sifnos', dur: 45, freq: 'high', plo: 8, phi: 14, note: "daily" },
+  { a: 'sfakia', b: 'gavdos', dur: 150, freq: 'low', plo: 14, phi: 22, note: "3-5/week summer only" },
+  { a: 'sifnos', b: 'kimolos', dur: 60, freq: 'med', plo: 10, phi: 16, note: "most days" },
+  { a: 'sifnos', b: 'milos', dur: 75, freq: 'high', plo: 12, phi: 20, note: "daily" },
+  { a: 'sikinos', b: 'ios', dur: 60, freq: 'med', plo: 8, phi: 14, note: "most days" },
+  { a: 'sikinos', b: 'santorini', dur: 120, freq: 'low', plo: 14, phi: 22, note: "4-5/week" },
+  { a: 'sitia', b: 'karpathos', dur: 240, freq: 'low', plo: 14, phi: 24, note: "2-3/week" },
+  { a: 'sitia', b: 'kasos', dur: 150, freq: 'low', plo: 10, phi: 18, note: "2-3/week" },
+  { a: 'skiathos', b: 'alonnisos', dur: 90, freq: 'high', plo: 18, phi: 28, note: "multiple daily" },
+  { a: 'skiathos', b: 'skopelos', dur: 60, freq: 'high', plo: 14, phi: 22, note: "multiple daily" },
+  { a: 'skopelos', b: 'alonnisos', dur: 30, freq: 'high', plo: 8, phi: 14, note: "multiple daily" },
+  { a: 'souda', b: 'piraeus', dur: 540, freq: 'high', plo: 40, phi: 120, note: "overnight" },
+  { a: 'symi', b: 'kos', dur: 105, freq: 'low', plo: 14, phi: 22, note: "3-4/week" },
+  { a: 'syros', b: 'mykonos', dur: 60, freq: 'med', plo: 14, phi: 22, note: "most days" },
+  { a: 'syros', b: 'paros', dur: 75, freq: 'med', plo: 14, phi: 22, note: "daily" },
+  { a: 'syros', b: 'tinos', dur: 30, freq: 'high', plo: 10, phi: 18, note: "daily" },
+  { a: 'tilos', b: 'kos', dur: 150, freq: 'low', plo: 14, phi: 22, note: "3-4/week" },
+  { a: 'tilos', b: 'symi', dur: 90, freq: 'low', plo: 12, phi: 18, note: "2-3/week" },
+  { a: 'tinos', b: 'mykonos', dur: 25, freq: 'high', plo: 10, phi: 18, note: "multiple daily" },
+  { a: 'tripiti', b: 'ammouliani', dur: 5, freq: 'high', plo: 1, phi: 2, note: "frequent" },
+  { a: 'volos', b: 'alonnisos', dur: 300, freq: 'high', plo: 24, phi: 45, note: "multiple daily" },
+  { a: 'volos', b: 'skiathos', dur: 150, freq: 'high', plo: 18, phi: 35, note: "multiple daily" },
+  { a: 'volos', b: 'skopelos', dur: 240, freq: 'high', plo: 22, phi: 42, note: "multiple daily" },
+  { a: 'paros', b: 'folegandros', dur: 105, freq: 'med', plo: 16, phi: 26, note: "most days" },
+  { a: 'naxos', b: 'folegandros', dur: 90, freq: 'med', plo: 14, phi: 22, note: "most days" },
+  { a: 'paros', b: 'milos', dur: 165, freq: 'med', plo: 18, phi: 28, note: "most days summer" },
+  { a: 'naxos', b: 'milos', dur: 180, freq: 'low', plo: 18, phi: 28, note: "few/week summer" },
+  { a: 'paros', b: 'sifnos', dur: 105, freq: 'low', plo: 14, phi: 22, note: "few/week" },
+  { a: 'paros', b: 'serifos', dur: 135, freq: 'low', plo: 16, phi: 24, note: "few/week" },
+];
+
+const MAINLAND_PORTS = {
+  'piraeus': { name: 'Piraeus (Athens)', name_el: 'Πειραιάς (Αθήνα)', lat: 37.94, lng: 23.643 },
+  'rafina': { name: 'Rafina (Athens)', name_el: 'Ραφήνα (Αθήνα)', lat: 38.024, lng: 24.005 },
+  'lavrio': { name: 'Lavrio', name_el: 'Λαύριο', lat: 37.713, lng: 24.058 },
+  'kyllini': { name: 'Kyllini', name_el: 'Κυλλήνη', lat: 37.939, lng: 21.146 },
+  'patras': { name: 'Patras', name_el: 'Πάτρα', lat: 38.246, lng: 21.736 },
+  'igoumenitsa': { name: 'Igoumenitsa', name_el: 'Ηγουμενίτσα', lat: 39.503, lng: 20.265 },
+  'volos': { name: 'Volos', name_el: 'Βόλος', lat: 39.366, lng: 22.946 },
+  'kymi': { name: 'Kymi (Evia)', name_el: 'Κύμη (Εύβοια)', lat: 38.625, lng: 24.114 },
+  'neapoli': { name: 'Neapoli (Pelop.)', name_el: 'Νεάπολη (Πελοπ.)', lat: 36.512, lng: 23.057 },
+  'pounta': { name: 'Pounta', name_el: 'Πούντα', lat: 36.474, lng: 22.978 },
+  'kavala': { name: 'Kavala', name_el: 'Καβάλα', lat: 40.939, lng: 24.412 },
+  'keramoti': { name: 'Keramoti', name_el: 'Κεραμωτή', lat: 40.853, lng: 24.708 },
+  'alexandroupoli': { name: 'Alexandroupoli', name_el: 'Αλεξανδρούπολη', lat: 40.847, lng: 25.872 },
+  'tripiti': { name: 'Tripiti (Halkidiki)', name_el: 'Τρυπητή (Χαλκιδική)', lat: 40.323, lng: 23.915 },
+  'perama': { name: 'Perama (Athens)', name_el: 'Πέραμα (Αθήνα)', lat: 37.962, lng: 23.586 },
+  'agia-marina': { name: 'Agia Marina', name_el: 'Αγία Μαρίνα', lat: 38.062, lng: 23.987 },
+  'arkitsa': { name: 'Arkitsa', name_el: 'Αρκίτσα', lat: 38.755, lng: 23.013 },
+  'sfakia': { name: 'Sfakia (Crete)', name_el: 'Σφακιά (Κρήτη)', lat: 35.201, lng: 24.137 },
+  'sitia': { name: 'Sitia (Crete)', name_el: 'Σητεία (Κρήτη)', lat: 35.207, lng: 26.107 },
+  'souda': { name: 'Souda (Chania)', name_el: 'Σούδα (Χανιά)', lat: 35.491, lng: 24.08 },
+};
+
+// Build adjacency map for pathfinding (each edge stored with explicit `to`)
+function buildFerryAdj() {
+  const adj = {};
+  FERRY_GRAPH.forEach(e => {
+    if (!adj[e.a]) adj[e.a] = [];
+    if (!adj[e.b]) adj[e.b] = [];
+    // forward: a → b
+    adj[e.a].push({ to: e.b, dur: e.dur, freq: e.freq, plo: e.plo, phi: e.phi, note: e.note });
+    // reverse: b → a
+    adj[e.b].push({ to: e.a, dur: e.dur, freq: e.freq, plo: e.plo, phi: e.phi, note: e.note });
+  });
+  return adj;
+}
+const FERRY_ADJ = buildFerryAdj();
+
+// Penalty added when a route requires a transfer (in minutes)
+// — encourages direct routes; transfer cost reflects waiting at port
+const TRANSFER_PENALTY = 90;
+
+// Find the best route from A to B (by total duration including transfer wait).
+// Returns { hops: [...edges], totalMin, transfers, totalPriceLo, totalPriceHi } or null.
+// Limits to max 2 transfers (3 hops) to keep results practical.
+function findFerryRoute(fromKey, toKey) {
+  if (!fromKey || !toKey || fromKey === toKey) return null;
+  if (!FERRY_ADJ[fromKey]) return null;
+
+  // Dijkstra-ish but with hop limit
+  const MAX_HOPS = 3;
+  const best = {};                  // key → minimum cost found so far
+  const queue = [{ node: fromKey, cost: 0, path: [], hops: 0 }];
+  let bestSolution = null;
+
+  while (queue.length) {
+    queue.sort((a, b) => a.cost - b.cost);
+    const cur = queue.shift();
+    if (cur.node === toKey) {
+      if (!bestSolution || cur.cost < bestSolution.cost) {
+        bestSolution = cur;
+      }
+      continue;
+    }
+    if (cur.hops >= MAX_HOPS) continue;
+    if (best[cur.node] !== undefined && best[cur.node] <= cur.cost) continue;
+    best[cur.node] = cur.cost;
+    const edges = FERRY_ADJ[cur.node] || [];
+    for (const edge of edges) {
+      if (cur.path.some(h => h.to === edge.to)) continue; // no loops
+      const transferCost = cur.hops > 0 ? TRANSFER_PENALTY : 0;
+      const next = {
+        node: edge.to,
+        cost: cur.cost + edge.dur + transferCost,
+        path: [...cur.path, edge],
+        hops: cur.hops + 1,
+      };
+      queue.push(next);
+    }
+  }
+
+  if (!bestSolution) return null;
+  const hops = bestSolution.path;
+  const totalMin = hops.reduce((s, h) => s + h.dur, 0);
+  const totalPriceLo = hops.reduce((s, h) => s + h.plo, 0);
+  const totalPriceHi = hops.reduce((s, h) => s + h.phi, 0);
+  return {
+    hops,
+    totalMin,
+    transfers: hops.length - 1,
+    totalPriceLo,
+    totalPriceHi,
+  };
+}
+
+// Format minutes as "Xh Ym" or "Xm"
+function formatDuration(min) {
+  if (min < 60) return `${min}m`;
+  const h = Math.floor(min / 60);
+  const m = min % 60;
+  return m === 0 ? `${h}h` : `${h}h ${m}m`;
+}
+
+// Get display name for a port/island key (handles language)
+function portDisplayName(key) {
+  if (MAINLAND_PORTS[key]) {
+    return CURRENT_LANG === 'el' ? MAINLAND_PORTS[key].name_el : MAINLAND_PORTS[key].name;
+  }
+  if (ISLANDS_DATA[key]) {
+    return islandName(key);
+  }
+  return key;
+}
+
+// All ports (mainland + islands) for the dropdowns
+function allFerryPorts() {
+  const islands = Object.keys(ISLANDS_DATA).filter(k => FERRY_ADJ[k]);
+  const mainland = Object.keys(MAINLAND_PORTS).filter(k => FERRY_ADJ[k]);
+  return { mainland, islands };
+}
+
+// Render the planner panel (called on demand from the hopping view)
+function renderFerryPlanner() {
+  const el = document.getElementById('ferry-planner');
+  if (!el) return;
+  const { mainland, islands } = allFerryPorts();
+  const sortedIslands = islands.map(k => ({ k, name: islandName(k) })).sort((a, b) => a.name.localeCompare(b.name));
+  const sortedMainland = mainland.map(k => ({ k, name: portDisplayName(k) })).sort((a, b) => a.name.localeCompare(b.name));
+
+  const buildOptions = (selected) => {
+    const mainlandGroup = `<optgroup label="${t('planner.mainland')}">${sortedMainland.map(p => `<option value="${p.k}"${p.k === selected ? ' selected' : ''}>${p.name}</option>`).join('')}</optgroup>`;
+    const islandGroup = `<optgroup label="${t('planner.islands')}">${sortedIslands.map(p => `<option value="${p.k}"${p.k === selected ? ' selected' : ''}>${p.name}</option>`).join('')}</optgroup>`;
+    return `<option value="">— ${t('planner.choose')} —</option>${mainlandGroup}${islandGroup}`;
+  };
+
+  el.innerHTML = `
+    <div class="planner-card">
+      <div class="planner-row">
+        <div class="planner-field">
+          <label for="planner-from">${t('planner.from')}</label>
+          <select id="planner-from" class="planner-select">${buildOptions(plannerState.from)}</select>
+        </div>
+        <div class="planner-arrow" aria-hidden="true">→</div>
+        <div class="planner-field">
+          <label for="planner-to">${t('planner.to')}</label>
+          <select id="planner-to" class="planner-select">${buildOptions(plannerState.to)}</select>
+        </div>
+      </div>
+      <button id="planner-go" class="planner-go-btn">${t('planner.find')}</button>
+      <div id="planner-result" class="planner-result"></div>
+    </div>`;
+
+  document.getElementById('planner-from').addEventListener('change', (e) => { plannerState.from = e.target.value; });
+  document.getElementById('planner-to').addEventListener('change', (e) => { plannerState.to = e.target.value; });
+  document.getElementById('planner-go').addEventListener('click', () => runPlannerSearch());
+}
+
+const plannerState = { from: '', to: '' };
+
+function runPlannerSearch() {
+  const result = document.getElementById('planner-result');
+  if (!result) return;
+  if (!plannerState.from || !plannerState.to) {
+    result.innerHTML = `<div class="planner-msg">${t('planner.pickboth')}</div>`;
+    return;
+  }
+  if (plannerState.from === plannerState.to) {
+    result.innerHTML = `<div class="planner-msg">${t('planner.samepoint')}</div>`;
+    return;
+  }
+  const route = findFerryRoute(plannerState.from, plannerState.to);
+  if (!route) {
+    result.innerHTML = `<div class="planner-msg planner-msg-warn">${t('planner.noroute')}</div>`;
+    return;
+  }
+  // Render route hops
+  const hopsHtml = route.hops.map((h, i) => {
+    const fromName = i === 0 ? portDisplayName(plannerState.from) : portDisplayName(route.hops[i - 1].to);
+    const toName = portDisplayName(h.to);
+    const freqLabel = t(`planner.freq.${h.freq}`);
+    return `<div class="planner-hop">
+      <div class="planner-hop-route">
+        <strong>${fromName}</strong>
+        <span class="planner-hop-arrow">⛵</span>
+        <strong>${toName}</strong>
+      </div>
+      <div class="planner-hop-meta">
+        <span class="planner-hop-dur">⏱ ${formatDuration(h.dur)}</span>
+        <span class="planner-hop-freq planner-freq-${h.freq}">${freqLabel}</span>
+        <span class="planner-hop-price">€${h.plo}–${h.phi}</span>
+      </div>
+      <div class="planner-hop-note">${h.note}</div>
+    </div>`;
+  }).join('');
+
+  const transferText = route.transfers === 0
+    ? t('planner.direct')
+    : route.transfers === 1
+    ? t('planner.onetransfer')
+    : `${route.transfers} ${t('planner.transfers')}`;
+
+  result.innerHTML = `
+    <div class="planner-summary">
+      <div class="planner-summary-stat">
+        <span class="planner-stat-num">${formatDuration(route.totalMin)}</span>
+        <span class="planner-stat-lbl">${t('planner.totaltime')}</span>
+      </div>
+      <div class="planner-summary-stat">
+        <span class="planner-stat-num">${transferText}</span>
+        <span class="planner-stat-lbl">${t('planner.routetype')}</span>
+      </div>
+      <div class="planner-summary-stat">
+        <span class="planner-stat-num">€${route.totalPriceLo}–${route.totalPriceHi}</span>
+        <span class="planner-stat-lbl">${t('planner.totalprice')}</span>
+      </div>
+    </div>
+    <div class="planner-hops">${hopsHtml}</div>
+    <div class="planner-disclaimer">${t('planner.disclaimer')}</div>`;
+}
+
 const FERRY_ROUTES = [
   // Classic Cyclades triangle
   { from: 'piraeus', to: 'syros', freq: 'high', duration: '~4 hrs', note: 'Daily · ~4 hrs · Blue Star, Golden Star' },
