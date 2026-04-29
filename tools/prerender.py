@@ -970,33 +970,44 @@ def main():
     generate_sitemap(keys)
     print(f'✓ Sitemap regenerated with {len(keys)} islands + static pages')
 
+def file_lastmod(path):
+    """Return ISO-8601 date for the modification time of a file. Falls back to today."""
+    try:
+        ts = path.stat().st_mtime
+        return datetime.fromtimestamp(ts, tz=timezone.utc).strftime('%Y-%m-%d')
+    except Exception:
+        return datetime.now(timezone.utc).strftime('%Y-%m-%d')
+
 def generate_sitemap(island_keys):
     """Build a sitemap with proper hreflang alternates per Google's guidelines.
 
     Each unique URL gets its own <url> entry whose <loc> matches that URL.
+    Includes <lastmod> per URL — for island pages, derived from the underlying
+    JSON file's mtime, so Google sees per-island freshness on each redeploy.
+    For static pages, uses today's UTC date.
+
     Hash-fragment URLs (e.g. /#data) are NOT included — Google ignores
     everything after '#', so they're treated as duplicates of the homepage.
-    Internal SPA views are reachable from the homepage and don't need
-    separate sitemap entries.
     """
+    today = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+
     # Static pages: just the two language homepages. The internal SPA views
     # (/#data, /#compare, etc.) are NOT separate URLs to a search engine.
     static_pages = [
-        ('/', '/el/', 1.0),
+        ('/', '/el/', 1.0, today),
     ]
-    # Mission has its own meaningful entry-point — link directly to /#mission
-    # is NOT a separate URL, but if we ever give it a clean path we can add it.
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">')
 
-    def add_url_pair(en_path, el_path, priority):
+    def add_url_pair(en_path, el_path, priority, lastmod):
         """Emit two <url> entries (one EN, one EL) with reciprocal hreflang alternates."""
         url_en = f'{SITE_URL}{en_path}'
         url_el = f'{SITE_URL}{el_path}'
         # English entry
         lines.append('  <url>')
         lines.append(f'    <loc>{url_en}</loc>')
+        lines.append(f'    <lastmod>{lastmod}</lastmod>')
         lines.append(f'    <priority>{priority}</priority>')
         lines.append(f'    <xhtml:link rel="alternate" hreflang="en" href="{url_en}"/>')
         lines.append(f'    <xhtml:link rel="alternate" hreflang="el" href="{url_el}"/>')
@@ -1005,6 +1016,7 @@ def generate_sitemap(island_keys):
         # Greek entry — its OWN entry, with its OWN <loc>
         lines.append('  <url>')
         lines.append(f'    <loc>{url_el}</loc>')
+        lines.append(f'    <lastmod>{lastmod}</lastmod>')
         lines.append(f'    <priority>{priority}</priority>')
         lines.append(f'    <xhtml:link rel="alternate" hreflang="en" href="{url_en}"/>')
         lines.append(f'    <xhtml:link rel="alternate" hreflang="el" href="{url_el}"/>')
@@ -1012,12 +1024,16 @@ def generate_sitemap(island_keys):
         lines.append('  </url>')
 
     # Static homepages (EN + EL)
-    for en_path, el_path, prio in static_pages:
-        add_url_pair(en_path, el_path, prio)
+    for en_path, el_path, prio, lastmod in static_pages:
+        add_url_pair(en_path, el_path, prio, lastmod)
 
-    # Islands — each one gets BOTH an EN entry and an EL entry
+    # Islands — each one gets BOTH an EN entry and an EL entry. Per-island
+    # lastmod comes from the JSON file mtime so editing one island only bumps
+    # that one's freshness signal in the sitemap.
     for key in sorted(island_keys):
-        add_url_pair(f'/island/{key}/', f'/el/island/{key}/', 0.7)
+        json_path = ISLANDS_DIR / f'{key}.json'
+        lastmod = file_lastmod(json_path)
+        add_url_pair(f'/island/{key}/', f'/el/island/{key}/', 0.7, lastmod)
 
     lines.append('</urlset>')
     SITEMAP_PATH.write_text('\n'.join(lines) + '\n')
