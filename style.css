@@ -89,6 +89,7 @@
   --shadow-sm: 0 2px 8px rgba(11,143,172,0.08), 0 1px 3px rgba(0,0,0,0.04);
   --shadow:    0 6px 20px rgba(11,143,172,0.12), 0 2px 6px rgba(0,0,0,0.06);
   --header-height: 64px;
+  --search-bar-height: 52px;
 }
 
 /* Mobile type scale — narrower screens get smaller hero/section sizes */
@@ -348,13 +349,16 @@ header {
 #view-home {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - var(--header-height));
-  height: calc(100dvh - var(--header-height)); /* mobile: accounts for URL bar */
+  height: calc(100vh - var(--header-height) - var(--search-bar-height));
+  height: calc(100dvh - var(--header-height) - var(--search-bar-height));
   overflow: hidden;
 }
-/* When home view is active (body has class), lock body scroll */
+/* When home view is active (body has class), lock body scroll and hide footer */
 body.home-view-active {
   overflow: hidden;
+}
+body.home-view-active #site-footer {
+  display: none;
 }
 #main-map {
   flex: 1;
@@ -3954,7 +3958,8 @@ html.dark .mission-disagree-box {
   grid-column: span 2;
   position: relative;
   display: flex;
-  justify-content: center;   /* center the pill horizontally within its 2-cell span */
+  /* Flex item lays out at start; we shift it horizontally with a transform
+     on the inner pill so its CENTRE lands on the month tick. */
 }
 .wtv-cap-above {
   grid-row: 1;
@@ -3967,29 +3972,39 @@ html.dark .mission-disagree-box {
   padding-top: 12px;
 }
 
-/* The visible pill — inline-block, naturally centered on its 2-cell parent.
-   Pill spans the full 2-cell width minus a small gutter, so neighbouring
-   pills don't touch. Tick marks (below) point at the actual month each
-   caption describes; the pill itself sits centered over the boundary
-   between two months for maximum text room. */
+/* The visible pill — inline-block so width hugs text. Anchored so its
+   TEXT CENTER lands on the month tick, but the pill itself can extend
+   asymmetrically into the empty space on the open side of its 2-cell
+   parent. This gives ~96% of cell width usable instead of ~50%. */
 .wtv-cap-text {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;            /* hard cap at 2 lines, ellipsis if more */
   overflow: hidden;
-  max-width: calc(100% - 8px);      /* 4px gutter on each side */
+  max-width: 96%;
   box-sizing: border-box;
-  padding: 3px 8px;
+  padding: 4px 10px;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   background: transparent;
   font-family: var(--sans);
-  font-size: var(--text-tiny);
+  font-size: var(--text-meta);
   font-weight: 500;
   line-height: 1.3;
   text-align: center;
   color: var(--ink-1);
-  margin: 0 auto;                   /* center within the 2-cell grid space */
+}
+/* Anchor: above-row pills place the tick at the LEFT QUARTER of the pill,
+   so the pill grows mostly RIGHTWARD into the empty MAY-above slot
+   (when this is JAN-MAR-MAY-JUL-SEP-NOV). Below-row pills place the tick
+   at the RIGHT QUARTER, so the pill grows LEFTWARD. */
+.wtv-cap-above .wtv-cap-text {
+  margin-left: 25%;
+  transform: translateX(-25%);
+}
+.wtv-cap-below .wtv-cap-text {
+  margin-left: 75%;
+  transform: translateX(-75%);
 }
 
 /* Tick marks linking pill to ribbon — vertical line at the month-tick X position.
