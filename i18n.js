@@ -30,7 +30,7 @@ const UI_TEXT = {
 
   // Hero / homepage
   'hero.title': { en: 'Find your perfect Greek island', el: 'Βρες το ιδανικό σου ελληνικό νησί' },
-  'hero.sub': { en: '78 islands scored across beaches, culture, nightlife, access and price. Click any circle to explore.', el: '78 νησιά βαθμολογημένα σε παραλίες, πολιτισμό, νυχτερινή ζωή, πρόσβαση και τιμή. Πάτα οποιοδήποτε σημείο για εξερεύνηση.' },
+  'hero.sub': { en: '78 islands scored across beaches, culture, nightlife, access and affordability. Click any circle to explore.', el: '78 νησιά βαθμολογημένα σε παραλίες, πολιτισμό, νυχτερινή ζωή, πρόσβαση και προσιτή τιμή. Πάτα οποιοδήποτε σημείο για εξερεύνηση.' },
   'hero.tagline': { en: 'The Greek Island Decision Engine', el: 'Ο οδηγός για το Ελληνικό νησί που σας ταιριάζει' },
   'hero.dismiss': { en: 'Got it', el: 'Έγινε' },
   'hero.stat.islands': { en: 'Islands', el: 'Νησιά' },
@@ -66,7 +66,7 @@ const UI_TEXT = {
   'filter.culture': { en: '🏛️ Culture', el: '🏛️ Πολιτισμός' },
   'filter.night': { en: '🍷 Nightlife', el: '🍷 Νυχτερινή ζωή' },
   'filter.access': { en: '🚢 Access', el: '🚢 Πρόσβαση' },
-  'filter.afford': { en: '💸 Price', el: '💸 Τιμή' },
+  'filter.afford': { en: '💸 Affordability', el: '💸 Προσιτή τιμή' },
   'filter.car': { en: '🚗 Car reliance', el: '🚗 Χρησιμότητα οχήματος' },
   // Dimension labels (for radar chart, bars, columns)
   'dim.beach': { en: 'Beach', el: 'Παραλία' },
@@ -120,7 +120,7 @@ const UI_TEXT = {
   'sidebar.culture': { en: 'Culture &amp; History', el: 'Πολιτισμός &amp; Ιστορία' },
   'sidebar.night': { en: 'Night Life', el: 'Νυχτερινή ζωή' },
   'sidebar.access': { en: 'Access Ease', el: 'Ευκολία Πρόσβασης' },
-  'sidebar.afford': { en: 'Price Level', el: 'Κόστος' },
+  'sidebar.afford': { en: 'Affordability', el: 'Προσιτή τιμή' },
   'sidebar.car': { en: 'Car reliance', el: 'Χρησιμότητα οχήματος' },
   'tooltip.overall': { en: 'Overall', el: 'Συνολικά' },
   'tooltip.recommended': { en: 'recommended', el: 'συνιστώμενες' },
@@ -172,7 +172,7 @@ const UI_TEXT = {
   'data.col.scores': { en: 'Scores', el: 'Βαθμολογίες' },
   'data.showdims': { en: '📊 Detailed scores', el: '📊 Αναλυτικές βαθμολογίες' },
   'data.hidedims': { en: '📊 Hide scores', el: '📊 Απόκρυψη βαθμολογιών' },
-  'data.hinttext': { en: 'See the 5 dimensions we rate each island on — beaches, culture, nightlife, access, price.', el: 'Δες τις 5 διαστάσεις που βαθμολογούμε σε κάθε νησί — παραλίες, πολιτισμός, νυχτερινή ζωή, πρόσβαση, τιμή.' },
+  'data.hinttext': { en: 'See the 5 dimensions we rate each island on — beaches, culture, nightlife, access, affordability.', el: 'Δες τις 5 διαστάσεις που βαθμολογούμε σε κάθε νησί — παραλίες, πολιτισμός, νυχτερινή ζωή, πρόσβαση, προσιτή τιμή.' },
 
   // Compare page
   'compare.title': { en: 'Compare Islands', el: 'Σύγκριση Νησιών' },

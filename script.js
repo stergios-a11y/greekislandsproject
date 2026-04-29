@@ -3076,8 +3076,8 @@ function computeQuizResults() {
   if (!container || !results) return;
   container.style.display = 'none'; results.style.display = '';
   const dimLabels = (CURRENT_LANG === 'el')
-    ? ['Παραλία', 'Πολιτισμός', 'Νυχτερινή ζωή', 'Φιλικό στο πορτοφόλι']
-    : ['Beach', 'Culture', 'Nightlife', 'Price-friendly'];
+    ? ['Παραλία', 'Πολιτισμός', 'Νυχτερινή ζωή', 'Προσιτή τιμή']
+    : ['Beach', 'Culture', 'Nightlife', 'Affordability'];
   const dimLabel = dimLabels[quizAnswers[1]] || (CURRENT_LANG === 'el' ? 'Συνολικά' : 'Overall');
   const driveOnSet = new Set(['lefkada','evia-north','evia-central','evia-south',
     'thasos','corfu','kefalonia','zakynthos','salamis','poros','aegina','agistri',
