@@ -976,8 +976,9 @@ function buildGettingThereSection(data) {
    WHEN-TO-VISIT SECTION — 12-month grid + summary paragraph
    Renders only if data.when_to_visit is present.
 ============================================================ */
-/* Photo credit overlay — renders bottom-right CC attribution on Wikimedia
-   images. Returns empty string if no credit data present. */
+/* Photo credit badge — a tiny info dot in the corner that reveals the full
+   CC attribution on click. Stops click propagation so it doesn't trigger the
+   lightbox underneath. Returns empty string if no credit data present. */
 function buildPhotoCredit(credit) {
   if (!credit || typeof credit !== 'object') return '';
   const artist = (credit.artist || '').replace(/"/g, '&quot;');
@@ -987,10 +988,10 @@ function buildPhotoCredit(credit) {
   const text = artist
     ? (license ? `© ${artist} / ${license}` : `© ${artist}`)
     : license;
-  if (pageUrl) {
-    return `<div class="photo-credit"><a href="${pageUrl}" target="_blank" rel="noopener noreferrer" title="View source on ${credit.source || 'Wikimedia Commons'}">${text}</a></div>`;
-  }
-  return `<div class="photo-credit">${text}</div>`;
+  const linkedText = pageUrl
+    ? `<a href="${pageUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">${text}</a>`
+    : text;
+  return `<button type="button" class="photo-credit-badge" aria-label="Image credit" onclick="event.stopPropagation();this.classList.toggle('open')">i<span class="photo-credit-text">${linkedText}</span></button>`;
 }
 
 /* Build an <img> tag that participates in the lightbox. Embeds credit
@@ -2775,14 +2776,29 @@ function computeQuizResults() {
   }
 
   // Global delegated click handler — catches clicks on lightbox-img anywhere
-  // in the document, INCLUDING inside Leaflet popups (which append to body).
+  // in the document, INCLUDING inside Leaflet popups. We use the CAPTURE phase
+  // (third arg = true) so we receive the click BEFORE any handler down the
+  // tree can call e.stopPropagation() — Leaflet does this on popup content
+  // to prevent map-click events, which would otherwise stop our delegation.
   document.addEventListener('click', function(e) {
     const target = e.target;
+    // Don't open lightbox if the click is on/inside the credit badge —
+    // that has its own toggle behaviour.
+    if (target && target.closest && target.closest('.photo-credit-badge')) return;
     if (target && target.tagName === 'IMG' && target.classList.contains('lightbox-img')) {
       e.preventDefault();
       e.stopPropagation();
       open(target);
     }
+  }, true);
+
+  // Click anywhere outside an open credit badge collapses it.
+  document.addEventListener('click', function(e) {
+    const t = e.target;
+    if (t && t.closest && t.closest('.photo-credit-badge')) return;
+    document.querySelectorAll('.photo-credit-badge.open').forEach(function(b) {
+      b.classList.remove('open');
+    });
   });
 
   // Keyboard
