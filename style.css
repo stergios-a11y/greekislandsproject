@@ -625,8 +625,30 @@ body.home-view-active #site-footer {
 /* ============================================================
    FERRY PLANNER
 ============================================================ */
-.planner-title {
+.planner-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
   margin: 32px 0 8px;
+}
+.planner-title {
+  margin: 0;
+}
+.ferry-btn-prominent {
+  /* Bigger and more visible than the standard ferry-btn used elsewhere */
+  padding: 12px 22px;
+  font-size: var(--text-body);
+  border-radius: 999px;       /* pill shape — distinguishes from squarer planner UI */
+  box-shadow: 0 2px 8px rgba(232, 82, 42, 0.18);
+}
+.ferry-btn-prominent:hover {
+  box-shadow: 0 4px 14px rgba(232, 82, 42, 0.30);
+}
+@media (max-width: 600px) {
+  .planner-header-row { gap: 12px; }
+  .ferry-btn-prominent { width: 100%; text-align: center; padding: 12px 18px; }
 }
 #ferry-planner { margin-bottom: 28px; }
 .planner-card {
@@ -2436,21 +2458,24 @@ html.dark .ferry-filter-btn.active { background: var(--marble-2); }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 11px 22px;
+  padding: 12px 22px;
   font-family: var(--sans);
   font-size: var(--text-body);
   font-weight: 700;
-  color: #fff;
-  background: var(--aegean);
+  color: #fff !important;
+  background: var(--accent, #FF6B6B);
   border: none;
-  border-radius: var(--radius);
+  border-radius: 999px;
   text-decoration: none;
-  transition: background 0.15s, transform 0.1s;
+  box-shadow: 0 2px 8px rgba(232, 82, 42, 0.18);
+  transition: all 0.15s;
 }
 .planner-book-btn:hover {
-  background: var(--aegean-dark);
+  background: var(--terracotta, #E8522A);
   text-decoration: none;
   color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(232, 82, 42, 0.30);
 }
 .planner-book-btn:active { transform: scale(0.98); }
 

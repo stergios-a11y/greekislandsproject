@@ -2937,16 +2937,6 @@ function renderFerryMap() {
     addThemeAwareTiles(ferryMapInstance, { maxZoom: 10 });
     L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(ferryMapInstance);
 
-    // Persistent "Book ferries" control in the top-right corner — opens Ferryhopper
-    const bookCtrl = L.control({ position: 'topright' });
-    bookCtrl.onAdd = function() {
-      const div = L.DomUtil.create('div', 'leaflet-bar ferry-map-book-ctrl');
-      div.innerHTML = `<a href="https://www.ferryhopper.com/en/" target="_blank" rel="noopener" title="${t('detail.bookferry')}">🚢 <span class="ferry-map-book-label">${t('hopping.book.label')}</span></a>`;
-      // Stop click events from propagating to the map
-      L.DomEvent.disableClickPropagation(div);
-      return div;
-    };
-    bookCtrl.addTo(ferryMapInstance);
   }
 
   // Re-draw layer (filter changes call this)
