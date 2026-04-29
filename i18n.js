@@ -90,6 +90,17 @@ const UI_TEXT = {
   'detail.copylink': { en: '🔗 Copy link', el: '🔗 Αντιγραφή' },
   'detail.print': { en: '🖨 Print', el: '🖨 Εκτύπωση' },
   'detail.bookferry': { en: '🚢 Book ferry tickets', el: '🚢 Κράτηση' },
+  'similar.title': { en: 'Islands like this one', el: 'Παρόμοια νησιά' },
+  'similar.intro': { en: 'Based on character, vibe, and ferry-region.', el: 'Βάσει χαρακτήρα και περιοχής.' },
+  'group.cyclades':  { en: 'Cyclades',     el: 'Κυκλάδες' },
+  'group.dodecanese':{ en: 'Dodecanese',   el: 'Δωδεκάνησα' },
+  'group.saronic':   { en: 'Saronic',      el: 'Σαρωνικός' },
+  'group.sporades':  { en: 'Sporades',     el: 'Σποράδες' },
+  'group.ionian':    { en: 'Ionian',       el: 'Ιόνιο' },
+  'group.neaegean':  { en: 'NE Aegean',    el: 'Β.Α. Αιγαίο' },
+  'group.crete':     { en: 'Crete',        el: 'Κρήτη' },
+  'group.evia':      { en: 'Evia',         el: 'Εύβοια' },
+  'group.other':     { en: 'Other',        el: 'Άλλα' },
   'detail.copied': { en: '✓ Copied!', el: '✓ Αντιγράφτηκε!' },
 
   // Generic fallback (ghost islands / failed JSON fetch)

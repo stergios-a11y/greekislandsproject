@@ -1838,6 +1838,75 @@ html.dark .local-section { background: var(--ink-1); border-top-color: var(--ink
 html.dark .local-item { background: var(--bg); border-color: var(--ink-2); }
 html.dark .local-when { background: var(--ink-2); color: #fff; }
 
+/* ============================================================
+   SIMILAR ISLANDS — recommendation cards at bottom of detail page
+============================================================ */
+.similar-section {
+  margin-top: 28px;
+  padding: 24px 18px 28px;
+  background: var(--marble);
+  border-top: 1px solid var(--border);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+.similar-title {
+  font-family: var(--serif);
+  font-size: var(--text-sub);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+.similar-intro {
+  font-size: var(--text-meta);
+  color: var(--ink-3);
+  margin: 0 0 18px;
+}
+.similar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+.similar-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--ink-1);
+  transition: border-color 0.15s, transform 0.1s, box-shadow 0.15s;
+  cursor: pointer;
+}
+.similar-card:hover {
+  border-color: var(--aegean);
+  box-shadow: 0 2px 8px rgba(11, 143, 172, 0.10);
+  transform: translateY(-1px);
+  text-decoration: none;
+  color: var(--ink-1);
+}
+.similar-card-name {
+  font-family: var(--serif);
+  font-size: var(--text-body);
+  font-weight: 700;
+  color: var(--ink);
+}
+.similar-card-score {
+  font-size: var(--text-meta);
+  color: var(--aegean-dark);
+  font-weight: 600;
+}
+.similar-card-reason {
+  font-size: var(--text-meta);
+  color: var(--ink-3);
+  line-height: 1.4;
+  text-transform: capitalize;
+}
+
+html.dark .similar-section { background: var(--ink-1); border-top-color: var(--ink-2); }
+html.dark .similar-card { background: var(--bg); border-color: var(--ink-2); }
+html.dark .similar-card:hover { border-color: var(--aegean); }
+
 /* MAP LEGEND */
 .map-legend {
   position: absolute;

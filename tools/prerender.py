@@ -44,10 +44,9 @@ def load_greek_names():
         return {}
     body = m.group(1)
     names = {}
-    for line in body.split('\n'):
-        mm = re.match(r"\s*'([a-z-]+)':\s*'([^']+)',?", line)
-        if mm:
-            names[mm.group(1)] = mm.group(2)
+    # Each line can have multiple 'key': 'value' pairs (e.g. "'paros': 'Πάρος', 'milos': 'Μήλος'")
+    for mm in re.finditer(r"'([a-z-]+)':\s*'([^']+)'", body):
+        names[mm.group(1)] = mm.group(2)
     return names
 
 GREEK_NAMES = load_greek_names()
@@ -81,6 +80,7 @@ def load_island_meta():
             'night': grab('night'),
             'access': grab('access'),
             'afford': grab('afford'),
+            'car_need': grab('car_need'),
             'days': grab('days'),
             'area': grab('area'),
             'pop': grab('pop'),
@@ -88,10 +88,45 @@ def load_island_meta():
             'lng': grab('lng'),
             'group': (re.search(r'island_group:\s*"([^"]+)"', line) or ['', ''])[1],
             'has_airport': 'has_airport:true' in line,
+            'drama':   'drama:true' in line,
+            'hiking':  'hiking:true' in line,
+            'springs': 'springs:true' in line,
+            'chora':   'chora:true' in line,
+            'sailing': 'sailing:true' in line,
         }
     return islands
 
 ISLAND_META = load_island_meta()
+
+import math
+
+def similar_island_distance(a, b):
+    """Mirrors similarIslandDistance() in script.js — same weights and signals."""
+    d = 0.0
+    for f in ('beach', 'hist', 'night', 'access', 'afford'):
+        d += abs((a.get(f) or 0) - (b.get(f) or 0)) / 5
+    char_w = {'drama': 1.2, 'hiking': 0.8, 'springs': 1.0, 'chora': 1.1, 'sailing': 0.7}
+    for f, w in char_w.items():
+        if bool(a.get(f)) != bool(b.get(f)):
+            d += w
+    if bool(a.get('has_airport')) != bool(b.get('has_airport')):
+        d += 0.4
+    d += abs((a.get('car_need') or 3) - (b.get('car_need') or 3)) / 5 * 0.4
+    if a.get('group') and a.get('group') == b.get('group'):
+        d -= 1.2
+    pa = max(a.get('pop') or 1, 1)
+    pb = max(b.get('pop') or 1, 1)
+    d += abs(math.log10(pa) - math.log10(pb)) * 0.4
+    d += abs((a.get('days') or 3) - (b.get('days') or 3)) * 0.2
+    return d
+
+def find_similar_islands(key, count=4):
+    target = ISLAND_META.get(key)
+    if not target: return []
+    scored = [(k, similar_island_distance(target, m)) for k, m in ISLAND_META.items() if k != key]
+    scored.sort(key=lambda x: x[1])
+    return [k for k, _ in scored[:count]]
+
 
 GREEK_GROUPS = {
     'Cyclades': 'Κυκλάδες',
@@ -565,19 +600,14 @@ def render_body(key, data, meta, lang='en'):
     # When-to-visit — 12-month seasonality grid (only renders if data.when_to_visit present)
     wtv_html = build_when_to_visit_html(data, lang)
 
-    # Related islands (internal linking — SEO gold)
-    group = meta.get('group', '')
-    related = [k for k, m in ISLAND_META.items()
-               if k != key and m.get('group') == group and m.get('total')]
-    related.sort(key=lambda k: -ISLAND_META[k]['total'])
-    related = related[:6]
+    # Similar islands — character-aware similarity (mirrors script.js findSimilarIslands)
+    related = find_similar_islands(key, count=4)
     related_links = []
     for rk in related:
         rname = GREEK_NAMES.get(rk, ISLAND_META[rk]['name']) if lang == 'el' else ISLAND_META[rk]['name']
         href = f'/el/island/{rk}/' if lang == 'el' else f'/island/{rk}/'
         related_links.append(f'<a href="{href}">{esc(rname)}</a>')
-    group_label = GREEK_GROUPS.get(group, group) if lang == 'el' else group
-    related_heading = f'Other islands in the {group_label}' if lang == 'en' else f'Άλλα νησιά στα/στο {group_label}'
+    related_heading = 'Islands like this one' if lang == 'en' else 'Παρόμοια νησιά'
     related_html = ''
     if related_links:
         related_html = f'<section class="seo-related"><h2>{related_heading}</h2><p>{" · ".join(related_links)}</p></section>'

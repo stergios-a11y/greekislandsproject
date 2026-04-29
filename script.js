@@ -1035,6 +1035,7 @@ function buildIslandPage(data) {
       <div class="itin-days" id="itin-days-container">${dayCards}</div>
       ${beachSection}
       ${buildLocalSection(data)}
+      ${buildSimilarIslandsSection(key)}
     </div>`;
 }
 
@@ -1193,6 +1194,93 @@ function buildWhenToVisitSection(data) {
    LOCAL & SEASONAL SECTION
    Renders only if specialties / crafts / festivals are present.
 ============================================================ */
+/* ============================================================
+   "Islands like this one" — similarity recommendations
+   ------------------------------------------------------------
+   Computes a weighted distance over scores, character flags,
+   group, and rough size. Returns the N closest matches.
+   Renders a card grid below the main island content.
+============================================================ */
+function similarIslandDistance(a, b) {
+  if (a.key === b.key) return Infinity;
+  let d = 0;
+  // 5 numeric scores (each 0-5), normalised to 0-1
+  ['beach','hist','night','access','afford'].forEach(f => {
+    d += Math.abs((a[f] || 0) - (b[f] || 0)) / 5;
+  });
+  // Character bools — weighted by how strongly each defines a vibe
+  const charWeights = { drama: 1.2, hiking: 0.8, springs: 1.0, chora: 1.1, sailing: 0.7 };
+  Object.keys(charWeights).forEach(f => {
+    if (!!a[f] !== !!b[f]) d += charWeights[f];
+  });
+  if (!!a.has_airport !== !!b.has_airport) d += 0.4;
+  d += Math.abs((a.car_need || 3) - (b.car_need || 3)) / 5 * 0.4;
+  // Same island group is a strong signal — bonus
+  if (a.island_group && a.island_group === b.island_group) d -= 1.2;
+  // Population scale (log)
+  const pa = Math.max(a.pop || 1, 1);
+  const pb = Math.max(b.pop || 1, 1);
+  d += Math.abs(Math.log10(pa) - Math.log10(pb)) * 0.4;
+  // Days match
+  d += Math.abs((a.days || 3) - (b.days || 3)) * 0.2;
+  return d;
+}
+
+function findSimilarIslands(key, count = 4) {
+  const target = ISLANDS_DATA[key];
+  if (!target) return [];
+  const scored = Object.keys(ISLANDS_DATA)
+    .filter(k => k !== key)
+    .map(k => ({ key: k, dist: similarIslandDistance(target, ISLANDS_DATA[k]) }));
+  scored.sort((a, b) => a.dist - b.dist);
+  return scored.slice(0, count).map(s => s.key);
+}
+
+// Build a short reason tagline highlighting why this island matches
+function similarReasonTags(srcKey, dstKey) {
+  const a = ISLANDS_DATA[srcKey], b = ISLANDS_DATA[dstKey];
+  if (!a || !b) return '';
+  const tags = [];
+  // Shared group
+  if (a.island_group && a.island_group === b.island_group) {
+    tags.push(t(`group.${a.island_group.toLowerCase().replace(/\s+/g,'')}`) || a.island_group);
+  }
+  // Shared character flags
+  const charLabels = {
+    drama:   { en: 'dramatic',  el: 'δραματικό' },
+    hiking:  { en: 'hiking',    el: 'πεζοπορία' },
+    springs: { en: 'springs',   el: 'ιαματικά' },
+    chora:   { en: 'chora',     el: 'χώρα' },
+    sailing: { en: 'sailing',   el: 'ιστιοπλοΐα' },
+  };
+  const lang = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
+  Object.keys(charLabels).forEach(f => {
+    if (a[f] && b[f]) tags.push(charLabels[f][lang]);
+  });
+  // Cap at 3 tags total
+  return tags.slice(0, 3).join(' · ');
+}
+
+function buildSimilarIslandsSection(key) {
+  const matches = findSimilarIslands(key, 4);
+  if (!matches.length) return '';
+  const cards = matches.map(matchKey => {
+    const m = ISLANDS_DATA[matchKey];
+    const reason = similarReasonTags(key, matchKey);
+    const score = (m.total || 0).toFixed(1);
+    return `<a class="similar-card" href="#" onclick="navigateTo('island','${matchKey}');return false;">
+      <div class="similar-card-name">${islandName(matchKey)}</div>
+      <div class="similar-card-score">★ ${score}</div>
+      <div class="similar-card-reason">${reason}</div>
+    </a>`;
+  }).join('');
+  return `<section class="similar-section">
+    <h3 class="similar-title">${t('similar.title')}</h3>
+    <p class="similar-intro">${t('similar.intro')}</p>
+    <div class="similar-grid">${cards}</div>
+  </section>`;
+}
+
 function buildLocalSection(data) {
   const specs = data.specialties || [];
   const crafts = data.crafts || [];
