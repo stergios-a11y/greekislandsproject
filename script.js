@@ -870,7 +870,7 @@ function buildIslandPage(data) {
     const photoId = `beach-photo-${i}`;
     // Support direct photo URL (Cloudinary, Unsplash etc) OR Wikimedia commons filename
     const photoHtml = b.photo
-      ? `<div class="beach-photo-wrap"><img class="beach-photo" src="${b.photo}" alt="${b.name}" loading="lazy" onerror="this.parentElement.style.display='none'"></div>`
+      ? `<div class="beach-photo-wrap"><img class="beach-photo" src="${b.photo}" alt="${b.name}" loading="lazy" onerror="this.parentElement.style.display='none'">${buildPhotoCredit(b.photo_credit)}</div>`
       : '';
     const beachId = (currentIslandKey + '_' + b.name).replace(/[^a-z0-9]/gi, '_').toLowerCase();
     return `<div class="beach-card">
@@ -976,6 +976,23 @@ function buildGettingThereSection(data) {
    WHEN-TO-VISIT SECTION — 12-month grid + summary paragraph
    Renders only if data.when_to_visit is present.
 ============================================================ */
+/* Photo credit overlay — renders bottom-right CC attribution on Wikimedia
+   images. Returns empty string if no credit data present. */
+function buildPhotoCredit(credit) {
+  if (!credit || typeof credit !== 'object') return '';
+  const artist = (credit.artist || '').replace(/"/g, '&quot;');
+  const license = (credit.license || '').replace(/"/g, '&quot;');
+  if (!artist && !license) return '';
+  const pageUrl = credit.page_url || '';
+  const text = artist
+    ? (license ? `© ${artist} / ${license}` : `© ${artist}`)
+    : license;
+  if (pageUrl) {
+    return `<div class="photo-credit"><a href="${pageUrl}" target="_blank" rel="noopener noreferrer" title="View source on ${credit.source || 'Wikimedia Commons'}">${text}</a></div>`;
+  }
+  return `<div class="photo-credit">${text}</div>`;
+}
+
 function buildWhenToVisitSection(data) {
   const w = data.when_to_visit;
   if (!w || !Array.isArray(w.months) || w.months.length !== 12) return '';
@@ -1056,12 +1073,22 @@ function buildLocalSection(data) {
     const desc = pickLang(item, 'desc') || '';
     const when = pickLang(item, 'when') || '';
     const whenHtml = when ? `<span class="local-when">${when}</span>` : '';
+    // Two possible image fields:
+    //   item.photo = large landscape (Wikimedia) — renders as banner with credit
+    //   item.image = small 80px square thumb (legacy)
+    const photo = item.photo || '';
     const image = item.image || '';
-    const imageHtml = image
-      ? `<img class="local-item-image" src="${image}" alt="${name.replace(/"/g, '&quot;')}" loading="lazy" width="80" height="80">`
-      : '';
+    let imageHtml = '';
+    let wrapClass = 'local-item';
+    if (photo) {
+      imageHtml = `<div class="local-item-photo-wrap"><img class="local-item-photo" src="${photo}" alt="${name.replace(/"/g, '&quot;')}" loading="lazy" onerror="this.parentElement.style.display='none'">${buildPhotoCredit(item.photo_credit)}</div>`;
+      wrapClass = 'local-item local-item-with-photo';
+    } else if (image) {
+      imageHtml = `<img class="local-item-image" src="${image}" alt="${name.replace(/"/g, '&quot;')}" loading="lazy" width="80" height="80">`;
+      wrapClass = 'local-item local-item-with-image';
+    }
     return `
-      <div class="local-item${image ? ' local-item-with-image' : ''}">
+      <div class="${wrapClass}">
         ${imageHtml}
         <div class="local-item-text">
           <div class="local-item-name">${name}${whenHtml}</div>
@@ -1218,7 +1245,9 @@ async function initItineraryMap(days, beaches = []) {
         ? `<a href="${stop.wiki}" target="_blank" rel="noopener" style="color:${day.color};font-weight:700">${stop.name}</a>`
         : `<strong>${stop.name}</strong>`;
       const typeLabel = stop.type ? stop.type.charAt(0).toUpperCase() + stop.type.slice(1) : 'Stop';
-      const photoLine = stop.photo ? `<img src="${stop.photo}" alt="${stop.name}" style="width:100%;height:120px;object-fit:cover;border-radius:6px;margin-top:8px;display:block" loading="lazy" onerror="this.style.display='none'">` : '';
+      const photoLine = stop.photo
+        ? `<div style="position:relative;margin-top:8px"><img src="${stop.photo}" alt="${stop.name}" style="width:100%;height:120px;object-fit:cover;border-radius:6px;display:block" loading="lazy" onerror="this.parentElement.style.display='none'">${buildPhotoCredit(stop.photo_credit)}</div>`
+        : '';
       const icon = L.divIcon({
         className: 'custom-marker',
         html: poiIcon(stop.type || 'village', day.color),
