@@ -14,52 +14,52 @@
       },
       {
         "tag": "ok",
-        "why": "Mild, hiking, waterfalls",
-        "why_el": "Ήπιο, πεζοπορία, καταρράκτες"
+        "why": "Mild, hiking",
+        "why_el": "Ήπιο, πεζοπορία"
       },
       {
         "tag": "great",
-        "why": "Wildflowers, green, mild",
+        "why": "Wildflowers",
         "why_el": "Αγριολούλουδα, πράσινα"
       },
       {
         "tag": "great",
-        "why": "Easter, mild walks",
-        "why_el": "Άγιες μέρες, ορεινά μονοπάτια"
+        "why": "Easter, walks",
+        "why_el": "Πάσχα, μονοπάτια"
       },
       {
         "tag": "perfect",
-        "why": "Beaches still empty, sea warming",
-        "why_el": "Άδειες παραλίες, ζεσταίνει"
+        "why": "Beaches empty",
+        "why_el": "Άδειες παραλίες"
       },
       {
         "tag": "perfect",
-        "why": "Long evenings, sea ideal",
-        "why_el": "Ολονήμερο φως, ζεστά"
+        "why": "Long days, ideal",
+        "why_el": "Ολονήμερο φως"
       },
       {
         "tag": "ok",
-        "why": "Hot, beach traffic builds",
-        "why_el": "Ζέστη, παραλίες γεμίζουν"
+        "why": "Hot, beach traffic",
+        "why_el": "Ζέστη, παραλίες"
       },
       {
         "tag": "avoid",
         "why": "Bridge brings Greeks",
-        "why_el": "Η γέφυρα φέρνει κορύφωση"
+        "why_el": "Η γέφυρα φέρνει"
       },
       {
         "tag": "perfect",
-        "why": "Best — warm sea, mellow",
-        "why_el": "Καλύτερος — ζεστά, χαλαρά"
+        "why": "Best — mellow",
+        "why_el": "Καλύτερος — χαλαρά"
       },
       {
         "tag": "great",
-        "why": "Last swims, beach calm",
-        "why_el": "Τελευταία μπάνια, ησυχία"
+        "why": "Last swims",
+        "why_el": "Τελευταία μπάνια"
       },
       {
         "tag": "great",
-        "why": "Hiking, mild, calm",
+        "why": "Hiking, mild",
         "why_el": "Πεζοπορία, ήπιο"
       },
       {
@@ -79,7 +79,7 @@
         "color": "#1B4F8A",
         "km": 20,
         "drive_mins": 25,
-        "overnight": "Lefkada Town",
+        "overnight": "Nydri",
         "stops": [
           {
             "name": "Lefkada Town",
@@ -91,14 +91,8 @@
             "desc": "Charming Ionian town with distinctive earthquake-resistant architecture — upper floors clad in corrugated metal and painted wood. Walk the pedestrian main street and the seafront.",
             "name_el": "Πόλη Λευκάδας",
             "desc_el": "Γοητευτική επτανησιακή πόλη με χαρακτηριστική αντισεισμική αρχιτεκτονική — οι όροφοι ντυμένοι με κυματοειδές μέταλλο και βαμμένο ξύλο. Περπάτησε τον πεζοδρομημένο κεντρικό δρόμο και την παραλιακή.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Lefkada%2C_lagoon_with_fishermen.jpg/1920px-Lefkada%2C_lagoon_with_fishermen.jpg",
-            "photo_credit": {
-              "artist": "Kate Horti",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Lefkada,_lagoon_with_fishermen.jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           },
           {
             "name": "Santa Maura Fortress",
@@ -110,14 +104,8 @@
             "desc": "14th-century Venetian fortress at the causeway entrance. The saltwater lagoon and the floating bridge make for an extraordinary approach to the island.",
             "name_el": "Φρούριο Αγίας Μαύρας",
             "desc_el": "Βενετσιάνικο φρούριο του 14ου αιώνα στην είσοδο του μώλου. Η αλμυρή λιμνοθάλασσα και η πλωτή γέφυρα δημιουργούν μια εκπληκτική προσέγγιση στο νησί.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Lefkada_-_Santa_Maura_6271.jpg/1920px-Lefkada_-_Santa_Maura_6271.jpg",
-            "photo_credit": {
-              "artist": "Geraki",
-              "license": "CC BY-SA 3.0 gr",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0/gr/deed.en",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Lefkada_-_Santa_Maura_6271.jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           },
           {
             "name": "Gyra Lagoon",
@@ -170,7 +158,7 @@
           }
         ],
         "title_el": "Χώρα Λευκάδας & η Λιμνοθάλασσα",
-        "overnight_el": "Χώρα Λευκάδας"
+        "overnight_el": "Νυδρί"
       },
       {
         "day": 2,
@@ -209,14 +197,8 @@
             "desc": "Day cruise around Onassis's private island Skorpios — you can swim in the crystal coves around it. Boats depart from Nydri harbour every morning.",
             "name_el": "Κρουαζιέρα στον Σκορπιό",
             "desc_el": "Ημερήσια κρουαζιέρα γύρω από το ιδιωτικό νησί του Ωνάση, τον Σκορπιό — μπορείς να κολυμπήσεις στους κρυστάλλινους κολπίσκους γύρω του. Οι βάρκες φεύγουν από το λιμάνι του Νυδριού κάθε πρωί.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Skorpios%2C_Lefkada.jpg/1920px-Skorpios%2C_Lefkada.jpg",
-            "photo_credit": {
-              "artist": "ArgGeo",
-              "license": "Public domain",
-              "license_url": "",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Skorpios,_Lefkada.jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           },
           {
             "name": "Meganisi Island",
@@ -266,7 +248,7 @@
         "color": "#5A7A3A",
         "km": 45,
         "drive_mins": 55,
-        "overnight": "Vassiliki",
+        "overnight": "Nydri",
         "stops": [
           {
             "name": "Egremni Beach",
@@ -278,14 +260,8 @@
             "desc": "One of the longest and most dramatic beaches in Greece — 1.5km of white pebble beneath sheer white cliffs, accessible only by 350 steps or by boat from Vassiliki. Completely wild and unorganised.",
             "name_el": "Παραλία Εγκρεμνοί",
             "desc_el": "Μία από τις μακρύτερες και πιο εντυπωσιακές παραλίες της Ελλάδας — 1,5 χλμ λευκού βότσαλου κάτω από κατακόρυφους λευκούς γκρεμούς, προσβάσιμη μόνο με 350 σκαλοπάτια ή με βάρκα από τον Βασιλικό. Εντελώς άγρια και ανοργάνωτη.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Egremni_beach_SF_0001.jpg/1920px-Egremni_beach_SF_0001.jpg",
-            "photo_credit": {
-              "artist": "Stefan Fussan",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Egremni_beach_SF_0001.jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           },
           {
             "name": "Porto Katsiki",
@@ -316,14 +292,8 @@
             "desc": "Tiny clifftop village above Porto Katsiki with spectacular views. The local taverna serves the best food in southern Lefkada — lamb from the hillside farms, local wine.",
             "name_el": "Χωριό Αθάνι",
             "desc_el": "Μικροσκοπικό χωριό σε γκρεμό πάνω από το Πόρτο Κατσίκι με εντυπωσιακή θέα. Η τοπική ταβέρνα σερβίρει το καλύτερο φαγητό της νότιας Λευκάδας — αρνί από τα φάρμα του βουνού, τοπικό κρασί.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/8/80/Athani-sideris_%28cropped%29.jpg",
-            "photo_credit": {
-              "artist": "Thatsrightjack at English Wikipedia",
-              "license": "CC BY 2.5",
-              "license_url": "https://creativecommons.org/licenses/by/2.5",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Athani-sideris_(cropped).jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           },
           {
             "name": "Cape Lefkatas",
@@ -346,7 +316,7 @@
           }
         ],
         "title_el": "Πόρτο Κατσίκι & Εγκρεμνοί",
-        "overnight_el": "Βασιλική"
+        "overnight_el": "Νυδρί"
       },
       {
         "day": 4,
@@ -366,14 +336,8 @@
             "desc": "Remote west-coast beach accessible only by a narrow road. Long, pebbly, wild and almost always empty. One of the hidden beaches of the island.",
             "name_el": "Παραλία Πόρος",
             "desc_el": "Απομακρυσμένη παραλία της δυτικής ακτής προσβάσιμη μόνο με στενό δρόμο. Μακριά, με βότσαλο, άγρια και σχεδόν πάντα άδεια. Μία από τις κρυφές παραλίες του νησιού.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Ellomeno%2C_Greece_-_panoramio_%281%29.jpg/1920px-Ellomeno%2C_Greece_-_panoramio_%281%29.jpg",
-            "photo_credit": {
-              "artist": "Numenor",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Ellomeno,_Greece_-_panoramio_(1).jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           },
           {
             "name": "Gialos Beach",
@@ -385,14 +349,8 @@
             "desc": "Quiet pebble beach on the west coast — calm, clear water and a small taverna. Much less visited than the famous southern beaches.",
             "name_el": "Παραλία Γιαλός",
             "desc_el": "Ήσυχη παραλία βότσαλου στη δυτική ακτή — ήρεμα, καθαρά νερά και μια μικρή ταβέρνα. Πολύ λιγότερο επισκέψιμη από τις διάσημες νότιες παραλίες.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Ellomeno%2C_Greece_-_panoramio_%281%29.jpg/1920px-Ellomeno%2C_Greece_-_panoramio_%281%29.jpg",
-            "photo_credit": {
-              "artist": "Numenor",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Ellomeno,_Greece_-_panoramio_(1).jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           },
           {
             "name": "Agios Petros Village",
@@ -404,14 +362,8 @@
             "desc": "Traditional inland village with a good local taverna. Try the local cheeses and the Lefkada sausage (loukanika) before the drive north.",
             "name_el": "Χωριό Άγιος Πέτρος",
             "desc_el": "Παραδοσιακό χωριό στο εσωτερικό με μια καλή τοπική ταβέρνα. Δοκίμασε τα τοπικά τυριά και το λουκάνικο της Λευκάδας πριν την οδική επιστροφή προς τον βορρά.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Agios_Petros_Lefkadas.jpg",
-            "photo_credit": {
-              "artist": "Ελ Γκρέκο",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Agios_Petros_Lefkadas.jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           },
           {
             "name": "Lefkada Town — Departure",

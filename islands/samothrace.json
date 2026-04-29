@@ -8,62 +8,62 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Off-season, rough sea",
-        "why_el": "Μόνο ντόπιοι, άγρια θάλασσα"
+        "why": "Off-season",
+        "why_el": "Μόνο ντόπιοι"
       },
       {
         "tag": "avoid",
-        "why": "Tourism dormant",
+        "why": "Off-season",
         "why_el": "Σε χειμερία νάρκη"
       },
       {
         "tag": "ok",
-        "why": "Hiking, sea cold, mostly closed",
-        "why_el": "Πεζοπορία, θάλασσα κρύα"
+        "why": "Hiking, sea cold",
+        "why_el": "Πεζοπορία, κρύα"
       },
       {
         "tag": "great",
-        "why": "Easter, hiking, waterfalls full",
-        "why_el": "Πάσχα, καταρράκτες γεμάτοι"
+        "why": "Easter, waterfalls",
+        "why_el": "Πάσχα, καταρράκτες"
       },
       {
         "tag": "great",
-        "why": "Sea warming, hiking",
+        "why": "Sea warm, hiking",
         "why_el": "Νερό κολυμπιέται πια"
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, Vathra pools",
-        "why_el": "Ζεστά, Βάθρες, πεζοπορία"
+        "why": "Vathra pools",
+        "why_el": "Βάθρες, πεζοπορία"
       },
       {
         "tag": "great",
-        "why": "Hot, busy, panigiria starting",
-        "why_el": "Ζέστη, αρχίζουν πανηγύρια"
+        "why": "Panigiria start",
+        "why_el": "Πανηγύρια αρχή"
       },
       {
         "tag": "ok",
-        "why": "Peak panigiria, hot",
-        "why_el": "Κορύφωση πανηγυριών"
+        "why": "Panigiria peak",
+        "why_el": "Πανηγύρια peak"
       },
       {
         "tag": "perfect",
-        "why": "Best — sea warm, paths open",
-        "why_el": "Καλύτερος — ζεστά, πεζοπορία"
+        "why": "Best — warm",
+        "why_el": "Καλύτερος — ζεστά"
       },
       {
         "tag": "great",
-        "why": "Last swims, ideal hiking",
-        "why_el": "Τελευταία μπάνια, πεζοπορία"
+        "why": "Last swims+hike",
+        "why_el": "Τελευταία μπάνια"
       },
       {
         "tag": "ok",
-        "why": "Pre-winter, paths still open",
-        "why_el": "Τελευταία βδομάδα κίνησης"
+        "why": "Paths still open",
+        "why_el": "Τελευταία βδομάδα"
       },
       {
         "tag": "avoid",
-        "why": "Mostly shut",
+        "why": "Off-season",
         "why_el": "Σχεδόν όλα κλειστά"
       }
     ]
@@ -176,7 +176,7 @@
         "title": "Waterfalls & Vathres",
         "km": 30,
         "drive_mins": 80,
-        "overnight": "Therma",
+        "overnight": "Chora",
         "color": "#3D8B6F",
         "stops": [
           {
@@ -189,14 +189,8 @@
             "desc": "Spa village with sulfur hot springs. The trailhead for most waterfall hikes.",
             "name_el": "Θέρμα (Λουτρά)",
             "desc_el": "Ιαματικό χωριό με θειούχες ιαματικές πηγές. Η αρχή για τις περισσότερες πεζοπορίες σε καταρράκτες.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/20091128_Loutra_Thermes_Xanthi_Thrace_Greece_2.jpg/1920px-20091128_Loutra_Thermes_Xanthi_Thrace_Greece_2.jpg",
-            "photo_credit": {
-              "artist": "Ggia",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:20091128_Loutra_Thermes_Xanthi_Thrace_Greece_2.jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           },
           {
             "name": "Fonias River Vathres",
@@ -233,7 +227,7 @@
           }
         ],
         "title_el": "Καταρράκτες & Βάθρες",
-        "overnight_el": "Θέρμα"
+        "overnight_el": "Χώρα"
       },
       {
         "day": 3,
