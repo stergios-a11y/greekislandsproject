@@ -877,7 +877,7 @@ async function renderIslandPage(key) {
     const res = await fetch(`/islands/${key}.json`);
     if (res.ok) {
       const data = await res.json();
-      guide.innerHTML = buildIslandPage(data);
+      guide.innerHTML = buildIslandPage(data, key);
       setTimeout(() => initItineraryMap(data.itinerary.days, data.beaches || []), 80);
       if (data.beaches) setTimeout(() => loadBeachPhotos(data.beaches), 150);
       setTimeout(() => initBeachVotes(), 200);
@@ -919,7 +919,7 @@ async function renderIslandPage(key) {
 /* ============================================================
    ISLAND PAGE BUILDER — works with any island's JSON
 ============================================================ */
-function buildIslandPage(data) {
+function buildIslandPage(data, key) {
   const itin = data.itinerary;
 
   const dayBtns = itin.days.map(d =>
@@ -1262,6 +1262,7 @@ function similarReasonTags(srcKey, dstKey) {
 }
 
 function buildSimilarIslandsSection(key) {
+  if (!key || !ISLANDS_DATA[key]) return '';
   const matches = findSimilarIslands(key, 4);
   if (!matches.length) return '';
   const cards = matches.map(matchKey => {
