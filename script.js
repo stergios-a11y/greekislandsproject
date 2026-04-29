@@ -835,7 +835,7 @@ function buildIslandPage(data) {
       const timeHtml = s.time ? `<span class="itin-stop-time">${s.time}</span>` : '';
       const hasPhoto = !!s.photo;
       const photoHtml = hasPhoto
-        ? `<div class="itin-stop-photo-wrap"><img class="itin-stop-photo" src="${s.photo}" alt="${s.name}" loading="lazy" onerror="this.parentElement.style.display='none'"></div>`
+        ? `<div class="itin-stop-photo-wrap">${buildLightboxImg(s.photo, s.name, s.photo_credit, 'itin-stop-photo', 'onerror="this.parentElement.style.display=\'none\'"')}${buildPhotoCredit(s.photo_credit)}</div>`
         : '';
       return `<div class="itin-stop${hasPhoto ? ' has-photo' : ''}">
         <div class="itin-stop-num" style="background:${d.color}">${i + 1}</div>
