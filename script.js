@@ -1735,7 +1735,7 @@ function addToCompare(key) {
   if (selB && compareSelection[1]) selB.value = compareSelection[1];
 }
 
-function renderCompareView() {
+async function renderCompareView() {
   const keyA = compareSelection[0];
   const keyB = compareSelection[1];
   const iA = keyA && ISLANDS_DATA[keyA] ? { key: keyA, ...ISLANDS_DATA[keyA] } : null;
@@ -1752,6 +1752,154 @@ function renderCompareView() {
   if (content) content.style.display = '';
   renderRadarChart(iA, iB);
   renderCompareCards(iA, iB);
+
+  // Fetch full island JSONs for WTV + beach data (non-blocking — render static parts first)
+  let jsonA = null, jsonB = null;
+  try {
+    const [resA, resB] = await Promise.all([
+      fetch(`/islands/${keyA}.json`),
+      fetch(`/islands/${keyB}.json`)
+    ]);
+    if (resA.ok) jsonA = await resA.json();
+    if (resB.ok) jsonB = await resB.json();
+  } catch(e) {}
+
+  renderCompareWTV(iA, iB, jsonA, jsonB);
+  renderCompareExtra(iA, iB, jsonA, jsonB);
+}
+
+function renderCompareWTV(iA, iB, jsonA, jsonB) {
+  const el = document.getElementById('compare-wtv');
+  if (!el) return;
+
+  const tagsA = WTV_TAGS[iA.key] || [];
+  const tagsB = WTV_TAGS[iB.key] || [];
+  const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const tagClass = ['wtv-avoid','wtv-ok','wtv-great','wtv-perfect'];
+  const tagLabel = (t) => ['Avoid','OK','Great','Perfect'][t] || '';
+
+  // Get why-text if full JSON is available
+  const whyA = jsonA && jsonA.when_to_visit && jsonA.when_to_visit.months
+    ? jsonA.when_to_visit.months.map(m => m.why) : [];
+  const whyB = jsonB && jsonB.when_to_visit && jsonB.when_to_visit.months
+    ? jsonB.when_to_visit.months.map(m => m.why) : [];
+
+  const months = monthNames.map((mo, i) => {
+    const tA = tagsA[i] !== undefined ? tagsA[i] : 1;
+    const tB = tagsB[i] !== undefined ? tagsB[i] : 1;
+    const isSweet = tA >= 2 && tB >= 2;          // both great or perfect
+    const isBest  = tA >= 3 && tB >= 3;          // both perfect
+    const wA = whyA[i] || '';
+    const wB = whyB[i] || '';
+    const tooltip = `${islandName(iA.key)}: ${tagLabel(tA)}${wA ? ' — ' + wA : ''}
+${islandName(iB.key)}: ${tagLabel(tB)}${wB ? ' — ' + wB : ''}`;
+    return `<div class="cwtv-col${isSweet ? ' cwtv-sweet' : ''}${isBest ? ' cwtv-best' : ''}" title="${tooltip.replace(/"/g,"'")}">
+      <div class="cwtv-cell cwtv-a ${tagClass[tA]}">${wA ? `<span class="cwtv-why">${wA}</span>` : ''}</div>
+      <div class="cwtv-month">${mo}</div>
+      <div class="cwtv-cell cwtv-b ${tagClass[tB]}">${wB ? `<span class="cwtv-why">${wB}</span>` : ''}</div>
+    </div>`;
+  }).join('');
+
+  // Count sweet months
+  const sweetCount = tagsA.filter((t,i) => t >= 2 && tagsB[i] >= 2).length;
+  const bestCount  = tagsA.filter((t,i) => t >= 3 && tagsB[i] >= 3).length;
+  let overlapMsg = '';
+  if (bestCount > 0) {
+    const bestMonths = monthNames.filter((_,i) => tagsA[i] >= 3 && tagsB[i] >= 3).join(', ');
+    overlapMsg = `<div class="cwtv-verdict cwtv-verdict-best">${t('compare.wtv_both_perfect').replace('{months}', bestMonths)}</div>`;
+  } else if (sweetCount > 0) {
+    const sweetMonths = monthNames.filter((_,i) => tagsA[i] >= 2 && tagsB[i] >= 2).join(', ');
+    overlapMsg = `<div class="cwtv-verdict">${t('compare.wtv_both_good').replace('{months}', sweetMonths)}</div>`;
+  } else {
+    overlapMsg = `<div class="cwtv-verdict cwtv-verdict-warn">${t('compare.wtv_no_overlap')}</div>`;
+  }
+
+  el.innerHTML = `
+    <div class="cwtv-legend-row">
+      <span class="cwtv-island-a">${islandName(iA.key)}</span>
+      <div class="cwtv-legend">
+        <span class="cwtv-leg wtv-perfect"></span>${t('wtv.perfect')}
+        <span class="cwtv-leg wtv-great"></span>${t('wtv.great')}
+        <span class="cwtv-leg wtv-ok"></span>${t('wtv.ok')}
+        <span class="cwtv-leg wtv-avoid"></span>${t('wtv.avoid')}
+      </div>
+      <span class="cwtv-island-b">${islandName(iB.key)}</span>
+    </div>
+    <div class="cwtv-grid">${months}</div>
+    ${overlapMsg}`;
+}
+
+function renderCompareExtra(iA, iB, jsonA, jsonB) {
+  const el = document.getElementById('compare-extra');
+  if (!el) return;
+
+  // Best-for verdict: dominant dimension
+  function bestFor(island) {
+    const dims = [
+      { k: 'beach',  l: t('dim.beach'),   v: island.beach  },
+      { k: 'hist',   l: t('dim.culture'), v: island.hist   },
+      { k: 'night',  l: t('dim.night'),   v: island.night  },
+      { k: 'access', l: t('dim.access'),  v: island.access },
+      { k: 'afford', l: t('dim.afford'),  v: island.afford },
+    ];
+    const top = dims.sort((a,b) => b.v - a.v)[0];
+    return `${top.l} (${fmt(top.v)})`;
+  }
+
+  // Character tags from ISLANDS_DATA booleans
+  function charTags(island) {
+    const tags = [];
+    if (island.car_need <= 1.5) tags.push({ icon:'🚶', label: t('vibe.carfree') });
+    if (island.drama)  tags.push({ icon:'🌋', label: t('vibe.drama') });
+    if (island.hiking) tags.push({ icon:'🥾', label: t('vibe.hiking') });
+    if (island.springs)tags.push({ icon:'♨️', label: t('vibe.springs') });
+    if (island.chora)  tags.push({ icon:'🏛', label: t('vibe.chora') });
+    if (island.sailing)tags.push({ icon:'⛵', label: t('vibe.sailing') });
+    if (island.has_airport) tags.push({ icon:'✈️', label: t('vibe.airport') });
+    return tags.map(tg => `<span class="cmp-char-tag">${tg.icon} ${tg.label}</span>`).join('');
+  }
+
+  // Beach summary from full JSON
+  function beachSummary(island, json) {
+    if (!json || !json.beaches || !json.beaches.length) return '';
+    const types = new Set();
+    const facings = new Set();
+    json.beaches.forEach(b => {
+      if (b.type) {
+        const t = b.type.toLowerCase();
+        if (t.includes('sand')) types.add('Sandy');
+        else if (t.includes('pebble')) types.add('Pebble');
+        else if (t.includes('rock')) types.add('Rocky');
+      }
+      if (b.facing) {
+        const f = b.facing.toLowerCase();
+        if (f.includes('shelter')) facings.add('sheltered');
+        else if (f.includes('exposed') || f.includes('open sea')) facings.add('exposed');
+        if (f.includes('meltemi') || f.includes('north')) facings.add('Meltemi-exposed');
+      }
+    });
+    const parts = [...types, ...facings].slice(0, 3);
+    return parts.length ? `<div class="cmp-beach-summary">🏖 ${parts.join(' · ')}</div>` : '';
+  }
+
+  // Getting there pills
+  function transportPills(island, json) {
+    const pills = (json && json.getting_there && json.getting_there.pills) || [];
+    if (!pills.length) return '';
+    return `<div class="cmp-transport">${pills.map(p => `<span class="cmp-transport-pill">${p}</span>`).join('')}</div>`;
+  }
+
+  function extraCard(island, json, other) {
+    return `<div class="cmp-extra-card">
+      <div class="cmp-extra-name">${islandName(island.key)}</div>
+      <div class="cmp-bestfor"><strong>${t('compare.best_for')}:</strong> ${bestFor(island)}</div>
+      <div class="cmp-char-tags">${charTags(island)}</div>
+      ${beachSummary(island, json)}
+      ${transportPills(island, json)}
+    </div>`;
+  }
+
+  el.innerHTML = `<div class="cmp-extra-grid">${extraCard(iA, jsonA, iB)}${extraCard(iB, jsonB, iA)}</div>`;
 }
 
 function renderRadarChart(iA, iB) {

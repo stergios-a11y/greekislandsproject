@@ -182,6 +182,16 @@ const UI_TEXT = {
   'compare.vs': { en: 'vs', el: 'εναντίον' },
   'compare.clear': { en: 'Clear', el: 'Καθαρισμός' },
   'compare.placeholder': { en: 'Select two islands above to start comparing.', el: 'Επίλεξε δύο νησιά παραπάνω για να αρχίσει η σύγκριση.' },
+  'compare.wtv_title':    { en: 'When to visit — overlap', el: 'Πότε να επισκεφτείς — επικάλυψη' },
+  'compare.extra_title':  { en: 'Character & practicalities', el: 'Χαρακτήρας & πρακτικά' },
+  'compare.best_for':     { en: 'Best for', el: 'Ιδανικό για' },
+  'compare.wtv_both_perfect': { en: 'Both perfect in {months}', el: 'Και τα δύο τέλεια: {months}' },
+  'compare.wtv_both_good':    { en: 'Both great or perfect in {months}', el: 'Και τα δύο καλά: {months}' },
+  'compare.wtv_no_overlap':   { en: 'No month where both are great — pick one over the other', el: 'Δεν υπάρχει μήνας που και τα δύο είναι καλά' },
+  'wtv.perfect': { en: 'Perfect', el: 'Τέλειο' },
+  'wtv.great':   { en: 'Great',   el: 'Καλό' },
+  'wtv.ok':      { en: 'OK',      el: 'ΟΚ' },
+  'wtv.avoid':   { en: 'Avoid',   el: 'Αποφύγετε' },
 
   // Hopping page
   'hopping.title': { en: '🚢 Island Hopping', el: '🚢 Νησοπορία' },
