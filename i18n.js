@@ -213,6 +213,7 @@ const UI_TEXT = {
   'hopping.title': { en: '🚢 Island Hopping', el: '🚢 Νησοπορία' },
   'hopping.maptitle': { en: 'Ferry network map', el: 'Χάρτης δικτύου πλοίων' },
   'hopping.show':     { en: 'Show', el: 'Εμφάνιση' },
+  'hopping.book.label': { en: 'Book ferries', el: 'Κράτηση πλοίων' },
   'hopping.focus.one':   { en: 'connection shown', el: 'σύνδεση' },
   'hopping.focus.many':  { en: 'connections shown', el: 'συνδέσεις' },
   'hopping.focus.guide': { en: 'View island guide', el: 'Δες τον οδηγό' },

@@ -18,6 +18,35 @@ The main index.html and the JSON files in /islands/ are the source of truth.
 """
 import json
 import os
+from datetime import datetime, timezone
+
+def bump_build_date():
+    """Update the BUILD_DATE constant in script.js to today (UTC)."""
+    today = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+    script_path = ROOT / 'script.js' if 'ROOT' in dir() else None
+    # Resolve script.js path lazily — same dir as this script's parent
+    script_path = (
+        (globals().get('ROOT') or __file__.rsplit('/', 2)[0])
+    )
+    import re as _re
+    from pathlib import Path as _Path
+    sp = _Path(__file__).resolve().parent.parent / 'script.js'
+    if not sp.exists():
+        print('  [warn] script.js not found at expected path')
+        return
+    src = sp.read_text()
+    new_src = _re.sub(
+        r"const BUILD_DATE = '[^']*';",
+        f"const BUILD_DATE = '{today}';",
+        src,
+        count=1,
+    )
+    if new_src != src:
+        sp.write_text(new_src)
+        print(f'✓ BUILD_DATE bumped to {today}')
+    else:
+        print('  [info] BUILD_DATE not changed (already current or marker missing)')
+
 import re
 import html
 from pathlib import Path
@@ -904,6 +933,9 @@ def render_page(key, data, meta, lang='en'):
 def main():
     OUT_EN.mkdir(parents=True, exist_ok=True)
     OUT_EL.mkdir(parents=True, exist_ok=True)
+
+    # Bump BUILD_DATE in script.js so the "Last updated" footer stamp is fresh
+    bump_build_date()
 
     count = 0
     keys = []

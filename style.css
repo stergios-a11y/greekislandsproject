@@ -2051,6 +2051,13 @@ html.dark .similar-card:hover { border-color: var(--aegean); }
   color: var(--ink-4);
   margin-top: 4px;
 }
+.footer-updated {
+  font-size: var(--text-meta);
+  color: var(--ink-4);
+  opacity: 0.7;
+  margin-top: 2px;
+}
+.footer-updated:empty { display: none; }
 
 /* Island hover tooltip */
 .island-tooltip {
@@ -2446,6 +2453,38 @@ html.dark .ferry-filter-btn.active { background: var(--marble-2); }
   color: #fff;
 }
 .planner-book-btn:active { transform: scale(0.98); }
+
+/* In-map "Book ferries" Leaflet control — top-right of ferry map */
+.ferry-map-book-ctrl {
+  background: var(--aegean);
+  border: none !important;
+  border-radius: var(--radius) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18) !important;
+  overflow: hidden;
+}
+.ferry-map-book-ctrl a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-family: var(--sans);
+  font-size: var(--text-meta);
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  background: var(--aegean);
+  transition: background 0.15s;
+}
+.ferry-map-book-ctrl a:hover {
+  background: var(--aegean-dark);
+  text-decoration: none;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .ferry-map-book-ctrl a { padding: 7px 10px; }
+  .ferry-map-book-label { display: none; }    /* Icon only on small screens */
+}
 
 /* Ferry map container */
 #ferry-map {
