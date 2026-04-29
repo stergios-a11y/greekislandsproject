@@ -4258,64 +4258,57 @@ html.dark .mission-disagree-box {
    (Feb/Apr/Jun/Aug/Oct/Dec). The pill (inner span) is flow-positioned so the
    cell expands naturally with content, then horizontally translated to anchor
    on the actual month tick (25% for odd months, 75% for even months). */
+/* Caption cells are just height reservoirs — the pill is absolutely positioned
+   so it can bleed freely into adjacent (always-empty) slots. */
 .wtv-cap-above,
 .wtv-cap-below {
   grid-column: span 2;
   position: relative;
-  display: flex;
-  overflow: visible;            /* pill can extend beyond the 2-col span */
+  overflow: visible;
 }
-.wtv-cap-above {
-  grid-row: 1;
-  align-items: flex-end;
-  padding-bottom: 10px;
-}
-.wtv-cap-below {
-  grid-row: 3;
-  align-items: flex-start;
-  padding-top: 10px;
-}
+.wtv-cap-above { grid-row: 1; height: 72px; }  /* enough for 2 lines + padding */
+.wtv-cap-below { grid-row: 3; height: 72px; }
 
-/* The visible pill — grows to fit its text (up to ~3 cell-widths).
-   translateX anchors the pill's midpoint over the month tick.
-   -webkit-line-clamp caps at exactly 2 lines so the pill height is
-   always uniform. The wide max-width lets it use the neighbouring
-   empty caption slot so text never has to wrap past 2 clean lines. */
+/* The visible pill — absolutely positioned, centered on the month tick.
+   Width is fixed at 1.8× a single cell (= 90% of the 2-col span).
+   Tick for above is at 25% of 2-col span; for below at 75%.
+   We nudge the pill so it sits mostly in the open (empty) neighbour slot. */
 .wtv-cap-text {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  width: max-content;           /* size to text, not to parent column */
-  max-width: 185%;              /* cap at ~3.7 col-widths — uses the open neighbour slot */
+  position: absolute;
+  /* sizing */
+  width: 160%;                  /* 160% of 2-col span ≈ 3.2 cell-widths */
   box-sizing: border-box;
-  padding: 5px 11px;
+  padding: 5px 10px;
+  /* appearance */
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  background: transparent;
+  background: var(--white);
   font-family: var(--sans);
   font-size: var(--text-meta);
   font-weight: 500;
   line-height: 1.35;
   text-align: center;
   color: var(--ink-1);
-  white-space: normal;          /* allow wrapping within the pill */
+  /* clamp at 2 lines */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
-/* Anchor: tick is at 25% of the 2-col span for above (odd months),
-   75% for below (even months). The pill is offset so its own midpoint
-   lands on the tick, giving it room to grow into the adjacent empty slot. */
+/* Above (tick at 25% of 2-col): left edge of pill starts at tick, grows rightward */
 .wtv-cap-above .wtv-cap-text {
-  margin-left: 25%;
-  transform: translateX(-50%);  /* centre the pill on the tick */
+  bottom: 10px;
+  left: 25%;
+  transform: translateX(-30%);  /* nudge left so tick is ~30% into pill */
 }
+/* Below (tick at 75% of 2-col): right edge of pill ends at tick, grows leftward */
 .wtv-cap-below .wtv-cap-text {
-  margin-left: 75%;
-  transform: translateX(-50%);  /* centre the pill on the tick */
+  top: 10px;
+  left: 75%;
+  transform: translateX(-70%);  /* nudge left so tick is ~70% into pill */
 }
 
-/* Tick marks linking pill to ribbon — vertical line at the month-tick X position.
-   Independent of pill position so they always point at the right month even if
-   the pill itself is wider/narrower. */
+/* Tick marks */
 .wtv-cap-above::after,
 .wtv-cap-below::before {
   content: "";
@@ -4388,6 +4381,7 @@ html.dark .wtv-section {
 html.dark .wtv-summary { color: var(--ink-2); }
 html.dark .wtv-cap-text {
   color: var(--ink-2);
+  background: var(--marble);
   border-color: rgba(255, 255, 255, 0.18);
 }
 html.dark .wtv-cap-muted .wtv-cap-text {
