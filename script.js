@@ -2917,8 +2917,8 @@ const QUIZ_QUESTIONS = [
   {
     question: 'How are you getting there?',
     question_el: 'Πώς φτάνεις στο νησί;',
-    options: ['By car (drive-on ferry or bridge)', 'Short ferry — under 2 hours', 'Long ferry — happy to sail overnight', 'Fly in'],
-    options_el: ['Με αυτοκίνητο (ro-ro ή γέφυρα)', 'Μικρή διαδρομή — κάτω από 2 ώρες', 'Μεγάλη διαδρομή — δεν με πειράζει', 'Αεροπλάνο']
+    options: ['By car', 'Ferry — up to 5 hours', 'Ferry — more than 5 hours', 'Fly in'],
+    options_el: ['Με το αυτοκίνητό μου', 'Πλοίο — έως 5 ώρες', 'Πλοίο — πάνω από 5 ώρες', 'Αεροπλάνο']
   },
   {
     question: 'Will you have a car on the island?',
@@ -3028,16 +3028,13 @@ function computeQuizResults() {
       if (driveOnIslands.has(i.key)) s += 2.0;
       else if (!i.has_airport && i.access < 3) s -= 1.5;
     } else if (transportPref === 1) {
-      // Short ferry <2h from Athens (access score proxy + known short-hop islands)
-      const shortFerryIslands = new Set(['aegina','agistri','hydra','poros','spetses',
-        'salamis','elafonisos','kythira','andros','tinos','syros','mykonos',
-        'paros','naxos','ios','santorini','heraklion','skiathos','skopelos',
-        'alonnisos','evia-north','evia-central','evia-south','kea','kythnos']);
-      if (shortFerryIslands.has(i.key)) s += 1.5;
-      else if (i.access < 3) s -= 1.2;
+      // Ferry up to 5h — most islands with access >= 3, penalise truly remote ones
+      if (i.access >= 3.0) s += 1.2;
+      else if (i.access < 2.0) s -= 1.5;
     } else if (transportPref === 2) {
-      // Long ferry OK — no penalty, slight boost for remote/hard-to-reach
-      if (i.access <= 2.5) s += 0.8;
+      // Ferry more than 5h — boost remote/hard-to-reach, no penalty on accessible ones
+      if (i.access <= 2.5) s += 1.2;
+      else if (i.access >= 4.5) s -= 0.5;
     } else if (transportPref === 3) {
       // Fly: favour airports, penalise no-airport
       if (i.has_airport) s += 1.2;
