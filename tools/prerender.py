@@ -542,15 +542,10 @@ def build_structured_data(key, data, meta, lang='en'):
             "name": "Greece"
         },
     }
-    # Add rating aggregated from our dimension scores
-    if meta.get('total'):
-        destination["aggregateRating"] = {
-            "@type": "AggregateRating",
-            "ratingValue": round(meta['total'], 1),
-            "bestRating": 5,
-            "worstRating": 1,
-            "ratingCount": 1
-        }
+    # NOTE: aggregateRating is NOT valid on TouristDestination per schema.org.
+    # Google Search Console flags it as "Invalid object type for field <parent_node>".
+    # Our internal dimension scores (beach/culture/nightlife/etc) aren't real reviews
+    # anyway, so Google would discount them. Removed to keep the schema clean.
 
     # Itinerary → TouristTrip
     trip = None
