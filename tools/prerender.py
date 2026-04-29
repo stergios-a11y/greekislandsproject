@@ -166,25 +166,28 @@ WTV_I18N = {
 def build_when_to_visit_html(data, lang='en'):
     """Mirror script.js buildWhenToVisitSection. Empty string if missing.
 
-    Renders an alternating-caption ribbon: 12 cells in a row with
+    Renders an alternating-caption ribbon: 12 ribbon cells in a row, with
     captions above (odd months: Jan/Mar/May/Jul/Sep/Nov) and below
-    (even months: Feb/Apr/Jun/Aug/Oct/Dec). Mobile users get a horizontal
-    scroll wrapper so the ribbon stays a continuous timeline.
+    (even months: Feb/Apr/Jun/Aug/Oct/Dec). Each caption spans 2 columns
+    so it has ~100px horizontal room; tick marks (CSS pseudo-elements)
+    point at the specific month each caption describes.
+
+    Mobile users get a horizontal-scroll wrapper so the ribbon stays a
+    continuous timeline rather than wrapping to two rows.
     """
     w = data.get('when_to_visit')
     if not w or not isinstance(w.get('months'), list) or len(w['months']) != 12:
         return ''
 
     labels = WTV_I18N[lang]
-    above_cells = []
-    below_cells = []
+    above_caps = []
+    below_caps = []
     ribbon_cells = []
 
     for i, m in enumerate(w['months']):
         tag = (m.get('tag') or 'ok').lower()
         why = pick(m, 'why', lang) or ''
 
-        # Caption styling: bold for perfect (peak), muted for avoid + ok
         cap_class = ''
         if tag == 'perfect':
             cap_class = ' wtv-cap-peak'
@@ -192,13 +195,9 @@ def build_when_to_visit_html(data, lang='en'):
             cap_class = ' wtv-cap-muted'
 
         if i % 2 == 0:
-            # odd month — caption above, empty placeholder below
-            above_cells.append(f'<div class="wtv-cap-above{cap_class}">{esc(why)}</div>')
-            below_cells.append('<div class="wtv-cap-below wtv-cap-empty"></div>')
+            above_caps.append(f'<div class="wtv-cap-above{cap_class}">{esc(why)}</div>')
         else:
-            # even month — empty above, caption below
-            above_cells.append('<div class="wtv-cap-above wtv-cap-empty"></div>')
-            below_cells.append(f'<div class="wtv-cap-below{cap_class}">{esc(why)}</div>')
+            below_caps.append(f'<div class="wtv-cap-below{cap_class}">{esc(why)}</div>')
 
         ribbon_cells.append(
             f'<div class="wtv-cell wtv-{esc(tag)}" title="{esc(why)}">'
@@ -208,7 +207,6 @@ def build_when_to_visit_html(data, lang='en'):
     summary = pick(w, 'summary', lang) or ''
     summary_html = f'<p class="wtv-summary">{safe_html(summary)}</p>' if summary else ''
 
-    # Legend: only tags that appear
     tags_present = {(m.get('tag') or 'ok').lower() for m in w['months']}
     legend_order = ['perfect', 'great', 'ok', 'avoid']
     legend_items = ''.join(
@@ -216,7 +214,7 @@ def build_when_to_visit_html(data, lang='en'):
         for t in legend_order if t in tags_present
     )
 
-    ribbon_inner = ''.join(above_cells) + ''.join(ribbon_cells) + ''.join(below_cells)
+    ribbon_inner = ''.join(above_caps) + ''.join(ribbon_cells) + ''.join(below_caps)
 
     return (
         f'<section class="seo-wtv wtv-section">'

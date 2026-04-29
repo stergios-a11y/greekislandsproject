@@ -985,11 +985,12 @@ function buildWhenToVisitSection(data) {
     ? ['Ιαν','Φεβ','Μάρ','Απρ','Μάι','Ιούν','Ιούλ','Αύγ','Σεπ','Οκτ','Νοέ','Δεκ']
     : ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
-  // Build three rows of grid items: above-captions, ribbon cells, below-captions.
-  // Odd-index months (Jan, Mar, May, Jul, Sep, Nov — i % 2 === 0) caption ABOVE.
-  // Even-index months (Feb, Apr, Jun, Aug, Oct, Dec — i % 2 === 1) caption BELOW.
-  const aboveCells = [];
-  const belowCells = [];
+  // Three rows in the ribbon grid:
+  //   Row 1: 6 above-captions (odd months: Jan/Mar/May/Jul/Sep/Nov), each spans 2 columns
+  //   Row 2: 12 ribbon cells (one per month)
+  //   Row 3: 6 below-captions (even months: Feb/Apr/Jun/Aug/Oct/Dec), each spans 2 columns
+  const aboveCaps = [];
+  const belowCaps = [];
   const ribbonCells = [];
 
   w.months.forEach((m, i) => {
@@ -997,19 +998,14 @@ function buildWhenToVisitSection(data) {
     const why = pickLang(m, 'why') || '';
     const safeWhy = why.replace(/"/g, '&quot;');
 
-    // Caption styling: muted for avoid + ok, peak (bold) for perfect, normal for great
     let capClass = '';
-    if (tag === 'perfect')      capClass = ' wtv-cap-peak';
-    else if (tag === 'avoid' || tag === 'ok') capClass = ' wtv-cap-muted';
+    if (tag === 'perfect')                     capClass = ' wtv-cap-peak';
+    else if (tag === 'avoid' || tag === 'ok')  capClass = ' wtv-cap-muted';
 
     if (i % 2 === 0) {
-      // odd month — caption above, empty below
-      aboveCells.push(`<div class="wtv-cap-above${capClass}">${why}</div>`);
-      belowCells.push(`<div class="wtv-cap-below wtv-cap-empty"></div>`);
+      aboveCaps.push(`<div class="wtv-cap-above${capClass}">${why}</div>`);
     } else {
-      // even month — empty above, caption below
-      aboveCells.push(`<div class="wtv-cap-above wtv-cap-empty"></div>`);
-      belowCells.push(`<div class="wtv-cap-below${capClass}">${why}</div>`);
+      belowCaps.push(`<div class="wtv-cap-below${capClass}">${why}</div>`);
     }
 
     ribbonCells.push(
@@ -1020,7 +1016,6 @@ function buildWhenToVisitSection(data) {
   const summary = pickLang(w, 'summary') || '';
   const summaryHtml = summary ? `<p class="wtv-summary">${summary}</p>` : '';
 
-  // Legend: only show tags that actually appear
   const tagsPresent = new Set(w.months.map(m => (m.tag || 'ok').toLowerCase()));
   const legendOrder = ['perfect', 'great', 'ok', 'avoid'];
   const legendLabels = lang === 'el'
@@ -1037,9 +1032,9 @@ function buildWhenToVisitSection(data) {
       ${summaryHtml}
       <div class="wtv-ribbon-wrap">
         <div class="wtv-ribbon">
-          ${aboveCells.join('')}
+          ${aboveCaps.join('')}
           ${ribbonCells.join('')}
-          ${belowCells.join('')}
+          ${belowCaps.join('')}
         </div>
       </div>
       <div class="wtv-legend">${legend}</div>

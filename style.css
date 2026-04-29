@@ -3724,45 +3724,45 @@ html.dark .mission-disagree-box {
   .wtv-ribbon { min-width: 720px; }
 }
 
-/* Caption cells — above row (odd months) and below row (even months) */
+/* Caption cells — span 2 ribbon cells each so text gets ~100px breathing room.
+   Each row holds 6 caption cells (instead of 12). Above-row holds odd-month
+   captions (Jan/Mar/May/Jul/Sep/Nov), below-row holds even-month captions
+   (Feb/Apr/Jun/Aug/Oct/Dec). The tick mark inside each caption cell offsets
+   left or right so it points at the actual month's ribbon segment. */
 .wtv-cap-above,
 .wtv-cap-below {
+  grid-column: span 2;
   font-family: var(--sans);
   font-size: var(--text-meta);
   font-weight: 500;
   line-height: 1.3;
   text-align: center;
   color: var(--ink-1);
-  padding: 0 4px;
+  padding: 0 6px;
   position: relative;
 }
 .wtv-cap-above {
   grid-row: 1;
   padding-bottom: 10px;
-  align-self: end;  /* push captions to bottom of their row, near the ribbon */
+  align-self: end;
 }
 .wtv-cap-below {
   grid-row: 3;
   padding-top: 10px;
   align-self: start;
 }
-.wtv-cap-empty {
-  /* empty placeholder cell (so the alternation works) */
-  visibility: hidden;
-}
-/* Tick marks linking captions to the ribbon */
+/* Tick marks pointing at the specific month — odd months tick at 25%
+   (left half of 2-cell span), even months tick at 75% (right half). */
 .wtv-cap-above::after,
 .wtv-cap-below::before {
   content: "";
   position: absolute;
-  left: 50%;
   width: 1px;
   height: 8px;
-  background: rgba(0, 0, 0, 0.18);
-  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.22);
 }
-.wtv-cap-above::after  { bottom: 0; }
-.wtv-cap-below::before { top: 0; }
+.wtv-cap-above::after  { bottom: 0; left: 25%; }
+.wtv-cap-below::before { top: 0;    left: 75%; }
 
 /* Muted captions for low-stakes months (avoid + ok shoulder) */
 .wtv-cap-muted { color: var(--ink-3); font-weight: 400; }
