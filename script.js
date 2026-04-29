@@ -2046,6 +2046,90 @@ const RHODES_PORT = { lat: 36.451, lng: 28.227 };
 //  See: findFerryRoute(fromKey, toKey) below.
 // ============================================================
 
+// Main ferry port coordinates per island. Used for the ferry network map so the
+// dots sit at the actual harbour rather than the geographic centroid (matters most
+// for big islands like Crete, Rhodes, Naxos where centroid != port).
+const ISLAND_FERRY_PORTS = {
+  'aegina': { lat: 37.745, lng: 23.43 },
+  'agathonisi': { lat: 37.464, lng: 26.989 },
+  'agios-efstratios': { lat: 39.51, lng: 24.998 },
+  'agistri': { lat: 37.7, lng: 23.347 },
+  'alonnisos': { lat: 39.149, lng: 23.857 },
+  'ammouliani': { lat: 40.323, lng: 23.901 },
+  'amorgos': { lat: 36.835, lng: 25.882 },
+  'anafi': { lat: 36.355, lng: 25.766 },
+  'andros': { lat: 37.881, lng: 24.738 },
+  'antiparos': { lat: 37.041, lng: 25.084 },
+  'astypalaia': { lat: 36.557, lng: 26.353 },
+  'chania': { lat: 35.491, lng: 24.08 },
+  'chios': { lat: 38.371, lng: 26.137 },
+  'corfu': { lat: 39.624, lng: 19.92 },
+  'donousa': { lat: 37.105, lng: 25.812 },
+  'elafonisos': { lat: 36.499, lng: 22.978 },
+  'evia-central': { lat: 38.464, lng: 23.598 },
+  'evia-north': { lat: 38.901, lng: 23.04 },
+  'evia-south': { lat: 38.084, lng: 24.297 },
+  'folegandros': { lat: 36.612, lng: 24.913 },
+  'fournoi': { lat: 37.594, lng: 26.5 },
+  'gavdos': { lat: 34.844, lng: 24.124 },
+  'halki': { lat: 36.224, lng: 27.617 },
+  'heraklion': { lat: 35.342, lng: 25.155 },
+  'hydra': { lat: 37.349, lng: 23.466 },
+  'ikaria': { lat: 37.62, lng: 26.213 },
+  'ios': { lat: 36.722, lng: 25.282 },
+  'iraklia': { lat: 36.846, lng: 25.469 },
+  'ithaca': { lat: 38.444, lng: 20.677 },
+  'kalymnos': { lat: 36.948, lng: 26.989 },
+  'karpathos': { lat: 35.508, lng: 27.213 },
+  'kasos': { lat: 35.408, lng: 26.926 },
+  'kastellorizo': { lat: 36.144, lng: 29.594 },
+  'kea': { lat: 37.659, lng: 24.318 },
+  'kefalonia': { lat: 38.252, lng: 20.643 },
+  'kimolos': { lat: 36.794, lng: 24.575 },
+  'kos': { lat: 36.893, lng: 27.288 },
+  'koufonisia': { lat: 36.937, lng: 25.594 },
+  'kythira': { lat: 36.144, lng: 23.011 },
+  'kythnos': { lat: 37.388, lng: 24.408 },
+  'lasithi': { lat: 35.197, lng: 25.722 },
+  'lefkada': { lat: 38.832, lng: 20.706 },
+  'leipsoi': { lat: 37.301, lng: 26.762 },
+  'lemnos': { lat: 39.876, lng: 25.067 },
+  'leros': { lat: 37.139, lng: 26.802 },
+  'lesvos': { lat: 39.108, lng: 26.554 },
+  'meganisi': { lat: 38.658, lng: 20.755 },
+  'milos': { lat: 36.737, lng: 24.435 },
+  'mykonos': { lat: 37.446, lng: 25.328 },
+  'naxos': { lat: 37.106, lng: 25.378 },
+  'nisyros': { lat: 36.378, lng: 27.143 },
+  'oinousses': { lat: 38.518, lng: 26.22 },
+  'paros': { lat: 37.084, lng: 25.15 },
+  'patmos': { lat: 37.31, lng: 26.554 },
+  'paxos': { lat: 39.205, lng: 20.184 },
+  'poros': { lat: 37.499, lng: 23.451 },
+  'psara': { lat: 38.534, lng: 25.561 },
+  'rethymno': { lat: 35.367, lng: 24.487 },
+  'rhodes': { lat: 36.451, lng: 28.227 },
+  'salamis': { lat: 37.943, lng: 23.523 },
+  'samos': { lat: 37.751, lng: 26.978 },
+  'samothrace': { lat: 40.481, lng: 25.473 },
+  'santorini': { lat: 36.413, lng: 25.43 },
+  'schoinoussa': { lat: 36.864, lng: 25.527 },
+  'serifos': { lat: 37.158, lng: 24.482 },
+  'sifnos': { lat: 36.967, lng: 24.677 },
+  'sikinos': { lat: 36.694, lng: 25.128 },
+  'skiathos': { lat: 39.165, lng: 23.49 },
+  'skopelos': { lat: 39.122, lng: 23.728 },
+  'skyros': { lat: 38.91, lng: 24.567 },
+  'spetses': { lat: 37.262, lng: 23.157 },
+  'symi': { lat: 36.617, lng: 27.842 },
+  'syros': { lat: 37.444, lng: 24.943 },
+  'thasos': { lat: 40.776, lng: 24.713 },
+  'therasia': { lat: 36.426, lng: 25.378 },
+  'tilos': { lat: 36.418, lng: 27.378 },
+  'tinos': { lat: 37.539, lng: 25.162 },
+  'zakynthos': { lat: 37.787, lng: 20.898 },
+};
+
 const FERRY_GRAPH = [
   { a: 'aegina', b: 'agistri', dur: 15, freq: 'high', plo: 3, phi: 5, note: "multiple daily" },
   { a: 'aegina', b: 'poros', dur: 60, freq: 'high', plo: 10, phi: 16, note: "multiple daily" },
@@ -2250,6 +2334,45 @@ const MAINLAND_PORTS = {
   'sitia': { name: 'Sitia (Crete)', name_el: 'Σητεία (Κρήτη)', lat: 35.207, lng: 26.107 },
   'souda': { name: 'Souda (Chania)', name_el: 'Σούδα (Χανιά)', lat: 35.491, lng: 24.08 },
 };
+
+// Ferryhopper slug conversions (some islands have non-obvious slugs there)
+const FERRYHOPPER_SLUGS = {
+  'lasithi': 'agios-nikolaos',
+  'kefalonia': 'kefalonia-sami',
+  'ithaca': 'ithaki',
+  'lesvos': 'mytilene',
+  'kea': 'kea-tzia',
+  'thasos': 'thassos',
+  'samothrace': 'samothraki',
+  'salamis': 'salamina',
+  // Mainland ports
+  'piraeus': 'piraeus',
+  'rafina': 'rafina',
+  'lavrio': 'lavrio',
+  'kyllini': 'kyllini',
+  'patras': 'patra',
+  'igoumenitsa': 'igoumenitsa',
+  'volos': 'volos',
+  'kymi': 'kymi',
+  'neapoli': 'neapoli',
+  'pounta': 'pounta',
+  'kavala': 'kavala',
+  'keramoti': 'keramoti',
+  'alexandroupoli': 'alexandroupolis',
+  'tripiti': 'tripiti',
+  'perama': 'piraeus',         // close enough for booking
+  'sfakia': 'chora-sfakion',
+  'sitia': 'sitia',
+  'souda': 'chania',            // Souda port serves Chania
+  'agia-marina': 'agia-marina-attica',
+  'arkitsa': 'arkitsa',
+};
+function ferryhopperSlug(key) {
+  return FERRYHOPPER_SLUGS[key] || key;
+}
+function ferryhopperRouteUrl(fromKey, toKey) {
+  return `https://www.ferryhopper.com/en/ferries/${ferryhopperSlug(fromKey)}/${ferryhopperSlug(toKey)}`;
+}
 
 // Build adjacency map for pathfinding (each edge stored with explicit `to`)
 function buildFerryAdj() {
@@ -2520,6 +2643,11 @@ function runPlannerSearch() {
       </div>
     </div>
     <div class="planner-hops">${hopsHtml}</div>
+    <div class="planner-actions">
+      <a class="planner-book-btn" href="${ferryhopperRouteUrl(plannerState.from, plannerState.to)}" target="_blank" rel="noopener">
+        🚢 ${t('planner.book')}
+      </a>
+    </div>
     <div class="planner-disclaimer">${t('planner.disclaimer')}</div>`;
 }
 
@@ -2610,6 +2738,10 @@ function curvedRouteCoords(fromLat, fromLng, toLat, toLng, segments = 12) {
 
 function getFerryPortCoords(key) {
   if (MAINLAND_PORTS[key]) return MAINLAND_PORTS[key];
+  // Prefer the explicit port coords for islands when available
+  if (ISLAND_FERRY_PORTS[key] && ISLANDS_DATA[key]) {
+    return { ...ISLANDS_DATA[key], lat: ISLAND_FERRY_PORTS[key].lat, lng: ISLAND_FERRY_PORTS[key].lng };
+  }
   if (ISLANDS_DATA[key])   return ISLANDS_DATA[key];
   if (typeof EXTRA_PORTS !== 'undefined' && EXTRA_PORTS[key]) return EXTRA_PORTS[key];
   return null;
@@ -2646,13 +2778,15 @@ function renderFerryMap() {
   const freqStyle = {
     high: { color: '#076880', weight: 2.4, opacity: 0.78, dashArray: null },
     med:  { color: '#0B8FAC', weight: 1.9, opacity: 0.62, dashArray: null },
-    low:  { color: '#C4962A', weight: 1.6, opacity: 0.55, dashArray: '6, 5' },
+    low:  { color: '#C4962A', weight: 1.6, opacity: 0.65, dashArray: null },
   };
 
-  // Draw all edges in FERRY_GRAPH that pass the filter
+  // Draw all edges in FERRY_GRAPH that pass the filter.
+  // If FERRY_FOCUS_PORT is set, only render edges touching that port.
   const drawnPorts = new Set();
   FERRY_GRAPH.forEach(edge => {
     if (!FERRY_MAP_FILTERS.has(edge.freq)) return;
+    if (FERRY_FOCUS_PORT && edge.a !== FERRY_FOCUS_PORT && edge.b !== FERRY_FOCUS_PORT) return;
     const from = getFerryPortCoords(edge.a);
     const to   = getFerryPortCoords(edge.b);
     if (!from || !to) return;
@@ -2661,8 +2795,8 @@ function renderFerryMap() {
     const style  = freqStyle[edge.freq] || freqStyle.low;
     const line = L.polyline(coords, {
       color: style.color,
-      weight: style.weight,
-      opacity: style.opacity,
+      weight: FERRY_FOCUS_PORT ? style.weight + 0.6 : style.weight,
+      opacity: FERRY_FOCUS_PORT ? Math.min(style.opacity + 0.2, 1) : style.opacity,
       dashArray: style.dashArray,
       smoothFactor: 1.2,
     }).addTo(ferryMapLayer);
@@ -2680,26 +2814,84 @@ function renderFerryMap() {
     drawnPorts.add(edge.b);
   });
 
-  // Port markers — different size/colour for mainland vs island
-  drawnPorts.forEach(key => {
+  // Port markers — different size/colour for mainland vs island.
+  // In focus mode: drawnPorts holds the focused port + its neighbours; also render
+  // the rest as faint, smaller dots so users can click to switch focus.
+  const allPorts = new Set([...Object.keys(MAINLAND_PORTS), ...Object.keys(ISLANDS_DATA)]);
+  const portsToRender = FERRY_FOCUS_PORT
+    ? new Set([...drawnPorts, ...[...allPorts].filter(k => FERRY_ADJ[k])])
+    : drawnPorts;
+
+  portsToRender.forEach(key => {
     const port = getFerryPortCoords(key);
     if (!port) return;
     const isMainland = !!MAINLAND_PORTS[key];
     const isHub = ['piraeus', 'rafina', 'rhodes', 'heraklion', 'mykonos', 'naxos', 'paros'].includes(key);
+    const isFocused = FERRY_FOCUS_PORT === key;
+    const isInFocus = drawnPorts.has(key);
+    // Faint background dot for non-focus ports when in focus mode
+    const faded = FERRY_FOCUS_PORT && !isInFocus;
+
     const marker = L.circleMarker([port.lat, port.lng], {
-      radius: isHub ? 6 : (isMainland ? 5 : 4),
+      radius: isFocused ? 8 : (faded ? 3 : (isHub ? 6 : (isMainland ? 5 : 4))),
       color: isMainland ? '#E8522A' : '#076880',
       fillColor: isMainland ? '#FF6B6B' : '#0B8FAC',
-      fillOpacity: 0.95,
-      weight: 1.5,
+      fillOpacity: faded ? 0.35 : (isFocused ? 1 : 0.95),
+      weight: isFocused ? 2.5 : 1.5,
     }).addTo(ferryMapLayer);
     marker.bindTooltip(`<strong>${ferryPortDisplayName(key)}</strong>`, {
       direction: 'top', opacity: 1, className: 'island-tooltip',
     });
-    if (ISLANDS_DATA[key]) {
-      marker.on('click', () => navigateTo('island', key));
-    }
+    // Click a port: focus on its direct connections (instead of navigating away).
+    // Click the same port again, or any non-adjacent port, to clear focus.
+    marker.on('click', () => {
+      if (FERRY_FOCUS_PORT === key) {
+        FERRY_FOCUS_PORT = null;
+      } else {
+        FERRY_FOCUS_PORT = key;
+      }
+      renderFerryMap();
+    });
   });
+
+  // If a port is focused, render its callout banner above the map
+  updateFerryFocusBanner();
+}
+
+let FERRY_FOCUS_PORT = null;
+
+function updateFerryFocusBanner() {
+  const banner = document.getElementById('ferry-focus-banner');
+  if (!banner) return;
+  if (!FERRY_FOCUS_PORT) {
+    banner.innerHTML = '';
+    banner.style.display = 'none';
+    return;
+  }
+  const name = ferryPortDisplayName(FERRY_FOCUS_PORT);
+  const isIsland = !!ISLANDS_DATA[FERRY_FOCUS_PORT];
+  const directEdges = (FERRY_ADJ[FERRY_FOCUS_PORT] || []).filter(e => FERRY_MAP_FILTERS.has(e.freq));
+  const countLabel = directEdges.length === 1
+    ? t('hopping.focus.one')
+    : `${directEdges.length} ${t('hopping.focus.many')}`;
+  const guideBtn = isIsland
+    ? `<button class="ferry-focus-btn" onclick="navigateTo('island', '${FERRY_FOCUS_PORT}')">${t('hopping.focus.guide')}</button>`
+    : '';
+  banner.innerHTML = `
+    <div class="ferry-focus-text">
+      <strong>${name}</strong>
+      <span class="ferry-focus-count">${countLabel}</span>
+    </div>
+    <div class="ferry-focus-actions">
+      ${guideBtn}
+      <button class="ferry-focus-clear" onclick="clearFerryFocus()">${t('hopping.focus.clear')}</button>
+    </div>`;
+  banner.style.display = 'flex';
+}
+
+function clearFerryFocus() {
+  FERRY_FOCUS_PORT = null;
+  renderFerryMap();
 }
 
 // Toggle a frequency on/off and redraw

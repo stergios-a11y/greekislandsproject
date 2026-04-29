@@ -2297,6 +2297,87 @@ html.dark .ferry-filter-row { background: var(--marble); }
 html.dark .ferry-filter-btn { background: rgba(255,255,255,0.04); }
 html.dark .ferry-filter-btn.active { background: var(--marble-2); }
 
+/* ============================================================
+   FERRY MAP FOCUS BANNER — appears above the map when a port is clicked
+============================================================ */
+.ferry-focus-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 18px;
+  margin-bottom: 12px;
+  background: var(--aegean);
+  color: #fff;
+  border-radius: var(--radius);
+  font-family: var(--sans);
+}
+.ferry-focus-text {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: var(--text-body);
+}
+.ferry-focus-text strong {
+  font-size: var(--text-sub);
+  font-family: var(--serif);
+}
+.ferry-focus-count {
+  opacity: 0.85;
+  font-size: var(--text-small);
+}
+.ferry-focus-actions {
+  display: flex;
+  gap: 8px;
+}
+.ferry-focus-btn,
+.ferry-focus-clear {
+  padding: 7px 14px;
+  font-family: var(--sans);
+  font-size: var(--text-meta);
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  border: 1.5px solid rgba(255,255,255,0.5);
+  background: transparent;
+  color: #fff;
+  transition: background 0.15s;
+}
+.ferry-focus-btn { background: #fff; color: var(--aegean-dark); border-color: #fff; }
+.ferry-focus-btn:hover { background: var(--marble); }
+.ferry-focus-clear:hover { background: rgba(255,255,255,0.12); }
+
+/* ============================================================
+   FERRY PLANNER — Book trip button in result panel
+============================================================ */
+.planner-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+}
+.planner-book-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  font-family: var(--sans);
+  font-size: var(--text-body);
+  font-weight: 700;
+  color: #fff;
+  background: var(--aegean);
+  border: none;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background 0.15s, transform 0.1s;
+}
+.planner-book-btn:hover {
+  background: var(--aegean-dark);
+  text-decoration: none;
+  color: #fff;
+}
+.planner-book-btn:active { transform: scale(0.98); }
+
 /* Ferry map container */
 #ferry-map {
   box-shadow: var(--shadow);
