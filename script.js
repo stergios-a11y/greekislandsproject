@@ -985,20 +985,40 @@ function buildWhenToVisitSection(data) {
     ? ['Ιαν','Φεβ','Μάρ','Απρ','Μάι','Ιούν','Ιούλ','Αύγ','Σεπ','Οκτ','Νοέ','Δεκ']
     : ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
-  const cells = w.months.map((m, i) => {
+  // Build three rows of grid items: above-captions, ribbon cells, below-captions.
+  // Odd-index months (Jan, Mar, May, Jul, Sep, Nov — i % 2 === 0) caption ABOVE.
+  // Even-index months (Feb, Apr, Jun, Aug, Oct, Dec — i % 2 === 1) caption BELOW.
+  const aboveCells = [];
+  const belowCells = [];
+  const ribbonCells = [];
+
+  w.months.forEach((m, i) => {
     const tag = (m.tag || 'ok').toLowerCase();
     const why = pickLang(m, 'why') || '';
     const safeWhy = why.replace(/"/g, '&quot;');
-    return `<div class="wtv-cell wtv-${tag}" title="${safeWhy}">
-      <div class="wtv-month">${monthNames[i]}</div>
-      <div class="wtv-why">${why}</div>
-    </div>`;
-  }).join('');
+
+    // Caption styling: muted for avoid + ok, peak (bold) for perfect, normal for great
+    let capClass = '';
+    if (tag === 'perfect')      capClass = ' wtv-cap-peak';
+    else if (tag === 'avoid' || tag === 'ok') capClass = ' wtv-cap-muted';
+
+    if (i % 2 === 0) {
+      // odd month — caption above, empty below
+      aboveCells.push(`<div class="wtv-cap-above${capClass}">${why}</div>`);
+      belowCells.push(`<div class="wtv-cap-below wtv-cap-empty"></div>`);
+    } else {
+      // even month — empty above, caption below
+      aboveCells.push(`<div class="wtv-cap-above wtv-cap-empty"></div>`);
+      belowCells.push(`<div class="wtv-cap-below${capClass}">${why}</div>`);
+    }
+
+    ribbonCells.push(
+      `<div class="wtv-cell wtv-${tag}" title="${safeWhy}">${monthNames[i]}</div>`
+    );
+  });
 
   const summary = pickLang(w, 'summary') || '';
-  const summaryHtml = summary
-    ? `<p class="wtv-summary">${summary}</p>`
-    : '';
+  const summaryHtml = summary ? `<p class="wtv-summary">${summary}</p>` : '';
 
   // Legend: only show tags that actually appear
   const tagsPresent = new Set(w.months.map(m => (m.tag || 'ok').toLowerCase()));
@@ -1015,7 +1035,13 @@ function buildWhenToVisitSection(data) {
     <section class="wtv-section">
       <h3 class="wtv-title">${t('wtv.title')}</h3>
       ${summaryHtml}
-      <div class="wtv-grid">${cells}</div>
+      <div class="wtv-ribbon-wrap">
+        <div class="wtv-ribbon">
+          ${aboveCells.join('')}
+          ${ribbonCells.join('')}
+          ${belowCells.join('')}
+        </div>
+      </div>
       <div class="wtv-legend">${legend}</div>
     </section>`;
 }

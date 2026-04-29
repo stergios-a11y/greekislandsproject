@@ -164,21 +164,45 @@ WTV_I18N = {
 }
 
 def build_when_to_visit_html(data, lang='en'):
-    """Mirror script.js buildWhenToVisitSection. Empty string if missing."""
+    """Mirror script.js buildWhenToVisitSection. Empty string if missing.
+
+    Renders an alternating-caption ribbon: 12 cells in a row with
+    captions above (odd months: Jan/Mar/May/Jul/Sep/Nov) and below
+    (even months: Feb/Apr/Jun/Aug/Oct/Dec). Mobile users get a horizontal
+    scroll wrapper so the ribbon stays a continuous timeline.
+    """
     w = data.get('when_to_visit')
     if not w or not isinstance(w.get('months'), list) or len(w['months']) != 12:
         return ''
 
     labels = WTV_I18N[lang]
-    cells = []
+    above_cells = []
+    below_cells = []
+    ribbon_cells = []
+
     for i, m in enumerate(w['months']):
         tag = (m.get('tag') or 'ok').lower()
         why = pick(m, 'why', lang) or ''
-        cells.append(
+
+        # Caption styling: bold for perfect (peak), muted for avoid + ok
+        cap_class = ''
+        if tag == 'perfect':
+            cap_class = ' wtv-cap-peak'
+        elif tag in ('avoid', 'ok'):
+            cap_class = ' wtv-cap-muted'
+
+        if i % 2 == 0:
+            # odd month — caption above, empty placeholder below
+            above_cells.append(f'<div class="wtv-cap-above{cap_class}">{esc(why)}</div>')
+            below_cells.append('<div class="wtv-cap-below wtv-cap-empty"></div>')
+        else:
+            # even month — empty above, caption below
+            above_cells.append('<div class="wtv-cap-above wtv-cap-empty"></div>')
+            below_cells.append(f'<div class="wtv-cap-below{cap_class}">{esc(why)}</div>')
+
+        ribbon_cells.append(
             f'<div class="wtv-cell wtv-{esc(tag)}" title="{esc(why)}">'
-            f'<div class="wtv-month">{esc(labels["months"][i])}</div>'
-            f'<div class="wtv-why">{esc(why)}</div>'
-            f'</div>'
+            f'{esc(labels["months"][i])}</div>'
         )
 
     summary = pick(w, 'summary', lang) or ''
@@ -192,11 +216,13 @@ def build_when_to_visit_html(data, lang='en'):
         for t in legend_order if t in tags_present
     )
 
+    ribbon_inner = ''.join(above_cells) + ''.join(ribbon_cells) + ''.join(below_cells)
+
     return (
         f'<section class="seo-wtv wtv-section">'
         f'<h2 class="wtv-title">{esc(labels["title"])}</h2>'
         f'{summary_html}'
-        f'<div class="wtv-grid">{"".join(cells)}</div>'
+        f'<div class="wtv-ribbon-wrap"><div class="wtv-ribbon">{ribbon_inner}</div></div>'
         f'<div class="wtv-legend">{legend_items}</div>'
         f'</section>'
     )

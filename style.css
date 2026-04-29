@@ -3695,51 +3695,100 @@ html.dark .mission-disagree-box {
   color: var(--ink-1);
 }
 .wtv-summary {
-  margin: 0 0 16px;
+  margin: 0 0 20px;
   font-size: var(--text-body);
   color: var(--ink-2);
   line-height: 1.55;
 }
-.wtv-grid {
+
+/* ============================================================
+   Ribbon layout — 12 segments with alternating above/below captions
+============================================================ */
+.wtv-ribbon-wrap {
+  margin: 0 0 16px;
+  /* mobile horizontal scroll wrapper */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.wtv-ribbon {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 4px;
-  margin: 0 0 14px;
+  grid-template-rows: auto auto auto;  /* above-captions / ribbon / below-captions */
+  column-gap: 0;
+  row-gap: 0;
+  min-width: 100%;
 }
-.wtv-cell {
-  padding: 12px 8px 10px;
-  border-radius: 6px;
+/* On mobile we set a min-width that forces horizontal scroll */
+@media (max-width: 700px) {
+  .wtv-ribbon { min-width: 720px; }
+}
+
+/* Caption cells — above row (odd months) and below row (even months) */
+.wtv-cap-above,
+.wtv-cap-below {
+  font-family: var(--sans);
+  font-size: var(--text-meta);
+  font-weight: 500;
+  line-height: 1.3;
   text-align: center;
-  color: #fff;
-  min-height: 130px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  cursor: default;
+  color: var(--ink-1);
+  padding: 0 4px;
+  position: relative;
 }
-.wtv-month {
+.wtv-cap-above {
+  grid-row: 1;
+  padding-bottom: 10px;
+  align-self: end;  /* push captions to bottom of their row, near the ribbon */
+}
+.wtv-cap-below {
+  grid-row: 3;
+  padding-top: 10px;
+  align-self: start;
+}
+.wtv-cap-empty {
+  /* empty placeholder cell (so the alternation works) */
+  visibility: hidden;
+}
+/* Tick marks linking captions to the ribbon */
+.wtv-cap-above::after,
+.wtv-cap-below::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.18);
+  transform: translateX(-50%);
+}
+.wtv-cap-above::after  { bottom: 0; }
+.wtv-cap-below::before { top: 0; }
+
+/* Muted captions for low-stakes months (avoid + ok shoulder) */
+.wtv-cap-muted { color: var(--ink-3); font-weight: 400; }
+/* Bold captions for the peak (perfect) months */
+.wtv-cap-peak  { font-weight: 700; }
+
+/* Cells — the actual ribbon segments */
+.wtv-cell {
+  grid-row: 2;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--sans);
   font-size: var(--text-meta);
   font-weight: 700;
   letter-spacing: 0.5px;
-  margin-bottom: 8px;
   text-transform: uppercase;
-  opacity: 0.85;
+  color: #fff;
+  cursor: default;
 }
-.wtv-why {
-  font-family: var(--sans);
-  font-size: var(--text-meta);
-  font-weight: 500;
-  line-height: 1.35;
-  text-align: center;
-}
+/* Tag colors — Variant A palette: red → pale teal → mid teal → dark teal */
 .wtv-perfect { background: var(--aegean-dark, #076880); }
 .wtv-great   { background: var(--aegean,      #0B8FAC); }
-.wtv-ok      { background: #C9B26C; color: #2a2510; }
+.wtv-ok      { background: #B8DCE5; color: #07424F; }
 .wtv-avoid   { background: #C25450; }
-.wtv-ok .wtv-month { opacity: 0.65; }
-.wtv-ok .wtv-why   { color: #2a2510; }
 
 .wtv-legend {
   display: flex;
@@ -3760,18 +3809,15 @@ html.dark .mission-disagree-box {
   border-radius: 3px;
 }
 
-/* Mobile: 6 cols × 2 rows */
-@media (max-width: 700px) {
-  .wtv-grid { grid-template-columns: repeat(6, 1fr); }
-  .wtv-cell { min-height: 110px; padding: 10px 6px 8px; }
-  .wtv-why { font-size: var(--text-small); line-height: 1.3; }
-}
-
 /* Dark mode */
 html.dark .wtv-section {
   background: rgba(11, 143, 172, 0.08);
   border-color: rgba(11, 143, 172, 0.25);
 }
-html.dark .wtv-summary { color: var(--ink-2); }
-html.dark .wtv-ok { background: #B89F5A; color: #1a1505; }
-html.dark .wtv-ok .wtv-why { color: #1a1505; }
+html.dark .wtv-summary,
+html.dark .wtv-cap-above,
+html.dark .wtv-cap-below { color: var(--ink-2); }
+html.dark .wtv-cap-muted { color: var(--ink-3); }
+html.dark .wtv-cap-above::after,
+html.dark .wtv-cap-below::before { background: rgba(255, 255, 255, 0.20); }
+html.dark .wtv-ok { background: #6FA9B8; color: #042631; }
