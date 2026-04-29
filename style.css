@@ -3967,11 +3967,15 @@ html.dark .mission-disagree-box {
   padding-top: 12px;
 }
 
-/* The visible pill — inline-block so width hugs text. Translated horizontally
-   so its centre lands on the month tick. max-width caps it at parent width
-   so neighbouring pills can never collide. */
+/* The visible pill — inline-block so width hugs text. Anchored so its
+   TEXT CENTER lands on the month tick, but the pill itself can extend
+   asymmetrically into the empty space on the open side of its 2-cell
+   parent. This gives ~96% of cell width usable instead of ~50%. */
 .wtv-cap-text {
-  display: inline-block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;            /* hard cap at 2 lines, ellipsis if more */
+  overflow: hidden;
   max-width: 96%;
   box-sizing: border-box;
   padding: 4px 10px;
@@ -3985,17 +3989,17 @@ html.dark .mission-disagree-box {
   text-align: center;
   color: var(--ink-1);
 }
-/* Anchor: above-row pills centre on 25% (odd month) of the 2-cell span;
-   below-row pills centre on 75% (even month). Use margin-left to push the
-   pill's left edge to the tick, then translate by -50% of pill width so its
-   centre lands there. */
+/* Anchor: above-row pills place the tick at the LEFT QUARTER of the pill,
+   so the pill grows mostly RIGHTWARD into the empty MAY-above slot
+   (when this is JAN-MAR-MAY-JUL-SEP-NOV). Below-row pills place the tick
+   at the RIGHT QUARTER, so the pill grows LEFTWARD. */
 .wtv-cap-above .wtv-cap-text {
   margin-left: 25%;
-  transform: translateX(-50%);
+  transform: translateX(-25%);
 }
 .wtv-cap-below .wtv-cap-text {
   margin-left: 75%;
-  transform: translateX(-50%);
+  transform: translateX(-75%);
 }
 
 /* Tick marks linking pill to ribbon — vertical line at the month-tick X position.
