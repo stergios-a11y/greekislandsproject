@@ -4209,18 +4209,55 @@ html.dark .mission-disagree-box {
 ============================================================ */
 .wtv-section {
   margin: 24px 0 32px;
-  padding: 20px;
+  padding: 0;                                 /* padding moved to summary + content */
   background: rgba(11, 143, 172, 0.03);
   border-radius: 8px;
   border: 1px solid rgba(11, 143, 172, 0.10);
 }
 .wtv-title {
+  /* native <summary> styling */
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
   font-family: var(--serif);
   font-size: var(--text-sub);
   font-weight: 700;
-  margin: 0 0 12px;
+  margin: 0;
   color: var(--ink-1);
+  user-select: none;
+  transition: background 0.15s;
 }
+.wtv-title::-webkit-details-marker { display: none; }   /* hide native triangle (Safari) */
+.wtv-title::marker { content: ''; }                     /* hide native triangle (others) */
+.wtv-title:hover { background: rgba(11, 143, 172, 0.06); border-radius: 8px; }
+.wtv-title::after {
+  content: '';
+  width: 10px; height: 10px;
+  border-right: 2px solid var(--ink-3);
+  border-bottom: 2px solid var(--ink-3);
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 0.18s ease;
+  flex-shrink: 0;
+}
+.wtv-section[open] > .wtv-title::after {
+  transform: rotate(-135deg) translate(-2px, -2px);
+}
+.wtv-section[open] > .wtv-title { border-bottom: 1px solid rgba(11, 143, 172, 0.10); }
+
+/* Content padding when open — applied to the children that follow summary */
+.wtv-section[open] > .wtv-summary,
+.wtv-section[open] > .wtv-ribbon-wrap,
+.wtv-section[open] > .wtv-vertical,
+.wtv-section[open] > .wtv-legend {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.wtv-section[open] > .wtv-summary { margin-top: 16px; }
+.wtv-section[open] > .wtv-legend { margin-bottom: 20px; }
 .wtv-summary {
   margin: 0 0 20px;
   font-size: var(--text-body);
@@ -4287,7 +4324,12 @@ html.dark .mission-disagree-box {
   .wtv-v-perfect .wtv-vwhy { font-weight: 700; }
   .wtv-v-avoid   .wtv-vwhy { color: var(--ink-3); }
   .wtv-v-ok      .wtv-vwhy { color: var(--ink-3); }
-  .wtv-section { padding: 16px 14px; }
+  .wtv-section { padding: 0; }
+  .wtv-title { padding: 14px 14px; }
+  .wtv-section[open] > .wtv-summary,
+  .wtv-section[open] > .wtv-vertical,
+  .wtv-section[open] > .wtv-legend { margin-left: 14px; margin-right: 14px; }
+  .wtv-section[open] > .wtv-legend { margin-bottom: 14px; }
   .wtv-vrow { grid-template-columns: 38px 5px 1fr; gap: 8px; padding: 6px 0; }
 }
 

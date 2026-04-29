@@ -231,13 +231,13 @@ def build_when_to_visit_html(data, lang='en'):
     vertical_inner = ''.join(vertical_rows)
 
     return (
-        f'<section class="seo-wtv wtv-section">'
-        f'<h2 class="wtv-title">{esc(labels["title"])}</h2>'
+        f'<details class="seo-wtv wtv-section">'
+        f'<summary class="wtv-title">{esc(labels["title"])}</summary>'
         f'{summary_html}'
         f'<div class="wtv-ribbon-wrap"><div class="wtv-ribbon">{ribbon_inner}</div></div>'
         f'<div class="wtv-vertical">{vertical_inner}</div>'
         f'<div class="wtv-legend">{legend_items}</div>'
-        f'</section>'
+        f'</details>'
     )
 
 # ---------------------------------------------------------------------

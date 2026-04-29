@@ -1174,8 +1174,8 @@ function buildWhenToVisitSection(data) {
   }).join('');
 
   return `
-    <section class="wtv-section">
-      <h3 class="wtv-title">${t('wtv.title')}</h3>
+    <details class="wtv-section">
+      <summary class="wtv-title">${t('wtv.title')}</summary>
       ${summaryHtml}
       <div class="wtv-ribbon-wrap">
         <div class="wtv-ribbon">
@@ -1186,7 +1186,7 @@ function buildWhenToVisitSection(data) {
       </div>
       <div class="wtv-vertical">${verticalRows}</div>
       <div class="wtv-legend">${legend}</div>
-    </section>`;
+    </details>`;
 }
 
 /* ============================================================
