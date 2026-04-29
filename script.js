@@ -1020,9 +1020,9 @@ function buildWhenToVisitSection(data) {
     else if (tag === 'avoid' || tag === 'ok')  capClass = ' wtv-cap-muted';
 
     if (i % 2 === 0) {
-      aboveCaps.push(`<div class="wtv-cap-above${capClass}">${why}</div>`);
+      aboveCaps.push(`<div class="wtv-cap-above${capClass}"><span class="wtv-cap-text">${why}</span></div>`);
     } else {
-      belowCaps.push(`<div class="wtv-cap-below${capClass}">${why}</div>`);
+      belowCaps.push(`<div class="wtv-cap-below${capClass}"><span class="wtv-cap-text">${why}</span></div>`);
     }
 
     ribbonCells.push(

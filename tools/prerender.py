@@ -195,9 +195,9 @@ def build_when_to_visit_html(data, lang='en'):
             cap_class = ' wtv-cap-muted'
 
         if i % 2 == 0:
-            above_caps.append(f'<div class="wtv-cap-above{cap_class}">{esc(why)}</div>')
+            above_caps.append(f'<div class="wtv-cap-above{cap_class}"><span class="wtv-cap-text">{esc(why)}</span></div>')
         else:
-            below_caps.append(f'<div class="wtv-cap-below{cap_class}">{esc(why)}</div>')
+            below_caps.append(f'<div class="wtv-cap-below{cap_class}"><span class="wtv-cap-text">{esc(why)}</span></div>')
 
         ribbon_cells.append(
             f'<div class="wtv-cell wtv-{esc(tag)}" title="{esc(why)}">'
