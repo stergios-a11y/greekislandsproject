@@ -12,62 +12,62 @@
     "months": [
       {
         "tag": "ok",
-        "why": "Quiet, windy, Karystos alive",
-        "why_el": "Ήσυχα, αέρας, Κάρυστος ζωντανή"
+        "why": "Quiet, windy",
+        "why_el": "Ήσυχα, αέρας, Κάρυστος"
       },
       {
         "tag": "ok",
-        "why": "Cold, hiking with kit",
-        "why_el": "Κρύο, πεζοπορία με εξοπλισμό"
+        "why": "Cold, hiking",
+        "why_el": "Κρύο, πεζοπορία"
       },
       {
         "tag": "great",
-        "why": "Wildflowers, Mt Ochi prime",
-        "why_el": "Αγριολούλουδα, η Όχη στα καλύτερά της"
+        "why": "Wildflowers, Mt Ochi",
+        "why_el": "Αγριολούλουδα, η Όχη"
       },
       {
         "tag": "great",
-        "why": "Easter, mild walks",
+        "why": "Easter, walks",
         "why_el": "Πάσχα, πεζοπορία, ήπιο"
       },
       {
         "tag": "perfect",
-        "why": "Drakospita + sea warming",
-        "why_el": "Δρακόσπιτα, θάλασσα ζεσταίνει"
+        "why": "Drakospita",
+        "why_el": "Δρακόσπιτα, ζεσταίνει"
       },
       {
         "tag": "perfect",
-        "why": "Long evenings, sea ideal",
-        "why_el": "Ολονήμερο φως, θάλασσα έτοιμη"
+        "why": "Long days, ideal",
+        "why_el": "Ολονήμερο φως"
       },
       {
         "tag": "ok",
-        "why": "Hot, weekend Athens traffic",
+        "why": "Hot, Athens crowd",
         "why_el": "Ζέστη, ΣΚ Αθηναίοι"
       },
       {
         "tag": "ok",
         "why": "Peak Greek holidays",
-        "why_el": "Δύο βδομάδες ελληνικού φόρτου"
+        "why_el": "2 βδομ. φόρτος"
       },
       {
         "tag": "perfect",
-        "why": "Sweet spot — sea + hiking",
-        "why_el": "Καλύτερος — θάλασσα, πεζοπορία"
+        "why": "Sweet spot — sea +",
+        "why_el": "Καλύτερος — θάλ."
       },
       {
         "tag": "great",
-        "why": "Hiking ideal, last swims",
-        "why_el": "Ιδανική πεζοπορία, τελευταία μπάνια"
+        "why": "Hiking ideal",
+        "why_el": "Πεζοπορία+μπάνια"
       },
       {
         "tag": "great",
-        "why": "Quiet, hiking, Karystos calm",
+        "why": "Quiet, hiking",
         "why_el": "Ήσυχα, πεζοπορία"
       },
       {
         "tag": "ok",
-        "why": "Cold, windy, Karystos alive",
+        "why": "Cold, windy",
         "why_el": "Κρύο, αέρας"
       }
     ]
@@ -250,7 +250,8 @@
       "summary_el": "1.5 χλμ. αμμώδης παραλία δίπλα στην Κάρυστο — εύκολη, οικογενειακή, με το βενετσιάνικο κάστρο για φόντο.",
       "lat": 38.018,
       "lng": 24.413,
-      "type": "sandy"
+      "type": "sandy",
+      "name_el": "Αγία Παρασκευή Καρύστου"
     },
     {
       "name": "Kallianou Beach",
@@ -258,7 +259,8 @@
       "summary_el": "Η άγρια άκρη του Δημοσάρη — βότσαλο, διαφανές νερό, χωρίς ανάπτυξη. Προσέγγιση πεζοπορώντας στο φαράγγι ή με 4x4.",
       "lat": 38.11,
       "lng": 24.512,
-      "type": "pebbly"
+      "type": "pebbly",
+      "name_el": "Παραλία Καλλιανού"
     },
     {
       "name": "Marmari Beach",
@@ -266,7 +268,8 @@
       "summary_el": "Αμμώδης παραλία στο Μαρμάρι — το λιμάνι — βολική για μπάνιο πριν/μετά το πλοίο. Ήρεμα, οικογενειακά νερά.",
       "lat": 38.052,
       "lng": 24.33,
-      "type": "sandy"
+      "type": "sandy",
+      "name_el": "Παραλία Μαρμαρίου"
     },
     {
       "name": "Kallianos Beach",
@@ -274,7 +277,8 @@
       "summary_el": "Κρυστάλλινα νερά και δραματικοί γκρεμοί 25λ βόρεια Καρύστου. Βότσαλο στην είσοδο, αμμουδιά μέσα.",
       "lat": 38.087,
       "lng": 24.345,
-      "type": "pebbly"
+      "type": "pebbly",
+      "name_el": "Παραλία Καλλιανός"
     }
   ],
   "getting_there": {

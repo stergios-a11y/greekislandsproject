@@ -12,58 +12,58 @@
     "months": [
       {
         "tag": "ok",
-        "why": "Chalkida alive, Dirfys snowy",
-        "why_el": "Χαλκίδα ζωντανή, Δίρφη χιονισμένη"
+        "why": "Chalkida + Dirfys",
+        "why_el": "Χαλκίδα, Δίρφη"
       },
       {
         "tag": "ok",
-        "why": "Cold, snow on Dirfys",
+        "why": "Dirfys snow",
         "why_el": "Κρύο, χιόνια στη Δίρφη"
       },
       {
         "tag": "great",
-        "why": "Wildflowers, hiking, mild",
-        "why_el": "Αγριολούλουδα, πεζοπορία, ήπιο"
+        "why": "Wildflowers, hike",
+        "why_el": "Αγριολούλουδα"
       },
       {
         "tag": "great",
-        "why": "Easter, blooming, perfect hiking",
-        "why_el": "Πάσχα, ανθίζει, ιδανική πεζοπορία"
+        "why": "Easter, hiking",
+        "why_el": "Πάσχα, ανθίζει"
       },
       {
         "tag": "perfect",
-        "why": "Eretria + sea warming + walks",
-        "why_el": "Ερέτρια, θάλασσα, μονοπάτια"
+        "why": "Eretria+sea+walks",
+        "why_el": "Ερέτρια, θάλασσα"
       },
       {
         "tag": "perfect",
-        "why": "Long evenings, sea ideal",
-        "why_el": "Μεγάλες μέρες, νερό ζεστό"
+        "why": "Long days, ideal",
+        "why_el": "Μεγάλες μέρες"
       },
       {
         "tag": "ok",
-        "why": "Hot, weekend Athenians",
-        "why_el": "Ζέστη, αθηναϊκή κίνηση ΣΚ"
+        "why": "Hot, Athens crowd",
+        "why_el": "Ζέστη, ΣΚ Αθηναίοι"
       },
       {
         "tag": "ok",
-        "why": "Peak Greeks, beaches full",
+        "why": "Peak Greeks",
         "why_el": "Αιχμή Ελλήνων"
       },
       {
         "tag": "perfect",
-        "why": "Sweet spot — sea + hiking",
-        "why_el": "Καλύτερος — θάλασσα, πεζοπορία, ησυχία"
+        "why": "Sweet spot — sea +",
+        "why_el": "Καλύτερος — θάλ."
       },
       {
         "tag": "great",
-        "why": "Last swims + ideal hiking",
-        "why_el": "Τελευταία μπάνια, ιδανική πεζοπορία"
+        "why": "Last swims+hike",
+        "why_el": "Τελευταία μπάνια"
       },
       {
         "tag": "great",
-        "why": "Hiking peak, Eretria empty",
-        "why_el": "Κορύφωση πεζοπορίας, Ερέτρια άδεια"
+        "why": "Eretria empty",
+        "why_el": "Πεζοπορία peak"
       },
       {
         "tag": "ok",
@@ -256,7 +256,7 @@
   "beaches": [
     {
       "name": "Mourteri Beach",
-      "name_el": "Παραλία Μουρτερή",
+      "name_el": "Παραλία Μούρτερη",
       "summary": "4km of fine pebbles and sand on the east coast, 15 minutes south of Kymi. Wide, exposed, almost shadeless — the Meltemi can whip it into a kite-surf paradise; on a calm day it's one of Evia's biggest, emptiest swims.",
       "summary_el": "4 χλμ. λεπτό βότσαλο και άμμο στην ανατολική ακτή, 15 λεπτά νότια της Κύμης. Φαρδιά, εκτεθειμένη, σχεδόν χωρίς σκιά — το μελτέμι την κάνει παράδεισο για kite-surf· σε ημέρα νηνεμίας ένα από τα μεγαλύτερα, πιο άδεια μπάνια της Εύβοιας.",
       "lat": 38.5634,
@@ -269,7 +269,8 @@
       "summary_el": "Μακριά αμμώδης παραλία νότια Ερέτριας, οικογενειακή, οργανωμένη. Η πιο κοντινή 'αληθινή' παραλία στη Χαλκίδα.",
       "lat": 38.354,
       "lng": 24.082,
-      "type": "sandy"
+      "type": "sandy",
+      "name_el": "Παραλία Καλάμου"
     },
     {
       "name": "Paralia Kymis",
@@ -277,7 +278,8 @@
       "summary_el": "Η παραλία του λιμανιού της Κύμης — βότσαλο, ήρεμα νερά, θέα στο πλοίο. Δες το πλοίο για Σκύρο να μπαίνει.",
       "lat": 38.625,
       "lng": 24.117,
-      "type": "pebbly"
+      "type": "pebbly",
+      "name_el": "Παραλία Κύμης"
     }
   ],
   "getting_there": {
