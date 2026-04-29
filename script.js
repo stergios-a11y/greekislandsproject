@@ -925,6 +925,7 @@ function buildIslandPage(data) {
       </div>
       ${introHtml}
       ${gettingThereHtml}
+      ${buildWhenToVisitSection(data)}
       <div class="itin-day-filter">
         <button class="itin-day-btn active" data-day="all" onclick="filterItinDay('all')" style="border-color:var(--ink-2);color:var(--ink-1)"><span style="color:inherit">${t("detail.alldays")}</span></button>
         ${dayBtns}
@@ -968,6 +969,54 @@ function buildGettingThereSection(data) {
       ${pillHtml}
       ${summaryHtml}
       ${tipHtml}
+    </section>`;
+}
+
+/* ============================================================
+   WHEN-TO-VISIT SECTION — 12-month grid + summary paragraph
+   Renders only if data.when_to_visit is present.
+============================================================ */
+function buildWhenToVisitSection(data) {
+  const w = data.when_to_visit;
+  if (!w || !Array.isArray(w.months) || w.months.length !== 12) return '';
+
+  const lang = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
+  const monthNames = lang === 'el'
+    ? ['Ιαν','Φεβ','Μάρ','Απρ','Μάι','Ιούν','Ιούλ','Αύγ','Σεπ','Οκτ','Νοέ','Δεκ']
+    : ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+  const cells = w.months.map((m, i) => {
+    const tag = (m.tag || 'ok').toLowerCase();
+    const why = pickLang(m, 'why') || '';
+    const safeWhy = why.replace(/"/g, '&quot;');
+    return `<div class="wtv-cell wtv-${tag}" title="${safeWhy}">
+      <div class="wtv-month">${monthNames[i]}</div>
+      <div class="wtv-why">${why}</div>
+    </div>`;
+  }).join('');
+
+  const summary = pickLang(w, 'summary') || '';
+  const summaryHtml = summary
+    ? `<p class="wtv-summary">${summary}</p>`
+    : '';
+
+  // Legend: only show tags that actually appear
+  const tagsPresent = new Set(w.months.map(m => (m.tag || 'ok').toLowerCase()));
+  const legendOrder = ['perfect', 'great', 'ok', 'avoid'];
+  const legendLabels = lang === 'el'
+    ? { perfect: 'Τέλεια', great: 'Καλά', ok: 'Μέτρια', avoid: 'Απόφυγε' }
+    : { perfect: 'Perfect', great: 'Great', ok: 'OK', avoid: 'Avoid' };
+  const legend = legendOrder
+    .filter(t => tagsPresent.has(t))
+    .map(t => `<span class="wtv-legend-item"><span class="wtv-legend-swatch wtv-${t}"></span>${legendLabels[t]}</span>`)
+    .join('');
+
+  return `
+    <section class="wtv-section">
+      <h3 class="wtv-title">${t('wtv.title')}</h3>
+      ${summaryHtml}
+      <div class="wtv-grid">${cells}</div>
+      <div class="wtv-legend">${legend}</div>
     </section>`;
 }
 

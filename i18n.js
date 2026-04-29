@@ -111,6 +111,7 @@ const UI_TEXT = {
   'local.specialties': { en: 'Local Specialties', el: 'Τοπικά Προϊόντα' },
   'local.crafts': { en: 'Crafts & Souvenirs', el: 'Χειροτεχνία & Αναμνηστικά' },
   'local.festivals': { en: 'Festivals & Events', el: 'Πανηγύρια & Εκδηλώσεις' },
+  'wtv.title': { en: 'When to Visit', el: 'Πότε να Πας' },
 
   // Detail sidebar
   'detail.ratings': { en: 'Blueprint Ratings', el: 'Βαθμολογίες' },

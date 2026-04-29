@@ -3676,3 +3676,102 @@ html.dark .mission-disagree-box {
   background: linear-gradient(135deg, rgba(11, 143, 172, 0.15) 0%, rgba(255, 255, 255, 0.04) 100%);
   border-color: rgba(11, 143, 172, 0.3);
 }
+
+/* ============================================================
+   WHEN-TO-VISIT SECTION — 12-month grid
+============================================================ */
+.wtv-section {
+  margin: 24px 0 32px;
+  padding: 20px;
+  background: rgba(11, 143, 172, 0.03);
+  border-radius: 8px;
+  border: 1px solid rgba(11, 143, 172, 0.10);
+}
+.wtv-title {
+  font-family: var(--serif);
+  font-size: var(--text-sub);
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: var(--ink-1);
+}
+.wtv-summary {
+  margin: 0 0 16px;
+  font-size: var(--text-body);
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+.wtv-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 4px;
+  margin: 0 0 14px;
+}
+.wtv-cell {
+  padding: 10px 6px 8px;
+  border-radius: 6px;
+  text-align: center;
+  color: #fff;
+  min-height: 92px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: default;
+}
+.wtv-month {
+  font-family: var(--sans);
+  font-size: var(--text-meta);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+.wtv-why {
+  font-family: var(--sans);
+  font-size: var(--text-tiny);
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+}
+.wtv-perfect { background: var(--aegean-dark, #076880); }
+.wtv-great   { background: var(--aegean,      #0B8FAC); }
+.wtv-ok      { background: #C9B26C; color: #2a2510; }
+.wtv-avoid   { background: #C25450; }
+.wtv-ok .wtv-month { opacity: 0.65; }
+.wtv-ok .wtv-why   { color: #2a2510; }
+
+.wtv-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: var(--text-small);
+  color: var(--ink-3);
+  font-family: var(--sans);
+}
+.wtv-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.wtv-legend-swatch {
+  display: inline-block;
+  width: 14px; height: 14px;
+  border-radius: 3px;
+}
+
+/* Mobile: 6 cols × 2 rows */
+@media (max-width: 700px) {
+  .wtv-grid { grid-template-columns: repeat(6, 1fr); }
+  .wtv-cell { min-height: 78px; }
+  .wtv-why { font-size: var(--text-tiny); line-height: 1.2; }
+}
+
+/* Dark mode */
+html.dark .wtv-section {
+  background: rgba(11, 143, 172, 0.08);
+  border-color: rgba(11, 143, 172, 0.25);
+}
+html.dark .wtv-summary { color: var(--ink-2); }
+html.dark .wtv-ok { background: #B89F5A; color: #1a1505; }
+html.dark .wtv-ok .wtv-why { color: #1a1505; }

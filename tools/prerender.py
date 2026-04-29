@@ -146,6 +146,62 @@ def localized_name(key, data, meta, lang='en'):
     return data.get('name') or meta.get('name') or key.title()
 
 # ---------------------------------------------------------------------
+# When-to-visit section — mirrors buildWhenToVisitSection() in script.js.
+# 12-month seasonality grid + summary paragraph. Each month has a tag
+# (perfect/great/ok/avoid) and a short bilingual "why" caption.
+# ---------------------------------------------------------------------
+WTV_I18N = {
+    'en': {
+        'title': 'When to Visit',
+        'months': ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+        'tags': {'perfect': 'Perfect', 'great': 'Great', 'ok': 'OK', 'avoid': 'Avoid'},
+    },
+    'el': {
+        'title': 'Πότε να Πας',
+        'months': ['Ιαν','Φεβ','Μάρ','Απρ','Μάι','Ιούν','Ιούλ','Αύγ','Σεπ','Οκτ','Νοέ','Δεκ'],
+        'tags': {'perfect': 'Τέλεια', 'great': 'Καλά', 'ok': 'Μέτρια', 'avoid': 'Απόφυγε'},
+    },
+}
+
+def build_when_to_visit_html(data, lang='en'):
+    """Mirror script.js buildWhenToVisitSection. Empty string if missing."""
+    w = data.get('when_to_visit')
+    if not w or not isinstance(w.get('months'), list) or len(w['months']) != 12:
+        return ''
+
+    labels = WTV_I18N[lang]
+    cells = []
+    for i, m in enumerate(w['months']):
+        tag = (m.get('tag') or 'ok').lower()
+        why = pick(m, 'why', lang) or ''
+        cells.append(
+            f'<div class="wtv-cell wtv-{esc(tag)}" title="{esc(why)}">'
+            f'<div class="wtv-month">{esc(labels["months"][i])}</div>'
+            f'<div class="wtv-why">{esc(why)}</div>'
+            f'</div>'
+        )
+
+    summary = pick(w, 'summary', lang) or ''
+    summary_html = f'<p class="wtv-summary">{safe_html(summary)}</p>' if summary else ''
+
+    # Legend: only tags that appear
+    tags_present = {(m.get('tag') or 'ok').lower() for m in w['months']}
+    legend_order = ['perfect', 'great', 'ok', 'avoid']
+    legend_items = ''.join(
+        f'<span class="wtv-legend-item"><span class="wtv-legend-swatch wtv-{t}"></span>{esc(labels["tags"][t])}</span>'
+        for t in legend_order if t in tags_present
+    )
+
+    return (
+        f'<section class="seo-wtv wtv-section">'
+        f'<h2 class="wtv-title">{esc(labels["title"])}</h2>'
+        f'{summary_html}'
+        f'<div class="wtv-grid">{"".join(cells)}</div>'
+        f'<div class="wtv-legend">{legend_items}</div>'
+        f'</section>'
+    )
+
+# ---------------------------------------------------------------------
 # Local & seasonal section — mirrors buildLocalSection() in script.js.
 # Renders specialties / crafts / festivals that the SPA shows but Google
 # previously didn't see. Each item supports an optional `image` field
@@ -467,6 +523,9 @@ def render_body(key, data, meta, lang='en'):
     # Local & seasonal — specialties / crafts / festivals (only renders if any present)
     local_html = build_local_html(data, lang)
 
+    # When-to-visit — 12-month seasonality grid (only renders if data.when_to_visit present)
+    wtv_html = build_when_to_visit_html(data, lang)
+
     # Related islands (internal linking — SEO gold)
     group = meta.get('group', '')
     related = [k for k, m in ISLAND_META.items()
@@ -497,6 +556,7 @@ def render_body(key, data, meta, lang='en'):
     <p>{safe_html(intro)}</p>
   </section>
   {getting_there_html}
+  {wtv_html}
   {itinerary_html}
   {beaches_html}
   {local_html}
