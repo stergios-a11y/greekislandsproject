@@ -116,7 +116,7 @@
     </div>
   </header>
 
-  <div class="search-container" id="home-controls">
+<div class="search-container" id="home-controls">
     <div class="search-bar-row">
       <input type="text" id="islandSearch" placeholder="🔍  Search islands…" aria-label="Search islands" data-i18n-aria-label="a11y.search_islands" data-i18n-placeholder="search.placeholder">
       <select id="group-select" class="filter-select" aria-label="Filter by island group" data-i18n-aria-label="a11y.filter_group">
@@ -131,6 +131,31 @@
         <option value="afford" data-i18n="filter.afford">💸 Price</option>
         <option value="car_need" data-i18n="filter.car">🚗 Car needed</option>
       </select>
+      <button id="vibe-filter-btn" class="vibe-filter-btn" onclick="toggleVibePanel()" aria-expanded="false" data-i18n-aria-label="a11y.vibe_filters">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="2" y1="4" x2="14" y2="4"/><line x1="4" y1="8" x2="12" y2="8"/><line x1="6" y1="12" x2="10" y2="12"/></svg>
+        <span data-i18n="filter.vibes">Filters</span>
+        <span id="vibe-filter-count" class="vibe-filter-count" style="display:none"></span>
+      </button>
+    </div>
+    <div id="vibe-panel" class="vibe-panel" style="display:none">
+      <div class="vibe-tags" id="vibe-tags">
+        <button class="vibe-tag" data-filter="good_now">📅 <span data-i18n="vibe.goodnow">Good now</span></button>
+        <button class="vibe-tag" data-filter="car_free">🚶 <span data-i18n="vibe.carfree">Car-free</span></button>
+        <button class="vibe-tag" data-filter="remote">🌊 <span data-i18n="vibe.remote">Off the radar</span></button>
+        <button class="vibe-tag" data-filter="budget">💸 <span data-i18n="vibe.budget">Budget-friendly</span></button>
+        <button class="vibe-tag" data-filter="nightlife">🍷 <span data-i18n="vibe.nightlife">Nightlife</span></button>
+        <button class="vibe-tag" data-filter="tiny">🔇 <span data-i18n="vibe.tiny">Under 2,000 people</span></button>
+        <button class="vibe-tag" data-filter="drama">🌋 <span data-i18n="vibe.drama">Dramatic landscape</span></button>
+        <button class="vibe-tag" data-filter="hiking">🥾 <span data-i18n="vibe.hiking">Serious hiking</span></button>
+        <button class="vibe-tag" data-filter="springs">♨️ <span data-i18n="vibe.springs">Hot springs</span></button>
+        <button class="vibe-tag" data-filter="chora">🏛 <span data-i18n="vibe.chora">Medieval chora</span></button>
+        <button class="vibe-tag" data-filter="sailing">⛵ <span data-i18n="vibe.sailing">Sailing hub</span></button>
+        <button class="vibe-tag" data-filter="airport">✈️ <span data-i18n="vibe.airport">Has airport</span></button>
+      </div>
+      <div class="vibe-panel-footer">
+        <span id="vibe-match-count" class="vibe-match-count"></span>
+        <button id="vibe-clear-btn" class="vibe-clear-btn" onclick="clearVibeFilters()" style="display:none" data-i18n="vibe.clear">Clear filters</button>
+      </div>
     </div>
   </div>
 

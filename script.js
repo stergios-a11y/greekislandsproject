@@ -3,88 +3,88 @@
 const VERSION = 'v4.0';
 
 const ISLANDS_DATA = {
-  "lefkada":      { name:"Lefkada",          lat:38.706, lng:20.648, beach:4.9, hist:2.5, night:3.2, access:4.5, afford:4.0, car_need:4.0, has_airport:true, total:3.9, area:335,   pop:22600,   days:4, island_group:"Ionian" },
-  "meganisi":     { name:"Meganisi",         lat:38.643, lng:20.783, beach:4.0, hist:2.5, night:2.8, access:3.2, afford:3.2, car_need:3.0, has_airport:false, total:3.5, area:22,    pop:1041,    days:2, island_group:"Ionian" },
-  "ithaca":       { name:"Ithaca",           lat:38.366, lng:20.716, beach:3.8, hist:4.9, night:2.5, access:2.5, afford:3.5, car_need:4.0, has_airport:false, total:3.8, area:96,    pop:3231,    days:3, island_group:"Ionian" },
-  "kefalonia":    { name:"Kefalonia",        lat:38.175, lng:20.569, beach:4.7, hist:3.2, night:3.2, access:3.5, afford:3.8, car_need:5.0, has_airport:true, total:4.1, area:773,   pop:35800,   days:5, island_group:"Ionian" },
-  "zakynthos":    { name:"Zakynthos",        lat:37.787, lng:20.899, beach:4.8, hist:2.5, night:4.5, access:3.7, afford:3.5, car_need:4.0, has_airport:true, total:4.1, area:405,   pop:40700,   days:4, island_group:"Ionian" },
-  "kythira":      { name:"Kythira",          lat:36.250, lng:23.000, beach:4.2, hist:4.5, night:2.5, access:2.5, afford:3.8, car_need:5.0, has_airport:true, total:3.7, area:279,   pop:3973,    days:4, island_group:"Ionian" },
-  "elafonisos":   { name:"Elafonisos",       lat:36.480, lng:22.980, beach:5.0, hist:2.0, night:2.5, access:2.5, afford:3.8, car_need:1.0, has_airport:false, total:4.0, area:19,    pop:1041,    days:2, island_group:"Other" },
-  "paros":        { name:"Paros",            lat:37.085, lng:25.148, beach:5.0, hist:3.8, night:5.0, access:4.5, afford:2.2, car_need:3.0, has_airport:true, total:4.1, area:196,   pop:13700,   days:3, island_group:"Cyclades" },
-  "chania":       { name:"Crete (Chania)",   lat:35.512, lng:24.018, beach:5.0, hist:4.7, night:4.0, access:4.5, afford:3.4, car_need:5.0, has_airport:true, total:4.9, area:2376,  pop:108000,  days:5, island_group:"Crete" },
-  "heraklion":    { name:"Crete (Heraklion)",lat:35.338, lng:25.131, beach:3.5, hist:5.0, night:4.7, access:5.0, afford:3.5, car_need:5.0, has_airport:true, total:4.3, area:2641,  pop:173000,  days:5, island_group:"Crete" },
-  "rethymno":     { name:"Crete (Rethymno)", lat:35.367, lng:24.475, beach:3.8, hist:4.5, night:3.8, access:3.5, afford:3.7, car_need:5.0, has_airport:false, total:4.0, area:1496,  pop:34300,   days:4, island_group:"Crete" },
-  "lasithi":      { name:"Crete (Lasithi)",  lat:35.188, lng:25.715, beach:4.0, hist:3.5, night:3.4, access:3.2, afford:3.2, car_need:5.0, has_airport:true, total:4.0, area:1823,  pop:76000,   days:4, island_group:"Crete" },
-  "santorini":    { name:"Santorini",        lat:36.393, lng:25.461, beach:3.2, hist:5.0, night:4.2, access:4.7, afford:1.0, car_need:3.0, has_airport:true, total:4.8, area:76,    pop:15500,   days:3, island_group:"Cyclades" },
-  "milos":        { name:"Milos",            lat:36.732, lng:24.429, beach:5.0, hist:3.5, night:3.0, access:3.2, afford:2.8, car_need:4.0, has_airport:true, total:4.7, area:151,   pop:4900,    days:4, island_group:"Cyclades" },
-  "rhodes":       { name:"Rhodes",           lat:36.170, lng:27.910, beach:4.2, hist:5.0, night:4.1, access:4.8, afford:3.5, car_need:5.0, has_airport:true, total:4.4, area:1400,  pop:115000,  days:5, island_group:"Dodecanese" },
-  "naxos":        { name:"Naxos",            lat:37.105, lng:25.376, beach:4.8, hist:4.4, night:3.5, access:3.8, afford:4.0, car_need:4.0, has_airport:true, total:4.5, area:429,   pop:18900,   days:4, island_group:"Cyclades" },
-  "mykonos":      { name:"Mykonos",          lat:37.446, lng:25.328, beach:4.3, hist:3.0, night:5.0, access:4.8, afford:1.0, car_need:4.0, has_airport:true, total:4.3, area:85,    pop:10100,   days:3, island_group:"Cyclades" },
-  "corfu":        { name:"Corfu",            lat:39.624, lng:19.921, beach:3.9, hist:4.8, night:4.2, access:4.7, afford:3.2, car_need:4.0, has_airport:true, total:4.2, area:593,   pop:102000,  days:5, island_group:"Ionian" },
+  "lefkada":      { name:"Lefkada",          lat:38.706, lng:20.648, beach:4.9, hist:2.5, night:3.2, access:4.5, afford:4.0, car_need:4.0, has_airport:true, total:3.9, area:335,   pop:22600,   days:4, island_group:"Ionian", drama:false, hiking:true, springs:false, chora:false, sailing:true },
+  "meganisi":     { name:"Meganisi",         lat:38.643, lng:20.783, beach:4.0, hist:2.5, night:2.8, access:3.2, afford:3.2, car_need:3.0, has_airport:false, total:3.5, area:22,    pop:1041,    days:2, island_group:"Ionian", drama:false, hiking:false, springs:false, chora:false, sailing:true },
+  "ithaca":       { name:"Ithaca",           lat:38.366, lng:20.716, beach:3.8, hist:4.9, night:2.5, access:2.5, afford:3.5, car_need:4.0, has_airport:false, total:3.8, area:96,    pop:3231,    days:3, island_group:"Ionian", drama:false, hiking:true, springs:false, chora:false, sailing:true },
+  "kefalonia":    { name:"Kefalonia",        lat:38.175, lng:20.569, beach:4.7, hist:3.2, night:3.2, access:3.5, afford:3.8, car_need:5.0, has_airport:true, total:4.1, area:773,   pop:35800,   days:5, island_group:"Ionian", drama:false, hiking:true, springs:false, chora:false, sailing:true },
+  "zakynthos":    { name:"Zakynthos",        lat:37.787, lng:20.899, beach:4.8, hist:2.5, night:4.5, access:3.7, afford:3.5, car_need:4.0, has_airport:true, total:4.1, area:405,   pop:40700,   days:4, island_group:"Ionian", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "kythira":      { name:"Kythira",          lat:36.250, lng:23.000, beach:4.2, hist:4.5, night:2.5, access:2.5, afford:3.8, car_need:5.0, has_airport:true, total:3.7, area:279,   pop:3973,    days:4, island_group:"Ionian", drama:false, hiking:true, springs:false, chora:false, sailing:false },
+  "elafonisos":   { name:"Elafonisos",       lat:36.480, lng:22.980, beach:5.0, hist:2.0, night:2.5, access:2.5, afford:3.8, car_need:1.0, has_airport:false, total:4.0, area:19,    pop:1041,    days:2, island_group:"Other", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "paros":        { name:"Paros",            lat:37.085, lng:25.148, beach:5.0, hist:3.8, night:5.0, access:4.5, afford:2.2, car_need:3.0, has_airport:true, total:4.1, area:196,   pop:13700,   days:3, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:true },
+  "chania":       { name:"Crete (Chania)",   lat:35.512, lng:24.018, beach:5.0, hist:4.7, night:4.0, access:4.5, afford:3.4, car_need:5.0, has_airport:true, total:4.9, area:2376,  pop:108000,  days:5, island_group:"Crete", drama:false, hiking:true, springs:false, chora:false, sailing:false },
+  "heraklion":    { name:"Crete (Heraklion)",lat:35.338, lng:25.131, beach:3.5, hist:5.0, night:4.7, access:5.0, afford:3.5, car_need:5.0, has_airport:true, total:4.3, area:2641,  pop:173000,  days:5, island_group:"Crete", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "rethymno":     { name:"Crete (Rethymno)", lat:35.367, lng:24.475, beach:3.8, hist:4.5, night:3.8, access:3.5, afford:3.7, car_need:5.0, has_airport:false, total:4.0, area:1496,  pop:34300,   days:4, island_group:"Crete", drama:false, hiking:true, springs:false, chora:false, sailing:false },
+  "lasithi":      { name:"Crete (Lasithi)",  lat:35.188, lng:25.715, beach:4.0, hist:3.5, night:3.4, access:3.2, afford:3.2, car_need:5.0, has_airport:true, total:4.0, area:1823,  pop:76000,   days:4, island_group:"Crete", drama:false, hiking:true, springs:false, chora:false, sailing:false },
+  "santorini":    { name:"Santorini",        lat:36.393, lng:25.461, beach:3.2, hist:5.0, night:4.2, access:4.7, afford:1.0, car_need:3.0, has_airport:true, total:4.8, area:76,    pop:15500,   days:3, island_group:"Cyclades", drama:true, hiking:false, springs:false, chora:false, sailing:false },
+  "milos":        { name:"Milos",            lat:36.732, lng:24.429, beach:5.0, hist:3.5, night:3.0, access:3.2, afford:2.8, car_need:4.0, has_airport:true, total:4.7, area:151,   pop:4900,    days:4, island_group:"Cyclades", drama:true, hiking:false, springs:false, chora:false, sailing:false },
+  "rhodes":       { name:"Rhodes",           lat:36.170, lng:27.910, beach:4.2, hist:5.0, night:4.1, access:4.8, afford:3.5, car_need:5.0, has_airport:true, total:4.4, area:1400,  pop:115000,  days:5, island_group:"Dodecanese", drama:false, hiking:false, springs:false, chora:true, sailing:true },
+  "naxos":        { name:"Naxos",            lat:37.105, lng:25.376, beach:4.8, hist:4.4, night:3.5, access:3.8, afford:4.0, car_need:4.0, has_airport:true, total:4.5, area:429,   pop:18900,   days:4, island_group:"Cyclades", drama:false, hiking:true, springs:false, chora:true, sailing:true },
+  "mykonos":      { name:"Mykonos",          lat:37.446, lng:25.328, beach:4.3, hist:3.0, night:5.0, access:4.8, afford:1.0, car_need:4.0, has_airport:true, total:4.3, area:85,    pop:10100,   days:3, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:true },
+  "corfu":        { name:"Corfu",            lat:39.624, lng:19.921, beach:3.9, hist:4.8, night:4.2, access:4.7, afford:3.2, car_need:4.0, has_airport:true, total:4.2, area:593,   pop:102000,  days:5, island_group:"Ionian", drama:false, hiking:false, springs:false, chora:false, sailing:true },
 
 
-  "hydra":        { name:"Hydra",            lat:37.350, lng:23.466, beach:2.2, hist:4.2, night:3.8, access:4.2, afford:1.8, car_need:1.0, has_airport:false, total:4.1, area:52,    pop:2700,    days:2, island_group:"Saronic" },
-  "folegandros":  { name:"Folegandros",      lat:36.630, lng:24.900, beach:3.9, hist:3.8, night:3.5, access:2.8, afford:2.2, car_need:3.0, has_airport:false, total:4.0, area:32,    pop:765,     days:3, island_group:"Cyclades" },
-  "koufonisia":   { name:"Koufonisia",       lat:36.930, lng:25.600, beach:5.0, hist:2.0, night:4.0, access:3.0, afford:3.0, car_need:1.0, has_airport:false, total:4.0, area:26,    pop:399,     days:3, island_group:"Cyclades" },
-  "evia-north":   { name:"Evia (North)",     lat:38.850, lng:23.200, beach:3.8, hist:3.5, night:2.5, access:4.5, afford:4.8, car_need:5.0, has_airport:false, total:3.7, area:1200,  pop:48000,   days:3, island_group:"Evia" },
-  "evia-central": { name:"Evia (Central)",   lat:38.500, lng:23.850, beach:3.5, hist:4.5, night:3.5, access:5.0, afford:4.6, car_need:5.0, has_airport:false, total:3.9, area:1700,  pop:120000,  days:3, island_group:"Evia" },
-  "evia-south":   { name:"Evia (South)",     lat:38.016, lng:24.420, beach:4.2, hist:3.5, night:2.5, access:4.5, afford:4.5, car_need:5.0, has_airport:false, total:3.9, area:780,   pop:42000,   days:3, island_group:"Evia" },
-  "lesvos":       { name:"Lesvos",           lat:39.21,  lng:26.21,  beach:4.0, hist:4.7, night:3.0, access:3.5, afford:4.6, car_need:5.0, has_airport:true, total:4.0, area:1633,  pop:83000,   days:6, island_group:"NE Aegean" },
-  "chios":        { name:"Chios",            lat:38.368, lng:26.135, beach:3.2, hist:4.7, night:2.5, access:3.2, afford:4.5, car_need:4.0, has_airport:true, total:3.6, area:842,   pop:51000,   days:4, island_group:"NE Aegean" },
-  "kos":          { name:"Kos",              lat:36.891, lng:27.287, beach:4.0, hist:4.2, night:4.0, access:4.6, afford:3.8, car_need:4.0, has_airport:true, total:3.7, area:287,   pop:33300,   days:4, island_group:"Dodecanese" },
-  "samos":        { name:"Samos",            lat:37.754, lng:26.977, beach:3.5, hist:4.6, night:3.0, access:3.5, afford:4.2, car_need:4.0, has_airport:true, total:3.3, area:477,   pop:32900,   days:4, island_group:"NE Aegean" },
+  "hydra":        { name:"Hydra",            lat:37.350, lng:23.466, beach:2.2, hist:4.2, night:3.8, access:4.2, afford:1.8, car_need:1.0, has_airport:false, total:4.1, area:52,    pop:2700,    days:2, island_group:"Saronic", drama:false, hiking:false, springs:false, chora:false, sailing:true },
+  "folegandros":  { name:"Folegandros",      lat:36.630, lng:24.900, beach:3.9, hist:3.8, night:3.5, access:2.8, afford:2.2, car_need:3.0, has_airport:false, total:4.0, area:32,    pop:765,     days:3, island_group:"Cyclades", drama:true, hiking:false, springs:false, chora:true, sailing:false },
+  "koufonisia":   { name:"Koufonisia",       lat:36.930, lng:25.600, beach:5.0, hist:2.0, night:4.0, access:3.0, afford:3.0, car_need:1.0, has_airport:false, total:4.0, area:26,    pop:399,     days:3, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "evia-north":   { name:"Evia (North)",     lat:38.850, lng:23.200, beach:3.8, hist:3.5, night:2.5, access:4.5, afford:4.8, car_need:5.0, has_airport:false, total:3.7, area:1200,  pop:48000,   days:3, island_group:"Evia", drama:false, hiking:true, springs:true, chora:false, sailing:false },
+  "evia-central": { name:"Evia (Central)",   lat:38.500, lng:23.850, beach:3.5, hist:4.5, night:3.5, access:5.0, afford:4.6, car_need:5.0, has_airport:false, total:3.9, area:1700,  pop:120000,  days:3, island_group:"Evia", drama:false, hiking:true, springs:false, chora:false, sailing:false },
+  "evia-south":   { name:"Evia (South)",     lat:38.016, lng:24.420, beach:4.2, hist:3.5, night:2.5, access:4.5, afford:4.5, car_need:5.0, has_airport:false, total:3.9, area:780,   pop:42000,   days:3, island_group:"Evia", drama:false, hiking:true, springs:false, chora:false, sailing:false },
+  "lesvos":       { name:"Lesvos",           lat:39.21,  lng:26.21,  beach:4.0, hist:4.7, night:3.0, access:3.5, afford:4.6, car_need:5.0, has_airport:true, total:4.0, area:1633,  pop:83000,   days:6, island_group:"NE Aegean", drama:false, hiking:true, springs:true, chora:true, sailing:false },
+  "chios":        { name:"Chios",            lat:38.368, lng:26.135, beach:3.2, hist:4.7, night:2.5, access:3.2, afford:4.5, car_need:4.0, has_airport:true, total:3.6, area:842,   pop:51000,   days:4, island_group:"NE Aegean", drama:false, hiking:false, springs:false, chora:true, sailing:false },
+  "kos":          { name:"Kos",              lat:36.891, lng:27.287, beach:4.0, hist:4.2, night:4.0, access:4.6, afford:3.8, car_need:4.0, has_airport:true, total:3.7, area:287,   pop:33300,   days:4, island_group:"Dodecanese", drama:false, hiking:false, springs:false, chora:false, sailing:true },
+  "samos":        { name:"Samos",            lat:37.754, lng:26.977, beach:3.5, hist:4.6, night:3.0, access:3.5, afford:4.2, car_need:4.0, has_airport:true, total:3.3, area:477,   pop:32900,   days:4, island_group:"NE Aegean", drama:false, hiking:true, springs:false, chora:false, sailing:false },
 
-  "syros":        { name:"Syros",            lat:37.444, lng:24.942, beach:2.8, hist:4.3, night:3.5, access:4.5, afford:3.5, car_need:3.0, has_airport:true, total:3.8, area:84,    pop:21500,   days:2, island_group:"Cyclades" },
-  "lemnos":       { name:"Lemnos",           lat:39.916, lng:25.166, beach:4.3, hist:3.5, night:2.2, access:3.0, afford:4.4, car_need:4.0, has_airport:true, total:3.5, area:476,   pop:16900,   days:3, island_group:"NE Aegean" },
-  "agios-efstratios": { name:"Agios Efstratios", lat:39.515, lng:25.007, beach:4.5, hist:2.8, night:1.5, access:1.5, afford:4.5, car_need:1.0, has_airport:false, total:3.3, area:43,    pop:270,     days:1, island_group:"NE Aegean" },
-  "psara":        { name:"Psara",            lat:38.541, lng:25.560, beach:3.8, hist:3.5, night:1.5, access:1.5, afford:4.2, car_need:1.0, has_airport:false, total:3.0, area:40,    pop:450,     days:1, island_group:"NE Aegean" },
-  "oinousses":    { name:"Oinousses",        lat:38.520, lng:26.202, beach:3.5, hist:3.2, night:1.8, access:2.0, afford:4.0, car_need:1.0, has_airport:false, total:3.0, area:14,    pop:820,     days:1, island_group:"NE Aegean" },
-  "iraklia":      { name:"Iraklia",          lat:36.840, lng:25.467, beach:4.2, hist:2.5, night:1.5, access:2.0, afford:4.3, car_need:1.0, has_airport:false, total:3.3, area:18,    pop:140,     days:1, island_group:"Cyclades" },
-  "kalymnos":     { name:"Kalymnos",         lat:36.983, lng:26.983, beach:3.5, hist:4.0, night:3.0, access:3.2, afford:4.2, car_need:4.0, has_airport:true, total:3.5, area:110,   pop:16179,   days:3, island_group:"Dodecanese" },
-  "thasos":       { name:"Thasos",           lat:40.666, lng:24.666, beach:4.2, hist:3.2, night:3.0, access:3.2, afford:4.1, car_need:4.0, has_airport:false, total:3.7, area:379,   pop:13700,   days:3, island_group:"Other" },
-  "aegina":       { name:"Aegina",           lat:37.750, lng:23.500, beach:2.5, hist:4.2, night:3.2, access:5.0, afford:3.5, car_need:3.0, has_airport:false, total:3.4, area:87,    pop:13000,   days:1, island_group:"Saronic" },
-  "tinos":        { name:"Tinos",            lat:37.583, lng:25.166, beach:3.5, hist:4.0, night:3.0, access:4.2, afford:3.2, car_need:4.0, has_airport:false, total:3.7, area:194,   pop:8600,    days:2, island_group:"Cyclades" },
-  "andros":       { name:"Andros",           lat:37.830, lng:24.930, beach:3.8, hist:4.0, night:2.8, access:4.0, afford:3.2, car_need:4.0, has_airport:false, total:3.7, area:380,   pop:9200,    days:3, island_group:"Cyclades" },
-  "ikaria":       { name:"Ikaria",           lat:37.600, lng:26.166, beach:4.0, hist:3.0, night:4.5, access:2.5, afford:4.5, car_need:4.0, has_airport:true, total:3.8, area:255,   pop:8400,    days:4, island_group:"NE Aegean" },
-  "leros":        { name:"Leros",            lat:37.150, lng:26.850, beach:3.2, hist:4.0, night:3.0, access:3.2, afford:4.2, car_need:3.0, has_airport:true, total:3.3, area:53,    pop:7900,    days:2, island_group:"Dodecanese" },
-  "karpathos":    { name:"Karpathos",        lat:35.583, lng:27.133, beach:4.4, hist:4.0, night:2.2, access:2.0, afford:3.8, car_need:5.0, has_airport:true, total:3.8, area:300,   pop:6200,    days:4, island_group:"Dodecanese" },
-  "skiathos":     { name:"Skiathos",         lat:39.163, lng:23.490, beach:4.6, hist:2.0, night:4.7, access:4.5, afford:3.0, car_need:3.0, has_airport:true, total:3.9, area:49,    pop:6088,    days:3, island_group:"Sporades" },
-  "skopelos":     { name:"Skopelos",         lat:39.121, lng:23.726, beach:4.2, hist:3.2, night:2.5, access:2.5, afford:3.8, car_need:4.0, has_airport:false, total:3.6, area:96,    pop:4960,    days:3, island_group:"Sporades" },
-  "patmos":       { name:"Patmos",           lat:37.322, lng:26.545, beach:3.0, hist:4.8, night:2.8, access:2.2, afford:2.5, car_need:3.0, has_airport:false, total:3.6, area:34,    pop:3047,    days:2, island_group:"Dodecanese" },
-  "poros":        { name:"Poros",            lat:37.510, lng:23.470, beach:3.0, hist:4.2, night:3.5, access:4.8, afford:3.2, car_need:3.0, has_airport:false, total:3.5, area:23,    pop:3993,    days:1, island_group:"Saronic" },
-  "alonnisos":    { name:"Alonnisos",        lat:39.216, lng:23.916, beach:4.4, hist:3.0, night:2.5, access:2.5, afford:4.0, car_need:3.0, has_airport:false, total:3.8, area:64,    pop:2750,    days:3, island_group:"Sporades" },
-  "skyros":       { name:"Skyros",           lat:38.866, lng:24.533, beach:4.0, hist:3.8, night:2.8, access:2.5, afford:4.2, car_need:4.0, has_airport:true, total:3.4, area:209,   pop:2994,    days:3, island_group:"Sporades" },
+  "syros":        { name:"Syros",            lat:37.444, lng:24.942, beach:2.8, hist:4.3, night:3.5, access:4.5, afford:3.5, car_need:3.0, has_airport:true, total:3.8, area:84,    pop:21500,   days:2, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "lemnos":       { name:"Lemnos",           lat:39.916, lng:25.166, beach:4.3, hist:3.5, night:2.2, access:3.0, afford:4.4, car_need:4.0, has_airport:true, total:3.5, area:476,   pop:16900,   days:3, island_group:"NE Aegean", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "agios-efstratios": { name:"Agios Efstratios", lat:39.515, lng:25.007, beach:4.5, hist:2.8, night:1.5, access:1.5, afford:4.5, car_need:1.0, has_airport:false, total:3.3, area:43,    pop:270,     days:1, island_group:"NE Aegean", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "psara":        { name:"Psara",            lat:38.541, lng:25.560, beach:3.8, hist:3.5, night:1.5, access:1.5, afford:4.2, car_need:1.0, has_airport:false, total:3.0, area:40,    pop:450,     days:1, island_group:"NE Aegean", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "oinousses":    { name:"Oinousses",        lat:38.520, lng:26.202, beach:3.5, hist:3.2, night:1.8, access:2.0, afford:4.0, car_need:1.0, has_airport:false, total:3.0, area:14,    pop:820,     days:1, island_group:"NE Aegean", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "iraklia":      { name:"Iraklia",          lat:36.840, lng:25.467, beach:4.2, hist:2.5, night:1.5, access:2.0, afford:4.3, car_need:1.0, has_airport:false, total:3.3, area:18,    pop:140,     days:1, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "kalymnos":     { name:"Kalymnos",         lat:36.983, lng:26.983, beach:3.5, hist:4.0, night:3.0, access:3.2, afford:4.2, car_need:4.0, has_airport:true, total:3.5, area:110,   pop:16179,   days:3, island_group:"Dodecanese", drama:false, hiking:true, springs:false, chora:false, sailing:false },
+  "thasos":       { name:"Thasos",           lat:40.666, lng:24.666, beach:4.2, hist:3.2, night:3.0, access:3.2, afford:4.1, car_need:4.0, has_airport:false, total:3.7, area:379,   pop:13700,   days:3, island_group:"Other", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "aegina":       { name:"Aegina",           lat:37.750, lng:23.500, beach:2.5, hist:4.2, night:3.2, access:5.0, afford:3.5, car_need:3.0, has_airport:false, total:3.4, area:87,    pop:13000,   days:1, island_group:"Saronic", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "tinos":        { name:"Tinos",            lat:37.583, lng:25.166, beach:3.5, hist:4.0, night:3.0, access:4.2, afford:3.2, car_need:4.0, has_airport:false, total:3.7, area:194,   pop:8600,    days:2, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "andros":       { name:"Andros",           lat:37.830, lng:24.930, beach:3.8, hist:4.0, night:2.8, access:4.0, afford:3.2, car_need:4.0, has_airport:false, total:3.7, area:380,   pop:9200,    days:3, island_group:"Cyclades", drama:false, hiking:true, springs:false, chora:true, sailing:false },
+  "ikaria":       { name:"Ikaria",           lat:37.600, lng:26.166, beach:4.0, hist:3.0, night:4.5, access:2.5, afford:4.5, car_need:4.0, has_airport:true, total:3.8, area:255,   pop:8400,    days:4, island_group:"NE Aegean", drama:true, hiking:true, springs:true, chora:false, sailing:false },
+  "leros":        { name:"Leros",            lat:37.150, lng:26.850, beach:3.2, hist:4.0, night:3.0, access:3.2, afford:4.2, car_need:3.0, has_airport:true, total:3.3, area:53,    pop:7900,    days:2, island_group:"Dodecanese", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "karpathos":    { name:"Karpathos",        lat:35.583, lng:27.133, beach:4.4, hist:4.0, night:2.2, access:2.0, afford:3.8, car_need:5.0, has_airport:true, total:3.8, area:300,   pop:6200,    days:4, island_group:"Dodecanese", drama:true, hiking:true, springs:false, chora:false, sailing:false },
+  "skiathos":     { name:"Skiathos",         lat:39.163, lng:23.490, beach:4.6, hist:2.0, night:4.7, access:4.5, afford:3.0, car_need:3.0, has_airport:true, total:3.9, area:49,    pop:6088,    days:3, island_group:"Sporades", drama:false, hiking:false, springs:false, chora:false, sailing:true },
+  "skopelos":     { name:"Skopelos",         lat:39.121, lng:23.726, beach:4.2, hist:3.2, night:2.5, access:2.5, afford:3.8, car_need:4.0, has_airport:false, total:3.6, area:96,    pop:4960,    days:3, island_group:"Sporades", drama:false, hiking:true, springs:false, chora:false, sailing:true },
+  "patmos":       { name:"Patmos",           lat:37.322, lng:26.545, beach:3.0, hist:4.8, night:2.8, access:2.2, afford:2.5, car_need:3.0, has_airport:false, total:3.6, area:34,    pop:3047,    days:2, island_group:"Dodecanese", drama:false, hiking:false, springs:false, chora:true, sailing:false },
+  "poros":        { name:"Poros",            lat:37.510, lng:23.470, beach:3.0, hist:4.2, night:3.5, access:4.8, afford:3.2, car_need:3.0, has_airport:false, total:3.5, area:23,    pop:3993,    days:1, island_group:"Saronic", drama:false, hiking:false, springs:false, chora:false, sailing:true },
+  "alonnisos":    { name:"Alonnisos",        lat:39.216, lng:23.916, beach:4.4, hist:3.0, night:2.5, access:2.5, afford:4.0, car_need:3.0, has_airport:false, total:3.8, area:64,    pop:2750,    days:3, island_group:"Sporades", drama:false, hiking:true, springs:false, chora:false, sailing:true },
+  "skyros":       { name:"Skyros",           lat:38.866, lng:24.533, beach:4.0, hist:3.8, night:2.8, access:2.5, afford:4.2, car_need:4.0, has_airport:true, total:3.4, area:209,   pop:2994,    days:3, island_group:"Sporades", drama:true, hiking:false, springs:false, chora:true, sailing:false },
 
-  "sifnos":       { name:"Sifnos",           lat:36.966, lng:24.716, beach:3.8, hist:4.0, night:3.2, access:3.5, afford:3.5, car_need:4.0, has_airport:false, total:3.9, area:73,    pop:2625,    days:3, island_group:"Cyclades" },
-  "symi":         { name:"Symi",             lat:36.583, lng:27.833, beach:3.0, hist:4.8, night:3.5, access:3.5, afford:2.5, car_need:3.0, has_airport:false, total:3.8, area:58,    pop:2590,    days:2, island_group:"Dodecanese" },
-  "paxos":        { name:"Paxos",            lat:39.200, lng:20.150, beach:4.2, hist:3.0, night:3.5, access:2.8, afford:2.5, car_need:2.0, has_airport:false, total:4.0, area:19,    pop:2300,    days:3, island_group:"Ionian" },
-  "kea":          { name:"Kea (Tzia)",       lat:37.616, lng:24.333, beach:3.8, hist:3.8, night:3.0, access:4.5, afford:3.0, car_need:4.0, has_airport:false, total:3.5, area:131,   pop:2455,    days:2, island_group:"Cyclades" },
-  "ios":          { name:"Ios",              lat:36.723, lng:25.281, beach:4.6, hist:2.5, night:5.0, access:3.2, afford:3.5, car_need:3.0, has_airport:false, total:3.9, area:109,   pop:2024,    days:3, island_group:"Cyclades" },
-  "amorgos":      { name:"Amorgos",          lat:36.833, lng:25.900, beach:4.0, hist:3.8, night:3.5, access:2.5, afford:3.5, car_need:4.0, has_airport:false, total:4.0, area:126,   pop:1973,    days:4, island_group:"Cyclades" },
-  "kythnos":      { name:"Kythnos",          lat:37.383, lng:24.416, beach:4.2, hist:3.2, night:3.0, access:3.5, afford:3.8, car_need:3.0, has_airport:false, total:3.5, area:100,   pop:1456,    days:2, island_group:"Cyclades" },
-  "astypalaia":   { name:"Astypalaia",       lat:36.550, lng:26.350, beach:4.0, hist:4.2, night:3.0, access:2.5, afford:3.8, car_need:4.0, has_airport:true, total:3.8, area:97,    pop:1334,    days:3, island_group:"Dodecanese" },
-  "antiparos":    { name:"Antiparos",        lat:37.000, lng:25.080, beach:4.5, hist:3.0, night:4.0, access:3.5, afford:2.8, car_need:3.0, has_airport:false, total:4.0, area:35,    pop:1211,    days:2, island_group:"Cyclades" },
-  "serifos":      { name:"Serifos",          lat:37.150, lng:24.483, beach:4.5, hist:3.2, night:3.0, access:3.5, afford:3.8, car_need:3.0, has_airport:false, total:3.9, area:75,    pop:1420,    days:2, island_group:"Cyclades" },
-  "agistri":      { name:"Agistri",          lat:37.700, lng:23.350, beach:3.5, hist:2.5, night:3.5, access:4.5, afford:4.0, car_need:1.0, has_airport:false, total:3.2, area:13,    pop:1142,    days:1, island_group:"Saronic" },
-  "nisyros":      { name:"Nisyros",          lat:36.583, lng:27.166, beach:3.0, hist:5.0, night:2.5, access:2.8, afford:4.0, car_need:3.0, has_airport:false, total:3.8, area:41,    pop:1008,    days:1, island_group:"Dodecanese" },
-  "kimolos":      { name:"Kimolos",          lat:36.800, lng:24.570, beach:4.5, hist:3.2, night:2.5, access:3.0, afford:3.8, car_need:3.0, has_airport:false, total:3.7, area:36,    pop:910,     days:2, island_group:"Cyclades" },
-  "kastellorizo": { name:"Kastellorizo",     lat:36.140, lng:29.580, beach:2.0, hist:5.0, night:2.8, access:1.2, afford:3.5, car_need:1.0, has_airport:true, total:4.0, area:12,    pop:492,     days:2, island_group:"Dodecanese" },
-  "sikinos":      { name:"Sikinos",          lat:36.683, lng:25.116, beach:3.5, hist:4.2, night:2.2, access:2.5, afford:4.0, car_need:3.0, has_airport:false, total:3.4, area:42,    pop:273,     days:2, island_group:"Cyclades" },
-  "anafi":        { name:"Anafi",            lat:36.366, lng:25.766, beach:4.5, hist:3.2, night:2.5, access:2.0, afford:4.2, car_need:3.0, has_airport:false, total:3.9, area:38,    pop:271,     days:2, island_group:"Cyclades" },
-  "samothrace":   { name:"Samothrace",       lat:40.466, lng:25.533, beach:3.0, hist:4.1, night:2.5, access:1.8, afford:4.5, car_need:3.0, has_airport:false, total:3.2, area:178,   pop:2859,    days:2, island_group:"Other" },
-  "fournoi":      { name:"Fournoi",          lat:37.580, lng:26.500, beach:3.8, hist:3.0, night:1.8, access:2.0, afford:4.5, car_need:3.0, has_airport:false, total:3.2, area:45,    pop:1459,    days:2, island_group:"Other" },
-  "spetses":      { name:"Spetses",          lat:37.260, lng:23.130, beach:2.8, hist:4.2, night:4.2, access:4.2, afford:2.0, car_need:3.0, has_airport:false, total:3.7, area:22,    pop:4027,    days:2, island_group:"Saronic" },
-  "tilos":        { name:"Tilos",            lat:36.416, lng:27.366, beach:3.8, hist:3.5, night:2.0, access:2.2, afford:4.2, car_need:3.0, has_airport:false, total:3.5, area:61,    pop:780,     days:2, island_group:"Dodecanese" },
-  "leipsoi":      { name:"Leipsoi",          lat:37.300, lng:26.750, beach:4.0, hist:3.0, night:2.0, access:2.5, afford:4.5, car_need:2.0, has_airport:false, total:3.4, area:16,    pop:790,     days:1, island_group:"Dodecanese" },
-  "halki":        { name:"Halki",            lat:36.220, lng:27.610, beach:3.8, hist:4.0, night:2.0, access:2.5, afford:4.0, car_need:3.0, has_airport:false, total:3.6, area:28,    pop:478,     days:2, island_group:"Dodecanese" },
-  "ammouliani":   { name:"Ammouliani",       lat:40.332, lng:23.916, beach:4.5, hist:2.0, night:3.0, access:3.0, afford:4.0, car_need:2.0, has_airport:false, total:3.5, area:4,     pop:547,     days:2, island_group:"Other" },
-  "salamis":      { name:"Salamis",          lat:37.933, lng:23.500, beach:2.0, hist:3.5, night:3.0, access:5.0, afford:4.5, car_need:3.0, has_airport:false, total:2.8, area:95,    pop:39283,   days:1, island_group:"Saronic" },
-  "therasia":     { name:"Therasia",         lat:36.433, lng:25.350, beach:3.0, hist:3.5, night:1.5, access:3.0, afford:3.5, car_need:1.0, has_airport:false, total:3.1, area:9,     pop:319,     days:1, island_group:"Cyclades" },
-  "schoinoussa":  { name:"Schoinoussa",      lat:36.866, lng:25.516, beach:4.5, hist:2.0, night:2.5, access:2.5, afford:3.8, car_need:1.0, has_airport:false, total:3.4, area:8,     pop:227,     days:2, island_group:"Cyclades" },
-  "donousa":      { name:"Donousa",          lat:37.100, lng:25.800, beach:4.5, hist:2.0, night:2.5, access:2.2, afford:3.8, car_need:1.0, has_airport:false, total:3.4, area:13,    pop:167,     days:2, island_group:"Cyclades" },
-  "kasos":        { name:"Kasos",            lat:35.383, lng:26.916, beach:3.2, hist:3.8, night:1.5, access:1.5, afford:4.5, car_need:3.0, has_airport:true, total:2.8, area:66,    pop:1084,    days:2, island_group:"Dodecanese" },
-  "agathonisi":   { name:"Agathonisi",       lat:37.466, lng:26.966, beach:3.5, hist:2.0, night:1.5, access:1.8, afford:4.5, car_need:2.0, has_airport:false, total:3.0, area:13,    pop:185,     days:1, island_group:"Dodecanese" },
-  "gavdos":       { name:"Gavdos",           lat:34.840, lng:24.080, beach:4.8, hist:2.0, night:2.5, access:1.0, afford:4.5, car_need:1.0, has_airport:false, total:2.5, area:33,    pop:152,     days:3, island_group:"Crete" }
+  "sifnos":       { name:"Sifnos",           lat:36.966, lng:24.716, beach:3.8, hist:4.0, night:3.2, access:3.5, afford:3.5, car_need:4.0, has_airport:false, total:3.9, area:73,    pop:2625,    days:3, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:true, sailing:false },
+  "symi":         { name:"Symi",             lat:36.583, lng:27.833, beach:3.0, hist:4.8, night:3.5, access:3.5, afford:2.5, car_need:3.0, has_airport:false, total:3.8, area:58,    pop:2590,    days:2, island_group:"Dodecanese", drama:false, hiking:false, springs:false, chora:false, sailing:true },
+  "paxos":        { name:"Paxos",            lat:39.200, lng:20.150, beach:4.2, hist:3.0, night:3.5, access:2.8, afford:2.5, car_need:2.0, has_airport:false, total:4.0, area:19,    pop:2300,    days:3, island_group:"Ionian", drama:false, hiking:false, springs:false, chora:false, sailing:true },
+  "kea":          { name:"Kea (Tzia)",       lat:37.616, lng:24.333, beach:3.8, hist:3.8, night:3.0, access:4.5, afford:3.0, car_need:4.0, has_airport:false, total:3.5, area:131,   pop:2455,    days:2, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "ios":          { name:"Ios",              lat:36.723, lng:25.281, beach:4.6, hist:2.5, night:5.0, access:3.2, afford:3.5, car_need:3.0, has_airport:false, total:3.9, area:109,   pop:2024,    days:3, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:true, sailing:false },
+  "amorgos":      { name:"Amorgos",          lat:36.833, lng:25.900, beach:4.0, hist:3.8, night:3.5, access:2.5, afford:3.5, car_need:4.0, has_airport:false, total:4.0, area:126,   pop:1973,    days:4, island_group:"Cyclades", drama:true, hiking:true, springs:false, chora:true, sailing:false },
+  "kythnos":      { name:"Kythnos",          lat:37.383, lng:24.416, beach:4.2, hist:3.2, night:3.0, access:3.5, afford:3.8, car_need:3.0, has_airport:false, total:3.5, area:100,   pop:1456,    days:2, island_group:"Cyclades", drama:false, hiking:false, springs:true, chora:false, sailing:false },
+  "astypalaia":   { name:"Astypalaia",       lat:36.550, lng:26.350, beach:4.0, hist:4.2, night:3.0, access:2.5, afford:3.8, car_need:4.0, has_airport:true, total:3.8, area:97,    pop:1334,    days:3, island_group:"Dodecanese", drama:true, hiking:false, springs:false, chora:true, sailing:false },
+  "antiparos":    { name:"Antiparos",        lat:37.000, lng:25.080, beach:4.5, hist:3.0, night:4.0, access:3.5, afford:2.8, car_need:3.0, has_airport:false, total:4.0, area:35,    pop:1211,    days:2, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "serifos":      { name:"Serifos",          lat:37.150, lng:24.483, beach:4.5, hist:3.2, night:3.0, access:3.5, afford:3.8, car_need:3.0, has_airport:false, total:3.9, area:75,    pop:1420,    days:2, island_group:"Cyclades", drama:true, hiking:false, springs:false, chora:false, sailing:false },
+  "agistri":      { name:"Agistri",          lat:37.700, lng:23.350, beach:3.5, hist:2.5, night:3.5, access:4.5, afford:4.0, car_need:1.0, has_airport:false, total:3.2, area:13,    pop:1142,    days:1, island_group:"Saronic", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "nisyros":      { name:"Nisyros",          lat:36.583, lng:27.166, beach:3.0, hist:5.0, night:2.5, access:2.8, afford:4.0, car_need:3.0, has_airport:false, total:3.8, area:41,    pop:1008,    days:1, island_group:"Dodecanese", drama:true, hiking:false, springs:false, chora:false, sailing:false },
+  "kimolos":      { name:"Kimolos",          lat:36.800, lng:24.570, beach:4.5, hist:3.2, night:2.5, access:3.0, afford:3.8, car_need:3.0, has_airport:false, total:3.7, area:36,    pop:910,     days:2, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "kastellorizo": { name:"Kastellorizo",     lat:36.140, lng:29.580, beach:2.0, hist:5.0, night:2.8, access:1.2, afford:3.5, car_need:1.0, has_airport:true, total:4.0, area:12,    pop:492,     days:2, island_group:"Dodecanese", drama:true, hiking:false, springs:false, chora:false, sailing:false },
+  "sikinos":      { name:"Sikinos",          lat:36.683, lng:25.116, beach:3.5, hist:4.2, night:2.2, access:2.5, afford:4.0, car_need:3.0, has_airport:false, total:3.4, area:42,    pop:273,     days:2, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:true, sailing:false },
+  "anafi":        { name:"Anafi",            lat:36.366, lng:25.766, beach:4.5, hist:3.2, night:2.5, access:2.0, afford:4.2, car_need:3.0, has_airport:false, total:3.9, area:38,    pop:271,     days:2, island_group:"Cyclades", drama:true, hiking:false, springs:false, chora:true, sailing:false },
+  "samothrace":   { name:"Samothrace",       lat:40.466, lng:25.533, beach:3.0, hist:4.1, night:2.5, access:1.8, afford:4.5, car_need:3.0, has_airport:false, total:3.2, area:178,   pop:2859,    days:2, island_group:"Other", drama:true, hiking:true, springs:true, chora:false, sailing:false },
+  "fournoi":      { name:"Fournoi",          lat:37.580, lng:26.500, beach:3.8, hist:3.0, night:1.8, access:2.0, afford:4.5, car_need:3.0, has_airport:false, total:3.2, area:45,    pop:1459,    days:2, island_group:"Other", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "spetses":      { name:"Spetses",          lat:37.260, lng:23.130, beach:2.8, hist:4.2, night:4.2, access:4.2, afford:2.0, car_need:3.0, has_airport:false, total:3.7, area:22,    pop:4027,    days:2, island_group:"Saronic", drama:false, hiking:false, springs:false, chora:false, sailing:true },
+  "tilos":        { name:"Tilos",            lat:36.416, lng:27.366, beach:3.8, hist:3.5, night:2.0, access:2.2, afford:4.2, car_need:3.0, has_airport:false, total:3.5, area:61,    pop:780,     days:2, island_group:"Dodecanese", drama:false, hiking:true, springs:false, chora:false, sailing:false },
+  "leipsoi":      { name:"Leipsoi",          lat:37.300, lng:26.750, beach:4.0, hist:3.0, night:2.0, access:2.5, afford:4.5, car_need:2.0, has_airport:false, total:3.4, area:16,    pop:790,     days:1, island_group:"Dodecanese", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "halki":        { name:"Halki",            lat:36.220, lng:27.610, beach:3.8, hist:4.0, night:2.0, access:2.5, afford:4.0, car_need:3.0, has_airport:false, total:3.6, area:28,    pop:478,     days:2, island_group:"Dodecanese", drama:false, hiking:false, springs:false, chora:true, sailing:false },
+  "ammouliani":   { name:"Ammouliani",       lat:40.332, lng:23.916, beach:4.5, hist:2.0, night:3.0, access:3.0, afford:4.0, car_need:2.0, has_airport:false, total:3.5, area:4,     pop:547,     days:2, island_group:"Other", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "salamis":      { name:"Salamis",          lat:37.933, lng:23.500, beach:2.0, hist:3.5, night:3.0, access:5.0, afford:4.5, car_need:3.0, has_airport:false, total:2.8, area:95,    pop:39283,   days:1, island_group:"Saronic", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "therasia":     { name:"Therasia",         lat:36.433, lng:25.350, beach:3.0, hist:3.5, night:1.5, access:3.0, afford:3.5, car_need:1.0, has_airport:false, total:3.1, area:9,     pop:319,     days:1, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "schoinoussa":  { name:"Schoinoussa",      lat:36.866, lng:25.516, beach:4.5, hist:2.0, night:2.5, access:2.5, afford:3.8, car_need:1.0, has_airport:false, total:3.4, area:8,     pop:227,     days:2, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "donousa":      { name:"Donousa",          lat:37.100, lng:25.800, beach:4.5, hist:2.0, night:2.5, access:2.2, afford:3.8, car_need:1.0, has_airport:false, total:3.4, area:13,    pop:167,     days:2, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "kasos":        { name:"Kasos",            lat:35.383, lng:26.916, beach:3.2, hist:3.8, night:1.5, access:1.5, afford:4.5, car_need:3.0, has_airport:true, total:2.8, area:66,    pop:1084,    days:2, island_group:"Dodecanese", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "agathonisi":   { name:"Agathonisi",       lat:37.466, lng:26.966, beach:3.5, hist:2.0, night:1.5, access:1.8, afford:4.5, car_need:2.0, has_airport:false, total:3.0, area:13,    pop:185,     days:1, island_group:"Dodecanese", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "gavdos":       { name:"Gavdos",           lat:34.840, lng:24.080, beach:4.8, hist:2.0, night:2.5, access:1.0, afford:4.5, car_need:1.0, has_airport:false, total:2.5, area:33,    pop:152,     days:3, island_group:"Crete", drama:true, hiking:false, springs:false, chora:false, sailing:false }
 };
 
 const ISLANDS = Object.entries(ISLANDS_DATA).map(([key, data]) => ({ key, ...data }));
@@ -306,6 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateShortlistCount();
   try { setupDarkMode(); } catch(e) { console.warn('setupDarkMode', e); }
   try { setupVibeChips(); } catch(e) { console.warn('setupVibeChips', e); }
+  try { setupVibeTags(); } catch(e) { console.warn('setupVibeTags', e); }
   try { setupGroupFilter(); } catch(e) { console.warn('setupGroupFilter', e); }
   try { setupMap(); } catch(e) { console.warn('setupMap', e); }
   try { setupTable(); } catch(e) { console.warn('setupTable', e); }
@@ -586,12 +587,14 @@ function getDisplayScore(island) {
   return island[modeMap[currentMapMode] || 'total'];
 }
 
-function makeMarkerIcon(score) {
-  const color = scoreToColor(score);
+function makeMarkerIcon(score, dimmed) {
+  const color = dimmed ? '#c8c8c8' : scoreToColor(score);
   const size = Math.round(20 + score * 2);
+  const textColor = dimmed ? '#999' : '#fff';
+  const shadow = dimmed ? 'none' : '0 2px 6px rgba(0,0,0,.3)';
   return L.divIcon({
     className: 'custom-marker',
-    html: `<div style="background:${color};width:${size}px;height:${size}px;border-radius:50%;border:2px solid #fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.3);">${fmt(score)}</div>`,
+    html: `<div style="background:${color};width:${size}px;height:${size}px;border-radius:50%;border:2px solid #fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:${textColor};box-shadow:${shadow};">${fmt(score)}</div>`,
     iconSize: [size, size], iconAnchor: [size / 2, size / 2],
   });
 }
@@ -613,10 +616,11 @@ function renderMapMarkers() {
     } else if (currentGroupFilter !== 'all' && island.island_group !== currentGroupFilter) {
       return;
     }
+    const vibeMatch = islandPassesVibeFilters(island);
     const score = getDisplayScore(island);
     const carWords = ['', t('car.none'), t('car.helpful'), t('car.useful'), t('car.recommended'), t('car.essential')];
     const carLabel = carWords[Math.round(island.car_need || 0)] || '—';
-    const marker = L.marker([island.lat, island.lng], { icon: makeMarkerIcon(score) })
+    const marker = L.marker([island.lat, island.lng], { icon: makeMarkerIcon(score, !vibeMatch), opacity: vibeMatch ? 1 : 0.22 })
       .addTo(mapInstance)
       .bindTooltip(`
         <div class="island-tooltip-inner">
@@ -641,6 +645,89 @@ function renderMapMarkers() {
   });
 }
 
+// ============================================================
+//  VIBE FILTER PANEL
+// ============================================================
+let activeVibeFilters = new Set();
+
+function toggleVibePanel() {
+  const panel = document.getElementById('vibe-panel');
+  const btn   = document.getElementById('vibe-filter-btn');
+  if (!panel) return;
+  const open = panel.style.display === 'none';
+  panel.style.display = open ? '' : 'none';
+  btn && btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  if (open) updateVibeMatchCount();
+}
+
+function toggleVibeTag(filter) {
+  if (activeVibeFilters.has(filter)) {
+    activeVibeFilters.delete(filter);
+  } else {
+    activeVibeFilters.add(filter);
+  }
+  // Update tag button states
+  document.querySelectorAll('.vibe-tag').forEach(btn => {
+    btn.classList.toggle('active', activeVibeFilters.has(btn.dataset.filter));
+  });
+  const clearBtn = document.getElementById('vibe-clear-btn');
+  if (clearBtn) clearBtn.style.display = activeVibeFilters.size ? '' : 'none';
+  // Update badge on filter button
+  const countBadge = document.getElementById('vibe-filter-count');
+  if (countBadge) {
+    countBadge.textContent = activeVibeFilters.size || '';
+    countBadge.style.display = activeVibeFilters.size ? '' : 'none';
+  }
+  updateVibeMatchCount();
+  renderMapMarkers();
+}
+
+function clearVibeFilters() {
+  activeVibeFilters.clear();
+  document.querySelectorAll('.vibe-tag').forEach(btn => btn.classList.remove('active'));
+  const clearBtn = document.getElementById('vibe-clear-btn');
+  if (clearBtn) clearBtn.style.display = 'none';
+  const countBadge = document.getElementById('vibe-filter-count');
+  if (countBadge) { countBadge.textContent = ''; countBadge.style.display = 'none'; }
+  updateVibeMatchCount();
+  renderMapMarkers();
+}
+
+function updateVibeMatchCount() {
+  const el = document.getElementById('vibe-match-count');
+  if (!el) return;
+  if (!activeVibeFilters.size) { el.textContent = ''; return; }
+  const n = ISLANDS.filter(i => islandPassesVibeFilters(i)).length;
+  const total = ISLANDS.length;
+  el.textContent = `${n} / ${total} islands`;
+}
+
+function islandPassesVibeFilters(island) {
+  if (!activeVibeFilters.size) return true;
+  const mo = new Date().getMonth(); // 0-indexed
+  for (const f of activeVibeFilters) {
+    switch (f) {
+      case 'good_now': {
+        const tag = WTV_TAGS[island.key] && WTV_TAGS[island.key][mo];
+        if (tag === undefined || tag < 2) return false; // need great(2) or perfect(3)
+        break;
+      }
+      case 'car_free':   if (!island.car_need || island.car_need > 1.5) return false; break;
+      case 'remote':     if (!island.access || island.access > 2.5)     return false; break;
+      case 'budget':     if (!island.afford  || island.afford  < 4.0)   return false; break;
+      case 'nightlife':  if (!island.night   || island.night   < 4.0)   return false; break;
+      case 'tiny':       if (!island.pop     || island.pop     > 2000)   return false; break;
+      case 'drama':      if (!island.drama)                              return false; break;
+      case 'hiking':     if (!island.hiking)                             return false; break;
+      case 'springs':    if (!island.springs)                            return false; break;
+      case 'chora':      if (!island.chora)                              return false; break;
+      case 'sailing':    if (!island.sailing)                            return false; break;
+      case 'airport':    if (!island.has_airport)                        return false; break;
+    }
+  }
+  return true;
+}
+
 function filterIslands() { renderMapMarkers(); }
 function updateMapMode(mode) { currentMapMode = mode; renderMapMarkers(); }
 
@@ -648,6 +735,12 @@ function setupVibeChips() {
   const sel = document.getElementById('vibe-select');
   if (!sel) return;
   sel.addEventListener('change', () => updateMapMode(sel.value));
+}
+
+function setupVibeTags() {
+  document.querySelectorAll('.vibe-tag').forEach(btn => {
+    btn.addEventListener('click', () => toggleVibeTag(btn.dataset.filter));
+  });
 }
 
 function setupGroupFilter() {
