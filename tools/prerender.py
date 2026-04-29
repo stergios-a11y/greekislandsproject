@@ -389,6 +389,128 @@ def build_local_html(data, lang='en'):
 # ---------------------------------------------------------------------
 # JSON-LD structured data — this is how we win rich snippets
 # ---------------------------------------------------------------------
+def find_hero_image(data):
+    """Return (url, alt-source-name) for the first available photo in the island data,
+    or (None, None) if no photo exists. Used as the prerendered SEO body hero image."""
+    # Try itinerary stops first — they have higher-quality on-island photos
+    for day in (data.get('itinerary') or {}).get('days') or []:
+        for stop in day.get('stops') or []:
+            if stop.get('photo'):
+                return stop['photo'], stop.get('name', '')
+    # Fall back to first beach photo
+    for b in data.get('beaches') or []:
+        if b.get('photo'):
+            return b['photo'], b.get('name', '')
+    return None, None
+
+
+def build_faq(key, data, meta, lang='en'):
+    """Build a FAQPage JSON-LD object pulling from existing island data.
+
+    Generates 3-5 Q&As that match real search queries:
+    - When to visit (from WTV summary)
+    - How long to stay (from days field)
+    - How to get there (from getting_there summary)
+    - Best beaches (from top beach names)
+    - Suitability (from scores: hiking, families, nightlife, etc.)
+    """
+    name = localized_name(key, data, meta, lang)
+    qas = []
+
+    # Q1: When to visit
+    wtv = data.get('when_to_visit') or {}
+    wtv_summary = pick(wtv, 'summary', lang) or ''
+    if wtv_summary:
+        # Trim to first ~2 sentences for a focused answer
+        first_sentences = re.split(r'(?<=[.!?])\s+', wtv_summary.strip())
+        answer = ' '.join(first_sentences[:2])[:400]
+        if lang == 'el':
+            q = f'Πότε είναι η καλύτερη εποχή για επίσκεψη στ{"ο" if name[-1] not in "αηειυω" else "η"} {name};'
+        else:
+            q = f'When is the best time to visit {name}?'
+        qas.append((q, answer))
+
+    # Q2: How long to stay
+    days = meta.get('days')
+    if days:
+        days_int = int(days)
+        if lang == 'el':
+            q = f'Πόσες μέρες χρειάζομαι στ{"ο" if name[-1] not in "αηειυω" else "η"} {name};'
+            a = f'Συνιστούμε {days_int} μέρες για να δείτε τα κύρια αξιοθέατα χωρίς βιασύνη.'
+        else:
+            q = f'How many days do I need in {name}?'
+            a = f'We suggest {days_int} days to cover the main highlights without rushing.'
+        qas.append((q, a))
+
+    # Q3: How to get there
+    gt = data.get('getting_there') or {}
+    gt_summary = pick(gt, 'summary', lang) or ''
+    if gt_summary:
+        first_sentences = re.split(r'(?<=[.!?])\s+', gt_summary.strip())
+        answer = ' '.join(first_sentences[:2])[:400]
+        if lang == 'el':
+            q = f'Πώς πάω στ{"ο" if name[-1] not in "αηειυω" else "η"} {name};'
+        else:
+            q = f'How do I get to {name}?'
+        qas.append((q, answer))
+
+    # Q4: Best beaches (only if at least 2 beaches in data)
+    beaches = data.get('beaches') or []
+    if len(beaches) >= 2:
+        names = [pick(b, 'name', lang) or b.get('name', '') for b in beaches[:3] if b.get('name')]
+        names = [n for n in names if n]
+        if names:
+            joined = ', '.join(names[:-1]) + (' and ' if lang == 'en' else ' και ') + names[-1] if len(names) > 1 else names[0]
+            if lang == 'el':
+                q = f'Ποιες είναι οι καλύτερες παραλίες στ{"ο" if name[-1] not in "αηειυω" else "η"} {name};'
+                a = f'Οι κορυφαίες παραλίες είναι {joined}.'
+            else:
+                q = f'What are the best beaches in {name}?'
+                a = f'The top beaches are {joined}.'
+            qas.append((q, a))
+
+    # Q5: Suitability (one based on dominant character)
+    if meta.get('hiking') and (meta.get('beach') or 0) >= 4:
+        if lang == 'el':
+            q = f'Είναι κατάλληλ{"ο" if name[-1] not in "αηειυω" else "η"} {name} για πεζοπορία;'
+            a = f'Ναι, {name} συνδυάζει εξαιρετικές παραλίες με μονοπάτια και ορεινά τοπία.'
+        else:
+            q = f'Is {name} good for hiking?'
+            a = f'Yes — {name} combines great beaches with serious hiking trails and mountain scenery.'
+        qas.append((q, a))
+    elif (meta.get('night') or 0) >= 4:
+        if lang == 'el':
+            q = f'Έχει νυχτερινή ζωή στ{"ο" if name[-1] not in "αηειυω" else "η"} {name};'
+            a = f'Ναι, {name} έχει σημαντική νυχτερινή ζωή — ιδίως τους καλοκαιρινούς μήνες.'
+        else:
+            q = f'Does {name} have nightlife?'
+            a = f'Yes — {name} has a significant nightlife scene, especially in peak summer months.'
+        qas.append((q, a))
+    elif (meta.get('access') or 5) <= 2.5:
+        if lang == 'el':
+            q = f'Είναι δύσκολο να φτάσει κανείς στ{"ο" if name[-1] not in "αηειυω" else "η"} {name};'
+            a = f'{name} είναι σχετικά απομακρυσμένο — λιγότερα δρομολόγια και λιγότεροι τουρίστες.'
+        else:
+            q = f'Is {name} hard to reach?'
+            a = f'{name} is relatively remote — fewer ferries, fewer tourists, and a quieter feel.'
+        qas.append((q, a))
+
+    if not qas:
+        return None
+    return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": q,
+                "acceptedAnswer": {"@type": "Answer", "text": a},
+            }
+            for q, a in qas
+        ],
+    }
+
+
 def build_structured_data(key, data, meta, lang='en'):
     """
     Build a list of JSON-LD objects for Google.
@@ -475,6 +597,9 @@ def build_structured_data(key, data, meta, lang='en'):
     out = [destination, breadcrumbs]
     if trip:
         out.append(trip)
+    faq = build_faq(key, data, meta, lang)
+    if faq:
+        out.append(faq)
     return out
 
 # ---------------------------------------------------------------------
@@ -643,6 +768,22 @@ def render_body(key, data, meta, lang='en'):
 
     # Compose full body
     subtitle_html = f'<p class="seo-subtitle">{esc(subtitle)}</p>' if subtitle else ''
+
+    # Hero image — first available photo from itinerary stops or beaches
+    hero_url, hero_subject = find_hero_image(data)
+    hero_html = ''
+    if hero_url:
+        if lang == 'el':
+            alt = f'{name} — {hero_subject}' if hero_subject else f'{name}, ελληνικό νησί'
+        else:
+            alt = f'{name} — {hero_subject}' if hero_subject else f'{name}, Greek island'
+        hero_html = (
+            f'<figure class="seo-hero">'
+            f'<img src="{esc(hero_url)}" alt="{esc(alt)}" loading="lazy" '
+            f'width="800" height="500" style="width:100%;height:auto;border-radius:8px">'
+            f'</figure>'
+        )
+
     return f'''
 <article class="seo-island-content">
   <div class="seo-header">
@@ -650,6 +791,7 @@ def render_body(key, data, meta, lang='en'):
     {subtitle_html}
     {rating_text}
   </div>
+  {hero_html}
   <section class="seo-intro">
     <p>{safe_html(intro)}</p>
   </section>
@@ -687,6 +829,10 @@ def render_page(key, data, meta, lang='en'):
     alt_lang = 'el' if lang == 'en' else 'en'
     alt_url = url_el if lang == 'en' else url_en
 
+    # Modified date — from the underlying JSON file's mtime, so per-island freshness
+    # is reflected in the article:modified_time meta (used by Google for E-E-A-T).
+    modified_date = file_lastmod(ISLANDS_DIR / f'{key}.json')
+
     return f'''<!DOCTYPE html>
 <html lang="{html_lang}">
 <head>
@@ -695,6 +841,9 @@ def render_page(key, data, meta, lang='en'):
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
 <meta name="theme-color" content="#0B8FAC">
+<meta name="author" content="Stergios Gousios">
+<meta property="article:author" content="Stergios Gousios">
+<meta property="article:modified_time" content="{modified_date}">
 <link rel="canonical" href="{url}">
 <link rel="alternate" hreflang="en" href="{url_en}">
 <link rel="alternate" hreflang="el" href="{url_el}">
@@ -737,6 +886,8 @@ def render_page(key, data, meta, lang='en'):
   .seo-subtitle {{ color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }}
   .seo-rating {{ color: var(--ink-2, #333); font-size: var(--text-small, 14px); }}
   .seo-intro p {{ font-size: var(--text-sub, 18px); }}
+  .seo-hero {{ margin: 16px 0 24px; }}
+  .seo-hero img {{ display: block; box-shadow: 0 2px 12px rgba(0,0,0,0.10); }}
   .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local {{ margin-top: 36px; }}
   .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2 {{
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
