@@ -210,7 +210,7 @@ const UI_TEXT = {
 
   // Match Me / Quiz
   'match.title': { en: 'Match Me', el: 'Βρες το Νησί σου' },
-  'match.intro': { en: "Answer 4 quick questions and we'll recommend your top islands.", el: 'Απάντησε σε 4 γρήγορες ερωτήσεις και θα σου προτείνουμε τα κορυφαία νησιά για εσένα.' },
+  'match.intro': { en: "Answer 7 quick questions and we'll match you to your ideal islands.", el: 'Απάντησε σε 7 γρήγορες ερωτήσεις και θα σε ταιριάξουμε με τα ιδανικά νησιά για εσένα.' },
   'match.results.title': { en: 'Your top islands', el: 'Τα κορυφαία σου νησιά' },
   'match.results.sub': { en: 'Matched on your preferences — click any to explore', el: 'Με βάση τις προτιμήσεις σου — πάτα οποιοδήποτε για εξερεύνηση' },
   'match.retake': { en: 'Retake quiz', el: 'Επανάληψη' },
@@ -223,6 +223,10 @@ const UI_TEXT = {
   'quiz.why.lowcrowds': { en: 'Low crowds', el: 'Λίγος κόσμος' },
   'quiz.why.easy': { en: 'Easy to reach', el: 'Εύκολη πρόσβαση' },
   'quiz.why.overall': { en: 'Overall score', el: 'Συνολική βαθμολογία' },
+  'quiz.why.season': { en: 'Perfect season fit', el: 'Ιδανική εποχή' },
+  'quiz.why.transport.car': { en: 'Reachable by car', el: 'Προσβάσιμο με αυτοκίνητο' },
+  'quiz.why.transport.fly': { en: 'Has airport', el: 'Έχει αεροδρόμιο' },
+  'quiz.why.transport.short': { en: 'Short ferry hop', el: 'Κοντινό πλοίο' },
 
   // Shortlist dimensions (in card)
   'shortlist.dim.beach': { en: 'Beach', el: 'Παραλία' },

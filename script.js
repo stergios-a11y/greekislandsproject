@@ -2550,6 +2550,87 @@ window.renderInternational = renderInternational;
 /* ============================================================
    QUIZ
 ============================================================ */
+const WTV_TAGS = {
+  "aegina": [2, 1, 2, 2, 3, 3, 1, 0, 3, 2, 2, 2],
+  "agathonisi": [0, 0, 0, 0, 1, 3, 2, 1, 3, 0, 0, 0],
+  "agios-efstratios": [0, 0, 0, 0, 1, 3, 2, 1, 3, 0, 0, 0],
+  "agistri": [1, 1, 2, 2, 3, 3, 1, 1, 3, 2, 1, 1],
+  "alonnisos": [0, 0, 1, 2, 3, 3, 2, 1, 3, 2, 1, 0],
+  "ammouliani": [0, 0, 1, 2, 2, 3, 1, 0, 3, 2, 0, 0],
+  "amorgos": [0, 0, 1, 2, 2, 3, 2, 1, 3, 2, 1, 0],
+  "anafi": [0, 0, 0, 1, 1, 3, 2, 1, 3, 1, 0, 0],
+  "andros": [1, 1, 2, 2, 3, 3, 1, 0, 3, 2, 1, 1],
+  "antiparos": [0, 0, 1, 2, 3, 3, 2, 1, 3, 2, 1, 0],
+  "astypalaia": [0, 0, 1, 2, 2, 3, 2, 1, 3, 2, 0, 0],
+  "chania": [1, 1, 2, 2, 3, 3, 1, 0, 3, 2, 2, 1],
+  "chios": [1, 1, 2, 2, 3, 3, 2, 1, 3, 2, 2, 1],
+  "corfu": [1, 1, 2, 2, 3, 3, 1, 0, 3, 2, 2, 1],
+  "donousa": [0, 0, 0, 1, 2, 3, 2, 1, 3, 1, 0, 0],
+  "elafonisos": [0, 0, 1, 2, 3, 3, 1, 0, 3, 2, 0, 0],
+  "evia-central": [1, 1, 2, 2, 3, 3, 1, 1, 3, 2, 2, 1],
+  "evia-north": [2, 2, 2, 2, 2, 3, 1, 0, 3, 2, 2, 2],
+  "evia-south": [1, 1, 2, 2, 3, 3, 1, 1, 3, 2, 2, 1],
+  "folegandros": [0, 0, 1, 2, 3, 3, 2, 1, 3, 2, 1, 0],
+  "fournoi": [0, 0, 1, 2, 2, 3, 2, 1, 3, 2, 0, 0],
+  "gavdos": [0, 0, 0, 1, 2, 3, 1, 0, 3, 1, 0, 0],
+  "halki": [0, 0, 1, 2, 2, 3, 1, 0, 3, 2, 0, 0],
+  "heraklion": [1, 1, 2, 2, 2, 3, 0, 0, 3, 2, 2, 1],
+  "hydra": [1, 1, 2, 2, 3, 3, 1, 0, 3, 2, 2, 1],
+  "ikaria": [1, 1, 2, 2, 3, 3, 2, 2, 3, 2, 2, 1],
+  "ios": [0, 0, 1, 1, 2, 2, 0, 0, 3, 2, 1, 0],
+  "iraklia": [0, 0, 0, 1, 2, 3, 2, 1, 3, 1, 0, 0],
+  "ithaca": [1, 1, 2, 2, 3, 3, 2, 1, 3, 2, 2, 1],
+  "kalymnos": [2, 2, 3, 2, 2, 3, 1, 0, 3, 3, 2, 2],
+  "karpathos": [0, 0, 1, 2, 2, 3, 2, 1, 3, 3, 1, 0],
+  "kasos": [0, 0, 0, 1, 1, 3, 2, 1, 3, 0, 0, 0],
+  "kastellorizo": [0, 0, 1, 2, 2, 3, 2, 0, 3, 2, 0, 0],
+  "kea": [1, 1, 2, 2, 3, 2, 1, 1, 3, 2, 1, 1],
+  "kefalonia": [1, 1, 2, 2, 3, 3, 2, 1, 3, 2, 2, 1],
+  "kimolos": [0, 0, 1, 2, 2, 3, 1, 1, 3, 2, 0, 0],
+  "kos": [1, 1, 2, 2, 3, 3, 1, 0, 3, 2, 2, 1],
+  "koufonisia": [0, 0, 0, 1, 2, 3, 2, 1, 3, 2, 0, 0],
+  "kythira": [1, 1, 2, 2, 3, 3, 2, 1, 3, 2, 2, 1],
+  "kythnos": [1, 1, 2, 2, 3, 3, 1, 0, 3, 2, 1, 1],
+  "lasithi": [1, 1, 2, 2, 3, 3, 1, 0, 3, 2, 2, 1],
+  "lefkada": [1, 1, 2, 2, 3, 3, 1, 0, 3, 2, 2, 1],
+  "leipsoi": [0, 0, 0, 1, 2, 3, 2, 1, 3, 0, 0, 0],
+  "lemnos": [1, 1, 2, 2, 3, 3, 2, 2, 3, 2, 2, 1],
+  "leros": [1, 1, 1, 2, 2, 3, 2, 1, 3, 2, 1, 1],
+  "lesvos": [1, 1, 2, 2, 3, 3, 2, 1, 3, 2, 2, 1],
+  "meganisi": [0, 0, 1, 2, 2, 3, 2, 1, 3, 2, 0, 0],
+  "milos": [0, 0, 1, 2, 3, 3, 1, 0, 3, 2, 1, 0],
+  "mykonos": [0, 0, 1, 2, 2, 3, 0, 0, 3, 2, 1, 0],
+  "naxos": [0, 0, 1, 2, 3, 3, 1, 0, 3, 2, 1, 0],
+  "nisyros": [0, 0, 1, 2, 2, 3, 1, 0, 3, 2, 0, 0],
+  "oinousses": [0, 0, 1, 2, 2, 3, 2, 1, 3, 0, 0, 0],
+  "paros": [0, 0, 1, 2, 2, 3, 1, 0, 3, 2, 1, 0],
+  "patmos": [0, 0, 1, 2, 3, 3, 1, 0, 3, 2, 1, 0],
+  "paxos": [0, 0, 1, 2, 2, 3, 1, 0, 3, 2, 0, 0],
+  "poros": [1, 1, 2, 2, 3, 3, 1, 1, 3, 2, 2, 1],
+  "psara": [0, 0, 0, 1, 2, 3, 2, 1, 3, 0, 0, 0],
+  "rethymno": [1, 1, 2, 2, 3, 3, 1, 0, 3, 2, 2, 1],
+  "rhodes": [2, 1, 2, 2, 2, 3, 1, 0, 3, 2, 2, 1],
+  "salamis": [1, 1, 2, 2, 2, 2, 1, 1, 2, 2, 1, 1],
+  "samos": [1, 1, 2, 2, 3, 3, 1, 1, 3, 2, 2, 1],
+  "samothrace": [0, 0, 1, 2, 2, 3, 2, 1, 3, 2, 1, 0],
+  "santorini": [0, 0, 1, 2, 2, 3, 0, 0, 3, 2, 1, 0],
+  "schoinoussa": [0, 0, 0, 1, 2, 3, 2, 1, 3, 1, 0, 0],
+  "serifos": [0, 0, 1, 2, 2, 3, 1, 0, 3, 2, 1, 0],
+  "sifnos": [0, 0, 1, 2, 2, 3, 2, 1, 3, 2, 1, 0],
+  "sikinos": [0, 0, 0, 1, 2, 3, 1, 1, 3, 1, 0, 0],
+  "skiathos": [0, 0, 1, 2, 2, 3, 1, 0, 3, 2, 1, 0],
+  "skopelos": [0, 0, 1, 2, 2, 3, 1, 0, 3, 2, 1, 0],
+  "skyros": [1, 2, 2, 2, 3, 3, 2, 1, 3, 2, 1, 1],
+  "spetses": [1, 1, 2, 2, 3, 3, 1, 0, 3, 2, 2, 1],
+  "symi": [0, 0, 1, 2, 3, 3, 1, 0, 3, 2, 2, 0],
+  "syros": [1, 1, 2, 2, 3, 3, 2, 1, 3, 2, 2, 1],
+  "thasos": [1, 1, 2, 2, 3, 3, 1, 0, 3, 2, 2, 1],
+  "therasia": [0, 0, 0, 1, 2, 3, 2, 1, 3, 1, 0, 0],
+  "tilos": [0, 0, 1, 2, 2, 3, 2, 1, 3, 2, 0, 0],
+  "tinos": [0, 0, 1, 2, 3, 3, 2, 0, 3, 2, 1, 0],
+  "zakynthos": [1, 1, 2, 2, 3, 3, 1, 0, 3, 2, 2, 1],
+};
+
 const QUIZ_QUESTIONS = [
   {
     question: 'What kind of trip are you planning?',
@@ -2574,6 +2655,18 @@ const QUIZ_QUESTIONS = [
     question_el: 'Πώς νιώθεις με τον κόσμο;',
     options: ['Love the buzz', 'Some is fine', 'Prefer quiet', 'Must be secluded'],
     options_el: ['Μου αρέσει η ζωντάνια', 'Παν μέτρον άριστον', 'Προτιμώ ηρεμία', 'Θέλω απομόνωση']
+  },
+  {
+    question: 'When are you travelling?',
+    question_el: 'Πότε ταξιδεύεις;',
+    options: ['Mar – May', 'Jun – Aug', 'Sep – Nov', 'Dec – Feb'],
+    options_el: ['Μαρ – Μάι', 'Ιουν – Αυγ', 'Σεπ – Νοε', 'Δεκ – Φεβ']
+  },
+  {
+    question: 'How are you getting there?',
+    question_el: 'Πώς φτάνεις στο νησί;',
+    options: ['By car (drive-on ferry or bridge)', 'Short ferry — under 2 hours', 'Long ferry — happy to sail overnight', 'Fly in'],
+    options_el: ['Με αυτοκίνητο (ro-ro ή γέφυρα)', 'Μικρή διαδρομή — κάτω από 2 ώρες', 'Μεγάλη διαδρομή — δεν με πειράζει', 'Αεροπλάνο']
   },
   {
     question: 'Will you have a car on the island?',
@@ -2602,14 +2695,17 @@ function renderQuizStep() {
   const backLabel = t('quiz.back');
   const nextLabel = t('quiz.next');
   const findLabel = t('quiz.find');
-  container.innerHTML = `<div class="quiz-progress">${QUIZ_QUESTIONS.map((_, i) => `<div class="quiz-dot ${i < quizStep ? 'done' : i === quizStep ? 'current' : ''}"></div>`).join('')}<span class="quiz-step-label">${quizStep + 1} / ${QUIZ_QUESTIONS.length}</span></div><div class="quiz-card"><div class="quiz-question">${questionText}</div><div class="quiz-options">${options.map((opt, i) => `<button class="quiz-option ${quizAnswers[quizStep] === i ? 'selected' : ''}" data-idx="${i}">${opt}</button>`).join('')}</div><div class="quiz-nav">${quizStep > 0 ? `<button class="quiz-back-btn">← ${backLabel}</button>` : `<span></span>`}<button class="quiz-next-btn ${quizAnswers[quizStep] === undefined ? 'disabled' : ''}" ${quizAnswers[quizStep] === undefined ? 'disabled' : ''}>${quizStep === QUIZ_QUESTIONS.length - 1 ? findLabel : nextLabel}</button></div></div>`;
+  container.innerHTML = `<div class="quiz-progress">${QUIZ_QUESTIONS.map((_, i) => `<div class="quiz-dot ${i < quizStep ? 'done' : i === quizStep ? 'current' : ''}"></div>`).join('')}<span class="quiz-step-label">${quizStep + 1} / ${QUIZ_QUESTIONS.length}</span></div><div class="quiz-card"><div class="quiz-question">${questionText}</div><div class="quiz-options">${options.map((opt, i) => `<button class="quiz-option ${quizAnswers[quizStep] === i ? 'selected' : ''}" data-idx="${i}">${opt}</button>`).join('')}</div>${quizStep > 0 ? `<div class="quiz-nav-back"><button class="quiz-back-btn">← ${backLabel}</button></div>` : ''}</div>`;
   container.querySelectorAll('.quiz-option').forEach(btn => {
-    btn.addEventListener('click', () => { quizAnswers[quizStep] = parseInt(btn.dataset.idx); renderQuizStep(); });
-  });
-  const nextBtn = container.querySelector('.quiz-next-btn');
-  if (nextBtn) nextBtn.addEventListener('click', () => {
-    if (quizAnswers[quizStep] === undefined) return;
-    if (quizStep < QUIZ_QUESTIONS.length - 1) { quizStep++; renderQuizStep(); } else { computeQuizResults(); }
+    btn.addEventListener('click', () => {
+      quizAnswers[quizStep] = parseInt(btn.dataset.idx);
+      if (quizStep < QUIZ_QUESTIONS.length - 1) {
+        quizStep++;
+        renderQuizStep();
+      } else {
+        computeQuizResults();
+      }
+    });
   });
   const backBtn = container.querySelector('.quiz-back-btn');
   if (backBtn) backBtn.addEventListener('click', () => { if (quizStep > 0) { quizStep--; renderQuizStep(); } });
@@ -2620,20 +2716,70 @@ function computeQuizResults() {
   const priority = priorityDims[quizAnswers[1]] || 'total';
   const budgetMod = [2, 0.5, -0.5, -2][quizAnswers[2]] || 0;
   const crowdPref = quizAnswers[3];
+
+  // Q5 season → representative month indices per bracket
+  // Mar-May=1, Jun-Aug=2, Sep-Nov=3, Dec-Feb=0
+  const seasonMonths = { 0: [2,3,4], 1: [5,6,7], 2: [8,9,10], 3: [11,0,1] };
+  const seasonIdx = quizAnswers[4];
+
+  // Q6 transport: 0=car/bridge, 1=short ferry <2h, 2=long ferry ok, 3=fly
+  const transportPref = quizAnswers[5];
+
+  // Islands reachable by car/bridge (drive-on ferry exists or bridge)
+  const driveOnIslands = new Set(['lefkada','evia-north','evia-central','evia-south',
+    'thasos','corfu','kefalonia','zakynthos','salamis','poros','aegina','agistri',
+    'spetses','hydra','elafonisos','kythira','ithaca','ammouliani']);
+
   const scored = ISLANDS.map(i => {
     let s = i[priority] * 2.5 + i.total * 1.5;
     if (budgetMod > 0) s += budgetMod * i.afford;
     else if (budgetMod < 0) s += Math.abs(budgetMod) * (5 - i.afford);
     if (crowdPref >= 2) s += crowdPref * Math.max(0, 4 - Math.log10(i.pop + 1)) * 0.5;
     if (quizAnswers[0] === 2) { s += i.access * 0.5; if (i.night > 4) s -= 0.5; }
-    // Q5: car preference. 0 = Yes (will rent), 1 = No car
-    // If user doesn't want a car, strongly penalize islands where car is essential (car_need >= 4)
-    if (quizAnswers[4] === 1 && i.car_need) {
+
+    // Season fit — boost islands rated perfect/great in chosen months, penalise avoid
+    if (seasonIdx !== undefined && WTV_TAGS[i.key]) {
+      const tags = WTV_TAGS[i.key];
+      const months = seasonMonths[seasonIdx] || [];
+      let seasonBonus = 0;
+      months.forEach(mi => {
+        const tag = tags[mi];
+        if (tag === 3) seasonBonus += 1.2;       // perfect
+        else if (tag === 2) seasonBonus += 0.5;  // great
+        else if (tag === 0) seasonBonus -= 1.0;  // avoid
+      });
+      s += seasonBonus / months.length;
+    }
+
+    // Transport preference
+    if (transportPref === 0) {
+      // Car/bridge: strongly favour drive-on islands, penalise fly-only
+      if (driveOnIslands.has(i.key)) s += 2.0;
+      else if (!i.has_airport && i.access < 3) s -= 1.5;
+    } else if (transportPref === 1) {
+      // Short ferry <2h from Athens (access score proxy + known short-hop islands)
+      const shortFerryIslands = new Set(['aegina','agistri','hydra','poros','spetses',
+        'salamis','elafonisos','kythira','andros','tinos','syros','mykonos',
+        'paros','naxos','ios','santorini','heraklion','skiathos','skopelos',
+        'alonnisos','evia-north','evia-central','evia-south','kea','kythnos']);
+      if (shortFerryIslands.has(i.key)) s += 1.5;
+      else if (i.access < 3) s -= 1.2;
+    } else if (transportPref === 2) {
+      // Long ferry OK — no penalty, slight boost for remote/hard-to-reach
+      if (i.access <= 2.5) s += 0.8;
+    } else if (transportPref === 3) {
+      // Fly: favour airports, penalise no-airport
+      if (i.has_airport) s += 1.2;
+      else s -= 0.8;
+    }
+
+    // Q7: car preference. 0 = Yes (will rent), 1 = No car
+    if (quizAnswers[6] === 1 && i.car_need) {
       s -= Math.max(0, i.car_need - 2) * 0.8;
-    } else if (quizAnswers[4] === 0 && i.car_need) {
-      // If user has a car, lightly favor bigger islands where having a car pays off
+    } else if (quizAnswers[6] === 0 && i.car_need) {
       s += Math.min(i.car_need, 5) * 0.1;
     }
+
     return { ...i, matchScore: s };
   }).sort((a, b) => b.matchScore - a.matchScore).slice(0, 6);
   const container = document.getElementById('quiz-container');
@@ -2644,13 +2790,22 @@ function computeQuizResults() {
     ? ['Παραλία', 'Πολιτισμός', 'Νυχτερινή ζωή', 'Φιλικό στο πορτοφόλι']
     : ['Beach', 'Culture', 'Nightlife', 'Price-friendly'];
   const dimLabel = dimLabels[quizAnswers[1]] || (CURRENT_LANG === 'el' ? 'Συνολικά' : 'Overall');
+  const driveOnSet = new Set(['lefkada','evia-north','evia-central','evia-south',
+    'thasos','corfu','kefalonia','zakynthos','salamis','poros','aegina','agistri',
+    'spetses','hydra','elafonisos','kythira','ithaca','ammouliani']);
   const whyText = (island) => {
     const reasons = [];
     if (island[priority] >= 4.5) reasons.push(`${t('quiz.why.top')} ${dimLabel.toLowerCase()} (${fmt(island[priority])})`);
     else if (island[priority] >= 3.8) reasons.push(`${t('quiz.why.strong')} ${dimLabel.toLowerCase()} (${fmt(island[priority])})`);
     if (budgetMod > 0 && island.afford >= 4) reasons.push(t('quiz.why.affordable'));
     if (crowdPref >= 2 && island.pop < 5000) reasons.push(t('quiz.why.lowcrowds'));
-    if (island.access >= 4.5) reasons.push(t('quiz.why.easy'));
+    if (seasonIdx !== undefined && WTV_TAGS[island.key]) {
+      const months = seasonMonths[seasonIdx] || [];
+      const allPerfect = months.every(mi => WTV_TAGS[island.key][mi] === 3);
+      if (allPerfect) reasons.push(t('quiz.why.season'));
+    }
+    if (transportPref === 0 && driveOnSet.has(island.key)) reasons.push(t('quiz.why.transport.car'));
+    else if (transportPref === 3 && island.has_airport) reasons.push(t('quiz.why.transport.fly'));
     if (!reasons.length) reasons.push(`${t('quiz.why.overall')} ${fmt(island.total)}`);
     return reasons.slice(0, 2).join(' · ');
   };
