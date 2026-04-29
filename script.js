@@ -2088,7 +2088,7 @@ const ISLAND_FERRY_PORTS = {
   'kimolos': { lat: 36.794, lng: 24.575 },
   'kos': { lat: 36.893, lng: 27.288 },
   'koufonisia': { lat: 36.937, lng: 25.594 },
-  'kythira': { lat: 36.144, lng: 23.011 },
+  'kythira': { lat: 36.211, lng: 23.071 },
   'kythnos': { lat: 37.388, lng: 24.408 },
   'lasithi': { lat: 35.197, lng: 25.722 },
   'lefkada': { lat: 38.700, lng: 20.713 },
@@ -2276,6 +2276,7 @@ const FERRY_GRAPH = [
   { a: 'rhodes', b: 'tilos', dur: 105, freq: 'med', plo: 14, phi: 24, note: "most days" },
   { a: 'samos', b: 'fournoi', dur: 90, freq: 'med', plo: 8, phi: 14, note: "most days" },
   { a: 'samos', b: 'ikaria', dur: 90, freq: 'med', plo: 12, phi: 20, note: "daily" },
+  { a: 'mykonos', b: 'ikaria', dur: 180, freq: 'med', plo: 18, phi: 28, note: "Blue Star Patmos line" },
   { a: 'santorini', b: 'anafi', dur: 90, freq: 'med', plo: 15, phi: 25, note: "5-6/week" },
   { a: 'santorini', b: 'milos', dur: 180, freq: 'med', plo: 28, phi: 42, note: "daily summer" },
   { a: 'santorini', b: 'therasia', dur: 20, freq: 'high', plo: 3, phi: 5, note: "small boats from Ammoudi/Athinios" },
@@ -2319,29 +2320,51 @@ const FERRY_GRAPH = [
 // individual edges between consecutive stops are skipped to avoid double-drawing.
 // Pathfinding is unaffected — the FERRY_GRAPH still contains all individual edges.
 const FERRY_VISUAL_LINES = [
-  { stops: ['volos', 'skiathos', 'skopelos', 'alonnisos'],         freq: 'high' },
-  { stops: ['rafina', 'andros', 'tinos', 'mykonos'],               freq: 'high' },
-  { stops: ['lavrio', 'kea', 'kythnos'],                           freq: 'high' },
-  { stops: ['serifos', 'sifnos', 'milos'],                         freq: 'high' },
-  { stops: ['paros', 'naxos'],                                     freq: 'high' },
-  { stops: ['piraeus', 'chios', 'lesvos'],                         freq: 'med' },
-  { stops: ['piraeus', 'syros', 'tinos', 'mykonos'],               freq: 'high' },
-  { stops: ['piraeus', 'paros', 'naxos'],                          freq: 'high' },
-  { stops: ['piraeus', 'naxos', 'ios', 'santorini'],               freq: 'high' },
+  // Sporades — Volos hop
+  { stops: ['volos', 'skiathos', 'skopelos', 'alonnisos'],                  freq: 'high' },
+  // Saronic chain
+  { stops: ['piraeus', 'aegina', 'poros', 'hydra', 'spetses'],              freq: 'high' },
+  // Cyclades from Athens — Rafina lines
+  { stops: ['rafina', 'andros', 'tinos', 'mykonos'],                        freq: 'high' },
+  // Cyclades from Athens — Lavrio (West Cyclades short hop)
+  { stops: ['lavrio', 'kea', 'kythnos'],                                    freq: 'high' },
+  // Western Cyclades — Piraeus chain (the same boat: Piraeus → Kythnos → Serifos → Sifnos → Milos)
+  { stops: ['piraeus', 'kythnos', 'serifos', 'sifnos', 'milos'],            freq: 'high' },
+  // Folegandros via Milos
+  { stops: ['piraeus', 'milos', 'folegandros'],                             freq: 'med' },
+  // Eastern Cyclades — Piraeus → Syros → Tinos → Mykonos
+  { stops: ['piraeus', 'syros', 'tinos', 'mykonos'],                        freq: 'high' },
+  // Central Cyclades — Piraeus → Paros → Naxos
+  { stops: ['piraeus', 'paros', 'naxos'],                                   freq: 'high' },
+  // Santorini line — Piraeus → Naxos → Ios → Santorini → Anafi
+  { stops: ['piraeus', 'naxos', 'ios', 'santorini', 'anafi'],               freq: 'high' },
+  // Small Cyclades (Express Skopelitis)
   { stops: ['naxos', 'iraklia', 'schoinoussa', 'koufonisia', 'donousa', 'amorgos'],   freq: 'low' },
-  { stops: ['piraeus', 'aegina', 'poros', 'hydra', 'spetses'],     freq: 'high' },
-  { stops: ['skiathos', 'skopelos', 'alonnisos'],                  freq: 'high' },
+  // Astypalaia via Amorgos
+  { stops: ['piraeus', 'amorgos', 'astypalaia'],                            freq: 'low' },
+  // NE Aegean — Piraeus → Chios → Lesvos overnight
+  { stops: ['piraeus', 'chios', 'lesvos'],                                  freq: 'med' },
+  // Eastern Aegean — Piraeus → Mykonos → Ikaria → Samos
+  { stops: ['piraeus', 'mykonos', 'ikaria', 'samos'],                       freq: 'med' },
+  // Dodecanese Blue Star — Piraeus → Kalymnos → Kos → Rhodes (the iconic SE Aegean run)
+  { stops: ['piraeus', 'kalymnos', 'kos', 'rhodes'],                        freq: 'med' },
+  // Karpathos / Kasos line from Rhodes
+  { stops: ['rhodes', 'karpathos', 'kasos'],                                freq: 'low' },
 ];
 
-// Helper: returns a Set of "a~b" keys (sorted) for every consecutive-stop pair
-// that lives inside a visual polyline. Used to skip drawing those individual edges.
+// Helper: returns a Set of "a~b" keys (sorted) for every pair of stops on the
+// SAME visual polyline. Used to skip drawing direct edges that would otherwise
+// run parallel to a polyline. e.g. if Piraeus → Naxos → Ios → Santorini is a
+// visual line, we hide the direct piraeus↔santorini edge so the map shows only
+// the multi-stop curve through actual ferry stops.
 function buildVisualEdgeSet() {
   const s = new Set();
   FERRY_VISUAL_LINES.forEach(line => {
-    for (let i = 0; i < line.stops.length - 1; i++) {
-      const a = line.stops[i], b = line.stops[i + 1];
-      const key = [a, b].sort().join('~');
-      s.add(key);
+    for (let i = 0; i < line.stops.length; i++) {
+      for (let j = i + 1; j < line.stops.length; j++) {
+        const key = [line.stops[i], line.stops[j]].sort().join('~');
+        s.add(key);
+      }
     }
   });
   return s;
