@@ -1273,6 +1273,22 @@ async function initItineraryMap(days, beaches = []) {
       const marker = L.marker([stop.lat, stop.lng], { icon })
         .addTo(itineraryMapInstance)
         .bindPopup(`<div style="min-width:200px;font-family:sans-serif"><div style="font-size:10px;font-weight:700;color:${day.color};text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px">Day ${day.day} · ${typeLabel}</div>${nameHtml}<p style="font-size:12px;color:#555;margin:6px 0 0;line-height:1.55">${stop.desc}</p>${photoLine}</div>`);
+      // Bind direct click handler on lightbox images inside this popup once it opens.
+      // Document-level delegation can be intercepted by Leaflet's internal handlers,
+      // so direct binding is the most reliable path inside popup content.
+      marker.on('popupopen', function(ev) {
+        const popupNode = ev.popup.getElement();
+        if (!popupNode) return;
+        popupNode.querySelectorAll('img.lightbox-img').forEach(function(img) {
+          if (img.dataset.lightboxBound) return;
+          img.dataset.lightboxBound = '1';
+          img.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (window.openLightbox) window.openLightbox(img);
+          });
+        });
+      });
       itinMarkerLayers[day.day].push(marker);
     });
   }
@@ -2808,4 +2824,8 @@ function computeQuizResults() {
     else if (e.key === 'ArrowLeft')  { e.preventDefault(); navigate(-1); }
     else if (e.key === 'ArrowRight') { e.preventDefault(); navigate(1); }
   });
+
+  // Expose open() globally so direct-bound handlers (e.g. inside Leaflet popups,
+  // where document-level delegation can be unreliable) can trigger the lightbox.
+  window.openLightbox = open;
 })();
