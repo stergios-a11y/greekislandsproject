@@ -1774,35 +1774,37 @@ function renderCompareWTV(iA, iB, jsonA, jsonB) {
 
   const tagsA = WTV_TAGS[iA.key] || [];
   const tagsB = WTV_TAGS[iB.key] || [];
-  const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  // Translated month names from i18n
+  const monthNames = t('months.short').split(',');
   const tagClass = ['wtv-avoid','wtv-ok','wtv-great','wtv-perfect'];
-  const tagLabel = (t) => ['Avoid','OK','Great','Perfect'][t] || '';
+  const tagLabels = [t('wtv.tag.avoid'), t('wtv.tag.ok'), t('wtv.tag.great'), t('wtv.tag.perfect')];
+  const tagLabel = (v) => tagLabels[v] || '';
 
-  // Get why-text if full JSON is available
+  // Get why-text — use EL if in Greek, EN otherwise
+  const wtvLangKey = CURRENT_LANG === 'el' ? 'why_el' : 'why';
   const whyA = jsonA && jsonA.when_to_visit && jsonA.when_to_visit.months
-    ? jsonA.when_to_visit.months.map(m => m.why) : [];
+    ? jsonA.when_to_visit.months.map(m => m[wtvLangKey] || m.why || '') : [];
   const whyB = jsonB && jsonB.when_to_visit && jsonB.when_to_visit.months
-    ? jsonB.when_to_visit.months.map(m => m.why) : [];
+    ? jsonB.when_to_visit.months.map(m => m[wtvLangKey] || m.why || '') : [];
 
   const months = monthNames.map((mo, i) => {
     const tA = tagsA[i] !== undefined ? tagsA[i] : 1;
     const tB = tagsB[i] !== undefined ? tagsB[i] : 1;
-    const isSweet = tA >= 2 && tB >= 2;          // both great or perfect
-    const isBest  = tA >= 3 && tB >= 3;          // both perfect
+    const isSweet = tA >= 2 && tB >= 2;
+    const isBest  = tA >= 3 && tB >= 3;
     const wA = whyA[i] || '';
     const wB = whyB[i] || '';
-    const tooltip = `${islandName(iA.key)}: ${tagLabel(tA)}${wA ? ' — ' + wA : ''}
-${islandName(iB.key)}: ${tagLabel(tB)}${wB ? ' — ' + wB : ''}`;
+    const tooltip = `${islandName(iA.key)}: ${tagLabel(tA)}${wA ? ' \u2014 ' + wA : ''} | ${islandName(iB.key)}: ${tagLabel(tB)}${wB ? ' \u2014 ' + wB : ''}`;
     return `<div class="cwtv-col${isSweet ? ' cwtv-sweet' : ''}${isBest ? ' cwtv-best' : ''}" title="${tooltip.replace(/"/g,"'")}">
-      <div class="cwtv-cell cwtv-a ${tagClass[tA]}">${wA ? `<span class="cwtv-why">${wA}</span>` : ''}</div>
+      <div class="cwtv-cell cwtv-a ${tagClass[tA]}"></div>
       <div class="cwtv-month">${mo}</div>
-      <div class="cwtv-cell cwtv-b ${tagClass[tB]}">${wB ? `<span class="cwtv-why">${wB}</span>` : ''}</div>
+      <div class="cwtv-cell cwtv-b ${tagClass[tB]}"></div>
     </div>`;
   }).join('');
 
-  // Count sweet months
-  const sweetCount = tagsA.filter((t,i) => t >= 2 && tagsB[i] >= 2).length;
-  const bestCount  = tagsA.filter((t,i) => t >= 3 && tagsB[i] >= 3).length;
+  // Verdict with translated month names
+  const sweetCount = tagsA.filter((tv,i) => tv >= 2 && tagsB[i] >= 2).length;
+  const bestCount  = tagsA.filter((tv,i) => tv >= 3 && tagsB[i] >= 3).length;
   let overlapMsg = '';
   if (bestCount > 0) {
     const bestMonths = monthNames.filter((_,i) => tagsA[i] >= 3 && tagsB[i] >= 3).join(', ');
@@ -1814,18 +1816,26 @@ ${islandName(iB.key)}: ${tagLabel(tB)}${wB ? ' — ' + wB : ''}`;
     overlapMsg = `<div class="cwtv-verdict cwtv-verdict-warn">${t('compare.wtv_no_overlap')}</div>`;
   }
 
+  const nameA = islandName(iA.key);
+  const nameB = islandName(iB.key);
+
   el.innerHTML = `
     <div class="cwtv-legend-row">
-      <span class="cwtv-island-a">${islandName(iA.key)}</span>
       <div class="cwtv-legend">
         <span class="cwtv-leg wtv-perfect"></span>${t('wtv.perfect')}
         <span class="cwtv-leg wtv-great"></span>${t('wtv.great')}
         <span class="cwtv-leg wtv-ok"></span>${t('wtv.ok')}
         <span class="cwtv-leg wtv-avoid"></span>${t('wtv.avoid')}
       </div>
-      <span class="cwtv-island-b">${islandName(iB.key)}</span>
     </div>
-    <div class="cwtv-grid">${months}</div>
+    <div class="cwtv-wrap">
+      <div class="cwtv-labels">
+        <div class="cwtv-label-a">${nameA}</div>
+        <div class="cwtv-label-spacer"></div>
+        <div class="cwtv-label-b">${nameB}</div>
+      </div>
+      <div class="cwtv-grid">${months}</div>
+    </div>
     ${overlapMsg}`;
 }
 

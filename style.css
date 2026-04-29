@@ -2660,21 +2660,40 @@ html.dark .cmp-bar-car_need { background: #9CA3AF; }
   margin-bottom: 8px;
 }
 .cwtv-legend-row {
-  display: flex; align-items: center; justify-content: space-between;
-  margin-bottom: 6px; gap: 8px;
+  display: flex; align-items: center;
+  margin-bottom: 8px; gap: 8px;
 }
-.cwtv-island-a, .cwtv-island-b {
-  font-family: var(--serif); font-size: var(--text-small); font-weight: 600;
-  color: var(--ink);
-}
-.cwtv-island-a { color: #1B4F8A; }
-.cwtv-island-b { color: #C4962A; }
-html.dark .cwtv-island-a { color: #4DBEFF; }
-html.dark .cwtv-island-b { color: #FFCB52; }
 .cwtv-legend {
   display: flex; align-items: center; gap: 8px;
   font-size: var(--text-meta); color: var(--ink-4); flex-wrap: wrap;
 }
+/* Island name labels on the left of the grid */
+.cwtv-wrap {
+  display: flex; align-items: stretch; gap: 8px;
+}
+.cwtv-labels {
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  padding: 0 2px;
+  flex-shrink: 0;
+  min-width: 72px; max-width: 120px;
+}
+.cwtv-label-a, .cwtv-label-b {
+  font-family: var(--serif); font-size: var(--text-meta); font-weight: 700;
+  line-height: 1.2;
+  /* vertically centre in their half of the strip height */
+  display: flex; align-items: center;
+  height: 22px;
+}
+.cwtv-label-a { color: #1B4F8A; }
+.cwtv-label-b { color: #C4962A; }
+html.dark .cwtv-label-a { color: #4DBEFF; }
+html.dark .cwtv-label-b { color: #FFCB52; }
+.cwtv-label-spacer {
+  /* matches the month label row height */
+  height: 18px; flex-shrink: 0;
+}
+.cwtv-wrap .cwtv-grid { flex: 1; min-width: 0; }
 .cwtv-leg {
   display: inline-block; width: 12px; height: 12px;
   border-radius: 2px; flex-shrink: 0;
@@ -2790,6 +2809,8 @@ html.dark .cwtv-verdict-warn { background: rgba(194,84,80,0.1); }
   .cwtv-cell { height: 16px; }
   .cwtv-month { font-size: var(--text-micro, 9px); }
   .cwtv-legend { display: none; }
+  .cwtv-labels { min-width: 52px; max-width: 72px; }
+  .cwtv-label-a, .cwtv-label-b { font-size: var(--text-micro, 10px); height: 16px; }
   .cmp-extra-grid { grid-template-columns: 1fr; }
 }
 
