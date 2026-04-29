@@ -225,7 +225,9 @@ const UI_TEXT = {
 
   // Match Me / Quiz
   'filter.vibes': { en: 'Filters', el: 'Φίλτρα' },
-  'vibe.goodnow':  { en: 'Good now', el: 'Καλή εποχή τώρα' },
+  'vibe.idealnow':    { en: 'Ideal now', el: 'Ιδανικά τώρα' },
+  'vibe.caroptional': { en: 'Car optional', el: 'Αυτοκίνητο προαιρετικό' },
+  'vibe.hint':        { en: 'Tap one or more to narrow the map', el: 'Πάτα ένα ή περισσότερα για φιλτράρισμα' },
   'vibe.carfree':  { en: 'Car-free', el: 'Χωρίς αυτοκίνητο' },
   'vibe.remote':   { en: 'Off the radar', el: 'Μακριά από κόσμο' },
   'vibe.budget':   { en: 'Budget-friendly', el: 'Οικονομικό' },

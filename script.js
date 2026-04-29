@@ -707,12 +707,13 @@ function islandPassesVibeFilters(island) {
   const mo = new Date().getMonth(); // 0-indexed
   for (const f of activeVibeFilters) {
     switch (f) {
-      case 'good_now': {
+      case 'ideal_now': {
         const tag = WTV_TAGS[island.key] && WTV_TAGS[island.key][mo];
-        if (tag === undefined || tag < 2) return false; // need great(2) or perfect(3)
+        if (tag === undefined || tag < 2) return false; // great(2) or perfect(3)
         break;
       }
-      case 'car_free':   if (!island.car_need || island.car_need > 1.5) return false; break;
+      case 'car_free':     if (!island.car_need || island.car_need > 1.5) return false; break;
+      case 'car_optional': if (!island.car_need || island.car_need > 3.0) return false; break;
       case 'remote':     if (!island.access || island.access > 2.5)     return false; break;
       case 'budget':     if (!island.afford  || island.afford  < 4.0)   return false; break;
       case 'nightlife':  if (!island.night   || island.night   < 4.0)   return false; break;

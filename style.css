@@ -357,10 +357,21 @@ header {
   color: var(--aegean);
 }
 .vibe-tag.active {
-  background: var(--aegean-pale);
-  border-color: var(--aegean);
-  color: var(--aegean);
+  background: var(--aegean);
+  border-color: var(--aegean-dark);
+  color: #fff;
   font-weight: 600;
+}
+.vibe-tag.active::before {
+  content: "✓ ";
+  font-size: 0.85em;
+  opacity: 0.9;
+}
+.vibe-hint {
+  margin: 0 0 8px;
+  font-size: var(--text-meta);
+  color: var(--ink-4);
+  font-style: italic;
 }
 .vibe-panel-footer {
   display: flex; align-items: center; justify-content: space-between;
