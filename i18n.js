@@ -45,7 +45,7 @@ const UI_TEXT = {
   'help.step2.title': { en: 'Filter and rank', el: 'Φιλτράρισμα και ταξινόμηση' },
   'help.step2.desc': { en: 'Use the dropdowns to filter by island group or rank by what matters to you — beaches, culture, nightlife.', el: 'Χρησιμοποίησε τα φίλτρα για να διαλέξεις νησιωτικό σύμπλεγμα ή να ταξινομήσεις κατά παραλίες, πολιτισμό, νυχτερινή ζωή.' },
   'help.step3.title': { en: 'Take the quiz', el: 'Κάνε το quiz' },
-  'help.step3.desc': { en: "Not sure where to go? Answer 5 quick questions and we'll match you to your top islands.", el: 'Δεν είσαι σίγουρος; Απάντησε σε 5 γρήγορες ερωτήσεις και θα σου προτείνουμε τα κορυφαία νησιά.' },
+  'help.step3.desc': { en: "Not sure where to go? Answer 7 quick questions and we'll match you to your top islands.", el: 'Δεν είσαι σίγουρος; Απάντησε σε 7 γρήγορες ερωτήσεις και θα σου προτείνουμε τα κορυφαία νησιά.' },
   'help.step4.title': { en: 'Save &amp; compare', el: 'Αποθήκευση &amp; σύγκριση' },
   'help.step4.desc': { en: 'Star islands to your shortlist, or put two side-by-side with Compare.', el: 'Αποθήκευσε νησιά στη λίστα σου, ή σύγκρινε δύο δίπλα-δίπλα.' },
   'help.close': { en: 'Got it — let me explore', el: 'Έγινε — ας εξερευνήσω' },
