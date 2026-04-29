@@ -870,7 +870,7 @@ function buildIslandPage(data) {
     const photoId = `beach-photo-${i}`;
     // Support direct photo URL (Cloudinary, Unsplash etc) OR Wikimedia commons filename
     const photoHtml = b.photo
-      ? `<div class="beach-photo-wrap"><img class="beach-photo" src="${b.photo}" alt="${b.name}" loading="lazy" onerror="this.parentElement.style.display='none'">${buildPhotoCredit(b.photo_credit)}</div>`
+      ? `<div class="beach-photo-wrap">${buildLightboxImg(b.photo, b.name, b.photo_credit, 'beach-photo', 'onerror="this.parentElement.parentElement.style.display=\'none\'"')}${buildPhotoCredit(b.photo_credit)}</div>`
       : '';
     const beachId = (currentIslandKey + '_' + b.name).replace(/[^a-z0-9]/gi, '_').toLowerCase();
     return `<div class="beach-card">
@@ -993,6 +993,22 @@ function buildPhotoCredit(credit) {
   return `<div class="photo-credit">${text}</div>`;
 }
 
+/* Build an <img> tag that participates in the lightbox. Embeds credit
+   metadata as data-* attributes so the lightbox can read them on click
+   without traversing the DOM. */
+function buildLightboxImg(src, alt, credit, extraClass, extraAttrs) {
+  const safeSrc = (src || '').replace(/"/g, '&quot;');
+  const safeAlt = (alt || '').replace(/"/g, '&quot;');
+  const c = credit || {};
+  const dataAttrs = [
+    `data-credit-artist="${(c.artist || '').replace(/"/g, '&quot;')}"`,
+    `data-credit-license="${(c.license || '').replace(/"/g, '&quot;')}"`,
+    `data-credit-page-url="${(c.page_url || '').replace(/"/g, '&quot;')}"`,
+  ].join(' ');
+  const cls = `lightbox-img${extraClass ? ' ' + extraClass : ''}`;
+  return `<img class="${cls}" src="${safeSrc}" alt="${safeAlt}" loading="lazy" ${dataAttrs}${extraAttrs ? ' ' + extraAttrs : ''}>`;
+}
+
 function buildWhenToVisitSection(data) {
   const w = data.when_to_visit;
   if (!w || !Array.isArray(w.months) || w.months.length !== 12) return '';
@@ -1081,7 +1097,7 @@ function buildLocalSection(data) {
     let imageHtml = '';
     let wrapClass = 'local-item';
     if (photo) {
-      imageHtml = `<div class="local-item-photo-wrap"><img class="local-item-photo" src="${photo}" alt="${name.replace(/"/g, '&quot;')}" loading="lazy" onerror="this.parentElement.style.display='none'">${buildPhotoCredit(item.photo_credit)}</div>`;
+      imageHtml = `<div class="local-item-photo-wrap">${buildLightboxImg(photo, name, item.photo_credit, 'local-item-photo', 'onerror="this.parentElement.parentElement.style.display=\'none\'"')}${buildPhotoCredit(item.photo_credit)}</div>`;
       wrapClass = 'local-item local-item-with-photo';
     } else if (image) {
       imageHtml = `<img class="local-item-image" src="${image}" alt="${name.replace(/"/g, '&quot;')}" loading="lazy" width="80" height="80">`;
@@ -1246,7 +1262,7 @@ async function initItineraryMap(days, beaches = []) {
         : `<strong>${stop.name}</strong>`;
       const typeLabel = stop.type ? stop.type.charAt(0).toUpperCase() + stop.type.slice(1) : 'Stop';
       const photoLine = stop.photo
-        ? `<div style="position:relative;margin-top:8px"><img src="${stop.photo}" alt="${stop.name}" style="width:100%;height:120px;object-fit:cover;border-radius:6px;display:block" loading="lazy" onerror="this.parentElement.style.display='none'">${buildPhotoCredit(stop.photo_credit)}</div>`
+        ? `<div style="position:relative;margin-top:8px">${buildLightboxImg(stop.photo, stop.name, stop.photo_credit, '', 'style="width:100%;height:120px;object-fit:cover;border-radius:6px;display:block" onerror="this.parentElement.style.display=\'none\'"')}${buildPhotoCredit(stop.photo_credit)}</div>`
         : '';
       const icon = L.divIcon({
         className: 'custom-marker',
@@ -2625,3 +2641,155 @@ function computeQuizResults() {
   results.querySelectorAll('.result-island-card').forEach(card => { card.addEventListener('click', () => navigateTo('island', card.dataset.key)); });
   results.querySelector('.quiz-retake-btn').addEventListener('click', () => { quizAnswers = {}; quizStep = 0; renderQuizStep(); });
 }
+
+/* ============================================================
+   LIGHTBOX
+   Click any <img class="lightbox-img"> to open in a fullscreen
+   overlay. Arrow keys / swipe to navigate. Esc / click-outside
+   / X to close. Reads CC credit from data-credit-* attributes.
+============================================================ */
+(function() {
+  let overlay = null;
+  let imgEl = null;
+  let captionEl = null;
+  let prevBtn = null;
+  let nextBtn = null;
+  let closeBtn = null;
+  let currentIndex = 0;
+  let imageSet = []; // array of <img> nodes that participate in lightbox
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let lastFocused = null;
+  let bodyOverflow = '';
+
+  function buildOverlay() {
+    overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-label', 'Image viewer');
+    overlay.innerHTML = ''
+      + '<button class="lightbox-close" aria-label="Close">&times;</button>'
+      + '<button class="lightbox-prev" aria-label="Previous image">&#8249;</button>'
+      + '<button class="lightbox-next" aria-label="Next image">&#8250;</button>'
+      + '<div class="lightbox-content">'
+      +   '<img class="lightbox-content-img" alt="">'
+      +   '<div class="lightbox-caption"></div>'
+      + '</div>';
+    document.body.appendChild(overlay);
+
+    imgEl     = overlay.querySelector('.lightbox-content-img');
+    captionEl = overlay.querySelector('.lightbox-caption');
+    prevBtn   = overlay.querySelector('.lightbox-prev');
+    nextBtn   = overlay.querySelector('.lightbox-next');
+    closeBtn  = overlay.querySelector('.lightbox-close');
+
+    prevBtn.addEventListener('click',  function(e) { e.stopPropagation(); navigate(-1); });
+    nextBtn.addEventListener('click',  function(e) { e.stopPropagation(); navigate(1); });
+    closeBtn.addEventListener('click', function(e) { e.stopPropagation(); close(); });
+    overlay.addEventListener('click',  function(e) {
+      // click-outside-image closes
+      if (e.target === overlay || e.target.classList.contains('lightbox-content')) close();
+    });
+
+    // Touch / swipe
+    overlay.addEventListener('touchstart', function(e) {
+      if (e.touches.length === 1) {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+      }
+    }, { passive: true });
+    overlay.addEventListener('touchend', function(e) {
+      if (touchStartX === 0) return;
+      const t = e.changedTouches[0];
+      const dx = t.clientX - touchStartX;
+      const dy = t.clientY - touchStartY;
+      touchStartX = 0;
+      // Horizontal swipe > 50px and not too vertical = navigate
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+        navigate(dx > 0 ? -1 : 1);
+      }
+    }, { passive: true });
+  }
+
+  function buildCaption(img) {
+    const artist  = img.getAttribute('data-credit-artist')   || '';
+    const license = img.getAttribute('data-credit-license')  || '';
+    const pageUrl = img.getAttribute('data-credit-page-url') || '';
+    if (!artist && !license) return '';
+    const text = artist
+      ? (license ? '© ' + artist + ' / ' + license : '© ' + artist)
+      : license;
+    if (pageUrl) {
+      return '<a href="' + pageUrl.replace(/"/g, '&quot;')
+        + '" target="_blank" rel="noopener noreferrer">' + text + '</a>';
+    }
+    return text;
+  }
+
+  function show(index) {
+    if (!imageSet.length) return;
+    currentIndex = (index + imageSet.length) % imageSet.length;
+    const src = imageSet[currentIndex];
+    imgEl.src = src.src;
+    imgEl.alt = src.alt || '';
+    captionEl.innerHTML = buildCaption(src);
+    // Hide nav buttons if only one image
+    const single = imageSet.length <= 1;
+    prevBtn.style.display = single ? 'none' : '';
+    nextBtn.style.display = single ? 'none' : '';
+  }
+
+  function navigate(delta) { show(currentIndex + delta); }
+
+  function open(triggerImg) {
+    if (!overlay) buildOverlay();
+    // Re-collect image set every open — page content may have changed
+    imageSet = Array.prototype.slice.call(
+      document.querySelectorAll('img.lightbox-img')
+    ).filter(function(img) { return img.src && img.offsetParent !== null; });
+    // The triggering image might not be in the set if it's inside a popup —
+    // include it explicitly at the appropriate index.
+    if (imageSet.indexOf(triggerImg) === -1) {
+      imageSet = [triggerImg];
+      currentIndex = 0;
+    } else {
+      currentIndex = imageSet.indexOf(triggerImg);
+    }
+    show(currentIndex);
+    overlay.classList.add('lightbox-open');
+    lastFocused = document.activeElement;
+    closeBtn.focus();
+    bodyOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    if (!overlay) return;
+    overlay.classList.remove('lightbox-open');
+    imgEl.src = '';
+    document.body.style.overflow = bodyOverflow;
+    if (lastFocused && typeof lastFocused.focus === 'function') {
+      try { lastFocused.focus(); } catch (e) {}
+    }
+  }
+
+  // Global delegated click handler — catches clicks on lightbox-img anywhere
+  // in the document, INCLUDING inside Leaflet popups (which append to body).
+  document.addEventListener('click', function(e) {
+    const target = e.target;
+    if (target && target.tagName === 'IMG' && target.classList.contains('lightbox-img')) {
+      e.preventDefault();
+      e.stopPropagation();
+      open(target);
+    }
+  });
+
+  // Keyboard
+  document.addEventListener('keydown', function(e) {
+    if (!overlay || !overlay.classList.contains('lightbox-open')) return;
+    if (e.key === 'Escape')      { e.preventDefault(); close(); }
+    else if (e.key === 'ArrowLeft')  { e.preventDefault(); navigate(-1); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); navigate(1); }
+  });
+})();
