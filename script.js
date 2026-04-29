@@ -2055,7 +2055,7 @@ const ISLAND_FERRY_PORTS = {
   'agios-efstratios': { lat: 39.51, lng: 24.998 },
   'agistri': { lat: 37.7, lng: 23.347 },
   'alonnisos': { lat: 39.149, lng: 23.857 },
-  'ammouliani': { lat: 40.323, lng: 23.901 },
+  'ammouliani': { lat: 40.335, lng: 23.920 },
   'amorgos': { lat: 36.835, lng: 25.882 },
   'anafi': { lat: 36.355, lng: 25.766 },
   'andros': { lat: 37.881, lng: 24.738 },
@@ -2078,7 +2078,7 @@ const ISLAND_FERRY_PORTS = {
   'ikaria': { lat: 37.62, lng: 26.213 },
   'ios': { lat: 36.722, lng: 25.282 },
   'iraklia': { lat: 36.846, lng: 25.469 },
-  'ithaca': { lat: 38.444, lng: 20.677 },
+  'ithaca': { lat: 38.364, lng: 20.718 },
   'kalymnos': { lat: 36.948, lng: 26.989 },
   'karpathos': { lat: 35.508, lng: 27.213 },
   'kasos': { lat: 35.408, lng: 26.926 },
@@ -2088,7 +2088,7 @@ const ISLAND_FERRY_PORTS = {
   'kimolos': { lat: 36.794, lng: 24.575 },
   'kos': { lat: 36.893, lng: 27.288 },
   'koufonisia': { lat: 36.937, lng: 25.594 },
-  'kythira': { lat: 36.211, lng: 23.071 },
+  'kythira': { lat: 36.270, lng: 23.079 },
   'kythnos': { lat: 37.388, lng: 24.408 },
   'lasithi': { lat: 35.197, lng: 25.722 },
   'lefkada': { lat: 38.700, lng: 20.713 },
@@ -2114,7 +2114,7 @@ const ISLAND_FERRY_PORTS = {
   'samothrace': { lat: 40.481, lng: 25.473 },
   'santorini': { lat: 36.413, lng: 25.43 },
   'schoinoussa': { lat: 36.864, lng: 25.527 },
-  'serifos': { lat: 37.158, lng: 24.482 },
+  'serifos': { lat: 37.142, lng: 24.518 },
   'sifnos': { lat: 36.967, lng: 24.677 },
   'sikinos': { lat: 36.694, lng: 25.128 },
   'skiathos': { lat: 39.165, lng: 23.49 },
@@ -2304,6 +2304,9 @@ const FERRY_GRAPH = [
   { a: 'volos', b: 'alonnisos', dur: 300, freq: 'high', plo: 24, phi: 45, note: "multiple daily" },
   { a: 'volos', b: 'skiathos', dur: 150, freq: 'high', plo: 18, phi: 35, note: "multiple daily" },
   { a: 'volos', b: 'skopelos', dur: 240, freq: 'high', plo: 22, phi: 42, note: "multiple daily" },
+  { a: 'agios-konstantinos', b: 'skiathos', dur: 165, freq: 'med', plo: 30, phi: 50, note: "Hellenic Seaways · daily summer" },
+  { a: 'agios-konstantinos', b: 'skopelos', dur: 240, freq: 'med', plo: 35, phi: 55, note: "Hellenic Seaways · daily summer" },
+  { a: 'agios-konstantinos', b: 'alonnisos', dur: 270, freq: 'med', plo: 38, phi: 60, note: "Hellenic Seaways · daily summer" },
   { a: 'paros', b: 'folegandros', dur: 105, freq: 'med', plo: 16, phi: 26, note: "most days" },
   { a: 'naxos', b: 'folegandros', dur: 90, freq: 'med', plo: 14, phi: 22, note: "most days" },
   { a: 'paros', b: 'milos', dur: 165, freq: 'med', plo: 18, phi: 28, note: "most days summer" },
@@ -2322,6 +2325,7 @@ const FERRY_GRAPH = [
 const FERRY_VISUAL_LINES = [
   // Sporades — Volos hop
   { stops: ['volos', 'skiathos', 'skopelos', 'alonnisos'],                  freq: 'high' },
+  { stops: ['agios-konstantinos', 'skiathos', 'skopelos', 'alonnisos'],     freq: 'med' },
   // Saronic chain
   { stops: ['piraeus', 'aegina', 'poros', 'hydra', 'spetses'],              freq: 'high' },
   // Cyclades from Athens — Rafina lines
@@ -2379,21 +2383,22 @@ const MAINLAND_PORTS = {
   'patras': { name: 'Patras', name_el: 'Πάτρα', lat: 38.246, lng: 21.736 },
   'igoumenitsa': { name: 'Igoumenitsa', name_el: 'Ηγουμενίτσα', lat: 39.503, lng: 20.265 },
   'volos': { name: 'Volos', name_el: 'Βόλος', lat: 39.366, lng: 22.946 },
-  'kymi': { name: 'Kymi (Evia)', name_el: 'Κύμη (Εύβοια)', lat: 38.625, lng: 24.114 },
+  'agios-konstantinos': { name: 'Agios Konstantinos', name_el: 'Άγιος Κωνσταντίνος', lat: 38.759, lng: 22.860 },
+  'kymi': { name: 'Kymi (Evia)', name_el: 'Κύμη (Εύβοια)', lat: 38.625, lng: 24.114, onIsland: true },
   'neapoli': { name: 'Neapoli (Pelop.)', name_el: 'Νεάπολη (Πελοπ.)', lat: 36.512, lng: 23.057 },
-  'pounta': { name: 'Pounta', name_el: 'Πούντα', lat: 36.500, lng: 22.929 },
+  'pounta': { name: 'Pounta', name_el: 'Πούντα', lat: 36.521, lng: 22.979 },
   'kavala': { name: 'Kavala', name_el: 'Καβάλα', lat: 40.939, lng: 24.412 },
   'keramoti': { name: 'Keramoti', name_el: 'Κεραμωτή', lat: 40.853, lng: 24.708 },
   'alexandroupoli': { name: 'Alexandroupoli', name_el: 'Αλεξανδρούπολη', lat: 40.847, lng: 25.872 },
-  'tripiti': { name: 'Tripiti (Halkidiki)', name_el: 'Τρυπητή (Χαλκιδική)', lat: 40.323, lng: 23.915 },
+  'tripiti': { name: 'Tripiti (Halkidiki)', name_el: 'Τρυπητή (Χαλκιδική)', lat: 40.364, lng: 23.918 },
   'perama': { name: 'Perama (Athens)', name_el: 'Πέραμα (Αθήνα)', lat: 37.962, lng: 23.586 },
   'agia-marina': { name: 'Agia Marina', name_el: 'Αγία Μαρίνα', lat: 38.062, lng: 23.987 },
   'arkitsa': { name: 'Arkitsa', name_el: 'Αρκίτσα', lat: 38.755, lng: 23.013 },
-  'sfakia': { name: 'Sfakia (Crete)', name_el: 'Σφακιά (Κρήτη)', lat: 35.201, lng: 24.137 },
-  'sitia': { name: 'Sitia (Crete)', name_el: 'Σητεία (Κρήτη)', lat: 35.207, lng: 26.107 },
-  'aidipsos':  { name: 'Loutra Aidipsou (Evia)',     name_el: 'Λουτρά Αιδηψού (Εύβοια)',  lat: 38.860, lng: 23.043 },
-  'nea-styra': { name: 'Nea Styra (Evia)',           name_el: 'Νέα Στύρα (Εύβοια)',       lat: 38.077, lng: 24.218 },
-  'souda': { name: 'Souda (Chania)', name_el: 'Σούδα (Χανιά)', lat: 35.491, lng: 24.08 },
+  'sfakia': { name: 'Sfakia (Crete)', name_el: 'Σφακιά (Κρήτη)', lat: 35.201, lng: 24.137, onIsland: true },
+  'sitia': { name: 'Sitia (Crete)', name_el: 'Σητεία (Κρήτη)', lat: 35.207, lng: 26.107, onIsland: true },
+  'aidipsos':  { name: 'Loutra Aidipsou (Evia)',     name_el: 'Λουτρά Αιδηψού (Εύβοια)',  lat: 38.860, lng: 23.043, onIsland: true },
+  'nea-styra': { name: 'Nea Styra (Evia)',           name_el: 'Νέα Στύρα (Εύβοια)',       lat: 38.180, lng: 24.208, onIsland: true },
+  'souda': { name: 'Souda (Chania)', name_el: 'Σούδα (Χανιά)', lat: 35.491, lng: 24.08, onIsland: true },
 };
 
 // Ferryhopper slug conversions (some islands have non-obvious slugs there)
@@ -2930,7 +2935,8 @@ function renderFerryMap() {
   portsToRender.forEach(key => {
     const port = getFerryPortCoords(key);
     if (!port) return;
-    const isMainland = !!MAINLAND_PORTS[key];
+    const portMeta = MAINLAND_PORTS[key];
+    const isMainland = !!portMeta && !portMeta.onIsland;
     const isHub = ['piraeus', 'rafina', 'rhodes', 'heraklion', 'mykonos', 'naxos', 'paros'].includes(key);
     const isFocused = FERRY_FOCUS_PORT === key;
     const isInFocus = drawnPorts.has(key);
