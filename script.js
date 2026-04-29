@@ -2571,97 +2571,149 @@ function getPortCoords(key, useRhodesPort) {
   return null;
 }
 
+// Active frequency filters for the ferry map (set of 'high','med','low')
+const FERRY_MAP_FILTERS = new Set(['high', 'med', 'low']);
+let ferryMapInstance = null;
+let ferryMapLayer = null;       // LayerGroup holding all current routes + markers
+
+// Generate a slightly curved polyline between two points so routes don't all look like
+// straight rulers slicing through landmasses. The curve offsets the midpoint
+// perpendicular to the line by a small fraction of the distance.
+function curvedRouteCoords(fromLat, fromLng, toLat, toLng, segments = 12) {
+  // Midpoint
+  const mLat = (fromLat + toLat) / 2;
+  const mLng = (fromLng + toLng) / 2;
+  // Perpendicular offset — small, scales with distance
+  const dLat = toLat - fromLat;
+  const dLng = toLng - fromLng;
+  const dist = Math.sqrt(dLat * dLat + dLng * dLng);
+  // Curve magnitude: ~7% of distance, capped
+  const curveAmt = Math.min(dist * 0.07, 0.4);
+  // Perpendicular vector (normalize and rotate 90°)
+  if (dist < 0.01) return [[fromLat, fromLng], [toLat, toLng]];
+  const perpLat = -dLng / dist * curveAmt;
+  const perpLng =  dLat / dist * curveAmt;
+  // Control point (offset midpoint)
+  const cLat = mLat + perpLat;
+  const cLng = mLng + perpLng;
+  // Sample quadratic Bézier between (from, control, to)
+  const out = [];
+  for (let i = 0; i <= segments; i++) {
+    const t = i / segments;
+    const u = 1 - t;
+    const lat = u * u * fromLat + 2 * u * t * cLat + t * t * toLat;
+    const lng = u * u * fromLng + 2 * u * t * cLng + t * t * toLng;
+    out.push([lat, lng]);
+  }
+  return out;
+}
+
+function getFerryPortCoords(key) {
+  if (MAINLAND_PORTS[key]) return MAINLAND_PORTS[key];
+  if (ISLANDS_DATA[key])   return ISLANDS_DATA[key];
+  if (typeof EXTRA_PORTS !== 'undefined' && EXTRA_PORTS[key]) return EXTRA_PORTS[key];
+  return null;
+}
+
+function ferryPortDisplayName(key) {
+  if (MAINLAND_PORTS[key]) {
+    return CURRENT_LANG === 'el' ? MAINLAND_PORTS[key].name_el : MAINLAND_PORTS[key].name;
+  }
+  if (ISLANDS_DATA[key]) return islandName(key);
+  return key;
+}
+
 function renderFerryMap() {
   const mapEl = document.getElementById('ferry-map');
-  if (!mapEl || mapEl._map) return; // already rendered
-  
-  const ferryMap = L.map('ferry-map', {
-    zoomControl: true, minZoom: 6, maxZoom: 10,
-    maxBounds: [[34.5, 19.0], [41.0, 29.5]], maxBoundsViscosity: 0.85
-  }).setView([37.5, 25.2], 7);
-  
-  mapEl._map = ferryMap;
-  addThemeAwareTiles(ferryMap, { maxZoom: 10 });
-  L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(ferryMap);
-  
-  // Frequency colours & weights
+  if (!mapEl) return;
+
+  // First time: create map + persistent controls
+  if (!mapEl._map) {
+    ferryMapInstance = L.map('ferry-map', {
+      zoomControl: true, minZoom: 6, maxZoom: 10,
+      maxBounds: [[34.5, 19.0], [41.0, 29.5]], maxBoundsViscosity: 0.85
+    }).setView([37.5, 25.2], 7);
+    mapEl._map = ferryMapInstance;
+    addThemeAwareTiles(ferryMapInstance, { maxZoom: 10 });
+    L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(ferryMapInstance);
+  }
+
+  // Re-draw layer (filter changes call this)
+  if (ferryMapLayer) ferryMapLayer.remove();
+  ferryMapLayer = L.layerGroup().addTo(ferryMapInstance);
+
+  // Frequency styling — distinct visual tiers
   const freqStyle = {
-    high: { color: '#0B8FAC', weight: 4, opacity: 0.85 },
-    med:  { color: '#FF6B6B', weight: 3, opacity: 0.75 },
-    low:  { color: '#C4962A', weight: 2.5, opacity: 0.7 },
+    high: { color: '#076880', weight: 2.4, opacity: 0.78, dashArray: null },
+    med:  { color: '#0B8FAC', weight: 1.9, opacity: 0.62, dashArray: null },
+    low:  { color: '#C4962A', weight: 1.6, opacity: 0.55, dashArray: '6, 5' },
   };
-  
-  // Draw routes
+
+  // Draw all edges in FERRY_GRAPH that pass the filter
   const drawnPorts = new Set();
-  FERRY_ROUTES.forEach(route => {
-    const style = freqStyle[route.freq] || freqStyle.low;
-    
-    // Multi-stop polyline route
-    if (route.polyline) {
-      const coords = [];
-      route.polyline.forEach(key => {
-        const port = getPortCoords(key);
-        if (port) {
-          coords.push([port.lat, port.lng]);
-          drawnPorts.add(key);
-        }
-      });
-      if (coords.length < 2) return;
-      
-      const line = L.polyline(coords, {
-        color: style.color, weight: style.weight, opacity: style.opacity,
-        dashArray: route.freq === 'low' ? '8, 6' : null,
-      }).addTo(ferryMap);
-      
-      const firstName = getPortCoords(route.polyline[0]).name;
-      const lastName = getPortCoords(route.polyline[route.polyline.length - 1]).name;
-      const tooltip = `<strong>${firstName} → ${lastName}</strong><br><span style="font-size:11px;color:var(--ink-3)">${route.note}</span>`;
-      line.bindTooltip(tooltip, { sticky: true, opacity: 1, className: 'island-tooltip' });
-      return;
-    }
-    
-    // Simple from→to route
-    const from = getPortCoords(route.from, route.useRhodesPort);
-    const to = getPortCoords(route.to, route.useRhodesPort);
+  FERRY_GRAPH.forEach(edge => {
+    if (!FERRY_MAP_FILTERS.has(edge.freq)) return;
+    const from = getFerryPortCoords(edge.a);
+    const to   = getFerryPortCoords(edge.b);
     if (!from || !to) return;
-    
-    const line = L.polyline([[from.lat, from.lng], [to.lat, to.lng]], {
-      color: style.color, weight: style.weight, opacity: style.opacity,
-      dashArray: route.freq === 'low' ? '8, 6' : null,
-    }).addTo(ferryMap);
-    
-    const tooltip = `<strong>${from.name} ↔ ${to.name}</strong><br><span style="font-size:11px;color:var(--ink-3)">${route.note}</span>`;
+
+    const coords = curvedRouteCoords(from.lat, from.lng, to.lat, to.lng);
+    const style  = freqStyle[edge.freq] || freqStyle.low;
+    const line = L.polyline(coords, {
+      color: style.color,
+      weight: style.weight,
+      opacity: style.opacity,
+      dashArray: style.dashArray,
+      smoothFactor: 1.2,
+    }).addTo(ferryMapLayer);
+
+    const fromName = ferryPortDisplayName(edge.a);
+    const toName   = ferryPortDisplayName(edge.b);
+    const durLabel = formatDuration(edge.dur);
+    const freqLabel = t(`planner.freq.${edge.freq}`);
+    const tooltip = `<strong>${fromName} ↔ ${toName}</strong><br>` +
+      `<span style="font-size:11px;color:var(--ink-3)">⏱ ${durLabel} · ${freqLabel} · €${edge.plo}–${edge.phi}</span><br>` +
+      `<span style="font-size:11px;color:var(--ink-3)">${edge.note}</span>`;
     line.bindTooltip(tooltip, { sticky: true, opacity: 1, className: 'island-tooltip' });
-    
-    drawnPorts.add(route.from);
-    drawnPorts.add(route.to);
+
+    drawnPorts.add(edge.a);
+    drawnPorts.add(edge.b);
   });
-  
-  // Draw port markers
+
+  // Port markers — different size/colour for mainland vs island
   drawnPorts.forEach(key => {
-    // For Rhodes, place the marker at the port (matches where the Dodecanese lines start)
-    const port = key === 'rhodes' 
-      ? { ...ISLANDS_DATA['rhodes'], lat: RHODES_PORT.lat, lng: RHODES_PORT.lng }
-      : getPortCoords(key);
+    const port = getFerryPortCoords(key);
     if (!port) return;
-    const isPiraeus = key === 'piraeus';
+    const isMainland = !!MAINLAND_PORTS[key];
+    const isHub = ['piraeus', 'rafina', 'rhodes', 'heraklion', 'mykonos', 'naxos', 'paros'].includes(key);
     const marker = L.circleMarker([port.lat, port.lng], {
-      radius: isPiraeus ? 8 : 6,
-      color: isPiraeus ? '#E8522A' : '#076880',
-      fillColor: isPiraeus ? '#FF6B6B' : '#0B8FAC',
-      fillOpacity: 0.9,
-      weight: 2,
-    }).addTo(ferryMap);
-    
-    marker.bindTooltip(`<strong>${port.name}</strong>`, { 
-      direction: 'top', opacity: 1, className: 'island-tooltip' 
+      radius: isHub ? 6 : (isMainland ? 5 : 4),
+      color: isMainland ? '#E8522A' : '#076880',
+      fillColor: isMainland ? '#FF6B6B' : '#0B8FAC',
+      fillOpacity: 0.95,
+      weight: 1.5,
+    }).addTo(ferryMapLayer);
+    marker.bindTooltip(`<strong>${ferryPortDisplayName(key)}</strong>`, {
+      direction: 'top', opacity: 1, className: 'island-tooltip',
     });
-    
-    // Click to navigate to island if it has a page
     if (ISLANDS_DATA[key]) {
       marker.on('click', () => navigateTo('island', key));
     }
   });
+}
+
+// Toggle a frequency on/off and redraw
+function toggleFerryMapFilter(freq) {
+  if (FERRY_MAP_FILTERS.has(freq)) {
+    if (FERRY_MAP_FILTERS.size === 1) return; // never go to zero
+    FERRY_MAP_FILTERS.delete(freq);
+  } else {
+    FERRY_MAP_FILTERS.add(freq);
+  }
+  document.querySelectorAll('.ferry-filter-btn').forEach(btn => {
+    btn.classList.toggle('active', FERRY_MAP_FILTERS.has(btn.dataset.freq));
+  });
+  renderFerryMap();
 }
 
 

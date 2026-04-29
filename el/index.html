@@ -259,10 +259,20 @@
     <div id="ferry-planner"></div>
     <h2 style="margin-top:48px" data-i18n="hopping.maptitle">Ferry network map</h2>
     <div id="ferry-map" style="height:600px;border-radius:16px;overflow:hidden;margin-bottom:20px;"></div>
-    <div class="ferry-legend">
-      <span class="ferry-legend-item"><span class="ferry-legend-line ferry-freq-high"></span><span data-i18n="hopping.legend.high">High frequency (multiple daily)</span></span>
-      <span class="ferry-legend-item"><span class="ferry-legend-line ferry-freq-med"></span><span data-i18n="hopping.legend.med">Medium (1-2 per day)</span></span>
-      <span class="ferry-legend-item"><span class="ferry-legend-line ferry-freq-low"></span><span data-i18n="hopping.legend.low">About 1/day (Skopelitis route, 6/week)</span></span>
+    <div class="ferry-filter-row">
+      <span class="ferry-filter-label" data-i18n="hopping.show">Show</span>
+      <button class="ferry-filter-btn ferry-freq-high active" data-freq="high" onclick="toggleFerryMapFilter('high')">
+        <span class="ferry-filter-line"></span>
+        <span data-i18n="hopping.legend.high">Multiple daily</span>
+      </button>
+      <button class="ferry-filter-btn ferry-freq-med active" data-freq="med" onclick="toggleFerryMapFilter('med')">
+        <span class="ferry-filter-line"></span>
+        <span data-i18n="hopping.legend.med">Daily / near-daily</span>
+      </button>
+      <button class="ferry-filter-btn ferry-freq-low active" data-freq="low" onclick="toggleFerryMapFilter('low')">
+        <span class="ferry-filter-line"></span>
+        <span data-i18n="hopping.legend.low">Few per week</span>
+      </button>
     </div>
     <h2 style="margin-top:40px" data-i18n="hopping.itineraries">Suggested Itineraries</h2>
     <p class="hopping-intro" data-i18n="hopping.itin.intro">Eight curated multi-island routes — from the classic Cyclades circuit to the quiet Small Cyclades escape. Each uses real ferry connections and shows approximate nights per stop.</p>

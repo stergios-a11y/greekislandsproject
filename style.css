@@ -2206,19 +2206,96 @@ html.dark .leaflet-popup-content {
   border-top-style: solid;
   border-top-width: 4px;
 }
-.ferry-freq-high {
-  border-top-color: #0B8FAC;
+.ferry-legend-line.ferry-freq-high {
+  border-top-color: #076880;
   border-top-width: 4px;
 }
-.ferry-freq-med {
-  border-top-color: #FF6B6B;
+.ferry-legend-line.ferry-freq-med {
+  border-top-color: #0B8FAC;
   border-top-width: 3px;
 }
-.ferry-freq-low {
+.ferry-legend-line.ferry-freq-low {
   border-top-color: #C4962A;
   border-top-width: 2px;
   border-top-style: dashed;
 }
+
+/* ============================================================
+   FERRY MAP FREQUENCY FILTER
+   Toggle pills below the map. Each pill shows a coloured line
+   matching its frequency tier. Inactive pills look dimmed.
+============================================================ */
+.ferry-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+}
+.ferry-filter-label {
+  font-family: var(--sans);
+  font-size: var(--text-meta);
+  font-weight: 600;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-right: 4px;
+}
+.ferry-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  font-family: var(--sans);
+  font-size: var(--text-meta);
+  font-weight: 600;
+  color: var(--ink-2);
+  background: var(--marble);
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.ferry-filter-btn:hover { border-color: var(--aegean); }
+.ferry-filter-btn.active {
+  background: var(--white);
+  border-color: var(--aegean);
+  color: var(--ink);
+}
+.ferry-filter-btn:not(.active) {
+  opacity: 0.45;
+}
+.ferry-filter-btn:not(.active) .ferry-filter-line {
+  filter: grayscale(0.8);
+}
+.ferry-filter-line {
+  display: inline-block;
+  width: 28px;
+  height: 0;
+  border-top-style: solid;
+  border-top-width: 3px;
+}
+.ferry-freq-high .ferry-filter-line {
+  border-top-color: #076880;
+  border-top-width: 3px;
+}
+.ferry-freq-med .ferry-filter-line {
+  border-top-color: #0B8FAC;
+  border-top-width: 2.5px;
+}
+.ferry-freq-low .ferry-filter-line {
+  border-top-color: #C4962A;
+  border-top-width: 2px;
+  border-top-style: dashed;
+}
+
+html.dark .ferry-filter-row { background: var(--marble); }
+html.dark .ferry-filter-btn { background: rgba(255,255,255,0.04); }
+html.dark .ferry-filter-btn.active { background: var(--marble-2); }
 
 /* Ferry map container */
 #ferry-map {
