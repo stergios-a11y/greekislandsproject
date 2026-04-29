@@ -1,0 +1,785 @@
+{
+  "key": "rhodes",
+  "name": "Rhodes",
+  "subtitle": "The island of knights, ancient acropolis and emerald bays",
+  "intro": "The largest of the Dodecanese, Rhodes packs an extraordinary range into one island: a UNESCO-listed medieval city, the cliff-top Acropolis of Lindos, castle ruins at dramatic viewpoints, mountain villages making wine and honey, and some of the finest beaches in Greece along its sheltered east coast. More than 300 days of sunshine a year make it the sunniest place in the country.",
+  "when_to_visit": {
+    "summary": "Rhodes has two seasons inverted: the medieval Old Town is best off-season (October-April) when you can walk it without bumping into a cruise group; the beaches and Lindos are best May-October. June and September are when both work. August is German-package peak and Old Town becomes a queue. The Knights' Palace deserves an early-morning visit.",
+    "summary_el": "Η Ρόδος έχει δύο αντιστραμμένες σεζόν: η μεσαιωνική Παλιά Πόλη καλύτερη εκτός σεζόν (Οκτώβρης-Απρίλης) όταν περπατάς χωρίς να συναντάς γκρουπ κρουαζιερόπλοιου, οι παραλίες και η Λίνδος Μάιο-Οκτώβρη. Ιούνιος και Σεπτέμβρης δουλεύουν και τα δύο. Ο Αύγουστος γερμανική κορύφωση και η Παλιά Πόλη ουρά. Το Παλάτι του Μ. Μαγίστρου θέλει πρωινή επίσκεψη.",
+    "months": [
+      {
+        "tag": "great",
+        "why": "Old Town magical",
+        "why_el": "Παλιά Πόλη μαγική, άδεια"
+      },
+      {
+        "tag": "ok",
+        "why": "Mild, museums, sea cold",
+        "why_el": "Ήπιο, μουσεία"
+      },
+      {
+        "tag": "great",
+        "why": "Old Town pleasant",
+        "why_el": "Παλιά Πόλη ευχάριστη"
+      },
+      {
+        "tag": "great",
+        "why": "Easter, Lindos opens",
+        "why_el": "Πάσχα, ανοίγει η Λίνδος"
+      },
+      {
+        "tag": "great",
+        "why": "Sea warming, Lindos calm",
+        "why_el": "Νερό ζεσταίνει, Λίνδος ήσυχη"
+      },
+      {
+        "tag": "perfect",
+        "why": "Best balance — manageable",
+        "why_el": "Ισορροπία — ζεστή θάλασσα"
+      },
+      {
+        "tag": "ok",
+        "why": "Hot, Lindos packed",
+        "why_el": "Ζέστη, Λίνδος γεμάτη"
+      },
+      {
+        "tag": "avoid",
+        "why": "German peak, Old Town queue",
+        "why_el": "Γερμανική κορύφωση, ουρά"
+      },
+      {
+        "tag": "perfect",
+        "why": "Best — breathable",
+        "why_el": "Καλύτερος — ζεστά, αναπνοή"
+      },
+      {
+        "tag": "great",
+        "why": "Last swims, Old Town back",
+        "why_el": "Τελευταία μπάνια, ησυχάζει"
+      },
+      {
+        "tag": "great",
+        "why": "Old Town empty, mild",
+        "why_el": "Παλιά Πόλη άδεια, ήπιο"
+      },
+      {
+        "tag": "ok",
+        "why": "Old Town quiet, museums",
+        "why_el": "Παλιά Πόλη ήσυχη"
+      }
+    ]
+  },
+  "itinerary": {
+    "title": "5-Day Rhodes Itinerary",
+    "subtitle": "From the medieval streets of Rhodes Town to the white lanes of Lindos, the knights' castles of the interior and the wild southern tip — a complete circuit of the island.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Rhodes Old Town & the North",
+        "color": "#1B4F8A",
+        "km": 20,
+        "drive_mins": 30,
+        "overnight": "Rhodes Town",
+        "stops": [
+          {
+            "name": "Mandraki Harbour",
+            "lat": 36.4497,
+            "lng": 28.2274,
+            "type": "harbour",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Mandraki_harbour",
+            "desc": "The ancient harbour where the Colossus of Rhodes once stood. Start your day with coffee watching the sailboats.",
+            "name_el": "Λιμάνι Μανδρακίου",
+            "desc_el": "Το αρχαίο λιμάνι όπου κάποτε στεκόταν ο Κολοσσός της Ρόδου. Ξεκίνα τη μέρα σου με καφέ κοιτάζοντας τα ιστιοπλοϊκά.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Saint_Nicolas_Fort_Rhodes_Harbour_night.jpg/1920px-Saint_Nicolas_Fort_Rhodes_Harbour_night.jpg",
+            "photo_credit": {
+              "artist": "Jebulon",
+              "license": "CC0",
+              "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Saint_Nicolas_Fort_Rhodes_Harbour_night.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Palace of the Grand Master",
+            "lat": 36.4452,
+            "lng": 28.2225,
+            "type": "castle",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Palace_of_the_Grand_Master_of_the_Knights_of_Rhodes",
+            "desc": "The finest example of Gothic architecture in Greece. Former seat of the Knights of St John. Impressive mosaics inside.",
+            "name_el": "Παλάτι του Μεγάλου Μαγίστρου",
+            "desc_el": "Το καλύτερο παράδειγμα γοτθικής αρχιτεκτονικής στην Ελλάδα. Πρώην έδρα των Ιπποτών του Αγίου Ιωάννη. Εντυπωσιακά ψηφιδωτά εσωτερικά.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Palace_of_the_Grand_Masters_of_Rhodes_-_Windows_01.jpg/1920px-Palace_of_the_Grand_Masters_of_Rhodes_-_Windows_01.jpg",
+            "photo_credit": {
+              "artist": "Bernard Gagnon",
+              "license": "CC BY-SA 4.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Palace_of_the_Grand_Masters_of_Rhodes_-_Windows_01.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Street of the Knights",
+            "lat": 36.444,
+            "lng": 28.2237,
+            "type": "museum",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Street_of_the_Knights,_Rhodes",
+            "desc": "The best-preserved medieval street in Europe. Each section was occupied by a different langue of the Knights Hospitaller.",
+            "name_el": "Οδός των Ιπποτών",
+            "desc_el": "Ο καλύτερα διατηρημένος μεσαιωνικός δρόμος της Ευρώπης. Κάθε τμήμα κατείχε διαφορετική γλώσσα των Ιπποτών του Νοσοκομείου.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Church_of_the_Holy_Trinity_%28Rhodes%29_01.jpg/1920px-Church_of_the_Holy_Trinity_%28Rhodes%29_01.jpg",
+            "photo_credit": {
+              "artist": "Bernard Gagnon",
+              "license": "CC BY-SA 4.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Church_of_the_Holy_Trinity_(Rhodes)_01.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Lunch — Nireas Restaurant",
+            "lat": 36.4435,
+            "lng": 28.2255,
+            "type": "harbour",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "One of the best seafood restaurants in the Old Town. Try the grilled octopus and local wine in the courtyard.",
+            "name_el": "Μεσημεριανό — Νηρέας",
+            "desc_el": "Ένα από τα καλύτερα ψαροεστιατόρια της Παλιάς Πόλης. Δοκίμασε χταπόδι στη σχάρα και τοπικό κρασί στην αυλή."
+          },
+          {
+            "name": "Kallithea Springs",
+            "lat": 36.3833,
+            "lng": 28.25,
+            "type": "spa",
+            "time": "16:00",
+            "wiki": "https://en.wikipedia.org/wiki/Kallithea_Springs",
+            "desc": "Stunning Italian-built thermal spa complex from the 1920s on the coast. Beautiful architecture and a clear swimming cove.",
+            "name_el": "Πηγές Καλλιθέας",
+            "desc_el": "Εκπληκτικό ιαματικό συγκρότημα ιταλικής κατασκευής της δεκαετίας του 1920 στην ακτή. Όμορφη αρχιτεκτονική και ένας διαυγής κολπίσκος για κολύμπι.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Kallithea_Springs%2C_Rhodes-5030790938.jpg",
+            "photo_credit": {
+              "artist": "hofman01",
+              "license": "CC BY-SA 2.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Kallithea_Springs,_Rhodes-5030790938.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Elli Beach",
+            "lat": 36.4547,
+            "lng": 28.2269,
+            "type": "beach",
+            "time": "18:30",
+            "wiki": null,
+            "desc": "Town beach just north of the Old Town. Evening swim, then dinner in the old town.",
+            "name_el": "Παραλία Έλλη",
+            "desc_el": "Παραλία της πόλης ακριβώς βόρεια από την Παλιά Πόλη. Απογευματινό μπάνιο και μετά δείπνο στην παλιά πόλη.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Aquarium_of_Rhodes_at_Elli_Beach_Rhodes_3_September_2023.jpg/1920px-Aquarium_of_Rhodes_at_Elli_Beach_Rhodes_3_September_2023.jpg",
+            "photo_credit": {
+              "artist": "Pjotr Mahhonin",
+              "license": "CC BY-SA 4.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Aquarium_of_Rhodes_at_Elli_Beach_Rhodes_3_September_2023.jpg",
+              "source": "Wikimedia Commons"
+            }
+          }
+        ],
+        "title_el": "Παλιά Πόλη της Ρόδου & ο Βορράς",
+        "overnight_el": "Πόλη της Ρόδου"
+      },
+      {
+        "day": 2,
+        "title": "West Side — Kamiros, Butterflies & Kritinia",
+        "color": "#7B5EA7",
+        "km": 85,
+        "drive_mins": 95,
+        "overnight": "Rhodes Town",
+        "stops": [
+          {
+            "name": "Kritinia Castle",
+            "lat": 36.2583,
+            "lng": 27.8333,
+            "type": "castle",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Kritinia_Castle",
+            "desc": "Ruined Knights' castle on a hilltop with panoramic sea views toward Turkey. Free entry. Small cafe at the base with wine and honey tastings.",
+            "name_el": "Κάστρο Κρητηνίας",
+            "desc_el": "Ερειπωμένο κάστρο των Ιπποτών σε λόφο με πανοραμική θέα προς την Τουρκία. Δωρεάν είσοδος. Μικρό καφέ στη βάση με γευσιγνωσία κρασιού και μελιού.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/KastroKritiniasRhodesMay112023_12.jpg/1920px-KastroKritiniasRhodesMay112023_12.jpg",
+            "photo_credit": {
+              "artist": "Hagai Agmon-Snir حچاي اچمون-سنير חגי אגמון-שניר",
+              "license": "CC BY-SA 4.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:KastroKritiniasRhodesMay112023_12.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Valley of the Butterflies",
+            "lat": 36.3333,
+            "lng": 28.0,
+            "type": "nature",
+            "time": "10:30",
+            "wiki": "https://en.wikipedia.org/wiki/Valley_of_the_Butterflies,_Rhodes",
+            "desc": "Unique valley where thousands of Jersey tiger moths gather in summer on the sweet storax trees. Shaded walks beside streams.",
+            "name_el": "Κοιλάδα των Πεταλούδων",
+            "desc_el": "Μοναδική κοιλάδα όπου χιλιάδες πεταλούδες-τίγρεις του Τζέρσεϊ συγκεντρώνονται το καλοκαίρι στα γλυκά δέντρα στύρακος. Σκιερές πεζοπορίες δίπλα σε ρυάκια.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/1._Rhodes%2C_Butterfly_Valley.jpg/1920px-1._Rhodes%2C_Butterfly_Valley.jpg",
+            "photo_credit": {
+              "artist": "Vilensija",
+              "license": "CC BY-SA 3.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:1._Rhodes,_Butterfly_Valley.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Ancient Kamiros",
+            "lat": 36.3367,
+            "lng": 27.9183,
+            "type": "museum",
+            "time": "12:30",
+            "wiki": "https://en.wikipedia.org/wiki/Kameiros",
+            "desc": "Ruins of one of the three ancient city-states of Rhodes — temples, stoas and a Hellenistic reservoir. Far less visited than Lindos but equally impressive.",
+            "name_el": "Αρχαία Κάμιρος",
+            "desc_el": "Ερείπια μιας από τις τρεις αρχαίες πόλεις-κράτη της Ρόδου — ναοί, στοές και ελληνιστική δεξαμενή. Πολύ λιγότερο επισκέψιμη από τη Λίνδο αλλά εξίσου εντυπωσιακή.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Ruins_Kameiros_Rhodes_3.jpg/1920px-Ruins_Kameiros_Rhodes_3.jpg",
+            "photo_credit": {
+              "artist": "Jebulon",
+              "license": "CC0",
+              "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Ruins_Kameiros_Rhodes_3.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Lunch — Kamiros Beach Taverna",
+            "lat": 36.3383,
+            "lng": 27.9167,
+            "type": "harbour",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Simple fish taverna below the ancient site on the west coast. Fresh catch, house wine, sea views.",
+            "name_el": "Μεσημεριανό — Παραλιακή Ταβέρνα Καμίρου",
+            "desc_el": "Απλή ψαροταβέρνα κάτω από τον αρχαίο χώρο στη δυτική ακτή. Φρέσκο ψάρι, χύμα κρασί, θέα στη θάλασσα."
+          },
+          {
+            "name": "Rhodes Town",
+            "lat": 36.4413,
+            "lng": 28.2226,
+            "type": "city",
+            "time": "17:00",
+            "wiki": "https://en.wikipedia.org/wiki/Rhodes",
+            "desc": "Return to Rhodes Town for the night. Dinner in the Old Town.",
+            "name_el": "Πόλη Ρόδου",
+            "desc_el": "Επιστροφή στην Πόλη της Ρόδου για διανυκτέρευση. Δείπνο στην Παλιά Πόλη.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Overtourism_in_the_Port_of_Rhodes%2C_Greece%2C_2024.jpg/1920px-Overtourism_in_the_Port_of_Rhodes%2C_Greece%2C_2024.jpg",
+            "photo_credit": {
+              "artist": "Julian Lupyan",
+              "license": "CC0",
+              "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Overtourism_in_the_Port_of_Rhodes,_Greece,_2024.jpg",
+              "source": "Wikimedia Commons"
+            }
+          }
+        ],
+        "title_el": "Δυτική Πλευρά — Κάμειρος, Πεταλούδες & Κρητηνία",
+        "overnight_el": "Πόλη της Ρόδου"
+      },
+      {
+        "day": 3,
+        "title": "The South — Monolithos & Siana",
+        "color": "#C4962A",
+        "km": 140,
+        "drive_mins": 150,
+        "overnight": "Rhodes Town",
+        "stops": [
+          {
+            "name": "Rhodes Town",
+            "lat": 36.444,
+            "lng": 28.224,
+            "type": "city",
+            "time": "08:30",
+            "wiki": "https://en.wikipedia.org/wiki/Rhodes_(city)",
+            "desc": "Early departure heading south down the west coast — the longest driving day of the trip.",
+            "name_el": "Πόλη της Ρόδου",
+            "desc_el": "Ξεκίνα νωρίς προς τα νότια κατά μήκος της δυτικής ακτής — η πιο μακρά διαδρομή του ταξιδιού.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Church_of_the_virgin_of_the_burgh_Rhodes_14th_century_night.jpg/1920px-Church_of_the_virgin_of_the_burgh_Rhodes_14th_century_night.jpg",
+            "photo_credit": {
+              "artist": "Jebulon",
+              "license": "CC0",
+              "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Church_of_the_virgin_of_the_burgh_Rhodes_14th_century_night.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Glystra Beach",
+            "lat": 36.0103,
+            "lng": 27.9492,
+            "type": "beach",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Sheltered sandy cove in the south with shallow, warm water. One of the least crowded excellent beaches on the island. Add 80 km round-trip if you want to push on to Prasonisi at the southern tip — a dramatic sandbar where the Aegean and Mediterranean meet, world-class for windsurfing.",
+            "name_el": "Παραλία Γλύστρα",
+            "desc_el": "Προστατευμένος αμμώδης κολπίσκος στον νότο με ρηχά, ζεστά νερά. Μία από τις λιγότερο πολυσύχναστες εξαιρετικές παραλίες του νησιού. Πρόσθεσε 80 χλμ. μετ' επιστροφής αν θες να φτάσεις μέχρι το Πρασονήσι στο νότιο άκρο — μια εντυπωσιακή λωρίδα άμμου όπου συναντιούνται Αιγαίο και Μεσόγειος, παγκόσμιας κλάσης για windsurf.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Glystra_Beach%2C_September_2023%2C_Rhodes_%2805%29.jpg/1920px-Glystra_Beach%2C_September_2023%2C_Rhodes_%2805%29.jpg",
+            "photo_credit": {
+              "artist": "Jana Sekyrová",
+              "license": "CC BY-SA 4.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Glystra_Beach,_September_2023,_Rhodes_(05).jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Siana Village",
+            "lat": 36.1367,
+            "lng": 27.8317,
+            "type": "village",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Mountain village famous for souma (local spirit) and thyme honey. Stop at a local shop for tastings — both are exceptional.",
+            "name_el": "Χωριό Σιάννα",
+            "desc_el": "Ορεινό χωριό διάσημο για τη σούμα (τοπικό απόσταγμα) και το θυμαρίσιο μέλι. Σταμάτησε σε ένα τοπικό μαγαζί για γευσιγνωσία — και τα δύο είναι εξαιρετικά.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Rhodos_Siana_R02.jpg/1920px-Rhodos_Siana_R02.jpg",
+            "photo_credit": {
+              "artist": "Marc Ryckaert (MJJR)",
+              "license": "CC BY 3.0",
+              "license_url": "https://creativecommons.org/licenses/by/3.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Rhodos_Siana_R02.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Monolithos Castle",
+            "lat": 36.12,
+            "lng": 27.7417,
+            "type": "castle",
+            "time": "16:30",
+            "wiki": "https://en.wikipedia.org/wiki/Monolithos_Castle",
+            "desc": "15th century Knights' castle perched on a 240-metre rock pinnacle with sheer drop views to the sea. The finest sunset viewpoint on Rhodes.",
+            "name_el": "Κάστρο Μονόλιθος",
+            "desc_el": "Κάστρο των Ιπποτών του 15ου αιώνα γκρεμισμένο σε βραχώδη κορυφή 240 μέτρων με κατακόρυφη θέα στη θάλασσα. Το καλύτερο σημείο για ηλιοβασίλεμα στη Ρόδο.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Kastro_Monolithou_%2812%29.jpg/1920px-Kastro_Monolithou_%2812%29.jpg",
+            "photo_credit": {
+              "artist": "Chris06",
+              "license": "CC BY-SA 4.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Kastro_Monolithou_(12).jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Dinner — Christos Corner",
+            "lat": 36.12,
+            "lng": 27.7433,
+            "type": "village",
+            "time": "19:30",
+            "wiki": null,
+            "desc": "Legendary family taverna in Monolithos. Ask the owner to show you the kitchen. Slow-cooked lamb and local wine before the drive back to Rhodes Town — about 80 km, take it slow on the mountain road.",
+            "name_el": "Δείπνο — Christos Corner",
+            "desc_el": "Θρυλική οικογενειακή ταβέρνα στον Μονόλιθο. Ζήτα από τον ιδιοκτήτη να σου δείξει την κουζίνα. Σιγομαγειρεμένο αρνί και ντόπιο κρασί, πριν την επιστροφή στην Πόλη — περίπου 80 χλμ., πάρτο ήρεμα στον ορεινό δρόμο."
+          }
+        ],
+        "title_el": "Ο Νότος — Μονόλιθος & Σιάννα",
+        "overnight_el": "Πόλη της Ρόδου"
+      },
+      {
+        "day": 4,
+        "title": "East Coast → Lindos",
+        "color": "#C0522A",
+        "km": 75,
+        "drive_mins": 90,
+        "overnight": "Lindos",
+        "stops": [
+          {
+            "name": "Rhodes Town",
+            "lat": 36.4413,
+            "lng": 28.2226,
+            "type": "city",
+            "time": "09:00",
+            "wiki": null,
+            "desc": "Depart south along the scenic east coast road.",
+            "name_el": "Πόλη Ρόδου",
+            "desc_el": "Αναχώρηση νότια κατά μήκος του γραφικού δρόμου της ανατολικής ακτής.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Lindos_View_of_the_Acropolis_and_town_from_the_north-east._Rhodes%2C_Greece.jpg/1920px-Lindos_View_of_the_Acropolis_and_town_from_the_north-east._Rhodes%2C_Greece.jpg",
+            "photo_credit": {
+              "artist": "Ввласенко",
+              "license": "CC BY-SA 3.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Lindos_View_of_the_Acropolis_and_town_from_the_north-east._Rhodes,_Greece.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Anthony Quinn Bay",
+            "lat": 36.3481,
+            "lng": 28.2189,
+            "type": "beach",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Anthony_Quinn_Bay",
+            "desc": "Iconic emerald cove named after the actor who filmed The Guns of Navarone here. Extraordinary clarity — bring a snorkel.",
+            "name_el": "Όρμος Άντονι Κουίν",
+            "desc_el": "Εμβληματικός σμαραγδένιος κόλπος που ονομάστηκε από τον ηθοποιό που γύρισε εδώ Τα Κανόνια του Ναβαρόνε. Εκπληκτική διαύγεια — φέρε snorkel.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Cape_Ladhiko_viewed_from_Anthony_Quinn_Bay_Rhodes_16_September_2017.jpg/1920px-Cape_Ladhiko_viewed_from_Anthony_Quinn_Bay_Rhodes_16_September_2017.jpg",
+            "photo_credit": {
+              "artist": "Pjotr Mahhonin",
+              "license": "CC BY-SA 4.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Cape_Ladhiko_viewed_from_Anthony_Quinn_Bay_Rhodes_16_September_2017.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Ladiko Beach",
+            "lat": 36.3489,
+            "lng": 28.2183,
+            "type": "beach",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "Secluded pebble bay just 5 minutes walk from Anthony Quinn. Rocky seabed excellent for snorkelling, fewer crowds.",
+            "name_el": "Παραλία Λαδικό",
+            "desc_el": "Απομονωμένος κόλπος με βότσαλο μόλις 5 λεπτά με τα πόδια από τον Άντονι Κουίν. Βραχώδης βυθός εξαιρετικός για snorkelling, λιγότερα πλήθη.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Ladiko_beach._Rhodes%2C_Greece.jpg/1920px-Ladiko_beach._Rhodes%2C_Greece.jpg",
+            "photo_credit": {
+              "artist": "Ввласенко",
+              "license": "CC BY-SA 3.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Ladiko_beach._Rhodes,_Greece.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Tsambika Beach",
+            "lat": 36.2294,
+            "lng": 28.1642,
+            "type": "beach",
+            "time": "13:30",
+            "wiki": "https://en.wikipedia.org/wiki/Tsambika_beach",
+            "desc": "The best family beach on Rhodes — long golden sand, shallow water, excellent facilities. Lunch at one of the beach tavernas.",
+            "name_el": "Παραλία Τσαμπίκα",
+            "desc_el": "Η καλύτερη οικογενειακή παραλία της Ρόδου — μακριά χρυσή άμμος, ρηχά νερά, εξαιρετικές υπηρεσίες. Μεσημεριανό σε μία από τις παραλιακές ταβέρνες.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Aerial_view_of_Tsambika_Monastery_and_Tsambika_Beach%2C_Rhodes%2C_Greece_%2851698552836%29.jpg/1920px-Aerial_view_of_Tsambika_Monastery_and_Tsambika_Beach%2C_Rhodes%2C_Greece_%2851698552836%29.jpg",
+            "photo_credit": {
+              "artist": "dronepicr",
+              "license": "CC BY 2.0",
+              "license_url": "https://creativecommons.org/licenses/by/2.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Tsambika_Monastery_and_Tsambika_Beach,_Rhodes,_Greece_(51698552836).jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Tsambika Monastery",
+            "lat": 36.28,
+            "lng": 28.1617,
+            "type": "church",
+            "time": "15:30",
+            "wiki": null,
+            "desc": "Climb the 300 steps to the hilltop Byzantine monastery for sweeping views over the coast and beach below.",
+            "name_el": "Μοναστήρι Τσαμπίκας",
+            "desc_el": "Ανέβα τα 300 σκαλοπάτια στο βυζαντινό μοναστήρι στην κορυφή του λόφου για σαρωτική θέα στην ακτή και την παραλία από κάτω.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Aerial_view_of_Tsambika_Monastery_and_Tsambika_Beach%2C_Rhodes%2C_Greece_%2851698552836%29.jpg/1920px-Aerial_view_of_Tsambika_Monastery_and_Tsambika_Beach%2C_Rhodes%2C_Greece_%2851698552836%29.jpg",
+            "photo_credit": {
+              "artist": "dronepicr",
+              "license": "CC BY 2.0",
+              "license_url": "https://creativecommons.org/licenses/by/2.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Tsambika_Monastery_and_Tsambika_Beach,_Rhodes,_Greece_(51698552836).jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Agathi Beach",
+            "lat": 36.1739,
+            "lng": 28.0653,
+            "type": "beach",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Golden sand and crystal clear water beneath Feraklos Castle. One of the finest beaches on the island. Morning swim before the crowds arrive.",
+            "name_el": "Παραλία Αγάθη",
+            "desc_el": "Χρυσή άμμος και κρυστάλλινα νερά κάτω από το Κάστρο Φερακλού. Μία από τις καλύτερες παραλίες του νησιού. Πρωινό μπάνιο πριν φτάσουν τα πλήθη.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Agathi_Beach%2C_December_2010_-_panoramio.jpg/1920px-Agathi_Beach%2C_December_2010_-_panoramio.jpg",
+            "photo_credit": {
+              "artist": "npinikas",
+              "license": "CC BY 3.0",
+              "license_url": "https://creativecommons.org/licenses/by/3.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Agathi_Beach,_December_2010_-_panoramio.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Lindos",
+            "name_el": "Λίνδος",
+            "desc": "Arrive in Lindos in the late afternoon. Check in, then walk down to the village for dinner with the Acropolis lit up above.",
+            "desc_el": "Άφιξη στη Λίνδο αργά το απόγευμα. Τακτοποίησε στο κατάλυμα, και κατέβα στο χωριό για δείπνο με την Ακρόπολη φωτισμένη από πάνω.",
+            "time": "18:30",
+            "type": "arrival",
+            "lat": 36.0916,
+            "lng": 28.0876,
+            "wiki": "https://en.wikipedia.org/wiki/Lindos",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Pier_at_Lindos._Rhodes%2C_Greece.jpg/1920px-Pier_at_Lindos._Rhodes%2C_Greece.jpg",
+            "photo_credit": {
+              "artist": "Ввласенко",
+              "license": "CC BY-SA 3.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Pier_at_Lindos._Rhodes,_Greece.jpg",
+              "source": "Wikimedia Commons"
+            }
+          }
+        ],
+        "title_el": "Ανατολική Ακτή → Λίνδος",
+        "overnight_el": "Λίνδος"
+      },
+      {
+        "day": 5,
+        "title": "Lindos & Departure",
+        "color": "#5A7A3A",
+        "km": 70,
+        "drive_mins": 80,
+        "overnight": null,
+        "stops": [
+          {
+            "name": "Lindos Acropolis",
+            "lat": 36.0917,
+            "lng": 28.0867,
+            "type": "castle",
+            "time": "11:00",
+            "wiki": "https://en.wikipedia.org/wiki/Acropolis_of_Lindos",
+            "desc": "3rd century BC acropolis with a Doric temple of Athena Lindia perched above a sheer 116-metre cliff. One of the most dramatic ancient sites in Greece.",
+            "name_el": "Ακρόπολη της Λίνδου",
+            "desc_el": "Ακρόπολη του 3ου αιώνα π.Χ. με δωρικό ναό της Αθηνάς Λινδίας γκρεμισμένο πάνω σε κατακόρυφο γκρεμό 116 μέτρων. Ένας από τους πιο εντυπωσιακούς αρχαίους χώρους της Ελλάδας.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/View_of_Lindos_from_the_Acropolis._Rhodes%2C_Greece.jpg/1920px-View_of_Lindos_from_the_Acropolis._Rhodes%2C_Greece.jpg",
+            "photo_credit": {
+              "artist": "Ввласенко",
+              "license": "CC BY-SA 3.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:View_of_Lindos_from_the_Acropolis._Rhodes,_Greece.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Lindos Village",
+            "lat": 36.0908,
+            "lng": 28.0861,
+            "type": "village",
+            "time": "12:30",
+            "wiki": "https://en.wikipedia.org/wiki/Lindos",
+            "desc": "Dazzling white cubist houses in maze-like lanes. Browse the galleries and craftshops before lunch.",
+            "name_el": "Χωριό Λίνδος",
+            "desc_el": "Εκθαμβωτικά λευκά κυβιστικά σπίτια σε λαβυρινθώδη δρομάκια. Δες τις γκαλερί και τα μαγαζιά χειροτεχνίας πριν το μεσημεριανό.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Pier_at_Lindos._Rhodes%2C_Greece.jpg/1920px-Pier_at_Lindos._Rhodes%2C_Greece.jpg",
+            "photo_credit": {
+              "artist": "Ввласенко",
+              "license": "CC BY-SA 3.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Pier_at_Lindos._Rhodes,_Greece.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Lunch — Mavrikios Restaurant",
+            "lat": 36.0908,
+            "lng": 28.0855,
+            "type": "museum",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "Regarded as the best restaurant on Rhodes. Family-run since 1933. Book ahead for the terrace table with Acropolis views.",
+            "name_el": "Μεσημεριανό — Μαυρίκιος",
+            "desc_el": "Θεωρείται το καλύτερο εστιατόριο της Ρόδου. Οικογενειακή επιχείρηση από το 1933. Κάνε κράτηση για το τραπέζι της βεράντας με θέα στην Ακρόπολη."
+          },
+          {
+            "name": "St Paul's Bay",
+            "lat": 36.0853,
+            "lng": 28.0883,
+            "type": "beach",
+            "time": "16:00",
+            "wiki": "https://en.wikipedia.org/wiki/Agios_Pavlos_beach",
+            "desc": "Heart-shaped bay just south of Lindos with crystal water and the Acropolis looming above. One of the most beautiful spots in Greece.",
+            "name_el": "Όρμος Αγίου Παύλου",
+            "desc_el": "Καρδιόσχημος κόλπος ακριβώς νότια της Λίνδου με κρυστάλλινα νερά και την Ακρόπολη να επιβλέπει από πάνω. Ένα από τα ομορφότερα σημεία της Ελλάδας."
+          },
+          {
+            "name": "Rhodes Town — Departure",
+            "name_el": "Πόλη της Ρόδου — Αναχώρηση",
+            "desc": "Drive back to Rhodes Town for ferry or flight departure. Final coffee at Mandraki harbour.",
+            "desc_el": "Επιστροφή στην Πόλη της Ρόδου για αναχώρηση με πλοίο ή αεροπλάνο. Τελευταίος καφές στο λιμάνι του Μανδρακίου.",
+            "time": "17:00",
+            "type": "departure",
+            "lat": 36.444,
+            "lng": 28.224,
+            "wiki": "https://en.wikipedia.org/wiki/Rhodes_(city)",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Church_of_the_virgin_of_the_burgh_Rhodes_14th_century_night.jpg/1920px-Church_of_the_virgin_of_the_burgh_Rhodes_14th_century_night.jpg",
+            "photo_credit": {
+              "artist": "Jebulon",
+              "license": "CC0",
+              "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Church_of_the_virgin_of_the_burgh_Rhodes_14th_century_night.jpg",
+              "source": "Wikimedia Commons"
+            }
+          }
+        ],
+        "title_el": "Λίνδος & Αναχώρηση",
+        "overnight_el": null
+      }
+    ],
+    "title_el": "Πρόγραμμα 5 Ημερών στη Ρόδο",
+    "subtitle_el": "Από τα μεσαιωνικά στενά της Πόλης της Ρόδου ως τα λευκά σοκάκια της Λίνδου, τα κάστρα των Ιπποτών στο εσωτερικό και το άγριο νότιο άκρο — ένας πλήρης γύρος του νησιού."
+  },
+  "beaches": [
+    {
+      "name": "Tsambika Beach",
+      "wiki": "https://en.wikipedia.org/wiki/Tsambika_beach",
+      "rating": 5,
+      "type": "Fine golden sand",
+      "length": "1.2 km",
+      "depth": "Shallow — very gradual entry, safe for children",
+      "facing": "East-facing — sheltered from west winds, calm water all day",
+      "facilities": "Fully organised: sunbeds, umbrellas, water sports, beach bars, tavernas, showers, parking",
+      "desc": "The finest beach on Rhodes — a sweeping arc of golden sand framed by mountains, with the hilltop monastery above. Exceptionally shallow and calm water making it ideal for families. The best all-round beach on the island.",
+      "commons": "Tsambika_beach_Rhodes.jpg",
+      "lat": 36.2294,
+      "lng": 28.1642,
+      "name_el": "Παραλία Τσαμπίκα",
+      "type_el": "Λεπτή χρυσή άμμος",
+      "depth_el": "Ρηχό — πολύ σταδιακή είσοδος, ασφαλές για παιδιά",
+      "facing_el": "Ανατολική — προστατευμένη από δυτικούς ανέμους, ήρεμα νερά όλη μέρα",
+      "facilities_el": "Πλήρως οργανωμένη: ξαπλώστρες, ομπρέλες, θαλάσσια σπορ, beach bars, ταβέρνες, ντους, parking",
+      "desc_el": "Η καλύτερη παραλία της Ρόδου — ένα σαρωτικό τόξο χρυσής άμμου πλαισιωμένο από βουνά, με το μοναστήρι στην κορυφή του λόφου από πάνω. Εξαιρετικά ρηχά και ήρεμα νερά την κάνουν ιδανική για οικογένειες. Η καλύτερη ολιστική παραλία του νησιού.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Aerial_view_of_Tsambika_Monastery_and_Tsambika_Beach%2C_Rhodes%2C_Greece_%2851698552836%29.jpg/1920px-Aerial_view_of_Tsambika_Monastery_and_Tsambika_Beach%2C_Rhodes%2C_Greece_%2851698552836%29.jpg",
+      "photo_credit": {
+        "artist": "dronepicr",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Tsambika_Monastery_and_Tsambika_Beach,_Rhodes,_Greece_(51698552836).jpg",
+        "source": "Wikimedia Commons"
+      }
+    },
+    {
+      "name": "Anthony Quinn Bay",
+      "wiki": "https://en.wikipedia.org/wiki/Anthony_Quinn_Bay",
+      "rating": 5,
+      "type": "Pebble and rock",
+      "length": "150 m",
+      "depth": "Medium to deep — rocky seabed, exceptional water clarity",
+      "facing": "East-facing — sheltered, glassy water in the morning",
+      "facilities": "Basic: one beach bar, sunbeds. No parking on beach — park above and walk down.",
+      "desc": "The most iconic cove on Rhodes, named after the actor who filmed The Guns of Navarone here and briefly owned the bay. The water is an otherworldly emerald-green colour. Best for snorkelling — the rocky seabed teems with fish. Arrive early; it fills up quickly.",
+      "commons": "Anthony_Quinn_Bay_Rhodes.jpg",
+      "lat": 36.3481,
+      "lng": 28.2189,
+      "name_el": "Όρμος Άντονι Κουίν",
+      "type_el": "Βότσαλο και βράχος",
+      "depth_el": "Μέτριο έως βαθύ — βραχώδης βυθός, εξαιρετική διαύγεια νερού",
+      "facing_el": "Ανατολική — προστατευμένη, γυαλιστερή θάλασσα το πρωί",
+      "facilities_el": "Στοιχειώδεις: ένα beach bar, ξαπλώστρες. Χωρίς parking στην παραλία — παρκάρισμα ψηλά και κατάβαση με τα πόδια.",
+      "desc_el": "Ο πιο εμβληματικός κολπίσκος της Ρόδου, που πήρε το όνομά του από τον ηθοποιό που γύρισε εδώ Τα Κανόνια του Ναβαρόνε και κατείχε σύντομα τον κόλπο. Τα νερά έχουν ένα απόκοσμο σμαραγδένιο-πράσινο χρώμα. Καλύτερα για snorkelling — ο βραχώδης βυθός βρίθει από ψάρια. Φτάσε νωρίς· γεμίζει γρήγορα.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Cape_Ladhiko_viewed_from_Anthony_Quinn_Bay_Rhodes_16_September_2017.jpg/1920px-Cape_Ladhiko_viewed_from_Anthony_Quinn_Bay_Rhodes_16_September_2017.jpg",
+      "photo_credit": {
+        "artist": "Pjotr Mahhonin",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Cape_Ladhiko_viewed_from_Anthony_Quinn_Bay_Rhodes_16_September_2017.jpg",
+        "source": "Wikimedia Commons"
+      }
+    },
+    {
+      "name": "St Paul's Bay (Agios Pavlos)",
+      "wiki": "https://en.wikipedia.org/wiki/Agios_Pavlos_beach",
+      "rating": 5,
+      "type": "Sand and fine pebble",
+      "length": "300 m",
+      "depth": "Shallow to medium — calm, clear water",
+      "facing": "Northeast-facing — enclosed bay, fully sheltered",
+      "facilities": "Organised: sunbeds and umbrellas (pricey), beach bar, water taxi from Lindos",
+      "desc": "A near-perfectly enclosed bay just south of Lindos with the Acropolis visible on the cliff above. Described by many visitors as the most beautiful beach setting in Greece. The combination of crystal water, white rock and the ancient ruins overhead is unforgettable.",
+      "commons": null,
+      "lat": 36.0853,
+      "lng": 28.0883,
+      "name_el": "Όρμος Αγίου Παύλου",
+      "type_el": "Άμμος και λεπτό βότσαλο",
+      "depth_el": "Ρηχό έως μέτριο — ήρεμα, διαυγή νερά",
+      "facing_el": "Βορειοανατολική — κλειστός κόλπος, πλήρως προστατευμένη",
+      "facilities_el": "Οργανωμένη: ξαπλώστρες και ομπρέλες (ακριβές), beach bar, θαλάσσιο ταξί από τη Λίνδο",
+      "desc_el": "Ένας σχεδόν τέλεια κλειστός κόλπος ακριβώς νότια της Λίνδου με την Ακρόπολη ορατή στον γκρεμό από πάνω. Πολλοί επισκέπτες τον περιγράφουν ως το ομορφότερο παραλιακό σκηνικό της Ελλάδας. Ο συνδυασμός κρυστάλλινων νερών, λευκής πέτρας και των αρχαίων ερειπίων από πάνω είναι αξέχαστος."
+    },
+    {
+      "name": "Agathi Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine golden sand",
+      "length": "600 m",
+      "depth": "Shallow — sandy bottom, ideal for families",
+      "facing": "East-facing — sheltered, calm water",
+      "facilities": "Good: sunbeds, umbrellas, beach bar, taverna. Feraklos Castle visible above.",
+      "desc": "A beautiful crescent of fine golden sand in the shadow of the ruined Feraklos Castle near Haraki. Clear, shallow water and fewer crowds than the main tourist beaches. One of the best-kept secrets on the east coast.",
+      "commons": null,
+      "lat": 36.1739,
+      "lng": 28.0653,
+      "name_el": "Παραλία Αγάθη",
+      "type_el": "Λεπτή χρυσή άμμος",
+      "depth_el": "Ρηχό — αμμώδης βυθός, ιδανικό για οικογένειες",
+      "facing_el": "Ανατολική — προστατευμένη, ήρεμα νερά",
+      "facilities_el": "Καλές: ξαπλώστρες, ομπρέλες, beach bar, ταβέρνα. Το Κάστρο Φερακλού ορατό από πάνω.",
+      "desc_el": "Μια όμορφη ημισέληνος λεπτής χρυσής άμμου στη σκιά του ερειπωμένου Κάστρου Φερακλού κοντά στο Χαράκι. Διαυγή, ρηχά νερά και λιγότερα πλήθη από τις κύριες τουριστικές παραλίες. Ένα από τα καλά κρυμμένα μυστικά της ανατολικής ακτής.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Agathi_Beach%2C_December_2010_-_panoramio.jpg/1920px-Agathi_Beach%2C_December_2010_-_panoramio.jpg",
+      "photo_credit": {
+        "artist": "npinikas",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Agathi_Beach,_December_2010_-_panoramio.jpg",
+        "source": "Wikimedia Commons"
+      }
+    },
+    {
+      "name": "Glystra Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "400 m",
+      "depth": "Shallow — very safe, calm water",
+      "facing": "East-facing — enclosed cove, protected from all winds",
+      "facilities": "Basic: small family beach cafe, some sunbeds. Quiet and unspoiled.",
+      "desc": "A sheltered sandy cove in the relatively undeveloped south of Rhodes near Kiotari. Crystal clear, warm, shallow water and a relaxed family atmosphere. Far fewer tourists than the northern beaches. A superb half-day stop on the southern loop.",
+      "commons": null,
+      "lat": 36.0103,
+      "lng": 27.9492,
+      "name_el": "Παραλία Γλύστρα",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχό — πολύ ασφαλή, ήρεμα νερά",
+      "facing_el": "Ανατολική — κλειστός κόλπος, προστατευμένος από όλους τους ανέμους",
+      "facilities_el": "Στοιχειώδεις: μικρό οικογενειακό beach café, κάποιες ξαπλώστρες. Ήσυχη και ανέγγιχτη.",
+      "desc_el": "Ένας προστατευμένος αμμώδης κολπίσκος στον σχετικά ανέγγιχτο νότο της Ρόδου κοντά στο Κιοτάρι. Κρυστάλλινα, ζεστά, ρηχά νερά και χαλαρή οικογενειακή ατμόσφαιρα. Πολύ λιγότεροι τουρίστες από τις βόρειες παραλίες. Μια εξαιρετική στάση μισής μέρας στον νότιο γύρο.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Glystra_Beach%2C_September_2023%2C_Rhodes_%2805%29.jpg/1920px-Glystra_Beach%2C_September_2023%2C_Rhodes_%2805%29.jpg",
+      "photo_credit": {
+        "artist": "Jana Sekyrová",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Glystra_Beach,_September_2023,_Rhodes_(05).jpg",
+        "source": "Wikimedia Commons"
+      }
+    }
+  ],
+  "name_el": "Ρόδος",
+  "subtitle_el": "Το νησί των ιπποτών, της αρχαίας ακρόπολης και των σμαραγδένιων κόλπων",
+  "intro_el": "Το μεγαλύτερο νησί των Δωδεκανήσων, η Ρόδος συγκεντρώνει εξαιρετική ποικιλία σε ένα νησί: μια μεσαιωνική πόλη χαρακτηρισμένη από την UNESCO, την Ακρόπολη της Λίνδου σε γκρεμό, ερείπια κάστρων σε εντυπωσιακά σημεία, ορεινά χωριά που παράγουν κρασί και μέλι, και μερικές από τις καλύτερες παραλίες της Ελλάδας στην προστατευμένη ανατολική ακτή. Πάνω από 300 ηλιόλουστες μέρες τον χρόνο την κάνουν το πιο ηλιόλουστο μέρος της χώρας.",
+  "getting_there": {
+    "pills": [
+      "✈ Airport (intl)",
+      "⛵ Piraeus 13–18h",
+      "€55–180"
+    ],
+    "pills_el": [
+      "✈ Αεροδρόμιο (διεθνές)",
+      "⛵ Πειραιάς 13–18h",
+      "€55–180"
+    ],
+    "summary": "Largest Dodecanese airport — Aegean, Sky Express, Ryanair, charters. Ferries from Piraeus dock at Rhodes Town port — Blue Star overnight, daily, €55–95 deck or €100–180 cabin. Direct flights are usually faster and similar cost to a cabin.",
+    "summary_el": "Το μεγαλύτερο αεροδρόμιο των Δωδεκανήσων — Aegean, Sky Express, Ryanair, charters. Τα πλοία από Πειραιά δένουν στο λιμάνι Ρόδου — Blue Star νυχτερινό, καθημερινά, €55–95 κατάστρωμα ή €100–180 καμπίνα. Οι απευθείας πτήσεις είναι συνήθως πιο γρήγορες και κοστίζουν όσο μια καμπίνα.",
+    "tip": "Daily summer hydrofoil to Marmaris (Turkey) takes ~1h — easy add-on.",
+    "tip_el": "Καθημερινό καλοκαιρινό υδροπτέρυγο προς Μαρμαρίδα Τουρκίας ~1 ώρα — εύκολο add-on."
+  }
+}

@@ -1,0 +1,334 @@
+{
+  "key": "meganisi",
+  "name": "Meganisi",
+  "subtitle": "Lefkada's secret neighbour — authentic, unhurried and strikingly beautiful",
+  "intro": "Meganisi is one of the most authentic islands in the Ionian — small, unhurried, with a permanent population of about 1,000 and almost no mass tourism. A short ferry from Nydri (Lefkada) brings you to an island of dramatic sea caves, crystalline water and hillside villages that feel unchanged from decades ago. No cars on many of the best paths. No chains, no resorts. Just excellent food, extraordinary swimming and the real Ionian.",
+  "when_to_visit": {
+    "summary": "Meganisi sits off Lefkada — a quiet sailing-friendly island with three villages and protected coves. Best June-September. Day-trippers from Lefkada come during summer; staying overnight you'll find the evenings almost empty. Mostly accessed via the Nidri ferry.",
+    "summary_el": "Το Μεγανήσι βρίσκεται απέναντι από τη Λευκάδα — ήσυχο νησί ιστιοφίλων με τρία χωριά και προστατευμένους όρμους. Καλύτερα Ιούνιο-Σεπτέμβρη. Ημερήσιοι από Λευκάδα το καλοκαίρι· διανυκτερεύοντας θα βρεις τα βράδια σχεδόν άδεια. Πρόσβαση κυρίως από Νυδρί.",
+    "months": [
+      {
+        "tag": "avoid",
+        "why": "Quiet, fewer ferries",
+        "why_el": "Χειμερία νάρκη, λίγα πλοία"
+      },
+      {
+        "tag": "avoid",
+        "why": "Few ferries, scarce",
+        "why_el": "Λίγα πλοία, λίγα ανοιχτά"
+      },
+      {
+        "tag": "ok",
+        "why": "Awakening, mild",
+        "why_el": "Αρχίζει η σεζόν, ήπιο"
+      },
+      {
+        "tag": "great",
+        "why": "Easter, calm",
+        "why_el": "Πάσχα, ησυχία"
+      },
+      {
+        "tag": "great",
+        "why": "Sea warming, peaceful",
+        "why_el": "Θάλασσα έρχεται στα ίσια"
+      },
+      {
+        "tag": "perfect",
+        "why": "Warm, sailing peaks",
+        "why_el": "Ζεστά, ιστιοπλοΐα κορύφωση"
+      },
+      {
+        "tag": "great",
+        "why": "Hot, day-trippers",
+        "why_el": "Ζέστη, ημερήσιοι"
+      },
+      {
+        "tag": "ok",
+        "why": "Greeks + sailing fleets",
+        "why_el": "Έλληνες και ιστιοφόρα"
+      },
+      {
+        "tag": "perfect",
+        "why": "Best — calm evenings",
+        "why_el": "Καλύτερος — ησυχία, ζεστά"
+      },
+      {
+        "tag": "great",
+        "why": "Sea warm, last weeks",
+        "why_el": "Τελευταία βουτιά, δροσιά"
+      },
+      {
+        "tag": "avoid",
+        "why": "Season ending, thin",
+        "why_el": "Κλείνουν σιγά σιγά"
+      },
+      {
+        "tag": "avoid",
+        "why": "Wintering, thin",
+        "why_el": "Σε χειμερία νάρκη"
+      }
+    ]
+  },
+  "itinerary": {
+    "title": "2-Day Meganisi Itinerary",
+    "subtitle": "A short escape from Lefkada to the sea caves, harbour villages and hidden beaches of the Ionian's most authentic small island.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Spartochori & the Sea Caves",
+        "color": "#1B4F8A",
+        "km": 10,
+        "drive_mins": 15,
+        "overnight": "Vathy",
+        "stops": [
+          {
+            "name": "Spartochori",
+            "lat": 38.6483,
+            "lng": 20.7867,
+            "type": "village",
+            "time": "10:00",
+            "wiki": "https://en.wikipedia.org/wiki/Spartochori",
+            "desc": "The most beautiful village on Meganisi — a hillside settlement of white houses above the main harbour. Extraordinary views over the straits to Lefkada and the surrounding islands. The village feels genuinely untouched.",
+            "name_el": "Σπαρτοχώρι",
+            "desc_el": "Το πιο όμορφο χωριό του Μεγανησίου — ορεινός οικισμός λευκών σπιτιών πάνω από το κύριο λιμάνι. Εξαιρετικές θέες πάνω στα στενά προς τη Λευκάδα και τα γύρω νησιά. Το χωριό μοιάζει πραγματικά ανέγγιχτο.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Spartochori%2C_Meganisi.jpg/1920px-Spartochori%2C_Meganisi.jpg",
+            "photo_credit": {
+              "artist": "Upp75",
+              "license": "CC BY-SA 4.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Spartochori,_Meganisi.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Papanikolis Cave",
+            "lat": 38.64,
+            "lng": 20.7633,
+            "type": "nature",
+            "time": "11:30",
+            "wiki": "https://en.wikipedia.org/wiki/Papanikolis_Cave",
+            "desc": "One of the largest sea caves in Greece — named after the submarine that sheltered here in WWII. Accessible by boat. The cave opens into a cathedral-like chamber with extraordinary blue light.",
+            "name_el": "Σπηλιά Παπανικολής",
+            "desc_el": "Μία από τις μεγαλύτερες θαλάσσιες σπηλιές της Ελλάδας — πήρε το όνομά της από το υποβρύχιο που κρύφτηκε εδώ στον Β' ΠΠ. Προσβάσιμη με βάρκα. Η σπηλιά ανοίγει σε θάλαμο σαν καθεδρικός ναός με εξαιρετικό μπλε φως.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Cave_of_Meganisi_-_panoramio.jpg",
+            "photo_credit": {
+              "artist": "Mickey Løgitmark",
+              "license": "CC BY 3.0",
+              "license_url": "https://creativecommons.org/licenses/by/3.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Cave_of_Meganisi_-_panoramio.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Atherinos Beach",
+            "lat": 38.6317,
+            "lng": 20.7783,
+            "type": "beach",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "The best beach on Meganisi — a sandy cove with turquoise water accessible by a short path. Almost always empty. Lunch at the small taverna above.",
+            "name_el": "Παραλία Αθερινός",
+            "desc_el": "Η καλύτερη παραλία του Μεγανησίου — αμμώδης κόλπος με τιρκουάζ νερά προσβάσιμος με σύντομο μονοπάτι. Σχεδόν πάντα άδειος. Μεσημεριανό στη μικρή ταβέρνα από πάνω."
+          },
+          {
+            "name": "Vathy Harbour",
+            "lat": 38.6567,
+            "lng": 20.7883,
+            "type": "harbour",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "The main harbour village of Meganisi — a small cove lined with tavernas. Dinner here watching the boats. The freshest seafood on the island.",
+            "name_el": "Λιμάνι Βαθέος",
+            "desc_el": "Το κύριο λιμενικό χωριό του Μεγανησίου — μικρός κόλπος γεμάτος ταβέρνες. Δείπνο εδώ βλέποντας τα σκάφη. Τα πιο φρέσκα θαλασσινά του νησιού."
+          }
+        ],
+        "title_el": "Σπαρτοχώρι & οι Θαλάσσιες Σπηλιές",
+        "overnight_el": "Βαθύ"
+      },
+      {
+        "day": 2,
+        "title": "Katomeri & Departure",
+        "color": "#C0522A",
+        "km": 8,
+        "drive_mins": 12,
+        "overnight": null,
+        "stops": [
+          {
+            "name": "Katomeri",
+            "lat": 38.64,
+            "lng": 20.8,
+            "type": "village",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "The second village of Meganisi — quieter than Spartochori, with a beautiful square shaded by plane trees and a small church. Morning coffee here before exploring the south of the island.",
+            "name_el": "Κατωμέρι",
+            "desc_el": "Το δεύτερο χωριό του Μεγανησίου — πιο ήσυχο από το Σπαρτοχώρι, με όμορφη πλατεία σκιασμένη από πλατάνια και μικρή εκκλησία. Πρωινός καφές εδώ πριν εξερευνήσεις τον νότο του νησιού.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/%CE%9C%CE%B5%CE%B3%CE%B1%CE%BD%CE%AE%CF%83%CE%B9_-_%CE%A0%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1_%CE%A6%CE%B1%CE%BD%CE%AC%CF%81%CE%B9.jpg/1920px-%CE%9C%CE%B5%CE%B3%CE%B1%CE%BD%CE%AE%CF%83%CE%B9_-_%CE%A0%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1_%CE%A6%CE%B1%CE%BD%CE%AC%CF%81%CE%B9.jpg",
+            "photo_credit": {
+              "artist": "TheFatDrummer",
+              "license": "CC BY-SA 4.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:%CE%9C%CE%B5%CE%B3%CE%B1%CE%BD%CE%AE%CF%83%CE%B9_-_%CE%A0%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1_%CE%A6%CE%B1%CE%BD%CE%AC%CF%81%CE%B9.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Limonari Beach",
+            "lat": 38.6233,
+            "lng": 20.8033,
+            "type": "beach",
+            "time": "10:30",
+            "wiki": null,
+            "desc": "Remote pebble beach on the south coast, accessible only by boat or a long walk. Crystal clear water and complete solitude.",
+            "name_el": "Παραλία Λημονάρι",
+            "desc_el": "Απομακρυσμένη βότσαλη παραλία στη νότια ακτή, προσβάσιμη μόνο με βάρκα ή μεγάλη πεζοπορία. Κρυστάλλινα νερά και απόλυτη μοναξιά."
+          },
+          {
+            "name": "Ftelia Beach",
+            "lat": 38.665,
+            "lng": 20.8083,
+            "type": "beach",
+            "time": "13:00",
+            "wiki": null,
+            "desc": "Sandy beach on the east coast with views across to the Meganisi straits. Calm, shallow, family-friendly.",
+            "name_el": "Παραλία Φτελιά",
+            "desc_el": "Αμμώδης παραλία στην ανατολική ακτή με θέες απέναντι στα στενά του Μεγανησίου. Ήρεμη, ρηχή, φιλική σε οικογένειες."
+          },
+          {
+            "name": "Nydri Ferry — Departure",
+            "lat": 38.65,
+            "lng": 20.7833,
+            "type": "harbour",
+            "time": "16:00",
+            "wiki": null,
+            "desc": "Ferry back to Nydri on Lefkada. The 30-minute crossing passes the islands of Skorpios and Sparti.",
+            "name_el": "Πλοίο Νυδριού — Αναχώρηση",
+            "desc_el": "Πλοίο πίσω στο Νυδρί της Λευκάδας. Το 30λεπτο πέρασμα περνάει από τα νησιά Σκορπιός και Σπάρτη."
+          }
+        ],
+        "title_el": "Κατωμέρι & Αναχώρηση"
+      }
+    ],
+    "title_el": "Πρόγραμμα 2 Ημερών στο Μεγανήσι",
+    "subtitle_el": "Μια σύντομη απόδραση από τη Λευκάδα στις θαλάσσιες σπηλιές, τα λιμενικά χωριά και τις κρυμμένες παραλίες του πιο αυθεντικού μικρού νησιού του Ιονίου."
+  },
+  "beaches": [
+    {
+      "name": "Atherinos Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Sand and fine pebble",
+      "length": "300 m",
+      "depth": "Shallow to medium — crystal clear",
+      "facing": "Southwest-facing — sheltered, calm",
+      "facilities": "Basic: small taverna above the beach. Short walk from the road.",
+      "desc": "The best beach on Meganisi — a beautiful cove with turquoise water and almost no visitors. The small taverna above serves fresh fish and local wine. One of the most peaceful swimming spots in the Ionian.",
+      "commons": null,
+      "lat": 38.6317,
+      "lng": 20.7783,
+      "name_el": "Παραλία Αθερινός",
+      "type_el": "Άμμος και λεπτά βότσαλα",
+      "depth_el": "Ρηχή έως μέτρια — κρυστάλλινη",
+      "facing_el": "Νοτιοδυτικά — προστατευμένη, ήρεμη",
+      "facilities_el": "Στοιχειώδεις: μικρή ταβέρνα πάνω από την παραλία. Σύντομη πεζοπορία από τον δρόμο.",
+      "desc_el": "Η καλύτερη παραλία του Μεγανησίου — ένας όμορφος κόλπος με τιρκουάζ νερά και σχεδόν κανέναν επισκέπτη. Η μικρή ταβέρνα από πάνω σερβίρει φρέσκο ψάρι και ντόπιο κρασί. Ένα από τα πιο ήσυχα σημεία κολύμβησης στο Ιόνιο."
+    },
+    {
+      "name": "Limonari Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "length": "200 m",
+      "depth": "Medium — deep, clear water",
+      "facing": "South-facing — open Ionian",
+      "facilities": "None — accessible by boat only or long hike.",
+      "desc": "A remote pebble cove on the south coast — accessible only by boat or a substantial walk. The isolation is the attraction. Perfect water clarity.",
+      "commons": null,
+      "lat": 38.6233,
+      "lng": 20.8033,
+      "name_el": "Παραλία Λημονάρι",
+      "type_el": "Βότσαλα",
+      "depth_el": "Μέτρια — βαθιά, διαυγή νερά",
+      "facing_el": "Νότια — ανοιχτό Ιόνιο",
+      "facilities_el": "Καμία — πρόσβαση μόνο με βάρκα ή μεγάλη πεζοπορία.",
+      "desc_el": "Μια απομακρυσμένη βότσαλη παραλία στη νότια ακτή — προσβάσιμη μόνο με βάρκα ή ουσιαστική πεζοπορία. Η απομόνωση είναι η έλξη. Τέλεια διαύγεια νερού."
+    },
+    {
+      "name": "Ftelia Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Sand",
+      "length": "250 m",
+      "depth": "Shallow — calm, good for families",
+      "facing": "East-facing — sheltered straits",
+      "facilities": "Basic: accessible by road, small parking area.",
+      "desc": "A sandy east-coast beach with views across the Meganisi straits. Calm, shallow, warm water. The most family-friendly beach on the island.",
+      "commons": null,
+      "lat": 38.665,
+      "lng": 20.8083,
+      "name_el": "Παραλία Φτελιά",
+      "type_el": "Άμμος",
+      "depth_el": "Ρηχή — ήρεμη, καλή για οικογένειες",
+      "facing_el": "Ανατολικά — προστατευμένα στενά",
+      "facilities_el": "Στοιχειώδεις: πρόσβαση με δρόμο, μικρό parking.",
+      "desc_el": "Αμμώδης παραλία της ανατολικής ακτής με θέες πάνω από τα στενά του Μεγανησίου. Ήρεμα, ρηχά, ζεστά νερά. Η πιο φιλική σε οικογένειες παραλία του νησιού."
+    },
+    {
+      "name": "Vathy Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "length": "150 m",
+      "depth": "Medium — harbour swimming",
+      "facing": "Northwest-facing — sheltered harbour bay",
+      "facilities": "Good: tavernas directly on the waterfront.",
+      "desc": "The small harbour beach at Vathy — not the island's most beautiful but the most convenient, with excellent tavernas a few steps away. Perfect for a swim before dinner.",
+      "commons": null,
+      "lat": 38.6567,
+      "lng": 20.7883,
+      "name_el": "Παραλία Βαθύ",
+      "type_el": "Βότσαλα",
+      "depth_el": "Μέτρια — λιμενικό κολύμπι",
+      "facing_el": "Βορειοδυτικά — προστατευμένος λιμενικός κόλπος",
+      "facilities_el": "Καλές: ταβέρνες ακριβώς στο παραλιακό.",
+      "desc_el": "Η μικρή παραλία του λιμανιού στο Βαθύ — όχι η πιο όμορφη του νησιού αλλά η πιο βολική, με εξαιρετικές ταβέρνες λίγα βήματα μακριά. Τέλεια για μπάνιο πριν το δείπνο."
+    },
+    {
+      "name": "Spilia Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "length": "100 m",
+      "depth": "Deep — sea cave entrance, snorkelling",
+      "facing": "West-facing — sheltered cove",
+      "facilities": "None — accessible by boat only.",
+      "desc": "A tiny cove at the entrance to the Papanikolis sea cave. The cave opens directly off the beach. Snorkelling here is extraordinary — you can swim into the cave from the beach.",
+      "commons": null,
+      "lat": 38.64,
+      "lng": 20.7633,
+      "name_el": "Παραλία Σπηλιά",
+      "type_el": "Βότσαλα",
+      "depth_el": "Βαθιά — είσοδος θαλάσσιας σπηλιάς, ψαροντούφεκο",
+      "facing_el": "Δυτικά — προστατευμένος κόλπος",
+      "facilities_el": "Καμία — πρόσβαση μόνο με βάρκα.",
+      "desc_el": "Ένας μικροσκοπικός κόλπος στην είσοδο της θαλάσσιας σπηλιάς Παπανικολής. Η σπηλιά ανοίγει απευθείας από την παραλία. Το ψαροντούφεκο εδώ είναι εξαιρετικό — μπορείς να κολυμπήσεις μέσα στη σπηλιά από την παραλία."
+    }
+  ],
+  "name_el": "Μεγανήσι",
+  "subtitle_el": "Η μυστική γειτόνισσα της Λευκάδας — αυθεντικό, αβίαστο και εντυπωσιακά όμορφο",
+  "intro_el": "Το Μεγανήσι είναι ένα από τα πιο αυθεντικά νησιά του Ιονίου — μικρό, αβίαστο, με μόνιμο πληθυσμό περίπου 1.000 και σχεδόν καθόλου μαζικό τουρισμό. Ένα σύντομο πλοίο από το Νυδρί (Λευκάδα) σε φέρνει σε ένα νησί με δραματικές θαλάσσιες σπηλιές, κρυστάλλινα νερά και ορεινά χωριά που μοιάζουν αμετάβλητα από δεκαετίες. Χωρίς αυτοκίνητα σε πολλά από τα καλύτερα μονοπάτια. Χωρίς αλυσίδες, χωρίς θέρετρα. Απλά εξαιρετικό φαγητό, εξαιρετικό κολύμπι και το αληθινό Ιόνιο.",
+  "getting_there": {
+    "pills": [
+      "⛵ via Lefkada 25min",
+      "€2–4"
+    ],
+    "pills_el": [
+      "⛵ μέσω Λευκάδας 25λ",
+      "€2–4"
+    ],
+    "summary": "No airport. Reach Meganisi from Nidri (Lefkada) — frequent shuttle, ~25 minutes, takes cars. Drive to Lefkada first via Rio-Antirrio bridge.",
+    "summary_el": "Χωρίς αεροδρόμιο. Προσέγγιση από Νυδρί (Λευκάδα) — συχνή σύνδεση, ~25 λεπτά, παίρνει αυτοκίνητα. Πήγαινε πρώτα Λευκάδα μέσω Ρίου-Αντιρρίου.",
+    "tip": "Half-day from Lefkada works for a peek — overnight to actually feel the island.",
+    "tip_el": "Μισή μέρα από Λευκάδα φτάνει για περιήγηση — διανυκτέρευση για να νιώσεις το νησί."
+  }
+}

@@ -1,0 +1,528 @@
+{
+  "key": "kythira",
+  "name": "Kythira",
+  "subtitle": "The forgotten island — Venetian castles, wild gorges and deserted beaches",
+  "intro": "Kythira sits between the Ionian and Aegean worlds, administratively part of the Ionian islands but geographically alone south of the Peloponnese. It is one of the least-visited significant islands in Greece — largely because it's hard to reach — and that is precisely its magic. Venetian architecture, Byzantine monasteries, dramatic gorges, and beaches that are almost always empty. The Australian community here (thousands emigrated in the 1950s) gives the island a distinct cultural character.",
+  "when_to_visit": {
+    "summary": "Kythira is technically Ionian but feels different — south of the Peloponnese, drier, more rugged. Long ferry from Piraeus, but also accessible from Neapoli on the Lakonian coast. Best May-October. The Easter celebrations in Mylopotamos are particularly beautiful. Authentic, slow, never overrun — the island the diaspora returns to.",
+    "summary_el": "Τα Κύθηρα είναι τεχνικά Ιόνιο αλλά διαφορετικό — νότια της Πελοποννήσου, πιο ξερό, πιο τραχύ. Μακρινό πλοίο από Πειραιά, αλλά και από Νεάπολη στη Λακωνία. Καλύτερα Μάιο-Οκτώβρη. Το Πάσχα στον Μυλοπόταμο ιδιαίτερα όμορφο. Αυθεντικά, αργά, ποτέ δε γεμίζει — το νησί που γυρνά η διασπορά.",
+    "months": [
+      {
+        "tag": "ok",
+        "why": "Quiet, locals, mild",
+        "why_el": "Ήσυχα, ντόπιοι, ήπιο"
+      },
+      {
+        "tag": "ok",
+        "why": "Hiking, peaceful",
+        "why_el": "Ήπιο, πεζοπορία"
+      },
+      {
+        "tag": "great",
+        "why": "Wildflowers, hiking",
+        "why_el": "Αγριολούλουδα, πεζοπορία"
+      },
+      {
+        "tag": "great",
+        "why": "Easter at Mylopotamos",
+        "why_el": "Πάσχα στον Μυλοπόταμο"
+      },
+      {
+        "tag": "perfect",
+        "why": "Sea warming, near-empty",
+        "why_el": "Θάλασσα ζεσταίνει, σχεδόν"
+      },
+      {
+        "tag": "perfect",
+        "why": "Long days, sea ready",
+        "why_el": "Ολονήμερο φως, ζεστά"
+      },
+      {
+        "tag": "great",
+        "why": "Hot, Greeks arrive",
+        "why_el": "Ζέστη, έρχονται οι Έλληνες"
+      },
+      {
+        "tag": "ok",
+        "why": "Peak Greeks, busy",
+        "why_el": "Γέμισε από Έλληνες"
+      },
+      {
+        "tag": "perfect",
+        "why": "Best — warm, golden",
+        "why_el": "Καλύτερος — ζεστά, χρυσά"
+      },
+      {
+        "tag": "great",
+        "why": "Last swims, hiking",
+        "why_el": "Τελευταία μπάνια, πεζοπορία"
+      },
+      {
+        "tag": "great",
+        "why": "Mild, hiking, locals",
+        "why_el": "Ήπιο, πεζοπορία, ντόπιοι"
+      },
+      {
+        "tag": "ok",
+        "why": "Quiet, locals only",
+        "why_el": "Ήσυχα, μόνο ντόπιοι"
+      }
+    ]
+  },
+  "itinerary": {
+    "title": "4-Day Kythira Itinerary",
+    "subtitle": "Chora's Venetian castle, the cave of Agia Sofia, the waterfall gorge of Milopotamos and the deserted beaches of the south coast.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Chora & the Castle",
+        "color": "#1B4F8A",
+        "km": 15,
+        "drive_mins": 20,
+        "overnight": "Chora",
+        "stops": [
+          {
+            "name": "Chora (Kythira Town)",
+            "lat": 36.1417,
+            "lng": 23.0183,
+            "type": "city",
+            "time": "09:00",
+            "wiki": "https://en.wikipedia.org/wiki/Chora,_Kythira",
+            "desc": "One of the most beautiful Venetian towns in Greece — a narrow ridge of blue-doored whitewashed houses below a 13th-century Venetian castle. The views from the castle over the sea are extraordinary.",
+            "name_el": "Χώρα (Πόλη Κυθήρων)",
+            "desc_el": "Μία από τις πιο όμορφες ενετικές πόλεις της Ελλάδας — μια στενή κορυφογραμμή από ασπρισμένα σπίτια με μπλε πόρτες κάτω από βενετικό κάστρο του 13ου αιώνα. Οι θέες από το κάστρο πάνω στη θάλασσα είναι εξαιρετικές.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chora_Kythira_panorama_banner.jpg/1920px-Chora_Kythira_panorama_banner.jpg",
+            "photo_credit": {
+              "artist": "cut and paste by FocalPoint, based on panorama of Lapost, based on photos of ...",
+              "license": "CC BY-SA 3.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Chora_Kythira_panorama_banner.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Venetian Castle of Kythira",
+            "lat": 36.1433,
+            "lng": 23.0167,
+            "type": "castle",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Kythira_Castle",
+            "desc": "Well-preserved 13th-century Venetian fortress with a complete enceinte wall and internal streets. Below the castle, the sea drops sheer 100m to the water.",
+            "name_el": "Ενετικό Κάστρο των Κυθήρων",
+            "desc_el": "Καλά διατηρημένο ενετικό φρούριο του 13ου αιώνα με πλήρες εξωτερικό τείχος και εσωτερικούς δρόμους. Κάτω από το κάστρο, η θάλασσα πέφτει κάθετα 100 μέτρα.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Kythira_-_Hora_1.jpg",
+            "photo_credit": {
+              "artist": "Ingo Mehling",
+              "license": "CC BY-SA 3.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Kythira_-_Hora_1.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Archaeological Museum Kythira",
+            "lat": 36.1417,
+            "lng": 23.0183,
+            "type": "museum",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "Excellent collection tracing the island's extraordinary history — Minoan, Phoenician, Byzantine and Venetian. Kythira was a major trade crossroads for 3000 years.",
+            "name_el": "Αρχαιολογικό Μουσείο Κυθήρων",
+            "desc_el": "Εξαιρετική συλλογή που ακολουθεί την εξαιρετική ιστορία του νησιού — μινωική, φοινικική, βυζαντινή και ενετική. Τα Κύθηρα ήταν σπουδαίο εμπορικό σταυροδρόμι για 3000 χρόνια."
+          },
+          {
+            "name": "Kapsali Beach",
+            "lat": 36.1317,
+            "lng": 23.01,
+            "type": "beach",
+            "time": "14:00",
+            "wiki": null,
+            "desc": "Twin coves below Chora — the port beach with clear water. The castle is visible on the cliff above. Good tavernas, calm water.",
+            "name_el": "Παραλία Καψάλι",
+            "desc_el": "Δύο δίδυμοι κόλποι κάτω από τη Χώρα — η παραλία του λιμανιού με διαυγή νερά. Το κάστρο φαίνεται πάνω στον γκρεμό. Καλές ταβέρνες, ήρεμα νερά.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Beach_-_Kapsali_-_Kythira_-_Greece_-_2018.08.28_15.41.26.147_002.JPG/1920px-Beach_-_Kapsali_-_Kythira_-_Greece_-_2018.08.28_15.41.26.147_002.JPG",
+            "photo_credit": {
+              "artist": "Dionisio Calucci",
+              "license": "CC BY-SA 4.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Beach_-_Kapsali_-_Kythira_-_Greece_-_2018.08.28_15.41.26.147_002.JPG",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Dinner in Chora",
+            "lat": 36.1417,
+            "lng": 23.0183,
+            "type": "village",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "Dinner at one of the tavernas in the Chora lanes. Try the local honey (thyme honey from Kythira is outstanding), the cheese pies, and the local wine.",
+            "name_el": "Δείπνο στη Χώρα",
+            "desc_el": "Δείπνο σε μία από τις ταβέρνες στα στενά της Χώρας. Δοκίμασε το ντόπιο μέλι (το θυμαρίσιο μέλι των Κυθήρων είναι εξαιρετικό), τα τυροπιτάκια, και το ντόπιο κρασί."
+          }
+        ],
+        "title_el": "Χώρα & το Κάστρο",
+        "overnight_el": "Χώρα"
+      },
+      {
+        "day": 2,
+        "title": "Milopotamos & the Waterfall",
+        "color": "#C0522A",
+        "km": 30,
+        "drive_mins": 40,
+        "overnight": "Chora",
+        "stops": [
+          {
+            "name": "Milopotamos Village",
+            "lat": 36.2433,
+            "lng": 22.99,
+            "type": "village",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Milopotamos,_Kythira",
+            "desc": "The most beautiful village in Kythira — a Venetian settlement above a river gorge, with a waterfall, plane trees and an extraordinary abandoned lower village (Kato Chora) with Venetian walls intact.",
+            "name_el": "Χωριό Μυλοπόταμος",
+            "desc_el": "Το πιο όμορφο χωριό των Κυθήρων — ενετικός οικισμός πάνω από φαράγγι με ποτάμι, καταρράκτη, πλατάνια και το εξαιρετικό εγκαταλελειμμένο κάτω χωριό (Κάτω Χώρα) με ανέπαφα ενετικά τείχη.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Phill%27s_Watermill%2C_Mylopotamos%2C_Kythira%2C_Greece.jpg/1920px-Phill%27s_Watermill%2C_Mylopotamos%2C_Kythira%2C_Greece.jpg",
+            "photo_credit": {
+              "artist": "",
+              "license": "CC BY-SA 3.0",
+              "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Phill%27s_Watermill,_Mylopotamos,_Kythira,_Greece.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Neraida Waterfall",
+            "lat": 36.24,
+            "lng": 22.9883,
+            "type": "nature",
+            "time": "10:30",
+            "wiki": null,
+            "desc": "Walk down through the village to the waterfall — a small but beautiful cascade into a natural pool surrounded by oleanders. One of the most unexpected spots in the Ionian islands.",
+            "name_el": "Καταρράκτης της Νεράιδας",
+            "desc_el": "Περπάτα κάτω μέσα από το χωριό στον καταρράκτη — μικρός αλλά όμορφος καταρράκτης σε φυσική πισίνα περιτριγυρισμένη από πικροδάφνες. Ένα από τα πιο απρόσμενα σημεία στα Ιόνια νησιά."
+          },
+          {
+            "name": "Cave of Agia Sofia",
+            "lat": 36.2317,
+            "lng": 22.975,
+            "type": "church",
+            "time": "12:00",
+            "wiki": "https://en.wikipedia.org/wiki/Cave_of_Agia_Sofia",
+            "desc": "A spectacular sea cave with a Byzantine church inside — frescos from the 12th-13th century survive on the cave walls. One of the most unusual religious sites in Greece. Guided tours from the village.",
+            "name_el": "Σπηλιά της Αγίας Σοφίας",
+            "desc_el": "Εντυπωσιακή θαλάσσια σπηλιά με βυζαντινή εκκλησία μέσα — τοιχογραφίες του 12ου-13ου αιώνα επιβιώνουν στα τοιχώματα της σπηλιάς. Ένας από τους πιο ασυνήθιστους θρησκευτικούς χώρους της Ελλάδας. Ξεναγήσεις από το χωριό.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Agia_Sofia_Cave_in_Kythira%2C_the_Pipe_Organ.JPG/1920px-Agia_Sofia_Cave_in_Kythira%2C_the_Pipe_Organ.JPG",
+            "photo_credit": {
+              "artist": "C messier",
+              "license": "CC BY 3.0",
+              "license_url": "https://creativecommons.org/licenses/by/3.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Agia_Sofia_Cave_in_Kythira,_the_Pipe_Organ.JPG",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Limnaria Beach",
+            "lat": 36.2217,
+            "lng": 22.965,
+            "type": "beach",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Remote pebble beach below Milopotamos, accessible by a steep path or by boat. Extremely clear water, dramatic cliff scenery, almost always deserted.",
+            "name_el": "Παραλία Λιμνάρια",
+            "desc_el": "Απομακρυσμένη βότσαλη παραλία κάτω από τον Μυλοπόταμο, προσβάσιμη με απότομο μονοπάτι ή με βάρκα. Εξαιρετικά διαυγή νερά, δραματικό σκηνικό γκρεμών, σχεδόν πάντα έρημη."
+          }
+        ],
+        "title_el": "Μυλοπόταμος & ο Καταρράκτης",
+        "overnight_el": "Χώρα"
+      },
+      {
+        "day": 3,
+        "title": "Avlemonas & the East Coast",
+        "color": "#5A7A3A",
+        "km": 35,
+        "drive_mins": 45,
+        "overnight": "Avlemonas",
+        "stops": [
+          {
+            "name": "Paleopolis Beach",
+            "lat": 36.1867,
+            "lng": 23.0783,
+            "type": "beach",
+            "time": "09:30",
+            "wiki": null,
+            "desc": "Long sandy beach near the ancient city of Scandeia — one of the longest on the island. Sandy, calm and rarely crowded. The ancient harbour ruins are visible offshore.",
+            "name_el": "Παραλία Παλαιόπολης",
+            "desc_el": "Μακριά αμμώδης παραλία κοντά στην αρχαία πόλη της Σκάνδειας — μία από τις πιο μακριές του νησιού. Αμμώδης, ήρεμη και σπάνια πολυσύχναστη. Τα ερείπια του αρχαίου λιμανιού είναι ορατά στη θάλασσα.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/1/13/Paleopoli_Beach.jpg",
+            "photo_credit": {
+              "artist": "Nsougia2 at English Wikipedia",
+              "license": "Public domain",
+              "license_url": "",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Paleopoli_Beach.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Avlemonas",
+            "lat": 36.1633,
+            "lng": 23.0967,
+            "type": "harbour",
+            "time": "12:00",
+            "wiki": "https://en.wikipedia.org/wiki/Avlemonas",
+            "desc": "The most atmospheric harbour in Kythira — a Venetian fortress above a tiny circular fishing harbour. Lunch at one of the waterfront tavernas. Exceptional fresh fish.",
+            "name_el": "Αυλέμονας",
+            "desc_el": "Το πιο ατμοσφαιρικό λιμάνι των Κυθήρων — ενετικό φρούριο πάνω από ένα μικροσκοπικό κυκλικό ψαρολίμανο. Μεσημεριανό σε μία από τις παραλιακές ταβέρνες. Εξαιρετικό φρέσκο ψάρι.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Avlemonas%2C_Kythira.JPG/1920px-Avlemonas%2C_Kythira.JPG",
+            "photo_credit": {
+              "artist": "Lapost",
+              "license": "CC BY-SA 3.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Avlemonas,_Kythira.JPG",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Fyri Ammos Beach",
+            "lat": 36.1433,
+            "lng": 23.0983,
+            "type": "beach",
+            "time": "14:30",
+            "wiki": null,
+            "desc": "The finest beach on the east coast — fine red sand (fyri ammos means 'red sand') in a sheltered bay. Clear, calm water. Accessible by a dirt track.",
+            "name_el": "Παραλία Φυρή Άμμος",
+            "desc_el": "Η καλύτερη παραλία της ανατολικής ακτής — λεπτή κόκκινη άμμος (φυρή άμμος σημαίνει «κόκκινη άμμος») σε προστατευμένο κόλπο. Διαυγή, ήρεμα νερά. Προσβάσιμη με χωματόδρομο."
+          },
+          {
+            "name": "Kaladi Beach",
+            "lat": 36.1317,
+            "lng": 23.1033,
+            "type": "beach",
+            "time": "16:30",
+            "wiki": null,
+            "desc": "Small, wild pebble beach accessible only on foot (30 min walk). Deep turquoise water and complete solitude. One of the best wild beaches in the Ionian.",
+            "name_el": "Παραλία Καλάδι",
+            "desc_el": "Μικρή, άγρια βότσαλη παραλία προσβάσιμη μόνο με τα πόδια (30 λεπτά περπάτημα). Βαθιά τιρκουάζ νερά και απόλυτη μοναξιά. Μία από τις καλύτερες άγριες παραλίες του Ιονίου.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Beach_-_Kaladi_-_Kythira_-_Greece_-_2018.08.26_11.35.39.631_001.JPG/1920px-Beach_-_Kaladi_-_Kythira_-_Greece_-_2018.08.26_11.35.39.631_001.JPG",
+            "photo_credit": {
+              "artist": "Dionisio Calucci",
+              "license": "CC BY-SA 4.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Beach_-_Kaladi_-_Kythira_-_Greece_-_2018.08.26_11.35.39.631_001.JPG",
+              "source": "Wikimedia Commons"
+            }
+          }
+        ],
+        "title_el": "Αυλέμονας & η Ανατολική Ακτή",
+        "overnight_el": "Αυλέμονας"
+      },
+      {
+        "day": 4,
+        "title": "North Kythira & Departure",
+        "color": "#C4962A",
+        "km": 40,
+        "drive_mins": 50,
+        "overnight": null,
+        "stops": [
+          {
+            "name": "Potamos Village",
+            "lat": 36.2733,
+            "lng": 22.9967,
+            "type": "village",
+            "time": "09:30",
+            "wiki": "https://en.wikipedia.org/wiki/Potamos,_Kythira",
+            "desc": "The largest village on the island and the main commercial centre. Sunday market is the social event of the Kythira calendar — locals from across the island come to shop and socialise.",
+            "name_el": "Χωριό Ποταμός",
+            "desc_el": "Το μεγαλύτερο χωριό του νησιού και το κύριο εμπορικό κέντρο. Η κυριακάτικη αγορά είναι το κοινωνικό γεγονός του ημερολογίου των Κυθήρων — ντόπιοι από όλο το νησί έρχονται για ψώνια και κοινωνικοποίηση.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Old_cafe_Potamos%2C_Kythira.JPG/1920px-Old_cafe_Potamos%2C_Kythira.JPG",
+            "photo_credit": {
+              "artist": "C messier",
+              "license": "CC BY 3.0",
+              "license_url": "https://creativecommons.org/licenses/by/3.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Old_cafe_Potamos,_Kythira.JPG",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Agia Pelagia Beach",
+            "lat": 36.31,
+            "lng": 23.045,
+            "type": "beach",
+            "time": "11:00",
+            "wiki": null,
+            "desc": "Sandy beach at the northern ferry port. Calm, organised, good facilities. The ferry to Piraeus and the Peloponnese leaves from here.",
+            "name_el": "Παραλία Αγίας Πελαγίας",
+            "desc_el": "Αμμώδης παραλία στο βόρειο λιμάνι. Ήρεμη, οργανωμένη, καλές υποδομές. Το πλοίο για Πειραιά και Πελοπόννησο φεύγει από εδώ.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Agia_Pelagia_beach_Cythera_2.jpg/1920px-Agia_Pelagia_beach_Cythera_2.jpg",
+            "photo_credit": {
+              "artist": "FocalPoint",
+              "license": "CC BY-SA 4.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Agia_Pelagia_beach_Cythera_2.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Diakofti Port — Departure",
+            "lat": 36.1883,
+            "lng": 23.1033,
+            "type": "harbour",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Main ferry port in the east — connections to Neapoli, Piraeus and the other Ionian islands. The ferry ride south reveals Kythira's dramatic coastline from the sea.",
+            "name_el": "Λιμάνι Διακόφτι — Αναχώρηση",
+            "desc_el": "Κύριο λιμάνι στα ανατολικά — συνδέσεις με Νεάπολη, Πειραιά και τα άλλα Ιόνια νησιά. Το ταξίδι νότια αποκαλύπτει τη δραματική ακτογραμμή των Κυθήρων από τη θάλασσα."
+          }
+        ],
+        "title_el": "Βόρεια Κύθηρα & Αναχώρηση"
+      }
+    ],
+    "title_el": "Πρόγραμμα 4 Ημερών στα Κύθηρα",
+    "subtitle_el": "Το ενετικό κάστρο της Χώρας, η Σπηλιά της Αγίας Σοφίας, το φαράγγι με τον καταρράκτη στον Μυλοπόταμο και οι έρημες παραλίες της νότιας ακτής."
+  },
+  "beaches": [
+    {
+      "name": "Fyri Ammos Beach",
+      "wiki": null,
+      "rating": 5,
+      "type": "Fine red sand",
+      "length": "400 m",
+      "depth": "Medium — clear, calm water",
+      "facing": "East-facing — sheltered bay",
+      "facilities": "Basic: accessible by dirt track. Small beach bar in summer.",
+      "desc": "The most beautiful beach on Kythira — distinctive red-orange sand (fyri ammos = red sand) in a sheltered bay on the east coast. The unusual sand colour and crystal clear water make it unforgettable. Almost always quiet.",
+      "commons": null,
+      "lat": 36.1433,
+      "lng": 23.0983,
+      "name_el": "Παραλία Φυρή Άμμος",
+      "type_el": "Λεπτή κόκκινη άμμος",
+      "depth_el": "Μέτρια — διαυγή, ήρεμα νερά",
+      "facing_el": "Ανατολικά — προστατευμένος κόλπος",
+      "facilities_el": "Στοιχειώδεις: πρόσβαση με χωματόδρομο. Μικρό beach bar το καλοκαίρι.",
+      "desc_el": "Η πιο όμορφη παραλία των Κυθήρων — χαρακτηριστική κοκκινωπή-πορτοκαλί άμμος (φυρή άμμος = κόκκινη άμμος) σε προστατευμένο κόλπο της ανατολικής ακτής. Το ασυνήθιστο χρώμα της άμμου και τα κρυστάλλινα νερά την κάνουν αξέχαστη. Σχεδόν πάντα ήσυχη."
+    },
+    {
+      "name": "Paleopolis Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Sand and pebble mix",
+      "length": "1.5 km",
+      "depth": "Shallow to medium",
+      "facing": "East-facing — calm, sheltered",
+      "facilities": "Good: sunbeds, taverna, parking. Ancient harbour ruins visible offshore.",
+      "desc": "The longest beach on Kythira near the ancient city of Scandeia. Sandy, calm and almost always uncrowded. The underwater ruins of the ancient harbour are visible when the water is clear.",
+      "commons": null,
+      "lat": 36.1867,
+      "lng": 23.0783,
+      "name_el": "Παραλία Παλαιόπολης",
+      "type_el": "Μίγμα άμμου και βότσαλων",
+      "depth_el": "Ρηχή έως μέτρια",
+      "facing_el": "Ανατολικά — ήρεμη, προστατευμένη",
+      "facilities_el": "Καλές: ξαπλώστρες, ταβέρνα, parking. Ερείπια αρχαίου λιμανιού ορατά στη θάλασσα.",
+      "desc_el": "Η πιο μακριά παραλία των Κυθήρων, κοντά στην αρχαία πόλη της Σκάνδειας. Αμμώδης, ήρεμη και σχεδόν πάντα μη πολυσύχναστη. Τα υποβρύχια ερείπια του αρχαίου λιμανιού είναι ορατά όταν τα νερά είναι διαυγή.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/1/13/Paleopoli_Beach.jpg",
+      "photo_credit": {
+        "artist": "Nsougia2 at English Wikipedia",
+        "license": "Public domain",
+        "license_url": "",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Paleopoli_Beach.jpg",
+        "source": "Wikimedia Commons"
+      }
+    },
+    {
+      "name": "Kapsali Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble and sand",
+      "length": "Two coves, each 200m",
+      "depth": "Medium — clear Ionian water",
+      "facing": "South-facing — sheltered by the castle headland",
+      "facilities": "Good: sunbeds, tavernas, boat hire. Chora castle visible above.",
+      "desc": "Twin coves directly below the castle of Chora — the most convenient beach on the island for those staying in the capital. Clear water and the extraordinary backdrop of the Venetian castle make it special.",
+      "commons": null,
+      "lat": 36.1317,
+      "lng": 23.01,
+      "name_el": "Παραλία Καψάλι",
+      "type_el": "Βότσαλα και άμμος",
+      "depth_el": "Μέτρια — διαυγή ιόνια νερά",
+      "facing_el": "Νότια — προστατευμένη από το ακρωτήριο του κάστρου",
+      "facilities_el": "Καλές: ξαπλώστρες, ταβέρνες, ενοικίαση σκαφών. Κάστρο Χώρας ορατό από πάνω.",
+      "desc_el": "Δύο δίδυμοι κόλποι ακριβώς κάτω από το κάστρο της Χώρας — η πιο βολική παραλία του νησιού για όσους μένουν στην πρωτεύουσα. Διαυγή νερά και το εξαιρετικό φόντο του ενετικού κάστρου την κάνουν ιδιαίτερη.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Beach_-_Kapsali_-_Kythira_-_Greece_-_2018.08.28_15.41.26.147_002.JPG/1920px-Beach_-_Kapsali_-_Kythira_-_Greece_-_2018.08.28_15.41.26.147_002.JPG",
+      "photo_credit": {
+        "artist": "Dionisio Calucci",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Beach_-_Kapsali_-_Kythira_-_Greece_-_2018.08.28_15.41.26.147_002.JPG",
+        "source": "Wikimedia Commons"
+      }
+    },
+    {
+      "name": "Limnaria Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "length": "200 m",
+      "depth": "Deep — crystal clear water",
+      "facing": "West-facing — open sea",
+      "facilities": "None — steep path or boat access only.",
+      "desc": "A remote pebble beach below the gorge of Milopotamos, accessible only on foot via a steep path or by boat. Dramatic cliff scenery and exceptional water clarity. Almost always completely empty.",
+      "commons": null,
+      "lat": 36.2217,
+      "lng": 22.965,
+      "name_el": "Παραλία Λιμνάρια",
+      "type_el": "Βότσαλα",
+      "depth_el": "Βαθιά — κρυστάλλινα νερά",
+      "facing_el": "Δυτικά — ανοιχτή θάλασσα",
+      "facilities_el": "Καμία — πρόσβαση μόνο με απότομο μονοπάτι ή βάρκα.",
+      "desc_el": "Μια απομακρυσμένη βότσαλη παραλία κάτω από το φαράγγι του Μυλοποτάμου, προσβάσιμη μόνο με τα πόδια από απότομο μονοπάτι ή με βάρκα. Δραματικό σκηνικό γκρεμών και εξαιρετική διαύγεια νερού. Σχεδόν πάντα εντελώς άδεια."
+    },
+    {
+      "name": "Kaladi Beach",
+      "wiki": null,
+      "rating": 4,
+      "type": "Pebble",
+      "length": "150 m",
+      "depth": "Deep — turquoise Ionian water",
+      "facing": "East-facing — sheltered cove",
+      "facilities": "None — 30-minute walk on foot only.",
+      "desc": "A wild, isolated pebble cove accessible only on foot. Deep turquoise water and complete solitude. One of the finest swimming spots in the south Ionian for those willing to walk.",
+      "commons": null,
+      "lat": 36.1317,
+      "lng": 23.1033,
+      "name_el": "Παραλία Καλάδι",
+      "type_el": "Βότσαλα",
+      "depth_el": "Βαθιά — τιρκουάζ ιόνια νερά",
+      "facing_el": "Ανατολικά — προστατευμένος κόλπος",
+      "facilities_el": "Καμία — 30 λεπτά πεζοπορία μόνο με τα πόδια.",
+      "desc_el": "Ένας άγριος, απομονωμένος βότσαλος κόλπος προσβάσιμος μόνο με τα πόδια. Βαθιά τιρκουάζ νερά και απόλυτη μοναξιά. Ένα από τα καλύτερα σημεία κολύμβησης του νότιου Ιονίου για όσους είναι πρόθυμοι να περπατήσουν.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Beach_-_Kaladi_-_Kythira_-_Greece_-_2018.08.26_11.35.39.631_001.JPG/1920px-Beach_-_Kaladi_-_Kythira_-_Greece_-_2018.08.26_11.35.39.631_001.JPG",
+      "photo_credit": {
+        "artist": "Dionisio Calucci",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Beach_-_Kaladi_-_Kythira_-_Greece_-_2018.08.26_11.35.39.631_001.JPG",
+        "source": "Wikimedia Commons"
+      }
+    }
+  ],
+  "name_el": "Κύθηρα",
+  "subtitle_el": "Το ξεχασμένο νησί — ενετικά κάστρα, άγρια φαράγγια και έρημες παραλίες",
+  "intro_el": "Τα Κύθηρα βρίσκονται ανάμεσα στον ιόνιο και αιγαιακό κόσμο, διοικητικά μέρος των Ιονίων νησιών αλλά γεωγραφικά μόνα νότια της Πελοποννήσου. Είναι από τα λιγότερο επισκεπτόμενα σημαντικά νησιά της Ελλάδας — κυρίως γιατί είναι δύσκολα προσβάσιμα — και αυτή ακριβώς είναι η μαγεία τους. Ενετική αρχιτεκτονική, βυζαντινά μοναστήρια, δραματικά φαράγγια, και παραλίες που είναι σχεδόν πάντα άδειες. Η αυστραλιανή κοινότητα εδώ (χιλιάδες μετανάστευσαν τη δεκαετία του 1950) δίνει στο νησί έναν ιδιαίτερο πολιτισμικό χαρακτήρα.",
+  "getting_there": {
+    "pills": [
+      "✈ Airport (small)",
+      "⛵ Neapoli 1h",
+      "€10–18"
+    ],
+    "pills_el": [
+      "✈ Αεροδρόμιο (μικρό)",
+      "⛵ Νεάπολη 1 ώρα",
+      "€10–18"
+    ],
+    "summary": "Small airport with daily Athens flights (Olympic, Sky Express). No Piraeus ferry — reach Kythira from Neapoli (Peloponnese SE, ~5h drive from Athens) by frequent ferry, ~1h.",
+    "summary_el": "Μικρό αεροδρόμιο με καθημερινές πτήσεις από Αθήνα (Olympic, Sky Express). Χωρίς πλοίο από Πειραιά — προσέγγιση από Νεάπολη (ΝΑ Πελοπόννησος, ~5 ώρες από Αθήνα) με συχνό πλοίο, ~1 ώρα.",
+    "tip": "For a short trip, fly. The Peloponnese drive only makes sense if you want to see Mani too.",
+    "tip_el": "Για σύντομο ταξίδι, πτήση. Η διαδρομή Πελοποννήσου έχει νόημα μόνο αν θες να δεις και τη Μάνη."
+  }
+}

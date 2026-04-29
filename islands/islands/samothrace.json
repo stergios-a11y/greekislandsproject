@@ -1,0 +1,392 @@
+{
+  "name": "Samothrace",
+  "intro": "Samothrace is an island of waterfalls, wild mountain pools, and ancient mystery. Mount Saos rises straight from the sea to 1,611 m, the highest peak in any Aegean island. The Sanctuary of the Great Gods was the most important secret religious cult in antiquity, attended by everyone from Herodotus to Philip II of Macedon. The Winged Victory of Samothrace (now in the Louvre) was found here. Today the island remains stubbornly untouristy — no airport, strong winds, goat-dotted mountainsides.",
+  "subtitle": "Waterfalls, ancient mysteries, and the highest peak in the Aegean",
+  "when_to_visit": {
+    "summary": "Samothrace is one of Greece's most distinctive islands — a near-vertical volcanic mountain rising from the sea, sacred since antiquity (the Sanctuary of the Great Gods, where the Winged Victory was found). Vathra rock pools and waterfalls. Best May-October; the August panigiri season is intense. Camping culture is huge here.",
+    "summary_el": "Η Σαμοθράκη είναι από τα πιο ξεχωριστά νησιά της Ελλάδας — σχεδόν κάθετο ηφαιστειογενές βουνό που σηκώνεται από τη θάλασσα, ιερό από την αρχαιότητα (Ιερό των Μεγάλων Θεών, όπου βρέθηκε η Νίκη). Βάθρες και καταρράκτες. Καλύτερα Μάιο-Οκτώβρη· η σεζόν των πανηγυριών Αυγούστου έντονη. Μεγάλη κουλτούρα κατασκήνωσης.",
+    "months": [
+      {
+        "tag": "avoid",
+        "why": "Off-season, rough sea",
+        "why_el": "Μόνο ντόπιοι, άγρια θάλασσα"
+      },
+      {
+        "tag": "avoid",
+        "why": "Tourism dormant",
+        "why_el": "Σε χειμερία νάρκη"
+      },
+      {
+        "tag": "ok",
+        "why": "Hiking, sea cold",
+        "why_el": "Πεζοπορία, κρύα θάλασσα"
+      },
+      {
+        "tag": "great",
+        "why": "Easter, waterfalls full",
+        "why_el": "Πάσχα, καταρράκτες γεμάτοι"
+      },
+      {
+        "tag": "great",
+        "why": "Sea warming, hiking",
+        "why_el": "Νερό κολυμπιέται πια"
+      },
+      {
+        "tag": "perfect",
+        "why": "Warm, Vathra pools",
+        "why_el": "Ζεστά, Βάθρες, πεζοπορία"
+      },
+      {
+        "tag": "great",
+        "why": "Hot, panigiria starting",
+        "why_el": "Ζέστη, αρχίζουν πανηγύρια"
+      },
+      {
+        "tag": "ok",
+        "why": "Peak panigiria, hot",
+        "why_el": "Κορύφωση πανηγυριών"
+      },
+      {
+        "tag": "perfect",
+        "why": "Best — warm, paths open",
+        "why_el": "Καλύτερος — ζεστά, πεζοπορία"
+      },
+      {
+        "tag": "great",
+        "why": "Last swims, hiking",
+        "why_el": "Τελευταία μπάνια, πεζοπορία"
+      },
+      {
+        "tag": "ok",
+        "why": "Pre-winter, paths open",
+        "why_el": "Τελευταία βδομάδα κίνησης"
+      },
+      {
+        "tag": "avoid",
+        "why": "Mostly shut",
+        "why_el": "Σχεδόν όλα κλειστά"
+      }
+    ]
+  },
+  "itinerary": {
+    "title": "3-day Itinerary for Samothrace",
+    "subtitle": "Waterfalls, ancient mysteries, and the highest peak in the Aegean",
+    "days": [
+      {
+        "day": 1,
+        "title": "Ancient Sanctuary & Chora",
+        "km": 25,
+        "drive_mins": 60,
+        "overnight": "Chora",
+        "color": "#0B8FAC",
+        "stops": [
+          {
+            "name": "Kamariotissa (port)",
+            "lat": 40.4829,
+            "lng": 25.4724,
+            "type": "harbour",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Ferry port. No particular charm but a good base for picking up a rental car.",
+            "name_el": "Καμαριώτισσα (λιμάνι)",
+            "desc_el": "Λιμάνι πλοίων. Χωρίς ιδιαίτερη γοητεία αλλά καλή βάση για να νοικιάσεις αυτοκίνητο.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Kamariotissa%2C_Samotraki%2C_Greece.jpg",
+            "photo_credit": {
+              "artist": "DocWoKav",
+              "license": "CC BY-SA 4.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Kamariotissa,_Samotraki,_Greece.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Sanctuary of the Great Gods",
+            "lat": 40.5061,
+            "lng": 25.5254,
+            "type": "museum",
+            "time": "11:00",
+            "wiki": "https://en.wikipedia.org/wiki/Sanctuary_of_the_Great_Gods",
+            "desc": "The most important mystery cult in antiquity. Extensive ruins of temples and initiation sites. The famous Winged Victory was found here.",
+            "name_el": "Ιερό των Μεγάλων Θεών",
+            "desc_el": "Η σημαντικότερη μυστηριακή λατρεία της αρχαιότητας. Εκτεταμένα ερείπια ναών και τόπων μύησης. Η διάσημη Νίκη βρέθηκε εδώ.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/20020800_Sanctuary_of_the_Great_Gods_Palaiopolis_Samothrace_island_Thrace_Greece.jpg/1920px-20020800_Sanctuary_of_the_Great_Gods_Palaiopolis_Samothrace_island_Thrace_Greece.jpg",
+            "photo_credit": {
+              "artist": "Ggia",
+              "license": "CC BY-SA 3.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:20020800_Sanctuary_of_the_Great_Gods_Palaiopolis_Samothrace_island_Thrace_Greece.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Archaeological Museum",
+            "lat": 40.5062,
+            "lng": 25.5243,
+            "type": "museum",
+            "time": "12:30",
+            "wiki": null,
+            "desc": "Small museum at the sanctuary entrance with excellent finds from the site.",
+            "name_el": "Αρχαιολογικό Μουσείο",
+            "desc_el": "Μικρό μουσείο στην είσοδο του ιερού με εξαιρετικά ευρήματα από τον χώρο.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Archaeological_museum_of_Samothrace.jpg",
+            "photo_credit": {
+              "artist": "ale3andro",
+              "license": "CC BY-SA 2.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Archaeological_museum_of_Samothrace.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Chora",
+            "lat": 40.4712,
+            "lng": 25.5307,
+            "type": "village",
+            "time": "15:00",
+            "wiki": "https://en.wikipedia.org/wiki/Chora_(Samothrace)",
+            "desc": "Medieval capital tucked into a mountain ravine — invisible from the sea. Stone-and-slate houses, Byzantine castle ruins.",
+            "name_el": "Χώρα",
+            "desc_el": "Μεσαιωνική πρωτεύουσα χωμένη σε ορεινή χαράδρα — αόρατη από τη θάλασσα. Σπίτια από πέτρα και σχιστόλιθο, ερείπια βυζαντινού κάστρου.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/20020800_Chora_Samothrace_island_Thrace_Greece.jpg/1920px-20020800_Chora_Samothrace_island_Thrace_Greece.jpg",
+            "photo_credit": {
+              "artist": "Ggia",
+              "license": "CC BY-SA 3.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:20020800_Chora_Samothrace_island_Thrace_Greece.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Dinner — Lefkada",
+            "lat": 40.4711,
+            "lng": 25.5312,
+            "type": "village",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Traditional taverna in Chora. Goat stew, local cheese, Samothracian herbs.",
+            "name_el": "Δείπνο — Λευκάδα",
+            "desc_el": "Παραδοσιακή ταβέρνα στη Χώρα. Κατσίκι στιφάδο, τοπικό τυρί, σαμοθρακίτικα βότανα."
+          }
+        ],
+        "title_el": "Παλαιόπολη & το Ιερό",
+        "overnight_el": "Χώρα"
+      },
+      {
+        "day": 2,
+        "title": "Waterfalls & Vathres",
+        "km": 30,
+        "drive_mins": 80,
+        "overnight": "Therma",
+        "color": "#3D8B6F",
+        "stops": [
+          {
+            "name": "Therma (Loutra)",
+            "lat": 40.5092,
+            "lng": 25.597,
+            "type": "village",
+            "time": "10:00",
+            "wiki": null,
+            "desc": "Spa village with sulfur hot springs. The trailhead for most waterfall hikes.",
+            "name_el": "Θέρμα (Λουτρά)",
+            "desc_el": "Ιαματικό χωριό με θειούχες ιαματικές πηγές. Η αρχή για τις περισσότερες πεζοπορίες σε καταρράκτες.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/20091128_Loutra_Thermes_Xanthi_Thrace_Greece_2.jpg/1920px-20091128_Loutra_Thermes_Xanthi_Thrace_Greece_2.jpg",
+            "photo_credit": {
+              "artist": "Ggia",
+              "license": "CC BY-SA 3.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:20091128_Loutra_Thermes_Xanthi_Thrace_Greece_2.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Fonias River Vathres",
+            "lat": 40.5124,
+            "lng": 25.6158,
+            "type": "beach",
+            "time": "11:30",
+            "wiki": null,
+            "desc": "The famous waterfall pools (vathres). Hike 30 min along the river past ice-cold swimming pools and cascades. Unique in the Aegean.",
+            "name_el": "Βάθρες Φωνιά",
+            "desc_el": "Οι διάσημες πισίνες καταρράκτη (βάθρες). Πεζοπορία 30 λεπτών στο ποτάμι περνώντας παγωμένες πισίνες κολύμβησης και καταρράκτες. Μοναδικό στο Αιγαίο."
+          },
+          {
+            "name": "Lunch — 1900",
+            "lat": 40.5093,
+            "lng": 25.5973,
+            "type": "village",
+            "time": "15:00",
+            "wiki": null,
+            "desc": "Therma taverna serving kid goat, local goat cheese, and wild greens.",
+            "name_el": "Μεσημεριανό — 1900",
+            "desc_el": "Ταβέρνα των Θέρμων που σερβίρει κατσικάκι, τοπικό κατσικίσιο τυρί και άγρια χόρτα."
+          },
+          {
+            "name": "Therma Thermal Springs",
+            "lat": 40.5112,
+            "lng": 25.5958,
+            "type": "village",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Public outdoor thermal baths in the village. Small fee, open until late.",
+            "name_el": "Ιαματικές Πηγές Θερμών",
+            "desc_el": "Δημόσια υπαίθρια ιαματικά λουτρά στο χωριό. Μικρή αμοιβή, ανοιχτά μέχρι αργά."
+          }
+        ],
+        "title_el": "Καταρράκτες & Βάθρες",
+        "overnight_el": "Θέρμα"
+      },
+      {
+        "day": 3,
+        "title": "Southern Coast & Pachia Ammos",
+        "km": 35,
+        "drive_mins": 90,
+        "overnight": "Departure",
+        "color": "#C4962A",
+        "stops": [
+          {
+            "name": "Pachia Ammos",
+            "lat": 40.4162,
+            "lng": 25.5361,
+            "type": "beach",
+            "time": "10:30",
+            "wiki": null,
+            "desc": "Samothrace's only proper sandy beach, on the south coast. Long, wild, 30-min drive from Chora.",
+            "name_el": "Παχιά Άμμος",
+            "desc_el": "Η μοναδική κανονική αμμώδης παραλία της Σαμοθράκης, στη νότια ακτή. Μακρά, άγρια, 30 λεπτά οδήγηση από τη Χώρα.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Pachia_Ammos_Beach%2C_Samothrace.jpg/1920px-Pachia_Ammos_Beach%2C_Samothrace.jpg",
+            "photo_credit": {
+              "artist": "DocWoKav",
+              "license": "CC BY-SA 4.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+              "page_url": "https://commons.wikimedia.org/wiki/File:Pachia_Ammos_Beach,_Samothrace.jpg",
+              "source": "Wikimedia Commons"
+            }
+          },
+          {
+            "name": "Kremasto Waterfall",
+            "lat": 40.4229,
+            "lng": 25.5563,
+            "type": "beach",
+            "time": "13:30",
+            "wiki": null,
+            "desc": "Spectacular 35-m waterfall that drops into the sea. Walk along the beach for 15 min. Peculiar to Samothrace.",
+            "name_el": "Καταρράκτης Κρεμαστός",
+            "desc_el": "Εντυπωσιακός καταρράκτης 35 μέτρων που πέφτει στη θάλασσα. Περπάτησε στην παραλία 15 λεπτά. Χαρακτηριστικός της Σαμοθράκης."
+          },
+          {
+            "name": "Lakkoma Beach",
+            "lat": 40.439,
+            "lng": 25.4858,
+            "type": "beach",
+            "time": "15:30",
+            "wiki": null,
+            "desc": "Pebble beach on the southwest coast. A few tavernas, good for late lunch before the ferry.",
+            "name_el": "Παραλία Λάκκωμα",
+            "desc_el": "Βότσαλη παραλία στη νοτιοδυτική ακτή. Μερικές ταβέρνες, καλή για όψιμο μεσημεριανό πριν το πλοίο."
+          }
+        ],
+        "title_el": "Νότια Ακτή & Παχιά Άμμος",
+        "overnight_el": "Αναχώρηση"
+      }
+    ],
+    "title_el": "Πρόγραμμα 3 Ημερών στη Σαμοθράκη",
+    "subtitle_el": "Το Ιερό των Μεγάλων Θεών την 1η ημέρα, οι καταρράκτες και τα βάθρα του Φενγκάρι τη 2η, η νότια ακτή με την Παχιά Άμμο την 3η."
+  },
+  "beaches": [
+    {
+      "name": "Pachia Ammos",
+      "lat": 40.4162,
+      "lng": 25.5361,
+      "type": "Fine sand",
+      "length": "700 m",
+      "depth": "Gradual",
+      "facing": "South — can be windy",
+      "facilities": "Canteen, umbrellas",
+      "wiki": null,
+      "desc": "Samothrace's only long sandy beach. Golden dunes, rarely crowded.",
+      "name_el": "Παχιά Άμμος",
+      "desc_el": "Η μοναδική μακρά αμμώδης παραλία της Σαμοθράκης. Χρυσές αμμοθίνες, σπάνια πολυσύχναστη.",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Σταδιακή",
+      "facing_el": "Νότια — μπορεί να είναι ανεμώδης",
+      "facilities_el": "Καντίνα, ομπρέλες",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Pachia_Ammos_Beach%2C_Samothrace.jpg/1920px-Pachia_Ammos_Beach%2C_Samothrace.jpg",
+      "photo_credit": {
+        "artist": "DocWoKav",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Pachia_Ammos_Beach,_Samothrace.jpg",
+        "source": "Wikimedia Commons"
+      }
+    },
+    {
+      "name": "Vatos",
+      "lat": 40.4132,
+      "lng": 25.5675,
+      "type": "Pebbles",
+      "length": "250 m",
+      "depth": "Deep",
+      "facing": "South",
+      "facilities": "None — naturist friendly",
+      "wiki": null,
+      "desc": "Remote south coast pebble beach. Clear water, accessed by a rough 4x4 track.",
+      "name_el": "Βάτος",
+      "desc_el": "Απομακρυσμένη βότσαλη παραλία της νότιας ακτής. Διαυγή νερά, προσβάσιμη με κακή 4x4 διαδρομή.",
+      "type_el": "Βότσαλα",
+      "depth_el": "Βαθιά",
+      "facing_el": "Νότια",
+      "facilities_el": "Καμία — φιλική προς γυμνιστές",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Vatos_Beach_Samothrace.jpg/1920px-Vatos_Beach_Samothrace.jpg",
+      "photo_credit": {
+        "artist": "DocWoKav",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Vatos_Beach_Samothrace.jpg",
+        "source": "Wikimedia Commons"
+      }
+    },
+    {
+      "name": "Kipos",
+      "lat": 40.5011,
+      "lng": 25.6587,
+      "type": "Large pebbles",
+      "length": "400 m",
+      "depth": "Deep",
+      "facing": "East",
+      "facilities": "One taverna",
+      "wiki": null,
+      "desc": "End-of-the-road beach with views across to Turkey. Powerful currents — experienced swimmers only.",
+      "name_el": "Κήπος",
+      "desc_el": "Παραλία στο τέλος του δρόμου με θέες απέναντι στην Τουρκία. Ισχυρά ρεύματα — μόνο για έμπειρους κολυμβητές.",
+      "type_el": "Μεγάλα βότσαλα",
+      "depth_el": "Βαθιά",
+      "facing_el": "Ανατολικά",
+      "facilities_el": "Μία ταβέρνα",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Kipos_Beach%2C_Samothrace.jpg/1920px-Kipos_Beach%2C_Samothrace.jpg",
+      "photo_credit": {
+        "artist": "DocWoKav",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Kipos_Beach,_Samothrace.jpg",
+        "source": "Wikimedia Commons"
+      }
+    }
+  ],
+  "name_el": "Σαμοθράκη",
+  "subtitle_el": "Καταρράκτες, αρχαία μυστήρια, και η ψηλότερη κορυφή του Αιγαίου",
+  "intro_el": "Η Σαμοθράκη είναι ένα νησί με καταρράκτες, άγριες ορεινές πισίνες και αρχαίο μυστήριο. Το Όρος Σάος υψώνεται κατευθείαν από τη θάλασσα στα 1.611 μέτρα, η ψηλότερη κορυφή κάθε αιγαιοπελαγίτικου νησιού. Το Ιερό των Μεγάλων Θεών ήταν η σημαντικότερη μυστική θρησκευτική λατρεία της αρχαιότητας, στην οποία συμμετείχαν όλοι από τον Ηρόδοτο μέχρι τον Φίλιππο Β' της Μακεδονίας. Η Νίκη της Σαμοθράκης (τώρα στο Λούβρο) βρέθηκε εδώ. Σήμερα το νησί παραμένει πεισματικά μη τουριστικό — χωρίς αεροδρόμιο, ισχυροί άνεμοι, βουνοπλαγιές με κατσίκες.",
+  "getting_there": {
+    "pills": [
+      "⛵ Alexandroupoli 2.5h",
+      "€15–22"
+    ],
+    "pills_el": [
+      "⛵ Αλεξανδρούπολη 2.5h",
+      "€15–22"
+    ],
+    "summary": "No airport. No Piraeus ferry. Reach Samothrace from Alexandroupoli (mainland NE, ~10h drive from Athens or domestic flight) — daily ferry, ~2.5h.",
+    "summary_el": "Χωρίς αεροδρόμιο. Χωρίς πλοίο από Πειραιά. Προσέγγιση από Αλεξανδρούπολη (ηπειρωτική ΒΑ, ~10 ώρες από Αθήνα ή πτήση) — καθημερινό πλοίο, ~2.5 ώρες.",
+    "tip": "Fly to Alexandroupoli first — driving from Athens kills two days.",
+    "tip_el": "Πτήση στην Αλεξανδρούπολη πρώτα — οδικώς από Αθήνα τρώει δύο μέρες."
+  }
+}
