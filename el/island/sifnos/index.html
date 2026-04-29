@@ -46,8 +46,8 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
@@ -98,6 +98,35 @@
   .seo-beach dl { display: grid; grid-template-columns: 120px 1fr; gap: 4px 12px; font-size: var(--text-meta, 13px); margin: 0; }
   .seo-beach dt { font-weight: 600; color: var(--ink-3, #555); }
   .seo-beach dd { margin: 0; }
+  .seo-local-block { margin-bottom: 24px; }
+  .seo-local-heading {
+    font-family: var(--display, serif); font-size: var(--text-sub, 18px); margin: 0 0 10px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-icon { margin-right: 6px; }
+  .seo-local-items { display: flex; flex-direction: column; gap: 12px; }
+  .seo-local-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 10px 0;
+  }
+  .seo-local-item + .seo-local-item { border-top: 1px solid rgba(11,143,172,0.10); }
+  .seo-local-image {
+    width: 80px; height: 80px; flex: 0 0 80px;
+    border-radius: 6px; object-fit: cover;
+  }
+  .seo-local-text { flex: 1; min-width: 0; }
+  .seo-local-name {
+    font-weight: 600; font-size: var(--text-body, 16px); margin: 0 0 4px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-when {
+    margin-left: 8px; font-weight: 400;
+    color: var(--ink-3, #555); font-size: var(--text-meta, 13px);
+  }
+  .seo-local-desc {
+    font-size: var(--text-small, 14px); color: var(--ink-2, #333);
+    line-height: 1.5; margin: 0;
+  }
   .seo-related a { color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }
   .seo-related a:hover { text-decoration: underline; }
 
@@ -231,6 +260,7 @@
     <dt>Υποδομές</dt><dd>Βασικές: μικρή ταβέρνα, περιορισμένες ξαπλώστρες. Απομακρυσμένη — μακρύς φιδογυριστός δρόμος.</dd>
   </dl>
 </article></section>
+  <section class="seo-local"><h2>Τοπικά &amp; Εποχιακά</h2><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🍽</span>Τοπικά Προϊόντα</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Μαστέλο</div><div class="seo-local-desc">Αρνί ή κατσίκι σιγομαγειρεμένο σε πήλινο σκεύος (μαστέλο) με κόκκινο κρασί και άνηθο, παραδοσιακά για το Πάσχα. Όλο τον χρόνο στο Στέκι στην Απολλωνία και στις περισσότερες ταβέρνες.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Ρεβιθάδα</div><div class="seo-local-desc">Ρεβίθια στιφάδο σιγοψημένα όλη νύχτα σε πήλινο σκεύος στον ξυλόφουρνο του χωριού. Παράδοση Κυριακής. Στις περισσότερες ταβέρνες· καλύτερα στον Αρτεμώνα και στο Κάστρο.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Μανούρα</div><div class="seo-local-desc">Σκληρή ξινομανούρα τυλιγμένη σε τρυγία, με μωβ φλούδα. Πικάντικη και αλμυρή. Σε κάθε χωριάτικο μαγαζί ή στον συνεταιρισμό στην Απολλωνία.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Αμυγδαλωτά Σίφνου</div><div class="seo-local-desc">Μαλακά αμυγδαλωτά αρωματισμένα με ροδόνερο και ζάχαρη άχνη. Ο φούρνος της οικογένειας Θεοδώρου στον Αρτεμώνα είναι η κλασική αναφορά.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🧵</span>Χειροτεχνία &amp; Αναμνηστικά</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Κεραμική</div><div class="seo-local-desc">Η Σίφνος παράγει κεραμικά εδώ και 5.000 χρόνια και συνεχίζει. Το ίδιο το μαστέλο είναι αναμνηστικό που αξίζει. Εργαστήρια σε Βαθύ και Καμάρες· το κεραμοποιείο στην Απολλωνία έχει την πιο ευρεία γκάμα.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🎉</span>Πανηγύρια &amp; Εκδηλώσεις</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Παναγία Χρυσοπηγή<span class="seo-local-when">Αγίου Πνεύματος (κινητή, Μάιος–Ιούνιος)</span></div><div class="seo-local-desc">Το μεγαλύτερο πανηγύρι του νησιού, στο μοναστήρι πάνω στον γκρεμό. Η εικόνα περιφέρεται· οι ταβέρνες σερβίρουν δωρεάν ρεβιθάδα και αρνί σε όλους.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Προφήτη Ηλία<span class="seo-local-when">20 Ιουλίου</span></div><div class="seo-local-desc">Πεζοπορία στην ψηλότερη κορυφή του νησιού (680μ), όπου βρίσκεται μικρό εκκλησάκι. Οι ντόπιοι ανεβαίνουν πριν την αυγή.</div></div></div></div></div></section>
   <section class="seo-related"><h2>Άλλα νησιά στα/στο Κυκλάδες</h2><p><a href="/el/island/santorini/">Σαντορίνη</a> · <a href="/el/island/milos/">Milos</a> · <a href="/el/island/naxos/">Naxos</a> · <a href="/el/island/mykonos/">Mykonos</a> · <a href="/el/island/paros/">Πάρος</a> · <a href="/el/island/folegandros/">Φολέγανδρος</a></p></section>
 </article>
 

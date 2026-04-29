@@ -46,8 +46,8 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
@@ -98,6 +98,35 @@
   .seo-beach dl { display: grid; grid-template-columns: 120px 1fr; gap: 4px 12px; font-size: var(--text-meta, 13px); margin: 0; }
   .seo-beach dt { font-weight: 600; color: var(--ink-3, #555); }
   .seo-beach dd { margin: 0; }
+  .seo-local-block { margin-bottom: 24px; }
+  .seo-local-heading {
+    font-family: var(--display, serif); font-size: var(--text-sub, 18px); margin: 0 0 10px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-icon { margin-right: 6px; }
+  .seo-local-items { display: flex; flex-direction: column; gap: 12px; }
+  .seo-local-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 10px 0;
+  }
+  .seo-local-item + .seo-local-item { border-top: 1px solid rgba(11,143,172,0.10); }
+  .seo-local-image {
+    width: 80px; height: 80px; flex: 0 0 80px;
+    border-radius: 6px; object-fit: cover;
+  }
+  .seo-local-text { flex: 1; min-width: 0; }
+  .seo-local-name {
+    font-weight: 600; font-size: var(--text-body, 16px); margin: 0 0 4px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-when {
+    margin-left: 8px; font-weight: 400;
+    color: var(--ink-3, #555); font-size: var(--text-meta, 13px);
+  }
+  .seo-local-desc {
+    font-size: var(--text-small, 14px); color: var(--ink-2, #333);
+    line-height: 1.5; margin: 0;
+  }
   .seo-related a { color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }
   .seo-related a:hover { text-decoration: underline; }
 
@@ -267,6 +296,7 @@
     <dt>Facilities</dt><dd>Good: sunbeds, tavernas, beach bars. Famous as the filming location for Zorba the Greek.</dd>
   </dl>
 </article></section>
+  <section class="seo-local"><h2>Local &amp; Seasonal</h2><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🍽</span>Local Specialties</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Chaniotiko boureki</div><div class="seo-local-desc">Layered zucchini, potato, and mizithra cheese pie — Chaniotic specialty. Found at most village tavernas; the version at Tamam in Chania old town is celebrated.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Apaki</div><div class="seo-local-desc">Smoked pork, vinegar-cured then smoked over aromatic herbs. Eaten cold in slices with raki. A Chaniotic specialty, available at village butchers.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Chaniotiko cheese</div><div class="seo-local-desc">Region-wide tradition: graviera, mizithra, anthotyros, malaka — each with PDO status. The cheese cooperative in Chania town has the full range.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Sfakianopita</div><div class="seo-local-desc">Sphakian cheese pie — thin pastry filled with myzithra, fried, drizzled with honey. The signature dish of Sfakia in southern Chania. Try at Sfakia village or any Chaniotic taverna.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🎉</span>Festivals &amp; Events</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Battle of Crete commemoration<span class="seo-local-when">Late May</span></div><div class="seo-local-desc">Week of events around 20–27 May commemorating the WWII battle. Most events centred on the cemetery at Souda and various villages where the resistance was fiercest.</div></div></div></div></div></section>
   <section class="seo-related"><h2>Other islands in the Crete</h2><p><a href="/island/heraklion/">Crete (Heraklion)</a> · <a href="/island/rethymno/">Crete (Rethymno)</a> · <a href="/island/lasithi/">Crete (Lasithi)</a> · <a href="/island/gavdos/">Gavdos</a></p></section>
 </article>
 

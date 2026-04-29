@@ -146,6 +146,88 @@ def localized_name(key, data, meta, lang='en'):
     return data.get('name') or meta.get('name') or key.title()
 
 # ---------------------------------------------------------------------
+# Local & seasonal section — mirrors buildLocalSection() in script.js.
+# Renders specialties / crafts / festivals that the SPA shows but Google
+# previously didn't see. Each item supports an optional `image` field
+# (80x80 thumbnail, served by Cloudinary URL transforms).
+# ---------------------------------------------------------------------
+LOCAL_I18N = {
+    'en': {
+        'section_title': 'Local & Seasonal',
+        'specialties': 'Local Specialties',
+        'crafts': 'Crafts & Souvenirs',
+        'festivals': 'Festivals & Events',
+    },
+    'el': {
+        'section_title': 'Τοπικά & Εποχιακά',
+        'specialties': 'Τοπικά Προϊόντα',
+        'crafts': 'Χειροτεχνία & Αναμνηστικά',
+        'festivals': 'Πανηγύρια & Εκδηλώσεις',
+    },
+}
+
+def build_local_html(data, lang='en'):
+    """Mirror script.js buildLocalSection. Empty string if no local content."""
+    specs = data.get('specialties') or []
+    crafts = data.get('crafts') or []
+    fests = data.get('festivals') or []
+    if not specs and not crafts and not fests:
+        return ''
+
+    labels = LOCAL_I18N[lang]
+
+    def render_item(item):
+        name = pick(item, 'name', lang) or ''
+        desc = pick(item, 'desc', lang) or ''
+        when = pick(item, 'when', lang) or ''
+        image = item.get('image') or ''
+        when_html = f'<span class="seo-local-when">{esc(when)}</span>' if when else ''
+        if image:
+            image_html = (
+                f'<img class="seo-local-image" src="{esc(image)}" '
+                f'alt="{esc(name)}" loading="lazy" width="80" height="80">'
+            )
+            wrap_class = 'seo-local-item seo-local-item-with-image'
+        else:
+            image_html = ''
+            wrap_class = 'seo-local-item'
+        desc_html = f'<div class="seo-local-desc">{safe_html(desc)}</div>' if desc else ''
+        return (
+            f'<div class="{wrap_class}">'
+            f'{image_html}'
+            f'<div class="seo-local-text">'
+            f'<div class="seo-local-name">{esc(name)}{when_html}</div>'
+            f'{desc_html}'
+            f'</div>'
+            f'</div>'
+        )
+
+    def block(title, items, icon):
+        if not items:
+            return ''
+        rendered = ''.join(render_item(it) for it in items)
+        return (
+            f'<div class="seo-local-block">'
+            f'<h3 class="seo-local-heading">'
+            f'<span class="seo-local-icon" aria-hidden="true">{icon}</span>'
+            f'{esc(title)}</h3>'
+            f'<div class="seo-local-items">{rendered}</div>'
+            f'</div>'
+        )
+
+    inner = (
+        block(labels['specialties'], specs, '🍽')
+        + block(labels['crafts'], crafts, '🧵')
+        + block(labels['festivals'], fests, '🎉')
+    )
+    return (
+        f'<section class="seo-local">'
+        f'<h2>{esc(labels["section_title"])}</h2>'
+        f'{inner}'
+        f'</section>'
+    )
+
+# ---------------------------------------------------------------------
 # JSON-LD structured data — this is how we win rich snippets
 # ---------------------------------------------------------------------
 def build_structured_data(key, data, meta, lang='en'):
@@ -382,6 +464,9 @@ def render_body(key, data, meta, lang='en'):
 </article>''')
         beaches_html = f'<section class="seo-beaches"><h2>{heading}</h2>{"".join(beach_blocks)}</section>'
 
+    # Local & seasonal — specialties / crafts / festivals (only renders if any present)
+    local_html = build_local_html(data, lang)
+
     # Related islands (internal linking — SEO gold)
     group = meta.get('group', '')
     related = [k for k, m in ISLAND_META.items()
@@ -414,6 +499,7 @@ def render_body(key, data, meta, lang='en'):
   {getting_there_html}
   {itinerary_html}
   {beaches_html}
+  {local_html}
   {related_html}
 </article>'''
 
@@ -491,8 +577,8 @@ def render_page(key, data, meta, lang='en'):
   .seo-subtitle {{ color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }}
   .seo-rating {{ color: var(--ink-2, #333); font-size: var(--text-small, 14px); }}
   .seo-intro p {{ font-size: var(--text-sub, 18px); }}
-  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there {{ margin-top: 36px; }}
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {{
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local {{ margin-top: 36px; }}
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2 {{
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }}
@@ -543,6 +629,35 @@ def render_page(key, data, meta, lang='en'):
   .seo-beach dl {{ display: grid; grid-template-columns: 120px 1fr; gap: 4px 12px; font-size: var(--text-meta, 13px); margin: 0; }}
   .seo-beach dt {{ font-weight: 600; color: var(--ink-3, #555); }}
   .seo-beach dd {{ margin: 0; }}
+  .seo-local-block {{ margin-bottom: 24px; }}
+  .seo-local-heading {{
+    font-family: var(--display, serif); font-size: var(--text-sub, 18px); margin: 0 0 10px;
+    color: var(--ink-1, #222);
+  }}
+  .seo-local-icon {{ margin-right: 6px; }}
+  .seo-local-items {{ display: flex; flex-direction: column; gap: 12px; }}
+  .seo-local-item {{
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 10px 0;
+  }}
+  .seo-local-item + .seo-local-item {{ border-top: 1px solid rgba(11,143,172,0.10); }}
+  .seo-local-image {{
+    width: 80px; height: 80px; flex: 0 0 80px;
+    border-radius: 6px; object-fit: cover;
+  }}
+  .seo-local-text {{ flex: 1; min-width: 0; }}
+  .seo-local-name {{
+    font-weight: 600; font-size: var(--text-body, 16px); margin: 0 0 4px;
+    color: var(--ink-1, #222);
+  }}
+  .seo-local-when {{
+    margin-left: 8px; font-weight: 400;
+    color: var(--ink-3, #555); font-size: var(--text-meta, 13px);
+  }}
+  .seo-local-desc {{
+    font-size: var(--text-small, 14px); color: var(--ink-2, #333);
+    line-height: 1.5; margin: 0;
+  }}
   .seo-related a {{ color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }}
   .seo-related a:hover {{ text-decoration: underline; }}
 

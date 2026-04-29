@@ -46,8 +46,8 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
@@ -98,6 +98,35 @@
   .seo-beach dl { display: grid; grid-template-columns: 120px 1fr; gap: 4px 12px; font-size: var(--text-meta, 13px); margin: 0; }
   .seo-beach dt { font-weight: 600; color: var(--ink-3, #555); }
   .seo-beach dd { margin: 0; }
+  .seo-local-block { margin-bottom: 24px; }
+  .seo-local-heading {
+    font-family: var(--display, serif); font-size: var(--text-sub, 18px); margin: 0 0 10px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-icon { margin-right: 6px; }
+  .seo-local-items { display: flex; flex-direction: column; gap: 12px; }
+  .seo-local-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 10px 0;
+  }
+  .seo-local-item + .seo-local-item { border-top: 1px solid rgba(11,143,172,0.10); }
+  .seo-local-image {
+    width: 80px; height: 80px; flex: 0 0 80px;
+    border-radius: 6px; object-fit: cover;
+  }
+  .seo-local-text { flex: 1; min-width: 0; }
+  .seo-local-name {
+    font-weight: 600; font-size: var(--text-body, 16px); margin: 0 0 4px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-when {
+    margin-left: 8px; font-weight: 400;
+    color: var(--ink-3, #555); font-size: var(--text-meta, 13px);
+  }
+  .seo-local-desc {
+    font-size: var(--text-small, 14px); color: var(--ink-2, #333);
+    line-height: 1.5; margin: 0;
+  }
   .seo-related a { color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }
   .seo-related a:hover { text-decoration: underline; }
 
@@ -224,6 +253,7 @@
     <dt>Υποδομές</dt><dd>Πολύ καλές: αρκετές ταβέρνες, ξαπλώστρες, watersports.</dd>
   </dl>
 </article></section>
+  <section class="seo-local"><h2>Τοπικά &amp; Εποχιακά</h2><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🍽</span>Τοπικά Προϊόντα</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Πουγκιά</div><div class="seo-local-desc">Πατμιακές τυρόπιτες — τηγανητά μισοφέγγαρα γεμάτα φρέσκο τυρί και βότανα. Διαφορετικά από τα γλυκά κασιώτικα: αυτά είναι αλμυρά. Στο Πατρικό στη Χώρα.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Θυμαρίσιο μέλι Πάτμου</div><div class="seo-local-desc">Έντονα αρωματικό μέλι από τις ξερές πλαγιές του νησιού. Στο μαγαζί του μοναστηριού και σε μικρούς παραγωγούς στη Σκάλα.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🎉</span>Πανηγύρια &amp; Εκδηλώσεις</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Πάσχα (Μεγάλη Εβδομάδα)<span class="seo-local-when">Κινητή γιορτή, Μάρτιος–Μάιος</span></div><div class="seo-local-desc">Το Πάσχα της Πάτμου είναι από τα πιο εντυπωσιακά στην Ελλάδα — το μοναστήρι τελεί τον Νιπτήρα τη Μεγάλη Πέμπτη, με τον ηγούμενο να πλένει τα πόδια 12 μοναχών. Προσκυνητές από όλον τον ορθόδοξο κόσμο.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Αγίου Ιωάννου του Θεολόγου<span class="seo-local-when">26 Σεπτεμβρίου</span></div><div class="seo-local-desc">Γιορτή του προστάτη αγίου στο μοναστήρι του Αγίου Ιωάννου. Προσκύνημα και λιτανεία.</div></div></div></div></div></section>
   <section class="seo-related"><h2>Άλλα νησιά στα/στο Δωδεκάνησα</h2><p><a href="/el/island/rhodes/">Ρόδος</a> · <a href="/el/island/kastellorizo/">Καστελλόριζο</a> · <a href="/el/island/karpathos/">Karpathos</a> · <a href="/el/island/symi/">Symi</a> · <a href="/el/island/astypalaia/">Αστυπάλαια</a> · <a href="/el/island/nisyros/">Νίσυρος</a></p></section>
 </article>
 

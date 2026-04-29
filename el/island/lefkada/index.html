@@ -46,8 +46,8 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
@@ -98,6 +98,35 @@
   .seo-beach dl { display: grid; grid-template-columns: 120px 1fr; gap: 4px 12px; font-size: var(--text-meta, 13px); margin: 0; }
   .seo-beach dt { font-weight: 600; color: var(--ink-3, #555); }
   .seo-beach dd { margin: 0; }
+  .seo-local-block { margin-bottom: 24px; }
+  .seo-local-heading {
+    font-family: var(--display, serif); font-size: var(--text-sub, 18px); margin: 0 0 10px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-icon { margin-right: 6px; }
+  .seo-local-items { display: flex; flex-direction: column; gap: 12px; }
+  .seo-local-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 10px 0;
+  }
+  .seo-local-item + .seo-local-item { border-top: 1px solid rgba(11,143,172,0.10); }
+  .seo-local-image {
+    width: 80px; height: 80px; flex: 0 0 80px;
+    border-radius: 6px; object-fit: cover;
+  }
+  .seo-local-text { flex: 1; min-width: 0; }
+  .seo-local-name {
+    font-weight: 600; font-size: var(--text-body, 16px); margin: 0 0 4px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-when {
+    margin-left: 8px; font-weight: 400;
+    color: var(--ink-3, #555); font-size: var(--text-meta, 13px);
+  }
+  .seo-local-desc {
+    font-size: var(--text-small, 14px); color: var(--ink-2, #333);
+    line-height: 1.5; margin: 0;
+  }
   .seo-related a { color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }
   .seo-related a:hover { text-decoration: underline; }
 
@@ -260,6 +289,7 @@
     <dt>Υποδομές</dt><dd>Στοιχειώδεις: μικρό beach bar, περιορισμένες ξαπλώστρες. Ήσυχη και χωρίς πλήθη.</dd>
   </dl>
 </article></section>
+  <section class="seo-local"><h2>Τοπικά &amp; Εποχιακά</h2><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🍽</span>Τοπικά Προϊόντα</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Σαλάμι Λευκάδας</div><div class="seo-local-desc">Παστό χοιρινό σαλάμι ΠΓΕ, παράγεται εδώ και αιώνες. Ξεχωριστά αρωματισμένο. Σε κάθε χωριάτικο χασάπη και μαγαζί.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Σοφιγάδο</div><div class="seo-local-desc">Σιγομαγειρεμένο μοσχαράκι με κυδώνια και κρασί Βερτζάμι — λευκαδίτικο χειμωνιάτικο φαγητό. Στο Φρύνι Στο Μώλο και σε ταβέρνες της Καρυάς.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Μαντολάτο Λευκάδας</div><div class="seo-local-desc">Λευκαδίτικη εκδοχή του ιονικού μαντολάτου. Λιγότερο ροδόνερο από το κεφαλονίτικο· πιο σκληρή υφή.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Κρασί Βερτζάμι</div><div class="seo-local-desc">Γηγενής βαθιά μωβ ποικιλία. Σκούρο, τανικό, ξεχωριστό. Ο τοπικός συνεταιρισμός στη Λυγιά και μικροί παραγωγοί προσφέρουν γευσιγνωσίες.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🧵</span>Χειροτεχνία &amp; Αναμνηστικά</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Καρσάνικο κέντημα</div><div class="seo-local-desc">Παραδοσιακό κέντημα από την Καρυά. Το μουσείο της Καρυάς πουλάει έργα τοπικών γυναικών που ακολουθούν μοτίβα γενεών.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🎉</span>Πανηγύρια &amp; Εκδηλώσεις</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Διεθνές Φεστιβάλ Λόγου και Τέχνης<span class="seo-local-when">Τέλη Αυγούστου</span></div><div class="seo-local-desc">Μεγάλο φολκλορικό και καλλιτεχνικό φεστιβάλ στη Χώρα της Λευκάδας με διεθνή χορευτικά συγκροτήματα, μουσική και θέατρο. Οι ημερομηνίες αλλάζουν.</div></div></div></div></div></section>
   <section class="seo-related"><h2>Άλλα νησιά στα/στο Ιόνιο</h2><p><a href="/el/island/corfu/">Corfu</a> · <a href="/el/island/kefalonia/">Κεφαλονιά</a> · <a href="/el/island/zakynthos/">Zakynthos</a> · <a href="/el/island/paxos/">Παξοί</a> · <a href="/el/island/ithaca/">Ithaca</a> · <a href="/el/island/kythira/">Κύθηρα</a></p></section>
 </article>
 

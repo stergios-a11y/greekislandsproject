@@ -46,8 +46,8 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
@@ -98,6 +98,35 @@
   .seo-beach dl { display: grid; grid-template-columns: 120px 1fr; gap: 4px 12px; font-size: var(--text-meta, 13px); margin: 0; }
   .seo-beach dt { font-weight: 600; color: var(--ink-3, #555); }
   .seo-beach dd { margin: 0; }
+  .seo-local-block { margin-bottom: 24px; }
+  .seo-local-heading {
+    font-family: var(--display, serif); font-size: var(--text-sub, 18px); margin: 0 0 10px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-icon { margin-right: 6px; }
+  .seo-local-items { display: flex; flex-direction: column; gap: 12px; }
+  .seo-local-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 10px 0;
+  }
+  .seo-local-item + .seo-local-item { border-top: 1px solid rgba(11,143,172,0.10); }
+  .seo-local-image {
+    width: 80px; height: 80px; flex: 0 0 80px;
+    border-radius: 6px; object-fit: cover;
+  }
+  .seo-local-text { flex: 1; min-width: 0; }
+  .seo-local-name {
+    font-weight: 600; font-size: var(--text-body, 16px); margin: 0 0 4px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-when {
+    margin-left: 8px; font-weight: 400;
+    color: var(--ink-3, #555); font-size: var(--text-meta, 13px);
+  }
+  .seo-local-desc {
+    font-size: var(--text-small, 14px); color: var(--ink-2, #333);
+    line-height: 1.5; margin: 0;
+  }
   .seo-related a { color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }
   .seo-related a:hover { text-decoration: underline; }
 
@@ -238,6 +267,7 @@
     <dt>Facilities</dt><dd>Good: sunbeds, tavernas, parking. Family-friendly.</dd>
   </dl>
 </article></section>
+  <section class="seo-local"><h2>Local &amp; Seasonal</h2><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🍽</span>Local Specialties</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Samos sweet wine</div><div class="seo-local-desc">PDO Muscat sweet wine — celebrated since antiquity, exported worldwide. Visit the EOSS cooperative museum and shop in Malagari (just outside Vathy) for tastings of the full range.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Samiotiko honey</div><div class="seo-local-desc">Pine honey from the wooded mountains. Darker and more resinous than Cretan thyme honey. Available at small producers in Vourliotes and Manolates villages.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Loukoumades Samiotika</div><div class="seo-local-desc">Samian-style fritters — slightly different recipe from the Athenian standard, often served with sweet wine reduction instead of honey. Try in the Pythagorio harbour.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🎉</span>Festivals &amp; Events</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Heraion festival<span class="seo-local-when">Late August</span></div><div class="seo-local-desc">Cultural festival at the ancient Heraion sanctuary — concerts, theatre, and historical commemorations of the goddess Hera, ancient patroness of Samos. Dates vary; check the local municipality.</div></div></div></div></div></section>
   <section class="seo-related"><h2>Other islands in the NE Aegean</h2><p><a href="/island/lesvos/">Lesvos</a> · <a href="/island/ikaria/">Ikaria</a> · <a href="/island/chios/">Chios</a> · <a href="/island/lemnos/">Lemnos</a> · <a href="/island/agios-efstratios/">Agios Efstratios</a> · <a href="/island/psara/">Psara</a></p></section>
 </article>
 

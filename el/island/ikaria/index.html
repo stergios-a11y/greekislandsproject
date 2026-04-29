@@ -46,8 +46,8 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
@@ -98,6 +98,35 @@
   .seo-beach dl { display: grid; grid-template-columns: 120px 1fr; gap: 4px 12px; font-size: var(--text-meta, 13px); margin: 0; }
   .seo-beach dt { font-weight: 600; color: var(--ink-3, #555); }
   .seo-beach dd { margin: 0; }
+  .seo-local-block { margin-bottom: 24px; }
+  .seo-local-heading {
+    font-family: var(--display, serif); font-size: var(--text-sub, 18px); margin: 0 0 10px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-icon { margin-right: 6px; }
+  .seo-local-items { display: flex; flex-direction: column; gap: 12px; }
+  .seo-local-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 10px 0;
+  }
+  .seo-local-item + .seo-local-item { border-top: 1px solid rgba(11,143,172,0.10); }
+  .seo-local-image {
+    width: 80px; height: 80px; flex: 0 0 80px;
+    border-radius: 6px; object-fit: cover;
+  }
+  .seo-local-text { flex: 1; min-width: 0; }
+  .seo-local-name {
+    font-weight: 600; font-size: var(--text-body, 16px); margin: 0 0 4px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-when {
+    margin-left: 8px; font-weight: 400;
+    color: var(--ink-3, #555); font-size: var(--text-meta, 13px);
+  }
+  .seo-local-desc {
+    font-size: var(--text-small, 14px); color: var(--ink-2, #333);
+    line-height: 1.5; margin: 0;
+  }
   .seo-related a { color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }
   .seo-related a:hover { text-decoration: underline; }
 
@@ -238,6 +267,7 @@
     <dt>Υποδομές</dt><dd>Καμία — 20 λεπτά πεζοπορία κάτω από τον δρόμο.</dd>
   </dl>
 </article></section>
+  <section class="seo-local"><h2>Τοπικά &amp; Εποχιακά</h2><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🍽</span>Τοπικά Προϊόντα</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Πράμνιος οίνος</div><div class="seo-local-desc">Το κρασί που ύμνησε ο Όμηρος στην Ιλιάδα — ακόμα παράγεται εδώ σε μικροσκοπικές ποσότητες. Ψάξε την ετικέτα Αφιάνες ή στον Χριστό Ραχών. Ξεχωριστά τραχύ, με βότανα, χαμηλό σε αλκοόλ.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Σουφικό</div><div class="seo-local-desc">Μελιτζάνες, πιπεριές, κολοκυθάκια, ντομάτα — το ικαριώτικο καλοκαιρινό λαχανικό στιφάδο, πιο απλό από το μπριάμ. Σε κάθε ταβέρνα του νησιού.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Κατσικάκι κοκκινιστό (καθούρα)</div><div class="seo-local-desc">Σιγομαγειρεμένο κατσικάκι με βότανα του βουνού — τα ικαριώτικα κατσίκια ζουν άγρια και το κρέας είναι έντονο. Καλύτερο σε ταβέρνες πανηγυριών στον Χριστό Ραχών και τον Μαγγανίτη.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🎉</span>Πανηγύρια &amp; Εκδηλώσεις</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Ικαριώτικα Πανηγύρια<span class="seo-local-when">Τέλη Ιουνίου έως αρχές Σεπτεμβρίου (γιορτές αγίων)</span></div><div class="seo-local-desc">Ο πιο διάσημος κύκλος πανηγυριών στην Ελλάδα. Κάθε χωριό γιορτάζει την ημέρα του αγίου του — Αγία Μαρίνα (17/7), Προφήτης Ηλίας (20/7), Αγία Παρασκευή (26/7), Παναγία (15/8), και πολλά μικρότερα. Ολονύχτιος χορός σε ζωντανή ικαριώτικη μουσική. Τα πανηγύρια εξηγούν τη μακροζωία των Ικαριωτών καλύτερα από κάθε διατροφική μελέτη.</div></div></div></div></div></section>
   <section class="seo-related"><h2>Άλλα νησιά στα/στο Β.Α. Αιγαίο</h2><p><a href="/el/island/lesvos/">Λέσβος</a> · <a href="/el/island/chios/">Chios</a> · <a href="/el/island/lemnos/">Lemnos</a> · <a href="/el/island/samos/">Samos</a> · <a href="/el/island/agios-efstratios/">Άγιος Ευστράτιος</a> · <a href="/el/island/psara/">Psara</a></p></section>
 </article>
 

@@ -46,8 +46,8 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
@@ -98,6 +98,35 @@
   .seo-beach dl { display: grid; grid-template-columns: 120px 1fr; gap: 4px 12px; font-size: var(--text-meta, 13px); margin: 0; }
   .seo-beach dt { font-weight: 600; color: var(--ink-3, #555); }
   .seo-beach dd { margin: 0; }
+  .seo-local-block { margin-bottom: 24px; }
+  .seo-local-heading {
+    font-family: var(--display, serif); font-size: var(--text-sub, 18px); margin: 0 0 10px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-icon { margin-right: 6px; }
+  .seo-local-items { display: flex; flex-direction: column; gap: 12px; }
+  .seo-local-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 10px 0;
+  }
+  .seo-local-item + .seo-local-item { border-top: 1px solid rgba(11,143,172,0.10); }
+  .seo-local-image {
+    width: 80px; height: 80px; flex: 0 0 80px;
+    border-radius: 6px; object-fit: cover;
+  }
+  .seo-local-text { flex: 1; min-width: 0; }
+  .seo-local-name {
+    font-weight: 600; font-size: var(--text-body, 16px); margin: 0 0 4px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-when {
+    margin-left: 8px; font-weight: 400;
+    color: var(--ink-3, #555); font-size: var(--text-meta, 13px);
+  }
+  .seo-local-desc {
+    font-size: var(--text-small, 14px); color: var(--ink-2, #333);
+    line-height: 1.5; margin: 0;
+  }
   .seo-related a { color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }
   .seo-related a:hover { text-decoration: underline; }
 
@@ -242,6 +271,7 @@
     <dt>Υποδομές</dt><dd>Καμία. Προσβάσιμη με χωματόδρομο βόρεια του χωριού Κατάλακκος.</dd>
   </dl>
 </article></section>
+  <section class="seo-local"><h2>Τοπικά &amp; Εποχιακά</h2><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🍽</span>Τοπικά Προϊόντα</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Καλαθάκι Λήμνου</div><div class="seo-local-desc">Πρόβειο τυρί ΠΟΠ ωριμασμένο σε μικρά καλάθια που αφήνουν το σχέδιό τους στην πέτσα. Πιο πικάντικο από φέτα, πιο στεγνό. Στο μαγαζί του συνεταιρισμού στη Μύρινα.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Μελίχλωρο</div><div class="seo-local-desc">Μαλακό, ελαφρώς γλυκό τυρί που τρώγεται με μέλι ή σε πίτες. Λημνιακή σπεσιαλιτέ. Σε κάθε χωριάτικο μαγαζί.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Κρασιά Λήμνου</div><div class="seo-local-desc">Κρασιά ΠΟΠ από τις γηγενείς ποικιλίες Λημνιό (ερυθρό) και Μοσχάτο Αλεξανδρείας (λευκό) — το Λημνιό είναι από τις παλαιότερες καλλιεργημένες ποικιλίες της Ελλάδας. Ο Συνεταιρισμός Λήμνου και αρκετά μικρότερα οινοποιεία προσφέρουν γευσιγνωσίες.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Φλωμάρια</div><div class="seo-local-desc">Χειροποίητα λημνιακά αυγοζυμαρικά, με βούτυρο και τριμμένο καλαθάκι. Κυριακάτικο φαγητό σπιτιού. Σε χωριάτικα μαγαζιά και ταβέρνες.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🎉</span>Πανηγύρια &amp; Εκδηλώσεις</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Άγιος Σώζων<span class="seo-local-when">7 Σεπτεμβρίου</span></div><div class="seo-local-desc">Προστάτης άγιος της Λήμνου. Προσκύνημα στην εκκλησία στην Ακτή και πανηγύρι.</div></div></div></div></div></section>
   <section class="seo-related"><h2>Άλλα νησιά στα/στο Β.Α. Αιγαίο</h2><p><a href="/el/island/lesvos/">Λέσβος</a> · <a href="/el/island/ikaria/">Ικαρία</a> · <a href="/el/island/chios/">Chios</a> · <a href="/el/island/samos/">Samos</a> · <a href="/el/island/agios-efstratios/">Άγιος Ευστράτιος</a> · <a href="/el/island/psara/">Psara</a></p></section>
 </article>
 

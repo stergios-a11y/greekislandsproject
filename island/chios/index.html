@@ -46,8 +46,8 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
@@ -98,6 +98,35 @@
   .seo-beach dl { display: grid; grid-template-columns: 120px 1fr; gap: 4px 12px; font-size: var(--text-meta, 13px); margin: 0; }
   .seo-beach dt { font-weight: 600; color: var(--ink-3, #555); }
   .seo-beach dd { margin: 0; }
+  .seo-local-block { margin-bottom: 24px; }
+  .seo-local-heading {
+    font-family: var(--display, serif); font-size: var(--text-sub, 18px); margin: 0 0 10px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-icon { margin-right: 6px; }
+  .seo-local-items { display: flex; flex-direction: column; gap: 12px; }
+  .seo-local-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 10px 0;
+  }
+  .seo-local-item + .seo-local-item { border-top: 1px solid rgba(11,143,172,0.10); }
+  .seo-local-image {
+    width: 80px; height: 80px; flex: 0 0 80px;
+    border-radius: 6px; object-fit: cover;
+  }
+  .seo-local-text { flex: 1; min-width: 0; }
+  .seo-local-name {
+    font-weight: 600; font-size: var(--text-body, 16px); margin: 0 0 4px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-when {
+    margin-left: 8px; font-weight: 400;
+    color: var(--ink-3, #555); font-size: var(--text-meta, 13px);
+  }
+  .seo-local-desc {
+    font-size: var(--text-small, 14px); color: var(--ink-2, #333);
+    line-height: 1.5; margin: 0;
+  }
   .seo-related a { color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }
   .seo-related a:hover { text-decoration: underline; }
 
@@ -238,6 +267,7 @@
     <dt>Facilities</dt><dd>Basic: small taverna. Very quiet even in summer.</dd>
   </dl>
 </article></section>
+  <section class="seo-local"><h2>Local &amp; Seasonal</h2><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🍽</span>Local Specialties</h3><div class="seo-local-items"><div class="seo-local-item seo-local-item-with-image"><img class="seo-local-image" src="https://res.cloudinary.com/dothbs5hs/image/upload/w_200,h_200,c_fill,q_auto,f_auto/local/chios-mastiha.jpg" alt="Mastiha" loading="lazy" width="80" height="80"><div class="seo-local-text"><div class="seo-local-name">Mastiha</div><div class="seo-local-desc">The single most distinctive Greek product. Resin tears chewed as gum, distilled into liqueur, used in toothpaste, sweets, cosmetics. UNESCO-recognized cultivation. Buy crystals to chew, the Mastiha Shop liqueur, or sweet-spoon mastic submarine (&#x27;ypovrychio&#x27;) anywhere in Chios town.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Mandarins (tangerines)</div><div class="seo-local-desc">PGI-protected variety unique to the Kambos region. Sold fresh in winter, but year-round as preserves and the perfumed liqueur &#x27;mandarini&#x27;.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Sfougato</div><div class="seo-local-desc">Chian zucchini-and-cheese baked omelette/soufflé. Found at most village tavernas; the version at Hotzas in Chios town is famous.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Chian retsina and Ariousios wine</div><div class="seo-local-desc">Chios was an ancient wine center; the Ariousios wine from the north coast was praised in classical times. Modern wineries (Ariousios, Mavrokalamos) are reviving the tradition.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🧵</span>Crafts &amp; Souvenirs</h3><div class="seo-local-items"><div class="seo-local-item seo-local-item-with-image"><img class="seo-local-image" src="https://res.cloudinary.com/dothbs5hs/image/upload/w_200,h_200,c_fill,q_auto,f_auto/local/chios-mastic-products.jpg" alt="Mastic products" loading="lazy" width="80" height="80"><div class="seo-local-text"><div class="seo-local-name">Mastic products</div><div class="seo-local-desc">The Mastiha Shop has branches in most villages — soaps, liqueurs, candy, oils. The Mastic Museum in Pyrgi sells direct from the cooperative at lower prices.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Xysta wall art</div><div class="seo-local-desc">Black-and-white geometric sgraffito decoration on the houses of Pyrgi village — completely unique to that one village in the Aegean. You can&#x27;t take it home, but buy any postcard or print of it.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🎉</span>Festivals &amp; Events</h3><div class="seo-local-items"><div class="seo-local-item seo-local-item-with-image"><img class="seo-local-image" src="https://res.cloudinary.com/dothbs5hs/image/upload/w_200,h_200,c_fill,q_auto,f_auto/local/chios-mastic-harvest.jpg" alt="Mastic harvest" loading="lazy" width="80" height="80"><div class="seo-local-text"><div class="seo-local-name">Mastic harvest<span class="seo-local-when">August through October</span></div><div class="seo-local-desc">Not a single-day festival but a season. Visit any of the 24 mastichochoria during this time and you&#x27;ll see the cleaned ground beneath the schinos trees waiting to catch the resin tears. Tours from the Mastic Museum in Pyrgi.</div></div></div></div></div></section>
   <section class="seo-related"><h2>Other islands in the NE Aegean</h2><p><a href="/island/lesvos/">Lesvos</a> · <a href="/island/ikaria/">Ikaria</a> · <a href="/island/lemnos/">Lemnos</a> · <a href="/island/samos/">Samos</a> · <a href="/island/agios-efstratios/">Agios Efstratios</a> · <a href="/island/psara/">Psara</a></p></section>
 </article>
 

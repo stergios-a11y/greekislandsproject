@@ -46,8 +46,8 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
@@ -98,6 +98,35 @@
   .seo-beach dl { display: grid; grid-template-columns: 120px 1fr; gap: 4px 12px; font-size: var(--text-meta, 13px); margin: 0; }
   .seo-beach dt { font-weight: 600; color: var(--ink-3, #555); }
   .seo-beach dd { margin: 0; }
+  .seo-local-block { margin-bottom: 24px; }
+  .seo-local-heading {
+    font-family: var(--display, serif); font-size: var(--text-sub, 18px); margin: 0 0 10px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-icon { margin-right: 6px; }
+  .seo-local-items { display: flex; flex-direction: column; gap: 12px; }
+  .seo-local-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 10px 0;
+  }
+  .seo-local-item + .seo-local-item { border-top: 1px solid rgba(11,143,172,0.10); }
+  .seo-local-image {
+    width: 80px; height: 80px; flex: 0 0 80px;
+    border-radius: 6px; object-fit: cover;
+  }
+  .seo-local-text { flex: 1; min-width: 0; }
+  .seo-local-name {
+    font-weight: 600; font-size: var(--text-body, 16px); margin: 0 0 4px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-when {
+    margin-left: 8px; font-weight: 400;
+    color: var(--ink-3, #555); font-size: var(--text-meta, 13px);
+  }
+  .seo-local-desc {
+    font-size: var(--text-small, 14px); color: var(--ink-2, #333);
+    line-height: 1.5; margin: 0;
+  }
   .seo-related a { color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }
   .seo-related a:hover { text-decoration: underline; }
 
@@ -274,6 +303,7 @@
     <dt>Υποδομές</dt><dd>Καλές: ξαπλώστρες, beach bars, ταβέρνες σε μικρή απόσταση στο χωριό</dd>
   </dl>
 </article></section>
+  <section class="seo-local"><h2>Τοπικά &amp; Εποχιακά</h2><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🍽</span>Τοπικά Προϊόντα</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Ούζο Πλωμαρίου</div><div class="seo-local-desc">Με ΠΓΕ, το πιο σεβαστό ούζο της Ελλάδας. Αποστακτήρια ανοιχτά για ξεναγήσεις στο Πλωμάρι — Μπαρμπαγιάννη, Πλωμαρίου Ισίδωρος Αρβανίτης. Αγόρα στην πηγή σε κλάσμα της τιμής της ηπειρωτικής χώρας.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Σαρδέλες Λέσβου</div><div class="seo-local-desc">Παστές σαρδέλες από τον Κόλπο Καλλονής — με ΠΓΕ. Τρώγονται με ούζο και ψωμί. Ο κλασικός συνδυασμός.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Ελαιόλαδο Μυτιλήνης</div><div class="seo-local-desc">Ελαιόλαδο ΠΓΕ από το αρχαιότερο ελαιοτόπι του κόσμου (μερικά δέντρα πάνω από 1.500 ετών). Απευθείας από τους συνεταιρισμούς στο Πλωμάρι και την Αγία Παρασκευή.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Τυρόπιτες της Πέτρας</div><div class="seo-local-desc">Διάσημες πλατιές τυρόπιτες από το χωριό Πέτρα της βόρειας Λέσβου — ζύμη με μαγιά, τηγανητές, γενναίο γέμισμα. Ο Συνεταιρισμός Γυναικών Πέτρας είναι η πηγή.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🎉</span>Πανηγύρια &amp; Εκδηλώσεις</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Ταυροσφαγία του Αγίου Χαραλάμπους<span class="seo-local-when">Αγίου Πνεύματος — κινητή γιορτή</span></div><div class="seo-local-desc">Στο χωριό Αγία Παρασκευή, αρχαία και ασυνήθιστη τελετή: ένας ταύρος περιφέρεται, ευλογείται, μετά θυσιάζεται και μοιράζεται κοινοτικά. Προχριστιανικές ρίζες, αμφιλεγόμενη στην εποχή μας, αλλά από τις πιο ξεχωριστές επιβιώνουσες λαϊκές παραδόσεις της Ελλάδας.</div></div></div></div></div></section>
   <section class="seo-related"><h2>Άλλα νησιά στα/στο Β.Α. Αιγαίο</h2><p><a href="/el/island/ikaria/">Ικαρία</a> · <a href="/el/island/chios/">Chios</a> · <a href="/el/island/lemnos/">Lemnos</a> · <a href="/el/island/samos/">Samos</a> · <a href="/el/island/agios-efstratios/">Άγιος Ευστράτιος</a> · <a href="/el/island/psara/">Psara</a></p></section>
 </article>
 

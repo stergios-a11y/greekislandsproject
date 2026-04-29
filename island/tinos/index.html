@@ -46,8 +46,8 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
@@ -98,6 +98,35 @@
   .seo-beach dl { display: grid; grid-template-columns: 120px 1fr; gap: 4px 12px; font-size: var(--text-meta, 13px); margin: 0; }
   .seo-beach dt { font-weight: 600; color: var(--ink-3, #555); }
   .seo-beach dd { margin: 0; }
+  .seo-local-block { margin-bottom: 24px; }
+  .seo-local-heading {
+    font-family: var(--display, serif); font-size: var(--text-sub, 18px); margin: 0 0 10px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-icon { margin-right: 6px; }
+  .seo-local-items { display: flex; flex-direction: column; gap: 12px; }
+  .seo-local-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 10px 0;
+  }
+  .seo-local-item + .seo-local-item { border-top: 1px solid rgba(11,143,172,0.10); }
+  .seo-local-image {
+    width: 80px; height: 80px; flex: 0 0 80px;
+    border-radius: 6px; object-fit: cover;
+  }
+  .seo-local-text { flex: 1; min-width: 0; }
+  .seo-local-name {
+    font-weight: 600; font-size: var(--text-body, 16px); margin: 0 0 4px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-when {
+    margin-left: 8px; font-weight: 400;
+    color: var(--ink-3, #555); font-size: var(--text-meta, 13px);
+  }
+  .seo-local-desc {
+    font-size: var(--text-small, 14px); color: var(--ink-2, #333);
+    line-height: 1.5; margin: 0;
+  }
   .seo-related a { color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }
   .seo-related a:hover { text-decoration: underline; }
 
@@ -242,6 +271,7 @@
     <dt>Facilities</dt><dd>None. Kitesurfers only in strong winds. Rough access road.</dd>
   </dl>
 </article></section>
+  <section class="seo-local"><h2>Local &amp; Seasonal</h2><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🍽</span>Local Specialties</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Louza</div><div class="seo-local-desc">Cured pork tenderloin, air-dried and seasoned with savory and pepper. Eaten in paper-thin slices with bread and ouzo. Available at any village butcher; To Thalassaki in Isternia restaurant elevates it.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Volaki cheese</div><div class="seo-local-desc">Sharp aged cheese specific to Tinos. Hard, peppery, intense — used grated over pasta or eaten with the local wine.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Furtalia</div><div class="seo-local-desc">Eggs scrambled with potatoes and louza or local sausage — Tinian breakfast or hangover food. Found in every village taverna.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Capers and caper leaves</div><div class="seo-local-desc">Wild capers grow everywhere on Tinos. Pickled buds, pickled leaves, and the fruit (kapparofyllo) — all distinctive. Available at any village shop.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🧵</span>Crafts &amp; Souvenirs</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Marble carving</div><div class="seo-local-desc">Tinos is THE marble island of Greece — a UNESCO-recognized intangible cultural heritage. Visit the Marble Museum in Pyrgos, then the workshops in Pyrgos and Volax. Small carved fanlights (fengites) make beautiful souvenirs.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Dovecotes</div><div class="seo-local-desc">You can&#x27;t take one home, but they&#x27;re an icon of the island — over 1,000 ornate Venetian-era dovecotes still standing across the countryside. Best concentration around the Tarambados area.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🎉</span>Festivals &amp; Events</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Dormition of the Virgin<span class="seo-local-when">15 August</span></div><div class="seo-local-desc">The largest religious pilgrimage in Greece. Pilgrims crawl the kilometre from the port to the Church of Panagia Evangelistria on hands and knees. Book accommodation months in advance.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Annunciation<span class="seo-local-when">25 March</span></div><div class="seo-local-desc">Second great Marian feast at the Church of Panagia. Smaller than August but still significant — and this is when the icon was discovered in 1823.</div></div></div></div></div></section>
   <section class="seo-related"><h2>Other islands in the Cyclades</h2><p><a href="/island/santorini/">Santorini</a> · <a href="/island/milos/">Milos</a> · <a href="/island/naxos/">Naxos</a> · <a href="/island/mykonos/">Mykonos</a> · <a href="/island/paros/">Paros</a> · <a href="/island/folegandros/">Folegandros</a></p></section>
 </article>
 

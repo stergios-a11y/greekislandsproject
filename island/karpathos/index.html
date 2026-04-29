@@ -46,8 +46,8 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
@@ -98,6 +98,35 @@
   .seo-beach dl { display: grid; grid-template-columns: 120px 1fr; gap: 4px 12px; font-size: var(--text-meta, 13px); margin: 0; }
   .seo-beach dt { font-weight: 600; color: var(--ink-3, #555); }
   .seo-beach dd { margin: 0; }
+  .seo-local-block { margin-bottom: 24px; }
+  .seo-local-heading {
+    font-family: var(--display, serif); font-size: var(--text-sub, 18px); margin: 0 0 10px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-icon { margin-right: 6px; }
+  .seo-local-items { display: flex; flex-direction: column; gap: 12px; }
+  .seo-local-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 10px 0;
+  }
+  .seo-local-item + .seo-local-item { border-top: 1px solid rgba(11,143,172,0.10); }
+  .seo-local-image {
+    width: 80px; height: 80px; flex: 0 0 80px;
+    border-radius: 6px; object-fit: cover;
+  }
+  .seo-local-text { flex: 1; min-width: 0; }
+  .seo-local-name {
+    font-weight: 600; font-size: var(--text-body, 16px); margin: 0 0 4px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-when {
+    margin-left: 8px; font-weight: 400;
+    color: var(--ink-3, #555); font-size: var(--text-meta, 13px);
+  }
+  .seo-local-desc {
+    font-size: var(--text-small, 14px); color: var(--ink-2, #333);
+    line-height: 1.5; margin: 0;
+  }
   .seo-related a { color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }
   .seo-related a:hover { text-decoration: underline; }
 
@@ -238,6 +267,7 @@
     <dt>Facilities</dt><dd>Basic: small snack bar, limited sunbeds.</dd>
   </dl>
 </article></section>
+  <section class="seo-local"><h2>Local &amp; Seasonal</h2><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🍽</span>Local Specialties</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Makarounes</div><div class="seo-local-desc">Hand-rolled Karpathian pasta, served with caramelized onions and fresh mizithra cheese. Defining island dish. Found across the island; best in Olympos village tavernas.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Olympos sourdough bread</div><div class="seo-local-desc">Round, dark, dense sourdough baked in communal wood ovens in the village of Olympos. Worth the trip up the mountain just for this.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Sitaka</div><div class="seo-local-desc">Karpathian butter-cream made by simmering whey for hours — used as a spread or to enrich sauces. A specialty you won&#x27;t find anywhere else.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🧵</span>Crafts &amp; Souvenirs</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Olympos costumes and embroidery</div><div class="seo-local-desc">Olympos village still has women wearing the traditional costume daily — among the last villages in Greece where this is true. Embroidered linens, tablecloths, and small folk-art pieces are sold in the village.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🎉</span>Festivals &amp; Events</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Karpathian wedding (Olympos)<span class="seo-local-when">Summer (varies)</span></div><div class="seo-local-desc">Three-day traditional weddings in Olympos still happen in the original form — costumes, music, lyra. If you&#x27;re in Karpathos and a wedding is happening, all visitors welcome.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Panagia<span class="seo-local-when">15 August</span></div><div class="seo-local-desc">Three-day panigiria in Olympos and Othos villages with traditional dancing.</div></div></div></div></div></section>
   <section class="seo-related"><h2>Other islands in the Dodecanese</h2><p><a href="/island/rhodes/">Rhodes</a> · <a href="/island/kastellorizo/">Kastellorizo</a> · <a href="/island/symi/">Symi</a> · <a href="/island/astypalaia/">Astypalaia</a> · <a href="/island/nisyros/">Nisyros</a> · <a href="/island/kos/">Kos</a></p></section>
 </article>
 

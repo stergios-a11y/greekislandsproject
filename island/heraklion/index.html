@@ -46,8 +46,8 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
-  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
@@ -98,6 +98,35 @@
   .seo-beach dl { display: grid; grid-template-columns: 120px 1fr; gap: 4px 12px; font-size: var(--text-meta, 13px); margin: 0; }
   .seo-beach dt { font-weight: 600; color: var(--ink-3, #555); }
   .seo-beach dd { margin: 0; }
+  .seo-local-block { margin-bottom: 24px; }
+  .seo-local-heading {
+    font-family: var(--display, serif); font-size: var(--text-sub, 18px); margin: 0 0 10px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-icon { margin-right: 6px; }
+  .seo-local-items { display: flex; flex-direction: column; gap: 12px; }
+  .seo-local-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 10px 0;
+  }
+  .seo-local-item + .seo-local-item { border-top: 1px solid rgba(11,143,172,0.10); }
+  .seo-local-image {
+    width: 80px; height: 80px; flex: 0 0 80px;
+    border-radius: 6px; object-fit: cover;
+  }
+  .seo-local-text { flex: 1; min-width: 0; }
+  .seo-local-name {
+    font-weight: 600; font-size: var(--text-body, 16px); margin: 0 0 4px;
+    color: var(--ink-1, #222);
+  }
+  .seo-local-when {
+    margin-left: 8px; font-weight: 400;
+    color: var(--ink-3, #555); font-size: var(--text-meta, 13px);
+  }
+  .seo-local-desc {
+    font-size: var(--text-small, 14px); color: var(--ink-2, #333);
+    line-height: 1.5; margin: 0;
+  }
   .seo-related a { color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }
   .seo-related a:hover { text-decoration: underline; }
 
@@ -267,6 +296,7 @@
     <dt>Facilities</dt><dd>Basic: small taverna, simple rooms to rent. Primitive and peaceful.</dd>
   </dl>
 </article></section>
+  <section class="seo-local"><h2>Local &amp; Seasonal</h2><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🍽</span>Local Specialties</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Dakos</div><div class="seo-local-desc">Hard barley rusk topped with grated tomato, mizithra cheese, olive oil and oregano. The Cretan tapas. Found everywhere — best at no-frills village tavernas.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Cretan raki/tsikoudia</div><div class="seo-local-desc">Pomace-distilled spirit served everywhere as a welcome and farewell. Each village has its own. Buy at any small shop or distillery; supermarket versions are inferior.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Graviera Kritis</div><div class="seo-local-desc">PDO hard sheep&#x27;s-milk cheese, the most famous Cretan cheese. Buy direct from village producers in Anogeia or Zaros for top quality.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Bougatsa Kritis</div><div class="seo-local-desc">Cretan cheese pie eaten for breakfast — flaky pastry, fresh creamy mizithra, dusted with sugar and cinnamon. Kirkor in Heraklion&#x27;s Lions Square is the institution.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🧵</span>Crafts &amp; Souvenirs</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Cretan knife (machairi)</div><div class="seo-local-desc">Traditional shepherd&#x27;s knife with engraved verse. Custom-made in Heraklion&#x27;s old craft shops on Daedalou street. Genuine ones are expensive but heritage-grade.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🎉</span>Festivals &amp; Events</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Wine festival of Daphnes<span class="seo-local-when">Mid-August</span></div><div class="seo-local-desc">Wine festival in the village of Daphnes, the heart of Heraklion&#x27;s wine country. Tastings of local Liatiko, Vidiano, Mandilari. Dates vary; check the village municipality.</div></div></div></div></div></section>
   <section class="seo-related"><h2>Other islands in the Crete</h2><p><a href="/island/chania/">Crete (Chania)</a> · <a href="/island/rethymno/">Crete (Rethymno)</a> · <a href="/island/lasithi/">Crete (Lasithi)</a> · <a href="/island/gavdos/">Gavdos</a></p></section>
 </article>
 
