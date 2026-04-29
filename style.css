@@ -3954,8 +3954,7 @@ html.dark .mission-disagree-box {
   grid-column: span 2;
   position: relative;
   display: flex;
-  /* Flex item lays out at start; we shift it horizontally with a transform
-     on the inner pill so its CENTRE lands on the month tick. */
+  justify-content: center;   /* center the pill horizontally within its 2-cell span */
 }
 .wtv-cap-above {
   grid-row: 1;
@@ -3968,39 +3967,29 @@ html.dark .mission-disagree-box {
   padding-top: 12px;
 }
 
-/* The visible pill — inline-block so width hugs text. Anchored so its
-   TEXT CENTER lands on the month tick, but the pill itself can extend
-   asymmetrically into the empty space on the open side of its 2-cell
-   parent. This gives ~96% of cell width usable instead of ~50%. */
+/* The visible pill — inline-block, naturally centered on its 2-cell parent.
+   Pill spans the full 2-cell width minus a small gutter, so neighbouring
+   pills don't touch. Tick marks (below) point at the actual month each
+   caption describes; the pill itself sits centered over the boundary
+   between two months for maximum text room. */
 .wtv-cap-text {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;            /* hard cap at 2 lines, ellipsis if more */
   overflow: hidden;
-  max-width: 96%;
+  max-width: calc(100% - 8px);      /* 4px gutter on each side */
   box-sizing: border-box;
-  padding: 4px 10px;
+  padding: 3px 8px;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   background: transparent;
   font-family: var(--sans);
-  font-size: var(--text-meta);
+  font-size: var(--text-tiny);
   font-weight: 500;
   line-height: 1.3;
   text-align: center;
   color: var(--ink-1);
-}
-/* Anchor: above-row pills place the tick at the LEFT QUARTER of the pill,
-   so the pill grows mostly RIGHTWARD into the empty MAY-above slot
-   (when this is JAN-MAR-MAY-JUL-SEP-NOV). Below-row pills place the tick
-   at the RIGHT QUARTER, so the pill grows LEFTWARD. */
-.wtv-cap-above .wtv-cap-text {
-  margin-left: 25%;
-  transform: translateX(-25%);
-}
-.wtv-cap-below .wtv-cap-text {
-  margin-left: 75%;
-  transform: translateX(-75%);
+  margin: 0 auto;                   /* center within the 2-cell grid space */
 }
 
 /* Tick marks linking pill to ribbon — vertical line at the month-tick X position.
