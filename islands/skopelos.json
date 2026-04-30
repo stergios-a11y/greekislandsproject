@@ -9,38 +9,38 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Wintering, rain",
+        "why": "Off-season, rain",
         "why_el": "Εκτός σεζόν, βροχές"
       },
       {
         "tag": "avoid",
-        "why": "Off-season hush",
-        "why_el": "Εκτός σεζόν, ησυχία"
+        "why": "Off-season",
+        "why_el": "Εκτός σεζόν"
       },
       {
         "tag": "ok",
-        "why": "Forests green, sea cold",
+        "why": "Forests green",
         "why_el": "Δάση πράσινα"
       },
       {
         "tag": "great",
-        "why": "Easter, hiking, blooming",
-        "why_el": "Άγιες μέρες, ορεινά μονοπάτια"
+        "why": "Easter, hiking",
+        "why_el": "Πάσχα, μονοπάτια"
       },
       {
         "tag": "great",
-        "why": "Sea ready soon, calm",
+        "why": "Sea ready",
         "why_el": "Ζεσταίνει σιγά σιγά"
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, before bus tours",
-        "why_el": "Ζεστά, πριν τα λεωφορεία"
+        "why": "Warm, before bus",
+        "why_el": "Ζεστά, πριν τα"
       },
       {
         "tag": "ok",
-        "why": "Mamma Mia tours peak",
-        "why_el": "Ζέστη, κορύφωση Mamma Mia"
+        "why": "Mamma Mia tours",
+        "why_el": "Κορύφωση Mamma Mia"
       },
       {
         "tag": "avoid",
@@ -49,13 +49,13 @@
       },
       {
         "tag": "perfect",
-        "why": "Best — warm, plum harvest",
-        "why_el": "Καλύτερος — ζεστά, τρύγος δαμάσκηνου"
+        "why": "Best — plums",
+        "why_el": "Καλύτερος — ζεστά"
       },
       {
         "tag": "great",
-        "why": "Sea warm, calm evenings",
-        "why_el": "Τελευταία ζεστά μπάνια"
+        "why": "Sea warm, evenings",
+        "why_el": "Τελευταία μπάνια"
       },
       {
         "tag": "ok",
@@ -64,8 +64,8 @@
       },
       {
         "tag": "avoid",
-        "why": "Few ferries, rooms scarce",
-        "why_el": "Λίγα πλοία, λίγα δωμάτια"
+        "why": "Few ferries",
+        "why_el": "Λίγα πλοία"
       }
     ]
   },
@@ -383,5 +383,15 @@
     "summary_el": "Χωρίς αεροδρόμιο. Προσέγγιση από Βόλο ή Άγιο Κωνσταντίνο μέσω Σκιάθου — ίδια γραμμή Σποράδων, ~3.5–5 ώρες σύνολο. Το νησί του Mamma Mia.",
     "tip": "Combine with Skiathos and Alonnisos — they hop on the same line.",
     "tip_el": "Συνδύασε με Σκιάθο και Αλόννησο — είναι στην ίδια γραμμή."
-  }
+  },
+  "festivals": [
+    {
+      "name": "Mamma Mia! summer (informal)",
+      "name_el": "Καλοκαίρι Mamma Mia!",
+      "when": "Throughout summer (June-September)",
+      "when_el": "Όλο το καλοκαίρι (Ιούνιο-Σεπτέμβριο)",
+      "desc": "Not an official festival but a phenomenon: Skopelos hosts a steady stream of Mamma Mia! pilgrimages to Agios Ioannis chapel (the wedding scene). Local tavernas screen the films, host themed nights, and run weekly tribute events through summer. The tourism economy runs on it.",
+      "desc_el": "Δεν είναι επίσημο φεστιβάλ αλλά φαινόμενο: η Σκόπελος υποδέχεται συνεχή ροή προσκυνητών Mamma Mia! στο εκκλησάκι του Αγίου Ιωάννη (σκηνή γάμου). Τοπικές ταβέρνες προβάλλουν τις ταινίες, διοργανώνουν θεματικές βραδιές. Η τουριστική οικονομία βασίζεται εν μέρει σε αυτό."
+    }
+  ]
 }

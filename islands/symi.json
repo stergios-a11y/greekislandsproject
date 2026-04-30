@@ -9,12 +9,12 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Off-season, fewer ferries",
-        "why_el": "Εκτός σεζόν, ελάχιστα δρομολόγια"
+        "why": "Off-season",
+        "why_el": "Εκτός σεζόν, λίγα"
       },
       {
         "tag": "avoid",
-        "why": "Tourism dormant",
+        "why": "Off-season",
         "why_el": "Σε χειμερία νάρκη"
       },
       {
@@ -24,23 +24,23 @@
       },
       {
         "tag": "great",
-        "why": "Easter, mild, day-trippers begin",
-        "why_el": "Πάσχα, αρχίζουν ημερήσιοι"
+        "why": "Easter, day-trips",
+        "why_el": "Πάσχα, αρχίζουν"
       },
       {
         "tag": "perfect",
-        "why": "Sea warming, pre-peak, calm",
-        "why_el": "Θάλασσα ζεσταίνει, πριν την κορύφωση"
+        "why": "Sea warming",
+        "why_el": "Θάλ. ζεσταίνει"
       },
       {
         "tag": "perfect",
-        "why": "Long days, before day-trips",
+        "why": "Before day-trips",
         "why_el": "Πριν τους ημερήσιους"
       },
       {
         "tag": "ok",
         "why": "Day-trippers midday",
-        "why_el": "Πλημμύρα ημερήσιων το μεσημέρι"
+        "why_el": "Πλημμύρα ημερήσιων"
       },
       {
         "tag": "avoid",
@@ -49,22 +49,22 @@
       },
       {
         "tag": "perfect",
-        "why": "Best — magical evenings",
-        "why_el": "Καλύτερος — βραδιές μαγικές"
+        "why": "Magical evenings",
+        "why_el": "Βραδιές μαγικές"
       },
       {
         "tag": "great",
-        "why": "Last swims, then chill",
-        "why_el": "Τελευταίες κολυμπιές"
+        "why": "Last swims",
+        "why_el": "Τελευταία μπάνια"
       },
       {
         "tag": "great",
-        "why": "Panormitis 8 Nov, calm",
-        "why_el": "Πανορμίτης 8 Νοε, ησυχία"
+        "why": "Panormitis, Nov 8",
+        "why_el": "Πανορμίτης 8 Νοε"
       },
       {
         "tag": "avoid",
-        "why": "Tourism dormant",
+        "why": "Off-season",
         "why_el": "Σε χειμερία νάρκη"
       }
     ]
@@ -345,6 +345,14 @@
         "page_url": "https://commons.wikimedia.org/wiki/File:Panormitis,_Symi,_Greece_-_panoramio_(2).jpg",
         "source": "Wikimedia Commons"
       }
+    },
+    {
+      "name": "Symi Festival (cultural summer)",
+      "name_el": "Φεστιβάλ Σύμης",
+      "when": "July through September",
+      "when_el": "Ιούλιο με Σεπτέμβριο",
+      "desc": "Three-month cultural festival across Symi: classical and traditional music, theatre, dance, art exhibitions in venues like Panormitis monastery, the Symi Naval Museum, and various harborside squares. Refreshingly substantive for an island this small.",
+      "desc_el": "Τρίμηνο πολιτιστικό φεστιβάλ στη Σύμη: κλασική και παραδοσιακή μουσική, θέατρο, χορός, εκθέσεις τέχνης σε Πανορμίτη, Ναυτικό Μουσείο και διάφορες πλατείες του λιμανιού. Εκπληκτικά πλούσιο για τόσο μικρό νησί."
     }
   ],
   "getting_there": {

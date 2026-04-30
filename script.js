@@ -636,7 +636,7 @@ async function renderWhatsOnStrip() {
   //   - FEW (<4): off-season fallback — top up with "great" tagged islands.
   const meta = (typeof ISLANDS_DATA !== 'undefined') ? ISLANDS_DATA : {};
   const byScore = (a, b) => (meta[b]?.total || 0) - (meta[a]?.total || 0);
-  const TARGET = 6;
+  const TARGET = 3;   // Slim — fits on one mobile line
 
   let islandsToShow = [];
   if (perfectIslands.length > 12) {
@@ -700,27 +700,19 @@ async function renderWhatsOnStrip() {
     }
   }
 
-  // Find festivals happening this month
-  const festivals = [];
+  // Count festivals happening this month — the strip just shows a count + link
+  // to the full festival calendar page rather than listing them inline.
+  let festivalCount = 0;
   Object.keys(data).forEach(key => {
     const entry = data[key];
     if (!entry.festivals) return;
     entry.festivals.forEach(f => {
-      if (f.months && f.months.includes(month)) {
-        festivals.push({
-          islandKey: key,
-          name: lang === 'el' ? (f.name_el || f.name) : f.name,
-          when: lang === 'el' ? (f.when_el || f.when) : f.when,
-        });
-      }
+      if (f.months && f.months.includes(month)) festivalCount++;
     });
   });
-  // Limit to 3 festivals shown — the rest are still in the data, just not visible
-  festivals.sort((a, b) => (a.when || '').localeCompare(b.when || ''));
-  const festivalsToShow = festivals.slice(0, 3);
 
   // Nothing to show? Hide the strip entirely.
-  if (islandsToShow.length === 0 && festivalsToShow.length === 0) {
+  if (islandsToShow.length === 0 && festivalCount === 0) {
     container.style.display = 'none';
     return;
   }
@@ -731,14 +723,14 @@ async function renderWhatsOnStrip() {
     return `<a class="whats-on-chip" href="#" onclick="navigateTo('island','${key}');return false;">${name}</a>`;
   }).join('');
 
+  // Festival call-to-action: just a link to the full calendar page, with the count.
   let festivalsHtml = '';
-  if (festivalsToShow.length) {
-    const items = festivalsToShow.map(f => {
-      const name = (typeof islandName === 'function') ? islandName(f.islandKey) : (meta[f.islandKey]?.name || f.islandKey);
-      return `<a class="whats-on-festival" href="#" onclick="navigateTo('island','${f.islandKey}');return false;" title="${escapeAttr(f.name)} · ${escapeAttr(f.when)}"><strong>${name}</strong>: ${escapeHtml(f.name)}</a>`;
-    }).join('');
-    const festLabel = lang === 'el' ? 'Γιορτές' : 'Happening now';
-    festivalsHtml = `<div class="whats-on-festivals"><span class="whats-on-label">${festLabel}:</span>${items}</div>`;
+  if (festivalCount > 0) {
+    const festPath = lang === 'el' ? '/el/festivals/' : '/festivals/';
+    const label = lang === 'el'
+      ? `${festivalCount} ${festivalCount === 1 ? 'γιορτή' : 'γιορτές'} αυτόν τον μήνα →`
+      : `${festivalCount} ${festivalCount === 1 ? 'festival' : 'festivals'} this month →`;
+    festivalsHtml = `<a class="whats-on-festivals-link" href="${festPath}">${label}</a>`;
   }
 
   // Label depends on the data shape:

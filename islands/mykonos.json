@@ -12,63 +12,63 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Mostly shut, windy",
+        "why": "Off-season, windy",
         "why_el": "Μόνο ντόπιοι, ανέμοι"
       },
       {
         "tag": "avoid",
-        "why": "Bleak, cold",
+        "why": "Cold",
         "why_el": "Σκυθρωπό, κρύο"
       },
       {
         "tag": "ok",
-        "why": "Empty but most beach clubs shut",
-        "why_el": "Άδειο αλλά τα beach club κλειστά"
+        "why": "Off-season",
+        "why_el": "Άδειο, beach clubs"
       },
       {
         "tag": "great",
-        "why": "Easter weekend can be magical",
-        "why_el": "Πάσχα μπορεί να είναι μαγικό"
+        "why": "Easter, can be",
+        "why_el": "Πάσχα, μαγικό"
       },
       {
         "tag": "great",
-        "why": "Season opens, prices reasonable",
-        "why_el": "Η σεζόν αρχίζει, τιμές λογικές"
+        "why": "Season opens",
+        "why_el": "Σεζόν αρχίζει"
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, parties begin",
-        "why_el": "Ζεστή θάλασσα, πάρτι αρχίζουν, μισές τιμές"
+        "why": "Parties start",
+        "why_el": "Ζεστά, πάρτι"
       },
       {
         "tag": "avoid",
-        "why": "Influencer chaos, €40 cocktails",
-        "why_el": "Χάος influencer, €40 το κοκτέιλ"
+        "why": "Influencer chaos",
+        "why_el": "Influencer χάος"
       },
       {
         "tag": "avoid",
-        "why": "Peak mayhem, Meltemi peaks",
-        "why_el": "Κορύφωση τρέλας, μελτέμι ορμητικό"
+        "why": "Peak mayhem",
+        "why_el": "Κορύφωση, μελτέμι"
       },
       {
         "tag": "perfect",
-        "why": "Sea warm, prices drop",
-        "why_el": "Θάλασσα ζεστή, ηρεμεί, πέφτουν τιμές"
+        "why": "Prices drop",
+        "why_el": "Πέφτουν τιμές"
       },
       {
         "tag": "great",
-        "why": "Last warm swims, mellower vibe",
-        "why_el": "Τελευταία ζεστά μπάνια, χαλαρή ατμόσφαιρα"
+        "why": "Last swimser",
+        "why_el": "Τελευταία μπάνια"
       },
       {
         "tag": "ok",
-        "why": "Most things closed",
+        "why": "Mostly closed",
         "why_el": "Σχεδόν όλα κλειστά"
       },
       {
         "tag": "avoid",
-        "why": "Mostly shut",
-        "why_el": "Χειμώνας, ελάχιστα ανοιχτά"
+        "why": "Off-season",
+        "why_el": "Χειμώνας, ελάχιστα"
       }
     ]
   },
@@ -419,5 +419,15 @@
     "summary_el": "Διεθνές αεροδρόμιο με μεγάλη καλοκαιρινή κίνηση — Aegean, Sky Express, EasyJet, Ryanair, charters. Τα πλοία δένουν στο Νέο Λιμάνι (Τούρλος, 2 χλμ. βόρεια Χώρας). Τα γρήγορα πλοία από Ραφήνα (~2.5 ώρες) είναι συνήθως πιο γρήγορα και φθηνά από τον Πειραιά.",
     "tip": "Use Rafina, not Piraeus — same crossing in less time, often cheaper.",
     "tip_el": "Ραφήνα, όχι Πειραιάς — ίδια διαδρομή σε λιγότερο χρόνο, συχνά φθηνότερα."
-  }
+  },
+  "festivals": [
+    {
+      "name": "XLSIOR Mykonos (LGBTQ+ festival)",
+      "name_el": "XLSIOR Μυκόνου",
+      "when": "Late August (typically around 22-30 August)",
+      "when_el": "Τέλη Αυγούστου (συνήθως 22-30 Αυγούστου)",
+      "desc": "Major international LGBTQ+ summer festival drawing 30,000+ visitors. Pool parties, beach events, headline DJs at Cavo Paradiso and other venues. Mykonos has been a leading gay summer destination since the 1970s; XLSIOR is the most concentrated week of it. Expect rooms to be impossible.",
+      "desc_el": "Μεγάλο διεθνές ΛΟΑΤΚΙ+ καλοκαιρινό φεστιβάλ με 30.000+ επισκέπτες. Πάρτι σε πισίνες, παραλιακές εκδηλώσεις, διεθνείς DJ σε Cavo Paradiso και αλλού. Η Μύκονος είναι κορυφαίος γκέι προορισμός από τη δεκαετία του 70· το XLSIOR είναι η πιο πυκνή του εβδομάδα. Δωμάτια αδύνατα."
+    }
+  ]
 }

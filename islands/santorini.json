@@ -12,63 +12,63 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Cold, half closed",
+        "why": "Cold",
         "why_el": "Κρύο, μισοκλειστά"
       },
       {
         "tag": "avoid",
-        "why": "Cold sea, windy",
+        "why": "Cold, windy",
         "why_el": "Κρύα θάλασσα, αέρας"
       },
       {
         "tag": "ok",
-        "why": "Quiet but cool",
+        "why": "Quiet, cool",
         "why_el": "Ήσυχο αλλά δροσερό"
       },
       {
         "tag": "great",
-        "why": "Wildflowers, mild",
-        "why_el": "Αγριολούλουδα, ήπιο, ήρεμα"
+        "why": "Wildflowers",
+        "why_el": "Αγριολούλουδα, ήπιο"
       },
       {
         "tag": "great",
-        "why": "Sea warming, prices low",
-        "why_el": "Θάλασσα ζεσταίνει, τιμές λογικές"
+        "why": "Sea warming",
+        "why_el": "Θάλ., λογικές τιμές"
       },
       {
         "tag": "perfect",
-        "why": "Long days, sea ready",
-        "why_el": "Μεγάλες μέρες, μπάνιο, πριν τον κόσμο"
+        "why": "Long days, ready",
+        "why_el": "Πριν τον κόσμο"
       },
       {
         "tag": "avoid",
         "why": "Cruise hell, packed",
-        "why_el": "Κρουαζιερόπλοιο, ζέστη, χάος"
+        "why_el": "Κρουαζιέρα, χάος"
       },
       {
         "tag": "avoid",
-        "why": "Peak madness, peak prices",
-        "why_el": "Κορύφωση τρέλας και τιμών"
+        "why": "Peak madness, prices",
+        "why_el": "Κορύφωση τρέλας και"
       },
       {
         "tag": "perfect",
-        "why": "Best — warm sea, quiet, golden",
-        "why_el": "Καλύτερος μήνας — ζεστή θάλασσα, απαλό φως"
+        "why": "Best — warm, quiet",
+        "why_el": "Καλύτερος — φως"
       },
       {
         "tag": "great",
-        "why": "Last swims, half closing",
-        "why_el": "Ακόμα κολύμπι, μισοκλείνει"
+        "why": "Last swims",
+        "why_el": "Ακόμα κολύμπι"
       },
       {
         "tag": "ok",
-        "why": "Storms begin, mostly closed",
-        "why_el": "Καταιγίδες, σχεδόν κλειστά"
+        "why": "Storms, closing",
+        "why_el": "Καταιγίδες, κλειστά"
       },
       {
         "tag": "avoid",
-        "why": "Tourism dormant",
-        "why_el": "Χειμώνας, ελάχιστα ανοιχτά"
+        "why": "Off-season",
+        "why_el": "Χειμώνας, ελάχιστα"
       }
     ]
   },
@@ -433,5 +433,15 @@
     "summary_el": "Μεγάλο διεθνές αεροδρόμιο — Aegean, Sky Express, Ryanair, EasyJet και πολλές charter πτήσεις το καλοκαίρι. Τα πλοία δένουν στον Αθηνιό (εμπορικό λιμάνι, 10 χλμ. νότια των Φηρών). Γρήγορα πλοία από Πειραιά ~5 ώρες (€60–90), συμβατικά 7–8 ώρες (€40–65), πολλά καθημερινά το καλοκαίρι.",
     "tip": "Combining with Crete? Daily fast ferry to Heraklion takes ~2h.",
     "tip_el": "Συνδυάζεις με Κρήτη; Το καθημερινό γρήγορο πλοίο για Ηράκλειο κάνει ~2 ώρες."
-  }
+  },
+  "festivals": [
+    {
+      "name": "Megaron Gyzi Festival",
+      "name_el": "Φεστιβάλ Μεγάρου Γκύζη",
+      "when": "Late August (typically last week)",
+      "when_el": "Τέλη Αυγούστου (συνήθως τελευταία εβδομάδα)",
+      "desc": "Classical music and arts festival hosted at the 17th-century Megaron Gyzi mansion in Fira. Chamber concerts, recitals, exhibitions. Quiet, refined antithesis to Santorini's mass-tourism reputation. Limited tickets — book ahead.",
+      "desc_el": "Φεστιβάλ κλασικής μουσικής και τεχνών στο αρχοντικό Μεγάρου Γκύζη του 17ου αιώνα στα Φηρά. Συναυλίες δωματίου, ρεσιτάλ, εκθέσεις. Η ήσυχη, εκλεπτυσμένη αντίθεση στη μαζική φήμη της Σαντορίνης. Περιορισμένα εισιτήρια."
+    }
+  ]
 }

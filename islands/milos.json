@@ -9,62 +9,62 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Off-season, ferries minimal",
-        "why_el": "Σχεδόν όλα κλειστά, λίγα πλοία"
+        "why": "Off-season",
+        "why_el": "Σχεδόν κλειστά"
       },
       {
         "tag": "avoid",
-        "why": "Tourism dormant",
+        "why": "Off-season",
         "why_el": "Σε χειμερία νάρκη"
       },
       {
         "tag": "ok",
-        "why": "Mild, sea cold, photogenic",
-        "why_el": "Ήπιο, κρύα θάλασσα, φωτογενές"
+        "why": "Mild, photogenic",
+        "why_el": "Ήπιο, φωτογενές"
       },
       {
         "tag": "great",
-        "why": "Easter, wildflowers, calm",
+        "why": "Easter, wildflowers,",
         "why_el": "Πάσχα, αγριολούλουδα"
       },
       {
         "tag": "perfect",
-        "why": "Boat tours, golden light",
-        "why_el": "Βαρκάδες, θάλασσα ζεσταίνει, χρυσό φως"
+        "why": "Boat tours",
+        "why_el": "Βαρκάδες, χρυσό φως"
       },
       {
         "tag": "perfect",
-        "why": "Ideal — before the Insta-crowds",
-        "why_el": "Ιδανικός — ζεστή θάλασσα, πριν τον κόσμο"
+        "why": "Before Insta-crowds",
+        "why_el": "Ιδανικός — πριν τον"
       },
       {
         "tag": "ok",
-        "why": "Hot, Sarakiniko packed",
-        "why_el": "Ζέστη, Σαρακήνικο γεμάτο"
+        "why": "Hot, Sarakiniko",
+        "why_el": "Ζέστη, Σαρακήνικο"
       },
       {
         "tag": "avoid",
         "why": "Peak chaos, pricy",
-        "why_el": "Χάος, τιμές τριπλασιάζονται"
+        "why_el": "Χάος, τιμές τριπλασιάζ"
       },
       {
         "tag": "perfect",
-        "why": "Best — warm sea, calm, light",
-        "why_el": "Καλύτερος — ζεστά, ήρεμα, φως"
+        "why": "Best — warm, calm",
+        "why_el": "Καλύτερος — ζεστά"
       },
       {
         "tag": "great",
-        "why": "Mellow, still swimming",
+        "why": "Still swimming",
         "why_el": "Χαλαρά, ακόμα μπάνιο"
       },
       {
         "tag": "ok",
-        "why": "Season ending, services thin",
-        "why_el": "Κλείνουν σιγά σιγά τα μαγαζιά"
+        "why": "Season ending",
+        "why_el": "Κλείνουν σιγά"
       },
       {
         "tag": "avoid",
-        "why": "Tourism dormant",
+        "why": "Off-season",
         "why_el": "Σε χειμερία νάρκη"
       }
     ]
@@ -503,5 +503,15 @@
     "summary_el": "Μικρό αεροδρόμιο εσωτερικού (Olympic). Τα πλοία δένουν στον Αδάμαντα. Seajets γρήγορο από Πειραιά ~3 ώρες (€60), συμβατικό ~7 ώρες (€40). Καθημερινά το καλοκαίρι, 3–5 τη βδομάδα τον χειμώνα.",
     "tip": "Combining with Santorini? Direct seasonal fast ferry beats routing back via Piraeus.",
     "tip_el": "Συνδυάζεις με Σαντορίνη; Το εποχιακό απευθείας γρήγορο πλοίο είναι πιο γρήγορο από επιστροφή μέσω Πειραιά."
-  }
+  },
+  "festivals": [
+    {
+      "name": "Klidonas",
+      "name_el": "Κλήδονας",
+      "when": "24 June (eve of) and 25 June",
+      "when_el": "24 Ιουνίου (παραμονή) και 25 Ιουνίου",
+      "desc": "Folk Saint John's Eve tradition still alive on Milos: at sunset, unmarried girls collect water from a well in silence and predict their future husbands through tokens placed in it overnight. Bonfires are jumped on the 24th. Smaller and more intimate than the better-known Cretan version.",
+      "desc_el": "Λαϊκή παράδοση της παραμονής του Αγίου Ιωάννη ζωντανή στη Μήλο: το σούρουπο, ανύπαντρες κοπέλες παίρνουν νερό από πηγάδι σιωπηλά και προβλέπουν τον μέλλοντα σύζυγο. Πηδούν φωτιές στις 24. Πιο οικείο από την κρητική εκδοχή."
+    }
+  ]
 }

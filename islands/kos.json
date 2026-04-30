@@ -9,7 +9,7 @@
     "months": [
       {
         "tag": "ok",
-        "why": "Quiet, mild, sea cold",
+        "why": "Quiet, mild",
         "why_el": "Ήσυχη, ήπιο"
       },
       {
@@ -19,52 +19,52 @@
       },
       {
         "tag": "great",
-        "why": "Wildflowers, sites quiet",
-        "why_el": "Αγριολούλουδα, σιωπηλά μνημεία"
+        "why": "Wildflowers",
+        "why_el": "Αγριολούλουδα"
       },
       {
         "tag": "great",
         "why": "Easter, sea warming",
-        "why_el": "Πάσχα, θάλασσα ζεσταίνει"
+        "why_el": "Πάσχα, θάλασσα"
       },
       {
         "tag": "perfect",
-        "why": "Sea swimmable, calm, cycling",
-        "why_el": "Μπάνιο, ήρεμα, ποδήλατο"
+        "why": "Swimmable, cycling",
+        "why_el": "Μπάνιο, ήρεμα"
       },
       {
         "tag": "perfect",
-        "why": "Sea warm, before package peak",
-        "why_el": "Ζεστή θάλασσα, πριν τα πακέτα"
+        "why": "Warm, before",
+        "why_el": "Πριν τα πακέτα"
       },
       {
         "tag": "ok",
         "why": "Hot, packages peak",
-        "why_el": "Ζέστη, κορύφωση πακέτων"
+        "why_el": "Πακέτα peak"
       },
       {
         "tag": "avoid",
-        "why": "All-inclusive saturation",
-        "why_el": "Κορεσμός all-inclusive"
+        "why": "All-incl. madness",
+        "why_el": "All-incl. κορεσμός"
       },
       {
         "tag": "perfect",
-        "why": "Best — sea warm, calmer",
-        "why_el": "Καλύτερος — ζεστή θάλασσα"
+        "why": "Best — calmer",
+        "why_el": "Καλύτερος — ζεστή"
       },
       {
         "tag": "great",
-        "why": "Last swims, mellow, cycling",
-        "why_el": "Τελευταία μπάνια, ποδήλατο"
+        "why": "Last swims, cycling",
+        "why_el": "Τελευταία μπάνια"
       },
       {
         "tag": "great",
-        "why": "Mild, quiet, sites empty",
-        "why_el": "Ήπιο, ησυχία, μνημεία άδεια"
+        "why": "Mild, quiet",
+        "why_el": "Ήπιο, μνημεία άδεια"
       },
       {
         "tag": "ok",
-        "why": "Quiet, locals only",
+        "why": "Quiet, locals",
         "why_el": "Ήσυχη, μόνο ντόπιοι"
       }
     ]
@@ -492,5 +492,15 @@
     "summary_el": "Διεθνές αεροδρόμιο με πολλές καλοκαιρινές charters — Aegean, Sky Express, Ryanair. Τα πλοία από Πειραιά δένουν στο λιμάνι Κω (Blue Star νυχτερινό). Το Μαστιχάρι εξυπηρετεί μόνο τη γραμμή Καλύμνου.",
     "tip": "Daily summer ferry to Bodrum (Turkey) takes 30 minutes — make it a side trip.",
     "tip_el": "Καθημερινό καλοκαιρινό πλοίο προς Μπόντρουμ Τουρκίας 30 λεπτά — ιδανικό για εκδρομή."
-  }
+  },
+  "festivals": [
+    {
+      "name": "Hippokrateia (cultural festival)",
+      "name_el": "Ιπποκράτεια",
+      "when": "July through August",
+      "when_el": "Ιούλιο με Αύγουστο",
+      "desc": "Annual cultural festival named after the island's most famous son. Open-air concerts, theatre, the symbolic re-reading of the Hippocratic Oath at the Asklepieion archaeological site. Major draws are the dance performances and ancient drama productions in atmospheric settings.",
+      "desc_el": "Ετήσιο πολιτιστικό φεστιβάλ που τιμά τον πιο διάσημο γιο του νησιού. Υπαίθριες συναυλίες, θέατρο, συμβολική απαγγελία του Όρκου του Ιπποκράτη στο Ασκληπιείο. Κυρίαρχες οι παραστάσεις χορού και αρχαίου δράματος."
+    }
+  ]
 }

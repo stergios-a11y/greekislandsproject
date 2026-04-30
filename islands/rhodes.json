@@ -10,61 +10,61 @@
       {
         "tag": "great",
         "why": "Old Town magical",
-        "why_el": "Παλιά Πόλη μαγική άδεια"
+        "why_el": "Παλιά Πόλη"
       },
       {
         "tag": "ok",
-        "why": "Mild, museums, sea cold",
+        "why": "Mild, museums",
         "why_el": "Ήπιο, μουσεία"
       },
       {
         "tag": "great",
-        "why": "Old Town pleasant",
-        "why_el": "Παλιά Πόλη ευχάριστη"
+        "why": "Old Town, mild",
+        "why_el": "Παλιά Πόλη"
       },
       {
         "tag": "great",
         "why": "Easter, Lindos opens",
-        "why_el": "Πάσχα, ανοίγει η Λίνδος"
+        "why_el": "Πάσχα, ανοίγει η"
       },
       {
         "tag": "great",
-        "why": "Sea warming, Lindos calm",
-        "why_el": "Νερό ζεσταίνει σιγά σιγά"
+        "why": "Sea warm, Lindos",
+        "why_el": "Νερό ζεσταίνει"
       },
       {
         "tag": "perfect",
-        "why": "Best balance — manageable",
-        "why_el": "Ισορροπία — ζεστή θάλασσα"
+        "why": "Best balance",
+        "why_el": "Ισορροπία — ζεστή"
       },
       {
         "tag": "ok",
-        "why": "Hot, Lindos packed",
-        "why_el": "Ζέστη, Λίνδος γεμάτη"
+        "why": "Lindos packed",
+        "why_el": "Λίνδος γεμάτη"
       },
       {
         "tag": "avoid",
-        "why": "German peak, Old Town queue",
-        "why_el": "Γερμανική κορύφωση, ουρά"
+        "why": "German peak, queue",
+        "why_el": "Γερμανική κορύφωση"
       },
       {
         "tag": "perfect",
-        "why": "Best — sea, room to breathe",
-        "why_el": "Καλύτερος — ζεστά, αναπνοή"
+        "why": "Best — breathable",
+        "why_el": "Καλύτερος — ζεστά"
       },
       {
         "tag": "great",
-        "why": "Last swims, Old Town reclaimed",
-        "why_el": "Τελευταία μπάνια, ησυχάζει"
+        "why": "Last swims",
+        "why_el": "Τελευταία μπάνια"
       },
       {
         "tag": "great",
-        "why": "Old Town empty, mild",
+        "why": "Old Town empty",
         "why_el": "Παλιά Πόλη άδεια, ήπιο"
       },
       {
         "tag": "ok",
-        "why": "Old Town quiet, museums",
+        "why": "Old Town quiet",
         "why_el": "Παλιά Πόλη ήσυχη"
       }
     ]
@@ -781,5 +781,15 @@
     "summary_el": "Το μεγαλύτερο αεροδρόμιο των Δωδεκανήσων — Aegean, Sky Express, Ryanair, charters. Τα πλοία από Πειραιά δένουν στο λιμάνι Ρόδου — Blue Star νυχτερινό, καθημερινά, €55–95 κατάστρωμα ή €100–180 καμπίνα. Οι απευθείας πτήσεις είναι συνήθως πιο γρήγορες και κοστίζουν όσο μια καμπίνα.",
     "tip": "Daily summer hydrofoil to Marmaris (Turkey) takes ~1h — easy add-on.",
     "tip_el": "Καθημερινό καλοκαιρινό υδροπτέρυγο προς Μαρμαρίδα Τουρκίας ~1 ώρα — εύκολο add-on."
-  }
+  },
+  "festivals": [
+    {
+      "name": "Medieval Rose Festival",
+      "name_el": "Μεσαιωνικό Ρόδο",
+      "when": "October (recently moved from May/June)",
+      "when_el": "Οκτώβριο (μετακινήθηκε πρόσφατα από Μάιο/Ιούνιο)",
+      "desc": "Living-history festival inside the medieval Old Town (UNESCO site): jousting knights, archery, sword fighting, fire shows, medieval markets, theatre. Reenacts life under the Order of Saint John (1310-1522). Run by the non-profit Medieval Rose since 2007. Check current dates before traveling — they shift.",
+      "desc_el": "Φεστιβάλ ζωντανής ιστορίας μέσα στη μεσαιωνική Παλιά Πόλη (μνημείο UNESCO): κονταρομαχίες, τοξοβολία, μονομαχίες, παραστάσεις φωτιάς, μεσαιωνικές αγορές, θέατρο. Αναπαριστά τη ζωή υπό τους Ιωαννίτες (1310-1522). Έλεγξε τις τρέχουσες ημερομηνίες πριν ταξιδέψεις."
+    }
+  ]
 }

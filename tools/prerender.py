@@ -1304,7 +1304,10 @@ def generate_festivals_page(island_keys):
         # Build month sections
         month_blocks = []
         for m in range(1, 13):
-            month_fests = [f for f in all_fests if m in f['months']]
+            # Show each festival only in its EARLIEST month — multi-month festivals
+            # (e.g. Apokries spanning Feb-Mar) used to appear twice. Now they appear
+            # in their first month only, with their date string showing the full span.
+            month_fests = [f for f in all_fests if f['months'] and f['months'][0] == m]
             if not month_fests:
                 continue
             heading = month_names[m - 1]
@@ -1344,10 +1347,10 @@ def generate_festivals_page(island_keys):
             )
             month_blocks.append(section_html)
 
-        # Quick-jump links
+        # Quick-jump links — count matches the earliest-month-only display logic
         nav_links = []
         for m in range(1, 13):
-            count = sum(1 for f in all_fests if m in f['months'])
+            count = sum(1 for f in all_fests if f['months'] and f['months'][0] == m)
             if count > 0:
                 short_name = month_names[m - 1][:3]
                 nav_links.append('<a href="#month-' + str(m) + '">' + short_name + ' (' + str(count) + ')</a>')
