@@ -1242,6 +1242,187 @@ def main():
     generate_whats_on_index(keys)
     print(f'✓ whats-on.json regenerated')
 
+    # Build the festivals calendar page (static HTML, EN + EL)
+    n_fests = generate_festivals_page(keys)
+    print(f'✓ festivals/ page regenerated ({n_fests} festivals)')
+
+def generate_festivals_page(island_keys):
+    """Build a 12-month festival calendar page (EN + EL) at /festivals/index.html.
+    Static HTML — festivals don't change often, and the page is a real SEO surface
+    for queries like 'greek island festivals 2027' or 'panigiri august'.
+    """
+    # Collect all festivals across islands
+    all_fests = []
+    for key in island_keys:
+        json_path = ISLANDS_DIR / f'{key}.json'
+        try:
+            d = json.loads(json_path.read_text())
+        except Exception:
+            continue
+        for fest in (d.get('festivals') or []):
+            if not isinstance(fest, dict): continue
+            months = sorted(parse_when_to_months(fest.get('when', '')))
+            all_fests.append({
+                'island': key,
+                'name': fest.get('name', ''),
+                'name_el': fest.get('name_el') or fest.get('name', ''),
+                'when': fest.get('when', ''),
+                'when_el': fest.get('when_el') or fest.get('when', ''),
+                'desc': fest.get('desc', ''),
+                'desc_el': fest.get('desc_el') or fest.get('desc', ''),
+                'photo': fest.get('photo', ''),
+                'months': months,
+                'sort_key': months[0] if months else 13,
+            })
+
+    all_fests.sort(key=lambda f: (f['sort_key'], f['name']))
+
+    MONTH_NAMES_EN = ['January','February','March','April','May','June','July',
+                      'August','September','October','November','December']
+    MONTH_NAMES_EL = ['Ιανουάριος','Φεβρουάριος','Μάρτιος','Απρίλιος','Μάιος','Ιούνιος','Ιούλιος',
+                      'Αύγουστος','Σεπτέμβριος','Οκτώβριος','Νοέμβριος','Δεκέμβριος']
+
+    for lang in ['en', 'el']:
+        is_el = (lang == 'el')
+        month_names = MONTH_NAMES_EL if is_el else MONTH_NAMES_EN
+        if is_el:
+            title = 'Γιορτές & Πανηγύρια Νησιών — αναλυτικό ημερολόγιο | Aegean Blueprint'
+            intro = ('Θρησκευτικές γιορτές, πανηγύρια και παραδοσιακές εκδηλώσεις σε όλα τα 78 ελληνικά νησιά. '
+                     'Για τις κινητές γιορτές, οι ημερομηνίες είναι ρυθμισμένες για το 2027. '
+                     'Το ημερολόγιο είναι ο καλύτερος τρόπος να σχεδιάσεις ταξίδι γύρω από κάτι συγκεκριμένο.')
+            h1 = 'Γιορτές & Πανηγύρια — Ημερολόγιο'
+        else:
+            title = 'Greek Island Festivals — full calendar | Aegean Blueprint'
+            intro = ('Religious feasts, panigiria, and traditional celebrations across all 78 Greek islands. '
+                     'Dates pinned to 2027 where movable. The calendar is the single best way to plan a trip '
+                     'around something specific — most of these festivals are the deepest-rooted experiences '
+                     'an island offers.')
+            h1 = 'Greek Island Festivals — full calendar'
+
+        url = f'{SITE_URL}/' + ('el/' if is_el else '') + 'festivals/'
+
+        # Build month sections
+        month_blocks = []
+        for m in range(1, 13):
+            month_fests = [f for f in all_fests if m in f['months']]
+            if not month_fests:
+                continue
+            heading = month_names[m - 1]
+            cards = []
+            for f in month_fests:
+                if is_el:
+                    island_name = GREEK_NAMES.get(f['island'], ISLAND_META.get(f['island'], {}).get('name', f['island']))
+                else:
+                    island_name = ISLAND_META.get(f['island'], {}).get('name', f['island'])
+                island_href = '/' + ('el/' if is_el else '') + 'island/' + f['island'] + '/'
+                fest_name = f['name_el'] if is_el else f['name']
+                when_text = f['when_el'] if is_el else f['when']
+                desc_text = f['desc_el'] if is_el else f['desc']
+
+                photo_html = ''
+                if f.get('photo'):
+                    photo_html = '<img class="fest-photo" src="' + esc(f['photo']) + '" alt="' + esc(fest_name) + '" loading="lazy">'
+
+                card_html = (
+                    '<article class="fest-card">'
+                    + photo_html
+                    + '<div class="fest-text">'
+                    + '<a class="fest-island" href="' + island_href + '">' + esc(island_name) + '</a>'
+                    + '<h3 class="fest-name">' + esc(fest_name) + '</h3>'
+                    + '<p class="fest-when">' + esc(when_text) + '</p>'
+                    + '<p class="fest-desc">' + esc(desc_text) + '</p>'
+                    + '</div></article>'
+                )
+                cards.append(card_html)
+
+            section_html = (
+                '<section class="fest-month" id="month-' + str(m) + '">'
+                + '<h2 class="fest-month-heading">' + heading
+                + ' <span class="fest-month-count">(' + str(len(month_fests)) + ')</span></h2>'
+                + '<div class="fest-cards">' + ''.join(cards) + '</div>'
+                + '</section>'
+            )
+            month_blocks.append(section_html)
+
+        # Quick-jump links
+        nav_links = []
+        for m in range(1, 13):
+            count = sum(1 for f in all_fests if m in f['months'])
+            if count > 0:
+                short_name = month_names[m - 1][:3]
+                nav_links.append('<a href="#month-' + str(m) + '">' + short_name + ' (' + str(count) + ')</a>')
+        nav_html = ' · '.join(nav_links)
+
+        page_html = (
+            '<!DOCTYPE html>\n<html lang="' + lang + '">\n<head>\n'
+            '<meta charset="UTF-8">\n'
+            '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
+            '<title>' + esc(title) + '</title>\n'
+            '<meta name="description" content="' + esc(intro[:155]) + '">\n'
+            '<meta name="theme-color" content="#0B8FAC">\n'
+            '<meta name="author" content="Stergios Gousios">\n'
+            '<link rel="canonical" href="' + url + '">\n'
+            '<link rel="alternate" hreflang="en" href="' + SITE_URL + '/festivals/">\n'
+            '<link rel="alternate" hreflang="el" href="' + SITE_URL + '/el/festivals/">\n'
+            '<link rel="alternate" hreflang="x-default" href="' + SITE_URL + '/festivals/">\n'
+            '<link rel="icon" href="' + ('../' if is_el else '') + 'logo.png">\n'
+            '<meta property="og:type" content="website">\n'
+            '<meta property="og:title" content="' + esc(title) + '">\n'
+            '<meta property="og:description" content="' + esc(intro[:155]) + '">\n'
+            '<meta property="og:url" content="' + url + '">\n'
+            '<meta property="og:locale" content="' + ('el_GR' if is_el else 'en_US') + '">\n'
+            '<link rel="stylesheet" href="' + ('../' if is_el else '') + 'style.css">\n'
+            '<style>\n'
+            '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--sans, system-ui), sans-serif; margin: 0; }\n'
+            '  .fest-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }\n'
+            '  .fest-page > h1 { font-family: var(--serif, Georgia), serif; font-size: 36px; margin: 0 0 8px; }\n'
+            '  .fest-intro { font-size: 17px; color: var(--ink-1, #444); line-height: 1.5; margin: 0 0 24px; max-width: 720px; }\n'
+            '  .fest-nav { background: var(--marble, #f6f4ee); padding: 12px 16px; border-radius: 12px; font-size: 14px; margin-bottom: 32px; }\n'
+            '  .fest-nav a { color: var(--aegean-dark, #076880); text-decoration: none; font-weight: 600; }\n'
+            '  .fest-nav a:hover { text-decoration: underline; }\n'
+            '  .fest-month { margin-bottom: 40px; }\n'
+            '  .fest-month-heading { font-family: var(--serif, Georgia), serif; font-size: 26px; margin: 0 0 16px; padding-bottom: 6px; border-bottom: 2px solid var(--aegean, #0B8FAC); }\n'
+            '  .fest-month-count { color: var(--ink-3, #888); font-weight: 400; font-size: 16px; }\n'
+            '  .fest-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }\n'
+            '  .fest-card { display: flex; gap: 14px; padding: 16px; background: var(--white, #fff); border: 1px solid var(--border, #e5e1d8); border-radius: 12px; }\n'
+            '  .fest-photo { width: 96px; height: 96px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }\n'
+            '  .fest-text { flex: 1; min-width: 0; }\n'
+            '  .fest-island { font-size: 13px; font-weight: 600; color: var(--aegean-dark, #076880); text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; }\n'
+            '  .fest-island:hover { text-decoration: underline; }\n'
+            '  .fest-name { font-family: var(--serif, Georgia), serif; font-size: 18px; margin: 4px 0; line-height: 1.25; }\n'
+            '  .fest-when { font-size: 13px; color: var(--accent, #FF6B6B); font-weight: 600; margin: 0 0 8px; }\n'
+            '  .fest-desc { font-size: 14px; color: var(--ink-1, #555); line-height: 1.5; margin: 0; }\n'
+            '  @media (max-width: 600px) {\n'
+            '    .fest-page { padding: 20px 16px 48px; }\n'
+            '    .fest-page > h1 { font-size: 28px; }\n'
+            '    .fest-card { flex-direction: column; }\n'
+            '    .fest-photo { width: 100%; height: 160px; }\n'
+            '  }\n'
+            '  html.dark body { background: #1a1a1a; color: #eee; }\n'
+            '  html.dark .fest-card { background: #2a2a2a; border-color: #444; }\n'
+            '  html.dark .fest-nav { background: #333; }\n'
+            '</style>\n'
+            '</head>\n<body>\n'
+            '<header class="site-header" style="padding: 12px 24px; background: var(--aegean, #0B8FAC); color: #fff;">\n'
+            '  <a href="/' + ('el/' if is_el else '') + '" style="color: #fff; text-decoration: none; font-family: var(--serif, Georgia), serif; font-size: 22px; font-weight: 700;">Aegean Blueprint</a>\n'
+            '  <a href="' + ('/' if is_el else '/el/festivals/') + '" style="color: #fff; opacity: 0.9; float: right; font-size: 14px; text-decoration: none;">' + ('EN' if is_el else 'EL') + '</a>\n'
+            '</header>\n'
+            '<main class="fest-page">\n'
+            '  <h1>' + h1 + '</h1>\n'
+            '  <p class="fest-intro">' + esc(intro) + '</p>\n'
+            '  <nav class="fest-nav">' + nav_html + '</nav>\n'
+            '  ' + ''.join(month_blocks) + '\n'
+            '</main>\n'
+            '</body>\n</html>'
+        )
+
+        out_dir = ROOT / ('el/festivals' if is_el else 'festivals')
+        out_dir.mkdir(parents=True, exist_ok=True)
+        (out_dir / 'index.html').write_text(page_html, encoding='utf-8')
+
+    return len(all_fests)
+
+
 def generate_whats_on_index(island_keys):
     """Build a compact JSON index for the home page 'what\'s on now' strip.
     Contains, per island: perfect months (1-12), festivals with month-coverage and name.
@@ -1345,6 +1526,7 @@ def generate_sitemap(island_keys):
     # (/#data, /#compare, etc.) are NOT separate URLs to a search engine.
     static_pages = [
         ('/', '/el/', 1.0, today),
+        ('/festivals/', '/el/festivals/', 0.8, today),
     ]
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']

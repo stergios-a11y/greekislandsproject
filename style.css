@@ -1937,27 +1937,28 @@ html.dark .similar-card:hover { border-color: var(--aegean); }
 .whats-on-strip {
   background: var(--marble);
   border-bottom: 1px solid var(--border);
-  padding: 10px 18px;
+  padding: 6px 18px;
   font-family: var(--sans);
   font-size: var(--text-meta);
+  line-height: 1.4;
 }
 .whats-on-strip:empty { display: none; }
 .whats-on-row {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px 24px;
+  gap: 6px 16px;
   max-width: 1400px;
   margin: 0 auto;
 }
-.whats-on-perfect,
-.whats-on-festivals {
+.whats-on-perfect {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: wrap;
+  flex: 1;
+  min-width: 0;
 }
-.whats-on-festivals { flex: 1; }
 .whats-on-label {
   color: var(--ink-3);
   font-weight: 600;
@@ -1966,17 +1967,18 @@ html.dark .similar-card:hover { border-color: var(--aegean); }
 .whats-on-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 4px;
 }
 .whats-on-chip {
   display: inline-block;
-  padding: 4px 12px;
+  padding: 2px 10px;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 999px;
   color: var(--ink);
   text-decoration: none;
   font-weight: 600;
+  font-size: var(--text-meta);
   transition: border-color 0.15s, color 0.15s;
 }
 .whats-on-chip:hover {
@@ -1984,26 +1986,21 @@ html.dark .similar-card:hover { border-color: var(--aegean); }
   color: var(--aegean-dark);
   text-decoration: none;
 }
-.whats-on-festival {
-  display: inline-block;
-  padding: 2px 0;
-  color: var(--ink-1);
-  text-decoration: none;
-  margin-right: 12px;
-}
-.whats-on-festival strong {
+.whats-on-festivals-link {
+  white-space: nowrap;
   color: var(--accent, #FF6B6B);
-  margin-right: 3px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 2px 0;
 }
-.whats-on-festival:hover {
+.whats-on-festivals-link:hover {
   text-decoration: underline;
-  color: var(--ink);
+  color: var(--terracotta, #E8522A);
 }
 
-@media (max-width: 768px) {
-  .whats-on-strip { padding: 8px 12px; }
-  .whats-on-row { gap: 8px 16px; }
-  .whats-on-festivals { width: 100%; font-size: var(--text-meta); }
+@media (max-width: 600px) {
+  .whats-on-strip { padding: 5px 10px; }
+  .whats-on-chip { padding: 2px 8px; }
 }
 
 html.dark .whats-on-strip { background: var(--ink-1); border-bottom-color: var(--ink-2); }
