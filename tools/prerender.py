@@ -614,20 +614,137 @@ def build_title(key, data, meta, lang='en'):
         return f"{name} Travel Guide — What to Do, Where to Stay | Aegean Blueprint"
 
 def build_description(key, data, meta, lang='en'):
-    """155-char meta description. Must be compelling — it's the search snippet."""
+    """Build a meta description targeting ~110-160 chars.
+
+    Strategy:
+      1. Add complete sentences until adding another would exceed 160 chars.
+      2. If we're still under 110 (lots of unused space) AND there's a next
+         sentence we didn't include, add a word-boundary-truncated prefix of it
+         with an ellipsis. Better to use SERP real estate than leave it blank.
+      3. Special edge: if the first sentence alone is over 160, soft-truncate it.
+    """
+    TARGET_MIN = 110
+    TARGET_MAX = 160
+
     intro = pick(data, 'intro', lang) or ''
-    # Strip any HTML-like chars, normalize whitespace
     clean = re.sub(r'\s+', ' ', intro).strip()
-    # Prefer first sentence or first 150 chars
-    m = re.match(r'^([^.!?]{40,200}[.!?])', clean)
-    snippet = m.group(1) if m else clean[:155]
-    if len(snippet) > 160:
-        snippet = snippet[:157].rsplit(' ', 1)[0] + '…'
-    return snippet
+    sentences = re.split(r'(?<=[.!?])\s+', clean)
+    if not sentences:
+        return clean[:TARGET_MAX]
+
+    # Step 1: fit complete sentences
+    out = ''
+    consumed_count = 0
+    for s in sentences:
+        candidate = (out + ' ' + s).strip() if out else s
+        if len(candidate) <= TARGET_MAX:
+            out = candidate
+            consumed_count += 1
+        else:
+            break
+
+    # Step 3 (handle first): if the first sentence alone is too long
+    if not out:
+        first = sentences[0]
+        out = first[:TARGET_MAX - 1].rsplit(' ', 1)[0] + '…'
+        return out
+
+    # Step 2: if we have room and another sentence exists, add a truncated prefix
+    if len(out) < TARGET_MIN and consumed_count < len(sentences):
+        extra = sentences[consumed_count]
+        room = TARGET_MAX - len(out) - 1   # joining space
+        if room > 30:                       # only worth it if we can add something meaningful
+            if len(extra) <= room:
+                out = (out + ' ' + extra).strip()
+            else:
+                snippet = extra[:room - 1].rsplit(' ', 1)[0]
+                out = (out + ' ' + snippet + '…').strip()
+
+    return out
 
 # ---------------------------------------------------------------------
 # Pre-rendered body content — this is what Google crawls
 # ---------------------------------------------------------------------
+def auto_link_islands(html_text, current_key, lang='en'):
+    """Find mentions of OTHER island names in prose text and convert to internal links.
+    Rules:
+      - Only link the first occurrence per page (avoids spammy repeated links)
+      - Never self-link (skip the current island)
+      - Skip mentions already inside <a> tags
+      - Skip mentions inside HTML attributes (alt="...", title="...")
+      - Use word boundaries — won't match "Naxos" inside "Naxosomething"
+    Returns the HTML with links added.
+    """
+    if not html_text:
+        return html_text
+
+    # Build (canonical-key, display-name) list, sorted by name LENGTH desc so
+    # longer names match before shorter substrings (e.g. "Agios Efstratios"
+    # before "Agios" if there were such collision).
+    candidates = []
+    for k, m in ISLAND_META.items():
+        if k == current_key:
+            continue
+        # Get the display name in the right language
+        if lang == 'el':
+            name = GREEK_NAMES.get(k, m.get('name', ''))
+        else:
+            name = m.get('name', '')
+        if not name:
+            continue
+        # Skip names that are common nouns or sub-string traps. None in our set
+        # currently — all 78 island names are distinctive — but worth filtering
+        # in future if we add e.g. "Crete" which appears as both an island and a region.
+        candidates.append((k, name))
+
+    candidates.sort(key=lambda x: -len(x[1]))
+
+    # Track which keys we've already linked so each destination gets at most ONE link
+    linked = set()
+    href_prefix = '/island/' if lang == 'en' else '/el/island/'
+
+    # We want to skip text inside existing tags. Approach: split by tag boundaries,
+    # only process the text-content segments. This is simpler than a full HTML parser.
+    parts = re.split(r'(<[^>]+>)', html_text)
+    # Track whether we are currently inside an <a>...</a>
+    inside_a = False
+    out_parts = []
+    for part in parts:
+        if part.startswith('<'):
+            # It's a tag — track <a>/</a> state
+            tag_lower = part.lower()
+            if tag_lower.startswith('<a ') or tag_lower == '<a>':
+                inside_a = True
+            elif tag_lower == '</a>':
+                inside_a = False
+            out_parts.append(part)
+            continue
+
+        if inside_a:
+            # Don't link inside existing anchors
+            out_parts.append(part)
+            continue
+
+        # Process this text segment — try each unlinked candidate
+        new_part = part
+        for k, name in candidates:
+            if k in linked:
+                continue
+            # Word-boundary match, case-sensitive (island names are proper nouns)
+            pattern = r'\b' + re.escape(name) + r'\b'
+            m = re.search(pattern, new_part)
+            if m:
+                # Replace ONLY the first occurrence
+                start, end = m.span()
+                href = f'{href_prefix}{k}/'
+                link_html = f'<a href="{href}">{name}</a>'
+                new_part = new_part[:start] + link_html + new_part[end:]
+                linked.add(k)
+        out_parts.append(new_part)
+
+    return ''.join(out_parts)
+
+
 def render_body(key, data, meta, lang='en'):
     """The visible, crawlable HTML for the island."""
     name = localized_name(key, data, meta, lang)
@@ -779,7 +896,7 @@ def render_body(key, data, meta, lang='en'):
             f'</figure>'
         )
 
-    return f'''
+    body_html = f'''
 <article class="seo-island-content">
   <div class="seo-header">
     <h1>{esc(name)}</h1>
@@ -797,6 +914,11 @@ def render_body(key, data, meta, lang='en'):
   {local_html}
   {related_html}
 </article>'''
+
+    # Post-process: auto-link mentions of OTHER island names to their pages.
+    # Done as a final pass so it works across all sections (intro, GT summary,
+    # WTV summary, captions). One link per destination island per page.
+    return auto_link_islands(body_html, key, lang)
 
 # ---------------------------------------------------------------------
 # Page shell
