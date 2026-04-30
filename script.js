@@ -625,16 +625,79 @@ async function renderWhatsOnStrip() {
     }
   });
 
-  // Top up to 6 islands. Prefer perfects, fill remainder with greats.
-  // Sort by total score so we surface the strongest matches first.
+  // Pick 6 islands to feature.
+  //
+  // Strategy depends on how many perfects there are:
+  //   - LOTS (>12): peak season — every popular island is "perfect", so showing
+  //     top-by-score just surfaces Santorini/Mykonos/Naxos every time. Instead
+  //     diversify by island group AND bias toward smaller/less-obvious picks
+  //     so the strip gives users something they wouldn't have found themselves.
+  //   - SOME (4-12): the sweet spot — show by score, all are genuine.
+  //   - FEW (<4): off-season fallback — top up with "great" tagged islands.
   const meta = (typeof ISLANDS_DATA !== 'undefined') ? ISLANDS_DATA : {};
   const byScore = (a, b) => (meta[b]?.total || 0) - (meta[a]?.total || 0);
-  perfectIslands.sort(byScore);
-  greatIslands.sort(byScore);
-  const islandsToShow = perfectIslands.slice(0, 6);
-  if (islandsToShow.length < 4) {
-    const fill = greatIslands.slice(0, 6 - islandsToShow.length);
-    islandsToShow.push(...fill);
+  const TARGET = 6;
+
+  let islandsToShow = [];
+  if (perfectIslands.length > 12) {
+    // Peak season — diversify by group, prefer smaller islands within group.
+    // First sort by population ascending (cap at 8000 — bigger ones are too obvious).
+    // Then walk down in group-rotation order so we get one from each group.
+    const popOf = k => meta[k]?.pop || 9999;
+    const groupOf = k => meta[k]?.island_group || 'Other';
+    // Bucket by group
+    const groupBuckets = {};
+    perfectIslands.forEach(k => {
+      const g = groupOf(k);
+      if (!groupBuckets[g]) groupBuckets[g] = [];
+      groupBuckets[g].push(k);
+    });
+    // Sort within each bucket: prefer smaller (less obvious) islands. Each
+    // island gets a "deserves-spotlight" rank: pop weight + score boost, so
+    // a small island with great score outranks an even smaller mediocre one.
+    Object.keys(groupBuckets).forEach(g => {
+      groupBuckets[g].sort((a, b) => {
+        // Lower pop is better; higher score is better. Tie-break on key.
+        const popA = Math.log10(popOf(a) + 1);
+        const popB = Math.log10(popOf(b) + 1);
+        const scoreA = meta[a]?.total || 0;
+        const scoreB = meta[b]?.total || 0;
+        // "Hidden gem" score: low population and decent rating
+        const gemA = -popA * 1.0 + scoreA * 0.4;
+        const gemB = -popB * 1.0 + scoreB * 0.4;
+        return gemB - gemA;
+      });
+    });
+    // Round-robin across groups, but with a month-based offset so June and
+    // September show different picks (both have ~75 perfects but rotate).
+    const groupKeys = Object.keys(groupBuckets).sort();   // stable order
+    const monthOffset = month;     // 1-12, used as starting bucket index
+    let idx = 0;
+    while (islandsToShow.length < TARGET) {
+      let added = false;
+      for (let i = 0; i < groupKeys.length && islandsToShow.length < TARGET; i++) {
+        // Stagger which group is picked first based on the month
+        const g = groupKeys[(i + monthOffset) % groupKeys.length];
+        // Stagger which item within the group based on month too — for groups
+        // with multiple candidates, June picks one, September picks the next.
+        const itemIdx = (idx + Math.floor(monthOffset / 3)) % Math.max(groupBuckets[g].length, 1);
+        if (groupBuckets[g].length > 0 && !islandsToShow.includes(groupBuckets[g][itemIdx])) {
+          islandsToShow.push(groupBuckets[g][itemIdx]);
+          added = true;
+        }
+      }
+      if (!added) break;
+      idx++;
+    }
+  } else {
+    // Normal case — just pick top-scored perfects, fill with greats if too few
+    perfectIslands.sort(byScore);
+    greatIslands.sort(byScore);
+    islandsToShow = perfectIslands.slice(0, TARGET);
+    if (islandsToShow.length < 4) {
+      const fill = greatIslands.slice(0, TARGET - islandsToShow.length);
+      islandsToShow.push(...fill);
+    }
   }
 
   // Find festivals happening this month
@@ -678,13 +741,18 @@ async function renderWhatsOnStrip() {
     festivalsHtml = `<div class="whats-on-festivals"><span class="whats-on-label">${festLabel}:</span>${items}</div>`;
   }
 
-  // Label depends on whether we have actual perfects or are falling back to greats
-  const usingFallback = perfectIslands.length < 4;
+  // Label depends on the data shape:
+  //   - 0 perfects: "Best in <month>" (fallback to greats)
+  //   - 1-3 perfects: "Best for <month>" (small handful of recommended)
+  //   - 4-12 perfects: "Perfect in <month>" (the genuine sweet spot)
+  //   - >12 perfects: "Underrated picks for <month>" (peak season, diversified)
   let perfectLabel;
-  if (usingFallback && perfectIslands.length === 0) {
+  if (perfectIslands.length === 0) {
     perfectLabel = lang === 'el' ? `Καλά για ${monthLabel}` : `Best in ${monthLabel}`;
-  } else if (usingFallback) {
+  } else if (perfectIslands.length < 4) {
     perfectLabel = lang === 'el' ? `Ιδανικά τον ${monthLabel}` : `Best for ${monthLabel}`;
+  } else if (perfectIslands.length > 12) {
+    perfectLabel = lang === 'el' ? `Αξιόλογες επιλογές τον ${monthLabel}` : `Underrated picks for ${monthLabel}`;
   } else {
     perfectLabel = lang === 'el' ? `Ιδανικά τον ${monthLabel}` : `Perfect in ${monthLabel}`;
   }
