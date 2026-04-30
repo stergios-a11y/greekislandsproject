@@ -9,62 +9,62 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Locals only, thin services",
+        "why": "Off-season",
         "why_el": "Σε χειμερία νάρκη"
       },
       {
         "tag": "avoid",
-        "why": "Wintering, cold",
-        "why_el": "Σε χειμερία νάρκη, κρύο"
+        "why": "Off-season, cold",
+        "why_el": "Σε χειμερία νάρκη"
       },
       {
         "tag": "ok",
-        "why": "Quiet, sea cold, hiking",
+        "why": "Quiet, hiking",
         "why_el": "Ήσυχη, θάλασσα κρύα"
       },
       {
         "tag": "great",
-        "why": "Easter wonders, blooming",
+        "why": "Easter, blooming",
         "why_el": "Πάσχα μαγικό, ανθίζει"
       },
       {
         "tag": "great",
         "why": "Tavernas opening",
-        "why_el": "Ανοίγουν μαγαζιά, ζεσταίνει η θάλασσα"
+        "why_el": "Ανοίγουν, ζεσταίνει"
       },
       {
         "tag": "perfect",
-        "why": "Long days, before crowds",
-        "why_el": "Μεγάλες μέρες, θάλασσα ζεστή"
+        "why": "Long days, before",
+        "why_el": "Μεγάλες μέρες, ζεστά"
       },
       {
         "tag": "great",
-        "why": "Hot, busy but pleasant",
-        "why_el": "Ζέστη, κόσμος αλλά καλό"
+        "why": "Hot, busy but",
+        "why_el": "Ζέστη, κόσμος αλλά"
       },
       {
         "tag": "ok",
-        "why": "Peak crowds and prices",
-        "why_el": "Κορύφωση κόσμου και τιμών"
+        "why": "Peak crowds and",
+        "why_el": "Κορύφωση, τιμές"
       },
       {
         "tag": "perfect",
-        "why": "Best — locals are out, sea warm",
-        "why_el": "Καλύτερος — βγαίνουν οι ντόπιοι"
+        "why": "Best — locals out",
+        "why_el": "Καλύτερος — ντόπιοι"
       },
       {
         "tag": "great",
-        "why": "Mellow, last good swims",
-        "why_el": "Χαλαρά, τελευταία καλά μπάνια"
+        "why": "Last swims",
+        "why_el": "Χαλαρά, τελευταία"
       },
       {
         "tag": "ok",
         "why": "Wrapping up",
-        "why_el": "Σιγά σιγά πάει για χειμώνα"
+        "why_el": "Για χειμώνα"
       },
       {
         "tag": "avoid",
-        "why": "Few ferries, rooms scarce",
+        "why": "Few ferries",
         "why_el": "Σχεδόν όλα κλειστά"
       }
     ]
@@ -416,8 +416,8 @@
     {
       "name": "Panagia Chrysopigi",
       "name_el": "Παναγία Χρυσοπηγή",
-      "when": "Pentecost (movable, May–June)",
-      "when_el": "Αγίου Πνεύματος (κινητή, Μάιος–Ιούνιος)",
+      "when": "Pentecost — 20 June 2027",
+      "when_el": "Πεντηκοστή — 20 Ιουνίου 2027",
       "desc": "Sifnos's biggest festival, at the cliff-top monastery. The icon is paraded; tavernas serve free chickpea stew and lamb to all comers.",
       "desc_el": "Το μεγαλύτερο πανηγύρι του νησιού, στο μοναστήρι πάνω στον γκρεμό. Η εικόνα περιφέρεται· οι ταβέρνες σερβίρουν δωρεάν ρεβιθάδα και αρνί σε όλους.",
       "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Cyclades_Sifnos_Panagia_Chrisopigi_-_panoramio.jpg",

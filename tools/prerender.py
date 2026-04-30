@@ -1310,10 +1310,13 @@ def parse_when_to_months(when_str):
         a = _MONTH_NAMES.get(dash_match.group(1)); b = _MONTH_NAMES.get(dash_match.group(2))
         if a and b:
             months.update(range(a, b+1) if a <= b else list(range(a, 13)) + list(range(1, b+1)))
-    if 'easter' in s or 'whitsun' in s or 'pentecost' in s:
-        months.update([4, 5])
-    if 'pre-lent' in s or 'apokries' in s:
-        months.update([2, 3])
+    # Movable feasts — only use the keyword fallback if NO explicit month was found.
+    # Once we've added explicit "20 June 2027" dates, those win.
+    if not months:
+        if 'easter' in s or 'whitsun' in s or 'pentecost' in s:
+            months.update([4, 5])
+        if 'pre-lent' in s or 'apokries' in s:
+            months.update([2, 3])
     return months
 
 
