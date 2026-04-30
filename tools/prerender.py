@@ -1238,6 +1238,85 @@ def main():
     generate_sitemap(keys)
     print(f'✓ Sitemap regenerated with {len(keys)} islands + static pages')
 
+    # Build the compact "what's on now" index for the home page strip
+    generate_whats_on_index(keys)
+    print(f'✓ whats-on.json regenerated')
+
+def generate_whats_on_index(island_keys):
+    """Build a compact JSON index for the home page 'what\'s on now' strip.
+    Contains, per island: perfect months (1-12), festivals with month-coverage and name.
+    Tiny file (~10KB for 78 islands) so home page loads it fast.
+    """
+    index = {}
+    for key in sorted(island_keys):
+        json_path = ISLANDS_DIR / f'{key}.json'
+        try:
+            d = json.loads(json_path.read_text())
+        except Exception:
+            continue
+
+        # Collect months tagged 'perfect' (1-indexed for human readability)
+        wtv_months = (d.get('when_to_visit') or {}).get('months') or []
+        perfect = [i+1 for i, m in enumerate(wtv_months) if isinstance(m, dict) and m.get('tag') == 'perfect']
+        great   = [i+1 for i, m in enumerate(wtv_months) if isinstance(m, dict) and m.get('tag') == 'great']
+
+        # Collect festivals with parsed month coverage
+        festivals = []
+        for fest in (d.get('festivals') or []):
+            if not isinstance(fest, dict): continue
+            when = fest.get('when', '')
+            festivals.append({
+                'name': fest.get('name', ''),
+                'name_el': fest.get('name_el', ''),
+                'when': when,
+                'when_el': fest.get('when_el', ''),
+                'months': sorted(parse_when_to_months(when)),
+            })
+
+        if perfect or great or festivals:
+            entry = {}
+            if perfect:    entry['perfect'] = perfect
+            if great:      entry['great'] = great
+            if festivals:  entry['festivals'] = festivals
+            index[key] = entry
+
+    out_path = ROOT / 'whats-on.json'
+    out_path.write_text(json.dumps(index, ensure_ascii=False, separators=(',',':')))
+    return out_path
+
+
+# Mirror of script.js parse — used at build time to pre-compute month coverage per festival
+_MONTH_NAMES = {
+    'january':1, 'jan':1, 'february':2, 'feb':2, 'march':3, 'mar':3, 'april':4, 'apr':4,
+    'may':5, 'june':6, 'jun':6, 'july':7, 'jul':7, 'august':8, 'aug':8,
+    'september':9, 'sept':9, 'sep':9, 'october':10, 'oct':10, 'november':11, 'nov':11,
+    'december':12, 'dec':12,
+}
+def parse_when_to_months(when_str):
+    """Return set of month numbers (1-12) the festival likely covers."""
+    if not when_str: return set()
+    s = when_str.lower()
+    months = set()
+    for name, num in _MONTH_NAMES.items():
+        if re.search(r'\b' + name + r'\b', s):
+            months.add(num)
+    range_match = re.search(r'(\w+)\s+through\s+(?:early\s+)?(\w+)', s)
+    if range_match:
+        a = _MONTH_NAMES.get(range_match.group(1)); b = _MONTH_NAMES.get(range_match.group(2))
+        if a and b:
+            months.update(range(a, b+1) if a <= b else list(range(a, 13)) + list(range(1, b+1)))
+    dash_match = re.search(r'(\w+)\s*[\u2013-]\s*(\w+)', s)
+    if dash_match:
+        a = _MONTH_NAMES.get(dash_match.group(1)); b = _MONTH_NAMES.get(dash_match.group(2))
+        if a and b:
+            months.update(range(a, b+1) if a <= b else list(range(a, 13)) + list(range(1, b+1)))
+    if 'easter' in s or 'whitsun' in s or 'pentecost' in s:
+        months.update([4, 5])
+    if 'pre-lent' in s or 'apokries' in s:
+        months.update([2, 3])
+    return months
+
+
 def file_lastmod(path):
     """Return ISO-8601 date for the modification time of a file. Falls back to today."""
     try:

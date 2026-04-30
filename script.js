@@ -311,6 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
   try { setupVibeTags(); } catch(e) { console.warn('setupVibeTags', e); }
   try { setupGroupFilter(); } catch(e) { console.warn('setupGroupFilter', e); }
   try { setupMap(); } catch(e) { console.warn('setupMap', e); }
+  try { renderWhatsOnStrip(); } catch(e) { console.warn('whatsOn', e); }
   try { setupTable(); } catch(e) { console.warn('setupTable', e); }
   try { setupCompare(); } catch(e) { console.warn('setupCompare', e); }
   const vd = document.getElementById('version-display');
@@ -584,6 +585,130 @@ function setupDarkMode() {
 /* ============================================================
    MAP
 ============================================================ */
+/* ============================================================
+   "What's on now" home strip
+   ------------------------------------------------------------
+   Fetches /whats-on.json (built by prerender.py) and renders a small
+   strip above the map showing islands tagged "perfect" for the current
+   month, plus any festivals happening this month. Refreshes monthly
+   automatically — same code, different output in May vs October.
+============================================================ */
+async function renderWhatsOnStrip() {
+  const container = document.getElementById('whats-on-strip');
+  if (!container) return;
+
+  let data;
+  try {
+    const res = await fetch('/whats-on.json', { cache: 'default' });
+    if (!res.ok) return;
+    data = await res.json();
+  } catch (e) {
+    console.warn('whats-on fetch failed', e);
+    return;
+  }
+
+  const month = new Date().getMonth() + 1;   // 1-12
+  const lang = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
+  const monthNamesEN = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const monthNamesEL = ['Ιανουάριο','Φεβρουάριο','Μάρτιο','Απρίλιο','Μάιο','Ιούνιο','Ιούλιο','Αύγουστο','Σεπτέμβριο','Οκτώβριο','Νοέμβριο','Δεκέμβριο'];
+  const monthLabel = lang === 'el' ? monthNamesEL[month - 1] : monthNamesEN[month - 1];
+
+  // Find islands tagged "perfect" for this month, then add "great" if too few perfects
+  const perfectIslands = [];
+  const greatIslands = [];
+  Object.keys(data).forEach(key => {
+    const entry = data[key];
+    if (entry.perfect && entry.perfect.includes(month)) {
+      perfectIslands.push(key);
+    } else if (entry.great && entry.great.includes(month)) {
+      greatIslands.push(key);
+    }
+  });
+
+  // Top up to 6 islands. Prefer perfects, fill remainder with greats.
+  // Sort by total score so we surface the strongest matches first.
+  const meta = (typeof ISLANDS_DATA !== 'undefined') ? ISLANDS_DATA : {};
+  const byScore = (a, b) => (meta[b]?.total || 0) - (meta[a]?.total || 0);
+  perfectIslands.sort(byScore);
+  greatIslands.sort(byScore);
+  const islandsToShow = perfectIslands.slice(0, 6);
+  if (islandsToShow.length < 4) {
+    const fill = greatIslands.slice(0, 6 - islandsToShow.length);
+    islandsToShow.push(...fill);
+  }
+
+  // Find festivals happening this month
+  const festivals = [];
+  Object.keys(data).forEach(key => {
+    const entry = data[key];
+    if (!entry.festivals) return;
+    entry.festivals.forEach(f => {
+      if (f.months && f.months.includes(month)) {
+        festivals.push({
+          islandKey: key,
+          name: lang === 'el' ? (f.name_el || f.name) : f.name,
+          when: lang === 'el' ? (f.when_el || f.when) : f.when,
+        });
+      }
+    });
+  });
+  // Limit to 3 festivals shown — the rest are still in the data, just not visible
+  festivals.sort((a, b) => (a.when || '').localeCompare(b.when || ''));
+  const festivalsToShow = festivals.slice(0, 3);
+
+  // Nothing to show? Hide the strip entirely.
+  if (islandsToShow.length === 0 && festivalsToShow.length === 0) {
+    container.style.display = 'none';
+    return;
+  }
+
+  // Build the chip HTML
+  const chipsHtml = islandsToShow.map(key => {
+    const name = (typeof islandName === 'function') ? islandName(key) : (meta[key]?.name || key);
+    return `<a class="whats-on-chip" href="#" onclick="navigateTo('island','${key}');return false;">${name}</a>`;
+  }).join('');
+
+  let festivalsHtml = '';
+  if (festivalsToShow.length) {
+    const items = festivalsToShow.map(f => {
+      const name = (typeof islandName === 'function') ? islandName(f.islandKey) : (meta[f.islandKey]?.name || f.islandKey);
+      return `<a class="whats-on-festival" href="#" onclick="navigateTo('island','${f.islandKey}');return false;" title="${escapeAttr(f.name)} · ${escapeAttr(f.when)}"><strong>${name}</strong>: ${escapeHtml(f.name)}</a>`;
+    }).join('');
+    const festLabel = lang === 'el' ? 'Γιορτές' : 'Happening now';
+    festivalsHtml = `<div class="whats-on-festivals"><span class="whats-on-label">${festLabel}:</span>${items}</div>`;
+  }
+
+  // Label depends on whether we have actual perfects or are falling back to greats
+  const usingFallback = perfectIslands.length < 4;
+  let perfectLabel;
+  if (usingFallback && perfectIslands.length === 0) {
+    perfectLabel = lang === 'el' ? `Καλά για ${monthLabel}` : `Best in ${monthLabel}`;
+  } else if (usingFallback) {
+    perfectLabel = lang === 'el' ? `Ιδανικά τον ${monthLabel}` : `Best for ${monthLabel}`;
+  } else {
+    perfectLabel = lang === 'el' ? `Ιδανικά τον ${monthLabel}` : `Perfect in ${monthLabel}`;
+  }
+
+  container.innerHTML = `
+    <div class="whats-on-row">
+      <div class="whats-on-perfect">
+        <span class="whats-on-label">${perfectLabel}:</span>
+        <div class="whats-on-chips">${chipsHtml}</div>
+      </div>
+      ${festivalsHtml}
+    </div>
+  `;
+  container.style.display = '';
+}
+
+// Tiny helpers — escape for HTML attrs and innerHTML use
+function escapeAttr(s) {
+  return String(s || '').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;');
+}
+function escapeHtml(s) {
+  return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
 function setupMap() {
   const GREECE_BOUNDS = L.latLngBounds(L.latLng(33.8, 18.5), L.latLng(42.2, 30.2));
   mapInstance = L.map('main-map', { zoomControl: true, minZoom: 6, maxZoom: 14, maxBounds: GREECE_BOUNDS, maxBoundsViscosity: 0.85 });
