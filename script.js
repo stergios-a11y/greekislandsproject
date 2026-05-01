@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-04-30';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-05-01';   // Updated by tools/prerender.py on each deploy
 
 const ISLANDS_DATA = {
   "lefkada":      { name:"Lefkada",          lat:38.706, lng:20.648, beach:4.9, hist:2.5, night:3.2, access:4.5, afford:4.0, car_need:4.0, has_airport:true, total:3.9, area:335,   pop:22600,   days:4, island_group:"Ionian", drama:false, hiking:true, springs:false, chora:false, sailing:true },

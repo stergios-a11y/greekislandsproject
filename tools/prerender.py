@@ -1374,6 +1374,10 @@ def generate_festivals_page(island_keys):
             '<meta property="og:description" content="' + esc(intro[:155]) + '">\n'
             '<meta property="og:url" content="' + url + '">\n'
             '<meta property="og:locale" content="' + ('el_GR' if is_el else 'en_US') + '">\n'
+            # Apply dark mode preference from localStorage BEFORE stylesheet loads.
+            # Otherwise users who enabled dark mode on the home page would briefly
+            # flash the light theme on this page. Tiny inline script — no JS file needed.
+            '<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>\n'
             '<link rel="stylesheet" href="' + ('../' if is_el else '') + 'style.css">\n'
             '<style>\n'
             '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--sans, system-ui), sans-serif; margin: 0; }\n'
@@ -1406,14 +1410,28 @@ def generate_festivals_page(island_keys):
             '  html.dark .fest-nav { background: #333; }\n'
             '</style>\n'
             '</head>\n<body>\n'
-            '<header class="site-header" style="padding: 10px 24px; background: var(--aegean, #0B8FAC); color: #fff; display: flex; align-items: center; flex-wrap: wrap; gap: 10px 18px;">\n'
-            '  <a href="/' + ('el/' if is_el else '') + '" style="color: #fff; text-decoration: none; font-family: var(--serif, Georgia), serif; font-size: 22px; font-weight: 700; margin-right: auto;">Aegean Blueprint</a>\n'
-            '  <nav style="display: flex; gap: 16px; flex-wrap: wrap; font-size: 14px;">\n'
-            '    <a href="/' + ('el/' if is_el else '') + '" style="color: #fff; opacity: 0.85; text-decoration: none;">' + ('Χάρτης' if is_el else 'Map') + '</a>\n'
-            '    <a href="/' + ('el/' if is_el else '') + 'festivals/" style="color: #fff; font-weight: 700; text-decoration: none; border-bottom: 2px solid #fff; padding-bottom: 1px;">' + ('Γιορτές' if is_el else 'Festivals') + '</a>\n'
-            '    <a href="/' + ('el/' if is_el else '') + '#mission" style="color: #fff; opacity: 0.85; text-decoration: none;">' + ('Στόχος' if is_el else 'Mission') + '</a>\n'
-            '  </nav>\n'
-            '  <a href="' + ('/' if is_el else '/el/festivals/') + '" style="color: #fff; opacity: 0.85; font-size: 13px; text-decoration: none; border: 1px solid rgba(255,255,255,0.4); padding: 3px 10px; border-radius: 4px;">' + ('EN' if is_el else 'EL') + '</a>\n'
+            # Match the main-site header exactly. Same classes, same CSS in style.css.
+            # Difference: nav links go to /index.html#hash so they switch SPA view on
+            # the home page, festivals link is real (active here), language toggle is
+            # a single tappable EN/EL link rather than the SPA dropdown (no JS available).
+            '<header>\n'
+            '  <div class="header-content">\n'
+            '    <a class="logo-wrapper" href="/' + ('el/' if is_el else '') + '" style="text-decoration: none;">\n'
+            '      <img src="/logo-hero.svg" id="site-logo" alt="Aegean Blueprint logo">\n'
+            '      <span id="brand-text"><span class="brand-word">Aegean</span> <span class="brand-word">Blueprint</span></span>\n'
+            '    </a>\n'
+            '    <nav class="top-nav">\n'
+            '      <a href="/' + ('el/' if is_el else '') + '">' + ('Χάρτης' if is_el else 'Map') + '</a>\n'
+            '      <a href="/' + ('el/' if is_el else '') + '#data">' + ('Στοιχεία Νησιών' if is_el else 'Islands Data') + '</a>\n'
+            '      <a href="/' + ('el/' if is_el else '') + '#compare">' + ('Σύγκριση' if is_el else 'Compare') + '</a>\n'
+            '      <a href="/' + ('el/' if is_el else '') + 'festivals/" class="active">' + ('Γιορτές' if is_el else 'Festivals') + '</a>\n'
+            '      <a href="/' + ('el/' if is_el else '') + '#hopping">' + ('Νησοπορία' if is_el else 'Island Hopping') + '</a>\n'
+            '      <a href="/' + ('el/' if is_el else '') + '#match">' + ('Βρες το Νησί σου' if is_el else 'Match Me') + '</a>\n'
+            '      <a href="/' + ('el/' if is_el else '') + '#mission">' + ('Στόχος' if is_el else 'Mission') + '</a>\n'
+            '    </nav>\n'
+            '    <a class="lang-toggle-static" href="' + ('/festivals/' if is_el else '/el/festivals/') + '" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;">'
+            '<span style="margin-right: 4px;">🌐</span>' + ('EN' if is_el else 'EL') + '</a>\n'
+            '  </div>\n'
             '</header>\n'
             '<main class="fest-page">\n'
             '  <h1>' + h1 + '</h1>\n'
