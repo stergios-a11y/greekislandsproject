@@ -90,8 +90,8 @@
         "stops": [
           {
             "name": "Fira",
-            "lat": 36.4169,
-            "lng": 25.432,
+            "lat": 36.4181,
+            "lng": 25.4324,
             "type": "city",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Fira",
@@ -102,8 +102,8 @@
           },
           {
             "name": "Museum of Prehistoric Thera",
-            "lat": 36.4162,
-            "lng": 25.4313,
+            "lat": 36.4168,
+            "lng": 25.4327,
             "type": "museum",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Museum_of_Prehistoric_Thera",
@@ -114,8 +114,8 @@
           },
           {
             "name": "Caldera Path — Fira to Imerovigli",
-            "lat": 36.4317,
-            "lng": 25.4267,
+            "lat": 36.4328,
+            "lng": 25.4228,
             "type": "nature",
             "time": "11:30",
             "wiki": null,
@@ -127,7 +127,7 @@
           {
             "name": "Lunch at Avocado Restaurant",
             "lat": 36.4328,
-            "lng": 25.4268,
+            "lng": 25.4228,
             "type": "village",
             "time": "13:30",
             "wiki": null,
@@ -138,8 +138,8 @@
           },
           {
             "name": "Skaros Rock",
-            "lat": 36.4383,
-            "lng": 25.4233,
+            "lat": 36.4327,
+            "lng": 25.4182,
             "type": "castle",
             "time": "16:00",
             "wiki": "https://en.wikipedia.org/wiki/Skaros",
@@ -150,8 +150,8 @@
           },
           {
             "name": "Sunset & Dinner — Athenian House",
-            "lat": 36.434,
-            "lng": 25.426,
+            "lat": 36.4328,
+            "lng": 25.4228,
             "type": "village",
             "time": "20:00",
             "wiki": null,
@@ -174,8 +174,8 @@
         "stops": [
           {
             "name": "Volcano boat tour — from Fira Old Port",
-            "lat": 36.4133,
-            "lng": 25.4239,
+            "lat": 36.4178,
+            "lng": 25.4281,
             "type": "harbour",
             "time": "09:00",
             "wiki": null,
@@ -185,8 +185,8 @@
           },
           {
             "name": "Nea Kameni Volcano walk",
-            "lat": 36.4017,
-            "lng": 25.3933,
+            "lat": 36.4,
+            "lng": 25.4,
             "type": "nature",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Nea_Kameni",
@@ -204,8 +204,8 @@
           },
           {
             "name": "Palea Kameni Hot Springs",
-            "lat": 36.4037,
-            "lng": 25.3796,
+            "lat": 36.3986,
+            "lng": 25.3799,
             "type": "beach",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Palaia_Kameni",
@@ -242,7 +242,7 @@
           },
           {
             "name": "Dinner at Ammoudi Bay — Dimitris",
-            "lat": 36.4651,
+            "lat": 36.4607,
             "lng": 25.3708,
             "type": "harbour",
             "time": "19:30",
@@ -250,6 +250,17 @@
             "desc": "Skip the sunset-point crowds in Oia. Instead descend the 300 steps (or take a donkey, €10) to Ammoudi Bay — the tiny port below Oia — and have dinner at <a href=\"https://dimitrisammoudi.gr/\" target=\"_blank\" rel=\"noopener noreferrer\">Dimitris</a>. Fresh fish sold by the kilo, feet in the water, red cliffs turning gold as the sun sets. €60-90/person.",
             "desc_el": "Απέφυγε τον συνωστισμό στο σημείο ηλιοβασιλέματος της Οίας. Κατέβα τα 300 σκαλιά (ή πάρε γαϊδούρι, 10€) στον κόλπο Αμμούδι — το μικρό λιμάνι κάτω από την Οία — και δείπνησε στου <a href=\"https://dimitrisammoudi.gr/\" target=\"_blank\" rel=\"noopener noreferrer\">Δημήτρη</a>. Φρέσκο ψάρι με το κιλό, τα πόδια στο νερό, τα κόκκινα βράχια χρυσίζουν στο ηλιοβασίλεμα. 60-90€/άτομο.",
             "name_el": "Δείπνο στον κόλπο Αμμουδιού — Δημήτρης"
+          },
+          {
+            "name": "Return to Imerovigli",
+            "lat": 36.4328,
+            "lng": 25.4228,
+            "type": "city",
+            "time": "23:00",
+            "wiki": null,
+            "desc": "Drive back along the caldera road from Oia to Imerovigli (about 15 minutes). The cliff lights of Fira and Imerovigli are spectacular at night — your villa's terrace is the perfect way to end the day.",
+            "name_el": "Επιστροφή στο Ημεροβίγλι",
+            "desc_el": "Επιστροφή στο Ημεροβίγλι μέσω του δρόμου της καλντέρας από την Οία (περίπου 15 λεπτά). Τα φώτα στους γκρεμούς της Φηράς και του Ημεροβιγλίου είναι εντυπωσιακά τη νύχτα — η ταράτσα της βίλας σου είναι ο τέλειος τρόπος να κλείσεις τη μέρα."
           }
         ]
       },
@@ -264,8 +275,8 @@
         "stops": [
           {
             "name": "Santo Wines Winery",
-            "lat": 36.391,
-            "lng": 25.4413,
+            "lat": 36.3876,
+            "lng": 25.4467,
             "type": "village",
             "time": "10:00",
             "wiki": null,
@@ -283,8 +294,8 @@
           },
           {
             "name": "Pyrgos village",
-            "lat": 36.3783,
-            "lng": 25.4464,
+            "lat": 36.383,
+            "lng": 25.4478,
             "type": "village",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Pyrgos_Kallistis",
@@ -302,8 +313,8 @@
           },
           {
             "name": "Lunch — Metaxi Mas",
-            "lat": 36.3806,
-            "lng": 25.4622,
+            "lat": 36.388,
+            "lng": 25.4573,
             "type": "village",
             "time": "13:30",
             "wiki": null,
@@ -313,8 +324,8 @@
           },
           {
             "name": "Akrotiri Archaeological Site",
-            "lat": 36.3519,
-            "lng": 25.4033,
+            "lat": 36.3518,
+            "lng": 25.4034,
             "type": "museum",
             "time": "15:30",
             "wiki": "https://en.wikipedia.org/wiki/Akrotiri_(prehistoric_city)",
@@ -332,8 +343,8 @@
           },
           {
             "name": "Red Beach",
-            "lat": 36.3486,
-            "lng": 25.3953,
+            "lat": 36.3489,
+            "lng": 25.3939,
             "type": "beach",
             "time": "17:00",
             "wiki": "https://en.wikipedia.org/wiki/Red_Beach,_Santorini",
@@ -348,6 +359,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Red_Beach,_Santorini.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Santorini Airport (departure)",
+            "lat": 36.4024,
+            "lng": 25.473,
+            "type": "departure",
+            "time": "17:00",
+            "wiki": null,
+            "desc": "Santorini Airport (JTR) is just 10 minutes east of Akrotiri/Red Beach. Most island flights run mid-afternoon to evening. If your flight is late, the Pyrgos hilltop chapels are a great sunset spot before heading to the airport.",
+            "name_el": "Αεροδρόμιο Σαντορίνης (αναχώρηση)",
+            "desc_el": "Το αεροδρόμιο της Σαντορίνης (JTR) είναι μόλις 10 λεπτά ανατολικά του Ακρωτηρίου / Κόκκινης Παραλίας. Οι περισσότερες πτήσεις ξεκινούν μεσημέρι ως βράδυ. Αν η πτήση σου είναι αργά, τα ξωκλήσια στον λόφο του Πύργου είναι εξαιρετικό μέρος για ηλιοβασίλεμα πριν το αεροδρόμιο."
           }
         ]
       }
@@ -371,8 +393,8 @@
       "desc": "The most surreal beach on Santorini. Lunar-white volcanic cliffs wind- and water-carved into shapes like a natural sculpture garden, backed by long grey sand. Far quieter than Perissa. Excellent for a late-afternoon swim and a sunset drink at <a href=\"https://www.theo-restaurant.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Theros Wave Bar</a>.",
       "desc_el": "Η πιο σουρεαλιστική παραλία της Σαντορίνης. Σεληνιακοί λευκοί βράχοι λαξεμένοι από αέρα και νερό σαν φυσικό γλυπτοπάρκο, με μακριά γκρι άμμο πίσω. Πολύ πιο ήσυχη από την Περίσσα. Εξαιρετική για βραδινό μπάνιο και ηλιοβασίλεμα με ποτό στο <a href=\"https://www.theo-restaurant.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Theros Wave Bar</a>.",
       "commons": null,
-      "lat": 36.3431,
-      "lng": 25.442,
+      "lat": 36.34,
+      "lng": 25.4311,
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776992185/sanbeach1_mxjxix.webp"
     },
     {
@@ -392,8 +414,8 @@
       "desc": "The most photographed beach on Santorini — dramatic red volcanic cliffs framing dark red sand. <strong>Note:</strong> rockfalls are a real hazard and the direct access path has been partly restricted since 2023. The safest way to see it is from the overlook above, or by boat tour from Akrotiri port.",
       "desc_el": "Η πιο φωτογραφισμένη παραλία της Σαντορίνης — εντυπωσιακοί κόκκινοι ηφαιστειακοί βράχοι που πλαισιώνουν σκούρα κόκκινη άμμο. <strong>Σημείωση:</strong> οι πτώσεις βράχων είναι πραγματικός κίνδυνος και η άμεση πρόσβαση έχει περιοριστεί από το 2023. Ο ασφαλέστερος τρόπος είναι από το παρατηρητήριο από πάνω ή με σκάφος από το λιμάνι Ακρωτηρίου.",
       "commons": null,
-      "lat": 36.3486,
-      "lng": 25.3953,
+      "lat": 36.3489,
+      "lng": 25.3939,
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776992184/santobeach2_mpjsc6.jpg"
     },
     {
@@ -413,8 +435,8 @@
       "desc": "Santorini's finest long black-sand beach, stretched under the towering cliffs of Ancient Thera on Mesa Vouno. Hot sand in summer — bring flip-flops. Good swimming, wide choice of tavernas. Much less pretentious than the caldera-side beaches.",
       "desc_el": "Η ωραιότερη μακριά παραλία με μαύρη άμμο της Σαντορίνης, απλωμένη κάτω από τους επιβλητικούς βράχους της Αρχαίας Θήρας στη Μέσα Βουνό. Η άμμος καίει το καλοκαίρι — φόρα σαγιονάρες. Καλό κολύμπι, μεγάλη ποικιλία ταβερνών. Πολύ λιγότερο εξεζητημένη από τις παραλίες της καλντέρας.",
       "commons": null,
-      "lat": 36.3583,
-      "lng": 25.4814,
+      "lat": 36.3537,
+      "lng": 25.4737,
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776992184/santobeach3_eoofui.jpg"
     }
   ],
