@@ -9,62 +9,62 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Wintering, no ferries",
-        "why_el": "Σε χειμερία νάρκη, σπάνια πλοία"
+        "why": "Wintering",
+        "why_el": "Χειμερία νάρκη"
       },
       {
         "tag": "avoid",
-        "why": "Tourism dormant",
+        "why": "Off-season",
         "why_el": "Μόνο ντόπιοι"
       },
       {
         "tag": "avoid",
-        "why": "Mostly shut",
+        "why": "Off-season",
         "why_el": "Μόνο ντόπιοι"
       },
       {
         "tag": "avoid",
-        "why": "Mostly closed",
+        "why": "Closed",
         "why_el": "Σχεδόν κλειστός"
       },
       {
         "tag": "ok",
-        "why": "Stirring, sea warming",
-        "why_el": "Αρχίζει η σεζόν, ζεσταίνει η θάλασσα"
+        "why": "Sea warming",
+        "why_el": "Ζωντανεύει, ζεστά"
       },
       {
         "tag": "perfect",
-        "why": "Open, warm sea, deep silence",
+        "why": "Warm, silence",
         "why_el": "Ανοίγει, βαθιά ησυχία"
       },
       {
         "tag": "great",
-        "why": "Hot, very few visitors",
-        "why_el": "Ζέστη, ελάχιστοι επισκέπτες"
+        "why": "Hot, few visitors",
+        "why_el": "Ζέστη, ελάχιστοι"
       },
       {
         "tag": "ok",
-        "why": "Greeks for two weeks",
-        "why_el": "Έλληνες δύο βδομάδες"
+        "why": "Greeks 2 weeks",
+        "why_el": "Έλληνες 2 βδομ."
       },
       {
         "tag": "perfect",
-        "why": "Best — calm, otherworldly",
-        "why_el": "Καλύτερος — εξωκόσμια ησυχία"
+        "why": "Best — otherworldly",
+        "why_el": "Καλύτερος — εξωκόσμια"
       },
       {
         "tag": "avoid",
-        "why": "Pre-winter, fewer ferries",
-        "why_el": "Κλείνουν μαγαζιά, λιγοστεύουν τα πλοία"
+        "why": "Few ferries",
+        "why_el": "Κλείνει, λίγα πλοία"
       },
       {
         "tag": "avoid",
-        "why": "Few ferries, rooms scarce",
+        "why": "Few ferries",
         "why_el": "Σχεδόν όλα κλειστά"
       },
       {
         "tag": "avoid",
-        "why": "Off-season hush",
+        "why": "Off-season",
         "why_el": "Σε χειμερία νάρκη"
       }
     ]
@@ -77,20 +77,20 @@
         "day": 1,
         "title": "The Village & the Black Sand Beaches",
         "color": "#1B4F8A",
-        "km": 8,
+        "km": 4,
         "drive_mins": 0,
         "overnight": "The village",
         "stops": [
           {
-            "name": "Harbour arrival",
-            "lat": 39.515,
-            "lng": 25.0075,
+            "name": "Harbour & Village",
+            "lat": 39.5394,
+            "lng": 24.9883,
             "type": "harbour",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Agios_Efstratios",
-            "desc": "Arrive at the single small harbour on the northwest coast. The village is built directly behind it — 1968 prefabricated houses replacing those destroyed in a catastrophic earthquake. No cars waiting. You walk from here.",
-            "name_el": "Άφιξη στο Λιμάνι",
-            "desc_el": "Άφιξη στο μοναδικό μικρό λιμάνι στη βορειοδυτική ακτή. Το χωριό είναι χτισμένο ακριβώς πίσω του — προκατασκευασμένα σπίτια του 1968 που αντικαθιστούν αυτά που καταστράφηκαν σε καταστροφικό σεισμό. Κανένα αυτοκίνητο δεν περιμένει. Από εδώ περπατάς.",
+            "desc": "Your base. The single small harbour on the northwest coast and the village built directly behind it — 1968 prefabricated houses replacing those destroyed in a catastrophic earthquake. No taxis, no buses, almost no cars. You walk from here to everywhere on the island.",
+            "name_el": "Λιμάνι & Χωριό",
+            "desc_el": "Η βάση σου. Το μοναδικό μικρό λιμάνι στη βορειοδυτική ακτή και το χωριό χτισμένο ακριβώς πίσω του — προκατασκευασμένα σπίτια του 1968 που αντικαθιστούν αυτά που καταστράφηκαν από καταστροφικό σεισμό. Όχι ταξί, όχι λεωφορεία, σχεδόν κανένα αυτοκίνητο. Από εδώ περπατάς παντού.",
             "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Agios_Efstratios_banner.jpg/1920px-Agios_Efstratios_banner.jpg",
             "photo_credit": {
               "artist": "Yorgos Iak. Epsimos",
@@ -102,73 +102,71 @@
           },
           {
             "name": "Museum of Democracy",
-            "lat": 39.5128,
-            "lng": 25.005,
+            "lat": 39.5397,
+            "lng": 24.9906,
             "type": "museum",
             "time": "10:00",
             "wiki": null,
-            "desc": "The restored 1909 Maraslios school — one of the few pre-earthquake buildings still standing. Tells the extraordinary story of the island's role as a place of political exile during the Greek Civil War and the 1967-74 junta. Mikis Theodorakis, Yiannis Ritsos, and thousands of other prisoners lived here.",
+            "desc": "The restored 1909 Maraslios school — one of the few pre-earthquake buildings still standing. Tells the extraordinary story of the island's role as a place of political exile during the 20th century, when figures like Mikis Theodorakis, Yiannis Ritsos and Manos Katrakis were sent here. Small but moving.",
             "name_el": "Μουσείο Δημοκρατίας",
-            "desc_el": "Το αναστηλωμένο Μαράσλειο σχολείο του 1909 — ένα από τα λίγα κτίρια πριν τον σεισμό που εξακολουθούν να στέκονται. Διηγείται την εξαιρετική ιστορία του ρόλου του νησιού ως τόπο πολιτικής εξορίας κατά τη διάρκεια του Εμφυλίου και της χούντας του 1967-74. Ο Μίκης Θεοδωράκης, ο Γιάννης Ρίτσος, και χιλιάδες άλλοι κρατούμενοι έζησαν εδώ."
+            "desc_el": "Το αποκατεστημένο Μαράσλειο σχολείο του 1909 — ένα από τα λίγα προ-σεισμικά κτίρια που στέκουν ακόμα. Διηγείται τη συγκλονιστική ιστορία του νησιού ως τόπου πολιτικής εξορίας τον 20ό αιώνα, όταν προσωπικότητες όπως ο Θεοδωράκης, ο Ρίτσος και ο Κατράκης στάλθηκαν εδώ. Μικρό αλλά συγκινητικό."
           },
           {
             "name": "Church of Christ",
-            "lat": 39.5122,
-            "lng": 25.0053,
+            "lat": 39.5396,
+            "lng": 24.9893,
             "type": "church",
             "time": "11:00",
             "wiki": null,
-            "desc": "The traditional church in the village with a prominent belfry — the heart of the tiny community.",
+            "desc": "The main village church, in the heart of what's left of old Agios Efstratios. Quiet, simple, with the everyday warmth of an island parish.",
             "name_el": "Εκκλησία του Χριστού",
-            "desc_el": "Η παραδοσιακή εκκλησία του χωριού με εμβληματικό καμπαναριό — η καρδιά της μικροσκοπικής κοινότητας."
+            "desc_el": "Η κεντρική εκκλησία του χωριού, στην καρδιά αυτού που έμεινε από τον παλιό Άγιο Ευστράτιο. Ήσυχη, απλή, με τη γνήσια ζεστασιά μιας νησιωτικής ενορίας."
           },
           {
-            "name": "Village Beach Swim",
-            "lat": 39.5156,
-            "lng": 25.0083,
+            "name": "Village Beach (volcanic black sand)",
+            "lat": 39.5388,
+            "lng": 24.988,
             "type": "beach",
             "time": "12:00",
             "wiki": null,
-            "desc": "The village beach — black volcanic sand, warm water, a few umbrellas. 3 minutes walk from anywhere in the village.",
-            "name_el": "Μπάνιο στην Παραλία του Χωριού",
-            "desc_el": "Η παραλία του χωριού — μαύρη ηφαιστειακή άμμος, ζεστά νερά, μερικές ομπρέλες. 3 λεπτά πεζοπορίας από οπουδήποτε στο χωριό."
+            "desc": "Walk straight from the village onto the dark volcanic sand. Calm shallow water, clean, almost no one. The most accessible swim on the island and many locals' favourite.",
+            "name_el": "Παραλία του Χωριού (μαύρη ηφαιστειακή άμμος)",
+            "desc_el": "Περπατάς απευθείας από το χωριό στη σκούρα ηφαιστειακή άμμο. Ήρεμα ρηχά νερά, καθαρά, σχεδόν κανείς. Το πιο εύκολο μπάνιο στο νησί και αγαπημένο των ντόπιων."
           },
           {
-            "name": "Lunch with the Fishermen",
-            "lat": 39.5139,
-            "lng": 25.0064,
+            "name": "Lunch at the harbour",
+            "lat": 39.5394,
+            "lng": 24.9883,
             "type": "harbour",
             "time": "14:00",
             "wiki": null,
-            "desc": "Two or three tiny tavernas operate on the harbour. The menu is whatever was caught that morning — lobster, grouper, crab, sun-dried mackerel (a local specialty). The locals know everyone who comes; conversation is part of the meal.",
-            "name_el": "Μεσημεριανό με τους Ψαράδες",
-            "desc_el": "Δύο ή τρεις μικρές ταβέρνες λειτουργούν στο λιμάνι. Το μενού είναι ό,τι πιάστηκε εκείνο το πρωί — αστακός, ροφός, καβούρι, παστό σκουμπρί (τοπική σπεσιαλιτέ). Οι ντόπιοι ξέρουν όλους όσους έρχονται· η κουβέντα είναι μέρος του γεύματος."
+            "desc": "There are two or three tavernas right on the harbour. Whatever the fishermen brought back that morning is what you eat. Lobster pasta if you're lucky; fresh-caught fish always. The fishermen often join the table.",
+            "name_el": "Μεσημεριανό στο λιμάνι",
+            "desc_el": "Υπάρχουν δύο-τρεις ταβέρνες ακριβώς στο λιμάνι. Ό,τι έφεραν οι ψαράδες το πρωί, αυτό τρως. Αστακομακαρονάδα αν είσαι τυχερός· φρέσκο ψάρι σίγουρα. Συχνά οι ψαράδες κάθονται μαζί σου στο τραπέζι."
           },
           {
             "name": "Agios Antonios Beach",
-            "lat": 39.5022,
+            "lat": 39.5308,
             "lng": 24.98,
             "type": "beach",
             "time": "16:00",
             "wiki": null,
-            "desc": "The finest beach on the island — sand and pebbles, crystal-clear water, oak trees for natural shade. A 40-minute walk on dirt tracks from the village. The sunset here is extraordinary.",
+            "desc": "About a 25-minute walk south from the village along the coastal dirt track. Quieter than the village beach, with the small chapel of Agios Antonios giving the spot its name. Crystal-clear water and almost guaranteed solitude.",
             "name_el": "Παραλία Αγίου Αντωνίου",
-            "desc_el": "Η καλύτερη παραλία του νησιού — άμμος και βότσαλα, κρυστάλλινα νερά, δέντρα βελανιδιάς για φυσική σκιά. 40λεπτη πεζοπορία σε χωματόδρομους από το χωριό. Το ηλιοβασίλεμα εδώ είναι εξαιρετικό."
+            "desc_el": "Περίπου 25 λεπτά πεζοπορίας νότια από το χωριό κατά μήκος του παραθαλάσσιου χωματόδρομου. Πιο ήσυχη από την παραλία του χωριού, με το εκκλησάκι του Αγίου Αντωνίου που της δίνει το όνομα. Κρυστάλλινα νερά και σχεδόν εγγυημένη μοναξιά."
           },
           {
-            "name": "Depart (or 2nd night)",
-            "lat": 39.515,
-            "lng": 25.0075,
+            "name": "Sunset & dinner in the village",
+            "lat": 39.5394,
+            "lng": 24.9883,
             "type": "harbour",
-            "time": "18:30",
+            "time": "20:00",
             "wiki": null,
-            "desc": "Boat back to Lemnos (2-3 hrs) or Lavrio (8.5-13.5 hrs depending on route). Consider a second night — this is a genuinely difficult island to reach, and you won't regret slowing down.",
-            "name_el": "Αναχώρηση (ή 2η Βραδιά)",
-            "desc_el": "Πλοίο πίσω στη Λήμνο (2-3 ώρες) ή στο Λαύριο (8,5-13,5 ώρες ανάλογα με τη διαδρομή). Σκέψου δεύτερη βραδιά — αυτό είναι πραγματικά δύσκολο νησί να προσεγγίσεις, και δεν θα μετανιώσεις που καθυστέρησες."
+            "desc": "Back to the village for sunset. The chapel of Agios Minas above the harbour gives the best view, but the harbour-front cafés are themselves a fine spot. Evening dinner at the same taverna where you had lunch — they'll remember you.",
+            "name_el": "Ηλιοβασίλεμα & δείπνο στο χωριό",
+            "desc_el": "Επιστροφή στο χωριό για το ηλιοβασίλεμα. Το εκκλησάκι του Αγίου Μηνά πάνω από το λιμάνι έχει την καλύτερη θέα, αλλά και τα παραλιακά καφέ είναι εξαιρετικά. Δείπνο στην ίδια ταβέρνα όπου έφαγες το μεσημέρι — θα σε θυμούνται."
           }
-        ],
-        "title_el": "Το Χωριό & οι Παραλίες Μαύρης Άμμου",
-        "overnight_el": "Στο χωριό"
+        ]
       }
     ],
     "title_el": "Πρόγραμμα 1 Ημέρας στον Άγιο Ευστράτιο",
@@ -176,44 +174,28 @@
   },
   "beaches": [
     {
+      "name": "Village Beach (Παραλία του Χωριού)",
+      "name_el": "Παραλία του Χωριού",
+      "lat": 39.5388,
+      "lng": 24.988,
+      "blurb": "Volcanic black sand right in front of the village. Calm shallow water, no facilities, no crowds.",
+      "blurb_el": "Μαύρη ηφαιστειακή άμμος ακριβώς μπροστά από το χωριό. Ήρεμα ρηχά νερά, χωρίς εγκαταστάσεις, χωρίς κόσμο."
+    },
+    {
       "name": "Agios Antonios Beach",
-      "wiki": null,
-      "rating": 5,
-      "type": "Sand and fine pebble",
-      "length": "200 m",
-      "depth": "Shallow — very clear water",
-      "facing": "West-facing — sunset views, oak trees behind",
-      "facilities": "None — bring everything you need. 40-minute walk from the village.",
-      "desc": "The finest beach on Agios Efstratios — a west-coast cove with fine sand, pebbles and extraordinarily clear water, surrounded by the Aegean's largest oak forest. The sunset here is one of the best in Greece. Access is on foot only.",
-      "commons": null,
-      "lat": 39.5022,
-      "lng": 24.98,
       "name_el": "Παραλία Αγίου Αντωνίου",
-      "type_el": "Άμμος και λεπτά βότσαλα",
-      "depth_el": "Ρηχή — πολύ διαυγή νερά",
-      "facing_el": "Δυτικά — θέες ηλιοβασιλέματος, δέντρα βελανιδιάς πίσω",
-      "facilities_el": "Καμία — πάρε ό,τι χρειάζεσαι. 40 λεπτά πεζοπορίας από το χωριό.",
-      "desc_el": "Η καλύτερη παραλία του Αγίου Ευστρατίου — ένας δυτικός κόλπος με λεπτή άμμο, βότσαλα και εξαιρετικά διαυγή νερά, που περιβάλλεται από το μεγαλύτερο δάσος βελανιδιάς του Αιγαίου. Το ηλιοβασίλεμα εδώ είναι ένα από τα καλύτερα στην Ελλάδα. Πρόσβαση μόνο με τα πόδια."
+      "lat": 39.5308,
+      "lng": 24.98,
+      "blurb": "25-minute walk south of the village. Small chapel, crystal-clear water, almost always empty.",
+      "blurb_el": "25 λεπτά πεζοπορίας νότια από το χωριό. Μικρό εκκλησάκι, κρυστάλλινα νερά, σχεδόν πάντα άδεια."
     },
     {
       "name": "Alonitsi Beach",
-      "wiki": null,
-      "rating": 4,
-      "type": "Fine pebble",
-      "length": "600 m",
-      "depth": "Shallow — safe for children",
-      "facing": "Northeast-facing — winds pick up in afternoon",
-      "facilities": "None — remote beach. Ancient cave of St Efstratios nearby.",
-      "desc": "The longest beach on the island — fine pebble with shallow water. Often windy in afternoons, which draws occasional windsurfers in the low season. Close to the cave where Saint Efstratios lived as a hermit, giving the island its name.",
-      "commons": null,
-      "lat": 39.4992,
-      "lng": 25.0275,
       "name_el": "Παραλία Αλωνίτσι",
-      "type_el": "Λεπτά βότσαλα",
-      "depth_el": "Ρηχή — ασφαλής για παιδιά",
-      "facing_el": "Βορειοανατολικά — οι άνεμοι δυναμώνουν το απόγευμα",
-      "facilities_el": "Καμία — απομακρυσμένη παραλία. Αρχαία σπηλιά του Αγίου Ευστρατίου κοντά.",
-      "desc_el": "Η μακρύτερη παραλία του νησιού — λεπτά βότσαλα με ρηχά νερά. Συχνά αεράς το απόγευμα, που προσελκύει περιστασιακούς windsurfers τη χαμηλή περίοδο. Κοντά στη σπηλιά όπου έζησε ως ερημίτης ο Άγιος Ευστράτιος, δίνοντας το όνομά του στο νησί."
+      "lat": 39.535,
+      "lng": 25.0472,
+      "blurb": "The longest beach on the island (~1.5 km), Natura 2000 protected. Sand on the right, pebbles on the left. Reachable on foot or by 4x4 dirt road from the village. Largest, most isolated beach.",
+      "blurb_el": "Η μεγαλύτερη παραλία του νησιού (~1.5 χλμ), προστατευόμενη Natura 2000. Άμμος δεξιά, βότσαλα αριστερά. Με τα πόδια ή με 4x4 χωματόδρομο από το χωριό. Η πιο μεγάλη και απομονωμένη παραλία."
     }
   ],
   "name_el": "Άγιος Ευστράτιος",
