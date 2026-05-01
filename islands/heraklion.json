@@ -9,63 +9,63 @@
     "months": [
       {
         "tag": "ok",
-        "why": "City alive, Knossos quiet",
-        "why_el": "Πόλη ζωντανή, Κνωσσός ήσυχη"
+        "why": "Knossos quiet",
+        "why_el": "Πόλη ζωντανή, Κνωσσός"
       },
       {
         "tag": "ok",
-        "why": "Mild, museums, sea cold",
+        "why": "Mild, museums",
         "why_el": "Ήπιο, μουσεία"
       },
       {
         "tag": "great",
-        "why": "Knossos pleasant, blooming",
-        "why_el": "Κνωσσός ευχάριστη, ανθίζει"
+        "why": "Knossos, blooming",
+        "why_el": "Κνωσσός ευχάριστη"
       },
       {
         "tag": "great",
-        "why": "Easter, Knossos great, mild",
-        "why_el": "Πάσχα, Κνωσσός υπέροχη"
+        "why": "Easter, Knossos",
+        "why_el": "Πάσχα, Κνωσσός"
       },
       {
         "tag": "great",
-        "why": "Sea warming, Knossos calm",
-        "why_el": "Ζεσταίνει σιγά σιγά"
+        "why": "Knossos, calm",
+        "why_el": "Ζεσταίνει, Κνωσσός"
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, festivals begin",
-        "why_el": "Ζεστή θάλασσα, ξεκινούν φεστιβάλ"
+        "why": "Festivals start",
+        "why_el": "Ζεστή θάλασσα"
       },
       {
         "tag": "avoid",
-        "why": "Knossos = Disneyland queue",
-        "why_el": "Κνωσσός = ουρά Disneyland"
+        "why": "Knossos = queue",
+        "why_el": "Κνωσσός, ουρά"
       },
       {
         "tag": "avoid",
-        "why": "Hottest, most crowded",
+        "why": "Hottest, most",
         "why_el": "Πιο ζεστά, πιο γεμάτα"
       },
       {
         "tag": "perfect",
-        "why": "Best — sea + Knossos breathing",
-        "why_el": "Καλύτερος — Κνωσσός αναπνέει"
+        "why": "Knossos breathes",
+        "why_el": "Κνωσσός αναπνέει"
       },
       {
         "tag": "great",
-        "why": "Last swims, museums, calm",
-        "why_el": "Τελευταία μπάνια, μουσεία"
+        "why": "Last swims, museums",
+        "why_el": "Τελευταία μπάνια"
       },
       {
         "tag": "great",
-        "why": "Mild, museums, locals",
+        "why": "Mild, museums",
         "why_el": "Ήπιο, μουσεία, ντόπιοι"
       },
       {
         "tag": "ok",
-        "why": "City alive for winter",
-        "why_el": "Πόλη ζωντανή για χειμώνα"
+        "why": "City alive",
+        "why_el": "Πόλη ζωντανή τον"
       }
     ]
   },
@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Koules Fortress",
-            "lat": 35.343,
-            "lng": 25.1347,
+            "lat": 35.3446,
+            "lng": 25.1369,
             "type": "castle",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Koules_Fortress",
@@ -102,8 +102,8 @@
           },
           {
             "name": "Heraklion Archaeological Museum",
-            "lat": 35.3392,
-            "lng": 25.133,
+            "lat": 35.339,
+            "lng": 25.1371,
             "type": "museum",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Heraklion_Archaeological_Museum",
@@ -121,8 +121,8 @@
           },
           {
             "name": "1866 Market Street",
-            "lat": 35.3381,
-            "lng": 25.1335,
+            "lat": 35.3384,
+            "lng": 25.1331,
             "type": "city",
             "time": "12:30",
             "wiki": null,
@@ -132,8 +132,8 @@
           },
           {
             "name": "Lunch — Peskesi",
-            "lat": 35.3388,
-            "lng": 25.1342,
+            "lat": 35.3402,
+            "lng": 25.1326,
             "type": "museum",
             "time": "13:30",
             "wiki": null,
@@ -143,8 +143,8 @@
           },
           {
             "name": "Venetian Walls & Martinengo Bastion",
-            "lat": 35.3318,
-            "lng": 25.1295,
+            "lat": 35.3321,
+            "lng": 25.1298,
             "type": "castle",
             "time": "16:00",
             "wiki": null,
@@ -166,8 +166,8 @@
         "stops": [
           {
             "name": "Palace of Knossos",
-            "lat": 35.2985,
-            "lng": 25.1631,
+            "lat": 35.298,
+            "lng": 25.1628,
             "type": "museum",
             "time": "08:30",
             "wiki": "https://en.wikipedia.org/wiki/Knossos",
@@ -185,8 +185,8 @@
           },
           {
             "name": "Archanes Village",
-            "lat": 35.2375,
-            "lng": 25.1636,
+            "lat": 35.2353,
+            "lng": 25.1593,
             "type": "village",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Archanes",
@@ -204,8 +204,8 @@
           },
           {
             "name": "Minoan Cemetery of Fourni",
-            "lat": 35.245,
-            "lng": 25.16,
+            "lat": 35.2461,
+            "lng": 25.1587,
             "type": "nature",
             "time": "13:00",
             "wiki": null,
@@ -215,14 +215,25 @@
           },
           {
             "name": "Peza Wine Village",
-            "lat": 35.2167,
-            "lng": 25.1833,
+            "lat": 35.2092,
+            "lng": 25.1972,
             "type": "village",
             "time": "15:00",
             "wiki": null,
             "desc": "Heraklion produces some of the finest wine in Greece. Stop at a local winery for a tasting of Kotsifali and Mandilari — the great Cretan reds.",
             "name_el": "Αμπελοχώρι Πεζά",
             "desc_el": "Το Ηράκλειο παράγει μερικά από τα καλύτερα κρασιά της Ελλάδας. Σταμάτησε σε ένα τοπικό οινοποιείο για γευσιγνωσία Κοτσιφαλιού και Μανδηλαριάς — τα μεγάλα κρητικά κόκκινα."
+          },
+          {
+            "name": "Return to Heraklion",
+            "lat": 35.339,
+            "lng": 25.1371,
+            "type": "city",
+            "time": "19:30",
+            "wiki": null,
+            "desc": "Drive back to Heraklion (about 25 minutes from Peza). Dinner in the old town — the area around Lions Square (Liontaria) is busy until late.",
+            "name_el": "Επιστροφή στο Ηράκλειο",
+            "desc_el": "Επιστροφή στο Ηράκλειο (περίπου 25 λεπτά από την Πεζά). Δείπνο στην παλιά πόλη — η περιοχή γύρω από τα Λιοντάρια ζει μέχρι αργά."
           }
         ],
         "title_el": "Κνωσός & Αρχάνες",
@@ -238,8 +249,8 @@
         "stops": [
           {
             "name": "Lasithi Plateau",
-            "lat": 35.1667,
-            "lng": 25.4667,
+            "lat": 35.1498,
+            "lng": 25.497,
             "type": "nature",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Lasithi_Plateau",
@@ -257,8 +268,8 @@
           },
           {
             "name": "Dikteon Cave",
-            "lat": 35.16,
-            "lng": 25.4667,
+            "lat": 35.1629,
+            "lng": 25.445,
             "type": "nature",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Dikteon_Cave",
@@ -276,8 +287,8 @@
           },
           {
             "name": "Kritsa Village",
-            "lat": 35.1583,
-            "lng": 25.64,
+            "lat": 35.1567,
+            "lng": 25.6442,
             "type": "village",
             "time": "14:00",
             "wiki": null,
@@ -295,8 +306,8 @@
           },
           {
             "name": "Malia Beach",
-            "lat": 35.285,
-            "lng": 25.4656,
+            "lat": 35.2902,
+            "lng": 25.461,
             "type": "beach",
             "time": "16:30",
             "wiki": null,
@@ -311,6 +322,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Crete,_Malia_beach_2019_b.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Heraklion",
+            "lat": 35.339,
+            "lng": 25.1371,
+            "type": "city",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "Drive back to Heraklion (about 45 minutes on the new motorway from Malia). After a full day of mountain plateau and coast, the buzz of the old town is a welcome contrast.",
+            "name_el": "Επιστροφή στο Ηράκλειο",
+            "desc_el": "Επιστροφή στο Ηράκλειο (περίπου 45 λεπτά με τον νέο αυτοκινητόδρομο από τα Μάλια). Μετά μια γεμάτη μέρα στο οροπέδιο και στην ακτή, η ζωή της παλιάς πόλης είναι ευπρόσδεκτη αντίθεση."
           }
         ],
         "title_el": "Οροπέδιο Λασιθίου & Δικταίο Άντρο",
@@ -326,7 +348,7 @@
         "stops": [
           {
             "name": "Phaistos Palace",
-            "lat": 35.0497,
+            "lat": 35.0517,
             "lng": 24.8119,
             "type": "museum",
             "time": "09:30",
@@ -345,8 +367,8 @@
           },
           {
             "name": "Matala Beach",
-            "lat": 34.9969,
-            "lng": 24.7472,
+            "lat": 34.994,
+            "lng": 24.7497,
             "type": "beach",
             "time": "12:00",
             "wiki": "https://en.wikipedia.org/wiki/Matala,_Heraklion",
@@ -356,8 +378,8 @@
           },
           {
             "name": "Red Beach Matala",
-            "lat": 34.9969,
-            "lng": 24.7472,
+            "lat": 34.9896,
+            "lng": 24.7491,
             "type": "beach",
             "time": "14:30",
             "wiki": null,
@@ -375,8 +397,8 @@
           },
           {
             "name": "Agia Galini",
-            "lat": 35.0967,
-            "lng": 24.69,
+            "lat": 35.0963,
+            "lng": 24.6884,
             "type": "harbour",
             "time": "19:00",
             "wiki": null,
@@ -391,6 +413,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Agia_Galini_harbour_in_Crete,_Greece_004.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Matala",
+            "lat": 34.994,
+            "lng": 24.7497,
+            "type": "city",
+            "time": "21:00",
+            "wiki": null,
+            "desc": "Drive back to Matala (about 15 minutes from Agia Galini). The bohemian-era taverns are open late; the bay is quiet by this hour.",
+            "name_el": "Επιστροφή στα Μάταλα",
+            "desc_el": "Επιστροφή στα Μάταλα (περίπου 15 λεπτά από την Αγία Γαλήνη). Οι ταβέρνες με τη φήμη της εποχής των χίπις λειτουργούν μέχρι αργά· ο κόλπος είναι ήσυχος αυτή την ώρα."
           }
         ],
         "title_el": "Νότια στα Μάταλα — Φαιστός & Κόκκινη Παραλία",
@@ -413,8 +446,8 @@
             "type": "beach",
             "desc": "Last morning swim before the crowds arrive — the cave-pocked cliff is at its best in the early light. Coffee on the beach, then north.",
             "desc_el": "Τελευταίο πρωινό μπάνιο πριν έρθει ο κόσμος — οι βραχώδεις σπηλιές δείχνουν καλύτερα στο πρωινό φως. Καφές στην παραλία, και μετά βόρεια.",
-            "lat": 34.9956,
-            "lng": 24.7494,
+            "lat": 34.994,
+            "lng": 24.7497,
             "wiki": "https://en.wikipedia.org/wiki/Matala",
             "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Matala_beach_cliff_Crete_Greece.jpg/1920px-Matala_beach_cliff_Crete_Greece.jpg",
             "photo_credit": {
@@ -432,8 +465,8 @@
             "type": "archaeological",
             "desc": "Roman capital of Crete and one of the great archaeological sites of the island. The Code of Gortyn, carved in stone here in the 5th century BC, is the oldest written law code in Europe. Less visited than Knossos, equally substantial — and right on the road back to Heraklion.",
             "desc_el": "Η ρωμαϊκή πρωτεύουσα της Κρήτης και ένας από τους σημαντικότερους αρχαιολογικούς χώρους του νησιού. Ο Νόμος της Γόρτυνας, χαραγμένος σε πέτρα τον 5ο αιώνα π.Χ., είναι ο αρχαιότερος γραπτός νομικός κώδικας της Ευρώπης. Λιγότερο επισκέψιμη από την Κνωσό, εξίσου ουσιαστική — και στη διαδρομή της επιστροφής προς το Ηράκλειο.",
-            "lat": 35.0631,
-            "lng": 24.9522,
+            "lat": 35.0626,
+            "lng": 24.947,
             "wiki": "https://en.wikipedia.org/wiki/Gortyna",
             "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/%CE%A0%CF%81%CE%B1%CE%B9%CF%84%CF%8E%CF%81%CE%B9%CE%BF_1714.jpg/1920px-%CE%A0%CF%81%CE%B1%CE%B9%CF%84%CF%8E%CF%81%CE%B9%CE%BF_1714.jpg",
             "photo_credit": {
@@ -451,8 +484,8 @@
             "type": "food",
             "desc": "Vori village is 10 minutes from Gortyna and has good tavernas — or push on to Heraklion for a final lunch on the harbour. Both work depending on departure time.",
             "desc_el": "Το χωριό Βώροι είναι 10 λεπτά από τη Γόρτυνα και έχει καλές ταβέρνες — ή συνέχισε προς το Ηράκλειο για τελευταίο γεύμα στο λιμάνι. Και τα δύο δουλεύουν, ανάλογα με την ώρα αναχώρησης.",
-            "lat": 35.0492,
-            "lng": 24.8656,
+            "lat": 35.0685,
+            "lng": 24.8097,
             "wiki": ""
           },
           {
@@ -462,8 +495,8 @@
             "type": "departure",
             "desc": "Return to Heraklion for ferry or flight. The airport is east of the city; the port is in the centre. Final coffee at Lions Square if time allows.",
             "desc_el": "Επιστροφή στο Ηράκλειο για πλοίο ή αεροπλάνο. Το αεροδρόμιο είναι ανατολικά της πόλης· το λιμάνι στο κέντρο. Τελευταίος καφές στην πλατεία Λεόντων αν προλαβαίνεις.",
-            "lat": 35.3387,
-            "lng": 25.1442,
+            "lat": 35.3395,
+            "lng": 25.1761,
             "wiki": "https://en.wikipedia.org/wiki/Heraklion",
             "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg/1920px-Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg",
             "photo_credit": {
@@ -492,8 +525,8 @@
       "facilities": "Well organised: sunbeds, tavernas, cafes. The famous cave dwellings in the red cliffs are accessible daily.",
       "desc": "One of the most atmospheric beaches in Greece — red sandstone cliffs riddled with Roman cave dwellings, where hippies including Joni Mitchell lived in the 1960s. Fine sand, warm water and a relaxed village immediately behind it.",
       "commons": "Matala_beach_Crete.jpg",
-      "lat": 34.9969,
-      "lng": 24.7472,
+      "lat": 34.994,
+      "lng": 24.7497,
       "name_el": "Παραλία Μάταλα",
       "type_el": "Λεπτή άμμος",
       "depth_el": "Μέτριο — καλό μπάνιο, βραχώδεις όχθες και στις δύο πλευρές",
@@ -520,8 +553,8 @@
       "facilities": "Fully organised: sunbeds, water sports, beach bar, taverna, parking.",
       "desc": "Widely regarded as one of the best beaches in eastern Crete near Istro. Long, wide, golden sand with extraordinarily clear water. Less famous than the west coast beaches, which means far fewer crowds even in high summer.",
       "commons": null,
-      "lat": 35.1075,
-      "lng": 25.7678,
+      "lat": 35.1253,
+      "lng": 25.7444,
       "name_el": "Παραλία Βουλίσμα",
       "type_el": "Λεπτή χρυσή άμμος",
       "depth_el": "Ρηχά έως μέτρια — καθαρά, διαυγή νερά",
@@ -548,8 +581,8 @@
       "facilities": "Fully developed resort beach: every facility available. Lively but can feel crowded in peak season.",
       "desc": "A long north-coast beach backed by the resort of Malia. Not the most beautiful setting but excellent for families — long, shallow, calm water. The Minoan Palace of Malia is just 3km away, making it a good base for combining beach and archaeology.",
       "commons": null,
-      "lat": 35.285,
-      "lng": 25.4656,
+      "lat": 35.2902,
+      "lng": 25.461,
       "name_el": "Παραλία Μάλια",
       "type_el": "Άμμος και λεπτό βότσαλο",
       "depth_el": "Ρηχά — πολύ σταδιακή είσοδος, ιδανική για οικογένειες",
@@ -576,8 +609,8 @@
       "facilities": "Good: sunbeds, beach bars, several hotels immediately behind beach.",
       "desc": "A sheltered sandy cove in a natural harbour 20km west of Heraklion. One of the best organised and cleanest beaches near the capital, with calm water suitable for families and those wanting facilities close to the city.",
       "commons": null,
-      "lat": 35.4131,
-      "lng": 25.0175,
+      "lat": 35.4057,
+      "lng": 25.0184,
       "name_el": "Παραλία Αγίας Πελαγίας",
       "type_el": "Λεπτή άμμος",
       "depth_el": "Ρηχά — προστατευμένος κόλπος, χωρίς κύματα",
@@ -604,8 +637,8 @@
       "facilities": "Basic: small taverna, simple rooms to rent. Primitive and peaceful.",
       "desc": "A remote south-coast beach reached via a dramatic mountain road near Cape Lithinon. Completely unspoiled, rarely visited by tourists, and strikingly beautiful. The area was an important ancient healing sanctuary. Worth the long drive for those seeking solitude.",
       "commons": null,
-      "lat": 34.9264,
-      "lng": 24.9194,
+      "lat": 34.9301,
+      "lng": 24.9227,
       "name_el": "Παραλία Λέντα",
       "type_el": "Βότσαλο και άμμος",
       "depth_el": "Μέτρια έως βαθιά — βραχώδης βυθός, εξαιρετική ορατότητα",

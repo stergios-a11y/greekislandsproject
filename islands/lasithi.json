@@ -9,33 +9,33 @@
     "months": [
       {
         "tag": "ok",
-        "why": "Quiet, Sitia alive year-round",
-        "why_el": "Ήσυχα, η Σητεία ζωντανή όλο τον χρόνο"
+        "why": "Quiet, Sitia alive",
+        "why_el": "Σητεία ζωντανή"
       },
       {
         "tag": "ok",
         "why": "Hiking, sea cold",
-        "why_el": "Καιρός για μονοπάτια"
+        "why_el": "Μονοπάτια"
       },
       {
         "tag": "great",
-        "why": "Wildflowers, Vai palms green",
-        "why_el": "Αγριολούλουδα, πράσινοι φοίνικες Βάι"
+        "why": "Wildflowers",
+        "why_el": "Αγριολούλουδα, Βάι"
       },
       {
         "tag": "great",
-        "why": "Easter, mild walks",
-        "why_el": "Πάσχα, μονοπάτια ανοιχτά"
+        "why": "Easter, walks",
+        "why_el": "Πάσχα, μονοπάτια"
       },
       {
         "tag": "perfect",
-        "why": "Sea swimmable, empty, lush",
-        "why_el": "Θάλασσα μπάνιο, άδεια, καταπράσινα"
+        "why": "Swimmable, empty",
+        "why_el": "Θάλ. μπάνιο"
       },
       {
         "tag": "perfect",
-        "why": "Long days, sea perfect",
-        "why_el": "Μεγάλες μέρες, θάλασσα τέλεια"
+        "why": "Long days, perfect",
+        "why_el": "Μεγάλες μέρες"
       },
       {
         "tag": "ok",
@@ -44,18 +44,18 @@
       },
       {
         "tag": "avoid",
-        "why": "Peak heat, Malia chaos",
-        "why_el": "Κορύφωση ζέστης, χάος Μαλίων"
+        "why": "Malia chaos",
+        "why_el": "Κορύφωση, χάος Μαλίων"
       },
       {
         "tag": "perfect",
-        "why": "Best — warm sea, calm",
-        "why_el": "Καλύτερος — θάλασσα ζεστή, ησυχία"
+        "why": "Best — warm, calm",
+        "why_el": "Καλύτερος — θάλ."
       },
       {
         "tag": "great",
         "why": "Last swims, harvest",
-        "why_el": "Τελευταία μπάνια, τρύγος"
+        "why_el": "Τελευταία, τρύγος"
       },
       {
         "tag": "great",
@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Agios Nikolaos Town",
-            "lat": 35.1905,
-            "lng": 25.7157,
+            "lat": 35.1891,
+            "lng": 25.7171,
             "type": "city",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Agios_Nikolaos,_Lasithi",
@@ -102,8 +102,8 @@
           },
           {
             "name": "Lake Voulismeni",
-            "lat": 35.1895,
-            "lng": 25.7152,
+            "lat": 35.1908,
+            "lng": 25.7174,
             "type": "nature",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Lake_Voulismeni",
@@ -121,8 +121,8 @@
           },
           {
             "name": "Elounda",
-            "lat": 35.2583,
-            "lng": 25.7233,
+            "lat": 35.2614,
+            "lng": 25.7234,
             "type": "harbour",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Elounda",
@@ -140,8 +140,8 @@
           },
           {
             "name": "Schisma Beach Elounda",
-            "lat": 35.2617,
-            "lng": 25.7183,
+            "lat": 35.2642,
+            "lng": 25.7222,
             "type": "beach",
             "time": "14:00",
             "wiki": null,
@@ -151,14 +151,25 @@
           },
           {
             "name": "Dinner — Ferryman Elounda",
-            "lat": 35.2583,
-            "lng": 25.7233,
+            "lat": 35.2614,
+            "lng": 25.7234,
             "type": "harbour",
             "time": "20:00",
             "wiki": null,
             "desc": "One of the best seafood restaurants in Lasithi, right on the Elounda waterfront. Try the lobster pasta — a local speciality. Then drive back to Agios Nikolaos for the night, just 15 minutes east.",
             "name_el": "Δείπνο — Ferryman Elounda",
             "desc_el": "Ένα από τα καλύτερα εστιατόρια ψαρικών στο Λασίθι, στην παραλιακή της Ελούντας. Δοκίμασε τα μακαρόνια με αστακό — τοπική σπεσιαλιτέ. Μετά πίσω στον Άγιο Νικόλαο για διανυκτέρευση, μόλις 15 λεπτά ανατολικά."
+          },
+          {
+            "name": "Return to Agios Nikolaos",
+            "lat": 35.1908,
+            "lng": 25.7174,
+            "type": "city",
+            "time": "22:30",
+            "wiki": null,
+            "desc": "Short 15-minute drive back from Elounda to Agios Nikolaos. Walk along Lake Voulismeni for a nightcap — the lake is lit and busy late.",
+            "name_el": "Επιστροφή στον Άγιο Νικόλαο",
+            "desc_el": "Σύντομη διαδρομή 15 λεπτών από την Ελούντα στον Άγιο Νικόλαο. Βόλτα στη λίμνη Βουλισμένη για ένα τελευταίο ποτό — η λίμνη είναι φωτισμένη και ζωντανή μέχρι αργά."
           }
         ],
         "title_el": "Άγιος Νικόλαος & Ελούντα",
@@ -174,7 +185,7 @@
         "stops": [
           {
             "name": "Spinalonga Island",
-            "lat": 35.2733,
+            "lat": 35.2972,
             "lng": 25.7383,
             "type": "castle",
             "time": "09:00",
@@ -193,8 +204,8 @@
           },
           {
             "name": "Kritsa Village",
-            "lat": 35.1583,
-            "lng": 25.64,
+            "lat": 35.1567,
+            "lng": 25.6442,
             "type": "village",
             "time": "12:30",
             "wiki": "https://en.wikipedia.org/wiki/Kritsa",
@@ -212,8 +223,8 @@
           },
           {
             "name": "Ancient Lato",
-            "lat": 35.1717,
-            "lng": 25.6467,
+            "lat": 35.178,
+            "lng": 25.6536,
             "type": "museum",
             "time": "14:30",
             "wiki": "https://en.wikipedia.org/wiki/Lato",
@@ -231,14 +242,25 @@
           },
           {
             "name": "Almyros Beach",
-            "lat": 35.1842,
-            "lng": 25.7322,
+            "lat": 35.1759,
+            "lng": 25.7093,
             "type": "beach",
             "time": "16:30",
             "wiki": null,
             "desc": "Long sandy beach 2km south of Agios Nikolaos. A freshwater river runs into the sea here, creating a natural lagoon — flamingoes visit in spring.",
             "name_el": "Παραλία Αλμυρός",
             "desc_el": "Μακριά αμμώδης παραλία 2 χλμ νότια του Αγίου Νικολάου. Ένα ποτάμι γλυκού νερού εκβάλλει στη θάλασσα εδώ, δημιουργώντας μια φυσική λιμνοθάλασσα — φλαμίνγκο επισκέπτονται την άνοιξη."
+          },
+          {
+            "name": "Evening in Agios Nikolaos",
+            "lat": 35.1908,
+            "lng": 25.7174,
+            "type": "city",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "Almyros is essentially the southern edge of Agios Nikolaos — a 5-minute drive or 25-minute walk along the coast brings you back to the lake. Dinner around Lake Voulismeni; the harbour cafés stay open late.",
+            "name_el": "Βράδυ στον Άγιο Νικόλαο",
+            "desc_el": "Ο Αλμυρός είναι ουσιαστικά το νότιο άκρο του Αγίου Νικολάου — 5 λεπτά με αυτοκίνητο ή 25 λεπτά με τα πόδια κατά μήκος της ακτής σε φέρνουν πίσω στη λίμνη. Δείπνο γύρω από τη Βουλισμένη· τα παραλιακά καφέ μένουν ανοιχτά μέχρι αργά."
           }
         ],
         "title_el": "Σπιναλόγκα & Κριτσά",
@@ -254,8 +276,8 @@
         "stops": [
           {
             "name": "Sitia Town",
-            "lat": 35.2067,
-            "lng": 26.1033,
+            "lat": 35.2087,
+            "lng": 26.1052,
             "type": "city",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Sitia",
@@ -273,8 +295,8 @@
           },
           {
             "name": "Vai Beach",
-            "lat": 35.2547,
-            "lng": 26.2661,
+            "lat": 35.2544,
+            "lng": 26.2649,
             "type": "beach",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Vai",
@@ -292,8 +314,8 @@
           },
           {
             "name": "Itanos Ruins",
-            "lat": 35.27,
-            "lng": 26.2733,
+            "lat": 35.263,
+            "lng": 26.2642,
             "type": "museum",
             "time": "13:00",
             "wiki": null,
@@ -311,8 +333,8 @@
           },
           {
             "name": "Palekastro",
-            "lat": 35.2017,
-            "lng": 26.2483,
+            "lat": 35.2005,
+            "lng": 26.25,
             "type": "village",
             "time": "15:00",
             "wiki": null,
@@ -327,6 +349,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Palekastro_R07.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Sitia",
+            "lat": 35.2087,
+            "lng": 26.1052,
+            "type": "city",
+            "time": "19:30",
+            "wiki": null,
+            "desc": "Drive back to Sitia (about 25 minutes from Palekastro). The Sitia waterfront tavernas serve until late, with the local Sitia wine PDO worth seeking out.",
+            "name_el": "Επιστροφή στη Σητεία",
+            "desc_el": "Επιστροφή στη Σητεία (περίπου 25 λεπτά από το Παλαίκαστρο). Οι ταβέρνες στην παραλία της Σητείας λειτουργούν μέχρι αργά· το τοπικό κρασί Σητείας ΠΟΠ αξίζει."
           }
         ],
         "title_el": "Φοινικόδασος του Βάι & Άπω Ανατολή",
@@ -342,8 +375,8 @@
         "stops": [
           {
             "name": "Kato Zakros Palace",
-            "lat": 35.0983,
-            "lng": 26.2667,
+            "lat": 35.0979,
+            "lng": 26.2611,
             "type": "museum",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Zakros",
@@ -361,8 +394,8 @@
           },
           {
             "name": "Gorge of the Dead",
-            "lat": 35.115,
-            "lng": 26.2483,
+            "lat": 35.1,
+            "lng": 26.25,
             "type": "nature",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Gorge_of_the_Dead",
@@ -380,8 +413,8 @@
           },
           {
             "name": "Xerokampos Beach",
-            "lat": 35.0625,
-            "lng": 26.2342,
+            "lat": 35.0491,
+            "lng": 26.233,
             "type": "beach",
             "time": "14:00",
             "wiki": null,
@@ -399,8 +432,8 @@
           },
           {
             "name": "Makrigialos Beach",
-            "lat": 35.0167,
-            "lng": 25.9733,
+            "lat": 35.0357,
+            "lng": 25.9705,
             "type": "beach",
             "time": "15:30",
             "wiki": null,
@@ -415,8 +448,8 @@
             "type": "departure",
             "desc": "Arrive at Heraklion for ferry or flight. The longest single drive of the trip — but the Libyan Sea on your right the whole way back makes it bearable.",
             "desc_el": "Άφιξη στο Ηράκλειο για πλοίο ή αεροπλάνο. Η μακρύτερη συνεχόμενη οδική διαδρομή του ταξιδιού — αλλά το Λιβυκό Πέλαγος στα δεξιά σου όλο τον δρόμο κάνει την επιστροφή υποφερτή.",
-            "lat": 35.3387,
-            "lng": 25.1442,
+            "lat": 35.3395,
+            "lng": 25.1761,
             "wiki": "https://en.wikipedia.org/wiki/Heraklion",
             "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg/1920px-Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg",
             "photo_credit": {
@@ -447,8 +480,8 @@
       "facilities": "Organised: sunbeds, umbrellas, restaurant, parking (paid). Protected national park — no camping.",
       "desc": "The only natural palm forest beach in Europe — 5000 Cretan date palms line a golden sand cove at the very tip of Crete. The combination of tropical vegetation and Aegean blue water is unlike anywhere else in Greece. Arrive early — it gets extremely busy by midday in summer.",
       "commons": "Vai_beach_Crete.jpg",
-      "lat": 35.2547,
-      "lng": 26.2661,
+      "lat": 35.2544,
+      "lng": 26.2649,
       "name_el": "Παραλία Βάι",
       "type_el": "Λεπτή χρυσή άμμος",
       "depth_el": "Ρηχό έως μέτριο — ήρεμα, διαυγή νερά",
@@ -475,8 +508,8 @@
       "facilities": "Fully organised: sunbeds, water sports, taverna. One of the best-equipped beaches in the east.",
       "desc": "The finest beach near Agios Nikolaos — a wide crescent of golden sand with crystalline water near Istro. Consistently ranked among the best beaches in eastern Crete, yet surprisingly uncrowded compared to the west coast beaches.",
       "commons": null,
-      "lat": 35.1075,
-      "lng": 25.7678,
+      "lat": 35.1253,
+      "lng": 25.7444,
       "name_el": "Παραλία Βουλίσμα",
       "type_el": "Λεπτή χρυσή άμμος",
       "depth_el": "Ρηχό έως μέτριο — διαυγή, ζεστά νερά",
@@ -503,8 +536,8 @@
       "facilities": "Very basic: one small taverna-rooms. No sunbeds. Accessible only by rough road.",
       "desc": "Three remote, wild beaches in the far southeast of Crete, reachable only by rough road. Almost no tourists even in August. The Libyan Sea here is the warmest water in Crete. For those who want complete solitude in a dramatically beautiful setting.",
       "commons": null,
-      "lat": 35.0625,
-      "lng": 26.2342,
+      "lat": 35.0491,
+      "lng": 26.233,
       "name_el": "Παραλία Ξερόκαμπος",
       "type_el": "Άμμος και λεπτό βότσαλο",
       "depth_el": "Μέτριο — ζεστό Λιβυκό πέλαγος, εξαιρετική ορατότητα",
@@ -531,8 +564,8 @@
       "facilities": "Good: sunbeds, tavernas, easy parking. Close to Agios Nikolaos.",
       "desc": "Long sandy beach just south of Agios Nikolaos where a freshwater river meets the sea, creating a natural lagoon. Flamingoes sometimes visit in spring. Calm, warm water and convenient location make it the best easy beach in the region.",
       "commons": null,
-      "lat": 35.1842,
-      "lng": 25.7322,
+      "lat": 35.1759,
+      "lng": 25.7093,
       "name_el": "Παραλία Αλμυρός",
       "type_el": "Λεπτή άμμος",
       "depth_el": "Ρηχό — πηγή γλυκού νερού δημιουργεί τμήμα λιμνοθάλασσας",
@@ -551,8 +584,8 @@
       "facilities": "Moderate: two windsurfing schools, taverna, simple rooms. Not ideal for sunbathing.",
       "desc": "The windsurfing capital of Crete near Palekastro — consistent winds and a long pebble beach make it world-class for water sports. The water is exceptionally clear. Not for those seeking a quiet beach day, but perfect for kitesurfers and windsurfers.",
       "commons": null,
-      "lat": 35.2133,
-      "lng": 26.2642,
+      "lat": 35.212,
+      "lng": 26.2675,
       "name_el": "Παραλία Κουρεμένος",
       "type_el": "Βότσαλο",
       "depth_el": "Μέτριο — διαυγές, κρύο, εξαιρετικό για windsurfing",

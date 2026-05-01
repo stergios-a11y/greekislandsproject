@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Fortezza Fortress",
-            "lat": 35.3742,
-            "lng": 24.4679,
+            "lat": 35.372,
+            "lng": 24.4711,
             "type": "castle",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Fortezza",
@@ -102,8 +102,8 @@
           },
           {
             "name": "Venetian Harbour",
-            "lat": 35.3727,
-            "lng": 24.4743,
+            "lat": 35.3704,
+            "lng": 24.4773,
             "type": "harbour",
             "time": "10:30",
             "wiki": null,
@@ -122,7 +122,7 @@
           {
             "name": "Old Town Rethymno",
             "lat": 35.3717,
-            "lng": 24.4717,
+            "lng": 24.475,
             "type": "museum",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Rethymno",
@@ -140,8 +140,8 @@
           },
           {
             "name": "Lunch — Avli Restaurant",
-            "lat": 35.3719,
-            "lng": 24.4721,
+            "lat": 35.3702,
+            "lng": 24.474,
             "type": "village",
             "time": "13:30",
             "wiki": null,
@@ -151,8 +151,8 @@
           },
           {
             "name": "Rethymno Beach",
-            "lat": 35.3677,
-            "lng": 24.4867,
+            "lat": 35.3673,
+            "lng": 24.4872,
             "type": "beach",
             "time": "16:30",
             "wiki": null,
@@ -182,8 +182,8 @@
         "stops": [
           {
             "name": "Kourtaliotiko Gorge",
-            "lat": 35.1533,
-            "lng": 24.54,
+            "lat": 35.1994,
+            "lng": 24.4586,
             "type": "nature",
             "time": "09:30",
             "wiki": null,
@@ -201,8 +201,8 @@
           },
           {
             "name": "Preveli Monastery",
-            "lat": 35.1167,
-            "lng": 24.5533,
+            "lat": 35.1576,
+            "lng": 24.4564,
             "type": "church",
             "time": "10:30",
             "wiki": "https://en.wikipedia.org/wiki/Preveli_Monastery",
@@ -220,8 +220,8 @@
           },
           {
             "name": "Preveli Beach",
-            "lat": 35.1528,
-            "lng": 24.4733,
+            "lat": 35.1526,
+            "lng": 24.4739,
             "type": "beach",
             "time": "12:00",
             "wiki": "https://en.wikipedia.org/wiki/Preveli_beach",
@@ -239,8 +239,8 @@
           },
           {
             "name": "Plakias Beach",
-            "lat": 35.1839,
-            "lng": 24.4008,
+            "lat": 35.1854,
+            "lng": 24.3993,
             "type": "beach",
             "time": "15:30",
             "wiki": null,
@@ -255,6 +255,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Plakias_Beach_01.JPG",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Rethymno",
+            "lat": 35.3704,
+            "lng": 24.4773,
+            "type": "city",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "Drive back to Rethymno (about 1 hour from Plakias on the mountain road through Spili — beautiful at golden hour). Dinner in the Venetian harbour or the back streets of the old town.",
+            "name_el": "Επιστροφή στο Ρέθυμνο",
+            "desc_el": "Επιστροφή στο Ρέθυμνο (περίπου 1 ώρα από τον Πλακιά μέσω του ορεινού δρόμου του Σπηλίου — όμορφος στη χρυσή ώρα). Δείπνο στο Ενετικό λιμάνι ή στα στενά της παλιάς πόλης."
           }
         ],
         "title_el": "Νότια Ακτή — Πρέβελη & Δαμνώνι",
@@ -270,8 +281,8 @@
         "stops": [
           {
             "name": "Arkadi Monastery",
-            "lat": 35.3183,
-            "lng": 24.6317,
+            "lat": 35.3099,
+            "lng": 24.629,
             "type": "church",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Arkadi_Monastery",
@@ -289,8 +300,8 @@
           },
           {
             "name": "Amari Valley",
-            "lat": 35.22,
-            "lng": 24.6167,
+            "lat": 35.2207,
+            "lng": 24.6412,
             "type": "nature",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Amari",
@@ -308,8 +319,8 @@
           },
           {
             "name": "Thronos Village",
-            "lat": 35.235,
-            "lng": 24.605,
+            "lat": 35.2579,
+            "lng": 24.6428,
             "type": "village",
             "time": "13:00",
             "wiki": null,
@@ -327,8 +338,8 @@
           },
           {
             "name": "Mount Psiloritis Viewpoint",
-            "lat": 35.2183,
-            "lng": 24.7667,
+            "lat": 35.2264,
+            "lng": 24.7707,
             "type": "nature",
             "time": "15:30",
             "wiki": "https://en.wikipedia.org/wiki/Mount_Ida_(Crete)",
@@ -343,6 +354,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Mount_Ida_chain_Messara_plain_from_Phaistos_Crete_Greece.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Rethymno",
+            "lat": 35.3704,
+            "lng": 24.4773,
+            "type": "city",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "Drive back through the Amari valley to Rethymno (about 1 hour). After a full day of monasteries and mountain villages, the lights of the old town are a welcome sight.",
+            "name_el": "Επιστροφή στο Ρέθυμνο",
+            "desc_el": "Επιστροφή μέσω της κοιλάδας του Αμαρίου στο Ρέθυμνο (περίπου 1 ώρα). Μετά μια γεμάτη μέρα μοναστηριών και ορεινών χωριών, τα φώτα της παλιάς πόλης είναι ευπρόσδεκτη θέα."
           }
         ],
         "title_el": "Μονή Αρκαδίου & Ορεινά Χωριά Αμαρίου",
@@ -358,8 +380,8 @@
         "stops": [
           {
             "name": "Bali Village",
-            "lat": 35.4117,
-            "lng": 24.785,
+            "lat": 35.4149,
+            "lng": 24.7831,
             "type": "harbour",
             "time": "09:30",
             "wiki": null,
@@ -377,8 +399,8 @@
           },
           {
             "name": "Panormo Beach",
-            "lat": 35.4133,
-            "lng": 24.8267,
+            "lat": 35.418,
+            "lng": 24.6896,
             "type": "beach",
             "time": "11:30",
             "wiki": null,
@@ -388,8 +410,8 @@
           },
           {
             "name": "Rethymno — Final Lunch",
-            "lat": 35.3727,
-            "lng": 24.4743,
+            "lat": 35.3704,
+            "lng": 24.4773,
             "type": "city",
             "time": "14:00",
             "wiki": null,
@@ -416,8 +438,8 @@
       "facilities": "Basic: small café on the beach. Access by boat from Plakias (30 min) or 30-minute hike from the car park.",
       "desc": "The most unique beach in Crete — a Cretan date palm forest lines a river that flows through a gorge and meets the sea in a small turquoise lagoon. You can swim in both the river and the sea. Accessible only by boat or on foot, which keeps it wonderfully uncrowded.",
       "commons": "Preveli_beach_Crete.jpg",
-      "lat": 35.1528,
-      "lng": 24.4733,
+      "lat": 35.1526,
+      "lng": 24.4739,
       "name_el": "Παραλία Πρέβελη",
       "type_el": "Λεπτή άμμος με ποτάμι και φοινικόδεντρα",
       "depth_el": "Σταδιακή — τιρκουάζ λιμνούλα",
@@ -444,8 +466,8 @@
       "facilities": "Good: sunbeds, tavernas, accommodation. Quiet south-coast resort feel.",
       "desc": "A long, wide south-coast beach backed by a relaxed village with excellent tavernas. The Libyan Sea is warmer and bluer than the north coast. Base yourself here for easy access to Preveli. One of the best value destinations on the island.",
       "commons": null,
-      "lat": 35.1839,
-      "lng": 24.4008,
+      "lat": 35.1854,
+      "lng": 24.3993,
       "name_el": "Παραλία Πλακιάς",
       "type_el": "Λεπτή χρυσή άμμος",
       "depth_el": "Σταδιακή είσοδος",
@@ -472,8 +494,8 @@
       "facilities": "Moderate: sunbeds, beach taverna. One of three coves in the Bali resort.",
       "desc": "The most picturesque of Bali's three coves — a small pebble beach enclosed by hills, with a taverna at the waterline. The water clarity is outstanding. Arrive early as space is limited.",
       "commons": null,
-      "lat": 35.4192,
-      "lng": 24.7806,
+      "lat": 35.4076,
+      "lng": 24.7847,
       "name_el": "Παραλία Λιβάδι (Μπαλί)",
       "type_el": "Βότσαλα και λίγη άμμος",
       "depth_el": "Μέτρια — εξαιρετική διαύγεια",
@@ -500,8 +522,8 @@
       "facilities": "Fully developed: all facilities for 12km. Town section most convenient, eastern section quieter.",
       "desc": "One of the longest beaches in Greece — 12km of sandy shore stretching east from the old town. The town section is convenient but busy; walk 20 minutes east for more space. Excellent for families with its flat, shallow entry.",
       "commons": null,
-      "lat": 35.3731,
-      "lng": 24.4847,
+      "lat": 35.3673,
+      "lng": 24.4872,
       "name_el": "Παραλία της Πόλης του Ρεθύμνου",
       "type_el": "Λεπτή χρυσή άμμος",
       "depth_el": "Ρηχή — πολύ σταδιακή",
@@ -528,8 +550,8 @@
       "facilities": "Basic: two small tavernas, some sunbeds. Remote and peaceful.",
       "desc": "A remote south-coast beach named for three large rocks that protrude from the sea. Long, sandy and almost empty even in peak season. The drive there — through mountain villages and olive groves — is half the pleasure.",
       "commons": null,
-      "lat": 35.1128,
-      "lng": 24.5056,
+      "lat": 35.1186,
+      "lng": 24.5467,
       "name_el": "Παραλία Τριόπετρα",
       "type_el": "Μακριά χρυσή άμμος",
       "depth_el": "Σταδιακή",
