@@ -9,62 +9,62 @@
     "months": [
       {
         "tag": "ok",
-        "why": "Old Town alive, mountains snowy",
-        "why_el": "Παλιά Πόλη ζωντανή, βουνά χιονισμένα"
+        "why": "Old Town, snow",
+        "why_el": "Παλιά Πόλη, χιόνι"
       },
       {
         "tag": "ok",
         "why": "Hiking, sea cold",
-        "why_el": "Ήπιο, πεζοπορία, θάλασσα κρύα"
+        "why_el": "Ήπιο, πεζοπορία"
       },
       {
         "tag": "great",
-        "why": "Wildflowers, gorges open",
-        "why_el": "Αγριολούλουδα, φαράγγια ανοίγουν"
+        "why": "Gorges open",
+        "why_el": "Αγριολούλουδα"
       },
       {
         "tag": "great",
-        "why": "Easter, Samaria opens",
-        "why_el": "Πάσχα, ανοίγει η Σαμαριά"
+        "why": "Easter, Samaria",
+        "why_el": "Πάσχα, Σαμαριά"
       },
       {
         "tag": "perfect",
-        "why": "Swimmable, gorges, empty, mild",
-        "why_el": "Μπάνιο, φαράγγια, άδεια, ήπιο"
+        "why": "Swimmable, gorges",
+        "why_el": "Μπάνιο, φαράγγια, ήπιο"
       },
       {
         "tag": "perfect",
-        "why": "Long days, sea perfect",
-        "why_el": "Μεγάλες μέρες, θάλασσα ιδανική"
+        "why": "Long days, perfect",
+        "why_el": "Μεγάλες μέρες"
       },
       {
         "tag": "ok",
-        "why": "Hot, German tour buses",
-        "why_el": "Ζέστη, γερμανικά λεωφορεία παντού"
+        "why": "Hot, tour buses",
+        "why_el": "Ζέστη, τουριστικά"
       },
       {
         "tag": "avoid",
-        "why": "Peak heat + crowds + prices",
-        "why_el": "Κορύφωση ζέστης, κόσμου, τιμών"
+        "why": "Peak heat+crowds",
+        "why_el": "Κορύφωση ζέστης"
       },
       {
         "tag": "perfect",
-        "why": "Best — sea perfect, golden",
-        "why_el": "Καλύτερος — θάλασσα ιδανική, χρυσή ησυχία"
+        "why": "Best — sea golden",
+        "why_el": "Καλύτερος — χρυσά"
       },
       {
         "tag": "great",
-        "why": "Still swimming, last warm month",
-        "why_el": "Ακόμα μπάνιο, τελευταίος ζεστός"
+        "why": "Still swimming, warm",
+        "why_el": "Ακόμα μπάνιο"
       },
       {
         "tag": "great",
-        "why": "Quiet, mild, Old Town pleasant",
-        "why_el": "Ησυχία, ήπιο, Παλιά Πόλη ευχάριστη"
+        "why": "Quiet, mild",
+        "why_el": "Ησυχία, Παλιά Πόλη"
       },
       {
         "tag": "ok",
-        "why": "Mild, mostly residents",
+        "why": "Mild, locals",
         "why_el": "Ήπιο, μόνο ντόπιοι"
       }
     ]
@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Venetian Harbour",
-            "lat": 35.5186,
-            "lng": 24.0178,
+            "lat": 35.5172,
+            "lng": 24.0176,
             "type": "harbour",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Chania",
@@ -95,8 +95,8 @@
           },
           {
             "name": "Chania Old Town",
-            "lat": 35.5163,
-            "lng": 24.0194,
+            "lat": 35.5165,
+            "lng": 24.0164,
             "type": "museum",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Chania",
@@ -107,8 +107,8 @@
           },
           {
             "name": "Kastelli Hill",
-            "lat": 35.518,
-            "lng": 24.021,
+            "lat": 35.5172,
+            "lng": 24.0197,
             "type": "castle",
             "time": "11:30",
             "wiki": null,
@@ -119,8 +119,8 @@
           },
           {
             "name": "Lunch — To Maridaki",
-            "lat": 35.5175,
-            "lng": 24.0175,
+            "lat": 35.5159,
+            "lng": 24.0214,
             "type": "harbour",
             "time": "13:30",
             "wiki": null,
@@ -131,8 +131,8 @@
           },
           {
             "name": "Nea Chora Beach",
-            "lat": 35.5127,
-            "lng": 23.9997,
+            "lat": 35.5137,
+            "lng": 24.0059,
             "type": "beach",
             "time": "16:30",
             "wiki": null,
@@ -143,8 +143,8 @@
           },
           {
             "name": "Dinner — Tamam",
-            "lat": 35.5168,
-            "lng": 24.0188,
+            "lat": 35.5165,
+            "lng": 24.0164,
             "type": "village",
             "time": "20:00",
             "wiki": null,
@@ -166,8 +166,8 @@
         "stops": [
           {
             "name": "Kissamos Port",
-            "lat": 35.5049,
-            "lng": 23.6518,
+            "lat": 35.5177,
+            "lng": 23.6366,
             "type": "harbour",
             "time": "09:00",
             "wiki": null,
@@ -185,8 +185,8 @@
           },
           {
             "name": "Gramvousa Island",
-            "lat": 35.6097,
-            "lng": 23.5803,
+            "lat": 35.6265,
+            "lng": 23.5848,
             "type": "castle",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Gramvousa",
@@ -204,8 +204,8 @@
           },
           {
             "name": "Balos Lagoon",
-            "lat": 35.5953,
-            "lng": 23.5881,
+            "lat": 35.5793,
+            "lng": 23.5887,
             "type": "beach",
             "time": "12:00",
             "wiki": "https://en.wikipedia.org/wiki/Balos_Beach",
@@ -223,8 +223,8 @@
           },
           {
             "name": "Kissamos Town",
-            "lat": 35.5049,
-            "lng": 23.6518,
+            "lat": 35.4945,
+            "lng": 23.658,
             "type": "city",
             "time": "17:30",
             "wiki": null,
@@ -239,6 +239,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:2339_kissamos-kastelli.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Chania Town",
+            "lat": 35.5172,
+            "lng": 24.0176,
+            "type": "city",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "Drive back to Chania Town (about 45 minutes from Kissamos). Dinner along the Venetian harbour. The contrast between the morning quiet of Balos and the evening buzz of Chania is one of the great pleasures of basing yourself in town.",
+            "name_el": "Επιστροφή στα Χανιά",
+            "desc_el": "Επιστροφή στην πόλη των Χανίων (περίπου 45 λεπτά από την Κίσσαμο). Δείπνο στο Ενετικό λιμάνι. Η αντίθεση ανάμεσα στην πρωινή ησυχία του Μπάλου και τη βραδινή ζωή των Χανίων είναι μία από τις μεγάλες χαρές του να μένεις στην πόλη."
           }
         ],
         "title_el": "Λιμνοθάλασσα Μπάλος & Γραμβούσα",
@@ -254,8 +265,8 @@
         "stops": [
           {
             "name": "Xyloskalo (Gorge Entry)",
-            "lat": 35.2967,
-            "lng": 23.9697,
+            "lat": 35.308,
+            "lng": 23.9185,
             "type": "nature",
             "time": "07:30",
             "wiki": "https://en.wikipedia.org/wiki/Samaria_Gorge",
@@ -273,8 +284,8 @@
           },
           {
             "name": "Iron Gates",
-            "lat": 35.2583,
-            "lng": 23.9667,
+            "lat": 35.2516,
+            "lng": 23.9684,
             "type": "nature",
             "time": "10:30",
             "wiki": null,
@@ -292,8 +303,8 @@
           },
           {
             "name": "Agia Roumeli Beach",
-            "lat": 35.2283,
-            "lng": 23.9717,
+            "lat": 35.2299,
+            "lng": 23.9575,
             "type": "beach",
             "time": "13:00",
             "wiki": null,
@@ -311,8 +322,8 @@
           },
           {
             "name": "Chora Sfakion",
-            "lat": 35.25,
-            "lng": 24.1167,
+            "lat": 35.2011,
+            "lng": 24.136,
             "type": "harbour",
             "time": "15:30",
             "wiki": null,
@@ -327,6 +338,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Village_Chora_Sfakion_on_Crete,_Greece.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Chania Town",
+            "lat": 35.5172,
+            "lng": 24.0176,
+            "type": "city",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Bus from Chora Sfakion over the White Mountains back to Chania Town — about 90 minutes through some of the most spectacular terrain on Crete. Light dinner; you will have walked 16 km in the heat and need an early night.",
+            "name_el": "Επιστροφή στα Χανιά",
+            "desc_el": "Λεωφορείο από Χώρα Σφακίων πάνω από τα Λευκά Όρη πίσω στα Χανιά — περίπου 90 λεπτά μέσα από κάποια από τα πιο εντυπωσιακά τοπία της Κρήτης. Ελαφρύ δείπνο· έχεις περπατήσει 16 χλμ στη ζέστη και χρειάζεσαι ύπνο νωρίς."
           }
         ],
         "title_el": "Φαράγγι Σαμαριάς",
@@ -344,8 +366,8 @@
         "stops": [
           {
             "name": "Falasarna Beach",
-            "lat": 35.5144,
-            "lng": 23.5733,
+            "lat": 35.492,
+            "lng": 23.5807,
             "type": "beach",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Falasarna",
@@ -363,8 +385,8 @@
           },
           {
             "name": "Ancient Falasarna",
-            "lat": 35.5133,
-            "lng": 23.57,
+            "lat": 35.5114,
+            "lng": 23.5702,
             "type": "museum",
             "time": "11:00",
             "wiki": null,
@@ -382,8 +404,8 @@
           },
           {
             "name": "Topolia Gorge",
-            "lat": 35.375,
-            "lng": 23.742,
+            "lat": 35.4194,
+            "lng": 23.6883,
             "type": "nature",
             "time": "12:30",
             "wiki": null,
@@ -401,8 +423,8 @@
           },
           {
             "name": "Elafonisi Beach",
-            "lat": 35.2722,
-            "lng": 23.5361,
+            "lat": 35.2712,
+            "lng": 23.5413,
             "type": "beach",
             "time": "13:30",
             "wiki": "https://en.wikipedia.org/wiki/Elafonisi",
@@ -420,8 +442,8 @@
           },
           {
             "name": "Kedrodasos Beach",
-            "lat": 35.27,
-            "lng": 23.5283,
+            "lat": 35.2686,
+            "lng": 23.5631,
             "type": "beach",
             "time": "15:30",
             "wiki": null,
@@ -439,8 +461,8 @@
           },
           {
             "name": "Paleochora",
-            "lat": 35.233,
-            "lng": 23.683,
+            "lat": 35.2305,
+            "lng": 23.6822,
             "type": "city",
             "time": "18:30",
             "wiki": "https://en.wikipedia.org/wiki/Paleochora",
@@ -475,8 +497,8 @@
             "type": "beach",
             "desc": "Paleochora's main sandy beach on the western side of the headland — long, soft golden sand, shallow turquoise water. Morning swim before the day heats up.",
             "desc_el": "Η κύρια αμμώδης παραλία της Παλαιόχωρας στη δυτική πλευρά της χερσονήσου — μακριά, μαλακή χρυσαφένια άμμος, ρηχά τιρκουάζ νερά. Πρωινό μπάνιο πριν ζεστάνει η μέρα.",
-            "lat": 35.235,
-            "lng": 23.677,
+            "lat": 35.2323,
+            "lng": 23.6781,
             "wiki": ""
           },
           {
@@ -486,8 +508,8 @@
             "type": "town",
             "desc": "Walk the headland — a small Venetian castle ruin sits at the tip with views in all directions. Coffee at one of the shaded squares, then last lunch.",
             "desc_el": "Περπάτησε στη χερσόνησο — στην άκρη υπάρχουν τα ερείπια ενός μικρού βενετσιάνικου κάστρου με θέα προς όλες τις κατευθύνσεις. Καφές σε μία από τις σκιερές πλατείες, και τελευταίο γεύμα.",
-            "lat": 35.231,
-            "lng": 23.679,
+            "lat": 35.2305,
+            "lng": 23.6822,
             "wiki": "https://en.wikipedia.org/wiki/Paleochora",
             "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Palaiochora_Kastro_2.jpg/1920px-Palaiochora_Kastro_2.jpg",
             "photo_credit": {
@@ -499,14 +521,14 @@
             }
           },
           {
-            "name": "Chania — Departure",
+            "name": "Chania Airport (departure)",
             "name_el": "Χανιά — Αναχώρηση",
             "time": "15:00",
             "type": "departure",
             "desc": "Drive back to Chania for ferry or flight. About 75 km — give yourself 90 minutes for the mountain road. Final coffee at the Venetian harbour if time allows.",
             "desc_el": "Επιστροφή στα Χανιά για πλοίο ή αεροπλάνο. Περίπου 75 χλμ. — υπολόγισε 90 λεπτά για τον ορεινό δρόμο. Τελευταίος καφές στο Βενετσιάνικο λιμάνι αν προλαβαίνεις.",
-            "lat": 35.5138,
-            "lng": 24.0179,
+            "lat": 35.53,
+            "lng": 24.1469,
             "wiki": "https://en.wikipedia.org/wiki/Chania",
             "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Lighthouse_in_Chania._Crete%2C_Greece.jpg/1920px-Lighthouse_in_Chania._Crete%2C_Greece.jpg",
             "photo_credit": {
@@ -536,8 +558,8 @@
       "desc": "Possibly the most photographed beach in Greece — a white sand lagoon between the mainland and Gramvousa island, with a 16th-century Venetian fortress on the peak above. The water colour is an impossible turquoise. Effort required to get here, but nothing in Greece compares to the first view from the hilltop.",
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1777442841/1b_wb2ezl.jpg",
       "commons": "Balos_Beach_Crete.jpg",
-      "lat": 35.5953,
-      "lng": 23.5881,
+      "lat": 35.5793,
+      "lng": 23.5887,
       "name_el": "Λιμνοθάλασσα Μπάλος",
       "type_el": "Λεπτή λευκή άμμος και θρύμματα κοχυλιών",
       "depth_el": "Ρηχή λιμνοθάλασσα — μέχρι το γόνατο στο μεγαλύτερο μέρος, βαθύτερα στην ανοιχτή πλευρά",
@@ -557,8 +579,8 @@
       "desc": "The secret beach next to Elafonisi — accessible only on foot through a protected juniper forest. Pristine, uncrowded, and completely undeveloped. The contrast with the busy Elafonisi nearby is striking. The juniper trees are endangered — do not touch them.",
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1777442840/4b_x46sxh.jpg",
       "commons": null,
-      "lat": 35.27,
-      "lng": 23.5283,
+      "lat": 35.2686,
+      "lng": 23.5631,
       "name_el": "Παραλία Κεδρόδασος",
       "type_el": "Λεπτή λευκή άμμος",
       "depth_el": "Ρηχό έως μέτριο — καθαρός αμμώδης βυθός",
@@ -578,8 +600,8 @@
       "desc": "Ranked world's best beach by TripAdvisor. A shallow pink-sand lagoon at the far southwest tip of Crete, with a small island reachable on foot at low tide. The colour of the water — shifting from turquoise to emerald to deep blue — is extraordinary. Arrive before 10am in peak season.",
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1777442840/2b_jjajds.jpg",
       "commons": "Elafonisi_beach_Crete.jpg",
-      "lat": 35.2722,
-      "lng": 23.5361,
+      "lat": 35.2712,
+      "lng": 23.5413,
       "name_el": "Παραλία Ελαφονήσι",
       "type_el": "Λεπτή άμμος με ροζ απόχρωση από συντριμμένα κοχύλια",
       "depth_el": "Πολύ ρηχή λιμνοθάλασσα — μέχρι το γόνατο σχεδόν παντού, βαθύτερα προς το νησί",
@@ -599,8 +621,8 @@
       "desc": "Five consecutive golden sand beaches on the wild west coast, repeatedly named best beach in Crete. The wide open bay, warm water and legendary sunsets make it unforgettable. Best in the morning when the wind is calm — afternoons can get breezy, which makes it perfect for water sports.",
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1777443193/falas_y0bw1v.jpg",
       "commons": "Falasarna_beach_Crete.jpg",
-      "lat": 35.5144,
-      "lng": 23.5733,
+      "lat": 35.492,
+      "lng": 23.5807,
       "name_el": "Παραλία Φαλάσαρνα",
       "type_el": "Χρυσή λεπτή άμμος",
       "depth_el": "Μέτριο — καλό για κολύμπι, λίγα κύματα τις πιο ανεμώδεις μέρες",
@@ -620,8 +642,8 @@
       "desc": "A perfectly circular enclosed bay near Akrotiri peninsula, filmed in the famous dance scene of Zorba the Greek. Remarkably calm water at all times — wind from any direction has no effect here. One of the best family beaches in the Chania region and far less crowded than Elafonisi.",
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1777442840/3b_n9hzhi.jpg",
       "commons": null,
-      "lat": 35.5983,
-      "lng": 24.0789,
+      "lat": 35.5918,
+      "lng": 24.0951,
       "name_el": "Παραλία Σταυρός",
       "type_el": "Λεπτή άμμος",
       "depth_el": "Πολύ ρηχό — απόλυτα ήρεμο, κλειστός κόλπος",
