@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Zakynthos Town",
-            "lat": 37.79,
-            "lng": 20.8967,
+            "lat": 37.7867,
+            "lng": 20.9002,
             "type": "city",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Zakynthos_(city)",
@@ -102,8 +102,8 @@
           },
           {
             "name": "Bochali Castle",
-            "lat": 37.7983,
-            "lng": 20.8917,
+            "lat": 37.7897,
+            "lng": 20.8921,
             "type": "castle",
             "time": "10:00",
             "wiki": null,
@@ -113,8 +113,8 @@
           },
           {
             "name": "Byzantine Museum",
-            "lat": 37.79,
-            "lng": 20.8983,
+            "lat": 37.7873,
+            "lng": 20.8996,
             "type": "museum",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Byzantine_Museum_of_Zakynthos",
@@ -132,8 +132,8 @@
           },
           {
             "name": "Lunch — Malanos",
-            "lat": 37.79,
-            "lng": 20.8967,
+            "lat": 37.7867,
+            "lng": 20.9002,
             "type": "village",
             "time": "13:30",
             "wiki": null,
@@ -143,8 +143,8 @@
           },
           {
             "name": "Tsilivi Beach",
-            "lat": 37.8333,
-            "lng": 20.9017,
+            "lat": 37.8166,
+            "lng": 20.8689,
             "type": "beach",
             "time": "16:00",
             "wiki": null,
@@ -159,6 +159,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Tsilivi_Beach_,_Mango_Beach_Bar_-_panoramio.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Zakynthos Town",
+            "lat": 37.7867,
+            "lng": 20.9002,
+            "type": "city",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Short drive back to Zakynthos Town (about 10 minutes). Solomos Square is the evening gathering spot — perfect for a stroll along the seafront before dinner.",
+            "name_el": "Επιστροφή στη Ζάκυνθο",
+            "desc_el": "Σύντομη διαδρομή στη Ζάκυνθο (περίπου 10 λεπτά). Η πλατεία Σολωμού είναι το βραδινό σημείο συνάντησης — τέλεια για μια βόλτα στην παραλία πριν το δείπνο."
           }
         ],
         "title_el": "Χώρα Ζακύνθου & η Ανατολή",
@@ -174,8 +185,8 @@
         "stops": [
           {
             "name": "Laganas Beach",
-            "lat": 37.7236,
-            "lng": 20.8761,
+            "lat": 37.725,
+            "lng": 20.8681,
             "type": "beach",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Laganas",
@@ -193,8 +204,8 @@
           },
           {
             "name": "National Marine Park",
-            "lat": 37.7,
-            "lng": 20.8333,
+            "lat": 37.69,
+            "lng": 20.88,
             "type": "nature",
             "time": "10:30",
             "wiki": "https://en.wikipedia.org/wiki/National_Marine_Park_of_Zakynthos",
@@ -212,8 +223,8 @@
           },
           {
             "name": "Keri Village",
-            "lat": 37.6917,
-            "lng": 20.8117,
+            "lat": 37.6786,
+            "lng": 20.8077,
             "type": "village",
             "time": "13:00",
             "wiki": null,
@@ -231,8 +242,8 @@
           },
           {
             "name": "Keri Sea Caves",
-            "lat": 37.6733,
-            "lng": 20.795,
+            "lat": 37.6483,
+            "lng": 20.8402,
             "type": "nature",
             "time": "15:00",
             "wiki": null,
@@ -242,8 +253,8 @@
           },
           {
             "name": "Marathonisi Turtle Island",
-            "lat": 37.705,
-            "lng": 20.8433,
+            "lat": 37.6835,
+            "lng": 20.87,
             "type": "nature",
             "time": "17:00",
             "wiki": null,
@@ -258,6 +269,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Turtle_Island_(21662194631).jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Zakynthos Town",
+            "lat": 37.7867,
+            "lng": 20.9002,
+            "type": "city",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Drive back from the Keri/Laganas area to Zakynthos Town (about 30 minutes). After a day with the turtles, the waterfront tavernas serve up the freshest seafood.",
+            "name_el": "Επιστροφή στη Ζάκυνθο",
+            "desc_el": "Επιστροφή από την περιοχή Κερί/Λαγανά στη Ζάκυνθο (περίπου 30 λεπτά). Μετά μια μέρα με τις χελώνες, οι ταβέρνες της παραλίας σερβίρουν τα πιο φρέσκα θαλασσινά."
           }
         ],
         "title_el": "Λαγανάς & οι Κόλποι των Χελωνών",
@@ -273,8 +295,8 @@
         "stops": [
           {
             "name": "Navagio Viewpoint",
-            "lat": 37.8617,
-            "lng": 20.6233,
+            "lat": 37.8618,
+            "lng": 20.6256,
             "type": "nature",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Navagio_beach",
@@ -292,8 +314,8 @@
           },
           {
             "name": "Navagio Shipwreck Beach",
-            "lat": 37.8592,
-            "lng": 20.6244,
+            "lat": 37.8595,
+            "lng": 20.6249,
             "type": "beach",
             "time": "10:30",
             "wiki": "https://en.wikipedia.org/wiki/Navagio_beach",
@@ -311,8 +333,8 @@
           },
           {
             "name": "Blue Caves",
-            "lat": 37.9017,
-            "lng": 20.7283,
+            "lat": 37.9303,
+            "lng": 20.7053,
             "type": "nature",
             "time": "13:30",
             "wiki": "https://en.wikipedia.org/wiki/Blue_Caves,_Zakynthos",
@@ -330,8 +352,8 @@
           },
           {
             "name": "Volimes Village",
-            "lat": 37.8917,
-            "lng": 20.69,
+            "lat": 37.8746,
+            "lng": 20.6582,
             "type": "village",
             "time": "16:00",
             "wiki": null,
@@ -346,6 +368,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Zakynthos_flora_(35914063705).jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Zakynthos Town",
+            "lat": 37.7867,
+            "lng": 20.9002,
+            "type": "city",
+            "time": "21:00",
+            "wiki": null,
+            "desc": "Drive back from Volimes to Zakynthos Town (about 1 hour through the central mountain road). The route passes through pretty villages — stop at Anafonitria monastery if there's daylight.",
+            "name_el": "Επιστροφή στη Ζάκυνθο",
+            "desc_el": "Επιστροφή από τα Βολίμες στη Ζάκυνθο (περίπου 1 ώρα μέσω του κεντρικού ορεινού δρόμου). Η διαδρομή περνά από όμορφα χωριά — σταματήστε στο μοναστήρι Αναφωνήτριας αν έχει ακόμα φως."
           }
         ],
         "title_el": "Ναυάγιο",
@@ -361,8 +394,8 @@
         "stops": [
           {
             "name": "Xigia Beach",
-            "lat": 37.8567,
-            "lng": 20.7617,
+            "lat": 37.8678,
+            "lng": 20.7351,
             "type": "beach",
             "time": "09:30",
             "wiki": null,
@@ -380,8 +413,8 @@
           },
           {
             "name": "Makris Gialos Beach",
-            "lat": 37.8167,
-            "lng": 20.7417,
+            "lat": 37.8783,
+            "lng": 20.726,
             "type": "beach",
             "time": "11:00",
             "wiki": null,
@@ -391,8 +424,8 @@
           },
           {
             "name": "Alykes Beach",
-            "lat": 37.8683,
-            "lng": 20.875,
+            "lat": 37.8406,
+            "lng": 20.7739,
             "type": "beach",
             "time": "13:30",
             "wiki": null,
@@ -410,8 +443,8 @@
           },
           {
             "name": "Zakynthos Town — Departure",
-            "lat": 37.79,
-            "lng": 20.8967,
+            "lat": 37.7541,
+            "lng": 20.8864,
             "type": "city",
             "time": "16:00",
             "wiki": null,
@@ -438,8 +471,8 @@
       "facilities": "None on the beach itself. Access only by boat from Porto Vromi or Agios Nikolaos (20 min).",
       "desc": "The most iconic beach in Greece — the rusting hulk of the Panagiotis cargo ship stranded in 1980, sitting on white sand enclosed by 200m white limestone cliffs. No road access. No facilities. Just the wreck, the sand and the extraordinary blue water. Every visitor to Zakynthos must see it.",
       "commons": "Navagio_beach_Zakynthos.jpg",
-      "lat": 37.8592,
-      "lng": 20.6244,
+      "lat": 37.8595,
+      "lng": 20.6249,
       "name_el": "Ναυάγιο (Shipwreck Beach)",
       "desc_el": "Η πιο εμβληματική παραλία της Ελλάδας — το σκουριασμένο κουφάρι του φορτηγού Παναγιώτη που προσάραξε το 1980, καθισμένο σε λευκή άμμο περικλεισμένη από λευκούς ασβεστολιθικούς γκρεμούς 200 μέτρων. Χωρίς πρόσβαση με δρόμο. Χωρίς ανέσεις. Μόνο το ναυάγιο, η άμμος και τα εξαιρετικά γαλάζια νερά. Κάθε επισκέπτης της Ζακύνθου πρέπει να τη δει.",
       "type_el": "Λεπτή λευκή άμμος",
@@ -466,8 +499,8 @@
       "facilities": "Fully developed resort beach. National Marine Park restrictions apply — no boats after 19:00, no beach access after dark June-August (turtle nesting).",
       "desc": "The longest beach in the Ionian islands and the most important loggerhead turtle nesting site in the Mediterranean. A unique combination — excellent swimming and sunbathing by day, turtle nesting by night. The marine park rules are strictly enforced.",
       "commons": null,
-      "lat": 37.7236,
-      "lng": 20.8761,
+      "lat": 37.725,
+      "lng": 20.8681,
       "name_el": "Παραλία Λαγανά",
       "desc_el": "Η μακρύτερη παραλία των Επτανήσων και η σημαντικότερη περιοχή φωλιάσματος χελωνών Caretta caretta στη Μεσόγειο. Μοναδικός συνδυασμός — εξαιρετική κολύμβηση και ηλιοθεραπεία την ημέρα, φώλιασμα χελωνών τη νύχτα. Οι κανόνες του θαλάσσιου πάρκου εφαρμόζονται αυστηρά.",
       "type_el": "Λεπτή χρυσή άμμος",
@@ -494,8 +527,8 @@
       "facilities": "Basic: small café, some sunbeds. Beach closes at sunset (turtle nesting area).",
       "desc": "A beautiful sandy beach at the southeastern tip of Zakynthos, one of the most important turtle nesting beaches in Greece. Clear, calm water and a dramatic headland setting. The beach closes at sunset from June onwards — turtles have priority.",
       "commons": null,
-      "lat": 37.6958,
-      "lng": 20.9719,
+      "lat": 37.7093,
+      "lng": 20.9863,
       "name_el": "Παραλία Γέρακα",
       "desc_el": "Μια όμορφη αμμώδης παραλία στο νοτιοανατολικό άκρο της Ζακύνθου, μία από τις σημαντικότερες παραλίες φωλιάσματος χελωνών στην Ελλάδα. Διαυγή, ήρεμα νερά και δραματικό σκηνικό ακρωτηρίου. Η παραλία κλείνει στο ηλιοβασίλεμα από τον Ιούνιο — οι χελώνες έχουν προτεραιότητα.",
       "type_el": "Λεπτή άμμος",
@@ -522,8 +555,8 @@
       "facilities": "Good: sunbeds, beach bar, taverna nearby.",
       "desc": "One of the best beaches on the east coast — clear turquoise water, organised facilities and far fewer crowds than the main resort beaches. The rocks at each end are good for snorkelling.",
       "commons": null,
-      "lat": 37.7603,
-      "lng": 20.95,
+      "lat": 37.7396,
+      "lng": 20.9597,
       "name_el": "Παραλία Πόρτο Ζόρο",
       "desc_el": "Μία από τις καλύτερες παραλίες της ανατολικής ακτής — διαυγή τιρκουάζ νερά, οργανωμένες ανέσεις και πολύ λιγότερα πλήθη από τις κύριες παραλίες θερέτρων. Τα βράχια σε κάθε άκρη είναι καλά για snorkelling.",
       "type_el": "Λεπτή άμμος και βότσαλο",
@@ -542,8 +575,8 @@
       "facilities": "Fully organised: sunbeds, water sports, beach bars, showers.",
       "desc": "Zakynthos's most popular family beach — long, sandy, shallow and well-organised. The banana boat and water sports make it lively. Not the most beautiful setting on the island but excellent for families with young children.",
       "commons": null,
-      "lat": 37.7378,
-      "lng": 20.9817,
+      "lat": 37.7291,
+      "lng": 20.9789,
       "name_el": "Παραλία Μπανάνα (Άγιος Νικόλαος)",
       "desc_el": "Η πιο δημοφιλής οικογενειακή παραλία της Ζακύνθου — μακρά, αμμώδης, ρηχή και καλά οργανωμένη. Το banana boat και τα θαλάσσια σπορ την κάνουν ζωντανή. Όχι το ομορφότερο σκηνικό στο νησί αλλά εξαιρετική για οικογένειες με μικρά παιδιά.",
       "type_el": "Λεπτή άμμος",

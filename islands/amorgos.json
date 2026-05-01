@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Katapola",
-            "lat": 36.8367,
-            "lng": 25.8633,
+            "lat": 36.8281,
+            "lng": 25.8657,
             "type": "harbour",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Katapola",
@@ -102,8 +102,8 @@
           },
           {
             "name": "Ancient Minoa",
-            "lat": 36.84,
-            "lng": 25.8667,
+            "lat": 36.8206,
+            "lng": 25.8624,
             "type": "museum",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Minoa,_Amorgos",
@@ -121,8 +121,8 @@
           },
           {
             "name": "Amorgos Chora",
-            "lat": 36.8317,
-            "lng": 25.8883,
+            "lat": 36.8319,
+            "lng": 25.8954,
             "type": "city",
             "time": "12:00",
             "wiki": "https://en.wikipedia.org/wiki/Chora,_Amorgos",
@@ -140,8 +140,8 @@
           },
           {
             "name": "Agia Anna Beach",
-            "lat": 36.8083,
-            "lng": 25.8883,
+            "lat": 36.8257,
+            "lng": 25.9059,
             "type": "beach",
             "time": "15:30",
             "wiki": null,
@@ -156,6 +156,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Agia_Anna_beach,_Amorgos,_18M1567.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Chora",
+            "lat": 36.8319,
+            "lng": 25.8954,
+            "type": "city",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Drive back up to Chora (about 10 minutes from Agia Anna). The whitewashed alleys and windmills of Chora light up at dusk — Jazzmin Bar and the tavernas around the main square are reliable.",
+            "name_el": "Επιστροφή στη Χώρα",
+            "desc_el": "Επιστροφή στη Χώρα (περίπου 10 λεπτά από την Αγία Άννα). Τα ασπρίσματα στενά και οι ανεμόμυλοι της Χώρας φωτίζονται στο σούρουπο — το Jazzmin Bar και οι ταβέρνες γύρω από την κεντρική πλατεία είναι αξιόπιστα."
           }
         ],
         "title_el": "Κατάπολα & Χώρα",
@@ -171,8 +182,8 @@
         "stops": [
           {
             "name": "Chozoviotissa Monastery",
-            "lat": 36.8133,
-            "lng": 25.89,
+            "lat": 36.8345,
+            "lng": 25.9095,
             "type": "church",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Monastery_of_Panagia_Chozoviotissa",
@@ -190,8 +201,8 @@
           },
           {
             "name": "Agia Anna Beach",
-            "lat": 36.8083,
-            "lng": 25.8883,
+            "lat": 36.8257,
+            "lng": 25.9059,
             "type": "beach",
             "time": "11:30",
             "wiki": null,
@@ -209,8 +220,8 @@
           },
           {
             "name": "Maltezi Beach",
-            "lat": 36.805,
-            "lng": 25.8933,
+            "lat": 36.8361,
+            "lng": 25.8537,
             "type": "beach",
             "time": "14:00",
             "wiki": null,
@@ -228,8 +239,8 @@
           },
           {
             "name": "Chora Sunset",
-            "lat": 36.8317,
-            "lng": 25.8883,
+            "lat": 36.8319,
+            "lng": 25.8954,
             "type": "village",
             "time": "19:00",
             "wiki": null,
@@ -279,7 +290,7 @@
           {
             "name": "Aegiali Beach",
             "lat": 36.8983,
-            "lng": 25.9,
+            "lng": 25.8967,
             "type": "beach",
             "time": "11:00",
             "wiki": null,
@@ -289,14 +300,25 @@
           },
           {
             "name": "Tholaria & Lagkada Villages",
-            "lat": 36.9083,
-            "lng": 25.8917,
+            "lat": 36.9174,
+            "lng": 25.9837,
             "type": "village",
             "time": "15:00",
             "wiki": null,
             "desc": "Two beautiful traditional villages above Aegiali — walk the path between them for views over the bay and the island. The finest hiking on Amorgos is in this area.",
             "name_el": "Θολάρια & Λαγκάδα",
             "desc_el": "Δύο όμορφα παραδοσιακά χωριά πάνω από την Αιγιάλη — περπάτα το μονοπάτι ανάμεσά τους για θέες πάνω στον κόλπο και στο νησί. Η καλύτερη πεζοπορία της Αμοργού είναι σε αυτή την περιοχή."
+          },
+          {
+            "name": "Return to Chora",
+            "lat": 36.8319,
+            "lng": 25.8954,
+            "type": "city",
+            "time": "21:00",
+            "wiki": null,
+            "desc": "Drive back from Aegiali/Tholaria to Chora (about 40 minutes via the central road). The mountain road in evening light is part of the experience.",
+            "name_el": "Επιστροφή στη Χώρα",
+            "desc_el": "Επιστροφή από την Αιγιάλη/Θολαριά στη Χώρα (περίπου 40 λεπτά μέσω του κεντρικού δρόμου). Ο ορεινός δρόμος στο βραδινό φως είναι μέρος της εμπειρίας."
           }
         ],
         "title_el": "Αιγιάλη & ο Βορράς",
@@ -312,8 +334,8 @@
         "stops": [
           {
             "name": "Kalotaritissa Beach",
-            "lat": 36.7817,
-            "lng": 25.8467,
+            "lat": 36.7931,
+            "lng": 25.7435,
             "type": "beach",
             "time": "09:30",
             "wiki": null,
@@ -331,8 +353,8 @@
           },
           {
             "name": "Katapola — Departure",
-            "lat": 36.8367,
-            "lng": 25.8633,
+            "lat": 36.8281,
+            "lng": 25.8657,
             "type": "harbour",
             "time": "15:00",
             "wiki": null,
@@ -360,7 +382,7 @@
       "desc": "The finest organised beach on Amorgos — sandy, shallow and calm in a beautiful bay surrounded by mountains. The best base for those who want both hiking and swimming.",
       "commons": null,
       "lat": 36.8983,
-      "lng": 25.9,
+      "lng": 25.8967,
       "name_el": "Παραλία Αιγιάλης",
       "type_el": "Λεπτή άμμος",
       "depth_el": "Ρηχή — ήρεμα, διαυγή νερά",
@@ -379,8 +401,8 @@
       "facilities": "None — the monastery and the cliff are the attraction.",
       "desc": "The most atmospheric beach in the Cyclades — a small pebble cove directly below the sheer cliff and the white monastery of Chozoviotissa. Filming location for The Big Blue. The setting is incomparable.",
       "commons": "Agia_Anna_beach_Amorgos.jpg",
-      "lat": 36.8083,
-      "lng": 25.8883,
+      "lat": 36.8257,
+      "lng": 25.9059,
       "name_el": "Παραλία Αγίας Άννας",
       "type_el": "Βότσαλα",
       "depth_el": "Μέτρια — διαυγή, κρύα νερά",
@@ -407,8 +429,8 @@
       "facilities": "None — rough track or boat access only.",
       "desc": "The wildest and most beautiful beach on Amorgos — white sand and turquoise water in a completely isolated bay. The effort required keeps it empty. One of the finest undiscovered beaches in the Cyclades.",
       "commons": null,
-      "lat": 36.7817,
-      "lng": 25.8467,
+      "lat": 36.7931,
+      "lng": 25.7435,
       "name_el": "Παραλία Καλοταρίτισσα",
       "type_el": "Λευκή άμμος",
       "depth_el": "Ρηχή — ζεστά, τιρκουάζ νερά",

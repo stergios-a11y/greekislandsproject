@@ -9,62 +9,62 @@
     "months": [
       {
         "tag": "ok",
-        "why": "Mild, weekend Athenians",
+        "why": "Mild, weekend",
         "why_el": "Ήπιο, ΣΚ Αθηναίοι"
       },
       {
         "tag": "ok",
-        "why": "Mild, art scene quiet",
+        "why": "Mild, art scene",
         "why_el": "Ήπιο, τέχνη ήσυχα"
       },
       {
         "tag": "great",
-        "why": "Wildflowers, busy weekends",
-        "why_el": "Αγριολούλουδα παντού"
+        "why": "Wildflowers",
+        "why_el": "Αγριολούλουδα"
       },
       {
         "tag": "great",
-        "why": "Easter Epitaphios into the sea",
-        "why_el": "Επιτάφιος μπαίνει στη θάλασσα"
+        "why": "Epitaphios in sea",
+        "why_el": "Επιτάφιος στη θάλασσα"
       },
       {
         "tag": "perfect",
-        "why": "Sea warming, calm weekdays",
-        "why_el": "Ζεσταίνει σιγά σιγά"
+        "why": "Sea warm",
+        "why_el": "Ζεσταίνει, καθημερινή"
       },
       {
         "tag": "perfect",
-        "why": "Long days, before peak",
-        "why_el": "Μεγάλες μέρες, ζεστή θάλασσα"
+        "why": "Long days, warm",
+        "why_el": "Μεγάλες μέρες"
       },
       {
         "tag": "ok",
-        "why": "Hot, weekend chaos, art opening",
+        "why": "Hot, weekend chaos",
         "why_el": "Ζέστη, χάος ΣΚ"
       },
       {
         "tag": "avoid",
-        "why": "Peak — yachts, art crowd",
-        "why_el": "Κορύφωση — γιοτ, τέχνη, ζέστη"
+        "why": "Peak — yachts",
+        "why_el": "Κορύφωση, γιοτ"
       },
       {
         "tag": "perfect",
-        "why": "Best — warm sea, mellow, golden",
-        "why_el": "Καλύτερος — ζεστά, χαλαρά"
+        "why": "Best — mellow",
+        "why_el": "Καλύτερος — χαλαρά"
       },
       {
         "tag": "great",
-        "why": "Last swims, art weekends",
+        "why": "Last swims, art",
         "why_el": "Σβήνει η σεζόν μπάνιου"
       },
       {
         "tag": "great",
-        "why": "Mild, alive at weekends",
+        "why": "Mild, weekends",
         "why_el": "Ήπιο, ζωντανά ΣΚ"
       },
       {
         "tag": "ok",
-        "why": "Mild, weekends, locals",
+        "why": "Mild, weekends",
         "why_el": "Ήπιο, ΣΚ"
       }
     ]
@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Hydra Harbour",
-            "lat": 37.35,
-            "lng": 23.4667,
+            "lat": 37.3503,
+            "lng": 23.4653,
             "type": "harbour",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Hydra_(island)",
@@ -102,8 +102,8 @@
           },
           {
             "name": "Historical Archive Museum",
-            "lat": 37.3495,
-            "lng": 23.4683,
+            "lat": 37.3518,
+            "lng": 23.467,
             "type": "museum",
             "time": "10:00",
             "wiki": null,
@@ -121,8 +121,8 @@
           },
           {
             "name": "Spilia Swimming Rocks",
-            "lat": 37.3483,
-            "lng": 23.4633,
+            "lat": 37.3518,
+            "lng": 23.4636,
             "type": "beach",
             "time": "11:30",
             "wiki": null,
@@ -132,8 +132,8 @@
           },
           {
             "name": "Lunch — Castello Kamini",
-            "lat": 37.3467,
-            "lng": 23.4583,
+            "lat": 37.3464,
+            "lng": 23.4554,
             "type": "village",
             "time": "13:30",
             "wiki": null,
@@ -143,8 +143,8 @@
           },
           {
             "name": "Vlychos Beach",
-            "lat": 37.3431,
-            "lng": 23.4586,
+            "lat": 37.3375,
+            "lng": 23.4394,
             "type": "beach",
             "time": "15:30",
             "wiki": null,
@@ -159,6 +159,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Vlychos_Beach_Hydra_Greece_(30996880448).jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Hydra Town",
+            "lat": 37.3503,
+            "lng": 23.4653,
+            "type": "city",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Walk back along the coast path or take a water taxi (10 minutes). The harbour at twilight is the postcard image of Hydra — find a table at one of the seafront tavernas.",
+            "name_el": "Επιστροφή στην Ύδρα",
+            "desc_el": "Επιστροφή με τα πόδια κατά μήκος της παράκτιας διαδρομής ή με υδροταξί (10 λεπτά). Το λιμάνι στο σούρουπο είναι η εικόνα καρτ ποστάλ της Ύδρας — βρες ένα τραπέζι σε μία από τις ταβέρνες της παραλίας."
           }
         ],
         "title_el": "Ύδρα Πόλη & Βλυχός",
@@ -174,8 +185,8 @@
         "stops": [
           {
             "name": "Bisti Beach",
-            "lat": 37.3344,
-            "lng": 23.4172,
+            "lat": 37.3052,
+            "lng": 23.3777,
             "type": "beach",
             "time": "10:00",
             "wiki": null,
@@ -193,8 +204,8 @@
           },
           {
             "name": "Hydra Town Evening",
-            "lat": 37.35,
-            "lng": 23.4667,
+            "lat": 37.3503,
+            "lng": 23.4653,
             "type": "city",
             "time": "13:00",
             "wiki": null,
@@ -204,8 +215,8 @@
           },
           {
             "name": "Hydra — Departure",
-            "lat": 37.35,
-            "lng": 23.4667,
+            "lat": 37.3503,
+            "lng": 23.4653,
             "type": "harbour",
             "time": "16:00",
             "wiki": null,
@@ -232,8 +243,8 @@
       "facilities": "Good: sunbeds, two excellent tavernas (Marina and Enalion), drinks served to the beach.",
       "desc": "The best beach on Hydra accessible on foot — a 30-minute walk along the coastal path from the harbour, past a 17th-century stone bridge. Pebble beach with calm clear water and two of the island's best tavernas immediately behind.",
       "commons": null,
-      "lat": 37.3431,
-      "lng": 23.4586,
+      "lat": 37.3375,
+      "lng": 23.4394,
       "name_el": "Παραλία Βλυχός",
       "type_el": "Βότσαλα με λίγη άμμο",
       "depth_el": "Ρηχά έως μέτρια — ήρεμα, διαυγή νερά",
@@ -260,8 +271,8 @@
       "facilities": "Basic: diving club, sunbeds, snack bar, pine shade. Water taxi or beach boat access only.",
       "desc": "A secluded pebble beach in a sheltered bay on the west coast, run by the island's diving club. Pine trees provide natural shade and the water is exceptionally clear. One of the quietest swimming spots in the Saronic gulf.",
       "commons": null,
-      "lat": 37.3344,
-      "lng": 23.4172,
+      "lat": 37.3052,
+      "lng": 23.3777,
       "name_el": "Παραλία Μπίστι",
       "type_el": "Βότσαλα",
       "depth_el": "Μέτρια — διαυγή νερά, καλά για ψαροντούφεκο",
@@ -288,8 +299,8 @@
       "facilities": "Premium: Mandraki Beach Resort with full service, showers, changing rooms. 20-minute walk east from the harbour.",
       "desc": "The only sandy beach on Hydra — an exclusive resort beach 20 minutes walk east of the harbour. Calm, shallow water and full premium facilities. The setup is expensive but the sandy bottom is unique on the island.",
       "commons": null,
-      "lat": 37.3583,
-      "lng": 23.4864,
+      "lat": 37.3538,
+      "lng": 23.4854,
       "name_el": "Παραλία Μανδράκι",
       "type_el": "Λεπτή άμμος (η μοναδική αμμώδης παραλία στην Ύδρα)",
       "depth_el": "Ρηχά — πολύ σταδιακή είσοδος",

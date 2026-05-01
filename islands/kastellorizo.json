@@ -13,36 +13,36 @@
       {
         "tag": "avoid",
         "why": "Quiet, fewer ferries",
-        "why_el": "Σε χειμερία νάρκη, λίγα πλοία"
+        "why_el": "Λίγα πλοία"
       },
       {
         "tag": "avoid",
-        "why": "Locals only, thin services",
-        "why_el": "Λίγα πλοία, λίγα ανοιχτά"
+        "why": "Off-season",
+        "why_el": "Λίγα πλοία"
       },
       {
         "tag": "ok",
-        "why": "Quiet, mild, awakening",
+        "why": "Quiet, mild",
         "why_el": "Ανοίγουν τα μαγαζιά"
       },
       {
         "tag": "great",
         "why": "Easter, mild, calm",
-        "why_el": "Άγιες μέρες, ησυχία"
+        "why_el": "Πάσχα, ησυχία"
       },
       {
         "tag": "great",
-        "why": "Sea ready soon, calm",
+        "why": "Sea warm",
         "why_el": "Ζεσταίνει σιγά σιγά"
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, Turkey day-trips",
-        "why_el": "Ζεστά, βαρκάδες Τουρκία"
+        "why": "Warm, Turkey",
+        "why_el": "Βαρκάδες Τουρκία"
       },
       {
         "tag": "great",
-        "why": "Hot, Greeks arrived",
+        "why": "Greeks arrived",
         "why_el": "Ζέστη, Έλληνες"
       },
       {
@@ -52,22 +52,22 @@
       },
       {
         "tag": "perfect",
-        "why": "Best — warm, calm, golden",
+        "why": "Best — golden",
         "why_el": "Καλύτερος — ζεστά"
       },
       {
         "tag": "great",
-        "why": "Late-season swims, calm",
-        "why_el": "Τελευταία βουτιά πριν την ψύχρα"
+        "why": "Late swims",
+        "why_el": "Τελευταία βουτιά"
       },
       {
         "tag": "avoid",
         "why": "Last week busy",
-        "why_el": "Τελευταία βδομάδα κίνησης"
+        "why_el": "Τελευταία βδομάδα"
       },
       {
         "tag": "avoid",
-        "why": "Locals only, thin services",
+        "why": "Off-season",
         "why_el": "Εκτός σεζόν"
       }
     ]
@@ -86,8 +86,8 @@
         "stops": [
           {
             "name": "Megisti Harbour",
-            "lat": 36.1494,
-            "lng": 29.5917,
+            "lat": 36.1502,
+            "lng": 29.5922,
             "type": "harbour",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Kastellorizo",
@@ -105,8 +105,8 @@
           },
           {
             "name": "Archaeological Museum",
-            "lat": 36.1503,
-            "lng": 29.5933,
+            "lat": 36.1516,
+            "lng": 29.5935,
             "type": "museum",
             "time": "11:30",
             "wiki": null,
@@ -124,8 +124,8 @@
           },
           {
             "name": "Knights of St John Castle",
-            "lat": 36.1497,
-            "lng": 29.5928,
+            "lat": 36.1509,
+            "lng": 29.5952,
             "type": "site",
             "time": "12:30",
             "wiki": null,
@@ -135,8 +135,8 @@
           },
           {
             "name": "Blue Cave (Galazio Spilio)",
-            "lat": 36.1378,
-            "lng": 29.6342,
+            "lat": 36.126,
+            "lng": 29.5789,
             "type": "site",
             "time": "15:00",
             "wiki": "https://en.wikipedia.org/wiki/Blue_Grotto_(Kastellorizo)",
@@ -146,8 +146,8 @@
           },
           {
             "name": "Dinner — Alexandra's, Harbour",
-            "lat": 36.149,
-            "lng": 29.5919,
+            "lat": 36.1502,
+            "lng": 29.5922,
             "type": "harbour",
             "time": "20:30",
             "wiki": null,
@@ -169,8 +169,8 @@
         "stops": [
           {
             "name": "Lycian Rock Tomb",
-            "lat": 36.1539,
-            "lng": 29.5928,
+            "lat": 36.151,
+            "lng": 29.5953,
             "type": "site",
             "time": "09:30",
             "wiki": null,
@@ -180,8 +180,8 @@
           },
           {
             "name": "Mandraki Bay",
-            "lat": 36.1453,
-            "lng": 29.5878,
+            "lat": 36.1493,
+            "lng": 29.596,
             "type": "village",
             "time": "10:30",
             "wiki": null,
@@ -191,8 +191,8 @@
           },
           {
             "name": "Profitis Ilias Monastery",
-            "lat": 36.1392,
-            "lng": 29.5908,
+            "lat": 36.141,
+            "lng": 29.591,
             "type": "church",
             "time": "12:00",
             "wiki": null,
@@ -202,8 +202,8 @@
           },
           {
             "name": "Plakes — Swimming Rocks",
-            "lat": 36.143,
-            "lng": 29.585,
+            "lat": 36.1494,
+            "lng": 29.594,
             "type": "beach",
             "time": "14:30",
             "wiki": null,
@@ -213,8 +213,8 @@
           },
           {
             "name": "Departure",
-            "lat": 36.1494,
-            "lng": 29.5917,
+            "lat": 36.1502,
+            "lng": 29.5922,
             "type": "harbour",
             "time": "17:00",
             "wiki": null,
@@ -246,8 +246,8 @@
       "desc": "The main swimming spot on Kastellorizo and the closest thing the island has to a beach. Locals come at the end of the day; visitors discover it on day two. Bring goggles — the visibility is among the best in Greece, with fish visible 10 m down.",
       "desc_el": "Το κύριο σημείο κολύμβησης στο Καστελλόριζο και το πιο κοντινό στο νησί που μοιάζει με παραλία. Οι ντόπιοι έρχονται στο τέλος της μέρας· οι επισκέπτες το ανακαλύπτουν τη δεύτερη μέρα. Πάρε γυαλιά — η ορατότητα είναι από τις καλύτερες στην Ελλάδα, με ψάρια ορατά 10 μέτρα κάτω.",
       "commons": null,
-      "lat": 36.143,
-      "lng": 29.585,
+      "lat": 36.1494,
+      "lng": 29.594,
       "name_el": "Πλάκες (Βράχια Κολύμβησης)"
     },
     {
@@ -266,8 +266,8 @@
       "desc": "A small pebble cove past the lighthouse on the east side of the island. Almost no one goes — most visitors don't realise it's there. Walk along the coast road past the cemetery; the cove is signed. Excellent swimming, no shade.",
       "desc_el": "Ένας μικρός κόλπος με βότσαλα μετά τον φάρο στην ανατολική πλευρά του νησιού. Σχεδόν κανείς δεν πηγαίνει — οι περισσότεροι επισκέπτες δεν συνειδητοποιούν ότι υπάρχει. Περπάτα στον παράκτιο δρόμο πέρα από το κοιμητήριο· ο κόλπος είναι σηματοδοτημένος. Εξαιρετικό κολύμπι, χωρίς σκιά.",
       "commons": null,
-      "lat": 36.1481,
-      "lng": 29.6042,
+      "lat": 36.1518,
+      "lng": 29.593,
       "name_el": "Φάρος (Ανατολικός Κόλπος)"
     },
     {
@@ -286,8 +286,8 @@
       "desc": "The bay on the other side of town from Megisti has several small swimming spots off the rocks. The setting is haunting — a bay of half-ruined houses being slowly restored, with calm sheltered water and almost no one around. Swim, then walk back along the headland for the harbour view.",
       "desc_el": "Ο κόλπος στην άλλη πλευρά της πόλης από τη Μεγίστη έχει αρκετά μικρά σημεία κολύμβησης από τα βράχια. Το σκηνικό είναι μαγευτικό — ένας κόλπος μισοερειπωμένων σπιτιών που σιγά-σιγά αναστηλώνονται, με ήρεμα προστατευμένα νερά και σχεδόν κανέναν γύρω. Κολύμπησε, μετά περπάτα πίσω κατά μήκος του ακρωτηρίου για τη θέα του λιμανιού.",
       "commons": null,
-      "lat": 36.1453,
-      "lng": 29.5878,
+      "lat": 36.1493,
+      "lng": 29.596,
       "name_el": "Κόλπος Μανδρακίου"
     }
   ],

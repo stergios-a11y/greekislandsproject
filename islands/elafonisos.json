@@ -9,62 +9,62 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Wintering, windswept",
-        "why_el": "Σε χειμερία νάρκη, αέρας"
+        "why": "Off-season,",
+        "why_el": "Σε χειμερία νάρκη"
       },
       {
         "tag": "avoid",
-        "why": "Few ferries, rooms scarce",
-        "why_el": "Λίγα πλοία, λίγα δωμάτια"
+        "why": "Few ferries",
+        "why_el": "Λίγα πλοία"
       },
       {
         "tag": "ok",
         "why": "Awakening, sea cold",
-        "why_el": "Πρώτες αφίξεις, θάλασσα κρύα"
+        "why_el": "Πρώτες αφίξεις"
       },
       {
         "tag": "great",
-        "why": "Holy Week, mild, fields blooming",
-        "why_el": "Πάσχα, οικογένειες ντόπιων"
+        "why": "Holy Week",
+        "why_el": "Πάσχα, ανθίζει"
       },
       {
         "tag": "perfect",
-        "why": "Sea warming, Simos near-empty",
+        "why": "Simos near-empty",
         "why_el": "Σίμος σχεδόν άδειος"
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, before Greek peak",
-        "why_el": "Ζεστά, πριν τους Έλληνες"
+        "why": "Before Greeks",
+        "why_el": "Πριν τους Έλληνες"
       },
       {
         "tag": "ok",
-        "why": "Hot, Simos starts filling",
+        "why": "Hot, Simos fills",
         "why_el": "Ζέστη, γεμίζει ο Σίμος"
       },
       {
         "tag": "avoid",
         "why": "Peak — Simos chaos",
-        "why_el": "Κορύφωση — Σίμος μάχη Instagram"
+        "why_el": "Σίμος χάος"
       },
       {
         "tag": "perfect",
-        "why": "Best — Simos breathes",
-        "why_el": "Καλύτερος — Σίμος αναπνέει"
+        "why": "Simos breathes",
+        "why_el": "Σίμος αναπνέει"
       },
       {
         "tag": "great",
-        "why": "Last swims, calm",
-        "why_el": "Τελευταία ζεστά μπάνια"
+        "why": "Last swims",
+        "why_el": "Τελευταία μπάνια"
       },
       {
         "tag": "avoid",
-        "why": "Season ending, services thin",
-        "why_el": "Κλείνουν σιγά σιγά τα μαγαζιά"
+        "why": "Season ending",
+        "why_el": "Κλείνουν σιγά"
       },
       {
         "tag": "avoid",
-        "why": "Mostly shut",
+        "why": "Off-season",
         "why_el": "Σχεδόν όλα κλειστά"
       }
     ]
@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Elafonisos Ferry",
-            "lat": 36.4983,
-            "lng": 22.9733,
+            "lat": 36.5209,
+            "lng": 22.9833,
             "type": "harbour",
             "time": "09:00",
             "wiki": null,
@@ -102,8 +102,8 @@
           },
           {
             "name": "Elafonisos Village",
-            "lat": 36.4983,
-            "lng": 22.9817,
+            "lat": 36.5077,
+            "lng": 22.9777,
             "type": "city",
             "time": "09:15",
             "wiki": "https://en.wikipedia.org/wiki/Elafonisos",
@@ -121,8 +121,8 @@
           },
           {
             "name": "Simos Beach",
-            "lat": 36.4606,
-            "lng": 22.9772,
+            "lat": 36.4726,
+            "lng": 22.9768,
             "type": "beach",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Simos_Beach",
@@ -140,8 +140,8 @@
           },
           {
             "name": "Lunch — Harbour Taverna",
-            "lat": 36.4983,
-            "lng": 22.9817,
+            "lat": 36.5077,
+            "lng": 22.9777,
             "type": "harbour",
             "time": "14:30",
             "wiki": null,
@@ -151,14 +151,25 @@
           },
           {
             "name": "Simos Sunset",
-            "lat": 36.4606,
-            "lng": 22.9772,
+            "lat": 36.4726,
+            "lng": 22.9768,
             "type": "beach",
             "time": "18:00",
             "wiki": null,
             "desc": "Return to Simos for the late afternoon — the beach empties as day trippers leave, and the water turns from turquoise to gold. The best time of day.",
             "name_el": "Ηλιοβασίλεμα στον Σίμο",
             "desc_el": "Επιστροφή στον Σίμο το απογευματινό — η παραλία αδειάζει καθώς οι ημερήσιοι επισκέπτες φεύγουν, και τα νερά μετατρέπονται από τιρκουάζ σε χρυσά. Η καλύτερη ώρα της μέρας."
+          },
+          {
+            "name": "Return to Elafonisos Village",
+            "lat": 36.5077,
+            "lng": 22.9777,
+            "type": "city",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Short drive back to the village (about 10 minutes from Simos). The harbour-front tavernas are unpretentious and famous for their fresh fish — sea bream, sea bass, and the catch of the day grilled simply with lemon and olive oil.",
+            "name_el": "Επιστροφή στο χωριό Ελαφονήσου",
+            "desc_el": "Σύντομη διαδρομή πίσω στο χωριό (περίπου 10 λεπτά από τον Σίμο). Οι ταβέρνες στο λιμάνι είναι λιτές και διάσημες για τα φρέσκα ψάρια — τσιπούρα, λαβράκι και η ψαριά της ημέρας ψημένη απλά με λεμόνι και ελαιόλαδο."
           }
         ],
         "title_el": "Παραλία Σίμος & το Χωριό",
@@ -174,8 +185,8 @@
         "stops": [
           {
             "name": "Kalogeros Beach",
-            "lat": 36.5014,
-            "lng": 22.98,
+            "lat": 36.5111,
+            "lng": 22.9708,
             "type": "beach",
             "time": "09:30",
             "wiki": null,
@@ -185,8 +196,8 @@
           },
           {
             "name": "Panagia Beach",
-            "lat": 36.485,
-            "lng": 22.9989,
+            "lat": 36.4913,
+            "lng": 22.9446,
             "type": "beach",
             "time": "11:00",
             "wiki": null,
@@ -204,8 +215,8 @@
           },
           {
             "name": "Simos — Final Swim",
-            "lat": 36.4606,
-            "lng": 22.9772,
+            "lat": 36.4726,
+            "lng": 22.9768,
             "type": "beach",
             "time": "12:30",
             "wiki": null,
@@ -215,8 +226,8 @@
           },
           {
             "name": "Ferry to Mainland",
-            "lat": 36.4983,
-            "lng": 22.9733,
+            "lat": 36.5209,
+            "lng": 22.9833,
             "type": "harbour",
             "time": "15:00",
             "wiki": null,
@@ -243,8 +254,8 @@
       "facilities": "Moderate: sunbeds and umbrellas (one organiser), beach bar, basic snack shack. No large resort development.",
       "desc": "One of the finest beaches in Europe — a double bay of white-pink sand and water that shifts from pale turquoise to deep cobalt depending on depth. The two bays are separated by a low dune and have completely different characters. No overdevelopment. The morning and evening light here is extraordinary.",
       "commons": "Simos_beach_Elafonisos.jpg",
-      "lat": 36.4612,
-      "lng": 22.981,
+      "lat": 36.4726,
+      "lng": 22.9768,
       "name_el": "Παραλία Σίμος",
       "type_el": "Λεπτή λευκή και ροζ άμμος",
       "depth_el": "Πολύ ρηχή — βάθος λιμνοθάλασσας στα περισσότερα σημεία, τέλεια για παιδιά",
@@ -271,8 +282,8 @@
       "facilities": "Basic: close to the village, easy walk.",
       "desc": "The village beach — a short walk from the harbour. Calm, clear water in the sheltered strait between Elafonisos and the mainland. Good for a quick morning swim.",
       "commons": null,
-      "lat": 36.5014,
-      "lng": 22.98,
+      "lat": 36.5111,
+      "lng": 22.9708,
       "name_el": "Παραλία Καλόγερος",
       "type_el": "Βότσαλα και άμμος",
       "depth_el": "Ρηχή — ήρεμα λιμενικά νερά",
@@ -291,8 +302,8 @@
       "facilities": "Basic: accessible by a short walk from the village.",
       "desc": "A quiet sandy beach on the east coast — less dramatic than Simos but calm, clear and almost always uncrowded. A good option if Simos is too busy.",
       "commons": null,
-      "lat": 36.485,
-      "lng": 22.9989,
+      "lat": 36.4913,
+      "lng": 22.9446,
       "name_el": "Παραλία Παναγία",
       "type_el": "Λεπτή άμμος",
       "depth_el": "Ρηχή — ήρεμα, ζεστά νερά",
@@ -319,8 +330,8 @@
       "facilities": "Minimal — the wilder of the two Simos bays, fewer sunbeds.",
       "desc": "The western bay of Simos — the quieter, wilder of the two bays. Longer, shallower, with fewer sunbeds and more space. The water colour here, especially in the late afternoon, is the best on the island.",
       "commons": null,
-      "lat": 36.4598,
-      "lng": 22.9755,
+      "lat": 36.4726,
+      "lng": 22.9768,
       "name_el": "Δυτικός Κόλπος Σίμος",
       "type_el": "Λεπτή λευκή άμμος",
       "depth_el": "Πολύ ρηχή — τέλεια για παιδιά",
@@ -339,8 +350,8 @@
       "facilities": "None — accessible by a rough path or by boat.",
       "desc": "A remote pebble cove on the southwest coast of the island accessible only on foot or by boat. Deep, clear water and complete solitude. For those wanting to escape even the relatively modest crowds at Simos.",
       "commons": null,
-      "lat": 36.4583,
-      "lng": 22.95,
+      "lat": 36.475,
+      "lng": 22.952,
       "name_el": "Φράγκου Αλώνα",
       "type_el": "Βότσαλα",
       "depth_el": "Μέτρια — βαθιά, διαυγή νερά",
