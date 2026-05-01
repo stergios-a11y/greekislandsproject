@@ -81,7 +81,7 @@
 
   <div id="loading-overlay">
     <div class="loading-inner">
-      <img src="/logo.svg" alt="Aegean Blueprint logo" data-i18n-alt="a11y.logo_alt" id="loading-logo">
+      <img src="/logo.svg" alt="Λογότυπο Aegean Blueprint" data-i18n-alt="a11y.logo_alt" id="loading-logo">
       <div class="loading-spinner"></div>
       <p>Loading islands…</p>
     </div>
@@ -90,23 +90,23 @@
   <header>
     <div class="header-content">
       <div class="logo-wrapper" id="nav-home">
-        <img src="/logo-hero.svg" id="site-logo" alt="Aegean Blueprint logo" data-i18n-alt="a11y.logo_alt">
+        <img src="/logo-hero.svg" id="site-logo" alt="Λογότυπο Aegean Blueprint" data-i18n-alt="a11y.logo_alt">
         <span id="brand-text"><span class="brand-word">Aegean</span> <span class="brand-word">Blueprint</span></span>
       </div>
       <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>
       <nav class="top-nav" id="main-nav">
-        <a href="#" id="nav-map" data-i18n="nav.map">Map</a>
-        <a href="#" id="nav-data" data-i18n="nav.data">Islands Data</a>
-        <a href="#" id="nav-compare" data-i18n="nav.compare">Compare</a>
-        <a href="/el/festivals/" id="nav-festivals" data-i18n="nav.festivals">Festivals</a>
-        <a href="#" id="nav-hopping" data-i18n="nav.hopping">Island Hopping</a>
-        <a href="#" id="nav-international" data-i18n="nav.international">International</a>
-        <a href="#" id="nav-match" data-i18n="nav.match">Match Me</a>
-        <a href="#" id="nav-shortlist" id="nav-shortlist"><span data-i18n="nav.shortlist">⭐ My Shortlist</span> <span class="shortlist-count" id="shortlist-count"></span></a>
-        <a href="#" id="nav-mission" data-i18n="nav.mission">Mission</a>
+        <a href="#" id="nav-map" data-i18n="nav.map">Χάρτης</a>
+        <a href="#" id="nav-data" data-i18n="nav.data">Στοιχεία Νησιών</a>
+        <a href="#" id="nav-compare" data-i18n="nav.compare">Σύγκριση</a>
+        <a href="/el/festivals/" id="nav-festivals" data-i18n="nav.festivals">Γιορτές</a>
+        <a href="#" id="nav-hopping" data-i18n="nav.hopping">Νησοπορία</a>
+        <a href="#" id="nav-international" data-i18n="nav.international">Διεθνώς</a>
+        <a href="#" id="nav-match" data-i18n="nav.match">Βρες το Νησί σου</a>
+        <a href="#" id="nav-shortlist" id="nav-shortlist"><span data-i18n="nav.shortlist">⭐ Η Λίστα μου</span> <span class="shortlist-count" id="shortlist-count"></span></a>
+        <a href="#" id="nav-mission" data-i18n="nav.mission">Στόχος</a>
       </nav>
       <div class="lang-dropdown" id="lang-dropdown">
-        <button class="lang-toggle" id="lang-toggle-btn" aria-label="Switch language" data-i18n-aria-label="a11y.switch_language" aria-haspopup="true" aria-expanded="false">
+        <button class="lang-toggle" id="lang-toggle-btn" aria-label="Αλλαγή γλώσσας" data-i18n-aria-label="a11y.switch_language" aria-haspopup="true" aria-expanded="false">
           <span class="lang-globe">🌐</span>
           <span class="lang-current" id="lang-current">EN</span>
           <span class="lang-caret">▾</span>
@@ -116,52 +116,52 @@
           <a href="#" class="lang-option" data-lang="el" role="menuitem"><span class="lang-option-flag">🇬🇷</span> Ελληνικά</a>
         </div>
       </div>
-      <button class="dark-mode-toggle" id="dark-mode-btn" aria-label="Toggle dark mode" data-i18n-aria-label="a11y.toggle_dark">☾</button>
+      <button class="dark-mode-toggle" id="dark-mode-btn" aria-label="Εναλλαγή σκοτεινής λειτουργίας" data-i18n-aria-label="a11y.toggle_dark">☾</button>
     </div>
   </header>
 
 <div class="search-container" id="home-controls">
     <div class="search-bar-row">
-      <input type="text" id="islandSearch" placeholder="🔍  Search islands…" aria-label="Search islands" data-i18n-aria-label="a11y.search_islands" data-i18n-placeholder="search.placeholder">
-      <select id="group-select" class="filter-select" aria-label="Filter by island group" data-i18n-aria-label="a11y.filter_group">
-        <option value="all" data-i18n="filter.allgroups">All islands</option>
+      <input type="text" id="islandSearch" placeholder="🔍  Αναζήτηση νησιών…" aria-label="Αναζήτηση νησιών" data-i18n-aria-label="a11y.search_islands" data-i18n-placeholder="search.placeholder">
+      <select id="group-select" class="filter-select" aria-label="Φιλτράρισμα ανά νησιωτικό σύμπλεγμα" data-i18n-aria-label="a11y.filter_group">
+        <option value="all" data-i18n="filter.allgroups">Όλα τα νησιά</option>
       </select>
-      <select id="vibe-select" class="filter-select" aria-label="Rank map by" data-i18n-aria-label="a11y.rank_map_by">
-        <option value="overall" data-i18n="filter.overall">🏠 Overall</option>
-        <option value="beach" data-i18n="filter.beach">🏖️ Beaches</option>
-        <option value="hist" data-i18n="filter.culture">🏛️ Culture</option>
-        <option value="night" data-i18n="filter.night">🍷 Nightlife</option>
-        <option value="access" data-i18n="filter.access">🚢 Access</option>
-        <option value="afford" data-i18n="filter.afford">💸 Affordability</option>
-        <option value="car_need" data-i18n="filter.car">🚗 Car needed</option>
+      <select id="vibe-select" class="filter-select" aria-label="Ταξινόμηση χάρτη κατά" data-i18n-aria-label="a11y.rank_map_by">
+        <option value="overall" data-i18n="filter.overall">🏠 Συνολικά</option>
+        <option value="beach" data-i18n="filter.beach">🏖️ Παραλίες</option>
+        <option value="hist" data-i18n="filter.culture">🏛️ Πολιτισμός</option>
+        <option value="night" data-i18n="filter.night">🍷 Νυχτερινή ζωή</option>
+        <option value="access" data-i18n="filter.access">🚢 Πρόσβαση</option>
+        <option value="afford" data-i18n="filter.afford">💸 Προσιτή τιμή</option>
+        <option value="car_need" data-i18n="filter.car">🚗 Χρησιμότητα οχήματος</option>
       </select>
-      <button id="vibe-filter-btn" class="vibe-filter-btn" onclick="toggleVibePanel()" aria-expanded="false" data-i18n-aria-label="a11y.vibe_filters">
+      <button id="vibe-filter-btn" class="vibe-filter-btn" onclick="toggleVibePanel()" aria-expanded="false" aria-label="Φίλτρα νησιών" data-i18n-aria-label="a11y.vibe_filters">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="2" y1="4" x2="14" y2="4"/><line x1="4" y1="8" x2="12" y2="8"/><line x1="6" y1="12" x2="10" y2="12"/></svg>
-        <span data-i18n="filter.vibes">Filters</span>
+        <span data-i18n="filter.vibes">Φίλτρα</span>
         <span id="vibe-filter-count" class="vibe-filter-count" style="display:none"></span>
       </button>
     </div>
     <div id="vibe-panel" class="vibe-panel" style="display:none">
-      <p class="vibe-hint" data-i18n="vibe.hint">Tap one or more to filter the map</p>
+      <p class="vibe-hint" data-i18n="vibe.hint">Πάτα ένα ή περισσότερα για φιλτράρισμα</p>
       <div class="vibe-tags" id="vibe-tags">
-        <button class="vibe-tag" data-filter="good_now">📅 <span data-i18n="vibe.goodnow">Good now</span></button>
-        <button class="vibe-tag" data-filter="ideal_now">⭐ <span data-i18n="vibe.idealnow">Ideal now</span></button>
-        <button class="vibe-tag" data-filter="car_free">🚶 <span data-i18n="vibe.carfree">Car-free</span></button>
-        <button class="vibe-tag" data-filter="car_optional">🚗 <span data-i18n="vibe.caroptional">Car optional</span></button>
-        <button class="vibe-tag" data-filter="remote">🌊 <span data-i18n="vibe.remote">Off the radar</span></button>
-        <button class="vibe-tag" data-filter="budget">💸 <span data-i18n="vibe.budget">Budget-friendly</span></button>
-        <button class="vibe-tag" data-filter="nightlife">🍷 <span data-i18n="vibe.nightlife">Nightlife</span></button>
-        <button class="vibe-tag" data-filter="tiny">🔇 <span data-i18n="vibe.tiny">Under 2,000 people</span></button>
-        <button class="vibe-tag" data-filter="drama">🌋 <span data-i18n="vibe.drama">Dramatic landscape</span></button>
-        <button class="vibe-tag" data-filter="hiking">🥾 <span data-i18n="vibe.hiking">Serious hiking</span></button>
-        <button class="vibe-tag" data-filter="springs">♨️ <span data-i18n="vibe.springs">Hot springs</span></button>
-        <button class="vibe-tag" data-filter="chora">🏛 <span data-i18n="vibe.chora">Medieval chora</span></button>
-        <button class="vibe-tag" data-filter="sailing">⛵ <span data-i18n="vibe.sailing">Sailing hub</span></button>
-        <button class="vibe-tag" data-filter="airport">✈️ <span data-i18n="vibe.airport">Has airport</span></button>
+        <button class="vibe-tag" data-filter="good_now">📅 <span data-i18n="vibe.goodnow">Καλή εποχή τώρα</span></button>
+        <button class="vibe-tag" data-filter="ideal_now">⭐ <span data-i18n="vibe.idealnow">Ιδανικά τώρα</span></button>
+        <button class="vibe-tag" data-filter="car_free">🚶 <span data-i18n="vibe.carfree">Χωρίς αυτοκίνητο</span></button>
+        <button class="vibe-tag" data-filter="car_optional">🚗 <span data-i18n="vibe.caroptional">Αυτοκίνητο προαιρετικό</span></button>
+        <button class="vibe-tag" data-filter="remote">🌊 <span data-i18n="vibe.remote">Μακριά από κόσμο</span></button>
+        <button class="vibe-tag" data-filter="budget">💸 <span data-i18n="vibe.budget">Οικονομικό</span></button>
+        <button class="vibe-tag" data-filter="nightlife">🍷 <span data-i18n="vibe.nightlife">Νυχτερινή ζωή</span></button>
+        <button class="vibe-tag" data-filter="tiny">🔇 <span data-i18n="vibe.tiny">Κάτω από 2.000 κατ.</span></button>
+        <button class="vibe-tag" data-filter="drama">🌋 <span data-i18n="vibe.drama">Εντυπωσιακό τοπίο</span></button>
+        <button class="vibe-tag" data-filter="hiking">🥾 <span data-i18n="vibe.hiking">Σοβαρή πεζοπορία</span></button>
+        <button class="vibe-tag" data-filter="springs">♨️ <span data-i18n="vibe.springs">Ιαματικά λουτρά</span></button>
+        <button class="vibe-tag" data-filter="chora">🏛 <span data-i18n="vibe.chora">Μεσαιωνική χώρα</span></button>
+        <button class="vibe-tag" data-filter="sailing">⛵ <span data-i18n="vibe.sailing">Κόμβος ιστιοπλοΐας</span></button>
+        <button class="vibe-tag" data-filter="airport">✈️ <span data-i18n="vibe.airport">Με αεροδρόμιο</span></button>
       </div>
       <div class="vibe-panel-footer">
         <span id="vibe-match-count" class="vibe-match-count"></span>
-        <button id="vibe-clear-btn" class="vibe-clear-btn" onclick="clearVibeFilters()" style="display:none" data-i18n="vibe.clear">Clear filters</button>
+        <button id="vibe-clear-btn" class="vibe-clear-btn" onclick="clearVibeFilters()" style="display:none" data-i18n="vibe.clear">Καθαρισμός</button>
       </div>
     </div>
   </div>
@@ -170,20 +170,20 @@
     <div class="help-modal" id="help-modal" style="display:none;">
       <div class="help-modal-content">
         <button class="help-modal-close" onclick="closeHelp()" aria-label="Close">×</button>
-        <h2 class="hero-title" data-i18n="hero.title">Find your perfect Greek island</h2>
-        <p class="hero-sub" data-i18n="hero.sub">78 islands scored across beaches, culture, nightlife, access and price. Click any circle to explore.</p>
+        <h2 class="hero-title" data-i18n="hero.title">Βρες το ιδανικό σου ελληνικό νησί</h2>
+        <p class="hero-sub" data-i18n="hero.sub">78 νησιά βαθμολογημένα σε παραλίες, πολιτισμό, νυχτερινή ζωή, πρόσβαση και προσιτή τιμή. Πάτα οποιοδήποτε σημείο για εξερεύνηση.</p>
         <div class="hero-stats">
-          <div class="hero-stat"><span class="hero-stat-num">78</span><span class="hero-stat-lbl" data-i18n="hero.stat.islands">Islands</span></div>
-          <div class="hero-stat"><span class="hero-stat-num">6</span><span class="hero-stat-lbl" data-i18n="hero.stat.dimensions">Score dimensions</span></div>
-          <div class="hero-stat"><span class="hero-stat-num">78</span><span class="hero-stat-lbl" data-i18n="hero.stat.guides">Full guides</span></div>
+          <div class="hero-stat"><span class="hero-stat-num">78</span><span class="hero-stat-lbl" data-i18n="hero.stat.islands">Νησιά</span></div>
+          <div class="hero-stat"><span class="hero-stat-num">6</span><span class="hero-stat-lbl" data-i18n="hero.stat.dimensions">Διαστάσεις</span></div>
+          <div class="hero-stat"><span class="hero-stat-num">78</span><span class="hero-stat-lbl" data-i18n="hero.stat.guides">Πλήρεις οδηγοί</span></div>
         </div>
         <div class="help-steps">
-          <div class="help-step"><span class="help-step-num">1</span><div class="help-step-text"><strong data-i18n="help.step1.title">Explore the map</strong><span data-i18n="help.step1.desc">Click any circle to open the island's full guide. Bigger circles = higher overall rating.</span></div></div>
-          <div class="help-step"><span class="help-step-num">2</span><div class="help-step-text"><strong data-i18n="help.step2.title">Filter and rank</strong><span data-i18n="help.step2.desc">Use the dropdowns to filter by island group or rank by what matters to you — beaches, culture, nightlife.</span></div></div>
-          <div class="help-step"><span class="help-step-num">3</span><div class="help-step-text"><strong data-i18n="help.step3.title">Take the quiz</strong><span data-i18n="help.step3.desc">Not sure where to go? Answer 5 quick questions and we'll match you to your top islands.</span></div></div>
-          <div class="help-step"><span class="help-step-num">4</span><div class="help-step-text"><strong data-i18n="help.step4.title">Save & compare</strong><span data-i18n="help.step4.desc">Star islands to your shortlist, or put two side-by-side with Compare.</span></div></div>
+          <div class="help-step"><span class="help-step-num">1</span><div class="help-step-text"><strong data-i18n="help.step1.title">Εξερεύνησε τον χάρτη</strong><span data-i18n="help.step1.desc">Πάτα σε οποιοδήποτε κυκλάκι για τον πλήρη οδηγό του νησιού.</span></div></div>
+          <div class="help-step"><span class="help-step-num">2</span><div class="help-step-text"><strong data-i18n="help.step2.title">Φιλτράρισμα και ταξινόμηση</strong><span data-i18n="help.step2.desc">Χρησιμοποίησε τα φίλτρα για να διαλέξεις νησιωτικό σύμπλεγμα ή να ταξινομήσεις κατά παραλίες, πολιτισμό, νυχτερινή ζωή.</span></div></div>
+          <div class="help-step"><span class="help-step-num">3</span><div class="help-step-text"><strong data-i18n="help.step3.title">Κάνε το quiz</strong><span data-i18n="help.step3.desc">Δεν είσαι σίγουρος; Απάντησε σε 7 γρήγορες ερωτήσεις και θα σου προτείνουμε τα κορυφαία νησιά.</span></div></div>
+          <div class="help-step"><span class="help-step-num">4</span><div class="help-step-text"><strong data-i18n="help.step4.title">Αποθήκευση &amp; σύγκριση</strong><span data-i18n="help.step4.desc">Αποθήκευσε νησιά στη λίστα σου, ή σύγκρινε δύο δίπλα-δίπλα.</span></div></div>
         </div>
-        <button class="help-close-btn" onclick="closeHelp()" data-i18n="help.close">Got it — let me explore</button>
+        <button class="help-close-btn" onclick="closeHelp()" data-i18n="help.close">Έγινε — ας εξερευνήσω</button>
       </div>
     </div>
     <div id="whats-on-strip" class="whats-on-strip"></div>
@@ -199,32 +199,32 @@
   </main>
 
   <main id="view-data" class="view-section content-page" style="display:none;">
-    <h1 data-i18n="data.title">Islands Database</h1>
+    <h1 data-i18n="data.title">Βάση Νησιών</h1>
     <div class="table-search-row">
-      <input type="text" id="tableSearchInput" placeholder="Filter islands…" data-i18n-placeholder="data.search">
+      <input type="text" id="tableSearchInput" placeholder="Φιλτράρισμα νησιών…" data-i18n-placeholder="data.search">
       <span id="table-count-label" class="table-count"></span>
     </div>
     <div class="table-hint-row" id="table-hint-row" onclick="toggleDimensions()">
-      <button id="toggle-dims-btn" class="toggle-dims-btn" onclick="event.stopPropagation();toggleDimensions()" data-i18n="data.showdims">📊 Detailed scores</button>
-      <span class="table-hint-text" data-i18n="data.hinttext">See the 6 dimensions we rate each island on — beaches, culture, nightlife, access, price, car need.</span>
-      <a href="/el/#how-we-score" class="how-we-score-link table-how-link" onclick="event.stopPropagation();navMission(event)" data-i18n="scoring.howlink">how we score</a>
+      <button id="toggle-dims-btn" class="toggle-dims-btn" onclick="event.stopPropagation();toggleDimensions()" data-i18n="data.showdims">📊 Αναλυτικές βαθμολογίες</button>
+      <span class="table-hint-text" data-i18n="data.hinttext">Δες τις 5 διαστάσεις που βαθμολογούμε σε κάθε νησί — παραλίες, πολιτισμός, νυχτερινή ζωή, πρόσβαση, προσιτή τιμή.</span>
+      <a href="/el/#how-we-score" class="how-we-score-link table-how-link" onclick="event.stopPropagation();navMission(event)" data-i18n="scoring.howlink">πώς βαθμολογούμε</a>
     </div>
     <div class="table-container">
       <table id="islands-table">
         <thead><tr>
-          <th data-col="name" data-i18n="data.col.island">Island ↕</th>
-          <th data-col="island_group" class="th-main" data-i18n="data.col.group">Group ↕</th>
-          <th data-col="total" class="th-main" data-i18n="data.col.rating">Rating ↕</th>
-          <th data-col="beach" class="th-dim" data-i18n="data.col.beach">Beach ↕</th>
-          <th data-col="hist" class="th-dim" data-i18n="data.col.culture">Culture ↕</th>
-          <th data-col="night" class="th-dim" data-i18n="data.col.night">Night ↕</th>
-          <th data-col="access" class="th-dim" data-i18n="data.col.access">Access ↕</th>
-          <th data-col="afford" class="th-dim" data-i18n="data.col.afford">Affordability ↕</th>
-          <th data-col="car_need" class="th-dim" data-i18n="data.col.car" title="1 = car useless, 5 = car essential" data-i18n-title="a11y.car_scale">🚗 Car ↕</th>
-          <th data-col="days" class="th-main" data-i18n="data.col.days">Days ↕</th>
-          <th data-col="has_airport" class="th-main" data-i18n="data.col.airport" title="Commercial airport on the island" data-i18n-title="a11y.has_airport">✈ Airport ↕</th>
-          <th data-col="area" class="th-main" data-i18n="data.col.area">Area (km²) ↕</th>
-          <th data-col="pop" class="th-main" data-i18n="data.col.pop">Population ↕</th>
+          <th data-col="name" data-i18n="data.col.island">Νησί ↕</th>
+          <th data-col="island_group" class="th-main" data-i18n="data.col.group">Ομάδα ↕</th>
+          <th data-col="total" class="th-main" data-i18n="data.col.rating">Βαθμός ↕</th>
+          <th data-col="beach" class="th-dim" data-i18n="data.col.beach">Παραλίες ↕</th>
+          <th data-col="hist" class="th-dim" data-i18n="data.col.culture">Πολιτισμός ↕</th>
+          <th data-col="night" class="th-dim" data-i18n="data.col.night">Νύχτα ↕</th>
+          <th data-col="access" class="th-dim" data-i18n="data.col.access">Πρόσβαση ↕</th>
+          <th data-col="afford" class="th-dim" data-i18n="data.col.afford">Τιμή ↕</th>
+          <th data-col="car_need" class="th-dim" data-i18n="data.col.car" title="1 = το αυτοκίνητο περιττό, 5 = το αυτοκίνητο απαραίτητο" data-i18n-title="a11y.car_scale">🚗 Χρησιμότητα οχήματος ↕</th>
+          <th data-col="days" class="th-main" data-i18n="data.col.days">Μέρες ↕</th>
+          <th data-col="has_airport" class="th-main" data-i18n="data.col.airport" title="Εμπορικό αεροδρόμιο στο νησί" data-i18n-title="a11y.has_airport">✈ Αεροδρόμιο ↕</th>
+          <th data-col="area" class="th-main" data-i18n="data.col.area">Έκταση (km²) ↕</th>
+          <th data-col="pop" class="th-main" data-i18n="data.col.pop">Πληθυσμός ↕</th>
         </tr></thead>
         <tbody id="islands-table-body"></tbody>
       </table>
@@ -232,23 +232,23 @@
   </main>
 
   <main id="view-compare" class="view-section content-page" style="display:none;">
-    <h1 data-i18n="compare.title">Compare Islands</h1>
-    <p class="compare-intro" data-i18n="compare.intro">Select two islands to compare side-by-side.</p>
+    <h1 data-i18n="compare.title">Σύγκριση Νησιών</h1>
+    <p class="compare-intro" data-i18n="compare.intro">Επίλεξε δύο νησιά για σύγκριση.</p>
     <div class="compare-selectors">
-      <select id="compare-select-a"><option value="" data-i18n="compare.optionA">— Island A —</option></select>
-      <span class="vs-label" data-i18n="compare.vs">vs</span>
-      <select id="compare-select-b"><option value="" data-i18n="compare.optionB">— Island B —</option></select>
+      <select id="compare-select-a"><option value="" data-i18n="compare.optionA">— Νησί Α —</option></select>
+      <span class="vs-label" data-i18n="compare.vs">εναντίον</span>
+      <select id="compare-select-b"><option value="" data-i18n="compare.optionB">— Νησί Β —</option></select>
     </div>
     <div id="compare-container">
-      <div id="compare-placeholder" class="compare-placeholder" data-i18n="compare.placeholder">Select two islands above to start comparing.</div>
+      <div id="compare-placeholder" class="compare-placeholder" data-i18n="compare.placeholder">Επίλεξε δύο νησιά παραπάνω για να αρχίσει η σύγκριση.</div>
       <div id="compare-content" style="display:none;">
         <div class="compare-radar-wrap">
-          <canvas id="compare-radar-chart" role="img" aria-label="Radar chart comparing two islands" data-i18n-aria-label="a11y.radar_compare"></canvas>
+          <canvas id="compare-radar-chart" role="img" aria-label="Διάγραμμα ράνταρ που συγκρίνει δύο νησιά" data-i18n-aria-label="a11y.radar_compare"></canvas>
         </div>
         <div class="compare-cards" id="compare-cards"></div>
-        <div class="compare-section-label" data-i18n="compare.wtv_title">When to visit — overlap</div>
+        <div class="compare-section-label" data-i18n="compare.wtv_title">Πότε να επισκεφτείς — επικάλυψη</div>
         <div id="compare-wtv" class="compare-wtv"></div>
-        <div class="compare-section-label" data-i18n="compare.extra_title">Character &amp; practicalities</div>
+        <div class="compare-section-label" data-i18n="compare.extra_title">Χαρακτήρας & πρακτικά</div>
         <div id="compare-extra" class="compare-extra"></div>
       </div>
     </div>
@@ -256,64 +256,64 @@
 
   <main id="view-hopping" class="view-section content-page" style="display:none;">
     <div class="hopping-header">
-      <h1 data-i18n="hopping.title">🚢 Island Hopping</h1>
-      <p class="hopping-intro"><span data-i18n="hopping.intro">The most iconic Greek ferry routes — the backbone of any island-hopping trip. Hover over a line for details, click a port to open its island page.</span></p>
+      <h1 data-i18n="hopping.title">🚢 Νησοπορία</h1>
+      <p class="hopping-intro"><span data-i18n="hopping.intro">Οι πιο εμβληματικές διαδρομές πλοίων στην Ελλάδα. Πέρνα τον κέρσορα πάνω από μια γραμμή για λεπτομέρειες, πάτα σε ένα λιμάνι για να ανοίξεις τη σελίδα του νησιού.</span></p>
     </div>
     <div class="planner-header-row">
-      <h2 class="planner-title" data-i18n="planner.title">Plan a route</h2>
-      <a class="ferry-btn ferry-btn-prominent" href="https://www.ferryhopper.com/en/" target="_blank" rel="noopener" data-i18n="detail.bookferry">🚢 Book ferry tickets</a>
+      <h2 class="planner-title" data-i18n="planner.title">Σχεδίασε διαδρομή</h2>
+      <a class="ferry-btn ferry-btn-prominent" href="https://www.ferryhopper.com/en/" target="_blank" rel="noopener" data-i18n="detail.bookferry">🚢 Κράτηση</a>
     </div>
-    <p class="hopping-intro" data-i18n="planner.intro">Pick where you're starting and where you want to go. We'll find the fastest direct or 1-transfer route based on real ferry connections.</p>
+    <p class="hopping-intro" data-i18n="planner.intro">Διάλεξε από πού ξεκινάς και πού θες να πας. Θα βρούμε την πιο γρήγορη απευθείας διαδρομή ή με μία ανταπόκριση, βάσει πραγματικών συνδέσεων.</p>
     <div id="ferry-planner"></div>
-    <h2 style="margin-top:48px" data-i18n="hopping.maptitle">Ferry network map</h2>
+    <h2 style="margin-top:48px" data-i18n="hopping.maptitle">Χάρτης δικτύου πλοίων</h2>
     <div id="ferry-focus-banner" class="ferry-focus-banner" style="display:none"></div>
     <div id="ferry-map" style="height:600px;border-radius:16px;overflow:hidden;margin-bottom:20px;"></div>
     <div class="ferry-filter-row">
-      <span class="ferry-filter-label" data-i18n="hopping.show">Show</span>
+      <span class="ferry-filter-label" data-i18n="hopping.show">Εμφάνιση</span>
       <button class="ferry-filter-btn ferry-freq-high active" data-freq="high" onclick="toggleFerryMapFilter('high')">
         <span class="ferry-filter-line"></span>
-        <span data-i18n="hopping.legend.high">Multiple daily</span>
+        <span data-i18n="hopping.legend.high">Πολλά ημερησίως</span>
       </button>
       <button class="ferry-filter-btn ferry-freq-med active" data-freq="med" onclick="toggleFerryMapFilter('med')">
         <span class="ferry-filter-line"></span>
-        <span data-i18n="hopping.legend.med">Daily / near-daily</span>
+        <span data-i18n="hopping.legend.med">Καθημερινά</span>
       </button>
       <button class="ferry-filter-btn ferry-freq-low active" data-freq="low" onclick="toggleFerryMapFilter('low')">
         <span class="ferry-filter-line"></span>
-        <span data-i18n="hopping.legend.low">Few per week</span>
+        <span data-i18n="hopping.legend.low">Λίγα/εβδομάδα</span>
       </button>
     </div>
-    <h2 style="margin-top:40px" data-i18n="hopping.itineraries">Suggested Itineraries</h2>
-    <p class="hopping-intro" data-i18n="hopping.itin.intro">Eight curated multi-island routes — from the classic Cyclades circuit to the quiet Small Cyclades escape. Each uses real ferry connections and shows approximate nights per stop.</p>
+    <h2 style="margin-top:40px" data-i18n="hopping.itineraries">Προτεινόμενες Διαδρομές</h2>
+    <p class="hopping-intro" data-i18n="hopping.itin.intro">Δέκα επιλεγμένες διαδρομές πολλαπλών νησιών — από την κλασική διαδρομή των Κυκλάδων μέχρι την ήσυχη απόδραση στις Μικρές Κυκλάδες. Όλες χρησιμοποιούν πραγματικές συνδέσεις πλοίων.</p>
     <div id="hopping-list"></div>
   </main>
 
   <main id="view-international" class="view-section content-page" style="display:none;">
     <div class="hopping-header">
-      <h1 data-i18n="international.title">🌍 International Escapes</h1>
-      <p class="hopping-intro"><span data-i18n="international.intro">Greek islands are closer to foreign shores than you think. From Corfu, Albania is 30 minutes away. From the east Aegean, Turkey is a short ferry across. Here are the proven international ferry connections from Greek islands — a different kind of island-hopping.</span></p>
-      <div class="intl-prebook-notice" data-i18n="international.prebook">💡 <strong>No need to pre-book.</strong> For all routes below, you can buy your ferry ticket on the spot at the port on the same day. Summer is busier — arrive 60–90 min before departure to secure your seat.</div>
+      <h1 data-i18n="international.title">🌍 Διεθνείς Αποδράσεις</h1>
+      <p class="hopping-intro"><span data-i18n="international.intro">Τα ελληνικά νησιά είναι πιο κοντά σε ξένες ακτές απ'όσο νομίζεις. Από την Κέρκυρα, η Αλβανία απέχει 30 λεπτά. Από το Ανατολικό Αιγαίο, η Τουρκία είναι σύντομη διαδρομή. Εδώ είναι οι αξιόπιστες διεθνείς συνδέσεις πλοίων από ελληνικά νησιά — ένα διαφορετικό είδος νησοπορίας.</span></p>
+      <div class="intl-prebook-notice" data-i18n="international.prebook">💡 <strong>Δεν χρειάζεται προκράτηση.</strong> Για όλες τις παρακάτω διαδρομές, μπορείς να αγοράσεις το εισιτήριο επί τόπου στο λιμάνι την ίδια μέρα. Το καλοκαίρι έχει κίνηση — έλα 60–90 λεπτά πριν την αναχώρηση για να εξασφαλίσεις θέση.</div>
     </div>
     <div id="international-map" style="height:560px;border-radius:16px;overflow:hidden;margin-bottom:20px;"></div>
     <div class="ferry-legend">
-      <span class="ferry-legend-item"><span class="ferry-legend-line ferry-freq-high"></span><span data-i18n="international.legend.daily">Daily (multiple crossings per day)</span></span>
-      <span class="ferry-legend-item"><span class="ferry-legend-line ferry-freq-med"></span><span data-i18n="international.legend.frequent">Frequent in summer (4-7/week)</span></span>
-      <span class="ferry-legend-item"><span class="ferry-legend-line ferry-freq-low"></span><span data-i18n="international.legend.seasonal">Seasonal / limited</span></span>
+      <span class="ferry-legend-item"><span class="ferry-legend-line ferry-freq-high"></span><span data-i18n="international.legend.daily">Καθημερινά (πολλά δρομολόγια)</span></span>
+      <span class="ferry-legend-item"><span class="ferry-legend-line ferry-freq-med"></span><span data-i18n="international.legend.frequent">Συχνά το καλοκαίρι (4-7/εβδ)</span></span>
+      <span class="ferry-legend-item"><span class="ferry-legend-line ferry-freq-low"></span><span data-i18n="international.legend.seasonal">Εποχιακό / περιορισμένο</span></span>
     </div>
-    <h2 style="margin-top:40px" data-i18n="international.routes.title">All Routes</h2>
+    <h2 style="margin-top:40px" data-i18n="international.routes.title">Όλες οι Διαδρομές</h2>
     <div id="international-list"></div>
   </main>
 
   <main id="view-match" class="view-section content-page" style="display:none;">
-    <h1 data-i18n="match.title">Match Me</h1>
-    <p class="match-intro" data-i18n="match.intro">Answer 4 quick questions and we'll recommend your top islands.</p>
+    <h1 data-i18n="match.title">Βρες το Νησί σου</h1>
+    <p class="match-intro" data-i18n="match.intro">Απάντησε σε 7 γρήγορες ερωτήσεις και θα σε ταιριάξουμε με τα ιδανικά νησιά για εσένα.</p>
     <div id="quiz-container"></div>
     <div id="quiz-results" style="display:none;"></div>
   </main>
 
   <main id="view-shortlist" class="view-section content-page" style="display:none;">
-    <h1 data-i18n="shortlist.title">⭐ My Shortlist</h1>
-    <p class="match-intro" data-i18n="shortlist.intro">Your saved islands — stored in this browser.</p>
+    <h1 data-i18n="shortlist.title">⭐ Η Λίστα μου</h1>
+    <p class="match-intro" data-i18n="shortlist.intro">Τα αποθηκευμένα σου νησιά — αποθηκευμένα σε αυτή τη συσκευή.</p>
     <div id="shortlist-container"></div>
   </main>
 
@@ -327,173 +327,173 @@
         <line x1="0" y1="150" x2="1280" y2="150" stroke="#fff" stroke-width="0.8" stroke-dasharray="5 12"/>
         <line x1="640" y1="0" x2="640" y2="300" stroke="#fff" stroke-width="0.8" stroke-dasharray="5 12" opacity="0.5"/>
       </svg>
-      <div class="why-hero-logo-wrap"><img src="/logo-hero.svg" alt="Aegean Blueprint logo" data-i18n-alt="a11y.logo_alt"></div>
-      <h1 data-i18n="mission.title">Mission</h1>
-      <p class="why-hero-sub" data-i18n="mission.tagline">For travellers who want to live the holiday, not plan it.</p>
+      <div class="why-hero-logo-wrap"><img src="/logo-hero.svg" alt="Λογότυπο Aegean Blueprint" data-i18n-alt="a11y.logo_alt"></div>
+      <h1 data-i18n="mission.title">Στόχος</h1>
+      <p class="why-hero-sub" data-i18n="mission.tagline">Για ταξιδιώτες που θέλουν να ζήσουν τις διακοπές, όχι να τις σχεδιάσουν.</p>
     </div>
 
     <div class="mission-body">
 
       <!-- SECTION 1: Why this site exists -->
       <section class="mission-section">
-        <h2 class="mission-section-title" data-i18n="mission.why.title">Why this site exists</h2>
-        <p class="mission-para" data-i18n="mission.why.p1">There are 78 islands on Aegean Blueprint. Most guides try to cover all of them, and end up saying nothing useful about any. Search results give you the same twenty stock photos of Oia and a PR-written paragraph that could be about any island in the Aegean. AI-generated lists read like they were written by someone who has never tasted a tomato.</p>
-        <blockquote class="mission-pullquote" data-i18n="mission.why.quote">This site is for people who don't want choices. They want the gist, without the fluff.</blockquote>
-        <p class="mission-para" data-i18n="mission.why.p2">Each island page gives you one opinionated recommendation: where to stay, what to do for 2 to 5 days, where to swim, where to eat. Not ten options ranked by affiliate payout. One. The one the person who built this site would pick.</p>
+        <h2 class="mission-section-title" data-i18n="mission.why.title">Γιατί υπάρχει αυτή η σελίδα</h2>
+        <p class="mission-para" data-i18n="mission.why.p1">Στο Aegean Blueprint υπάρχουν 78 νησιά. Οι περισσότεροι οδηγοί τα καλύπτουν όλα — και καταλήγουν να μη λένε τίποτα χρήσιμο για κανένα. Οι λίστες από AI διαβάζονται σαν να τις έγραψε άνθρωπος που δεν έχει δοκιμάσει ποτέ ντομάτα.</p>
+        <blockquote class="mission-pullquote" data-i18n="mission.why.quote">Αυτή η σελίδα είναι για ανθρώπους που δεν θέλουν επιλογές. Θέλουν την ουσία, χωρίς περιττά.</blockquote>
+        <p class="mission-para" data-i18n="mission.why.p2">Κάθε σελίδα νησιού σού δίνει μία πρόταση με άποψη: πού να μείνεις, τι να κάνεις σε 2 έως 5 μέρες, πού να κολυμπήσεις, πού να φας. Όχι δέκα επιλογές. Μία. Αυτή που θα διάλεγα ο ίδιος.</p>
       </section>
 
       <!-- SECTION 2: Built by one person -->
       <section class="mission-section mission-author-section">
-        <h2 class="mission-section-title" data-i18n="mission.author.title">Built by one person</h2>
+        <h2 class="mission-section-title" data-i18n="mission.author.title">Φτιαγμένο από έναν άνθρωπο</h2>
         <div class="mission-author-card">
           <img src="https://res.cloudinary.com/dothbs5hs/image/upload/w_400,q_auto,f_auto/v1776894159/SAM_2285_1_ecrp5l.jpg" alt="Stergios Gousios" class="mission-author-photo">
           <div class="mission-author-text">
             <div class="mission-author-name">Stergios Gousios</div>
-            <div class="mission-author-role" data-i18n="mission.author.role2">Founder · Athens</div>
-            <p class="mission-author-bio" data-i18n="mission.author.bio">Greek, based in Athens, 50+ islands visited over 20+ years. Not a travel influencer, not a PR-sponsored blog. A single person writing down what he actually thinks.</p>
+            <div class="mission-author-role" data-i18n="mission.author.role2">Δημιουργός · Αθήνα</div>
+            <p class="mission-author-bio" data-i18n="mission.author.bio">Έλληνας, ζω στην Αθήνα. 50+ νησιά σε 20+ χρόνια. Δεν είμαι influencer, ούτε blog με χορηγίες. Ένας άνθρωπος που γράφει αυτό που πραγματικά πιστεύει.</p>
           </div>
         </div>
-        <p class="mission-para" data-i18n="mission.author.note">This matters because the alternative is what everyone else does: aggregate reviews from TripAdvisor, run them through an SEO mill, translate the output into every language, and publish it as a "guide." The writing reads fine. The advice is worthless.</p>
+        <p class="mission-para" data-i18n="mission.author.note">Η εναλλακτική είναι αυτό που κάνουν όλοι: κριτικές από TripAdvisor, πέρασμα από SEO μηχανή, μετάφραση σε όλες τις γλώσσες, και το λένε «οδηγό». Το κείμενο διαβάζεται μια χαρά. Η συμβουλή έχει μικρή χρησιμότητα.</p>
       </section>
 
       <!-- SECTION 3: The one-recommendation principle -->
       <section class="mission-section">
-        <h2 class="mission-section-title" data-i18n="mission.principle.title">The one-recommendation principle</h2>
-        <p class="mission-para" data-i18n="mission.principle.intro">For each island, this site picks exactly one of each:</p>
+        <h2 class="mission-section-title" data-i18n="mission.principle.title">Η αρχή της μίας πρότασης</h2>
+        <p class="mission-para" data-i18n="mission.principle.intro">Για κάθε νησί, η σελίδα διαλέγει ακριβώς ένα από τα παρακάτω:</p>
         <div class="mission-triptych">
           <div class="mission-triptych-card">
             <div class="mission-triptych-icon">🏨</div>
-            <div class="mission-triptych-label" data-i18n="mission.principle.hotel.label">One hotel</div>
-            <p class="mission-triptych-text" data-i18n="mission.principle.hotel.text">With a budget alternative if the top pick is too expensive. Linked to Booking.com so you can check availability in one click.</p>
+            <div class="mission-triptych-label" data-i18n="mission.principle.hotel.label">Ένα ξενοδοχείο</div>
+            <p class="mission-triptych-text" data-i18n="mission.principle.hotel.text">Με μια οικονομικότερη εναλλακτική αν η πρώτη επιλογή είναι ακριβή. Σύνδεσμος στο Booking.com για να δεις τη διαθεσιμότητα με ένα κλικ.</p>
           </div>
           <div class="mission-triptych-card">
             <div class="mission-triptych-icon">🗺</div>
-            <div class="mission-triptych-label" data-i18n="mission.principle.route.label">One itinerary</div>
-            <p class="mission-triptych-text" data-i18n="mission.principle.route.text">2 to 5 days depending on the island, mapped with driving distances. Beaches, villages, archaeological sites, places to eat. No "optional side-trips."</p>
+            <div class="mission-triptych-label" data-i18n="mission.principle.route.label">Ένα δρομολόγιο</div>
+            <p class="mission-triptych-text" data-i18n="mission.principle.route.text">2 έως 5 μέρες ανάλογα με το νησί, χαρτογραφημένο με αποστάσεις. Παραλίες, χωριά, αρχαιολογικοί χώροι, εστιατόρια. Χωρίς «προαιρετικές εκδρομές».</p>
           </div>
           <div class="mission-triptych-card">
             <div class="mission-triptych-icon">🍽</div>
-            <div class="mission-triptych-label" data-i18n="mission.principle.dinner.label">One dinner spot per night</div>
-            <p class="mission-triptych-text" data-i18n="mission.principle.dinner.text">Named, linked, often with a phone number to book ahead. Where I'd take a friend who had one night on the island.</p>
+            <div class="mission-triptych-label" data-i18n="mission.principle.dinner.label">Ένα εστιατόριο ανά βράδυ</div>
+            <p class="mission-triptych-text" data-i18n="mission.principle.dinner.text">Με όνομα, σύνδεσμο, συχνά και τηλέφωνο για κράτηση. Εκεί που θα πήγαινα έναν φίλο που έχει μόνο μία βραδιά στο νησί.</p>
           </div>
         </div>
-        <p class="mission-kicker-line" data-i18n="mission.principle.kicker">Pick an island. Pack a bag. Go.</p>
+        <p class="mission-kicker-line" data-i18n="mission.principle.kicker">Διάλεξε ένα νησί. Φτιάξε βαλίτσα. Φύγε.</p>
       </section>
 
       <!-- SECTION 4: How we score -->
       <section class="mission-section mission-score-section" id="how-we-score">
-        <h2 class="mission-section-title" data-i18n="mission.scoring.title">How we score</h2>
+        <h2 class="mission-section-title" data-i18n="mission.scoring.title">Πώς βαθμολογούμε</h2>
 
-        <p class="mission-para" data-i18n="mission.scoring.lead">Every island gets rated 1 to 5 on five dimensions, plus one overall number. These aren't computed by an algorithm and they aren't scraped from TripAdvisor. They're one person's informed judgment — mine — based on having been there, or on careful research and local contacts for the few I haven't.</p>
+        <p class="mission-para" data-i18n="mission.scoring.lead">Κάθε νησί παίρνει βαθμολογία 1 έως 5 σε πέντε διαστάσεις, συν έναν συνολικό αριθμό. Κανένα από αυτά δεν υπολογίζεται με αλγόριθμο και κανένα δεν είναι παρμένο από αλλού — είναι η δική μου κρίση, με βάση το ότι έχω πάει στα περισσότερα ή ότι μιλάω με ανθρώπους που ζουν στα υπόλοιπα.</p>
 
-        <p class="mission-para" data-i18n="mission.scoring.honest">If you want to know why Milos is 4.6 and Tinos is 3.9, the short answer is: I think so, for the reasons below. The longer answer is: disagree with me — I'd rather have that conversation than pretend there's a formula.</p>
+        <p class="mission-para" data-i18n="mission.scoring.honest">Αν θες να ξέρεις γιατί η Μήλος είναι 4.6 και η Τήνος 3.9, η σύντομη απάντηση είναι: έτσι το κρίνω, για τους παρακάτω λόγους. Η μακριά απάντηση: διαφώνησε μαζί μου — καλύτερα αυτή η συζήτηση, παρά μια ψεύτικη για φόρμουλες.</p>
 
         <!-- Sources sub-section -->
-        <h3 class="mission-subsection-title" data-i18n="mission.sources.title">Where the information comes from</h3>
+        <h3 class="mission-subsection-title" data-i18n="mission.sources.title">Από πού έρχονται οι πληροφορίες</h3>
         <ul class="mission-sources-list">
-          <li><strong data-i18n="mission.sources.visited.t">Personal visits.</strong><span data-i18n="mission.sources.visited.d"> 50+ of the 78 islands on this site I've been to in person, most more than once. The itineraries, beaches and restaurants for those islands come from my own experience.</span></li>
-          <li><strong data-i18n="mission.sources.local.t">Local contacts.</strong><span data-i18n="mission.sources.local.d"> Friends, family and acquaintances who live or summer on specific islands. Kalymnos, Ikaria, Lemnos, Skyros — when I call someone who lives there, their answer beats any guidebook.</span></li>
-          <li><strong data-i18n="mission.sources.official.t">Official data.</strong><span data-i18n="mission.sources.official.d"> Ferry schedules from Ferryhopper and the operators themselves. Opening hours and prices from the actual restaurant, winery and museum websites. Wikipedia for historical facts. Not from SEO-farm aggregators.</span></li>
-          <li><strong data-i18n="mission.sources.feedback.t">Reader corrections.</strong><span data-i18n="mission.sources.feedback.d"> When someone emails to say a restaurant closed or a ferry route changed, the page is updated. That loop is explicit — it's the Feedback button.</span></li>
+          <li><strong data-i18n="mission.sources.visited.t">Προσωπικές επισκέψεις.</strong><span data-i18n="mission.sources.visited.d"> 50+ από τα 78 νησιά, τα περισσότερα παραπάνω από μία φορές.</span></li>
+          <li><strong data-i18n="mission.sources.local.t">Ντόπιες γνωριμίες.</strong><span data-i18n="mission.sources.local.d"> Φίλοι και συγγενείς που ζουν ή παραθερίζουν σε συγκεκριμένα νησιά. Κάλυμνος, Ικαρία, Λήμνος, Σκύρος — όταν παίρνω τηλέφωνο σε κάποιον που ζει εκεί, η απάντησή του κερδίζει κάθε οδηγό.</span></li>
+          <li><strong data-i18n="mission.sources.official.t">Επίσημες πηγές.</strong><span data-i18n="mission.sources.official.d"> Δρομολόγια απευθείας από τους μεταφορείς. Ωράρια από τα ίδια τα εστιατόρια και τα μουσεία. Wikipedia για ιστορικά στοιχεία. Όχι από SEO-farm συλλογείς.</span></li>
+          <li><strong data-i18n="mission.sources.feedback.t">Διορθώσεις αναγνωστών.</strong><span data-i18n="mission.sources.feedback.d"> Όταν μου γράφει κάποιος ότι έκλεισε ένα εστιατόριο, η σελίδα ενημερώνεται. Το κουμπί Σχόλια είναι ο κύκλος.</span></li>
         </ul>
 
         <!-- Rubric sub-section -->
-        <h3 class="mission-subsection-title" data-i18n="mission.rubric.title">The rubric</h3>
-        <p class="mission-para mission-rubric-intro" data-i18n="mission.rubric.intro">Five dimensions. Each scored 1 to 5. Here's what those numbers actually mean.</p>
+        <h3 class="mission-subsection-title" data-i18n="mission.rubric.title">Η κλίμακα</h3>
+        <p class="mission-para mission-rubric-intro" data-i18n="mission.rubric.intro">Πέντε διαστάσεις. Κάθε μία βαθμολογείται 1 έως 5. Να τι σημαίνουν πραγματικά αυτοί οι αριθμοί.</p>
 
         <div class="mission-rubric-grid">
 
           <div class="mission-rubric-card">
             <div class="mission-rubric-head">
               <span class="mission-rubric-icon">🏖</span>
-              <span class="mission-rubric-name" data-i18n="mission.rubric.beach.name">Beach</span>
+              <span class="mission-rubric-name" data-i18n="mission.rubric.beach.name">Παραλία</span>
             </div>
-            <p class="mission-rubric-desc" data-i18n="mission.rubric.beach.desc">How good the swimming is.</p>
+            <p class="mission-rubric-desc" data-i18n="mission.rubric.beach.desc">Πόσο καλό είναι το μπάνιο.</p>
             <div class="mission-rubric-anchors">
-              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-5">5</span><span data-i18n="mission.rubric.beach.5">You'd pick the island because of the water. Milos, Elafonisos, Lefkada.</span></div>
-              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-3">3</span><span data-i18n="mission.rubric.beach.3">Good beaches exist but they're not the reason to come.</span></div>
-              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-1">1</span><span data-i18n="mission.rubric.beach.1">Swim at the hotel pool instead.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-5">5</span><span data-i18n="mission.rubric.beach.5">Θα διάλεγες το νησί για τα νερά του. Μήλος, Ελαφόνησος, Λευκάδα.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-3">3</span><span data-i18n="mission.rubric.beach.3">Καλές παραλίες υπάρχουν αλλά δεν είναι ο λόγος να έρθεις.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-1">1</span><span data-i18n="mission.rubric.beach.1">Κολύμπα καλύτερα στην πισίνα του ξενοδοχείου.</span></div>
             </div>
           </div>
 
           <div class="mission-rubric-card">
             <div class="mission-rubric-head">
               <span class="mission-rubric-icon">🏛</span>
-              <span class="mission-rubric-name" data-i18n="mission.rubric.hist.name">Culture</span>
+              <span class="mission-rubric-name" data-i18n="mission.rubric.hist.name">Πολιτισμός</span>
             </div>
-            <p class="mission-rubric-desc" data-i18n="mission.rubric.hist.desc">Archaeology, museums, churches, old towns, living tradition.</p>
+            <p class="mission-rubric-desc" data-i18n="mission.rubric.hist.desc">Αρχαιολογία, μουσεία, εκκλησίες, παλιές πόλεις, ζωντανή παράδοση.</p>
             <div class="mission-rubric-anchors">
-              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-5">5</span><span data-i18n="mission.rubric.hist.5">Serious depth. Delos, Rhodes Old Town, Patmos.</span></div>
-              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-3">3</span><span data-i18n="mission.rubric.hist.3">One or two good sites, worth a half-day.</span></div>
-              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-1">1</span><span data-i18n="mission.rubric.hist.1">The island's story is "we have a beach."</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-5">5</span><span data-i18n="mission.rubric.hist.5">Σοβαρό βάθος. Δήλος, Παλιά Πόλη Ρόδου, Πάτμος.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-3">3</span><span data-i18n="mission.rubric.hist.3">Ένα-δύο καλά σημεία, αξίζουν μισή μέρα.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-1">1</span><span data-i18n="mission.rubric.hist.1">Η ιστορία του νησιού είναι «έχουμε παραλία».</span></div>
             </div>
           </div>
 
           <div class="mission-rubric-card">
             <div class="mission-rubric-head">
               <span class="mission-rubric-icon">🌃</span>
-              <span class="mission-rubric-name" data-i18n="mission.rubric.night.name">Nightlife</span>
+              <span class="mission-rubric-name" data-i18n="mission.rubric.night.name">Νυχτερινή ζωή</span>
             </div>
-            <p class="mission-rubric-desc" data-i18n="mission.rubric.night.desc">From beach clubs to late dinners.</p>
+            <p class="mission-rubric-desc" data-i18n="mission.rubric.night.desc">Από beach clubs μέχρι αργά δείπνα.</p>
             <div class="mission-rubric-anchors">
-              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-5">5</span><span data-i18n="mission.rubric.night.5">Party-destination level. Mykonos, Ios.</span></div>
-              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-3">3</span><span data-i18n="mission.rubric.night.3">Good food, a few bars, things happen after midnight.</span></div>
-              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-1">1</span><span data-i18n="mission.rubric.night.1">Dinner ends at 10pm and the village sleeps.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-5">5</span><span data-i18n="mission.rubric.night.5">Επίπεδο party-προορισμού. Μύκονος, Ίος.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-3">3</span><span data-i18n="mission.rubric.night.3">Καλό φαγητό, λίγα μπαρ, κάτι γίνεται μετά τα μεσάνυχτα.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-1">1</span><span data-i18n="mission.rubric.night.1">Το δείπνο τελειώνει στις 10 και το χωριό κοιμάται.</span></div>
             </div>
           </div>
 
           <div class="mission-rubric-card">
             <div class="mission-rubric-head">
               <span class="mission-rubric-icon">🚢</span>
-              <span class="mission-rubric-name" data-i18n="mission.rubric.access.name">Access</span>
+              <span class="mission-rubric-name" data-i18n="mission.rubric.access.name">Πρόσβαση</span>
             </div>
-            <p class="mission-rubric-desc" data-i18n="mission.rubric.access.desc">How hard to reach from Athens, and onward.</p>
+            <p class="mission-rubric-desc" data-i18n="mission.rubric.access.desc">Πόσο δύσκολο να φτάσεις από την Αθήνα, και παραπέρα.</p>
             <div class="mission-rubric-anchors">
-              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-5">5</span><span data-i18n="mission.rubric.access.5">Airport plus fast ferries. Santorini, Rhodes, Corfu.</span></div>
-              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-3">3</span><span data-i18n="mission.rubric.access.3">One reliable ferry a day in summer.</span></div>
-              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-1">1</span><span data-i18n="mission.rubric.access.1">You need to really want to go.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-5">5</span><span data-i18n="mission.rubric.access.5">Αεροδρόμιο και γρήγορα πλοία. Σαντορίνη, Ρόδος, Κέρκυρα.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-3">3</span><span data-i18n="mission.rubric.access.3">Ένα αξιόπιστο πλοίο τη μέρα το καλοκαίρι.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-1">1</span><span data-i18n="mission.rubric.access.1">Πρέπει πραγματικά να το θες.</span></div>
             </div>
           </div>
 
           <div class="mission-rubric-card">
             <div class="mission-rubric-head">
               <span class="mission-rubric-icon">💶</span>
-              <span class="mission-rubric-name" data-i18n="mission.rubric.afford.name">Affordability</span>
+              <span class="mission-rubric-name" data-i18n="mission.rubric.afford.name">Οικονομικά</span>
             </div>
-            <p class="mission-rubric-desc" data-i18n="mission.rubric.afford.desc">Week for two in August: hotel + food + getting around.</p>
+            <p class="mission-rubric-desc" data-i18n="mission.rubric.afford.desc">Εβδομάδα για δύο τον Αύγουστο: ξενοδοχείο + φαγητό + μετακινήσεις.</p>
             <div class="mission-rubric-anchors">
-              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-5">5</span><span data-i18n="mission.rubric.afford.5">Genuinely cheap. Ikaria, Samothrace, Lemnos.</span></div>
-              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-3">3</span><span data-i18n="mission.rubric.afford.3">Normal Greek-island pricing.</span></div>
-              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-1">1</span><span data-i18n="mission.rubric.afford.1">Mykonos/Santorini territory. Dinner alone can clear €200.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-5">5</span><span data-i18n="mission.rubric.afford.5">Γνήσια φθηνά. Ικαρία, Σαμοθράκη, Λήμνος.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-3">3</span><span data-i18n="mission.rubric.afford.3">Κανονικές τιμές ελληνικού νησιού.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-1">1</span><span data-i18n="mission.rubric.afford.1">Επίπεδο Μυκόνου/Σαντορίνης. Μόνο το δείπνο ξεπερνά τα 200€.</span></div>
             </div>
           </div>
 
         </div>
 
         <!-- Overall number -->
-        <h3 class="mission-subsection-title" data-i18n="mission.overall.title">The overall number</h3>
-        <p class="mission-para" data-i18n="mission.overall.p1">The overall number leans most on Beach and Culture — that's what most people come for — but it's not a formula. A quiet, affordable island with one great beach and one real ruin can outscore a famous one that doesn't offer anything unique. <strong>Milos is {milos.total}, Tinos is {tinos.total}.</strong> I set numbers by judgment, then check them by ranking islands against each other in my head.</p>
-        <p class="mission-para mission-para-emphasis" data-i18n="mission.overall.p3">Use the five underlying numbers if your trip has a specific goal. The overall is for sorting the table when you don't yet know what you want.</p>
+        <h3 class="mission-subsection-title" data-i18n="mission.overall.title">Ο συνολικός αριθμός</h3>
+        <p class="mission-para" data-i18n="mission.overall.p1">Ο συνολικός αριθμός γέρνει περισσότερο προς την Παραλία και τον Πολιτισμό — γι' αυτά έρχεται ο περισσότερος κόσμος εδώ — αλλά δεν είναι φόρμουλα. Ένα ήσυχο, οικονομικό νησί με μία πραγματικά ωραία παραλία και ένα αληθινό μνημείο μπορεί να βγει μπροστά από ένα διάσημο που δεν προσφέρει κάτι μοναδικό. <strong>Η Μήλος είναι {milos.total}, η Τήνος {tinos.total}.</strong> Βάζω τους αριθμούς με την κρίση μου, και τους ξαναβλέπω συγκρίνοντας τα νησιά μεταξύ τους στο μυαλό μου.</p>
+        <p class="mission-para mission-para-emphasis" data-i18n="mission.overall.p3">Χρησιμοποίησε τις πέντε επιμέρους διαστάσεις αν το ταξίδι σου έχει συγκεκριμένο στόχο. Τη συνολική βαθμολογία όταν ταξινομείς τον πίνακα και δεν έχεις ακόμα αποφασίσει τι ψάχνεις.</p>
 
         <!-- Update cadence -->
-        <h3 class="mission-subsection-title" data-i18n="mission.updates.title">How often this changes</h3>
-        <p class="mission-para" data-i18n="mission.updates.p1">Restaurants close. Ferry operators swap routes. A hotel changes hands and quality drops. Scores themselves rarely shift — an island's personality doesn't change in a season — but the specifics on a page do.</p>
-        <p class="mission-para" data-i18n="mission.updates.p2">When I get reader feedback or visit an island again, the page updates. When a restaurant I recommended closes, the link comes down within a week. The goal is not to be an encyclopedia — it's to be the most current opinionated recommendation you can trust for the next 6 months.</p>
+        <h3 class="mission-subsection-title" data-i18n="mission.updates.title">Πόσο συχνά αλλάζει</h3>
+        <p class="mission-para" data-i18n="mission.updates.p1">Τα εστιατόρια κλείνουν. Οι ακτοπλοϊκές αλλάζουν γραμμές. Ένα ξενοδοχείο αλλάζει χέρια και η ποιότητα πέφτει. Οι ίδιες οι βαθμολογίες σπάνια αλλάζουν — ο χαρακτήρας ενός νησιού δεν αλλάζει σε μια σεζόν — αλλά οι λεπτομέρειες στη σελίδα αλλάζουν.</p>
+        <p class="mission-para" data-i18n="mission.updates.p2">Όταν παίρνω σχόλια από αναγνώστες ή επισκέπτομαι ξανά ένα νησί, η σελίδα ενημερώνεται. Όταν κλείνει ένα εστιατόριο που πρότεινα, ο σύνδεσμος κατεβαίνει μέσα σε μια εβδομάδα. Στόχος δεν είναι να γίνουμε εγκυκλοπαίδεια — αλλά η πιο ενημερωμένη πρόταση με άποψη που μπορείς να εμπιστευτείς για τους επόμενους 6 μήνες.</p>
 
         <!-- Limitations -->
-        <h3 class="mission-subsection-title" data-i18n="mission.limits.title">What the scores can't capture</h3>
-        <p class="mission-para" data-i18n="mission.limits.lead">Five numbers can't describe an island. A few things they miss:</p>
+        <h3 class="mission-subsection-title" data-i18n="mission.limits.title">Τι δεν μπορούν να δείξουν οι βαθμολογίες</h3>
+        <p class="mission-para" data-i18n="mission.limits.lead">Πέντε αριθμοί δεν περιγράφουν ένα νησί. Κάποια πράγματα που χάνουν:</p>
         <ul class="mission-limits-list">
-          <li data-i18n="mission.limits.season">Season. Ios in July is a 5 for nightlife; Ios in April is a 1. The score reflects the peak.</li>
-          <li data-i18n="mission.limits.taste">Personal taste. If you hate parties, Mykonos's high Nightlife score is a warning, not a selling point.</li>
-          <li data-i18n="mission.limits.crowds">Crowds. Santorini scores well across the board but feels different when six cruise ships dock the same day. The pages mention this; the numbers don't reflect it.</li>
-          <li data-i18n="mission.limits.drift">Drift. A "must-eat" restaurant can coast for years on reviews after the original chef leaves. I try to catch these but I'm one person.</li>
+          <li data-i18n="mission.limits.season">Εποχή. Η Ίος τον Ιούλιο είναι 5 στη νυχτερινή ζωή· τον Απρίλιο είναι 1. Ο αριθμός δείχνει την κορύφωση.</li>
+          <li data-i18n="mission.limits.taste">Προσωπικό γούστο. Αν μισείς τα πάρτι, η ψηλή βαθμολογία Νυχτερινής Ζωής της Μυκόνου είναι προειδοποίηση, όχι πλεονέκτημα.</li>
+          <li data-i18n="mission.limits.crowds">Τουριστικός συνωστισμός. Η Σαντορίνη βαθμολογείται καλά παντού, αλλά έχει άλλη αίσθηση όταν δένουν έξι κρουαζιερόπλοια την ίδια μέρα. Οι σελίδες το αναφέρουν, οι αριθμοί όχι.</li>
+          <li data-i18n="mission.limits.drift">Μετατόπιση. Ένα «must-eat» εστιατόριο μπορεί να εξακολουθεί να συστήνεται χρόνια μετά την αποχώρηση του αρχικού σεφ. Προσπαθώ να τα πιάνω αλλά είμαι ένας άνθρωπος.</li>
         </ul>
 
         <!-- Disagree -->
         <div class="mission-disagree-box">
-          <h3 class="mission-disagree-title" data-i18n="mission.disagree.title">Think I got one wrong?</h3>
-          <p class="mission-para" data-i18n="mission.disagree.text">Hit the <strong>💬 Feedback</strong> button at the bottom right of any page and pick <em>"Suggest a rating correction."</em> Explain what you'd change and why. If you make a good case, I'll update the number. The five dimensions and the reasoning stay in the open.</p>
+          <h3 class="mission-disagree-title" data-i18n="mission.disagree.title">Πιστεύεις πως έκανα λάθος;</h3>
+          <p class="mission-para" data-i18n="mission.disagree.text">Πάτα το κουμπί <strong>💬 Σχόλια</strong> κάτω δεξιά σε οποιαδήποτε σελίδα και διάλεξε <em>«Πρόταση διόρθωσης βαθμολογίας»</em>. Εξήγησε τι θα άλλαζες και γιατί. Αν έχεις καλό επιχείρημα, θα ενημερώσω τον αριθμό. Οι πέντε διαστάσεις και η λογική παραμένουν δημόσιες.</p>
         </div>
 
       </section>
@@ -504,14 +504,14 @@
   <main id="view-detail" class="view-section" style="display:none;">
     <div class="detail-container">
       <div class="detail-header">
-        <button class="back-btn" id="detail-back-btn" data-i18n="detail.back">← Back to Map</button>
+        <button class="back-btn" id="detail-back-btn" data-i18n="detail.back">← Χάρτης</button>
         <h1 id="island-name"></h1>
         <div class="island-meta-pill" id="island-meta-info"></div>
-        <button class="compare-add-btn" id="detail-compare-btn" data-i18n="detail.compare">＋ Compare</button>
-        <button class="shortlist-btn" id="detail-shortlist-btn" onclick="toggleShortlist()" data-i18n="detail.save">☆ Save</button>
-        <button class="share-btn" id="detail-share-btn" onclick="copyIslandLink()" data-i18n="detail.copylink">🔗 Copy link</button>
-        <button class="print-btn" id="detail-print-btn" onclick="printIsland()" data-i18n="detail.print">🖨 Print</button>
-        <a class="ferry-btn" id="detail-ferry-btn" target="_blank" rel="noopener" data-i18n="detail.bookferry">🚢 Book ferry tickets</a>
+        <button class="compare-add-btn" id="detail-compare-btn" data-i18n="detail.compare">＋ Σύγκριση</button>
+        <button class="shortlist-btn" id="detail-shortlist-btn" onclick="toggleShortlist()" data-i18n="detail.save">☆ Λίστα</button>
+        <button class="share-btn" id="detail-share-btn" onclick="copyIslandLink()" data-i18n="detail.copylink">🔗 Αντιγραφή</button>
+        <button class="print-btn" id="detail-print-btn" onclick="printIsland()" data-i18n="detail.print">🖨 Εκτύπωση</button>
+        <a class="ferry-btn" id="detail-ferry-btn" target="_blank" rel="noopener" data-i18n="detail.bookferry">🚢 Κράτηση</a>
       </div>
       <div class="detail-grid">
         <div class="detail-main">
@@ -520,44 +520,44 @@
         </div>
         <aside class="detail-sidebar">
           <div class="sidebar-box">
-            <h3 data-i18n="detail.ratings">Blueprint Ratings</h3>
-            <a href="/el/#how-we-score" onclick="navMission(event)" class="how-we-score-link" data-i18n="scoring.howlink">how we score</a>
+            <h3 data-i18n="detail.ratings">Βαθμολογίες</h3>
+            <a href="/el/#how-we-score" onclick="navMission(event)" class="how-we-score-link" data-i18n="scoring.howlink">πώς βαθμολογούμε</a>
             <div class="rating-list">
-              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.beach">Beach Quality</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div><span class="rating-val" id="val-beach"></span></div>
-              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.culture">Culture &amp; History</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div><span class="rating-val" id="val-hist"></span></div>
-              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.night">Night Life</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div><span class="rating-val" id="val-night"></span></div>
-              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.access">Access Ease</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div><span class="rating-val" id="val-access"></span></div>
-              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.afford">Price Level</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div><span class="rating-val" id="val-afford"></span></div>
-              <div class="rating-item rating-item-car" title="" id="rating-item-car"><span class="rating-label" data-i18n="sidebar.car">Car reliance</span><span class="rating-val" id="val-car"></span></div>
+              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.beach">Ποιότητα Παραλιών</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div><span class="rating-val" id="val-beach"></span></div>
+              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.culture">Πολιτισμός &amp; Ιστορία</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div><span class="rating-val" id="val-hist"></span></div>
+              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.night">Νυχτερινή ζωή</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div><span class="rating-val" id="val-night"></span></div>
+              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.access">Ευκολία Πρόσβασης</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div><span class="rating-val" id="val-access"></span></div>
+              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.afford">Προσιτή τιμή</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div><span class="rating-val" id="val-afford"></span></div>
+              <div class="rating-item rating-item-car" title="" id="rating-item-car"><span class="rating-label" data-i18n="sidebar.car">Χρησιμότητα οχήματος</span><span class="rating-val" id="val-car"></span></div>
             </div>
           </div>
           <div class="sidebar-box" id="sidebar-stats">
-            <h3 data-i18n="detail.keystats">Key Stats</h3>
-            <div class="stat-line"><span data-i18n="detail.area">Land Area:</span> <strong id="stat-area"></strong></div>
-            <div class="stat-line"><span data-i18n="detail.population">Population:</span> <strong id="stat-pop"></strong></div>
-            <div class="stat-line"><span data-i18n="detail.group">Group:</span> <strong id="stat-group"></strong></div>
-            <div class="stat-line"><span data-i18n="detail.suggestedstay">Suggested stay:</span> <strong id="stat-days"></strong></div>
+            <h3 data-i18n="detail.keystats">Βασικά Στοιχεία</h3>
+            <div class="stat-line"><span data-i18n="detail.area">Έκταση:</span> <strong id="stat-area"></strong></div>
+            <div class="stat-line"><span data-i18n="detail.population">Πληθυσμός:</span> <strong id="stat-pop"></strong></div>
+            <div class="stat-line"><span data-i18n="detail.group">Ομάδα:</span> <strong id="stat-group"></strong></div>
+            <div class="stat-line"><span data-i18n="detail.suggestedstay">Συνιστώμενη παραμονή:</span> <strong id="stat-days"></strong></div>
           </div>
         </aside>
       </div>
     </div>
   </main>
 
-  <footer id="site-footer"><div class="footer-copy" data-i18n="footer.copyright">© 2026 Stergios Gousios · Aegean Blueprint</div><div class="footer-updated" id="footer-updated"></div></footer>
+  <footer id="site-footer"><div class="footer-copy" data-i18n="footer.copyright">© 2026 Στέργιος Γούσιος · Aegean Blueprint</div><div class="footer-updated" id="footer-updated"></div></footer>
 
   <!-- Floating action buttons (bottom-right) -->
-  <button id="help-btn" class="fab-btn fab-help" onclick="openHelp()" title="How to use this site" data-i18n-title="a11y.how_to_use" data-i18n="help.btn">❓ How to</button>
-  <button id="feedback-btn" class="fab-btn" onclick="openFeedback()" title="Send feedback" data-i18n-title="a11y.send_feedback" data-i18n="feedback.btn">💬 Feedback</button>
+  <button id="help-btn" class="fab-btn fab-help" onclick="openHelp()" title="Πώς να χρησιμοποιήσετε αυτόν τον ιστότοπο" data-i18n-title="a11y.how_to_use" data-i18n="help.btn">Οδηγίες</button>
+  <button id="feedback-btn" class="fab-btn" onclick="openFeedback()" title="Αποστολή σχολίων" data-i18n-title="a11y.send_feedback" data-i18n="feedback.btn">💬 Σχόλια</button>
 
   <!-- Feedback modal -->
   <div id="feedback-modal" class="feedback-modal" style="display:none;">
     <div class="feedback-content">
       <button class="feedback-close" onclick="closeFeedback()">×</button>
-      <h2 data-i18n="feedback.title">Got feedback?</h2>
-      <p data-i18n="feedback.intro">Spotted an error? Have a suggestion? Want to recommend an island, beach, or restaurant we should add? Tell us — we read everything.</p>
+      <h2 data-i18n="feedback.title">Θες να μας πεις κάτι;</h2>
+      <p data-i18n="feedback.intro">Είδες κάποιο λάθος; Έχεις πρόταση; Θέλεις να μας πεις για κάποιο νησί, παραλία ή εστιατόριο; Διαβάζουμε τα πάντα.</p>
       <form id="feedback-form" onsubmit="submitFeedback(event)">
         <label>
-          <span data-i18n="feedback.topic">What's this about?</span>
+          <span data-i18n="feedback.topic">Σχετικά με;</span>
           <select name="topic" required>
             <option value="suggestion" data-i18n="feedback.topic.suggestion">💡 Πρόταση ή ιδέα</option>
             <option value="error" data-i18n="feedback.topic.error">🐛 Λάθος ή διόρθωση</option>
@@ -575,8 +575,8 @@
           <span data-i18n="feedback.email">Το email σου (προαιρετικά)</span>
           <input type="email" name="email" placeholder="you@example.com" data-i18n-placeholder="feedback.email.placeholder">
         </label>
-        <button type="submit" class="feedback-submit" data-i18n="feedback.submit">Send via email</button>
-        <p class="feedback-note" data-i18n="feedback.note">This will open your email app with the message ready to send.</p>
+        <button type="submit" class="feedback-submit" data-i18n="feedback.submit">Αποστολή με email</button>
+        <p class="feedback-note" data-i18n="feedback.note">Θα ανοίξει η εφαρμογή email σου με το μήνυμα έτοιμο.</p>
       </form>
     </div>
   </div>
