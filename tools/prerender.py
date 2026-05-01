@@ -1368,7 +1368,7 @@ def generate_festivals_page(island_keys):
             '<link rel="alternate" hreflang="en" href="' + SITE_URL + '/festivals/">\n'
             '<link rel="alternate" hreflang="el" href="' + SITE_URL + '/el/festivals/">\n'
             '<link rel="alternate" hreflang="x-default" href="' + SITE_URL + '/festivals/">\n'
-            '<link rel="icon" href="' + ('../' if is_el else '') + 'logo.png">\n'
+            '<link rel="icon" href="/logo.png">\n'
             '<meta property="og:type" content="website">\n'
             '<meta property="og:title" content="' + esc(title) + '">\n'
             '<meta property="og:description" content="' + esc(intro[:155]) + '">\n'
@@ -1378,7 +1378,7 @@ def generate_festivals_page(island_keys):
             # Otherwise users who enabled dark mode on the home page would briefly
             # flash the light theme on this page. Tiny inline script — no JS file needed.
             '<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>\n'
-            '<link rel="stylesheet" href="' + ('../' if is_el else '') + 'style.css">\n'
+            '<link rel="stylesheet" href="/style.css">\n'
             '<style>\n'
             '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--sans, system-ui), sans-serif; margin: 0; }\n'
             '  .fest-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }\n'
