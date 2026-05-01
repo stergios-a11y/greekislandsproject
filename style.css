@@ -2072,10 +2072,33 @@ html.dark .whats-on-chip:hover { border-color: var(--aegean); }
 }
 .share-btn:hover { background: var(--aegean); color: #fff; }
 
-/* Table stars & bars */
+/* Score pills — replaces the old star ratings.
+   Numeric badge with color from scoreToColor() in script.js. More honest about
+   precision (0.1 resolution shown directly) and easier to scan in dense tables.
+   The color scale is the same 4-bucket palette used on map markers/tooltips. */
+.score-pill {
+  display: inline-block;
+  min-width: 32px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--ink-3);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: var(--text-meta);
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+.score-pill.score-empty {
+  background: transparent;
+  color: var(--ink-4);
+  font-weight: 400;
+}
+/* Legacy alias — kept so old call sites with .star-rating wrapping a pill still
+   look fine. Doesn't override anything; the inner .score-pill carries the visuals. */
 .star-rating {
   font-size: var(--text-meta);
-  letter-spacing: 1px;
   white-space: nowrap;
 }
 .table-bar-wrap {

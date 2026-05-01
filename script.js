@@ -824,7 +824,7 @@ function renderMapMarkers() {
         <div class="island-tooltip-inner">
           <div class="itt-name">${islandName(island.key)}</div>
           <div class="itt-meta">${groupName(island.island_group)} · ${fmtNum(island.area)} km²</div>
-          <div class="itt-overall">${t('tooltip.overall')}: <strong style="color:${scoreToColor(island.total)}">${fmt(island.total)} ★</strong></div>
+          <div class="itt-overall">${t('tooltip.overall')}: <strong style="color:${scoreToColor(island.total)}">${fmt(island.total)}</strong></div>
           <div class="itt-ratings">
             <div class="itt-rating-row"><span class="itt-rating-label">🏖️ ${t('dim.beach')}</span><span class="itt-rating-bar"><span class="itt-rating-fill itt-fill-beach" style="width:${(island.beach/5)*100}%"></span></span><span class="itt-rating-val">${fmt(island.beach)}</span></div>
             <div class="itt-rating-row"><span class="itt-rating-label">🏛️ ${t('dim.culture')}</span><span class="itt-rating-bar"><span class="itt-rating-fill itt-fill-hist" style="width:${(island.hist/5)*100}%"></span></span><span class="itt-rating-val">${fmt(island.hist)}</span></div>
@@ -1469,7 +1469,7 @@ function buildSimilarIslandsSection(key) {
     const score = (m.total || 0).toFixed(1);
     return `<a class="similar-card" href="#" onclick="navigateTo('island','${matchKey}');return false;">
       <div class="similar-card-name">${islandName(matchKey)}</div>
-      <div class="similar-card-score">★ ${score}</div>
+      <div class="similar-card-score">${scoreHtml(score)}</div>
       <div class="similar-card-reason">${reason}</div>
     </a>`;
   }).join('');
@@ -1931,18 +1931,19 @@ function initBeachVotes() {
 }
 
 function starsHtml(score) {
-  // Round to nearest 0.5
-  const rounded = Math.round(score * 2) / 2;
-  const full = Math.floor(rounded);
-  const half = rounded % 1 !== 0;
-  const empty = 5 - full - (half ? 1 : 0);
-  const isFiveStars = rounded >= 5;
-  const color = isFiveStars ? '#E8522A' : '#C4962A';
-  let html = '';
-  for (let i = 0; i < full; i++) html += `<span style="color:${color}">★</span>`;
-  if (half) html += `<span style="color:${color}">½</span>`;
-  for (let i = 0; i < empty; i++) html += `<span style="color:#DDD">★</span>`;
-  return `<span class="star-rating" title="${score}">${html}</span>`;
+  // Legacy name (still called from many places). Now renders a colored number
+  // badge instead of star icons. The number is more honest about precision —
+  // your data has 0.1 resolution and stars rounded to 0.5 was throwing it away.
+  return scoreHtml(score);
+}
+
+function scoreHtml(score) {
+  // Compact colored badge showing the actual numeric score with 1-decimal precision.
+  // Color comes from scoreToColor() — same 4-bucket scale used in tooltips, map markers,
+  // and elsewhere, so the visual language is consistent across the site.
+  if (score == null || isNaN(score)) return '<span class="score-pill score-empty">—</span>';
+  const color = scoreToColor(score);
+  return `<span class="score-pill" style="background:${color}" title="${fmt(score)} / 5">${fmt(score)}</span>`;
 }
 
 const MAX_AREA = 2641; // Crete (Heraklion prefecture) — largest single entry
