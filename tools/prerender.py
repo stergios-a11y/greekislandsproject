@@ -1420,7 +1420,10 @@ def generate_festivals_page(island_keys):
             '      <img src="/logo-hero.svg" id="site-logo" alt="Aegean Blueprint logo">\n'
             '      <span id="brand-text"><span class="brand-word">Aegean</span> <span class="brand-word">Blueprint</span></span>\n'
             '    </a>\n'
-            '    <nav class="top-nav">\n'
+            # Hamburger — needed for mobile, since style.css hides .top-nav under 860px.
+            # Without it the nav disappears with no way to open it. JS handler below.
+            '    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>\n'
+            '    <nav class="top-nav" id="main-nav">\n'
             '      <a href="/' + ('el/' if is_el else '') + '">' + ('Χάρτης' if is_el else 'Map') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#data">' + ('Στοιχεία Νησιών' if is_el else 'Islands Data') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#compare">' + ('Σύγκριση' if is_el else 'Compare') + '</a>\n'
@@ -1433,6 +1436,20 @@ def generate_festivals_page(island_keys):
             '<span style="margin-right: 4px;">🌐</span>' + ('EN' if is_el else 'EL') + '</a>\n'
             '  </div>\n'
             '</header>\n'
+            # Tiny inline script to wire the hamburger. Mirrors the toggleMenu() function
+            # in script.js so the festivals page works without loading the full SPA bundle.
+            '<script>\n'
+            '  (function(){\n'
+            '    var btn = document.getElementById("menu-toggle-btn");\n'
+            '    var nav = document.getElementById("main-nav");\n'
+            '    if (btn && nav) {\n'
+            '      btn.addEventListener("click", function(){\n'
+            '        nav.classList.toggle("open");\n'
+            '        btn.classList.toggle("open");\n'
+            '      });\n'
+            '    }\n'
+            '  })();\n'
+            '</script>\n'
             '<main class="fest-page">\n'
             '  <h1>' + h1 + '</h1>\n'
             '  <p class="fest-intro">' + esc(intro) + '</p>\n'
