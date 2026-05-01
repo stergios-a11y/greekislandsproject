@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Lefkada Town",
-            "lat": 38.8333,
-            "lng": 20.705,
+            "lat": 38.8334,
+            "lng": 20.7069,
             "type": "city",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Lefkada",
@@ -96,8 +96,8 @@
           },
           {
             "name": "Santa Maura Fortress",
-            "lat": 38.8383,
-            "lng": 20.6967,
+            "lat": 38.8445,
+            "lng": 20.7204,
             "type": "castle",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Santa_Maura_Castle",
@@ -120,8 +120,8 @@
           },
           {
             "name": "Agios Nikitas",
-            "lat": 38.7667,
-            "lng": 20.645,
+            "lat": 38.7894,
+            "lng": 20.6132,
             "type": "village",
             "time": "13:30",
             "wiki": null,
@@ -139,8 +139,8 @@
           },
           {
             "name": "Kathisma Beach",
-            "lat": 38.7361,
-            "lng": 20.6297,
+            "lat": 38.7768,
+            "lng": 20.6002,
             "type": "beach",
             "time": "16:00",
             "wiki": null,
@@ -155,6 +155,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Kathisma_beach,_lefkada_pic2.JPG",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Nydri",
+            "lat": 38.71,
+            "lng": 20.7141,
+            "type": "village",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "About 25-minute drive across the island via Karya. Try Taverna Pyrofani by the waterfront for fresh fish, or Minas for a more elaborate meal.",
+            "desc_el": "Διαδρομή ~25 λεπτά μέσα από το νησί μέσω Καρυάς. Δοκίμασε στην ταβέρνα Πυροφάνι στην παραλία για φρέσκο ψάρι, ή στο Μηνά για κάτι πιο σύνθετο.",
+            "name_el": "Επιστροφή στο Νυδρί"
           }
         ],
         "title_el": "Χώρα Λευκάδας & η Λιμνοθάλασσα",
@@ -170,8 +181,8 @@
         "stops": [
           {
             "name": "Nydri",
-            "lat": 38.7233,
-            "lng": 20.7017,
+            "lat": 38.71,
+            "lng": 20.7141,
             "type": "harbour",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Nydri",
@@ -189,8 +200,8 @@
           },
           {
             "name": "Skorpios Island Cruise",
-            "lat": 38.6883,
-            "lng": 20.745,
+            "lat": 38.6915,
+            "lng": 20.7435,
             "type": "nature",
             "time": "10:30",
             "wiki": "https://en.wikipedia.org/wiki/Skorpios",
@@ -202,8 +213,8 @@
           },
           {
             "name": "Meganisi Island",
-            "lat": 38.6433,
-            "lng": 20.7833,
+            "lat": 38.6506,
+            "lng": 20.754,
             "type": "village",
             "time": "13:00",
             "wiki": "https://en.wikipedia.org/wiki/Meganisi",
@@ -221,8 +232,8 @@
           },
           {
             "name": "Vassiliki",
-            "lat": 38.6317,
-            "lng": 20.61,
+            "lat": 38.6287,
+            "lng": 20.609,
             "type": "harbour",
             "time": "17:00",
             "wiki": "https://en.wikipedia.org/wiki/Vassiliki,_Lefkada",
@@ -237,6 +248,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Vasiliki,_Lefkada_2_-_panoramio.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Nydri",
+            "lat": 38.71,
+            "lng": 20.7141,
+            "type": "village",
+            "time": "19:30",
+            "wiki": null,
+            "desc": "20-minute drive back along the east coast — the road from Vassiliki to Nydri is one of the prettiest on the island, especially at sunset. Drinks at the harbour at Sapfo.",
+            "desc_el": "20 λεπτά οδήγηση πίσω κατά μήκος της ανατολικής ακτής — ο δρόμος από τη Βασιλική στο Νυδρί είναι από τους πιο γραφικούς του νησιού, ειδικά στο ηλιοβασίλεμα. Ποτά στο λιμάνι στη Σαπφώ.",
+            "name_el": "Επιστροφή στο Νυδρί"
           }
         ],
         "title_el": "Νυδρί & η Ανατολική Ακτή",
@@ -252,8 +274,8 @@
         "stops": [
           {
             "name": "Egremni Beach",
-            "lat": 38.6167,
-            "lng": 20.5975,
+            "lat": 38.6375,
+            "lng": 20.5584,
             "type": "beach",
             "time": "09:30",
             "wiki": null,
@@ -265,8 +287,8 @@
           },
           {
             "name": "Porto Katsiki",
-            "lat": 38.6128,
-            "lng": 20.5811,
+            "lat": 38.6012,
+            "lng": 20.5503,
             "type": "beach",
             "time": "12:00",
             "wiki": "https://en.wikipedia.org/wiki/Porto_Katsiki",
@@ -284,8 +306,8 @@
           },
           {
             "name": "Athani Village",
-            "lat": 38.6167,
-            "lng": 20.6333,
+            "lat": 38.6652,
+            "lng": 20.5717,
             "type": "village",
             "time": "15:00",
             "wiki": null,
@@ -297,8 +319,8 @@
           },
           {
             "name": "Cape Lefkatas",
-            "lat": 38.5683,
-            "lng": 20.535,
+            "lat": 38.5638,
+            "lng": 20.5424,
             "type": "nature",
             "time": "17:30",
             "wiki": "https://en.wikipedia.org/wiki/Cape_Lefkatas",
@@ -313,6 +335,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Most_south_and_west_point_of_Lefkada_island,_near_Apollo_temple,_pic6.JPG",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Nydri",
+            "lat": 38.71,
+            "lng": 20.7141,
+            "type": "village",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "About 50 minutes back via Vassiliki and the east coast. Long but spectacular drive — stop at any taverna along the way if you're hungry. Late dinner at Ta Kalamia in Nydri.",
+            "desc_el": "Περίπου 50 λεπτά πίσω μέσω Βασιλικής και ανατολικής ακτής. Μακρύς αλλά υπέροχος δρόμος — σταμάτα σε όποια ταβέρνα θέλεις στο δρόμο. Αργό δείπνο στα Καλάμια στο Νυδρί.",
+            "name_el": "Επιστροφή στο Νυδρί"
           }
         ],
         "title_el": "Πόρτο Κατσίκι & Εγκρεμνοί",
@@ -328,8 +361,8 @@
         "stops": [
           {
             "name": "Poros Beach",
-            "lat": 38.665,
-            "lng": 20.6083,
+            "lat": 38.641,
+            "lng": 20.6969,
             "type": "beach",
             "time": "09:30",
             "wiki": null,
@@ -341,8 +374,8 @@
           },
           {
             "name": "Gialos Beach",
-            "lat": 38.695,
-            "lng": 20.6133,
+            "lat": 38.671,
+            "lng": 20.5571,
             "type": "beach",
             "time": "11:00",
             "wiki": null,
@@ -354,8 +387,8 @@
           },
           {
             "name": "Agios Petros Village",
-            "lat": 38.7483,
-            "lng": 20.6633,
+            "lat": 38.6664,
+            "lng": 20.6018,
             "type": "village",
             "time": "13:00",
             "wiki": null,
@@ -367,8 +400,8 @@
           },
           {
             "name": "Lefkada Town — Departure",
-            "lat": 38.8333,
-            "lng": 20.705,
+            "lat": 38.8334,
+            "lng": 20.7069,
             "type": "city",
             "time": "15:30",
             "wiki": null,

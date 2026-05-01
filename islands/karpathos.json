@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Pigadia",
-            "lat": 35.5092,
-            "lng": 27.2147,
+            "lat": 35.5067,
+            "lng": 27.2129,
             "type": "city",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Pigadia",
@@ -102,8 +102,8 @@
           },
           {
             "name": "Archaeological Museum",
-            "lat": 35.5083,
-            "lng": 27.2133,
+            "lat": 35.5087,
+            "lng": 27.2115,
             "type": "museum",
             "time": "10:00",
             "wiki": null,
@@ -121,8 +121,8 @@
           },
           {
             "name": "Amopi Beach",
-            "lat": 35.4789,
-            "lng": 27.2139,
+            "lat": 35.4791,
+            "lng": 27.1976,
             "type": "beach",
             "time": "12:30",
             "wiki": null,
@@ -132,8 +132,8 @@
           },
           {
             "name": "Kyra Panagia",
-            "lat": 35.6214,
-            "lng": 27.1814,
+            "lat": 35.5874,
+            "lng": 27.1782,
             "type": "beach",
             "time": "15:30",
             "wiki": null,
@@ -148,6 +148,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Kira_Panagia_-_Marienkapelle-1.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Pigadia",
+            "lat": 35.5067,
+            "lng": 27.2129,
+            "type": "city",
+            "time": "19:30",
+            "wiki": null,
+            "desc": "About 30 minutes south back to Pigadia — the road traces the east coast with constant sea views. Dinner on the seafront promenade at Akropolis or To Helliniko.",
+            "desc_el": "Περίπου 30 λεπτά νότια πίσω στα Πηγάδια — ο δρόμος ακολουθεί την ανατολική ακτή με συνεχή θέα στη θάλασσα. Δείπνο στην παραλιακή στην Ακρόπολη ή στο Ελληνικό.",
+            "name_el": "Επιστροφή στα Πηγάδια"
           }
         ],
         "title_el": "Πηγάδια & οι Κοντινές Παραλίες",
@@ -163,8 +174,8 @@
         "stops": [
           {
             "name": "Apella Beach",
-            "lat": 35.6067,
-            "lng": 27.1783,
+            "lat": 35.6025,
+            "lng": 27.1589,
             "type": "beach",
             "time": "10:00",
             "wiki": null,
@@ -182,8 +193,8 @@
           },
           {
             "name": "Achata Beach",
-            "lat": 35.5858,
-            "lng": 27.1889,
+            "lat": 35.5571,
+            "lng": 27.2036,
             "type": "beach",
             "time": "13:00",
             "wiki": null,
@@ -201,14 +212,25 @@
           },
           {
             "name": "Othos Village",
-            "lat": 35.5647,
-            "lng": 27.1656,
+            "lat": 35.5436,
+            "lng": 27.1511,
             "type": "village",
             "time": "15:30",
             "wiki": null,
             "desc": "Highest village on the island — traditional mountain settlement with the best wine on Karpathos (sweet, dark red). Several tavernas offer wine tastings.",
             "name_el": "Χωριό Όθος",
             "desc_el": "Το πιο ψηλό χωριό του νησιού — παραδοσιακός ορεινός οικισμός με το καλύτερο κρασί της Καρπάθου (γλυκό, σκούρο κόκκινο). Πολλές ταβέρνες προσφέρουν γευσιγνωσίες κρασιού."
+          },
+          {
+            "name": "Return to Pigadia",
+            "lat": 35.5067,
+            "lng": 27.2129,
+            "type": "city",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "Quick 15-minute drive back down to Pigadia — Othos sits in the central spine of the island, so it's downhill all the way. Drinks at Enplo before dinner.",
+            "desc_el": "Γρήγορη 15λεπτη διαδρομή κάτω στα Πηγάδια — η Όθος είναι στον ορεινό άξονα του νησιού, οπότε ο δρόμος είναι κατηφορικός. Ποτό στο Έμπλο πριν το δείπνο.",
+            "name_el": "Επιστροφή στα Πηγάδια"
           }
         ],
         "title_el": "Άπελλα & η Ανατολική Ακτή",
@@ -235,8 +257,8 @@
           },
           {
             "name": "Olympos Village",
-            "lat": 35.7228,
-            "lng": 27.1886,
+            "lat": 35.7407,
+            "lng": 27.1733,
             "type": "village",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Olympos,_Karpathos",
@@ -265,8 +287,8 @@
           },
           {
             "name": "Diafani Harbour",
-            "lat": 35.7383,
-            "lng": 27.205,
+            "lat": 35.7565,
+            "lng": 27.2096,
             "type": "harbour",
             "time": "16:00",
             "wiki": null,
@@ -281,6 +303,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Diafani,_Karpathos,_GRE.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Pigadia",
+            "lat": 35.5067,
+            "lng": 27.2129,
+            "type": "city",
+            "time": "21:00",
+            "wiki": null,
+            "desc": "Long drive — about 1h15min back to Pigadia along the mountain road. Many travellers prefer to overnight in Diafani or Olympos after the day in the north and continue the next morning. If you do drive back, late dinner at To Limanaki on the harbour.",
+            "desc_el": "Μακρύς δρόμος — περίπου 1ω15λ πίσω στα Πηγάδια από τον ορεινό δρόμο. Πολλοί ταξιδιώτες προτιμούν να μείνουν στο Διαφάνι ή την Όλυμπο μετά την ημέρα στον βορρά και να επιστρέψουν το πρωί. Αν επιστρέψεις, αργό δείπνο στο Λιμανάκι στο λιμάνι.",
+            "name_el": "Επιστροφή στα Πηγάδια"
           }
         ],
         "title_el": "Όλυμπος — Ο Παραδοσιακός Βορράς",
@@ -296,8 +329,8 @@
         "stops": [
           {
             "name": "Saria Island Boat Trip",
-            "lat": 35.84,
-            "lng": 27.2267,
+            "lat": 35.8635,
+            "lng": 27.2147,
             "type": "nature",
             "time": "09:30",
             "wiki": null,
@@ -307,8 +340,8 @@
           },
           {
             "name": "Arkassa Beach",
-            "lat": 35.5069,
-            "lng": 27.1156,
+            "lat": 35.4779,
+            "lng": 27.1208,
             "type": "beach",
             "time": "14:00",
             "wiki": null,
@@ -318,8 +351,8 @@
           },
           {
             "name": "Karpathos Airport/Port — Departure",
-            "lat": 35.42,
-            "lng": 27.1467,
+            "lat": 35.427,
+            "lng": 27.1488,
             "type": "harbour",
             "time": "17:30",
             "wiki": null,

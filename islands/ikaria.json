@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Agios Kirykos",
-            "lat": 37.6233,
-            "lng": 26.2733,
+            "lat": 37.6116,
+            "lng": 26.2914,
             "type": "city",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Agios_Kirykos",
@@ -102,8 +102,8 @@
           },
           {
             "name": "Therma Hot Springs",
-            "lat": 37.6283,
-            "lng": 26.265,
+            "lat": 37.6217,
+            "lng": 26.3056,
             "type": "spa",
             "time": "11:30",
             "wiki": null,
@@ -121,8 +121,8 @@
           },
           {
             "name": "Faros Beach",
-            "lat": 37.61,
-            "lng": 26.2867,
+            "lat": 37.6728,
+            "lng": 26.3498,
             "type": "beach",
             "time": "14:30",
             "wiki": null,
@@ -148,6 +148,17 @@
             "desc": "The port comes alive late — Ikarians eat dinner at 22:00, socialise until 02:00 and sleep late. Join the rhythm rather than fight it.",
             "name_el": "Βραδιά στο Λιμάνι",
             "desc_el": "Το λιμάνι ζωντανεύει αργά — οι Ικαριώτες δειπνούν στις 22:00, κοινωνικοποιούνται ως τις 02:00 και κοιμούνται αργά. Μπες στον ρυθμό αντί να πολεμάς."
+          },
+          {
+            "name": "Drive to Evdilos",
+            "lat": 37.5983,
+            "lng": 26.1478,
+            "type": "village",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "About 1 hour west across the spine of Ikaria — winding mountain roads, but the views are worth it. Settle in for the night in Evdilos before tomorrow's hike base.",
+            "desc_el": "Περίπου 1 ώρα δυτικά μέσα από τον ορεινό όγκο της Ικαρίας — δρόμοι με στροφές αλλά αξίζει η θέα. Διανυκτέρευση στον Εύδηλο πριν το αυριανό ορμητήριο πεζοπορίας.",
+            "name_el": "Διαδρομή προς Εύδηλο"
           }
         ],
         "title_el": "Άγιος Κήρυκος & τα Ιαματικά Λουτρά",
@@ -163,8 +174,8 @@
         "stops": [
           {
             "name": "Christos Raches",
-            "lat": 37.6167,
-            "lng": 26.1367,
+            "lat": 37.601,
+            "lng": 26.0808,
             "type": "village",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Christos_Raches",
@@ -182,8 +193,8 @@
           },
           {
             "name": "Langada Gorge",
-            "lat": 37.6083,
-            "lng": 26.105,
+            "lat": 37.618,
+            "lng": 26.0625,
             "type": "nature",
             "time": "13:00",
             "wiki": null,
@@ -193,8 +204,8 @@
           },
           {
             "name": "Nas Beach",
-            "lat": 37.6383,
-            "lng": 26.0633,
+            "lat": 37.6223,
+            "lng": 26.0592,
             "type": "beach",
             "time": "15:30",
             "wiki": "https://en.wikipedia.org/wiki/Nas,_Ikaria",
@@ -212,8 +223,8 @@
           },
           {
             "name": "Armenistis",
-            "lat": 37.64,
-            "lng": 26.0867,
+            "lat": 37.6341,
+            "lng": 26.0878,
             "type": "harbour",
             "time": "18:00",
             "wiki": null,
@@ -243,8 +254,8 @@
         "stops": [
           {
             "name": "Livadi Beach",
-            "lat": 37.6417,
-            "lng": 26.09,
+            "lat": 37.6309,
+            "lng": 26.0915,
             "type": "beach",
             "time": "10:00",
             "wiki": null,
@@ -262,8 +273,8 @@
           },
           {
             "name": "Messakti Beach",
-            "lat": 37.6433,
-            "lng": 26.1033,
+            "lat": 37.6299,
+            "lng": 26.0974,
             "type": "beach",
             "time": "12:00",
             "wiki": null,
@@ -281,8 +292,8 @@
           },
           {
             "name": "Evdilos",
-            "lat": 37.6583,
-            "lng": 26.1783,
+            "lat": 37.5983,
+            "lng": 26.1478,
             "type": "harbour",
             "time": "16:00",
             "wiki": "https://en.wikipedia.org/wiki/Evdilos",
@@ -312,8 +323,8 @@
         "stops": [
           {
             "name": "Ikarian Wine Tasting",
-            "lat": 37.6167,
-            "lng": 26.1367,
+            "lat": 37.6209,
+            "lng": 26.1427,
             "type": "distillery",
             "time": "10:00",
             "wiki": null,
@@ -323,8 +334,8 @@
           },
           {
             "name": "Seychelles Beach",
-            "lat": 37.615,
-            "lng": 26.2117,
+            "lat": 37.5594,
+            "lng": 26.1405,
             "type": "beach",
             "time": "12:30",
             "wiki": null,
@@ -342,8 +353,8 @@
           },
           {
             "name": "Agios Kirykos — Departure",
-            "lat": 37.6233,
-            "lng": 26.2733,
+            "lat": 37.6116,
+            "lng": 26.2914,
             "type": "harbour",
             "time": "17:00",
             "wiki": null,
