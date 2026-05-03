@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Agios Kirykos",
-            "lat": 37.6233,
-            "lng": 26.2733,
+            "lat": 37.6115518,
+            "lng": 26.2914441,
             "type": "city",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Agios_Kirykos",
@@ -102,8 +102,8 @@
           },
           {
             "name": "Therma Hot Springs",
-            "lat": 37.6283,
-            "lng": 26.265,
+            "lat": 37.6217135,
+            "lng": 26.3055852,
             "type": "spa",
             "time": "11:30",
             "wiki": null,
@@ -163,8 +163,8 @@
         "stops": [
           {
             "name": "Christos Raches",
-            "lat": 37.6167,
-            "lng": 26.1367,
+            "lat": 37.6009709,
+            "lng": 26.0808311,
             "type": "village",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Christos_Raches",
@@ -193,8 +193,8 @@
           },
           {
             "name": "Nas Beach",
-            "lat": 37.6383,
-            "lng": 26.0633,
+            "lat": 37.622253,
+            "lng": 26.0592128,
             "type": "beach",
             "time": "15:30",
             "wiki": "https://en.wikipedia.org/wiki/Nas,_Ikaria",
@@ -212,8 +212,8 @@
           },
           {
             "name": "Armenistis",
-            "lat": 37.64,
-            "lng": 26.0867,
+            "lat": 37.6341257,
+            "lng": 26.0877789,
             "type": "harbour",
             "time": "18:00",
             "wiki": null,
@@ -228,6 +228,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Armenistis_Ikaria.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Evdilos",
+            "lat": 37.6583,
+            "lng": 26.1783,
+            "type": "city",
+            "time": "21:00",
+            "wiki": null,
+            "desc": "Drive back from Armenistis to Evdilos (about 25 minutes). Ikaria's legendary panigyria (village festivals) often go all night — ask locals if one is on while you're visiting.",
+            "name_el": "Επιστροφή στον Εύδηλο",
+            "desc_el": "Επιστροφή από τον Αρμενιστή στον Εύδηλο (περίπου 25 λεπτά). Τα θρυλικά πανηγύρια της Ικαρίας συχνά κρατούν όλη τη νύχτα — ρώτα τους ντόπιους αν έχει κάποιο όσο είσαι εκεί."
           }
         ],
         "title_el": "Ορεινά Χωριά της Ραχής",
@@ -243,8 +254,8 @@
         "stops": [
           {
             "name": "Livadi Beach",
-            "lat": 37.6417,
-            "lng": 26.09,
+            "lat": 37.6309221,
+            "lng": 26.0914841,
             "type": "beach",
             "time": "10:00",
             "wiki": null,
@@ -323,8 +334,8 @@
           },
           {
             "name": "Seychelles Beach",
-            "lat": 37.615,
-            "lng": 26.2117,
+            "lat": 37.5593625,
+            "lng": 26.1405066,
             "type": "beach",
             "time": "12:30",
             "wiki": null,
@@ -342,8 +353,8 @@
           },
           {
             "name": "Agios Kirykos — Departure",
-            "lat": 37.6233,
-            "lng": 26.2733,
+            "lat": 37.6115518,
+            "lng": 26.2914441,
             "type": "harbour",
             "time": "17:00",
             "wiki": null,
@@ -370,8 +381,8 @@
       "facilities": "Basic: one taverna. Ancient ruins of Artemis temple at the river mouth. No sunbeds.",
       "desc": "The most atmospheric beach in the eastern Aegean — a river flows through 2500-year-old ruins of the Temple of Artemis and into the sea at a wild pebble cove. Swim in the river pool above the beach to avoid the current at the sea entrance. Unforgettable.",
       "commons": null,
-      "lat": 37.6383,
-      "lng": 26.0633,
+      "lat": 37.622253,
+      "lng": 26.0592128,
       "name_el": "Παραλία Νας",
       "type_el": "Βότσαλα στην εκβολή ποταμού",
       "depth_el": "Μέτρια — διαυγή νερά",
@@ -398,8 +409,8 @@
       "facilities": "Good: sunbeds, beach bar, tavernas nearby. Best organised beach on the north coast.",
       "desc": "The best accessible beach on Ikaria — long sandy north-coast beach below Armenistis. Clear water, organised facilities and the relaxed Ikarian atmosphere. Afternoon winds make it good for those who like a bit of wave.",
       "commons": null,
-      "lat": 37.6417,
-      "lng": 26.09,
+      "lat": 37.6309221,
+      "lng": 26.0914841,
       "name_el": "Παραλία Λιβάδι",
       "type_el": "Λεπτή χρυσή άμμος",
       "depth_el": "Σταδιακή — οικογενειακή",
@@ -426,8 +437,8 @@
       "facilities": "None — foot or boat access only.",
       "desc": "A remote cove in the south named for the Caribbean clarity of its water. The effort required to reach it keeps it almost deserted. One of the hidden gems of the eastern Aegean.",
       "commons": null,
-      "lat": 37.615,
-      "lng": 26.2117,
+      "lat": 37.5593625,
+      "lng": 26.1405066,
       "name_el": "Παραλία Σεϋχέλλες",
       "type_el": "Λευκά λεία βότσαλα",
       "depth_el": "Βαθιά — κρυστάλλινα τιρκουάζ νερά",

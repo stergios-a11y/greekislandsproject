@@ -132,8 +132,8 @@
           },
           {
             "name": "Kyra Panagia",
-            "lat": 35.6214,
-            "lng": 27.1814,
+            "lat": 35.5874085,
+            "lng": 27.1782168,
             "type": "beach",
             "time": "15:30",
             "wiki": null,
@@ -148,6 +148,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Kira_Panagia_-_Marienkapelle-1.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Pigadia",
+            "lat": 35.5097,
+            "lng": 27.2153,
+            "type": "harbour",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Drive back to Pigadia from the east coast (about 25 minutes from Kyra Panagia). The waterfront tavernas in town are the social hub in the evening — fresh fish off the boats, shaded tables.",
+            "name_el": "Επιστροφή στα Πηγάδια",
+            "desc_el": "Επιστροφή στα Πηγάδια από την ανατολική ακτή (περίπου 25 λεπτά από την Κυρά Παναγιά). Οι ταβέρνες της προκυμαίας είναι το κοινωνικό κέντρο το βράδυ — φρέσκα ψάρια από τα καΐκια, σκιερά τραπέζια."
           }
         ],
         "title_el": "Πηγάδια & οι Κοντινές Παραλίες",
@@ -163,8 +174,8 @@
         "stops": [
           {
             "name": "Apella Beach",
-            "lat": 35.6067,
-            "lng": 27.1783,
+            "lat": 35.6025048,
+            "lng": 27.1589209,
             "type": "beach",
             "time": "10:00",
             "wiki": null,
@@ -182,8 +193,8 @@
           },
           {
             "name": "Achata Beach",
-            "lat": 35.5858,
-            "lng": 27.1889,
+            "lat": 35.5571366,
+            "lng": 27.2035795,
             "type": "beach",
             "time": "13:00",
             "wiki": null,
@@ -201,14 +212,25 @@
           },
           {
             "name": "Othos Village",
-            "lat": 35.5647,
-            "lng": 27.1656,
+            "lat": 35.5436086,
+            "lng": 27.1510533,
             "type": "village",
             "time": "15:30",
             "wiki": null,
             "desc": "Highest village on the island — traditional mountain settlement with the best wine on Karpathos (sweet, dark red). Several tavernas offer wine tastings.",
             "name_el": "Χωριό Όθος",
             "desc_el": "Το πιο ψηλό χωριό του νησιού — παραδοσιακός ορεινός οικισμός με το καλύτερο κρασί της Καρπάθου (γλυκό, σκούρο κόκκινο). Πολλές ταβέρνες προσφέρουν γευσιγνωσίες κρασιού."
+          },
+          {
+            "name": "Return to Pigadia",
+            "lat": 35.5097,
+            "lng": 27.2153,
+            "type": "harbour",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "Drive back down from the mountain villages to Pigadia (about 30 minutes from Othos). The cobbled descent through the pine forest is part of the experience.",
+            "name_el": "Επιστροφή στα Πηγάδια",
+            "desc_el": "Επιστροφή από τα ορεινά χωριά στα Πηγάδια (περίπου 30 λεπτά από το Όθος). Η πλακόστρωτη κάθοδος μέσα από το πευκοδάσος είναι μέρος της εμπειρίας."
           }
         ],
         "title_el": "Άπελλα & η Ανατολική Ακτή",
@@ -235,8 +257,8 @@
           },
           {
             "name": "Olympos Village",
-            "lat": 35.7228,
-            "lng": 27.1886,
+            "lat": 35.7406819,
+            "lng": 27.1733129,
             "type": "village",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Olympos,_Karpathos",
@@ -265,8 +287,8 @@
           },
           {
             "name": "Diafani Harbour",
-            "lat": 35.7383,
-            "lng": 27.205,
+            "lat": 35.7564848,
+            "lng": 27.2096146,
             "type": "harbour",
             "time": "16:00",
             "wiki": null,
@@ -281,6 +303,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Diafani,_Karpathos,_GRE.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Return to Pigadia",
+            "lat": 35.5097,
+            "lng": 27.2153,
+            "type": "harbour",
+            "time": "21:30",
+            "wiki": null,
+            "desc": "Long drive back from the north (about 1.5 hours from Diafani). The road winds through Spoa and the coastal villages — late afternoon light is spectacular over the Aegean. Most people stop at Apella viewpoint on the way down.",
+            "name_el": "Επιστροφή στα Πηγάδια",
+            "desc_el": "Μεγάλη διαδρομή επιστροφής από τα βόρεια (περίπου 1,5 ώρα από το Διαφάνι). Ο δρόμος ελίσσεται μέσω της Σπόας και των παράκτιων χωριών — το απογευματινό φως είναι εντυπωσιακό πάνω από το Αιγαίο. Οι περισσότεροι σταματούν στο μπαλκόνι της Απέλλας στην επιστροφή."
           }
         ],
         "title_el": "Όλυμπος — Ο Παραδοσιακός Βορράς",
@@ -318,8 +351,8 @@
           },
           {
             "name": "Karpathos Airport/Port — Departure",
-            "lat": 35.42,
-            "lng": 27.1467,
+            "lat": 35.5097144,
+            "lng": 27.2153333,
             "type": "harbour",
             "time": "17:30",
             "wiki": null,
@@ -346,8 +379,8 @@
       "facilities": "Basic: one small taverna, limited sunbeds. Short walk from the road.",
       "desc": "Consistently ranked among the finest beaches in the Aegean — white pebbles and electric turquoise water in a sheltered cove below pine-covered cliffs. The view from the road above before descending is as dramatic as Myrtos on Kefalonia. Quieter than any comparable beach in the Cyclades.",
       "commons": null,
-      "lat": 35.6067,
-      "lng": 27.1783,
+      "lat": 35.6025048,
+      "lng": 27.1589209,
       "name_el": "Παραλία Άπελλα",
       "desc_el": "Σταθερά κατατάσσεται μεταξύ των καλύτερων παραλιών του Αιγαίου — λευκά βότσαλα και ηλεκτρικό τιρκουάζ νερό σε προστατευμένο κόλπο κάτω από πευκοκαλυμμένα βράχια. Η θέα από τον δρόμο πριν κατέβεις είναι το ίδιο δραματική με τον Μύρτο στην Κεφαλονιά. Πιο ήσυχη από κάθε συγκρίσιμη παραλία των Κυκλάδων.",
       "type_el": "Λευκό βότσαλο",
@@ -374,8 +407,8 @@
       "facilities": "Basic: one small taverna, chapel above the beach.",
       "desc": "One of the most beautiful beaches in the Aegean — a small sandy-pebble cove beneath sheer green-covered cliffs, with a whitewashed chapel on the rocks. The water colour is extraordinary. Accessible by a steep drive or by boat from Pigadia.",
       "commons": null,
-      "lat": 35.6214,
-      "lng": 27.1814,
+      "lat": 35.5874085,
+      "lng": 27.1782168,
       "name_el": "Παραλία Κυρά Παναγιά",
       "desc_el": "Μία από τις ομορφότερες παραλίες του Αιγαίου — ένας μικρός αμμώδης-βότσαλος κόλπος κάτω από κάθετα πρασινοσκεπασμένα βράχια, με ένα ασβεστωμένο εκκλησάκι στους βράχους. Το χρώμα των νερών είναι εξαιρετικό. Προσβάσιμη με απότομη διαδρομή ή με βάρκα από τα Πηγάδια.",
       "type_el": "Λεπτό λευκό βότσαλο",
@@ -402,8 +435,8 @@
       "facilities": "Basic: small snack bar, limited sunbeds.",
       "desc": "A beautiful sheltered cove on the east coast with white pebbles and remarkably green-tinted water. Combines perfectly with Apella and Kyra Panagia for a day's east-coast beach tour. Much quieter than the more famous beaches.",
       "commons": null,
-      "lat": 35.5858,
-      "lng": 27.1889,
+      "lat": 35.5571366,
+      "lng": 27.2035795,
       "name_el": "Παραλία Άχατα",
       "desc_el": "Ένας όμορφος προστατευμένος κόλπος στην ανατολική ακτή με λευκά βότσαλα και αξιοσημείωτα πράσινα νερά. Συνδυάζεται τέλεια με την Άπελλα και την Κυρά Παναγιά για μια ημέρα περιήγησης παραλιών ανατολικής ακτής. Πολύ πιο ήσυχη από τις πιο διάσημες παραλίες.",
       "type_el": "Λευκό βότσαλο και άμμος",

@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Patitiri",
-            "lat": 39.1533,
-            "lng": 23.8667,
+            "lat": 39.144426,
+            "lng": 23.865507,
             "type": "harbour",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Patitiri",
@@ -102,8 +102,8 @@
           },
           {
             "name": "Chora (Old Village)",
-            "lat": 39.165,
-            "lng": 23.8567,
+            "lat": 39.149806,
+            "lng": 23.843922,
             "type": "village",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Alonnisos",
@@ -149,8 +149,8 @@
         "stops": [
           {
             "name": "Patitiri — Boat Departure",
-            "lat": 39.1533,
-            "lng": 23.8667,
+            "lat": 39.144426,
+            "lng": 23.865507,
             "type": "harbour",
             "time": "09:30",
             "wiki": null,
@@ -202,6 +202,17 @@
             "desc_el": "Τα νερά γύρω από την Αλόννησο έχουν τη μεγαλύτερη συγκέντρωση μεσογειακών φωκιών στον κόσμο — περίπου 40 άτομα. Υπομονετικοί καπετάνιοι συχνά τις εντοπίζουν το απομεσήμερο.",
             "photo": "",
             "photo_credit": null
+          },
+          {
+            "name": "Return to Patitiri",
+            "lat": 39.1444,
+            "lng": 23.8655,
+            "type": "harbour",
+            "time": "17:30",
+            "wiki": null,
+            "desc": "Boat returns to Patitiri Port in late afternoon (about 90 min from the marine park area). The harbour fills up at dinner time — Patitiri's fish tavernas are some of the best in the Sporades.",
+            "name_el": "Επιστροφή στο Πατητήρι",
+            "desc_el": "Το σκάφος επιστρέφει στο λιμάνι Πατητηρίου αργά το απόγευμα (περίπου 90 λεπτά από την περιοχή του θαλάσσιου πάρκου). Το λιμάνι γεμίζει την ώρα του δείπνου — οι ψαροταβέρνες του Πατητηρίου είναι από τις καλύτερες στις Σποράδες."
           }
         ],
         "title_el": "Εκδρομή στο Θαλάσσιο Πάρκο",
@@ -217,8 +228,8 @@
         "stops": [
           {
             "name": "Agios Dimitrios Beach",
-            "lat": 39.2183,
-            "lng": 23.8717,
+            "lat": 39.222767,
+            "lng": 23.9448218,
             "type": "beach",
             "time": "10:00",
             "wiki": null,
@@ -247,8 +258,8 @@
           },
           {
             "name": "Patitiri — Departure",
-            "lat": 39.1533,
-            "lng": 23.8667,
+            "lat": 39.144426,
+            "lng": 23.865507,
             "type": "harbour",
             "time": "16:30",
             "wiki": null,
@@ -275,8 +286,8 @@
       "facilities": "None — rough road access or boat only.",
       "desc": "The finest beach on Alonnisos — white sand, turquoise water, almost always empty. The rough road access keeps the crowds away. This is what Greek beaches looked like before tourism.",
       "commons": null,
-      "lat": 39.2183,
-      "lng": 23.8717,
+      "lat": 39.222767,
+      "lng": 23.9448218,
       "name_el": "Παραλία Αγίου Δημητρίου",
       "type_el": "Λευκή άμμος",
       "depth_el": "Ρηχή έως μέτρια — κρυστάλλινα νερά",
