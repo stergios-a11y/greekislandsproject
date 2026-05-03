@@ -82,8 +82,8 @@
         "stops": [
           {
             "name": "Kamariotissa (port)",
-            "lat": 40.4829,
-            "lng": 25.4724,
+            "lat": 40.4742622,
+            "lng": 25.471439,
             "type": "harbour",
             "time": "10:00",
             "wiki": null,
@@ -101,8 +101,8 @@
           },
           {
             "name": "Sanctuary of the Great Gods",
-            "lat": 40.5061,
-            "lng": 25.5254,
+            "lat": 40.5008406,
+            "lng": 25.5300483,
             "type": "museum",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Sanctuary_of_the_Great_Gods",
@@ -139,8 +139,8 @@
           },
           {
             "name": "Chora",
-            "lat": 40.4712,
-            "lng": 25.5307,
+            "lat": 40.4742843,
+            "lng": 25.5251947,
             "type": "village",
             "time": "15:00",
             "wiki": "https://en.wikipedia.org/wiki/Chora_(Samothrace)",
@@ -181,8 +181,8 @@
         "stops": [
           {
             "name": "Therma (Loutra)",
-            "lat": 40.5092,
-            "lng": 25.597,
+            "lat": 40.496436,
+            "lng": 25.6075921,
             "type": "village",
             "time": "10:00",
             "wiki": null,
@@ -224,6 +224,17 @@
             "desc": "Public outdoor thermal baths in the village. Small fee, open until late.",
             "name_el": "Ιαματικές Πηγές Θερμών",
             "desc_el": "Δημόσια υπαίθρια ιαματικά λουτρά στο χωριό. Μικρή αμοιβή, ανοιχτά μέχρι αργά."
+          },
+          {
+            "name": "Drive back to Chora",
+            "lat": 40.4743,
+            "lng": 25.5252,
+            "type": "city",
+            "time": "21:00",
+            "wiki": null,
+            "desc": "Drive back from Therma to Chora (about 25 minutes). Samothrace's mountain capital sits high on a slope, dark stone houses and narrow stepped lanes — quiet at night, the perfect counterpoint to a steamy soak.",
+            "name_el": "Επιστροφή στη Χώρα",
+            "desc_el": "Διαδρομή επιστροφής από τα Θέρμα στη Χώρα (περίπου 25 λεπτά). Η ορεινή πρωτεύουσα της Σαμοθράκης ψηλά σε πλαγιά, σκουρόπετρα σπίτια και στενά σκαλιστά δρομάκια — ήσυχη τη νύχτα, ιδανικό αντίθετο σε ένα χλιαρό μπάνιο στις πηγές."
           }
         ],
         "title_el": "Καταρράκτες & Βάθρες",
@@ -239,8 +250,8 @@
         "stops": [
           {
             "name": "Pachia Ammos",
-            "lat": 40.4162,
-            "lng": 25.5361,
+            "lat": 40.3951791,
+            "lng": 25.5807115,
             "type": "beach",
             "time": "10:30",
             "wiki": null,
@@ -289,8 +300,8 @@
   "beaches": [
     {
       "name": "Pachia Ammos",
-      "lat": 40.4162,
-      "lng": 25.5361,
+      "lat": 40.3951791,
+      "lng": 25.5807115,
       "type": "Fine sand",
       "length": "700 m",
       "depth": "Gradual",
@@ -315,8 +326,8 @@
     },
     {
       "name": "Vatos",
-      "lat": 40.4132,
-      "lng": 25.5675,
+      "lat": 40.3957907,
+      "lng": 25.6031552,
       "type": "Pebbles",
       "length": "250 m",
       "depth": "Deep",
