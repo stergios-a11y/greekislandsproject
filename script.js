@@ -3,6 +3,17 @@
 const VERSION = 'v4.0';
 const BUILD_DATE = '2026-05-03';   // Updated by tools/prerender.py on each deploy
 
+// Booking.com affiliate config.
+// Replace BOOKING_AID with your real AID once your booking.com affiliate account
+// is approved (apply at https://www.booking.com/affiliate-program/).
+// Add island keys to BOOKING_ENABLED_ISLANDS to enable the "Book hotel" button
+// on those islands. Leave this list narrow until you've measured click-through
+// on a couple of pages.
+const BOOKING_AID = '0000000';   // <-- swap when you have your real AID
+const BOOKING_ENABLED_ISLANDS = new Set([
+  'santorini',
+]);
+
 const ISLANDS_DATA = {
   "lefkada":      { name:"Lefkada",          lat:38.706, lng:20.648, beach:4.9, hist:2.5, night:3.2, access:4.5, afford:4.0, car_need:4.0, has_airport:true, total:3.9, area:335,   pop:22600,   days:4, island_group:"Ionian", drama:false, hiking:true, springs:false, chora:false, sailing:true },
   "meganisi":     { name:"Meganisi",         lat:38.643, lng:20.783, beach:4.0, hist:2.5, night:2.8, access:3.2, afford:3.2, car_need:3.0, has_airport:false, total:3.5, area:22,    pop:1041,    days:2, island_group:"Ionian", drama:false, hiking:false, springs:false, chora:false, sailing:true },
@@ -1146,7 +1157,22 @@ function buildIslandPage(data, key) {
       </div>`;
     }).join('');
     const driveInfo = d.km ? `<span class="itin-day-meta">${d.km} ${t('common.km')} · ${d.drive_mins} ${t('common.mindrive')}</span>` : '';
-    const overnightHtml = d.overnight ? `<span class="itin-overnight" style="border-color:${d.color};color:${d.color}">🌙 ${t('common.sleep')}: ${pickLang(d, 'overnight')}</span>` : '';
+    let overnightHtml = '';
+    if (d.overnight) {
+      const overnightText = pickLang(d, 'overnight');
+      const escAttr = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+      const inner = `🌙 ${t('common.sleep')}: ${overnightText}`;
+      if (BOOKING_ENABLED_ISLANDS.has(currentIslandKey)) {
+        // Search-URL strategy — Booking.com matches the hotel name to its inventory.
+        // Encoding the hotel name + island keeps the search tight.
+        const islandName = ISLANDS_DATA[currentIslandKey] ? ISLANDS_DATA[currentIslandKey].name : '';
+        const query = encodeURIComponent(`${overnightText} ${islandName}`);
+        const href = `https://www.booking.com/searchresults.html?ss=${query}&aid=${BOOKING_AID}`;
+        overnightHtml = `<a href="${href}" target="_blank" rel="noopener sponsored" class="itin-overnight itin-overnight--booking" style="border-color:${d.color};color:${d.color}" aria-label="${escAttr(t('common.booking_aria'))}">${inner} <span class="itin-overnight-cta">→ ${t('common.book_hotel')}</span></a>`;
+      } else {
+        overnightHtml = `<span class="itin-overnight" style="border-color:${d.color};color:${d.color}">${inner}</span>`;
+      }
+    }
     return `<div class="itin-day-card" id="itin-day-card-${d.day}">
       <div class="itin-day-header" style="border-left:4px solid ${d.color}">
         <div class="itin-day-header-main">
@@ -1399,57 +1425,99 @@ function buildWhenToVisitSection(data) {
    group, and rough size. Returns the N closest matches.
    Renders a card grid below the main island content.
 ============================================================ */
-function similarIslandDistance(a, b) {
-  // Note: same-key check is handled in findSimilarIslands via filter,
-  // so we don't need (and can't reliably do) it here — island objects
-  // don't carry their own key.
-  let d = 0;
+/* ------------------------------------------------------------
+   Archetype profile — derives 7 latent vibe scores from raw
+   fields. This captures things like "remote outpost", "tiny
+   weekend escape", "big working island" that aren't in any
+   single field but emerge from combinations.
+   Each archetype is 0..1.
+   ------------------------------------------------------------ */
+function islandArchetypes(x) {
+  const pop      = x.pop || 1;
+  const area     = x.area || 50;
+  const beach    = x.beach || 0;
+  const hist     = x.hist || 0;
+  const night    = x.night || 0;
+  const access   = x.access || 0;
+  const drama    = !!x.drama;
+  const hiking   = !!x.hiking;
+  const chora    = !!x.chora;
 
-  // 5 numeric scores (each 0-5), normalised to 0-1.
-  // Beach + nightlife weighted slightly higher — they're stronger
-  // vibe signals than e.g. afford or access.
-  const scoreWeights = { beach: 1.4, night: 1.4, hist: 1.2, access: 0.7, afford: 0.7 };
-  Object.keys(scoreWeights).forEach(f => {
-    d += Math.abs((a[f] || 0) - (b[f] || 0)) / 5 * scoreWeights[f];
+  // Remote outpost — hard to reach + small permanent population.
+  // Captures: Agios Efstratios, Kastellorizo, Gavdos, Anafi, Psara.
+  const remote = Math.max(0, (3 - access)) / 3 * 0.6
+               + Math.max(0, (1000 - pop)) / 1000 * 0.4;
+
+  // Tiny weekend escape — small footprint, easy day-trip-able.
+  // Captures: Agistri, Ammouliani, Schoinoussa, Therasia, Donousa.
+  const tiny = Math.max(0, (40 - area)) / 40 * 0.5
+             + Math.max(0, (2500 - pop)) / 2500 * 0.5;
+
+  // Party — high nightlife AND large enough to actually host a scene.
+  // Sleepy island with one beach bar shouldn't score as "party".
+  const party = (night / 5) * (pop > 5000 ? 1 : pop / 5000);
+
+  // Big working island — substantial population & area, real life beyond tourism.
+  // Captures: Lesvos, Chios, Samos, Crete regions, Kefalonia, Rhodes.
+  const working = (Math.min(pop / 30000, 1) + Math.min(area / 500, 1)) / 2;
+
+  // Postcard / aesthetic — dramatic landscape, beautiful chora, top beach scores.
+  // Captures: Santorini, Folegandros, Anafi, Symi, Sikinos.
+  const postcard = (drama ? 0.4 : 0)
+                 + beach / 5 * 0.3
+                 + (chora ? 0.2 : 0)
+                 + Math.max(0, (300 - area)) / 300 * 0.1;
+
+  // Active / nature-driven — hiking flag is the main signal.
+  // Captures: Andros, Crete (Chania/Lasithi), Ikaria, Naxos hinterland.
+  const active = (hiking ? 0.6 : 0)
+               + (drama ? 0.2 : 0)
+               + Math.max(0, (3 - night)) / 3 * 0.2;
+
+  // Historic depth — high history score, especially with chora preserved.
+  const historic = (hist / 5) * (chora || hist >= 4 ? 1.0 : 0.5);
+
+  return { remote, tiny, party, working, postcard, active, historic };
+}
+
+/* ------------------------------------------------------------
+   Distance function — archetype-first.
+   Primary signal: Euclidean distance over the 7 archetypes,
+   weighted up by how strongly the TARGET expresses each one
+   (an island that's mostly "remote" cares most about other
+   islands' remote score).
+   Secondary: small bonuses for same ferry region and proximity.
+   ------------------------------------------------------------ */
+function similarIslandDistance(target, candidate, targetArc) {
+  const a = target;
+  const b = candidate;
+  const arcA = targetArc;          // pre-computed once per call to findSimilarIslands
+  const arcB = islandArchetypes(b);
+
+  // Weighted Euclidean over archetypes
+  let arcSum = 0;
+  Object.keys(arcA).forEach(k => {
+    const gap = arcA[k] - arcB[k];
+    const weight = 1.0 + arcA[k] * 1.5;   // 1.0 (target weak in k) → 2.5 (target strong)
+    arcSum += gap * gap * weight;
+  });
+  let d = Math.sqrt(arcSum) * 2.5;
+
+  // Small character-flag mismatch penalty (catches edge cases archetypes miss)
+  ['drama', 'hiking', 'chora', 'sailing', 'springs'].forEach(f => {
+    if (!!a[f] !== !!b[f]) d += 0.15;
   });
 
-  // Character flags. Both penalise mismatch AND reward shared rare vibes —
-  // two "drama" islands matching is a stronger signal than two non-drama
-  // islands matching, since drama is rarer.
-  const charWeights = { drama: 1.0, hiking: 0.8, springs: 1.0, chora: 1.1, sailing: 0.8 };
-  Object.keys(charWeights).forEach(f => {
-    const av = !!a[f], bv = !!b[f];
-    if (av !== bv) {
-      d += charWeights[f];
-    } else if (av && bv) {
-      d -= charWeights[f] * 0.5;  // both have the rare flag → bonus
-    }
-  });
+  // Same ferry region — modest bonus (NOT dominant — that was the old bug)
+  if (a.island_group && a.island_group === b.island_group) d -= 0.4;
 
-  // Travel logistics
-  if (!!a.has_airport !== !!b.has_airport) d += 0.4;
-  d += Math.abs((a.car_need || 3) - (b.car_need || 3)) / 5 * 0.4;
-
-  // Same ferry region — strong bonus
-  if (a.island_group && a.island_group === b.island_group) d -= 1.5;
-
-  // Geographic proximity (within ~150 km is meaningful for "easy day-trip")
+  // Geographic proximity — gentle factor, capped low so it never dominates archetype
   if (a.lat && a.lng && b.lat && b.lng) {
     const dLat = (a.lat - b.lat) * 111;
     const dLng = (a.lng - b.lng) * 111 * Math.cos((a.lat + b.lat) / 2 * Math.PI / 180);
     const km = Math.sqrt(dLat * dLat + dLng * dLng);
-    // 0 km → 0 penalty; 150 km → ~0.5; 300 km → ~1.0; saturates ~1.5
-    d += Math.min(km / 200, 1.5);
+    d += Math.min(km / 500, 0.6);   // saturates at 0.6 — purely a tie-breaker
   }
-
-  // Size class (log of area). Aegina (87 km²) and Lefkada (335 km²) are
-  // categorically different islands — this matters more than raw population.
-  const aArea = Math.max(a.area || 50, 1);
-  const bArea = Math.max(b.area || 50, 1);
-  d += Math.abs(Math.log10(aArea) - Math.log10(bArea)) * 0.8;
-
-  // Trip length
-  d += Math.abs((a.days || 3) - (b.days || 3)) * 0.15;
 
   return d;
 }
@@ -1457,9 +1525,10 @@ function similarIslandDistance(a, b) {
 function findSimilarIslands(key, count = 4) {
   const target = ISLANDS_DATA[key];
   if (!target) return [];
+  const targetArc = islandArchetypes(target);
   const scored = Object.keys(ISLANDS_DATA)
     .filter(k => k !== key)
-    .map(k => ({ key: k, dist: similarIslandDistance(target, ISLANDS_DATA[k]) }));
+    .map(k => ({ key: k, dist: similarIslandDistance(target, ISLANDS_DATA[k], targetArc) }));
   scored.sort((a, b) => a.dist - b.dist);
   return scored.slice(0, count).map(s => s.key);
 }
@@ -1471,37 +1540,53 @@ function similarReasonTags(srcKey, dstKey) {
   const lang = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
   const tags = [];
 
-  // Shared ferry region (most important signal)
-  if (a.island_group && a.island_group === b.island_group) {
-    tags.push(t(`group.${a.island_group.toLowerCase().replace(/\s+/g,'')}`) || a.island_group);
-  }
-
-  // Shared character flags — only highlight ones BOTH have (rare-vibe match)
-  const charLabels = {
-    drama:   { en: 'dramatic',  el: 'δραματικό' },
-    hiking:  { en: 'hiking',    el: 'πεζοπορία' },
-    springs: { en: 'springs',   el: 'ιαματικά' },
-    chora:   { en: 'chora',     el: 'χώρα' },
-    sailing: { en: 'sailing',   el: 'ιστιοπλοΐα' },
+  // Lead with the strongest shared archetype — this is what's actually
+  // driving the match in the new algorithm. Threshold of 0.45 means
+  // "both score meaningfully on this dimension".
+  const arcA = islandArchetypes(a);
+  const arcB = islandArchetypes(b);
+  const archetypeLabels = {
+    remote:   { en: 'remote outpost',     el: 'απομακρυσμένο' },
+    tiny:     { en: 'tiny escape',        el: 'μικρό καταφύγιο' },
+    party:    { en: 'lively scene',       el: 'ζωντανή σκηνή' },
+    working:  { en: 'lived-in island',    el: 'πραγματικό νησί' },
+    postcard: { en: 'postcard beauty',    el: 'ομορφιά καρτ-ποστάλ' },
+    active:   { en: 'hiking & nature',    el: 'πεζοπορία & φύση' },
+    historic: { en: 'rich history',       el: 'πλούσια ιστορία' },
   };
-  Object.keys(charLabels).forEach(f => {
-    if (a[f] && b[f]) tags.push(charLabels[f][lang]);
-  });
+  // Sort archetypes by combined strength (min of the two scores → "shared min")
+  const sharedStrength = Object.keys(arcA).map(k => ({
+    key: k,
+    strength: Math.min(arcA[k], arcB[k])
+  })).sort((x, y) => y.strength - x.strength);
 
-  // Score-based descriptors — only when BOTH score high on the same dimension
-  const scoreLabels = {
-    beach: { threshold: 4.2, en: 'great beaches', el: 'εξαιρετικές παραλίες' },
-    night: { threshold: 4.0, en: 'lively nights', el: 'ζωντανές νύχτες' },
-    hist:  { threshold: 4.2, en: 'rich history',  el: 'πλούσια ιστορία' },
-  };
-  Object.keys(scoreLabels).forEach(f => {
-    const sl = scoreLabels[f];
-    if ((a[f] || 0) >= sl.threshold && (b[f] || 0) >= sl.threshold) {
-      tags.push(sl[lang]);
+  sharedStrength.forEach(s => {
+    if (s.strength >= 0.45 && tags.length < 2) {
+      tags.push(archetypeLabels[s.key][lang]);
     }
   });
 
-  // Size bracket — useful when nothing else has matched yet
+  // Add ferry region if shared — useful logistical info
+  if (a.island_group && a.island_group === b.island_group && tags.length < 3) {
+    tags.push(t(`group.${a.island_group.toLowerCase().replace(/\s+/g,'')}`) || a.island_group);
+  }
+
+  // Shared character flags as additional flavour (only if rare-vibe match)
+  const charLabels = {
+    drama:   { en: 'dramatic',  el: 'δραματικό' },
+    hiking:  { en: 'hiking',    el: 'πεζοπορία' },
+    chora:   { en: 'chora',     el: 'χώρα' },
+    sailing: { en: 'sailing',   el: 'ιστιοπλοΐα' },
+    springs: { en: 'springs',   el: 'ιαματικά' },
+  };
+  Object.keys(charLabels).forEach(f => {
+    if (a[f] && b[f] && tags.length < 3) {
+      const label = charLabels[f][lang];
+      if (!tags.includes(label)) tags.push(label);
+    }
+  });
+
+  // Last-resort fallback — "similar size" if nothing else fits
   if (tags.length === 0) {
     const aArea = a.area || 50, bArea = b.area || 50;
     const ratio = Math.max(aArea, bArea) / Math.max(Math.min(aArea, bArea), 1);
@@ -1513,7 +1598,6 @@ function similarReasonTags(srcKey, dstKey) {
     }
   }
 
-  // Cap at 3 tags total
   return tags.slice(0, 3).join(' · ');
 }
 

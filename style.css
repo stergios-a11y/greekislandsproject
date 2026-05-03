@@ -1683,6 +1683,32 @@ html.dark .itin-day-btn.active {
   background: var(--white);
   white-space: nowrap;
 }
+.itin-overnight--booking {
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.itin-overnight--booking:hover {
+  background: currentColor;
+  filter: brightness(1.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transform: translateY(-1px);
+}
+.itin-overnight--booking:hover,
+.itin-overnight--booking:hover .itin-overnight-cta {
+  color: var(--white) !important;
+}
+.itin-overnight--booking:active {
+  transform: translateY(0);
+}
+.itin-overnight-cta {
+  font-weight: 700;
+  font-size: 0.95em;
+  opacity: 0.85;
+}
 .itin-stop-name-row {
   display: flex; align-items: center; gap: 8px;
   margin-bottom: 3px; flex-wrap: wrap;

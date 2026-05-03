@@ -149,6 +149,8 @@ const UI_TEXT = {
   'common.km': { en: 'km', el: 'χλμ' },
   'common.mindrive': { en: 'min drive', el: 'λεπτά οδήγηση' },
   'common.sleep': { en: 'Sleep', el: 'Διανυκτέρευση' },
+  'common.book_hotel': { en: 'Book', el: 'Κράτηση' },
+  'common.booking_aria': { en: 'Search this hotel on Booking.com', el: 'Αναζήτηση ξενοδοχείου στο Booking.com' },
   'map.layer.map': { en: 'Map', el: 'Χάρτης' },
   'map.layer.satellite': { en: 'Satellite', el: 'Δορυφόρος' },
   'getting_there.title': { en: 'Getting there', el: 'Πώς θα φτάσεις' },
