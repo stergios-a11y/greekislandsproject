@@ -154,6 +154,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Golden_Beach_Chrisi_Ammoudia_and_Chrisi_Akti,_Thassos.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Drive back to Thasos Town",
+            "lat": 40.7791,
+            "lng": 24.7076,
+            "type": "harbour",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Drive back along the east coast (about 25 minutes from Golden Beach). Limenas (Thasos Town) has the best night-time scene on the island — a long waterfront with bars, tavernas, and a small ancient agora lit up at the heart of it.",
+            "name_el": "Επιστροφή στη Θάσο",
+            "desc_el": "Διαδρομή επιστροφής κατά μήκος της ανατολικής ακτής (περίπου 25 λεπτά από τη Χρυσή Αμμουδιά). Ο Λιμένας έχει το καλύτερο νυχτερινό σκηνικό του νησιού — μακρά παραλιακή με μπαρ, ταβέρνες και μια μικρή φωτισμένη αρχαία αγορά στην καρδιά."
           }
         ],
         "title_el": "Χώρα Θάσου & η Αρχαία Αγορά",
@@ -169,8 +180,8 @@
         "stops": [
           {
             "name": "Panagia Village",
-            "lat": 40.7136,
-            "lng": 24.7592,
+            "lat": 40.7300849,
+            "lng": 24.7270791,
             "type": "village",
             "time": "10:00",
             "wiki": null,
@@ -231,14 +242,25 @@
           },
           {
             "name": "Theologos",
-            "lat": 40.6183,
-            "lng": 24.6981,
+            "lat": 40.658895,
+            "lng": 24.6927757,
             "type": "village",
             "time": "17:00",
             "wiki": null,
             "desc": "Old capital of Thasos, high in the mountains. Traditional stone houses, best preserved village on the island.",
             "name_el": "Θεολόγος",
             "desc_el": "Παλιά πρωτεύουσα της Θάσου, ψηλά στα βουνά. Παραδοσιακά πέτρινα σπίτια, το καλύτερα διατηρημένο χωριό του νησιού."
+          },
+          {
+            "name": "Drive back to Thasos Town",
+            "lat": 40.7791,
+            "lng": 24.7076,
+            "type": "harbour",
+            "time": "21:00",
+            "wiki": null,
+            "desc": "Drive back from the mountain villages (about 50 minutes from Theologos). The descent through the pine forest at twilight is quietly beautiful — pull over at a viewpoint if the timing is right.",
+            "name_el": "Επιστροφή στη Θάσο",
+            "desc_el": "Διαδρομή επιστροφής από τα ορεινά χωριά (περίπου 50 λεπτά από τον Θεολόγο). Η κάθοδος μέσα από το πευκοδάσος στο σούρουπο είναι διακριτικά όμορφη — σταμάτα σε σημείο θέας αν προλαβαίνεις."
           }
         ],
         "title_el": "Ορεινά Χωριά & Μάρμαρο",
@@ -254,8 +276,8 @@
         "stops": [
           {
             "name": "Limenaria",
-            "lat": 40.622,
-            "lng": 24.5742,
+            "lat": 40.6282676,
+            "lng": 24.5762096,
             "type": "harbour",
             "time": "10:00",
             "wiki": null,
@@ -273,8 +295,8 @@
           },
           {
             "name": "Giola Lagoon",
-            "lat": 40.5938,
-            "lng": 24.6094,
+            "lat": 40.5863247,
+            "lng": 24.6786178,
             "type": "beach",
             "time": "11:30",
             "wiki": null,
@@ -284,8 +306,8 @@
           },
           {
             "name": "Potos",
-            "lat": 40.5983,
-            "lng": 24.6458,
+            "lat": 40.6109933,
+            "lng": 24.6075629,
             "type": "harbour",
             "time": "14:00",
             "wiki": null,
@@ -341,8 +363,8 @@
     },
     {
       "name": "Giola Lagoon",
-      "lat": 40.5938,
-      "lng": 24.6094,
+      "lat": 40.5863247,
+      "lng": 24.6786178,
       "type": "Natural rock pool",
       "length": "25 m",
       "depth": "Deep (3+ m)",
@@ -385,8 +407,8 @@
     },
     {
       "name": "Paradise Beach",
-      "lat": 40.6955,
-      "lng": 24.8179,
+      "lat": 40.6452201,
+      "lng": 24.7669912,
       "type": "Fine sand",
       "length": "300 m",
       "depth": "Shallow",

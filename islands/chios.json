@@ -140,8 +140,8 @@
           },
           {
             "name": "Karfas Beach",
-            "lat": 38.3233,
-            "lng": 26.1433,
+            "lat": 38.3194139,
+            "lng": 26.1537926,
             "type": "beach",
             "time": "15:00",
             "wiki": null,
@@ -171,8 +171,8 @@
         "stops": [
           {
             "name": "Nea Moni Monastery",
-            "lat": 38.3667,
-            "lng": 26.0617,
+            "lat": 38.3740342,
+            "lng": 26.0559806,
             "type": "church",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Nea_Moni",
@@ -190,8 +190,8 @@
           },
           {
             "name": "Anavatos Village",
-            "lat": 38.36,
-            "lng": 26.0433,
+            "lat": 38.4026829,
+            "lng": 26.019826,
             "type": "village",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Anavatos",
@@ -209,8 +209,8 @@
           },
           {
             "name": "Pyrgi Village",
-            "lat": 38.245,
-            "lng": 26.0733,
+            "lat": 38.2269515,
+            "lng": 25.9966559,
             "type": "village",
             "time": "14:00",
             "wiki": "https://en.wikipedia.org/wiki/Pyrgi,_Chios",
@@ -236,6 +236,17 @@
             "desc": "Black volcanic pebble beach in the ancient harbour of Emporios — crystal clear water, dramatic cliff scenery. Far less visited than it deserves.",
             "name_el": "Παραλία Εμπορειός",
             "desc_el": "Παραλία από μαύρα ηφαιστειακά βότσαλα στο αρχαίο λιμάνι του Εμπορειού — κρυστάλλινα νερά, δραματικό σκηνικό γκρεμών. Πολύ λιγότερο επισκεπτόμενη απ' όσο αξίζει."
+          },
+          {
+            "name": "Drive back to Chios Town",
+            "lat": 38.3713,
+            "lng": 26.136,
+            "type": "harbour",
+            "time": "21:00",
+            "wiki": null,
+            "desc": "Drive back from the south coast (about 35 minutes from Emporios). The waterfront tavernas and ouzo bars in Chios Town fill up after dark — pick a table with a view of the medieval castle walls.",
+            "name_el": "Επιστροφή στην πόλη της Χίου",
+            "desc_el": "Επιστροφή από τη νότια ακτή (περίπου 35 λεπτά από τον Εμπορειό). Οι ψαροταβέρνες και τα ουζερί στην παραλιακή της Χώρας γεμίζουν μετά το σκοτάδι — διάλεξε τραπέζι με θέα στα μεσαιωνικά τείχη."
           }
         ],
         "title_el": "Νέα Μονή & Πυργί",
@@ -251,8 +262,8 @@
         "stops": [
           {
             "name": "Mesta Village",
-            "lat": 38.2617,
-            "lng": 25.9967,
+            "lat": 38.2604328,
+            "lng": 25.9220797,
             "type": "village",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Mesta",
@@ -289,8 +300,8 @@
           },
           {
             "name": "Olympi Village",
-            "lat": 38.2433,
-            "lng": 26.02,
+            "lat": 38.2476627,
+            "lng": 25.9424213,
             "type": "village",
             "time": "13:30",
             "wiki": null,
@@ -316,6 +327,17 @@
             "desc": "Sandy beach near the mastic villages — the best organised beach in southern Chios. Good for a swim after a day of medieval villages.",
             "name_el": "Παραλία Κώμη",
             "desc_el": "Αμμώδης παραλία κοντά στα μαστιχοχώρια — η καλύτερη οργανωμένη παραλία στη νότια Χίο. Καλή για μπάνιο μετά από μέρα μεσαιωνικών χωριών."
+          },
+          {
+            "name": "Drive back to Chios Town",
+            "lat": 38.3713,
+            "lng": 26.136,
+            "type": "harbour",
+            "time": "21:00",
+            "wiki": null,
+            "desc": "Drive back from Komi (about 30 minutes). Last night dinner in Chios Town — try a mastiha-flavoured cocktail at a kafeneio, or a more substantial meal at one of the seaside tavernas.",
+            "name_el": "Επιστροφή στην πόλη της Χίου",
+            "desc_el": "Επιστροφή από τον Κώμη (περίπου 30 λεπτά). Δείπνο τελευταίας βραδιάς στην πόλη — δοκίμασε κοκτέιλ με μαστίχα σε καφενείο ή πιο ουσιαστικό γεύμα σε παραθαλάσσια ταβέρνα."
           }
         ],
         "title_el": "Μαστιχοχώρια",
@@ -331,8 +353,8 @@
         "stops": [
           {
             "name": "Volissos Village",
-            "lat": 38.4717,
-            "lng": 25.9283,
+            "lat": 38.4832657,
+            "lng": 25.9266905,
             "type": "castle",
             "time": "09:30",
             "wiki": null,

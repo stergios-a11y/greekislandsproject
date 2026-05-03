@@ -102,8 +102,8 @@
           {
             "name": "Castle of Myrina",
             "name_el": "Κάστρο Μύρινας",
-            "lat": 39.8742,
-            "lng": 25.0567,
+            "lat": 39.875265,
+            "lng": 25.063448,
             "type": "castle",
             "desc": "The defining sight of Myrina — a vast Byzantine castle on a rocky precipice between the two harbours. Built by Andronikos I Komnenos in 1186, expanded by the Venetian Megadux Filocalo Navigajoso in the 13th century, repaired by the Ottomans in the 16th. Free entry, easy 20-minute climb. Deer live inside the walls — descendants of stock released by the Greek royal family.",
             "desc_el": "Το κύριο αξιοθέατο της Μύρινας — τεράστιο βυζαντινό κάστρο σε βραχώδες ακρωτήρι ανάμεσα στα δύο λιμάνια. Χτίστηκε από τον Ανδρόνικο Α' Κομνηνό το 1186, επεκτάθηκε από τον Βενετό Μεγαδούκα Φιλόκαλο Ναβιγκαζόζο τον 13ο αιώνα, επισκευάστηκε από τους Οθωμανούς τον 16ο. Δωρεάν είσοδος, εύκολη ανάβαση 20 λεπτών. Ελάφια ζουν μέσα στα τείχη — απόγονοι ζώων που είχε αφήσει η ελληνική βασιλική οικογένεια.",
@@ -137,8 +137,8 @@
           {
             "name": "Sunset at Romeikos Gialos",
             "name_el": "Ηλιοβασίλεμα στον Ρωμέικο Γιαλό",
-            "lat": 39.8742,
-            "lng": 25.0589,
+            "lat": 39.8806817,
+            "lng": 25.0617457,
             "type": "village",
             "desc": "Back in Myrina — the western waterfront with its row of stone mansions catches the sunset directly. Café terraces line the seafront, the castle silhouettes against the sky. Dinner at one of the harbour-side tavernas — sea urchin, fresh fish, Lemnian Muscat wine.",
             "desc_el": "Πίσω στη Μύρινα — η δυτική παραλιακή με τη σειρά των πέτρινων αρχοντικών πιάνει κατευθείαν το ηλιοβασίλεμα. Βεράντες καφέ στη σειρά κατά μήκος της προκυμαίας, το κάστρο σιλουέτα στον ουρανό. Δείπνο σε μία από τις ταβέρνες του λιμανιού — αχινός, φρέσκο ψάρι, λημνιακό Μοσχάτο κρασί."
@@ -215,6 +215,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Allied_cemetery,_Moudros,_Lemnos.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Drive back to Myrina",
+            "lat": 39.8753,
+            "lng": 25.0634,
+            "type": "harbour",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Drive back across the island to Myrina (about 35 minutes from Moudros). Romeikos Gialos beach in town is the locals' evening promenade — neoclassical mansions facing the sea, the castle lit up above.",
+            "name_el": "Επιστροφή στη Μύρινα",
+            "desc_el": "Διαδρομή επιστροφής στη Μύρινα (περίπου 35 λεπτά από τον Μούδρο). Ο Ρωμαίικος Γιαλός είναι η βραδινή βόλτα των ντόπιων — νεοκλασικά αρχοντικά απέναντι στη θάλασσα, το κάστρο φωτισμένο από πάνω."
           }
         ],
         "title_el": "Πολιόχνη, Ηφαιστία & Κεντρική Λήμνος",
@@ -249,8 +260,8 @@
           {
             "name": "Keros Beach",
             "name_el": "Παραλία Κέρος",
-            "lat": 39.9264,
-            "lng": 25.4144,
+            "lat": 39.9095576,
+            "lng": 25.3579261,
             "type": "beach",
             "desc": "On the windswept east coast — a 1.5km sandy crescent that is one of the best windsurfing and kitesurfing spots in the Mediterranean. Two kite schools operate here. Beginners' lessons available. Even non-surfers find the wild dune-backed beach worth the drive.",
             "desc_el": "Στην ανεμόπληκτη ανατολική ακτή — μια αμμώδης ημισέληνος 1,5 χλμ που είναι από τα καλύτερα σημεία windsurfing και kitesurfing της Μεσογείου. Δύο σχολές kite λειτουργούν εδώ. Διαθέσιμα μαθήματα για αρχάριους. Ακόμα και οι μη surfers βρίσκουν την άγρια αμμοθινική παραλία αντάξια της οδικής διαδρομής.",
@@ -313,8 +324,8 @@
       "facilities_el": "Δύο σχολές kite/windsurf, μερικά beach bars. 40 χλμ από τη Μύρινα.",
       "desc": "The Mediterranean's premier windsurfing beach — long sandy crescent backed by dunes, with reliable cross-shore winds 90% of summer days. Schools rent equipment and offer lessons. Even if you don't surf, the wild dune landscape is worth the drive.",
       "desc_el": "Η κορυφαία παραλία windsurfing της Μεσογείου — μακριά αμμώδης ημισέληνος με αμμοθίνες πίσω, με αξιόπιστους πλευρικούς ανέμους το 90% των καλοκαιρινών ημερών. Σχολές νοικιάζουν εξοπλισμό και προσφέρουν μαθήματα. Ακόμα και αν δεν κάνεις surf, το άγριο τοπίο των αμμοθινών αξίζει την οδική διαδρομή.",
-      "lat": 39.9264,
-      "lng": 25.4144,
+      "lat": 39.9095576,
+      "lng": 25.3579261,
       "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Keros_beach_3.jpg/1920px-Keros_beach_3.jpg",
       "photo_credit": {
         "artist": "Zachariou Fotini",

@@ -173,8 +173,8 @@
         "stops": [
           {
             "name": "Apikia",
-            "lat": 37.8665,
-            "lng": 24.8989,
+            "lat": 37.8492824,
+            "lng": 24.90888,
             "type": "village",
             "time": "09:30",
             "wiki": null,
@@ -192,8 +192,8 @@
           },
           {
             "name": "Pythara Waterfalls",
-            "lat": 37.8766,
-            "lng": 24.896,
+            "lat": 37.8483599,
+            "lng": 24.9088332,
             "type": "beach",
             "time": "10:30",
             "wiki": null,
@@ -233,6 +233,17 @@
             "desc": "West coast port village with a curved sandy bay. Dinner on the waterfront.",
             "name_el": "Μπατσί (Ηλιοβασίλεμα)",
             "desc_el": "Λιμενικό χωριό της δυτικής ακτής με καμπυλωτό αμμώδη κόλπο. Δείπνο στο παραλιακό."
+          },
+          {
+            "name": "Drive back to Chora",
+            "lat": 37.838,
+            "lng": 24.9391,
+            "type": "city",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Drive back across the island (about 40 minutes from Batsi). Andros Chora's marble-paved streets and waterfront mansions glow in the evening — try a quiet seafront taverna for dinner.",
+            "name_el": "Επιστροφή στη Χώρα",
+            "desc_el": "Διαδρομή επιστροφής διασχίζοντας το νησί (περίπου 40 λεπτά από τους Μπατσί). Τα μαρμαρόστρωτα δρομάκια της Χώρας και τα αρχοντικά της παραλίας λάμπουν το βράδυ — διάλεξε ήσυχη ψαροταβέρνα για δείπνο."
           }
         ],
         "title_el": "Πεζοπορία & Καταρράκτες",
@@ -286,8 +297,8 @@
           },
           {
             "name": "Stenies",
-            "lat": 37.865,
-            "lng": 24.9399,
+            "lat": 37.8550053,
+            "lng": 24.9275485,
             "type": "village",
             "time": "12:30",
             "wiki": null,
@@ -343,8 +354,8 @@
     },
     {
       "name": "Achla Beach",
-      "lat": 37.8934,
-      "lng": 24.9041,
+      "lat": 37.894023,
+      "lng": 24.9513921,
       "type": "Coarse sand",
       "length": "300 m",
       "depth": "Moderate",
@@ -361,8 +372,8 @@
     },
     {
       "name": "Vitali Beach",
-      "lat": 37.9099,
-      "lng": 24.8995,
+      "lat": 37.937202,
+      "lng": 24.8252127,
       "type": "Large pebbles",
       "length": "250 m",
       "depth": "Deep quickly",

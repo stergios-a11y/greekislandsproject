@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Chora (Kythira Town)",
-            "lat": 36.1417,
-            "lng": 23.0183,
+            "lat": 36.1492961,
+            "lng": 22.9877193,
             "type": "city",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Chora,_Kythira",
@@ -121,8 +121,8 @@
           },
           {
             "name": "Archaeological Museum Kythira",
-            "lat": 36.1417,
-            "lng": 23.0183,
+            "lat": 36.1510419,
+            "lng": 22.9853756,
             "type": "museum",
             "time": "11:30",
             "wiki": null,
@@ -132,8 +132,8 @@
           },
           {
             "name": "Kapsali Beach",
-            "lat": 36.1317,
-            "lng": 23.01,
+            "lat": 36.1441919,
+            "lng": 23.0021148,
             "type": "beach",
             "time": "14:00",
             "wiki": null,
@@ -151,14 +151,25 @@
           },
           {
             "name": "Dinner in Chora",
-            "lat": 36.1417,
-            "lng": 23.0183,
+            "lat": 36.1492961,
+            "lng": 22.9877193,
             "type": "restaurant",
             "time": "20:00",
             "wiki": null,
             "desc": "Dinner at one of the tavernas in the Chora lanes. Try the local honey (thyme honey from Kythira is outstanding), the cheese pies, and the local wine.",
             "name_el": "Δείπνο στη Χώρα",
             "desc_el": "Δείπνο σε μία από τις ταβέρνες στα στενά της Χώρας. Δοκίμασε το ντόπιο μέλι (το θυμαρίσιο μέλι των Κυθήρων είναι εξαιρετικό), τα τυροπιτάκια, και το ντόπιο κρασί."
+          },
+          {
+            "name": "Drive back to Avlemonas",
+            "lat": 36.2275,
+            "lng": 23.0807,
+            "type": "harbour",
+            "time": "21:30",
+            "wiki": null,
+            "desc": "Drive back to the eastern coast (about 30 minutes from Chora). Avlemonas is silent at night — just lapping water against the rocks and the lights of fishing boats. Perfect for a nightcap on the harbour.",
+            "name_el": "Επιστροφή στον Αυλέμωνα",
+            "desc_el": "Διαδρομή επιστροφής στην ανατολική ακτή (περίπου 30 λεπτά από τη Χώρα). Ο Αυλέμωνας είναι σιωπηλός τη νύχτα — μόνο το νερό στα βράχια και τα φώτα των αλιευτικών. Ιδανικό για ένα ποτό στο λιμάνι."
           }
         ],
         "title_el": "Χώρα & το Κάστρο",
@@ -193,8 +204,8 @@
           },
           {
             "name": "Neraida Waterfall",
-            "lat": 36.24,
-            "lng": 22.9883,
+            "lat": 36.2441696,
+            "lng": 22.9450911,
             "type": "nature",
             "time": "10:30",
             "wiki": null,
@@ -204,8 +215,8 @@
           },
           {
             "name": "Cave of Agia Sofia",
-            "lat": 36.2317,
-            "lng": 22.975,
+            "lat": 36.1493071,
+            "lng": 23.0184974,
             "type": "church",
             "time": "12:00",
             "wiki": "https://en.wikipedia.org/wiki/Cave_of_Agia_Sofia",
@@ -223,14 +234,25 @@
           },
           {
             "name": "Limnaria Beach",
-            "lat": 36.2217,
-            "lng": 22.965,
+            "lat": 36.200083,
+            "lng": 22.919307,
             "type": "beach",
             "time": "15:00",
             "wiki": null,
             "desc": "Remote pebble beach below Milopotamos, accessible by a steep path or by boat. Extremely clear water, dramatic cliff scenery, almost always deserted.",
             "name_el": "Παραλία Λιμνάρια",
             "desc_el": "Απομακρυσμένη βότσαλη παραλία κάτω από τον Μυλοπόταμο, προσβάσιμη με απότομο μονοπάτι ή με βάρκα. Εξαιρετικά διαυγή νερά, δραματικό σκηνικό γκρεμών, σχεδόν πάντα έρημη."
+          },
+          {
+            "name": "Drive back to Avlemonas",
+            "lat": 36.2275,
+            "lng": 23.0807,
+            "type": "harbour",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Drive back across the island to Avlemonas (about 40 minutes from the west coast). The harbour's small tavernas serve fresh-caught fish — an ideal late dinner under the stars.",
+            "name_el": "Επιστροφή στον Αυλέμωνα",
+            "desc_el": "Διαδρομή επιστροφής διασχίζοντας το νησί (περίπου 40 λεπτά από τη δυτική ακτή). Οι μικρές ταβέρνες του λιμανιού σερβίρουν φρέσκο ψάρι — ιδανικό για αργό δείπνο κάτω από τα αστέρια."
           }
         ],
         "title_el": "Μυλοπόταμος & ο Καταρράκτης",
@@ -246,8 +268,8 @@
         "stops": [
           {
             "name": "Paleopolis Beach",
-            "lat": 36.1867,
-            "lng": 23.0783,
+            "lat": 36.2582932,
+            "lng": 22.9981895,
             "type": "beach",
             "time": "09:30",
             "wiki": null,
@@ -265,8 +287,8 @@
           },
           {
             "name": "Avlemonas",
-            "lat": 36.1633,
-            "lng": 23.0967,
+            "lat": 36.227487,
+            "lng": 23.0807227,
             "type": "harbour",
             "time": "12:00",
             "wiki": "https://en.wikipedia.org/wiki/Avlemonas",
@@ -311,6 +333,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Beach_-_Kaladi_-_Kythira_-_Greece_-_2018.08.26_11.35.39.631_001.JPG",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Drive back to Avlemonas",
+            "lat": 36.2275,
+            "lng": 23.0807,
+            "type": "harbour",
+            "time": "19:30",
+            "wiki": null,
+            "desc": "Drive back from Kaladi (about 25 minutes). Last evening — settle into a taverna with a view of the harbour, order octopus and white wine, and watch the sky turn pink over the rocks.",
+            "name_el": "Επιστροφή στον Αυλέμωνα",
+            "desc_el": "Επιστροφή από το Καλάδι (περίπου 25 λεπτά). Τελευταία βραδιά — κάτσε σε ταβέρνα με θέα στο λιμάνι, παράγγειλε χταπόδι και άσπρο κρασί, και δες τον ουρανό να γίνεται ροζ πάνω από τους βράχους."
           }
         ],
         "title_el": "Αυλέμονας & η Ανατολική Ακτή",
@@ -326,8 +359,8 @@
         "stops": [
           {
             "name": "Potamos Village",
-            "lat": 36.2733,
-            "lng": 22.9967,
+            "lat": 36.3004678,
+            "lng": 22.9602327,
             "type": "village",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Potamos,_Kythira",
@@ -345,8 +378,8 @@
           },
           {
             "name": "Agia Pelagia Beach",
-            "lat": 36.31,
-            "lng": 23.045,
+            "lat": 36.3270874,
+            "lng": 22.9796352,
             "type": "beach",
             "time": "11:00",
             "wiki": null,
@@ -364,8 +397,8 @@
           },
           {
             "name": "Diakofti Port — Departure",
-            "lat": 36.1883,
-            "lng": 23.1033,
+            "lat": 36.2623857,
+            "lng": 23.0754793,
             "type": "harbour",
             "time": "15:00",
             "wiki": null,
@@ -412,8 +445,8 @@
       "facilities": "Good: sunbeds, taverna, parking. Ancient harbour ruins visible offshore.",
       "desc": "The longest beach on Kythira near the ancient city of Scandeia. Sandy, calm and almost always uncrowded. The underwater ruins of the ancient harbour are visible when the water is clear.",
       "commons": null,
-      "lat": 36.1867,
-      "lng": 23.0783,
+      "lat": 36.2582932,
+      "lng": 22.9981895,
       "name_el": "Παραλία Παλαιόπολης",
       "type_el": "Μίγμα άμμου και βότσαλων",
       "depth_el": "Ρηχή έως μέτρια",
@@ -440,8 +473,8 @@
       "facilities": "Good: sunbeds, tavernas, boat hire. Chora castle visible above.",
       "desc": "Twin coves directly below the castle of Chora — the most convenient beach on the island for those staying in the capital. Clear water and the extraordinary backdrop of the Venetian castle make it special.",
       "commons": null,
-      "lat": 36.1317,
-      "lng": 23.01,
+      "lat": 36.1441919,
+      "lng": 23.0021148,
       "name_el": "Παραλία Καψάλι",
       "type_el": "Βότσαλα και άμμος",
       "depth_el": "Μέτρια — διαυγή ιόνια νερά",
@@ -468,8 +501,8 @@
       "facilities": "None — steep path or boat access only.",
       "desc": "A remote pebble beach below the gorge of Milopotamos, accessible only on foot via a steep path or by boat. Dramatic cliff scenery and exceptional water clarity. Almost always completely empty.",
       "commons": null,
-      "lat": 36.2217,
-      "lng": 22.965,
+      "lat": 36.200083,
+      "lng": 22.919307,
       "name_el": "Παραλία Λιμνάρια",
       "type_el": "Βότσαλα",
       "depth_el": "Βαθιά — κρυστάλλινα νερά",
