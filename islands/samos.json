@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Vathy (Samos Town)",
-            "lat": 37.755,
-            "lng": 26.9733,
+            "lat": 37.7497172,
+            "lng": 26.981879,
             "type": "city",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Vathy,_Samos",
@@ -102,8 +102,8 @@
           },
           {
             "name": "Samos Archaeological Museum",
-            "lat": 37.755,
-            "lng": 26.9733,
+            "lat": 37.7500933,
+            "lng": 26.9616775,
             "type": "museum",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Archaeological_Museum_of_Samos",
@@ -121,8 +121,8 @@
           },
           {
             "name": "Kokkari Village",
-            "lat": 37.77,
-            "lng": 26.9033,
+            "lat": 37.7789529,
+            "lng": 26.8912124,
             "type": "village",
             "time": "12:00",
             "wiki": null,
@@ -148,6 +148,17 @@
             "desc": "Organised pebble beach near Kokkari with crystal clear water and good facilities. One of the better beaches on the north coast.",
             "name_el": "Παραλία Τσαμπού",
             "desc_el": "Οργανωμένη βότσαλη παραλία κοντά στο Κοκκάρι με κρυστάλλινα νερά και καλές ανέσεις. Μία από τις καλύτερες παραλίες της βόρειας ακτής."
+          },
+          {
+            "name": "Drive back to Vathy",
+            "lat": 37.7497,
+            "lng": 26.9819,
+            "type": "city",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Drive back to Vathy along the north coast (about 25 minutes from Tsabou). Vathy's palm-lined waterfront and the Pythagoras statue come alive after dark — pick a fish taverna with harbour views.",
+            "name_el": "Επιστροφή στο Βαθύ",
+            "desc_el": "Διαδρομή επιστροφής κατά μήκος της βόρειας ακτής (περίπου 25 λεπτά από το Τσαμπού). Η παραλιακή του Βαθέος με τους φοίνικες και το άγαλμα του Πυθαγόρα ζωντανεύουν τη νύχτα — διάλεξε ψαροταβέρνα με θέα στο λιμάνι."
           }
         ],
         "title_el": "Βαθύ & ο Βορράς",
@@ -163,8 +174,8 @@
         "stops": [
           {
             "name": "Heraion Sanctuary",
-            "lat": 37.6617,
-            "lng": 26.8967,
+            "lat": 37.6735047,
+            "lng": 26.887997,
             "type": "museum",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Heraion_of_Samos",
@@ -236,6 +247,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Psili_Ammos._-_panoramio.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Drive back to Vathy",
+            "lat": 37.7497,
+            "lng": 26.9819,
+            "type": "city",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Drive back from the south (about 25 minutes from Psili Ammos). The harbour cafés stay open late — Samos is famous for its sweet wine, perfect for a nightcap.",
+            "name_el": "Επιστροφή στο Βαθύ",
+            "desc_el": "Διαδρομή επιστροφής από τα νότια (περίπου 25 λεπτά από την Ψιλή Άμμο). Τα καφέ στο λιμάνι μένουν ανοιχτά αργά — η Σάμος φημίζεται για το γλυκό της κρασί, ιδανικό για βραδινό ποτό."
           }
         ],
         "title_el": "Ηραίο & Πυθαγόρειο",
@@ -270,8 +292,8 @@
           },
           {
             "name": "Potami Beach & Waterfall",
-            "lat": 37.7964,
-            "lng": 26.6983,
+            "lat": 37.7911122,
+            "lng": 26.6662397,
             "type": "beach",
             "time": "10:00",
             "wiki": null,
@@ -300,8 +322,8 @@
           },
           {
             "name": "Sea Cave of Pythagoras",
-            "lat": 37.7,
-            "lng": 26.6683,
+            "lat": 37.7277706,
+            "lng": 26.6588205,
             "type": "nature",
             "time": "16:00",
             "wiki": null,
@@ -316,6 +338,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Pythagoras_Cave_window_view_out.jpg",
               "source": "Wikimedia Commons"
             }
+          },
+          {
+            "name": "Drive back to Karlovasi",
+            "lat": 37.7921,
+            "lng": 26.7049,
+            "type": "city",
+            "time": "20:00",
+            "wiki": null,
+            "desc": "Long drive from south coast (about 50 minutes from the cave). Karlovasi is the island's second town — quieter than Vathy, with old leather-tanning warehouses converted to restaurants and a long seafront walk.",
+            "name_el": "Επιστροφή στο Καρλόβασι",
+            "desc_el": "Μεγάλη διαδρομή από τη νότια ακτή (περίπου 50 λεπτά από τη σπηλιά). Το Καρλόβασι είναι η δεύτερη πόλη του νησιού — πιο ήσυχο από το Βαθύ, με παλιά βυρσοδεψεία μετατρεπόμενα σε εστιατόρια και μακρά παραλιακή."
           }
         ],
         "title_el": "Όρος Κέρκης & η Δύση",
@@ -331,8 +364,8 @@
         "stops": [
           {
             "name": "Samos Wine Cooperative",
-            "lat": 37.755,
-            "lng": 26.9733,
+            "lat": 37.7500933,
+            "lng": 26.9616775,
             "type": "winery",
             "time": "10:00",
             "wiki": null,
@@ -361,8 +394,8 @@
           },
           {
             "name": "Vathy — Departure",
-            "lat": 37.755,
-            "lng": 26.9733,
+            "lat": 37.7497172,
+            "lng": 26.981879,
             "type": "harbour",
             "time": "16:00",
             "wiki": null,
@@ -417,8 +450,8 @@
       "facilities": "Basic: taverna nearby. River gorge with waterfall behind the beach.",
       "desc": "A unique beach where a river flows through a gorge and meets the sea — Byzantine ruins and a waterfall are accessible on a 30-minute walk upstream. One of the most interesting beach settings in the Aegean.",
       "commons": null,
-      "lat": 37.7964,
-      "lng": 26.6983,
+      "lat": 37.7911122,
+      "lng": 26.6662397,
       "name_el": "Παραλία Ποτάμι",
       "desc_el": "Μια μοναδική παραλία όπου ένα ποτάμι ρέει μέσα από φαράγγι και συναντά τη θάλασσα — βυζαντινά ερείπια και καταρράκτης προσβάσιμα με 30λεπτη πεζοπορία πάνω στο ποτάμι. Ένα από τα πιο ενδιαφέροντα παραλιακά σκηνικά του Αιγαίου.",
       "type_el": "Λεπτή άμμος και βότσαλο",

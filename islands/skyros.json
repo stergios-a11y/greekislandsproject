@@ -93,8 +93,8 @@
           },
           {
             "name": "Skyros Town (Chora)",
-            "lat": 38.9,
-            "lng": 24.5612,
+            "lat": 38.9061222,
+            "lng": 24.5678034,
             "type": "village",
             "time": "12:30",
             "wiki": "https://en.wikipedia.org/wiki/Skyros",
@@ -112,8 +112,8 @@
           },
           {
             "name": "Byzantine Castle of Skyros",
-            "lat": 38.9015,
-            "lng": 24.5631,
+            "lat": 38.9061222,
+            "lng": 24.5678034,
             "type": "castle",
             "time": "14:00",
             "wiki": null,
@@ -134,8 +134,8 @@
           },
           {
             "name": "Faltaits Folklore Museum",
-            "lat": 38.9006,
-            "lng": 24.5625,
+            "lat": 38.9088747,
+            "lng": 24.5680955,
             "type": "museum",
             "time": "17:00",
             "wiki": null,
@@ -145,8 +145,8 @@
           },
           {
             "name": "Magazia Beach (sunset)",
-            "lat": 38.9038,
-            "lng": 24.5722,
+            "lat": 38.9097625,
+            "lng": 24.5706986,
             "type": "beach",
             "time": "19:30",
             "wiki": null,
@@ -168,8 +168,8 @@
         "stops": [
           {
             "name": "Molos Beach",
-            "lat": 38.9088,
-            "lng": 24.5716,
+            "lat": 38.9174185,
+            "lng": 24.5735055,
             "type": "beach",
             "time": "10:00",
             "wiki": null,
@@ -198,8 +198,8 @@
           },
           {
             "name": "Atsitsa Beach",
-            "lat": 38.9122,
-            "lng": 24.4889,
+            "lat": 38.9158713,
+            "lng": 24.4697661,
             "type": "beach",
             "time": "14:00",
             "wiki": null,
@@ -209,14 +209,25 @@
           },
           {
             "name": "Pefkos Beach",
-            "lat": 38.8769,
-            "lng": 24.5123,
+            "lat": 38.856912,
+            "lng": 24.5107039,
             "type": "beach",
             "time": "16:30",
             "wiki": null,
             "desc": "Shallow sandy bay backed by a pine forest. Calm, family-friendly.",
             "name_el": "Παραλία Πεύκος",
             "desc_el": "Ρηχός αμμώδης κόλπος με πευκοδάσος πίσω. Ήρεμη, κατάλληλη για οικογένειες."
+          },
+          {
+            "name": "Drive back to Skyros Town",
+            "lat": 38.9061,
+            "lng": 24.5678,
+            "type": "city",
+            "time": "20:30",
+            "wiki": null,
+            "desc": "Drive back to Chora (about 30 minutes from Pefkos). Skyros' main square fills up after dark — try a traditional taverna in the cubic-white village under the castle.",
+            "name_el": "Επιστροφή στη Σκύρο",
+            "desc_el": "Διαδρομή επιστροφής στη Χώρα (περίπου 30 λεπτά από τον Πεύκο). Η κεντρική πλατεία της Σκύρου γεμίζει το βράδυ — διάλεξε παραδοσιακή ταβέρνα στο κυβικό λευκό χωριό κάτω από το κάστρο."
           }
         ],
         "title_el": "Βορράς: Ρούπερτ Μπρουκ & Παραλίες",
@@ -232,8 +243,8 @@
         "stops": [
           {
             "name": "Kalamitsa Beach",
-            "lat": 38.8214,
-            "lng": 24.553,
+            "lat": 38.8431938,
+            "lng": 24.5608985,
             "type": "beach",
             "time": "09:30",
             "wiki": null,
@@ -319,8 +330,8 @@
     },
     {
       "name": "Atsitsa",
-      "lat": 38.9122,
-      "lng": 24.4889,
+      "lat": 38.9158713,
+      "lng": 24.4697661,
       "type": "Small pebbles",
       "length": "200 m",
       "depth": "Moderate",
@@ -337,8 +348,8 @@
     },
     {
       "name": "Kalamitsa",
-      "lat": 38.8214,
-      "lng": 24.553,
+      "lat": 38.8431938,
+      "lng": 24.5608985,
       "type": "Sand",
       "length": "400 m",
       "depth": "Shallow",
