@@ -8,53 +8,53 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Mostly shut, raw",
-        "why_el": "Σε χειμερία νάρκη, άγρια"
+        "why": "Off-season, raw",
+        "why_el": "Σε χειμερία νάρκη"
       },
       {
         "tag": "avoid",
-        "why": "Off-season hush",
-        "why_el": "Εκτός σεζόν, ησυχία"
+        "why": "Off-season",
+        "why_el": "Εκτός σεζόν"
       },
       {
         "tag": "ok",
-        "why": "Quiet, cold sea",
+        "why": "Quiet",
         "why_el": "Ησυχία, κρύα θάλασσα"
       },
       {
         "tag": "great",
-        "why": "Easter, mild walks",
+        "why": "Easter, walks",
         "why_el": "Πάσχα, πεζοπορία, ήπιο"
       },
       {
         "tag": "great",
         "why": "Empty, sea warming",
-        "why_el": "Άδεια, θάλασσα ζεσταίνει"
+        "why_el": "Άδεια, θάλασσα"
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, dramatic light, quiet",
-        "why_el": "Ζεστή θάλασσα, άγριο φως"
+        "why": "Warm, dramatic light",
+        "why_el": "Ζεστή θάλασσα"
       },
       {
         "tag": "ok",
-        "why": "Hot, Meltemi shuts north",
-        "why_el": "Ζέστη, μελτέμι κλείνει βόρειες"
+        "why": "Meltemi, N closed",
+        "why_el": "Ζέστη, μελτέμι βόρεια"
       },
       {
         "tag": "avoid",
-        "why": "Meltemi peaks, busy week",
+        "why": "Meltemi peak",
         "why_el": "Κορύφωση μελτεμιού"
       },
       {
         "tag": "perfect",
-        "why": "Best — emptier, warm sea",
-        "why_el": "Καλύτερος — άδεια, ζεστή θάλασσα"
+        "why": "Best — emptier, warm",
+        "why_el": "Καλύτερος — άδεια"
       },
       {
         "tag": "great",
-        "why": "Still swimmable early in month",
-        "why_el": "Ακόμα μπάνιο αρχές μήνα"
+        "why": "Still swimmable",
+        "why_el": "Ακόμα μπάνιο αρχές"
       },
       {
         "tag": "ok",
@@ -63,8 +63,8 @@
       },
       {
         "tag": "avoid",
-        "why": "Off-season hush",
-        "why_el": "Εκτός σεζόν, ησυχία"
+        "why": "Off-season",
+        "why_el": "Εκτός σεζόν"
       }
     ]
   },
@@ -82,8 +82,8 @@
         "stops": [
           {
             "name": "Livadi (port)",
-            "lat": 37.1427,
-            "lng": 24.5138,
+            "lat": 37.1464,
+            "lng": 24.5195,
             "type": "harbour",
             "time": "10:00",
             "wiki": null,
@@ -101,8 +101,8 @@
           },
           {
             "name": "Livadakia Beach",
-            "lat": 37.1388,
-            "lng": 24.5146,
+            "lat": 37.143,
+            "lng": 24.5165,
             "type": "beach",
             "time": "11:00",
             "wiki": null,
@@ -120,8 +120,8 @@
           },
           {
             "name": "Chora (Upper Village)",
-            "lat": 37.1558,
-            "lng": 24.5059,
+            "lat": 37.1541,
+            "lng": 24.5069,
             "type": "village",
             "time": "16:00",
             "wiki": "https://en.wikipedia.org/wiki/Serifos",
@@ -139,8 +139,8 @@
           },
           {
             "name": "Chora Castle ruins",
-            "lat": 37.1558,
-            "lng": 24.5059,
+            "lat": 37.1556,
+            "lng": 24.5073,
             "type": "castle",
             "time": "18:00",
             "wiki": null,
@@ -152,7 +152,7 @@
             "name": "Dinner — Stou Stratou",
             "lat": 37.1549,
             "lng": 24.5064,
-            "type": "village",
+            "type": "restaurant",
             "time": "20:30",
             "wiki": null,
             "desc": "Iconic Chora restaurant on the main square. Modern Cycladic cuisine with creative meze.",
@@ -173,8 +173,8 @@
         "stops": [
           {
             "name": "Megalo Livadi",
-            "lat": 37.1406,
-            "lng": 24.4328,
+            "lat": 37.1288,
+            "lng": 24.4443,
             "type": "harbour",
             "time": "10:30",
             "wiki": null,
@@ -192,8 +192,8 @@
           },
           {
             "name": "Koutalas Beach",
-            "lat": 37.1383,
-            "lng": 24.4549,
+            "lat": 37.1221,
+            "lng": 24.4706,
             "type": "beach",
             "time": "12:00",
             "wiki": null,
@@ -203,8 +203,8 @@
           },
           {
             "name": "Mega Chorio (abandoned)",
-            "lat": 37.1491,
-            "lng": 24.4471,
+            "lat": 37.1765,
+            "lng": 24.47,
             "type": "village",
             "time": "15:00",
             "wiki": null,
@@ -214,8 +214,8 @@
           },
           {
             "name": "Panagia",
-            "lat": 37.1778,
-            "lng": 24.4878,
+            "lat": 37.1701,
+            "lng": 24.4809,
             "type": "village",
             "time": "16:30",
             "wiki": null,
@@ -245,8 +245,8 @@
         "stops": [
           {
             "name": "Psili Ammos",
-            "lat": 37.1612,
-            "lng": 24.5227,
+            "lat": 37.161,
+            "lng": 24.5417,
             "type": "beach",
             "time": "10:00",
             "wiki": null,
@@ -264,8 +264,8 @@
           },
           {
             "name": "Agios Sostis",
-            "lat": 37.1559,
-            "lng": 24.532,
+            "lat": 37.1533,
+            "lng": 24.5385,
             "type": "beach",
             "time": "12:30",
             "wiki": null,
@@ -285,7 +285,7 @@
             "name": "Lunch — Takis",
             "lat": 37.1465,
             "lng": 24.5205,
-            "type": "village",
+            "type": "restaurant",
             "time": "14:00",
             "wiki": null,
             "desc": "Local-favorite taverna on Livadi's waterfront. Fresh fish, Serifos chickpea stew (revithada).",

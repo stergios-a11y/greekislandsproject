@@ -12,13 +12,13 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Mostly shut",
+        "why": "Off-season",
         "why_el": "Σχεδόν όλα κλειστά"
       },
       {
         "tag": "avoid",
-        "why": "Wintering, services thin",
-        "why_el": "Χειμώνας, ελάχιστες υπηρεσίες"
+        "why": "Off-season, thin",
+        "why_el": "Χειμώνας, ελάχιστα"
       },
       {
         "tag": "ok",
@@ -37,28 +37,28 @@
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, near-empty, ideal",
-        "why_el": "Ζεστή θάλασσα, σχεδόν άδεια"
+        "why": "Warm, near-empty",
+        "why_el": "Ζεστά, σχεδόν άδεια"
       },
       {
         "tag": "ok",
-        "why": "Hot, Meltemi rough",
+        "why": "Meltemi rough",
         "why_el": "Ζέστη, σκληρό μελτέμι"
       },
       {
         "tag": "ok",
-        "why": "Greeks visit, busy week",
+        "why": "Greeks visit, busy",
         "why_el": "Έρχονται οι Έλληνες"
       },
       {
         "tag": "perfect",
-        "why": "Best — warm, calm, quiet",
-        "why_el": "Καλύτερος — ζεστά, ήρεμα"
+        "why": "Best — warm, calm",
+        "why_el": "Καλύτερος — ζεστά"
       },
       {
         "tag": "great",
-        "why": "Tail end, last good swims",
-        "why_el": "Τελευταία καλά μπάνια"
+        "why": "Last swims",
+        "why_el": "Τελευταία μπάνια"
       },
       {
         "tag": "avoid",
@@ -67,8 +67,8 @@
       },
       {
         "tag": "avoid",
-        "why": "Few ferries, rooms scarce",
-        "why_el": "Λίγα πλοία, λίγα δωμάτια"
+        "why": "Few ferries",
+        "why_el": "Λίγα πλοία"
       }
     ]
   },
@@ -84,8 +84,8 @@
           {
             "name": "Psathi Port",
             "name_el": "Λιμάνι Ψάθη",
-            "lat": 36.7854,
-            "lng": 24.5808,
+            "lat": 36.7869,
+            "lng": 24.5733,
             "type": "village",
             "desc": "The port and second settlement, 1km below Chorio. A few tavernas on the waterfront, the bus to Chorio meets every ferry. Most visitors transfer up immediately.",
             "desc_el": "Το λιμάνι και ο δεύτερος οικισμός, 1 χλμ κάτω από το Χωριό. Μερικές ταβέρνες στην παραλία, το λεωφορείο για το Χωριό συναντά κάθε πλοίο. Οι περισσότεροι επισκέπτες μετακινούνται αμέσως πάνω.",
@@ -101,8 +101,8 @@
           {
             "name": "Chorio (Chora)",
             "name_el": "Χωριό (Χώρα)",
-            "lat": 36.7929,
-            "lng": 24.5747,
+            "lat": 36.7886,
+            "lng": 24.5694,
             "type": "village",
             "wiki": "https://en.wikipedia.org/wiki/Kimolos",
             "desc": "The main village and home to 90% of the island's 800 residents. A medieval Venetian Kastro at its heart, with the 16th-century Church of the Nativity built into the castle walls. Whitewashed alleys, traditional kafeneia, two small museums (Archaeological + Folk Maritime).",
@@ -119,8 +119,8 @@
           {
             "name": "Archaeological Museum",
             "name_el": "Αρχαιολογικό Μουσείο",
-            "lat": 36.7929,
-            "lng": 24.5747,
+            "lat": 36.7884,
+            "lng": 24.5697,
             "type": "ruin",
             "desc": "Small but well-curated. Houses finds from the sunken ancient city of Ellinika on the west coast — Mycenaean, Classical and Roman pieces. Open mornings and evenings in summer.",
             "desc_el": "Μικρό αλλά καλά επιμελημένο. Φιλοξενεί ευρήματα από τη βυθισμένη αρχαία πόλη της Ελληνικής στη δυτική ακτή — μυκηναϊκά, κλασικά και ρωμαϊκά κομμάτια. Ανοιχτό πρωινά και απογεύματα το καλοκαίρι.",
@@ -136,8 +136,8 @@
           {
             "name": "Prassa Beach",
             "name_el": "Παραλία Πράσσα",
-            "lat": 36.8246,
-            "lng": 24.601,
+            "lat": 36.8323,
+            "lng": 24.6086,
             "type": "beach",
             "desc": "Drive 9km north on a road that turns to gravel near the perlite mines. White sand from the nearby chalk deposits, water shading from turquoise to deep blue. A small bar in summer; otherwise unspoiled. Natural thermal springs emerge directly through the sand.",
             "desc_el": "Οδήγησε 9 χλμ βόρεια σε δρόμο που γίνεται χωματόδρομος κοντά στα ορυχεία περλίτη. Λευκή άμμος από τις κοντινές αποθέσεις γύψου, νερά που σκιάζουν από τιρκουάζ σε βαθύ μπλε. Ένα μικρό μπαρ το καλοκαίρι· διαφορετικά ανέγγιχτη. Φυσικές θερμικές πηγές αναβλύζουν κατευθείαν μέσα από την άμμο."
@@ -147,7 +147,7 @@
             "name_el": "Μεσημεριανό — Πρασονήσι",
             "lat": 36.8298,
             "lng": 24.6055,
-            "type": "village",
+            "type": "restaurant",
             "desc": "Restaurant just south of Prassa lagoon. More expensive than the average island taverna but considered the best food on Kimolos. Fantastic view of the turquoise bay below.",
             "desc_el": "Εστιατόριο ακριβώς νότια της λιμνοθάλασσας Πράσσα. Πιο ακριβό από τη μέση ταβέρνα του νησιού αλλά θεωρείται το καλύτερο φαγητό της Κιμώλου. Φανταστική θέα στον τιρκουάζ κόλπο από κάτω."
           }
@@ -166,8 +166,8 @@
           {
             "name": "Skiadi Mushroom Rock",
             "name_el": "Βράχος-Μανιτάρι Σκιάδι",
-            "lat": 36.8089,
-            "lng": 24.5396,
+            "lat": 36.8087,
+            "lng": 24.555,
             "type": "viewpoint",
             "desc": "30-minute hike from a parking bay 3km north of Chorio along an old mule track. A 4-metre rock shaped like a mushroom by millennia of wind erosion — the soft base eroded faster than the hard volcanic top. One of the protected geological monuments of the Aegean.",
             "desc_el": "Πεζοπορία 30 λεπτών από στάθμευση 3 χλμ βόρεια του Χωριού κατά μήκος ενός παλιού μονοπατιού για μουλάρια. Ένας βράχος 4 μέτρων σε σχήμα μανιταριού από χιλιετίες διάβρωσης από τον άνεμο — η μαλακή βάση διαβρώθηκε γρηγορότερα από την σκληρή ηφαιστειακή κορυφή. Ένα από τα προστατευμένα γεωλογικά μνημεία του Αιγαίου."
@@ -175,8 +175,8 @@
           {
             "name": "Ellinika & Mavrospilia Beaches",
             "name_el": "Παραλίες Ελληνικά & Μαυροσπηλιά",
-            "lat": 36.7918,
-            "lng": 24.532,
+            "lat": 36.7944,
+            "lng": 24.5358,
             "type": "beach",
             "desc": "Continue on the same hiking trail past Skiadi to reach two southwestern beaches. Ellinika is above the submerged ruins of an ancient city — bring a snorkel to see the foundations underwater. Mavrospilia next door has white volcanic rock formations.",
             "desc_el": "Συνέχισε στο ίδιο μονοπάτι πέρα από το Σκιάδι για να φτάσεις σε δύο νοτιοδυτικές παραλίες. Η Ελληνική είναι πάνω από τα βυθισμένα ερείπια αρχαίας πόλης — φέρε snorkel για να δεις τα θεμέλια κάτω από το νερό. Η Μαυροσπηλιά δίπλα έχει λευκούς ηφαιστειακούς βραχώδεις σχηματισμούς."
@@ -184,8 +184,8 @@
           {
             "name": "Bonatsa Beach",
             "name_el": "Παραλία Μπονάτσα",
-            "lat": 36.7755,
-            "lng": 24.549,
+            "lat": 36.7747,
+            "lng": 24.5589,
             "type": "beach",
             "desc": "South-coast sandy beach with tamarisk shade and a couple of tavernas. Family-friendly, very calm water, much easier to access than Prassa. The default afternoon swim if you don't want to drive.",
             "desc_el": "Νότια αμμώδης παραλία με σκιά αλμυρικιών και μερικές ταβέρνες. Οικογενειακή, πολύ ήρεμα νερά, πολύ ευκολότερη πρόσβαση από το Πράσσα. Η προεπιλογή για απογευματινό μπάνιο αν δεν θέλεις να οδηγήσεις."
@@ -193,8 +193,8 @@
           {
             "name": "Polyaigos Boat Trip (Optional)",
             "name_el": "Εκδρομή με Βάρκα στην Πολύαιγο (Προαιρετικό)",
-            "lat": 36.7612,
-            "lng": 24.6312,
+            "lat": 36.7333,
+            "lng": 24.65,
             "type": "viewpoint",
             "desc": "If you have a third day or skip Skiadi, take the boat trip to uninhabited Polyaigos — the largest uninhabited island in Greece, NATURA 2000-protected. Mediterranean monk seals breed in the sea caves. Departures from Psathi.",
             "desc_el": "Αν έχεις τρίτη μέρα ή παραλείπεις το Σκιάδι, πάρε την εκδρομή με βάρκα στην ακατοίκητη Πολύαιγο — το μεγαλύτερο ακατοίκητο νησί της Ελλάδας, προστατευμένο από το NATURA 2000. Φώκιες monachus monachus αναπαράγονται στις θαλάσσιες σπηλιές. Αναχωρήσεις από το Ψάθη."

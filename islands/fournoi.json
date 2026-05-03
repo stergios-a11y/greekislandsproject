@@ -12,62 +12,62 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Off-season, ferries minimal",
-        "why_el": "Εκτός σεζόν, ελάχιστα δρομολόγια"
+        "why": "Off-season",
+        "why_el": "Εκτός σεζόν, λίγα"
       },
       {
         "tag": "avoid",
-        "why": "Locals only, thin services",
+        "why": "Off-season",
         "why_el": "Σχεδόν όλα κλειστά"
       },
       {
         "tag": "ok",
-        "why": "Quiet, locals only",
+        "why": "Quiet, locals",
         "why_el": "Ήσυχα, μόνο ντόπιοι"
       },
       {
         "tag": "great",
-        "why": "Easter, mild, awakening",
-        "why_el": "Πάσχα, ήπιο και ανθίζει"
+        "why": "Easter, mild",
+        "why_el": "Πάσχα, ήπιο και"
       },
       {
         "tag": "great",
-        "why": "Sea warming, calm, fish",
-        "why_el": "Νερό ζεσταίνει σιγά σιγά"
+        "why": "Sea warming, fish",
+        "why_el": "Νερό ζεσταίνει, ψάρεμα"
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, fish heaven",
-        "why_el": "Ζεστά, παράδεισος ψαριού"
+        "why": "Warm sea, fish",
+        "why_el": "Παράδεισος ψαριού"
       },
       {
         "tag": "great",
-        "why": "Hot, Greeks arrived",
+        "why": "Greeks arrived",
         "why_el": "Ζέστη, οι Έλληνες"
       },
       {
         "tag": "ok",
-        "why": "Peak Greeks, busy 2 weeks",
-        "why_el": "Δύο βδομάδες ελληνικού φόρτου"
+        "why": "Peak Greeks, busy",
+        "why_el": "2 βδομ. φόρτος"
       },
       {
         "tag": "perfect",
-        "why": "Best — warm, golden evenings",
+        "why": "Best — golden",
         "why_el": "Καλύτερος — ζεστά"
       },
       {
         "tag": "great",
-        "why": "Sea warm in last open weeks",
-        "why_el": "Τελευταία βουτιά πριν την ψύχρα"
+        "why": "Sea warm, last",
+        "why_el": "Τελευταία βουτιά"
       },
       {
         "tag": "avoid",
-        "why": "Pre-winter slowdown",
-        "why_el": "Κλείνουν οι ταβέρνες μία-μία"
+        "why": "Slowing down",
+        "why_el": "Κλείνουν ταβέρνες"
       },
       {
         "tag": "avoid",
-        "why": "Few ferries, rooms scarce",
+        "why": "Few ferries",
         "why_el": "Μόνο ντόπιοι"
       }
     ]
@@ -111,8 +111,8 @@
           {
             "name": "Kampi Village & the Three Windmills",
             "name_el": "Χωριό Καμπί & οι Τρεις Ανεμόμυλοι",
-            "lat": 37.5702,
-            "lng": 26.477,
+            "lat": 37.5703,
+            "lng": 26.4886,
             "type": "village",
             "desc": "1km south of Chora — small settlement with the island's signature trio of stone windmills on the ridge above. The Kampi Beach Bar is the only proper organised beach service on Fournoi. Sandy beach, salt cedars for shade, an easy first swim.",
             "desc_el": "1 χλμ νότια της Χώρας — μικρός οικισμός με τους χαρακτηριστικούς τρεις πέτρινους ανεμόμυλους στην κορυφογραμμή από πάνω. Το Kampi Beach Bar είναι η μόνη κανονική οργανωμένη παραλιακή υπηρεσία στους Φούρνους. Αμμώδης παραλία, αλμυρίκια για σκιά, εύκολο πρώτο μπάνιο."
@@ -120,8 +120,8 @@
           {
             "name": "Petrokopio Beach & Ancient Quarry",
             "name_el": "Παραλία Πετροκόπιο & Αρχαίο Λατομείο",
-            "lat": 37.5608,
-            "lng": 26.4877,
+            "lat": 37.5594,
+            "lng": 26.4661,
             "type": "ruin",
             "desc": "4km southwest, on the western coast. White marble pebbles cover the beach — debris from the ancient quarries that supplied Miletus and Ephesus. Intact columns and pedestals still lying around. Reach by trail or boat. Tamarisk shade, no facilities, often nudist.",
             "desc_el": "4 χλμ νοτιοδυτικά, στη δυτική ακτή. Λευκά μαρμάρινα βότσαλα καλύπτουν την παραλία — υπολείμματα από τα αρχαία λατομεία που τροφοδοτούσαν τη Μίλητο και την Έφεσο. Ακέραιες κολώνες και βάθρα ακόμα κείτονται γύρω. Πρόσβαση με μονοπάτι ή βάρκα. Σκιά αλμυρικιών, χωρίς υπηρεσίες, συχνά γυμνιστική.",
@@ -148,7 +148,7 @@
             "name_el": "Δείπνο — Ταβέρνα Άλμυρα",
             "lat": 37.5786,
             "lng": 26.4965,
-            "type": "village",
+            "type": "restaurant",
             "desc": "Beach-rustic taverna on the Chora harbour serving fish and seafood straight from the boats moored ten metres away. Order whatever was caught that morning — and the lobster, if it's listed. Fratzesca's next door is the alternative.",
             "desc_el": "Παραθαλάσσια ταβέρνα στο λιμάνι της Χώρας που σερβίρει ψάρι και θαλασσινά κατευθείαν από τις βάρκες δεμένες δέκα μέτρα μακριά. Παράγγειλε ό,τι πιάστηκε το πρωί — και αστακό, αν είναι στο μενού. Η Φραντζέσκας δίπλα είναι η εναλλακτική."
           }
@@ -176,8 +176,8 @@
           {
             "name": "Chrysomilia Harbour",
             "name_el": "Λιμάνι Χρυσομηλιάς",
-            "lat": 37.6304,
-            "lng": 26.5115,
+            "lat": 37.6461,
+            "lng": 26.4867,
             "type": "village",
             "desc": "The most picturesque fishing harbour in the Aegean — that's not a brochure claim, multiple Greek travel writers say it. Traditional caïques moored against a tiny stone harbour, a handful of houses behind, the Tower of Agia Triada with the ancient sanctuary to Poseidon on the hill above.",
             "desc_el": "Το πιο γραφικό αλιευτικό λιμάνι του Αιγαίου — δεν είναι ισχυρισμός φυλλαδίου, πολλοί Έλληνες ταξιδιωτικοί συγγραφείς το λένε. Παραδοσιακά καΐκια δεμένα σε μικροσκοπικό πέτρινο λιμάνι, μερικά σπίτια πίσω, ο Πύργος της Αγίας Τριάδας με το αρχαίο ιερό του Ποσειδώνα στον λόφο από πάνω."
@@ -185,8 +185,8 @@
           {
             "name": "Chrysomilia Beach",
             "name_el": "Παραλία Χρυσομηλιάς",
-            "lat": 37.6304,
-            "lng": 26.5115,
+            "lat": 37.645,
+            "lng": 26.4853,
             "type": "beach",
             "desc": "Long sandy north-coast beach next to the harbour. Shallow, calm, family-friendly because the water is sheltered from the meltemi. The taverna at the seaside (the one at the bottom of the steps) is the lunch reward for the descent.",
             "desc_el": "Μακριά αμμώδης παραλία της βόρειας ακτής δίπλα στο λιμάνι. Ρηχή, ήρεμη, οικογενειακή γιατί τα νερά είναι προστατευμένα από το μελτέμι. Η ταβέρνα στην παραλία (αυτή στο τέλος των σκαλοπατιών) είναι η ανταμοιβή για το μεσημεριανό μετά την κατάβαση."
@@ -194,8 +194,8 @@
           {
             "name": "Boat to Thymaina",
             "name_el": "Βάρκα προς Θύμαινα",
-            "lat": 37.5838,
-            "lng": 26.4371,
+            "lat": 37.5894,
+            "lng": 26.4322,
             "type": "village",
             "desc": "Daily small ferry from Chora to the second inhabited island of the archipelago — 30 minutes. Single fishing village, one or two tavernas, the long sandy Keramidou Beach. O Kottaras Taverna at the far end of Keramidou is one of the most genuinely good lunch spots in the eastern Aegean.",
             "desc_el": "Καθημερινό μικρό πλοίο από τη Χώρα προς το δεύτερο κατοικημένο νησί του αρχιπελάγους — 30 λεπτά. Ένα μόνο αλιευτικό χωριό, μία-δύο ταβέρνες, η μακριά αμμώδης παραλία Κεραμίδου. Η ταβέρνα του Κοτταρά στο μακρινό άκρο της Κεραμίδου είναι ένα από τα πιο γνήσια καλά μεσημεριανά σημεία του ανατολικού Αιγαίου."

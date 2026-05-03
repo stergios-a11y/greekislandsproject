@@ -14,57 +14,57 @@
       },
       {
         "tag": "avoid",
-        "why": "Skeleton crew",
+        "why": "Off-season",
         "why_el": "Σκελετός υπηρεσιών"
       },
       {
         "tag": "ok",
-        "why": "Pines green, sea cold",
-        "why_el": "Πεύκα πράσινα, θάλασσα κρύα"
+        "why": "Pines green",
+        "why_el": "Πεύκα πράσινα"
       },
       {
         "tag": "great",
-        "why": "Easter, awakening, mild",
-        "why_el": "Πάσχα, ανοίγουν μαγαζιά"
+        "why": "Easter, awakening",
+        "why_el": "Πάσχα, ανοίγουν"
       },
       {
         "tag": "great",
-        "why": "Water warming, beaches yours",
-        "why_el": "Θάλασσα ζεσταίνει, άδειες παραλίες"
+        "why": "Beaches yours",
+        "why_el": "Θάλ., άδειες"
       },
       {
         "tag": "perfect",
-        "why": "Long days, before flights",
-        "why_el": "Μεγάλες μέρες, πριν τις πτήσεις"
+        "why": "Before flights",
+        "why_el": "Πριν τις πτήσεις"
       },
       {
         "tag": "ok",
-        "why": "Hot, packages begin",
-        "why_el": "Ζέστη, αρχίζουν τα πακέτα"
+        "why": "Hot, packages start",
+        "why_el": "Πακέτα αρχίζουν"
       },
       {
         "tag": "avoid",
-        "why": "Peak chaos, Koukounaries packed",
-        "why_el": "Χάος, Κουκουναριές γεμάτη"
+        "why": "Peak chaos,",
+        "why_el": "Κουκουναριές χάος"
       },
       {
         "tag": "perfect",
-        "why": "Best — warm sea, calmer, golden",
-        "why_el": "Καλύτερος — ζεστά, ηρεμία"
+        "why": "Best — golden",
+        "why_el": "Καλύτερος — ζεστά"
       },
       {
         "tag": "great",
-        "why": "Last swims, packages thin",
-        "why_el": "Τελευταία βουτιά πριν την ψύχρα"
+        "why": "Last swims",
+        "why_el": "Τελευταία βουτιά"
       },
       {
         "tag": "ok",
         "why": "Season ending, mild",
-        "why_el": "Σιγά σιγά πάει για χειμώνα"
+        "why_el": "Για χειμώνα"
       },
       {
         "tag": "avoid",
-        "why": "Skeleton crew",
+        "why": "Off-season",
         "why_el": "Σκελετός υπηρεσιών"
       }
     ]
@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Skiathos Town",
-            "lat": 39.1622,
-            "lng": 23.4921,
+            "lat": 39.1617,
+            "lng": 23.4917,
             "type": "city",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Skiathos_(city)",
@@ -102,8 +102,8 @@
           },
           {
             "name": "Bourtzi Fortress",
-            "lat": 39.1608,
-            "lng": 23.4911,
+            "lat": 39.1617,
+            "lng": 23.49,
             "type": "castle",
             "time": "10:00",
             "wiki": null,
@@ -113,8 +113,8 @@
           },
           {
             "name": "Evangelistria Monastery",
-            "lat": 39.1903,
-            "lng": 23.4803,
+            "lat": 39.1783,
+            "lng": 23.465,
             "type": "church",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Evangelistria_Monastery,_Skiathos",
@@ -132,8 +132,8 @@
           },
           {
             "name": "Koukounaries Beach",
-            "lat": 39.1487,
-            "lng": 23.4019,
+            "lat": 39.1614,
+            "lng": 23.3589,
             "type": "beach",
             "time": "14:30",
             "wiki": "https://en.wikipedia.org/wiki/Koukounaries",
@@ -163,8 +163,8 @@
         "stops": [
           {
             "name": "Old Port — Boat Departure",
-            "lat": 39.1621,
-            "lng": 23.49,
+            "lat": 39.1617,
+            "lng": 23.4917,
             "type": "harbour",
             "time": "09:30",
             "wiki": null,
@@ -174,22 +174,16 @@
           },
           {
             "name": "Lalaria Beach",
-            "lat": 39.2071,
-            "lng": 23.4779,
+            "lat": 39.1933,
+            "lng": 23.4864,
             "type": "beach",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Lalaria_beach",
             "desc": "The most dramatic beach in the Sporades — white oval pebbles under sheer white limestone cliffs with a natural rock arch. Accessible only by boat. Crystal clear water.",
             "name_el": "Παραλία Λαλάρια",
             "desc_el": "Η πιο δραματική παραλία των Σποράδων — λευκά ωοειδή βότσαλα κάτω από κάθετους λευκούς ασβεστολιθικούς γκρεμούς με φυσική βραχώδη αψίδα. Προσβάσιμη μόνο με βάρκα. Κρυστάλλινα νερά.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Lalaria_beach_girl_%28Unsplash%29.jpg/1920px-Lalaria_beach_girl_%28Unsplash%29.jpg",
-            "photo_credit": {
-              "artist": "Alex Blăjan alexb",
-              "license": "CC0",
-              "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Lalaria_beach_girl_(Unsplash).jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           },
           {
             "name": "Blue Cave (Skotini Spilia)",
@@ -204,22 +198,16 @@
           },
           {
             "name": "Kastro (Abandoned Town)",
-            "lat": 39.2103,
-            "lng": 23.4606,
+            "lat": 39.1967,
+            "lng": 23.4483,
             "type": "castle",
             "time": "14:00",
             "wiki": "https://en.wikipedia.org/wiki/Kastro,_Skiathos",
             "desc": "The abandoned medieval capital of Skiathos on a sea cliff — the entire population moved to the current town in 1829. Ruins of 300 houses and 22 churches. Boat stop with a short hike up.",
             "name_el": "Κάστρο (Εγκαταλελειμμένη Πόλη)",
             "desc_el": "Η εγκαταλελειμμένη μεσαιωνική πρωτεύουσα της Σκιάθου σε θαλάσσιο γκρεμό — ολόκληρος ο πληθυσμός μετακινήθηκε στη σημερινή πόλη το 1829. Ερείπια 300 σπιτιών και 22 εκκλησιών. Στάση με βάρκα και σύντομη πεζοπορία.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Kastro%2C_Skiathos_-_panoramio.jpg/1920px-Kastro%2C_Skiathos_-_panoramio.jpg",
-            "photo_credit": {
-              "artist": "arnepetter",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Kastro,_Skiathos_-_panoramio.jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           }
         ],
         "title_el": "Περιήγηση Παραλιών με Σκάφος",
@@ -235,8 +223,8 @@
         "stops": [
           {
             "name": "Banana Beach",
-            "lat": 39.1474,
-            "lng": 23.3924,
+            "lat": 39.1633,
+            "lng": 23.355,
             "type": "beach",
             "time": "09:30",
             "wiki": null,
@@ -254,8 +242,8 @@
           },
           {
             "name": "Agia Eleni Beach",
-            "lat": 39.1538,
-            "lng": 23.3915,
+            "lat": 39.1683,
+            "lng": 23.3867,
             "type": "beach",
             "time": "12:00",
             "wiki": null,
@@ -273,8 +261,8 @@
           },
           {
             "name": "Skiathos Town — Departure",
-            "lat": 39.1622,
-            "lng": 23.4921,
+            "lat": 39.1617,
+            "lng": 23.4917,
             "type": "harbour",
             "time": "16:00",
             "wiki": null,

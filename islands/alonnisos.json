@@ -10,61 +10,61 @@
       {
         "tag": "avoid",
         "why": "Quiet, fewer ferries",
-        "why_el": "Σχεδόν όλα κλειστά, λίγα πλοία"
+        "why_el": "Σχεδόν κλειστά"
       },
       {
         "tag": "avoid",
-        "why": "Mostly shut",
+        "why": "Off-season",
         "why_el": "Σχεδόν όλα κλειστά"
       },
       {
         "tag": "ok",
         "why": "Hiking, sea cold",
-        "why_el": "Πεζοπορία, θάλασσα κρύα"
+        "why_el": "Πεζοπορία, κρύα"
       },
       {
         "tag": "great",
-        "why": "Easter celebrations, trails open",
-        "why_el": "Άγιες μέρες, ορεινά μονοπάτια"
+        "why": "Easter, trails open",
+        "why_el": "Πάσχα, μονοπάτια"
       },
       {
         "tag": "perfect",
-        "why": "Sea warming, park boat trips",
-        "why_el": "Θάλασσα ζεσταίνει, βαρκάδες θαλάσσιο πάρκο"
+        "why": "Sea warming",
+        "why_el": "Θάλασσα, βαρκάδες"
       },
       {
         "tag": "perfect",
-        "why": "Long days, warm sea",
-        "why_el": "Μεγάλες μέρες, νερό ζεστό"
+        "why": "Long days, warm",
+        "why_el": "Μεγάλες μέρες"
       },
       {
         "tag": "great",
-        "why": "Hot, busy but mellow",
+        "why": "Hot, mellow",
         "why_el": "Ζέστη, χαλαρά γεμάτο"
       },
       {
         "tag": "ok",
-        "why": "Peak Greeks, busy 2 weeks",
+        "why": "Peak Greeks, busy",
         "why_el": "Αιχμή Ελλήνων"
       },
       {
         "tag": "perfect",
-        "why": "Best — warm, golden evenings",
-        "why_el": "Καλύτερος — ζεστά, χρυσά"
+        "why": "Best — golden",
+        "why_el": "Καλύτερος — χρυσά"
       },
       {
         "tag": "great",
-        "why": "Sea warm, calm evenings",
-        "why_el": "Τελευταία ζεστά μπάνια"
+        "why": "Sea warm, evenings",
+        "why_el": "Τελευταία μπάνια"
       },
       {
         "tag": "ok",
         "why": "Pre-winter, mild",
-        "why_el": "Τελευταία βδομάδα κίνησης"
+        "why_el": "Τελευταία μπάνια"
       },
       {
         "tag": "avoid",
-        "why": "Mostly shut",
+        "why": "Off-season",
         "why_el": "Σχεδόν όλα κλειστά"
       }
     ]
@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Patitiri",
-            "lat": 39.1442,
-            "lng": 23.8642,
+            "lat": 39.1533,
+            "lng": 23.8667,
             "type": "harbour",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Patitiri",
@@ -102,27 +102,21 @@
           },
           {
             "name": "Chora (Old Village)",
-            "lat": 39.1498,
-            "lng": 23.8439,
+            "lat": 39.165,
+            "lng": 23.8567,
             "type": "village",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Alonnisos",
             "desc": "The abandoned hilltop village slowly being restored by hippies and artists who moved here in the 1970s. Extraordinary views, medieval lanes, and a completely different atmosphere to the port.",
             "name_el": "Χώρα (Παλιό Χωριό)",
             "desc_el": "Το εγκαταλελειμμένο ορεινό χωριό που σιγά-σιγά αναστηλώνεται από χίπηδες και καλλιτέχνες που μετακόμισαν εδώ τη δεκαετία του 1970. Εξαιρετικές θέες, μεσαιωνικά στενά, και εντελώς διαφορετική ατμόσφαιρα από το λιμάνι.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Alonnisos_Excavation.jpg/1920px-Alonnisos_Excavation.jpg",
-            "photo_credit": {
-              "artist": "Elpida Hadjidaki",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Alonnisos_Excavation.jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           },
           {
             "name": "History & Folklore Museum",
-            "lat": 39.1442,
-            "lng": 23.8642,
+            "lat": 39.1533,
+            "lng": 23.8667,
             "type": "museum",
             "time": "12:00",
             "wiki": null,
@@ -133,7 +127,7 @@
           {
             "name": "Roussoum Beach",
             "lat": 39.1483,
-            "lng": 23.8698,
+            "lng": 23.865,
             "type": "beach",
             "time": "15:00",
             "wiki": null,
@@ -155,8 +149,8 @@
         "stops": [
           {
             "name": "Patitiri — Boat Departure",
-            "lat": 39.1442,
-            "lng": 23.8642,
+            "lat": 39.1533,
+            "lng": 23.8667,
             "type": "harbour",
             "time": "09:30",
             "wiki": null,
@@ -166,8 +160,8 @@
           },
           {
             "name": "Gioura Island",
-            "lat": 39.3954,
-            "lng": 24.1737,
+            "lat": 39.3667,
+            "lng": 24.0833,
             "type": "nature",
             "time": "11:00",
             "wiki": null,
@@ -185,22 +179,16 @@
           },
           {
             "name": "Peristera Island",
-            "lat": 39.1777,
-            "lng": 23.9596,
+            "lat": 39.1233,
+            "lng": 23.9167,
             "type": "beach",
             "time": "14:00",
             "wiki": null,
             "desc": "Uninhabited island opposite Alonnisos with deserted sandy beaches and crystal water. Most boat tours stop here for swimming and snorkelling.",
             "name_el": "Περιστέρα",
             "desc_el": "Ακατοίκητο νησί απέναντι από την Αλόννησο με έρημες αμμώδεις παραλίες και κρυστάλλινα νερά. Οι περισσότερες εκδρομές με σκάφος σταματούν εδώ για κολύμπι και ψαροντούφεκο.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/5/54/ISS022-E-100410_-_View_of_Greece_-_Alonnisos_%28Alonissos%29_-_Peristera_-_Lechousa_-_Agios_Georgios_%28cropped%29.jpg",
-            "photo_credit": {
-              "artist": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
-              "license": "Public domain",
-              "license_url": "",
-              "page_url": "https://commons.wikimedia.org/wiki/File:ISS022-E-100410_-_View_of_Greece_-_Alonnisos_(Alonissos)_-_Peristera_-_Lechousa_-_Agios_Georgios_(cropped).jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           },
           {
             "name": "Monk Seal Spotting",
@@ -212,14 +200,8 @@
             "desc": "The waters around Alonnisos have the highest concentration of Mediterranean monk seals in the world — about 40 individuals. Patient boat skippers often spot them in the late afternoon.",
             "name_el": "Εντοπισμός Μεσογειακής Φώκιας",
             "desc_el": "Τα νερά γύρω από την Αλόννησο έχουν τη μεγαλύτερη συγκέντρωση μεσογειακών φωκιών στον κόσμο — περίπου 40 άτομα. Υπομονετικοί καπετάνιοι συχνά τις εντοπίζουν το απομεσήμερο.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/%CE%A4%CE%BF_%CE%B2%CE%BB%CE%AD%CE%BC%CE%BC%CE%B1_%CF%84%CE%B7%CF%82_%CF%86%CF%8E%CE%BA%CE%B9%CE%B1%CF%82.jpg/1920px-%CE%A4%CE%BF_%CE%B2%CE%BB%CE%AD%CE%BC%CE%BC%CE%B1_%CF%84%CE%B7%CF%82_%CF%86%CF%8E%CE%BA%CE%B9%CE%B1%CF%82.jpg",
-            "photo_credit": {
-              "artist": "Vasilis drosakis",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:%CE%A4%CE%BF_%CE%B2%CE%BB%CE%AD%CE%BC%CE%BC%CE%B1_%CF%84%CE%B7%CF%82_%CF%86%CF%8E%CE%BA%CE%B9%CE%B1%CF%82.jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           }
         ],
         "title_el": "Εκδρομή στο Θαλάσσιο Πάρκο",
@@ -235,8 +217,8 @@
         "stops": [
           {
             "name": "Agios Dimitrios Beach",
-            "lat": 39.2228,
-            "lng": 23.9448,
+            "lat": 39.2183,
+            "lng": 23.8717,
             "type": "beach",
             "time": "10:00",
             "wiki": null,
@@ -254,8 +236,8 @@
           },
           {
             "name": "Leftos Gialos Beach",
-            "lat": 39.1734,
-            "lng": 23.907,
+            "lat": 39.1883,
+            "lng": 23.8567,
             "type": "beach",
             "time": "12:30",
             "wiki": null,
@@ -265,8 +247,8 @@
           },
           {
             "name": "Patitiri — Departure",
-            "lat": 39.1442,
-            "lng": 23.8642,
+            "lat": 39.1533,
+            "lng": 23.8667,
             "type": "harbour",
             "time": "16:30",
             "wiki": null,

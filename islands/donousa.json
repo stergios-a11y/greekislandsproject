@@ -12,22 +12,22 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Skeleton crew",
+        "why": "Off-season",
         "why_el": "Σκελετός υπηρεσιών"
       },
       {
         "tag": "avoid",
-        "why": "Wintering, services thin",
-        "why_el": "Χειμώνας, ελάχιστες υπηρεσίες"
+        "why": "Wintering",
+        "why_el": "Χειμώνας, ελάχιστα"
       },
       {
         "tag": "avoid",
-        "why": "Off-season hush",
-        "why_el": "Εκτός σεζόν, ησυχία"
+        "why": "Off-season",
+        "why_el": "Εκτός σεζόν"
       },
       {
         "tag": "ok",
-        "why": "Quiet, mostly closed",
+        "why": "Quiet",
         "why_el": "Ήσυχα, μισοκλειστά"
       },
       {
@@ -37,38 +37,38 @@
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, peaceful, hiking",
-        "why_el": "Ζεστή θάλασσα, μονοπάτια"
+        "why": "Warm sea, hiking",
+        "why_el": "Ζεστή θάλασσα"
       },
       {
         "tag": "great",
-        "why": "Greek bohemians arrive",
-        "why_el": "Έρχονται οι Έλληνες μποέμ"
+        "why": "Greek bohemians",
+        "why_el": "Έρχονται οι μποέμ"
       },
       {
         "tag": "ok",
-        "why": "Peak — small island, big crowds",
-        "why_el": "Κορύφωση — μικρό νησί, κόσμος"
+        "why": "Peak — small",
+        "why_el": "Κορύφωση — μικρό"
       },
       {
         "tag": "perfect",
-        "why": "Best — warm, mellow, magical",
-        "why_el": "Καλύτερος — ζεστά, μαγικό"
+        "why": "Best — warm, magical",
+        "why_el": "Καλύτερος — ζεστά"
       },
       {
         "tag": "ok",
         "why": "Last week busy",
-        "why_el": "Τελευταία βδομάδα κίνησης"
+        "why_el": "Τελευταία βδομάδα"
       },
       {
         "tag": "avoid",
-        "why": "Tourism dormant",
+        "why": "Off-season",
         "why_el": "Σε χειμερία νάρκη"
       },
       {
         "tag": "avoid",
-        "why": "Few ferries, rooms scarce",
-        "why_el": "Λίγα πλοία, λίγα δωμάτια"
+        "why": "Few ferries",
+        "why_el": "Λίγα πλοία"
       }
     ]
   },
@@ -84,8 +84,8 @@
           {
             "name": "Stavros (Chora)",
             "name_el": "Σταυρός (Χώρα)",
-            "lat": 37.0998,
-            "lng": 25.7962,
+            "lat": 36.9015,
+            "lng": 25.7858,
             "type": "village",
             "wiki": "https://en.wikipedia.org/wiki/Donousa",
             "desc": "The port and main village, with a sandy crescent beach right next to the harbour. Walk the alleys uphill — the tavernas, mini-market and a few small hotels are all here. Most visitors base themselves in Stavros and walk out from there.",
@@ -102,8 +102,8 @@
           {
             "name": "Kedros Beach",
             "name_el": "Παραλία Κέδρος",
-            "lat": 37.0984,
-            "lng": 25.8039,
+            "lat": 36.9012,
+            "lng": 25.7958,
             "type": "beach",
             "desc": "20-minute walk east of Stavros along the coastal path. The largest and most beautiful beach on Donousa — fine yellow sand and turquoise water. The wreck of a German WWII ship lies in shallow water just offshore (visible by snorkel). One beach bar that serves genuinely good food.",
             "desc_el": "20 λεπτά με τα πόδια ανατολικά του Σταυρού στο παραλιακό μονοπάτι. Η μεγαλύτερη και ομορφότερη παραλία της Δονούσας — λεπτή κίτρινη άμμος και τιρκουάζ νερά. Το ναυάγιο γερμανικού πλοίου του Β' Παγκοσμίου βρίσκεται σε ρηχά νερά λίγο πιο πέρα (ορατό με snorkel). Ένα beach bar που σερβίρει πραγματικά καλό φαγητό.",
@@ -119,7 +119,7 @@
           {
             "name": "Vathy Limenari",
             "name_el": "Βαθύ Λιμενάρι",
-            "lat": 37.1043,
+            "lat": 36.9043,
             "lng": 25.8023,
             "type": "beach",
             "desc": "Continue 1km east on the path. Deep turquoise bay with white coarse pebbles. Geometric-period ruins on the surrounding hills — once a pirate hideout. Quieter than Kedros.",
@@ -128,8 +128,8 @@
           {
             "name": "Livadi Beach",
             "name_el": "Παραλία Λιβάδι",
-            "lat": 37.0919,
-            "lng": 25.8222,
+            "lat": 36.9097,
+            "lng": 25.8131,
             "type": "beach",
             "desc": "The most photogenic beach on the island — emerald water and dazzling white sand reached only by the trail from Mersini (or by boat). Nudist-friendly. No facilities. Bring everything.",
             "desc_el": "Η πιο φωτογενής παραλία του νησιού — σμαραγδένια νερά και εκθαμβωτική λευκή άμμος, προσβάσιμη μόνο μέσω του μονοπατιού από τη Μερσίνη (ή με βάρκα). Φιλική προς γυμνιστές. Χωρίς υπηρεσίες. Φέρε τα πάντα."
@@ -137,8 +137,8 @@
           {
             "name": "Mersini Village & Spring",
             "name_el": "Χωριό & Πηγή Μερσίνης",
-            "lat": 37.1085,
-            "lng": 25.8167,
+            "lat": 36.9117,
+            "lng": 25.8088,
             "type": "village",
             "desc": "Steep climb up from Livadi (160m elevation). The only village with a natural spring on Donousa — water from a plane tree, locals fill bottles for the week. The clifftop chapel of Agia Sofia has the best view on the island, looking out to Amorgos in the distance.",
             "desc_el": "Απότομη ανηφόρα από το Λιβάδι (160 μέτρα υψόμετρο). Το μόνο χωριό με φυσική πηγή στη Δονούσα — νερό από ένα πλάτανο, οι ντόπιοι γεμίζουν μπουκάλια για την εβδομάδα. Το εκκλησάκι της Αγίας Σοφίας στον γκρεμό έχει την καλύτερη θέα του νησιού, με την Αμοργό στο βάθος."
@@ -158,8 +158,8 @@
           {
             "name": "Kalotaritissa Village",
             "name_el": "Χωριό Καλοταρίτισσα",
-            "lat": 37.1238,
-            "lng": 25.8166,
+            "lat": 36.923,
+            "lng": 25.7856,
             "type": "village",
             "desc": "The northernmost settlement on Donousa, reached by an asphalt road climbing high above the sea. Three small beaches in a row (Sapounochoma, Mesa Ammos, Tripiti) and the Mitsos taverna — keftedes that justify the trip on their own.",
             "desc_el": "Ο βορειότερος οικισμός της Δονούσας, προσβάσιμος με ασφαλτόδρομο που ανεβαίνει ψηλά πάνω από τη θάλασσα. Τρεις μικρές παραλίες στη σειρά (Σαπουνόχωμα, Μέσα Άμμος, Τρυπητή) και η ταβέρνα του Μήτσου — κεφτεδάκια που αξίζουν μόνα τους το ταξίδι.",
@@ -175,8 +175,8 @@
           {
             "name": "Tripiti Beach",
             "name_el": "Παραλία Τρυπητή",
-            "lat": 37.126,
-            "lng": 25.8228,
+            "lat": 36.9248,
+            "lng": 25.7888,
             "type": "beach",
             "desc": "Short path from the far end of Kalotaritissa beach. Sandy, nudist-friendly, almost always empty. The third and most secluded of the Kalotaritissa beaches.",
             "desc_el": "Σύντομο μονοπάτι από την άκρη της παραλίας Καλοταρίτισσας. Αμμώδης, φιλική προς γυμνιστές, σχεδόν πάντα άδεια. Η τρίτη και πιο απομονωμένη από τις παραλίες της Καλοταρίτισσας."
@@ -184,8 +184,8 @@
           {
             "name": "Fokospilia Sea Cave",
             "name_el": "Σπηλιά Φωκόσπηλια",
-            "lat": 37.1083,
-            "lng": 25.8354,
+            "lat": 36.918,
+            "lng": 25.8075,
             "type": "viewpoint",
             "desc": "Reachable only by boat. A dramatic sea cave at Cape Moschonas — once a Mediterranean monk seal breeding site (Greek 'fokia' = seal). Local boat excursions from Stavros include it.",
             "desc_el": "Προσβάσιμη μόνο με βάρκα. Μια εντυπωσιακή θαλάσσια σπηλιά στο Ακρωτήριο Μοσχονά — κάποτε σημείο αναπαραγωγής φωκών. Οι τοπικές εκδρομές με βάρκα από τον Σταυρό την περιλαμβάνουν."
@@ -193,8 +193,8 @@
           {
             "name": "Aspros Kavos Walk",
             "name_el": "Πεζοπορία Άσπρος Κάβος",
-            "lat": 37.1215,
-            "lng": 25.7784,
+            "lat": 36.8998,
+            "lng": 25.7723,
             "type": "viewpoint",
             "desc": "Easy 2km flat coastal path west from Stavros to a wild limestone cape. Almost no elevation, no shade, but constant Aegean views. The best easy walk on the island.",
             "desc_el": "Εύκολο επίπεδο παραλιακό μονοπάτι 2 χλμ δυτικά του Σταυρού σε άγριο ασβεστολιθικό ακρωτήρι. Σχεδόν καθόλου υψομετρική διαφορά, καθόλου σκιά, αλλά συνεχής θέα στο Αιγαίο. Η καλύτερη εύκολη πεζοπορία του νησιού."

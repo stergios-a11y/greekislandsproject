@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Chora (Kythira Town)",
-            "lat": 36.1493,
-            "lng": 22.9877,
+            "lat": 36.1417,
+            "lng": 23.0183,
             "type": "city",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Chora,_Kythira",
@@ -102,8 +102,8 @@
           },
           {
             "name": "Venetian Castle of Kythira",
-            "lat": 36.1466,
-            "lng": 22.9906,
+            "lat": 36.1433,
+            "lng": 23.0167,
             "type": "castle",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Kythira_Castle",
@@ -121,8 +121,8 @@
           },
           {
             "name": "Archaeological Museum Kythira",
-            "lat": 36.1493,
-            "lng": 22.9877,
+            "lat": 36.1417,
+            "lng": 23.0183,
             "type": "museum",
             "time": "11:30",
             "wiki": null,
@@ -132,8 +132,8 @@
           },
           {
             "name": "Kapsali Beach",
-            "lat": 36.1438,
-            "lng": 23.0011,
+            "lat": 36.1317,
+            "lng": 23.01,
             "type": "beach",
             "time": "14:00",
             "wiki": null,
@@ -153,7 +153,7 @@
             "name": "Dinner in Chora",
             "lat": 36.1417,
             "lng": 23.0183,
-            "type": "village",
+            "type": "restaurant",
             "time": "20:00",
             "wiki": null,
             "desc": "Dinner at one of the tavernas in the Chora lanes. Try the local honey (thyme honey from Kythira is outstanding), the cheese pies, and the local wine.",
@@ -174,8 +174,8 @@
         "stops": [
           {
             "name": "Milopotamos Village",
-            "lat": 36.2423,
-            "lng": 22.9452,
+            "lat": 36.2433,
+            "lng": 22.99,
             "type": "village",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Milopotamos,_Kythira",
@@ -193,8 +193,8 @@
           },
           {
             "name": "Neraida Waterfall",
-            "lat": 36.2442,
-            "lng": 22.9451,
+            "lat": 36.24,
+            "lng": 22.9883,
             "type": "nature",
             "time": "10:30",
             "wiki": null,
@@ -204,8 +204,8 @@
           },
           {
             "name": "Cave of Agia Sofia",
-            "lat": 36.1493,
-            "lng": 23.0185,
+            "lat": 36.2317,
+            "lng": 22.975,
             "type": "church",
             "time": "12:00",
             "wiki": "https://en.wikipedia.org/wiki/Cave_of_Agia_Sofia",
@@ -223,25 +223,14 @@
           },
           {
             "name": "Limnaria Beach",
-            "lat": 36.2001,
-            "lng": 22.9193,
+            "lat": 36.2217,
+            "lng": 22.965,
             "type": "beach",
             "time": "15:00",
             "wiki": null,
             "desc": "Remote pebble beach below Milopotamos, accessible by a steep path or by boat. Extremely clear water, dramatic cliff scenery, almost always deserted.",
             "name_el": "Παραλία Λιμνάρια",
             "desc_el": "Απομακρυσμένη βότσαλη παραλία κάτω από τον Μυλοπόταμο, προσβάσιμη με απότομο μονοπάτι ή με βάρκα. Εξαιρετικά διαυγή νερά, δραματικό σκηνικό γκρεμών, σχεδόν πάντα έρημη."
-          },
-          {
-            "name": "Return to Avlemonas",
-            "name_el": "Επιστροφή στον Αυλέμωνα",
-            "lat": 36.2275,
-            "lng": 23.0807,
-            "type": "city",
-            "time": "20:00",
-            "wiki": null,
-            "desc": "About a 30-minute drive across the island back to your seaside base. Avlemonas at sunset is a picture-postcard fishing hamlet — whitewashed cubes around a tiny rock-cut harbour. Dinner at Sotiris for fresh fish straight off the boat.",
-            "desc_el": "Περίπου 30 λεπτά οδήγησης στο νησί πίσω στη βάση σου. Ο Αυλέμωνας στο ηλιοβασίλεμα είναι σκηνικό από καρτ-ποστάλ — ασπρισμένα κυβικά γύρω από μικροσκοπικό λιμανάκι σκαλισμένο στο βράχο. Δείπνο στον Σωτήρη για φρέσκο ψάρι κατευθείαν από το καΐκι."
           }
         ],
         "title_el": "Μυλοπόταμος & ο Καταρράκτης",
@@ -276,8 +265,8 @@
           },
           {
             "name": "Avlemonas",
-            "lat": 36.2275,
-            "lng": 23.0807,
+            "lat": 36.1633,
+            "lng": 23.0967,
             "type": "harbour",
             "time": "12:00",
             "wiki": "https://en.wikipedia.org/wiki/Avlemonas",
@@ -306,8 +295,8 @@
           },
           {
             "name": "Kaladi Beach",
-            "lat": 36.2071,
-            "lng": 23.0499,
+            "lat": 36.1317,
+            "lng": 23.1033,
             "type": "beach",
             "time": "16:30",
             "wiki": null,
@@ -337,8 +326,8 @@
         "stops": [
           {
             "name": "Potamos Village",
-            "lat": 36.3005,
-            "lng": 22.9602,
+            "lat": 36.2733,
+            "lng": 22.9967,
             "type": "village",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Potamos,_Kythira",
@@ -356,8 +345,8 @@
           },
           {
             "name": "Agia Pelagia Beach",
-            "lat": 36.3271,
-            "lng": 22.9796,
+            "lat": 36.31,
+            "lng": 23.045,
             "type": "beach",
             "time": "11:00",
             "wiki": null,
@@ -375,8 +364,8 @@
           },
           {
             "name": "Diakofti Port — Departure",
-            "lat": 36.2617,
-            "lng": 23.0759,
+            "lat": 36.1883,
+            "lng": 23.1033,
             "type": "harbour",
             "time": "15:00",
             "wiki": null,

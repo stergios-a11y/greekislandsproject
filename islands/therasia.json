@@ -12,48 +12,48 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Mostly shut",
+        "why": "Off-season",
         "why_el": "Σχεδόν όλα κλειστά"
       },
       {
         "tag": "avoid",
-        "why": "Skeleton crew",
+        "why": "Off-season",
         "why_el": "Σκελετός υπηρεσιών"
       },
       {
         "tag": "avoid",
-        "why": "Few ferries, rooms scarce",
-        "why_el": "Λίγα πλοία, λίγα δωμάτια"
+        "why": "Few ferries",
+        "why_el": "Λίγα πλοία"
       },
       {
         "tag": "ok",
-        "why": "Quiet, walks, half closed",
+        "why": "Quiet, walks",
         "why_el": "Ήσυχα, μονοπάτια"
       },
       {
         "tag": "great",
         "why": "Awakening, calm",
-        "why_el": "Αρχίζει η σεζόν, ήσυχα"
+        "why_el": "Αρχίζει, ήσυχα"
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, tavernas open, empty",
-        "why_el": "Ζεστή θάλασσα, ταβέρνες, άδεια"
+        "why": "Warm, empty",
+        "why_el": "Ζεστά, ταβέρνες"
       },
       {
         "tag": "great",
-        "why": "Hot, Santorini day-trippers",
-        "why_el": "Ζέστη, ημερήσιες από Σαντορίνη"
+        "why": "Day-trips",
+        "why_el": "Ζέστη, ημερήσιες"
       },
       {
         "tag": "ok",
-        "why": "Day-trippers crowd midday",
-        "why_el": "Ημερήσιοι, βραδιά άδεια"
+        "why": "Day-trippers",
+        "why_el": "Ημερήσιοι"
       },
       {
         "tag": "perfect",
-        "why": "Best — warm, peaceful, magical",
-        "why_el": "Σημείο τομής — ζεστό νερό, ησυχία"
+        "why": "Best — peaceful",
+        "why_el": "Καλύτερος — ήρεμα"
       },
       {
         "tag": "ok",
@@ -62,13 +62,13 @@
       },
       {
         "tag": "avoid",
-        "why": "Mostly shut",
+        "why": "Off-season",
         "why_el": "Σχεδόν όλα κλειστά"
       },
       {
         "tag": "avoid",
-        "why": "Wintering, services thin",
-        "why_el": "Χειμώνας, ελάχιστες υπηρεσίες"
+        "why": "Off-season, thin",
+        "why_el": "Χειμώνας, ελάχιστα"
       }
     ]
   },
@@ -84,8 +84,8 @@
           {
             "name": "Korfos Harbour",
             "name_el": "Λιμάνι Κορφός",
-            "lat": 36.4438,
-            "lng": 25.3447,
+            "lat": 36.4392,
+            "lng": 25.3794,
             "type": "village",
             "wiki": "https://en.wikipedia.org/wiki/Therasia",
             "desc": "Tiny harbour at the foot of the cliffs — boats from Ammoudi (Santorini) dock here every couple of hours in summer. Three small fish tavernas at the water that are some of the best in the caldera. Lunch here either before or after the climb.",
@@ -102,8 +102,8 @@
           {
             "name": "263 Steps to Manolas",
             "name_el": "263 Σκαλοπάτια προς Μανωλά",
-            "lat": 36.4438,
-            "lng": 25.3447,
+            "lat": 36.44,
+            "lng": 25.3789,
             "type": "viewpoint",
             "desc": "The traditional climb up — stepped switchbacks zigzagging up the caldera face. About 20-30 minutes at a steady pace. Donkeys available if you don't fancy the climb. The view back down to Korfos and across to Santorini gets better with every step.",
             "desc_el": "Η παραδοσιακή ανάβαση — σκαλοπάτια σε zigzag στην πλαγιά της καλντέρας. Περίπου 20-30 λεπτά σε σταθερό ρυθμό. Γαϊδούρια διαθέσιμα αν δεν θέλεις την ανάβαση. Η θέα προς τα κάτω στον Κορφό και απέναντι στη Σαντορίνη γίνεται καλύτερη με κάθε βήμα."
@@ -111,8 +111,8 @@
           {
             "name": "Manolas Village",
             "name_el": "Χωριό Μανωλάς",
-            "lat": 36.4344,
-            "lng": 25.3447,
+            "lat": 36.4419,
+            "lng": 25.3781,
             "type": "village",
             "desc": "The cliff-top capital, built on the very edge of the caldera directly opposite Imerovigli on Santorini. White cube houses, blue-domed churches, and one main path along the rim. Every house has the caldera view. A few cafés serve the same sunset that costs €30 in Oia for the price of a frappe.",
             "desc_el": "Η πρωτεύουσα πάνω στον γκρεμό, χτισμένη στην ίδια την άκρη της καλντέρας, ακριβώς απέναντι από το Ημεροβίγλι της Σαντορίνης. Λευκά κυβικά σπίτια, εκκλησίες με γαλάζιο τρούλο, και ένα κύριο μονοπάτι κατά μήκος της κορυφής. Κάθε σπίτι έχει θέα στην καλντέρα. Λίγα καφέ σερβίρουν το ίδιο ηλιοβασίλεμα που κοστίζει €30 στην Οία για την τιμή ενός φραπέ.",
@@ -128,8 +128,8 @@
           {
             "name": "Potamos Village",
             "name_el": "Χωριό Ποταμός",
-            "lat": 36.4374,
-            "lng": 25.3385,
+            "lat": 36.4286,
+            "lng": 25.3717,
             "type": "village",
             "desc": "Inland village 2km south of Manolas — entirely cave houses carved into the soft pumice. Five blue-domed churches in the central square. Almost completely uninhabited in winter, sleepy even in August. The walk between Manolas and Potamos is the best in Therasia.",
             "desc_el": "Χωριό στην ενδοχώρα 2 χλμ νότια του Μανωλά — αποτελείται εξ ολοκλήρου από σπίτια-σπηλιές λαξευμένα στο μαλακό κίσηρι. Πέντε εκκλησίες με γαλάζιο τρούλο στην κεντρική πλατεία. Σχεδόν εντελώς ακατοίκητο τον χειμώνα, νυσταγμένο ακόμα και τον Αύγουστο. Η πεζοπορία ανάμεσα σε Μανωλά και Ποταμό είναι η καλύτερη της Θηρασίας."
@@ -146,8 +146,8 @@
           {
             "name": "Korfos Beach",
             "name_el": "Παραλία Κορφός",
-            "lat": 36.4438,
-            "lng": 25.3447,
+            "lat": 36.44,
+            "lng": 25.3819,
             "type": "beach",
             "desc": "Small black-pebble and pumice beach at the harbour — the easy swim before catching the boat back to Ammoudi. Translucent turquoise water with the dramatic Santorini caldera cliffs across the strait.",
             "desc_el": "Μικρή παραλία με μαύρο βότσαλο και κίσηρι στο λιμάνι — το εύκολο μπάνιο πριν πάρεις τη βάρκα πίσω στην Αμμούδι. Διάφανα τιρκουάζ νερά με τους εντυπωσιακούς γκρεμούς της καλντέρας της Σαντορίνης απέναντι.",
@@ -163,8 +163,8 @@
           {
             "name": "Sunset Boat to Santorini",
             "name_el": "Βάρκα Ηλιοβασιλέματος για Σαντορίνη",
-            "lat": 36.4438,
-            "lng": 25.3447,
+            "lat": 36.4392,
+            "lng": 25.3794,
             "type": "village",
             "desc": "If you stay until the late boat, the return crossing to Ammoudi at sunset is one of the most memorable experiences in the Cyclades — you watch the sun drop behind Therasia from the water itself. Check the day's last departure when you arrive.",
             "desc_el": "Αν μείνεις μέχρι την αργή βάρκα, η επιστροφή προς την Αμμούδι στο ηλιοβασίλεμα είναι μία από τις πιο αξέχαστες εμπειρίες των Κυκλάδων — βλέπεις τον ήλιο να βυθίζεται πίσω από τη Θηρασία από το ίδιο το νερό. Έλεγξε την τελευταία αναχώρηση της ημέρας όταν φτάσεις."

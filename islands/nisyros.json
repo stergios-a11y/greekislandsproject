@@ -12,32 +12,32 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Off-season hush",
-        "why_el": "Εκτός σεζόν, ησυχία"
+        "why": "Off-season",
+        "why_el": "Εκτός σεζόν"
       },
       {
         "tag": "avoid",
-        "why": "Off-season hush",
-        "why_el": "Εκτός σεζόν, ησυχία"
+        "why": "Off-season",
+        "why_el": "Εκτός σεζόν"
       },
       {
         "tag": "ok",
-        "why": "Quiet, awakening",
+        "why": "Awakening",
         "why_el": "Αρχίζει η σεζόν"
       },
       {
         "tag": "great",
-        "why": "Easter, mild, awakening",
-        "why_el": "Πάσχα — τοπικά γιορτές"
+        "why": "Easter, local feasts",
+        "why_el": "Πάσχα — τοπικά"
       },
       {
         "tag": "great",
-        "why": "Sea warming, day-trips",
-        "why_el": "Νερό ζεσταίνει σιγά σιγά"
+        "why": "Sea warming",
+        "why_el": "Νερό ζεσταίνει σιγά"
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, before peak day-trips",
+        "why": "Warm, before",
         "why_el": "Πριν τους ημερήσιους"
       },
       {
@@ -52,22 +52,22 @@
       },
       {
         "tag": "perfect",
-        "why": "Best — warmer, calmer",
+        "why": "Best — warm, calm",
         "why_el": "Καλύτερος — ηρεμεί"
       },
       {
         "tag": "great",
-        "why": "Sea warm, locals reclaim",
-        "why_el": "Νερό ακόμα ζεστό, βραδιές δροσερές"
+        "why": "Sea warm, locals",
+        "why_el": "Νερό ζεστό, δροσιά"
       },
       {
         "tag": "avoid",
-        "why": "Pre-winter slowdown",
-        "why_el": "Κλείνουν οι ταβέρνες μία-μία"
+        "why": "Slowing down",
+        "why_el": "Κλείνουν ταβέρνες"
       },
       {
         "tag": "avoid",
-        "why": "Skeleton crew",
+        "why": "Off-season",
         "why_el": "Σκελετός υπηρεσιών"
       }
     ]
@@ -86,8 +86,8 @@
         "stops": [
           {
             "name": "Mandraki (Port)",
-            "lat": 36.6107,
-            "lng": 27.1321,
+            "lat": 36.6094,
+            "lng": 27.1372,
             "type": "harbour",
             "time": "08:30",
             "wiki": "https://en.wikipedia.org/wiki/Mandraki",
@@ -105,9 +105,9 @@
           },
           {
             "name": "Stefanos Crater (Volcano)",
-            "lat": 36.5778,
-            "lng": 27.1679,
-            "type": "site",
+            "lat": 36.5833,
+            "lng": 27.1667,
+            "type": "nature",
             "time": "10:30",
             "wiki": "https://en.wikipedia.org/wiki/Nisyros",
             "desc": "Park at the volcano car park and walk 5 minutes down into the main crater — Stefanos, 330 m wide and 30 m deep. The floor is cracked yellow and white, sulphurous steam hisses out of fumaroles, and the smell of rotten eggs is unmistakable. You can walk freely across it. There are smaller satellite craters nearby (Polyvotis is the most dramatic). Wear good shoes and don't go in flip-flops — the ground is sharp.",
@@ -124,8 +124,8 @@
           },
           {
             "name": "Nikia Village",
-            "lat": 36.5741,
-            "lng": 27.1777,
+            "lat": 36.5847,
+            "lng": 27.1842,
             "type": "village",
             "time": "12:30",
             "wiki": null,
@@ -143,8 +143,8 @@
           },
           {
             "name": "Emporios Village",
-            "lat": 36.6035,
-            "lng": 27.1773,
+            "lat": 36.6028,
+            "lng": 27.1731,
             "type": "village",
             "time": "14:30",
             "wiki": null,
@@ -162,8 +162,8 @@
           },
           {
             "name": "Pali — Lies Beach",
-            "lat": 36.618,
-            "lng": 27.1747,
+            "lat": 36.6253,
+            "lng": 27.1639,
             "type": "beach",
             "time": "15:30",
             "wiki": null,
@@ -174,7 +174,7 @@
           {
             "name": "Panagia Spiliani Monastery",
             "lat": 36.6108,
-            "lng": 27.1309,
+            "lng": 27.1361,
             "type": "church",
             "time": "18:00",
             "wiki": null,
@@ -194,7 +194,7 @@
             "name": "Dinner — Irini Square, Mandraki",
             "lat": 36.6086,
             "lng": 27.1389,
-            "type": "harbour",
+            "type": "restaurant",
             "time": "20:30",
             "wiki": null,
             "desc": "The main square of Mandraki, Plateia Ilikiomenis (locally just 'Irini'), is shaded by an enormous ficus tree and ringed with tavernas. Try Irini Restaurant for traditional Nisyrian dishes — pitia (chickpea fritters) and soumada, the local almond drink, are both island specialities.",

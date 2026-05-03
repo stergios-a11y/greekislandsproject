@@ -9,63 +9,63 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Mostly shut",
+        "why": "Off-season",
         "why_el": "Σχεδόν όλα κλειστά"
       },
       {
         "tag": "avoid",
-        "why": "Skeleton crew",
+        "why": "Off-season",
         "why_el": "Σκελετός υπηρεσιών"
       },
       {
         "tag": "avoid",
-        "why": "Few ferries, rooms scarce",
-        "why_el": "Λίγα πλοία, λίγα δωμάτια"
+        "why": "Few ferries",
+        "why_el": "Λίγα πλοία"
       },
       {
         "tag": "ok",
-        "why": "Quiet, awakening",
+        "why": "Awakening",
         "why_el": "Ήσυχα, πρώτες αφίξεις"
       },
       {
         "tag": "great",
-        "why": "Sea warming, wild beauty",
+        "why": "Sea warming",
         "why_el": "Νερό κολυμπιέται πια"
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, near-empty",
-        "why_el": "Ζεστή θάλασσα, σχεδόν άδεια"
+        "why": "Warm, near-empty",
+        "why_el": "Ζεστά, σχεδόν άδεια"
       },
       {
         "tag": "great",
-        "why": "Hot, calm except cave area",
+        "why": "Hot, calm, cave area",
         "why_el": "Ζέστη, ήσυχα"
       },
       {
         "tag": "ok",
-        "why": "Peak Greeks, busy week",
+        "why": "Peak Greeks, busy",
         "why_el": "Αιχμή Ελλήνων"
       },
       {
         "tag": "perfect",
-        "why": "Best — warm, raw, peaceful",
-        "why_el": "Καλύτερος — ζεστά, άγρια"
+        "why": "Best — peaceful",
+        "why_el": "Καλύτερος — ζεστά"
       },
       {
         "tag": "ok",
-        "why": "Season ending, services thin",
-        "why_el": "Κλείνουν σιγά σιγά τα μαγαζιά"
+        "why": "Season ending",
+        "why_el": "Κλείνουν σιγά"
       },
       {
         "tag": "avoid",
-        "why": "Locals only, thin services",
-        "why_el": "Μόνο ντόπιοι, λίγες υπηρεσίες"
+        "why": "Off-season",
+        "why_el": "Μόνο ντόπιοι"
       },
       {
         "tag": "avoid",
-        "why": "Wintering, services thin",
-        "why_el": "Χειμώνας, ελάχιστες υπηρεσίες"
+        "why": "Off-season, thin",
+        "why_el": "Χειμώνας, ελάχιστα"
       }
     ]
   },
@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Agios Georgios (Port)",
-            "lat": 36.8585,
-            "lng": 25.4695,
+            "lat": 36.8497,
+            "lng": 25.4706,
             "type": "harbour",
             "time": "09:00",
             "wiki": "https://en.wikipedia.org/wiki/Iraklia",
@@ -102,8 +102,8 @@
           },
           {
             "name": "Livadi Beach",
-            "lat": 36.8512,
-            "lng": 25.4735,
+            "lat": 36.8394,
+            "lng": 25.4711,
             "type": "beach",
             "time": "10:00",
             "wiki": null,
@@ -123,7 +123,7 @@
             "name": "Lunch — Village Taverna",
             "lat": 36.8494,
             "lng": 25.47,
-            "type": "village",
+            "type": "restaurant",
             "time": "13:00",
             "wiki": null,
             "desc": "The village tavernas cook what the local fishermen bring in. Simple, excellent, a third of Mykonos prices. The owner probably knows everyone on the island by name.",
@@ -132,8 +132,8 @@
           },
           {
             "name": "Tourkopigado Beach",
-            "lat": 36.8337,
-            "lng": 25.4737,
+            "lat": 36.82,
+            "lng": 25.4789,
             "type": "beach",
             "time": "15:00",
             "wiki": null,
@@ -154,8 +154,8 @@
           },
           {
             "name": "Departure or 2nd Night",
-            "lat": 36.8585,
-            "lng": 25.4695,
+            "lat": 36.8497,
+            "lng": 25.4706,
             "type": "harbour",
             "time": "18:00",
             "wiki": null,

@@ -12,62 +12,62 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Wintering, few ferries",
-        "why_el": "Σχεδόν όλα κλειστά, λίγα πλοία"
+        "why": "Off-season, few",
+        "why_el": "Σχεδόν κλειστά"
       },
       {
         "tag": "avoid",
-        "why": "Wintering, services thin",
-        "why_el": "Χειμώνας, ελάχιστες υπηρεσίες"
+        "why": "Wintering",
+        "why_el": "Χειμώνας, ελάχιστα"
       },
       {
         "tag": "ok",
         "why": "Awakening, sea cold",
-        "why_el": "Ζωντανεύει, θάλασσα κρύα"
+        "why_el": "Ζωντανεύει, κρύα"
       },
       {
         "tag": "great",
         "why": "Easter, calm, mild",
-        "why_el": "Πάσχα, οικογένειες ντόπιων"
+        "why_el": "Πάσχα, οικογένειες"
       },
       {
         "tag": "great",
-        "why": "Sea warming, calm weekdays",
-        "why_el": "Νερό ζεσταίνει σιγά σιγά"
+        "why": "Sea warm",
+        "why_el": "Νερό ζεσταίνει, ήσυχα"
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, before Greek peak",
-        "why_el": "Ζεστά, πριν τους Έλληνες"
+        "why": "Before Greeks",
+        "why_el": "Πριν τους Έλληνες"
       },
       {
         "tag": "ok",
-        "why": "Hot, weekend Thessalonians",
-        "why_el": "Ζέστη, ΣΚ Θεσσαλονικιοί"
+        "why": "Hot, weekend crowds",
+        "why_el": "Ζέστη, ΣΚ Θεσσαλονικιο"
       },
       {
         "tag": "avoid",
         "why": "Peak Greeks, packed",
-        "why_el": "Πιο πολύς ελληνικός κόσμος"
+        "why_el": "Πιο πολύς κόσμος"
       },
       {
         "tag": "perfect",
-        "why": "Sweet spot — warm, lovely",
+        "why": "Sweet spot",
         "why_el": "Καλύτερος — ζεστά"
       },
       {
         "tag": "great",
-        "why": "Sea warm, calm evenings",
-        "why_el": "Τελευταία ζεστά μπάνια"
+        "why": "Sea warm, calm",
+        "why_el": "Τελευταία μπάνια"
       },
       {
         "tag": "avoid",
-        "why": "Pre-winter slowdown",
-        "why_el": "Κλείνουν οι ταβέρνες μία-μία"
+        "why": "Slowing down",
+        "why_el": "Κλείνουν ταβέρνες"
       },
       {
         "tag": "avoid",
-        "why": "Mostly shut",
+        "why": "Off-season",
         "why_el": "Σχεδόν όλα κλειστά"
       }
     ]
@@ -84,8 +84,8 @@
           {
             "name": "Ammouliani Port",
             "name_el": "Λιμάνι Αμμουλιανής",
-            "lat": 40.3345,
-            "lng": 23.9197,
+            "lat": 40.3322,
+            "lng": 23.9233,
             "type": "village",
             "wiki": "https://en.wikipedia.org/wiki/Ammouliani",
             "desc": "The main settlement around the port. 15-minute ferry from Tripiti on the mainland (€3.50/person, €10/car, hourly in summer). Tavernas and a small Folklore Museum with relics from the 1925 refugee resettlement.",
@@ -119,25 +119,19 @@
           {
             "name": "Alikes Beach",
             "name_el": "Παραλία Αλυκές",
-            "lat": 40.3191,
-            "lng": 23.9163,
+            "lat": 40.3242,
+            "lng": 23.9183,
             "type": "beach",
             "desc": "The main beach on the southwest coast, overlooking the Sithonia peninsula. Crescent of golden sand, three beach bars, one taverna, a camping site. Sunbeds free with a €15 minimum at the bar. Busy in August weekends but never overwhelming.",
             "desc_el": "Η κύρια παραλία στη νοτιοδυτική ακτή, με θέα στη χερσόνησο Σιθωνίας. Ημισέληνος χρυσής άμμου, τρία beach bars, μία ταβέρνα, ένα camping. Δωρεάν ξαπλώστρες με κατανάλωση 15€ στο μπαρ. Πολυσύχναστη τα Σαββατοκύριακα Αυγούστου αλλά ποτέ συντριπτική.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Alikes_Beach%2C_Ammouliani.jpg/1920px-Alikes_Beach%2C_Ammouliani.jpg",
-            "photo_credit": {
-              "artist": "DocWoKav",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Alikes_Beach,_Ammouliani.jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           },
           {
             "name": "Karagatsia Beach",
             "name_el": "Παραλία Καραγάτσια",
-            "lat": 40.3257,
-            "lng": 23.8955,
+            "lat": 40.3361,
+            "lng": 23.9128,
             "type": "beach",
             "desc": "2km northwest of the village — wild sandy cove sheltered by tall elm trees (karagatsia in Greek). Some sunbeds, one canteen, otherwise quiet. Better snorkelling along the rocky edges than at Alikes.",
             "desc_el": "2 χλμ βορειοδυτικά του χωριού — άγριος αμμώδης κολπίσκος προστατευμένος από ψηλές καραγάτσιες. Κάποιες ξαπλώστρες, μία καντίνα, αλλιώς ήσυχη. Καλύτερο snorkelling στις βραχώδεις άκρες παρά στις Αλυκές.",
@@ -203,7 +197,7 @@
             "name_el": "Μεσημεριανό — Ταβέρνα Λευτέρης",
             "lat": 40.3324,
             "lng": 23.9237,
-            "type": "village",
+            "type": "restaurant",
             "desc": "Family-run tavern back in Ammouliani village — meatballs, mackerel, octopus, live music on weekends. The sort of place that survives because the cooking actually delivers what every island taverna claims.",
             "desc_el": "Οικογενειακή ταβέρνα πίσω στο χωριό της Αμμουλιανής — κεφτεδάκια, σκουμπρί, χταπόδι, ζωντανή μουσική το Σαββατοκύριακο. Από τα μέρη που επιβιώνουν γιατί η μαγειρική παραδίδει αυτό που κάθε νησιωτική ταβέρνα ισχυρίζεται."
           }

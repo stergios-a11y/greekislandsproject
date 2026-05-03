@@ -84,6 +84,8 @@
         "title_el": "Αθήνα → Χαλκίδα & Δίρφη",
         "overnight": "Chalkida",
         "overnight_el": "Χαλκίδα",
+        "drive_km": 130,
+        "drive_min": 165,
         "stops": [
           {
             "time": "09:30",
@@ -98,8 +100,8 @@
           {
             "time": "11:00",
             "name": "Karababa Castle",
-            "lat": 38.4649,
-            "lng": 23.5853,
+            "lat": 38.469,
+            "lng": 23.591,
             "type": "castle",
             "desc": "17th-century Ottoman fortress on the mainland side. Free entry, panoramic views over the strait and the city. 30 min, gives you the geography in a glance.",
             "name_el": "Κάστρο Καράμπαμπα",
@@ -110,7 +112,7 @@
             "name": "Lunch — Apanemia (Chalkida seafront)",
             "lat": 38.464,
             "lng": 23.595,
-            "type": "harbour",
+            "type": "restaurant",
             "desc": "Old-school fish taverna right on the strait. Watch the current change while you eat — it actually does, in front of you.",
             "name_el": "Μεσημεριανό — Απάνεμη (Χαλκίδα)",
             "desc_el": "Παραδοσιακή ψαροταβέρνα στον πορθμό. Παρακολουθείς το ρεύμα να αλλάζει την ώρα που τρως — αληθινά, μπροστά σου."
@@ -118,8 +120,8 @@
           {
             "time": "15:30",
             "name": "Drive up to Steni (Mt Dirfys)",
-            "lat": 38.5804,
-            "lng": 23.8372,
+            "lat": 38.557,
+            "lng": 23.776,
             "type": "village",
             "desc": "45-minute drive up the mountain to Steni — alpine village at 480m, plane trees, mountain springs, the temperature drop is immediate. The trailhead for Mt Dirfys (1,743m) is here.",
             "name_el": "Ανάβαση στη Στενή (Δίρφη)",
@@ -128,16 +130,14 @@
           {
             "time": "19:30",
             "name": "Dinner — Liaskos Taverna (Steni)",
-            "lat": 38.5804,
-            "lng": 23.8372,
-            "type": "village",
+            "lat": 38.557,
+            "lng": 23.776,
+            "type": "restaurant",
             "desc": "The classic Steni mountain taverna. Spit-roasted goat, wild greens, locally-pressed wine. They cook over wood — you smell it from outside.",
             "name_el": "Δείπνο — Λιάσκος (Στενή)",
             "desc_el": "Το κλασικό ορεινό σαλοόνι της Στενής. Κατσικάκι σούβλας, χόρτα, ντόπιο κρασί. Μαγειρεύουν στα ξύλα — το μυρίζεις από έξω."
           }
-        ],
-        "km": 113,
-        "drive_mins": 120
+        ]
       },
       {
         "day": 2,
@@ -145,12 +145,14 @@
         "title_el": "Ερέτρια & Απολιθωμένο Δάσος",
         "overnight": "Chalkida",
         "overnight_el": "Χαλκίδα",
+        "drive_km": 80,
+        "drive_min": 110,
         "stops": [
           {
             "time": "10:00",
             "name": "Ancient Eretria",
-            "lat": 38.3986,
-            "lng": 23.7906,
+            "lat": 38.402,
+            "lng": 23.794,
             "type": "ruin",
             "desc": "20km southeast of Chalkida. Major archaeological site of one of ancient Greece's most powerful city-states. Theatre, gymnasium, House of Mosaics — and the dedicated museum is excellent.",
             "name_el": "Αρχαία Ερέτρια",
@@ -161,7 +163,7 @@
             "name": "Lunch — Cavo D'Oro (Eretria)",
             "lat": 38.401,
             "lng": 23.793,
-            "type": "harbour",
+            "type": "restaurant",
             "desc": "Seafront lunch with view to the mainland. Octopus and fava are the moves; the wine list has Evia varieties hard to find elsewhere.",
             "name_el": "Μεσημεριανό — Cavo D'Oro (Ερέτρια)",
             "desc_el": "Παραλιακό φαγητό με θέα την ηπειρωτική. Χταπόδι και φάβα οι κινήσεις· η λίστα κρασιών έχει ευβοϊκές ποικιλίες δύσκολο να βρεις αλλού."
@@ -170,7 +172,7 @@
             "time": "15:30",
             "name": "Folklore Museum of Chalkida (or Aliveri vineyards)",
             "lat": 38.464,
-            "lng": 23.595,
+            "lng": 23.594,
             "type": "museum",
             "desc": "If museums: the Folklore Museum (in Chalkida) is small but excellent on Evia's textile traditions. If wine: drive 25min east to Aliveri's wineries (Lykos, Avantis) for tastings — Evia is an underrated wine region.",
             "name_el": "Λαογραφικό Μουσείο Χαλκίδας (ή αμπελώνες Αλιβερίου)",
@@ -181,14 +183,12 @@
             "name": "Dinner — Stavento (Chalkida)",
             "lat": 38.464,
             "lng": 23.595,
-            "type": "city",
+            "type": "restaurant",
             "desc": "Modern Greek on the strait, sit outside if the weather lets you. Fresh fish, creative mezedes, good list of Greek wines.",
             "name_el": "Δείπνο — Stavento (Χαλκίδα)",
             "desc_el": "Μοντέρνα ελληνική κουζίνα στον πορθμό, κάτσε έξω αν επιτρέπει ο καιρός. Φρέσκο ψάρι, δημιουργικοί μεζέδες, καλή λίστα ελληνικών κρασιών."
           }
-        ],
-        "km": 53,
-        "drive_mins": 65
+        ]
       },
       {
         "day": 3,
@@ -196,13 +196,15 @@
         "title_el": "Κύμη & Παραλία Μουρτερή",
         "overnight": null,
         "overnight_el": null,
+        "drive_km": 200,
+        "drive_min": 240,
         "stops": [
           {
             "time": "09:30",
             "name": "Drive Chalkida → Kymi",
             "name_el": "Διαδρομή Χαλκίδα → Κύμη",
-            "lat": 38.6253,
-            "lng": 24.1057,
+            "lat": 38.629,
+            "lng": 24.108,
             "type": "village",
             "desc": "1h45 east through the centre of the island, climbing into Kymi which sits 250m up on a cliff with the open Aegean below.",
             "desc_el": "1ω45 ανατολικά στο κέντρο του νησιού, ανεβαίνοντας στην Κύμη που βρίσκεται στα 250μ σε γκρεμό με ανοιχτό Αιγαίο από κάτω."
@@ -211,8 +213,8 @@
             "time": "11:30",
             "name": "Kymi Old Town & the port",
             "name_el": "Παλιά Κύμη & το λιμάνι",
-            "lat": 38.6253,
-            "lng": 24.1057,
+            "lat": 38.629,
+            "lng": 24.108,
             "type": "village",
             "desc": "Walk the old quarter — neoclassical sea-captain houses, the Folklore Museum, the views down to Paralia Kymis (the port) where the Skyros ferry leaves from.",
             "desc_el": "Περπάτα την παλιά συνοικία — νεοκλασικά αρχοντικά καπεταναίων, το Λαογραφικό, τη θέα κάτω στην Παραλία Κύμης (το λιμάνι) απ' όπου φεύγει το πλοίο για Σκύρο."
@@ -221,9 +223,9 @@
             "time": "13:30",
             "name": "Lunch — To Steki tou Yianni (Kymi)",
             "name_el": "Μεσημεριανό — Το Στέκι του Γιάννη (Κύμη)",
-            "lat": 38.6253,
-            "lng": 24.1057,
-            "type": "village",
+            "lat": 38.629,
+            "lng": 24.108,
+            "type": "restaurant",
             "desc": "Old kafeneion-taverna in upper Kymi. Spetzofai (sausage with peppers), revithada chickpea stew, the kind of place where the menu is what's cooked today.",
             "desc_el": "Παλιό καφενείο-ταβέρνα στην πάνω Κύμη. Σπετζοφάι, ρεβιθάδα — το είδος του μέρους όπου ο κατάλογος είναι ό,τι μαγειρεύτηκε σήμερα."
           },
@@ -231,8 +233,8 @@
             "time": "16:00",
             "name": "Mourteri Beach",
             "name_el": "Παραλία Μουρτερή",
-            "lat": 38.5616,
-            "lng": 24.1677,
+            "lat": 38.5634,
+            "lng": 24.1643,
             "type": "beach",
             "desc": "15 minutes south of Kymi, signposted off the Lepoura road at Orio village. A 4km stretch of fine pebbles and coarse sand facing the open Aegean — long, wide, almost no shade. Wind-and-kite-surfers love it; on a calm day it's a long peaceful swim. The beach bar Bourboulithres serves cold drinks; the village taverna Kyma does fresh fish at lunch.",
             "desc_el": "15 λεπτά νότια της Κύμης, με ταμπέλα στον δρόμο για Λέπουρα στο χωριό Ώριο. Παραλία 4 χλμ. με λεπτό βότσαλο και χοντρή άμμο, ανοιχτή στο Αιγαίο — μακριά, φαρδιά, σχεδόν χωρίς σκιά. Τη λατρεύουν kite- και windsurfers· σε ημέρα νηνεμίας είναι ένα μακρύ ήρεμο μπάνιο. Το beach bar Μπουρμπουλίθρες έχει κρύα ποτά· η ταβέρνα του χωριού Κύμα φρέσκο ψάρι το μεσημέρι."
@@ -247,9 +249,7 @@
             "desc": "2h30 from Mourteri back to Athens via Lepoura and Chalkida. Cross the Euripus bridge for the last time as the sun sets behind it.",
             "desc_el": "2ω30 από Μουρτερή στην Αθήνα μέσω Λέπουρα και Χαλκίδας. Πέρασε τη γέφυρα του Ευρίπου για τελευταία φορά καθώς ο ήλιος βασιλεύει."
           }
-        ],
-        "km": 251,
-        "drive_mins": 255
+        ]
       }
     ]
   },

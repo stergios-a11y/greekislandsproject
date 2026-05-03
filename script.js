@@ -1737,22 +1737,50 @@ function filterItinDay(day) {
 /* ============================================================
    POI ICONS
 ============================================================ */
-function poiIcon(type, color) {
-  const emojis = {
-    city:       '🏙',
-    castle:     '🏰',
-    beach:      '🏖️',
-    village:    '🏘',
-    nature:     '🌿',
-    spa:        '♨️',
-    church:     '⛪',
-    distillery: '🥃',
-    harbour:    '⚓',
-    museum:     '🏛️',
-    forest:     '🌲',
-  };
-  const emoji = emojis[type] || '📍';
+// Full canonical taxonomy of stop types (matches data/migration spec)
+const POI_EMOJIS = {
+  beach:      '🏖️',
+  village:    '🏘',
+  harbour:    '⚓',
+  city:       '🏙',
+  museum:     '🏛️',
+  restaurant: '🍽',
+  nature:     '🌿',
+  castle:     '🏰',
+  church:     '⛪',
+  viewpoint:  '🔭',
+  ruin:       '🏛',
+  departure:  '✈️',
+  monastery:  '☧',
+  arrival:    '🚢',
+  spa:        '♨️',
+  winery:     '🍷',
+  distillery: '🥃',
+};
+
+// Zoom threshold below which markers render as small colored dots (cleaner overview),
+// at-or-above renders as full emoji badges.
+const POI_EMOJI_ZOOM = 11;
+
+function poiIcon(type, color, mode) {
+  // mode: 'emoji' | 'dot'  (default 'emoji' for back-compat)
+  if (mode === 'dot') {
+    return `<div style="width:10px;height:10px;border-radius:50%;background:${color};border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,.4)"></div>`;
+  }
+  const emoji = POI_EMOJIS[type] || '📍';
   return `<div style="font-size:22px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5));text-align:center;width:32px;height:32px;display:flex;align-items:center;justify-content:center;background:white;border-radius:50%;border:2px solid ${color};box-shadow:0 2px 6px rgba(0,0,0,.25);">${emoji}</div>`;
+}
+
+// Build a divIcon for a stop at the given mode (kept as one helper so the
+// marker creation site and the zoom-handler stay in sync on size/anchor).
+function poiDivIcon(type, color, mode) {
+  const isDot = mode === 'dot';
+  return L.divIcon({
+    className: 'custom-marker',
+    html: poiIcon(type, color, mode),
+    iconSize:   isDot ? [14, 14] : [32, 32],
+    iconAnchor: isDot ? [7, 7]   : [16, 16],
+  });
 }
 
 /* ============================================================
@@ -1808,14 +1836,14 @@ async function initItineraryMap(days, beaches = []) {
       const photoLine = stop.photo
         ? `<div style="position:relative;margin-top:8px">${buildLightboxImg(stop.photo, stop.name, stop.photo_credit, '', 'style="width:100%;height:120px;object-fit:cover;border-radius:6px;display:block" onerror="this.parentElement.style.display=\'none\'"')}${buildPhotoCredit(stop.photo_credit)}</div>`
         : '';
-      const icon = L.divIcon({
-        className: 'custom-marker',
-        html: poiIcon(stop.type || 'village', day.color),
-        iconSize: [32, 32], iconAnchor: [16, 16],
-      });
-      const marker = L.marker([stop.lat, stop.lng], { icon })
+      const stopType = stop.type || 'village';
+      const initialMode = itineraryMapInstance.getZoom() >= POI_EMOJI_ZOOM ? 'emoji' : 'dot';
+      const marker = L.marker([stop.lat, stop.lng], { icon: poiDivIcon(stopType, day.color, initialMode) })
         .addTo(itineraryMapInstance)
         .bindPopup(`<div style="min-width:200px;font-family:sans-serif"><div style="font-size:10px;font-weight:700;color:${day.color};text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px">Day ${day.day} · ${typeLabel}</div>${nameHtml}<p style="font-size:12px;color:#555;margin:6px 0 0;line-height:1.55">${stop.desc}</p>${photoLine}</div>`);
+      // Stash the metadata on the marker so the zoom handler can re-render the icon
+      marker._poiType = stopType;
+      marker._poiColor = day.color;
       // Bind direct click handler on lightbox images inside this popup once it opens.
       // Document-level delegation can be intercepted by Leaflet's internal handlers,
       // so direct binding is the most reliable path inside popup content.
@@ -1840,26 +1868,41 @@ async function initItineraryMap(days, beaches = []) {
   // Shown when "All days" is active; hidden when a specific day is selected.
   itinBeachMarkers = [];
   const BEACH_COLOR = '#0B8FAC';
+  const initialBeachMode = itineraryMapInstance.getZoom() >= POI_EMOJI_ZOOM ? 'emoji' : 'dot';
   beaches.forEach(b => {
     if (!b.lat || !b.lng) return;
     const name = pickLang(b, 'name');
     const desc = pickLang(b, 'desc');
     const type = pickLang(b, 'type');
-    const icon = L.divIcon({
-      className: 'custom-marker',
-      html: poiIcon('beach', BEACH_COLOR),
-      iconSize: [32, 32], iconAnchor: [16, 16],
-    });
     const popupHtml = `<div style="min-width:200px;font-family:sans-serif">
       <div style="font-size:10px;font-weight:700;color:${BEACH_COLOR};text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px">${t('detail.beach')}</div>
       <strong>${name}</strong>
       ${type ? `<div style="font-size:11px;color:#777;margin-top:2px">${type}</div>` : ''}
       <p style="font-size:12px;color:#555;margin:6px 0 0;line-height:1.55">${desc}</p>
     </div>`;
-    const marker = L.marker([b.lat, b.lng], { icon, zIndexOffset: -100 })
+    const marker = L.marker([b.lat, b.lng], { icon: poiDivIcon('beach', BEACH_COLOR, initialBeachMode), zIndexOffset: -100 })
       .addTo(itineraryMapInstance)
       .bindPopup(popupHtml);
+    marker._poiType = 'beach';
+    marker._poiColor = BEACH_COLOR;
     itinBeachMarkers.push(marker);
+  });
+
+  // Zoom-based icon mode: render dots when zoomed out (less clutter), emojis when zoomed in.
+  // Only re-render icons when crossing the threshold to avoid thrash on small zoom changes.
+  let _lastPoiMode = itineraryMapInstance.getZoom() >= POI_EMOJI_ZOOM ? 'emoji' : 'dot';
+  itineraryMapInstance.on('zoomend', () => {
+    const mode = itineraryMapInstance.getZoom() >= POI_EMOJI_ZOOM ? 'emoji' : 'dot';
+    if (mode === _lastPoiMode) return;
+    _lastPoiMode = mode;
+    Object.values(itinMarkerLayers).forEach(arr => {
+      arr.forEach(m => {
+        if (m._poiType) m.setIcon(poiDivIcon(m._poiType, m._poiColor, mode));
+      });
+    });
+    itinBeachMarkers.forEach(m => {
+      if (m._poiType) m.setIcon(poiDivIcon(m._poiType, m._poiColor, mode));
+    });
   });
 }
 

@@ -12,22 +12,22 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Wintering, no ferries",
-        "why_el": "Σχεδόν κλειστά, ελάχιστα πλοία"
+        "why": "Wintering",
+        "why_el": "Σχεδόν κλειστά"
       },
       {
         "tag": "avoid",
-        "why": "Few ferries, rooms scarce",
-        "why_el": "Λίγα πλοία, λίγα δωμάτια"
+        "why": "Few ferries",
+        "why_el": "Λίγα πλοία"
       },
       {
         "tag": "avoid",
-        "why": "Off-season hush",
-        "why_el": "Εκτός σεζόν, ησυχία"
+        "why": "Off-season",
+        "why_el": "Εκτός σεζόν"
       },
       {
         "tag": "ok",
-        "why": "Easter quiet, awakening",
+        "why": "Easter quiet",
         "why_el": "Ήσυχο Πάσχα"
       },
       {
@@ -37,7 +37,7 @@
       },
       {
         "tag": "perfect",
-        "why": "Open, warm sea, near-empty",
+        "why": "Warm, empty",
         "why_el": "Ανοίγει, ζεστή θάλασσα"
       },
       {
@@ -47,28 +47,28 @@
       },
       {
         "tag": "ok",
-        "why": "Diaspora panigiri, brief",
+        "why": "Diaspora panigiri",
         "why_el": "Πανηγύρι διασποράς"
       },
       {
         "tag": "perfect",
-        "why": "Best — calm, warm, raw",
-        "why_el": "Καλύτερος — ήσυχα, ζεστά"
+        "why": "Best — calm, warm",
+        "why_el": "Καλύτερος — ήσυχα"
       },
       {
         "tag": "avoid",
-        "why": "Winding down, fewer ferries",
-        "why_el": "Τελειώνει η σεζόν, λίγα πλοία"
+        "why": "Winding down",
+        "why_el": "Τελειώνει, λίγα πλοία"
       },
       {
         "tag": "avoid",
-        "why": "Few ferries, rooms scarce",
-        "why_el": "Λίγα πλοία, λίγα δωμάτια"
+        "why": "Few ferries",
+        "why_el": "Λίγα πλοία"
       },
       {
         "tag": "avoid",
-        "why": "Locals only, thin services",
-        "why_el": "Μόνο ντόπιοι, λίγες υπηρεσίες"
+        "why": "Off-season",
+        "why_el": "Μόνο ντόπιοι"
       }
     ]
   },
@@ -86,8 +86,8 @@
         "stops": [
           {
             "name": "Fry (Capital)",
-            "lat": 35.4173,
-            "lng": 26.9233,
+            "lat": 35.4172,
+            "lng": 26.9269,
             "type": "harbour",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Kasos",
@@ -105,8 +105,8 @@
           },
           {
             "name": "Bouka Harbour",
-            "lat": 35.4173,
-            "lng": 26.9233,
+            "lat": 35.4178,
+            "lng": 26.9261,
             "type": "harbour",
             "time": "11:00",
             "wiki": null,
@@ -116,8 +116,8 @@
           },
           {
             "name": "Archaeological Museum",
-            "lat": 35.4164,
-            "lng": 26.922,
+            "lat": 35.4181,
+            "lng": 26.9281,
             "type": "museum",
             "time": "12:00",
             "wiki": null,
@@ -127,8 +127,8 @@
           },
           {
             "name": "Agia Marina",
-            "lat": 35.412,
-            "lng": 26.9121,
+            "lat": 35.4153,
+            "lng": 26.9111,
             "type": "village",
             "time": "13:30",
             "wiki": null,
@@ -138,8 +138,8 @@
           },
           {
             "name": "Poli Village",
-            "lat": 35.4045,
-            "lng": 26.9368,
+            "lat": 35.4097,
+            "lng": 26.9189,
             "type": "village",
             "time": "15:00",
             "wiki": null,
@@ -149,8 +149,8 @@
           },
           {
             "name": "Helatros Beach (Optional)",
-            "lat": 35.3478,
-            "lng": 26.8721,
+            "lat": 35.3722,
+            "lng": 26.9281,
             "type": "beach",
             "time": "16:30",
             "wiki": null,
@@ -162,7 +162,7 @@
             "name": "Dinner — Mylos, Fry",
             "lat": 35.4175,
             "lng": 26.9272,
-            "type": "harbour",
+            "type": "restaurant",
             "time": "21:00",
             "wiki": null,
             "desc": "Best taverna on the harbour — Cretan-Kasiot cooking with a Mediterranean lightness. Try the local makarounes (handmade pasta with caramelised onions and cheese, an island specialty). The fish is whatever came in that morning.",
@@ -183,8 +183,8 @@
         "stops": [
           {
             "name": "Boat Departure — Fry",
-            "lat": 35.4173,
-            "lng": 26.9233,
+            "lat": 35.4172,
+            "lng": 26.9269,
             "type": "harbour",
             "time": "10:00",
             "wiki": null,
@@ -194,8 +194,8 @@
           },
           {
             "name": "Armathia Islet",
-            "lat": 35.4388,
-            "lng": 26.8645,
+            "lat": 35.4567,
+            "lng": 26.8819,
             "type": "beach",
             "time": "10:45",
             "wiki": "https://en.wikipedia.org/wiki/Armathia",
@@ -213,8 +213,8 @@
           },
           {
             "name": "Return to Fry",
-            "lat": 35.4173,
-            "lng": 26.9233,
+            "lat": 35.4172,
+            "lng": 26.9269,
             "type": "harbour",
             "time": "16:00",
             "wiki": null,

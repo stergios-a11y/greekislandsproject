@@ -8,38 +8,38 @@
     "months": [
       {
         "tag": "ok",
-        "why": "Quiet, mild, mostly closed",
+        "why": "Quiet, mild",
         "why_el": "Σβησμένο, ήπιο"
       },
       {
         "tag": "ok",
         "why": "Mild walking weather",
-        "why_el": "Ήπιο, μέρες για περπάτημα"
+        "why_el": "Ήπιο, πεζοπορία"
       },
       {
         "tag": "great",
-        "why": "Wildflowers, hiking, mild",
+        "why": "Wildflowers, hike",
         "why_el": "Στρώμα αγριολούλουδων"
       },
       {
         "tag": "great",
-        "why": "Easter, blooming, mild",
-        "why_el": "Πάσχα, ήπιο και ανθίζει"
+        "why": "Easter, blooming",
+        "why_el": "Πάσχα, ήπιο και"
       },
       {
         "tag": "perfect",
-        "why": "Beaches still empty, sea warming",
-        "why_el": "Θάλασσα ζεσταίνει, άδειες"
+        "why": "Beaches empty",
+        "why_el": "Θάλ., άδειες"
       },
       {
         "tag": "perfect",
-        "why": "Long days, warm sea",
-        "why_el": "Μεγάλες μέρες, η θάλασσα στα καλύτερά της"
+        "why": "Long days, warm",
+        "why_el": "Μεγάλες μέρες"
       },
       {
         "tag": "ok",
-        "why": "Hot, Eastern European peak",
-        "why_el": "Ζέστη, ανατολικοευρωπαϊκή κορύφωση"
+        "why": "East-European peak",
+        "why_el": "Ζέστη, ανατολικοευρωπα"
       },
       {
         "tag": "avoid",
@@ -48,13 +48,13 @@
       },
       {
         "tag": "perfect",
-        "why": "Best — warm sea, harvest, calm",
-        "why_el": "Καλύτερος — ζεστά, τρύγος"
+        "why": "Best — harvest",
+        "why_el": "Καλύτερος — ζεστά"
       },
       {
         "tag": "great",
-        "why": "Last swims, olive harvest",
-        "why_el": "Τελευταία μπάνια, ελιά"
+        "why": "Last swims+olive",
+        "why_el": "Τελευταία, ελιά"
       },
       {
         "tag": "great",
@@ -82,46 +82,34 @@
         "stops": [
           {
             "name": "Thasos Town (Limenas)",
-            "lat": 40.7767,
-            "lng": 24.7091,
+            "lat": 40.781,
+            "lng": 24.7122,
             "type": "city",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Thasos_(city)",
             "desc": "Main port and capital. The old town sits on top of the ancient city — you'll see ancient ruins in people's gardens.",
             "name_el": "Πόλη Θάσου (Λιμένας)",
             "desc_el": "Κύριο λιμάνι και πρωτεύουσα. Η παλιά πόλη βρίσκεται πάνω από την αρχαία πόλη — θα δεις αρχαία ερείπια σε κήπους ανθρώπων.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Thasos_-_168-148_BC_-_silver_tetradrachm_-_head_of_Dionysos_-_Herakles_-_Berlin_MK_AM.jpg/1920px-Thasos_-_168-148_BC_-_silver_tetradrachm_-_head_of_Dionysos_-_Herakles_-_Berlin_MK_AM.jpg",
-            "photo_credit": {
-              "artist": "ArchaiOptix",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Thasos_-_168-148_BC_-_silver_tetradrachm_-_head_of_Dionysos_-_Herakles_-_Berlin_MK_AM.jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           },
           {
             "name": "Ancient Agora",
-            "lat": 40.7799,
-            "lng": 24.7132,
+            "lat": 40.7811,
+            "lng": 24.7104,
             "type": "museum",
             "time": "11:00",
             "wiki": "https://en.wikipedia.org/wiki/Thasos#Archaeology",
             "desc": "One of the best-preserved Agoras in Greece — paved Roman plazas, stoas, Hellenistic temples. Right next to the archaeological museum.",
             "name_el": "Αρχαία Αγορά",
             "desc_el": "Μία από τις καλύτερα διατηρημένες Αγορές στην Ελλάδα — πλακόστρωτες ρωμαϊκές πλατείες, στοές, ελληνιστικοί ναοί. Δίπλα στο αρχαιολογικό μουσείο.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Thasos.jpg/1920px-Thasos.jpg",
-            "photo_credit": {
-              "artist": "NASA/Crew of STS-56",
-              "license": "Public domain",
-              "license_url": "",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Thasos.jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           },
           {
             "name": "Ancient Theatre of Thasos",
-            "lat": 40.7821,
-            "lng": 24.7176,
+            "lat": 40.7834,
+            "lng": 24.7152,
             "type": "museum",
             "time": "12:30",
             "wiki": null,
@@ -141,7 +129,7 @@
             "name": "Lunch — Simi Restaurant",
             "lat": 40.7818,
             "lng": 24.713,
-            "type": "village",
+            "type": "restaurant",
             "time": "14:00",
             "wiki": null,
             "desc": "Elegant waterfront spot with fresh fish and the best Thasian wine list.",
@@ -150,8 +138,8 @@
           },
           {
             "name": "Chrysi Ammoudia (Golden Beach)",
-            "lat": 40.7274,
-            "lng": 24.759,
+            "lat": 40.7217,
+            "lng": 24.8026,
             "type": "beach",
             "time": "17:00",
             "wiki": null,
@@ -181,8 +169,8 @@
         "stops": [
           {
             "name": "Panagia Village",
-            "lat": 40.7301,
-            "lng": 24.7271,
+            "lat": 40.7136,
+            "lng": 24.7592,
             "type": "village",
             "time": "10:00",
             "wiki": null,
@@ -200,8 +188,8 @@
           },
           {
             "name": "Potamia",
-            "lat": 40.7167,
-            "lng": 24.729,
+            "lat": 40.7134,
+            "lng": 24.787,
             "type": "village",
             "time": "11:00",
             "wiki": null,
@@ -219,28 +207,22 @@
           },
           {
             "name": "Aliki Archaeological Site",
-            "lat": 40.6049,
-            "lng": 24.7426,
+            "lat": 40.5933,
+            "lng": 24.7729,
             "type": "museum",
             "time": "13:00",
             "wiki": null,
             "desc": "Ancient marble quarry on the southeast coast. Twin harbors, 7th-century BC temples, quarry cuts visible in the cliff face.",
             "name_el": "Αρχαιολογικός Χώρος Αλυκής",
             "desc_el": "Αρχαίο μαρμαρικό λατομείο στη νοτιοανατολική ακτή. Δίδυμα λιμάνια, ναοί του 7ου αιώνα π.Χ., λατομικές κοπές ορατές στον βράχο.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Aliki_%281958%29_4_C.jpg/1920px-Aliki_%281958%29_4_C.jpg",
-            "photo_credit": {
-              "artist": "Gerhard Haubold",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Aliki_(1958)_4_C.jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           },
           {
             "name": "Lunch — Armenaki",
             "lat": 40.5923,
             "lng": 24.7746,
-            "type": "village",
+            "type": "restaurant",
             "time": "14:30",
             "wiki": null,
             "desc": "Taverna in the Aliki double bay. Fresh catch, grilled over charcoal.",
@@ -249,8 +231,8 @@
           },
           {
             "name": "Theologos",
-            "lat": 40.6589,
-            "lng": 24.6928,
+            "lat": 40.6183,
+            "lng": 24.6981,
             "type": "village",
             "time": "17:00",
             "wiki": null,
@@ -272,8 +254,8 @@
         "stops": [
           {
             "name": "Limenaria",
-            "lat": 40.6283,
-            "lng": 24.5762,
+            "lat": 40.622,
+            "lng": 24.5742,
             "type": "harbour",
             "time": "10:00",
             "wiki": null,
@@ -291,8 +273,8 @@
           },
           {
             "name": "Giola Lagoon",
-            "lat": 40.5863,
-            "lng": 24.6786,
+            "lat": 40.5938,
+            "lng": 24.6094,
             "type": "beach",
             "time": "11:30",
             "wiki": null,
@@ -302,8 +284,8 @@
           },
           {
             "name": "Potos",
-            "lat": 40.611,
-            "lng": 24.6076,
+            "lat": 40.5983,
+            "lng": 24.6458,
             "type": "harbour",
             "time": "14:00",
             "wiki": null,
@@ -321,8 +303,8 @@
           },
           {
             "name": "Marble Beach (Saliara)",
-            "lat": 40.7505,
-            "lng": 24.7481,
+            "lat": 40.7857,
+            "lng": 24.7625,
             "type": "beach",
             "time": "17:00",
             "wiki": null,

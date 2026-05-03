@@ -12,62 +12,62 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Wintering, few ferries",
-        "why_el": "Σχεδόν όλα κλειστά, λίγα πλοία"
+        "why": "Off-season, few",
+        "why_el": "Σχεδόν κλειστά"
       },
       {
         "tag": "avoid",
-        "why": "Tourism dormant",
+        "why": "Off-season",
         "why_el": "Σε χειμερία νάρκη"
       },
       {
         "tag": "ok",
-        "why": "Quiet, mostly closed",
+        "why": "Quiet",
         "why_el": "Ήσυχα, κλειστά"
       },
       {
         "tag": "great",
         "why": "Easter, awakening",
-        "why_el": "Άγιες μέρες, ησυχία"
+        "why_el": "Πάσχα, ησυχία"
       },
       {
         "tag": "great",
-        "why": "Warming up, no crowds",
+        "why": "Warming up, no",
         "why_el": "Νερό κολυμπιέται πια"
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, near-empty, calm",
-        "why_el": "Ζεστή θάλασσα, ησυχία"
+        "why": "Warm, calm",
+        "why_el": "Ζεστά, ησυχία"
       },
       {
         "tag": "great",
-        "why": "Hot, busy weeks",
+        "why": "Hot, busy",
         "why_el": "Ζέστη, γεμάτα"
       },
       {
         "tag": "ok",
-        "why": "Peak, but island absorbs it",
+        "why": "Peak, but absorbs it",
         "why_el": "Κορύφωση, αντέχει"
       },
       {
         "tag": "perfect",
-        "why": "Best — warm, calm, golden",
-        "why_el": "Καλύτερος — ζεστά, χρυσά"
+        "why": "Best — warm, calm",
+        "why_el": "Καλύτερος — χρυσά"
       },
       {
         "tag": "great",
-        "why": "Last swims, then chill",
-        "why_el": "Τελευταίες κολυμπιές"
+        "why": "Last swims",
+        "why_el": "Τελευταία μπάνια"
       },
       {
         "tag": "avoid",
         "why": "Last week busy",
-        "why_el": "Τελευταία βδομάδα κίνησης"
+        "why_el": "Τελευταία βδομάδα"
       },
       {
         "tag": "avoid",
-        "why": "Skeleton crew",
+        "why": "Off-season",
         "why_el": "Σκελετός υπηρεσιών"
       }
     ]
@@ -86,8 +86,8 @@
         "stops": [
           {
             "name": "Skala (Port)",
-            "lat": 36.5472,
-            "lng": 26.3554,
+            "lat": 36.5408,
+            "lng": 26.3508,
             "type": "harbour",
             "time": "10:00",
             "wiki": null,
@@ -99,7 +99,7 @@
             "name": "Querini Castle",
             "lat": 36.5436,
             "lng": 26.3553,
-            "type": "site",
+            "type": "castle",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Astypalaia",
             "desc": "The 13th-century Venetian castle that crowns Chora — built by the Querini family who ruled the island for 300 years. Houses were built into the castle walls themselves; you can still see the stone window frames embedded in the fortifications. The two churches inside, Panagia tou Kastrou and Agios Georgios, are still active. Free entry; views are spectacular in all directions.",
@@ -116,9 +116,9 @@
           },
           {
             "name": "The Eight Windmills",
-            "lat": 36.5459,
-            "lng": 26.3529,
-            "type": "site",
+            "lat": 36.5439,
+            "lng": 26.3578,
+            "type": "viewpoint",
             "time": "13:00",
             "wiki": null,
             "desc": "A row of eight stone windmills along the ridge between Chora and the modern village — most restored, most photographed at sunset. Walk along the ridge top from the castle. The light at dusk on the windmills with the white village below is the postcard image of the island.",
@@ -127,8 +127,8 @@
           },
           {
             "name": "Livadi Beach",
-            "lat": 36.5426,
-            "lng": 26.3429,
+            "lat": 36.5275,
+            "lng": 26.3267,
             "type": "beach",
             "time": "15:00",
             "wiki": null,
@@ -148,7 +148,7 @@
             "name": "Sunset from the Castle Walls",
             "lat": 36.5436,
             "lng": 26.3553,
-            "type": "site",
+            "type": "castle",
             "time": "20:00",
             "wiki": null,
             "desc": "Walk back up to the castle for sunset. The light on the white houses and the windmills is at its best 30 minutes before the sun drops. Bring a drink from one of the cafes on the way up.",
@@ -159,7 +159,7 @@
             "name": "Dinner — Astropelos, Chora",
             "lat": 36.5447,
             "lng": 26.3561,
-            "type": "village",
+            "type": "restaurant",
             "time": "21:30",
             "wiki": null,
             "desc": "One of the better tavernas in Chora — try the local lambriano (lamb stuffed with rice and herbs, an island specialty) or the saffron-spiked goat. Booking advised in summer.",
@@ -191,8 +191,8 @@
           },
           {
             "name": "Vatses Beach",
-            "lat": 36.5137,
-            "lng": 26.3171,
+            "lat": 36.4969,
+            "lng": 26.4042,
             "type": "beach",
             "time": "11:00",
             "wiki": null,
@@ -202,8 +202,8 @@
           },
           {
             "name": "Kaminakia Beach",
-            "lat": 36.5196,
-            "lng": 26.3035,
+            "lat": 36.4814,
+            "lng": 26.3922,
             "type": "beach",
             "time": "14:00",
             "wiki": null,
@@ -213,8 +213,8 @@
           },
           {
             "name": "Negros Beach",
-            "lat": 36.5782,
-            "lng": 26.369,
+            "lat": 36.5042,
+            "lng": 26.4583,
             "type": "beach",
             "time": "17:00",
             "wiki": null,
@@ -236,8 +236,8 @@
         "stops": [
           {
             "name": "Maltezana (Analipsi)",
-            "lat": 36.5746,
-            "lng": 26.3832,
+            "lat": 36.5611,
+            "lng": 26.4014,
             "type": "village",
             "time": "10:00",
             "wiki": null,
@@ -255,8 +255,8 @@
           },
           {
             "name": "Schinontas Beach",
-            "lat": 36.5765,
-            "lng": 26.391,
+            "lat": 36.5556,
+            "lng": 26.3833,
             "type": "beach",
             "time": "12:00",
             "wiki": null,
@@ -266,8 +266,8 @@
           },
           {
             "name": "Agios Konstantinos Beach",
-            "lat": 36.5281,
-            "lng": 26.3531,
+            "lat": 36.5236,
+            "lng": 26.3197,
             "type": "beach",
             "time": "14:30",
             "wiki": null,
@@ -277,8 +277,8 @@
           },
           {
             "name": "Departure",
-            "lat": 36.582,
-            "lng": 26.3749,
+            "lat": 36.5408,
+            "lng": 26.3508,
             "type": "harbour",
             "time": "17:00",
             "wiki": null,

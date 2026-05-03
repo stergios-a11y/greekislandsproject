@@ -12,62 +12,62 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Locals only, thin services",
-        "why_el": "Μόνο ντόπιοι, λίγες υπηρεσίες"
+        "why": "Off-season",
+        "why_el": "Μόνο ντόπιοι"
       },
       {
         "tag": "avoid",
-        "why": "Mostly shut",
+        "why": "Off-season",
         "why_el": "Σχεδόν όλα κλειστά"
       },
       {
         "tag": "avoid",
-        "why": "Wintering, services thin",
-        "why_el": "Χειμώνας, ελάχιστες υπηρεσίες"
+        "why": "Off-season, thin",
+        "why_el": "Χειμώνας, ελάχιστα"
       },
       {
         "tag": "ok",
-        "why": "Quiet, mostly closed",
+        "why": "Quiet",
         "why_el": "Ήσυχα, σχεδόν κλειστά"
       },
       {
         "tag": "great",
-        "why": "Awakening, sea warming, calm",
-        "why_el": "Αρχίζει η σεζόν, ζεσταίνει η θάλασσα"
+        "why": "Awakening, sea",
+        "why_el": "Ζωντανεύει, ζεσταίνει"
       },
       {
         "tag": "perfect",
-        "why": "Open, warm sea, completely calm",
-        "why_el": "Ανοίγει, ζεστή θάλασσα, εντελώς ήσυχα"
+        "why": "Warm, calm",
+        "why_el": "Ανοίγει, ζεστά, ήσυχα"
       },
       {
         "tag": "ok",
-        "why": "Hot, Greeks come briefly",
-        "why_el": "Ζέστη, σύντομα οι Έλληνες"
+        "why": "Hot, Greeks briefly",
+        "why_el": "Ζέστη, σύντομα οι"
       },
       {
         "tag": "ok",
-        "why": "Greeks for 2 weeks, mellow",
-        "why_el": "2 βδομάδες Έλληνες, ακόμα χαλαρά"
+        "why": "Greeks 2 wks",
+        "why_el": "2 βδομ. Έλληνες"
       },
       {
         "tag": "perfect",
-        "why": "Best — warm, peaceful, golden",
-        "why_el": "Ιδανικός μήνας — νερό ζεστό, χωρίς κόσμο"
+        "why": "Best — golden",
+        "why_el": "Καλύτερος — ήρεμα"
       },
       {
         "tag": "ok",
         "why": "Last swims, closing",
-        "why_el": "Τελευταίες κολυμπιές"
+        "why_el": "Τελευταία μπάνια"
       },
       {
         "tag": "avoid",
-        "why": "Mostly shut",
+        "why": "Off-season",
         "why_el": "Σχεδόν όλα κλειστά"
       },
       {
         "tag": "avoid",
-        "why": "Tourism dormant",
+        "why": "Off-season",
         "why_el": "Σε χειμερία νάρκη"
       }
     ]
@@ -84,8 +84,8 @@
           {
             "name": "Alopronia Port",
             "name_el": "Λιμάνι Αλοπρόνοιας",
-            "lat": 36.6745,
-            "lng": 25.1437,
+            "lat": 36.725,
+            "lng": 25.1486,
             "type": "village",
             "wiki": "https://en.wikipedia.org/wiki/Sikinos",
             "desc": "The small port settlement, with the only beach you can walk to from the harbour (Alopronia Beach is right there). A bus runs to Chora to meet most ferries.",
@@ -102,8 +102,8 @@
           {
             "name": "Chora & Kastro",
             "name_el": "Χώρα & Κάστρο",
-            "lat": 36.6955,
-            "lng": 25.1186,
+            "lat": 36.6953,
+            "lng": 25.1467,
             "type": "village",
             "desc": "Twin medieval settlements on the same hill, locally called Pano Meria. Kastro is the older, fortified Venetian core; Chora is the more recent expansion downhill. White houses, vaulted alleys, a few tavernas at the central square (Plateia). One of the prettiest unphotographed Choras in the Cyclades.",
             "desc_el": "Διπλοί μεσαιωνικοί οικισμοί στον ίδιο λόφο, που τοπικά λέγονται Πάνω Μεριά. Το Κάστρο είναι ο παλαιότερος, οχυρωμένος βενετσιάνικος πυρήνας· η Χώρα είναι η πιο πρόσφατη επέκταση προς τα κάτω. Λευκά σπίτια, θολωτά δρομάκια, μερικές ταβέρνες στην κεντρική Πλατεία. Από τις ομορφότερες αφωτογράφητες Χώρες των Κυκλάδων.",
@@ -119,8 +119,8 @@
           {
             "name": "Pantanassa Church",
             "name_el": "Εκκλησία Παντάνασσα",
-            "lat": 36.696,
-            "lng": 25.1186,
+            "lat": 36.6961,
+            "lng": 25.1463,
             "type": "monastery",
             "desc": "Domed 17th-century Byzantine church at the heart of Kastro, the local pilgrimage site. The interior preserves a wood-carved iconostasis and 18th-century icons.",
             "desc_el": "Θολωτή βυζαντινή εκκλησία του 17ου αιώνα στην καρδιά του Κάστρου, ο τοπικός προσκυνηματικός χώρος. Το εσωτερικό διατηρεί ξυλόγλυπτο τέμπλο και εικόνες του 18ου αιώνα.",
@@ -136,8 +136,8 @@
           {
             "name": "Episkopi",
             "name_el": "Επισκοπή",
-            "lat": 36.6696,
-            "lng": 25.0924,
+            "lat": 36.6939,
+            "lng": 25.1306,
             "type": "ruin",
             "desc": "1.5km west of Chora on a marked path or short drive. A 3rd-century Roman mausoleum-temple with extraordinarily well-preserved Doric columns and pediment, converted to a church (Koimisi tis Theotokou) in the 7th century. The most unusual ancient structure in the Small Cyclades. Free entry.",
             "desc_el": "1,5 χλμ δυτικά της Χώρας σε σημασμένο μονοπάτι ή σύντομη οδική απόσταση. Ένα ρωμαϊκό μαυσωλείο-ναός του 3ου αιώνα με εξαιρετικά διατηρημένες δωρικές κολώνες και αέτωμα, μετατραμμένο σε εκκλησία (Κοίμηση της Θεοτόκου) τον 7ο αιώνα. Η πιο ασυνήθιστη αρχαία κατασκευή των Μικρών Κυκλάδων. Δωρεάν είσοδος.",
@@ -153,8 +153,8 @@
           {
             "name": "Manalis Winery",
             "name_el": "Οινοποιείο Μανάλη",
-            "lat": 36.6811,
-            "lng": 25.1008,
+            "lat": 36.6878,
+            "lng": 25.1364,
             "type": "village",
             "desc": "Family-run winery 2km southwest of Chora producing assyrtiko and an unusual local Sikinian variety. The oldest organised winemaking on the island. Tastings by appointment in summer.",
             "desc_el": "Οικογενειακό οινοποιείο 2 χλμ νοτιοδυτικά της Χώρας που παράγει ασύρτικο και μια ασυνήθιστη τοπική ποικιλία της Σικίνου. Η παλαιότερη οργανωμένη οινοπαραγωγή του νησιού. Γευσιγνωσίες κατόπιν ραντεβού το καλοκαίρι.",
@@ -182,8 +182,8 @@
           {
             "name": "Alopronia Beach",
             "name_el": "Παραλία Αλοπρόνοιας",
-            "lat": 36.6745,
-            "lng": 25.1437,
+            "lat": 36.725,
+            "lng": 25.1486,
             "type": "beach",
             "desc": "The port beach — sandy, sheltered, with a couple of waterfront tavernas. The only beach you can reach without walking or boating. Surprisingly clean and clear given the easy access.",
             "desc_el": "Η παραλία του λιμανιού — αμμώδης, προστατευμένη, με μερικές ταβέρνες στο νερό. Η μόνη παραλία που φτάνεις χωρίς πεζοπορία ή βάρκα. Εκπληκτικά καθαρή και διαυγής για το πόσο εύκολη είναι η πρόσβαση."
@@ -191,8 +191,8 @@
           {
             "name": "Agios Georgios Beach",
             "name_el": "Παραλία Αγίου Γεωργίου",
-            "lat": 36.6935,
-            "lng": 25.166,
+            "lat": 36.7311,
+            "lng": 25.1572,
             "type": "beach",
             "desc": "Small sandy beach 1km east of Alopronia along the coastal path. A whitewashed chapel above. No facilities. Often empty.",
             "desc_el": "Μικρή αμμώδης παραλία 1 χλμ ανατολικά της Αλοπρόνοιας στο παραλιακό μονοπάτι. Ένα ασβεστωμένο εκκλησάκι από πάνω. Χωρίς υπηρεσίες. Συχνά άδεια."
@@ -209,8 +209,8 @@
           {
             "name": "Sunset at Pantanassa",
             "name_el": "Ηλιοβασίλεμα στην Παντάνασσα",
-            "lat": 36.696,
-            "lng": 25.1186,
+            "lat": 36.6953,
+            "lng": 25.1467,
             "type": "viewpoint",
             "desc": "Walk back up to Chora for sunset from the terraces below the Pantanassa church. The view west takes in Folegandros and beyond. Dinner at one of the tavernas in the central square.",
             "desc_el": "Ανέβα ξανά στη Χώρα για ηλιοβασίλεμα από τις βεράντες κάτω από την εκκλησία Παντάνασσα. Η θέα δυτικά πιάνει τη Φολέγανδρο και πέρα. Δείπνο σε μία από τις ταβέρνες στην κεντρική πλατεία."

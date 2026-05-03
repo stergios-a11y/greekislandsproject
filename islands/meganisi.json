@@ -10,17 +10,17 @@
       {
         "tag": "avoid",
         "why": "Quiet, fewer ferries",
-        "why_el": "Σε χειμερία νάρκη, λίγα πλοία"
+        "why_el": "Λίγα πλοία"
       },
       {
         "tag": "avoid",
-        "why": "Few ferries, rooms scarce",
-        "why_el": "Λίγα πλοία, λίγα ανοιχτά"
+        "why": "Few ferries",
+        "why_el": "Λίγα πλοία"
       },
       {
         "tag": "ok",
         "why": "Awakening, mild",
-        "why_el": "Αρχίζει η σεζόν, ήπιο"
+        "why_el": "Αρχίζει, ήπιο"
       },
       {
         "tag": "great",
@@ -29,42 +29,42 @@
       },
       {
         "tag": "great",
-        "why": "Sea warming, peaceful",
-        "why_el": "Η θάλασσα έρχεται στα ίσια της"
+        "why": "Sea warm, peaceful",
+        "why_el": "Θάλ. έτοιμη"
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, calm, sailing peaks",
-        "why_el": "Ζεστά, ιστιοπλοΐα κορύφωση"
+        "why": "Warm, sailing peaks",
+        "why_el": "Ιστιοπλοΐα peak"
       },
       {
         "tag": "great",
-        "why": "Hot, busy with day-trippers",
+        "why": "Day-trippers",
         "why_el": "Ζέστη, ημερήσιοι"
       },
       {
         "tag": "ok",
-        "why": "Greeks + sailing flotillas",
-        "why_el": "Έλληνες και στόλοι ιστιοφόρων"
+        "why": "Greeks+sailing",
+        "why_el": "Έλληνες και ιστιοφόρα"
       },
       {
         "tag": "perfect",
-        "why": "Best — calm, empty evenings",
-        "why_el": "Καλύτερος — ησυχία, ζεστά"
+        "why": "Best — calm evenings",
+        "why_el": "Καλύτερος — ησυχία"
       },
       {
         "tag": "great",
-        "why": "Sea warm in last open weeks",
-        "why_el": "Τελευταία βουτιά πριν την ψύχρα"
+        "why": "Sea warm, last",
+        "why_el": "Τελευταία βουτιά"
       },
       {
         "tag": "avoid",
-        "why": "Season ending, services thin",
-        "why_el": "Κλείνουν σιγά σιγά τα μαγαζιά"
+        "why": "Season ending",
+        "why_el": "Κλείνουν σιγά"
       },
       {
         "tag": "avoid",
-        "why": "Wintering, services thin",
+        "why": "Off-season, thin",
         "why_el": "Σε χειμερία νάρκη"
       }
     ]
@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Spartochori",
-            "lat": 38.6586,
-            "lng": 20.7588,
+            "lat": 38.6483,
+            "lng": 20.7867,
             "type": "village",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Spartochori",
@@ -102,8 +102,8 @@
           },
           {
             "name": "Papanikolis Cave",
-            "lat": 38.6141,
-            "lng": 20.7626,
+            "lat": 38.64,
+            "lng": 20.7633,
             "type": "nature",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Papanikolis_Cave",
@@ -121,8 +121,8 @@
           },
           {
             "name": "Atherinos Beach",
-            "lat": 38.6613,
-            "lng": 20.7994,
+            "lat": 38.6317,
+            "lng": 20.7783,
             "type": "beach",
             "time": "13:30",
             "wiki": null,
@@ -132,8 +132,8 @@
           },
           {
             "name": "Vathy Harbour",
-            "lat": 38.6641,
-            "lng": 20.7839,
+            "lat": 38.6567,
+            "lng": 20.7883,
             "type": "harbour",
             "time": "17:00",
             "wiki": null,
@@ -155,8 +155,8 @@
         "stops": [
           {
             "name": "Katomeri",
-            "lat": 38.6559,
-            "lng": 20.7889,
+            "lat": 38.64,
+            "lng": 20.8,
             "type": "village",
             "time": "09:30",
             "wiki": null,
@@ -174,8 +174,8 @@
           },
           {
             "name": "Limonari Beach",
-            "lat": 38.6477,
-            "lng": 20.7895,
+            "lat": 38.6233,
+            "lng": 20.8033,
             "type": "beach",
             "time": "10:30",
             "wiki": null,

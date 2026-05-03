@@ -12,12 +12,12 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Few ferries, rooms scarce",
-        "why_el": "Λίγα πλοία, λίγα δωμάτια"
+        "why": "Few ferries",
+        "why_el": "Λίγα πλοία"
       },
       {
         "tag": "avoid",
-        "why": "Skeleton crew",
+        "why": "Off-season",
         "why_el": "Σκελετός υπηρεσιών"
       },
       {
@@ -28,16 +28,16 @@
       {
         "tag": "great",
         "why": "Easter, mild",
-        "why_el": "Πάσχα, ήπιο και ανθίζει"
+        "why_el": "Πάσχα, ήπιο και"
       },
       {
         "tag": "great",
-        "why": "Sea ready soon, calm",
+        "why": "Sea warm",
         "why_el": "Ζεσταίνει σιγά σιγά"
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, before day-trippers",
+        "why": "Warm, before",
         "why_el": "Πριν τους ημερήσιους"
       },
       {
@@ -52,22 +52,22 @@
       },
       {
         "tag": "perfect",
-        "why": "Best — warm, calmer evenings",
-        "why_el": "Καλύτερος — ήσυχα βράδια"
+        "why": "Best — warm, calm",
+        "why_el": "Καλύτερος — ήσυχα"
       },
       {
         "tag": "great",
-        "why": "Last swims, mellow",
-        "why_el": "Νερό ακόμα ζεστό, βραδιές δροσερές"
+        "why": "Last swims",
+        "why_el": "Νερό ζεστό, δροσιά"
       },
       {
         "tag": "avoid",
-        "why": "Winding down for winter",
+        "why": "Winding down",
         "why_el": "Τελειώνει η σεζόν"
       },
       {
         "tag": "avoid",
-        "why": "Skeleton crew",
+        "why": "Off-season",
         "why_el": "Σκελετός υπηρεσιών"
       }
     ]
@@ -116,8 +116,8 @@
           },
           {
             "name": "Old Chorio (Medieval Capital)",
-            "lat": 36.2296,
-            "lng": 27.5672,
+            "lat": 36.2167,
+            "lng": 27.5961,
             "type": "village",
             "time": "13:00",
             "wiki": null,
@@ -127,8 +127,8 @@
           },
           {
             "name": "Pondamos Beach",
-            "lat": 36.2223,
-            "lng": 27.6052,
+            "lat": 36.2233,
+            "lng": 27.6017,
             "type": "beach",
             "time": "16:00",
             "wiki": null,
@@ -140,7 +140,7 @@
             "name": "Dinner — Magefseis (Tarpon Springs Blvd)",
             "lat": 36.224,
             "lng": 27.6092,
-            "type": "harbour",
+            "type": "restaurant",
             "time": "21:00",
             "wiki": null,
             "desc": "One of the better tavernas on the harbour strip. Try the local goat in tomato sauce or whatever fish came in that day. The waterfront strip is officially named Tarpon Springs Boulevard after the émigré Halki community in Florida.",
@@ -183,8 +183,8 @@
           },
           {
             "name": "Areta Beach",
-            "lat": 36.2455,
-            "lng": 27.5994,
+            "lat": 36.2189,
+            "lng": 27.5258,
             "type": "beach",
             "time": "13:30",
             "wiki": null,
@@ -196,7 +196,7 @@
             "name": "Alimia Islet (Optional)",
             "lat": 36.2722,
             "lng": 27.7253,
-            "type": "site",
+            "type": "nature",
             "time": "15:00",
             "wiki": "https://en.wikipedia.org/wiki/Alimia",
             "desc": "Some boats include a stop at the abandoned island of Alimia just north of Halki — a former Italian submarine base in WWII, now uninhabited. The harbour bay has crystal water and ruined Italian military buildings on shore. Worth it if your boat goes; otherwise skip.",

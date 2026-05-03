@@ -9,62 +9,62 @@
     "months": [
       {
         "tag": "ok",
-        "why": "Lived in, cold, Athens day-trip",
-        "why_el": "Ζωντανή, ημερήσια από Αθήνα"
+        "why": "Lived-in, Athens",
+        "why_el": "Ζωντανή, ημερήσια"
       },
       {
         "tag": "ok",
-        "why": "Mild, museum, monastery",
-        "why_el": "Ήπιο, μουσείο, μοναστήρι"
+        "why": "Mild, museum",
+        "why_el": "Ήπιο, μουσείο"
       },
       {
         "tag": "great",
-        "why": "Mild, blooming, walks",
+        "why": "Mild, blooming",
         "why_el": "Ήπιο, ανθίζει"
       },
       {
         "tag": "great",
-        "why": "Easter, mild, day-trips",
-        "why_el": "Άγιες μέρες, ησυχία"
+        "why": "Easter, mild",
+        "why_el": "Πάσχα, ησυχία"
       },
       {
         "tag": "great",
-        "why": "Sea warming, weekend beaches",
+        "why": "Sea warming",
         "why_el": "Νερό κολυμπιέται πια"
       },
       {
         "tag": "great",
-        "why": "Warm sea, busy weekends",
+        "why": "Warm sea, busy",
         "why_el": "Ζεστά, ΣΚ"
       },
       {
         "tag": "ok",
-        "why": "Hot, very busy weekends",
+        "why": "Hot, very busy",
         "why_el": "Ζέστη, γεμάτα ΣΚ"
       },
       {
         "tag": "ok",
-        "why": "Peak Athenian weekends",
+        "why": "Peak Athenian",
         "why_el": "Κορύφωση κίνησης ΣΚ"
       },
       {
         "tag": "great",
-        "why": "Warm sea, calmer",
+        "why": "Warm, calmer",
         "why_el": "Ζεστή θάλασσα, ηρεμεί"
       },
       {
         "tag": "great",
-        "why": "Mild, last swims, walks",
+        "why": "Mild, last swims",
         "why_el": "Ήπιο, τελευταία μπάνια"
       },
       {
         "tag": "ok",
-        "why": "Mild, day-trips, museum",
+        "why": "Mild, day-trips",
         "why_el": "Ήπιο"
       },
       {
         "tag": "ok",
-        "why": "Lived in, mild, day-trips",
+        "why": "Lived-in, mild",
         "why_el": "Ζωντανή, ήπιο"
       }
     ]
@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Paloukia Ferry Port",
-            "lat": 37.9655,
-            "lng": 23.5289,
+            "lat": 37.9567,
+            "lng": 23.51,
             "type": "harbour",
             "time": "09:30",
             "wiki": null,
@@ -113,8 +113,8 @@
           },
           {
             "name": "Faneromeni Monastery",
-            "lat": 37.9843,
-            "lng": 23.4355,
+            "lat": 37.9983,
+            "lng": 23.4517,
             "type": "church",
             "time": "11:30",
             "wiki": "https://en.wikipedia.org/wiki/Faneromeni_Monastery_(Salamis)",
@@ -134,7 +134,7 @@
             "name": "Lunch — Eantio Tavernas",
             "lat": 37.9617,
             "lng": 23.4867,
-            "type": "village",
+            "type": "restaurant",
             "time": "13:30",
             "wiki": null,
             "desc": "Eantio, the main town on the west coast, has the best fish tavernas on the island. Athenians drive here at weekends for the lunch. Very reasonable prices.",
@@ -143,8 +143,8 @@
           },
           {
             "name": "Kanakia Beach",
-            "lat": 37.9029,
-            "lng": 23.4091,
+            "lat": 37.9133,
+            "lng": 23.4567,
             "type": "beach",
             "time": "15:00",
             "wiki": null,
@@ -162,8 +162,8 @@
           },
           {
             "name": "Paloukia — Departure",
-            "lat": 37.9655,
-            "lng": 23.5289,
+            "lat": 37.9567,
+            "lng": 23.51,
             "type": "harbour",
             "time": "18:00",
             "wiki": null,

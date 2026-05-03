@@ -12,18 +12,18 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Mostly shut",
+        "why": "Off-season",
         "why_el": "Σχεδόν όλα κλειστά"
       },
       {
         "tag": "avoid",
-        "why": "Locals only, thin services",
-        "why_el": "Μόνο ντόπιοι, λίγες υπηρεσίες"
+        "why": "Off-season",
+        "why_el": "Μόνο ντόπιοι"
       },
       {
         "tag": "avoid",
-        "why": "Locals only, thin services",
-        "why_el": "Μόνο ντόπιοι, λίγες υπηρεσίες"
+        "why": "Off-season",
+        "why_el": "Μόνο ντόπιοι"
       },
       {
         "tag": "ok",
@@ -33,12 +33,12 @@
       {
         "tag": "great",
         "why": "Tavernas opening",
-        "why_el": "Ανοίγουν μαγαζιά, ζεσταίνει η θάλασσα"
+        "why_el": "Ανοίγουν, ζεσταίνει"
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, near-empty",
-        "why_el": "Ζεστή θάλασσα, σχεδόν άδεια"
+        "why": "Warm, near-empty",
+        "why_el": "Ζεστά, σχεδόν άδεια"
       },
       {
         "tag": "great",
@@ -48,26 +48,26 @@
       {
         "tag": "ok",
         "why": "Peak Greeks, busy",
-        "why_el": "Πιο πολύς ελληνικός κόσμος"
+        "why_el": "Πιο πολύς κόσμος"
       },
       {
         "tag": "perfect",
-        "why": "Best — warm, peaceful",
-        "why_el": "Καλύτερος — ζεστή θάλασσα και ηρεμία"
+        "why": "Best — peaceful",
+        "why_el": "Καλύτερος — ζεστά"
       },
       {
         "tag": "ok",
-        "why": "Pre-winter slowdown",
-        "why_el": "Κλείνουν οι ταβέρνες μία-μία"
+        "why": "Slowing down",
+        "why_el": "Κλείνουν ταβέρνες"
       },
       {
         "tag": "avoid",
-        "why": "Off-season hush",
-        "why_el": "Εκτός σεζόν, ησυχία"
+        "why": "Off-season",
+        "why_el": "Εκτός σεζόν"
       },
       {
         "tag": "avoid",
-        "why": "Mostly shut",
+        "why": "Off-season",
         "why_el": "Σχεδόν όλα κλειστά"
       }
     ]
@@ -84,8 +84,8 @@
           {
             "name": "Mersini Port",
             "name_el": "Λιμάνι Μερσίνης",
-            "lat": 36.8705,
-            "lng": 25.5101,
+            "lat": 36.853,
+            "lng": 25.5275,
             "type": "village",
             "wiki": "https://en.wikipedia.org/wiki/Schoinoussa",
             "desc": "The natural-harbour port — one of the safest in the Cyclades. Two seafood tavernas at the water and the bay itself doubles as Mersini Beach (calm enough for paddle-boarding). 10-min walk uphill to Chora.",
@@ -102,8 +102,8 @@
           {
             "name": "Chora",
             "name_el": "Χώρα",
-            "lat": 36.8589,
-            "lng": 25.522,
+            "lat": 36.8567,
+            "lng": 25.5189,
             "type": "village",
             "desc": "The main village on the highest point — small Cycladic settlement of whitewashed houses, narrow alleys, half a dozen tavernas, two mini-markets. Walk it end to end in 5 minutes. The food scene here is the surprise of the island.",
             "desc_el": "Το κύριο χωριό στο ψηλότερο σημείο — μικρός κυκλαδίτικος οικισμός από ασβεστωμένα σπίτια, στενά δρομάκια, μισή ντουζίνα ταβέρνες, δύο μίνι μάρκετ. Περπάτησέ το από άκρη σε άκρη σε 5 λεπτά. Η κουζίνα εδώ είναι η έκπληξη του νησιού.",
@@ -119,8 +119,8 @@
           {
             "name": "Tsigouri Beach",
             "name_el": "Παραλία Τσιγκούρι",
-            "lat": 36.8648,
-            "lng": 25.517,
+            "lat": 36.8517,
+            "lng": 25.5213,
             "type": "beach",
             "desc": "10-minute walk south of Chora down stairs. Long sandy beach with calm shallow water. Site of an early Christian basilica and Hellenistic-Roman ruins. The most popular beach on the island and reasonably equipped.",
             "desc_el": "10 λεπτά με τα πόδια νότια της Χώρας κατεβαίνοντας σκαλιά. Μακριά αμμώδης παραλία με ήρεμα ρηχά νερά. Σημείο πρωτοχριστιανικής βασιλικής και ελληνιστικών-ρωμαϊκών ερειπίων. Η πιο δημοφιλής παραλία του νησιού και αρκετά εξοπλισμένη."
@@ -139,7 +139,7 @@
             "name_el": "Δείπνο στη Χώρα",
             "lat": 36.8567,
             "lng": 25.5189,
-            "type": "village",
+            "type": "restaurant",
             "desc": "The food on Schoinoussa is the highlight. Fava (yellow split pea purée), local goat, koftes, fresh seafood. Walk into Chora and pick whichever taverna catches your eye — the standard is uniformly high.",
             "desc_el": "Το φαγητό στη Σχοινούσα είναι το υψηλό σημείο. Φάβα, ντόπιο κατσίκι, κοφτές, φρέσκα θαλασσινά. Μπες στη Χώρα και διάλεξε όποια ταβέρνα σε τραβήξει — το επίπεδο είναι ομοιόμορφα υψηλό."
           }
@@ -158,8 +158,8 @@
           {
             "name": "Psili Ammos Beach",
             "name_el": "Παραλία Ψιλή Άμμος",
-            "lat": 36.8798,
-            "lng": 25.5278,
+            "lat": 36.8628,
+            "lng": 25.5275,
             "type": "beach",
             "desc": "30-minute walk northeast of Chora. The best beach on the island — long, sandy, with crystal-clear water. North-facing so it can be windy when the meltemi blows; otherwise paradise. No facilities.",
             "desc_el": "30 λεπτά με τα πόδια βορειοανατολικά της Χώρας. Η καλύτερη παραλία του νησιού — μακριά, αμμώδης, με κρυστάλλινα νερά. Βόρεια οπότε μπορεί να φυσάει όταν φυσά το μελτέμι· διαφορετικά παράδεισος. Χωρίς υπηρεσίες."
@@ -167,8 +167,8 @@
           {
             "name": "Aligaria Beach",
             "name_el": "Παραλία Αλιγαριά",
-            "lat": 36.8552,
-            "lng": 25.5345,
+            "lat": 36.842,
+            "lng": 25.5183,
             "type": "beach",
             "desc": "2km south of Chora via narrow trail to the southernmost bay. Sandy, very quiet, with two other small beaches (Kambos and Gagavi) in the same bay.",
             "desc_el": "2 χλμ νότια της Χώρας μέσω στενού μονοπατιού στον νοτιότερο κόλπο. Αμμώδης, πολύ ήσυχη, με δύο άλλες μικρές παραλίες (Κάμπος και Γκαγκάβι) στον ίδιο κόλπο."
@@ -176,8 +176,8 @@
           {
             "name": "Messaria Village",
             "name_el": "Χωριό Μεσαριά",
-            "lat": 36.8809,
-            "lng": 25.522,
+            "lat": 36.8589,
+            "lng": 25.5083,
             "type": "village",
             "desc": "Small inland village 1km west of Chora — only a few permanent residents. A handful of traditional houses, a couple of churches. Worth a 15-minute walk to see how the agricultural inland of the island works.",
             "desc_el": "Μικρό χωριό στην ενδοχώρα 1 χλμ δυτικά της Χώρας — μόνο λίγοι μόνιμοι κάτοικοι. Μερικά παραδοσιακά σπίτια, λίγες εκκλησίες. Αξίζει 15 λεπτά πεζοπορίας για να δεις πώς λειτουργεί η αγροτική ενδοχώρα του νησιού."
@@ -185,8 +185,8 @@
           {
             "name": "Boat to Iraklia or Koufonisia",
             "name_el": "Βάρκα προς Ηρακλειά ή Κουφονήσια",
-            "lat": 36.8705,
-            "lng": 25.5101,
+            "lat": 36.853,
+            "lng": 25.5275,
             "type": "village",
             "desc": "If you have a third day, the Express Skopelitis ferry runs between all four Small Cyclades islands daily in summer. Iraklia is closer (sleepier, with the impressive Cave of Agios Ioannis); Koufonisia is more developed but with the famous Pori beach.",
             "desc_el": "Αν έχεις τρίτη μέρα, το Express Skopelitis κάνει δρομολόγια ανάμεσα στα τέσσερα Μικρά Κυκλαδίτικα νησιά καθημερινά το καλοκαίρι. Η Ηρακλειά είναι πιο κοντά (πιο νυσταγμένη, με το εντυπωσιακό Σπήλαιο Αγίου Ιωάννη)· τα Κουφονήσια είναι πιο ανεπτυγμένα αλλά με τη διάσημη παραλία Πόρι."

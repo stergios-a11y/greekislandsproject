@@ -9,62 +9,62 @@
       {
         "tag": "ok",
         "why": "City alive, sea cold",
-        "why_el": "Πόλη ζωντανή, θάλασσα κρύα"
+        "why_el": "Πόλη ζωντανή"
       },
       {
         "tag": "ok",
-        "why": "Apokries — huge carnival",
-        "why_el": "Οι Απόκριες είναι μεγάλες εδώ"
+        "why": "Apokries carnival",
+        "why_el": "Απόκριες carnival"
       },
       {
         "tag": "great",
-        "why": "Mild, museums and food",
-        "why_el": "Ήπιο, μουσεία και φαγητό"
+        "why": "Mild, museums and",
+        "why_el": "Ήπιο, μουσεία και"
       },
       {
         "tag": "great",
-        "why": "Easter — both faiths together",
-        "why_el": "Πάσχα — Καθολικοί και Ορθόδοξοι μαζί"
+        "why": "Easter, both faiths",
+        "why_el": "Πάσχα, 2 δόγματα"
       },
       {
         "tag": "perfect",
-        "why": "Sea warming, Ermoupoli alive",
-        "why_el": "Θάλασσα ζεσταίνει, Ερμούπολη στα καλύτερά της"
+        "why": "Sea warming",
+        "why_el": "Ερμούπολη peak"
       },
       {
         "tag": "perfect",
-        "why": "Long evenings, sea ideal",
-        "why_el": "Πολύ φως, θάλασσα στα καλύτερά της"
+        "why": "Long days, ideal",
+        "why_el": "Πολύ φως, θάλασσα"
       },
       {
         "tag": "great",
-        "why": "Hot but city has shade",
-        "why_el": "Ζέστη αλλά η πόλη έχει σκιά"
+        "why": "Hot, city has shade",
+        "why_el": "Ζέστη, η πόλη δίνει"
       },
       {
         "tag": "ok",
-        "why": "Hot, festival season, Meltemi",
-        "why_el": "Ζέστη, φεστιβάλ, μελτέμι"
+        "why": "Hot, festivals",
+        "why_el": "Ζέστη, φεστιβάλ"
       },
       {
         "tag": "perfect",
-        "why": "Best — warm sea, rebetiko",
-        "why_el": "Καλύτερος — θάλασσα ζεστή, ρεμπέτικα"
+        "why": "Best — warm",
+        "why_el": "Καλύτερος — ζεστά"
       },
       {
         "tag": "great",
-        "why": "City lively, sea still warm",
-        "why_el": "Πόλη ζωντανή, θάλασσα ζεστή"
+        "why": "City, sea warm",
+        "why_el": "Πόλη ζωντανή"
       },
       {
         "tag": "great",
-        "why": "Indoor city pleasures, mild",
+        "why": "City pleasures",
         "why_el": "Ήπιο, ζωή στην πόλη"
       },
       {
         "tag": "ok",
-        "why": "Quiet, but city alive",
-        "why_el": "Ήσυχα, αλλά πόλη ζωντανή"
+        "why": "Quiet, but city",
+        "why_el": "Ήσυχα, αλλά πόλη"
       }
     ]
   },
@@ -82,8 +82,8 @@
         "stops": [
           {
             "name": "Miaouli Square",
-            "lat": 37.4456,
-            "lng": 24.9437,
+            "lat": 37.4439,
+            "lng": 24.944,
             "type": "city",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Ermoupoli",
@@ -101,8 +101,8 @@
           },
           {
             "name": "Apollon Theater",
-            "lat": 37.4455,
-            "lng": 24.9437,
+            "lat": 37.4443,
+            "lng": 24.9428,
             "type": "museum",
             "time": "10:30",
             "wiki": "https://en.wikipedia.org/wiki/Apollon_Theater_(Syros)",
@@ -120,8 +120,8 @@
           },
           {
             "name": "Ano Syros (climb)",
-            "lat": 37.4507,
-            "lng": 24.9367,
+            "lat": 37.4496,
+            "lng": 24.9392,
             "type": "village",
             "time": "12:00",
             "wiki": "https://en.wikipedia.org/wiki/Ano_Syros",
@@ -141,7 +141,7 @@
             "name": "Lunch — Lilis Taverna",
             "lat": 37.4496,
             "lng": 24.9385,
-            "type": "village",
+            "type": "restaurant",
             "time": "14:00",
             "wiki": null,
             "desc": "Classic taverna in Ano Syros with panoramic terrace. Famous for Syrian sausage (loukaniko) and local goat cheese.",
@@ -150,8 +150,8 @@
           },
           {
             "name": "Vaporia Neighborhood",
-            "lat": 37.4484,
-            "lng": 24.9468,
+            "lat": 37.4426,
+            "lng": 24.9461,
             "type": "city",
             "time": "17:00",
             "wiki": null,
@@ -161,8 +161,8 @@
           },
           {
             "name": "Agios Nikolaos (sunset)",
-            "lat": 37.4484,
-            "lng": 24.9468,
+            "lat": 37.4421,
+            "lng": 24.9469,
             "type": "church",
             "time": "19:30",
             "wiki": null,
@@ -184,8 +184,8 @@
         "stops": [
           {
             "name": "Galissas",
-            "lat": 37.4213,
-            "lng": 24.8837,
+            "lat": 37.4228,
+            "lng": 24.8966,
             "type": "beach",
             "time": "10:00",
             "wiki": null,
@@ -203,8 +203,8 @@
           },
           {
             "name": "Finikas",
-            "lat": 37.3984,
-            "lng": 24.8781,
+            "lat": 37.4005,
+            "lng": 24.8974,
             "type": "beach",
             "time": "13:00",
             "wiki": null,
@@ -222,8 +222,8 @@
           },
           {
             "name": "Poseidonia (Della Grazia)",
-            "lat": 37.3904,
-            "lng": 24.8873,
+            "lat": 37.4013,
+            "lng": 24.9107,
             "type": "village",
             "time": "15:00",
             "wiki": null,
@@ -233,8 +233,8 @@
           },
           {
             "name": "Vari Beach",
-            "lat": 37.3901,
-            "lng": 24.9455,
+            "lat": 37.4063,
+            "lng": 24.9357,
             "type": "beach",
             "time": "17:00",
             "wiki": null,
@@ -256,8 +256,8 @@
         "stops": [
           {
             "name": "Kini",
-            "lat": 37.4464,
-            "lng": 24.9008,
+            "lat": 37.4551,
+            "lng": 24.8839,
             "type": "village",
             "time": "10:00",
             "wiki": null,
@@ -275,8 +275,8 @@
           },
           {
             "name": "Delfini Beach",
-            "lat": 37.4597,
-            "lng": 24.8983,
+            "lat": 37.4661,
+            "lng": 24.8878,
             "type": "beach",
             "time": "12:00",
             "wiki": null,
@@ -296,7 +296,7 @@
             "name": "Lunch — Allou Yialou",
             "lat": 37.4551,
             "lng": 24.8835,
-            "type": "village",
+            "type": "restaurant",
             "time": "14:00",
             "wiki": null,
             "desc": "Modern taverna in Kini — excellent fresh catch and Cycladic wines.",
@@ -305,8 +305,8 @@
           },
           {
             "name": "Ermoupoli — Rembetiko Evening",
-            "lat": 37.4456,
-            "lng": 24.9437,
+            "lat": 37.4439,
+            "lng": 24.944,
             "type": "city",
             "time": "21:00",
             "wiki": null,

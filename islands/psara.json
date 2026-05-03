@@ -9,33 +9,33 @@
     "months": [
       {
         "tag": "avoid",
-        "why": "Locals only, ferries weekly",
-        "why_el": "Εκτός σεζόν, ελάχιστα δρομολόγια"
+        "why": "Locals, weekly ferry",
+        "why_el": "Εκτός σεζόν, λίγα"
       },
       {
         "tag": "avoid",
-        "why": "Skeleton crew",
+        "why": "Off-season",
         "why_el": "Σχεδόν όλα κλειστά"
       },
       {
         "tag": "avoid",
-        "why": "Off-season hush",
+        "why": "Off-season",
         "why_el": "Σχεδόν όλα κλειστά"
       },
       {
         "tag": "ok",
-        "why": "Easter quiet, awakening",
+        "why": "Easter quiet",
         "why_el": "Ήσυχο Πάσχα"
       },
       {
         "tag": "great",
-        "why": "Sea getting swimmable, peaceful",
-        "why_el": "Η θάλασσα έρχεται στα ίσια της"
+        "why": "Swimmable, peaceful",
+        "why_el": "Θάλ. έτοιμη"
       },
       {
         "tag": "perfect",
-        "why": "June 21 — warm, full of meaning",
-        "why_el": "21 Ιουνίου μνήμη, ζεστά, βαθιά"
+        "why": "June 21 memorial",
+        "why_el": "21 Ιουνίου μνήμη"
       },
       {
         "tag": "great",
@@ -44,27 +44,27 @@
       },
       {
         "tag": "ok",
-        "why": "Diaspora 2 weeks, busy briefly",
+        "why": "Diaspora 2 wks",
         "why_el": "Διασπορά 2 βδομάδες"
       },
       {
         "tag": "perfect",
-        "why": "Best — calm, warm, peaceful",
-        "why_el": "Καλύτερος — ησυχία, ζεστά"
+        "why": "Best — calm",
+        "why_el": "Καλύτερος — ησυχία"
       },
       {
         "tag": "avoid",
-        "why": "Tavernas shutting one by one",
-        "why_el": "Σιγά σιγά πάει για χειμώνα"
+        "why": "Tavernas closing",
+        "why_el": "Για χειμώνα"
       },
       {
         "tag": "avoid",
-        "why": "Wintering, services thin",
-        "why_el": "Λίγα πλοία, λίγα ανοιχτά"
+        "why": "Off-season, thin",
+        "why_el": "Λίγα πλοία"
       },
       {
         "tag": "avoid",
-        "why": "Off-season hush",
+        "why": "Off-season",
         "why_el": "Εκτός σεζόν"
       }
     ]
@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Harbour Arrival",
-            "lat": 38.5405,
-            "lng": 25.5638,
+            "lat": 38.5411,
+            "lng": 25.5603,
             "type": "harbour",
             "time": "09:30",
             "wiki": "https://en.wikipedia.org/wiki/Psara",
@@ -134,7 +134,7 @@
             "name": "Lunch — Harbour Taverna",
             "lat": 38.5406,
             "lng": 25.5608,
-            "type": "harbour",
+            "type": "restaurant",
             "time": "13:30",
             "wiki": null,
             "desc": "Three small tavernas operate on the harbour. Fresh fish and traditional Aegean dishes at unhurried, very reasonable prices. The lobster here is excellent and about a third of the Mykonos price.",
@@ -143,8 +143,8 @@
           },
           {
             "name": "Limnos Beach",
-            "lat": 38.5405,
-            "lng": 25.5815,
+            "lat": 38.5489,
+            "lng": 25.5347,
             "type": "beach",
             "time": "15:30",
             "wiki": null,
@@ -154,22 +154,16 @@
           },
           {
             "name": "Departure",
-            "lat": 38.5405,
-            "lng": 25.5638,
+            "lat": 38.5411,
+            "lng": 25.5603,
             "type": "harbour",
             "time": "18:00",
             "wiki": null,
             "desc": "Ferry back to Chios (~3-4 hrs) or Piraeus via other islands. Most visitors combine Psara with Chios or Lesvos.",
             "name_el": "Αναχώρηση",
             "desc_el": "Πλοίο πίσω στη Χίο (~3-4 ώρες) ή στον Πειραιά μέσω άλλων νησιών. Οι περισσότεροι επισκέπτες συνδυάζουν τα Ψαρά με τη Χίο ή τη Λέσβο.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/3/34/DOD_108203711-6057e201ea5d5_01956.jpg",
-            "photo_credit": {
-              "artist": "NATO",
-              "license": "Public domain",
-              "license_url": "",
-              "page_url": "https://commons.wikimedia.org/wiki/File:DOD_108203711-6057e201ea5d5_01956.jpg",
-              "source": "Wikimedia Commons"
-            }
+            "photo": "",
+            "photo_credit": null
           }
         ],
         "title_el": "Μαύρη Ράχη & το Χωριό",

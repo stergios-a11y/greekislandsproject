@@ -84,6 +84,8 @@
         "title_el": "Αθήνα → Αιδηψός & Πηγές",
         "overnight": "Edipsos",
         "overnight_el": "Αιδηψός",
+        "drive_km": 165,
+        "drive_min": 165,
         "stops": [
           {
             "time": "10:00",
@@ -100,7 +102,7 @@
             "name": "Lunch — Captain's Restaurant",
             "lat": 38.864,
             "lng": 23.038,
-            "type": "harbour",
+            "type": "restaurant",
             "desc": "Waterfront seafood in the heart of Edipsos. Order the fresh fish of the day — they grill it on charcoal in front of you.",
             "name_el": "Μεσημεριανό — Captain's",
             "desc_el": "Ψαροφαγία στην προκυμαία της Αιδηψού. Παράγγειλε το φρέσκο ψάρι της ημέρας — το ψήνουν στα κάρβουνα μπροστά σου."
@@ -125,9 +127,7 @@
             "name_el": "Ηλιοβασίλεμα — προκυμαία Αιδηψού",
             "desc_el": "Η προκυμαία γεμάτη Belle Époque ξενοδοχεία και σκιερά καφενεία. Περπάτησέ την αργά, κατάλαβε σε ένα παλιό για ουζάκι."
           }
-        ],
-        "km": 158,
-        "drive_mins": 140
+        ]
       },
       {
         "day": 2,
@@ -135,12 +135,14 @@
         "title_el": "Λιχαδονήσοι & Λίμνη",
         "overnight": "Edipsos",
         "overnight_el": "Αιδηψός",
+        "drive_km": 70,
+        "drive_min": 90,
         "stops": [
           {
             "time": "09:30",
             "name": "Lichadonisia Day-Trip Boat",
-            "lat": 38.8228,
-            "lng": 22.8211,
+            "lat": 38.815,
+            "lng": 22.838,
             "type": "nature",
             "desc": "From Agios Georgios (15 min from Edipsos), boats run all day to the Lichadonisia islets. Turquoise water you don't expect this far north — Greece's answer to a Caribbean lagoon.",
             "name_el": "Σκάφος για Λιχαδονήσους",
@@ -151,7 +153,7 @@
             "name": "Lunch on the islets — Manolas",
             "lat": 38.815,
             "lng": 22.838,
-            "type": "village",
+            "type": "restaurant",
             "desc": "Beach taverna right where the boats anchor. Octopus, fried squid, Greek salad. Nothing fancy, exactly what you want after swimming.",
             "name_el": "Μεσημεριανό — Manolas",
             "desc_el": "Παραλιακή ταβέρνα όπου αράζουν τα σκάφη. Χταπόδι, καλαμαράκια, χωριάτικη. Τίποτα φανταχτερό — ακριβώς αυτό που θες μετά το μπάνιο."
@@ -159,8 +161,8 @@
           {
             "time": "17:00",
             "name": "Limni Village",
-            "lat": 38.7657,
-            "lng": 23.318,
+            "lat": 38.766,
+            "lng": 23.319,
             "type": "village",
             "desc": "Sleepy fishing village 30 minutes south of Edipsos. Stone houses, narrow lanes, working fishermen. Walk to Galataki Monastery (10 min drive) for the views.",
             "name_el": "Λίμνη",
@@ -173,25 +175,12 @@
             "name": "Dinner — Iliopoulou (Limni)",
             "lat": 38.766,
             "lng": 23.319,
-            "type": "village",
+            "type": "restaurant",
             "desc": "Tiny family taverna at the harbour. Dinner on a tiny terrace looking at fishing boats. Order whatever the owner says was caught that morning.",
             "name_el": "Δείπνο — Ηλιοπούλου (Λίμνη)",
             "desc_el": "Μικρή οικογενειακή ταβέρνα στο λιμάνι. Φαγητό σε μικρή βεράντα με θέα τα ψαράδικα. Παράγγειλε ό,τι λέει ο ιδιοκτήτης πως πιάστηκε το πρωί."
-          },
-          {
-            "name": "Return to Edipsos",
-            "name_el": "Επιστροφή στα Λουτρά Αιδηψού",
-            "lat": 38.866,
-            "lng": 23.041,
-            "type": "city",
-            "time": "20:30",
-            "wiki": null,
-            "desc": "About 50-minute drive north along the coast, looping past the gulf villages. Edipsos remains the thermal-spa centre of north Evia — a soak before bed at one of the seafront thermal baths is the perfect ending. Late dinner at Captain Cook on the harbour.",
-            "desc_el": "Περίπου 50 λεπτά οδήγησης βόρεια κατά μήκος της ακτής, μέσω των παραλίμνιων χωριών. Τα Λουτρά Αιδηψού παραμένουν το λουτροπολικό κέντρο της βόρειας Εύβοιας — ένα μπάνιο πριν τον ύπνο σε ένα από τα παραθαλάσσια λουτρά είναι το ιδανικό τέλος. Αργό δείπνο στο Captain Cook στο λιμάνι."
           }
-        ],
-        "km": 48,
-        "drive_mins": 75
+        ]
       },
       {
         "day": 3,
@@ -199,6 +188,8 @@
         "title_el": "Ακτή Αγίας Άννας & Αναχώρηση",
         "overnight": null,
         "overnight_el": null,
+        "drive_km": 200,
+        "drive_min": 240,
         "stops": [
           {
             "time": "10:00",
@@ -213,8 +204,8 @@
           {
             "time": "12:00",
             "name": "Agia Anna Beach",
-            "lat": 38.8596,
-            "lng": 23.3999,
+            "lat": 38.876,
+            "lng": 23.43,
             "type": "beach",
             "desc": "1.5km of fine sand and cedar trees right next to the water. One of Evia's longest beaches, never crowded outside August. Few tavernas at the south end for lunch.",
             "name_el": "Παραλία Αγίας Άννας",
@@ -230,9 +221,7 @@
             "name_el": "Επιστροφή μέσω Χαλκίδας → Αθήνα",
             "desc_el": "Από Αγία Άννα, ο πιο γρήγορος δρόμος για πίσω είναι νότια μέσω Χαλκίδας (2ω για Αθήνα). Η γέφυρα στο ηλιοβασίλεμα είναι ωραίο κλείσιμο."
           }
-        ],
-        "km": 184,
-        "drive_mins": 220
+        ]
       }
     ]
   },

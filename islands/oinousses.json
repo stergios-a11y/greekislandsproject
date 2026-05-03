@@ -10,32 +10,32 @@
       {
         "tag": "avoid",
         "why": "Quiet, fewer ferries",
-        "why_el": "Σε χειμερία νάρκη, λίγα πλοία"
+        "why_el": "Λίγα πλοία"
       },
       {
         "tag": "avoid",
-        "why": "Locals only, thin services",
+        "why": "Off-season",
         "why_el": "Εκτός σεζόν"
       },
       {
         "tag": "ok",
-        "why": "Awakening, museum open",
-        "why_el": "Ζωντανεύει, μουσείο λειτουργεί"
+        "why": "Awakening, museum",
+        "why_el": "Ζωντανεύει"
       },
       {
         "tag": "great",
         "why": "Easter, mild",
-        "why_el": "Πάσχα, ήπιο και ανθίζει"
+        "why_el": "Πάσχα, ήπιο και"
       },
       {
         "tag": "great",
-        "why": "Sea warming, near-empty",
+        "why": "Sea warm, empty",
         "why_el": "Νερό κολυμπιέται πια"
       },
       {
         "tag": "perfect",
-        "why": "Warm sea, deep silence",
-        "why_el": "Ζεστά, βαθιά ησυχία"
+        "why": "Warm, deep silence",
+        "why_el": "Βαθιά ησυχία"
       },
       {
         "tag": "great",
@@ -44,27 +44,27 @@
       },
       {
         "tag": "ok",
-        "why": "Diaspora returns briefly",
+        "why": "Diaspora returns",
         "why_el": "Επιστρέφει η διασπορά"
       },
       {
         "tag": "perfect",
-        "why": "Best — calm, warm, peaceful",
-        "why_el": "Καλύτερος — ησυχία, ζεστά"
+        "why": "Best — calm",
+        "why_el": "Καλύτερος — ησυχία"
       },
       {
         "tag": "avoid",
-        "why": "Winding down, fewer ferries",
-        "why_el": "Κλείνουν σιγά σιγά τα μαγαζιά"
+        "why": "Winding down",
+        "why_el": "Κλείνουν σιγά"
       },
       {
         "tag": "avoid",
-        "why": "Skeleton crew",
+        "why": "Off-season",
         "why_el": "Μόνο ντόπιοι"
       },
       {
         "tag": "avoid",
-        "why": "Wintering, services thin",
+        "why": "Off-season, thin",
         "why_el": "Εκτός σεζόν"
       }
     ]
@@ -83,8 +83,8 @@
         "stops": [
           {
             "name": "Harbour Arrival",
-            "lat": 38.5149,
-            "lng": 26.2143,
+            "lat": 38.52,
+            "lng": 26.2017,
             "type": "harbour",
             "time": "10:00",
             "wiki": "https://en.wikipedia.org/wiki/Oinousses",
@@ -102,8 +102,8 @@
           },
           {
             "name": "Naval Museum",
-            "lat": 38.5144,
-            "lng": 26.2189,
+            "lat": 38.5192,
+            "lng": 26.2028,
             "type": "museum",
             "time": "10:30",
             "wiki": null,
@@ -113,8 +113,8 @@
           },
           {
             "name": "Shipowners' Mansions Walk",
-            "lat": 38.5144,
-            "lng": 26.2189,
+            "lat": 38.52,
+            "lng": 26.2017,
             "type": "village",
             "time": "11:30",
             "wiki": null,
@@ -126,7 +126,7 @@
             "name": "Lunch — Harbour Taverna",
             "lat": 38.5192,
             "lng": 26.2022,
-            "type": "harbour",
+            "type": "restaurant",
             "time": "13:00",
             "wiki": null,
             "desc": "Two or three tavernas on the harbour serve excellent seafood at honest prices. The lobster pasta here is a local specialty.",
@@ -146,8 +146,8 @@
           },
           {
             "name": "Departure",
-            "lat": 38.5149,
-            "lng": 26.2143,
+            "lat": 38.52,
+            "lng": 26.2017,
             "type": "harbour",
             "time": "18:30",
             "wiki": null,
