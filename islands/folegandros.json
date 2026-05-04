@@ -92,7 +92,8 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Karavostasis,_church_and_port,_Folegandros,_153355.jpg",
               "source": "Wikimedia Commons"
             },
-            "type": "harbour"
+            "type": "harbour",
+            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJRfe1xSZVmBQRoGfCdC-9AAo"
           },
           {
             "name": "Chora (Folegandros Town)",
@@ -110,7 +111,8 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Folegandros-Chora.jpg",
               "source": "Wikimedia Commons"
             },
-            "type": "village"
+            "type": "village",
+            "wiki": "https://en.wikipedia.org/wiki/Folegandros"
           },
           {
             "name": "Kastro (medieval quarter)",
@@ -120,7 +122,8 @@
             "lat": 36.6287,
             "lng": 24.9207,
             "time": "13:30",
-            "type": "castle"
+            "type": "castle",
+            "wiki": "https://en.wikipedia.org/wiki/Folegandros"
           },
           {
             "name": "Church of Panagia (hilltop)",
@@ -130,7 +133,8 @@
             "lat": 36.6302,
             "lng": 24.9256,
             "time": "16:00",
-            "type": "church"
+            "type": "church",
+            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJF4IsgWtVmBQR42xC8wMR2RM"
           },
           {
             "name": "Dinner — Blue Cuisine (Chora)",
@@ -169,7 +173,8 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:View_of_Agali_Beach.jpg",
               "source": "Wikimedia Commons"
             },
-            "type": "beach"
+            "type": "beach",
+            "wiki": "https://en.wikipedia.org/wiki/Folegandros"
           },
           {
             "name": "Agios Nikolaos Beach (walk from Agali)",
@@ -179,7 +184,8 @@
             "lat": 36.632,
             "lng": 24.891,
             "time": "11:00",
-            "type": "beach"
+            "type": "beach",
+            "wiki": "https://en.wikipedia.org/wiki/Folegandros"
           },
           {
             "name": "Lunch — Sinandisi (Ano Meria, since 1920)",
@@ -207,7 +213,8 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Ano_Meria_on_Folegandros,_15M6593.jpg",
               "source": "Wikimedia Commons"
             },
-            "type": "village"
+            "type": "village",
+            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJdVIONKP_mBQRfP6rlu57nBU"
           },
           {
             "name": "Return to Chora",
@@ -239,7 +246,8 @@
             "lat": 36.5952,
             "lng": 24.9496,
             "time": "09:30",
-            "type": "beach"
+            "type": "beach",
+            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJoWvy1dWqmRQRfABEi9xk5hk"
           },
           {
             "name": "Livadaki Beach (remote hike or boat)",
@@ -249,7 +257,8 @@
             "lat": 36.6362,
             "lng": 24.8593,
             "time": "13:00",
-            "type": "beach"
+            "type": "beach",
+            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ-_UGp8v_mBQRYBB4rk3u2nw"
           },
           {
             "name": "Karavostasi — Departure",
@@ -296,7 +305,8 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "page_url": "https://commons.wikimedia.org/wiki/File:Cyclades_Folegandros_Katergo_Plage_-_panoramio.jpg",
         "source": "Wikimedia Commons"
-      }
+      },
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJoWvy1dWqmRQRfABEi9xk5hk"
     },
     {
       "name": "Agali Beach",
@@ -320,7 +330,8 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "page_url": "https://commons.wikimedia.org/wiki/File:View_of_Agali_Beach.jpg",
         "source": "Wikimedia Commons"
-      }
+      },
+      "wiki": "https://en.wikipedia.org/wiki/Folegandros"
     },
     {
       "name": "Agios Nikolaos Beach",
@@ -344,7 +355,8 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "page_url": "https://commons.wikimedia.org/wiki/File:Cyclades_Folegandros_Angali_Agios_Nikolaos_Plage_Tamaris_-_panoramio.jpg",
         "source": "Wikimedia Commons"
-      }
+      },
+      "wiki": "https://en.wikipedia.org/wiki/Folegandros"
     },
     {
       "name": "Livadaki Beach",
@@ -368,7 +380,8 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "page_url": "https://commons.wikimedia.org/wiki/File:Paralia_Livadaki_Beach,_Folegandros,_Greece.jpg",
         "source": "Wikimedia Commons"
-      }
+      },
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ-_UGp8v_mBQRYBB4rk3u2nw"
     }
   ],
   "name_el": "Φολέγανδρος",
