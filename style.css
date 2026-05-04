@@ -4742,6 +4742,9 @@ html.dark .intl-star.on { color: #FFCB52; }
 .mrs-5 { background: #1B5E20; } /* deep green */
 .mrs-3 { background: #C4962A; } /* gold */
 .mrs-1 { background: #C0522A; } /* terracotta */
+/* mrs-neutral: car reliance is a fact, not a quality score, so the 5/3/1
+   badges should be value-neutral grey rather than green/gold/red. */
+.mrs-neutral { background: #6B7280; } /* slate grey */
 
 /* Limits list */
 .mission-limits-list {

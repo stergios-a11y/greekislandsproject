@@ -180,6 +180,28 @@ def esc(s):
     """Escape HTML in a string for safe insertion."""
     return html.escape(str(s)) if s is not None else ''
 
+def strip_html(s):
+    """Strip HTML tags and decode entities. Used for places where structured
+    data or meta needs plain text — e.g. JSON-LD `description`. Whitespace is
+    collapsed."""
+    if not s:
+        return ''
+    # Drop tags entirely
+    text = re.sub(r'<[^>]+>', '', str(s))
+    # Decode entities (&amp;, &nbsp;, etc.)
+    text = html.unescape(text)
+    return re.sub(r'\s+', ' ', text).strip()
+
+def truncate_at_word(s, limit):
+    """Truncate at a word boundary, no trailing ellipsis. Used for JSON-LD
+    description fields where Google has a length cap but we don't want a
+    visible "..."."""
+    if len(s) <= limit:
+        return s
+    cut = s[:limit].rsplit(' ', 1)[0]
+    # Trim trailing punctuation that looks awkward mid-sentence
+    return cut.rstrip(' ,;:—–-')
+
 def safe_html(s):
     """Allow simple <a href="...">, <strong>, and <em> tags in descriptions,
     escape everything else. This lets island authors include real hyperlinks
@@ -523,14 +545,16 @@ def build_structured_data(key, data, meta, lang='en'):
     url = f'{SITE_URL}/island/{key}/' if lang == 'en' else f'{SITE_URL}/el/island/{key}/'
     name = localized_name(key, data, meta, lang)
     intro = pick(data, 'intro', lang) or ''
-    # Clean intro to plain text
-    intro_plain = re.sub(r'\s+', ' ', intro).strip()
+    # Clean intro to plain text — strip HTML, collapse whitespace.
+    # JSON-LD descriptions must be plain text; raw HTML (e.g. embedded <a> tags
+    # in the intro) breaks the structured data when the slice cuts mid-tag.
+    intro_plain = strip_html(intro)
 
     destination = {
         "@context": "https://schema.org",
         "@type": "TouristDestination",
         "name": name,
-        "description": intro_plain[:500],
+        "description": truncate_at_word(intro_plain, 500),
         "url": url,
         "geo": {
             "@type": "GeoCoordinates",
@@ -566,7 +590,7 @@ def build_structured_data(key, data, meta, lang='en'):
             "@context": "https://schema.org",
             "@type": "TouristTrip",
             "name": f"{len(days)}-day {name} itinerary",
-            "description": pick(data.get('itinerary', {}), 'subtitle', lang) or intro_plain[:200],
+            "description": pick(data.get('itinerary', {}), 'subtitle', lang) or truncate_at_word(intro_plain, 200),
             "itinerary": {
                 "@type": "ItemList",
                 "numberOfItems": len(itinerary_list),
@@ -1290,6 +1314,10 @@ def generate_festivals_page(island_keys):
             intro = ('Θρησκευτικές γιορτές, πανηγύρια και παραδοσιακές εκδηλώσεις σε όλα τα 78 ελληνικά νησιά. '
                      'Για τις κινητές γιορτές, οι ημερομηνίες είναι ρυθμισμένες για το 2027. '
                      'Το ημερολόγιο είναι ο καλύτερος τρόπος να σχεδιάσεις ταξίδι γύρω από κάτι συγκεκριμένο.')
+            # Self-contained meta description (≤160 chars). Don't slice `intro` —
+            # it's body copy and slicing truncates mid-sentence.
+            meta_desc = ('Θρησκευτικές γιορτές και πανηγύρια σε όλα τα 78 ελληνικά νησιά. '
+                         'Κινητές ημερομηνίες ρυθμισμένες για το 2027. Σχεδίασε το ταξίδι σου γύρω από κάτι αυθεντικό.')
             h1 = 'Γιορτές & Πανηγύρια — Ημερολόγιο'
         else:
             title = 'Greek Island Festivals — full calendar | Aegean Blueprint'
@@ -1297,6 +1325,9 @@ def generate_festivals_page(island_keys):
                      'Dates pinned to 2027 where movable. The calendar is the single best way to plan a trip '
                      'around something specific — most of these festivals are the deepest-rooted experiences '
                      'an island offers.')
+            # Self-contained meta description (≤160 chars).
+            meta_desc = ('Religious feasts and panigiria across all 78 Greek islands. Movable dates pinned to 2027. '
+                         'The calendar is the deepest way to plan a trip.')
             h1 = 'Greek Island Festivals — full calendar'
 
         url = f'{SITE_URL}/' + ('el/' if is_el else '') + 'festivals/'
@@ -1361,7 +1392,7 @@ def generate_festivals_page(island_keys):
             '<meta charset="UTF-8">\n'
             '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
             '<title>' + esc(title) + '</title>\n'
-            '<meta name="description" content="' + esc(intro[:155]) + '">\n'
+            '<meta name="description" content="' + esc(meta_desc) + '">\n'
             '<meta name="theme-color" content="#0B8FAC">\n'
             '<meta name="author" content="Stergios Gousios">\n'
             '<link rel="canonical" href="' + url + '">\n'
@@ -1371,7 +1402,7 @@ def generate_festivals_page(island_keys):
             '<link rel="icon" href="/logo.png">\n'
             '<meta property="og:type" content="website">\n'
             '<meta property="og:title" content="' + esc(title) + '">\n'
-            '<meta property="og:description" content="' + esc(intro[:155]) + '">\n'
+            '<meta property="og:description" content="' + esc(meta_desc) + '">\n'
             '<meta property="og:url" content="' + url + '">\n'
             '<meta property="og:locale" content="' + ('el_GR' if is_el else 'en_US') + '">\n'
             # Apply dark mode preference from localStorage BEFORE stylesheet loads.
@@ -1429,7 +1460,9 @@ def generate_festivals_page(island_keys):
             '      <a href="/' + ('el/' if is_el else '') + '#compare">' + ('Σύγκριση' if is_el else 'Compare') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + 'festivals/" class="active">' + ('Γιορτές' if is_el else 'Festivals') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#hopping">' + ('Νησοπορία' if is_el else 'Island Hopping') + '</a>\n'
+            '      <a href="/' + ('el/' if is_el else '') + '#international">' + ('Διεθνώς' if is_el else 'International') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#match">' + ('Βρες το Νησί σου' if is_el else 'Match Me') + '</a>\n'
+            '      <a href="/' + ('el/' if is_el else '') + '#shortlist">' + ('⭐ Η Λίστα μου' if is_el else '⭐ My Shortlist') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#mission">' + ('Στόχος' if is_el else 'Mission') + '</a>\n'
             '    </nav>\n'
             '    <a class="lang-toggle-static" href="' + ('/festivals/' if is_el else '/el/festivals/') + '" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;">'

@@ -341,7 +341,7 @@ const UI_TEXT = {
 
   // Section 4 — How we score
   'mission.scoring.title': { en: 'How we score', el: 'Πώς βαθμολογούμε' },
-  'mission.scoring.lead': { en: 'Every island gets rated 1 to 5 on five dimensions, plus an overall number. None of these are computed by an algorithm or scraped from elsewhere — they\'re my own informed judgment, based on having been to most of them or talking to people who live on the rest.', el: 'Κάθε νησί παίρνει βαθμολογία 1 έως 5 σε πέντε διαστάσεις, συν έναν συνολικό αριθμό. Κανένα από αυτά δεν υπολογίζεται με αλγόριθμο και κανένα δεν είναι παρμένο από αλλού — είναι η δική μου κρίση, με βάση το ότι έχω πάει στα περισσότερα ή ότι μιλάω με ανθρώπους που ζουν στα υπόλοιπα.' },
+  'mission.scoring.lead': { en: 'Every island gets rated 1 to 5 on five dimensions, plus an overall number and one practical fact (how much you need a car). None of these are computed by an algorithm or scraped from elsewhere — they\'re my own informed judgment, based on having been to most of them or talking to people who live on the rest.', el: 'Κάθε νησί παίρνει βαθμολογία 1 έως 5 σε πέντε διαστάσεις, συν έναν συνολικό αριθμό και ένα πρακτικό στοιχείο (πόσο χρειάζεσαι αυτοκίνητο). Κανένα δεν υπολογίζεται με αλγόριθμο και κανένα δεν είναι παρμένο από αλλού — είναι η δική μου κρίση, με βάση το ότι έχω πάει στα περισσότερα ή ότι μιλάω με ανθρώπους που ζουν στα υπόλοιπα.' },
   'mission.scoring.honest': { en: "If you want to know why Milos is 4.6 and Tinos is 3.9, the short answer is: I think so, for the reasons below. The longer answer is: disagree with me — I'd rather have that conversation than pretend there's a formula.", el: 'Αν θες να ξέρεις γιατί η Μήλος είναι 4.6 και η Τήνος 3.9, η σύντομη απάντηση είναι: έτσι το κρίνω, για τους παρακάτω λόγους. Η μακριά απάντηση: διαφώνησε μαζί μου — καλύτερα αυτή η συζήτηση, παρά μια ψεύτικη για φόρμουλες.' },
 
   // Sources
@@ -357,7 +357,7 @@ const UI_TEXT = {
 
   // Rubric
   'mission.rubric.title': { en: 'The rubric', el: 'Η κλίμακα' },
-  'mission.rubric.intro': { en: "Five dimensions. Each scored 1 to 5. Here's what those numbers actually mean.", el: 'Πέντε διαστάσεις. Κάθε μία βαθμολογείται 1 έως 5. Να τι σημαίνουν πραγματικά αυτοί οι αριθμοί.' },
+  'mission.rubric.intro': { en: "Five rated dimensions, each scored 1 to 5, plus a sixth number for car reliance — a fact, not a quality score. Here's what those numbers actually mean.", el: 'Πέντε βαθμολογημένες διαστάσεις, κάθε μία από 1 έως 5, συν έναν έκτο αριθμό για την εξάρτηση από αυτοκίνητο — στοιχείο πληροφορίας, όχι ποιότητας. Να τι σημαίνουν πραγματικά αυτοί οι αριθμοί.' },
 
   'mission.rubric.beach.name': { en: 'Beach', el: 'Παραλία' },
   'mission.rubric.beach.desc': { en: 'How good the swimming is.', el: 'Πόσο καλό είναι το μπάνιο.' },
@@ -388,6 +388,12 @@ const UI_TEXT = {
   'mission.rubric.afford.5': { en: 'Genuinely cheap. Ikaria, Samothrace, Lemnos.', el: 'Γνήσια φθηνά. Ικαρία, Σαμοθράκη, Λήμνος.' },
   'mission.rubric.afford.3': { en: 'Normal Greek-island pricing.', el: 'Κανονικές τιμές ελληνικού νησιού.' },
   'mission.rubric.afford.1': { en: 'Mykonos/Santorini territory. Dinner alone can clear €200.', el: 'Επίπεδο Μυκόνου/Σαντορίνης. Μόνο το δείπνο ξεπερνά τα 200€.' },
+
+  'mission.rubric.car.name': { en: 'Car reliance', el: 'Εξάρτηση από αυτοκίνητο' },
+  'mission.rubric.car.desc': { en: 'Practical fact, not a quality score. How much a car shapes the trip.', el: 'Πρακτικό στοιχείο, όχι βαθμολογία ποιότητας. Πόσο διαμορφώνει το ταξίδι το αυτοκίνητο.' },
+  'mission.rubric.car.5': { en: 'Essential. The island only opens up if you drive. Crete, Naxos, Lefkada.', el: 'Απαραίτητο. Το νησί ανοίγεται μόνο με αυτοκίνητο. Κρήτη, Νάξος, Λευκάδα.' },
+  'mission.rubric.car.3': { en: 'Useful but not required. Buses cover the basics; a car opens up beaches.', el: 'Χρήσιμο αλλά όχι απαραίτητο. Τα λεωφορεία καλύπτουν τα βασικά· το αυτοκίνητο ανοίγει παραλίες.' },
+  'mission.rubric.car.1': { en: 'Pointless. You walk or take the local bus. Hydra, Koufonisia.', el: 'Άχρηστο. Πάς με τα πόδια ή με το τοπικό λεωφορείο. Ύδρα, Κουφονήσια.' },
 
   // Overall
   'mission.overall.title': { en: 'The overall number', el: 'Ο συνολικός αριθμός' },

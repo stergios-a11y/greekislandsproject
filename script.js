@@ -9,10 +9,18 @@ const BUILD_DATE = '2026-05-04';   // Updated by tools/prerender.py on each depl
 // Add island keys to BOOKING_ENABLED_ISLANDS to enable the "Book hotel" button
 // on those islands. Leave this list narrow until you've measured click-through
 // on a couple of pages.
+//
+// Safety: the placeholder AID '0000000' is rejected at render time. Even if
+// an island is in BOOKING_ENABLED_ISLANDS, the Booking link will not render
+// while the AID is still the placeholder — clicks would otherwise go to
+// Booking.com with a non-existent affiliate ID and earn no commission.
 const BOOKING_AID = '0000000';   // <-- swap when you have your real AID
+const BOOKING_PLACEHOLDER_AID = '0000000';
 const BOOKING_ENABLED_ISLANDS = new Set([
-  'santorini',
+  // Add island keys here once BOOKING_AID is a real ID.
+  // Started with 'santorini' — re-enable when ready.
 ]);
+const BOOKING_READY = (BOOKING_AID && BOOKING_AID !== BOOKING_PLACEHOLDER_AID);
 
 const ISLANDS_DATA = {
   "lefkada":      { name:"Lefkada",          lat:38.706, lng:20.648, beach:4.9, hist:2.5, night:3.2, access:4.5, afford:4.0, car_need:4.0, has_airport:true, total:3.9, area:335,   pop:22600,   days:4, island_group:"Ionian", drama:false, hiking:true, springs:false, chora:false, sailing:true },
@@ -1162,7 +1170,7 @@ function buildIslandPage(data, key) {
       const overnightText = pickLang(d, 'overnight');
       const escAttr = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
       const inner = `🌙 ${t('common.sleep')}: ${overnightText}`;
-      if (BOOKING_ENABLED_ISLANDS.has(currentIslandKey)) {
+      if (BOOKING_READY && BOOKING_ENABLED_ISLANDS.has(currentIslandKey)) {
         // Search-URL strategy — Booking.com matches the hotel name to its inventory.
         // Encoding the hotel name + island keeps the search tight.
         const islandName = ISLANDS_DATA[currentIslandKey] ? ISLANDS_DATA[currentIslandKey].name : '';
