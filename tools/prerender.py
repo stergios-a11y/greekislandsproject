@@ -1047,7 +1047,13 @@ def render_page(key, data, meta, lang='en'):
 <link rel="alternate" hreflang="en" href="{url_en}">
 <link rel="alternate" hreflang="el" href="{url_el}">
 <link rel="alternate" hreflang="x-default" href="{url_en}">
-<link rel="icon" href="{asset_prefix}logo.png">
+<link rel="icon" href="{asset_prefix}favicon.ico" sizes="any">
+<link rel="icon" href="{asset_prefix}favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="{asset_prefix}favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{asset_prefix}favicon-16.png">
+<link rel="apple-touch-icon" href="{asset_prefix}apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Aegean Blueprint">
+<link rel="manifest" href="{asset_prefix}site.webmanifest">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -1457,7 +1463,13 @@ def generate_festivals_page(island_keys):
             '<link rel="alternate" hreflang="en" href="' + SITE_URL + '/festivals/">\n'
             '<link rel="alternate" hreflang="el" href="' + SITE_URL + '/el/festivals/">\n'
             '<link rel="alternate" hreflang="x-default" href="' + SITE_URL + '/festivals/">\n'
-            '<link rel="icon" href="/logo.png">\n'
+            '<link rel="icon" href="/favicon.ico" sizes="any">\n'
+            '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
+            '<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">\n'
+            '<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">\n'
+            '<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n'
+            '<meta name="apple-mobile-web-app-title" content="Aegean Blueprint">\n'
+            '<link rel="manifest" href="/site.webmanifest">\n'
             '<meta property="og:type" content="website">\n'
             '<meta property="og:title" content="' + esc(title) + '">\n'
             '<meta property="og:description" content="' + esc(meta_desc) + '">\n'
