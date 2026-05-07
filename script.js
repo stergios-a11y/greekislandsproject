@@ -1407,7 +1407,7 @@ function buildWhenToVisitSection(data) {
   }).join('');
 
   return `
-    <details class="wtv-section">
+    <details class="wtv-section" open>
       <summary class="wtv-title">${t('wtv.title')}</summary>
       ${summaryHtml}
       <div class="wtv-ribbon-wrap">
