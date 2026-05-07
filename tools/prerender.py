@@ -458,7 +458,8 @@ def build_faq(key, data, meta, lang='en'):
         days_int = int(days)
         if lang == 'el':
             q = f'Πόσες μέρες χρειάζομαι στ{"ο" if name[-1] not in "αηειυω" else "η"} {name};'
-            a = f'Συνιστούμε {days_int} μέρες για να δείτε τα κύρια αξιοθέατα χωρίς βιασύνη.'
+            day_word = 'μέρα' if days_int == 1 else 'μέρες'
+            a = f'Συνιστούμε {days_int} {day_word} για να δείτε τα κύρια αξιοθέατα χωρίς βιασύνη.'
         else:
             q = f'How many days do I need in {name}?'
             a = f'We suggest {days_int} days to cover the main highlights without rushing.'
