@@ -426,6 +426,58 @@ def find_hero_image(data):
     return None, None
 
 
+def gr_in(data):
+    """Build the Greek 'στον/στην/στο/στους/στις/στα + accusative-name' phrase.
+
+    Reads name_accusative_el and gender_el from the island JSON. Falls back to
+    name_el (nominative) and feminine if either field is missing — better to
+    produce slightly-wrong Greek than to crash.
+
+    Genders: m | f | n | plm | plf | pln
+    Articles: στον | στην | στο | στους | στις | στα
+
+    For feminine accusative singular we always use 'στην' (the safe rule —
+    final -ν is grammatically required before vowels and κ/π/τ/ξ/ψ/μπ/ντ/γκ
+    and is optional but accepted elsewhere; "always στην" is what most modern
+    Greek writing does and is never wrong).
+    """
+    acc = data.get('name_accusative_el') or data.get('name_el') or ''
+    gender = data.get('gender_el') or 'f'
+    article = {
+        'm':   'στον',
+        'f':   'στην',
+        'n':   'στο',
+        'plm': 'στους',
+        'plf': 'στις',
+        'pln': 'στα',
+    }.get(gender, 'στην')
+    return f'{article} {acc}'
+
+
+def gr_subj(data):
+    """Build the Greek nominative subject phrase: 'η Άνδρος', 'το Καστελλόριζο'…
+
+    For Q5-style sentences where the island is the grammatical subject and we
+    want a gender-neutral predicate that doesn't need adjective agreement.
+    """
+    name_el = data.get('name_el') or ''
+    gender = data.get('gender_el') or 'f'
+    article = {
+        'm':   'ο',
+        'f':   'η',
+        'n':   'το',
+        'plm': 'οι',
+        'plf': 'οι',
+        'pln': 'τα',
+    }.get(gender, 'η')
+    return f'{article} {name_el}'
+
+
+def gr_is_plural(data):
+    """True if the island's grammatical number is plural (Παξοί, Σπέτσες, Κουφονήσια…)."""
+    return (data.get('gender_el') or '').startswith('pl')
+
+
 def build_faq(key, data, meta, lang='en'):
     """Build a FAQPage JSON-LD object pulling from existing island data.
 
@@ -447,7 +499,7 @@ def build_faq(key, data, meta, lang='en'):
         first_sentences = re.split(r'(?<=[.!?])\s+', wtv_summary.strip())
         answer = ' '.join(first_sentences[:2])[:400]
         if lang == 'el':
-            q = f'Πότε είναι η καλύτερη εποχή για επίσκεψη στ{"ο" if name[-1] not in "αηειυω" else "η"} {name};'
+            q = f'Πότε είναι η καλύτερη εποχή για επίσκεψη {gr_in(data)};'
         else:
             q = f'When is the best time to visit {name}?'
         qas.append((q, answer))
@@ -457,7 +509,7 @@ def build_faq(key, data, meta, lang='en'):
     if days:
         days_int = int(days)
         if lang == 'el':
-            q = f'Πόσες μέρες χρειάζομαι στ{"ο" if name[-1] not in "αηειυω" else "η"} {name};'
+            q = f'Πόσες μέρες χρειάζομαι {gr_in(data)};'
             day_word = 'μέρα' if days_int == 1 else 'μέρες'
             a = f'Συνιστούμε {days_int} {day_word} για να δείτε τα κύρια αξιοθέατα χωρίς βιασύνη.'
         else:
@@ -472,7 +524,7 @@ def build_faq(key, data, meta, lang='en'):
         first_sentences = re.split(r'(?<=[.!?])\s+', gt_summary.strip())
         answer = ' '.join(first_sentences[:2])[:400]
         if lang == 'el':
-            q = f'Πώς πάω στ{"ο" if name[-1] not in "αηειυω" else "η"} {name};'
+            q = f'Πώς πάω {gr_in(data)};'
         else:
             q = f'How do I get to {name}?'
         qas.append((q, answer))
@@ -485,7 +537,7 @@ def build_faq(key, data, meta, lang='en'):
         if names:
             joined = ', '.join(names[:-1]) + (' and ' if lang == 'en' else ' και ') + names[-1] if len(names) > 1 else names[0]
             if lang == 'el':
-                q = f'Ποιες είναι οι καλύτερες παραλίες στ{"ο" if name[-1] not in "αηειυω" else "η"} {name};'
+                q = f'Ποιες είναι οι καλύτερες παραλίες {gr_in(data)};'
                 a = f'Οι κορυφαίες παραλίες είναι {joined}.'
             else:
                 q = f'What are the best beaches in {name}?'
@@ -495,24 +547,29 @@ def build_faq(key, data, meta, lang='en'):
     # Q5: Suitability (one based on dominant character)
     if meta.get('hiking') and (meta.get('beach') or 0) >= 4:
         if lang == 'el':
-            q = f'Είναι κατάλληλ{"ο" if name[-1] not in "αηειυω" else "η"} {name} για πεζοπορία;'
-            a = f'Ναι, {name} συνδυάζει εξαιρετικές παραλίες με μονοπάτια και ορεινά τοπία.'
+            q = f'Έχει καλές διαδρομές πεζοπορίας {gr_in(data)};'
+            verb = 'συνδυάζουν' if gr_is_plural(data) else 'συνδυάζει'
+            a = f'Ναι — {gr_subj(data)} {verb} εξαιρετικές παραλίες με μονοπάτια και ορεινά τοπία.'
         else:
             q = f'Is {name} good for hiking?'
             a = f'Yes — {name} combines great beaches with serious hiking trails and mountain scenery.'
         qas.append((q, a))
     elif (meta.get('night') or 0) >= 4:
         if lang == 'el':
-            q = f'Έχει νυχτερινή ζωή στ{"ο" if name[-1] not in "αηειυω" else "η"} {name};'
-            a = f'Ναι, {name} έχει σημαντική νυχτερινή ζωή — ιδίως τους καλοκαιρινούς μήνες.'
+            q = f'Έχει νυχτερινή ζωή {gr_in(data)};'
+            verb = 'έχουν' if gr_is_plural(data) else 'έχει'
+            a = f'Ναι — {gr_subj(data)} {verb} σημαντική νυχτερινή ζωή, ιδίως τους καλοκαιρινούς μήνες.'
         else:
             q = f'Does {name} have nightlife?'
             a = f'Yes — {name} has a significant nightlife scene, especially in peak summer months.'
         qas.append((q, a))
     elif (meta.get('access') or 5) <= 2.5:
         if lang == 'el':
-            q = f'Είναι δύσκολο να φτάσει κανείς στ{"ο" if name[-1] not in "αηειυω" else "η"} {name};'
-            a = f'{name} είναι σχετικά απομακρυσμένο — λιγότερα δρομολόγια και λιγότεροι τουρίστες.'
+            q = f'Είναι δύσκολο να φτάσει κανείς {gr_in(data)};'
+            subj = gr_subj(data)
+            subj_cap = subj[:1].upper() + subj[1:]  # "η Άνδρος" -> "Η Άνδρος"
+            verb = 'βρίσκονται' if gr_is_plural(data) else 'βρίσκεται'
+            a = f'{subj_cap} {verb} σχετικά μακριά — λιγότερα δρομολόγια και λιγότεροι τουρίστες.'
         else:
             q = f'Is {name} hard to reach?'
             a = f'{name} is relatively remote — fewer ferries, fewer tourists, and a quieter feel.'
