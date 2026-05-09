@@ -1335,6 +1335,89 @@ def main():
     n_fests = generate_festivals_page(keys)
     print(f'✓ festivals/ page regenerated ({n_fests} festivals)')
 
+    # Inject (or refresh) the static SEO island list at the bottom of each
+    # homepage. Without this, the SPA's island links are JS-rendered and
+    # Google's crawler can't easily discover them — pages get stuck in
+    # "Discovered – currently not indexed" for weeks.
+    n_inject = inject_homepage_seo_links(keys)
+    print(f'✓ Homepage SEO link blocks updated ({n_inject} islands × 2 languages)')
+
+def inject_homepage_seo_links(island_keys):
+    """Inject (or refresh) a static <nav> of every island page into both homepages.
+
+    Why: the homepage SPA renders its island links via JavaScript only. Google
+    crawls JS but slowly, and PageRank flows poorly through JS-only links.
+    A visually-hidden static <nav> with all 78 island URLs lets the crawler
+    discover and index every page on the first HTML pass.
+
+    The block is bounded by HTML comment markers so prerender can safely
+    overwrite it on every run. Hand-edits between the markers will be lost
+    on the next prerender — edit content elsewhere, or change this function.
+
+    The 'visually-hidden' class clips content off-screen but keeps it in the
+    accessibility tree and crawlable. This is the standard 'sr-only' pattern
+    (used by GitHub, MDN, etc.); Google does not penalize it.
+
+    Returns count of islands listed (per language).
+    """
+    START = '<!-- SEO_ISLAND_LIST_START -->'
+    END   = '<!-- SEO_ISLAND_LIST_END -->'
+
+    def build_block(lang):
+        """Build the <nav> fragment for the given language."""
+        # Pull each island's display name in the right language. Sort by the
+        # display name (so Greek pages list alphabetically in Greek).
+        items = []
+        for key in island_keys:
+            jf = ISLANDS_DIR / f'{key}.json'
+            try:
+                data = json.loads(jf.read_text(encoding='utf-8'))
+            except Exception:
+                continue
+            display = data.get('name_el' if lang == 'el' else 'name', key)
+            href = f'/el/island/{key}/' if lang == 'el' else f'/island/{key}/'
+            items.append((display, href))
+        items.sort(key=lambda x: x[0].lower())
+
+        if lang == 'el':
+            heading = 'Όλα τα νησιά'
+        else:
+            heading = 'All islands'
+
+        lines = [START]
+        lines.append(f'<nav class="visually-hidden" aria-label="{esc(heading)}">')
+        lines.append(f'  <h2>{esc(heading)}</h2>')
+        lines.append('  <ul>')
+        for display, href in items:
+            lines.append(f'    <li><a href="{href}">{esc(display)}</a></li>')
+        lines.append('  </ul>')
+        lines.append('</nav>')
+        lines.append(END)
+        return '\n'.join(lines)
+
+    def upsert(path, lang):
+        """Insert the block, or replace existing one between markers."""
+        text = path.read_text(encoding='utf-8')
+        block = build_block(lang)
+        if START in text and END in text:
+            # Replace existing
+            pre  = text.split(START, 1)[0]
+            post = text.split(END, 1)[1]
+            new  = pre + block + post
+        else:
+            # First-time insert: place just before </body>
+            if '</body>' not in text:
+                print(f'  [skip] {path}: no </body> tag found')
+                return
+            new = text.replace('</body>', block + '\n</body>', 1)
+        if new != text:
+            path.write_text(new, encoding='utf-8')
+
+    upsert(ROOT / 'index.html', 'en')
+    upsert(ROOT / 'el' / 'index.html', 'el')
+    return len(island_keys)
+
+
 def generate_festivals_page(island_keys):
     """Build a 12-month festival calendar page (EN + EL) at /festivals/index.html.
     Static HTML — festivals don't change often, and the page is a real SEO surface

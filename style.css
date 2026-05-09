@@ -5100,3 +5100,20 @@ html.dark .wtv-cap-peak .wtv-cap-text {
 html.dark .wtv-cap-above::after,
 html.dark .wtv-cap-below::before { background: rgba(255, 255, 255, 0.25); }
 html.dark .wtv-ok { background: #6FA9B8; color: #042631; }
+
+/* Visually hidden but accessible — used for the SEO island list at the bottom
+   of the homepage, so search-engine crawlers and screen readers see all 78
+   island links even though they're not part of the visual UI. Standard
+   sr-only / visually-hidden pattern; do not change without checking that
+   the block is still discoverable in the rendered DOM. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
