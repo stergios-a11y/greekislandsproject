@@ -327,6 +327,8 @@ const UI_TEXT = {
   'mission.author.role2': { en: 'Founder · Athens', el: 'Δημιουργός · Αθήνα' },
   'mission.author.bio': { en: 'Greek, based in Athens. 50+ islands visited over 20+ years. Not a travel influencer, not a sponsored blog. One person writing what he actually thinks.', el: 'Έλληνας, ζω στην Αθήνα. 50+ νησιά σε 20+ χρόνια. Δεν είμαι influencer, ούτε blog με χορηγίες. Ένας άνθρωπος που γράφει αυτό που πραγματικά πιστεύει.' },
   'mission.author.note': { en: 'The alternative is what everyone else does: aggregate TripAdvisor reviews, run them through an SEO mill, translate the output, and call it a "guide." The writing reads fine. The advice is worthless.', el: 'Η εναλλακτική είναι αυτό που κάνουν όλοι: κριτικές από TripAdvisor, πέρασμα από SEO μηχανή, μετάφραση σε όλες τις γλώσσες, και το λένε «οδηγό». Το κείμενο διαβάζεται μια χαρά. Η συμβουλή έχει μικρή χρησιμότητα.' },
+  'mission.author.also.before': { en: "If you're driving in Greece, Stergios also built ", el: 'Αν οδηγείς στην Ελλάδα, ο Στέργιος έχει φτιάξει επίσης το ' },
+  'mission.author.also.after':  { en: ' — a Greek motorway toll and route calculator that shows you how much time you\'d lose to save €1 of tolls.', el: ' — υπολογιστή διοδίων και διαδρομών που δείχνει πόσο χρόνο θα χάσεις για να γλιτώσεις €1 από τα διόδια.' },
 
   // Section 3 — The one-recommendation principle
   'mission.principle.title': { en: 'The one-recommendation principle', el: 'Η αρχή της μίας πρότασης' },
