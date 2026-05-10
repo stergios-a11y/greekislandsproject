@@ -28,6 +28,7 @@ const UI_TEXT = {
   'nav.match': { en: 'Match Me', el: 'Βρες το Νησί σου' },
   'nav.shortlist': { en: '⭐ My Shortlist', el: '⭐ Η Λίστα μου' },
   'nav.mission': { en: 'Mission', el: 'Στόχος' },
+  'nav.privacy': { en: 'Privacy', el: 'Απόρρητο' },
 
   // Hero / homepage
   'hero.title': { en: 'Find your perfect Greek island', el: 'Βρες το ιδανικό σου ελληνικό νησί' },

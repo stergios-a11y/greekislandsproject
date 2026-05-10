@@ -261,6 +261,22 @@ header {
 .top-nav a:hover { background: rgba(255,255,255,0.12); color: #fff; }
 .top-nav a.active { background: rgba(255,255,255,0.18); color: #fff; }
 
+/* Utility nav links (Privacy etc.) — dimmer, smaller, separated by a thin
+   divider so they read as legal/secondary links rather than primary nav. */
+.top-nav a.nav-utility {
+  font-size: calc(var(--text-meta) - 1px);
+  color: rgba(255,255,255,0.45);
+  margin-left: 6px;
+  padding-left: 13px;
+  border-left: 1px solid rgba(255,255,255,0.18);
+  border-radius: 0;
+}
+.top-nav a.nav-utility:hover {
+  background: transparent;
+  color: rgba(255,255,255,0.85);
+  text-decoration: underline;
+}
+
 .dark-mode-toggle {
   background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255,255,255,0.2);
@@ -1149,6 +1165,14 @@ html.dark .why-feat-num { color: var(--marble-3); }
   }
   .top-nav.open a { padding: 11px 16px; font-size: var(--text-small); color: rgba(255,255,255,0.8); }
   .top-nav.open a:hover, .top-nav.open a.active { background: rgba(255,255,255,0.15); color: #fff; }
+  /* Utility links read as normal items in the mobile drawer — drop the divider/dimming. */
+  .top-nav.open a.nav-utility {
+    font-size: var(--text-small);
+    border-left: none;
+    margin-left: 0;
+    padding-left: 16px;
+    color: rgba(255,255,255,0.65);
+  }
   .menu-toggle { display: flex; }
   .detail-grid     { grid-template-columns: 1fr; }
   .compare-cards   { grid-template-columns: 1fr; }
