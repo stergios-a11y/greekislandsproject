@@ -1223,6 +1223,7 @@ def render_page(key, data, meta, lang='en'):
   .seo-footer a {{ color: #0B8FAC; text-decoration: none; }}
   .seo-footer p {{ margin: 4px 0; }}
 </style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9298260273942245" crossorigin="anonymous"></script>
 </head>
 <body data-island-key="{key}" data-lang="{lang}">
 
@@ -1257,7 +1258,7 @@ def render_page(key, data, meta, lang='en'):
 <!-- Footer -->
 <footer class="seo-footer">
   <p>© 2026 {'Stergios Gousios · Aegean Blueprint' if lang == 'en' else 'Στέργιος Γούσιος · Aegean Blueprint'}</p>
-  <p><a href="{('/el/island/' if lang == 'en' else '/island/')}{key}/">{'Ελληνικά' if lang == 'en' else 'English'}</a></p>
+  <p><a href="{('/el/island/' if lang == 'en' else '/island/')}{key}/">{'Ελληνικά' if lang == 'en' else 'English'}</a> · <a href="{'/privacy/' if lang == 'en' else '/el/privacy/'}">{'Privacy' if lang == 'en' else 'Απόρρητο'}</a></p>
 </footer>
 
 <!--
@@ -1595,6 +1596,7 @@ def generate_festivals_page(island_keys):
             '  html.dark .fest-card { background: #2a2a2a; border-color: #444; }\n'
             '  html.dark .fest-nav { background: #333; }\n'
             '</style>\n'
+            '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9298260273942245" crossorigin="anonymous"></script>\n'
             '</head>\n<body>\n'
             # Match the main-site header exactly. Same classes, same CSS in style.css.
             # Difference: nav links go to /index.html#hash so they switch SPA view on
@@ -1644,6 +1646,10 @@ def generate_festivals_page(island_keys):
             '  <nav class="fest-nav">' + nav_html + '</nav>\n'
             '  ' + ''.join(month_blocks) + '\n'
             '</main>\n'
+            '<footer style="text-align:center;padding:24px 16px;font-size:13px;color:#888;border-top:1px solid #e5e5e5;margin-top:40px;">\n'
+            '  <p style="margin:4px 0;">© 2026 ' + ('Στέργιος Γούσιος · Aegean Blueprint' if is_el else 'Stergios Gousios · Aegean Blueprint') + '</p>\n'
+            '  <p style="margin:4px 0;"><a href="' + ('/el/privacy/' if is_el else '/privacy/') + '" style="color:#888;text-decoration:none;">' + ('Απόρρητο' if is_el else 'Privacy') + '</a></p>\n'
+            '</footer>\n'
             '</body>\n</html>'
         )
 
@@ -1758,6 +1764,7 @@ def generate_sitemap(island_keys):
     static_pages = [
         ('/', '/el/', 1.0, today),
         ('/festivals/', '/el/festivals/', 0.8, today),
+        ('/privacy/', '/el/privacy/', 0.3, today),
     ]
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']

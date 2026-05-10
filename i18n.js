@@ -167,6 +167,7 @@ const UI_TEXT = {
 
   // Footer
   'footer.copyright': { en: '© 2026 Stergios Gousios · Aegean Blueprint', el: '© 2026 Στέργιος Γούσιος · Aegean Blueprint' },
+  'footer.privacy':   { en: 'Privacy', el: 'Απόρρητο' },
 
   // Data table page
   'data.title': { en: 'Islands Database', el: 'Βάση Νησιών' },

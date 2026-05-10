@@ -2207,6 +2207,19 @@ html.dark .whats-on-chip:hover { border-color: var(--aegean); }
   margin-top: 2px;
 }
 .footer-updated:empty { display: none; }
+.footer-links {
+  font-size: var(--text-meta);
+  color: var(--ink-4);
+  margin-top: 2px;
+}
+.footer-links a {
+  color: var(--ink-4);
+  text-decoration: none;
+}
+.footer-links a:hover {
+  color: var(--teal);
+  text-decoration: underline;
+}
 
 /* Island hover tooltip */
 .island-tooltip {
