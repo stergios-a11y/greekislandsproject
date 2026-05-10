@@ -1224,6 +1224,15 @@ def render_page(key, data, meta, lang='en'):
   .seo-footer p {{ margin: 4px 0; }}
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9298260273942245" crossorigin="anonymous"></script>
+<script>
+  /* Desktop-only ads: suppress on viewports below 900px. */
+  (function(){{
+    if (window.matchMedia('(max-width: 899.98px)').matches) {{
+      window.adsbygoogle = window.adsbygoogle || [];
+      window.adsbygoogle.push = function(){{}};
+    }}
+  }})();
+</script>
 </head>
 <body data-island-key="{key}" data-lang="{lang}">
 
@@ -1597,6 +1606,15 @@ def generate_festivals_page(island_keys):
             '  html.dark .fest-nav { background: #333; }\n'
             '</style>\n'
             '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9298260273942245" crossorigin="anonymous"></script>\n'
+            '<script>\n'
+            '  /* Desktop-only ads: suppress on viewports below 900px. */\n'
+            '  (function(){\n'
+            '    if (window.matchMedia(\'(max-width: 899.98px)\').matches) {\n'
+            '      window.adsbygoogle = window.adsbygoogle || [];\n'
+            '      window.adsbygoogle.push = function(){};\n'
+            '    }\n'
+            '  })();\n'
+            '</script>\n'
             '</head>\n<body>\n'
             # Match the main-site header exactly. Same classes, same CSS in style.css.
             # Difference: nav links go to /index.html#hash so they switch SPA view on

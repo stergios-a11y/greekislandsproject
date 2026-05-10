@@ -5130,3 +5130,21 @@ html.dark .wtv-ok { background: #6FA9B8; color: #042631; }
   white-space: nowrap;
   border: 0;
 }
+
+/* Desktop-only AdSense — hide all ad containers below 900px.
+   The .adsbygoogle class is what AdSense applies to ad slots (both manual
+   <ins> elements and Auto Ads injections). The google-auto-placed class
+   wraps Auto Ads' container divs.
+   The JS in <head> already prevents adsbygoogle.push() from firing on
+   mobile, but this CSS is a safety net for any case where Auto Ads injects
+   a slot before the guard runs. */
+@media (max-width: 899.98px) {
+  .adsbygoogle,
+  ins.adsbygoogle,
+  .google-auto-placed,
+  [data-anchor-status],
+  [data-google-query-id] {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
