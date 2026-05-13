@@ -156,14 +156,14 @@ const UI_TEXT = {
   'map.layer.satellite': { en: 'Satellite', el: 'Δορυφόρος' },
   'getting_there.title': { en: 'Getting there', el: 'Πώς θα φτάσεις' },
   'getting_there.tip': { en: 'Tip', el: 'Συμβουλή' },
-  'detail.editorial': { en: 'Editorial', el: 'Εκδοτική' },
+  'detail.editorial': { en: 'Editorial', el: 'Βαθμολογία' },
   'detail.yourrating': { en: 'Your rating', el: 'Η βαθμολογία σου' },
   'detail.spec.type': { en: 'Type', el: 'Τύπος' },
   'detail.spec.length': { en: 'Length', el: 'Μήκος' },
   'detail.spec.depth': { en: 'Depth', el: 'Βάθος' },
   'detail.spec.wind': { en: 'Wind protection', el: 'Προστασία από αέρα' },
   'detail.spec.facilities': { en: 'Facilities', el: 'Υποδομές' },
-  'detail.beaches.title': { en: 'Top Beaches of', el: 'Κορυφαίες Παραλίες της' },
+  'detail.beaches.title': { en: 'Top Beaches of', el: 'Κορυφαίες Παραλίες' },
   'detail.beaches.sub': { en: 'Ranked by overall quality — with details on sand type, depth, wind exposure and facilities.', el: 'Κατάταξη με βάση τη συνολική ποιότητα — με λεπτομέρειες για τον τύπο άμμου, το βάθος, την έκθεση στον άνεμο και τις υποδομές.' },
 
   // Footer

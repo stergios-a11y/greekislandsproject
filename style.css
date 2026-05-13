@@ -5172,3 +5172,11 @@ html.dark .wtv-ok { background: #6FA9B8; color: #042631; }
     visibility: hidden !important;
   }
 }
+
+/* Hide Leaflet zoom buttons on touch devices. Touch users zoom with
+   pinch gestures anyway; the +/- buttons just take map real estate
+   and overlap content. Covers all maps in the SPA (main map, mini
+   map on island detail, comparison map, ferry planner, itinerary). */
+@media (hover: none) {
+  .leaflet-control-zoom { display: none !important; }
+}

@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-05-10';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-05-13';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -1239,10 +1239,25 @@ function buildIslandPage(data, key) {
 
   const introHtml = data.intro ? `<div class="itin-island-intro"><p>${pickLang(data, 'intro')}</p></div>` : '';
   const gettingThereHtml = buildGettingThereSection(data);
+  // Build the "Top Beaches of X" heading. English: simple concatenation.
+  // Greek: use the genitive form + the right article (της/του/των) based on
+  // grammatical gender so we say "Παραλίες της Λέσβου" / "του Πόρου" /
+  // "των Παξών" (plural).
+  let beachHeading;
+  if (CURRENT_LANG === 'el') {
+    const g = data.gender_el || '';
+    let article = 'της';
+    if (g === 'm' || g === 'n') article = 'του';
+    else if (g.startsWith('pl')) article = 'των';
+    const genitive = data.name_genitive_el || data.name_el || islandName(currentIslandKey);
+    beachHeading = `${t("detail.beaches.title")} ${article} ${genitive}`;
+  } else {
+    beachHeading = `${t("detail.beaches.title")} ${islandName(currentIslandKey)}`;
+  }
   const beachSection = beachCards ? `
     <div class="itin-beaches-section">
       <div class="itin-beaches-header">
-        <h2 class="itin-beaches-title">${t("detail.beaches.title")} ${islandName(currentIslandKey)}</h2>
+        <h2 class="itin-beaches-title">${beachHeading}</h2>
         <p class="itin-beaches-sub">${t("detail.beaches.sub")}</p>
       </div>
       <div class="itin-beaches-list">${beachCards}</div>

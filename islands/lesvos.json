@@ -202,18 +202,6 @@
             "desc_el": "Η πιο γνωστή ετικέτα ούζου της Λέσβου. Ξενάγηση στο αποσταγματοποιείο και γευσιγνωσία."
           },
           {
-            "name": "Melinda Beach",
-            "lat": 38.987,
-            "lng": 26.3129,
-            "type": "beach",
-            "time": "13:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ44BrKabwuhQRAnpwQl1d1cA",
-            "desc": "Secluded pebble cove west of Plomari. Swim and lunch at the small taverna.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776895445/melinda_hy2fp1.jpg",
-            "name_el": "Παραλία Μελίντας",
-            "desc_el": "Μικρή βοτσαλωτή παραλία με κρυστάλλινα νερά, λίγο δυτικά από το Πλωμάρι. Ιδανική για απογευματινή απόδραση."
-          },
-          {
             "name": "Vatera Beach",
             "lat": 39.0184,
             "lng": 26.2184,
@@ -537,7 +525,7 @@
             "time": "10:30",
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJOS1hcjGBuhQR3SnjKpxCdoE",
             "desc": "Remote northern beach accessible by dirt road — pristine, empty, and wild.",
-            "name_el": "Παραλία Τσώνιας",
+            "name_el": "Παραλία Τσώνια",
             "desc_el": "Απομακρυσμένη βόρεια παραλία προσβάσιμη από χωματόδρομο — αμόλυντη, άδεια, ιδανική για πρωινό μπάνιο."
           },
           {
@@ -592,9 +580,9 @@
       "wiki": "https://en.wikipedia.org/wiki/Eresos",
       "type": "Fine dark sand",
       "length": "3 km",
-      "depth": "Shallow to medium — gentle entry",
+      "depth": "Medium depth — gradually deepening",
       "facing": "South-facing — sheltered, calm in summer",
-      "facilities": "Moderate: beach bars, tavernas, some sunbeds. Village is directly behind the beach.",
+      "facilities": "Good: beach bars, tavernas, sunbeds. Village is directly behind the beach.",
       "desc": "The top beach on Lesvos. A long dark-sand beach in front of the village of Skala Eresou, birthplace of the poet Sappho. Relaxed, bohemian character and far less touristy than the Cyclades. Warm, calm water in summer.",
       "lat": 39.1351,
       "lng": 25.931,
@@ -606,16 +594,16 @@
       "desc_el": "Η κορυφαία παραλία της Λέσβου. Μακριά παραλία με σκούρα άμμο μπροστά από το χωριό της Σκάλας Ερεσού. Ρηχά νερά, καθαρή θάλασσα, χαλαρή ατμόσφαιρα και πολλές ταβέρνες πάνω στην άμμο.",
       "type_el": "Λεπτή σκούρα άμμος",
       "length_el": "3 χλμ",
-      "depth_el": "Ρηχά έως μέτρια — ομαλή είσοδος",
+      "depth_el": "Μέτριο βάθος — βαθαίνει σταδιακά",
       "facing_el": "Νότιος προσανατολισμός — απάνεμη και ήρεμη το καλοκαίρι",
-      "facilities_el": "Μέτριες: beach bars, ταβέρνες, ξαπλώστρες. Το χωριό είναι ακριβώς πίσω από την παραλία."
+      "facilities_el": "Καλές: beach bars, ταβέρνες, ξαπλώστρες. Το χωριό βρίσκεται ακριβώς πίσω από την παραλία."
     },
     {
       "name": "Agios Isidoros Beach",
       "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJowKYGpX3uhQRIwrPLbD1wa0",
-      "type": "Fine sand",
+      "type": "Fine pebble",
       "length": "1.8 km",
-      "depth": "Shallow — gently shelving, safe for children",
+      "depth": "Deep — shelves quickly, suited to confident swimmers",
       "facing": "South-facing — well sheltered from north winds",
       "facilities": "Good: sunbeds, umbrellas, tavernas, parking nearby",
       "desc": "A fine sandy beach on the south coast, sheltered and consistently calm. Popular with locals but never overcrowded. Clear, warm water and easy access make it one of the best all-round choices on the island.",
@@ -627,9 +615,9 @@
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776897265/2_xsr7sd.jpg",
       "name_el": "Παραλία Αγίου Ισιδώρου",
       "desc_el": "Λεπτή αμμώδης παραλία στη νότια ακτή, απάνεμη και σταθερά ήρεμη. Δημοφιλής στους ντόπιους, ιδανική για οικογένειες.",
-      "type_el": "Λεπτή άμμος",
+      "type_el": "Ψιλό βότσαλο",
       "length_el": "1,8 χλμ",
-      "depth_el": "Ρηχά — σταδιακά βαθαίνει, ασφαλές για παιδιά",
+      "depth_el": "Βαθιά — βυθίζεται γρήγορα, κατάλληλη για άνετους κολυμβητές",
       "facing_el": "Νότιος προσανατολισμός — καλά προστατευμένη από τους βόρειους ανέμους",
       "facilities_el": "Καλές: ξαπλώστρες, ομπρέλες, ταβέρνες, κοντινό πάρκινγκ"
     },
@@ -706,26 +694,27 @@
   "intro_el": "Η Λέσβος (Μυτιλήνη) είναι το τρίτο μεγαλύτερο νησί της Ελλάδας — μια γη από αμέτρητους ελαιώνες, θερμές πηγές και μικρά ορεινά χωριά που αρνούνται να αλλάξουν. Έχει ρυθμό δικό της. Ουζερί, καστροπολιτείες, αρχαία πετρωμένα δάση, μακριές παραλίες που σχεδόν πάντα έχεις για σένα. Δεν είναι Σαντορίνη και δεν θέλει να γίνει. Έρχεσαι εδώ για τη Λέσβο.",
   "name_el": "Λέσβος",
   "name_accusative_el": "Λέσβο",
+  "name_genitive_el": "Λέσβου",
   "gender_el": "f",
   "subtitle_el": "Το νησί του ούζου, της Σαπφώς και των απολιθωμένων δασών",
   "specialties": [
     {
-      "name": "Plomari ouzo",
-      "name_el": "Ούζο Πλωμαρίου",
-      "desc": "PGI-protected, the most respected ouzo in Greece. Distilleries open for tours in Plomari town — Barbayanni, Plomari Isidoros Arvanitis. Buy at source for fraction of mainland prices.",
-      "desc_el": "Με ΠΓΕ, το πιο σεβαστό ούζο της Ελλάδας. Αποστακτήρια ανοιχτά για ξεναγήσεις στο Πλωμάρι — Μπαρμπαγιάννη, Πλωμαρίου Ισίδωρος Αρβανίτης. Αγόρα στην πηγή σε κλάσμα της τιμής της ηπειρωτικής χώρας."
+      "name": "Pitsiladis ouzo",
+      "name_el": "Ούζο Πιτσιλαδή",
+      "desc": "Family-run Plomari distillery producing what many consider the most balanced ouzo on Lesvos — slow distillation, locally grown anise from the slopes around Plomari, no industrial scale-up. The bottle to bring home, and the one to ask for at the ouzeri.",
+      "desc_el": "Οικογενειακό αποστακτήριο στο Πλωμάρι που παράγει αυτό που πολλοί θεωρούν το πιο ισορροπημένο ούζο της Λέσβου — αργή απόσταξη, ντόπιο γλυκάνισο από τις πλαγιές γύρω από το Πλωμάρι, χωρίς βιομηχανική κλίμακα. Το μπουκάλι που παίρνεις μαζί σου, και αυτό που ζητάς στο ουζερί."
     },
     {
       "name": "Lesvos sardines",
       "name_el": "Σαρδέλες Λέσβου",
       "desc": "Salted sardines from Kalloni Bay — PGI-protected. Eaten with ouzo and bread. The classic combination.",
-      "desc_el": "Παστές σαρδέλες από τον Κόλπο Καλλονής — με ΠΓΕ. Τρώγονται με ούζο και ψωμί. Ο κλασικός συνδυασμός."
+      "desc_el": "Παστές σαρδέλες από τον Κόλπο Καλλονής — με Π.Γ.Ε. (Προστατευόμενη Γεωγραφική Ένδειξη). Τρώγονται με ούζο και ψωμί. Ο κλασικός συνδυασμός."
     },
     {
       "name": "Mytilene olive oil",
       "name_el": "Ελαιόλαδο Μυτιλήνης",
       "desc": "PGI-protected oil from the world's oldest olive grove (some trees over 1,500 years old). Buy direct from the cooperatives in Plomari and Agia Paraskevi.",
-      "desc_el": "Ελαιόλαδο ΠΓΕ από το αρχαιότερο ελαιοτόπι του κόσμου (μερικά δέντρα πάνω από 1.500 ετών). Απευθείας από τους συνεταιρισμούς στο Πλωμάρι και την Αγία Παρασκευή."
+      "desc_el": "Ελαιόλαδο Π.Γ.Ε. από το αρχαιότερο ελαιοτόπι του κόσμου (μερικά δέντρα πάνω από 1.500 ετών). Απευθείας από τους συνεταιρισμούς στο Πλωμάρι και την Αγία Παρασκευή."
     },
     {
       "name": "Petra cheese pies",
