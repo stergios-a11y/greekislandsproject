@@ -2158,27 +2158,30 @@ const MAX_AREA = 2641; // Crete (Heraklion prefecture) — largest single entry
 const MAX_POP = 664000; // removed Athens but keep scale reasonable — use 200000
 
 function carNeedCompactHtml(score) {
+  // Used inside the data table — keep the number visible (users sort by it)
+  // but always pair it with the text label so direction is unambiguous.
   if (score == null || isNaN(score)) return '<span style="color:var(--ink-4)">—</span>';
   const n = Math.round(score);
-  const labelsEN = ['', 'Useless', 'E-scooter', 'Useful', 'Very useful', 'Essential'];
-  const labelsEL = ['', 'Άχρηστο', 'Πατίνι', 'Χρήσιμο', 'Πολύ χρήσιμο', 'Απαραίτητο'];
-  const labels = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? labelsEL : labelsEN;
+  const keys = ['', 'car.none', 'car.helpful', 'car.useful', 'car.recommended', 'car.essential'];
+  const label = (typeof t === 'function' && keys[n]) ? t(keys[n]) : '';
   const colors = ['', '#6B7280', '#8B8B8B', '#A58A3A', '#D17A2B', '#C0522A'];
   const col = colors[n] || '#888';
-  return `<span class="car-compact-pill" style="background:${col}20;color:${col};border:1px solid ${col}40">${n} · ${labels[n]}</span>`;
+  return `<span class="car-compact-pill" style="background:${col}20;color:${col};border:1px solid ${col}40">${n} · ${label}</span>`;
 }
 
 function carNeedHtml(score) {
-  // 1 = car useless, 5 = car essential. Display as a labeled pill.
+  // Used in island detail rating sidebar. Per UX feedback (the bare "1"
+  // reads as "bad" since other dims are higher-is-better), this version
+  // shows ONLY the text label, no visible number. The numeric score lives
+  // in the title attribute for accessibility / power users.
   if (score == null || isNaN(score)) return '<span style="color:var(--ink-4)">—</span>';
   const n = Math.round(score);
-  const labelsEN = ['', 'Useless', 'E-scooter', 'Useful', 'Very useful', 'Essential'];
-  const labelsEL = ['', 'Άχρηστο', 'Πατίνι', 'Χρήσιμο', 'Πολύ χρήσιμο', 'Απαραίτητο'];
-  const labels = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? labelsEL : labelsEN;
+  const keys = ['', 'car.none', 'car.helpful', 'car.useful', 'car.recommended', 'car.essential'];
+  const label = (typeof t === 'function' && keys[n]) ? t(keys[n]) : '';
   const colors = ['', '#6B7280', '#8B8B8B', '#A58A3A', '#D17A2B', '#C0522A'];
   const col = colors[n] || '#888';
-  const label = labels[n] || '';
-  return `<span class="car-need-pill" style="background:${col}20;color:${col};border:1px solid ${col}40"><span class="car-need-icon">🚗</span><span class="car-need-score">${n}</span><span class="car-need-label">${label}</span></span>`;
+  const scaleHint = (typeof t === 'function') ? t('dim.car.hint') : '';
+  return `<span class="car-need-pill" style="background:${col}20;color:${col};border:1px solid ${col}40" title="${scaleHint} (${n}/5)"><span class="car-need-icon">🚗</span><span class="car-need-label">${label}</span></span>`;
 }
 
 function barHtml(val, max, color) {

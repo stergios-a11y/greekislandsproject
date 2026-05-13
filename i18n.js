@@ -77,11 +77,11 @@ const UI_TEXT = {
   'dim.access': { en: 'Access', el: 'Πρόσβαση' },
   'dim.afford': { en: 'Affordability', el: 'Προσιτή τιμή' },
   'dim.car': { en: 'Car reliance', el: 'Χρησιμότητα οχήματος' },
-  'dim.car.hint': { en: 'Car reliance: 1=useless, 2=e-scooter works, 5=essential', el: 'Χρησιμότητα οχήματος: 1=περιττή, 2=e-scooter αρκεί, 5=απαραίτητη' },
-  'car.none': { en: 'Useless', el: 'Άχρηστο' },
-  'car.helpful': { en: 'E-scooter', el: 'Πατίνι' },
+  'dim.car.hint': { en: 'Car reliance: 1 = not needed, 3 = useful, 5 = essential', el: 'Χρησιμότητα οχήματος: 1 = δεν χρειάζεται, 3 = χρήσιμο, 5 = απαραίτητο' },
+  'car.none': { en: 'Not needed', el: 'Δεν χρειάζεται' },
+  'car.helpful': { en: 'Optional', el: 'Προαιρετικό' },
   'car.useful': { en: 'Useful', el: 'Χρήσιμο' },
-  'car.recommended': { en: 'Very useful', el: 'Πολύ χρήσιμο' },
+  'car.recommended': { en: 'Recommended', el: 'Συνιστάται' },
   'car.essential': { en: 'Essential', el: 'Απαραίτητο' },
 
   // Detail page buttons
@@ -397,7 +397,7 @@ const UI_TEXT = {
   'mission.rubric.car.desc': { en: 'Practical fact, not a quality score. How much a car shapes the trip.', el: 'Πρακτικό στοιχείο, όχι βαθμολογία ποιότητας. Πόσο διαμορφώνει το ταξίδι το αυτοκίνητο.' },
   'mission.rubric.car.5': { en: 'Essential. The island only opens up if you drive. Crete, Naxos, Lefkada.', el: 'Απαραίτητο. Το νησί ανοίγεται μόνο με αυτοκίνητο. Κρήτη, Νάξος, Λευκάδα.' },
   'mission.rubric.car.3': { en: 'Useful but not required. Buses cover the basics; a car opens up beaches.', el: 'Χρήσιμο αλλά όχι απαραίτητο. Τα λεωφορεία καλύπτουν τα βασικά· το αυτοκίνητο ανοίγει παραλίες.' },
-  'mission.rubric.car.1': { en: 'Pointless. You walk or take the local bus. Hydra, Koufonisia.', el: 'Άχρηστο. Πάς με τα πόδια ή με το τοπικό λεωφορείο. Ύδρα, Κουφονήσια.' },
+  'mission.rubric.car.1': { en: 'Not needed. You walk or take the local bus. Hydra, Koufonisia.', el: 'Δεν χρειάζεται. Πάς με τα πόδια ή με το τοπικό λεωφορείο. Ύδρα, Κουφονήσια.' },
 
   // Overall
   'mission.overall.title': { en: 'The overall number', el: 'Ο συνολικός αριθμός' },
@@ -438,7 +438,7 @@ const UI_TEXT = {
   'a11y.radar_compare': { en: 'Radar chart comparing two islands', el: 'Διάγραμμα ράνταρ που συγκρίνει δύο νησιά' },
   'a11y.switch_language': { en: 'Switch language', el: 'Αλλαγή γλώσσας' },
   'a11y.toggle_dark': { en: 'Toggle dark mode', el: 'Εναλλαγή σκοτεινής λειτουργίας' },
-  'a11y.car_scale': { en: '1 = car useless, 5 = car essential', el: '1 = το αυτοκίνητο περιττό, 5 = το αυτοκίνητο απαραίτητο' },
+  'a11y.car_scale': { en: '1 = not needed, 5 = essential', el: '1 = δεν χρειάζεται, 5 = απαραίτητο' },
   'a11y.has_airport': { en: 'Commercial airport on the island', el: 'Εμπορικό αεροδρόμιο στο νησί' },
   'a11y.how_to_use': { en: 'How to use this site', el: 'Πώς να χρησιμοποιήσετε αυτόν τον ιστότοπο' },
   'a11y.send_feedback': { en: 'Send feedback', el: 'Αποστολή σχολίων' },
