@@ -845,11 +845,16 @@ def render_body(key, data, meta, lang='en'):
             rating_text = f'<p class="seo-rating">Overall rating: <strong>{rating:.1f}/5</strong> · {int(meta["area"]) if meta.get("area") else ""} km² · {int(meta["pop"]) if meta.get("pop") else ""} residents</p>'
 
     # Getting-there section (between intro and itinerary) — v2 schema: pills + summary + tip
+    # The summary is split into a visible first sentence ("lead") and a
+    # collapsible "rest", rendered as a native <details> element. This
+    # declutters the page without removing any content from the HTML —
+    # Google still indexes everything inside <details> normally.
     getting_there_html = ''
     gt = data.get('getting_there')
     if gt and gt.get('pills'):
         gt_label = 'Getting there' if lang == 'en' else 'Πώς θα φτάσεις'
         tip_label = 'Tip' if lang == 'en' else 'Συμβουλή'
+        more_label = 'Read full route' if lang == 'en' else 'Διαβάστε αναλυτικά'
 
         pills = gt.get('pills_el' if lang == 'el' else 'pills', [])
         summary = gt.get('summary_el' if lang == 'el' else 'summary', '')
@@ -860,16 +865,70 @@ def render_body(key, data, meta, lang='en'):
             pill_spans = ''.join(f'<span class="seo-gt-pill">{esc(p)}</span>' for p in pills)
             pill_html = f'<div class="seo-gt-pills">{pill_spans}</div>'
 
-        summary_html = f'<p class="seo-gt-summary">{esc(summary)}</p>' if summary else ''
+        # Split summary into lead (visible) + rest (collapsed). Strategy:
+        # accumulate sentences into the lead until we have >= 80 chars, OR until
+        # we hit the second sentence-end after a substantive opening. This
+        # avoids the case where the lead is a useless "No airport." stub.
+        lead_html = ''
+        rest_html = ''
+        if summary:
+            sentences = re.split(r'([.!?:](?:\s+|$))', summary)
+            # Recombine sentences: pairs of (text, terminator)
+            recombined = []
+            buf = ''
+            for token in sentences:
+                buf += token
+                if re.match(r'^[.!?:](\s+|$)', token):
+                    recombined.append(buf)
+                    buf = ''
+            if buf:
+                recombined.append(buf)
+            # Collect lead sentences until length budget reached
+            lead = ''
+            rest = ''
+            for i, sent in enumerate(recombined):
+                if len(lead) >= 80:
+                    rest = ''.join(recombined[i:]).strip()
+                    break
+                lead += sent
+            else:
+                lead = summary
+            lead = lead.rstrip()
+            # If the "rest" is trivially short, don't hide it behind a toggle —
+            # the toggle costs the user a click for nothing. Threshold ~50 chars
+            # accounts for paragraphs where the second sentence is just a short
+            # clarifier; longer rests genuinely declutter.
+            if rest and len(rest) < 60:
+                lead = (lead + ' ' + rest).strip()
+                rest = ''
+            if rest:
+                lead_html = f'<p class="seo-gt-summary seo-gt-lead">{esc(lead)}</p>'
+                rest_html = f'<p class="seo-gt-summary seo-gt-rest">{esc(rest)}</p>'
+            else:
+                lead_html = f'<p class="seo-gt-summary seo-gt-lead">{esc(lead)}</p>'
+
         tip_html = f'<p class="seo-gt-tip"><strong>{tip_label}:</strong> {esc(tip)}</p>' if tip else ''
 
-        if pill_html or summary_html:
+        # Wrap rest + tip in a <details> so users can declutter but content
+        # stays in the DOM at load (full SEO indexing). Only render the
+        # <details> if there's actually rest content or a tip to hide.
+        more_html = ''
+        if rest_html or tip_html:
+            more_html = (
+                f'<details class="seo-gt-more">'
+                f'<summary>{more_label}</summary>'
+                f'{rest_html}'
+                f'{tip_html}'
+                f'</details>'
+            )
+
+        if pill_html or lead_html:
             getting_there_html = (
                 f'<section class="seo-getting-there">'
                 f'<h2>{gt_label}</h2>'
                 f'{pill_html}'
-                f'{summary_html}'
-                f'{tip_html}'
+                f'{lead_html}'
+                f'{more_html}'
                 f'</section>'
             )
 

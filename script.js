@@ -1297,6 +1297,8 @@ function buildGettingThereSection(data) {
 
   const title = t('getting_there.title');
   const tipLabel = t('getting_there.tip');
+  const showMoreLabel = lang === 'el' ? 'Διαβάστε αναλυτικά →' : 'Read full route →';
+  const showLessLabel = lang === 'el' ? '← Σύμπτυξη' : '← Show less';
 
   const pills = (lang === 'el' ? gt.pills_el : gt.pills) || [];
   const summary = (lang === 'el' ? gt.summary_el : gt.summary) || '';
@@ -1305,18 +1307,86 @@ function buildGettingThereSection(data) {
   const pillHtml = pills.length
     ? `<div class="itin-gt-pills">${pills.map(p => `<span class="itin-gt-pill">${escHtml(p)}</span>`).join('')}</div>`
     : '';
-  const summaryHtml = summary ? `<p class="itin-gt-summary">${escHtml(summary)}</p>` : '';
+
+  // Split the summary into lead (visible) + rest (collapsed). Accumulate
+  // sentences into the lead until we have >= 80 chars, so we don't leave
+  // a useless stub like "No airport." as the only visible text.
+  let leadHtml = '';
+  let restHtml = '';
+  if (summary) {
+    const tokens = summary.split(/([.!?:](?:\s+|$))/);
+    const sentences = [];
+    let buf = '';
+    for (const tok of tokens) {
+      buf += tok;
+      if (/^[.!?:](\s+|$)/.test(tok)) { sentences.push(buf); buf = ''; }
+    }
+    if (buf) sentences.push(buf);
+    let lead = '';
+    let rest = '';
+    for (let i = 0; i < sentences.length; i++) {
+      if (lead.length >= 80) {
+        rest = sentences.slice(i).join('').trim();
+        break;
+      }
+      lead += sentences[i];
+    }
+    lead = lead.trimEnd();
+    // Merge a trivially short "rest" back into the lead — no toggle needed.
+    if (rest && rest.length < 60) {
+      lead = (lead + ' ' + rest).trim();
+      rest = '';
+    }
+    if (rest) {
+      leadHtml = `<p class="itin-gt-summary itin-gt-lead">${escHtml(lead)}</p>`;
+      restHtml = `<p class="itin-gt-summary itin-gt-rest">${escHtml(rest)}</p>`;
+    } else {
+      leadHtml = `<p class="itin-gt-summary itin-gt-lead">${escHtml(lead)}</p>`;
+    }
+  }
   const tipHtml = tip ? `<p class="itin-gt-tip"><strong>${escHtml(tipLabel)}:</strong> ${escHtml(tip)}</p>` : '';
 
-  if (!pillHtml && !summaryHtml) return '';
+  if (!pillHtml && !leadHtml) return '';
+
+  // If there's collapsed content, render a toggle. Otherwise just the lead.
+  const hasMore = restHtml || tipHtml;
+  const moreBlock = hasMore
+    ? `<div class="itin-gt-more" hidden>${restHtml}${tipHtml}</div>
+       <button type="button" class="itin-gt-toggle"
+               data-show="${escHtml(showMoreLabel)}"
+               data-hide="${escHtml(showLessLabel)}"
+               aria-expanded="false"
+               onclick="toggleGettingThereMore(this)">${escHtml(showMoreLabel)}</button>`
+    : '';
 
   return `
     <section class="itin-getting-there">
       <h3 class="itin-getting-there-title">${escHtml(title)}</h3>
       ${pillHtml}
-      ${summaryHtml}
-      ${tipHtml}
+      ${leadHtml}
+      ${moreBlock}
     </section>`;
+}
+
+/* Toggle handler for the "Read full route" reveal. Toggles the .itin-gt-more
+   block's hidden attribute and swaps the button label. Inline in script.js
+   so it's available globally; not exposed via window.* because the onclick
+   attribute resolves names from the global scope on click. */
+function toggleGettingThereMore(btn) {
+  const section = btn.closest('.itin-getting-there');
+  if (!section) return;
+  const more = section.querySelector('.itin-gt-more');
+  if (!more) return;
+  const expanded = !more.hasAttribute('hidden');
+  if (expanded) {
+    more.setAttribute('hidden', '');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.textContent = btn.dataset.show;
+  } else {
+    more.removeAttribute('hidden');
+    btn.setAttribute('aria-expanded', 'true');
+    btn.textContent = btn.dataset.hide;
+  }
 }
 
 /* ============================================================

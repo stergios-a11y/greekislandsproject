@@ -1335,6 +1335,55 @@ html.dark .why-feat-num { color: var(--marble-3); }
   line-height: 1.5;
 }
 .itin-gt-tip strong { font-style: normal; color: var(--aegean); }
+
+/* "Read full route" toggle in the SPA's getting-there block. Hides .itin-gt-more
+   by default; toggleGettingThereMore() removes the [hidden] attribute on click.
+   Content inside remains in the DOM at load — Google indexes it regardless. */
+.itin-gt-more[hidden] { display: none; }
+.itin-gt-more {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.itin-gt-toggle {
+  margin-top: 8px;
+  padding: 4px 0;
+  background: none;
+  border: none;
+  color: var(--aegean);
+  font-size: var(--text-small);
+  font-family: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+.itin-gt-toggle:hover { text-decoration: underline; }
+
+/* Same pattern for the prerendered SEO page (uses native <details>). The
+   <summary> is the visible click target; clicking expands the rest. Google
+   indexes all of it whether or not the user clicks. */
+.seo-gt-more {
+  margin-top: 8px;
+}
+.seo-gt-more > summary {
+  cursor: pointer;
+  color: #0B8FAC;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 0;
+  list-style: none;
+}
+.seo-gt-more > summary::-webkit-details-marker { display: none; }
+.seo-gt-more > summary::after {
+  content: ' ▾';
+  font-size: 0.85em;
+  color: #888;
+}
+.seo-gt-more[open] > summary::after {
+  content: ' ▴';
+}
+.seo-gt-more > summary:hover { text-decoration: underline; }
+
 @media (max-width: 600px) {
   .itin-getting-there { padding: 12px 14px; margin: 16px 0; }
   .itin-getting-there-title { font-size: var(--text-body); }
