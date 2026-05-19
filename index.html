@@ -225,6 +225,57 @@
         <div class="map-legend-hint">Circle size = score · Click to explore</div>
       </div>
     </div>
+
+    <!-- Scroll affordance: hints there's content below the map -->
+    <div class="home-scroll-hint" aria-hidden="true">
+      <span data-i18n="home.scroll_hint">Read more about this site</span>
+      <span class="home-scroll-arrow">↓</span>
+    </div>
+
+    <!-- Homepage content section (sits below the map). Provides the
+         "What is Aegean Blueprint?" prose, a featured-islands grid, and a
+         short rubric primer. Real prose content for both AdSense / search
+         engines and curious readers. -->
+    <section class="home-content" id="home-content">
+
+      <div class="home-block home-intro">
+        <h2 class="home-block-title" data-i18n="home.about.title">A Greek islands travel guide with opinions</h2>
+        <p data-i18n="home.about.p1">Most island guides list 30 beaches and call it a recommendation. This one picks the one you should actually go to, and tells you why the other 29 didn't make it. The same goes for the where-to-stay, the where-to-eat, the day plan, the side trip.</p>
+        <p data-i18n="home.about.p2">Built and written by Stergios Gousios — Athens-based, 50+ islands visited over 20+ years, no sponsorships, no affiliate hotel chains in disguise. Each island gets an honest score across beaches, history, nightlife, access and price — not a marketing brochure, not an algorithm, just one person's take, cross-checked with friends and family who actually live on each island.</p>
+        <p data-i18n="home.about.p3">The map above is the entry point. Click any circle to open that island's full guide. Larger circles = higher overall score. Use the dropdowns to filter by region or rank by what matters to you.</p>
+      </div>
+
+      <div class="home-block home-featured">
+        <h2 class="home-block-title" data-i18n="home.featured.title">Featured islands</h2>
+        <p class="home-block-sub" data-i18n="home.featured.sub">A few starting points across different moods. Click for the full guide.</p>
+        <div class="home-featured-grid" id="home-featured-grid">
+          <!-- Cards injected by script.js: renderHomeFeatured() -->
+        </div>
+      </div>
+
+      <div class="home-block home-how">
+        <h2 class="home-block-title" data-i18n="home.how.title">How this site works</h2>
+        <div class="home-how-grid">
+          <div class="home-how-item">
+            <h3 data-i18n="home.how.one.title">One recommendation, not ten</h3>
+            <p data-i18n="home.how.one.text">Every page gives a single pick for dinner, a single pick for the best beach, a single 2-to-5-day plan. A friend who knows the place doesn't list every option — they tell you the one to go to.</p>
+          </div>
+          <div class="home-how-item">
+            <h3 data-i18n="home.how.scores.title">Honest scores</h3>
+            <p data-i18n="home.how.scores.text">Beaches, history, nightlife, access, price. A 5/5 in beaches means world-class. A 2/5 in nightlife means there's a bar and that's it. The overall number is the simple average — no weighted formulas, no claims of objectivity. Read the <a href="#mission" data-i18n="home.how.scores.link">full rubric →</a></p>
+          </div>
+          <div class="home-how-item">
+            <h3 data-i18n="home.how.updates.title">Real updates</h3>
+            <p data-i18n="home.how.updates.text">When a restaurant closes, the link comes down within a week. When someone writes in to say a beach has changed, the page changes. The feedback button is below the map.</p>
+          </div>
+          <div class="home-how-item">
+            <h3 data-i18n="home.how.nofunnel.title">No signup walls</h3>
+            <p data-i18n="home.how.nofunnel.text">No newsletter wall, no "click to continue", no email required to see a page. This is a static site you can read. The feedback button is the one place to write back.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
   </main>
 
   <main id="view-data" class="view-section content-page" style="display:none;">

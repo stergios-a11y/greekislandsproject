@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-05-15';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-05-19';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -331,6 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
   try { setupGroupFilter(); } catch(e) { console.warn('setupGroupFilter', e); }
   try { setupMap(); } catch(e) { console.warn('setupMap', e); }
   try { renderWhatsOnStrip(); } catch(e) { console.warn('whatsOn', e); }
+  try { renderHomeFeatured(); } catch(e) { console.warn('homeFeatured', e); }
   try { setupTable(); } catch(e) { console.warn('setupTable', e); }
   try { setupCompare(); } catch(e) { console.warn('setupCompare', e); }
   const vd = document.getElementById('version-display');
@@ -604,6 +605,87 @@ function setupDarkMode() {
 /* ============================================================
    MAP
 ============================================================ */
+/* ============================================================
+   "Featured islands" homepage grid
+   ------------------------------------------------------------
+   Renders 6 hand-picked island cards in the homepage content section
+   (below the map). Each card has a short tag (mood label) and an
+   excerpt drawn from the island's own intro text. The set is curated
+   for editorial breadth — different moods, different regions,
+   different scores — not algorithmic. Re-curate by editing the
+   FEATURED array below.
+============================================================ */
+const HOMEPAGE_FEATURED = [
+  { key: 'folegandros', tagEn: 'Quiet escape',    tagEl: 'Ήσυχη απόδραση' },
+  { key: 'milos',       tagEn: 'Beach trip',      tagEl: 'Παραλιακή απόδραση' },
+  { key: 'santorini',   tagEn: 'Iconic',          tagEl: 'Εμβληματική' },
+  { key: 'hydra',       tagEn: 'No cars',         tagEl: 'Χωρίς αυτοκίνητα' },
+  { key: 'symi',        tagEn: 'Off-radar',       tagEl: 'Εκτός ραντάρ' },
+  { key: 'naxos',       tagEn: 'Family-friendly', tagEl: 'Φιλικό για οικογένειες' },
+];
+
+function renderHomeFeatured() {
+  const grid = document.getElementById('home-featured-grid');
+  if (!grid) return;
+  const lang = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
+
+  const cards = HOMEPAGE_FEATURED.map(item => {
+    const meta = (typeof ISLANDS_DATA !== 'undefined') ? ISLANDS_DATA[item.key] : null;
+    if (!meta) return '';
+    const name = (lang === 'el' && typeof GREEK_NAMES !== 'undefined' && GREEK_NAMES[item.key])
+      ? GREEK_NAMES[item.key]
+      : meta.name;
+    const score = (typeof meta.total === 'number') ? meta.total.toFixed(1) : '';
+    const tag = lang === 'el' ? item.tagEl : item.tagEn;
+    // Excerpt comes from the per-island JSON's intro field. Since we don't
+    // pre-load all 78 JSONs on the homepage, we use a short hardcoded excerpt
+    // pulled from each intro's first sentence (curated below for brevity).
+    const excerpt = (HOMEPAGE_EXCERPTS[item.key] || {})[lang] || '';
+    const href = (lang === 'el' ? '/el/island/' : '/island/') + item.key + '/';
+    return `
+      <a class="home-featured-card" href="${href}">
+        <div class="home-featured-card-head">
+          <span class="home-featured-card-name">${name}</span>
+          <span class="home-featured-card-score">${score}/5</span>
+        </div>
+        <p class="home-featured-card-excerpt">${excerpt}</p>
+        <span class="home-featured-card-tag">${tag}</span>
+      </a>`;
+  }).filter(Boolean).join('');
+
+  grid.innerHTML = cards;
+}
+
+/* Excerpts for the featured grid. One sentence per island, EN + EL.
+   Drawn from each island's own intro field in islands/*.json — kept
+   in sync there. When changing an intro, update here too. */
+const HOMEPAGE_EXCERPTS = {
+  folegandros: {
+    en: 'The Cyclades as they were 30 years ago — 19 square kilometres, 765 people, no airport, three villages.',
+    el: 'Οι Κυκλάδες όπως ήταν πριν 30 χρόνια — 19 τετραγωνικά χιλιόμετρα, 765 κάτοικοι, χωρίς αεροδρόμιο, τρία χωριά.'
+  },
+  milos: {
+    en: 'Called the most beautiful island in Greece — volcanic geology, lunar rock at Sarakiniko, white pumice at Kleftiko.',
+    el: 'Έχει χαρακτηριστεί το ομορφότερο νησί της Ελλάδας — ηφαιστειακή γεωλογία, σεληνιακοί βράχοι στο Σαρακήνικο, λευκή κίσσηρης στο Κλέφτικο.'
+  },
+  santorini: {
+    en: 'Not primarily a beach island — come for the caldera, the architecture, the wine and the sunsets.',
+    el: 'Δεν είναι κυρίως νησί παραλιών — έλα για την καλντέρα, την αρχιτεκτονική, το κρασί και τα ηλιοβασιλέματα.'
+  },
+  hydra: {
+    en: 'Bans all motor vehicles — move on foot, by donkey, or by water taxi. The most peaceful town in the Saronic.',
+    el: 'Απαγορεύει τα μηχανοκίνητα οχήματα — με τα πόδια, με γαϊδούρι, ή θαλάσσιο ταξί. Η πιο ήσυχη πόλη στον Σαρωνικό.'
+  },
+  symi: {
+    en: 'The most photographed harbour in Greece — an amphitheatre of ochre, yellow, terracotta and blue mansions.',
+    el: 'Το πιο φωτογραφημένο λιμάνι της Ελλάδας — αμφιθέατρο νεοκλασικών αρχοντικών σε ώχρα, κίτρινο, τερακότα και μπλε.'
+  },
+  naxos: {
+    en: 'The largest and most self-sufficient Cycladic island — mountain interior, marble quarries, the finest sandy beaches.',
+    el: 'Το μεγαλύτερο και πιο αυτάρκες νησί των Κυκλάδων — ορεινό εσωτερικό, λατομεία μαρμάρου, οι καλύτερες αμμώδεις παραλίες.'
+  },
+};
+
 /* ============================================================
    "What's on now" home strip
    ------------------------------------------------------------

@@ -223,6 +223,52 @@
         <div class="map-legend-hint">Circle size = score · Click to explore</div>
       </div>
     </div>
+
+    <div class="home-scroll-hint" aria-hidden="true">
+      <span data-i18n="home.scroll_hint">Διάβασε περισσότερα για τη σελίδα</span>
+      <span class="home-scroll-arrow">↓</span>
+    </div>
+
+    <section class="home-content" id="home-content">
+
+      <div class="home-block home-intro">
+        <h2 class="home-block-title" data-i18n="home.about.title">Ένας οδηγός για τα ελληνικά νησιά, με άποψη</h2>
+        <p data-i18n="home.about.p1">Οι περισσότεροι οδηγοί νησιών γράφουν 30 παραλίες και το λένε πρόταση. Εδώ διαλέγω αυτή που πραγματικά αξίζει, και εξηγώ γιατί δεν πέρασαν οι άλλες 29. Το ίδιο ισχύει για το πού θα μείνεις, πού θα φας, το πλάνο της ημέρας, την παρέκβαση.</p>
+        <p data-i18n="home.about.p2">Γραμμένο από τον Στέργιο Γούσιο — ζω στην Αθήνα, έχω επισκεφθεί 50+ νησιά σε διάστημα 20+ ετών, χωρίς χορηγίες, χωρίς συγκαλυμμένες affiliate πλατφόρμες κρατήσεων. Κάθε νησί παίρνει μια ειλικρινή βαθμολογία σε παραλίες, ιστορία, νυχτερινή ζωή, πρόσβαση και τιμές — όχι διαφημιστικό φυλλάδιο, όχι αλγόριθμος, η κρίση ενός ανθρώπου, διασταυρωμένη με φίλους και συγγενείς που ζουν στα νησιά.</p>
+        <p data-i18n="home.about.p3">Ο χάρτης παραπάνω είναι το σημείο εκκίνησης. Πάτα οποιοδήποτε κυκλάκι για να ανοίξεις τον πλήρη οδηγό του νησιού. Μεγαλύτερα κυκλάκια = υψηλότερη συνολική βαθμολογία. Χρησιμοποίησε τα μενού για να φιλτράρεις ανά περιοχή ή να ταξινομήσεις με το κριτήριο που σε ενδιαφέρει.</p>
+      </div>
+
+      <div class="home-block home-featured">
+        <h2 class="home-block-title" data-i18n="home.featured.title">Επιλεγμένα νησιά</h2>
+        <p class="home-block-sub" data-i18n="home.featured.sub">Λίγες αφετηρίες για διαφορετικές διαθέσεις. Πάτα για τον πλήρη οδηγό.</p>
+        <div class="home-featured-grid" id="home-featured-grid">
+          <!-- Cards injected by script.js: renderHomeFeatured() -->
+        </div>
+      </div>
+
+      <div class="home-block home-how">
+        <h2 class="home-block-title" data-i18n="home.how.title">Πώς λειτουργεί η σελίδα</h2>
+        <div class="home-how-grid">
+          <div class="home-how-item">
+            <h3 data-i18n="home.how.one.title">Μία πρόταση, όχι δέκα</h3>
+            <p data-i18n="home.how.one.text">Κάθε σελίδα δίνει μία επιλογή για δείπνο, μία για την καλύτερη παραλία, ένα πλάνο 2 έως 5 ημερών. Ένας φίλος που γνωρίζει το μέρος δεν σου λέει όλες τις επιλογές — σου λέει αυτή που πρέπει.</p>
+          </div>
+          <div class="home-how-item">
+            <h3 data-i18n="home.how.scores.title">Ειλικρινείς βαθμολογίες</h3>
+            <p data-i18n="home.how.scores.text">Παραλίες, ιστορία, νυχτερινή ζωή, πρόσβαση, τιμές. Το 5/5 στις παραλίες σημαίνει παγκόσμιας κλάσης. Το 2/5 στη νυχτερινή ζωή σημαίνει υπάρχει ένα μπαρ και τελείωσε. Ο συνολικός αριθμός είναι ο απλός μέσος όρος — χωρίς ζυγισμένες φόρμουλες, χωρίς ισχυρισμούς αντικειμενικότητας. Διάβασε το <a href="#mission" data-i18n="home.how.scores.link">πλήρες κριτήριο →</a></p>
+          </div>
+          <div class="home-how-item">
+            <h3 data-i18n="home.how.updates.title">Πραγματικές ενημερώσεις</h3>
+            <p data-i18n="home.how.updates.text">Όταν κλείνει ένα εστιατόριο, ο σύνδεσμος κατεβαίνει μέσα σε μια εβδομάδα. Όταν κάποιος γράφει ότι μια παραλία έχει αλλάξει, η σελίδα αλλάζει. Το κουμπί σχολίων βρίσκεται κάτω από τον χάρτη.</p>
+          </div>
+          <div class="home-how-item">
+            <h3 data-i18n="home.how.nofunnel.title">Χωρίς τοίχους εγγραφής</h3>
+            <p data-i18n="home.how.nofunnel.text">Χωρίς newsletter wall, χωρίς "πάτα εδώ για συνέχεια", χωρίς email για να δεις σελίδα. Είναι ένα στατικό site που μπορείς να διαβάσεις. Το κουμπί σχολίων είναι το μοναδικό σημείο επικοινωνίας.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
   </main>
 
   <main id="view-data" class="view-section content-page" style="display:none;">

@@ -459,22 +459,22 @@ header {
    This just styles the container
 ---------------------------------------------------------- */
 #view-home {
-  display: flex;
-  flex-direction: column;
+  /* Map fills the viewport, but the page now scrolls past it to reveal
+     the homepage content section. Previously this was a flex column with
+     overflow:hidden — that locked users to the map view. */
+  display: block;
+}
+#view-home #main-map {
   height: calc(100vh - var(--header-height) - var(--search-bar-height));
   height: calc(100dvh - var(--header-height) - var(--search-bar-height));
-  overflow: hidden;
 }
-/* When home view is active (body has class), lock body scroll and hide footer */
+/* body.home-view-active formerly locked scroll and hid the footer. Now we
+   want both: scroll to read the homepage content section, and a visible
+   footer once you've scrolled past the map and the content. */
 body.home-view-active {
-  overflow: hidden;
-}
-body.home-view-active #site-footer {
-  display: none;
+  overflow-y: auto;
 }
 #main-map {
-  flex: 1;
-  min-height: 0;
   width: 100%;
   background: var(--aegean-pale);
   position: relative;
@@ -5228,4 +5228,151 @@ html.dark .wtv-ok { background: #6FA9B8; color: #042631; }
    map on island detail, comparison map, ferry planner, itinerary). */
 @media (hover: none) {
   .leaflet-control-zoom { display: none !important; }
+}
+
+/* ============================================================
+   HOMEPAGE CONTENT SECTION (below the map)
+   Provides the "About this site" prose + featured islands grid
+   + how-this-works block. Sits below the full-viewport map so
+   visitors who scroll see real prose content — needed both for
+   AdSense reviewer readability and for SEO (Google parses text
+   on the homepage to understand what the site is about).
+============================================================ */
+.home-scroll-hint {
+  text-align: center;
+  padding: 24px 16px 8px;
+  color: var(--ink-3);
+  font-size: var(--text-small);
+  font-family: var(--sans);
+  background: var(--bg);
+}
+.home-scroll-arrow {
+  display: inline-block;
+  margin-left: 8px;
+  animation: home-scroll-bob 2s ease-in-out infinite;
+  color: var(--aegean);
+}
+@keyframes home-scroll-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(4px); }
+}
+
+.home-content {
+  background: var(--bg);
+  padding: 24px 24px 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.home-block {
+  margin-bottom: 56px;
+}
+.home-block:last-child { margin-bottom: 0; }
+
+.home-block-title {
+  font-family: var(--serif);
+  font-size: 1.75rem;
+  margin: 0 0 16px;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.home-block-sub {
+  font-size: var(--text-small);
+  color: var(--ink-3);
+  margin: -8px 0 24px;
+}
+
+.home-intro p {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin: 0 0 16px;
+  max-width: 760px;
+}
+.home-intro p:last-child { margin-bottom: 0; }
+
+.home-featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+.home-featured-card {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  background: var(--white);
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.home-featured-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  border-color: var(--aegean);
+}
+.home-featured-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.home-featured-card-name {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.home-featured-card-score {
+  font-size: 0.95rem;
+  color: var(--aegean);
+  font-weight: 600;
+}
+.home-featured-card-excerpt {
+  font-size: var(--text-small);
+  color: var(--ink-2);
+  line-height: 1.55;
+  margin: 0;
+}
+.home-featured-card-tag {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 3px 8px;
+  background: var(--aegean-pale);
+  color: var(--aegean);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  align-self: flex-start;
+}
+
+.home-how-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px 32px;
+}
+.home-how-item h3 {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+.home-how-item p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ink-2);
+  margin: 0;
+}
+.home-how-item a { color: var(--aegean); }
+
+@media (max-width: 700px) {
+  .home-content { padding: 20px 18px 40px; }
+  .home-block { margin-bottom: 40px; }
+  .home-block-title { font-size: 1.45rem; }
+  .home-intro p { font-size: 1rem; }
+  .home-featured-grid { grid-template-columns: 1fr; }
+  .home-how-grid { gap: 24px; }
 }

@@ -40,6 +40,25 @@ const UI_TEXT = {
   'hero.stat.guides': { en: 'Full guides', el: 'Πλήρεις οδηγοί' },
   'hero.stat.minutes': { en: 'Minutes', el: 'Λεπτά' },
 
+  // Homepage content section (below the map)
+  'home.scroll_hint': { en: 'Read more about this site', el: 'Διάβασε περισσότερα για τη σελίδα' },
+  'home.about.title': { en: 'A Greek islands travel guide with opinions', el: 'Ένας οδηγός για τα ελληνικά νησιά, με άποψη' },
+  'home.about.p1': { en: "Most island guides list 30 beaches and call it a recommendation. This one picks the one you should actually go to, and tells you why the other 29 didn\\'t make it. The same goes for the where-to-stay, the where-to-eat, the day plan, the side trip.", el: 'Οι περισσότεροι οδηγοί νησιών γράφουν 30 παραλίες και το λένε πρόταση. Εδώ διαλέγω αυτή που πραγματικά αξίζει, και εξηγώ γιατί δεν πέρασαν οι άλλες 29. Το ίδιο ισχύει για το πού θα μείνεις, πού θα φας, το πλάνο της ημέρας, την παρέκβαση.' },
+  'home.about.p2': { en: "Built and written by Stergios Gousios — Athens-based, 50+ islands visited over 20+ years, no sponsorships, no affiliate hotel chains in disguise. Each island gets an honest score across beaches, history, nightlife, access and price — not a marketing brochure, not an algorithm, just one person\\'s take, cross-checked with friends and family who actually live on each island.", el: 'Γραμμένο από τον Στέργιο Γούσιο — ζω στην Αθήνα, έχω επισκεφθεί 50+ νησιά σε διάστημα 20+ ετών, χωρίς χορηγίες, χωρίς συγκαλυμμένες affiliate πλατφόρμες κρατήσεων. Κάθε νησί παίρνει μια ειλικρινή βαθμολογία σε παραλίες, ιστορία, νυχτερινή ζωή, πρόσβαση και τιμές — όχι διαφημιστικό φυλλάδιο, όχι αλγόριθμος, η κρίση ενός ανθρώπου, διασταυρωμένη με φίλους και συγγενείς που ζουν στα νησιά.' },
+  'home.about.p3': { en: "The map above is the entry point. Click any circle to open that island\\'s full guide. Larger circles = higher overall score. Use the dropdowns to filter by region or rank by what matters to you.", el: 'Ο χάρτης παραπάνω είναι το σημείο εκκίνησης. Πάτα οποιοδήποτε κυκλάκι για να ανοίξεις τον πλήρη οδηγό του νησιού. Μεγαλύτερα κυκλάκια = υψηλότερη συνολική βαθμολογία. Χρησιμοποίησε τα μενού για να φιλτράρεις ανά περιοχή ή να ταξινομήσεις με το κριτήριο που σε ενδιαφέρει.' },
+  'home.featured.title': { en: 'Featured islands', el: 'Επιλεγμένα νησιά' },
+  'home.featured.sub': { en: 'A few starting points across different moods. Click for the full guide.', el: 'Λίγες αφετηρίες για διαφορετικές διαθέσεις. Πάτα για τον πλήρη οδηγό.' },
+  'home.how.title': { en: 'How this site works', el: 'Πώς λειτουργεί η σελίδα' },
+  'home.how.one.title': { en: 'One recommendation, not ten', el: 'Μία πρόταση, όχι δέκα' },
+  'home.how.one.text': { en: "Every page gives a single pick for dinner, a single pick for the best beach, a single 2-to-5-day plan. A friend who knows the place doesn\\'t list every option — they tell you the one to go to.", el: 'Κάθε σελίδα δίνει μία επιλογή για δείπνο, μία για την καλύτερη παραλία, ένα πλάνο 2 έως 5 ημερών. Ένας φίλος που γνωρίζει το μέρος δεν σου λέει όλες τις επιλογές — σου λέει αυτή που πρέπει.' },
+  'home.how.scores.title': { en: 'Honest scores', el: 'Ειλικρινείς βαθμολογίες' },
+  'home.how.scores.text': { en: "Beaches, history, nightlife, access, price. A 5/5 in beaches means world-class. A 2/5 in nightlife means there\\'s a bar and that\\'s it. The overall number is the simple average — no weighted formulas, no claims of objectivity. Read the <a href=\"#mission\">full rubric →</a>", el: 'Παραλίες, ιστορία, νυχτερινή ζωή, πρόσβαση, τιμές. Το 5/5 στις παραλίες σημαίνει παγκόσμιας κλάσης. Το 2/5 στη νυχτερινή ζωή σημαίνει υπάρχει ένα μπαρ και τελείωσε. Ο συνολικός αριθμός είναι ο απλός μέσος όρος — χωρίς ζυγισμένες φόρμουλες, χωρίς ισχυρισμούς αντικειμενικότητας. Διάβασε το <a href="#mission">πλήρες κριτήριο →</a>' },
+  'home.how.scores.link': { en: 'full rubric →', el: 'πλήρες κριτήριο →' },
+  'home.how.updates.title': { en: 'Real updates', el: 'Πραγματικές ενημερώσεις' },
+  'home.how.updates.text': { en: 'When a restaurant closes, the link comes down within a week. When someone writes in to say a beach has changed, the page changes. The feedback button is below the map.', el: 'Όταν κλείνει ένα εστιατόριο, ο σύνδεσμος κατεβαίνει μέσα σε μια εβδομάδα. Όταν κάποιος γράφει ότι μια παραλία έχει αλλάξει, η σελίδα αλλάζει. Το κουμπί σχολίων βρίσκεται κάτω από τον χάρτη.' },
+  'home.how.nofunnel.title': { en: 'No signup walls', el: 'Χωρίς τοίχους εγγραφής' },
+  'home.how.nofunnel.text': { en: "No newsletter wall, no \"click to continue\", no email required to see a page. This is a static site you can read. The feedback button is the one place to write back.", el: 'Χωρίς newsletter wall, χωρίς "πάτα εδώ για συνέχεια", χωρίς email για να δεις σελίδα. Είναι ένα στατικό site που μπορείς να διαβάσεις. Το κουμπί σχολίων είναι το μοναδικό σημείο επικοινωνίας.' },
+
   // Help modal
   'help.btn': { en: 'How to', el: 'Οδηγίες' },
   'help.step1.title': { en: 'Explore the map', el: 'Εξερεύνησε τον χάρτη' },
