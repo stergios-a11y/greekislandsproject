@@ -5376,3 +5376,45 @@ html.dark .wtv-ok { background: #6FA9B8; color: #042631; }
   .home-featured-grid { grid-template-columns: 1fr; }
   .home-how-grid { gap: 24px; }
 }
+
+/* "Good for / Maybe skip if" orientation block on island detail (SPA). Two
+   columns of short bullet lists, helps a reader self-select before diving in. */
+.itin-suited {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
+}
+.itin-suited-col {
+  padding: 16px 18px;
+  border-radius: 10px;
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,0.07);
+}
+.itin-suited-good { border-left: 3px solid #2E7D32; }
+.itin-suited-skip { border-left: 3px solid #C0522A; }
+.itin-suited-title {
+  font-family: var(--sans);
+  font-size: var(--text-small);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 10px;
+  color: var(--ink-2);
+}
+.itin-suited-good .itin-suited-title { color: #2E7D32; }
+.itin-suited-skip .itin-suited-title { color: #C0522A; }
+.itin-suited ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.itin-suited li {
+  font-size: var(--text-small);
+  line-height: 1.55;
+  color: var(--ink-2);
+  margin-bottom: 6px;
+}
+.itin-suited li:last-child { margin-bottom: 0; }
+@media (max-width: 600px) {
+  .itin-suited { grid-template-columns: 1fr; gap: 12px; }
+}

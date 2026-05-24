@@ -58,6 +58,28 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
+  .seo-suited {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;
+  }
+  .seo-suited-col {
+    padding: 16px 18px; border-radius: 10px;
+    border: 1px solid #e5e5e5; background: #fff;
+  }
+  .seo-suited-col:first-child { border-left: 3px solid #2E7D32; }
+  .seo-suited-col:last-child { border-left: 3px solid #C0522A; }
+  .seo-suited-col h2 {
+    font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em;
+    margin: 0 0 10px;
+  }
+  .seo-suited-col:first-child h2 { color: #2E7D32; }
+  .seo-suited-col:last-child h2 { color: #C0522A; }
+  .seo-suited-col ul { margin: 0; padding-left: 18px; }
+  .seo-suited-col li {
+    font-size: 14px; line-height: 1.55; color: #444; margin-bottom: 6px;
+  }
+  @media (max-width: 600px) {
+    .seo-suited { grid-template-columns: 1fr; gap: 12px; }
+  }
   .seo-hero { margin: 16px 0 24px; }
   .seo-hero img { display: block; box-shadow: 0 2px 12px rgba(0,0,0,0.10); }
   .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local { margin-top: 36px; }
@@ -228,6 +250,7 @@
   <section class="seo-intro">
     <p>Skiathos is tiny — 12km long — but packs in 60 beaches, dense pine forest running to the water&#x27;s edge, and the liveliest nightlife in the Sporades. Koukounaries is one of the finest sandy beaches in Greece. The old town is genuinely attractive. Planes land metres above the beach at the runway — a spectacle in itself. Come here for beaches and nightlife, not culture.</p>
   </section>
+  
   <section class="seo-getting-there"><h2>Getting there</h2><div class="seo-gt-pills"><span class="seo-gt-pill">✈ Airport (intl charter)</span><span class="seo-gt-pill">⛵ Volos 2–3h</span><span class="seo-gt-pill">€20–35</span></div><p class="seo-gt-summary seo-gt-lead">International airport with summer charters from Europe. No Piraeus ferry — reach Skiathos from Volos or Agios Konstantinos (mainland, ~3h drive from Athens). Frequent ferries.</p><details class="seo-gt-more"><summary>Read full route</summary><p class="seo-gt-tip"><strong>Tip:</strong> Direct charter from London/Manchester is the fastest option — skip Athens.</p></details></section>
   <details class="seo-wtv wtv-section" open><summary class="wtv-title">When to Visit</summary><p class="wtv-summary">Skiathos has 60 beaches and an international airport — which means cheap flights from northern Europe and matching crowds. The pine forests come right down to the sand. Best May-October; June and September are sweet spots. Mid-July through August is package-tourism peak; Koukounaries beach is a battle.</p><div class="wtv-ribbon-wrap"><div class="wtv-ribbon"><div class="wtv-cap-above wtv-cap-muted"><span class="wtv-cap-text">Off-season, rainy</span></div><div class="wtv-cap-above wtv-cap-muted"><span class="wtv-cap-text">Pines green</span></div><div class="wtv-cap-above"><span class="wtv-cap-text">Beaches yours</span></div><div class="wtv-cap-above wtv-cap-muted"><span class="wtv-cap-text">Hot, packages start</span></div><div class="wtv-cap-above wtv-cap-peak"><span class="wtv-cap-text">Best — golden</span></div><div class="wtv-cap-above wtv-cap-muted"><span class="wtv-cap-text">Season ending, mild</span></div><div class="wtv-cell wtv-avoid" title="Off-season, rainy">Jan</div><div class="wtv-cell wtv-avoid" title="Off-season">Feb</div><div class="wtv-cell wtv-ok" title="Pines green">Mar</div><div class="wtv-cell wtv-great" title="Easter, awakening">Apr</div><div class="wtv-cell wtv-great" title="Beaches yours">May</div><div class="wtv-cell wtv-perfect" title="Before flights">Jun</div><div class="wtv-cell wtv-ok" title="Hot, packages start">Jul</div><div class="wtv-cell wtv-avoid" title="Peak chaos,">Aug</div><div class="wtv-cell wtv-perfect" title="Best — golden">Sep</div><div class="wtv-cell wtv-great" title="Last swims">Oct</div><div class="wtv-cell wtv-ok" title="Season ending, mild">Nov</div><div class="wtv-cell wtv-avoid" title="Off-season">Dec</div><div class="wtv-cap-below wtv-cap-muted"><span class="wtv-cap-text">Off-season</span></div><div class="wtv-cap-below"><span class="wtv-cap-text">Easter, awakening</span></div><div class="wtv-cap-below wtv-cap-peak"><span class="wtv-cap-text">Before flights</span></div><div class="wtv-cap-below wtv-cap-muted"><span class="wtv-cap-text">Peak chaos,</span></div><div class="wtv-cap-below"><span class="wtv-cap-text">Last swims</span></div><div class="wtv-cap-below wtv-cap-muted"><span class="wtv-cap-text">Off-season</span></div></div></div><div class="wtv-vertical"><div class="wtv-vrow wtv-v-avoid"><div class="wtv-vmonth">Jan</div><div class="wtv-vbar wtv-avoid" title="Avoid"></div><div class="wtv-vwhy">Off-season, rainy</div></div><div class="wtv-vrow wtv-v-avoid"><div class="wtv-vmonth">Feb</div><div class="wtv-vbar wtv-avoid" title="Avoid"></div><div class="wtv-vwhy">Off-season</div></div><div class="wtv-vrow wtv-v-ok"><div class="wtv-vmonth">Mar</div><div class="wtv-vbar wtv-ok" title="OK"></div><div class="wtv-vwhy">Pines green</div></div><div class="wtv-vrow wtv-v-great"><div class="wtv-vmonth">Apr</div><div class="wtv-vbar wtv-great" title="Great"></div><div class="wtv-vwhy">Easter, awakening</div></div><div class="wtv-vrow wtv-v-great"><div class="wtv-vmonth">May</div><div class="wtv-vbar wtv-great" title="Great"></div><div class="wtv-vwhy">Beaches yours</div></div><div class="wtv-vrow wtv-v-perfect"><div class="wtv-vmonth">Jun</div><div class="wtv-vbar wtv-perfect" title="Perfect"></div><div class="wtv-vwhy">Before flights</div></div><div class="wtv-vrow wtv-v-ok"><div class="wtv-vmonth">Jul</div><div class="wtv-vbar wtv-ok" title="OK"></div><div class="wtv-vwhy">Hot, packages start</div></div><div class="wtv-vrow wtv-v-avoid"><div class="wtv-vmonth">Aug</div><div class="wtv-vbar wtv-avoid" title="Avoid"></div><div class="wtv-vwhy">Peak chaos,</div></div><div class="wtv-vrow wtv-v-perfect"><div class="wtv-vmonth">Sep</div><div class="wtv-vbar wtv-perfect" title="Perfect"></div><div class="wtv-vwhy">Best — golden</div></div><div class="wtv-vrow wtv-v-great"><div class="wtv-vmonth">Oct</div><div class="wtv-vbar wtv-great" title="Great"></div><div class="wtv-vwhy">Last swims</div></div><div class="wtv-vrow wtv-v-ok"><div class="wtv-vmonth">Nov</div><div class="wtv-vbar wtv-ok" title="OK"></div><div class="wtv-vwhy">Season ending, mild</div></div><div class="wtv-vrow wtv-v-avoid"><div class="wtv-vmonth">Dec</div><div class="wtv-vbar wtv-avoid" title="Avoid"></div><div class="wtv-vwhy">Off-season</div></div></div><div class="wtv-legend"><span class="wtv-legend-item"><span class="wtv-legend-swatch wtv-perfect"></span>Perfect</span><span class="wtv-legend-item"><span class="wtv-legend-swatch wtv-great"></span>Great</span><span class="wtv-legend-item"><span class="wtv-legend-swatch wtv-ok"></span>OK</span><span class="wtv-legend-item"><span class="wtv-legend-swatch wtv-avoid"></span>Avoid</span></div></details>
   <section class="seo-itinerary"><h2>3-day itinerary for Skiathos</h2>

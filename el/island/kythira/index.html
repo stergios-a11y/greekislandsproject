@@ -58,6 +58,28 @@
   .seo-subtitle { color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }
   .seo-rating { color: var(--ink-2, #333); font-size: var(--text-small, 14px); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
+  .seo-suited {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;
+  }
+  .seo-suited-col {
+    padding: 16px 18px; border-radius: 10px;
+    border: 1px solid #e5e5e5; background: #fff;
+  }
+  .seo-suited-col:first-child { border-left: 3px solid #2E7D32; }
+  .seo-suited-col:last-child { border-left: 3px solid #C0522A; }
+  .seo-suited-col h2 {
+    font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em;
+    margin: 0 0 10px;
+  }
+  .seo-suited-col:first-child h2 { color: #2E7D32; }
+  .seo-suited-col:last-child h2 { color: #C0522A; }
+  .seo-suited-col ul { margin: 0; padding-left: 18px; }
+  .seo-suited-col li {
+    font-size: 14px; line-height: 1.55; color: #444; margin-bottom: 6px;
+  }
+  @media (max-width: 600px) {
+    .seo-suited { grid-template-columns: 1fr; gap: 12px; }
+  }
   .seo-hero { margin: 16px 0 24px; }
   .seo-hero img { display: block; box-shadow: 0 2px 12px rgba(0,0,0,0.10); }
   .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local { margin-top: 36px; }
@@ -228,6 +250,7 @@
   <section class="seo-intro">
     <p>Τα Κύθηρα βρίσκονται ανάμεσα στον ιόνιο και αιγαιακό κόσμο, διοικητικά μέρος των Ιονίων νησιών αλλά γεωγραφικά μόνα νότια της Πελοποννήσου. Είναι από τα λιγότερο επισκεπτόμενα σημαντικά νησιά της Ελλάδας — κυρίως γιατί είναι δύσκολα προσβάσιμα — και αυτή ακριβώς είναι η μαγεία τους. Ενετική αρχιτεκτονική, βυζαντινά μοναστήρια, δραματικά φαράγγια, και παραλίες που είναι σχεδόν πάντα άδειες. Η αυστραλιανή κοινότητα εδώ (χιλιάδες μετανάστευσαν τη δεκαετία του 1950) δίνει στο νησί έναν ιδιαίτερο πολιτισμικό χαρακτήρα.</p>
   </section>
+  
   <section class="seo-getting-there"><h2>Πώς θα φτάσεις</h2><div class="seo-gt-pills"><span class="seo-gt-pill">✈ Αεροδρόμιο (μικρό)</span><span class="seo-gt-pill">⛵ Νεάπολη 1 ώρα</span><span class="seo-gt-pill">€10–18</span></div><p class="seo-gt-summary seo-gt-lead">Μικρό αεροδρόμιο με καθημερινές πτήσεις από Αθήνα (Olympic, Sky Express). Χωρίς πλοίο από Πειραιά — προσέγγιση από Νεάπολη (ΝΑ Πελοπόννησος, ~5 ώρες από Αθήνα) με συχνό πλοίο, ~1 ώρα.</p><details class="seo-gt-more"><summary>Διαβάστε αναλυτικά</summary><p class="seo-gt-tip"><strong>Συμβουλή:</strong> Για σύντομο ταξίδι, πτήση. Η διαδρομή Πελοποννήσου έχει νόημα μόνο αν θες να δεις και τη Μάνη.</p></details></section>
   <details class="seo-wtv wtv-section" open><summary class="wtv-title">Πότε να Πας</summary><p class="wtv-summary">Τα Κύθηρα είναι τεχνικά Ιόνιο αλλά διαφορετικό — νότια της Πελοποννήσου, πιο ξερό, πιο τραχύ. Μακρινό πλοίο από Πειραιά, αλλά και από Νεάπολη στη Λακωνία. Καλύτερα Μάιο-Οκτώβρη. Το Πάσχα στον Μυλοπόταμο ιδιαίτερα όμορφο. Αυθεντικά, αργά, ποτέ δε γεμίζει — το νησί που γυρνά η διασπορά.</p><div class="wtv-ribbon-wrap"><div class="wtv-ribbon"><div class="wtv-cap-above wtv-cap-muted"><span class="wtv-cap-text">Ήσυχα, ντόπιοι, ήπιο</span></div><div class="wtv-cap-above"><span class="wtv-cap-text">Αγριολούλουδα</span></div><div class="wtv-cap-above wtv-cap-peak"><span class="wtv-cap-text">Θάλ. ζεσταίνει</span></div><div class="wtv-cap-above"><span class="wtv-cap-text">Ζέστη, έρχονται οι</span></div><div class="wtv-cap-above wtv-cap-peak"><span class="wtv-cap-text">Καλύτερος — χρυσά</span></div><div class="wtv-cap-above"><span class="wtv-cap-text">Ήπιο, πεζοπορία</span></div><div class="wtv-cell wtv-ok" title="Ήσυχα, ντόπιοι, ήπιο">Ιαν</div><div class="wtv-cell wtv-ok" title="Ήπιο, πεζοπορία">Φεβ</div><div class="wtv-cell wtv-great" title="Αγριολούλουδα">Μάρ</div><div class="wtv-cell wtv-great" title="Πάσχα στον Μυλοπόταμο">Απρ</div><div class="wtv-cell wtv-perfect" title="Θάλ. ζεσταίνει">Μάι</div><div class="wtv-cell wtv-perfect" title="Ολοήμερο φως">Ιούν</div><div class="wtv-cell wtv-great" title="Ζέστη, έρχονται οι">Ιούλ</div><div class="wtv-cell wtv-ok" title="Γέμισε από Έλληνες">Αύγ</div><div class="wtv-cell wtv-perfect" title="Καλύτερος — χρυσά">Σεπ</div><div class="wtv-cell wtv-great" title="Τελευταία μπάνια">Οκτ</div><div class="wtv-cell wtv-great" title="Ήπιο, πεζοπορία">Νοέ</div><div class="wtv-cell wtv-ok" title="Ήσυχα, μόνο ντόπιοι">Δεκ</div><div class="wtv-cap-below wtv-cap-muted"><span class="wtv-cap-text">Ήπιο, πεζοπορία</span></div><div class="wtv-cap-below"><span class="wtv-cap-text">Πάσχα στον Μυλοπόταμο</span></div><div class="wtv-cap-below wtv-cap-peak"><span class="wtv-cap-text">Ολοήμερο φως</span></div><div class="wtv-cap-below wtv-cap-muted"><span class="wtv-cap-text">Γέμισε από Έλληνες</span></div><div class="wtv-cap-below"><span class="wtv-cap-text">Τελευταία μπάνια</span></div><div class="wtv-cap-below wtv-cap-muted"><span class="wtv-cap-text">Ήσυχα, μόνο ντόπιοι</span></div></div></div><div class="wtv-vertical"><div class="wtv-vrow wtv-v-ok"><div class="wtv-vmonth">Ιαν</div><div class="wtv-vbar wtv-ok" title="Μέτρια"></div><div class="wtv-vwhy">Ήσυχα, ντόπιοι, ήπιο</div></div><div class="wtv-vrow wtv-v-ok"><div class="wtv-vmonth">Φεβ</div><div class="wtv-vbar wtv-ok" title="Μέτρια"></div><div class="wtv-vwhy">Ήπιο, πεζοπορία</div></div><div class="wtv-vrow wtv-v-great"><div class="wtv-vmonth">Μάρ</div><div class="wtv-vbar wtv-great" title="Καλά"></div><div class="wtv-vwhy">Αγριολούλουδα</div></div><div class="wtv-vrow wtv-v-great"><div class="wtv-vmonth">Απρ</div><div class="wtv-vbar wtv-great" title="Καλά"></div><div class="wtv-vwhy">Πάσχα στον Μυλοπόταμο</div></div><div class="wtv-vrow wtv-v-perfect"><div class="wtv-vmonth">Μάι</div><div class="wtv-vbar wtv-perfect" title="Τέλεια"></div><div class="wtv-vwhy">Θάλ. ζεσταίνει</div></div><div class="wtv-vrow wtv-v-perfect"><div class="wtv-vmonth">Ιούν</div><div class="wtv-vbar wtv-perfect" title="Τέλεια"></div><div class="wtv-vwhy">Ολοήμερο φως</div></div><div class="wtv-vrow wtv-v-great"><div class="wtv-vmonth">Ιούλ</div><div class="wtv-vbar wtv-great" title="Καλά"></div><div class="wtv-vwhy">Ζέστη, έρχονται οι</div></div><div class="wtv-vrow wtv-v-ok"><div class="wtv-vmonth">Αύγ</div><div class="wtv-vbar wtv-ok" title="Μέτρια"></div><div class="wtv-vwhy">Γέμισε από Έλληνες</div></div><div class="wtv-vrow wtv-v-perfect"><div class="wtv-vmonth">Σεπ</div><div class="wtv-vbar wtv-perfect" title="Τέλεια"></div><div class="wtv-vwhy">Καλύτερος — χρυσά</div></div><div class="wtv-vrow wtv-v-great"><div class="wtv-vmonth">Οκτ</div><div class="wtv-vbar wtv-great" title="Καλά"></div><div class="wtv-vwhy">Τελευταία μπάνια</div></div><div class="wtv-vrow wtv-v-great"><div class="wtv-vmonth">Νοέ</div><div class="wtv-vbar wtv-great" title="Καλά"></div><div class="wtv-vwhy">Ήπιο, πεζοπορία</div></div><div class="wtv-vrow wtv-v-ok"><div class="wtv-vmonth">Δεκ</div><div class="wtv-vbar wtv-ok" title="Μέτρια"></div><div class="wtv-vwhy">Ήσυχα, μόνο ντόπιοι</div></div></div><div class="wtv-legend"><span class="wtv-legend-item"><span class="wtv-legend-swatch wtv-perfect"></span>Τέλεια</span><span class="wtv-legend-item"><span class="wtv-legend-swatch wtv-great"></span>Καλά</span><span class="wtv-legend-item"><span class="wtv-legend-swatch wtv-ok"></span>Μέτρια</span></div></details>
   <section class="seo-itinerary"><h2>Δρομολόγιο 4 ημερών — Κύθηρα</h2>

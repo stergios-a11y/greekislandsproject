@@ -844,6 +844,30 @@ def render_body(key, data, meta, lang='en'):
         else:
             rating_text = f'<p class="seo-rating">Overall rating: <strong>{rating:.1f}/5</strong> · {int(meta["area"]) if meta.get("area") else ""} km² · {int(meta["pop"]) if meta.get("pop") else ""} residents</p>'
 
+    # "Good for / Maybe skip if" orientation block — renders between the
+    # intro and getting-there if the island has a suited_for field. Two short
+    # lists of original editorial content; strong signal of a real guide.
+    suited_for_html = ''
+    sf = data.get('suited_for')
+    if sf:
+        good = sf.get('good_el' if lang == 'el' else 'good', []) or []
+        skip = sf.get('skip_el' if lang == 'el' else 'skip', []) or []
+        if good or skip:
+            good_title = 'Ιδανικό για' if lang == 'el' else 'Good for'
+            skip_title = 'Σκέψου αλλιώς αν' if lang == 'el' else 'Maybe skip if'
+            good_li = ''.join(f'<li>{esc(x)}</li>' for x in good)
+            skip_li = ''.join(f'<li>{esc(x)}</li>' for x in skip)
+            suited_for_html = (
+                f'<section class="seo-suited">'
+                f'<div class="seo-suited-col">'
+                f'<h2>{good_title}</h2><ul>{good_li}</ul>'
+                f'</div>'
+                f'<div class="seo-suited-col">'
+                f'<h2>{skip_title}</h2><ul>{skip_li}</ul>'
+                f'</div>'
+                f'</section>'
+            )
+
     # Getting-there section (between intro and itinerary) — v2 schema: pills + summary + tip
     # The summary is split into a visible first sentence ("lead") and a
     # collapsible "rest", rendered as a native <details> element. This
@@ -1048,6 +1072,7 @@ def render_body(key, data, meta, lang='en'):
   <section class="seo-intro">
     <p>{safe_html(intro)}</p>
   </section>
+  {suited_for_html}
   {getting_there_html}
   {wtv_html}
   {itinerary_html}
@@ -1151,6 +1176,28 @@ def render_page(key, data, meta, lang='en'):
   .seo-subtitle {{ color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }}
   .seo-rating {{ color: var(--ink-2, #333); font-size: var(--text-small, 14px); }}
   .seo-intro p {{ font-size: var(--text-sub, 18px); }}
+  .seo-suited {{
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;
+  }}
+  .seo-suited-col {{
+    padding: 16px 18px; border-radius: 10px;
+    border: 1px solid #e5e5e5; background: #fff;
+  }}
+  .seo-suited-col:first-child {{ border-left: 3px solid #2E7D32; }}
+  .seo-suited-col:last-child {{ border-left: 3px solid #C0522A; }}
+  .seo-suited-col h2 {{
+    font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em;
+    margin: 0 0 10px;
+  }}
+  .seo-suited-col:first-child h2 {{ color: #2E7D32; }}
+  .seo-suited-col:last-child h2 {{ color: #C0522A; }}
+  .seo-suited-col ul {{ margin: 0; padding-left: 18px; }}
+  .seo-suited-col li {{
+    font-size: 14px; line-height: 1.55; color: #444; margin-bottom: 6px;
+  }}
+  @media (max-width: 600px) {{
+    .seo-suited {{ grid-template-columns: 1fr; gap: 12px; }}
+  }}
   .seo-hero {{ margin: 16px 0 24px; }}
   .seo-hero img {{ display: block; box-shadow: 0 2px 12px rgba(0,0,0,0.10); }}
   .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local {{ margin-top: 36px; }}

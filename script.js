@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-05-19';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-05-24';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -1352,6 +1352,7 @@ function buildIslandPage(data, key) {
         <p class="itin-subtitle">${pickLang(itin, "subtitle")}</p>
       </div>
       ${introHtml}
+      ${buildSuitedForSection(data)}
       ${gettingThereHtml}
       ${buildWhenToVisitSection(data)}
       <div class="itin-day-filter">
@@ -1365,6 +1366,38 @@ function buildIslandPage(data, key) {
       ${beachSection}
       ${buildLocalSection(data)}
       ${buildSimilarIslandsSection(key)}
+    </div>`;
+}
+
+/* Renders the "Good for / Skip if" orientation block. Two short lists that
+   help a reader self-select before reading the full guide. Only renders if
+   data.suited_for is present (rolled out to thinner islands first). */
+function buildSuitedForSection(data) {
+  const sf = data.suited_for;
+  if (!sf) return '';
+  const lang = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
+  const escHtml = (s) => String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+  const good = (lang === 'el' ? sf.good_el : sf.good) || [];
+  const skip = (lang === 'el' ? sf.skip_el : sf.skip) || [];
+  if (!good.length && !skip.length) return '';
+
+  const goodTitle = lang === 'el' ? 'Ιδανικό για' : 'Good for';
+  const skipTitle = lang === 'el' ? 'Σκέψου αλλιώς αν' : 'Maybe skip if';
+
+  const li = (items) => items.map(x => `<li>${escHtml(x)}</li>`).join('');
+
+  return `
+    <div class="itin-suited">
+      <div class="itin-suited-col itin-suited-good">
+        <h3 class="itin-suited-title">${goodTitle}</h3>
+        <ul>${li(good)}</ul>
+      </div>
+      <div class="itin-suited-col itin-suited-skip">
+        <h3 class="itin-suited-title">${skipTitle}</h3>
+        <ul>${li(skip)}</ul>
+      </div>
     </div>`;
 }
 
