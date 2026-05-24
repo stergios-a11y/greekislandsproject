@@ -41,7 +41,8 @@ const UI_TEXT = {
   'hero.stat.minutes': { en: 'Minutes', el: 'Λεπτά' },
 
   // Homepage content section (below the map)
-  'home.scroll_hint': { en: 'Read more about this site', el: 'Διάβασε περισσότερα για τη σελίδα' },
+  'home.scroll_hint': { en: 'About this site', el: 'Σχετικά με τη σελίδα' },
+  'home.back_to_map': { en: 'Back to the map', el: 'Πίσω στον χάρτη' },
   'home.about.title': { en: 'A Greek islands travel guide with opinions', el: 'Ένας οδηγός για τα ελληνικά νησιά, με άποψη' },
   'home.about.p1': { en: "Most island guides list 30 beaches and call it a recommendation. This one picks the one you should actually go to, and tells you why the other 29 didn\\'t make it. The same goes for the where-to-stay, the where-to-eat, the day plan, the side trip.", el: 'Οι περισσότεροι οδηγοί νησιών γράφουν 30 παραλίες και το λένε πρόταση. Εδώ διαλέγω αυτή που πραγματικά αξίζει, και εξηγώ γιατί δεν πέρασαν οι άλλες 29. Το ίδιο ισχύει για το πού θα μείνεις, πού θα φας, το πλάνο της ημέρας, την παρέκβαση.' },
   'home.about.p2': { en: "Built and written by Stergios Gousios — Athens-based, 50+ islands visited over 20+ years, no sponsorships, no affiliate hotel chains in disguise. Each island gets an honest score across beaches, history, nightlife, access and price — not a marketing brochure, not an algorithm, just one person\\'s take, cross-checked with friends and family who actually live on each island.", el: 'Γραμμένο από τον Στέργιο Γούσιο — ζω στην Αθήνα, έχω επισκεφθεί 50+ νησιά σε διάστημα 20+ ετών, χωρίς χορηγίες, χωρίς συγκαλυμμένες affiliate πλατφόρμες κρατήσεων. Κάθε νησί παίρνει μια ειλικρινή βαθμολογία σε παραλίες, ιστορία, νυχτερινή ζωή, πρόσβαση και τιμές — όχι διαφημιστικό φυλλάδιο, όχι αλγόριθμος, η κρίση ενός ανθρώπου, διασταυρωμένη με φίλους και συγγενείς που ζουν στα νησιά.' },

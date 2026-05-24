@@ -5238,23 +5238,63 @@ html.dark .wtv-ok { background: #6FA9B8; color: #042631; }
    AdSense reviewer readability and for SEO (Google parses text
    on the homepage to understand what the site is about).
 ============================================================ */
-.home-scroll-hint {
-  text-align: center;
-  padding: 24px 16px 8px;
-  color: var(--ink-3);
-  font-size: var(--text-small);
+.home-about-btn {
+  /* Floats over the map, bottom-centre. Clicking smooth-scrolls down to
+     the homepage content section — needed because the map captures the
+     mouse wheel and a plain scroll never reaches the content. */
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--aegean);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
   font-family: var(--sans);
-  background: var(--bg);
+  font-size: var(--text-small);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
-.home-scroll-arrow {
+.home-about-btn:hover {
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+}
+.home-about-btn-arrow {
   display: inline-block;
-  margin-left: 8px;
   animation: home-scroll-bob 2s ease-in-out infinite;
-  color: var(--aegean);
 }
 @keyframes home-scroll-bob {
   0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(4px); }
+  50%      { transform: translateY(3px); }
+}
+
+.home-backtop-btn {
+  /* Sits at the top of the content section — jumps back up to the map. */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 8px;
+  padding: 7px 14px;
+  background: none;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 999px;
+  color: var(--ink-2);
+  font-family: var(--sans);
+  font-size: var(--text-meta);
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.home-backtop-btn:hover {
+  border-color: var(--aegean);
+  color: var(--aegean);
 }
 
 .home-content {

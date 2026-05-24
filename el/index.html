@@ -222,14 +222,18 @@
         <div class="map-legend-row"><span class="map-legend-dot" style="background:#C0522A;width:11px;height:11px"></span><span>Under 3.0</span></div>
         <div class="map-legend-hint">Circle size = score · Click to explore</div>
       </div>
-    </div>
-
-    <div class="home-scroll-hint" aria-hidden="true">
-      <span data-i18n="home.scroll_hint">Διάβασε περισσότερα για τη σελίδα</span>
-      <span class="home-scroll-arrow">↓</span>
+      <button type="button" class="home-about-btn" onclick="scrollToHomeContent()">
+        <span data-i18n="home.scroll_hint">Σχετικά με τη σελίδα</span>
+        <span class="home-about-btn-arrow">↓</span>
+      </button>
     </div>
 
     <section class="home-content" id="home-content">
+
+      <button type="button" class="home-backtop-btn" onclick="scrollToHomeTop()">
+        <span class="home-backtop-arrow">↑</span>
+        <span data-i18n="home.back_to_map">Πίσω στον χάρτη</span>
+      </button>
 
       <div class="home-block home-intro">
         <h2 class="home-block-title" data-i18n="home.about.title">Ένας οδηγός για τα ελληνικά νησιά, με άποψη</h2>

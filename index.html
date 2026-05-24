@@ -224,12 +224,13 @@
         <div class="map-legend-row"><span class="map-legend-dot" style="background:#C0522A;width:11px;height:11px"></span><span>Under 3.0</span></div>
         <div class="map-legend-hint">Circle size = score · Click to explore</div>
       </div>
-    </div>
-
-    <!-- Scroll affordance: hints there's content below the map -->
-    <div class="home-scroll-hint" aria-hidden="true">
-      <span data-i18n="home.scroll_hint">Read more about this site</span>
-      <span class="home-scroll-arrow">↓</span>
+      <!-- Discoverable trigger to reach the content section below the map.
+           The map captures mouse-wheel events (Leaflet zoom), so a plain
+           scroll won't reach the content — this button smooth-scrolls there. -->
+      <button type="button" class="home-about-btn" onclick="scrollToHomeContent()">
+        <span data-i18n="home.scroll_hint">About this site</span>
+        <span class="home-about-btn-arrow">↓</span>
+      </button>
     </div>
 
     <!-- Homepage content section (sits below the map). Provides the
@@ -237,6 +238,11 @@
          short rubric primer. Real prose content for both AdSense / search
          engines and curious readers. -->
     <section class="home-content" id="home-content">
+
+      <button type="button" class="home-backtop-btn" onclick="scrollToHomeTop()">
+        <span class="home-backtop-arrow">↑</span>
+        <span data-i18n="home.back_to_map">Back to the map</span>
+      </button>
 
       <div class="home-block home-intro">
         <h2 class="home-block-title" data-i18n="home.about.title">A Greek islands travel guide with opinions</h2>

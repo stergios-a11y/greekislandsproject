@@ -624,6 +624,17 @@ const HOMEPAGE_FEATURED = [
   { key: 'naxos',       tagEn: 'Family-friendly', tagEl: 'Φιλικό για οικογένειες' },
 ];
 
+/* Smooth-scroll between the map and the homepage content section.
+   The map captures mouse-wheel events, so these button-triggered jumps
+   are the reliable way to move between the two. */
+function scrollToHomeContent() {
+  const el = document.getElementById('home-content');
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function scrollToHomeTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 function renderHomeFeatured() {
   const grid = document.getElementById('home-featured-grid');
   if (!grid) return;
