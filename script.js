@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
   try { setupVibeTags(); } catch(e) { console.warn('setupVibeTags', e); }
   try { setupGroupFilter(); } catch(e) { console.warn('setupGroupFilter', e); }
   try { setupMap(); } catch(e) { console.warn('setupMap', e); }
-  try { renderWhatsOnStrip(); } catch(e) { console.warn('whatsOn', e); }
+  try { renderWhatsOnStrip().then(adjustMapHeightToStrip); } catch(e) { console.warn('whatsOn', e); }
   try { renderHomeFeatured(); } catch(e) { console.warn('homeFeatured', e); }
   try { setupTable(); } catch(e) { console.warn('setupTable', e); }
   try { setupCompare(); } catch(e) { console.warn('setupCompare', e); }
@@ -623,6 +623,31 @@ const HOMEPAGE_FEATURED = [
   { key: 'symi',        tagEn: 'Off-radar',       tagEl: 'Εκτός ραντάρ' },
   { key: 'naxos',       tagEn: 'Family-friendly', tagEl: 'Φιλικό για οικογένειες' },
 ];
+
+/* Measure the actual height of the "What's on this month" strip and pass
+   it to CSS as --whats-on-strip-height. The default in style.css (~37px)
+   is a guess; if the strip ends up taller (long content wrapping to a
+   second line) or shorter (font rendering differences, empty strip on
+   the off-chance), the map height calc would be off and the "About this
+   site" button at the bottom of the map would get clipped or float
+   awkwardly. Runs once after the strip is rendered, and again on resize. */
+function adjustMapHeightToStrip() {
+  const strip = document.getElementById('whats-on-strip');
+  if (!strip) return;
+  const apply = () => {
+    const h = strip.offsetHeight;            // 0 if :empty { display:none } kicked in
+    document.documentElement.style.setProperty('--whats-on-strip-height', h + 'px');
+    // Force Leaflet to re-measure (otherwise the map tiles don't fill
+    // the new bottom space until the next pan/zoom).
+    if (typeof mapInstance !== 'undefined' && mapInstance && mapInstance.invalidateSize) {
+      mapInstance.invalidateSize();
+    }
+  };
+  apply();
+  // Re-measure on window resize — the strip may wrap differently at
+  // different widths, changing its height.
+  window.addEventListener('resize', apply);
+}
 
 /* Smooth-scroll between the map and the homepage content section.
    The map captures mouse-wheel events, so these button-triggered jumps
