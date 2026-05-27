@@ -4978,18 +4978,38 @@ html.dark .mission-disagree-box {
 ============================================================ */
 .wtv-ribbon-wrap {
   margin: 0 0 16px;
-  padding: 0 60px;              /* room for JAN / DEC pill overflow into edges */
   overflow: visible;
 }
 .wtv-ribbon {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto auto auto;
-  column-gap: 0;
-  row-gap: 0;
-  min-width: 100%;
-  overflow: visible;
+  column-gap: 2px;
+  border-radius: 6px;
+  overflow: hidden;
 }
+/* Highlights line above the ribbon — answers "when should I come" in plain
+   text. Each item is "Best: Jun, Sep" style; separators are subtle dots. */
+.wtv-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin: 0 0 12px;
+  font-family: var(--sans);
+  font-size: var(--text-small);
+  line-height: 1.5;
+}
+.wtv-hl-item { color: var(--ink-2); }
+.wtv-hl-item strong {
+  margin-right: 4px;
+  font-weight: 700;
+}
+.wtv-hl-perfect strong { color: #0B5460; }
+.wtv-hl-great   strong { color: #0B8FAC; }
+.wtv-hl-ok      strong { color: #888; }
+.wtv-hl-avoid   strong { color: #B04A2A; }
+.wtv-hl-sep     { color: var(--ink-3); opacity: 0.5; }
+
 /* Vertical layout — used only on mobile */
 .wtv-vertical { display: none; }
 
@@ -5041,94 +5061,13 @@ html.dark .mission-disagree-box {
   .wtv-vrow { grid-template-columns: 38px 5px 1fr; gap: 8px; padding: 6px 0; }
 }
 
-/* Caption cells — span 2 ribbon cells each so text gets ~100px breathing room.
-   Each row holds 6 caption cells (instead of 12). Above-row holds odd-month
-   captions (Jan/Mar/May/Jul/Sep/Nov), below-row holds even-month captions
-   (Feb/Apr/Jun/Aug/Oct/Dec). The pill (inner span) is flow-positioned so the
-   cell expands naturally with content, then horizontally translated to anchor
-   on the actual month tick (25% for odd months, 75% for even months). */
-/* Caption cells are just height reservoirs — the pill is absolutely positioned
-   so it can bleed freely into adjacent (always-empty) slots. */
-.wtv-cap-above,
-.wtv-cap-below {
-  grid-column: span 2;
-  position: relative;
-  overflow: visible;
-}
-.wtv-cap-above { grid-row: 1; height: 72px; }  /* enough for 2 lines + padding */
-.wtv-cap-below { grid-row: 3; height: 72px; }
-
-/* The visible pill — absolutely positioned, centered on the month tick.
-   Width is fixed at 1.8× a single cell (= 90% of the 2-col span).
-   Tick for above is at 25% of 2-col span; for below at 75%.
-   We nudge the pill so it sits mostly in the open (empty) neighbour slot. */
-.wtv-cap-text {
-  position: absolute;
-  /* sizing — fixed 2-line height for uniform pills */
-  width: 100%;                  /* 100% of 2-col span = exactly 1 month-pair wide */
-  height: 48px;                 /* exactly 2 lines tall (line-height 1.35 × 2 + padding) */
-  box-sizing: border-box;
-  padding: 5px 8px;
-  /* appearance */
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  background: var(--white);
-  font-family: var(--sans);
-  font-size: var(--text-meta);
-  font-weight: 500;
-  line-height: 1.35;
-  text-align: center;
-  color: var(--ink-1);
-  /* always render as 2 lines — flex centring gives uniform look whether text fills 1 or 2 lines */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  /* allow text wrap onto 2 lines but no more */
-  word-break: break-word;
-}
-/* Above: tick at 25% of 2-col span — pill centred on tick */
-.wtv-cap-above .wtv-cap-text {
-  bottom: 10px;
-  left: 25%;
-  transform: translateX(-50%);
-}
-/* Below: tick at 75% of 2-col span — pill centred on tick */
-.wtv-cap-below .wtv-cap-text {
-  top: 10px;
-  left: 75%;
-  transform: translateX(-50%);
-}
-
-/* Tick marks */
-.wtv-cap-above::after,
-.wtv-cap-below::before {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 8px;
-  background: rgba(0, 0, 0, 0.22);
-}
-.wtv-cap-above::after  { bottom: 0; left: 25%; }
-.wtv-cap-below::before { top: 0;    left: 75%; }
-
-/* Muted captions for low-stakes months (avoid + ok shoulder):
-   pill border lighter, text muted */
-.wtv-cap-muted .wtv-cap-text {
-  color: var(--ink-3);
-  font-weight: 400;
-  border-color: rgba(0, 0, 0, 0.07);
-}
-/* Bold captions for the peak (perfect) months: pill border darker, text bold */
-.wtv-cap-peak .wtv-cap-text {
-  font-weight: 700;
-  border-color: rgba(0, 0, 0, 0.22);
-}
-
-/* Cells — the actual ribbon segments */
+/* Cells — the actual ribbon segments. The colored month strip is the visual
+   identity of the When-to-Visit block; the cap labels above/below were retired
+   because the floating layout was visually noisy. Tooltips (title=) provide
+   the per-month detail on hover; the .wtv-highlights line above summarises
+   the months by tag. */
 .wtv-cell {
-  grid-row: 2;
-  height: 36px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5138,8 +5077,10 @@ html.dark .mission-disagree-box {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: #fff;
-  cursor: default;
+  cursor: help;
+  transition: filter 0.15s ease, transform 0.15s ease;
 }
+.wtv-cell:hover { filter: brightness(1.08); transform: translateY(-1px); }
 /* Tag colors — Variant A palette: red → pale teal → mid teal → dark teal */
 .wtv-perfect { background: var(--aegean-dark, #076880); }
 .wtv-great   { background: var(--aegean,      #0B8FAC); }
@@ -5171,20 +5112,10 @@ html.dark .wtv-section {
   border-color: rgba(11, 143, 172, 0.25);
 }
 html.dark .wtv-summary { color: var(--ink-2); }
-html.dark .wtv-cap-text {
-  color: var(--ink-2);
-  background: var(--marble);
-  border-color: rgba(255, 255, 255, 0.18);
-}
-html.dark .wtv-cap-muted .wtv-cap-text {
-  color: var(--ink-3);
-  border-color: rgba(255, 255, 255, 0.10);
-}
-html.dark .wtv-cap-peak .wtv-cap-text {
-  border-color: rgba(255, 255, 255, 0.30);
-}
-html.dark .wtv-cap-above::after,
-html.dark .wtv-cap-below::before { background: rgba(255, 255, 255, 0.25); }
+html.dark .wtv-highlights .wtv-hl-item { color: var(--ink-2); }
+html.dark .wtv-hl-perfect strong { color: #5BC9E0; }
+html.dark .wtv-hl-great   strong { color: #4CB4D3; }
+html.dark .wtv-hl-avoid   strong { color: #E08070; }
 html.dark .wtv-ok { background: #6FA9B8; color: #042631; }
 
 /* Visually hidden but accessible — used for the SEO island list at the bottom

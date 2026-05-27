@@ -1562,51 +1562,76 @@ function buildWhenToVisitSection(data) {
     ? ['Ιαν','Φεβ','Μάρ','Απρ','Μάι','Ιούν','Ιούλ','Αύγ','Σεπ','Οκτ','Νοέ','Δεκ']
     : ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
-  // Three rows in the ribbon grid:
-  //   Row 1: 6 above-captions (odd months: Jan/Mar/May/Jul/Sep/Nov), each spans 2 columns
-  //   Row 2: 12 ribbon cells (one per month)
-  //   Row 3: 6 below-captions (even months: Feb/Apr/Jun/Aug/Oct/Dec), each spans 2 columns
-  const aboveCaps = [];
-  const belowCaps = [];
-  const ribbonCells = [];
-
-  w.months.forEach((m, i) => {
+  // Build the ribbon: 12 colored cells, one per month. The `title` attribute
+  // gives native browser tooltips on hover (desktop). Mobile users get the
+  // vertical list (.wtv-vertical) instead, where labels are inline.
+  const ribbonCells = w.months.map((m, i) => {
     const tag = (m.tag || 'ok').toLowerCase();
     const why = pickLang(m, 'why') || '';
     const safeWhy = why.replace(/"/g, '&quot;');
+    return `<div class="wtv-cell wtv-${tag}" title="${monthNames[i]} — ${safeWhy}">${monthNames[i]}</div>`;
+  }).join('');
 
-    let capClass = '';
-    if (tag === 'perfect')                     capClass = ' wtv-cap-peak';
-    else if (tag === 'avoid' || tag === 'ok')  capClass = ' wtv-cap-muted';
-
-    if (i % 2 === 0) {
-      aboveCaps.push(`<div class="wtv-cap-above${capClass}"><span class="wtv-cap-text">${why}</span></div>`);
-    } else {
-      belowCaps.push(`<div class="wtv-cap-below${capClass}"><span class="wtv-cap-text">${why}</span></div>`);
-    }
-
-    ribbonCells.push(
-      `<div class="wtv-cell wtv-${tag}" title="${safeWhy}">${monthNames[i]}</div>`
-    );
+  // "Highlights" line above the ribbon. Groups months by tag and renders
+  // "Best: Jun, Sep · Great: Jul · Avoid: Oct–May" — the reader's actual
+  // question is "when do I come?" and this answers it in one line.
+  const monthAbbr = monthNames; // same array
+  const tagGroups = { perfect: [], great: [], ok: [], avoid: [] };
+  w.months.forEach((m, i) => {
+    const tag = (m.tag || 'ok').toLowerCase();
+    if (tagGroups[tag]) tagGroups[tag].push(i);
   });
+  // Format a list of month indices into "Jun, Sep" or "Oct–May" (range)
+  // if they're contiguous (handles year-wrap for avoid months).
+  const fmtMonthList = (indices) => {
+    if (!indices.length) return '';
+    if (indices.length <= 3) {
+      return indices.map(i => monthAbbr[i]).join(', ');
+    }
+    // Try a contiguous run; allow year-wrap (Oct, Nov, Dec, Jan, Feb...)
+    const sorted = [...indices].sort((a, b) => a - b);
+    // Check wrap: is there a gap in the middle larger than the gap end→start+12?
+    let gapStart = -1, maxGap = 0;
+    for (let i = 0; i < sorted.length - 1; i++) {
+      const g = sorted[i+1] - sorted[i];
+      if (g > maxGap) { maxGap = g; gapStart = i; }
+    }
+    const wrapGap = (12 - sorted[sorted.length-1] - 1) + sorted[0] + 1;
+    if (maxGap === 1 && wrapGap > 1) {
+      // Contiguous, no wrap: e.g. May–Sep
+      return `${monthAbbr[sorted[0]]}–${monthAbbr[sorted[sorted.length-1]]}`;
+    }
+    if (maxGap > 1 && wrapGap === 1 && sorted.length === (12 - (maxGap - 1))) {
+      // Wrap-around contiguous: e.g. Oct–May (everything except Jun–Sep)
+      const first = sorted[gapStart + 1];
+      const last = sorted[gapStart];
+      return `${monthAbbr[first]}–${monthAbbr[last]}`;
+    }
+    // Fallback: comma list
+    return sorted.map(i => monthAbbr[i]).join(', ');
+  };
+  const tagLabels = lang === 'el'
+    ? { perfect: 'Τέλεια', great: 'Καλά', ok: 'Μέτρια', avoid: 'Απόφυγε' }
+    : { perfect: 'Best', great: 'Great', ok: 'OK', avoid: 'Avoid' };
+  const highlightOrder = ['perfect', 'great', 'ok', 'avoid'];
+  const highlightHtml = highlightOrder
+    .filter(t => tagGroups[t].length)
+    .map(t => `<span class="wtv-hl-item wtv-hl-${t}"><strong>${tagLabels[t]}:</strong> ${fmtMonthList(tagGroups[t])}</span>`)
+    .join('<span class="wtv-hl-sep">·</span>');
+  const highlightsBar = highlightHtml
+    ? `<div class="wtv-highlights">${highlightHtml}</div>`
+    : '';
 
   const summary = pickLang(w, 'summary') || '';
   const summaryHtml = summary ? `<p class="wtv-summary">${summary}</p>` : '';
 
   const tagsPresent = new Set(w.months.map(m => (m.tag || 'ok').toLowerCase()));
-  const legendOrder = ['perfect', 'great', 'ok', 'avoid'];
-  const legendLabels = lang === 'el'
-    ? { perfect: 'Τέλεια', great: 'Καλά', ok: 'Μέτρια', avoid: 'Απόφυγε' }
-    : { perfect: 'Perfect', great: 'Great', ok: 'OK', avoid: 'Avoid' };
-  const legend = legendOrder
+  const legend = highlightOrder
     .filter(t => tagsPresent.has(t))
-    .map(t => `<span class="wtv-legend-item"><span class="wtv-legend-swatch wtv-${t}"></span>${legendLabels[t]}</span>`)
+    .map(t => `<span class="wtv-legend-item"><span class="wtv-legend-swatch wtv-${t}"></span>${tagLabels[t]}</span>`)
     .join('');
 
-  // Build mobile vertical list — 12 rows, one per month, with tag swatch + caption
-  const tagLabels = lang === 'el'
-    ? { perfect: 'Τέλεια', great: 'Καλά', ok: 'Μέτρια', avoid: 'Απόφυγε' }
-    : { perfect: 'Perfect', great: 'Great', ok: 'OK', avoid: 'Avoid' };
+  // Mobile vertical list — 12 rows, one per month, with tag swatch + caption
   const verticalRows = w.months.map((m, i) => {
     const tag = (m.tag || 'ok').toLowerCase();
     const why = pickLang(m, 'why') || '';
@@ -1621,11 +1646,10 @@ function buildWhenToVisitSection(data) {
     <details class="wtv-section" open>
       <summary class="wtv-title">${t('wtv.title')}</summary>
       ${summaryHtml}
+      ${highlightsBar}
       <div class="wtv-ribbon-wrap">
         <div class="wtv-ribbon">
-          ${aboveCaps.join('')}
-          ${ribbonCells.join('')}
-          ${belowCaps.join('')}
+          ${ribbonCells}
         </div>
       </div>
       <div class="wtv-vertical">${verticalRows}</div>
