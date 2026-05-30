@@ -1287,16 +1287,32 @@ function buildIslandPage(data, key) {
     if (d.overnight) {
       const overnightText = pickLang(d, 'overnight');
       const escAttr = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
-      const inner = `🌙 ${t('common.sleep')}: ${overnightText}`;
-      if (BOOKING_READY && BOOKING_ENABLED_ISLANDS.has(currentIslandKey)) {
-        // Search-URL strategy — Booking.com matches the hotel name to its inventory.
-        // Encoding the hotel name + island keeps the search tight.
-        const islandName = ISLANDS_DATA[currentIslandKey] ? ISLANDS_DATA[currentIslandKey].name : '';
-        const query = encodeURIComponent(`${overnightText} ${islandName}`);
-        const href = `https://www.booking.com/searchresults.html?ss=${query}&aid=${BOOKING_AID}`;
-        overnightHtml = `<a href="${href}" target="_blank" rel="noopener sponsored" class="itin-overnight itin-overnight--booking" style="border-color:${d.color};color:${d.color}" aria-label="${escAttr(t('common.booking_aria'))}">${inner} <span class="itin-overnight-cta">→ ${t('common.book_hotel')}</span></a>`;
+      // Departure-day detection: if the overnight value is "Departure" / "Αναχώρηση"
+      // (or starts with those — handles "Αναχώρηση πρωί" etc), render plainly without
+      // the "Sleep:" prefix and without a Booking.com link (you can't sleep there
+      // that night — you're leaving). Compare in a case- and accent-insensitive way
+      // so "αναχώρηση" / "Αναχώρηση" / "ΑΝΑΧΩΡΗΣΗ" all match.
+      const normalised = overnightText.trim().toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      const isDeparture = normalised.startsWith('departure') ||
+                          normalised.startsWith('αναχωρηση') ||  // El after stripping diacritics
+                          normalised.startsWith('αναχωρησηs');   // safety net
+      if (isDeparture) {
+        // Render the bare word, no "Sleep:" prefix, no Booking link.
+        const inner = `🌙 ${overnightText}`;
+        overnightHtml = `<span class="itin-overnight itin-overnight--departure" style="border-color:${d.color};color:${d.color}">${inner}</span>`;
       } else {
-        overnightHtml = `<span class="itin-overnight" style="border-color:${d.color};color:${d.color}">${inner}</span>`;
+        const inner = `🌙 ${t('common.sleep')}: ${overnightText}`;
+        if (BOOKING_READY && BOOKING_ENABLED_ISLANDS.has(currentIslandKey)) {
+          // Search-URL strategy — Booking.com matches the hotel name to its inventory.
+          // Encoding the hotel name + island keeps the search tight.
+          const islandName = ISLANDS_DATA[currentIslandKey] ? ISLANDS_DATA[currentIslandKey].name : '';
+          const query = encodeURIComponent(`${overnightText} ${islandName}`);
+          const href = `https://www.booking.com/searchresults.html?ss=${query}&aid=${BOOKING_AID}`;
+          overnightHtml = `<a href="${href}" target="_blank" rel="noopener sponsored" class="itin-overnight itin-overnight--booking" style="border-color:${d.color};color:${d.color}" aria-label="${escAttr(t('common.booking_aria'))}">${inner} <span class="itin-overnight-cta">→ ${t('common.book_hotel')}</span></a>`;
+        } else {
+          overnightHtml = `<span class="itin-overnight" style="border-color:${d.color};color:${d.color}">${inner}</span>`;
+        }
       }
     }
     return `<div class="itin-day-card" id="itin-day-card-${d.day}">

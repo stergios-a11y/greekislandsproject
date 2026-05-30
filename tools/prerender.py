@@ -49,6 +49,7 @@ def bump_build_date():
 
 import re
 import html
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
@@ -1031,7 +1032,15 @@ def render_body(key, data, meta, lang='en'):
 
             meta_parts = []
             if overnight:
-                meta_parts.append(f'{overnight_label}: <strong>{overnight}</strong>')
+                # Departure-day detection — render bare word without "Overnight:" prefix.
+                # Matches "Departure" / "Αναχώρηση" (case- and accent-insensitive).
+                normalised = unicodedata.normalize('NFD', overnight).lower()
+                normalised = ''.join(c for c in normalised if not unicodedata.combining(c))
+                is_departure = normalised.startswith('departure') or normalised.startswith('αναχωρηση')
+                if is_departure:
+                    meta_parts.append(f'<strong>{overnight}</strong>')
+                else:
+                    meta_parts.append(f'{overnight_label}: <strong>{overnight}</strong>')
             if km not in (None, '', 0) and drive_mins not in (None, '', 0):
                 meta_parts.append(f'{drive_label}: {km} km, ~{drive_mins} min')
             meta_line_html = f'<p class="seo-day-meta">{" · ".join(meta_parts)}</p>' if meta_parts else ''
