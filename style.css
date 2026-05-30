@@ -175,6 +175,18 @@ h1, h2, h3, h4 {
 }
 h1 { font-size: var(--text-section); font-weight: 800; margin-bottom: 10px; }
 h2 { font-size: var(--text-sub); font-weight: 700; margin-bottom: 8px; }
+
+/* Demoted-from-h1 view headings — each SPA view (Islands Data, Compare,
+   Island Hopping, etc.) used to use <h1> for its title. Demoted to <h2>
+   so the homepage has exactly one <h1> (the sr-only one in #view-home)
+   per SEO best practice. This rule preserves the original h1 sizing so
+   the visual UI is unchanged. */
+.view-section > h2[data-i18n$=".title"],
+.content-page > h2[data-i18n$=".title"] {
+  font-size: var(--text-section);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
 h3 { font-size: var(--text-body); font-weight: 700; margin-bottom: 6px; }
 
 p { color: var(--ink-3); line-height: 1.7; }
@@ -493,7 +505,8 @@ body.home-view-active {
   margin: 0 auto;
   padding: 32px 24px 64px;
 }
-.content-page > h1 { margin-bottom: 4px; }
+.content-page > h1,
+.content-page > h2[data-i18n$=".title"] { margin-bottom: 4px; }
 .content-page > p:first-of-type { color: var(--ink-3); margin-bottom: 24px; }
 
 /* ----------------------------------------------------------
@@ -5091,6 +5104,47 @@ html.dark .mission-disagree-box {
 .wtv-ok      { background: #B8DCE5; color: #07424F; }
 .wtv-avoid   { background: #C25450; }
 
+/* Limited service — dims the cell + small diagonal stripe overlay.
+   Orthogonal to the perfect/great/ok/avoid tag: an island can be
+   "Great in March" AND have limited service (shoulder season). */
+.wtv-cell.wtv-limited {
+  position: relative;
+  opacity: 0.55;
+}
+.wtv-cell.wtv-limited::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    transparent 3px,
+    rgba(255,255,255,0.20) 3px,
+    rgba(255,255,255,0.20) 4px
+  );
+  pointer-events: none;
+}
+.wtv-limited-note {
+  margin-top: 6px;
+  font-family: var(--sans);
+  font-size: var(--text-small);
+  color: var(--ink-3);
+  line-height: 1.5;
+}
+.wtv-limited-note strong {
+  color: var(--ink-2);
+  font-weight: 700;
+  margin-right: 4px;
+}
+.wtv-v-limited-badge {
+  display: inline-block;
+  width: 14px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--ink-3);
+  margin-right: 4px;
+}
+
 .wtv-legend {
   display: flex;
   flex-wrap: wrap;
@@ -5127,6 +5181,9 @@ html.dark .wtv-ok { background: #6FA9B8; color: #042631; }
    island links even though they're not part of the visual UI. Standard
    sr-only / visually-hidden pattern; do not change without checking that
    the block is still discoverable in the rendered DOM. */
+/* Aliases — .sr-only is the conventional name (Tailwind/Bootstrap),
+   .visually-hidden is the more semantic name. Same rules. */
+.sr-only,
 .visually-hidden {
   position: absolute;
   width: 1px;

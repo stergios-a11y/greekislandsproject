@@ -10,68 +10,74 @@
   "intro": "Mykonos is the most expensive and most hedonistic island in Greece — come for the nightlife, the beach clubs, the fashion and the extraordinary people-watching. But don't overlook the genuinely beautiful Cycladic architecture of Mykonos Town (Chora), the quiet inland village of Ano Mera, and above all don't miss Delos — the uninhabited sacred island 30 minutes away by boat, with some of the finest ancient ruins in the Aegean. The south-coast party beaches get all the press, but the real magic is in quieter spots like Kalo Livadi or the wild, road's-end beach of Fokos. <strong>Where to stay:</strong> For luxury near Chora, <a href=\"https://www.booking.com/hotel/gr/belvedere-mykonos.html\" target=\"_blank\" rel=\"noopener noreferrer\">Belvedere Mykonos</a> is a short walk from Little Venice with a pool and Matsuhisa restaurant. For the beach scene, <a href=\"https://www.booking.com/hotel/gr/nomad-mykonos.html\" target=\"_blank\" rel=\"noopener noreferrer\">Nomad Mykonos</a> on Kalo Livadi is a Small Luxury Hotels member.",
   "intro_el": "Η Μύκονος είναι το πιο ακριβό και πιο ηδονιστικό νησί της Ελλάδας — έλα για τη νυχτερινή ζωή, τα beach clubs, τη μόδα και το εξαιρετικό people-watching. Αλλά μην προσπεράσεις τη γνήσια όμορφη κυκλαδίτικη αρχιτεκτονική της Χώρας, το ήσυχο εσωτερικό χωριό της Άνω Μεράς, και πάνω απ'όλα μη χάσεις τη Δήλο — το ακατοίκητο ιερό νησί 30 λεπτά μακριά με σκάφος, με μερικά από τα ωραιότερα αρχαία ερείπια του Αιγαίου. Οι νότιες party beaches τραβούν όλη τη δημοσιότητα, αλλά η πραγματική μαγεία είναι σε πιο ήσυχα μέρη όπως το Καλό Λιβάδι ή η άγρια, απομακρυσμένη παραλία του Φωκού. <strong>Πού να μείνεις:</strong> Για πολυτέλεια κοντά στη Χώρα, το <a href=\"https://www.booking.com/hotel/gr/belvedere-mykonos.html\" target=\"_blank\" rel=\"noopener noreferrer\">Belvedere Mykonos</a> είναι λίγα λεπτά από τη Μικρή Βενετία, με πισίνα και εστιατόριο Matsuhisa. Για παραλιακή εμπειρία, το <a href=\"https://www.booking.com/hotel/gr/nomad-mykonos.html\" target=\"_blank\" rel=\"noopener noreferrer\">Nomad Mykonos</a> στο Καλό Λιβάδι (μέλος Small Luxury Hotels).",
   "when_to_visit": {
-    "summary": "June and September are when Mykonos is actually pleasant. July-August is just an expensive Las Vegas with worse beaches — go only if you want to be in the scene. May has the parties starting and the prices low; October is melancholy and beautiful but everything's closing.",
-    "summary_el": "Ιούνιος και Σεπτέμβρης είναι όταν η Μύκονος είναι όντως ευχάριστη. Ιούλιος-Αύγουστος είναι ένα ακριβό Λας Βέγκας με χειρότερες παραλίες — πήγαινε μόνο αν θες να είσαι στη σκηνή. Μάιος έχει τα πάρτι να ξεκινούν και τις τιμές χαμηλά· Οκτώβρης είναι μελαγχολικός και όμορφος αλλά όλα κλείνουν.",
+    "summary": "July-September is what Mykonos is for — the scene, the beach clubs, the people-watching. June or late September give you peak Mykonos with marginally fewer crowds. May and October still work if you want the atmosphere without the chaos. November through April, most of the island is shuttered — only come then if you specifically want an empty Cycladic island.",
+    "summary_el": "Ιούλιος-Σεπτέμβριος είναι ο λόγος που υπάρχει η Mykonos — η σκηνή, τα beach clubs, το people-watching. Ο Ιούνιος ή το τέλος Σεπτεμβρίου σου δίνουν την κορύφωση με ελάχιστα λιγότερο πλήθος. Μάιος και Οκτώβριος λειτουργούν αν θες την ατμόσφαιρα χωρίς το χάος. Νοέμβριος με Απρίλιο, το μεγαλύτερο μέρος του νησιού είναι κλειστό — έλα τότε μόνο αν θες συγκεκριμένα ένα άδειο κυκλαδίτικο νησί.",
     "months": [
       {
         "tag": "avoid",
-        "why": "Off-season, windy",
-        "why_el": "Μόνο ντόπιοι, ανέμοι"
+        "why": "Off-season, windy, almost everything closed",
+        "why_el": "Εκτός σεζόν, ανέμοι, σχεδόν τα πάντα κλειστά",
+        "limited": true
       },
       {
         "tag": "avoid",
-        "why": "Cold",
-        "why_el": "Σκυθρωπό, κρύο"
+        "why": "Cold, closed",
+        "why_el": "Κρύο, κλειστά",
+        "limited": true
+      },
+      {
+        "tag": "avoid",
+        "why": "Still closed — most clubs, beach bars and restaurants reopen in May",
+        "why_el": "Ακόμα κλειστά — τα περισσότερα κλαμπ, beach bars και εστιατόρια ανοίγουν τον Μάιο",
+        "limited": true
       },
       {
         "tag": "ok",
-        "why": "Off-season",
-        "why_el": "Άδειο, beach clubs"
+        "why": "Easter opening if it falls late — otherwise scene still ramping",
+        "why_el": "Πάσχα αν πέφτει αργά — αλλιώς η σκηνή ακόμα ζεσταίνει",
+        "limited": true
       },
       {
         "tag": "great",
-        "why": "Easter, can be",
-        "why_el": "Πάσχα, μαγικό"
+        "why": "Season properly opens, parties start, weather warm but not yet brutal",
+        "why_el": "Η σεζόν ανοίγει κανονικά, αρχίζουν τα πάρτι, ζεστός καιρός αλλά όχι ακόμα ανυπόφορος"
       },
       {
         "tag": "great",
-        "why": "Season opens",
-        "why_el": "Σεζόν αρχίζει"
+        "why": "Peak Mykonos with breathing room — full scene, fewer crowds than August",
+        "why_el": "Mykonos σε καλά της — η σκηνή στο 100%, λιγότερο πλήθος από Αύγουστο"
       },
       {
         "tag": "perfect",
-        "why": "Parties start",
-        "why_el": "Ζεστά, πάρτι"
-      },
-      {
-        "tag": "avoid",
-        "why": "Influencer chaos",
-        "why_el": "Influencer χάος"
-      },
-      {
-        "tag": "avoid",
-        "why": "Peak mayhem",
-        "why_el": "Κορύφωση, μελτέμι"
+        "why": "Peak season — beach clubs at maximum, the scene is the point",
+        "why_el": "Κορύφωση — beach clubs στο μέγιστο, η σκηνή είναι ο λόγος που έρχεσαι"
       },
       {
         "tag": "perfect",
-        "why": "Prices drop",
-        "why_el": "Πέφτουν τιμές"
+        "why": "Peak of peak — most expensive, most crowded, most Mykonos. Book months ahead",
+        "why_el": "Κορύφωση της κορύφωσης — πιο ακριβά, πιο γεμάτα, πιο Mykonos. Κράτησε μήνες πριν"
+      },
+      {
+        "tag": "perfect",
+        "why": "The sweet spot — full scene, prices easing, sea at warmest",
+        "why_el": "Το χρυσό σημείο — πλήρης σκηνή, χαλαρώνουν οι τιμές, η θάλασσα στο μέγιστο"
       },
       {
         "tag": "great",
-        "why": "Last swimser",
-        "why_el": "Τελευταία μπάνια"
-      },
-      {
-        "tag": "ok",
-        "why": "Mostly closed",
-        "why_el": "Σχεδόν όλα κλειστά"
+        "why": "Wind-down — scene quieting, weather still warm, prices halve",
+        "why_el": "Σταδιακή κατάβαση — η σκηνή ηρεμεί, ο καιρός ακόμα ζεστός, οι τιμές πέφτουν στο μισό"
       },
       {
         "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Χειμώνας, ελάχιστα"
+        "why": "Most things closed by mid-month — town gets quiet fast",
+        "why_el": "Τα περισσότερα κλείνουν μέχρι μέσα του μήνα — η πόλη αδειάζει γρήγορα",
+        "limited": true
+      },
+      {
+        "tag": "avoid",
+        "why": "Off-season — except brief NYE spike, everything is closed",
+        "why_el": "Εκτός σεζόν — εκτός μικρού ξεσπάσματος Πρωτοχρονιάς, όλα κλειστά",
+        "limited": true
       }
     ]
   },

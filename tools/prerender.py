@@ -240,7 +240,7 @@ WTV_I18N = {
     'en': {
         'title': 'When to Visit',
         'months': ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-        'tags': {'perfect': 'Perfect', 'great': 'Great', 'ok': 'OK', 'avoid': 'Avoid'},
+        'tags': {'perfect': 'Best', 'great': 'Great', 'ok': 'OK', 'avoid': 'Avoid'},
     },
     'el': {
         'title': 'Πότε να Πας',
@@ -252,74 +252,123 @@ WTV_I18N = {
 def build_when_to_visit_html(data, lang='en'):
     """Mirror script.js buildWhenToVisitSection. Empty string if missing.
 
-    Renders an alternating-caption ribbon: 12 ribbon cells in a row, with
-    captions above (odd months: Jan/Mar/May/Jul/Sep/Nov) and below
-    (even months: Feb/Apr/Jun/Aug/Oct/Dec). Each caption spans 2 columns
-    so it has ~100px horizontal room; tick marks (CSS pseudo-elements)
-    point at the specific month each caption describes.
+    Renders the redesigned clean layout: a single-row 12-month colored ribbon,
+    preceded by a highlights summary line ("Best: Jun, Sep · Avoid: Oct-May"),
+    followed by an optional "Limited service: …" line if any months have the
+    `limited: true` flag set.
 
-    Mobile users get a horizontal-scroll wrapper so the ribbon stays a
-    continuous timeline rather than wrapping to two rows.
+    Mobile uses a vertical 12-row list (.wtv-vertical) instead of the ribbon.
     """
     w = data.get('when_to_visit')
     if not w or not isinstance(w.get('months'), list) or len(w['months']) != 12:
         return ''
 
     labels = WTV_I18N[lang]
-    above_caps = []
-    below_caps = []
-    ribbon_cells = []
+    month_abbr = labels['months']  # ['Jan','Feb',…] or ['Ιαν','Φεβ',…]
+    tag_labels = labels['tags']    # {'perfect':'Best',…}
+    limited_label = 'Limited service' if lang == 'en' else 'Περιορισμένη λειτουργία'
 
+    # Ribbon cells — wtv-limited modifier dims the cell visually
+    ribbon_cells = []
     for i, m in enumerate(w['months']):
         tag = (m.get('tag') or 'ok').lower()
         why = pick(m, 'why', lang) or ''
-
-        cap_class = ''
-        if tag == 'perfect':
-            cap_class = ' wtv-cap-peak'
-        elif tag in ('avoid', 'ok'):
-            cap_class = ' wtv-cap-muted'
-
-        if i % 2 == 0:
-            above_caps.append(f'<div class="wtv-cap-above{cap_class}"><span class="wtv-cap-text">{esc(why)}</span></div>')
-        else:
-            below_caps.append(f'<div class="wtv-cap-below{cap_class}"><span class="wtv-cap-text">{esc(why)}</span></div>')
-
+        is_limited = m.get('limited') is True
+        prefix = f'{limited_label} — ' if is_limited else ''
+        cls = f'wtv-cell wtv-{tag}' + (' wtv-limited' if is_limited else '')
         ribbon_cells.append(
-            f'<div class="wtv-cell wtv-{esc(tag)}" title="{esc(why)}">'
-            f'{esc(labels["months"][i])}</div>'
+            f'<div class="{cls}" title="{esc(month_abbr[i])} — {esc(prefix + why)}">'
+            f'{esc(month_abbr[i])}</div>'
         )
+
+    # Group months by tag for the highlights summary
+    tag_groups = {'perfect': [], 'great': [], 'ok': [], 'avoid': []}
+    for i, m in enumerate(w['months']):
+        tag = (m.get('tag') or 'ok').lower()
+        if tag in tag_groups:
+            tag_groups[tag].append(i)
+
+    def fmt_month_list(indices):
+        """Format indices as 'Jun, Sep' or 'Oct-May' if contiguous (handles wrap)."""
+        if not indices:
+            return ''
+        if len(indices) <= 3:
+            return ', '.join(month_abbr[i] for i in indices)
+        sorted_ix = sorted(indices)
+        max_gap = 0
+        gap_start = -1
+        for j in range(len(sorted_ix) - 1):
+            g = sorted_ix[j+1] - sorted_ix[j]
+            if g > max_gap:
+                max_gap = g
+                gap_start = j
+        wrap_gap = (12 - sorted_ix[-1] - 1) + sorted_ix[0] + 1
+        if max_gap == 1 and wrap_gap > 1:
+            return f'{month_abbr[sorted_ix[0]]}–{month_abbr[sorted_ix[-1]]}'
+        if max_gap > 1 and wrap_gap == 1 and len(sorted_ix) == 12 - (max_gap - 1):
+            first = sorted_ix[gap_start + 1]
+            last = sorted_ix[gap_start]
+            return f'{month_abbr[first]}–{month_abbr[last]}'
+        return ', '.join(month_abbr[i] for i in sorted_ix)
+
+    highlight_order = ['perfect', 'great', 'ok', 'avoid']
+    highlight_items = []
+    for t in highlight_order:
+        if tag_groups[t]:
+            highlight_items.append(
+                f'<span class="wtv-hl-item wtv-hl-{t}">'
+                f'<strong>{esc(tag_labels[t])}:</strong> {esc(fmt_month_list(tag_groups[t]))}'
+                f'</span>'
+            )
+    highlight_html = '<span class="wtv-hl-sep">·</span>'.join(highlight_items)
+
+    # Separate "Limited service: Jan, Feb…" line
+    limited_indices = [i for i, m in enumerate(w['months']) if m.get('limited') is True]
+    limited_line = (
+        f'<div class="wtv-limited-note"><strong>{esc(limited_label)}:</strong> '
+        f'{esc(fmt_month_list(limited_indices))}</div>'
+        if limited_indices else ''
+    )
+    highlights_bar = (
+        f'<div class="wtv-highlights">{highlight_html}</div>{limited_line}'
+        if highlight_html else limited_line
+    )
 
     summary = pick(w, 'summary', lang) or ''
     summary_html = f'<p class="wtv-summary">{safe_html(summary)}</p>' if summary else ''
 
     tags_present = {(m.get('tag') or 'ok').lower() for m in w['months']}
-    legend_order = ['perfect', 'great', 'ok', 'avoid']
     legend_items = ''.join(
-        f'<span class="wtv-legend-item"><span class="wtv-legend-swatch wtv-{t}"></span>{esc(labels["tags"][t])}</span>'
-        for t in legend_order if t in tags_present
+        f'<span class="wtv-legend-item"><span class="wtv-legend-swatch wtv-{t}"></span>{esc(tag_labels[t])}</span>'
+        for t in highlight_order if t in tags_present
     )
 
-    ribbon_inner = ''.join(above_caps) + ''.join(ribbon_cells) + ''.join(below_caps)
-
-    # Vertical layout for mobile — 12 rows, one per month
+    # Vertical mobile list
     vertical_rows = []
     for i, m in enumerate(w['months']):
         tag = (m.get('tag') or 'ok').lower()
         why = pick(m, 'why', lang) or ''
+        is_limited = m.get('limited') is True
+        badge = (
+            f'<span class="wtv-v-limited-badge" title="{esc(limited_label)}">·</span>'
+            if is_limited else ''
+        )
+        cls = f'wtv-vrow wtv-v-{tag}' + (' wtv-v-limited' if is_limited else '')
         vertical_rows.append(
-            f'<div class="wtv-vrow wtv-v-{esc(tag)}">'
-            f'<div class="wtv-vmonth">{esc(labels["months"][i])}</div>'
-            f'<div class="wtv-vbar wtv-{esc(tag)}" title="{esc(labels["tags"].get(tag, ""))}"></div>'
-            f'<div class="wtv-vwhy">{esc(why)}</div>'
+            f'<div class="{cls}">'
+            f'<div class="wtv-vmonth">{esc(month_abbr[i])}</div>'
+            f'<div class="wtv-vbar wtv-{tag}" title="{esc(tag_labels.get(tag, ""))}"></div>'
+            f'<div class="wtv-vwhy">{badge}{esc(why)}</div>'
             f'</div>'
         )
     vertical_inner = ''.join(vertical_rows)
+    ribbon_inner = ''.join(ribbon_cells)
 
     return (
         f'<details class="seo-wtv wtv-section" open>'
         f'<summary class="wtv-title">{esc(labels["title"])}</summary>'
         f'{summary_html}'
+        f'{highlights_bar}'
         f'<div class="wtv-ribbon-wrap"><div class="wtv-ribbon">{ribbon_inner}</div></div>'
         f'<div class="wtv-vertical">{vertical_inner}</div>'
         f'<div class="wtv-legend">{legend_items}</div>'

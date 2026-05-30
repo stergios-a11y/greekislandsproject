@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-05-27';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-05-30';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -1590,11 +1590,19 @@ function buildWhenToVisitSection(data) {
   // Build the ribbon: 12 colored cells, one per month. The `title` attribute
   // gives native browser tooltips on hover (desktop). Mobile users get the
   // vertical list (.wtv-vertical) instead, where labels are inline.
+  // `limited: true` on a month adds the .wtv-limited modifier — visually
+  // dims the cell and shows a "Limited service" prefix in the tooltip.
+  const limitedLabel = lang === 'el'
+    ? 'Περιορισμένη λειτουργία'
+    : 'Limited service';
   const ribbonCells = w.months.map((m, i) => {
     const tag = (m.tag || 'ok').toLowerCase();
     const why = pickLang(m, 'why') || '';
-    const safeWhy = why.replace(/"/g, '&quot;');
-    return `<div class="wtv-cell wtv-${tag}" title="${monthNames[i]} — ${safeWhy}">${monthNames[i]}</div>`;
+    const isLimited = m.limited === true;
+    const prefix = isLimited ? `${limitedLabel} — ` : '';
+    const safeWhy = (prefix + why).replace(/"/g, '&quot;');
+    const cls = `wtv-cell wtv-${tag}${isLimited ? ' wtv-limited' : ''}`;
+    return `<div class="${cls}" title="${monthNames[i]} — ${safeWhy}">${monthNames[i]}</div>`;
   }).join('');
 
   // "Highlights" line above the ribbon. Groups months by tag and renders
@@ -1643,9 +1651,20 @@ function buildWhenToVisitSection(data) {
     .filter(t => tagGroups[t].length)
     .map(t => `<span class="wtv-hl-item wtv-hl-${t}"><strong>${tagLabels[t]}:</strong> ${fmtMonthList(tagGroups[t])}</span>`)
     .join('<span class="wtv-hl-sep">·</span>');
-  const highlightsBar = highlightHtml
-    ? `<div class="wtv-highlights">${highlightHtml}</div>`
+
+  // Separate line for months with limited services — orthogonal to the
+  // good/bad tag. An island can be a "Great" month AND have limited
+  // service (shoulder season) OR can be "Avoid" but fully open (peak
+  // crowds in August). This line is shown only if any month is flagged.
+  const limitedIndices = [];
+  w.months.forEach((m, i) => { if (m.limited === true) limitedIndices.push(i); });
+  const limitedLine = limitedIndices.length
+    ? `<div class="wtv-limited-note"><strong>${limitedLabel}:</strong> ${fmtMonthList(limitedIndices)}</div>`
     : '';
+
+  const highlightsBar = highlightHtml
+    ? `<div class="wtv-highlights">${highlightHtml}</div>${limitedLine}`
+    : limitedLine;
 
   const summary = pickLang(w, 'summary') || '';
   const summaryHtml = summary ? `<p class="wtv-summary">${summary}</p>` : '';
@@ -1656,14 +1675,20 @@ function buildWhenToVisitSection(data) {
     .map(t => `<span class="wtv-legend-item"><span class="wtv-legend-swatch wtv-${t}"></span>${tagLabels[t]}</span>`)
     .join('');
 
-  // Mobile vertical list — 12 rows, one per month, with tag swatch + caption
+  // Mobile vertical list — 12 rows, one per month, with tag swatch + caption.
+  // Limited months get a "·" indicator next to the why text.
   const verticalRows = w.months.map((m, i) => {
     const tag = (m.tag || 'ok').toLowerCase();
     const why = pickLang(m, 'why') || '';
-    return `<div class="wtv-vrow wtv-v-${tag}">
+    const isLimited = m.limited === true;
+    const limitedBadge = isLimited
+      ? `<span class="wtv-v-limited-badge" title="${limitedLabel}">·</span>`
+      : '';
+    const cls = `wtv-vrow wtv-v-${tag}${isLimited ? ' wtv-v-limited' : ''}`;
+    return `<div class="${cls}">
       <div class="wtv-vmonth">${monthNames[i]}</div>
       <div class="wtv-vbar wtv-${tag}" title="${tagLabels[tag] || ''}"></div>
-      <div class="wtv-vwhy">${why}</div>
+      <div class="wtv-vwhy">${limitedBadge}${why}</div>
     </div>`;
   }).join('');
 
