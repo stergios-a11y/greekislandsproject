@@ -16,22 +16,26 @@
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Εκτός σεζόν"
+        "why_el": "Εκτός σεζόν",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Εκτός σεζόν"
+        "why_el": "Εκτός σεζόν",
+        "limited": true
       },
       {
         "tag": "ok",
         "why": "Awakening",
-        "why_el": "Αρχίζει η σεζόν"
+        "why_el": "Αρχίζει η σεζόν",
+        "limited": true
       },
       {
         "tag": "great",
         "why": "Easter, local feasts",
-        "why_el": "Πάσχα — τοπικά"
+        "why_el": "Πάσχα — τοπικά",
+        "limited": true
       },
       {
         "tag": "great",
@@ -66,12 +70,14 @@
       {
         "tag": "avoid",
         "why": "Slowing down",
-        "why_el": "Κλείνουν ταβέρνες"
+        "why_el": "Κλείνουν ταβέρνες",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Σκελετός υπηρεσιών"
+        "why_el": "Σκελετός υπηρεσιών",
+        "limited": true
       }
     ]
   },

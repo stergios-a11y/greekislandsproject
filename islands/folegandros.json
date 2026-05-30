@@ -10,22 +10,26 @@
       {
         "tag": "avoid",
         "why": "Off-season, rough",
-        "why_el": "Εκτός σεζόν, ταραγμένη"
+        "why_el": "Εκτός σεζόν, ταραγμένη",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Μόνο ντόπιοι"
+        "why_el": "Μόνο ντόπιοι",
+        "limited": true
       },
       {
         "tag": "ok",
         "why": "Hiking, sea cold",
-        "why_el": "Μόνο πεζοπορία"
+        "why_el": "Μόνο πεζοπορία",
+        "limited": true
       },
       {
         "tag": "great",
         "why": "Wildflowers",
-        "why_el": "Αγριολούλουδα, Πάσχα"
+        "why_el": "Αγριολούλουδα, Πάσχα",
+        "limited": true
       },
       {
         "tag": "perfect",
@@ -60,12 +64,14 @@
       {
         "tag": "ok",
         "why": "Closing",
-        "why_el": "Σχεδόν όλα κλείνουν"
+        "why_el": "Σχεδόν όλα κλείνουν",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Σχεδόν όλα κλειστά"
+        "why_el": "Σχεδόν όλα κλειστά",
+        "limited": true
       }
     ]
   },

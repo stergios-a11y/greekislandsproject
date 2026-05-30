@@ -16,22 +16,26 @@
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Σε χειμερία νάρκη"
+        "why_el": "Σε χειμερία νάρκη",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Εκτός σεζόν"
+        "why_el": "Εκτός σεζόν",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Few ferries",
-        "why_el": "Λίγα πλοία"
+        "why_el": "Λίγα πλοία",
+        "limited": true
       },
       {
         "tag": "ok",
         "why": "Easter quiet",
-        "why_el": "Πάσχα ήσυχα,"
+        "why_el": "Πάσχα ήσυχα,",
+        "limited": true
       },
       {
         "tag": "ok",
@@ -66,12 +70,14 @@
       {
         "tag": "avoid",
         "why": "Few ferries",
-        "why_el": "Λίγα πλοία"
+        "why_el": "Λίγα πλοία",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Μόνο ντόπιοι"
+        "why_el": "Μόνο ντόπιοι",
+        "limited": true
       }
     ]
   },
@@ -144,7 +150,7 @@
             "photo_credit": {
               "artist": "Luca Aless",
               "license": "CC0",
-              "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+              "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
               "page_url": "https://commons.wikimedia.org/wiki/File:Anafi_monolithos_e_roukounas_1.jpg",
               "source": "Wikimedia Commons"
             },
@@ -254,7 +260,7 @@
       "photo_credit": {
         "artist": "Luca Aless",
         "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "page_url": "https://commons.wikimedia.org/wiki/File:Anafi_monolithos_e_roukounas_1.jpg",
         "source": "Wikimedia Commons"
       }

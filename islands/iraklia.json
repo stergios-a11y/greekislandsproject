@@ -10,22 +10,26 @@
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Σχεδόν όλα κλειστά"
+        "why_el": "Σχεδόν όλα κλειστά",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Σκελετός υπηρεσιών"
+        "why_el": "Σκελετός υπηρεσιών",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Few ferries",
-        "why_el": "Λίγα πλοία"
+        "why_el": "Λίγα πλοία",
+        "limited": true
       },
       {
         "tag": "ok",
         "why": "Awakening",
-        "why_el": "Ήσυχα, πρώτες αφίξεις"
+        "why_el": "Ήσυχα, πρώτες αφίξεις",
+        "limited": true
       },
       {
         "tag": "great",
@@ -60,12 +64,14 @@
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Μόνο ντόπιοι"
+        "why_el": "Μόνο ντόπιοι",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season, thin",
-        "why_el": "Χειμώνας, ελάχιστα"
+        "why_el": "Χειμώνας, ελάχιστα",
+        "limited": true
       }
     ]
   },

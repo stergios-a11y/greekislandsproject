@@ -16,22 +16,26 @@
       {
         "tag": "avoid",
         "why": "Few ferries",
-        "why_el": "Λίγα πλοία"
+        "why_el": "Λίγα πλοία",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Σκελετός υπηρεσιών"
+        "why_el": "Σκελετός υπηρεσιών",
+        "limited": true
       },
       {
         "tag": "ok",
         "why": "Awakening, quiet",
-        "why_el": "Ζωντανεύει σιγά σιγά"
+        "why_el": "Ζωντανεύει σιγά σιγά",
+        "limited": true
       },
       {
         "tag": "great",
         "why": "Easter, mild",
-        "why_el": "Πάσχα, ήπιο και"
+        "why_el": "Πάσχα, ήπιο και",
+        "limited": true
       },
       {
         "tag": "great",
@@ -66,12 +70,14 @@
       {
         "tag": "avoid",
         "why": "Winding down",
-        "why_el": "Τελειώνει η σεζόν"
+        "why_el": "Τελειώνει η σεζόν",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Σκελετός υπηρεσιών"
+        "why_el": "Σκελετός υπηρεσιών",
+        "limited": true
       }
     ]
   },

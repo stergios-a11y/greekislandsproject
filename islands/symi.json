@@ -10,17 +10,20 @@
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Εκτός σεζόν, λίγα"
+        "why_el": "Εκτός σεζόν, λίγα",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Σε χειμερία νάρκη"
+        "why_el": "Σε χειμερία νάρκη",
+        "limited": true
       },
       {
         "tag": "ok",
         "why": "Awakening, calm",
-        "why_el": "Αρχίζει η σεζόν"
+        "why_el": "Αρχίζει η σεζόν",
+        "limited": true
       },
       {
         "tag": "great",
@@ -65,7 +68,8 @@
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Σε χειμερία νάρκη"
+        "why_el": "Σε χειμερία νάρκη",
+        "limited": true
       }
     ]
   },
@@ -114,7 +118,7 @@
             "photo_credit": {
               "artist": "Jebulon",
               "license": "CC0",
-              "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+              "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
               "page_url": "https://commons.wikimedia.org/wiki/File:Nautical_museum_Symi.jpg",
               "source": "Wikimedia Commons"
             }

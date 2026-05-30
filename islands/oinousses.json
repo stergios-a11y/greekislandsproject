@@ -10,22 +10,26 @@
       {
         "tag": "avoid",
         "why": "Quiet, fewer ferries",
-        "why_el": "Λίγα πλοία"
+        "why_el": "Λίγα πλοία",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Εκτός σεζόν"
+        "why_el": "Εκτός σεζόν",
+        "limited": true
       },
       {
         "tag": "ok",
         "why": "Awakening, museum",
-        "why_el": "Ζωντανεύει"
+        "why_el": "Ζωντανεύει",
+        "limited": true
       },
       {
         "tag": "great",
         "why": "Easter, mild",
-        "why_el": "Πάσχα, ήπιο και"
+        "why_el": "Πάσχα, ήπιο και",
+        "limited": true
       },
       {
         "tag": "great",
@@ -60,12 +64,14 @@
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Μόνο ντόπιοι"
+        "why_el": "Μόνο ντόπιοι",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season, thin",
-        "why_el": "Εκτός σεζόν"
+        "why_el": "Εκτός σεζόν",
+        "limited": true
       }
     ]
   },
@@ -95,7 +101,7 @@
             "photo_credit": {
               "artist": "NikoSilver at English Wikipedia",
               "license": "CC BY-SA 3.0",
-              "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+              "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
               "page_url": "https://commons.wikimedia.org/wiki/File:Oinousses_main_settlement.JPG",
               "source": "Wikimedia Commons"
             }

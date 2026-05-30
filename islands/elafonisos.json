@@ -10,17 +10,20 @@
       {
         "tag": "avoid",
         "why": "Off-season,",
-        "why_el": "Σε χειμερία νάρκη"
+        "why_el": "Σε χειμερία νάρκη",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Few ferries",
-        "why_el": "Λίγα πλοία"
+        "why_el": "Λίγα πλοία",
+        "limited": true
       },
       {
         "tag": "ok",
         "why": "Awakening, sea cold",
-        "why_el": "Πρώτες αφίξεις"
+        "why_el": "Πρώτες αφίξεις",
+        "limited": true
       },
       {
         "tag": "great",
@@ -60,12 +63,14 @@
       {
         "tag": "avoid",
         "why": "Season ending",
-        "why_el": "Κλείνουν σιγά"
+        "why_el": "Κλείνουν σιγά",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Σχεδόν όλα κλειστά"
+        "why_el": "Σχεδόν όλα κλειστά",
+        "limited": true
       }
     ]
   },

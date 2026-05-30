@@ -16,22 +16,26 @@
       {
         "tag": "avoid",
         "why": "Wintering",
-        "why_el": "Μόνο ντόπιοι"
+        "why_el": "Μόνο ντόπιοι",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Εκτός σεζόν"
+        "why_el": "Εκτός σεζόν",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Λίγα ανοιχτά"
+        "why_el": "Λίγα ανοιχτά",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Σε χειμερία νάρκη"
+        "why_el": "Σε χειμερία νάρκη",
+        "limited": true
       },
       {
         "tag": "ok",
@@ -66,12 +70,14 @@
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Λίγα πλοία"
+        "why_el": "Λίγα πλοία",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Εκτός σεζόν"
+        "why_el": "Εκτός σεζόν",
+        "limited": true
       }
     ]
   },
@@ -97,7 +103,7 @@
             "photo_credit": {
               "artist": "HHHoffmann (Hans-Heinrich Hoffmann) at de.wikipedia",
               "license": "CC BY-SA 3.0",
-              "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+              "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
               "page_url": "https://commons.wikimedia.org/wiki/File:P9147967_Agathonisi.jpg",
               "source": "Wikimedia Commons"
             }
@@ -124,7 +130,7 @@
             "photo_credit": {
               "artist": "HHHoffmann (Hans-Heinrich Hoffmann) at de.wikipedia",
               "license": "CC BY-SA 3.0",
-              "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+              "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
               "page_url": "https://commons.wikimedia.org/wiki/File:P9147967_Agathonisi.jpg",
               "source": "Wikimedia Commons"
             }

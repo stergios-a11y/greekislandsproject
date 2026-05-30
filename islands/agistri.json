@@ -16,17 +16,20 @@
       {
         "tag": "ok",
         "why": "Mild, quiet",
-        "why_el": "Ήπιο, κλειστά"
+        "why_el": "Ήπιο, κλειστά",
+        "limited": true
       },
       {
         "tag": "ok",
         "why": "Cold, quiet",
-        "why_el": "Κρύο, ήσυχα"
+        "why_el": "Κρύο, ήσυχα",
+        "limited": true
       },
       {
         "tag": "great",
         "why": "Pines, mild",
-        "why_el": "Πεύκα πράσινα, ήπιο"
+        "why_el": "Πεύκα πράσινα, ήπιο",
+        "limited": true
       },
       {
         "tag": "great",
@@ -71,7 +74,8 @@
       {
         "tag": "ok",
         "why": "Quiet, locals",
-        "why_el": "Ήσυχα"
+        "why_el": "Ήσυχα",
+        "limited": true
       }
     ]
   },

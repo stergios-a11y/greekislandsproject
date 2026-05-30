@@ -10,22 +10,26 @@
       {
         "tag": "avoid",
         "why": "Wintering",
-        "why_el": "Χειμερία νάρκη"
+        "why_el": "Χειμερία νάρκη",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Μόνο ντόπιοι"
+        "why_el": "Μόνο ντόπιοι",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Μόνο ντόπιοι"
+        "why_el": "Μόνο ντόπιοι",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Closed",
-        "why_el": "Σχεδόν κλειστός"
+        "why_el": "Σχεδόν κλειστός",
+        "limited": true
       },
       {
         "tag": "ok",
@@ -60,12 +64,14 @@
       {
         "tag": "avoid",
         "why": "Few ferries",
-        "why_el": "Σχεδόν όλα κλειστά"
+        "why_el": "Σχεδόν όλα κλειστά",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Σε χειμερία νάρκη"
+        "why_el": "Σε χειμερία νάρκη",
+        "limited": true
       }
     ]
   },

@@ -10,17 +10,20 @@
       {
         "tag": "ok",
         "why": "Mild, off-season",
-        "why_el": "Ήρεμα, ήπιο"
+        "why_el": "Ήρεμα, ήπιο",
+        "limited": true
       },
       {
         "tag": "great",
         "why": "Apokries, Geros",
-        "why_el": "Απόκριες, Γέρος"
+        "why_el": "Απόκριες, Γέρος",
+        "limited": true
       },
       {
         "tag": "great",
         "why": "Apokries",
-        "why_el": "Απόκριες"
+        "why_el": "Απόκριες",
+        "limited": true
       },
       {
         "tag": "great",
@@ -65,7 +68,8 @@
       {
         "tag": "ok",
         "why": "Quiet, mild",
-        "why_el": "Ησυχία, ήπιος καιρός"
+        "why_el": "Ησυχία, ήπιος καιρός",
+        "limited": true
       }
     ]
   },

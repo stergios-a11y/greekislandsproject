@@ -10,17 +10,20 @@
       {
         "tag": "avoid",
         "why": "Off-season, rain",
-        "why_el": "Εκτός σεζόν, βροχές"
+        "why_el": "Εκτός σεζόν, βροχές",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Εκτός σεζόν"
+        "why_el": "Εκτός σεζόν",
+        "limited": true
       },
       {
         "tag": "ok",
         "why": "Forests green",
-        "why_el": "Δάση πράσινα"
+        "why_el": "Δάση πράσινα",
+        "limited": true
       },
       {
         "tag": "great",
@@ -65,7 +68,8 @@
       {
         "tag": "avoid",
         "why": "Few ferries",
-        "why_el": "Λίγα πλοία"
+        "why_el": "Λίγα πλοία",
+        "limited": true
       }
     ]
   },

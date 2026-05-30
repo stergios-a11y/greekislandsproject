@@ -16,17 +16,20 @@
       {
         "tag": "avoid",
         "why": "Off-season, rainy",
-        "why_el": "Εκτός σεζόν, βροχές"
+        "why_el": "Εκτός σεζόν, βροχές",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Cold, quiet",
-        "why_el": "Κρύο, ήσυχα"
+        "why_el": "Κρύο, ήσυχα",
+        "limited": true
       },
       {
         "tag": "ok",
         "why": "Mild, no swimming",
-        "why_el": "Ήπιο, κρύα θάλασσα"
+        "why_el": "Ήπιο, κρύα θάλασσα",
+        "limited": true
       },
       {
         "tag": "great",
@@ -66,12 +69,14 @@
       {
         "tag": "ok",
         "why": "Closing down",
-        "why_el": "Κλείνουν τα μαγαζιά"
+        "why_el": "Κλείνουν τα μαγαζιά",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Λίγα πλοία"
+        "why_el": "Λίγα πλοία",
+        "limited": true
       }
     ]
   },
@@ -190,7 +195,7 @@
             "photo_credit": {
               "artist": "Wicki2009 at English Wikipedia",
               "license": "CC BY-SA 3.0",
-              "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+              "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
               "page_url": "https://commons.wikimedia.org/wiki/File:Despotiko.jpg",
               "source": "Wikimedia Commons"
             },

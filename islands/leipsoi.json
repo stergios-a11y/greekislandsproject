@@ -16,22 +16,26 @@
       {
         "tag": "avoid",
         "why": "Few ferries",
-        "why_el": "Εκτός σεζόν"
+        "why_el": "Εκτός σεζόν",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Σχεδόν όλα κλειστά"
+        "why_el": "Σχεδόν όλα κλειστά",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Εκτός σεζόν"
+        "why_el": "Εκτός σεζόν",
+        "limited": true
       },
       {
         "tag": "ok",
         "why": "Easter quiet",
-        "why_el": "Ήσυχο Πάσχα"
+        "why_el": "Ήσυχο Πάσχα",
+        "limited": true
       },
       {
         "tag": "great",
@@ -66,12 +70,14 @@
       {
         "tag": "avoid",
         "why": "Few ferries",
-        "why_el": "Σε χειμερία νάρκη"
+        "why_el": "Σε χειμερία νάρκη",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Σε χειμερία νάρκη"
+        "why_el": "Σε χειμερία νάρκη",
+        "limited": true
       }
     ]
   },

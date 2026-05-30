@@ -16,22 +16,26 @@
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Σχεδόν όλα κλειστά"
+        "why_el": "Σχεδόν όλα κλειστά",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Σε χειμερία νάρκη"
+        "why_el": "Σε χειμερία νάρκη",
+        "limited": true
       },
       {
         "tag": "ok",
         "why": "Quiet, hiking",
-        "why_el": "Ήσυχα, πεζοπορία"
+        "why_el": "Ήσυχα, πεζοπορία",
+        "limited": true
       },
       {
         "tag": "great",
         "why": "Easter, walks",
-        "why_el": "Πάσχα, μονοπάτια"
+        "why_el": "Πάσχα, μονοπάτια",
+        "limited": true
       },
       {
         "tag": "great",
@@ -66,12 +70,14 @@
       {
         "tag": "avoid",
         "why": "Off-season",
-        "why_el": "Εκτός σεζόν"
+        "why_el": "Εκτός σεζόν",
+        "limited": true
       },
       {
         "tag": "avoid",
         "why": "Off-season, thin",
-        "why_el": "Χειμώνας, ελάχιστα"
+        "why_el": "Χειμώνας, ελάχιστα",
+        "limited": true
       }
     ]
   },
