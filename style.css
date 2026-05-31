@@ -622,6 +622,39 @@ body.home-view-active {
 }
 #compare-radar-chart { width: 100% !important; height: 100% !important; }
 .compare-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+/* Compare-tool banner — appears above the cards when the selected pair
+   has a dedicated /compare/{a}-vs-{b}/ static page. Pulls the user toward
+   the deeper editorial content; cleanly removed when selection changes. */
+.compare-vs-banner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px;
+  padding: 12px 18px;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, rgba(11,143,172,0.08), rgba(11,143,172,0.04));
+  border: 1px solid rgba(11,143,172,0.2);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--ink-1);
+  font-size: var(--text-small);
+  transition: background 0.15s;
+}
+.compare-vs-banner:hover {
+  background: linear-gradient(90deg, rgba(11,143,172,0.14), rgba(11,143,172,0.07));
+}
+.compare-vs-banner-text { line-height: 1.4; }
+.compare-vs-banner-text strong { color: var(--aegean-dark); }
+.compare-vs-banner-cta {
+  flex-shrink: 0;
+  background: var(--aegean); color: #fff;
+  padding: 6px 14px; border-radius: 6px;
+  font-weight: 600; font-size: var(--text-tiny);
+  white-space: nowrap;
+}
+html.dark .compare-vs-banner {
+  background: linear-gradient(90deg, rgba(11,143,172,0.16), rgba(11,143,172,0.08));
+  border-color: rgba(11,143,172,0.35);
+  color: #ddd;
+}
 .compare-card {
   background: var(--white);
   border: 1px solid var(--border);

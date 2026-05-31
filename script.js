@@ -126,6 +126,36 @@ let itinBeachMarkers = [];
 const SCORE_DIMS = ['beach', 'hist', 'night', 'access', 'afford', 'car_need'];
 // For the compare page we exclude car_need from the chart/histogram — it's shown below as a label
 const COMPARE_DIMS = ['beach', 'hist', 'night', 'access', 'afford'];
+
+// VS_PAGES — the set of pairs that have a dedicated static comparison page
+// at /compare/{a}-vs-{b}/. Used by renderCompareCards to surface a banner
+// when the user has picked exactly the two islands in a known pair.
+// Keys are alphabetical, joined with '__'. Kept in sync with the curated +
+// algorithmic selection in tools/prerender.py generate_vs_pages().
+const VS_PAGES = new Set([
+  'alonnisos__skiathos', 'amorgos__anafi', 'amorgos__antiparos', 'amorgos__folegandros',
+  'amorgos__koufonisia', 'amorgos__serifos', 'anafi__antiparos', 'anafi__folegandros',
+  'anafi__koufonisia', 'anafi__serifos', 'andros__paros', 'antiparos__folegandros',
+  'antiparos__koufonisia', 'antiparos__serifos', 'astypalaia__kastellorizo',
+  'astypalaia__nisyros', 'chania__heraklion', 'chania__lasithi', 'chania__rethymno',
+  'corfu__kefalonia', 'corfu__zakynthos', 'evia-central__evia-south',
+  'folegandros__koufonisia', 'folegandros__milos', 'heraklion__lasithi',
+  'heraklion__rethymno', 'hydra__spetses', 'ios__milos', 'ios__mykonos',
+  'ios__sifnos', 'ithaca__paxos', 'kastellorizo__nisyros', 'kefalonia__zakynthos',
+  'kos__rhodes', 'koufonisia__serifos', 'kythira__paxos', 'lasithi__rethymno',
+  'milos__naxos', 'milos__santorini', 'milos__sifnos', 'mykonos__naxos',
+  'mykonos__paros', 'mykonos__santorini', 'mykonos__syros', 'naxos__paros',
+  'naxos__santorini', 'naxos__syros', 'paros__santorini', 'paros__syros',
+  'santorini__syros',
+]);
+// Curated subset gets richer editorial content — banner says so.
+const VS_PAGES_CURATED = new Set([
+  'chania__heraklion', 'chania__rethymno', 'corfu__kefalonia', 'folegandros__milos',
+  'hydra__spetses', 'ios__mykonos', 'kefalonia__zakynthos', 'kos__rhodes',
+  'milos__santorini', 'mykonos__naxos', 'mykonos__paros', 'mykonos__santorini',
+  'naxos__paros', 'naxos__santorini', 'paros__santorini',
+]);
+
 // DIM_LABELS is now a function — gets translated labels at call time
 function getDimLabels() {
   return [t('dim.beach'), t('dim.culture'), t('dim.night'), t('dim.access'), t('dim.afford'), t('dim.car')];
@@ -2838,6 +2868,36 @@ function renderCompareCards(iA, iB) {
   };
 
   container.innerHTML = card(iA, iB) + card(iB, iA);
+
+  // If a dedicated /compare/{a}-vs-{b}/ static page exists for this pair,
+  // show a banner above the cards linking to it. The banner is removed
+  // (or replaced) every time renderCompareCards is called, so changing
+  // the selection updates it immediately.
+  const oldBanner = document.getElementById('compare-vs-banner');
+  if (oldBanner) oldBanner.remove();
+  const sortedPair = [iA.key, iB.key].sort();
+  const pairKey = sortedPair[0] + '__' + sortedPair[1];
+  if (VS_PAGES.has(pairKey)) {
+    const isEl = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+    const hasEditorial = VS_PAGES_CURATED.has(pairKey);
+    const aName = islandName(sortedPair[0]);
+    const bName = islandName(sortedPair[1]);
+    const href = `/${isEl ? 'el/' : ''}compare/${sortedPair[0]}-vs-${sortedPair[1]}/`;
+    const label = isEl
+      ? (hasEditorial
+          ? `📖 Έχουμε λεπτομερές άρθρο για αυτή τη σύγκριση: <strong>${aName} vs ${bName}</strong>`
+          : `🔎 Δες την αποκλειστική σελίδα σύγκρισης: <strong>${aName} vs ${bName}</strong>`)
+      : (hasEditorial
+          ? `📖 We have a detailed write-up for this pair: <strong>${aName} vs ${bName}</strong>`
+          : `🔎 See the dedicated comparison page: <strong>${aName} vs ${bName}</strong>`);
+    const ctaText = isEl ? 'Διάβασε →' : 'Read →';
+    const banner = document.createElement('a');
+    banner.id = 'compare-vs-banner';
+    banner.href = href;
+    banner.className = 'compare-vs-banner';
+    banner.innerHTML = `<span class="compare-vs-banner-text">${label}</span><span class="compare-vs-banner-cta">${ctaText}</span>`;
+    container.parentNode.insertBefore(banner, container);
+  }
 }
 
 /* ============================================================

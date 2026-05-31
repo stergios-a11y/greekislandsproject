@@ -2004,6 +2004,472 @@ def generate_ferries_page(island_keys):
     return len(routes)
 
 
+def generate_vs_pages(island_keys):
+    """Build static head-to-head comparison pages at /compare/{a}-vs-{b}/.
+
+    Hybrid selection:
+      - 15 hand-curated pairs (the high-search-volume ones)
+      - ~35 algorithmically-selected pairs (same group, tier-similar, capped per-island)
+    = 50 pages total × 2 languages = 100 HTML files.
+
+    Each page renders:
+      - Side-by-side island summary
+      - Dimension comparison (6 score bars)
+      - Data-driven "If you want X choose Y" lines
+      - Editorial verdict (for curated pairs; empty for algorithmic)
+      - When-to-visit comparison
+      - Good-for / Maybe-skip comparison
+      - CTAs to individual island pages and the Compare tool
+    """
+    # ------------------------------------------------------------------
+    # Pair selection
+    # ------------------------------------------------------------------
+    CURATED = [
+        ('santorini', 'mykonos'), ('santorini', 'naxos'), ('santorini', 'milos'),
+        ('santorini', 'paros'), ('mykonos', 'paros'), ('mykonos', 'naxos'),
+        ('paros', 'naxos'), ('milos', 'folegandros'), ('chania', 'heraklion'),
+        ('chania', 'rethymno'), ('corfu', 'kefalonia'), ('kefalonia', 'zakynthos'),
+        ('hydra', 'spetses'), ('mykonos', 'ios'), ('rhodes', 'kos'),
+    ]
+    # Normalize to alphabetical
+    CURATED = [tuple(sorted(p)) for p in CURATED]
+    CURATED_SET = set(CURATED)
+
+    # Pull ISLANDS_DATA scores from script.js (same source as the ferries page)
+    script_text = (ROOT / 'script.js').read_text(encoding='utf-8')
+    isl_block_match = re.search(r'const ISLANDS_DATA = \{([\s\S]+?)\n\};', script_text)
+    if not isl_block_match:
+        print('  ⚠  Could not find ISLANDS_DATA — skipping vs pages')
+        return 0
+    isl_block = isl_block_match.group(1)
+    islands_meta = {}
+    for line in isl_block.split('\n'):
+        km = re.search(r'"([\w-]+)":\s*\{(.+?)\}', line)
+        if not km: continue
+        k = km.group(1)
+        props_str = km.group(2)
+        props = {}
+        for pm in re.finditer(r'(\w+):\s*"([^"]*)"', props_str):
+            props[pm.group(1)] = pm.group(2)
+        for pm in re.finditer(r'(\w+):\s*([-\d.]+)', props_str):
+            props[pm.group(1)] = float(pm.group(2))
+        for pm in re.finditer(r'(\w+):\s*(true|false)', props_str):
+            props[pm.group(1)] = (pm.group(2) == 'true')
+        islands_meta[k] = props
+
+    # Algorithmic pair selection with tier-similarity + per-island cap
+    def tier_for_pop(p):
+        if p >= 30000: return 1
+        if p >= 8000:  return 2
+        if p >= 2000:  return 3
+        return 4
+
+    from collections import Counter
+    appearance = Counter()
+    for a, b in CURATED:
+        appearance[a] += 1
+        appearance[b] += 1
+
+    candidates = []
+    keys_sorted = sorted(islands_meta.keys())
+    for i, a in enumerate(keys_sorted):
+        for b in keys_sorted[i+1:]:
+            ai, bi = islands_meta[a], islands_meta[b]
+            if ai.get('total', 0) < 3.5 or bi.get('total', 0) < 3.5: continue
+            if ai.get('island_group') != bi.get('island_group'): continue
+            ta, tb = tier_for_pop(ai.get('pop', 0)), tier_for_pop(bi.get('pop', 0))
+            if abs(ta - tb) > 1: continue
+            if (a, b) in CURATED_SET: continue
+            score = ai.get('total', 0) + bi.get('total', 0) - abs(ta - tb) * 0.5
+            candidates.append((a, b, score))
+    candidates.sort(key=lambda x: -x[2])
+
+    MAX_PER_ISLAND = 5
+    ALGO_TARGET = 35
+    algorithmic = []
+    for a, b, score in candidates:
+        if appearance[a] >= MAX_PER_ISLAND: continue
+        if appearance[b] >= MAX_PER_ISLAND: continue
+        algorithmic.append((a, b))
+        appearance[a] += 1
+        appearance[b] += 1
+        if len(algorithmic) >= ALGO_TARGET:
+            break
+
+    all_pairs = list(CURATED) + algorithmic
+    curated_pair_set = CURATED_SET  # for marking pages as having editorial space
+
+    # ------------------------------------------------------------------
+    # Editorial verdicts for curated pairs (Session 2 will fill these in;
+    # Session 1 ships with empty strings so the pages still render.)
+    # Keys are alphabetical-sorted tuples to match CURATED.
+    # ------------------------------------------------------------------
+    VS_VERDICTS = {
+        # Format: ('a', 'b'): {'en': '<p>...</p>', 'el': '<p>...</p>'}
+        # Filled in Session 2.
+    }
+
+    # ------------------------------------------------------------------
+    # Per-island data load (we need intro + suited_for + when_to_visit per island)
+    # ------------------------------------------------------------------
+    island_data_cache = {}
+    def get_island_data(k):
+        if k in island_data_cache:
+            return island_data_cache[k]
+        try:
+            d = json.loads((ISLANDS_DIR / f'{k}.json').read_text(encoding='utf-8'))
+        except Exception:
+            d = {}
+        island_data_cache[k] = d
+        return d
+
+    # ------------------------------------------------------------------
+    # Helpers — score-difference verdict generators
+    # ------------------------------------------------------------------
+    DIM_LABELS = {
+        'en': {
+            'beach':  ('beaches',   'beach scenery'),
+            'hist':   ('culture & history', 'historical depth'),
+            'night':  ('nightlife', 'nightlife & scene'),
+            'access': ('ease of access', 'how easily you can get there'),
+            'afford': ('affordability', 'value for money'),
+        },
+        'el': {
+            'beach':  ('παραλίες',  'παραλίες'),
+            'hist':   ('πολιτισμό & ιστορία', 'ιστορικό βάθος'),
+            'night':  ('νυχτερινή ζωή', 'νυχτερινή ζωή & σκηνή'),
+            'access': ('ευκολία πρόσβασης', 'πόσο εύκολα φτάνεις'),
+            'afford': ('οικονομικότητα', 'σχέση αξίας/τιμής'),
+        },
+    }
+    def build_data_verdict(a_key, b_key, lang):
+        """Generate the 'If you want X, choose Y' lines from dimension differences."""
+        a, b = islands_meta[a_key], islands_meta[b_key]
+        a_name = a.get('name', a_key.title())
+        b_name = b.get('name', b_key.title())
+        items = []
+        for dim, (short, _) in DIM_LABELS[lang].items():
+            av, bv = a.get(dim, 0), b.get(dim, 0)
+            diff = abs(av - bv)
+            if diff < 0.5: continue  # too close to call
+            winner = a_name if av > bv else b_name
+            if lang == 'el':
+                items.append(f'<li>Καλύτερες {short} → <strong>{winner}</strong></li>')
+            else:
+                items.append(f'<li>Better {short} → <strong>{winner}</strong></li>')
+        if not items:
+            # Very similar islands across all dimensions
+            if lang == 'el':
+                return '<p><em>Τα δύο νησιά είναι πολύ κοντά σε όλες τις διαστάσεις. Η επιλογή εξαρτάται από τις προτιμήσεις σου σε ατμόσφαιρα και αισθητική.</em></p>'
+            return '<p><em>The two islands are remarkably close across every dimension. The choice comes down to atmosphere and personal preference more than measurable differences.</em></p>'
+        heading = ('Με βάση τα δεδομένα' if lang == 'el' else 'By the numbers')
+        return f'<h3>{heading}</h3><ul class="vs-quick-verdict">{"".join(items)}</ul>'
+
+    def build_dim_bars(a_key, b_key, lang):
+        """Render the 5-dimension comparison as side-by-side bars."""
+        a, b = islands_meta[a_key], islands_meta[b_key]
+        rows = []
+        # Match dim labels to existing i18n keys for consistency
+        dims = [
+            ('beach',  ('Beach Quality',     'Παραλίες')),
+            ('hist',   ('Culture & History', 'Πολιτισμός & Ιστορία')),
+            ('night',  ('Night Life',        'Νυχτερινή Ζωή')),
+            ('access', ('Access Ease',       'Πρόσβαση')),
+            ('afford', ('Price Level',       'Επίπεδο Τιμών')),
+        ]
+        for dim, (en_lbl, el_lbl) in dims:
+            lbl = el_lbl if lang == 'el' else en_lbl
+            av, bv = a.get(dim, 0), b.get(dim, 0)
+            apct, bpct = (av/5)*100, (bv/5)*100
+            rows.append(
+                f'<div class="vs-dim-row">'
+                f'<div class="vs-dim-label">{lbl}</div>'
+                f'<div class="vs-dim-bars">'
+                f'<div class="vs-bar-side vs-bar-a"><span class="vs-bar-val">{av:.1f}</span><div class="vs-bar-track"><div class="vs-bar-fill" style="width:{apct:.0f}%"></div></div></div>'
+                f'<div class="vs-bar-side vs-bar-b"><div class="vs-bar-track"><div class="vs-bar-fill" style="width:{bpct:.0f}%"></div></div><span class="vs-bar-val">{bv:.1f}</span></div>'
+                f'</div></div>'
+            )
+        return ''.join(rows)
+
+    def build_suited_panel(key, lang):
+        """The 'Good for / Maybe skip if' panel for one island."""
+        data = get_island_data(key)
+        sf = data.get('suited_for')
+        if not sf:
+            return ''
+        good = sf.get('good_el' if lang == 'el' else 'good', []) or []
+        skip = sf.get('skip_el' if lang == 'el' else 'skip', []) or []
+        if not (good or skip): return ''
+        good_title = 'Ιδανικό για' if lang == 'el' else 'Good for'
+        skip_title = 'Σκέψου αλλιώς αν' if lang == 'el' else 'Maybe skip if'
+        good_li = ''.join(f'<li>{esc(x)}</li>' for x in good)
+        skip_li = ''.join(f'<li>{esc(x)}</li>' for x in skip)
+        out = ''
+        if good_li:
+            out += f'<div class="vs-suited-block"><h4>✓ {good_title}</h4><ul>{good_li}</ul></div>'
+        if skip_li:
+            out += f'<div class="vs-suited-block vs-suited-skip"><h4>✗ {skip_title}</h4><ul>{skip_li}</ul></div>'
+        return out
+
+    def build_wtv_summary(key, lang):
+        """Brief when-to-visit summary — just the 'best' / 'great' months.
+        The months array is positional: index 0 = January, ..., index 11 = December.
+        """
+        data = get_island_data(key)
+        wtv = (data.get('when_to_visit') or {}).get('months') or []
+        if not wtv: return ''
+        best = [i + 1 for i, m in enumerate(wtv) if isinstance(m, dict) and m.get('tag') == 'best']
+        great = [i + 1 for i, m in enumerate(wtv) if isinstance(m, dict) and m.get('tag') == 'great']
+        if not best and not great: return ''
+        month_names = (['Ιαν','Φεβ','Μαρ','Απρ','Μάι','Ιουν','Ιουλ','Αυγ','Σεπ','Οκτ','Νοε','Δεκ']
+                       if lang == 'el' else
+                       ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'])
+        def fmt_months(months):
+            return ', '.join(month_names[m-1] for m in sorted(months))
+        parts = []
+        if best:
+            parts.append(f'<strong>{"Καλύτερα" if lang == "el" else "Best"}:</strong> {fmt_months(best)}')
+        if great:
+            parts.append(f'<strong>{"Πολύ καλά" if lang == "el" else "Great"}:</strong> {fmt_months(great)}')
+        return ' · '.join(parts)
+
+    # ------------------------------------------------------------------
+    # Render one page (one pair × one language)
+    # ------------------------------------------------------------------
+    def render_vs_page(a_key, b_key, lang):
+        is_el = (lang == 'el')
+        a_meta = islands_meta[a_key]
+        b_meta = islands_meta[b_key]
+        a_data = get_island_data(a_key)
+        b_data = get_island_data(b_key)
+        a_name = a_meta.get('name', a_key.title())
+        b_name = b_meta.get('name', b_key.title())
+
+        # Page title — explicit "vs" phrasing for SEO match
+        if is_el:
+            title = f'{a_name} ή {b_name}: Σύγκριση Ελληνικών Νησιών | Aegean Blueprint'
+            description = (f'{a_name} ή {b_name}; Λεπτομερής σύγκριση: παραλίες, νυχτερινή ζωή, '
+                           f'πολιτισμός, πρόσβαση, κόστος. Ποιο νησί ταιριάζει στο ταξίδι σου.')
+            h1 = f'{a_name} ή {b_name};'
+            sub = 'Λεπτομερής σύγκριση δύο ελληνικών νησιών — βαθμολογίες, χαρακτηριστικά, ποια εποχή να πας.'
+            dim_heading = 'Σύγκριση κατά διάσταση'
+            wtv_heading = 'Πότε να επισκεφθείς'
+            suited_heading = 'Για ποιον ταιριάζει'
+            verdict_heading = 'Η ετυμηγορία μας'
+            cta_heading = 'Συνέχισε στις πλήρεις σελίδες'
+            cta_compare = 'Σύγκρινε με άλλα νησιά →'
+        else:
+            title = f'{a_name} vs {b_name}: Which Greek Island Should You Choose? | Aegean Blueprint'
+            description = (f'{a_name} vs {b_name}: side-by-side comparison of beaches, nightlife, '
+                           f'culture, access, and price. Find the right island for your trip.')
+            h1 = f'{a_name} vs {b_name}: Which Should You Visit?'
+            sub = 'Side-by-side comparison of two Greek islands — scores, character, when to visit.'
+            dim_heading = 'Side-by-side comparison'
+            wtv_heading = 'When to visit'
+            suited_heading = 'Who each island suits'
+            verdict_heading = 'Our verdict'
+            cta_heading = 'Read the full guides'
+            cta_compare = 'Compare with other islands →'
+
+        # Intro snippet for each island
+        def first_sentence(text):
+            text = strip_html(text or '').strip()
+            m = re.match(r'(.+?[.!?])(\s|$)', text)
+            return m.group(1) if m else text[:200]
+
+        a_intro = first_sentence(pick(a_data, 'intro', lang))
+        b_intro = first_sentence(pick(b_data, 'intro', lang))
+
+        # Data-driven verdict
+        data_verdict = build_data_verdict(a_key, b_key, lang)
+
+        # Editorial verdict (curated only)
+        pair_key = (a_key, b_key)
+        editorial_html = ''
+        if pair_key in VS_VERDICTS:
+            v = VS_VERDICTS[pair_key].get(lang, '')
+            if v:
+                editorial_html = f'<section class="vs-verdict"><h2>{verdict_heading}</h2>{v}</section>'
+
+        # Suited-for side-by-side
+        a_suited = build_suited_panel(a_key, lang)
+        b_suited = build_suited_panel(b_key, lang)
+
+        # When-to-visit side-by-side
+        a_wtv = build_wtv_summary(a_key, lang)
+        b_wtv = build_wtv_summary(b_key, lang)
+
+        # Dimension bars
+        dim_bars = build_dim_bars(a_key, b_key, lang)
+
+        # URLs
+        url_en = f'{SITE_URL}/compare/{a_key}-vs-{b_key}/'
+        url_el = f'{SITE_URL}/el/compare/{a_key}-vs-{b_key}/'
+        url = url_el if is_el else url_en
+        a_url = f'/{"el/" if is_el else ""}island/{a_key}/'
+        b_url = f'/{"el/" if is_el else ""}island/{b_key}/'
+
+        return (
+            '<!DOCTYPE html>\n'
+            f'<html lang="{"el" if is_el else "en"}">\n<head>\n'
+            '<meta charset="UTF-8">\n'
+            '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
+            f'<title>{esc(title)}</title>\n'
+            f'<meta name="description" content="{esc(description)}">\n'
+            '<meta name="theme-color" content="#0B8FAC">\n'
+            f'<link rel="canonical" href="{url}">\n'
+            f'<link rel="alternate" hreflang="en" href="{url_en}">\n'
+            f'<link rel="alternate" hreflang="el" href="{url_el}">\n'
+            f'<link rel="alternate" hreflang="x-default" href="{url_en}">\n'
+            '<link rel="icon" href="/favicon.ico" sizes="any">\n'
+            '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
+            '<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n'
+            '<meta property="og:type" content="website">\n'
+            f'<meta property="og:title" content="{esc(title)}">\n'
+            f'<meta property="og:description" content="{esc(description)}">\n'
+            f'<meta property="og:url" content="{url}">\n'
+            f'<meta property="og:locale" content="{"el_GR" if is_el else "en_US"}">\n'
+            '<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>\n'
+            '<link rel="stylesheet" href="/style.css">\n'
+            '<style>\n'
+            '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--sans, system-ui), sans-serif; margin: 0; }\n'
+            '  .vs-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }\n'
+            '  .vs-page > h1 { font-family: var(--serif, Georgia), serif; font-size: 36px; margin: 0 0 8px; }\n'
+            '  .vs-sub { font-size: 17px; color: var(--ink-1, #444); margin: 0 0 32px; }\n'
+            '  .vs-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 32px; }\n'
+            '  .vs-card { background: var(--white, #fff); border: 1px solid var(--border, #e5e1d8); border-radius: 12px; padding: 18px 20px; }\n'
+            '  .vs-card h2 { font-family: var(--serif, Georgia), serif; font-size: 24px; margin: 0 0 4px; }\n'
+            '  .vs-card .vs-card-meta { font-size: 13px; color: var(--ink-3, #888); margin: 0 0 12px; }\n'
+            '  .vs-card p { font-size: 15px; line-height: 1.55; margin: 0 0 12px; color: var(--ink-1, #333); }\n'
+            '  .vs-card a.vs-card-link { font-size: 14px; color: var(--aegean-dark, #076880); font-weight: 600; text-decoration: none; }\n'
+            '  .vs-card a.vs-card-link:hover { text-decoration: underline; }\n'
+            '  .vs-section { margin: 32px 0; }\n'
+            '  .vs-section h2 { font-family: var(--serif, Georgia), serif; font-size: 24px; margin: 0 0 16px; padding-bottom: 6px; border-bottom: 2px solid var(--aegean, #0B8FAC); }\n'
+            '  .vs-dim-row { margin-bottom: 14px; }\n'
+            '  .vs-dim-label { font-size: 14px; color: var(--ink-2, #333); margin-bottom: 4px; font-weight: 600; text-align: center; }\n'
+            '  .vs-dim-bars { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: center; }\n'
+            '  .vs-bar-side { display: flex; align-items: center; gap: 8px; }\n'
+            '  .vs-bar-side.vs-bar-a { justify-content: flex-end; flex-direction: row-reverse; }\n'
+            '  .vs-bar-track { flex: 1; height: 14px; background: var(--marble, #f6f4ee); border-radius: 7px; overflow: hidden; }\n'
+            '  .vs-bar-fill { height: 100%; background: linear-gradient(90deg, var(--aegean, #0B8FAC), var(--aegean-light, #4FC3DC)); }\n'
+            '  .vs-bar-a .vs-bar-track { transform: scaleX(-1); }\n'  # mirror the left bar so it grows toward center
+            '  .vs-bar-val { font-weight: 700; font-size: 14px; color: var(--aegean-dark, #076880); min-width: 30px; text-align: center; }\n'
+            '  .vs-quick-verdict { list-style: none; padding: 0; margin: 12px 0 0; }\n'
+            '  .vs-quick-verdict li { padding: 8px 14px; margin: 6px 0; background: var(--marble, #f6f4ee); border-radius: 8px; font-size: 15px; }\n'
+            '  .vs-suited { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }\n'
+            '  .vs-suited-side h3 { font-family: var(--serif, Georgia), serif; font-size: 19px; margin: 0 0 10px; color: var(--aegean-dark, #076880); }\n'
+            '  .vs-suited-block { background: var(--white, #fff); border: 1px solid var(--border, #e5e1d8); border-left: 3px solid #2E7D32; border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; }\n'
+            '  .vs-suited-block.vs-suited-skip { border-left-color: #C0522A; }\n'
+            '  .vs-suited-block h4 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 6px; color: #2E7D32; }\n'
+            '  .vs-suited-block.vs-suited-skip h4 { color: #C0522A; }\n'
+            '  .vs-suited-block ul { margin: 0; padding-left: 18px; }\n'
+            '  .vs-suited-block li { font-size: 14px; line-height: 1.55; color: #444; margin-bottom: 4px; }\n'
+            '  .vs-wtv { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }\n'
+            '  .vs-wtv-side { background: var(--marble, #f6f4ee); border-radius: 10px; padding: 14px 16px; font-size: 14px; line-height: 1.55; }\n'
+            '  .vs-wtv-side h3 { font-family: var(--serif, Georgia), serif; font-size: 17px; margin: 0 0 6px; color: var(--aegean-dark, #076880); }\n'
+            '  .vs-verdict { background: rgba(11,143,172,0.06); border-radius: 12px; padding: 20px 24px; }\n'
+            '  .vs-verdict h2 { border: none; padding: 0; margin-bottom: 12px; }\n'
+            '  .vs-verdict p { font-size: 16px; line-height: 1.65; margin: 0 0 10px; color: var(--ink-1, #333); }\n'
+            '  .vs-cta { background: var(--marble, #f6f4ee); border-radius: 12px; padding: 20px 24px; text-align: center; }\n'
+            '  .vs-cta h3 { font-family: var(--serif, Georgia), serif; font-size: 20px; margin: 0 0 12px; }\n'
+            '  .vs-cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }\n'
+            '  .vs-cta-btn { background: var(--aegean, #0B8FAC); color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; }\n'
+            '  .vs-cta-btn.vs-cta-btn-secondary { background: transparent; color: var(--aegean-dark, #076880); border: 1px solid var(--aegean, #0B8FAC); }\n'
+            '  .vs-cta-btn:hover { opacity: 0.9; }\n'
+            '  @media (max-width: 600px) {\n'
+            '    .vs-page { padding: 20px 16px 48px; }\n'
+            '    .vs-page > h1 { font-size: 26px; }\n'
+            '    .vs-summary, .vs-suited, .vs-wtv { grid-template-columns: 1fr; }\n'
+            '    .vs-dim-bars { grid-template-columns: 1fr 1fr; gap: 8px; }\n'
+            '  }\n'
+            '  html.dark body { background: #1a1a1a; color: #eee; }\n'
+            '  html.dark .vs-card, html.dark .vs-suited-block { background: #2a2a2a; border-color: #444; }\n'
+            '  html.dark .vs-wtv-side, html.dark .vs-cta, html.dark .vs-quick-verdict li { background: #2a2a2a; }\n'
+            '  html.dark .vs-verdict { background: rgba(11,143,172,0.12); }\n'
+            '</style>\n'
+            '</head>\n<body>\n'
+            '<header>\n'
+            '  <div class="header-content">\n'
+            f'    <a class="logo-wrapper" href="/{"el/" if is_el else ""}" style="text-decoration: none;">\n'
+            '      <img src="/logo-hero.svg" id="site-logo" alt="Aegean Blueprint logo">\n'
+            '      <span id="brand-text"><span class="brand-word">Aegean</span> <span class="brand-word">Blueprint</span></span>\n'
+            '    </a>\n'
+            '    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>\n'
+            '    <nav class="top-nav" id="main-nav">\n'
+            f'      <a href="/{"el/" if is_el else ""}">{"Χάρτης" if is_el else "Map"}</a>\n'
+            f'      <a href="/{"el/" if is_el else ""}#data">{"Στοιχεία Νησιών" if is_el else "Islands Data"}</a>\n'
+            f'      <a href="/{"el/" if is_el else ""}#compare" class="active">{"Σύγκριση" if is_el else "Compare"}</a>\n'
+            f'      <a href="/{"el/" if is_el else ""}festivals/">{"Γιορτές" if is_el else "Festivals"}</a>\n'
+            f'      <a href="/{"el/" if is_el else ""}ferries/">{"Πλοία" if is_el else "Ferries"}</a>\n'
+            f'      <a href="/{"el/" if is_el else ""}#hopping">{"Νησοπορία" if is_el else "Island Hopping"}</a>\n'
+            f'      <a href="/{"el/" if is_el else ""}#mission">{"Στόχος" if is_el else "Mission"}</a>\n'
+            f'      <a href="{"/el/privacy/" if is_el else "/privacy/"}" class="nav-utility">{"Απόρρητο" if is_el else "Privacy"}</a>\n'
+            '    </nav>\n'
+            f'    <a class="lang-toggle-static" href="{f"/compare/{a_key}-vs-{b_key}/" if is_el else f"/el/compare/{a_key}-vs-{b_key}/"}" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;">'
+            f'<span style="margin-right: 4px;">🌐</span>{"EN" if is_el else "EL"}</a>\n'
+            '  </div>\n'
+            '</header>\n'
+            '<main class="vs-page">\n'
+            f'  <h1>{esc(h1)}</h1>\n'
+            f'  <p class="vs-sub">{esc(sub)}</p>\n'
+            '  <section class="vs-summary">\n'
+            f'    <div class="vs-card"><h2>{esc(a_name)}</h2>'
+            f'<p class="vs-card-meta">{a_meta.get("island_group","")} · {("Συν." if is_el else "Total")} {a_meta.get("total",0):.1f}/5</p>'
+            f'<p>{esc(a_intro)}</p>'
+            f'<a class="vs-card-link" href="{a_url}">{("Πλήρης οδηγός" if is_el else "Full guide")} →</a></div>\n'
+            f'    <div class="vs-card"><h2>{esc(b_name)}</h2>'
+            f'<p class="vs-card-meta">{b_meta.get("island_group","")} · {("Συν." if is_el else "Total")} {b_meta.get("total",0):.1f}/5</p>'
+            f'<p>{esc(b_intro)}</p>'
+            f'<a class="vs-card-link" href="{b_url}">{("Πλήρης οδηγός" if is_el else "Full guide")} →</a></div>\n'
+            '  </section>\n'
+            f'  <section class="vs-section"><h2>{dim_heading}</h2>'
+            f'<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:12px;font-weight:600;text-align:center;color:var(--aegean-dark,#076880)">'
+            f'<div>{esc(a_name)}</div><div>{esc(b_name)}</div></div>'
+            f'{dim_bars}'
+            f'{data_verdict}'
+            '</section>\n'
+            + editorial_html +
+            (f'  <section class="vs-section"><h2>{wtv_heading}</h2><div class="vs-wtv">'
+             f'<div class="vs-wtv-side"><h3>{esc(a_name)}</h3>{a_wtv}</div>'
+             f'<div class="vs-wtv-side"><h3>{esc(b_name)}</h3>{b_wtv}</div>'
+             '</div></section>\n' if a_wtv or b_wtv else '')
+            +
+            (f'  <section class="vs-section"><h2>{suited_heading}</h2><div class="vs-suited">'
+             f'<div class="vs-suited-side"><h3>{esc(a_name)}</h3>{a_suited}</div>'
+             f'<div class="vs-suited-side"><h3>{esc(b_name)}</h3>{b_suited}</div>'
+             '</div></section>\n' if a_suited or b_suited else '')
+            +
+            f'  <section class="vs-cta"><h3>{esc(cta_heading)}</h3>'
+            f'<div class="vs-cta-buttons">'
+            f'<a class="vs-cta-btn" href="{a_url}">{esc(a_name)} →</a>'
+            f'<a class="vs-cta-btn" href="{b_url}">{esc(b_name)} →</a>'
+            f'<a class="vs-cta-btn vs-cta-btn-secondary" href="/{"el/" if is_el else ""}#compare">{esc(cta_compare)}</a>'
+            '</div></section>\n'
+            '</main>\n'
+            '<script>document.getElementById("menu-toggle-btn").addEventListener("click", function(){ document.getElementById("main-nav").classList.toggle("open"); });</script>\n'
+            '</body>\n</html>\n'
+        )
+
+    # ------------------------------------------------------------------
+    # Write all pages
+    # ------------------------------------------------------------------
+    written = 0
+    for a, b in all_pairs:
+        for lang in ('en', 'el'):
+            html_out = render_vs_page(a, b, lang)
+            out_path = ROOT / (f'el/compare/{a}-vs-{b}/index.html' if lang == 'el'
+                               else f'compare/{a}-vs-{b}/index.html')
+            out_path.parent.mkdir(parents=True, exist_ok=True)
+            out_path.write_text(html_out, encoding='utf-8')
+            written += 1
+
+    # Expose the pair list for sitemap + Compare-tool integration
+    generate_vs_pages.pairs = all_pairs  # type: ignore[attr-defined]
+    generate_vs_pages.curated_pairs = list(CURATED)  # type: ignore[attr-defined]
+    return written
+
+
+
 def main():
     OUT_EN.mkdir(parents=True, exist_ok=True)
     OUT_EL.mkdir(parents=True, exist_ok=True)
@@ -2040,10 +2506,6 @@ def main():
 
     print(f'✓ Generated {count} islands × 2 languages = {count*2} pages')
 
-    # Regenerate sitemap with clean URLs
-    generate_sitemap(keys)
-    print(f'✓ Sitemap regenerated with {len(keys)} islands + static pages')
-
     # Build the compact "what's on now" index for the home page strip
     generate_whats_on_index(keys)
     print(f'✓ whats-on.json regenerated')
@@ -2055,6 +2517,16 @@ def main():
     # Build the ferries hub page (static HTML, EN + EL)
     n_routes = generate_ferries_page(keys)
     print(f'✓ ferries/ page regenerated ({n_routes} routes)')
+
+    # Build the head-to-head comparison pages (static HTML, EN + EL).
+    # Must run BEFORE generate_sitemap so its .pairs attribute is set and
+    # the sitemap picks up every vs-URL.
+    n_vs = generate_vs_pages(keys)
+    print(f'✓ compare/ pages regenerated ({n_vs} files = {n_vs // 2} pairs × 2 languages)')
+
+    # Regenerate sitemap LAST — needs vs_pages attribute populated above.
+    generate_sitemap(keys)
+    print(f'✓ Sitemap regenerated with {len(keys)} islands + static pages')
 
     # Inject (or refresh) the static SEO island list at the bottom of each
     # homepage. Without this, the SPA's island links are JS-rendered and
@@ -2514,14 +2986,23 @@ def generate_sitemap(island_keys):
     """
     today = datetime.now(timezone.utc).strftime('%Y-%m-%d')
 
-    # Static pages: just the two language homepages. The internal SPA views
-    # (/#data, /#compare, etc.) are NOT separate URLs to a search engine.
+    # Static pages: language homepages + dedicated landing pages
+    # (/#data, /#compare, etc. are SPA hash routes, NOT separate URLs)
     static_pages = [
         ('/', '/el/', 1.0, today),
         ('/festivals/', '/el/festivals/', 0.8, today),
         ('/ferries/', '/el/ferries/', 0.8, today),
         ('/privacy/', '/el/privacy/', 0.3, today),
     ]
+    # Add vs-comparison pages — pulled from the generator that just ran.
+    # Falls back gracefully if generate_vs_pages hasn't run yet (e.g.
+    # sitemap is called standalone or in a different order).
+    vs_pairs = getattr(generate_vs_pages, 'pairs', None) or []
+    curated_set = set(getattr(generate_vs_pages, 'curated_pairs', None) or [])
+    for a, b in vs_pairs:
+        # Curated pages get slightly higher priority (more editorial content)
+        prio = 0.7 if (a, b) in curated_set else 0.5
+        static_pages.append((f'/compare/{a}-vs-{b}/', f'/el/compare/{a}-vs-{b}/', prio, today))
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">')
