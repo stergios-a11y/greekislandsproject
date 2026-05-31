@@ -1217,6 +1217,34 @@ async function renderIslandPage(key) {
     const res = await fetch(`/islands/${key}.json`);
     if (res.ok) {
       const data = await res.json();
+      // Display "Last updated" from the HTTP Last-Modified response header —
+      // GitHub Pages sets this from the underlying git commit time, so it
+      // reflects when this island's JSON was actually edited.
+      try {
+        const lm = res.headers.get('Last-Modified');
+        if (lm) {
+          const lmDate = new Date(lm);
+          if (!isNaN(lmDate.getTime())) {
+            const lang = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
+            const label = lang === 'el' ? 'Τελευταία ενημέρωση' : 'Last updated';
+            const monthsEl = ['Ιανουαρίου','Φεβρουαρίου','Μαρτίου','Απριλίου','Μαΐου','Ιουνίου',
+                              'Ιουλίου','Αυγούστου','Σεπτεμβρίου','Οκτωβρίου','Νοεμβρίου','Δεκεμβρίου'];
+            const fmtDate = lang === 'el'
+              ? `${lmDate.getDate()} ${monthsEl[lmDate.getMonth()]} ${lmDate.getFullYear()}`
+              : lmDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+            const isoDate = lmDate.toISOString().split('T')[0];
+            // Insert as a sibling of the meta pill if not already present
+            const metaPill = document.getElementById('island-meta-info');
+            if (metaPill && !document.getElementById('island-lastupdated')) {
+              const stamp = document.createElement('div');
+              stamp.id = 'island-lastupdated';
+              stamp.className = 'island-lastupdated';
+              stamp.innerHTML = `<time datetime="${isoDate}">${label}: <strong>${fmtDate}</strong></time>`;
+              metaPill.parentNode.insertBefore(stamp, metaPill.nextSibling);
+            }
+          }
+        }
+      } catch(e) { /* non-fatal */ }
       guide.innerHTML = buildIslandPage(data, key);
       setTimeout(() => initItineraryMap(data.itinerary.days, data.beaches || []), 80);
       if (data.beaches) setTimeout(() => loadBeachPhotos(data.beaches), 150);

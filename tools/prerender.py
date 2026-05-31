@@ -643,20 +643,23 @@ def build_faq(key, data, meta, lang='en'):
 
 def build_structured_data(key, data, meta, lang='en'):
     """
-    Build a list of JSON-LD objects for Google.
+    Build a list of JSON-LD objects for Google. Aims for Rich Results eligibility.
     We emit:
-      - TouristDestination (the island)
-      - TouristTrip (the itinerary)
+      - TouristDestination (the island itself)
+      - TouristTrip (the itinerary, with day-by-day descriptions + overnight coords)
+      - Article (the travel guide as an editorial piece, with author + dates)
       - BreadcrumbList
-      - FAQPage (if we had FAQs; skip for now)
+      - FAQPage (if FAQs present)
+
+    All objects include dateModified pulled from the JSON file's git/mtime,
+    so re-edits surface as fresh-content signals to Google.
     """
     url = f'{SITE_URL}/island/{key}/' if lang == 'en' else f'{SITE_URL}/el/island/{key}/'
     name = localized_name(key, data, meta, lang)
     intro = pick(data, 'intro', lang) or ''
-    # Clean intro to plain text — strip HTML, collapse whitespace.
-    # JSON-LD descriptions must be plain text; raw HTML (e.g. embedded <a> tags
-    # in the intro) breaks the structured data when the slice cuts mid-tag.
     intro_plain = strip_html(intro)
+    # Pull the last-modified date from git log (or mtime fallback)
+    last_modified = file_lastmod(ISLANDS_DIR / f'{key}.json')
 
     destination = {
         "@context": "https://schema.org",
@@ -679,25 +682,63 @@ def build_structured_data(key, data, meta, lang='en'):
     # Our internal dimension scores (beach/culture/nightlife/etc) aren't real reviews
     # anyway, so Google would discount them. Removed to keep the schema clean.
 
-    # Itinerary → TouristTrip
+    # Itinerary → TouristTrip with enriched day-by-day descriptions.
+    # Each day now includes a description (from the day's `subtitle` or first stop),
+    # geographic coordinates (from the day's overnight stop if known), and a list
+    # of subAttractions (the day's stops, each with name and coords).
     trip = None
     if 'itinerary' in data and data['itinerary'].get('days'):
         days = data['itinerary']['days']
         itinerary_list = []
         for day in days:
+            day_num = day.get('day', 1)
             day_title = pick(day, 'title', lang)
+            # Day description — prefer day.subtitle if present, fall back to first stop desc
+            day_desc = pick(day, 'subtitle', lang) or ''
+            if not day_desc and day.get('stops'):
+                first_stop = day['stops'][0]
+                day_desc = pick(first_stop, 'desc', lang) or ''
+            day_desc = strip_html(day_desc)
+            # Day-level attraction: aggregate of the stops visited
+            stops = day.get('stops', []) or []
+            day_attraction = {
+                "@type": "TouristAttraction",
+                "name": f"Day {day_num}: {day_title}" if lang == 'en' else f"Μέρα {day_num}: {day_title}",
+            }
+            if day_desc:
+                day_attraction["description"] = truncate_at_word(day_desc, 250)
+            # Geo: use the first stop's coords if available (gives Google a real location)
+            for s in stops:
+                if isinstance(s, dict) and s.get('lat') is not None and s.get('lng') is not None:
+                    day_attraction["geo"] = {
+                        "@type": "GeoCoordinates",
+                        "latitude": s['lat'],
+                        "longitude": s['lng'],
+                    }
+                    break
+            # subAttractions: each individual stop (named places). Google can use
+            # these for rich-snippet day-by-day rendering when supported.
+            sub_attractions = []
+            for s in stops[:8]:  # cap at 8 per day to keep payload reasonable
+                if not isinstance(s, dict): continue
+                stop_name = pick(s, 'name', lang) or ''
+                if not stop_name: continue
+                sub = {"@type": "TouristAttraction", "name": stop_name}
+                if s.get('lat') is not None and s.get('lng') is not None:
+                    sub["geo"] = {"@type": "GeoCoordinates", "latitude": s['lat'], "longitude": s['lng']}
+                sub_attractions.append(sub)
+            if sub_attractions:
+                day_attraction["subjectOf"] = sub_attractions
             itinerary_list.append({
                 "@type": "ListItem",
-                "position": day.get('day', 1),
-                "item": {
-                    "@type": "TouristAttraction",
-                    "name": f"Day {day.get('day', 1)}: {day_title}",
-                }
+                "position": day_num,
+                "item": day_attraction,
             })
         trip = {
             "@context": "https://schema.org",
             "@type": "TouristTrip",
-            "name": f"{len(days)}-day {name} itinerary",
+            "name": (f"{len(days)}-day {name} itinerary" if lang == 'en'
+                     else f"Δρομολόγιο {len(days)} ημερών — {name}"),
             "description": pick(data.get('itinerary', {}), 'subtitle', lang) or truncate_at_word(intro_plain, 200),
             "itinerary": {
                 "@type": "ItemList",
@@ -705,11 +746,42 @@ def build_structured_data(key, data, meta, lang='en'):
                 "itemListElement": itinerary_list,
             },
             "touristType": "leisure",
+            "dateModified": last_modified,
         }
 
-    # Breadcrumb — two levels (Home → Island). The "group" mid-level was removed
-    # because it pointed at the same URL as Home, which broke Google's breadcrumb
-    # validation ("Invalid object type for field <parent_node>").
+    # Article schema — positions the page as an editorial travel guide for
+    # Google's Article rich results. headline + author + dates are the
+    # required fields; image is a strong recommended one (we use the OG image).
+    article = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": build_title(key, data, meta, lang).rsplit(' | ', 1)[0],  # strip " | Aegean Blueprint"
+        "description": truncate_at_word(intro_plain, 200),
+        "url": url,
+        "image": f'{SITE_URL}/og/{key}.jpg',
+        "datePublished": last_modified,  # we don't track first-publish separately
+        "dateModified": last_modified,
+        "author": {
+            "@type": "Person",
+            "name": "Stergios Gousios",
+            "url": SITE_URL + ('/' if lang == 'en' else '/el/') + 'mission/',
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Aegean Blueprint",
+            "logo": {
+                "@type": "ImageObject",
+                "url": f'{SITE_URL}/logo.png',
+            },
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": url,
+        },
+        "inLanguage": "en" if lang == 'en' else "el",
+    }
+
+    # Breadcrumb — two levels (Home → Island).
     breadcrumbs = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -721,7 +793,7 @@ def build_structured_data(key, data, meta, lang='en'):
         ],
     }
 
-    out = [destination, breadcrumbs]
+    out = [destination, article, breadcrumbs]
     if trip:
         out.append(trip)
     faq = build_faq(key, data, meta, lang)
@@ -893,6 +965,33 @@ def render_body(key, data, meta, lang='en'):
             rating_text = f'<p class="seo-rating">Συνολική βαθμολογία: <strong>{rating:.1f}/5</strong> · {int(meta["area"]) if meta.get("area") else ""} km² · {int(meta["pop"]) if meta.get("pop") else ""} κάτοικοι</p>'
         else:
             rating_text = f'<p class="seo-rating">Overall rating: <strong>{rating:.1f}/5</strong> · {int(meta["area"]) if meta.get("area") else ""} km² · {int(meta["pop"]) if meta.get("pop") else ""} residents</p>'
+
+    # Last-updated line — signals to readers (and Google) that the guide is
+    # actively maintained. Pulled from git log (committer date) on the
+    # underlying JSON file, so edits to itinerary/beaches/specialties show
+    # up as a fresh date here.
+    last_updated_iso = file_lastmod(ISLANDS_DIR / f'{key}.json')
+    last_updated_human = ''
+    try:
+        dt = datetime.strptime(last_updated_iso, '%Y-%m-%d')
+        if lang == 'el':
+            month_names_el = ['Ιανουαρίου','Φεβρουαρίου','Μαρτίου','Απριλίου','Μαΐου','Ιουνίου',
+                              'Ιουλίου','Αυγούστου','Σεπτεμβρίου','Οκτωβρίου','Νοεμβρίου','Δεκεμβρίου']
+            last_updated_human = f'{dt.day} {month_names_el[dt.month - 1]} {dt.year}'
+        else:
+            last_updated_human = dt.strftime('%B %-d, %Y')
+    except Exception:
+        last_updated_human = last_updated_iso  # fall back to ISO
+
+    if last_updated_human:
+        label = 'Τελευταία ενημέρωση' if lang == 'el' else 'Last updated'
+        last_updated_html = (
+            f'<p class="seo-lastupdated">'
+            f'<time datetime="{esc(last_updated_iso)}">{label}: <strong>{esc(last_updated_human)}</strong></time>'
+            f'</p>'
+        )
+    else:
+        last_updated_html = ''
 
     # "Good for / Maybe skip if" orientation block — renders between the
     # intro and getting-there if the island has a suited_for field. Two short
@@ -1125,6 +1224,7 @@ def render_body(key, data, meta, lang='en'):
     <h1>{esc(name)}</h1>
     {subtitle_html}
     {rating_text}
+    {last_updated_html}
   </div>
   {hero_html}
   <section class="seo-intro">
@@ -1233,6 +1333,12 @@ def render_page(key, data, meta, lang='en'):
   }}
   .seo-subtitle {{ color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }}
   .seo-rating {{ color: var(--ink-2, #333); font-size: var(--text-small, 14px); }}
+  .seo-lastupdated {{
+    color: var(--ink-3, #777); font-size: var(--text-tiny, 12px);
+    margin: 2px 0 0; font-style: italic;
+  }}
+  .seo-lastupdated time {{ color: inherit; }}
+  .seo-lastupdated strong {{ font-weight: 600; font-style: normal; color: var(--ink-2, #333); }}
   .seo-intro p {{ font-size: var(--text-sub, 18px); }}
   .seo-suited {{
     display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;
@@ -2363,7 +2469,32 @@ def parse_when_to_months(when_str):
 
 
 def file_lastmod(path):
-    """Return ISO-8601 date for the modification time of a file. Falls back to today."""
+    """Return ISO-8601 date for when the file was last meaningfully changed.
+
+    Strategy: prefer `git log -1 --format=%cI` of the file's committer date —
+    this reflects when content actually changed, not when the file was touched
+    locally (mtime resets on git pull, cp, checkout, etc).
+
+    Falls back to file mtime if git is unavailable or the path isn't tracked
+    (e.g., when running this script outside the repo's working tree, or in
+    sandboxes that only have the files without history).
+    """
+    # Try git first
+    try:
+        import subprocess
+        result = subprocess.run(
+            ['git', 'log', '-1', '--format=%cI', '--', str(path)],
+            cwd=str(ROOT),
+            capture_output=True,
+            text=True,
+            timeout=2,
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            # git outputs ISO 8601 like '2026-05-31T17:22:14+00:00' — keep only date
+            return result.stdout.strip().split('T', 1)[0]
+    except Exception:
+        pass
+    # Fall back to file mtime
     try:
         ts = path.stat().st_mtime
         return datetime.fromtimestamp(ts, tz=timezone.utc).strftime('%Y-%m-%d')

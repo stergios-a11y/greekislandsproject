@@ -1026,6 +1026,18 @@ html.dark .planner-disclaimer { background: rgba(11, 143, 172, 0.10); }
   border-radius: 20px; color: var(--ink-3);
   letter-spacing: 0.2px;
 }
+/* "Last updated" stamp in the detail-header — small, italic, muted.
+   Sits below the island-meta-pill, populated by renderIslandPage()
+   from the JSON file's HTTP Last-Modified header. */
+.island-lastupdated {
+  font-size: var(--text-tiny, 12px);
+  color: var(--ink-3);
+  font-style: italic;
+  margin-top: 4px;
+  width: 100%;
+}
+.island-lastupdated time { color: inherit; }
+.island-lastupdated strong { font-weight: 600; font-style: normal; color: var(--ink-2); }
 .detail-grid { display: grid; grid-template-columns: 1fr 300px; gap: 20px; }
 #island-mini-map {
   border-radius: var(--radius-lg); overflow: hidden;
