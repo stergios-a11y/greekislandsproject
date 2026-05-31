@@ -1414,7 +1414,12 @@ def render_page(key, data, meta, lang='en'):
   </div>
 </nav>
 
-<!-- Pre-rendered content -->
+<!-- The page now hydrates into the full SPA experience. The SEO content
+     below (#seo-fallback) is what crawlers see; once the SPA boots, it
+     populates the hidden <main id="view-detail"> skeleton and a small
+     bootstrap script swaps them — no flash, full interactivity.
+     Tag '{key}' is the island key the SPA needs for routing. -->
+<div id="seo-fallback">
 {body}
 
 <!-- Call-to-action to get users into the interactive SPA -->
@@ -1433,13 +1438,97 @@ def render_page(key, data, meta, lang='en'):
   <p>© 2026 {'Stergios Gousios · Aegean Blueprint' if lang == 'en' else 'Στέργιος Γούσιος · Aegean Blueprint'}</p>
   <p><a href="{('/el/island/' if lang == 'en' else '/island/')}{key}/">{'Ελληνικά' if lang == 'en' else 'English'}</a> · <a href="{'/privacy/' if lang == 'en' else '/el/privacy/'}">{'Privacy' if lang == 'en' else 'Απόρρητο'}</a></p>
 </footer>
+</div><!-- /#seo-fallback -->
 
-<!--
-  Self-contained SEO page. The rich content above is the canonical version
-  of this island guide — meant to rank in Google. Users who want the
-  interactive map, comparison tool, or quiz can click through to the SPA.
-  No JS redirect, no DOM surgery — just a clean page.
--->
+<!-- SPA view-detail skeleton — populated by script.js renderIslandPage(),
+     hidden until hydration kicks in (display:none below is removed by the
+     SPA after it boots). Mirrors the structure in /index.html exactly. -->
+<main id="view-detail" class="view-section" style="display:none;">
+  <div class="detail-container">
+    <div class="detail-header">
+      <button class="back-btn" id="detail-back-btn" data-i18n="detail.back">{'← Back to Map' if lang == 'en' else '← Πίσω στον Χάρτη'}</button>
+      <h2 id="island-name"></h2>
+      <div class="island-meta-pill" id="island-meta-info"></div>
+      <button class="compare-add-btn" id="detail-compare-btn" data-i18n="detail.compare">{'＋ Compare' if lang == 'en' else '＋ Σύγκρινε'}</button>
+      <button class="shortlist-btn" id="detail-shortlist-btn" onclick="toggleShortlist()" data-i18n="detail.save">{'☆ Save' if lang == 'en' else '☆ Αποθήκευση'}</button>
+      <button class="share-btn" id="detail-share-btn" onclick="copyIslandLink()" data-i18n="detail.copylink">{'🔗 Copy link' if lang == 'en' else '🔗 Αντιγραφή'}</button>
+      <button class="print-btn" id="detail-print-btn" onclick="printIsland()" data-i18n="detail.print">{'🖨 Print' if lang == 'en' else '🖨 Εκτύπωση'}</button>
+      <a class="ferry-btn" id="detail-ferry-btn" target="_blank" rel="noopener" data-i18n="detail.bookferry">{'🚢 Book ferry tickets' if lang == 'en' else '🚢 Κράτηση πλοίου'}</a>
+    </div>
+    <div class="detail-grid">
+      <div class="detail-main">
+        <div id="island-mini-map"></div>
+        <div id="island-guide"></div>
+      </div>
+      <aside class="detail-sidebar">
+        <div class="sidebar-box">
+          <h3 data-i18n="detail.ratings">{'Blueprint Ratings' if lang == 'en' else 'Βαθμολογίες'}</h3>
+          <a href="#how-we-score" onclick="navMission(event)" class="how-we-score-link" data-i18n="scoring.howlink">{'how we score' if lang == 'en' else 'πώς βαθμολογούμε'}</a>
+          <div class="rating-list">
+            <div class="rating-item"><span class="rating-label" data-i18n="sidebar.beach">{'Beach Quality' if lang == 'en' else 'Παραλίες'}</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div><span class="rating-val" id="val-beach"></span></div>
+            <div class="rating-item"><span class="rating-label" data-i18n="sidebar.culture">{'Culture &amp; History' if lang == 'en' else 'Πολιτισμός'}</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div><span class="rating-val" id="val-hist"></span></div>
+            <div class="rating-item"><span class="rating-label" data-i18n="sidebar.night">{'Night Life' if lang == 'en' else 'Νυχτερινή Ζωή'}</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div><span class="rating-val" id="val-night"></span></div>
+            <div class="rating-item"><span class="rating-label" data-i18n="sidebar.access">{'Access Ease' if lang == 'en' else 'Πρόσβαση'}</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div><span class="rating-val" id="val-access"></span></div>
+            <div class="rating-item"><span class="rating-label" data-i18n="sidebar.afford">{'Price Level' if lang == 'en' else 'Επίπεδο Τιμών'}</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div><span class="rating-val" id="val-afford"></span></div>
+            <div class="rating-item rating-item-car" title="" id="rating-item-car"><span class="rating-label" data-i18n="sidebar.car">{'Car reliance' if lang == 'en' else 'Ανάγκη Αυτοκινήτου'}</span><span class="rating-val" id="val-car"></span></div>
+          </div>
+        </div>
+        <div class="sidebar-box" id="sidebar-stats">
+          <h3 data-i18n="detail.keystats">{'Key Stats' if lang == 'en' else 'Στοιχεία'}</h3>
+          <div class="stat-line"><span data-i18n="detail.area">{'Land Area:' if lang == 'en' else 'Έκταση:'}</span> <strong id="stat-area"></strong></div>
+          <div class="stat-line"><span data-i18n="detail.population">{'Population:' if lang == 'en' else 'Πληθυσμός:'}</span> <strong id="stat-pop"></strong></div>
+          <div class="stat-line"><span data-i18n="detail.group">{'Group:' if lang == 'en' else 'Νησιωτικό Σύμπλεγμα:'}</span> <strong id="stat-group"></strong></div>
+          <div class="stat-line"><span data-i18n="detail.suggestedstay">{'Suggested stay:' if lang == 'en' else 'Προτεινόμενη Διαμονή:'}</span> <strong id="stat-days"></strong></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- SPA hydration — load Leaflet + Chart.js + i18n + script.js, then swap
+     the SEO fallback for the hydrated view-detail. The home-base URL for
+     the back button is overridden because the SPA's default 'navigateTo
+     home' just sets a hash on the current path, which would re-trigger
+     this island page. -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="{asset_prefix}i18n.js?v=26"></script>
+<script src="{asset_prefix}script.js?v=33"></script>
+<script>
+  // Static-page hydration handoff: once script.js loads and renderIslandPage
+  // populates view-detail, hide the SEO fallback and show view-detail.
+  // Wrapped in DOMContentLoaded + setTimeout because script.js's main init
+  // runs on its own event listeners — we wait for it to finish populating.
+  (function() {{
+    function tryHandoff() {{
+      var detail = document.getElementById('view-detail');
+      var nameEl = document.getElementById('island-name');
+      // Hand off only once the SPA has actually populated the island name
+      // — that's the signal that renderIslandPage() finished.
+      if (detail && nameEl && nameEl.textContent.trim()) {{
+        document.getElementById('seo-fallback').style.display = 'none';
+        detail.style.display = '';
+        // Override the back button to go to the actual homepage URL,
+        // not just push a hash on the current path (which would re-trigger).
+        var backBtn = document.getElementById('detail-back-btn');
+        if (backBtn) {{
+          backBtn.onclick = function(e) {{
+            if (e) e.preventDefault();
+            window.location.href = '{('/' if lang == 'en' else '/el/')}';
+          }};
+        }}
+        return true;
+      }}
+      return false;
+    }}
+    // Poll briefly for the handoff signal. ~10 attempts at 200ms intervals.
+    var attempts = 0;
+    var iv = setInterval(function() {{
+      if (tryHandoff() || ++attempts > 20) clearInterval(iv);
+    }}, 200);
+  }})();
+</script>
 <script>
 // Track that someone viewed this page (same GA as main site)
 (function() {{
