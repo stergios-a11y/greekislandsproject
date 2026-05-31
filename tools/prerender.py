@@ -1679,6 +1679,9 @@ def generate_ferries_page(island_keys):
                              'καλοκαίρι έχει κίνηση — έλα 60-90 λεπτά πριν την αναχώρηση. '
                              'Για κράτηση online συνιστούμε το ')
             ferryhopper_link = '<a href="https://www.ferryhopper.com/" target="_blank" rel="noopener">Ferryhopper</a>.'
+            crosslink_text = ('Σχεδιάζεις διαδρομή πολλαπλών νησιών; Δες τον '
+                              '<a href="/el/#hopping">διαδραστικό χάρτη και σχεδιαστή διαδρομών</a> '
+                              'και τις <a href="/el/#hopping">προτεινόμενες διαδρομές νησοπορίας</a>.')
         else:
             title = 'Ferries from Athens to the Greek Islands — all routes | Aegean Blueprint'
             description = 'Ferries from Piraeus, Rafina, and Lavrio to 78 islands. Duration, frequency, fare. Up-to-date guide for 2026.'
@@ -1701,6 +1704,9 @@ def generate_ferries_page(island_keys):
                              'at the port the same day. Summer is busier — arrive 60-90 minutes '
                              'before departure. For online booking we recommend ')
             ferryhopper_link = '<a href="https://www.ferryhopper.com/" target="_blank" rel="noopener">Ferryhopper</a>.'
+            crosslink_text = ('Planning a multi-island hop? See our '
+                              '<a href="/#hopping">interactive ferry network map and route planner</a> '
+                              'and <a href="/#hopping">curated island-hopping itineraries</a>.')
 
         # Build port sections
         port_sections = []
@@ -1730,6 +1736,15 @@ def generate_ferries_page(island_keys):
                 f'<section class="ferry-port" id="{port_anchor}">'
                 f'<h2>{esc(port_name)}</h2>'
                 '<div class="ferry-table-wrap"><table class="ferry-table">'
+                # colgroup makes table-layout:fixed work — column widths come
+                # from the col elements, not from inspecting cell content.
+                '<colgroup>'
+                '<col class="ferry-col-dest">'
+                '<col class="ferry-col-dur">'
+                '<col class="ferry-col-freq">'
+                '<col class="ferry-col-price">'
+                '<col class="ferry-col-note">'
+                '</colgroup>'
                 f'<thead><tr><th>{head_dest}</th><th>{head_dur}</th><th>{head_freq}</th><th>{head_price}</th><th>{head_note}</th></tr></thead>'
                 f'<tbody>{"".join(rows)}</tbody>'
                 '</table></div>'
@@ -1803,15 +1818,26 @@ def generate_ferries_page(island_keys):
             '  .ferry-port { margin-bottom: 40px; }\n'
             '  .ferry-port h2 { font-family: var(--serif, Georgia), serif; font-size: 26px; margin: 0 0 16px; padding-bottom: 6px; border-bottom: 2px solid var(--aegean, #0B8FAC); }\n'
             '  .ferry-table-wrap { overflow-x: auto; }\n'
-            '  .ferry-table { width: 100%; border-collapse: collapse; font-size: 14px; }\n'
+            '  /* table-layout: fixed + explicit column widths ensures all tables\n'
+            '     across port sections share the same column proportions, regardless\n'
+            '     of content length. Without this, each table auto-sizes its columns\n'
+            '     to its own content, so a section with short notes ends up with\n'
+            '     much narrower columns than one with long notes — looks broken. */\n'
+            '  .ferry-table { width: 100%; border-collapse: collapse; font-size: 14px; table-layout: fixed; }\n'
+            '  .ferry-table col.ferry-col-dest  { width: 25%; }\n'
+            '  .ferry-table col.ferry-col-dur   { width: 12%; }\n'
+            '  .ferry-table col.ferry-col-freq  { width: 14%; }\n'
+            '  .ferry-table col.ferry-col-price { width: 12%; }\n'
+            '  .ferry-table col.ferry-col-note  { width: 37%; }\n'
             '  .ferry-table thead th { text-align: left; padding: 10px 12px; background: var(--marble, #f6f4ee); color: var(--ink-2, #333); font-weight: 700; border-bottom: 2px solid var(--border, #e5e1d8); white-space: nowrap; }\n'
-            '  .ferry-table tbody td { padding: 10px 12px; border-bottom: 1px solid var(--border, #eee); vertical-align: top; }\n'
+            '  .ferry-table tbody td { padding: 10px 12px; border-bottom: 1px solid var(--border, #eee); vertical-align: top; word-wrap: break-word; overflow-wrap: break-word; }\n'
             '  .ferry-table tbody tr:hover { background: var(--aegean-pale, rgba(11,143,172,0.05)); }\n'
             '  .ferry-table a { color: var(--aegean-dark, #076880); font-weight: 600; text-decoration: none; }\n'
             '  .ferry-table a:hover { text-decoration: underline; }\n'
             '  .ferry-dest { font-weight: 600; }\n'
             '  .ferry-note { color: var(--ink-3, #888); font-size: 13px; }\n'
             '  .ferry-footer { background: var(--marble, #f6f4ee); padding: 20px 24px; border-radius: 12px; font-size: 15px; line-height: 1.6; color: var(--ink-1, #444); margin-top: 32px; }\n'
+            '  .ferry-footer p { margin: 0; }\n'
             '  .ferry-footer a { color: var(--aegean-dark, #076880); font-weight: 600; }\n'
             '  @media (max-width: 600px) {\n'
             '    .ferry-page { padding: 20px 16px 48px; }\n'
@@ -1856,7 +1882,7 @@ def generate_ferries_page(island_keys):
             f'  <p class="ferry-intro">{intro}</p>\n'
             f'  <div class="ferry-nav"><span class="ferry-nav-label">{esc(port_subtitle)}</span>{port_nav}</div>\n'
             + '\n'.join(port_sections) +
-            f'\n  <div class="ferry-footer">{booking_intro}{ferryhopper_link}</div>\n'
+            f'\n  <div class="ferry-footer"><p>{booking_intro}{ferryhopper_link}</p><p style="margin-top: 12px;">{crosslink_text}</p></div>\n'
             '</main>\n'
             '<script>\n'
             '  /* Mobile hamburger toggle */\n'

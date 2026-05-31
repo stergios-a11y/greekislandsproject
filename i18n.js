@@ -269,6 +269,8 @@ const UI_TEXT = {
   'planner.freq.low':    { en: 'Few per week', el: 'Λίγα/εβδομάδα' },
   'planner.freq.seasonal':{ en: 'Summer only', el: 'Μόνο καλοκαίρι' },
   'hopping.intro': { en: 'The most iconic Greek ferry routes — the backbone of any island-hopping trip. Hover over a line for details, click a port to open its island page.', el: 'Οι πιο εμβληματικές διαδρομές πλοίων στην Ελλάδα. Πέρνα τον κέρσορα πάνω από μια γραμμή για λεπτομέρειες, πάτα σε ένα λιμάνι για να ανοίξεις τη σελίδα του νησιού.' },
+  'hopping.crosslink': { en: 'Looking for ferries from mainland Athens to the islands? See our ', el: 'Ψάχνεις πλοία από την ηπειρωτική Ελλάδα προς τα νησιά; Δες τον ' },
+  'hopping.crosslink_label': { en: 'complete ferries guide', el: 'πλήρη οδηγό πλοίων' },
   'hopping.legend.high': { en: 'Multiple daily', el: 'Πολλά ημερησίως' },
   'hopping.legend.med': { en: 'Daily / near-daily', el: 'Καθημερινά' },
   'hopping.legend.low': { en: 'Few per week', el: 'Λίγα/εβδομάδα' },
