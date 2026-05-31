@@ -598,7 +598,14 @@ function setupLanguageToggle() {
 function setupDarkMode() {
   const btn = document.getElementById('dark-mode-btn');
   const root = document.documentElement;
-  if (localStorage.getItem('darkMode') === 'true') { root.classList.add('dark'); btn.textContent = '☀'; }
+  // Apply persisted preference even if the toggle button isn't on this page
+  // (static island pages don't include the homepage's dark-mode button).
+  if (localStorage.getItem('darkMode') === 'true') {
+    root.classList.add('dark');
+    if (btn) btn.textContent = '☀';
+  }
+  // No button → nothing to wire up; bail before .addEventListener throws.
+  if (!btn) return;
   btn.addEventListener('click', () => {
     const isDark = root.classList.toggle('dark');
     btn.textContent = isDark ? '☀' : '☾';
