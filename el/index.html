@@ -125,6 +125,7 @@
         <a href="#" id="nav-data" data-i18n="nav.data">Στοιχεία Νησιών</a>
         <a href="#" id="nav-compare" data-i18n="nav.compare">Σύγκριση</a>
         <a href="/el/festivals/" id="nav-festivals" data-i18n="nav.festivals">Γιορτές</a>
+        <a href="/el/ferries/" id="nav-ferries" data-i18n="nav.ferries">Πλοία</a>
         <a href="#" id="nav-hopping" data-i18n="nav.hopping">Νησοπορία</a>
         <a href="#" id="nav-international" data-i18n="nav.international">Διεθνώς</a>
         <a href="#" id="nav-match" data-i18n="nav.match">Βρες το Νησί σου</a>
@@ -194,6 +195,7 @@
   </div>
 
   <main id="view-home" class="view-section">
+    <h1 class="sr-only">Aegean Blueprint — Οδηγός Ελληνικών Νησιών</h1>
     <div class="help-modal" id="help-modal" style="display:none;">
       <div class="help-modal-content">
         <button class="help-modal-close" onclick="closeHelp()" aria-label="Close">×</button>
@@ -276,7 +278,7 @@
   </main>
 
   <main id="view-data" class="view-section content-page" style="display:none;">
-    <h1 data-i18n="data.title">Βάση Νησιών</h1>
+    <h2 data-i18n="data.title">Βάση Νησιών</h2>
     <div class="table-search-row">
       <input type="text" id="tableSearchInput" placeholder="Φιλτράρισμα νησιών…" data-i18n-placeholder="data.search">
       <span id="table-count-label" class="table-count"></span>
@@ -309,7 +311,7 @@
   </main>
 
   <main id="view-compare" class="view-section content-page" style="display:none;">
-    <h1 data-i18n="compare.title">Σύγκριση Νησιών</h1>
+    <h2 data-i18n="compare.title">Σύγκριση Νησιών</h2>
     <p class="compare-intro" data-i18n="compare.intro">Επίλεξε δύο νησιά για σύγκριση.</p>
     <div class="compare-selectors">
       <select id="compare-select-a"><option value="" data-i18n="compare.optionA">— Νησί Α —</option></select>
@@ -333,7 +335,7 @@
 
   <main id="view-hopping" class="view-section content-page" style="display:none;">
     <div class="hopping-header">
-      <h1 data-i18n="hopping.title">🚢 Νησοπορία</h1>
+      <h2 data-i18n="hopping.title">🚢 Νησοπορία</h2>
       <p class="hopping-intro"><span data-i18n="hopping.intro">Οι πιο εμβληματικές διαδρομές πλοίων στην Ελλάδα. Πέρνα τον κέρσορα πάνω από μια γραμμή για λεπτομέρειες, πάτα σε ένα λιμάνι για να ανοίξεις τη σελίδα του νησιού.</span></p>
     </div>
     <div class="planner-header-row">
@@ -367,7 +369,7 @@
 
   <main id="view-international" class="view-section content-page" style="display:none;">
     <div class="hopping-header">
-      <h1 data-i18n="international.title">🌍 Διεθνείς Αποδράσεις</h1>
+      <h2 data-i18n="international.title">🌍 Διεθνείς Αποδράσεις</h2>
       <p class="hopping-intro"><span data-i18n="international.intro">Τα ελληνικά νησιά είναι πιο κοντά σε ξένες ακτές απ'όσο νομίζεις. Από την Κέρκυρα, η Αλβανία απέχει 30 λεπτά. Από το Ανατολικό Αιγαίο, η Τουρκία είναι σύντομη διαδρομή. Εδώ είναι οι αξιόπιστες διεθνείς συνδέσεις πλοίων από ελληνικά νησιά — ένα διαφορετικό είδος νησοπορίας.</span></p>
       <div class="intl-prebook-notice" data-i18n="international.prebook">💡 <strong>Δεν χρειάζεται προκράτηση.</strong> Για όλες τις παρακάτω διαδρομές, μπορείς να αγοράσεις το εισιτήριο επί τόπου στο λιμάνι την ίδια μέρα. Το καλοκαίρι έχει κίνηση — έλα 60–90 λεπτά πριν την αναχώρηση για να εξασφαλίσεις θέση.</div>
     </div>
@@ -382,14 +384,14 @@
   </main>
 
   <main id="view-match" class="view-section content-page" style="display:none;">
-    <h1 data-i18n="match.title">Βρες το Νησί σου</h1>
+    <h2 data-i18n="match.title">Βρες το Νησί σου</h2>
     <p class="match-intro" data-i18n="match.intro">Απάντησε σε 7 γρήγορες ερωτήσεις και θα σε ταιριάξουμε με τα ιδανικά νησιά για εσένα.</p>
     <div id="quiz-container"></div>
     <div id="quiz-results" style="display:none;"></div>
   </main>
 
   <main id="view-shortlist" class="view-section content-page" style="display:none;">
-    <h1 data-i18n="shortlist.title">⭐ Η Λίστα μου</h1>
+    <h2 data-i18n="shortlist.title">⭐ Η Λίστα μου</h2>
     <p class="match-intro" data-i18n="shortlist.intro">Τα αποθηκευμένα σου νησιά — αποθηκευμένα σε αυτή τη συσκευή.</p>
     <div id="shortlist-container"></div>
   </main>
@@ -405,7 +407,7 @@
         <line x1="640" y1="0" x2="640" y2="300" stroke="#fff" stroke-width="0.8" stroke-dasharray="5 12" opacity="0.5"/>
       </svg>
       <div class="why-hero-logo-wrap"><img src="/logo-hero.svg" alt="Λογότυπο Aegean Blueprint" data-i18n-alt="a11y.logo_alt"></div>
-      <h1 data-i18n="mission.title">Στόχος</h1>
+      <h2 data-i18n="mission.title">Στόχος</h2>
       <p class="why-hero-sub" data-i18n="mission.tagline">Για ταξιδιώτες που θέλουν να ζήσουν τις διακοπές, όχι να τις σχεδιάσουν.</p>
     </div>
 
@@ -583,7 +585,7 @@
     <div class="detail-container">
       <div class="detail-header">
         <button class="back-btn" id="detail-back-btn" data-i18n="detail.back">← Χάρτης</button>
-        <h1 id="island-name"></h1>
+        <h2 id="island-name"></h2>
         <div class="island-meta-pill" id="island-meta-info"></div>
         <button class="compare-add-btn" id="detail-compare-btn" data-i18n="detail.compare">＋ Σύγκριση</button>
         <button class="shortlist-btn" id="detail-shortlist-btn" onclick="toggleShortlist()" data-i18n="detail.save">☆ Λίστα</button>

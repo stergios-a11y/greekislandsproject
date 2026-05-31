@@ -23,6 +23,7 @@ const UI_TEXT = {
   'nav.data': { en: 'Islands Data', el: 'Στοιχεία Νησιών' },
   'nav.compare': { en: 'Compare', el: 'Σύγκριση' },
   'nav.festivals': { en: 'Festivals', el: 'Γιορτές' },
+  'nav.ferries': { en: 'Ferries', el: 'Πλοία' },
   'nav.hopping': { en: 'Island Hopping', el: 'Νησοπορία' },
   'nav.international': { en: 'International', el: 'Διεθνώς' },
   'nav.match': { en: 'Match Me', el: 'Βρες το Νησί σου' },

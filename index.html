@@ -10,7 +10,7 @@
     gtag('js', new Date());
     gtag('config', 'G-FMFWLRM2J9');
   </script>
-  <title>Greek Island Guide — Compare 78 Islands, Itineraries, Beaches | Aegean Blueprint</title>
+  <title>Greek Island Guide — 78 Islands, Reviewed | Aegean Blueprint</title>
   <meta name="description" content="Honest, opinionated guides to all 78 Greek islands. Compare beaches, culture, ferries and crowds — written by someone who actually goes there.">
   <meta name="keywords" content="greek islands, greek island guide, santorini itinerary, mykonos, cyclades, dodecanese, ionian islands, greek island hopping, greece travel, compare greek islands">
   <meta name="theme-color" content="#0B8FAC">
@@ -127,6 +127,7 @@
         <a href="#" id="nav-data" data-i18n="nav.data">Islands Data</a>
         <a href="#" id="nav-compare" data-i18n="nav.compare">Compare</a>
         <a href="/festivals/" id="nav-festivals" data-i18n="nav.festivals">Festivals</a>
+        <a href="/ferries/" id="nav-ferries" data-i18n="nav.ferries">Ferries</a>
         <a href="#" id="nav-hopping" data-i18n="nav.hopping">Island Hopping</a>
         <a href="#" id="nav-international" data-i18n="nav.international">International</a>
         <a href="#" id="nav-match" data-i18n="nav.match">Match Me</a>
@@ -196,6 +197,7 @@
   </div>
 
   <main id="view-home" class="view-section">
+    <h1 class="sr-only">Aegean Blueprint — Greek Island Travel Guide</h1>
     <div class="help-modal" id="help-modal" style="display:none;">
       <div class="help-modal-content">
         <button class="help-modal-close" onclick="closeHelp()" aria-label="Close">×</button>
@@ -285,7 +287,7 @@
   </main>
 
   <main id="view-data" class="view-section content-page" style="display:none;">
-    <h1 data-i18n="data.title">Islands Database</h1>
+    <h2 data-i18n="data.title">Islands Database</h2>
     <div class="table-search-row">
       <input type="text" id="tableSearchInput" placeholder="Filter islands…" data-i18n-placeholder="data.search">
       <span id="table-count-label" class="table-count"></span>
@@ -318,7 +320,7 @@
   </main>
 
   <main id="view-compare" class="view-section content-page" style="display:none;">
-    <h1 data-i18n="compare.title">Compare Islands</h1>
+    <h2 data-i18n="compare.title">Compare Islands</h2>
     <p class="compare-intro" data-i18n="compare.intro">Select two islands to compare side-by-side.</p>
     <div class="compare-selectors">
       <select id="compare-select-a"><option value="" data-i18n="compare.optionA">— Island A —</option></select>
@@ -342,7 +344,7 @@
 
   <main id="view-hopping" class="view-section content-page" style="display:none;">
     <div class="hopping-header">
-      <h1 data-i18n="hopping.title">🚢 Island Hopping</h1>
+      <h2 data-i18n="hopping.title">🚢 Island Hopping</h2>
       <p class="hopping-intro"><span data-i18n="hopping.intro">The most iconic Greek ferry routes — the backbone of any island-hopping trip. Hover over a line for details, click a port to open its island page.</span></p>
     </div>
     <div class="planner-header-row">
@@ -376,7 +378,7 @@
 
   <main id="view-international" class="view-section content-page" style="display:none;">
     <div class="hopping-header">
-      <h1 data-i18n="international.title">🌍 International Escapes</h1>
+      <h2 data-i18n="international.title">🌍 International Escapes</h2>
       <p class="hopping-intro"><span data-i18n="international.intro">Greek islands are closer to foreign shores than you think. From Corfu, Albania is 30 minutes away. From the east Aegean, Turkey is a short ferry across. Here are the proven international ferry connections from Greek islands — a different kind of island-hopping.</span></p>
       <div class="intl-prebook-notice" data-i18n="international.prebook">💡 <strong>No need to pre-book.</strong> For all routes below, you can buy your ferry ticket on the spot at the port on the same day. Summer is busier — arrive 60–90 min before departure to secure your seat.</div>
     </div>
@@ -391,14 +393,14 @@
   </main>
 
   <main id="view-match" class="view-section content-page" style="display:none;">
-    <h1 data-i18n="match.title">Match Me</h1>
+    <h2 data-i18n="match.title">Match Me</h2>
     <p class="match-intro" data-i18n="match.intro">Answer 4 quick questions and we'll recommend your top islands.</p>
     <div id="quiz-container"></div>
     <div id="quiz-results" style="display:none;"></div>
   </main>
 
   <main id="view-shortlist" class="view-section content-page" style="display:none;">
-    <h1 data-i18n="shortlist.title">⭐ My Shortlist</h1>
+    <h2 data-i18n="shortlist.title">⭐ My Shortlist</h2>
     <p class="match-intro" data-i18n="shortlist.intro">Your saved islands — stored in this browser.</p>
     <div id="shortlist-container"></div>
   </main>
@@ -414,7 +416,7 @@
         <line x1="640" y1="0" x2="640" y2="300" stroke="#fff" stroke-width="0.8" stroke-dasharray="5 12" opacity="0.5"/>
       </svg>
       <div class="why-hero-logo-wrap"><img src="logo-hero.svg" alt="Aegean Blueprint logo" data-i18n-alt="a11y.logo_alt"></div>
-      <h1 data-i18n="mission.title">Mission</h1>
+      <h2 data-i18n="mission.title">Mission</h2>
       <p class="why-hero-sub" data-i18n="mission.tagline">For travellers who want to live the holiday, not plan it.</p>
     </div>
 
@@ -605,7 +607,7 @@
     <div class="detail-container">
       <div class="detail-header">
         <button class="back-btn" id="detail-back-btn" data-i18n="detail.back">← Back to Map</button>
-        <h1 id="island-name"></h1>
+        <h2 id="island-name"></h2>
         <div class="island-meta-pill" id="island-meta-info"></div>
         <button class="compare-add-btn" id="detail-compare-btn" data-i18n="detail.compare">＋ Compare</button>
         <button class="shortlist-btn" id="detail-shortlist-btn" onclick="toggleShortlist()" data-i18n="detail.save">☆ Save</button>

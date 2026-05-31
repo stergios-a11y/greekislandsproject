@@ -1461,6 +1461,328 @@ def render_page(key, data, meta, lang='en'):
 # ---------------------------------------------------------------------
 # Main generation loop
 # ---------------------------------------------------------------------
+def generate_ferries_page(island_keys):
+    """Build a static ferries hub page (EN + EL) at /ferries/index.html.
+
+    Pulls the FERRY_GRAPH array out of script.js by regex — single source of
+    truth, no data duplication. Builds a sortable table of all ferry routes
+    departing from each mainland port (Piraeus, Rafina, Lavrio, Patras, etc.).
+
+    Why static HTML rather than another SPA view: this page targets generic
+    queries like "ferries from Athens to Greek islands" and needs to be a
+    real indexable URL, not a `#hash`. Same approach as /festivals/.
+    """
+    # Parse FERRY_GRAPH out of script.js. Each entry looks like:
+    #   { a: 'piraeus', b: 'mykonos', dur: 285, freq: 'high', plo: 30, phi: 65, note: "..." },
+    script_path = ROOT / 'script.js'
+    script_text = script_path.read_text(encoding='utf-8')
+    graph_block_match = re.search(r'const FERRY_GRAPH = \[([\s\S]+?)\n\];', script_text)
+    if not graph_block_match:
+        print('  ⚠  Could not find FERRY_GRAPH in script.js — skipping ferries page')
+        return 0
+    block = graph_block_match.group(1)
+    routes = []
+    # Each route line:  { a: 'piraeus', b: 'mykonos', dur: 285, freq: 'high', plo: 30, phi: 65, note: "..." }
+    for m in re.finditer(
+        r"\{\s*a:\s*'([^']+)',\s*b:\s*'([^']+)',\s*dur:\s*(\d+),\s*freq:\s*'(\w+)',\s*plo:\s*(\d+),\s*phi:\s*(\d+)(?:,\s*note:\s*\"([^\"]*)\")?",
+        block
+    ):
+        routes.append({
+            'a': m.group(1), 'b': m.group(2),
+            'dur': int(m.group(3)),
+            'freq': m.group(4),
+            'plo': int(m.group(5)), 'phi': int(m.group(6)),
+            'note': m.group(7) or '',
+        })
+    if not routes:
+        print('  ⚠  FERRY_GRAPH parsed empty — skipping ferries page')
+        return 0
+
+    # Pull a mapping of island-key → display name from ISLANDS_DATA (also in script.js).
+    # Quick-and-dirty: regex out each `"key": { name:"Name", ...`.
+    isl_block_match = re.search(r'const ISLANDS_DATA = \{([\s\S]+?)\n\};', script_text)
+    name_map = {}
+    if isl_block_match:
+        for m in re.finditer(r'"([\w-]+)":\s*\{\s*name:\s*"([^"]+)"', isl_block_match.group(1)):
+            name_map[m.group(1)] = m.group(2)
+
+    # Hand-curated mainland-port labels (these aren't in ISLANDS_DATA — they're departure ports)
+    PORT_LABELS = {
+        'piraeus':  {'en': 'Piraeus',  'el': 'Πειραιάς'},
+        'rafina':   {'en': 'Rafina',   'el': 'Ραφήνα'},
+        'lavrio':   {'en': 'Lavrio',   'el': 'Λαύριο'},
+        'patras':   {'en': 'Patras',   'el': 'Πάτρα'},
+        'kyllini':  {'en': 'Kyllini',  'el': 'Κυλλήνη'},
+        'igoumenitsa': {'en': 'Igoumenitsa', 'el': 'Ηγουμενίτσα'},
+        'alexandroupoli': {'en': 'Alexandroupoli', 'el': 'Αλεξανδρούπολη'},
+        'kavala':   {'en': 'Kavala',   'el': 'Καβάλα'},
+        'volos':    {'en': 'Volos',    'el': 'Βόλος'},
+        'agios-konstantinos': {'en': 'Agios Konstantinos', 'el': 'Άγιος Κωνσταντίνος'},
+        'thessaloniki': {'en': 'Thessaloniki', 'el': 'Θεσσαλονίκη'},
+        'neapoli':  {'en': 'Neapoli (Voion)', 'el': 'Νεάπολη (Βοιών)'},
+        'gythio':   {'en': 'Gythio',   'el': 'Γύθειο'},
+        'pounta':   {'en': 'Pounta',   'el': 'Πούντα'},
+        'perama':   {'en': 'Perama',   'el': 'Πέραμα'},
+    }
+
+    # The mainland ports we care about — order matters for the page sections
+    MAINLAND_ORDER = ['piraeus', 'rafina', 'lavrio', 'patras', 'kyllini',
+                      'igoumenitsa', 'agios-konstantinos', 'volos',
+                      'thessaloniki', 'kavala', 'alexandroupoli',
+                      'neapoli', 'gythio']
+    # Routes grouped by origin (mainland port)
+    routes_by_origin = {}
+    for r in routes:
+        if r['a'] in MAINLAND_ORDER:
+            routes_by_origin.setdefault(r['a'], []).append(r)
+    # Sort each origin's routes by duration ascending (quickest first)
+    for o in routes_by_origin:
+        routes_by_origin[o].sort(key=lambda r: r['dur'])
+
+    def fmt_duration(mins):
+        if mins < 60:
+            return f'{mins} min'
+        h = mins // 60
+        m = mins % 60
+        return f'{h}h {m:02d}m' if m else f'{h}h'
+
+    def fmt_freq(freq, lang):
+        labels = {
+            'en': {'high': 'Daily+', 'med': 'Most days', 'low': '2-4/week'},
+            'el': {'high': 'Καθημερινά+', 'med': 'Σχεδόν καθημερινά', 'low': '2-4/εβδ.'}
+        }
+        return labels[lang].get(freq, freq)
+
+    def island_link(key, lang):
+        """Return an HTML link to the island detail page; falls back to plain text."""
+        name = name_map.get(key, key.title())
+        # Mainland port — render as plain text
+        if key in PORT_LABELS:
+            return esc(PORT_LABELS[key][lang])
+        # Some island keys are valid; some (eg 'piraeus') aren't
+        if key in island_keys:
+            path = f'/el/island/{key}/' if lang == 'el' else f'/island/{key}/'
+            return f'<a href="{path}">{esc(name)}</a>'
+        return esc(name)
+
+    # Build the page for each language
+    for lang in ['en', 'el']:
+        is_el = (lang == 'el')
+        if is_el:
+            title = 'Πλοία προς τα Ελληνικά Νησιά από Αθήνα — όλες οι διαδρομές | Aegean Blueprint'
+            description = 'Πλοία από Πειραιά, Ραφήνα και Λαύριο προς 78 νησιά. Διάρκεια, συχνότητα, τιμές. Ενημερωμένος οδηγός για το 2026.'
+            intro = ('Σχεδόν όλα τα νησιά του Αιγαίου και του Ιονίου είναι προσβάσιμα με πλοίο '
+                     'από την Αθήνα — αλλά το λιμάνι έναρξης κάνει μεγάλη διαφορά. Ο '
+                     '<strong>Πειραιάς</strong> εξυπηρετεί τα περισσότερα Κυκλάδες, Δωδεκάνησα, '
+                     'Κρήτη και την υπόλοιπη Ελλάδα — είναι το μεγάλο λιμάνι, με μεγαλύτερες '
+                     'ουρές και πιο αργές διαδρομές. Η <strong>Ραφήνα</strong> είναι μικρότερη, '
+                     'γρηγορότερη για τις βόρειες Κυκλάδες (Άνδρος, Τήνος, Μύκονος, Πάρος, Νάξος). '
+                     'Το <strong>Λαύριο</strong> εξυπηρετεί λίγες αλλά συγκεκριμένες προορισμούς '
+                     '(Κέα, Κύθνος και την οδηγική σύνδεση προς τις βόρειες Κυκλάδες).')
+            port_subtitle = 'Διαδρομές από κάθε λιμάνι'
+            head_dest = 'Προορισμός'
+            head_dur = 'Διάρκεια'
+            head_freq = 'Συχνότητα'
+            head_price = 'Τιμή (€)'
+            head_note = 'Σημείωση'
+            booking_intro = ('<strong>Κρατήσεις:</strong> Για τις περισσότερες διαδρομές μπορείς '
+                             'να αγοράσεις εισιτήριο επί τόπου στο λιμάνι την ίδια μέρα. Το '
+                             'καλοκαίρι έχει κίνηση — έλα 60-90 λεπτά πριν την αναχώρηση. '
+                             'Για κράτηση online συνιστούμε το ')
+            ferryhopper_link = '<a href="https://www.ferryhopper.com/" target="_blank" rel="noopener">Ferryhopper</a>.'
+        else:
+            title = 'Ferries from Athens to the Greek Islands — all routes | Aegean Blueprint'
+            description = 'Ferries from Piraeus, Rafina, and Lavrio to 78 islands. Duration, frequency, fare. Up-to-date guide for 2026.'
+            intro = ('Almost every Aegean and Ionian island is reachable by ferry from Athens — '
+                     'but the departure port matters. <strong>Piraeus</strong> serves most '
+                     'Cyclades, Dodecanese, Crete, and northern Aegean — it\'s the big port, '
+                     'with longer queues and (usually) slower overnight ferries. '
+                     '<strong>Rafina</strong> is smaller, quicker for the northern Cyclades '
+                     '(Andros, Tinos, Mykonos, Paros, Naxos), and worth the slight drive from '
+                     'central Athens if you\'re heading there. <strong>Lavrio</strong> serves '
+                     'a few specific destinations (Kea, Kythnos, and the driving connection '
+                     'to the northern Cyclades).')
+            port_subtitle = 'Routes from each port'
+            head_dest = 'Destination'
+            head_dur = 'Duration'
+            head_freq = 'Frequency'
+            head_price = 'Price (€)'
+            head_note = 'Notes'
+            booking_intro = ('<strong>Booking:</strong> For most routes, you can buy your ticket '
+                             'at the port the same day. Summer is busier — arrive 60-90 minutes '
+                             'before departure. For online booking we recommend ')
+            ferryhopper_link = '<a href="https://www.ferryhopper.com/" target="_blank" rel="noopener">Ferryhopper</a>.'
+
+        # Build port sections
+        port_sections = []
+        for port in MAINLAND_ORDER:
+            port_routes = routes_by_origin.get(port, [])
+            if not port_routes:
+                continue
+            port_name = PORT_LABELS[port][lang]
+            rows = []
+            for r in port_routes:
+                # Skip mainland-to-mainland (e.g. Piraeus → Perama)
+                if r['b'] in PORT_LABELS and r['b'] not in island_keys:
+                    continue
+                rows.append(
+                    '<tr>'
+                    f'<td class="ferry-dest">{island_link(r["b"], lang)}</td>'
+                    f'<td>{fmt_duration(r["dur"])}</td>'
+                    f'<td>{fmt_freq(r["freq"], lang)}</td>'
+                    f'<td>€{r["plo"]}-{r["phi"]}</td>'
+                    f'<td class="ferry-note">{esc(r["note"])}</td>'
+                    '</tr>'
+                )
+            if not rows:
+                continue
+            port_anchor = f'port-{port}'
+            port_sections.append(
+                f'<section class="ferry-port" id="{port_anchor}">'
+                f'<h2>{esc(port_name)}</h2>'
+                '<div class="ferry-table-wrap"><table class="ferry-table">'
+                f'<thead><tr><th>{head_dest}</th><th>{head_dur}</th><th>{head_freq}</th><th>{head_price}</th><th>{head_note}</th></tr></thead>'
+                f'<tbody>{"".join(rows)}</tbody>'
+                '</table></div>'
+                '</section>'
+            )
+
+        # Quick-jump nav to each port section
+        port_nav_items = []
+        for port in MAINLAND_ORDER:
+            if routes_by_origin.get(port):
+                port_nav_items.append(
+                    f'<a href="#port-{port}">{esc(PORT_LABELS[port][lang])}</a>'
+                )
+        port_nav = ' · '.join(port_nav_items)
+
+        url_en = f'{SITE_URL}/ferries/'
+        url_el = f'{SITE_URL}/el/ferries/'
+        url = url_el if is_el else url_en
+
+        nav_label_map = {
+            'map':       ('Map',       'Χάρτης'),
+            'data':      ('Islands Data', 'Στοιχεία Νησιών'),
+            'compare':   ('Compare',   'Σύγκριση'),
+            'festivals': ('Festivals', 'Γιορτές'),
+            'ferries':   ('Ferries',   'Πλοία'),
+            'hopping':   ('Island Hopping', 'Νησοπορία'),
+            'mission':   ('Mission',   'Στόχος'),
+            'privacy':   ('Privacy',   'Απόρρητο'),
+        }
+        def navlbl(k):
+            return nav_label_map[k][1 if is_el else 0]
+
+        html_out = (
+            '<!DOCTYPE html>\n'
+            f'<html lang="{"el" if is_el else "en"}">\n'
+            '<head>\n'
+            '<meta charset="UTF-8">\n'
+            '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
+            f'<title>{esc(title)}</title>\n'
+            f'<meta name="description" content="{esc(description)}">\n'
+            '<meta name="theme-color" content="#0B8FAC">\n'
+            '<meta name="author" content="Stergios Gousios">\n'
+            f'<link rel="canonical" href="{url}">\n'
+            f'<link rel="alternate" hreflang="en" href="{url_en}">\n'
+            f'<link rel="alternate" hreflang="el" href="{url_el}">\n'
+            f'<link rel="alternate" hreflang="x-default" href="{url_en}">\n'
+            '<link rel="icon" href="/favicon.ico" sizes="any">\n'
+            '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
+            '<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">\n'
+            '<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">\n'
+            '<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">\n'
+            '<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n'
+            '<meta name="apple-mobile-web-app-title" content="Aegean Blueprint">\n'
+            '<link rel="manifest" href="/site.webmanifest">\n'
+            '<meta property="og:type" content="website">\n'
+            f'<meta property="og:title" content="{esc(title)}">\n'
+            f'<meta property="og:description" content="{esc(description)}">\n'
+            f'<meta property="og:url" content="{url}">\n'
+            f'<meta property="og:locale" content="{"el_GR" if is_el else "en_US"}">\n'
+            '<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>\n'
+            '<link rel="stylesheet" href="/style.css">\n'
+            '<style>\n'
+            '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--sans, system-ui), sans-serif; margin: 0; }\n'
+            '  .ferry-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }\n'
+            '  .ferry-page > h1 { font-family: var(--serif, Georgia), serif; font-size: 36px; margin: 0 0 8px; }\n'
+            '  .ferry-intro { font-size: 17px; color: var(--ink-1, #444); line-height: 1.55; margin: 0 0 24px; max-width: 760px; }\n'
+            '  .ferry-nav { background: var(--marble, #f6f4ee); padding: 12px 16px; border-radius: 12px; font-size: 14px; margin-bottom: 32px; line-height: 1.8; }\n'
+            '  .ferry-nav-label { display: block; font-weight: 700; color: var(--ink-2, #333); margin-bottom: 4px; }\n'
+            '  .ferry-nav a { color: var(--aegean-dark, #076880); text-decoration: none; font-weight: 600; }\n'
+            '  .ferry-nav a:hover { text-decoration: underline; }\n'
+            '  .ferry-port { margin-bottom: 40px; }\n'
+            '  .ferry-port h2 { font-family: var(--serif, Georgia), serif; font-size: 26px; margin: 0 0 16px; padding-bottom: 6px; border-bottom: 2px solid var(--aegean, #0B8FAC); }\n'
+            '  .ferry-table-wrap { overflow-x: auto; }\n'
+            '  .ferry-table { width: 100%; border-collapse: collapse; font-size: 14px; }\n'
+            '  .ferry-table thead th { text-align: left; padding: 10px 12px; background: var(--marble, #f6f4ee); color: var(--ink-2, #333); font-weight: 700; border-bottom: 2px solid var(--border, #e5e1d8); white-space: nowrap; }\n'
+            '  .ferry-table tbody td { padding: 10px 12px; border-bottom: 1px solid var(--border, #eee); vertical-align: top; }\n'
+            '  .ferry-table tbody tr:hover { background: var(--aegean-pale, rgba(11,143,172,0.05)); }\n'
+            '  .ferry-table a { color: var(--aegean-dark, #076880); font-weight: 600; text-decoration: none; }\n'
+            '  .ferry-table a:hover { text-decoration: underline; }\n'
+            '  .ferry-dest { font-weight: 600; }\n'
+            '  .ferry-note { color: var(--ink-3, #888); font-size: 13px; }\n'
+            '  .ferry-footer { background: var(--marble, #f6f4ee); padding: 20px 24px; border-radius: 12px; font-size: 15px; line-height: 1.6; color: var(--ink-1, #444); margin-top: 32px; }\n'
+            '  .ferry-footer a { color: var(--aegean-dark, #076880); font-weight: 600; }\n'
+            '  @media (max-width: 600px) {\n'
+            '    .ferry-page { padding: 20px 16px 48px; }\n'
+            '    .ferry-page > h1 { font-size: 28px; }\n'
+            '    .ferry-table thead th, .ferry-table tbody td { padding: 8px 6px; font-size: 13px; }\n'
+            '    .ferry-note { display: none; }\n'  # Notes are hidden on mobile — saves horizontal space.
+            '  }\n'
+            '  html.dark body { background: #1a1a1a; color: #eee; }\n'
+            '  html.dark .ferry-table thead th { background: #2a2a2a; border-bottom-color: #444; }\n'
+            '  html.dark .ferry-table tbody td { border-bottom-color: #333; }\n'
+            '  html.dark .ferry-table tbody tr:hover { background: rgba(11,143,172,0.12); }\n'
+            '  html.dark .ferry-nav, html.dark .ferry-footer { background: #2a2a2a; }\n'
+            '</style>\n'
+            '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9298260273942245" crossorigin="anonymous"></script>\n'
+            '<script>\n'
+            '  (function(){ if (window.matchMedia(\'(max-width: 899.98px)\').matches) { window.adsbygoogle = window.adsbygoogle || []; window.adsbygoogle.push = function(){}; } })();\n'
+            '</script>\n'
+            '</head>\n<body>\n'
+            '<header>\n'
+            '  <div class="header-content">\n'
+            f'    <a class="logo-wrapper" href="/{"el/" if is_el else ""}" style="text-decoration: none;">\n'
+            '      <img src="/logo-hero.svg" id="site-logo" alt="Aegean Blueprint logo">\n'
+            '      <span id="brand-text"><span class="brand-word">Aegean</span> <span class="brand-word">Blueprint</span></span>\n'
+            '    </a>\n'
+            '    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>\n'
+            '    <nav class="top-nav" id="main-nav">\n'
+            f'      <a href="/{"el/" if is_el else ""}">{navlbl("map")}</a>\n'
+            f'      <a href="/{"el/" if is_el else ""}#data">{navlbl("data")}</a>\n'
+            f'      <a href="/{"el/" if is_el else ""}#compare">{navlbl("compare")}</a>\n'
+            f'      <a href="/{"el/" if is_el else ""}festivals/">{navlbl("festivals")}</a>\n'
+            f'      <a href="/{"el/" if is_el else ""}ferries/" class="active">{navlbl("ferries")}</a>\n'
+            f'      <a href="/{"el/" if is_el else ""}#hopping">{navlbl("hopping")}</a>\n'
+            f'      <a href="/{"el/" if is_el else ""}#mission">{navlbl("mission")}</a>\n'
+            f'      <a href="{"/el/privacy/" if is_el else "/privacy/"}" class="nav-utility">{navlbl("privacy")}</a>\n'
+            '    </nav>\n'
+            f'    <a class="lang-toggle-static" href="{"/ferries/" if is_el else "/el/ferries/"}" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;">'
+            f'<span style="margin-right: 4px;">🌐</span>{"EN" if is_el else "EL"}</a>\n'
+            '  </div>\n'
+            '</header>\n'
+            '<main class="ferry-page">\n'
+            f'  <h1>{esc(title.rsplit(" | ", 1)[0])}</h1>\n'
+            f'  <p class="ferry-intro">{intro}</p>\n'
+            f'  <div class="ferry-nav"><span class="ferry-nav-label">{esc(port_subtitle)}</span>{port_nav}</div>\n'
+            + '\n'.join(port_sections) +
+            f'\n  <div class="ferry-footer">{booking_intro}{ferryhopper_link}</div>\n'
+            '</main>\n'
+            '<script>\n'
+            '  /* Mobile hamburger toggle */\n'
+            '  document.getElementById("menu-toggle-btn").addEventListener("click", function(){ document.getElementById("main-nav").classList.toggle("open"); });\n'
+            '</script>\n'
+            '</body>\n</html>\n'
+        )
+
+        out_path = ROOT / ('el/ferries/index.html' if is_el else 'ferries/index.html')
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        out_path.write_text(html_out, encoding='utf-8')
+
+    return len(routes)
+
+
 def main():
     OUT_EN.mkdir(parents=True, exist_ok=True)
     OUT_EL.mkdir(parents=True, exist_ok=True)
@@ -1508,6 +1830,10 @@ def main():
     # Build the festivals calendar page (static HTML, EN + EL)
     n_fests = generate_festivals_page(keys)
     print(f'✓ festivals/ page regenerated ({n_fests} festivals)')
+
+    # Build the ferries hub page (static HTML, EN + EL)
+    n_routes = generate_ferries_page(keys)
+    print(f'✓ ferries/ page regenerated ({n_routes} routes)')
 
     # Inject (or refresh) the static SEO island list at the bottom of each
     # homepage. Without this, the SPA's island links are JS-rendered and
@@ -1947,6 +2273,7 @@ def generate_sitemap(island_keys):
     static_pages = [
         ('/', '/el/', 1.0, today),
         ('/festivals/', '/el/festivals/', 0.8, today),
+        ('/ferries/', '/el/ferries/', 0.8, today),
         ('/privacy/', '/el/privacy/', 0.3, today),
     ]
 
