@@ -1135,13 +1135,10 @@ function setupGroupFilter() {
 let currentIslandKey = '';
 
 async function renderIslandPage(key) {
-  console.warn('[renderIslandPage] called with key:', key);
   currentIslandKey = key;
   setTimeout(updateShortlistButton, 50);
   const island = ISLANDS_DATA[key];
-  console.warn('[renderIslandPage] ISLANDS_DATA[key]:', island);
-  if (!island) { console.warn('[renderIslandPage] BAILING — no island'); return; }
-  console.warn('[renderIslandPage] proceeding past island check');
+  if (!island) return;
 
   // Always tear down any stale mini map from a previous island.
   // The generic-fallback path below conditionally creates a Leaflet instance in
@@ -1159,9 +1156,7 @@ async function renderIslandPage(key) {
     miniMapElTop.style.display = '';
   }
 
-  console.warn('[renderIslandPage] about to set island-name');
-  document.getElementById('island-name').textContent = islandName(island.key);
-  console.warn('[renderIslandPage] set island-name to:', document.getElementById('island-name').textContent);
+  document.getElementById('island-name').textContent = islandName(key);
   document.getElementById('island-meta-info').textContent = `${island.island_group} · ${fmtNum(island.area)} km² · Pop. ${fmtNum(island.pop)}`;
 
   const compareBtn = document.getElementById('detail-compare-btn');
