@@ -288,7 +288,7 @@ function showView(view, param) {
   if (view === 'island') {
     const el = document.getElementById('view-detail');
     if (el) el.style.display = '';
-    homeControls.style.display = 'none';
+    if (homeControls) homeControls.style.display = 'none';
     const helpBtn = document.getElementById('help-btn');
     if (helpBtn) helpBtn.style.display = 'none';
     document.body.classList.remove('home-view-active');
@@ -297,7 +297,7 @@ function showView(view, param) {
   }
   const target = document.getElementById(`view-${view}`);
   if (target) target.style.display = '';
-  homeControls.style.display = (view === 'home') ? '' : 'none';
+  if (homeControls) homeControls.style.display = (view === 'home') ? '' : 'none';
   const navLink = document.getElementById(`nav-${view}`);
   if (navLink) navLink.classList.add('active');
   // Help button is only relevant on the home/map view
