@@ -172,20 +172,24 @@ function parseHash() {
 
 
 /* ============================================================
-   MAP TILES — switch between light and dark tiles based on theme
+   MAP TILES — switch between light and dark tiles based on theme.
+   Both light and dark use CARTO basemaps: Voyager (light) is a clean,
+   modern travel-site map with soft teal water that matches our brand
+   palette; dark_matter is its visual counterpart. Both are free, no
+   API key, and share the same `{s}.basemaps.cartocdn.com` CDN with
+   subdomains a/b/c/d.
 ============================================================ */
 function getMapTileUrl() {
   const isDark = document.documentElement.classList.contains('dark');
   return isDark
     ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'
-    : 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    : 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png';
 }
 
 function getMapTileAttribution() {
-  const isDark = document.documentElement.classList.contains('dark');
-  return isDark
-    ? '© OpenStreetMap contributors © CARTO'
-    : '© OpenStreetMap contributors';
+  // Same attribution string for both themes — CARTO requires both
+  // OpenStreetMap (source data) and CARTO (style/tiles) to be credited.
+  return '© OpenStreetMap contributors © CARTO';
 }
 
 // Esri World Imagery — satellite, no API key required, free for non-commercial use
@@ -201,11 +205,12 @@ function addThemeAwareTiles(map, options = {}) {
   const isDark = document.documentElement.classList.contains('dark');
   const maxZoom = options.maxZoom || 18;
 
-  // Map (theme-aware) layer
+  // Map (theme-aware) layer. CARTO uses 4 subdomains (a/b/c/d) for both
+  // Voyager and dark_matter — keeps tile requests spread across them.
   const mapLayer = L.tileLayer(getMapTileUrl(), {
     attribution: options.attribution || getMapTileAttribution(),
     maxZoom: maxZoom,
-    subdomains: isDark ? 'abcd' : 'abc',
+    subdomains: 'abcd',
   });
 
   // Hybrid satellite: Esri imagery + Esri labels/boundaries overlay
