@@ -172,24 +172,51 @@
   .seo-related a { color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }
   .seo-related a:hover { text-decoration: underline; }
 
-  /* Top nav */
+  /* Top nav — styled to match the main SPA header (teal gradient banner)
+     while keeping the minimal 4-link layout. So someone coming from search
+     gets the same visual brand presence as the live site. */
   .seo-nav {
-    max-width: 1100px; margin: 0 auto; padding: 16px 24px;
+    background: linear-gradient(135deg, #0B8FAC 0%, #076880 100%);
+    box-shadow: 0 2px 12px rgba(11,143,172,0.25);
+    border-bottom: none;
+    position: sticky; top: 0; z-index: 1000;
+    margin-bottom: 0;
+  }
+  .seo-nav-inner {
+    max-width: 1280px; margin: 0 auto; padding: 14px 24px;
     display: flex; justify-content: space-between; align-items: center;
-    font-family: var(--sans, sans-serif); border-bottom: 1px solid #e5e5e5;
+    font-family: var(--sans, sans-serif);
   }
   .seo-nav-brand {
-    display: flex; align-items: center; gap: 10px;
-    text-decoration: none; color: #111; font-weight: 700; font-size: var(--text-sub, 18px);
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none; color: #fff; font-weight: 700;
+    font-family: var(--serif, Georgia, serif);
+    font-size: 20px;
   }
-  .seo-nav-links { display: flex; gap: 20px; }
+  .seo-nav-brand img {
+    width: 40px; height: 40px;
+  }
+  .seo-nav-brand:hover { opacity: 0.92; color: #fff; text-decoration: none; }
+  .seo-nav-links { display: flex; gap: 24px; align-items: center; }
   .seo-nav-links a {
-    color: #0B8FAC; text-decoration: none; font-weight: 600; font-size: var(--text-small, 14px);
+    color: #fff; text-decoration: none; font-weight: 600;
+    font-size: var(--text-small, 14px);
+    opacity: 0.95;
+    transition: opacity 0.15s;
   }
-  .seo-nav-links a:hover { text-decoration: underline; }
+  .seo-nav-links a:hover { opacity: 1; text-decoration: underline; color: #fff; }
+  .seo-nav-lang {
+    background: none; border: 1px solid rgba(255,255,255,0.4);
+    color: #fff; padding: 4px 10px; border-radius: 4px;
+    text-decoration: none; font-size: 13px; white-space: nowrap;
+    margin-left: 8px;
+  }
+  .seo-nav-lang:hover {
+    background: rgba(255,255,255,0.12); color: #fff; text-decoration: none;
+  }
   @media (max-width: 600px) {
-    .seo-nav { flex-direction: column; gap: 12px; }
-    .seo-nav-links { gap: 14px; font-size: var(--text-meta, 13px); }
+    .seo-nav-inner { flex-direction: column; gap: 10px; padding: 12px 16px; }
+    .seo-nav-links { gap: 14px; font-size: var(--text-meta, 13px); flex-wrap: wrap; justify-content: center; }
   }
 
   /* CTA box */
@@ -230,17 +257,22 @@
 </head>
 <body data-island-key="aegina" data-lang="el">
 
-<!-- Top navigation bar -->
+<!-- Top navigation bar — teal banner matching the main SPA header -->
 <nav class="seo-nav">
-  <a href="/el/" class="seo-nav-brand">
-    <img src="/logo.png" alt="Aegean Blueprint" width="36" height="36">
-    <span>Aegean Blueprint</span>
-  </a>
-  <div class="seo-nav-links">
-    <a href="/el/">Χάρτης</a>
-    <a href="/el/#data">Όλα τα Νησιά</a>
-    <a href="/el/#compare">Σύγκριση</a>
-    <a href="/el/#match">Quiz</a>
+  <div class="seo-nav-inner">
+    <a href="/el/" class="seo-nav-brand">
+      <img src="/logo.png" alt="Aegean Blueprint">
+      <span>Aegean Blueprint</span>
+    </a>
+    <div class="seo-nav-links">
+      <a href="/el/">Χάρτης</a>
+      <a href="/el/#data">Όλα τα Νησιά</a>
+      <a href="/el/#compare">Σύγκριση</a>
+      <a href="/el/#match">Quiz</a>
+      <a href="/island/aegina/" class="seo-nav-lang">
+        🌐 EN
+      </a>
+    </div>
   </div>
 </nav>
 
