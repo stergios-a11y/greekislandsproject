@@ -5442,16 +5442,51 @@ html.dark .wtv-ok { background: #6FA9B8; color: #042631; }
 }
 .home-featured-card-tag {
   display: inline-block;
-  margin-top: 12px;
+  /* margin-top: auto pushes the tag to the bottom of the flex column,
+     so pills line up across all cards regardless of how long the excerpt
+     above them is. The 16px above gives breathing room from the excerpt. */
+  margin-top: auto;
+  padding-top: 16px;
+  align-self: flex-start;
+}
+/* The actual pill is rendered as a span. We need an inner inline-block
+   for the visual chip so margin-top:auto can act on the outer span. */
+.home-featured-card-tag::before {
+  content: attr(data-tag-label);
+  display: inline-block;
   padding: 3px 8px;
-  background: var(--aegean-pale);
-  color: var(--aegean);
   font-size: 0.75rem;
   font-weight: 600;
   border-radius: 4px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  align-self: flex-start;
+  background: var(--aegean-pale);
+  color: var(--aegean);
+}
+/* Per-tag colour variations — six muted, low-saturation hues at roughly
+   matching lightness. The text color is a darker shade of the same hue
+   for legibility. Keys map by the data-tag-key attribute set in JS. */
+.home-featured-card-tag[data-tag-key="folegandros"]::before { background: #E8F1F6; color: #2E6F8F; } /* dusty teal — Quiet escape */
+.home-featured-card-tag[data-tag-key="milos"]::before       { background: #FFEFE2; color: #B45B1A; } /* warm sand — Beach trip */
+.home-featured-card-tag[data-tag-key="santorini"]::before   { background: #F2EAF6; color: #6B4083; } /* dusty mauve — Iconic */
+.home-featured-card-tag[data-tag-key="hydra"]::before       { background: #ECE6DC; color: #6B5A3C; } /* muted khaki — No cars */
+.home-featured-card-tag[data-tag-key="symi"]::before        { background: #E5EEDD; color: #4E6B3A; } /* sage — Off-radar */
+.home-featured-card-tag[data-tag-key="naxos"]::before       { background: #FBE9EA; color: #9A3E47; } /* dusty rose — Family-friendly */
+
+/* One-line footer (was 3 stacked divs). The empty-state `.footer-updated:empty`
+   rule already hides the build-stamp span; the leading " · " separator now
+   lives inside the textContent set by renderBuildStamp() so it hides too. */
+.footer-line {
+  font-size: var(--text-meta);
+  color: var(--ink-4);
+}
+.footer-line a {
+  color: var(--ink-4);
+  text-decoration: none;
+}
+.footer-line a:hover {
+  color: var(--teal);
+  text-decoration: underline;
 }
 
 .home-how-grid {

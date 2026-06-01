@@ -177,6 +177,60 @@ def pick(obj, field, lang='en'):
         return obj[f'{field}_el']
     return obj.get(field, '')
 
+# Mapping shared by interpret_facing. Mirrors FACING_MAP in i18n.js so both
+# renderers produce identical wind-protection prose for the same data.
+_FACING_MAP = {
+    'north':     {'en': 'North-facing — fully exposed to the meltemi (the dominant summer N/NE wind); often choppy June–September',
+                  'el': 'Με προσανατολισμό βόρειο — πλήρως εκτεθειμένη στο μελτέμι (τον κυρίαρχο καλοκαιρινό Β/ΒΑ άνεμο)· συχνά αγριεμένη Ιούνιο–Σεπτέμβριο'},
+    'northeast': {'en': 'Northeast-facing — exposed to the meltemi (the dominant summer N/NE wind); often windy on meltemi days',
+                  'el': 'Με προσανατολισμό βορειοανατολικό — εκτεθειμένη στο μελτέμι (τον κυρίαρχο καλοκαιρινό Β/ΒΑ άνεμο)· συχνά αγριεμένη τις μέρες μελτεμιού'},
+    'east':      {'en': 'East-facing — mostly sheltered from the meltemi (the summer N/NE wind); can be choppy on the strongest NE days',
+                  'el': 'Με προσανατολισμό ανατολικό — κυρίως προστατευμένη από το μελτέμι (τον καλοκαιρινό Β/ΒΑ άνεμο)· μπορεί να φουρτουνιάσει τις πιο δυνατές ΒΑ μέρες'},
+    'southeast': {'en': 'Southeast-facing — sheltered from the meltemi (the summer N/NE wind); calm most days, exposed only to rare southern winds',
+                  'el': 'Με προσανατολισμό νοτιοανατολικό — προστατευμένη από το μελτέμι (τον καλοκαιρινό Β/ΒΑ άνεμο)· ήρεμη τις περισσότερες μέρες, εκτεθειμένη μόνο σε σπάνιους νότιους ανέμους'},
+    'south':     {'en': 'South-facing — sheltered from the meltemi (the summer N/NE wind); calm in summer, exposed only to rare southern winds',
+                  'el': 'Με προσανατολισμό νότιο — προστατευμένη από το μελτέμι (τον καλοκαιρινό Β/ΒΑ άνεμο)· ήρεμη το καλοκαίρι, εκτεθειμένη μόνο σε σπάνιους νότιους ανέμους'},
+    'southwest': {'en': 'Southwest-facing — sheltered from the meltemi (the summer N/NE wind); calm in summer, exposed only to rare S/SW winds',
+                  'el': 'Με προσανατολισμό νοτιοδυτικό — προστατευμένη από το μελτέμι (τον καλοκαιρινό Β/ΒΑ άνεμο)· ήρεμη το καλοκαίρι, εκτεθειμένη μόνο σε σπάνιους Ν/ΝΔ ανέμους'},
+    'west':      {'en': 'West-facing — sheltered from the meltemi (the summer N/NE wind); calm most summer days, sometimes choppy on rare westerly winds',
+                  'el': 'Με προσανατολισμό δυτικό — προστατευμένη από το μελτέμι (τον καλοκαιρινό Β/ΒΑ άνεμο)· ήρεμη τις περισσότερες καλοκαιρινές μέρες, μερικές φορές φουρτουνιασμένη σε σπάνιους δυτικούς ανέμους'},
+    'northwest': {'en': 'Northwest-facing — exposed to the meltemi (the dominant summer N/NE wind); often windy on meltemi days',
+                  'el': 'Με προσανατολισμό βορειοδυτικό — εκτεθειμένη στο μελτέμι (τον κυρίαρχο καλοκαιρινό Β/ΒΑ άνεμο)· συχνά αγριεμένη τις μέρες μελτεμιού'},
+}
+# Abbreviations map to the full direction
+_FACING_ABBREV = {'n': 'north', 'ne': 'northeast', 'e': 'east', 'se': 'southeast',
+                  's': 'south', 'sw': 'southwest', 'w': 'west', 'nw': 'northwest',
+                  # Hybrid directions seen in the data — map to the nearest cardinal
+                  'south-southwest': 'southwest', 'ssw': 'southwest',
+                  'west-southwest': 'southwest', 'wsw': 'southwest',
+                  'south-southeast': 'southeast', 'sse': 'southeast',
+                  'east-southeast': 'southeast', 'ese': 'southeast',
+                  'north-northeast': 'northeast', 'nne': 'northeast',
+                  'east-northeast': 'northeast', 'ene': 'northeast',
+                  'north-northwest': 'northwest', 'nnw': 'northwest',
+                  'west-northwest': 'northwest', 'wnw': 'northwest'}
+
+def interpret_facing(raw_facing, lang):
+    """Turn a beach `facing` value into a traveler-friendly wind-protection
+    sentence. Mirrors interpretFacing() in i18n.js. See that function for
+    rationale. Falls back to the raw value for unmatched edge cases."""
+    if not raw_facing:
+        return ''
+    head = str(raw_facing)
+    # Drop any descriptive suffix introduced by em-dash or " - " or " — ".
+    # Use a regex so we don't confuse the dash inside "South-facing" with
+    # a separator dash.
+    import re as _re
+    head = _re.split(r'\s+[—–-]\s+', head, 1)[0]
+    # Strip a trailing "-facing" / " facing" if present.
+    head = _re.sub(r'[-\s]facing$', '', head, flags=_re.IGNORECASE).strip().lower()
+    if head in _FACING_ABBREV:
+        head = _FACING_ABBREV[head]
+    mapped = _FACING_MAP.get(head)
+    if mapped:
+        return mapped.get('el' if lang == 'el' else 'en', raw_facing)
+    return raw_facing
+
 def esc(s):
     """Escape HTML in a string for safe insertion."""
     return html.escape(str(s)) if s is not None else ''
@@ -1166,7 +1220,7 @@ def render_body(key, data, meta, lang='en'):
             btype = esc(pick(b, 'type', lang))
             blen = esc(pick(b, 'length', lang))
             bdepth = esc(pick(b, 'depth', lang))
-            bfacing = esc(pick(b, 'facing', lang))
+            bfacing = esc(interpret_facing(pick(b, 'facing', lang), lang))
             bfac = esc(pick(b, 'facilities', lang))
             beach_blocks.append(f'''
 <article class="seo-beach">
@@ -1176,7 +1230,7 @@ def render_body(key, data, meta, lang='en'):
     <dt>{'Type' if lang=='en' else 'Τύπος'}</dt><dd>{btype}</dd>
     <dt>{'Length' if lang=='en' else 'Μήκος'}</dt><dd>{blen}</dd>
     <dt>{'Depth' if lang=='en' else 'Βάθος'}</dt><dd>{bdepth}</dd>
-    <dt>{'Facing' if lang=='en' else 'Προσανατολισμός'}</dt><dd>{bfacing}</dd>
+    <dt>{'Wind protection' if lang=='en' else 'Προστασία από αέρα'}</dt><dd>{bfacing}</dd>
     <dt>{'Facilities' if lang=='en' else 'Υποδομές'}</dt><dd>{bfac}</dd>
   </dl>
 </article>''')
@@ -1573,8 +1627,7 @@ def render_page(key, data, meta, lang='en'):
 
 <!-- Footer -->
 <footer class="seo-footer">
-  <p>© 2026 {'Stergios Gousios · Aegean Blueprint' if lang == 'en' else 'Στέργιος Γούσιος · Aegean Blueprint'}</p>
-  <p><a href="{('/el/island/' if lang == 'en' else '/island/')}{key}/">{'Ελληνικά' if lang == 'en' else 'English'}</a> · <a href="{'/privacy/' if lang == 'en' else '/el/privacy/'}">{'Privacy' if lang == 'en' else 'Απόρρητο'}</a></p>
+  <p>© 2026 Aegean Blueprint · <a href="{('/el/island/' if lang == 'en' else '/island/')}{key}/">{'Ελληνικά' if lang == 'en' else 'English'}</a> · <a href="{'/privacy/' if lang == 'en' else '/el/privacy/'}">{'Privacy' if lang == 'en' else 'Απόρρητο'}</a></p>
 </footer>
 </div><!-- /#seo-fallback -->
 
@@ -1631,8 +1684,8 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="{asset_prefix}i18n.js?v=29"></script>
-<script src="{asset_prefix}script.js?v=42"></script>
+<script src="{asset_prefix}i18n.js?v=31"></script>
+<script src="{asset_prefix}script.js?v=44"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
@@ -2415,8 +2468,7 @@ def generate_festivals_page(island_keys):
             '  ' + ''.join(month_blocks) + '\n'
             '</main>\n'
             '<footer style="text-align:center;padding:24px 16px;font-size:13px;color:#888;border-top:1px solid #e5e5e5;margin-top:40px;">\n'
-            '  <p style="margin:4px 0;">© 2026 ' + ('Στέργιος Γούσιος · Aegean Blueprint' if is_el else 'Stergios Gousios · Aegean Blueprint') + '</p>\n'
-            '  <p style="margin:4px 0;"><a href="' + ('/el/privacy/' if is_el else '/privacy/') + '" style="color:#888;text-decoration:none;">' + ('Απόρρητο' if is_el else 'Privacy') + '</a></p>\n'
+            '  <p style="margin:0;">© 2026 Aegean Blueprint · <a href="' + ('/el/privacy/' if is_el else '/privacy/') + '" style="color:#888;text-decoration:none;">' + ('Απόρρητο' if is_el else 'Privacy') + '</a></p>\n'
             '</footer>\n'
             '</body>\n</html>'
         )

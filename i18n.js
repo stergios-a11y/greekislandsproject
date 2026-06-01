@@ -46,8 +46,8 @@ const UI_TEXT = {
   'home.back_to_map': { en: 'Back to the map', el: 'Πίσω στον χάρτη' },
   'home.about.title': { en: 'A Greek islands travel guide with opinions', el: 'Ένας οδηγός για τα ελληνικά νησιά, με άποψη' },
   'home.about.p1': { en: "Most island guides list 30 beaches and call it a recommendation. This one picks the one you should actually go to, and tells you why the other 29 didn\\'t make it. The same goes for the where-to-stay, the where-to-eat, the day plan, the side trip.", el: 'Οι περισσότεροι οδηγοί νησιών γράφουν 30 παραλίες και το λένε πρόταση. Εδώ διαλέγω αυτή που πραγματικά αξίζει, και εξηγώ γιατί δεν πέρασαν οι άλλες 29. Το ίδιο ισχύει για το πού θα μείνεις, πού θα φας, το πλάνο της ημέρας, την παρέκβαση.' },
-  'home.about.p2': { en: "Built and written by Stergios Gousios — Athens-based, 50+ islands visited over 20+ years, no sponsorships, no affiliate hotel chains in disguise. Each island gets an honest score across beaches, history, nightlife, access and price — not a marketing brochure, not an algorithm, just one person\\'s take, cross-checked with friends and family who actually live on each island.", el: 'Γραμμένο από τον Στέργιο Γούσιο — ζω στην Αθήνα, έχω επισκεφθεί 50+ νησιά σε διάστημα 20+ ετών, χωρίς χορηγίες, χωρίς συγκαλυμμένες affiliate πλατφόρμες κρατήσεων. Κάθε νησί παίρνει μια ειλικρινή βαθμολογία σε παραλίες, ιστορία, νυχτερινή ζωή, πρόσβαση και τιμές — όχι διαφημιστικό φυλλάδιο, όχι αλγόριθμος, η κρίση ενός ανθρώπου, διασταυρωμένη με φίλους και συγγενείς που ζουν στα νησιά.' },
-  'home.about.p3': { en: "The map above is the entry point. Click any circle to open that island\\'s full guide. Larger circles = higher overall score. Use the dropdowns to filter by region or rank by what matters to you.", el: 'Ο χάρτης παραπάνω είναι το σημείο εκκίνησης. Πάτα οποιοδήποτε κυκλάκι για να ανοίξεις τον πλήρη οδηγό του νησιού. Μεγαλύτερα κυκλάκια = υψηλότερη συνολική βαθμολογία. Χρησιμοποίησε τα μενού για να φιλτράρεις ανά περιοχή ή να ταξινομήσεις με το κριτήριο που σε ενδιαφέρει.' },
+  'home.about.p2': { en: "No sponsorships, no affiliate hotel chains in disguise. Each island gets an honest score across beaches, history, nightlife, access and price — not a marketing brochure, not an algorithm, just one person\\'s take, cross-checked with friends and family who actually live on each island.", el: 'Χωρίς χορηγίες, χωρίς συγκαλυμμένες affiliate πλατφόρμες κρατήσεων. Κάθε νησί παίρνει μια ειλικρινή βαθμολογία σε παραλίες, ιστορία, νυχτερινή ζωή, πρόσβαση και τιμές — όχι διαφημιστικό φυλλάδιο, όχι αλγόριθμος, η κρίση ενός ανθρώπου, διασταυρωμένη με φίλους και συγγενείς που ζουν στα νησιά.' },
+  'home.about.p3': { en: "The map above is the entry point. Click any circle to open that island\\'s full guide. Use the dropdowns to filter by region or rank by what matters to you.", el: 'Ο χάρτης παραπάνω είναι το σημείο εκκίνησης. Πάτα οποιοδήποτε κυκλάκι για να ανοίξεις τον πλήρη οδηγό του νησιού. Χρησιμοποίησε τα μενού για να φιλτράρεις ανά περιοχή ή να ταξινομήσεις με το κριτήριο που σε ενδιαφέρει.' },
   'home.featured.title': { en: 'Featured islands', el: 'Επιλεγμένα νησιά' },
   'home.featured.sub': { en: 'A few starting points across different moods. Click for the full guide.', el: 'Λίγες αφετηρίες για διαφορετικές διαθέσεις. Πάτα για τον πλήρη οδηγό.' },
   'home.how.title': { en: 'How this site works', el: 'Πώς λειτουργεί η σελίδα' },
@@ -188,7 +188,7 @@ const UI_TEXT = {
   'detail.beaches.sub': { en: 'Ranked by overall quality — with details on sand type, depth, wind exposure and facilities.', el: 'Κατάταξη με βάση τη συνολική ποιότητα — με λεπτομέρειες για τον τύπο άμμου, το βάθος, την έκθεση στον άνεμο και τις υποδομές.' },
 
   // Footer
-  'footer.copyright': { en: '© 2026 Stergios Gousios · Aegean Blueprint', el: '© 2026 Στέργιος Γούσιος · Aegean Blueprint' },
+  'footer.copyright': { en: '© 2026 Aegean Blueprint', el: '© 2026 Aegean Blueprint' },
   'footer.privacy':   { en: 'Privacy', el: 'Απόρρητο' },
 
   // Data table page
@@ -577,6 +577,85 @@ function pickLang(obj, field) {
   if (!obj) return '';
   if (CURRENT_LANG === 'el' && obj[field + '_el']) return obj[field + '_el'];
   return obj[field] || '';
+}
+
+// Turn a beach's raw `facing` value (e.g. 'South — calm water', 'NW',
+// 'Northeast-facing') into a full traveler-friendly wind-protection sentence.
+// In the Cyclades + most of the Aegean, the dominant summer wind is the
+// meltemi (a steady N/NE wind), so a south-facing beach is sheltered, a
+// north-facing one is exposed. We render the practical implications.
+//
+// Lang: 'en' | 'el'. Falls back to returning the raw value if we can't
+// classify the direction (e.g. "Various", "Double bay" — rare edge cases
+// where the original prose is already clearer than anything we'd generate).
+function interpretFacing(rawFacing, lang) {
+  if (!rawFacing) return '';
+  // Extract the cardinal direction from the start of the string. Data has
+  // values like 'South', 'South-facing', 'South — calm water', 'SW', etc.
+  // Use a regex separator that requires whitespace around the dash so we
+  // don't confuse the dash inside "South-facing" with a separator.
+  const head = String(rawFacing)
+    .split(/\s+[—–-]\s+/, 1)[0]                                 // drop " — descriptive bit"
+    .replace(/[-\s]facing$/i, '')                                // strip a trailing "-facing"
+    .trim()
+    .toLowerCase();
+
+  // Hybrid/intercardinal directions found in the data map to their nearest
+  // canonical 8-point direction so we don't need 16 separate entries.
+  const FACING_ALIASES = {
+    'south-southwest': 'southwest', 'ssw': 'southwest',
+    'west-southwest':  'southwest', 'wsw': 'southwest',
+    'south-southeast': 'southeast', 'sse': 'southeast',
+    'east-southeast':  'southeast', 'ese': 'southeast',
+    'north-northeast': 'northeast', 'nne': 'northeast',
+    'east-northeast':  'northeast', 'ene': 'northeast',
+    'north-northwest': 'northwest', 'nnw': 'northwest',
+    'west-northwest':  'northwest', 'wnw': 'northwest',
+  };
+  const headNormalized = FACING_ALIASES[head] || head;
+
+  // Mapping: each canonical direction has a full EN+EL sentence describing
+  // both what it's sheltered from and what (if anything) it's exposed to.
+  const FACING_MAP = {
+    'north':     { en: 'North-facing — fully exposed to the meltemi (the dominant summer N/NE wind); often choppy June–September',
+                   el: 'Με προσανατολισμό βόρειο — πλήρως εκτεθειμένη στο μελτέμι (τον κυρίαρχο καλοκαιρινό Β/ΒΑ άνεμο)· συχνά αγριεμένη Ιούνιο–Σεπτέμβριο' },
+    'n':         { en: 'North-facing — fully exposed to the meltemi (the dominant summer N/NE wind); often choppy June–September',
+                   el: 'Με προσανατολισμό βόρειο — πλήρως εκτεθειμένη στο μελτέμι (τον κυρίαρχο καλοκαιρινό Β/ΒΑ άνεμο)· συχνά αγριεμένη Ιούνιο–Σεπτέμβριο' },
+    'northeast': { en: 'Northeast-facing — exposed to the meltemi (the dominant summer N/NE wind); often windy on meltemi days',
+                   el: 'Με προσανατολισμό βορειοανατολικό — εκτεθειμένη στο μελτέμι (τον κυρίαρχο καλοκαιρινό Β/ΒΑ άνεμο)· συχνά αγριεμένη τις μέρες μελτεμιού' },
+    'ne':        { en: 'Northeast-facing — exposed to the meltemi (the dominant summer N/NE wind); often windy on meltemi days',
+                   el: 'Με προσανατολισμό βορειοανατολικό — εκτεθειμένη στο μελτέμι (τον κυρίαρχο καλοκαιρινό Β/ΒΑ άνεμο)· συχνά αγριεμένη τις μέρες μελτεμιού' },
+    'east':      { en: 'East-facing — mostly sheltered from the meltemi (the summer N/NE wind); can be choppy on the strongest NE days',
+                   el: 'Με προσανατολισμό ανατολικό — κυρίως προστατευμένη από το μελτέμι (τον καλοκαιρινό Β/ΒΑ άνεμο)· μπορεί να φουρτουνιάσει τις πιο δυνατές ΒΑ μέρες' },
+    'e':         { en: 'East-facing — mostly sheltered from the meltemi (the summer N/NE wind); can be choppy on the strongest NE days',
+                   el: 'Με προσανατολισμό ανατολικό — κυρίως προστατευμένη από το μελτέμι (τον καλοκαιρινό Β/ΒΑ άνεμο)· μπορεί να φουρτουνιάσει τις πιο δυνατές ΒΑ μέρες' },
+    'southeast': { en: 'Southeast-facing — sheltered from the meltemi (the summer N/NE wind); calm most days, exposed only to rare southern winds',
+                   el: 'Με προσανατολισμό νοτιοανατολικό — προστατευμένη από το μελτέμι (τον καλοκαιρινό Β/ΒΑ άνεμο)· ήρεμη τις περισσότερες μέρες, εκτεθειμένη μόνο σε σπάνιους νότιους ανέμους' },
+    'se':        { en: 'Southeast-facing — sheltered from the meltemi (the summer N/NE wind); calm most days, exposed only to rare southern winds',
+                   el: 'Με προσανατολισμό νοτιοανατολικό — προστατευμένη από το μελτέμι (τον καλοκαιρινό Β/ΒΑ άνεμο)· ήρεμη τις περισσότερες μέρες, εκτεθειμένη μόνο σε σπάνιους νότιους ανέμους' },
+    'south':     { en: 'South-facing — sheltered from the meltemi (the summer N/NE wind); calm in summer, exposed only to rare southern winds',
+                   el: 'Με προσανατολισμό νότιο — προστατευμένη από το μελτέμι (τον καλοκαιρινό Β/ΒΑ άνεμο)· ήρεμη το καλοκαίρι, εκτεθειμένη μόνο σε σπάνιους νότιους ανέμους' },
+    's':         { en: 'South-facing — sheltered from the meltemi (the summer N/NE wind); calm in summer, exposed only to rare southern winds',
+                   el: 'Με προσανατολισμό νότιο — προστατευμένη από το μελτέμι (τον καλοκαιρινό Β/ΒΑ άνεμο)· ήρεμη το καλοκαίρι, εκτεθειμένη μόνο σε σπάνιους νότιους ανέμους' },
+    'southwest': { en: 'Southwest-facing — sheltered from the meltemi (the summer N/NE wind); calm in summer, exposed only to rare S/SW winds',
+                   el: 'Με προσανατολισμό νοτιοδυτικό — προστατευμένη από το μελτέμι (τον καλοκαιρινό Β/ΒΑ άνεμο)· ήρεμη το καλοκαίρι, εκτεθειμένη μόνο σε σπάνιους Ν/ΝΔ ανέμους' },
+    'sw':        { en: 'Southwest-facing — sheltered from the meltemi (the summer N/NE wind); calm in summer, exposed only to rare S/SW winds',
+                   el: 'Με προσανατολισμό νοτιοδυτικό — προστατευμένη από το μελτέμι (τον καλοκαιρινό Β/ΒΑ άνεμο)· ήρεμη το καλοκαίρι, εκτεθειμένη μόνο σε σπάνιους Ν/ΝΔ ανέμους' },
+    'west':      { en: 'West-facing — sheltered from the meltemi (the summer N/NE wind); calm most summer days, sometimes choppy on rare westerly winds',
+                   el: 'Με προσανατολισμό δυτικό — προστατευμένη από το μελτέμι (τον καλοκαιρινό Β/ΒΑ άνεμο)· ήρεμη τις περισσότερες καλοκαιρινές μέρες, μερικές φορές φουρτουνιασμένη σε σπάνιους δυτικούς ανέμους' },
+    'w':         { en: 'West-facing — sheltered from the meltemi (the summer N/NE wind); calm most summer days, sometimes choppy on rare westerly winds',
+                   el: 'Με προσανατολισμό δυτικό — προστατευμένη από το μελτέμι (τον καλοκαιρινό Β/ΒΑ άνεμο)· ήρεμη τις περισσότερες καλοκαιρινές μέρες, μερικές φορές φουρτουνιασμένη σε σπάνιους δυτικούς ανέμους' },
+    'northwest': { en: 'Northwest-facing — exposed to the meltemi (the dominant summer N/NE wind); often windy on meltemi days',
+                   el: 'Με προσανατολισμό βορειοδυτικό — εκτεθειμένη στο μελτέμι (τον κυρίαρχο καλοκαιρινό Β/ΒΑ άνεμο)· συχνά αγριεμένη τις μέρες μελτεμιού' },
+    'nw':        { en: 'Northwest-facing — exposed to the meltemi (the dominant summer N/NE wind); often windy on meltemi days',
+                   el: 'Με προσανατολισμό βορειοδυτικό — εκτεθειμένη στο μελτέμι (τον κυρίαρχο καλοκαιρινό Β/ΒΑ άνεμο)· συχνά αγριεμένη τις μέρες μελτεμιού' },
+  };
+
+  const mapped = FACING_MAP[headNormalized];
+  if (mapped) return mapped[lang === 'el' ? 'el' : 'en'];
+  // Edge cases (e.g. "Various", "Double bay", "All directions") — the original
+  // value is usually already a complete prose phrase, so just return it as-is.
+  return rawFacing;
 }
 
 function islandName(key) {

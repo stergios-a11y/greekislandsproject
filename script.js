@@ -514,7 +514,10 @@ function renderBuildStamp() {
   const d = new Date(BUILD_DATE);
   const formatted = d.toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' });
   const label = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'Τελευταία ενημέρωση' : 'Last updated';
-  el.textContent = `${label}: ${formatted}`;
+  // Include the leading " · " separator inside the textContent so that when
+  // the footer is in its empty state (no BUILD_DATE), `:empty` keeps the span
+  // hidden and we don't end up with a dangling " · " in the inline footer.
+  el.textContent = ` · ${label}: ${formatted}`;
 }
 
 function setupNav() {
@@ -698,7 +701,7 @@ function renderHomeFeatured() {
           <span class="home-featured-card-score">${score}/5</span>
         </div>
         <p class="home-featured-card-excerpt">${excerpt}</p>
-        <span class="home-featured-card-tag">${tag}</span>
+        <span class="home-featured-card-tag" data-tag-key="${item.key}" data-tag-label="${tag}"></span>
       </a>`;
   }).filter(Boolean).join('');
 
@@ -1405,7 +1408,7 @@ function buildIslandPage(data, key) {
           <div class="beach-spec"><span class="beach-spec-label">${t("detail.spec.type")}</span><span class="beach-spec-val">${pickLang(b, "type")}</span></div>
           <div class="beach-spec"><span class="beach-spec-label">${t("detail.spec.length")}</span><span class="beach-spec-val">${pickLang(b, "length")}</span></div>
           <div class="beach-spec"><span class="beach-spec-label">${t("detail.spec.depth")}</span><span class="beach-spec-val">${pickLang(b, "depth")}</span></div>
-          <div class="beach-spec"><span class="beach-spec-label">${t("detail.spec.wind")}</span><span class="beach-spec-val">${pickLang(b, "facing")}</span></div>
+          <div class="beach-spec"><span class="beach-spec-label">${t("detail.spec.wind")}</span><span class="beach-spec-val">${interpretFacing(pickLang(b, "facing"), CURRENT_LANG)}</span></div>
           <div class="beach-spec beach-spec-full"><span class="beach-spec-label">${t("detail.spec.facilities")}</span><span class="beach-spec-val">${pickLang(b, "facilities")}</span></div>
         </div>
       </div>
