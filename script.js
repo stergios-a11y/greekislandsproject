@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-05-31';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-06-01';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -2582,6 +2582,48 @@ function addToCompare(key) {
   if (selB && compareSelection[1]) selB.value = compareSelection[1];
 }
 
+// Cached vs_verdicts.json data — lazily loaded the first time the Compare
+// view is opened. Format: { 'a__b': { en: '<p>...</p>', el: '<p>...</p>' } }
+// Pairs are alphabetical (sorted) for lookup; e.g. 'mykonos__santorini'.
+let VS_VERDICTS_CACHE = null;
+async function loadVsVerdicts() {
+  if (VS_VERDICTS_CACHE) return VS_VERDICTS_CACHE;
+  try {
+    const res = await fetch('/vs_verdicts.json');
+    if (res.ok) {
+      VS_VERDICTS_CACHE = await res.json();
+      return VS_VERDICTS_CACHE;
+    }
+  } catch(e) { /* file not deployed yet — fail silently */ }
+  VS_VERDICTS_CACHE = {};  // empty so we don't retry
+  return VS_VERDICTS_CACHE;
+}
+
+// Render the editorial verdict block (if one exists for this pair).
+// Called by renderCompareView after the cards have rendered.
+async function renderCompareVerdict(iA, iB) {
+  const el = document.getElementById('compare-verdict');
+  if (!el) return;
+  const verdicts = await loadVsVerdicts();
+  const sortedPair = [iA.key, iB.key].sort();
+  const pairKey = sortedPair[0] + '__' + sortedPair[1];
+  const entry = verdicts[pairKey];
+  if (!entry) {
+    el.style.display = 'none';
+    el.innerHTML = '';
+    return;
+  }
+  const lang = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
+  const html = entry[lang] || entry['en'] || '';
+  if (!html) {
+    el.style.display = 'none';
+    return;
+  }
+  const heading = lang === 'el' ? 'Η ετυμηγορία μας' : 'Our verdict';
+  el.innerHTML = `<h3 class="compare-verdict-heading">${heading}</h3>${html}`;
+  el.style.display = '';
+}
+
 async function renderCompareView() {
   const keyA = compareSelection[0];
   const keyB = compareSelection[1];
@@ -2599,6 +2641,7 @@ async function renderCompareView() {
   if (content) content.style.display = '';
   renderRadarChart(iA, iB);
   renderCompareCards(iA, iB);
+  renderCompareVerdict(iA, iB);  // editorial paragraph for curated pairs
 
   // Fetch full island JSONs for WTV + beach data (non-blocking — render static parts first)
   let jsonA = null, jsonB = null;

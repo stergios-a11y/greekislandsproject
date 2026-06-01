@@ -325,6 +325,9 @@
           <canvas id="compare-radar-chart" role="img" aria-label="Διάγραμμα ράνταρ που συγκρίνει δύο νησιά" data-i18n-aria-label="a11y.radar_compare"></canvas>
         </div>
         <div class="compare-cards" id="compare-cards"></div>
+        <!-- Editorial verdict — populated by renderCompareVerdict() when the
+             selected pair has a curated paragraph in vs_verdicts.json. -->
+        <div id="compare-verdict" class="compare-verdict" style="display:none;"></div>
         <div class="compare-section-label" data-i18n="compare.wtv_title">Πότε να επισκεφτείς — επικάλυψη</div>
         <div id="compare-wtv" class="compare-wtv"></div>
         <div class="compare-section-label" data-i18n="compare.extra_title">Χαρακτήρας & πρακτικά</div>
@@ -665,7 +668,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="/i18n.js?v=28"></script>
-  <script src="/script.js?v=37"></script>
+  <script src="/script.js?v=38"></script>
 <!-- SEO_ISLAND_LIST_START -->
 <nav class="visually-hidden" aria-label="Όλα τα νησιά">
   <h2>Όλα τα νησιά</h2>

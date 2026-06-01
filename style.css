@@ -622,6 +622,47 @@ body.home-view-active {
 }
 #compare-radar-chart { width: 100% !important; height: 100% !important; }
 .compare-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* Editorial verdict block — shown above the WTV section for the 15 curated
+   comparison pairs. Has a slightly distinct background and serif body to
+   feel like real travel writing rather than data output. */
+.compare-verdict {
+  background: linear-gradient(135deg, rgba(11,143,172,0.06) 0%, rgba(11,143,172,0.02) 100%);
+  border: 1px solid rgba(11,143,172,0.18);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  margin: 20px 0 8px;
+}
+.compare-verdict-heading {
+  font-family: var(--serif);
+  font-size: var(--text-sub);
+  font-weight: 700;
+  color: var(--aegean-dark);
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(11,143,172,0.25);
+}
+.compare-verdict p {
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-1);
+  margin: 0 0 14px;
+}
+.compare-verdict p:last-child { margin-bottom: 0; }
+.compare-verdict strong {
+  color: var(--aegean-dark);
+  font-weight: 700;
+}
+html.dark .compare-verdict {
+  background: linear-gradient(135deg, rgba(11,143,172,0.14) 0%, rgba(11,143,172,0.06) 100%);
+  border-color: rgba(11,143,172,0.35);
+}
+html.dark .compare-verdict p { color: #ddd; }
+@media (max-width: 600px) {
+  .compare-verdict { padding: 18px 18px; }
+  .compare-verdict p { font-size: 15px; }
+}
 .compare-card {
   background: var(--white);
   border: 1px solid var(--border);
