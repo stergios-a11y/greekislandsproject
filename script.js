@@ -2125,7 +2125,7 @@ function poiIcon(type, color, mode, dayNum) {
   // Positioned absolutely inside the 32×32 marker; uses pointer-events:none so it
   // doesn't intercept clicks meant for the marker itself.
   const badge = (typeof dayNum === 'number' && dayNum > 0)
-    ? `<span style="position:absolute;top:-4px;right:-6px;background:${color};color:#fff;font:700 11px/1 system-ui,sans-serif;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.35);pointer-events:none;">${dayNum}</span>`
+    ? `<span style="position:absolute;top:-3px;right:-3px;background:${color};color:#fff;font:800 12px/1 system-ui,-apple-system,sans-serif;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);pointer-events:none;text-shadow:0 1px 1px rgba(0,0,0,.35);z-index:2;">${dayNum}</span>`
     : '';
   return `<div style="position:relative;font-size:22px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5));text-align:center;width:32px;height:32px;display:flex;align-items:center;justify-content:center;background:white;border-radius:50%;border:2px solid ${color};box-shadow:0 2px 6px rgba(0,0,0,.25);">${emoji}${badge}</div>`;
 }
