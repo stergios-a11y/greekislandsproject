@@ -115,7 +115,7 @@ let miniMapInstance = null;
 let itineraryMapInstance = null;
 let currentMapMode = 'overall';
 let currentGroupFilter = 'all';
-let compareSelection = ['chania', 'rhodes'];
+let compareSelection = ['mykonos', 'santorini'];
 let radarChartInstance = null;
 let sortState = { col: 'total', asc: false };
 let itinActiveDay = 'all';
@@ -2559,7 +2559,7 @@ function setupCompare() {
       opt.value = i.key; opt.textContent = islandName(i.key); sel.appendChild(opt);
     });
   });
-  // Apply current compareSelection (defaults: chania + rhodes) to the dropdowns
+  // Apply current compareSelection (defaults: mykonos + santorini) to the dropdowns
   if (compareSelection[0]) selA.value = compareSelection[0];
   if (compareSelection[1]) selB.value = compareSelection[1];
   selA.addEventListener('change', () => { compareSelection[0] = selA.value || null; renderCompareView(); });
