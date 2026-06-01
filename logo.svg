@@ -1,8 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" aria-label="Aegean Blueprint">
+  <!-- Outer circle: a navigational/instrumentation frame. -->
   <circle cx="70" cy="70" r="68" fill="none" stroke="#0B8FAC" stroke-width="1.5"/>
-  <line x1="70" y1="30" x2="38" y2="108" stroke="#0B8FAC" stroke-width="7" stroke-linecap="round"/>
-  <line x1="70" y1="30" x2="102" y2="108" stroke="#0B8FAC" stroke-width="7" stroke-linecap="round"/>
-  <line x1="40" y1="80" x2="100" y2="80" stroke="#E8522A" stroke-width="3" stroke-linecap="round"/>
+  <!-- Tapered legs ending in sharp points — references the brass dividers used
+       by navigators alongside a sextant. Tip half-width is 0.2px (essentially
+       a point); legs extend 4px past the original endpoint for extra taper. -->
+  <path d="M 66.50 30.00 L 73.50 30.00 L 36.67 111.78 L 36.30 111.62 Z" fill="#0B8FAC"/>
+  <path d="M 66.50 30.00 L 73.50 30.00 L 103.70 111.62 L 103.33 111.78 Z" fill="#0B8FAC"/>
+  <!-- Crossbar: the index/horizon reference. Bumped from 3px to 5px so the
+       accent is genuinely visible across all rendered sizes. -->
+  <line x1="40" y1="80" x2="100" y2="80" stroke="#E8522A" stroke-width="5" stroke-linecap="round"/>
+  <!-- Three small dots — abstract scale or compass-rose markings. -->
   <circle cx="55" cy="94" r="2" fill="#0B8FAC"/>
   <circle cx="70" cy="97" r="2.5" fill="#0B8FAC"/>
   <circle cx="85" cy="94" r="2" fill="#0B8FAC"/>

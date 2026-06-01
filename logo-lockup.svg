@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" aria-label="Aegean Blueprint">
-  <circle cx="40" cy="40" r="38" fill="none" stroke="currentColor" stroke-width="1"/>
-  <line x1="40" y1="17" x2="22" y2="61" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-  <line x1="40" y1="17" x2="58" y2="61" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-  <line x1="23" y1="45" x2="57" y2="45" stroke="#E8522A" stroke-width="1.8" stroke-linecap="round"/>
-  <circle cx="32" cy="53" r="1.2" fill="currentColor"/>
-  <circle cx="40" cy="55" r="1.5" fill="currentColor"/>
-  <circle cx="48" cy="53" r="1.2" fill="currentColor"/>
+  <circle cx="40" cy="40" r="37.40" fill="none" stroke="currentColor" stroke-width="1"/>
+  <path d="M 38.08 18.00 L 41.92 18.00 L 21.67 62.98 L 21.46 62.89 Z" fill="currentColor"/>
+  <path d="M 38.08 18.00 L 41.92 18.00 L 58.54 62.89 L 58.33 62.98 Z" fill="currentColor"/>
+  <line x1="23.50" y1="45.50" x2="56.50" y2="45.50" stroke="#E8522A" stroke-width="2.75" stroke-linecap="round"/>
+  <circle cx="31.75" cy="53.20" r="1.10" fill="currentColor"/>
+  <circle cx="40.00" cy="54.85" r="1.38" fill="currentColor"/>
+  <circle cx="48.25" cy="53.20" r="1.10" fill="currentColor"/>
   <text x="100" y="34" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="500" fill="currentColor" letter-spacing="-0.3">Aegean</text>
   <text x="100" y="60" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="500" fill="currentColor" letter-spacing="-0.3">Blueprint</text>
 </svg>
