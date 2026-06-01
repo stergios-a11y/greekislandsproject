@@ -2669,6 +2669,7 @@ function renderCompareWTV(iA, iB, jsonA, jsonB) {
   const tagClass = ['wtv-avoid','wtv-ok','wtv-great','wtv-perfect'];
   const tagLabels = [t('wtv.tag.avoid'), t('wtv.tag.ok'), t('wtv.tag.great'), t('wtv.tag.perfect')];
   const tagLabel = (v) => tagLabels[v] || '';
+  const limitedLabel = t('wtv.limited');
 
   // Get why-text — use EL if in Greek, EN otherwise
   const wtvLangKey = CURRENT_LANG === 'el' ? 'why_el' : 'why';
@@ -2677,6 +2678,13 @@ function renderCompareWTV(iA, iB, jsonA, jsonB) {
   const whyB = jsonB && jsonB.when_to_visit && jsonB.when_to_visit.months
     ? jsonB.when_to_visit.months.map(m => m[wtvLangKey] || m.why || '') : [];
 
+  // Limited-service flags per month — comes from the same JSON we already fetched.
+  // Matches the per-island page redesign where `limited:true` dims the cell visually.
+  const limitedA = jsonA && jsonA.when_to_visit && jsonA.when_to_visit.months
+    ? jsonA.when_to_visit.months.map(m => m.limited === true) : [];
+  const limitedB = jsonB && jsonB.when_to_visit && jsonB.when_to_visit.months
+    ? jsonB.when_to_visit.months.map(m => m.limited === true) : [];
+
   const months = monthNames.map((mo, i) => {
     const tA = tagsA[i] !== undefined ? tagsA[i] : 1;
     const tB = tagsB[i] !== undefined ? tagsB[i] : 1;
@@ -2684,11 +2692,18 @@ function renderCompareWTV(iA, iB, jsonA, jsonB) {
     const isBest  = tA >= 3 && tB >= 3;
     const wA = whyA[i] || '';
     const wB = whyB[i] || '';
-    const tooltip = `${islandName(iA.key)}: ${tagLabel(tA)}${wA ? ' \u2014 ' + wA : ''} | ${islandName(iB.key)}: ${tagLabel(tB)}${wB ? ' \u2014 ' + wB : ''}`;
+    const lA = limitedA[i] === true;
+    const lB = limitedB[i] === true;
+    // Include 'Limited service —' prefix in tooltip when applicable
+    const aTip = `${islandName(iA.key)}: ${lA ? limitedLabel + ' — ' : ''}${tagLabel(tA)}${wA ? ' \u2014 ' + wA : ''}`;
+    const bTip = `${islandName(iB.key)}: ${lB ? limitedLabel + ' — ' : ''}${tagLabel(tB)}${wB ? ' \u2014 ' + wB : ''}`;
+    const tooltip = `${aTip} | ${bTip}`;
+    const cellAClass = `cwtv-cell cwtv-a ${tagClass[tA]}${lA ? ' wtv-limited' : ''}`;
+    const cellBClass = `cwtv-cell cwtv-b ${tagClass[tB]}${lB ? ' wtv-limited' : ''}`;
     return `<div class="cwtv-col${isSweet ? ' cwtv-sweet' : ''}${isBest ? ' cwtv-best' : ''}" title="${tooltip.replace(/"/g,"'")}">
-      <div class="cwtv-cell cwtv-a ${tagClass[tA]}"></div>
+      <div class="${cellAClass}"></div>
       <div class="cwtv-month">${mo}</div>
-      <div class="cwtv-cell cwtv-b ${tagClass[tB]}"></div>
+      <div class="${cellBClass}"></div>
     </div>`;
   }).join('');
 
@@ -2709,6 +2724,13 @@ function renderCompareWTV(iA, iB, jsonA, jsonB) {
   const nameA = islandName(iA.key);
   const nameB = islandName(iB.key);
 
+  // Build the legend — include 'Limited service' indicator only if at least one
+  // island actually has a limited month in the selection.
+  const anyLimited = limitedA.some(Boolean) || limitedB.some(Boolean);
+  const limitedLegendItem = anyLimited
+    ? `<span class="cwtv-leg cwtv-leg-limited" aria-hidden="true"></span>${limitedLabel}`
+    : '';
+
   el.innerHTML = `
     <div class="cwtv-legend-row">
       <div class="cwtv-legend">
@@ -2716,6 +2738,7 @@ function renderCompareWTV(iA, iB, jsonA, jsonB) {
         <span class="cwtv-leg wtv-great"></span>${t('wtv.great')}
         <span class="cwtv-leg wtv-ok"></span>${t('wtv.ok')}
         <span class="cwtv-leg wtv-avoid"></span>${t('wtv.avoid')}
+        ${limitedLegendItem}
       </div>
     </div>
     <div class="cwtv-wrap">

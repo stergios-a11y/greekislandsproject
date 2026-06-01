@@ -5160,11 +5160,13 @@ html.dark .mission-disagree-box {
 /* Limited service — dims the cell + small diagonal stripe overlay.
    Orthogonal to the perfect/great/ok/avoid tag: an island can be
    "Great in March" AND have limited service (shoulder season). */
-.wtv-cell.wtv-limited {
+.wtv-cell.wtv-limited,
+.cwtv-cell.wtv-limited {
   position: relative;
   opacity: 0.55;
 }
-.wtv-cell.wtv-limited::after {
+.wtv-cell.wtv-limited::after,
+.cwtv-cell.wtv-limited::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -5176,6 +5178,25 @@ html.dark .mission-disagree-box {
     rgba(255,255,255,0.20) 4px
   );
   pointer-events: none;
+}
+/* Compare-view WTV legend swatch for the limited-service marker.
+   Shows a striped + dimmed grey rectangle that matches the cell treatment. */
+.cwtv-leg.cwtv-leg-limited {
+  background: #b5b5b5;
+  opacity: 0.55;
+  position: relative;
+}
+.cwtv-leg.cwtv-leg-limited::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    transparent 3px,
+    rgba(255,255,255,0.40) 3px,
+    rgba(255,255,255,0.40) 4px
+  );
 }
 .wtv-limited-note {
   margin-top: 6px;
