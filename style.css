@@ -663,6 +663,102 @@ html.dark .compare-verdict p { color: #ddd; }
   .compare-verdict { padding: 18px 18px; }
   .compare-verdict p { font-size: 15px; }
 }
+/* Long-form verdict (Milos vs Santorini and others) — adds H4 subheaders,
+   two-column "Choose X if..." blocks, and a FAQ accordion below the prose. */
+.compare-verdict h4 {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--ink-1);
+  margin: 24px 0 10px;
+}
+.compare-verdict h4:first-of-type { margin-top: 16px; }
+.compare-verdict-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 16px 0 20px;
+}
+.compare-verdict-col {
+  background: var(--white);
+  border: 1px solid rgba(11,143,172,0.15);
+  border-radius: 10px;
+  padding: 14px 18px;
+}
+.compare-verdict-col h4 {
+  margin: 0 0 10px;
+  font-size: 17px;
+  color: var(--aegean-dark);
+}
+.compare-verdict-col ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.compare-verdict-col li {
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.55;
+  margin-bottom: 8px;
+  color: var(--ink-1);
+}
+.compare-verdict-col li:last-child { margin-bottom: 0; }
+html.dark .compare-verdict-col {
+  background: rgba(0,0,0,0.18);
+  border-color: rgba(11,143,172,0.30);
+}
+html.dark .compare-verdict-col li { color: #ddd; }
+@media (max-width: 720px) {
+  .compare-verdict-cols { grid-template-columns: 1fr; gap: 12px; }
+}
+/* FAQ accordion below the verdict prose */
+.compare-faq {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(11,143,172,0.18);
+}
+.compare-faq-heading {
+  font-family: var(--serif);
+  font-size: var(--text-sub);
+  font-weight: 700;
+  color: var(--aegean-dark);
+  margin: 0 0 12px;
+}
+.compare-faq details {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0;
+  margin-bottom: 8px;
+}
+.compare-faq details summary {
+  cursor: pointer;
+  padding: 12px 16px;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink-1);
+  list-style: none;
+}
+.compare-faq details summary::-webkit-details-marker { display: none; }
+.compare-faq details summary::after {
+  content: '+';
+  float: right;
+  color: var(--aegean);
+  font-weight: 700;
+}
+.compare-faq details[open] summary::after { content: '−'; }
+.compare-faq details p {
+  padding: 0 16px 14px;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-1);
+}
+html.dark .compare-faq details {
+  background: rgba(0,0,0,0.2);
+  border-color: #444;
+}
+html.dark .compare-faq details p { color: #ddd; }
 .compare-card {
   background: var(--white);
   border: 1px solid var(--border);

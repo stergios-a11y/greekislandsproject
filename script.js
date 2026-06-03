@@ -115,7 +115,16 @@ let miniMapInstance = null;
 let itineraryMapInstance = null;
 let currentMapMode = 'overall';
 let currentGroupFilter = 'all';
-let compareSelection = ['mykonos', 'santorini'];
+// Pre-rendered static comparison pages set window.__INITIAL_COMPARE_PAIR
+// in an inline <script> before loading this file, so the SPA can pick up the
+// pair immediately and render the right chart on the very first paint — no
+// flash of the default mykonos/santorini view. Falls back to those defaults
+// when nothing was set (e.g. when the user lands on /#compare).
+let compareSelection = (typeof window !== 'undefined'
+  && Array.isArray(window.__INITIAL_COMPARE_PAIR)
+  && window.__INITIAL_COMPARE_PAIR.length === 2)
+  ? [window.__INITIAL_COMPARE_PAIR[0], window.__INITIAL_COMPARE_PAIR[1]]
+  : ['mykonos', 'santorini'];
 let radarChartInstance = null;
 let sortState = { col: 'total', asc: false };
 let itinActiveDay = 'all';
@@ -163,6 +172,12 @@ function parseHash() {
   const path = window.location.pathname.replace(/^\/el\//, '/').replace(/\/$/, '');
   const pathMatch = path.match(/^\/island\/([a-z-]+)$/);
   if (pathMatch) return { view: 'island', param: pathMatch[1] };
+
+  // Pre-rendered comparison pages at /compare/{a}-vs-{b}/ — the slug carries
+  // both island keys; the boot logic uses them to pre-select compareSelection
+  // before renderCompareView runs. The 'pair' shape is [keyA, keyB].
+  const cmpMatch = path.match(/^\/compare\/([a-z-]+)-vs-([a-z-]+)$/);
+  if (cmpMatch) return { view: 'compare', param: { pair: [cmpMatch[1], cmpMatch[2]] } };
 
   // Fall back to hash routing (the SPA's native navigation)
   const hash = window.location.hash.replace('#', '').trim();
@@ -312,7 +327,26 @@ function showView(view, param) {
   if (view === 'international') setTimeout(renderInternational, 50);
   if (view === 'match') setupQuizIfNeeded();
   if (view === 'shortlist') renderShortlist();
-  if (view === 'compare') setTimeout(renderCompareView, 50);
+  if (view === 'compare') {
+    // If a pair was passed via /compare/{a}-vs-{b}/ path, pre-select those
+    // islands before the view renders. Validates that both keys exist in the
+    // dataset (so a bad URL falls through to the default selection).
+    if (param && param.pair && param.pair.length === 2) {
+      const [a, b] = param.pair;
+      if (ISLANDS_DATA && ISLANDS_DATA[a] && ISLANDS_DATA[b]) {
+        compareSelection[0] = a;
+        compareSelection[1] = b;
+        // Push the dropdowns too — they're the visible source of truth and
+        // their change events drive re-render; without this they'd still show
+        // the default mykonos/santorini after setupCompare populated them.
+        const selA = document.getElementById('compare-select-a');
+        const selB = document.getElementById('compare-select-b');
+        if (selA) selA.value = a;
+        if (selB) selB.value = b;
+      }
+    }
+    setTimeout(renderCompareView, 50);
+  }
 }
 
 function handleNav(view, param) { navigateTo(view, param); }
@@ -2709,10 +2743,13 @@ function addToCompare(key) {
   if (selB && compareSelection[1]) selB.value = compareSelection[1];
 }
 
-// Cached vs_verdicts.json data — lazily loaded the first time the Compare
-// view is opened. Format: { 'a__b': { en: '<p>...</p>', el: '<p>...</p>' } }
-// Pairs are alphabetical (sorted) for lookup; e.g. 'mykonos__santorini'.
+// Cached vs_verdicts.json + vs_faqs.json data — lazily loaded the first
+// time the Compare view is opened. Both share the same key format
+// 'a__b' (alphabetical pair). Verdicts contain editorial HTML;
+// FAQs contain {q, a} arrays per language and become an accordion below
+// the verdict prose.
 let VS_VERDICTS_CACHE = null;
+let VS_FAQS_CACHE = null;
 async function loadVsVerdicts() {
   if (VS_VERDICTS_CACHE) return VS_VERDICTS_CACHE;
   try {
@@ -2725,29 +2762,51 @@ async function loadVsVerdicts() {
   VS_VERDICTS_CACHE = {};  // empty so we don't retry
   return VS_VERDICTS_CACHE;
 }
+async function loadVsFaqs() {
+  if (VS_FAQS_CACHE) return VS_FAQS_CACHE;
+  try {
+    const res = await fetch('/vs_faqs.json');
+    if (res.ok) {
+      VS_FAQS_CACHE = await res.json();
+      return VS_FAQS_CACHE;
+    }
+  } catch(e) { /* file optional — fail silently */ }
+  VS_FAQS_CACHE = {};
+  return VS_FAQS_CACHE;
+}
 
 // Render the editorial verdict block (if one exists for this pair).
-// Called by renderCompareView after the cards have rendered.
+// Called by renderCompareView after the cards have rendered. Also pulls the
+// matching FAQ accordion from vs_faqs.json when available, since the FAQ
+// is part of the same "verdict + supporting Q&A" section for SEO purposes.
 async function renderCompareVerdict(iA, iB) {
   const el = document.getElementById('compare-verdict');
   if (!el) return;
-  const verdicts = await loadVsVerdicts();
+  const [verdicts, faqsAll] = await Promise.all([loadVsVerdicts(), loadVsFaqs()]);
   const sortedPair = [iA.key, iB.key].sort();
   const pairKey = sortedPair[0] + '__' + sortedPair[1];
   const entry = verdicts[pairKey];
-  if (!entry) {
+  const lang = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
+  const html = entry ? (entry[lang] || entry['en'] || '') : '';
+  const faqList = (faqsAll[pairKey] && faqsAll[pairKey][lang]) ? faqsAll[pairKey][lang] : [];
+  // Nothing curated → hide the section entirely.
+  if (!html && !faqList.length) {
     el.style.display = 'none';
     el.innerHTML = '';
     return;
   }
-  const lang = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
-  const html = entry[lang] || entry['en'] || '';
-  if (!html) {
-    el.style.display = 'none';
-    return;
-  }
+  const escHtml = (s) => String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   const heading = lang === 'el' ? 'Η ετυμηγορία μας' : 'Our verdict';
-  el.innerHTML = `<h3 class="compare-verdict-heading">${heading}</h3>${html}`;
+  let faqHtml = '';
+  if (faqList.length) {
+    const faqHeading = lang === 'el' ? 'Συχνές ερωτήσεις' : 'Common questions';
+    const items = faqList.map(item =>
+      `<details><summary>${escHtml(item.q)}</summary><p>${escHtml(item.a)}</p></details>`
+    ).join('');
+    faqHtml = `<div class="compare-faq"><h3 class="compare-faq-heading">${faqHeading}</h3>${items}</div>`;
+  }
+  el.innerHTML = `<h3 class="compare-verdict-heading">${heading}</h3>${html}${faqHtml}`;
   el.style.display = '';
 }
 
