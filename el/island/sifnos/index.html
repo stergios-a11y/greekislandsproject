@@ -123,6 +123,27 @@
     line-height: 1.5;
   }
   .seo-gt-tip strong { font-style: normal; color: var(--aegean, #0B8FAC); }
+  /* Detailed getting_there paragraphs (when getting_there.detailed is present).
+     Inline **strong** acts as subheaders inside the prose. */
+  .seo-getting-there p {
+    margin: 0 0 14px;
+    font-size: var(--text-body, 16px);
+    line-height: 1.65;
+    color: var(--ink-2, #333);
+  }
+  .seo-getting-there p strong {
+    color: var(--ink-1, #222);
+    display: inline;
+  }
+  /* beaches_intro: the declarative top-pick prose above the per-beach list */
+  .seo-beaches-intro p {
+    margin: 0 0 14px;
+    font-size: var(--text-body, 16px);
+    line-height: 1.65;
+    color: var(--ink-2, #333);
+  }
+  .seo-beaches-intro p strong { color: var(--ink-1, #222); }
+  .seo-beaches-intro p:last-child { margin-bottom: 18px; }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
   .seo-day-meta { color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }
@@ -319,7 +340,7 @@
     <li><strong>09:00 · Πεζοπορία Κάτω Πετάλι προς Κάστρο</strong><br>Η καλύτερη πεζοπορία της Σίφνου — το παλιό μονοπάτι με μουλάρια από την Απολλωνία στο Κάστρο μέσα από ελαιώνες και κυκλαδίτικα εκκλησάκια. 45 λεπτά, επίπεδη και όμορφη.</li><li><strong>11:30 · Παραλία Καμάρες</strong><br>Η παραλία του λιμανιού — μακρά, αμμώδης και προστατευμένη στον κόλπο του λιμανιού. Καλές ανέσεις και ζωντανή προκυμαία με καφέ. Η καλύτερη παραλία για παρατήρηση ανθρώπων.</li><li><strong>15:30 · Απολλωνία — Αναχώρηση</strong><br>Πλοίο από το λιμάνι των Καμαρών προς Πειραιά, Μήλο, Σέριφο ή Πάρο.</li>
   </ol>
 </section></section>
-  <section class="seo-beaches"><h2>Κορυφαίες παραλίες — Σίφνος</h2>
+  <section class="seo-beaches"><h2>Καλύτερη παραλία — Σίφνος</h2><div class="seo-beaches-intro"><p>Η καλύτερη παραλία της Σίφνου είναι ο <strong>Πλατύς Γιαλός</strong> — μακρά λωρίδα λεπτής άμμου στη νότια ακτή, προστατευμένη από το μελτέμι, ρηχή και ζεστή, με τις καλύτερες ταβέρνες του νησιού στο πίσω μέρος. Είναι η προφανής πρώτη επιλογή και η πιο δημοφιλής παραλία, αλλά ο κόλπος είναι αρκετά μεγάλος ώστε να απορροφά τον κόσμο και το φαγητό πραγματικά καλό.</p><p>Αν θέλεις κάτι πιο φωτογενές, ο <strong>Αποκοφτός</strong> βρίσκεται ακριβώς κάτω από τη λευκή μονή της Χρυσοπηγής στη βραχώδη χερσόνησό της — η πιο φωτογραφημένη παραλία των Κυκλάδων, και δικαίως. Είναι μικρότερη και λιγότερο οργανωμένη από τον Πλατύ Γιαλό, αλλά το σκηνικό είναι εξαιρετικό.</p><p>Για ησυχία, το <strong>Βαθύ</strong> είναι η απάντηση: απομακρυσμένος αμμώδης κόλπος στη δυτική ακτή, με μακρύ φιδογυριστό δρόμο που κρατά τα πλήθη μακριά. Ήρεμα νερά, μια μικρή ταβέρνα, σχεδόν κανείς.</p><p>Παρακάτω: όλες οι λεπτομέρειες για κάθε παραλία, με υποδομές, βάθος και έκθεση στον άνεμο.</p></div>
 <article class="seo-beach">
   <h3>Παραλία Πλατύς Γιαλός</h3>
   <p>Η καλύτερη παραλία της Σίφνου — μακρά, αμμώδης και ρηχή με εξαιρετικές ανέσεις. Η πιο δημοφιλής στο νησί αλλά αρκετά μεγάλη ώστε να απορροφά τα πλήθη. Οι ταβέρνες στο πίσω μέρος της παραλίας σερβίρουν εξαιρετικό σιφνιώτικο φαγητό.</p>
@@ -428,7 +449,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="/i18n.js?v=31"></script>
-<script src="/script.js?v=44"></script>
+<script src="/script.js?v=45"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.

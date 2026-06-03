@@ -123,6 +123,27 @@
     line-height: 1.5;
   }
   .seo-gt-tip strong { font-style: normal; color: var(--aegean, #0B8FAC); }
+  /* Detailed getting_there paragraphs (when getting_there.detailed is present).
+     Inline **strong** acts as subheaders inside the prose. */
+  .seo-getting-there p {
+    margin: 0 0 14px;
+    font-size: var(--text-body, 16px);
+    line-height: 1.65;
+    color: var(--ink-2, #333);
+  }
+  .seo-getting-there p strong {
+    color: var(--ink-1, #222);
+    display: inline;
+  }
+  /* beaches_intro: the declarative top-pick prose above the per-beach list */
+  .seo-beaches-intro p {
+    margin: 0 0 14px;
+    font-size: var(--text-body, 16px);
+    line-height: 1.65;
+    color: var(--ink-2, #333);
+  }
+  .seo-beaches-intro p strong { color: var(--ink-1, #222); }
+  .seo-beaches-intro p:last-child { margin-bottom: 18px; }
   .seo-day { margin-bottom: 24px; }
   .seo-day h3 { font-size: var(--text-sub, 18px); margin: 0 0 4px; }
   .seo-day-meta { color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }
@@ -319,7 +340,7 @@
     <li><strong>09:00 · Kato Petali to Kastro Walk</strong><br>The finest walk on Sifnos — the old mule path from Apollonia to Kastro through olive groves and Cycladic chapels. 45 minutes, flat and beautiful.</li><li><strong>11:30 · Kamares Beach</strong><br>The port beach — long, sandy and sheltered in the harbour bay. Good facilities and a lively waterfront with cafes. The best beach for people-watching.</li><li><strong>15:30 · Apollonia — Departure</strong><br>Ferry from Kamares port to Piraeus, Milos, Serifos or <a href="/island/paros/">Paros</a>.</li>
   </ol>
 </section></section>
-  <section class="seo-beaches"><h2>Top beaches of Sifnos</h2>
+  <section class="seo-beaches"><h2>Best beach in Sifnos</h2><div class="seo-beaches-intro"><p>The best beach in Sifnos is <strong>Platis Gialos</strong> — a long stretch of fine sand on the south coast, sheltered from the meltemi, shallow and warm, with the island&#x27;s best tavernas at the back. It&#x27;s the obvious top pick and the most popular beach on the island, but the bay is large enough to absorb the crowds and the food is genuinely good.</p><p>If you want something more photogenic, <strong>Apokofto</strong> sits directly below the white Chrysopigi monastery on its rocky peninsula — the most-photographed beach in the Cyclades, and rightly so. It&#x27;s smaller and less equipped than Platis Gialos, but the setting is extraordinary.</p><p>For solitude, <strong>Vathy</strong> is the answer: a remote sandy cove in a deep west-coast bay, reached by a long winding road that keeps the crowds out. Calm water, one small taverna, almost nobody.</p><p>Below: the full beach detail for each, with facilities, depth, and exposure to wind.</p></div>
 <article class="seo-beach">
   <h3>Platis Gialos Beach</h3>
   <p>The best beach on Sifnos — long, sandy and shallow with excellent facilities. The most popular on the island but large enough to absorb the crowds. The tavernas at the back of the beach serve outstanding Sifniot food.</p>
@@ -428,7 +449,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="/i18n.js?v=31"></script>
-<script src="/script.js?v=44"></script>
+<script src="/script.js?v=45"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.

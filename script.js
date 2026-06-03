@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-06-01';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-06-03';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -1432,12 +1432,37 @@ function buildIslandPage(data, key) {
   } else {
     beachHeading = `${t("detail.beaches.title")} ${islandName(currentIslandKey)}`;
   }
+  // When `beaches_intro` is present (islands targeting "best beach in X"),
+  // override the heading and render the declarative top-pick prose above the
+  // beach list. Mirrors the prerender so SPA-rendered view matches what
+  // Google indexed.
+  const beachesIntroObj = data.beaches_intro || {};
+  const beachesIntroText = (CURRENT_LANG === 'el' ? beachesIntroObj.el : beachesIntroObj.en) || '';
+  let beachesIntroHtml = '';
+  if (beachesIntroText) {
+    const escHtml = (s) => String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+    const paras = beachesIntroText.split(/\n\n+/).map(p => p.trim()).filter(Boolean);
+    const htmlParas = paras.map(p => {
+      const escaped = escHtml(p);
+      return `<p>${escaped.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')}</p>`;
+    }).join('');
+    beachesIntroHtml = `<div class="itin-beaches-intro">${htmlParas}</div>`;
+    // Override the heading to use the target query phrase.
+    if (CURRENT_LANG === 'el') {
+      beachHeading = `Καλύτερη παραλία — ${data.name_el || islandName(currentIslandKey)}`;
+    } else {
+      beachHeading = `Best beach in ${islandName(currentIslandKey)}`;
+    }
+  }
   const beachSection = beachCards ? `
     <div class="itin-beaches-section">
       <div class="itin-beaches-header">
         <h2 class="itin-beaches-title">${beachHeading}</h2>
         <p class="itin-beaches-sub">${t("detail.beaches.sub")}</p>
       </div>
+      ${beachesIntroHtml}
       <div class="itin-beaches-list">${beachCards}</div>
     </div>` : '';
 
@@ -1518,6 +1543,43 @@ function buildGettingThereSection(data) {
   const pillHtml = pills.length
     ? `<div class="itin-gt-pills">${pills.map(p => `<span class="itin-gt-pill">${escHtml(p)}</span>`).join('')}</div>`
     : '';
+
+  // Detailed long-form content (for islands targeting "how to get to X" search
+  // queries). When `getting_there.detailed` is present in the JSON, render the
+  // SEO-targeted heading + full prose instead of the short summary + toggle.
+  // Mirrors the prerender logic so the SPA view matches what Google sees.
+  const detailedObj = gt.detailed || {};
+  const detailedText = (lang === 'el' ? detailedObj.el : detailedObj.en) || '';
+  if (detailedText) {
+    // Markdown-light: blank-line-separated paragraphs, **bold** subheaders.
+    const paras = detailedText.split(/\n\n+/).map(p => p.trim()).filter(Boolean);
+    const htmlParas = paras.map(p => {
+      // Escape first, then unescape the **bold** wrappers and replace with <strong>.
+      // Doing it in this order means the user-facing text inside the bold can't
+      // inject HTML, but the bold marker itself becomes proper markup.
+      const escaped = escHtml(p);
+      return `<p>${escaped.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')}</p>`;
+    }).join('');
+
+    // SEO heading: literal target query in EN; gender-aware accusative in EL.
+    const name = (lang === 'el' && data.name_el) ? data.name_el : (data.name || '');
+    let heading;
+    if (lang === 'en') {
+      heading = `How to get to ${name}`;
+    } else {
+      const acc = data.name_accusative_el || name;
+      const gender = (data.gender_el || 'f').toLowerCase();
+      const prep = { f: 'στη', m: 'στον', n: 'στο', p: 'στα' }[gender] || 'στη';
+      heading = `Πώς να πας ${prep} ${acc}`;
+    }
+
+    return `
+      <section class="itin-getting-there">
+        <h3 class="itin-getting-there-title">${escHtml(heading)}</h3>
+        ${pillHtml}
+        ${htmlParas}
+      </section>`;
+  }
 
   // Split the summary into lead (visible) + rest (collapsed). Accumulate
   // sentences into the lead until we have >= 80 chars, so we don't leave

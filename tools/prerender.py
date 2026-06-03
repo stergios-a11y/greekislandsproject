@@ -1149,15 +1149,66 @@ def render_body(key, data, meta, lang='en'):
                 f'</details>'
             )
 
-        if pill_html or lead_html:
-            getting_there_html = (
-                f'<section class="seo-getting-there">'
-                f'<h2>{gt_label}</h2>'
-                f'{pill_html}'
-                f'{lead_html}'
-                f'{more_html}'
-                f'</section>'
-            )
+        # Detailed long-form content — for islands targeting "how to get to X"
+        # search queries. When `getting_there.detailed` is present in the JSON,
+        # we override the section heading with the literal query phrase
+        # ("How to get to {Name}") and render the full prose below the pills.
+        # The detailed content uses markdown-light formatting (paragraphs +
+        # **bold** subheaders), which we convert to HTML here.
+        detailed_raw = gt.get('detailed') or {}
+        detailed_text = detailed_raw.get('el' if lang == 'el' else 'en', '')
+        detailed_html = ''
+        if detailed_text:
+            # Convert simple markdown to HTML: each blank-line-separated chunk
+            # becomes a <p>, with **bold** → <strong>. Keeps it as one section
+            # with semantic prose paragraphs (better for SEO than a single
+            # giant <p>).
+            paras = [p.strip() for p in detailed_text.split('\n\n') if p.strip()]
+            html_paras = []
+            for p in paras:
+                # Process bold markers
+                p_html = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', esc(p))
+                # un-escape the strong tags we just inserted (esc() escaped the
+                # raw text first; the regex substitution adds tags that aren't
+                # text). Pattern: we ran esc on the whole string, so the **bold**
+                # asterisks are still there literally. Now wrap them.
+                html_paras.append(f'<p>{p_html}</p>')
+            detailed_html = ''.join(html_paras)
+
+        if pill_html or lead_html or detailed_html:
+            # If detailed content is present, use the SEO-targeted heading and
+            # show the full prose instead of the truncated lead/more pattern.
+            if detailed_html:
+                if lang == 'en':
+                    seo_heading = f'How to get to {name}'
+                else:
+                    # Greek needs accusative case + gender-aware preposition:
+                    #   feminine (η Φολέγανδρος) → "στη Φολέγανδρο"
+                    #   masculine (ο Πόρος) → "στον Πόρο"
+                    #   neuter (το Ηράκλειο) → "στο Ηράκλειο"
+                    #   plural (τα Κύθηρα) → "στα Κύθηρα"
+                    # Fall back to nominative + "στη" if no accusative provided.
+                    acc = data.get('name_accusative_el') or name
+                    gender = (data.get('gender_el') or 'f').lower()
+                    prep_map = {'f': 'στη', 'm': 'στον', 'n': 'στο', 'p': 'στα'}
+                    prep = prep_map.get(gender, 'στη')
+                    seo_heading = f'Πώς να πας {prep} {acc}'
+                getting_there_html = (
+                    f'<section class="seo-getting-there">'
+                    f'<h2>{esc(seo_heading)}</h2>'
+                    f'{pill_html}'
+                    f'{detailed_html}'
+                    f'</section>'
+                )
+            else:
+                getting_there_html = (
+                    f'<section class="seo-getting-there">'
+                    f'<h2>{gt_label}</h2>'
+                    f'{pill_html}'
+                    f'{lead_html}'
+                    f'{more_html}'
+                    f'</section>'
+                )
 
     # Itinerary section
     itinerary_html = ''
@@ -1212,7 +1263,23 @@ def render_body(key, data, meta, lang='en'):
     # Beaches section
     beaches_html = ''
     if beaches:
-        heading = f'Top beaches of {name}' if lang == 'en' else f'Κορυφαίες παραλίες — {name}'
+        # If `beaches_intro` is present in the JSON, the page is targeting the
+        # "best beach in X" search query. Use the SEO heading and render the
+        # intro prose (declarative top pick + runners-up) above the beach list.
+        # Otherwise keep the existing "Top beaches of X" heading and just the list.
+        beaches_intro_obj = data.get('beaches_intro') or {}
+        beaches_intro_text = beaches_intro_obj.get('el' if lang == 'el' else 'en', '')
+        intro_html = ''
+        if beaches_intro_text:
+            paras = [p.strip() for p in beaches_intro_text.split('\n\n') if p.strip()]
+            html_paras = []
+            for p in paras:
+                p_html = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', esc(p))
+                html_paras.append(f'<p>{p_html}</p>')
+            intro_html = f'<div class="seo-beaches-intro">{"".join(html_paras)}</div>'
+            heading = f'Best beach in {name}' if lang == 'en' else f'Καλύτερη παραλία — {name}'
+        else:
+            heading = f'Top beaches of {name}' if lang == 'en' else f'Κορυφαίες παραλίες — {name}'
         beach_blocks = []
         for b in beaches:
             bname = esc(pick(b, 'name', lang))
@@ -1234,7 +1301,7 @@ def render_body(key, data, meta, lang='en'):
     <dt>{'Facilities' if lang=='en' else 'Υποδομές'}</dt><dd>{bfac}</dd>
   </dl>
 </article>''')
-        beaches_html = f'<section class="seo-beaches"><h2>{heading}</h2>{"".join(beach_blocks)}</section>'
+        beaches_html = f'<section class="seo-beaches"><h2>{heading}</h2>{intro_html}{"".join(beach_blocks)}</section>'
 
     # Local & seasonal — specialties / crafts / festivals (only renders if any present)
     local_html = build_local_html(data, lang)
@@ -1453,6 +1520,27 @@ def render_page(key, data, meta, lang='en'):
     line-height: 1.5;
   }}
   .seo-gt-tip strong {{ font-style: normal; color: var(--aegean, #0B8FAC); }}
+  /* Detailed getting_there paragraphs (when getting_there.detailed is present).
+     Inline **strong** acts as subheaders inside the prose. */
+  .seo-getting-there p {{
+    margin: 0 0 14px;
+    font-size: var(--text-body, 16px);
+    line-height: 1.65;
+    color: var(--ink-2, #333);
+  }}
+  .seo-getting-there p strong {{
+    color: var(--ink-1, #222);
+    display: inline;
+  }}
+  /* beaches_intro: the declarative top-pick prose above the per-beach list */
+  .seo-beaches-intro p {{
+    margin: 0 0 14px;
+    font-size: var(--text-body, 16px);
+    line-height: 1.65;
+    color: var(--ink-2, #333);
+  }}
+  .seo-beaches-intro p strong {{ color: var(--ink-1, #222); }}
+  .seo-beaches-intro p:last-child {{ margin-bottom: 18px; }}
   .seo-day {{ margin-bottom: 24px; }}
   .seo-day h3 {{ font-size: var(--text-sub, 18px); margin: 0 0 4px; }}
   .seo-day-meta {{ color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }}
@@ -1685,7 +1773,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=31"></script>
-<script src="{asset_prefix}script.js?v=44"></script>
+<script src="{asset_prefix}script.js?v=45"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
