@@ -92,7 +92,7 @@ const ISLANDS_DATA = {
   "sikinos":      { name:"Sikinos",          lat:36.683, lng:25.116, beach:3.5, hist:4.2, night:2.2, access:2.5, afford:4.0, car_need:3.0, has_airport:false, total:3.4, area:42,    pop:273,     days:2, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:true, sailing:false },
   "anafi":        { name:"Anafi",            lat:36.366, lng:25.766, beach:4.5, hist:3.2, night:2.5, access:2.0, afford:4.2, car_need:3.0, has_airport:false, total:3.9, area:38,    pop:271,     days:2, island_group:"Cyclades", drama:true, hiking:false, springs:false, chora:true, sailing:false },
   "samothrace":   { name:"Samothrace",       lat:40.466, lng:25.533, beach:3.0, hist:4.1, night:2.5, access:1.8, afford:4.5, car_need:3.0, has_airport:false, total:3.2, area:178,   pop:2859,    days:2, island_group:"Other", drama:true, hiking:true, springs:true, chora:false, sailing:false },
-  "fournoi":      { name:"Fournoi",          lat:37.580, lng:26.500, beach:3.8, hist:3.0, night:1.8, access:2.0, afford:4.5, car_need:3.0, has_airport:false, total:3.2, area:45,    pop:1459,    days:2, island_group:"Other", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "fournoi":      { name:"Fournoi",          lat:37.580, lng:26.500, beach:3.8, hist:3.0, night:1.8, access:2.0, afford:4.5, car_need:3.0, has_airport:false, total:3.2, area:45,    pop:1459,    days:2, island_group:"NE Aegean", drama:false, hiking:false, springs:false, chora:false, sailing:false },
   "spetses":      { name:"Spetses",          lat:37.260, lng:23.130, beach:2.8, hist:4.2, night:4.2, access:4.2, afford:2.0, car_need:3.0, has_airport:false, total:3.7, area:22,    pop:4027,    days:2, island_group:"Saronic", drama:false, hiking:false, springs:false, chora:false, sailing:true },
   "tilos":        { name:"Tilos",            lat:36.416, lng:27.366, beach:3.8, hist:3.5, night:2.0, access:2.2, afford:4.2, car_need:3.0, has_airport:false, total:3.5, area:61,    pop:780,     days:2, island_group:"Dodecanese", drama:false, hiking:true, springs:false, chora:false, sailing:false },
   "leipsoi":      { name:"Leipsoi",          lat:37.300, lng:26.750, beach:4.0, hist:3.0, night:2.0, access:2.5, afford:4.5, car_need:2.0, has_airport:false, total:3.4, area:16,    pop:790,     days:1, island_group:"Dodecanese", drama:false, hiking:false, springs:false, chora:false, sailing:false },
@@ -1474,6 +1474,7 @@ function buildIslandPage(data, key) {
       </div>
       ${introHtml}
       ${buildSuitedForSection(data)}
+      ${buildAudienceSections(data)}
       ${gettingThereHtml}
       ${buildWhenToVisitSection(data)}
       <div class="itin-day-filter">
@@ -1520,6 +1521,56 @@ function buildSuitedForSection(data) {
         <ul>${li(skip)}</ul>
       </div>
     </div>`;
+}
+
+/* Renders audience pitches ("Naxos for families", "Milos for hikers", etc.)
+   Mirrors the prerender's audience rendering so the SPA-loaded page matches
+   what Google indexes. Each entry in data.audience is keyed by audience name
+   ('families', 'couples', 'hikers'...) and contains markdown-light prose in
+   'en' and 'el'. **Bold** subheaders become <strong>. */
+function buildAudienceSections(data) {
+  const audience = data.audience;
+  if (!audience || typeof audience !== 'object') return '';
+
+  const lang = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
+  const escHtml = (s) => String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+  // Label map — keep in sync with AUDIENCE_LABELS in tools/prerender.py.
+  const AUDIENCE_LABELS = {
+    families:   ['for families',           'για οικογένειες'],
+    couples:    ['for couples',            'για ζευγάρια'],
+    hikers:     ['for hikers',             'για πεζοπόρους'],
+    solo:       ['for solo travelers',     'για μοναχικούς ταξιδιώτες'],
+    foodies:    ['for foodies',            'για καλοφαγάδες'],
+    first_time: ['for first-time visitors','για πρώτη επίσκεψη'],
+  };
+
+  const name = (lang === 'el' && data.name_el) ? data.name_el : (data.name || '');
+
+  const blocks = [];
+  for (const key of Object.keys(audience)) {
+    const entry = audience[key] || {};
+    const text = (lang === 'el' ? entry.el : entry.en) || '';
+    if (!text) continue;
+    const labels = AUDIENCE_LABELS[key] || [key, key];
+    const suffix = lang === 'el' ? labels[1] : labels[0];
+    const heading = `${name} ${suffix}`;
+
+    const paras = text.split(/\n\n+/).map(p => p.trim()).filter(Boolean);
+    const htmlParas = paras.map(p => {
+      const escaped = escHtml(p);
+      return `<p>${escaped.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')}</p>`;
+    }).join('');
+
+    blocks.push(
+      `<section class="itin-audience" data-audience="${escHtml(key)}">
+        <h2 class="itin-audience-title">${escHtml(heading)}</h2>
+        ${htmlParas}
+      </section>`
+    );
+  }
+  return blocks.join('');
 }
 
 function buildGettingThereSection(data) {

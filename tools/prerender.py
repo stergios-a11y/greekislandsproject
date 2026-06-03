@@ -1072,6 +1072,45 @@ def render_body(key, data, meta, lang='en'):
             )
 
     # Getting-there section (between intro and itinerary) — v2 schema: pills + summary + tip
+    # Audience pitches — generic mechanism for "X for {audience}" SEO targeting
+    # (e.g. "Naxos for families", "Milos for hikers", "Hydra for couples").
+    # Each entry in data['audience'] is keyed by audience name and contains
+    # markdown-light prose in 'en' and 'el'. Renders one <section> per pitch,
+    # using a localized heading and **bold** subheaders inside the prose.
+    audience_html = ''
+    audience_obj = data.get('audience') or {}
+    if audience_obj:
+        # Label map: audience-key → (EN heading suffix, EL heading suffix).
+        # EN: "{Name} for {audience}". EL uses gender-aware preposition + accusative.
+        # Add new audiences here as they're added to islands.
+        AUDIENCE_LABELS = {
+            'families':  ('for families',  'για οικογένειες'),
+            'couples':   ('for couples',   'για ζευγάρια'),
+            'hikers':    ('for hikers',    'για πεζοπόρους'),
+            'solo':      ('for solo travelers', 'για μοναχικούς ταξιδιώτες'),
+            'foodies':   ('for foodies',   'για καλοφαγάδες'),
+            'first_time':('for first-time visitors', 'για πρώτη επίσκεψη'),
+        }
+        audience_blocks = []
+        for audience_key, audience_data in audience_obj.items():
+            text = audience_data.get('el' if lang == 'el' else 'en', '')
+            if not text:
+                continue
+            label_en, label_el = AUDIENCE_LABELS.get(audience_key, (audience_key, audience_key))
+            heading = f'{name} {label_en}' if lang == 'en' else f'{name} {label_el}'
+            paras = [p.strip() for p in text.split('\n\n') if p.strip()]
+            html_paras = []
+            for p in paras:
+                p_html = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', esc(p))
+                html_paras.append(f'<p>{p_html}</p>')
+            audience_blocks.append(
+                f'<section class="seo-audience" data-audience="{esc(audience_key)}">'
+                f'<h2>{esc(heading)}</h2>'
+                f'{"".join(html_paras)}'
+                f'</section>'
+            )
+        audience_html = ''.join(audience_blocks)
+
     # The summary is split into a visible first sentence ("lead") and a
     # collapsible "rest", rendered as a native <details> element. This
     # declutters the page without removing any content from the HTML —
@@ -1352,6 +1391,7 @@ def render_body(key, data, meta, lang='en'):
     <p>{safe_html(intro)}</p>
   </section>
   {suited_for_html}
+  {audience_html}
   {getting_there_html}
   {wtv_html}
   {itinerary_html}
@@ -1485,8 +1525,8 @@ def render_page(key, data, meta, lang='en'):
   }}
   .seo-hero {{ margin: 16px 0 24px; }}
   .seo-hero img {{ display: block; box-shadow: 0 2px 12px rgba(0,0,0,0.10); }}
-  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local {{ margin-top: 36px; }}
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2 {{
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local, .seo-audience {{ margin-top: 36px; }}
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2, .seo-audience h2 {{
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }}
@@ -1529,6 +1569,18 @@ def render_page(key, data, meta, lang='en'):
     color: var(--ink-2, #333);
   }}
   .seo-getting-there p strong {{
+    color: var(--ink-1, #222);
+    display: inline;
+  }}
+  /* Audience pitches ("X for families/couples/hikers/..."). Same long-form
+     prose style as the detailed getting_there variant. */
+  .seo-audience p {{
+    margin: 0 0 14px;
+    font-size: var(--text-body, 16px);
+    line-height: 1.65;
+    color: var(--ink-2, #333);
+  }}
+  .seo-audience p strong {{
     color: var(--ink-1, #222);
     display: inline;
   }}
@@ -1773,7 +1825,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=31"></script>
-<script src="{asset_prefix}script.js?v=45"></script>
+<script src="{asset_prefix}script.js?v=46"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
