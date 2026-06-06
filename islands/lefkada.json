@@ -149,14 +149,14 @@
             }
           },
           {
-            "name": "Return to Nydri",
+            "name": "Go to Nydri",
             "lat": 38.71,
             "lng": 20.7141,
             "type": "city",
             "time": "20:00",
             "wiki": null,
             "desc": "Drive back across the island to Nydri (about 35 minutes from the west coast). The harbour fills up after dark — sailing crews coming in for dinner, families on the promenade.",
-            "name_el": "Επιστροφή στο Νυδρί",
+            "name_el": "Άφιξη στο Νυδρί",
             "desc_el": "Επιστροφή στο Νυδρί διασχίζοντας το νησί (περίπου 35 λεπτά από τη δυτική ακτή). Το λιμάνι γεμίζει το βράδυ — πληρώματα ιστιοπλοϊκών για δείπνο, οικογένειες στην παραλιακή."
           }
         ],
@@ -359,7 +359,8 @@
             "wiki": null,
             "desc": "Return across the floating bridge to the mainland. No ferry needed — Lefkada is the only Greek island you can drive to and from.",
             "name_el": "Πόλη Λευκάδας — Αναχώρηση",
-            "desc_el": "Επιστροφή πάνω από την πλωτή γέφυρα στην ηπειρωτική χώρα. Δεν χρειάζεται πλοίο — η Λευκάδα είναι το μοναδικό ελληνικό νησί όπου μπορείς να πας και να γυρίσεις με αυτοκίνητο."
+            "desc_el": "Επιστροφή πάνω από την πλωτή γέφυρα στην ηπειρωτική χώρα. Δεν χρειάζεται πλοίο — η Λευκάδα είναι το μοναδικό ελληνικό νησί όπου μπορείς να πας και να γυρίσεις με αυτοκίνητο.",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780779537/%CE%BB%CE%B5%CF%85%CE%BA%CE%B1%CE%B4%CE%B1_%CF%80%CE%BF%CE%BB%CE%B7_j5r4ig.jpg"
           }
         ],
         "title_el": "Δυτική Ακτή & Αναχώρηση"
@@ -467,7 +468,6 @@
       "facing": "West-facing — open, beautiful sunset views",
       "facilities": "Basic: small beach bar, limited sunbeds. Quiet and uncrowded.",
       "desc": "A long, relatively uncrowded beach just south of Agios Nikitas. Cedar trees provide natural shade at the back of the beach. The water is calm and clear. One of the best spots on the island for watching the sun set over the Ionian.",
-      "commons": null,
       "lat": 38.80931979499138,
       "lng": 20.6323689680407,
       "name_el": "Παραλία Πευκούλια",
@@ -476,14 +476,7 @@
       "facing_el": "Δυτική — ανοιχτή, όμορφη θέα στο ηλιοβασίλεμα",
       "facilities_el": "Στοιχειώδεις: μικρό beach bar, περιορισμένες ξαπλώστρες. Ήσυχη και χωρίς πλήθη.",
       "desc_el": "Μια μακριά, σχετικά ήσυχη παραλία ακριβώς νότια του Αγίου Νικήτα. Κέδροι παρέχουν φυσική σκιά στο πίσω μέρος της παραλίας. Τα νερά είναι ήρεμα και διαυγή. Ένα από τα καλύτερα σημεία του νησιού για να δεις τον ήλιο να δύει πάνω από το Ιόνιο.",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Lefkas12.JPG/1920px-Lefkas12.JPG",
-      "photo_credit": {
-        "artist": "Igorm77",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Lefkas12.JPG",
-        "source": "Wikimedia Commons"
-      }
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780779536/%CF%80%CE%B5%CF%85%CE%BA%CE%BF%CF%85%CE%BB%CE%B9%CE%B1_z6fdou.jpg"
     }
   ],
   "name_el": "Λευκάδα",
