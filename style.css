@@ -2165,9 +2165,9 @@ html.dark .itin-day-btn.active {
   .local-item-image { width: 64px; height: 64px; }
 }
 
-html.dark .local-section { background: var(--ink-1); border-top-color: var(--ink-2); }
+html.dark .local-section { background: var(--marble-2); border-top-color: var(--marble-3); }
+html.dark .local-when { background: var(--aegean-light); color: var(--aegean-dark); }
 html.dark .local-item { background: var(--bg); border-color: var(--ink-2); }
-html.dark .local-when { background: var(--ink-2); color: #fff; }
 
 /* ============================================================
    SIMILAR ISLANDS — recommendation cards at bottom of detail page
@@ -2234,7 +2234,7 @@ html.dark .local-when { background: var(--ink-2); color: #fff; }
   text-transform: capitalize;
 }
 
-html.dark .similar-section { background: var(--ink-1); border-top-color: var(--ink-2); }
+html.dark .similar-section { background: var(--marble-2); border-top-color: var(--marble-3); }
 html.dark .similar-card { background: var(--bg); border-color: var(--ink-2); }
 html.dark .similar-card:hover { border-color: var(--aegean); }
 
@@ -2312,7 +2312,7 @@ html.dark .similar-card:hover { border-color: var(--aegean); }
   .whats-on-chip { padding: 2px 8px; }
 }
 
-html.dark .whats-on-strip { background: var(--ink-1); border-bottom-color: var(--ink-2); }
+html.dark .whats-on-strip { background: var(--marble-2); border-bottom-color: var(--marble-3); }
 html.dark .whats-on-chip { background: var(--bg); border-color: var(--ink-2); color: var(--ink); }
 html.dark .whats-on-chip:hover { border-color: var(--aegean); }
 
