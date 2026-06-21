@@ -1992,11 +1992,12 @@ def generate_ferries_page(island_keys):
         return esc(name)
 
     # Build the page for each language
+    island_count = len(island_keys)
     for lang in ['en', 'el']:
         is_el = (lang == 'el')
         if is_el:
             title = 'Πλοία προς τα Ελληνικά Νησιά από Αθήνα — όλες οι διαδρομές | Aegean Blueprint'
-            description = 'Πλοία από Πειραιά, Ραφήνα και Λαύριο προς 78 νησιά. Διάρκεια, συχνότητα, τιμές. Ενημερωμένος οδηγός για το 2026.'
+            description = f'Πλοία από Πειραιά, Ραφήνα και Λαύριο προς {island_count} νησιά. Διάρκεια, συχνότητα, τιμές. Ενημερωμένος οδηγός για το 2026.'
             intro = ('Σχεδόν όλα τα νησιά του Αιγαίου και του Ιονίου είναι προσβάσιμα με πλοίο '
                      'από την Αθήνα — αλλά το λιμάνι έναρξης κάνει μεγάλη διαφορά. Ο '
                      '<strong>Πειραιάς</strong> εξυπηρετεί τα περισσότερα Κυκλάδες, Δωδεκάνησα, '
@@ -2021,7 +2022,7 @@ def generate_ferries_page(island_keys):
                               'και τις <a href="/el/#hopping">προτεινόμενες διαδρομές νησοπορίας</a>.')
         else:
             title = 'Ferries from Athens to the Greek Islands — all routes | Aegean Blueprint'
-            description = 'Ferries from Piraeus, Rafina, and Lavrio to 78 islands. Duration, frequency, fare. Up-to-date guide for 2026.'
+            description = f'Ferries from Piraeus, Rafina, and Lavrio to {island_count} islands. Duration, frequency, fare. Up-to-date guide for 2026.'
             intro = ('Almost every Aegean and Ionian island is reachable by ferry from Athens — '
                      'but the departure port matters. <strong>Piraeus</strong> serves most '
                      'Cyclades, Dodecanese, Crete, and northern Aegean — it\'s the big port, '
@@ -2406,27 +2407,28 @@ def generate_festivals_page(island_keys):
     MONTH_NAMES_EL = ['Ιανουάριος','Φεβρουάριος','Μάρτιος','Απρίλιος','Μάιος','Ιούνιος','Ιούλιος',
                       'Αύγουστος','Σεπτέμβριος','Οκτώβριος','Νοέμβριος','Δεκέμβριος']
 
+    island_count = len(island_keys)
     for lang in ['en', 'el']:
         is_el = (lang == 'el')
         month_names = MONTH_NAMES_EL if is_el else MONTH_NAMES_EN
         if is_el:
             title = 'Γιορτές & Πανηγύρια Νησιών — αναλυτικό ημερολόγιο | Aegean Blueprint'
-            intro = ('Θρησκευτικές γιορτές, πανηγύρια και παραδοσιακές εκδηλώσεις σε όλα τα 78 ελληνικά νησιά. '
+            intro = (f'Θρησκευτικές γιορτές, πανηγύρια και παραδοσιακές εκδηλώσεις σε όλα τα {island_count} ελληνικά νησιά. '
                      'Για τις κινητές γιορτές, οι ημερομηνίες είναι ρυθμισμένες για το 2027. '
                      'Το ημερολόγιο είναι ο καλύτερος τρόπος να σχεδιάσεις ταξίδι γύρω από κάτι συγκεκριμένο.')
             # Self-contained meta description (≤160 chars). Don't slice `intro` —
             # it's body copy and slicing truncates mid-sentence.
-            meta_desc = ('Θρησκευτικές γιορτές και πανηγύρια σε όλα τα 78 ελληνικά νησιά. '
+            meta_desc = (f'Θρησκευτικές γιορτές και πανηγύρια σε όλα τα {island_count} ελληνικά νησιά. '
                          'Κινητές ημερομηνίες ρυθμισμένες για το 2027. Σχεδίασε το ταξίδι σου γύρω από κάτι αυθεντικό.')
             h1 = 'Γιορτές & Πανηγύρια — Ημερολόγιο'
         else:
             title = 'Greek Island Festivals — full calendar | Aegean Blueprint'
-            intro = ('Religious feasts, panigiria, and traditional celebrations across all 78 Greek islands. '
+            intro = (f'Religious feasts, panigiria, and traditional celebrations across all {island_count} Greek islands. '
                      'Dates pinned to 2027 where movable. The calendar is the single best way to plan a trip '
                      'around something specific — most of these festivals are the deepest-rooted experiences '
                      'an island offers.')
             # Self-contained meta description (≤160 chars).
-            meta_desc = ('Religious feasts and panigiria across all 78 Greek islands. Movable dates pinned to 2027. '
+            meta_desc = (f'Religious feasts and panigiria across all {island_count} Greek islands. Movable dates pinned to 2027. '
                          'The calendar is the deepest way to plan a trip.')
             h1 = 'Greek Island Festivals — full calendar'
 

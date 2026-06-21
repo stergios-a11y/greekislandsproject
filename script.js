@@ -2348,13 +2348,16 @@ async function initItineraryMap(days, beaches = []) {
         : '';
       const stopType = stop.type || 'village';
       const initialMode = itineraryMapInstance.getZoom() >= POI_EMOJI_ZOOM ? 'emoji' : 'dot';
-      const marker = L.marker([stop.lat, stop.lng], { icon: poiDivIcon(stopType, day.color, initialMode, day.day) })
+      // Badge shows the stop's sequence within its day (1..N), not the day number,
+      // so a 5-stop day reads 1·2·3·4·5 in walking order.
+      const stopNum = i + 1;
+      const marker = L.marker([stop.lat, stop.lng], { icon: poiDivIcon(stopType, day.color, initialMode, stopNum) })
         .addTo(itineraryMapInstance)
-        .bindPopup(`<div style="min-width:200px;font-family:sans-serif"><div style="font-size:10px;font-weight:700;color:${day.color};text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px">Day ${day.day} · ${typeLabel}</div>${nameHtml}<p style="font-size:12px;color:#555;margin:6px 0 0;line-height:1.55">${stop.desc}</p>${photoLine}</div>`);
+        .bindPopup(`<div style="min-width:200px;font-family:sans-serif"><div style="font-size:10px;font-weight:700;color:${day.color};text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px">Day ${day.day} · Stop ${stopNum} · ${typeLabel}</div>${nameHtml}<p style="font-size:12px;color:#555;margin:6px 0 0;line-height:1.55">${stop.desc}</p>${photoLine}</div>`);
       // Stash the metadata on the marker so the zoom handler can re-render the icon
       marker._poiType = stopType;
       marker._poiColor = day.color;
-      marker._poiDay = day.day;
+      marker._poiDay = stopNum;
       // Bind direct click handler on lightbox images inside this popup once it opens.
       // Document-level delegation can be intercepted by Leaflet's internal handlers,
       // so direct binding is the most reliable path inside popup content.
