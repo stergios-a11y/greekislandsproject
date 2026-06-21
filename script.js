@@ -2339,21 +2339,39 @@ async function initItineraryMap(days, beaches = []) {
     itinRouteLayers[day.day].push(polyline);
 
     day.stops.forEach((stop, i) => {
+      // Itinerary popups: pull EL fields when on /el/, fall back to EN if a
+      // particular field hasn't been translated for this island yet.
+      const isEl = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+      const stopName = (isEl && stop.name_el) ? stop.name_el : stop.name;
+      const stopDesc = (isEl && stop.desc_el) ? stop.desc_el : stop.desc;
       const nameHtml = stop.wiki
-        ? `<a href="${stop.wiki}" target="_blank" rel="noopener" style="color:${day.color};font-weight:700">${stop.name}</a>`
-        : `<strong>${stop.name}</strong>`;
-      const typeLabel = stop.type ? stop.type.charAt(0).toUpperCase() + stop.type.slice(1) : 'Stop';
+        ? `<a href="${stop.wiki}" target="_blank" rel="noopener" style="color:${day.color};font-weight:700">${stopName}</a>`
+        : `<strong>${stopName}</strong>`;
+      // Stop-type labels (beach / village / castle / …) translated for popup headers
+      const TYPE_LABELS_EL = {
+        beach:'Παραλία', village:'Χωριό', harbour:'Λιμάνι', city:'Πόλη',
+        restaurant:'Εστιατόριο', museum:'Μουσείο', nature:'Φύση',
+        castle:'Κάστρο', church:'Εκκλησία', viewpoint:'Θέα', ruin:'Ερείπια',
+        departure:'Αναχώρηση', monastery:'Μοναστήρι', spa:'Ιαματικά',
+        arrival:'Άφιξη', winery:'Οινοποιείο', distillery:'Αποστακτήριο'
+      };
+      const typeLabel = isEl
+        ? (TYPE_LABELS_EL[stop.type] || 'Στάση')
+        : (stop.type ? stop.type.charAt(0).toUpperCase() + stop.type.slice(1) : 'Stop');
       const photoLine = stop.photo
-        ? `<div style="position:relative;margin-top:8px">${buildLightboxImg(stop.photo, stop.name, stop.photo_credit, '', 'style="width:100%;height:120px;object-fit:cover;border-radius:6px;display:block" onerror="this.parentElement.style.display=\'none\'"')}${buildPhotoCredit(stop.photo_credit)}</div>`
+        ? `<div style="position:relative;margin-top:8px">${buildLightboxImg(stop.photo, stopName, stop.photo_credit, '', 'style="width:100%;height:120px;object-fit:cover;border-radius:6px;display:block" onerror="this.parentElement.style.display=\'none\'"')}${buildPhotoCredit(stop.photo_credit)}</div>`
         : '';
       const stopType = stop.type || 'village';
       const initialMode = itineraryMapInstance.getZoom() >= POI_EMOJI_ZOOM ? 'emoji' : 'dot';
       // Badge shows the stop's sequence within its day (1..N), not the day number,
       // so a 5-stop day reads 1·2·3·4·5 in walking order.
       const stopNum = i + 1;
+      // Popup-header words ("Day"/"Stop") also switch language
+      const dayWord = isEl ? 'Ημέρα' : 'Day';
+      const stopWord = isEl ? 'Στάση' : 'Stop';
       const marker = L.marker([stop.lat, stop.lng], { icon: poiDivIcon(stopType, day.color, initialMode, stopNum) })
         .addTo(itineraryMapInstance)
-        .bindPopup(`<div style="min-width:200px;font-family:sans-serif"><div style="font-size:10px;font-weight:700;color:${day.color};text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px">Day ${day.day} · Stop ${stopNum} · ${typeLabel}</div>${nameHtml}<p style="font-size:12px;color:#555;margin:6px 0 0;line-height:1.55">${stop.desc}</p>${photoLine}</div>`);
+        .bindPopup(`<div style="min-width:200px;font-family:sans-serif"><div style="font-size:10px;font-weight:700;color:${day.color};text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px">${dayWord} ${day.day} · ${stopWord} ${stopNum} · ${typeLabel}</div>${nameHtml}<p style="font-size:12px;color:#555;margin:6px 0 0;line-height:1.55">${stopDesc}</p>${photoLine}</div>`);
       // Stash the metadata on the marker so the zoom handler can re-render the icon
       marker._poiType = stopType;
       marker._poiColor = day.color;
