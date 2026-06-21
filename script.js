@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-06-06';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-06-21';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -29,6 +29,7 @@ const ISLANDS_DATA = {
   "kefalonia":    { name:"Kefalonia",        lat:38.175, lng:20.569, beach:4.7, hist:3.2, night:3.2, access:3.5, afford:3.8, car_need:5.0, has_airport:true, total:4.1, area:773,   pop:35800,   days:5, island_group:"Ionian", drama:false, hiking:true, springs:false, chora:false, sailing:true },
   "zakynthos":    { name:"Zakynthos",        lat:37.787, lng:20.899, beach:4.8, hist:2.5, night:4.5, access:3.7, afford:3.5, car_need:4.0, has_airport:true, total:4.1, area:405,   pop:40700,   days:4, island_group:"Ionian", drama:false, hiking:false, springs:false, chora:false, sailing:false },
   "kythira":      { name:"Kythira",          lat:36.250, lng:23.000, beach:4.2, hist:4.5, night:2.5, access:2.5, afford:3.8, car_need:5.0, has_airport:true, total:3.7, area:279,   pop:3973,    days:4, island_group:"Ionian", drama:false, hiking:true, springs:false, chora:false, sailing:false },
+  "antikythera":  { name:"Antikythera",      lat:35.862, lng:23.306, beach:3.5, hist:4.5, night:1.0, access:1.0, afford:3.5, car_need:2.5, has_airport:false, total:3.4, area:20,    pop:40,      days:2, island_group:"Ionian", drama:false, hiking:true, springs:false, chora:false, sailing:false },
   "elafonisos":   { name:"Elafonisos",       lat:36.480, lng:22.980, beach:5.0, hist:2.0, night:2.5, access:2.5, afford:3.8, car_need:1.0, has_airport:false, total:4.0, area:19,    pop:1041,    days:2, island_group:"Other", drama:false, hiking:false, springs:false, chora:false, sailing:false },
   "paros":        { name:"Paros",            lat:37.085, lng:25.148, beach:5.0, hist:3.8, night:5.0, access:4.5, afford:2.2, car_need:3.0, has_airport:true, total:4.1, area:196,   pop:13700,   days:3, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:true },
   "chania":       { name:"Crete (Chania)",   lat:35.512, lng:24.018, beach:5.0, hist:4.7, night:4.0, access:4.5, afford:3.4, car_need:5.0, has_airport:true, total:4.9, area:2376,  pop:108000,  days:5, island_group:"Crete", drama:false, hiking:true, springs:false, chora:false, sailing:false },
@@ -4752,6 +4753,7 @@ const WTV_TAGS = {
   "ammouliani": [0, 0, 1, 2, 2, 3, 1, 0, 3, 2, 0, 0],
   "amorgos": [0, 0, 1, 2, 2, 3, 2, 1, 3, 2, 1, 0],
   "anafi": [0, 0, 0, 1, 1, 3, 2, 1, 3, 1, 0, 0],
+  "antikythera": [0, 0, 0, 1, 2, 3, 2, 2, 3, 1, 0, 0],
   "andros": [1, 1, 2, 2, 3, 3, 1, 0, 3, 2, 1, 1],
   "antiparos": [0, 0, 1, 2, 3, 3, 2, 1, 3, 2, 1, 0],
   "astypalaia": [0, 0, 1, 2, 2, 3, 2, 1, 3, 2, 0, 0],
