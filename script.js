@@ -3094,14 +3094,11 @@ function renderCompareCards(iA, iB) {
   if (!container) return;
 
   const carWords = ['', t('car.none'), t('car.helpful'), t('car.useful'), t('car.recommended'), t('car.essential')];
-  const dimLabels = { beach: t('dim.beach'), hist: t('dim.culture'), night: t('dim.night'), access: t('dim.access'), afford: t('dim.afford') };
 
-  const card = (island, other) => {
-    const barsHtml = COMPARE_DIMS.map(dim => {
-      const wins = island[dim] >= other[dim];
-      return `<div class="cmp-bar-row"><span class="cmp-dim-label">${dimLabels[dim]}</span><div class="cmp-bar-track"><div class="cmp-bar-fill cmp-bar-${dim}" style="width:${(island[dim]/5)*100}%"></div></div><span class="cmp-dim-val ${wins ? 'wins' : ''}">${fmt(island[dim])}</span></div>`;
-    }).join('');
-
+  // Per-dimension scores are intentionally omitted from the cards — the radar
+  // chart above shows the same data more clearly. The cards summarize each
+  // island (overall total + practical info) rather than re-listing the bars.
+  const card = (island) => {
     const carLabel = carWords[Math.round(island.car_need || 0)] || '—';
     const airportRow = island.has_airport ? `<div class="cmp-info-row"><span class="cmp-info-label">✈ ${t('tooltip.hasairport')}</span><span class="cmp-info-val">${t('common.yes')}</span></div>` : '';
     const daysRow = island.days ? `<div class="cmp-info-row"><span class="cmp-info-label">⏱ ${t('tooltip.suggesteddays')}</span><span class="cmp-info-val">${island.days} ${t('common.days')}</span></div>` : '';
@@ -3110,7 +3107,6 @@ function renderCompareCards(iA, iB) {
       <h2>${islandName(island.key)}</h2>
       <div class="compare-meta">${groupName(island.island_group)} · ${fmtNum(island.area)} km² · ${t('compare.pop')}. ${fmtNum(island.pop)}</div>
       <div class="compare-total" style="color:${scoreToColor(island.total)}">${fmt(island.total)}<span>/5</span></div>
-      <div class="compare-bars">${barsHtml}</div>
       <div class="cmp-info-panel">
         <div class="cmp-info-row"><span class="cmp-info-label">🚗 ${t('dim.car')}</span><span class="cmp-info-val"><strong>${carLabel}</strong></span></div>
         ${airportRow}
@@ -3119,7 +3115,7 @@ function renderCompareCards(iA, iB) {
     </div>`;
   };
 
-  container.innerHTML = card(iA, iB) + card(iB, iA);
+  container.innerHTML = card(iA) + card(iB);
 }
 
 /* ============================================================

@@ -771,12 +771,6 @@ html.dark .compare-faq details p { color: #ddd; }
 .compare-meta { font-size: var(--text-meta); color: var(--ink-3); margin-bottom: 12px; }
 .compare-total { font-family: var(--serif); font-size: var(--text-hero); font-weight: 600; margin-bottom: 16px; }
 .compare-total span { font-size: var(--text-body); color: var(--ink-4); }
-.cmp-bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
-.cmp-dim-label { font-size: var(--text-meta); font-weight: 500; color: var(--ink-3); width: 70px; flex-shrink: 0; }
-.cmp-bar-track { flex: 1; height: 8px; background: var(--marble-2); border-radius: 4px; overflow: hidden; }
-.cmp-bar-fill { height: 100%; border-radius: 4px; transition: width 0.4s ease; }
-.cmp-dim-val { font-size: var(--text-meta); font-weight: 600; width: 28px; text-align: right; color: var(--ink-3); }
-.cmp-dim-val.wins { color: var(--ink); }
 
 .compare-add-btn {
   padding: 8px 16px; font-size: var(--text-meta); font-family: var(--sans); font-weight: 500;
@@ -3554,19 +3548,7 @@ html.dark .lang-option:hover { background: rgba(255,255,255,0.06); }
 /* ============================================================
    Compare bar colors — work in both light & dark mode
 ============================================================ */
-.cmp-bar-beach  { background: #2196D3; }
-.cmp-bar-hist   { background: #6BB04A; }
-.cmp-bar-night  { background: #E8662C; }
-.cmp-bar-access { background: #DDB13C; }
-.cmp-bar-afford { background: #9B7EC8; }
-.cmp-bar-car_need { background: #6B7280; }
-
-html.dark .cmp-bar-beach  { background: #4DBEFF; }
-html.dark .cmp-bar-hist   { background: #8FD66B; }
-html.dark .cmp-bar-night  { background: #FF8A52; }
-html.dark .cmp-bar-access { background: #FFCB52; }
-html.dark .cmp-bar-afford { background: #BAA0E8; }
-html.dark .cmp-bar-car_need { background: #9CA3AF; }
+/* (Removed — per-dimension bars dropped from compare cards; radar covers it.) */
 
 /* ============================================================
    COMPARE — WTV OVERLAP RIBBON
@@ -3738,10 +3720,6 @@ html.dark .cwtv-verdict-warn { background: rgba(194,84,80,0.1); }
   .cwtv-labels { min-width: 52px; max-width: 72px; }
   .cwtv-label-a, .cwtv-label-b { font-size: var(--text-micro, 10px); height: 16px; }
   .cmp-extra-grid { grid-template-columns: 1fr; }
-}
-
-html.dark .cmp-bar-track {
-  background: rgba(255,255,255,0.14);
 }
 
 /* ============================================================
