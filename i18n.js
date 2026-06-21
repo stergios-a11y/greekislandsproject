@@ -54,7 +54,7 @@ const UI_TEXT = {
   'home.how.one.title': { en: 'One recommendation, not ten', el: 'Μία πρόταση, όχι δέκα' },
   'home.how.one.text': { en: "Every page gives a single pick for dinner, a single pick for the best beach, a single 2-to-5-day plan. A friend who knows the place doesn\\'t list every option — they tell you the one to go to.", el: 'Κάθε σελίδα δίνει μία επιλογή για δείπνο, μία για την καλύτερη παραλία, ένα πλάνο 2 έως 5 ημερών. Ένας φίλος που γνωρίζει το μέρος δεν σου λέει όλες τις επιλογές — σου λέει αυτή που πρέπει.' },
   'home.how.scores.title': { en: 'Honest scores', el: 'Ειλικρινείς βαθμολογίες' },
-  'home.how.scores.text': { en: "Beaches, history, nightlife, access, price. A 5/5 in beaches means world-class. A 2/5 in nightlife means there\\'s a bar and that\\'s it. The overall number is the simple average — no weighted formulas, no claims of objectivity. Read the <a href=\"#mission\">full rubric →</a>", el: 'Παραλίες, ιστορία, νυχτερινή ζωή, πρόσβαση, τιμές. Το 5/5 στις παραλίες σημαίνει παγκόσμιας κλάσης. Το 2/5 στη νυχτερινή ζωή σημαίνει υπάρχει ένα μπαρ και τελείωσε. Ο συνολικός αριθμός είναι ο απλός μέσος όρος — χωρίς ζυγισμένες φόρμουλες, χωρίς ισχυρισμούς αντικειμενικότητας. Διάβασε το <a href="#mission">πλήρες κριτήριο →</a>' },
+  'home.how.scores.text': { en: "Beaches, history, nightlife, access, price. A 5/5 in beaches means world-class. A 2/5 in nightlife means there\\'s a bar and that\\'s it. The overall number is a judgment call, not a formula — no weighting, no claims of objectivity. Read the <a href=\"#mission\">full rubric →</a>", el: 'Παραλίες, ιστορία, νυχτερινή ζωή, πρόσβαση, τιμές. Το 5/5 στις παραλίες σημαίνει παγκόσμιας κλάσης. Το 2/5 στη νυχτερινή ζωή σημαίνει υπάρχει ένα μπαρ και τελείωσε. Ο συνολικός αριθμός είναι θέμα κρίσης, όχι φόρμουλα — χωρίς ζυγίσματα, χωρίς ισχυρισμούς αντικειμενικότητας. Διάβασε το <a href="#mission">πλήρες κριτήριο →</a>' },
   'home.how.scores.link': { en: 'full rubric →', el: 'πλήρες κριτήριο →' },
   'home.how.updates.title': { en: 'Real updates', el: 'Πραγματικές ενημερώσεις' },
   'home.how.updates.text': { en: 'When a restaurant closes, the link comes down within a week. When someone writes in to say a beach has changed, the page changes. The feedback button is below the map.', el: 'Όταν κλείνει ένα εστιατόριο, ο σύνδεσμος κατεβαίνει μέσα σε μια εβδομάδα. Όταν κάποιος γράφει ότι μια παραλία έχει αλλάξει, η σελίδα αλλάζει. Το κουμπί σχολίων βρίσκεται κάτω από τον χάρτη.' },
@@ -370,7 +370,7 @@ const UI_TEXT = {
   // Section 4 — How we score
   'mission.scoring.title': { en: 'How we score', el: 'Πώς βαθμολογώ' },
   'mission.scoring.lead': { en: 'Every island gets rated 1 to 5 on five dimensions, plus an overall number and one practical fact (how much you need a car). None of these are computed by an algorithm or scraped from elsewhere — they\'re my own informed judgment, based on having been to most of them or talking to people who live on the rest.', el: 'Κάθε νησί παίρνει βαθμολογία 1 έως 5 σε πέντε διαστάσεις, μαζί με έναν συνολικό αριθμό και ένα πρακτικό στοιχείο (πόσο χρειάζεται αυτοκίνητο). Καμία βαθμολογία δεν προκύπτει από αλγόριθμο και καμία δεν είναι αντιγραμμένη από αλλού — είναι η δική μου κρίση, βασισμένη σε όσα έχω δει ο ίδιος ή σε όσα μου λένε άνθρωποι που ζουν εκεί.' },
-  'mission.scoring.honest': { en: "If you want to know why Milos is 4.6 and Tinos is 3.9, the short answer is: I think so, for the reasons below. The longer answer is: disagree with me — I'd rather have that conversation than pretend there's a formula.", el: 'Αν θες να ξέρεις γιατί η Μήλος έχει 4.6 και η Τήνος 3.9, η σύντομη απάντηση είναι: έτσι το κρίνω, για τους λόγους που εξηγώ παρακάτω. Η πιο μακριά απάντηση: διαφώνησε. Προτιμώ αυτή τη συζήτηση από το να προσποιούμαι ότι υπάρχει φόρμουλα.' },
+  'mission.scoring.honest': { en: "If you want to know why Milos is 4.7 and Tinos is 3.7, the short answer is: I think so, for the reasons below. The longer answer is: disagree with me — I'd rather have that conversation than pretend there's a formula.", el: 'Αν θες να ξέρεις γιατί η Μήλος έχει 4.7 και η Τήνος 3.7, η σύντομη απάντηση είναι: έτσι το κρίνω, για τους λόγους που εξηγώ παρακάτω. Η πιο μακριά απάντηση: διαφώνησε. Προτιμώ αυτή τη συζήτηση από το να προσποιούμαι ότι υπάρχει φόρμουλα.' },
 
   // Sources
   'mission.sources.title': { en: 'Where the information comes from', el: 'Από πού έρχονται οι πληροφορίες' },
@@ -697,7 +697,7 @@ function applyStaticTranslations() {
 }
 
 /* Replace {islandkey.field} tokens in a string by looking up
-   ISLANDS_DATA. Example: "Milos is {milos.total}" -> "Milos is 4.6"
+   ISLANDS_DATA. Example: "Milos is {milos.total}" -> "Milos is 4.7"
    If ISLANDS_DATA isn't loaded yet, leaves tokens as-is. */
 function applyDataTokens(text) {
   if (!text || typeof text !== 'string') return text;
