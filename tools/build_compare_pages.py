@@ -318,11 +318,11 @@ def render_page(pair_key, lang):
         <canvas id="compare-radar-chart" role="img" aria-label="Radar chart comparing two islands"></canvas>
       </div>
       <div class="compare-cards" id="compare-cards"></div>
-      <div id="compare-verdict" class="compare-verdict" style="{verdict_display}">{prerendered_verdict}</div>
-      <div class="compare-section-label" data-i18n="compare.wtv_title">When to visit — overlap</div>
-      <div id="compare-wtv" class="compare-wtv"></div>
       <div class="compare-section-label" data-i18n="compare.extra_title">Character &amp; practicalities</div>
       <div id="compare-extra" class="compare-extra"></div>
+      <div class="compare-section-label" data-i18n="compare.wtv_title">When to visit — overlap</div>
+      <div id="compare-wtv" class="compare-wtv"></div>
+      <div id="compare-verdict" class="compare-verdict" style="{verdict_display}">{prerendered_verdict}</div>
     </div>
   </div>
 </main>

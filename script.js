@@ -3104,9 +3104,11 @@ function renderCompareCards(iA, iB) {
     const daysRow = island.days ? `<div class="cmp-info-row"><span class="cmp-info-label">⏱ ${t('tooltip.suggesteddays')}</span><span class="cmp-info-val">${island.days} ${t('common.days')}</span></div>` : '';
 
     return `<div class="compare-card">
-      <h2>${islandName(island.key)}</h2>
+      <div class="compare-card-head">
+        <h2>${islandName(island.key)}</h2>
+        <div class="compare-total" style="color:${scoreToColor(island.total)}">${fmt(island.total)}<span>/5</span></div>
+      </div>
       <div class="compare-meta">${groupName(island.island_group)} · ${fmtNum(island.area)} km² · ${t('compare.pop')}. ${fmtNum(island.pop)}</div>
-      <div class="compare-total" style="color:${scoreToColor(island.total)}">${fmt(island.total)}<span>/5</span></div>
       <div class="cmp-info-panel">
         <div class="cmp-info-row"><span class="cmp-info-label">🚗 ${t('dim.car')}</span><span class="cmp-info-val"><strong>${carLabel}</strong></span></div>
         ${airportRow}

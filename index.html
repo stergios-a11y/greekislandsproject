@@ -330,14 +330,15 @@
           <canvas id="compare-radar-chart" role="img" aria-label="Radar chart comparing two islands" data-i18n-aria-label="a11y.radar_compare"></canvas>
         </div>
         <div class="compare-cards" id="compare-cards"></div>
-        <!-- Editorial verdict — populated by renderCompareVerdict() when the
-             selected pair has a curated paragraph in vs_verdicts.json.
-             Empty (display:none) otherwise. -->
-        <div id="compare-verdict" class="compare-verdict" style="display:none;"></div>
-        <div class="compare-section-label" data-i18n="compare.wtv_title">When to visit — overlap</div>
-        <div id="compare-wtv" class="compare-wtv"></div>
         <div class="compare-section-label" data-i18n="compare.extra_title">Character &amp; practicalities</div>
         <div id="compare-extra" class="compare-extra"></div>
+        <div class="compare-section-label" data-i18n="compare.wtv_title">When to visit — overlap</div>
+        <div id="compare-wtv" class="compare-wtv"></div>
+        <!-- Editorial verdict — populated by renderCompareVerdict() when the
+             selected pair has a curated paragraph in vs_verdicts.json.
+             Empty (display:none) otherwise. Sits last because it's the
+             long-form synthesis after factual context above. -->
+        <div id="compare-verdict" class="compare-verdict" style="display:none;"></div>
       </div>
     </div>
   </main>
