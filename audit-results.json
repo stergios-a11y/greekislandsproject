@@ -1,0 +1,121 @@
+[
+  {
+    "island": "therasia",
+    "kind": "stop",
+    "day": 0,
+    "idx": 2,
+    "name": "Manolas Village",
+    "json_coord": [
+      36.441,
+      25.374
+    ],
+    "osm_coord": [
+      36.4346,
+      25.3448
+    ],
+    "distance_km": 2.71,
+    "query": "Manolas Village, Therasia, Greece"
+  },
+  {
+    "island": "therasia",
+    "kind": "stop",
+    "day": 0,
+    "idx": 3,
+    "name": "Potamos Village",
+    "json_coord": [
+      36.436,
+      25.373
+    ],
+    "osm_coord": [
+      36.4372,
+      25.3389
+    ],
+    "distance_km": 3.06,
+    "query": "Potamos Village, Therasia, Greece"
+  },
+  {
+    "island": "evia-south",
+    "kind": "stop",
+    "day": 0,
+    "idx": 1,
+    "name": "Lunch — Cavo D'Oro (Karystos seafront)",
+    "json_coord": [
+      38.013,
+      24.42
+    ],
+    "osm_coord": [
+      37.859,
+      24.7808
+    ],
+    "distance_km": 35.98,
+    "query": "Cavo D'Oro, Evia (South), Greece"
+  },
+  {
+    "island": "evia-south",
+    "kind": "stop",
+    "day": 0,
+    "idx": 2,
+    "name": "Castello Rosso (Bourtzi)",
+    "json_coord": [
+      38.0347163,
+      24.4313975
+    ],
+    "osm_coord": [
+      38.1656,
+      24.213
+    ],
+    "distance_km": 24.02,
+    "query": "Castello Rosso, Evia (South), Greece"
+  },
+  {
+    "island": "evia-south",
+    "kind": "stop",
+    "day": 1,
+    "idx": 4,
+    "name": "Dinner — Marina (Karystos)",
+    "json_coord": [
+      38.013,
+      24.42
+    ],
+    "osm_coord": [
+      37.6156,
+      24.3008
+    ],
+    "distance_km": 45.41,
+    "query": "Marina, Evia (South), Greece"
+  },
+  {
+    "island": "evia-south",
+    "kind": "stop",
+    "day": 2,
+    "idx": 2,
+    "name": "Lunch & swim — Kallianou Beach",
+    "json_coord": [
+      38.063,
+      24.445
+    ],
+    "osm_coord": [
+      38.1411,
+      24.4798
+    ],
+    "distance_km": 9.2,
+    "query": "Kallianou Beach, Evia (South), Greece"
+  },
+  {
+    "island": "evia-south",
+    "kind": "beach",
+    "day": null,
+    "idx": 1,
+    "name": "Kallianou Beach",
+    "json_coord": [
+      38.11,
+      24.512
+    ],
+    "osm_coord": [
+      38.1411,
+      24.4798
+    ],
+    "distance_km": 4.46,
+    "query": "Kallianou Beach, Evia (South), Greece"
+  }
+]
