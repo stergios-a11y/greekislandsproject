@@ -1,5 +1,5 @@
 """
-v2: viewbox-constrained audit of coordinates in islands/*.json against OpenStreetMap Nominatim.
+v3: viewbox-constrained audit of coordinates in islands/*.json against OpenStreetMap Nominatim.
 Flags coordinates that are >2km from the geocoder's best match.
 
 Usage:
@@ -69,15 +69,37 @@ def clean_query_name(name):
     return n.strip()
 
 def should_geocode(name, stop_type):
-    """Filter out names that won't usefully geocode."""
+    """Filter out names that won't usefully geocode.
+
+    v3: skips restaurants entirely (taverna/restaurant names are noisy as
+    geocoder queries — e.g. "Cavo D'Oro" matches a strait, "Marina" matches
+    a random marina). Also skips single-word generic place words that
+    invariably match the wrong feature inside the viewbox.
+    """
     cleaned = clean_query_name(name).lower()
     if not cleaned or len(cleaned) < 3:
         return False
     # Skip purely descriptive entries
     if stop_type in ('arrival', 'departure'):
         return False
+    # v3: skip restaurants entirely — geocoding restaurant/taverna names is
+    # almost always wrong (Nominatim usually matches a generic word in the
+    # restaurant name like "Cavo D'Oro" → the strait of that name, not the
+    # restaurant). False positives outweigh real catches.
+    if stop_type == 'restaurant':
+        return False
     # Skip if the cleaned name is just a generic verb
     if cleaned in SKIP_NAMES:
+        return False
+    # v3: skip if the cleaned name is a single common generic word —
+    # "Marina" / "Port" / "Square" / "Beach" / "Harbour" / "Chora" / "Center"
+    # — these match arbitrary features inside the box and produce noise.
+    GENERIC_SINGLE_WORDS = {
+        'marina', 'port', 'square', 'beach', 'harbour', 'harbor', 'chora',
+        'centre', 'center', 'village', 'town', 'museum', 'cathedral',
+        'church', 'monastery', 'castle', 'taverna',
+    }
+    if cleaned in GENERIC_SINGLE_WORDS:
         return False
     return True
 
