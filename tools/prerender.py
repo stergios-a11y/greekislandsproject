@@ -2455,12 +2455,15 @@ def generate_festivals_page(island_keys):
                 when_text = f['when_el'] if is_el else f['when']
                 desc_text = f['desc_el'] if is_el else f['desc']
 
+                photo_src = f.get('photo') or f.get('image') or ''
                 photo_html = ''
-                if f.get('photo'):
-                    photo_html = '<img class="fest-photo" src="' + esc(f['photo']) + '" alt="' + esc(fest_name) + '" loading="lazy">'
+                if photo_src:
+                    photo_html = '<img class="fest-photo" src="' + esc(photo_src) + '" alt="' + esc(fest_name) + '" loading="lazy">'
 
+                months_attr = ','.join(str(m) for m in f['months'])
+                search_blob = (fest_name + ' ' + island_name + ' ' + (desc_text or '')).lower()
                 card_html = (
-                    '<article class="fest-card">'
+                    '<article class="fest-card" data-island="' + esc(f['island']) + '" data-months="' + months_attr + '" data-search="' + esc(search_blob) + '">'
                     + photo_html
                     + '<div class="fest-text">'
                     + '<a class="fest-island" href="' + island_href + '">' + esc(island_name) + '</a>'
@@ -2488,6 +2491,59 @@ def generate_festivals_page(island_keys):
                 short_name = month_names[m - 1][:3]
                 nav_links.append('<a href="#month-' + str(m) + '">' + short_name + ' (' + str(count) + ')</a>')
         nav_html = ' · '.join(nav_links)
+
+        # --- Festivals UX: filters + "happening now & soon" ---
+        L_month  = 'Μήνας' if is_el else 'Month'
+        L_island = 'Νησί' if is_el else 'Island'
+        L_all    = 'Όλα' if is_el else 'All'
+        L_search = 'Αναζήτηση γιορτών…' if is_el else 'Search festivals…'
+        L_clear  = 'Καθαρισμός' if is_el else 'Clear'
+        L_soon   = 'Τώρα & προσεχώς' if is_el else 'Happening now & soon'
+        L_this   = 'Αυτόν τον μήνα' if is_el else 'This month'
+        L_next   = 'Τον επόμενο μήνα' if is_el else 'Next month'
+        L_none   = 'Καμία γιορτή δεν ταιριάζει με τα φίλτρα.' if is_el else 'No festivals match these filters.'
+
+        _isl_names = {}
+        for _f in all_fests:
+            if is_el:
+                _isl_names[_f['island']] = GREEK_NAMES.get(_f['island'], ISLAND_META.get(_f['island'], {}).get('name', _f['island']))
+            else:
+                _isl_names[_f['island']] = ISLAND_META.get(_f['island'], {}).get('name', _f['island'])
+        _island_options = sorted(_isl_names.items(), key=lambda kv: kv[1])
+        _present_months = sorted({m for f in all_fests for m in f['months']})
+        _month_opts = ''.join('<option value="' + str(m) + '">' + month_names[m-1] + '</option>' for m in _present_months)
+        _island_opts = ''.join('<option value="' + k + '">' + esc(nm) + '</option>' for k, nm in _island_options)
+
+        filter_html = (
+            '<div class="fest-controls">'
+            + '<select id="fest-f-month" aria-label="' + esc(L_month) + '"><option value="">' + esc(L_month) + ': ' + esc(L_all) + '</option>' + _month_opts + '</select>'
+            + '<select id="fest-f-island" aria-label="' + esc(L_island) + '"><option value="">' + esc(L_island) + ': ' + esc(L_all) + '</option>' + _island_opts + '</select>'
+            + '<input id="fest-f-search" type="search" placeholder="' + esc(L_search) + '">'
+            + '<button type="button" class="fest-clear" id="fest-f-clear">' + esc(L_clear) + '</button>'
+            + '</div>'
+            + '<section class="fest-soon" id="fest-soon" hidden><h2>' + esc(L_soon) + '</h2><div class="fest-cards" id="fest-soon-cards"></div></section>'
+            + '<p class="fest-noresults" id="fest-noresults">' + esc(L_none) + '</p>'
+        )
+
+        soon_script = (
+            '<script>\n(function(){\n'
+            '  var monthSel=document.getElementById("fest-f-month"),islandSel=document.getElementById("fest-f-island"),search=document.getElementById("fest-f-search"),clearBtn=document.getElementById("fest-f-clear"),noRes=document.getElementById("fest-noresults");\n'
+            '  var sections=[].slice.call(document.querySelectorAll(".fest-month"));\n'
+            '  var cards=[].slice.call(document.querySelectorAll(".fest-month .fest-card"));\n'
+            '  function apply(){var m=monthSel.value,isl=islandSel.value,q=(search.value||"").trim().toLowerCase(),any=false;\n'
+            '    cards.forEach(function(c){var okM=!m||(","+c.getAttribute("data-months")+",").indexOf(","+m+",")>-1;var okI=!isl||c.getAttribute("data-island")===isl;var okQ=!q||(c.getAttribute("data-search")||"").indexOf(q)>-1;var show=okM&&okI&&okQ;c.classList.toggle("is-hidden",!show);if(show)any=true;});\n'
+            '    sections.forEach(function(s){s.classList.toggle("is-hidden",s.querySelectorAll(".fest-card:not(.is-hidden)").length===0);});\n'
+            '    noRes.style.display=any?"none":"block";}\n'
+            '  monthSel.addEventListener("change",apply);islandSel.addEventListener("change",apply);search.addEventListener("input",apply);\n'
+            '  clearBtn.addEventListener("click",function(){monthSel.value="";islandSel.value="";search.value="";apply();});\n'
+            '  var now=new Date(),cm=now.getMonth()+1,nm=cm===12?1:cm+1,picked=[];\n'
+            '  var soon=document.getElementById("fest-soon"),soonCards=document.getElementById("fest-soon-cards");\n'
+            '  function pick(month,tagText,tagClass){cards.forEach(function(c){if(picked.indexOf(c)>-1)return;if((","+c.getAttribute("data-months")+",").indexOf(","+month+",")>-1){picked.push(c);var clone=c.cloneNode(true);clone.classList.remove("is-hidden");var tag=document.createElement("span");tag.className="fest-soon-tag "+tagClass;tag.textContent=tagText;var txt=clone.querySelector(".fest-text");if(txt)txt.insertBefore(tag,txt.firstChild);soonCards.appendChild(clone);}});}\n'
+            '  pick(cm,' + json.dumps(L_this, ensure_ascii=False) + ',"this");pick(nm,' + json.dumps(L_next, ensure_ascii=False) + ',"next");\n'
+            '  if(soonCards.children.length>0)soon.hidden=false;\n'
+            '})();\n</script>\n'
+        )
+        # --- end Festivals UX block ---
 
         page_html = (
             '<!DOCTYPE html>\n<html lang="' + lang + '">\n<head>\n'
@@ -2548,6 +2604,19 @@ def generate_festivals_page(island_keys):
             '  html.dark body { background: #1a1a1a; color: #eee; }\n'
             '  html.dark .fest-card { background: #2a2a2a; border-color: #444; }\n'
             '  html.dark .fest-nav { background: #333; }\n'
+            '  .fest-controls { display:flex; flex-wrap:wrap; gap:10px; margin:0 0 28px; align-items:center; }\n'
+            '  .fest-controls select, .fest-controls input { font:inherit; font-size:14px; padding:8px 12px; border:1px solid var(--border,#e5e1d8); border-radius:10px; background:var(--white,#fff); color:inherit; }\n'
+            '  .fest-controls input { flex:1; min-width:160px; }\n'
+            '  .fest-clear { cursor:pointer; border:none; background:none; color:var(--aegean-dark,#076880); font-weight:600; font-size:13px; padding:8px; }\n'
+            '  .fest-soon { margin:0 0 36px; }\n'
+            '  .fest-soon > h2 { font-family:var(--serif,Georgia),serif; font-size:22px; margin:0 0 14px; }\n'
+            '  .fest-soon-tag { display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; color:#fff; background:var(--aegean,#0B8FAC); border-radius:999px; padding:2px 9px; margin:0 0 6px; }\n'
+            '  .fest-soon-tag.next { background:var(--ink-3,#888); }\n'
+            '  .fest-card { transition:transform .12s ease, box-shadow .12s ease; }\n'
+            '  .fest-card:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,.10); }\n'
+            '  .fest-noresults { display:none; padding:24px; text-align:center; color:var(--ink-3,#888); font-size:15px; }\n'
+            '  .fest-month.is-hidden, .fest-card.is-hidden { display:none !important; }\n'
+            '  html.dark .fest-controls select, html.dark .fest-controls input { background:#2a2a2a; border-color:#444; color:#eee; }\n'
             '</style>\n'
             '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9298260273942245" crossorigin="anonymous"></script>\n'
             '<script>\n'
@@ -2607,12 +2676,14 @@ def generate_festivals_page(island_keys):
             '  <h1>' + h1 + '</h1>\n'
             '  <p class="fest-intro">' + esc(intro) + '</p>\n'
             '  <nav class="fest-nav">' + nav_html + '</nav>\n'
+            + filter_html + '\n'
             '  ' + ''.join(month_blocks) + '\n'
             '</main>\n'
             '<footer style="text-align:center;padding:24px 16px;font-size:13px;color:#888;border-top:1px solid #e5e5e5;margin-top:40px;">\n'
             '  <p style="margin:0;">© 2026 Aegean Blueprint · <a href="' + ('/el/privacy/' if is_el else '/privacy/') + '" style="color:#888;text-decoration:none;">' + ('Απόρρητο' if is_el else 'Privacy') + '</a></p>\n'
             '</footer>\n'
-            '</body>\n</html>'
+            + soon_script
+            + '</body>\n</html>'
         )
 
         out_dir = ROOT / ('el/festivals' if is_el else 'festivals')
