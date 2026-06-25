@@ -47,6 +47,57 @@
     .vs-page-h1 { font-size: 26px; }
     .vs-page-sub { font-size: 15px; }
   }
+  /* Related comparisons widget */
+  .compare-related {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--marble-3, #e0e0e0);
+  }
+  .compare-related-heading {
+    font-family: var(--display, Georgia, serif);
+    font-size: var(--text-h3, 20px);
+    margin: 0 0 16px;
+    color: var(--ink-1, #222);
+  }
+  .compare-related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .compare-related-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background: var(--marble, #fafafa);
+    border: 1px solid var(--marble-3, #e0e0e0);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--ink-1, #222);
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .compare-related-card:hover {
+    background: var(--marble-2, #f0f0f0);
+    border-color: var(--ink-3, #999);
+  }
+  .compare-related-pair {
+    font-size: var(--text-body, 15px);
+    line-height: 1.3;
+  }
+  .compare-related-pair em {
+    font-style: normal;
+    color: var(--ink-2, #555);
+    font-size: var(--text-small, 13px);
+    margin: 0 4px;
+  }
+  .compare-related-arrow {
+    color: var(--ink-2, #555);
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+  @media (max-width: 600px) {
+    .compare-related-grid { grid-template-columns: 1fr; }
+  }
 </style>
 
 </head>
@@ -118,7 +169,7 @@
       <div id="compare-wtv" class="compare-wtv"></div>
       <div id="compare-verdict" class="compare-verdict" style=""><h3 class="compare-verdict-heading">Η ετυμηγορία μας</h3><p>Τα Χανιά και το Ηράκλειο βρίσκονται στα δύο άκρα της Κρήτης και ανταμείβουν διαφορετικούς ταξιδιώτες. Το Ηράκλειο είναι η πρωτεύουσα του νησιού, το εμπορικό του κέντρο, και η πύλη για την Κνωσό και το Αρχαιολογικό Μουσείο — μαζί μία από τις σπουδαιότερες κλασικές συλλογές στην Ευρώπη. Τα Χανιά είναι η ρομαντική εναλλακτική: μια ενετοοθωμανική πόλη-λιμάνι στα δυτικά, εξαιρετικό τοπικό φαγητό, και κοντά στα Λευκά Όρη και το φαράγγι της Σαμαριάς.</p>
 <p>Αν το ενδιαφέρον σου για την Κρήτη ριζώνει στον μινωικό πολιτισμό, το Ηράκλειο είναι αναπόφευκτο — η Κνωσός είναι στην πόρτα του και η Φαιστός βρίσκεται σε σύντομη απόσταση οδικώς. Η ίδια η πόλη είναι λιγότερο φωτογενική, αλλά βελτιώνει σταθερά τη σκηνή εστιατορίων και μπαρ της. Τα Χανιά προσφέρουν μια πιο άμεσα ευχάριστη εμπειρία: το παλιό λιμάνι, έναν πιο συμπυκνωμένο τουριστικό πυρήνα, και την καλύτερη πύλη για τις παραλίες της δυτικής Κρήτης (Μπάλος, Ελαφονήσι) και τα βουνά.</p>
-<p><strong>Επίλεξε Ηράκλειο</strong> για ταξίδια εστιασμένα στην αρχαιολογία, ή ως κόμβο αν σχεδιάζεις να κινηθείς οδικώς ευρέως στην κεντρική Κρήτη. <strong>Επίλεξε Χανιά</strong> για συντομότερα ταξίδια, ρομαντικές αποδράσεις, ή αν θέλεις ομορφιά σε απόσταση περπατήματος συνδυασμένη με εκδρομές στα πιο άγρια τοπία της δυτικής Κρήτης.</p></div>
+<p><strong>Επίλεξε Ηράκλειο</strong> για ταξίδια εστιασμένα στην αρχαιολογία, ή ως κόμβο αν σχεδιάζεις να κινηθείς οδικώς ευρέως στην κεντρική Κρήτη. <strong>Επίλεξε Χανιά</strong> για συντομότερα ταξίδια, ρομαντικές αποδράσεις, ή αν θέλεις ομορφιά σε απόσταση περπατήματος συνδυασμένη με εκδρομές στα πιο άγρια τοπία της δυτικής Κρήτης.</p><div class="compare-related"><h3 class="compare-related-heading">Σχετικές συγκρίσεις</h3><div class="compare-related-grid"><a class="compare-related-card" href="/el/compare/chania-vs-corfu/"><span class="compare-related-pair">Χανιά <em>ή</em> Κέρκυρα</span><span class="compare-related-arrow" aria-hidden="true">→</span></a><a class="compare-related-card" href="/el/compare/chania-vs-rethymno/"><span class="compare-related-pair">Χανιά <em>ή</em> Ρέθυμνο</span><span class="compare-related-arrow" aria-hidden="true">→</span></a><a class="compare-related-card" href="/el/compare/chania-vs-santorini/"><span class="compare-related-pair">Χανιά <em>ή</em> Σαντορίνη</span><span class="compare-related-arrow" aria-hidden="true">→</span></a></div></div></div>
     </div>
   </div>
 </main>

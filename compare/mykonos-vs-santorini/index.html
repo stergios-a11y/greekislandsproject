@@ -47,6 +47,57 @@
     .vs-page-h1 { font-size: 26px; }
     .vs-page-sub { font-size: 15px; }
   }
+  /* Related comparisons widget */
+  .compare-related {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--marble-3, #e0e0e0);
+  }
+  .compare-related-heading {
+    font-family: var(--display, Georgia, serif);
+    font-size: var(--text-h3, 20px);
+    margin: 0 0 16px;
+    color: var(--ink-1, #222);
+  }
+  .compare-related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .compare-related-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background: var(--marble, #fafafa);
+    border: 1px solid var(--marble-3, #e0e0e0);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--ink-1, #222);
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .compare-related-card:hover {
+    background: var(--marble-2, #f0f0f0);
+    border-color: var(--ink-3, #999);
+  }
+  .compare-related-pair {
+    font-size: var(--text-body, 15px);
+    line-height: 1.3;
+  }
+  .compare-related-pair em {
+    font-style: normal;
+    color: var(--ink-2, #555);
+    font-size: var(--text-small, 13px);
+    margin: 0 4px;
+  }
+  .compare-related-arrow {
+    color: var(--ink-2, #555);
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+  @media (max-width: 600px) {
+    .compare-related-grid { grid-template-columns: 1fr; }
+  }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Mykonos or Santorini better for a honeymoon?","acceptedAnswer":{"@type":"Answer","text":"Santorini, almost without exception. The caldera-view hotels, the sunset dinners, and the visual drama suit a honeymoon better than anywhere else in Greece. Mykonos is more of a friends-and-party island; the romantic vibe is harder to find amid the beach club energy."}},{"@type":"Question","name":"Which is more expensive, Mykonos or Santorini?","acceptedAnswer":{"@type":"Answer","text":"Both are at the top of the Greek-island price scale (both score 1.0/5 on affordability), and the difference is smaller than people assume. Mykonos's beach clubs and party scene add costs that don't exist on Santorini. Santorini's caldera-view hotel premium is the biggest single cost. For a couple's week, both run €5,000-15,000 all-in depending on accommodation tier."}},{"@type":"Question","name":"Can I visit both Mykonos and Santorini in one trip?","acceptedAnswer":{"@type":"Answer","text":"Yes — this is one of the most common Cycladic itineraries. The fast ferry takes about 2.5 hours and runs 3-4 times daily in summer. A reasonable structure: 2-3 nights in Santorini, 3-4 nights in Mykonos, fly out from Mykonos. Doing them in this order has you ending on the social-energy island rather than the contemplative one."}},{"@type":"Question","name":"Are Santorini's beaches really that bad?","acceptedAnswer":{"@type":"Answer","text":"They're not bad — they're just disappointing for an island this famous. Small, often crowded, with mediocre swimming. Red Beach and Black Beach are visually striking but small. If you imagine 'Greek-island beaches' from movies and brochures, Santorini will let you down. Mykonos, Paros, Naxos, and Milos all have significantly better beaches."}},{"@type":"Question","name":"Which is better for a first-time trip to Greece?","acceptedAnswer":{"@type":"Answer","text":"Santorini, by a small margin. The iconic image is so well-known that visiting Santorini matches expectations — the caldera, the sunset, the white villages. Mykonos is a more specific brand of experience (party-and-luxury) that some first-timers love and some find off-putting. If you're not sure which you'd be, Santorini is the safer first choice."}}]}</script>
 </head>
@@ -159,7 +210,7 @@
 <p>Mykonos rewards 4-5 days. The southern coast has enough beach variety to fill several distinct days, the dinner-and-club scene needs at least three evenings to sample properly, and the Chora deserves an afternoon of its own. Coming for 2 days means seeing one beach and one dinner — under-using what the island offers.</p>
 
 <h4>The honest verdict</h4>
-<p>These are the two most-Googled islands in Greece for a reason: they deliver, but they deliver very specific experiences that match very specific travelers. If your trip is about the visual memory and Instagram is part of the plan, Santorini is the answer. If your trip is about restaurants, beach clubs, and long days, Mykonos is. Neither is "better" — they're answers to different questions. The mistake people make is picking based on someone else's recommendation rather than honestly asking what kind of trip they want. If you genuinely don't know — pick Santorini. The disappointment of finding Santorini's beaches mediocre is smaller than the disappointment of finding yourself in the Mykonos party scene when what you wanted was a quiet honeymoon.</p><div class="compare-faq"><h3 class="compare-faq-heading">Common questions</h3><details><summary>Is Mykonos or Santorini better for a honeymoon?</summary><p>Santorini, almost without exception. The caldera-view hotels, the sunset dinners, and the visual drama suit a honeymoon better than anywhere else in Greece. Mykonos is more of a friends-and-party island; the romantic vibe is harder to find amid the beach club energy.</p></details><details><summary>Which is more expensive, Mykonos or Santorini?</summary><p>Both are at the top of the Greek-island price scale (both score 1.0/5 on affordability), and the difference is smaller than people assume. Mykonos's beach clubs and party scene add costs that don't exist on Santorini. Santorini's caldera-view hotel premium is the biggest single cost. For a couple's week, both run €5,000-15,000 all-in depending on accommodation tier.</p></details><details><summary>Can I visit both Mykonos and Santorini in one trip?</summary><p>Yes — this is one of the most common Cycladic itineraries. The fast ferry takes about 2.5 hours and runs 3-4 times daily in summer. A reasonable structure: 2-3 nights in Santorini, 3-4 nights in Mykonos, fly out from Mykonos. Doing them in this order has you ending on the social-energy island rather than the contemplative one.</p></details><details><summary>Are Santorini's beaches really that bad?</summary><p>They're not bad — they're just disappointing for an island this famous. Small, often crowded, with mediocre swimming. Red Beach and Black Beach are visually striking but small. If you imagine 'Greek-island beaches' from movies and brochures, Santorini will let you down. Mykonos, Paros, Naxos, and Milos all have significantly better beaches.</p></details><details><summary>Which is better for a first-time trip to Greece?</summary><p>Santorini, by a small margin. The iconic image is so well-known that visiting Santorini matches expectations — the caldera, the sunset, the white villages. Mykonos is a more specific brand of experience (party-and-luxury) that some first-timers love and some find off-putting. If you're not sure which you'd be, Santorini is the safer first choice.</p></details></div></div>
+<p>These are the two most-Googled islands in Greece for a reason: they deliver, but they deliver very specific experiences that match very specific travelers. If your trip is about the visual memory and Instagram is part of the plan, Santorini is the answer. If your trip is about restaurants, beach clubs, and long days, Mykonos is. Neither is "better" — they're answers to different questions. The mistake people make is picking based on someone else's recommendation rather than honestly asking what kind of trip they want. If you genuinely don't know — pick Santorini. The disappointment of finding Santorini's beaches mediocre is smaller than the disappointment of finding yourself in the Mykonos party scene when what you wanted was a quiet honeymoon.</p><div class="compare-faq"><h3 class="compare-faq-heading">Common questions</h3><details><summary>Is Mykonos or Santorini better for a honeymoon?</summary><p>Santorini, almost without exception. The caldera-view hotels, the sunset dinners, and the visual drama suit a honeymoon better than anywhere else in Greece. Mykonos is more of a friends-and-party island; the romantic vibe is harder to find amid the beach club energy.</p></details><details><summary>Which is more expensive, Mykonos or Santorini?</summary><p>Both are at the top of the Greek-island price scale (both score 1.0/5 on affordability), and the difference is smaller than people assume. Mykonos's beach clubs and party scene add costs that don't exist on Santorini. Santorini's caldera-view hotel premium is the biggest single cost. For a couple's week, both run €5,000-15,000 all-in depending on accommodation tier.</p></details><details><summary>Can I visit both Mykonos and Santorini in one trip?</summary><p>Yes — this is one of the most common Cycladic itineraries. The fast ferry takes about 2.5 hours and runs 3-4 times daily in summer. A reasonable structure: 2-3 nights in Santorini, 3-4 nights in Mykonos, fly out from Mykonos. Doing them in this order has you ending on the social-energy island rather than the contemplative one.</p></details><details><summary>Are Santorini's beaches really that bad?</summary><p>They're not bad — they're just disappointing for an island this famous. Small, often crowded, with mediocre swimming. Red Beach and Black Beach are visually striking but small. If you imagine 'Greek-island beaches' from movies and brochures, Santorini will let you down. Mykonos, Paros, Naxos, and Milos all have significantly better beaches.</p></details><details><summary>Which is better for a first-time trip to Greece?</summary><p>Santorini, by a small margin. The iconic image is so well-known that visiting Santorini matches expectations — the caldera, the sunset, the white villages. Mykonos is a more specific brand of experience (party-and-luxury) that some first-timers love and some find off-putting. If you're not sure which you'd be, Santorini is the safer first choice.</p></details></div><div class="compare-related"><h3 class="compare-related-heading">Related comparisons</h3><div class="compare-related-grid"><a class="compare-related-card" href="/compare/ios-vs-mykonos/"><span class="compare-related-pair">Ios <em>vs</em> Mykonos</span><span class="compare-related-arrow" aria-hidden="true">→</span></a><a class="compare-related-card" href="/compare/chania-vs-santorini/"><span class="compare-related-pair">Crete (Chania) <em>vs</em> Santorini</span><span class="compare-related-arrow" aria-hidden="true">→</span></a><a class="compare-related-card" href="/compare/mykonos-vs-paros/"><span class="compare-related-pair">Mykonos <em>vs</em> Paros</span><span class="compare-related-arrow" aria-hidden="true">→</span></a><a class="compare-related-card" href="/compare/folegandros-vs-santorini/"><span class="compare-related-pair">Folegandros <em>vs</em> Santorini</span><span class="compare-related-arrow" aria-hidden="true">→</span></a></div></div></div>
     </div>
   </div>
 </main>

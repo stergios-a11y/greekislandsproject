@@ -47,6 +47,57 @@
     .vs-page-h1 { font-size: 26px; }
     .vs-page-sub { font-size: 15px; }
   }
+  /* Related comparisons widget */
+  .compare-related {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--marble-3, #e0e0e0);
+  }
+  .compare-related-heading {
+    font-family: var(--display, Georgia, serif);
+    font-size: var(--text-h3, 20px);
+    margin: 0 0 16px;
+    color: var(--ink-1, #222);
+  }
+  .compare-related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .compare-related-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background: var(--marble, #fafafa);
+    border: 1px solid var(--marble-3, #e0e0e0);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--ink-1, #222);
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .compare-related-card:hover {
+    background: var(--marble-2, #f0f0f0);
+    border-color: var(--ink-3, #999);
+  }
+  .compare-related-pair {
+    font-size: var(--text-body, 15px);
+    line-height: 1.3;
+  }
+  .compare-related-pair em {
+    font-style: normal;
+    color: var(--ink-2, #555);
+    font-size: var(--text-small, 13px);
+    margin: 0 4px;
+  }
+  .compare-related-arrow {
+    color: var(--ink-2, #555);
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+  @media (max-width: 600px) {
+    .compare-related-grid { grid-template-columns: 1fr; }
+  }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is mastiha and why is Chios famous for it?","acceptedAnswer":{"@type":"Answer","text":"Mastiha is the aromatic resin produced by Pistacia lentiscus trees, used in liqueur, sweets, chewing gum, cosmetics, and traditional medicine. The Chios variety is the only one in the world that produces commercially viable resin — protected by EU PDO designation since 1997. The 24 villages of southern Chios (the mastichochoria) cultivate it; Pyrgi and Mesta are the famous medieval settlements where production has continued unchanged for centuries. The Chios Mastic Museum in Pyrgi is the best place to understand the cultivation process. Buying mastiha products elsewhere in Greece often means buying lower-grade Turkish or Algerian resin marketed as Chios."}},{"@type":"Question","name":"Which is easier to reach from Athens, Chios or Lesvos?","acceptedAnswer":{"@type":"Answer","text":"Lesvos, slightly. Lesvos has more daily Athens flights (3-5 per day in summer) and direct international flights from London, Frankfurt, and other European hubs. Chios has 1-2 Athens flights per day plus seasonal European service. Both have overnight ferries from Piraeus (10-12 hours). For travelers coming via Athens, both islands are similar in transit difficulty; for travelers coming directly from Europe, Lesvos has more options."}},{"@type":"Question","name":"Can I visit both Chios and Lesvos in one trip?","acceptedAnswer":{"@type":"Answer","text":"Yes — there's a ferry between Chios town and Mytilene (Lesvos) that runs daily in summer, taking about 4 hours. A reasonable arrangement is 4-5 days Chios + 5-6 days Lesvos, with a one-way ferry connection. Either island can be the starting point — flying into Mytilene and out of Chios (or vice versa) means you don't need to return. This works particularly well as a 10-day trip exploring the NE Aegean."}},{"@type":"Question","name":"Are Chios and Lesvos still affected by the refugee crisis?","acceptedAnswer":{"@type":"Answer","text":"No, the practical situation in 2026 is that both islands have normal tourism, full hospitality services, and welcoming residents. The 2015-2016 period of large refugee arrivals is well behind both islands, and the tourism infrastructure was never significantly damaged. The cultural reputation in some European markets sometimes still raises the question, but visitors today encounter standard Greek-island travel with no practical impact. If anything, both islands welcome visitors particularly warmly because they remember the periods when fewer came."}},{"@type":"Question","name":"Which has better food, Chios or Lesvos?","acceptedAnswer":{"@type":"Answer","text":"Lesvos has a broader food culture (olive oil, ouzo, sardines from Kalloni, local breweries) and more highly-rated restaurants overall. Chios has narrower but more distinctive food culture concentrated around mastiha and the products of the mastichochoria. For travelers interested in a wider eating experience: Lesvos. For travelers interested in something unique that no other Greek island offers: Chios mastiha sweets, mastiha liqueur, and mastiha-based dishes are genuinely unusual. Both islands have strong tavernas; both islands are well below Cycladic prices for comparable quality."}}]}</script>
 </head>

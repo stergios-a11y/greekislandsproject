@@ -47,6 +47,57 @@
     .vs-page-h1 { font-size: 26px; }
     .vs-page-sub { font-size: 15px; }
   }
+  /* Related comparisons widget */
+  .compare-related {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--marble-3, #e0e0e0);
+  }
+  .compare-related-heading {
+    font-family: var(--display, Georgia, serif);
+    font-size: var(--text-h3, 20px);
+    margin: 0 0 16px;
+    color: var(--ink-1, #222);
+  }
+  .compare-related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .compare-related-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background: var(--marble, #fafafa);
+    border: 1px solid var(--marble-3, #e0e0e0);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--ink-1, #222);
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .compare-related-card:hover {
+    background: var(--marble-2, #f0f0f0);
+    border-color: var(--ink-3, #999);
+  }
+  .compare-related-pair {
+    font-size: var(--text-body, 15px);
+    line-height: 1.3;
+  }
+  .compare-related-pair em {
+    font-style: normal;
+    color: var(--ink-2, #555);
+    font-size: var(--text-small, 13px);
+    margin: 0 4px;
+  }
+  .compare-related-arrow {
+    color: var(--ink-2, #555);
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+  @media (max-width: 600px) {
+    .compare-related-grid { grid-template-columns: 1fr; }
+  }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which is better for first-time visitors to Greece, Corfu or Kefalonia?","acceptedAnswer":{"@type":"Answer","text":"Corfu, marginally. Its UNESCO Old Town gives a strong cultural anchor that newcomers often appreciate, restaurants and infrastructure are more developed, and you can manage without a car if you base in the Old Town. Kefalonia is a more dramatic island visually but really requires a road-trip mindset to be enjoyed properly — better for repeat visitors to Greece or active travelers."}},{"@type":"Question","name":"Is Kefalonia or Corfu more expensive?","acceptedAnswer":{"@type":"Answer","text":"Corfu, by 20-30%. Mid-range hotels in high season run €120-220 on Corfu vs €90-180 on Kefalonia. Restaurants run €30-50 per person on Corfu (€60+ at top Old Town spots); Kefalonia €25-45. The premium reflects Corfu's stronger international flight access and more developed restaurant scene. For a week with mid-range accommodation, expect Corfu to cost €400-800 more than Kefalonia."}},{"@type":"Question","name":"Do I need a car in Corfu or Kefalonia?","acceptedAnswer":{"@type":"Answer","text":"On Kefalonia, yes — the island is huge (773 km²) and the highlights are spread out; the car-need score is 5/5. On Corfu, you can manage without one if you base in the Old Town and use buses for nearby beaches, though a car opens up the rest of the island significantly. The car-need score for Corfu is 4/5. Realistically: rent a car on Kefalonia for the whole trip, rent on Corfu for 2-3 days within a 5-7 day stay."}},{"@type":"Question","name":"Which has Myrtos Beach?","acceptedAnswer":{"@type":"Answer","text":"Kefalonia. Myrtos is on Kefalonia's northwest coast — a 1km crescent of white pebbles backed by 200-meter limestone cliffs. It's one of the most photographed beaches in Greece and a major reason people pick Kefalonia over Corfu. The descent down to it requires a winding drive, but the view from the overlook at the top is iconic on its own."}},{"@type":"Question","name":"Can I do Corfu and Kefalonia in one trip?","acceptedAnswer":{"@type":"Answer","text":"Possible but inefficient. There's no direct fast ferry between them, and they sit at opposite ends of the Ionian chain. You'd either need to drive/ferry through the mainland (about 5 hours) or take two separate flights. For a 7-day trip, picking one and going deeper is better. If you really want both, plan 10-12 days and use Patras or Athens as a connection point — or fly between Corfu and Athens, then take the ferry from Kyllini to Kefalonia."}}]}</script>
 </head>
@@ -158,7 +209,7 @@
 <p>Kefalonia ideally wants 5-7 days too, because the island is huge (over an hour from north to south) and the highlights are spread out. A serious Kefalonia trip: Myrtos and the west coast, Fiskardo, Argostoli and its turtles, the Melissani-Drogarati cave pair, Skala and the southeast beaches, and at least one drive into Ainos. Going for less than 5 days means making hard cuts.</p>
 
 <h4>The honest verdict</h4>
-<p>This is a closer call than most Greek-island comparisons. The two islands score within 0.1 of each other overall, and both are legitimate choices for similar travelers. The real differentiator is what you want from a Greek-island trip. If you want the trip to be substantially about beaches and dramatic landscapes, with culture as the backdrop, choose Kefalonia. If you want the trip to be about culture, food, and town atmosphere with beaches as a supporting role, choose Corfu. For first-time visitors to Greece who care equally about both, Corfu is the marginally safer pick — it's easier without a car, has a stronger central anchor in the Old Town, and is harder to disappoint with. For active travelers, couples in their 30s-50s, and anyone willing to drive: Kefalonia delivers a more visually memorable trip. The Captain Corelli's Mandolin question — whether nostalgia for the book or film should influence the choice — is a tie-breaker; if it matters to you, Kefalonia.</p><div class="compare-faq"><h3 class="compare-faq-heading">Common questions</h3><details><summary>Which is better for first-time visitors to Greece, Corfu or Kefalonia?</summary><p>Corfu, marginally. Its UNESCO Old Town gives a strong cultural anchor that newcomers often appreciate, restaurants and infrastructure are more developed, and you can manage without a car if you base in the Old Town. Kefalonia is a more dramatic island visually but really requires a road-trip mindset to be enjoyed properly — better for repeat visitors to Greece or active travelers.</p></details><details><summary>Is Kefalonia or Corfu more expensive?</summary><p>Corfu, by 20-30%. Mid-range hotels in high season run €120-220 on Corfu vs €90-180 on Kefalonia. Restaurants run €30-50 per person on Corfu (€60+ at top Old Town spots); Kefalonia €25-45. The premium reflects Corfu's stronger international flight access and more developed restaurant scene. For a week with mid-range accommodation, expect Corfu to cost €400-800 more than Kefalonia.</p></details><details><summary>Do I need a car in Corfu or Kefalonia?</summary><p>On Kefalonia, yes — the island is huge (773 km²) and the highlights are spread out; the car-need score is 5/5. On Corfu, you can manage without one if you base in the Old Town and use buses for nearby beaches, though a car opens up the rest of the island significantly. The car-need score for Corfu is 4/5. Realistically: rent a car on Kefalonia for the whole trip, rent on Corfu for 2-3 days within a 5-7 day stay.</p></details><details><summary>Which has Myrtos Beach?</summary><p>Kefalonia. Myrtos is on Kefalonia's northwest coast — a 1km crescent of white pebbles backed by 200-meter limestone cliffs. It's one of the most photographed beaches in Greece and a major reason people pick Kefalonia over Corfu. The descent down to it requires a winding drive, but the view from the overlook at the top is iconic on its own.</p></details><details><summary>Can I do Corfu and Kefalonia in one trip?</summary><p>Possible but inefficient. There's no direct fast ferry between them, and they sit at opposite ends of the Ionian chain. You'd either need to drive/ferry through the mainland (about 5 hours) or take two separate flights. For a 7-day trip, picking one and going deeper is better. If you really want both, plan 10-12 days and use Patras or Athens as a connection point — or fly between Corfu and Athens, then take the ferry from Kyllini to Kefalonia.</p></details></div></div>
+<p>This is a closer call than most Greek-island comparisons. The two islands score within 0.1 of each other overall, and both are legitimate choices for similar travelers. The real differentiator is what you want from a Greek-island trip. If you want the trip to be substantially about beaches and dramatic landscapes, with culture as the backdrop, choose Kefalonia. If you want the trip to be about culture, food, and town atmosphere with beaches as a supporting role, choose Corfu. For first-time visitors to Greece who care equally about both, Corfu is the marginally safer pick — it's easier without a car, has a stronger central anchor in the Old Town, and is harder to disappoint with. For active travelers, couples in their 30s-50s, and anyone willing to drive: Kefalonia delivers a more visually memorable trip. The Captain Corelli's Mandolin question — whether nostalgia for the book or film should influence the choice — is a tie-breaker; if it matters to you, Kefalonia.</p><div class="compare-faq"><h3 class="compare-faq-heading">Common questions</h3><details><summary>Which is better for first-time visitors to Greece, Corfu or Kefalonia?</summary><p>Corfu, marginally. Its UNESCO Old Town gives a strong cultural anchor that newcomers often appreciate, restaurants and infrastructure are more developed, and you can manage without a car if you base in the Old Town. Kefalonia is a more dramatic island visually but really requires a road-trip mindset to be enjoyed properly — better for repeat visitors to Greece or active travelers.</p></details><details><summary>Is Kefalonia or Corfu more expensive?</summary><p>Corfu, by 20-30%. Mid-range hotels in high season run €120-220 on Corfu vs €90-180 on Kefalonia. Restaurants run €30-50 per person on Corfu (€60+ at top Old Town spots); Kefalonia €25-45. The premium reflects Corfu's stronger international flight access and more developed restaurant scene. For a week with mid-range accommodation, expect Corfu to cost €400-800 more than Kefalonia.</p></details><details><summary>Do I need a car in Corfu or Kefalonia?</summary><p>On Kefalonia, yes — the island is huge (773 km²) and the highlights are spread out; the car-need score is 5/5. On Corfu, you can manage without one if you base in the Old Town and use buses for nearby beaches, though a car opens up the rest of the island significantly. The car-need score for Corfu is 4/5. Realistically: rent a car on Kefalonia for the whole trip, rent on Corfu for 2-3 days within a 5-7 day stay.</p></details><details><summary>Which has Myrtos Beach?</summary><p>Kefalonia. Myrtos is on Kefalonia's northwest coast — a 1km crescent of white pebbles backed by 200-meter limestone cliffs. It's one of the most photographed beaches in Greece and a major reason people pick Kefalonia over Corfu. The descent down to it requires a winding drive, but the view from the overlook at the top is iconic on its own.</p></details><details><summary>Can I do Corfu and Kefalonia in one trip?</summary><p>Possible but inefficient. There's no direct fast ferry between them, and they sit at opposite ends of the Ionian chain. You'd either need to drive/ferry through the mainland (about 5 hours) or take two separate flights. For a 7-day trip, picking one and going deeper is better. If you really want both, plan 10-12 days and use Patras or Athens as a connection point — or fly between Corfu and Athens, then take the ferry from Kyllini to Kefalonia.</p></details></div><div class="compare-related"><h3 class="compare-related-heading">Related comparisons</h3><div class="compare-related-grid"><a class="compare-related-card" href="/compare/chania-vs-corfu/"><span class="compare-related-pair">Crete (Chania) <em>vs</em> Corfu</span><span class="compare-related-arrow" aria-hidden="true">→</span></a><a class="compare-related-card" href="/compare/kefalonia-vs-zakynthos/"><span class="compare-related-pair">Kefalonia <em>vs</em> Zakynthos</span><span class="compare-related-arrow" aria-hidden="true">→</span></a><a class="compare-related-card" href="/compare/corfu-vs-rhodes/"><span class="compare-related-pair">Corfu <em>vs</em> Rhodes</span><span class="compare-related-arrow" aria-hidden="true">→</span></a><a class="compare-related-card" href="/compare/corfu-vs-zakynthos/"><span class="compare-related-pair">Corfu <em>vs</em> Zakynthos</span><span class="compare-related-arrow" aria-hidden="true">→</span></a></div></div></div>
     </div>
   </div>
 </main>

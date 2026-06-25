@@ -47,6 +47,57 @@
     .vs-page-h1 { font-size: 26px; }
     .vs-page-sub { font-size: 15px; }
   }
+  /* Related comparisons widget */
+  .compare-related {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--marble-3, #e0e0e0);
+  }
+  .compare-related-heading {
+    font-family: var(--display, Georgia, serif);
+    font-size: var(--text-h3, 20px);
+    margin: 0 0 16px;
+    color: var(--ink-1, #222);
+  }
+  .compare-related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .compare-related-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background: var(--marble, #fafafa);
+    border: 1px solid var(--marble-3, #e0e0e0);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--ink-1, #222);
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .compare-related-card:hover {
+    background: var(--marble-2, #f0f0f0);
+    border-color: var(--ink-3, #999);
+  }
+  .compare-related-pair {
+    font-size: var(--text-body, 15px);
+    line-height: 1.3;
+  }
+  .compare-related-pair em {
+    font-style: normal;
+    color: var(--ink-2, #555);
+    font-size: var(--text-small, 13px);
+    margin: 0 4px;
+  }
+  .compare-related-arrow {
+    color: var(--ink-2, #555);
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+  @media (max-width: 600px) {
+    .compare-related-grid { grid-template-columns: 1fr; }
+  }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I choose Paros or Naxos for my first trip to the Cyclades?","acceptedAnswer":{"@type":"Answer","text":"Paros, in most cases. The highlights are more concentrated (Naoussa harbor especially), the atmosphere matches what most first-time visitors imagine when they picture 'a Greek island', and the strong ferry connections make day trips easy. The exception: families with young children should pick Naxos regardless of trip number — the family-friendly beaches are that much better."}},{"@type":"Question","name":"Is Paros more expensive than Naxos?","acceptedAnswer":{"@type":"Answer","text":"Significantly. For comparable accommodation in high season, expect to pay 30-40% more on Paros, especially in Naoussa. Restaurants are 20-30% more expensive. For a week's trip, the total difference is typically €1,000-2,000. Naxos isn't cheap by Greek standards, but it's meaningfully more affordable than Paros."}},{"@type":"Question","name":"Which is better for families with kids?","acceptedAnswer":{"@type":"Answer","text":"Naxos, by a clear margin. The south-west coast — Plaka, Agios Prokopios, Kastraki — is a continuous 15 km stretch of fine sand with shallow, calm, gently shelving water. There's no beach in Paros that matches that combination of length, safety, and ease of access. Naxos also has more child-friendly accommodation options and the Chora is walkable without the cliff stairs that make Mykonos or Santorini hard with strollers."}},{"@type":"Question","name":"Which has better nightlife?","acceptedAnswer":{"@type":"Answer","text":"Paros, especially Naoussa. The night scene runs late, the bars are well-curated, and the vibe is 'sophisticated casual' rather than club. Naxos has good tavernas and a quiet bar scene in the Chora, but nothing comparable to a Naoussa summer night. If nightlife is part of why you're going to Greece, Paros is the clear pick."}},{"@type":"Question","name":"Can I visit both Paros and Naxos in one trip?","acceptedAnswer":{"@type":"Answer","text":"Yes — they're 30 minutes apart by fast ferry and 4-6 ferries run daily in summer. A common itinerary is 3-4 days in one and 3 days in the other. Start in Paros if you want the social arrival and end in Naxos if you want a quieter close, or reverse it if you want to wind up with nightlife. Either order works because the ferry connections are excellent."}}]}</script>
 </head>
@@ -159,7 +210,7 @@
 <p>Naxos rewards 4-5 days. One day for the Chora and the Apollo temple gate (Portara). Two beach days on the south-west coast. One day driving through the mountain villages with a long lunch in Apeiranthos or Halki. Optionally, a day for the marble quarries and ancient kouros statues if you're into that. Coming for only 2 days means seeing the Chora and one beach — possible but you'll feel rushed.</p>
 
 <h4>The honest verdict</h4>
-<p>If we removed names and just compared the islands on what they offer, Naxos wins on most measurable axes — bigger, cheaper, more varied, better for families, more historically rich, with comparable beaches. But Paros wins on the things travelers actually book a Greek-island trip for: atmosphere, evening dining, the harbor-village ideal, the social ambience. Most first-time visitors should pick Paros and most repeat visitors should pick Naxos. Most families should pick Naxos regardless of which trip it is. And anyone with 7+ days in the Cyclades should just do both — they're 30 minutes apart by fast ferry.</p><div class="compare-faq"><h3 class="compare-faq-heading">Common questions</h3><details><summary>Should I choose Paros or Naxos for my first trip to the Cyclades?</summary><p>Paros, in most cases. The highlights are more concentrated (Naoussa harbor especially), the atmosphere matches what most first-time visitors imagine when they picture 'a Greek island', and the strong ferry connections make day trips easy. The exception: families with young children should pick Naxos regardless of trip number — the family-friendly beaches are that much better.</p></details><details><summary>Is Paros more expensive than Naxos?</summary><p>Significantly. For comparable accommodation in high season, expect to pay 30-40% more on Paros, especially in Naoussa. Restaurants are 20-30% more expensive. For a week's trip, the total difference is typically €1,000-2,000. Naxos isn't cheap by Greek standards, but it's meaningfully more affordable than Paros.</p></details><details><summary>Which is better for families with kids?</summary><p>Naxos, by a clear margin. The south-west coast — Plaka, Agios Prokopios, Kastraki — is a continuous 15 km stretch of fine sand with shallow, calm, gently shelving water. There's no beach in Paros that matches that combination of length, safety, and ease of access. Naxos also has more child-friendly accommodation options and the Chora is walkable without the cliff stairs that make Mykonos or Santorini hard with strollers.</p></details><details><summary>Which has better nightlife?</summary><p>Paros, especially Naoussa. The night scene runs late, the bars are well-curated, and the vibe is 'sophisticated casual' rather than club. Naxos has good tavernas and a quiet bar scene in the Chora, but nothing comparable to a Naoussa summer night. If nightlife is part of why you're going to Greece, Paros is the clear pick.</p></details><details><summary>Can I visit both Paros and Naxos in one trip?</summary><p>Yes — they're 30 minutes apart by fast ferry and 4-6 ferries run daily in summer. A common itinerary is 3-4 days in one and 3 days in the other. Start in Paros if you want the social arrival and end in Naxos if you want a quieter close, or reverse it if you want to wind up with nightlife. Either order works because the ferry connections are excellent.</p></details></div></div>
+<p>If we removed names and just compared the islands on what they offer, Naxos wins on most measurable axes — bigger, cheaper, more varied, better for families, more historically rich, with comparable beaches. But Paros wins on the things travelers actually book a Greek-island trip for: atmosphere, evening dining, the harbor-village ideal, the social ambience. Most first-time visitors should pick Paros and most repeat visitors should pick Naxos. Most families should pick Naxos regardless of which trip it is. And anyone with 7+ days in the Cyclades should just do both — they're 30 minutes apart by fast ferry.</p><div class="compare-faq"><h3 class="compare-faq-heading">Common questions</h3><details><summary>Should I choose Paros or Naxos for my first trip to the Cyclades?</summary><p>Paros, in most cases. The highlights are more concentrated (Naoussa harbor especially), the atmosphere matches what most first-time visitors imagine when they picture 'a Greek island', and the strong ferry connections make day trips easy. The exception: families with young children should pick Naxos regardless of trip number — the family-friendly beaches are that much better.</p></details><details><summary>Is Paros more expensive than Naxos?</summary><p>Significantly. For comparable accommodation in high season, expect to pay 30-40% more on Paros, especially in Naoussa. Restaurants are 20-30% more expensive. For a week's trip, the total difference is typically €1,000-2,000. Naxos isn't cheap by Greek standards, but it's meaningfully more affordable than Paros.</p></details><details><summary>Which is better for families with kids?</summary><p>Naxos, by a clear margin. The south-west coast — Plaka, Agios Prokopios, Kastraki — is a continuous 15 km stretch of fine sand with shallow, calm, gently shelving water. There's no beach in Paros that matches that combination of length, safety, and ease of access. Naxos also has more child-friendly accommodation options and the Chora is walkable without the cliff stairs that make Mykonos or Santorini hard with strollers.</p></details><details><summary>Which has better nightlife?</summary><p>Paros, especially Naoussa. The night scene runs late, the bars are well-curated, and the vibe is 'sophisticated casual' rather than club. Naxos has good tavernas and a quiet bar scene in the Chora, but nothing comparable to a Naoussa summer night. If nightlife is part of why you're going to Greece, Paros is the clear pick.</p></details><details><summary>Can I visit both Paros and Naxos in one trip?</summary><p>Yes — they're 30 minutes apart by fast ferry and 4-6 ferries run daily in summer. A common itinerary is 3-4 days in one and 3 days in the other. Start in Paros if you want the social arrival and end in Naxos if you want a quieter close, or reverse it if you want to wind up with nightlife. Either order works because the ferry connections are excellent.</p></details></div><div class="compare-related"><h3 class="compare-related-heading">Related comparisons</h3><div class="compare-related-grid"><a class="compare-related-card" href="/compare/milos-vs-naxos/"><span class="compare-related-pair">Milos <em>vs</em> Naxos</span><span class="compare-related-arrow" aria-hidden="true">→</span></a><a class="compare-related-card" href="/compare/ios-vs-paros/"><span class="compare-related-pair">Ios <em>vs</em> Paros</span><span class="compare-related-arrow" aria-hidden="true">→</span></a><a class="compare-related-card" href="/compare/naxos-vs-santorini/"><span class="compare-related-pair">Naxos <em>vs</em> Santorini</span><span class="compare-related-arrow" aria-hidden="true">→</span></a><a class="compare-related-card" href="/compare/mykonos-vs-paros/"><span class="compare-related-pair">Mykonos <em>vs</em> Paros</span><span class="compare-related-arrow" aria-hidden="true">→</span></a></div></div></div>
     </div>
   </div>
 </main>

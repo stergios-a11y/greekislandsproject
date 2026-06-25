@@ -47,6 +47,57 @@
     .vs-page-h1 { font-size: 26px; }
     .vs-page-sub { font-size: 15px; }
   }
+  /* Related comparisons widget */
+  .compare-related {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--marble-3, #e0e0e0);
+  }
+  .compare-related-heading {
+    font-family: var(--display, Georgia, serif);
+    font-size: var(--text-h3, 20px);
+    margin: 0 0 16px;
+    color: var(--ink-1, #222);
+  }
+  .compare-related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .compare-related-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background: var(--marble, #fafafa);
+    border: 1px solid var(--marble-3, #e0e0e0);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--ink-1, #222);
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .compare-related-card:hover {
+    background: var(--marble-2, #f0f0f0);
+    border-color: var(--ink-3, #999);
+  }
+  .compare-related-pair {
+    font-size: var(--text-body, 15px);
+    line-height: 1.3;
+  }
+  .compare-related-pair em {
+    font-style: normal;
+    color: var(--ink-2, #555);
+    font-size: var(--text-small, 13px);
+    margin: 0 4px;
+  }
+  .compare-related-arrow {
+    color: var(--ink-2, #555);
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+  @media (max-width: 600px) {
+    .compare-related-grid { grid-template-columns: 1fr; }
+  }
 </style>
 
 </head>
@@ -118,7 +169,7 @@
       <div id="compare-wtv" class="compare-wtv"></div>
       <div id="compare-verdict" class="compare-verdict" style=""><h3 class="compare-verdict-heading">Our verdict</h3><p>Mykonos and Naxos are neighbours geographically but worlds apart in character. Mykonos is the Cyclades polished for international consumption; Naxos is the Cyclades as Greeks themselves enjoy them.</p>
 <p>Mykonos's strengths are its beach clubs, its restaurants, and its meticulously maintained tourist infrastructure. Its weaknesses are its prices and the relentless intensity of high-season crowds. Naxos is the largest Cycladic island, with a long western beach coastline, a Venetian-walled old town, mountain villages still working their olive groves and vineyards, and prices that allow normal travellers to stay a full week without remortgaging.</p>
-<p><strong>Choose Mykonos</strong> if you specifically want the curated party-luxury experience. <strong>Choose Naxos</strong> for almost any other Cycladic priority: families, week-long stays, food culture, hiking, or simply spending less. Naxos is also a far better base if you plan to ferry-hop, with daily connections to most of the Cyclades.</p></div>
+<p><strong>Choose Mykonos</strong> if you specifically want the curated party-luxury experience. <strong>Choose Naxos</strong> for almost any other Cycladic priority: families, week-long stays, food culture, hiking, or simply spending less. Naxos is also a far better base if you plan to ferry-hop, with daily connections to most of the Cyclades.</p><div class="compare-related"><h3 class="compare-related-heading">Related comparisons</h3><div class="compare-related-grid"><a class="compare-related-card" href="/compare/ios-vs-mykonos/"><span class="compare-related-pair">Ios <em>vs</em> Mykonos</span><span class="compare-related-arrow" aria-hidden="true">→</span></a><a class="compare-related-card" href="/compare/milos-vs-naxos/"><span class="compare-related-pair">Milos <em>vs</em> Naxos</span><span class="compare-related-arrow" aria-hidden="true">→</span></a><a class="compare-related-card" href="/compare/mykonos-vs-paros/"><span class="compare-related-pair">Mykonos <em>vs</em> Paros</span><span class="compare-related-arrow" aria-hidden="true">→</span></a><a class="compare-related-card" href="/compare/naxos-vs-paros/"><span class="compare-related-pair">Naxos <em>vs</em> Paros</span><span class="compare-related-arrow" aria-hidden="true">→</span></a></div></div></div>
     </div>
   </div>
 </main>
