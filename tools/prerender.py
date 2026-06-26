@@ -2461,9 +2461,8 @@ def generate_festivals_page(island_keys):
                     photo_html = '<img class="fest-photo" src="' + esc(photo_src) + '" alt="' + esc(fest_name) + '" loading="lazy">'
 
                 months_attr = ','.join(str(m) for m in f['months'])
-                search_blob = (fest_name + ' ' + island_name + ' ' + (desc_text or '')).lower()
                 card_html = (
-                    '<article class="fest-card" data-island="' + esc(f['island']) + '" data-months="' + months_attr + '" data-search="' + esc(search_blob) + '">'
+                    '<article class="fest-card" data-island="' + esc(f['island']) + '" data-months="' + months_attr + '">'
                     + photo_html
                     + '<div class="fest-text">'
                     + '<a class="fest-island" href="' + island_href + '">' + esc(island_name) + '</a>'
@@ -2496,7 +2495,6 @@ def generate_festivals_page(island_keys):
         L_month  = 'Μήνας' if is_el else 'Month'
         L_island = 'Νησί' if is_el else 'Island'
         L_all    = 'Όλα' if is_el else 'All'
-        L_search = 'Αναζήτηση γιορτών…' if is_el else 'Search festivals…'
         L_clear  = 'Καθαρισμός' if is_el else 'Clear'
         L_soon   = 'Τώρα & προσεχώς' if is_el else 'Happening now & soon'
         L_this   = 'Αυτόν τον μήνα' if is_el else 'This month'
@@ -2518,7 +2516,6 @@ def generate_festivals_page(island_keys):
             '<div class="fest-controls">'
             + '<select id="fest-f-month" aria-label="' + esc(L_month) + '"><option value="">' + esc(L_month) + ': ' + esc(L_all) + '</option>' + _month_opts + '</select>'
             + '<select id="fest-f-island" aria-label="' + esc(L_island) + '"><option value="">' + esc(L_island) + ': ' + esc(L_all) + '</option>' + _island_opts + '</select>'
-            + '<input id="fest-f-search" type="search" placeholder="' + esc(L_search) + '">'
             + '<button type="button" class="fest-clear" id="fest-f-clear">' + esc(L_clear) + '</button>'
             + '</div>'
             + '<section class="fest-soon" id="fest-soon" hidden><h2>' + esc(L_soon) + '</h2><div class="fest-cards" id="fest-soon-cards"></div></section>'
@@ -2527,15 +2524,15 @@ def generate_festivals_page(island_keys):
 
         soon_script = (
             '<script>\n(function(){\n'
-            '  var monthSel=document.getElementById("fest-f-month"),islandSel=document.getElementById("fest-f-island"),search=document.getElementById("fest-f-search"),clearBtn=document.getElementById("fest-f-clear"),noRes=document.getElementById("fest-noresults");\n'
+            '  var monthSel=document.getElementById("fest-f-month"),islandSel=document.getElementById("fest-f-island"),clearBtn=document.getElementById("fest-f-clear"),noRes=document.getElementById("fest-noresults");\n'
             '  var sections=[].slice.call(document.querySelectorAll(".fest-month"));\n'
             '  var cards=[].slice.call(document.querySelectorAll(".fest-month .fest-card"));\n'
-            '  function apply(){var m=monthSel.value,isl=islandSel.value,q=(search.value||"").trim().toLowerCase(),any=false;\n'
-            '    cards.forEach(function(c){var okM=!m||(","+c.getAttribute("data-months")+",").indexOf(","+m+",")>-1;var okI=!isl||c.getAttribute("data-island")===isl;var okQ=!q||(c.getAttribute("data-search")||"").indexOf(q)>-1;var show=okM&&okI&&okQ;c.classList.toggle("is-hidden",!show);if(show)any=true;});\n'
+            '  function apply(){var m=monthSel.value,isl=islandSel.value,any=false;\n'
+            '    cards.forEach(function(c){var okM=!m||(","+c.getAttribute("data-months")+",").indexOf(","+m+",")>-1;var okI=!isl||c.getAttribute("data-island")===isl;var show=okM&&okI;c.classList.toggle("is-hidden",!show);if(show)any=true;});\n'
             '    sections.forEach(function(s){s.classList.toggle("is-hidden",s.querySelectorAll(".fest-card:not(.is-hidden)").length===0);});\n'
             '    noRes.style.display=any?"none":"block";}\n'
-            '  monthSel.addEventListener("change",apply);islandSel.addEventListener("change",apply);search.addEventListener("input",apply);\n'
-            '  clearBtn.addEventListener("click",function(){monthSel.value="";islandSel.value="";search.value="";apply();});\n'
+            '  monthSel.addEventListener("change",apply);islandSel.addEventListener("change",apply);\n'
+            '  clearBtn.addEventListener("click",function(){monthSel.value="";islandSel.value="";apply();});\n'
             '  var now=new Date(),cm=now.getMonth()+1,nm=cm===12?1:cm+1,picked=[];\n'
             '  var soon=document.getElementById("fest-soon"),soonCards=document.getElementById("fest-soon-cards");\n'
             '  function pick(month,tagText,tagClass){cards.forEach(function(c){if(picked.indexOf(c)>-1)return;if((","+c.getAttribute("data-months")+",").indexOf(","+month+",")>-1){picked.push(c);var clone=c.cloneNode(true);clone.classList.remove("is-hidden");var tag=document.createElement("span");tag.className="fest-soon-tag "+tagClass;tag.textContent=tagText;var txt=clone.querySelector(".fest-text");if(txt)txt.insertBefore(tag,txt.firstChild);soonCards.appendChild(clone);}});}\n'
@@ -2610,7 +2607,7 @@ def generate_festivals_page(island_keys):
             '  .fest-clear { cursor:pointer; border:none; background:none; color:var(--aegean-dark,#076880); font-weight:600; font-size:13px; padding:8px; }\n'
             '  .fest-soon { margin:0 0 36px; }\n'
             '  .fest-soon > h2 { font-family:var(--serif,Georgia),serif; font-size:22px; margin:0 0 14px; }\n'
-            '  .fest-soon-tag { display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; color:#fff; background:var(--aegean,#0B8FAC); border-radius:999px; padding:2px 9px; margin:0 0 6px; }\n'
+            '  .fest-soon-tag { display:block; width:fit-content; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; color:#fff; background:var(--aegean,#0B8FAC); border-radius:999px; padding:2px 9px; margin:0 0 8px; }\n'
             '  .fest-soon-tag.next { background:var(--ink-3,#888); }\n'
             '  .fest-card { transition:transform .12s ease, box-shadow .12s ease; }\n'
             '  .fest-card:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,.10); }\n'
