@@ -1480,6 +1480,20 @@ function buildIslandPage(data, key) {
   }).join('');
 
   const introHtml = data.intro ? `<div class="itin-island-intro"><p>${pickLang(data, 'intro')}</p></div>` : '';
+
+  // Characteristic hero photo: first available itinerary-stop photo, else first beach photo.
+  // Mirrors find_hero_image() in prerender.py so the SPA matches the static SEO page.
+  let _hp = null, _hc = null, _hn = '';
+  for (const _d of itin.days) {
+    for (const _s of (_d.stops || [])) { if (_s.photo) { _hp = _s.photo; _hc = _s.photo_credit; _hn = pickLang(_s, 'name'); break; } }
+    if (_hp) break;
+  }
+  if (!_hp && Array.isArray(data.beaches)) {
+    for (const _b of data.beaches) { if (_b.photo) { _hp = _b.photo; _hc = _b.photo_credit; _hn = pickLang(_b, 'name'); break; } }
+  }
+  const heroHtml = _hp
+    ? `<figure class="island-hero">${buildLightboxImg(_hp, islandName(key) + (_hn ? ' — ' + _hn : ''), _hc, 'island-hero-img', '')}${buildPhotoCredit(_hc)}</figure>`
+    : '';
   const gettingThereHtml = buildGettingThereSection(data);
   // Build the "Top Beaches of X" heading. English: simple concatenation.
   // Greek: use the genitive form + the right article (της/του/των) based on
@@ -1536,6 +1550,7 @@ function buildIslandPage(data, key) {
         <h2 class="itin-title">${pickLang(itin, "title")}</h2>
         <p class="itin-subtitle">${pickLang(itin, "subtitle")}</p>
       </div>
+      ${heroHtml}
       ${introHtml}
       ${buildSuitedForSection(data)}
       ${buildAudienceSections(data)}
