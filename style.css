@@ -2545,6 +2545,26 @@ html.dark .whats-on-chip:hover { border-color: var(--aegean); }
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(232,82,42,0.25);
 }
+.car-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: var(--text-meta);
+  font-family: var(--sans);
+  font-weight: 700;
+  background: var(--aegean, #0B8FAC);
+  color: #fff !important;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.car-btn:hover {
+  background: var(--aegean-dark, #076880);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(11,143,172,0.25);
+}
 
 /* Shortlist button on detail page */
 .shortlist-btn {
@@ -3209,6 +3229,7 @@ html.dark .top-nav.open {
   .share-btn,
   .print-btn,
   .ferry-btn,
+  .car-btn,
   .itin-day-btn-row,
   .leaflet-container,
   .beach-vote-stars,

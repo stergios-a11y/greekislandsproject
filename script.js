@@ -1252,6 +1252,18 @@ async function renderIslandPage(key) {
     ferryBtn.href = `https://www.ferryhopper.com/en/ferries-to/${slug}`;
   }
 
+  // Rent-a-car affiliate (DiscoverCars). Hidden on car-free / fully walkable islands
+  // (car_need 1.0 — Hydra and the small islands where renting makes no sense).
+  const carBtn = document.getElementById('detail-car-btn');
+  if (carBtn) {
+    if ((island.car_need || 0) > 1) {
+      carBtn.href = 'https://www.discovercars.com/?a_aid=antaran2';
+      carBtn.style.display = '';
+    } else {
+      carBtn.style.display = 'none';
+    }
+  }
+
   const guide = document.getElementById('island-guide');
   if (!guide) return;
 
