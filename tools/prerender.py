@@ -1290,8 +1290,7 @@ def render_body(key, data, meta, lang='en'):
             nightlife_txt = safe_html(pick(day, 'nightlife', lang))
             if nightlife_txt:
                 nl_title = 'Nightlife' if lang == 'en' else 'Νυχτερινή ζωή'
-                nl_tag = 'optional' if lang == 'en' else 'προαιρετικό'
-                stop_items.append(f'<li class="seo-stop-nightlife">🍸 <strong>{nl_title}</strong> <span class="seo-nightlife-tag">{nl_tag}</span><br>{nightlife_txt}</li>')
+                stop_items.append(f'<li class="seo-stop-nightlife">🍸 <strong>{nl_title}</strong><br>{nightlife_txt}</li>')
 
             day_blocks.append(f'''
 <section class="seo-day">

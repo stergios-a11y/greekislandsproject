@@ -5690,8 +5690,6 @@ html.dark .wtv-ok { background: #6FA9B8; color: #042631; }
 .itin-stop-num--nightlife{background:linear-gradient(135deg,#e64980,#7048e8);font-size:15px}
 .itin-stop-name--nightlife{color:#d6336c}
 html.dark .itin-stop-name--nightlife{color:#f783ac}
-.itin-nightlife-tag{display:inline-block;margin-left:8px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#fff;background:#e64980;border-radius:999px;padding:2px 8px;vertical-align:middle}
 .itin-stop--nightlife .itin-stop-desc a{color:#d6336c;text-decoration:underline}
 html.dark .itin-stop--nightlife .itin-stop-desc a{color:#f783ac}
 .seo-stop-nightlife{list-style:none;margin-top:10px;padding-top:10px;border-top:1px dashed #e6a8c4}
-.seo-nightlife-tag{font-size:11px;text-transform:uppercase;color:#d6336c;font-weight:700;letter-spacing:.5px}

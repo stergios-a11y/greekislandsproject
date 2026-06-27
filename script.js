@@ -1398,12 +1398,11 @@ function buildIslandPage(data, key) {
     const nlText = pickLang(d, 'nightlife');
     if (nlText) {
       const nlTitle = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'Νυχτερινή ζωή' : 'Nightlife';
-      const nlTag = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'προαιρετικό' : 'optional';
       nightlifeStop = `<div class="itin-stop itin-stop--nightlife">
         <div class="itin-stop-num itin-stop-num--nightlife">🍸</div>
         <div class="itin-stop-content">
           <div class="itin-stop-text">
-            <div class="itin-stop-name-row"><span class="itin-stop-name itin-stop-name--nightlife">${nlTitle}</span><span class="itin-nightlife-tag">${nlTag}</span></div>
+            <div class="itin-stop-name-row"><span class="itin-stop-name itin-stop-name--nightlife">${nlTitle}</span></div>
             <div class="itin-stop-desc">${nlText}</div>
           </div>
         </div>
