@@ -478,6 +478,7 @@ def render_page(pair_key, lang):
   </div>
 </main>
 
+<div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored" data-i18n="detail.bookferry">🚢 Book ferry tickets</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored" data-i18n="detail.rentcar">🚗 Rent a car</a></div>
 <footer id="site-footer">
   <div class="footer-line">
     <span class="footer-copy" data-i18n="footer.copyright">© 2026 Aegean Blueprint</span> · {privacy_link}<span class="footer-updated" id="footer-updated"></span>
@@ -832,6 +833,7 @@ def render_hub_page(lang, valid_pairs):
   {''.join(sections_html)}
 </main>
 
+<div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored" data-i18n="detail.bookferry">🚢 Book ferry tickets</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored" data-i18n="detail.rentcar">🚗 Rent a car</a></div>
 <footer id="site-footer">
   <div class="footer-line">
     <span class="footer-copy" data-i18n="footer.copyright">© 2026 Aegean Blueprint</span> · {privacy_link}<span class="footer-updated" id="footer-updated"></span>

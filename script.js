@@ -301,6 +301,9 @@ function showView(view, param) {
   });
   const nav = document.getElementById('main-nav');
   if (nav) nav.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+  // Site-wide affiliate CTA: show on content views, hide on home (map), island detail (has its own buttons) and mission (no-affiliate page).
+  const ctaBar = document.getElementById('cta-affiliate');
+  if (ctaBar) ctaBar.style.display = (view === 'home' || view === 'island' || view === 'mission') ? 'none' : '';
 
   if (view === 'island') {
     const el = document.getElementById('view-detail');

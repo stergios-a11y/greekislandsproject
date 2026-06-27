@@ -5714,3 +5714,7 @@ html.dark .itin-stop-name--nightlife{color:#f783ac}
 .itin-stop--nightlife .itin-stop-desc a{color:#d6336c;text-decoration:underline}
 html.dark .itin-stop--nightlife .itin-stop-desc a{color:#f783ac}
 .seo-stop-nightlife{list-style:none;margin-top:10px;padding-top:10px;border-top:1px dashed #e6a8c4}
+
+/* Site-wide ferry + car affiliate CTA (footer area) */
+.cta-affiliate{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:24px 16px 8px;}
+@media print{.cta-affiliate{display:none !important;}}

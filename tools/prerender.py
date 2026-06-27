@@ -1789,6 +1789,7 @@ def render_page(key, data, meta, lang='en'):
       <button class="share-btn" id="detail-share-btn" onclick="copyIslandLink()" data-i18n="detail.copylink">{'🔗 Copy link' if lang == 'en' else '🔗 Αντιγραφή'}</button>
       <button class="print-btn" id="detail-print-btn" onclick="printIsland()" data-i18n="detail.print">{'🖨 Print' if lang == 'en' else '🖨 Εκτύπωση'}</button>
       <a class="ferry-btn" id="detail-ferry-btn" target="_blank" rel="noopener" data-i18n="detail.bookferry">{'🚢 Book ferry tickets' if lang == 'en' else '🚢 Κράτηση πλοίου'}</a>
+      <a class="car-btn" id="detail-car-btn" target="_blank" rel="noopener sponsored" data-i18n="detail.rentcar">{'🚗 Rent a car' if lang == 'en' else '🚗 Ενοικίαση αυτοκινήτου'}</a>
     </div>
     <div class="detail-grid">
       <div class="detail-main">
@@ -2225,6 +2226,7 @@ def generate_ferries_page(island_keys):
             f'  <div class="ferry-nav"><span class="ferry-nav-label">{esc(port_subtitle)}</span>{port_nav}</div>\n'
             + '\n'.join(port_sections) +
             f'\n  <div class="ferry-footer"><p>{booking_intro}{ferryhopper_link}</p><p style="margin-top: 12px;">{crosslink_text}</p></div>\n'
+            '<div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored">' + ('🚢 Κράτηση εισιτηρίων' if is_el else '🚢 Book ferry tickets') + '</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">' + ('🚗 Ενοικίαση αυτοκινήτου' if is_el else '🚗 Rent a car') + '</a></div>\n'
             '</main>\n'
             '<script>\n'
             '  /* Mobile hamburger toggle */\n'
@@ -2680,6 +2682,7 @@ def generate_festivals_page(island_keys):
             + filter_html + '\n'
             '  ' + ''.join(month_blocks) + '\n'
             '</main>\n'
+            '<div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored">' + ('🚢 Κράτηση εισιτηρίων' if is_el else '🚢 Book ferry tickets') + '</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">' + ('🚗 Ενοικίαση αυτοκινήτου' if is_el else '🚗 Rent a car') + '</a></div>\n'
             '<footer style="text-align:center;padding:24px 16px;font-size:13px;color:#888;border-top:1px solid #e5e5e5;margin-top:40px;">\n'
             '  <p style="margin:0;">© 2026 Aegean Blueprint · <a href="' + ('/el/privacy/' if is_el else '/privacy/') + '" style="color:#888;text-decoration:none;">' + ('Απόρρητο' if is_el else 'Privacy') + '</a></p>\n'
             '</footer>\n'
