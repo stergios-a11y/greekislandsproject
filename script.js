@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-06-26';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-06-27';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -1394,6 +1394,12 @@ function buildIslandPage(data, key) {
         }
       }
     }
+    let nightlifeHtml = '';
+    const nlText = pickLang(d, 'nightlife');
+    if (nlText) {
+      const nlLabel = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'Απόψε' : 'Tonight';
+      nightlifeHtml = `<div class="itin-nightlife" style="border-left:4px solid ${d.color}">🍸 <strong>${nlLabel}:</strong> ${nlText}</div>`;
+    }
     return `<div class="itin-day-card" id="itin-day-card-${d.day}">
       <div class="itin-day-header" style="border-left:4px solid ${d.color}">
         <div class="itin-day-header-main">
@@ -1404,6 +1410,7 @@ function buildIslandPage(data, key) {
         ${overnightHtml}
       </div>
       <div class="itin-stops">${stops}</div>
+      ${nightlifeHtml}
     </div>`;
   }).join('');
 
