@@ -5686,9 +5686,12 @@ html.dark .wtv-ok { background: #6FA9B8; color: #042631; }
   .itin-suited { grid-template-columns: 1fr; gap: 12px; }
 }
 
-/* Per-day nightlife suggestion (itinerary day card + SEO static day) */
-.itin-nightlife{margin:12px 0 0;padding:10px 14px;background:var(--marble,#f6f4ee);border-radius:0 8px 8px 0;font-size:14px;line-height:1.55;color:var(--ink-1,#444)}
-.itin-nightlife strong{color:var(--ink,#222)}
-html.dark .itin-nightlife{background:#2a2a2a;color:#ddd}
-html.dark .itin-nightlife strong{color:#fff}
-.seo-day-nightlife{margin:8px 0 0;padding:8px 12px;background:#f6f4ee;border-radius:0 8px 8px 0;font-size:14px;line-height:1.55;color:#444}
+/* Per-day nightlife — rendered as an optional, party-styled final itinerary stop */
+.itin-stop-num--nightlife{background:linear-gradient(135deg,#e64980,#7048e8);font-size:15px}
+.itin-stop-name--nightlife{color:#d6336c}
+html.dark .itin-stop-name--nightlife{color:#f783ac}
+.itin-nightlife-tag{display:inline-block;margin-left:8px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#fff;background:#e64980;border-radius:999px;padding:2px 8px;vertical-align:middle}
+.itin-stop--nightlife .itin-stop-desc a{color:#d6336c;text-decoration:underline}
+html.dark .itin-stop--nightlife .itin-stop-desc a{color:#f783ac}
+.seo-stop-nightlife{list-style:none;margin-top:10px;padding-top:10px;border-top:1px dashed #e6a8c4}
+.seo-nightlife-tag{font-size:11px;text-transform:uppercase;color:#d6336c;font-weight:700;letter-spacing:.5px}

@@ -1394,11 +1394,20 @@ function buildIslandPage(data, key) {
         }
       }
     }
-    let nightlifeHtml = '';
+    let nightlifeStop = '';
     const nlText = pickLang(d, 'nightlife');
     if (nlText) {
-      const nlLabel = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'Απόψε' : 'Tonight';
-      nightlifeHtml = `<div class="itin-nightlife" style="border-left:4px solid ${d.color}">🍸 <strong>${nlLabel}:</strong> ${nlText}</div>`;
+      const nlTitle = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'Νυχτερινή ζωή' : 'Nightlife';
+      const nlTag = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'προαιρετικό' : 'optional';
+      nightlifeStop = `<div class="itin-stop itin-stop--nightlife">
+        <div class="itin-stop-num itin-stop-num--nightlife">🍸</div>
+        <div class="itin-stop-content">
+          <div class="itin-stop-text">
+            <div class="itin-stop-name-row"><span class="itin-stop-name itin-stop-name--nightlife">${nlTitle}</span><span class="itin-nightlife-tag">${nlTag}</span></div>
+            <div class="itin-stop-desc">${nlText}</div>
+          </div>
+        </div>
+      </div>`;
     }
     return `<div class="itin-day-card" id="itin-day-card-${d.day}">
       <div class="itin-day-header" style="border-left:4px solid ${d.color}">
@@ -1409,8 +1418,7 @@ function buildIslandPage(data, key) {
         </div>
         ${overnightHtml}
       </div>
-      <div class="itin-stops">${stops}</div>
-      ${nightlifeHtml}
+      <div class="itin-stops">${stops}${nightlifeStop}</div>
     </div>`;
   }).join('');
 

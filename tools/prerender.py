@@ -1288,8 +1288,10 @@ def render_body(key, data, meta, lang='en'):
                 meta_parts.append(f'{drive_label}: {km} km, ~{drive_mins} min')
             meta_line_html = f'<p class="seo-day-meta">{" · ".join(meta_parts)}</p>' if meta_parts else ''
             nightlife_txt = safe_html(pick(day, 'nightlife', lang))
-            nl_label = 'Tonight' if lang == 'en' else 'Απόψε'
-            nightlife_html = f'<p class="seo-day-nightlife">🍸 <strong>{nl_label}:</strong> {nightlife_txt}</p>' if nightlife_txt else ''
+            if nightlife_txt:
+                nl_title = 'Nightlife' if lang == 'en' else 'Νυχτερινή ζωή'
+                nl_tag = 'optional' if lang == 'en' else 'προαιρετικό'
+                stop_items.append(f'<li class="seo-stop-nightlife">🍸 <strong>{nl_title}</strong> <span class="seo-nightlife-tag">{nl_tag}</span><br>{nightlife_txt}</li>')
 
             day_blocks.append(f'''
 <section class="seo-day">
@@ -1298,7 +1300,6 @@ def render_body(key, data, meta, lang='en'):
   <ol class="seo-stops">
     {"".join(stop_items)}
   </ol>
-  {nightlife_html}
 </section>''')
 
         itinerary_html = f'<section class="seo-itinerary"><h2>{heading}</h2>{"".join(day_blocks)}</section>'
