@@ -2548,6 +2548,39 @@ def generate_festivals_page(island_keys):
         )
         # --- end Festivals UX block ---
 
+        # Event structured data (schema.org) — one Event per festival with a parseable date.
+        _events = []
+        for _f in all_fests:
+            _start, _end = festival_iso_dates(_f['when'])
+            if not _start:
+                continue
+            if is_el:
+                _iname = GREEK_NAMES.get(_f['island'], ISLAND_META.get(_f['island'], {}).get('name', _f['island']))
+                _fname = _f['name_el'] or _f['name']
+                _fdesc = strip_html(_f['desc_el'] or _f['desc'])
+            else:
+                _iname = ISLAND_META.get(_f['island'], {}).get('name', _f['island'])
+                _fname = _f['name']
+                _fdesc = strip_html(_f['desc'])
+            _ev = {
+                "@context": "https://schema.org",
+                "@type": "Event",
+                "name": _fname,
+                "startDate": _start,
+                "eventStatus": "https://schema.org/EventScheduled",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "location": {"@type": "Place", "name": f"{_iname}, Greece",
+                             "address": {"@type": "PostalAddress", "addressLocality": _iname, "addressCountry": "GR"}},
+                "description": truncate_at_word(_fdesc, 280),
+                "url": SITE_URL + ('/el/island/' if is_el else '/island/') + _f['island'] + '/',
+            }
+            if _end:
+                _ev["endDate"] = _end
+            if _f.get('photo'):
+                _ev["image"] = _f['photo']
+            _events.append(_ev)
+        schema_html = ('<script type="application/ld+json">' + json.dumps(_events, ensure_ascii=False) + '</script>\n') if _events else ''
+
         page_html = (
             '<!DOCTYPE html>\n<html lang="' + lang + '">\n<head>\n'
             '<meta charset="UTF-8">\n'
@@ -2631,7 +2664,8 @@ def generate_festivals_page(island_keys):
             '    }\n'
             '  })();\n'
             '</script>\n'
-            '</head>\n<body>\n'
+            + schema_html
+            + '</head>\n<body>\n'
             # Match the main-site header exactly. Same classes, same CSS in style.css.
             # Difference: nav links go to /index.html#hash so they switch SPA view on
             # the home page, festivals link is real (active here), language toggle is
@@ -2747,6 +2781,33 @@ _MONTH_NAMES = {
     'september':9, 'sept':9, 'sep':9, 'october':10, 'oct':10, 'november':11, 'nov':11,
     'december':12, 'dec':12,
 }
+_MONTHS_EN = {'january':1,'february':2,'march':3,'april':4,'may':5,'june':6,
+              'july':7,'august':8,'september':9,'october':10,'november':11,'december':12}
+def festival_iso_dates(when_str, year=2027):
+    """Best-effort (startDate, endDate) ISO strings from a festival 'when' string.
+    Returns (None, None) when no explicit day+month can be found (vague ranges)."""
+    s = when_str or ''
+    ym = re.search(r'(20\d\d)', s)
+    yr = int(ym.group(1)) if ym else year
+    low = s.lower()
+    # range "D[-/–]D Month"
+    rm = re.search(r'(\d{1,2})\s*[\u2013\-]\s*(\d{1,2})\s+([a-z]+)', low)
+    if rm and rm.group(3) in _MONTHS_EN:
+        mo = _MONTHS_EN[rm.group(3)]
+        return f"{yr}-{mo:02d}-{int(rm.group(1)):02d}", f"{yr}-{mo:02d}-{int(rm.group(2)):02d}"
+    # single "D Month"
+    sm = re.search(r'(\d{1,2})\s+([a-z]+)', low)
+    if sm and sm.group(2) in _MONTHS_EN:
+        mo = _MONTHS_EN[sm.group(2)]
+        return f"{yr}-{mo:02d}-{int(sm.group(1)):02d}", None
+    # "Month D"
+    sm2 = re.search(r'\b([a-z]+)\s+(\d{1,2})\b', low)
+    if sm2 and sm2.group(1) in _MONTHS_EN:
+        mo = _MONTHS_EN[sm2.group(1)]
+        return f"{yr}-{mo:02d}-{int(sm2.group(2)):02d}", None
+    return None, None
+
+
 def parse_when_to_months(when_str):
     """Return set of month numbers (1-12) the festival likely covers."""
     if not when_str: return set()

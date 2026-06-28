@@ -483,12 +483,44 @@
   ],
   "festivals": [
     {
-      "name": "Ikarian Panigiria",
-      "name_el": "Ικαριώτικα Πανηγύρια",
-      "when": "Late June through early September (saint days)",
-      "when_el": "Τέλη Ιουνίου έως αρχές Σεπτεμβρίου (γιορτές αγίων)",
-      "desc": "The most famous panigiria circuit in Greece. Each village hosts on its patron saint's day — Agia Marina (17 July), Profitis Ilias (20 July), Agia Paraskevi (26 July), Panagia (15 August), and many smaller ones. All-night dancing to live Ikariotiko music. The panigiria explain Ikarian longevity better than any nutrition study.",
-      "desc_el": "Ο πιο διάσημος κύκλος πανηγυριών στην Ελλάδα. Κάθε χωριό γιορτάζει την ημέρα του αγίου του — Αγία Μαρίνα (17/7), Προφήτης Ηλίας (20/7), Αγία Παρασκευή (26/7), Παναγία (15/8), και πολλά μικρότερα. Ολονύχτιος χορός σε ζωντανή ικαριώτικη μουσική. Τα πανηγύρια εξηγούν τη μακροζωία των Ικαριωτών καλύτερα από κάθε διατροφική μελέτη."
+      "name": "Agios Kirykos panigiri",
+      "name_el": "Πανηγύρι Αγίου Κηρύκου",
+      "when": "15 July",
+      "when_el": "15 Ιουλίου",
+      "desc": "The island capital's own feast, for its patron saints Kirykos and Ioulitta — the warm-up to Ikaria's big mid-summer run. Tables fill the square, the wine is from the barrel, and the Ikariotiko dancing builds long past midnight.",
+      "desc_el": "Το πανηγύρι της πρωτεύουσας, για τους πολιούχους Κήρυκο και Ιουλίττα — το προοίμιο της μεγάλης καλοκαιρινής σειράς. Τραπέζια γεμίζουν την πλατεία, το κρασί είναι από το βαρέλι και ο ικαριώτικος χορός ανεβαίνει πολύ μετά τα μεσάνυχτα."
+    },
+    {
+      "name": "Profitis Ilias panigiria",
+      "name_el": "Πανηγύρια Προφήτη Ηλία",
+      "when": "20 July",
+      "when_el": "20 Ιουλίου",
+      "desc": "Profitis Ilias always sits on a summit, so these panigiria happen at hilltop chapels with the whole island spread out below and the dancing under the stars. Several villages celebrate the same night.",
+      "desc_el": "Ο Προφήτης Ηλίας βρίσκεται πάντα σε κορυφή, έτσι αυτά τα πανηγύρια γίνονται στα ξωκλήσια ψηλά, με όλο το νησί απλωμένο από κάτω και τον χορό κάτω από τα αστέρια. Πολλά χωριά γιορτάζουν την ίδια νύχτα."
+    },
+    {
+      "name": "Agia Paraskevi panigiri",
+      "name_el": "Πανηγύρι Αγίας Παρασκευής",
+      "when": "26 July",
+      "when_el": "26 Ιουλίου",
+      "desc": "One of the season's busiest nights, in several villages at once. The Ikarian formula in full: no stage, no tickets — communal tables of goat in tomato sauce, soufiko and kathoura cheese, barrels of village wine, and live violin-and-lute until dawn.",
+      "desc_el": "Μία από τις πιο πολυσύχναστες νύχτες, σε πολλά χωριά μαζί. Η ικαριώτικη συνταγή πλήρης: χωρίς σκηνή, χωρίς εισιτήρια — κοινά τραπέζια με κατσικάκι κοκκινιστό, σουφικό και καθούρα, βαρέλια χωριάτικο κρασί και ζωντανό βιολί-λαούτο ως το ξημέρωμα."
+    },
+    {
+      "name": "Christos Rachon panigiri (Transfiguration)",
+      "name_el": "Πανηγύρι Χριστού Ραχών (Μεταμόρφωση)",
+      "when": "6 August",
+      "when_el": "6 Αυγούστου",
+      "desc": "Christos Rachon throws one of the two biggest panigiria on Ikaria, for the Transfiguration. The mountain village fills with thousands and the proceeds fund the village all year — school, roads, the clinic. The dancing routinely runs until 7am.",
+      "desc_el": "Ο Χριστός Ραχών στήνει ένα από τα δύο μεγαλύτερα πανηγύρια της Ικαρίας, για τη Μεταμόρφωση. Το ορεινό χωριό γεμίζει χιλιάδες και τα έσοδα συντηρούν το χωριό όλο τον χρόνο — σχολείο, δρόμους, το ιατρείο. Ο χορός κρατάει συχνά ως τις 7 το πρωί."
+    },
+    {
+      "name": "Langada panigiri (Dormition)",
+      "name_el": "Πανηγύρι Λαγκάδας (Δεκαπενταύγουστος)",
+      "when": "15 August",
+      "when_el": "15 Αυγούστου",
+      "desc": "The most famous panigiri in Greece. In the near-abandoned village of Langada above Agios Dimitrios, the Dormition draws people from across the island and the diaspora for an all-night feast that ends well after sunrise. Communal, unhurried, wine-and-dance till dawn — the clearest window into why Ikarians live so long.",
+      "desc_el": "Το πιο διάσημο πανηγύρι της Ελλάδας. Στη σχεδόν εγκαταλειμμένη Λαγκάδα πάνω από τον Άγιο Δημήτριο, η Κοίμηση μαζεύει κόσμο απ' όλο το νησί και την ομογένεια για ένα ολονύχτιο γλέντι που τελειώνει πολύ μετά την ανατολή. Κοινοτικό, χωρίς βιασύνη, κρασί και χορός ως το πρωί — το καθαρότερο παράθυρο στη μακροζωία των Ικαριωτών."
     }
   ],
   "getting_there": {
