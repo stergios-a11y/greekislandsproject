@@ -1309,7 +1309,6 @@ async function renderIslandPage(key) {
       guide.innerHTML = buildIslandPage(data, key);
       setTimeout(() => initItineraryMap(data.itinerary.days, data.beaches || []), 80);
       if (data.beaches) setTimeout(() => loadBeachPhotos(data.beaches), 150);
-      setTimeout(() => initBeachVotes(), 200);
       return;
     }
   } catch(e) {
@@ -1457,12 +1456,6 @@ function buildIslandPage(data, key) {
               <div class="beach-rating-block">
                 <span class="beach-rating-label">${t("detail.editorial")}</span>
                 <div class="beach-stars">${'\u2605'.repeat(b.rating || 4)}${'\u2606'.repeat(5 - (b.rating || 4))}</div>
-              </div>
-              <div class="beach-rating-block">
-                <span class="beach-rating-label">${t("detail.yourrating")} <span class="beach-vote-count" id="vote-count-${beachId}"></span></span>
-                <div class="beach-vote-stars" id="vote-stars-${beachId}" data-beach-id="${beachId}">
-                  ${[1,2,3,4,5].map(s => `<span class="vote-star" data-score="${s}" onclick="voteBeach('${beachId}',${s})">☆</span>`).join('')}
-                </div>
               </div>
             </div>
           </div>
