@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-06-27';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-06-28';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -94,7 +94,7 @@ const ISLANDS_DATA = {
   "anafi":        { name:"Anafi",            lat:36.366, lng:25.766, beach:4.5, hist:3.2, night:2.5, access:2.0, afford:4.2, car_need:3.0, has_airport:false, total:3.9, area:38,    pop:271,     days:2, island_group:"Cyclades", drama:true, hiking:false, springs:false, chora:true, sailing:false },
   "samothrace":   { name:"Samothrace",       lat:40.45, lng:25.535, beach:3.0, hist:4.1, night:2.5, access:1.8, afford:4.5, car_need:3.0, has_airport:false, total:3.2, area:178,   pop:2859,    days:2, island_group:"Other", drama:true, hiking:true, springs:true, chora:false, sailing:false },
   "fournoi":      { name:"Fournoi",          lat:37.580, lng:26.500, beach:3.8, hist:3.0, night:1.8, access:2.0, afford:4.5, car_need:3.0, has_airport:false, total:3.2, area:45,    pop:1459,    days:2, island_group:"NE Aegean", drama:false, hiking:false, springs:false, chora:false, sailing:false },
-  "spetses":      { name:"Spetses",          lat:37.260, lng:23.130, beach:2.8, hist:4.2, night:4.2, access:4.2, afford:2.0, car_need:3.0, has_airport:false, total:3.7, area:22,    pop:4027,    days:2, island_group:"Saronic", drama:false, hiking:false, springs:false, chora:false, sailing:true },
+  "spetses":      { name:"Spetses",          lat:37.260, lng:23.130, beach:2.8, hist:3.9, night:4.2, access:3.9, afford:2.0, car_need:3.0, has_airport:false, total:3.7, area:22,    pop:4027,    days:2, island_group:"Saronic", drama:false, hiking:false, springs:false, chora:false, sailing:true },
   "tilos":        { name:"Tilos",            lat:36.44, lng:27.37, beach:3.8, hist:3.5, night:2.0, access:2.2, afford:4.2, car_need:3.0, has_airport:false, total:3.5, area:61,    pop:780,     days:2, island_group:"Dodecanese", drama:false, hiking:true, springs:false, chora:false, sailing:false },
   "leipsoi":      { name:"Leipsoi",          lat:37.300, lng:26.750, beach:4.0, hist:3.0, night:2.0, access:2.5, afford:4.5, car_need:2.0, has_airport:false, total:3.4, area:16,    pop:790,     days:1, island_group:"Dodecanese", drama:false, hiking:false, springs:false, chora:false, sailing:false },
   "halki":        { name:"Halki",            lat:36.220, lng:27.610, beach:3.8, hist:4.0, night:2.0, access:2.5, afford:4.0, car_need:3.0, has_airport:false, total:3.6, area:28,    pop:478,     days:2, island_group:"Dodecanese", drama:false, hiking:false, springs:false, chora:true, sailing:false },
