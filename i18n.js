@@ -179,7 +179,6 @@ const UI_TEXT = {
   'getting_there.title': { en: 'Getting there', el: 'Πώς θα φτάσεις' },
   'getting_there.tip': { en: 'Tip', el: 'Συμβουλή' },
   'detail.editorial': { en: 'Editorial', el: 'Βαθμολογία' },
-  'detail.yourrating': { en: 'Your rating', el: 'Η βαθμολογία σου' },
   'detail.spec.type': { en: 'Type', el: 'Τύπος' },
   'detail.spec.length': { en: 'Length', el: 'Μήκος' },
   'detail.spec.depth': { en: 'Depth', el: 'Βάθος' },

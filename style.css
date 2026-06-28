@@ -2450,32 +2450,6 @@ html.dark .whats-on-chip:hover { border-color: var(--aegean); }
   letter-spacing: 0.5px;
   color: var(--ink-4);
 }
-.beach-vote-count {
-  font-weight: 400;
-  font-size: var(--text-tiny);
-  color: var(--ink-3);
-  text-transform: none;
-  letter-spacing: 0;
-}
-.beach-vote-stars {
-  display: flex;
-  gap: 2px;
-  cursor: pointer;
-}
-.vote-star {
-  font-size: var(--text-body);
-  color: var(--border-2);
-  cursor: pointer;
-  transition: color 0.1s, transform 0.1s;
-  user-select: none;
-}
-.vote-star:hover {
-  transform: scale(1.2);
-  color: var(--gold);
-}
-.vote-star.voted {
-  color: var(--aegean);
-}
 @media (max-width: 600px) {
   .beach-ratings-row { gap: 10px; }
 }
@@ -3232,7 +3206,6 @@ html.dark .top-nav.open {
   .car-btn,
   .itin-day-btn-row,
   .leaflet-container,
-  .beach-vote-stars,
   #home-controls,
   #loading-overlay,
   #hero-banner {
