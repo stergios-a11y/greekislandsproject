@@ -1408,20 +1408,23 @@ function buildIslandPage(data, key) {
         }
       }
     }
-    let nightlifeStop = '';
+    // Eat & Drink panel — food + nightlife, separated from the routed sightseeing stops.
+    const _el = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+    let edRows = '';
+    const foodObj = d.food;
+    if (foodObj) {
+      const meal = (_el ? foodObj.meal_el : foodObj.meal) || (_el ? 'Φαγητό' : 'Food');
+      const area = (_el ? foodObj.area_el : foodObj.area) || '';
+      const fdesc = (_el ? foodObj.desc_el : foodObj.desc) || foodObj.desc || '';
+      const head = area ? `${meal} · ${area}` : meal;
+      edRows += `<div class="ed-row"><span class="ed-icon">🍴</span><div class="ed-text"><div class="ed-head">${head}</div><div class="ed-body">${fdesc}</div></div></div>`;
+    }
     const nlText = pickLang(d, 'nightlife');
     if (nlText) {
-      const nlTitle = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'Νυχτερινή ζωή' : 'Nightlife';
-      nightlifeStop = `<div class="itin-stop itin-stop--nightlife">
-        <div class="itin-stop-num itin-stop-num--nightlife">🍸</div>
-        <div class="itin-stop-content">
-          <div class="itin-stop-text">
-            <div class="itin-stop-name-row"><span class="itin-stop-name itin-stop-name--nightlife">${nlTitle}</span></div>
-            <div class="itin-stop-desc">${nlText}</div>
-          </div>
-        </div>
-      </div>`;
+      const nlTitle = _el ? 'Νυχτερινή ζωή' : 'Nightlife';
+      edRows += `<div class="ed-row"><span class="ed-icon">🍸</span><div class="ed-text"><div class="ed-head">${nlTitle}</div><div class="ed-body">${nlText}</div></div></div>`;
     }
+    const eatDrink = edRows ? `<div class="itin-eatdrink"><div class="ed-title">${_el ? 'Φαγητό & Ποτό' : 'Eat & Drink'}</div>${edRows}</div>` : '';
     return `<div class="itin-day-card" id="itin-day-card-${d.day}">
       <div class="itin-day-header" style="border-left:4px solid ${d.color}">
         <div class="itin-day-header-main">
@@ -1431,7 +1434,8 @@ function buildIslandPage(data, key) {
         </div>
         ${overnightHtml}
       </div>
-      <div class="itin-stops">${stops}${nightlifeStop}</div>
+      <div class="itin-stops">${stops}</div>
+      ${eatDrink}
     </div>`;
   }).join('');
 

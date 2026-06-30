@@ -1287,10 +1287,21 @@ def render_body(key, data, meta, lang='en'):
             if km not in (None, '', 0) and drive_mins not in (None, '', 0):
                 meta_parts.append(f'{drive_label}: {km} km, ~{drive_mins} min')
             meta_line_html = f'<p class="seo-day-meta">{" · ".join(meta_parts)}</p>' if meta_parts else ''
+            # Eat & Drink block (food + nightlife), separated from the routed stops
+            food = day.get('food')
             nightlife_txt = safe_html(pick(day, 'nightlife', lang))
+            ed_rows = ''
+            if food:
+                meal = (food.get('meal_el') if lang == 'el' else food.get('meal')) or ('Φαγητό' if lang == 'el' else 'Food')
+                area = (food.get('area_el') if lang == 'el' else food.get('area')) or ''
+                fdesc = safe_html(pick(food, 'desc', lang))
+                head = f'{meal} · {area}' if area else meal
+                ed_rows += f'<div class="ed-row"><span class="ed-icon">🍴</span><div class="ed-text"><div class="ed-head">{esc(head)}</div><div class="ed-body">{fdesc}</div></div></div>'
             if nightlife_txt:
                 nl_title = 'Nightlife' if lang == 'en' else 'Νυχτερινή ζωή'
-                stop_items.append(f'<li class="seo-stop-nightlife">🍸 <strong>{nl_title}</strong><br>{nightlife_txt}</li>')
+                ed_rows += f'<div class="ed-row"><span class="ed-icon">🍸</span><div class="ed-text"><div class="ed-head">{nl_title}</div><div class="ed-body">{nightlife_txt}</div></div></div>'
+            ed_title = 'Φαγητό & Ποτό' if lang == 'el' else 'Eat & Drink'
+            eatdrink_html = f'<div class="itin-eatdrink"><div class="ed-title">{ed_title}</div>{ed_rows}</div>' if ed_rows else ''
 
             day_blocks.append(f'''
 <section class="seo-day">
@@ -1299,6 +1310,7 @@ def render_body(key, data, meta, lang='en'):
   <ol class="seo-stops">
     {"".join(stop_items)}
   </ol>
+  {eatdrink_html}
 </section>''')
 
         itinerary_html = f'<section class="seo-itinerary"><h2>{heading}</h2>{"".join(day_blocks)}</section>'

@@ -5696,3 +5696,16 @@ html.dark .itin-stop--nightlife .itin-stop-desc a{color:#f783ac}
 .island-hero{position:relative;margin:0 0 20px;}
 .island-hero-img{width:100%;max-height:360px;object-fit:cover;border-radius:12px;display:block;box-shadow:0 2px 12px rgba(0,0,0,.10);cursor:zoom-in;}
 @media (max-width:600px){.island-hero-img{max-height:240px;}}
+
+/* Per-day Eat & Drink panel (food + nightlife), separated from routed itinerary stops */
+.itin-eatdrink{margin:14px 0 0;padding:14px 16px;background:var(--marble,#f6f4ee);border-radius:12px}
+.itin-eatdrink .ed-title{font-family:var(--serif,Georgia),serif;font-size:15px;font-weight:700;margin:0 0 10px;color:var(--ink,#222)}
+.itin-eatdrink .ed-row{display:flex;gap:10px;margin-top:12px}
+.itin-eatdrink .ed-row:first-of-type{margin-top:0}
+.itin-eatdrink .ed-icon{font-size:18px;line-height:1.45;flex-shrink:0}
+.itin-eatdrink .ed-head{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--aegean-dark,#076880);margin-bottom:3px}
+.itin-eatdrink .ed-body{font-size:14px;line-height:1.55;color:var(--ink-1,#444)}
+.itin-eatdrink .ed-body a{color:#d6336c;text-decoration:underline}
+html.dark .itin-eatdrink{background:#2a2a2a}
+html.dark .itin-eatdrink .ed-body{color:#ddd}
+html.dark .itin-eatdrink .ed-title{color:#eee}
