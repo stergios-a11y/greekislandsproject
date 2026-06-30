@@ -1355,7 +1355,8 @@ function buildIslandPage(data, key) {
   ).join('');
 
   const dayCards = itin.days.map(d => {
-    const stops = d.stops.map((s, i) => {
+    const isEl = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+    const stopArr = d.stops.map((s, i) => {
       const nameHtml = s.wiki
         ? `<a href="${s.wiki}" target="_blank" rel="noopener" class="itin-stop-link">${pickLang(s, "name")}</a>`
         : pickLang(s, "name");
@@ -1369,12 +1370,23 @@ function buildIslandPage(data, key) {
         <div class="itin-stop-content">
           <div class="itin-stop-text">
             <div class="itin-stop-name-row">${nameHtml}${timeHtml}</div>
+            ${s.drive ? `<div class="itin-stop-drive">🚗 ${isEl ? (s.drive_el || s.drive) : s.drive}</div>` : ''}
             <div class="itin-stop-desc">${pickLang(s, "desc")}</div>
           </div>
           ${photoHtml}
         </div>
       </div>`;
-    }).join('');
+    });
+    // Meal-timing cue placed in the route at the meal's slot (food itself is in the Eat & Drink panel below)
+    const _f = d.food;
+    if (_f && (_f.meal || _f.desc)) {
+      const _meal = ((isEl ? _f.meal_el : _f.meal) || '').toLowerCase();
+      const _area = (isEl ? _f.area_el : _f.area) || '';
+      const _cue = `<div class="itin-meal-cue">🍴 ${isEl ? 'Στάση για' : 'Stop for'} ${_meal}${_area ? ' · ' + _area : ''} — ${isEl ? 'δες «Φαγητό & Ποτό» πιο κάτω' : 'see Eat & Drink below'}</div>`;
+      const _idx = _f.after ? d.stops.findIndex(x => x.name === _f.after) : -1;
+      if (_idx >= 0) stopArr.splice(_idx + 1, 0, _cue); else stopArr.push(_cue);
+    }
+    const stops = stopArr.join('');
     const driveInfo = d.km ? `<span class="itin-day-meta">${d.km} ${t('common.km')} · ${d.drive_mins} ${t('common.mindrive')}</span>` : '';
     let overnightHtml = '';
     if (d.overnight) {

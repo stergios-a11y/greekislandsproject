@@ -5709,3 +5709,10 @@ html.dark .itin-stop--nightlife .itin-stop-desc a{color:#f783ac}
 html.dark .itin-eatdrink{background:#2a2a2a}
 html.dark .itin-eatdrink .ed-body{color:#ddd}
 html.dark .itin-eatdrink .ed-title{color:#eee}
+
+/* In-route meal-timing cue + per-leg drive note */
+.itin-meal-cue{margin:10px 0;padding:7px 12px;background:rgba(214,51,108,.07);border-left:3px solid #d6336c;border-radius:0 6px 6px 0;font-size:13px;font-weight:600;color:#b02a5b}
+html.dark .itin-meal-cue{background:rgba(214,51,108,.16);color:#f3a6c4}
+.itin-stop-drive{font-size:12px;color:var(--ink-3,#888);margin-top:2px}
+.seo-meal-cue{list-style:none;margin:8px 0;padding:6px 10px;background:rgba(214,51,108,.07);border-left:3px solid #d6336c;font-size:13px;font-weight:600;color:#b02a5b}
+.seo-stop-drive{font-size:12px;color:#888}

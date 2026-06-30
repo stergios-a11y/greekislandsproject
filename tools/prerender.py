@@ -1267,7 +1267,20 @@ def render_body(key, data, meta, lang='en'):
                 sname = esc(pick(s, 'name', lang))
                 sdesc = safe_html(pick(s, 'desc', lang))
                 stime = esc(s.get('time', ''))
-                stop_items.append(f'<li><strong>{stime} · {sname}</strong><br>{sdesc}</li>')
+                drive = pick(s, 'drive', lang)
+                drive_html = f'<br><span class="seo-stop-drive">🚗 {esc(drive)}</span>' if drive else ''
+                stop_items.append(f'<li><strong>{stime} · {sname}</strong>{drive_html}<br>{sdesc}</li>')
+            # Meal-timing cue at the meal's slot in the route
+            _food = day.get('food')
+            if _food and (_food.get('meal') or _food.get('desc')):
+                _meal = ((_food.get('meal_el') if lang == 'el' else _food.get('meal')) or '').lower()
+                _area = (_food.get('area_el') if lang == 'el' else _food.get('area')) or ''
+                _lab = 'Στάση για' if lang == 'el' else 'Stop for'
+                _see = 'δες «Φαγητό & Ποτό» πιο κάτω' if lang == 'el' else 'see Eat & Drink below'
+                _cue = f'<li class="seo-meal-cue">🍴 {_lab} {esc(_meal)}' + (f' · {esc(_area)}' if _area else '') + f' — {_see}</li>'
+                _ai = next((i for i, x in enumerate(stops) if x.get('name') == _food.get('after')), None)
+                if _ai is not None: stop_items.insert(_ai + 1, _cue)
+                else: stop_items.append(_cue)
 
             overnight_label = 'Overnight' if lang == 'en' else 'Διανυκτέρευση'
             drive_label = 'Drive' if lang == 'en' else 'Οδήγηση'
