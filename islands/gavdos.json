@@ -162,7 +162,18 @@
         "overnight": "Sarakiniko",
         "overnight_el": "Σαρακήνικο",
         "km": 15,
-        "drive_mins": 30
+        "drive_mins": 30,
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Sarakiniko",
+            "area_el": "Σαρακήνικο",
+            "desc": "<a href=\"https://www.google.com/maps/search/Fish+Restaurant+Sarakiniko+Gavdos\" target=\"_blank\" rel=\"noopener\">Sarakiniko Fish Restaurant</a> is the dependable table by the beach — fresh fish at Europe's southern edge.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Fish+Restaurant+Sarakiniko+Gavdos\" target=\"_blank\" rel=\"noopener\">Sarakiniko Fish Restaurant</a> είναι το σταθερό τραπέζι δίπλα στην παραλία — φρέσκο ψάρι στο νότιο άκρο της Ευρώπης.",
+            "after": "Walk back to Sarakiniko"
+          }
+        ]
       },
       {
         "day": 2,
@@ -225,7 +236,18 @@
         "overnight": "Sarakiniko",
         "overnight_el": "Σαρακήνικο",
         "km": 20,
-        "drive_mins": 45
+        "drive_mins": 45,
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Korfos",
+            "area_el": "Κόρφος",
+            "desc": "<a href=\"https://www.google.com/maps/search/Panorama+Taverna+Korfos+Gavdos\" target=\"_blank\" rel=\"noopener\">Panorama</a> sits at the highest point of the Korfos settlement for the best sea view; <a href=\"https://www.google.com/maps/search/Taverna+Korfos+Gavdos\" target=\"_blank\" rel=\"noopener\">Taverna Korfos</a> by the water does fresh seafood.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Panorama+Taverna+Korfos+Gavdos\" target=\"_blank\" rel=\"noopener\">Panorama</a> βρίσκεται στο ψηλότερο σημείο του Κόρφου για την καλύτερη θέα· η <a href=\"https://www.google.com/maps/search/Taverna+Korfos+Gavdos\" target=\"_blank\" rel=\"noopener\">Ταβέρνα Κόρφος</a> δίπλα στο νερό κάνει φρέσκα θαλασσινά.",
+            "after": "Korfos Beach & Settlement"
+          }
+        ]
       },
       {
         "day": 3,
