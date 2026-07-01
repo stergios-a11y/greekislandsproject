@@ -164,10 +164,10 @@
           {
             "meal": "Dinner",
             "meal_el": "Δείπνο",
-            "area": "Lefkada",
-            "area_el": "Λευκάδα",
-            "desc": "Traditional taverna in Chora that's been run by the same family for three generations. Goat stew slow-cooked in lemon broth, local cheese, Samothracian wild herbs in everything. Small space, six tables — reserve in summer, particularly weekends when Athenians on the ferry from Alexandroupoli arrive.",
-            "desc_el": "Παραδοσιακή ταβέρνα στη Χώρα, σε διαχείριση της ίδιας οικογένειας τρεις γενιές. Κατσίκι στιφάδο σιγομαγειρεμένο σε ζωμό λεμονιού, τοπικό τυρί, σαμοθρακίτικα άγρια βότανα παντού. Μικρός χώρος, έξι τραπέζια — κάνε κράτηση το καλοκαίρι, ιδίως τα σαββατοκύριακα όταν φτάνουν Αθηναίοι με το πλοίο από Αλεξανδρούπολη.",
+            "area": "Chora",
+            "area_el": "Χώρα",
+            "desc": "<a href=\"https://www.google.com/maps/search/Lefkada+Taverna+Chora+Samothrace\" target=\"_blank\" rel=\"noopener\">Lefkada</a> is the traditional Chora taverna, run by the same family for generations — hearty local goat and greens.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Lefkada+Taverna+Chora+Samothrace\" target=\"_blank\" rel=\"noopener\">Λευκάδα</a> είναι η παραδοσιακή ταβέρνα της Χώρας, από την ίδια οικογένεια εδώ και γενιές — χορταστικό ντόπιο κατσίκι και χόρτα.",
             "after": "Chora"
           }
         ]
@@ -233,10 +233,10 @@
           {
             "meal": "Lunch",
             "meal_el": "Μεσημεριανό",
-            "area": "1900",
-            "area_el": "1900",
-            "desc": "Taverna in the heart of Therma. The menu is short and old-style: kid goat slow-roasted with herbs, local goat cheese, wild greens from the slopes above the village. Ask what was cooked that morning — it's usually one or two dishes only, the way it should be.",
-            "desc_el": "Ταβέρνα στην καρδιά των Θερμών. Το μενού είναι σύντομο και παλιάς κοπής: κατσικάκι σιγοψημένο με βότανα, τοπικό κατσικίσιο τυρί, άγρια χόρτα από τις πλαγιές πάνω από το χωριό. Ρώτα τι μαγειρεύτηκε εκείνο το πρωί — συνήθως ένα ή δύο πιάτα μόνο, όπως πρέπει.",
+            "area": "Therma",
+            "area_el": "Θέρμα",
+            "desc": "<a href=\"https://www.google.com/maps/search/1900+Taverna+Therma+Samothrace\" target=\"_blank\" rel=\"noopener\">1900</a> in the heart of Therma keeps a short menu of whatever's good that day.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/1900+Taverna+Therma+Samothrace\" target=\"_blank\" rel=\"noopener\">1900</a> στην καρδιά της Θέρμας κρατάει σύντομο μενού με ό,τι είναι καλό εκείνη τη μέρα.",
             "after": "Fonias River Vathres"
           }
         ]
@@ -266,7 +266,9 @@
               "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:Pachia_Ammos_Beach,_Samothrace.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈40 min south of Chora",
+            "drive_el": "≈40 λεπτά νότια της Χώρας"
           },
           {
             "name": "Kremasto Waterfall",
