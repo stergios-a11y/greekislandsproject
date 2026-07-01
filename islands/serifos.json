@@ -149,22 +149,21 @@
             "name_el": "Ερείπια Κάστρου Χώρας",
             "desc_el": "Στην κορυφή της Χώρας — ερείπια από την ενετική εποχή σε βράχο που στεφανώνει όλο το νησί. 360° θέες πάνω από το Αιγαίο στο ηλιοβασίλεμα, με τη Σίφνο και την Κύθνο ορατές σε καθαρά βράδια. Η ανάβαση από την κάτω Χώρα διαρκεί 15 λεπτά· πήγαινε λίγο πριν τη δύση και μείνε για το ηλιοβασίλεμα.",
             "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780175791/%CE%BA%CE%B1%CF%83%CF%84%CF%81%CE%BF_mys1vf.jpg"
-          },
-          {
-            "name": "Dinner — Stou Stratou",
-            "lat": 37.1549,
-            "lng": 24.5064,
-            "type": "restaurant",
-            "time": "20:30",
-            "wiki": null,
-            "desc": "Iconic Chora restaurant on the main square, with tables under the bougainvillea and a small kitchen turning out modern Cycladic cuisine. Creative meze, the local chickpea revithada slow-cooked overnight, and a wine list that takes Cycladic varieties seriously. Book ahead in August.",
-            "name_el": "Δείπνο — Στου Στράτου",
-            "desc_el": "Εμβληματικό εστιατόριο της Χώρας στην κεντρική πλατεία, με τραπέζια κάτω από τις μπουκαμβίλιες και μικρή κουζίνα που βγάζει σύγχρονη κυκλαδίτικη κουζίνα. Δημιουργικοί μεζέδες, η τοπική ρεβιθάδα ψημένη όλη νύχτα, και ένας κατάλογος κρασιών που αντιμετωπίζει τις κυκλαδίτικες ποικιλίες σοβαρά. Κάνε κράτηση τον Αύγουστο.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780175790/%CF%83%CF%84%CE%BF%CF%85_%CF%83%CF%84%CF%81%CE%B1%CF%84%CE%BF%CF%85_mijjjh.jpg"
           }
         ],
         "title_el": "Χώρα & Λιβάδι",
-        "overnight_el": "Χώρα"
+        "overnight_el": "Χώρα",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Stou Stratou",
+            "area_el": "Στου Στράτου",
+            "desc": "Iconic Chora restaurant on the main square, with tables under the bougainvillea and a small kitchen turning out modern Cycladic cuisine. Creative meze, the local chickpea revithada slow-cooked overnight, and a wine list that takes Cycladic varieties seriously. Book ahead in August.",
+            "desc_el": "Εμβληματικό εστιατόριο της Χώρας στην κεντρική πλατεία, με τραπέζια κάτω από τις μπουκαμβίλιες και μικρή κουζίνα που βγάζει σύγχρονη κυκλαδίτικη κουζίνα. Δημιουργικοί μεζέδες, η τοπική ρεβιθάδα ψημένη όλη νύχτα, και ένας κατάλογος κρασιών που αντιμετωπίζει τις κυκλαδίτικες ποικιλίες σοβαρά. Κάνε κράτηση τον Αύγουστο.",
+            "after": "Chora Castle ruins"
+          }
+        ]
       },
       {
         "day": 2,
@@ -234,21 +233,21 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:%CE%A0%CE%B1%CE%BD%CE%B1%CE%B3%CE%B9%CE%AC_%CE%A3%CE%B5%CF%81%CE%AF%CF%86%CE%BF%CF%85_1929.jpg",
               "source": "Wikimedia Commons"
             }
-          },
-          {
-            "name": "Dinner — Seriani",
-            "lat": 37.155685,
-            "lng": 24.5056139,
-            "type": "restaurant",
-            "time": "20:00",
-            "wiki": "https://www.google.com/maps/place/Seriani+Restobar/@37.155685,24.5056139,17z/data=!3m1!4b1!4m6!3m5!1s0x1498bd71eb02c03f:0x5773986124a4fbaf!8m2!3d37.155685!4d24.5056139!16s%2Fg%2F11sv993x7n",
-            "desc": "Sleek restaurant in the Chora with creative Greek-Cycladic plates and a small but thoughtful wine list. Tables on the rooftop terrace look across the saddle to the sea on both sides of the island. Book ahead in summer.",
-            "name_el": "Δείπνο — Σεριάνι",
-            "desc_el": "Κομψό εστιατόριο στη Χώρα με δημιουργικά ελληνικά-κυκλαδίτικα πιάτα και μικρή αλλά μελετημένη λίστα κρασιών. Τα τραπέζια στο ταρατσάκι κοιτούν τη θάλασσα και από τις δύο πλευρές του νησιού. Κάνε κράτηση το καλοκαίρι."
           }
         ],
         "title_el": "Βόρεια Ακτή & Ορυχεία",
-        "overnight_el": "Χώρα"
+        "overnight_el": "Χώρα",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Seriani",
+            "area_el": "Σεριάνι",
+            "desc": "Sleek restaurant in the Chora with creative Greek-Cycladic plates and a small but thoughtful wine list. Tables on the rooftop terrace look across the saddle to the sea on both sides of the island. Book ahead in summer.",
+            "desc_el": "Κομψό εστιατόριο στη Χώρα με δημιουργικά ελληνικά-κυκλαδίτικα πιάτα και μικρή αλλά μελετημένη λίστα κρασιών. Τα τραπέζια στο ταρατσάκι κοιτούν τη θάλασσα και από τις δύο πλευρές του νησιού. Κάνε κράτηση το καλοκαίρι.",
+            "after": "Panagia"
+          }
+        ]
       },
       {
         "day": 3,
@@ -295,22 +294,21 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:A@a_from_agios_sostis_serifos_greece_-_panoramio.jpg",
               "source": "Wikimedia Commons"
             }
-          },
-          {
-            "name": "Lunch — Takis",
-            "lat": 37.1465,
-            "lng": 24.5205,
-            "type": "restaurant",
-            "time": "14:00",
-            "wiki": null,
-            "desc": "Local-favourite taverna on Livadi's waterfront, where the fishermen who supply the kitchen eat their own dinner at the back table. Fresh fish whatever came in, Serifos chickpea stew (revithada) on Sundays — slow-baked overnight in a wood oven, the way it should be.",
-            "name_el": "Μεσημεριανό — Τάκης",
-            "desc_el": "Ταβέρνα αγαπημένη των ντόπιων στην προκυμαία του Λιβαδιού, εκεί που οι ψαράδες που τροφοδοτούν την κουζίνα τρώνε τα δικά τους δείπνα στο πίσω τραπέζι. Φρέσκο ψάρι ό,τι μπει, ρεβιθάδα Σερίφου τις Κυριακές — ψημένη αργά όλη τη νύχτα σε ξυλόφουρνο, όπως πρέπει.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780175790/%CF%84%CE%B1%CE%BA%CE%B7%CF%82_iiw4f5.jpg"
           }
         ],
         "title_el": "Παραλίες της Ανατολικής Ακτής",
-        "overnight_el": "Αναχώρηση"
+        "overnight_el": "Αναχώρηση",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Takis",
+            "area_el": "Τάκης",
+            "desc": "Local-favourite taverna on Livadi's waterfront, where the fishermen who supply the kitchen eat their own dinner at the back table. Fresh fish whatever came in, Serifos chickpea stew (revithada) on Sundays — slow-baked overnight in a wood oven, the way it should be.",
+            "desc_el": "Ταβέρνα αγαπημένη των ντόπιων στην προκυμαία του Λιβαδιού, εκεί που οι ψαράδες που τροφοδοτούν την κουζίνα τρώνε τα δικά τους δείπνα στο πίσω τραπέζι. Φρέσκο ψάρι ό,τι μπει, ρεβιθάδα Σερίφου τις Κυριακές — ψημένη αργά όλη τη νύχτα σε ξυλόφουρνο, όπως πρέπει.",
+            "after": "Agios Sostis"
+          }
+        ]
       }
     ],
     "title_el": "Πρόγραμμα 3 Ημερών στη Σέριφο",

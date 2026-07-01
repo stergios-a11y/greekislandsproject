@@ -139,17 +139,6 @@
             }
           },
           {
-            "name": "Lunch — Casa Grec",
-            "lat": 38.1786,
-            "lng": 20.4885,
-            "type": "restaurant",
-            "time": "13:00",
-            "wiki": null,
-            "desc": "One of the best restaurants in Argostoli — Corfiot-inspired cooking with local ingredients. Try the lamb with Robola wine sauce.",
-            "name_el": "Μεσημεριανό — Casa Grec",
-            "desc_el": "Ένα από τα καλύτερα εστιατόρια στο Αργοστόλι — μαγειρική με κερκυραϊκή έμπνευση και τοπικά υλικά. Δοκίμασε αρνί με σάλτσα κρασιού Ροπόλα."
-          },
-          {
             "name": "Lassi Beaches",
             "lat": 38.1685,
             "lng": 20.4799,
@@ -183,7 +172,18 @@
         "title_el": "Αργοστόλι & η Χερσόνησος",
         "overnight_el": "Αργοστόλι",
         "nightlife": "Argostoli holds most of the island's nightlife along the <a href=\"https://www.google.com/maps/search/Lithostroto+Argostoli\" target=\"_blank\" rel=\"noopener\">Lithostroto</a> promenade and Plateia Valianou. Start with artisanal cocktails at <a href=\"https://www.google.com/maps/search/Bees+Knees+Bar+Argostoli\" target=\"_blank\" rel=\"noopener\">Bee's Knees</a> (try the saffron-honey-and-gin one), then <a href=\"https://www.google.com/maps/search/Bass+Club+Argostoli\" target=\"_blank\" rel=\"noopener\">Bass Club</a> for electronic nights and international DJs. It all kicks off after midnight.",
-        "nightlife_el": "Το Αργοστόλι συγκεντρώνει τη νυχτερινή ζωή του νησιού στον πεζόδρομο <a href=\"https://www.google.com/maps/search/Lithostroto+Argostoli\" target=\"_blank\" rel=\"noopener\">Λιθόστρωτο</a> και στην Πλατεία Βαλλιάνου. Ξεκίνα με artisanal κοκτέιλ στο <a href=\"https://www.google.com/maps/search/Bees+Knees+Bar+Argostoli\" target=\"_blank\" rel=\"noopener\">Bee's Knees</a> (δοκίμασε αυτό με σαφράν, μέλι και τζιν), και μετά <a href=\"https://www.google.com/maps/search/Bass+Club+Argostoli\" target=\"_blank\" rel=\"noopener\">Bass Club</a> για ηλεκτρονικές βραδιές και διεθνείς DJs. Όλα ανάβουν μετά τα μεσάνυχτα."
+        "nightlife_el": "Το Αργοστόλι συγκεντρώνει τη νυχτερινή ζωή του νησιού στον πεζόδρομο <a href=\"https://www.google.com/maps/search/Lithostroto+Argostoli\" target=\"_blank\" rel=\"noopener\">Λιθόστρωτο</a> και στην Πλατεία Βαλλιάνου. Ξεκίνα με artisanal κοκτέιλ στο <a href=\"https://www.google.com/maps/search/Bees+Knees+Bar+Argostoli\" target=\"_blank\" rel=\"noopener\">Bee's Knees</a> (δοκίμασε αυτό με σαφράν, μέλι και τζιν), και μετά <a href=\"https://www.google.com/maps/search/Bass+Club+Argostoli\" target=\"_blank\" rel=\"noopener\">Bass Club</a> για ηλεκτρονικές βραδιές και διεθνείς DJs. Όλα ανάβουν μετά τα μεσάνυχτα.",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Casa Grec",
+            "area_el": "Casa Grec",
+            "desc": "One of the best restaurants in Argostoli — Corfiot-inspired cooking with local ingredients. Try the lamb with Robola wine sauce.",
+            "desc_el": "Ένα από τα καλύτερα εστιατόρια στο Αργοστόλι — μαγειρική με κερκυραϊκή έμπνευση και τοπικά υλικά. Δοκίμασε αρνί με σάλτσα κρασιού Ροπόλα.",
+            "after": "Archaeological Museum Argostoli"
+          }
+        ]
       },
       {
         "day": 2,

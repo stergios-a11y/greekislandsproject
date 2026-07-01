@@ -493,17 +493,6 @@
             }
           },
           {
-            "name": "Lunch — Vori or Heraklion",
-            "name_el": "Γεύμα — Βώροι ή Ηράκλειο",
-            "time": "13:30",
-            "type": "restaurant",
-            "desc": "Vori village is 10 minutes from Gortyna and has good tavernas — or push on to Heraklion for a final lunch on the harbour. Both work depending on departure time.",
-            "desc_el": "Το χωριό Βώροι είναι 10 λεπτά από τη Γόρτυνα και έχει καλές ταβέρνες — ή συνέχισε προς το Ηράκλειο για τελευταίο γεύμα στο λιμάνι. Και τα δύο δουλεύουν, ανάλογα με την ώρα αναχώρησης.",
-            "lat": 35.0685,
-            "lng": 24.8097,
-            "wiki": ""
-          },
-          {
             "name": "Heraklion — Departure",
             "name_el": "Ηράκλειο — Αναχώρηση",
             "time": "16:00",
@@ -521,6 +510,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg",
               "source": "Wikimedia Commons"
             }
+          }
+        ],
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Vori or Heraklion",
+            "area_el": "Γεύμα",
+            "desc": "Vori village is 10 minutes from Gortyna and has good tavernas — or push on to Heraklion for a final lunch on the harbour. Both work depending on departure time.",
+            "desc_el": "Το χωριό Βώροι είναι 10 λεπτά από τη Γόρτυνα και έχει καλές ταβέρνες — ή συνέχισε προς το Ηράκλειο για τελευταίο γεύμα στο λιμάνι. Και τα δύο δουλεύουν, ανάλογα με την ώρα αναχώρησης.",
+            "after": "Gortyna"
           }
         ]
       }

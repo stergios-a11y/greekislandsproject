@@ -137,17 +137,6 @@
             "desc_el": "Η κύρια εκκλησία του χωριού — φιλοξενεί λείψανα και εικόνες που σώθηκαν κατά την καταστροφή του 1824. Η ίδια η εκκλησία αναχτίστηκε τον 19ο αιώνα."
           },
           {
-            "name": "Lunch — Harbour Taverna",
-            "lat": 38.5406,
-            "lng": 25.5608,
-            "type": "restaurant",
-            "time": "13:30",
-            "wiki": null,
-            "desc": "Three small tavernas operate on the harbour. Fresh fish and traditional Aegean dishes at unhurried, very reasonable prices. The lobster here is excellent and about a third of the Mykonos price.",
-            "name_el": "Μεσημεριανό — Ταβέρνα Λιμανιού",
-            "desc_el": "Τρεις μικρές ταβέρνες λειτουργούν στο λιμάνι. Φρέσκο ψάρι και παραδοσιακά αιγαιοπελαγίτικα πιάτα σε αβίαστες, πολύ λογικές τιμές. Ο αστακός εδώ είναι εξαιρετικός και περίπου στο ένα τρίτο της τιμής της Μυκόνου."
-          },
-          {
             "name": "Limnos Beach",
             "lat": 38.5489,
             "lng": 25.5347,
@@ -173,7 +162,18 @@
           }
         ],
         "title_el": "Μαύρη Ράχη & το Χωριό",
-        "overnight_el": "Στο χωριό"
+        "overnight_el": "Στο χωριό",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Harbour Taverna",
+            "area_el": "Ταβέρνα Λιμανιού",
+            "desc": "Three small tavernas operate on the harbour. Fresh fish and traditional Aegean dishes at unhurried, very reasonable prices. The lobster here is excellent and about a third of the Mykonos price.",
+            "desc_el": "Τρεις μικρές ταβέρνες λειτουργούν στο λιμάνι. Φρέσκο ψάρι και παραδοσιακά αιγαιοπελαγίτικα πιάτα σε αβίαστες, πολύ λογικές τιμές. Ο αστακός εδώ είναι εξαιρετικός και περίπου στο ένα τρίτο της τιμής της Μυκόνου.",
+            "after": "Church of Agios Nikolaos"
+          }
+        ]
       }
     ],
     "title_el": "Πρόγραμμα 1 Ημέρας στα Ψαρά",

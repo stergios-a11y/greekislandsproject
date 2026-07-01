@@ -139,17 +139,6 @@
             }
           },
           {
-            "name": "Lunch — Agora Fish Market",
-            "lat": 37.7467,
-            "lng": 23.4267,
-            "type": "restaurant",
-            "time": "13:30",
-            "wiki": null,
-            "desc": "Aegina's fish market is the best in the Saronic — come at lunchtime when the tavernas serve what the fishermen landed that morning. Try the pistachios afterwards from any harbour stall. On the harbour-front, <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJv3KuDnjNoRQRONGhEdwKyDg\" target=\"_blank\" rel=\"noopener noreferrer\">Ouzeri o Skotadis</a> earned ★★ in the FNL Best Restaurant Awards 2026 (Seafood Restaurant) — the standout fish-and-ouzo address on the island.",
-            "name_el": "Μεσημεριανό — Ψαραγορά",
-            "desc_el": "Η ιχθυαγορά της Αίγινας είναι η καλύτερη στον Σαρωνικό — έλα το μεσημέρι όταν οι ταβέρνες σερβίρουν ό,τι πιάστηκε το πρωί. Μετά, δοκίμασε τα φιστίκια από οποιοδήποτε πάγκο του λιμανιού. Στο λιμάνι, το <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJv3KuDnjNoRQRONGhEdwKyDg\" target=\"_blank\" rel=\"noopener noreferrer\">Ουζερί ο Σκοτάδης</a> κέρδισε ★★ στα Βραβεία FNL 2026 (Εστιατόριο για Ψάρι) — η ξεχωριστή διεύθυνση στο νησί για ψάρι και ούζο."
-          },
-          {
             "name": "Marathonas Beach",
             "lat": 37.73,
             "lng": 23.4131,
@@ -174,7 +163,18 @@
         ],
         "title_el": "Χώρα Αίγινας, Ναός & Παραλία",
         "nightlife": "If you linger past the day-trip, Aegina Town's waterfront is chilled and stylish rather than wild. <a href=\"https://www.google.com/maps/search/Speak+Low+Bar+Aegina\" target=\"_blank\" rel=\"noopener\">Speak Low</a> is a speakeasy-style cocktail bar (the Moscow Mules are the move); <a href=\"https://www.google.com/maps/search/Riva+Lounge+Aegina\" target=\"_blank\" rel=\"noopener\">Riva Lounge</a> does premium drinks and tapas in a prime spot. Most bars wind down by 2am.",
-        "nightlife_el": "Αν μείνεις πέρα από την ημερήσια εκδρομή, η προκυμαία της Χώρας της Αίγινας είναι χαλαρή και σικ παρά ξέφρενη. Το <a href=\"https://www.google.com/maps/search/Speak+Low+Bar+Aegina\" target=\"_blank\" rel=\"noopener\">Speak Low</a> είναι cocktail bar τύπου speakeasy (τα Moscow Mules είναι η κίνηση)· το <a href=\"https://www.google.com/maps/search/Riva+Lounge+Aegina\" target=\"_blank\" rel=\"noopener\">Riva Lounge</a> σερβίρει premium ποτά και tapas σε προνομιακό σημείο. Τα περισσότερα μπαρ κλείνουν ως τις 2."
+        "nightlife_el": "Αν μείνεις πέρα από την ημερήσια εκδρομή, η προκυμαία της Χώρας της Αίγινας είναι χαλαρή και σικ παρά ξέφρενη. Το <a href=\"https://www.google.com/maps/search/Speak+Low+Bar+Aegina\" target=\"_blank\" rel=\"noopener\">Speak Low</a> είναι cocktail bar τύπου speakeasy (τα Moscow Mules είναι η κίνηση)· το <a href=\"https://www.google.com/maps/search/Riva+Lounge+Aegina\" target=\"_blank\" rel=\"noopener\">Riva Lounge</a> σερβίρει premium ποτά και tapas σε προνομιακό σημείο. Τα περισσότερα μπαρ κλείνουν ως τις 2.",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Agora Fish Market",
+            "area_el": "Ψαραγορά",
+            "desc": "Aegina's fish market is the best in the Saronic — come at lunchtime when the tavernas serve what the fishermen landed that morning. Try the pistachios afterwards from any harbour stall. On the harbour-front, <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJv3KuDnjNoRQRONGhEdwKyDg\" target=\"_blank\" rel=\"noopener noreferrer\">Ouzeri o Skotadis</a> earned ★★ in the FNL Best Restaurant Awards 2026 (Seafood Restaurant) — the standout fish-and-ouzo address on the island.",
+            "desc_el": "Η ιχθυαγορά της Αίγινας είναι η καλύτερη στον Σαρωνικό — έλα το μεσημέρι όταν οι ταβέρνες σερβίρουν ό,τι πιάστηκε το πρωί. Μετά, δοκίμασε τα φιστίκια από οποιοδήποτε πάγκο του λιμανιού. Στο λιμάνι, το <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJv3KuDnjNoRQRONGhEdwKyDg\" target=\"_blank\" rel=\"noopener noreferrer\">Ουζερί ο Σκοτάδης</a> κέρδισε ★★ στα Βραβεία FNL 2026 (Εστιατόριο για Ψάρι) — η ξεχωριστή διεύθυνση στο νησί για ψάρι και ούζο.",
+            "after": "Temple of Aphaea"
+          }
+        ]
       }
     ],
     "title_el": "Πρόγραμμα 1 Ημέρας στην Αίγινα",

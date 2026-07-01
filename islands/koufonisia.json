@@ -119,15 +119,6 @@
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJj_0r5s0cmBQRGAUN-VlEEAg"
           },
           {
-            "name": "Lunch — Capetan Nikolas",
-            "name_el": "Μεσημεριανό — Καπετάν Νικόλας",
-            "lat": 36.9316,
-            "lng": 25.5971,
-            "type": "restaurant",
-            "desc": "Family-run tavern open since 1988, large terrace with windmill and harbour views. Best place to get the day going at 2pm. Reasonable prices for the island and the seafood is what to order.",
-            "desc_el": "Οικογενειακή ταβέρνα από το 1988, μεγάλη βεράντα με θέα στον ανεμόμυλο και το λιμάνι. Το καλύτερο μέρος για να ξεκινήσεις τη μέρα στις 2 μ.μ. Λογικές τιμές για το νησί και τα θαλασσινά είναι αυτά που πρέπει να παραγγείλεις."
-          },
-          {
             "name": "Finikas Beach (Charokopou)",
             "name_el": "Παραλία Φοίνικας (Χαροκοπού)",
             "lat": 36.9342,
@@ -146,16 +137,6 @@
             "desc": "Continue east 10 minutes. Fanos is the rare Koufonisia beach with sunbeds and a beach café. Sandy, family-friendly, slightly busier than the wilder coves further along.",
             "desc_el": "Συνέχισε ανατολικά 10 λεπτά. Ο Φανός είναι η σπάνια παραλία της Κουφονησίας με ξαπλώστρες και beach café. Αμμώδης, οικογενειακή, λίγο πιο πολυσύχναστη από τους πιο άγριους κόλπους που ακολουθούν.",
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJpT5cg9UCmBQRDXVrJTAZBHE"
-          },
-          {
-            "name": "Sunset Drinks at the Harbour",
-            "name_el": "Ποτό Ηλιοβασιλέματος στο Λιμάνι",
-            "lat": 36.9323,
-            "lng": 25.6012,
-            "type": "restaurant",
-            "desc": "Walk back to Chora for a sunset drink at Sorokos on the harbour or Mylos (an old windmill turned bar) on the heights between the port and the shipyard. The sun drops directly behind Naxos.",
-            "desc_el": "Επιστροφή στη Χώρα για ποτό ηλιοβασιλέματος στον Σόροκο στο λιμάνι ή στον Μύλο (ένας παλιός μύλος μετατραμμένος σε μπαρ) στις ψηλές περιοχές ανάμεσα στο λιμάνι και το ναυπηγείο. Ο ήλιος βυθίζεται κατευθείαν πίσω από τη Νάξο.",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJj_0r5s0cmBQRGAUN-VlEEAg"
           }
         ],
         "title_el": "Χώρα & οι Κοντινές Παραλίες",
@@ -164,7 +145,27 @@
         "km": 5,
         "drive_mins": 15,
         "nightlife": "Koufonisia's night is small and barefoot. The cluster of bars along the port is the social heart — sundowners, local beers, the odd live set — while <a href=\"https://www.google.com/maps/search/Scholio+Cocktail+Bar+Koufonisia\" target=\"_blank\" rel=\"noopener\">Scholio Cocktail Bar</a> pulls a more refined, artisanal-cocktail crowd. That's about it, and that's the point.",
-        "nightlife_el": "Η νύχτα στα Κουφονήσια είναι μικρή και ξυπόλυτη. Τα μπαρ στη σειρά κατά μήκος του λιμανιού είναι η κοινωνική καρδιά — ποτά στο ηλιοβασίλεμα, ντόπιες μπύρες, καμιά ζωντανή μουσική — ενώ το <a href=\"https://www.google.com/maps/search/Scholio+Cocktail+Bar+Koufonisia\" target=\"_blank\" rel=\"noopener\">Scholio Cocktail Bar</a> τραβάει ένα πιο εκλεπτυσμένο κοινό. Αυτό περίπου, κι αυτό είναι το νόημα."
+        "nightlife_el": "Η νύχτα στα Κουφονήσια είναι μικρή και ξυπόλυτη. Τα μπαρ στη σειρά κατά μήκος του λιμανιού είναι η κοινωνική καρδιά — ποτά στο ηλιοβασίλεμα, ντόπιες μπύρες, καμιά ζωντανή μουσική — ενώ το <a href=\"https://www.google.com/maps/search/Scholio+Cocktail+Bar+Koufonisia\" target=\"_blank\" rel=\"noopener\">Scholio Cocktail Bar</a> τραβάει ένα πιο εκλεπτυσμένο κοινό. Αυτό περίπου, κι αυτό είναι το νόημα.",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Capetan Nikolas",
+            "area_el": "Καπετάν Νικόλας",
+            "desc": "Family-run tavern open since 1988, large terrace with windmill and harbour views. Best place to get the day going at 2pm. Reasonable prices for the island and the seafood is what to order.",
+            "desc_el": "Οικογενειακή ταβέρνα από το 1988, μεγάλη βεράντα με θέα στον ανεμόμυλο και το λιμάνι. Το καλύτερο μέρος για να ξεκινήσεις τη μέρα στις 2 μ.μ. Λογικές τιμές για το νησί και τα θαλασσινά είναι αυτά που πρέπει να παραγγείλεις.",
+            "after": "Ammos Beach"
+          },
+          {
+            "meal": "Food",
+            "meal_el": "Φαγητό",
+            "area": "Sunset Drinks at the Harbour",
+            "area_el": "Ποτό Ηλιοβασιλέματος στο Λιμάνι",
+            "desc": "Walk back to Chora for a sunset drink at Sorokos on the harbour or Mylos (an old windmill turned bar) on the heights between the port and the shipyard. The sun drops directly behind Naxos.",
+            "desc_el": "Επιστροφή στη Χώρα για ποτό ηλιοβασιλέματος στον Σόροκο στο λιμάνι ή στον Μύλο (ένας παλιός μύλος μετατραμμένος σε μπαρ) στις ψηλές περιοχές ανάμεσα στο λιμάνι και το ναυπηγείο. Ο ήλιος βυθίζεται κατευθείαν πίσω από τη Νάξο.",
+            "after": "Fanos Beach"
+          }
+        ]
       },
       {
         "day": 2,
@@ -257,15 +258,6 @@
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJpUhlA34cmBQRGPFYTgYDG80"
           },
           {
-            "name": "Lunch — Venetsanos Taverna",
-            "name_el": "Μεσημεριανό — Ταβέρνα Βενετσάνος",
-            "lat": 36.9167,
-            "lng": 25.5888,
-            "type": "restaurant",
-            "desc": "The only taverna on Kato Koufonisi, near the boat landing. Local goat dishes (the meat comes from Keros), fresh fish, sometimes impromptu Greek music. The kind of meal you remember.",
-            "desc_el": "Η μόνη ταβέρνα στο Κάτω Κουφονήσι, κοντά στο λιμανάκι. Πιάτα με κατσίκι από την Κέρο, φρέσκο ψάρι, μερικές φορές αυθόρμητη ελληνική μουσική. Από τα γεύματα που θυμάσαι."
-          },
-          {
             "name": "Pezoulia & Detis Beaches",
             "name_el": "Παραλίες Πεζούλια & Δέτης",
             "lat": 36.9215,
@@ -290,7 +282,18 @@
         "overnight": null,
         "overnight_el": null,
         "km": 10,
-        "drive_mins": 30
+        "drive_mins": 30,
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Venetsanos Taverna",
+            "area_el": "Ταβέρνα Βενετσάνος",
+            "desc": "The only taverna on Kato Koufonisi, near the boat landing. Local goat dishes (the meat comes from Keros), fresh fish, sometimes impromptu Greek music. The kind of meal you remember.",
+            "desc_el": "Η μόνη ταβέρνα στο Κάτω Κουφονήσι, κοντά στο λιμανάκι. Πιάτα με κατσίκι από την Κέρο, φρέσκο ψάρι, μερικές φορές αυθόρμητη ελληνική μουσική. Από τα γεύματα που θυμάσαι.",
+            "after": "Nero Beach (Kato Koufonisi)"
+          }
+        ]
       }
     ],
     "title_el": "Πρόγραμμα 3 Ημερών στα Κουφονήσια",

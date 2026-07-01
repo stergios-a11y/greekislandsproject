@@ -158,17 +158,6 @@
             }
           },
           {
-            "name": "Lunch — Pantheon Chora",
-            "lat": 37.3072,
-            "lng": 26.5411,
-            "type": "restaurant",
-            "time": "14:30",
-            "wiki": null,
-            "desc": "Traditional taverna in the Chora with outstanding Dodecanese food — the island produces its own cheeses and wine. Book ahead, popular with the yachting crowd.",
-            "name_el": "Μεσημεριανό — Πάνθεον, Χώρα",
-            "desc_el": "Παραδοσιακή ταβέρνα στη Χώρα με εξαιρετικό δωδεκανησιακό φαγητό — το νησί παράγει δικά του τυριά και κρασί. Κάνε κράτηση, είναι δημοφιλής στις πληρωμές σκαφών."
-          },
-          {
             "time": "16:00",
             "name": "Psili Ammos Beach",
             "name_el": "Παραλία Ψιλή Άμμος",
@@ -192,7 +181,18 @@
           }
         ],
         "title_el": "Σπηλιά της Αποκάλυψης & Χώρα",
-        "overnight_el": "Σκάλα ή Χώρα"
+        "overnight_el": "Σκάλα ή Χώρα",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Pantheon Chora",
+            "area_el": "Πάνθεον, Χώρα",
+            "desc": "Traditional taverna in the Chora with outstanding Dodecanese food — the island produces its own cheeses and wine. Book ahead, popular with the yachting crowd.",
+            "desc_el": "Παραδοσιακή ταβέρνα στη Χώρα με εξαιρετικό δωδεκανησιακό φαγητό — το νησί παράγει δικά του τυριά και κρασί. Κάνε κράτηση, είναι δημοφιλής στις πληρωμές σκαφών.",
+            "after": "Monastery of St John"
+          }
+        ]
       },
       {
         "day": 2,

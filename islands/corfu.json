@@ -139,17 +139,6 @@
             }
           },
           {
-            "name": "Lunch — To Dimarchio",
-            "lat": 39.6235,
-            "lng": 19.9226,
-            "type": "restaurant",
-            "time": "13:30",
-            "wiki": null,
-            "desc": "Classic Corfiot restaurant under the trees near Dimarchion Square. Try the sofrito (Corfu's signature veal dish) and bourdeto (spicy fish stew).",
-            "name_el": "Μεσημεριανό — Το Δημαρχείο",
-            "desc_el": "Κλασικό κερκυραϊκό εστιατόριο κάτω από τα δέντρα κοντά στην πλατεία του Δημαρχείου. Δοκίμασε σοφρίτο (το χαρακτηριστικό κερκυραϊκό πιάτο μοσχαριού) και μπουρδέτο (πικάντικο ψαρόσουπο)."
-          },
-          {
             "name": "New Fortress",
             "lat": 39.6246,
             "lng": 19.9174,
@@ -196,7 +185,18 @@
         "title_el": "Παλιά Πόλη Κέρκυρας",
         "overnight_el": "Κέρκυρα Πόλη",
         "nightlife": "Corfu Town does evenings in layers. Aperitivo under the arches of the <a href=\"https://www.google.com/maps/search/Liston+Corfu\" target=\"_blank\" rel=\"noopener\">Liston</a> as the sun drops, cocktails up at the <a href=\"https://www.google.com/maps/search/Cavalieri+Roof+Garden+Corfu\" target=\"_blank\" rel=\"noopener\">Cavalieri Roof Garden</a> over the rooftops, then the medieval Campiello alleys — <a href=\"https://www.google.com/maps/search/Mikro+Cafe+Corfu\" target=\"_blank\" rel=\"noopener\">Mikro Cafe</a> in its courtyard — for something more intimate. Clubs sit further north on the main road if you want them.",
-        "nightlife_el": "Η πόλη της Κέρκυρας ζει το βράδυ σε στρώσεις. Απεριτίφ κάτω από τις καμάρες του <a href=\"https://www.google.com/maps/search/Liston+Corfu\" target=\"_blank\" rel=\"noopener\">Liston</a> καθώς πέφτει ο ήλιος, κοκτέιλ πάνω στο <a href=\"https://www.google.com/maps/search/Cavalieri+Roof+Garden+Corfu\" target=\"_blank\" rel=\"noopener\">Cavalieri Roof Garden</a> με θέα τις στέγες, και μετά τα μεσαιωνικά σοκάκια του Καμπιέλο — το <a href=\"https://www.google.com/maps/search/Mikro+Cafe+Corfu\" target=\"_blank\" rel=\"noopener\">Mikro Cafe</a> στην αυλή του — για κάτι πιο προσωπικό. Τα clubs είναι πιο βόρεια στον κεντρικό δρόμο αν τα θες."
+        "nightlife_el": "Η πόλη της Κέρκυρας ζει το βράδυ σε στρώσεις. Απεριτίφ κάτω από τις καμάρες του <a href=\"https://www.google.com/maps/search/Liston+Corfu\" target=\"_blank\" rel=\"noopener\">Liston</a> καθώς πέφτει ο ήλιος, κοκτέιλ πάνω στο <a href=\"https://www.google.com/maps/search/Cavalieri+Roof+Garden+Corfu\" target=\"_blank\" rel=\"noopener\">Cavalieri Roof Garden</a> με θέα τις στέγες, και μετά τα μεσαιωνικά σοκάκια του Καμπιέλο — το <a href=\"https://www.google.com/maps/search/Mikro+Cafe+Corfu\" target=\"_blank\" rel=\"noopener\">Mikro Cafe</a> στην αυλή του — για κάτι πιο προσωπικό. Τα clubs είναι πιο βόρεια στον κεντρικό δρόμο αν τα θες.",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "To Dimarchio",
+            "area_el": "Το Δημαρχείο",
+            "desc": "Classic Corfiot restaurant under the trees near Dimarchion Square. Try the sofrito (Corfu's signature veal dish) and bourdeto (spicy fish stew).",
+            "desc_el": "Κλασικό κερκυραϊκό εστιατόριο κάτω από τα δέντρα κοντά στην πλατεία του Δημαρχείου. Δοκίμασε σοφρίτο (το χαρακτηριστικό κερκυραϊκό πιάτο μοσχαριού) και μπουρδέτο (πικάντικο ψαρόσουπο).",
+            "after": "Corfu Old Town (UNESCO)"
+          }
+        ]
       },
       {
         "day": 2,
@@ -554,20 +554,20 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Corfu_Agios_Gordis_R04.jpg",
               "source": "Wikimedia Commons"
             }
-          },
-          {
-            "name": "Corfu Town — Farewell Dinner",
-            "lat": 39.6235,
-            "lng": 19.9275,
-            "type": "restaurant",
-            "time": "19:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ06DedkxdWxMRANDfCrVzs08",
-            "desc": "Return to Corfu Town for a final dinner at the Liston. Order the pastitsada (Corfiot pasta with cockerel) and a glass of Robola wine.",
-            "name_el": "Πόλη Κέρκυρας — Αποχαιρετιστήριο Δείπνο",
-            "desc_el": "Επιστροφή στην πόλη της Κέρκυρας για ένα τελευταίο δείπνο στο Λιστόν. Παράγγειλε παστιτσάδα (κερκυραϊκή με κόκορα) και ένα ποτήρι κρασί Ροπόλα."
           }
         ],
-        "title_el": "Γλυφάδα & η Δυτική Ακτή"
+        "title_el": "Γλυφάδα & η Δυτική Ακτή",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Corfu Town",
+            "area_el": "Πόλη Κέρκυρας",
+            "desc": "Return to Corfu Town for a final dinner at the Liston. Order the pastitsada (Corfiot pasta with cockerel) and a glass of Robola wine.",
+            "desc_el": "Επιστροφή στην πόλη της Κέρκυρας για ένα τελευταίο δείπνο στο Λιστόν. Παράγγειλε παστιτσάδα (κερκυραϊκή με κόκορα) και ένα ποτήρι κρασί Ροπόλα.",
+            "after": "Agios Gordios Beach"
+          }
+        ]
       }
     ],
     "title_el": "Πρόγραμμα 5 Ημερών στην Κέρκυρα",

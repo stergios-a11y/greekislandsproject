@@ -141,22 +141,24 @@
             "desc": "4km south of Lakki — an old fishing village at the head of a small inlet, with a coarse-sand beach, rooms to rent, a campsite. Above the village sits Paliokastro, ancient castle ruins on a site dated to around 2,500 BC. Quiet and atmospheric.",
             "desc_el": "4 χλμ νότια του Λακκί — ένα παλιό αλιευτικό χωριό στο βάθος μιας μικρής εισχώρησης, με παραλία χονδρής άμμου, ενοικιαζόμενα δωμάτια, camping. Πάνω από το χωριό βρίσκεται το Παλιόκαστρο, ερείπια αρχαίου κάστρου σε τόπο χρονολογημένο γύρω στο 2.500 π.Χ. Ήσυχο και ατμοσφαιρικό.",
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ1YkFE_LrvRQRmR1v1hV4pgU"
-          },
-          {
-            "name": "Dinner in Lakki — Homemade Baklava",
-            "name_el": "Δείπνο στο Λακκί — Σπιτικός Μπακλαβάς",
-            "lat": 37.1283,
-            "lng": 26.84,
-            "type": "restaurant",
-            "desc": "Plenty of tavernas at the Lakki harbour for dinner. After, head to the liquor store across from the cinema — the owner makes baklava fresh every day, widely agreed to be the best on the island. For destination dining elsewhere on the island, <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJH0YRwavBvRQRa1rpBbYc7Lw\" target=\"_blank\" rel=\"noopener noreferrer\">Mylos by the Sea</a> in Agia Marina earned ★★★ in the FNL Best Restaurant Awards 2026 (Seafood Restaurant) — the only three-star FNL restaurant in its category not located in a mainstream tourist destination. Σέρζα in Lakki holds a star in Gastrotaverns.",
-            "desc_el": "Άφθονες ταβέρνες στο λιμάνι του Λακκί για δείπνο. Μετά, πήγαινε στο κάβα απέναντι από το σινεμά — ο ιδιοκτήτης φτιάχνει μπακλαβά φρέσκο κάθε μέρα, όλοι συμφωνούν ότι είναι ο καλύτερος του νησιού. Για επιλογή υψηλής γαστρονομίας αλλού στο νησί, ο <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJH0YRwavBvRQRa1rpBbYc7Lw\" target=\"_blank\" rel=\"noopener noreferrer\">Μύλος by the Sea</a> στην Αγία Μαρίνα κέρδισε ★★★ στα Βραβεία FNL 2026 — το μοναδικό τριών αστεριών στην κατηγορία του εκτός mainstream τουριστικού προορισμού. Στο Λακκί, η Σέρζα διατηρεί ★ στις Γαστροταβέρνες."
           }
         ],
         "title_el": "Λακκί — Ιταλικό Αρ Ντεκό & το Τούνελ του Β' ΠΠ",
         "overnight": "Pandeli",
         "overnight_el": "Παντέλι",
         "km": 20,
-        "drive_mins": 35
+        "drive_mins": 35,
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Homemade Baklava",
+            "area_el": "Σπιτικός Μπακλαβάς",
+            "desc": "Plenty of tavernas at the Lakki harbour for dinner. After, head to the liquor store across from the cinema — the owner makes baklava fresh every day, widely agreed to be the best on the island. For destination dining elsewhere on the island, <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJH0YRwavBvRQRa1rpBbYc7Lw\" target=\"_blank\" rel=\"noopener noreferrer\">Mylos by the Sea</a> in Agia Marina earned ★★★ in the FNL Best Restaurant Awards 2026 (Seafood Restaurant) — the only three-star FNL restaurant in its category not located in a mainstream tourist destination. Σέρζα in Lakki holds a star in Gastrotaverns.",
+            "desc_el": "Άφθονες ταβέρνες στο λιμάνι του Λακκί για δείπνο. Μετά, πήγαινε στο κάβα απέναντι από το σινεμά — ο ιδιοκτήτης φτιάχνει μπακλαβά φρέσκο κάθε μέρα, όλοι συμφωνούν ότι είναι ο καλύτερος του νησιού. Για επιλογή υψηλής γαστρονομίας αλλού στο νησί, ο <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJH0YRwavBvRQRa1rpBbYc7Lw\" target=\"_blank\" rel=\"noopener noreferrer\">Μύλος by the Sea</a> στην Αγία Μαρίνα κέρδισε ★★★ στα Βραβεία FNL 2026 — το μοναδικό τριών αστεριών στην κατηγορία του εκτός mainstream τουριστικού προορισμού. Στο Λακκί, η Σέρζα διατηρεί ★ στις Γαστροταβέρνες.",
+            "after": "Xerokampos & Paliokastro"
+          }
+        ]
       },
       {
         "day": 2,

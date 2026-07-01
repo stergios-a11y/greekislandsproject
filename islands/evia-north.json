@@ -102,16 +102,6 @@
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ7-TCBIDJoBQR0mxNFNxae1E"
           },
           {
-            "time": "13:30",
-            "name": "Lunch — Captain's Restaurant",
-            "lat": 38.864,
-            "lng": 23.038,
-            "type": "restaurant",
-            "desc": "Waterfront seafood in the heart of Edipsos. Order the fresh fish of the day — they grill it on charcoal in front of you.",
-            "name_el": "Μεσημεριανό — Captain's",
-            "desc_el": "Ψαροφαγία στην προκυμαία της Αιδηψού. Παράγγειλε το φρέσκο ψάρι της ημέρας — το ψήνουν στα κάρβουνα μπροστά σου."
-          },
-          {
             "time": "15:30",
             "name": "Edipsos Thermal Springs",
             "lat": 38.8525876,
@@ -134,7 +124,18 @@
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJT08zwm7LoBQREWHyvU4rVfU"
           }
         ],
-        "color": "#1B4F8A"
+        "color": "#1B4F8A",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Captain's Restaurant",
+            "area_el": "Captain's",
+            "desc": "Waterfront seafood in the heart of Edipsos. Order the fresh fish of the day — they grill it on charcoal in front of you.",
+            "desc_el": "Ψαροφαγία στην προκυμαία της Αιδηψού. Παράγγειλε το φρέσκο ψάρι της ημέρας — το ψήνουν στα κάρβουνα μπροστά σου.",
+            "after": "Drive Athens → Arkitsa → Ferry → Edipsos"
+          }
+        ]
       },
       {
         "day": 2,
@@ -157,16 +158,6 @@
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ_Z5G0wawoBQRHaY5I_GsdRk"
           },
           {
-            "time": "14:00",
-            "name": "Lunch on the islets — Manolas",
-            "lat": 38.815,
-            "lng": 22.838,
-            "type": "restaurant",
-            "desc": "Beach taverna right where the boats anchor. Octopus, fried squid, Greek salad. Nothing fancy, exactly what you want after swimming.",
-            "name_el": "Μεσημεριανό — Manolas",
-            "desc_el": "Παραλιακή ταβέρνα όπου αράζουν τα σκάφη. Χταπόδι, καλαμαράκια, χωριάτικη. Τίποτα φανταχτερό — ακριβώς αυτό που θες μετά το μπάνιο."
-          },
-          {
             "time": "17:00",
             "name": "Limni Village",
             "lat": 38.766,
@@ -180,16 +171,6 @@
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJZz7qNOPWoBQRsB664iy9AAU"
           },
           {
-            "time": "20:00",
-            "name": "Dinner — Iliopoulou (Limni)",
-            "lat": 38.766,
-            "lng": 23.319,
-            "type": "restaurant",
-            "desc": "Tiny family taverna at the harbour. Dinner on a tiny terrace looking at fishing boats. Order whatever the owner says was caught that morning.",
-            "name_el": "Δείπνο — Ηλιοπούλου (Λίμνη)",
-            "desc_el": "Μικρή οικογενειακή ταβέρνα στο λιμάνι. Φαγητό σε μικρή βεράντα με θέα τα ψαράδικα. Παράγγειλε ό,τι λέει ο ιδιοκτήτης πως πιάστηκε το πρωί."
-          },
-          {
             "name": "Drive back to Edipsos",
             "lat": 38.8592,
             "lng": 23.0455,
@@ -201,7 +182,27 @@
             "desc_el": "Μεγάλη διαδρομή επιστροφής στα βόρεια (περίπου 45 λεπτά από τη Λίμνη). Σκοτεινός παραλιακός δρόμος, σχεδόν άδειος αυτή την ώρα. Το κέντρο της Λουτρόπολης είναι ήσυχο τη νύχτα — ιδανικό για μια τελευταία βραδινή βουτιά στις θερμές πηγές πριν τον ύπνο."
           }
         ],
-        "color": "#C0522A"
+        "color": "#C0522A",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Manolas",
+            "area_el": "Manolas",
+            "desc": "Beach taverna right where the boats anchor. Octopus, fried squid, Greek salad. Nothing fancy, exactly what you want after swimming.",
+            "desc_el": "Παραλιακή ταβέρνα όπου αράζουν τα σκάφη. Χταπόδι, καλαμαράκια, χωριάτικη. Τίποτα φανταχτερό — ακριβώς αυτό που θες μετά το μπάνιο.",
+            "after": "Lichadonisia Day-Trip Boat"
+          },
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Iliopoulou (Limni)",
+            "area_el": "Ηλιοπούλου (Λίμνη)",
+            "desc": "Tiny family taverna at the harbour. Dinner on a tiny terrace looking at fishing boats. Order whatever the owner says was caught that morning.",
+            "desc_el": "Μικρή οικογενειακή ταβέρνα στο λιμάνι. Φαγητό σε μικρή βεράντα με θέα τα ψαράδικα. Παράγγειλε ό,τι λέει ο ιδιοκτήτης πως πιάστηκε το πρωί.",
+            "after": "Limni Village"
+          }
+        ]
       },
       {
         "day": 3,

@@ -157,21 +157,21 @@
             "desc": "Walk back up to the castle for sunset. The light on the white houses and the windmills is at its best 30 minutes before the sun drops. Bring a drink from one of the cafes on the way up.",
             "name_el": "Ηλιοβασίλεμα από τα Τείχη του Κάστρου",
             "desc_el": "Ανέβα πάλι στο κάστρο για το ηλιοβασίλεμα. Το φως στα λευκά σπίτια και στους ανεμόμυλους είναι στο καλύτερό του 30 λεπτά πριν πέσει ο ήλιος. Πάρε ένα ποτό από ένα από τα καφέ στον δρόμο."
-          },
-          {
-            "name": "Dinner — Astropelos, Chora",
-            "lat": 36.5447,
-            "lng": 26.3561,
-            "type": "restaurant",
-            "time": "21:30",
-            "wiki": null,
-            "desc": "One of the better tavernas in Chora — try the local lambriano (lamb stuffed with rice and herbs, an island specialty) or the saffron-spiked goat. Booking advised in summer.",
-            "name_el": "Δείπνο — Αστροπελός, Χώρα",
-            "desc_el": "Μία από τις καλύτερες ταβέρνες στη Χώρα — δοκίμασε το τοπικό λαμπριανό (αρνί γεμιστό με ρύζι και αρωματικά, σπεσιαλιτέ του νησιού) ή το γιδάκι με ζαφορά. Η κράτηση συνιστάται το καλοκαίρι."
           }
         ],
         "title_el": "Χώρα, Κάστρο & Ανεμόμυλοι",
-        "overnight_el": "Χώρα"
+        "overnight_el": "Χώρα",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Astropelos, Chora",
+            "area_el": "Αστροπελός, Χώρα",
+            "desc": "One of the better tavernas in Chora — try the local lambriano (lamb stuffed with rice and herbs, an island specialty) or the saffron-spiked goat. Booking advised in summer.",
+            "desc_el": "Μία από τις καλύτερες ταβέρνες στη Χώρα — δοκίμασε το τοπικό λαμπριανό (αρνί γεμιστό με ρύζι και αρωματικά, σπεσιαλιτέ του νησιού) ή το γιδάκι με ζαφορά. Η κράτηση συνιστάται το καλοκαίρι.",
+            "after": "Sunset from the Castle Walls"
+          }
+        ]
       },
       {
         "day": 2,

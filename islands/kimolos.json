@@ -153,22 +153,24 @@
             "desc": "Drive 9km north on a road that turns to gravel near the perlite mines. White sand from the nearby chalk deposits, water shading from turquoise to deep blue. A small bar in summer; otherwise unspoiled. Natural thermal springs emerge directly through the sand.",
             "desc_el": "Οδήγησε 9 χλμ βόρεια σε δρόμο που γίνεται χωματόδρομος κοντά στα ορυχεία περλίτη. Λευκή άμμος από τις κοντινές αποθέσεις γύψου, νερά που σκιάζουν από τιρκουάζ σε βαθύ μπλε. Ένα μικρό μπαρ το καλοκαίρι· διαφορετικά ανέγγιχτη. Φυσικές θερμικές πηγές αναβλύζουν κατευθείαν μέσα από την άμμο.",
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJIzrythbmmBQRN6qEODNUDRo"
-          },
-          {
-            "name": "Lunch — Prasonisi",
-            "name_el": "Μεσημεριανό — Πρασονήσι",
-            "lat": 36.8298,
-            "lng": 24.6055,
-            "type": "restaurant",
-            "desc": "Restaurant just south of Prassa lagoon. More expensive than the average island taverna but considered the best food on Kimolos. Fantastic view of the turquoise bay below.",
-            "desc_el": "Εστιατόριο ακριβώς νότια της λιμνοθάλασσας Πράσσα. Πιο ακριβό από τη μέση ταβέρνα του νησιού αλλά θεωρείται το καλύτερο φαγητό της Κιμώλου. Φανταστική θέα στον τιρκουάζ κόλπο από κάτω."
           }
         ],
         "title_el": "Χωριό, το Κάστρο & η Λιμνοθάλασσα Πράσσα",
         "overnight": "Chorio",
         "overnight_el": "Χωριό",
         "km": 10,
-        "drive_mins": 20
+        "drive_mins": 20,
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Prasonisi",
+            "area_el": "Πρασονήσι",
+            "desc": "Restaurant just south of Prassa lagoon. More expensive than the average island taverna but considered the best food on Kimolos. Fantastic view of the turquoise bay below.",
+            "desc_el": "Εστιατόριο ακριβώς νότια της λιμνοθάλασσας Πράσσα. Πιο ακριβό από τη μέση ταβέρνα του νησιού αλλά θεωρείται το καλύτερο φαγητό της Κιμώλου. Φανταστική θέα στον τιρκουάζ κόλπο από κάτω.",
+            "after": "Prassa Beach"
+          }
+        ]
       },
       {
         "day": 2,

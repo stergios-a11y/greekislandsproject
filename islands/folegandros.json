@@ -152,16 +152,6 @@
             "wiki": "https://www.google.com/maps/search/?api=1&query=Agali+Beach+Folegandros",
             "desc": "A 15-minute drive west of Chora drops you at Agali — the most accessible of Folegandros's beaches and the natural late-afternoon swim. Small bay, fine sand, calm water, a handful of relaxed tavernas above the beach if you want a cold drink before heading back up for dinner. The contemplative pace fits the island.",
             "desc_el": "Σύντομη οδική απόσταση 15 λεπτών δυτικά της Χώρας σε αφήνει στην Αγκάλη — την πιο προσβάσιμη από τις παραλίες της Φολεγάνδρου και το φυσικό απογευματινό μπάνιο. Μικρός κόλπος, λεπτή άμμος, ήρεμα νερά, και μια χούφτα χαλαρές ταβέρνες πάνω από την παραλία αν θέλεις ένα δροσερό ποτό πριν επιστρέψεις πάνω για δείπνο. Ο στοχαστικός ρυθμός ταιριάζει στο νησί."
-          },
-          {
-            "name": "Dinner — Blue Cuisine (Chora)",
-            "name_el": "Δείπνο — Blue Cuisine (Χώρα)",
-            "desc": "The island's most refined restaurant — creative modern Greek in a tiny dining room tucked in Chora's alleys. Chef Eva sources from her own farm in Livadi. Prawn orzo with saffron-crayfish stock, octopus with fava, zucchini fritters that are genuinely light. Not cheap by Cycladic standards (mains €20-30) but exceptional. Book 2-3 days ahead in August. For something more rustic at half the price, To Spitiko in the same village nails traditional matsata pasta.",
-            "desc_el": "Το πιο εκλεπτυσμένο εστιατόριο του νησιού — δημιουργική σύγχρονη ελληνική κουζίνα σε ένα μικροσκοπικό τραπεζαρία χωμένη στα δρομάκια της Χώρας. Η σεφ Εύα προμηθεύεται από τη δική της φάρμα στο Λιβάδι. Ορζό με γαρίδες σε ζωμό καραβίδας-σαφράν, χταπόδι με φάβα, κολοκυθοκεφτέδες γνήσια ελαφριοί. Όχι φθηνό με κυκλαδίτικα μέτρα (κύρια πιάτα 20-30€) αλλά εξαιρετικό. Κάνε κράτηση 2-3 ημέρες πριν τον Αύγουστο. Για κάτι πιο ρουστίκ στη μισή τιμή, το Το Σπιτικό στο ίδιο χωριό κάνει τέλεια την παραδοσιακή ματσάτα.",
-            "lat": 36.6287,
-            "lng": 24.9207,
-            "time": "19:00",
-            "type": "restaurant"
           }
         ],
         "overnight": "Chora",
@@ -172,7 +162,18 @@
         "drive_mins": 10,
         "color": "#1B4F8A",
         "nightlife": "No clubs here — Folegandros's night is its linked Chora squares, bars spilling onto the flagstones. <a href=\"https://www.google.com/maps/search/Astarti+Bar+Folegandros\" target=\"_blank\" rel=\"noopener\">Astarti</a> on the main square is the institution (Greek tunes, rembetika and its famous hot rakomelo); <a href=\"https://www.google.com/maps/search/El+Greco+Folegandros\" target=\"_blank\" rel=\"noopener\">El Greco</a> is the bohemian late one; <a href=\"https://www.google.com/maps/search/Beez+Cocktail+Bar+Folegandros\" target=\"_blank\" rel=\"noopener\">Beez</a> does serious cocktails to soul and reggae. Wandering between them is the night.",
-        "nightlife_el": "Χωρίς clubs εδώ — η νύχτα της Φολεγάνδρου είναι οι συνδεδεμένες πλατείες της Χώρας, με τα μπαρ να ξεχύνονται στις πλάκες. Το <a href=\"https://www.google.com/maps/search/Astarti+Bar+Folegandros\" target=\"_blank\" rel=\"noopener\">Astarti</a> στην κεντρική πλατεία είναι ο θεσμός (ελληνικά, ρεμπέτικα και το περίφημο ζεστό ρακόμελο)· το <a href=\"https://www.google.com/maps/search/El+Greco+Folegandros\" target=\"_blank\" rel=\"noopener\">El Greco</a> είναι το μποέμ ξενύχτι· το <a href=\"https://www.google.com/maps/search/Beez+Cocktail+Bar+Folegandros\" target=\"_blank\" rel=\"noopener\">Beez</a> κάνει σοβαρά κοκτέιλ σε soul και reggae. Η βόλτα ανάμεσά τους είναι η βραδιά."
+        "nightlife_el": "Χωρίς clubs εδώ — η νύχτα της Φολεγάνδρου είναι οι συνδεδεμένες πλατείες της Χώρας, με τα μπαρ να ξεχύνονται στις πλάκες. Το <a href=\"https://www.google.com/maps/search/Astarti+Bar+Folegandros\" target=\"_blank\" rel=\"noopener\">Astarti</a> στην κεντρική πλατεία είναι ο θεσμός (ελληνικά, ρεμπέτικα και το περίφημο ζεστό ρακόμελο)· το <a href=\"https://www.google.com/maps/search/El+Greco+Folegandros\" target=\"_blank\" rel=\"noopener\">El Greco</a> είναι το μποέμ ξενύχτι· το <a href=\"https://www.google.com/maps/search/Beez+Cocktail+Bar+Folegandros\" target=\"_blank\" rel=\"noopener\">Beez</a> κάνει σοβαρά κοκτέιλ σε soul και reggae. Η βόλτα ανάμεσά τους είναι η βραδιά.",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Blue Cuisine (Chora)",
+            "area_el": "Blue Cuisine (Χώρα)",
+            "desc": "The island's most refined restaurant — creative modern Greek in a tiny dining room tucked in Chora's alleys. Chef Eva sources from her own farm in Livadi. Prawn orzo with saffron-crayfish stock, octopus with fava, zucchini fritters that are genuinely light. Not cheap by Cycladic standards (mains €20-30) but exceptional. Book 2-3 days ahead in August. For something more rustic at half the price, To Spitiko in the same village nails traditional matsata pasta.",
+            "desc_el": "Το πιο εκλεπτυσμένο εστιατόριο του νησιού — δημιουργική σύγχρονη ελληνική κουζίνα σε ένα μικροσκοπικό τραπεζαρία χωμένη στα δρομάκια της Χώρας. Η σεφ Εύα προμηθεύεται από τη δική της φάρμα στο Λιβάδι. Ορζό με γαρίδες σε ζωμό καραβίδας-σαφράν, χταπόδι με φάβα, κολοκυθοκεφτέδες γνήσια ελαφριοί. Όχι φθηνό με κυκλαδίτικα μέτρα (κύρια πιάτα 20-30€) αλλά εξαιρετικό. Κάνε κράτηση 2-3 ημέρες πριν τον Αύγουστο. Για κάτι πιο ρουστίκ στη μισή τιμή, το Το Σπιτικό στο ίδιο χωριό κάνει τέλεια την παραδοσιακή ματσάτα.",
+            "after": "Agali Beach (sunset swim)"
+          }
+        ]
       },
       {
         "day": 2,
@@ -206,16 +207,6 @@
             "time": "11:00",
             "type": "beach",
             "wiki": "https://www.google.com/maps/search/Agios+Nikolaos+Beach+(walk+from+Agali)+Folegandros"
-          },
-          {
-            "name": "Lunch — Sinandisi (Ano Meria, since 1920)",
-            "name_el": "Μεσημεριανό — Συνάντηση (Άνω Μεριά, από το 1920)",
-            "desc": "A taverna run by the same family since 1920, on the edge of Ano Meria with a massive shaded veranda looking south over the Cretan Sea. Signature dish: handmade matsata pasta with slow-cooked rooster, served large enough for two. Also kalasouna (local cheese pie with wild herbs), ampelofasoula (beans with vine leaves). Free yogurt with marinated grapes comes at the end. This is the authentic Folegandros meal.",
-            "desc_el": "Μια ταβέρνα που διαχειρίζεται η ίδια οικογένεια από το 1920, στην άκρη της Άνω Μεριάς με τεράστια σκιασμένη βεράντα κοιτώντας νότια στο Κρητικό Πέλαγος. Πιάτο υπογραφής: χειροποίητη ματσάτα με κόκορα σιγομαγειρεμένο, σερβιριζόμενο αρκετά μεγάλο για δύο. Επίσης καλασούνα (τοπική τυρόπιτα με άγρια χόρτα), αμπελοφάσουλα. Δωρεάν γιαούρτι με μαριναρισμένα σταφύλια έρχεται στο τέλος. Αυτό είναι το αυθεντικό φολεγανδρίτικο γεύμα.",
-            "lat": 36.6437,
-            "lng": 24.8833,
-            "time": "13:30",
-            "type": "restaurant"
           },
           {
             "name": "Ano Meria village",
@@ -254,7 +245,18 @@
         "title_el": "Αγκάλη, Άγιος Νικόλαος & Άνω Μεριά",
         "km": 25,
         "drive_mins": 40,
-        "color": "#C0522A"
+        "color": "#C0522A",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Sinandisi (Ano Meria, since 1920)",
+            "area_el": "Συνάντηση (Άνω Μεριά, από το 1920)",
+            "desc": "A taverna run by the same family since 1920, on the edge of Ano Meria with a massive shaded veranda looking south over the Cretan Sea. Signature dish: handmade matsata pasta with slow-cooked rooster, served large enough for two. Also kalasouna (local cheese pie with wild herbs), ampelofasoula (beans with vine leaves). Free yogurt with marinated grapes comes at the end. This is the authentic Folegandros meal.",
+            "desc_el": "Μια ταβέρνα που διαχειρίζεται η ίδια οικογένεια από το 1920, στην άκρη της Άνω Μεριάς με τεράστια σκιασμένη βεράντα κοιτώντας νότια στο Κρητικό Πέλαγος. Πιάτο υπογραφής: χειροποίητη ματσάτα με κόκορα σιγομαγειρεμένο, σερβιριζόμενο αρκετά μεγάλο για δύο. Επίσης καλασούνα (τοπική τυρόπιτα με άγρια χόρτα), αμπελοφάσουλα. Δωρεάν γιαούρτι με μαριναρισμένα σταφύλια έρχεται στο τέλος. Αυτό είναι το αυθεντικό φολεγανδρίτικο γεύμα.",
+            "after": "Agios Nikolaos Beach (walk from Agali)"
+          }
+        ]
       },
       {
         "day": 3,

@@ -145,22 +145,24 @@
             "desc": "15-minute walk east of Chora. The shallowest and most sheltered beach on Schoinoussa — perfect for kids. Less developed than Tsigouri.",
             "desc_el": "15 λεπτά με τα πόδια ανατολικά της Χώρας. Η πιο ρηχή και πιο προστατευμένη παραλία της Σχοινούσας — ιδανική για παιδιά. Λιγότερο ανεπτυγμένη από το Τσιγκούρι.",
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJPejdxm0ZmBQRODmGZMLP0Xc"
-          },
-          {
-            "name": "Dinner in Chora",
-            "name_el": "Δείπνο στη Χώρα",
-            "lat": 36.8713008,
-            "lng": 25.5236968,
-            "type": "restaurant",
-            "desc": "The food on Schoinoussa is the highlight. Fava (yellow split pea purée), local goat, koftes, fresh seafood. Walk into Chora and pick whichever taverna catches your eye — the standard is uniformly high.",
-            "desc_el": "Το φαγητό στη Σχοινούσα είναι το υψηλό σημείο. Φάβα, ντόπιο κατσίκι, κοφτές, φρέσκα θαλασσινά. Μπες στη Χώρα και διάλεξε όποια ταβέρνα σε τραβήξει — το επίπεδο είναι ομοιόμορφα υψηλό."
           }
         ],
         "title_el": "Χώρα & οι Ανατολικές Παραλίες",
         "overnight": "Chora (Panagia)",
         "overnight_el": "Χώρα (Παναγιά)",
         "km": 10,
-        "drive_mins": 20
+        "drive_mins": 20,
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Chora",
+            "area_el": "Χώρα",
+            "desc": "The food on Schoinoussa is the highlight. Fava (yellow split pea purée), local goat, koftes, fresh seafood. Walk into Chora and pick whichever taverna catches your eye — the standard is uniformly high.",
+            "desc_el": "Το φαγητό στη Σχοινούσα είναι το υψηλό σημείο. Φάβα, ντόπιο κατσίκι, κοφτές, φρέσκα θαλασσινά. Μπες στη Χώρα και διάλεξε όποια ταβέρνα σε τραβήξει — το επίπεδο είναι ομοιόμορφα υψηλό.",
+            "after": "Almyros Beach"
+          }
+        ]
       },
       {
         "day": 2,

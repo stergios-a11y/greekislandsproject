@@ -154,22 +154,24 @@
             "desc": "Southwestern coast, accessible only by boat or rough track. Fine white sand, turquoise water, complete seclusion. Common nudist beach. Bring water, food, shade.",
             "desc_el": "Νοτιοδυτική ακτή, προσβάσιμη μόνο με βάρκα ή κακή χωμάτινη διαδρομή. Λεπτή λευκή άμμος, τιρκουάζ νερά, απόλυτη απομόνωση. Συνηθισμένη γυμνιστική παραλία. Φέρε νερό, φαγητό, σκιά.",
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ5cBzcfNUvBQR88xxogF-2q0"
-          },
-          {
-            "name": "Dinner — Almyra Taverna",
-            "name_el": "Δείπνο — Ταβέρνα Άλμυρα",
-            "lat": 37.5786,
-            "lng": 26.4965,
-            "type": "restaurant",
-            "desc": "Beach-rustic taverna on the Chora harbour serving fish and seafood straight from the boats moored ten metres away. Order whatever was caught that morning — and the lobster, if it's listed. Fratzesca's next door is the alternative.",
-            "desc_el": "Παραθαλάσσια ταβέρνα στο λιμάνι της Χώρας που σερβίρει ψάρι και θαλασσινά κατευθείαν από τις βάρκες δεμένες δέκα μέτρα μακριά. Παράγγειλε ό,τι πιάστηκε το πρωί — και αστακό, αν είναι στο μενού. Η Φραντζέσκας δίπλα είναι η εναλλακτική."
           }
         ],
         "title_el": "Χώρα, Καμπί & οι Νότιες Παραλίες",
         "overnight": "Chora (Kambos)",
         "overnight_el": "Χώρα (Κάμπος)",
         "km": 15,
-        "drive_mins": 30
+        "drive_mins": 30,
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Almyra Taverna",
+            "area_el": "Ταβέρνα Άλμυρα",
+            "desc": "Beach-rustic taverna on the Chora harbour serving fish and seafood straight from the boats moored ten metres away. Order whatever was caught that morning — and the lobster, if it's listed. Fratzesca's next door is the alternative.",
+            "desc_el": "Παραθαλάσσια ταβέρνα στο λιμάνι της Χώρας που σερβίρει ψάρι και θαλασσινά κατευθείαν από τις βάρκες δεμένες δέκα μέτρα μακριά. Παράγγειλε ό,τι πιάστηκε το πρωί — και αστακό, αν είναι στο μενού. Η Φραντζέσκας δίπλα είναι η εναλλακτική.",
+            "after": "Kasidi Beach"
+          }
+        ]
       },
       {
         "day": 2,

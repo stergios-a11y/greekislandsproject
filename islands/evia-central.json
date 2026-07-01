@@ -113,16 +113,6 @@
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJGcb6KJ0XoRQRY8TpW9BJWQ8"
           },
           {
-            "time": "13:00",
-            "name": "Lunch — Apanemia (Chalkida seafront)",
-            "lat": 38.464,
-            "lng": 23.595,
-            "type": "restaurant",
-            "desc": "Old-school fish taverna right on the strait. Watch the current change while you eat — it actually does, in front of you.",
-            "name_el": "Μεσημεριανό — Απάνεμη (Χαλκίδα)",
-            "desc_el": "Παραδοσιακή ψαροταβέρνα στον πορθμό. Παρακολουθείς το ρεύμα να αλλάζει την ώρα που τρως — αληθινά, μπροστά σου."
-          },
-          {
             "time": "15:30",
             "name": "Drive up to Steni (Mt Dirfys)",
             "lat": 38.557,
@@ -132,19 +122,29 @@
             "name_el": "Ανάβαση στη Στενή (Δίρφη)",
             "desc_el": "45 λεπτά ανάβαση στη Στενή — αλπικό χωριό στα 480μ, πλατάνια, ορεινές πηγές, η θερμοκρασία πέφτει άμεσα. Από εδώ ξεκινάει το μονοπάτι για τη Δίρφη (1.743μ).",
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJVVVVVQFGoRQRJNVfi_53yvc"
-          },
-          {
-            "time": "19:30",
-            "name": "Dinner — Liaskos Taverna (Steni)",
-            "lat": 38.557,
-            "lng": 23.776,
-            "type": "restaurant",
-            "desc": "The classic Steni mountain taverna. Spit-roasted goat, wild greens, locally-pressed wine. They cook over wood — you smell it from outside.",
-            "name_el": "Δείπνο — Λιάσκος (Στενή)",
-            "desc_el": "Το κλασικό ορεινό σαλοόνι της Στενής. Κατσικάκι σούβλας, χόρτα, ντόπιο κρασί. Μαγειρεύουν στα ξύλα — το μυρίζεις από έξω."
           }
         ],
-        "color": "#1B4F8A"
+        "color": "#1B4F8A",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Apanemia (Chalkida seafront)",
+            "area_el": "Απάνεμη (Χαλκίδα)",
+            "desc": "Old-school fish taverna right on the strait. Watch the current change while you eat — it actually does, in front of you.",
+            "desc_el": "Παραδοσιακή ψαροταβέρνα στον πορθμό. Παρακολουθείς το ρεύμα να αλλάζει την ώρα που τρως — αληθινά, μπροστά σου.",
+            "after": "Karababa Castle"
+          },
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Liaskos Taverna (Steni)",
+            "area_el": "Λιάσκος (Στενή)",
+            "desc": "The classic Steni mountain taverna. Spit-roasted goat, wild greens, locally-pressed wine. They cook over wood — you smell it from outside.",
+            "desc_el": "Το κλασικό ορεινό σαλοόνι της Στενής. Κατσικάκι σούβλας, χόρτα, ντόπιο κρασί. Μαγειρεύουν στα ξύλα — το μυρίζεις από έξω.",
+            "after": "Drive up to Steni (Mt Dirfys)"
+          }
+        ]
       },
       {
         "day": 2,
@@ -167,16 +167,6 @@
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJCTukUmproRQRw6OGTvxJuos"
           },
           {
-            "time": "13:00",
-            "name": "Lunch — Cavo D'Oro (Eretria)",
-            "lat": 38.401,
-            "lng": 23.793,
-            "type": "restaurant",
-            "desc": "Seafront lunch with view to the mainland. Octopus and fava are the moves; the wine list has Evia varieties hard to find elsewhere.",
-            "name_el": "Μεσημεριανό — Cavo D'Oro (Ερέτρια)",
-            "desc_el": "Παραλιακό φαγητό με θέα την ηπειρωτική. Χταπόδι και φάβα οι κινήσεις· η λίστα κρασιών έχει ευβοϊκές ποικιλίες δύσκολο να βρεις αλλού."
-          },
-          {
             "time": "15:30",
             "name": "Folklore Museum of Chalkida (or Aliveri vineyards)",
             "lat": 38.464,
@@ -186,19 +176,29 @@
             "name_el": "Λαογραφικό Μουσείο Χαλκίδας (ή αμπελώνες Αλιβερίου)",
             "desc_el": "Αν μουσεία: το Λαογραφικό (Χαλκίδα) μικρό αλλά εξαιρετικό για ευβοϊκή υφαντική. Αν κρασί: 25λ ανατολικά στα οινοποιεία Αλιβερίου (Λύκος, Avantis) για γευσιγνωσία — η Εύβοια είναι υποτιμημένη οινική περιοχή.",
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJMRfZtE0WoRQRAgtbi0gAnbY"
-          },
-          {
-            "time": "20:00",
-            "name": "Dinner — Stavento (Chalkida)",
-            "lat": 38.464,
-            "lng": 23.595,
-            "type": "restaurant",
-            "desc": "Modern Greek on the strait, sit outside if the weather lets you. Fresh fish, creative mezedes, good list of Greek wines.",
-            "name_el": "Δείπνο — Stavento (Χαλκίδα)",
-            "desc_el": "Μοντέρνα ελληνική κουζίνα στον πορθμό, κάτσε έξω αν επιτρέπει ο καιρός. Φρέσκο ψάρι, δημιουργικοί μεζέδες, καλή λίστα ελληνικών κρασιών."
           }
         ],
-        "color": "#C0522A"
+        "color": "#C0522A",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Cavo D'Oro (Eretria)",
+            "area_el": "Cavo D'Oro (Ερέτρια)",
+            "desc": "Seafront lunch with view to the mainland. Octopus and fava are the moves; the wine list has Evia varieties hard to find elsewhere.",
+            "desc_el": "Παραλιακό φαγητό με θέα την ηπειρωτική. Χταπόδι και φάβα οι κινήσεις· η λίστα κρασιών έχει ευβοϊκές ποικιλίες δύσκολο να βρεις αλλού.",
+            "after": "Ancient Eretria"
+          },
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Stavento (Chalkida)",
+            "area_el": "Stavento (Χαλκίδα)",
+            "desc": "Modern Greek on the strait, sit outside if the weather lets you. Fresh fish, creative mezedes, good list of Greek wines.",
+            "desc_el": "Μοντέρνα ελληνική κουζίνα στον πορθμό, κάτσε έξω αν επιτρέπει ο καιρός. Φρέσκο ψάρι, δημιουργικοί μεζέδες, καλή λίστα ελληνικών κρασιών.",
+            "after": "Folklore Museum of Chalkida (or Aliveri vineyards)"
+          }
+        ]
       },
       {
         "day": 3,
@@ -232,16 +232,6 @@
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJUZa8mOZVoRQRs0oF3Gt7Zxs"
           },
           {
-            "time": "13:30",
-            "name": "Lunch — To Steki tou Yianni (Kymi)",
-            "name_el": "Μεσημεριανό — Το Στέκι του Γιάννη (Κύμη)",
-            "lat": 38.629,
-            "lng": 24.108,
-            "type": "restaurant",
-            "desc": "Old kafeneion-taverna in upper Kymi. Spetzofai (sausage with peppers), revithada chickpea stew, the kind of place where the menu is what's cooked today.",
-            "desc_el": "Παλιό καφενείο-ταβέρνα στην πάνω Κύμη. Σπετζοφάι, ρεβιθάδα — το είδος του μέρους όπου ο κατάλογος είναι ό,τι μαγειρεύτηκε σήμερα."
-          },
-          {
             "time": "16:00",
             "name": "Mourteri Beach",
             "name_el": "Παραλία Μουρτερή",
@@ -263,7 +253,18 @@
             "desc_el": "2ω30 από Μουρτερή στην Αθήνα μέσω Λέπουρα και Χαλκίδας. Πέρασε τη γέφυρα του Ευρίπου για τελευταία φορά καθώς ο ήλιος βασιλεύει."
           }
         ],
-        "color": "#5A7A3A"
+        "color": "#5A7A3A",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "To Steki tou Yianni (Kymi)",
+            "area_el": "Το Στέκι του Γιάννη (Κύμη)",
+            "desc": "Old kafeneion-taverna in upper Kymi. Spetzofai (sausage with peppers), revithada chickpea stew, the kind of place where the menu is what's cooked today.",
+            "desc_el": "Παλιό καφενείο-ταβέρνα στην πάνω Κύμη. Σπετζοφάι, ρεβιθάδα — το είδος του μέρους όπου ο κατάλογος είναι ό,τι μαγειρεύτηκε σήμερα.",
+            "after": "Kymi Old Town & the port"
+          }
+        ]
       }
     ]
   },

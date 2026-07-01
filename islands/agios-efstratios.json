@@ -141,17 +141,6 @@
             "desc_el": "Περπατάς απευθείας από το χωριό στη σκούρα ηφαιστειακή άμμο. Ήρεμα ρηχά νερά, καθαρά, σχεδόν κανείς. Το πιο εύκολο μπάνιο στο νησί και αγαπημένο των ντόπιων."
           },
           {
-            "name": "Lunch at the harbour",
-            "lat": 39.5394,
-            "lng": 24.9883,
-            "type": "restaurant",
-            "time": "14:00",
-            "wiki": null,
-            "desc": "There are two or three tavernas right on the harbour. Whatever the fishermen brought back that morning is what you eat. Lobster pasta if you're lucky; fresh-caught fish always. The fishermen often join the table.",
-            "name_el": "Μεσημεριανό στο λιμάνι",
-            "desc_el": "Υπάρχουν δύο-τρεις ταβέρνες ακριβώς στο λιμάνι. Ό,τι έφεραν οι ψαράδες το πρωί, αυτό τρως. Αστακομακαρονάδα αν είσαι τυχερός· φρέσκο ψάρι σίγουρα. Συχνά οι ψαράδες κάθονται μαζί σου στο τραπέζι."
-          },
-          {
             "name": "Agios Antonios Beach",
             "lat": 39.5308,
             "lng": 24.98,
@@ -161,17 +150,26 @@
             "desc": "About a 25-minute walk south from the village along the coastal dirt track. Quieter than the village beach, with the small chapel of Agios Antonios giving the spot its name. Crystal-clear water and almost guaranteed solitude.",
             "name_el": "Παραλία Αγίου Αντωνίου",
             "desc_el": "Περίπου 25 λεπτά πεζοπορίας νότια από το χωριό κατά μήκος του παραθαλάσσιου χωματόδρομου. Πιο ήσυχη από την παραλία του χωριού, με το εκκλησάκι του Αγίου Αντωνίου που της δίνει το όνομα. Κρυστάλλινα νερά και σχεδόν εγγυημένη μοναξιά."
+          }
+        ],
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "harbour",
+            "area_el": "λιμάνι",
+            "desc": "There are two or three tavernas right on the harbour. Whatever the fishermen brought back that morning is what you eat. Lobster pasta if you're lucky; fresh-caught fish always. The fishermen often join the table.",
+            "desc_el": "Υπάρχουν δύο-τρεις ταβέρνες ακριβώς στο λιμάνι. Ό,τι έφεραν οι ψαράδες το πρωί, αυτό τρως. Αστακομακαρονάδα αν είσαι τυχερός· φρέσκο ψάρι σίγουρα. Συχνά οι ψαράδες κάθονται μαζί σου στο τραπέζι.",
+            "after": "Village Beach (volcanic black sand)"
           },
           {
-            "name": "Sunset & dinner in the village",
-            "lat": 39.5394,
-            "lng": 24.9883,
-            "type": "restaurant",
-            "time": "20:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJV1lPoO9zpRQRB3yM-p12nZo",
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "village",
+            "area_el": "χωριό",
             "desc": "Back to the village for sunset. The chapel of Agios Minas above the harbour gives the best view, but the harbour-front cafés are themselves a fine spot. Evening dinner at the same taverna where you had lunch — they'll remember you.",
-            "name_el": "Ηλιοβασίλεμα & δείπνο στο χωριό",
-            "desc_el": "Επιστροφή στο χωριό για το ηλιοβασίλεμα. Το εκκλησάκι του Αγίου Μηνά πάνω από το λιμάνι έχει την καλύτερη θέα, αλλά και τα παραλιακά καφέ είναι εξαιρετικά. Δείπνο στην ίδια ταβέρνα όπου έφαγες το μεσημέρι — θα σε θυμούνται."
+            "desc_el": "Επιστροφή στο χωριό για το ηλιοβασίλεμα. Το εκκλησάκι του Αγίου Μηνά πάνω από το λιμάνι έχει την καλύτερη θέα, αλλά και τα παραλιακά καφέ είναι εξαιρετικά. Δείπνο στην ίδια ταβέρνα όπου έφαγες το μεσημέρι — θα σε θυμούνται.",
+            "after": "Agios Antonios Beach"
           }
         ]
       }

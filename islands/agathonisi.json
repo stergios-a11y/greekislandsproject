@@ -154,20 +154,22 @@
             "desc": "Eastern side of the island near the chapel of Agios Nikolaos — stone-built domed constructions from the 11th century, likely Byzantine food warehouses (they have airways at the roofs). Protected by barbed wire but you can get close. Combine with a walk down to Vathy Pigadi beach below.",
             "desc_el": "Ανατολική πλευρά του νησιού κοντά στο εκκλησάκι του Αγίου Νικολάου — πέτρινες θολωτές κατασκευές του 11ου αιώνα, πιθανότατα βυζαντινές αποθήκες τροφίμων (έχουν εξαερισμούς στις στέγες). Προστατεύονται με συρμάτινο πλέγμα αλλά πλησιάζεις. Συνδύασε με κατάβαση στην παραλία Βαθύ Πηγάδι από κάτω.",
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJx04tSogzvBQRy_YmAHbYmO4"
-          },
-          {
-            "name": "Dinner — Atsidas Taverna",
-            "name_el": "Δείπνο — Ταβέρνα Ατσίδας",
-            "lat": 37.4625,
-            "lng": 26.9611,
-            "type": "restaurant",
-            "desc": "In Megalo Chorio with panoramic harbour views. Stews, grilled meat cooked to order, catch of the day. Order the myzithra pies (small handmade cheese pies), goat with macaroni, and the homemade local cheese. This is the reason to have stayed overnight rather than day-tripped.",
-            "desc_el": "Στο Μεγάλο Χωριό με πανοραμική θέα στο λιμάνι. Κατσαρόλες, κρέας στη σχάρα έτοιμο κατά παραγγελία, το ψάρι της ημέρας. Παράγγειλε τις μυζηθρόπιτες (μικρές χειροποίητες τυρόπιτες), κατσίκι με μακαρόνια, και το σπιτικό τοπικό τυρί. Αυτός είναι ο λόγος που διανυκτέρευσες αντί να κάνεις ημερήσια."
           }
         ],
         "title_el": "Τα Τρία Χωριά & η Παραλία Σπηλιά",
         "km": 5,
-        "drive_mins": 15
+        "drive_mins": 15,
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Atsidas Taverna",
+            "area_el": "Ταβέρνα Ατσίδας",
+            "desc": "In Megalo Chorio with panoramic harbour views. Stews, grilled meat cooked to order, catch of the day. Order the myzithra pies (small handmade cheese pies), goat with macaroni, and the homemade local cheese. This is the reason to have stayed overnight rather than day-tripped.",
+            "desc_el": "Στο Μεγάλο Χωριό με πανοραμική θέα στο λιμάνι. Κατσαρόλες, κρέας στη σχάρα έτοιμο κατά παραγγελία, το ψάρι της ημέρας. Παράγγειλε τις μυζηθρόπιτες (μικρές χειροποίητες τυρόπιτες), κατσίκι με μακαρόνια, και το σπιτικό τοπικό τυρί. Αυτός είναι ο λόγος που διανυκτέρευσες αντί να κάνεις ημερήσια.",
+            "after": "The Tholi Domes"
+          }
+        ]
       }
     ],
     "title_el": "Πρόγραμμα 1 Ημέρας στο Αγαθονήσι",

@@ -131,17 +131,6 @@
             "desc_el": "Το σημείο κολύμβησης της πόλης — βραχώδεις πλατφόρμες ακριβώς κάτω από το καφέ Σπηλιά. Κρυστάλλινα νερά και βουτιές από τα βράχια. 5 λεπτά από το λιμάνι."
           },
           {
-            "name": "Lunch — Castello Kamini",
-            "lat": 37.3464,
-            "lng": 23.4554,
-            "type": "restaurant",
-            "time": "13:30",
-            "wiki": null,
-            "desc": "Harbourfront taverna in the tiny fishing village of Kamini. The grilled octopus and the view are both excellent. 15-minute walk from the main harbour.",
-            "name_el": "Μεσημεριανό — Καστέλο, Καμίνι",
-            "desc_el": "Παραλιακή ταβέρνα στο μικροσκοπικό ψαροχώρι του Καμινίου. Το ψητό χταπόδι και η θέα είναι αμφότερα εξαιρετικά. 15 λεπτά πεζοπορίας από το κύριο λιμάνι."
-          },
-          {
             "name": "Vlychos Beach",
             "lat": 37.3375,
             "lng": 23.4394,
@@ -175,7 +164,18 @@
         "title_el": "Ύδρα Πόλη & Βλυχός",
         "overnight_el": "Ύδρα (Πόλη)",
         "nightlife": "No cars and no clubs — on Hydra the whole port becomes the party and you drift between bars. Start with a sundowner at <a href=\"https://www.google.com/maps/search/Hydronetta+Hydra\" target=\"_blank\" rel=\"noopener\">Hydronetta</a>, out on the cannons above the sea, then <a href=\"https://www.google.com/maps/search/Pirate+Bar+Hydra\" target=\"_blank\" rel=\"noopener\">Pirate Bar</a> for the institution and <a href=\"https://www.google.com/maps/search/Amalour+Hydra\" target=\"_blank\" rel=\"noopener\">Amalour</a> for candlelit cocktails and dancing to soul and funk.",
-        "nightlife_el": "Χωρίς αυτοκίνητα και χωρίς clubs — στην Ύδρα όλο το λιμάνι γίνεται το πάρτι και περνάς από μπαρ σε μπαρ. Ξεκίνα με ποτό στο ηλιοβασίλεμα στο <a href=\"https://www.google.com/maps/search/Hydronetta+Hydra\" target=\"_blank\" rel=\"noopener\">Hydronetta</a>, έξω στα κανόνια πάνω από τη θάλασσα, μετά <a href=\"https://www.google.com/maps/search/Pirate+Bar+Hydra\" target=\"_blank\" rel=\"noopener\">Pirate Bar</a> για τον θεσμό και <a href=\"https://www.google.com/maps/search/Amalour+Hydra\" target=\"_blank\" rel=\"noopener\">Amalour</a> για κοκτέιλ στο φως των κεριών και χορό σε soul και funk."
+        "nightlife_el": "Χωρίς αυτοκίνητα και χωρίς clubs — στην Ύδρα όλο το λιμάνι γίνεται το πάρτι και περνάς από μπαρ σε μπαρ. Ξεκίνα με ποτό στο ηλιοβασίλεμα στο <a href=\"https://www.google.com/maps/search/Hydronetta+Hydra\" target=\"_blank\" rel=\"noopener\">Hydronetta</a>, έξω στα κανόνια πάνω από τη θάλασσα, μετά <a href=\"https://www.google.com/maps/search/Pirate+Bar+Hydra\" target=\"_blank\" rel=\"noopener\">Pirate Bar</a> για τον θεσμό και <a href=\"https://www.google.com/maps/search/Amalour+Hydra\" target=\"_blank\" rel=\"noopener\">Amalour</a> για κοκτέιλ στο φως των κεριών και χορό σε soul και funk.",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Castello Kamini",
+            "area_el": "Καστέλο, Καμίνι",
+            "desc": "Harbourfront taverna in the tiny fishing village of Kamini. The grilled octopus and the view are both excellent. 15-minute walk from the main harbour.",
+            "desc_el": "Παραλιακή ταβέρνα στο μικροσκοπικό ψαροχώρι του Καμινίου. Το ψητό χταπόδι και η θέα είναι αμφότερα εξαιρετικά. 15 λεπτά πεζοπορίας από το κύριο λιμάνι.",
+            "after": "Spilia Swimming Rocks"
+          }
+        ]
       },
       {
         "day": 2,

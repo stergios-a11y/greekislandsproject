@@ -139,17 +139,6 @@
             }
           },
           {
-            "name": "Lunch — Nonna's",
-            "lat": 37.8382,
-            "lng": 24.9446,
-            "type": "restaurant",
-            "time": "14:00",
-            "wiki": null,
-            "desc": "Casual spot in lower Chora with Andros specialties served family-style. Order the fourtalia — a thick herb omelet with potatoes and local sausage, the island's signature dish — plus local cheeses (kopanisti and volaki) and the dry-cured loukaniko from the mountain villages.",
-            "name_el": "Μεσημεριανό — Νόννα",
-            "desc_el": "Χαλαρό μέρος στην κάτω Χώρα με σπεσιαλιτέ της Άνδρου σε οικογενειακή σερβίτσια. Παράγγειλε φουρτάλια — παχιά ομελέτα με βότανα, πατάτες και ντόπιο λουκάνικο, το χαρακτηριστικό πιάτο του νησιού — και τοπικά τυριά (κοπανιστή και βολάκι) και το αλίπαστο λουκάνικο από τα ορεινά χωριά."
-          },
-          {
             "name": "Paraporti Beach",
             "lat": 37.8362,
             "lng": 24.9416,
@@ -164,7 +153,18 @@
         "title_el": "Χώρα & η Ανατολή",
         "overnight_el": "Χώρα",
         "nightlife": "Andros Chora is small but surprisingly switched-on. <a href=\"https://www.google.com/maps/search/Moomba+Afterlight+Andros+Chora\" target=\"_blank\" rel=\"noopener\">Moomba Afterlight</a> is the open-air cocktail spot over the marina; <a href=\"https://www.google.com/maps/search/Skyline+Bar+Andros\" target=\"_blank\" rel=\"noopener\">Skyline</a> does drinks from a rooftop over the town lights; and <a href=\"https://www.google.com/maps/search/Andros+Club+Chora\" target=\"_blank\" rel=\"noopener\">Andros Club</a> is the proper late-night dance floor when the shipowners' kids are home for summer.",
-        "nightlife_el": "Η Χώρα της Άνδρου είναι μικρή αλλά απρόσμενα ζωντανή. Το <a href=\"https://www.google.com/maps/search/Moomba+Afterlight+Andros+Chora\" target=\"_blank\" rel=\"noopener\">Moomba Afterlight</a> είναι το υπαίθριο cocktail σημείο πάνω από τη μαρίνα· το <a href=\"https://www.google.com/maps/search/Skyline+Bar+Andros\" target=\"_blank\" rel=\"noopener\">Skyline</a> σερβίρει ποτά από ταράτσα πάνω από τα φώτα της πόλης· και το <a href=\"https://www.google.com/maps/search/Andros+Club+Chora\" target=\"_blank\" rel=\"noopener\">Andros Club</a> είναι η κανονική πίστα όταν τα παιδιά των εφοπλιστών είναι πίσω για το καλοκαίρι."
+        "nightlife_el": "Η Χώρα της Άνδρου είναι μικρή αλλά απρόσμενα ζωντανή. Το <a href=\"https://www.google.com/maps/search/Moomba+Afterlight+Andros+Chora\" target=\"_blank\" rel=\"noopener\">Moomba Afterlight</a> είναι το υπαίθριο cocktail σημείο πάνω από τη μαρίνα· το <a href=\"https://www.google.com/maps/search/Skyline+Bar+Andros\" target=\"_blank\" rel=\"noopener\">Skyline</a> σερβίρει ποτά από ταράτσα πάνω από τα φώτα της πόλης· και το <a href=\"https://www.google.com/maps/search/Andros+Club+Chora\" target=\"_blank\" rel=\"noopener\">Andros Club</a> είναι η κανονική πίστα όταν τα παιδιά των εφοπλιστών είναι πίσω για το καλοκαίρι.",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Nonna's",
+            "area_el": "Νόννα",
+            "desc": "Casual spot in lower Chora with Andros specialties served family-style. Order the fourtalia — a thick herb omelet with potatoes and local sausage, the island's signature dish — plus local cheeses (kopanisti and volaki) and the dry-cured loukaniko from the mountain villages.",
+            "desc_el": "Χαλαρό μέρος στην κάτω Χώρα με σπεσιαλιτέ της Άνδρου σε οικογενειακή σερβίτσια. Παράγγειλε φουρτάλια — παχιά ομελέτα με βότανα, πατάτες και ντόπιο λουκάνικο, το χαρακτηριστικό πιάτο του νησιού — και τοπικά τυριά (κοπανιστή και βολάκι) και το αλίπαστο λουκάνικο από τα ορεινά χωριά.",
+            "after": "Archaeological Museum"
+          }
+        ]
       },
       {
         "day": 2,

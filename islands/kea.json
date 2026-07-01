@@ -123,17 +123,6 @@
             "desc_el": "Αρχαϊκό λίθινο λιοντάρι του 6ου αιώνα π.Χ. λαξευμένο απευθείας στον λόφο. 30 λεπτά πεζοπορίας από την Ιουλίδα μέσω σηματοδοτημένου μονοπατιού."
           },
           {
-            "name": "Lunch — Rolando",
-            "lat": 37.632,
-            "lng": 24.3429,
-            "type": "restaurant",
-            "time": "14:30",
-            "wiki": null,
-            "desc": "Traditional Kean cuisine — excellent loutza (cured pork), fava (split pea puree), local wine. For destination dining at Psathi Bay on the south coast, <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJw0uwg1kXohQRNgGTy_HsmvY\" target=\"_blank\" rel=\"noopener noreferrer\">Lygaria</a> at Kea Retreat won ★★ in the FNL Best Restaurant Awards 2026 (Contemporary International) and was on the FNL List 2025 of the ten must-visit restaurants in Greece.",
-            "name_el": "Μεσημεριανό — Ρολάνδο",
-            "desc_el": "Παραδοσιακή κεϊκή κουζίνα — εξαιρετική λούτζα (παστό χοιρινό), φάβα, ντόπιο κρασί. Για εμπειρία υψηλής γαστρονομίας στον Όρμο Ψαθί στη νότια ακτή, η <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJw0uwg1kXohQRNgGTy_HsmvY\" target=\"_blank\" rel=\"noopener noreferrer\">Λυγαριά</a> στο Kea Retreat κέρδισε ★★ στα Βραβεία FNL 2026 (Σύγχρονη Διεθνής Κουζίνα)."
-          },
-          {
             "name": "Otzias Beach",
             "lat": 37.6747106,
             "lng": 24.3503923,
@@ -146,7 +135,18 @@
           }
         ],
         "title_el": "Ιουλίδα & ο Λέων",
-        "overnight_el": "Ιουλίδα"
+        "overnight_el": "Ιουλίδα",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Rolando",
+            "area_el": "Ρολάνδο",
+            "desc": "Traditional Kean cuisine — excellent loutza (cured pork), fava (split pea puree), local wine. For destination dining at Psathi Bay on the south coast, <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJw0uwg1kXohQRNgGTy_HsmvY\" target=\"_blank\" rel=\"noopener noreferrer\">Lygaria</a> at Kea Retreat won ★★ in the FNL Best Restaurant Awards 2026 (Contemporary International) and was on the FNL List 2025 of the ten must-visit restaurants in Greece.",
+            "desc_el": "Παραδοσιακή κεϊκή κουζίνα — εξαιρετική λούτζα (παστό χοιρινό), φάβα, ντόπιο κρασί. Για εμπειρία υψηλής γαστρονομίας στον Όρμο Ψαθί στη νότια ακτή, η <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJw0uwg1kXohQRNgGTy_HsmvY\" target=\"_blank\" rel=\"noopener noreferrer\">Λυγαριά</a> στο Kea Retreat κέρδισε ★★ στα Βραβεία FNL 2026 (Σύγχρονη Διεθνής Κουζίνα).",
+            "after": "Lion of Kea"
+          }
+        ]
       },
       {
         "day": 2,

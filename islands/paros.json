@@ -150,17 +150,6 @@
             "desc_el": "Αμμώδης παραλία με ήρεμα, ρηχά νερά 3 χλμ νότια της Παροικιάς. Καλές υπηρεσίες, προστατευμένος κόλπος. Μία από τις καλύτερες οικογενειακές παραλίες κοντά στην πρωτεύουσα."
           },
           {
-            "name": "Dinner — Mario Restaurant (Livadia, Parikia)",
-            "name_el": "Δείπνο — Mario Restaurant (Λιβάδια, Παροικιά)",
-            "desc": "Dinner in Livadia, just outside Parikia, at <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJoUWRFUhxmBQRsEQMJ1kN-Qk\" target=\"_blank\" rel=\"noopener noreferrer\">Mario Restaurant & Farm</a> — ★ FNL Best Restaurant Awards 2026 (Seafood). Farm-to-table seafood, lobster pasta, attentive service. For a higher-end alternative, <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJvydD8BFzmBQRk_B4BswV1i4\" target=\"_blank\" rel=\"noopener noreferrer\">Galazia Hytra</a> at Summer Senses Hotel near Marpissa earned ★★ FNL 2026 (Greek Fine Dining).",
-            "desc_el": "Δείπνο στα Λιβάδια, λίγο έξω από την Παροικιά, στο <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJoUWRFUhxmBQRsEQMJ1kN-Qk\" target=\"_blank\" rel=\"noopener noreferrer\">Mario Restaurant & Farm</a> — ★ Βραβεία FNL 2026. Για επιλογή υψηλής γαστρονομίας, η <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJvydD8BFzmBQRk_B4BswV1i4\" target=\"_blank\" rel=\"noopener noreferrer\">Γαλάζια Χύτρα</a> στο Summer Senses Hotel κοντά στη Μάρπησσα κέρδισε ★★ FNL 2026.",
-            "lat": 37.0913,
-            "lng": 25.1567,
-            "time": "20:30",
-            "type": "restaurant",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJoUWRFUhxmBQRsEQMJ1kN-Qk"
-          },
-          {
             "name": "Return to Parikia",
             "lat": 37.085,
             "lng": 25.1518,
@@ -175,7 +164,18 @@
         "title_el": "Παροικιά & η Δύση",
         "overnight_el": "Παροικιά",
         "nightlife": "Parikia's nightlife is the mellower of the island's two hubs — a lane of bars behind the waterfront, plus beach bars just south. For sunset, <a href=\"https://www.google.com/maps/search/Zazala+Beach+Bar+Parasporos+Paros\" target=\"_blank\" rel=\"noopener\">Zazala Beach Bar</a> on Parasporos (10 min south) pours cocktails on the sand; later, the old-town bar lane near the windmill keeps a low-key crowd.",
-        "nightlife_el": "Η νυχτερινή ζωή στην Παροικιά είναι η πιο χαλαρή από τα δύο κέντρα του νησιού — ένα δρομάκι με μπαρ πίσω από την παραλία, και beach bars λίγο πιο νότια. Για ηλιοβασίλεμα, το <a href=\"https://www.google.com/maps/search/Zazala+Beach+Bar+Parasporos+Paros\" target=\"_blank\" rel=\"noopener\">Zazala Beach Bar</a> στον Παρασπόρο (10' νότια) σερβίρει κοκτέιλ στην άμμο· αργότερα, το δρομάκι με τα μπαρ στην παλιά πόλη κοντά στον ανεμόμυλο κρατάει ήσυχο κοινό."
+        "nightlife_el": "Η νυχτερινή ζωή στην Παροικιά είναι η πιο χαλαρή από τα δύο κέντρα του νησιού — ένα δρομάκι με μπαρ πίσω από την παραλία, και beach bars λίγο πιο νότια. Για ηλιοβασίλεμα, το <a href=\"https://www.google.com/maps/search/Zazala+Beach+Bar+Parasporos+Paros\" target=\"_blank\" rel=\"noopener\">Zazala Beach Bar</a> στον Παρασπόρο (10' νότια) σερβίρει κοκτέιλ στην άμμο· αργότερα, το δρομάκι με τα μπαρ στην παλιά πόλη κοντά στον ανεμόμυλο κρατάει ήσυχο κοινό.",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Mario Restaurant (Livadia, Parikia)",
+            "area_el": "Mario Restaurant (Λιβάδια, Παροικιά)",
+            "desc": "Dinner in Livadia, just outside Parikia, at <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJoUWRFUhxmBQRsEQMJ1kN-Qk\" target=\"_blank\" rel=\"noopener noreferrer\">Mario Restaurant & Farm</a> — ★ FNL Best Restaurant Awards 2026 (Seafood). Farm-to-table seafood, lobster pasta, attentive service. For a higher-end alternative, <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJvydD8BFzmBQRk_B4BswV1i4\" target=\"_blank\" rel=\"noopener noreferrer\">Galazia Hytra</a> at Summer Senses Hotel near Marpissa earned ★★ FNL 2026 (Greek Fine Dining).",
+            "desc_el": "Δείπνο στα Λιβάδια, λίγο έξω από την Παροικιά, στο <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJoUWRFUhxmBQRsEQMJ1kN-Qk\" target=\"_blank\" rel=\"noopener noreferrer\">Mario Restaurant & Farm</a> — ★ Βραβεία FNL 2026. Για επιλογή υψηλής γαστρονομίας, η <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJvydD8BFzmBQRk_B4BswV1i4\" target=\"_blank\" rel=\"noopener noreferrer\">Γαλάζια Χύτρα</a> στο Summer Senses Hotel κοντά στη Μάρπησσα κέρδισε ★★ FNL 2026.",
+            "after": "Parasporos Beach"
+          }
+        ]
       },
       {
         "day": 2,
@@ -254,17 +254,6 @@
             "desc_el": "Η πιο γνωστή παραλία της ανατολικής ακτής — μακριά, χρυσή άμμος με σταθερούς ανέμους που την κάνουν την πρωτεύουσα του windsurfing της Ευρώπης. Το Παγκόσμιο Κύπελλο PWA διεξάγεται εδώ. Καλή για κολύμπι όταν πέφτει ο αέρας."
           },
           {
-            "name": "Dinner — Blue Oyster (Ampelas)",
-            "name_el": "Δείπνο — Blue Oyster (Αμπελάς)",
-            "desc": "On the way back from Golden Beach, dinner at <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJD0z4vg11mBQR-ipr-LZMYAY\" target=\"_blank\" rel=\"noopener noreferrer\">Blue Oyster</a> in Ampelas — ★ FNL Best Restaurant Awards 2026 (Seafood). Beachfront tables, ceviche, octopus, seafood linguini, sunset views over the bay.",
-            "desc_el": "Στην επιστροφή από το Χρυσή Ακτή, δείπνο στο <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJD0z4vg11mBQR-ipr-LZMYAY\" target=\"_blank\" rel=\"noopener noreferrer\">Blue Oyster</a> στον Αμπελά — ★ Βραβεία FNL 2026 (Εστιατόριο για Ψάρι). Τραπέζια στην παραλία, σεβίτσε, χταπόδι, λιγκουίνι θαλασσινών.",
-            "lat": 37.1023,
-            "lng": 25.2657,
-            "time": "20:30",
-            "type": "restaurant",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJD0z4vg11mBQR-ipr-LZMYAY"
-          },
-          {
             "name": "Return to Parikia",
             "lat": 37.085,
             "lng": 25.1518,
@@ -279,7 +268,18 @@
         "title_el": "Νάουσα & Χρυσή Ακτή",
         "overnight_el": "Παροικιά",
         "nightlife": "Naoussa is where Paros stays out late — the old Venetian port is wall-to-wall bars. <a href=\"https://www.google.com/maps/search/Agosta+Naoussa+Paros\" target=\"_blank\" rel=\"noopener\">Agosta</a> (terrace cocktails early, heaving after midnight), the legendary <a href=\"https://www.google.com/maps/search/Barbarossa+Naoussa+Paros\" target=\"_blank\" rel=\"noopener\">Barbarossa</a> right on the water, pink-fronted <a href=\"https://www.google.com/maps/search/Linardo+Naoussa+Paros\" target=\"_blank\" rel=\"noopener\">Linardo</a> for dancing, and <a href=\"https://www.google.com/maps/search/Sommaripa+Consolato+Naoussa+Paros\" target=\"_blank\" rel=\"noopener\">Sommaripa Consolato</a> for a refined drink above the port.",
-        "nightlife_el": "Η Νάουσα είναι εκεί που η Πάρος ξενυχτάει — το παλιό βενετσιάνικο λιμανάκι είναι γεμάτο μπαρ. Το <a href=\"https://www.google.com/maps/search/Agosta+Naoussa+Paros\" target=\"_blank\" rel=\"noopener\">Agosta</a> (κοκτέιλ στη βεράντα νωρίς, χαμός μετά τα μεσάνυχτα), το θρυλικό <a href=\"https://www.google.com/maps/search/Barbarossa+Naoussa+Paros\" target=\"_blank\" rel=\"noopener\">Barbarossa</a> δίπλα στο νερό, το ροζ <a href=\"https://www.google.com/maps/search/Linardo+Naoussa+Paros\" target=\"_blank\" rel=\"noopener\">Linardo</a> για χορό, και το <a href=\"https://www.google.com/maps/search/Sommaripa+Consolato+Naoussa+Paros\" target=\"_blank\" rel=\"noopener\">Sommaripa Consolato</a> για ένα πιο εκλεπτυσμένο ποτό πάνω από το λιμάνι."
+        "nightlife_el": "Η Νάουσα είναι εκεί που η Πάρος ξενυχτάει — το παλιό βενετσιάνικο λιμανάκι είναι γεμάτο μπαρ. Το <a href=\"https://www.google.com/maps/search/Agosta+Naoussa+Paros\" target=\"_blank\" rel=\"noopener\">Agosta</a> (κοκτέιλ στη βεράντα νωρίς, χαμός μετά τα μεσάνυχτα), το θρυλικό <a href=\"https://www.google.com/maps/search/Barbarossa+Naoussa+Paros\" target=\"_blank\" rel=\"noopener\">Barbarossa</a> δίπλα στο νερό, το ροζ <a href=\"https://www.google.com/maps/search/Linardo+Naoussa+Paros\" target=\"_blank\" rel=\"noopener\">Linardo</a> για χορό, και το <a href=\"https://www.google.com/maps/search/Sommaripa+Consolato+Naoussa+Paros\" target=\"_blank\" rel=\"noopener\">Sommaripa Consolato</a> για ένα πιο εκλεπτυσμένο ποτό πάνω από το λιμάνι.",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Blue Oyster (Ampelas)",
+            "area_el": "Blue Oyster (Αμπελάς)",
+            "desc": "On the way back from Golden Beach, dinner at <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJD0z4vg11mBQR-ipr-LZMYAY\" target=\"_blank\" rel=\"noopener noreferrer\">Blue Oyster</a> in Ampelas — ★ FNL Best Restaurant Awards 2026 (Seafood). Beachfront tables, ceviche, octopus, seafood linguini, sunset views over the bay.",
+            "desc_el": "Στην επιστροφή από το Χρυσή Ακτή, δείπνο στο <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJD0z4vg11mBQR-ipr-LZMYAY\" target=\"_blank\" rel=\"noopener noreferrer\">Blue Oyster</a> στον Αμπελά — ★ Βραβεία FNL 2026 (Εστιατόριο για Ψάρι). Τραπέζια στην παραλία, σεβίτσε, χταπόδι, λιγκουίνι θαλασσινών.",
+            "after": "Golden Beach (Chryssi Akti)"
+          }
+        ]
       },
       {
         "day": 3,

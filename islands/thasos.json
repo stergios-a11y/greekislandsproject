@@ -127,17 +127,6 @@
             }
           },
           {
-            "name": "Lunch — Simi Restaurant",
-            "lat": 40.7818,
-            "lng": 24.713,
-            "type": "restaurant",
-            "time": "14:00",
-            "wiki": null,
-            "desc": "Elegant waterfront spot with fresh fish and the best Thasian wine list.",
-            "name_el": "Μεσημεριανό — Εστιατόριο Σιμή",
-            "desc_el": "Κομψό παραθαλάσσιο σημείο με φρέσκο ψάρι και την καλύτερη λίστα θασιώτικου κρασιού."
-          },
-          {
             "name": "Chrysi Ammoudia (Golden Beach)",
             "lat": 40.7217,
             "lng": 24.8026,
@@ -169,7 +158,18 @@
           }
         ],
         "title_el": "Χώρα Θάσου & η Αρχαία Αγορά",
-        "overnight_el": "Χώρα Θάσου"
+        "overnight_el": "Χώρα Θάσου",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Simi Restaurant",
+            "area_el": "Εστιατόριο Σιμή",
+            "desc": "Elegant waterfront spot with fresh fish and the best Thasian wine list.",
+            "desc_el": "Κομψό παραθαλάσσιο σημείο με φρέσκο ψάρι και την καλύτερη λίστα θασιώτικου κρασιού.",
+            "after": "Ancient Theatre of Thasos"
+          }
+        ]
       },
       {
         "day": 2,
@@ -231,17 +231,6 @@
             "photo_credit": null
           },
           {
-            "name": "Lunch — Armenaki",
-            "lat": 40.5923,
-            "lng": 24.7746,
-            "type": "restaurant",
-            "time": "14:30",
-            "wiki": null,
-            "desc": "Taverna in the Aliki double bay. Fresh catch, grilled over charcoal.",
-            "name_el": "Μεσημεριανό — Αρμενάκι",
-            "desc_el": "Ταβέρνα στον διπλό κόλπο Αλυκής. Φρέσκο ψάρι, ψημένο στα κάρβουνα."
-          },
-          {
             "name": "Theologos",
             "lat": 40.658895,
             "lng": 24.6927757,
@@ -265,7 +254,18 @@
           }
         ],
         "title_el": "Ορεινά Χωριά & Μάρμαρο",
-        "overnight_el": "Χώρα Θάσου"
+        "overnight_el": "Χώρα Θάσου",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Armenaki",
+            "area_el": "Αρμενάκι",
+            "desc": "Taverna in the Aliki double bay. Fresh catch, grilled over charcoal.",
+            "desc_el": "Ταβέρνα στον διπλό κόλπο Αλυκής. Φρέσκο ψάρι, ψημένο στα κάρβουνα.",
+            "after": "Aliki Archaeological Site"
+          }
+        ]
       },
       {
         "day": 3,

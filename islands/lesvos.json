@@ -118,18 +118,6 @@
             "desc_el": "Φιλοξενεί το Μουσείο Θεόφιλου και το Μουσείο Τεριάντ — δύο συλλογές τέχνης παγκόσμιας κλάσης."
           },
           {
-            "name": "Lunch — Ουζερί Αντώνης (Ταξιάρχες)",
-            "lat": 39.0653,
-            "lng": 26.5639,
-            "type": "restaurant",
-            "time": "13:30",
-            "wiki": null,
-            "desc": "Iconic hilltop ouzeri in the village of Taxiarches (Kagiani), 8 km from Mytilene on the airport road. Sweeping view over the city and the Asia Minor coast. Order the cheese pies, the marinated sardines, the keftedakia with cumin, and the cuttlefish in vinegar.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776895446/ouzeri-antonis-kagiani-lesvos-5-gastronomos_u4sqfn.jpg",
-            "name_el": "Μεσημεριανό — Ουζερί Αντώνης (Ταξιάρχες)",
-            "desc_el": "Εμβληματικό ουζερί στο χωριό Ταξιάρχες (Καγιάνι), 8 χλμ έξω από τη Μυτιλήνη στον δρόμο του αεροδρομίου. Υπέροχη θέα σε όλη την πόλη και τα απέναντι μικρασιατικά παράλια. Παράγγειλε τις τυρόπιτες, τις παστές σαρδέλες, τα κεφτεδάκια με κύμινο και τη σουπιά με ξύδι."
-          },
-          {
             "name": "Agios Isidoros Beach",
             "lat": 38.9678,
             "lng": 26.392,
@@ -140,22 +128,30 @@
             "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776895444/agios_isidoros_jzcche.jpg",
             "name_el": "Παραλία Αγίου Ισιδώρου",
             "desc_el": "Ήρεμη παραλία με ψιλό βότσαλο στη νότια ακτή, απάνεμη και ρηχή. Απογευματινό μπάνιο."
-          },
-          {
-            "name": "Dinner — Το Καφενείον",
-            "lat": 38.9751,
-            "lng": 26.3684,
-            "type": "restaurant",
-            "time": "20:00",
-            "wiki": null,
-            "desc": "«Το Καφενείον» Meat Stories in Plomari — grilled meats and local wine in a traditional setting. Stay overnight in Plomari.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776895440/tokafeneon_h38whr.jpg",
-            "name_el": "Βραδινό — Το Καφενείον",
-            "desc_el": "«Το Καφενείον» Meat Stories στο Πλωμάρι — ψητά κρέατα και τοπικό κρασί σε παραδοσιακή ατμόσφαιρα. Διανυκτέρευση στο Πλωμάρι."
           }
         ],
         "title_el": "Μυτιλήνη & η Ανατολή → Πλωμάρι",
-        "overnight_el": "Πλωμάρι"
+        "overnight_el": "Πλωμάρι",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Ουζερί Αντώνης (Ταξιάρχες)",
+            "area_el": "Ουζερί Αντώνης (Ταξιάρχες)",
+            "desc": "Iconic hilltop ouzeri in the village of Taxiarches (Kagiani), 8 km from Mytilene on the airport road. Sweeping view over the city and the Asia Minor coast. Order the cheese pies, the marinated sardines, the keftedakia with cumin, and the cuttlefish in vinegar.",
+            "desc_el": "Εμβληματικό ουζερί στο χωριό Ταξιάρχες (Καγιάνι), 8 χλμ έξω από τη Μυτιλήνη στον δρόμο του αεροδρομίου. Υπέροχη θέα σε όλη την πόλη και τα απέναντι μικρασιατικά παράλια. Παράγγειλε τις τυρόπιτες, τις παστές σαρδέλες, τα κεφτεδάκια με κύμινο και τη σουπιά με ξύδι.",
+            "after": "Varia Village"
+          },
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Το Καφενείον",
+            "area_el": "Το Καφενείον",
+            "desc": "«Το Καφενείον» Meat Stories in Plomari — grilled meats and local wine in a traditional setting. Stay overnight in Plomari.",
+            "desc_el": "«Το Καφενείον» Meat Stories στο Πλωμάρι — ψητά κρέατα και τοπικό κρασί σε παραδοσιακή ατμόσφαιρα. Διανυκτέρευση στο Πλωμάρι.",
+            "after": "Agios Isidoros Beach"
+          }
+        ]
       },
       {
         "day": 2,

@@ -139,17 +139,6 @@
             }
           },
           {
-            "name": "Lunch — Avli Restaurant",
-            "lat": 35.3702,
-            "lng": 24.474,
-            "type": "restaurant",
-            "time": "13:30",
-            "wiki": null,
-            "desc": "Legendary Cretan restaurant in a restored 17th-century Venetian mansion. Garden courtyard, outstanding Cretan cuisine, local wine. A Rethymno institution.",
-            "name_el": "Μεσημεριανό — Εστιατόριο Αυλή",
-            "desc_el": "Θρυλικό κρητικό εστιατόριο σε αναστηλωμένο ενετικό αρχοντικό του 17ου αιώνα. Αυλή κήπος, εξαιρετική κρητική κουζίνα, ντόπιο κρασί. Θεσμός του Ρεθύμνου."
-          },
-          {
             "name": "Rethymno Beach",
             "lat": 35.3673,
             "lng": 24.4872,
@@ -172,7 +161,18 @@
         "title_el": "Παλιά Πόλη & Φορτέτζα",
         "overnight_el": "Ρέθυμνο",
         "nightlife": "Rethymno's Old Town is the liveliest in Crete after Heraklion. The Venetian port and the lanes behind it fill with bars — <a href=\"https://www.google.com/maps/search/Metropolis+Society+Bar+Rethymno\" target=\"_blank\" rel=\"noopener\">Metropolis Society</a> for DJ sets and cocktails on Nearchou, <a href=\"https://www.google.com/maps/search/Fraoules+Rethymno\" target=\"_blank\" rel=\"noopener\">Fraoules</a> for inventive drinks, and <a href=\"https://www.google.com/maps/search/Ice+Club+Rethymno\" target=\"_blank\" rel=\"noopener\">Ice Club</a> behind the port when you want to dance. It starts late, around midnight.",
-        "nightlife_el": "Η Παλιά Πόλη του Ρεθύμνου είναι η πιο ζωντανή της Κρήτης μετά το Ηράκλειο. Το βενετσιάνικο λιμάνι και τα στενά πίσω του γεμίζουν μπαρ — <a href=\"https://www.google.com/maps/search/Metropolis+Society+Bar+Rethymno\" target=\"_blank\" rel=\"noopener\">Metropolis Society</a> για DJ sets και κοκτέιλ στη Νεάρχου, <a href=\"https://www.google.com/maps/search/Fraoules+Rethymno\" target=\"_blank\" rel=\"noopener\">Fraoules</a> για ευρηματικά ποτά, και <a href=\"https://www.google.com/maps/search/Ice+Club+Rethymno\" target=\"_blank\" rel=\"noopener\">Ice Club</a> πίσω από το λιμάνι όταν θες να χορέψεις. Ξεκινάει αργά, γύρω στα μεσάνυχτα."
+        "nightlife_el": "Η Παλιά Πόλη του Ρεθύμνου είναι η πιο ζωντανή της Κρήτης μετά το Ηράκλειο. Το βενετσιάνικο λιμάνι και τα στενά πίσω του γεμίζουν μπαρ — <a href=\"https://www.google.com/maps/search/Metropolis+Society+Bar+Rethymno\" target=\"_blank\" rel=\"noopener\">Metropolis Society</a> για DJ sets και κοκτέιλ στη Νεάρχου, <a href=\"https://www.google.com/maps/search/Fraoules+Rethymno\" target=\"_blank\" rel=\"noopener\">Fraoules</a> για ευρηματικά ποτά, και <a href=\"https://www.google.com/maps/search/Ice+Club+Rethymno\" target=\"_blank\" rel=\"noopener\">Ice Club</a> πίσω από το λιμάνι όταν θες να χορέψεις. Ξεκινάει αργά, γύρω στα μεσάνυχτα.",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Avli Restaurant",
+            "area_el": "Εστιατόριο Αυλή",
+            "desc": "Legendary Cretan restaurant in a restored 17th-century Venetian mansion. Garden courtyard, outstanding Cretan cuisine, local wine. A Rethymno institution.",
+            "desc_el": "Θρυλικό κρητικό εστιατόριο σε αναστηλωμένο ενετικό αρχοντικό του 17ου αιώνα. Αυλή κήπος, εξαιρετική κρητική κουζίνα, ντόπιο κρασί. Θεσμός του Ρεθύμνου.",
+            "after": "Old Town Rethymno"
+          }
+        ]
       },
       {
         "day": 2,
@@ -409,20 +409,20 @@
             "desc": "Sandy beach in a quiet village east of Bali. Good facilities, calm water, and a better-value alternative to the more crowded resorts.",
             "name_el": "Παραλία Πάνορμος",
             "desc_el": "Αμμώδης παραλία σε ήσυχο χωριό ανατολικά του Μπαλί. Καλές υποδομές, ήρεμα νερά, και καλύτερη αξία σε σύγκριση με τα πιο πολυσύχναστα θέρετρα."
-          },
-          {
-            "name": "Rethymno — Final Lunch",
-            "lat": 35.3704,
-            "lng": 24.4773,
-            "type": "restaurant",
-            "time": "14:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJm4gFCwp1mxQRK_PwoKt1nrQ",
-            "desc": "Return to Rethymno for a final lunch at the harbour. The fried gavros (anchovies) and local raki are the perfect send-off.",
-            "name_el": "Ρέθυμνο — Τελευταίο Μεσημεριανό",
-            "desc_el": "Επιστροφή στο Ρέθυμνο για τελευταίο μεσημεριανό στο λιμάνι. Ο τηγανητός γαύρος και το ντόπιο ρακί είναι το τέλειο αντίο."
           }
         ],
-        "title_el": "Παραλίες & Αναχώρηση"
+        "title_el": "Παραλίες & Αναχώρηση",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Rethymno",
+            "area_el": "Ρέθυμνο",
+            "desc": "Return to Rethymno for a final lunch at the harbour. The fried gavros (anchovies) and local raki are the perfect send-off.",
+            "desc_el": "Επιστροφή στο Ρέθυμνο για τελευταίο μεσημεριανό στο λιμάνι. Ο τηγανητός γαύρος και το ντόπιο ρακί είναι το τέλειο αντίο.",
+            "after": "Panormo Beach"
+          }
+        ]
       }
     ],
     "title_el": "Πρόγραμμα 4 Ημερών στο Ρέθυμνο",

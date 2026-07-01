@@ -1270,17 +1270,21 @@ def render_body(key, data, meta, lang='en'):
                 drive = pick(s, 'drive', lang)
                 drive_html = f'<br><span class="seo-stop-drive">🚗 {esc(drive)}</span>' if drive else ''
                 stop_items.append(f'<li><strong>{stime} · {sname}</strong>{drive_html}<br>{sdesc}</li>')
-            # Meal-timing cue at the meal's slot in the route
-            _food = day.get('food')
-            if _food and (_food.get('meal') or _food.get('desc')):
-                _meal = ((_food.get('meal_el') if lang == 'el' else _food.get('meal')) or '').lower()
-                _area = (_food.get('area_el') if lang == 'el' else _food.get('area')) or ''
+            # Meal-timing cues at each meal's slot in the route
+            _foods = day.get('food')
+            _foods = _foods if isinstance(_foods, list) else ([_foods] if _foods else [])
+            _cuelist = []
+            for f in _foods:
+                if not (f.get('meal') or f.get('desc')): continue
+                _meal = ((f.get('meal_el') if lang == 'el' else f.get('meal')) or '').lower()
+                _area = (f.get('area_el') if lang == 'el' else f.get('area')) or ''
                 _lab = 'Στάση για' if lang == 'el' else 'Stop for'
                 _see = 'δες «Φαγητό & Ποτό» πιο κάτω' if lang == 'el' else 'see Eat & Drink below'
                 _cue = f'<li class="seo-meal-cue">🍴 {_lab} {esc(_meal)}' + (f' · {esc(_area)}' if _area else '') + f' — {_see}</li>'
-                _ai = next((i for i, x in enumerate(stops) if x.get('name') == _food.get('after')), None)
-                if _ai is not None: stop_items.insert(_ai + 1, _cue)
-                else: stop_items.append(_cue)
+                _ai = next((i for i, x in enumerate(stops) if x.get('name') == f.get('after')), None)
+                _cuelist.append((_ai if _ai is not None else len(stops) - 1, _cue))
+            for _ai, _cue in sorted(_cuelist, key=lambda t: -t[0]):
+                stop_items.insert(_ai + 1, _cue)
 
             overnight_label = 'Overnight' if lang == 'en' else 'Διανυκτέρευση'
             drive_label = 'Drive' if lang == 'en' else 'Οδήγηση'
@@ -1301,10 +1305,10 @@ def render_body(key, data, meta, lang='en'):
                 meta_parts.append(f'{drive_label}: {km} km, ~{drive_mins} min')
             meta_line_html = f'<p class="seo-day-meta">{" · ".join(meta_parts)}</p>' if meta_parts else ''
             # Eat & Drink block (food + nightlife), separated from the routed stops
-            food = day.get('food')
             nightlife_txt = safe_html(pick(day, 'nightlife', lang))
             ed_rows = ''
-            if food:
+            for food in _foods:
+                if not (food.get('meal') or food.get('desc')): continue
                 meal = (food.get('meal_el') if lang == 'el' else food.get('meal')) or ('Φαγητό' if lang == 'el' else 'Food')
                 area = (food.get('area_el') if lang == 'el' else food.get('area')) or ''
                 fdesc = safe_html(pick(food, 'desc', lang))

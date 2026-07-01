@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-06-30';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-07-01';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -1377,15 +1377,15 @@ function buildIslandPage(data, key) {
         </div>
       </div>`;
     });
-    // Meal-timing cue placed in the route at the meal's slot (food itself is in the Eat & Drink panel below)
-    const _f = d.food;
-    if (_f && (_f.meal || _f.desc)) {
-      const _meal = ((isEl ? _f.meal_el : _f.meal) || '').toLowerCase();
-      const _area = (isEl ? _f.area_el : _f.area) || '';
-      const _cue = `<div class="itin-meal-cue">🍴 ${isEl ? 'Στάση για' : 'Stop for'} ${_meal}${_area ? ' · ' + _area : ''} — ${isEl ? 'δες «Φαγητό & Ποτό» πιο κάτω' : 'see Eat & Drink below'}</div>`;
-      const _idx = _f.after ? d.stops.findIndex(x => x.name === _f.after) : -1;
-      if (_idx >= 0) stopArr.splice(_idx + 1, 0, _cue); else stopArr.push(_cue);
-    }
+    // Meal-timing cues placed in the route at each meal's slot (food itself is in the Eat & Drink panel below)
+    const _foods = Array.isArray(d.food) ? d.food : (d.food ? [d.food] : []);
+    const _cues = _foods.filter(f => f && (f.meal || f.desc)).map(f => {
+      const _meal = ((isEl ? f.meal_el : f.meal) || '').toLowerCase();
+      const _area = (isEl ? f.area_el : f.area) || '';
+      return { idx: f.after ? d.stops.findIndex(x => x.name === f.after) : -1,
+        html: `<div class="itin-meal-cue">🍴 ${isEl ? 'Στάση για' : 'Stop for'} ${_meal}${_area ? ' · ' + _area : ''} — ${isEl ? 'δες «Φαγητό & Ποτό» πιο κάτω' : 'see Eat & Drink below'}</div>` };
+    });
+    _cues.sort((a, b) => b.idx - a.idx).forEach(c => { if (c.idx >= 0) stopArr.splice(c.idx + 1, 0, c.html); else stopArr.push(c.html); });
     const stops = stopArr.join('');
     const driveInfo = d.km ? `<span class="itin-day-meta">${d.km} ${t('common.km')} · ${d.drive_mins} ${t('common.mindrive')}</span>` : '';
     let overnightHtml = '';
@@ -1420,23 +1420,22 @@ function buildIslandPage(data, key) {
         }
       }
     }
-    // Eat & Drink panel — food + nightlife, separated from the routed sightseeing stops.
-    const _el = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+    // Eat & Drink panel — one row per meal + nightlife, separated from the routed stops.
     let edRows = '';
-    const foodObj = d.food;
-    if (foodObj) {
-      const meal = (_el ? foodObj.meal_el : foodObj.meal) || (_el ? 'Φαγητό' : 'Food');
-      const area = (_el ? foodObj.area_el : foodObj.area) || '';
-      const fdesc = (_el ? foodObj.desc_el : foodObj.desc) || foodObj.desc || '';
+    _foods.forEach(f => {
+      if (!(f && (f.meal || f.desc))) return;
+      const meal = (isEl ? f.meal_el : f.meal) || (isEl ? 'Φαγητό' : 'Food');
+      const area = (isEl ? f.area_el : f.area) || '';
+      const fdesc = (isEl ? f.desc_el : f.desc) || f.desc || '';
       const head = area ? `${meal} · ${area}` : meal;
       edRows += `<div class="ed-row"><span class="ed-icon">🍴</span><div class="ed-text"><div class="ed-head">${head}</div><div class="ed-body">${fdesc}</div></div></div>`;
-    }
+    });
     const nlText = pickLang(d, 'nightlife');
     if (nlText) {
-      const nlTitle = _el ? 'Νυχτερινή ζωή' : 'Nightlife';
+      const nlTitle = isEl ? 'Νυχτερινή ζωή' : 'Nightlife';
       edRows += `<div class="ed-row"><span class="ed-icon">🍸</span><div class="ed-text"><div class="ed-head">${nlTitle}</div><div class="ed-body">${nlText}</div></div></div>`;
     }
-    const eatDrink = edRows ? `<div class="itin-eatdrink"><div class="ed-title">${_el ? 'Φαγητό & Ποτό' : 'Eat & Drink'}</div>${edRows}</div>` : '';
+    const eatDrink = edRows ? `<div class="itin-eatdrink"><div class="ed-title">${isEl ? 'Φαγητό & Ποτό' : 'Eat & Drink'}</div>${edRows}</div>` : '';
     return `<div class="itin-day-card" id="itin-day-card-${d.day}">
       <div class="itin-day-header" style="border-left:4px solid ${d.color}">
         <div class="itin-day-header-main">

@@ -150,17 +150,6 @@
             }
           },
           {
-            "name": "Dinner in Chora",
-            "lat": 36.1492961,
-            "lng": 22.9877193,
-            "type": "restaurant",
-            "time": "20:00",
-            "wiki": null,
-            "desc": "Dinner at one of the tavernas in the Chora lanes. Try the local honey (thyme honey from Kythira is outstanding), the cheese pies, and the local wine.",
-            "name_el": "Δείπνο στη Χώρα",
-            "desc_el": "Δείπνο σε μία από τις ταβέρνες στα στενά της Χώρας. Δοκίμασε το ντόπιο μέλι (το θυμαρίσιο μέλι των Κυθήρων είναι εξαιρετικό), τα τυροπιτάκια, και το ντόπιο κρασί."
-          },
-          {
             "name": "Drive back to Avlemonas",
             "lat": 36.2275,
             "lng": 23.0807,
@@ -173,7 +162,18 @@
           }
         ],
         "title_el": "Χώρα & το Κάστρο",
-        "overnight_el": "Αυλέμωνας"
+        "overnight_el": "Αυλέμωνας",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Chora",
+            "area_el": "Χώρα",
+            "desc": "Dinner at one of the tavernas in the Chora lanes. Try the local honey (thyme honey from Kythira is outstanding), the cheese pies, and the local wine.",
+            "desc_el": "Δείπνο σε μία από τις ταβέρνες στα στενά της Χώρας. Δοκίμασε το ντόπιο μέλι (το θυμαρίσιο μέλι των Κυθήρων είναι εξαιρετικό), τα τυροπιτάκια, και το ντόπιο κρασί.",
+            "after": "Kapsali Beach"
+          }
+        ]
       },
       {
         "day": 2,

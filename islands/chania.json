@@ -118,18 +118,6 @@
             "desc_el": "Το παλαιότερο μέρος των Χανίων, με μινωικά ερείπια κάτω από βενετσιάνικα τείχη. Εξαιρετική θέα προς το λιμάνι και τα Λευκά Όρη."
           },
           {
-            "name": "Lunch — To Maridaki",
-            "lat": 35.5159,
-            "lng": 24.0214,
-            "type": "restaurant",
-            "time": "13:30",
-            "wiki": null,
-            "desc": "Best fish taverna in Chania Town, right on the Venetian harbour. Grilled fish, local wine, incredible setting. Book ahead in summer.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1777442841/4_xogzfz.jpg",
-            "name_el": "Μεσημεριανό — Το Μαριδάκι",
-            "desc_el": "Η καλύτερη ψαροταβέρνα στα Χανιά, ακριβώς στο Βενετσιάνικο λιμάνι. Ψάρι στη σχάρα, τοπικό κρασί, εκπληκτικό σκηνικό. Κάνε κράτηση το καλοκαίρι."
-          },
-          {
             "name": "Nea Chora Beach",
             "lat": 35.5137,
             "lng": 24.0059,
@@ -140,23 +128,32 @@
             "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1777442840/5_kyw3i0.jpg",
             "name_el": "Παραλία Νέα Χώρα",
             "desc_el": "Παραλία της πόλης 15 λεπτά με τα πόδια από την παλιά πόλη. Αμμώδης, ρηχή, οικογενειακή. Καλή για ένα απογευματινό μπάνιο πριν το δείπνο."
-          },
-          {
-            "name": "Dinner — Tamam",
-            "lat": 35.5165,
-            "lng": 24.0164,
-            "type": "restaurant",
-            "time": "20:00",
-            "wiki": null,
-            "desc": "Award-winning Cretan-Ottoman fusion restaurant in a converted Turkish bathhouse in the old town. Outstanding mezedes. Book ahead.",
-            "name_el": "Δείπνο — Ταμάμ",
-            "desc_el": "Βραβευμένο εστιατόριο κρητικής-οθωμανικής κουζίνας σε ανακαινισμένο τουρκικό χαμάμ στην παλιά πόλη. Εξαιρετικοί μεζέδες. Κάνε κράτηση."
           }
         ],
         "title_el": "Παλιά Πόλη Χανίων",
         "overnight_el": "Χανιά",
         "nightlife": "Chania's <a href=\"https://www.google.com/maps/search/Old+Venetian+Harbour+Chania\" target=\"_blank\" rel=\"noopener\">Old Venetian Harbour</a> is the stage — a 700m waterfront curve of bars under floodlit Venetian façades and the Egyptian lighthouse. <a href=\"https://www.google.com/maps/search/Pallas+Chania\" target=\"_blank\" rel=\"noopener\">Pallas</a> for rooftop harbour views, <a href=\"https://www.google.com/maps/search/Sinagogi+Cocktail+Bar+Chania\" target=\"_blank\" rel=\"noopener\">Sinagogi</a> for cocktails in a former synagogue's courtyard, <a href=\"https://www.google.com/maps/search/Fagotto+Jazz+Bar+Chania\" target=\"_blank\" rel=\"noopener\">Fagotto</a> for late jazz. Wander the promenade and pick your mood.",
-        "nightlife_el": "Το <a href=\"https://www.google.com/maps/search/Old+Venetian+Harbour+Chania\" target=\"_blank\" rel=\"noopener\">Παλιό Βενετσιάνικο Λιμάνι</a> των Χανίων είναι η σκηνή — μια καμπύλη 700μ. με μπαρ κάτω από φωτισμένες βενετσιάνικες προσόψεις και τον αιγυπτιακό φάρο. <a href=\"https://www.google.com/maps/search/Pallas+Chania\" target=\"_blank\" rel=\"noopener\">Pallas</a> για θέα από ταράτσα, <a href=\"https://www.google.com/maps/search/Sinagogi+Cocktail+Bar+Chania\" target=\"_blank\" rel=\"noopener\">Sinagogi</a> για κοκτέιλ στην αυλή μιας πρώην συναγωγής, <a href=\"https://www.google.com/maps/search/Fagotto+Jazz+Bar+Chania\" target=\"_blank\" rel=\"noopener\">Fagotto</a> για βραδινή τζαζ. Περπάτα στην προκυμαία και διάλεξε διάθεση."
+        "nightlife_el": "Το <a href=\"https://www.google.com/maps/search/Old+Venetian+Harbour+Chania\" target=\"_blank\" rel=\"noopener\">Παλιό Βενετσιάνικο Λιμάνι</a> των Χανίων είναι η σκηνή — μια καμπύλη 700μ. με μπαρ κάτω από φωτισμένες βενετσιάνικες προσόψεις και τον αιγυπτιακό φάρο. <a href=\"https://www.google.com/maps/search/Pallas+Chania\" target=\"_blank\" rel=\"noopener\">Pallas</a> για θέα από ταράτσα, <a href=\"https://www.google.com/maps/search/Sinagogi+Cocktail+Bar+Chania\" target=\"_blank\" rel=\"noopener\">Sinagogi</a> για κοκτέιλ στην αυλή μιας πρώην συναγωγής, <a href=\"https://www.google.com/maps/search/Fagotto+Jazz+Bar+Chania\" target=\"_blank\" rel=\"noopener\">Fagotto</a> για βραδινή τζαζ. Περπάτα στην προκυμαία και διάλεξε διάθεση.",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "To Maridaki",
+            "area_el": "Το Μαριδάκι",
+            "desc": "Best fish taverna in Chania Town, right on the Venetian harbour. Grilled fish, local wine, incredible setting. Book ahead in summer.",
+            "desc_el": "Η καλύτερη ψαροταβέρνα στα Χανιά, ακριβώς στο Βενετσιάνικο λιμάνι. Ψάρι στη σχάρα, τοπικό κρασί, εκπληκτικό σκηνικό. Κάνε κράτηση το καλοκαίρι.",
+            "after": "Kastelli Hill"
+          },
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Tamam",
+            "area_el": "Ταμάμ",
+            "desc": "Award-winning Cretan-Ottoman fusion restaurant in a converted Turkish bathhouse in the old town. Outstanding mezedes. Book ahead.",
+            "desc_el": "Βραβευμένο εστιατόριο κρητικής-οθωμανικής κουζίνας σε ανακαινισμένο τουρκικό χαμάμ στην παλιά πόλη. Εξαιρετικοί μεζέδες. Κάνε κράτηση.",
+            "after": "Nea Chora Beach"
+          }
+        ]
       },
       {
         "day": 2,

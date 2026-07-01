@@ -148,21 +148,21 @@
             "desc": "Ancient thermal springs (52°C) — bathed in since antiquity, housed in a 19th-century spa hotel. Day passes available.",
             "name_el": "Ιαματικά Λουτρά",
             "desc_el": "Αρχαίες ιαματικές πηγές (52°C) — χρησιμοποιούνται από την αρχαιότητα, στεγάζονται σε λουτρικό ξενοδοχείο του 19ου αιώνα. Διαθέσιμα ημερήσια εισιτήρια."
-          },
-          {
-            "name": "Dinner — Karnagio",
-            "lat": 37.4483,
-            "lng": 24.4366,
-            "type": "restaurant",
-            "time": "20:30",
-            "wiki": null,
-            "desc": "Friendly taverna on the Loutra waterfront, the kind of place where the menu changes daily based on what came off the boats that morning. Fresh fish straight from the pier, grilled simply, served with horta and a carafe of house wine.",
-            "name_el": "Δείπνο — Καρνάγιο",
-            "desc_el": "Φιλική ταβέρνα στο παραλιακό των Λουτρών, από εκείνες που το μενού αλλάζει καθημερινά ανάλογα με τι έπιασαν τα καΐκια. Φρέσκο ψάρι κατευθείαν από την προκυμαία, ψημένο απλά, με χόρτα και χύμα κρασί."
           }
         ],
         "title_el": "Χώρα & Ιαματικά Λουτρά",
-        "overnight_el": "Λουτρά"
+        "overnight_el": "Λουτρά",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Karnagio",
+            "area_el": "Καρνάγιο",
+            "desc": "Friendly taverna on the Loutra waterfront, the kind of place where the menu changes daily based on what came off the boats that morning. Fresh fish straight from the pier, grilled simply, served with horta and a carafe of house wine.",
+            "desc_el": "Φιλική ταβέρνα στο παραλιακό των Λουτρών, από εκείνες που το μενού αλλάζει καθημερινά ανάλογα με τι έπιασαν τα καΐκια. Φρέσκο ψάρι κατευθείαν από την προκυμαία, ψημένο απλά, με χόρτα και χύμα κρασί.",
+            "after": "Loutra Thermal Baths"
+          }
+        ]
       },
       {
         "day": 2,

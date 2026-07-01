@@ -120,17 +120,6 @@
             }
           },
           {
-            "name": "Lunch — Volcano",
-            "lat": 39.198,
-            "lng": 20.186,
-            "type": "restaurant",
-            "time": "13:30",
-            "wiki": null,
-            "desc": "Seafood taverna on Gaios' main square, with tables that spill onto the cobblestones. Fresh catch of the day on display behind the counter, excellent local Ionian wines, and the kind of unhurried lunch that runs into mid-afternoon.",
-            "name_el": "Μεσημεριανό — Volcano",
-            "desc_el": "Ψαροταβέρνα στην κύρια πλατεία του Γάιου, με τραπέζια που ξεχύνονται στο καλντερίμι. Φρέσκια ψαριά της ημέρας στη βιτρίνα, εξαιρετικά τοπικά ιόνια κρασιά, και αυτό το είδος αβίαστου μεσημεριανού που τραβά μέχρι αργά."
-          },
-          {
             "name": "Mongonissi Beach",
             "lat": 39.1822,
             "lng": 20.2059,
@@ -140,23 +129,32 @@
             "desc": "Sheltered sandy bay at the southern tip, 4 km from Gaios on a narrow road. The calmest swimming on Paxos — protected from wind on all sides — and a couple of small tavernas at the back of the beach for grilled octopus and a cold beer.",
             "name_el": "Παραλία Μογγονήσι",
             "desc_el": "Προστατευμένος αμμώδης κόλπος στο νότιο άκρο, 4 χλμ από τον Γάιο σε στενό δρόμο. Το πιο ήρεμο κολύμπι στους Παξούς — προφυλαγμένος από κάθε άνεμο — και δύο μικρές ταβέρνες στο πίσω μέρος της παραλίας για ψητό χταπόδι και κρύα μπύρα."
-          },
-          {
-            "name": "Dinner — Taka Taka Mam",
-            "lat": 39.198,
-            "lng": 20.186,
-            "type": "restaurant",
-            "time": "20:30",
-            "wiki": null,
-            "desc": "Tiny family-run spot with dining tables tucked into a lemon grove. Grilled meats, garden-fresh vegetables, no menu — they tell you what they cooked that day. Book by phone the morning of; there are only six tables.",
-            "name_el": "Δείπνο — Taka Taka Mam",
-            "desc_el": "Μικροσκοπικό οικογενειακό στέκι με τραπέζια στημένα σε λεμονόδεντρα. Ψητά κρέατα, λαχανικά του κήπου, χωρίς μενού — σου λένε τι μαγείρεψαν τη μέρα. Κράτηση το πρωί στο τηλέφωνο· έχει μόνο έξι τραπέζια."
           }
         ],
         "title_el": "Γάιος & η Ανατολική Ακτή",
         "overnight_el": "Γάιος",
         "nightlife": "Tiny Paxos is mellow lounge bars, not clubs. The <a href=\"https://www.google.com/maps/search/Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Gaios</a> waterfront is the scene — <a href=\"https://www.google.com/maps/search/Old+Harbor+Bar+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Old Harbor Bar</a> for cocktails and meze over the water, Capriccio for something more polished. There's exactly one club, <a href=\"https://www.google.com/maps/search/Diana+Club+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Diana</a>, with the occasional band or DJ.",
-        "nightlife_el": "Οι μικροί Παξοί είναι χαλαρά lounge bars, όχι clubs. Η προκυμαία του <a href=\"https://www.google.com/maps/search/Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Γάιου</a> είναι η σκηνή — <a href=\"https://www.google.com/maps/search/Old+Harbor+Bar+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Old Harbor Bar</a> για κοκτέιλ και μεζέ πάνω από το νερό, Capriccio για κάτι πιο φροντισμένο. Υπάρχει ακριβώς ένα club, το <a href=\"https://www.google.com/maps/search/Diana+Club+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Diana</a>, με καμιά μπάντα ή DJ πού και πού."
+        "nightlife_el": "Οι μικροί Παξοί είναι χαλαρά lounge bars, όχι clubs. Η προκυμαία του <a href=\"https://www.google.com/maps/search/Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Γάιου</a> είναι η σκηνή — <a href=\"https://www.google.com/maps/search/Old+Harbor+Bar+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Old Harbor Bar</a> για κοκτέιλ και μεζέ πάνω από το νερό, Capriccio για κάτι πιο φροντισμένο. Υπάρχει ακριβώς ένα club, το <a href=\"https://www.google.com/maps/search/Diana+Club+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Diana</a>, με καμιά μπάντα ή DJ πού και πού.",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Volcano",
+            "area_el": "Volcano",
+            "desc": "Seafood taverna on Gaios' main square, with tables that spill onto the cobblestones. Fresh catch of the day on display behind the counter, excellent local Ionian wines, and the kind of unhurried lunch that runs into mid-afternoon.",
+            "desc_el": "Ψαροταβέρνα στην κύρια πλατεία του Γάιου, με τραπέζια που ξεχύνονται στο καλντερίμι. Φρέσκια ψαριά της ημέρας στη βιτρίνα, εξαιρετικά τοπικά ιόνια κρασιά, και αυτό το είδος αβίαστου μεσημεριανού που τραβά μέχρι αργά.",
+            "after": "Agios Nikolaos islet"
+          },
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Taka Taka Mam",
+            "area_el": "Taka Taka Mam",
+            "desc": "Tiny family-run spot with dining tables tucked into a lemon grove. Grilled meats, garden-fresh vegetables, no menu — they tell you what they cooked that day. Book by phone the morning of; there are only six tables.",
+            "desc_el": "Μικροσκοπικό οικογενειακό στέκι με τραπέζια στημένα σε λεμονόδεντρα. Ψητά κρέατα, λαχανικά του κήπου, χωρίς μενού — σου λένε τι μαγείρεψαν τη μέρα. Κράτηση το πρωί στο τηλέφωνο· έχει μόνο έξι τραπέζια.",
+            "after": "Mongonissi Beach"
+          }
+        ]
       },
       {
         "day": 2,

@@ -156,21 +156,21 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:20020800_Chora_Samothrace_island_Thrace_Greece.jpg",
               "source": "Wikimedia Commons"
             }
-          },
-          {
-            "name": "Dinner — Lefkada",
-            "lat": 40.4711,
-            "lng": 25.5312,
-            "type": "restaurant",
-            "time": "20:30",
-            "wiki": null,
-            "desc": "Traditional taverna in Chora that's been run by the same family for three generations. Goat stew slow-cooked in lemon broth, local cheese, Samothracian wild herbs in everything. Small space, six tables — reserve in summer, particularly weekends when Athenians on the ferry from Alexandroupoli arrive.",
-            "name_el": "Δείπνο — Λευκάδα",
-            "desc_el": "Παραδοσιακή ταβέρνα στη Χώρα, σε διαχείριση της ίδιας οικογένειας τρεις γενιές. Κατσίκι στιφάδο σιγομαγειρεμένο σε ζωμό λεμονιού, τοπικό τυρί, σαμοθρακίτικα άγρια βότανα παντού. Μικρός χώρος, έξι τραπέζια — κάνε κράτηση το καλοκαίρι, ιδίως τα σαββατοκύριακα όταν φτάνουν Αθηναίοι με το πλοίο από Αλεξανδρούπολη."
           }
         ],
         "title_el": "Παλαιόπολη & το Ιερό",
-        "overnight_el": "Χώρα"
+        "overnight_el": "Χώρα",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Lefkada",
+            "area_el": "Λευκάδα",
+            "desc": "Traditional taverna in Chora that's been run by the same family for three generations. Goat stew slow-cooked in lemon broth, local cheese, Samothracian wild herbs in everything. Small space, six tables — reserve in summer, particularly weekends when Athenians on the ferry from Alexandroupoli arrive.",
+            "desc_el": "Παραδοσιακή ταβέρνα στη Χώρα, σε διαχείριση της ίδιας οικογένειας τρεις γενιές. Κατσίκι στιφάδο σιγομαγειρεμένο σε ζωμό λεμονιού, τοπικό τυρί, σαμοθρακίτικα άγρια βότανα παντού. Μικρός χώρος, έξι τραπέζια — κάνε κράτηση το καλοκαίρι, ιδίως τα σαββατοκύριακα όταν φτάνουν Αθηναίοι με το πλοίο από Αλεξανδρούπολη.",
+            "after": "Chora"
+          }
+        ]
       },
       {
         "day": 2,
@@ -205,17 +205,6 @@
             "desc_el": "Οι διάσημες πισίνες καταρράκτη (βάθρες). Πεζοπορία 30 λεπτών στο ποτάμι περνώντας παγωμένες πισίνες κολύμβησης και καταρράκτες. Μοναδικό στο Αιγαίο."
           },
           {
-            "name": "Lunch — 1900",
-            "lat": 40.5093,
-            "lng": 25.5973,
-            "type": "restaurant",
-            "time": "15:00",
-            "wiki": null,
-            "desc": "Taverna in the heart of Therma. The menu is short and old-style: kid goat slow-roasted with herbs, local goat cheese, wild greens from the slopes above the village. Ask what was cooked that morning — it's usually one or two dishes only, the way it should be.",
-            "name_el": "Μεσημεριανό — 1900",
-            "desc_el": "Ταβέρνα στην καρδιά των Θερμών. Το μενού είναι σύντομο και παλιάς κοπής: κατσικάκι σιγοψημένο με βότανα, τοπικό κατσικίσιο τυρί, άγρια χόρτα από τις πλαγιές πάνω από το χωριό. Ρώτα τι μαγειρεύτηκε εκείνο το πρωί — συνήθως ένα ή δύο πιάτα μόνο, όπως πρέπει."
-          },
-          {
             "name": "Therma Thermal Springs",
             "lat": 40.5112,
             "lng": 25.5958,
@@ -239,7 +228,18 @@
           }
         ],
         "title_el": "Καταρράκτες & Βάθρες",
-        "overnight_el": "Χώρα"
+        "overnight_el": "Χώρα",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "1900",
+            "area_el": "1900",
+            "desc": "Taverna in the heart of Therma. The menu is short and old-style: kid goat slow-roasted with herbs, local goat cheese, wild greens from the slopes above the village. Ask what was cooked that morning — it's usually one or two dishes only, the way it should be.",
+            "desc_el": "Ταβέρνα στην καρδιά των Θερμών. Το μενού είναι σύντομο και παλιάς κοπής: κατσικάκι σιγοψημένο με βότανα, τοπικό κατσικίσιο τυρί, άγρια χόρτα από τις πλαγιές πάνω από το χωριό. Ρώτα τι μαγειρεύτηκε εκείνο το πρωί — συνήθως ένα ή δύο πιάτα μόνο, όπως πρέπει.",
+            "after": "Fonias River Vathres"
+          }
+        ]
       },
       {
         "day": 3,

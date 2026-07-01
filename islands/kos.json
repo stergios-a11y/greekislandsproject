@@ -221,17 +221,6 @@
             "desc_el": "Ερείπια παλαιοχριστιανικής βασιλικής στην παραλία, με το μικροσκοπικό νησάκι Κάστρι ακριβώς απέναντι — μπορείς να κολυμπήσεις και να επισκεφτείς το μικρό εκκλησάκι στην κορυφή. Ένα από τα πιο φωτογενή σημεία του νησιού."
           },
           {
-            "name": "Lunch — Kefalos Village",
-            "lat": 36.7445146,
-            "lng": 26.9591755,
-            "type": "restaurant",
-            "time": "13:30",
-            "wiki": null,
-            "desc": "Traditional hilltop village at the southwest tip — the authentic alternative to the resorts on the coast below. Excellent small tavernas with views over the bay. Three FNL Best Restaurant Awards 2026 winners on Kos: <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJKzx21jz9vRQRBjkoXG0bo4k\" target=\"_blank\" rel=\"noopener noreferrer\">Mosaico Gastro Wine Bar</a> at Horizon Beach Resort (★★), Cuvee at Aqua Blu Hotel (★, Modern Greek), and Albergo Gelsomino on the Kos Town seafront (★, Modern Bistro).",
-            "name_el": "Μεσημεριανό — Χωριό Κεφάλος",
-            "desc_el": "Παραδοσιακό χωριό σε λόφο στο νοτιοδυτικό άκρο — η αυθεντική εναλλακτική στα θέρετρα της παρακάτω ακτής. Εξαιρετικές μικρές ταβέρνες με θέα στον κόλπο. Τρεις νικητές των Βραβείων FNL 2026 στην Κω: το <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJKzx21jz9vRQRBjkoXG0bo4k\" target=\"_blank\" rel=\"noopener noreferrer\">Mosaico Gastro Wine Bar</a> στο Horizon Beach Resort (★★), το Cuvee στο Aqua Blu Hotel (★) και το Albergo Gelsomino στην παραλιακή της Κω (★)."
-          },
-          {
             "name": "Camel Beach",
             "lat": 36.7644,
             "lng": 27.095,
@@ -255,7 +244,18 @@
           }
         ],
         "title_el": "Παραλίες της Νότιας Ακτής",
-        "overnight_el": "Πόλη της Κω"
+        "overnight_el": "Πόλη της Κω",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Kefalos Village",
+            "area_el": "Χωριό Κεφάλος",
+            "desc": "Traditional hilltop village at the southwest tip — the authentic alternative to the resorts on the coast below. Excellent small tavernas with views over the bay. Three FNL Best Restaurant Awards 2026 winners on Kos: <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJKzx21jz9vRQRBjkoXG0bo4k\" target=\"_blank\" rel=\"noopener noreferrer\">Mosaico Gastro Wine Bar</a> at Horizon Beach Resort (★★), Cuvee at Aqua Blu Hotel (★, Modern Greek), and Albergo Gelsomino on the Kos Town seafront (★, Modern Bistro).",
+            "desc_el": "Παραδοσιακό χωριό σε λόφο στο νοτιοδυτικό άκρο — η αυθεντική εναλλακτική στα θέρετρα της παρακάτω ακτής. Εξαιρετικές μικρές ταβέρνες με θέα στον κόλπο. Τρεις νικητές των Βραβείων FNL 2026 στην Κω: το <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJKzx21jz9vRQRBjkoXG0bo4k\" target=\"_blank\" rel=\"noopener noreferrer\">Mosaico Gastro Wine Bar</a> στο Horizon Beach Resort (★★), το Cuvee στο Aqua Blu Hotel (★) και το Albergo Gelsomino στην παραλιακή της Κω (★).",
+            "after": "Agios Stefanos & Kastri Islet"
+          }
+        ]
       },
       {
         "day": 3,

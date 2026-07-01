@@ -150,17 +150,6 @@
             "desc_el": "Ήρεμη αμμώδης παραλία στον προστατευμένο κόλπο της Ελούντας. Τα νερά εδώ είναι αισθητά πιο ζεστά και πιο ήρεμα από την ανοιχτή θάλασσα. Ιδανική για οικογένειες."
           },
           {
-            "name": "Dinner — Ferryman Elounda",
-            "lat": 35.2614,
-            "lng": 25.7234,
-            "type": "restaurant",
-            "time": "20:00",
-            "wiki": null,
-            "desc": "One of the best seafood restaurants in Lasithi, right on the Elounda waterfront. Try the lobster pasta — a local speciality. Then drive back to Agios Nikolaos for the night, just 15 minutes east.",
-            "name_el": "Δείπνο — Ferryman Elounda",
-            "desc_el": "Ένα από τα καλύτερα εστιατόρια ψαρικών στο Λασίθι, στην παραλιακή της Ελούντας. Δοκίμασε τα μακαρόνια με αστακό — τοπική σπεσιαλιτέ. Μετά πίσω στον Άγιο Νικόλαο για διανυκτέρευση, μόλις 15 λεπτά ανατολικά."
-          },
-          {
             "name": "Return to Agios Nikolaos",
             "lat": 35.1908,
             "lng": 25.7174,
@@ -175,7 +164,18 @@
         "title_el": "Άγιος Νικόλαος & Ελούντα",
         "overnight_el": "Άγιος Νικόλαος",
         "nightlife": "Agios Nikolaos packs eastern Crete's best nightlife around <a href=\"https://www.google.com/maps/search/Lake+Voulismeni+Agios+Nikolaos\" target=\"_blank\" rel=\"noopener\">Lake Voulismeni</a> and the harbour. Sunset cocktails lakeside at <a href=\"https://www.google.com/maps/search/Arc+Cocktail+Bar+Agios+Nikolaos\" target=\"_blank\" rel=\"noopener\">Arc</a> or on the water at the Boathouse, then the clubs along Koundourou Street — <a href=\"https://www.google.com/maps/search/Senso+Club+Agios+Nikolaos\" target=\"_blank\" rel=\"noopener\">Senso Club</a> is the high-energy one, DJs and a young crowd.",
-        "nightlife_el": "Ο Άγιος Νικόλαος συγκεντρώνει την καλύτερη νυχτερινή ζωή της ανατολικής Κρήτης γύρω από τη <a href=\"https://www.google.com/maps/search/Lake+Voulismeni+Agios+Nikolaos\" target=\"_blank\" rel=\"noopener\">Λίμνη Βουλισμένη</a> και το λιμάνι. Κοκτέιλ στο ηλιοβασίλεμα δίπλα στη λίμνη στο <a href=\"https://www.google.com/maps/search/Arc+Cocktail+Bar+Agios+Nikolaos\" target=\"_blank\" rel=\"noopener\">Arc</a> ή πάνω στο νερό στο Boathouse, και μετά τα clubs στην οδό Κουντούρου — το <a href=\"https://www.google.com/maps/search/Senso+Club+Agios+Nikolaos\" target=\"_blank\" rel=\"noopener\">Senso Club</a> είναι το high-energy, DJs και νεανικό κοινό."
+        "nightlife_el": "Ο Άγιος Νικόλαος συγκεντρώνει την καλύτερη νυχτερινή ζωή της ανατολικής Κρήτης γύρω από τη <a href=\"https://www.google.com/maps/search/Lake+Voulismeni+Agios+Nikolaos\" target=\"_blank\" rel=\"noopener\">Λίμνη Βουλισμένη</a> και το λιμάνι. Κοκτέιλ στο ηλιοβασίλεμα δίπλα στη λίμνη στο <a href=\"https://www.google.com/maps/search/Arc+Cocktail+Bar+Agios+Nikolaos\" target=\"_blank\" rel=\"noopener\">Arc</a> ή πάνω στο νερό στο Boathouse, και μετά τα clubs στην οδό Κουντούρου — το <a href=\"https://www.google.com/maps/search/Senso+Club+Agios+Nikolaos\" target=\"_blank\" rel=\"noopener\">Senso Club</a> είναι το high-energy, DJs και νεανικό κοινό.",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Ferryman Elounda",
+            "area_el": "Ferryman Elounda",
+            "desc": "One of the best seafood restaurants in Lasithi, right on the Elounda waterfront. Try the lobster pasta — a local speciality. Then drive back to Agios Nikolaos for the night, just 15 minutes east.",
+            "desc_el": "Ένα από τα καλύτερα εστιατόρια ψαρικών στο Λασίθι, στην παραλιακή της Ελούντας. Δοκίμασε τα μακαρόνια με αστακό — τοπική σπεσιαλιτέ. Μετά πίσω στον Άγιο Νικόλαο για διανυκτέρευση, μόλις 15 λεπτά ανατολικά.",
+            "after": "Schisma Beach Elounda"
+          }
+        ]
       },
       {
         "day": 2,

@@ -127,17 +127,6 @@
             "desc_el": "Αρχαία ακρόπολη μετατραπείσα σε ενετικό/βυζαντινό φρούριο. Θέες 360° πάνω από την πόλη και το Αιγαίο."
           },
           {
-            "name": "Lunch — Anemos",
-            "lat": 38.899,
-            "lng": 24.5614,
-            "type": "restaurant",
-            "time": "15:30",
-            "wiki": null,
-            "desc": "Small taverna with panoramic terrace. Excellent lobster pasta (Skyros is famous for lobster).",
-            "name_el": "Μεσημεριανό — Άνεμος",
-            "desc_el": "Μικρή ταβέρνα με πανοραμική βεράντα. Εξαιρετικά ζυμαρικά με αστακό (η Σκύρος φημίζεται για τον αστακό)."
-          },
-          {
             "name": "Faltaits Folklore Museum",
             "lat": 38.9088747,
             "lng": 24.5680955,
@@ -161,7 +150,18 @@
           }
         ],
         "title_el": "Χώρα & Κάστρο Σκύρου",
-        "overnight_el": "Χώρα Σκύρου"
+        "overnight_el": "Χώρα Σκύρου",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Anemos",
+            "area_el": "Άνεμος",
+            "desc": "Small taverna with panoramic terrace. Excellent lobster pasta (Skyros is famous for lobster).",
+            "desc_el": "Μικρή ταβέρνα με πανοραμική βεράντα. Εξαιρετικά ζυμαρικά με αστακό (η Σκύρος φημίζεται για τον αστακό).",
+            "after": "Byzantine Castle of Skyros"
+          }
+        ]
       },
       {
         "day": 2,

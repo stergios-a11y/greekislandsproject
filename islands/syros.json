@@ -139,17 +139,6 @@
             }
           },
           {
-            "name": "Lunch — Lilis Taverna",
-            "lat": 37.4496,
-            "lng": 24.9385,
-            "type": "restaurant",
-            "time": "14:00",
-            "wiki": null,
-            "desc": "Classic taverna in Ano Syros with panoramic terrace. Famous for Syrian sausage (loukaniko) and local goat cheese.",
-            "name_el": "Μεσημεριανό — Ταβέρνα Λίλης",
-            "desc_el": "Κλασική ταβέρνα στην Άνω Σύρο με πανοραμική βεράντα. Διάσημη για το σύρικο λουκάνικο και το τοπικό τυρί κατσικίσιο."
-          },
-          {
             "time": "15:30",
             "name": "Galissas Beach",
             "name_el": "Παραλία Γαλησσά",
@@ -186,7 +175,18 @@
         "title_el": "Ερμούπολη & Άνω Σύρος",
         "overnight_el": "Ερμούπολη",
         "nightlife": "Ermoupoli's nightlife is elegant rather than wild — fitting for the grand old capital of the Cyclades. Drinks around <a href=\"https://www.google.com/maps/search/Miaouli+Square+Ermoupoli+Syros\" target=\"_blank\" rel=\"noopener\">Miaouli Square</a> and the lanes off it: <a href=\"https://www.google.com/maps/search/MouSouTou+Syros\" target=\"_blank\" rel=\"noopener\">MouSouTou</a> for cocktails (and its own gin), tucked-away <a href=\"https://www.google.com/maps/search/Kouchico+Syros\" target=\"_blank\" rel=\"noopener\">Kouchico</a> for craft drinks, and the 1924 grande dame <a href=\"https://www.google.com/maps/search/Aktaion+Ermoupoli+Syros\" target=\"_blank\" rel=\"noopener\">Aktaion</a> for live-music nights. Rembetiko, the island's signature, surfaces in the tavernas of Ano Syros.",
-        "nightlife_el": "Η νυχτερινή ζωή της Ερμούπολης είναι κομψή παρά ξέφρενη — ταιριάζει στη μεγάλη παλιά πρωτεύουσα των Κυκλάδων. Ποτά γύρω από την <a href=\"https://www.google.com/maps/search/Miaouli+Square+Ermoupoli+Syros\" target=\"_blank\" rel=\"noopener\">Πλατεία Μιαούλη</a> και τα στενά της: <a href=\"https://www.google.com/maps/search/MouSouTou+Syros\" target=\"_blank\" rel=\"noopener\">MouSouTou</a> για κοκτέιλ (και δικό του τζιν), το κρυμμένο <a href=\"https://www.google.com/maps/search/Kouchico+Syros\" target=\"_blank\" rel=\"noopener\">Kouchico</a> για craft ποτά, και η γκραντ νταμ του 1924 <a href=\"https://www.google.com/maps/search/Aktaion+Ermoupoli+Syros\" target=\"_blank\" rel=\"noopener\">Aktaion</a> για βραδιές ζωντανής μουσικής. Το ρεμπέτικο, η υπογραφή του νησιού, ακούγεται στις ταβέρνες της Άνω Σύρου."
+        "nightlife_el": "Η νυχτερινή ζωή της Ερμούπολης είναι κομψή παρά ξέφρενη — ταιριάζει στη μεγάλη παλιά πρωτεύουσα των Κυκλάδων. Ποτά γύρω από την <a href=\"https://www.google.com/maps/search/Miaouli+Square+Ermoupoli+Syros\" target=\"_blank\" rel=\"noopener\">Πλατεία Μιαούλη</a> και τα στενά της: <a href=\"https://www.google.com/maps/search/MouSouTou+Syros\" target=\"_blank\" rel=\"noopener\">MouSouTou</a> για κοκτέιλ (και δικό του τζιν), το κρυμμένο <a href=\"https://www.google.com/maps/search/Kouchico+Syros\" target=\"_blank\" rel=\"noopener\">Kouchico</a> για craft ποτά, και η γκραντ νταμ του 1924 <a href=\"https://www.google.com/maps/search/Aktaion+Ermoupoli+Syros\" target=\"_blank\" rel=\"noopener\">Aktaion</a> για βραδιές ζωντανής μουσικής. Το ρεμπέτικο, η υπογραφή του νησιού, ακούγεται στις ταβέρνες της Άνω Σύρου.",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Lilis Taverna",
+            "area_el": "Ταβέρνα Λίλης",
+            "desc": "Classic taverna in Ano Syros with panoramic terrace. Famous for Syrian sausage (loukaniko) and local goat cheese.",
+            "desc_el": "Κλασική ταβέρνα στην Άνω Σύρο με πανοραμική βεράντα. Διάσημη για το σύρικο λουκάνικο και το τοπικό τυρί κατσικίσιο.",
+            "after": "Ano Syros (climb)"
+          }
+        ]
       },
       {
         "day": 2,
@@ -318,17 +318,6 @@
             }
           },
           {
-            "name": "Lunch — Allou Yialou",
-            "lat": 37.4551,
-            "lng": 24.8835,
-            "type": "restaurant",
-            "time": "14:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJQRPfYZtiohQR-qO8tBgV9e0",
-            "desc": "Modern taverna in Kini — excellent fresh catch and Cycladic wines. ★ FNL Best Restaurant Awards 2026 — Seafood Restaurant.",
-            "name_el": "Μεσημεριανό — Αλλού Γιαλού",
-            "desc_el": "Σύγχρονη ταβέρνα στο Κίνι — εξαιρετικό φρέσκο ψάρι και κυκλαδίτικα κρασιά. ★ Βραβεία FNL 2026 — Εστιατόριο για Ψάρι."
-          },
-          {
             "name": "Ermoupoli — Rembetiko Evening",
             "lat": 37.4439,
             "lng": 24.944,
@@ -341,7 +330,18 @@
           }
         ],
         "title_el": "Βόρεια Σύρος & Ρεμπέτικο",
-        "overnight_el": "Αναχώρηση"
+        "overnight_el": "Αναχώρηση",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Allou Yialou",
+            "area_el": "Αλλού Γιαλού",
+            "desc": "Modern taverna in Kini — excellent fresh catch and Cycladic wines. ★ FNL Best Restaurant Awards 2026 — Seafood Restaurant.",
+            "desc_el": "Σύγχρονη ταβέρνα στο Κίνι — εξαιρετικό φρέσκο ψάρι και κυκλαδίτικα κρασιά. ★ Βραβεία FNL 2026 — Εστιατόριο για Ψάρι.",
+            "after": "Delfini Beach"
+          }
+        ]
       }
     ],
     "title_el": "Πρόγραμμα 3 Ημερών στη Σύρο",

@@ -131,17 +131,6 @@
             }
           },
           {
-            "name": "Lunch — Harbour Taverna",
-            "lat": 37.5,
-            "lng": 23.4567,
-            "type": "restaurant",
-            "time": "13:00",
-            "wiki": null,
-            "desc": "The harbour tavernas serve excellent grilled fish watching the boats from Galatas cross the straits. The crossing takes only 5 minutes.",
-            "name_el": "Μεσημεριανό — Ταβέρνα Λιμανιού",
-            "desc_el": "Οι ταβέρνες του λιμανιού σερβίρουν εξαιρετικό ψητό ψάρι ενώ παρακολουθείς τα σκάφη από τους Γαλατάδες να διασχίζουν τα στενά. Το πέρασμα παίρνει μόνο 5 λεπτά."
-          },
-          {
             "name": "Love Bay",
             "lat": 37.514911,
             "lng": 23.438744,
@@ -174,7 +163,18 @@
         ],
         "title_el": "Πόρος, Όρμος Αγάπης & Ναός",
         "nightlife": "Poros Town's waterfront does easy summer nights. <a href=\"https://www.google.com/maps/search/Joy+Cocktail+Bar+Poros\" target=\"_blank\" rel=\"noopener\">Joy Cocktail Bar</a> is the main draw — cocktails and sea views from 6pm, disco and house as the sun drops; <a href=\"https://www.google.com/maps/search/Sunset+Terrace+Poros\" target=\"_blank\" rel=\"noopener\">Sunset Terrace</a> for the panoramic sundowner. Mellow, close to Athens, no clubs to speak of.",
-        "nightlife_el": "Η προκυμαία της Χώρας του Πόρου έχει χαλαρές καλοκαιρινές βραδιές. Το <a href=\"https://www.google.com/maps/search/Joy+Cocktail+Bar+Poros\" target=\"_blank\" rel=\"noopener\">Joy Cocktail Bar</a> είναι ο βασικός πόλος — κοκτέιλ και θέα θάλασσα από τις 6, disco και house καθώς πέφτει ο ήλιος· το <a href=\"https://www.google.com/maps/search/Sunset+Terrace+Poros\" target=\"_blank\" rel=\"noopener\">Sunset Terrace</a> για το πανοραμικό ποτό του ηλιοβασιλέματος. Χαλαρά, κοντά στην Αθήνα, χωρίς ουσιαστικά clubs."
+        "nightlife_el": "Η προκυμαία της Χώρας του Πόρου έχει χαλαρές καλοκαιρινές βραδιές. Το <a href=\"https://www.google.com/maps/search/Joy+Cocktail+Bar+Poros\" target=\"_blank\" rel=\"noopener\">Joy Cocktail Bar</a> είναι ο βασικός πόλος — κοκτέιλ και θέα θάλασσα από τις 6, disco και house καθώς πέφτει ο ήλιος· το <a href=\"https://www.google.com/maps/search/Sunset+Terrace+Poros\" target=\"_blank\" rel=\"noopener\">Sunset Terrace</a> για το πανοραμικό ποτό του ηλιοβασιλέματος. Χαλαρά, κοντά στην Αθήνα, χωρίς ουσιαστικά clubs.",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Harbour Taverna",
+            "area_el": "Ταβέρνα Λιμανιού",
+            "desc": "The harbour tavernas serve excellent grilled fish watching the boats from Galatas cross the straits. The crossing takes only 5 minutes.",
+            "desc_el": "Οι ταβέρνες του λιμανιού σερβίρουν εξαιρετικό ψητό ψάρι ενώ παρακολουθείς τα σκάφη από τους Γαλατάδες να διασχίζουν τα στενά. Το πέρασμα παίρνει μόνο 5 λεπτά.",
+            "after": "Temple of Poseidon"
+          }
+        ]
       }
     ],
     "title_el": "Πρόγραμμα 1 Ημέρας στον Πόρο",

@@ -144,21 +144,21 @@
             "desc": "The closest beach to Emporio — 10 minutes' walk west along the coast road. Coarse sand and pebbles, calm water, a single beachfront taverna (Nick's). Sunbeds available. Most island visitors come here at least once.",
             "name_el": "Παραλία Πόνταμος",
             "desc_el": "Η πιο κοντινή παραλία στο Εμπορείο — 10 λεπτά πεζοπορίας δυτικά κατά μήκος του παράκτιου δρόμου. Χονδρή άμμος και βότσαλα, ήρεμα νερά, μία παραλιακή ταβέρνα (Nick's). Διαθέσιμες ξαπλώστρες. Οι περισσότεροι επισκέπτες έρχονται εδώ τουλάχιστον μία φορά."
-          },
-          {
-            "name": "Dinner — Magefseis (Tarpon Springs Blvd)",
-            "lat": 36.224,
-            "lng": 27.6092,
-            "type": "restaurant",
-            "time": "21:00",
-            "wiki": null,
-            "desc": "One of the better tavernas on the harbour strip. Try the local goat in tomato sauce or whatever fish came in that day. The waterfront strip is officially named Tarpon Springs Boulevard after the émigré Halki community in Florida.",
-            "name_el": "Δείπνο — Μαγεύσεις (Λεωφόρος Τάρπον Σπρινγκς)",
-            "desc_el": "Μία από τις καλύτερες ταβέρνες στο παραλιακό. Δοκίμασε το τοπικό κατσίκι σε σάλτσα ντομάτας ή ό,τι ψάρι ήρθε εκείνη τη μέρα. Το παραλιακό λέγεται επίσημα Λεωφόρος Τάρπον Σπρινγκς προς τιμήν της κοινότητας Χαλκίτων μεταναστών στη Φλόριντα."
           }
         ],
         "title_el": "Λιμάνι Εμπορειού & Παλιό Χωριό",
-        "overnight_el": "Εμπορειός"
+        "overnight_el": "Εμπορειός",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Magefseis (Tarpon Springs Blvd)",
+            "area_el": "Μαγεύσεις (Λεωφόρος Τάρπον Σπρινγκς)",
+            "desc": "One of the better tavernas on the harbour strip. Try the local goat in tomato sauce or whatever fish came in that day. The waterfront strip is officially named Tarpon Springs Boulevard after the émigré Halki community in Florida.",
+            "desc_el": "Μία από τις καλύτερες ταβέρνες στο παραλιακό. Δοκίμασε το τοπικό κατσίκι σε σάλτσα ντομάτας ή ό,τι ψάρι ήρθε εκείνη τη μέρα. Το παραλιακό λέγεται επίσημα Λεωφόρος Τάρπον Σπρινγκς προς τιμήν της κοινότητας Χαλκίτων μεταναστών στη Φλόριντα.",
+            "after": "Pondamos Beach"
+          }
+        ]
       },
       {
         "day": 2,

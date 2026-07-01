@@ -102,16 +102,6 @@
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJk1RA_2zToxQRaK9sZVYA23I"
           },
           {
-            "time": "13:30",
-            "name": "Lunch — Cavo D'Oro (Karystos seafront)",
-            "lat": 38.013,
-            "lng": 24.42,
-            "type": "restaurant",
-            "desc": "Right on the harbour, tables almost in the water. Order grilled octopus and the local kavourosalata (crab salad).",
-            "name_el": "Μεσημεριανό — Cavo D'Oro (προκυμαία Καρύστου)",
-            "desc_el": "Πάνω στο λιμάνι, τραπέζια σχεδόν μέσα στο νερό. Παράγγειλε χταπόδι σχάρας και την τοπική καβουροσαλάτα."
-          },
-          {
             "time": "16:00",
             "name": "Castello Rosso (Bourtzi)",
             "lat": 38.0347163,
@@ -132,19 +122,29 @@
             "wiki": "https://www.google.com/maps/search/?api=1&query=Agia+Paraskevi+Beach+Karystos",
             "desc": "The Karystos town beach — fine sand, calm shallow water, walking distance from the dinner spot. After the climb up to Castello Rosso, an unhurried late-afternoon swim feels well earned. Locals and visitors mix here without the busy energy of southern Aegean beaches.",
             "desc_el": "Η παραλία της πόλης του Καρύστου — λεπτή άμμος, ήρεμα ρηχά νερά, σε απόσταση περπατήματος από το μέρος του δείπνου. Μετά την ανηφόρα στο Castello Rosso, ένα αργό απογευματινό μπάνιο νιώθεται καλά κερδισμένο. Ντόπιοι και επισκέπτες ανακατεύονται εδώ χωρίς την έντονη ενέργεια των παραλιών του νότιου Αιγαίου."
-          },
-          {
-            "time": "20:00",
-            "name": "Dinner — Stou Reuma (Karystos)",
-            "lat": 38.013,
-            "lng": 24.42,
-            "type": "restaurant",
-            "desc": "Slightly inland from the harbour, family-run, traditional. The lamb in lemon and the bourdeto (spicy fish stew) are why people drive over from Athens.",
-            "name_el": "Δείπνο — Στου Ρεύμα (Κάρυστος)",
-            "desc_el": "Λίγο πιο μέσα από το λιμάνι, οικογενειακή, παραδοσιακή. Το αρνί λεμονάτο και το μπουρδέτο είναι ο λόγος που οδηγούν από Αθήνα."
           }
         ],
-        "color": "#1B4F8A"
+        "color": "#1B4F8A",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Cavo D'Oro (Karystos seafront)",
+            "area_el": "Cavo D'Oro (προκυμαία Καρύστου)",
+            "desc": "Right on the harbour, tables almost in the water. Order grilled octopus and the local kavourosalata (crab salad).",
+            "desc_el": "Πάνω στο λιμάνι, τραπέζια σχεδόν μέσα στο νερό. Παράγγειλε χταπόδι σχάρας και την τοπική καβουροσαλάτα.",
+            "after": "Drive Athens → Rafina → Ferry to Marmari"
+          },
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Stou Reuma (Karystos)",
+            "area_el": "Στου Ρεύμα (Κάρυστος)",
+            "desc": "Slightly inland from the harbour, family-run, traditional. The lamb in lemon and the bourdeto (spicy fish stew) are why people drive over from Athens.",
+            "desc_el": "Λίγο πιο μέσα από το λιμάνι, οικογενειακή, παραδοσιακή. Το αρνί λεμονάτο και το μπουρδέτο είναι ο λόγος που οδηγούν από Αθήνα.",
+            "after": "Agia Paraskevi Beach"
+          }
+        ]
       },
       {
         "day": 2,
@@ -177,16 +177,6 @@
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJrTzaTx_RoxQRSzhUaUcCB5o"
           },
           {
-            "time": "14:00",
-            "name": "Lunch — Mili village taverna",
-            "lat": 38.066,
-            "lng": 24.421,
-            "type": "restaurant",
-            "desc": "Back at the trailhead. Whatever the family has cooked that day — lamb on the spit, wild greens, mountain potatoes. Closes when the food runs out.",
-            "name_el": "Μεσημεριανό — ταβέρνα στους Μύλους",
-            "desc_el": "Πίσω στην αρχή του μονοπατιού. Ό,τι έχει μαγειρέψει η οικογένεια — αρνί σούβλας, χόρτα, ορεινές πατάτες. Κλείνει όταν τελειώσει το φαγητό."
-          },
-          {
             "time": "16:30",
             "name": "Kallianos Beach (or rest)",
             "lat": 38.1411,
@@ -196,19 +186,29 @@
             "name_el": "Παραλία Καλλιανού (ή ξεκούραση)",
             "desc_el": "Αν έχεις πόδια — 30λ οδικώς στην Καλλιανού για απογευματινό μπάνιο. Ή πίσω στην Κάρυστο για παγωμένο καφέ στο λιμάνι.",
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJdReYh2jIoxQRp8C7meqKa1c"
-          },
-          {
-            "time": "20:30",
-            "name": "Dinner — Marina (Karystos)",
-            "lat": 38.013,
-            "lng": 24.42,
-            "type": "restaurant",
-            "desc": "Modern fish taverna at the marina end of town. Lighter than Stou Reuma — fresh sashimi-style raw fish, ouzo with mezedes, local wine.",
-            "name_el": "Δείπνο — Marina (Κάρυστος)",
-            "desc_el": "Σύγχρονη ψαροταβέρνα στο τέλος της προκυμαίας. Πιο ελαφρύ από το Στου Ρεύμα — φρέσκο ωμό ψάρι, ουζάκι με μεζέδες, τοπικό κρασί."
           }
         ],
-        "color": "#C0522A"
+        "color": "#C0522A",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Mili village taverna",
+            "area_el": "ταβέρνα στους Μύλους",
+            "desc": "Back at the trailhead. Whatever the family has cooked that day — lamb on the spit, wild greens, mountain potatoes. Closes when the food runs out.",
+            "desc_el": "Πίσω στην αρχή του μονοπατιού. Ό,τι έχει μαγειρέψει η οικογένεια — αρνί σούβλας, χόρτα, ορεινές πατάτες. Κλείνει όταν τελειώσει το φαγητό.",
+            "after": "Hike Mt Ochi → Dragon Houses"
+          },
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Marina (Karystos)",
+            "area_el": "Marina (Κάρυστος)",
+            "desc": "Modern fish taverna at the marina end of town. Lighter than Stou Reuma — fresh sashimi-style raw fish, ouzo with mezedes, local wine.",
+            "desc_el": "Σύγχρονη ψαροταβέρνα στο τέλος της προκυμαίας. Πιο ελαφρύ από το Στου Ρεύμα — φρέσκο ωμό ψάρι, ουζάκι με μεζέδες, τοπικό κρασί.",
+            "after": "Kallianos Beach (or rest)"
+          }
+        ]
       },
       {
         "day": 3,

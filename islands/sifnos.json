@@ -139,17 +139,6 @@
             }
           },
           {
-            "name": "Dinner — Cantina (Kastro)",
-            "name_el": "Δείπνο — Cantina (Κάστρο)",
-            "desc": "End the day at <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJM2XU8QqNmBQRenubgS-phAo\" target=\"_blank\" rel=\"noopener noreferrer\">Cantina</a> in Seralia below Kastro — ★★ FNL Best Restaurant Awards 2026 (Modern Greek). 7-course sharing menu (€70pp) on a terrace overlooking the sea. Closed Sunday.",
-            "desc_el": "Κλείστε τη μέρα στην <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJM2XU8QqNmBQRenubgS-phAo\" target=\"_blank\" rel=\"noopener noreferrer\">Cantina</a> στη Σεραλιά κάτω από το Κάστρο — ★★ Βραβεία FNL 2026 (Σύγχρονη Ελληνική). Μενού 7 πιάτων (€70/άτομο). Κλειστά Κυριακή.",
-            "lat": 36.9722,
-            "lng": 24.746,
-            "time": "20:30",
-            "type": "restaurant",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJM2XU8QqNmBQRenubgS-phAo"
-          },
-          {
             "name": "Platis Gialos Beach",
             "lat": 36.9317112,
             "lng": 24.7296366,
@@ -172,7 +161,18 @@
         "title_el": "Απολλωνία & Αρτεμώνας",
         "overnight_el": "Απολλωνία",
         "nightlife": "Sifnos packs its nightlife into one cobbled Apollonia alley — <a href=\"https://www.google.com/maps/search/Steno+Apollonia+Sifnos\" target=\"_blank\" rel=\"noopener\">Steno</a>. It has more bars than the rest of the island combined: <a href=\"https://www.google.com/maps/search/Argo+Bar+Apollonia+Sifnos\" target=\"_blank\" rel=\"noopener\">Argo</a> (going since 1983, old soul and good-value drinks), rooftop <a href=\"https://www.google.com/maps/search/Botzi+93+Sifnos\" target=\"_blank\" rel=\"noopener\">Botzi 93</a> for world jazz under the bougainvillea, and Doloma for the late crowd. Civilised, not raucous.",
-        "nightlife_el": "Η Σίφνος μαζεύει τη νυχτερινή της ζωή σε ένα καλντερίμι της Απολλωνίας — το <a href=\"https://www.google.com/maps/search/Steno+Apollonia+Sifnos\" target=\"_blank\" rel=\"noopener\">Steno</a>. Έχει περισσότερα μπαρ από όλο το υπόλοιπο νησί μαζί: το <a href=\"https://www.google.com/maps/search/Argo+Bar+Apollonia+Sifnos\" target=\"_blank\" rel=\"noopener\">Argo</a> (από το 1983, παλιά soul και ποτά καλής σχέσης), το rooftop <a href=\"https://www.google.com/maps/search/Botzi+93+Sifnos\" target=\"_blank\" rel=\"noopener\">Botzi 93</a> για world jazz κάτω από τη μπουκαμβίλια, και το Doloma για το αργό κοινό. Πολιτισμένα, όχι ξέφρενα."
+        "nightlife_el": "Η Σίφνος μαζεύει τη νυχτερινή της ζωή σε ένα καλντερίμι της Απολλωνίας — το <a href=\"https://www.google.com/maps/search/Steno+Apollonia+Sifnos\" target=\"_blank\" rel=\"noopener\">Steno</a>. Έχει περισσότερα μπαρ από όλο το υπόλοιπο νησί μαζί: το <a href=\"https://www.google.com/maps/search/Argo+Bar+Apollonia+Sifnos\" target=\"_blank\" rel=\"noopener\">Argo</a> (από το 1983, παλιά soul και ποτά καλής σχέσης), το rooftop <a href=\"https://www.google.com/maps/search/Botzi+93+Sifnos\" target=\"_blank\" rel=\"noopener\">Botzi 93</a> για world jazz κάτω από τη μπουκαμβίλια, και το Doloma για το αργό κοινό. Πολιτισμένα, όχι ξέφρενα.",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Cantina (Kastro)",
+            "area_el": "Cantina (Κάστρο)",
+            "desc": "End the day at <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJM2XU8QqNmBQRenubgS-phAo\" target=\"_blank\" rel=\"noopener noreferrer\">Cantina</a> in Seralia below Kastro — ★★ FNL Best Restaurant Awards 2026 (Modern Greek). 7-course sharing menu (€70pp) on a terrace overlooking the sea. Closed Sunday.",
+            "desc_el": "Κλείστε τη μέρα στην <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJM2XU8QqNmBQRenubgS-phAo\" target=\"_blank\" rel=\"noopener noreferrer\">Cantina</a> στη Σεραλιά κάτω από το Κάστρο — ★★ Βραβεία FNL 2026 (Σύγχρονη Ελληνική). Μενού 7 πιάτων (€70/άτομο). Κλειστά Κυριακή.",
+            "after": "Kastro (Medieval Capital)"
+          }
+        ]
       },
       {
         "day": 2,
@@ -232,17 +232,6 @@
             }
           },
           {
-            "name": "Dinner — Faros Bay (Pelicanos / Alyelo)",
-            "name_el": "Δείπνο — Όρμος Φάρου (Pelicanos / Alyelo)",
-            "desc": "After Vathy, drive 10 min north to Faros for dinner at one of two FNL Best Restaurant Awards 2026 winners on the bay: <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJm1F6hqfzmBQRjkq60gIjvyg\" target=\"_blank\" rel=\"noopener noreferrer\">Pelicanos</a> (★ Modern Greek — beachfront, sea urchin and grilled fish) or <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJKz2rZEHzmBQRsOSLPsZAFs0\" target=\"_blank\" rel=\"noopener noreferrer\">Alyelo</a> (★ Modern Bistro — feet-in-sand tables, dolma nigiri with smoked eel). <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJ_TrJoIvzmBQRU0wbOaYTFXw\" target=\"_blank\" rel=\"noopener noreferrer\">NÓS</a> at NÓS Hotel & Villas (★ Modern Greek) is on the same bay.",
-            "desc_el": "Μετά το Βαθύ, δίπλα στο Φάρο για δείπνο σε ένα από τα τρία βραβευμένα FNL 2026 εστιατόρια του όρμου: <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJm1F6hqfzmBQRjkq60gIjvyg\" target=\"_blank\" rel=\"noopener noreferrer\">Pelicanos</a> (★), <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJKz2rZEHzmBQRsOSLPsZAFs0\" target=\"_blank\" rel=\"noopener noreferrer\">Alyelo</a> (★) ή <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJ_TrJoIvzmBQRU0wbOaYTFXw\" target=\"_blank\" rel=\"noopener noreferrer\">NÓS</a> (★).",
-            "lat": 36.9442,
-            "lng": 24.7513,
-            "time": "20:30",
-            "type": "restaurant",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJm1F6hqfzmBQRjkq60gIjvyg"
-          },
-          {
             "name": "Vathy Beach",
             "lat": 36.9311,
             "lng": 24.6928,
@@ -263,7 +252,18 @@
           }
         ],
         "title_el": "Χρυσοπηγή & ο Νότος",
-        "overnight_el": "Απολλωνία"
+        "overnight_el": "Απολλωνία",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Faros Bay (Pelicanos / Alyelo)",
+            "area_el": "Όρμος Φάρου (Pelicanos / Alyelo)",
+            "desc": "After Vathy, drive 10 min north to Faros for dinner at one of two FNL Best Restaurant Awards 2026 winners on the bay: <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJm1F6hqfzmBQRjkq60gIjvyg\" target=\"_blank\" rel=\"noopener noreferrer\">Pelicanos</a> (★ Modern Greek — beachfront, sea urchin and grilled fish) or <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJKz2rZEHzmBQRsOSLPsZAFs0\" target=\"_blank\" rel=\"noopener noreferrer\">Alyelo</a> (★ Modern Bistro — feet-in-sand tables, dolma nigiri with smoked eel). <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJ_TrJoIvzmBQRU0wbOaYTFXw\" target=\"_blank\" rel=\"noopener noreferrer\">NÓS</a> at NÓS Hotel & Villas (★ Modern Greek) is on the same bay.",
+            "desc_el": "Μετά το Βαθύ, δίπλα στο Φάρο για δείπνο σε ένα από τα τρία βραβευμένα FNL 2026 εστιατόρια του όρμου: <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJm1F6hqfzmBQRjkq60gIjvyg\" target=\"_blank\" rel=\"noopener noreferrer\">Pelicanos</a> (★), <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJKz2rZEHzmBQRsOSLPsZAFs0\" target=\"_blank\" rel=\"noopener noreferrer\">Alyelo</a> (★) ή <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJ_TrJoIvzmBQRU0wbOaYTFXw\" target=\"_blank\" rel=\"noopener noreferrer\">NÓS</a> (★).",
+            "after": "Faros Village"
+          }
+        ]
       },
       {
         "day": 3,

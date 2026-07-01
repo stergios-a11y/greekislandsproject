@@ -155,23 +155,24 @@
               "source": "Wikimedia Commons"
             },
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJs6G6KQ15lxQRiLjUSDMhUiU"
-          },
-          {
-            "name": "Sunset & Dinner in Chora",
-            "name_el": "Ηλιοβασίλεμα & Δείπνο στη Χώρα",
-            "lat": 36.3618,
-            "lng": 25.7745,
-            "type": "restaurant",
-            "desc": "Back to Chora for dinner. The sunset over the Aegean from the Chora terraces is one of the best in the Cyclades — better than most of Santorini, and you don't need a reservation to see it.",
-            "desc_el": "Επιστροφή στη Χώρα για δείπνο. Το ηλιοβασίλεμα πάνω από το Αιγαίο από τις βεράντες της Χώρας είναι από τα καλύτερα των Κυκλάδων — καλύτερο από τα περισσότερα της Σαντορίνης, και δεν χρειάζεσαι κράτηση για να το δεις.",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJqw7soEZ5lxQR_g2O75tUb14"
           }
         ],
         "title_el": "Χώρα & το Μονοπάτι των Παραλιών",
         "overnight": "Chora",
         "overnight_el": "Χώρα",
         "km": 15,
-        "drive_mins": 25
+        "drive_mins": 25,
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Chora",
+            "area_el": "Χώρα",
+            "desc": "Back to Chora for dinner. The sunset over the Aegean from the Chora terraces is one of the best in the Cyclades — better than most of Santorini, and you don't need a reservation to see it.",
+            "desc_el": "Επιστροφή στη Χώρα για δείπνο. Το ηλιοβασίλεμα πάνω από το Αιγαίο από τις βεράντες της Χώρας είναι από τα καλύτερα των Κυκλάδων — καλύτερο από τα περισσότερα της Σαντορίνης, και δεν χρειάζεσαι κράτηση για να το δεις.",
+            "after": "Roukounas Beach"
+          }
+        ]
       },
       {
         "day": 2,

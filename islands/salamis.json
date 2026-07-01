@@ -131,17 +131,6 @@
             }
           },
           {
-            "name": "Lunch — Eantio Tavernas",
-            "lat": 37.9617,
-            "lng": 23.4867,
-            "type": "restaurant",
-            "time": "13:30",
-            "wiki": null,
-            "desc": "Eantio, the main town on the west coast, has the best fish tavernas on the island. Athenians drive here at weekends for the lunch. Very reasonable prices.",
-            "name_el": "Μεσημεριανό — Ταβέρνες Αιάντειου",
-            "desc_el": "Το Αιάντειο, η κύρια πόλη στη δυτική ακτή, έχει τις καλύτερες ψαροταβέρνες του νησιού. Οι Αθηναίοι οδηγούν εδώ τα σαββατοκύριακα για μεσημεριανό. Πολύ λογικές τιμές."
-          },
-          {
             "name": "Kanakia Beach",
             "lat": 37.9028953,
             "lng": 23.4090734,
@@ -172,7 +161,18 @@
             "desc_el": "Πλοίο επιστροφής στο Πέραμα για το λεωφορείο ή το μετρό προς την Αθήνα. Τα πλοία εκτελούν δρομολόγια κάθε 10-15 λεπτά όλη μέρα και βράδυ."
           }
         ],
-        "title_el": "Φανερωμένη & ο Χώρος της Μάχης"
+        "title_el": "Φανερωμένη & ο Χώρος της Μάχης",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Eantio Tavernas",
+            "area_el": "Ταβέρνες Αιάντειου",
+            "desc": "Eantio, the main town on the west coast, has the best fish tavernas on the island. Athenians drive here at weekends for the lunch. Very reasonable prices.",
+            "desc_el": "Το Αιάντειο, η κύρια πόλη στη δυτική ακτή, έχει τις καλύτερες ψαροταβέρνες του νησιού. Οι Αθηναίοι οδηγούν εδώ τα σαββατοκύριακα για μεσημεριανό. Πολύ λογικές τιμές.",
+            "after": "Faneromeni Monastery"
+          }
+        ]
       }
     ],
     "title_el": "Πρόγραμμα 1 Ημέρας στη Σαλαμίνα",

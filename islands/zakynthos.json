@@ -131,17 +131,6 @@
             }
           },
           {
-            "name": "Lunch — Malanos",
-            "lat": 37.7867,
-            "lng": 20.9002,
-            "type": "restaurant",
-            "time": "13:30",
-            "wiki": null,
-            "desc": "Legendary traditional taverna in Zakynthos Town, run by the same family for generations. Try the stifado and the local Verdea wine — a white wine unique to Zakynthos.",
-            "name_el": "Μεσημεριανό — Μαλανός",
-            "desc_el": "Θρυλική παραδοσιακή ταβέρνα στην Πόλη της Ζακύνθου, που διαχειρίζεται η ίδια οικογένεια για γενιές. Δοκίμασε το στιφάδο και το τοπικό κρασί Βερδέα — ένα λευκό κρασί μοναδικό στη Ζάκυνθο."
-          },
-          {
             "name": "Tsilivi Beach",
             "lat": 37.8166,
             "lng": 20.8689,
@@ -175,7 +164,18 @@
         "title_el": "Χώρα Ζακύνθου & η Ανατολή",
         "overnight_el": "Ζάκυνθος",
         "nightlife": "Zakynthos Town is the grown-up alternative to Laganas. The bars around <a href=\"https://www.google.com/maps/search/Agios+Markos+Square+Zakynthos\" target=\"_blank\" rel=\"noopener\">Agios Markos Square</a> — <a href=\"https://www.google.com/maps/search/Base+Bar+Zakynthos\" target=\"_blank\" rel=\"noopener\">Base</a> and <a href=\"https://www.google.com/maps/search/Cul+de+Sac+Zakynthos\" target=\"_blank\" rel=\"noopener\">Cul de Sac</a> — are where locals drink; up on <a href=\"https://www.google.com/maps/search/Bochali+Zakynthos\" target=\"_blank\" rel=\"noopener\">Bohali</a> hill, tavernas serve kantades serenades over the town lights.",
-        "nightlife_el": "Η πόλη της Ζακύνθου είναι η πιο ώριμη εναλλακτική του Λαγανά. Τα μπαρ γύρω από την <a href=\"https://www.google.com/maps/search/Agios+Markos+Square+Zakynthos\" target=\"_blank\" rel=\"noopener\">Πλατεία Αγίου Μάρκου</a> — <a href=\"https://www.google.com/maps/search/Base+Bar+Zakynthos\" target=\"_blank\" rel=\"noopener\">Base</a> και <a href=\"https://www.google.com/maps/search/Cul+de+Sac+Zakynthos\" target=\"_blank\" rel=\"noopener\">Cul de Sac</a> — είναι εκεί που πίνουν οι ντόπιοι· πάνω στο <a href=\"https://www.google.com/maps/search/Bochali+Zakynthos\" target=\"_blank\" rel=\"noopener\">Μπόχαλη</a>, ταβέρνες με καντάδες και θέα τα φώτα της πόλης."
+        "nightlife_el": "Η πόλη της Ζακύνθου είναι η πιο ώριμη εναλλακτική του Λαγανά. Τα μπαρ γύρω από την <a href=\"https://www.google.com/maps/search/Agios+Markos+Square+Zakynthos\" target=\"_blank\" rel=\"noopener\">Πλατεία Αγίου Μάρκου</a> — <a href=\"https://www.google.com/maps/search/Base+Bar+Zakynthos\" target=\"_blank\" rel=\"noopener\">Base</a> και <a href=\"https://www.google.com/maps/search/Cul+de+Sac+Zakynthos\" target=\"_blank\" rel=\"noopener\">Cul de Sac</a> — είναι εκεί που πίνουν οι ντόπιοι· πάνω στο <a href=\"https://www.google.com/maps/search/Bochali+Zakynthos\" target=\"_blank\" rel=\"noopener\">Μπόχαλη</a>, ταβέρνες με καντάδες και θέα τα φώτα της πόλης.",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Malanos",
+            "area_el": "Μαλανός",
+            "desc": "Legendary traditional taverna in Zakynthos Town, run by the same family for generations. Try the stifado and the local Verdea wine — a white wine unique to Zakynthos.",
+            "desc_el": "Θρυλική παραδοσιακή ταβέρνα στην Πόλη της Ζακύνθου, που διαχειρίζεται η ίδια οικογένεια για γενιές. Δοκίμασε το στιφάδο και το τοπικό κρασί Βερδέα — ένα λευκό κρασί μοναδικό στη Ζάκυνθο.",
+            "after": "Byzantine Museum"
+          }
+        ]
       },
       {
         "day": 2,

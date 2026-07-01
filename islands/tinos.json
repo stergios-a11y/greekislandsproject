@@ -115,17 +115,6 @@
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJox-Te-vsohQR_XxOP1Ehsro"
           },
           {
-            "name": "Lunch — Marathia (Agios Fokas)",
-            "name_el": "Μεσημεριανό — Μαραθιά (Άγιος Φωκάς)",
-            "desc": "A 10-minute walk south of Chora brings you to Agios Fokas beach, backed by a row of reliable tavernas. Marathia is the local-favorite — grilled whole fish (sea bream, sea bass), fresh octopus, and the Cycladic basics done correctly. Sea views, fair prices by Cycladic standards. Open lunch through late dinner in summer. ★★ FNL Best Restaurant Awards 2026 — Modern Greek Cuisine.",
-            "desc_el": "Μια 10λεπτη πεζοπορία νότια της Χώρας σε φέρνει στην παραλία Αγίου Φωκά, με σειρά αξιόπιστων ταβερνών πίσω. Η Μαραθιά είναι η αγαπημένη των ντόπιων — ψάρι στη σχάρα (τσιπούρα, λαβράκι), φρέσκο χταπόδι, και τα κυκλαδίτικα βασικά καμωμένα σωστά. Θέα στη θάλασσα, δίκαιες τιμές με κυκλαδίτικα μέτρα. Ανοιχτή από το μεσημέρι μέχρι αργά το βράδυ το καλοκαίρι. ★★ Βραβεία FNL 2026 — Σύγχρονη Ελληνική Κουζίνα.",
-            "lat": 37.5318,
-            "lng": 25.1665,
-            "time": "13:30",
-            "type": "restaurant",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ4VvkCqPsohQR-FMB1PNGen8"
-          },
-          {
             "name": "Agios Fokas Beach",
             "name_el": "Παραλία Αγίου Φωκά",
             "desc": "The closest real beach to Chora — 10 minutes on foot. Long, sandy, organized, with shallow water. Family-friendly, reliable, nothing spectacular but does the job when you just want to swim after lunch. Gets busy in August — go earlier or later.",
@@ -163,7 +152,18 @@
         "drive_mins": 45,
         "color": "#1B4F8A",
         "nightlife": "Tinos Town's harbour is quietly lively once the pilgrims leave. <a href=\"https://www.google.com/maps/search/Koursaros+Bar+Tinos\" target=\"_blank\" rel=\"noopener\">Koursaros</a> ('Pirate') has anchored the corner by the port since 1987; <a href=\"https://www.google.com/maps/search/Kaktos+Bar+Tinos\" target=\"_blank\" rel=\"noopener\">Kaktos</a> pours cocktails from an open-air terrace beside a restored windmill; <a href=\"https://www.google.com/maps/search/3+Donkeys+Bar+Tinos\" target=\"_blank\" rel=\"noopener\">3 Donkeys</a> does serious drinks with local ingredients. Stylish and low-key.",
-        "nightlife_el": "Το λιμάνι της Χώρας της Τήνου ζωντανεύει διακριτικά μόλις φύγουν οι προσκυνητές. Το <a href=\"https://www.google.com/maps/search/Koursaros+Bar+Tinos\" target=\"_blank\" rel=\"noopener\">Koursaros</a> («Κουρσάρος») κρατάει τη γωνία στο λιμάνι από το 1987· το <a href=\"https://www.google.com/maps/search/Kaktos+Bar+Tinos\" target=\"_blank\" rel=\"noopener\">Kaktos</a> σερβίρει κοκτέιλ από υπαίθρια βεράντα δίπλα σε αναστηλωμένο ανεμόμυλο· τα <a href=\"https://www.google.com/maps/search/3+Donkeys+Bar+Tinos\" target=\"_blank\" rel=\"noopener\">3 Donkeys</a> κάνουν σοβαρά ποτά με ντόπια υλικά. Σικ και χαλαρά."
+        "nightlife_el": "Το λιμάνι της Χώρας της Τήνου ζωντανεύει διακριτικά μόλις φύγουν οι προσκυνητές. Το <a href=\"https://www.google.com/maps/search/Koursaros+Bar+Tinos\" target=\"_blank\" rel=\"noopener\">Koursaros</a> («Κουρσάρος») κρατάει τη γωνία στο λιμάνι από το 1987· το <a href=\"https://www.google.com/maps/search/Kaktos+Bar+Tinos\" target=\"_blank\" rel=\"noopener\">Kaktos</a> σερβίρει κοκτέιλ από υπαίθρια βεράντα δίπλα σε αναστηλωμένο ανεμόμυλο· τα <a href=\"https://www.google.com/maps/search/3+Donkeys+Bar+Tinos\" target=\"_blank\" rel=\"noopener\">3 Donkeys</a> κάνουν σοβαρά ποτά με ντόπια υλικά. Σικ και χαλαρά.",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Marathia (Agios Fokas)",
+            "area_el": "Μαραθιά (Άγιος Φωκάς)",
+            "desc": "A 10-minute walk south of Chora brings you to Agios Fokas beach, backed by a row of reliable tavernas. Marathia is the local-favorite — grilled whole fish (sea bream, sea bass), fresh octopus, and the Cycladic basics done correctly. Sea views, fair prices by Cycladic standards. Open lunch through late dinner in summer. ★★ FNL Best Restaurant Awards 2026 — Modern Greek Cuisine.",
+            "desc_el": "Μια 10λεπτη πεζοπορία νότια της Χώρας σε φέρνει στην παραλία Αγίου Φωκά, με σειρά αξιόπιστων ταβερνών πίσω. Η Μαραθιά είναι η αγαπημένη των ντόπιων — ψάρι στη σχάρα (τσιπούρα, λαβράκι), φρέσκο χταπόδι, και τα κυκλαδίτικα βασικά καμωμένα σωστά. Θέα στη θάλασσα, δίκαιες τιμές με κυκλαδίτικα μέτρα. Ανοιχτή από το μεσημέρι μέχρι αργά το βράδυ το καλοκαίρι. ★★ Βραβεία FNL 2026 — Σύγχρονη Ελληνική Κουζίνα.",
+            "after": "Panagia Evangelistria"
+          }
+        ]
       },
       {
         "day": 2,
@@ -186,16 +186,6 @@
             },
             "type": "village",
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJfVQTMqe_YBMRcsSeNJQbnPc"
-          },
-          {
-            "name": "Lunch in Pyrgos main square",
-            "name_el": "Μεσημεριανό στην πλατεία του Πύργου",
-            "desc": "O Megalos Kafenes, the oldest café on the island, sits in the main square under a huge plane tree with marble-top tables. Coffee, galaktoboureko, and people-watching. For a proper meal, Athmar in the same square serves homemade regional dishes — chickpea stews, stuffed peppers, local cheese — in a shaded, unhurried setting. Sima is the modern standout if you want something more creative.",
-            "desc_el": "Το Μεγάλο Καφενές, το παλαιότερο καφέ του νησιού, βρίσκεται στην κεντρική πλατεία κάτω από ένα τεράστιο πλατάνι με μαρμάρινα τραπέζια. Καφές, γαλακτομπούρεκο, και παρατήρηση κόσμου. Για ένα κανονικό γεύμα, το Athmar στην ίδια πλατεία σερβίρει σπιτικά τοπικά πιάτα — ρεβιθάδες, γεμιστά, τοπικό τυρί — σε σκιασμένο, χαλαρό σκηνικό. Το Sima είναι η σύγχρονη επιλογή αν θες κάτι πιο δημιουργικό.",
-            "lat": 37.6406374,
-            "lng": 25.0407908,
-            "time": "13:00",
-            "type": "restaurant"
           },
           {
             "name": "Panormos Port",
@@ -226,7 +216,18 @@
         "title_el": "Πύργος, Πάνορμος & Βωλάξ",
         "km": 80,
         "drive_mins": 100,
-        "color": "#C0522A"
+        "color": "#C0522A",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Pyrgos main square",
+            "area_el": "ν πλατεία του Πύργου",
+            "desc": "O Megalos Kafenes, the oldest café on the island, sits in the main square under a huge plane tree with marble-top tables. Coffee, galaktoboureko, and people-watching. For a proper meal, Athmar in the same square serves homemade regional dishes — chickpea stews, stuffed peppers, local cheese — in a shaded, unhurried setting. Sima is the modern standout if you want something more creative.",
+            "desc_el": "Το Μεγάλο Καφενές, το παλαιότερο καφέ του νησιού, βρίσκεται στην κεντρική πλατεία κάτω από ένα τεράστιο πλατάνι με μαρμάρινα τραπέζια. Καφές, γαλακτομπούρεκο, και παρατήρηση κόσμου. Για ένα κανονικό γεύμα, το Athmar στην ίδια πλατεία σερβίρει σπιτικά τοπικά πιάτα — ρεβιθάδες, γεμιστά, τοπικό τυρί — σε σκιασμένο, χαλαρό σκηνικό. Το Sima είναι η σύγχρονη επιλογή αν θες κάτι πιο δημιουργικό.",
+            "after": "Pyrgos Village"
+          }
+        ]
       },
       {
         "day": 3,
@@ -253,26 +254,6 @@
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJafZZmvfuohQRUCMCVkQYgq0"
           },
           {
-            "name": "Lunch — Sta Fys Aera (Aetofolia)",
-            "name_el": "Μεσημεριανό — Στα Φυσ' Αέρα (Αετοφωλιά)",
-            "desc": "On the way back south, detour to the tiny inland village of Aetofolia. Sta Fys Aera is a small, family-run taverna with no pretension — seasonal vegetables from their own garden, wild greens, local cheese, slow-cooked meat. Strong signals of authenticity: few tables, handwritten menu, no tourist trappings. Call ahead on weekends: +30 22830 41100.",
-            "desc_el": "Στον δρόμο επιστροφής νότια, κάνε παράκαμψη στο μικροσκοπικό εσωτερικό χωριό Αετοφωλιά. Τα Στα Φυσ' Αέρα είναι μια μικρή, οικογενειακή ταβέρνα χωρίς προσχήματα — εποχιακά λαχανικά από τον δικό τους κήπο, άγρια χόρτα, τοπικό τυρί, κρέας σιγομαγειρεμένο. Ισχυρά σημάδια αυθεντικότητας: λίγα τραπέζια, χειρόγραφο μενού, χωρίς τουριστικές παγίδες. Τηλεφώνησε πριν τα σαββατοκύριακα: +30 22830 41100.",
-            "lat": 37.6215,
-            "lng": 25.1558,
-            "time": "13:30",
-            "type": "restaurant"
-          },
-          {
-            "name": "Dinner — To Perivoli tis Kardianis (Kardiani)",
-            "name_el": "Δείπνο — Το Περιβόλι της Καρδιανής",
-            "desc": "Drive west through Ysternia and Kardiani as the sun sets. Kardiani is the greenest village on Tinos — plane trees, olive groves, dramatic cliffside views. Dinner at To Perivoli tis Kardianis is the classic Tinos experience: a garden terrace overlooking the Aegean, updated versions of regional dishes, good wine list. Book ahead in August. For something more casual, Mpeee in nearby Arnados is a local favorite at half the price.",
-            "desc_el": "Οδήγησε δυτικά μέσα από τα Υστέρνια και την Καρδιανή καθώς δύει ο ήλιος. Η Καρδιανή είναι το πιο πράσινο χωριό της Τήνου — πλατάνια, ελαιώνες, δραματικές θέες σε γκρεμό. Το δείπνο στο Περιβόλι της Καρδιανής είναι η κλασική τηνιακή εμπειρία: βεράντα-κήπος με θέα στο Αιγαίο, επικαιροποιημένες εκδοχές τοπικών πιάτων, καλή λίστα κρασιών. Κάνε κράτηση τον Αύγουστο. Για κάτι πιο χαλαρό, το Μπεεε στους γειτονικούς Αρνάδους είναι αγαπημένο των ντόπιων στη μισή τιμή.",
-            "lat": 37.5993,
-            "lng": 25.1121,
-            "time": "19:00",
-            "type": "restaurant"
-          },
-          {
             "name": "Back to Tinos Town",
             "name_el": "Επιστροφή στην Πόλη της Τήνου",
             "desc": "Return to the harbor for the ferry. One last frappe at a waterfront café — Mikro Karavi or the no-name kafenion next to the ferry ticket office — while watching the boats come in. Ferries run frequently to Mykonos (40 min), Rafina (3.5h), or south to Andros/Syros/Paros.",
@@ -297,7 +278,27 @@
         "title_el": "Ταραμπάδος, Κολυμπήθρα & Καρδιανή",
         "km": 50,
         "drive_mins": 70,
-        "color": "#5A7A3A"
+        "color": "#5A7A3A",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Sta Fys Aera (Aetofolia)",
+            "area_el": "Στα Φυσ' Αέρα (Αετοφωλιά)",
+            "desc": "On the way back south, detour to the tiny inland village of Aetofolia. Sta Fys Aera is a small, family-run taverna with no pretension — seasonal vegetables from their own garden, wild greens, local cheese, slow-cooked meat. Strong signals of authenticity: few tables, handwritten menu, no tourist trappings. Call ahead on weekends: +30 22830 41100.",
+            "desc_el": "Στον δρόμο επιστροφής νότια, κάνε παράκαμψη στο μικροσκοπικό εσωτερικό χωριό Αετοφωλιά. Τα Στα Φυσ' Αέρα είναι μια μικρή, οικογενειακή ταβέρνα χωρίς προσχήματα — εποχιακά λαχανικά από τον δικό τους κήπο, άγρια χόρτα, τοπικό τυρί, κρέας σιγομαγειρεμένο. Ισχυρά σημάδια αυθεντικότητας: λίγα τραπέζια, χειρόγραφο μενού, χωρίς τουριστικές παγίδες. Τηλεφώνησε πριν τα σαββατοκύριακα: +30 22830 41100.",
+            "after": "Kolymbithra Beach (surf beach)"
+          },
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "To Perivoli tis Kardianis (Kardiani)",
+            "area_el": "Το Περιβόλι της Καρδιανής",
+            "desc": "Drive west through Ysternia and Kardiani as the sun sets. Kardiani is the greenest village on Tinos — plane trees, olive groves, dramatic cliffside views. Dinner at To Perivoli tis Kardianis is the classic Tinos experience: a garden terrace overlooking the Aegean, updated versions of regional dishes, good wine list. Book ahead in August. For something more casual, Mpeee in nearby Arnados is a local favorite at half the price.",
+            "desc_el": "Οδήγησε δυτικά μέσα από τα Υστέρνια και την Καρδιανή καθώς δύει ο ήλιος. Η Καρδιανή είναι το πιο πράσινο χωριό της Τήνου — πλατάνια, ελαιώνες, δραματικές θέες σε γκρεμό. Το δείπνο στο Περιβόλι της Καρδιανής είναι η κλασική τηνιακή εμπειρία: βεράντα-κήπος με θέα στο Αιγαίο, επικαιροποιημένες εκδοχές τοπικών πιάτων, καλή λίστα κρασιών. Κάνε κράτηση τον Αύγουστο. Για κάτι πιο χαλαρό, το Μπεεε στους γειτονικούς Αρνάδους είναι αγαπημένο των ντόπιων στη μισή τιμή.",
+            "after": "Kolymbithra Beach (surf beach)"
+          }
+        ]
       }
     ],
     "title_el": "Πρόγραμμα 3 Ημερών στην Τήνο",

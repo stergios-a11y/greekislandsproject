@@ -151,21 +151,21 @@
             "wiki": "https://www.google.com/maps/search/?api=1&query=Myrties+Beach+Kalymnos",
             "desc": "After Chora, the natural detour west drops you at Myrties — the prettiest beach on the island, looking directly across the narrow channel to Telendos islet. Fine sand and pebbles, taverns set just back from the water, and the famous Telendos sunset as the cliffs opposite catch the last light. A perfect transition before returning to Pothia for dinner.",
             "desc_el": "Μετά τη Χώρα, η φυσική παράκαμψη δυτικά σε αφήνει στις Μυρτιές — την πιο όμορφη παραλία του νησιού, με άμεση θέα μέσα από τον στενό δίαυλο προς τη νησίδα Τέλενδος. Λεπτή άμμος και βότσαλο, ταβέρνες λίγο πιο πίσω από το νερό, και το διάσημο ηλιοβασίλεμα του Τέλενδου καθώς οι απέναντι γκρεμοί συλλαμβάνουν το τελευταίο φως. Ιδανική μετάβαση πριν την επιστροφή στην Πόθια για δείπνο."
-          },
-          {
-            "name": "Pothia Waterfront Dinner",
-            "lat": 36.9478,
-            "lng": 26.9894,
-            "type": "restaurant",
-            "time": "20:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJiXPmZPXvvRQRygHCStOh13g",
-            "desc": "The harbour tavernas serve excellent fresh fish. Try the mermizeli (Kalymnos salad with rusks) and oktapodi (octopus). On the south coast at Linaria, <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJ5_MgOKbvvRQRRvF79Tzm0uo\" target=\"_blank\" rel=\"noopener noreferrer\">Καπάδικο</a> earned ★ in the FNL Best Restaurant Awards 2026 (Seafood Restaurant) — chef Michael Marthas's destination fish kitchen. Reserve ahead.",
-            "name_el": "Δείπνο στο Παραλιακό της Πόθιας",
-            "desc_el": "Οι ταβέρνες του λιμανιού σερβίρουν εξαιρετικό φρέσκο ψάρι. Δοκίμασε το μερμίζελι (καλύμνικη σαλάτα με παξιμάδια) και το χταπόδι. Στη Λινάρια στη νότια ακτή, το <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJ5_MgOKbvvRQRRvF79Tzm0uo\" target=\"_blank\" rel=\"noopener noreferrer\">Καπάδικο</a> κέρδισε ★ στα Βραβεία FNL 2026 (Εστιατόριο για Ψάρι). Κάντε κράτηση εκ των προτέρων."
           }
         ],
         "title_el": "Πόθια & Μουσεία Σφουγγαριών",
-        "overnight_el": "Μασούρι"
+        "overnight_el": "Μασούρι",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Pothia Waterfront Dinner",
+            "area_el": "Παραλιακό της Πόθιας",
+            "desc": "The harbour tavernas serve excellent fresh fish. Try the mermizeli (Kalymnos salad with rusks) and oktapodi (octopus). On the south coast at Linaria, <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJ5_MgOKbvvRQRRvF79Tzm0uo\" target=\"_blank\" rel=\"noopener noreferrer\">Καπάδικο</a> earned ★ in the FNL Best Restaurant Awards 2026 (Seafood Restaurant) — chef Michael Marthas's destination fish kitchen. Reserve ahead.",
+            "desc_el": "Οι ταβέρνες του λιμανιού σερβίρουν εξαιρετικό φρέσκο ψάρι. Δοκίμασε το μερμίζελι (καλύμνικη σαλάτα με παξιμάδια) και το χταπόδι. Στη Λινάρια στη νότια ακτή, το <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJ5_MgOKbvvRQRRvF79Tzm0uo\" target=\"_blank\" rel=\"noopener noreferrer\">Καπάδικο</a> κέρδισε ★ στα Βραβεία FNL 2026 (Εστιατόριο για Ψάρι). Κάντε κράτηση εκ των προτέρων.",
+            "after": "Myrties Beach"
+          }
+        ]
       },
       {
         "day": 2,

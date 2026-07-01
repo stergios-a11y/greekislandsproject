@@ -224,22 +224,24 @@
             "desc": "Small fishing village on the north coast with good taverns and a peaceful bay. Just beyond it, Plaka beach with its resident peacocks — pine trees for shade, pebbles, no sunbeds, no café. The oddest-but-wonderful sight on the island: peacocks walking the pebbles.",
             "desc_el": "Μικρό αλιευτικό χωριό στη βόρεια ακτή με καλές ταβέρνες και ήρεμο κόλπο. Λίγο πιο πέρα, η παραλία Πλάκα με τα μόνιμα παγώνια της — πεύκα για σκιά, βότσαλο, χωρίς ξαπλώστρες, χωρίς καφέ. Το πιο περίεργο-αλλά-υπέροχο θέαμα του νησιού: παγώνια που περπατούν στο βότσαλο.",
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJP-GbA8TllRQR_-HJNw4fA7k"
-          },
-          {
-            "name": "Dinner at Kastro Taverna",
-            "name_el": "Δείπνο στην Ταβέρνα Κάστρο",
-            "lat": 36.455,
-            "lng": 27.345,
-            "type": "restaurant",
-            "desc": "In Megalo Chorio — grilled meat, simple local dishes, family-run. The evening view from the square with the castle illuminated above is the reason to linger. Back to Livadia by bus afterwards, or stay in one of the small rooms in Megalo Chorio.",
-            "desc_el": "Στο Μεγάλο Χωριό — κρέας στη σχάρα, απλά τοπικά πιάτα, οικογενειακή. Η βραδινή θέα από την πλατεία με το κάστρο φωτισμένο από πάνω είναι ο λόγος να μείνεις. Πίσω στη Λιβαδιά με λεωφορείο μετά, ή μείνε σε ένα από τα μικρά δωμάτια στο Μεγάλο Χωριό."
           }
         ],
         "title_el": "Σπήλαιο Χαρκαδιού, Κάστρο Μεγάλου Χωριού & Έριστος",
         "overnight": null,
         "overnight_el": null,
         "km": 35,
-        "drive_mins": 60
+        "drive_mins": 60,
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Kastro Taverna",
+            "area_el": "ν Ταβέρνα Κάστρο",
+            "desc": "In Megalo Chorio — grilled meat, simple local dishes, family-run. The evening view from the square with the castle illuminated above is the reason to linger. Back to Livadia by bus afterwards, or stay in one of the small rooms in Megalo Chorio.",
+            "desc_el": "Στο Μεγάλο Χωριό — κρέας στη σχάρα, απλά τοπικά πιάτα, οικογενειακή. Η βραδινή θέα από την πλατεία με το κάστρο φωτισμένο από πάνω είναι ο λόγος να μείνεις. Πίσω στη Λιβαδιά με λεωφορείο μετά, ή μείνε σε ένα από τα μικρά δωμάτια στο Μεγάλο Χωριό.",
+            "after": "Agios Antonios & Plaka Beach"
+          }
+        ]
       }
     ],
     "title_el": "Πρόγραμμα 2 Ημερών στην Τήλο",

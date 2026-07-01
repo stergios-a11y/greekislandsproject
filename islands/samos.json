@@ -340,17 +340,6 @@
             }
           },
           {
-            "name": "Dinner — Orizontas (Platanos)",
-            "name_el": "Δείπνο — Ορίζοντας (Πλάτανος)",
-            "desc": "In the mountain village of Platanos in western Samos, <a href=\"https://www.google.com/maps/search/?api=1&query=Orizontas+Platanos+Samos\" target=\"_blank\" rel=\"noopener noreferrer\">Ορίζοντας</a> earned ★ in the FNL Best Restaurant Awards 2026 (Modern Greek Cuisine) — the recognized Samos destination kitchen for elevated takes on island ingredients.",
-            "desc_el": "Στο ορεινό χωριό Πλάτανος στη δυτική Σάμο, ο <a href=\"https://www.google.com/maps/search/?api=1&query=Ορίζοντας+Πλάτανος+Σάμος\" target=\"_blank\" rel=\"noopener noreferrer\">Ορίζοντας</a> κέρδισε ★ στα Βραβεία FNL 2026 (Σύγχρονη Ελληνική Κουζίνα).",
-            "lat": 37.7592,
-            "lng": 26.6219,
-            "time": "20:30",
-            "type": "restaurant",
-            "wiki": "https://www.google.com/maps/search/?api=1&query=Orizontas+Platanos+Samos"
-          },
-          {
             "name": "Drive back to Karlovasi",
             "lat": 37.7921,
             "lng": 26.7049,
@@ -363,7 +352,18 @@
           }
         ],
         "title_el": "Όρος Κέρκης & η Δύση",
-        "overnight_el": "Καρλόβασι"
+        "overnight_el": "Καρλόβασι",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Orizontas (Platanos)",
+            "area_el": "Ορίζοντας (Πλάτανος)",
+            "desc": "In the mountain village of Platanos in western Samos, <a href=\"https://www.google.com/maps/search/?api=1&query=Orizontas+Platanos+Samos\" target=\"_blank\" rel=\"noopener noreferrer\">Ορίζοντας</a> earned ★ in the FNL Best Restaurant Awards 2026 (Modern Greek Cuisine) — the recognized Samos destination kitchen for elevated takes on island ingredients.",
+            "desc_el": "Στο ορεινό χωριό Πλάτανος στη δυτική Σάμο, ο <a href=\"https://www.google.com/maps/search/?api=1&query=Ορίζοντας+Πλάτανος+Σάμος\" target=\"_blank\" rel=\"noopener noreferrer\">Ορίζοντας</a> κέρδισε ★ στα Βραβεία FNL 2026 (Σύγχρονη Ελληνική Κουζίνα).",
+            "after": "Sea Cave of Pythagoras"
+          }
+        ]
       },
       {
         "day": 4,

@@ -275,17 +275,6 @@
             }
           },
           {
-            "name": "Lunch — Olympos Taverna",
-            "lat": 35.7228,
-            "lng": 27.1886,
-            "type": "restaurant",
-            "time": "13:30",
-            "wiki": null,
-            "desc": "Try the village food — makarounes (homemade pasta with cheese and onions), local goat and the excellent Olympos bread. The oven bakery in the village is the last of its kind.",
-            "name_el": "Μεσημεριανό — Ταβέρνα Ολύμπου",
-            "desc_el": "Δοκίμασε το φαγητό του χωριού — μακαρούνες (σπιτικά ζυμαρικά με τυρί και κρεμμύδια), τοπικό κατσίκι και το εξαιρετικό ψωμί Ολύμπου. Ο παραδοσιακός φούρνος στο χωριό είναι ο τελευταίος του είδους του."
-          },
-          {
             "name": "Diafani Harbour",
             "lat": 35.7564848,
             "lng": 27.2096146,
@@ -328,7 +317,18 @@
           }
         ],
         "title_el": "Όλυμπος — Ο Παραδοσιακός Βορράς",
-        "overnight_el": "Πηγάδια"
+        "overnight_el": "Πηγάδια",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Olympos Taverna",
+            "area_el": "Ταβέρνα Ολύμπου",
+            "desc": "Try the village food — makarounes (homemade pasta with cheese and onions), local goat and the excellent Olympos bread. The oven bakery in the village is the last of its kind.",
+            "desc_el": "Δοκίμασε το φαγητό του χωριού — μακαρούνες (σπιτικά ζυμαρικά με τυρί και κρεμμύδια), τοπικό κατσίκι και το εξαιρετικό ψωμί Ολύμπου. Ο παραδοσιακός φούρνος στο χωριό είναι ο τελευταίος του είδους του.",
+            "after": "Olympos Village"
+          }
+        ]
       },
       {
         "day": 4,

@@ -129,17 +129,6 @@
             "desc_el": "Περπάτα τα στενά του χωριού για να δεις τα εκπληκτικά επιβλητικά αρχοντικά. Τα περισσότερα είναι εξοχικά για οικογένειες που τώρα ζουν στην Αθήνα, το Λονδίνο ή τη Νέα Υόρκη. Η κλίμακα εντυπωσιάζει για χωριό 800 κατοίκων."
           },
           {
-            "name": "Lunch — Harbour Taverna",
-            "lat": 38.5192,
-            "lng": 26.2022,
-            "type": "restaurant",
-            "time": "13:00",
-            "wiki": null,
-            "desc": "Two or three tavernas on the harbour serve excellent seafood at honest prices. The lobster pasta here is a local specialty.",
-            "name_el": "Μεσημεριανό — Ταβέρνα Λιμανιού",
-            "desc_el": "Δύο ή τρεις ταβέρνες στο λιμάνι σερβίρουν εξαιρετικά θαλασσινά σε ειλικρινείς τιμές. Τα ζυμαρικά με αστακό εδώ είναι τοπική σπεσιαλιτέ."
-          },
-          {
             "name": "Zepaga Beach",
             "lat": 38.5144,
             "lng": 26.1978,
@@ -163,7 +152,18 @@
           }
         ],
         "title_el": "Λιμάνι, Μουσείο & Παραλία",
-        "overnight_el": "Στο χωριό"
+        "overnight_el": "Στο χωριό",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Harbour Taverna",
+            "area_el": "Ταβέρνα Λιμανιού",
+            "desc": "Two or three tavernas on the harbour serve excellent seafood at honest prices. The lobster pasta here is a local specialty.",
+            "desc_el": "Δύο ή τρεις ταβέρνες στο λιμάνι σερβίρουν εξαιρετικά θαλασσινά σε ειλικρινείς τιμές. Τα ζυμαρικά με αστακό εδώ είναι τοπική σπεσιαλιτέ.",
+            "after": "Shipowners' Mansions Walk"
+          }
+        ]
       }
     ],
     "title_el": "Πρόγραμμα 1 Ημέρας στις Οινούσσες",
