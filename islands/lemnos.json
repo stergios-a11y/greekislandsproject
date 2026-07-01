@@ -155,7 +155,27 @@
         "overnight": "Myrina",
         "overnight_el": "Μύρινα",
         "km": 40,
-        "drive_mins": 60
+        "drive_mins": 60,
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Myrina",
+            "area_el": "Μύρινα",
+            "desc": "The tavernas and cafés along <a href=\"https://www.google.com/maps/search/Romeikos+Gialos+Myrina+Lemnos\" target=\"_blank\" rel=\"noopener\">Romeikos Gialos</a>, Myrina's sandy town beach, are the spot for a relaxed lunch under the castle.",
+            "desc_el": "Οι ταβέρνες και τα καφέ κατά μήκος του <a href=\"https://www.google.com/maps/search/Romeikos+Gialos+Myrina+Lemnos\" target=\"_blank\" rel=\"noopener\">Ρωμαϊκού Γιαλού</a>, της αμμώδους παραλίας της Μύρινας, είναι το σημείο για ένα χαλαρό μεσημεριανό κάτω από το κάστρο.",
+            "after": "Sunset at Romeikos Gialos"
+          },
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Myrina",
+            "area_el": "Μύρινα",
+            "desc": "<a href=\"https://www.google.com/maps/search/Giannakaros+Myrina+Lemnos\" target=\"_blank\" rel=\"noopener\">Giannakaros</a> is the island's best fish tavern — fresh catch and vegetables from the family orchard, served in huge portions.",
+            "desc_el": "Ο <a href=\"https://www.google.com/maps/search/Giannakaros+Myrina+Lemnos\" target=\"_blank\" rel=\"noopener\">Γιαννακάρος</a> είναι η καλύτερη ψαροταβέρνα του νησιού — φρέσκο ψάρι και λαχανικά από τον οικογενειακό μπαξέ, σε τεράστιες μερίδες.",
+            "after": "Sunset at Romeikos Gialos"
+          }
+        ]
       },
       {
         "day": 2,
@@ -224,7 +244,9 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Allied_cemetery,_Moudros,_Lemnos.jpg",
               "source": "Wikimedia Commons"
             },
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJVdDKIMaSrxQRzNTQRt4vQxI"
+            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJVdDKIMaSrxQRzNTQRt4vQxI",
+            "drive": "≈40 min east of Myrina",
+            "drive_el": "≈40 λεπτά ανατολικά της Μύρινας"
           },
           {
             "name": "Drive back to Myrina",
@@ -257,7 +279,9 @@
             "type": "viewpoint",
             "desc": "North of Katalakkos village by Gomati cove — vast sand dunes on the side of a mountain, with a landscape that looks like a slice of the Sahara dropped into the Aegean. Sandboarding is possible. Constantly reshaping with the wind. Surreal and almost always empty.",
             "desc_el": "Βόρεια του χωριού Κατάλακκος στον κόλπο Γωμάτι — τεράστιες αμμοθίνες στην πλαγιά βουνού, με τοπίο που μοιάζει με κομμάτι Σαχάρας πεταγμένο στο Αιγαίο. Είναι δυνατό sandboarding. Συνεχώς αλλάζουν σχήμα με τον άνεμο. Σουρεαλιστικό και σχεδόν πάντα άδειο.",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJf3Q7R8WXrxQRMpAMBkHi6ac"
+            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJf3Q7R8WXrxQRMpAMBkHi6ac",
+            "drive": "≈1 hr northeast of Myrina",
+            "drive_el": "≈1 ώρα βορειοανατολικά της Μύρινας"
           },
           {
             "name": "Panagia Kakkaviotissa Chapel",

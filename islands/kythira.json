@@ -167,10 +167,10 @@
           {
             "meal": "Dinner",
             "meal_el": "Δείπνο",
-            "area": "Chora",
-            "area_el": "Χώρα",
-            "desc": "Dinner at one of the tavernas in the Chora lanes. Try the local honey (thyme honey from Kythira is outstanding), the cheese pies, and the local wine.",
-            "desc_el": "Δείπνο σε μία από τις ταβέρνες στα στενά της Χώρας. Δοκίμασε το ντόπιο μέλι (το θυμαρίσιο μέλι των Κυθήρων είναι εξαιρετικό), τα τυροπιτάκια, και το ντόπιο κρασί.",
+            "area": "Chora & Kapsali",
+            "area_el": "Χώρα & Καψάλι",
+            "desc": "The tavernas in the <a href=\"https://www.google.com/maps/search/Kythira+Chora\" target=\"_blank\" rel=\"noopener\">Chora</a> lanes do classic Kytherian plates; down at <a href=\"https://www.google.com/maps/search/Kapsali+Kythira\" target=\"_blank\" rel=\"noopener\">Kapsali</a> the waterfront fish tavernas look onto the twin bays.",
+            "desc_el": "Οι ταβέρνες στα σοκάκια της <a href=\"https://www.google.com/maps/search/Kythira+Chora\" target=\"_blank\" rel=\"noopener\">Χώρας</a> κάνουν κλασικά κυθηραϊκά πιάτα· κάτω στο <a href=\"https://www.google.com/maps/search/Kapsali+Kythira\" target=\"_blank\" rel=\"noopener\">Καψάλι</a> οι παραθαλάσσιες ψαροταβέρνες βλέπουν τους δύο όρμους.",
             "after": "Kapsali Beach"
           }
         ]
@@ -200,7 +200,9 @@
               "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
               "page_url": "https://commons.wikimedia.org/wiki/File:Phill%27s_Watermill,_Mylopotamos,_Kythira,_Greece.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈30 min west of Avlemonas",
+            "drive_el": "≈30 λεπτά δυτικά του Αβλέμονα"
           },
           {
             "name": "Neraida Waterfall",
@@ -347,7 +349,18 @@
           }
         ],
         "title_el": "Αυλέμονας & η Ανατολική Ακτή",
-        "overnight_el": "Αυλέμωνας"
+        "overnight_el": "Αυλέμωνας",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Avlemonas",
+            "area_el": "Αβλέμονας",
+            "desc": "<a href=\"https://www.google.com/maps/search/Psomoladea+Avlemonas+Kythira\" target=\"_blank\" rel=\"noopener\">Psomoladea</a>, in a 400-year-old building, does ladenia and fresh fish; <a href=\"https://www.google.com/maps/search/Sotiris+Avlemonas+Kythira\" target=\"_blank\" rel=\"noopener\">Sotiris</a> nearby is the seafood table on the little harbour.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Psomoladea+Avlemonas+Kythira\" target=\"_blank\" rel=\"noopener\">Ψωμολαδέα</a>, σε κτίριο 400 ετών, κάνει λαδένια και φρέσκο ψάρι· ο <a href=\"https://www.google.com/maps/search/Sotiris+Avlemonas+Kythira\" target=\"_blank\" rel=\"noopener\">Σωτήρης</a> δίπλα είναι το τραπέζι θαλασσινών στο λιμανάκι.",
+            "after": "Avlemonas"
+          }
+        ]
       },
       {
         "day": 4,
@@ -374,7 +387,9 @@
               "license_url": "https://creativecommons.org/licenses/by/3.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:Old_cafe_Potamos,_Kythira.JPG",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈40 min north of Avlemonas",
+            "drive_el": "≈40 λεπτά βόρεια του Αβλέμονα"
           },
           {
             "name": "Agia Pelagia Beach",

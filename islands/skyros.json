@@ -155,11 +155,20 @@
           {
             "meal": "Lunch",
             "meal_el": "Μεσημεριανό",
-            "area": "Anemos",
-            "area_el": "Άνεμος",
-            "desc": "Small taverna with panoramic terrace. Excellent lobster pasta (Skyros is famous for lobster).",
-            "desc_el": "Μικρή ταβέρνα με πανοραμική βεράντα. Εξαιρετικά ζυμαρικά με αστακό (η Σκύρος φημίζεται για τον αστακό).",
+            "area": "Skyros Town (Chora)",
+            "area_el": "Χώρα",
+            "desc": "<a href=\"https://www.google.com/maps/search/Anemos+Skyros+Chora\" target=\"_blank\" rel=\"noopener\">Anemos</a> is the small taverna with a panoramic terrace — excellent lobster pasta and Skyrian plates.",
+            "desc_el": "Ο <a href=\"https://www.google.com/maps/search/Anemos+Skyros+Chora\" target=\"_blank\" rel=\"noopener\">Άνεμος</a> είναι η μικρή ταβέρνα με πανοραμική βεράντα — εξαιρετική αστακομακαρονάδα και σκυριανά πιάτα.",
             "after": "Byzantine Castle of Skyros"
+          },
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Skyros Town (Chora)",
+            "area_el": "Χώρα",
+            "desc": "<a href=\"https://www.google.com/maps/search/Margetis+Skyros+Chora\" target=\"_blank\" rel=\"noopener\">Margetis</a> is the most authentic taverna in town — grilled meats and Greek wine; <a href=\"https://www.google.com/maps/search/O+Papous+ki+ego+Skyros\" target=\"_blank\" rel=\"noopener\">O Pappous ki ego</a> does Skyrian stews and tapas-style plates.",
+            "desc_el": "Ο <a href=\"https://www.google.com/maps/search/Margetis+Skyros+Chora\" target=\"_blank\" rel=\"noopener\">Μαργέτης</a> είναι η πιο αυθεντική ταβέρνα της πόλης — ψητά και ελληνικό κρασί· ο <a href=\"https://www.google.com/maps/search/O+Papous+ki+ego+Skyros\" target=\"_blank\" rel=\"noopener\">Ο Παππούς κι εγώ</a> κάνει σκυριανά μαγειρευτά και πιάτα για μοίρασμα.",
+            "after": "Magazia Beach (sunset)"
           }
         ]
       },
@@ -199,7 +208,9 @@
               "license_url": "https://creativecommons.org/licenses/by/4.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:Archaeological_Site_of_Palamari_at_Skyros_2022.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈30 min north of Chora",
+            "drive_el": "≈30 λεπτά βόρεια της Χώρας"
           },
           {
             "name": "Atsitsa Beach",
