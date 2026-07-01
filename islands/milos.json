@@ -181,10 +181,10 @@
           {
             "meal": "Dinner",
             "meal_el": "Δείπνο",
-            "area": "Mákris (Domes White Coast, Mytakas)",
-            "area_el": "Mákris (Domes White Coast, Μύτακας)",
-            "desc": "On the north coast at Mytakas, <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJywkYlVPfmBQR9ufOuhcTdx0\" target=\"_blank\" rel=\"noopener noreferrer\">Mákris Milos</a> at Domes White Coast won ★ in the FNL Best Restaurant Awards 2026 (Modern Bistro). Black Angus beef, creative tasting menu, dramatic clifftop setting. Reserve ahead.",
-            "desc_el": "Στη βόρεια ακτή στον Μύτακα, το <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJywkYlVPfmBQR9ufOuhcTdx0\" target=\"_blank\" rel=\"noopener noreferrer\">Mákris Milos</a> στο Domes White Coast κέρδισε ★ στα Βραβεία FNL 2026 (Modern Bistro). Black Angus, ευφάνταστο μενού γευσιγνωσίας. Κράτηση εκ των προτέρων.",
+            "area": "Plaka & Mandrakia",
+            "area_el": "Πλάκα & Μανδράκια",
+            "desc": "Sunset dinner on the north coast. <a href=\"https://www.google.com/maps/search/Medusa+Mandrakia+Milos\" target=\"_blank\" rel=\"noopener\">Medusa</a> perches on the Mandrakia cliff for seafood as the sun drops. <a href=\"https://www.google.com/maps/search/Archontoula+Plaka+Milos\" target=\"_blank\" rel=\"noopener\">Archontoula</a> in Plaka village is the reliable, home-style taverna; for something upscale, <a href=\"https://www.google.com/maps/search/Makris+Domes+White+Coast+Milos\" target=\"_blank\" rel=\"noopener\">Mákris</a> at the Domes resort in Mytakas.",
+            "desc_el": "Δείπνο στο ηλιοβασίλεμα, στη βόρεια ακτή. Το <a href=\"https://www.google.com/maps/search/Medusa+Mandrakia+Milos\" target=\"_blank\" rel=\"noopener\">Medusa</a> στέκεται στον γκρεμό των Μανδρακίων για θαλασσινά καθώς πέφτει ο ήλιος. Η <a href=\"https://www.google.com/maps/search/Archontoula+Plaka+Milos\" target=\"_blank\" rel=\"noopener\">Αρχοντούλα</a> στην Πλάκα είναι η σταθερή, σπιτική ταβέρνα· για κάτι πιο αναβαθμισμένο, το <a href=\"https://www.google.com/maps/search/Makris+Domes+White+Coast+Milos\" target=\"_blank\" rel=\"noopener\">Mákris</a> στο Domes στον Μύτακα.",
             "after": "Plaka Village"
           }
         ]
@@ -377,7 +377,18 @@
           }
         ],
         "title_el": "Παραλίες της Νότιας Ακτής",
-        "overnight_el": "Αδάμαντας"
+        "overnight_el": "Αδάμαντας",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Pollonia",
+            "area_el": "Πολλώνια",
+            "desc": "The fishing village of Pollonia is the island's best dinner spot. <a href=\"https://www.google.com/maps/search/Enalion+Pollonia+Milos\" target=\"_blank\" rel=\"noopener\">Enalion</a> is the local favourite — seafood and produce largely from the owner's own farm, right on the waterfront. <a href=\"https://www.google.com/maps/search/Gialos+Pollonia+Milos\" target=\"_blank\" rel=\"noopener\">Gialos</a> next door does classic Greek by the water.",
+            "desc_el": "Το ψαροχώρι Πολλώνια είναι το καλύτερο σημείο για δείπνο στο νησί. Το <a href=\"https://www.google.com/maps/search/Enalion+Pollonia+Milos\" target=\"_blank\" rel=\"noopener\">Enalion</a> είναι το αγαπημένο των ντόπιων — θαλασσινά και προϊόντα κυρίως από το χωράφι του ιδιοκτήτη, πάνω στην προκυμαία. Το <a href=\"https://www.google.com/maps/search/Gialos+Pollonia+Milos\" target=\"_blank\" rel=\"noopener\">Gialos</a> δίπλα κάνει κλασική ελληνική κουζίνα δίπλα στο νερό.",
+            "after": "Pollonia"
+          }
+        ]
       },
       {
         "day": 4,

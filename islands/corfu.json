@@ -190,10 +190,10 @@
           {
             "meal": "Lunch",
             "meal_el": "Μεσημεριανό",
-            "area": "To Dimarchio",
-            "area_el": "Το Δημαρχείο",
-            "desc": "Classic Corfiot restaurant under the trees near Dimarchion Square. Try the sofrito (Corfu's signature veal dish) and bourdeto (spicy fish stew).",
-            "desc_el": "Κλασικό κερκυραϊκό εστιατόριο κάτω από τα δέντρα κοντά στην πλατεία του Δημαρχείου. Δοκίμασε σοφρίτο (το χαρακτηριστικό κερκυραϊκό πιάτο μοσχαριού) και μπουρδέτο (πικάντικο ψαρόσουπο).",
+            "area": "Corfu Town",
+            "area_el": "Πόλη Κέρκυρας",
+            "desc": "Lunch in the Old Town. <a href=\"https://www.google.com/maps/search/To+Dimarchio+Corfu+Town\" target=\"_blank\" rel=\"noopener\">To Dimarchio</a> sits on the Town Hall square for classic Corfiot dishes (pastitsada, sofrito). <a href=\"https://www.google.com/maps/search/Rex+Corfu+Town\" target=\"_blank\" rel=\"noopener\">Rex</a>, just off the Liston and going since 1932, is the grand old institution.",
+            "desc_el": "Μεσημεριανό στην Παλιά Πόλη. Το <a href=\"https://www.google.com/maps/search/To+Dimarchio+Corfu+Town\" target=\"_blank\" rel=\"noopener\">To Dimarchio</a> βρίσκεται στην πλατεία του Δημαρχείου για κλασικά κερκυραϊκά πιάτα (παστιτσάδα, σοφρίτο). Το <a href=\"https://www.google.com/maps/search/Rex+Corfu+Town\" target=\"_blank\" rel=\"noopener\">Rex</a>, δίπλα στο Λιστόν και από το 1932, είναι ο μεγάλος παλιός θεσμός.",
             "after": "Corfu Old Town (UNESCO)"
           }
         ]
@@ -223,7 +223,9 @@
               "license_url": "https://creativecommons.org/licenses/by/3.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:Corfu_Achilleion_R05.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈20 min south of Corfu Town",
+            "drive_el": "≈20 λεπτά νότια της Πόλης"
           },
           {
             "name": "Benitses Village",
@@ -304,7 +306,9 @@
             "name_el": "Μοναστήρι Παλαιοκαστρίτσας",
             "desc_el": "Μοναστήρι του 13ου αιώνα γκρεμισμένο σε ακρωτήρι πάνω από τους κόλπους. Μικρό μουσείο εικόνων και εκκλησιαστικών αντικειμένων. Εκπληκτική θέα στους τιρκουάζ κολπίσκους από κάτω.",
             "photo": "",
-            "photo_credit": null
+            "photo_credit": null,
+            "drive": "≈45 min from Corfu Town",
+            "drive_el": "≈45 λεπτά από την Πόλη"
           },
           {
             "name": "Paleokastritsa Beach",
@@ -414,7 +418,9 @@
               "license_url": "https://creativecommons.org/licenses/by/3.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:Corfu_Roda_R01.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈40 min to the north coast",
+            "drive_el": "≈40 λεπτά στη βόρεια ακτή"
           },
           {
             "name": "Canal d'Amour",
@@ -563,8 +569,8 @@
             "meal_el": "Δείπνο",
             "area": "Corfu Town",
             "area_el": "Πόλη Κέρκυρας",
-            "desc": "Return to Corfu Town for a final dinner at the Liston. Order the pastitsada (Corfiot pasta with cockerel) and a glass of Robola wine.",
-            "desc_el": "Επιστροφή στην πόλη της Κέρκυρας για ένα τελευταίο δείπνο στο Λιστόν. Παράγγειλε παστιτσάδα (κερκυραϊκή με κόκορα) και ένα ποτήρι κρασί Ροπόλα.",
+            "desc": "A farewell dinner in the Old Town. <a href=\"https://www.google.com/maps/search/Venetian+Well+Corfu+Town\" target=\"_blank\" rel=\"noopener\">The Venetian Well</a> on a hidden square is the island's finest — Corfiot-Mediterranean cooking and a serious wine list (book ahead). <a href=\"https://www.google.com/maps/search/Rex+Corfu+Town\" target=\"_blank\" rel=\"noopener\">Rex</a> is the classic alternative near the Liston.",
+            "desc_el": "Αποχαιρετιστήριο δείπνο στην Παλιά Πόλη. Το <a href=\"https://www.google.com/maps/search/Venetian+Well+Corfu+Town\" target=\"_blank\" rel=\"noopener\">The Venetian Well</a> σε μια κρυμμένη πλατεία είναι το καλύτερο του νησιού — κερκυραϊκή-μεσογειακή κουζίνα και σοβαρή λίστα κρασιών (κράτηση εκ των προτέρων). Το <a href=\"https://www.google.com/maps/search/Rex+Corfu+Town\" target=\"_blank\" rel=\"noopener\">Rex</a> είναι η κλασική εναλλακτική κοντά στο Λιστόν.",
             "after": "Agios Gordios Beach"
           }
         ]
