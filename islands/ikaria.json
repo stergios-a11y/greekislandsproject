@@ -151,7 +151,18 @@
           }
         ],
         "title_el": "Άγιος Κήρυκος & τα Ιαματικά Λουτρά",
-        "overnight_el": "Εύδηλος"
+        "overnight_el": "Εύδηλος",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Evdilos",
+            "area_el": "Εύδηλος",
+            "desc": "<a href=\"https://www.google.com/maps/search/Sta+Perix+Ikaria\" target=\"_blank\" rel=\"noopener\">Sta Perix</a>, between Evdilos and Kambos, does traditional Ikarian plates bursting with flavour.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Sta+Perix+Ikaria\" target=\"_blank\" rel=\"noopener\">Στα Περίξ</a>, ανάμεσα σε Εύδηλο και Κάμπο, κάνει παραδοσιακά ικαριώτικα πιάτα γεμάτα γεύση.",
+            "after": "Evening at the Port"
+          }
+        ]
       },
       {
         "day": 2,
@@ -178,7 +189,9 @@
               "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:Ikaria_local_produce_shop_in_Christos_Raches_-_17092529567_-_Pramnios.png",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈40 min west of Evdilos",
+            "drive_el": "≈40 λεπτά δυτικά του Ευδήλου"
           },
           {
             "name": "Langada Gorge",
@@ -242,7 +255,18 @@
           }
         ],
         "title_el": "Ορεινά Χωριά της Ραχής",
-        "overnight_el": "Εύδηλος"
+        "overnight_el": "Εύδηλος",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Christos Raches & Nas",
+            "area_el": "Χριστός Ραχών & Νας",
+            "desc": "<a href=\"https://www.google.com/maps/search/CousinA+Christos+Raches+Ikaria\" target=\"_blank\" rel=\"noopener\">CousinA</a> in pedestrianised Christos Raches does ecological, generous Ikarian cooking; the tavernas at <a href=\"https://www.google.com/maps/search/Nas+Ikaria\" target=\"_blank\" rel=\"noopener\">Nas</a> sit above the gorge and beach.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/CousinA+Christos+Raches+Ikaria\" target=\"_blank\" rel=\"noopener\">CousinA</a> στον πεζόδρομο του Χριστού Ραχών κάνει οικολογική, γενναιόδωρη ικαριώτικη κουζίνα· οι ταβέρνες στο <a href=\"https://www.google.com/maps/search/Nas+Ikaria\" target=\"_blank\" rel=\"noopener\">Νας</a> κάθονται πάνω από το φαράγγι και την παραλία.",
+            "after": "Nas Beach"
+          }
+        ]
       },
       {
         "day": 3,

@@ -136,19 +136,19 @@
           {
             "meal": "Lunch",
             "meal_el": "Μεσημεριανό",
-            "area": "Ουζερί Αντώνης (Ταξιάρχες)",
-            "area_el": "Ουζερί Αντώνης (Ταξιάρχες)",
-            "desc": "Iconic hilltop ouzeri in the village of Taxiarches (Kagiani), 8 km from Mytilene on the airport road. Sweeping view over the city and the Asia Minor coast. Order the cheese pies, the marinated sardines, the keftedakia with cumin, and the cuttlefish in vinegar.",
-            "desc_el": "Εμβληματικό ουζερί στο χωριό Ταξιάρχες (Καγιάνι), 8 χλμ έξω από τη Μυτιλήνη στον δρόμο του αεροδρομίου. Υπέροχη θέα σε όλη την πόλη και τα απέναντι μικρασιατικά παράλια. Παράγγειλε τις τυρόπιτες, τις παστές σαρδέλες, τα κεφτεδάκια με κύμινο και τη σουπιά με ξύδι.",
+            "area": "Taxiarches",
+            "area_el": "Ταξιάρχες",
+            "desc": "<a href=\"https://www.google.com/maps/search/Ouzeri+Antonis+Taxiarches+Lesvos\" target=\"_blank\" rel=\"noopener\">Ουζερί Αντώνης</a> is the iconic hilltop ouzeri in Taxiarches — mezes and Lesvos ouzo. In Mytilene, <a href=\"https://www.google.com/maps/search/Kafeneion+O+Ermis+Mytilene\" target=\"_blank\" rel=\"noopener\">Kafeneion O Ermis</a> is the 1800s ouzeri to know.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Ouzeri+Antonis+Taxiarches+Lesvos\" target=\"_blank\" rel=\"noopener\">Ουζερί Αντώνης</a> είναι το εμβληματικό ουζερί στους Ταξιάρχες — μεζέδες και ούζο Λέσβου. Στη Μυτιλήνη, το <a href=\"https://www.google.com/maps/search/Kafeneion+O+Ermis+Mytilene\" target=\"_blank\" rel=\"noopener\">Καφενείον Ο Ερμής</a> είναι το ουζερί του 1800.",
             "after": "Varia Village"
           },
           {
             "meal": "Dinner",
             "meal_el": "Δείπνο",
-            "area": "Το Καφενείον",
-            "area_el": "Το Καφενείον",
-            "desc": "«Το Καφενείον» Meat Stories in Plomari — grilled meats and local wine in a traditional setting. Stay overnight in Plomari.",
-            "desc_el": "«Το Καφενείον» Meat Stories στο Πλωμάρι — ψητά κρέατα και τοπικό κρασί σε παραδοσιακή ατμόσφαιρα. Διανυκτέρευση στο Πλωμάρι.",
+            "area": "Plomari",
+            "area_el": "Πλωμάρι",
+            "desc": "<a href=\"https://www.google.com/maps/search/To+Kafeneion+Plomari+Lesvos\" target=\"_blank\" rel=\"noopener\">Το Καφενείον</a> in Plomari — the ouzo town — does 'meat stories': grilled meats and mezes to sip ouzo by.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/To+Kafeneion+Plomari+Lesvos\" target=\"_blank\" rel=\"noopener\">Το Καφενείον</a> στο Πλωμάρι — την πόλη του ούζου — κάνει «ιστορίες κρέατος»: ψητά και μεζέδες για να πιεις ούζο.",
             "after": "Agios Isidoros Beach"
           }
         ]
@@ -250,7 +250,9 @@
             "desc": "UNESCO-listed Petrified Forest — 20 million year old trees turned to stone by volcanic ash. Allow 1.5 hours.",
             "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776895441/petrifiedforest_elzmpo.webp",
             "name_el": "Πετρωμένο Δάσος",
-            "desc_el": "Γεωπάρκο UNESCO. Απολιθωμένοι κορμοί 20 εκατομμυρίων ετών, που πέτρωσαν από ηφαιστειακή τέφρα. Επισκέψου και το Μουσείο Σιγρίου για την πλήρη ιστορία."
+            "desc_el": "Γεωπάρκο UNESCO. Απολιθωμένοι κορμοί 20 εκατομμυρίων ετών, που πέτρωσαν από ηφαιστειακή τέφρα. Επισκέψου και το Μουσείο Σιγρίου για την πλήρη ιστορία.",
+            "drive": "≈45 min west of Eresos",
+            "drive_el": "≈45 λεπτά δυτικά της Ερεσού"
           },
           {
             "name": "Sigri",
@@ -375,7 +377,9 @@
               "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:Molyvos_lesvos.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈1 hr 15 to the north coast",
+            "drive_el": "≈1 ώρα 15 στη βόρεια ακτή"
           }
         ],
         "title_el": "Καλλονή & ο Κόλπος",
@@ -468,7 +472,18 @@
           }
         ],
         "title_el": "Μόλυβος, Πέτρα & ο Βορράς",
-        "overnight_el": "Μόλυβος"
+        "overnight_el": "Μόλυβος",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Molyvos",
+            "area_el": "Μόλυβος",
+            "desc": "<a href=\"https://www.google.com/maps/search/Captains+Table+Molyvos+Lesvos\" target=\"_blank\" rel=\"noopener\">The Captain's Table</a> on the Molyvos harbour is the long-running favourite for fresh fish and mezes under the castle.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Captains+Table+Molyvos+Lesvos\" target=\"_blank\" rel=\"noopener\">The Captain's Table</a> στο λιμάνι του Μολύβου είναι το πολυκαιρισμένο αγαπημένο για φρέσκο ψάρι και μεζέδες κάτω από το κάστρο.",
+            "after": "Return to Molyvos"
+          }
+        ]
       },
       {
         "day": 6,

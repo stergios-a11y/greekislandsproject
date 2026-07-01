@@ -159,7 +159,18 @@
           }
         ],
         "title_el": "Πόλη της Χίου",
-        "overnight_el": "Χώρα"
+        "overnight_el": "Χώρα",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Chios Town",
+            "area_el": "Χώρα Χίου",
+            "desc": "<a href=\"https://www.google.com/maps/search/Hotzas+Chios+Town\" target=\"_blank\" rel=\"noopener\">Hotzas</a> (open since 1882) is the storied taverna where chef Yiannis Linos plays with Chian and Constantinopolitan flavours — the standout. On the harbour, <a href=\"https://www.google.com/maps/search/To+Tsikoudo+Chios+Town\" target=\"_blank\" rel=\"noopener\">To Tsikoudo</a> does classic meze.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Hotzas+Chios+Town\" target=\"_blank\" rel=\"noopener\">Hotzas</a> (από το 1882) είναι η θρυλική ταβέρνα όπου ο σεφ Γιάννης Λινός παίζει με χιώτικες και πολίτικες γεύσεις — η κορυφαία επιλογή. Στο λιμάνι, το <a href=\"https://www.google.com/maps/search/To+Tsikoudo+Chios+Town\" target=\"_blank\" rel=\"noopener\">Το Τσικουδό</a> κάνει κλασικό μεζέ.",
+            "after": "Karfas Beach"
+          }
+        ]
       },
       {
         "day": 2,
@@ -277,7 +288,9 @@
               "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:The_port_of_Mesta,_Chios,_Greece.JPG",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈50 min southwest of Chios Town",
+            "drive_el": "≈50 λεπτά νοτιοδυτικά της Χώρας"
           },
           {
             "name": "Mastic Museum",
@@ -341,7 +354,18 @@
           }
         ],
         "title_el": "Μαστιχοχώρια",
-        "overnight_el": "Χώρα"
+        "overnight_el": "Χώρα",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Mesta",
+            "area_el": "Μεστά",
+            "desc": "<a href=\"https://www.google.com/maps/search/O+Mesaionas+Mesta+Chios\" target=\"_blank\" rel=\"noopener\">O Mesaionas</a> on the medieval square of Mesta serves traditional Chian cooking in the mastic villages.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/O+Mesaionas+Mesta+Chios\" target=\"_blank\" rel=\"noopener\">Ο Μεσαίωνας</a> στην μεσαιωνική πλατεία των Μεστών σερβίρει παραδοσιακή χιώτικη κουζίνα στα μαστιχοχώρια.",
+            "after": "Mesta Village"
+          }
+        ]
       },
       {
         "day": 4,
