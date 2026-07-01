@@ -194,7 +194,18 @@
         "overnight": "Chora",
         "overnight_el": "Χώρα",
         "km": 10,
-        "drive_mins": 20
+        "drive_mins": 20,
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Chora",
+            "area_el": "Χώρα",
+            "desc": "<a href=\"https://www.google.com/maps/search/To+Steki+tou+Garmpi+Sikinos\" target=\"_blank\" rel=\"noopener\">To Steki tou Garmpi</a> and <a href=\"https://www.google.com/maps/search/Klimataria+Sikinos\" target=\"_blank\" rel=\"noopener\">Klimataria</a> sit side by side near the Chora square with daily specials; down at the port, <a href=\"https://www.google.com/maps/search/Lucas+Restaurant+Sikinos\" target=\"_blank\" rel=\"noopener\">Lucas</a> is right on the front.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/To+Steki+tou+Garmpi+Sikinos\" target=\"_blank\" rel=\"noopener\">Στέκι του Γαρμπή</a> και η <a href=\"https://www.google.com/maps/search/Klimataria+Sikinos\" target=\"_blank\" rel=\"noopener\">Κλιματαριά</a> είναι δίπλα-δίπλα κοντά στην πλατεία της Χώρας με πιάτα ημέρας· κάτω στο λιμάνι, το <a href=\"https://www.google.com/maps/search/Lucas+Restaurant+Sikinos\" target=\"_blank\" rel=\"noopener\">Lucas</a> είναι πάνω στο κύμα.",
+            "after": "Chora & Kastro"
+          }
+        ]
       },
       {
         "day": 2,

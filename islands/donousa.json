@@ -160,7 +160,18 @@
         "overnight": "Stavros",
         "overnight_el": "Σταυρός",
         "km": 10,
-        "drive_mins": 25
+        "drive_mins": 25,
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Stavros",
+            "area_el": "Σταυρός",
+            "desc": "<a href=\"https://www.google.com/maps/search/Aposperitis+Donousa\" target=\"_blank\" rel=\"noopener\">Aposperitis</a> on the Stavros beachfront (since 1987) is the homemade-food institution; <a href=\"https://www.google.com/maps/search/Kapetan+Giorgis+Donousa\" target=\"_blank\" rel=\"noopener\">Kapetan Giorgis</a> is the other village favourite.",
+            "desc_el": "Ο <a href=\"https://www.google.com/maps/search/Aposperitis+Donousa\" target=\"_blank\" rel=\"noopener\">Αποσπερίτης</a> στην παραλία του Σταυρού (από το 1987) είναι ο θεσμός της σπιτικής κουζίνας· ο <a href=\"https://www.google.com/maps/search/Kapetan+Giorgis+Donousa\" target=\"_blank\" rel=\"noopener\">Καπετάν Γιώργης</a> είναι το άλλο αγαπημένο του χωριού.",
+            "after": "Mersini Village & Spring"
+          }
+        ]
       },
       {
         "day": 2,
