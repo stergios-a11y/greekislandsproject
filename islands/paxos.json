@@ -139,19 +139,19 @@
           {
             "meal": "Lunch",
             "meal_el": "Μεσημεριανό",
-            "area": "Volcano",
-            "area_el": "Volcano",
-            "desc": "Seafood taverna on Gaios' main square, with tables that spill onto the cobblestones. Fresh catch of the day on display behind the counter, excellent local Ionian wines, and the kind of unhurried lunch that runs into mid-afternoon.",
-            "desc_el": "Ψαροταβέρνα στην κύρια πλατεία του Γάιου, με τραπέζια που ξεχύνονται στο καλντερίμι. Φρέσκια ψαριά της ημέρας στη βιτρίνα, εξαιρετικά τοπικά ιόνια κρασιά, και αυτό το είδος αβίαστου μεσημεριανού που τραβά μέχρι αργά.",
+            "area": "Gaios",
+            "area_el": "Γάιος",
+            "desc": "<a href=\"https://www.google.com/maps/search/Volcano+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Volcano</a> is the seafood taverna on the Gaios main square, tables spilling toward the water.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Volcano+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Volcano</a> είναι η ψαροταβέρνα στην κεντρική πλατεία του Γάιου, με τραπέζια ως το νερό.",
             "after": "Agios Nikolaos islet"
           },
           {
             "meal": "Dinner",
             "meal_el": "Δείπνο",
-            "area": "Taka Taka Mam",
-            "area_el": "Taka Taka Mam",
-            "desc": "Tiny family-run spot with dining tables tucked into a lemon grove. Grilled meats, garden-fresh vegetables, no menu — they tell you what they cooked that day. Book by phone the morning of; there are only six tables.",
-            "desc_el": "Μικροσκοπικό οικογενειακό στέκι με τραπέζια στημένα σε λεμονόδεντρα. Ψητά κρέατα, λαχανικά του κήπου, χωρίς μενού — σου λένε τι μαγείρεψαν τη μέρα. Κράτηση το πρωί στο τηλέφωνο· έχει μόνο έξι τραπέζια.",
+            "area": "Gaios",
+            "area_el": "Γάιος",
+            "desc": "<a href=\"https://www.google.com/maps/search/Taka+Taka+Mam+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Taka Taka Mam</a> is the tiny family-run spot with tables tucked into a lemon garden.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Taka+Taka+Mam+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Taka Taka Mam</a> είναι το μικρό οικογενειακό στέκι με τραπέζια σε έναν κήπο με λεμονιές.",
             "after": "Mongonissi Beach"
           }
         ]
@@ -234,7 +234,18 @@
           }
         ],
         "title_el": "Γκρεμοί Δυτικής Ακτής & Αντίπαξοι",
-        "overnight_el": "Αναχώρηση"
+        "overnight_el": "Αναχώρηση",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Loggos",
+            "area_el": "Λογγός",
+            "desc": "The harbour tavernas at <a href=\"https://www.google.com/maps/search/Loggos+Paxos\" target=\"_blank\" rel=\"noopener\">Loggos</a> line a tiny, postcard bay — fresh fish and a slow lunch before the Antipaxos boat.",
+            "desc_el": "Οι ταβέρνες του λιμανιού στον <a href=\"https://www.google.com/maps/search/Loggos+Paxos\" target=\"_blank\" rel=\"noopener\">Λογγό</a> είναι πάνω σε έναν μικροσκοπικό, καρτ-ποστάλ όρμο — φρέσκο ψάρι κι ένα χαλαρό μεσημεριανό πριν το καΐκι για τους Αντίπαξους.",
+            "after": "Longos"
+          }
+        ]
       }
     ],
     "title_el": "Πρόγραμμα 2 Ημερών στους Παξούς",

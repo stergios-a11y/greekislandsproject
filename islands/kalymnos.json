@@ -159,10 +159,10 @@
           {
             "meal": "Dinner",
             "meal_el": "Δείπνο",
-            "area": "Pothia Waterfront Dinner",
-            "area_el": "Παραλιακό της Πόθιας",
-            "desc": "The harbour tavernas serve excellent fresh fish. Try the mermizeli (Kalymnos salad with rusks) and oktapodi (octopus). On the south coast at Linaria, <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJ5_MgOKbvvRQRRvF79Tzm0uo\" target=\"_blank\" rel=\"noopener noreferrer\">Καπάδικο</a> earned ★ in the FNL Best Restaurant Awards 2026 (Seafood Restaurant) — chef Michael Marthas's destination fish kitchen. Reserve ahead.",
-            "desc_el": "Οι ταβέρνες του λιμανιού σερβίρουν εξαιρετικό φρέσκο ψάρι. Δοκίμασε το μερμίζελι (καλύμνικη σαλάτα με παξιμάδια) και το χταπόδι. Στη Λινάρια στη νότια ακτή, το <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJ5_MgOKbvvRQRRvF79Tzm0uo\" target=\"_blank\" rel=\"noopener noreferrer\">Καπάδικο</a> κέρδισε ★ στα Βραβεία FNL 2026 (Εστιατόριο για Ψάρι). Κάντε κράτηση εκ των προτέρων.",
+            "area": "Pothia",
+            "area_el": "Ποθιά",
+            "desc": "The harbour tavernas do excellent fresh fish. In the backstreets, <a href=\"https://www.google.com/maps/search/Xefteris+Pothia+Kalymnos\" target=\"_blank\" rel=\"noopener\">Xefteris</a> is the island's old-timer (since 1933) for classic Kalymnian home cooking.",
+            "desc_el": "Οι ταβέρνες του λιμανιού κάνουν εξαιρετικό φρέσκο ψάρι. Στα σοκάκια, ο <a href=\"https://www.google.com/maps/search/Xefteris+Pothia+Kalymnos\" target=\"_blank\" rel=\"noopener\">Ξευτέρης</a> είναι ο παλιός θεσμός του νησιού (από το 1933) για κλασική καλυμνιώτικη σπιτική κουζίνα.",
             "after": "Myrties Beach"
           }
         ]
@@ -245,7 +245,18 @@
           }
         ],
         "title_el": "Μασσούρι, Αναρρίχηση & Παραλίες",
-        "overnight_el": "Μασούρι"
+        "overnight_el": "Μασούρι",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Masouri",
+            "area_el": "Μασούρι",
+            "desc": "<a href=\"https://www.google.com/maps/search/Aegean+Tavern+Masouri+Kalymnos\" target=\"_blank\" rel=\"noopener\">Aegean Tavern</a> at the end of Masouri beach (since 1989) is the island's best — a modern take on Greek cooking; <a href=\"https://www.google.com/maps/search/Thrimpi+Wine+Restaurant+Kalymnos\" target=\"_blank\" rel=\"noopener\">Thrimpi</a> just beyond has a white terrace for the sunset.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Aegean+Tavern+Masouri+Kalymnos\" target=\"_blank\" rel=\"noopener\">Aegean Tavern</a> στην άκρη της παραλίας του Μασουρίου (από το 1989) είναι το καλύτερο του νησιού — μοντέρνα ματιά στην ελληνική κουζίνα· το <a href=\"https://www.google.com/maps/search/Thrimpi+Wine+Restaurant+Kalymnos\" target=\"_blank\" rel=\"noopener\">Thrimpi</a> λίγο πιο πέρα έχει λευκή βεράντα για το ηλιοβασίλεμα.",
+            "after": "Emborios Village"
+          }
+        ]
       },
       {
         "day": 3,

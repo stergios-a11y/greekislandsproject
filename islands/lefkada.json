@@ -163,7 +163,18 @@
         "title_el": "Χώρα Λευκάδας & η Λιμνοθάλασσα",
         "overnight_el": "Νυδρί",
         "nightlife": "You're based in <a href=\"https://www.google.com/maps/search/Nydri+Lefkada\" target=\"_blank\" rel=\"noopener\">Nydri</a>, Lefkada's nightlife hub — a promenade of bars with happy hours and live music. <a href=\"https://www.google.com/maps/search/Street+Bar+Nydri+Lefkada\" target=\"_blank\" rel=\"noopener\">The Street Bar</a> is the cocktail anchor; for clubs, <a href=\"https://www.google.com/maps/search/Excess+Club+Nydri\" target=\"_blank\" rel=\"noopener\">Excess</a> is the biggest, house and techno June–September. Lefkada Town (20 min) has the classier bars — Karma, Baccara, the two-floor Havana Club — if you fancy the trip.",
-        "nightlife_el": "Έχεις βάση το <a href=\"https://www.google.com/maps/search/Nydri+Lefkada\" target=\"_blank\" rel=\"noopener\">Νυδρί</a>, το κέντρο της νυχτερινής ζωής της Λευκάδας — μια προκυμαία με μπαρ, happy hours και ζωντανή μουσική. Το <a href=\"https://www.google.com/maps/search/Street+Bar+Nydri+Lefkada\" target=\"_blank\" rel=\"noopener\">The Street Bar</a> είναι ο πυρήνας για κοκτέιλ· για clubs, το <a href=\"https://www.google.com/maps/search/Excess+Club+Nydri\" target=\"_blank\" rel=\"noopener\">Excess</a> είναι το μεγαλύτερο, house και techno Ιούνιο–Σεπτέμβριο. Η πόλη της Λευκάδας (20') έχει τα πιο σικ μπαρ — Karma, Baccara, το διώροφο Havana Club — αν θες τη βόλτα."
+        "nightlife_el": "Έχεις βάση το <a href=\"https://www.google.com/maps/search/Nydri+Lefkada\" target=\"_blank\" rel=\"noopener\">Νυδρί</a>, το κέντρο της νυχτερινής ζωής της Λευκάδας — μια προκυμαία με μπαρ, happy hours και ζωντανή μουσική. Το <a href=\"https://www.google.com/maps/search/Street+Bar+Nydri+Lefkada\" target=\"_blank\" rel=\"noopener\">The Street Bar</a> είναι ο πυρήνας για κοκτέιλ· για clubs, το <a href=\"https://www.google.com/maps/search/Excess+Club+Nydri\" target=\"_blank\" rel=\"noopener\">Excess</a> είναι το μεγαλύτερο, house και techno Ιούνιο–Σεπτέμβριο. Η πόλη της Λευκάδας (20') έχει τα πιο σικ μπαρ — Karma, Baccara, το διώροφο Havana Club — αν θες τη βόλτα.",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Agios Nikitas",
+            "area_el": "Άγιος Νικήτας",
+            "desc": "<a href=\"https://www.google.com/maps/search/Maistros+Agios+Nikitas+Lefkada\" target=\"_blank\" rel=\"noopener\">Maistros</a> and <a href=\"https://www.google.com/maps/search/Asperous+Agios+Nikitas+Lefkada\" target=\"_blank\" rel=\"noopener\">Asperous</a> (near Milos Beach) are the two to know in the pretty village of Agios Nikitas — seafood and Mediterranean plates.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Maistros+Agios+Nikitas+Lefkada\" target=\"_blank\" rel=\"noopener\">Maistros</a> και το <a href=\"https://www.google.com/maps/search/Asperous+Agios+Nikitas+Lefkada\" target=\"_blank\" rel=\"noopener\">Asperous</a> (κοντά στην παραλία Μύλος) είναι τα δύο στέκια του γραφικού Αγίου Νικήτα — θαλασσινά και μεσογειακά πιάτα.",
+            "after": "Agios Nikitas"
+          }
+        ]
       },
       {
         "day": 2,
@@ -234,7 +245,18 @@
           }
         ],
         "title_el": "Νυδρί & η Ανατολική Ακτή",
-        "overnight_el": "Νυδρί"
+        "overnight_el": "Νυδρί",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Nydri",
+            "area_el": "Νυδρί",
+            "desc": "<a href=\"https://www.google.com/maps/search/Trata+Restaurant+Nydri+Lefkada\" target=\"_blank\" rel=\"noopener\">Trata</a> near the Nydri seafront serves traditional Greek and fresh seafood with family-style service.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Trata+Restaurant+Nydri+Lefkada\" target=\"_blank\" rel=\"noopener\">Trata</a> κοντά στην παραλία του Νυδριού σερβίρει παραδοσιακά ελληνικά και φρέσκα θαλασσινά με οικογενειακή φιλοξενία.",
+            "after": "Return to Nydri"
+          }
+        ]
       },
       {
         "day": 3,
@@ -254,7 +276,9 @@
             "desc": "One of the longest and most dramatic beaches in Greece — 1.5km of white pebble beneath sheer white cliffs, accessible only by 350 steps or by boat from Vassiliki. Completely wild and unorganised.",
             "name_el": "Παραλία Εγκρεμνοί",
             "desc_el": "Μία από τις μακρύτερες και πιο εντυπωσιακές παραλίες της Ελλάδας — 1,5 χλμ λευκού βότσαλου κάτω από κατακόρυφους λευκούς γκρεμούς, προσβάσιμη μόνο με 350 σκαλοπάτια ή με βάρκα από τον Βασιλικό. Εντελώς άγρια και ανοργάνωτη.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780778665/%CE%B5%CE%B3%CE%BA%CF%81%CE%B5%CE%BC%CE%BD%CE%BF%CE%B9_wqplwo.jpg"
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780778665/%CE%B5%CE%B3%CE%BA%CF%81%CE%B5%CE%BC%CE%BD%CE%BF%CE%B9_wqplwo.jpg",
+            "drive": "≈45 min down the west coast",
+            "drive_el": "≈45 λεπτά στη δυτική ακτή"
           },
           {
             "name": "Porto Katsiki",
@@ -266,7 +290,9 @@
             "desc": "Consistently ranked one of the best beaches in Europe — sheer white limestone cliffs 100m high dropping to turquoise water. Access via 100 steps. Arrive by 11am for a sunbed. Unmissable.",
             "name_el": "Πόρτο Κατσίκι",
             "desc_el": "Σταθερά μια από τις καλύτερες παραλίες της Ευρώπης — κατακόρυφοι λευκοί ασβεστολιθικοί γκρεμοί 100 μέτρων που πέφτουν σε τιρκουάζ νερά. Πρόσβαση μέσω 100 σκαλοπατιών. Φτάσε μέχρι τις 11 π.μ. για ξαπλώστρα. Αδιαπραγμάτευτη.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780778665/%CF%80%CE%BF%CF%81%CF%84%CE%BF_%CE%BA%CE%B1%CF%84%CF%83%CE%B9%CE%BA%CE%B9_nk97ke.jpg"
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780778665/%CF%80%CE%BF%CF%81%CF%84%CE%BF_%CE%BA%CE%B1%CF%84%CF%83%CE%B9%CE%BA%CE%B9_nk97ke.jpg",
+            "drive": "≈45 min southwest of Nydri",
+            "drive_el": "≈45 λεπτά νοτιοδυτικά του Νυδριού"
           },
           {
             "name": "Athani Village",

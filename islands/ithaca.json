@@ -154,7 +154,18 @@
           }
         ],
         "title_el": "Βαθύ & ο Νότος",
-        "overnight_el": "Βαθύ"
+        "overnight_el": "Βαθύ",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Vathy",
+            "area_el": "Βαθύ",
+            "desc": "<a href=\"https://www.google.com/maps/search/Kohyli+Vathy+Ithaca\" target=\"_blank\" rel=\"noopener\">Kohyli</a> sits by the sea overlooking Vathy's harbour — one of the island's most popular tables; <a href=\"https://www.google.com/maps/search/Karamela+Vathy+Ithaca\" target=\"_blank\" rel=\"noopener\">Karamela</a> at the yacht port is the other reliable pick.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Kohyli+Vathy+Ithaca\" target=\"_blank\" rel=\"noopener\">Κοχύλι</a> βρίσκεται δίπλα στη θάλασσα με θέα στο λιμάνι του Βαθέος — ένα από τα πιο δημοφιλή τραπέζια του νησιού· η <a href=\"https://www.google.com/maps/search/Karamela+Vathy+Ithaca\" target=\"_blank\" rel=\"noopener\">Καραμέλα</a> στη μαρίνα είναι η άλλη σίγουρη επιλογή.",
+            "after": "Filiatro Beach"
+          }
+        ]
       },
       {
         "day": 2,
@@ -192,7 +203,9 @@
               "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:Kephalonia_from_Stavros_-_Ithaca_(Pilikata).jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈30 min north of Vathy",
+            "drive_el": "≈30 λεπτά βόρεια του Βαθέος"
           },
           {
             "name": "Frikes",
@@ -256,7 +269,18 @@
           }
         ],
         "title_el": "Ο Βορράς — Κιόνι & Φρίκες",
-        "overnight_el": "Βαθύ"
+        "overnight_el": "Βαθύ",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Kioni",
+            "area_el": "Κιόνι",
+            "desc": "<a href=\"https://www.google.com/maps/search/Mythos+Taverna+Kioni+Ithaca\" target=\"_blank\" rel=\"noopener\">Mythos</a> is the harbourside favourite in Kioni; <a href=\"https://www.google.com/maps/search/Calypso+Kioni+Ithaca\" target=\"_blank\" rel=\"noopener\">Calypso</a> nearby does everything from fresh fish to homemade desserts.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Mythos+Taverna+Kioni+Ithaca\" target=\"_blank\" rel=\"noopener\">Mythos</a> είναι το αγαπημένο δίπλα στο λιμάνι στο Κιόνι· η <a href=\"https://www.google.com/maps/search/Calypso+Kioni+Ithaca\" target=\"_blank\" rel=\"noopener\">Calypso</a> δίπλα κάνει τα πάντα, από φρέσκο ψάρι ως σπιτικά γλυκά.",
+            "after": "Kioni"
+          }
+        ]
       },
       {
         "day": 3,

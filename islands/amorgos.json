@@ -172,7 +172,27 @@
         "title_el": "Κατάπολα & Χώρα",
         "overnight_el": "Χώρα",
         "nightlife": "Amorgos is for the quiet crowd, and <a href=\"https://www.google.com/maps/search/Jazzmin+Bar+Amorgos+Chora\" target=\"_blank\" rel=\"noopener\">Jazzmin</a> is its heart — a bohemian café-bar in Chora with a serious wine-and-spirits list and jazz on the speakers, open till 2am. A nightcap in the Cycladic lanes rather than a night out.",
-        "nightlife_el": "Η Αμοργός είναι για το ήσυχο κοινό, και το <a href=\"https://www.google.com/maps/search/Jazzmin+Bar+Amorgos+Chora\" target=\"_blank\" rel=\"noopener\">Jazzmin</a> είναι η καρδιά της — ένα μποέμ café-bar στη Χώρα με σοβαρή λίστα κρασιών και ποτών και τζαζ στα ηχεία, ανοιχτό ως τις 2. Ένα τελευταίο ποτό στα κυκλαδίτικα σοκάκια παρά νυχτερινή έξοδος."
+        "nightlife_el": "Η Αμοργός είναι για το ήσυχο κοινό, και το <a href=\"https://www.google.com/maps/search/Jazzmin+Bar+Amorgos+Chora\" target=\"_blank\" rel=\"noopener\">Jazzmin</a> είναι η καρδιά της — ένα μποέμ café-bar στη Χώρα με σοβαρή λίστα κρασιών και ποτών και τζαζ στα ηχεία, ανοιχτό ως τις 2. Ένα τελευταίο ποτό στα κυκλαδίτικα σοκάκια παρά νυχτερινή έξοδος.",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Katapola",
+            "area_el": "Κατάπολα",
+            "desc": "<a href=\"https://www.google.com/maps/search/Mouragio+Katapola+Amorgos\" target=\"_blank\" rel=\"noopener\">Mouragio</a> is the fish tavern on the Katapola waterfront — seafood mezes with a view over the port.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Mouragio+Katapola+Amorgos\" target=\"_blank\" rel=\"noopener\">Μουράγιο</a> είναι η ψαροταβέρνα στην προκυμαία των Καταπόλων — θαλασσινοί μεζέδες με θέα στο λιμάνι.",
+            "after": "Katapola"
+          },
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Chora",
+            "area_el": "Χώρα",
+            "desc": "<a href=\"https://www.google.com/maps/search/Tranzistoraki+Amorgos+Chora\" target=\"_blank\" rel=\"noopener\">Tranzistoraki</a> is the beloved family taverna in the heart of Chora; <a href=\"https://www.google.com/maps/search/Kastanis+Amorgos+Chora\" target=\"_blank\" rel=\"noopener\">Kastanis</a> nearby is in the Greek Gastronomy Guide for its island cooking.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Tranzistoraki+Amorgos+Chora\" target=\"_blank\" rel=\"noopener\">Τρανζιστοράκι</a> είναι η αγαπημένη οικογενειακή ταβέρνα στην καρδιά της Χώρας· ο <a href=\"https://www.google.com/maps/search/Kastanis+Amorgos+Chora\" target=\"_blank\" rel=\"noopener\">Καστάνης</a> δίπλα είναι στον Greek Gastronomy Guide για τη νησιώτικη κουζίνα του.",
+            "after": "Return to Chora"
+          }
+        ]
       },
       {
         "day": 2,
@@ -287,7 +307,9 @@
               "license_url": "",
               "page_url": "https://commons.wikimedia.org/wiki/File:View_of_Aegiali_bay,_Amorgos,_Greece.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈30 min north of Chora",
+            "drive_el": "≈30 λεπτά βόρεια της Χώρας"
           },
           {
             "name": "Aegiali Beach",
@@ -324,7 +346,18 @@
           }
         ],
         "title_el": "Αιγιάλη & ο Βορράς",
-        "overnight_el": "Χώρα"
+        "overnight_el": "Χώρα",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Aegiali",
+            "area_el": "Αιγιάλη",
+            "desc": "<a href=\"https://www.google.com/maps/search/To+Limani+tis+Kyras+Katinas+Aegiali+Amorgos\" target=\"_blank\" rel=\"noopener\">Kyra Katina</a> on the Aegiali waterfront does honest Amorgian home cooking by the bay.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/To+Limani+tis+Kyras+Katinas+Aegiali+Amorgos\" target=\"_blank\" rel=\"noopener\">της Κυρα-Κατίνας</a> στην προκυμαία της Αιγιάλης κάνει τίμια αμοργιανή σπιτική κουζίνα δίπλα στον όρμο.",
+            "after": "Aegiali"
+          }
+        ]
       },
       {
         "day": 4,
