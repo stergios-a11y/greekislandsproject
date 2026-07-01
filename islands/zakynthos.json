@@ -169,10 +169,10 @@
           {
             "meal": "Lunch",
             "meal_el": "Μεσημεριανό",
-            "area": "Malanos",
-            "area_el": "Μαλανός",
-            "desc": "Legendary traditional taverna in Zakynthos Town, run by the same family for generations. Try the stifado and the local Verdea wine — a white wine unique to Zakynthos.",
-            "desc_el": "Θρυλική παραδοσιακή ταβέρνα στην Πόλη της Ζακύνθου, που διαχειρίζεται η ίδια οικογένεια για γενιές. Δοκίμασε το στιφάδο και το τοπικό κρασί Βερδέα — ένα λευκό κρασί μοναδικό στη Ζάκυνθο.",
+            "area": "Zakynthos Town",
+            "area_el": "Πόλη Ζακύνθου",
+            "desc": "<a href=\"https://www.google.com/maps/search/Malanos+Zakynthos\" target=\"_blank\" rel=\"noopener\">Malanos</a> is the beloved old-school taverna — barrel wine, grills and Zakynthian dishes at honest prices. For a special dinner instead, <a href=\"https://www.google.com/maps/search/Prosilio+Zakynthos+Town\" target=\"_blank\" rel=\"noopener\">Prosilio</a> by Solomos Square is the island's fine-dining garden.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Malanos+Zakynthos\" target=\"_blank\" rel=\"noopener\">Malanos</a> είναι η αγαπημένη παλιακή ταβέρνα — βαρελίσιο κρασί, ψητά και ζακυνθινά πιάτα σε τίμιες τιμές. Για ένα ξεχωριστό δείπνο, το <a href=\"https://www.google.com/maps/search/Prosilio+Zakynthos+Town\" target=\"_blank\" rel=\"noopener\">Prosilio</a> δίπλα στην Πλατεία Σολωμού είναι ο κήπος fine dining του νησιού.",
             "after": "Byzantine Museum"
           }
         ]
@@ -314,7 +314,9 @@
               "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:Navagio_beach_Zakynthos_3.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈40 min north of Zakynthos Town",
+            "drive_el": "≈40 λεπτά βόρεια της πόλης"
           },
           {
             "name": "Navagio Shipwreck Beach",

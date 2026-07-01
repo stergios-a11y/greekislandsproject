@@ -138,19 +138,19 @@
           {
             "meal": "Lunch",
             "meal_el": "Μεσημεριανό",
-            "area": "To Maridaki",
-            "area_el": "Το Μαριδάκι",
-            "desc": "Best fish taverna in Chania Town, right on the Venetian harbour. Grilled fish, local wine, incredible setting. Book ahead in summer.",
-            "desc_el": "Η καλύτερη ψαροταβέρνα στα Χανιά, ακριβώς στο Βενετσιάνικο λιμάνι. Ψάρι στη σχάρα, τοπικό κρασί, εκπληκτικό σκηνικό. Κάνε κράτηση το καλοκαίρι.",
+            "area": "Venetian Harbour",
+            "area_el": "Βενετσιάνικο Λιμάνι",
+            "desc": "By the Venetian harbour. <a href=\"https://www.google.com/maps/search/To+Maridaki+Chania\" target=\"_blank\" rel=\"noopener\">To Maridaki</a> is the town's go-to fish taverna, right on the water. For the finest seafood, <a href=\"https://www.google.com/maps/search/Thalassino+Ageri+Chania\" target=\"_blank\" rel=\"noopener\">Thalassino Ageri</a> sits on a rock platform by the sea in Halepa, just east of the Old Town — book ahead.",
+            "desc_el": "Στο Βενετσιάνικο λιμάνι. Το <a href=\"https://www.google.com/maps/search/To+Maridaki+Chania\" target=\"_blank\" rel=\"noopener\">Το Μαριδάκι</a> είναι η ψαροταβέρνα των Χανιωτών, πάνω στο νερό. Για τα καλύτερα θαλασσινά, το <a href=\"https://www.google.com/maps/search/Thalassino+Ageri+Chania\" target=\"_blank\" rel=\"noopener\">Θαλασσινό Αγέρι</a> βρίσκεται σε βραχώδη πλατφόρμα δίπλα στη θάλασσα στη Χαλέπα, λίγο ανατολικά της Παλιάς Πόλης — κλείσε τραπέζι.",
             "after": "Kastelli Hill"
           },
           {
             "meal": "Dinner",
             "meal_el": "Δείπνο",
-            "area": "Tamam",
-            "area_el": "Ταμάμ",
-            "desc": "Award-winning Cretan-Ottoman fusion restaurant in a converted Turkish bathhouse in the old town. Outstanding mezedes. Book ahead.",
-            "desc_el": "Βραβευμένο εστιατόριο κρητικής-οθωμανικής κουζίνας σε ανακαινισμένο τουρκικό χαμάμ στην παλιά πόλη. Εξαιρετικοί μεζέδες. Κάνε κράτηση.",
+            "area": "Old Town",
+            "area_el": "Παλιά Πόλη",
+            "desc": "<a href=\"https://www.google.com/maps/search/Tamam+Restaurant+Chania\" target=\"_blank\" rel=\"noopener\">Tamam</a> occupies a restored Ottoman bathhouse — the most atmospheric room in Chania, with Cretan-Ottoman cooking (a Lonely Planet and New York Times regular). Nearby <a href=\"https://www.google.com/maps/search/Well+of+the+Turk+Chania\" target=\"_blank\" rel=\"noopener\">Well of the Turk</a> does refined Eastern-Mediterranean plates in the quiet Splantzia quarter.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Tamam+Restaurant+Chania\" target=\"_blank\" rel=\"noopener\">Tamam</a> στεγάζεται σε αναπαλαιωμένο οθωμανικό χαμάμ — ο πιο ατμοσφαιρικός χώρος των Χανίων, με κρητικο-οθωμανική κουζίνα (σταθερή αναφορά σε Lonely Planet και New York Times). Δίπλα, το <a href=\"https://www.google.com/maps/search/Well+of+the+Turk+Chania\" target=\"_blank\" rel=\"noopener\">Well of the Turk</a> σερβίρει εκλεπτυσμένα ανατολικομεσογειακά πιάτα στη ήσυχη Σπλάντζια.",
             "after": "Nea Chora Beach"
           }
         ]
@@ -180,7 +180,9 @@
               "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:Port_of_Kissamos_in_Crete,_Greece_001.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈45 min west of Chania",
+            "drive_el": "≈45 λεπτά δυτικά των Χανίων"
           },
           {
             "name": "Gramvousa Island",
@@ -279,7 +281,9 @@
               "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:%CE%A6%CE%B1%CF%81%CE%AC%CE%B3%CE%B3%CE%B9_%CE%A3%CE%B1%CE%BC%CE%B1%CF%81%CE%B9%CE%AC%CF%82_3754.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈1 hr 15 up to the gorge",
+            "drive_el": "≈1 ώρα 15 ανάβαση στο φαράγγι"
           },
           {
             "name": "Iron Gates",
@@ -380,7 +384,9 @@
               "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:Falasarna_-_Crete,_Greece_-_3.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈1 hr west of Chania",
+            "drive_el": "≈1 ώρα δυτικά των Χανίων"
           },
           {
             "name": "Ancient Falasarna",
@@ -476,6 +482,17 @@
               "page_url": "https://commons.wikimedia.org/wiki/File:Palaiochora_Kastro_2.jpg",
               "source": "Wikimedia Commons"
             }
+          }
+        ],
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Paleochora",
+            "area_el": "Παλαιόχωρα",
+            "desc": "Dinner in laid-back Paleochora. <a href=\"https://www.google.com/maps/search/Caravella+Paleochora+Crete\" target=\"_blank\" rel=\"noopener\">Caravella</a> is the seafront classic for fresh fish; <a href=\"https://www.google.com/maps/search/Third+Eye+Paleochora+Crete\" target=\"_blank\" rel=\"noopener\">Third Eye</a> is the long-running vegetarian favourite.",
+            "desc_el": "Δείπνο στη χαλαρή Παλαιόχωρα. Το <a href=\"https://www.google.com/maps/search/Caravella+Paleochora+Crete\" target=\"_blank\" rel=\"noopener\">Caravella</a> είναι το παραθαλάσσιο κλασικό για φρέσκο ψάρι· το <a href=\"https://www.google.com/maps/search/Third+Eye+Paleochora+Crete\" target=\"_blank\" rel=\"noopener\">Third Eye</a> είναι το πολυκαιρισμένο χορτοφαγικό αγαπημένο.",
+            "after": "Paleochora"
           }
         ]
       },

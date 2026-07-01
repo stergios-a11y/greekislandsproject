@@ -166,10 +166,10 @@
           {
             "meal": "Lunch",
             "meal_el": "Μεσημεριανό",
-            "area": "Avli Restaurant",
-            "area_el": "Εστιατόριο Αυλή",
-            "desc": "Legendary Cretan restaurant in a restored 17th-century Venetian mansion. Garden courtyard, outstanding Cretan cuisine, local wine. A Rethymno institution.",
-            "desc_el": "Θρυλικό κρητικό εστιατόριο σε αναστηλωμένο ενετικό αρχοντικό του 17ου αιώνα. Αυλή κήπος, εξαιρετική κρητική κουζίνα, ντόπιο κρασί. Θεσμός του Ρεθύμνου.",
+            "area": "Old Town",
+            "area_el": "Παλιά Πόλη",
+            "desc": "<a href=\"https://www.google.com/maps/search/Avli+Rethymno\" target=\"_blank\" rel=\"noopener\">Avli</a> is the town's fine-dining landmark — modern Cretan cooking in a 16th-century Venetian mansion and courtyard. Right by the Fortezza, <a href=\"https://www.google.com/maps/search/Prima+Plora+Rethymno\" target=\"_blank\" rel=\"noopener\">Prima Plora</a> sets its tables by the sea for creative, organic Greek plates.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Avli+Rethymno\" target=\"_blank\" rel=\"noopener\">Avli</a> είναι το σημείο αναφοράς για fine dining στην πόλη — μοντέρνα κρητική κουζίνα σε βενετσιάνικο αρχοντικό του 16ου αιώνα. Ακριβώς δίπλα στη Φορτέτζα, το <a href=\"https://www.google.com/maps/search/Prima+Plora+Rethymno\" target=\"_blank\" rel=\"noopener\">Prima Plora</a> στρώνει τραπέζια δίπλα στη θάλασσα για δημιουργικά, οργανικά ελληνικά πιάτα.",
             "after": "Old Town Rethymno"
           }
         ]
@@ -199,7 +199,9 @@
               "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:Kreta_(GR),_Myxorrouma,_Kourtaliotiko-Schlucht_--_2023_--_8386.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈45 min south of Rethymno",
+            "drive_el": "≈45 λεπτά νότια του Ρεθύμνου"
           },
           {
             "name": "Preveli Monastery",
@@ -298,7 +300,9 @@
               "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:Kreta_(GR),_Amnatos,_Kloster_Arkadi_--_2023_--_8569.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈30 min inland",
+            "drive_el": "≈30 λεπτά στην ενδοχώρα"
           },
           {
             "name": "Amari Valley",
@@ -418,8 +422,8 @@
             "meal_el": "Μεσημεριανό",
             "area": "Rethymno",
             "area_el": "Ρέθυμνο",
-            "desc": "Return to Rethymno for a final lunch at the harbour. The fried gavros (anchovies) and local raki are the perfect send-off.",
-            "desc_el": "Επιστροφή στο Ρέθυμνο για τελευταίο μεσημεριανό στο λιμάνι. Ο τηγανητός γαύρος και το ντόπιο ρακί είναι το τέλειο αντίο.",
+            "desc": "A final lunch by the water — <a href=\"https://www.google.com/maps/search/Prima+Plora+Rethymno\" target=\"_blank\" rel=\"noopener\">Prima Plora</a> beside the Fortezza, or the fish tavernas along the Venetian harbour.",
+            "desc_el": "Ένα τελευταίο μεσημεριανό δίπλα στο νερό — <a href=\"https://www.google.com/maps/search/Prima+Plora+Rethymno\" target=\"_blank\" rel=\"noopener\">Prima Plora</a> δίπλα στη Φορτέτζα, ή οι ψαροταβέρνες κατά μήκος του βενετσιάνικου λιμανιού.",
             "after": "Panormo Beach"
           }
         ]

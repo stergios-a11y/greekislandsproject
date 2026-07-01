@@ -169,10 +169,10 @@
           {
             "meal": "Dinner",
             "meal_el": "Δείπνο",
-            "area": "Ferryman Elounda",
-            "area_el": "Ferryman Elounda",
-            "desc": "One of the best seafood restaurants in Lasithi, right on the Elounda waterfront. Try the lobster pasta — a local speciality. Then drive back to Agios Nikolaos for the night, just 15 minutes east.",
-            "desc_el": "Ένα από τα καλύτερα εστιατόρια ψαρικών στο Λασίθι, στην παραλιακή της Ελούντας. Δοκίμασε τα μακαρόνια με αστακό — τοπική σπεσιαλιτέ. Μετά πίσω στον Άγιο Νικόλαο για διανυκτέρευση, μόλις 15 λεπτά ανατολικά.",
+            "area": "Elounda & Agios Nikolaos",
+            "area_el": "Ελούντα & Άγιος Νικόλαος",
+            "desc": "<a href=\"https://www.google.com/maps/search/Ferryman+Taverna+Elounda\" target=\"_blank\" rel=\"noopener\">Ferryman</a> on the Elounda waterfront does traditional Cretan recipes, modernised. In Agios Nikolaos, <a href=\"https://www.google.com/maps/search/Migomis+Agios+Nikolaos\" target=\"_blank\" rel=\"noopener\">Migomis</a> is the refined choice over Lake Voulismeni (piano, views), and <a href=\"https://www.google.com/maps/search/Pelagos+Agios+Nikolaos\" target=\"_blank\" rel=\"noopener\">Pelagos</a> does classic seafood by the sea.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Ferryman+Taverna+Elounda\" target=\"_blank\" rel=\"noopener\">Ferryman</a> στην προκυμαία της Ελούντας κάνει παραδοσιακές κρητικές συνταγές, εκσυγχρονισμένες. Στον Άγιο Νικόλαο, το <a href=\"https://www.google.com/maps/search/Migomis+Agios+Nikolaos\" target=\"_blank\" rel=\"noopener\">Migomis</a> είναι η εκλεπτυσμένη επιλογή πάνω από τη Λίμνη Βουλισμένη (πιάνο, θέα), και το <a href=\"https://www.google.com/maps/search/Pelagos+Agios+Nikolaos\" target=\"_blank\" rel=\"noopener\">Pelagos</a> κάνει κλασικά θαλασσινά δίπλα στη θάλασσα.",
             "after": "Schisma Beach Elounda"
           }
         ]
@@ -293,7 +293,9 @@
               "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:Goose-Sitia-Crete-1.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈1 hr 15 east of Agios Nikolaos",
+            "drive_el": "≈1 ώρα 15 ανατολικά του Αγίου Νικολάου"
           },
           {
             "name": "Vai Beach",
@@ -365,7 +367,18 @@
           }
         ],
         "title_el": "Φοινικόδασος του Βάι & Άπω Ανατολή",
-        "overnight_el": "Σητεία"
+        "overnight_el": "Σητεία",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Sitia",
+            "area_el": "Σητεία",
+            "desc": "Dinner on the Sitia seafront. <a href=\"https://www.google.com/maps/search/Inodion+Sitia\" target=\"_blank\" rel=\"noopener\">Inodion</a> is a traditional rakadiko by the water; <a href=\"https://www.google.com/maps/search/Balcony+Sitia\" target=\"_blank\" rel=\"noopener\">Balcony</a> is the upscale, fusion-leaning table in town.",
+            "desc_el": "Δείπνο στην παραλία της Σητείας. Το <a href=\"https://www.google.com/maps/search/Inodion+Sitia\" target=\"_blank\" rel=\"noopener\">Inodion</a> είναι ένα παραδοσιακό ρακάδικο δίπλα στο νερό· το <a href=\"https://www.google.com/maps/search/Balcony+Sitia\" target=\"_blank\" rel=\"noopener\">Balcony</a> είναι το αναβαθμισμένο, fusion τραπέζι της πόλης.",
+            "after": "Return to Sitia"
+          }
+        ]
       },
       {
         "day": 4,
@@ -392,7 +405,9 @@
               "license_url": "",
               "page_url": "https://commons.wikimedia.org/wiki/File:Palace_of_Zakros_ruins.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈1 hr from Sitia",
+            "drive_el": "≈1 ώρα από τη Σητεία"
           },
           {
             "name": "Gorge of the Dead",

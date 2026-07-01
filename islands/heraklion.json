@@ -131,17 +131,6 @@
             "desc_el": "Η σκεπαστή αγορά του Ηρακλείου — το καλύτερο street food της Κρήτης. Δοκίμασε καλιτσούνια, ντάκο και φρέσκο μέλι από ντόπιους παραγωγούς."
           },
           {
-            "name": "Lunch — Peskesi",
-            "lat": 35.3402,
-            "lng": 25.1326,
-            "type": "museum",
-            "time": "13:30",
-            "wiki": null,
-            "desc": "Award-winning Cretan restaurant sourcing everything from its own farm. Traditional recipes cooked with extraordinary produce. One of the best meals in Greece.",
-            "name_el": "Μεσημεριανό — Πεσκέσι",
-            "desc_el": "Βραβευμένο κρητικό εστιατόριο που προμηθεύεται τα πάντα από το δικό του αγρόκτημα. Παραδοσιακές συνταγές μαγειρεμένες με εξαιρετικά υλικά. Ένα από τα καλύτερα γεύματα στην Ελλάδα."
-          },
-          {
             "name": "Venetian Walls & Martinengo Bastion",
             "lat": 35.3321,
             "lng": 25.1298,
@@ -167,7 +156,18 @@
         "title_el": "Πόλη του Ηρακλείου",
         "overnight_el": "Ηράκλειο",
         "nightlife": "Heraklion's nightlife is local and year-round, clustered in the pedestrian lanes off the centre. <a href=\"https://www.google.com/maps/search/Korai+Street+Heraklion\" target=\"_blank\" rel=\"noopener\">Korai</a> is the packed one — bars indoors and out, music from rock to laïka — with quieter <a href=\"https://www.google.com/maps/search/Chandakos+Street+Heraklion\" target=\"_blank\" rel=\"noopener\">Chandakos</a> alongside; for a view, the rooftop <a href=\"https://www.google.com/maps/search/Pairidaeza+Heraklion\" target=\"_blank\" rel=\"noopener\">Pairidaeza</a>. A real-city night, not a tourist strip.",
-        "nightlife_el": "Η νυχτερινή ζωή του Ηρακλείου είναι ντόπια και ολοχρονίς, μαζεμένη στους πεζόδρομους γύρω από το κέντρο. Η <a href=\"https://www.google.com/maps/search/Korai+Street+Heraklion\" target=\"_blank\" rel=\"noopener\">Κοραή</a> είναι η γεμάτη — μπαρ μέσα κι έξω, μουσική από ροκ ως λαϊκά — με την πιο ήσυχη <a href=\"https://www.google.com/maps/search/Chandakos+Street+Heraklion\" target=\"_blank\" rel=\"noopener\">Χάνδακος</a> δίπλα· για θέα, το rooftop <a href=\"https://www.google.com/maps/search/Pairidaeza+Heraklion\" target=\"_blank\" rel=\"noopener\">Pairidaeza</a>. Βραδιά πραγματικής πόλης, όχι τουριστικού δρόμου."
+        "nightlife_el": "Η νυχτερινή ζωή του Ηρακλείου είναι ντόπια και ολοχρονίς, μαζεμένη στους πεζόδρομους γύρω από το κέντρο. Η <a href=\"https://www.google.com/maps/search/Korai+Street+Heraklion\" target=\"_blank\" rel=\"noopener\">Κοραή</a> είναι η γεμάτη — μπαρ μέσα κι έξω, μουσική από ροκ ως λαϊκά — με την πιο ήσυχη <a href=\"https://www.google.com/maps/search/Chandakos+Street+Heraklion\" target=\"_blank\" rel=\"noopener\">Χάνδακος</a> δίπλα· για θέα, το rooftop <a href=\"https://www.google.com/maps/search/Pairidaeza+Heraklion\" target=\"_blank\" rel=\"noopener\">Pairidaeza</a>. Βραδιά πραγματικής πόλης, όχι τουριστικού δρόμου.",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Heraklion",
+            "area_el": "Ηράκλειο",
+            "desc": "<a href=\"https://www.google.com/maps/search/Peskesi+Heraklion\" target=\"_blank\" rel=\"noopener\">Peskesi</a> is the standout — Cretan heritage cooking in a restored mansion, named #1 for Greek & Regional cuisine at the 2019 Restaurant100 awards and Best Organic Restaurant in Europe in 2025 (book ahead). For seafront seafood, <a href=\"https://www.google.com/maps/search/Ippokampos+Heraklion\" target=\"_blank\" rel=\"noopener\">Ippokampos</a> is the beloved ouzeri.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Peskesi+Heraklion\" target=\"_blank\" rel=\"noopener\">Peskesi</a> είναι η κορυφαία επιλογή — κρητική κουζίνα κληρονομιάς σε αναπαλαιωμένο αρχοντικό, Νο1 στην ελληνική & τοπική κουζίνα στα Restaurant100 του 2019 και Καλύτερο Οργανικό Εστιατόριο της Ευρώπης το 2025 (κλείσε τραπέζι). Για θαλασσινά στην ακτή, το <a href=\"https://www.google.com/maps/search/Ippokampos+Heraklion\" target=\"_blank\" rel=\"noopener\">Ippokampos</a> είναι το αγαπημένο ουζερί.",
+            "after": "1866 Market Street"
+          }
+        ]
       },
       {
         "day": 2,
@@ -277,7 +277,9 @@
               "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:478_Crete_Panorama_14.09.2012.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈1 hr from Heraklion",
+            "drive_el": "≈1 ώρα από το Ηράκλειο"
           },
           {
             "name": "Dikteon Cave",
@@ -376,7 +378,9 @@
               "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
               "page_url": "https://commons.wikimedia.org/wiki/File:Mount_Ida_chain_Messara_plain_from_Phaistos_Crete_Greece.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈1 hr south of Heraklion",
+            "drive_el": "≈1 ώρα νότια του Ηρακλείου"
           },
           {
             "name": "Matala Beach",
@@ -516,10 +520,10 @@
           {
             "meal": "Lunch",
             "meal_el": "Μεσημεριανό",
-            "area": "Vori or Heraklion",
-            "area_el": "Γεύμα",
-            "desc": "Vori village is 10 minutes from Gortyna and has good tavernas — or push on to Heraklion for a final lunch on the harbour. Both work depending on departure time.",
-            "desc_el": "Το χωριό Βώροι είναι 10 λεπτά από τη Γόρτυνα και έχει καλές ταβέρνες — ή συνέχισε προς το Ηράκλειο για τελευταίο γεύμα στο λιμάνι. Και τα δύο δουλεύουν, ανάλογα με την ώρα αναχώρησης.",
+            "area": "Vori / Heraklion",
+            "area_el": "Βώροι / Ηράκλειο",
+            "desc": "A last Cretan lunch. The village of Vori near Phaistos has honest tavernas, or eat back in Heraklion before your flight at <a href=\"https://www.google.com/maps/search/Peskesi+Heraklion\" target=\"_blank\" rel=\"noopener\">Peskesi</a> or seafront <a href=\"https://www.google.com/maps/search/Ippokampos+Heraklion\" target=\"_blank\" rel=\"noopener\">Ippokampos</a>.",
+            "desc_el": "Ένα τελευταίο κρητικό μεσημεριανό. Το χωριό Βώροι κοντά στη Φαιστό έχει τίμιες ταβέρνες, ή φάε πίσω στο Ηράκλειο πριν την πτήση στο <a href=\"https://www.google.com/maps/search/Peskesi+Heraklion\" target=\"_blank\" rel=\"noopener\">Peskesi</a> ή στο παραθαλάσσιο <a href=\"https://www.google.com/maps/search/Ippokampos+Heraklion\" target=\"_blank\" rel=\"noopener\">Ippokampos</a>.",
             "after": "Gortyna"
           }
         ]

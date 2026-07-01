@@ -177,10 +177,10 @@
           {
             "meal": "Lunch",
             "meal_el": "Μεσημεριανό",
-            "area": "Casa Grec",
-            "area_el": "Casa Grec",
-            "desc": "One of the best restaurants in Argostoli — Corfiot-inspired cooking with local ingredients. Try the lamb with Robola wine sauce.",
-            "desc_el": "Ένα από τα καλύτερα εστιατόρια στο Αργοστόλι — μαγειρική με κερκυραϊκή έμπνευση και τοπικά υλικά. Δοκίμασε αρνί με σάλτσα κρασιού Ροπόλα.",
+            "area": "Argostoli",
+            "area_el": "Αργοστόλι",
+            "desc": "<a href=\"https://www.google.com/maps/search/Casa+Grec+Argostoli\" target=\"_blank\" rel=\"noopener\">Casa Grec</a> is a long-standing favourite off a quiet Argostoli lane (Greek with Italian and French touches). On the water, <a href=\"https://www.google.com/maps/search/Kiani+Akti+Argostoli\" target=\"_blank\" rel=\"noopener\">Kiani Akti</a> serves fresh fish out on its own pier.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Casa+Grec+Argostoli\" target=\"_blank\" rel=\"noopener\">Casa Grec</a> είναι πολυκαιρισμένο αγαπημένο σε ήσυχο δρομάκι του Αργοστολίου (ελληνική κουζίνα με ιταλικές και γαλλικές πινελιές). Πάνω στο νερό, το <a href=\"https://www.google.com/maps/search/Kiani+Akti+Argostoli\" target=\"_blank\" rel=\"noopener\">Kiani Akti</a> σερβίρει φρέσκο ψάρι στη δική του προβλήτα.",
             "after": "Archaeological Museum Argostoli"
           }
         ]
@@ -309,7 +309,9 @@
               "license_url": "https://creativecommons.org/licenses/by/2.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:Myrtos_Beach,_Kefalonia.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈45 min north of Argostoli",
+            "drive_el": "≈45 λεπτά βόρεια του Αργοστολίου"
           },
           {
             "name": "Myrtos Beach",
@@ -402,7 +404,18 @@
         "title_el": "Μύρτος, Άσσος & Φισκάρδο",
         "overnight_el": "Σάμη",
         "nightlife": "Fiscardo is the polished end of Kefalonia after dark — wine bars and lounges along the Venetian harbour, drawing the yacht crowd. <a href=\"https://www.google.com/maps/search/Captains+Bar+Fiscardo\" target=\"_blank\" rel=\"noopener\">Captain's Bar</a> for fine rums and whiskies, harbourside tables for a long, slow drink before the drive to Sami.",
-        "nightlife_el": "Το Φισκάρδο είναι η εκλεπτυσμένη όψη της Κεφαλονιάς το βράδυ — wine bars και lounges κατά μήκος του βενετσιάνικου λιμανιού, που τραβούν το κοινό των σκαφών. <a href=\"https://www.google.com/maps/search/Captains+Bar+Fiscardo\" target=\"_blank\" rel=\"noopener\">Captain's Bar</a> για καλά ρούμια και ουίσκι, τραπέζια στο λιμάνι για ένα μακρύ, αργό ποτό πριν τον δρόμο για τη Σάμη."
+        "nightlife_el": "Το Φισκάρδο είναι η εκλεπτυσμένη όψη της Κεφαλονιάς το βράδυ — wine bars και lounges κατά μήκος του βενετσιάνικου λιμανιού, που τραβούν το κοινό των σκαφών. <a href=\"https://www.google.com/maps/search/Captains+Bar+Fiscardo\" target=\"_blank\" rel=\"noopener\">Captain's Bar</a> για καλά ρούμια και ουίσκι, τραπέζια στο λιμάνι για ένα μακρύ, αργό ποτό πριν τον δρόμο για τη Σάμη.",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Fiscardo",
+            "area_el": "Φισκάρδο",
+            "desc": "Lunch in postcard Fiscardo. <a href=\"https://www.google.com/maps/search/Tassia+Fiscardo+Kefalonia\" target=\"_blank\" rel=\"noopener\">Tassia</a> has run the harbour since 1972 (seafood, the famous fish soup); <a href=\"https://www.google.com/maps/search/Cafe+Tselenti+Fiscardo\" target=\"_blank\" rel=\"noopener\">Café Tselenti</a> sits in a Venetian building on the waterfront.",
+            "desc_el": "Μεσημεριανό στο καρτ-ποστάλ Φισκάρδο. Το <a href=\"https://www.google.com/maps/search/Tassia+Fiscardo+Kefalonia\" target=\"_blank\" rel=\"noopener\">Tassia</a> κρατάει το λιμάνι από το 1972 (θαλασσινά, η περίφημη ψαρόσουπα)· το <a href=\"https://www.google.com/maps/search/Cafe+Tselenti+Fiscardo\" target=\"_blank\" rel=\"noopener\">Café Tselenti</a> βρίσκεται σε βενετσιάνικο κτίριο στην προκυμαία.",
+            "after": "Fiscardo"
+          }
+        ]
       },
       {
         "day": 4,
@@ -528,7 +541,9 @@
               "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:Poros_Kefalonia_square.JPG",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈1 hr southeast",
+            "drive_el": "≈1 ώρα νοτιοανατολικά"
           },
           {
             "name": "Katelios Beach",
