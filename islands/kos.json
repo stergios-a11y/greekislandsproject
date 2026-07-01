@@ -180,7 +180,18 @@
         "title_el": "Πόλη της Κω & Ασκληπιείο",
         "overnight_el": "Πόλη της Κω",
         "nightlife": "Kos Town's <a href=\"https://www.google.com/maps/search/Bar+Street+Nafklirou+Kos\" target=\"_blank\" rel=\"noopener\">Bar Street (Nafklirou)</a> is the engine — a pedestrian lane from Plane Tree Square to Liberty Square that turns into a wall of clubs and bars after midnight, packed with a young European crowd from June to September. Hip-hop, EDM and Greek pop; beers 4–6€.",
-        "nightlife_el": "Η <a href=\"https://www.google.com/maps/search/Bar+Street+Nafklirou+Kos\" target=\"_blank\" rel=\"noopener\">Bar Street (Ναυκλήρου)</a> στην πόλη της Κω είναι η μηχανή — ένας πεζόδρομος από την Πλατεία του Πλατάνου ως την Πλατεία Ελευθερίας που μετά τα μεσάνυχτα γίνεται ένας τοίχος από clubs και μπαρ, γεμάτος νεαρό ευρωπαϊκό κοινό από Ιούνιο ως Σεπτέμβριο. Hip-hop, EDM και ελληνικά· μπύρες 4–6€."
+        "nightlife_el": "Η <a href=\"https://www.google.com/maps/search/Bar+Street+Nafklirou+Kos\" target=\"_blank\" rel=\"noopener\">Bar Street (Ναυκλήρου)</a> στην πόλη της Κω είναι η μηχανή — ένας πεζόδρομος από την Πλατεία του Πλατάνου ως την Πλατεία Ελευθερίας που μετά τα μεσάνυχτα γίνεται ένας τοίχος από clubs και μπαρ, γεμάτος νεαρό ευρωπαϊκό κοινό από Ιούνιο ως Σεπτέμβριο. Hip-hop, EDM και ελληνικά· μπύρες 4–6€.",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Kos Town",
+            "area_el": "Πόλη της Κω",
+            "desc": "<a href=\"https://www.google.com/maps/search/Elia+Restaurant+Kos+Town\" target=\"_blank\" rel=\"noopener\">Elia</a> in a restored 1890 Old Town building does refined Greek meze; <a href=\"https://www.google.com/maps/search/Barbouni+Kos+Town\" target=\"_blank\" rel=\"noopener\">Barbouni</a> is the cool seaside spot for fresh fish.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Elia+Restaurant+Kos+Town\" target=\"_blank\" rel=\"noopener\">Elia</a> σε αναπαλαιωμένο κτίριο του 1890 στην Παλιά Πόλη κάνει εκλεπτυσμένους ελληνικούς μεζέδες· το <a href=\"https://www.google.com/maps/search/Barbouni+Kos+Town\" target=\"_blank\" rel=\"noopener\">Barbouni</a> είναι το κουλ παραθαλάσσιο σημείο για φρέσκο ψάρι.",
+            "after": "Lambi Beach"
+          }
+        ]
       },
       {
         "day": 2,
@@ -207,7 +218,9 @@
               "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
               "page_url": "https://commons.wikimedia.org/wiki/File:Kos%27_Paradise_Beach.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈35 min southwest of Kos Town",
+            "drive_el": "≈35 λεπτά νοτιοδυτικά της Πόλης της Κω"
           },
           {
             "name": "Agios Stefanos & Kastri Islet",
@@ -249,10 +262,10 @@
           {
             "meal": "Lunch",
             "meal_el": "Μεσημεριανό",
-            "area": "Kefalos Village",
-            "area_el": "Χωριό Κεφάλος",
-            "desc": "Traditional hilltop village at the southwest tip — the authentic alternative to the resorts on the coast below. Excellent small tavernas with views over the bay. Three FNL Best Restaurant Awards 2026 winners on Kos: <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJKzx21jz9vRQRBjkoXG0bo4k\" target=\"_blank\" rel=\"noopener noreferrer\">Mosaico Gastro Wine Bar</a> at Horizon Beach Resort (★★), Cuvee at Aqua Blu Hotel (★, Modern Greek), and Albergo Gelsomino on the Kos Town seafront (★, Modern Bistro).",
-            "desc_el": "Παραδοσιακό χωριό σε λόφο στο νοτιοδυτικό άκρο — η αυθεντική εναλλακτική στα θέρετρα της παρακάτω ακτής. Εξαιρετικές μικρές ταβέρνες με θέα στον κόλπο. Τρεις νικητές των Βραβείων FNL 2026 στην Κω: το <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJKzx21jz9vRQRBjkoXG0bo4k\" target=\"_blank\" rel=\"noopener noreferrer\">Mosaico Gastro Wine Bar</a> στο Horizon Beach Resort (★★), το Cuvee στο Aqua Blu Hotel (★) και το Albergo Gelsomino στην παραλιακή της Κω (★).",
+            "area": "Kefalos",
+            "area_el": "Κέφαλος",
+            "desc": "<a href=\"https://www.google.com/maps/search/Limionas+Fish+Restaurant+Kos\" target=\"_blank\" rel=\"noopener\">Limionas</a> is a panoramic fish taverna on Limionas bay below Kefalos; up in <a href=\"https://www.google.com/maps/search/Kefalos+village+Kos\" target=\"_blank\" rel=\"noopener\">Kefalos village</a> the traditional tavernas do hearty island cooking.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Limionas+Fish+Restaurant+Kos\" target=\"_blank\" rel=\"noopener\">Limionas</a> είναι πανοραμική ψαροταβέρνα στον όρμο Λιμιώνα κάτω από τον Κέφαλο· πάνω στο <a href=\"https://www.google.com/maps/search/Kefalos+village+Kos\" target=\"_blank\" rel=\"noopener\">χωριό Κέφαλος</a> οι παραδοσιακές ταβέρνες κάνουν χορταστικό νησιώτικο φαγητό.",
             "after": "Agios Stefanos & Kastri Islet"
           }
         ]

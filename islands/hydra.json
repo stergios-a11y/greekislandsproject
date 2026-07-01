@@ -169,11 +169,20 @@
           {
             "meal": "Lunch",
             "meal_el": "Μεσημεριανό",
-            "area": "Castello Kamini",
-            "area_el": "Καστέλο, Καμίνι",
-            "desc": "Harbourfront taverna in the tiny fishing village of Kamini. The grilled octopus and the view are both excellent. 15-minute walk from the main harbour.",
-            "desc_el": "Παραλιακή ταβέρνα στο μικροσκοπικό ψαροχώρι του Καμινίου. Το ψητό χταπόδι και η θέα είναι αμφότερα εξαιρετικά. 15 λεπτά πεζοπορίας από το κύριο λιμάνι.",
+            "area": "Kamini",
+            "area_el": "Καμίνι",
+            "desc": "<a href=\"https://www.google.com/maps/search/Castello+Kamini+Hydra\" target=\"_blank\" rel=\"noopener\">Castello</a> is a harbourfront taverna in the fishing hamlet of Kamini; <a href=\"https://www.google.com/maps/search/Kodylenia+Kamini+Hydra\" target=\"_blank\" rel=\"noopener\">Kodylenia's</a> sits at the edge of the same harbour with a waterfront terrace.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Castello+Kamini+Hydra\" target=\"_blank\" rel=\"noopener\">Castello</a> είναι ταβέρνα στην προκυμαία του ψαροχωριού Καμίνι· η <a href=\"https://www.google.com/maps/search/Kodylenia+Kamini+Hydra\" target=\"_blank\" rel=\"noopener\">Κοδυλένια</a> βρίσκεται στην άκρη του ίδιου λιμανιού με βεράντα πάνω στο νερό.",
             "after": "Spilia Swimming Rocks"
+          },
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Hydra Town",
+            "area_el": "Χώρα Ύδρας",
+            "desc": "<a href=\"https://www.google.com/maps/search/Taverna+Gitoniko+Hydra\" target=\"_blank\" rel=\"noopener\">Gitoniko</a> (Manolis & Christina) is the island institution — honest home cooking and a rooftop garden, worth seeking out through the lanes.",
+            "desc_el": "Η <a href=\"https://www.google.com/maps/search/Taverna+Gitoniko+Hydra\" target=\"_blank\" rel=\"noopener\">Γειτονικό</a> (Μανώλης & Χριστίνα) είναι ο θεσμός του νησιού — τίμια σπιτική κουζίνα και κήπος στην ταράτσα, αξίζει να τη βρεις μέσα στα σοκάκια.",
+            "after": "Return to Hydra Town"
           }
         ]
       },

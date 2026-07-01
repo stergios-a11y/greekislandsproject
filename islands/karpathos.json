@@ -162,7 +162,18 @@
           }
         ],
         "title_el": "Πηγάδια & οι Κοντινές Παραλίες",
-        "overnight_el": "Πηγάδια"
+        "overnight_el": "Πηγάδια",
+        "food": [
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Pigadia",
+            "area_el": "Πηγάδια",
+            "desc": "<a href=\"https://www.google.com/maps/search/Ellinikon+Pigadia+Karpathos\" target=\"_blank\" rel=\"noopener\">Ellinikon</a> is the family-run Pigadia favourite — Karpathian makarounes, local goat and Mediterranean plates.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Ellinikon+Pigadia+Karpathos\" target=\"_blank\" rel=\"noopener\">Ellinikon</a> είναι το οικογενειακό αγαπημένο των Πηγαδιών — καρπάθικες μακαρούνες, ντόπιο κατσίκι και μεσογειακά πιάτα.",
+            "after": "Return to Pigadia"
+          }
+        ]
       },
       {
         "day": 2,
@@ -272,7 +283,9 @@
               "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
               "page_url": "https://commons.wikimedia.org/wiki/File:Olympos_Karpathos_002.jpg",
               "source": "Wikimedia Commons"
-            }
+            },
+            "drive": "≈1 hr 30 from Pigadia on a winding mountain road",
+            "drive_el": "≈1 ώρα 30 από τα Πηγάδια σε στριφογυριστό ορεινό δρόμο"
           },
           {
             "name": "Diafani Harbour",
@@ -322,10 +335,10 @@
           {
             "meal": "Lunch",
             "meal_el": "Μεσημεριανό",
-            "area": "Olympos Taverna",
-            "area_el": "Ταβέρνα Ολύμπου",
-            "desc": "Try the village food — makarounes (homemade pasta with cheese and onions), local goat and the excellent Olympos bread. The oven bakery in the village is the last of its kind.",
-            "desc_el": "Δοκίμασε το φαγητό του χωριού — μακαρούνες (σπιτικά ζυμαρικά με τυρί και κρεμμύδια), τοπικό κατσίκι και το εξαιρετικό ψωμί Ολύμπου. Ο παραδοσιακός φούρνος στο χωριό είναι ο τελευταίος του είδους του.",
+            "area": "Olympos",
+            "area_el": "Όλυμπος",
+            "desc": "<a href=\"https://www.google.com/maps/search/Milos+Taverna+Olympos+Karpathos\" target=\"_blank\" rel=\"noopener\">Milos</a> bakes traditional Karpathian dishes in a wood oven — the makarounes (handmade pasta with onion and sour cheese) are the island's best. Other tavernas around the square do goat and makarounes too.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Milos+Taverna+Olympos+Karpathos\" target=\"_blank\" rel=\"noopener\">Milos</a> ψήνει παραδοσιακά καρπάθικα πιάτα σε ξυλόφουρνο — οι μακαρούνες (χειροποίητο ζυμαρικό με κρεμμύδι και ξινό τυρί) είναι οι καλύτερες του νησιού. Και οι άλλες ταβέρνες γύρω από την πλατεία κάνουν κατσίκι και μακαρούνες.",
             "after": "Olympos Village"
           }
         ]
