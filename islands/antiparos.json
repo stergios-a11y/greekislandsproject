@@ -174,10 +174,10 @@
           {
             "meal": "Lunch",
             "meal_el": "Μεσημεριανό",
-            "area": "Taverna Yorgis",
-            "area_el": "Ταβέρνα Γιώργης",
-            "desc": "Family-run taverna in a small flagged side-street near the main square. Octopus, fava, lamb chops, homemade tsipouro at the end. The kind of place where Jenny will tell you what's freshly made today.",
-            "desc_el": "Οικογενειακή ταβέρνα σε ένα μικρό πλακόστρωτο δρομάκι κοντά στην κεντρική πλατεία. Χταπόδι, φάβα, παϊδάκια, σπιτικό τσίπουρο στο τέλος. Από αυτά τα μέρη όπου η Τζένη θα σου πει τι είναι φρέσκο σήμερα.",
+            "area": "Chora",
+            "area_el": "Χώρα",
+            "desc": "<a href=\"https://www.google.com/maps/search/Taverna+Yorgis+Antiparos\" target=\"_blank\" rel=\"noopener\">Taverna Yorgis</a> is the family-run pick — a flagged Chora side-street, honest Greek cooking at fair prices.",
+            "desc_el": "Η <a href=\"https://www.google.com/maps/search/Taverna+Yorgis+Antiparos\" target=\"_blank\" rel=\"noopener\">Ταβέρνα Γιώργης</a> είναι η οικογενειακή επιλογή — σε στρωμένο με πλάκες σοκάκι της Χώρας, τίμια ελληνική κουζίνα σε καλές τιμές.",
             "after": "Castro of Antiparos"
           }
         ]
@@ -234,16 +234,6 @@
             "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJY5V50M1mmBQR9SXqfTcZ8hM"
           },
           {
-            "name": "Captain Pipinos",
-            "name_el": "Καπτάν Πιπίνος",
-            "lat": 36.9789,
-            "lng": 25.0296,
-            "type": "village",
-            "desc": "Classic fish taverna on the Agios Georgios waterfront, where they dry the day's catch — octopus and fish — outside the kitchen. Order what's hanging. House wine, sea view, no pretensions.",
-            "desc_el": "Κλασική ψαροταβέρνα στην παραλιακή του Αγίου Γεωργίου, όπου στεγνώνουν την ψαριά της ημέρας — χταπόδι και ψάρι — έξω από την κουζίνα. Παράγγειλε αυτό που κρέμεται. Χύμα κρασί, θέα στη θάλασσα, χωρίς επιδείξεις.",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ90l0MJdmmBQRbeadp7vTmok"
-          },
-          {
             "name": "Return to Antiparos Port",
             "lat": 36.9931,
             "lng": 25.0775,
@@ -259,7 +249,18 @@
         "overnight": null,
         "overnight_el": null,
         "km": 18,
-        "drive_mins": 30
+        "drive_mins": 30,
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Agios Georgios",
+            "area_el": "Άγιος Γεώργιος",
+            "desc": "<a href=\"https://www.google.com/maps/search/Captain+Pipinos+Antiparos\" target=\"_blank\" rel=\"noopener\">Captain Pipinos</a> at Agios Georgios is said to serve the best grilled fish in the islands — a ledge cantilevered over the water looking across to Despotiko.",
+            "desc_el": "Ο <a href=\"https://www.google.com/maps/search/Captain+Pipinos+Antiparos\" target=\"_blank\" rel=\"noopener\">Captain Pipinos</a> στον Άγιο Γεώργιο λέγεται πως σερβίρει το καλύτερο ψητό ψάρι στα νησιά — ένα μπαλκόνι κρεμασμένο πάνω από το νερό με θέα στο Δεσποτικό.",
+            "after": "Livadi Beach (Despotiko)"
+          }
+        ]
       }
     ],
     "title_el": "Πρόγραμμα 2 Ημερών στην Αντίπαρο",
