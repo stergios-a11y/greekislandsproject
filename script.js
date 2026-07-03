@@ -2303,12 +2303,15 @@ const POI_EMOJIS = {
   church:     '⛪',
   viewpoint:  '🔭',
   ruin:       '🏛',
-  departure:  '✈️',
+  departure:  '🚢',
   monastery:  '☧',
   arrival:    '🚢',
   spa:        '♨️',
   winery:     '🍷',
   distillery: '🥃',
+  waterfall:  '💧',
+  airport:    '✈️',
+  port:       '⛴️',
 };
 
 // Zoom threshold below which markers render as small colored dots (cleaner overview),
@@ -2444,7 +2447,8 @@ async function initItineraryMap(days, beaches = []) {
         restaurant:'Εστιατόριο', museum:'Μουσείο', nature:'Φύση',
         castle:'Κάστρο', church:'Εκκλησία', viewpoint:'Θέα', ruin:'Ερείπια',
         departure:'Αναχώρηση', monastery:'Μοναστήρι', spa:'Ιαματικά',
-        arrival:'Άφιξη', winery:'Οινοποιείο', distillery:'Αποστακτήριο'
+        arrival:'Άφιξη', winery:'Οινοποιείο', distillery:'Αποστακτήριο',
+        waterfall:'Καταρράκτης', airport:'Αεροδρόμιο', port:'Λιμάνι'
       };
       const typeLabel = isEl
         ? (TYPE_LABELS_EL[stop.type] || 'Στάση')
@@ -2453,6 +2457,14 @@ async function initItineraryMap(days, beaches = []) {
         ? `<div style="position:relative;margin-top:8px">${buildLightboxImg(stop.photo, stopName, stop.photo_credit, '', 'style="width:100%;height:120px;object-fit:cover;border-radius:6px;display:block" onerror="this.parentElement.style.display=\'none\'"')}${buildPhotoCredit(stop.photo_credit)}</div>`
         : '';
       const stopType = stop.type || 'village';
+      // Icon-only type: arrival/departure describe a day-role, not a place, so
+      // resolve their marker to ✈️ vs ⛴️ by the stop name (most island arrivals
+      // and departures are by ferry — only real airports get the plane). The
+      // popup label still uses stop.type ("Arrival"/"Departure").
+      let iconType = stopType;
+      if (iconType === 'arrival' || iconType === 'departure') {
+        iconType = /airport|αεροδρ|flight/i.test(stop.name || '') ? 'airport' : 'port';
+      }
       const initialMode = itineraryMapInstance.getZoom() >= POI_EMOJI_ZOOM ? 'emoji' : 'dot';
       // Badge shows the stop's sequence within its day (1..N), not the day number,
       // so a 5-stop day reads 1·2·3·4·5 in walking order.
@@ -2460,11 +2472,11 @@ async function initItineraryMap(days, beaches = []) {
       // Popup-header words ("Day"/"Stop") also switch language
       const dayWord = isEl ? 'Ημέρα' : 'Day';
       const stopWord = isEl ? 'Στάση' : 'Stop';
-      const marker = L.marker([stop.lat, stop.lng], { icon: poiDivIcon(stopType, day.color, initialMode, stopNum) })
+      const marker = L.marker([stop.lat, stop.lng], { icon: poiDivIcon(iconType, day.color, initialMode, stopNum) })
         .addTo(itineraryMapInstance)
         .bindPopup(`<div style="min-width:200px;font-family:sans-serif"><div style="font-size:10px;font-weight:700;color:${day.color};text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px">${dayWord} ${day.day} · ${stopWord} ${stopNum} · ${typeLabel}</div>${nameHtml}<p style="font-size:12px;color:#555;margin:6px 0 0;line-height:1.55">${stopDesc}</p>${photoLine}</div>`);
       // Stash the metadata on the marker so the zoom handler can re-render the icon
-      marker._poiType = stopType;
+      marker._poiType = iconType;
       marker._poiColor = day.color;
       marker._poiDay = stopNum;
       // Bind direct click handler on lightbox images inside this popup once it opens.
