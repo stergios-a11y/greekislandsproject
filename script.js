@@ -2364,6 +2364,33 @@ async function fetchOSRMRoute(coords) {
 /* ============================================================
    ITINERARY MAP INIT — accepts days array from JSON
 ============================================================ */
+// Douglas–Peucker simplification for a [lat,lng] path. The OSRM route has very
+// dense vertices; when we offset the line (to separate overlapping days) those
+// tiny wiggles make the offset line overshoot and look crooked/lumpy. Thinning
+// the path first keeps the road shape but gives clean parallel offsets.
+function _perpDistDeg(p, a, b) {
+  const x = p[1], y = p[0], x1 = a[1], y1 = a[0], x2 = b[1], y2 = b[0];
+  const dx = x2 - x1, dy = y2 - y1;
+  if (dx === 0 && dy === 0) return Math.hypot(x - x1, y - y1);
+  let t = ((x - x1) * dx + (y - y1) * dy) / (dx * dx + dy * dy);
+  t = Math.max(0, Math.min(1, t));
+  return Math.hypot(x - (x1 + t * dx), y - (y1 + t * dy));
+}
+function simplifyPath(pts, eps) {
+  if (!pts || pts.length < 3) return pts || [];
+  let dmax = 0, idx = 0;
+  for (let i = 1; i < pts.length - 1; i++) {
+    const d = _perpDistDeg(pts[i], pts[0], pts[pts.length - 1]);
+    if (d > dmax) { dmax = d; idx = i; }
+  }
+  if (dmax > eps) {
+    const left = simplifyPath(pts.slice(0, idx + 1), eps);
+    const right = simplifyPath(pts.slice(idx), eps);
+    return left.slice(0, -1).concat(right);
+  }
+  return [pts[0], pts[pts.length - 1]];
+}
+
 async function initItineraryMap(days, beaches = []) {
   const mapEl = document.getElementById('itin-map');
   if (!mapEl) return;
@@ -2385,17 +2412,21 @@ async function initItineraryMap(days, beaches = []) {
     itinMarkerLayers[day.day] = [];
 
     const coords = day.stops.map(s => [s.lat, s.lng]);
-    const routeCoords = await fetchOSRMRoute(coords);
+    const rawRoute = await fetchOSRMRoute(coords);
+    // Thin the dense OSRM path (~40m tolerance) before drawing so the offset
+    // lines stay smooth instead of lumpy at every little road wiggle.
+    const routeCoords = simplifyPath(rawRoute, 0.0004);
 
     // Where two days share the same road, their lines would sit exactly on top
     // of each other and only the last-drawn one would show. Offset each day's
     // line a few pixels perpendicular (via leaflet-polylineoffset) so overlapping
-    // segments fan out into parallel colored lines. Offsets are centered around
-    // 0 so the bundle stays visually on the road. Falls back gracefully (offset
-    // ignored) if the plugin isn't loaded.
-    const dayIdx = days.indexOf(day);
-    const routeOffset = (dayIdx - (days.length - 1) / 2) * 4;
-    const polyline = L.polyline(routeCoords, { color: day.color, weight: 5, opacity: 0.9, offset: routeOffset }).addTo(itineraryMapInstance);
+    // segments fan out into parallel colored lines. Round joins/caps keep the
+    // offset line smooth. Weight + offset are set by restyleItinRoutes() below
+    // (zoom-responsive). Falls back gracefully if the plugin isn't loaded.
+    const polyline = L.polyline(routeCoords, {
+      color: day.color, weight: 5, opacity: 0.9,
+      lineJoin: 'round', lineCap: 'round'
+    }).addTo(itineraryMapInstance);
     itinRouteLayers[day.day].push(polyline);
 
     day.stops.forEach((stop, i) => {
@@ -2487,8 +2518,10 @@ async function initItineraryMap(days, beaches = []) {
   // thin + tightly bundled when zoomed out, thicker + more separated when zoomed in.
   function restyleItinRoutes() {
     const z = itineraryMapInstance.getZoom();
-    const weight = Math.max(2, Math.min(5.5, (z - 6) * 0.7));
-    const unit   = Math.max(1.5, Math.min(4, (z - 7) * 0.6));
+    const weight = Math.max(2, Math.min(5, (z - 6) * 0.65));
+    // Offset just enough to separate colors on shared roads; kept small so the
+    // simplified lines read as parallel, not distorted.
+    const unit   = Math.max(1.2, Math.min(3, (z - 8) * 0.5 + 1.2));
     days.forEach((d, idx) => {
       const off = (idx - (days.length - 1) / 2) * unit;
       (itinRouteLayers[d.day] || []).forEach(pl => {
