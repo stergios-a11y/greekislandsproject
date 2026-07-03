@@ -2387,7 +2387,15 @@ async function initItineraryMap(days, beaches = []) {
     const coords = day.stops.map(s => [s.lat, s.lng]);
     const routeCoords = await fetchOSRMRoute(coords);
 
-    const polyline = L.polyline(routeCoords, { color: day.color, weight: 5, opacity: 0.88 }).addTo(itineraryMapInstance);
+    // Where two days share the same road, their lines would sit exactly on top
+    // of each other and only the last-drawn one would show. Offset each day's
+    // line a few pixels perpendicular (via leaflet-polylineoffset) so overlapping
+    // segments fan out into parallel colored lines. Offsets are centered around
+    // 0 so the bundle stays visually on the road. Falls back gracefully (offset
+    // ignored) if the plugin isn't loaded.
+    const dayIdx = days.indexOf(day);
+    const routeOffset = (dayIdx - (days.length - 1) / 2) * 4;
+    const polyline = L.polyline(routeCoords, { color: day.color, weight: 5, opacity: 0.9, offset: routeOffset }).addTo(itineraryMapInstance);
     itinRouteLayers[day.day].push(polyline);
 
     day.stops.forEach((stop, i) => {
