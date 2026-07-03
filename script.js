@@ -2481,9 +2481,28 @@ async function initItineraryMap(days, beaches = []) {
   });
 
   // Zoom-based icon mode: render dots when zoomed out (less clutter), emojis when zoomed in.
+  // Route lines use a fixed pixel weight, so on zoom-out the island shrinks but
+  // the lines don't — they read as thick bands (worse with the parallel offsets).
+  // Scale both weight and the per-day offset with zoom so lines stay proportional:
+  // thin + tightly bundled when zoomed out, thicker + more separated when zoomed in.
+  function restyleItinRoutes() {
+    const z = itineraryMapInstance.getZoom();
+    const weight = Math.max(2, Math.min(5.5, (z - 6) * 0.7));
+    const unit   = Math.max(1.5, Math.min(4, (z - 7) * 0.6));
+    days.forEach((d, idx) => {
+      const off = (idx - (days.length - 1) / 2) * unit;
+      (itinRouteLayers[d.day] || []).forEach(pl => {
+        pl.setStyle({ weight });
+        if (pl.setOffset) pl.setOffset(off);
+      });
+    });
+  }
+  restyleItinRoutes();
+
   // Only re-render icons when crossing the threshold to avoid thrash on small zoom changes.
   let _lastPoiMode = itineraryMapInstance.getZoom() >= POI_EMOJI_ZOOM ? 'emoji' : 'dot';
   itineraryMapInstance.on('zoomend', () => {
+    restyleItinRoutes();
     const mode = itineraryMapInstance.getZoom() >= POI_EMOJI_ZOOM ? 'emoji' : 'dot';
     if (mode === _lastPoiMode) return;
     _lastPoiMode = mode;
