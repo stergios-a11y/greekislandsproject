@@ -728,8 +728,13 @@ let HERO_PHOTOS = {};
 function thumbUrl(url) {
   if (!url) return url;
   if (url.indexOf('res.cloudinary.com') > -1)
-    return url.replace(/\/upload\/(?:[^/]*\/)?v(\d+)\//, '/upload/w_420,h_240,c_fill,q_auto,f_auto/v$1/');
-  if (url.indexOf('/thumb/') > -1) return url.replace(/\/\d+px-/, '/440px-');
+    return url.replace(/\/upload\/(?:[^/]*\/)?v(\d+)\//, '/upload/w_640,h_384,c_fill,q_auto,f_auto/v$1/');
+  // Wikimedia only serves a fixed set of thumbnail widths; 640 is a standard
+  // bucket (440 was rejected -> broken image). Handle both /thumb/ URLs and
+  // originals (which we convert to a /thumb/ URL).
+  if (url.indexOf('/thumb/') > -1) return url.replace(/\/\d+px-/, '/640px-');
+  var m = url.match(/^(https?:\/\/upload\.wikimedia\.org\/wikipedia\/[a-z]+)\/([0-9a-f])\/([0-9a-f]{2})\/([^/]+)$/);
+  if (m) return m[1] + '/thumb/' + m[2] + '/' + m[3] + '/' + m[4] + '/640px-' + m[4];
   return url;
 }
 async function loadHeroPhotos() {

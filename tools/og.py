@@ -241,23 +241,57 @@ def _hero_url(data):
             return b['photo']
     return None
 
-def _bump_size(url):
-    """Ask the CDN for a card-sized image so it isn't upscaled/soft."""
-    if 'res.cloudinary.com' in url:
-        import re
-        return re.sub(r'/upload/(?:[^/]*/)?v(\d+)/',
-                      '/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v\\1/', url)
+# Wikimedia only serves a fixed set of thumbnail widths; arbitrary sizes 400.
+# 1280/1024/800 are standard buckets. We try largest first, then fall back.
+WIKI_SIZES = [1280, 1024, 800]
+UA = 'AegeanBlueprintOG/1.0 (https://aegeanblueprint.com; build script) Python-urllib'
+
+def _cloudinary_at(url):
+    import re
+    return re.sub(r'/upload/(?:[^/]*/)?v(\d+)/',
+                  r'/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v\1/', url)
+
+def _wiki_thumb_at(url, px):
+    import re
     if '/thumb/' in url:
-        import re
-        return re.sub(r'/\d+px-', '/1200px-', url)
+        return re.sub(r'/\d+px-([^/]+)$', f'/{px}px-\\1', url)
+    m = re.match(r'(https?://upload\.wikimedia\.org/wikipedia/[a-z]+)/([0-9a-f])/([0-9a-f]{2})/([^/]+)$', url)
+    if m:
+        base, a, b, fname = m.groups()
+        return f'{base}/thumb/{a}/{b}/{fname}/{px}px-{fname}'
     return url
 
-def _download_img(url):
+def _get(u):
     import urllib.request
     from io import BytesIO
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Macintosh)'})
+    req = urllib.request.Request(u, headers={'User-Agent': UA})
     raw = urllib.request.urlopen(req, timeout=25).read()
     return Image.open(BytesIO(raw)).convert('RGB')
+
+def _download_img(url):
+    """Fetch a card-sized image, using allowed Wikimedia thumbnail widths and
+    retrying on rate-limits (429). Raises on total failure (caller -> text card)."""
+    import urllib.error, time
+    if 'res.cloudinary.com' in url:
+        return _get(_cloudinary_at(url))
+    if 'upload.wikimedia.org' in url:
+        last = None
+        for px in WIKI_SIZES:
+            u = _wiki_thumb_at(url, px)
+            for attempt in range(3):
+                try:
+                    return _get(u)
+                except urllib.error.HTTPError as e:
+                    last = e
+                    if e.code == 429:
+                        time.sleep(1.5 * (attempt + 1))
+                        continue
+                    break  # other error (e.g. 400 too-large) -> try next size
+                except Exception as e:
+                    last = e
+                    break
+        raise last or RuntimeError('wikimedia fetch failed')
+    return _get(url)
 
 def _cover(img, w, h):
     iw, ih = img.size
@@ -334,7 +368,7 @@ def render_island(key, data):
     url = _hero_url(data)
     if url:
         try:
-            return render_photo_card(key, data, _download_img(_bump_size(url)))
+            return render_photo_card(key, data, _download_img(url))
         except Exception as e:
             print(f'  ! {key}: photo unavailable ({e}) — using text card')
     return render_text_card(key, data)
@@ -443,6 +477,8 @@ def main():
         out = render_island(key, data)
         size_kb = out.stat().st_size // 1024
         print(f'  ✓ {key}.jpg  ({size_kb} KB)')
+        # Be polite to Wikimedia's thumbnail servers (avoids 429 rate-limits)
+        import time as _t; _t.sleep(0.35)
 
     print(f'\nDone. {len(json_files)} OG images written to {OUT_DIR}/')
     print('Next: deploy and verify at https://aegeanblueprint.com/og/{key}.jpg')
