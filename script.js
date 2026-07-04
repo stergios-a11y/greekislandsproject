@@ -2420,15 +2420,11 @@ async function initItineraryMap(days, beaches = []) {
     // lines stay smooth instead of lumpy at every little road wiggle.
     const routeCoords = simplifyPath(rawRoute, 0.0004);
 
-    // Where two days share the same road, their lines would sit exactly on top
-    // of each other and only the last-drawn one would show. Offset each day's
-    // line a few pixels perpendicular (via leaflet-polylineoffset) so overlapping
-    // segments fan out into parallel colored lines. Round joins/caps keep the
-    // offset line smooth. Weight + offset are set by restyleItinRoutes() below
-    // (zoom-responsive). Falls back gracefully if the plugin isn't loaded.
+    // Lines stay exactly on the road. Overlapping days are distinguished by a
+    // staggered dash pattern applied in restyleItinRoutes() (zoom-responsive),
+    // so no geometry is moved off the road (which previously caused curls).
     const polyline = L.polyline(routeCoords, {
-      color: day.color, weight: 5, opacity: 0.9,
-      lineJoin: 'round', lineCap: 'round'
+      color: day.color, weight: 5, opacity: 0.9, lineJoin: 'round'
     }).addTo(itineraryMapInstance);
     itinRouteLayers[day.day].push(polyline);
 
@@ -2531,14 +2527,18 @@ async function initItineraryMap(days, beaches = []) {
   function restyleItinRoutes() {
     const z = itineraryMapInstance.getZoom();
     const weight = Math.max(2, Math.min(5, (z - 6) * 0.65));
-    // Offset just enough to separate colors on shared roads; kept small so the
-    // simplified lines read as parallel, not distorted.
-    const unit   = Math.max(1.2, Math.min(3, (z - 8) * 0.5 + 1.2));
+    const N = Math.max(1, days.length);
+    // Distinguish overlapping days WITHOUT moving the line off the road. Earlier
+    // we offset each line perpendicular, but that curls/loops at switchbacks and
+    // out-and-back legs. Instead, draw each day dashed at ~50% duty and stagger
+    // the phase per day: on a shared road the colors interleave, and a solo road
+    // still reads as a clean dashed line. Lines stay exactly on the road.
+    const cycle = Math.max(14, weight * 4);
+    const dash = `${(cycle / 2).toFixed(1)}, ${(cycle / 2).toFixed(1)}`;
     days.forEach((d, idx) => {
-      const off = (idx - (days.length - 1) / 2) * unit;
+      const dashOffset = ((cycle / N) * idx).toFixed(1);
       (itinRouteLayers[d.day] || []).forEach(pl => {
-        pl.setStyle({ weight });
-        if (pl.setOffset) pl.setOffset(off);
+        pl.setStyle({ weight, dashArray: dash, dashOffset, lineCap: 'butt' });
       });
     });
   }
