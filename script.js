@@ -761,7 +761,6 @@ function renderHomeFeatured() {
           <span class="hfc-scrim"></span>
           <span class="hfc-score">${score}<small>/5</small></span>
           ${grp ? `<span class="hfc-group">${grp}</span>` : ''}
-          ${buildPhotoCredit(hero.credit)}
         </div>
         <div class="hfc-body">
           <span class="home-featured-card-name">${name}</span>
