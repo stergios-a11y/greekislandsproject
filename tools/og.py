@@ -205,7 +205,118 @@ def get_island_meta(key):
             get_island_meta._cache = cache
     return get_island_meta._cache.get(key, {})
 
+# ----------------------------------------------------------------------
+# Photo-forward card: hero image background + scrim + overlaid text
+# ----------------------------------------------------------------------
+def _hero_url(data):
+    for day in (data.get('itinerary') or {}).get('days') or []:
+        for s in day.get('stops') or []:
+            if s.get('photo'):
+                return s['photo']
+    for b in data.get('beaches') or []:
+        if b.get('photo'):
+            return b['photo']
+    return None
+
+def _bump_size(url):
+    """Ask the CDN for a card-sized image so it isn't upscaled/soft."""
+    if 'res.cloudinary.com' in url:
+        import re
+        return re.sub(r'/upload/(?:[^/]*/)?v(\d+)/',
+                      '/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v\\1/', url)
+    if '/thumb/' in url:
+        import re
+        return re.sub(r'/\d+px-', '/1200px-', url)
+    return url
+
+def _download_img(url):
+    import urllib.request
+    from io import BytesIO
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Macintosh)'})
+    raw = urllib.request.urlopen(req, timeout=25).read()
+    return Image.open(BytesIO(raw)).convert('RGB')
+
+def _cover(img, w, h):
+    iw, ih = img.size
+    scale = max(w / iw, h / ih)
+    nw, nh = int(iw * scale + 0.5), int(ih * scale + 0.5)
+    img = img.resize((nw, nh), Image.LANCZOS)
+    x, y = (nw - w) // 2, (nh - h) // 2
+    return img.crop((x, y, x + w, y + h))
+
+def _scrim(photo):
+    """Darken for legibility: light base wash + strong bottom + soft top."""
+    overlay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    od = ImageDraw.Draw(overlay)
+    for y in range(H):
+        a_top = int(150 * max(0.0, 1 - y / 150.0))
+        a_bot = int(210 * max(0.0, (y - (H - 360)) / 360.0)) if y > (H - 360) else 0
+        a = min(225, 40 + a_top + a_bot)
+        od.line([(0, y), (W, y)], fill=(9, 18, 28, a))
+    return Image.alpha_composite(photo.convert('RGBA'), overlay).convert('RGB')
+
+def render_photo_card(key, data, photo):
+    img = _scrim(_cover(photo, W, H))
+    draw = ImageDraw.Draw(img)
+    SOFT = (232, 238, 242)
+
+    draw.rectangle([0, 0, W, 6], fill=AEGEAN)
+    draw.text((60, 40), 'AEGEAN BLUEPRINT', font=load_font(30, 'bold'), fill=WHITE)
+    draw.text((60, 80), 'Greek Islands · A decision engine', font=load_font(20, 'regular'), fill=SOFT)
+    url_font = load_font(20, 'regular')
+    uw, _ = text_bbox(draw, 'aegeanblueprint.com', url_font)
+    draw.text((W - 60 - uw, 52), 'aegeanblueprint.com', font=url_font, fill=SOFT)
+
+    meta = get_island_meta(key)
+    name = data.get('name') or meta.get('name') or key.title()
+    subtitle = data.get('subtitle') or ''
+    score = meta.get('total')
+    group = meta.get('group') or ''
+
+    name_font, _ = fit_text_size(draw, name, 'bold', W - 120, max_size=132, min_size=56)
+    nw, nh = text_bbox(draw, name, name_font)
+    pill_font = load_font(30, 'bold')
+    sub_font = load_font(30, 'italic')
+
+    pills_h = 56
+    bottom = H - 58
+    pills_y = bottom - pills_h
+    if subtitle:
+        subtitle = truncate_to_width(draw, subtitle, sub_font, W - 120)
+        _, sh = text_bbox(draw, subtitle, sub_font)
+        sub_y = pills_y - sh - 22
+    else:
+        sh, sub_y = 0, pills_y
+    name_y = sub_y - nh - (14 if subtitle else 18)
+
+    # soft shadow for the name, then the name
+    draw.text((62, name_y + 2), name, font=name_font, fill=(0, 0, 0))
+    draw.text((60, name_y), name, font=name_font, fill=WHITE)
+    if subtitle:
+        draw.text((60, sub_y), subtitle, font=sub_font, fill=SOFT)
+
+    cursor = 60
+    if score is not None:
+        r, _b = draw_pill(draw, cursor, pills_y, f'★ {score:.1f}', pill_font, AEGEAN, WHITE, padding=18)
+        cursor = r + 16
+    if group:
+        draw_pill(draw, cursor, pills_y, group, pill_font, WHITE, AEGEAN_DARK, padding=18)
+
+    out_path = OUT_DIR / f'{key}.jpg'
+    img.save(out_path, 'JPEG', quality=86, optimize=True, progressive=True)
+    return out_path
+
 def render_island(key, data):
+    """Photo-forward card when a hero photo is available; else the text card."""
+    url = _hero_url(data)
+    if url:
+        try:
+            return render_photo_card(key, data, _download_img(_bump_size(url)))
+        except Exception as e:
+            print(f'  ! {key}: photo unavailable ({e}) — using text card')
+    return render_text_card(key, data)
+
+def render_text_card(key, data):
     img = Image.new('RGB', (W, H), WHITE)
     draw = ImageDraw.Draw(img)
 
