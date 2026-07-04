@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-07-03';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-07-04';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -2757,7 +2757,16 @@ function carNeedHtml(score) {
   const colors = ['', '#6B7280', '#8B8B8B', '#A58A3A', '#D17A2B', '#C0522A'];
   const col = colors[n] || '#888';
   const scaleHint = (typeof t === 'function') ? t('dim.car.hint') : '';
-  return `<span class="car-need-pill" style="background:${col}20;color:${col};border:1px solid ${col}40" title="${scaleHint} (${n}/5)"><span class="car-need-icon">🚗</span><span class="car-need-label">${label}</span></span>`;
+  const style = `background:${col}20;color:${col};border:1px solid ${col}40`;
+  const inner = `<span class="car-need-icon">🚗</span><span class="car-need-label">${label}</span>`;
+  // Where a car is actually useful (score > 1), make the pill a link to the
+  // car-rental affiliate. Car-free islands (n <= 1) stay a plain pill — renting
+  // there makes no sense (matches the hidden Rent-a-car button).
+  if (n > 1) {
+    const rentHint = (typeof t === 'function') ? t('detail.rentcar') : 'Rent a car';
+    return `<a class="car-need-pill car-need-link" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored" style="${style};text-decoration:none;cursor:pointer" title="${rentHint} · ${scaleHint} (${n}/5)">${inner}<span class="car-need-go" aria-hidden="true">↗</span></a>`;
+  }
+  return `<span class="car-need-pill" style="${style}" title="${scaleHint} (${n}/5)">${inner}</span>`;
 }
 
 function barHtml(val, max, color) {
