@@ -1071,24 +1071,23 @@ function renderMapMarkers() {
     // Lazy island photo in the hover tooltip: only load after the pointer
     // settles (~150ms) so sweeping across markers costs nothing. Reuses the
     // already-loaded HERO_PHOTOS manifest + a small thumbnail; browser caches.
-    marker.on('mouseover', function () {
+    marker.on('tooltipopen', function (e) {
       const hero = HERO_PHOTOS[island.key];
       if (!hero || !hero.url) return;
+      const el = e.tooltip && e.tooltip.getElement && e.tooltip.getElement();
+      if (!el) return;
       clearTimeout(marker._photoTimer);
       marker._photoTimer = setTimeout(() => {
-        const tt = marker.getTooltip && marker.getTooltip();
-        const el = tt && tt.getElement && tt.getElement();
-        if (!el) return;
         const inner = el.querySelector('.island-tooltip-inner');
         const img = el.querySelector('.itt-photo');
+        if (!img || img.getAttribute('src')) return;
+        img.onload = () => img.classList.add('loaded');
+        img.onerror = () => { if (inner) inner.classList.remove('has-photo'); };
         if (inner) inner.classList.add('has-photo');
-        if (img && !img.getAttribute('src')) {
-          img.onload = () => img.classList.add('loaded');
-          img.src = thumbUrl(hero.url);
-        }
+        img.src = thumbUrl(hero.url);
       }, 150);
     });
-    marker.on('mouseout', function () { clearTimeout(marker._photoTimer); });
+    marker.on('tooltipclose', function () { clearTimeout(marker._photoTimer); });
     mapMarkers[island.key] = marker;
   });
 }
