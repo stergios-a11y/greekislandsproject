@@ -196,6 +196,10 @@ function parseHash() {
    API key, and share the same `{s}.basemaps.cartocdn.com` CDN with
    subdomains a/b/c/d.
 ============================================================ */
+// On-brand day-route ramp: distinct but harmonious colors drawn from the site
+// palette, used for itinerary day buttons / cards / map routes by day index.
+const DAY_COLOR_RAMP = ['#0B8FAC', '#E8522A', '#3D8B6F', '#C98A00', '#7A5FA0', '#076880'];
+
 function getMapTileUrl() {
   const isDark = document.documentElement.classList.contains('dark');
   return isDark
@@ -1373,6 +1377,11 @@ async function renderIslandPage(key) {
 ============================================================ */
 function buildIslandPage(data, key) {
   const itin = data.itinerary;
+
+  // Normalize per-day colors to one on-brand ramp (turquoise → terracotta →
+  // olive → amber → plum → deep teal) so day buttons, cards, the route lines
+  // and markers all share a harmonious sequence instead of ad-hoc JSON colors.
+  (itin.days || []).forEach((d, i) => { d.color = DAY_COLOR_RAMP[i % DAY_COLOR_RAMP.length]; });
 
   const dayBtns = itin.days.map(d =>
     `<button class="itin-day-btn" data-day="${d.day}" onclick="filterItinDay(${d.day})" style="border-color:${d.color};color:${d.color}"><span>${t("detail.day")} ${d.day}: ${pickLang(d, "title")}</span></button>`
