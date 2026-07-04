@@ -722,6 +722,16 @@ function scrollToHomeTop() {
 }
 
 let HERO_PHOTOS = {};
+// Downsize a hero photo URL to a small thumbnail for map/card popups so hovering
+// stays light. Cloudinary takes a w_/h_ transform; Wikimedia thumb URLs take a
+// smaller pixel width. Anything else is returned unchanged.
+function thumbUrl(url) {
+  if (!url) return url;
+  if (url.indexOf('res.cloudinary.com') > -1)
+    return url.replace(/\/upload\/(?:[^/]*\/)?v(\d+)\//, '/upload/w_420,h_240,c_fill,q_auto,f_auto/v$1/');
+  if (url.indexOf('/thumb/') > -1) return url.replace(/\/\d+px-/, '/440px-');
+  return url;
+}
 async function loadHeroPhotos() {
   if (HERO_PHOTOS && Object.keys(HERO_PHOTOS).length) return HERO_PHOTOS;
   try {
@@ -1040,6 +1050,7 @@ function renderMapMarkers() {
       .addTo(mapInstance)
       .bindTooltip(`
         <div class="island-tooltip-inner">
+          <div class="itt-media"><img class="itt-photo" alt="" decoding="async"></div>
           <div class="itt-name">${islandName(island.key)}</div>
           <div class="itt-meta">${groupName(island.island_group)} · ${fmtNum(island.area)} km²</div>
           <div class="itt-overall">${t('tooltip.overall')}: <strong style="color:${scoreToColor(island.total)}">${fmt(island.total)}</strong></div>
@@ -1057,6 +1068,27 @@ function renderMapMarkers() {
         </div>
       `, { sticky: false, opacity: 1, className: 'island-tooltip' });
     marker.on('click', () => navigateTo('island', island.key));
+    // Lazy island photo in the hover tooltip: only load after the pointer
+    // settles (~150ms) so sweeping across markers costs nothing. Reuses the
+    // already-loaded HERO_PHOTOS manifest + a small thumbnail; browser caches.
+    marker.on('mouseover', function () {
+      const hero = HERO_PHOTOS[island.key];
+      if (!hero || !hero.url) return;
+      clearTimeout(marker._photoTimer);
+      marker._photoTimer = setTimeout(() => {
+        const tt = marker.getTooltip && marker.getTooltip();
+        const el = tt && tt.getElement && tt.getElement();
+        if (!el) return;
+        const inner = el.querySelector('.island-tooltip-inner');
+        const img = el.querySelector('.itt-photo');
+        if (inner) inner.classList.add('has-photo');
+        if (img && !img.getAttribute('src')) {
+          img.onload = () => img.classList.add('loaded');
+          img.src = thumbUrl(hero.url);
+        }
+      }, 150);
+    });
+    marker.on('mouseout', function () { clearTimeout(marker._photoTimer); });
     mapMarkers[island.key] = marker;
   });
 }
