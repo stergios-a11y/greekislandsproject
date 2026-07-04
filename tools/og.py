@@ -179,6 +179,29 @@ def draw_pill(draw, x, y, label, font, fill, fg, padding=18, radius=20):
     draw.text((x + padding, y + 4), label, font=font, fill=fg)
     return x + w, y + h
 
+def _star_points(cx, cy, r):
+    """5-point star polygon points (drawn, not a font glyph — Nunito lacks ★)."""
+    import math
+    pts = []
+    for i in range(10):
+        ang = -math.pi / 2 + i * math.pi / 5
+        rr = r if i % 2 == 0 else r * 0.45
+        pts.append((cx + rr * math.cos(ang), cy + rr * math.sin(ang)))
+    return pts
+
+def draw_score_pill(draw, x, y, score, font, fill, fg, padding=18, radius=20):
+    """Rounded score pill with a drawn star + number. Returns (right_x, bottom_y)."""
+    label = f'{score:.1f}'
+    tw, th = text_bbox(draw, label, font)
+    star_r = 13
+    star_gap = 10
+    w = padding + star_r * 2 + star_gap + tw + padding
+    h = th + 14
+    draw.rounded_rectangle([x, y, x + w, y + h], radius=radius, fill=fill)
+    draw.polygon(_star_points(x + padding + star_r, y + h / 2, star_r), fill=fg)
+    draw.text((x + padding + star_r * 2 + star_gap, y + 4), label, font=font, fill=fg)
+    return x + w, y + h
+
 # ----------------------------------------------------------------------
 # Render one OG image
 # ----------------------------------------------------------------------
@@ -273,21 +296,21 @@ def render_photo_card(key, data, photo):
     score = meta.get('total')
     group = meta.get('group') or ''
 
-    name_font, _ = fit_text_size(draw, name, 'bold', W - 120, max_size=132, min_size=56)
+    name_font, _ = fit_text_size(draw, name, 'bold', W - 120, max_size=118, min_size=54)
     nw, nh = text_bbox(draw, name, name_font)
     pill_font = load_font(30, 'bold')
     sub_font = load_font(30, 'italic')
 
     pills_h = 56
-    bottom = H - 58
+    bottom = H - 56
     pills_y = bottom - pills_h
     if subtitle:
         subtitle = truncate_to_width(draw, subtitle, sub_font, W - 120)
         _, sh = text_bbox(draw, subtitle, sub_font)
-        sub_y = pills_y - sh - 22
+        sub_y = pills_y - sh - 30
     else:
         sh, sub_y = 0, pills_y
-    name_y = sub_y - nh - (14 if subtitle else 18)
+    name_y = sub_y - nh - (36 if subtitle else 20)
 
     # soft shadow for the name, then the name
     draw.text((62, name_y + 2), name, font=name_font, fill=(0, 0, 0))
@@ -297,7 +320,7 @@ def render_photo_card(key, data, photo):
 
     cursor = 60
     if score is not None:
-        r, _b = draw_pill(draw, cursor, pills_y, f'★ {score:.1f}', pill_font, AEGEAN, WHITE, padding=18)
+        r, _b = draw_score_pill(draw, cursor, pills_y, score, pill_font, AEGEAN, WHITE, padding=18)
         cursor = r + 16
     if group:
         draw_pill(draw, cursor, pills_y, group, pill_font, WHITE, AEGEAN_DARK, padding=18)
@@ -371,21 +394,21 @@ def render_text_card(key, data):
     badge_y = rule_y + 36
 
     # Build the labels first to compute total width and center them
-    score_label = f'★ {score:.1f}' if score is not None else ''
     group_label = group
-
-    sw, _ = text_bbox(draw, score_label, pill_font) if score_label else (0, 0)
+    pad = 18
+    # Score pill uses a drawn star (Nunito has no ★ glyph); measure its width.
+    score_str = f'{score:.1f}' if score is not None else ''
+    sw, _ = text_bbox(draw, score_str, pill_font) if score_str else (0, 0)
     gw, _ = text_bbox(draw, group_label, pill_font) if group_label else (0, 0)
 
-    pad = 18
-    score_pill_w = sw + pad * 2 + 4 if score_label else 0
+    score_pill_w = (pad + 26 + 10 + sw + pad) if score_str else 0
     group_pill_w = gw + pad * 2 + 4 if group_label else 0
     gap = 16
-    total_w = score_pill_w + (gap if score_label and group_label else 0) + group_pill_w
+    total_w = score_pill_w + (gap if score_str and group_label else 0) + group_pill_w
 
     cursor = (W - total_w) / 2
-    if score_label:
-        draw_pill(draw, cursor, badge_y, score_label, pill_font, AEGEAN, WHITE, padding=pad)
+    if score_str:
+        draw_score_pill(draw, cursor, badge_y, score, pill_font, AEGEAN, WHITE, padding=pad)
         cursor += score_pill_w + gap
     if group_label:
         draw_pill(draw, cursor, badge_y, group_label, pill_font, AEGEAN_LIGHT, AEGEAN_DARK, padding=pad)
