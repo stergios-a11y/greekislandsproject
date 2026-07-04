@@ -29,8 +29,16 @@
 
   /* Terracotta */
   --terracotta:    #E8522A;
+  --terra-dark:    #C6421F;
   --terra-light:   #FCDDD3;
   --terra-pale:    #FEF2EE;
+
+  /* Single warm UI accent (buttons, links, active states). Points at terracotta
+     so the interface reads as turquoise + one warm signature, instead of coral
+     AND terracotta competing. Coral (--gold) and olive are reserved for
+     decorative/data-viz use. Auto-adapts in dark mode via the vars it references. */
+  --accent:        var(--terracotta);
+  --accent-dark:   var(--terra-dark);
 
   /* Olive / sea grass */
   --olive:         #3D8B6F;
@@ -128,6 +136,7 @@ html.dark {
   --gold-pale:     #1E0E0E;
 
   --terracotta:    #F07050;
+  --terra-dark:    #D85F40;
   --terra-light:   #2A1510;
   --terra-pale:    #1E100E;
 
@@ -2306,7 +2315,7 @@ html.dark .similar-card:hover { border-color: var(--aegean); }
 }
 .whats-on-festivals-link:hover {
   text-decoration: underline;
-  color: var(--terracotta, #E8522A);
+  color: var(--accent-dark);
 }
 
 @media (max-width: 600px) {
