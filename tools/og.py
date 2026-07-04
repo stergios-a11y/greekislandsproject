@@ -241,9 +241,10 @@ def _hero_url(data):
             return b['photo']
     return None
 
-# Wikimedia only serves a fixed set of thumbnail widths; arbitrary sizes 400.
-# 1280/1024/800 are standard buckets. We try largest first, then fall back.
-WIKI_SIZES = [1280, 1024, 800]
+# Wikimedia only serves a FIXED set of thumbnail widths (20,40,60,120,250,330,
+# 500,960,1280,1920,3840); anything else is rejected (400). 1280 fits the OG
+# card; 960 is the fallback for smaller originals.
+WIKI_SIZES = [1280, 960]
 UA = 'AegeanBlueprintOG/1.0 (https://aegeanblueprint.com; build script) Python-urllib'
 
 def _cloudinary_at(url):
