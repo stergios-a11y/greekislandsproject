@@ -2311,6 +2311,10 @@ def main():
     generate_whats_on_index(keys)
     print(f'✓ whats-on.json regenerated')
 
+    # Build the hero-photo manifest (key -> first on-island photo) for card thumbnails
+    generate_hero_photos_index(keys)
+    print(f'✓ hero-photos.json regenerated')
+
     # Build the festivals calendar page (static HTML, EN + EL)
     n_fests = generate_festivals_page(keys)
     print(f'✓ festivals/ page regenerated ({n_fests} festivals)')
@@ -2800,6 +2804,38 @@ def generate_whats_on_index(island_keys):
 
     out_path = ROOT / 'whats-on.json'
     out_path.write_text(json.dumps(index, ensure_ascii=False, separators=(',',':')))
+    return out_path
+
+
+def generate_hero_photos_index(island_keys):
+    """Map island key -> {url, credit} for the first available on-island photo.
+    Lets the SPA show photo thumbnails on island cards (quiz results) without
+    fetching each island's full JSON. Tiny file."""
+    def _credit_for(d, url):
+        for day in (d.get('itinerary') or {}).get('days') or []:
+            for s in day.get('stops') or []:
+                if s.get('photo') == url:
+                    return s.get('photo_credit', '')
+        for b in d.get('beaches') or []:
+            if b.get('photo') == url:
+                return b.get('photo_credit', '')
+        return ''
+    index = {}
+    for key in sorted(island_keys):
+        try:
+            d = json.loads((ISLANDS_DIR / f'{key}.json').read_text())
+        except Exception:
+            continue
+        url, _subject = find_hero_image(d)
+        if not url:
+            continue
+        entry = {'url': url}
+        credit = _credit_for(d, url)
+        if credit:
+            entry['credit'] = credit
+        index[key] = entry
+    out_path = ROOT / 'hero-photos.json'
+    out_path.write_text(json.dumps(index, ensure_ascii=False, separators=(',', ':')))
     return out_path
 
 

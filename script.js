@@ -375,7 +375,10 @@ document.addEventListener('DOMContentLoaded', () => {
   try { setupGroupFilter(); } catch(e) { console.warn('setupGroupFilter', e); }
   try { setupMap(); } catch(e) { console.warn('setupMap', e); }
   try { renderWhatsOnStrip().then(adjustMapHeightToStrip); } catch(e) { console.warn('whatsOn', e); }
+  // Featured cards use per-island hero photos from a small manifest. Render once
+  // now (fallback initials) and re-render after the manifest loads (with photos).
   try { renderHomeFeatured(); } catch(e) { console.warn('homeFeatured', e); }
+  try { loadHeroPhotos().then(() => { try { renderHomeFeatured(); } catch(_) {} }); } catch(e) { console.warn('heroPhotos', e); }
   try { setupTable(); } catch(e) { console.warn('setupTable', e); }
   try { setupCompare(); } catch(e) { console.warn('setupCompare', e); }
   const vd = document.getElementById('version-display');
@@ -714,6 +717,16 @@ function scrollToHomeTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+let HERO_PHOTOS = {};
+async function loadHeroPhotos() {
+  if (HERO_PHOTOS && Object.keys(HERO_PHOTOS).length) return HERO_PHOTOS;
+  try {
+    const r = await fetch('/hero-photos.json', { cache: 'default' });
+    if (r.ok) HERO_PHOTOS = await r.json();
+  } catch (e) { console.warn('hero-photos fetch failed', e); }
+  return HERO_PHOTOS;
+}
+
 function renderHomeFeatured() {
   const grid = document.getElementById('home-featured-grid');
   if (!grid) return;
@@ -732,14 +745,25 @@ function renderHomeFeatured() {
     // pulled from each intro's first sentence (curated below for brevity).
     const excerpt = (HOMEPAGE_EXCERPTS[item.key] || {})[lang] || '';
     const href = (lang === 'el' ? '/el/island/' : '/island/') + item.key + '/';
+    const hero = HERO_PHOTOS[item.key] || {};
+    const grp = (typeof groupName === 'function') ? groupName(meta.island_group) : (meta.island_group || '');
+    const photoImg = hero.url
+      ? `<img class="hfc-photo" src="${hero.url}" alt="${name}" loading="lazy" onerror="this.closest('.hfc-media').classList.add('hfc-nophoto')">`
+      : '';
     return `
       <a class="home-featured-card" href="${href}">
-        <div class="home-featured-card-head">
-          <span class="home-featured-card-name">${name}</span>
-          <span class="home-featured-card-score">${score}/5</span>
+        <div class="hfc-media${hero.url ? '' : ' hfc-nophoto'}" data-initial="${name.charAt(0)}">
+          ${photoImg}
+          <span class="hfc-scrim"></span>
+          <span class="hfc-score">${score}<small>/5</small></span>
+          ${grp ? `<span class="hfc-group">${grp}</span>` : ''}
+          ${buildPhotoCredit(hero.credit)}
         </div>
-        <p class="home-featured-card-excerpt">${excerpt}</p>
-        <span class="home-featured-card-tag" data-tag-key="${item.key}" data-tag-label="${tag}"></span>
+        <div class="hfc-body">
+          <span class="home-featured-card-name">${name}</span>
+          <p class="home-featured-card-excerpt">${excerpt}</p>
+          <span class="home-featured-card-tag" data-tag-key="${item.key}" data-tag-label="${tag}"></span>
+        </div>
       </a>`;
   }).filter(Boolean).join('');
 
