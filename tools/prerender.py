@@ -1764,7 +1764,7 @@ def render_page(key, data, meta, lang='en'):
 <nav class="seo-nav">
   <div class="seo-nav-inner">
     <a href="{('/' if lang == 'en' else '/el/')}" class="seo-nav-brand">
-      <img src="{asset_prefix}logo.png" alt="Aegean Blueprint">
+      <img src="/logo-hero.svg" alt="Aegean Blueprint" width="40" height="40">
       <span>Aegean Blueprint</span>
     </a>
     <div class="seo-nav-links">
