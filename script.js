@@ -484,8 +484,8 @@ function copyIslandLink() {
   navigator.clipboard.writeText(url).then(() => {
     const btn = document.getElementById('detail-share-btn');
     if (btn) {
-      btn.textContent = '✓ Copied!';
-      setTimeout(() => { btn.textContent = '🔗 Copy link'; }, 2000);
+      btn.textContent = '✓';
+      setTimeout(() => { btn.textContent = '↗'; }, 2000);
     }
   }).catch(() => {
     // Fallback for older browsers
@@ -497,8 +497,8 @@ function copyIslandLink() {
     document.body.removeChild(el);
     const btn = document.getElementById('detail-share-btn');
     if (btn) {
-      btn.textContent = '✓ Copied!';
-      setTimeout(() => { btn.textContent = '🔗 Copy link'; }, 2000);
+      btn.textContent = '✓';
+      setTimeout(() => { btn.textContent = '↗'; }, 2000);
     }
   });
 }
@@ -1273,11 +1273,31 @@ async function renderIslandPage(key) {
   document.getElementById('island-name').textContent = islandName(key);
   document.getElementById('island-meta-info').textContent = `${island.island_group} · ${fmtNum(island.area)} km² · Pop. ${fmtNum(island.pop)}`;
 
+  const _isEl = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
   const compareBtn = document.getElementById('detail-compare-btn');
   if (compareBtn) {
     compareBtn.dataset.islandKey = key;
-    compareBtn.textContent = compareSelection.includes(key) ? '✓ In Compare' : '＋ Compare';
+    // Icon-only glass control on the hero: ⇄ normally, ✓ when already in Compare.
+    const inCmp = compareSelection.includes(key);
+    compareBtn.textContent = inCmp ? '✓' : '⇄';
+    compareBtn.title = inCmp ? (_isEl ? 'Στη σύγκριση' : 'In Compare') : (_isEl ? 'Σύγκριση' : 'Compare');
+    compareBtn.classList.toggle('saved', inCmp);
   }
+
+  // Blueprint score ring + qualitative verdict
+  const _total = (typeof island.total === 'number') ? island.total : null;
+  const _ringFill = document.getElementById('blueprint-ring-fill');
+  const _ringNum = document.getElementById('blueprint-ring-num');
+  const _verdict = document.getElementById('blueprint-verdict');
+  const _verdictSub = document.getElementById('blueprint-verdict-sub');
+  if (_ringNum) _ringNum.textContent = _total != null ? _total.toFixed(1) : '–';
+  if (_ringFill && _total != null) {
+    const _C = 2 * Math.PI * 30; // ring circumference (r=30) ≈ 188.5
+    _ringFill.style.strokeDashoffset = String(_C * (1 - _total / 5));
+    _ringFill.style.stroke = scoreToColor(_total);
+  }
+  if (_verdict) _verdict.textContent = _total != null ? scoreVerdict(_total) : '';
+  if (_verdictSub) _verdictSub.textContent = _isEl ? 'Συνολική βαθμολογία · στα 5' : 'Overall score · out of 5';
 
   SCORE_DIMS.forEach(dim => {
     // car_need has a special rendering (pill), handled below — skip the stars loop
@@ -1380,6 +1400,7 @@ async function renderIslandPage(key) {
         }
       } catch(e) { /* non-fatal */ }
       guide.innerHTML = buildIslandPage(data, key);
+      relocateHeroToSlot(key);
       setTimeout(() => initItineraryMap(data.itinerary.days, data.beaches || []), 80);
       if (data.beaches) setTimeout(() => loadBeachPhotos(data.beaches), 150);
       return;
@@ -1415,6 +1436,38 @@ async function renderIslandPage(key) {
       <p style="margin-top:12px;font-size:13px;color:var(--ink-3)">${t('fallback.coming_soon')}</p>
       <p style="margin-top:10px"><a href="#" onclick="window._addCmpNav('${key}')">${t('fallback.compare_link')}</a></p>
     </div>`;
+  relocateHeroToSlot(key);
+}
+
+/* Moves the immersive hero out of #island-guide into the full-width
+   #island-hero-slot so it spans both grid columns (photo on top, itinerary +
+   Blueprint panel below). If no photo hero was rendered (generic fallback or a
+   photo-less island), injects a simple teal banner so the layout stays intact. */
+function relocateHeroToSlot(key) {
+  const guide = document.getElementById('island-guide');
+  const slot = document.getElementById('island-hero-slot');
+  if (!slot) return;
+  const hero = guide && guide.querySelector('.isl-hero, .itin-hero');
+  slot.innerHTML = '';
+  if (hero) {
+    slot.appendChild(hero);
+  } else if (key) {
+    const meta = (typeof ISLANDS_DATA !== 'undefined' && ISLANDS_DATA[key]) || {};
+    const tag = meta.subtitle ? `<p class="isl-hero-tag">${meta.subtitle}</p>` : '';
+    slot.innerHTML = `<div class="itin-hero"><h2 class="itin-title">${islandName(key)}</h2>${tag}</div>`;
+  }
+}
+
+/* Short qualitative label for the overall score, shown beside the Blueprint
+   score ring (e.g. 3.8 → "Very good"). EN/EL. */
+function scoreVerdict(s) {
+  const el = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+  if (s >= 4.5) return el ? 'Κορυφαίο' : 'Exceptional';
+  if (s >= 4.0) return el ? 'Εξαιρετικό' : 'Excellent';
+  if (s >= 3.5) return el ? 'Πολύ καλό' : 'Very good';
+  if (s >= 3.0) return el ? 'Στέρεη επιλογή' : 'Solid choice';
+  if (s >= 2.5) return el ? 'Αξιοπρεπές' : 'Decent';
+  return el ? 'Εξειδικευμένο' : 'Niche';
 }
 
 /* ============================================================
@@ -2741,7 +2794,10 @@ function updateShortlistButton() {
   const btn = document.getElementById('detail-shortlist-btn');
   if (!btn || !currentIslandKey) return;
   const saved = isInShortlist(currentIslandKey);
-  btn.textContent = saved ? t('detail.saved') : t('detail.save');
+  const el = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+  // Icon-only glass control on the hero: ★ when saved, ☆ otherwise.
+  btn.textContent = saved ? '★' : '☆';
+  btn.title = saved ? (el ? 'Αποθηκευμένο' : 'Saved') : (el ? 'Αποθήκευση' : 'Save');
   btn.classList.toggle('saved', saved);
 }
 

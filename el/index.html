@@ -90,7 +90,7 @@
   <meta name="apple-mobile-web-app-title" content="Aegean Blueprint">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="/style.css?v=22">
+  <link rel="stylesheet" href="/style.css?v=25">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9298260273942245" crossorigin="anonymous"></script>
   <script>
     /* Desktop-only ads: on viewports below 900px, replace adsbygoogle.push
@@ -590,25 +590,48 @@
 
   <main id="view-detail" class="view-section" style="display:none;">
     <div class="detail-container">
-      <div class="detail-header">
-        <button class="back-btn" id="detail-back-btn" data-i18n="detail.back">← Χάρτης</button>
-        <h2 id="island-name"></h2>
-        <div class="island-meta-pill" id="island-meta-info"></div>
-        <button class="compare-add-btn" id="detail-compare-btn" data-i18n="detail.compare">＋ Σύγκριση</button>
-        <button class="shortlist-btn" id="detail-shortlist-btn" onclick="toggleShortlist()" data-i18n="detail.save">☆ Λίστα</button>
-        <button class="share-btn" id="detail-share-btn" onclick="copyIslandLink()" data-i18n="detail.copylink">🔗 Αντιγραφή</button>
-        <button class="print-btn" id="detail-print-btn" onclick="printIsland()" data-i18n="detail.print">🖨 Εκτύπωση</button>
-        <a class="ferry-btn" id="detail-ferry-btn" target="_blank" rel="noopener" data-i18n="detail.bookferry">🚢 Κράτηση</a>
-        <a class="car-btn" id="detail-car-btn" target="_blank" rel="noopener sponsored" data-i18n="detail.rentcar">🚗 Ενοικίαση αυτοκινήτου</a>
-      </div>
       <div class="detail-grid">
+
+        <div class="detail-hero-wrap">
+          <div id="island-hero-slot"></div>
+          <div class="detail-hero-top">
+            <button class="glass-btn detail-back-glass" id="detail-back-btn" data-i18n="detail.back">← Χάρτης</button>
+            <div class="detail-hero-actions">
+              <button class="glass-btn glass-ic" id="detail-shortlist-btn" onclick="toggleShortlist()" title="Λίστα" aria-label="Λίστα">☆</button>
+              <button class="glass-btn glass-ic" id="detail-compare-btn" title="Σύγκριση" aria-label="Σύγκριση">⇄</button>
+              <button class="glass-btn glass-ic" id="detail-share-btn" onclick="copyIslandLink()" title="Αντιγραφή" aria-label="Αντιγραφή">↗</button>
+            </div>
+          </div>
+          <h2 id="island-name" hidden></h2>
+          <div class="island-meta-pill" id="island-meta-info" hidden></div>
+        </div>
+
+        <div class="detail-actionbar">
+          <a class="ferry-btn" id="detail-ferry-btn" target="_blank" rel="noopener" data-i18n="detail.bookferry">🚢 Κράτηση</a>
+          <a class="car-btn" id="detail-car-btn" target="_blank" rel="noopener sponsored" data-i18n="detail.rentcar">🚗 Ενοικίαση αυτοκινήτου</a>
+          <span class="actionbar-spacer"></span>
+          <button class="glass-ic-solid" id="detail-print-btn" onclick="printIsland()" title="Εκτύπωση" aria-label="Εκτύπωση">🖨</button>
+        </div>
+
         <div class="detail-main">
           <div id="island-mini-map"></div>
           <div id="island-guide"></div>
         </div>
+
         <aside class="detail-sidebar">
-          <div class="sidebar-box">
-            <h3 data-i18n="detail.ratings">Βαθμολογίες</h3>
+          <div class="sidebar-box blueprint-box">
+            <div class="blueprint-eyebrow" data-i18n="detail.ratings">Βαθμολογίες</div>
+            <div class="blueprint-scorerow">
+              <svg class="blueprint-ring" viewBox="0 0 70 70" width="62" height="62" aria-hidden="true">
+                <circle cx="35" cy="35" r="30" fill="none" stroke="var(--marble-2)" stroke-width="7"></circle>
+                <circle id="blueprint-ring-fill" cx="35" cy="35" r="30" fill="none" stroke="var(--aegean)" stroke-width="7" stroke-linecap="round" stroke-dasharray="188.5" stroke-dashoffset="188.5" transform="rotate(-90 35 35)"></circle>
+                <text id="blueprint-ring-num" x="35" y="41" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="19" fill="var(--ink-1)">–</text>
+              </svg>
+              <div class="blueprint-verdict">
+                <span class="blueprint-verdict-main" id="blueprint-verdict"></span>
+                <span class="blueprint-verdict-sub" id="blueprint-verdict-sub"></span>
+              </div>
+            </div>
             <a href="/el/#how-we-score" onclick="navMission(event)" class="how-we-score-link" data-i18n="scoring.howlink">πώς βαθμολογούμε</a>
             <div class="rating-list">
               <div class="rating-item"><span class="rating-label" data-i18n="sidebar.beach">Ποιότητα Παραλιών</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div><span class="rating-val" id="val-beach"></span></div>
@@ -618,15 +641,16 @@
               <div class="rating-item"><span class="rating-label" data-i18n="sidebar.afford">Προσιτή τιμή</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div><span class="rating-val" id="val-afford"></span></div>
               <div class="rating-item rating-item-car" title="" id="rating-item-car"><span class="rating-label" data-i18n="sidebar.car">Χρησιμότητα οχήματος</span><span class="rating-val" id="val-car"></span></div>
             </div>
-          </div>
-          <div class="sidebar-box" id="sidebar-stats">
-            <h3 data-i18n="detail.keystats">Βασικά Στοιχεία</h3>
-            <div class="stat-line"><span data-i18n="detail.area">Έκταση:</span> <strong id="stat-area"></strong></div>
-            <div class="stat-line"><span data-i18n="detail.population">Πληθυσμός:</span> <strong id="stat-pop"></strong></div>
-            <div class="stat-line"><span data-i18n="detail.group">Ομάδα:</span> <strong id="stat-group"></strong></div>
-            <div class="stat-line"><span data-i18n="detail.suggestedstay">Συνιστώμενη παραμονή:</span> <strong id="stat-days"></strong></div>
+            <div class="blueprint-divider"></div>
+            <div id="sidebar-stats" class="blueprint-stats">
+              <div class="stat-line"><span data-i18n="detail.area">Έκταση:</span> <strong id="stat-area"></strong></div>
+              <div class="stat-line"><span data-i18n="detail.population">Πληθυσμός:</span> <strong id="stat-pop"></strong></div>
+              <div class="stat-line"><span data-i18n="detail.group">Ομάδα:</span> <strong id="stat-group"></strong></div>
+              <div class="stat-line"><span data-i18n="detail.suggestedstay">Συνιστώμενη παραμονή:</span> <strong id="stat-days"></strong></div>
+            </div>
           </div>
         </aside>
+
       </div>
     </div>
   </main>
@@ -673,7 +697,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="/i18n.js?v=31"></script>
-  <script src="/script.js?v=47"></script>
+  <script src="/script.js?v=48"></script>
 <!-- SEO_ISLAND_LIST_START -->
 <nav class="visually-hidden" aria-label="Όλα τα νησιά">
   <h2>Όλα τα νησιά</h2>
