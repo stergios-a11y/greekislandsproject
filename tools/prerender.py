@@ -533,6 +533,38 @@ def find_hero_image(data):
     return None, None
 
 
+def hero_src_1280(url):
+    """Large hero rendition — mirrors heroSrc() in script.js exactly, so the
+    static first-paint image is the same file the SPA hero uses (cache hit,
+    no visual swap on hydration)."""
+    if not url:
+        return url
+    if 'res.cloudinary.com' in url:
+        return re.sub(r'/upload/(?:[^/]*/)?v(\d+)/',
+                      r'/upload/w_1280,h_560,c_fill,q_auto,f_auto/v\1/', url)
+    # Wikimedia only serves FIXED thumb widths; 1280 is the hero bucket.
+    if '/thumb/' in url:
+        return re.sub(r'/\d+px-', '/1280px-', url)
+    m = re.match(r'^(https?://upload\.wikimedia\.org/wikipedia/[a-z]+)/([0-9a-f])/([0-9a-f]{2})/([^/]+)$', url)
+    if m:
+        return f'{m.group(1)}/thumb/{m.group(2)}/{m.group(3)}/{m.group(4)}/1280px-{m.group(4)}'
+    return url
+
+
+# Localized island-group names — mirrors groupName()/i18n group.* in the SPA.
+GROUP_NAMES_EL = {
+    'Cyclades': 'Κυκλάδες', 'Dodecanese': 'Δωδεκάνησα', 'Saronic': 'Σαρωνικός',
+    'Sporades': 'Σποράδες', 'Ionian': 'Ιόνιο', 'NE Aegean': 'Β.Α. Αιγαίο',
+    'Crete': 'Κρήτη', 'Evia': 'Εύβοια', 'Other': 'Άλλα',
+}
+
+# Car-reliance chip labels — mirrors car.* i18n keys (index 1-5 = rounded car_need).
+CAR_LABELS = {
+    'en': ['', 'Not needed', 'Optional', 'Useful', 'Recommended', 'Essential'],
+    'el': ['', 'Δεν χρειάζεται', 'Προαιρετικό', 'Χρήσιμο', 'Συνιστάται', 'Απαραίτητο'],
+}
+
+
 def gr_in(data):
     """Build the Greek 'στον/στην/στο/στους/στις/στα + accusative-name' phrase.
 
@@ -1407,22 +1439,65 @@ def render_body(key, data, meta, lang='en'):
             alt = f'{name} — {hero_subject}' if hero_subject else f'{name}, ελληνικό νησί'
         else:
             alt = f'{name} — {hero_subject}' if hero_subject else f'{name}, Greek island'
-        hero_html = (
-            f'<figure class="seo-hero">'
-            f'<img src="{esc(hero_url)}" alt="{esc(alt)}" loading="lazy" '
-            f'width="800" height="500" style="width:100%;height:auto;border-radius:8px">'
-            f'</figure>'
-        )
+        # Immersive hero — same classes as the SPA hero from buildIslandPage()
+        # in script.js, so the first paint matches the hydrated page (no swap
+        # flash). Real <img> (.isl-hero-img) instead of a CSS background so
+        # crawlers get an indexable image with alt text; same 1280 rendition
+        # the SPA requests, so hydration is a cache hit.
+        grp_raw = meta.get('group') or ''
+        grp = (GROUP_NAMES_EL.get(grp_raw, grp_raw) if lang == 'el' else grp_raw)
+        hero_tag = pick(data, 'subtitle', lang) or ''
+        score_html = (f'<span class="isl-hero-score">{meta["total"]:.1f}<small>/5</small></span>'
+                      if meta.get('total') else '')
+        chips = []
+        if meta.get('area'):
+            chips.append(f'<span class="isl-chip">📍 {int(meta["area"]):,} km²</span>')
+        if meta.get('pop'):
+            chips.append(f'<span class="isl-chip">👥 {int(meta["pop"]):,}</span>')
+        if meta.get('days'):
+            chips.append(f'<span class="isl-chip">🗓 {int(meta["days"])} {"μέρες" if lang == "el" else "days"}</span>')
+        if meta.get('has_airport'):
+            chips.append(f'<span class="isl-chip">✈ {"Αεροδρόμιο" if lang == "el" else "Airport"}</span>')
+        car_lbl = CAR_LABELS['el' if lang == 'el' else 'en'][round(meta['car_need'])] if meta.get('car_need') else ''
+        if car_lbl:
+            chips.append(f'<span class="isl-chip">🚗 {car_lbl}</span>')
+        chips_html = f'<div class="isl-hero-chips">{"".join(chips)}</div>' if chips else ''
+        hero_html = f'''<div class="isl-hero">
+    <img class="isl-hero-img" src="{esc(hero_src_1280(hero_url))}" alt="{esc(alt)}" fetchpriority="high" width="1280" height="560">
+    <div class="isl-hero-scrim"></div>
+    <div class="isl-hero-body">
+      {f'<div class="isl-hero-eyebrow">{esc(grp)}</div>' if grp else ''}
+      <div class="isl-hero-nrow"><h1 class="isl-hero-name">{esc(name)}</h1>{score_html}</div>
+      {f'<p class="isl-hero-tag">{esc(hero_tag)}</p>' if hero_tag else ''}
+      {chips_html}
+    </div>
+  </div>'''
 
-    body_html = f'''
-<article class="seo-island-content">
-  <div class="seo-header">
+    # With the immersive hero the <h1> lives on the hero itself; the header
+    # block below it keeps the crawlable text lines (subtitle, rating,
+    # last-updated). Photo-less islands keep the original full header.
+    # The hero is excluded from island auto-linking (placeholder swapped back
+    # in after the pass): a link inside the hero tagline would render as a
+    # default-styled link over the photo and waste the one-link-per-island
+    # budget on markup that's replaced at hydration anyway.
+    if hero_url:
+        header_html = f'''@@ISL_HERO@@
+  <div class="seo-header seo-header-under">
+    {subtitle_html}
+    {rating_text}
+    {last_updated_html}
+  </div>'''
+    else:
+        header_html = f'''<div class="seo-header">
     <h1>{esc(name)}</h1>
     {subtitle_html}
     {rating_text}
     {last_updated_html}
-  </div>
-  {hero_html}
+  </div>'''
+
+    body_html = f'''
+<article class="seo-island-content">
+  {header_html}
   <section class="seo-intro">
     <p>{safe_html(intro)}</p>
   </section>
@@ -1439,7 +1514,10 @@ def render_body(key, data, meta, lang='en'):
     # Post-process: auto-link mentions of OTHER island names to their pages.
     # Done as a final pass so it works across all sections (intro, GT summary,
     # WTV summary, captions). One link per destination island per page.
-    return auto_link_islands(body_html, key, lang)
+    linked = auto_link_islands(body_html, key, lang)
+    if hero_url:
+        linked = linked.replace('@@ISL_HERO@@', hero_html, 1)
+    return linked
 
 # ---------------------------------------------------------------------
 # Page shell
@@ -1517,7 +1595,7 @@ def render_page(key, data, meta, lang='en'):
 <script type="application/ld+json">{schema_json}</script>
 
 <!-- SPA assets — load the same CSS as the main site so the SEO body blends visually -->
-<link rel="stylesheet" href="{asset_prefix}style.css?v=25">
+<link rel="stylesheet" href="{asset_prefix}style.css?v=26">
 <style>
   /* Minimal SEO body styling — these elements exist only in pre-rendered pages */
   .seo-island-content {{
