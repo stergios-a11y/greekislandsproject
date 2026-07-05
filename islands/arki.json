@@ -1,0 +1,183 @@
+{
+  "key": "arki",
+  "name": "Arki",
+  "subtitle": "A fishing hamlet of 44 in the Dodecanese — sheltered bays, no cars, total quiet",
+  "intro": "Arki is a speck of an island east of Patmos — one small settlement around the harbour, a handful of tavernas that also rent rooms, no cars, no bank and no ATM. It is reached by the small Dodecanese ferries that call between Samos, Patmos, Lipsi and Kalymnos. The draw is the near-total silence, the shallow turquoise coves of the south coast, and the neighbouring islet of Marathi with one of the finest beaches in the eastern Aegean. This is an island for travellers who genuinely want to disappear for a day or two.",
+  "when_to_visit": {
+    "summary": "Arki is a summer-only island — most rooms and tavernas open roughly May to September. June and September are ideal: warm sea, calm bays and almost nobody around. Ferries thin out sharply outside summer.",
+    "summary_el": "Οι Αρκιοί λειτουργούν μόνο το καλοκαίρι — τα περισσότερα δωμάτια και ταβέρνες ανοίγουν περίπου Μάιο με Σεπτέμβριο. Ιούνιος και Σεπτέμβριος είναι ιδανικοί: ζεστή θάλασσα, ήρεμοι όρμοι και σχεδόν κανείς. Έξω από το καλοκαίρι τα πλοία αραιώνουν πολύ.",
+    "months": [
+      {
+        "tag": "avoid",
+        "why": "Off-season",
+        "why_el": "Σχεδόν όλα κλειστά",
+        "limited": true
+      },
+      {
+        "tag": "avoid",
+        "why": "Off-season",
+        "why_el": "Σκελετός υπηρεσιών",
+        "limited": true
+      },
+      {
+        "tag": "avoid",
+        "why": "Few ferries",
+        "why_el": "Λίγα πλοία",
+        "limited": true
+      },
+      {
+        "tag": "ok",
+        "why": "Awakening",
+        "why_el": "Ήσυχα, πρώτες αφίξεις",
+        "limited": true
+      },
+      {
+        "tag": "great",
+        "why": "Sea warming",
+        "why_el": "Κολυμπιέται πια"
+      },
+      {
+        "tag": "perfect",
+        "why": "Warm, near-empty",
+        "why_el": "Ζεστά, σχεδόν άδεια"
+      },
+      {
+        "tag": "great",
+        "why": "Hot, calm",
+        "why_el": "Ζέστη, ήσυχα"
+      },
+      {
+        "tag": "ok",
+        "why": "Peak Greeks, busy",
+        "why_el": "Αιχμή Ελλήνων"
+      },
+      {
+        "tag": "perfect",
+        "why": "Best — peaceful",
+        "why_el": "Καλύτερος — ζεστά"
+      },
+      {
+        "tag": "ok",
+        "why": "Season ending",
+        "why_el": "Κλείνουν σιγά"
+      },
+      {
+        "tag": "avoid",
+        "why": "Off-season",
+        "why_el": "Μόνο ντόπιοι",
+        "limited": true
+      },
+      {
+        "tag": "avoid",
+        "why": "Off-season, thin",
+        "why_el": "Χειμώνας, ελάχιστα",
+        "limited": true
+      }
+    ]
+  },
+  "itinerary": {
+    "title": "1-Day Arki Itinerary",
+    "subtitle": "The one harbour village, the Tiganakia turquoise coves, and a boat to Marathi.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Harbour, Coves & Marathi",
+        "color": "#0B8FAC",
+        "km": 6,
+        "drive_mins": 40,
+        "overnight": "Port Augusta (Arki)",
+        "stops": [
+          {
+            "name": "Port Augusta (Arki village)",
+            "lat": 37.3803,
+            "lng": 26.736,
+            "type": "harbour",
+            "time": "10:00",
+            "wiki": "https://www.google.com/maps/search/Port%20Augusta%20%28Arki%20village%29%20Arki",
+            "desc": "The island's only village wraps around a deep natural harbour — three or four tavernas with rooms, a tiny church, a couple of shops. Boats from Patmos and Lipsi tie up right in front of the tables.",
+            "name_el": "Λιμάνι (Χωριό Αρκιών)",
+            "desc_el": "Το μοναδικό χωριό απλώνεται γύρω από ένα βαθύ φυσικό λιμάνι — τρεις-τέσσερις ταβέρνες με δωμάτια, ένα εκκλησάκι, δυο μαγαζάκια. Οι βάρκες από Πάτμο και Λειψούς δένουν ακριβώς μπροστά στα τραπέζια."
+          },
+          {
+            "name": "Tiganakia Coves",
+            "lat": 37.3722,
+            "lng": 26.7409,
+            "type": "beach",
+            "time": "11:30",
+            "wiki": "https://www.google.com/maps/search/Tiganakia%20Coves%20Arki",
+            "desc": "A cluster of tiny shallow coves on the south coast with astonishing turquoise water over pale sand — the island's signature swim. Reached on foot or by small boat; no facilities, so bring water and shade.",
+            "name_el": "Όρμοι Τηγανάκια",
+            "desc_el": "Μια συστάδα μικροσκοπικών ρηχών όρμων στη νότια ακτή με εκπληκτικά γαλαζοπράσινα νερά πάνω σε ανοιχτόχρωμη άμμο — το σήμα κατατεθέν του νησιού. Πρόσβαση με τα πόδια ή με βαρκάκι· χωρίς υποδομές, πάρε νερό και σκιά."
+          },
+          {
+            "name": "Marathi islet",
+            "lat": 37.362,
+            "lng": 26.7175,
+            "type": "beach",
+            "time": "14:00",
+            "wiki": "https://www.google.com/maps/search/Marathi%20islet%20Arki",
+            "desc": "A ten-minute boat hop to a near-uninhabited islet with a wide sweep of pale sand and two summer-only tavernas. One of the best beaches in the whole eastern Aegean, and almost always empty.",
+            "name_el": "Νησάκι Μαράθι",
+            "desc_el": "Δεκάλεπτη βαρκάδα σε ένα σχεδόν ακατοίκητο νησάκι με πλατιά αμμουδιά και δύο καλοκαιρινές ταβέρνες. Μία από τις καλύτερες παραλίες όλου του ανατολικού Αιγαίου, σχεδόν πάντα άδεια."
+          }
+        ],
+        "title_el": "Λιμάνι, Όρμοι & Μαράθι",
+        "overnight_el": "Λιμάνι (Αρκιοί)",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Port Augusta",
+            "area_el": "Λιμάνι",
+            "desc": "A handful of family tavernas ring the harbour, each with rooms above and the day's catch below — grilled fish, goat, and whatever the garden gave. Cash only, no reservations, no rush.",
+            "desc_el": "Λίγες οικογενειακές ταβέρνες κυκλώνουν το λιμάνι, με δωμάτια από πάνω και το ψάρι της ημέρας από κάτω — ψητό ψάρι, κατσίκι και ό,τι έδωσε ο κήπος. Μόνο μετρητά, χωρίς κρατήσεις, χωρίς βιασύνη.",
+            "after": "Tiganakia Coves"
+          }
+        ]
+      }
+    ],
+    "title_el": "Πρόγραμμα 1 Ημέρας — Αρκιοί",
+    "subtitle_el": "Το μοναδικό λιμανοχώρι, οι γαλαζοπράσινοι όρμοι Τηγανάκια και μια βάρκα στο Μαράθι."
+  },
+  "beaches": [
+    {
+      "name": "Tiganakia",
+      "wiki": "https://www.google.com/maps/search/Tiganakia%20Arki",
+      "rating": 4,
+      "type": "Sand & rock coves",
+      "length": "Series of coves",
+      "depth": "Shallow — crystal clear",
+      "facing": "South-facing — sheltered",
+      "facilities": "None — bring everything.",
+      "desc": "Shallow turquoise coves on Arki's south coast — the island's best swim, reached on foot from the village. No sunbeds, no bar, total peace.",
+      "commons": null,
+      "lat": 37.3722,
+      "lng": 26.7409,
+      "name_el": "Τηγανάκια",
+      "type_el": "Όρμοι με άμμο & βράχο",
+      "depth_el": "Ρηχά — κρυστάλλινα",
+      "facing_el": "Νότια — προστατευμένα",
+      "facilities_el": "Καμία — πάρε ό,τι χρειάζεσαι.",
+      "desc_el": "Ρηχοί γαλαζοπράσινοι όρμοι στη νότια ακτή των Αρκιών — το καλύτερο κολύμπι του νησιού, με πρόσβαση πεζή από το χωριό. Χωρίς ξαπλώστρες ή μπαρ, απόλυτη ηρεμία."
+    }
+  ],
+  "name_el": "Αρκιοί",
+  "name_accusative_el": "Αρκιούς",
+  "gender_el": "m",
+  "subtitle_el": "Ένας ψαροχώρι 44 κατοίκων στα Δωδεκάνησα — προστατευμένοι όρμοι, χωρίς αυτοκίνητα, απόλυτη ησυχία",
+  "intro_el": "Οι Αρκιοί είναι ένα μικροσκοπικό νησί ανατολικά της Πάτμου — ένας μικρός οικισμός γύρω από το λιμάνι, μια χούφτα ταβέρνες που νοικιάζουν και δωμάτια, χωρίς αυτοκίνητα, χωρίς τράπεζα ή ΑΤΜ. Προσεγγίζεται με τα μικρά δωδεκανησιακά πλοία που συνδέουν Σάμο, Πάτμο, Λειψούς και Κάλυμνο. Το θέλγητρο είναι η σχεδόν απόλυτη σιωπή, οι ρηχοί γαλαζοπράσινοι όρμοι της νότιας ακτής και το γειτονικό νησάκι Μαράθι με μία από τις καλύτερες παραλίες του ανατολικού Αιγαίου. Νησί για όσους θέλουν πραγματικά να εξαφανιστούν για μια-δυο μέρες.",
+  "getting_there": {
+    "pills": [
+      "⛵ via Patmos/Lipsi",
+      "€8–15"
+    ],
+    "pills_el": [
+      "⛵ μέσω Πάτμου/Λειψών",
+      "€8–15"
+    ],
+    "summary": "No airport. Small Dodecanese ferries and the Patmos–Lipsi day boats call at Arki several times a week in summer; the crossing from Patmos is about 1 hour. Very limited service outside June–September.",
+    "summary_el": "Χωρίς αεροδρόμιο. Μικρά δωδεκανησιακά πλοία και τα καθημερινά καΐκια Πάτμου–Λειψών πιάνουν Αρκιούς αρκετές φορές την εβδομάδα το καλοκαίρι· από Πάτμο περίπου 1 ώρα. Πολύ περιορισμένα δρομολόγια εκτός Ιουνίου–Σεπτεμβρίου.",
+    "tip": "Pair Arki with Lipsi or Patmos — few people come out here as a standalone trip.",
+    "tip_el": "Συνδύασε τους Αρκιούς με Λειψούς ή Πάτμο — ελάχιστοι έρχονται μόνο για εδώ."
+  }
+}

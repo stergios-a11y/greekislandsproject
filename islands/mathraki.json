@@ -1,0 +1,183 @@
+{
+  "key": "mathraki",
+  "name": "Mathraki",
+  "subtitle": "The smallest Diapontia island — a mile of empty sand and nesting turtles",
+  "intro": "Mathraki is the smallest and least-visited of the Diapontia islands off northwest Corfu — a single green ridge with a couple of tiny hamlets and barely a few hundred residents. Its defining feature is Portello, a long unbroken sweep of pine-backed sand where loggerhead turtles come ashore to nest. There is almost no development: a taverna or two, a few rooms, no cars to speak of. People come for the sand, the quiet, and the sense of being at the very edge of the country.",
+  "when_to_visit": {
+    "summary": "Open in summer only, roughly June to September. Because it is so exposed and small, come in settled weather — June and September are calmest. Turtle nesting means parts of Portello may be roped off; keep clear.",
+    "summary_el": "Ανοιχτό μόνο το καλοκαίρι, περίπου Ιούνιο με Σεπτέμβριο. Επειδή είναι μικρό κι εκτεθειμένο, προτίμησε σταθερό καιρό — Ιούνιος και Σεπτέμβριος πιο ήρεμοι. Η γέννα των χελωνών σημαίνει πως τμήματα του Πορτέλλο μπορεί να είναι οριοθετημένα· κράτα απόσταση.",
+    "months": [
+      {
+        "tag": "avoid",
+        "why": "Off-season",
+        "why_el": "Σχεδόν όλα κλειστά",
+        "limited": true
+      },
+      {
+        "tag": "avoid",
+        "why": "Off-season",
+        "why_el": "Σκελετός υπηρεσιών",
+        "limited": true
+      },
+      {
+        "tag": "avoid",
+        "why": "Few ferries",
+        "why_el": "Λίγα πλοία",
+        "limited": true
+      },
+      {
+        "tag": "ok",
+        "why": "Awakening",
+        "why_el": "Ήσυχα, πρώτες αφίξεις",
+        "limited": true
+      },
+      {
+        "tag": "great",
+        "why": "Sea warming",
+        "why_el": "Κολυμπιέται πια"
+      },
+      {
+        "tag": "perfect",
+        "why": "Warm, near-empty",
+        "why_el": "Ζεστά, σχεδόν έρημα"
+      },
+      {
+        "tag": "great",
+        "why": "Hot, calm",
+        "why_el": "Ζέστη, ήσυχα"
+      },
+      {
+        "tag": "ok",
+        "why": "Peak Greeks, busy",
+        "why_el": "Αιχμή Ελλήνων"
+      },
+      {
+        "tag": "perfect",
+        "why": "Best — peaceful",
+        "why_el": "Καλύτερος — ζεστά"
+      },
+      {
+        "tag": "ok",
+        "why": "Season ending",
+        "why_el": "Κλείνουν σιγά"
+      },
+      {
+        "tag": "avoid",
+        "why": "Off-season",
+        "why_el": "Μόνο ντόπιοι",
+        "limited": true
+      },
+      {
+        "tag": "avoid",
+        "why": "Off-season, thin",
+        "why_el": "Χειμώνας, ελάχιστα",
+        "limited": true
+      }
+    ]
+  },
+  "itinerary": {
+    "title": "1-Day Mathraki Itinerary",
+    "subtitle": "Plakes harbour, the long Portello beach and Kato Mathraki.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Port, the Long Sand & the Village",
+        "color": "#0B8FAC",
+        "km": 6,
+        "drive_mins": 40,
+        "overnight": "Plakes (Mathraki)",
+        "stops": [
+          {
+            "name": "Plakes (port)",
+            "lat": 39.7635,
+            "lng": 19.549,
+            "type": "harbour",
+            "time": "11:00",
+            "wiki": "https://www.google.com/maps/search/Plakes%20%28port%29%20Mathraki",
+            "desc": "The little ferry landing on the east side, with a taverna and a few rooms just above. From here a single lane climbs to the villages and drops to Portello beach.",
+            "name_el": "Πλάκες (Λιμάνι)",
+            "desc_el": "Η μικρή προβλήτα στην ανατολική πλευρά, με μια ταβέρνα και λίγα δωμάτια από πάνω. Από εδώ ένας δρόμος ανηφορίζει στα χωριά και κατεβαίνει στην παραλία Πορτέλλο."
+          },
+          {
+            "name": "Portello beach",
+            "lat": 39.7548,
+            "lng": 19.5402,
+            "type": "beach",
+            "time": "11:45",
+            "wiki": "https://www.google.com/maps/search/Portello%20beach%20Mathraki",
+            "desc": "A kilometre-plus of fine golden sand backed by pines along the southwest shore — one of the longest, emptiest beaches in the Ionian. Loggerhead turtles nest here; a couple of seasonal canteens are the only facilities.",
+            "name_el": "Παραλία Πορτέλλο",
+            "desc_el": "Πάνω από ένα χιλιόμετρο λεπτής χρυσής άμμου με πεύκα, στη νοτιοδυτική ακτή — μία από τις μακρύτερες, πιο άδειες παραλίες του Ιονίου. Εδώ γεννούν χελώνες caretta· δυο εποχικές καντίνες είναι οι μόνες υποδομές."
+          },
+          {
+            "name": "Kato Mathraki",
+            "lat": 39.758,
+            "lng": 19.552,
+            "type": "village",
+            "time": "14:00",
+            "wiki": "https://www.google.com/maps/search/Kato%20Mathraki%20Mathraki",
+            "desc": "A tiny hilltop hamlet with a couple of tavernas and long views back to Corfu and across to Othonoi. The whole island can be walked in an afternoon.",
+            "name_el": "Κάτω Μαθράκι",
+            "desc_el": "Ένας μικροσκοπικός οικισμός στην κορυφή με δυο ταβέρνες και θέα πίσω στην Κέρκυρα και απέναντι στους Οθωνούς. Όλο το νησί περπατιέται σε ένα απόγευμα."
+          }
+        ],
+        "title_el": "Λιμάνι, η Μεγάλη Αμμουδιά & το Χωριό",
+        "overnight_el": "Πλάκες (Μαθράκι)",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Plakes / Kato Mathraki",
+            "area_el": "Πλάκες / Κάτω Μαθράκι",
+            "desc": "Two or three family tavernas — one by the port, a couple up in the village — cook a short daily menu of fish, meat off the grill and garden vegetables. Hours follow the ferries and the weather.",
+            "desc_el": "Δυο-τρεις οικογενειακές ταβέρνες — μια στο λιμάνι, καμιά στο χωριό — μαγειρεύουν σύντομο ημερήσιο μενού με ψάρι, ψητό κρέας και λαχανικά του κήπου. Το ωράριο ακολουθεί τα πλοία και τον καιρό.",
+            "after": "Portello beach"
+          }
+        ]
+      }
+    ],
+    "title_el": "Πρόγραμμα 1 Ημέρας — Μαθράκι",
+    "subtitle_el": "Το λιμάνι Πλάκες, η μακριά παραλία Πορτέλλο και το Κάτω Μαθράκι."
+  },
+  "beaches": [
+    {
+      "name": "Portello",
+      "wiki": "https://www.google.com/maps/search/Portello%20Mathraki",
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "1.2 km",
+      "depth": "Shallow — gentle",
+      "facing": "Southwest-facing — exposed",
+      "facilities": "Seasonal canteen only; turtle nesting zones.",
+      "desc": "Mathraki's great sweep of pine-backed golden sand — over a kilometre long and usually near-empty. Loggerhead turtles nest here, so parts may be roped off in summer.",
+      "commons": null,
+      "lat": 39.7548,
+      "lng": 19.5402,
+      "name_el": "Πορτέλλο",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχά — ήπια",
+      "facing_el": "Νοτιοδυτικά — εκτεθειμένη",
+      "facilities_el": "Μόνο εποχική καντίνα· ζώνες γέννας χελωνών.",
+      "desc_el": "Η μεγάλη αμμουδιά του Μαθρακίου με πεύκα — πάνω από ένα χιλιόμετρο και συνήθως σχεδόν άδεια. Εδώ γεννούν χελώνες caretta, οπότε τμήματα μπορεί να είναι οριοθετημένα το καλοκαίρι."
+    }
+  ],
+  "name_el": "Μαθράκι",
+  "name_accusative_el": "Μαθράκι",
+  "gender_el": "n",
+  "subtitle_el": "Το μικρότερο Διαπόντιο νησί — ένα μίλι άδειας άμμου και χελώνες που γεννούν",
+  "intro_el": "Το Μαθράκι είναι το μικρότερο και λιγότερο επισκέψιμο από τα Διαπόντια νησιά, ΒΔ της Κέρκυρας — μια πράσινη ράχη με δυο μικρούς οικισμούς και μόλις μερικές εκατοντάδες κατοίκους. Το χαρακτηριστικό του είναι το Πορτέλλο, μια μακριά αδιάκοπη αμμουδιά με πεύκα στο πίσω μέρος, όπου οι θαλάσσιες χελώνες caretta βγαίνουν να γεννήσουν. Σχεδόν καμία ανάπτυξη: μια-δυο ταβέρνες, λίγα δωμάτια, ουσιαστικά χωρίς αυτοκίνητα. Οι επισκέπτες έρχονται για την άμμο, την ησυχία και την αίσθηση πως βρίσκονται στην άκρη της χώρας.",
+  "getting_there": {
+    "pills": [
+      "⛵ from Corfu via Erikousa",
+      "€10–16"
+    ],
+    "pills_el": [
+      "⛵ από Κέρκυρα μέσω Ερείκουσας",
+      "€10–16"
+    ],
+    "summary": "No airport. Passenger ferries from Agios Stefanos in northwest Corfu call at Mathraki several times a week in summer, usually after a stop at Erikousa — around 3 hours in total. Service is thin and weather-dependent.",
+    "summary_el": "Χωρίς αεροδρόμιο. Επιβατικά πλοία από τον Άγιο Στέφανο στη ΒΔ Κέρκυρα πιάνουν Μαθράκι αρκετές φορές την εβδομάδα το καλοκαίρι, συνήθως μετά από στάση στην Ερείκουσα — περίπου 3 ώρες συνολικά. Τα δρομολόγια αραιά κι εξαρτώνται από τον καιρό.",
+    "tip": "Mathraki works best as a slow overnight combined with the other two Diapontia islands.",
+    "tip_el": "Το Μαθράκι λειτουργεί καλύτερα ως ήσυχη διανυκτέρευση μαζί με τα άλλα δύο Διαπόντια."
+  }
+}

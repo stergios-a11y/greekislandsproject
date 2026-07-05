@@ -1,0 +1,183 @@
+{
+  "key": "pserimos",
+  "name": "Pserimos",
+  "subtitle": "A day-trip islet between Kos and Kalymnos with a big sandy village beach",
+  "intro": "Pserimos sits in the channel between Kos and Kalymnos — a low, dry island of fewer than a hundred permanent residents whose single village opens straight onto a wide, shallow, sandy bay. In summer it fills by day with excursion boats from both neighbours, then empties again by evening, when the handful who stay have the beach to themselves. Beyond the main bay are two or three quieter beaches reached on foot. There are no cars and no real roads — just tavernas along the sand and a scatter of rooms.",
+  "when_to_visit": {
+    "summary": "High summer is when Pserimos is alive — May to September, with July and August busiest by day from the excursion boats. Come in June or September, or simply stay the night, to catch the island at its quiet best.",
+    "summary_el": "Το κατακαλόκαιρο η Ψέριμος ζωντανεύει — Μάιο με Σεπτέμβριο, με Ιούλιο και Αύγουστο πιο πολυσύχναστα τη μέρα από τα εκδρομικά. Έλα Ιούνιο ή Σεπτέμβριο, ή απλώς διανυκτέρευσε, για να πιάσεις το νησί στην ήσυχη καλύτερή του ώρα.",
+    "months": [
+      {
+        "tag": "avoid",
+        "why": "Off-season",
+        "why_el": "Σχεδόν όλα κλειστά",
+        "limited": true
+      },
+      {
+        "tag": "avoid",
+        "why": "Off-season",
+        "why_el": "Σκελετός υπηρεσιών",
+        "limited": true
+      },
+      {
+        "tag": "avoid",
+        "why": "Few ferries",
+        "why_el": "Λίγα πλοία",
+        "limited": true
+      },
+      {
+        "tag": "ok",
+        "why": "Awakening",
+        "why_el": "Ήσυχα, πρώτες αφίξεις",
+        "limited": true
+      },
+      {
+        "tag": "great",
+        "why": "Sea warming",
+        "why_el": "Κολυμπιέται πια"
+      },
+      {
+        "tag": "perfect",
+        "why": "Warm, near-empty",
+        "why_el": "Ζεστά, σχεδόν άδεια"
+      },
+      {
+        "tag": "great",
+        "why": "Hot, calm",
+        "why_el": "Ζέστη, ήσυχα"
+      },
+      {
+        "tag": "ok",
+        "why": "Peak Greeks, busy",
+        "why_el": "Αιχμή Ελλήνων"
+      },
+      {
+        "tag": "perfect",
+        "why": "Best — peaceful",
+        "why_el": "Καλύτερος — ζεστά"
+      },
+      {
+        "tag": "ok",
+        "why": "Season ending",
+        "why_el": "Κλείνουν σιγά"
+      },
+      {
+        "tag": "avoid",
+        "why": "Off-season",
+        "why_el": "Μόνο ντόπιοι",
+        "limited": true
+      },
+      {
+        "tag": "avoid",
+        "why": "Off-season, thin",
+        "why_el": "Χειμώνας, ελάχιστα",
+        "limited": true
+      }
+    ]
+  },
+  "itinerary": {
+    "title": "1-Day Pserimos Itinerary",
+    "subtitle": "The main sandy bay at the village, plus a walk to Vathy or Marathounta.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Village Beach & the Quiet Coves",
+        "color": "#0B8FAC",
+        "km": 6,
+        "drive_mins": 40,
+        "overnight": "Avlakia (Pserimos village)",
+        "stops": [
+          {
+            "name": "Avlakia village & beach",
+            "lat": 36.9297,
+            "lng": 27.1516,
+            "type": "beach",
+            "time": "10:30",
+            "wiki": "https://www.google.com/maps/search/Avlakia%20village%20%26%20beach%20Pserimos",
+            "desc": "The whole village lines one long crescent of soft sand and shallow, warm water — you step off the boat straight onto the beach. Tavernas run right to the waterline; the swimming is calm and family-easy.",
+            "name_el": "Χωριό & Παραλία Αυλάκια",
+            "desc_el": "Όλο το χωριό απλώνεται σε μια μεγάλη ημισέληνο μαλακής άμμου και ρηχού, ζεστού νερού — κατεβαίνεις από το καΐκι κατευθείαν στην παραλία. Οι ταβέρνες φτάνουν ως τη θάλασσα· το κολύμπι ήρεμο και οικογενειακό."
+          },
+          {
+            "name": "Vathy beach",
+            "lat": 36.9245,
+            "lng": 27.16,
+            "type": "beach",
+            "time": "13:00",
+            "wiki": "https://www.google.com/maps/search/Vathy%20beach%20Pserimos",
+            "desc": "A quieter sand-and-shingle bay a short walk over the headland from the village, usually well away from the day-boat crowd. No facilities beyond what you carry.",
+            "name_el": "Παραλία Βαθύ",
+            "desc_el": "Ένας πιο ήσυχος όρμος με άμμο και βότσαλο, σύντομη πεζοπορία πάνω από το ακρωτήρι από το χωριό, συνήθως μακριά από τον κόσμο των καϊκιών. Χωρίς υποδομές πέρα από ό,τι κουβαλάς."
+          },
+          {
+            "name": "Grafiotissa",
+            "lat": 36.935,
+            "lng": 27.142,
+            "type": "beach",
+            "time": "15:30",
+            "wiki": "https://www.google.com/maps/search/Grafiotissa%20Pserimos",
+            "desc": "A broad, dune-backed sandy beach on the north side, empty most of the time — a longer walk keeps the crowds away. Bring shade and water.",
+            "name_el": "Γραφιώτισσα",
+            "desc_el": "Μια πλατιά αμμουδιά με αμμόλοφους στη βόρεια πλευρά, άδεια τις περισσότερες ώρες — η πιο μακρινή πεζοπορία κρατά τον κόσμο μακριά. Πάρε σκιά και νερό."
+          }
+        ],
+        "title_el": "Παραλία Χωριού & Ήσυχοι Όρμοι",
+        "overnight_el": "Αυλάκια (Χωριό Ψερίμου)",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Avlakia",
+            "area_el": "Αυλάκια",
+            "desc": "Tavernas line the village beach, most serving grilled fish and octopus, Kalymnian dishes and cold beer feet-from-the-water. They gear up for the midday boat crowd, so lunch is the liveliest meal.",
+            "desc_el": "Οι ταβέρνες παρατάσσονται στην παραλία του χωριού, οι περισσότερες με ψητό ψάρι και χταπόδι, καλυμνιώτικα πιάτα και κρύα μπύρα δίπλα στο νερό. Ετοιμάζονται για τον μεσημεριανό κόσμο των καϊκιών, οπότε το μεσημέρι είναι το πιο ζωντανό γεύμα.",
+            "after": "Avlakia village & beach"
+          }
+        ]
+      }
+    ],
+    "title_el": "Πρόγραμμα 1 Ημέρας — Ψέριμος",
+    "subtitle_el": "Ο κύριος αμμώδης όρμος στο χωριό, και μια βόλτα στο Βαθύ ή τη Μαραθούντα."
+  },
+  "beaches": [
+    {
+      "name": "Avlakia (village beach)",
+      "wiki": "https://www.google.com/maps/search/Avlakia%20%28village%20beach%29%20Pserimos",
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "400 m",
+      "depth": "Shallow — very calm",
+      "facing": "Northwest-facing — sheltered",
+      "facilities": "Tavernas, some sunbeds; busy midday.",
+      "desc": "The wide, shallow sand beach the whole village sits on — warm, calm water ideal for families, with tavernas at the back. Busy by day with excursion boats, blissful in the evening.",
+      "commons": null,
+      "lat": 36.9297,
+      "lng": 27.1516,
+      "name_el": "Αυλάκια (Παραλία Χωριού)",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχά — πολύ ήρεμα",
+      "facing_el": "Βορειοδυτικά — προστατευμένη",
+      "facilities_el": "Ταβέρνες, κάποιες ξαπλώστρες· γεμάτη το μεσημέρι.",
+      "desc_el": "Η πλατιά, ρηχή αμμουδιά πάνω στην οποία κάθεται όλο το χωριό — ζεστά, ήρεμα νερά ιδανικά για οικογένειες, με ταβέρνες στο πίσω μέρος. Γεμάτη τη μέρα από τα εκδρομικά, μαγική το βράδυ."
+    }
+  ],
+  "name_el": "Ψέριμος",
+  "name_accusative_el": "Ψέριμο",
+  "gender_el": "f",
+  "subtitle_el": "Ένα νησάκι για ημερήσια ανάμεσα σε Κω και Κάλυμνο, με μεγάλη αμμώδη παραλία στο χωριό",
+  "intro_el": "Η Ψέριμος βρίσκεται στο κανάλι ανάμεσα σε Κω και Κάλυμνο — ένα χαμηλό, ξερό νησί με λιγότερους από εκατό μόνιμους κατοίκους, του οποίου το μοναδικό χωριό ανοίγει κατευθείαν σε έναν πλατύ, ρηχό, αμμώδη όρμο. Το καλοκαίρι γεμίζει τη μέρα με εκδρομικά καΐκια κι από τα δύο γειτονικά νησιά, κι αδειάζει ξανά το βράδυ, όταν οι λίγοι που μένουν έχουν την παραλία δική τους. Πέρα από τον κύριο όρμο υπάρχουν δυο-τρεις πιο ήσυχες παραλίες με πρόσβαση πεζή. Χωρίς αυτοκίνητα και δρόμους — μόνο ταβέρνες στην άμμο και λίγα δωμάτια.",
+  "getting_there": {
+    "pills": [
+      "⛵ from Kos (Mastichari) / Kalymnos",
+      "€8–15"
+    ],
+    "pills_el": [
+      "⛵ από Κω (Μαστιχάρι) / Κάλυμνο",
+      "€8–15"
+    ],
+    "summary": "No airport. Daily excursion and local boats run from Mastichari on Kos (~35 min) and from Kalymnos (~50 min) through the summer, typically out in the morning and back late afternoon. Off-season sailings are sparse.",
+    "summary_el": "Χωρίς αεροδρόμιο. Καθημερινά εκδρομικά και τοπικά καΐκια από το Μαστιχάρι της Κω (~35 λεπτά) και από την Κάλυμνο (~50 λεπτά) όλο το καλοκαίρι, συνήθως πρωί έξω και αργά το απόγευμα πίσω. Εκτός σεζόν τα δρομολόγια ελάχιστα.",
+    "tip": "Stay the night to have the big beach to yourself once the day boats leave.",
+    "tip_el": "Διανυκτέρευσε για να έχεις τη μεγάλη παραλία δική σου μόλις φύγουν τα καΐκια."
+  }
+}

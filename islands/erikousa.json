@@ -1,0 +1,183 @@
+{
+  "key": "erikousa",
+  "name": "Erikousa",
+  "subtitle": "The greenest Diapontia island — sandy Porto beach and an Astoria diaspora",
+  "intro": "Erikousa is the most populated and easiest to reach of the Diapontia islands off northwest Corfu — a small, green, low island whose harbour opens onto a broad sandy beach. It has an unusually tight bond with Astoria, New York, where much of the island emigrated; in August the population multiplies as families return. Outside that peak it is deeply quiet: a few tavernas and guesthouses, cypress and olive slopes, and two good sandy beaches. It makes the gentlest introduction to the Diapontia trio.",
+  "when_to_visit": {
+    "summary": "Rooms and tavernas open roughly May to September. August is the one busy month, when the diaspora returns; June, July and September give warm sea and calm, near-empty beaches. Little runs in winter.",
+    "summary_el": "Δωμάτια και ταβέρνες ανοίγουν περίπου Μάιο με Σεπτέμβριο. Ο Αύγουστος είναι ο μόνος γεμάτος μήνας, όταν επιστρέφει η διασπορά· Ιούνιος, Ιούλιος και Σεπτέμβριος έχουν ζεστή θάλασσα και ήρεμες, σχεδόν άδειες παραλίες. Τον χειμώνα λίγα λειτουργούν.",
+    "months": [
+      {
+        "tag": "avoid",
+        "why": "Off-season",
+        "why_el": "Σχεδόν όλα κλειστά",
+        "limited": true
+      },
+      {
+        "tag": "avoid",
+        "why": "Off-season",
+        "why_el": "Σκελετός υπηρεσιών",
+        "limited": true
+      },
+      {
+        "tag": "avoid",
+        "why": "Few ferries",
+        "why_el": "Λίγα πλοία",
+        "limited": true
+      },
+      {
+        "tag": "ok",
+        "why": "Awakening",
+        "why_el": "Ήσυχα, πρώτες αφίξεις",
+        "limited": true
+      },
+      {
+        "tag": "great",
+        "why": "Sea warming",
+        "why_el": "Κολυμπιέται πια"
+      },
+      {
+        "tag": "perfect",
+        "why": "Warm, near-empty",
+        "why_el": "Ζεστά, σχεδόν άδεια"
+      },
+      {
+        "tag": "great",
+        "why": "Hot, calm",
+        "why_el": "Ζέστη, ήσυχα"
+      },
+      {
+        "tag": "ok",
+        "why": "Peak Greeks, busy",
+        "why_el": "Αιχμή Ελλήνων"
+      },
+      {
+        "tag": "perfect",
+        "why": "Best — peaceful",
+        "why_el": "Καλύτερος — ζεστά"
+      },
+      {
+        "tag": "ok",
+        "why": "Season ending",
+        "why_el": "Κλείνουν σιγά"
+      },
+      {
+        "tag": "avoid",
+        "why": "Off-season",
+        "why_el": "Μόνο ντόπιοι",
+        "limited": true
+      },
+      {
+        "tag": "avoid",
+        "why": "Off-season, thin",
+        "why_el": "Χειμώνας, ελάχιστα",
+        "limited": true
+      }
+    ]
+  },
+  "itinerary": {
+    "title": "1-Day Erikousa Itinerary",
+    "subtitle": "Porto harbour beach, the village, and pine-backed Bragini bay.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Harbour Sand & the Pine Bay",
+        "color": "#0B8FAC",
+        "km": 6,
+        "drive_mins": 40,
+        "overnight": "Porto (Erikousa)",
+        "stops": [
+          {
+            "name": "Porto (harbour & beach)",
+            "lat": 39.883,
+            "lng": 19.577,
+            "type": "beach",
+            "time": "11:00",
+            "wiki": "https://www.google.com/maps/search/Porto%20%28harbour%20%26%20beach%29%20Erikousa",
+            "desc": "The ferry lands right beside a wide, shallow sandy beach — the centre of island life, with tavernas, rooms and the church just behind. Warm, calm water ideal for families.",
+            "name_el": "Πόρτο (Λιμάνι & Παραλία)",
+            "desc_el": "Το πλοίο δένει ακριβώς δίπλα σε μια πλατιά, ρηχή αμμουδιά — το κέντρο της ζωής του νησιού, με ταβέρνες, δωμάτια και την εκκλησία ακριβώς πίσω. Ζεστά, ήρεμα νερά ιδανικά για οικογένειες."
+          },
+          {
+            "name": "Bragini beach",
+            "lat": 39.8875,
+            "lng": 19.569,
+            "type": "beach",
+            "time": "13:00",
+            "wiki": "https://www.google.com/maps/search/Bragini%20beach%20Erikousa",
+            "desc": "A quieter sandy bay backed by pines a short walk northwest of the harbour, with shade at the treeline and clear shallow water. Often you'll have it to yourself.",
+            "name_el": "Παραλία Μπραγκίνι",
+            "desc_el": "Ένας πιο ήσυχος αμμώδης όρμος με πεύκα, σύντομη πεζοπορία βορειοδυτικά του λιμανιού, με σκιά στη γραμμή των δέντρων και καθαρά ρηχά νερά. Συχνά θα τον έχεις δικό σου."
+          },
+          {
+            "name": "Erikousa village & church",
+            "lat": 39.8855,
+            "lng": 19.581,
+            "type": "village",
+            "time": "16:00",
+            "wiki": "https://www.google.com/maps/search/Erikousa%20village%20%26%20church%20Erikousa",
+            "desc": "The small main village just inland, gathered around its church — the social heart in August, sleepy the rest of the season. A short loop takes in the cypress slopes and sea views.",
+            "name_el": "Χωριό & Εκκλησία Ερείκουσας",
+            "desc_el": "Το μικρό κύριο χωριό λίγο πιο μέσα, μαζεμένο γύρω από την εκκλησία του — η κοινωνική καρδιά τον Αύγουστο, νυσταγμένο την υπόλοιπη σεζόν. Μια σύντομη βόλτα περιλαμβάνει τις πλαγιές με τα κυπαρίσσια και θέα στη θάλασσα."
+          }
+        ],
+        "title_el": "Άμμος Λιμανιού & Ο Όρμος με τα Πεύκα",
+        "overnight_el": "Πόρτο (Ερείκουσα)",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Porto",
+            "area_el": "Πόρτο",
+            "desc": "The tavernas behind the harbour beach serve Corfiot home cooking — bourdeto, sofrito, fresh fish and island wine — with a distinctly Greek-American warmth in August when the Astoria families are back.",
+            "desc_el": "Οι ταβέρνες πίσω από την παραλία του λιμανιού σερβίρουν κερκυραϊκή σπιτική κουζίνα — μπουρδέτο, σοφρίτο, φρέσκο ψάρι και ντόπιο κρασί — με μια χαρακτηριστικά ελληνοαμερικανική ζεστασιά τον Αύγουστο, όταν επιστρέφουν οι οικογένειες από την Αστόρια.",
+            "after": "Porto (harbour & beach)"
+          }
+        ]
+      }
+    ],
+    "title_el": "Πρόγραμμα 1 Ημέρας — Ερείκουσα",
+    "subtitle_el": "Η παραλία του λιμανιού Πόρτο, το χωριό και ο όρμος Μπραγκίνι με τα πεύκα."
+  },
+  "beaches": [
+    {
+      "name": "Porto (harbour beach)",
+      "wiki": "https://www.google.com/maps/search/Porto%20%28harbour%20beach%29%20Erikousa",
+      "rating": 4,
+      "type": "Fine sand",
+      "length": "350 m",
+      "depth": "Shallow — family-friendly",
+      "facing": "South-facing — sheltered",
+      "facilities": "Tavernas & rooms behind; some sunbeds.",
+      "desc": "Erikousa's main beach, right where the ferry lands — wide golden sand, warm shallow water and tavernas at the back. The easiest good beach in the Diapontia.",
+      "commons": null,
+      "lat": 39.883,
+      "lng": 19.577,
+      "name_el": "Πόρτο (Παραλία Λιμανιού)",
+      "type_el": "Λεπτή άμμος",
+      "depth_el": "Ρηχά — οικογενειακά",
+      "facing_el": "Νότια — προστατευμένη",
+      "facilities_el": "Ταβέρνες & δωμάτια πίσω· κάποιες ξαπλώστρες.",
+      "desc_el": "Η κύρια παραλία της Ερείκουσας, ακριβώς εκεί που δένει το πλοίο — πλατιά χρυσή άμμος, ζεστά ρηχά νερά και ταβέρνες στο πίσω μέρος. Η πιο εύκολη καλή παραλία των Διαποντίων."
+    }
+  ],
+  "name_el": "Ερείκουσα",
+  "name_accusative_el": "Ερείκουσα",
+  "gender_el": "f",
+  "subtitle_el": "Το πιο πράσινο Διαπόντιο νησί — η αμμώδης παραλία Πόρτο και μια διασπορά στην Αστόρια",
+  "intro_el": "Η Ερείκουσα είναι το πιο κατοικημένο και πιο εύκολα προσβάσιμο από τα Διαπόντια νησιά, ΒΔ της Κέρκυρας — ένα μικρό, πράσινο, χαμηλό νησί του οποίου το λιμάνι ανοίγει σε μια πλατιά αμμουδιά. Έχει ασυνήθιστα στενό δεσμό με την Αστόρια της Νέας Υόρκης, όπου μετανάστευσε μεγάλο μέρος του νησιού· τον Αύγουστο ο πληθυσμός πολλαπλασιάζεται καθώς επιστρέφουν οι οικογένειες. Έξω από αυτή την αιχμή είναι βαθιά ήσυχο: λίγες ταβέρνες και ξενώνες, πλαγιές με κυπαρίσσια κι ελιές, και δύο καλές αμμουδιές. Η πιο ήπια εισαγωγή στην τριάδα των Διαποντίων.",
+  "getting_there": {
+    "pills": [
+      "⛵ from Corfu (Ag. Stefanos)",
+      "€10–16"
+    ],
+    "pills_el": [
+      "⛵ από Κέρκυρα (Άγ. Στέφανος)",
+      "€10–16"
+    ],
+    "summary": "No airport. It is the closest Diapontia island to Corfu — passenger ferries from Agios Stefanos in the northwest run several times a week in summer, around 2.5 hours. Some Sidari day-cruises also call.",
+    "summary_el": "Χωρίς αεροδρόμιο. Είναι το πιο κοντινό Διαπόντιο στην Κέρκυρα — επιβατικά πλοία από τον Άγιο Στέφανο στα ΒΔ αρκετές φορές την εβδομάδα το καλοκαίρι, περίπου 2,5 ώρες. Κάποιες ημερήσιες κρουαζιέρες από το Σιδάρι πιάνουν επίσης.",
+    "tip": "The easiest Diapontia island to reach — a good first step, or a base for the other two.",
+    "tip_el": "Το πιο εύκολο Διαπόντιο στην πρόσβαση — καλό πρώτο βήμα ή βάση για τα άλλα δύο."
+  }
+}
