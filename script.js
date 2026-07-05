@@ -1084,7 +1084,7 @@ function renderMapMarkers() {
       `, { sticky: false, opacity: 1, className: 'island-tooltip' });
     marker.on('click', () => navigateTo('island', island.key));
     // Lazy island photo in the hover tooltip: only load after the pointer
-    // settles (~150ms) so sweeping across markers costs nothing. Reuses the
+    // settles (~80ms) so sweeping across markers costs nothing. Reuses the
     // already-loaded HERO_PHOTOS manifest + a small thumbnail; browser caches.
     marker.on('tooltipopen', function (e) {
       const hero = HERO_PHOTOS[island.key];
@@ -1100,7 +1100,7 @@ function renderMapMarkers() {
         img.onerror = () => { if (inner) inner.classList.remove('has-photo'); };
         if (inner) inner.classList.add('has-photo');
         img.src = thumbUrl(hero.url);
-      }, 150);
+      }, 80);
     });
     marker.on('tooltipclose', function () { clearTimeout(marker._photoTimer); });
     mapMarkers[island.key] = marker;
