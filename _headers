@@ -1,0 +1,22 @@
+# Cloudflare Pages cache rules.
+# App logic revalidates every load so deploys show up immediately (no stale JS/CSS).
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+/script.js
+  Cache-Control: public, max-age=0, must-revalidate
+/style.css
+  Cache-Control: public, max-age=0, must-revalidate
+/i18n.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Generated data — revalidate so island content updates promptly.
+/hero-photos.json
+  Cache-Control: public, max-age=0, must-revalidate
+/whats-on.json
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Immutable-ish assets — cache hard for speed.
+/og/*
+  Cache-Control: public, max-age=86400
+/logo-hero.svg
+  Cache-Control: public, max-age=604800
