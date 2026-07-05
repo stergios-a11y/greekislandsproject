@@ -737,6 +737,16 @@ function thumbUrl(url) {
   if (m) return m[1] + '/thumb/' + m[2] + '/' + m[3] + '/' + m[4] + '/500px-' + m[4];
   return url;
 }
+// Larger variant for the full-width island hero (1280px bucket / cloudinary fill).
+function heroSrc(url) {
+  if (!url) return url;
+  if (url.indexOf('res.cloudinary.com') > -1)
+    return url.replace(/\/upload\/(?:[^/]*\/)?v(\d+)\//, '/upload/w_1280,h_560,c_fill,q_auto,f_auto/v$1/');
+  if (url.indexOf('/thumb/') > -1) return url.replace(/\/\d+px-/, '/1280px-');
+  var m = url.match(/^(https?:\/\/upload\.wikimedia\.org\/wikipedia\/[a-z]+)\/([0-9a-f])\/([0-9a-f]{2})\/([^/]+)$/);
+  if (m) return m[1] + '/thumb/' + m[2] + '/' + m[3] + '/' + m[4] + '/1280px-' + m[4];
+  return url;
+}
 async function loadHeroPhotos() {
   if (HERO_PHOTOS && Object.keys(HERO_PHOTOS).length) return HERO_PHOTOS;
   try {
@@ -1623,13 +1633,39 @@ function buildIslandPage(data, key) {
       <div class="itin-beaches-list">${beachCards}</div>
     </div>` : '';
 
+  // Immersive hero: the photo carries the island name, score, tagline and quick
+  // facts (replaces the old teal banner + separate photo). Falls back gracefully
+  // to a plain heading if no photo exists.
+  const _meta = (typeof ISLANDS_DATA !== 'undefined' && ISLANDS_DATA[key]) || {};
+  const _tag = pickLang(data, 'subtitle') || '';
+  const _scoreTxt = (typeof _meta.total === 'number') ? _meta.total.toFixed(1) : '';
+  const _grp = _meta.island_group ? groupName(_meta.island_group) : '';
+  const _carW = ['', t('car.none'), t('car.helpful'), t('car.useful'), t('car.recommended'), t('car.essential')];
+  const _carLbl = _carW[Math.round(_meta.car_need || 0)] || '';
+  const _chips = [
+    _meta.area ? `<span class="isl-chip">📍 ${fmtNum(_meta.area)} km²</span>` : '',
+    _meta.pop ? `<span class="isl-chip">👥 ${fmtNum(_meta.pop)}</span>` : '',
+    _meta.days ? `<span class="isl-chip">🗓 ${_meta.days} ${t('common.days')}</span>` : '',
+    _meta.has_airport ? `<span class="isl-chip">✈ ${t('tooltip.hasairport')}</span>` : '',
+    _carLbl ? `<span class="isl-chip">🚗 ${_carLbl}</span>` : ''
+  ].join('');
+  const islHero = _hp ? `
+      <div class="isl-hero" style="background-image:url('${heroSrc(_hp)}')">
+        <div class="isl-hero-scrim"></div>
+        <div class="isl-hero-body">
+          ${_grp ? `<div class="isl-hero-eyebrow">${_grp}</div>` : ''}
+          <div class="isl-hero-nrow"><h1 class="isl-hero-name">${islandName(key)}</h1>${_scoreTxt ? `<span class="isl-hero-score">${_scoreTxt}<small>/5</small></span>` : ''}</div>
+          ${_tag ? `<p class="isl-hero-tag">${_tag}</p>` : ''}
+          ${_chips ? `<div class="isl-hero-chips">${_chips}</div>` : ''}
+        </div>
+        ${buildPhotoCredit(_hc)}
+      </div>` : `<div class="itin-hero"><h2 class="itin-title">${islandName(key)}</h2>${_tag ? `<p class="itin-subtitle">${_tag}</p>` : ''}</div>`;
+
   return `
     <div class="itin-wrapper">
-      <div class="itin-hero">
-        <h2 class="itin-title">${pickLang(itin, "title")}</h2>
-        <p class="itin-subtitle">${pickLang(itin, "subtitle")}</p>
-      </div>
-      ${heroHtml}
+      ${islHero}
+      <h2 class="itin-section-title">${pickLang(itin, "title")}</h2>
+      <p class="itin-section-sub">${pickLang(itin, "subtitle")}</p>
       ${introHtml}
       ${buildSuitedForSection(data)}
       ${buildAudienceSections(data)}

@@ -1448,6 +1448,59 @@ html.dark .why-feat-num { color: var(--marble-3); }
   padding: 36px 28px 40px;
   margin-bottom: 0;
 }
+
+/* ---- Immersive island hero (photo + overlaid name/score/tagline/facts) ---- */
+.isl-hero {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 380px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 22px;
+  box-shadow: var(--shadow);
+}
+.isl-hero-scrim {
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(to top, rgba(8,16,26,0.86) 0%, rgba(8,16,26,0.34) 44%, rgba(8,16,26,0.08) 72%);
+}
+.isl-hero-body { position: absolute; left: 26px; right: 26px; bottom: 22px; z-index: 2; color: #fff; }
+.isl-hero-eyebrow {
+  font-family: var(--sans); font-size: var(--text-tiny); font-weight: 800;
+  letter-spacing: 0.11em; text-transform: uppercase; color: #bfe6f0; margin-bottom: 6px;
+}
+.isl-hero-nrow { display: flex; align-items: flex-end; gap: 14px; flex-wrap: wrap; }
+.isl-hero-name {
+  font-family: var(--font-display); font-weight: 800; font-size: 48px; line-height: 0.98;
+  margin: 0; color: #fff; text-shadow: 0 2px 18px rgba(0,0,0,0.45);
+}
+.isl-hero-score {
+  display: inline-flex; align-items: baseline; gap: 2px; margin-bottom: 8px;
+  background: var(--aegean-dark); color: #fff; font-family: var(--serif); font-weight: 800;
+  font-size: 17px; padding: 6px 13px; border-radius: 999px; box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+.isl-hero-score small { font-size: 11px; opacity: 0.85; font-weight: 700; }
+.isl-hero-tag {
+  font-size: var(--text-body); line-height: 1.45; color: rgba(255,255,255,0.93);
+  max-width: 640px; margin: 10px 0 14px; text-shadow: 0 1px 10px rgba(0,0,0,0.45);
+}
+.isl-hero-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.isl-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: #fff;
+  font-size: var(--text-tiny); font-weight: 700; padding: 5px 11px; border-radius: 999px;
+}
+.isl-hero .photo-credit-badge { top: 12px; right: 12px; bottom: auto; left: auto; }
+/* Itinerary title is now a plain heading below the hero (was a teal box) */
+.itin-section-title { font-family: var(--font-display); font-weight: 700; font-size: var(--text-section); letter-spacing: -0.01em; margin: 4px 0 4px; }
+.itin-section-sub { color: var(--ink-3); font-size: var(--text-small); margin: 0 0 16px; }
+/* Name/meta now live on the hero — hide the redundant copies in the top toolbar */
+.detail-header #island-name, .detail-header .island-meta-pill { display: none; }
+@media (max-width: 600px) {
+  .isl-hero { min-height: 300px; }
+  .isl-hero-name { font-size: 34px; }
+  .isl-hero-body { left: 18px; right: 18px; bottom: 16px; }
+}
 .itin-title {
   font-family: var(--serif);
   font-size: var(--text-section); font-weight: 600;
