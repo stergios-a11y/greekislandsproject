@@ -1559,10 +1559,13 @@ function buildIslandPage(data, key) {
 
   // Characteristic hero photo: first available itinerary-stop photo, else first beach photo.
   // Mirrors find_hero_image() in prerender.py so the SPA matches the static SEO page.
-  let _hp = null, _hc = null, _hn = '';
-  for (const _d of itin.days) {
-    for (const _s of (_d.stops || [])) { if (_s.photo) { _hp = _s.photo; _hc = _s.photo_credit; _hn = pickLang(_s, 'name'); break; } }
-    if (_hp) break;
+  // A top-level `hero_photo` on the island JSON overrides the auto-pick.
+  let _hp = data.hero_photo || null, _hc = null, _hn = '';
+  if (!_hp) {
+    for (const _d of itin.days) {
+      for (const _s of (_d.stops || [])) { if (_s.photo) { _hp = _s.photo; _hc = _s.photo_credit; _hn = pickLang(_s, 'name'); break; } }
+      if (_hp) break;
+    }
   }
   if (!_hp && Array.isArray(data.beaches)) {
     for (const _b of data.beaches) { if (_b.photo) { _hp = _b.photo; _hc = _b.photo_credit; _hn = pickLang(_b, 'name'); break; } }
@@ -3246,16 +3249,22 @@ function renderCompareCards(iA, iB) {
     const airportRow = island.has_airport ? `<div class="cmp-info-row"><span class="cmp-info-label">✈ ${t('tooltip.hasairport')}</span><span class="cmp-info-val">${t('common.yes')}</span></div>` : '';
     const daysRow = island.days ? `<div class="cmp-info-row"><span class="cmp-info-label">⏱ ${t('tooltip.suggesteddays')}</span><span class="cmp-info-val">${island.days} ${t('common.days')}</span></div>` : '';
 
+    const nm = islandName(island.key);
+    const hero = HERO_PHOTOS[island.key] || {};
+    const media = `<div class="cmp-media${hero.url ? '' : ' cmp-nophoto'}" data-initial="${nm.charAt(0)}">${hero.url ? `<img class="cmp-photo" src="${thumbUrl(hero.url)}" alt="${nm}" loading="lazy" onerror="this.closest('.cmp-media').classList.add('cmp-nophoto')">` : ''}</div>`;
     return `<div class="compare-card">
-      <div class="compare-card-head">
-        <h2>${islandName(island.key)}</h2>
-        <div class="compare-total" style="color:${scoreToColor(island.total)}">${fmt(island.total)}<span>/5</span></div>
-      </div>
-      <div class="compare-meta">${groupName(island.island_group)} · ${fmtNum(island.area)} km² · ${t('compare.pop')}. ${fmtNum(island.pop)}</div>
-      <div class="cmp-info-panel">
-        <div class="cmp-info-row"><span class="cmp-info-label">🚗 ${t('dim.car')}</span><span class="cmp-info-val"><strong>${carLabel}</strong></span></div>
-        ${airportRow}
-        ${daysRow}
+      ${media}
+      <div class="cmp-body">
+        <div class="compare-card-head">
+          <h2>${nm}</h2>
+          <div class="compare-total" style="color:${scoreToColor(island.total)}">${fmt(island.total)}<span>/5</span></div>
+        </div>
+        <div class="compare-meta">${groupName(island.island_group)} · ${fmtNum(island.area)} km² · ${t('compare.pop')}. ${fmtNum(island.pop)}</div>
+        <div class="cmp-info-panel">
+          <div class="cmp-info-row"><span class="cmp-info-label">🚗 ${t('dim.car')}</span><span class="cmp-info-val"><strong>${carLabel}</strong></span></div>
+          ${airportRow}
+          ${daysRow}
+        </div>
       </div>
     </div>`;
   };
@@ -5183,7 +5192,12 @@ function computeQuizResults() {
     if (!reasons.length) reasons.push(`${t('quiz.why.overall')} ${fmt(island.total)}`);
     return reasons.slice(0, 2).join(' · ');
   };
-  results.innerHTML = `<div class="quiz-results-header"><div class="quiz-results-title">${t('match.results.title')}</div><div class="quiz-results-sub">${t('match.results.sub')}</div></div>${scored.map((island, idx) => `<div class="result-island-card" data-key="${island.key}"><div class="result-rank">${idx + 1}</div><div class="result-info"><div class="result-name">${islandName(island.key)}</div><div class="result-why">${whyText(island)}</div></div><div class="result-score" style="color:${scoreToColor(island.total)}">${fmt(island.total)}</div></div>`).join('')}<div class="quiz-retake-row"><button class="quiz-retake-btn">${t('match.retake')}</button></div>`;
+  results.innerHTML = `<div class="quiz-results-header"><div class="quiz-results-title">${t('match.results.title')}</div><div class="quiz-results-sub">${t('match.results.sub')}</div></div>${scored.map((island, idx) => {
+    const nm = islandName(island.key);
+    const hero = HERO_PHOTOS[island.key] || {};
+    const thumb = `<div class="result-thumb${hero.url ? '' : ' result-nophoto'}" data-initial="${nm.charAt(0)}">${hero.url ? `<img src="${thumbUrl(hero.url)}" alt="${nm}" loading="lazy" onerror="this.closest('.result-thumb').classList.add('result-nophoto')">` : ''}<span class="result-rank">${idx + 1}</span></div>`;
+    return `<div class="result-island-card" data-key="${island.key}">${thumb}<div class="result-info"><div class="result-name">${nm}</div><div class="result-why">${whyText(island)}</div></div><div class="result-score" style="color:${scoreToColor(island.total)}">${fmt(island.total)}</div></div>`;
+  }).join('')}<div class="quiz-retake-row"><button class="quiz-retake-btn">${t('match.retake')}</button></div>`;
   results.querySelectorAll('.result-island-card').forEach(card => { card.addEventListener('click', () => navigateTo('island', card.dataset.key)); });
   results.querySelector('.quiz-retake-btn').addEventListener('click', () => { quizAnswers = {}; quizStep = 0; renderQuizStep(); });
 }

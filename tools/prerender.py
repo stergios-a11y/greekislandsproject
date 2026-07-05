@@ -518,6 +518,9 @@ def build_local_html(data, lang='en'):
 def find_hero_image(data):
     """Return (url, alt-source-name) for the first available photo in the island data,
     or (None, None) if no photo exists. Used as the prerendered SEO body hero image."""
+    # A top-level `hero_photo` overrides the auto-pick (a hand-chosen main image).
+    if data.get('hero_photo'):
+        return data['hero_photo'], ''
     # Try itinerary stops first — they have higher-quality on-island photos
     for day in (data.get('itinerary') or {}).get('days') or []:
         for stop in day.get('stops') or []:

@@ -232,6 +232,8 @@ def get_island_meta(key):
 # Photo-forward card: hero image background + scrim + overlaid text
 # ----------------------------------------------------------------------
 def _hero_url(data):
+    if data.get('hero_photo'):
+        return data['hero_photo']
     for day in (data.get('itinerary') or {}).get('days') or []:
         for s in day.get('stops') or []:
             if s.get('photo'):
