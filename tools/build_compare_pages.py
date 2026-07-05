@@ -45,7 +45,7 @@ def _resolve_root():
 
 ROOT = _resolve_root()
 SITE_URL = 'https://aegeanblueprint.com'
-ASSET_V = 48
+ASSET_V = 49
 
 VERDICTS = json.loads((ROOT / 'vs_verdicts.json').read_text(encoding='utf-8'))
 FAQS_PATH = ROOT / 'vs_faqs.json'
@@ -490,7 +490,7 @@ window.__INITIAL_COMPARE_PAIR = {init_pair};
 </script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-<script src="/i18n.js?v=31"></script>
+<script src="/i18n.js?v=32"></script>
 <script src="/script.js?v={ASSET_V}"></script>
 </body>
 </html>
@@ -840,7 +840,7 @@ def render_hub_page(lang, valid_pairs):
   </div>
 </footer>
 
-<script src="/i18n.js?v=31"></script>
+<script src="/i18n.js?v=32"></script>
 </body>
 </html>
 '''

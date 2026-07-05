@@ -772,8 +772,8 @@ function renderHomeFeatured() {
   const cards = HOMEPAGE_FEATURED.map(item => {
     const meta = (typeof ISLANDS_DATA !== 'undefined') ? ISLANDS_DATA[item.key] : null;
     if (!meta) return '';
-    const name = (lang === 'el' && typeof GREEK_NAMES !== 'undefined' && GREEK_NAMES[item.key])
-      ? GREEK_NAMES[item.key]
+    const name = (lang === 'el' && typeof ISLAND_NAMES_EL !== 'undefined' && ISLAND_NAMES_EL[item.key])
+      ? ISLAND_NAMES_EL[item.key]
       : meta.name;
     const score = (typeof meta.total === 'number') ? meta.total.toFixed(1) : '';
     const tag = lang === 'el' ? item.tagEl : item.tagEn;
