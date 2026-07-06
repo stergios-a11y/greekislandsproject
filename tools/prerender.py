@@ -2528,11 +2528,14 @@ def generate_festivals_page(island_keys):
             d = json.loads(json_path.read_text())
         except Exception:
             continue
+        _isl_hero_url, _ = find_hero_image(d)
+        _isl_hero = hero_src_1280(_isl_hero_url) if _isl_hero_url else ''
         for fest in (d.get('festivals') or []):
             if not isinstance(fest, dict): continue
             months = sorted(parse_when_to_months(fest.get('when', '')))
             all_fests.append({
                 'island': key,
+                'island_hero': _isl_hero,
                 'name': fest.get('name', ''),
                 'name_el': fest.get('name_el') or fest.get('name', ''),
                 'when': fest.get('when', ''),
@@ -2712,10 +2715,14 @@ def generate_festivals_page(island_keys):
                 "description": truncate_at_word(_fdesc, 280),
                 "url": SITE_URL + ('/el/island/' if is_el else '/island/') + _f['island'] + '/',
             }
-            if _end:
-                _ev["endDate"] = _end
-            if _f.get('photo'):
-                _ev["image"] = _f['photo']
+            # endDate: explicit range end when parseable, otherwise the event is
+            # single-day so it ends the day it starts (GSC 'missing endDate').
+            _ev["endDate"] = _end or _start
+            # image: festival's own photo, else the island's hero photo
+            # (GSC 'missing image' — a real photo of the place the event happens).
+            _img = _f.get('photo') or _f.get('island_hero')
+            if _img:
+                _ev["image"] = _img
             _events.append(_ev)
         schema_html = ('<script type="application/ld+json">' + json.dumps(_events, ensure_ascii=False) + '</script>\n') if _events else ''
 
