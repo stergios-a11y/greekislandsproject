@@ -771,7 +771,11 @@ async function initHomeHero() {
     sug.hidden = false;
   };
   if (input && sug) {
-    input.addEventListener('input', renderSug);
+    input.addEventListener('input', () => {
+      renderSug();
+      // Live-filter the map markers as you type (the map search field is gone)
+      try { if (typeof mapInstance !== 'undefined' && mapInstance) renderMapMarkers(); } catch (_) {}
+    });
     input.addEventListener('focus', renderSug);
     input.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSug(); });
     document.addEventListener('click', (e) => { if (!e.target.closest('.bp-hero-search-wrap')) closeSug(); });
@@ -784,11 +788,7 @@ async function initHomeHero() {
       window.location.href = (isElLang ? '/el/island/' : '/island/') + keys[0] + '/';
       return;
     }
-    const mapSearch = document.getElementById('islandSearch');
-    if (mapSearch) {
-      mapSearch.value = q;
-      mapSearch.dispatchEvent(new Event('input', { bubbles: true }));
-    }
+    try { if (typeof mapInstance !== 'undefined' && mapInstance) renderMapMarkers(); } catch (_) {}
     closeSug();
     scrollToMainMap();
   });
@@ -1184,7 +1184,7 @@ function makeMarkerIcon(score, dimmed) {
 function renderMapMarkers() {
   Object.values(mapMarkers).forEach(m => mapInstance.removeLayer(m));
   mapMarkers = {};
-  const searchTerm = (document.getElementById('islandSearch')?.value || '').toLowerCase();
+  const searchTerm = ((document.getElementById('islandSearch')?.value || document.getElementById('bp-hero-search')?.value) || '').toLowerCase();
   ISLANDS.forEach(island => {
     if (searchTerm) {
         const enName = island.name.toLowerCase();
