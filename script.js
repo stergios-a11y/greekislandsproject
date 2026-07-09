@@ -1338,7 +1338,32 @@ function islandPassesVibeFilters(island) {
 }
 
 function filterIslands() { renderMapMarkers(); }
-function updateMapMode(mode) { currentMapMode = mode; renderMapMarkers(); }
+
+/* Label of the currently selected rank-by option, emoji stripped. */
+function rankModeLabel() {
+  const sel = document.getElementById('vibe-select');
+  if (!sel || !sel.selectedOptions || !sel.selectedOptions[0]) return '';
+  return sel.selectedOptions[0].textContent.replace(/^[^A-Za-z\u0370-\u03FF]+/, '').trim();
+}
+
+function updateMapMode(mode) {
+  currentMapMode = mode;
+  renderMapMarkers();
+  const sel = document.getElementById('vibe-select');
+  if (sel) sel.classList.toggle('active', mode !== 'overall');
+  const lm = document.getElementById('legend-mode');
+  if (lm) lm.textContent = rankModeLabel();
+  // Brief confirmation toast on the map so the re-rank is unmissable
+  const mapEl = document.getElementById('main-map');
+  if (mapEl) {
+    const isEl = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+    const t = document.createElement('div');
+    t.className = 'map-mode-toast';
+    t.textContent = (isEl ? 'Ταξινόμηση κατά: ' : 'Map re-ranked by: ') + rankModeLabel();
+    mapEl.appendChild(t);
+    setTimeout(() => t.remove(), 1700);
+  }
+}
 
 function setupVibeChips() {
   const sel = document.getElementById('vibe-select');

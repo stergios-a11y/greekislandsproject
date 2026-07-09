@@ -520,8 +520,8 @@ header {
   display: block;
 }
 #view-home #main-map {
-  height: calc(100vh  - var(--header-height) - var(--search-bar-height) - var(--whats-on-strip-height));
-  height: calc(100dvh - var(--header-height) - var(--search-bar-height) - var(--whats-on-strip-height));
+  height: calc(100vh  - var(--header-height) - var(--whats-on-strip-height));
+  height: calc(100dvh - var(--header-height) - var(--whats-on-strip-height));
 }
 /* body.home-view-active formerly locked scroll and hid the footer. Now we
    want both: scroll to read the homepage content section, and a visible
@@ -6069,3 +6069,71 @@ html.dark .bp-sc-score { color: #071820; }
   color: var(--ink-1);
 }
 .home-how-item p { font-size: 13.5px; line-height: 1.55; color: var(--ink-3); margin: 0; }
+
+
+/* ============================================================
+   Map-embedded filter bar (replaces the white strip above the map)
+============================================================ */
+.map-filterbar {
+  position: absolute; top: 14px; left: 50%; transform: translateX(-50%); z-index: 1001;
+  display: flex; gap: 6px; align-items: center;
+  background: color-mix(in srgb, var(--white, #FFFBF5) 94%, transparent);
+  backdrop-filter: blur(10px); border-radius: 999px; padding: 6px 8px;
+  box-shadow: 0 6px 24px rgba(26,35,50,0.22);
+  max-width: calc(100% - 120px);
+}
+.map-filterbar .filter-select {
+  appearance: none; border: 0; background: transparent;
+  font-family: var(--serif); font-weight: 800; font-size: 13px; color: var(--ink-1);
+  padding: 7px 24px 7px 12px; border-radius: 999px; cursor: pointer;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"><path d="M0 0l5 6 5-6z" fill="%23637080"/></svg>');
+  background-repeat: no-repeat; background-position: right 8px center;
+  max-width: 190px;
+}
+.map-filterbar .filter-select:hover { background-color: var(--aegean-light); }
+.map-filterbar .filter-select.active {
+  background-color: var(--aegean); color: #fff;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"><path d="M0 0l5 6 5-6z" fill="white"/></svg>');
+}
+.mf-divider { width: 1px; height: 20px; background: var(--border, rgba(26,35,50,0.14)); flex-shrink: 0; }
+.mf-group { display: flex; align-items: center; gap: 2px; }
+.mf-label {
+  font-size: 10px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--ink-3); padding-left: 8px; cursor: pointer; white-space: nowrap;
+}
+.map-filterbar .vibe-filter-btn {
+  display: flex; align-items: center; gap: 6px; border: 0;
+  background: var(--aegean); color: #fff; font-family: var(--serif); font-weight: 800;
+  font-size: 13px; padding: 8px 15px; border-radius: 999px; cursor: pointer;
+}
+html.dark .map-filterbar .vibe-filter-btn { color: #071820; }
+.map-filterbar .vibe-filter-count { background: var(--white, #fff); color: var(--aegean-dark); font-size: 11px; border-radius: 999px; padding: 1px 7px; }
+
+/* Vibe panel drops over the map */
+#main-map .vibe-panel {
+  position: absolute; top: 62px; left: 50%; transform: translateX(-50%); z-index: 1002;
+  width: min(640px, 94%);
+  background: color-mix(in srgb, var(--white, #FFFBF5) 97%, transparent);
+  backdrop-filter: blur(12px); border: 0; border-radius: 16px;
+  box-shadow: 0 16px 44px rgba(26,35,50,0.3); padding: 14px 18px 12px;
+}
+
+/* Legend: mode title */
+.map-legend-title { font-weight: 800; font-size: 11px; margin-bottom: 5px; color: var(--ink-1); }
+.map-legend-title b { color: var(--aegean-dark); }
+
+/* Re-rank toast */
+.map-mode-toast {
+  position: absolute; top: 64px; left: 50%; transform: translateX(-50%); z-index: 1003;
+  background: var(--ink-1); color: var(--white, #fff); font-size: 12.5px; font-weight: 700;
+  padding: 8px 16px; border-radius: 999px; opacity: 0.95; pointer-events: none;
+  animation: vibe-slide-in 0.18s ease-out;
+}
+html.dark .map-mode-toast { background: #EEF2F5; color: #171C24; }
+
+@media (max-width: 700px) {
+  .map-filterbar { top: 10px; max-width: calc(100% - 20px); width: calc(100% - 20px); justify-content: space-between; padding: 5px 6px; }
+  .map-filterbar .filter-select { font-size: 12px; padding: 6px 20px 6px 8px; max-width: 130px; }
+  .mf-label { display: none; }
+  #main-map .vibe-panel { top: 58px; }
+}
