@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-07-06';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-07-09';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -387,6 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
   try { setupGroupFilter(); } catch(e) { console.warn('setupGroupFilter', e); }
   try { setupMap(); } catch(e) { console.warn('setupMap', e); }
   try { renderWhatsOnStrip().then(adjustMapHeightToStrip); } catch(e) { console.warn('whatsOn', e); }
+  try { initHomeHero(); } catch(e) { console.warn('homeHero', e); }
   // Featured cards use per-island hero photos from a small manifest. Render once
   // now (fallback initials) and re-render after the manifest loads (with photos).
   try { renderHomeFeatured(); } catch(e) { console.warn('homeFeatured', e); }
@@ -721,6 +722,69 @@ function adjustMapHeightToStrip() {
 /* Smooth-scroll between the map and the homepage content section.
    The map captures mouse-wheel events, so these button-triggered jumps
    are the reliable way to move between the two. */
+function scrollToMainMap() {
+  const m = document.getElementById('main-map');
+  if (m) m.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* ============================================================
+   Homepage photo hero (design A)
+   Rotating Cloudinary hero photos + search + live stats.
+============================================================ */
+const HOME_HERO_KEYS = ['kythira', 'milos', 'folegandros', 'naxos', 'skopelos'];
+async function initHomeHero() {
+  const hero = document.getElementById('bp-hero');
+  if (!hero) return;
+
+  // Live stats (single source of truth: ISLANDS_DATA)
+  const count = (typeof ISLANDS_DATA !== 'undefined') ? Object.keys(ISLANDS_DATA).length : 87;
+  const elIslands = document.getElementById('bp-stat-islands');
+  const elGuides = document.getElementById('bp-stat-guides');
+  if (elIslands) elIslands.textContent = count;
+  if (elGuides) elGuides.textContent = count;
+
+  // Search → feed the map's own search box and scroll to it
+  const form = document.getElementById('bp-hero-search-form');
+  if (form) form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const q = (document.getElementById('bp-hero-search') || {}).value || '';
+    const mapSearch = document.getElementById('islandSearch');
+    if (mapSearch) {
+      mapSearch.value = q;
+      mapSearch.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+    scrollToMainMap();
+  });
+
+  // Rotating photos from the same hero set the island pages use
+  const photos = await loadHeroPhotos();
+  const keys = HOME_HERO_KEYS.filter(k => photos[k] && photos[k].url);
+  const bgsWrap = document.getElementById('bp-hero-bgs');
+  const credit = document.getElementById('bp-hero-credit');
+  if (!bgsWrap || keys.length === 0) return;
+  const isEl = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+  bgsWrap.innerHTML = keys.map((k, i) =>
+    `<div class="bp-hero-bg${i === 0 ? ' on' : ''}" style="background-image:url('${heroSrc(photos[k].url)}')"></div>`
+  ).join('');
+  const setCredit = (k) => {
+    if (!credit) return;
+    credit.textContent = islandName(k);
+    credit.href = (isEl ? '/el/island/' : '/island/') + k + '/';
+  };
+  setCredit(keys[0]);
+  const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (keys.length > 1 && !reduced) {
+    let i = 0;
+    const bgs = bgsWrap.children;
+    setInterval(() => {
+      bgs[i].classList.remove('on');
+      i = (i + 1) % keys.length;
+      bgs[i].classList.add('on');
+      setCredit(keys[i]);
+    }, 5200);
+  }
+}
+
 function scrollToHomeContent() {
   const el = document.getElementById('home-content');
   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -962,26 +1026,56 @@ async function renderWhatsOnStrip() {
     });
   });
 
-  // Nothing to show? Hide the strip entirely.
+  // Nothing to show? Hide both the strip and the seasonal section.
   if (islandsToShow.length === 0 && festivalCount === 0) {
     container.style.display = 'none';
+    const seasonEmpty = document.getElementById('bp-season');
+    if (seasonEmpty) seasonEmpty.hidden = true;
     return;
   }
 
-  // Build the chip HTML
-  const chipsHtml = islandsToShow.map(key => {
+  // The old thin strip is retired — the seasonal photo section below the
+  // decision cards (design A) shows the same data with photos. Keep the strip
+  // element hidden so adjustMapHeightToStrip measures 0.
+  container.style.display = 'none';
+  const season = document.getElementById('bp-season');
+  if (!season) return;
+
+  const photos = await loadHeroPhotos();
+  const cardsHtml = islandsToShow.slice(0, 4).map(key => {
     const name = (typeof islandName === 'function') ? islandName(key) : (meta[key]?.name || key);
-    return `<a class="whats-on-chip" href="#" onclick="navigateTo('island','${key}');return false;">${name}</a>`;
+    const m = meta[key] || {};
+    const score = (typeof m.total === 'number') ? m.total.toFixed(1) : '';
+    const grp = (typeof groupName === 'function') ? groupName(m.island_group) : (m.island_group || '');
+    const photo = photos[key] && photos[key].url ? thumbUrl(photos[key].url) : '';
+    const href = (lang === 'el' ? '/el/island/' : '/island/') + key + '/';
+    return `<a class="bp-scard" href="${href}">
+      ${photo ? `<img src="${photo}" alt="${escapeAttr(name)}" loading="lazy">` : ''}
+      <span class="bp-sc-scrim"></span>
+      ${score ? `<span class="bp-sc-score">${score}<small>/5</small></span>` : ''}
+      <span class="bp-sc-body"><span class="bp-sc-name">${escapeHtml(name)}</span>${grp ? `<span class="bp-sc-grp">${escapeHtml(grp)}</span>` : ''}</span>
+    </a>`;
   }).join('');
 
-  // Festival call-to-action: just a link to the full calendar page, with the count.
-  let festivalsHtml = '';
+  // Up to 3 named festival pills for this month + a link to the calendar
+  const festPath = lang === 'el' ? '/el/festivals/' : '/festivals/';
+  const pills = [];
+  Object.keys(data).forEach(key => {
+    (data[key].festivals || []).forEach(f => {
+      if (pills.length >= 3) return;
+      if (!(f.months && f.months.includes(month))) return;
+      const fname = lang === 'el' ? (f.name_el || f.name) : f.name;
+      const fwhen = lang === 'el' ? (f.when_el || f.when) : f.when;
+      const iname = (typeof islandName === 'function') ? islandName(key) : key;
+      pills.push(`<a class="bp-fest-pill" href="${festPath}">🎉 <b>${escapeHtml(fname)}</b> — ${escapeHtml(iname)} <span class="d">${escapeHtml(fwhen)}</span></a>`);
+    });
+  });
+  let festLink = '';
   if (festivalCount > 0) {
-    const festPath = lang === 'el' ? '/el/festivals/' : '/festivals/';
     const label = lang === 'el'
-      ? `${festivalCount} ${festivalCount === 1 ? 'γιορτή' : 'γιορτές'} αυτόν τον μήνα →`
-      : `${festivalCount} ${festivalCount === 1 ? 'festival' : 'festivals'} this month →`;
-    festivalsHtml = `<a class="whats-on-festivals-link" href="${festPath}">${label}</a>`;
+      ? `Και οι ${festivalCount} γιορτές του μήνα →`
+      : `All ${festivalCount} festivals this month →`;
+    festLink = `<a class="bp-fest-more" href="${festPath}">${label}</a>`;
   }
 
   // Label depends on the data shape:
@@ -1000,16 +1094,16 @@ async function renderWhatsOnStrip() {
     perfectLabel = lang === 'el' ? `Ιδανικά τον ${monthLabel}` : `Perfect in ${monthLabel}`;
   }
 
-  container.innerHTML = `
-    <div class="whats-on-row">
-      <div class="whats-on-perfect">
-        <span class="whats-on-label">${perfectLabel}:</span>
-        <div class="whats-on-chips">${chipsHtml}</div>
-      </div>
-      ${festivalsHtml}
+  const seeAll = lang === 'el' ? 'Όλα τα 87 ανά μήνα →' : 'All 87 by month →';
+  season.innerHTML = `
+    <div class="bp-sec-head">
+      <h2>${perfectLabel}</h2>
+      <a class="all" href="${festPath}">${seeAll}</a>
     </div>
+    <div class="bp-season-cards">${cardsHtml}</div>
+    ${(pills.length || festLink) ? `<div class="bp-fest-strip">${pills.join('')}${festLink}</div>` : ''}
   `;
-  container.style.display = '';
+  season.hidden = false;
 }
 
 // Tiny helpers — escape for HTML attrs and innerHTML use

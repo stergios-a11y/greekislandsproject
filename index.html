@@ -91,7 +91,7 @@
   <meta name="apple-mobile-web-app-title" content="Aegean Blueprint">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="style.css?v=26">
+  <link rel="stylesheet" href="style.css?v=27">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9298260273942245" crossorigin="anonymous"></script>
   <script>
     /* Desktop-only ads: on viewports below 900px, replace adsbygoogle.push
@@ -217,6 +217,79 @@
         <button class="help-close-btn" onclick="closeHelp()" data-i18n="help.close">Got it — let me explore</button>
       </div>
     </div>
+    <!-- ============ Photo hero (design A) ============ -->
+    <section class="bp-hero" id="bp-hero">
+      <div class="bp-hero-bgs" id="bp-hero-bgs"></div>
+      <div class="bp-hero-scrim"></div>
+      <div class="bp-hero-inner">
+        <div class="bp-hero-eyebrow">The Greek Island Decision Engine</div>
+        <h2 class="bp-hero-title">Find your perfect Greek island</h2>
+        <p class="bp-hero-sub">87 islands scored across beaches, culture, nightlife, access and price — by someone who's been to all of them.</p>
+        <form class="bp-hero-search" id="bp-hero-search-form">
+          <input id="bp-hero-search" type="text" placeholder="🔍  Search an island — Milos, Ikaria, Skopelos…" aria-label="Search islands">
+          <button type="submit">Explore</button>
+        </form>
+        <div class="bp-hero-ctas">
+          <button type="button" class="bp-hero-cta" onclick="navigateTo('match')">🎯 Match me to an island</button>
+          <button type="button" class="bp-hero-cta" onclick="navigateTo('compare')">↔ Compare two islands</button>
+          <button type="button" class="bp-hero-cta" onclick="scrollToMainMap()">🗺 Open the map</button>
+        </div>
+      </div>
+      <a class="bp-hero-credit" id="bp-hero-credit" href="#"></a>
+      <div class="bp-hero-stats">
+        <div class="bp-hero-stat"><b id="bp-stat-islands">87</b><span>Islands</span></div>
+        <div class="bp-hero-stat"><b>6</b><span>Score dimensions</span></div>
+        <div class="bp-hero-stat"><b id="bp-stat-guides">87</b><span>Full guides</span></div>
+      </div>
+    </section>
+
+    <div class="bp-home-wrap">
+      <!-- Decision cards -->
+      <div class="bp-decide">
+        <button type="button" class="bp-dcard alt" onclick="navigateTo('match')">
+          <span class="ic">🎯</span>
+          <h3>Don't know where to start?</h3>
+          <p>Answer 6 quick questions — beaches, budget, nightlife, pace — and get your 3 best-match islands, scored.</p>
+          <span class="go">Take the 60-second quiz →</span>
+        </button>
+        <button type="button" class="bp-dcard" onclick="navigateTo('compare')">
+          <span class="ic">↔</span>
+          <h3>Torn between two?</h3>
+          <p>Side-by-side scores, radar chart, ferries and an honest verdict.</p>
+          <span class="go">Compare islands →</span>
+        </button>
+        <button type="button" class="bp-dcard" onclick="scrollToMainMap()">
+          <span class="ic">🗺</span>
+          <h3>Know the vibe, not the name?</h3>
+          <p>Browse all 87 on the map — filter by group or rank by what matters — and hover for a photo preview.</p>
+          <span class="go">Explore the map →</span>
+        </button>
+      </div>
+
+      <!-- Seasonal: filled by renderWhatsOnStrip() from whats-on.json -->
+      <section class="bp-season" id="bp-season" hidden></section>
+
+      <!-- Popular comparisons -->
+      <section class="bp-faceoffs">
+        <div class="bp-sec-head">
+          <h2>Can't decide? Popular face-offs</h2>
+          <a class="all" href="/compare/">All comparisons →</a>
+        </div>
+        <div class="bp-vs-strip">
+          <a class="bp-vs-chip" href="/compare/ios-vs-paros/">Ios <span class="v">VS</span> Paros</a>
+          <a class="bp-vs-chip" href="/compare/hydra-vs-spetses/">Hydra <span class="v">VS</span> Spetses</a>
+          <a class="bp-vs-chip" href="/compare/milos-vs-sifnos/">Milos <span class="v">VS</span> Sifnos</a>
+          <a class="bp-vs-chip" href="/compare/naxos-vs-paros/">Naxos <span class="v">VS</span> Paros</a>
+          <a class="bp-vs-chip" href="/compare/mykonos-vs-santorini/">Mykonos <span class="v">VS</span> Santorini</a>
+          <a class="bp-vs-chip" href="/compare/folegandros-vs-milos/">Folegandros <span class="v">VS</span> Milos</a>
+        </div>
+      </section>
+
+      <div class="bp-sec-head bp-map-head">
+        <h2>Explore all 87 on the map</h2>
+      </div>
+    </div>
+
     <div id="whats-on-strip" class="whats-on-strip"></div>
     <div id="main-map">
       <div class="map-legend">
@@ -723,7 +796,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="i18n.js?v=32"></script>
-  <script src="script.js?v=49"></script>
+  <script src="script.js?v=50"></script>
 <!-- SEO_ISLAND_LIST_START -->
 <nav class="visually-hidden" aria-label="All islands">
   <h2>All islands</h2>
