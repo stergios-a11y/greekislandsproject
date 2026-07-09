@@ -390,8 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
   try { initHomeHero(); } catch(e) { console.warn('homeHero', e); }
   // Featured cards use per-island hero photos from a small manifest. Render once
   // now (fallback initials) and re-render after the manifest loads (with photos).
-  try { renderHomeFeatured(); } catch(e) { console.warn('homeFeatured', e); }
-  try { loadHeroPhotos().then(() => { try { renderHomeFeatured(); } catch(_) {} }); } catch(e) { console.warn('heroPhotos', e); }
+  try { loadHeroPhotos(); } catch(e) { console.warn('heroPhotos', e); }
   try { setupTable(); } catch(e) { console.warn('setupTable', e); }
   try { setupCompare(); } catch(e) { console.warn('setupCompare', e); }
   const vd = document.getElementById('version-display');
@@ -736,16 +735,61 @@ async function initHomeHero() {
   const hero = document.getElementById('bp-hero');
   if (!hero) return;
 
-  // Search → feed the map's own search box and scroll to it
+  // Search with autocomplete: suggests islands as you type (EN + EL names);
+  // picking one goes straight to its guide. Submitting free text falls back
+  // to the map's own search box.
   const form = document.getElementById('bp-hero-search-form');
+  const input = document.getElementById('bp-hero-search');
+  const sug = document.getElementById('bp-hero-suggest');
+  const isElLang = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+  const matches = (q) => {
+    q = q.trim().toLowerCase();
+    if (!q) return [];
+    const out = [];
+    Object.keys(ISLANDS_DATA).forEach(k => {
+      const en = (ISLANDS_DATA[k].name || '').toLowerCase();
+      const el = (typeof ISLAND_NAMES_EL !== 'undefined' && ISLAND_NAMES_EL[k]) ? ISLAND_NAMES_EL[k].toLowerCase() : '';
+      if (en.startsWith(q) || el.startsWith(q)) out.push(k);
+      else if (en.includes(q) || el.includes(q)) out.push(k);
+    });
+    // startsWith hits first, then includes; dedupe preserves first position
+    return [...new Set(out)].slice(0, 6);
+  };
+  const closeSug = () => { if (sug) { sug.innerHTML = ''; sug.hidden = true; } };
+  const renderSug = () => {
+    if (!sug || !input) return;
+    const keys = matches(input.value);
+    if (!keys.length) { closeSug(); return; }
+    sug.innerHTML = keys.map(k => {
+      const m = ISLANDS_DATA[k];
+      const score = (typeof m.total === 'number') ? m.total.toFixed(1) : '';
+      const grp = (typeof groupName === 'function') ? groupName(m.island_group) : (m.island_group || '');
+      return `<a class="bp-sug-item" href="${(isElLang ? '/el/island/' : '/island/') + k + '/'}">` +
+        `<span class="bp-sug-name">${escapeHtml(islandName(k))}</span>` +
+        `<span class="bp-sug-meta">${escapeHtml(grp)}${score ? ' · ' + score + '/5' : ''}</span></a>`;
+    }).join('');
+    sug.hidden = false;
+  };
+  if (input && sug) {
+    input.addEventListener('input', renderSug);
+    input.addEventListener('focus', renderSug);
+    input.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSug(); });
+    document.addEventListener('click', (e) => { if (!e.target.closest('.bp-hero-search-wrap')) closeSug(); });
+  }
   if (form) form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const q = (document.getElementById('bp-hero-search') || {}).value || '';
+    const q = (input || {}).value || '';
+    const keys = matches(q);
+    if (keys.length === 1 || (keys.length && q.trim().length > 2)) {
+      window.location.href = (isElLang ? '/el/island/' : '/island/') + keys[0] + '/';
+      return;
+    }
     const mapSearch = document.getElementById('islandSearch');
     if (mapSearch) {
       mapSearch.value = q;
       mapSearch.dispatchEvent(new Event('input', { bubbles: true }));
     }
+    closeSug();
     scrollToMainMap();
   });
 
@@ -944,7 +988,7 @@ async function renderWhatsOnStrip() {
   //   - FEW (<4): off-season fallback — top up with "great" tagged islands.
   const meta = (typeof ISLANDS_DATA !== 'undefined') ? ISLANDS_DATA : {};
   const byScore = (a, b) => (meta[b]?.total || 0) - (meta[a]?.total || 0);
-  const TARGET = 3;   // Slim — fits on one mobile line
+  const TARGET = 4;   // Four photo cards in the seasonal section
 
   let islandsToShow = [];
   if (perfectIslands.length > 12) {
@@ -1109,8 +1153,10 @@ function escapeHtml(s) {
 
 function setupMap() {
   const GREECE_BOUNDS = L.latLngBounds(L.latLng(33.8, 18.5), L.latLng(42.2, 30.2));
-  mapInstance = L.map('main-map', { zoomControl: true, minZoom: 6, maxZoom: 14, maxBounds: GREECE_BOUNDS, maxBoundsViscosity: 0.85 });
-  mapInstance.fitBounds(GREECE_BOUNDS);
+  mapInstance = L.map('main-map', { zoomControl: true, minZoom: 6, maxZoom: 14, zoomSnap: 0.5, maxBounds: GREECE_BOUNDS, maxBoundsViscosity: 0.85 });
+  // Default view hugs the Greek islands (Corfu→Kastellorizo, Crete→Thasos)
+  // instead of the padded maxBounds — no half-screen of Italy/Turkey/sea.
+  mapInstance.fitBounds(L.latLngBounds(L.latLng(34.6, 19.4), L.latLng(41.1, 28.4)));
   addThemeAwareTiles(mapInstance, { maxZoom: 14 });
   L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(mapInstance);
   renderMapMarkers();

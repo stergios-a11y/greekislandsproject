@@ -6038,3 +6038,12 @@ html.dark .bp-sc-score { color: #071820; }
   .bp-hero-eyebrow { display: none; }
   .bp-sec-head h2 { font-size: 22px; }
 }
+
+/* Hero search autocomplete */
+.bp-hero-search-wrap { position: relative; max-width: 520px; margin: 0 auto; }
+.bp-hero-search-wrap .bp-hero-search { max-width: none; }
+.bp-hero-suggest { position: absolute; top: calc(100% + 6px); left: 0; right: 0; background: var(--white, #fff); border-radius: 14px; box-shadow: 0 12px 34px rgba(0,0,0,0.3); overflow: hidden; z-index: 20; text-align: left; }
+.bp-sug-item { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 10px 16px; font-size: 14px; }
+.bp-sug-item:hover { background: var(--aegean-pale); }
+.bp-sug-name { font-weight: 800; color: var(--ink-1); }
+.bp-sug-meta { font-size: 12px; color: var(--ink-3); white-space: nowrap; }

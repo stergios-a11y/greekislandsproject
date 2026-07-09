@@ -91,7 +91,7 @@
   <meta name="apple-mobile-web-app-title" content="Aegean Blueprint">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="style.css?v=28">
+  <link rel="stylesheet" href="style.css?v=29">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9298260273942245" crossorigin="anonymous"></script>
   <script>
     /* Desktop-only ads: on viewports below 900px, replace adsbygoogle.push
@@ -180,10 +180,13 @@
         <div class="bp-hero-eyebrow">The Greek Island Decision Engine</div>
         <h2 class="bp-hero-title">Find your perfect Greek island</h2>
         <p class="bp-hero-sub">87 islands scored across beaches, culture, nightlife, access and price — by someone who's been to all of them.</p>
+        <div class="bp-hero-search-wrap">
         <form class="bp-hero-search" id="bp-hero-search-form">
           <input id="bp-hero-search" type="text" placeholder="🔍  Search an island — Milos, Ikaria, Skopelos…" aria-label="Search islands">
           <button type="submit">Explore</button>
         </form>
+          <div class="bp-hero-suggest" id="bp-hero-suggest" hidden></div>
+        </div>
       </div>
       <a class="bp-hero-credit" id="bp-hero-credit" href="#"></a>
     </section>
@@ -311,14 +314,6 @@
         <p data-i18n="home.about.p1">Most island guides list 30 beaches and call it a recommendation. This one picks the one you should actually go to, and tells you why the other 29 didn't make it. The same goes for the where-to-stay, the where-to-eat, the day plan, the side trip.</p>
         <p data-i18n="home.about.p2">No sponsorships, no affiliate hotel chains in disguise. Each island gets an honest score across beaches, history, nightlife, access and price — not a marketing brochure, not an algorithm, just one person's take, cross-checked with friends and family who actually live on each island.</p>
         <p data-i18n="home.about.p3">The map above is the entry point. Click any circle to open that island's full guide. Use the dropdowns to filter by region or rank by what matters to you.</p>
-      </div>
-
-      <div class="home-block home-featured">
-        <h2 class="home-block-title" data-i18n="home.featured.title">Featured islands</h2>
-        <p class="home-block-sub" data-i18n="home.featured.sub">A few starting points across different moods. Click for the full guide.</p>
-        <div class="home-featured-grid" id="home-featured-grid">
-          <!-- Cards injected by script.js: renderHomeFeatured() -->
-        </div>
       </div>
 
       <div class="home-block home-how">
@@ -783,7 +778,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="i18n.js?v=32"></script>
-  <script src="script.js?v=51"></script>
+  <script src="script.js?v=52"></script>
 <!-- SEO_ISLAND_LIST_START -->
 <nav class="visually-hidden" aria-label="All islands">
   <h2>All islands</h2>
