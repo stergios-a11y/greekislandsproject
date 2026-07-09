@@ -5978,12 +5978,12 @@ html.dark .itin-meal-cue{background:rgba(214,51,108,.16);color:#f3a6c4}
    Homepage design A — photo hero, decision cards, seasonal,
    face-offs. (bp- prefix = blueprint homepage components)
 ============================================================ */
-.bp-hero { position: relative; min-height: clamp(280px, 42vh, 360px); display: flex; align-items: center; justify-content: center; overflow: hidden; background: var(--aegean-dark); }
+.bp-hero { position: relative; min-height: clamp(310px, 46vh, 400px); display: flex; align-items: center; justify-content: center; overflow: hidden; background: var(--aegean-dark); }
 .bp-hero-bgs, .bp-hero-bg { position: absolute; inset: 0; }
 .bp-hero-bg { background-size: cover; background-position: center; opacity: 0; transition: opacity 1.6s ease; }
 .bp-hero-bg.on { opacity: 1; }
 .bp-hero-scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(8,16,26,0.72) 0%, rgba(8,16,26,0.38) 45%, rgba(8,16,26,0.30) 100%); }
-.bp-hero-inner { position: relative; z-index: 2; text-align: center; color: #fff; padding: 34px 20px 36px; max-width: 720px; }
+.bp-hero-inner { position: relative; z-index: 2; text-align: center; color: #fff; padding: 26px 20px 88px; max-width: 720px; }
 .bp-hero-eyebrow { font-family: var(--sans); font-size: 11.5px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #bfe6f0; margin-bottom: 10px; }
 .bp-hero-title { font-family: var(--font-display); font-weight: 800; font-size: 38px; line-height: 1.04; margin: 0; color: #fff; text-shadow: 0 2px 22px rgba(0,0,0,0.45); }
 .bp-hero-sub { font-size: 14.5px; margin: 10px auto 18px; max-width: 560px; color: rgba(255,255,255,0.92); text-shadow: 0 1px 10px rgba(0,0,0,0.4); }
@@ -5991,12 +5991,12 @@ html.dark .itin-meal-cue{background:rgba(214,51,108,.16);color:#f3a6c4}
 .bp-hero-search input { flex: 1; border: 0; outline: 0; font-family: var(--sans); font-size: 15px; color: #1A2332; background: transparent; min-width: 0; }
 .bp-hero-search button { background: #E8522A; color: #fff; border: 0; font-family: var(--serif); font-weight: 800; font-size: 14.5px; padding: 12px 22px; border-radius: 999px; cursor: pointer; }
 .bp-hero-search button:hover { background: #C6421F; }
-.bp-hero-credit { position: absolute; right: 14px; bottom: 12px; z-index: 2; font-size: 11px; color: rgba(255,255,255,0.8); background: rgba(8,16,26,0.4); padding: 3px 10px; border-radius: 999px; }
+.bp-hero-credit { position: absolute; right: 14px; top: 12px; z-index: 2; font-size: 11px; color: rgba(255,255,255,0.8); background: rgba(8,16,26,0.4); padding: 3px 10px; border-radius: 999px; }
 .bp-hero-credit:hover { color: #fff; }
 
 .bp-home-wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px; }
-.bp-decide { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0 18px; }
-.bp-dcard { background: var(--white, #fff); border: 0; border-radius: 14px; padding: 13px 16px 12px; box-shadow: var(--shadow); cursor: pointer; transition: transform 0.18s ease, box-shadow 0.18s ease; border-top: 3px solid var(--aegean); text-align: left; font-family: var(--sans); }
+.bp-decide { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: -64px 0 18px; position: relative; z-index: 5; }
+.bp-dcard { background: var(--white, #fff); border: 0; border-radius: 14px; padding: 13px 16px 12px; box-shadow: 0 10px 32px rgba(26,35,50,0.18); cursor: pointer; transition: transform 0.18s ease, box-shadow 0.18s ease; border-top: 3px solid var(--aegean); text-align: left; font-family: var(--sans); }
 .bp-dcard:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(26,35,50,0.14); }
 .bp-dcard.alt { border-top-color: var(--terracotta); }
 .bp-dcard .ic { font-size: 19px; float: right; margin-left: 8px; }
@@ -6031,12 +6031,12 @@ html.dark .bp-sc-score { color: #071820; }
 .bp-vs-chip .v { color: var(--terracotta); font-size: 11px; }
 
 @media (max-width: 840px) {
-  .bp-decide { grid-template-columns: 1fr; gap: 8px; }
+  .bp-decide { grid-template-columns: 1fr; gap: 8px; margin-top: -34px; }
   .bp-dcard p { display: none; }
   .bp-season-cards { grid-template-columns: repeat(2, 1fr); }
-  .bp-hero { min-height: 250px; }
+  .bp-hero { min-height: 280px; }
   .bp-hero-title { font-size: 27px; }
-  .bp-hero-inner { padding: 26px 16px 28px; }
+  .bp-hero-inner { padding: 22px 16px 56px; }
   .bp-hero-eyebrow { display: none; }
   .bp-sec-head h2 { font-size: 22px; }
 }
