@@ -429,7 +429,7 @@ def render_page(pair_key, lang):
 
 <header>
   <div class="header-content">
-    <a href="{home_url}" class="logo-wrapper" id="nav-home">
+    <a href="{home_url}" class="logo-wrapper">
       <img src="/logo-hero.svg" id="site-logo" alt="Aegean Blueprint logo">
       <span id="brand-text"><span class="brand-word">Aegean</span> <span class="brand-word">Blueprint</span></span>
     </a>
@@ -636,7 +636,8 @@ def render_hub_page(lang, valid_pairs):
         href = f'{href_prefix}{slug}/'
         longform_badge = ''
         if _is_longform(pk):
-            longform_badge = '<span class="hub-card-tag" aria-hidden="true">●</span>'
+            tag_label = 'Αναλυτική' if lang == 'el' else 'In-depth'
+            longform_badge = f'<span class="hub-card-tag">{tag_label}</span>'
         return (
             f'<a class="hub-card" href="{esc(href)}">'
             f'<span class="hub-card-pair">{esc(name_a)} <em>{sep}</em> {esc(name_b)}</span>'
@@ -771,9 +772,15 @@ def render_hub_page(lang, valid_pairs):
     margin: 0 4px;
   }
   .hub-card-tag {
-    color: #0B8FAC;
+    color: var(--aegean-dark, #076880);
+    background: var(--aegean-light, #C8EEF5);
     flex-shrink: 0;
-    font-size: var(--text-small, 10px);
+    font-size: 10.5px;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 999px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
   }
   .hub-card-arrow {
     color: var(--ink-2, #555);
