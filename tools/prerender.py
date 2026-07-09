@@ -1849,7 +1849,6 @@ def render_page(key, data, meta, lang='en'):
       <span>Aegean Blueprint</span>
     </a>
     <div class="seo-nav-links">
-      <a href="{('/' if lang == 'en' else '/el/')}">{'Map' if lang == 'en' else 'Χάρτης'}</a>
       <a href="{('/' if lang == 'en' else '/el/')}#data">{'All Islands' if lang == 'en' else 'Όλα τα Νησιά'}</a>
       <a href="{('/' if lang == 'en' else '/el/')}#compare">{'Compare' if lang == 'en' else 'Σύγκριση'}</a>
       <a href="{('/' if lang == 'en' else '/el/')}#match">{'Quiz' if lang == 'en' else 'Quiz'}</a>
@@ -2341,7 +2340,6 @@ def generate_ferries_page(island_keys):
             '    </a>\n'
             '    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>\n'
             '    <nav class="top-nav" id="main-nav">\n'
-            f'      <a href="/{"el/" if is_el else ""}">{navlbl("map")}</a>\n'
             f'      <a href="/{"el/" if is_el else ""}#data">{navlbl("data")}</a>\n'
             f'      <a href="/{"el/" if is_el else ""}#compare">{navlbl("compare")}</a>\n'
             f'      <a href="/{"el/" if is_el else ""}festivals/">{navlbl("festivals")}</a>\n'
@@ -2825,7 +2823,6 @@ def generate_festivals_page(island_keys):
             # Without it the nav disappears with no way to open it. JS handler below.
             '    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>\n'
             '    <nav class="top-nav" id="main-nav">\n'
-            '      <a href="/' + ('el/' if is_el else '') + '">' + ('Χάρτης' if is_el else 'Map') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#data">' + ('Στοιχεία Νησιών' if is_el else 'Islands Data') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#compare">' + ('Σύγκριση' if is_el else 'Compare') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + 'festivals/" class="active">' + ('Γιορτές' if is_el else 'Festivals') + '</a>\n'

@@ -274,7 +274,6 @@ def render_page(pair_key, lang):
 
     if lang == 'el':
         nav_items = [
-            ('/el/', 'Χάρτης', 'nav-map'),
             ('/el/#data', 'Στοιχεία Νησιών', 'nav-data'),
             ('/el/#compare', 'Σύγκριση', 'nav-compare'),
             ('/el/festivals/', 'Γιορτές', 'nav-festivals'),
@@ -290,7 +289,6 @@ def render_page(pair_key, lang):
         privacy_link = '<a href="/el/privacy/" data-i18n="footer.privacy">Απόρρητο</a>'
     else:
         nav_items = [
-            ('/', 'Map', 'nav-map'),
             ('/#data', 'Islands Data', 'nav-data'),
             ('/#compare', 'Compare', 'nav-compare'),
             ('/festivals/', 'Festivals', 'nav-festivals'),
@@ -672,7 +670,6 @@ def render_hub_page(lang, valid_pairs):
     # Navigation (same structure as compare pages)
     if lang == 'el':
         nav_items = [
-            ('/el/', 'Χάρτης', 'nav-map'),
             ('/el/#data', 'Στοιχεία Νησιών', 'nav-data'),
             ('/el/#compare', 'Σύγκριση', 'nav-compare'),
             ('/el/festivals/', 'Γιορτές', 'nav-festivals'),
@@ -687,7 +684,6 @@ def render_hub_page(lang, valid_pairs):
         privacy_link = '<a href="/el/privacy/" data-i18n="footer.privacy">Απόρρητο</a>'
     else:
         nav_items = [
-            ('/', 'Map', 'nav-map'),
             ('/#data', 'Islands Data', 'nav-data'),
             ('/#compare', 'Compare', 'nav-compare'),
             ('/festivals/', 'Festivals', 'nav-festivals'),
