@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=50">
+<link rel="stylesheet" href="/style.css?v=51">
 <style>
   main.hub-main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
   .hub-hero { margin-bottom: 40px; }
@@ -102,13 +102,14 @@
 </style>
 </head>
 <body>
-<header id="site-header">
-  <div class="header-inner">
-    <a href="/el/" class="site-logo">
-      <img src="/logo.svg" alt="Aegean Blueprint" width="40" height="40">
-      <span class="site-title">Aegean Blueprint</span>
+<header>
+  <div class="header-content">
+    <a class="logo-wrapper" href="/el/" style="text-decoration: none;">
+      <img src="/logo-hero.svg" id="site-logo" alt="Aegean Blueprint logo">
+      <span id="brand-text"><span class="brand-word">Aegean</span> <span class="brand-word">Blueprint</span></span>
     </a>
-    <nav id="site-nav">
+    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>
+    <nav class="top-nav" id="main-nav">
         <a href="/el/" id="nav-map">Χάρτης</a>
         <a href="/el/#data" id="nav-data">Στοιχεία Νησιών</a>
         <a href="/el/#compare" id="nav-compare">Σύγκριση</a>
@@ -121,6 +122,7 @@
         <a href="/el/#mission" id="nav-mission">Στόχος</a>
         <a href="/el/privacy/" id="nav-privacy">Απόρρητο</a>
     </nav>
+    <a class="lang-toggle-static" href="/compare/" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;"><span style="margin-right: 4px;">🌐</span>EN</a>
   </div>
 </header>
 
@@ -140,5 +142,11 @@
 </footer>
 
 <script src="/i18n.js?v=32"></script>
+<script>
+  (function() {
+    var btn = document.getElementById("menu-toggle-btn");
+    if (btn) btn.addEventListener("click", function() { document.getElementById("main-nav").classList.toggle("open"); });
+  })();
+</script>
 </body>
 </html>

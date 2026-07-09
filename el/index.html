@@ -90,7 +90,7 @@
   <meta name="apple-mobile-web-app-title" content="Aegean Blueprint">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="/style.css?v=27">
+  <link rel="stylesheet" href="/style.css?v=28">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9298260273942245" crossorigin="anonymous"></script>
   <script>
     /* Desktop-only ads: on viewports below 900px, replace adsbygoogle.push
@@ -227,18 +227,8 @@
           <input id="bp-hero-search" type="text" placeholder="🔍  Αναζήτησε νησί — Μήλος, Ικαρία, Σκόπελος…" aria-label="Αναζήτηση νησιών">
           <button type="submit">Εξερεύνηση</button>
         </form>
-        <div class="bp-hero-ctas">
-          <button type="button" class="bp-hero-cta" onclick="navigateTo('match')">🎯 Βρες το νησί σου</button>
-          <button type="button" class="bp-hero-cta" onclick="navigateTo('compare')">↔ Σύγκρινε δύο νησιά</button>
-          <button type="button" class="bp-hero-cta" onclick="scrollToMainMap()">🗺 Άνοιξε τον χάρτη</button>
-        </div>
       </div>
       <a class="bp-hero-credit" id="bp-hero-credit" href="#"></a>
-      <div class="bp-hero-stats">
-        <div class="bp-hero-stat"><b id="bp-stat-islands">87</b><span>Νησιά</span></div>
-        <div class="bp-hero-stat"><b>6</b><span>Διαστάσεις</span></div>
-        <div class="bp-hero-stat"><b id="bp-stat-guides">87</b><span>Πλήρεις οδηγοί</span></div>
-      </div>
     </section>
 
     <div class="bp-home-wrap">
@@ -263,29 +253,6 @@
           <span class="go">Εξερεύνησε τον χάρτη →</span>
         </button>
       </div>
-
-      <!-- Seasonal: filled by renderWhatsOnStrip() from whats-on.json -->
-      <section class="bp-season" id="bp-season" hidden></section>
-
-      <!-- Popular comparisons -->
-      <section class="bp-faceoffs">
-        <div class="bp-sec-head">
-          <h2>Δεν αποφασίζεις; Δημοφιλείς αναμετρήσεις</h2>
-          <a class="all" href="/el/compare/">Όλες οι συγκρίσεις →</a>
-        </div>
-        <div class="bp-vs-strip">
-          <a class="bp-vs-chip" href="/el/compare/ios-vs-paros/">Ίος <span class="v">VS</span> Πάρος</a>
-          <a class="bp-vs-chip" href="/el/compare/hydra-vs-spetses/">Ύδρα <span class="v">VS</span> Σπέτσες</a>
-          <a class="bp-vs-chip" href="/el/compare/milos-vs-sifnos/">Μήλος <span class="v">VS</span> Σίφνος</a>
-          <a class="bp-vs-chip" href="/el/compare/naxos-vs-paros/">Νάξος <span class="v">VS</span> Πάρος</a>
-          <a class="bp-vs-chip" href="/el/compare/mykonos-vs-santorini/">Μύκονος <span class="v">VS</span> Σαντορίνη</a>
-          <a class="bp-vs-chip" href="/el/compare/folegandros-vs-milos/">Φολέγανδρος <span class="v">VS</span> Μήλος</a>
-        </div>
-      </section>
-
-      <div class="bp-sec-head bp-map-head">
-        <h2>Εξερεύνησε και τα 87 στον χάρτη</h2>
-      </div>
     </div>
 
     <div id="whats-on-strip" class="whats-on-strip"></div>
@@ -309,6 +276,26 @@
         <span class="home-backtop-arrow">↑</span>
         <span data-i18n="home.back_to_map">Πίσω στον χάρτη</span>
       </button>
+
+
+      <!-- Seasonal: filled by renderWhatsOnStrip() from whats-on.json -->
+      <section class="bp-season" id="bp-season" hidden></section>
+
+      <!-- Popular comparisons -->
+      <section class="bp-faceoffs">
+        <div class="bp-sec-head">
+          <h2>Δεν αποφασίζεις; Δημοφιλείς αναμετρήσεις</h2>
+          <a class="all" href="/el/compare/">Όλες οι συγκρίσεις →</a>
+        </div>
+        <div class="bp-vs-strip">
+          <a class="bp-vs-chip" href="/el/compare/ios-vs-paros/">Ίος <span class="v">VS</span> Πάρος</a>
+          <a class="bp-vs-chip" href="/el/compare/hydra-vs-spetses/">Ύδρα <span class="v">VS</span> Σπέτσες</a>
+          <a class="bp-vs-chip" href="/el/compare/milos-vs-sifnos/">Μήλος <span class="v">VS</span> Σίφνος</a>
+          <a class="bp-vs-chip" href="/el/compare/naxos-vs-paros/">Νάξος <span class="v">VS</span> Πάρος</a>
+          <a class="bp-vs-chip" href="/el/compare/mykonos-vs-santorini/">Μύκονος <span class="v">VS</span> Σαντορίνη</a>
+          <a class="bp-vs-chip" href="/el/compare/folegandros-vs-milos/">Φολέγανδρος <span class="v">VS</span> Μήλος</a>
+        </div>
+      </section>
 
       <div class="home-block home-intro">
         <h2 class="home-block-title" data-i18n="home.about.title">Ένας οδηγός για τα ελληνικά νησιά, με άποψη</h2>
@@ -770,7 +757,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="/i18n.js?v=32"></script>
-  <script src="/script.js?v=50"></script>
+  <script src="/script.js?v=51"></script>
 <!-- SEO_ISLAND_LIST_START -->
 <nav class="visually-hidden" aria-label="Όλα τα νησιά">
   <h2>Όλα τα νησιά</h2>

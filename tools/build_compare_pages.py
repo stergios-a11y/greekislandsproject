@@ -45,7 +45,7 @@ def _resolve_root():
 
 ROOT = _resolve_root()
 SITE_URL = 'https://aegeanblueprint.com'
-ASSET_V = 50
+ASSET_V = 51
 
 VERDICTS = json.loads((ROOT / 'vs_verdicts.json').read_text(encoding='utf-8'))
 FAQS_PATH = ROOT / 'vs_faqs.json'
@@ -813,15 +813,17 @@ def render_hub_page(lang, valid_pairs):
 <style>{page_css}</style>
 </head>
 <body>
-<header id="site-header">
-  <div class="header-inner">
-    <a href="{'/el/' if lang == 'el' else '/'}" class="site-logo">
-      <img src="/logo.svg" alt="Aegean Blueprint" width="40" height="40">
-      <span class="site-title">Aegean Blueprint</span>
+<header>
+  <div class="header-content">
+    <a class="logo-wrapper" href="{'/el/' if lang == 'el' else '/'}" style="text-decoration: none;">
+      <img src="/logo-hero.svg" id="site-logo" alt="Aegean Blueprint logo">
+      <span id="brand-text"><span class="brand-word">Aegean</span> <span class="brand-word">Blueprint</span></span>
     </a>
-    <nav id="site-nav">
+    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>
+    <nav class="top-nav" id="main-nav">
         {nav_html}
     </nav>
+    <a class="lang-toggle-static" href="{'/compare/' if lang == 'el' else '/el/compare/'}" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;"><span style="margin-right: 4px;">🌐</span>{'EN' if lang == 'el' else 'EL'}</a>
   </div>
 </header>
 
@@ -841,6 +843,12 @@ def render_hub_page(lang, valid_pairs):
 </footer>
 
 <script src="/i18n.js?v=32"></script>
+<script>
+  (function() {{
+    var btn = document.getElementById("menu-toggle-btn");
+    if (btn) btn.addEventListener("click", function() {{ document.getElementById("main-nav").classList.toggle("open"); }});
+  }})();
+</script>
 </body>
 </html>
 '''

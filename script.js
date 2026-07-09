@@ -736,13 +736,6 @@ async function initHomeHero() {
   const hero = document.getElementById('bp-hero');
   if (!hero) return;
 
-  // Live stats (single source of truth: ISLANDS_DATA)
-  const count = (typeof ISLANDS_DATA !== 'undefined') ? Object.keys(ISLANDS_DATA).length : 87;
-  const elIslands = document.getElementById('bp-stat-islands');
-  const elGuides = document.getElementById('bp-stat-guides');
-  if (elIslands) elIslands.textContent = count;
-  if (elGuides) elGuides.textContent = count;
-
   // Search → feed the map's own search box and scroll to it
   const form = document.getElementById('bp-hero-search-form');
   if (form) form.addEventListener('submit', function (e) {
