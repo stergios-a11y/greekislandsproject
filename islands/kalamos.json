@@ -7,18 +7,72 @@
     "summary": "A summer and sailing-season island — tavernas and rooms open roughly May to September, busiest when the flotillas pass in July and August. June and September are the sweet spot: warm sea, quiet paths through the pines, and space on the harbour front.",
     "summary_el": "Νησί του καλοκαιριού και της σεζόν ιστιοπλοΐας — ταβέρνες και δωμάτια ανοίγουν περίπου Μάιο με Σεπτέμβριο, με αιχμή όταν περνούν οι στόλοι σκαφών Ιούλιο και Αύγουστο. Ιούνιος και Σεπτέμβριος τα ιδανικά: ζεστή θάλασσα, ήσυχα μονοπάτια στα πεύκα και χώρος στο λιμάνι.",
     "months": [
-      { "tag": "avoid", "why": "Off-season", "why_el": "Σχεδόν όλα κλειστά", "limited": true },
-      { "tag": "avoid", "why": "Off-season", "why_el": "Σκελετός υπηρεσιών", "limited": true },
-      { "tag": "avoid", "why": "Few boats", "why_el": "Λίγα δρομολόγια", "limited": true },
-      { "tag": "ok", "why": "Awakening", "why_el": "Ήσυχα, πρώτες αφίξεις", "limited": true },
-      { "tag": "great", "why": "Sea warming", "why_el": "Κολυμπιέται πια" },
-      { "tag": "perfect", "why": "Warm, near-empty", "why_el": "Ζεστά, σχεδόν άδεια" },
-      { "tag": "great", "why": "Hot, flotillas", "why_el": "Ζέστη, στόλοι σκαφών" },
-      { "tag": "ok", "why": "Peak Greeks, busy", "why_el": "Αιχμή Ελλήνων" },
-      { "tag": "perfect", "why": "Best — peaceful", "why_el": "Καλύτερος — ζεστά" },
-      { "tag": "ok", "why": "Season ending", "why_el": "Κλείνουν σιγά" },
-      { "tag": "avoid", "why": "Off-season", "why_el": "Μόνο ντόπιοι", "limited": true },
-      { "tag": "avoid", "why": "Off-season, thin", "why_el": "Χειμώνας, ελάχιστα", "limited": true }
+      {
+        "tag": "avoid",
+        "why": "Off-season",
+        "why_el": "Σχεδόν όλα κλειστά",
+        "limited": true
+      },
+      {
+        "tag": "avoid",
+        "why": "Off-season",
+        "why_el": "Σκελετός υπηρεσιών",
+        "limited": true
+      },
+      {
+        "tag": "avoid",
+        "why": "Few boats",
+        "why_el": "Λίγα δρομολόγια",
+        "limited": true
+      },
+      {
+        "tag": "ok",
+        "why": "Awakening",
+        "why_el": "Ήσυχα, πρώτες αφίξεις",
+        "limited": true
+      },
+      {
+        "tag": "great",
+        "why": "Sea warming",
+        "why_el": "Κολυμπιέται πια"
+      },
+      {
+        "tag": "perfect",
+        "why": "Warm, near-empty",
+        "why_el": "Ζεστά, σχεδόν άδεια"
+      },
+      {
+        "tag": "great",
+        "why": "Hot, flotillas",
+        "why_el": "Ζέστη, στόλοι σκαφών"
+      },
+      {
+        "tag": "ok",
+        "why": "Peak Greeks, busy",
+        "why_el": "Αιχμή Ελλήνων"
+      },
+      {
+        "tag": "perfect",
+        "why": "Best — peaceful",
+        "why_el": "Καλύτερος — ζεστά"
+      },
+      {
+        "tag": "ok",
+        "why": "Season ending",
+        "why_el": "Κλείνουν σιγά"
+      },
+      {
+        "tag": "avoid",
+        "why": "Off-season",
+        "why_el": "Μόνο ντόπιοι",
+        "limited": true
+      },
+      {
+        "tag": "avoid",
+        "why": "Off-season, thin",
+        "why_el": "Χειμώνας, ελάχιστα",
+        "limited": true
+      }
     ]
   },
   "itinerary": {
@@ -47,7 +101,7 @@
           {
             "name": "Episkopi",
             "lat": 38.642,
-            "lng": 20.930,
+            "lng": 20.93,
             "type": "village",
             "time": "12:30",
             "wiki": "https://www.google.com/maps/search/Episkopi%20Kalamos",
@@ -92,7 +146,7 @@
       "facilities": "Basic: shade from pines, tavernas in the village nearby.",
       "desc": "The long pebble beach just north of Kalamos village, backed by pines that drop shade right onto the stones. Clear, calm water in the lee of the island — an easy walk from the harbour.",
       "commons": null,
-      "lat": 38.630,
+      "lat": 38.63,
       "lng": 20.957,
       "name_el": "Παραλία Καλάμου",
       "type_el": "Βότσαλο",
@@ -120,5 +174,6 @@
     "summary_el": "Χωρίς αεροδρόμιο. Ένα μικρό τοπικό καΐκι συνδέει τον Κάλαμο με τον Μύτικα στη στεριά (και τον γειτονικό Καστό) τις περισσότερες μέρες το καλοκαίρι· πολλοί φτάνουν με σκάφος. Εκτός σεζόν τα δρομολόγια περιορισμένα κι εξαρτώνται από τον καιρό.",
     "tip": "Pair Kalamos with Kastos — the same boat serves both, and together they make a perfect slow two-island hop.",
     "tip_el": "Συνδύασε τον Κάλαμο με τον Καστό — το ίδιο καΐκι εξυπηρετεί και τα δύο, και μαζί κάνουν το τέλειο αργό διπλό νησολόι."
-  }
+  },
+  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783723255/%CE%BA%CE%B1%CE%BB%CE%B1%CE%BC%CE%BF%CF%83_idquvo.jpg"
 }
