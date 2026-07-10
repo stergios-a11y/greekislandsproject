@@ -1,0 +1,124 @@
+{
+  "key": "kalamos",
+  "name": "Kalamos",
+  "subtitle": "The tall pine-covered island of the Inner Ionian — two villages, an abandoned bay, endless anchorages",
+  "intro": "Kalamos is the biggest and tallest of the small islands strung between Lefkada and the Acarnanian coast — a steep green ridge rising over 700 metres straight from the sea, thick with pines. Around five hundred people live in two villages: Kalamos, stacked above the little harbour on the east coast, and quieter Episkopi facing the mainland across a narrow channel. In the south lies Port Leone, a village abandoned after the 1953 earthquake, its church still tended, its bay one of the best-loved anchorages in the Ionian. A small boat links the island with Mytikas on the mainland; most other visitors arrive under sail.",
+  "when_to_visit": {
+    "summary": "A summer and sailing-season island — tavernas and rooms open roughly May to September, busiest when the flotillas pass in July and August. June and September are the sweet spot: warm sea, quiet paths through the pines, and space on the harbour front.",
+    "summary_el": "Νησί του καλοκαιριού και της σεζόν ιστιοπλοΐας — ταβέρνες και δωμάτια ανοίγουν περίπου Μάιο με Σεπτέμβριο, με αιχμή όταν περνούν οι στόλοι σκαφών Ιούλιο και Αύγουστο. Ιούνιος και Σεπτέμβριος τα ιδανικά: ζεστή θάλασσα, ήσυχα μονοπάτια στα πεύκα και χώρος στο λιμάνι.",
+    "months": [
+      { "tag": "avoid", "why": "Off-season", "why_el": "Σχεδόν όλα κλειστά", "limited": true },
+      { "tag": "avoid", "why": "Off-season", "why_el": "Σκελετός υπηρεσιών", "limited": true },
+      { "tag": "avoid", "why": "Few boats", "why_el": "Λίγα δρομολόγια", "limited": true },
+      { "tag": "ok", "why": "Awakening", "why_el": "Ήσυχα, πρώτες αφίξεις", "limited": true },
+      { "tag": "great", "why": "Sea warming", "why_el": "Κολυμπιέται πια" },
+      { "tag": "perfect", "why": "Warm, near-empty", "why_el": "Ζεστά, σχεδόν άδεια" },
+      { "tag": "great", "why": "Hot, flotillas", "why_el": "Ζέστη, στόλοι σκαφών" },
+      { "tag": "ok", "why": "Peak Greeks, busy", "why_el": "Αιχμή Ελλήνων" },
+      { "tag": "perfect", "why": "Best — peaceful", "why_el": "Καλύτερος — ζεστά" },
+      { "tag": "ok", "why": "Season ending", "why_el": "Κλείνουν σιγά" },
+      { "tag": "avoid", "why": "Off-season", "why_el": "Μόνο ντόπιοι", "limited": true },
+      { "tag": "avoid", "why": "Off-season, thin", "why_el": "Χειμώνας, ελάχιστα", "limited": true }
+    ]
+  },
+  "itinerary": {
+    "title": "1-Day Kalamos Itinerary",
+    "subtitle": "The harbour village, the ride or walk to Episkopi, and Port Leone by boat.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Village, Pines & Port Leone",
+        "color": "#0B8FAC",
+        "km": 12,
+        "drive_mins": 50,
+        "overnight": "Kalamos village",
+        "stops": [
+          {
+            "name": "Kalamos village & harbour",
+            "lat": 38.624,
+            "lng": 20.955,
+            "type": "harbour",
+            "time": "10:30",
+            "wiki": "https://www.google.com/maps/search/Kalamos%20village%20harbour",
+            "desc": "The main village climbs steeply from a small harbour that fills with yachts every summer evening. Whitewashed lanes, a couple of tavernas and shops, and pines coming right down to the water.",
+            "name_el": "Χωριό & Λιμάνι Καλάμου",
+            "desc_el": "Το κύριο χωριό ανηφορίζει απότομα από ένα μικρό λιμάνι που γεμίζει σκάφη κάθε καλοκαιρινό απόγευμα. Ασβεστωμένα σοκάκια, δυο ταβέρνες και μαγαζιά, και πεύκα που φτάνουν ώς το νερό."
+          },
+          {
+            "name": "Episkopi",
+            "lat": 38.642,
+            "lng": 20.930,
+            "type": "village",
+            "time": "12:30",
+            "wiki": "https://www.google.com/maps/search/Episkopi%20Kalamos",
+            "desc": "The island's second, much quieter village looks across a narrow channel to Mytikas on the mainland. A handful of houses, a small quay and absolute calm — the road there winds through pine forest with sea views the whole way.",
+            "name_el": "Επισκοπή",
+            "desc_el": "Το δεύτερο, πολύ πιο ήσυχο χωριό του νησιού κοιτάζει τον Μύτικα απέναντι, πέρα από ένα στενό κανάλι. Λίγα σπίτια, ένας μικρός μόλος κι απόλυτη ηρεμία — ο δρόμος ώς εκεί ελίσσεται μέσα σε πευκοδάσος με θέα στη θάλασσα σε όλη τη διαδρομή."
+          },
+          {
+            "name": "Port Leone",
+            "lat": 38.596,
+            "lng": 20.912,
+            "type": "sight",
+            "time": "15:00",
+            "wiki": "https://www.google.com/maps/search/Port%20Leone%20Kalamos",
+            "desc": "An abandoned village on a deep, sheltered bay in the island's south — its people left after the 1953 earthquake broke the water supply, but the church is still cared for. No road: reach it by boat or on foot along the old path. One of the most atmospheric anchorages in the Ionian.",
+            "name_el": "Πόρτο Λεόνε",
+            "desc_el": "Ένα εγκαταλελειμμένο χωριό σε βαθύ, προστατευμένο κόλπο στα νότια του νησιού — οι κάτοικοι έφυγαν μετά τον σεισμό του 1953, μα η εκκλησία φροντίζεται ακόμα. Δρόμος δεν υπάρχει: πρόσβαση με σκάφος ή πεζή στο παλιό μονοπάτι. Από τα πιο ατμοσφαιρικά αραξοβόλια του Ιονίου."
+          }
+        ],
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Kalamos harbour",
+            "area_el": "Λιμάνι Καλάμου",
+            "desc": "The harbour tavernas cook for the sailing crowd — grilled fish, goat, horta and oil from the island's groves. Simple menus that change with the day's catch.",
+            "desc_el": "Οι ταβέρνες του λιμανιού μαγειρεύουν για τον κόσμο των σκαφών — ψητό ψάρι, κατσίκι, χόρτα και λάδι από τους ελαιώνες του νησιού. Απλά μενού που αλλάζουν με την ψαριά της ημέρας."
+          }
+        ]
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Kalamos village beach",
+      "wiki": "https://www.google.com/maps/search/Kalamos%20beach",
+      "rating": 3,
+      "type": "Pebble",
+      "length": "600 m",
+      "depth": "Medium — very clear",
+      "facing": "East-facing — mostly sheltered",
+      "facilities": "Basic: shade from pines, tavernas in the village nearby.",
+      "desc": "The long pebble beach just north of Kalamos village, backed by pines that drop shade right onto the stones. Clear, calm water in the lee of the island — an easy walk from the harbour.",
+      "commons": null,
+      "lat": 38.630,
+      "lng": 20.957,
+      "name_el": "Παραλία Καλάμου",
+      "type_el": "Βότσαλο",
+      "depth_el": "Μέτρια — πολύ διάφανα",
+      "facing_el": "Ανατολικά — κυρίως προστατευμένη",
+      "facilities_el": "Βασικές: σκιά από πεύκα, ταβέρνες στο χωριό δίπλα.",
+      "desc_el": "Η μακριά βοτσαλωτή παραλία λίγο βόρεια του χωριού, με πεύκα που ρίχνουν τη σκιά τους ώς τα βότσαλα. Καθαρά, ήρεμα νερά στην απάνεμη μεριά του νησιού — εύκολο περπάτημα από το λιμάνι."
+    }
+  ],
+  "name_el": "Κάλαμος",
+  "name_accusative_el": "Κάλαμο",
+  "gender_el": "m",
+  "subtitle_el": "Το ψηλό πευκόφυτο νησί του Εσωτερικού Ιονίου — δύο χωριά, ένας εγκαταλελειμμένος όρμος, αμέτρητα αραξοβόλια",
+  "intro_el": "Ο Κάλαμος είναι το μεγαλύτερο και ψηλότερο από τα μικρά νησιά ανάμεσα στη Λευκάδα και τις ακαρνανικές ακτές — μια απότομη πράσινη ράχη που υψώνεται πάνω από 700 μέτρα κατευθείαν από τη θάλασσα, πνιγμένη στα πεύκα. Γύρω στους πεντακόσιους κάτοικοι μοιράζονται δύο χωριά: τον Κάλαμο, χτισμένο πάνω από το λιμανάκι της ανατολικής ακτής, και την πιο ήσυχη Επισκοπή απέναντι από τη στεριά. Στα νότια βρίσκεται το Πόρτο Λεόνε, χωριό εγκαταλελειμμένο μετά τον σεισμό του 1953, με την εκκλησιά του ακόμα φροντισμένη και τον κόλπο του από τα πιο αγαπημένα αραξοβόλια του Ιονίου. Ένα μικρό καΐκι συνδέει το νησί με τον Μύτικα· οι περισσότεροι άλλοι επισκέπτες φτάνουν με πανιά.",
+  "getting_there": {
+    "pills": [
+      "⛵ from Mytikas (mainland)",
+      "€6–10"
+    ],
+    "pills_el": [
+      "⛵ από Μύτικα (στεριά)",
+      "€6–10"
+    ],
+    "summary": "No airport. A small local boat links Kalamos with Mytikas on the mainland (and neighbouring Kastos) most days in summer; many visitors arrive by yacht. Limited, weather-dependent service off-season.",
+    "summary_el": "Χωρίς αεροδρόμιο. Ένα μικρό τοπικό καΐκι συνδέει τον Κάλαμο με τον Μύτικα στη στεριά (και τον γειτονικό Καστό) τις περισσότερες μέρες το καλοκαίρι· πολλοί φτάνουν με σκάφος. Εκτός σεζόν τα δρομολόγια περιορισμένα κι εξαρτώνται από τον καιρό.",
+    "tip": "Pair Kalamos with Kastos — the same boat serves both, and together they make a perfect slow two-island hop.",
+    "tip_el": "Συνδύασε τον Κάλαμο με τον Καστό — το ίδιο καΐκι εξυπηρετεί και τα δύο, και μαζί κάνουν το τέλειο αργό διπλό νησολόι."
+  }
+}

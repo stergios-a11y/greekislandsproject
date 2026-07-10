@@ -30,9 +30,10 @@ const ISLANDS_DATA = {
   "pserimos":     { name:"Pserimos",         lat:36.930, lng:27.152, beach:4.0, hist:1.5, night:1.5, access:2.0, afford:4.0, car_need:1.0, has_airport:false, total:3.2, area:15,    pop:84,      days:1, island_group:"Dodecanese", drama:false, hiking:false, springs:false, chora:false, sailing:false },
   "telendos":     { name:"Telendos",         lat:36.998, lng:26.918, beach:2.8, hist:3.0, night:1.5, access:2.5, afford:4.0, car_need:1.0, has_airport:false, total:3.3, area:5,     pop:50,      days:1, island_group:"Dodecanese", drama:false, hiking:true, springs:false, chora:false, sailing:false },
   "erikousa":     { name:"Erikousa",         lat:39.883, lng:19.577, beach:3.8, hist:2.0, night:1.5, access:2.0, afford:4.2, car_need:1.0, has_airport:false, total:3.2, area:4,     pop:447,     days:2, island_group:"Ionian", drama:false, hiking:false, springs:false, chora:false, sailing:true },
-  "kastos":       { name:"Kastos",           lat:38.580, lng:20.905, beach:2.8, hist:2.0, night:1.0, access:1.5, afford:4.0, car_need:1.0, has_airport:false, total:3.0, area:6,     pop:40,      days:1, island_group:"Ionian", drama:false, hiking:false, springs:false, chora:false, sailing:true },
+  "kastos":       { name:"Kastos",           lat:38.5758, lng:20.9158, beach:2.8, hist:2.0, night:1.0, access:1.5, afford:4.0, car_need:1.0, has_airport:false, total:3.0, area:6,     pop:40,      days:1, island_group:"Ionian", drama:false, hiking:false, springs:false, chora:false, sailing:true },
+  "kalamos":      { name:"Kalamos",          lat:38.625, lng:20.925, beach:3.0, hist:2.0, night:1.3, access:2.0, afford:4.2, car_need:1.5, has_airport:false, total:3.2, area:25,    pop:496,     days:2, island_group:"Ionian", drama:false, hiking:true, springs:false, chora:false, sailing:true },
   "thymaina":     { name:"Thymaina",         lat:37.600, lng:26.440, beach:2.8, hist:1.5, night:1.0, access:1.5, afford:4.3, car_need:1.0, has_airport:false, total:3.0, area:10,    pop:191,     days:1, island_group:"NE Aegean", drama:false, hiking:true, springs:false, chora:false, sailing:false },
-  "meganisi":     { name:"Meganisi",         lat:38.643, lng:20.783, beach:4.0, hist:2.5, night:2.8, access:3.2, afford:3.2, car_need:3.0, has_airport:false, total:3.5, area:22,    pop:1041,    days:2, island_group:"Ionian", drama:false, hiking:false, springs:false, chora:false, sailing:true },
+  "meganisi":     { name:"Meganisi",         lat:38.6539, lng:20.7692, beach:4.0, hist:2.5, night:2.8, access:3.2, afford:3.2, car_need:3.0, has_airport:false, total:3.5, area:22,    pop:1041,    days:2, island_group:"Ionian", drama:false, hiking:false, springs:false, chora:false, sailing:true },
   "ithaca":       { name:"Ithaca",           lat:38.41, lng:20.69, beach:3.8, hist:4.9, night:2.5, access:2.5, afford:3.5, car_need:4.0, has_airport:false, total:3.8, area:96,    pop:3231,    days:3, island_group:"Ionian", drama:false, hiking:true, springs:false, chora:false, sailing:true },
   "kefalonia":    { name:"Kefalonia",        lat:38.175, lng:20.569, beach:4.7, hist:3.2, night:3.2, access:3.5, afford:3.8, car_need:5.0, has_airport:true, total:4.1, area:773,   pop:35800,   days:5, island_group:"Ionian", drama:false, hiking:true, springs:false, chora:false, sailing:true },
   "zakynthos":    { name:"Zakynthos",        lat:37.79, lng:20.77, beach:4.8, hist:2.5, night:4.5, access:3.7, afford:3.5, car_need:4.0, has_airport:true, total:4.1, area:405,   pop:40700,   days:4, island_group:"Ionian", drama:false, hiking:false, springs:false, chora:false, sailing:false },
@@ -1131,7 +1132,8 @@ async function renderWhatsOnStrip() {
     perfectLabel = lang === 'el' ? `Ιδανικά τον ${monthLabel}` : `Perfect in ${monthLabel}`;
   }
 
-  const seeAll = lang === 'el' ? 'Όλα τα 87 ανά μήνα →' : 'All 87 by month →';
+  const _n = Object.keys(meta).length || 88;
+  const seeAll = lang === 'el' ? `Όλα τα ${_n} ανά μήνα →` : `All ${_n} by month →`;
   season.innerHTML = `
     <div class="bp-sec-head">
       <h2>${perfectLabel}</h2>
