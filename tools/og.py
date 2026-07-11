@@ -458,9 +458,38 @@ def render_text_card(key, data):
 # ----------------------------------------------------------------------
 # Main
 # ----------------------------------------------------------------------
+# ---------------------------------------------------------------------
+# Incremental generation: each island's card is a pure function of its
+# hero URL + the name/score/group from script.js. We hash those inputs
+# into og/.og-manifest.json and skip islands whose signature is unchanged
+# and whose .jpg already exists. `python3 tools/og.py --force` rebuilds all;
+# `python3 tools/og.py <key> [key...]` still targets specific islands.
+# ---------------------------------------------------------------------
+import hashlib
+
+MANIFEST_PATH = OUT_DIR / '.og-manifest.json'
+
+def _signature(key, data):
+    meta = get_island_meta(key)
+    parts = [
+        _hero_url(data) or '',
+        str(meta.get('name', '')),
+        str(meta.get('total', '')),
+        str(meta.get('group', '')),
+        data.get('name', ''),
+    ]
+    return hashlib.md5('|'.join(parts).encode('utf-8')).hexdigest()
+
+def _load_manifest():
+    try:
+        return json.loads(MANIFEST_PATH.read_text())
+    except Exception:
+        return {}
+
 def main():
-    args = sys.argv[1:]
-    keys = args if args else None
+    args = [a for a in sys.argv[1:]]
+    force = '--force' in args
+    keys = [a for a in args if not a.startswith('--')] or None
 
     json_files = sorted(ISLANDS_DIR.glob('*.json'))
     if keys:
@@ -469,7 +498,9 @@ def main():
             print(f'No matching island JSONs found for: {", ".join(keys)}')
             return
 
-    print(f'Generating OG images for {len(json_files)} island(s) -> {OUT_DIR}/')
+    manifest = _load_manifest()
+    made, skipped = 0, 0
+    print(f'OG images: checking {len(json_files)} island(s) -> {OUT_DIR}/')
     for f in json_files:
         key = f.stem
         try:
@@ -477,13 +508,21 @@ def main():
         except Exception as e:
             print(f'  ✗ {key}: invalid JSON — {e}')
             continue
+        sig = _signature(key, data)
+        out_path = OUT_DIR / f'{key}.jpg'
+        if not force and out_path.exists() and manifest.get(key) == sig:
+            skipped += 1
+            continue
         out = render_island(key, data)
+        manifest[key] = sig
         size_kb = out.stat().st_size // 1024
+        made += 1
         print(f'  ✓ {key}.jpg  ({size_kb} KB)')
         # Be polite to Wikimedia's thumbnail servers (avoids 429 rate-limits)
         import time as _t; _t.sleep(0.35)
 
-    print(f'\nDone. {len(json_files)} OG images written to {OUT_DIR}/')
+    MANIFEST_PATH.write_text(json.dumps(manifest, indent=0, sort_keys=True))
+    print(f'\nDone. {made} regenerated, {skipped} unchanged (skipped). Use --force to rebuild all.')
     print('Next: deploy and verify at https://aegeanblueprint.com/og/{key}.jpg')
 
 if __name__ == '__main__':
