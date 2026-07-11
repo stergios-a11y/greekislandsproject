@@ -198,6 +198,28 @@ _FACING_MAP = {
                   'el': 'Με προσανατολισμό βορειοδυτικό — εκτεθειμένη στο μελτέμι (τον κυρίαρχο καλοκαιρινό Β/ΒΑ άνεμο)· συχνά αγριεμένη τις μέρες μελτεμιού'},
 }
 # Abbreviations map to the full direction
+
+# Ionian (Eptanisa) variant — no meltemi there; the summer wind is the
+# maïstros, a NW afternoon sea breeze. Mirrors FACING_MAP_IONIAN in i18n.js.
+_FACING_MAP_IONIAN = {
+    'north':     {'en': "North-facing — open to the Ionian's afternoon maïstros (NW sea breeze); calmest in the morning",
+                  'el': 'Με προσανατολισμό βόρειο — ανοιχτή στον απογευματινό μαΐστρο (τη ΒΔ θαλάσσια αύρα του Ιονίου)· πιο ήρεμη το πρωί'},
+    'northeast': {'en': 'Northeast-facing — mostly sheltered from the afternoon maïstros (NW breeze); usually calm',
+                  'el': 'Με προσανατολισμό βορειοανατολικό — κυρίως προστατευμένη από τον απογευματινό μαΐστρο (ΒΔ αύρα)· συνήθως ήρεμη'},
+    'east':      {'en': "East-facing — sheltered from the Ionian's afternoon maïstros (NW breeze); typically calm all day",
+                  'el': 'Με προσανατολισμό ανατολικό — προστατευμένη από τον απογευματινό μαΐστρο του Ιονίου (ΒΔ αύρα)· κατά κανόνα ήρεμη όλη μέρα'},
+    'southeast': {'en': 'Southeast-facing — well sheltered; calm in summer, exposed only to rare southerlies',
+                  'el': 'Με προσανατολισμό νοτιοανατολικό — καλά προστατευμένη· ήρεμη το καλοκαίρι, εκτεθειμένη μόνο σε σπάνιους νοτιάδες'},
+    'south':     {'en': 'South-facing — sheltered from the prevailing NW winds; calm in summer, exposed only to rare southerlies',
+                  'el': 'Με προσανατολισμό νότιο — προστατευμένη από τους επικρατούντες ΒΔ ανέμους· ήρεμη το καλοκαίρι, εκτεθειμένη μόνο σε σπάνιους νοτιάδες'},
+    'southwest': {'en': 'Southwest-facing — calm mornings; picks up some of the afternoon maïstros (NW breeze) late in the day',
+                  'el': 'Με προσανατολισμό νοτιοδυτικό — ήρεμα πρωινά· πιάνει λίγο τον απογευματινό μαΐστρο (ΒΔ αύρα) αργά τη μέρα'},
+    'west':      {'en': "West-facing — exposed to the afternoon maïstros (the Ionian's NW summer breeze); glassy mornings, waves by late afternoon",
+                  'el': 'Με προσανατολισμό δυτικό — εκτεθειμένη στον απογευματινό μαΐστρο (τη ΒΔ καλοκαιρινή αύρα του Ιονίου)· λάδι το πρωί, κυματάκι το απόγευμα'},
+    'northwest': {'en': 'Northwest-facing — head-on to the afternoon maïstros (NW breeze); best swum in the morning',
+                  'el': 'Με προσανατολισμό βορειοδυτικό — κόντρα στον απογευματινό μαΐστρο (ΒΔ αύρα)· καλύτερη για μπάνιο το πρωί'},
+}
+
 _FACING_ABBREV = {'n': 'north', 'ne': 'northeast', 'e': 'east', 'se': 'southeast',
                   's': 'south', 'sw': 'southwest', 'w': 'west', 'nw': 'northwest',
                   # Hybrid directions seen in the data — map to the nearest cardinal
@@ -210,7 +232,7 @@ _FACING_ABBREV = {'n': 'north', 'ne': 'northeast', 'e': 'east', 'se': 'southeast
                   'north-northwest': 'northwest', 'nnw': 'northwest',
                   'west-northwest': 'northwest', 'wnw': 'northwest'}
 
-def interpret_facing(raw_facing, lang):
+def interpret_facing(raw_facing, lang, ionian=False):
     """Turn a beach `facing` value into a traveler-friendly wind-protection
     sentence. Mirrors interpretFacing() in i18n.js. See that function for
     rationale. Falls back to the raw value for unmatched edge cases."""
@@ -226,7 +248,7 @@ def interpret_facing(raw_facing, lang):
     head = _re.sub(r'[-\s]facing$', '', head, flags=_re.IGNORECASE).strip().lower()
     if head in _FACING_ABBREV:
         head = _FACING_ABBREV[head]
-    mapped = _FACING_MAP.get(head)
+    mapped = (_FACING_MAP_IONIAN if ionian else _FACING_MAP).get(head)
     if mapped:
         return mapped.get('el' if lang == 'el' else 'en', raw_facing)
     return raw_facing
@@ -1394,7 +1416,8 @@ def render_body(key, data, meta, lang='en'):
             btype = esc(pick(b, 'type', lang))
             blen = esc(pick(b, 'length', lang))
             bdepth = esc(pick(b, 'depth', lang))
-            bfacing = esc(interpret_facing(pick(b, 'facing', lang), lang))
+            bfacing = esc(interpret_facing(pick(b, 'facing', lang), lang,
+                                            ionian=(meta.get('group') == 'Ionian')))
             bfac = esc(pick(b, 'facilities', lang))
             beach_blocks.append(f'''
 <article class="seo-beach">
@@ -1962,8 +1985,8 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="{asset_prefix}i18n.js?v=34"></script>
-<script src="{asset_prefix}script.js?v=56"></script>
+<script src="{asset_prefix}i18n.js?v=35"></script>
+<script src="{asset_prefix}script.js?v=57"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.

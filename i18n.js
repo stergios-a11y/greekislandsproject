@@ -597,7 +597,7 @@ function pickLang(obj, field) {
 // Lang: 'en' | 'el'. Falls back to returning the raw value if we can't
 // classify the direction (e.g. "Various", "Double bay" — rare edge cases
 // where the original prose is already clearer than anything we'd generate).
-function interpretFacing(rawFacing, lang) {
+function interpretFacing(rawFacing, lang, islandGroup) {
   if (!rawFacing) return '';
   // Extract the cardinal direction from the start of the string. Data has
   // values like 'South', 'South-facing', 'South — calm water', 'SW', etc.
@@ -660,8 +660,36 @@ function interpretFacing(rawFacing, lang) {
                    el: 'Με προσανατολισμό βορειοδυτικό — εκτεθειμένη στο μελτέμι (τον κυρίαρχο καλοκαιρινό Β/ΒΑ άνεμο)· συχνά αγριεμένη τις μέρες μελτεμιού' },
   };
 
-  const mapped = FACING_MAP[headNormalized];
-  if (mapped) return mapped[lang === 'el' ? 'el' : 'en'];
+
+  // Ionian (Eptanisa) islands never see the meltemi — the prevailing summer
+  // wind there is the maïstros, a NW afternoon sea breeze (mornings are
+  // usually glassy). Same directions, different weather story.
+  const FACING_MAP_IONIAN = {
+    'north':     { en: "North-facing — open to the Ionian's afternoon maïstros (NW sea breeze); calmest in the morning",
+                   el: 'Με προσανατολισμό βόρειο — ανοιχτή στον απογευματινό μαΐστρο (τη ΒΔ θαλάσσια αύρα του Ιονίου)· πιο ήρεμη το πρωί' },
+    'northeast': { en: 'Northeast-facing — mostly sheltered from the afternoon maïstros (NW breeze); usually calm',
+                   el: 'Με προσανατολισμό βορειοανατολικό — κυρίως προστατευμένη από τον απογευματινό μαΐστρο (ΒΔ αύρα)· συνήθως ήρεμη' },
+    'east':      { en: "East-facing — sheltered from the Ionian's afternoon maïstros (NW breeze); typically calm all day",
+                   el: 'Με προσανατολισμό ανατολικό — προστατευμένη από τον απογευματινό μαΐστρο του Ιονίου (ΒΔ αύρα)· κατά κανόνα ήρεμη όλη μέρα' },
+    'southeast': { en: 'Southeast-facing — well sheltered; calm in summer, exposed only to rare southerlies',
+                   el: 'Με προσανατολισμό νοτιοανατολικό — καλά προστατευμένη· ήρεμη το καλοκαίρι, εκτεθειμένη μόνο σε σπάνιους νοτιάδες' },
+    'south':     { en: 'South-facing — sheltered from the prevailing NW winds; calm in summer, exposed only to rare southerlies',
+                   el: 'Με προσανατολισμό νότιο — προστατευμένη από τους επικρατούντες ΒΔ ανέμους· ήρεμη το καλοκαίρι, εκτεθειμένη μόνο σε σπάνιους νοτιάδες' },
+    'southwest': { en: 'Southwest-facing — calm mornings; picks up some of the afternoon maïstros (NW breeze) late in the day',
+                   el: 'Με προσανατολισμό νοτιοδυτικό — ήρεμα πρωινά· πιάνει λίγο τον απογευματινό μαΐστρο (ΒΔ αύρα) αργά τη μέρα' },
+    'west':      { en: "West-facing — exposed to the afternoon maïstros (the Ionian's NW summer breeze); glassy mornings, waves by late afternoon",
+                   el: 'Με προσανατολισμό δυτικό — εκτεθειμένη στον απογευματινό μαΐστρο (τη ΒΔ καλοκαιρινή αύρα του Ιονίου)· λάδι το πρωί, κυματάκι το απόγευμα' },
+    'northwest': { en: 'Northwest-facing — head-on to the afternoon maïstros (NW breeze); best swum in the morning',
+                   el: 'Με προσανατολισμό βορειοδυτικό — κόντρα στον απογευματινό μαΐστρο (ΒΔ αύρα)· καλύτερη για μπάνιο το πρωί' },
+  };
+  FACING_MAP_IONIAN['n']=FACING_MAP_IONIAN['north']; FACING_MAP_IONIAN['ne']=FACING_MAP_IONIAN['northeast'];
+  FACING_MAP_IONIAN['e']=FACING_MAP_IONIAN['east']; FACING_MAP_IONIAN['se']=FACING_MAP_IONIAN['southeast'];
+  FACING_MAP_IONIAN['s']=FACING_MAP_IONIAN['south']; FACING_MAP_IONIAN['sw']=FACING_MAP_IONIAN['southwest'];
+  FACING_MAP_IONIAN['w']=FACING_MAP_IONIAN['west']; FACING_MAP_IONIAN['nw']=FACING_MAP_IONIAN['northwest'];
+
+  const activeMap = (islandGroup === 'Ionian') ? FACING_MAP_IONIAN : FACING_MAP;
+  const chosen = activeMap[headNormalized];
+  if (chosen) return chosen[lang === 'el' ? 'el' : 'en'];
   // Edge cases (e.g. "Various", "Double bay", "All directions") — the original
   // value is usually already a complete prose phrase, so just return it as-is.
   return rawFacing;

@@ -1779,7 +1779,7 @@ function buildIslandPage(data, key) {
           <div class="beach-spec"><span class="beach-spec-label">${t("detail.spec.type")}</span><span class="beach-spec-val">${pickLang(b, "type")}</span></div>
           <div class="beach-spec"><span class="beach-spec-label">${t("detail.spec.length")}</span><span class="beach-spec-val">${pickLang(b, "length")}</span></div>
           <div class="beach-spec"><span class="beach-spec-label">${t("detail.spec.depth")}</span><span class="beach-spec-val">${pickLang(b, "depth")}</span></div>
-          <div class="beach-spec"><span class="beach-spec-label">${t("detail.spec.wind")}</span><span class="beach-spec-val">${interpretFacing(pickLang(b, "facing"), CURRENT_LANG)}</span></div>
+          <div class="beach-spec"><span class="beach-spec-label">${t("detail.spec.wind")}</span><span class="beach-spec-val">${interpretFacing(pickLang(b, "facing"), CURRENT_LANG, (ISLANDS_DATA[key]||{}).island_group)}</span></div>
           <div class="beach-spec beach-spec-full"><span class="beach-spec-label">${t("detail.spec.facilities")}</span><span class="beach-spec-val">${pickLang(b, "facilities")}</span></div>
         </div>
       </div>
@@ -3411,7 +3411,11 @@ function renderCompareExtra(iA, iB, jsonA, jsonB) {
         const f = b.facing.toLowerCase();
         if (f.includes('shelter')) facings.add('sheltered');
         else if (f.includes('exposed') || f.includes('open sea')) facings.add('exposed');
-        if (f.includes('meltemi') || f.includes('north')) facings.add('Meltemi-exposed');
+        // 'Meltemi-exposed' only makes sense in the Aegean — the Ionian's
+        // summer wind is the NW maïstros, not the meltemi.
+        if (f.includes('meltemi') || f.includes('north')) {
+          facings.add(island.island_group === 'Ionian' ? 'NW-breeze exposed' : 'Meltemi-exposed');
+        }
       }
     });
     const parts = [...types, ...facings].slice(0, 3);
