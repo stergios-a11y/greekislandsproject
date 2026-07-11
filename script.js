@@ -2190,7 +2190,7 @@ function buildWhenToVisitSection(data) {
     const prefix = isLimited ? `${limitedLabel} — ` : '';
     const safeWhy = (prefix + why).replace(/"/g, '&quot;');
     const cls = `wtv-cell wtv-${tag}${isLimited ? ' wtv-limited' : ''}`;
-    return `<div class="${cls}" title="${monthNames[i]} — ${safeWhy}">${monthNames[i]}</div>`;
+    return `<div class="${cls}" title="${monthNames[i]} — ${safeWhy}" data-cap="${monthNames[i]} — ${safeWhy}" onclick="wtvShowCap(this)">${monthNames[i]}</div>`;
   }).join('');
 
   // "Highlights" line above the ribbon. Groups months by tag and renders
@@ -2263,23 +2263,10 @@ function buildWhenToVisitSection(data) {
     .map(t => `<span class="wtv-legend-item"><span class="wtv-legend-swatch wtv-${t}"></span>${tagLabels[t]}</span>`)
     .join('');
 
-  // Mobile vertical list — 12 rows, one per month, with tag swatch + caption.
-  // Limited months get a "·" indicator next to the why text.
-  const verticalRows = w.months.map((m, i) => {
-    const tag = (m.tag || 'ok').toLowerCase();
-    const why = pickLang(m, 'why') || '';
-    const isLimited = m.limited === true;
-    const limitedBadge = isLimited
-      ? `<span class="wtv-v-limited-badge" title="${limitedLabel}">·</span>`
-      : '';
-    const cls = `wtv-vrow wtv-v-${tag}${isLimited ? ' wtv-v-limited' : ''}`;
-    return `<div class="${cls}">
-      <div class="wtv-vmonth">${monthNames[i]}</div>
-      <div class="wtv-vbar wtv-${tag}" title="${tagLabels[tag] || ''}"></div>
-      <div class="wtv-vwhy">${limitedBadge}${why}</div>
-    </div>`;
-  }).join('');
-
+  // The 12-cell ribbon is used on ALL screen sizes (the old mobile 12-row
+  // list was too verbose). Tapping/clicking a cell shows its caption in the
+  // line below the ribbon — the touch equivalent of the desktop tooltip.
+  const tapHint = lang === 'el' ? 'Πάτα έναν μήνα για λεπτομέρειες' : 'Tap a month for details';
   return `
     <details class="wtv-section" open>
       <summary class="wtv-title">${t('wtv.title')}</summary>
@@ -2290,9 +2277,21 @@ function buildWhenToVisitSection(data) {
           ${ribbonCells}
         </div>
       </div>
-      <div class="wtv-vertical">${verticalRows}</div>
+      <div class="wtv-caption"><span class="wtv-caption-hint">${tapHint}</span></div>
       <div class="wtv-legend">${legend}</div>
     </details>`;
+}
+
+/* Tap/click handler for when-to-visit ribbon cells: shows the month's
+   caption in the .wtv-caption line (mobile-friendly tooltip). */
+function wtvShowCap(cell) {
+  const section = cell.closest('.wtv-section');
+  if (!section) return;
+  const cap = section.querySelector('.wtv-caption');
+  if (!cap) return;
+  section.querySelectorAll('.wtv-cell.wtv-sel').forEach(c => c.classList.remove('wtv-sel'));
+  cell.classList.add('wtv-sel');
+  cap.textContent = cell.dataset.cap || '';
 }
 
 /* ============================================================

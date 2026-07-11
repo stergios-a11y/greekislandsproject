@@ -45,7 +45,7 @@ def _resolve_root():
 
 ROOT = _resolve_root()
 SITE_URL = 'https://aegeanblueprint.com'
-ASSET_V = 57
+ASSET_V = 58
 
 VERDICTS = json.loads((ROOT / 'vs_verdicts.json').read_text(encoding='utf-8'))
 FAQS_PATH = ROOT / 'vs_faqs.json'
