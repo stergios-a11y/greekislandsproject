@@ -6123,3 +6123,20 @@ html.dark .map-mode-toast { background: #EEF2F5; color: #171C24; }
   .mf-label { display: none; }
   #main-map .vibe-panel { top: 58px; }
 }
+
+/* Mobile: strip the below-map content down to essentials. Everything stays
+   in the DOM (desktop + crawlers unaffected) — this is display-only. */
+@media (max-width: 840px) {
+  /* Intro prose: heading + first paragraph only */
+  .home-intro p:nth-of-type(n+2) { display: none; }
+  /* How-it-works: titles only, compact cards */
+  .home-how-item p { display: none; }
+  .home-how-item { padding: 13px 16px 11px; }
+  .home-how-item h3 { margin: 0; }
+  .home-how-grid { gap: 8px; }
+  /* Seasonal festival pills: one pill + the "all N festivals" link */
+  .bp-fest-strip .bp-fest-pill:nth-child(n+2) { display: none; }
+  /* Face-offs: four chips (two tidy rows) */
+  .bp-vs-strip .bp-vs-chip:nth-child(n+5) { display: none; }
+  .home-block { margin-bottom: 36px; }
+}
