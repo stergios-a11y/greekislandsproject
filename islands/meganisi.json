@@ -189,15 +189,15 @@
             "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783803738/%CE%BB%CE%B9%CE%BC%CE%BF%CE%BD%CE%B1%CF%81%CE%B9_uen6vq.jpg"
           },
           {
-            "name": "Nydri Ferry — Departure",
-            "lat": 38.65,
-            "lng": 20.7833,
+            "name": "Spartochori (Porto Spilia) — Ferry back to Nydri",
+            "lat": 38.6608,
+            "lng": 20.7626,
             "type": "harbour",
             "time": "16:00",
-            "wiki": null,
-            "desc": "Ferry back to Nydri on Lefkada. The 30-minute crossing passes the islands of Skorpios and Sparti.",
-            "name_el": "Πλοίο Νυδριού — Αναχώρηση",
-            "desc_el": "Πλοίο πίσω στο Νυδρί της Λευκάδας. Το 30λεπτο πέρασμα περνάει από τα νησιά Σκορπιός και Σπάρτη."
+            "wiki": "https://www.google.com/maps/search/Porto%20Spilia%20Meganisi",
+            "desc": "End the loop back at Spartochori's little port, Porto Spilia, for a last coffee on the waterfront before the ferry across to Nydri on Lefkada. Arrive twenty minutes early in August — the boat fills with day-trippers and their scooters.",
+            "name_el": "Σπαρτοχώρι (Πόρτο Σπηλιά) — Πλοίο επιστροφής για Νυδρί",
+            "desc_el": "Κλείσε τον κύκλο πίσω στο λιμανάκι του Σπαρτοχωρίου, το Πόρτο Σπηλιά, για έναν τελευταίο καφέ στην προκυμαία πριν το πλοίο για το Νυδρί της Λευκάδας. Τον Αύγουστο πήγαινε είκοσι λεπτά νωρίτερα — το καράβι γεμίζει με ημερήσιους επισκέπτες και τα μηχανάκια τους."
           }
         ],
         "title_el": "Κατωμέρι & Αναχώρηση"
@@ -207,6 +207,28 @@
     "subtitle_el": "Μια σύντομη απόδραση από τη Λευκάδα στις θαλάσσιες σπηλιές, τα λιμενικά χωριά και τις κρυμμένες παραλίες του πιο αυθεντικού μικρού νησιού του Ιονίου."
   },
   "beaches": [
+    {
+      "name": "Ammoglossa",
+      "wiki": "https://www.google.com/maps?q=38.65900956932009,20.738008643537803",
+      "rating": 5,
+      "type": "Sandspit — fine sand",
+      "type_el": "Αμμόγλωσσα — ψιλή άμμος",
+      "length": "~150 m tongue of sand",
+      "length_el": "Γλώσσα άμμου ~150 μ.",
+      "depth": "Shallow — warm, turquoise water on both sides",
+      "depth_el": "Ρηχά — ζεστά, τιρκουάζ νερά κι από τις δύο πλευρές",
+      "facing": "Double-sided sandspit — one side is always in the lee, whatever the breeze",
+      "facing_el": "Δίπλευρη αμμόγλωσσα — η μία πλευρά είναι πάντα απάνεμη, όποια αύρα κι αν φυσά",
+      "facilities": "None — bring water and shade; the nearest tavernas are in Spartochori.",
+      "facilities_el": "Καμία — νερό και σκιά μαζί σου· οι κοντινότερες ταβέρνες στο Σπαρτοχώρι.",
+      "desc": "The best beach on Meganisi: a blond tongue of fine sand reaching into the channel at the island's north-west tip, with shallow warm water on both sides and Lefkada straight across. Because it's double-sided, there's always a calm shore — and in the soft late-afternoon light it's the island's signature photograph.",
+      "desc_el": "Η καλύτερη παραλία του Μεγανησιού: μια ξανθιά γλώσσα ψιλής άμμου που μπαίνει στο κανάλι στη βορειοδυτική άκρη του νησιού, με ρηχά ζεστά νερά κι από τις δύο πλευρές και τη Λευκάδα ακριβώς απέναντι. Επειδή έχει δύο πλευρές, πάντα υπάρχει απάνεμη ακτή — και στο απαλό απογευματινό φως είναι η φωτογραφία-υπογραφή του νησιού.",
+      "commons": null,
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783803738/%CE%B1%CE%BC%CE%BC%CE%BF%CE%B3%CE%BB%CF%89%CF%83%CF%83%CE%B1_kung1d.jpg",
+      "lat": 38.65900956932009,
+      "lng": 20.738008643537803,
+      "name_el": "Αμμόγλωσσα"
+    },
     {
       "name": "Spartochori Beach",
       "wiki": "https://www.google.com/maps/place/Spartochori+Beach/@38.6591054,20.7624969,150m/data=!3m1!1e3!4m6!3m5!1s0x135dc947c81645b5:0xd5552aea81b7efce!8m2!3d38.6591054!4d20.7624969!16s%2Fg%2F11knpsrnm3?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D",
@@ -248,27 +270,6 @@
       "facilities_el": "Καμία — πρόσβαση μόνο με βάρκα ή μεγάλη πεζοπορία.",
       "desc_el": "Μια απομακρυσμένη βότσαλη παραλία στη νότια ακτή — προσβάσιμη μόνο με βάρκα ή ουσιαστική πεζοπορία. Η απομόνωση είναι η έλξη. Τέλεια διαύγεια νερού.",
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783803738/%CE%BB%CE%B9%CE%BC%CE%BF%CE%BD%CE%B1%CF%81%CE%B9_uen6vq.jpg"
-    },
-    {
-      "name": "Vathy Beach",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJId3jT97LXRMRx275k9hq0Jw",
-      "rating": 4,
-      "type": "Pebble",
-      "length": "150 m",
-      "depth": "Medium — harbour swimming",
-      "facing": "Northwest-facing — sheltered harbour bay",
-      "facilities": "Good: tavernas directly on the waterfront.",
-      "desc": "The small harbour beach at Vathy — not the island's most beautiful but the most convenient, with excellent tavernas a few steps away. Perfect for a swim before dinner.",
-      "commons": null,
-      "lat": 38.6627109,
-      "lng": 20.7853709,
-      "name_el": "Παραλία Βαθύ",
-      "type_el": "Βότσαλα",
-      "depth_el": "Μέτρια — λιμενικό κολύμπι",
-      "facing_el": "Βορειοδυτικά — προστατευμένος λιμενικός κόλπος",
-      "facilities_el": "Καλές: ταβέρνες ακριβώς στο παραλιακό.",
-      "desc_el": "Η μικρή παραλία του λιμανιού στο Βαθύ — όχι η πιο όμορφη του νησιού αλλά η πιο βολική, με εξαιρετικές ταβέρνες λίγα βήματα μακριά. Τέλεια για μπάνιο πριν το δείπνο.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783803738/%CE%B2%CE%B1%CE%B8%CF%85_nif7n0.jpg"
     }
   ],
   "name_el": "Μεγανήσι",
