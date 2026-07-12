@@ -3033,6 +3033,13 @@ def parse_when_to_months(when_str):
     return months
 
 
+# Bump this whenever a TEMPLATE change materially alters every island page
+# (redesigns, new sections, changed markup). Island <lastmod> in the sitemap
+# becomes max(JSON git date, this date) — so Google learns the pages changed
+# even when the underlying JSON didn't. Last bump: island-page immersive hero
+# + when-to-visit ribbon + Ionian wind wording.
+TEMPLATE_LASTMOD = '2026-07-11'
+
 def file_lastmod(path):
     """Return ISO-8601 date for when the file was last meaningfully changed.
 
@@ -3123,7 +3130,9 @@ def generate_sitemap(island_keys):
     # that one's freshness signal in the sitemap.
     for key in sorted(island_keys):
         json_path = ISLANDS_DIR / f'{key}.json'
-        lastmod = file_lastmod(json_path)
+        # max(): content edits bump per-island; TEMPLATE_LASTMOD covers
+        # site-wide template changes that alter every page's HTML.
+        lastmod = max(file_lastmod(json_path), TEMPLATE_LASTMOD)
         add_url_pair(f'/island/{key}/', f'/el/island/{key}/', 0.7, lastmod)
 
     lines.append('</urlset>')
