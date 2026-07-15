@@ -77,14 +77,14 @@
  },
  "itinerary": {
   "title": "1-Day Agios Efstratios Itinerary",
-  "subtitle": "The village, the museum, a swim at Agios Antonios beach, dinner with the fishermen.",
+  "subtitle": "The village, the museum, a swim at Agios Dimitrios beach, dinner with the fishermen.",
   "days": [
    {
     "day": 1,
     "title": "The Village & the Black Sand Beaches",
     "title_el": "Το χωριό και οι παραλίες με τη μαύρη άμμο",
     "color": "#1B4F8A",
-    "km": 4,
+    "km": 12,
     "drive_mins": 0,
     "overnight": "The village",
     "stops": [
@@ -137,16 +137,16 @@
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784151838/village_beach_qjnlji.jpg"
      },
      {
-      "name": "Agios Antonios Beach",
-      "lat": 39.5308,
-      "lng": 24.98,
+      "name": "Agios Dimitrios Beach",
+      "lat": 39.512,
+      "lng": 24.972,
       "type": "beach",
       "time": "16:00",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJV1lPoO9zpRQRB3yM-p12nZo",
-      "desc": "About a 25-minute walk south from the village along the coastal dirt track. Quieter than the village beach, with the small chapel of Agios Antonios giving the spot its name. Crystal-clear water and almost guaranteed solitude.",
-      "name_el": "Παραλία Αγίου Αντωνίου",
-      "desc_el": "Περίπου 25 λεπτά πεζοπορίας νότια από το χωριό κατά μήκος του παραθαλάσσιου χωματόδρομου. Πιο ήσυχη από την παραλία του χωριού, με το εκκλησάκι του Αγίου Αντωνίου που της δίνει το όνομα. Κρυστάλλινα νερά και σχεδόν εγγυημένη μοναξιά.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784151838/agios_antonios_beach_vhavke.jpg"
+      "wiki": "https://www.google.com/maps/search/Agios+Dimitrios+beach+Agios+Efstratios",
+      "desc": "The island's most popular beach and the pick for a long afternoon swim — sandy with fine black volcanic pebbles and, rare for Ai Stratis, real tree shade above the sand. It sits about 5 km west of the village along the dirt road, so it's the one stop that rewards a 4x4, an ATV, or a lift arranged in the village — though some walk it. Clear water, good for snorkelling; head back afterwards for dinner with the fishermen.",
+      "name_el": "Παραλία Αγίου Δημητρίου",
+      "desc_el": "Η πιο δημοφιλής παραλία του νησιού και η επιλογή για ένα μεγάλο απογευματινό μπάνιο — αμμουδιά με ψιλά μαύρα ηφαιστειακά βότσαλα και, σπάνιο για τον Άι Στράτη, πραγματική σκιά από δέντρα πάνω από την άμμο. Βρίσκεται περίπου 5 χλμ δυτικά του χωριού στον χωματόδρομο, οπότε είναι η μόνη στάση που θέλει 4x4, γουρούνα ή μια μεταφορά κανονισμένη από το χωριό — αν και κάποιοι την περπατούν. Καθαρά νερά, ιδανικά για ψαροντούφεκο· επιστροφή μετά για δείπνο με τους ψαράδες.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784151837/agios_dimitrios_beach_ln6x8q.jpg"
      }
     ],
     "food": [
@@ -172,7 +172,7 @@
    }
   ],
   "title_el": "Πρόγραμμα 1 Ημέρας στον Άγιο Ευστράτιο",
-  "subtitle_el": "Το χωριό, το μουσείο, ένα μπάνιο στην παραλία Αγίου Αντωνίου, δείπνο με τους ψαράδες."
+  "subtitle_el": "Το χωριό, το μουσείο, ένα μπάνιο στην παραλία Αγίου Δημητρίου, δείπνο με τους ψαράδες."
  },
  "beaches": [
   {
@@ -203,7 +203,7 @@
    "lng": 24.98,
    "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJV1lPoO9zpRQRB3yM-p12nZo",
    "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784151838/agios_antonios_beach_vhavke.jpg",
-   "rating": 4,
+   "rating": 3,
    "type": "Fine pebbles",
    "type_el": "Ψιλά βότσαλα",
    "length": "~150 m",
