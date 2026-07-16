@@ -217,6 +217,7 @@ def render_page(lang, meta, data):
         'estimate', 'li_ferries', 'li_legs', 'li_pax', 'book_ferry', 'li_rooms', 'central',
         'li_car', 'days', 'book_car', 'li_fuel', 'li_boat', 'boat_rec', 'li_food', 'food_s',
         'li_esim', 'esim_s', 'book_esim', 'li_insurance', 'ins_days', 'total', 'pp',
+        'cta_ferry', 'cta_car',
         'assume', 'honest', 'guide', 'remove',
         'tier_budget', 'tier_mid', 'tier_comfort',
     )}

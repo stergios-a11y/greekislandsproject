@@ -191,8 +191,8 @@ const UI_TEXT = {
   // Footer
   'footer.copyright': { en: '© 2026 Aegean Blueprint', el: '© 2026 Aegean Blueprint' },
   'footer.privacy':   { en: 'Privacy', el: 'Απόρρητο' },
-  'hopping.crosslink_intl': { en: 'Flying in from abroad? See ', el: 'Πετάς από το εξωτερικό; Δες ' },
-  'hopping.crosslink_intl_label': { en: 'which islands have international airports', el: 'ποια νησιά έχουν διεθνή αεροδρόμια' },
+  'hopping.crosslink_intl': { en: 'Continuing beyond Greece? See the ', el: 'Συνεχίζεις εκτός Ελλάδας; Δες τις ' },
+  'hopping.crosslink_intl_label': { en: 'international ferry routes from Greek islands', el: 'διεθνείς ακτοπλοϊκές συνδέσεις από τα νησιά' },
 
   // Data table page
   'data.title': { en: 'Islands Database', el: 'Βάση Νησιών' },
