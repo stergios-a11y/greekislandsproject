@@ -120,7 +120,7 @@ STR = {
         'total': 'Total (excl. flights)', 'pp': 'per person',
         'cta_ferry': '🚢 Book ferries', 'cta_car': '🚗 Get the car',
         'assume': '<b>How we estimate:</b> economy ferry fares from real route distances · room prices for a decent double in {month} · one taverna meal + breakfast/snacks per day · car only where you toggled it. Museums, sunbeds and cocktails are yours.',
-        'honest': 'This is an honest range, not a quote — prices are set by ferry companies and hotels, not us. Book early for July–August; ferries sell out.',
+        'honest': 'Every figure is a typical price, not a quote — expect real prices roughly ±20% either side, set by ferry companies and hotels, not us. Book early for July–August; ferries sell out.',
         'guide': 'guide →',
         'remove': 'Remove',
         'footer_privacy': 'Privacy', 'footer_mission': 'Mission', 'footer_lang': 'Ελληνικά',
@@ -164,7 +164,7 @@ STR = {
         'total': 'Σύνολο (χωρίς αεροπορικά)', 'pp': 'ανά άτομο',
         'cta_ferry': '🚢 Κράτηση πλοίων', 'cta_car': '🚗 Κλείσε αυτοκίνητο',
         'assume': '<b>Πώς υπολογίζουμε:</b> οικονομικά ναύλα από πραγματικές αποστάσεις · τιμές για ένα καλό δίκλινο τον {month} · ένα γεύμα ταβέρνας + πρωινό/σνακ τη μέρα · αυτοκίνητο μόνο όπου το ενεργοποίησες. Μουσεία, ξαπλώστρες και κοκτέιλ δικά σου.',
-        'honest': 'Είναι ένα ειλικρινές εύρος, όχι προσφορά — τις τιμές τις ορίζουν ακτοπλοϊκές και ξενοδοχεία, όχι εμείς. Για Ιούλιο–Αύγουστο κλείσε νωρίς· τα πλοία εξαντλούνται.',
+        'honest': 'Κάθε ποσό είναι τυπική τιμή, όχι προσφορά — οι πραγματικές τιμές κινούνται περίπου ±20%, και τις ορίζουν ακτοπλοϊκές και ξενοδοχεία, όχι εμείς. Για Ιούλιο–Αύγουστο κλείσε νωρίς· τα πλοία εξαντλούνται.',
         'guide': 'οδηγός →',
         'remove': 'Αφαίρεση',
         'footer_privacy': 'Απόρρητο', 'footer_mission': 'Στόχος', 'footer_lang': 'English',
@@ -430,6 +430,8 @@ function legInfo(a,b){{
   return{{f:f,label:T.via_mainland,fly:(ISL[a].air&&ISL[b].air)}};
 }}
 const eur=n=>'€'+Math.round(n).toLocaleString(LANG==='el'?'el-GR':'en-GB');
+const rnd=n=>n<100?Math.round(n/5)*5:Math.round(n/10)*10;
+const mid=f=>(f[0]+f[1])/2;
 
 // ---------------- state ----------------
 let state={{month:'jun',pax:2,tier:'mid',nonEU:false,trip:JSON.parse(JSON.stringify(PRESETS.classic))}};
@@ -466,11 +468,11 @@ function render(){{
   document.querySelectorAll('#tc-tiers .tc-chip').forEach(c=>c.classList.toggle('on',c.dataset.t===state.tier));
   document.getElementById('tc-noneu').classList.toggle('on',state.nonEU);
 
-  const lo_=CFG.range_lo,hi_=CFG.range_hi,sR=CFG.season_room[state.month],sC=CFG.season_car[state.month];
+  const sR=CFG.season_room[state.month],sC=CFG.season_car[state.month];
   let h='';
   const first=state.trip[0].k,last=state.trip[state.trip.length-1].k;
   const dep=legInfo('M',first);
-  h+=`<div class="tc-leg"><span class="l">🛳</span> ${{dep.label||''}} — ${{T.departure}} ${{dep.fly?'<span class="hint">'+T.fly_hint+'</span>':''}}<span class="fp">€${{dep.f[0]}}–${{dep.f[1]}} pp</span></div>`;
+  h+=`<div class="tc-leg"><span class="l">🛳</span> ${{dep.label||''}} — ${{T.departure}} ${{dep.fly?'<span class="hint">'+T.fly_hint+'</span>':''}}<span class="fp">~€${{rnd(mid(dep.f))}} pp</span></div>`;
   state.trip.forEach((t,i)=>{{
     const isl=ISL[t.k],rn=roomNight(t.k);
     const guide=(LANG==='el'?'/el':'')+'/island/'+t.k+'/';
@@ -478,7 +480,7 @@ function render(){{
       ${{isl.img?`<img src="${{isl.img}}" alt="${{iname(t.k)}}" loading="lazy">`:''}}
       <div class="tc-cb">
         <div class="tc-cn">${{iname(t.k)}}<a href="${{guide}}">${{T.guide}}</a></div>
-        <div class="tc-cs">${{T.rooms_per_night}} ${{eur(rn*lo_)}}–${{eur(rn*hi_)}}${{T.per_night}} · ${{T.months[state.month]}}</div>
+        <div class="tc-cs">${{T.rooms_per_night}} ~${{eur(rnd(rn))}}${{T.per_night}} · ${{T.months[state.month]}}</div>
         <div class="tc-cc">
           <span class="tc-n"><button data-a="n-" data-i="${{i}}">−</button> ${{t.n}} ${{t.n===1?T.night:T.nights}} <button data-a="n+" data-i="${{i}}">+</button></span>
           ${{isl.car?`<span class="tc-sw ${{t.c?'on':''}}" data-a="car" data-i="${{i}}"><span class="s"></span> ${{T.car}}</span>`:''}}
@@ -490,60 +492,58 @@ function render(){{
     </div>`;
     const next=state.trip[i+1];
     if(next){{const li=legInfo(t.k,next.k);
-      h+=`<div class="tc-leg"><span class="l">⛴</span> ${{T.ferry_to}} ${{iname(next.k)}}${{li.label?' <small>('+li.label+')</small>':''}} ${{li.fly?'<span class="hint">'+T.fly_hint+'</span>':''}}<span class="fp">€${{li.f[0]}}–${{li.f[1]}} pp</span></div>`;}}
+      h+=`<div class="tc-leg"><span class="l">⛴</span> ${{T.ferry_to}} ${{iname(next.k)}}${{li.label?' <small>('+li.label+')</small>':''}} ${{li.fly?'<span class="hint">'+T.fly_hint+'</span>':''}}<span class="fp">~€${{rnd(mid(li.f))}} pp</span></div>`;}}
   }});
   const ret=legInfo(last,'M');
-  h+=`<div class="tc-leg"><span class="l">🛳</span> ${{T.back_to}} ${{ret.label||''}}<span class="fp">€${{ret.f[0]}}–${{ret.f[1]}} pp</span></div>`;
+  h+=`<div class="tc-leg"><span class="l">🛳</span> ${{T.back_to}} ${{ret.label||''}}<span class="fp">~€${{rnd(mid(ret.f))}} pp</span></div>`;
   document.getElementById('tc-route').innerHTML=h;
 
   // quick-add buttons
   document.getElementById('tc-quick').innerHTML=QUICK.filter(k=>!state.trip.some(t=>t.k===k)).slice(0,3)
     .map(k=>`<button class="tc-addbtn" data-add="${{k}}">+ ${{iname(k)}}</button>`).join(' ');
 
-  // ---------------- totals ----------------
+  // ---------------- totals (single typical figures) ----------------
   const nightsTotal=state.trip.reduce((a,t)=>a+t.n,0);
-  let lo=0,hi=0,li='';
-  const line=(ic,lbl,small,l,h2,book,url)=>`<div class="tc-li"><span>${{ic}}</span><span class="lbl">${{lbl}}<small>${{small}}</small></span><span class="amt">${{eur(l)}}–${{eur(h2)}}</span>${{book?`<a class="bk" href="${{url}}" target="_blank" rel="noopener sponsored">${{book}}</a>`:''}}</div>`;
+  let tot=0,li='';
+  const line=(ic,lbl,small,amt,book,url)=>`<div class="tc-li"><span>${{ic}}</span><span class="lbl">${{lbl}}<small>${{small}}</small></span><span class="amt">~${{eur(rnd(amt))}}</span>${{book?`<a class="bk" href="${{url}}" target="_blank" rel="noopener sponsored">${{book}}</a>`:''}}</div>`;
   // ferries
-  let flo=0,fhi=0;const legs=[['M',first],...state.trip.slice(0,-1).map((t,i)=>[t.k,state.trip[i+1].k]),[last,'M']];
-  legs.forEach(([a,b])=>{{const f=legInfo(a,b).f;flo+=f[0]*state.pax;fhi+=f[1]*state.pax;}});
-  li+=line('⛴',T.li_ferries,`${{legs.length}} ${{T.li_legs}} × ${{state.pax}} ${{T.li_pax}}`,flo,fhi,T.book_ferry,'https://www.ferryhopper.com/'+(LANG==='el'?'el/':'en/'));
-  lo+=flo;hi+=fhi;
+  let fsum=0;const legs=[['M',first],...state.trip.slice(0,-1).map((t,i)=>[t.k,state.trip[i+1].k]),[last,'M']];
+  legs.forEach(([a,b])=>{{fsum+=mid(legInfo(a,b).f)*state.pax;}});
+  li+=line('⛴',T.li_ferries,`${{legs.length}} ${{T.li_legs}} × ${{state.pax}} ${{T.li_pax}}`,fsum,T.book_ferry,'https://www.ferryhopper.com/'+(LANG==='el'?'el/':'en/'));
+  tot+=fsum;
   // rooms
-  let rlo=0,rhi=0;
+  let rsum=0;
   state.trip.forEach(t=>{{const rn=roomNight(t.k);
     const mult=(!t.c&&ISL[t.k].cn>=4&&ISL[t.k].car)?CFG.carless_central_premium:1;
-    rlo+=rn*lo_*t.n*mult;rhi+=rn*hi_*t.n*mult;}});
-  li+=line('🛏',`${{T.li_rooms}} — ${{nightsTotal}} ${{T.nights}}`,state.trip.map(t=>`${{iname(t.k)}} ${{t.n}}${{(!t.c&&ISL[t.k].cn>=4&&ISL[t.k].car)?' '+T.central:''}}`).join(' · '),rlo,rhi,null);
-  lo+=rlo;hi+=rhi;
+    rsum+=rn*t.n*mult;}});
+  li+=line('🛏',`${{T.li_rooms}} — ${{nightsTotal}} ${{T.nights}}`,state.trip.map(t=>`${{iname(t.k)}} ${{t.n}}${{(!t.c&&ISL[t.k].cn>=4&&ISL[t.k].car)?' '+T.central:''}}`).join(' · '),rsum,null);
+  tot+=rsum;
   // car + fuel
-  let clo=0,chi=0,cd=0;
-  state.trip.forEach(t=>{{if(t.c&&ISL[t.k].car){{const c=ISL[t.k].car*sC;clo+=c*lo_*t.n;chi+=c*hi_*t.n;cd+=t.n;}}}});
-  if(cd){{li+=line('🚗',`${{T.li_car}} — ${{cd}} ${{T.days}}`,state.trip.filter(t=>t.c&&ISL[t.k].car).map(t=>iname(t.k)).join(' · '),clo,chi,T.book_car,'https://www.discovercars.com/?a_aid=antaran2');lo+=clo;hi+=chi;
-    li+=line('⛽',T.li_fuel,`~€${{CFG.fuel_per_day}}/${{LANG==='el'?'μέρα':'day'}} × ${{cd}} ${{T.days}}`,cd*CFG.fuel_per_day*0.8,cd*CFG.fuel_per_day*1.2,null);
-    lo+=cd*CFG.fuel_per_day*0.8;hi+=cd*CFG.fuel_per_day*1.2;}}
+  let csum=0,cd=0;
+  state.trip.forEach(t=>{{if(t.c&&ISL[t.k].car){{csum+=ISL[t.k].car*sC*t.n;cd+=t.n;}}}});
+  if(cd){{li+=line('🚗',`${{T.li_car}} — ${{cd}} ${{T.days}}`,state.trip.filter(t=>t.c&&ISL[t.k].car).map(t=>iname(t.k)).join(' · '),csum,T.book_car,'https://www.discovercars.com/?a_aid=antaran2');tot+=csum;
+    const fuel=cd*CFG.fuel_per_day;
+    li+=line('⛽',T.li_fuel,`~€${{CFG.fuel_per_day}}/${{LANG==='el'?'μέρα':'day'}} × ${{cd}} ${{T.days}}`,fuel,null);tot+=fuel;}}
   // boat days
-  let blo=0,bhi=0,boats=[];
-  state.trip.forEach(t=>{{const b=ISL[t.k].boat;if(b&&t.b){{blo+=b.pp*lo_*state.pax;bhi+=b.pp*hi_*state.pax;boats.push(LANG==='el'?b.nel:b.n);}}}});
-  if(boats.length){{li+=line('⛵',T.li_boat,boats.join(' · ')+' — '+T.boat_rec,blo,bhi,null);lo+=blo;hi+=bhi;}}
+  let bsum=0,boats=[];
+  state.trip.forEach(t=>{{const b=ISL[t.k].boat;if(b&&t.b){{bsum+=b.pp*state.pax;boats.push(LANG==='el'?b.nel:b.n);}}}});
+  if(boats.length){{li+=line('⛵',T.li_boat,boats.join(' · ')+' — '+T.boat_rec,bsum,null);tot+=bsum;}}
   // food
-  let mlo=0,mhi=0;
-  state.trip.forEach(t=>{{const m=mealDay(t.k);mlo+=m*0.85*state.pax*t.n;mhi+=m*1.2*state.pax*t.n;}});
-  li+=line('🍴',T.li_food,`~${{eur(mealDay(first))}} ${{T.food_s}}`,mlo,mhi,null);
-  lo+=mlo;hi+=mhi;
+  let msum=0;
+  state.trip.forEach(t=>{{msum+=mealDay(t.k)*state.pax*t.n;}});
+  li+=line('🍴',T.li_food,`~${{eur(mealDay(first))}} ${{T.food_s}}`,msum,null);
+  tot+=msum;
   // non-EU extras
   if(state.nonEU){{
-    li+=line('📶',T.li_esim,`${{state.pax}}× ${{T.esim_s}}`,state.pax*15,state.pax*22,T.book_esim,'https://www.airalo.com/greece-esim');
-    lo+=state.pax*15;hi+=state.pax*22;
-    li+=line('🛡',T.li_insurance,`${{state.pax}}× ${{nightsTotal+1}} ${{T.ins_days}}`,state.pax*(nightsTotal+1)*2.5,state.pax*(nightsTotal+1)*4,null);
-    lo+=state.pax*(nightsTotal+1)*2.5;hi+=state.pax*(nightsTotal+1)*4;}}
+    const esim=state.pax*18;li+=line('📶',T.li_esim,`${{state.pax}}× ${{T.esim_s}}`,esim,T.book_esim,'https://www.airalo.com/greece-esim');tot+=esim;
+    const ins=state.pax*(nightsTotal+1)*3;li+=line('🛡',T.li_insurance,`${{state.pax}}× ${{nightsTotal+1}} ${{T.ins_days}}`,ins,null);tot+=ins;}}
 
   document.getElementById('tc-summary').innerHTML=`
     <h2>${{T.estimate}}</h2>
     <div class="tc-ss">${{state.pax}} ${{T.li_pax}} · ${{nightsTotal}} ${{T.nights}} · ${{T.months[state.month]}} · ${{({{budget:T.tier_budget,mid:T.tier_mid,comfort:T.tier_comfort}})[state.tier]}}</div>
     ${{li}}
-    <div class="tc-tot"><span class="t1">${{T.total}}</span><span class="amt">${{eur(lo)}} – ${{eur(hi)}}</span></div>
-    <div class="tc-pp">≈ ${{eur(lo/state.pax)}}–${{eur(hi/state.pax)}} ${{T.pp}}</div>
+    <div class="tc-tot"><span class="t1">${{T.total}}</span><span class="amt">≈ ${{eur(rnd(tot))}}</span></div>
+    <div class="tc-pp">≈ ${{eur(rnd(tot/state.pax))}} ${{T.pp}}</div>
     <div class="tc-ctas">
       <a class="tc-cta f" href="https://www.ferryhopper.com/${{LANG==='el'?'el/':'en/'}}" target="_blank" rel="noopener sponsored">${{T.cta_ferry}}</a>
       <a class="tc-cta c" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">${{T.cta_car}}</a>
