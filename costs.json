@@ -1,0 +1,904 @@
+{
+ "_meta": {
+  "baseline": "July; single typical values per island in costs.csv. All multipliers come from cost-rules.csv.",
+  "season_room": {
+   "apr": 0.65,
+   "may": 0.7,
+   "jun": 0.85,
+   "jul": 1.0,
+   "aug": 1.15,
+   "sep": 0.8,
+   "oct": 0.65
+  },
+  "season_car": {
+   "apr": 0.7,
+   "may": 0.75,
+   "jun": 0.85,
+   "jul": 1.0,
+   "aug": 1.25,
+   "sep": 0.85,
+   "oct": 0.7
+  },
+  "range_lo": 0.85,
+  "range_hi": 1.25,
+  "meal_budget": 0.6,
+  "meal_comfort": 1.65,
+  "carless_central_premium": 1.2,
+  "fuel_per_day": 10.0,
+  "updated": "2026-07-17"
+ },
+ "islands": {
+  "aegina": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 34,
+   "car_day": 42
+  },
+  "agathonisi": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 28,
+   "car_day": 42
+  },
+  "agios-efstratios": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 28,
+   "car_day": null
+  },
+  "agistri": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 31,
+   "car_day": null
+  },
+  "alonnisos": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 31,
+   "car_day": 42,
+   "boat": {
+    "name": "Marine Park Boat Trip",
+    "pp": 55
+   }
+  },
+  "ammouliani": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 31,
+   "car_day": 42,
+   "boat": {
+    "name": "Drenia Islets & Departure",
+    "pp": 55
+   }
+  },
+  "amorgos": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 34,
+   "car_day": 42
+  },
+  "anafi": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 30,
+   "car_day": 42
+  },
+  "andros": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 35,
+   "car_day": 42
+  },
+  "antikythera": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 34,
+   "car_day": 42
+  },
+  "antiparos": {
+   "room": {
+    "budget": 80,
+    "mid": 175,
+    "comfort": 370
+   },
+   "meal_pp_mid": 37,
+   "car_day": 42
+  },
+  "arki": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 30,
+   "car_day": null
+  },
+  "astypalaia": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 32,
+   "car_day": 42
+  },
+  "chania": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 34,
+   "car_day": 42
+  },
+  "chios": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 28,
+   "car_day": 42
+  },
+  "corfu": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 35,
+   "car_day": 42
+  },
+  "donousa": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 32,
+   "car_day": null
+  },
+  "elafonisos": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 32,
+   "car_day": null
+  },
+  "erikousa": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 30,
+   "car_day": null
+  },
+  "evia-central": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 28,
+   "car_day": 42
+  },
+  "evia-north": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 27,
+   "car_day": 42,
+   "boat": {
+    "name": "Lichadonisia & Limni",
+    "pp": 55
+   }
+  },
+  "evia-south": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 28,
+   "car_day": 42
+  },
+  "folegandros": {
+   "room": {
+    "budget": 95,
+    "mid": 210,
+    "comfort": 440
+   },
+   "meal_pp_mid": 40,
+   "car_day": 50,
+   "boat": {
+    "name": "Katergo, Livadaki & Departure",
+    "pp": 55
+   }
+  },
+  "fournoi": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 28,
+   "car_day": 42,
+   "boat": {
+    "name": "Chrysomilia & Thymaina",
+    "pp": 55
+   }
+  },
+  "gavdos": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 28,
+   "car_day": null
+  },
+  "halki": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 31,
+   "car_day": 42,
+   "boat": {
+    "name": "Boat Day — Western Beaches",
+    "pp": 55
+   }
+  },
+  "heraklion": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 34,
+   "car_day": 42
+  },
+  "hydra": {
+   "room": {
+    "budget": 120,
+    "mid": 270,
+    "comfort": 565
+   },
+   "meal_pp_mid": 42,
+   "car_day": null
+  },
+  "ikaria": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 28,
+   "car_day": 42
+  },
+  "ios": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 34,
+   "car_day": 42
+  },
+  "iraklia": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 30,
+   "car_day": null
+  },
+  "ithaca": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 34,
+   "car_day": 42
+  },
+  "kalamos": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 30,
+   "car_day": 42
+  },
+  "kalymnos": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 30,
+   "car_day": 42,
+   "boat": {
+    "name": "Telendos Island & Departure",
+    "pp": 55
+   }
+  },
+  "karpathos": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 32,
+   "car_day": 42,
+   "boat": {
+    "name": "Kitesurfing Bays & Departure",
+    "pp": 55
+   }
+  },
+  "kasos": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 28,
+   "car_day": 42,
+   "boat": {
+    "name": "Day Trip to Armathia",
+    "pp": 55
+   }
+  },
+  "kastellorizo": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 34,
+   "car_day": null
+  },
+  "kastos": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 31,
+   "car_day": null
+  },
+  "kea": {
+   "room": {
+    "budget": 80,
+    "mid": 175,
+    "comfort": 370
+   },
+   "meal_pp_mid": 36,
+   "car_day": 42
+  },
+  "kefalonia": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 32,
+   "car_day": 42
+  },
+  "kimolos": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 32,
+   "car_day": 42,
+   "boat": {
+    "name": "Skiadi & the Southern Beaches",
+    "pp": 55
+   }
+  },
+  "kos": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 32,
+   "car_day": 42
+  },
+  "koufonisia": {
+   "room": {
+    "budget": 80,
+    "mid": 175,
+    "comfort": 370
+   },
+   "meal_pp_mid": 36,
+   "car_day": null,
+   "boat": {
+    "name": "Kato Koufonisi & Departure",
+    "pp": 55
+   }
+  },
+  "kythira": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 32,
+   "car_day": 42
+  },
+  "kythnos": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 32,
+   "car_day": 42
+  },
+  "lasithi": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 35,
+   "car_day": 42
+  },
+  "lefkada": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 31,
+   "car_day": 42,
+   "boat": {
+    "name": "Nydri & the East Coast",
+    "pp": 55
+   }
+  },
+  "leipsoi": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 28,
+   "car_day": 42
+  },
+  "lemnos": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 29,
+   "car_day": 42
+  },
+  "leros": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 30,
+   "car_day": 42
+  },
+  "lesvos": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 28,
+   "car_day": 42
+  },
+  "mathraki": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 30,
+   "car_day": null
+  },
+  "meganisi": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 35,
+   "car_day": 42
+  },
+  "milos": {
+   "room": {
+    "budget": 80,
+    "mid": 175,
+    "comfort": 370
+   },
+   "meal_pp_mid": 37,
+   "car_day": 42,
+   "boat": {
+    "name": "Kleftiko Boat Trip",
+    "pp": 100
+   }
+  },
+  "mykonos": {
+   "room": {
+    "budget": 160,
+    "mid": 350,
+    "comfort": 735
+   },
+   "meal_pp_mid": 46,
+   "car_day": 50,
+   "boat": {
+    "name": "Delos Sacred Island & Psarou Beach",
+    "pp": 55
+   }
+  },
+  "naxos": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 31,
+   "car_day": 42
+  },
+  "nisyros": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 31,
+   "car_day": 42
+  },
+  "oinousses": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 31,
+   "car_day": null
+  },
+  "othonoi": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 30,
+   "car_day": null
+  },
+  "paros": {
+   "room": {
+    "budget": 95,
+    "mid": 210,
+    "comfort": 440
+   },
+   "meal_pp_mid": 40,
+   "car_day": 50
+  },
+  "patmos": {
+   "room": {
+    "budget": 80,
+    "mid": 175,
+    "comfort": 370
+   },
+   "meal_pp_mid": 38,
+   "car_day": 42
+  },
+  "paxos": {
+   "room": {
+    "budget": 80,
+    "mid": 175,
+    "comfort": 370
+   },
+   "meal_pp_mid": 38,
+   "car_day": 42,
+   "boat": {
+    "name": "West Coast Cliffs & Antipaxos",
+    "pp": 55
+   }
+  },
+  "poros": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 35,
+   "car_day": 42
+  },
+  "psara": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 30,
+   "car_day": null
+  },
+  "pserimos": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 31,
+   "car_day": null
+  },
+  "rethymno": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 32,
+   "car_day": 42
+  },
+  "rhodes": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 34,
+   "car_day": 42
+  },
+  "salamis": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 28,
+   "car_day": 42
+  },
+  "samos": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 30,
+   "car_day": 42
+  },
+  "samothrace": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 28,
+   "car_day": 42
+  },
+  "santorini": {
+   "room": {
+    "budget": 160,
+    "mid": 350,
+    "comfort": 735
+   },
+   "meal_pp_mid": 46,
+   "car_day": 50,
+   "boat": {
+    "name": "Volcano, Hot Springs & Ammoudi Bay",
+    "pp": 65
+   }
+  },
+  "schoinoussa": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 32,
+   "car_day": null,
+   "boat": {
+    "name": "Psili Ammos & the South Coast",
+    "pp": 55
+   }
+  },
+  "serifos": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 32,
+   "car_day": 42
+  },
+  "sifnos": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 34,
+   "car_day": 42
+  },
+  "sikinos": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 31,
+   "car_day": 42,
+   "boat": {
+    "name": "Beaches & Boat Trip",
+    "pp": 55
+   }
+  },
+  "skiathos": {
+   "room": {
+    "budget": 80,
+    "mid": 175,
+    "comfort": 370
+   },
+   "meal_pp_mid": 36,
+   "car_day": 42,
+   "boat": {
+    "name": "Beach Boat Tour",
+    "pp": 55
+   }
+  },
+  "skopelos": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 32,
+   "car_day": 42
+  },
+  "skyros": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 30,
+   "car_day": 42
+  },
+  "spetses": {
+   "room": {
+    "budget": 95,
+    "mid": 210,
+    "comfort": 440
+   },
+   "meal_pp_mid": 41,
+   "car_day": 50
+  },
+  "symi": {
+   "room": {
+    "budget": 80,
+    "mid": 175,
+    "comfort": 370
+   },
+   "meal_pp_mid": 38,
+   "car_day": 42
+  },
+  "syros": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 34,
+   "car_day": 42
+  },
+  "telendos": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 31,
+   "car_day": null
+  },
+  "thasos": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 30,
+   "car_day": 42
+  },
+  "therasia": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 34,
+   "car_day": null,
+   "boat": {
+    "name": "Manolas, Potamos & Korfos",
+    "pp": 55
+   }
+  },
+  "thymaina": {
+   "room": {
+    "budget": 45,
+    "mid": 95,
+    "comfort": 200
+   },
+   "meal_pp_mid": 30,
+   "car_day": null
+  },
+  "tilos": {
+   "room": {
+    "budget": 50,
+    "mid": 115,
+    "comfort": 240
+   },
+   "meal_pp_mid": 30,
+   "car_day": 42
+  },
+  "tinos": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 35,
+   "car_day": 42
+  },
+  "zakynthos": {
+   "room": {
+    "budget": 65,
+    "mid": 140,
+    "comfort": 295
+   },
+   "meal_pp_mid": 34,
+   "car_day": 42
+  }
+ }
+}

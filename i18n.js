@@ -24,7 +24,7 @@ const UI_TEXT = {
   'nav.compare': { en: 'Compare', el: 'Σύγκριση' },
   'nav.festivals': { en: 'Festivals', el: 'Γιορτές' },
   'nav.ferries': { en: 'Ferries', el: 'Πλοία' },
-  'nav.hopping': { en: 'Island Hopping', el: 'Νησοπορία' },
+  'nav.hopping': { en: 'Ferries & Hopping', el: 'Πλοία & Νησοπορία' },
   'nav.international': { en: 'International', el: 'Διεθνώς' },
   'nav.match': { en: 'Match Me', el: 'Βρες το Νησί σου' },
   'nav.shortlist': { en: '⭐ My Shortlist', el: '⭐ Η Λίστα μου' },
@@ -190,6 +190,8 @@ const UI_TEXT = {
   // Footer
   'footer.copyright': { en: '© 2026 Aegean Blueprint', el: '© 2026 Aegean Blueprint' },
   'footer.privacy':   { en: 'Privacy', el: 'Απόρρητο' },
+  'hopping.crosslink_intl': { en: 'Flying in from abroad? See ', el: 'Πετάς από το εξωτερικό; Δες ' },
+  'hopping.crosslink_intl_label': { en: 'which islands have international airports', el: 'ποια νησιά έχουν διεθνή αεροδρόμια' },
 
   // Data table page
   'data.title': { en: 'Islands Database', el: 'Βάση Νησιών' },

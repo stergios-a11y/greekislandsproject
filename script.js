@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-07-15';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-07-16';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -580,6 +580,7 @@ function setupNav() {
     'nav-compare': 'compare', 'nav-hopping': 'hopping',
     'nav-international': 'international',
     'nav-match': 'match', 'nav-shortlist': 'shortlist', 'nav-mission': 'mission',
+    'footer-mission': 'mission', 'hop-intl-link': 'international',
   };
   Object.entries(navMap).forEach(([btnId, view]) => {
     const el = document.getElementById(btnId);

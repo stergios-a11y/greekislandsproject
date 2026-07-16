@@ -1903,7 +1903,7 @@ def render_page(key, data, meta, lang='en'):
 
 <!-- Footer -->
 <footer class="seo-footer">
-  <p>© 2026 Aegean Blueprint · <a href="{('/el/island/' if lang == 'en' else '/island/')}{key}/">{'Ελληνικά' if lang == 'en' else 'English'}</a> · <a href="{'/privacy/' if lang == 'en' else '/el/privacy/'}">{'Privacy' if lang == 'en' else 'Απόρρητο'}</a></p>
+  <p>© 2026 Aegean Blueprint · <a href="{('/el/island/' if lang == 'en' else '/island/')}{key}/">{'Ελληνικά' if lang == 'en' else 'English'}</a> · <a href="{'/privacy/' if lang == 'en' else '/el/privacy/'}">{'Privacy' if lang == 'en' else 'Απόρρητο'}</a> · <a href="{'/#mission' if lang == 'en' else '/el/#mission'}">{'Mission' if lang == 'en' else 'Στόχος'}</a></p>
 </footer>
 </div><!-- /#seo-fallback -->
 
@@ -1985,8 +1985,8 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="{asset_prefix}i18n.js?v=35"></script>
-<script src="{asset_prefix}script.js?v=57"></script>
+<script src="{asset_prefix}i18n.js?v=36"></script>
+<script src="{asset_prefix}script.js?v=58"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
@@ -2269,7 +2269,9 @@ def generate_ferries_page(island_keys):
             'compare':   ('Compare',   'Σύγκριση'),
             'festivals': ('Festivals', 'Γιορτές'),
             'ferries':   ('Ferries',   'Πλοία'),
-            'hopping':   ('Island Hopping', 'Νησοπορία'),
+            'hopping':   ('Ferries & Hopping', 'Πλοία & Νησοπορία'),
+            'match':     ('Match Me', 'Βρες το Νησί σου'),
+            'shortlist': ('⭐ My Shortlist', '⭐ Η Λίστα μου'),
             'mission':   ('Mission',   'Στόχος'),
             'privacy':   ('Privacy',   'Απόρρητο'),
         }
@@ -2363,13 +2365,12 @@ def generate_ferries_page(island_keys):
             '    </a>\n'
             '    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>\n'
             '    <nav class="top-nav" id="main-nav">\n'
-            f'      <a href="/{"el/" if is_el else ""}#data">{navlbl("data")}</a>\n'
             f'      <a href="/{"el/" if is_el else ""}#compare">{navlbl("compare")}</a>\n'
+            f'      <a href="/{"el/" if is_el else ""}#match">{navlbl("match")}</a>\n'
+            f'      <a href="/{"el/" if is_el else ""}#hopping" class="active">{navlbl("hopping")}</a>\n'
             f'      <a href="/{"el/" if is_el else ""}festivals/">{navlbl("festivals")}</a>\n'
-            f'      <a href="/{"el/" if is_el else ""}ferries/" class="active">{navlbl("ferries")}</a>\n'
-            f'      <a href="/{"el/" if is_el else ""}#hopping">{navlbl("hopping")}</a>\n'
-            f'      <a href="/{"el/" if is_el else ""}#mission">{navlbl("mission")}</a>\n'
-            f'      <a href="{"/el/privacy/" if is_el else "/privacy/"}" class="nav-utility">{navlbl("privacy")}</a>\n'
+            f'      <a href="/{"el/" if is_el else ""}#data">{navlbl("data")}</a>\n'
+            f'      <a href="/{"el/" if is_el else ""}#shortlist">{navlbl("shortlist")}</a>\n'
             '    </nav>\n'
             f'    <a class="lang-toggle-static" href="{"/ferries/" if is_el else "/el/ferries/"}" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;">'
             f'<span style="margin-right: 4px;">🌐</span>{"EN" if is_el else "EL"}</a>\n'
@@ -2846,15 +2847,12 @@ def generate_festivals_page(island_keys):
             # Without it the nav disappears with no way to open it. JS handler below.
             '    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>\n'
             '    <nav class="top-nav" id="main-nav">\n'
-            '      <a href="/' + ('el/' if is_el else '') + '#data">' + ('Στοιχεία Νησιών' if is_el else 'Islands Data') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#compare">' + ('Σύγκριση' if is_el else 'Compare') + '</a>\n'
-            '      <a href="/' + ('el/' if is_el else '') + 'festivals/" class="active">' + ('Γιορτές' if is_el else 'Festivals') + '</a>\n'
-            '      <a href="/' + ('el/' if is_el else '') + '#hopping">' + ('Νησοπορία' if is_el else 'Island Hopping') + '</a>\n'
-            '      <a href="/' + ('el/' if is_el else '') + '#international">' + ('Διεθνώς' if is_el else 'International') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#match">' + ('Βρες το Νησί σου' if is_el else 'Match Me') + '</a>\n'
+            '      <a href="/' + ('el/' if is_el else '') + '#hopping">' + ('Πλοία & Νησοπορία' if is_el else 'Ferries & Hopping') + '</a>\n'
+            '      <a href="/' + ('el/' if is_el else '') + 'festivals/" class="active">' + ('Γιορτές' if is_el else 'Festivals') + '</a>\n'
+            '      <a href="/' + ('el/' if is_el else '') + '#data">' + ('Στοιχεία Νησιών' if is_el else 'Islands Data') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#shortlist">' + ('⭐ Η Λίστα μου' if is_el else '⭐ My Shortlist') + '</a>\n'
-            '      <a href="/' + ('el/' if is_el else '') + '#mission">' + ('Στόχος' if is_el else 'Mission') + '</a>\n'
-            '      <a href="' + ('/el/privacy/' if is_el else '/privacy/') + '" class="nav-utility">' + ('Απόρρητο' if is_el else 'Privacy') + '</a>\n'
             '    </nav>\n'
             '    <a class="lang-toggle-static" href="' + ('/festivals/' if is_el else '/el/festivals/') + '" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;">'
             '<span style="margin-right: 4px;">🌐</span>' + ('EN' if is_el else 'EL') + '</a>\n'
@@ -3038,7 +3036,7 @@ def parse_when_to_months(when_str):
 # becomes max(JSON git date, this date) — so Google learns the pages changed
 # even when the underlying JSON didn't. Last bump: island-page immersive hero
 # + when-to-visit ribbon + Ionian wind wording.
-TEMPLATE_LASTMOD = '2026-07-11'
+TEMPLATE_LASTMOD = '2026-07-17'
 
 def file_lastmod(path):
     """Return ISO-8601 date for when the file was last meaningfully changed.

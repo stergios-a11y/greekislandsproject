@@ -45,7 +45,7 @@ def _resolve_root():
 
 ROOT = _resolve_root()
 SITE_URL = 'https://aegeanblueprint.com'
-ASSET_V = 60
+ASSET_V = 61
 
 VERDICTS = json.loads((ROOT / 'vs_verdicts.json').read_text(encoding='utf-8'))
 FAQS_PATH = ROOT / 'vs_faqs.json'
@@ -274,34 +274,26 @@ def render_page(pair_key, lang):
 
     if lang == 'el':
         nav_items = [
-            ('/el/#data', 'Στοιχεία Νησιών', 'nav-data'),
             ('/el/#compare', 'Σύγκριση', 'nav-compare'),
-            ('/el/festivals/', 'Γιορτές', 'nav-festivals'),
-            ('/el/ferries/', 'Πλοία', 'nav-ferries'),
-            ('/el/#hopping', 'Νησοπορία', 'nav-hopping'),
-            ('/el/#international', 'Διεθνώς', 'nav-international'),
             ('/el/#match', 'Ταίριαξέ με', 'nav-match'),
+            ('/el/#hopping', 'Πλοία & Νησοπορία', 'nav-hopping'),
+            ('/el/festivals/', 'Γιορτές', 'nav-festivals'),
+            ('/el/#data', 'Στοιχεία Νησιών', 'nav-data'),
             ('/el/#shortlist', '⭐ Λίστα μου', 'nav-shortlist'),
-            ('/el/#mission', 'Στόχος', 'nav-mission'),
-            ('/el/privacy/', 'Απόρρητο', 'nav-privacy'),
         ]
         home_url = '/el/'
-        privacy_link = '<a href="/el/privacy/" data-i18n="footer.privacy">Απόρρητο</a>'
+        privacy_link = '<a href="/el/privacy/" data-i18n="footer.privacy">Απόρρητο</a> · <a href="/el/#mission">Στόχος</a>'
     else:
         nav_items = [
-            ('/#data', 'Islands Data', 'nav-data'),
             ('/#compare', 'Compare', 'nav-compare'),
-            ('/festivals/', 'Festivals', 'nav-festivals'),
-            ('/ferries/', 'Ferries', 'nav-ferries'),
-            ('/#hopping', 'Island Hopping', 'nav-hopping'),
-            ('/#international', 'International', 'nav-international'),
             ('/#match', 'Match Me', 'nav-match'),
+            ('/#hopping', 'Ferries & Hopping', 'nav-hopping'),
+            ('/festivals/', 'Festivals', 'nav-festivals'),
+            ('/#data', 'Islands Data', 'nav-data'),
             ('/#shortlist', '⭐ My Shortlist', 'nav-shortlist'),
-            ('/#mission', 'Mission', 'nav-mission'),
-            ('/privacy/', 'Privacy', 'nav-privacy'),
         ]
         home_url = '/'
-        privacy_link = '<a href="/privacy/" data-i18n="footer.privacy">Privacy</a>'
+        privacy_link = '<a href="/privacy/" data-i18n="footer.privacy">Privacy</a> · <a href="/#mission">Mission</a>'
 
     nav_html = '\n        '.join(
         f'<a href="{esc(href)}" id="{nav_id}">{esc(label)}</a>'
@@ -488,7 +480,7 @@ window.__INITIAL_COMPARE_PAIR = {init_pair};
 </script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-<script src="/i18n.js?v=35"></script>
+<script src="/i18n.js?v=36"></script>
 <script src="/script.js?v={ASSET_V}"></script>
 </body>
 </html>
@@ -670,32 +662,24 @@ def render_hub_page(lang, valid_pairs):
     # Navigation (same structure as compare pages)
     if lang == 'el':
         nav_items = [
-            ('/el/#data', 'Στοιχεία Νησιών', 'nav-data'),
             ('/el/#compare', 'Σύγκριση', 'nav-compare'),
-            ('/el/festivals/', 'Γιορτές', 'nav-festivals'),
-            ('/el/ferries/', 'Πλοία', 'nav-ferries'),
-            ('/el/#hopping', 'Νησοπορία', 'nav-hopping'),
-            ('/el/#international', 'Διεθνώς', 'nav-international'),
             ('/el/#match', 'Ταίριαξέ με', 'nav-match'),
+            ('/el/#hopping', 'Πλοία & Νησοπορία', 'nav-hopping'),
+            ('/el/festivals/', 'Γιορτές', 'nav-festivals'),
+            ('/el/#data', 'Στοιχεία Νησιών', 'nav-data'),
             ('/el/#shortlist', '⭐ Λίστα μου', 'nav-shortlist'),
-            ('/el/#mission', 'Στόχος', 'nav-mission'),
-            ('/el/privacy/', 'Απόρρητο', 'nav-privacy'),
         ]
-        privacy_link = '<a href="/el/privacy/" data-i18n="footer.privacy">Απόρρητο</a>'
+        privacy_link = '<a href="/el/privacy/" data-i18n="footer.privacy">Απόρρητο</a> · <a href="/el/#mission">Στόχος</a>'
     else:
         nav_items = [
-            ('/#data', 'Islands Data', 'nav-data'),
             ('/#compare', 'Compare', 'nav-compare'),
-            ('/festivals/', 'Festivals', 'nav-festivals'),
-            ('/ferries/', 'Ferries', 'nav-ferries'),
-            ('/#hopping', 'Island Hopping', 'nav-hopping'),
-            ('/#international', 'International', 'nav-international'),
             ('/#match', 'Match Me', 'nav-match'),
+            ('/#hopping', 'Ferries & Hopping', 'nav-hopping'),
+            ('/festivals/', 'Festivals', 'nav-festivals'),
+            ('/#data', 'Islands Data', 'nav-data'),
             ('/#shortlist', '⭐ My Shortlist', 'nav-shortlist'),
-            ('/#mission', 'Mission', 'nav-mission'),
-            ('/privacy/', 'Privacy', 'nav-privacy'),
         ]
-        privacy_link = '<a href="/privacy/" data-i18n="footer.privacy">Privacy</a>'
+        privacy_link = '<a href="/privacy/" data-i18n="footer.privacy">Privacy</a> · <a href="/#mission">Mission</a>'
 
     nav_html = '\n        '.join(
         f'<a href="{esc(href)}" id="{nav_id}">{esc(label)}</a>'
@@ -845,7 +829,7 @@ def render_hub_page(lang, valid_pairs):
   </div>
 </footer>
 
-<script src="/i18n.js?v=35"></script>
+<script src="/i18n.js?v=36"></script>
 <script>
   (function() {{
     var btn = document.getElementById("menu-toggle-btn");
