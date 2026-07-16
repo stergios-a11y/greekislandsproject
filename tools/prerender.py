@@ -2271,6 +2271,7 @@ def generate_ferries_page(island_keys):
             'ferries':   ('Ferries',   'Πλοία'),
             'hopping':   ('Ferries & Hopping', 'Πλοία & Νησοπορία'),
             'match':     ('Match Me', 'Βρες το Νησί σου'),
+            'tripcost':  ('Trip Cost', 'Κόστος Ταξιδιού'),
             'shortlist': ('⭐ My Shortlist', '⭐ Η Λίστα μου'),
             'mission':   ('Mission',   'Στόχος'),
             'privacy':   ('Privacy',   'Απόρρητο'),
@@ -2367,6 +2368,7 @@ def generate_ferries_page(island_keys):
             '    <nav class="top-nav" id="main-nav">\n'
             f'      <a href="/{"el/" if is_el else ""}#compare">{navlbl("compare")}</a>\n'
             f'      <a href="/{"el/" if is_el else ""}#match">{navlbl("match")}</a>\n'
+            f'      <a href="/{"el/" if is_el else ""}trip-cost/">{navlbl("tripcost")}</a>\n'
             f'      <a href="/{"el/" if is_el else ""}#hopping" class="active">{navlbl("hopping")}</a>\n'
             f'      <a href="/{"el/" if is_el else ""}festivals/">{navlbl("festivals")}</a>\n'
             f'      <a href="/{"el/" if is_el else ""}#data">{navlbl("data")}</a>\n'
@@ -2849,6 +2851,7 @@ def generate_festivals_page(island_keys):
             '    <nav class="top-nav" id="main-nav">\n'
             '      <a href="/' + ('el/' if is_el else '') + '#compare">' + ('Σύγκριση' if is_el else 'Compare') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#match">' + ('Βρες το Νησί σου' if is_el else 'Match Me') + '</a>\n'
+            '      <a href="/' + ('el/' if is_el else '') + 'trip-cost/">' + ('Κόστος Ταξιδιού' if is_el else 'Trip Cost') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#hopping">' + ('Πλοία & Νησοπορία' if is_el else 'Ferries & Hopping') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + 'festivals/" class="active">' + ('Γιορτές' if is_el else 'Festivals') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#data">' + ('Στοιχεία Νησιών' if is_el else 'Islands Data') + '</a>\n'
@@ -3090,6 +3093,7 @@ def generate_sitemap(island_keys):
         ('/', '/el/', 1.0, today),
         ('/festivals/', '/el/festivals/', 0.8, today),
         ('/ferries/', '/el/ferries/', 0.8, today),
+        ('/trip-cost/', '/el/trip-cost/', 0.8, today),
         ('/privacy/', '/el/privacy/', 0.3, today),
     ]
 

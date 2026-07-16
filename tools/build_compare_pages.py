@@ -276,6 +276,7 @@ def render_page(pair_key, lang):
         nav_items = [
             ('/el/#compare', 'Σύγκριση', 'nav-compare'),
             ('/el/#match', 'Ταίριαξέ με', 'nav-match'),
+            ('/el/trip-cost/', 'Κόστος Ταξιδιού', 'nav-tripcost'),
             ('/el/#hopping', 'Πλοία & Νησοπορία', 'nav-hopping'),
             ('/el/festivals/', 'Γιορτές', 'nav-festivals'),
             ('/el/#data', 'Στοιχεία Νησιών', 'nav-data'),
@@ -287,6 +288,7 @@ def render_page(pair_key, lang):
         nav_items = [
             ('/#compare', 'Compare', 'nav-compare'),
             ('/#match', 'Match Me', 'nav-match'),
+            ('/trip-cost/', 'Trip Cost', 'nav-tripcost'),
             ('/#hopping', 'Ferries & Hopping', 'nav-hopping'),
             ('/festivals/', 'Festivals', 'nav-festivals'),
             ('/#data', 'Islands Data', 'nav-data'),
@@ -664,6 +666,7 @@ def render_hub_page(lang, valid_pairs):
         nav_items = [
             ('/el/#compare', 'Σύγκριση', 'nav-compare'),
             ('/el/#match', 'Ταίριαξέ με', 'nav-match'),
+            ('/el/trip-cost/', 'Κόστος Ταξιδιού', 'nav-tripcost'),
             ('/el/#hopping', 'Πλοία & Νησοπορία', 'nav-hopping'),
             ('/el/festivals/', 'Γιορτές', 'nav-festivals'),
             ('/el/#data', 'Στοιχεία Νησιών', 'nav-data'),
@@ -674,6 +677,7 @@ def render_hub_page(lang, valid_pairs):
         nav_items = [
             ('/#compare', 'Compare', 'nav-compare'),
             ('/#match', 'Match Me', 'nav-match'),
+            ('/trip-cost/', 'Trip Cost', 'nav-tripcost'),
             ('/#hopping', 'Ferries & Hopping', 'nav-hopping'),
             ('/festivals/', 'Festivals', 'nav-festivals'),
             ('/#data', 'Islands Data', 'nav-data'),
