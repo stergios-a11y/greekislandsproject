@@ -1,5 +1,15 @@
 # Cloudflare Pages cache rules.
 # App logic revalidates every load so deploys show up immediately (no stale JS/CSS).
+# NOTE: Pages serves the homepage at "/" (and redirects /index.html to /),
+# so the HTML rules must target the clean URLs, not the file names.
+/
+  Cache-Control: public, max-age=0, must-revalidate
+/el/
+  Cache-Control: public, max-age=0, must-revalidate
+/trip-cost/
+  Cache-Control: public, max-age=0, must-revalidate
+/el/trip-cost/
+  Cache-Control: public, max-age=0, must-revalidate
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
 /script.js
