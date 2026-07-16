@@ -253,7 +253,7 @@ function render(){
   let h='';
   const first=state.trip[0].k,last=state.trip[state.trip.length-1].k;
   const dep=legInfo('M',first);
-  h+=`<div class="tc-leg"><span class="l">🛳</span> ${dep.label||''} — ${T.departure} ${dep.fly?'<span class="hint">'+T.fly_hint+'</span>':''}<span class="fp">~€${rnd(mid(dep.f))} pp</span></div>`;
+  h+=`<div class="tc-leg"><span class="l">🛳</span> ${dep.label||''} — ${T.departure} ${dep.fly?'<span class="hint">'+T.fly_hint+'</span>':''}<span class="fp">€${rnd(mid(dep.f))} pp</span></div>`;
   state.trip.forEach((t,i)=>{
     const isl=ISL[t.k],rn=roomNight(t.k);
     const guide=(LANG==='el'?'/el':'')+'/island/'+t.k+'/';
@@ -261,7 +261,7 @@ function render(){
       ${isl.img?`<img src="${isl.img}" alt="${iname(t.k)}" loading="lazy">`:''}
       <div class="tc-cb">
         <div class="tc-cn">${iname(t.k)}<a href="${guide}">${T.guide}</a></div>
-        <div class="tc-cs">${T.rooms_per_night} ~${eur(rnd(rn))}${T.per_night} · ${T.months[state.month]}</div>
+        <div class="tc-cs">${T.rooms_per_night} ${eur(rnd(rn))}${T.per_night} · ${T.months[state.month]}</div>
         <div class="tc-cc">
           <span class="tc-n"><button data-a="n-" data-i="${i}">−</button> ${t.n} ${t.n===1?T.night:T.nights} <button data-a="n+" data-i="${i}">+</button></span>
           ${isl.car?`<span class="tc-sw ${t.c?'on':''}" data-a="car" data-i="${i}"><span class="s"></span> ${T.car}</span>`:''}
@@ -273,10 +273,10 @@ function render(){
     </div>`;
     const next=state.trip[i+1];
     if(next){const li=legInfo(t.k,next.k);
-      h+=`<div class="tc-leg"><span class="l">⛴</span> ${T.ferry_to} ${iname(next.k)}${li.label?' <small>('+li.label+')</small>':''} ${li.fly?'<span class="hint">'+T.fly_hint+'</span>':''}<span class="fp">~€${rnd(mid(li.f))} pp</span></div>`;}
+      h+=`<div class="tc-leg"><span class="l">⛴</span> ${T.ferry_to} ${iname(next.k)}${li.label?' <small>('+li.label+')</small>':''} ${li.fly?'<span class="hint">'+T.fly_hint+'</span>':''}<span class="fp">€${rnd(mid(li.f))} pp</span></div>`;}
   });
   const ret=legInfo(last,'M');
-  h+=`<div class="tc-leg"><span class="l">🛳</span> ${T.back_to} ${ret.label||''}<span class="fp">~€${rnd(mid(ret.f))} pp</span></div>`;
+  h+=`<div class="tc-leg"><span class="l">🛳</span> ${T.back_to} ${ret.label||''}<span class="fp">€${rnd(mid(ret.f))} pp</span></div>`;
   document.getElementById('tc-route').innerHTML=h;
 
   // quick-add buttons
@@ -286,7 +286,7 @@ function render(){
   // ---------------- totals (single typical figures) ----------------
   const nightsTotal=state.trip.reduce((a,t)=>a+t.n,0);
   let tot=0,li='';
-  const line=(ic,lbl,small,amt,book,url)=>`<div class="tc-li"><span>${ic}</span><span class="lbl">${lbl}<small>${small}</small></span><span class="amt">~${eur(rnd(amt))}</span>${book?`<a class="bk" href="${url}" target="_blank" rel="noopener sponsored">${book}</a>`:''}</div>`;
+  const line=(ic,lbl,small,amt,book,url)=>`<div class="tc-li"><span>${ic}</span><span class="lbl">${lbl}<small>${small}</small></span><span class="amt">${eur(rnd(amt))}</span>${book?`<a class="bk" href="${url}" target="_blank" rel="noopener sponsored">${book}</a>`:''}</div>`;
   // ferries
   let fsum=0;const legs=[['M',first],...state.trip.slice(0,-1).map((t,i)=>[t.k,state.trip[i+1].k]),[last,'M']];
   legs.forEach(([a,b])=>{fsum+=mid(legInfo(a,b).f)*state.pax;});
@@ -304,7 +304,7 @@ function render(){
   state.trip.forEach(t=>{if(t.c&&ISL[t.k].car){csum+=ISL[t.k].car*sC*t.n;cd+=t.n;}});
   if(cd){li+=line('🚗',`${T.li_car} — ${cd} ${T.days}`,state.trip.filter(t=>t.c&&ISL[t.k].car).map(t=>iname(t.k)).join(' · '),csum,T.book_car,'https://www.discovercars.com/?a_aid=antaran2');tot+=csum;
     const fuel=cd*CFG.fuel_per_day;
-    li+=line('⛽',T.li_fuel,`~€${CFG.fuel_per_day}/${LANG==='el'?'μέρα':'day'} × ${cd} ${T.days}`,fuel,null);tot+=fuel;}
+    li+=line('⛽',T.li_fuel,`€${CFG.fuel_per_day}/${LANG==='el'?'μέρα':'day'} × ${cd} ${T.days}`,fuel,null);tot+=fuel;}
   // boat days
   let bsum=0,boats=[];
   state.trip.forEach(t=>{const b=ISL[t.k].boat;if(b&&t.b){bsum+=b.pp*state.pax;boats.push(LANG==='el'?b.nel:b.n);}});
@@ -312,7 +312,7 @@ function render(){
   // food
   let msum=0;
   state.trip.forEach(t=>{msum+=mealDay(t.k)*state.pax*t.n;});
-  li+=line('🍴',T.li_food,`~${eur(mealDay(first))} ${T.food_s}`,msum,null);
+  li+=line('🍴',T.li_food,`${eur(Math.round(mealDay(first)))} ${T.food_s}`,msum,null);
   tot+=msum;
   // non-EU extras
   if(state.nonEU){
@@ -323,8 +323,8 @@ function render(){
     <h2>${T.estimate}</h2>
     <div class="tc-ss">${state.pax} ${T.li_pax} · ${nightsTotal} ${T.nights} · ${T.months[state.month]} · ${({budget:T.tier_budget,mid:T.tier_mid,comfort:T.tier_comfort})[state.tier]}</div>
     ${li}
-    <div class="tc-tot"><span class="t1">${T.total}</span><span class="amt">≈ ${eur(rnd(tot))}</span></div>
-    <div class="tc-pp">≈ ${eur(rnd(tot/state.pax))} ${T.pp}</div>
+    <div class="tc-tot"><span class="t1">${T.total}</span><span class="amt">${eur(rnd(tot))}</span></div>
+    <div class="tc-pp">${eur(rnd(tot/state.pax))} ${T.pp}</div>
     <div class="tc-ctas">
       <a class="tc-cta f" href="https://www.ferryhopper.com/${LANG==='el'?'el/':'en/'}" target="_blank" rel="noopener sponsored">${T.cta_ferry}</a>
       <a class="tc-cta c" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">${T.cta_car}</a>
