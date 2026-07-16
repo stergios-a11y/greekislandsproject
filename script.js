@@ -1488,6 +1488,14 @@ async function renderIslandPage(key) {
   document.getElementById('stat-group').textContent = groupName(island.island_group);
   const statDays = document.getElementById('stat-days');
   if (statDays) statDays.textContent = island.days ? `${island.days} ${t('common.days')}` : '—';
+
+  // Trip-cost deep link: prefill the calculator with this island + suggested days
+  const costBtn = document.getElementById('detail-cost-btn');
+  if (costBtn) {
+    const d = Math.max(1, Math.round(island.days || 3));
+    costBtn.href = `${CURRENT_LANG === 'el' ? '/el' : ''}/trip-cost/?i=${key}:${d}`;
+    costBtn.textContent = t('detail.tripcost').replace('{d}', d);
+  }
   
   // Set ferry booking link based on island
   const ferryBtn = document.getElementById('detail-ferry-btn');

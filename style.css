@@ -6144,3 +6144,7 @@ html.dark .map-mode-toast { background: #EEF2F5; color: #171C24; }
 /* "Price this trip" button on itinerary cards (hopping view) */
 .itin-cost-btn { display: inline-block; margin-top: 12px; background: #0B8FAC; color: #fff; font-weight: 800; font-size: 13px; padding: 8px 16px; border-radius: 999px; text-decoration: none; }
 .itin-cost-btn:hover { background: #076880; color: #fff; }
+
+/* Trip-cost button in island detail action bar */
+.cost-btn { display: inline-flex; align-items: center; gap: 6px; background: #076880; color: #fff; font-weight: 800; font-size: 14px; padding: 9px 16px; border-radius: 999px; text-decoration: none; white-space: nowrap; }
+.cost-btn:hover { background: #0B8FAC; color: #fff; }

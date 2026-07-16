@@ -115,6 +115,7 @@ const UI_TEXT = {
   'detail.print': { en: '🖨 Print', el: '🖨 Εκτύπωση' },
   'detail.bookferry': { en: '🚢 Book ferry tickets', el: '🚢 Κράτηση' },
   'detail.rentcar': { en: '🚗 Rent a car', el: '🚗 Ενοικίαση αυτοκινήτου' },
+  'detail.tripcost': { en: '💶 Cost for {d} days', el: '💶 Κόστος για {d} μέρες' },
   'similar.title': { en: 'Islands like this one', el: 'Παρόμοια νησιά' },
   'similar.intro': { en: 'Based on character, vibe, and ferry-region.', el: 'Βάσει χαρακτήρα και περιοχής.' },
   'group.cyclades':  { en: 'Cyclades',     el: 'Κυκλάδες' },

@@ -1618,7 +1618,7 @@ def render_page(key, data, meta, lang='en'):
 <script type="application/ld+json">{schema_json}</script>
 
 <!-- SPA assets — load the same CSS as the main site so the SEO body blends visually -->
-<link rel="stylesheet" href="{asset_prefix}style.css?v=36">
+<link rel="stylesheet" href="{asset_prefix}style.css?v=37">
 <style>
   /* Minimal SEO body styling — these elements exist only in pre-rendered pages */
   .seo-island-content {{
@@ -1898,6 +1898,7 @@ def render_page(key, data, meta, lang='en'):
     <a href="{('/' if lang == 'en' else '/el/')}#compare" class="seo-cta-btn">{'↔ Compare islands' if lang == 'en' else '↔ Σύγκρινε νησιά'}</a>
     <a href="{('/' if lang == 'en' else '/el/')}#match" class="seo-cta-btn">{'🎯 Take the quiz' if lang == 'en' else '🎯 Κάνε το quiz'}</a>
     <a href="{('/' if lang == 'en' else '/el/')}" class="seo-cta-btn">{'🗺 Explore map' if lang == 'en' else '🗺 Εξερεύνησε χάρτη'}</a>
+    <a href="{('/trip-cost/' if lang == 'en' else '/el/trip-cost/')}?i={key}:{int(meta.get('days') or 3)}" class="seo-cta-btn">{f"💶 What do {int(meta.get('days') or 3)} days here cost?" if lang == 'en' else f"💶 Πόσο κοστίζουν {int(meta.get('days') or 3)} μέρες εδώ;"}</a>
   </div>
 </div>
 
@@ -1985,8 +1986,8 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="{asset_prefix}i18n.js?v=38"></script>
-<script src="{asset_prefix}script.js?v=59"></script>
+<script src="{asset_prefix}i18n.js?v=39"></script>
+<script src="{asset_prefix}script.js?v=60"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
