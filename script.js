@@ -4724,6 +4724,16 @@ function renderItineraries() {
     }).join('');
 
     const islandKeys = it.stops.filter(s => s !== 'piraeus' && ISLANDS_DATA[s]);
+    // Deep-link into /trip-cost/ with this route prefilled (islands + nights).
+    // Nights come from the breakdown, matched by island display name; stops
+    // without a match (or non-island rows like Athens) fall back sensibly.
+    const nightsByKey = {};
+    it.breakdown.forEach(b => {
+      const k = Object.keys(ISLANDS_DATA).find(k2 => ISLANDS_DATA[k2].name === b.from);
+      if (k) nightsByKey[k] = b.nights;
+    });
+    const costParam = islandKeys.map(k => `${k}:${nightsByKey[k] || 2}`).join(',');
+    const costHref = `${CURRENT_LANG === 'el' ? '/el' : ''}/trip-cost/?i=${costParam}`;
     const islandLinks = islandKeys.map(k =>
       `<a class="itin-island-link" href="#island/${k}" onclick="event.preventDefault();navigateTo('island','${k}')">${islandName(k)}</a>`
     ).join(' · ');
@@ -4742,6 +4752,7 @@ function renderItineraries() {
         <p class="itin-desc">${pickLang(it, 'description')}</p>
         <div class="itin-legs">${stopsLine}</div>
         ${islandLinks ? `<div class="itin-links">${t('hopping.visit')} ${islandLinks}</div>` : ''}
+        <a class="itin-cost-btn" href="${costHref}">${t('hopping.pricetrip')}</a>
       </div>
     `;
   }).join('');

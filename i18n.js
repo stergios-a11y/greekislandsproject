@@ -283,6 +283,7 @@ const UI_TEXT = {
   'hopping.night': { en: 'night', el: 'βράδυ' },
   'hopping.nights': { en: 'nights', el: 'βράδια' },
   'hopping.visit': { en: 'Visit:', el: 'Επισκέψου:' },
+  'hopping.pricetrip': { en: '💶 What does this trip cost? →', el: '💶 Πόσο κοστίζει αυτό το ταξίδι; →' },
 
   // International Escapes page
   'international.title': { en: '🌍 International Escapes', el: '🌍 Διεθνείς Αποδράσεις' },

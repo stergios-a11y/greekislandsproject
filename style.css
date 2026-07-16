@@ -6140,3 +6140,7 @@ html.dark .map-mode-toast { background: #EEF2F5; color: #171C24; }
   .bp-vs-strip .bp-vs-chip:nth-child(n+5) { display: none; }
   .home-block { margin-bottom: 36px; }
 }
+
+/* "Price this trip" button on itinerary cards (hopping view) */
+.itin-cost-btn { display: inline-block; margin-top: 12px; background: #0B8FAC; color: #fff; font-weight: 800; font-size: 13px; padding: 8px 16px; border-radius: 999px; text-decoration: none; }
+.itin-cost-btn:hover { background: #076880; color: #fff; }
