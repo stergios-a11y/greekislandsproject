@@ -114,6 +114,7 @@ STR = {
         'carless_note': 'No car on {n} (car-reliant) — we price a central room so you can walk to things (+{p}%).',
         'estimate': 'Your trip estimate',
         'li_ferries': 'Ferries', 'li_legs': 'legs', 'li_pax': 'pax', 'book_ferry': 'Book on Ferryhopper →',
+        'from_port': 'from', 'ionian_gate_s': 'local mainland port',
         'li_rooms': 'Rooms', 'central': '(central)',
         'li_car': 'Car', 'days': 'days', 'book_car': 'Compare on Discover Cars →',
         'li_vehicle': 'Vehicle hire', 'li_flights': 'Domestic flights', 'total_fly': 'Total (excl. int’l flights)',
@@ -162,6 +163,7 @@ STR = {
         'carless_note': 'Χωρίς αυτοκίνητο στη {n} (το χρειάζεται) — υπολογίζουμε κεντρικό δωμάτιο για να πηγαίνεις παντού με τα πόδια (+{p}%).',
         'estimate': 'Η εκτίμηση του ταξιδιού σου',
         'li_ferries': 'Πλοία', 'li_legs': 'διαδρομές', 'li_pax': 'άτομα', 'book_ferry': 'Κράτηση στο Ferryhopper →',
+        'from_port': 'από', 'ionian_gate_s': 'τοπικό λιμάνι στεριάς',
         'li_rooms': 'Δωμάτια', 'central': '(κεντρικό)',
         'li_car': 'Αυτοκίνητο', 'days': 'μέρες', 'book_car': 'Σύγκριση στο Discover Cars →',
         'li_vehicle': 'Ενοικίαση οχήματος', 'li_flights': 'Πτήσεις εσωτερικού', 'total_fly': 'Σύνολο (χωρίς διεθνείς πτήσεις)',
@@ -226,7 +228,7 @@ def render_page(lang, meta, data):
         'li_car', 'days', 'book_car', 'li_fuel', 'li_boat', 'boat_rec', 'li_food', 'food_s',
         'li_esim', 'esim_s', 'book_esim', 'li_insurance', 'ins_days', 'total', 'pp',
         'cta_ferry', 'cta_car',
-        'li_vehicle', 'li_flights', 'total_fly', 'veh_none', 'veh_moto', 'veh_car', 'add_far',
+        'li_vehicle', 'li_flights', 'total_fly', 'veh_none', 'veh_moto', 'veh_car', 'add_far', 'from_port', 'ionian_gate_s',
         'assume', 'honest', 'guide', 'remove',
         'tier_budget', 'tier_mid', 'tier_comfort',
     )}
@@ -543,7 +545,11 @@ function render(){{
   // ferries
   let fsum=0;const legs=[...(flyIn?[]:[['M',first]]),...state.trip.slice(0,-1).map((t,i)=>[t.k,state.trip[i+1].k]),...(flyOut?[]:[[last,'M']])];
   legs.forEach(([a,b])=>{{fsum+=mid(legInfo(a,b).f)*state.pax;}});
-  if(legs.length){{li+=line('⛴',T.li_ferries,`${{legs.length}} ${{T.li_legs}} × ${{state.pax}} ${{T.li_pax}}`,fsum,T.book_ferry,'https://www.ferryhopper.com/'+(LANG==='el'?'el/':'en/'));tot+=fsum;}}
+  if(legs.length){{
+    const portOf=k=>{{const g=gateOf(k);return g?g[LANG]:T.ionian_gate_s;}};
+    const ports=[...new Set(legs.filter(([a,b])=>a==='M'||b==='M').map(([a,b])=>portOf(a==='M'?b:a)))];
+    const portsTxt=ports.length?`${{T.from_port}} ${{ports.join(' & ')}} · `:'';
+    li+=line('⛴',T.li_ferries,`${{portsTxt}}${{legs.length}} ${{T.li_legs}} × ${{state.pax}} ${{T.li_pax}}`,fsum,T.book_ferry,'https://www.ferryhopper.com/'+(LANG==='el'?'el/':'en/'));tot+=fsum;}}
   if(flyIn||flyOut){{const fl=((flyIn?flightFare(first):0)+(flyOut?flightFare(last):0))*state.pax;
     li+=line('✈',T.li_flights,`${{(flyIn?1:0)+(flyOut?1:0)}} × ${{state.pax}} ${{T.li_pax}}`,fl,null);tot+=fl;}}
   // rooms
