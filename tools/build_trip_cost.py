@@ -117,6 +117,7 @@ STR = {
         'months': {'apr': 'April', 'may': 'May', 'jun': 'June', 'jul': 'July', 'aug': 'August', 'sep': 'September', 'oct': 'October'},
         'add_island': 'Add an island:', 'add_ph': 'Type an island…',
         'add_far': 'Islands far from this route are hidden — remove a stop to change region.',
+        'empty_trip': 'Your route is empty — add an island below to start.',
         'departure': 'departure', 'back_to': 'back to', 'ferry_to': 'ferry to',
         'via_mainland': 'via mainland — no direct ferry likely', 'fly_hint': '✈ flying is often cheaper',
         'ionian_gate': 'nearest mainland port (drive or KTEL bus from Athens)',
@@ -173,6 +174,7 @@ STR = {
         'months': {'apr': 'Απρίλιος', 'may': 'Μάιος', 'jun': 'Ιούνιος', 'jul': 'Ιούλιος', 'aug': 'Αύγουστος', 'sep': 'Σεπτέμβριος', 'oct': 'Οκτώβριος'},
         'add_island': 'Πρόσθεσε νησί:', 'add_ph': 'Γράψε ένα νησί…',
         'add_far': 'Νησιά μακριά από τη διαδρομή σου κρύβονται — αφαίρεσε στάση για να αλλάξεις περιοχή.',
+        'empty_trip': 'Η διαδρομή σου είναι άδεια — πρόσθεσε ένα νησί για να ξεκινήσεις.',
         'departure': 'αναχώρηση', 'back_to': 'επιστροφή', 'ferry_to': 'πλοίο προς',
         'via_mainland': 'μέσω στεριάς — μάλλον χωρίς απευθείας πλοίο', 'fly_hint': '✈ συχνά συμφέρει αεροπορικώς',
         'ionian_gate': 'κοντινότερο λιμάνι στεριάς (οδικώς / ΚΤΕΛ από Αθήνα)',
@@ -247,7 +249,7 @@ def render_page(lang, meta, data):
         'li_esim', 'esim_s', 'book_esim', 'li_insurance', 'ins_days', 'total', 'pp',
         'cta_ferry', 'cta_car',
         'li_vehicle', 'li_flights', 'total_fly', 'veh_none', 'veh_moto', 'veh_car', 'add_far', 'from_port', 'ionian_gate_s',
-        'li_carferry', 'carferry_s', 'li_legs',
+        'li_carferry', 'carferry_s', 'li_legs', 'empty_trip',
         'assume', 'honest', 'guide', 'remove',
         'tier_budget', 'tier_mid', 'tier_comfort',
     )}
@@ -481,7 +483,7 @@ function legInfo(a,b){{
   const f=[fa[0]+fb[0],fa[1]+fb[1]];
   return{{f:f,label:T.via_mainland,fly:(ISL[a].air&&ISL[b].air)}};
 }}
-function nearTrip(k){{return state.trip.some(t=>ISL[t.k].g===ISL[k].g||haversine(ISL[t.k],ISL[k])<=130);}}
+function nearTrip(k){{if(!state.trip.length)return true;return state.trip.some(t=>ISL[t.k].g===ISL[k].g||haversine(ISL[t.k],ISL[k])<=130);}}
 function flightFare(k){{const nm=haversine(GATES.Piraeus,ISL[k])/1.852;return Math.min(120,Math.max(55,Math.round(55+0.15*nm)));}}
 const eur=n=>'€'+Math.round(n).toLocaleString(LANG==='el'?'el-GR':'en-GB');
 const rnd=n=>n<100?Math.round(n/5)*5:Math.round(n/10)*10;
@@ -532,6 +534,13 @@ function render(){{
 
   const sR=CFG.season_room[state.month],sC=CFG.season_car[state.month];
   let h='';
+  if(!state.trip.length){{
+    document.getElementById('tc-route').innerHTML=`<div class="tc-leg" style="padding:18px 4px;font-size:14px">${{T.empty_trip}}</div>`;
+    document.getElementById('tc-quick').innerHTML=['santorini','milos','naxos']
+      .map(k=>`<button class="tc-addbtn" data-add="${{k}}">+ ${{iname(k)}}</button>`).join(' ');
+    document.getElementById('tc-summary').innerHTML=`<h2>${{T.estimate}}</h2><div class="tc-ss">${{T.empty_trip}}</div>`;
+    sync();return;
+  }}
   const first=state.trip[0].k,last=state.trip[state.trip.length-1].k;
   const flyIn=state.fly&&!state.own&&ISL[first].air,flyOut=state.fly&&!state.own&&ISL[last].air;
   const flyChip=document.querySelector('#tc-arr [data-arr="fly"]');
@@ -573,9 +582,11 @@ function render(){{
 
   // quick-add buttons
   const inTrip=k=>state.trip.some(t=>t.k===k);
-  const dist=k=>Math.min(...state.trip.map(t=>haversine(ISL[t.k],ISL[k])));
-  document.getElementById('tc-quick').innerHTML=Object.keys(ISL)
-    .filter(k=>!inTrip(k)&&nearTrip(k)).sort((a,b)=>dist(a)-dist(b)).slice(0,3)
+  const quickKeys=state.trip.length
+    ?Object.keys(ISL).filter(k=>!inTrip(k)&&nearTrip(k))
+      .sort((a,b)=>Math.min(...state.trip.map(t=>haversine(ISL[t.k],ISL[a])))-Math.min(...state.trip.map(t=>haversine(ISL[t.k],ISL[b])))).slice(0,3)
+    :['santorini','milos','naxos'];
+  document.getElementById('tc-quick').innerHTML=quickKeys
     .map(k=>`<button class="tc-addbtn" data-add="${{k}}">+ ${{iname(k)}}</button>`).join(' ');
 
   // ---------------- totals (single typical figures) ----------------
@@ -665,7 +676,7 @@ document.getElementById('tc-route').addEventListener('click',e=>{{
   else if(el.dataset.a==='n+')t.n=Math.min(14,t.n+1);
   else if(el.dataset.a==='veh')t.v=el.dataset.v;
   else if(el.dataset.a==='boat')t.b=!t.b;
-  else if(el.dataset.a==='rm'){{if(state.trip.length>1)state.trip.splice(i,1);}}
+  else if(el.dataset.a==='rm')state.trip.splice(i,1);
   render();}});
 document.getElementById('tc-quick').addEventListener('click',e=>{{const b=e.target.closest('[data-add]');
   if(b&&!state.trip.some(t=>t.k===b.dataset.add)){{state.trip.push({{k:b.dataset.add,n:3,v:'',b:false}});render();}}}});
