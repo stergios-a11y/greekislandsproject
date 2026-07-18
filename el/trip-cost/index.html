@@ -313,7 +313,7 @@ function render(){
     h+=`<div class="tc-leg"><span class="l">✈</span> ${GATES.Piraeus[LANG].replace(/\s*\(.*\)/,'')} (ATH) — ${T.departure}<span class="fp">€${rnd(flightFare(first))} pp</span></div>`;
   }else{
     const dep=legInfo('M',first);
-    h+=`<div class="tc-leg"><span class="l">🛳</span> ${dep.label||''} — ${T.departure} ${dep.fly?'<span class="hint">'+T.fly_hint+'</span>':''}<span class="fp">€${rnd(mid(dep.f))} pp</span></div>`;
+    h+=`<div class="tc-leg"><span class="l">🛳</span> ${dep.label||''} — ${T.departure} ${(dep.fly&&!state.own)?'<span class="hint">'+T.fly_hint+'</span>':''}<span class="fp">€${rnd(mid(dep.f))} pp</span></div>`;
   }
   state.trip.forEach((t,i)=>{
     const isl=ISL[t.k],rn=roomNight(t.k);
@@ -334,7 +334,7 @@ function render(){
     </div>`;
     const next=state.trip[i+1];
     if(next){const li=legInfo(t.k,next.k);
-      h+=`<div class="tc-leg"><span class="l">⛴</span> ${T.ferry_to} ${iname(next.k)}${li.label?' <small>('+li.label+')</small>':''} ${li.fly?'<span class="hint">'+T.fly_hint+'</span>':''}<span class="fp">€${rnd(mid(li.f))} pp</span></div>`;}
+      h+=`<div class="tc-leg"><span class="l">⛴</span> ${T.ferry_to} ${iname(next.k)}${li.label?' <small>('+li.label+')</small>':''} ${(li.fly&&!state.own)?'<span class="hint">'+T.fly_hint+'</span>':''}<span class="fp">€${rnd(mid(li.f))} pp</span></div>`;}
   });
   if(flyOut){
     h+=`<div class="tc-leg"><span class="l">✈</span> ${T.back_to} ${GATES.Piraeus[LANG].replace(/\s*\(.*\)/,'')} (ATH)<span class="fp">€${rnd(flightFare(last))} pp</span></div>`;
