@@ -1144,6 +1144,96 @@ async function renderWhatsOnStrip() {
     ${(pills.length || festLink) ? `<div class="bp-fest-strip">${pills.join('')}${festLink}</div>` : ''}
   `;
   season.hidden = false;
+
+  renderMapRail(islandsToShow.slice(0, 4), perfectLabel, photos, lang);
+}
+
+/* ============================================================
+   MAP PICK RAIL — polaroids of this month's picks on the map,
+   dotted leader lines to their gold dots. Desktop only.
+============================================================ */
+let railDots = [];
+function renderMapRail(keys, label, photos, lang) {
+  const rail = document.getElementById('pick-rail');
+  const svg = document.getElementById('rail-svg');
+  if (!rail || !svg || typeof mapInstance === 'undefined' || !mapInstance) return;
+  if (window.matchMedia('(max-width: 840px)').matches) return;   // mobile uses the bp-season strip
+  if (!keys.length) return;
+  const meta = (typeof ISLANDS_DATA !== 'undefined') ? ISLANDS_DATA : {};
+  const collapsed = localStorage.getItem('bp-rail-off') === '1';
+
+  // gold dots at real coordinates (once)
+  railDots.forEach(d => mapInstance.removeLayer(d));
+  railDots = keys.filter(k => meta[k]).map(k => {
+    const d = L.circleMarker([meta[k].lat, meta[k].lng], { radius: 6, color: '#fff', weight: 2, fillColor: '#C4962A', fillOpacity: 1, pane: 'markerPane' })
+      .addTo(mapInstance).bindTooltip(`${islandName(k)} — ${label}`);
+    d.on('click', () => navigateTo('island', k));
+    d._railKey = k;
+    return d;
+  });
+
+  const hideTitle = lang === 'el' ? 'Απόκρυψη' : 'Hide';
+  const cards = keys.filter(k => meta[k]).map((k, i) => {
+    const photo = photos[k] && photos[k].url ? thumbUrl(photos[k].url) : '';
+    const grp = (typeof groupName === 'function') ? groupName(meta[k].island_group) : '';
+    return `<div class="bp-pol" data-k="${k}">
+      ${photo ? `<img src="${photo}" alt="${escapeAttr(islandName(k))}" loading="lazy">` : ''}
+      <span class="bp-pol-cap">${escapeHtml(islandName(k))}</span>
+      <span class="bp-pol-tag">${escapeHtml(grp)}</span>
+    </div>`;
+  }).join('');
+  rail.innerHTML = `
+    <div class="bp-rail-head"><b>📅 ${escapeHtml(label)}</b>
+      <button class="bp-rail-x" title="${hideTitle}" aria-label="${hideTitle}">✕</button></div>
+    ${cards}`;
+  const pill = document.createElement('button');
+  pill.className = 'bp-rail-pill';
+  pill.id = 'bp-rail-pill';
+  pill.textContent = '📅 ' + label;
+  const old = document.getElementById('bp-rail-pill');
+  if (old) old.remove();
+  rail.parentElement.appendChild(pill);
+
+  function setCollapsed(off) {
+    rail.hidden = off;
+    svg.style.display = off ? 'none' : '';
+    pill.style.display = off ? '' : 'none';
+    railDots.forEach(d => d.setStyle({ fillOpacity: off ? 0 : 1, opacity: off ? 0 : 1 }));
+    localStorage.setItem('bp-rail-off', off ? '1' : '0');
+    if (!off) drawRailLeaders();
+  }
+  rail.querySelector('.bp-rail-x').addEventListener('click', () => setCollapsed(true));
+  pill.addEventListener('click', () => setCollapsed(false));
+  rail.addEventListener('click', e => {
+    const c = e.target.closest('.bp-pol');
+    if (c) navigateTo('island', c.dataset.k);
+  });
+
+  // leader lines: fade during zoom, redraw on settle, skip off-screen dots
+  mapInstance.on('zoomstart', () => { svg.style.opacity = '0'; });
+  mapInstance.on('zoomend moveend viewreset', () => { if (!rail.hidden) { drawRailLeaders(); svg.style.opacity = '1'; } });
+  mapInstance.on('move', () => { if (!rail.hidden) drawRailLeaders(); });
+  setCollapsed(collapsed);
+  setTimeout(() => { if (!rail.hidden) drawRailLeaders(); }, 350);
+}
+
+function drawRailLeaders() {
+  const rail = document.getElementById('pick-rail');
+  const svg = document.getElementById('rail-svg');
+  if (!rail || !svg || rail.hidden || !mapInstance) return;
+  const wrap = svg.parentElement.getBoundingClientRect();
+  svg.setAttribute('width', wrap.width);
+  svg.setAttribute('height', wrap.height);
+  const bounds = mapInstance.getBounds();
+  svg.innerHTML = [...rail.querySelectorAll('.bp-pol')].map(card => {
+    const k = card.dataset.k;
+    const meta = ISLANDS_DATA[k];
+    if (!meta || !bounds.contains([meta.lat, meta.lng])) return '';
+    const pt = mapInstance.latLngToContainerPoint([meta.lat, meta.lng]);
+    const cr = card.getBoundingClientRect();
+    const x1 = cr.left - wrap.left, y1 = cr.top - wrap.top + cr.height / 2;
+    return `<path d="M${x1},${y1} Q${(x1 + pt.x) / 2},${y1} ${pt.x},${pt.y}" fill="none" stroke="rgba(196,150,42,.75)" stroke-width="1.5" stroke-dasharray="4 4"/>`;
+  }).join('');
 }
 
 // Tiny helpers — escape for HTML attrs and innerHTML use
@@ -1156,7 +1246,7 @@ function escapeHtml(s) {
 
 function setupMap() {
   const GREECE_BOUNDS = L.latLngBounds(L.latLng(33.8, 18.5), L.latLng(42.2, 30.2));
-  mapInstance = L.map('main-map', { zoomControl: true, minZoom: 6, maxZoom: 14, zoomSnap: 0.5, maxBounds: GREECE_BOUNDS, maxBoundsViscosity: 0.85 });
+  mapInstance = L.map('main-map', { zoomControl: true, scrollWheelZoom: false, minZoom: 6, maxZoom: 14, zoomSnap: 0.5, maxBounds: GREECE_BOUNDS, maxBoundsViscosity: 0.85 });
   // Default view hugs the Greek islands (Corfu→Kastellorizo, Crete→Thasos)
   // instead of the padded maxBounds — no half-screen of Italy/Turkey/sea.
   mapInstance.fitBounds(L.latLngBounds(L.latLng(34.6, 19.4), L.latLng(41.1, 28.4)));
