@@ -1967,7 +1967,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=40"></script>
-<script src="{asset_prefix}script.js?v=62"></script>
+<script src="{asset_prefix}script.js?v=63"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
@@ -2566,7 +2566,7 @@ def generate_festivals_page(island_keys):
         is_el = (lang == 'el')
         month_names = MONTH_NAMES_EL if is_el else MONTH_NAMES_EN
         if is_el:
-            title = 'Γιορτές & Πανηγύρια Νησιών — αναλυτικό ημερολόγιο | Aegean Blueprint'
+            title = f'Γιορτές & Πανηγύρια Νησιών {datetime.now().year} — αναλυτικό ημερολόγιο | Aegean Blueprint'
             intro = (f'Θρησκευτικές γιορτές, πανηγύρια και παραδοσιακές εκδηλώσεις σε όλα τα {island_count} ελληνικά νησιά. '
                      'Για τις κινητές γιορτές, οι ημερομηνίες είναι ρυθμισμένες για το 2027. '
                      'Το ημερολόγιο είναι ο καλύτερος τρόπος να σχεδιάσεις ταξίδι γύρω από κάτι συγκεκριμένο.')
@@ -2576,7 +2576,7 @@ def generate_festivals_page(island_keys):
                          'Κινητές ημερομηνίες ρυθμισμένες για το 2027. Σχεδίασε το ταξίδι σου γύρω από κάτι αυθεντικό.')
             h1 = 'Γιορτές & Πανηγύρια — Ημερολόγιο'
         else:
-            title = 'Greek Island Festivals — full calendar | Aegean Blueprint'
+            title = f'Greek Island Festivals {datetime.now().year} — full calendar | Aegean Blueprint'
             intro = (f'Religious feasts, panigiria, and traditional celebrations across all {island_count} Greek islands. '
                      'Dates pinned to 2027 where movable. The calendar is the single best way to plan a trip '
                      'around something specific — most of these festivals are the deepest-rooted experiences '
@@ -2584,7 +2584,7 @@ def generate_festivals_page(island_keys):
             # Self-contained meta description (≤160 chars).
             meta_desc = (f'Religious feasts and panigiria across all {island_count} Greek islands. Movable dates pinned to 2027. '
                          'The calendar is the deepest way to plan a trip.')
-            h1 = 'Greek Island Festivals — full calendar'
+            h1 = f'Greek Island Festivals {datetime.now().year} — full calendar'
 
         url = f'{SITE_URL}/' + ('el/' if is_el else '') + 'festivals/'
 
@@ -2864,6 +2864,12 @@ def generate_festivals_page(island_keys):
             '  <h1>' + h1 + '</h1>\n'
             '  <p class="fest-intro">' + esc(intro) + '</p>\n'
             '  <nav class="fest-nav">' + nav_html + '</nav>\n'
+            + ('  <p class="fest-nav" style="margin-top:-20px">'
+               + ('Ανά μήνα: ' if is_el else 'By month: ')
+               + ' · '.join(f'<a href="/{"el/" if is_el else ""}festivals/{slug}/">{el_n if is_el else en_n}</a>'
+                            for slug, en_n, el_n in [('may','May','Μάιος'),('june','June','Ιούνιος'),('july','July','Ιούλιος'),('august','August','Αύγουστος'),('september','September','Σεπτέμβριος')])
+               + ' &nbsp;·&nbsp; <a href="/' + ('el/' if is_el else '') + 'festivals/ikaria-panigiria/"><strong>'
+               + ('Τα πανηγύρια της Ικαρίας →' if is_el else 'The panigiria of Ikaria →') + '</strong></a></p>\n')
             + filter_html + '\n'
             '  ' + ''.join(month_blocks) + '\n'
             '</main>\n'
