@@ -408,6 +408,7 @@ def render_page(pair_key, lang):
 <link rel="stylesheet" href="/style.css?v={ASSET_V}">
 <style>{page_css}</style>
 {faq_jsonld}
+<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>
 </head>
 <body>
 
@@ -802,6 +803,7 @@ def render_hub_page(lang, valid_pairs):
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css?v={ASSET_V}">
 <style>{page_css}</style>
+<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>
 </head>
 <body>
 <header>

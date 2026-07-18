@@ -1861,6 +1861,7 @@ def render_page(key, data, meta, lang='en'):
     }}
   }})();
 </script>
+<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>
 </head>
 <body data-island-key="{key}" data-lang="{lang}">
 
@@ -2358,6 +2359,7 @@ def generate_ferries_page(island_keys):
             '<script>\n'
             '  (function(){ if (window.matchMedia(\'(max-width: 899.98px)\').matches) { window.adsbygoogle = window.adsbygoogle || []; window.adsbygoogle.push = function(){}; } })();\n'
             '</script>\n'
+            '<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>\n'
             '</head>\n<body>\n'
             '<header>\n'
             '  <div class="header-content">\n'
@@ -2835,6 +2837,7 @@ def generate_festivals_page(island_keys):
             '  })();\n'
             '</script>\n'
             + schema_html
+            + '<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>\n'
             + '</head>\n<body>\n'
             # Match the main-site header exactly. Same classes, same CSS in style.css.
             # Difference: nav links go to /index.html#hash so they switch SPA view on

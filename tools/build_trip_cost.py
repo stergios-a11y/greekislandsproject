@@ -332,6 +332,7 @@ def render_page(lang, meta, data):
 .seo-footer{{font-size:13px;color:var(--ink-3,#637080)}}
 .seo-footer a{{color:#0B8FAC;text-decoration:none}}
 </style>
+<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>
 </head>
 <body>
 <header>
