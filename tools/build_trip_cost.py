@@ -50,15 +50,19 @@ def parse_islands_data():
 
 
 def thumb(url):
-    """Cloudinary hero URL -> small card thumbnail."""
+    """Hero URL -> small card thumbnail (replaces any existing Cloudinary transform)."""
     if not url:
         return ''
-    return url.replace('/image/upload/', '/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/', 1)
+    if '/image/upload/' in url:
+        return re.sub(r'/image/upload/(?:[a-zA-Z]+_[^/]+/)?',
+                      '/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/', url, count=1)
+    return url  # non-Cloudinary (e.g. Wikimedia) — use as-is
 
 
 def build_dataset():
     costs = json.loads((ROOT / 'costs.json').read_text(encoding='utf-8'))
     meta, cost_islands = costs['_meta'], costs['islands']
+    heroes = json.loads((ROOT / 'hero-photos.json').read_text(encoding='utf-8'))
     geo = parse_islands_data()
     data = {}
     for key, c in cost_islands.items():
@@ -78,7 +82,7 @@ def build_dataset():
         data[key] = {
             'n': g['name'],
             'nel': ij.get('name_el') or g['name'],
-            'img': thumb(ij.get('hero_photo') or ''),
+            'img': thumb(ij.get('hero_photo') or (heroes.get(key) or {}).get('url') or ''),
             'lat': g['lat'], 'lng': g['lng'],
             'g': g['group'], 'cn': g['car_need'], 'air': g['air'],
             'room': c['room'], 'meal': c['meal_pp_mid'], 'car': c['car_day'],
