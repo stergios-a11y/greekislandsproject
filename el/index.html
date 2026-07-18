@@ -124,7 +124,7 @@
       <nav class="top-nav" id="main-nav">
         <a href="#" id="nav-compare" data-i18n="nav.compare">Σύγκριση</a>
         <a href="#" id="nav-match" data-i18n="nav.match">Βρες το Νησί σου</a>
-        <a href="/el/trip-cost/" id="nav-tripcost" data-i18n="nav.tripcost">Κόστος Ταξιδιού</a>
+        <a href="/el/trip-cost/" id="nav-tripcost" data-i18n="nav.tripcost">Μπάτζετ</a>
         <a href="#" id="nav-hopping" data-i18n="nav.hopping">Πλοία &amp; Νησοπορία</a>
         <a href="/el/festivals/" id="nav-festivals" data-i18n="nav.festivals">Γιορτές</a>
         <a href="#" id="nav-data" data-i18n="nav.data">Στοιχεία Νησιών</a>
@@ -176,7 +176,7 @@
       <div class="bp-hero-inner">
         <div class="bp-hero-eyebrow">Ο οδηγός για το ελληνικό νησί που σας ταιριάζει</div>
         <h2 class="bp-hero-title">Βρες το ιδανικό σου ελληνικό νησί</h2>
-        <p class="bp-hero-sub">88 νησιά βαθμολογημένα σε παραλίες, πολιτισμό, νυχτερινή ζωή, πρόσβαση και τιμές.</p>
+        <p class="bp-hero-sub">Διάλεξε νησί, σχεδίασε τη διαδρομή, φτιάξε μπάτζετ, κλείσε — ένας ειλικρινής οδηγός και για τα 88.</p>
         <div class="bp-hero-search-wrap">
         <form class="bp-hero-search" id="bp-hero-search-form">
           <input id="bp-hero-search" type="text" placeholder="🔍  Αναζήτησε νησί — Μήλος, Ικαρία, Σκόπελος…" aria-label="Αναζήτηση νησιών">
@@ -192,25 +192,25 @@
       <!-- Decision cards -->
       <div class="bp-decide">
         <button type="button" class="bp-dcard alt" onclick="navigateTo('match')">
-          <span class="bp-dcard-m">🎯 Quiz</span>
+          <span class="bp-dcard-m">1 · Διάλεξε</span>
           <span class="ic">🎯</span>
-          <h3>Δεν ξέρεις από πού να ξεκινήσεις;</h3>
-          <p>Απάντησε 6 γρήγορες ερωτήσεις — παραλίες, budget, νυχτερινή ζωή, ρυθμός — και πάρε τα 3 νησιά που σου ταιριάζουν.</p>
-          <span class="go">Κάνε το quiz του ενός λεπτού →</span>
+          <h3>1 · Διάλεξε νησί</h3>
+          <p>88 νησιά με ειλικρινή βαθμολογία. Κάνε το quiz του ενός λεπτού, σύγκρινε δύο, ή δες τον χάρτη.</p>
+          <span class="go">Κάνε το quiz →</span>
         </button>
-        <button type="button" class="bp-dcard" onclick="navigateTo('compare')">
-          <span class="bp-dcard-m">↔ Σύγκριση</span>
-          <span class="ic">↔</span>
-          <h3>Ανάμεσα σε δύο;</h3>
-          <p>Βαθμολογίες δίπλα-δίπλα, διάγραμμα ράνταρ, ακτοπλοϊκά και μια ειλικρινής ετυμηγορία.</p>
-          <span class="go">Σύγκρινε νησιά →</span>
+        <button type="button" class="bp-dcard" onclick="navigateTo('hopping')">
+          <span class="bp-dcard-m">2 · Σχεδίασε</span>
+          <span class="ic">🧭</span>
+          <h3>2 · Σχεδίασε το ταξίδι</h3>
+          <p>Έτοιμες διαδρομές νησοπορίας, πραγματικά δρομολόγια πλοίων, και ο σωστός μήνας.</p>
+          <span class="go">Διαδρομές &amp; πλοία →</span>
         </button>
-        <button type="button" class="bp-dcard" onclick="scrollToMainMap()">
-          <span class="bp-dcard-m">🗺 Χάρτης</span>
-          <span class="ic">🗺</span>
-          <h3>Ξέρεις το vibe, όχι το όνομα;</h3>
-          <p>Δες και τα 88 στον χάρτη — φιλτράρισε ανά σύμπλεγμα ή ταξινόμησε με ό,τι μετράει για σένα.</p>
-          <span class="go">Εξερεύνησε τον χάρτη →</span>
+        <button type="button" class="bp-dcard" onclick="window.location.href='/el/trip-cost/'">
+          <span class="bp-dcard-m">3 · Μπάτζετ</span>
+          <span class="ic">💶</span>
+          <h3>3 · Μπάτζετ &amp; κράτηση</h3>
+          <p>Φτιάξε τη διαδρομή σου και δες τι κοστίζει πραγματικά — δωμάτια, πλοία, αυτοκίνητο, φαγητό — και κλείσε το καθένα.</p>
+          <span class="go">Φτιάξε το μπάτζετ →</span>
         </button>
       </div>
     </div>
@@ -715,7 +715,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-  <script src="/i18n.js?v=39"></script>
+  <script src="/i18n.js?v=40"></script>
   <script src="/script.js?v=62"></script>
 <!-- SEO_ISLAND_LIST_START -->
 <nav class="visually-hidden" aria-label="Όλα τα νησιά">

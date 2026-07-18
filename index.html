@@ -126,7 +126,7 @@
       <nav class="top-nav" id="main-nav">
         <a href="#" id="nav-compare" data-i18n="nav.compare">Compare</a>
         <a href="#" id="nav-match" data-i18n="nav.match">Match Me</a>
-        <a href="/trip-cost/" id="nav-tripcost" data-i18n="nav.tripcost">Trip Cost</a>
+        <a href="/trip-cost/" id="nav-tripcost" data-i18n="nav.tripcost">Budget</a>
         <a href="#" id="nav-hopping" data-i18n="nav.hopping">Ferries &amp; Hopping</a>
         <a href="/festivals/" id="nav-festivals" data-i18n="nav.festivals">Festivals</a>
         <a href="#" id="nav-data" data-i18n="nav.data">Islands Data</a>
@@ -177,7 +177,7 @@
       <div class="bp-hero-inner">
         <div class="bp-hero-eyebrow">The Greek Island Decision Engine</div>
         <h2 class="bp-hero-title">Find your perfect Greek island</h2>
-        <p class="bp-hero-sub">88 islands scored across beaches, culture, nightlife, access and price.</p>
+        <p class="bp-hero-sub">Choose your island, plan the route, budget it, book it — one honest guide for all 88.</p>
         <div class="bp-hero-search-wrap">
         <form class="bp-hero-search" id="bp-hero-search-form">
           <input id="bp-hero-search" type="text" placeholder="🔍  Search an island — Milos, Ikaria, Skopelos…" aria-label="Search islands">
@@ -193,25 +193,25 @@
       <!-- Decision cards -->
       <div class="bp-decide">
         <button type="button" class="bp-dcard alt" onclick="navigateTo('match')">
-          <span class="bp-dcard-m">🎯 Quiz</span>
+          <span class="bp-dcard-m">1 · Choose</span>
           <span class="ic">🎯</span>
-          <h3>Don't know where to start?</h3>
-          <p>Answer 6 quick questions — beaches, budget, nightlife, pace — and get your 3 best-match islands, scored.</p>
-          <span class="go">Take the 60-second quiz →</span>
+          <h3>1 · Choose your island</h3>
+          <p>88 islands, honestly scored. Take the 60-second quiz, compare two head-to-head, or browse the map below.</p>
+          <span class="go">Take the quiz →</span>
         </button>
-        <button type="button" class="bp-dcard" onclick="navigateTo('compare')">
-          <span class="bp-dcard-m">↔ Compare</span>
-          <span class="ic">↔</span>
-          <h3>Torn between two?</h3>
-          <p>Side-by-side scores, radar chart, ferries and an honest verdict.</p>
-          <span class="go">Compare islands →</span>
+        <button type="button" class="bp-dcard" onclick="navigateTo('hopping')">
+          <span class="bp-dcard-m">2 · Plan</span>
+          <span class="ic">🧭</span>
+          <h3>2 · Plan the trip</h3>
+          <p>Ready-made island-hopping itineraries, real ferry routes, and the right month to go.</p>
+          <span class="go">See routes &amp; ferries →</span>
         </button>
-        <button type="button" class="bp-dcard" onclick="scrollToMainMap()">
-          <span class="bp-dcard-m">🗺 Map</span>
-          <span class="ic">🗺</span>
-          <h3>Know the vibe, not the name?</h3>
-          <p>Browse all 88 on the map — filter by group or rank by what matters — and hover for a photo preview.</p>
-          <span class="go">Explore the map →</span>
+        <button type="button" class="bp-dcard" onclick="window.location.href='/trip-cost/'">
+          <span class="bp-dcard-m">3 · Budget</span>
+          <span class="ic">💶</span>
+          <h3>3 · Budget it &amp; book it</h3>
+          <p>Build your route and see what it really costs — rooms, ferries, car, food — then book each piece.</p>
+          <span class="go">Plan your budget →</span>
         </button>
       </div>
     </div>
@@ -737,7 +737,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-  <script src="i18n.js?v=39"></script>
+  <script src="i18n.js?v=40"></script>
   <script src="script.js?v=62"></script>
 <!-- SEO_ISLAND_LIST_START -->
 <nav class="visually-hidden" aria-label="All islands">

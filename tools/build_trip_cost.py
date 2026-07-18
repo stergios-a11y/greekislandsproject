@@ -96,7 +96,7 @@ def build_dataset():
 STR = {
     'en': {
         'lang': 'en', 'base': '/', 'other': '/el/trip-cost/', 'lang_label': 'EL',
-        'title': 'Greek Island Trip Cost Calculator — ferries, rooms, car, food | Aegean Blueprint',
+        'title': 'Greek Island Budget Planner — ferries, rooms, car, food | Aegean Blueprint',
         'desc': 'Build your island route and get an honest cost estimate: ferry fares, room prices by month, car hire, food — for all 88 Greek islands. No fake precision.',
         'h1': 'What will your island trip cost?',
         'sub': 'Build your route, set your nights, and get an honest estimate — ferry fares from real distances, room prices by month, no fake precision. Then book the pieces that need booking.',
@@ -141,7 +141,7 @@ STR = {
         'guide': 'guide →',
         'remove': 'Remove',
         'footer_privacy': 'Privacy', 'footer_mission': 'Mission', 'footer_lang': 'Ελληνικά',
-        'nav': [('/#compare', 'Compare'), ('/#match', 'Match Me'), ('/trip-cost/', 'Trip Cost', True),
+        'nav': [('/#compare', 'Compare'), ('/#match', 'Match Me'), ('/trip-cost/', 'Budget', True),
                 ('/#hopping', 'Ferries & Hopping'), ('/festivals/', 'Festivals'),
                 ('/#data', 'Islands Data'), ('/#mission', 'Mission'), ('/#shortlist', '⭐ My Shortlist')],
         'preset_defs': [
@@ -153,7 +153,7 @@ STR = {
     },
     'el': {
         'lang': 'el', 'base': '/el/', 'other': '/trip-cost/', 'lang_label': 'EN',
-        'title': 'Υπολογιστής Κόστους Ταξιδιού στα Ελληνικά Νησιά — πλοία, δωμάτια, αυτοκίνητο | Aegean Blueprint',
+        'title': 'Μπάτζετ Ταξιδιού στα Ελληνικά Νησιά — πλοία, δωμάτια, αυτοκίνητο | Aegean Blueprint',
         'desc': 'Φτιάξε τη διαδρομή σου και δες μια ειλικρινή εκτίμηση κόστους: εισιτήρια πλοίων, δωμάτια ανά μήνα, ενοικίαση αυτοκινήτου, φαγητό — και για τα 88 νησιά.',
         'h1': 'Πόσο θα κοστίσει το ταξίδι σου στα νησιά;',
         'sub': 'Φτιάξε τη διαδρομή, όρισε τις νύχτες και δες μια ειλικρινή εκτίμηση — ναύλα από πραγματικές αποστάσεις, τιμές δωματίων ανά μήνα, χωρίς ψεύτικη ακρίβεια. Μετά κλείσε ό,τι χρειάζεται κράτηση.',
@@ -198,7 +198,7 @@ STR = {
         'guide': 'οδηγός →',
         'remove': 'Αφαίρεση',
         'footer_privacy': 'Απόρρητο', 'footer_mission': 'Στόχος', 'footer_lang': 'English',
-        'nav': [('/el/#compare', 'Σύγκριση'), ('/el/#match', 'Βρες το Νησί σου'), ('/el/trip-cost/', 'Κόστος Ταξιδιού', True),
+        'nav': [('/el/#compare', 'Σύγκριση'), ('/el/#match', 'Βρες το Νησί σου'), ('/el/trip-cost/', 'Μπάτζετ', True),
                 ('/el/#hopping', 'Πλοία & Νησοπορία'), ('/el/festivals/', 'Γιορτές'),
                 ('/el/#data', 'Στοιχεία Νησιών'), ('/el/#mission', 'Στόχος'), ('/el/#shortlist', '⭐ Η Λίστα μου')],
         'preset_defs': [
@@ -257,7 +257,7 @@ def render_page(lang, meta, data):
 
     schema = json.dumps({
         '@context': 'https://schema.org', '@type': 'WebApplication',
-        'name': 'Greek Island Trip Cost Calculator' if not is_el else 'Υπολογιστής Κόστους Ταξιδιού στα Ελληνικά Νησιά',
+        'name': 'Greek Island Budget Planner' if not is_el else 'Μπάτζετ Ταξιδιού στα Ελληνικά Νησιά',
         'url': url, 'applicationCategory': 'TravelApplication',
         'operatingSystem': 'Web',
         'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'EUR'},

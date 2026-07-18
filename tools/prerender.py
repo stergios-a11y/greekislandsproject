@@ -1987,7 +1987,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="{asset_prefix}i18n.js?v=39"></script>
+<script src="{asset_prefix}i18n.js?v=40"></script>
 <script src="{asset_prefix}script.js?v=62"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
@@ -2273,7 +2273,7 @@ def generate_ferries_page(island_keys):
             'ferries':   ('Ferries',   'Πλοία'),
             'hopping':   ('Ferries & Hopping', 'Πλοία & Νησοπορία'),
             'match':     ('Match Me', 'Βρες το Νησί σου'),
-            'tripcost':  ('Trip Cost', 'Κόστος Ταξιδιού'),
+            'tripcost':  ('Budget', 'Μπάτζετ'),
             'shortlist': ('⭐ My Shortlist', '⭐ Η Λίστα μου'),
             'mission':   ('Mission',   'Στόχος'),
             'privacy':   ('Privacy',   'Απόρρητο'),
@@ -2856,7 +2856,7 @@ def generate_festivals_page(island_keys):
             '    <nav class="top-nav" id="main-nav">\n'
             '      <a href="/' + ('el/' if is_el else '') + '#compare">' + ('Σύγκριση' if is_el else 'Compare') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#match">' + ('Βρες το Νησί σου' if is_el else 'Match Me') + '</a>\n'
-            '      <a href="/' + ('el/' if is_el else '') + 'trip-cost/">' + ('Κόστος Ταξιδιού' if is_el else 'Trip Cost') + '</a>\n'
+            '      <a href="/' + ('el/' if is_el else '') + 'trip-cost/">' + ('Μπάτζετ' if is_el else 'Budget') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#hopping">' + ('Πλοία & Νησοπορία' if is_el else 'Ferries & Hopping') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + 'festivals/" class="active">' + ('Γιορτές' if is_el else 'Festivals') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#data">' + ('Στοιχεία Νησιών' if is_el else 'Islands Data') + '</a>\n'

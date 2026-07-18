@@ -276,7 +276,7 @@ def render_page(pair_key, lang):
         nav_items = [
             ('/el/#compare', 'Σύγκριση', 'nav-compare'),
             ('/el/#match', 'Ταίριαξέ με', 'nav-match'),
-            ('/el/trip-cost/', 'Κόστος Ταξιδιού', 'nav-tripcost'),
+            ('/el/trip-cost/', 'Μπάτζετ', 'nav-tripcost'),
             ('/el/#hopping', 'Πλοία & Νησοπορία', 'nav-hopping'),
             ('/el/festivals/', 'Γιορτές', 'nav-festivals'),
             ('/el/#data', 'Στοιχεία Νησιών', 'nav-data'),
@@ -289,7 +289,7 @@ def render_page(pair_key, lang):
         nav_items = [
             ('/#compare', 'Compare', 'nav-compare'),
             ('/#match', 'Match Me', 'nav-match'),
-            ('/trip-cost/', 'Trip Cost', 'nav-tripcost'),
+            ('/trip-cost/', 'Budget', 'nav-tripcost'),
             ('/#hopping', 'Ferries & Hopping', 'nav-hopping'),
             ('/festivals/', 'Festivals', 'nav-festivals'),
             ('/#data', 'Islands Data', 'nav-data'),
@@ -485,7 +485,7 @@ window.__INITIAL_COMPARE_PAIR = {init_pair};
 </script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-<script src="/i18n.js?v=39"></script>
+<script src="/i18n.js?v=40"></script>
 <script src="/script.js?v={ASSET_V}"></script>
 </body>
 </html>
@@ -669,7 +669,7 @@ def render_hub_page(lang, valid_pairs):
         nav_items = [
             ('/el/#compare', 'Σύγκριση', 'nav-compare'),
             ('/el/#match', 'Ταίριαξέ με', 'nav-match'),
-            ('/el/trip-cost/', 'Κόστος Ταξιδιού', 'nav-tripcost'),
+            ('/el/trip-cost/', 'Μπάτζετ', 'nav-tripcost'),
             ('/el/#hopping', 'Πλοία & Νησοπορία', 'nav-hopping'),
             ('/el/festivals/', 'Γιορτές', 'nav-festivals'),
             ('/el/#data', 'Στοιχεία Νησιών', 'nav-data'),
@@ -681,7 +681,7 @@ def render_hub_page(lang, valid_pairs):
         nav_items = [
             ('/#compare', 'Compare', 'nav-compare'),
             ('/#match', 'Match Me', 'nav-match'),
-            ('/trip-cost/', 'Trip Cost', 'nav-tripcost'),
+            ('/trip-cost/', 'Budget', 'nav-tripcost'),
             ('/#hopping', 'Ferries & Hopping', 'nav-hopping'),
             ('/festivals/', 'Festivals', 'nav-festivals'),
             ('/#data', 'Islands Data', 'nav-data'),
@@ -839,7 +839,7 @@ def render_hub_page(lang, valid_pairs):
   </div>
 </footer>
 
-<script src="/i18n.js?v=39"></script>
+<script src="/i18n.js?v=40"></script>
 <script>
   (function() {{
     var btn = document.getElementById("menu-toggle-btn");
