@@ -105,6 +105,7 @@ STR = {
         'tier_comfort': 'Comfort', 'tier_comfort_s': 'boutique, no counting',
         'months': {'apr': 'April', 'may': 'May', 'jun': 'June', 'jul': 'July', 'aug': 'August', 'sep': 'September', 'oct': 'October'},
         'add_island': 'Add an island:', 'add_ph': 'Type an island…',
+        'add_far': 'Islands far from this route are hidden — remove a stop to change region.',
         'departure': 'departure', 'back_to': 'back to', 'ferry_to': 'ferry to',
         'via_mainland': 'via mainland — no direct ferry likely', 'fly_hint': '✈ flying is often cheaper',
         'ionian_gate': 'nearest mainland port (drive or KTEL bus from Athens)',
@@ -152,6 +153,7 @@ STR = {
         'tier_comfort': 'Άνετα', 'tier_comfort_s': 'boutique, χωρίς μέτρημα',
         'months': {'apr': 'Απρίλιος', 'may': 'Μάιος', 'jun': 'Ιούνιος', 'jul': 'Ιούλιος', 'aug': 'Αύγουστος', 'sep': 'Σεπτέμβριος', 'oct': 'Οκτώβριος'},
         'add_island': 'Πρόσθεσε νησί:', 'add_ph': 'Γράψε ένα νησί…',
+        'add_far': 'Νησιά μακριά από τη διαδρομή σου κρύβονται — αφαίρεσε στάση για να αλλάξεις περιοχή.',
         'departure': 'αναχώρηση', 'back_to': 'επιστροφή', 'ferry_to': 'πλοίο προς',
         'via_mainland': 'μέσω στεριάς — μάλλον χωρίς απευθείας πλοίο', 'fly_hint': '✈ συχνά συμφέρει αεροπορικώς',
         'ionian_gate': 'κοντινότερο λιμάνι στεριάς (οδικώς / ΚΤΕΛ από Αθήνα)',
@@ -224,7 +226,7 @@ def render_page(lang, meta, data):
         'li_car', 'days', 'book_car', 'li_fuel', 'li_boat', 'boat_rec', 'li_food', 'food_s',
         'li_esim', 'esim_s', 'book_esim', 'li_insurance', 'ins_days', 'total', 'pp',
         'cta_ferry', 'cta_car',
-        'li_vehicle', 'li_flights', 'total_fly', 'veh_none', 'veh_moto', 'veh_car',
+        'li_vehicle', 'li_flights', 'total_fly', 'veh_none', 'veh_moto', 'veh_car', 'add_far',
         'assume', 'honest', 'guide', 'remove',
         'tier_budget', 'tier_mid', 'tier_comfort',
     )}
@@ -442,6 +444,7 @@ function legInfo(a,b){{
   const f=[fa[0]+fb[0],fa[1]+fb[1]];
   return{{f:f,label:T.via_mainland,fly:(ISL[a].air&&ISL[b].air)}};
 }}
+function nearTrip(k){{return state.trip.some(t=>ISL[t.k].g===ISL[k].g||haversine(ISL[t.k],ISL[k])<=130);}}
 function flightFare(k){{const nm=haversine(GATES.Piraeus,ISL[k])/1.852;return Math.min(120,Math.max(55,Math.round(55+0.15*nm)));}}
 const eur=n=>'€'+Math.round(n).toLocaleString(LANG==='el'?'el-GR':'en-GB');
 const rnd=n=>n<100?Math.round(n/5)*5:Math.round(n/10)*10;
@@ -527,7 +530,10 @@ function render(){{
   document.getElementById('tc-route').innerHTML=h;
 
   // quick-add buttons
-  document.getElementById('tc-quick').innerHTML=QUICK.filter(k=>!state.trip.some(t=>t.k===k)).slice(0,3)
+  const inTrip=k=>state.trip.some(t=>t.k===k);
+  const dist=k=>Math.min(...state.trip.map(t=>haversine(ISL[t.k],ISL[k])));
+  document.getElementById('tc-quick').innerHTML=Object.keys(ISL)
+    .filter(k=>!inTrip(k)&&nearTrip(k)).sort((a,b)=>dist(a)-dist(b)).slice(0,3)
     .map(k=>`<button class="tc-addbtn" data-add="${{k}}">+ ${{iname(k)}}</button>`).join(' ');
 
   // ---------------- totals (single typical figures) ----------------
@@ -609,11 +615,14 @@ function norm(s){{return s.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u0
 sIn.addEventListener('input',()=>{{
   const q=norm(sIn.value.trim());
   if(q.length<2){{sUl.style.display='none';return;}}
-  const hits=Object.keys(ISL).filter(k=>!state.trip.some(t=>t.k===k))
-    .filter(k=>norm(ISL[k].n).startsWith(q)||norm(ISL[k].nel).startsWith(q)||norm(ISL[k].n).includes(q)||norm(ISL[k].nel).includes(q))
+  const raw=Object.keys(ISL).filter(k=>!state.trip.some(t=>t.k===k))
+    .filter(k=>norm(ISL[k].n).startsWith(q)||norm(ISL[k].nel).startsWith(q)||norm(ISL[k].n).includes(q)||norm(ISL[k].nel).includes(q));
+  const hits=raw.filter(nearTrip)
     .sort((a,b)=>(norm(iname(a)).startsWith(q)?0:1)-(norm(iname(b)).startsWith(q)?0:1)).slice(0,7);
-  sUl.innerHTML=hits.map(k=>`<div data-k="${{k}}">${{iname(k)}} <small style="color:var(--ink-4,#A0ADB8)">${{ISL[k].g}}</small></div>`).join('');
-  sUl.style.display=hits.length?'block':'none';}});
+  let html=hits.map(k=>`<div data-k="${{k}}">${{iname(k)}} <small style="color:var(--ink-4,#A0ADB8)">${{ISL[k].g}}</small></div>`).join('');
+  if(raw.length&&!hits.length)html=`<div style="cursor:default;color:var(--ink-4,#A0ADB8);font-weight:600;font-size:12px">${{T.add_far}}</div>`;
+  sUl.innerHTML=html;
+  sUl.style.display=html?'block':'none';}});
 sUl.addEventListener('click',e=>{{const d=e.target.closest('[data-k]');if(!d)return;
   state.trip.push({{k:d.dataset.k,n:3,v:'',b:false}});sIn.value='';sUl.style.display='none';render();}});
 document.addEventListener('click',e=>{{if(!e.target.closest('.tc-add'))sUl.style.display='none';}});
