@@ -916,70 +916,49 @@ def build_structured_data(key, data, meta, lang='en'):
 # Meta tags
 # ---------------------------------------------------------------------
 def build_title(key, data, meta, lang='en'):
-    """Unique, keyword-rich page title."""
+    """Unique, keyword-rich page title.
+
+    CTR pass (Jul 2026): GSC showed island pages at position 7-10 earning half
+    the expected CTR. Hooks added: current year (freshness signal), "Beaches
+    Ranked" (concrete promise), "Honest" (the brand differentiator). Most
+    important words front-loaded so they survive SERP truncation (~60 chars).
+    """
+    from datetime import date as _d
+    year = _d.today().year
     name = localized_name(key, data, meta, lang)
     days = int(meta.get('days') or 0) if meta.get('days') else 0
     if lang == 'el':
         if days:
-            return f"{name} — Οδηγός {days} ημερών, παραλίες, δρομολόγιο | Aegean Blueprint"
-        return f"{name} — Ταξιδιωτικός οδηγός | Aegean Blueprint"
+            return f"{name} {year} — Παραλίες με βαθμολογία, πρόγραμμα {days} ημερών | Aegean Blueprint"
+        return f"{name} {year} — Ειλικρινής ταξιδιωτικός οδηγός | Aegean Blueprint"
     else:
         if days:
-            return f"{name} Travel Guide — {days}-Day Itinerary, Beaches & What to Do | Aegean Blueprint"
-        return f"{name} Travel Guide — What to Do, Where to Stay | Aegean Blueprint"
+            return f"{name} Travel Guide {year} — Beaches Ranked, {days}-Day Itinerary | Aegean Blueprint"
+        return f"{name} Travel Guide {year} — Honest Scores, What's Worth It | Aegean Blueprint"
 
 def build_description(key, data, meta, lang='en'):
-    """Build a meta description targeting ~110-160 chars.
-
-    Strategy:
-      1. Add complete sentences until adding another would exceed 160 chars.
-      2. If we're still under 110 (lots of unused space) AND there's a next
-         sentence we didn't include, add a word-boundary-truncated prefix of it
-         with an ellipsis. Better to use SERP real estate than leave it blank.
-      3. Special edge: if the first sentence alone is over 160, soft-truncate it.
-    """
-    TARGET_MIN = 110
+    """Meta description: the island's own first intro sentence (relevance,
+    query-term bolding) + a punchy promise of what the page delivers (CTR).
+    Target <= 160 chars."""
     TARGET_MAX = 160
-
+    days = int(meta.get('days') or 0) if meta.get('days') else 0
+    if lang == 'el':
+        hook = (f"Παραλίες με βαθμολογία, πρόγραμμα {days} ημερών, πού να φας — ειλικρινά, χωρίς φλυαρίες."
+                if days else "Παραλίες, διαμονή, τι αξίζει — ειλικρινά, χωρίς φλυαρίες.")
+    else:
+        hook = (f"Beaches rated, a {days}-day plan, where to eat — honest, no fluff."
+                if days else "Beaches, where to stay, what's worth it — honest, no fluff.")
     intro = pick(data, 'intro', lang) or ''
     clean = re.sub(r'\s+', ' ', intro).strip()
-    sentences = re.split(r'(?<=[.!?])\s+', clean)
-    if not sentences:
-        return clean[:TARGET_MAX]
+    # split only when the next word starts with a capital — keeps abbreviations
+    # like 'τ.χλμ.' or 'Mt.' from ending the sentence early
+    first = re.split(r'(?<=[.!?])\s+(?=[A-ZΑ-ΩΆΈΉΊΌΎΏ«"0-9])', clean)[0] if clean else ''
+    budget = TARGET_MAX - len(hook) - 1
+    if len(first) > budget:
+        first = first[:budget].rsplit(' ', 1)[0].rstrip(',;—-· ') + '…'
+    return (first + ' ' + hook).strip()
 
-    # Step 1: fit complete sentences
-    out = ''
-    consumed_count = 0
-    for s in sentences:
-        candidate = (out + ' ' + s).strip() if out else s
-        if len(candidate) <= TARGET_MAX:
-            out = candidate
-            consumed_count += 1
-        else:
-            break
 
-    # Step 3 (handle first): if the first sentence alone is too long
-    if not out:
-        first = sentences[0]
-        out = first[:TARGET_MAX - 1].rsplit(' ', 1)[0] + '…'
-        return out
-
-    # Step 2: if we have room and another sentence exists, add a truncated prefix
-    if len(out) < TARGET_MIN and consumed_count < len(sentences):
-        extra = sentences[consumed_count]
-        room = TARGET_MAX - len(out) - 1   # joining space
-        if room > 30:                       # only worth it if we can add something meaningful
-            if len(extra) <= room:
-                out = (out + ' ' + extra).strip()
-            else:
-                snippet = extra[:room - 1].rsplit(' ', 1)[0]
-                out = (out + ' ' + snippet + '…').strip()
-
-    return out
-
-# ---------------------------------------------------------------------
-# Pre-rendered body content — this is what Google crawls
-# ---------------------------------------------------------------------
 def auto_link_islands(html_text, current_key, lang='en'):
     """Find mentions of OTHER island names in prose text and convert to internal links.
     Rules:
@@ -3045,7 +3024,7 @@ def parse_when_to_months(when_str):
 # becomes max(JSON git date, this date) — so Google learns the pages changed
 # even when the underlying JSON didn't. Last bump: island-page immersive hero
 # + when-to-visit ribbon + Ionian wind wording.
-TEMPLATE_LASTMOD = '2026-07-17'
+TEMPLATE_LASTMOD = '2026-07-18'
 
 def file_lastmod(path):
     """Return ISO-8601 date for when the file was last meaningfully changed.
