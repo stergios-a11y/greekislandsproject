@@ -372,10 +372,6 @@ window._addCmpNav = function(key) { addToCompare(key); navigateTo('compare'); };
 
 document.addEventListener('DOMContentLoaded', () => {
   const hardFallback = setTimeout(dismissLoading, 3000);
-  if (!localStorage.getItem('heroDismissed')) {
-    // First-time visitor: open the help modal automatically
-    setTimeout(() => openHelp(), 600);
-  }
   try { setupNav(); } catch(e) { console.warn('setupNav', e); }
   try { applyStaticTranslations(); } catch(e) { console.warn('i18n', e); }
   try { renderBuildStamp(); } catch(e) { console.warn('buildStamp', e); }

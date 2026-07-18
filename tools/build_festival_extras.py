@@ -277,6 +277,7 @@ IKARIA_EN = f'''
 <tr><td>15 August</td><td><strong>Langada (Dormition)</strong> — the most famous panigiri in Greece, in a near-abandoned mountain village above Agios Dimitrios. People come from across the island and the diaspora. If you attend one panigiri in your life, this is the one.</td></tr>
 </ul></table>
 <p>Smaller feasts continue into September, and there are winter ones for the committed. The saint’s day is fixed by the church calendar; villages occasionally shift the party to the nearest weekend — the kafeneio in any village will know, and asking is part of the experience.</p>
+<p><em>Full disclosure: Ikaria is still on my own list — this guide is built from research and Ikarians’ own accounts, the way this site handles the few islands I haven’t reached yet. It will be rewritten, probably at length, the week I finally dance at Langada. If you’ve been and I got something wrong, the feedback button exists for exactly this.</em></p>
 <h2>Planning around a panigiri</h2>
 <p>Rooms near Christos Raches and Langada are effectively gone for 5–6 and 14–15 August; book months ahead or stay in Armenistis or Evdilos and accept the mountain drive. A car is essential — the great panigiria are in mountain villages, and taxis stop existing after midnight. Ferries fill around 15 August in both directions.</p>
 '''
@@ -305,6 +306,7 @@ IKARIA_EL = f'''
 <tr><td>15 Αυγούστου</td><td><strong>Λαγκάδα (Κοίμηση)</strong> — το πιο διάσημο πανηγύρι της Ελλάδας, σε ένα σχεδόν εγκαταλελειμμένο ορεινό χωριό πάνω από τον Άγιο Δημήτριο. Έρχεται κόσμος από όλο το νησί και τη διασπορά. Αν πας σε ένα πανηγύρι στη ζωή σου, είναι αυτό.</td></tr>
 </table>
 <p>Μικρότερες γιορτές συνεχίζουν τον Σεπτέμβριο, και υπάρχουν και χειμωνιάτικες για τους πιστούς του είδους. Η μέρα του αγίου είναι σταθερή από το εορτολόγιο· τα χωριά καμιά φορά μεταφέρουν το γλέντι στο κοντινότερο σαββατοκύριακο — το καφενείο κάθε χωριού ξέρει, και το να ρωτήσεις είναι μέρος της εμπειρίας.</p>
+<p><em>Με ειλικρίνεια: η Ικαρία είναι ακόμη στη δική μου λίστα — αυτός ο οδηγός στηρίζεται σε έρευνα και στις αφηγήσεις των ίδιων των Ικαριωτών, όπως κάνει αυτό το site για τα λίγα νησιά που δεν έχω προλάβει ακόμη. Θα ξαναγραφτεί, μάλλον εκτενώς, τη βδομάδα που θα χορέψω επιτέλους στη Λαγκάδα. Αν έχεις πάει και κάτι δεν στέκει, το κουμπί feedback υπάρχει ακριβώς γι' αυτό.</em></p>
 <h2>Οργάνωση γύρω από ένα πανηγύρι</h2>
 <p>Δωμάτια κοντά στον Χριστό Ραχών και τη Λαγκάδα ουσιαστικά δεν υπάρχουν για 5–6 και 14–15 Αυγούστου· κλείσε μήνες πριν, ή μείνε σε Αρμενιστή ή Εύδηλο και δέξου την ορεινή διαδρομή. Το αυτοκίνητο είναι απαραίτητο — τα μεγάλα πανηγύρια γίνονται σε ορεινά χωριά και τα ταξί παύουν να υπάρχουν μετά τα μεσάνυχτα. Τα πλοία γεμίζουν γύρω στον Δεκαπενταύγουστο και προς τις δύο κατευθύνσεις.</p>
 '''
