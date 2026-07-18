@@ -173,7 +173,7 @@
 
       <div class="tc-add">
         <span>Add an island:</span>
-        <input class="tc-search" id="tc-search" placeholder="Type an island…" autocomplete="off">
+        <input class="tc-search" id="tc-search" placeholder="Choose an island…" autocomplete="off">
         <div class="tc-sug" id="tc-sug"></div>
         <span id="tc-quick"></span>
       </div>
@@ -433,17 +433,22 @@ document.getElementById('tc-quick').addEventListener('click',e=>{const b=e.targe
 // island search autocomplete
 const sIn=document.getElementById('tc-search'),sUl=document.getElementById('tc-sug');
 function norm(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
-sIn.addEventListener('input',()=>{
+function distTo(k){return state.trip.length?Math.min(...state.trip.map(t=>haversine(ISL[t.k],ISL[k]))):0;}
+function renderSug(){
   const q=norm(sIn.value.trim());
-  if(q.length<2){sUl.style.display='none';return;}
-  const raw=Object.keys(ISL).filter(k=>!state.trip.some(t=>t.k===k))
-    .filter(k=>norm(ISL[k].n).startsWith(q)||norm(ISL[k].nel).startsWith(q)||norm(ISL[k].n).includes(q)||norm(ISL[k].nel).includes(q));
-  const hits=raw.filter(nearTrip)
-    .sort((a,b)=>(norm(iname(a)).startsWith(q)?0:1)-(norm(iname(b)).startsWith(q)?0:1)).slice(0,7);
+  const pool=Object.keys(ISL).filter(k=>!state.trip.some(t=>t.k===k));
+  const raw=q?pool.filter(k=>norm(ISL[k].n).includes(q)||norm(ISL[k].nel).includes(q)):pool;
+  let hits=raw.filter(nearTrip);
+  hits=q
+    ?hits.sort((a,b)=>((norm(iname(a)).startsWith(q)?0:1)-(norm(iname(b)).startsWith(q)?0:1))||distTo(a)-distTo(b))
+    :hits.sort((a,b)=>distTo(a)-distTo(b)||iname(a).localeCompare(iname(b)));
   let html=hits.map(k=>`<div data-k="${k}">${iname(k)} <small style="color:var(--ink-4,#A0ADB8)">${ISL[k].g}</small></div>`).join('');
   if(raw.length&&!hits.length)html=`<div style="cursor:default;color:var(--ink-4,#A0ADB8);font-weight:600;font-size:12px">${T.add_far}</div>`;
   sUl.innerHTML=html;
-  sUl.style.display=html?'block':'none';});
+  sUl.style.display=html?'block':'none';
+}
+sIn.addEventListener('input',renderSug);
+sIn.addEventListener('focus',renderSug);
 sUl.addEventListener('click',e=>{const d=e.target.closest('[data-k]');if(!d)return;
   state.trip.push({k:d.dataset.k,n:3,v:'',b:false});sIn.value='';sUl.style.display='none';render();});
 document.addEventListener('click',e=>{if(!e.target.closest('.tc-add'))sUl.style.display='none';});
