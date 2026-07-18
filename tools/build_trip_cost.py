@@ -143,7 +143,7 @@ STR = {
         'footer_privacy': 'Privacy', 'footer_mission': 'Mission', 'footer_lang': 'Ελληνικά',
         'nav': [('/#compare', 'Compare'), ('/#match', 'Match Me'), ('/trip-cost/', 'Trip Cost', True),
                 ('/#hopping', 'Ferries & Hopping'), ('/festivals/', 'Festivals'),
-                ('/#data', 'Islands Data'), ('/#shortlist', '⭐ My Shortlist')],
+                ('/#data', 'Islands Data'), ('/#mission', 'Mission'), ('/#shortlist', '⭐ My Shortlist')],
         'preset_defs': [
             ('classic', '🏛 Cyclades First-Timer', 'Paros · Naxos · Santorini — 8 nights'),
             ('beach', '🏖 Beach Chaser', 'Milos · Ios — 7 nights'),
@@ -200,7 +200,7 @@ STR = {
         'footer_privacy': 'Απόρρητο', 'footer_mission': 'Στόχος', 'footer_lang': 'English',
         'nav': [('/el/#compare', 'Σύγκριση'), ('/el/#match', 'Βρες το Νησί σου'), ('/el/trip-cost/', 'Κόστος Ταξιδιού', True),
                 ('/el/#hopping', 'Πλοία & Νησοπορία'), ('/el/festivals/', 'Γιορτές'),
-                ('/el/#data', 'Στοιχεία Νησιών'), ('/el/#shortlist', '⭐ Η Λίστα μου')],
+                ('/el/#data', 'Στοιχεία Νησιών'), ('/el/#mission', 'Στόχος'), ('/el/#shortlist', '⭐ Η Λίστα μου')],
         'preset_defs': [
             ('classic', '🏛 Πρώτη φορά Κυκλάδες', 'Πάρος · Νάξος · Σαντορίνη — 8 νύχτες'),
             ('beach', '🏖 Κυνηγός παραλιών', 'Μήλος · Ίος — 7 νύχτες'),

@@ -280,6 +280,7 @@ def render_page(pair_key, lang):
             ('/el/#hopping', 'Πλοία & Νησοπορία', 'nav-hopping'),
             ('/el/festivals/', 'Γιορτές', 'nav-festivals'),
             ('/el/#data', 'Στοιχεία Νησιών', 'nav-data'),
+            ('/el/#mission', 'Στόχος', 'nav-mission'),
             ('/el/#shortlist', '⭐ Λίστα μου', 'nav-shortlist'),
         ]
         home_url = '/el/'
@@ -292,6 +293,7 @@ def render_page(pair_key, lang):
             ('/#hopping', 'Ferries & Hopping', 'nav-hopping'),
             ('/festivals/', 'Festivals', 'nav-festivals'),
             ('/#data', 'Islands Data', 'nav-data'),
+            ('/#mission', 'Mission', 'nav-mission'),
             ('/#shortlist', '⭐ My Shortlist', 'nav-shortlist'),
         ]
         home_url = '/'
@@ -671,6 +673,7 @@ def render_hub_page(lang, valid_pairs):
             ('/el/#hopping', 'Πλοία & Νησοπορία', 'nav-hopping'),
             ('/el/festivals/', 'Γιορτές', 'nav-festivals'),
             ('/el/#data', 'Στοιχεία Νησιών', 'nav-data'),
+            ('/el/#mission', 'Στόχος', 'nav-mission'),
             ('/el/#shortlist', '⭐ Λίστα μου', 'nav-shortlist'),
         ]
         privacy_link = '<a href="/el/privacy/" data-i18n="footer.privacy">Απόρρητο</a> · <a href="/el/#mission">Στόχος</a>'
@@ -682,6 +685,7 @@ def render_hub_page(lang, valid_pairs):
             ('/#hopping', 'Ferries & Hopping', 'nav-hopping'),
             ('/festivals/', 'Festivals', 'nav-festivals'),
             ('/#data', 'Islands Data', 'nav-data'),
+            ('/#mission', 'Mission', 'nav-mission'),
             ('/#shortlist', '⭐ My Shortlist', 'nav-shortlist'),
         ]
         privacy_link = '<a href="/privacy/" data-i18n="footer.privacy">Privacy</a> · <a href="/#mission">Mission</a>'
