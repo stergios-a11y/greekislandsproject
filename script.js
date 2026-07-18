@@ -159,7 +159,7 @@ const SCORE_COLORS = {
 function scoreToColor(s) {
   if (s >= 4.5) return '#1B5E20'; // deep green (best)
   if (s >= 3.8) return '#4CAF50'; // green
-  if (s >= 3.5) return '#0B8FAC'; // aegean teal — solid mid-upper band
+  if (s >= 3.5) return '#8FAE3C'; // olive — the rung between gold and green
   if (s >= 3.0) return '#C4962A'; // gold/yellow
   return '#C0522A';               // red/terracotta
 }
