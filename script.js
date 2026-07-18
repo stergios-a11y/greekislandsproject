@@ -1252,6 +1252,33 @@ function setupMap() {
   mapInstance.fitBounds(L.latLngBounds(L.latLng(34.6, 19.4), L.latLng(41.1, 28.4)));
   addThemeAwareTiles(mapInstance, { maxZoom: 14 });
   L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(mapInstance);
+
+  // Google-embed wheel behavior: plain scroll scrolls the page (wheel zoom is
+  // off above); Ctrl/Cmd + scroll zooms at the cursor. A brief hint teaches it.
+  const mapEl = document.getElementById('main-map');
+  let hintTimer = null;
+  mapEl.addEventListener('wheel', (e) => {
+    if (e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      const dir = e.deltaY < 0 ? 1 : -1;
+      mapInstance.setZoomAround(mapInstance.mouseEventToLatLng(e), mapInstance.getZoom() + dir * 0.5);
+    } else {
+      let hint = document.getElementById('map-zoom-hint');
+      if (!hint) {
+        hint = document.createElement('div');
+        hint.id = 'map-zoom-hint';
+        hint.className = 'map-zoom-hint';
+        const mac = /Mac|iP(hone|ad|od)/.test(navigator.platform);
+        hint.textContent = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el')
+          ? `Κράτα ${mac ? '⌘' : 'Ctrl'} + scroll για zoom`
+          : `Hold ${mac ? '⌘' : 'Ctrl'} + scroll to zoom`;
+        mapEl.appendChild(hint);
+      }
+      hint.classList.add('show');
+      clearTimeout(hintTimer);
+      hintTimer = setTimeout(() => hint.classList.remove('show'), 1100);
+    }
+  }, { passive: false });
   renderMapMarkers();
   const searchInput = document.getElementById('islandSearch');
   if (searchInput) searchInput.addEventListener('input', filterIslands);
