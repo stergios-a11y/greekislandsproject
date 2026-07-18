@@ -3100,7 +3100,6 @@ def generate_sitemap(island_keys):
         ('/festivals/', '/el/festivals/', 0.8, today),
         ('/ferries/', '/el/ferries/', 0.8, today),
         ('/trip-cost/', '/el/trip-cost/', 0.8, today),
-        ('/privacy/', '/el/privacy/', 0.3, today),
     ]
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
