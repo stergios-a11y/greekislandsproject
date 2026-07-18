@@ -483,7 +483,22 @@ function legInfo(a,b){{
   const f=[fa[0]+fb[0],fa[1]+fb[1]];
   return{{f:f,label:T.via_mainland,fly:(ISL[a].air&&ISL[b].air)}};
 }}
-function nearTrip(k){{if(!state.trip.length)return true;return state.trip.some(t=>ISL[t.k].g===ISL[k].g||haversine(ISL[t.k],ISL[k])<=130);}}
+// Explicit combination rules, then the generic group/distance rule.
+const COMPAT_W={{kythira:['antikythera','elafonisos'],antikythera:['kythira','elafonisos'],elafonisos:['kythira','antikythera'],ammouliani:['thasos','samothrace']}};
+function pairOK(a,b){{
+  if(COMPAT_W[a]||COMPAT_W[b]){{
+    if(COMPAT_W[a]&&!COMPAT_W[a].includes(b))return false;
+    if(COMPAT_W[b]&&!COMPAT_W[b].includes(a))return false;
+    return true; // whitelisted pairs are allowed regardless of distance
+  }}
+  const ga=ISL[a].g,gb=ISL[b].g;
+  if((ga==='Saronic')!==(gb==='Saronic'))return false;              // Saronic only with Saronic
+  const es=g=>g==='Sporades'||g==='Evia';
+  if(es(ga)!==es(gb))return false;                                  // Evia+Sporades: closed cluster
+  const sameGroup=ga===gb&&ga!=='Other';                            // 'Other' is not a real group
+  return sameGroup||haversine(ISL[a],ISL[b])<=130;
+}}
+function nearTrip(k){{if(!state.trip.length)return true;return state.trip.every(t=>pairOK(t.k,k));}}
 function flightFare(k){{const nm=haversine(GATES.Piraeus,ISL[k])/1.852;return Math.min(120,Math.max(55,Math.round(55+0.15*nm)));}}
 const eur=n=>'€'+Math.round(n).toLocaleString(LANG==='el'?'el-GR':'en-GB');
 const rnd=n=>n<100?Math.round(n/5)*5:Math.round(n/10)*10;
