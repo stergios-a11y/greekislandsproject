@@ -577,7 +577,7 @@ function render(){{
   tot+=msum;
   // non-EU extras
   if(state.nonEU){{
-    const esim=state.pax*18;li+=line('📶',T.li_esim,`${{state.pax}}× ${{T.esim_s}}`,esim,T.book_esim,'https://www.airalo.com/greece-esim');tot+=esim;
+    const esim=state.pax*18;li+=line('📶',T.li_esim,`${{state.pax}}× ${{T.esim_s}}`,esim,T.book_esim,'https://yesim.tpx.lt/Sax2vWmP');tot+=esim;
     const ins=state.pax*(nightsTotal+1)*3;li+=line('🛡',T.li_insurance,`${{state.pax}}× ${{nightsTotal+1}} ${{T.ins_days}}`,ins,null);tot+=ins;}}
 
   document.getElementById('tc-summary').innerHTML=`
