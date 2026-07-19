@@ -6182,8 +6182,8 @@ body.home-view-active #site-footer { margin-top: 0; }
 /* Mobile: escape hatch from the full-height map back to the top of the page */
 .map-top-btn { display: none; }
 @media (max-width: 840px) {
-  .map-top-btn { display: flex; position: absolute; right: 12px; bottom: 68px; z-index: 820;
-    width: 42px; height: 42px; border-radius: 50%; border: 0; background: rgba(255,251,245,.95);
-    color: var(--aegean-dark, #076880); font-size: 20px; font-weight: 800; align-items: center;
-    justify-content: center; box-shadow: 0 4px 16px rgba(26,35,50,.3); cursor: pointer; }
+  .map-top-btn { display: inline-flex; position: absolute; right: 10px; top: 62px; z-index: 820;
+    align-items: center; gap: 5px; border: 0; border-radius: 999px; padding: 9px 16px;
+    background: var(--aegean-dark, #076880); color: #fff; font-family: inherit;
+    font-size: 14px; font-weight: 800; box-shadow: 0 5px 18px rgba(26,35,50,.35); cursor: pointer; }
 }

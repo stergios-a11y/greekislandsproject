@@ -19,7 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE_URL = 'https://aegeanblueprint.com'
-STYLE_V = 41   # keep in sync with index.html
+STYLE_V = 42   # keep in sync with index.html
 YEAR = date.today().year
 
 TP_SCRIPT = '<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>'
