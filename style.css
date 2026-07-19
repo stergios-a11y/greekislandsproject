@@ -6187,3 +6187,14 @@ body.home-view-active #site-footer { margin-top: 0; }
     background: var(--aegean-dark, #076880); color: #fff; font-family: inherit;
     font-size: 14px; font-weight: 800; box-shadow: 0 5px 18px rgba(26,35,50,.35); cursor: pointer; }
 }
+
+/* CLS guard: on mobile the seasonal section loads async ABOVE the map —
+   reserve its space so the map doesn't jump when it fills */
+@media (max-width: 840px) {
+  #bp-season[hidden] { display: block; visibility: hidden; min-height: 236px; }
+}
+/* dark mode for the map pick rail + mobile controls (match legend treatment) */
+html.dark .bp-rail-head, html.dark .bp-rail-pill { background: rgba(23, 28, 36, 0.94); }
+html.dark .bp-rail-head b, html.dark .bp-rail-pill { color: #E8ECF1; }
+html.dark .bp-rail-x { color: #8B98A5; }
+html.dark .map-top-btn { background: rgba(23, 28, 36, 0.95); color: #7FD4E8; }

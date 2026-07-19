@@ -20,7 +20,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE_URL = 'https://aegeanblueprint.com'
-STYLE_V = 42  # keep in sync with index.html
+STYLE_V = 43  # keep in sync with index.html
 
 # ---------------------------------------------------------------- data
 
@@ -627,9 +627,11 @@ function render(){{
   tot+=rsum;
   // car + fuel
   if(state.own){{
-    // Your own car rides every ferry leg: vehicle fee ≈ 2.5× the passenger fare (one car, not per pax)
+    // Your own car rides every ferry leg. Vehicle fee ≈ 2.3× the passenger fare,
+    // clamped to real-world car-deck pricing (short hop ≥ €25, long haul ≤ €130).
     const carLegs=[['M',first],...state.trip.slice(0,-1).map((t,i)=>[t.k,state.trip[i+1].k]),[last,'M']];
-    const cfSum=carLegs.reduce((a,[x,y])=>a+mid(legInfo(x,y).f)*2.5,0);
+    const carFee=f=>Math.min(130,Math.max(25,mid(f)*2.3));
+    const cfSum=carLegs.reduce((a,[x,y])=>a+carFee(legInfo(x,y).f),0);
     li+=line('🚙',T.li_carferry,`${{T.carferry_s}} ${{carLegs.length}} ${{T.li_legs}}`,cfSum,null);tot+=cfSum;
     const fuel=nightsTotal*CFG.fuel_per_day;
     li+=line('⛽',T.li_fuel,`€${{CFG.fuel_per_day}}/${{LANG==='el'?'μέρα':'day'}} × ${{nightsTotal}} ${{T.days}}`,fuel,null);tot+=fuel;

@@ -17,7 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://aegeanblueprint.com/og/naxos.jpg">
 <link rel="icon" href="/logo-hero.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/style.css?v=42">
+<link rel="stylesheet" href="/style.css?v=43">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Greek Island Budget Planner", "url": "https://aegeanblueprint.com/trip-cost/", "applicationCategory": "TravelApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}}</script>
 <style>
 .tc-page{max-width:1120px;margin:0 auto;padding:0 22px 60px;font-family:'Nunito Sans',sans-serif}
@@ -377,9 +377,11 @@ function render(){
   tot+=rsum;
   // car + fuel
   if(state.own){
-    // Your own car rides every ferry leg: vehicle fee ≈ 2.5× the passenger fare (one car, not per pax)
+    // Your own car rides every ferry leg. Vehicle fee ≈ 2.3× the passenger fare,
+    // clamped to real-world car-deck pricing (short hop ≥ €25, long haul ≤ €130).
     const carLegs=[['M',first],...state.trip.slice(0,-1).map((t,i)=>[t.k,state.trip[i+1].k]),[last,'M']];
-    const cfSum=carLegs.reduce((a,[x,y])=>a+mid(legInfo(x,y).f)*2.5,0);
+    const carFee=f=>Math.min(130,Math.max(25,mid(f)*2.3));
+    const cfSum=carLegs.reduce((a,[x,y])=>a+carFee(legInfo(x,y).f),0);
     li+=line('🚙',T.li_carferry,`${T.carferry_s} ${carLegs.length} ${T.li_legs}`,cfSum,null);tot+=cfSum;
     const fuel=nightsTotal*CFG.fuel_per_day;
     li+=line('⛽',T.li_fuel,`€${CFG.fuel_per_day}/${LANG==='el'?'μέρα':'day'} × ${nightsTotal} ${T.days}`,fuel,null);tot+=fuel;

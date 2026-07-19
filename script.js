@@ -509,42 +509,7 @@ function copyIslandLink() {
   });
 }
 
-function openHelp() {
-  const modal = document.getElementById('help-modal');
-  if (modal) {
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-  }
-}
-
-function closeHelp() {
-  const modal = document.getElementById('help-modal');
-  if (modal) {
-    modal.style.display = 'none';
-    document.body.style.overflow = '';
-    localStorage.setItem('heroDismissed', '1');
-  }
-}
-
-// Back-compat
-function dismissHero() { closeHelp(); }
-
-window.openHelp = openHelp;
-window.closeHelp = closeHelp;
-
-// Close modal on backdrop click
-document.addEventListener('click', (e) => {
-  const modal = document.getElementById('help-modal');
-  if (modal && e.target === modal) closeHelp();
-});
-
-// Close modal on Escape
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    const modal = document.getElementById('help-modal');
-    if (modal && modal.style.display === 'flex') closeHelp();
-  }
-});
+// (first-visit help modal removed — tour retired July 2026)
 
 function dismissLoading() {
   const overlay = document.getElementById('loading-overlay');
