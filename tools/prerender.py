@@ -1525,6 +1525,7 @@ def render_body(key, data, meta, lang='en'):
 # Page shell
 # ---------------------------------------------------------------------
 def render_page(key, data, meta, lang='en'):
+    _hero_url, _ = find_hero_image(data)
     """Full HTML document for one island."""
     name = localized_name(key, data, meta, lang)
     title = build_title(key, data, meta, lang)
@@ -1563,6 +1564,7 @@ def render_page(key, data, meta, lang='en'):
 <meta property="article:author" content="Stergios Gousios">
 <meta property="article:modified_time" content="{modified_date}">
 <link rel="canonical" href="{url}">
+{f'<link rel="preload" as="image" href="{esc(hero_src_1280(_hero_url))}" fetchpriority="high">' if _hero_url else ''}
 <link rel="alternate" hreflang="en" href="{url_en}">
 <link rel="alternate" hreflang="el" href="{url_el}">
 <link rel="alternate" hreflang="x-default" href="{url_en}">
