@@ -59,7 +59,6 @@ OUT_EL = ROOT / 'el' / 'island'
 SITEMAP_PATH = ROOT / 'sitemap.xml'
 
 SITE_URL = 'https://aegeanblueprint.com'
-CF_BEACON = """<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6861bfdca18a49c0a2f16b955dea5e6d"}'></script>"""
 SITE_NAME = 'Aegean Blueprint'
 
 # ---------------------------------------------------------------------
@@ -1842,7 +1841,6 @@ def render_page(key, data, meta, lang='en'):
   }})();
 </script>
 <script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>
-<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "6861bfdca18a49c0a2f16b955dea5e6d"}}'></script>
 </head>
 <body data-island-key="{key}" data-lang="{lang}">
 
@@ -2341,7 +2339,6 @@ def generate_ferries_page(island_keys):
             '  (function(){ if (window.matchMedia(\'(max-width: 899.98px)\').matches) { window.adsbygoogle = window.adsbygoogle || []; window.adsbygoogle.push = function(){}; } })();\n'
             '</script>\n'
             '<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>\n'
-            + CF_BEACON + '\n'
             '</head>\n<body>\n'
             '<header>\n'
             '  <div class="header-content">\n'
@@ -2821,7 +2818,6 @@ def generate_festivals_page(island_keys):
             '</script>\n'
             + schema_html
             + '<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>\n'
-            + CF_BEACON + '\n'
             + '</head>\n<body>\n'
             # Match the main-site header exactly. Same classes, same CSS in style.css.
             # Difference: nav links go to /index.html#hash so they switch SPA view on
