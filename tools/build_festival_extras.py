@@ -109,7 +109,7 @@ def page_head(title, desc, path_en, path_el, lang):
 </head>'''
 
 
-def header_nav(lang, toggle_href):
+def header_nav(lang, toggle_href, active='festivals'):
     p = '/el/' if lang == 'el' else '/'
     L = (lambda en, el: el if lang == 'el' else en)
     return f'''<body>
@@ -122,10 +122,10 @@ def header_nav(lang, toggle_href):
     <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>
     <nav class="top-nav" id="main-nav">
       <a href="{p}#compare">{L('Compare', 'Σύγκριση')}</a>
-      <a href="{p}#match">{L('Match Me', 'Βρες το Νησί σου')}</a>
+      <a href="{p}#match"{' class="active"' if active == 'match' else ''}>{L('Match Me', 'Βρες το Νησί σου')}</a>
       <a href="{p}trip-cost/">{L('Budget', 'Μπάτζετ')}</a>
       <a href="{p}#hopping">{L('Ferries &amp; Hopping', 'Πλοία &amp; Νησοπορία')}</a>
-      <a href="{p}festivals/" class="active">{L('Festivals', 'Γιορτές')}</a>
+      <a href="{p}festivals/"{' class="active"' if active == 'festivals' else ''}>{L('Festivals', 'Γιορτές')}</a>
       <a href="{p}#data">{L('Islands Data', 'Στοιχεία Νησιών')}</a>
       <a href="{p}#mission">{L('Mission', 'Στόχος')}</a>
       <a href="{p}#shortlist">{L('⭐ My Shortlist', '⭐ Η Λίστα μου')}</a>

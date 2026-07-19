@@ -313,6 +313,14 @@ def localized_name(key, data, meta, lang='en'):
 # 12-month seasonality grid + summary paragraph. Each month has a tag
 # (perfect/great/ok/avoid) and a short bilingual "why" caption.
 # ---------------------------------------------------------------------
+
+def _wtv_heading(data, lang):
+    """Query-shaped section heading: 'Best time to visit Milos' / EL accusative."""
+    if lang == 'el':
+        acc = data.get('name_accusative_el') or data.get('name_el') or data.get('name', '')
+        return f'Καλύτερη εποχή για {acc}'
+    return f'Best time to visit {data.get("name", "")}'
+
 WTV_I18N = {
     'en': {
         'title': 'When to Visit',
@@ -443,7 +451,7 @@ def build_when_to_visit_html(data, lang='en'):
 
     return (
         f'<details class="seo-wtv wtv-section" open>'
-        f'<summary class="wtv-title">{esc(labels["title"])}</summary>'
+        f'<summary class="wtv-title">{esc(_wtv_heading(data, lang))}</summary>'
         f'{summary_html}'
         f'{highlights_bar}'
         f'<div class="wtv-ribbon-wrap"><div class="wtv-ribbon">{ribbon_inner}</div></div>'
@@ -1878,7 +1886,7 @@ def render_page(key, data, meta, lang='en'):
   <p>{'Our interactive tools help you filter, compare side-by-side, and find the perfect island for your trip.' if lang == 'en' else 'Τα διαδραστικά μας εργαλεία σε βοηθούν να φιλτράρεις, να συγκρίνεις και να βρεις το ιδανικό νησί.'}</p>
   <div class="seo-cta-buttons">
     <a href="{('/' if lang == 'en' else '/el/')}#compare" class="seo-cta-btn">{'↔ Compare islands' if lang == 'en' else '↔ Σύγκρινε νησιά'}</a>
-    <a href="{('/' if lang == 'en' else '/el/')}#match" class="seo-cta-btn">{'🎯 Take the quiz' if lang == 'en' else '🎯 Κάνε το quiz'}</a>
+    <a href="{('/match/' if lang == 'en' else '/el/match/')}" class="seo-cta-btn">{'🎯 Take the quiz' if lang == 'en' else '🎯 Κάνε το quiz'}</a>
     <a href="{('/' if lang == 'en' else '/el/')}" class="seo-cta-btn">{'🗺 Explore map' if lang == 'en' else '🗺 Εξερεύνησε χάρτη'}</a>
     <a href="{('/trip-cost/' if lang == 'en' else '/el/trip-cost/')}?i={key}:{int(meta.get('days') or 3)}" class="seo-cta-btn">{f"💶 What do {int(meta.get('days') or 3)} days here cost?" if lang == 'en' else f"💶 Πόσο κοστίζουν {int(meta.get('days') or 3)} μέρες εδώ;"}</a>
   </div>
@@ -1968,7 +1976,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="{asset_prefix}i18n.js?v=40"></script>
+<script src="{asset_prefix}i18n.js?v=41"></script>
 <script src="{asset_prefix}script.js?v=63"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
