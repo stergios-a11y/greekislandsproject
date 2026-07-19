@@ -262,8 +262,8 @@ function addThemeAwareTiles(map, options = {}) {
   baseLayers[labelMap] = mapLayer;
   baseLayers[labelSat] = satLayer;
 
-  // Always start on Map, regardless of any previous user choice. No persistence.
-  mapLayer.addTo(map);
+  // Default layer: 'satellite' opt-in per map (island itineraries), else Map.
+  if (options.defaultLayer === 'satellite') satLayer.addTo(map); else mapLayer.addTo(map);
 
   // Layer control (top-right) — user can toggle in-session, but we don't remember the choice
   let layerControl = null;
@@ -2817,7 +2817,7 @@ async function initItineraryMap(days, beaches = []) {
   itinMarkerLayers = {};
 
   itineraryMapInstance = L.map(mapEl, { zoomControl: true, attributionControl: true });
-  addThemeAwareTiles(itineraryMapInstance, { maxZoom: 16 });
+  addThemeAwareTiles(itineraryMapInstance, { maxZoom: 16, defaultLayer: 'satellite' });
   L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(itineraryMapInstance);
 
   const stopCoords = days.flatMap(d => d.stops.map(s => [s.lat, s.lng]));
