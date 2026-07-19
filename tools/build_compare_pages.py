@@ -411,6 +411,7 @@ def render_page(pair_key, lang):
 <style>{page_css}</style>
 {faq_jsonld}
 <script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "6861bfdca18a49c0a2f16b955dea5e6d"}}'></script>
 </head>
 <body>
 
@@ -808,6 +809,7 @@ def render_hub_page(lang, valid_pairs):
 <link rel="stylesheet" href="/style.css?v={ASSET_V}">
 <style>{page_css}</style>
 <script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "6861bfdca18a49c0a2f16b955dea5e6d"}}'></script>
 </head>
 <body>
 <header>

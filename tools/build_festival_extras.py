@@ -22,7 +22,8 @@ SITE_URL = 'https://aegeanblueprint.com'
 STYLE_V = 42   # keep in sync with index.html
 YEAR = date.today().year
 
-TP_SCRIPT = '<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>'
+TP_SCRIPT = """<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6861bfdca18a49c0a2f16b955dea5e6d"}'></script>"""
 
 MONTHS = [
     ('january', 'January', 'Ιανουάριος', 'τον Ιανουάριο'),
