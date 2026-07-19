@@ -6135,7 +6135,7 @@ html.dark .map-mode-toast { background: #EEF2F5; color: #171C24; }
   .home-how-item h3 { margin: 0; }
   .home-how-grid { gap: 8px; }
   /* Seasonal festival pills: one pill + the "all N festivals" link */
-  .bp-fest-strip .bp-fest-pill:nth-child(n+2) { display: none; }
+  .bp-fest-strip { display: none !important; }
   /* Face-offs: four chips (two tidy rows) */
   .bp-vs-strip .bp-vs-chip:nth-child(n+5) { display: none; }
   .home-block { margin-bottom: 36px; }
@@ -6178,3 +6178,12 @@ html.dark .map-mode-toast { background: #EEF2F5; color: #171C24; }
 
 /* map is the homepage finale — footer sits directly beneath it */
 body.home-view-active #site-footer { margin-top: 0; }
+
+/* Mobile: escape hatch from the full-height map back to the top of the page */
+.map-top-btn { display: none; }
+@media (max-width: 840px) {
+  .map-top-btn { display: flex; position: absolute; right: 12px; bottom: 68px; z-index: 820;
+    width: 42px; height: 42px; border-radius: 50%; border: 0; background: rgba(255,251,245,.95);
+    color: var(--aegean-dark, #076880); font-size: 20px; font-weight: 800; align-items: center;
+    justify-content: center; box-shadow: 0 4px 16px rgba(26,35,50,.3); cursor: pointer; }
+}
