@@ -468,6 +468,7 @@ function renderSwaps(){
   const inTrip=k=>state.trip.some(t=>t.k===k);
   const byStop={};
   state.trip.forEach((cur,i)=>{
+    if(i===0)return; // first island is the user's anchor choice — never suggest swapping it
     const v0=cur.v,curStay=stayCost(cur.k,i,v0),curTot=ISL[cur.k].tot,curB=ISL[cur.k].b;
     let save=null,up=null;
     Object.keys(ISL).forEach(k=>{
