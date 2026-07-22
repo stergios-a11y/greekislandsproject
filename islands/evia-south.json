@@ -299,15 +299,47 @@
       "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJgd0YZ8nSoxQRq3I7-Jh4wvU"
     },
     {
-      "name": "Kallianos Beach",
-      "summary": "Crystal water and dramatic cliffs 25min north of Karystos. Pebble entrance, sandy seabed once you're in.",
-      "summary_el": "Κρυστάλλινα νερά και δραματικοί γκρεμοί 25λ βόρεια Καρύστου. Βότσαλο στην είσοδο, αμμουδιά μέσα.",
-      "lat": 38.1411,
-      "lng": 24.4798,
-      "type": "pebbly",
-      "type_el": "Βότσαλο",
-      "name_el": "Παραλία Καλλιανός",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJdReYh2jIoxQRp8C7meqKa1c"
+      "name": "Livadi Beach",
+      "name_el": "Παραλία Λιβάδι",
+      "rating": 5,
+      "summary": "A long, open sand beach on the wild southeast coast below Platanistos, in the remote Kafireas (Cavo d'Oro) corner of Evia. Undeveloped and often empty — bring your own shade and water.",
+      "summary_el": "Μακριά, ανοιχτή αμμουδιά στη άγρια νοτιοανατολική ακτή κάτω από τον Πλατανιστό, στην απομακρυσμένη γωνιά του Καφηρέα (Κάβο Ντόρο). Χωρίς ανάπτυξη και συχνά έρημη — φέρε δική σου σκιά και νερό.",
+      "type": "sandy",
+      "type_el": "Αμμουδιά",
+      "lat": 37.987625543980826,
+      "lng": 24.556237940691872
+    },
+    {
+      "name": "Potami Beach",
+      "name_el": "Παραλία Ποτάμι",
+      "rating": 5,
+      "summary": "Sand-and-pebble beach at a river mouth (potami = river) in the far southeast near Platanistos. Clear, deep water and no development; reached by a rough unpaved road.",
+      "summary_el": "Παραλία με άμμο και βότσαλο στην εκβολή ποταμού στα βαθιά νοτιοανατολικά, κοντά στον Πλατανιστό. Διαυγή, βαθιά νερά και καμία ανάπτυξη· προσβάσιμη μέσω χωματόδρομου.",
+      "type": "sand & pebble",
+      "type_el": "Άμμος & βότσαλο",
+      "lat": 38.00639259656225,
+      "lng": 24.567087952642538
+    },
+    {
+      "name": "Agios Dimitrios Beach",
+      "name_el": "Παραλία Άγιος Δημήτριος",
+      "summary": "A long sandy beach on the east coast beneath the Kafireas wind farms. Exposed to the meltemi — glorious when calm, wild and windswept when it blows.",
+      "summary_el": "Μακριά αμμουδιά στην ανατολική ακτή κάτω από τα αιολικά πάρκα του Καφηρέα. Εκτεθειμένη στο μελτέμι — υπέροχη με άπνοια, άγρια όταν φυσάει.",
+      "type": "sandy",
+      "type_el": "Αμμουδιά",
+      "lat": 38.1420708699537,
+      "lng": 24.447662872403605
+    },
+    {
+      "name": "Giannitsi Beach",
+      "name_el": "Παραλία Γιαννίτσι",
+      "rating": 5,
+      "summary": "A broad sandy beach on the east coast by the hamlet of Giannitsi — fine sand, turquoise water and minimal facilities. One of south Evia's best.",
+      "summary_el": "Πλατιά αμμουδιά στην ανατολική ακτή δίπλα στον οικισμό Γιαννίτσι — ψιλή άμμος, τιρκουάζ νερά και ελάχιστες υποδομές. Από τις καλύτερες της νότιας Εύβοιας.",
+      "type": "sandy",
+      "type_el": "Αμμουδιά",
+      "lat": 38.15879730032784,
+      "lng": 24.397395930161785
     }
   ],
   "getting_there": {
