@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-07-19';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-07-22';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -58,7 +58,7 @@ const ISLANDS_DATA = {
   "koufonisia":   { name:"Koufonisia",       lat:36.945, lng:25.6, beach:5.0, hist:2.0, night:4.0, access:3.0, afford:3.0, car_need:1.0, has_airport:false, total:4.0, area:26,    pop:399,     days:3, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:false },
   "evia-north":   { name:"Evia (North)",     lat:38.850, lng:23.200, beach:3.8, hist:3.5, night:2.5, access:4.5, afford:4.8, car_need:5.0, has_airport:false, total:3.6, area:1200,  pop:48000,   days:3, island_group:"Evia", drama:false, hiking:true, springs:true, chora:false, sailing:false },
   "evia-central": { name:"Evia (Central)",   lat:38.500, lng:23.850, beach:3.5, hist:4.5, night:3.5, access:5.0, afford:4.6, car_need:5.0, has_airport:false, total:3.9, area:1700,  pop:120000,  days:3, island_group:"Evia", drama:false, hiking:true, springs:false, chora:false, sailing:false },
-  "evia-south":   { name:"Evia (South)",     lat:38.016, lng:24.420, beach:4.2, hist:3.5, night:2.5, access:4.5, afford:4.5, car_need:5.0, has_airport:false, total:3.9, area:780,   pop:42000,   days:3, island_group:"Evia", drama:false, hiking:true, springs:false, chora:false, sailing:false },
+  "evia-south":   { name:"Evia (South)",     lat:38.016, lng:24.420, beach:4.6, hist:3.5, night:2.5, access:4.5, afford:4.5, car_need:5.0, has_airport:false, total:3.9, area:780,   pop:42000,   days:3, island_group:"Evia", drama:false, hiking:true, springs:false, chora:false, sailing:false },
   "lesvos":       { name:"Lesvos",           lat:39.21,  lng:26.21,  beach:4.0, hist:4.7, night:3.0, access:3.5, afford:4.6, car_need:5.0, has_airport:true, total:4.0, area:1633,  pop:83000,   days:6, island_group:"NE Aegean", drama:false, hiking:true, springs:true, chora:true, sailing:false },
   "chios":        { name:"Chios",            lat:38.37, lng:25.995, beach:3.2, hist:4.7, night:2.5, access:3.2, afford:4.5, car_need:4.0, has_airport:true, total:3.6, area:842,   pop:51000,   days:4, island_group:"NE Aegean", drama:false, hiking:false, springs:false, chora:true, sailing:false },
   "kos":          { name:"Kos",              lat:36.82, lng:27.1, beach:4.0, hist:4.2, night:4.0, access:4.6, afford:3.8, car_need:4.0, has_airport:true, total:3.7, area:287,   pop:33300,   days:4, island_group:"Dodecanese", drama:false, hiking:false, springs:false, chora:false, sailing:true },
