@@ -1252,6 +1252,11 @@ html.dark .planner-disclaimer { background: rgba(11, 143, 172, 0.10); }
 /* Hero + action bar break out to full width across both columns; itinerary and
    the Blueprint panel sit in the row below. */
 .detail-hero-wrap { grid-column: 1 / -1; position: relative; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); }
+/* CLS guard: reserve the hero's height so the box never collapses to 0 in the
+   window between #view-detail becoming visible and the hero being injected into
+   #island-hero-slot. Without this the whole page jumps ~440px (measured CLS ~0.9). */
+.detail-hero-wrap, #island-hero-slot { min-height: 440px; }
+@media (max-width: 600px) { .detail-hero-wrap, #island-hero-slot { min-height: 320px; } }
 .detail-actionbar { grid-column: 1 / -1; }
 .detail-grid > .detail-main { grid-column: 1; min-width: 0; }
 .detail-grid > .detail-sidebar { grid-column: 2; }
