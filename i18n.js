@@ -162,6 +162,8 @@ const UI_TEXT = {
   'tooltip.overall': { en: 'Overall', el: 'Συνολικά' },
   'tooltip.recommended': { en: 'recommended', el: 'συνιστώμενες' },
   'tooltip.click': { en: 'Click to explore →', el: 'Πάτα για εξερεύνηση →' },
+  'cluster.satellites': { en: 'satellite islands', el: 'δορυφορικά νησιά' },
+  'cluster.zoomin': { en: 'zoom in to see them', el: 'κάνε ζουμ για να τα δεις' },
   'detail.area': { en: 'Land Area:', el: 'Έκταση:' },
   'detail.population': { en: 'Population:', el: 'Πληθυσμός:' },
   'detail.group': { en: 'Group:', el: 'Ομάδα:' },

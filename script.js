@@ -1326,8 +1326,137 @@ function setupMap() {
     }
   }, { passive: false });
   renderMapMarkers();
+  // Re-draw only when the grouped/branched state actually flips — zooming
+  // within a state shouldn't rebuild 88 markers.
+  mapInstance.on('zoomend', () => {
+    const g = clusterGroupingActive();
+    if (g !== _lastGrouped) { _lastGrouped = g; renderMapMarkers(); }
+    else if (!g) drawClusterSpokes();
+  });
+  _lastGrouped = clusterGroupingActive();
   const searchInput = document.getElementById('islandSearch');
   if (searchInput) searchInput.addEventListener('input', filterIslands);
+}
+
+
+/* ============================================================
+   SATELLITE CLUSTERS ON THE MAIN MAP
+   Small islands that aren't worth a trip alone are folded into their gateway
+   island while zoomed out: the gateway keeps its own score and size, and wears
+   a tight orbit carrying one moon per satellite. Each moon sits at the real
+   compass bearing of its island and takes that island's own score colour, so
+   the node says how many / which way / how good before anyone clicks.
+   Past CLUSTER_ZOOM the members reappear as ordinary markers with spokes.
+   ============================================================ */
+const CLUSTER_ZOOM = 8;              // below → grouped, at/above → branched
+let clusterSpokes = [];              // polylines drawn in the branched state
+let _lastGrouped = null;             // so we only re-render when the state flips
+
+/* Which clusters treat this island as their base. */
+function clustersGatedBy(key) {
+  if (typeof ISLAND_CLUSTERS === 'undefined') return [];
+  return Object.entries(ISLAND_CLUSTERS)
+    .filter(([, c]) => c.gateway === key)
+    .map(([ck, c]) => ({ ck, ...c }));
+}
+/* Grouping is a lens, not a filter: switch it off whenever the user is
+   searching or filtering, so results are never silently hidden. */
+function clusterGroupingActive() {
+  if (typeof ISLAND_CLUSTERS === 'undefined' || !mapInstance) return false;
+  const term = ((document.getElementById('islandSearch')?.value ||
+                 document.getElementById('bp-hero-search')?.value) || '').trim();
+  if (term) return false;
+  if (typeof currentGroupFilter !== 'undefined' && currentGroupFilter !== 'all') return false;
+  return mapInstance.getZoom() < CLUSTER_ZOOM;
+}
+/* Bearing of a satellite from its gateway, maths orientation (0 = east,
+   +90° = north). The renderer flips to screen space with y = cy - r*sin(a),
+   so dy must be (member - gateway). Longitude scaled by cos(lat) keeps the
+   bearing true on Mercator instead of stretched. */
+function _satBearing(g, m) {
+  const dx = (m.lng - g.lng) * Math.cos(g.lat * Math.PI / 180);
+  const dy = (m.lat - g.lat);
+  return Math.atan2(dy, dx);
+}
+/* Spread moons that share almost the same bearing just enough to stay legible,
+   preserving their order and re-centring the fan on the true mean bearing. */
+function _spreadMoons(list, minSep) {
+  if (list.length < 2) return list;
+  list.sort((p, q) => p.a - q.a);
+  const meanOf = arr => Math.atan2(
+    arr.reduce((t, o) => t + Math.sin(o.a), 0),
+    arr.reduce((t, o) => t + Math.cos(o.a), 0));
+  const mean = meanOf(list);
+  if (list.length * minSep >= 2 * Math.PI) {
+    list.forEach((o, i) => { o.a = mean + i * (2 * Math.PI / list.length); });
+    return list;
+  }
+  for (let i = 1; i < list.length; i++)
+    if (list[i].a - list[i - 1].a < minSep) list[i].a = list[i - 1].a + minSep;
+  let shift = mean - meanOf(list);
+  while (shift > Math.PI) shift -= 2 * Math.PI;
+  while (shift < -Math.PI) shift += 2 * Math.PI;
+  list.forEach(o => { o.a += shift; });
+  return list;
+}
+/* Gateway marker + orbit + moons. Mirrors makeMarkerIcon()'s sizing so the
+   island itself looks identical to every other island on the map. */
+function makeSatelliteIcon(score, dimmed, clusters) {
+  const color = dimmed ? '#c8c8c8' : scoreToColor(score);
+  const size = Math.round(20 + score * 2), r = size / 2;
+  const z = mapInstance ? mapInstance.getZoom() : 6;
+  const zf = Math.max(0, Math.min(1, (z - 6) / 2));          // grows a little as you zoom
+  const orbit = r + 4.5 + zf * 5, moon = 3.6 + zf * 1.1;
+  const box = Math.ceil((orbit + moon + 3) * 2), cx = box / 2, cy = box / 2;
+
+  const meta = (typeof ISLANDS_DATA !== 'undefined') ? ISLANDS_DATA : {};
+  const gate = clusters[0];
+  const gm = meta[gate.gateway] || {};
+  let moons = [];
+  clusters.forEach(c => (c.members || []).forEach(k => {
+    if (!meta[k]) return;
+    moons.push({ k, a: _satBearing(gm, meta[k]), s: meta[k].total });
+  }));
+  moons = _spreadMoons(moons, (moon * 2 + 2.5) / orbit);
+
+  const dots = moons.map(o => {
+    const x = cx + orbit * Math.cos(o.a), y = cy - orbit * Math.sin(o.a);
+    return `<i class="sat-moon" style="left:${(x - moon).toFixed(1)}px;top:${(y - moon).toFixed(1)}px;
+      width:${(moon * 2).toFixed(1)}px;height:${(moon * 2).toFixed(1)}px;
+      background:${dimmed ? '#c8c8c8' : scoreToColor(o.s)}"></i>`;
+  }).join('');
+
+  return L.divIcon({
+    className: 'custom-marker sat-marker',
+    html: `<div class="sat-wrap" style="width:${box}px;height:${box}px">
+        <svg width="${box}" height="${box}" aria-hidden="true">
+          <circle cx="${cx}" cy="${cy}" r="${orbit.toFixed(1)}" fill="none"
+                  stroke="${color}" stroke-width="1.5" opacity=".5"/>
+        </svg>
+        <span class="sat-core" style="left:${cx - r}px;top:${cy - r}px;width:${size}px;height:${size}px;
+          background:${color};color:${dimmed ? '#999' : '#fff'}">${fmt(score)}</span>
+        ${dots}
+      </div>`,
+    iconSize: [box, box], iconAnchor: [box / 2, box / 2],
+  });
+}
+/* Dotted spokes gateway → members, drawn only in the branched state. */
+function drawClusterSpokes() {
+  clusterSpokes.forEach(l => mapInstance.removeLayer(l));
+  clusterSpokes = [];
+  if (typeof ISLAND_CLUSTERS === 'undefined' || !mapInstance) return;
+  if (mapInstance.getZoom() < CLUSTER_ZOOM) return;
+  const meta = ISLANDS_DATA || {};
+  Object.values(ISLAND_CLUSTERS).forEach(c => {
+    const g = meta[c.gateway];
+    if (!g) return;
+    (c.members || []).forEach(k => {
+      if (!meta[k]) return;
+      clusterSpokes.push(L.polyline([[g.lat, g.lng], [meta[k].lat, meta[k].lng]], {
+        color: scoreToColor(g.total), weight: 1.6, opacity: 0.45, interactive: false, pane: 'overlayPane',
+      }).addTo(mapInstance));
+    });
+  });
 }
 
 function getDisplayScore(island) {
@@ -1348,6 +1477,7 @@ function makeMarkerIcon(score, dimmed) {
 }
 
 function renderMapMarkers() {
+  drawClusterSpokes();
   Object.values(mapMarkers).forEach(m => mapInstance.removeLayer(m));
   mapMarkers = {};
   const searchTerm = ((document.getElementById('islandSearch')?.value || document.getElementById('bp-hero-search')?.value) || '').toLowerCase();
@@ -1364,11 +1494,19 @@ function renderMapMarkers() {
     } else if (currentGroupFilter !== 'all' && island.island_group !== currentGroupFilter) {
       return;
     }
+    // Satellite clustering: while zoomed out the members live on their
+    // gateway's orbit, so don't draw them separately.
+    const _grouped = clusterGroupingActive();
+    if (_grouped && typeof CLUSTER_OF !== 'undefined' && CLUSTER_OF[island.key]) return;
+    const _gates = _grouped ? clustersGatedBy(island.key) : [];
     const vibeMatch = islandPassesVibeFilters(island);
     const score = getDisplayScore(island);
     const carWords = ['', t('car.none'), t('car.helpful'), t('car.useful'), t('car.recommended'), t('car.essential')];
     const carLabel = carWords[Math.round(island.car_need || 0)] || '—';
-    const marker = L.marker([island.lat, island.lng], { icon: makeMarkerIcon(score, !vibeMatch), opacity: vibeMatch ? 1 : 0.22 })
+    const marker = L.marker([island.lat, island.lng], {
+      icon: _gates.length ? makeSatelliteIcon(score, !vibeMatch, _gates) : makeMarkerIcon(score, !vibeMatch),
+      opacity: vibeMatch ? 1 : 0.22,
+      zIndexOffset: _gates.length ? 400 : 0 })
       .addTo(mapInstance)
       .bindTooltip(`
         <div class="island-tooltip-inner">
@@ -1384,6 +1522,7 @@ function renderMapMarkers() {
             <div class="itt-rating-row"><span class="itt-rating-label">💸 ${t('dim.afford')}</span><span class="itt-rating-bar"><span class="itt-rating-fill itt-fill-afford" style="width:${(island.afford/5)*100}%"></span></span><span class="itt-rating-val">${fmt(island.afford)}</span></div>
           </div>
           <div class="itt-car">🚗 ${t('dim.car')}: <strong>${carLabel}</strong></div>
+          ${_gates.length ? `<div class="itt-sat">🛰 <strong>${_gates.reduce((n, c) => n + (c.members || []).length, 0)}</strong> ${t('cluster.satellites')} — ${t('cluster.zoomin')}</div>` : ''}
           ${island.has_airport ? `<div class="itt-airport">✈ <strong>${t('tooltip.hasairport')}</strong></div>` : ''}
           ${island.days ? `<div class="itt-days">⏱ ${island.days} ${t('common.days')} ${t('tooltip.recommended')}</div>` : ''}
           <div class="itt-cta">${t('tooltip.click')}</div>
