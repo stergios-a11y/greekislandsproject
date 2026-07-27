@@ -88,6 +88,17 @@
         "overnight": "Kastos village",
         "stops": [
           {
+            "time": "09:00",
+            "name": "Rent a boat in Mytikas",
+            "name_el": "Νοίκιασε βάρκα στον Μύτικα",
+            "lat": 38.6425,
+            "lng": 20.9331,
+            "type": "arrival",
+            "wiki": "https://www.google.com/maps/search/Mytikas+Aitoloakarnania",
+            "desc": "The best way to do these islands is to skip the timetable and drive yourself. <a href=\"https://nemorentaboat.gr/\" target=\"_blank\" rel=\"noopener\">Nemo Rent a Boat</a> and others on the Mytikas quay hire small outboards for around <strong>€100 a day</strong>, plus roughly <strong>€50</strong> of fuel — and <strong>no boat licence is needed</strong>, an ordinary car licence is enough. The distances here are tiny, so with an early start and a calm forecast you can take in Kalamos, Kastos and a string of empty coves in a single day. Watch the wind: the afternoon breeze gets up, so plan to be back before it does. Riding your own boat between these islands is the thing people remember from the trip.",
+            "desc_el": "Ο καλύτερος τρόπος για αυτά τα νησιά είναι να ξεχάσεις τα δρομολόγια και να οδηγήσεις μόνος. Η <a href=\"https://nemorentaboat.gr/\" target=\"_blank\" rel=\"noopener\">Nemo Rent a Boat</a> και άλλοι στην προκυμαία του Μύτικα νοικιάζουν μικρές βάρκες με εξωλέμβια γύρω στα <strong>100€ τη μέρα</strong>, συν περίπου <strong>50€</strong> βενζίνη — και <strong>δεν χρειάζεται δίπλωμα σκάφους</strong>, αρκεί το δίπλωμα αυτοκινήτου. Οι αποστάσεις είναι μικρές, οπότε με πρωινή αναχώρηση και άπνοια προλαβαίνεις Κάλαμο, Καστό και μια σειρά από έρημους όρμους μέσα σε μία μέρα. Πρόσεχε τον αέρα: το απόγευμα σηκώνεται, οπότε γύρνα νωρίτερα. Το να πλέεις με δική σου βάρκα ανάμεσα στα νησιά είναι αυτό που θα θυμάσαι από το ταξίδι."
+          },
+          {
             "name": "Kastos harbour & village",
             "lat": 38.56802082063725,
             "lng": 20.91099243226486,
@@ -121,6 +132,19 @@
             "desc": "A sheltered pebble cove on the south of the island, a favourite anchorage with water clear enough to see the anchor on the bottom. Reached on foot or by dinghy; no facilities.",
             "name_el": "Όρμος Σαρακίνικο",
             "desc_el": "Ένας προστατευμένος βοτσαλωτός όρμος στα νότια, αγαπημένο αραξοβόλι με νερά τόσο καθαρά που βλέπεις την άγκυρα στον πάτο. Πρόσβαση πεζή ή με βαρκάκι· χωρίς υποδομές."
+          },
+          {
+            "time": "16:00",
+            "name": "Atokos — swim with the wild boars",
+            "name_el": "Ατοκός — μπάνιο με τα αγριογούρουνα",
+            "lat": 38.483533890778965,
+            "lng": 20.81966078346176,
+            "type": "beach",
+            "wiki": "https://www.google.com/maps/search/Atokos+island+beach",
+            "desc": "If the sea is glass, push on to <strong>Atokos</strong>, the uninhabited island southwest of Kastos. Its beach is one of the strangest and best in Greece: you swim, and the island's <strong>wild boars</strong> wander down to the shoreline beside you. There is nothing else here — no water, no shade, no people, no phone signal. Bring everything you need, and only attempt the crossing in a flat calm.",
+            "desc_el": "Αν η θάλασσα είναι λάδι, συνέχισε ως τον <strong>Ατοκό</strong>, το ακατοίκητο νησί νοτιοδυτικά του Καστού. Η παραλία του είναι από τις πιο παράξενες και ωραίες στην Ελλάδα: κολυμπάς και τα <strong>αγριογούρουνα</strong> του νησιού κατεβαίνουν δίπλα σου στην ακροθαλασσιά. Δεν υπάρχει τίποτα άλλο — ούτε νερό, ούτε σκιά, ούτε κόσμος, ούτε σήμα. Φέρε ό,τι χρειάζεσαι, και επιχείρησε το πέρασμα μόνο με απόλυτη άπνοια.",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/c_fill,w_640,h_620/c_pad,w_1280,h_620,g_west,b_rgb:ffffff/l_atokos_xjadzr,c_fill,w_640,h_620/fl_layer_apply,g_east/v1785187171/atokos2_gjprv0.jpg",
+            "photo_credit": null
           }
         ],
         "title_el": "Λιμάνι, Ανεμόμυλος & Ένας Ήσυχος Όρμος",
