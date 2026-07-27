@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-07-22';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-07-27';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -116,6 +116,90 @@ const ISLANDS_DATA = {
   "agathonisi":   { name:"Agathonisi",       lat:37.466, lng:26.966, beach:3.5, hist:2.0, night:1.5, access:1.8, afford:4.5, car_need:2.0, has_airport:false, total:3.0, area:13,    pop:185,     days:1, island_group:"Dodecanese", drama:false, hiking:false, springs:false, chora:false, sailing:false },
   "gavdos":       { name:"Gavdos",           lat:34.840, lng:24.080, beach:4.8, hist:2.0, night:2.5, access:1.0, afford:4.5, car_need:1.0, has_airport:false, total:3.0, area:33,    pop:152,     days:3, island_group:"Crete", drama:true, hiking:false, springs:false, chora:false, sailing:false }
 };
+
+/* Cluster dual-scoring: some islands are not destinations on their own.
+   Scored alone they look weak; scored as one leg of a route they read true.
+   Valid JSON so tools/prerender.py can parse this as the single source. */
+const ISLAND_CLUSTERS = {
+  "diapontia": {
+    "name": "the Diapontia islands",
+    "name_el": "τα Διαπόντια νησιά",
+    "members": [
+      "othonoi",
+      "erikousa",
+      "mathraki"
+    ],
+    "gateway": "corfu",
+    "score": 4.0,
+    "days": 4,
+    "why": "One boat out of Corfu, three islands, almost no other visitors — the access penalty that drags each island down on its own disappears once you treat them as a single trip.",
+    "why_el": "Ένα καράβι από την Κέρκυρα, τρία νησιά, σχεδόν κανένας άλλος επισκέπτης — η δυσκολία πρόσβασης που ρίχνει τη βαθμολογία κάθε νησιού χωριστά εξαφανίζεται όταν τα δεις ως ένα ταξίδι.",
+    "name_el_gen": "των Διαποντίων νησιών"
+  },
+  "inner-ionian": {
+    "name": "the Inner Ionian",
+    "name_el": "το Εσωτερικό Ιόνιο",
+    "members": [
+      "kastos",
+      "kalamos",
+      "meganisi"
+    ],
+    "gateway": "lefkada",
+    "score": 4.1,
+    "days": 4,
+    "why": "These are hopping islands, not destinations. Based in Lefkada with a boat or the local ferries, the three of them together make one of the best low-key weeks in Greece.",
+    "why_el": "Είναι νησιά για νησοπορία, όχι προορισμοί. Με βάση τη Λευκάδα και βάρκα ή τα τοπικά φέρι, τα τρία μαζί δίνουν μια από τις καλύτερες χαλαρές εβδομάδες στην Ελλάδα.",
+    "name_el_gen": "του Εσωτερικού Ιονίου"
+  },
+  "kalymnos-satellites": {
+    "name": "the Kalymnos satellites",
+    "name_el": "οι δορυφόροι της Καλύμνου",
+    "members": [
+      "telendos",
+      "pserimos"
+    ],
+    "gateway": "kalymnos",
+    "score": 3.9,
+    "days": 3,
+    "why": "Both are short boat rides from Kalymnos and neither fills a day on its own. Paired with a Kalymnos base they turn into two excellent half-days.",
+    "why_el": "Και τα δύο είναι λίγα λεπτά με βάρκα από την Κάλυμνο και κανένα δεν γεμίζει μέρα μόνο του. Με βάση την Κάλυμνο γίνονται δύο εξαιρετικά μισά της μέρας.",
+    "name_el_gen": "των δορυφόρων της Καλύμνου"
+  },
+  "patmos-satellites": {
+    "name": "the Patmos & Lipsi group",
+    "name_el": "η ομάδα Πάτμου & Λειψών",
+    "members": [
+      "arki",
+      "leipsoi",
+      "agathonisi"
+    ],
+    "gateway": "patmos",
+    "score": 3.9,
+    "days": 4,
+    "why": "Tiny, sleepy and connected by the same local boats. Strung together off Patmos they add up to a proper slow-travel week; visited singly they are half-day stops.",
+    "why_el": "Μικροσκοπικά, νυσταγμένα και συνδεδεμένα με τα ίδια τοπικά καράβια. Στη σειρά από την Πάτμο δίνουν μια πραγματική εβδομάδα αργού ταξιδιού· χωριστά είναι στάσεις μισής μέρας.",
+    "name_el_gen": "της ομάδας Πάτμου & Λειψών"
+  },
+  "fourni-group": {
+    "name": "the Fournoi group",
+    "name_el": "το σύμπλεγμα Φούρνων",
+    "members": [
+      "fournoi",
+      "thymaina"
+    ],
+    "gateway": "ikaria",
+    "score": 3.9,
+    "days": 3,
+    "why": "Thymaina only makes sense as part of Fournoi, and Fournoi makes most sense as an add-on to Ikaria or Samos. Together it is one of the least-visited corners of the Aegean.",
+    "why_el": "Η Θύμαινα βγάζει νόημα μόνο μαζί με τους Φούρνους, και οι Φούρνοι κυρίως ως προέκταση της Ικαρίας ή της Σάμου. Μαζί είναι μια από τις λιγότερο επισκέψιμες γωνιές του Αιγαίου.",
+    "name_el_gen": "του συμπλέγματος Φούρνων"
+  }
+};
+const CLUSTER_OF = (() => {
+  const m = {};
+  Object.entries(ISLAND_CLUSTERS).forEach(([ck, c]) => c.members.forEach(k => { m[k] = ck; }));
+  return m;
+})();
 
 const ISLANDS = Object.entries(ISLANDS_DATA).map(([key, data]) => ({ key, ...data }));
 
@@ -1695,6 +1779,25 @@ async function renderIslandPage(key) {
   relocateHeroToSlot(key);
 }
 
+
+/* "3.0 alone · 4.1 as part of the Inner Ionian" — shown on islands that belong
+   to a cluster. Honest framing: the solo score stays visible, the cluster score
+   explains what the island actually is. */
+function clusterNoteHtml(key) {
+  const ck = CLUSTER_OF[key];
+  if (!ck) return '';
+  const c = ISLAND_CLUSTERS[ck];
+  const solo = (ISLANDS_DATA[key] || {}).total;
+  if (!solo) return '';
+  const el = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+  const cname = el ? (c.name_el_gen || c.name_el || c.name) : c.name;
+  const aloneLbl = el ? 'μόνο του' : 'on its own';
+  const partLbl = el ? 'ως μέρος' : 'as part of';
+  return `<p class="isl-cluster-note">`
+    + `<b>${solo.toFixed(1)}</b> ${aloneLbl} · <b>${c.score.toFixed(1)}</b> ${partLbl} ${cname}`
+    + `</p>`;
+}
+
 /* Moves the immersive hero out of #island-guide into the full-width
    #island-hero-slot so it spans both grid columns (photo on top, itinerary +
    Blueprint panel below). If no photo hero was rendered (generic fallback or a
@@ -1958,6 +2061,7 @@ function buildIslandPage(data, key) {
     _meta.has_airport ? `<span class="isl-chip">✈ ${t('tooltip.hasairport')}</span>` : '',
     _carLbl ? `<span class="isl-chip">🚗 ${_carLbl}</span>` : ''
   ].join('');
+  const _cnote = clusterNoteHtml(key);
   const islHero = _hp ? `
       <div class="isl-hero" style="background-image:url('${heroSrc(_hp)}')">
         <div class="isl-hero-scrim"></div>
@@ -1965,6 +2069,7 @@ function buildIslandPage(data, key) {
           ${_grp ? `<div class="isl-hero-eyebrow">${_grp}</div>` : ''}
           <div class="isl-hero-nrow"><h1 class="isl-hero-name">${islandName(key)}</h1>${_scoreTxt ? `<span class="isl-hero-score">${_scoreTxt}<small>/5</small></span>` : ''}</div>
           ${_tag ? `<p class="isl-hero-tag">${_tag}</p>` : ''}
+          ${_cnote}
           ${_chips ? `<div class="isl-hero-chips">${_chips}</div>` : ''}
         </div>
         ${buildPhotoCredit(_hc)}

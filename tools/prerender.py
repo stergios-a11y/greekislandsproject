@@ -84,6 +84,63 @@ GREEK_NAMES = load_greek_names()
 # ---------------------------------------------------------------------
 # Pull each island's group + stats from script.js's ISLANDS_DATA
 # ---------------------------------------------------------------------
+def load_island_clusters():
+    """Parse ISLAND_CLUSTERS from script.js (written as valid JSON) and return
+    (clusters, cluster_of) so the static pages match the SPA exactly."""
+    text = (ROOT / 'script.js').read_text()
+    m = re.search(r'const ISLAND_CLUSTERS = (\{[\s\S]*?\n\});', text)
+    if not m:
+        return {}, {}
+    clusters = json.loads(m.group(1))
+    cluster_of = {}
+    for ck, c in clusters.items():
+        for k in c.get('members', []):
+            cluster_of[k] = ck
+    return clusters, cluster_of
+
+
+ISLAND_CLUSTERS, CLUSTER_OF = {}, {}
+
+
+def cluster_note_html(key, meta, lang):
+    """Static twin of clusterNoteHtml() in script.js."""
+    ck = CLUSTER_OF.get(key)
+    if not ck or not meta.get('total'):
+        return ''
+    c = ISLAND_CLUSTERS[ck]
+    cname = (c.get('name_el_gen') or c.get('name_el') or c['name']) if lang == 'el' else c['name']
+    alone = 'μόνο του' if lang == 'el' else 'on its own'
+    part = 'ως μέρος' if lang == 'el' else 'as part of'
+    return (f'<p class="isl-cluster-note"><b>{meta["total"]:.1f}</b> {alone} · '
+            f'<b>{c["score"]:.1f}</b> {part} {esc(cname)}</p>')
+
+
+def cluster_prose(key, meta, lang):
+    """A short honest paragraph for the SEO body, explaining the dual score."""
+    ck = CLUSTER_OF.get(key)
+    if not ck or not meta.get('total'):
+        return ''
+    c = ISLAND_CLUSTERS[ck]
+    cname = (c.get('name_el_gen') or c.get('name_el') or c['name']) if lang == 'el' else c['name']
+    why = (c.get('why_el') or c.get('why', '')) if lang == 'el' else c.get('why', '')
+    gw = c.get('gateway')
+    gw_name = (ISLAND_META.get(gw, {}) or {}).get('name', gw or '')
+    if lang == 'el':
+        gw_name = GREEK_NAMES.get(gw, gw_name)
+    gw_link = f'/el/island/{gw}/' if lang == 'el' else f'/island/{gw}/'
+    if lang == 'el':
+        head = 'Μόνο του ή ως μέρος διαδρομής;'
+        body = (f'Χωριστά, το νησί βαθμολογείται <strong>{meta["total"]:.1f}/5</strong>. '
+                f'Ως μέρος {esc(cname)} — με βάση την <a href="{gw_link}">{esc(gw_name)}</a> και '
+                f'{c.get("days", 3)} ημέρες — βαθμολογείται <strong>{c["score"]:.1f}/5</strong>. {esc(why)}')
+    else:
+        head = 'On its own, or as part of a route?'
+        body = (f'Judged alone, this island scores <strong>{meta["total"]:.1f}/5</strong>. '
+                f'Judged as one leg of {esc(cname)} — based on <a href="{gw_link}">{esc(gw_name)}</a> over '
+                f'{c.get("days", 3)} days — it scores <strong>{c["score"]:.1f}/5</strong>. {esc(why)}')
+    return f'<h2 class="seo-h2">{head}</h2>\n<p>{body}</p>'
+
+
 def load_island_meta():
     """Extract ISLANDS_DATA from script.js."""
     text = (ROOT / 'script.js').read_text()
@@ -127,6 +184,8 @@ def load_island_meta():
     return islands
 
 ISLAND_META = load_island_meta()
+ISLAND_CLUSTERS, CLUSTER_OF = load_island_clusters()
+TITLE_OVERRIDES = {'ammouliani': ('Ammouliani {year} — Beaches, Drenia Islets & Mt Athos Views', 'Αμμουλιανή {year} — Παραλίες, Δρένια & Θέα στον Άθω'), 'meganisi': ('Meganisi {year} — Beaches, Getting There from Lefkada, Day Plan', 'Μεγανήσι {year} — Παραλίες, Πώς Πας από Λευκάδα, Πρόγραμμα'), 'kastos': ('Kastos {year} — Tiny, Car-Free: Is It Worth the Trip?', 'Καστός {year} — Μικροσκοπικός, Χωρίς Αυτοκίνητα: Αξίζει;'), 'kalamos': ('Kalamos {year} — Ionian Hideaway: Beaches, Boats, Honest Take', 'Κάλαμος {year} — Κρυφό Ιόνιο: Παραλίες, Βάρκες, Ειλικρινά'), 'othonoi': ("Othonoi {year} — Greece's Westernmost Isle: Caves & Beaches", 'Οθωνοί {year} — Το Δυτικότερο Νησί: Σπηλιές & Παραλίες'), 'pserimos': ('Pserimos {year} — One Beach, 84 Locals: Day Trip Guide', 'Ψέριμος {year} — Μια Παραλία, 84 Κάτοικοι: Οδηγός Εκδρομής'), 'mathraki': ('Mathraki {year} — 330 People, One Beach, No Crowds', 'Μαθράκι {year} — 330 Κάτοικοι, Μια Παραλία, Καθόλου Κόσμος'), 'telendos': ("Telendos {year} — Car-Free Rock off Kalymnos: What's There", 'Τέλενδος {year} — Βράχος Χωρίς Αυτοκίνητα: Τι Έχει'), 'arki': ('Arki {year} — 44 Residents, No Cars: Aegean at Its Emptiest', 'Αρκιοί {year} — 44 Κάτοικοι, Χωρίς Αυτοκίνητα: Άδειο Αιγαίο')}
 
 import math
 
@@ -934,6 +993,11 @@ def build_title(key, data, meta, lang='en'):
     from datetime import date as _d
     year = _d.today().year
     name = localized_name(key, data, meta, lang)
+    # CTR pass (Jul 2026): tiny islands ranked p6-12 but earned <1.5% CTR with
+    # the generic template. Bespoke, expectation-setting titles instead.
+    ov = TITLE_OVERRIDES.get(key)
+    if ov:
+        return f"{(ov[1] if lang == 'el' else ov[0]).format(year=year)} | Aegean Blueprint"
     days = int(meta.get('days') or 0) if meta.get('days') else 0
     if lang == 'el':
         if days:
@@ -1063,6 +1127,9 @@ def render_body(key, data, meta, lang='en'):
             rating_text = f'<p class="seo-rating">Συνολική βαθμολογία: <strong>{rating:.1f}/5</strong> · {int(meta["area"]) if meta.get("area") else ""} km² · {int(meta["pop"]) if meta.get("pop") else ""} κάτοικοι</p>'
         else:
             rating_text = f'<p class="seo-rating">Overall rating: <strong>{rating:.1f}/5</strong> · {int(meta["area"]) if meta.get("area") else ""} km² · {int(meta["pop"]) if meta.get("pop") else ""} residents</p>'
+        _cp = cluster_prose(key, meta, lang)
+        if _cp:
+            rating_text = rating_text + '\n' + _cp
 
     # Last-updated line — signals to readers (and Google) that the guide is
     # actively maintained. Pulled from git log (committer date) on the
@@ -1479,6 +1546,7 @@ def render_body(key, data, meta, lang='en'):
       {f'<div class="isl-hero-eyebrow">{esc(grp)}</div>' if grp else ''}
       <div class="isl-hero-nrow"><h1 class="isl-hero-name">{esc(name)}</h1>{score_html}</div>
       {f'<p class="isl-hero-tag">{esc(hero_tag)}</p>' if hero_tag else ''}
+      {cluster_note_html(key, meta, lang)}
       {chips_html}
     </div>
   </div>'''
@@ -1607,7 +1675,7 @@ def render_page(key, data, meta, lang='en'):
 <script type="application/ld+json">{schema_json}</script>
 
 <!-- SPA assets — load the same CSS as the main site so the SEO body blends visually -->
-<link rel="stylesheet" href="{asset_prefix}style.css?v=44">
+<link rel="stylesheet" href="{asset_prefix}style.css?v=45">
 <style>
   /* Minimal SEO body styling — these elements exist only in pre-rendered pages */
   .seo-island-content {{
@@ -1620,6 +1688,8 @@ def render_page(key, data, meta, lang='en'):
   }}
   .seo-subtitle {{ color: var(--ink-3, #555); font-style: italic; margin: 0 0 12px; }}
   .seo-rating {{ color: var(--ink-2, #333); font-size: var(--text-small, 14px); }}
+  .isl-cluster-note {{ margin: 6px 0 0; font-size: 13.5px; color: rgba(255,255,255,.94); text-shadow: 0 1px 10px rgba(0,0,0,.5); }}
+  .isl-cluster-note b {{ font-weight: 800; }}
   .seo-lastupdated {{
     color: var(--ink-3, #777); font-size: var(--text-tiny, 12px);
     margin: 2px 0 0; font-style: italic;
@@ -1977,7 +2047,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=41"></script>
-<script src="{asset_prefix}script.js?v=66"></script>
+<script src="{asset_prefix}script.js?v=67"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
