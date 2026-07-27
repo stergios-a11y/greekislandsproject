@@ -102,17 +102,31 @@ def load_island_clusters():
 ISLAND_CLUSTERS, CLUSTER_OF = {}, {}
 
 
+def _score_colour(s):
+    """Mirror of scoreToColor() in script.js — same five bands."""
+    s = s or 0
+    return ('#1B5E20' if s >= 4.5 else '#4CAF50' if s >= 3.8 else
+            '#8FAE3C' if s >= 3.5 else '#C4962A' if s >= 3.0 else '#C0522A')
+
+
 def cluster_note_html(key, meta, lang):
-    """Static twin of clusterNoteHtml() in script.js."""
+    """Static twin of clusterNoteHtml() — the two-chip dual score."""
     ck = CLUSTER_OF.get(key)
     if not ck or not meta.get('total'):
         return ''
     c = ISLAND_CLUSTERS[ck]
-    cname = (c.get('name_el_gen') or c.get('name_el') or c['name']) if lang == 'el' else c['name']
-    alone = 'μόνο του' if lang == 'el' else 'on its own'
-    part = 'ως μέρος' if lang == 'el' else 'as part of'
-    return (f'<p class="isl-cluster-note"><b>{meta["total"]:.1f}</b> {alone} · '
-            f'<b>{c["score"]:.1f}</b> {part} {esc(cname)}</p>')
+    solo = meta['total']
+    cname = (c.get('name_el') or c['name']) if lang == 'el' else c['name']
+    if lang == 'el':
+        a_lbl, b_lbl = 'μόνο του', 'με ' + cname
+    else:
+        a_lbl, b_lbl = 'on its own', 'with the ' + re.sub(r'^the ', '', cname)
+    return (f'<span class="isl-dual">'
+            f'<span class="isl-dual-chip"><b style="color:{_score_colour(solo)}">{solo:.1f}</b>'
+            f'<i>{a_lbl}</i></span>'
+            f'<span class="isl-dual-arrow">→</span>'
+            f'<span class="isl-dual-chip up"><b style="color:{_score_colour(c["score"])}">{c["score"]:.1f}</b>'
+            f'<i>{esc(b_lbl)}</i></span></span>')
 
 
 def cluster_prose(key, meta, lang):
@@ -121,24 +135,45 @@ def cluster_prose(key, meta, lang):
     if not ck or not meta.get('total'):
         return ''
     c = ISLAND_CLUSTERS[ck]
-    cname = (c.get('name_el_gen') or c.get('name_el') or c['name']) if lang == 'el' else c['name']
+    cname = (c.get('name_el') or c['name']) if lang == 'el' else c['name']
     why = (c.get('why_el') or c.get('why', '')) if lang == 'el' else c.get('why', '')
     gw = c.get('gateway')
     gw_name = (ISLAND_META.get(gw, {}) or {}).get('name', gw or '')
     if lang == 'el':
         gw_name = GREEK_NAMES.get(gw, gw_name)
     gw_link = f'/el/island/{gw}/' if lang == 'el' else f'/island/{gw}/'
+    rows = []
+    for k in c.get('members', []):
+        km = ISLAND_META.get(k, {}) or {}
+        kname = GREEK_NAMES.get(k, km.get('name', k)) if lang == 'el' else km.get('name', k)
+        role = ((c.get('roles', {}).get(k) or {}).get('el' if lang == 'el' else 'en')) or ''
+        klink = f'/el/island/{k}/' if lang == 'el' else f'/island/{k}/'
+        here = (' <em>' + ('— εδώ είσαι' if lang == 'el' else "— you&#39;re here") + '</em>') if k == key else ''
+        sc = km.get('total') or 0
+        cell = (f'<span class="cb-score" style="background:{_score_colour(sc)}">{sc:.1f}</span>'
+                f'<span class="cb-text"><b>{esc(kname)}{here}</b><span>{esc(role)}</span></span>')
+        rows.append(f'<div class="cb-row me">{cell}</div>' if k == key
+                    else f'<a class="cb-row" href="{klink}">{cell}</a>')
+    rows_html = ''.join(rows)
+    gw_sc = (ISLAND_META.get(gw, {}) or {}).get('total') or 0
+    days = c.get('days', 3)
+    per = max(1, round(days / max(1, len(c.get('members', [])))))
+    trip = ','.join(f'{k}:{per}' for k in c.get('members', []))
+    tc_link = ('/el/trip-cost/' if lang == 'el' else '/trip-cost/') + '?i=' + trip
     if lang == 'el':
-        head = 'Μόνο του ή ως μέρος διαδρομής;'
-        body = (f'Χωριστά, το νησί βαθμολογείται <strong>{meta["total"]:.1f}/5</strong>. '
-                f'Ως μέρος {esc(cname)} — με βάση την <a href="{gw_link}">{esc(gw_name)}</a> και '
-                f'{c.get("days", 3)} ημέρες — βαθμολογείται <strong>{c["score"]:.1f}/5</strong>. {esc(why)}')
+        head = 'Μέρος ' + esc(c.get('name_el_gen') or cname)
+        base_lbl, days_lbl, cta = 'Βάση', 'ημέρες', '💶 Υπολόγισε αυτή τη διαδρομή'
     else:
-        head = 'On its own, or as part of a route?'
-        body = (f'Judged alone, this island scores <strong>{meta["total"]:.1f}/5</strong>. '
-                f'Judged as one leg of {esc(cname)} — based on <a href="{gw_link}">{esc(gw_name)}</a> over '
-                f'{c.get("days", 3)} days — it scores <strong>{c["score"]:.1f}/5</strong>. {esc(why)}')
-    return f'<h2 class="seo-h2">{head}</h2>\n<p>{body}</p>'
+        head = 'Part of ' + esc(cname)
+        base_lbl, days_lbl, cta = 'Base', 'days', '💶 Budget this route'
+    return (f'<section class="cluster-block" id="cluster-block">'
+            f'<h2 class="cb-title">{head}</h2>'
+            f'<p class="cb-why">{esc(why)}</p>'
+            f'<a class="cb-base" href="{gw_link}"><span class="cb-base-lbl">{base_lbl}</span>'
+            f'<span class="cb-score" style="background:{_score_colour(gw_sc)}">{gw_sc:.1f}</span>'
+            f'<b>{esc(gw_name)}</b><span class="cb-days">{days} {days_lbl}</span></a>'
+            f'<div class="cb-rows">{rows_html}</div>'
+            f'<a class="cb-cta" href="{tc_link}">{cta}</a></section>')
 
 
 def load_island_meta():
@@ -1675,7 +1710,7 @@ def render_page(key, data, meta, lang='en'):
 <script type="application/ld+json">{schema_json}</script>
 
 <!-- SPA assets — load the same CSS as the main site so the SEO body blends visually -->
-<link rel="stylesheet" href="{asset_prefix}style.css?v=46">
+<link rel="stylesheet" href="{asset_prefix}style.css?v=47">
 <style>
   /* Minimal SEO body styling — these elements exist only in pre-rendered pages */
   .seo-island-content {{
@@ -2047,7 +2082,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=42"></script>
-<script src="{asset_prefix}script.js?v=68"></script>
+<script src="{asset_prefix}script.js?v=69"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.

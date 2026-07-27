@@ -134,7 +134,21 @@ const ISLAND_CLUSTERS = {
     "days": 4,
     "why": "One boat out of Corfu, three islands, almost no other visitors — the access penalty that drags each island down on its own disappears once you treat them as a single trip.",
     "why_el": "Ένα καράβι από την Κέρκυρα, τρία νησιά, σχεδόν κανένας άλλος επισκέπτης — η δυσκολία πρόσβασης που ρίχνει τη βαθμολογία κάθε νησιού χωριστά εξαφανίζεται όταν τα δεις ως ένα ταξίδι.",
-    "name_el_gen": "των Διαποντίων νησιών"
+    "name_el_gen": "των Διαποντίων νησιών",
+    "roles": {
+      "othonoi": {
+        "en": "The biggest and furthest out — Calypso's cave and the best walking of the three. Usually paired with a night on Erikousa.",
+        "el": "Το μεγαλύτερο και πιο απομακρυσμένο — η σπηλιά της Καλυψώς και οι καλύτερες πεζοπορίες των τριών. Συνήθως συνδυάζεται με μια νύχτα στην Ερείκουσα."
+      },
+      "erikousa": {
+        "en": "The easy one, and the only one with real sand. Day-trip it from Corfu, or sleep here between Othonoi and Mathraki.",
+        "el": "Το εύκολο, και το μόνο με πραγματική αμμουδιά. Ημερήσια εκδρομή από την Κέρκυρα, ή διανυκτέρευση ανάμεσα σε Οθωνούς και Μαθράκι."
+      },
+      "mathraki": {
+        "en": "The smallest and quietest — one long beach, 330 people. Most routes give it the half-day between Othonoi and Erikousa.",
+        "el": "Το μικρότερο και πιο ήσυχο — μια μεγάλη παραλία, 330 κάτοικοι. Οι περισσότερες διαδρομές του δίνουν το μισό της μέρας ανάμεσα σε Οθωνούς και Ερείκουσα."
+      }
+    }
   },
   "inner-ionian": {
     "name": "the Inner Ionian",
@@ -149,7 +163,21 @@ const ISLAND_CLUSTERS = {
     "days": 4,
     "why": "These are hopping islands, not destinations. Based in Lefkada with a boat or the local ferries, the three of them together make one of the best low-key weeks in Greece.",
     "why_el": "Είναι νησιά για νησοπορία, όχι προορισμοί. Με βάση τη Λευκάδα και βάρκα ή τα τοπικά φέρι, τα τρία μαζί δίνουν μια από τις καλύτερες χαλαρές εβδομάδες στην Ελλάδα.",
-    "name_el_gen": "του Εσωτερικού Ιονίου"
+    "name_el_gen": "του Εσωτερικού Ιονίου",
+    "roles": {
+      "kastos": {
+        "en": "The quietest link in the chain — one village, no cars, a stone path. Most people stop here between Kalamos and Meganisi.",
+        "el": "Ο πιο ήσυχος κρίκος της αλυσίδας — ένα χωριό, χωρίς αυτοκίνητα, ένα λιθόστρωτο μονοπάτι. Οι περισσότεροι σταματούν εδώ ανάμεσα σε Κάλαμο και Μεγανήσι."
+      },
+      "kalamos": {
+        "en": "The green one, with the best anchorages and the Porto Leone ghost village. The natural middle stop between Meganisi and Kastos.",
+        "el": "Το πράσινο, με τα καλύτερα αγκυροβόλια και το εγκαταλελειμμένο Πόρτο Λεόνε. Η φυσική ενδιάμεση στάση ανάμεσα σε Μεγανήσι και Καστό."
+      },
+      "meganisi": {
+        "en": "The busiest and best-connected — twenty minutes from Lefkada, so most routes start or finish here before Kalamos and Kastos.",
+        "el": "Το πιο ζωντανό και καλοσυνδεδεμένο — είκοσι λεπτά από τη Λευκάδα, οπότε οι περισσότερες διαδρομές ξεκινούν ή τελειώνουν εδώ, πριν από Κάλαμο και Καστό."
+      }
+    }
   },
   "kalymnos-satellites": {
     "name": "the Kalymnos satellites",
@@ -163,7 +191,17 @@ const ISLAND_CLUSTERS = {
     "days": 3,
     "why": "Both are short boat rides from Kalymnos and neither fills a day on its own. Paired with a Kalymnos base they turn into two excellent half-days.",
     "why_el": "Και τα δύο είναι λίγα λεπτά με βάρκα από την Κάλυμνο και κανένα δεν γεμίζει μέρα μόνο του. Με βάση την Κάλυμνο γίνονται δύο εξαιρετικά μισά της μέρας.",
-    "name_el_gen": "των δορυφόρων της Καλύμνου"
+    "name_el_gen": "των δορυφόρων της Καλύμνου",
+    "roles": {
+      "telendos": {
+        "en": "Five minutes across the strait from Kalymnos — climbing, sunsets, waterfront tavernas. The evening half of the pair with Pserimos.",
+        "el": "Πέντε λεπτά απέναντι από την Κάλυμνο — αναρρίχηση, ηλιοβασιλέματα, ταβέρνες στο κύμα. Το απογευματινό μισό του ζευγαριού με την Ψέριμο."
+      },
+      "pserimos": {
+        "en": "One wide sandy bay between Kalymnos and Kos, and 84 residents. The beach half of the pair with Telendos.",
+        "el": "Ένας πλατύς αμμώδης κόλπος ανάμεσα σε Κάλυμνο και Κω, και 84 κάτοικοι. Το «παραλιακό» μισό του ζευγαριού με την Τέλενδο."
+      }
+    }
   },
   "patmos-satellites": {
     "name": "the Patmos & Lipsi group",
@@ -178,7 +216,21 @@ const ISLAND_CLUSTERS = {
     "days": 4,
     "why": "Tiny, sleepy and connected by the same local boats. Strung together off Patmos they add up to a proper slow-travel week; visited singly they are half-day stops.",
     "why_el": "Μικροσκοπικά, νυσταγμένα και συνδεδεμένα με τα ίδια τοπικά καράβια. Στη σειρά από την Πάτμο δίνουν μια πραγματική εβδομάδα αργού ταξιδιού· χωριστά είναι στάσεις μισής μέρας.",
-    "name_el_gen": "της ομάδας Πάτμου & Λειψών"
+    "name_el_gen": "της ομάδας Πάτμου & Λειψών",
+    "roles": {
+      "arki": {
+        "en": "The emptiest of the group — 44 residents and no cars. Reached on the same local boat line as Lipsi and Agathonisi.",
+        "el": "Το πιο άδειο της ομάδας — 44 κάτοικοι και χωρίς αυτοκίνητα. Προσεγγίζεται με την ίδια τοπική γραμμή με Λειψούς και Αγαθονήσι."
+      },
+      "leipsoi": {
+        "en": "The hub of the small ones — most of the rooms and tavernas, and the boat you take onward to Arki.",
+        "el": "Ο κόμβος των μικρών — τα περισσότερα δωμάτια και ταβέρνες, και το καΐκι για τους Αρκιούς."
+      },
+      "agathonisi": {
+        "en": "The furthest out, on the Samos line — usually the last stop after Lipsi and Arki, or the way you leave the group.",
+        "el": "Το πιο απομακρυσμένο, στη γραμμή της Σάμου — συνήθως η τελευταία στάση μετά τους Λειψούς και τους Αρκιούς, ή ο τρόπος να φύγεις."
+      }
+    }
   },
   "fourni-group": {
     "name": "the Fournoi group",
@@ -192,7 +244,17 @@ const ISLAND_CLUSTERS = {
     "days": 3,
     "why": "Thymaina only makes sense as part of Fournoi, and Fournoi makes most sense as an add-on to Ikaria or Samos. Together it is one of the least-visited corners of the Aegean.",
     "why_el": "Η Θύμαινα βγάζει νόημα μόνο μαζί με τους Φούρνους, και οι Φούρνοι κυρίως ως προέκταση της Ικαρίας ή της Σάμου. Μαζί είναι μια από τις λιγότερο επισκέψιμες γωνιές του Αιγαίου.",
-    "name_el_gen": "του συμπλέγματος Φούρνων"
+    "name_el_gen": "του συμπλέγματος Φούρνων",
+    "roles": {
+      "fournoi": {
+        "en": "The main island of the pair — harbour, tavernas, and a coastline of small beaches. Thymaina sits across the strait.",
+        "el": "Το κύριο νησί του ζευγαριού — λιμάνι, ταβέρνες και μια ακτογραμμή με μικρές παραλίες. Η Θύμαινα είναι απέναντι."
+      },
+      "thymaina": {
+        "en": "Fournoi's little sibling — a fishing village and very little else, and you can only get here through Fournoi.",
+        "el": "Η μικρή αδελφή των Φούρνων — ένα ψαροχώρι και ελάχιστα άλλα, και φτάνεις μόνο μέσω Φούρνων."
+      }
+    }
   }
 };
 const CLUSTER_OF = (() => {
@@ -1919,9 +1981,9 @@ async function renderIslandPage(key) {
 }
 
 
-/* "3.0 alone · 4.1 as part of the Inner Ionian" — shown on islands that belong
-   to a cluster. Honest framing: the solo score stays visible, the cluster score
-   explains what the island actually is. */
+/* Dual score, rendered as two chips rather than a sentence — the solo score
+   stays honest and visible, the route score explains what the island really is.
+   Clicking scrolls to the full cluster block. */
 function clusterNoteHtml(key) {
   const ck = CLUSTER_OF[key];
   if (!ck) return '';
@@ -1929,12 +1991,59 @@ function clusterNoteHtml(key) {
   const solo = (ISLANDS_DATA[key] || {}).total;
   if (!solo) return '';
   const el = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
-  const cname = el ? (c.name_el_gen || c.name_el || c.name) : c.name;
-  const aloneLbl = el ? 'μόνο του' : 'on its own';
-  const partLbl = el ? 'ως μέρος' : 'as part of';
-  return `<p class="isl-cluster-note">`
-    + `<b>${solo.toFixed(1)}</b> ${aloneLbl} · <b>${c.score.toFixed(1)}</b> ${partLbl} ${cname}`
-    + `</p>`;
+  const cname = el ? (c.name_el || c.name) : c.name;
+  return `<button type="button" class="isl-dual" onclick="document.getElementById('cluster-block')?.scrollIntoView({behavior:'smooth',block:'center'})"
+      title="${el ? 'Δες τη διαδρομή' : 'See the route'}">
+      <span class="isl-dual-chip">
+        <b style="color:${scoreToColor(solo)}">${solo.toFixed(1)}</b>
+        <i>${el ? 'μόνο του' : 'on its own'}</i>
+      </span>
+      <span class="isl-dual-arrow">→</span>
+      <span class="isl-dual-chip up">
+        <b style="color:${scoreToColor(c.score)}">${c.score.toFixed(1)}</b>
+        <i>${el ? 'με ' + cname : 'with the ' + cname.replace(/^the /, '')}</i>
+      </span>
+    </button>`;
+}
+
+/* "Part of <cluster>" — the base island plus every sibling, linked and scored,
+   each with a line on what it adds. This is what turns three thin pages into
+   one route. */
+function clusterBlockHtml(key) {
+  const ck = CLUSTER_OF[key];
+  if (!ck) return '';
+  const c = ISLAND_CLUSTERS[ck];
+  const el = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+  const L = p => (el ? '/el' : '') + '/island/' + p + '/';
+  const nm = k => islandName(k);
+  const cname = el ? (c.name_el || c.name) : c.name;
+  const why = (el ? c.why_el : c.why) || '';
+  const gw = c.gateway, gwMeta = ISLANDS_DATA[gw] || {};
+  const roleOf = k => (c.roles && c.roles[k]) ? (el ? c.roles[k].el : c.roles[k].en) : '';
+
+  const rows = c.members.map(k => {
+    const me = k === key, meta = ISLANDS_DATA[k] || {};
+    const inner = `
+      <span class="cb-score" style="background:${scoreToColor(meta.total || 0)}">${(meta.total || 0).toFixed(1)}</span>
+      <span class="cb-text"><b>${nm(k)}${me ? ` <em>${el ? '— εδώ είσαι' : "— you're here"}</em>` : ''}</b>
+      <span>${roleOf(k)}</span></span>`;
+    return me ? `<div class="cb-row me">${inner}</div>`
+              : `<a class="cb-row" href="${L(k)}">${inner}</a>`;
+  }).join('');
+
+  const tripKeys = c.members.map(k => k + ':' + Math.max(1, Math.round((c.days || 3) / c.members.length))).join(',');
+  return `<section class="cluster-block" id="cluster-block">
+      <h2 class="cb-title">${el ? 'Μέρος ' + (c.name_el_gen || cname) : 'Part of ' + cname}</h2>
+      <p class="cb-why">${why}</p>
+      <a class="cb-base" href="${L(gw)}">
+        <span class="cb-base-lbl">${el ? 'Βάση' : 'Base'}</span>
+        <span class="cb-score" style="background:${scoreToColor(gwMeta.total || 0)}">${(gwMeta.total || 0).toFixed(1)}</span>
+        <b>${nm(gw)}</b>
+        <span class="cb-days">${c.days} ${el ? 'ημέρες' : 'days'}</span>
+      </a>
+      <div class="cb-rows">${rows}</div>
+      <a class="cb-cta" href="${(el ? '/el' : '')}/trip-cost/?i=${tripKeys}">${el ? '💶 Υπολόγισε αυτή τη διαδρομή' : '💶 Budget this route'}</a>
+    </section>`;
 }
 
 /* Moves the immersive hero out of #island-guide into the full-width
@@ -2220,6 +2329,7 @@ function buildIslandPage(data, key) {
       <h2 class="itin-section-title">${pickLang(itin, "title")}</h2>
       <p class="itin-section-sub">${pickLang(itin, "subtitle")}</p>
       ${introHtml}
+      ${clusterBlockHtml(key)}
       ${buildSuitedForSection(data)}
       ${buildAudienceSections(data)}
       ${gettingThereHtml}
