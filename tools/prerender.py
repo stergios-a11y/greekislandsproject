@@ -158,7 +158,8 @@ def cluster_prose(key, meta, lang):
     gw_sc = (ISLAND_META.get(gw, {}) or {}).get('total') or 0
     days = c.get('days', 3)
     per = max(1, round(days / max(1, len(c.get('members', [])))))
-    trip = ','.join(f'{k}:{per}' for k in c.get('members', []))
+    # %3A not ':' — Cloudflare 301s literal colons in query strings
+    trip = ','.join(f'{k}%3A{per}' for k in c.get('members', []))
     tc_link = ('/el/trip-cost/' if lang == 'el' else '/trip-cost/') + '?i=' + trip
     if lang == 'el':
         head = 'Μέρος ' + esc(c.get('name_el_gen') or cname)
@@ -1993,7 +1994,7 @@ def render_page(key, data, meta, lang='en'):
     <a href="{('/' if lang == 'en' else '/el/')}#compare" class="seo-cta-btn">{'↔ Compare islands' if lang == 'en' else '↔ Σύγκρινε νησιά'}</a>
     <a href="{('/match/' if lang == 'en' else '/el/match/')}" class="seo-cta-btn">{'🎯 Take the quiz' if lang == 'en' else '🎯 Κάνε το quiz'}</a>
     <a href="{('/' if lang == 'en' else '/el/')}" class="seo-cta-btn">{'🗺 Explore map' if lang == 'en' else '🗺 Εξερεύνησε χάρτη'}</a>
-    <a href="{('/trip-cost/' if lang == 'en' else '/el/trip-cost/')}?i={key}:{int(meta.get('days') or 3)}" class="seo-cta-btn">{f"💶 What do {int(meta.get('days') or 3)} days here cost?" if lang == 'en' else f"💶 Πόσο κοστίζουν {int(meta.get('days') or 3)} μέρες εδώ;"}</a>
+    <a href="{('/trip-cost/' if lang == 'en' else '/el/trip-cost/')}?i={key}%3A{int(meta.get('days') or 3)}" class="seo-cta-btn">{f"💶 What do {int(meta.get('days') or 3)} days here cost?" if lang == 'en' else f"💶 Πόσο κοστίζουν {int(meta.get('days') or 3)} μέρες εδώ;"}</a>
   </div>
 </div>
 
@@ -2082,7 +2083,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=42"></script>
-<script src="{asset_prefix}script.js?v=69"></script>
+<script src="{asset_prefix}script.js?v=70"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.

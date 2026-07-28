@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
+# The budget planner takes its whole state from the query string, so every
+# island page links a pre-filled variant (?i=naxos%3A4 ...). They all canonical
+# back to the bare /trip-cost/ page, so crawling ~200 of them is pure waste.
+# The planner itself stays fully crawlable.
+Disallow: /trip-cost/?i=
+Disallow: /el/trip-cost/?i=
+
 Sitemap: https://aegeanblueprint.com/sitemap.xml

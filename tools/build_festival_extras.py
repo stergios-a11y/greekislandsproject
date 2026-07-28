@@ -155,7 +155,7 @@ def fest_entry(f, names, lang, mnum):
     slug = slugify(f.get('name', ''))
     budget = ''
     if mnum in BUDGET_MONTH:
-        bhref = f"{'/el' if is_el else ''}/trip-cost/?i={f['island']}:3&m={BUDGET_MONTH[mnum]}"
+        bhref = f"{'/el' if is_el else ''}/trip-cost/?i={f['island']}%3A3&m={BUDGET_MONTH[mnum]}"
         blabel = 'Πόσο κοστίζει αυτό το ταξίδι; →' if is_el else 'What would this trip cost? →'
         budget = f'<a class="fx-budget" href="{bhref}">💶 {blabel}</a>'
     return f'''  <article class="fest-card" id="{slug}">
@@ -321,13 +321,13 @@ def build_ikaria():
             desc = f'Τα πανηγύρια της Ικαρίας: πώς λειτουργούν, η εθιμοτυπία, και το ημερολόγιο {YEAR} — Χριστός Ραχών 6 Αυγούστου, Λαγκάδα 15 Αυγούστου, και όλη η καλοκαιρινή σειρά.'
             h1 = 'Τα πανηγύρια της Ικαρίας'
             body = IKARIA_EL
-            cta = f'<a class="fx-budget" style="font-size:14px;padding:9px 18px" href="/el/trip-cost/?i=ikaria:4&m=aug">💶 Πόσο κοστίζει μια εβδομάδα πανηγυριών; →</a> <a class="fx-budget" style="font-size:14px;padding:9px 18px" href="/el/island/ikaria/">🏝 Ο πλήρης οδηγός της Ικαρίας →</a>'
+            cta = f'<a class="fx-budget" style="font-size:14px;padding:9px 18px" href="/el/trip-cost/?i=ikaria%3A4&m=aug">💶 Πόσο κοστίζει μια εβδομάδα πανηγυριών; →</a> <a class="fx-budget" style="font-size:14px;padding:9px 18px" href="/el/island/ikaria/">🏝 Ο πλήρης οδηγός της Ικαρίας →</a>'
         else:
             title = f'Ikaria Panigiria {YEAR} — dates, villages & how to join | Aegean Blueprint'
             desc = f'Ikaria’s all-night village feasts explained: how a panigiri works, the etiquette, and the {YEAR} calendar — Christos Raches on 6 August, the legendary Langada on 15 August.'
             h1 = 'The panigiria of Ikaria'
             body = IKARIA_EN
-            cta = f'<a class="fx-budget" style="font-size:14px;padding:9px 18px" href="/trip-cost/?i=ikaria:4&m=aug">💶 What would a panigiri week cost? →</a> <a class="fx-budget" style="font-size:14px;padding:9px 18px" href="/island/ikaria/">🏝 Full Ikaria guide →</a>'
+            cta = f'<a class="fx-budget" style="font-size:14px;padding:9px 18px" href="/trip-cost/?i=ikaria%3A4&m=aug">💶 What would a panigiri week cost? →</a> <a class="fx-budget" style="font-size:14px;padding:9px 18px" href="/island/ikaria/">🏝 Full Ikaria guide →</a>'
         html = (page_head(title, desc, path_en, path_el, lang)
                 + header_nav(lang, (path_en if is_el else path_el))
                 + EXTRA_CSS

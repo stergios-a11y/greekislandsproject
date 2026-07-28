@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-07-27';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-07-28';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -1857,7 +1857,9 @@ async function renderIslandPage(key) {
   const costBtn = document.getElementById('detail-cost-btn');
   if (costBtn) {
     const d = Math.max(1, Math.round(island.days || 3));
-    costBtn.href = `${CURRENT_LANG === 'el' ? '/el' : ''}/trip-cost/?i=${key}:${d}`;
+    // %3A not ':' — a literal colon makes Cloudflare 301 to the encoded form,
+    // which showed up as 200+ 'Page with redirect' URLs in Search Console.
+    costBtn.href = `${CURRENT_LANG === 'el' ? '/el' : ''}/trip-cost/?i=${key}%3A${d}`;
     costBtn.textContent = t('detail.tripcost').replace('{d}', d);
   }
   
@@ -2031,7 +2033,7 @@ function clusterBlockHtml(key) {
               : `<a class="cb-row" href="${L(k)}">${inner}</a>`;
   }).join('');
 
-  const tripKeys = c.members.map(k => k + ':' + Math.max(1, Math.round((c.days || 3) / c.members.length))).join(',');
+  const tripKeys = c.members.map(k => k + '%3A' + Math.max(1, Math.round((c.days || 3) / c.members.length))).join(',');
   return `<section class="cluster-block" id="cluster-block">
       <h2 class="cb-title">${el ? 'Μέρος ' + (c.name_el_gen || cname) : 'Part of ' + cname}</h2>
       <p class="cb-why">${why}</p>
@@ -5173,7 +5175,7 @@ function renderItineraries() {
       const k = Object.keys(ISLANDS_DATA).find(k2 => ISLANDS_DATA[k2].name === b.from);
       if (k) nightsByKey[k] = b.nights;
     });
-    const costParam = islandKeys.map(k => `${k}:${nightsByKey[k] || 2}`).join(',');
+    const costParam = islandKeys.map(k => `${k}%3A${nightsByKey[k] || 2}`).join(',');
     const costHref = `${CURRENT_LANG === 'el' ? '/el' : ''}/trip-cost/?i=${costParam}`;
     const islandLinks = islandKeys.map(k =>
       `<a class="itin-island-link" href="#island/${k}" onclick="event.preventDefault();navigateTo('island','${k}')">${islandName(k)}</a>`
