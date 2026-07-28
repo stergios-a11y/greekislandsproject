@@ -177,27 +177,16 @@
         "overnight": null,
         "stops": [
           {
-            "name": "Kalogeros Beach",
-            "lat": 36.5111,
-            "lng": 22.9708,
-            "type": "beach",
-            "time": "09:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJE86ZrmwNnhQRRHw2RuT8dnY",
-            "desc": "Small pebble beach on the north coast near the village — calm, clear water, usually very quiet. Good for a morning swim before leaving.",
-            "name_el": "Παραλία Καλόγερος",
-            "desc_el": "Μικρή βότσαλη παραλία στη βόρεια ακτή κοντά στο χωριό — ήρεμα, διαυγή νερά, συνήθως πολύ ήσυχη. Καλή για πρωινό μπάνιο πριν φύγεις."
-          },
-          {
-            "name": "Panagia Beach",
-            "lat": 36.4913,
-            "lng": 22.9446,
+            "name": "Kato Nisi (Panagia) Beach",
+            "lat": 36.491604815882454,
+            "lng": 22.94482250819608,
             "type": "beach",
             "time": "11:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJa_C2MlIMnhQRgrBWm3LiGsY",
-            "desc": "Quiet sandy beach on the east side of the island. Less spectacular than Simos but calm, uncrowded and peaceful.",
-            "name_el": "Παραλία Παναγία",
-            "desc_el": "Ήσυχη αμμώδης παραλία στην ανατολική πλευρά του νησιού. Λιγότερο εντυπωσιακή από τον Σίμο αλλά ήρεμη, χωρίς πλήθη και ειρηνική.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785274426/%CF%80%CE%B1%CE%BD%CE%B1%CE%B3%CE%B9%CE%B1_cbwurg.webp",
+            "wiki": "https://www.google.com/maps/search/Kato+Nisi+Beach+Elafonisos",
+            "desc": "The long west-coast beach — Kato Nisi, known locally as Panagia. Open water, clean sand and the best sunset on the island; usually near-empty because everyone is at Simos.",
+            "name_el": "Παραλία Κάτω Νησί (Παναγία)",
+            "desc_el": "Η μακριά παραλία της δυτικής ακτής — Κάτω Νησί, γνωστή τοπικά και ως Παναγία. Ανοιχτά νερά, καθαρή άμμος και το καλύτερο ηλιοβασίλεμα του νησιού· συνήθως σχεδόν άδεια γιατί όλοι είναι στον Σίμο.",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785274426/%CE%BA%CE%B1%CF%84%CF%89_%CE%BD%CE%B7%CF%83%CE%B9_vyxwc4.jpg",
             "photo_credit": null
           },
           {
@@ -267,12 +256,14 @@
       "facilities_el": "Ελαφριές: καντίνα τη σεζόν, λίγη σκιά. Με τα πόδια από το χωριό, οπότε είναι η εύκολη επιλογή χωρίς αυτοκίνητο.",
       "desc": "The village beach, and the one you can reach on foot. Sand, calm shallow water, and far fewer people than Simos because everyone drives straight past it. Not spectacular next to Simos — very little is — but a genuinely good swim ten minutes from your room.",
       "desc_el": "Η παραλία του χωριού, και η μόνη που φτάνεις με τα πόδια. Άμμος, ήρεμα ρηχά νερά, και πολύ λιγότερος κόσμος από τον Σίμο γιατί όλοι τον προσπερνούν. Δεν είναι εντυπωσιακή δίπλα στον Σίμο — λίγα πράγματα είναι — αλλά είναι ένα πραγματικά καλό μπάνιο δέκα λεπτά από το δωμάτιό σου.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785274426/%CF%80%CE%B1%CE%BD%CE%B1%CE%B3%CE%B9%CE%B1_cbwurg.webp",
-      "photo_credit": null
+      "photo": "",
+      "photo_credit": null,
+      "lat": 36.50975613027811,
+      "lng": 22.977810391791394
     },
     {
-      "name": "Kato Nisi Beach",
-      "name_el": "Παραλία Κάτω Νησί",
+      "name": "Kato Nisi (Panagia) Beach",
+      "name_el": "Παραλία Κάτω Νησί (Παναγία)",
       "rating": 4,
       "wiki": "https://www.google.com/maps/search/Kato+Nisi+Beach+Elafonisos",
       "type": "Sand and fine shingle",
@@ -287,7 +278,9 @@
       "desc": "The long west-coast beach, and the quiet alternative to Simos. Open water, clean sand, and the sunset from here is the best on the island. Bring what you need; there is next to nothing built.",
       "desc_el": "Η μακριά παραλία της δυτικής ακτής, η ήσυχη εναλλακτική του Σίμου. Ανοιχτά νερά, καθαρή άμμος, και το ηλιοβασίλεμα από εδώ είναι το καλύτερο του νησιού. Φέρε ό,τι χρειάζεσαι· σχεδόν τίποτα δεν είναι δομημένο.",
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785274425/%CE%BA%CE%B1%CF%84%CF%89_%CE%BD%CE%B7%CF%83%CE%B9_2_zsrops.jpg",
-      "photo_credit": null
+      "photo_credit": null,
+      "lat": 36.491604815882454,
+      "lng": 22.94482250819608
     }
   ],
   "name_el": "Ελαφόνησος",
