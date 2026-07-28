@@ -3176,7 +3176,11 @@ async function initItineraryMap(days, beaches = []) {
   addThemeAwareTiles(itineraryMapInstance, { maxZoom: 16, defaultLayer: 'satellite' });
   L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(itineraryMapInstance);
 
-  const stopCoords = days.flatMap(d => d.stops.map(s => [s.lat, s.lng]));
+  // Stops without coordinates are intentional (a boat onward, a generic
+  // 'departure') — they stay in the text itinerary but get no pin, so they
+  // must be filtered out of bounds/route/marker maths.
+  const hasPin = s => s && s.lat != null && s.lng != null;
+  const stopCoords = days.flatMap(d => d.stops.filter(hasPin).map(s => [s.lat, s.lng]));
   const beachCoords = beaches.filter(b => b.lat && b.lng).map(b => [b.lat, b.lng]);
   const allCoords = [...stopCoords, ...beachCoords];
   if (allCoords.length) itineraryMapInstance.fitBounds(L.latLngBounds(allCoords), { padding: [30, 30] });
@@ -3185,7 +3189,7 @@ async function initItineraryMap(days, beaches = []) {
     itinRouteLayers[day.day] = [];
     itinMarkerLayers[day.day] = [];
 
-    const coords = day.stops.map(s => [s.lat, s.lng]);
+    const coords = day.stops.filter(hasPin).map(s => [s.lat, s.lng]);
     const rawRoute = await fetchOSRMRoute(coords);
     // Thin the dense OSRM path (~40m tolerance) before drawing so the offset
     // lines stay smooth instead of lumpy at every little road wiggle.
@@ -3200,6 +3204,7 @@ async function initItineraryMap(days, beaches = []) {
     itinRouteLayers[day.day].push(polyline);
 
     day.stops.forEach((stop, i) => {
+      if (!hasPin(stop)) return;   // no pin requested for this stop
       // Itinerary popups: pull EL fields when on /el/, fall back to EN if a
       // particular field hasn't been translated for this island yet.
       const isEl = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
