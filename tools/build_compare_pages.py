@@ -47,6 +47,11 @@ ROOT = _resolve_root()
 SITE_URL = 'https://aegeanblueprint.com'
 ASSET_V = 70
 
+from datetime import date as _date
+YEAR = _date.today().year
+TITLE_OVERRIDES = {('chania', 'rethymno'): ('Chania vs Rethymno {y}: Chania Wins on Beaches — Honest Pick', 'Χανιά ή Ρέθυμνο {y}: Τα Χανιά Κερδίζουν στις Παραλίες'), ('corfu', 'zakynthos'): ('Corfu vs Zakynthos {y}: Old Town or Better Beaches?', 'Κέρκυρα ή Ζάκυνθος {y}: Παλιά Πόλη ή Καλύτερες Παραλίες;'), ('mykonos', 'paros'): ('Mykonos vs Paros {y}: Same Nightlife, Half the Price', 'Μύκονος ή Πάρος {y}: Ίδια Νυχτερινή Ζωή, Μισή Τιμή'), ('kos', 'rhodes'): ('Kos vs Rhodes {y}: Rhodes for History, Kos for Easy', 'Κως ή Ρόδος {y}: Ρόδος για Ιστορία, Κως για Ευκολία'), ('corfu', 'rhodes'): ('Corfu vs Rhodes {y}: Two Old Towns, One Clear Winner', 'Κέρκυρα ή Ρόδος {y}: Δύο Παλιές Πόλεις, Ένας Νικητής'), ('kefalonia', 'zakynthos'): ('Kefalonia vs Zakynthos {y}: Quiet Coves or Party Coast?', 'Κεφαλονιά ή Ζάκυνθος {y}: Ήσυχοι Όρμοι ή Πάρτι;'), ('naxos', 'paros'): ('Naxos vs Paros {y}: Which Cyclade Actually Suits You?', 'Νάξος ή Πάρος {y}: Ποια Κυκλάδα σού Ταιριάζει Πραγματικά;'), ('ios', 'santorini'): ('Ios vs Santorini {y}: Caldera Views or Cheaper Nights?', 'Ίος ή Σαντορίνη {y}: Καλντέρα ή Φθηνότερες Νύχτες;'), ('milos', 'naxos'): ('Milos vs Naxos {y}: Strange Coastline or All-Rounder?', 'Μήλος ή Νάξος {y}: Παράξενη Ακτή ή Ολοκληρωμένο Νησί;')}
+DESC_OVERRIDES = {('chania', 'rethymno'): ("Chania scores 4.8 to Rethymno's 3.8 — better beaches, better old town, more to do. But Rethymno is cheaper and quieter. Which one fits your trip, honestly.", 'Τα Χανιά βαθμολογούνται 4.8 έναντι 3.8 του Ρεθύμνου — καλύτερες παραλίες, καλύτερη παλιά πόλη. Το Ρέθυμνο όμως είναι φθηνότερο και πιο ήσυχο. Ειλικρινής σύγκριση.'), ('corfu', 'zakynthos'): ('Zakynthos has the better beaches (4.8 vs 3.9); Corfu has the far better old town (4.8 vs 2.5). Scored side by side on beaches, nightlife, access and price.', 'Η Ζάκυνθος έχει καλύτερες παραλίες (4.8 έναντι 3.9)· η Κέρκυρα πολύ καλύτερη παλιά πόλη (4.8 έναντι 2.5). Αναλυτική σύγκριση με βαθμολογίες.'), ('mykonos', 'paros'): ("Both score 5.0 for nightlife and Paros beats Mykonos on beaches — at a fraction of the cost. When Mykonos is still worth it, and when it isn't.", 'Και τα δύο 5.0 στη νυχτερινή ζωή, και η Πάρος κερδίζει στις παραλίες — με πολύ μικρότερο κόστος. Πότε αξίζει η Μύκονος και πότε όχι.'), ('kos', 'rhodes'): ('Rhodes wins overall (4.4 vs 3.7) on history and old town; Kos is flatter, cheaper and easier to get around by bike. Scored on beaches, nightlife and price.', 'Η Ρόδος κερδίζει συνολικά (4.4 έναντι 3.7) σε ιστορία και παλιά πόλη· η Κως είναι πιο επίπεδη, φθηνότερη και ευκολότερη με ποδήλατο. Με βαθμολογίες.'), ('corfu', 'rhodes'): ('Two UNESCO old towns compared: Rhodes edges it overall (4.4 vs 4.2) with the stronger medieval core, Corfu is greener with better food. Scored side by side.', 'Δύο παλιές πόλεις UNESCO: η Ρόδος υπερτερεί οριακά (4.4 έναντι 4.2) με ισχυρότερο μεσαιωνικό πυρήνα, η Κέρκυρα είναι πιο πράσινη με καλύτερο φαγητό.'), ('kefalonia', 'zakynthos'): ('Dead level overall at 4.1 each — Zakynthos for nightlife and Navagio, Kefalonia for quiet coves and mountains. The honest split, scored.', 'Ισοπαλία στο 4.1 — Ζάκυνθος για νυχτερινή ζωή και Ναυάγιο, Κεφαλονιά για ήσυχους όρμους και βουνά. Η ειλικρινής διαφορά, με βαθμολογίες.')}
+
 VERDICTS = json.loads((ROOT / 'vs_verdicts.json').read_text(encoding='utf-8'))
 FAQS_PATH = ROOT / 'vs_faqs.json'
 FAQS = json.loads(FAQS_PATH.read_text(encoding='utf-8')) if FAQS_PATH.exists() else {}
@@ -234,19 +239,35 @@ def render_page(pair_key, lang):
     faqs = faq_entry.get('el' if lang == 'el' else 'en', []) or []
 
     if lang == 'en':
-        page_title = f'{name_a} vs {name_b}: Which Greek Island Should You Visit? | Aegean Blueprint'
-        page_desc = (f'{name_a} vs {name_b} — side-by-side comparison of beaches, '
-                     f'culture, nightlife, access, and price. Practical recommendations '
-                     f'for choosing the right island for your trip.')
+        _ov = TITLE_OVERRIDES.get((a, b)) or TITLE_OVERRIDES.get((b, a))
+        if _ov:
+            page_title = _ov[0].format(y=YEAR) + ' | Aegean Blueprint'
+        else:
+            page_title = f'{name_a} vs {name_b}: Which Greek Island Should You Visit? | Aegean Blueprint'
+        _od = DESC_OVERRIDES.get((a, b)) or DESC_OVERRIDES.get((b, a))
+        if _od:
+            page_desc = _od[0]
+        else:
+            page_desc = (f'{name_a} vs {name_b} — side-by-side comparison of beaches, '
+                         f'culture, nightlife, access, and price. Practical recommendations '
+                         f'for choosing the right island for your trip.')
         h1_text = f'{name_a} vs {name_b}'
         subtitle = 'Side-by-side comparison — beaches, culture, atmosphere, and the practical question of which one suits your trip.'
         verdict_heading = 'Our verdict'
         og_locale = 'en_US'
     else:
-        page_title = f'{name_a} ή {name_b}: Ποιο ελληνικό νησί να διαλέξεις; | Aegean Blueprint'
-        page_desc = (f'{name_a} ή {name_b} — αναλυτική σύγκριση παραλιών, πολιτισμού, '
-                     f'νυχτερινής ζωής, πρόσβασης και τιμών. Πρακτικές συμβουλές για '
-                     f'να επιλέξεις το σωστό νησί για το ταξίδι σου.')
+        _ov = TITLE_OVERRIDES.get((a, b)) or TITLE_OVERRIDES.get((b, a))
+        if _ov:
+            page_title = _ov[1].format(y=YEAR) + ' | Aegean Blueprint'
+        else:
+            page_title = f'{name_a} ή {name_b}: Ποιο ελληνικό νησί να διαλέξεις; | Aegean Blueprint'
+        _od = DESC_OVERRIDES.get((a, b)) or DESC_OVERRIDES.get((b, a))
+        if _od:
+            page_desc = _od[1]
+        else:
+            page_desc = (f'{name_a} ή {name_b} — αναλυτική σύγκριση παραλιών, πολιτισμού, '
+                         f'νυχτερινής ζωής, πρόσβασης και τιμών. Πρακτικές συμβουλές για '
+                         f'να επιλέξεις το σωστό νησί για το ταξίδι σου.')
         h1_text = f'{name_a} ή {name_b}'
         subtitle = 'Λεπτομερής σύγκριση — παραλίες, πολιτισμός, ατμόσφαιρα, και η πρακτική επιλογή του νησιού που ταιριάζει στο ταξίδι σου.'
         verdict_heading = 'Η ετυμηγορία μας'
@@ -406,6 +427,8 @@ def render_page(pair_key, lang):
 <meta name="twitter:title" content="{esc(page_title)}">
 <meta name="twitter:description" content="{esc(page_desc)}">
 <meta name="twitter:image" content="{og_image}">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-FMFWLRM2J9');</script>
 <script>if(localStorage.getItem("darkMode")==="true"){{document.documentElement.classList.add("dark");}}</script>
 <link rel="stylesheet" href="/style.css?v={ASSET_V}">
 <style>{page_css}</style>
@@ -804,6 +827,8 @@ def render_hub_page(lang, valid_pairs):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-FMFWLRM2J9');</script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css?v={ASSET_V}">
 <style>{page_css}</style>

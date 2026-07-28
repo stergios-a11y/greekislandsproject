@@ -282,6 +282,8 @@ def render_page(lang, meta, data):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-FMFWLRM2J9');</script>
 <title>{t['title']}</title>
 <meta name="description" content="{t['desc']}">
 <meta name="theme-color" content="#0B8FAC">

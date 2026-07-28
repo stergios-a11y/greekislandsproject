@@ -104,6 +104,8 @@ def page_head(title, desc, path_en, path_el, lang):
 <meta property="og:url" content="{url}">
 <meta property="og:type" content="website">
 <link rel="icon" href="/logo-hero.svg" type="image/svg+xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-FMFWLRM2J9');</script>
 <link rel="stylesheet" href="/style.css?v={STYLE_V}">
 {TP_SCRIPT}
 </head>'''
