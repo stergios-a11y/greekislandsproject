@@ -221,7 +221,12 @@ def load_island_meta():
 
 ISLAND_META = load_island_meta()
 ISLAND_CLUSTERS, CLUSTER_OF = load_island_clusters()
-TITLE_OVERRIDES = {'ammouliani': ('Ammouliani {year} — Beaches, Drenia Islets & Mt Athos Views', 'Αμμουλιανή {year} — Παραλίες, Δρένια & Θέα στον Άθω'), 'meganisi': ('Meganisi {year} — Beaches, Getting There from Lefkada, Day Plan', 'Μεγανήσι {year} — Παραλίες, Πώς Πας από Λευκάδα, Πρόγραμμα'), 'kastos': ('Kastos {year} — Tiny, Car-Free: Is It Worth the Trip?', 'Καστός {year} — Μικροσκοπικός, Χωρίς Αυτοκίνητα: Αξίζει;'), 'kalamos': ('Kalamos {year} — Ionian Hideaway: Beaches, Boats, Honest Take', 'Κάλαμος {year} — Κρυφό Ιόνιο: Παραλίες, Βάρκες, Ειλικρινά'), 'othonoi': ("Othonoi {year} — Greece's Westernmost Isle: Caves & Beaches", 'Οθωνοί {year} — Το Δυτικότερο Νησί: Σπηλιές & Παραλίες'), 'pserimos': ('Pserimos {year} — One Beach, 84 Locals: Day Trip Guide', 'Ψέριμος {year} — Μια Παραλία, 84 Κάτοικοι: Οδηγός Εκδρομής'), 'mathraki': ('Mathraki {year} — 330 People, One Beach, No Crowds', 'Μαθράκι {year} — 330 Κάτοικοι, Μια Παραλία, Καθόλου Κόσμος'), 'telendos': ("Telendos {year} — Car-Free Rock off Kalymnos: What's There", 'Τέλενδος {year} — Βράχος Χωρίς Αυτοκίνητα: Τι Έχει'), 'arki': ('Arki {year} — 44 Residents, No Cars: Aegean at Its Emptiest', 'Αρκιοί {year} — 44 Κάτοικοι, Χωρίς Αυτοκίνητα: Άδειο Αιγαίο')}
+TITLE_OVERRIDES = {'ammouliani': ('Ammouliani {year} — Beaches, Drenia Islets & Mt Athos Views', 'Αμμουλιανή {year} — Παραλίες, Δρένια & Θέα στον Άθω'), 'meganisi': ('Meganisi {year} — Beaches, Getting There from Lefkada, Day Plan', 'Μεγανήσι {year} — Παραλίες, Πώς Πας από Λευκάδα, Πρόγραμμα'), 'kastos': ('Kastos {year} — Tiny, Car-Free: Is It Worth the Trip?', 'Καστός {year} — Μικροσκοπικός, Χωρίς Αυτοκίνητα: Αξίζει;'), 'kalamos': ('Kalamos {year} — Ionian Hideaway: Beaches, Boats, Honest Take', 'Κάλαμος {year} — Κρυφό Ιόνιο: Παραλίες, Βάρκες, Ειλικρινά'), 'othonoi': ("Othonoi {year} — Greece's Westernmost Isle: Caves & Beaches", 'Οθωνοί {year} — Το Δυτικότερο Νησί: Σπηλιές & Παραλίες'), 'pserimos': ('Pserimos {year} — One Beach, 84 Locals: Day Trip Guide', 'Ψέριμος {year} — Μια Παραλία, 84 Κάτοικοι: Οδηγός Εκδρομής'), 'mathraki': ('Mathraki {year} — 330 People, One Beach, No Crowds', 'Μαθράκι {year} — 330 Κάτοικοι, Μια Παραλία, Καθόλου Κόσμος'), 'telendos': ("Telendos {year} — Car-Free Rock off Kalymnos: What's There", 'Τέλενδος {year} — Βράχος Χωρίς Αυτοκίνητα: Τι Έχει'), 'arki': ('Arki {year} — 44 Residents, No Cars: Aegean at Its Emptiest', 'Αρκιοί {year} — 44 Κάτοικοι, Χωρίς Αυτοκίνητα: Άδειο Αιγαίο'),
+    # GSC: the demand here is beach-name led — 'koufonisia beaches' (pos 53),
+    # 'pori koufonisia', 'fanos beach koufonisia', 'italida beach koufonisia'.
+    # Naming the three beaches in the title matches the actual queries.
+    'koufonisia': ('Koufonisia Beaches {year} — Pori, Italida & Fanos, Ranked',
+                   'Παραλίες Κουφονησίων {year} — Πόρι, Ιταλίδα, Φανός με Βαθμολογία')}
 
 import math
 
@@ -658,6 +663,31 @@ def find_hero_image(data):
     return None, None
 
 
+def content_img_640(url):
+    """Mid-size rendition for inline content photos (stops, beaches)."""
+    if not url:
+        return url
+    if 'res.cloudinary.com' in url:
+        return re.sub(r'/upload/(?:[^/]*/)?v(\d+)/',
+                      r'/upload/w_640,h_420,c_fill,q_auto,f_auto/v\1/', url)
+    if '/thumb/' in url:
+        return re.sub(r'/\d+px-', '/640px-', url)
+    m = re.match(r'^(https?://upload\.wikimedia\.org/wikipedia/[a-z]+)/([0-9a-f])/([0-9a-f]{2})/([^/]+)$', url)
+    if m:
+        return f'{m.group(1)}/thumb/{m.group(2)}/{m.group(3)}/{m.group(4)}/640px-{m.group(4)}'
+    return url
+
+
+def seo_photo_html(url, alt, cls='seo-photo'):
+    """One inline content photo for the crawled page. Explicit dimensions keep
+    CLS at zero; lazy+async keep it off the critical path. Returns '' when the
+    item has no photo, so islands mid-way through a photo pass stay valid."""
+    if not url:
+        return ''
+    return (f'<img class="{cls}" src="{esc(content_img_640(url))}" alt="{esc(alt)}" '
+            f'width="640" height="420" loading="lazy" decoding="async">')
+
+
 def hero_src_1280(url):
     """Large hero rendition — mirrors heroSrc() in script.js exactly, so the
     static first-paint image is the same file the SPA hero uses (cache hit,
@@ -1044,11 +1074,22 @@ def build_title(key, data, meta, lang='en'):
             return f"{name} Travel Guide {year} — Beaches Ranked, {days}-Day Itinerary | Aegean Blueprint"
         return f"{name} Travel Guide {year} — Honest Scores, What's Worth It | Aegean Blueprint"
 
+# Bespoke meta descriptions where the generic template misses the query intent.
+DESC_OVERRIDES = {
+    'koufonisia': (
+        'Every Koufonisia beach rated: Pori, Italida, Fanos, Finikas, Ammos and the Pisina rock pool. Which are worth the walk, which get crowded, and a 3-day plan.',
+        'Κάθε παραλία των Κουφονησίων με βαθμολογία: Πόρι, Ιταλίδα, Φανός, Φοινίκας, Άμμος και η Πισίνα. Ποιες αξίζουν, ποιες γεμίζουν, και πρόγραμμα 3 ημερών.'),
+}
+
+
 def build_description(key, data, meta, lang='en'):
     """Meta description: the island's own first intro sentence (relevance,
     query-term bolding) + a punchy promise of what the page delivers (CTR).
     Target <= 160 chars."""
     TARGET_MAX = 160
+    _od = DESC_OVERRIDES.get(key)
+    if _od:
+        return _od[1] if lang == 'el' else _od[0]
     days = int(meta.get('days') or 0) if meta.get('days') else 0
     if lang == 'el':
         hook = (f"Παραλίες με βαθμολογία, πρόγραμμα {days} ημερών, πού να φας — ειλικρινά, χωρίς φλυαρίες."
@@ -1416,7 +1457,8 @@ def render_body(key, data, meta, lang='en'):
                 stime = esc(s.get('time', ''))
                 drive = pick(s, 'drive', lang)
                 drive_html = f'<br><span class="seo-stop-drive">🚗 {esc(drive)}</span>' if drive else ''
-                stop_items.append(f'<li><strong>{stime} · {sname}</strong>{drive_html}<br>{sdesc}</li>')
+                simg = seo_photo_html(s.get('photo'), pick(s, 'name', lang))
+                stop_items.append(f'<li><strong>{stime} · {sname}</strong>{drive_html}<br>{sdesc}{simg}</li>')
             # Meal-timing cues at each meal's slot in the route
             _foods = day.get('food')
             _foods = _foods if isinstance(_foods, list) else ([_foods] if _foods else [])
@@ -1509,9 +1551,11 @@ def render_body(key, data, meta, lang='en'):
             bfacing = esc(interpret_facing(pick(b, 'facing', lang), lang,
                                             ionian=(meta.get('group') == 'Ionian')))
             bfac = esc(pick(b, 'facilities', lang))
+            bimg = seo_photo_html(b.get('photo'), pick(b, 'name', lang))
             beach_blocks.append(f'''
 <article class="seo-beach">
   <h3>{bname}</h3>
+  {bimg}
   <p>{bdesc}</p>
   <dl>
     <dt>{'Type' if lang=='en' else 'Τύπος'}</dt><dd>{btype}</dd>
@@ -1828,6 +1872,8 @@ def render_page(key, data, meta, lang='en'):
   .seo-day {{ margin-bottom: 24px; }}
   .seo-day h3 {{ font-size: var(--text-sub, 18px); margin: 0 0 4px; }}
   .seo-day-meta {{ color: var(--ink-3, #555); font-size: var(--text-meta, 13px); margin: 0 0 10px; }}
+  .seo-photo {{ display: block; width: 100%; max-width: 420px; height: auto;
+    aspect-ratio: 640 / 420; object-fit: cover; border-radius: 10px; margin: 8px 0 4px; }}
   .seo-stops {{ padding-left: 20px; }}
   .seo-stops li {{ margin-bottom: 10px; font-size: var(--text-body, 16px); }}
   .seo-beach {{
