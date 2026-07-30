@@ -8,4 +8,10 @@ Allow: /
 Disallow: /trip-cost/?i=
 Disallow: /el/trip-cost/?i=
 
+# Cloudflare's email-obfuscation rewrites the mailto: on /privacy/ into a
+# /cdn-cgi/ decoder link. It isn't a page — Bing's crawler was following it
+# and logging a 4xx. Keep the obfuscation (it protects the address), just
+# stop crawlers walking into it.
+Disallow: /cdn-cgi/
+
 Sitemap: https://aegeanblueprint.com/sitemap.xml

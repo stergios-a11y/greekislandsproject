@@ -224,12 +224,17 @@ def build_month_hubs(fests, names):
             path_en, path_el = f'/festivals/{slug}/', f'/el/festivals/{slug}/'
             n = len(flist)
             if is_el:
-                title = f'Πανηγύρια & γιορτές στα νησιά {el_acc} {YEAR} — {n} εκδηλώσεις | Aegean Blueprint'
-                desc = f'Όλα τα πανηγύρια και οι γιορτές στα ελληνικά νησιά {el_acc}: ημερομηνίες, νησί και τι να περιμένεις. {n} εκδηλώσεις, ενημερωμένες για το {YEAR}.'
+                # Bing flagged these at 79-84 chars; trimmed, and '1 εκδηλώσεις'
+                # was plain wrong on the single-event months.
+                _ev_el = 'εκδήλωση' if n == 1 else 'εκδηλώσεις'
+                _upd_el = 'ενημερωμένη' if n == 1 else 'ενημερωμένες'
+                title = f'Γιορτές νησιών {el_acc} {YEAR} — {n} {_ev_el} | Aegean Blueprint'
+                desc = f'Όλα τα πανηγύρια και οι γιορτές στα ελληνικά νησιά {el_acc}: ημερομηνίες, νησί και τι να περιμένεις. {n} {_ev_el}, {_upd_el} για το {YEAR}.'
                 h1 = f'Πανηγύρια & γιορτές {el_acc}'
                 intro = f'{n} γιορτές και πανηγύρια στα νησιά {el_acc} — με ημερομηνίες και σύνδεσμο για τον πλήρη οδηγό κάθε νησιού. Οι κινητές γιορτές είναι υπολογισμένες για φέτος.'
             else:
-                title = f'Greek Island Festivals in {en} {YEAR} — {n} events & dates | Aegean Blueprint'
+                _ev_en = 'event' if n == 1 else 'events'
+                title = f'Greek Island Festivals in {en} {YEAR} — {n} {_ev_en} & dates | Aegean Blueprint'
                 desc = f'Every island festival and panigiri in {en}: dates, which island, and what to expect. {n} events across the Greek islands, updated for {YEAR}.'
                 h1 = f'Greek island festivals in {en}'
                 intro = f'{n} festivals and panigiria across the islands in {en} — with dates and a link to each island’s full guide. Movable feasts are pinned to this year’s dates.'
