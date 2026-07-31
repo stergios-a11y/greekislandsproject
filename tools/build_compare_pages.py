@@ -209,6 +209,228 @@ DESC_OVERRIDES.update({
         'παραλίες. Η Σίφνος κερδίζει σε φαγητό, περπάτημα και τιμή (3.5 έναντι 2.8).'),
 })
 
+# --- enrichment batch 2 -----------------------------------------------------
+# chania/heraklion also FIXES a factually wrong generic title: the template was
+# emitting "Crete (Chania) vs Crete (Heraklion): Which Greek Island Should You
+# Visit?" — they are two ends of the same island.
+TITLE_OVERRIDES.update({
+    ('chania', 'heraklion'): (
+        'Chania vs Heraklion {y}: Same Island, Opposite Trips',
+        'Χανιά ή Ηράκλειο {y}: Ίδιο Νησί, Αντίθετα Ταξίδια'),
+    ('antiparos', 'paros'): (
+        'Antiparos vs Paros {y}: Seven Minutes, Two Different Islands',
+        'Αντίπαρος ή Πάρος {y}: Επτά Λεπτά, Δύο Άλλα Νησιά'),
+    ('folegandros', 'milos'): (
+        'Folegandros vs Milos {y}: Stillness or Spectacle?',
+        'Φολέγανδρος ή Μήλος {y}: Ησυχία ή Θέαμα;'),
+})
+DESC_OVERRIDES.update({
+    ('chania', 'heraklion'): (
+        'Two ends of Crete, not two islands. Chania scores 4.8 — the highest here — on beaches '
+        '5.0 vs 3.5; Heraklion holds the only perfect 5.0 culture score, for Knossos and the museum.',
+        'Δύο άκρα της Κρήτης, όχι δύο νησιά. Τα Χανιά βαθμολογούνται 4.8 — το υψηλότερο εδώ — με '
+        'παραλίες 5.0 έναντι 3.5· το Ηράκλειο κρατά το μόνο άριστο 5.0 στον πολιτισμό.'),
+    ('antiparos', 'paros'): (
+        'Seven minutes apart, 4.1 vs 4.0, and completely different in scale. Paros has perfect 5.0 '
+        'beaches and nightlife; Antiparos is one Chora and two days. Neither is the cheap one.',
+        'Επτά λεπτά μακριά, 4.1 έναντι 4.0, και τελείως διαφορετικής κλίμακας. Η Πάρος έχει άριστα '
+        '5.0 σε παραλίες και νυχτερινή ζωή· η Αντίπαρος μια Χώρα και δύο μέρες.'),
+    ('folegandros', 'milos'): (
+        "Milos wins 4.7 to 4.0 on a perfect 5.0 beach score — Sarakiniko, Kleftiko, 70 beaches. "
+        'Folegandros has the better chora and the stillness, but costs the same as Paros.',
+        'Η Μήλος κερδίζει 4.7 έναντι 4.0 με άριστα 5.0 στις παραλίες — Σαρακήνικο, Κλέφτικο, 70 '
+        'παραλίες. Η Φολέγανδρος έχει καλύτερη χώρα και ησυχία, αλλά κοστίζει όσο η Πάρος.'),
+})
+
+# --- title/description pass: off the generic template ------------------------
+# 26 of these had full long-form verdicts but were still emitting
+# "X vs Y: Which Greek Island Should You Visit?"; 4 more were rendering the
+# awkward "Crete (Heraklion) vs ...". Each title now states the page's verdict.
+TITLE_OVERRIDES.update({
+    ('corfu', 'kefalonia'): (
+        'Corfu vs Kefalonia {y}: Culture or Coastline?',
+        'Κέρκυρα ή Κεφαλονιά {y}: Πολιτισμός ή Ακτογραμμή;'),
+    ('hydra', 'spetses'): (
+        'Hydra vs Spetses {y}: No Cars or More Beach?',
+        'Ύδρα ή Σπέτσες {y}: Χωρίς Αυτοκίνητα ή Πιο Παραλία;'),
+    ('aegina', 'hydra'): (
+        'Aegina vs Hydra {y}: Working Island or Film Set?',
+        'Αίγινα ή Ύδρα {y}: Ζωντανό Νησί ή Σκηνικό;'),
+    ('ios', 'paros'): (
+        'Ios vs Paros {y}: Party Island or All-Rounder?',
+        'Ίος ή Πάρος {y}: Νησί για Πάρτι ή Ολοκληρωμένο;'),
+    ('paros', 'sifnos'): (
+        'Paros vs Sifnos {y}: Beaches and Bars or Dinner?',
+        'Πάρος ή Σίφνος {y}: Παραλίες και Μπαρ ή Δείπνο;'),
+    ('kea', 'kythnos'): (
+        'Kea vs Kythnos {y}: Closer to Athens or Better Beaches?',
+        'Κέα ή Κύθνος {y}: Πιο Κοντά στην Αθήνα ή Καλύτερες Παραλίες;'),
+    ('aegina', 'agistri'): (
+        'Aegina vs Agistri {y}: Temple and Town or Just Swimming?',
+        'Αίγινα ή Αγκίστρι {y}: Ναός και Πόλη ή Μόνο Μπάνιο;'),
+    ('mykonos', 'rhodes'): (
+        'Mykonos vs Rhodes {y}: Nightlife or a Medieval City?',
+        'Μύκονος ή Ρόδος {y}: Νυχτερινή Ζωή ή Μεσαιωνική Πόλη;'),
+    ('milos', 'santorini'): (
+        'Milos vs Santorini {y}: Beaches or the View?',
+        'Μήλος ή Σαντορίνη {y}: Παραλίες ή η Θέα;'),
+    ('ios', 'mykonos'): (
+        'Ios vs Mykonos {y}: Same 5.0 Nightlife, Far Less Money',
+        'Ίος ή Μύκονος {y}: Ίδια Νυχτερινή Ζωή, Πολύ Λιγότερα Λεφτά'),
+    ('chania', 'corfu'): (
+        'Chania vs Corfu {y}: The Beaches Decide It',
+        'Χανιά ή Κέρκυρα {y}: Οι Παραλίες Κρίνουν'),
+    ('paros', 'santorini'): (
+        'Paros vs Santorini {y}: Beaches or the Caldera?',
+        'Πάρος ή Σαντορίνη {y}: Παραλίες ή Καλντέρα;'),
+    ('rhodes', 'santorini'): (
+        'Rhodes vs Santorini {y}: A Week or Three Nights?',
+        'Ρόδος ή Σαντορίνη {y}: Μια Εβδομάδα ή Τρεις Νύχτες;'),
+    ('chania', 'santorini'): (
+        'Chania vs Santorini {y}: Both 4.8, Nothing Alike',
+        'Χανιά ή Σαντορίνη {y}: Και τα Δύο 4.8, Τίποτα Κοινό'),
+    ('amorgos', 'astypalaia'): (
+        'Amorgos vs Astypalaia {y}: Cliffs or Castle?',
+        'Αμοργός ή Αστυπάλαια {y}: Βράχια ή Κάστρο;'),
+    ('donousa', 'schoinoussa'): (
+        'Donousa vs Schoinoussa {y}: Sisters, Not Rivals',
+        'Δονούσα ή Σχοινούσα {y}: Αδελφές, Όχι Αντίπαλες'),
+    ('mykonos', 'santorini'): (
+        'Mykonos vs Santorini {y}: Beaches or the Postcard?',
+        'Μύκονος ή Σαντορίνη {y}: Παραλίες ή Καρτ Ποστάλ;'),
+    ('chios', 'lesvos'): (
+        'Chios vs Lesvos {y}: Mastic Villages or Sheer Scale?',
+        'Χίος ή Λέσβος {y}: Μαστιχοχώρια ή Καθαρή Κλίμακα;'),
+    ('folegandros', 'santorini'): (
+        'Folegandros vs Santorini {y}: Same Cliffs, No Crowds',
+        'Φολέγανδρος ή Σαντορίνη {y}: Ίδιοι Βράχοι, Χωρίς Κόσμο'),
+    ('samothrace', 'thasos'): (
+        'Samothrace vs Thasos {y}: Wild or Easy?',
+        'Σαμοθράκη ή Θάσος {y}: Άγρια ή Εύκολη;'),
+    ('naxos', 'santorini'): (
+        'Naxos vs Santorini {y}: Better Beaches, Far Cheaper',
+        'Νάξος ή Σαντορίνη {y}: Καλύτερες Παραλίες, Πολύ Φθηνότερα'),
+    ('koufonisia', 'schoinoussa'): (
+        'Koufonisia vs Schoinoussa {y}: A Perfect 5.0 for Beaches',
+        'Κουφονήσια ή Σχοινούσα {y}: Άριστα 5.0 στις Παραλίες'),
+    ('iraklia', 'schoinoussa'): (
+        'Iraklia vs Schoinoussa {y}: The Quietest Two, Compared',
+        'Ηρακλειά ή Σχοινούσα {y}: Οι Δύο Πιο Ήσυχες, Συγκριτικά'),
+    ('iraklia', 'koufonisia'): (
+        'Iraklia vs Koufonisia {y}: Same Ferry, Opposite Islands',
+        'Ηρακλειά ή Κουφονήσια {y}: Ίδιο Πλοίο, Αντίθετα Νησιά'),
+    ('donousa', 'koufonisia'): (
+        'Donousa vs Koufonisia {y}: Isolation or Quality?',
+        'Δονούσα ή Κουφονήσια {y}: Απομόνωση ή Ποιότητα;'),
+    ('donousa', 'iraklia'): (
+        'Donousa vs Iraklia {y}: The Two Hardest to Reach',
+        'Δονούσα ή Ηρακλειά {y}: Οι Δύο Πιο Δύσκολες στην Πρόσβαση'),
+    ('heraklion', 'rhodes'): (
+        'Heraklion vs Rhodes {y}: Two Perfect 5.0s for History',
+        'Ηράκλειο ή Ρόδος {y}: Δύο Άριστα 5.0 στην Ιστορία'),
+    ('chania', 'rhodes'): (
+        'Chania vs Rhodes {y}: Beaches or the Old Town?',
+        'Χανιά ή Ρόδος {y}: Παραλίες ή Παλιά Πόλη;'),
+    ('corfu', 'heraklion'): (
+        'Corfu vs Heraklion {y}: Venetian Town or Knossos?',
+        'Κέρκυρα ή Ηράκλειο {y}: Βενετσιάνικη Πόλη ή Κνωσός;'),
+    ('heraklion', 'santorini'): (
+        'Heraklion vs Santorini {y}: Knossos or the Caldera?',
+        'Ηράκλειο ή Σαντορίνη {y}: Κνωσός ή Καλντέρα;'),
+})
+DESC_OVERRIDES.update({
+    ('corfu', 'kefalonia'): (
+        'Corfu takes it 4.2 to 4.1 on its UNESCO Old Town (culture 4.8 vs 3.2); Kefalonia has the better beaches (4.7 vs 3.9) and Myrtos. Scored side by side on price, access and nightlife.',
+        'Η Κέρκυρα κερδίζει 4.2 έναντι 4.1 με την Παλιά Πόλη UNESCO (πολιτισμός 4.8 έναντι 3.2)· η Κεφαλονιά έχει καλύτερες παραλίες (4.7 έναντι 3.9) και τον Μύρτο. Αναλυτική σύγκριση.'),
+    ('hydra', 'spetses'): (
+        "Hydra wins 4.0 to 3.7 on atmosphere and the total absence of cars, but it's the most expensive island here at 1.8. Spetses has better beaches (2.8 vs 2.2) and suits a longer stay.",
+        'Η Ύδρα κερδίζει 4.0 έναντι 3.7 στην ατμόσφαιρα και στην παντελή απουσία αυτοκινήτων, αλλά είναι το ακριβότερο νησί εδώ με 1.8. Οι Σπέτσες έχουν καλύτερες παραλίες και θέλουν χρόνο.'),
+    ('aegina', 'hydra'): (
+        'Hydra scores 4.0 to Aegina’s 3.3 but costs nearly twice as much (1.8 vs 3.5) and has worse beaches. Aegina is a working island of 13,000 with the Temple of Aphaia. Honest comparison.',
+        'Η Ύδρα βαθμολογείται 4.0 έναντι 3.3 της Αίγινας αλλά κοστίζει σχεδόν διπλά (1.8 έναντι 3.5) και έχει χειρότερες παραλίες. Η Αίγινα είναι ζωντανό νησί 13.000 κατοίκων με τον Ναό της Αφαίας.'),
+    ('ios', 'paros'): (
+        'Both score a perfect 5.0 for nightlife. Paros wins overall 4.1 to 3.9 on beaches, ferries and variety; Ios is cheaper (3.5 vs 2.2) and more singular. When each one is the right call.',
+        'Και τα δύο έχουν άριστα 5.0 στη νυχτερινή ζωή. Η Πάρος κερδίζει 4.1 έναντι 3.9 σε παραλίες, πλοία και ποικιλία· η Ίος είναι φθηνότερη (3.5 έναντι 2.2) και πιο μονοδιάστατη.'),
+    ('paros', 'sifnos'): (
+        'Paros wins 4.1 to 3.9 with perfect 5.0 scores for beaches and nightlife; Sifnos has the best food in the Cyclades, 100 km of marked paths, and costs less (3.5 vs 2.2).',
+        'Η Πάρος κερδίζει 4.1 έναντι 3.9 με άριστα 5.0 σε παραλίες και νυχτερινή ζωή· η Σίφνος έχει το καλύτερο φαγητό των Κυκλάδων, 100 χλμ. μονοπάτια, και κοστίζει λιγότερο (3.5 έναντι 2.2).'),
+    ('kea', 'kythnos'): (
+        'Dead level at 3.5 each. Kea is closer to Athens (access 4.5 vs 3.5) with the ancient sites; Kythnos has better beaches (4.2 vs 3.8), hot springs and lower prices. The honest split.',
+        'Ισοπαλία στο 3.5. Η Κέα είναι πιο κοντά στην Αθήνα (πρόσβαση 4.5 έναντι 3.5) με τους αρχαίους χώρους· η Κύθνος έχει καλύτερες παραλίες (4.2 έναντι 3.8), ιαματικές πηγές και χαμηλότερες τιμές.'),
+    ('aegina', 'agistri'): (
+        'Agistri edges it 3.4 to 3.3 on beaches (3.5 vs 2.5) and needs no car at all. Aegina has the Temple of Aphaia, Perdika’s fish tavernas and the easiest ferries in Greece.',
+        'Το Αγκίστρι υπερτερεί 3.4 έναντι 3.3 στις παραλίες (3.5 έναντι 2.5) και δεν θέλει καθόλου αυτοκίνητο. Η Αίγινα έχει τον Ναό της Αφαίας, την Πέρδικα και τα ευκολότερα πλοία της Ελλάδας.'),
+    ('mykonos', 'rhodes'): (
+        'Rhodes edges it 4.4 to 4.3 and costs a fraction as much — affordability 3.5 against Mykonos’s 1.0, the lowest we score. Mykonos has 5.0 nightlife; Rhodes has a 5.0 for history.',
+        'Η Ρόδος υπερτερεί 4.4 έναντι 4.3 και κοστίζει πολύ λιγότερο — προσιτότητα 3.5 έναντι 1.0 της Μυκόνου, η χαμηλότερη που δίνουμε. Η Μύκονος έχει 5.0 νυχτερινή ζωή· η Ρόδος 5.0 στην ιστορία.'),
+    ('milos', 'santorini'): (
+        'Santorini wins 4.8 to 4.7 on the caldera and a perfect 5.0 for culture; Milos has the only perfect 5.0 beach score on this site against Santorini’s 3.2. Going for beaches? Milos.',
+        'Η Σαντορίνη κερδίζει 4.8 έναντι 4.7 με την καλντέρα και άριστα 5.0 στον πολιτισμό· η Μήλος έχει τη μόνη άριστη βαθμολογία 5.0 παραλιών εδώ έναντι 3.2. Για παραλίες; Μήλος.'),
+    ('ios', 'mykonos'): (
+        'Both score a perfect 5.0 for nightlife, but Ios rates 3.5 for affordability against Mykonos’s 1.0 — the lowest on this site. Ios also has better beaches (4.6 vs 4.3).',
+        'Και τα δύο άριστα 5.0 στη νυχτερινή ζωή, αλλά η Ίος βαθμολογείται 3.5 στην προσιτότητα έναντι 1.0 της Μυκόνου — η χαμηλότερη εδώ. Η Ίος έχει και καλύτερες παραλίες (4.6 έναντι 4.3).'),
+    ('chania', 'corfu'): (
+        'Chania scores 4.8 — the highest on this site — to Corfu’s 4.2, on beaches 5.0 against 3.9. Corfu wins culture by a hair (4.8 vs 4.7). Two Venetian towns, one clear swimmer.',
+        'Τα Χανιά βαθμολογούνται 4.8 — το υψηλότερο εδώ — έναντι 4.2 της Κέρκυρας, με παραλίες 5.0 έναντι 3.9. Η Κέρκυρα κερδίζει οριακά στον πολιτισμό (4.8 έναντι 4.7).'),
+    ('paros', 'santorini'): (
+        'Santorini wins 4.8 to 4.1 on the caldera and culture 5.0, but Paros has perfect 5.0 beaches against Santorini’s 3.2 and costs less. Three nights there or a week here.',
+        'Η Σαντορίνη κερδίζει 4.8 έναντι 4.1 με την καλντέρα και πολιτισμό 5.0, αλλά η Πάρος έχει άριστα 5.0 παραλίες έναντι 3.2 και κοστίζει λιγότερο. Τρεις νύχτες εκεί ή μια εβδομάδα εδώ.'),
+    ('rhodes', 'santorini'): (
+        'Both hold a perfect 5.0 for culture. Santorini takes it 4.8 to 4.4 on the caldera; Rhodes has far better beaches (4.2 vs 3.2), costs much less (3.5 vs 1.0) and fills a week.',
+        'Και τα δύο κρατούν άριστα 5.0 στον πολιτισμό. Η Σαντορίνη κερδίζει 4.8 έναντι 4.4 με την καλντέρα· η Ρόδος έχει πολύ καλύτερες παραλίες (4.2 έναντι 3.2) και κοστίζει πολύ λιγότερο.'),
+    ('chania', 'santorini'): (
+        'A genuine tie at 4.8 each, and they could not be less alike: Chania has perfect 5.0 beaches against Santorini’s 3.2; Santorini has 5.0 culture and the caldera. Scored side by side.',
+        'Πραγματική ισοπαλία στο 4.8, και δεν θα μπορούσαν να διαφέρουν περισσότερο: τα Χανιά έχουν άριστα 5.0 παραλίες έναντι 3.2· η Σαντορίνη 5.0 πολιτισμό και την καλντέρα.'),
+    ('amorgos', 'astypalaia'): (
+        'Amorgos wins 4.0 to 3.8 on the Hozoviotissa monastery and its cliffs; Astypalaia has the better castle and culture (4.2 vs 3.8). Identical 4.0 beaches and 2.5 access.',
+        'Η Αμοργός κερδίζει 4.0 έναντι 3.8 με τη Χοζοβιώτισσα και τα βράχια της· η Αστυπάλαια έχει καλύτερο κάστρο και πολιτισμό (4.2 έναντι 3.8). Ίδιες παραλίες 4.0 και πρόσβαση 2.5.'),
+    ('donousa', 'schoinoussa'): (
+        'These two score identically — 3.4 each, 4.5 beaches each — so this is not a rivalry. What actually differs is isolation, ferries and what there is to do after swimming.',
+        'Αυτά τα δύο βαθμολογούνται ίδια — 3.4 έκαστο, 4.5 στις παραλίες — οπότε δεν είναι αντιπαλότητα. Διαφέρουν στην απομόνωση, στα πλοία και στο τι κάνεις μετά το μπάνιο.'),
+    ('mykonos', 'santorini'): (
+        'Santorini wins 4.8 to 4.3 on culture 5.0 and the caldera; Mykonos has much better beaches (4.3 vs 3.2) and 5.0 nightlife. Both score 1.0 for affordability — the lowest we give.',
+        'Η Σαντορίνη κερδίζει 4.8 έναντι 4.3 με πολιτισμό 5.0 και την καλντέρα· η Μύκονος έχει πολύ καλύτερες παραλίες (4.3 έναντι 3.2) και 5.0 νυχτερινή ζωή. Και τα δύο 1.0 στην προσιτότητα.'),
+    ('chios', 'lesvos'): (
+        'Both score 4.7 for culture. Lesvos wins overall 4.0 to 3.6 on sheer scale, beaches and the petrified forest; Chios has the mastic villages and Nea Moni, and is slightly cheaper.',
+        'Και τα δύο 4.7 στον πολιτισμό. Η Λέσβος κερδίζει 4.0 έναντι 3.6 στην κλίμακα, τις παραλίες και το απολιθωμένο δάσος· η Χίος έχει τα Μαστιχοχώρια και τη Νέα Μονή, και είναι λίγο φθηνότερη.'),
+    ('folegandros', 'santorini'): (
+        'Santorini wins 4.8 to 4.0 on the caldera and culture 5.0. Folegandros has a cliff-edge chora nearly as dramatic, 765 residents and no crowds — but the same 2.2-vs-1.0 price bracket.',
+        'Η Σαντορίνη κερδίζει 4.8 έναντι 4.0 με την καλντέρα και πολιτισμό 5.0. Η Φολέγανδρος έχει χώρα σε βράχο σχεδόν εξίσου εντυπωσιακή, 765 κατοίκους και μηδέν κόσμο.'),
+    ('samothrace', 'thasos'): (
+        'Thasos wins 3.7 to 3.2 on beaches (4.2 vs 3.0) and access — Samothrace scores 1.8, the hardest to reach here. Samothrace has Mt Saos, the waterfalls and the Sanctuary of the Gods.',
+        'Η Θάσος κερδίζει 3.7 έναντι 3.2 στις παραλίες (4.2 έναντι 3.0) και στην πρόσβαση — η Σαμοθράκη βαθμολογείται 1.8, η δυσκολότερη εδώ. Η Σαμοθράκη έχει τον Σάο, τις βάθρες και το Ιερό.'),
+    ('naxos', 'santorini'): (
+        'Santorini wins 4.8 to 4.5, but Naxos has far better beaches (4.8 vs 3.2) and rates 4.0 for affordability against Santorini’s 1.0. A real island against a three-night view.',
+        'Η Σαντορίνη κερδίζει 4.8 έναντι 4.5, αλλά η Νάξος έχει πολύ καλύτερες παραλίες (4.8 έναντι 3.2) και βαθμολογείται 4.0 στην προσιτότητα έναντι 1.0. Πραγματικό νησί έναντι τριήμερης θέας.'),
+    ('koufonisia', 'schoinoussa'): (
+        'Koufonisia wins 4.0 to 3.4 with a perfect 5.0 for beaches — Pori, Italida and the Pisina rock pool. Schoinoussa is quieter and cheaper. Both are Small Cyclades, one ferry apart.',
+        'Τα Κουφονήσια κερδίζουν 4.0 έναντι 3.4 με άριστα 5.0 στις παραλίες — Πορί, Ιταλίδα και η Πισίνα. Η Σχοινούσα είναι ησυχότερη και φθηνότερη. Και τα δύο Μικρές Κυκλάδες, ένα πλοίο μακριά.'),
+    ('iraklia', 'schoinoussa'): (
+        'Schoinoussa edges it 3.4 to 3.2 on beaches and ferries; Iraklia is the cheaper and emptier of the two, with the lowest nightlife score in the archipelago at 1.5.',
+        'Η Σχοινούσα υπερτερεί 3.4 έναντι 3.2 στις παραλίες και στα πλοία· η Ηρακλειά είναι η φθηνότερη και πιο άδεια, με τη χαμηλότερη νυχτερινή ζωή του αρχιπελάγους στο 1.5.'),
+    ('iraklia', 'koufonisia'): (
+        'Two ends of the same ferry line and nothing alike: Koufonisia scores 4.0 with perfect 5.0 beaches and 4.0 nightlife; Iraklia scores 3.2 with 1.5 nightlife and near-total quiet.',
+        'Δύο άκρα της ίδιας γραμμής και τίποτα κοινό: τα Κουφονήσια βαθμολογούνται 4.0 με άριστα 5.0 παραλίες και 4.0 νυχτερινή ζωή· η Ηρακλειά 3.2 με 1.5 και σχεδόν απόλυτη ησυχία.'),
+    ('donousa', 'koufonisia'): (
+        'Koufonisia wins 4.0 to 3.4 on quality — a perfect 5.0 for beaches against 4.5 — while Donousa wins on isolation, with access 2.2 and almost no one there. Scored side by side.',
+        'Τα Κουφονήσια κερδίζουν 4.0 έναντι 3.4 στην ποιότητα — άριστα 5.0 στις παραλίες έναντι 4.5 — ενώ η Δονούσα κερδίζει στην απομόνωση, με πρόσβαση 2.2 και σχεδόν κανέναν εκεί.'),
+    ('donousa', 'iraklia'): (
+        'The two hardest Small Cyclades to reach — access 2.2 and 2.0, the lowest in the archipelago. Donousa edges it 3.4 to 3.2 on beaches; Iraklia is cheaper and quieter still.',
+        'Οι δύο δυσκολότερες Μικρές Κυκλάδες — πρόσβαση 2.2 και 2.0, οι χαμηλότερες του αρχιπελάγους. Η Δονούσα υπερτερεί 3.4 έναντι 3.2 στις παραλίες· η Ηρακλειά είναι φθηνότερη και ησυχότερη.'),
+    ('heraklion', 'rhodes'): (
+        'Both hold a perfect 5.0 for culture — Knossos and the museum against the medieval Old Town. Rhodes wins overall 4.4 to 4.2 on much better beaches (4.2 vs 3.5).',
+        'Και τα δύο κρατούν άριστα 5.0 στον πολιτισμό — η Κνωσός και το μουσείο έναντι της μεσαιωνικής Παλιάς Πόλης. Η Ρόδος κερδίζει 4.4 έναντι 4.2 με πολύ καλύτερες παραλίες (4.2 έναντι 3.5).'),
+    ('chania', 'rhodes'): (
+        'Chania scores 4.8 — the highest here — to Rhodes’s 4.4, on perfect 5.0 beaches against 4.2. Rhodes answers with a 5.0 for culture and the best medieval town in Greece.',
+        'Τα Χανιά βαθμολογούνται 4.8 — το υψηλότερο εδώ — έναντι 4.4 της Ρόδου, με άριστα 5.0 παραλίες έναντι 4.2. Η Ρόδος απαντά με 5.0 στον πολιτισμό και την καλύτερη μεσαιωνική πόλη της Ελλάδας.'),
+    ('corfu', 'heraklion'): (
+        'A dead tie at 4.2 each. Heraklion holds the only perfect 5.0 culture score on this site, for Knossos and the museum; Corfu has the better Old Town to stay in, plus beaches and food.',
+        'Ισοπαλία στο 4.2. Το Ηράκλειο κρατά τη μόνη άριστη βαθμολογία 5.0 πολιτισμού εδώ, για την Κνωσό και το μουσείο· η Κέρκυρα έχει καλύτερη Παλιά Πόλη για διαμονή, παραλίες και φαγητό.'),
+    ('heraklion', 'santorini'): (
+        'Both hold a perfect 5.0 for culture — Knossos against the caldera. Santorini wins overall 4.8 to 4.2; Heraklion costs far less (3.5 vs 1.0) and has the better museum.',
+        'Και τα δύο άριστα 5.0 στον πολιτισμό — η Κνωσός έναντι της καλντέρας. Η Σαντορίνη κερδίζει 4.8 έναντι 4.2· το Ηράκλειο κοστίζει πολύ λιγότερο (3.5 έναντι 1.0) και έχει καλύτερο μουσείο.'),
+})
+
 VERDICTS = json.loads((ROOT / 'vs_verdicts.json').read_text(encoding='utf-8'))
 FAQS_PATH = ROOT / 'vs_faqs.json'
 FAQS = json.loads(FAQS_PATH.read_text(encoding='utf-8')) if FAQS_PATH.exists() else {}
