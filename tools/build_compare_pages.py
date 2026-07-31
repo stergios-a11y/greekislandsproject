@@ -179,6 +179,36 @@ DESC_OVERRIDES.update({
         'πάρκο· η Σκύρος στον πολιτισμό (3.8 έναντι 3.0), στην τιμή και στο καρναβάλι.'),
 })
 
+# --- enrichment batch 1: highest-traffic thin verdicts, now long-form --------
+TITLE_OVERRIDES.update({
+    ('kefalonia', 'lefkada'): (
+        'Kefalonia vs Lefkada {y}: The Closest Call in the Ionian',
+        'Κεφαλονιά ή Λευκάδα {y}: Η Πιο Δύσκολη Επιλογή στο Ιόνιο'),
+    ('corfu', 'lefkada'): (
+        'Corfu vs Lefkada {y}: Old Town or the Beach Wall?',
+        'Κέρκυρα ή Λευκάδα {y}: Παλιά Πόλη ή Τείχος Παραλιών;'),
+    ('milos', 'sifnos'): (
+        'Milos vs Sifnos {y}: Landscape or Dinner?',
+        'Μήλος ή Σίφνος {y}: Τοπίο ή Δείπνο;'),
+})
+DESC_OVERRIDES.update({
+    ('kefalonia', 'lefkada'): (
+        "Kefalonia takes it 4.1 to 4.0, but Lefkada has the better beaches (4.9 vs 4.7) and a "
+        'bridge instead of a ferry. Scale and culture against concentration and price.',
+        'Η Κεφαλονιά κερδίζει 4.1 έναντι 4.0, αλλά η Λευκάδα έχει καλύτερες παραλίες (4.9 έναντι 4.7) '
+        'και γεφύρι αντί για πλοίο. Κλίμακα και πολιτισμός έναντι συγκέντρωσης και τιμής.'),
+    ('corfu', 'lefkada'): (
+        'Corfu wins 4.2 to 4.0 on its UNESCO Old Town (culture 4.8 vs 2.5); Lefkada wins beaches '
+        '4.9 to 3.9 and costs less. Two opposite ideas of an Ionian holiday, scored.',
+        'Η Κέρκυρα κερδίζει 4.2 έναντι 4.0 με την Παλιά Πόλη UNESCO (πολιτισμός 4.8 έναντι 2.5)· η '
+        'Λευκάδα στις παραλίες 4.9 έναντι 3.9 και κοστίζει λιγότερο. Δύο αντίθετες ιδέες διακοπών.'),
+    ('milos', 'sifnos'): (
+        "Milos wins 4.7 to 3.9 on a perfect 5.0 beach score — Sarakiniko, Kleftiko, 70 beaches. "
+        'Sifnos wins on food, walking and price (3.5 vs 2.8). Not a close call, but not a wrong one.',
+        'Η Μήλος κερδίζει 4.7 έναντι 3.9 με άριστα 5.0 στις παραλίες — Σαρακήνικο, Κλέφτικο, 70 '
+        'παραλίες. Η Σίφνος κερδίζει σε φαγητό, περπάτημα και τιμή (3.5 έναντι 2.8).'),
+})
+
 VERDICTS = json.loads((ROOT / 'vs_verdicts.json').read_text(encoding='utf-8'))
 FAQS_PATH = ROOT / 'vs_faqs.json'
 FAQS = json.loads(FAQS_PATH.read_text(encoding='utf-8')) if FAQS_PATH.exists() else {}
