@@ -100,7 +100,7 @@ STR = {
     'en': {
         'lang': 'en', 'base': '/', 'other': '/el/trip-cost/', 'lang_label': 'EL',
         'title': 'Greek Island Budget Planner — ferries, rooms, car, food | Aegean Blueprint',
-        'desc': 'Build your island route and get an honest cost estimate: ferry fares, room prices by month, car hire, food — for all 88 Greek islands. No fake precision.',
+        'desc': 'Build your island route and get an honest cost estimate: ferry fares, room prices by month, car hire, food — for all 83 Greek islands. No fake precision.',
         'h1': 'What will your island trip cost?',
         'sub': 'Build your route, set your nights, and get an honest estimate — ferry fares from real distances, room prices by month, no fake precision. Then book the pieces that need booking.',
         'presets': 'Start from a route', 'when_who': 'When & who', 'travellers': 'Travellers',

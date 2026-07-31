@@ -34,7 +34,7 @@ const UI_TEXT = {
 
   // Hero / homepage
   'hero.title': { en: 'Find your perfect Greek island', el: 'Βρες το ιδανικό σου ελληνικό νησί' },
-  'hero.sub': { en: '88 islands scored across beaches, culture, nightlife, access and affordability. Click any circle to explore.', el: '88 νησιά βαθμολογημένα σε παραλίες, πολιτισμό, νυχτερινή ζωή, πρόσβαση και προσιτή τιμή. Πάτα οποιοδήποτε σημείο για εξερεύνηση.' },
+  'hero.sub': { en: '83 islands scored across beaches, culture, nightlife, access and affordability. Click any circle to explore.', el: '83 νησιά βαθμολογημένα σε παραλίες, πολιτισμό, νυχτερινή ζωή, πρόσβαση και προσιτή τιμή. Πάτα οποιοδήποτε σημείο για εξερεύνηση.' },
   'hero.tagline': { en: 'The Greek Island Decision Engine', el: 'Ο οδηγός για το Ελληνικό νησί που σας ταιριάζει' },
   'hero.dismiss': { en: 'Got it', el: 'Έγινε' },
   'hero.stat.islands': { en: 'Islands', el: 'Νησιά' },
@@ -47,7 +47,7 @@ const UI_TEXT = {
   'home.back_to_map': { en: 'Back to the map', el: 'Πίσω στον χάρτη' },
   'home.about.title': { en: 'A Greek islands travel guide with opinions', el: 'Ένας οδηγός για τα ελληνικά νησιά, με άποψη' },
   'home.about.p1': { en: "Most island guides list 30 beaches and call it a recommendation. This one picks the one you should actually go to, and tells you why the other 29 didn't make it. The same goes for the where-to-stay, the where-to-eat, the day plan, the side trip.", el: 'Οι περισσότεροι οδηγοί νησιών γράφουν 30 παραλίες και το λένε πρόταση. Εδώ διαλέγω αυτή που πραγματικά αξίζει, και εξηγώ γιατί δεν πέρασαν οι άλλες 29. Το ίδιο ισχύει για το πού θα μείνεις, πού θα φας, το πλάνο της ημέρας, την παρέκβαση.' },
-  'home.about.p2': { en: "No sponsorships, no affiliate hotel chains in disguise. Each island gets an honest score across beaches, history, nightlife, access and price — not a marketing brochure, not an algorithm, just one person's take, cross-checked with friends and family who actually live on each island.", el: 'Χωρίς χορηγίες, χωρίς συγκαλυμμένες affiliate πλατφόρμες κρατήσεων. Κάθε νησί παίρνει μια ειλικρινή βαθμολογία σε παραλίες, ιστορία, νυχτερινή ζωή, πρόσβαση και τιμές — όχι διαφημιστικό φυλλάδιο, όχι αλγόριθμος, η κρίση ενός ανθρώπου, διασταυρωμένη με φίλους και συγγενείς που ζουν στα νησιά.' },
+  'home.about.p2': { en: "How this site earns: the ferry and car-hire links are affiliate links — book through one and the site takes a small commission, at no extra cost to you. That is what keeps it free. What money does not buy is a place in it: nobody has ever paid to be recommended here, and no score has ever been sold. Each island gets an honest score across beaches, history, nightlife, access and price — not a marketing brochure, not an algorithm, just one person's take, cross-checked with friends and family who actually live on each island.", el: 'Πώς κερδίζει αυτό το site: οι σύνδεσμοι για πλοία και ενοικίαση αυτοκινήτου είναι affiliate — αν κλείσεις μέσα από αυτούς, το site παίρνει μια μικρή προμήθεια, χωρίς επιπλέον κόστος για σένα. Αυτό το κρατά δωρεάν. Αυτό που δεν αγοράζεται είναι η θέση μέσα του: κανείς δεν πλήρωσε ποτέ για να προταθεί εδώ, και καμία βαθμολογία δεν πουλήθηκε. Κάθε νησί παίρνει μια ειλικρινή βαθμολογία σε παραλίες, ιστορία, νυχτερινή ζωή, πρόσβαση και τιμές — όχι διαφημιστικό φυλλάδιο, όχι αλγόριθμος, η κρίση ενός ανθρώπου, διασταυρωμένη με φίλους και συγγενείς που ζουν στα νησιά.' },
   'home.about.p3': { en: "The map above is the entry point. Click any circle to open that island's full guide. Use the dropdowns to filter by region or rank by what matters to you.", el: 'Ο χάρτης παραπάνω είναι το σημείο εκκίνησης. Πάτα οποιοδήποτε κυκλάκι για να ανοίξεις τον πλήρη οδηγό του νησιού. Χρησιμοποίησε τα μενού για να φιλτράρεις ανά περιοχή ή να ταξινομήσεις με το κριτήριο που σε ενδιαφέρει.' },
   'home.featured.title': { en: 'Featured islands', el: 'Επιλεγμένα νησιά' },
   'home.featured.sub': { en: 'A few starting points across different moods. Click for the full guide.', el: 'Λίγες αφετηρίες για διαφορετικές διαθέσεις. Πάτα για τον πλήρη οδηγό.' },
@@ -350,9 +350,9 @@ const UI_TEXT = {
 
   // Section 1 — Why this site exists
   'mission.why.title': { en: 'Why this site exists', el: 'Γιατί υπάρχει αυτή η σελίδα' },
-  'mission.why.p1': { en: 'There are 88 islands on Aegean Blueprint. Most guides try to cover all of them, and end up saying nothing useful about any. AI-generated lists read like they were written by someone who has never tasted a tomato.', el: 'Στο Aegean Blueprint υπάρχουν 88 νησιά. Οι περισσότεροι οδηγοί τα καλύπτουν όλα — και καταλήγουν να μη λένε τίποτα χρήσιμο για κανένα. Οι λίστες από AI διαβάζονται σαν να τις έγραψε άνθρωπος που δεν έχει δοκιμάσει ποτέ ντομάτα.' },
+  'mission.why.p1': { en: 'Aegean Blueprint covers 83 Greek islands across 88 guides — Crete and Evia are each split by region, because one page cannot do either of them justice. Most guides try to cover all of them, and end up saying nothing useful about any. AI-generated lists read like they were written by someone who has never tasted a tomato.', el: 'Το Aegean Blueprint καλύπτει 83 ελληνικά νησιά σε 88 οδηγούς — η Κρήτη και η Εύβοια χωρίζονται ανά περιοχή, γιατί μια σελίδα δεν τις καλύπτει σωστά. Οι περισσότεροι οδηγοί τα καλύπτουν όλα — και καταλήγουν να μη λένε τίποτα χρήσιμο για κανένα. Οι λίστες από AI διαβάζονται σαν να τις έγραψε άνθρωπος που δεν έχει δοκιμάσει ποτέ ντομάτα.' },
   'mission.why.quote': { en: "This site is for people who don't want choices. They want the gist, without the fluff.", el: 'Αυτή η σελίδα είναι για ανθρώπους που δεν θέλουν επιλογές. Θέλουν την ουσία, χωρίς περιττά.' },
-  'mission.why.p2': { en: 'Each island page gives you one opinionated recommendation: where to stay, what to do for 2 to 5 days, where to swim, where to eat. Not ten options. One. The one I would pick.', el: 'Κάθε σελίδα νησιού δίνει μία πρόταση με άποψη: πού να μείνεις, τι να κάνεις σε 2 έως 5 μέρες, πού να κολυμπήσεις, πού να φας. Όχι δέκα επιλογές. Μία. Αυτή που θα διάλεγα.' },
+  'mission.why.p2': { en: 'Each island page gives you a short, opinionated list: the beaches worth your time, one mapped itinerary of 2 to 5 days, and the two or three tavernas I would actually send you to. Not twenty options ranked by affiliate payout — a selection someone has to stand behind.', el: 'Κάθε σελίδα νησιού δίνει μια σύντομη λίστα με άποψη: τις παραλίες που αξίζουν, ένα χαρτογραφημένο πρόγραμμα 2 έως 5 ημερών, και τις δύο-τρεις ταβέρνες που θα σου πρότεινα όντως. Όχι είκοσι επιλογές ταξινομημένες κατά affiliate προμήθεια — μια επιλογή που κάποιος πρέπει να υπερασπιστεί.' },
 
   // Section 2 — Built by one person
   'mission.author.title': { en: 'Built by one person', el: 'Φτιαγμένο από έναν άνθρωπο, για ταξιδιώτες' },
@@ -363,15 +363,16 @@ const UI_TEXT = {
   'mission.author.also.before': { en: "If you're driving in Greece, Stergios also built ", el: 'Αν οδηγείς στην Ελλάδα, ο Στέργιος έχει φτιάξει επίσης το ' },
   'mission.author.also.after':  { en: ' — a Greek motorway toll and route calculator that shows you how much time you\'d lose to save €1 of tolls.', el: ' — υπολογιστή διοδίων και διαδρομών που δείχνει πόσο χρόνο θα χάσεις για να γλιτώσεις €1 από τα διόδια.' },
 
-  // Section 3 — The one-recommendation principle
-  'mission.principle.title': { en: 'The one-recommendation principle', el: 'Η αρχή της μίας πρότασης' },
-  'mission.principle.intro': { en: 'For each island, this site picks exactly one of each:', el: 'Για κάθε νησί, η σελίδα διαλέγει ακριβώς ένα από τα παρακάτω:' },
-  'mission.principle.hotel.label': { en: 'One hotel', el: 'Ένα ξενοδοχείο' },
-  'mission.principle.hotel.text': { en: 'With a budget alternative if the top pick is too expensive. Linked to Booking.com so you can check availability in one click.', el: 'Με μια οικονομικότερη εναλλακτική αν η πρώτη επιλογή είναι ακριβή. Σύνδεσμος στο Booking.com για να δεις τη διαθεσιμότητα με ένα κλικ.' },
+  // Section 3 — The short-list principle
+  'mission.principle.title': { en: 'The short-list principle', el: 'Η αρχή της αυστηρής επιλογής' },
+  'mission.principle.intro': { en: 'For each island you get a deliberately narrow selection — not everything with a name on it, just what is worth your days:', el: 'Για κάθε νησί παίρνεις μια σκόπιμα στενή επιλογή — όχι ό,τι υπάρχει, αλλά ό,τι αξίζει τις μέρες σου:' },
+  'mission.principle.hotel.label': { en: 'The beaches worth your time', el: 'Οι παραλίες που αξίζουν' },
+  'mission.principle.hotel.text': { en: 'Three or four per island, rated on sand type, depth, and how exposed they are to the meltemi. Not every cove that happens to have a name.', el: 'Τρεις ή τέσσερις ανά νησί, με βαθμολογία σε άμμο, βάθος και πόσο εκτεθειμένες είναι στο μελτέμι. Όχι κάθε όρμος που τυχαίνει να έχει όνομα.' },
   'mission.principle.route.label': { en: 'One itinerary', el: 'Ένα δρομολόγιο' },
   'mission.principle.route.text': { en: '2 to 5 days depending on the island, mapped with driving distances. Beaches, villages, archaeological sites, places to eat. No "optional side-trips."', el: '2 έως 5 μέρες ανάλογα με το νησί, χαρτογραφημένο με αποστάσεις. Παραλίες, χωριά, αρχαιολογικοί χώροι, εστιατόρια. Χωρίς «προαιρετικές εκδρομές».' },
-  'mission.principle.dinner.label': { en: 'One dinner spot per night', el: 'Ένα εστιατόριο ανά βράδυ' },
-  'mission.principle.dinner.text': { en: "Named, linked, often with a phone number to book ahead. Where I'd take a friend who had one night on the island.", el: 'Με όνομα, σύνδεσμο, συχνά και τηλέφωνο για κράτηση. Εκεί που θα πήγαινα έναν φίλο που έχει μόνο μία βραδιά στο νησί.' },
+  'mission.principle.dinner.label': { en: 'The tavernas worth your evenings', el: 'Οι ταβέρνες που αξίζουν' },
+  'mission.principle.dinner.text': { en: "Two or three per island, named and linked, often with a phone number. Where I would take a friend who had one night — not every place on the harbour.", el: 'Δύο ή τρεις ανά νησί, με όνομα, σύνδεσμο, συχνά και τηλέφωνο. Εκεί που θα πήγαινα έναν φίλο με μία μόνο βραδιά — όχι κάθε μαγαζί στο λιμάνι.' },
+  'mission.principle.nohotel': { en: "One thing this site deliberately does not do: name a single hotel. On any island worth going to, the good rooms in August are gone by spring — so one pick would be advice you cannot use. The itinerary tells you which village or bay to sleep in instead, which is the decision that actually shapes the trip.", el: 'Ένα πράγμα που σκόπιμα δεν κάνει αυτό το site: να προτείνει ένα συγκεκριμένο ξενοδοχείο. Σε κάθε νησί που αξίζει, τα καλά δωμάτια του Αυγούστου έχουν κλείσει από την άνοιξη — μια μοναδική πρόταση θα ήταν συμβουλή που δεν μπορείς να χρησιμοποιήσεις. Το πρόγραμμα σου λέει σε ποιο χωριό ή κόλπο να μείνεις, που είναι και η απόφαση που ορίζει πραγματικά το ταξίδι.' },
   'mission.principle.kicker': { en: 'Pick an island. Pack a bag. Go.', el: 'Διάλεξε ένα νησί. Φτιάξε βαλίτσα. Φύγε.' },
 
   // Section 4 — How we score
@@ -382,7 +383,7 @@ const UI_TEXT = {
   // Sources
   'mission.sources.title': { en: 'Where the information comes from', el: 'Από πού έρχονται οι πληροφορίες' },
   'mission.sources.visited.t': { en: 'Personal visits.', el: 'Προσωπικές επισκέψεις.' },
-  'mission.sources.visited.d': { en: ' 50+ of the 88 islands, most more than once.', el: ' 50+ από τα 88 νησιά, τα περισσότερα παραπάνω από μία φορές.' },
+  'mission.sources.visited.d': { en: ' 50+ of the 83 islands, most more than once.', el: ' 50+ από τα 83 νησιά, τα περισσότερα παραπάνω από μία φορές.' },
   'mission.sources.local.t': { en: 'Local contacts.', el: 'Ντόπιες γνωριμίες.' },
   'mission.sources.local.d': { en: ' Friends and family who live or summer on specific islands. Kalymnos, Ikaria, Lemnos, Skyros — when I call someone who lives there, their answer beats any guidebook.', el: ' Φίλοι και συγγενείς που ζουν ή παραθερίζουν σε συγκεκριμένα νησιά. Κάλυμνος, Ικαρία, Λήμνος, Σκύρος — όταν παίρνω τηλέφωνο σε κάποιον που ζει εκεί, η απάντησή του μετράει περισσότερο από κάθε οδηγό.' },
   'mission.sources.official.t': { en: 'Official data.', el: 'Επίσημες πηγές.' },
@@ -437,7 +438,7 @@ const UI_TEXT = {
 
   // Updates
   'mission.updates.title': { en: 'How often this changes', el: 'Πόσο συχνά αλλάζει' },
-  'mission.updates.p1': { en: "Restaurants close. Ferry operators swap routes. A hotel changes hands and quality drops. Scores themselves rarely shift — an island's personality doesn't change in a season — but the specifics on a page do.", el: 'Τα εστιατόρια κλείνουν. Οι ακτοπλοϊκές αλλάζουν γραμμές. Ένα ξενοδοχείο αλλάζει χέρια και η ποιότητα πέφτει. Οι ίδιες οι βαθμολογίες σπάνια αλλάζουν — ο χαρακτήρας ενός νησιού δεν αλλάζει σε μια σεζόν — αλλά οι λεπτομέρειες στη σελίδα αλλάζουν.' },
+  'mission.updates.p1': { en: "Restaurants close. Ferry operators swap routes. A hotel changes hands and quality drops. Scores themselves rarely shift — an island's personality doesn't change in a season — but the specifics on a page do.", el: 'Τα εστιατόρια κλείνουν. Οι ακτοπλοϊκές αλλάζουν γραμμές. Οι παραλίες που αξίζουν αλλάζει χέρια και η ποιότητα πέφτει. Οι ίδιες οι βαθμολογίες σπάνια αλλάζουν — ο χαρακτήρας ενός νησιού δεν αλλάζει σε μια σεζόν — αλλά οι λεπτομέρειες στη σελίδα αλλάζουν.' },
   'mission.updates.p2': { en: 'When I get reader feedback or visit an island again, the page updates. When a restaurant I recommended closes, the link comes down within a week. The goal is not to be an encyclopedia — it\'s to be the most current opinionated recommendation you can trust for the next 6 months.', el: 'Όταν λαμβάνω σχόλια από αναγνώστες ή επισκέπτομαι ξανά ένα νησί, η σελίδα ενημερώνεται. Όταν κλείνει ένα εστιατόριο που έχω προτείνει, ο σύνδεσμος κατεβαίνει μέσα σε μια εβδομάδα.' },
 
   // Limits
