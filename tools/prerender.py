@@ -18,7 +18,22 @@ The main index.html and the JSON files in /islands/ are the source of truth.
 """
 import json
 import os
+import unicodedata
 from datetime import datetime, timezone
+
+
+def gr_sort_key(s):
+    """Collation key that sorts Greek (and Latin) names alphabetically.
+
+    Python's default sort is by code point, which puts every accented initial
+    ahead of the plain alphabet: «Άγιος Ευστράτιος», «Άνδρος», «Ίος» and «Ύδρα»
+    all landed before «Αγαθονήσι», because U+038x/U+03Ax sort below α (U+03B1).
+    Stripping the accents first makes code-point order correct for Greek, since
+    α–ω are contiguous. Final sigma is folded to σ so «...ος» and «...οσ» tie.
+    """
+    s = unicodedata.normalize('NFD', str(s))
+    s = ''.join(c for c in s if not unicodedata.combining(c))
+    return unicodedata.normalize('NFC', s).lower().replace('ς', 'σ')
 
 def bump_build_date():
     """Update the BUILD_DATE constant in script.js to today (UTC)."""
@@ -2129,7 +2144,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=42"></script>
-<script src="{asset_prefix}script.js?v=71"></script>
+<script src="{asset_prefix}script.js?v=72"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
@@ -2644,7 +2659,8 @@ def inject_homepage_seo_links(island_keys):
             display = data.get('name_el' if lang == 'el' else 'name', key)
             href = f'/el/island/{key}/' if lang == 'el' else f'/island/{key}/'
             items.append((display, href))
-        items.sort(key=lambda x: x[0].lower())
+        # Greek-aware: plain .lower() sorts by code point and misplaces accents.
+        items.sort(key=lambda x: gr_sort_key(x[0]))
 
         if lang == 'el':
             heading = 'Όλα τα νησιά'
@@ -2824,7 +2840,8 @@ def generate_festivals_page(island_keys):
                 _isl_names[_f['island']] = GREEK_NAMES.get(_f['island'], ISLAND_META.get(_f['island'], {}).get('name', _f['island']))
             else:
                 _isl_names[_f['island']] = ISLAND_META.get(_f['island'], {}).get('name', _f['island'])
-        _island_options = sorted(_isl_names.items(), key=lambda kv: kv[1])
+        # Greek-aware collation for the island filter dropdown.
+        _island_options = sorted(_isl_names.items(), key=lambda kv: gr_sort_key(kv[1]))
         _present_months = sorted({m for f in all_fests for m in f['months']})
         _month_opts = ''.join('<option value="' + str(m) + '">' + month_names[m-1] + '</option>' for m in _present_months)
         _island_opts = ''.join('<option value="' + k + '">' + esc(nm) + '</option>' for k, nm in _island_options)

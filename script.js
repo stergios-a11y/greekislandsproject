@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-07-28';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-07-31';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -1344,6 +1344,34 @@ function drawRailLeaders() {
   }).join('');
 }
 
+/* Alphabetical sorting in the language actually on screen.
+   Two separate bugs this fixes:
+   1. Several dropdowns sorted by the ENGLISH name while displaying the Greek one,
+      so «Αίγινα» came before «Αγαθονήσι» (because "Aegina" < "Agathonisi").
+   2. Plain code-point sorting throws accented initials to the front — «Άγιος
+      Ευστράτιος», «Άνδρος», «Ίος», «Ύδρα» all landed before «Αγαθονήσι», because
+      U+038x/U+03Ax sort below α (U+03B1).
+   Intl.Collator with the active locale handles both, and sensitivity:'base' also
+   folds ς with σ and ignores accents. Built lazily, and cached in a `var` rather
+   than a `let`, so it can never be touched in its temporal dead zone if a caller
+   fires before this point in the file. */
+var _NAME_COLLATOR = null;
+function nameCollator() {
+  if (!_NAME_COLLATOR) {
+    var loc = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
+    try {
+      _NAME_COLLATOR = new Intl.Collator(loc, { sensitivity: 'base', numeric: true });
+    } catch (e) {
+      _NAME_COLLATOR = { compare: function (x, y) { return String(x).localeCompare(String(y), loc); } };
+    }
+  }
+  return _NAME_COLLATOR;
+}
+// Compare two already-localised display strings.
+function cmpName(a, b) {
+  return nameCollator().compare(a == null ? '' : String(a), b == null ? '' : String(b));
+}
+
 // Tiny helpers — escape for HTML attrs and innerHTML use
 function escapeAttr(s) {
   return String(s || '').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;');
@@ -1747,7 +1775,9 @@ function setupVibeTags() {
 function setupGroupFilter() {
   const sel = document.getElementById('group-select');
   if (!sel) return;
-  const groups = [...new Set(ISLANDS.map(i => i.island_group))].sort();
+  // Sort by the translated group label, not the English key.
+  const groups = [...new Set(ISLANDS.map(i => i.island_group))]
+    .sort((a, b) => cmpName(groupName(a), groupName(b)));
   groups.forEach(group => {
     const opt = document.createElement('option');
     opt.value = group;
@@ -3568,8 +3598,21 @@ function renderTable() {
   });
   const col = sortState.col, asc = sortState.asc;
   list.sort((a, b) => {
+    // The Island and Group columns display translated text, so collate on that
+    // rather than on the English value stored in the record.
+    if (col === 'name') {
+      const r = cmpName(islandName(a.key), islandName(b.key));
+      return asc ? r : -r;
+    }
+    if (col === 'island_group') {
+      const r = cmpName(groupName(a.island_group), groupName(b.island_group));
+      return asc ? r : -r;
+    }
     const av = a[col], bv = b[col];
-    if (typeof av === 'string') return asc ? av.localeCompare(bv) : bv.localeCompare(av);
+    if (typeof av === 'string') {
+      const r = cmpName(av, bv);
+      return asc ? r : -r;
+    }
     return asc ? av - bv : bv - av;
   });
   const countLabel = document.getElementById('table-count-label');
@@ -3589,7 +3632,8 @@ function setupCompare() {
   const selA = document.getElementById('compare-select-a');
   const selB = document.getElementById('compare-select-b');
   if (!selA || !selB) return;
-  const sorted = [...ISLANDS].sort((a, b) => a.name.localeCompare(b.name));
+  // Sort by the name that is actually shown, not the English one.
+  const sorted = [...ISLANDS].sort((a, b) => cmpName(islandName(a.key), islandName(b.key)));
   sorted.forEach(i => {
     [selA, selB].forEach(sel => {
       const opt = document.createElement('option');
@@ -4529,8 +4573,8 @@ function renderFerryPlanner() {
   if (!el) return;
 
   const { mainland, islands } = allFerryPorts();
-  const sortedIslands  = islands.map(k => ({ k, name: islandName(k) })).sort((a, b) => a.name.localeCompare(b.name));
-  const sortedMainland = mainland.map(k => ({ k, name: portDisplayName(k) })).sort((a, b) => a.name.localeCompare(b.name));
+  const sortedIslands  = islands.map(k => ({ k, name: islandName(k) })).sort((a, b) => cmpName(a.name, b.name));
+  const sortedMainland = mainland.map(k => ({ k, name: portDisplayName(k) })).sort((a, b) => cmpName(a.name, b.name));
 
   // FROM dropdown — full list (mainland + islands)
   const fromOptionsHtml = `<option value="">— ${t('planner.choose')} —</option>` +

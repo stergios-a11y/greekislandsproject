@@ -813,7 +813,7 @@ function renderSug(){{
   let hits=raw.filter(nearTrip);
   hits=q
     ?hits.sort((a,b)=>((norm(iname(a)).startsWith(q)?0:1)-(norm(iname(b)).startsWith(q)?0:1))||distTo(a)-distTo(b))
-    :hits.sort((a,b)=>distTo(a)-distTo(b)||iname(a).localeCompare(iname(b)));
+    :hits.sort((a,b)=>distTo(a)-distTo(b)||iname(a).localeCompare(iname(b), LANG));
   let html=hits.map(k=>`<div data-k="${{k}}">${{iname(k)}} <small style="color:var(--ink-4,#A0ADB8)">${{ISL[k].g}}</small></div>`).join('');
   if(raw.length&&!hits.length)html=`<div style="cursor:default;color:var(--ink-4,#A0ADB8);font-weight:600;font-size:12px">${{T.add_far}}</div>`;
   sUl.innerHTML=html;
