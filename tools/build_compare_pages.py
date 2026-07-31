@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# ^ explicit declaration: this file contains Greek titles and descriptions, and
+#   some interpreters refuse non-ASCII source without it (PEP 263).
 """Generate static, SEO-indexable comparison pages at /compare/<a>-vs-<b>/.
 
 Each page is:
@@ -51,6 +54,130 @@ from datetime import date as _date
 YEAR = _date.today().year
 TITLE_OVERRIDES = {('chania', 'rethymno'): ('Chania vs Rethymno {y}: Chania Wins on Beaches — Honest Pick', 'Χανιά ή Ρέθυμνο {y}: Τα Χανιά Κερδίζουν στις Παραλίες'), ('corfu', 'zakynthos'): ('Corfu vs Zakynthos {y}: Old Town or Better Beaches?', 'Κέρκυρα ή Ζάκυνθος {y}: Παλιά Πόλη ή Καλύτερες Παραλίες;'), ('mykonos', 'paros'): ('Mykonos vs Paros {y}: Same Nightlife, Half the Price', 'Μύκονος ή Πάρος {y}: Ίδια Νυχτερινή Ζωή, Μισή Τιμή'), ('kos', 'rhodes'): ('Kos vs Rhodes {y}: Rhodes for History, Kos for Easy', 'Κως ή Ρόδος {y}: Ρόδος για Ιστορία, Κως για Ευκολία'), ('corfu', 'rhodes'): ('Corfu vs Rhodes {y}: Two Old Towns, One Clear Winner', 'Κέρκυρα ή Ρόδος {y}: Δύο Παλιές Πόλεις, Ένας Νικητής'), ('kefalonia', 'zakynthos'): ('Kefalonia vs Zakynthos {y}: Quiet Coves or Party Coast?', 'Κεφαλονιά ή Ζάκυνθος {y}: Ήσυχοι Όρμοι ή Πάρτι;'), ('naxos', 'paros'): ('Naxos vs Paros {y}: Which Cyclade Actually Suits You?', 'Νάξος ή Πάρος {y}: Ποια Κυκλάδα σού Ταιριάζει Πραγματικά;'), ('ios', 'santorini'): ('Ios vs Santorini {y}: Caldera Views or Cheaper Nights?', 'Ίος ή Σαντορίνη {y}: Καλντέρα ή Φθηνότερες Νύχτες;'), ('milos', 'naxos'): ('Milos vs Naxos {y}: Strange Coastline or All-Rounder?', 'Μήλος ή Νάξος {y}: Παράξενη Ακτή ή Ολοκληρωμένο Νησί;')}
 DESC_OVERRIDES = {('chania', 'rethymno'): ("Chania scores 4.8 to Rethymno's 3.8 — better beaches, better old town, more to do. But Rethymno is cheaper and quieter. Which one fits your trip, honestly.", 'Τα Χανιά βαθμολογούνται 4.8 έναντι 3.8 του Ρεθύμνου — καλύτερες παραλίες, καλύτερη παλιά πόλη. Το Ρέθυμνο όμως είναι φθηνότερο και πιο ήσυχο. Ειλικρινής σύγκριση.'), ('corfu', 'zakynthos'): ('Zakynthos has the better beaches (4.8 vs 3.9); Corfu has the far better old town (4.8 vs 2.5). Scored side by side on beaches, nightlife, access and price.', 'Η Ζάκυνθος έχει καλύτερες παραλίες (4.8 έναντι 3.9)· η Κέρκυρα πολύ καλύτερη παλιά πόλη (4.8 έναντι 2.5). Αναλυτική σύγκριση με βαθμολογίες.'), ('mykonos', 'paros'): ("Both score 5.0 for nightlife and Paros beats Mykonos on beaches — at a fraction of the cost. When Mykonos is still worth it, and when it isn't.", 'Και τα δύο 5.0 στη νυχτερινή ζωή, και η Πάρος κερδίζει στις παραλίες — με πολύ μικρότερο κόστος. Πότε αξίζει η Μύκονος και πότε όχι.'), ('kos', 'rhodes'): ('Rhodes wins overall (4.4 vs 3.7) on history and old town; Kos is flatter, cheaper and easier to get around by bike. Scored on beaches, nightlife and price.', 'Η Ρόδος κερδίζει συνολικά (4.4 έναντι 3.7) σε ιστορία και παλιά πόλη· η Κως είναι πιο επίπεδη, φθηνότερη και ευκολότερη με ποδήλατο. Με βαθμολογίες.'), ('corfu', 'rhodes'): ('Two UNESCO old towns compared: Rhodes edges it overall (4.4 vs 4.2) with the stronger medieval core, Corfu is greener with better food. Scored side by side.', 'Δύο παλιές πόλεις UNESCO: η Ρόδος υπερτερεί οριακά (4.4 έναντι 4.2) με ισχυρότερο μεσαιωνικό πυρήνα, η Κέρκυρα είναι πιο πράσινη με καλύτερο φαγητό.'), ('kefalonia', 'zakynthos'): ('Dead level overall at 4.1 each — Zakynthos for nightlife and Navagio, Kefalonia for quiet coves and mountains. The honest split, scored.', 'Ισοπαλία στο 4.1 — Ζάκυνθος για νυχτερινή ζωή και Ναυάγιο, Κεφαλονιά για ήσυχους όρμους και βουνά. Η ειλικρινής διαφορά, με βαθμολογίες.')}
+
+# --- Saronic day-trip set + the three Evia regions -------------------------
+# The default template would produce "Evia (Central) vs Evia (North)", which
+# reads badly and wastes the title. All six get a verdict-led title instead.
+TITLE_OVERRIDES.update({
+    ('agistri', 'salamis'): (
+        "Agistri vs Salamina {y}: Only One Is Worth Swimming In",
+        'Αγκίστρι ή Σαλαμίνα {y}: Μόνο στο Ένα Αξίζει το Μπάνιο'),
+    ('aegina', 'salamis'): (
+        "Aegina vs Salamina {y}: Closest Isn't Best",
+        'Αίγινα ή Σαλαμίνα {y}: Το Πιο Κοντινό Δεν Είναι Καλύτερο'),
+    ('agistri', 'poros'): (
+        'Agistri vs Poros {y}: Better Swimming or Better Town?',
+        'Αγκίστρι ή Πόρος {y}: Καλύτερο Μπάνιο ή Καλύτερη Πόλη;'),
+    ('evia-central', 'evia-north'): (
+        'Central vs North Evia {y}: No Ferry or No Bills?',
+        'Κεντρική ή Βόρεια Εύβοια {y}: Χωρίς Πλοίο ή Χωρίς Έξοδα;'),
+    ('evia-north', 'evia-south'): (
+        'North vs South Evia {y}: South Wins on Beaches',
+        'Βόρεια ή Νότια Εύβοια {y}: Ο Νότος Κερδίζει στις Παραλίες'),
+    ('evia-central', 'evia-south'): (
+        'Central vs South Evia {y}: Ancient Sites or Best Beaches?',
+        'Κεντρική ή Νότια Εύβοια {y}: Αρχαία ή Καλύτερες Παραλίες;'),
+})
+DESC_OVERRIDES.update({
+    ('agistri', 'salamis'): (
+        "Agistri scores 3.4 to Salamina's 2.8, and the gap is water: 3.5 for beaches "
+        'against 2.0. Salamina has the 480 BC battle and a 15-minute ferry. Honest pick.',
+        'Το Αγκίστρι βαθμολογείται 3.4 έναντι 2.8 της Σαλαμίνας, και η διαφορά είναι το νερό: '
+        '3.5 στις παραλίες έναντι 2.0. Η Σαλαμίνα έχει τη ναυμαχία και 15 λεπτά πλοίο.'),
+    ('aegina', 'salamis'): (
+        'Aegina wins 3.3 to 2.8 on the Temple of Aphaia, Perdika fish tavernas and easier '
+        'ferries. Salamina is closer and cheaper. Neither is a beach island — 2.5 vs 2.0.',
+        'Η Αίγινα κερδίζει 3.3 έναντι 2.8 με τον Ναό της Αφαίας, τις ψαροταβέρνες της Πέρδικας '
+        'και ευκολότερα πλοία. Η Σαλαμίνα είναι πιο κοντά και φθηνότερη. Καμία για παραλίες.'),
+    ('agistri', 'poros'): (
+        "Poros edges it 3.5 to 3.4 on town and culture (4.2 vs 2.5); Agistri wins beaches "
+        '(3.5 vs 3.0), price and needs no car at all. Swim on Agistri, stay on Poros.',
+        'Ο Πόρος υπερτερεί 3.5 έναντι 3.4 σε πόλη και πολιτισμό (4.2 έναντι 2.5)· το Αγκίστρι '
+        'κερδίζει σε παραλίες (3.5 έναντι 3.0), τιμή, και δεν θέλει καθόλου αυτοκίνητο.'),
+    ('evia-central', 'evia-north'): (
+        'Central Evia scores 3.9 to 3.6: no ferry at all via the Chalkida bridge, plus ancient '
+        'Eretria and Mt Dirfys. North Evia is cheapest on the island (4.8) with thermal springs.',
+        'Η Κεντρική Εύβοια βαθμολογείται 3.9 έναντι 3.6: χωρίς πλοίο μέσω της Χαλκίδας, με την '
+        'αρχαία Ερέτρια και τη Δίρφη. Η Βόρεια είναι η φθηνότερη (4.8) με ιαματικές πηγές.'),
+    ('evia-north', 'evia-south'): (
+        'South Evia wins 3.9 to 3.6 on the best beaches on the island (4.6 vs 3.8) and the '
+        'Dimosari gorge. North Evia is cheaper (4.8) with the Edipsos thermal springs.',
+        'Η Νότια Εύβοια κερδίζει 3.9 έναντι 3.6 με τις καλύτερες παραλίες του νησιού (4.6 έναντι '
+        '3.8) και το φαράγγι του Δημοσάρη. Η Βόρεια είναι φθηνότερη (4.8) με τα Λουτρά Αιδηψού.'),
+    ('evia-central', 'evia-south'): (
+        'A real tie at 3.9 each. Central wins culture (4.5 vs 3.5) and needs no ferry; South '
+        'wins beaches decisively (4.6 vs 3.5) plus Mt Ochi and Karystos. Scored side by side.',
+        'Πραγματική ισοπαλία στο 3.9. Η Κεντρική κερδίζει στον πολιτισμό (4.5 έναντι 3.5) και δεν '
+        'θέλει πλοίο· η Νότια κερδίζει καθαρά στις παραλίες (4.6 έναντι 3.5), με Όχη και Κάρυστο.'),
+})
+
+# --- Dodecanese + NE Aegean decisions --------------------------------------
+TITLE_OVERRIDES.update({
+    ('karpathos', 'kos'): (
+        'Karpathos vs Kos {y}: Wild Beaches or Easy Flights?',
+        'Κάρπαθος ή Κως {y}: Άγριες Παραλίες ή Εύκολες Πτήσεις;'),
+    ('chios', 'samos'): (
+        'Chios vs Samos {y}: Mastic Villages or Ancient Engineering?',
+        'Χίος ή Σάμος {y}: Μαστιχοχώρια ή Αρχαία Μηχανική;'),
+})
+DESC_OVERRIDES.update({
+    ('karpathos', 'kos'): (
+        "Karpathos wins on beaches (4.4 vs 4.0) and emptiness; Kos wins on access 4.6 to 2.0 "
+        '— direct flights, flat cycling, the Asklepion. The honest Dodecanese decision.',
+        'Η Κάρπαθος κερδίζει στις παραλίες (4.4 έναντι 4.0) και στην ερημιά· η Κως στην πρόσβαση '
+        '4.6 έναντι 2.0 — απευθείας πτήσεις, ποδήλατο, Ασκληπιείο. Ειλικρινής σύγκριση.'),
+    ('chios', 'samos'): (
+        'Chios edges it 3.6 to 3.3 on the mastic villages and Nea Moni (culture 4.7); Samos is '
+        'greener with better beaches, the Eupalinos Tunnel and Ephesus an hour away.',
+        'Η Χίος υπερτερεί 3.6 έναντι 3.3 με τα Μαστιχοχώρια και τη Νέα Μονή (πολιτισμός 4.7)· η '
+        'Σάμος είναι πιο πράσινη με καλύτερες παραλίες, το Ευπαλίνειο και την Έφεσο μία ώρα μακριά.'),
+})
+
+# --- NE Aegean + the four missing Sporades pairs ---------------------------
+TITLE_OVERRIDES.update({
+    ('lemnos', 'lesvos'): (
+        'Lemnos vs Lesvos {y}: Better Beaches or More Island?',
+        'Λήμνος ή Λέσβος {y}: Καλύτερες Παραλίες ή Πιο Πολύ Νησί;'),
+    ('alonnisos', 'skiathos'): (
+        'Alonnisos vs Skiathos {y}: Monk Seals or Party Beaches?',
+        'Αλόννησος ή Σκιάθος {y}: Φώκιες ή Παραλίες με Πάρτι;'),
+    ('skiathos', 'skyros'): (
+        'Skiathos vs Skyros {y}: Not Actually the Same Trip',
+        'Σκιάθος ή Σκύρος {y}: Δεν Είναι το Ίδιο Ταξίδι'),
+    ('skopelos', 'skyros'): (
+        'Skopelos vs Skyros {y}: Pine Forest or Cycladic Chora?',
+        'Σκόπελος ή Σκύρος {y}: Πευκοδάσος ή Κυκλαδίτικη Χώρα;'),
+    ('alonnisos', 'skyros'): (
+        'Alonnisos vs Skyros {y}: Marine Park or Living Folklore?',
+        'Αλόννησος ή Σκύρος {y}: Θαλάσσιο Πάρκο ή Ζωντανή Παράδοση;'),
+})
+DESC_OVERRIDES.update({
+    ('lemnos', 'lesvos'): (
+        "Lesvos scores 4.0 to Lemnos's 3.7 on culture (4.7 vs 3.5) — but Lemnos has better "
+        'beaches (4.3 vs 4.0) and fits three days where Lesvos needs six. Scored side by side.',
+        'Η Λέσβος βαθμολογείται 4.0 έναντι 3.7 στον πολιτισμό (4.7 έναντι 3.5) — αλλά η Λήμνος έχει '
+        'καλύτερες παραλίες (4.3 έναντι 4.0) και χωράει σε τρεις μέρες όπου η Λέσβος θέλει έξι.'),
+    ('alonnisos', 'skiathos'): (
+        'Nearly level at 3.9 vs 3.8 with almost the same beach score — so it comes down to crowds '
+        'and cost. Skiathos flies direct; Alonnisos has the marine park and is cheaper.',
+        'Σχεδόν ισοπαλία 3.9 έναντι 3.8 με σχεδόν ίδια βαθμολογία παραλιών — κρίνεται στον κόσμο και '
+        'το κόστος. Η Σκιάθος έχει απευθείας πτήσεις· η Αλόννησος το θαλάσσιο πάρκο και φθηνότερα.'),
+    ('skiathos', 'skyros'): (
+        'Both are Sporades but not on the same ferry network — Skiathos from Volos, Skyros from '
+        'Kymi. Skiathos wins beaches 4.6 to 4.0; Skyros wins culture 3.8 to 2.0.',
+        'Και οι δύο Σποράδες αλλά όχι στο ίδιο δίκτυο πλοίων — Σκιάθος από Βόλο, Σκύρος από Κύμη. '
+        'Η Σκιάθος κερδίζει στις παραλίες 4.6 έναντι 4.0· η Σκύρος στον πολιτισμό 3.8 έναντι 2.0.'),
+    ('skopelos', 'skyros'): (
+        'Skopelos edges it 3.6 to 3.4 on pine forest and beaches (4.2 vs 4.0); Skyros is cheaper '
+        'with stronger culture (3.8 vs 3.2) and a chora that looks Cycladic. Not combinable.',
+        'Η Σκόπελος υπερτερεί 3.6 έναντι 3.4 με πευκοδάσος και παραλίες (4.2 έναντι 4.0)· η Σκύρος '
+        'είναι φθηνότερη με ισχυρότερο πολιτισμό (3.8 έναντι 3.2) και κυκλαδίτικη χώρα.'),
+    ('alonnisos', 'skyros'): (
+        'The two quietest Sporades. Alonnisos wins 3.8 to 3.4 on beaches and the marine park; '
+        'Skyros on culture (3.8 vs 3.0), price and the goat-mask carnival.',
+        'Οι δύο ησυχότερες Σποράδες. Η Αλόννησος κερδίζει 3.8 έναντι 3.4 σε παραλίες και θαλάσσιο '
+        'πάρκο· η Σκύρος στον πολιτισμό (3.8 έναντι 3.0), στην τιμή και στο καρναβάλι.'),
+})
 
 VERDICTS = json.loads((ROOT / 'vs_verdicts.json').read_text(encoding='utf-8'))
 FAQS_PATH = ROOT / 'vs_faqs.json'
