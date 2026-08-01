@@ -6235,7 +6235,7 @@ body.home-view-active #site-footer { margin-top: 0; }
 @media (max-width: 840px) {
   .map-top-btn { display: inline-flex; position: absolute; right: 10px; top: 62px; z-index: 820;
     align-items: center; gap: 5px; border: 0; border-radius: 999px; padding: 9px 16px;
-    background: var(--aegean-dark, #076880); color: #fff; font-family: inherit;
+    background: var(--terracotta, #E8522A); color: #fff; font-family: inherit;
     font-size: 14px; font-weight: 800; box-shadow: 0 5px 18px rgba(26,35,50,.35); cursor: pointer; }
 }
 
@@ -6248,7 +6248,7 @@ body.home-view-active #site-footer { margin-top: 0; }
 html.dark .bp-rail-head, html.dark .bp-rail-pill { background: rgba(23, 28, 36, 0.94); }
 html.dark .bp-rail-head b, html.dark .bp-rail-pill { color: #E8ECF1; }
 html.dark .bp-rail-x { color: #8B98A5; }
-html.dark .map-top-btn { background: rgba(23, 28, 36, 0.95); color: #7FD4E8; }
+html.dark .map-top-btn { background: var(--terracotta, #F07050); color: #fff; }
 
 /* ----------------------------------------------------------
    HEADER SEARCH DOCK
@@ -6311,11 +6311,14 @@ html.dark .map-top-btn { background: rgba(23, 28, 36, 0.95); color: #7FD4E8; }
   display: flex; align-items: center; justify-content: center;
   width: 34px; height: 34px;
   border: 0; border-radius: 999px;
-  background: transparent; color: var(--aegean-dark, #0B5666);
-  cursor: pointer;
+  /* Filled terracotta, not a grey outline: in a pill that is otherwise teal
+     dropdowns, an unfilled icon read as decoration and was missed entirely. */
+  background: var(--terracotta, #E8522A); color: #fff;
+  box-shadow: 0 2px 8px rgba(232,82,42,.35);
+  cursor: pointer; transition: transform .15s, box-shadow .15s;
 }
-.mf-search-btn:hover { background: var(--aegean-light, #E1F5EE); }
-.map-filterbar.searching .mf-search-btn { background: var(--aegean-light, #E1F5EE); }
+.mf-search-btn:hover { transform: scale(1.06); box-shadow: 0 3px 12px rgba(232,82,42,.5); }
+.map-filterbar.searching .mf-search-btn { background: var(--aegean-dark, #076880); box-shadow: none; }
 .mf-controls { display: flex; gap: 6px; align-items: center; min-width: 0; }
 .map-filterbar.searching .mf-controls { display: none; }
 .mf-search-slot { flex: 1 1 auto; min-width: 0; display: flex; }

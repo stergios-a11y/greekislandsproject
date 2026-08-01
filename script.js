@@ -1526,10 +1526,19 @@ function escapeHtml(s) {
 
 function setupMap() {
   const GREECE_BOUNDS = L.latLngBounds(L.latLng(33.8, 18.5), L.latLng(42.2, 30.2));
-  mapInstance = L.map('main-map', { zoomControl: true, scrollWheelZoom: false, minZoom: 6, maxZoom: 14, zoomSnap: 0.5, maxBounds: GREECE_BOUNDS, maxBoundsViscosity: 0.85 });
+  /* Phones fit the whole country at zoom 6, which WAS also minZoom — so the map
+     opened already pinned against the floor and would not zoom out at all. The
+     0.85 viscosity then made panning feel stuck near the edges. Both are relaxed
+     on small screens; desktop keeps the tighter framing it was tuned with. */
+  const _small = window.matchMedia('(max-width: 840px)').matches;
+  mapInstance = L.map('main-map', {
+    zoomControl: true, scrollWheelZoom: false,
+    minZoom: _small ? 5 : 6, maxZoom: 14, zoomSnap: 0.5,
+    maxBounds: GREECE_BOUNDS, maxBoundsViscosity: _small ? 0.25 : 0.85 });
   // Default view hugs the Greek islands (Corfu→Kastellorizo, Crete→Thasos)
   // instead of the padded maxBounds — no half-screen of Italy/Turkey/sea.
-  mapInstance.fitBounds(L.latLngBounds(L.latLng(34.6, 19.4), L.latLng(41.1, 28.4)));
+  mapInstance.fitBounds(L.latLngBounds(L.latLng(34.6, 19.4), L.latLng(41.1, 28.4)),
+    _small ? { padding: [18, 18] } : {});
   addThemeAwareTiles(mapInstance, { maxZoom: 14 });
   L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(mapInstance);
 
