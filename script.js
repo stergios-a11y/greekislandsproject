@@ -425,7 +425,8 @@ function addThemeAwareTiles(map, options = {}) {
   let layerControl = null;
   if (!options.hideLayerControl) {
     layerControl = L.control.layers(baseLayers, null, {
-      position: options.layerControlPosition || 'topright',
+      // Bottom-right: at the top it competed with the search/filter pill.
+      position: options.layerControlPosition || 'bottomright',
       collapsed: true,
     }).addTo(map);
   }
@@ -587,6 +588,7 @@ document.addEventListener('DOMContentLoaded', () => {
   try { initHomeHero(); } catch(e) { console.warn('homeHero', e); }
   try { setupMapSearch(); } catch(e) { console.warn('mapSearch', e); }
   try { setupVibePanelDismiss(); } catch(e) { console.warn('vibeDismiss', e); }
+  try { setupPillPinning(); } catch(e) { console.warn('pillPin', e); }
   // Featured cards use per-island hero photos from a small manifest. Render once
   // now (fallback initials) and re-render after the manifest loads (with photos).
   try { loadHeroPhotos(); } catch(e) { console.warn('heroPhotos', e); }
@@ -1668,6 +1670,23 @@ function _spreadMoons(list, minSep) {
   list.forEach(o => { o.a += shift; });
   return list;
 }
+/* Does a single island key survive the active vibe filters? Used so each moon
+   in a cluster can be judged on its own merits rather than the gateway's. */
+function satPasses(key) {
+  const m = (typeof ISLANDS_DATA !== 'undefined') ? ISLANDS_DATA[key] : null;
+  if (!m) return true;
+  try { return islandPassesVibeFilters(Object.assign({ key: key }, m)); }
+  catch (_) { return true; }
+}
+
+/* Does anything in this cluster match — the gateway, or any satellite? If so
+   the marker must stay at full opacity, otherwise a matching island would be
+   faded to 0.65 along with the rest of the group. */
+function clusterHasMatch(gatewayKey, clusters) {
+  if (satPasses(gatewayKey)) return true;
+  return (clusters || []).some(c => (c.members || []).some(satPasses));
+}
+
 /* Gateway marker + orbit + moons. Mirrors makeMarkerIcon()'s sizing so the
    island itself looks identical to every other island on the map. */
 function makeSatelliteIcon(score, dimmed, clusters) {
@@ -1684,7 +1703,11 @@ function makeSatelliteIcon(score, dimmed, clusters) {
   let moons = [];
   clusters.forEach(c => (c.members || []).forEach(k => {
     if (!meta[k]) return;
-    moons.push({ k, a: _satBearing(gm, meta[k]), s: meta[k].total });
+    // Each satellite is judged on its own merits. Previously every moon
+    // inherited the gateway's verdict, so a cluster whose gateway failed the
+    // filter went entirely grey even when a member matched — the island you
+    // were looking for was hidden inside a dead-looking blob.
+    moons.push({ k, a: _satBearing(gm, meta[k]), s: meta[k].total, dim: !satPasses(k) });
   }));
   moons = _spreadMoons(moons, (moon * 2 + 2.5) / orbit);
 
@@ -1692,7 +1715,7 @@ function makeSatelliteIcon(score, dimmed, clusters) {
     const x = cx + orbit * Math.cos(o.a), y = cy - orbit * Math.sin(o.a);
     return `<i class="sat-moon" style="left:${(x - moon).toFixed(1)}px;top:${(y - moon).toFixed(1)}px;
       width:${(moon * 2).toFixed(1)}px;height:${(moon * 2).toFixed(1)}px;
-      background:${dimmed ? DIM_FILL : scoreToColor(o.s)}"></i>`;
+      background:${o.dim ? DIM_FILL : scoreToColor(o.s)}"></i>`;
   }).join('');
 
   return L.divIcon({
@@ -1774,7 +1797,9 @@ function renderMapMarkers() {
     const carLabel = carWords[Math.round(island.car_need || 0)] || '—';
     const marker = L.marker([island.lat, island.lng], {
       icon: _gates.length ? makeSatelliteIcon(score, !vibeMatch, _gates) : makeMarkerIcon(score, !vibeMatch),
-      opacity: vibeMatch ? 1 : DIM_OPACITY,
+      // A cluster stays fully opaque if ANY of its islands matches; the core and
+      // each moon are then dimmed individually inside makeSatelliteIcon().
+      opacity: (_gates.length ? clusterHasMatch(island.key, _gates) : vibeMatch) ? 1 : DIM_OPACITY,
       zIndexOffset: _gates.length ? 400 : 0 })
       .addTo(mapInstance)
       .bindTooltip(`
@@ -1849,6 +1874,30 @@ function closeVibePanel() {
    sat over the map you were trying to look at — worst on a phone, where it
    covers most of the screen. Any interaction with the map now dismisses it;
    choosing tags inside the panel does not. */
+/* The pill is absolutely positioned inside #main-map, so it scrolled away as
+   soon as you moved down the map — exactly when you want to search or filter.
+   Pin it under the header while any part of the map is still on screen. */
+function setupPillPinning() {
+  const bar = document.getElementById('home-controls');
+  const map = document.getElementById('main-map');
+  const header = document.querySelector('header');
+  if (!bar || !map || !header) return;
+  const gap = 10;
+  function sync() {
+    const m = map.getBoundingClientRect();
+    const h = header.getBoundingClientRect().height || 64;
+    // Pin once the map's own top has passed under the header, and unpin again
+    // before the map's bottom leaves, so the pill never floats over the footer.
+    const shouldPin = m.top < h + gap && m.bottom > h + 120;
+    bar.classList.toggle('pinned', shouldPin);
+    if (shouldPin) bar.style.top = (h + gap) + 'px';
+    else bar.style.top = '';
+  }
+  window.addEventListener('scroll', sync, { passive: true });
+  window.addEventListener('resize', sync);
+  sync();
+}
+
 function setupVibePanelDismiss() {
   document.addEventListener('click', (e) => {
     const panel = document.getElementById('vibe-panel');

@@ -6346,10 +6346,7 @@ html.dark .map-top-btn { background: var(--terracotta, #F07050); color: #fff; }
 .leaflet-top.leaflet-right { z-index: 800; }
 .map-filterbar { z-index: 900; }
 .map-filterbar.searching { z-index: 1000; }
-@media (max-width: 700px) {
-  /* Push the layer switcher clear of the pill on narrow screens. */
-  .leaflet-top.leaflet-right .leaflet-control-layers { margin-top: 62px; }
-}
+
 
 /* Search reads as a search field, not the first filter.
    Icon-only was ambiguous: sitting left of two dropdowns inside the same pill,
@@ -6367,3 +6364,6 @@ html.dark .map-top-btn { background: var(--terracotta, #F07050); color: #fff; }
   .mf-search-label { font-size: 12px; }
   .map-filterbar .filter-select { max-width: 96px; }
 }
+
+/* Pill stays put while the map is on screen (see setupPillPinning). */
+.map-filterbar.pinned { position: fixed; }
