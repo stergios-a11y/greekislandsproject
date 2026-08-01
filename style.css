@@ -6329,3 +6329,21 @@ html.dark .map-top-btn { background: rgba(23, 28, 36, 0.95); color: #7FD4E8; }
   .map-filterbar.searching { width: calc(100% - 20px); }
   .mf-search-slot .bp-hero-search button { display: none; }
 }
+
+/* ----------------------------------------------------------
+   MOBILE: reclaim map real estate
+   The feedback FAB sat permanently over the bottom-right of the map,
+   and the Leaflet layer switcher overlapped the search pill.
+---------------------------------------------------------- */
+@media (max-width: 700px) {
+  /* Feedback is a nice-to-have; on a phone it costs a corner of the map. */
+  #feedback-btn { display: none !important; }
+}
+/* The layer switcher must never sit on top of the search pill. */
+.leaflet-top.leaflet-right { z-index: 800; }
+.map-filterbar { z-index: 900; }
+.map-filterbar.searching { z-index: 1000; }
+@media (max-width: 700px) {
+  /* Push the layer switcher clear of the pill on narrow screens. */
+  .leaflet-top.leaflet-right .leaflet-control-layers { margin-top: 62px; }
+}

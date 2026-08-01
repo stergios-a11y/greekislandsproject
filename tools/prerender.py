@@ -1290,17 +1290,17 @@ def render_body(key, data, meta, lang='en'):
     last_updated_human = ''
     try:
         dt = datetime.strptime(last_updated_iso, '%Y-%m-%d')
-        if lang == 'el':
-            month_names_el = ['Ιανουαρίου','Φεβρουαρίου','Μαρτίου','Απριλίου','Μαΐου','Ιουνίου',
-                              'Ιουλίου','Αυγούστου','Σεπτεμβρίου','Οκτωβρίου','Νοεμβρίου','Δεκεμβρίου']
-            last_updated_human = f'{dt.day} {month_names_el[dt.month - 1]} {dt.year}'
-        else:
-            last_updated_human = dt.strftime('%B %-d, %Y')
+        # Compact one-line stamp: 01/Aug/2026. The long form ("1 August 2026" /
+        # "1 Αυγούστου 2026") wrapped onto a second line on narrow screens.
+        _MON_EN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+        _MON_EL = ['Ιαν','Φεβ','Μαρ','Απρ','Μαΐ','Ιουν','Ιουλ','Αυγ','Σεπ','Οκτ','Νοε','Δεκ']
+        _mon = (_MON_EL if lang == 'el' else _MON_EN)[dt.month - 1]
+        last_updated_human = f'{dt.day:02d}/{_mon}/{dt.year}'
     except Exception:
         last_updated_human = last_updated_iso  # fall back to ISO
 
     if last_updated_human:
-        label = 'Τελευταία ενημέρωση' if lang == 'el' else 'Last updated'
+        label = 'Ενημερώθηκε' if lang == 'el' else 'Updated'
         last_updated_html = (
             f'<p class="seo-lastupdated">'
             f'<time datetime="{esc(last_updated_iso)}">{label}: <strong>{esc(last_updated_human)}</strong></time>'
@@ -1833,7 +1833,7 @@ def render_page(key, data, meta, lang='en'):
 <script type="application/ld+json">{schema_json}</script>
 
 <!-- SPA assets — load the same CSS as the main site so the SEO body blends visually -->
-<link rel="stylesheet" href="{asset_prefix}style.css?v=51">
+<link rel="stylesheet" href="{asset_prefix}style.css?v=52">
 <style>
   /* Minimal SEO body styling — these elements exist only in pre-rendered pages */
   .seo-island-content {{
@@ -2208,7 +2208,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=42"></script>
-<script src="{asset_prefix}script.js?v=79"></script>
+<script src="{asset_prefix}script.js?v=80"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.

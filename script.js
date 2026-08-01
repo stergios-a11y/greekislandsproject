@@ -731,11 +731,19 @@ function dismissLoading() {
 function renderBuildStamp() {
   const el = document.getElementById('footer-updated');
   if (!el) return;
-  // Format date in user's language
-  const lang = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el-GR' : 'en-GB';
+  // Compact one-line stamp: "Updated 01/Aug/2026". The old long form
+  // ("Last updated: 1 August 2026") wrapped onto a second line on narrow
+  // screens, which pushed the footer taller than it needed to be.
+  const el2 = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
   const d = new Date(BUILD_DATE);
-  const formatted = d.toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' });
-  const label = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'Τελευταία ενημέρωση' : 'Last updated';
+  const MON_EN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const MON_EL = ['Ιαν', 'Φεβ', 'Μαρ', 'Απρ', 'Μαΐ', 'Ιουν',
+                  'Ιουλ', 'Αυγ', 'Σεπ', 'Οκτ', 'Νοε', 'Δεκ'];
+  const dd = String(d.getDate()).padStart(2, '0');
+  const mon = (el2 ? MON_EL : MON_EN)[d.getMonth()];
+  const formatted = `${dd}/${mon}/${d.getFullYear()}`;
+  const label = el2 ? 'Ενημερώθηκε' : 'Updated';
   // Include the leading " · " separator inside the textContent so that when
   // the footer is in its empty state (no BUILD_DATE), `:empty` keeps the span
   // hidden and we don't end up with a dangling " · " in the inline footer.
