@@ -6402,3 +6402,7 @@ html.dark .map-top-btn { background: var(--terracotta, #F07050); color: #fff; }
   background: none; border: 0; border-top: 1px solid rgba(255,255,255,.15);
   color: inherit; cursor: pointer;
 }
+
+/* Back-to-top clears the pinned pill instead of hiding beneath it.
+   Both become fixed together so they scroll as one group. */
+body.pill-pinned .map-top-btn { position: fixed; }

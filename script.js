@@ -1919,8 +1919,20 @@ function setupPillPinning() {
     // before the map's bottom leaves, so the pill never floats over the footer.
     const shouldPin = m.top < h + gap && m.bottom > h + 120;
     bar.classList.toggle('pinned', shouldPin);
-    if (shouldPin) bar.style.top = (h + gap) + 'px';
-    else bar.style.top = '';
+    // The back-to-top button lives at top:62px inside the map. Once the pill
+    // is pinned it occupies that band too and, being z-index 900 against the
+    // button's 820, silently covered it. Flag the state so the button can move
+    // clear rather than hide underneath.
+    document.body.classList.toggle('pill-pinned', shouldPin);
+    if (shouldPin) {
+      bar.style.top = (h + gap) + 'px';
+      const btn = document.querySelector('.map-top-btn');
+      if (btn) btn.style.top = (h + gap + Math.round(bar.getBoundingClientRect().height) + 8) + 'px';
+    } else {
+      bar.style.top = '';
+      const btn = document.querySelector('.map-top-btn');
+      if (btn) btn.style.top = '';
+    }
   }
   window.addEventListener('scroll', sync, { passive: true });
   window.addEventListener('resize', sync);
