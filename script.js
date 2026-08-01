@@ -1998,19 +1998,67 @@ function updateVibeMatchCount() {
   el.textContent = `${n} / ${total} islands`;
 }
 
+/* "Good now" / "Ideal now", ranked relative to the season rather than against
+   a fixed threshold.
+
+   The old absolute test (tag >= 2) was uninformative for most of the year: in
+   June and September all 79 tagged islands passed, so the filter did nothing,
+   while in August only 3 passed and "ideal" returned an empty map. That is
+   because the tags answer "is this the island's best month", not "is this
+   worth doing now" — and almost nowhere is at its best in August.
+
+   Ranking within the current window always returns a useful shortlist, in
+   every month, without touching the underlying editorial tags.
+
+   "Now" is a rolling ~30 days, not a calendar month: from the 21st onward most
+   people are planning for the weeks ahead, so someone looking on 29 August is
+   answered for early September too. That is also why nothing in the UI names
+   a month — it would be wrong for a third of every month. */
+var _nowRankCache = null;
+function nowRanked() {
+  const d = new Date();
+  const mo = d.getMonth();
+  const spansNext = d.getDate() >= 21;
+  const stamp = mo + ':' + (spansNext ? 1 : 0);
+  if (_nowRankCache && _nowRankCache.stamp === stamp) return _nowRankCache;
+
+  const next = (mo + 1) % 12;
+  const meta = (typeof ISLANDS_DATA !== 'undefined') ? ISLANDS_DATA : {};
+  const scored = [];
+  for (const k in WTV_TAGS) {
+    const v = WTV_TAGS[k];
+    if (!v || v.length < 12) continue;
+    const season = spansNext ? Math.max(v[mo], v[next]) : v[mo];
+    if (!season) continue;                       // 0 = genuinely not the season
+    scored.push({ k: k, season: season, rating: (meta[k] && meta[k].total) || 0 });
+  }
+  // Season first, then island quality. The tags are only 0-3, so without the
+  // second key a third of the map ties and the cut becomes arbitrary — this is
+  // what made "good" and "ideal" return identical sets on the first attempt.
+  scored.sort((a, b) => (b.season - a.season) || (b.rating - a.rating));
+
+  const take = (frac, min) => new Set(
+    scored.slice(0, Math.max(min, Math.round(scored.length * frac))).map(x => x.k));
+
+  _nowRankCache = {
+    stamp: stamp,
+    good: take(0.30, 8),     // a browsable shortlist
+    ideal: take(0.10, 3),    // the handful you would actually book
+  };
+  return _nowRankCache;
+}
+
 function islandPassesVibeFilters(island) {
   if (!activeVibeFilters.size) return true;
   const mo = new Date().getMonth(); // 0-indexed
   for (const f of activeVibeFilters) {
     switch (f) {
       case 'good_now': {
-        const tag = WTV_TAGS[island.key] && WTV_TAGS[island.key][mo];
-        if (tag === undefined || tag < 2) return false; // great(2) or perfect(3)
+        if (!nowRanked().good.has(island.key)) return false;
         break;
       }
       case 'ideal_now': {
-        const tag = WTV_TAGS[island.key] && WTV_TAGS[island.key][mo];
-        if (tag === undefined || tag < 3) return false; // perfect only
+        if (!nowRanked().ideal.has(island.key)) return false;
         break;
       }
       case 'car_free':     if (!island.car_need || island.car_need > 1.5) return false; break;
