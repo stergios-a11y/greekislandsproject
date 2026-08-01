@@ -445,10 +445,53 @@ function swapAllTiles() {
 }
 
 
+/* ============================================================
+   GA4 page views for the in-app views.
+   The router changes a hash fragment (#compare, #data, …) and GA4 strips
+   fragments from Page path, so every in-app view used to collapse into a
+   single "/" row — Compare, Islands Data, Ferries, Match and Shortlist were
+   invisible in Pages and screens no matter how much they were used.
+   We therefore send an explicit page_view with a synthetic path.
+
+   Island views deliberately use the SAME path as the prerendered page
+   (/island/naxos/), so in-app browsing and direct search landings add up to
+   one number per island instead of being split across two rows.
+
+   Note: gtag('config') still fires its own page_view for the real landing
+   URL on first load. That is left alone on purpose — suppressing it with
+   send_page_view:false would mean any JS error before this point loses the
+   pageview entirely, and a robust count matters more than a tidy one.
+============================================================ */
+const GA_VIEW_TITLES = {
+  home: 'Map', data: 'Islands Data', compare: 'Compare', hopping: 'Ferries & Hopping',
+  international: 'International Routes', match: 'Match Me', shortlist: 'My Shortlist',
+  mission: 'Mission',
+};
+function gaViewPath(view, param) {
+  const pre = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? '/el' : '';
+  if (view === 'island' && param) return `${pre}/island/${param}/`;
+  return `${pre}/app/${view === 'home' ? 'map' : view}`;
+}
+function trackView(view, param) {
+  if (typeof gtag !== 'function') return;
+  try {
+    const path = gaViewPath(view, param);
+    const name = (view === 'island' && typeof islandName === 'function' && param)
+      ? islandName(param)
+      : (GA_VIEW_TITLES[view] || view);
+    gtag('event', 'page_view', {
+      page_path: path,
+      page_location: window.location.origin + path,
+      page_title: name,
+    });
+  } catch (_) { /* analytics must never break navigation */ }
+}
+
 function navigateTo(view, param) {
   const hash = view === 'home' ? '#map' : view === 'island' ? `#island/${param}` : `#${view}`;
   if (window.location.hash !== hash) history.pushState({ view, param }, '', hash);
   showView(view, param);
+  trackView(view, param);
 }
 
 // Navigate to the Mission page and scroll to the How We Score section.
@@ -552,12 +595,18 @@ document.addEventListener('DOMContentLoaded', () => {
   if (vd) vd.textContent = `Aegean Blueprint ${VERSION}`;
   clearTimeout(hardFallback);
   dismissLoading();
-  try { const { view, param } = parseHash(); showView(view, param); }
+  try {
+    const { view, param } = parseHash();
+    showView(view, param);
+    // Deep link into a specific view: gtag('config') logged the landing URL as
+    // "/", so send the view itself too. Home needs nothing — already counted.
+    if (view && view !== 'home') trackView(view, param);
+  }
   catch(e) { showView('home', null); }
 });
 
 window.addEventListener('popstate', () => {
-  try { const { view, param } = parseHash(); showView(view, param); }
+  try { const { view, param } = parseHash(); showView(view, param); trackView(view, param); }
   catch(e) { showView('home', null); }
 });
 
