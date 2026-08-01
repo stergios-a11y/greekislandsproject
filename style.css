@@ -6406,3 +6406,84 @@ html.dark .map-top-btn { background: var(--terracotta, #F07050); color: #fff; }
 /* Back-to-top clears the pinned pill instead of hiding beneath it.
    Both become fixed together so they scroll as one group. */
 body.pill-pinned .map-top-btn { position: fixed; }
+
+/* ----------------------------------------------------------
+   MAP CONTROLS — match the pill instead of default Leaflet
+   Leaflet ships grey boxes with hard 1px borders and square corners, which
+   looked like a different product sitting next to the blurred, rounded pill.
+   Same surface, same radius, same shadow, same hover language.
+---------------------------------------------------------- */
+.leaflet-bar,
+.leaflet-control-layers {
+  border: 0 !important;
+  border-radius: 14px !important;
+  background: color-mix(in srgb, var(--white, #FFFBF5) 94%, transparent) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 24px rgba(26, 35, 50, 0.22) !important;
+  overflow: hidden;
+}
+
+/* Zoom: one soft stack, hairline divider, no outer border */
+.leaflet-control-zoom a.leaflet-control-zoom-in,
+.leaflet-control-zoom a.leaflet-control-zoom-out {
+  width: 38px; height: 38px; line-height: 36px;
+  background: transparent; border: 0;
+  /* !important because leaflet.css is served from a CDN — the browser blocks
+     us reading it, and its `.leaflet-bar a { color: black }` was winning. */
+  color: var(--aegean-dark, #076880) !important;
+  font-size: 21px; font-weight: 400;
+  transition: background .15s ease, color .15s ease;
+}
+.leaflet-control-zoom a.leaflet-control-zoom-in { border-bottom: 1px solid rgba(26,35,50,.10) !important; }
+.leaflet-control-zoom a:hover { background: var(--aegean-light, #C8EEF5); color: var(--aegean-dark, #076880) !important; }
+.leaflet-control-zoom a:active { background: var(--aegean-mid, #14A8C8); color: #fff !important; }
+.leaflet-control-zoom a.leaflet-disabled {
+  background: transparent; color: rgba(26,35,50,.25) !important; cursor: default;
+}
+
+/* Layer switcher: circular, terracotta on hover to echo the search button */
+.leaflet-control-layers-toggle {
+  width: 40px !important; height: 40px !important;
+  border-radius: 999px !important;
+  background-size: 20px 20px !important;
+  transition: background-color .15s ease, transform .15s ease;
+}
+.leaflet-control-layers-toggle:hover { background-color: var(--aegean-light, #C8EEF5) !important; transform: scale(1.05); }
+.leaflet-control-layers-expanded {
+  padding: 10px 14px 10px 12px !important;
+  border-radius: 14px !important;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink-1, #1A2332);
+  min-width: 132px;
+}
+.leaflet-control-layers-expanded label { display: flex; align-items: center; gap: 8px; padding: 4px 0; cursor: pointer; }
+.leaflet-control-layers-expanded input[type="radio"] { accent-color: var(--terracotta, #E8522A); margin: 0; }
+.leaflet-control-layers-separator { border-top: 1px solid rgba(26,35,50,.10); margin: 6px 0; }
+
+/* Scale bar: lose the boxy border */
+.leaflet-control-scale-line {
+  border: 0 !important; border-top: 2px solid rgba(26,35,50,.45) !important;
+  background: color-mix(in srgb, var(--white, #FFFBF5) 80%, transparent) !important;
+  border-radius: 0 0 4px 4px; padding: 1px 6px; font-family: var(--sans); font-size: 11px;
+  box-shadow: none !important;
+}
+
+html.dark .leaflet-bar,
+html.dark .leaflet-control-layers { background: rgba(23, 28, 36, 0.94) !important; }
+html.dark .leaflet-control-zoom a { color: #7FD4E8 !important; }
+html.dark .leaflet-control-zoom a:hover { background: rgba(127,212,232,.14); }
+html.dark .leaflet-control-zoom a.leaflet-control-zoom-in { border-bottom-color: rgba(255,255,255,.12) !important; }
+html.dark .leaflet-control-layers-expanded { color: #E6EDF3; }
+html.dark .leaflet-control-layers-toggle:hover { background-color: rgba(127,212,232,.14) !important; }
+html.dark .leaflet-control-scale-line {
+  background: rgba(23,28,36,.8) !important; color: #E6EDF3;
+  border-top-color: rgba(255,255,255,.45) !important;
+}
+
+/* Touch targets: a bit larger where fingers, not cursors, do the work */
+@media (max-width: 700px) {
+  .leaflet-control-zoom a.leaflet-control-zoom-in,
+  .leaflet-control-zoom a.leaflet-control-zoom-out { width: 42px; height: 42px; line-height: 40px; }
+  .leaflet-control-layers-toggle { width: 44px !important; height: 44px !important; }
+}
