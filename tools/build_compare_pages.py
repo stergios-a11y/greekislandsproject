@@ -48,7 +48,7 @@ def _resolve_root():
 
 ROOT = _resolve_root()
 SITE_URL = 'https://aegeanblueprint.com'
-ASSET_V = 85
+ASSET_V = 87
 
 from datetime import date as _date
 YEAR = _date.today().year

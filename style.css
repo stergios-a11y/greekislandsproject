@@ -6358,11 +6358,24 @@ html.dark .map-top-btn { background: var(--terracotta, #F07050); color: #fff; }
 .map-filterbar.searching .mf-search-label,
 .map-filterbar.searching .mf-search-divider { display: none; }
 .map-filterbar.searching .mf-search-btn { width: 34px; padding: 0; }
-@media (max-width: 600px) {
-  /* Keep the word on phones too — that is where the ambiguity was worst.
-     Room comes from shortening the dropdowns instead. */
-  .mf-search-label { font-size: 12px; }
-  .map-filterbar .filter-select { max-width: 96px; }
+@media (max-width: 700px) {
+  /* Phones cannot fit the label AND both dropdowns AND Filters: measured, the
+     Filters button was pushed 143-213px off the right edge and disappeared.
+     A missing control beats a missing word, so the label goes and the
+     terracotta fill carries the "this is search" signal instead. Tapping it
+     opens a full-width field whose placeholder says what it wants. */
+  .mf-search-label { display: none; }
+  .mf-search-btn { width: 34px; padding: 0; }
+  .mf-search-divider { display: none; }
+  .map-filterbar .mf-label { display: none; }      /* the "Rank by" caption */
+  .map-filterbar .filter-select { max-width: 88px; font-size: 12px; }
+  .map-filterbar { gap: 4px; padding: 5px 6px; }
+}
+@media (max-width: 430px) {
+  /* Last 40px of headroom: the funnel icon plus the active-count badge say
+     "filters" without the word. Verified to fit down to 360px with 21px spare. */
+  #vibe-filter-btn [data-i18n="filter.vibes"] { display: none; }
+  #vibe-filter-btn { padding: 6px 10px; }
 }
 
 /* Pill stays put while the map is on screen (see setupPillPinning). */
