@@ -6367,3 +6367,15 @@ html.dark .map-top-btn { background: var(--terracotta, #F07050); color: #fff; }
 
 /* Pill stays put while the map is on screen (see setupPillPinning). */
 .map-filterbar.pinned { position: fixed; }
+
+/* ----------------------------------------------------------
+   MOBILE FOOTER: trim padding, not content
+   Measured at 58px on a 390px phone, of which 36px was padding and only
+   ~22px the text. Cutting the "© Aegean Blueprint" string would have saved
+   nothing (the line already fits); cutting the padding gives back 16px.
+   Privacy stays — it carries the affiliate disclosure — and the Updated
+   stamp is a freshness signal worth keeping.
+---------------------------------------------------------- */
+@media (max-width: 700px) {
+  #site-footer { padding: 10px 14px; margin-top: 20px; }
+}

@@ -20,7 +20,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE_URL = 'https://aegeanblueprint.com'
-STYLE_V = 55  # keep in sync with index.html
+STYLE_V = 56  # keep in sync with index.html
 
 # ---------------------------------------------------------------- data
 
