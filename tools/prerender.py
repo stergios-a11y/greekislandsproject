@@ -96,6 +96,65 @@ def load_greek_names():
 
 GREEK_NAMES = load_greek_names()
 
+
+def load_compare_pairs():
+    """island key -> [(other_key, slug, is_longform), …]
+
+    Island pages carried no link to a compare page at all — not to a relevant
+    pair, not even to the hub. GA4 showed compare pages holding readers 2–3x
+    longer than the site average while taking about 4% of views, so the problem
+    was never the writing, it was that nothing pointed at them.
+    """
+    path = ROOT / 'vs_verdicts.json'
+    if not path.exists():
+        return {}
+    try:
+        verdicts = json.loads(path.read_text(encoding='utf-8'))
+    except Exception:
+        return {}
+    out = {}
+    for pair_key, v in verdicts.items():
+        try:
+            a, b = pair_key.split('__', 1)
+        except ValueError:
+            continue
+        slug = f'{a}-vs-{b}'
+        # Long-form verdicts carry the two-column block; the older one-paragraph
+        # ones do not. Surface the substantial pages first.
+        longform = 'compare-verdict-cols' in (v.get('en') or '')
+        out.setdefault(a, []).append((b, slug, longform))
+        out.setdefault(b, []).append((a, slug, longform))
+    return out
+
+
+COMPARE_PAIRS = load_compare_pairs()
+
+
+def build_compare_html(key, lang, limit=5):
+    """'How does X compare?' — links to the compare pages this island appears in."""
+    pairs = COMPARE_PAIRS.get(key) or []
+    if not pairs:
+        return ''
+    # Long-form first, then alphabetical by the other island's display name.
+    def label(other):
+        if lang == 'el':
+            return GREEK_NAMES.get(other, ISLAND_META.get(other, {}).get('name', other))
+        return ISLAND_META.get(other, {}).get('name', other)
+    pairs = sorted(pairs, key=lambda p: (not p[2], label(p[0])))[:limit]
+    me = label(key)
+    links = []
+    for other, slug, _lf in pairs:
+        href = f'/el/compare/{slug}/' if lang == 'el' else f'/compare/{slug}/'
+        vs = 'ή' if lang == 'el' else 'vs'
+        links.append(f'<a href="{href}">{esc(me)} {vs} {esc(label(other))}</a>')
+    heading = (f'Πώς συγκρίνεται η/ο {me};' if lang == 'el'
+               else f'How does {me} compare?')
+    hub = '/el/compare/' if lang == 'el' else '/compare/'
+    more = ('Δες όλες τις συγκρίσεις' if lang == 'el' else 'See all island comparisons')
+    return (f'<section class="seo-compare"><h2>{esc(heading)}</h2>'
+            f'<p>{" · ".join(links)}</p>'
+            f'<p class="seo-compare-more"><a href="{hub}">{esc(more)}</a></p></section>')
+
 # ---------------------------------------------------------------------
 # Pull each island's group + stats from script.js's ISLANDS_DATA
 # ---------------------------------------------------------------------
@@ -1595,6 +1654,9 @@ def render_body(key, data, meta, lang='en'):
         rname = GREEK_NAMES.get(rk, ISLAND_META[rk]['name']) if lang == 'el' else ISLAND_META[rk]['name']
         href = f'/el/island/{rk}/' if lang == 'el' else f'/island/{rk}/'
         related_links.append(f'<a href="{href}">{esc(rname)}</a>')
+    # Compare pages this island appears in — the missing internal link.
+    compare_html = build_compare_html(key, lang)
+
     related_heading = 'Islands like this one' if lang == 'en' else 'Παρόμοια νησιά'
     related_html = ''
     if related_links:
@@ -1681,6 +1743,7 @@ def render_body(key, data, meta, lang='en'):
   {itinerary_html}
   {beaches_html}
   {local_html}
+  {compare_html}
   {related_html}
 </article>'''
 
@@ -1816,8 +1879,8 @@ def render_page(key, data, meta, lang='en'):
   }}
   .seo-hero {{ margin: 16px 0 24px; }}
   .seo-hero img {{ display: block; box-shadow: 0 2px 12px rgba(0,0,0,0.10); }}
-  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local, .seo-audience {{ margin-top: 36px; }}
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2, .seo-audience h2 {{
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-compare, .seo-getting-there, .seo-local, .seo-audience {{ margin-top: 36px; }}
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-compare h2, .seo-getting-there h2, .seo-local h2, .seo-audience h2 {{
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }}
@@ -1932,7 +1995,8 @@ def render_page(key, data, meta, lang='en'):
     font-size: var(--text-small, 14px); color: var(--ink-2, #333);
     line-height: 1.5; margin: 0;
   }}
-  .seo-related a {{ color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }}
+  .seo-related a, .seo-compare a {{ color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }}
+  .seo-compare-more {{ margin-top: 8px; font-size: 14px; }}
   .seo-related a:hover {{ text-decoration: underline; }}
 
   /* Top nav — styled to match the main SPA header (teal gradient banner)

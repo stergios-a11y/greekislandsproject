@@ -91,8 +91,8 @@
   }
   .seo-hero { margin: 16px 0 24px; }
   .seo-hero img { display: block; box-shadow: 0 2px 12px rgba(0,0,0,0.10); }
-  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local, .seo-audience { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2, .seo-audience h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-compare, .seo-getting-there, .seo-local, .seo-audience { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-compare h2, .seo-getting-there h2, .seo-local h2, .seo-audience h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
@@ -207,7 +207,8 @@
     font-size: var(--text-small, 14px); color: var(--ink-2, #333);
     line-height: 1.5; margin: 0;
   }
-  .seo-related a { color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }
+  .seo-related a, .seo-compare a { color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }
+  .seo-compare-more { margin-top: 8px; font-size: 14px; }
   .seo-related a:hover { text-decoration: underline; }
 
   /* Top nav — styled to match the main SPA header (teal gradient banner)
@@ -448,6 +449,7 @@
   </dl>
 </article></section>
   <section class="seo-local"><h2>Τοπικά &amp; Εποχιακά</h2><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🍽</span>Τοπικά Προϊόντα</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Ντάκος</div><div class="seo-local-desc">Σκληρό κριθαρένιο παξιμάδι με τριμμένη ντομάτα, μυζήθρα, ελαιόλαδο και ρίγανη. Το κρητικό μεζεδάκι. Παντού — καλύτερο σε απλές χωριάτικες ταβέρνες.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Ρακή Κρήτης (τσικουδιά)</div><div class="seo-local-desc">Απόσταγμα από στέμφυλα, σερβίρεται παντού ως υποδοχή και αποχαιρετισμός. Κάθε χωριό έχει το δικό του. Σε μικρά μαγαζιά ή αποστακτήρια· οι εκδοχές σούπερ μάρκετ είναι κατώτερες.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Γραβιέρα Κρήτης</div><div class="seo-local-desc">Σκληρή πρόβεια γραβιέρα Π.Ο.Π., το πιο διάσημο κρητικό τυρί. Απευθείας από παραγωγούς σε Ανώγεια και Ζαρό για κορυφαία ποιότητα.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Μπουγάτσα Κρήτης</div><div class="seo-local-desc">Κρητική μπουγάτσα για πρωινό — τραγανή ζύμη, φρέσκια κρεμώδης μυζήθρα, με ζάχαρη και κανέλα. Ο Κίρκορ στην πλατεία Λιονταριών είναι ο θεσμός.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🧵</span>Χειροτεχνία &amp; Αναμνηστικά</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Κρητικό μαχαίρι</div><div class="seo-local-desc">Παραδοσιακό κρητικό μαχαίρι με χαραγμένη μαντινάδα. Παραγγελία σε παλιά εργαστήρια στην οδό Δαιδάλου του Ηρακλείου. Τα γνήσια είναι ακριβά αλλά κληρονομιά.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🎉</span>Πανηγύρια &amp; Εκδηλώσεις</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Γιορτή Κρασιού Δαφνών<span class="seo-local-when">Μέσα Αυγούστου</span></div><div class="seo-local-desc">Γιορτή κρασιού στο χωριό Δαφνές, στην καρδιά του οινικού Ηρακλείου. Γευσιγνωσίες τοπικών Λιάτικου, Βιδιανού, Μανδηλαριάς. Οι ημερομηνίες αλλάζουν.</div></div></div></div></div></section>
+  <section class="seo-compare"><h2>Πώς συγκρίνεται η/ο Ηράκλειο;</h2><p><a href="/el/compare/heraklion-vs-lasithi/">Ηράκλειο ή Λασίθι</a> · <a href="/el/compare/heraklion-vs-rethymno/">Ηράκλειο ή Ρέθυμνο</a> · <a href="/el/compare/chania-vs-heraklion/">Ηράκλειο ή Χανιά</a> · <a href="/el/compare/corfu-vs-heraklion/">Ηράκλειο ή Κέρκυρα</a> · <a href="/el/compare/heraklion-vs-rhodes/">Ηράκλειο ή Ρόδος</a></p><p class="seo-compare-more"><a href="/el/compare/">Δες όλες τις συγκρίσεις</a></p></section>
   <section class="seo-related"><h2>Παρόμοια νησιά</h2><p><a href="/el/island/chania/">Χανιά</a> · <a href="/el/island/lasithi/">Λασίθι</a> · <a href="/el/island/rethymno/">Ρέθυμνο</a> · <a href="/el/island/corfu/">Κέρκυρα</a></p></section>
 </article>
 

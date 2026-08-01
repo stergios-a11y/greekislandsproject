@@ -91,8 +91,8 @@
   }
   .seo-hero { margin: 16px 0 24px; }
   .seo-hero img { display: block; box-shadow: 0 2px 12px rgba(0,0,0,0.10); }
-  .seo-itinerary, .seo-beaches, .seo-related, .seo-getting-there, .seo-local, .seo-audience { margin-top: 36px; }
-  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-getting-there h2, .seo-local h2, .seo-audience h2 {
+  .seo-itinerary, .seo-beaches, .seo-related, .seo-compare, .seo-getting-there, .seo-local, .seo-audience { margin-top: 36px; }
+  .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-compare h2, .seo-getting-there h2, .seo-local h2, .seo-audience h2 {
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
     border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
   }
@@ -207,7 +207,8 @@
     font-size: var(--text-small, 14px); color: var(--ink-2, #333);
     line-height: 1.5; margin: 0;
   }
-  .seo-related a { color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }
+  .seo-related a, .seo-compare a { color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }
+  .seo-compare-more { margin-top: 8px; font-size: 14px; }
   .seo-related a:hover { text-decoration: underline; }
 
   /* Top nav — styled to match the main SPA header (teal gradient banner)
@@ -408,6 +409,7 @@
   </dl>
 </article></section>
   <section class="seo-local"><h2>Τοπικά &amp; Εποχιακά</h2><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🍽</span>Τοπικά Προϊόντα</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Αστακός Σκύρου</div><div class="seo-local-desc">Ο αιγαιοπελαγίτικος αστακός εορτάζεται σε όλη τη Σκύρο — συνήθως με χειροποίητα ζυμαρικά. Η εκδοχή στον Άνεμο στη Χώρα είναι διάσημη.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Σκυριανό κατσικάκι</div><div class="seo-local-desc">Τοπικό κατσικάκι σιγομαγειρεμένο με ζυμαρικά και τυρί — σκυριανό πασχαλινό φαγητό όλο τον χρόνο. Σε ταβέρνες των Μαγαζιών.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🧵</span>Χειροτεχνία &amp; Αναμνηστικά</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Σκυριανά σκαλιστά έπιπλα</div><div class="seo-local-desc">Ξεχωριστά σκαλιστά χαμηλά έπιπλα, αρχικά για τα μικρά σκυριανά σπίτια. Το Μουσείο Φαλτάιτς πουλάει αντίγραφα· μικρά εργαστήρια στη Χώρα έχουν αυθεντικά.</div></div></div><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Σκυριανό κέντημα και κεραμική</div><div class="seo-local-desc">Παραδοσιακά σκυριανά υφαντά με μοναδική παλέτα χρωμάτων και μοτίβα από πουλιά και πλοία. Η κεραμική της ίδιας παράδοσης έχει την ίδια εικονογραφία.</div></div></div></div></div><div class="seo-local-block"><h3 class="seo-local-heading"><span class="seo-local-icon" aria-hidden="true">🎉</span>Πανηγύρια &amp; Εκδηλώσεις</h3><div class="seo-local-items"><div class="seo-local-item"><div class="seo-local-text"><div class="seo-local-name">Αποκριές Σκύρου<span class="seo-local-when">Αποκριές — τέλη Φεβρουαρίου 2027 (Σαββατοκύριακο 5–7 Μαρτίου 2027)</span></div><div class="seo-local-desc">Από τις πιο ξεχωριστές απόκριες της Ελλάδας — η μορφή του «Γέρου» ντυμένου με κατσικίσιες προβιές και κουδούνια χορεύει στους δρόμους του χωριού. Προχριστιανικές ρίζες, βαθιά σκυριανές.</div></div></div></div></div></section>
+  <section class="seo-compare"><h2>Πώς συγκρίνεται η/ο Σκύρος;</h2><p><a href="/el/compare/alonnisos-vs-skyros/">Σκύρος ή Αλόννησος</a> · <a href="/el/compare/skiathos-vs-skyros/">Σκύρος ή Σκιάθος</a> · <a href="/el/compare/skopelos-vs-skyros/">Σκύρος ή Σκόπελος</a></p><p class="seo-compare-more"><a href="/el/compare/">Δες όλες τις συγκρίσεις</a></p></section>
   <section class="seo-related"><h2>Παρόμοια νησιά</h2><p><a href="/el/island/astypalaia/">Αστυπάλαια</a> · <a href="/el/island/folegandros/">Φολέγανδρος</a> · <a href="/el/island/anafi/">Ανάφη</a> · <a href="/el/island/amorgos/">Αμοργός</a></p></section>
 </article>
 
