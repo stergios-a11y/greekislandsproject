@@ -542,6 +542,7 @@ document.addEventListener('DOMContentLoaded', () => {
   try { setupMap(); } catch(e) { console.warn('setupMap', e); }
   try { renderWhatsOnStrip().then(adjustMapHeightToStrip); } catch(e) { console.warn('whatsOn', e); }
   try { initHomeHero(); } catch(e) { console.warn('homeHero', e); }
+  try { setupHeaderSearch(); } catch(e) { console.warn('headerSearch', e); }
   // Featured cards use per-island hero photos from a small manifest. Render once
   // now (fallback initials) and re-render after the manifest loads (with photos).
   try { loadHeroPhotos(); } catch(e) { console.warn('heroPhotos', e); }
@@ -690,6 +691,89 @@ function renderBuildStamp() {
   // the footer is in its empty state (no BUILD_DATE), `:empty` keeps the span
   // hidden and we don't end up with a dangling " · " in the inline footer.
   el.textContent = ` · ${label}: ${formatted}`;
+}
+
+/* ============================================================
+   HEADER SEARCH DOCK
+   The hero search is also the map's search field — renderMapMarkers()
+   reads #bp-hero-search — but it scrolls out of reach, so you could not
+   search while looking at the map. Instead of a second input (two states
+   for one query), the existing wrap element is relocated into the header
+   dock once the hero leaves the viewport, and moved back when it returns.
+   Same node, so value, listeners and typeahead all follow it.
+============================================================ */
+function setupHeaderSearch() {
+  const wrap = document.querySelector('.bp-hero-search-wrap');
+  const btn = document.getElementById('hdr-search-btn');
+  const dock = document.getElementById('hdr-search-dock');
+  const header = document.querySelector('header');
+  const input = document.getElementById('bp-hero-search');
+  if (!wrap || !btn || !dock || !header) return;   // not the homepage
+
+  // Marks where the wrap belongs so it can be returned to the exact spot.
+  const home = document.createElement('span');
+  home.className = 'hdr-search-home';
+  home.hidden = true;
+  wrap.parentNode.insertBefore(home, wrap);
+
+  let docked = false, open = false;
+  const headerH = () => header.getBoundingClientRect().height || 56;
+
+  function openDock() {
+    open = true;
+    dock.style.top = headerH() + 'px';
+    dock.hidden = false;
+    dock.appendChild(wrap);
+    btn.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('hdr-search-open');
+    if (input) { input.focus(); input.select(); }
+  }
+  function closeDock(restore) {
+    open = false;
+    dock.hidden = true;
+    btn.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('hdr-search-open');
+    if (restore !== false) home.parentNode.insertBefore(wrap, home);
+    const sug = document.getElementById('bp-hero-suggest');
+    if (sug) { sug.hidden = true; sug.innerHTML = ''; }
+  }
+
+  btn.addEventListener('click', () => (open ? closeDock() : openDock()));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && open) closeDock(); });
+  document.addEventListener('click', (e) => {
+    if (!open) return;
+    if (e.target.closest('#hdr-search-dock') || e.target.closest('#hdr-search-btn')) return;
+    closeDock();
+  });
+
+  function sync() {
+    // Dock once the hero search's own slot has passed above the header.
+    const shouldDock = home.getBoundingClientRect().top < headerH();
+    if (shouldDock === docked) return;
+    docked = shouldDock;
+    btn.hidden = !docked;
+    if (!docked && open) closeDock();
+  }
+  window.addEventListener('scroll', sync, { passive: true });
+  window.addEventListener('resize', () => { sync(); if (open) dock.style.top = headerH() + 'px'; });
+  sync();
+
+  // Expose so the search handler can close the dock after a pick.
+  window._closeHeaderSearch = () => { if (open) closeDock(); };
+}
+
+/* When a query narrows to a single island, move the map to it. Filtering
+   alone used to leave the one surviving pin wherever it happened to be —
+   often off-screen — which read as "search did nothing". */
+function panMapToMatches(keys) {
+  if (typeof mapInstance === 'undefined' || !mapInstance || !keys || !keys.length) return;
+  const pts = keys
+    .map(k => (typeof ISLANDS_DATA !== 'undefined' ? ISLANDS_DATA[k] : null))
+    .filter(i => i && typeof i.lat === 'number')
+    .map(i => [i.lat, i.lng]);
+  if (!pts.length) return;
+  if (pts.length === 1) mapInstance.setView(pts[0], Math.max(mapInstance.getZoom(), 9), { animate: true });
+  else mapInstance.fitBounds(pts, { padding: [40, 40], maxZoom: 9 });
 }
 
 function setupNav() {
@@ -895,6 +979,11 @@ async function initHomeHero() {
       renderSug();
       // Live-filter the map markers as you type (the map search field is gone)
       try { if (typeof mapInstance !== 'undefined' && mapInstance) renderMapMarkers(); } catch (_) {}
+      // ...and move the map to what survived, so a match is never off-screen.
+      try {
+        const hits = matches(input.value);
+        if (input.value.trim().length >= 2 && hits.length) panMapToMatches(hits);
+      } catch (_) {}
     });
     input.addEventListener('focus', renderSug);
     input.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSug(); });
@@ -909,6 +998,9 @@ async function initHomeHero() {
       return;
     }
     try { if (typeof mapInstance !== 'undefined' && mapInstance) renderMapMarkers(); } catch (_) {}
+    try { panMapToMatches(keys); } catch (_) {}
+    // Free-text search shows results on the map, so get the dock out of the way.
+    try { if (typeof window._closeHeaderSearch === 'function') window._closeHeaderSearch(); } catch (_) {}
     closeSug();
     scrollToMainMap();
   });

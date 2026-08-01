@@ -6246,3 +6246,48 @@ html.dark .bp-rail-head, html.dark .bp-rail-pill { background: rgba(23, 28, 36, 
 html.dark .bp-rail-head b, html.dark .bp-rail-pill { color: #E8ECF1; }
 html.dark .bp-rail-x { color: #8B98A5; }
 html.dark .map-top-btn { background: rgba(23, 28, 36, 0.95); color: #7FD4E8; }
+
+/* ----------------------------------------------------------
+   HEADER SEARCH DOCK
+   The hero search scrolls away, which left no way to search
+   while looking at the map. Rather than add a second input
+   (two sources of truth for the same query, and the map already
+   reads the hero field), the existing .bp-hero-search-wrap NODE
+   is moved into #hdr-search-dock and back. Same element, so the
+   value, listeners and typeahead travel with it.
+---------------------------------------------------------- */
+.hdr-search-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 6px 8px;
+  margin-left: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+}
+.hdr-search-btn:hover { background: rgba(255,255,255,.14); }
+.hdr-search-btn[hidden] { display: none; }
+.hdr-search-btn[aria-expanded="true"] { background: rgba(255,255,255,.2); }
+
+.hdr-search-dock {
+  position: fixed;
+  left: 0; right: 0;
+  top: var(--header-height);
+  z-index: 1200;
+  background: var(--aegean, #0F6E56);
+  padding: 8px 12px 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.18);
+}
+.hdr-search-dock[hidden] { display: none; }
+/* the wrap is styled for the hero, so neutralise the hero-only sizing */
+.hdr-search-dock .bp-hero-search-wrap { max-width: none; margin: 0; }
+.hdr-search-dock .bp-hero-suggest {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+@media (max-width: 600px) {
+  /* the brand wordmark would fight the icon for room */
+  body.hdr-search-open #brand-text { display: none; }
+}
