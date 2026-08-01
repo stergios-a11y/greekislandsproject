@@ -431,6 +431,55 @@ DESC_OVERRIDES.update({
         'Και τα δύο άριστα 5.0 στον πολιτισμό — η Κνωσός έναντι της καλντέρας. Η Σαντορίνη κερδίζει 4.8 έναντι 4.2· το Ηράκλειο κοστίζει πολύ λιγότερο (3.5 έναντι 1.0) και έχει καλύτερο μουσείο.'),
 })
 
+# --- Crete regional bases + the last uncovered Saronic pair -----------------
+# "where do I base myself in Crete" is the real planning question for the
+# largest Greek island; the generic template would have said "Which Greek
+# Island Should You Visit?" about four regions of the same one.
+TITLE_OVERRIDES.update({
+    ('heraklion', 'rethymno'): (
+        'Heraklion vs Rethymno {y}: Land in One, Sleep in the Other',
+        'Ηράκλειο ή Ρέθυμνο {y}: Προσγειώνεσαι στο Ένα, Μένεις στο Άλλο'),
+    ('chania', 'lasithi'): (
+        'Chania vs Lasithi {y}: Opposite Ends of Crete',
+        'Χανιά ή Λασίθι {y}: Τα Δύο Άκρα της Κρήτης'),
+    ('heraklion', 'lasithi'): (
+        'Heraklion vs Lasithi {y}: Knossos or the Better Coast?',
+        'Ηράκλειο ή Λασίθι {y}: Κνωσός ή Καλύτερη Ακτή;'),
+    ('lasithi', 'rethymno'): (
+        'Lasithi vs Rethymno {y}: Palm Beaches or a Venetian Town?',
+        'Λασίθι ή Ρέθυμνο {y}: Φοινικόδασος ή Βενετσιάνικη Πόλη;'),
+    ('agistri', 'hydra'): (
+        'Agistri vs Hydra {y}: Both Car-Free, Nothing Else Alike',
+        'Αγκίστρι ή Ύδρα {y}: Και τα Δύο Χωρίς Αυτοκίνητα'),
+})
+DESC_OVERRIDES.update({
+    ('heraklion', 'rethymno'): (
+        'Heraklion wins 4.2 to 3.8 on the only perfect 5.0 culture score and the airport; Rethymno '
+        'has the better-preserved old town, better beaches and lower prices. Land in one, stay in the other.',
+        'Το Ηράκλειο κερδίζει 4.2 έναντι 3.8 με τη μόνη άριστη βαθμολογία 5.0 πολιτισμού και το '
+        'αεροδρόμιο· το Ρέθυμνο έχει καλύτερα διατηρημένη παλιά πόλη, καλύτερες παραλίες, φθηνότερα.'),
+    ('chania', 'lasithi'): (
+        'Chania scores 4.8 — the highest here — to Lasithi’s 4.0, on beaches 5.0 vs 4.0. But they are '
+        'four hours apart: this is two different holidays, not two bases for one trip.',
+        'Τα Χανιά βαθμολογούνται 4.8 — το υψηλότερο εδώ — έναντι 4.0 του Λασιθίου, με παραλίες 5.0 '
+        'έναντι 4.0. Απέχουν όμως τέσσερις ώρες: δύο διαφορετικές διακοπές, όχι δύο βάσεις.'),
+    ('heraklion', 'lasithi'): (
+        'Heraklion edges it 4.2 to 4.0 on Knossos and a 5.0 for access; Lasithi has better beaches '
+        '(4.0 vs 3.5), Vai and Spinalonga. An hour apart — the easiest Crete pair to combine.',
+        'Το Ηράκλειο υπερτερεί 4.2 έναντι 4.0 με την Κνωσό και 5.0 στην πρόσβαση· το Λασίθι έχει '
+        'καλύτερες παραλίες (4.0 έναντι 3.5), το Βάι και τη Σπιναλόγκα. Μία ώρα μακριά.'),
+    ('lasithi', 'rethymno'): (
+        'Lasithi edges it 4.0 to 3.8 on beaches and its own airport; Rethymno has the best-preserved '
+        'old town in Crete (culture 4.5 vs 3.5) and costs less. The quieter two Crete bases, compared.',
+        'Το Λασίθι υπερτερεί 4.0 έναντι 3.8 σε παραλίες και δικό του αεροδρόμιο· το Ρέθυμνο έχει την '
+        'καλύτερα διατηρημένη παλιά πόλη της Κρήτης (πολιτισμός 4.5 έναντι 3.5) και κοστίζει λιγότερο.'),
+    ('agistri', 'hydra'): (
+        'Both score 1.0 for car reliance, and diverge from there. Hydra wins 4.0 to 3.4 on the harbour '
+        'and culture; Agistri has far better beaches (3.5 vs 2.2) at less than half the price.',
+        'Και τα δύο 1.0 στην ανάγκη οχήματος, και μετά αποκλίνουν. Η Ύδρα κερδίζει 4.0 έναντι 3.4 με '
+        'το λιμάνι και τον πολιτισμό· το Αγκίστρι έχει πολύ καλύτερες παραλίες με το μισό κόστος.'),
+})
+
 VERDICTS = json.loads((ROOT / 'vs_verdicts.json').read_text(encoding='utf-8'))
 FAQS_PATH = ROOT / 'vs_faqs.json'
 FAQS = json.loads(FAQS_PATH.read_text(encoding='utf-8')) if FAQS_PATH.exists() else {}
