@@ -1452,21 +1452,46 @@ const CLUSTER_ZOOM = 8;              // below → grouped, at/above → branched
 let clusterSpokes = [];              // polylines drawn in the branched state
 let _lastGrouped = null;             // so we only re-render when the state flips
 
-/* Which clusters treat this island as their base. */
+/* Does an island survive the island-group dropdown? Used to keep a cluster's
+   orbit honest — a moon must never represent an island the filter excluded. */
+function _passesGroupFilter(key) {
+  if (typeof currentGroupFilter === 'undefined' || currentGroupFilter === 'all') return true;
+  const isl = (typeof ISLANDS_DATA !== 'undefined') ? ISLANDS_DATA[key] : null;
+  if (!isl) return true;
+  if (currentGroupFilter === '__airport_yes__') return !!isl.has_airport;
+  if (currentGroupFilter === '__airport_no__') return !isl.has_airport;
+  return isl.island_group === currentGroupFilter;
+}
+
+/* Which clusters treat this island as their base.
+   A cluster is only drawn as an orbit when the gateway AND every member pass the
+   active filter. Today all five clusters sit inside a single island group, so
+   group filtering never trips this — but the check keeps the orbit truthful if
+   a future cluster ever straddles two groups. */
 function clustersGatedBy(key) {
   if (typeof ISLAND_CLUSTERS === 'undefined') return [];
   return Object.entries(ISLAND_CLUSTERS)
     .filter(([, c]) => c.gateway === key)
+    .filter(([, c]) => _passesGroupFilter(c.gateway) &&
+                       (c.members || []).every(_passesGroupFilter))
     .map(([ck, c]) => ({ ck, ...c }));
 }
-/* Grouping is a lens, not a filter: switch it off whenever the user is
-   searching or filtering, so results are never silently hidden. */
+
+/* Grouping is a lens, not a filter.
+   It used to switch off for ANY dropdown selection, which killed the clusters
+   exactly when they are most useful — filtering to one island group is how you
+   cut the clutter on a phone. Group filtering is safe because a cluster never
+   spans two groups, and clustersGatedBy() now verifies that per cluster.
+   The airport filters are different: 4 of the 5 gateways have an airport while
+   their members do not, so an orbit there would display islands that fail the
+   filter. Those stay ungrouped, as does an active text search. */
 function clusterGroupingActive() {
   if (typeof ISLAND_CLUSTERS === 'undefined' || !mapInstance) return false;
   const term = ((document.getElementById('islandSearch')?.value ||
                  document.getElementById('bp-hero-search')?.value) || '').trim();
   if (term) return false;
-  if (typeof currentGroupFilter !== 'undefined' && currentGroupFilter !== 'all') return false;
+  if (typeof currentGroupFilter !== 'undefined' &&
+      (currentGroupFilter === '__airport_yes__' || currentGroupFilter === '__airport_no__')) return false;
   return mapInstance.getZoom() < CLUSTER_ZOOM;
 }
 /* Bearing of a satellite from its gateway, maths orientation (0 = east,
