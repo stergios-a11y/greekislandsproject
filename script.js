@@ -585,7 +585,7 @@ document.addEventListener('DOMContentLoaded', () => {
   try { setupMap(); } catch(e) { console.warn('setupMap', e); }
   try { renderWhatsOnStrip().then(adjustMapHeightToStrip); } catch(e) { console.warn('whatsOn', e); }
   try { initHomeHero(); } catch(e) { console.warn('homeHero', e); }
-  try { setupHeaderSearch(); } catch(e) { console.warn('headerSearch', e); }
+  try { setupMapSearch(); } catch(e) { console.warn('mapSearch', e); }
   // Featured cards use per-island hero photos from a small manifest. Render once
   // now (fallback initials) and re-render after the manifest loads (with photos).
   try { loadHeroPhotos(); } catch(e) { console.warn('heroPhotos', e); }
@@ -743,86 +743,57 @@ function renderBuildStamp() {
 }
 
 /* ============================================================
-   HEADER SEARCH DOCK
-   The hero search is also the map's search field — renderMapMarkers()
-   reads #bp-hero-search — but it scrolls out of reach, so you could not
-   search while looking at the map. Instead of a second input (two states
-   for one query), the existing wrap element is relocated into the header
-   dock once the hero leaves the viewport, and moved back when it returns.
-   Same node, so value, listeners and typeahead all follow it.
-============================================================ */
-function setupHeaderSearch() {
-  const wrap = document.querySelector('.bp-hero-search-wrap');
-  const btn = document.getElementById('hdr-search-btn');
-  const dock = document.getElementById('hdr-search-dock');
-  const header = document.querySelector('header');
-  const input = document.getElementById('bp-hero-search');
-  if (!wrap || !btn || !dock || !header) return;   // not the homepage
+   SEARCH INSIDE THE MAP PILL
+   Two earlier attempts put this in the site header; both failed. On desktop
+   the header is contested space (nav, language, dark mode) and the icon was
+   invisible or never rendered; on mobile it was worse. The map pill is the
+   one control surface that is always on screen at every breakpoint.
 
-  // Marks where the wrap belongs so it can be returned to the exact spot.
-  // NOT `hidden`: a display:none marker reports a 0,0 rect, so `top` reads as 0,
-  // which is always above the header — the dock then latched on at first paint
-  // and never released. Zero-sized but laid out keeps the measurement honest.
+   Opening search moves the EXISTING .bp-hero-search-wrap node into the pill,
+   so the value, listeners, typeahead, live map filtering and pan-to-result
+   all come along — there is still exactly one search input on the page.
+============================================================ */
+function setupMapSearch() {
+  const wrap = document.querySelector('.bp-hero-search-wrap');
+  const bar = document.getElementById('home-controls');
+  const btn = document.getElementById('mf-search-btn');
+  const slot = document.getElementById('mf-search-slot');
+  const input = document.getElementById('bp-hero-search');
+  if (!wrap || !bar || !btn || !slot) return;   // not the homepage
+
+  // Where the wrap lives when it is not in the pill. Zero-sized but laid out —
+  // a display:none marker reports a 0,0 rect, which broke the previous version.
   const home = document.createElement('span');
-  home.className = 'hdr-search-home';
   home.setAttribute('aria-hidden', 'true');
   home.style.cssText = 'display:block;width:0;height:0;overflow:hidden';
   wrap.parentNode.insertBefore(home, wrap);
-  // The hero itself is the fallback reference once the wrap has been moved away.
-  const hero = document.getElementById('bp-hero');
 
-  let docked = false, open = false;
-  const headerH = () => header.getBoundingClientRect().height || 56;
-
-  function openDock() {
+  let open = false;
+  function openSearch() {
     open = true;
-    dock.style.top = headerH() + 'px';
-    dock.hidden = false;
-    dock.appendChild(wrap);
+    slot.hidden = false;
+    slot.appendChild(wrap);
+    bar.classList.add('searching');
     btn.setAttribute('aria-expanded', 'true');
-    document.body.classList.add('hdr-search-open');
     if (input) { input.focus(); input.select(); }
   }
-  function closeDock(restore) {
+  function closeSearch() {
     open = false;
-    dock.hidden = true;
+    bar.classList.remove('searching');
     btn.setAttribute('aria-expanded', 'false');
-    document.body.classList.remove('hdr-search-open');
-    if (restore !== false) home.parentNode.insertBefore(wrap, home);
+    slot.hidden = true;
+    home.parentNode.insertBefore(wrap, home);
     const sug = document.getElementById('bp-hero-suggest');
     if (sug) { sug.hidden = true; sug.innerHTML = ''; }
   }
-
-  btn.addEventListener('click', () => (open ? closeDock() : openDock()));
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && open) closeDock(); });
+  btn.addEventListener('click', () => (open ? closeSearch() : openSearch()));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && open) closeSearch(); });
   document.addEventListener('click', (e) => {
     if (!open) return;
-    if (e.target.closest('#hdr-search-dock') || e.target.closest('#hdr-search-btn')) return;
-    closeDock();
+    if (e.target.closest('#home-controls')) return;
+    closeSearch();
   });
-
-  function sync() {
-    // Dock once the hero search's own slot has passed above the header. While
-    // docked the wrap has moved out, so fall back to the hero's own bottom edge.
-    const ref = docked && hero ? hero.getBoundingClientRect().bottom
-                               : home.getBoundingClientRect().top;
-    const shouldDock = ref < headerH();
-    if (shouldDock === docked) return;
-    docked = shouldDock;
-    btn.hidden = !docked;
-    if (!docked && open) closeDock();
-  }
-  window.addEventListener('scroll', sync, { passive: true });
-  window.addEventListener('resize', () => { sync(); if (open) dock.style.top = headerH() + 'px'; });
-  sync();
-  // The hero photo and its layout settle asynchronously, so re-measure once
-  // things have actually been painted rather than trusting the first frame.
-  requestAnimationFrame(sync);
-  window.addEventListener('load', sync);
-  setTimeout(sync, 600);
-
-  // Expose so the search handler can close the dock after a pick.
-  window._closeHeaderSearch = () => { if (open) closeDock(); };
+  window._closeHeaderSearch = () => { if (open) closeSearch(); };
 }
 
 /* When a query narrows to a single island, move the map to it. Filtering

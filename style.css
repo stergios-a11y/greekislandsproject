@@ -6109,7 +6109,10 @@ html.dark .bp-sc-score { color: #071820; }
    Map-embedded filter bar (replaces the white strip above the map)
 ============================================================ */
 .map-filterbar {
-  position: absolute; top: 14px; left: 50%; transform: translateX(-50%); z-index: 1001;
+  /* z-index sits BELOW the sticky header (1000). At 1001 the pill painted over
+     the nav once the map scrolled up, making Compare / Match Me / Budget /
+     Ferries / Festivals / Islands Data unclickable on desktop. */
+  position: absolute; top: 14px; left: 50%; transform: translateX(-50%); z-index: 900;
   display: flex; gap: 6px; align-items: center;
   background: color-mix(in srgb, var(--white, #FFFBF5) 94%, transparent);
   backdrop-filter: blur(10px); border-radius: 999px; padding: 6px 8px;
@@ -6292,4 +6295,37 @@ html.dark .map-top-btn { background: rgba(23, 28, 36, 0.95); color: #7FD4E8; }
 @media (max-width: 600px) {
   /* the brand wordmark would fight the icon for room */
   body.hdr-search-open #brand-text { display: none; }
+}
+
+/* ----------------------------------------------------------
+   SEARCH INSIDE THE MAP PILL
+   The header magnifier was tried twice and failed — hidden behind
+   contested header space on desktop, worse on mobile. The pill is the
+   only control surface that is always visible, at every breakpoint,
+   and always over the map. Opening search turns the whole pill into a
+   field and hides the dropdowns, so the behaviour is identical at 360px
+   and 2560px with no overflow arithmetic.
+---------------------------------------------------------- */
+.mf-search-btn {
+  flex: 0 0 auto;
+  display: flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px;
+  border: 0; border-radius: 999px;
+  background: transparent; color: var(--aegean-dark, #0B5666);
+  cursor: pointer;
+}
+.mf-search-btn:hover { background: var(--aegean-light, #E1F5EE); }
+.map-filterbar.searching .mf-search-btn { background: var(--aegean-light, #E1F5EE); }
+.mf-controls { display: flex; gap: 6px; align-items: center; min-width: 0; }
+.map-filterbar.searching .mf-controls { display: none; }
+.mf-search-slot { flex: 1 1 auto; min-width: 0; display: flex; }
+.mf-search-slot[hidden] { display: none; }
+.map-filterbar.searching { width: min(560px, calc(100% - 24px)); }
+.mf-search-slot .bp-hero-search-wrap { max-width: none; margin: 0; width: 100%; }
+.mf-search-slot .bp-hero-search input { height: 34px; font-size: 14px; }
+.mf-search-slot .bp-hero-search button { padding: 6px 14px; font-size: 13px; }
+.mf-search-slot .bp-hero-suggest { max-height: 52vh; overflow-y: auto; }
+@media (max-width: 600px) {
+  .map-filterbar.searching { width: calc(100% - 20px); }
+  .mf-search-slot .bp-hero-search button { display: none; }
 }
