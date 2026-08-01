@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-07-31';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-08-01';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -301,6 +301,16 @@ let DIM_LABELS = ['Beach', 'Culture', 'Nightlife', 'Access', 'Affordability', 'C
 const SCORE_COLORS = {
   beach: '#1B4F8A', hist: '#5A7A3A', night: '#C0522A', access: '#C4962A', afford: '#7B5EA7', car_need: '#6B7280',
 };
+
+/* Styling for a marker that fails the active filters.
+   These used to be drawn #c8c8c8 with #999 text — grey on grey, about 1.6:1 —
+   and then Leaflet applied opacity 0.22 on top of that. The two effects stacked
+   and the pins became unreadable ghosts, worst on a bright phone screen. One
+   dimming mechanism now, dark enough that white text stays legible. */
+const DIM_FILL = '#6B7683';
+const DIM_TEXT = '#fff';
+const DIM_SHADOW = '0 1px 3px rgba(0,0,0,.18)';
+const DIM_OPACITY = 0.65;
 
 function scoreToColor(s) {
   if (s >= 4.5) return '#1B5E20'; // deep green (best)
@@ -1492,7 +1502,7 @@ function _spreadMoons(list, minSep) {
 /* Gateway marker + orbit + moons. Mirrors makeMarkerIcon()'s sizing so the
    island itself looks identical to every other island on the map. */
 function makeSatelliteIcon(score, dimmed, clusters) {
-  const color = dimmed ? '#c8c8c8' : scoreToColor(score);
+  const color = dimmed ? DIM_FILL : scoreToColor(score);
   const size = Math.round(20 + score * 2), r = size / 2;
   const z = mapInstance ? mapInstance.getZoom() : 6;
   const zf = Math.max(0, Math.min(1, (z - 6) / 2));          // grows a little as you zoom
@@ -1513,7 +1523,7 @@ function makeSatelliteIcon(score, dimmed, clusters) {
     const x = cx + orbit * Math.cos(o.a), y = cy - orbit * Math.sin(o.a);
     return `<i class="sat-moon" style="left:${(x - moon).toFixed(1)}px;top:${(y - moon).toFixed(1)}px;
       width:${(moon * 2).toFixed(1)}px;height:${(moon * 2).toFixed(1)}px;
-      background:${dimmed ? '#c8c8c8' : scoreToColor(o.s)}"></i>`;
+      background:${dimmed ? DIM_FILL : scoreToColor(o.s)}"></i>`;
   }).join('');
 
   return L.divIcon({
@@ -1524,7 +1534,7 @@ function makeSatelliteIcon(score, dimmed, clusters) {
                   stroke="${color}" stroke-width="1.5" opacity=".5"/>
         </svg>
         <span class="sat-core" style="left:${cx - r}px;top:${cy - r}px;width:${size}px;height:${size}px;
-          background:${color};color:${dimmed ? '#999' : '#fff'}">${fmt(score)}</span>
+          background:${color};color:${dimmed ? DIM_TEXT : '#fff'}">${fmt(score)}</span>
         ${dots}
       </div>`,
     iconSize: [box, box], iconAnchor: [box / 2, box / 2],
@@ -1555,10 +1565,10 @@ function getDisplayScore(island) {
 }
 
 function makeMarkerIcon(score, dimmed) {
-  const color = dimmed ? '#c8c8c8' : scoreToColor(score);
+  const color = dimmed ? DIM_FILL : scoreToColor(score);
   const size = Math.round(20 + score * 2);
-  const textColor = dimmed ? '#999' : '#fff';
-  const shadow = dimmed ? 'none' : '0 2px 6px rgba(0,0,0,.3)';
+  const textColor = dimmed ? DIM_TEXT : '#fff';
+  const shadow = dimmed ? DIM_SHADOW : '0 2px 6px rgba(0,0,0,.3)';
   return L.divIcon({
     className: 'custom-marker',
     html: `<div style="background:${color};width:${size}px;height:${size}px;border-radius:50%;border:2px solid #fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:${textColor};box-shadow:${shadow};">${fmt(score)}</div>`,
@@ -1595,7 +1605,7 @@ function renderMapMarkers() {
     const carLabel = carWords[Math.round(island.car_need || 0)] || '—';
     const marker = L.marker([island.lat, island.lng], {
       icon: _gates.length ? makeSatelliteIcon(score, !vibeMatch, _gates) : makeMarkerIcon(score, !vibeMatch),
-      opacity: vibeMatch ? 1 : 0.22,
+      opacity: vibeMatch ? 1 : DIM_OPACITY,
       zIndexOffset: _gates.length ? 400 : 0 })
       .addTo(mapInstance)
       .bindTooltip(`
