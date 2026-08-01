@@ -698,7 +698,7 @@ function setupNav() {
     'nav-compare': 'compare', 'nav-hopping': 'hopping',
     'nav-international': 'international',
     'nav-match': 'match', 'nav-shortlist': 'shortlist', 'nav-mission': 'mission',
-    'footer-mission': 'mission', 'hop-intl-link': 'international',
+    'hop-intl-link': 'international',   // footer-mission removed: Mission lives in the top nav only
   };
   Object.entries(navMap).forEach(([btnId, view]) => {
     const el = document.getElementById(btnId);

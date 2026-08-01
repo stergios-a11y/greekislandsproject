@@ -48,7 +48,7 @@ def _resolve_root():
 
 ROOT = _resolve_root()
 SITE_URL = 'https://aegeanblueprint.com'
-ASSET_V = 73
+ASSET_V = 74
 
 from datetime import date as _date
 YEAR = _date.today().year
@@ -684,7 +684,7 @@ def render_page(pair_key, lang):
             ('/el/#shortlist', '⭐ Λίστα μου', 'nav-shortlist'),
         ]
         home_url = '/el/'
-        privacy_link = '<a href="/el/privacy/" data-i18n="footer.privacy">Απόρρητο</a> · <a href="/el/#mission">Στόχος</a>'
+        privacy_link = '<a href="/el/privacy/" data-i18n="footer.privacy">Απόρρητο</a>'
     else:
         nav_items = [
             ('/#compare', 'Compare', 'nav-compare'),
@@ -697,7 +697,7 @@ def render_page(pair_key, lang):
             ('/#shortlist', '⭐ My Shortlist', 'nav-shortlist'),
         ]
         home_url = '/'
-        privacy_link = '<a href="/privacy/" data-i18n="footer.privacy">Privacy</a> · <a href="/#mission">Mission</a>'
+        privacy_link = '<a href="/privacy/" data-i18n="footer.privacy">Privacy</a>'
 
     nav_html = '\n        '.join(
         f'<a href="{esc(href)}" id="{nav_id}">{esc(label)}</a>'
@@ -1078,7 +1078,7 @@ def render_hub_page(lang, valid_pairs):
             ('/el/#mission', 'Στόχος', 'nav-mission'),
             ('/el/#shortlist', '⭐ Λίστα μου', 'nav-shortlist'),
         ]
-        privacy_link = '<a href="/el/privacy/" data-i18n="footer.privacy">Απόρρητο</a> · <a href="/el/#mission">Στόχος</a>'
+        privacy_link = '<a href="/el/privacy/" data-i18n="footer.privacy">Απόρρητο</a>'
     else:
         nav_items = [
             ('/#compare', 'Compare', 'nav-compare'),
@@ -1090,7 +1090,7 @@ def render_hub_page(lang, valid_pairs):
             ('/#mission', 'Mission', 'nav-mission'),
             ('/#shortlist', '⭐ My Shortlist', 'nav-shortlist'),
         ]
-        privacy_link = '<a href="/privacy/" data-i18n="footer.privacy">Privacy</a> · <a href="/#mission">Mission</a>'
+        privacy_link = '<a href="/privacy/" data-i18n="footer.privacy">Privacy</a>'
 
     nav_html = '\n        '.join(
         f'<a href="{esc(href)}" id="{nav_id}">{esc(label)}</a>'
