@@ -6260,8 +6260,10 @@ html.dark .map-top-btn { background: rgba(23, 28, 36, 0.95); color: #7FD4E8; }
   background: none;
   border: none;
   color: #fff;
-  padding: 6px 8px;
-  margin-left: auto;
+  padding: 8px;
+  min-width: 40px;
+  min-height: 40px;
+  justify-content: center;
   cursor: pointer;
   display: flex;
   align-items: center;

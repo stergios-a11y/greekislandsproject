@@ -711,10 +711,16 @@ function setupHeaderSearch() {
   if (!wrap || !btn || !dock || !header) return;   // not the homepage
 
   // Marks where the wrap belongs so it can be returned to the exact spot.
+  // NOT `hidden`: a display:none marker reports a 0,0 rect, so `top` reads as 0,
+  // which is always above the header — the dock then latched on at first paint
+  // and never released. Zero-sized but laid out keeps the measurement honest.
   const home = document.createElement('span');
   home.className = 'hdr-search-home';
-  home.hidden = true;
+  home.setAttribute('aria-hidden', 'true');
+  home.style.cssText = 'display:block;width:0;height:0;overflow:hidden';
   wrap.parentNode.insertBefore(home, wrap);
+  // The hero itself is the fallback reference once the wrap has been moved away.
+  const hero = document.getElementById('bp-hero');
 
   let docked = false, open = false;
   const headerH = () => header.getBoundingClientRect().height || 56;
@@ -747,8 +753,11 @@ function setupHeaderSearch() {
   });
 
   function sync() {
-    // Dock once the hero search's own slot has passed above the header.
-    const shouldDock = home.getBoundingClientRect().top < headerH();
+    // Dock once the hero search's own slot has passed above the header. While
+    // docked the wrap has moved out, so fall back to the hero's own bottom edge.
+    const ref = docked && hero ? hero.getBoundingClientRect().bottom
+                               : home.getBoundingClientRect().top;
+    const shouldDock = ref < headerH();
     if (shouldDock === docked) return;
     docked = shouldDock;
     btn.hidden = !docked;
@@ -757,6 +766,11 @@ function setupHeaderSearch() {
   window.addEventListener('scroll', sync, { passive: true });
   window.addEventListener('resize', () => { sync(); if (open) dock.style.top = headerH() + 'px'; });
   sync();
+  // The hero photo and its layout settle asynchronously, so re-measure once
+  // things have actually been painted rather than trusting the first frame.
+  requestAnimationFrame(sync);
+  window.addEventListener('load', sync);
+  setTimeout(sync, 600);
 
   // Expose so the search handler can close the dock after a pick.
   window._closeHeaderSearch = () => { if (open) closeDock(); };
