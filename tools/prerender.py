@@ -1791,6 +1791,7 @@ def render_page(key, data, meta, lang='en'):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.localStorage&&document.documentElement.classList.toggle("dark",localStorage.getItem("darkMode")===null?window.matchMedia("(prefers-color-scheme: dark)").matches:localStorage.getItem("darkMode")==="true")</script>
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
 <meta name="theme-color" content="#0B8FAC">
@@ -1833,7 +1834,7 @@ def render_page(key, data, meta, lang='en'):
 <script type="application/ld+json">{schema_json}</script>
 
 <!-- SPA assets — load the same CSS as the main site so the SEO body blends visually -->
-<link rel="stylesheet" href="{asset_prefix}style.css?v=56">
+<link rel="stylesheet" href="{asset_prefix}style.css?v=57">
 <style>
   /* Minimal SEO body styling — these elements exist only in pre-rendered pages */
   .seo-island-content {{
@@ -2208,7 +2209,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=42"></script>
-<script src="{asset_prefix}script.js?v=84"></script>
+<script src="{asset_prefix}script.js?v=85"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
@@ -2508,6 +2509,7 @@ def generate_ferries_page(island_keys):
             '<meta charset="UTF-8">\n'
             '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
             '<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>\n<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag(\'js\',new Date());gtag(\'config\',\'G-FMFWLRM2J9\');</script>\n'
+            '<script>window.localStorage&&document.documentElement.classList.toggle("dark",localStorage.getItem("darkMode")===null?window.matchMedia("(prefers-color-scheme: dark)").matches:localStorage.getItem("darkMode")==="true")</script>\n'
             f'<title>{esc(title)}</title>\n'
             f'<meta name="description" content="{esc(description)}">\n'
             '<meta name="theme-color" content="#0B8FAC">\n'
@@ -2982,6 +2984,7 @@ def generate_festivals_page(island_keys):
             '<meta charset="UTF-8">\n'
             '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
             '<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>\n<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag(\'js\',new Date());gtag(\'config\',\'G-FMFWLRM2J9\');</script>\n'
+            '<script>window.localStorage&&document.documentElement.classList.toggle("dark",localStorage.getItem("darkMode")===null?window.matchMedia("(prefers-color-scheme: dark)").matches:localStorage.getItem("darkMode")==="true")</script>\n'
             '<title>' + esc(title) + '</title>\n'
             '<meta name="description" content="' + esc(meta_desc) + '">\n'
             '<meta name="theme-color" content="#0B8FAC">\n'

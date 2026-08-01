@@ -48,7 +48,7 @@ def _resolve_root():
 
 ROOT = _resolve_root()
 SITE_URL = 'https://aegeanblueprint.com'
-ASSET_V = 84
+ASSET_V = 85
 
 from datetime import date as _date
 YEAR = _date.today().year
@@ -834,6 +834,7 @@ def render_page(pair_key, lang):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.localStorage&&document.documentElement.classList.toggle("dark",localStorage.getItem("darkMode")===null?window.matchMedia("(prefers-color-scheme: dark)").matches:localStorage.getItem("darkMode")==="true")</script>
 <title>{esc(page_title)}</title>
 <meta name="description" content="{esc(page_desc)}">
 <meta name="theme-color" content="#0B8FAC">
@@ -1235,6 +1236,7 @@ def render_hub_page(lang, valid_pairs):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.localStorage&&document.documentElement.classList.toggle("dark",localStorage.getItem("darkMode")===null?window.matchMedia("(prefers-color-scheme: dark)").matches:localStorage.getItem("darkMode")==="true")</script>
 <title>{esc(page_title)}</title>
 <meta name="description" content="{esc(page_desc)}">
 <meta name="theme-color" content="#0B8FAC">

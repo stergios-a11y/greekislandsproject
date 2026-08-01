@@ -900,23 +900,52 @@ function setupLanguageToggle() {
   });
 }
 
+/* Dark mode follows the phone unless the reader overrides it.
+   iOS and Android both offer "Automatic — sunset to sunrise" and know the
+   user's real location, so honouring prefers-color-scheme gives true sunset
+   switching for free. Rolling our own clock would need geolocation, would
+   disagree with the OS, and would override people who chose light on purpose.
+   The class itself is set by an inline <head> script so there is no flash. */
 function setupDarkMode() {
   const btn = document.getElementById('dark-mode-btn');
   const root = document.documentElement;
-  // Apply persisted preference even if the toggle button isn't on this page
-  // (static island pages don't include the homepage's dark-mode button).
-  if (localStorage.getItem('darkMode') === 'true') {
-    root.classList.add('dark');
-    if (btn) btn.textContent = '☀';
+  const mq = window.matchMedia('(prefers-color-scheme: dark)');
+  const stored = () => localStorage.getItem('darkMode');   // null = follow the OS
+
+  function paint() {
+    const isDark = root.classList.contains('dark');
+    if (btn) {
+      btn.textContent = isDark ? '☀' : '☾';
+      btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+    }
   }
-  // No button → nothing to wire up; bail before .addEventListener throws.
+  function apply(isDark) {
+    root.classList.toggle('dark', isDark);
+    paint();
+    try { if (radarChartInstance) renderRadarChart(); } catch (_) {}
+    try { swapAllTiles(); } catch (_) {}
+  }
+
+  // Live-follow the OS while no manual choice is stored — this is what makes
+  // the page go dark at sunset without the reader touching anything.
+  const onOsChange = (e) => { if (stored() === null) apply(e.matches); };
+  if (mq.addEventListener) mq.addEventListener('change', onOsChange);
+  else if (mq.addListener) mq.addListener(onOsChange);
+
+  paint();
   if (!btn) return;
+
+  // On phones the toggle lives inside the hamburger menu; the top bar is too
+  // contested to spend a slot on something most people never touch.
+  if (window.matchMedia('(max-width: 840px)').matches) {
+    const nav = document.getElementById('main-nav');
+    if (nav) { btn.classList.add('in-nav'); nav.appendChild(btn); }
+  }
+
   btn.addEventListener('click', () => {
-    const isDark = root.classList.toggle('dark');
-    btn.textContent = isDark ? '☀' : '☾';
-    localStorage.setItem('darkMode', isDark);
-    if (radarChartInstance) renderRadarChart();
-    swapAllTiles();
+    const isDark = !root.classList.contains('dark');
+    localStorage.setItem('darkMode', isDark);   // manual choice wins from now on
+    apply(isDark);
   });
 }
 

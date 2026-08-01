@@ -6379,3 +6379,13 @@ html.dark .map-top-btn { background: var(--terracotta, #F07050); color: #fff; }
 @media (max-width: 700px) {
   #site-footer { padding: 10px 14px; margin-top: 20px; }
 }
+
+/* Dark-mode toggle moves into the hamburger menu on phones (see setupDarkMode).
+   The top bar is contested space and this is a control most readers never
+   touch — the OS preference now handles it for them. */
+#dark-mode-btn.in-nav {
+  display: block; width: 100%; text-align: left;
+  padding: 12px 18px; font-size: 15px;
+  background: none; border: 0; border-top: 1px solid rgba(255,255,255,.15);
+  color: inherit; cursor: pointer;
+}

@@ -20,7 +20,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE_URL = 'https://aegeanblueprint.com'
-STYLE_V = 56  # keep in sync with index.html
+STYLE_V = 57  # keep in sync with index.html
 
 # ---------------------------------------------------------------- data
 
@@ -284,6 +284,7 @@ def render_page(lang, meta, data):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-FMFWLRM2J9');</script>
+<script>window.localStorage&&document.documentElement.classList.toggle("dark",localStorage.getItem("darkMode")===null?window.matchMedia("(prefers-color-scheme: dark)").matches:localStorage.getItem("darkMode")==="true")</script>
 <title>{t['title']}</title>
 <meta name="description" content="{t['desc']}">
 <meta name="theme-color" content="#0B8FAC">
