@@ -586,6 +586,7 @@ document.addEventListener('DOMContentLoaded', () => {
   try { renderWhatsOnStrip().then(adjustMapHeightToStrip); } catch(e) { console.warn('whatsOn', e); }
   try { initHomeHero(); } catch(e) { console.warn('homeHero', e); }
   try { setupMapSearch(); } catch(e) { console.warn('mapSearch', e); }
+  try { setupVibePanelDismiss(); } catch(e) { console.warn('vibeDismiss', e); }
   // Featured cards use per-island hero photos from a small manifest. Render once
   // now (fallback initials) and re-render after the manifest loads (with photos).
   try { loadHeroPhotos(); } catch(e) { console.warn('heroPhotos', e); }
@@ -1834,6 +1835,35 @@ function toggleVibePanel() {
   panel.style.display = open ? '' : 'none';
   btn && btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   if (open) updateVibeMatchCount();
+}
+
+function closeVibePanel() {
+  const panel = document.getElementById('vibe-panel');
+  const btn   = document.getElementById('vibe-filter-btn');
+  if (!panel || panel.style.display === 'none') return;
+  panel.style.display = 'none';
+  btn && btn.setAttribute('aria-expanded', 'false');
+}
+
+/* The filter panel used to stay open until you pressed the button again, so it
+   sat over the map you were trying to look at — worst on a phone, where it
+   covers most of the screen. Any interaction with the map now dismisses it;
+   choosing tags inside the panel does not. */
+function setupVibePanelDismiss() {
+  document.addEventListener('click', (e) => {
+    const panel = document.getElementById('vibe-panel');
+    if (!panel || panel.style.display === 'none') return;
+    if (e.target.closest('#vibe-panel') || e.target.closest('#vibe-filter-btn')) return;
+    closeVibePanel();
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVibePanel(); });
+  // Pan and zoom close it too. Deliberately NOT Leaflet's 'click': the panel is
+  // rendered inside #main-map, so a map click also fires when you tap a filter
+  // tag, which closed the panel on every selection. Ordinary DOM clicks on the
+  // map already bubble to the document handler above, which excludes the panel.
+  if (typeof mapInstance !== 'undefined' && mapInstance) {
+    mapInstance.on('movestart zoomstart', closeVibePanel);
+  }
 }
 
 function toggleVibeTag(filter) {

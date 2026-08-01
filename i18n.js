@@ -464,12 +464,12 @@ const UI_TEXT = {
   'feedback.email.placeholder': { en: 'you@example.com', el: 'you@example.com' },
 
   // Accessibility: aria-label / title / alt attributes
-  'a11y.search_islands': { en: 'Search islands', el: 'Αναζήτηση νησιών' },
   'a11y.filter_group': { en: 'Filter by island group', el: 'Φιλτράρισμα ανά νησιωτικό σύμπλεγμα' },
   'a11y.rank_map_by': { en: 'Rank map by', el: 'Ταξινόμηση χάρτη κατά' },
   'a11y.radar_compare': { en: 'Radar chart comparing two islands', el: 'Διάγραμμα ράνταρ που συγκρίνει δύο νησιά' },
-  'a11y.search_islands': { en: 'Search islands', el: 'Αναζήτηση νησιών' },
   'a11y.close_search': { en: 'Close search', el: 'Κλείσιμο αναζήτησης' },
+  'a11y.search_islands': { en: 'Search islands', el: 'Αναζήτηση νησιών' },
+  'search.island': { en: 'Search an island', el: 'Αναζήτηση νησιού' },
   'a11y.switch_language': { en: 'Switch language', el: 'Αλλαγή γλώσσας' },
   'a11y.toggle_dark': { en: 'Toggle dark mode', el: 'Εναλλαγή σκοτεινής λειτουργίας' },
   'a11y.car_scale': { en: '1 = not needed, 5 = essential', el: '1 = δεν χρειάζεται, 5 = απαραίτητο' },

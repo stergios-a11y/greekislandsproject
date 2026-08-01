@@ -6350,3 +6350,20 @@ html.dark .map-top-btn { background: var(--terracotta, #F07050); color: #fff; }
   /* Push the layer switcher clear of the pill on narrow screens. */
   .leaflet-top.leaflet-right .leaflet-control-layers { margin-top: 62px; }
 }
+
+/* Search reads as a search field, not the first filter.
+   Icon-only was ambiguous: sitting left of two dropdowns inside the same pill,
+   it looked like the start of the filter controls. A word plus a divider makes
+   the affordance explicit at a glance. */
+.mf-search-btn { gap: 7px; width: auto; padding: 0 14px 0 11px; }
+.mf-search-label { font-size: 13px; font-weight: 700; white-space: nowrap; letter-spacing: .01em; }
+.mf-search-divider { width: 1px; height: 20px; background: rgba(26,35,50,.16); flex: 0 0 auto; }
+.map-filterbar.searching .mf-search-label,
+.map-filterbar.searching .mf-search-divider { display: none; }
+.map-filterbar.searching .mf-search-btn { width: 34px; padding: 0; }
+@media (max-width: 600px) {
+  /* Keep the word on phones too — that is where the ambiguity was worst.
+     Room comes from shortening the dropdowns instead. */
+  .mf-search-label { font-size: 12px; }
+  .map-filterbar .filter-select { max-width: 96px; }
+}
