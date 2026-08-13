@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FMFWLRM2J9');</script>
+<script>window.localStorage&&document.documentElement.classList.toggle("dark",localStorage.getItem("darkMode")===null?window.matchMedia("(prefers-color-scheme: dark)").matches:localStorage.getItem("darkMode")==="true")</script>
+<title>Μπάτζετ Ταξιδιού στα Ελληνικά Νησιά — πλοία, δωμάτια, αυτοκίνητο | Aegean Blueprint</title>
+<meta name="description" content="Φτιάξε τη διαδρομή σου και δες μια ειλικρινή εκτίμηση κόστους: εισιτήρια πλοίων, δωμάτια ανά μήνα, ενοικίαση αυτοκινήτου, φαγητό — και για τα 88 νησιά.">
+<meta name="theme-color" content="#0B8FAC">
+<meta name="author" content="Stergios Gousios">
+<link rel="canonical" href="https://aegeanblueprint.com/el/trip-cost/">
+<link rel="alternate" hreflang="en" href="https://aegeanblueprint.com/trip-cost/">
+<link rel="alternate" hreflang="el" href="https://aegeanblueprint.com/el/trip-cost/">
+<link rel="alternate" hreflang="x-default" href="https://aegeanblueprint.com/trip-cost/">
+<meta property="og:title" content="Πόσο θα κοστίσει το ταξίδι σου στα νησιά;">
+<meta property="og:description" content="Φτιάξε τη διαδρομή σου και δες μια ειλικρινή εκτίμηση κόστους: εισιτήρια πλοίων, δωμάτια ανά μήνα, ενοικίαση αυτοκινήτου, φαγητό — και για τα 88 νησιά.">
+<meta property="og:url" content="https://aegeanblueprint.com/el/trip-cost/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://aegeanblueprint.com/og/naxos.jpg">
+<link rel="icon" href="/logo-hero.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css?v=62">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Μπάτζετ Ταξιδιού στα Ελληνικά Νησιά", "url": "https://aegeanblueprint.com/el/trip-cost/", "applicationCategory": "TravelApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}}</script>
+<style>
+.tc-page{max-width:1120px;margin:0 auto;padding:0 22px 60px;font-family:'Nunito Sans',sans-serif}
+.tc-head{margin:30px 0 6px}
+.tc-head h1{font-family:'Alegreya',serif;font-weight:800;font-size:34px;margin:0}
+.tc-head p{color:var(--ink-3,#637080);font-size:14.5px;margin-top:6px;max-width:680px}
+.tc-grid{display:grid;grid-template-columns:1fr 380px;gap:24px;margin-top:22px;align-items:start}
+.tc-ctrl{background:var(--card-bg,#fff);border-radius:16px;box-shadow:0 4px 18px rgba(26,35,50,.09);padding:16px 18px;margin-bottom:14px}
+.tc-subl{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-4,#A0ADB8);margin:0 0 8px}
+.tc-ctrl h3{font-family:'Nunito',sans-serif;font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3,#637080);margin:0 0 10px}
+.tc-chips{display:flex;gap:8px;flex-wrap:wrap}
+.tc-chip{border:1.5px solid rgba(26,35,50,.13);background:var(--card-bg,#fff);border-radius:14px;padding:7px 15px;font-weight:700;font-size:13px;cursor:pointer;color:var(--ink-2,#2E3D50);user-select:none}
+.tc-chip small{font-weight:600;color:var(--ink-3,#637080)}
+.tc-chip.on{border-color:#0B8FAC;background:rgba(200,238,245,.55);color:#076880}
+.tc-trav{display:flex;align-items:center;gap:14px}
+.tc-step{display:flex;align-items:center;gap:10px;background:rgba(232,247,251,.9);border-radius:999px;padding:4px}
+.tc-step button{width:30px;height:30px;border:0;border-radius:50%;background:#fff;font-weight:800;font-size:16px;cursor:pointer;color:#076880;box-shadow:0 1px 4px rgba(26,35,50,.15)}
+.tc-step span{font-weight:800;font-size:15px;min-width:20px;text-align:center;color:var(--ink-1,#1A2332)}
+.tc-sw{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:var(--ink-3,#637080);cursor:pointer;user-select:none}
+.tc-sw .s{width:34px;height:20px;border-radius:999px;background:rgba(26,35,50,.15);position:relative;transition:background .15s;flex-shrink:0}
+.tc-sw .s::after{content:'';position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:left .15s}
+.tc-sw.on .s{background:#0B8FAC}
+.tc-sw.on .s::after{left:16px}
+.tc-seg{display:inline-flex;background:rgba(232,247,251,.9);border-radius:999px;padding:3px;gap:2px}
+.tc-seg button{border:0;background:transparent;font-size:14px;padding:4px 10px;border-radius:999px;cursor:pointer;opacity:.55}
+.tc-seg button.on{background:#fff;opacity:1;box-shadow:0 1px 4px rgba(26,35,50,.2)}
+.tc-swaps-box{background:linear-gradient(180deg,rgba(7,104,128,.05),transparent);border:1px solid var(--line,#E4EBF0);border-radius:14px;padding:14px 16px;margin:14px 0}
+.tc-swap{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:9px 0;border-top:1px dashed var(--line,#E4EBF0)}
+.tc-swap:first-of-type{border-top:none}
+.tc-swap-t{flex:1 1 150px;font-size:14px}
+.tc-swap-t small{color:var(--ink-4,#A0ADB8);font-weight:600}
+.tc-swap-d{font-size:13px;white-space:nowrap}
+.tc-swap-b{border:1.5px solid #076880;background:transparent;color:#076880;font:inherit;font-size:13px;font-weight:700;padding:6px 12px;border-radius:9px;cursor:pointer}
+.tc-swap-b:hover{background:#076880;color:#fff}
+.tc-leg{display:flex;align-items:center;gap:10px;padding:8px 4px;color:var(--ink-3,#637080);font-size:13px;font-weight:700}
+.tc-leg .l{flex:0 0 26px;text-align:center;font-size:16px}
+.tc-leg .fp{margin-left:auto;font-weight:800;color:var(--ink-2,#2E3D50);white-space:nowrap}
+.tc-leg .hint{font-weight:600;font-size:11px;color:#C6421F}
+.tc-card{display:flex;gap:14px;background:var(--card-bg,#fff);border-radius:16px;box-shadow:0 4px 18px rgba(26,35,50,.09);padding:12px;align-items:center}
+.tc-card img{width:92px;height:72px;object-fit:cover;border-radius:10px;flex-shrink:0;background:#dde8ec}
+.tc-cb{flex:1;min-width:0}
+.tc-cn{font-family:'Alegreya',serif;font-weight:700;font-size:19px;color:var(--ink-1,#1A2332)}
+.tc-cn a{font-family:'Nunito Sans',sans-serif;font-size:11.5px;font-weight:700;color:#0B8FAC;text-decoration:none;margin-left:8px}
+.tc-cs{font-size:12px;color:var(--ink-3,#637080);margin-top:1px}
+.tc-cc{display:flex;gap:14px;align-items:center;margin-top:8px;flex-wrap:wrap}
+.tc-n{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--ink-2,#2E3D50)}
+.tc-n button{width:24px;height:24px;border:1.5px solid #C8EEF5;background:var(--card-bg,#fff);border-radius:50%;cursor:pointer;font-weight:800;color:#076880}
+.tc-warn{font-size:11.5px;color:#C6421F;margin-top:6px;font-weight:700}
+.tc-x{border:0;background:transparent;color:var(--ink-4,#A0ADB8);font-size:17px;cursor:pointer;align-self:flex-start}
+.tc-add{display:flex;gap:8px;align-items:center;margin:10px 0 0 40px;flex-wrap:wrap;position:relative}
+.tc-add>span{font-size:12.5px;font-weight:800;color:var(--ink-3,#637080)}
+.tc-addbtn{border:1.5px dashed #0B8FAC;background:rgba(232,247,251,.9);color:#076880;border-radius:999px;padding:6px 14px;font-weight:800;font-size:12.5px;cursor:pointer}
+.tc-search{border:1.5px solid rgba(26,35,50,.15);border-radius:999px;padding:7px 14px;font-size:13px;font-family:inherit;min-width:170px;background:var(--card-bg,#fff);color:var(--ink-1,#1A2332)}
+.tc-sug{position:absolute;top:100%;left:0;margin-top:6px;background:var(--card-bg,#fff);border-radius:12px;box-shadow:0 10px 30px rgba(26,35,50,.25);z-index:50;min-width:230px;max-height:260px;overflow:auto;display:none}
+.tc-sug div{padding:9px 14px;font-size:13.5px;font-weight:700;cursor:pointer;color:var(--ink-1,#1A2332)}
+.tc-sug div:hover{background:rgba(200,238,245,.5)}
+.tc-sum{background:var(--card-bg,#fff);border-radius:18px;box-shadow:0 10px 34px rgba(26,35,50,.14);padding:20px;position:sticky;top:16px}
+.tc-sum h2{font-family:'Alegreya',serif;font-weight:800;font-size:21px;margin:0 0 2px;color:var(--ink-1,#1A2332)}
+.tc-ss{font-size:12px;color:var(--ink-3,#637080);margin-bottom:14px}
+.tc-li{display:grid;grid-template-columns:22px 1fr 96px;column-gap:8px;align-items:start;padding:9px 0;border-bottom:1px dashed rgba(26,35,50,.12);font-size:13.5px}
+.tc-li .lbl{color:var(--ink-2,#2E3D50);font-weight:600;min-width:0}
+.tc-li .lbl small{display:block;color:var(--ink-4,#A0ADB8);font-size:11px;font-weight:600;overflow:hidden;text-overflow:ellipsis}
+.tc-li .amt{font-weight:800;white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums;color:var(--ink-1,#1A2332)}
+.tc-li .bk{grid-column:2/4;justify-self:end;margin-top:5px;font-size:11px;font-weight:800;color:#C6421F;white-space:nowrap;text-decoration:none;background:#FEF2EE;padding:3px 9px;border-radius:999px}
+.tc-tot{display:flex;align-items:baseline;margin-top:14px}
+.tc-tot .t1{font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;color:var(--ink-1,#1A2332)}
+.tc-tot .amt{margin-left:auto;font-family:'Nunito',sans-serif;font-weight:800;font-size:24px;color:#076880}
+.tc-pp{text-align:right;font-size:12px;color:var(--ink-3,#637080);margin-top:2px}
+.tc-assume{margin-top:14px;background:rgba(232,247,251,.9);border-radius:12px;padding:11px 13px;font-size:11.5px;color:var(--ink-2,#2E3D50);line-height:1.55}
+.tc-assume b{color:#076880}
+.tc-honest{margin-top:10px;font-size:11px;color:var(--ink-4,#A0ADB8);font-style:italic;line-height:1.5}
+.tc-ctas{display:flex;gap:8px;margin-top:14px}
+.tc-cta{flex:1;text-align:center;border-radius:12px;padding:11px 8px;font-family:'Nunito',sans-serif;font-weight:800;font-size:13.5px;text-decoration:none}
+.tc-cta.f{background:#E8522A;color:#fff}
+.tc-cta.c{background:#0B8FAC;color:#fff}
+@media(max-width:900px){.tc-grid{grid-template-columns:1fr}.tc-sum{position:static}.tc-add{margin-left:0}}
+.seo-footer{font-size:13px;color:var(--ink-3,#637080)}
+.seo-footer a{color:#0B8FAC;text-decoration:none}
+</style>
+<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>
+</head>
+<body>
+<header>
+  <div class="header-content">
+    <a class="logo-wrapper" href="/el/" style="text-decoration: none;">
+      <img src="/logo-hero.svg" id="site-logo" alt="Aegean Blueprint logo">
+      <span id="brand-text"><span class="brand-word">Aegean</span> <span class="brand-word">Blueprint</span></span>
+    </a>
+    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>
+    <nav class="top-nav" id="main-nav">
+      <a href="/el/#compare">Σύγκριση</a>
+      <a href="/el/#match">Βρες το Νησί σου</a>
+      <a href="/el/trip-cost/" class="active">Μπάτζετ</a>
+      <a href="/el/#hopping">Πλοία & Νησοπορία</a>
+      <a href="/el/festivals/">Γιορτές</a>
+      <a href="/el/#data">Στοιχεία Νησιών</a>
+      <a href="/el/#mission">Στόχος</a>
+      <a href="/el/#shortlist">⭐ Η Λίστα μου</a>
+    </nav>
+    <a class="lang-toggle-static" href="/trip-cost/" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;"><span style="margin-right: 4px;">🌐</span>EN</a>
+  </div>
+</header>
+
+<main class="tc-page">
+  <div class="tc-head">
+    <h1>Πόσο θα κοστίσει το ταξίδι σου στα νησιά;</h1>
+    <p>Φτιάξε τη διαδρομή, όρισε τις νύχτες και δες μια ειλικρινή εκτίμηση — ναύλα από πραγματικές αποστάσεις, τιμές δωματίων ανά μήνα, χωρίς ψεύτικη ακρίβεια. Μετά κλείσε ό,τι χρειάζεται κράτηση.</p>
+  </div>
+
+  <div class="tc-grid">
+    <div>
+      <div class="tc-ctrl">
+        <h3>Ξεκίνα από μια διαδρομή</h3>
+        <div class="tc-chips" id="tc-presets">
+          <span class="tc-chip tc-preset on" data-p="classic">🏛 Πρώτη φορά Κυκλάδες<br><small>Πάρος · Νάξος · Σαντορίνη — 8 νύχτες</small></span>
+          <span class="tc-chip tc-preset" data-p="beach">🏖 Κυνηγός παραλιών<br><small>Μήλος · Ίος — 7 νύχτες</small></span>
+          <span class="tc-chip tc-preset" data-p="easy">⛵ Εύκολο δίδυμο<br><small>Πάρος · Νάξος — 7 νύχτες</small></span>
+          <span class="tc-chip tc-preset" data-p="ionian">🌲 Πράσινο Ιόνιο<br><small>Λευκάδα · Μεγανήσι — 6 νύχτες</small></span>
+        </div>
+      </div>
+
+      <div class="tc-ctrl">
+        <h3>1 · Πότε & ποιοι</h3>
+        <div style="display:flex;gap:26px;flex-wrap:wrap;align-items:center">
+          <div class="tc-chips" id="tc-months"><span class="tc-chip" data-m="apr">Απρίλιος</span><span class="tc-chip" data-m="may">Μάιος</span><span class="tc-chip on" data-m="jun">Ιούνιος</span><span class="tc-chip" data-m="jul">Ιούλιος</span><span class="tc-chip" data-m="aug">Αύγουστος</span><span class="tc-chip" data-m="sep">Σεπτέμβριος</span><span class="tc-chip" data-m="oct">Οκτώβριος</span></div>
+          <div class="tc-trav">
+            <label for="tc-date" style="font-size:13px;font-weight:700;color:var(--ink-3,#637080)">📅 Ακριβείς ημερομηνίες</label>
+            <input type="date" id="tc-date" title="προαιρετικό — ακριβέστερες τιμές ανά μήνα και έτοιμοι σύνδεσμοι κράτησης" style="font:inherit;font-size:13.5px;padding:7px 10px;border:1.5px solid var(--line,#DFE6EC);border-radius:10px;background:var(--card,#fff);color:inherit">
+          </div>
+          <div class="tc-trav">
+            <span style="font-size:13px;font-weight:700;color:var(--ink-3,#637080)">Ταξιδιώτες</span>
+            <div class="tc-step"><button id="tc-pax-minus">−</button><span id="tc-pax">2</span><button id="tc-pax-plus">+</button></div>
+          </div>
+        </div>
+        <div style="margin-top:12px">
+          <span class="tc-sw" id="tc-noneu"><span class="s"></span> 🌍 Ταξιδεύεις από χώρα εκτός ΕΕ <small style="font-weight:600;color:var(--ink-4,#A0ADB8)">(προσθέτει eSIM & ασφάλεια)</small></span>
+        </div>
+      </div>
+
+      <div class="tc-ctrl">
+        <h3>2 · Μετάβαση & μετακίνηση</h3>
+        <div class="tc-subl">Άφιξη & αναχώρηση με</div>
+        <div class="tc-chips" id="tc-arr">
+          <span class="tc-chip on" data-arr="ferry">🛳 Πλοίο<br><small>από τα λιμάνια της στεριάς</small></span>
+          <span class="tc-chip" data-arr="fly">✈ Αεροπλάνο<br><small>όπου υπάρχει αεροδρόμιο</small></span>
+        </div>
+        <div class="tc-subl" style="margin-top:14px">Μετακίνηση στα νησιά</div>
+        <div class="tc-chips" id="tc-veh">
+          <span class="tc-chip" data-veh="own">🚙 Το αυτοκίνητό μου<br><small>με το πλοίο από τη στεριά</small></span>
+          <span class="tc-chip" data-veh="car">🚗 Ενοικίαση αυτοκινήτου</span>
+          <span class="tc-chip" data-veh="moto">🛵 Ενοικίαση μηχανακιού</span>
+          <span class="tc-chip" data-veh="none">🚶 Χωρίς όχημα</span>
+        </div>
+      </div>
+
+      <div class="tc-ctrl">
+        <h3>3 · Άνεση</h3>
+        <div class="tc-chips" id="tc-tiers">
+          <span class="tc-chip" data-t="budget">Οικονομικά<br><small>δωμάτια & γύρος</small></span>
+          <span class="tc-chip on" data-t="mid">Μεσαία<br><small>καλό δωμάτιο, ταβέρνες</small></span>
+          <span class="tc-chip" data-t="comfort">Άνετα<br><small>boutique, χωρίς μέτρημα</small></span>
+        </div>
+      </div>
+
+      <div id="tc-route"></div>
+      <div id="tc-swaps"></div>
+
+      <div class="tc-add">
+        <span>Πρόσθεσε νησί:</span>
+        <input class="tc-search" id="tc-search" placeholder="Διάλεξε νησί…" autocomplete="off">
+        <div class="tc-sug" id="tc-sug"></div>
+        <span id="tc-quick"></span>
+      </div>
+    </div>
+
+    <div class="tc-sum" id="tc-summary"></div>
+  </div>
+</main>
+
+<footer class="seo-footer" style="max-width:1120px;margin:0 auto;padding:20px 22px">
+  <p>© 2026 Aegean Blueprint · <a href="https://aegeanblueprint.com/trip-cost/">English</a> · <a href="/el/privacy/">Απόρρητο</a></p>
+</footer>
+
+<script>
+document.getElementById("menu-toggle-btn").addEventListener("click",function(){var n=document.getElementById("main-nav");n.classList.toggle("open");this.classList.toggle("open");});
+
+// ---------------- data (generated by tools/build_trip_cost.py) ----------------
+const LANG="el";
+const T={"departure": "αναχώρηση", "back_to": "επιστροφή", "ferry_to": "πλοίο προς", "via_mainland": "μέσω στεριάς — μάλλον χωρίς απευθείας πλοίο", "fly_hint": "✈ συχνά συμφέρει αεροπορικώς", "ionian_gate": "κοντινότερο λιμάνι στεριάς (οδικώς / ΚΤΕΛ από Αθήνα)", "nights": "νύχτες", "night": "νύχτα", "car": "🚗 αυτοκίνητο", "boat_day": "⛵ ημέρα σκάφους", "rooms_per_night": "δωμάτια", "per_night": "/νύχτα", "carless_note": "Χωρίς αυτοκίνητο στη {n} (το χρειάζεται) — υπολογίζουμε κεντρικό δωμάτιο για να πηγαίνεις παντού με τα πόδια (+{p}%).", "estimate": "Η εκτίμηση του ταξιδιού σου", "li_ferries": "Πλοία", "li_legs": "διαδρομές", "li_pax": "άτομα", "book_ferry": "Κράτηση στο Ferryhopper →", "li_rooms": "Δωμάτια", "central": "(κεντρικό)", "li_car": "Αυτοκίνητο", "days": "μέρες", "book_car": "Σύγκριση στο Discover Cars →", "li_fuel": "Καύσιμα", "li_boat": "Ημέρες σκάφους", "boat_rec": "οι προτεινόμενες εκδρομές μας", "li_food": "Φαγητό & ποτό", "food_s": "ανά άτομο/μέρα", "li_esim": "eSIM — δεδομένα Ελλάδα", "esim_s": "πακέτο 10GB", "book_esim": "Πάρε eSIM →", "li_insurance": "Ταξιδιωτική ασφάλεια", "ins_days": "μέρες", "total": "Σύνολο (χωρίς αεροπορικά)", "pp": "ανά άτομο", "cta_ferry": "🚢 Κράτηση πλοίων", "cta_car": "🚗 Κλείσε αυτοκίνητο", "li_vehicle": "Ενοικίαση οχήματος", "li_flights": "Πτήσεις εσωτερικού", "total_fly": "Σύνολο (χωρίς διεθνείς πτήσεις)", "veh_none": "Πεζή / λεωφορείο", "veh_moto": "Μηχανάκι / ATV", "veh_car": "Αυτοκίνητο", "add_far": "Νησιά μακριά από τη διαδρομή σου κρύβονται — αφαίρεσε στάση για να αλλάξεις περιοχή.", "from_port": "από", "ionian_gate_s": "τοπικό λιμάνι στεριάς", "li_carferry": "Αυτοκίνητο στα πλοία", "carferry_s": "ναύλος οχήματος ×", "empty_trip": "Η διαδρομή σου είναι άδεια — πρόσθεσε ένα νησί για να ξεκινήσεις.", "assume": "<b>Πώς υπολογίζουμε:</b> οικονομικά ναύλα από πραγματικές αποστάσεις · τιμές για ένα καλό δίκλινο τον {month} · ένα γεύμα ταβέρνας + πρωινό/σνακ τη μέρα · αυτοκίνητο μόνο όπου το ενεργοποίησες. Μουσεία, ξαπλώστρες και κοκτέιλ δικά σου.", "honest": "Κάθε ποσό είναι τυπική τιμή, όχι προσφορά — οι πραγματικές τιμές κινούνται περίπου ±20%, και τις ορίζουν ακτοπλοϊκές και ξενοδοχεία, όχι εμείς. Για Ιούλιο–Αύγουστο κλείσε νωρίς· τα πλοία εξαντλούνται.", "guide": "οδηγός →", "remove": "Αφαίρεση", "book_room": "κράτηση δωματίων →", "swaps_title": "💡 Έξυπνες εναλλαγές", "swaps_sub": "Ίδια περιοχή, καλύτερη σχέση — βάσει των βαθμολογιών του site και των επιλογών σου.", "swap_save": "κερδίζεις", "swap_more": "επιπλέον", "swap_apply": "Αλλαγή", "swap_instead": "αντί για", "swap_overall": "συνολικά", "swap_beach": "παραλίες", "tier_budget": "Οικονομικά", "tier_mid": "Μεσαία", "tier_comfort": "Άνετα", "months": {"apr": "Απρίλιος", "may": "Μάιος", "jun": "Ιούνιος", "jul": "Ιούλιος", "aug": "Αύγουστος", "sep": "Σεπτέμβριος", "oct": "Οκτώβριος"}};
+const CFG={"season_room": {"apr": 0.65, "may": 0.7, "jun": 0.85, "jul": 1.0, "aug": 1.15, "sep": 0.8, "oct": 0.65}, "season_car": {"apr": 0.7, "may": 0.75, "jun": 0.85, "jul": 1.0, "aug": 1.25, "sep": 0.85, "oct": 0.7}, "range_lo": 0.85, "range_hi": 1.25, "meal_budget": 0.6, "meal_comfort": 1.65, "carless_central_premium": 1.2, "fuel_per_day": 10.0, "moto_factor": 0.55};
+const ISL={"aegina":{"n":"Aegina","nel":"Αίγινα","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783275556/aegina_xtdqil.jpg","lat":37.75,"lng":23.5,"g":"Saronic","cn":3.0,"air":false,"room":{"budget":65,"mid":140,"comfort":295},"meal":34,"car":42,"boat":null,"b":2.5,"tot":3.3},"agathonisi":{"n":"Agathonisi","nel":"Αγαθονήσι","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783275998/agathonisi_mai1uw.jpg","lat":37.466,"lng":26.966,"g":"Dodecanese","cn":2.0,"air":false,"room":{"budget":45,"mid":95,"comfort":200},"meal":28,"car":42,"boat":null,"b":3.5,"tot":3.0},"agios-efstratios":{"n":"Agios Efstratios","nel":"Άγιος Ευστράτιος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783272506/agios_efstratios_b2y5au.jpg","lat":39.515,"lng":25.007,"g":"NE Aegean","cn":1.0,"air":false,"room":{"budget":45,"mid":95,"comfort":200},"meal":28,"car":null,"boat":null,"b":4.5,"tot":3.3},"agistri":{"n":"Agistri","nel":"Αγκίστρι","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1778777852/skala_port_gjgogq.jpg","lat":37.7,"lng":23.35,"g":"Saronic","cn":1.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":31,"car":null,"boat":null,"b":3.5,"tot":3.4},"alonnisos":{"n":"Alonnisos","nel":"Αλόννησος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783273251/alonissos_ox4yu7.webp","lat":39.216,"lng":23.916,"g":"Sporades","cn":3.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":31,"car":42,"boat":{"n":"Marine Park Boat Trip","nel":"Εκδρομή στο Θαλάσσιο Πάρκο","pp":55},"b":4.4,"tot":3.8},"ammouliani":{"n":"Ammouliani","nel":"Αμμουλιανή","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783272506/ammouliani_jh9w8s.jpg","lat":40.332,"lng":23.916,"g":"Other","cn":2.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":31,"car":42,"boat":{"n":"Drenia Islets & Departure","nel":"Νησίδες Δρένια & Αναχώρηση","pp":55},"b":4.5,"tot":3.5},"amorgos":{"n":"Amorgos","nel":"Αμοργός","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277157/%CE%B1%CE%BC%CE%BF%CF%81%CE%B3%CE%BF%CF%82_pgriwx.jpg","lat":36.833,"lng":25.9,"g":"Cyclades","cn":4.0,"air":false,"room":{"budget":65,"mid":140,"comfort":295},"meal":34,"car":42,"boat":null,"b":4.0,"tot":4.0},"anafi":{"n":"Anafi","nel":"Ανάφη","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277627/%CE%B1%CE%BD%CE%B1%CF%86%CE%B7_cwoaxp.jpg","lat":36.366,"lng":25.766,"g":"Cyclades","cn":3.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":30,"car":42,"boat":null,"b":4.5,"tot":3.9},"andros":{"n":"Andros","nel":"Άνδρος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277169/andros_nk3pmn.jpg","lat":37.83,"lng":24.93,"g":"Cyclades","cn":4.0,"air":false,"room":{"budget":65,"mid":140,"comfort":295},"meal":35,"car":42,"boat":null,"b":3.8,"tot":3.7},"antikythera":{"n":"Antikythera","nel":"Αντικύθηρα","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783273547/%CE%B1%CE%BD%CF%84%CE%B9%CE%BA%CF%85%CE%B8%CE%B7%CF%81%CE%B1_h3f5wa.jpg","lat":35.862,"lng":23.306,"g":"Ionian","cn":2.5,"air":false,"room":{"budget":65,"mid":140,"comfort":295},"meal":34,"car":42,"boat":null,"b":3.5,"tot":3.0},"antiparos":{"n":"Antiparos","nel":"Αντίπαρος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277627/%CE%B1%CE%BD%CF%84%CE%B9%CF%80%CE%B1%CF%81%CE%BF%CF%82_df72ku.jpg","lat":36.995,"lng":25.043,"g":"Cyclades","cn":3.0,"air":false,"room":{"budget":80,"mid":175,"comfort":370},"meal":37,"car":42,"boat":null,"b":4.5,"tot":4.0},"arki":{"n":"Arki","nel":"Αρκιοί","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783292655/%CE%B1%CF%81%CE%BA%CE%B9%CE%BF%CE%B9_kolwmj.jpg","lat":37.38,"lng":26.735,"g":"Dodecanese","cn":1.0,"air":false,"room":{"budget":45,"mid":95,"comfort":200},"meal":30,"car":null,"boat":null,"b":3.0,"tot":3.0},"astypalaia":{"n":"Astypalaia","nel":"Αστυπάλαια","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783275998/astypalaia_gfwulj.jpg","lat":36.55,"lng":26.36,"g":"Dodecanese","cn":4.0,"air":true,"room":{"budget":50,"mid":115,"comfort":240},"meal":32,"car":42,"boat":null,"b":4.0,"tot":3.8},"chania":{"n":"Crete (Chania)","nel":"Κρήτη (Χανιά)","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783274944/crete_chania_ripnqu.avif","lat":35.32,"lng":23.9,"g":"Crete","cn":5.0,"air":true,"room":{"budget":65,"mid":140,"comfort":295},"meal":34,"car":42,"boat":null,"b":5.0,"tot":4.8},"chios":{"n":"Chios","nel":"Χίος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783272505/%CF%87%CE%B9%CE%BF%CF%82_cnscsn.jpg","lat":38.37,"lng":25.995,"g":"NE Aegean","cn":4.0,"air":true,"room":{"budget":45,"mid":95,"comfort":200},"meal":28,"car":42,"boat":null,"b":3.2,"tot":3.6},"corfu":{"n":"Corfu","nel":"Κέρκυρα","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783273547/%CE%BA%CE%B5%CF%81%CE%BA%CF%85%CF%81%CE%B1_d9ehab.jpg","lat":39.62,"lng":19.86,"g":"Ionian","cn":4.0,"air":true,"room":{"budget":65,"mid":140,"comfort":295},"meal":35,"car":42,"boat":null,"b":3.9,"tot":4.2},"donousa":{"n":"Donousa","nel":"Δονούσα","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277157/%CE%B4%CE%BF%CE%BD%CE%BF%CF%85%CF%83%CE%B1_olivs2.jpg","lat":37.095,"lng":25.805,"g":"Cyclades","cn":1.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":32,"car":null,"boat":null,"b":4.5,"tot":3.4},"elafonisos":{"n":"Elafonisos","nel":"Ελαφόνησος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783273767/%CE%B5%CE%BB%CE%B1%CF%86%CE%BF%CE%BD%CE%B7%CF%83%CE%BF%CF%82_aukafa.jpg","lat":36.485,"lng":22.99,"g":"Other","cn":1.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":32,"car":null,"boat":null,"b":5.0,"tot":4.0},"erikousa":{"n":"Erikousa","nel":"Ερείκουσα","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783292655/%CE%B5%CF%81%CE%B5%CE%B9%CE%BA%CE%BF%CE%B8%CF%83%CE%B1_huniox.jpg","lat":39.883,"lng":19.577,"g":"Ionian","cn":1.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":30,"car":null,"boat":null,"b":3.8,"tot":3.2},"evia-central":{"n":"Evia (Central)","nel":"Εύβοια (Κεντρική)","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783273251/central_evia_nh97mf.avif","lat":38.5,"lng":23.85,"g":"Evia","cn":5.0,"air":false,"room":{"budget":45,"mid":95,"comfort":200},"meal":28,"car":42,"boat":null,"b":3.5,"tot":3.9},"evia-north":{"n":"Evia (North)","nel":"Εύβοια (Βόρεια)","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783273250/north_evia_ecjxb0.jpg","lat":38.85,"lng":23.2,"g":"Evia","cn":5.0,"air":false,"room":{"budget":45,"mid":95,"comfort":200},"meal":27,"car":42,"boat":{"n":"Lichadonisia & Limni","nel":"Λιχαδονήσοι & Λίμνη","pp":55},"b":3.8,"tot":3.6},"evia-south":{"n":"Evia (South)","nel":"Εύβοια (Νότια)","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783273251/south_evia_mizhut.jpg","lat":38.016,"lng":24.42,"g":"Evia","cn":5.0,"air":false,"room":{"budget":45,"mid":95,"comfort":200},"meal":28,"car":42,"boat":null,"b":4.6,"tot":3.9},"folegandros":{"n":"Folegandros","nel":"Φολέγανδρος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277633/%CF%86%CE%BF%CE%BB%CE%B5%CE%B3%CE%B1%CE%BD%CE%B4%CF%81%CE%BF%CF%82_yncp02.jpg","lat":36.63,"lng":24.9,"g":"Cyclades","cn":3.0,"air":false,"room":{"budget":95,"mid":210,"comfort":440},"meal":40,"car":50,"boat":{"n":"Katergo, Livadaki & Departure","nel":"Κάτεργο, Λιβαδάκι & Αναχώρηση","pp":55},"b":3.9,"tot":4.0},"fournoi":{"n":"Fournoi","nel":"Φούρνοι","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783275998/fournoi_svcprg.jpg","lat":37.58,"lng":26.5,"g":"NE Aegean","cn":3.0,"air":false,"room":{"budget":45,"mid":95,"comfort":200},"meal":28,"car":42,"boat":{"n":"Chrysomilia & Thymaina","nel":"Χρυσομηλιά & Θύμαινα","pp":55},"b":3.8,"tot":3.2},"gavdos":{"n":"Gavdos","nel":"Γαύδος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783274945/gavdos_elfxnq.jpg","lat":34.84,"lng":24.08,"g":"Crete","cn":1.0,"air":false,"room":{"budget":45,"mid":95,"comfort":200},"meal":28,"car":null,"boat":null,"b":4.8,"tot":3.0},"halki":{"n":"Halki","nel":"Χάλκη","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783275998/halki_ewtjjf.jpg","lat":36.22,"lng":27.61,"g":"Dodecanese","cn":3.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":31,"car":42,"boat":{"n":"Boat Day — Western Beaches","nel":"Ημέρα με Σκάφος — Δυτικές Παραλίες","pp":55},"b":3.8,"tot":3.6},"heraklion":{"n":"Crete (Heraklion)","nel":"Κρήτη (Ηράκλειο)","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783274944/crete_heraklio_qbpjqr.jpg","lat":35.15,"lng":25.1,"g":"Crete","cn":5.0,"air":true,"room":{"budget":65,"mid":140,"comfort":295},"meal":34,"car":42,"boat":null,"b":3.5,"tot":4.2},"hydra":{"n":"Hydra","nel":"Ύδρα","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783275436/hydra_qxs5cb.jpg","lat":37.34,"lng":23.48,"g":"Saronic","cn":1.0,"air":false,"room":{"budget":120,"mid":270,"comfort":565},"meal":42,"car":null,"boat":null,"b":2.2,"tot":4.0},"ikaria":{"n":"Ikaria","nel":"Ικαρία","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783275999/ikaria_ogmbzl.webp","lat":37.6,"lng":26.166,"g":"NE Aegean","cn":4.0,"air":true,"room":{"budget":45,"mid":95,"comfort":200},"meal":28,"car":42,"boat":null,"b":4.0,"tot":3.8},"ios":{"n":"Ios","nel":"Ίος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277628/%CE%B9%CE%BF%CF%82_sl4hwc.jpg","lat":36.72,"lng":25.33,"g":"Cyclades","cn":3.0,"air":false,"room":{"budget":65,"mid":140,"comfort":295},"meal":34,"car":42,"boat":null,"b":4.6,"tot":3.9},"iraklia":{"n":"Iraklia","nel":"Ηρακλειά","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277158/%CE%B7%CF%81%CE%B1%CE%BA%CE%BB%CE%B5%CE%B9%CE%B1_ukyded.jpg","lat":36.84,"lng":25.448,"g":"Cyclades","cn":1.0,"air":false,"room":{"budget":45,"mid":95,"comfort":200},"meal":30,"car":null,"boat":null,"b":4.2,"tot":3.2},"ithaca":{"n":"Ithaca","nel":"Ιθάκη","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783273767/%CE%B9%CE%B8%CE%B1%CE%BA%CE%B7_c5md7m.jpg","lat":38.41,"lng":20.69,"g":"Ionian","cn":4.0,"air":false,"room":{"budget":65,"mid":140,"comfort":295},"meal":34,"car":42,"boat":null,"b":3.8,"tot":3.8},"kalamos":{"n":"Kalamos","nel":"Κάλαμος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783723255/%CE%BA%CE%B1%CE%BB%CE%B1%CE%BC%CE%BF%CF%83_idquvo.jpg","lat":38.625,"lng":20.925,"g":"Ionian","cn":1.5,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":30,"car":42,"boat":null,"b":3.0,"tot":3.2},"kalymnos":{"n":"Kalymnos","nel":"Κάλυμνος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783276001/kalymnos_ohazqe.jpg","lat":36.983,"lng":26.983,"g":"Dodecanese","cn":4.0,"air":true,"room":{"budget":50,"mid":115,"comfort":240},"meal":30,"car":42,"boat":{"n":"Telendos Island & Departure","nel":"Τέλενδος & Αναχώρηση","pp":55},"b":3.5,"tot":3.5},"karpathos":{"n":"Karpathos","nel":"Κάρπαθος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783275437/karpathos_k7ttfd.jpg","lat":35.583,"lng":27.133,"g":"Dodecanese","cn":5.0,"air":true,"room":{"budget":50,"mid":115,"comfort":240},"meal":32,"car":42,"boat":{"n":"Kitesurfing Bays & Departure","nel":"Κόλποι Kitesurfing & Αναχώρηση","pp":55},"b":4.4,"tot":3.8},"kasos":{"n":"Kasos","nel":"Κάσος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783275438/kasos_ccjgwc.webp","lat":35.383,"lng":26.916,"g":"Dodecanese","cn":3.0,"air":true,"room":{"budget":45,"mid":95,"comfort":200},"meal":28,"car":42,"boat":{"n":"Day Trip to Armathia","nel":"Ημερήσια Εκδρομή στην Αρμαθιά","pp":55},"b":3.2,"tot":2.8},"kastellorizo":{"n":"Kastellorizo","nel":"Καστελλόριζο","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783274946/kastelorizo_xsgdpi.jpg","lat":36.14,"lng":29.58,"g":"Dodecanese","cn":1.0,"air":true,"room":{"budget":65,"mid":140,"comfort":295},"meal":34,"car":null,"boat":null,"b":2.0,"tot":4.0},"kastos":{"n":"Kastos","nel":"Καστός","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783292763/%CE%BA%CE%B1%CF%83%CF%84%CE%BF%CF%82_q57n92.png","lat":38.5758,"lng":20.9158,"g":"Ionian","cn":1.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":31,"car":null,"boat":null,"b":2.8,"tot":3.0},"kea":{"n":"Kea (Tzia)","nel":"Κέα","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277158/%CE%BA%CE%B5%CE%B1_p9di3k.jpg","lat":37.616,"lng":24.333,"g":"Cyclades","cn":4.0,"air":false,"room":{"budget":80,"mid":175,"comfort":370},"meal":36,"car":42,"boat":null,"b":3.8,"tot":3.5},"kefalonia":{"n":"Kefalonia","nel":"Κεφαλονιά","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783273547/%CE%BA%CE%B5%CF%86%CE%B1%CE%BB%CE%BF%CE%BD%CE%B9%CE%B1_lmq1jq.jpg","lat":38.175,"lng":20.569,"g":"Ionian","cn":5.0,"air":true,"room":{"budget":50,"mid":115,"comfort":240},"meal":32,"car":42,"boat":null,"b":4.7,"tot":4.1},"kimolos":{"n":"Kimolos","nel":"Κίμωλος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277630/%CE%BA%CE%B9%CE%BC%CF%89%CE%BB%CE%BF%CF%82_qf7e7u.jpg","lat":36.8,"lng":24.57,"g":"Cyclades","cn":3.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":32,"car":42,"boat":{"n":"Skiadi & the Southern Beaches","nel":"Σκιάδι & οι Νότιες Παραλίες","pp":55},"b":4.5,"tot":3.6},"kos":{"n":"Kos","nel":"Κως","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783276002/kos_bjicbi.avif","lat":36.82,"lng":27.1,"g":"Dodecanese","cn":4.0,"air":true,"room":{"budget":50,"mid":115,"comfort":240},"meal":32,"car":42,"boat":null,"b":4.0,"tot":3.7},"koufonisia":{"n":"Koufonisia","nel":"Κουφονήσια","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277159/%CE%BA%CE%BF%CF%85%CF%86%CE%BF%CE%BD%CE%B7%CF%83%CE%B9%CE%B1_c6qjcc.jpg","lat":36.945,"lng":25.6,"g":"Cyclades","cn":1.0,"air":false,"room":{"budget":80,"mid":175,"comfort":370},"meal":36,"car":null,"boat":{"n":"Kato Koufonisi & Departure","nel":"Κάτω Κουφονήσι & Αναχώρηση","pp":55},"b":5.0,"tot":4.0},"kythira":{"n":"Kythira","nel":"Κύθηρα","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783273547/%CE%BA%CF%85%CE%B8%CE%B7%CF%81%CE%B1_vuwxno.jpg","lat":36.25,"lng":23.0,"g":"Ionian","cn":5.0,"air":true,"room":{"budget":50,"mid":115,"comfort":240},"meal":32,"car":42,"boat":null,"b":4.2,"tot":3.8},"kythnos":{"n":"Kythnos","nel":"Κύθνος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277161/%CE%BA%CF%85%CE%B8%CE%BD%CE%BF%CF%82_mq6gnv.jpg","lat":37.4,"lng":24.43,"g":"Cyclades","cn":3.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":32,"car":42,"boat":null,"b":4.2,"tot":3.5},"lasithi":{"n":"Crete (Lasithi)","nel":"Κρήτη (Λασίθι)","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783274944/crete_lasithi_ih1t27.jpg","lat":35.15,"lng":25.9,"g":"Crete","cn":5.0,"air":true,"room":{"budget":65,"mid":140,"comfort":295},"meal":35,"car":42,"boat":null,"b":4.0,"tot":4.0},"lefkada":{"n":"Lefkada","nel":"Λευκάδα","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783273547/%CE%BB%CE%B5%CF%85%CE%BA%CE%B1%CE%B4%CE%B1_jpiaa9.jpg","lat":38.706,"lng":20.648,"g":"Ionian","cn":4.0,"air":true,"room":{"budget":50,"mid":115,"comfort":240},"meal":31,"car":42,"boat":{"n":"Nydri & the East Coast","nel":"Νυδρί & η Ανατολική Ακτή","pp":55},"b":4.9,"tot":4.0},"leipsoi":{"n":"Leipsoi","nel":"Λειψοί","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783276003/leipsoi_hazadg.webp","lat":37.3,"lng":26.75,"g":"Dodecanese","cn":2.0,"air":false,"room":{"budget":45,"mid":95,"comfort":200},"meal":28,"car":42,"boat":null,"b":4.0,"tot":3.4},"lemnos":{"n":"Lemnos","nel":"Λήμνος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783272505/%CE%BB%CE%B7%CE%BC%CE%BD%CE%BF%CF%82_xht7g6.jpg","lat":39.916,"lng":25.166,"g":"NE Aegean","cn":4.0,"air":true,"room":{"budget":45,"mid":95,"comfort":200},"meal":29,"car":42,"boat":null,"b":4.3,"tot":3.7},"leros":{"n":"Leros","nel":"Λέρος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783276004/leros_ok8iyh.jpg","lat":37.15,"lng":26.85,"g":"Dodecanese","cn":3.0,"air":true,"room":{"budget":50,"mid":115,"comfort":240},"meal":30,"car":42,"boat":null,"b":3.2,"tot":3.3},"lesvos":{"n":"Lesvos","nel":"Λέσβος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783272505/%CE%BB%CE%B5%CF%83%CE%B2%CE%BF%CF%82_vsg6hx.jpg","lat":39.21,"lng":26.21,"g":"NE Aegean","cn":5.0,"air":true,"room":{"budget":45,"mid":95,"comfort":200},"meal":28,"car":42,"boat":null,"b":4.0,"tot":4.0},"mathraki":{"n":"Mathraki","nel":"Μαθράκι","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783292655/%CE%BC%CE%B1%CE%B8%CF%81%CE%B1%CE%BA%CE%B9_vcgvii.jpg","lat":39.76,"lng":19.545,"g":"Ionian","cn":1.0,"air":false,"room":{"budget":45,"mid":95,"comfort":200},"meal":30,"car":null,"boat":null,"b":4.0,"tot":3.1},"meganisi":{"n":"Meganisi","nel":"Μεγανήσι","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783273768/meganisi_l4nb1v.jpg","lat":38.6539,"lng":20.7692,"g":"Ionian","cn":3.0,"air":false,"room":{"budget":65,"mid":140,"comfort":295},"meal":35,"car":42,"boat":null,"b":4.0,"tot":3.5},"milos":{"n":"Milos","nel":"Μήλος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277631/%CE%BC%CE%B9%CE%BB%CE%BF%CF%82_fxw6md.webp","lat":36.74,"lng":24.43,"g":"Cyclades","cn":4.0,"air":true,"room":{"budget":80,"mid":175,"comfort":370},"meal":37,"car":42,"boat":{"n":"Kleftiko Boat Trip","nel":"Εκδρομή με Σκάφος στο Κλέφτικο","pp":100},"b":5.0,"tot":4.7},"mykonos":{"n":"Mykonos","nel":"Μύκονος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277162/%CE%BC%CF%85%CE%BA%CE%BF%CE%BD%CE%BF%CF%82_xaq9kx.jpg","lat":37.45,"lng":25.37,"g":"Cyclades","cn":4.0,"air":true,"room":{"budget":160,"mid":350,"comfort":735},"meal":46,"car":50,"boat":{"n":"Delos Sacred Island & Psarou Beach","nel":"Δήλος & Παραλία Ψαρού","pp":55},"b":4.3,"tot":4.3},"naxos":{"n":"Naxos","nel":"Νάξος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277163/%CE%BD%CE%B1%CE%BE%CE%BF%CF%82_qgy4d3.jpg","lat":37.05,"lng":25.49,"g":"Cyclades","cn":4.0,"air":true,"room":{"budget":50,"mid":115,"comfort":240},"meal":31,"car":42,"boat":null,"b":4.8,"tot":4.5},"nisyros":{"n":"Nisyros","nel":"Νίσυρος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783276006/nisyros_dqykk3.jpg","lat":36.583,"lng":27.166,"g":"Dodecanese","cn":3.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":31,"car":42,"boat":null,"b":3.0,"tot":3.8},"oinousses":{"n":"Oinousses","nel":"Οινούσσες","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Oinousses_main_settlement.JPG/1920px-Oinousses_main_settlement.JPG","lat":38.52,"lng":26.202,"g":"NE Aegean","cn":1.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":31,"car":null,"boat":null,"b":3.5,"tot":3.0},"othonoi":{"n":"Othonoi","nel":"Οθωνοί","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783292655/%CE%BF%CE%B8%CF%89%CE%BD%CE%BF%CE%B9_zxmofl.jpg","lat":39.847,"lng":19.4,"g":"Ionian","cn":1.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":30,"car":null,"boat":null,"b":3.5,"tot":3.1},"paros":{"n":"Paros","nel":"Πάρος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277163/%CF%80%CE%B1%CF%81%CE%BF%CF%82_nibyrx.jpg","lat":37.06,"lng":25.2,"g":"Cyclades","cn":3.0,"air":true,"room":{"budget":95,"mid":210,"comfort":440},"meal":40,"car":50,"boat":null,"b":5.0,"tot":4.1},"patmos":{"n":"Patmos","nel":"Πάτμος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783276006/patmos_kyldba.jpg","lat":37.322,"lng":26.545,"g":"Dodecanese","cn":3.0,"air":false,"room":{"budget":80,"mid":175,"comfort":370},"meal":38,"car":42,"boat":null,"b":3.0,"tot":3.6},"paxos":{"n":"Paxos","nel":"Παξοί","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783273547/%CF%80%CE%B1%CE%BE%CE%BF%CE%B9_o3g7yv.jpg","lat":39.2,"lng":20.15,"g":"Ionian","cn":2.0,"air":false,"room":{"budget":80,"mid":175,"comfort":370},"meal":38,"car":42,"boat":{"n":"West Coast Cliffs & Antipaxos","nel":"Γκρεμοί Δυτικής Ακτής & Αντίπαξοι","pp":55},"b":4.2,"tot":4.0},"poros":{"n":"Poros","nel":"Πόρος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783275556/poros_xmmkgr.jpg","lat":37.51,"lng":23.47,"g":"Saronic","cn":3.0,"air":false,"room":{"budget":65,"mid":140,"comfort":295},"meal":35,"car":42,"boat":null,"b":3.0,"tot":3.5},"psara":{"n":"Psara","nel":"Ψαρά","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783272505/psarra_soqnkb.jpg","lat":38.55,"lng":25.54,"g":"NE Aegean","cn":1.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":30,"car":null,"boat":null,"b":3.8,"tot":3.0},"pserimos":{"n":"Pserimos","nel":"Ψέριμος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783292655/%CF%88%CE%B5%CF%81%CE%B9%CE%BC%CE%BF%CF%82_pbxutj.jpg","lat":36.93,"lng":27.152,"g":"Dodecanese","cn":1.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":31,"car":null,"boat":null,"b":4.0,"tot":3.2},"rethymno":{"n":"Crete (Rethymno)","nel":"Κρήτη (Ρέθυμνο)","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783274945/crete_rethymno_jr4y9q.webp","lat":35.25,"lng":24.55,"g":"Crete","cn":5.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":32,"car":42,"boat":null,"b":3.8,"tot":3.8},"rhodes":{"n":"Rhodes","nel":"Ρόδος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783274947/rhodes_qntepy.webp","lat":36.17,"lng":27.91,"g":"Dodecanese","cn":5.0,"air":true,"room":{"budget":65,"mid":140,"comfort":295},"meal":34,"car":42,"boat":null,"b":4.2,"tot":4.4},"salamis":{"n":"Salamis","nel":"Σαλαμίνα","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783275558/salamina_t4dvtr.jpg","lat":37.933,"lng":23.5,"g":"Saronic","cn":3.0,"air":false,"room":{"budget":45,"mid":95,"comfort":200},"meal":28,"car":42,"boat":null,"b":2.0,"tot":2.8},"samos":{"n":"Samos","nel":"Σάμος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783276007/samos_tv8lux.jpg","lat":37.74,"lng":26.8,"g":"NE Aegean","cn":4.0,"air":true,"room":{"budget":50,"mid":115,"comfort":240},"meal":30,"car":42,"boat":null,"b":3.5,"tot":3.3},"samothrace":{"n":"Samothrace","nel":"Σαμοθράκη","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783272505/samothraki_lggl9b.jpg","lat":40.45,"lng":25.535,"g":"Other","cn":3.0,"air":false,"room":{"budget":45,"mid":95,"comfort":200},"meal":28,"car":42,"boat":null,"b":3.0,"tot":3.2},"santorini":{"n":"Santorini","nel":"Σαντορίνη","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1776992198/santo1_rw0mdz.jpg","lat":36.393,"lng":25.461,"g":"Cyclades","cn":3.0,"air":true,"room":{"budget":160,"mid":350,"comfort":735},"meal":46,"car":50,"boat":{"n":"Volcano, Hot Springs & Ammoudi Bay","nel":"Ηφαίστειο, ιαματικές πηγές & κόλπος Αμμούδι","pp":65},"b":3.2,"tot":4.8},"schoinoussa":{"n":"Schoinoussa","nel":"Σχοινούσα","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277168/%CF%83%CF%87%CE%BF%CE%B9%CE%BD%CE%BF%CF%85%CF%83%CE%B1_noic6e.jpg","lat":36.87,"lng":25.51,"g":"Cyclades","cn":1.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":32,"car":null,"boat":{"n":"Psili Ammos & the South Coast","nel":"Ψιλή Άμμος & η Νότια Ακτή","pp":55},"b":4.5,"tot":3.4},"serifos":{"n":"Serifos","nel":"Σέριφος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277165/%CF%83%CE%B5%CF%81%CE%B9%CF%86%CE%BF%CF%83_ijreqj.jpg","lat":37.15,"lng":24.483,"g":"Cyclades","cn":3.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":32,"car":42,"boat":null,"b":4.5,"tot":3.9},"sifnos":{"n":"Sifnos","nel":"Σίφνος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277165/%CF%83%CE%B9%CF%86%CE%BD%CE%BF%CF%82_ulwp62.jpg","lat":36.966,"lng":24.716,"g":"Cyclades","cn":4.0,"air":false,"room":{"budget":65,"mid":140,"comfort":295},"meal":34,"car":42,"boat":null,"b":3.8,"tot":3.9},"sikinos":{"n":"Sikinos","nel":"Σικίνος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277632/%CF%83%CE%B9%CE%BA%CE%B9%CE%BD%CE%BF%CF%82_wgqdhy.jpg","lat":36.683,"lng":25.116,"g":"Cyclades","cn":3.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":31,"car":42,"boat":{"n":"Beaches & Boat Trip","nel":"Παραλίες & Εκδρομή με Σκάφος","pp":55},"b":3.5,"tot":3.4},"skiathos":{"n":"Skiathos","nel":"Σκιάθος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783273251/skiathos_desyug.jpg","lat":39.165,"lng":23.47,"g":"Sporades","cn":3.0,"air":true,"room":{"budget":80,"mid":175,"comfort":370},"meal":36,"car":42,"boat":{"n":"Beach Boat Tour","nel":"Περιήγηση Παραλιών με Σκάφος","pp":55},"b":4.6,"tot":3.9},"skopelos":{"n":"Skopelos","nel":"Σκόπελος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783273251/skopelos_oaxtcl.webp","lat":39.12,"lng":23.7,"g":"Sporades","cn":4.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":32,"car":42,"boat":null,"b":4.2,"tot":3.6},"skyros":{"n":"Skyros","nel":"Σκύρος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783273251/skyros_xyzzvs.webp","lat":38.866,"lng":24.533,"g":"Sporades","cn":4.0,"air":true,"room":{"budget":50,"mid":115,"comfort":240},"meal":30,"car":42,"boat":null,"b":4.0,"tot":3.4},"spetses":{"n":"Spetses","nel":"Σπέτσες","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783275558/spetses_idnsrx.jpg","lat":37.26,"lng":23.13,"g":"Saronic","cn":3.0,"air":false,"room":{"budget":95,"mid":210,"comfort":440},"meal":41,"car":50,"boat":null,"b":2.8,"tot":3.7},"symi":{"n":"Symi","nel":"Σύμη","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783275043/symi_zx4lql.jpg","lat":36.583,"lng":27.833,"g":"Dodecanese","cn":3.0,"air":false,"room":{"budget":80,"mid":175,"comfort":370},"meal":38,"car":42,"boat":null,"b":3.0,"tot":3.8},"syros":{"n":"Syros","nel":"Σύρος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277166/%CF%83%CF%85%CF%81%CE%BF%CF%82_anwqh4.jpg","lat":37.44,"lng":24.91,"g":"Cyclades","cn":3.0,"air":true,"room":{"budget":65,"mid":140,"comfort":295},"meal":34,"car":42,"boat":null,"b":2.8,"tot":3.8},"telendos":{"n":"Telendos","nel":"Τέλενδος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783292655/%CF%84%CE%B5%CE%BB%CE%B5%CE%BD%CE%B4%CE%BF%CF%82_kh1chc.jpg","lat":36.998,"lng":26.918,"g":"Dodecanese","cn":1.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":31,"car":null,"boat":null,"b":2.8,"tot":3.3},"thasos":{"n":"Thasos","nel":"Θάσος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783272506/thassos_mlytko.jpg","lat":40.666,"lng":24.666,"g":"Other","cn":4.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":30,"car":42,"boat":null,"b":4.2,"tot":3.7},"therasia":{"n":"Therasia","nel":"Θηρασία","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277628/%CE%B8%CE%B7%CF%81%CE%B1%CF%83%CE%B9%CE%B1_klaq8i.webp","lat":36.445,"lng":25.335,"g":"Cyclades","cn":1.0,"air":false,"room":{"budget":65,"mid":140,"comfort":295},"meal":34,"car":null,"boat":{"n":"Manolas, Potamos & Korfos","nel":"Μανωλάς, Ποταμός & Κόρφος","pp":55},"b":3.0,"tot":3.1},"thymaina":{"n":"Thymaina","nel":"Θύμαινα","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783292762/%CE%B8%CF%85%CE%BC%CE%B1%CE%B9%CE%BD%CE%B1_uqfv2o.jpg","lat":37.6,"lng":26.44,"g":"NE Aegean","cn":1.0,"air":false,"room":{"budget":45,"mid":95,"comfort":200},"meal":30,"car":null,"boat":null,"b":2.8,"tot":3.0},"tilos":{"n":"Tilos","nel":"Τήλος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783276008/tilos_pmw8cb.jpg","lat":36.44,"lng":27.37,"g":"Dodecanese","cn":3.0,"air":false,"room":{"budget":50,"mid":115,"comfort":240},"meal":30,"car":42,"boat":null,"b":3.8,"tot":3.5},"tinos":{"n":"Tinos","nel":"Τήνος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783277169/tinos_t46arp.webp","lat":37.583,"lng":25.166,"g":"Cyclades","cn":4.0,"air":false,"room":{"budget":65,"mid":140,"comfort":295},"meal":35,"car":42,"boat":null,"b":3.5,"tot":3.7},"zakynthos":{"n":"Zakynthos","nel":"Ζάκυνθος","img":"https://res.cloudinary.com/dothbs5hs/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/v1783273546/%CE%B6%CE%B1%CE%BA%CF%85%CE%BD%CE%B8%CE%BF%CF%82_mk5ayg.jpg","lat":37.79,"lng":20.77,"g":"Ionian","cn":4.0,"air":true,"room":{"budget":65,"mid":140,"comfort":295},"meal":34,"car":42,"boat":null,"b":4.8,"tot":4.1}};
+const PRESETS={
+ classic:[{k:'paros',n:3,v:'',b:true},{k:'naxos',n:3,v:'c',b:false},{k:'santorini',n:2,v:'',b:true}],
+ beach:[{k:'milos',n:4,v:'c',b:true},{k:'ios',n:3,v:'m',b:false}],
+ easy:[{k:'paros',n:4,v:'c',b:false},{k:'naxos',n:3,v:'',b:false}],
+ ionian:[{k:'lefkada',n:4,v:'c',b:false},{k:'meganisi',n:2,v:'',b:true}]
+};
+const QUICK=['santorini','milos','ios','folegandros','sifnos'];
+const GATES={'Piraeus':{lat:37.942,lng:23.646,en:'Piraeus (Athens)',el:'Πειραιάς (Αθήνα)'},'Volos':{lat:39.362,lng:22.942,en:'Volos / Ag. Konstantinos',el:'Βόλος / Αγ. Κωνσταντίνος'}};
+
+// ---------------- model ----------------
+const iname=k=>LANG==='el'?(ISL[k].nel||ISL[k].n):ISL[k].n;
+function haversine(a,b){const R=6371,d=Math.PI/180;const dLat=(b.lat-a.lat)*d,dLng=(b.lng-a.lng)*d;
+  const h=Math.sin(dLat/2)**2+Math.cos(a.lat*d)*Math.cos(b.lat*d)*Math.sin(dLng/2)**2;return 2*R*Math.asin(Math.sqrt(h));}
+function nmFare(km){const nm=km/1.852;
+  return [Math.min(85,Math.max(7,Math.round(7+0.33*nm))),Math.min(120,Math.max(12,Math.round(12+0.55*nm)))];}
+function gateOf(k){const g=ISL[k].g;
+  if(g==='Sporades')return GATES.Volos;
+  if(g==='Ionian')return null; // local mainland port, priced flat
+  return GATES.Piraeus;}
+// fare between two points of the trip; 'M' = mainland start/end
+function legInfo(a,b){
+  const isl=a==='M'?b:a, other=a==='M'?a:b;
+  if(a==='M'||b==='M'){
+    const k=a==='M'?b:a, gate=gateOf(k);
+    if(!gate)return{f:[15,40],label:T.ionian_gate,fly:false};
+    const f=nmFare(haversine(gate,ISL[k]));
+    const fly=ISL[k].air&&f[1]>=60;
+    return{f:f,label:gate[LANG],fly:fly};
+  }
+  if(ISL[a].g===ISL[b].g){return{f:nmFare(haversine(ISL[a],ISL[b])),label:null,fly:false};}
+  // cross-group: via mainland = two legs
+  const ga=gateOf(a),gb=gateOf(b);
+  const fa=ga?nmFare(haversine(ga,ISL[a])):[15,40];
+  const fb=gb?nmFare(haversine(gb,ISL[b])):[15,40];
+  const f=[fa[0]+fb[0],fa[1]+fb[1]];
+  return{f:f,label:T.via_mainland,fly:(ISL[a].air&&ISL[b].air)};
+}
+// Explicit combination rules, then the generic group/distance rule.
+const COMPAT_W={kythira:['antikythera','elafonisos'],antikythera:['kythira','elafonisos'],elafonisos:['kythira','antikythera'],ammouliani:['thasos','samothrace']};
+function pairOK(a,b){
+  if(COMPAT_W[a]||COMPAT_W[b]){
+    if(COMPAT_W[a]&&!COMPAT_W[a].includes(b))return false;
+    if(COMPAT_W[b]&&!COMPAT_W[b].includes(a))return false;
+    return true; // whitelisted pairs are allowed regardless of distance
+  }
+  const ga=ISL[a].g,gb=ISL[b].g;
+  if((ga==='Saronic')!==(gb==='Saronic'))return false;              // Saronic only with Saronic
+  const es=g=>g==='Sporades'||g==='Evia';
+  if(es(ga)!==es(gb))return false;                                  // Evia+Sporades: closed cluster
+  const sameGroup=ga===gb&&ga!=='Other';                            // 'Other' is not a real group
+  return sameGroup||haversine(ISL[a],ISL[b])<=130;
+}
+function nearTrip(k){if(!state.trip.length)return true;return state.trip.every(t=>pairOK(t.k,k));}
+function flightFare(k){const nm=haversine(GATES.Piraeus,ISL[k])/1.852;return Math.min(120,Math.max(55,Math.round(55+0.15*nm)));}
+const eur=n=>'€'+Math.round(n).toLocaleString(LANG==='el'?'el-GR':'en-GB');
+const rnd=n=>n<100?Math.round(n/5)*5:Math.round(n/10)*10;
+const mid=f=>(f[0]+f[1])/2;
+// ---- exact dates (optional): per-island check-in/out derived from nights ----
+const MKEYS=['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+const isoD=d=>{const p=n=>String(n).padStart(2,'0');return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate());};
+const seas=(tbl,mk)=>tbl[mk]!==undefined?tbl[mk]:Math.min.apply(null,Object.values(tbl)); // off-season months price like the cheapest listed month
+function tripStart(){if(!state.date)return null;const d=new Date(state.date+'T12:00:00');return isNaN(d)?null:d;}
+function legDates(i){const d0=tripStart();if(d0===null||!state.trip[i])return null;let off=0;for(let j=0;j<i;j++)off+=state.trip[j].n;
+  const a=new Date(d0);a.setDate(a.getDate()+off);const b=new Date(a);b.setDate(b.getDate()+state.trip[i].n);return[a,b];}
+function monthAt(i){const ld=legDates(i);return ld?MKEYS[ld[0].getMonth()]:state.month;}
+const fmtD=d=>d.toLocaleDateString(LANG==='el'?'el-GR':'en-GB',{day:'numeric',month:'short'});
+function bookUrl(i){const t=state.trip[i];let u='https://www.booking.com/searchresults.html?ss='+encodeURIComponent(ISL[t.k].n+', Greece')+'&group_adults='+state.pax+'&no_rooms=1&group_children=0';
+  const ld=legDates(i);if(ld)u+='&checkin='+isoD(ld[0])+'&checkout='+isoD(ld[1]);return u;}
+// ---- smart swaps: on-island spend (rooms+food+vehicle) for a candidate at a stop ----
+function stayCost(k,i,v){const isl=ISL[k],n=state.trip[i].n,mk=monthAt(i);
+  const rn=isl.room[state.tier]*seas(CFG.season_room,mk);
+  const mult=(!state.own&&!v&&isl.cn>=4&&isl.car)?CFG.carless_central_premium:1;
+  let c=rn*n*mult + mealDay(k)*state.pax*n;
+  if(!state.own&&v&&isl.car){c+=isl.car*seas(CFG.season_car,mk)*(v==='m'?(CFG.moto_factor||0.55):1)*n;
+    c+=(v==='m'?Math.round(CFG.fuel_per_day*0.4):CFG.fuel_per_day)*n;}
+  return c;}
+function fitsExcept(i,k){return state.trip.every((t,j)=>j===i||pairOK(t.k,k));}
+
+// ---------------- state ----------------
+let state={month:'jun',date:null,pax:2,tier:'mid',nonEU:false,fly:false,own:false,trip:JSON.parse(JSON.stringify(PRESETS.classic))};
+// URL params: ?i=milos:4:c:b,ios:3&m=aug&pax=2&tier=mid
+(function(){
+  const q=new URLSearchParams(location.search);
+  try{const saved=localStorage.getItem('tc-state');if(saved&&!q.get('i')){state=JSON.parse(saved);}}catch(e){}
+  if(q.get('i')){
+    const trip=q.get('i').split(',').map(s=>{const p=s.split(':');
+      return ISL[p[0]]?{k:p[0],n:Math.min(14,Math.max(1,parseInt(p[1])||3)),v:p.includes('c')?'c':(p.includes('m')?'m':''),b:p.includes('b')}:null;}).filter(Boolean);
+    if(trip.length)state.trip=trip;
+  }
+  if(q.get('m')&&CFG.season_room[q.get('m')])state.month=q.get('m');
+  if(q.get('pax'))state.pax=Math.min(8,Math.max(1,parseInt(q.get('pax'))||2));
+  if(['budget','mid','comfort'].includes(q.get('tier')))state.tier=q.get('tier');
+  if(state.date&&!/^\d{4}-\d{2}-\d{2}$/.test(state.date))state.date=null;
+  if(/^\d{4}-\d{2}-\d{2}$/.test(q.get('d')||''))state.date=q.get('d');
+  {const ts=tripStart();if(!ts||ts<new Date(Date.now()-864e5))state.date=null;
+   else{const mk=MKEYS[ts.getMonth()];if(CFG.season_room[mk])state.month=mk;}}
+  if(!CFG.season_room[state.month])state.month='jun';
+  state.trip=(state.trip||[]).filter(t=>ISL[t.k]);
+  if(q.get('fly')==='1')state.fly=true;
+  if(q.get('veh')==='own'){state.own=true;state.fly=false;}
+  if(!state.trip.length)state.trip=JSON.parse(JSON.stringify(PRESETS.classic));
+  state.fly=!!state.fly;state.own=!!state.own;if(state.own)state.fly=false;
+  state.trip.forEach(t=>{if(t.v===undefined)t.v=t.c?'c':'';delete t.c;});
+})();
+function sync(){
+  try{localStorage.setItem('tc-state',JSON.stringify(state));}catch(e){}
+  const i=state.trip.map(t=>t.k+':'+t.n+(t.v?':'+t.v:'')+(t.b?':b':'')).join(',');
+  history.replaceState(null,'','?i='+i+'&m='+state.month+'&pax='+state.pax+'&tier='+state.tier+(state.fly?'&fly=1':'')+(state.own?'&veh=own':'')+(state.date?'&d='+state.date:''));
+}
+
+// per-tier room price for an island in the selected month
+function roomNight(k,i){return ISL[k].room[state.tier]*seas(CFG.season_room,i===undefined?state.month:monthAt(i));}
+function mealDay(k){const m=ISL[k].meal;return state.tier==='budget'?m*CFG.meal_budget:state.tier==='comfort'?m*CFG.meal_comfort:m;}
+
+// ---------------- render ----------------
+function render(){
+  document.getElementById('tc-pax').textContent=state.pax;
+  const _di=document.getElementById('tc-date');if(_di&&_di.value!==(state.date||''))_di.value=state.date||'';
+  document.querySelectorAll('#tc-months .tc-chip').forEach(c=>c.classList.toggle('on',c.dataset.m===state.month));
+  document.querySelectorAll('#tc-tiers .tc-chip').forEach(c=>c.classList.toggle('on',c.dataset.t===state.tier));
+  document.getElementById('tc-noneu').classList.toggle('on',state.nonEU);
+  const allV=v=>state.trip.every(t=>!ISL[t.k].car||t.v===v)&&state.trip.some(t=>ISL[t.k].car);
+  document.querySelectorAll('#tc-arr .tc-chip').forEach(c=>c.classList.toggle('on',(c.dataset.arr==='fly')===state.fly));
+  document.querySelectorAll('#tc-veh .tc-chip').forEach(c=>{const v=c.dataset.veh;
+    c.classList.toggle('on', v==='own'?state.own : (!state.own&&(v==='car'?allV('c'):v==='moto'?allV('m'):allV(''))));});
+
+  const sR=CFG.season_room[state.month],sC=CFG.season_car[state.month];
+  let h='';
+  if(!state.trip.length){
+    document.getElementById('tc-route').innerHTML=`<div class="tc-leg" style="padding:18px 4px;font-size:14px">${T.empty_trip}</div>`;
+    document.getElementById('tc-quick').innerHTML=['santorini','milos','naxos']
+      .map(k=>`<button class="tc-addbtn" data-add="${k}">+ ${iname(k)}</button>`).join(' ');
+    document.getElementById('tc-summary').innerHTML=`<h2>${T.estimate}</h2><div class="tc-ss">${T.empty_trip}</div>`;
+    sync();return;
+  }
+  const first=state.trip[0].k,last=state.trip[state.trip.length-1].k;
+  const flyIn=state.fly&&!state.own&&ISL[first].air,flyOut=state.fly&&!state.own&&ISL[last].air;
+  const flyChip=document.querySelector('#tc-arr [data-arr="fly"]');
+  if(flyChip)flyChip.style.opacity=(state.own||!(ISL[first].air||ISL[last].air))?'0.45':'1';
+  if(flyIn){
+    h+=`<div class="tc-leg"><span class="l">✈</span> ${GATES.Piraeus[LANG].replace(/\s*\(.*\)/,'')} (ATH) — ${T.departure}<span class="fp">€${rnd(flightFare(first))} pp</span></div>`;
+  }else{
+    const dep=legInfo('M',first);
+    h+=`<div class="tc-leg"><span class="l">🛳</span> ${dep.label||''} — ${T.departure} ${(dep.fly&&!state.own)?'<span class="hint">'+T.fly_hint+'</span>':''}<span class="fp">€${rnd(mid(dep.f))} pp</span></div>`;
+  }
+  state.trip.forEach((t,i)=>{
+    const isl=ISL[t.k],rn=roomNight(t.k,i),ld=legDates(i);
+    const guide=(LANG==='el'?'/el':'')+'/island/'+t.k+'/';
+    h+=`<div class="tc-card">
+      ${isl.img?`<img src="${isl.img}" alt="${iname(t.k)}" loading="lazy">`:''}
+      <div class="tc-cb">
+        <div class="tc-cn">${iname(t.k)}<a href="${guide}">${T.guide}</a></div>
+        <div class="tc-cs">${T.rooms_per_night} ${eur(rnd(rn))}${T.per_night} · ${ld?fmtD(ld[0])+' – '+fmtD(ld[1]):T.months[state.month]} · <a href="${bookUrl(i)}" target="_blank" rel="noopener sponsored" style="color:#076880;font-weight:700;text-decoration:none">${T.book_room}</a></div>
+        <div class="tc-cc">
+          <span class="tc-n"><button data-a="n-" data-i="${i}">−</button> ${t.n} ${t.n===1?T.night:T.nights} <button data-a="n+" data-i="${i}">+</button></span>
+          ${(isl.car&&!state.own)?`<span class="tc-seg"><button class="${!t.v?'on':''}" data-a="veh" data-v="" data-i="${i}" title="${T.veh_none}">🚶</button><button class="${t.v==='m'?'on':''}" data-a="veh" data-v="m" data-i="${i}" title="${T.veh_moto}">🛵</button><button class="${t.v==='c'?'on':''}" data-a="veh" data-v="c" data-i="${i}" title="${T.veh_car}">🚗</button></span>`:''}
+          ${isl.boat?`<span class="tc-sw ${t.b?'on':''}" data-a="boat" data-i="${i}"><span class="s"></span> ${T.boat_day} <small>€${isl.boat.pp} pp</small></span>`:''}
+        </div>
+        ${(!state.own&&!t.v&&isl.cn>=4&&isl.car)?`<div class="tc-warn">${T.carless_note.replace('{n}',iname(t.k)).replace('{p}',Math.round((CFG.carless_central_premium-1)*100))}</div>`:''}
+      </div>
+      <button class="tc-x" data-a="rm" data-i="${i}" title="${T.remove}">✕</button>
+    </div>`;
+    const next=state.trip[i+1];
+    if(next){const li=legInfo(t.k,next.k);
+      h+=`<div class="tc-leg"><span class="l">⛴</span> ${T.ferry_to} ${iname(next.k)}${li.label?' <small>('+li.label+')</small>':''} ${(li.fly&&!state.own)?'<span class="hint">'+T.fly_hint+'</span>':''}<span class="fp">€${rnd(mid(li.f))} pp</span></div>`;}
+  });
+  if(flyOut){
+    h+=`<div class="tc-leg"><span class="l">✈</span> ${T.back_to} ${GATES.Piraeus[LANG].replace(/\s*\(.*\)/,'')} (ATH)<span class="fp">€${rnd(flightFare(last))} pp</span></div>`;
+  }else{
+    const ret=legInfo(last,'M');
+    h+=`<div class="tc-leg"><span class="l">🛳</span> ${T.back_to} ${ret.label||''}<span class="fp">€${rnd(mid(ret.f))} pp</span></div>`;
+  }
+  document.getElementById('tc-route').innerHTML=h;
+  renderSwaps();
+
+  // quick-add buttons
+  const inTrip=k=>state.trip.some(t=>t.k===k);
+  const quickKeys=state.trip.length
+    ?Object.keys(ISL).filter(k=>!inTrip(k)&&nearTrip(k))
+      .sort((a,b)=>Math.min(...state.trip.map(t=>haversine(ISL[t.k],ISL[a])))-Math.min(...state.trip.map(t=>haversine(ISL[t.k],ISL[b])))).slice(0,3)
+    :['santorini','milos','naxos'];
+  document.getElementById('tc-quick').innerHTML=quickKeys
+    .map(k=>`<button class="tc-addbtn" data-add="${k}">+ ${iname(k)}</button>`).join(' ');
+
+  // ---------------- totals (single typical figures) ----------------
+  const nightsTotal=state.trip.reduce((a,t)=>a+t.n,0);
+  let tot=0,li='';
+  const line=(ic,lbl,small,amt,book,url)=>`<div class="tc-li"><span>${ic}</span><span class="lbl">${lbl}<small>${small}</small></span><span class="amt">${eur(rnd(amt))}</span>${book?`<a class="bk" href="${url}" target="_blank" rel="noopener sponsored">${book}</a>`:''}</div>`;
+  // ferries
+  let fsum=0;const legs=[...(flyIn?[]:[['M',first]]),...state.trip.slice(0,-1).map((t,i)=>[t.k,state.trip[i+1].k]),...(flyOut?[]:[[last,'M']])];
+  legs.forEach(([a,b])=>{fsum+=mid(legInfo(a,b).f)*state.pax;});
+  if(legs.length){
+    const portOf=k=>{const g=gateOf(k);return g?g[LANG]:T.ionian_gate_s;};
+    const ports=[...new Set(legs.filter(([a,b])=>a==='M'||b==='M').map(([a,b])=>portOf(a==='M'?b:a)))];
+    const portsTxt=ports.length?`${T.from_port} ${ports.join(' & ')} · `:'';
+    li+=line('⛴',T.li_ferries,`${portsTxt}${legs.length} ${T.li_legs} × ${state.pax} ${T.li_pax}`,fsum,T.book_ferry,'https://www.ferryhopper.com/'+(LANG==='el'?'el/':'en/'));tot+=fsum;}
+  if(flyIn||flyOut){const fl=((flyIn?flightFare(first):0)+(flyOut?flightFare(last):0))*state.pax;
+    li+=line('✈',T.li_flights,`${(flyIn?1:0)+(flyOut?1:0)} × ${state.pax} ${T.li_pax}`,fl,null);tot+=fl;}
+  // rooms
+  let rsum=0;
+  state.trip.forEach((t,i)=>{const rn=roomNight(t.k,i);
+    const mult=(!state.own&&!t.v&&ISL[t.k].cn>=4&&ISL[t.k].car)?CFG.carless_central_premium:1;
+    rsum+=rn*t.n*mult;});
+  li+=line('🛏',`${T.li_rooms} — ${nightsTotal} ${T.nights}`,state.trip.map(t=>`${iname(t.k)} ${t.n}${(!state.own&&!t.v&&ISL[t.k].cn>=4&&ISL[t.k].car)?' '+T.central:''}`).join(' · '),rsum,state.trip.length===1?T.book_room:null,state.trip.length===1?bookUrl(0):null);
+  tot+=rsum;
+  // car + fuel
+  if(state.own){
+    // Your own car rides every ferry leg. Vehicle fee ≈ 2.3× the passenger fare,
+    // clamped to real-world car-deck pricing (short hop ≥ €25, long haul ≤ €130).
+    const carLegs=[['M',first],...state.trip.slice(0,-1).map((t,i)=>[t.k,state.trip[i+1].k]),[last,'M']];
+    const carFee=f=>Math.min(130,Math.max(25,mid(f)*2.3));
+    const cfSum=carLegs.reduce((a,[x,y])=>a+carFee(legInfo(x,y).f),0);
+    li+=line('🚙',T.li_carferry,`${T.carferry_s} ${carLegs.length} ${T.li_legs}`,cfSum,null);tot+=cfSum;
+    const fuel=nightsTotal*CFG.fuel_per_day;
+    li+=line('⛽',T.li_fuel,`€${CFG.fuel_per_day}/${LANG==='el'?'μέρα':'day'} × ${nightsTotal} ${T.days}`,fuel,null);tot+=fuel;
+  }else{
+  let csum=0,cd=0,fuelSum=0;
+  state.trip.forEach((t,i)=>{if(t.v&&ISL[t.k].car){csum+=ISL[t.k].car*seas(CFG.season_car,monthAt(i))*(t.v==='m'?(CFG.moto_factor||0.55):1)*t.n;cd+=t.n;
+    fuelSum+=(t.v==='m'?Math.round(CFG.fuel_per_day*0.4):CFG.fuel_per_day)*t.n;}});
+  if(cd){li+=line('🚗',`${T.li_vehicle} — ${cd} ${T.days}`,state.trip.filter(t=>t.v&&ISL[t.k].car).map(t=>iname(t.k)+' '+(t.v==='m'?'🛵':'🚗')).join(' · '),csum,T.book_car,'https://www.discovercars.com/?a_aid=antaran2');tot+=csum;
+    li+=line('⛽',T.li_fuel,`🚗 €${CFG.fuel_per_day} · 🛵 €${Math.round(CFG.fuel_per_day*0.4)} /${LANG==='el'?'μέρα':'day'}`,fuelSum,null);tot+=fuelSum;}
+  }
+  // boat days
+  let bsum=0,boats=[];
+  state.trip.forEach(t=>{const b=ISL[t.k].boat;if(b&&t.b){bsum+=b.pp*state.pax;boats.push(LANG==='el'?b.nel:b.n);}});
+  if(boats.length){li+=line('⛵',T.li_boat,boats.join(' · ')+' — '+T.boat_rec,bsum,null);tot+=bsum;}
+  // food
+  let msum=0;
+  state.trip.forEach(t=>{msum+=mealDay(t.k)*state.pax*t.n;});
+  li+=line('🍴',T.li_food,`${eur(Math.round(mealDay(first)))} ${T.food_s}`,msum,null);
+  tot+=msum;
+  // non-EU extras
+  if(state.nonEU){
+    const esim=state.pax*18;li+=line('📶',T.li_esim,`${state.pax}× ${T.esim_s}`,esim,T.book_esim,'https://yesim.tpx.lt/Sax2vWmP');tot+=esim;
+    const ins=state.pax*(nightsTotal+1)*3;li+=line('🛡',T.li_insurance,`${state.pax}× ${nightsTotal+1} ${T.ins_days}`,ins,null);tot+=ins;}
+
+  const _ts=tripStart();let whenTxt=T.months[state.month];
+  if(_ts){const _e=new Date(_ts);_e.setDate(_e.getDate()+nightsTotal);whenTxt=fmtD(_ts)+' – '+fmtD(_e);}
+  document.getElementById('tc-summary').innerHTML=`
+    <h2>${T.estimate}</h2>
+    <div class="tc-ss">${state.pax} ${T.li_pax} · ${nightsTotal} ${T.nights} · ${whenTxt} · ${({budget:T.tier_budget,mid:T.tier_mid,comfort:T.tier_comfort})[state.tier]}</div>
+    ${li}
+    <div class="tc-tot"><span class="t1">${state.fly?T.total_fly:T.total}</span><span class="amt">${eur(rnd(tot))}</span></div>
+    <div class="tc-pp">${eur(rnd(tot/state.pax))} ${T.pp}</div>
+    <div class="tc-ctas">
+      <a class="tc-cta f" href="https://www.ferryhopper.com/${LANG==='el'?'el/':'en/'}" target="_blank" rel="noopener sponsored">${T.cta_ferry}</a>
+      <a class="tc-cta c" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">${T.cta_car}</a>
+    </div>
+    <div class="tc-assume">${T.assume.replace('{month}',T.months[state.month])}</div>
+    <div class="tc-honest">${T.honest}</div>`;
+  sync();
+}
+
+function renderSwaps(){
+  const box=document.getElementById('tc-swaps');if(!box)return;
+  if(!state.trip.length){box.innerHTML='';return;}
+  const inTrip=k=>state.trip.some(t=>t.k===k);
+  const byStop={};
+  state.trip.forEach((cur,i)=>{
+    if(i===0)return; // first island is the user's anchor choice — never suggest swapping it
+    const v0=cur.v,curStay=stayCost(cur.k,i,v0),curTot=ISL[cur.k].tot,curB=ISL[cur.k].b;
+    let save=null,up=null;
+    Object.keys(ISL).forEach(k=>{
+      if(inTrip(k)||!fitsExcept(i,k))return;
+      const v=(v0&&ISL[k].car)?v0:'';
+      const dM=Math.round(stayCost(k,i,v)-curStay),dT=+(ISL[k].tot-curTot).toFixed(1),dB=+(ISL[k].b-curB).toFixed(1);
+      if(dM<=-60&&dT>=-0.4){if(!save||dM<save.dM)save={i,k,dM,dT,dB,kind:'save',score:-dM};}
+      if(dT>=0.2&&dM<=150){if(!up||dT>up.dT||(dT===up.dT&&dM<up.dM))up={i,k,dM,dT,dB,kind:'up',score:dT*250-Math.max(0,dM)};}
+    });
+    const best=[save,up].filter(Boolean).sort((a,b)=>b.score-a.score)[0];
+    if(best)byStop[i]=best;
+  });
+  const sug=Object.values(byStop).sort((a,b)=>b.score-a.score).slice(0,3);
+  if(!sug.length){box.innerHTML='';return;}
+  const chips=sug.map(s=>{
+    const money=s.dM<0
+      ?`<b style="color:#2E7D32">${T.swap_save} ${eur(Math.abs(s.dM))}</b>`
+      :`<b style="color:#B26A00">+${eur(s.dM)}</b>`;
+    const parts=[money];
+    if(Math.abs(s.dT)>=0.1)parts.push(`⭐ ${T.swap_overall} ${s.dT>0?'+':''}${s.dT.toFixed(1)}`);
+    if(Math.abs(s.dB)>=0.3)parts.push(`🏖 ${T.swap_beach} ${s.dB>0?'+':''}${s.dB.toFixed(1)}`);
+    return `<div class="tc-swap">
+      <span class="tc-swap-t"><b>${iname(s.k)}</b> <small>${T.swap_instead} ${iname(state.trip[s.i].k)}</small></span>
+      <span class="tc-swap-d">${parts.join(' · ')}</span>
+      <button class="tc-swap-b" data-swap="${s.i}:${s.k}">${T.swap_apply} ⇄</button>
+    </div>`;
+  }).join('');
+  box.innerHTML=`<div class="tc-ctrl tc-swaps-box">
+    <h3 style="margin-bottom:2px">${T.swaps_title}</h3>
+    <div style="font-size:12.5px;color:var(--ink-4,#A0ADB8);margin-bottom:10px">${T.swaps_sub}</div>
+    ${chips}</div>`;
+}
+
+// ---------------- events ----------------
+document.getElementById('tc-presets').addEventListener('click',e=>{const c=e.target.closest('.tc-preset');if(!c)return;
+  document.querySelectorAll('#tc-presets .tc-preset').forEach(x=>x.classList.remove('on'));c.classList.add('on');
+  state.trip=JSON.parse(JSON.stringify(PRESETS[c.dataset.p]));render();});
+document.getElementById('tc-months').addEventListener('click',e=>{const c=e.target.closest('.tc-chip');if(c){state.month=c.dataset.m;state.date=null;render();}});
+document.getElementById('tc-date').addEventListener('change',e=>{const v=e.target.value;
+  state.date=/^\d{4}-\d{2}-\d{2}$/.test(v)?v:null;
+  const ts=tripStart();if(ts){const mk=MKEYS[ts.getMonth()];if(CFG.season_room[mk])state.month=mk;}
+  render();});
+document.getElementById('tc-tiers').addEventListener('click',e=>{const c=e.target.closest('.tc-chip');if(c){state.tier=c.dataset.t;render();}});
+document.getElementById('tc-noneu').addEventListener('click',()=>{state.nonEU=!state.nonEU;render();});
+document.getElementById('tc-arr').addEventListener('click',e=>{const c=e.target.closest('.tc-chip');if(!c)return;
+  if(c.dataset.arr==='fly'){if(state.own)return;state.fly=true;}else state.fly=false;render();});
+document.getElementById('tc-veh').addEventListener('click',e=>{const c=e.target.closest('.tc-chip');if(!c)return;
+  const v=c.dataset.veh;
+  if(v==='own'){state.own=!state.own;if(state.own)state.fly=false;}
+  else{state.own=false;state.trip.forEach(t=>{if(ISL[t.k].car)t.v=(v==='car'?'c':v==='moto'?'m':'');});}
+  render();});
+document.getElementById('tc-pax-minus').addEventListener('click',()=>{state.pax=Math.max(1,state.pax-1);render();});
+document.getElementById('tc-pax-plus').addEventListener('click',()=>{state.pax=Math.min(8,state.pax+1);render();});
+document.getElementById('tc-route').addEventListener('click',e=>{
+  const el=e.target.closest('[data-a]');if(!el)return;const i=+el.dataset.i,t=state.trip[i];
+  if(el.dataset.a==='n-')t.n=Math.max(1,t.n-1);
+  else if(el.dataset.a==='n+')t.n=Math.min(14,t.n+1);
+  else if(el.dataset.a==='veh')t.v=el.dataset.v;
+  else if(el.dataset.a==='boat')t.b=!t.b;
+  else if(el.dataset.a==='rm')state.trip.splice(i,1);
+  render();});
+document.getElementById('tc-quick').addEventListener('click',e=>{const b=e.target.closest('[data-add]');
+  if(b&&!state.trip.some(t=>t.k===b.dataset.add)){state.trip.push({k:b.dataset.add,n:3,v:'',b:false});render();}});
+document.getElementById('tc-swaps').addEventListener('click',e=>{const b=e.target.closest('[data-swap]');if(!b)return;
+  const [i,k]=b.dataset.swap.split(':');const s=state.trip[+i];if(!s||state.trip.some(x=>x.k===k))return;
+  s.k=k;if(!ISL[k].car)s.v='';render();});
+
+// island search autocomplete
+const sIn=document.getElementById('tc-search'),sUl=document.getElementById('tc-sug');
+function norm(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function distTo(k){return state.trip.length?Math.min(...state.trip.map(t=>haversine(ISL[t.k],ISL[k]))):0;}
+function renderSug(){
+  const q=norm(sIn.value.trim());
+  const pool=Object.keys(ISL).filter(k=>!state.trip.some(t=>t.k===k));
+  const raw=q?pool.filter(k=>norm(ISL[k].n).includes(q)||norm(ISL[k].nel).includes(q)):pool;
+  let hits=raw.filter(nearTrip);
+  hits=q
+    ?hits.sort((a,b)=>((norm(iname(a)).startsWith(q)?0:1)-(norm(iname(b)).startsWith(q)?0:1))||distTo(a)-distTo(b))
+    :hits.sort((a,b)=>distTo(a)-distTo(b)||iname(a).localeCompare(iname(b), LANG));
+  let html=hits.map(k=>`<div data-k="${k}">${iname(k)} <small style="color:var(--ink-4,#A0ADB8)">${ISL[k].g}</small></div>`).join('');
+  if(raw.length&&!hits.length)html=`<div style="cursor:default;color:var(--ink-4,#A0ADB8);font-weight:600;font-size:12px">${T.add_far}</div>`;
+  sUl.innerHTML=html;
+  sUl.style.display=html?'block':'none';
+}
+sIn.addEventListener('input',renderSug);
+sIn.addEventListener('focus',renderSug);
+sUl.addEventListener('click',e=>{const d=e.target.closest('[data-k]');if(!d)return;
+  state.trip.push({k:d.dataset.k,n:3,v:'',b:false});sIn.value='';sUl.style.display='none';render();});
+document.addEventListener('click',e=>{if(!e.target.closest('.tc-add'))sUl.style.display='none';});
+
+render();
+</script>
+</body>
+</html>

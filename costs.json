@@ -1,9 +1,7 @@
 {
  "_meta": {
-  "baseline": "July; single typical values. Ranges by formula: lo = value x range_lo, hi = value x range_hi.",
-  "range_lo": 0.85,
-  "range_hi": 1.25,
-  "season": {
+  "baseline": "July; single typical values per island in costs.csv. All multipliers come from cost-rules.csv.",
+  "season_room": {
    "apr": 0.65,
    "may": 0.7,
    "jun": 0.85,
@@ -12,18 +10,23 @@
    "sep": 0.8,
    "oct": 0.65
   },
-  "season_applies_to": [
-   "room",
-   "car_day"
-  ],
-  "meal_tier": {
-   "budget": 0.6,
-   "mid": 1.0,
-   "comfort": 1.65
+  "season_car": {
+   "apr": 0.7,
+   "may": 0.75,
+   "jun": 0.85,
+   "jul": 1.0,
+   "aug": 1.25,
+   "sep": 0.85,
+   "oct": 0.7
   },
+  "range_lo": 0.85,
+  "range_hi": 1.25,
+  "meal_budget": 0.6,
+  "meal_comfort": 1.65,
   "carless_central_premium": 1.2,
-  "fuel_per_day": 10,
-  "updated": "2026-07-16"
+  "fuel_per_day": 10.0,
+  "moto_factor": 0.55,
+  "updated": "2026-08-01"
  },
  "islands": {
   "aegina": {
