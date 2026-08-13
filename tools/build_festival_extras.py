@@ -229,13 +229,15 @@ def build_month_hubs(fests, names):
                 # was plain wrong on the single-event months.
                 _ev_el = 'εκδήλωση' if n == 1 else 'εκδηλώσεις'
                 _upd_el = 'ενημερωμένη' if n == 1 else 'ενημερωμένες'
-                title = f'Γιορτές νησιών {el_acc} {YEAR} — {n} {_ev_el} | Aegean Blueprint'
+                # CTR pass Aug 2026: brand suffix dropped — it pushed these
+                # month hubs to 66-79 chars, past Google's truncation point.
+                title = f'Πανηγύρια {el_acc} {YEAR}: {n} {_ev_el} με ημερομηνίες'
                 desc = f'Όλα τα πανηγύρια και οι γιορτές στα ελληνικά νησιά {el_acc}: ημερομηνίες, νησί και τι να περιμένεις. {n} {_ev_el}, {_upd_el} για το {YEAR}.'
                 h1 = f'Πανηγύρια & γιορτές {el_acc}'
                 intro = f'{n} γιορτές και πανηγύρια στα νησιά {el_acc} — με ημερομηνίες και σύνδεσμο για τον πλήρη οδηγό κάθε νησιού. Οι κινητές γιορτές είναι υπολογισμένες για φέτος.'
             else:
                 _ev_en = 'event' if n == 1 else 'events'
-                title = f'Greek Island Festivals in {en} {YEAR} — {n} {_ev_en} & dates | Aegean Blueprint'
+                title = f'Greek Island Festivals in {en} {YEAR}: {n} {_ev_en} & Dates'
                 desc = f'Every island festival and panigiri in {en}: dates, which island, and what to expect. {n} events across the Greek islands, updated for {YEAR}.'
                 h1 = f'Greek island festivals in {en}'
                 intro = f'{n} festivals and panigiria across the islands in {en} — with dates and a link to each island’s full guide. Movable feasts are pinned to this year’s dates.'
@@ -325,14 +327,14 @@ def build_ikaria():
         is_el = lang == 'el'
         path_en, path_el = '/festivals/ikaria-panigiria/', '/el/festivals/ikaria-panigiria/'
         if is_el:
-            title = f'Πανηγύρια Ικαρίας {YEAR} — ημερομηνίες, χωριά & πώς να πας | Aegean Blueprint'
+            title = f'Πανηγύρια Ικαρίας {YEAR}: Ημερομηνίες, Χωριά, Πώς να Πας'
             desc = f'Τα πανηγύρια της Ικαρίας: πώς λειτουργούν, η εθιμοτυπία, και το ημερολόγιο {YEAR} — Χριστός Ραχών 6 Αυγούστου, Λαγκάδα 15 Αυγούστου, και όλη η καλοκαιρινή σειρά.'
             h1 = 'Τα πανηγύρια της Ικαρίας'
             body = IKARIA_EL
             cta = f'<a class="fx-budget" style="font-size:14px;padding:9px 18px" href="/el/trip-cost/?i=ikaria%3A4&m=aug">💶 Πόσο κοστίζει μια εβδομάδα πανηγυριών; →</a> <a class="fx-budget" style="font-size:14px;padding:9px 18px" href="/el/island/ikaria/">🏝 Ο πλήρης οδηγός της Ικαρίας →</a>'
         else:
-            title = f'Ikaria Panigiria {YEAR} — dates, villages & how to join | Aegean Blueprint'
-            desc = f'Ikaria’s all-night village feasts explained: how a panigiri works, the etiquette, and the {YEAR} calendar — Christos Raches on 6 August, the legendary Langada on 15 August.'
+            title = f'Ikaria Panigiria {YEAR}: Dates, Villages & How to Join'
+            desc = f'Ikaria’s all-night village feasts: how a panigiri works, the etiquette, and the {YEAR} dates — Christos Raches 6 Aug, the legendary Langada 15 Aug.'
             h1 = 'The panigiria of Ikaria'
             body = IKARIA_EN
             cta = f'<a class="fx-budget" style="font-size:14px;padding:9px 18px" href="/trip-cost/?i=ikaria%3A4&m=aug">💶 What would a panigiri week cost? →</a> <a class="fx-budget" style="font-size:14px;padding:9px 18px" href="/island/ikaria/">🏝 Full Ikaria guide →</a>'

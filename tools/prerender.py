@@ -300,7 +300,15 @@ TITLE_OVERRIDES = {'ammouliani': ('Ammouliani {year} — Beaches, Drenia Islets 
     # 'pori koufonisia', 'fanos beach koufonisia', 'italida beach koufonisia'.
     # Naming the three beaches in the title matches the actual queries.
     'koufonisia': ('Koufonisia Beaches {year} — Pori, Italida & Fanos, Ranked',
-                   'Παραλίες Κουφονησίων {year} — Πόρι, Ιταλίδα, Φανός με Βαθμολογία')}
+                   'Παραλίες Κουφονησίων {year} — Πόρι, Ιταλίδα, Φανός με Βαθμολογία'),
+    # GSC Aug 2026: this page ranks for two spellings and only converts on one.
+    # 'salamina*' queries -> 425 impressions, 5 clicks. 'salamis*' queries ->
+    # 406 impressions, ZERO clicks across all eight variants ('salamis island'
+    # alone is 198 impressions at position 11.8). The title said "Salamina" and
+    # buried "Salamis" in the description, so English searchers never saw their
+    # own word. Both spellings now sit in the title.
+    'salamis': ('Salamis (Salamina) {year} — Beaches Ranked, Day Trip from Athens',
+                'Σαλαμίνα {year} — Παραλίες με Βαθμολογία, Εκδρομή από Αθήνα')}
 
 import math
 
@@ -1137,16 +1145,22 @@ def build_title(key, data, meta, lang='en'):
     # the generic template. Bespoke, expectation-setting titles instead.
     ov = TITLE_OVERRIDES.get(key)
     if ov:
-        return f"{(ov[1] if lang == 'el' else ov[0]).format(year=year)} | Aegean Blueprint"
+        return (ov[1] if lang == 'el' else ov[0]).format(year=year)
     days = int(meta.get('days') or 0) if meta.get('days') else 0
+    # CTR pass (Aug 2026): the old templates ran 74-87 chars once the
+    # " | Aegean Blueprint" suffix was appended, so Google truncated the part
+    # that actually sells the click. GSC pages-by-position shows 49% of all
+    # impressions sit at position 7-10 where every character counts. Brand
+    # suffix dropped (Google already shows the domain) and the template
+    # tightened to land under ~55 chars for all 88 islands.
     if lang == 'el':
         if days:
-            return f"{name} {year} — Παραλίες με βαθμολογία, πρόγραμμα {days} ημερών | Aegean Blueprint"
-        return f"{name} {year} — Ειλικρινής ταξιδιωτικός οδηγός | Aegean Blueprint"
+            return f"{name} {year}: Παραλίες & πρόγραμμα {days} ημερών"
+        return f"{name} {year}: Ειλικρινής οδηγός"
     else:
         if days:
-            return f"{name} Travel Guide {year} — Beaches Ranked, {days}-Day Itinerary | Aegean Blueprint"
-        return f"{name} Travel Guide {year} — Honest Scores, What's Worth It | Aegean Blueprint"
+            return f"{name} {year}: Beaches Ranked + {days}-Day Plan"
+        return f"{name} {year}: Honest Scores, What's Worth It"
 
 # Bespoke meta descriptions where the generic template misses the query intent.
 DESC_OVERRIDES = {
@@ -1156,30 +1170,92 @@ DESC_OVERRIDES = {
 }
 
 
+# Hook variants. The old code used one fixed sentence on all 88 island pages,
+# which reads as boilerplate in the SERP (and invites Google to rewrite the
+# snippet). Chosen deterministically per island so builds stay reproducible.
+_HOOKS_EN_DAYS = [
+    "Beaches rated, a {d}-day plan, where to eat — honest, no fluff.",
+    "Every beach scored, a {d}-day route, and what to skip.",
+    "Ranked beaches, a {d}-day itinerary, honest verdicts.",
+    "Which beaches are worth it, plus a {d}-day plan.",
+]
+_HOOKS_EN_PLAIN = [
+    "Beaches, where to stay, what's worth it — honest, no fluff.",
+    "Beaches scored, where to stay, and what to skip.",
+    "Honest scores on beaches, food and cost.",
+]
+_HOOKS_EL_DAYS = [
+    "Παραλίες με βαθμολογία, πρόγραμμα {d} ημερών, πού να φας — χωρίς φλυαρίες.",
+    "Κάθε παραλία βαθμολογημένη, διαδρομή {d} ημερών, τι να παραλείψεις.",
+    "Βαθμολογημένες παραλίες, πρόγραμμα {d} ημερών, ειλικρινείς κρίσεις.",
+    "Ποιες παραλίες αξίζουν, μαζί με πρόγραμμα {d} ημερών.",
+]
+_HOOKS_EL_PLAIN = [
+    "Παραλίες, διαμονή, τι αξίζει — ειλικρινά, χωρίς φλυαρίες.",
+    "Βαθμολογημένες παραλίες, πού να μείνεις, τι να παραλείψεις.",
+    "Ειλικρινείς βαθμολογίες για παραλίες, φαγητό και κόστος.",
+]
+
+
+def _clause_trim(text, limit):
+    """Cut to <= limit at a clause boundary so the result still reads as a
+    finished thought. Returns '' when no clean cut exists."""
+    if len(text) <= limit:
+        return text
+    window = text[:limit]
+    for sep in ('—', ';', ' - ', ','):
+        idx = window.rfind(sep)
+        if idx >= 60:
+            return window[:idx].rstrip(' ,;—-·')
+    return ''
+
+
 def build_description(key, data, meta, lang='en'):
-    """Meta description: the island's own first intro sentence (relevance,
-    query-term bolding) + a punchy promise of what the page delivers (CTR).
-    Target <= 160 chars."""
-    TARGET_MAX = 160
+    """Meta description: the island's own opening sentence (relevance) plus a
+    concrete promise of what the page delivers (CTR). Target <= 158 chars.
+
+    Aug 2026 rewrite. The previous version reserved room for one long fixed
+    hook and then hard-truncated the intro mid-phrase with an ellipsis, so 24
+    of 25 audited island pages shipped snippets like "…sitting between Rhodes
+    and Crete — remote… Beaches rated, a 4-day plan". That reads as broken
+    auto-generation. Now the *hook* shrinks to fit the sentence rather than the
+    sentence being amputated to fit the hook.
+    """
+    TARGET_MAX = 158
     _od = DESC_OVERRIDES.get(key)
     if _od:
         return _od[1] if lang == 'el' else _od[0]
     days = int(meta.get('days') or 0) if meta.get('days') else 0
-    if lang == 'el':
-        hook = (f"Παραλίες με βαθμολογία, πρόγραμμα {days} ημερών, πού να φας — ειλικρινά, χωρίς φλυαρίες."
-                if days else "Παραλίες, διαμονή, τι αξίζει — ειλικρινά, χωρίς φλυαρίες.")
-    else:
-        hook = (f"Beaches rated, a {days}-day plan, where to eat — honest, no fluff."
-                if days else "Beaches, where to stay, what's worth it — honest, no fluff.")
+    pool = ((_HOOKS_EL_DAYS if days else _HOOKS_EL_PLAIN) if lang == 'el'
+            else (_HOOKS_EN_DAYS if days else _HOOKS_EN_PLAIN))
+    # Stable per-island pick, rotated so neighbouring islands differ.
+    start = sum(ord(c) for c in key) % len(pool)
+    hooks = [pool[(start + n) % len(pool)] for n in range(len(pool))]
+    hooks = [h.format(d=days) for h in hooks]
+    # Longest first: we want the fullest hook that still fits.
+    hooks.sort(key=len, reverse=True)
+
     intro = pick(data, 'intro', lang) or ''
     clean = re.sub(r'\s+', ' ', intro).strip()
     # split only when the next word starts with a capital — keeps abbreviations
     # like 'τ.χλμ.' or 'Mt.' from ending the sentence early
     first = re.split(r'(?<=[.!?])\s+(?=[A-ZΑ-ΩΆΈΉΊΌΎΏ«"0-9])', clean)[0] if clean else ''
-    budget = TARGET_MAX - len(hook) - 1
-    if len(first) > budget:
-        first = first[:budget].rsplit(' ', 1)[0].rstrip(',;—-· ') + '…'
-    return (first + ' ' + hook).strip()
+
+    if first:
+        for hook in hooks:
+            if len(first) + 1 + len(hook) <= TARGET_MAX:
+                return first + ' ' + hook
+        # Sentence too long for even the shortest hook: cut at a clause
+        # boundary and close it properly rather than trailing an ellipsis.
+        shortest = hooks[-1]
+        trimmed = _clause_trim(first, TARGET_MAX - len(shortest) - 2)
+        if trimmed:
+            return trimmed + '. ' + shortest
+        # No clean boundary — ship the sentence alone, intact, if it fits.
+        if len(first) <= TARGET_MAX:
+            return first
+        return _clause_trim(first, TARGET_MAX) or first[:TARGET_MAX].rsplit(' ', 1)[0] + '.'
+    return hooks[0]
 
 
 def auto_link_islands(html_text, current_key, lang='en'):
@@ -2811,24 +2887,28 @@ def generate_festivals_page(island_keys):
         is_el = (lang == 'el')
         month_names = MONTH_NAMES_EL if is_el else MONTH_NAMES_EN
         if is_el:
-            title = f'Γιορτές & Πανηγύρια Νησιών {datetime.now().year} — αναλυτικό ημερολόγιο | Aegean Blueprint'
+            # CTR pass Aug 2026: this hub is the site's largest single pool of
+            # impressions (13,675 in 28 days) at 1.71% CTR, position 8.6. The
+            # old title ended in "αναλυτικό ημερολόγιο" plus a brand suffix
+            # that pushed it to 77 chars — the promise got truncated away.
+            title = f'Πανηγύρια & Γιορτές Νησιών {datetime.now().year}: Όλες οι Ημερομηνίες'
             intro = (f'Θρησκευτικές γιορτές, πανηγύρια και παραδοσιακές εκδηλώσεις σε όλα τα {island_count} ελληνικά νησιά. '
                      'Για τις κινητές γιορτές, οι ημερομηνίες είναι ρυθμισμένες για το 2027. '
                      'Το ημερολόγιο είναι ο καλύτερος τρόπος να σχεδιάσεις ταξίδι γύρω από κάτι συγκεκριμένο.')
             # Self-contained meta description (≤160 chars). Don't slice `intro` —
             # it's body copy and slicing truncates mid-sentence.
-            meta_desc = (f'Θρησκευτικές γιορτές και πανηγύρια σε όλα τα {island_count} ελληνικά νησιά. '
-                         'Κινητές ημερομηνίες ρυθμισμένες για το 2027. Σχεδίασε το ταξίδι σου γύρω από κάτι αυθεντικό.')
+            meta_desc = (f'Κάθε πανηγύρι και θρησκευτική γιορτή σε {island_count} ελληνικά νησιά, ανά ημερομηνία — '
+                         'ποιο νησί, τι γίνεται, και πώς να πας. Το πιο αυθεντικό κομμάτι κάθε νησιού.')
             h1 = 'Γιορτές & Πανηγύρια — Ημερολόγιο'
         else:
-            title = f'Greek Island Festivals {datetime.now().year} — full calendar | Aegean Blueprint'
+            title = f'Greek Island Festivals {datetime.now().year}: Every Panigiri, by Date'
             intro = (f'Religious feasts, panigiria, and traditional celebrations across all {island_count} Greek islands. '
                      'Dates pinned to 2027 where movable. The calendar is the single best way to plan a trip '
                      'around something specific — most of these festivals are the deepest-rooted experiences '
                      'an island offers.')
             # Self-contained meta description (≤160 chars).
-            meta_desc = (f'Religious feasts and panigiria across all {island_count} Greek islands. Movable dates pinned to 2027. '
-                         'The calendar is the deepest way to plan a trip.')
+            meta_desc = (f'Every panigiri and religious feast across {island_count} Greek islands, by date — which island, '
+                         'what actually happens, and how to join in. The deepest way to plan a trip.')
             h1 = f'Greek Island Festivals {datetime.now().year} — full calendar'
 
         url = f'{SITE_URL}/' + ('el/' if is_el else '') + 'festivals/'

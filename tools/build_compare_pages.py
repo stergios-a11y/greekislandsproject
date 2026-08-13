@@ -480,6 +480,71 @@ DESC_OVERRIDES.update({
         'το λιμάνι και τον πολιτισμό· το Αγκίστρι έχει πολύ καλύτερες παραλίες με το μισό κόστος.'),
 })
 
+# --- "or" phrasing test, Aug 2026 -------------------------------------------
+# GSC evidence, restricted to position 4-10 so position isn't doing the work:
+#     queries containing " vs "  -> 3,535 impressions, 2.46% CTR
+#     queries containing " or "  -> 2,983 impressions, 3.22% CTR
+# The Greek titles have always used "ή" (or) and Greek compare pages run 5.52%
+# CTR against 1.84% for English. Confounded by competition, but it points the
+# same way. Applied to the seven worst-converting English compare pages only,
+# so the rest of the corpus stays as a control and the next GSC export can
+# actually settle it. URLs and H1s keep "vs" — the pages still rank for both.
+TITLE_OVERRIDES.update({
+    ('chania', 'rethymno'): (          # 3,282 impr, 0.34% CTR, pos 5.8
+        'Chania or Rethymno {y}? Chania Wins on Beaches — Honest Pick',
+        'Χανιά ή Ρέθυμνο {y}: Τα Χανιά Κερδίζουν στις Παραλίες'),
+    ('corfu', 'kefalonia'): (          # 4,024 impr, 1.29% CTR, pos 4.7
+        'Corfu or Kefalonia {y}? Culture vs Coastline, Scored',
+        'Κέρκυρα ή Κεφαλονιά {y}: Πολιτισμός ή Ακτογραμμή;'),
+    ('corfu', 'rhodes'): (             # 4,188 impr, 1.43% CTR, pos 5.8
+        'Corfu or Rhodes {y}? Two Old Towns, One Clear Winner',
+        'Κέρκυρα ή Ρόδος {y}: Δύο Παλιές Πόλεις, Ένας Νικητής'),
+    ('kos', 'rhodes'): (               # 2,613 impr, 1.22% CTR, pos 5.7
+        'Kos or Rhodes {y}? Rhodes for History, Kos for Easy',
+        'Κως ή Ρόδος {y}: Ρόδος για Ιστορία, Κως για Ευκολία'),
+    ('kefalonia', 'zakynthos'): (      # 1,927 impr, 0.62% CTR, pos 7.1
+        'Kefalonia or Zakynthos {y}? Quiet Coves vs Party Coast',
+        'Κεφαλονιά ή Ζάκυνθος {y}: Ήσυχοι Όρμοι ή Πάρτι;'),
+    ('corfu', 'lefkada'): (            # 1,367 impr, 1.32% CTR, pos 4.3
+        'Corfu or Lefkada {y}? Old Town vs the Beach Wall',
+        'Κέρκυρα ή Λευκάδα {y}: Παλιά Πόλη ή Τείχος Παραλιών;'),
+    ('mykonos', 'paros'): (            #   938 impr, 0.85% CTR, pos 7.0
+        'Mykonos or Paros {y}? Same Nightlife, Half the Price',
+        'Μύκονος ή Πάρος {y}: Ίδια Νυχτερινή Ζωή, Μισή Τιμή'),
+})
+
+def fit_description(text, limit=158, floor=115):
+    """Keep a meta description inside Google's snippet budget.
+
+    Aug 2026: 145 of 164 compare descriptions ran 161-191 chars, so the last
+    clause was being cut off mid-word in the SERP. These are hand-written, so
+    rather than chop them blindly we drop whole trailing sentences — the last
+    sentence is usually the generic "Scored side by side on..." tail — and only
+    fall back to a clause cut if dropping sentences would gut the description
+    below `floor`. Anything already inside the budget is returned untouched.
+    """
+    text = re.sub(r'\s+', ' ', (text or '')).strip()
+    if len(text) <= limit:
+        return text
+    parts = re.split(r'(?<=[.!?;])\s+', text)
+    while len(parts) > 1 and len(' '.join(parts)) > limit:
+        candidate = ' '.join(parts[:-1])
+        if len(candidate) < floor:
+            break
+        parts = parts[:-1]
+    joined = ' '.join(parts)
+    if len(joined) <= limit:
+        return joined
+    # Single overlong sentence: cut at the last clause boundary that still
+    # leaves something substantial, and close it cleanly.
+    window = joined[:limit - 1]
+    for sep in ('—', ';', ',', ' '):
+        idx = window.rfind(sep)
+        if idx >= floor:
+            return window[:idx].rstrip(' ,;—-·') + '.'
+    return window.rstrip(' ,;—-·') + '.'
+
+
 VERDICTS = json.loads((ROOT / 'vs_verdicts.json').read_text(encoding='utf-8'))
 FAQS_PATH = ROOT / 'vs_faqs.json'
 FAQS = json.loads(FAQS_PATH.read_text(encoding='utf-8')) if FAQS_PATH.exists() else {}
@@ -669,9 +734,14 @@ def render_page(pair_key, lang):
     if lang == 'en':
         _ov = TITLE_OVERRIDES.get((a, b)) or TITLE_OVERRIDES.get((b, a))
         if _ov:
-            page_title = _ov[0].format(y=YEAR) + ' | Aegean Blueprint'
+            # CTR pass Aug 2026: the ' | Aegean Blueprint' suffix cost 19
+            # characters on every compare title, pushing the average to 71.6
+            # and truncating the hook that earns the click. Google already
+            # renders the domain beside the title, so the brand was buying
+            # nothing and costing the payload.
+            page_title = _ov[0].format(y=YEAR)
         else:
-            page_title = f'{name_a} vs {name_b}: Which Greek Island Should You Visit? | Aegean Blueprint'
+            page_title = f'{name_a} or {name_b}? An Honest, Scored Comparison'
         _od = DESC_OVERRIDES.get((a, b)) or DESC_OVERRIDES.get((b, a))
         if _od:
             page_desc = _od[0]
@@ -679,6 +749,7 @@ def render_page(pair_key, lang):
             page_desc = (f'{name_a} vs {name_b} — side-by-side comparison of beaches, '
                          f'culture, nightlife, access, and price. Practical recommendations '
                          f'for choosing the right island for your trip.')
+        page_desc = fit_description(page_desc)
         h1_text = f'{name_a} vs {name_b}'
         subtitle = 'Side-by-side comparison — beaches, culture, atmosphere, and the practical question of which one suits your trip.'
         verdict_heading = 'Our verdict'
@@ -686,9 +757,9 @@ def render_page(pair_key, lang):
     else:
         _ov = TITLE_OVERRIDES.get((a, b)) or TITLE_OVERRIDES.get((b, a))
         if _ov:
-            page_title = _ov[1].format(y=YEAR) + ' | Aegean Blueprint'
+            page_title = _ov[1].format(y=YEAR)
         else:
-            page_title = f'{name_a} ή {name_b}: Ποιο ελληνικό νησί να διαλέξεις; | Aegean Blueprint'
+            page_title = f'{name_a} ή {name_b}; Ειλικρινής σύγκριση με βαθμολογίες'
         _od = DESC_OVERRIDES.get((a, b)) or DESC_OVERRIDES.get((b, a))
         if _od:
             page_desc = _od[1]
@@ -696,6 +767,7 @@ def render_page(pair_key, lang):
             page_desc = (f'{name_a} ή {name_b} — αναλυτική σύγκριση παραλιών, πολιτισμού, '
                          f'νυχτερινής ζωής, πρόσβασης και τιμών. Πρακτικές συμβουλές για '
                          f'να επιλέξεις το σωστό νησί για το ταξίδι σου.')
+        page_desc = fit_description(page_desc)
         h1_text = f'{name_a} ή {name_b}'
         subtitle = 'Λεπτομερής σύγκριση — παραλίες, πολιτισμός, ατμόσφαιρα, και η πρακτική επιλογή του νησιού που ταιριάζει στο ταξίδι σου.'
         verdict_heading = 'Η ετυμηγορία μας'
