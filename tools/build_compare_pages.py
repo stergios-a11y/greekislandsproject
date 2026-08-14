@@ -23,6 +23,7 @@ appearance by reusing the same shell — only the URL changes.
 Reads:  vs_verdicts.json, vs_faqs.json, island metadata in script.js
 Writes: compare/<slug>/index.html, el/compare/<slug>/index.html
 """
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -712,6 +713,73 @@ def render_faq_html(faqs, lang):
             f'<h3 class="compare-faq-heading">{heading}</h3>'
             f'{"".join(items)}</div>')
 
+# --- "or" vs "vs" title experiment ------------------------------------------
+# Randomised 50/50 across all English compare pages, assigned by a salted hash
+# of the pair key so the split is deterministic and survives rebuilds.
+#
+# Why randomised rather than "convert everything": the GSC evidence that
+# prompted this (queries containing " or " earn 3.22% CTR at positions 4-10
+# against 2.46% for " vs ") was collected while EVERY English title said "vs".
+# It shows that people who phrase a search with "or" click more — it does NOT
+# show that an "or" title causes clicks. Only a controlled split can. And
+# because Greek-island search collapses between August and October, a plain
+# before/after would be swamped by seasonality; matched groups over the same
+# window are the only way to read the result.
+#
+# Greek titles are excluded — they have always used "ή" and have no control.
+OR_TEST_SALT = 'or-vs-title-test-2026-08'
+_OR_GROUP = None
+
+
+def _or_group_set():
+    """Exactly half the pairs, chosen by hash rank.
+
+    A plain `hash % 2` gave a 31/51 split on 82 pairs — legal for a coin flip
+    but a needlessly unbalanced experiment. Ranking every pair by its salted
+    hash and taking the lower half guarantees 41/41 while staying entirely
+    deterministic.
+    """
+    global _OR_GROUP
+    if _OR_GROUP is None:
+        keys = sorted({'__'.join(sorted(parse_pair_key(pk))) for pk in VERDICTS})
+        ranked = sorted(keys, key=lambda k: hashlib.md5(
+            (OR_TEST_SALT + k).encode('utf-8')).hexdigest())
+        _OR_GROUP = set(ranked[:len(ranked) // 2])
+    return _OR_GROUP
+
+
+def in_or_group(a, b):
+    return '__'.join(sorted([a, b])) in _or_group_set()
+
+
+def phrase_pair(title, name_a, name_b, use_or):
+    """Swap the leading 'A vs B' / 'A or B' connector only.
+
+    Deliberately anchored to the start of the string: several hooks contain a
+    second 'vs' ("Culture vs Coastline, Scored") that must survive untouched.
+    """
+    want = ' or ' if use_or else ' vs '
+    other = ' vs ' if use_or else ' or '
+
+    # Split off the hook at the first ':' or '?'. Hand-written titles routinely
+    # carry a second connector in the hook ("Kea vs Kythnos 2026: Closer to
+    # Athens or Better Beaches?") and that one must not move.
+    m = re.search(r'[:?]', title)
+    head, tail = (title[:m.start()], title[m.start():]) if m else (title, '')
+
+    if other in head:
+        head = head.replace(other, want, 1)
+    elif want not in head:
+        # Neither connector in the head — nothing safe to rewrite. Happens if a
+        # future override phrases the pair some other way.
+        return title
+
+    # "X or Y 2026? hook" reads as a question; "X vs Y 2026: hook" does not.
+    if tail:
+        tail = ('?' + tail[1:]) if use_or else (':' + tail[1:])
+    return head + tail
+
+
 def render_page(pair_key, lang):
     a, b = parse_pair_key(pair_key)
     if a not in META or b not in META:
@@ -741,7 +809,10 @@ def render_page(pair_key, lang):
             # nothing and costing the payload.
             page_title = _ov[0].format(y=YEAR)
         else:
-            page_title = f'{name_a} or {name_b}? An Honest, Scored Comparison'
+            page_title = f'{name_a} vs {name_b}: An Honest, Scored Comparison'
+        # Randomised arm assignment — applies to bespoke and templated titles
+        # alike, so the split isn't confounded with which pages I hand-wrote.
+        page_title = phrase_pair(page_title, name_a, name_b, in_or_group(a, b))
         _od = DESC_OVERRIDES.get((a, b)) or DESC_OVERRIDES.get((b, a))
         if _od:
             page_desc = _od[0]
