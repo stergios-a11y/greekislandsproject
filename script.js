@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-08-01';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-08-14';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -98,7 +98,7 @@ const ISLANDS_DATA = {
   "agistri":      { name:"Agistri",          lat:37.700, lng:23.350, beach:3.5, hist:2.5, night:3.5, access:4.5, afford:4.0, car_need:1.0, has_airport:false, total:3.4, area:13,    pop:1142,    days:1, island_group:"Saronic", drama:false, hiking:false, springs:false, chora:false, sailing:false },
   "nisyros":      { name:"Nisyros",          lat:36.583, lng:27.166, beach:3.0, hist:5.0, night:2.5, access:2.8, afford:4.0, car_need:3.0, has_airport:false, total:3.8, area:41,    pop:1008,    days:1, island_group:"Dodecanese", drama:true, hiking:false, springs:false, chora:false, sailing:false },
   "kimolos":      { name:"Kimolos",          lat:36.800, lng:24.570, beach:4.5, hist:3.2, night:2.5, access:3.0, afford:3.8, car_need:3.0, has_airport:false, total:3.6, area:36,    pop:910,     days:2, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:false },
-  "kastellorizo": { name:"Kastellorizo",     lat:36.140, lng:29.580, beach:2.0, hist:5.0, night:2.8, access:1.2, afford:3.5, car_need:1.0, has_airport:true, total:4.0, area:12,    pop:492,     days:2, island_group:"Dodecanese", drama:true, hiking:false, springs:false, chora:false, sailing:false },
+  "kastellorizo": { name:"Kastellorizo",     lat:36.140, lng:29.580, beach:2.0, hist:5.0, night:2.8, access:1.2, afford:3.5, car_need:1.0, has_airport:true, total:4.0, area:12,    pop:492,     days:1, island_group:"Dodecanese", drama:true, hiking:false, springs:false, chora:false, sailing:false },
   "sikinos":      { name:"Sikinos",          lat:36.683, lng:25.116, beach:3.5, hist:4.2, night:2.2, access:2.5, afford:4.0, car_need:3.0, has_airport:false, total:3.4, area:42,    pop:273,     days:2, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:true, sailing:false },
   "anafi":        { name:"Anafi",            lat:36.366, lng:25.766, beach:4.5, hist:3.2, night:2.5, access:2.0, afford:4.2, car_need:3.0, has_airport:false, total:3.9, area:38,    pop:271,     days:2, island_group:"Cyclades", drama:true, hiking:false, springs:false, chora:true, sailing:false },
   "samothrace":   { name:"Samothrace",       lat:40.45, lng:25.535, beach:3.0, hist:4.1, night:2.5, access:1.8, afford:4.5, car_need:3.0, has_airport:false, total:3.2, area:178,   pop:2859,    days:2, island_group:"Other", drama:true, hiking:true, springs:true, chora:false, sailing:false },

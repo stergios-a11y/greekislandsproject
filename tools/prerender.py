@@ -1064,7 +1064,7 @@ def build_structured_data(key, data, meta, lang='en'):
             "@context": "https://schema.org",
             "@type": "TouristTrip",
             "name": (f"{len(days)}-day {name} itinerary" if lang == 'en'
-                     else f"Δρομολόγιο {len(days)} ημερών — {name}"),
+                     else f"Δρομολόγιο {el_days(len(days))} — {name}"),
             "description": pick(data.get('itinerary', {}), 'subtitle', lang) or truncate_at_word(intro_plain, 200),
             "itinerary": {
                 "@type": "ItemList",
@@ -1155,12 +1155,23 @@ def build_title(key, data, meta, lang='en'):
     # tightened to land under ~55 chars for all 88 islands.
     if lang == 'el':
         if days:
-            return f"{name} {year}: Παραλίες & πρόγραμμα {days} ημερών"
+            return f"{name} {year}: Παραλίες & πρόγραμμα {el_days(days)}"
         return f"{name} {year}: Ειλικρινής οδηγός"
     else:
         if days:
             return f"{name} {year}: Beaches Ranked + {days}-Day Plan"
         return f"{name} {year}: Honest Scores, What's Worth It"
+
+def el_days(n):
+    """Greek day-count phrase with the right case.
+
+    Aug 2026 bugfix: the templates hard-coded the genitive plural, so every
+    one-day island shipped "πρόγραμμα 1 ημερών" — 23 Greek pages, all of them
+    ungrammatical. One day takes the genitive singular.
+    """
+    n = int(n)
+    return f"{n} ημέρας" if n == 1 else f"{n} ημερών"
+
 
 # Bespoke meta descriptions where the generic template misses the query intent.
 DESC_OVERRIDES = {
@@ -1185,10 +1196,10 @@ _HOOKS_EN_PLAIN = [
     "Honest scores on beaches, food and cost.",
 ]
 _HOOKS_EL_DAYS = [
-    "Παραλίες με βαθμολογία, πρόγραμμα {d} ημερών, πού να φας — χωρίς φλυαρίες.",
-    "Κάθε παραλία βαθμολογημένη, διαδρομή {d} ημερών, τι να παραλείψεις.",
-    "Βαθμολογημένες παραλίες, πρόγραμμα {d} ημερών, ειλικρινείς κρίσεις.",
-    "Ποιες παραλίες αξίζουν, μαζί με πρόγραμμα {d} ημερών.",
+    "Παραλίες με βαθμολογία, πρόγραμμα {dd}, πού να φας — χωρίς φλυαρίες.",
+    "Κάθε παραλία βαθμολογημένη, διαδρομή {dd}, τι να παραλείψεις.",
+    "Βαθμολογημένες παραλίες, πρόγραμμα {dd}, ειλικρινείς κρίσεις.",
+    "Ποιες παραλίες αξίζουν, μαζί με πρόγραμμα {dd}.",
 ]
 _HOOKS_EL_PLAIN = [
     "Παραλίες, διαμονή, τι αξίζει — ειλικρινά, χωρίς φλυαρίες.",
@@ -1231,7 +1242,7 @@ def build_description(key, data, meta, lang='en'):
     # Stable per-island pick, rotated so neighbouring islands differ.
     start = sum(ord(c) for c in key) % len(pool)
     hooks = [pool[(start + n) % len(pool)] for n in range(len(pool))]
-    hooks = [h.format(d=days) for h in hooks]
+    hooks = [h.format(d=days, dd=el_days(days)) for h in hooks]
     # Longest first: we want the fullest hook that still fits.
     hooks.sort(key=len, reverse=True)
 
@@ -1590,7 +1601,7 @@ def render_body(key, data, meta, lang='en'):
     # Itinerary section
     itinerary_html = ''
     if days_count:
-        heading = f'{days_count}-day itinerary for {name}' if lang == 'en' else f'Δρομολόγιο {days_count} ημερών — {name}'
+        heading = f'{days_count}-day itinerary for {name}' if lang == 'en' else f'Δρομολόγιο {el_days(days_count)} — {name}'
         day_blocks = []
         for day in data['itinerary']['days']:
             day_num = day.get('day', 1)
