@@ -112,7 +112,7 @@ STR = {
         's5': 'Add another island', 's5_s': 'ones that fit this route',
         's6': 'Extras', 's6_s': 'own car on the ferries, non-EU add-ons',
         'unsure': 'Not sure yet — pick a month',
-        'continue': 'Continue →', 'arrive_q': 'How will you get there?',
+        'arrive_q': 'How will you get there?',
         'near_none': 'Remove a stop to reach a different region.',
         'add_more': '⛴ Add another island', 'add_more_s': 'ferry legs and totals appear automatically',
         'which_island': 'Island', 'change_island': 'change',
@@ -183,7 +183,7 @@ STR = {
         's5': 'Πρόσθεσε κι άλλο νησί', 's5_s': 'αυτά που ταιριάζουν στη διαδρομή',
         's6': 'Έξτρα', 's6_s': 'δικό σου αυτοκίνητο στα πλοία, επιλογές εκτός ΕΕ',
         'unsure': 'Δεν ξέρω ακόμα — διάλεξε μήνα',
-        'continue': 'Συνέχεια →', 'arrive_q': 'Πώς θα πας;',
+        'arrive_q': 'Πώς θα πας;',
         'near_none': 'Αφαίρεσε στάση για να πας σε άλλη περιοχή.',
         'add_more': '⛴ Πρόσθεσε κι άλλο νησί', 'add_more_s': 'τα ακτοπλοϊκά και τα σύνολα εμφανίζονται αυτόματα',
         'which_island': 'Νησί', 'change_island': 'αλλαγή',
@@ -400,9 +400,6 @@ def render_page(lang, meta, data):
 .tc-srow{{display:flex;gap:14px;align-items:center;flex-wrap:wrap}}
 .tc-date{{font:inherit;font-size:15px;font-weight:700;padding:10px 12px;border:1.5px solid var(--line,#DFE6EC);border-radius:12px;background:var(--card,#fff);color:inherit}}
 .tc-link{{font:inherit;font-size:13.5px;font-weight:700;color:#0B8FAC;background:none;border:0;cursor:pointer;text-decoration:underline;padding:0}}
-.tc-next{{margin-top:14px;font:inherit;font-size:14px;font-weight:800;color:#fff;background:#0B8FAC;border:0;border-radius:11px;padding:9px 16px;cursor:pointer}}
-.tc-next[hidden]{{display:none}}
-.tc-next:hover{{background:#087591}}
 .tc-f-isl{{position:relative;max-width:340px}}
 .tc-f-isl .tc-search{{width:100%}}
 #tc-isug,#tc-sug{{position:absolute;top:100%;left:0;right:0;z-index:30}}
@@ -444,13 +441,11 @@ def render_page(lang, meta, data):
           <button class="tc-link" id="tc-unsure">{t['unsure']}</button>
         </div>
         <div class="tc-chips" id="tc-months" hidden>{months_html}</div>
-        <button class="tc-next" data-next="1">{t['continue']}</button>
       </section>
 
       <section class="tc-step-c" data-step="2" hidden>
         <h3><i>2</i>{t['s2']}</h3>
         <div class="tc-step"><button id="tc-pax-minus">−</button><span id="tc-pax">2</span><button id="tc-pax-plus">+</button></div>
-        <button class="tc-next" data-next="2">{t['continue']}</button>
       </section>
 
       <section class="tc-step-c" data-step="3" hidden>
@@ -460,7 +455,6 @@ def render_page(lang, meta, data):
           <span class="tc-chip on" data-t="mid">{t['tier_mid']}<br><small>{t['tier_mid_s']}</small></span>
           <span class="tc-chip" data-t="comfort">{t['tier_comfort']}<br><small>{t['tier_comfort_s']}</small></span>
         </div>
-        <button class="tc-next" data-next="3">{t['continue']}</button>
       </section>
 
       <section class="tc-step-c" data-step="4" hidden>
@@ -813,13 +807,13 @@ function renderSwaps(){{
 }}
 
 // ---------------- events ----------------
-document.getElementById('tc-months').addEventListener('click',e=>{{const c=e.target.closest('.tc-chip');if(c){{state.month=c.dataset.m;state.date=null;openStep(2);render();}}}});
+document.getElementById('tc-months').addEventListener('click',e=>{{const c=e.target.closest('.tc-chip');if(c){{state.month=c.dataset.m;state.date=null;openStep(4);render();}}}});
 document.getElementById('tc-date').addEventListener('change',e=>{{const v=e.target.value;
   state.date=/^\d{{4}}-\d{{2}}-\d{{2}}$/.test(v)?v:null;
-  if(state.date)openStep(2);
+  if(state.date)openStep(4);
   const ts=tripStart();if(ts){{const mk=MKEYS[ts.getMonth()];if(CFG.season_room[mk])state.month=mk;}}
   render();}});
-document.getElementById('tc-tiers').addEventListener('click',e=>{{const c=e.target.closest('.tc-chip');if(c){{state.tier=c.dataset.t;openStep(4);render();}}}});
+document.getElementById('tc-tiers').addEventListener('click',e=>{{const c=e.target.closest('.tc-chip');if(c){{state.tier=c.dataset.t;render();}}}});
 document.getElementById('tc-noneu').addEventListener('click',()=>{{state.nonEU=!state.nonEU;render();}});
 document.getElementById('tc-arr').addEventListener('click',e=>{{const c=e.target.closest('.tc-chip');if(!c)return;
   if(c.dataset.arr==='fly'){{if(state.own)return;state.fly=true;}}else state.fly=false;render();}});
@@ -828,8 +822,8 @@ document.getElementById('tc-veh').addEventListener('click',e=>{{const c=e.target
   if(v==='own'){{state.own=!state.own;if(state.own)state.fly=false;}}
   else{{state.own=false;state.trip.forEach(t=>{{if(ISL[t.k].car)t.v=(v==='car'?'c':v==='moto'?'m':'');}});}}
   render();}});
-document.getElementById('tc-pax-minus').addEventListener('click',()=>{{state.pax=Math.max(1,state.pax-1);openStep(3);render();}});
-document.getElementById('tc-pax-plus').addEventListener('click',()=>{{state.pax=Math.min(8,state.pax+1);openStep(3);render();}});
+document.getElementById('tc-pax-minus').addEventListener('click',()=>{{state.pax=Math.max(1,state.pax-1);render();}});
+document.getElementById('tc-pax-plus').addEventListener('click',()=>{{state.pax=Math.min(8,state.pax+1);render();}});
 document.getElementById('tc-route').addEventListener('click',e=>{{
   const el=e.target.closest('[data-a]');if(!el)return;const i=+el.dataset.i,t=state.trip[i];
   if(el.dataset.a==='n-')t.n=Math.max(1,t.n-1);
@@ -882,10 +876,6 @@ function syncSteps(){{
   document.querySelectorAll('.tc-step-c').forEach(el=>{{
     el.hidden = (+el.dataset.step) > state.step;
   }});
-  // Continue buttons disappear once you're past them.
-  document.querySelectorAll('.tc-next').forEach(b=>{{
-    b.hidden = state.step > (+b.dataset.next);
-  }});
   const aw=document.getElementById('tc-arrwrap');
   if(aw)aw.hidden=!state.trip.length;
   const isl=document.getElementById('tc-island');
@@ -897,11 +887,9 @@ function syncSteps(){{
     note.hidden=!(noAir&&!state.own);
   }}
 }}
-document.addEventListener('click',e=>{{
-  const b=e.target.closest('.tc-next');if(!b)return;openStep((+b.dataset.next)+1);}});
 document.getElementById('tc-unsure').addEventListener('click',()=>{{
   document.getElementById('tc-months').hidden=false;
-  document.getElementById('tc-date').value='';state.date=null;openStep(2);render();}});
+  document.getElementById('tc-date').value='';state.date=null;openStep(4);render();}});
 
 // island picker — sets or replaces the first stop
 const iIn=document.getElementById('tc-island'),iUl=document.getElementById('tc-isug');
