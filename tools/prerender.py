@@ -155,6 +155,7 @@ def build_compare_html(key, lang, limit=5):
             f'<p>{" · ".join(links)}</p>'
             f'<p class="seo-compare-more"><a href="{hub}">{esc(more)}</a></p></section>')
 
+
 # ---------------------------------------------------------------------
 # Pull each island's group + stats from script.js's ISLANDS_DATA
 # ---------------------------------------------------------------------
@@ -1849,6 +1850,16 @@ def render_page(key, data, meta, lang='en'):
     _hero_url, _ = find_hero_image(data)
     """Full HTML document for one island."""
     name = localized_name(key, data, meta, lang)
+    # Budget-tool CTA label. Aug 2026 bugfix: this read "What do 1 days here
+    # cost?" on all 19 one-day islands (Kastellorizo just became the 20th), and
+    # the Greek used the plural verb regardless of the count.
+    _cta_days = int(meta.get('days') or 3)
+    if lang == 'el':
+        _cta_cost_label = ('💶 Πόσο κοστίζει 1 μέρα εδώ;' if _cta_days == 1
+                           else f'💶 Πόσο κοστίζουν {_cta_days} μέρες εδώ;')
+    else:
+        _cta_cost_label = ('💶 What does 1 day here cost?' if _cta_days == 1
+                           else f'💶 What do {_cta_days} days here cost?')
     title = build_title(key, data, meta, lang)
     description = build_description(key, data, meta, lang)
     url = f'{SITE_URL}/island/{key}/' if lang == 'en' else f'{SITE_URL}/el/island/{key}/'
@@ -2207,7 +2218,7 @@ def render_page(key, data, meta, lang='en'):
     <a href="{('/' if lang == 'en' else '/el/')}#compare" class="seo-cta-btn">{'↔ Compare islands' if lang == 'en' else '↔ Σύγκρινε νησιά'}</a>
     <a href="{('/match/' if lang == 'en' else '/el/match/')}" class="seo-cta-btn">{'🎯 Take the quiz' if lang == 'en' else '🎯 Κάνε το quiz'}</a>
     <a href="{('/' if lang == 'en' else '/el/')}" class="seo-cta-btn">{'🗺 Explore map' if lang == 'en' else '🗺 Εξερεύνησε χάρτη'}</a>
-    <a href="{('/trip-cost/' if lang == 'en' else '/el/trip-cost/')}?i={key}%3A{int(meta.get('days') or 3)}" class="seo-cta-btn">{f"💶 What do {int(meta.get('days') or 3)} days here cost?" if lang == 'en' else f"💶 Πόσο κοστίζουν {int(meta.get('days') or 3)} μέρες εδώ;"}</a>
+    <a href="{('/trip-cost/' if lang == 'en' else '/el/trip-cost/')}?i={key}%3A{_cta_days}" class="seo-cta-btn">{_cta_cost_label}</a>
   </div>
 </div>
 

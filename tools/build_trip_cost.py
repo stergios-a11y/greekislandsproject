@@ -104,6 +104,14 @@ STR = {
         'h1': 'What will your island trip cost?',
         'sub': 'Build your route, set your nights, and get an honest estimate — ferry fares from real distances, room prices by month, no fake precision. Then book the pieces that need booking.',
         'presets': 'Start from a route', 'when_who': 'When & who', 'travellers': 'Travellers',
+        'mode_one': '🏝 One island', 'mode_hop': '⛴ Island hopping',
+        'mode_hop_s': 'add stops and ferry legs',
+        'which_island': 'Island', 'change_island': 'change',
+        'row_nights': 'Nights', 'row_when': 'When',
+        'advanced': 'More options', 'adv_s': 'arrival, vehicle, exact dates',
+        'veh_default': 'Vehicle (applies to every island)',
+        'fly_off': 'No airport on your first or last island — ferry only.',
+        'one_hint': 'Pricing one island. Switch to island hopping to add ferry legs between stops.',
         'noneu': '🌍 Travelling from outside the EU', 'noneu_small': '(adds eSIM & insurance)',
         'step_when': '1 · When & who', 'step_how': '2 · Getting there & around', 'step_comfort': '3 · Comfort',
         'arrive_by': 'Arrive & leave by',
@@ -166,6 +174,14 @@ STR = {
         'h1': 'Πόσο θα κοστίσει το ταξίδι σου στα νησιά;',
         'sub': 'Φτιάξε τη διαδρομή, όρισε τις νύχτες και δες μια ειλικρινή εκτίμηση — ναύλα από πραγματικές αποστάσεις, τιμές δωματίων ανά μήνα, χωρίς ψεύτικη ακρίβεια. Μετά κλείσε ό,τι χρειάζεται κράτηση.',
         'presets': 'Ξεκίνα από μια διαδρομή', 'when_who': 'Πότε & ποιοι', 'travellers': 'Ταξιδιώτες',
+        'mode_one': '🏝 Ένα νησί', 'mode_hop': '⛴ Νησοπορία',
+        'mode_hop_s': 'πρόσθεσε στάσεις και ακτοπλοϊκά',
+        'which_island': 'Νησί', 'change_island': 'αλλαγή',
+        'row_nights': 'Νύχτες', 'row_when': 'Πότε',
+        'advanced': 'Περισσότερες επιλογές', 'adv_s': 'άφιξη, όχημα, ακριβείς ημερομηνίες',
+        'veh_default': 'Όχημα (ισχύει για κάθε νησί)',
+        'fly_off': 'Δεν υπάρχει αεροδρόμιο στο πρώτο ή στο τελευταίο νησί — μόνο πλοίο.',
+        'one_hint': 'Υπολογισμός για ένα νησί. Άλλαξε σε νησοπορία για να προσθέσεις ακτοπλοϊκά μεταξύ στάσεων.',
         'noneu': '🌍 Ταξιδεύεις από χώρα εκτός ΕΕ', 'noneu_small': '(προσθέτει eSIM & ασφάλεια)',
         'step_when': '1 · Πότε & ποιοι', 'step_how': '2 · Μετάβαση & μετακίνηση', 'step_comfort': '3 · Άνεση',
         'arrive_by': 'Άφιξη & αναχώρηση με',
@@ -378,6 +394,33 @@ def render_page(lang, meta, data):
 @media(max-width:900px){{.tc-grid{{grid-template-columns:1fr}}.tc-sum{{position:static}}.tc-add{{margin-left:0}}}}
 .seo-footer{{font-size:13px;color:var(--ink-3,#637080)}}
 .seo-footer a{{color:#0B8FAC;text-decoration:none}}
+/* --- Aug 2026 restructure: mode switch, primary rows, advanced disclosure --- */
+.tc-modes{{display:flex;gap:8px;margin:0 0 14px}}
+.tc-mode{{flex:1;font:inherit;font-size:14.5px;font-weight:800;cursor:pointer;padding:11px 12px;border:1.5px solid var(--line,#DFE6EC);background:var(--card,#fff);color:inherit;border-radius:12px;line-height:1.25;text-align:center}}
+.tc-mode small{{display:block;font-size:11.5px;font-weight:600;color:var(--ink-4,#A0ADB8)}}
+.tc-mode.on{{border-color:#0B8FAC;background:rgba(11,143,172,.08);color:#076880}}
+.tc-primary .tc-row{{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-end}}
+.tc-primary .tc-row2{{margin-top:14px;align-items:flex-start}}
+.tc-f{{display:flex;flex-direction:column;gap:6px;position:relative}}
+.tc-f-isl{{flex:1 1 240px;min-width:200px}}
+.tc-f-grow{{flex:1 1 260px}}
+.tc-lbl{{font-size:13px;font-weight:700;color:var(--ink-3,#637080)}}
+.tc-f-isl .tc-search{{width:100%}}
+#tc-isug{{position:absolute;top:100%;left:0;right:0;z-index:30}}
+.tc-adv{{margin-top:16px;border:1.5px solid var(--line,#DFE6EC);border-radius:14px;background:var(--card,#fff)}}
+.tc-adv>summary{{cursor:pointer;padding:12px 16px;font-weight:800;font-size:14.5px;list-style:none}}
+.tc-adv>summary::-webkit-details-marker{{display:none}}
+.tc-adv>summary::before{{content:'▸';margin-right:8px;color:var(--ink-4,#A0ADB8)}}
+.tc-adv[open]>summary::before{{content:'▾'}}
+.tc-adv>summary small{{font-weight:600;color:var(--ink-4,#A0ADB8);margin-left:6px}}
+.tc-advbody{{padding:2px 16px 16px}}
+.tc-advrow{{display:flex;gap:22px;flex-wrap:wrap;align-items:center;margin-top:16px}}
+.tc-note{{margin-top:8px;font-size:12.5px;color:var(--ink-4,#A0ADB8)}}
+.tc-hoponly[hidden]{{display:none!important}}
+@media(max-width:640px){{
+  .tc-primary .tc-row{{gap:12px}}
+  .tc-mode{{font-size:13.5px;padding:9px 8px}}
+}}
 </style>
 <script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>
 </head>
@@ -404,65 +447,91 @@ def render_page(lang, meta, data):
 
   <div class="tc-grid">
     <div>
-      <div class="tc-ctrl">
+      <!-- Mode switch. Aug 2026: the tool used to open on a committed 3-island
+           route. Search data says every cost and itinerary query is about ONE
+           island, so single-island is now the default and hopping is opt-in. -->
+      <div class="tc-modes" id="tc-modes">
+        <button class="tc-mode on" data-mode="one">{t['mode_one']}</button>
+        <button class="tc-mode" data-mode="hop">{t['mode_hop']} <small>{t['mode_hop_s']}</small></button>
+      </div>
+
+      <div class="tc-ctrl tc-primary">
+        <div class="tc-row">
+          <div class="tc-f tc-f-isl">
+            <label class="tc-lbl" for="tc-island">{t['which_island']}</label>
+            <input class="tc-search" id="tc-island" placeholder="{t['add_ph']}" autocomplete="off">
+            <div class="tc-sug" id="tc-isug"></div>
+          </div>
+          <div class="tc-f" id="tc-nights-f">
+            <span class="tc-lbl">{t['row_nights']}</span>
+            <div class="tc-step"><button id="tc-n-minus">−</button><span id="tc-n">3</span><button id="tc-n-plus">+</button></div>
+          </div>
+          <div class="tc-f">
+            <span class="tc-lbl">{t['travellers']}</span>
+            <div class="tc-step"><button id="tc-pax-minus">−</button><span id="tc-pax">2</span><button id="tc-pax-plus">+</button></div>
+          </div>
+        </div>
+
+        <div class="tc-row tc-row2">
+          <div class="tc-f tc-f-grow">
+            <span class="tc-lbl">{t['row_when']}</span>
+            <div class="tc-chips" id="tc-months">{months_html}</div>
+          </div>
+          <div class="tc-f tc-f-grow">
+            <span class="tc-lbl">{t['comfort']}</span>
+            <div class="tc-chips" id="tc-tiers">
+              <span class="tc-chip" data-t="budget">{t['tier_budget']}</span>
+              <span class="tc-chip on" data-t="mid">{t['tier_mid']}</span>
+              <span class="tc-chip" data-t="comfort">{t['tier_comfort']}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tc-ctrl tc-hoponly" id="tc-presets-wrap">
         <h3>{t['presets']}</h3>
         <div class="tc-chips" id="tc-presets">
           {presets_html}
         </div>
       </div>
 
-      <div class="tc-ctrl">
-        <h3>{t['step_when']}</h3>
-        <div style="display:flex;gap:26px;flex-wrap:wrap;align-items:center">
-          <div class="tc-chips" id="tc-months">{months_html}</div>
-          <div class="tc-trav">
-            <label for="tc-date" style="font-size:13px;font-weight:700;color:var(--ink-3,#637080)">{t['exact_dates']}</label>
-            <input type="date" id="tc-date" title="{t['dates_opt']}" style="font:inherit;font-size:13.5px;padding:7px 10px;border:1.5px solid var(--line,#DFE6EC);border-radius:10px;background:var(--card,#fff);color:inherit">
-          </div>
-          <div class="tc-trav">
-            <span style="font-size:13px;font-weight:700;color:var(--ink-3,#637080)">{t['travellers']}</span>
-            <div class="tc-step"><button id="tc-pax-minus">−</button><span id="tc-pax">2</span><button id="tc-pax-plus">+</button></div>
-          </div>
-        </div>
-        <div style="margin-top:12px">
-          <span class="tc-sw" id="tc-noneu"><span class="s"></span> {t['noneu']} <small style="font-weight:600;color:var(--ink-4,#A0ADB8)">{t['noneu_small']}</small></span>
-        </div>
-      </div>
-
-      <div class="tc-ctrl">
-        <h3>{t['step_how']}</h3>
-        <div class="tc-subl">{t['arrive_by']}</div>
-        <div class="tc-chips" id="tc-arr">
-          <span class="tc-chip on" data-arr="ferry">{t['arr_ferry']}<br><small>{t['arr_ferry_s']}</small></span>
-          <span class="tc-chip" data-arr="fly">{t['arr_fly']}<br><small>{t['arr_fly_s']}</small></span>
-        </div>
-        <div class="tc-subl" style="margin-top:14px">{t['around']}</div>
-        <div class="tc-chips" id="tc-veh">
-          <span class="tc-chip" data-veh="own">{t['veh_own']}<br><small>{t['veh_own_s']}</small></span>
-          <span class="tc-chip" data-veh="car">{t['veh_rentcar']}</span>
-          <span class="tc-chip" data-veh="moto">{t['veh_rentmoto']}</span>
-          <span class="tc-chip" data-veh="none">{t['veh_none2']}</span>
-        </div>
-      </div>
-
-      <div class="tc-ctrl">
-        <h3>{t['step_comfort']}</h3>
-        <div class="tc-chips" id="tc-tiers">
-          <span class="tc-chip" data-t="budget">{t['tier_budget']}<br><small>{t['tier_budget_s']}</small></span>
-          <span class="tc-chip on" data-t="mid">{t['tier_mid']}<br><small>{t['tier_mid_s']}</small></span>
-          <span class="tc-chip" data-t="comfort">{t['tier_comfort']}<br><small>{t['tier_comfort_s']}</small></span>
-        </div>
-      </div>
-
       <div id="tc-route"></div>
-      <div id="tc-swaps"></div>
+      <div id="tc-swaps" class="tc-hoponly"></div>
 
-      <div class="tc-add">
+      <div class="tc-add tc-hoponly" id="tc-add-wrap">
         <span>{t['add_island']}</span>
         <input class="tc-search" id="tc-search" placeholder="{t['add_ph']}" autocomplete="off">
         <div class="tc-sug" id="tc-sug"></div>
         <span id="tc-quick"></span>
       </div>
+
+      <details class="tc-adv" id="tc-adv">
+        <summary>{t['advanced']} <small>{t['adv_s']}</small></summary>
+        <div class="tc-advbody">
+          <div class="tc-subl">{t['arrive_by']}</div>
+          <div class="tc-chips" id="tc-arr">
+            <span class="tc-chip on" data-arr="ferry">{t['arr_ferry']}<br><small>{t['arr_ferry_s']}</small></span>
+            <span class="tc-chip" data-arr="fly">{t['arr_fly']}<br><small>{t['arr_fly_s']}</small></span>
+          </div>
+          <div class="tc-note" id="tc-flynote" hidden>{t['fly_off']}</div>
+
+          <div class="tc-subl" style="margin-top:14px">{t['veh_default']}</div>
+          <div class="tc-chips" id="tc-veh">
+            <span class="tc-chip" data-veh="own">{t['veh_own']}<br><small>{t['veh_own_s']}</small></span>
+            <span class="tc-chip" data-veh="car">{t['veh_rentcar']}</span>
+            <span class="tc-chip" data-veh="moto">{t['veh_rentmoto']}</span>
+            <span class="tc-chip" data-veh="none">{t['veh_none2']}</span>
+          </div>
+
+          <div class="tc-advrow">
+            <div class="tc-trav">
+              <label for="tc-date" class="tc-lbl">{t['exact_dates']}</label>
+              <input type="date" id="tc-date" title="{t['dates_opt']}" style="font:inherit;font-size:13.5px;padding:7px 10px;border:1.5px solid var(--line,#DFE6EC);border-radius:10px;background:var(--card,#fff);color:inherit">
+            </div>
+            <span class="tc-sw" id="tc-noneu"><span class="s"></span> {t['noneu']} <small style="font-weight:600;color:var(--ink-4,#A0ADB8)">{t['noneu_small']}</small></span>
+          </div>
+        </div>
+      </details>
     </div>
 
     <div class="tc-sum" id="tc-summary"></div>
@@ -555,7 +624,7 @@ function stayCost(k,i,v){{const isl=ISL[k],n=state.trip[i].n,mk=monthAt(i);
 function fitsExcept(i,k){{return state.trip.every((t,j)=>j===i||pairOK(t.k,k));}}
 
 // ---------------- state ----------------
-let state={{month:'jun',date:null,pax:2,tier:'mid',nonEU:false,fly:false,own:false,trip:JSON.parse(JSON.stringify(PRESETS.classic))}};
+let state={{mode:'one',month:'jun',date:null,pax:2,tier:'mid',nonEU:false,fly:false,own:false,trip:[{{k:'naxos',n:3,v:'',b:false}}]}};
 // URL params: ?i=milos:4:c:b,ios:3&m=aug&pax=2&tier=mid
 (function(){{
   const q=new URLSearchParams(location.search);
@@ -593,6 +662,7 @@ function mealDay(k){{const m=ISL[k].meal;return state.tier==='budget'?m*CFG.meal
 // ---------------- render ----------------
 function render(){{
   document.getElementById('tc-pax').textContent=state.pax;
+  if(typeof syncMode==='function')syncMode();
   const _di=document.getElementById('tc-date');if(_di&&_di.value!==(state.date||''))_di.value=state.date||'';
   document.querySelectorAll('#tc-months .tc-chip').forEach(c=>c.classList.toggle('on',c.dataset.m===state.month));
   document.querySelectorAll('#tc-tiers .tc-chip').forEach(c=>c.classList.toggle('on',c.dataset.t===state.tier));
@@ -826,6 +896,57 @@ sUl.addEventListener('click',e=>{{const d=e.target.closest('[data-k]');if(!d)ret
   state.trip.push({{k:d.dataset.k,n:3,v:'',b:false}});sIn.value='';sUl.style.display='none';render();}});
 document.addEventListener('click',e=>{{if(!e.target.closest('.tc-add'))sUl.style.display='none';}});
 
+// ---------------- mode: one island vs island hopping ----------------
+function applyMode(m){{
+  state.mode=m;
+  // Collapsing to one island keeps the FIRST stop — the one the user came for.
+  if(m==='one'&&state.trip.length>1)state.trip=[state.trip[0]];
+  syncMode();render();
+}}
+function syncMode(){{
+  const hop=state.mode==='hop';
+  document.querySelectorAll('#tc-modes .tc-mode').forEach(b=>b.classList.toggle('on',b.dataset.mode===state.mode));
+  document.querySelectorAll('.tc-hoponly').forEach(el=>{{el.hidden=!hop;}});
+  const nf=document.getElementById('tc-nights-f');if(nf)nf.hidden=hop;   // nights live on the leg card when hopping
+  const isl=document.getElementById('tc-island');
+  if(isl&&document.activeElement!==isl)isl.value=(!hop&&state.trip[0])?iname(state.trip[0].k):'';
+  const n=document.getElementById('tc-n');
+  if(n&&state.trip[0])n.textContent=state.trip[0].n;
+  // Honest explanation for the previously-dimmed Fly chip.
+  const first=state.trip[0],last=state.trip[state.trip.length-1];
+  const noAir=!state.trip.length||(!ISL[first.k].air&&!ISL[last.k].air);
+  const note=document.getElementById('tc-flynote');
+  if(note)note.hidden=!(noAir&&!state.own);
+}}
+document.getElementById('tc-modes').addEventListener('click',e=>{{
+  const b=e.target.closest('.tc-mode');if(!b)return;applyMode(b.dataset.mode);}});
+
+// nights stepper for single-island mode
+document.getElementById('tc-n-minus').addEventListener('click',()=>{{
+  if(!state.trip[0])return;state.trip[0].n=Math.max(1,state.trip[0].n-1);render();}});
+document.getElementById('tc-n-plus').addEventListener('click',()=>{{
+  if(!state.trip[0])return;state.trip[0].n=Math.min(14,state.trip[0].n+1);render();}});
+
+// island picker for single-island mode — replaces stop 0 rather than appending
+const iIn=document.getElementById('tc-island'),iUl=document.getElementById('tc-isug');
+function renderISug(){{
+  const q=iIn.value.trim().toLowerCase();
+  const keys=Object.keys(ISL).filter(k=>iname(k).toLowerCase().includes(q)).slice(0,8);
+  iUl.innerHTML=keys.map(k=>`<div data-k="${{k}}">${{iname(k)}}</div>`).join('');
+  iUl.style.display=keys.length?'block':'none';
+}}
+iIn.addEventListener('input',renderISug);
+iIn.addEventListener('focus',()=>{{iIn.select();renderISug();}});
+iUl.addEventListener('click',e=>{{const d=e.target.closest('[data-k]');if(!d)return;
+  const n=state.trip[0]?state.trip[0].n:3;
+  state.trip[0]={{k:d.dataset.k,n:n,v:'',b:false}};
+  if(state.mode==='one')state.trip=[state.trip[0]];
+  iUl.style.display='none';iIn.blur();render();}});
+document.addEventListener('click',e=>{{if(!e.target.closest('.tc-f-isl'))iUl.style.display='none';}});
+
+// A deep link with more than one island is a hopping trip by definition.
+if(state.trip.length>1)state.mode='hop';
+syncMode();
 render();
 </script>
 </body>
