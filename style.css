@@ -6487,3 +6487,62 @@ html.dark .leaflet-control-scale-line {
   .leaflet-control-zoom a.leaflet-control-zoom-out { width: 42px; height: 42px; line-height: 40px; }
   .leaflet-control-layers-toggle { width: 44px !important; height: 44px !important; }
 }
+
+/* --- Aug 2026 mobile homepage ------------------------------------------------
+   The 1-2-3 decision strip collapsed to three bare words on phones (heading,
+   paragraph, icon and arrow were all display:none), so it neither read as a
+   recipe nor looked tappable. Worse, the numbering promised sequential progress
+   the site never tracked, and the three destinations were the wrong three:
+   /app/compare took 576 views in 28 days against 40 for the quiz and 63 for the
+   budget tool. On mobile it is now one honest CTA pointing at the thing people
+   actually use. Desktop keeps all three cards.                              */
+.bp-mobile-cta { display: none; }
+.bp-map-jump { display: none; }
+
+@media (max-width: 840px) {
+  .bp-decide { display: none; }
+
+  .bp-mobile-cta {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%; margin: -22px 0 14px; padding: 15px 18px;
+    font-family: var(--sans); font-size: 16px; font-weight: 800;
+    color: #fff; background: var(--terracotta); border: 0; border-radius: 14px;
+    box-shadow: 0 10px 28px rgba(26,35,50,0.20); cursor: pointer;
+    position: relative; z-index: 5;
+  }
+  .bp-mobile-cta:active { transform: scale(0.985); }
+  .bp-mobile-cta-go { font-weight: 800; opacity: 0.85; }
+
+  /* Map above the seasonal rail. Done with flex order rather than by moving the
+     node, so desktop layout and every script that queries the DOM are
+     untouched. Measured: the map started 804px down (0.96 screens) with the
+     428px seasonal block above it. */
+  #view-home { display: flex; flex-direction: column; }
+  /* Every child needs an explicit order: anything left unset defaults to 0 and
+     would leapfrog to the top. #view-home has eight children, not five. */
+  #view-home > *               { order: 9; }
+  #view-home > .sr-only        { order: 0; }
+  #view-home > .bp-hero        { order: 1; }
+  #view-home > .bp-home-wrap   { order: 2; }
+  #view-home > #main-map       { order: 3; }
+  #view-home > .bp-season      { order: 4; }
+  #view-home > .whats-on-strip { order: 5; }
+  #view-home > #home-content   { order: 6; }
+
+  /* Sticky jump button — exists only while the map is off-screen, so it never
+     taxes the viewport the way the old feedback FAB did. Aegean, not terracotta:
+     the search pill and the back-to-top button are already terracotta and three
+     of them on one screen is one too many. */
+  .bp-map-jump {
+    display: flex; align-items: center; justify-content: center; gap: 7px;
+    position: fixed; left: 12px; right: 12px; bottom: 14px; z-index: 950;
+    padding: 14px 16px; font-family: var(--sans); font-size: 15px; font-weight: 800;
+    color: #fff; background: var(--aegean-dark, #076880); border: 0; border-radius: 14px;
+    box-shadow: 0 8px 26px rgba(26,35,50,0.28); cursor: pointer;
+    opacity: 0; transform: translateY(8px); pointer-events: none;
+    transition: opacity 0.22s ease, transform 0.22s ease;
+  }
+  .bp-map-jump[hidden] { display: none; }
+  .bp-map-jump.on { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  body.pill-pinned .bp-map-jump { bottom: 14px; }
+}

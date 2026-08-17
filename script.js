@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-08-15';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-08-17';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -589,6 +589,7 @@ document.addEventListener('DOMContentLoaded', () => {
   try { setupMapSearch(); } catch(e) { console.warn('mapSearch', e); }
   try { setupVibePanelDismiss(); } catch(e) { console.warn('vibeDismiss', e); }
   try { setupPillPinning(); } catch(e) { console.warn('pillPin', e); }
+  try { setupMapJump(); } catch(e) { console.warn('mapJump', e); }
   // Featured cards use per-island hero photos from a small manifest. Render once
   // now (fallback initials) and re-render after the manifest loads (with photos).
   try { loadHeroPhotos(); } catch(e) { console.warn('heroPhotos', e); }
@@ -1906,6 +1907,49 @@ function closeVibePanel() {
 /* The pill is absolutely positioned inside #main-map, so it scrolled away as
    soon as you moved down the map — exactly when you want to search or filter.
    Pin it under the header while any part of the map is still on screen. */
+/* Sticky "see the map" button — mobile only.
+   Shows only while #main-map is out of view, so it costs nothing once the user
+   can see the map. Deliberately a scroll, not a mode toggle: a mode would need
+   a way back out, and this site has no separate map view ('map' aliases to
+   'home' in the router). */
+function setupMapJump() {
+  var btn = document.getElementById('bp-map-jump');
+  var map = document.getElementById('main-map');
+  if (!btn || !map) return;
+  var mq = window.matchMedia('(max-width: 840px)');
+
+  btn.addEventListener('click', function () {
+    map.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  var io = null;
+  function teardown() {
+    if (io) { io.disconnect(); io = null; }
+    btn.hidden = true;
+    btn.classList.remove('on');
+  }
+  function setup() {
+    if (!mq.matches) { teardown(); return; }
+    if (io) return;
+    btn.hidden = false;
+    io = new IntersectionObserver(function (entries) {
+      // Any meaningful sliver of map on screen is enough to retire the button.
+      var showing = entries[0].intersectionRatio > 0.12;
+      btn.classList.toggle('on', !showing);
+    }, { threshold: [0, 0.12, 0.5] });
+    io.observe(map);
+  }
+  setup();
+  if (mq.addEventListener) mq.addEventListener('change', setup);
+  else if (mq.addListener) mq.addListener(setup);
+
+  // Only relevant on the home view.
+  window.addEventListener('hashchange', function () {
+    var onHome = !location.hash || location.hash === '#' || location.hash === '#map';
+    if (onHome) setup(); else teardown();
+  });
+}
+
 function setupPillPinning() {
   const bar = document.getElementById('home-controls');
   const map = document.getElementById('main-map');

@@ -470,6 +470,8 @@ const UI_TEXT = {
   'a11y.close_search': { en: 'Close search', el: 'Κλείσιμο αναζήτησης' },
   'a11y.search_islands': { en: 'Search islands', el: 'Αναζήτηση νησιών' },
   'search.island': { en: 'Search an island', el: 'Αναζήτηση νησιού' },
+  'home.compare_cta': { en: '⇄  Compare two islands', el: '⇄  Σύγκρινε δύο νησιά' },
+  'home.map_jump': { en: 'See all 88 islands, rated', el: 'Δες και τα 88 νησιά με βαθμολογία' },
   'a11y.switch_language': { en: 'Switch language', el: 'Αλλαγή γλώσσας' },
   'a11y.toggle_dark': { en: 'Toggle dark mode', el: 'Εναλλαγή σκοτεινής λειτουργίας' },
   'a11y.car_scale': { en: '1 = not needed, 5 = essential', el: '1 = δεν χρειάζεται, 5 = απαραίτητο' },
