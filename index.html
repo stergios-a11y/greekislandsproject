@@ -168,30 +168,26 @@
     <div class="bp-home-wrap">
       <!-- Decision cards -->
       <div class="bp-decide">
-        <button type="button" class="bp-dcard alt" onclick="navigateTo('match')">
-          <span class="bp-dcard-m">1 · Choose</span>
-          <span class="ic">🎯</span>
-          <h3>1 · Choose your island</h3>
-          <p>83 islands, honestly scored. Take the 60-second quiz, compare two head-to-head, or browse the map below.</p>
-          <span class="go">Take the quiz →</span>
+        <button type="button" class="bp-dcard alt" onclick="navigateTo('compare')">
+          <span class="ic">⇄</span>
+          <h3>Which island is right for you?</h3>
+          <p>88 islands, honestly scored on beaches, culture, nightlife, cost and access. Put any two side by side.</p>
+          <span class="go">Compare two islands →</span>
         </button>
-        <button type="button" class="bp-dcard" onclick="navigateTo('hopping')">
-          <span class="bp-dcard-m">2 · Plan</span>
-          <span class="ic">🧭</span>
-          <h3>2 · Plan the trip</h3>
-          <p>Ready-made island-hopping itineraries, real ferry routes, and the right month to go.</p>
-          <span class="go">See routes &amp; ferries →</span>
+        <button type="button" class="bp-dcard" onclick="window.location.href='/festivals/'">
+          <span class="ic">🎉</span>
+          <h3>When should you go?</h3>
+          <p>Every panigiri and feast day across the islands, by date — the deepest-rooted thing an island does.</p>
+          <span class="go">See the festival calendar →</span>
         </button>
         <button type="button" class="bp-dcard" onclick="window.location.href='/trip-cost/'">
-          <span class="bp-dcard-m">3 · Budget</span>
           <span class="ic">💶</span>
-          <h3>3 · Budget it &amp; book it</h3>
-          <p>Build your route and see what it really costs — rooms, ferries, car, food — then book each piece.</p>
-          <span class="go">Plan your budget →</span>
+          <h3>What will it cost?</h3>
+          <p>Ferries, rooms, car hire and food for your actual dates — an honest estimate, then book each piece.</p>
+          <span class="go">Work out the budget →</span>
         </button>
-        </span>
       </div>
-      <button type="button" class="bp-mobile-cta" onclick="navigateTo('compare')"><span data-i18n="home.compare_cta">⇄  Compare two islands</span><span class="bp-mobile-cta-go" aria-hidden="true">→</span></button>
+      <p class="bp-decide-alt">Not sure where to start? <button type="button" class="bp-linkbtn" onclick="navigateTo('match')">Take the 60-second quiz →</button></p>      <button type="button" class="bp-mobile-cta" onclick="navigateTo('compare')"><span data-i18n="home.compare_cta">⇄  Compare two islands</span><span class="bp-mobile-cta-go" aria-hidden="true">→</span></button>
     </div>
 
   
