@@ -4295,12 +4295,23 @@ function cmpBeachSummary(island, json) {
     }
     if (b.facing) {
       const f = b.facing.toLowerCase();
-      if (f.includes('shelter')) facings.add('sheltered');
-      else if (f.includes('exposed') || f.includes('open sea')) facings.add('exposed');
-      // 'Meltemi-exposed' only makes sense in the Aegean — the Ionian's
-      // summer wind is the NW maistros, not the meltemi.
-      if (f.includes('meltemi') || f.includes('north')) {
+      // Aug 2026 fix. This used to flag anything containing 'meltemi' OR
+      // 'north' as meltemi-exposed, which read "South-facing — protected from
+      // the meltemi" and "Northwest-facing — sheltered cove" as exposure: 68
+      // beaches carried the label, most of them wrongly. A compass bearing is
+      // not a wind claim, and a negated mention is the opposite of one.
+      const negated = /(protected|sheltered|shielded)\s+(from|against)/.test(f);
+      const windy   = f.includes('exposed') || f.includes('open sea');
+      const meltemi = f.includes('meltemi') && windy && !negated;
+      if (meltemi) {
+        // 'Meltemi-exposed' only makes sense in the Aegean — the Ionian's
+        // summer wind is the NW maistros, not the meltemi. The more specific
+        // label replaces the generic one rather than sitting beside it.
         facings.add(island.island_group === 'Ionian' ? 'NW-breeze exposed' : 'Meltemi-exposed');
+      } else if (f.includes('shelter') || negated) {
+        facings.add('sheltered');
+      } else if (windy) {
+        facings.add('exposed');
       }
     }
   });
