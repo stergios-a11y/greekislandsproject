@@ -156,6 +156,34 @@ def build_compare_html(key, lang, limit=5):
             f'<p class="seo-compare-more"><a href="{hub}">{esc(more)}</a></p></section>')
 
 
+
+# Islands that belong to a collection page get a contextual link to it, so the
+# collections aren't orphans and the island pages gain a relevant internal link.
+DIAPONTIA_KEYS = {'othonoi', 'erikousa', 'mathraki'}
+QUIET_KEYS = {
+    'kastos', 'arki', 'telendos', 'thymaina', 'pserimos', 'antikythera',
+    'mathraki', 'iraklia', 'agios-efstratios', 'therasia', 'erikousa', 'psara',
+    'othonoi', 'agathonisi', 'kalamos', 'gavdos', 'donousa', 'oinousses',
+    'schoinoussa', 'kastellorizo',
+}
+
+
+def build_collection_links(key, lang):
+    links = []
+    if key in DIAPONTIA_KEYS:
+        href = '/el/diapontia/' if lang == 'el' else '/diapontia/'
+        label = ('Και τα τρία Διαπόντια σε ένα ταξίδι' if lang == 'el'
+                 else 'All three Diapontia islands in one trip')
+        links.append(f'<a href="{href}">{esc(label)}</a>')
+    if key in QUIET_KEYS:
+        href = '/el/quiet-islands/' if lang == 'el' else '/quiet-islands/'
+        label = ('Στα 20 πιο ήσυχα ελληνικά νησιά' if lang == 'el'
+                 else 'One of the 20 quietest Greek islands')
+        links.append(f'<a href="{href}">{esc(label)}</a>')
+    if not links:
+        return ''
+    return f'<p class="seo-collections">{" · ".join(links)}</p>'
+
 # ---------------------------------------------------------------------
 # Pull each island's group + stats from script.js's ISLANDS_DATA
 # ---------------------------------------------------------------------
@@ -1744,6 +1772,7 @@ def render_body(key, data, meta, lang='en'):
         related_links.append(f'<a href="{href}">{esc(rname)}</a>')
     # Compare pages this island appears in — the missing internal link.
     compare_html = build_compare_html(key, lang)
+    collections_html = build_collection_links(key, lang)
 
     related_heading = 'Islands like this one' if lang == 'en' else 'Παρόμοια νησιά'
     related_html = ''
@@ -1832,6 +1861,7 @@ def render_body(key, data, meta, lang='en'):
   {beaches_html}
   {local_html}
   {compare_html}
+  {collections_html}
   {related_html}
 </article>'''
 
@@ -2096,6 +2126,8 @@ def render_page(key, data, meta, lang='en'):
   }}
   .seo-related a, .seo-compare a {{ color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }}
   .seo-compare-more {{ margin-top: 8px; font-size: 14px; }}
+  .seo-collections {{ margin: 10px 0 0; font-size: 14px; }}
+  .seo-collections a {{ color: #076880; font-weight: 700; text-decoration: none; }}
   .seo-related a:hover {{ text-decoration: underline; }}
 
   /* Top nav — styled to match the main SPA header (teal gradient banner)
