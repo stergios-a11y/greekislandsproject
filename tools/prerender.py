@@ -499,7 +499,11 @@ def safe_html(s):
     escaped = html.escape(str(s))
     # Restore <a href="..."> (href is the only allowed attribute)
     escaped = re.sub(
-        r'&lt;a\s+href=(?:&quot;|")([^&"]+)(?:&quot;|")\s*(?:target=(?:&quot;|")_blank(?:&quot;|")\s*)?(?:rel=(?:&quot;|")[^&"]*(?:&quot;|")\s*)?&gt;',
+        # The href class is [^&"] plus the handful of entities html.escape()
+        # can put *inside* a URL. Aug 2026: an apostrophe in a Google Maps
+        # query ("Roza's") became &#x27;, the '&' broke the class, and the
+        # whole anchor shipped to the page as visible text.
+        r'&lt;a\s+href=(?:&quot;|")((?:[^&"]|&#x27;|&#39;|&amp;)+)(?:&quot;|")\s*(?:target=(?:&quot;|")_blank(?:&quot;|")\s*)?(?:rel=(?:&quot;|")[^&"]*(?:&quot;|")\s*)?&gt;',
         r'<a href="\1" target="_blank" rel="noopener noreferrer">',
         escaped
     )
