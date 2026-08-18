@@ -4227,23 +4227,43 @@ body:has(#islands-table.show-dims) .table-hint-row {
 
 /* Show/Hide scores button */
 .toggle-dims-btn {
-  padding: 8px 14px;
+  padding: 12px 20px;
   font-family: var(--sans);
-  font-size: var(--text-meta);
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 800;
   color: #fff;
-  background: linear-gradient(135deg, var(--aegean) 0%, var(--aegean-dark) 100%);
+  background: var(--terracotta);
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: transform 0.15s, box-shadow 0.15s;
   white-space: nowrap;
   flex-shrink: 0;
-  box-shadow: 0 2px 6px rgba(11,143,172,0.25);
+  box-shadow: 0 3px 10px rgba(232,82,42,0.30);
 }
 .toggle-dims-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 3px 10px rgba(11,143,172,0.4);
+  box-shadow: 0 5px 16px rgba(232,82,42,0.45);
+}
+/* While the scores are hidden the button is the only thing telling you they
+   exist, so it breathes until you use it. Aegean blue read as chrome next to
+   the header; terracotta is the site's action colour. */
+body:has(#islands-table:not(.show-dims)) .toggle-dims-btn {
+  animation: dimsPulse 2.4s ease-in-out infinite;
+}
+@keyframes dimsPulse {
+  0%, 100% { box-shadow: 0 3px 10px rgba(232,82,42,0.30); }
+  50%      { box-shadow: 0 3px 10px rgba(232,82,42,0.30), 0 0 0 7px rgba(232,82,42,0.12); }
+}
+body:has(#islands-table:not(.show-dims)) .table-hint-row {
+  border-color: rgba(232,82,42,0.42);
+  background: linear-gradient(90deg, rgba(232,82,42,0.07) 0%, rgba(232,82,42,0.02) 100%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .toggle-dims-btn { animation: none !important; }
+}
+@media (max-width: 640px) {
+  .toggle-dims-btn { width: 100%; text-align: center; font-size: 14.5px; }
 }
 
 /* Mobile: stack button + hint text vertically */
