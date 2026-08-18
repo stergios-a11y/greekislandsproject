@@ -1181,7 +1181,6 @@ html.dark .planner-disclaimer { background: rgba(11, 143, 172, 0.10); }
   font-size: var(--text-body); font-weight: 600; color: var(--ink);
 }
 .result-why { font-size: var(--text-meta); color: var(--ink-3); margin-top: 3px; }
-.result-score { font-family: var(--serif); font-size: var(--text-section); font-weight: 600; flex-shrink: 0; }
 .quiz-retake-row { margin-top: 24px; text-align: center; }
 .quiz-retake-btn {
   padding: 10px 24px; font-size: var(--text-meta); font-family: var(--sans); font-weight: 500;

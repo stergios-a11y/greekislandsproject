@@ -6501,9 +6501,12 @@ function computeQuizResults() {
     const reasons = [];
     if (island[priority] >= 4.5) reasons.push(`${t('quiz.why.top')} ${dimLabel.toLowerCase()} (${fmt(island[priority])})`);
     else if (island[priority] >= 3.8) reasons.push(`${t('quiz.why.strong')} ${dimLabel.toLowerCase()} (${fmt(island[priority])})`);
-    if (budgetMod > 0 && island.afford >= 4) reasons.push(t('quiz.why.affordable'));
+    // Don't restate the dimension the user already picked as their priority:
+    // with 'Affordability' chosen this produced "Top affordability (4.5) · Very
+    // affordable" on every card. Same trap for nightlife and the scene reason.
+    if (budgetMod > 0 && island.afford >= 4 && priority !== 'afford') reasons.push(t('quiz.why.affordable'));
     if (scenePref >= 2 && island.pop < 5000) reasons.push(t('quiz.why.lowcrowds'));
-    if (scenePref === 0 && island.night >= 4.5) reasons.push(t('quiz.why.scene'));
+    if (scenePref === 0 && island.night >= 4.5 && priority !== 'night') reasons.push(t('quiz.why.scene'));
     if (tripDays !== undefined && island.days && island.days <= tripDays) reasons.push(t('quiz.why.fits').replace('{n}', island.days));
     if (seasonIdx !== undefined && WTV_TAGS[island.key]) {
       const months = seasonMonths[seasonIdx] || [];
@@ -6519,7 +6522,7 @@ function computeQuizResults() {
     const nm = islandName(island.key);
     const hero = HERO_PHOTOS[island.key] || {};
     const thumb = `<div class="result-thumb${hero.url ? '' : ' result-nophoto'}" data-initial="${nm.charAt(0)}">${hero.url ? `<img src="${thumbUrl(hero.url)}" alt="${nm}" loading="lazy" onerror="this.closest('.result-thumb').classList.add('result-nophoto')">` : ''}<span class="result-rank">${idx + 1}</span></div>`;
-    return `<div class="result-island-card" data-key="${island.key}">${thumb}<div class="result-info"><div class="result-name">${nm}</div><div class="result-why">${whyText(island)}</div></div><div class="result-score" style="color:${scoreToColor(island.total)}">${fmt(island.total)}</div></div>`;
+    return `<div class="result-island-card" data-key="${island.key}">${thumb}<div class="result-info"><div class="result-name">${nm}</div><div class="result-why">${whyText(island)}</div></div></div>`;
   }).join('')}<div class="quiz-retake-row"><button class="quiz-retake-btn">${t('match.retake')}</button></div>`;
   results.querySelectorAll('.result-island-card').forEach(card => { card.addEventListener('click', () => navigateTo('island', card.dataset.key)); });
   results.querySelector('.quiz-retake-btn').addEventListener('click', () => { quizAnswers = {}; quizStep = 0; quizPrevRanks = null;
