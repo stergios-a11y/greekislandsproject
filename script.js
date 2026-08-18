@@ -595,7 +595,11 @@ document.addEventListener('DOMContentLoaded', () => {
   try { setupMapJump(); } catch(e) { console.warn('mapJump', e); }
   // Featured cards use per-island hero photos from a small manifest. Render once
   // now (fallback initials) and re-render after the manifest loads (with photos).
-  try { loadHeroPhotos(); } catch(e) { console.warn('heroPhotos', e); }
+  try {
+    loadHeroPhotos().then(function () {
+      try { refreshQuizLiveThumbs(); } catch (_) {}
+    });
+  } catch(e) { console.warn('heroPhotos', e); }
   try { setupTable(); } catch(e) { console.warn('setupTable', e); }
   try { setupCompare(); } catch(e) { console.warn('setupCompare', e); }
   const vd = document.getElementById('version-display');
@@ -6395,6 +6399,27 @@ function scoreIslandsFromAnswers(quizAnswers) {
    scorer as the final results, so what you watch climbing is the real ranking,
    not a decorative animation. */
 let quizPrevRanks = null;
+
+/* hero-photos.json is fetched without blocking first paint, so the board's
+   first render happens while HERO_PHOTOS is still empty and every row shows an
+   initial instead of a photo. Nothing re-rendered the board afterwards, so the
+   photos only appeared from question two onward. Swap the thumbnails in place
+   rather than re-rendering: a full re-render would fire the FLIP animation and
+   wipe the movement caption for a change that isn't a change. */
+function refreshQuizLiveThumbs() {
+  document.querySelectorAll('#quiz-live .ql-row').forEach(function (row) {
+    var key = row.dataset.key;
+    var hero = HERO_PHOTOS[key] || {};
+    var old = row.querySelector('.ql-thumb');
+    if (!hero.url || !old || old.tagName === 'IMG') return;
+    var img = document.createElement('img');
+    img.className = 'ql-thumb';
+    img.src = thumbUrl(hero.url);
+    img.alt = '';
+    img.loading = 'lazy';
+    old.replaceWith(img);
+  });
+}
 
 function renderQuizLiveBoard() {
   const box = document.getElementById('quiz-live');
