@@ -6159,34 +6159,49 @@ const WTV_TAGS = {
 
 const QUIZ_QUESTIONS = [
   {
+    id: 'party',
     question: 'What kind of trip are you planning?',
     question_el: 'Τι είδους ταξίδι σχεδιάζεις;',
     options: ['Solo adventure', 'Couple getaway', 'Family vacation', 'Friend group'],
-    icons: ['🎒', '💞', '👨‍👩‍👧', '🍻'],
-    options_el: ['Μόνος/-η περιπέτεια', 'Ζευγάρι', 'Οικογενειακές διακοπές', 'Παρέα φίλων']
+    options_el: ['Μόνος/-η περιπέτεια', 'Ζευγάρι', 'Οικογενειακές διακοπές', 'Παρέα φίλων'],
+    icons: ['🎒', '💞', '👨‍👩‍👧', '🍻']
   },
   {
+    id: 'duration',
+    question: 'How long have you got?',
+    question_el: 'Πόσο χρόνο έχεις;',
+    options: ['2–3 days', '4–5 days', 'About a week', '10 days or more'],
+    options_el: ['2–3 μέρες', '4–5 μέρες', 'Περίπου μια εβδομάδα', '10 μέρες ή περισσότερες'],
+    icons: ['⚡', '🗓', '🌅', '🧳']
+  },
+  {
+    id: 'priority',
     question: 'What matters most to you?',
     question_el: 'Τι σε ενδιαφέρει περισσότερο;',
     options: ['Beaches & swimming', 'History & culture', 'Nightlife & food', 'Peace & nature'],
-    icons: ['🏖', '🏛', '🍷', '🌿'],
-    options_el: ['Παραλίες & μπάνιο', 'Ιστορία & πολιτισμός', 'Νυχτερινή ζωή & φαγητό', 'Ηρεμία & φύση']
+    options_el: ['Παραλίες & μπάνιο', 'Ιστορία & πολιτισμός', 'Νυχτερινή ζωή & φαγητό', 'Ηρεμία & φύση'],
+    icons: ['🏖', '🏛', '🍷', '🌿']
   },
   {
+    id: 'budget',
     question: 'What is your budget level?',
     question_el: 'Ποιο είναι το μπάτζετ σου;',
     options: ['Budget (backpacker)', 'Mid-range', 'Splurge-ready', 'No limit'],
-    icons: ['🎒', '🙂', '✨', '🥂'],
-    options_el: ['Οικονομικό', 'Μεσαίο', 'Γενναιόδωρο', 'Χωρίς όριο']
+    options_el: ['Οικονομικό', 'Μεσαίο', 'Γενναιόδωρο', 'Χωρίς όριο'],
+    icons: ['🎒', '🙂', '✨', '🥂']
   },
   {
-    question: 'How do you feel about crowds?',
-    question_el: 'Πώς νιώθεις με τον κόσμο;',
-    options: ['Love the buzz', 'Some is fine', 'Prefer quiet', 'Must be secluded'],
-    icons: ['🎉', '🙂', '🤫', '🏝'],
-    options_el: ['Μου αρέσει η ζωντάνια', 'Παν μέτρον άριστον', 'Προτιμώ ηρεμία', 'Θέλω απομόνωση']
+    id: 'scene',
+    question: 'Cosmopolitan or quiet?',
+    question_el: 'Κοσμοπολίτικο ή ήσυχο;',
+    options: ['Cosmopolitan — bars, boutiques, be seen', 'Lively, but not a scene',
+              'Local and low-key', 'Solitude — barely anyone'],
+    options_el: ['Κοσμοπολίτικο — μπαρ, βιτρίνες, κόσμος', 'Ζωντανό, χωρίς επίδειξη',
+                 'Ήσυχο και ντόπιο', 'Μοναξιά — σχεδόν κανείς'],
+    icons: ['🥂', '🎶', '🫒', '🏝']
   },
   {
+    id: 'month',
     question: 'When are you travelling?',
     question_el: 'Πότε ταξιδεύεις;',
     options: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
@@ -6194,18 +6209,20 @@ const QUIZ_QUESTIONS = [
     month_picker: true
   },
   {
+    id: 'transport',
     question: 'How are you getting there?',
     question_el: 'Πώς φτάνεις στο νησί;',
     options: ['By car', 'Ferry — up to 5 hours', 'Ferry — any length', 'Fly in'],
-    icons: ['🚗', '⛴', '🛳', '✈️'],
-    options_el: ['Με το αυτοκίνητό μου', 'Πλοίο — έως 5 ώρες', 'Πλοίο — όσο χρειαστεί', 'Αεροπλάνο']
+    options_el: ['Με το αυτοκίνητό μου', 'Πλοίο — έως 5 ώρες', 'Πλοίο — όσο χρειαστεί', 'Αεροπλάνο'],
+    icons: ['🚗', '⛴', '🛳', '✈️']
   },
   {
+    id: 'car',
     question: 'Will you have a car on the island?',
     question_el: 'Θα έχεις αυτοκίνητο στο νησί;',
     options: ['Yes, I want to rent one', 'No, I prefer walking / public transport'],
-    icons: ['🚗', '🚶'],
-    options_el: ['Ναι, θα νοικιάσω', 'Όχι, προτιμώ περπάτημα / ΜΜΜ']
+    options_el: ['Ναι, θα νοικιάσω', 'Όχι, προτιμώ περπάτημα / ΜΜΜ'],
+    icons: ['🚗', '🚶']
   },
 ];
 let quizAnswers = {};
@@ -6266,23 +6283,28 @@ function renderQuizStep() {
    Every lookup below already degrades safely when an answer is undefined,
    which is what lets the live leaderboard run from question one. */
 function scoreIslandsFromAnswers(quizAnswers) {
+  // Answers are keyed by question id, not by position. Inserting a question
+  // used to shift every index in this function and silently rescore the whole
+  // quiz; ids make that impossible.
+  const A = {};
+  QUIZ_QUESTIONS.forEach(function (q, i) {
+    if (quizAnswers[i] !== undefined) A[q.id] = quizAnswers[i];
+  });
+
   const priorityDims = ['beach', 'hist', 'night', 'afford'];
-  const priority = priorityDims[quizAnswers[1]] || 'total';
-  const budgetMod = [2, 0.5, -0.5, -2][quizAnswers[2]] || 0;
-  const crowdPref = quizAnswers[3];
+  const priority = priorityDims[A.priority] || 'total';
+  const budgetMod = [2, 0.5, -0.5, -2][A.budget] || 0;
+  const scenePref = A.scene;
+  const seasonIdx = A.month;
+  const transportPref = A.transport;
 
-  // Q5 season — now a single month index (0=Jan … 11=Dec)
-  // Use the chosen month plus neighbours for scoring to be more forgiving
-  const seasonIdx = quizAnswers[4];
   const seasonMonths = {};
-  for (let m = 0; m < 12; m++) {
-    seasonMonths[m] = [m]; // single month — exact match
-  }
+  for (let m = 0; m < 12; m++) seasonMonths[m] = [m];
 
-  // Q6 transport: 0=car/bridge, 1=short ferry <2h, 2=long ferry ok, 3=fly
-  const transportPref = quizAnswers[5];
+  // Trip length in usable days. Anything the island itself asks for beyond this
+  // is a mismatch: two days on Crete is not a Crete trip.
+  const tripDays = [2.5, 4.5, 7, 12][A.duration];
 
-  // Islands reachable by car/bridge (drive-on ferry exists or bridge)
   const driveOnIslands = new Set(['lefkada','evia-north','evia-central','evia-south',
     'thasos','corfu','kefalonia','zakynthos','salamis','poros','aegina','agistri',
     'spetses','hydra','elafonisos','kythira','ithaca','ammouliani']);
@@ -6291,72 +6313,81 @@ function scoreIslandsFromAnswers(quizAnswers) {
     let s = i[priority] * 2.5 + i.total * 1.5;
     if (budgetMod > 0) s += budgetMod * i.afford;
     else if (budgetMod < 0) s += Math.abs(budgetMod) * (5 - i.afford);
-    if (crowdPref >= 2) s += crowdPref * Math.max(0, 4 - Math.log10(i.pop + 1)) * 0.5;
 
-    // Q1 trip type. Until Aug 2026 only answer 2 (family) was read — solo,
-    // couple and friend group were collected and thrown away, so the live
-    // board sat perfectly still on the first question and looked broken.
-    const party = quizAnswers[0];
-    if (party === 0) {            // solo: easy to reach, somewhere to meet people, walkable
+    // Q1 trip type.
+    const party = A.party;
+    if (party === 0) {
       s += i.access * 0.35 + i.night * 0.2;
       if (i.hiking) s += 0.4;
       if (i.car_need >= 4) s -= 0.4;
-    } else if (party === 1) {     // couple: scenery and a chora, not a party town
+    } else if (party === 1) {
       if (i.drama) s += 0.6;
       if (i.chora) s += 0.5;
       if (i.night > 4.5) s -= 0.4;
-    } else if (party === 2) {     // family: reachable, calmer, shallow-water beaches
+    } else if (party === 2) {
       s += i.access * 0.5;
       if (i.night > 4) s -= 0.5;
-    } else if (party === 3) {     // friends: nightlife and value
+    } else if (party === 3) {
       s += i.night * 0.45 + i.afford * 0.2;
     }
 
-    // Season fit — boost islands rated perfect/great in chosen months, penalise avoid
+    // Trip length. Islands ask for a certain number of days (i.days); going
+    // under that means you spend the trip travelling, not being there.
+    if (tripDays !== undefined && i.days) {
+      const over = i.days - tripDays;
+      if (over > 0) s -= over * 1.1;
+      // Short trips also punish anything slow to reach.
+      if (tripDays <= 3) s += (i.access - 3) * 0.5;
+      // Long trips on a one-beach island run out of road.
+      if (tripDays >= 7 && i.days <= 2) s -= (tripDays >= 12 ? 1.2 : 0.6);
+    }
+
+    // Scene: glamour at one end, emptiness at the other. Distinct from raw
+    // crowd counts — Crete is busy but not showy, Hydra is small but a scene.
+    if (scenePref !== undefined) {
+      const glam = (i.night * 0.5) + ((5 - i.afford) * 0.5) + (i.sailing ? 0.8 : 0) + (i.has_airport ? 0.4 : 0);
+      const empty = Math.max(0, 4 - Math.log10(i.pop + 1)) + (i.night <= 2 ? 0.6 : 0);
+      if (scenePref === 0) s += glam * 1.3;
+      else if (scenePref === 1) s += (i.night * 0.3) + (i.chora ? 0.4 : 0);
+      else if (scenePref === 2) s += empty * 0.5 - glam * 0.25;
+      else if (scenePref === 3) s += empty * 1.6 - glam * 0.5;
+    }
+
     if (seasonIdx !== undefined && WTV_TAGS[i.key]) {
       const tags = WTV_TAGS[i.key];
       const months = seasonMonths[seasonIdx] || [];
       let seasonBonus = 0;
       months.forEach(mi => {
         const tag = tags[mi];
-        if (tag === 3) seasonBonus += 1.2;       // perfect
-        else if (tag === 2) seasonBonus += 0.5;  // great
-        else if (tag === 0) seasonBonus -= 1.0;  // avoid
+        if (tag === 3) seasonBonus += 1.2;
+        else if (tag === 2) seasonBonus += 0.5;
+        else if (tag === 0) seasonBonus -= 1.0;
       });
       s += seasonBonus / months.length;
     }
 
-    // Transport preference
     if (transportPref === 0) {
-      // Car/bridge: strongly favour drive-on islands, penalise fly-only
       if (driveOnIslands.has(i.key)) s += 2.0;
       else if (!i.has_airport && i.access < 3) s -= 1.5;
     } else if (transportPref === 1) {
-      // Ferry up to 5h — most islands with access >= 3, penalise truly remote ones
       if (i.access >= 3.0) s += 1.2;
       else if (i.access < 2.0) s -= 1.5;
     } else if (transportPref === 2) {
       // "Ferry — any length" means no constraint, not a taste for long crossings.
-      // This used to add +1.2 to remote islands and dock -0.5 from the most
-      // accessible ones, which quietly pushed Paros and Naxos out of the running
-      // for someone who had only said they were relaxed about ferry time.
-      // Tolerating a long trip is not the same as wanting one: score unchanged.
     } else if (transportPref === 3) {
-      // Fly: favour airports, penalise no-airport
       if (i.has_airport) s += 1.2;
       else s -= 0.8;
     }
 
-    // Q7: car preference. 0 = Yes (will rent), 1 = No car
-    if (quizAnswers[6] === 1 && i.car_need) {
+    if (A.car === 1 && i.car_need) {
       s -= Math.max(0, i.car_need - 2) * 0.8;
-    } else if (quizAnswers[6] === 0 && i.car_need) {
+    } else if (A.car === 0 && i.car_need) {
       s += Math.min(i.car_need, 5) * 0.1;
     }
 
     return { ...i, matchScore: s };
   }).sort((a, b) => b.matchScore - a.matchScore);
-  return { scored, priority, budgetMod, crowdPref, seasonIdx, seasonMonths, transportPref };
+  return { scored, A, priority, budgetMod, scenePref, seasonIdx, seasonMonths, transportPref, tripDays };
 }
 
 /* ---- Live front-runners -------------------------------------------------
@@ -6451,7 +6482,7 @@ function renderQuizMovement(climbers, answered) {
 
 function computeQuizResults() {
   const ctx = scoreIslandsFromAnswers(quizAnswers);
-  const { priority, budgetMod, crowdPref, seasonIdx, seasonMonths, transportPref } = ctx;
+  const { A, priority, budgetMod, scenePref, seasonIdx, seasonMonths, transportPref, tripDays } = ctx;
   const scored = ctx.scored.slice(0, 6);
   const container = document.getElementById('quiz-container');
   const results = document.getElementById('quiz-results');
@@ -6464,7 +6495,7 @@ function computeQuizResults() {
   const dimLabels = (CURRENT_LANG === 'el')
     ? ['Παραλία', 'Πολιτισμός', 'Νυχτερινή ζωή', 'Προσιτή τιμή']
     : ['Beach', 'Culture', 'Nightlife', 'Affordability'];
-  const dimLabel = dimLabels[quizAnswers[1]] || (CURRENT_LANG === 'el' ? 'Συνολικά' : 'Overall');
+  const dimLabel = dimLabels[A.priority] || (CURRENT_LANG === 'el' ? 'Συνολικά' : 'Overall');
   const driveOnSet = new Set(['lefkada','evia-north','evia-central','evia-south',
     'thasos','corfu','kefalonia','zakynthos','salamis','poros','aegina','agistri',
     'spetses','hydra','elafonisos','kythira','ithaca','ammouliani']);
@@ -6473,7 +6504,9 @@ function computeQuizResults() {
     if (island[priority] >= 4.5) reasons.push(`${t('quiz.why.top')} ${dimLabel.toLowerCase()} (${fmt(island[priority])})`);
     else if (island[priority] >= 3.8) reasons.push(`${t('quiz.why.strong')} ${dimLabel.toLowerCase()} (${fmt(island[priority])})`);
     if (budgetMod > 0 && island.afford >= 4) reasons.push(t('quiz.why.affordable'));
-    if (crowdPref >= 2 && island.pop < 5000) reasons.push(t('quiz.why.lowcrowds'));
+    if (scenePref >= 2 && island.pop < 5000) reasons.push(t('quiz.why.lowcrowds'));
+    if (scenePref === 0 && island.night >= 4.5) reasons.push(t('quiz.why.scene'));
+    if (tripDays !== undefined && island.days && island.days <= tripDays) reasons.push(t('quiz.why.fits').replace('{n}', island.days));
     if (seasonIdx !== undefined && WTV_TAGS[island.key]) {
       const months = seasonMonths[seasonIdx] || [];
       const allPerfect = months.every(mi => WTV_TAGS[island.key][mi] === 3);
