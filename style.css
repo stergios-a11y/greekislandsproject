@@ -6570,25 +6570,18 @@ html.dark .leaflet-control-scale-line {
 .ql-thumb { flex: none; width: 34px; height: 34px; border-radius: 9px; object-fit: cover; }
 .ql-nophoto { display: flex; align-items: center; justify-content: center; background: var(--aegean, #0B8FAC);
   color: #fff; font-weight: 800; font-size: 14px; }
-.ql-name { flex: 1 1 auto; font-size: 13.5px; font-weight: 700; color: var(--ink-1); min-width: 0;
+.ql-name { flex: 1 1 auto; font-size: 14px; font-weight: 700; color: var(--ink-1); min-width: 0;
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ql-move { flex: none; font-size: 10.5px; font-weight: 800; padding: 2px 5px; border-radius: 6px; }
 .ql-up { color: #1D9E75; background: rgba(29,158,117,0.12); }
 .ql-down { color: #A0ADB8; background: rgba(160,173,184,0.14); }
 .ql-new { color: #C4694A; background: rgba(196,105,74,0.14); }
-.ql-score { flex: none; font-size: 13.5px; font-weight: 800; }
 @media (max-width: 900px) {
   .match-grid { grid-template-columns: 1fr; gap: 16px; }
   .quiz-live { position: static; }
 }
 
 /* --- Match Me: stage, option icons, movement caption, rank animation ------ */
-.quiz-stage { position: relative; border-radius: 18px; overflow: hidden; padding: 18px; }
-.quiz-backdrop { position: absolute; inset: 0; background-size: cover; background-position: center;
-  opacity: 0; transition: opacity 0.7s ease; z-index: 0; }
-.quiz-backdrop::after { content: ''; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(255,252,246,0.90), rgba(255,252,246,0.96)); }
-.quiz-stage > #quiz-container { position: relative; z-index: 1; }
 
 .quiz-option { display: flex; align-items: center; gap: 10px; text-align: left; }
 .quiz-opt-ic { flex: none; font-size: 19px; line-height: 1; }
@@ -6607,5 +6600,5 @@ html.dark .leaflet-control-scale-line {
 @keyframes qlpop { 0% { transform: scale(0.6); opacity: 0; } 60% { transform: scale(1.12); } 100% { transform: scale(1); opacity: 1; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .ql-row, .ql-enter, .ql-move, .quiz-movement.on, .quiz-backdrop { animation: none !important; transition: none !important; }
+  .ql-row, .ql-enter, .ql-move, .quiz-movement.on { animation: none !important; transition: none !important; }
 }

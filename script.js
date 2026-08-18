@@ -6399,7 +6399,6 @@ function renderQuizLiveBoard() {
          + thumb
          + '<span class="ql-name">' + nm + '</span>'
          + move
-         + '<span class="ql-score" style="color:' + scoreToColor(isl.total) + '">' + fmt(isl.total) + '</span>'
          + '</li>';
   }).join('');
 
@@ -6428,29 +6427,8 @@ function renderQuizLiveBoard() {
     r.addEventListener('click', function () { navigateTo('island', r.dataset.key); });
   });
 
-  renderQuizBackdrop(scored[0]);
   renderQuizMovement(climbers, answered);
   quizPrevRanks = rankNow;
-}
-
-/* The current leader's photo, dimmed, behind the question card. Cross-fades
-   whenever the top island changes, so the page shows you where you are heading
-   instead of sitting on cream. */
-let quizBackdropKey = null;
-function renderQuizBackdrop(leader) {
-  const el = document.getElementById('quiz-backdrop');
-  if (!el || !leader) return;
-  if (quizBackdropKey === leader.key) return;
-  const hero = HERO_PHOTOS[leader.key] || {};
-  if (!hero.url) { el.style.opacity = '0'; quizBackdropKey = leader.key; return; }
-  quizBackdropKey = leader.key;
-  el.style.opacity = '0';
-  const img = new Image();
-  img.onload = function () {
-    el.style.backgroundImage = 'url("' + hero.url + '")';
-    el.style.opacity = '1';
-  };
-  img.src = hero.url;
 }
 
 /* One plain sentence explaining the reshuffle the answer just caused. */
@@ -6511,7 +6489,7 @@ function computeQuizResults() {
     return `<div class="result-island-card" data-key="${island.key}">${thumb}<div class="result-info"><div class="result-name">${nm}</div><div class="result-why">${whyText(island)}</div></div><div class="result-score" style="color:${scoreToColor(island.total)}">${fmt(island.total)}</div></div>`;
   }).join('')}<div class="quiz-retake-row"><button class="quiz-retake-btn">${t('match.retake')}</button></div>`;
   results.querySelectorAll('.result-island-card').forEach(card => { card.addEventListener('click', () => navigateTo('island', card.dataset.key)); });
-  results.querySelector('.quiz-retake-btn').addEventListener('click', () => { quizAnswers = {}; quizStep = 0; quizPrevRanks = null; quizBackdropKey = null;
+  results.querySelector('.quiz-retake-btn').addEventListener('click', () => { quizAnswers = {}; quizStep = 0; quizPrevRanks = null;
     const cb = document.getElementById('cta-affiliate'); if (cb) cb.style.display = 'none';
     renderQuizStep(); });
 }
