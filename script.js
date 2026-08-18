@@ -4154,7 +4154,7 @@ async function renderCompareView() {
   } catch(e) {}
 
   renderCompareWTV(iA, iB, jsonA, jsonB);
-  renderCompareExtra(iA, iB, jsonA, jsonB);
+  fillCompareCardDetails(iA, iB, jsonA, jsonB);
 }
 
 function renderCompareWTV(iA, iB, jsonA, jsonB) {
@@ -4251,81 +4251,74 @@ function renderCompareWTV(iA, iB, jsonA, jsonB) {
     ${overlapMsg}`;
 }
 
-function renderCompareExtra(iA, iB, jsonA, jsonB) {
-  const el = document.getElementById('compare-extra');
-  if (!el) return;
+/* Card details shared by the compare cards. These used to live inside a
+   separate "Character & practicalities" section that repeated both island
+   names underneath the cards; they are now rows inside the cards themselves. */
+function cmpBestFor(island) {
+  const dims = [
+    { k: 'beach',  l: t('dim.beach'),   v: island.beach  },
+    { k: 'hist',   l: t('dim.culture'), v: island.hist   },
+    { k: 'night',  l: t('dim.night'),   v: island.night  },
+    { k: 'access', l: t('dim.access'),  v: island.access },
+    { k: 'afford', l: t('dim.afford'),  v: island.afford },
+  ];
+  const top = dims.sort((a, b) => b.v - a.v)[0];
+  return `${top.l} (${fmt(top.v)})`;
+}
 
-  // Best-for verdict: dominant dimension
-  function bestFor(island) {
-    const dims = [
-      { k: 'beach',  l: t('dim.beach'),   v: island.beach  },
-      { k: 'hist',   l: t('dim.culture'), v: island.hist   },
-      { k: 'night',  l: t('dim.night'),   v: island.night  },
-      { k: 'access', l: t('dim.access'),  v: island.access },
-      { k: 'afford', l: t('dim.afford'),  v: island.afford },
-    ];
-    const top = dims.sort((a,b) => b.v - a.v)[0];
-    return `${top.l} (${fmt(top.v)})`;
-  }
+function cmpCharTags(island) {
+  const tags = [];
+  if (island.car_need <= 1.5) tags.push({ icon: '🚶', label: t('vibe.carfree') });
+  if (island.drama)   tags.push({ icon: '🌋', label: t('vibe.drama') });
+  if (island.hiking)  tags.push({ icon: '🥾', label: t('vibe.hiking') });
+  if (island.springs) tags.push({ icon: '♨️', label: t('vibe.springs') });
+  if (island.chora)   tags.push({ icon: '🏛', label: t('vibe.chora') });
+  if (island.sailing) tags.push({ icon: '⛵', label: t('vibe.sailing') });
+  if (island.has_airport) tags.push({ icon: '✈️', label: t('vibe.airport') });
+  return tags.map(tg => `<span class="cmp-char-tag">${tg.icon} ${tg.label}</span>`).join('');
+}
 
-  // Character tags from ISLANDS_DATA booleans
-  function charTags(island) {
-    const tags = [];
-    if (island.car_need <= 1.5) tags.push({ icon:'🚶', label: t('vibe.carfree') });
-    if (island.drama)  tags.push({ icon:'🌋', label: t('vibe.drama') });
-    if (island.hiking) tags.push({ icon:'🥾', label: t('vibe.hiking') });
-    if (island.springs)tags.push({ icon:'♨️', label: t('vibe.springs') });
-    if (island.chora)  tags.push({ icon:'🏛', label: t('vibe.chora') });
-    if (island.sailing)tags.push({ icon:'⛵', label: t('vibe.sailing') });
-    if (island.has_airport) tags.push({ icon:'✈️', label: t('vibe.airport') });
-    return tags.map(tg => `<span class="cmp-char-tag">${tg.icon} ${tg.label}</span>`).join('');
-  }
-
-  // Beach summary from full JSON
-  function beachSummary(island, json) {
-    if (!json || !json.beaches || !json.beaches.length) return '';
-    const types = new Set();
-    const facings = new Set();
-    json.beaches.forEach(b => {
-      if (b.type) {
-        const t = b.type.toLowerCase();
-        if (t.includes('sand')) types.add('Sandy');
-        else if (t.includes('pebble')) types.add('Pebble');
-        else if (t.includes('rock')) types.add('Rocky');
+function cmpBeachSummary(island, json) {
+  if (!json || !json.beaches || !json.beaches.length) return '';
+  const types = new Set();
+  const facings = new Set();
+  json.beaches.forEach(b => {
+    if (b.type) {
+      const ty = b.type.toLowerCase();
+      if (ty.includes('sand')) types.add('Sandy');
+      else if (ty.includes('pebble')) types.add('Pebble');
+      else if (ty.includes('rock')) types.add('Rocky');
+    }
+    if (b.facing) {
+      const f = b.facing.toLowerCase();
+      if (f.includes('shelter')) facings.add('sheltered');
+      else if (f.includes('exposed') || f.includes('open sea')) facings.add('exposed');
+      // 'Meltemi-exposed' only makes sense in the Aegean — the Ionian's
+      // summer wind is the NW maistros, not the meltemi.
+      if (f.includes('meltemi') || f.includes('north')) {
+        facings.add(island.island_group === 'Ionian' ? 'NW-breeze exposed' : 'Meltemi-exposed');
       }
-      if (b.facing) {
-        const f = b.facing.toLowerCase();
-        if (f.includes('shelter')) facings.add('sheltered');
-        else if (f.includes('exposed') || f.includes('open sea')) facings.add('exposed');
-        // 'Meltemi-exposed' only makes sense in the Aegean — the Ionian's
-        // summer wind is the NW maïstros, not the meltemi.
-        if (f.includes('meltemi') || f.includes('north')) {
-          facings.add(island.island_group === 'Ionian' ? 'NW-breeze exposed' : 'Meltemi-exposed');
-        }
-      }
-    });
-    const parts = [...types, ...facings].slice(0, 3);
-    return parts.length ? `<div class="cmp-beach-summary">🏖 ${parts.join(' · ')}</div>` : '';
-  }
+    }
+  });
+  const parts = [...types, ...facings].slice(0, 3);
+  return parts.length ? `<div class="cmp-beach-summary">🏖 ${parts.join(' · ')}</div>` : '';
+}
 
-  // Getting there pills
-  function transportPills(island, json) {
-    const pills = (json && json.getting_there && json.getting_there.pills) || [];
-    if (!pills.length) return '';
-    return `<div class="cmp-transport">${pills.map(p => `<span class="cmp-transport-pill">${p}</span>`).join('')}</div>`;
-  }
+function cmpTransportPills(island, json) {
+  const pills = (json && json.getting_there && json.getting_there.pills) || [];
+  if (!pills.length) return '';
+  return `<div class="cmp-transport">${pills.map(p => `<span class="cmp-transport-pill">${p}</span>`).join('')}</div>`;
+}
 
-  function extraCard(island, json, other) {
-    return `<div class="cmp-extra-card">
-      <div class="cmp-extra-name">${islandName(island.key)}</div>
-      <div class="cmp-bestfor"><strong>${t('compare.best_for')}:</strong> ${bestFor(island)}</div>
-      <div class="cmp-char-tags">${charTags(island)}</div>
-      ${beachSummary(island, json)}
-      ${transportPills(island, json)}
-    </div>`;
-  }
-
-  el.innerHTML = `<div class="cmp-extra-grid">${extraCard(iA, jsonA, iB)}${extraCard(iB, jsonB, iA)}</div>`;
+/* The cards render straight away; beach type and transport pills come from a
+   per-island JSON fetch that lands later. Filling a slot inside the existing
+   card avoids re-rendering it, which would make the hero photos flash. */
+function fillCompareCardDetails(iA, iB, jsonA, jsonB) {
+  [[iA, jsonA], [iB, jsonB]].forEach(([island, json]) => {
+    const slot = document.querySelector(`.cmp-json-slot[data-key="${island.key}"]`);
+    if (!slot) return;
+    slot.innerHTML = cmpBeachSummary(island, json) + cmpTransportPills(island, json);
+  });
 }
 
 function renderRadarChart(iA, iB) {
@@ -4413,6 +4406,11 @@ function renderCompareCards(iA, iB) {
           <div class="cmp-info-row"><span class="cmp-info-label">🚗 ${t('dim.car')}</span><span class="cmp-info-val"><strong>${carLabel}</strong></span></div>
           ${airportRow}
           ${daysRow}
+        </div>
+        <div class="cmp-character">
+          <div class="cmp-bestfor"><strong>${t('compare.best_for')}:</strong> ${cmpBestFor(island)}</div>
+          <div class="cmp-char-tags">${cmpCharTags(island)}</div>
+          <div class="cmp-json-slot" data-key="${island.key}"></div>
         </div>
       </div>
     </div>`;

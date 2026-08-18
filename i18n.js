@@ -231,7 +231,6 @@ const UI_TEXT = {
   'wtv.tag.ok':      { en: 'OK',      el: 'ΟΚ' },
   'wtv.tag.great':   { en: 'Great',   el: 'Καλό' },
   'wtv.tag.perfect': { en: 'Best',    el: 'Άριστο' },
-  'compare.extra_title':  { en: 'Character & practicalities', el: 'Χαρακτήρας & πρακτικά' },
   'compare.best_for':     { en: 'Best for', el: 'Ιδανικό για' },
   'compare.wtv_both_perfect': { en: 'Both at their best in {months}', el: 'Και τα δύο άριστα: {months}' },
   'compare.wtv_both_good':    { en: 'Both great or better in {months}', el: 'Και τα δύο καλά: {months}' },

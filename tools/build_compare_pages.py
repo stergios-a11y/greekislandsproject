@@ -49,7 +49,18 @@ def _resolve_root():
 
 ROOT = _resolve_root()
 SITE_URL = 'https://aegeanblueprint.com'
-ASSET_V = 92
+ASSET_V = 95
+
+# style.css has its own version; using ASSET_V here meant compare pages asked
+# for a different ?v= of the same stylesheet than every other page.
+def _style_v():
+    try:
+        return int(re.search(r'style\.css\?v=(\d+)', (ROOT / 'index.html').read_text(encoding='utf-8')).group(1))
+    except Exception:
+        return ASSET_V
+
+
+STYLE_V = _style_v()
 
 from datetime import date as _date
 YEAR = _date.today().year
@@ -1002,7 +1013,7 @@ def render_page(pair_key, lang):
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-FMFWLRM2J9');</script>
 <script>if(localStorage.getItem("darkMode")==="true"){{document.documentElement.classList.add("dark");}}</script>
-<link rel="stylesheet" href="/style.css?v={ASSET_V}">
+<link rel="stylesheet" href="/style.css?v={STYLE_V}">
 <style>{page_css}</style>
 {faq_jsonld}
 <script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>
@@ -1059,8 +1070,6 @@ def render_page(pair_key, lang):
         <canvas id="compare-radar-chart" role="img" aria-label="Radar chart comparing two islands"></canvas>
       </div>
       <div class="compare-cards" id="compare-cards"></div>
-      <div class="compare-section-label" data-i18n="compare.extra_title">Character &amp; practicalities</div>
-      <div id="compare-extra" class="compare-extra"></div>
       <div class="compare-section-label" data-i18n="compare.wtv_title">When to visit — overlap</div>
       <div id="compare-wtv" class="compare-wtv"></div>
       <div id="compare-verdict" class="compare-verdict" style="{verdict_display}">{prerendered_verdict}</div>
@@ -1403,7 +1412,7 @@ def render_hub_page(lang, valid_pairs):
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-FMFWLRM2J9');</script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v={ASSET_V}">
+<link rel="stylesheet" href="/style.css?v={STYLE_V}">
 <style>{page_css}</style>
 <script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>
 </head>

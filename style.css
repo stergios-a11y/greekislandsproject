@@ -6622,3 +6622,12 @@ html.dark .leaflet-control-scale-line {
 @media (prefers-reduced-motion: reduce) {
   .ql-row, .ql-enter, .ql-move, .quiz-movement.on { animation: none !important; transition: none !important; }
 }
+
+/* Character rows now live inside each compare card rather than in a separate
+   "Character & practicalities" block that repeated both island names. */
+.cmp-character { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line, #E4E9ED); }
+.cmp-character .cmp-bestfor { font-size: 13.5px; margin-bottom: 8px; }
+.cmp-character .cmp-char-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.cmp-character .cmp-beach-summary { margin-top: 9px; font-size: 13px; color: var(--ink-3, #637080); }
+.cmp-character .cmp-transport { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
+.cmp-json-slot:empty { display: none; }

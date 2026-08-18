@@ -18,8 +18,24 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+
+# Asset versions are read from index.html at build time. They used to be
+# hard-coded here with a "keep in sync with index.html" comment, and drifted six
+# versions behind — which shipped stale CSS to every page this script writes.
+def _asset_versions():
+    try:
+        idx = (ROOT / 'index.html').read_text(encoding='utf-8')
+        st = re.search(r'style\.css\?v=(\d+)', idx)
+        sc = re.search(r'script\.js\?v=(\d+)', idx)
+        return (int(st.group(1)) if st else 1), (int(sc.group(1)) if sc else 1)
+    except Exception:
+        return 1, 1
+
+
+STYLE_V, SCRIPT_V = _asset_versions()
+
 SITE_URL = 'https://aegeanblueprint.com'
-STYLE_V = 62   # keep in sync with index.html
+
 YEAR = date.today().year
 
 TP_SCRIPT = '<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>'
