@@ -6217,9 +6217,14 @@ const QUIZ_QUESTIONS = [
     id: 'month',
     question: 'When are you travelling?',
     question_el: 'Πότε ταξιδεύεις;',
-    options: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-    options_el: ['Ιαν','Φεβ','Μαρ','Απρ','Μάι','Ιουν','Ιουλ','Αυγ','Σεπ','Οκτ','Νοε','Δεκ'],
-    month_picker: true
+    // Four seasons rather than twelve months. Nobody picking a Greek island
+    // needs March scored separately from February — the island either works in
+    // the off season or it doesn't. Each option scores the average of its
+    // months' when-to-visit ratings, so a bucket is as accurate as the months
+    // inside it.
+    options: ['Spring (Apr–May)', 'High summer (Jun–Aug)', 'Early autumn (Sep–Oct)', 'Off season (Nov–Mar)'],
+    options_el: ['Άνοιξη (Απρ–Μάι)', 'Καρδιά καλοκαιριού (Ιουν–Αυγ)', 'Αρχές φθινοπώρου (Σεπ–Οκτ)', 'Εκτός σεζόν (Νοε–Μαρ)'],
+    icons: ['🌸', '☀️', '🍇', '🌧']
   },
   {
     id: 'transport',
@@ -6311,8 +6316,9 @@ function scoreIslandsFromAnswers(quizAnswers) {
   const seasonIdx = A.month;
   const transportPref = A.transport;
 
-  const seasonMonths = {};
-  for (let m = 0; m < 12; m++) seasonMonths[m] = [m];
+  // Bucket -> month indices (0 = Jan). The averaging below already divides by
+  // months.length, so multi-month buckets need no other change.
+  const seasonMonths = { 0: [3, 4], 1: [5, 6, 7], 2: [8, 9], 3: [10, 11, 0, 1, 2] };
 
   // Trip length in usable days. Anything the island itself asks for beyond this
   // is a mismatch: two days on Crete is not a Crete trip.
@@ -6369,14 +6375,20 @@ function scoreIslandsFromAnswers(quizAnswers) {
     if (seasonIdx !== undefined && WTV_TAGS[i.key]) {
       const tags = WTV_TAGS[i.key];
       const months = seasonMonths[seasonIdx] || [];
-      let seasonBonus = 0;
+      let seasonBonus = 0, avoidCount = 0;
       months.forEach(mi => {
         const tag = tags[mi];
         if (tag === 3) seasonBonus += 1.2;
         else if (tag === 2) seasonBonus += 0.5;
-        else if (tag === 0) seasonBonus -= 1.0;
+        else if (tag === 0) { seasonBonus -= 1.0; avoidCount++; }
       });
       s += seasonBonus / months.length;
+      // A -1 average was not enough to express "shut". Koufonisia is tagged
+      // avoid for all five off-season months and still came out #1 for someone
+      // travelling in January, because its beach score carried it. An island
+      // rated avoid right across the chosen window is not a candidate.
+      if (months.length && avoidCount === months.length) s -= 7;
+      else if (avoidCount > months.length / 2) s -= 2.5;
     }
 
     if (transportPref === 0) {
