@@ -6196,9 +6196,9 @@ const QUIZ_QUESTIONS = [
   {
     question: 'How are you getting there?',
     question_el: 'Πώς φτάνεις στο νησί;',
-    options: ['By car', 'Ferry — up to 5 hours', 'Ferry — more than 5 hours', 'Fly in'],
+    options: ['By car', 'Ferry — up to 5 hours', 'Ferry — any length', 'Fly in'],
     icons: ['🚗', '⛴', '🛳', '✈️'],
-    options_el: ['Με το αυτοκίνητό μου', 'Πλοίο — έως 5 ώρες', 'Πλοίο — πάνω από 5 ώρες', 'Αεροπλάνο']
+    options_el: ['Με το αυτοκίνητό μου', 'Πλοίο — έως 5 ώρες', 'Πλοίο — όσο χρειαστεί', 'Αεροπλάνο']
   },
   {
     question: 'Will you have a car on the island?',
@@ -6336,9 +6336,11 @@ function scoreIslandsFromAnswers(quizAnswers) {
       if (i.access >= 3.0) s += 1.2;
       else if (i.access < 2.0) s -= 1.5;
     } else if (transportPref === 2) {
-      // Ferry more than 5h — boost remote/hard-to-reach, no penalty on accessible ones
-      if (i.access <= 2.5) s += 1.2;
-      else if (i.access >= 4.5) s -= 0.5;
+      // "Ferry — any length" means no constraint, not a taste for long crossings.
+      // This used to add +1.2 to remote islands and dock -0.5 from the most
+      // accessible ones, which quietly pushed Paros and Naxos out of the running
+      // for someone who had only said they were relaxed about ferry time.
+      // Tolerating a long trip is not the same as wanting one: score unchanged.
     } else if (transportPref === 3) {
       // Fly: favour airports, penalise no-airport
       if (i.has_airport) s += 1.2;
