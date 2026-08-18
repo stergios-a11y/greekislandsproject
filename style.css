@@ -6551,3 +6551,33 @@ html.dark .leaflet-control-scale-line {
   background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
 .bp-linkbtn:hover { color: var(--terra-dark); }
 @media (max-width: 840px) { .bp-decide-alt { display: none; } }
+
+/* --- Match Me: live front-runners ------------------------------------------
+   The quiz was a narrow card floating in a very large empty page. The board
+   fills that space with something that actually reacts to the answers. */
+.match-grid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 26px; align-items: start; }
+.match-col { min-width: 0; }
+.quiz-live { background: var(--white, #fff); border: 1px solid var(--line, #E4E9ED);
+  border-radius: 16px; padding: 14px 16px 8px; position: sticky; top: 84px; }
+.quiz-live[hidden] { display: none; }
+.ql-head { font-family: var(--font-display); font-size: 15.5px; font-weight: 800; color: var(--ink-1); margin-bottom: 10px; }
+.ql-head small { display: block; font-family: var(--sans); font-size: 11.5px; font-weight: 600; color: var(--ink-4, #A0ADB8); margin-top: 2px; }
+.ql-list { list-style: none; margin: 0; padding: 0; }
+.ql-row { display: flex; align-items: center; gap: 9px; padding: 7px 4px; border-radius: 10px;
+  cursor: pointer; transition: background 0.15s ease; }
+.ql-row:hover { background: var(--sand, #FAF6EF); }
+.ql-rank { flex: none; width: 17px; font-size: 12px; font-weight: 800; color: var(--ink-4, #A0ADB8); text-align: right; }
+.ql-thumb { flex: none; width: 34px; height: 34px; border-radius: 9px; object-fit: cover; }
+.ql-nophoto { display: flex; align-items: center; justify-content: center; background: var(--aegean, #0B8FAC);
+  color: #fff; font-weight: 800; font-size: 14px; }
+.ql-name { flex: 1 1 auto; font-size: 13.5px; font-weight: 700; color: var(--ink-1); min-width: 0;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ql-move { flex: none; font-size: 10.5px; font-weight: 800; padding: 2px 5px; border-radius: 6px; }
+.ql-up { color: #1D9E75; background: rgba(29,158,117,0.12); }
+.ql-down { color: #A0ADB8; background: rgba(160,173,184,0.14); }
+.ql-new { color: #C4694A; background: rgba(196,105,74,0.14); }
+.ql-score { flex: none; font-size: 13.5px; font-weight: 800; }
+@media (max-width: 900px) {
+  .match-grid { grid-template-columns: 1fr; gap: 16px; }
+  .quiz-live { position: static; }
+}

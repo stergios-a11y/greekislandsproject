@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-08-17';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-08-18';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -6245,13 +6245,18 @@ function renderQuizStep() {
       }
     });
   });
+  try { renderQuizLiveBoard(); } catch (e) { console.warn('quizLive', e); }
+
   const backBtn = container.querySelector('.quiz-back-btn');
   if (backBtn) backBtn.addEventListener('click', () => {
     if (quizStep > 0) { quizDirection = -1; quizStep--; renderQuizStep(); }
   });
 }
 
-function computeQuizResults() {
+/* Scores every island from however many answers exist so far.
+   Every lookup below already degrades safely when an answer is undefined,
+   which is what lets the live leaderboard run from question one. */
+function scoreIslandsFromAnswers(quizAnswers) {
   const priorityDims = ['beach', 'hist', 'night', 'afford'];
   const priority = priorityDims[quizAnswers[1]] || 'total';
   const budgetMod = [2, 0.5, -0.5, -2][quizAnswers[2]] || 0;
@@ -6321,11 +6326,69 @@ function computeQuizResults() {
     }
 
     return { ...i, matchScore: s };
-  }).sort((a, b) => b.matchScore - a.matchScore).slice(0, 6);
+  }).sort((a, b) => b.matchScore - a.matchScore);
+  return { scored, priority, budgetMod, crowdPref, seasonIdx, seasonMonths, transportPref };
+}
+
+/* ---- Live front-runners -------------------------------------------------
+   The quiz used to be a form that told you nothing until the last question.
+   This shows the current top five after every answer, with the movement each
+   answer caused, so you can see the thing reacting to you. Runs off the same
+   scorer as the final results, so what you watch climbing is the real ranking,
+   not a decorative animation. */
+let quizPrevRanks = null;
+
+function renderQuizLiveBoard() {
+  const box = document.getElementById('quiz-live');
+  if (!box) return;
+  const answered = Object.keys(quizAnswers).length;
+  const scored = scoreIslandsFromAnswers(quizAnswers).scored.slice(0, 5);
+
+  const rankNow = {};
+  scored.forEach((isl, i) => { rankNow[isl.key] = i; });
+
+  const rows = scored.map((isl, idx) => {
+    const nm = islandName(isl.key);
+    const hero = HERO_PHOTOS[isl.key] || {};
+    let move = '';
+    if (quizPrevRanks) {
+      const was = quizPrevRanks[isl.key];
+      if (was === undefined) move = '<span class="ql-move ql-new">' + t('quiz.live.new') + '</span>';
+      else if (was > idx) move = '<span class="ql-move ql-up">▲ ' + (was - idx) + '</span>';
+      else if (was < idx) move = '<span class="ql-move ql-down">▼ ' + (idx - was) + '</span>';
+    }
+    const thumb = hero.url
+      ? '<img class="ql-thumb" src="' + thumbUrl(hero.url) + '" alt="" loading="lazy">'
+      : '<span class="ql-thumb ql-nophoto">' + nm.charAt(0) + '</span>';
+    return '<li class="ql-row" data-key="' + isl.key + '">'
+         + '<span class="ql-rank">' + (idx + 1) + '</span>'
+         + thumb
+         + '<span class="ql-name">' + nm + '</span>'
+         + move
+         + '<span class="ql-score" style="color:' + scoreToColor(isl.total) + '">' + fmt(isl.total) + '</span>'
+         + '</li>';
+  }).join('');
+
+  box.hidden = false;
+  box.innerHTML = '<div class="ql-head">' + t('quiz.live.title')
+    + '<small>' + (answered ? t('quiz.live.sub') : t('quiz.live.sub0')) + '</small></div>'
+    + '<ol class="ql-list">' + rows + '</ol>';
+  box.querySelectorAll('.ql-row').forEach(function (r) {
+    r.addEventListener('click', function () { navigateTo('island', r.dataset.key); });
+  });
+  quizPrevRanks = rankNow;
+}
+
+function computeQuizResults() {
+  const ctx = scoreIslandsFromAnswers(quizAnswers);
+  const { priority, budgetMod, crowdPref, seasonIdx, seasonMonths, transportPref } = ctx;
+  const scored = ctx.scored.slice(0, 6);
   const container = document.getElementById('quiz-container');
   const results = document.getElementById('quiz-results');
   if (!container || !results) return;
   container.style.display = 'none'; results.style.display = '';
+  const liveBox = document.getElementById('quiz-live');
+  if (liveBox) liveBox.hidden = true;
   const dimLabels = (CURRENT_LANG === 'el')
     ? ['Παραλία', 'Πολιτισμός', 'Νυχτερινή ζωή', 'Προσιτή τιμή']
     : ['Beach', 'Culture', 'Nightlife', 'Affordability'];
@@ -6356,7 +6419,7 @@ function computeQuizResults() {
     return `<div class="result-island-card" data-key="${island.key}">${thumb}<div class="result-info"><div class="result-name">${nm}</div><div class="result-why">${whyText(island)}</div></div><div class="result-score" style="color:${scoreToColor(island.total)}">${fmt(island.total)}</div></div>`;
   }).join('')}<div class="quiz-retake-row"><button class="quiz-retake-btn">${t('match.retake')}</button></div>`;
   results.querySelectorAll('.result-island-card').forEach(card => { card.addEventListener('click', () => navigateTo('island', card.dataset.key)); });
-  results.querySelector('.quiz-retake-btn').addEventListener('click', () => { quizAnswers = {}; quizStep = 0; renderQuizStep(); });
+  results.querySelector('.quiz-retake-btn').addEventListener('click', () => { quizAnswers = {}; quizStep = 0; quizPrevRanks = null; renderQuizStep(); });
 }
 
 /* ============================================================
