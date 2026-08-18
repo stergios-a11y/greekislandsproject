@@ -517,7 +517,10 @@ function showView(view, param) {
   if (nav) nav.querySelectorAll('a').forEach(a => a.classList.remove('active'));
   // Site-wide affiliate CTA: show on content views, hide on home (map), island detail (has its own buttons) and mission (no-affiliate page).
   const ctaBar = document.getElementById('cta-affiliate');
-  if (ctaBar) ctaBar.style.display = (view === 'home' || view === 'island' || view === 'mission' || view === 'hopping' || view === 'international') ? 'none' : '';
+  // 'match' joins the hide list: the ferry/car bar used to sit in the middle
+  // of the quiz, the two brightest things on the page, before anyone had an
+  // answer worth booking. computeQuizResults() reveals it with the results.
+  if (ctaBar) ctaBar.style.display = (view === 'home' || view === 'island' || view === 'mission' || view === 'hopping' || view === 'international' || view === 'match') ? 'none' : '';
 
   if (view === 'island') {
     const el = document.getElementById('view-detail');
@@ -6159,24 +6162,28 @@ const QUIZ_QUESTIONS = [
     question: 'What kind of trip are you planning?',
     question_el: 'Τι είδους ταξίδι σχεδιάζεις;',
     options: ['Solo adventure', 'Couple getaway', 'Family vacation', 'Friend group'],
+    icons: ['🎒', '💞', '👨‍👩‍👧', '🍻'],
     options_el: ['Μόνος/-η περιπέτεια', 'Ζευγάρι', 'Οικογενειακές διακοπές', 'Παρέα φίλων']
   },
   {
     question: 'What matters most to you?',
     question_el: 'Τι σε ενδιαφέρει περισσότερο;',
     options: ['Beaches & swimming', 'History & culture', 'Nightlife & food', 'Peace & nature'],
+    icons: ['🏖', '🏛', '🍷', '🌿'],
     options_el: ['Παραλίες & μπάνιο', 'Ιστορία & πολιτισμός', 'Νυχτερινή ζωή & φαγητό', 'Ηρεμία & φύση']
   },
   {
     question: 'What is your budget level?',
     question_el: 'Ποιο είναι το μπάτζετ σου;',
     options: ['Budget (backpacker)', 'Mid-range', 'Splurge-ready', 'No limit'],
+    icons: ['🎒', '🙂', '✨', '🥂'],
     options_el: ['Οικονομικό', 'Μεσαίο', 'Γενναιόδωρο', 'Χωρίς όριο']
   },
   {
     question: 'How do you feel about crowds?',
     question_el: 'Πώς νιώθεις με τον κόσμο;',
     options: ['Love the buzz', 'Some is fine', 'Prefer quiet', 'Must be secluded'],
+    icons: ['🎉', '🙂', '🤫', '🏝'],
     options_el: ['Μου αρέσει η ζωντάνια', 'Παν μέτρον άριστον', 'Προτιμώ ηρεμία', 'Θέλω απομόνωση']
   },
   {
@@ -6190,12 +6197,14 @@ const QUIZ_QUESTIONS = [
     question: 'How are you getting there?',
     question_el: 'Πώς φτάνεις στο νησί;',
     options: ['By car', 'Ferry — up to 5 hours', 'Ferry — more than 5 hours', 'Fly in'],
+    icons: ['🚗', '⛴', '🛳', '✈️'],
     options_el: ['Με το αυτοκίνητό μου', 'Πλοίο — έως 5 ώρες', 'Πλοίο — πάνω από 5 ώρες', 'Αεροπλάνο']
   },
   {
     question: 'Will you have a car on the island?',
     question_el: 'Θα έχεις αυτοκίνητο στο νησί;',
     options: ['Yes, I want to rent one', 'No, I prefer walking / public transport'],
+    icons: ['🚗', '🚶'],
     options_el: ['Ναι, θα νοικιάσω', 'Όχι, προτιμώ περπάτημα / ΜΜΜ']
   },
 ];
@@ -6223,7 +6232,7 @@ function renderQuizStep() {
   // Options HTML — month picker gets a compact 4-col grid
   const optionsHtml = isMonthPicker
     ? `<div class="quiz-options quiz-month-grid">${options.map((opt, i) => `<button class="quiz-option quiz-month-btn ${quizAnswers[quizStep] === i ? 'selected' : ''}" data-idx="${i}">${opt}</button>`).join('')}</div>`
-    : `<div class="quiz-options">${options.map((opt, i) => `<button class="quiz-option ${quizAnswers[quizStep] === i ? 'selected' : ''}" data-idx="${i}">${opt}</button>`).join('')}</div>`;
+    : `<div class="quiz-options">${options.map((opt, i) => `<button class="quiz-option ${quizAnswers[quizStep] === i ? 'selected' : ''}" data-idx="${i}">${q.icons && q.icons[i] ? `<span class="quiz-opt-ic" aria-hidden="true">${q.icons[i]}</span>` : ''}<span class="quiz-opt-tx">${opt}</span></button>`).join('')}</div>`;
 
   container.innerHTML = `<div class="quiz-progress">${QUIZ_QUESTIONS.map((_, i) => `<div class="quiz-dot ${i < quizStep ? 'done' : i === quizStep ? 'current' : ''}"></div>`).join('')}<span class="quiz-step-label">${quizStep + 1} / ${QUIZ_QUESTIONS.length}</span></div><div class="quiz-card quiz-card-entering quiz-card-from-${quizDirection > 0 ? 'right' : 'left'}"><div class="quiz-question">${questionText}</div>${optionsHtml}${quizStep > 0 ? `<div class="quiz-nav-back"><button class="quiz-back-btn">← ${backLabel}</button></div>` : ''}</div>`;
 
@@ -6283,7 +6292,25 @@ function scoreIslandsFromAnswers(quizAnswers) {
     if (budgetMod > 0) s += budgetMod * i.afford;
     else if (budgetMod < 0) s += Math.abs(budgetMod) * (5 - i.afford);
     if (crowdPref >= 2) s += crowdPref * Math.max(0, 4 - Math.log10(i.pop + 1)) * 0.5;
-    if (quizAnswers[0] === 2) { s += i.access * 0.5; if (i.night > 4) s -= 0.5; }
+
+    // Q1 trip type. Until Aug 2026 only answer 2 (family) was read — solo,
+    // couple and friend group were collected and thrown away, so the live
+    // board sat perfectly still on the first question and looked broken.
+    const party = quizAnswers[0];
+    if (party === 0) {            // solo: easy to reach, somewhere to meet people, walkable
+      s += i.access * 0.35 + i.night * 0.2;
+      if (i.hiking) s += 0.4;
+      if (i.car_need >= 4) s -= 0.4;
+    } else if (party === 1) {     // couple: scenery and a chora, not a party town
+      if (i.drama) s += 0.6;
+      if (i.chora) s += 0.5;
+      if (i.night > 4.5) s -= 0.4;
+    } else if (party === 2) {     // family: reachable, calmer, shallow-water beaches
+      s += i.access * 0.5;
+      if (i.night > 4) s -= 0.5;
+    } else if (party === 3) {     // friends: nightlife and value
+      s += i.night * 0.45 + i.afford * 0.2;
+    }
 
     // Season fit — boost islands rated perfect/great in chosen months, penalise avoid
     if (seasonIdx !== undefined && WTV_TAGS[i.key]) {
@@ -6344,18 +6371,25 @@ function renderQuizLiveBoard() {
   const answered = Object.keys(quizAnswers).length;
   const scored = scoreIslandsFromAnswers(quizAnswers).scored.slice(0, 5);
 
-  const rankNow = {};
-  scored.forEach((isl, i) => { rankNow[isl.key] = i; });
+  // FLIP step 1 — where is every row sitting right now?
+  const firstTop = {};
+  box.querySelectorAll('.ql-row').forEach(function (r) {
+    firstTop[r.dataset.key] = r.getBoundingClientRect().top;
+  });
 
-  const rows = scored.map((isl, idx) => {
+  const rankNow = {};
+  scored.forEach(function (isl, i) { rankNow[isl.key] = i; });
+
+  const climbers = [];
+  const rows = scored.map(function (isl, idx) {
     const nm = islandName(isl.key);
     const hero = HERO_PHOTOS[isl.key] || {};
     let move = '';
     if (quizPrevRanks) {
       const was = quizPrevRanks[isl.key];
-      if (was === undefined) move = '<span class="ql-move ql-new">' + t('quiz.live.new') + '</span>';
-      else if (was > idx) move = '<span class="ql-move ql-up">▲ ' + (was - idx) + '</span>';
-      else if (was < idx) move = '<span class="ql-move ql-down">▼ ' + (idx - was) + '</span>';
+      if (was === undefined) { move = '<span class="ql-move ql-new">' + t('quiz.live.new') + '</span>'; climbers.push(nm); }
+      else if (was > idx) { move = '<span class="ql-move ql-up">▲ ' + (was - idx) + '</span>'; climbers.push(nm); }
+      else if (was < idx) { move = '<span class="ql-move ql-down">▼ ' + (idx - was) + '</span>'; }
     }
     const thumb = hero.url
       ? '<img class="ql-thumb" src="' + thumbUrl(hero.url) + '" alt="" loading="lazy">'
@@ -6373,11 +6407,67 @@ function renderQuizLiveBoard() {
   box.innerHTML = '<div class="ql-head">' + t('quiz.live.title')
     + '<small>' + (answered ? t('quiz.live.sub') : t('quiz.live.sub0')) + '</small></div>'
     + '<ol class="ql-list">' + rows + '</ol>';
+
+  // FLIP step 2 — put each row back where it was, then let CSS carry it home.
+  box.querySelectorAll('.ql-row').forEach(function (r) {
+    const was = firstTop[r.dataset.key];
+    if (was === undefined) { r.classList.add('ql-enter'); return; }
+    const delta = was - r.getBoundingClientRect().top;
+    if (!delta) return;
+    r.style.transform = 'translateY(' + delta + 'px)';
+    r.style.transition = 'none';
+  });
+  if (box.querySelector('.ql-row')) box.offsetHeight;   // force a reflow
+  box.querySelectorAll('.ql-row').forEach(function (r) {
+    r.style.transition = 'transform 0.42s cubic-bezier(0.22, 1, 0.36, 1)';
+    r.style.transform = '';
+    r.addEventListener('transitionend', function () { r.style.transition = ''; }, { once: true });
+  });
+
   box.querySelectorAll('.ql-row').forEach(function (r) {
     r.addEventListener('click', function () { navigateTo('island', r.dataset.key); });
   });
+
+  renderQuizBackdrop(scored[0]);
+  renderQuizMovement(climbers, answered);
   quizPrevRanks = rankNow;
 }
+
+/* The current leader's photo, dimmed, behind the question card. Cross-fades
+   whenever the top island changes, so the page shows you where you are heading
+   instead of sitting on cream. */
+let quizBackdropKey = null;
+function renderQuizBackdrop(leader) {
+  const el = document.getElementById('quiz-backdrop');
+  if (!el || !leader) return;
+  if (quizBackdropKey === leader.key) return;
+  const hero = HERO_PHOTOS[leader.key] || {};
+  if (!hero.url) { el.style.opacity = '0'; quizBackdropKey = leader.key; return; }
+  quizBackdropKey = leader.key;
+  el.style.opacity = '0';
+  const img = new Image();
+  img.onload = function () {
+    el.style.backgroundImage = 'url("' + hero.url + '")';
+    el.style.opacity = '1';
+  };
+  img.src = hero.url;
+}
+
+/* One plain sentence explaining the reshuffle the answer just caused. */
+function renderQuizMovement(climbers, answered) {
+  const el = document.getElementById('quiz-movement');
+  if (!el) return;
+  if (!answered || !climbers.length) { el.textContent = ''; el.classList.remove('on'); return; }
+  const names = climbers.slice(0, 3);
+  const list = names.length > 1
+    ? names.slice(0, -1).join(', ') + ' ' + t('quiz.move.and') + ' ' + names[names.length - 1]
+    : names[0];
+  el.textContent = list + ' ' + (names.length > 1 ? t('quiz.move.plural') : t('quiz.move.single'));
+  el.classList.remove('on');
+  void el.offsetWidth;
+  el.classList.add('on');
+}
+
 
 function computeQuizResults() {
   const ctx = scoreIslandsFromAnswers(quizAnswers);
@@ -6389,6 +6479,8 @@ function computeQuizResults() {
   container.style.display = 'none'; results.style.display = '';
   const liveBox = document.getElementById('quiz-live');
   if (liveBox) liveBox.hidden = true;
+  const ctaAff = document.getElementById('cta-affiliate');
+  if (ctaAff) ctaAff.style.display = '';
   const dimLabels = (CURRENT_LANG === 'el')
     ? ['Παραλία', 'Πολιτισμός', 'Νυχτερινή ζωή', 'Προσιτή τιμή']
     : ['Beach', 'Culture', 'Nightlife', 'Affordability'];
@@ -6419,7 +6511,9 @@ function computeQuizResults() {
     return `<div class="result-island-card" data-key="${island.key}">${thumb}<div class="result-info"><div class="result-name">${nm}</div><div class="result-why">${whyText(island)}</div></div><div class="result-score" style="color:${scoreToColor(island.total)}">${fmt(island.total)}</div></div>`;
   }).join('')}<div class="quiz-retake-row"><button class="quiz-retake-btn">${t('match.retake')}</button></div>`;
   results.querySelectorAll('.result-island-card').forEach(card => { card.addEventListener('click', () => navigateTo('island', card.dataset.key)); });
-  results.querySelector('.quiz-retake-btn').addEventListener('click', () => { quizAnswers = {}; quizStep = 0; quizPrevRanks = null; renderQuizStep(); });
+  results.querySelector('.quiz-retake-btn').addEventListener('click', () => { quizAnswers = {}; quizStep = 0; quizPrevRanks = null; quizBackdropKey = null;
+    const cb = document.getElementById('cta-affiliate'); if (cb) cb.style.display = 'none';
+    renderQuizStep(); });
 }
 
 /* ============================================================
