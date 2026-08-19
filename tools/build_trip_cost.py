@@ -16,7 +16,12 @@ Run AFTER tools/build_costs.py (needs a fresh costs.json).
 import json
 import re
 import sys
+from datetime import date as _date
 from pathlib import Path
+
+# Footer copyright. Was the literal "2026" — which would have disagreed with
+# the auto-rolling year in every page title from 1 January onward.
+_COPY_YEAR = _date.today().year
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -524,7 +529,7 @@ def render_page(lang, meta, data):
 </main>
 
 <footer class="seo-footer" style="max-width:1120px;margin:0 auto;padding:20px 22px">
-  <p>© 2026 Aegean Blueprint · <a href="{url_el if not is_el else url_en}">{t['footer_lang']}</a> · <a href="{'/el/privacy/' if is_el else '/privacy/'}">{t['footer_privacy']}</a> · <a href="{'/el/credits/' if is_el else '/credits/'}">{'Πηγές φωτογραφιών' if is_el else 'Photo credits'}</a></p>
+  <p>© {_COPY_YEAR} Aegean Blueprint · <a href="{url_el if not is_el else url_en}">{t['footer_lang']}</a> · <a href="{'/el/privacy/' if is_el else '/privacy/'}">{t['footer_privacy']}</a> · <a href="{'/el/credits/' if is_el else '/credits/'}">{'Πηγές φωτογραφιών' if is_el else 'Photo credits'}</a></p>
 </footer>
 
 <script>

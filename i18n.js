@@ -192,7 +192,7 @@ const UI_TEXT = {
   'detail.beaches.sub': { en: 'Ranked by overall quality — with details on sand type, depth, wind exposure and facilities.', el: 'Κατάταξη με βάση τη συνολική ποιότητα — με λεπτομέρειες για τον τύπο άμμου, το βάθος, την έκθεση στον άνεμο και τις υποδομές.' },
 
   // Footer
-  'footer.copyright': { en: '© 2026 Aegean Blueprint', el: '© 2026 Aegean Blueprint' },
+  'footer.copyright': { en: '\u00A9 ' + new Date().getFullYear() + ' Aegean Blueprint', el: '\u00A9 ' + new Date().getFullYear() + ' Aegean Blueprint' },
   'footer.privacy':   { en: 'Privacy', el: 'Απόρρητο' },
   'footer.credits': { en: 'Photo credits', el: 'Πηγές φωτογραφιών' },
   'hopping.crosslink_intl': { en: 'Continuing beyond Greece? See the ', el: 'Συνεχίζεις εκτός Ελλάδας; Δες τις ' },

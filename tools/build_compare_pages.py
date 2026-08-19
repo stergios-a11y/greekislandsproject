@@ -1080,7 +1080,7 @@ def render_page(pair_key, lang):
 <div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored" data-i18n="detail.bookferry">🚢 Book ferry tickets</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored" data-i18n="detail.rentcar">🚗 Rent a car</a></div>
 <footer id="site-footer">
   <div class="footer-line">
-    <span class="footer-copy" data-i18n="footer.copyright">© 2026 Aegean Blueprint</span> · {privacy_link}<span class="footer-updated" id="footer-updated"></span>
+    <span class="footer-copy" data-i18n="footer.copyright">© {YEAR} Aegean Blueprint</span> · {privacy_link}<span class="footer-updated" id="footer-updated"></span>
   </div>
 </footer>
 
@@ -1097,6 +1097,43 @@ window.__INITIAL_COMPARE_PAIR = {init_pair};
     return html
 
 
+def compare_lastmod():
+    """Honest <lastmod> for the compare pages.
+
+    This used to be the literal '2026-06-06'. That told Google 166 URLs — every
+    EN and EL compare page — had not changed since June, while their titles and
+    descriptions were rewritten in August. A frozen lastmod suppresses recrawl
+    of exactly the pages whose snippets you want re-read.
+
+    Derive it the way prerender.py does: the newest committer date across the
+    inputs that actually determine a compare page's HTML — the verdicts, the
+    FAQs and this builder. Not date.today(): claiming every page changed on
+    every build is the opposite lie and Google discounts it just as fast.
+    """
+    from datetime import datetime, timezone
+
+    def stamp(path):
+        path = Path(path)
+        try:
+            import subprocess
+            r = subprocess.run(['git', 'log', '-1', '--format=%cI', '--', str(path)],
+                               cwd=str(ROOT), capture_output=True, text=True, timeout=2)
+            if r.returncode == 0 and r.stdout.strip():
+                return r.stdout.strip().split('T', 1)[0]
+        except Exception:
+            pass
+        try:
+            return datetime.fromtimestamp(path.stat().st_mtime,
+                                          tz=timezone.utc).strftime('%Y-%m-%d')
+        except Exception:
+            return None
+
+    dates = [stamp(p) for p in (ROOT / 'vs_verdicts.json', FAQS_PATH,
+                                Path(__file__).resolve())]
+    dates = [d for d in dates if d]
+    return max(dates) if dates else datetime.now(timezone.utc).strftime('%Y-%m-%d')
+
+
 def update_sitemap(slugs):
     """Add per-pair URLs to sitemap.xml. Idempotent — replaces the block on re-runs."""
     sitemap_path = ROOT / 'sitemap.xml'
@@ -1106,7 +1143,7 @@ def update_sitemap(slugs):
 
     START = '<!-- BEGIN AUTO-GENERATED COMPARE PAGES -->'
     END = '<!-- END AUTO-GENERATED COMPARE PAGES -->'
-    today = '2026-06-06'
+    today = compare_lastmod()
 
     entries = []
     # Hub pages first (higher priority than individual comparisons)
@@ -1442,7 +1479,7 @@ def render_hub_page(lang, valid_pairs):
 <div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored" data-i18n="detail.bookferry">🚢 Book ferry tickets</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored" data-i18n="detail.rentcar">🚗 Rent a car</a></div>
 <footer id="site-footer">
   <div class="footer-line">
-    <span class="footer-copy" data-i18n="footer.copyright">© 2026 Aegean Blueprint</span> · {privacy_link}<span class="footer-updated" id="footer-updated"></span>
+    <span class="footer-copy" data-i18n="footer.copyright">© {YEAR} Aegean Blueprint</span> · {privacy_link}<span class="footer-updated" id="footer-updated"></span>
   </div>
 </footer>
 

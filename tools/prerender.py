@@ -20,6 +20,11 @@ import json
 import os
 import unicodedata
 from datetime import datetime, timezone
+from datetime import date as _date_mod
+# Page titles roll to the new year on their own (date.today().year).
+# The copyright used to be the literal "2026", so on 1 January the
+# two would disagree on every page. Same clock for both now.
+COPYRIGHT_YEAR = _date_mod.today().year
 
 
 def gr_sort_key(s):
@@ -2301,7 +2306,7 @@ def render_page(key, data, meta, lang='en'):
 
 <!-- Footer -->
 <footer class="seo-footer">
-  <p>© 2026 Aegean Blueprint · <a href="{('/el/island/' if lang == 'en' else '/island/')}{key}/">{'Ελληνικά' if lang == 'en' else 'English'}</a> · <a href="{'/privacy/' if lang == 'en' else '/el/privacy/'}">{'Privacy' if lang == 'en' else 'Απόρρητο'}</a> · <a href="{'/credits/' if lang == 'en' else '/el/credits/'}">{'Photo credits' if lang == 'en' else 'Πηγές φωτογραφιών'}</a></p>
+  <p>© {COPYRIGHT_YEAR} Aegean Blueprint · <a href="{('/el/island/' if lang == 'en' else '/island/')}{key}/">{'Ελληνικά' if lang == 'en' else 'English'}</a> · <a href="{'/privacy/' if lang == 'en' else '/el/privacy/'}">{'Privacy' if lang == 'en' else 'Απόρρητο'}</a> · <a href="{'/credits/' if lang == 'en' else '/el/credits/'}">{'Photo credits' if lang == 'en' else 'Πηγές φωτογραφιών'}</a></p>
 </footer>
 </div><!-- /#seo-fallback -->
 
@@ -2798,7 +2803,7 @@ def generate_ferries_page(island_keys):
             # privacy link and nowhere to reach the photo credits from.
             '<footer style="text-align:center;padding:24px 16px;font-size:13px;color:#888;'
             'border-top:1px solid #e5e5e5;margin-top:40px;">\n'
-            '  <p style="margin:0;">© 2026 Aegean Blueprint · <a href="'
+            f'  <p style="margin:0;">© {COPYRIGHT_YEAR} Aegean Blueprint · <a href="'
             + ('/el/privacy/' if is_el else '/privacy/')
             + '" style="color:#888;text-decoration:none;">'
             + ('Απόρρητο' if is_el else 'Privacy')
@@ -3356,7 +3361,7 @@ def generate_festivals_page(island_keys):
             '</main>\n'
             '<div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored">' + ('🚢 Κράτηση εισιτηρίων' if is_el else '🚢 Book ferry tickets') + '</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">' + ('🚗 Ενοικίαση αυτοκινήτου' if is_el else '🚗 Rent a car') + '</a></div>\n'
             '<footer style="text-align:center;padding:24px 16px;font-size:13px;color:#888;border-top:1px solid #e5e5e5;margin-top:40px;">\n'
-            '  <p style="margin:0;">© 2026 Aegean Blueprint · <a href="' + ('/el/privacy/' if is_el else '/privacy/') + '" style="color:#888;text-decoration:none;">' + ('Απόρρητο' if is_el else 'Privacy') + '</a> · <a href="' + ('/el/credits/' if is_el else '/credits/') + '" style="color:#888;text-decoration:none;">' + ('Πηγές φωτογραφιών' if is_el else 'Photo credits') + '</a></p>\n'
+            f'  <p style="margin:0;">© {COPYRIGHT_YEAR} Aegean Blueprint · <a href="' + ('/el/privacy/' if is_el else '/privacy/') + '" style="color:#888;text-decoration:none;">' + ('Απόρρητο' if is_el else 'Privacy') + '</a> · <a href="' + ('/el/credits/' if is_el else '/credits/') + '" style="color:#888;text-decoration:none;">' + ('Πηγές φωτογραφιών' if is_el else 'Photo credits') + '</a></p>\n'
             '</footer>\n'
             + soon_script
             + '</body>\n</html>'

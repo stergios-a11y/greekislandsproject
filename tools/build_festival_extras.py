@@ -161,10 +161,13 @@ def header_nav(lang, toggle_href, active='festivals'):
 
 
 FOOTER = '''<footer class="seo-footer" style="max-width:1000px;margin:0 auto;padding:24px 22px;font-size:13px;color:#637080">
-  <p>© 2026 Aegean Blueprint · <a href="{lang_link}" style="color:#076880;text-decoration:none">{lang_label}</a> · <a href="{privacy}" style="color:#076880;text-decoration:none">{privacy_label}</a> · <a href="{credits}" style="color:#076880;text-decoration:none">{credits_label}</a></p>
+  <p>© {copyright_year} Aegean Blueprint · <a href="{lang_link}" style="color:#076880;text-decoration:none">{lang_label}</a> · <a href="{privacy}" style="color:#076880;text-decoration:none">{privacy_label}</a> · <a href="{credits}" style="color:#076880;text-decoration:none">{credits_label}</a></p>
 </footer>
 </body>
 </html>'''
+
+FOOTER = FOOTER.replace('{copyright_year}', str(YEAR))
+
 
 BUDGET_MONTH = {4: 'apr', 5: 'may', 6: 'jun', 7: 'jul', 8: 'aug', 9: 'sep', 10: 'oct'}
 
