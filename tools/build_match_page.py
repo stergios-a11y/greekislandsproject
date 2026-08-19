@@ -117,7 +117,9 @@ def build(lang, names):
                 lang_link=(path_en if is_el else path_el),
                 lang_label=('English' if is_el else 'Ελληνικά'),
                 privacy=('/el/privacy/' if is_el else '/privacy/'),
-                privacy_label=('Απόρρητο' if is_el else 'Privacy')))
+                privacy_label=('Απόρρητο' if is_el else 'Privacy'),
+                credits=('/el/credits/' if is_el else '/credits/'),
+                credits_label=('Πηγές φωτογραφιών' if is_el else 'Photo credits')))
     out = ROOT / (path_el if is_el else path_en).strip('/')
     out.mkdir(parents=True, exist_ok=True)
     (out / 'index.html').write_text(html, encoding='utf-8')

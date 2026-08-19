@@ -56,6 +56,16 @@ CSS = '''<style>
 .cx-card h3 a{color:var(--ink-1,#1A2332);text-decoration:none}
 .cx-card p{margin:0;font-size:13.5px;line-height:1.55;color:var(--ink-3,#637080)}
 .cx-page ol.cx-steps{padding-left:20px;line-height:1.7;font-size:15px;max-width:70ch}
+.cr-island{margin:26px 0 0}
+.cr-island h3{font-size:17px;margin:0 0 8px}
+.cr-island h3 a{color:var(--ink-1,#1A2332);text-decoration:none}
+.cr-island h3 small{font-weight:600;font-size:12.5px;color:var(--ink-4,#A0ADB8)}
+.cr-list{list-style:none;margin:0;padding:0;font-size:13.5px;line-height:1.7;color:var(--ink-3,#637080)}
+.cr-list li{padding:2px 0;border-bottom:1px solid var(--line,#EFF3F6)}
+.cr-list li:last-child{border-bottom:0}
+.cr-subj{font-weight:700;color:var(--ink-2,#3C4A57)}
+.cr-list a{color:#076880;text-decoration:none}
+.cx-facts{display:flex;flex-wrap:wrap;gap:6px}
 </style>'''
 
 
@@ -209,7 +219,9 @@ def build_quiet(lang, meta, gnames, photos):
                 lang_link=(path_en if is_el else path_el),
                 lang_label=('English' if is_el else 'Ελληνικά'),
                 privacy=('/el/privacy/' if is_el else '/privacy/'),
-                privacy_label=('Απόρρητο' if is_el else 'Privacy')))
+                privacy_label=('Απόρρητο' if is_el else 'Privacy'),
+                credits=('/el/credits/' if is_el else '/credits/'),
+                credits_label=('Πηγές φωτογραφιών' if is_el else 'Photo credits')))
     out = ROOT / (path_el if is_el else path_en).strip('/')
     out.mkdir(parents=True, exist_ok=True)
     (out / 'index.html').write_text(html, encoding='utf-8')
@@ -293,23 +305,151 @@ def build_diapontia(lang, meta, gnames, photos):
                 lang_link=(path_en if is_el else path_el),
                 lang_label=('English' if is_el else 'Ελληνικά'),
                 privacy=('/el/privacy/' if is_el else '/privacy/'),
-                privacy_label=('Απόρρητο' if is_el else 'Privacy')))
+                privacy_label=('Απόρρητο' if is_el else 'Privacy'),
+                credits=('/el/credits/' if is_el else '/credits/'),
+                credits_label=('Πηγές φωτογραφιών' if is_el else 'Photo credits')))
     out = ROOT / (path_el if is_el else path_en).strip('/')
     out.mkdir(parents=True, exist_ok=True)
     (out / 'index.html').write_text(html, encoding='utf-8')
 
 
+
+# ---------------------------------------------------------------- credits
+
+def collect_credits():
+    """Every attributed photo on the site, grouped by island.
+
+    Aug 2026: 474 photos carry a CC licence naming a photographer. The inline
+    badge on each image is the primary attribution; this page is the durable,
+    linkable record — and the honest thing for a site built on other people's
+    photographs to have.
+    """
+    out = []
+    for f in sorted((ROOT / 'islands').glob('*.json')):
+        d = json.loads(f.read_text(encoding='utf-8'))
+        key = d['key']
+        items = []
+
+        def take(o, what):
+            c = o.get('photo_credit')
+            if o.get('photo') and isinstance(c, dict) and (c.get('artist') or c.get('license')):
+                items.append({
+                    'subject': o.get('name') or what,
+                    'artist': (c.get('artist') or '').strip(),
+                    'license': (c.get('license') or '').strip(),
+                    'license_url': (c.get('license_url') or '').strip(),
+                    'page_url': (c.get('page_url') or '').strip(),
+                    'source': (c.get('source') or '').strip(),
+                })
+
+        for day in (d.get('itinerary') or {}).get('days', []):
+            for st in day.get('stops', []):
+                take(st, 'stop')
+        for b in (d.get('beaches') or []):
+            take(b, 'beach')
+        if items:
+            out.append((key, d.get('name') or key.title(), d.get('name_el') or d.get('name'), items))
+    return out
+
+
+def build_credits(lang, groups):
+    is_el = lang == 'el'
+    path_en, path_el = '/credits/', '/el/credits/'
+    total = sum(len(i[3]) for i in groups)
+    photographers = len({it['artist'] for _, _, _, items in groups for it in items if it['artist']})
+
+    if is_el:
+        title = 'Πηγές φωτογραφιών & άδειες χρήσης'
+        desc = (f'Κάθε φωτογραφία με άδεια Creative Commons στο Aegean Blueprint — {total} '
+                f'φωτογραφίες από {photographers} φωτογράφους, με άδεια και πηγή.')
+        h1 = 'Πηγές φωτογραφιών'
+        intro = (f'Το μεγαλύτερο μέρος των φωτογραφιών σε αυτόν τον ιστότοπο προέρχεται από '
+                 f'φωτογράφους που τις διέθεσαν με άδεια Creative Commons. Εδώ είναι όλες: '
+                 f'{total} φωτογραφίες, {photographers} φωτογράφοι. Η αναφορά υπάρχει και '
+                 f'πάνω σε κάθε φωτογραφία, με το κουμπάκι «i».')
+        lic_h = 'Άδειες που χρησιμοποιούνται'
+        note = ('Αν είσαι ο δημιουργός μιας φωτογραφίας και θέλεις διαφορετική αναφορά ή '
+                'αφαίρεση, στείλε μήνυμα και θα γίνει αμέσως.')
+    else:
+        title = 'Photo credits & licences'
+        desc = (f'Every Creative Commons photograph on Aegean Blueprint — {total} photos by '
+                f'{photographers} photographers, with licence and source for each.')
+        h1 = 'Photo credits'
+        intro = (f'Most of the photographs on this site were taken by other people and released '
+                 f'under Creative Commons licences. Here they all are: {total} photos by '
+                 f'{photographers} photographers. The same credit appears on every image itself, '
+                 f'behind the small "i" badge.')
+        lic_h = 'Licences in use'
+        note = ('If you took one of these and would like the credit worded differently, or the '
+                'photo removed, get in touch and it will be changed straight away.')
+
+    lic_counts = {}
+    for _, _, _, items in groups:
+        for it in items:
+            lic_counts[it['license'] or '—'] = lic_counts.get(it['license'] or '—', 0) + 1
+    lic_rows = ''.join(
+        f'<span class="cx-fact">{esc(k)} · {v}</span>'
+        for k, v in sorted(lic_counts.items(), key=lambda kv: -kv[1]))
+
+    blocks = []
+    for key, name_en, name_el, items in groups:
+        nm = (name_el or name_en) if is_el else name_en
+        href = f'/el/island/{key}/' if is_el else f'/island/{key}/'
+        rows = []
+        for it in items:
+            who = esc(it['artist']) or ('Άγνωστος' if is_el else 'Unknown')
+            lic = esc(it['license'])
+            if it['license_url']:
+                lic = f'<a href="{esc(it["license_url"])}" target="_blank" rel="noopener nofollow">{lic}</a>'
+            src = ''
+            if it['page_url']:
+                label = it['source'] or 'source'
+                src = (f' · <a href="{esc(it["page_url"])}" target="_blank" rel="noopener nofollow">'
+                       f'{esc(label)}</a>')
+            rows.append(f'<li><span class="cr-subj">{esc(it["subject"])}</span> — {who}'
+                        f'{" · " + lic if lic else ""}{src}</li>')
+        blocks.append(f'<section class="cr-island"><h3><a href="{href}">{esc(nm)}</a>'
+                      f' <small>{len(items)}</small></h3><ul class="cr-list">'
+                      + ''.join(rows) + '</ul></section>')
+
+    html = (page_head(title, desc, path_en, path_el, lang)
+            + header_nav(lang, (path_en if is_el else path_el), active='')
+            + CSS
+            + f'''<main class="cx-page">
+<h1>{esc(h1)}</h1>
+<p class="cx-intro">{esc(intro)}</p>
+<h2>{esc(lic_h)}</h2>
+<div class="cx-facts">{lic_rows}</div>
+<div class="cx-note" style="margin-top:20px">{esc(note)}</div>
+{"".join(blocks)}
+</main>
+'''
+            + FOOTER.format(
+                lang_link=(path_en if is_el else path_el),
+                lang_label=('English' if is_el else 'Ελληνικά'),
+                privacy=('/el/privacy/' if is_el else '/privacy/'),
+                privacy_label=('Απόρρητο' if is_el else 'Privacy'),
+                credits=('/el/credits/' if is_el else '/credits/'),
+                credits_label=('Πηγές φωτογραφιών' if is_el else 'Photo credits')))
+    out = ROOT / (path_el if is_el else path_en).strip('/')
+    out.mkdir(parents=True, exist_ok=True)
+    (out / 'index.html').write_text(html, encoding='utf-8')
+    return total, photographers
+
 def main():
     meta = load_meta()
     gnames = greek_names()
     photos = hero_photos()
+    credits = collect_credits()
     for lang in ('en', 'el'):
         build_quiet(lang, meta, gnames, photos)
         build_diapontia(lang, meta, gnames, photos)
+        n_photos, n_people = build_credits(lang, credits)
     added = patch_sitemap([('/quiet-islands/', '/el/quiet-islands/'),
-                           ('/diapontia/', '/el/diapontia/')])
-    print(f'✓ Collections built: /quiet-islands/ + /diapontia/ (EN+EL), '
-          f'{added} sitemap entries added')
+                           ('/diapontia/', '/el/diapontia/'),
+                           ('/credits/', '/el/credits/')])
+    print(f'✓ Collections built: /quiet-islands/, /diapontia/, /credits/ (EN+EL) — '
+          f'{n_photos} photos by {n_people} photographers, {added} sitemap entries added')
     return 0
 
 

@@ -524,7 +524,7 @@ def render_page(lang, meta, data):
 </main>
 
 <footer class="seo-footer" style="max-width:1120px;margin:0 auto;padding:20px 22px">
-  <p>© 2026 Aegean Blueprint · <a href="{url_el if not is_el else url_en}">{t['footer_lang']}</a> · <a href="{'/el/privacy/' if is_el else '/privacy/'}">{t['footer_privacy']}</a></p>
+  <p>© 2026 Aegean Blueprint · <a href="{url_el if not is_el else url_en}">{t['footer_lang']}</a> · <a href="{'/el/privacy/' if is_el else '/privacy/'}">{t['footer_privacy']}</a> · <a href="{'/el/credits/' if is_el else '/credits/'}">{'Πηγές φωτογραφιών' if is_el else 'Photo credits'}</a></p>
 </footer>
 
 <script>

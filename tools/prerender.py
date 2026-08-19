@@ -793,14 +793,52 @@ def content_img_640(url):
     return url
 
 
-def seo_photo_html(url, alt, cls='seo-photo'):
+def photo_credit_html(credit):
+    """Click-to-reveal CC attribution badge — mirrors buildPhotoCredit() in
+    script.js so the static page and the hydrated SPA show the same thing.
+
+    Aug 2026: 426 of the photos on this site carry a CC BY or BY-SA licence, and
+    the prerendered pages — the ones Google indexes and most visitors land on —
+    were shipping them with no visible credit at all. The badge existed only in
+    the SPA. Attribution is a licence condition, not a nicety.
+
+    Pure HTML + CSS: a <button> with an inline class toggle, so it works before
+    script.js has loaded and on pages that never load it.
+    """
+    if not isinstance(credit, dict):
+        return ''
+    artist = (credit.get('artist') or '').strip()
+    license_ = (credit.get('license') or '').strip()
+    if not artist and not license_:
+        return ''
+    text = f'© {artist} / {license_}' if artist and license_ else (f'© {artist}' if artist else license_)
+    page_url = (credit.get('page_url') or '').strip()
+    inner = esc(text)
+    if page_url:
+        inner = (f'<a href="{esc(page_url)}" target="_blank" rel="noopener noreferrer" '
+                 f'onclick="event.stopPropagation()">{esc(text)}</a>')
+    label = 'Image credit'
+    return ('<button type="button" class="photo-credit-badge" aria-label="' + label + '" '
+            "onclick=\"event.stopPropagation();this.classList.toggle('open')\">i"
+            f'<span class="photo-credit-text">{inner}</span></button>')
+
+
+def seo_photo_html(url, alt, cls='seo-photo', credit=None):
     """One inline content photo for the crawled page. Explicit dimensions keep
     CLS at zero; lazy+async keep it off the critical path. Returns '' when the
-    item has no photo, so islands mid-way through a photo pass stay valid."""
+    item has no photo, so islands mid-way through a photo pass stay valid.
+
+    When the photo carries credit data it is wrapped in a positioned span so the
+    absolutely-positioned attribution badge has something to anchor to.
+    """
     if not url:
         return ''
-    return (f'<img class="{cls}" src="{esc(content_img_640(url))}" alt="{esc(alt)}" '
-            f'width="640" height="420" loading="lazy" decoding="async">')
+    img = (f'<img class="{cls}" src="{esc(content_img_640(url))}" alt="{esc(alt)}" '
+           f'width="640" height="420" loading="lazy" decoding="async">')
+    badge = photo_credit_html(credit)
+    if not badge:
+        return img
+    return f'<span class="seo-photo-wrap">{img}{badge}</span>' 
 
 
 def hero_src_1280(url):
@@ -1651,7 +1689,8 @@ def render_body(key, data, meta, lang='en'):
                 stime = esc(s.get('time', ''))
                 drive = pick(s, 'drive', lang)
                 drive_html = f'<br><span class="seo-stop-drive">🚗 {esc(drive)}</span>' if drive else ''
-                simg = seo_photo_html(s.get('photo'), pick(s, 'name', lang))
+                simg = seo_photo_html(s.get('photo'), pick(s, 'name', lang),
+                                      credit=s.get('photo_credit'))
                 stop_items.append(f'<li><strong>{stime} · {sname}</strong>{drive_html}<br>{sdesc}{simg}</li>')
             # Meal-timing cues at each meal's slot in the route
             _foods = day.get('food')
@@ -1745,7 +1784,8 @@ def render_body(key, data, meta, lang='en'):
             bfacing = esc(interpret_facing(pick(b, 'facing', lang), lang,
                                             ionian=(meta.get('group') == 'Ionian')))
             bfac = esc(pick(b, 'facilities', lang))
-            bimg = seo_photo_html(b.get('photo'), pick(b, 'name', lang))
+            bimg = seo_photo_html(b.get('photo'), pick(b, 'name', lang),
+                                  credit=b.get('photo_credit'))
             beach_blocks.append(f'''
 <article class="seo-beach">
   <h3>{bname}</h3>
@@ -1966,7 +2006,7 @@ def render_page(key, data, meta, lang='en'):
 <script type="application/ld+json">{schema_json}</script>
 
 <!-- SPA assets — load the same CSS as the main site so the SEO body blends visually -->
-<link rel="stylesheet" href="{asset_prefix}style.css?v=69">
+<link rel="stylesheet" href="{asset_prefix}style.css?v=70">
 <style>
   /* Minimal SEO body styling — these elements exist only in pre-rendered pages */
   .seo-island-content {{
@@ -2131,6 +2171,7 @@ def render_page(key, data, meta, lang='en'):
   .seo-related a, .seo-compare a {{ color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }}
   .seo-compare-more {{ margin-top: 8px; font-size: 14px; }}
   .seo-collections {{ margin: 10px 0 0; font-size: 14px; }}
+  .seo-photo-wrap {{ position: relative; display: inline-block; max-width: 100%; line-height: 0; }}
   .seo-collections a {{ color: #076880; font-weight: 700; text-decoration: none; }}
   .seo-related a:hover {{ text-decoration: underline; }}
 
@@ -2260,7 +2301,7 @@ def render_page(key, data, meta, lang='en'):
 
 <!-- Footer -->
 <footer class="seo-footer">
-  <p>© 2026 Aegean Blueprint · <a href="{('/el/island/' if lang == 'en' else '/island/')}{key}/">{'Ελληνικά' if lang == 'en' else 'English'}</a> · <a href="{'/privacy/' if lang == 'en' else '/el/privacy/'}">{'Privacy' if lang == 'en' else 'Απόρρητο'}</a></p>
+  <p>© 2026 Aegean Blueprint · <a href="{('/el/island/' if lang == 'en' else '/island/')}{key}/">{'Ελληνικά' if lang == 'en' else 'English'}</a> · <a href="{'/privacy/' if lang == 'en' else '/el/privacy/'}">{'Privacy' if lang == 'en' else 'Απόρρητο'}</a> · <a href="{'/credits/' if lang == 'en' else '/el/credits/'}">{'Photo credits' if lang == 'en' else 'Πηγές φωτογραφιών'}</a></p>
 </footer>
 </div><!-- /#seo-fallback -->
 
@@ -2343,7 +2384,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=42"></script>
-<script src="{asset_prefix}script.js?v=101"></script>
+<script src="{asset_prefix}script.js?v=102"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
@@ -2672,7 +2713,7 @@ def generate_ferries_page(island_keys):
             f'<meta property="og:url" content="{url}">\n'
             f'<meta property="og:locale" content="{"el_GR" if is_el else "en_US"}">\n'
             '<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>\n'
-            '<link rel="stylesheet" href="/style.css?v=69">\n'
+            '<link rel="stylesheet" href="/style.css?v=70">\n'
             '<style>\n'
             '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--sans, system-ui), sans-serif; margin: 0; }\n'
             '  .ferry-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }\n'
@@ -2753,6 +2794,18 @@ def generate_ferries_page(island_keys):
             f'\n  <div class="ferry-footer"><p>{booking_intro}{ferryhopper_link}</p><p style="margin-top: 12px;">{crosslink_text}</p></div>\n'
             '<div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored">' + ('🚢 Κράτηση εισιτηρίων' if is_el else '🚢 Book ferry tickets') + '</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">' + ('🚗 Ενοικίαση αυτοκινήτου' if is_el else '🚗 Rent a car') + '</a></div>\n'
             '</main>\n'
+            # /ferries/ was the one page type with no footer at all — so no
+            # privacy link and nowhere to reach the photo credits from.
+            '<footer style="text-align:center;padding:24px 16px;font-size:13px;color:#888;'
+            'border-top:1px solid #e5e5e5;margin-top:40px;">\n'
+            '  <p style="margin:0;">© 2026 Aegean Blueprint · <a href="'
+            + ('/el/privacy/' if is_el else '/privacy/')
+            + '" style="color:#888;text-decoration:none;">'
+            + ('Απόρρητο' if is_el else 'Privacy')
+            + '</a> · <a href="' + ('/el/credits/' if is_el else '/credits/')
+            + '" style="color:#888;text-decoration:none;">'
+            + ('Πηγές φωτογραφιών' if is_el else 'Photo credits') + '</a></p>\n'
+            '</footer>\n'
             '<script>\n'
             '  /* Mobile hamburger toggle */\n'
             '  document.getElementById("menu-toggle-btn").addEventListener("click", function(){ document.getElementById("main-nav").classList.toggle("open"); });\n'
@@ -3190,7 +3243,7 @@ def generate_festivals_page(island_keys):
             # Otherwise users who enabled dark mode on the home page would briefly
             # flash the light theme on this page. Tiny inline script — no JS file needed.
             '<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>\n'
-            '<link rel="stylesheet" href="/style.css?v=69">\n'
+            '<link rel="stylesheet" href="/style.css?v=70">\n'
             '<style>\n'
             '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--sans, system-ui), sans-serif; margin: 0; }\n'
             '  .fest-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }\n'
@@ -3303,7 +3356,7 @@ def generate_festivals_page(island_keys):
             '</main>\n'
             '<div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored">' + ('🚢 Κράτηση εισιτηρίων' if is_el else '🚢 Book ferry tickets') + '</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">' + ('🚗 Ενοικίαση αυτοκινήτου' if is_el else '🚗 Rent a car') + '</a></div>\n'
             '<footer style="text-align:center;padding:24px 16px;font-size:13px;color:#888;border-top:1px solid #e5e5e5;margin-top:40px;">\n'
-            '  <p style="margin:0;">© 2026 Aegean Blueprint · <a href="' + ('/el/privacy/' if is_el else '/privacy/') + '" style="color:#888;text-decoration:none;">' + ('Απόρρητο' if is_el else 'Privacy') + '</a></p>\n'
+            '  <p style="margin:0;">© 2026 Aegean Blueprint · <a href="' + ('/el/privacy/' if is_el else '/privacy/') + '" style="color:#888;text-decoration:none;">' + ('Απόρρητο' if is_el else 'Privacy') + '</a> · <a href="' + ('/el/credits/' if is_el else '/credits/') + '" style="color:#888;text-decoration:none;">' + ('Πηγές φωτογραφιών' if is_el else 'Photo credits') + '</a></p>\n'
             '</footer>\n'
             + soon_script
             + '</body>\n</html>'

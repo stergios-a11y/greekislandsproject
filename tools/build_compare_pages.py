@@ -49,7 +49,7 @@ def _resolve_root():
 
 ROOT = _resolve_root()
 SITE_URL = 'https://aegeanblueprint.com'
-ASSET_V = 101
+ASSET_V = 102
 
 # style.css has its own version; using ASSET_V here meant compare pages asked
 # for a different ?v= of the same stylesheet than every other page.
@@ -887,7 +887,7 @@ def render_page(pair_key, lang):
             ('/el/#shortlist', '⭐ Λίστα μου', 'nav-shortlist'),
         ]
         home_url = '/el/'
-        privacy_link = '<a href="/el/privacy/" data-i18n="footer.privacy">Απόρρητο</a>'
+        privacy_link = '<a href="/el/privacy/" data-i18n="footer.privacy">Απόρρητο</a> · <a href="/el/credits/" data-i18n="footer.credits">Πηγές φωτογραφιών</a>'
     else:
         nav_items = [
             ('/#compare', 'Compare', 'nav-compare'),
@@ -900,7 +900,7 @@ def render_page(pair_key, lang):
             ('/#shortlist', '⭐ My Shortlist', 'nav-shortlist'),
         ]
         home_url = '/'
-        privacy_link = '<a href="/privacy/" data-i18n="footer.privacy">Privacy</a>'
+        privacy_link = '<a href="/privacy/" data-i18n="footer.privacy">Privacy</a> · <a href="/credits/" data-i18n="footer.credits">Photo credits</a>'
 
     nav_html = '\n        '.join(
         f'<a href="{esc(href)}" id="{nav_id}">{esc(label)}</a>'
@@ -1280,7 +1280,7 @@ def render_hub_page(lang, valid_pairs):
             ('/el/#mission', 'Στόχος', 'nav-mission'),
             ('/el/#shortlist', '⭐ Λίστα μου', 'nav-shortlist'),
         ]
-        privacy_link = '<a href="/el/privacy/" data-i18n="footer.privacy">Απόρρητο</a>'
+        privacy_link = '<a href="/el/privacy/" data-i18n="footer.privacy">Απόρρητο</a> · <a href="/el/credits/" data-i18n="footer.credits">Πηγές φωτογραφιών</a>'
     else:
         nav_items = [
             ('/#compare', 'Compare', 'nav-compare'),
@@ -1292,7 +1292,7 @@ def render_hub_page(lang, valid_pairs):
             ('/#mission', 'Mission', 'nav-mission'),
             ('/#shortlist', '⭐ My Shortlist', 'nav-shortlist'),
         ]
-        privacy_link = '<a href="/privacy/" data-i18n="footer.privacy">Privacy</a>'
+        privacy_link = '<a href="/privacy/" data-i18n="footer.privacy">Privacy</a> · <a href="/credits/" data-i18n="footer.credits">Photo credits</a>'
 
     nav_html = '\n        '.join(
         f'<a href="{esc(href)}" id="{nav_id}">{esc(label)}</a>'

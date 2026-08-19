@@ -161,7 +161,7 @@ def header_nav(lang, toggle_href, active='festivals'):
 
 
 FOOTER = '''<footer class="seo-footer" style="max-width:1000px;margin:0 auto;padding:24px 22px;font-size:13px;color:#637080">
-  <p>© 2026 Aegean Blueprint · <a href="{lang_link}" style="color:#076880;text-decoration:none">{lang_label}</a> · <a href="{privacy}" style="color:#076880;text-decoration:none">{privacy_label}</a></p>
+  <p>© 2026 Aegean Blueprint · <a href="{lang_link}" style="color:#076880;text-decoration:none">{lang_label}</a> · <a href="{privacy}" style="color:#076880;text-decoration:none">{privacy_label}</a> · <a href="{credits}" style="color:#076880;text-decoration:none">{credits_label}</a></p>
 </footer>
 </body>
 </html>'''
@@ -274,7 +274,9 @@ def build_month_hubs(fests, names):
                         lang_link=(path_en if is_el else path_el),
                         lang_label=('English' if is_el else 'Ελληνικά'),
                         privacy=('/el/privacy/' if is_el else '/privacy/'),
-                        privacy_label=('Απόρρητο' if is_el else 'Privacy')))
+                        privacy_label=('Απόρρητο' if is_el else 'Privacy'),
+                credits=('/el/credits/' if is_el else '/credits/'),
+                credits_label=('Πηγές φωτογραφιών' if is_el else 'Photo credits')))
             out = ROOT / (path_el if is_el else path_en).strip('/')
             out.mkdir(parents=True, exist_ok=True)
             (out / 'index.html').write_text(html, encoding='utf-8')
@@ -370,7 +372,9 @@ def build_ikaria():
                     lang_link=(path_en if is_el else path_el),
                     lang_label=('English' if is_el else 'Ελληνικά'),
                     privacy=('/el/privacy/' if is_el else '/privacy/'),
-                    privacy_label=('Απόρρητο' if is_el else 'Privacy')))
+                    privacy_label=('Απόρρητο' if is_el else 'Privacy'),
+                credits=('/el/credits/' if is_el else '/credits/'),
+                credits_label=('Πηγές φωτογραφιών' if is_el else 'Photo credits')))
         out = ROOT / (path_el if is_el else path_en).strip('/')
         out.mkdir(parents=True, exist_ok=True)
         (out / 'index.html').write_text(html, encoding='utf-8')
