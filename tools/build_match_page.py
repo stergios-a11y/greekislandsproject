@@ -61,8 +61,10 @@ def build(lang, names):
     is_el = lang == 'el'
     path_en, path_el = '/match/', '/el/match/'
     if is_el:
-        title = f'Ποιο ελληνικό νησί σού ταιριάζει; Quiz 60" + ειλικρινείς προτάσεις ({YEAR}) | Aegean Blueprint'
-        desc = 'Απάντησε σε λίγες γρήγορες ερωτήσεις — παραλίες, μπάτζετ, νυχτερινή ζωή, ρυθμός — και πάρε τα 3 νησιά που σού ταιριάζουν, με βαθμολογίες. Ή ξεκίνα από αυτό που ψάχνεις.'
+        # Brand suffix dropped and the payload tightened: 92 chars meant Google
+        # truncated the part that sells the click.
+        title = f'Ποιο ελληνικό νησί σού ταιριάζει; Quiz 60 δευτ. ({YEAR})'
+        desc = 'Οκτώ γρήγορες ερωτήσεις — παραλίες, μπάτζετ, πόσο χρόνο έχεις — και παίρνεις τα νησιά που σού ταιριάζουν, με βαθμολογίες.'
         h1 = 'Ποιο ελληνικό νησί σού ταιριάζει;'
         intro = ('Υπάρχουν 83 κατοικημένα νησιά και οι περισσότεροι οδηγοί σού λένε «όλα υπέροχα». Εδώ κάθε νησί έχει ειλικρινή βαθμολογία σε παραλίες, πολιτισμό, νυχτερινή ζωή, πρόσβαση και τιμές — '
                  'οπότε το ταίριασμα γίνεται με πραγματικά κριτήρια, όχι με διαφημιστικά.')
@@ -75,8 +77,8 @@ def build(lang, names):
                '<p>Οι βαθμολογίες δεν βγαίνουν από αλγόριθμο ούτε από το TripAdvisor — είναι η κρίση ενός ανθρώπου που έχει πάει στα περισσότερα, εξηγημένη δημόσια στη σελίδα <a href="/el/#mission" style="color:#076880">Στόχος</a>. '
                f'Και όταν διαλέξεις, το <a href="/el/trip-cost/" style="color:#076880">Μπάτζετ</a> σού δείχνει τι θα κοστίσει το ταξίδι — ενημερωμένο για το {YEAR}.</p>')
     else:
-        title = f'Which Greek Island Should You Visit? 60-Second Quiz + Honest Picks ({YEAR}) | Aegean Blueprint'
-        desc = 'Answer a few quick questions — beaches, budget, nightlife, pace — and get your 3 best-match islands, scored. Or start from what you want: beaches, quiet, families, no car.'
+        title = f'Which Greek Island Should You Visit? 60-Second Quiz ({YEAR})'
+        desc = 'Eight quick questions — beaches, budget, how long you have — and you get the islands that actually fit, scored and ranked.'
         h1 = 'Which Greek island should you visit?'
         intro = ('There are 83 inhabited islands and most guides call all of them wonderful. Here, every island carries an honest score across beaches, culture, nightlife, access and price — '
                  'so the matching runs on real criteria, not marketing copy.')

@@ -117,7 +117,7 @@ def build_dataset():
 STR = {
     'en': {
         'lang': 'en', 'base': '/', 'other': '/el/trip-cost/', 'lang_label': 'EL',
-        'title': 'Greek Island Budget Planner — ferries, rooms, car, food | Aegean Blueprint',
+        'title': 'Greek Island Trip Cost: Ferries, Rooms, Car, Food',
         'desc': 'Build your island route and get an honest cost estimate: ferry fares, room prices by month, car hire, food — for all 83 Greek islands. No fake precision.',
         'h1': 'What will your island trip cost?',
         'sub': 'Six quick questions and you get an honest estimate — ferry fares from real distances, room prices for your actual dates, no fake precision. Start with one island; add more if you are hopping.',
@@ -188,7 +188,7 @@ STR = {
     },
     'el': {
         'lang': 'el', 'base': '/el/', 'other': '/trip-cost/', 'lang_label': 'EN',
-        'title': 'Μπάτζετ Ταξιδιού στα Ελληνικά Νησιά — πλοία, δωμάτια, αυτοκίνητο | Aegean Blueprint',
+        'title': 'Κόστος Ταξιδιού στα Νησιά: Πλοία, Δωμάτια, Αυτοκίνητο',
         'desc': 'Φτιάξε τη διαδρομή σου και δες μια ειλικρινή εκτίμηση κόστους: εισιτήρια πλοίων, δωμάτια ανά μήνα, ενοικίαση αυτοκινήτου, φαγητό — και για τα 88 νησιά.',
         'h1': 'Πόσο θα κοστίσει το ταξίδι σου στα νησιά;',
         'sub': 'Έξι γρήγορες ερωτήσεις και έχεις μια ειλικρινή εκτίμηση — ναύλα από πραγματικές αποστάσεις, τιμές δωματίων για τις δικές σου ημερομηνίες, χωρίς ψεύτικη ακρίβεια. Ξεκίνα με ένα νησί και πρόσθεσε κι άλλα αν κάνεις νησοπορία.',

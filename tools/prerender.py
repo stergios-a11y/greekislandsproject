@@ -2343,7 +2343,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=42"></script>
-<script src="{asset_prefix}script.js?v=100"></script>
+<script src="{asset_prefix}script.js?v=101"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
@@ -2514,7 +2514,7 @@ def generate_ferries_page(island_keys):
     for lang in ['en', 'el']:
         is_el = (lang == 'el')
         if is_el:
-            title = 'Πλοία προς τα Ελληνικά Νησιά από Αθήνα — όλες οι διαδρομές | Aegean Blueprint'
+            title = 'Πλοία από Αθήνα προς τα Νησιά: Όλες οι Διαδρομές'
             description = f'Πλοία από Πειραιά, Ραφήνα και Λαύριο προς {island_count} νησιά. Διάρκεια, συχνότητα, τιμές. Ενημερωμένος οδηγός για το 2026.'
             intro = ('Σχεδόν όλα τα νησιά του Αιγαίου και του Ιονίου είναι προσβάσιμα με πλοίο '
                      'από την Αθήνα — αλλά το λιμάνι έναρξης κάνει μεγάλη διαφορά. Ο '
@@ -2539,7 +2539,7 @@ def generate_ferries_page(island_keys):
                               '<a href="/el/#hopping">διαδραστικό χάρτη και σχεδιαστή διαδρομών</a> '
                               'και τις <a href="/el/#hopping">προτεινόμενες διαδρομές νησοπορίας</a>.')
         else:
-            title = 'Ferries from Athens to the Greek Islands — all routes | Aegean Blueprint'
+            title = 'Ferries from Athens to the Greek Islands: All Routes'
             description = f'Ferries from Piraeus, Rafina, and Lavrio to {island_count} islands. Duration, frequency, fare. Up-to-date guide for 2026.'
             intro = ('Almost every Aegean and Ionian island is reachable by ferry from Athens — '
                      'but the departure port matters. <strong>Piraeus</strong> serves most '
