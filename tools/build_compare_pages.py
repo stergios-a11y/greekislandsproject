@@ -49,7 +49,7 @@ def _resolve_root():
 
 ROOT = _resolve_root()
 SITE_URL = 'https://aegeanblueprint.com'
-ASSET_V = 99
+ASSET_V = 100
 
 # style.css has its own version; using ASSET_V here meant compare pages asked
 # for a different ?v= of the same stylesheet than every other page.

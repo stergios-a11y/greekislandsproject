@@ -120,6 +120,11 @@ def page_head(title, desc, path_en, path_el, lang):
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
 <meta property="og:type" content="website">
+<meta property="og:image" content="{SITE_URL}/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{SITE_URL}/og-image.png">
 <link rel="icon" href="/logo-hero.svg" type="image/svg+xml">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-FMFWLRM2J9');</script>

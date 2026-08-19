@@ -2343,7 +2343,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=42"></script>
-<script src="{asset_prefix}script.js?v=99"></script>
+<script src="{asset_prefix}script.js?v=100"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
@@ -2661,6 +2661,12 @@ def generate_ferries_page(island_keys):
             '<meta name="apple-mobile-web-app-title" content="Aegean Blueprint">\n'
             '<link rel="manifest" href="/site.webmanifest">\n'
             '<meta property="og:type" content="website">\n'
+            # /ferries/ and /festivals/ build their own <head> rather than using the
+            # shared helper, and both shipped with no og:image — so every social share
+            # of the two biggest non-island pages rendered without a card image.
+            '<meta property="og:image" content="https://aegeanblueprint.com/og-image.png">\n'
+            '<meta name="twitter:card" content="summary_large_image">\n'
+            '<meta name="twitter:image" content="https://aegeanblueprint.com/og-image.png">\n'
             f'<meta property="og:title" content="{esc(title)}">\n'
             f'<meta property="og:description" content="{esc(description)}">\n'
             f'<meta property="og:url" content="{url}">\n'
@@ -2761,9 +2767,39 @@ def generate_ferries_page(island_keys):
     return len(routes)
 
 
+def check_day_counts():
+    """The `days` field in ISLANDS_DATA must equal the itinerary's real length.
+
+    Aug 2026: nine islands had drifted apart, so Serifos shipped a title saying
+    "2-Day Plan" directly above a heading saying "3-day itinerary", and the
+    wrong figure fed the budget CTA, the compare card's suggested stay and the
+    quiz's trip-length scoring. Cheap to check, invisible when it breaks, so it
+    is checked on every build.
+    """
+    bad = []
+    for jf in sorted(ISLANDS_DIR.glob('*.json')):
+        if jf.stem == 'TEMPLATE':
+            continue
+        key = jf.stem
+        meta = ISLAND_META.get(key)
+        if not meta or meta.get('days') is None:
+            continue
+        data = json.loads(jf.read_text(encoding='utf-8'))
+        real = len((data.get('itinerary') or {}).get('days', []))
+        if real and int(meta['days']) != real:
+            bad.append((key, int(meta['days']), real))
+    if bad:
+        print('  [WARN] days mismatch between ISLANDS_DATA and the itinerary:')
+        for key, declared, real in bad:
+            print(f'         {key}: script.js says {declared}, itinerary has {real}')
+    return bad
+
+
 def main():
     OUT_EN.mkdir(parents=True, exist_ok=True)
     OUT_EL.mkdir(parents=True, exist_ok=True)
+
+    check_day_counts()
 
     # Bump BUILD_DATE in script.js so the "Last updated" footer stamp is fresh
     bump_build_date()
@@ -3140,6 +3176,12 @@ def generate_festivals_page(island_keys):
             '<meta name="apple-mobile-web-app-title" content="Aegean Blueprint">\n'
             '<link rel="manifest" href="/site.webmanifest">\n'
             '<meta property="og:type" content="website">\n'
+            # /ferries/ and /festivals/ build their own <head> rather than using the
+            # shared helper, and both shipped with no og:image — so every social share
+            # of the two biggest non-island pages rendered without a card image.
+            '<meta property="og:image" content="https://aegeanblueprint.com/og-image.png">\n'
+            '<meta name="twitter:card" content="summary_large_image">\n'
+            '<meta name="twitter:image" content="https://aegeanblueprint.com/og-image.png">\n'
             '<meta property="og:title" content="' + esc(title) + '">\n'
             '<meta property="og:description" content="' + esc(meta_desc) + '">\n'
             '<meta property="og:url" content="' + url + '">\n'
