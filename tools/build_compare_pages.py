@@ -208,7 +208,7 @@ DESC_OVERRIDES.update({
         "Kefalonia takes it 4.1 to 4.0, but Lefkada has the better beaches (4.9 vs 4.7) and a "
         'bridge instead of a ferry. Scale and culture against concentration and price.',
         'Η Κεφαλονιά κερδίζει 4.1 έναντι 4.0, αλλά η Λευκάδα έχει καλύτερες παραλίες (4.9 έναντι 4.7) '
-        'και γεφύρι αντί για πλοίο. Κλίμακα και πολιτισμός έναντι συγκέντρωσης και τιμής.'),
+        'και γέφυρα αντί για πλοίο. Μέγεθος και πολιτισμός έναντι συγκέντρωσης και τιμής.'),
     ('corfu', 'lefkada'): (
         'Corfu wins 4.2 to 4.0 on its UNESCO Old Town (culture 4.8 vs 2.5); Lefkada wins beaches '
         '4.9 to 3.9 and costs less. Two opposite ideas of an Ionian holiday, scored.',
