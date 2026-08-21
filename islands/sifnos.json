@@ -1,495 +1,434 @@
 {
-  "key": "sifnos",
-  "name": "Sifnos",
-  "subtitle": "The gourmet Cycladic island — pottery, chickpea soup and the finest food in the archipelago",
-  "intro": "Sifnos has a reputation entirely disproportionate to its size — the best food in the Cyclades, a tradition of pottery going back 4000 years, a string of beautiful Venetian villages, and excellent beaches. The slow-cooked revithada (chickpea soup, cooked overnight in a ceramic pot in the village bakery) is the local dish. The island rewards slow travel — walk the old mule-path network between villages rather than driving.",
-  "when_to_visit": {
-    "summary": "Sifnos is a foodie's island and the season is short — May through October. Late September is when Greeks themselves go: warm sea, working tavernas, no German tour groups. Easter in Apollonia is a serious affair, with revani and lambs on spits everywhere.",
-    "summary_el": "Η Σίφνος είναι νησί για καλοφαγάδες και η σεζόν είναι σύντομη — Μάιος ως Οκτώβριος. Στα τέλη Σεπτεμβρίου πάνε οι ίδιοι οι Έλληνες: ζεστή θάλασσα, ταβέρνες ανοιχτές, χωρίς γερμανικά γκρουπ. Το Πάσχα στην Απολλωνία είναι σοβαρή υπόθεση, με ρεβανί και αρνιά στη σούβλα παντού.",
-    "months": [
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Σε χειμερία νάρκη"
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season, cold",
-        "why_el": "Σε χειμερία νάρκη"
-      },
-      {
-        "tag": "ok",
-        "why": "Quiet, hiking",
-        "why_el": "Ήσυχη, θάλασσα κρύα"
-      },
-      {
-        "tag": "great",
-        "why": "Easter, blooming",
-        "why_el": "Πάσχα μαγικό, ανθίζει"
-      },
-      {
-        "tag": "great",
-        "why": "Tavernas opening",
-        "why_el": "Ανοίγουν, ζεσταίνει"
-      },
-      {
-        "tag": "perfect",
-        "why": "Sea warmed up, the famous tavernas (To Steki, Omega, Lempesis) bookable same-day, the path from Artemonas to Kastro a daily ritual. The honest best month.",
-        "why_el": "Η θάλασσα ζεστή, οι διάσημες ταβέρνες (Στέκι, Ωμέγα, Λεμπέσης) με κράτηση ίδιας μέρας, το μονοπάτι Αρτεμώνα-Κάστρο καθημερινή ρουτίνα. Ο πραγματικά καλύτερος μήνας."
-      },
-      {
-        "tag": "great",
-        "why": "Hot, food scene packed — tavernas need 2-3 day advance booking. Beaches (Vathy, Platis Gialos) busy but breathable. Kastro at sunset is still magical.",
-        "why_el": "Ζέστη, η γαστρονομία γεμάτη — οι ταβέρνες θέλουν 2-3 μέρες πριν για κράτηση. Παραλίες (Βαθύ, Πλατύς Γιαλός) πολυσύχναστες αλλά αναπνεύσιμες. Το Κάστρο στο ηλιοβασίλεμα ακόμα μαγικό."
-      },
-      {
-        "tag": "ok",
-        "why": "Peak — the food destination Sifnos transforms into a queue. Even mediocre tavernas need bookings; the famous ones (Omega especially) impossible without a week's notice. Beaches packed. Come for the food, accept the wait.",
-        "why_el": "Κορύφωση — ο γαστρονομικός προορισμός Σίφνος γίνεται ουρά. Ακόμα και μέτριες ταβέρνες θέλουν κράτηση· οι διάσημες (ιδίως το Ωμέγα) αδύνατες χωρίς μία εβδομάδα ειδοποίηση. Παραλίες γεμάτες. Έλα για το φαγητό, δέξου την αναμονή."
-      },
-      {
-        "tag": "perfect",
-        "why": "Crowds easing, bookings open up, the slow-cooked revithada (chickpea stew baked overnight) the right meal on the cooler evenings. Pottery workshops in Vathy reopen for visitors.",
-        "why_el": "Το πλήθος υποχωρεί, οι κρατήσεις ανοίγουν, η σιγομαγειρεμένη ρεβιθάδα (ψημένη όλη νύχτα) το σωστό φαγητό στα πιο δροσερά βράδια. Τα κεραμικά εργαστήρια στο Βαθύ ξανανοίγουν για επισκέπτες."
-      },
-      {
-        "tag": "great",
-        "why": "Last swims",
-        "why_el": "Χαλαρά, τελευταία"
-      },
-      {
-        "tag": "ok",
-        "why": "Wrapping up",
-        "why_el": "Για χειμώνα"
-      },
-      {
-        "tag": "avoid",
-        "why": "Few ferries",
-        "why_el": "Σχεδόν όλα κλειστά"
-      }
-    ]
-  },
-  "itinerary": {
-    "title": "3-Day Sifnos Itinerary",
-    "subtitle": "Apollonia's lanes, the hilltop monastery of Chrysopigi, the beaches of Platis Gialos and the pottery village of Artemonas.",
-    "days": [
-      {
-        "day": 1,
-        "title": "Apollonia & Artemonas",
-        "color": "#1B4F8A",
-        "km": 15,
-        "drive_mins": 20,
-        "overnight": "Apollonia",
-        "stops": [
-          {
-            "name": "Apollonia",
-            "lat": 36.9733563,
-            "lng": 24.7239075,
-            "type": "city",
-            "time": "09:00",
-            "wiki": "https://www.google.com/maps/search/Apollonia+Sifnos",
-            "desc": "The capital — a beautiful hilltop town of white lanes, blue-domed churches and bougainvillea. Walk the main pedestrian street to Artemonas. The folk museum is excellent.",
-            "name_el": "Απολλωνία",
-            "desc_el": "Η πρωτεύουσα — μια όμορφη πόλη σε κορυφή λόφου με λευκά δρομάκια, γαλάζιους τρούλους και μπουκαμβίλιες. Περπάτησε τον κύριο πεζόδρομο προς τον Αρτεμώνα. Το λαογραφικό μουσείο είναι εξαιρετικό.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Church%2C_Panagia_Ouranofora%2C_1767_AD%2C_Apollonia%2C_Sifnos%2C_153387.jpg/1920px-Church%2C_Panagia_Ouranofora%2C_1767_AD%2C_Apollonia%2C_Sifnos%2C_153387.jpg",
-            "photo_credit": {
-              "artist": "Zde",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Church,_Panagia_Ouranofora,_1767_AD,_Apollonia,_Sifnos,_153387.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Artemonas",
-            "lat": 36.9833,
-            "lng": 24.7283,
-            "type": "village",
-            "time": "10:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJTQp_TVCNmBQRL32wODbMxeY",
-            "desc": "The most elegant village on Sifnos — Venetian mansions and the finest pottery on the island. Several workshops sell hand-thrown Sifniot ceramics in the traditional geometric patterns.",
-            "name_el": "Αρτεμώνας",
-            "desc_el": "Το πιο κομψό χωριό της Σίφνου — βενετσιάνικα αρχοντικά και η καλύτερη κεραμική του νησιού. Πολλά εργαστήρια πωλούν σιφνιώτικα κεραμικά χειροποίητα στα παραδοσιακά γεωμετρικά μοτίβα.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Artemonas.jpg",
-            "photo_credit": {
-              "artist": "Jon Corelis",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Artemonas.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Kastro (Medieval Capital)",
-            "lat": 36.9753175,
-            "lng": 24.7445342,
-            "type": "castle",
-            "time": "12:00",
-            "wiki": "https://www.google.com/maps/search/Kastro+(Medieval+Capital)+Sifnos",
-            "desc": "The medieval capital of Sifnos — a Venetian fortress-village on a sea cliff with extraordinary views. The houses form the outer wall. The Archaeological Museum inside is small but excellent.",
-            "name_el": "Κάστρο (Μεσαιωνική Πρωτεύουσα)",
-            "desc_el": "Η μεσαιωνική πρωτεύουσα της Σίφνου — ένα βενετσιάνικο οχυρό-χωριό σε θαλάσσιο γκρεμό με εξαιρετικές θέες. Τα σπίτια σχηματίζουν το εξωτερικό τείχος. Το Αρχαιολογικό Μουσείο μέσα είναι μικρό αλλά εξαιρετικό.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Kastro_of_Sifnos%2C_sarcophagus_on_street%2C_153496.jpg/1920px-Kastro_of_Sifnos%2C_sarcophagus_on_street%2C_153496.jpg",
-            "photo_credit": {
-              "artist": "Zde",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Kastro_of_Sifnos,_sarcophagus_on_street,_153496.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Platis Gialos Beach",
-            "lat": 36.9317112,
-            "lng": 24.7296366,
-            "type": "beach",
-            "time": "15:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJkW9RX2LymBQRII5WPtM3Jog",
-            "desc": "The best beach on the island — long, sandy, shallow and well-organised. The most popular beach on Sifnos but large enough to never feel overcrowded.",
-            "name_el": "Παραλία Πλατύς Γιαλός",
-            "desc_el": "Η καλύτερη παραλία του νησιού — μακρά, αμμώδης, ρηχή και καλά οργανωμένη. Η πιο δημοφιλής παραλία της Σίφνου αλλά αρκετά μεγάλη ώστε να μην αισθάνεσαι ποτέ υπερβολικά πολυσύχναστη.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Cyclades_Sifnos_Platis_Gialos_09092014_-_panoramio.jpg",
-            "photo_credit": {
-              "artist": "rene boulay",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Cyclades_Sifnos_Platis_Gialos_09092014_-_panoramio.jpg",
-              "source": "Wikimedia Commons"
-            }
-          }
-        ],
-        "title_el": "Απολλωνία & Αρτεμώνας",
-        "overnight_el": "Απολλωνία",
-        "nightlife": "Sifnos packs its nightlife into one cobbled Apollonia alley — <a href=\"https://www.google.com/maps/search/Steno+Apollonia+Sifnos\" target=\"_blank\" rel=\"noopener\">Steno</a>. It has more bars than the rest of the island combined: <a href=\"https://www.google.com/maps/search/Argo+Bar+Apollonia+Sifnos\" target=\"_blank\" rel=\"noopener\">Argo</a> (going since 1983, old soul and good-value drinks), rooftop <a href=\"https://www.google.com/maps/search/Botzi+93+Sifnos\" target=\"_blank\" rel=\"noopener\">Botzi 93</a> for world jazz under the bougainvillea, and Doloma for the late crowd. Civilised, not raucous.",
-        "nightlife_el": "Η Σίφνος μαζεύει τη νυχτερινή της ζωή σε ένα καλντερίμι της Απολλωνίας — το <a href=\"https://www.google.com/maps/search/Steno+Apollonia+Sifnos\" target=\"_blank\" rel=\"noopener\">Steno</a>. Έχει περισσότερα μπαρ από όλο το υπόλοιπο νησί μαζί: το <a href=\"https://www.google.com/maps/search/Argo+Bar+Apollonia+Sifnos\" target=\"_blank\" rel=\"noopener\">Argo</a> (από το 1983, παλιά soul και ποτά καλής σχέσης), το rooftop <a href=\"https://www.google.com/maps/search/Botzi+93+Sifnos\" target=\"_blank\" rel=\"noopener\">Botzi 93</a> για world jazz κάτω από τη μπουκαμβίλια, και το Doloma για το αργό κοινό. Πολιτισμένα, όχι ξέφρενα.",
-        "food": [
-          {
-            "meal": "Dinner",
-            "meal_el": "Δείπνο",
-            "area": "Kastro",
-            "area_el": "Κάστρο",
-            "desc": "<a href=\"https://www.google.com/maps/search/Cantina+Seralia+Sifnos\" target=\"_blank\" rel=\"noopener\">Cantina</a> at Seralia (the Kastro harbour) is a gastronomy destination in its own right. Back in Apollonia, <a href=\"https://www.google.com/maps/search/To+Steki+Apollonia+Sifnos\" target=\"_blank\" rel=\"noopener\">To Steki</a> does classic Sifnian cooking — chickpea stew, mastelo lamb.",
-            "desc_el": "Η <a href=\"https://www.google.com/maps/search/Cantina+Seralia+Sifnos\" target=\"_blank\" rel=\"noopener\">Cantina</a> στα Σεράλια (το λιμανάκι του Κάστρου) είναι από μόνη της προορισμός γαστρονομίας. Πίσω στην Απολλωνία, το <a href=\"https://www.google.com/maps/search/To+Steki+Apollonia+Sifnos\" target=\"_blank\" rel=\"noopener\">To Steki</a> κάνει κλασική σιφνέικη κουζίνα — ρεβιθάδα, μαστέλο.",
-            "after": "Kastro (Medieval Capital)"
-          }
-        ]
-      },
-      {
-        "day": 2,
-        "title": "Chrysopigi & the South",
-        "color": "#C0522A",
-        "km": 25,
-        "drive_mins": 30,
-        "overnight": "Apollonia",
-        "stops": [
-          {
-            "name": "Chrysopigi Monastery",
-            "lat": 36.9367,
-            "lng": 24.7417,
-            "type": "church",
-            "time": "09:30",
-            "wiki": "https://www.google.com/maps/search/Chrysopigi+Monastery+Sifnos",
-            "desc": "The most beautiful monastery in the Cyclades — a 17th-century whitewashed complex on a tiny rocky peninsula connected by a causeway. The setting is extraordinary.",
-            "name_el": "Μονή Χρυσοπηγής",
-            "desc_el": "Η ομορφότερη μονή των Κυκλάδων — ένα ασβεστωμένο σύμπλεγμα του 17ου αιώνα σε μικροσκοπική βραχώδη χερσόνησο συνδεδεμένη με γέφυρα. Το σκηνικό είναι εξαιρετικό.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Chrysopigi_Monastery_Sifnos_Greece_%28209167519%29.jpeg/1920px-Chrysopigi_Monastery_Sifnos_Greece_%28209167519%29.jpeg",
-            "photo_credit": {
-              "artist": "Georgios Liakopoulos",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Chrysopigi_Monastery_Sifnos_Greece_(209167519).jpeg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Apokofto Beach",
-            "lat": 36.9333,
-            "lng": 24.7389,
-            "type": "beach",
-            "time": "11:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJn_CZFu7ymBQRQRecFwQ2OZs",
-            "desc": "Sandy beach directly below the Chrysopigi monastery — the monastery visible on the rocks above makes this one of the most picturesque beach settings in the Cyclades.",
-            "name_el": "Παραλία Αποκοφτός",
-            "desc_el": "Αμμώδης παραλία ακριβώς κάτω από τη μονή Χρυσοπηγής — η μονή ορατή στους βράχους από πάνω κάνει αυτό ένα από τα πιο γραφικά παραλιακά σκηνικά των Κυκλάδων."
-          },
-          {
-            "name": "Faros Village",
-            "lat": 36.9442917,
-            "lng": 24.7509046,
-            "type": "village",
-            "time": "13:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJYZnp_ebymBQRXr5iRGAIR1M",
-            "desc": "Traditional fishing village with three small coves and the best fish tavernas on the island. Lunch here — the grilled fish and local white wine are outstanding.",
-            "name_el": "Χωριό Φάρος",
-            "desc_el": "Παραδοσιακό αλιευτικό χωριό με τρεις μικρούς κολπίσκους και τις καλύτερες ψαροταβέρνες του νησιού. Μεσημεριανό εδώ — το ψητό ψάρι και το τοπικό λευκό κρασί είναι εξαιρετικά.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Cyclades_Sifnos_Faros_Port_-_panoramio.jpg",
-            "photo_credit": {
-              "artist": "rene boulay",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Cyclades_Sifnos_Faros_Port_-_panoramio.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Vathy Beach",
-            "lat": 36.9311,
-            "lng": 24.6928,
-            "type": "beach",
-            "time": "16:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJPS-if5jtmBQRTvMg_HMjFmk",
-            "desc": "Remote sandy beach in a deep bay on the west coast — the most unspoiled beach on Sifnos, accessible by a long winding road. Beautiful and quiet.",
-            "name_el": "Παραλία Βαθύ",
-            "desc_el": "Απομακρυσμένη αμμώδης παραλία σε βαθύ κόλπο της δυτικής ακτής — η πιο ανέγγιχτη παραλία της Σίφνου, προσβάσιμη με μακρύ φιδογυριστό δρόμο. Όμορφη και ήσυχη.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Beach_in_Vathy_on_Sifnos%2C_153617.jpg/1920px-Beach_in_Vathy_on_Sifnos%2C_153617.jpg",
-            "photo_credit": {
-              "artist": "Zde",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Beach_in_Vathy_on_Sifnos,_153617.jpg",
-              "source": "Wikimedia Commons"
-            }
-          }
-        ],
-        "title_el": "Χρυσοπηγή & ο Νότος",
-        "overnight_el": "Απολλωνία",
-        "food": [
-          {
-            "meal": "Dinner",
-            "meal_el": "Δείπνο",
-            "area": "Faros Bay (Pelicanos / Alyelo)",
-            "area_el": "Όρμος Φάρου (Pelicanos / Alyelo)",
-            "desc": "After Vathy, drive 10 min north to Faros for dinner at one of two FNL Best Restaurant Awards 2026 winners on the bay: <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJm1F6hqfzmBQRjkq60gIjvyg\" target=\"_blank\" rel=\"noopener noreferrer\">Pelicanos</a> (★ Modern Greek — beachfront, sea urchin and grilled fish) or <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJKz2rZEHzmBQRsOSLPsZAFs0\" target=\"_blank\" rel=\"noopener noreferrer\">Alyelo</a> (★ Modern Bistro — feet-in-sand tables, dolma nigiri with smoked eel). <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJ_TrJoIvzmBQRU0wbOaYTFXw\" target=\"_blank\" rel=\"noopener noreferrer\">NÓS</a> at NÓS Hotel & Villas (★ Modern Greek) is on the same bay.",
-            "desc_el": "Μετά το Βαθύ, δίπλα στο Φάρο για δείπνο σε ένα από τα τρία βραβευμένα FNL 2026 εστιατόρια του όρμου: <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJm1F6hqfzmBQRjkq60gIjvyg\" target=\"_blank\" rel=\"noopener noreferrer\">Pelicanos</a> (★), <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJKz2rZEHzmBQRsOSLPsZAFs0\" target=\"_blank\" rel=\"noopener noreferrer\">Alyelo</a> (★) ή <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJ_TrJoIvzmBQRU0wbOaYTFXw\" target=\"_blank\" rel=\"noopener noreferrer\">NÓS</a> (★).",
-            "after": "Faros Village"
-          }
-        ]
-      },
-      {
-        "day": 3,
-        "title": "Walking the Mule Paths",
-        "color": "#5A7A3A",
-        "km": 10,
-        "drive_mins": 15,
-        "overnight": null,
-        "stops": [
-          {
-            "name": "Kato Petali to Kastro Walk",
-            "lat": 36.9767,
-            "lng": 24.73,
-            "type": "nature",
-            "time": "09:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJdV31QTGNmBQRoy65_Qppi9M",
-            "desc": "The finest walk on Sifnos — the old mule path from Apollonia to Kastro through olive groves and Cycladic chapels. 45 minutes, flat and beautiful.",
-            "name_el": "Πεζοπορία Κάτω Πετάλι προς Κάστρο",
-            "desc_el": "Η καλύτερη πεζοπορία της Σίφνου — το παλιό μονοπάτι με μουλάρια από την Απολλωνία στο Κάστρο μέσα από ελαιώνες και κυκλαδίτικα εκκλησάκια. 45 λεπτά, επίπεδη και όμορφη."
-          },
-          {
-            "name": "Kamares Beach",
-            "lat": 36.9914,
-            "lng": 24.6794,
-            "type": "beach",
-            "time": "11:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJkSdP1dGSmBQRgQzBtByaeDE",
-            "desc": "The port beach — long, sandy and sheltered in the harbour bay. Good facilities and a lively waterfront with cafes. The best beach for people-watching.",
-            "name_el": "Παραλία Καμάρες",
-            "desc_el": "Η παραλία του λιμανιού — μακρά, αμμώδης και προστατευμένη στον κόλπο του λιμανιού. Καλές ανέσεις και ζωντανή προκυμαία με καφέ. Η καλύτερη παραλία για παρατήρηση ανθρώπων.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Beach_of_Kamares%2C_Sifnos_at_Noon.jpg/1920px-Beach_of_Kamares%2C_Sifnos_at_Noon.jpg",
-            "photo_credit": {
-              "artist": "Golem Unity",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Beach_of_Kamares,_Sifnos_at_Noon.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Apollonia — Departure",
-            "lat": 36.9733563,
-            "lng": 24.7239075,
-            "type": "harbour",
-            "time": "15:30",
-            "wiki": null,
-            "desc": "Ferry from Kamares port to Piraeus, Milos, Serifos or Paros.",
-            "name_el": "Απολλωνία — Αναχώρηση",
-            "desc_el": "Πλοίο από το λιμάνι των Καμαρών προς Πειραιά, Μήλο, Σέριφο ή Πάρο."
-          }
-        ],
-        "title_el": "Βαδίζοντας τα Μονοπάτια"
-      }
-    ],
-    "title_el": "Πρόγραμμα 3 Ημερών στη Σίφνο",
-    "subtitle_el": "Τα στενά της Απολλωνίας, η ορεινή μονή της Χρυσοπηγής, οι παραλίες του Πλατύ Γιαλού και το χωριό των κεραμιστών, ο Αρτεμώνας."
-  },
-  "beaches": [
-    {
+ "key": "sifnos",
+ "name": "Sifnos",
+ "subtitle": "The gourmet Cycladic island — pottery, chickpea soup and the finest food in the archipelago",
+ "intro": "Sifnos has a reputation entirely disproportionate to its size — the best food in the Cyclades, a tradition of pottery going back 4000 years, a string of beautiful Venetian villages, and excellent beaches. The slow-cooked revithada (chickpea soup, cooked overnight in a ceramic pot in the village bakery) is the local dish. The island rewards slow travel — walk the old mule-path network between villages rather than driving.",
+ "when_to_visit": {
+  "summary": "Sifnos is a foodie's island and the season is short — May through October. Late September is when Greeks themselves go: warm sea, working tavernas, no German tour groups. Easter in Apollonia is a serious affair, with revani and lambs on spits everywhere.",
+  "summary_el": "Η Σίφνος είναι νησί για καλοφαγάδες και η σεζόν είναι σύντομη — Μάιος ως Οκτώβριος. Στα τέλη Σεπτεμβρίου πάνε οι ίδιοι οι Έλληνες: ζεστή θάλασσα, ταβέρνες ανοιχτές, χωρίς γερμανικά γκρουπ. Το Πάσχα στην Απολλωνία είναι σοβαρή υπόθεση, με ρεβανί και αρνιά στη σούβλα παντού.",
+  "months": [
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Σε χειμερία νάρκη"
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season, cold",
+    "why_el": "Σε χειμερία νάρκη"
+   },
+   {
+    "tag": "ok",
+    "why": "Quiet, hiking",
+    "why_el": "Ήσυχη, θάλασσα κρύα"
+   },
+   {
+    "tag": "great",
+    "why": "Easter, blooming",
+    "why_el": "Πάσχα μαγικό, ανθίζει"
+   },
+   {
+    "tag": "great",
+    "why": "Tavernas opening",
+    "why_el": "Ανοίγουν, ζεσταίνει"
+   },
+   {
+    "tag": "perfect",
+    "why": "Sea warmed up, the famous tavernas (To Steki, Omega, Lempesis) bookable same-day, the path from Artemonas to Kastro a daily ritual. The honest best month.",
+    "why_el": "Η θάλασσα ζεστή, οι διάσημες ταβέρνες (Στέκι, Ωμέγα, Λεμπέσης) με κράτηση ίδιας μέρας, το μονοπάτι Αρτεμώνα-Κάστρο καθημερινή ρουτίνα. Ο πραγματικά καλύτερος μήνας."
+   },
+   {
+    "tag": "great",
+    "why": "Hot, food scene packed — tavernas need 2-3 day advance booking. Beaches (Vathy, Platis Gialos) busy but breathable. Kastro at sunset is still magical.",
+    "why_el": "Ζέστη, η γαστρονομία γεμάτη — οι ταβέρνες θέλουν 2-3 μέρες πριν για κράτηση. Παραλίες (Βαθύ, Πλατύς Γιαλός) πολυσύχναστες αλλά αναπνεύσιμες. Το Κάστρο στο ηλιοβασίλεμα ακόμα μαγικό."
+   },
+   {
+    "tag": "ok",
+    "why": "Peak — the food destination Sifnos transforms into a queue. Even mediocre tavernas need bookings; the famous ones (Omega especially) impossible without a week's notice. Beaches packed. Come for the food, accept the wait.",
+    "why_el": "Κορύφωση — ο γαστρονομικός προορισμός Σίφνος γίνεται ουρά. Ακόμα και μέτριες ταβέρνες θέλουν κράτηση· οι διάσημες (ιδίως το Ωμέγα) αδύνατες χωρίς μία εβδομάδα ειδοποίηση. Παραλίες γεμάτες. Έλα για το φαγητό, δέξου την αναμονή."
+   },
+   {
+    "tag": "perfect",
+    "why": "Crowds easing, bookings open up, the slow-cooked revithada (chickpea stew baked overnight) the right meal on the cooler evenings. Pottery workshops in Vathy reopen for visitors.",
+    "why_el": "Το πλήθος υποχωρεί, οι κρατήσεις ανοίγουν, η σιγομαγειρεμένη ρεβιθάδα (ψημένη όλη νύχτα) το σωστό φαγητό στα πιο δροσερά βράδια. Τα κεραμικά εργαστήρια στο Βαθύ ξανανοίγουν για επισκέπτες."
+   },
+   {
+    "tag": "great",
+    "why": "Last swims",
+    "why_el": "Χαλαρά, τελευταία"
+   },
+   {
+    "tag": "ok",
+    "why": "Wrapping up",
+    "why_el": "Για χειμώνα"
+   },
+   {
+    "tag": "avoid",
+    "why": "Few ferries",
+    "why_el": "Σχεδόν όλα κλειστά"
+   }
+  ]
+ },
+ "itinerary": {
+  "title": "3-Day Sifnos Itinerary",
+  "subtitle": "Apollonia's lanes, the hilltop monastery of Chrysopigi, the beaches of Platis Gialos and the pottery village of Artemonas.",
+  "days": [
+   {
+    "day": 1,
+    "title": "Apollonia & Artemonas",
+    "color": "#1B4F8A",
+    "km": 15,
+    "drive_mins": 20,
+    "overnight": "Apollonia",
+    "stops": [
+     {
+      "name": "Apollonia",
+      "lat": 36.9733563,
+      "lng": 24.7239075,
+      "type": "city",
+      "time": "09:00",
+      "wiki": "https://www.google.com/maps/search/Apollonia+Sifnos",
+      "desc": "The capital — a beautiful hilltop town of white lanes, blue-domed churches and bougainvillea. Walk the main pedestrian street to Artemonas. The folk museum is excellent.",
+      "name_el": "Απολλωνία",
+      "desc_el": "Η πρωτεύουσα — μια όμορφη πόλη σε κορυφή λόφου με λευκά δρομάκια, γαλάζιους τρούλους και μπουκαμβίλιες. Περπάτησε τον κύριο πεζόδρομο προς τον Αρτεμώνα. Το λαογραφικό μουσείο είναι εξαιρετικό.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1787344297/%CE%B1%CF%80%CE%BF%CE%BB%CE%BB%CF%89%CE%BD%CE%B9%CE%B1_eeihgz.jpg"
+     },
+     {
+      "name": "Artemonas",
+      "lat": 36.9833,
+      "lng": 24.7283,
+      "type": "village",
+      "time": "10:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJTQp_TVCNmBQRL32wODbMxeY",
+      "desc": "The most elegant village on Sifnos — Venetian mansions and the finest pottery on the island. Several workshops sell hand-thrown Sifniot ceramics in the traditional geometric patterns.",
+      "name_el": "Αρτεμώνας",
+      "desc_el": "Το πιο κομψό χωριό της Σίφνου — βενετσιάνικα αρχοντικά και η καλύτερη κεραμική του νησιού. Πολλά εργαστήρια πωλούν σιφνιώτικα κεραμικά χειροποίητα στα παραδοσιακά γεωμετρικά μοτίβα.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1787344302/%CE%B1%CF%81%CF%84%CE%B5%CE%BC%CF%89%CE%BD%CE%B1%CF%82_y8ns74.jpg"
+     },
+     {
+      "name": "Kastro (Medieval Capital)",
+      "lat": 36.9753175,
+      "lng": 24.7445342,
+      "type": "castle",
+      "time": "12:00",
+      "wiki": "https://www.google.com/maps/search/Kastro+(Medieval+Capital)+Sifnos",
+      "desc": "The medieval capital of Sifnos — a Venetian fortress-village on a sea cliff with extraordinary views. The houses form the outer wall. The Archaeological Museum inside is small but excellent.",
+      "name_el": "Κάστρο (Μεσαιωνική Πρωτεύουσα)",
+      "desc_el": "Η μεσαιωνική πρωτεύουσα της Σίφνου — ένα βενετσιάνικο οχυρό-χωριό σε θαλάσσιο γκρεμό με εξαιρετικές θέες. Τα σπίτια σχηματίζουν το εξωτερικό τείχος. Το Αρχαιολογικό Μουσείο μέσα είναι μικρό αλλά εξαιρετικό.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1787344302/%CE%BA%CE%B1%CF%83%CF%84%CF%81%CE%BF_jvkjrz.jpg"
+     },
+     {
       "name": "Platis Gialos Beach",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJkW9RX2LymBQRII5WPtM3Jog",
-      "rating": 5,
-      "type": "Fine sand",
-      "length": "900 m",
-      "depth": "Shallow — calm, clear water",
-      "facing": "South-facing — sheltered, warm",
-      "facilities": "Well organised: sunbeds, beach bars, tavernas, water sports.",
-      "desc": "The best beach on Sifnos — long, sandy and shallow with excellent facilities. The most popular on the island but large enough to absorb the crowds. The tavernas at the back of the beach serve outstanding Sifniot food.",
-      "commons": null,
       "lat": 36.9317112,
       "lng": 24.7296366,
+      "type": "beach",
+      "time": "15:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJkW9RX2LymBQRII5WPtM3Jog",
+      "desc": "The best beach on the island — long, sandy, shallow and well-organised. The most popular beach on Sifnos but large enough to never feel overcrowded.",
       "name_el": "Παραλία Πλατύς Γιαλός",
-      "desc_el": "Η καλύτερη παραλία της Σίφνου — μακρά, αμμώδης και ρηχή με εξαιρετικές ανέσεις. Η πιο δημοφιλής στο νησί αλλά αρκετά μεγάλη ώστε να απορροφά τα πλήθη. Οι ταβέρνες στο πίσω μέρος της παραλίας σερβίρουν εξαιρετικό σιφνιώτικο φαγητό.",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Ρηχά — ήρεμα, διαυγή νερά",
-      "facing_el": "Νότιο προσανατολισμό — προστατευμένη, ζεστά",
-      "facilities_el": "Καλά οργανωμένη: ξαπλώστρες, beach bars, ταβέρνες, θαλάσσια σπορ.",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Cyclades_Sifnos_Platis_Gialos_09092014_-_panoramio.jpg",
-      "photo_credit": {
-        "artist": "rene boulay",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Cyclades_Sifnos_Platis_Gialos_09092014_-_panoramio.jpg",
-        "source": "Wikimedia Commons"
-      }
-    },
-    {
+      "desc_el": "Η καλύτερη παραλία του νησιού — μακρά, αμμώδης, ρηχή και καλά οργανωμένη. Η πιο δημοφιλής παραλία της Σίφνου αλλά αρκετά μεγάλη ώστε να μην αισθάνεσαι ποτέ υπερβολικά πολυσύχναστη.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1787344296/%CF%80%CE%BB%CE%B1%CF%84%CF%85%CF%82_%CE%B3%CF%85%CE%B1%CE%BB%CE%BF%CF%82_p2nnwh.jpg"
+     }
+    ],
+    "title_el": "Απολλωνία & Αρτεμώνας",
+    "overnight_el": "Απολλωνία",
+    "nightlife": "Sifnos packs its nightlife into one cobbled Apollonia alley — <a href=\"https://www.google.com/maps/search/Steno+Apollonia+Sifnos\" target=\"_blank\" rel=\"noopener\">Steno</a>. It has more bars than the rest of the island combined: <a href=\"https://www.google.com/maps/search/Argo+Bar+Apollonia+Sifnos\" target=\"_blank\" rel=\"noopener\">Argo</a> (going since 1983, old soul and good-value drinks), rooftop <a href=\"https://www.google.com/maps/search/Botzi+93+Sifnos\" target=\"_blank\" rel=\"noopener\">Botzi 93</a> for world jazz under the bougainvillea, and Doloma for the late crowd. Civilised, not raucous.",
+    "nightlife_el": "Η Σίφνος μαζεύει τη νυχτερινή της ζωή σε ένα καλντερίμι της Απολλωνίας — το <a href=\"https://www.google.com/maps/search/Steno+Apollonia+Sifnos\" target=\"_blank\" rel=\"noopener\">Steno</a>. Έχει περισσότερα μπαρ από όλο το υπόλοιπο νησί μαζί: το <a href=\"https://www.google.com/maps/search/Argo+Bar+Apollonia+Sifnos\" target=\"_blank\" rel=\"noopener\">Argo</a> (από το 1983, παλιά soul και ποτά καλής σχέσης), το rooftop <a href=\"https://www.google.com/maps/search/Botzi+93+Sifnos\" target=\"_blank\" rel=\"noopener\">Botzi 93</a> για world jazz κάτω από τη μπουκαμβίλια, και το Doloma για το αργό κοινό. Πολιτισμένα, όχι ξέφρενα.",
+    "food": [
+     {
+      "meal": "Dinner",
+      "meal_el": "Δείπνο",
+      "area": "Kastro",
+      "area_el": "Κάστρο",
+      "desc": "<a href=\"https://www.google.com/maps/search/Cantina+Seralia+Sifnos\" target=\"_blank\" rel=\"noopener\">Cantina</a> at Seralia (the Kastro harbour) is a gastronomy destination in its own right. Back in Apollonia, <a href=\"https://www.google.com/maps/search/To+Steki+Apollonia+Sifnos\" target=\"_blank\" rel=\"noopener\">To Steki</a> does classic Sifnian cooking — chickpea stew, mastelo lamb.",
+      "desc_el": "Η <a href=\"https://www.google.com/maps/search/Cantina+Seralia+Sifnos\" target=\"_blank\" rel=\"noopener\">Cantina</a> στα Σεράλια (το λιμανάκι του Κάστρου) είναι από μόνη της προορισμός γαστρονομίας. Πίσω στην Απολλωνία, το <a href=\"https://www.google.com/maps/search/To+Steki+Apollonia+Sifnos\" target=\"_blank\" rel=\"noopener\">To Steki</a> κάνει κλασική σιφνέικη κουζίνα — ρεβιθάδα, μαστέλο.",
+      "after": "Kastro (Medieval Capital)"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "title": "Chrysopigi & the South",
+    "color": "#C0522A",
+    "km": 25,
+    "drive_mins": 30,
+    "overnight": "Apollonia",
+    "stops": [
+     {
+      "name": "Chrysopigi Monastery",
+      "lat": 36.9367,
+      "lng": 24.7417,
+      "type": "church",
+      "time": "09:30",
+      "wiki": "https://www.google.com/maps/search/Chrysopigi+Monastery+Sifnos",
+      "desc": "The most beautiful monastery in the Cyclades — a 17th-century whitewashed complex on a tiny rocky peninsula connected by a causeway. The setting is extraordinary.",
+      "name_el": "Μονή Χρυσοπηγής",
+      "desc_el": "Η ομορφότερη μονή των Κυκλάδων — ένα ασβεστωμένο σύμπλεγμα του 17ου αιώνα σε μικροσκοπική βραχώδη χερσόνησο συνδεδεμένη με γέφυρα. Το σκηνικό είναι εξαιρετικό.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1787344296/%CF%87%CF%81%CF%85%CF%83%CE%BF%CF%80%CE%B7%CE%B3%CE%B7_ymwo23.jpg"
+     },
+     {
       "name": "Apokofto Beach",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJn_CZFu7ymBQRQRecFwQ2OZs",
-      "rating": 5,
-      "type": "Fine sand",
-      "length": "300 m",
-      "depth": "Shallow — calm, clear",
-      "facing": "Southeast-facing — sheltered cove",
-      "facilities": "Basic: the Chrysopigi monastery taverna nearby. Beautiful setting.",
-      "desc": "The most photogenic beach in the Cyclades — fine sand directly below the whitewashed Chrysopigi monastery on its rocky peninsula. The setting is extraordinary. One of those beaches where the surroundings matter as much as the swimming.",
-      "commons": null,
       "lat": 36.9333,
       "lng": 24.7389,
+      "type": "beach",
+      "time": "11:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJn_CZFu7ymBQRQRecFwQ2OZs",
+      "desc": "Sandy beach directly below the Chrysopigi monastery — the monastery visible on the rocks above makes this one of the most picturesque beach settings in the Cyclades.",
       "name_el": "Παραλία Αποκοφτός",
-      "desc_el": "Η πιο φωτογενής παραλία των Κυκλάδων — λεπτή άμμος ακριβώς κάτω από την ασβεστωμένη μονή της Χρυσοπηγής στη βραχώδη χερσόνησό της. Το σκηνικό είναι εξαιρετικό. Μία από εκείνες τις παραλίες όπου το περιβάλλον μετράει όσο και το κολύμπι.",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Ρηχά — ήρεμα, διαυγή",
-      "facing_el": "Νοτιοανατολικό προσανατολισμό — προστατευμένος κόλπος",
-      "facilities_el": "Βασικές: ταβέρνα της μονής Χρυσοπηγής κοντά. Όμορφο σκηνικό."
-    },
-    {
+      "desc_el": "Αμμώδης παραλία ακριβώς κάτω από τη μονή Χρυσοπηγής — η μονή ορατή στους βράχους από πάνω κάνει αυτό ένα από τα πιο γραφικά παραλιακά σκηνικά των Κυκλάδων.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1787344302/%CE%B1%CF%80%CE%BF%CE%BA%CE%BF%CF%86%CF%84%CE%BF_pua8pn.jpg"
+     },
+     {
+      "name": "Faros Village",
+      "lat": 36.9442917,
+      "lng": 24.7509046,
+      "type": "village",
+      "time": "13:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJYZnp_ebymBQRXr5iRGAIR1M",
+      "desc": "Traditional fishing village with three small coves and the best fish tavernas on the island. Lunch here — the grilled fish and local white wine are outstanding.",
+      "name_el": "Χωριό Φάρος",
+      "desc_el": "Παραδοσιακό αλιευτικό χωριό με τρεις μικρούς κολπίσκους και τις καλύτερες ψαροταβέρνες του νησιού. Μεσημεριανό εδώ — το ψητό ψάρι και το τοπικό λευκό κρασί είναι εξαιρετικά.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1787344296/%CF%86%CE%B1%CF%81%CE%BF%CF%82_2_hilowh.jpg"
+     },
+     {
       "name": "Vathy Beach",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJPS-if5jtmBQRTvMg_HMjFmk",
-      "rating": 4,
-      "type": "Fine sand",
-      "length": "400 m",
-      "depth": "Shallow — calm bay",
-      "facing": "East-facing — enclosed bay, sheltered",
-      "facilities": "Basic: small taverna, limited sunbeds. Remote — long winding road access.",
-      "desc": "The most remote and peaceful beach on Sifnos — a sandy cove in a deep bay on the west coast. The long drive keeps it quiet. A small taverna, calm water and beautiful surroundings.",
-      "commons": null,
       "lat": 36.9311,
       "lng": 24.6928,
+      "type": "beach",
+      "time": "16:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJPS-if5jtmBQRTvMg_HMjFmk",
+      "desc": "Remote sandy beach in a deep bay on the west coast — the most unspoiled beach on Sifnos, accessible by a long winding road. Beautiful and quiet.",
       "name_el": "Παραλία Βαθύ",
-      "desc_el": "Η πιο απομακρυσμένη και ειρηνική παραλία της Σίφνου — ένας αμμώδης κόλπος σε βαθύ όρμο της δυτικής ακτής. Ο μακρύς δρόμος την κρατά ήσυχη. Μια μικρή ταβέρνα, ήρεμα νερά και όμορφο περιβάλλον.",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Ρηχά — ήρεμος κόλπος",
-      "facing_el": "Ανατολικό προσανατολισμό — κλειστός κόλπος, προστατευμένος",
-      "facilities_el": "Βασικές: μικρή ταβέρνα, περιορισμένες ξαπλώστρες. Απομακρυσμένη — μακρύς φιδογυριστός δρόμος.",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Beach_in_Vathy_on_Sifnos%2C_153617.jpg/1920px-Beach_in_Vathy_on_Sifnos%2C_153617.jpg",
-      "photo_credit": {
-        "artist": "Zde",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Beach_in_Vathy_on_Sifnos,_153617.jpg",
-        "source": "Wikimedia Commons"
-      }
-    }
-  ],
-  "name_el": "Σίφνος",
-  "name_accusative_el": "Σίφνο",
-  "name_genitive_el": "Σίφνου",
-  "gender_el": "f",
-  "subtitle_el": "Το γκουρμέ κυκλαδίτικο νησί — κεραμική, ρεβιθάδα και το καλύτερο φαγητό του αρχιπελάγους",
-  "intro_el": "Η Σίφνος έχει φήμη εντελώς δυσανάλογη με το μέγεθός της — το καλύτερο φαγητό των Κυκλάδων, μια παράδοση κεραμικής που πηγαίνει πίσω 4000 χρόνια, μια σειρά από όμορφα βενετσιάνικα χωριά, και εξαιρετικές παραλίες. Η σιγοβρασμένη ρεβιθάδα (μαγειρεμένη μια νύχτα σε κεραμικό σκεύος στον φούρνο του χωριού) είναι το τοπικό πιάτο. Το νησί ανταμείβει την αργή ταξιδιωτική εμπειρία — περπάτησε το παλιό δίκτυο μονοπατιών με μουλάρια μεταξύ των χωριών αντί να οδηγήσεις.",
-  "specialties": [
-    {
-      "name": "Mastelo",
-      "name_el": "Μαστέλο",
-      "desc": "Lamb or goat slow-cooked in a clay pot (the mastelo) with red wine and dill, traditionally for Easter. Found year-round at To Steki in Apollonia and most village tavernas.",
-      "desc_el": "Αρνί ή κατσίκι σιγομαγειρεμένο σε πήλινο σκεύος (μαστέλο) με κόκκινο κρασί και άνηθο, παραδοσιακά για το Πάσχα. Όλο τον χρόνο στο Στέκι στην Απολλωνία και στις περισσότερες ταβέρνες."
-    },
-    {
-      "name": "Revithada",
-      "name_el": "Ρεβιθάδα",
-      "desc": "Chickpea stew slow-baked overnight in a clay pot in the village wood-fired oven. A Sunday tradition. Available at most island tavernas; best in Artemonas and Kastro.",
-      "desc_el": "Ρεβίθια στιφάδο σιγοψημένα όλη νύχτα σε πήλινο σκεύος στον ξυλόφουρνο του χωριού. Παράδοση Κυριακής. Στις περισσότερες ταβέρνες· καλύτερα στον Αρτεμώνα και στο Κάστρο."
-    },
-    {
-      "name": "Manoura cheese",
-      "name_el": "Μανούρα",
-      "desc": "Hard aged Sifnian cheese rolled in wine sediment, giving a purple rind. Sharp and salty. Buy at any village shop or the cooperative in Apollonia.",
-      "desc_el": "Σκληρή ξινομανούρα τυλιγμένη σε τρυγία, με μωβ φλούδα. Πικάντικη και αλμυρή. Σε κάθε χωριάτικο μαγαζί ή στον συνεταιρισμό στην Απολλωνία."
-    },
-    {
-      "name": "Ammoudaki almond cookies",
-      "name_el": "Αμυγδαλωτά Σίφνου",
-      "desc": "Soft almond cookies dusted with rose water and powdered sugar. The Theodorou family bakery in Artemonas is the classic source.",
-      "desc_el": "Μαλακά αμυγδαλωτά αρωματισμένα με ροδόνερο και ζάχαρη άχνη. Ο φούρνος της οικογένειας Θεοδώρου στον Αρτεμώνα είναι η κλασική αναφορά."
-    }
-  ],
-  "crafts": [
-    {
-      "name": "Pottery",
-      "name_el": "Κεραμική",
-      "desc": "Sifnos has been producing pottery for 5,000 years and is still doing it. The mastelo clay pot itself is a souvenir worth taking home. Workshops in Vathy and Kamares; the Apollonia pottery has the broadest selection.",
-      "desc_el": "Η Σίφνος παράγει κεραμικά εδώ και 5.000 χρόνια και συνεχίζει. Το ίδιο το μαστέλο είναι αναμνηστικό που αξίζει. Εργαστήρια σε Βαθύ και Καμάρες· το κεραμοποιείο στην Απολλωνία έχει την πιο ευρεία γκάμα."
-    }
-  ],
-  "festivals": [
-    {
-      "name": "Panagia Chrysopigi",
-      "name_el": "Παναγία Χρυσοπηγή",
-      "when": "Pentecost — 20 June 2027",
-      "when_el": "Πεντηκοστή — 20 Ιουνίου 2027",
-      "desc": "Sifnos's biggest festival, at the cliff-top monastery. The icon is paraded; tavernas serve free chickpea stew and lamb to all comers.",
-      "desc_el": "Το μεγαλύτερο πανηγύρι του νησιού, στο μοναστήρι πάνω στον γκρεμό. Η εικόνα περιφέρεται· οι ταβέρνες σερβίρουν δωρεάν ρεβιθάδα και αρνί σε όλους.",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Cyclades_Sifnos_Panagia_Chrisopigi_-_panoramio.jpg",
-      "photo_credit": {
-        "artist": "rene boulay",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Cyclades_Sifnos_Panagia_Chrisopigi_-_panoramio.jpg",
-        "source": "Wikimedia Commons"
-      }
-    },
-    {
-      "name": "Profitis Ilias",
-      "name_el": "Προφήτη Ηλία",
-      "when": "20 July",
-      "when_el": "20 Ιουλίου",
-      "desc": "Pilgrimage on foot to the highest point of the island (680m), where a small chapel sits on the summit. Locals walk up before dawn.",
-      "desc_el": "Πεζοπορία στην ψηλότερη κορυφή του νησιού (680μ), όπου βρίσκεται μικρό εκκλησάκι. Οι ντόπιοι ανεβαίνουν πριν την αυγή.",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Profitis_Ilias_Sifnos.JPG/1920px-Profitis_Ilias_Sifnos.JPG",
-      "photo_credit": {
-        "artist": "/ Evelin123 at Greek Wikipedia",
-        "license": "CC BY-SA 3.0 gr",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/gr/deed.en",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Profitis_Ilias_Sifnos.JPG",
-        "source": "Wikimedia Commons"
-      }
-    }
-  ],
-  "getting_there": {
-    "pills": [
-      "⛵ Piraeus 2.5–5h",
-      "€38–55"
+      "desc_el": "Απομακρυσμένη αμμώδης παραλία σε βαθύ κόλπο της δυτικής ακτής — η πιο ανέγγιχτη παραλία της Σίφνου, προσβάσιμη με μακρύ φιδογυριστό δρόμο. Όμορφη και ήσυχη.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1787344296/%CE%B2%CE%B1%CE%B8%CF%85_ofxudk.jpg"
+     }
     ],
-    "pills_el": [
-      "⛵ Πειραιάς 2.5–5h",
-      "€38–55"
+    "title_el": "Χρυσοπηγή & ο Νότος",
+    "overnight_el": "Απολλωνία",
+    "food": [
+     {
+      "meal": "Dinner",
+      "meal_el": "Δείπνο",
+      "area": "Faros Bay (Pelicanos / Alyelo)",
+      "area_el": "Όρμος Φάρου (Pelicanos / Alyelo)",
+      "desc": "After Vathy, drive 10 min north to Faros for dinner at one of two FNL Best Restaurant Awards 2026 winners on the bay: <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJm1F6hqfzmBQRjkq60gIjvyg\" target=\"_blank\" rel=\"noopener noreferrer\">Pelicanos</a> (★ Modern Greek — beachfront, sea urchin and grilled fish) or <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJKz2rZEHzmBQRsOSLPsZAFs0\" target=\"_blank\" rel=\"noopener noreferrer\">Alyelo</a> (★ Modern Bistro — feet-in-sand tables, dolma nigiri with smoked eel). <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJ_TrJoIvzmBQRU0wbOaYTFXw\" target=\"_blank\" rel=\"noopener noreferrer\">NÓS</a> at NÓS Hotel & Villas (★ Modern Greek) is on the same bay.",
+      "desc_el": "Μετά το Βαθύ, δίπλα στο Φάρο για δείπνο σε ένα από τα τρία βραβευμένα FNL 2026 εστιατόρια του όρμου: <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJm1F6hqfzmBQRjkq60gIjvyg\" target=\"_blank\" rel=\"noopener noreferrer\">Pelicanos</a> (★), <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJKz2rZEHzmBQRsOSLPsZAFs0\" target=\"_blank\" rel=\"noopener noreferrer\">Alyelo</a> (★) ή <a href=\"https://www.google.com/maps/place/?q=place_id:ChIJ_TrJoIvzmBQRU0wbOaYTFXw\" target=\"_blank\" rel=\"noopener noreferrer\">NÓS</a> (★).",
+      "after": "Faros Village"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "title": "Walking the Mule Paths",
+    "color": "#5A7A3A",
+    "km": 10,
+    "drive_mins": 15,
+    "overnight": null,
+    "stops": [
+     {
+      "name": "Kato Petali to Kastro Walk",
+      "lat": 36.9767,
+      "lng": 24.73,
+      "type": "nature",
+      "time": "09:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJdV31QTGNmBQRoy65_Qppi9M",
+      "desc": "The finest walk on Sifnos — the old mule path from Apollonia to Kastro through olive groves and Cycladic chapels. 45 minutes, flat and beautiful.",
+      "name_el": "Πεζοπορία Κάτω Πετάλι προς Κάστρο",
+      "desc_el": "Η καλύτερη πεζοπορία της Σίφνου — το παλιό μονοπάτι με μουλάρια από την Απολλωνία στο Κάστρο μέσα από ελαιώνες και κυκλαδίτικα εκκλησάκια. 45 λεπτά, επίπεδη και όμορφη."
+     },
+     {
+      "name": "Kamares Beach",
+      "lat": 36.9914,
+      "lng": 24.6794,
+      "type": "beach",
+      "time": "11:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJkSdP1dGSmBQRgQzBtByaeDE",
+      "desc": "The port beach — long, sandy and sheltered in the harbour bay. Good facilities and a lively waterfront with cafes. The best beach for people-watching.",
+      "name_el": "Παραλία Καμάρες",
+      "desc_el": "Η παραλία του λιμανιού — μακρά, αμμώδης και προστατευμένη στον κόλπο του λιμανιού. Καλές ανέσεις και ζωντανή προκυμαία με καφέ. Η καλύτερη παραλία για παρατήρηση ανθρώπων.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Beach_of_Kamares%2C_Sifnos_at_Noon.jpg/1920px-Beach_of_Kamares%2C_Sifnos_at_Noon.jpg",
+      "photo_credit": {
+       "artist": "Golem Unity",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Beach_of_Kamares,_Sifnos_at_Noon.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Apollonia — Departure",
+      "lat": 36.9733563,
+      "lng": 24.7239075,
+      "type": "harbour",
+      "time": "15:30",
+      "wiki": null,
+      "desc": "Ferry from Kamares port to Piraeus, Milos, Serifos or Paros.",
+      "name_el": "Απολλωνία — Αναχώρηση",
+      "desc_el": "Πλοίο από το λιμάνι των Καμαρών προς Πειραιά, Μήλο, Σέριφο ή Πάρο."
+     }
     ],
-    "summary": "No airport. Ferries dock at Kamares on the west coast (5km from Apollonia). Seajets fast ferry from Piraeus ~2.5h, conventional ~5h, daily year-round.",
-    "summary_el": "Χωρίς αεροδρόμιο. Τα πλοία δένουν στις Καμάρες στη δυτική ακτή (5 χλμ. από την Απολλωνία). Seajets γρήγορο από Πειραιά ~2.5 ώρες, συμβατικό ~5 ώρες, καθημερινά όλο τον χρόνο.",
-    "tip": "Same Western Cyclades line as Serifos, Milos, Kimolos — easy to combine.",
-    "tip_el": "Ίδια γραμμή Δυτικών Κυκλάδων με Σέριφο, Μήλο, Κίμωλο — εύκολος συνδυασμός."
+    "title_el": "Βαδίζοντας τα Μονοπάτια"
+   }
+  ],
+  "title_el": "Πρόγραμμα 3 Ημερών στη Σίφνο",
+  "subtitle_el": "Τα στενά της Απολλωνίας, η ορεινή μονή της Χρυσοπηγής, οι παραλίες του Πλατύ Γιαλού και το χωριό των κεραμιστών, ο Αρτεμώνας."
+ },
+ "beaches": [
+  {
+   "name": "Platis Gialos Beach",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJkW9RX2LymBQRII5WPtM3Jog",
+   "rating": 5,
+   "type": "Fine sand",
+   "length": "900 m",
+   "depth": "Shallow — calm, clear water",
+   "facing": "South-facing — sheltered, warm",
+   "facilities": "Well organised: sunbeds, beach bars, tavernas, water sports.",
+   "desc": "The best beach on Sifnos — long, sandy and shallow with excellent facilities. The most popular on the island but large enough to absorb the crowds. The tavernas at the back of the beach serve outstanding Sifniot food.",
+   "commons": null,
+   "lat": 36.9317112,
+   "lng": 24.7296366,
+   "name_el": "Παραλία Πλατύς Γιαλός",
+   "desc_el": "Η καλύτερη παραλία της Σίφνου — μακρά, αμμώδης και ρηχή με εξαιρετικές ανέσεις. Η πιο δημοφιλής στο νησί αλλά αρκετά μεγάλη ώστε να απορροφά τα πλήθη. Οι ταβέρνες στο πίσω μέρος της παραλίας σερβίρουν εξαιρετικό σιφνιώτικο φαγητό.",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Ρηχά — ήρεμα, διαυγή νερά",
+   "facing_el": "Νότιο προσανατολισμό — προστατευμένη, ζεστά",
+   "facilities_el": "Καλά οργανωμένη: ξαπλώστρες, beach bars, ταβέρνες, θαλάσσια σπορ.",
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1787344296/%CF%80%CE%BB%CE%B1%CF%84%CF%85%CF%82_%CE%B3%CF%85%CE%B1%CE%BB%CE%BF%CF%82_2_usyd8u.jpg"
   },
-  "beaches_intro": {
-    "en": "The best beach in Sifnos is **Platis Gialos** — a long stretch of fine sand on the south coast, sheltered from the meltemi, shallow and warm, with the island's best tavernas at the back. It's the obvious top pick and the most popular beach on the island, but the bay is large enough to absorb the crowds and the food is genuinely good.\n\nIf you want something more photogenic, **Apokofto** sits directly below the white Chrysopigi monastery on its rocky peninsula — the most-photographed beach in the Cyclades, and rightly so. It's smaller and less equipped than Platis Gialos, but the setting is extraordinary.\n\nFor solitude, **Vathy** is the answer: a remote sandy cove in a deep west-coast bay, reached by a long winding road that keeps the crowds out. Calm water, one small taverna, almost nobody.\n\nBelow: the full beach detail for each, with facilities, depth, and exposure to wind.",
-    "el": "Η καλύτερη παραλία της Σίφνου είναι ο **Πλατύς Γιαλός** — μακρά λωρίδα λεπτής άμμου στη νότια ακτή, προστατευμένη από το μελτέμι, ρηχή και ζεστή, με τις καλύτερες ταβέρνες του νησιού στο πίσω μέρος. Είναι η προφανής πρώτη επιλογή και η πιο δημοφιλής παραλία, αλλά ο κόλπος είναι αρκετά μεγάλος ώστε να απορροφά τον κόσμο και το φαγητό πραγματικά καλό.\n\nΑν θέλεις κάτι πιο φωτογενές, ο **Αποκοφτός** βρίσκεται ακριβώς κάτω από τη λευκή μονή της Χρυσοπηγής στη βραχώδη χερσόνησό της — η πιο φωτογραφημένη παραλία των Κυκλάδων, και δικαίως. Είναι μικρότερη και λιγότερο οργανωμένη από τον Πλατύ Γιαλό, αλλά το σκηνικό είναι εξαιρετικό.\n\nΓια ησυχία, το **Βαθύ** είναι η απάντηση: απομακρυσμένος αμμώδης κόλπος στη δυτική ακτή, με μακρύ φιδογυριστό δρόμο που κρατά τα πλήθη μακριά. Ήρεμα νερά, μια μικρή ταβέρνα, σχεδόν κανείς.\n\nΠαρακάτω: όλες οι λεπτομέρειες για κάθε παραλία, με υποδομές, βάθος και έκθεση στον άνεμο."
+  {
+   "name": "Apokofto Beach",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJn_CZFu7ymBQRQRecFwQ2OZs",
+   "rating": 5,
+   "type": "Fine sand",
+   "length": "300 m",
+   "depth": "Shallow — calm, clear",
+   "facing": "Southeast-facing — sheltered cove",
+   "facilities": "Basic: the Chrysopigi monastery taverna nearby. Beautiful setting.",
+   "desc": "The most photogenic beach in the Cyclades — fine sand directly below the whitewashed Chrysopigi monastery on its rocky peninsula. The setting is extraordinary. One of those beaches where the surroundings matter as much as the swimming.",
+   "commons": null,
+   "lat": 36.9333,
+   "lng": 24.7389,
+   "name_el": "Παραλία Αποκοφτός",
+   "desc_el": "Η πιο φωτογενής παραλία των Κυκλάδων — λεπτή άμμος ακριβώς κάτω από την ασβεστωμένη μονή της Χρυσοπηγής στη βραχώδη χερσόνησό της. Το σκηνικό είναι εξαιρετικό. Μία από εκείνες τις παραλίες όπου το περιβάλλον μετράει όσο και το κολύμπι.",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Ρηχά — ήρεμα, διαυγή",
+   "facing_el": "Νοτιοανατολικό προσανατολισμό — προστατευμένος κόλπος",
+   "facilities_el": "Βασικές: ταβέρνα της μονής Χρυσοπηγής κοντά. Όμορφο σκηνικό.",
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1787344303/%CE%B1%CF%80%CE%BF%CE%BA%CE%BF%CF%86%CF%84%CE%BF_2_gxmpnc.jpg"
   },
-  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783277165/%CF%83%CE%B9%CF%86%CE%BD%CE%BF%CF%82_ulwp62.jpg"
+  {
+   "name": "Vathy Beach",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJPS-if5jtmBQRTvMg_HMjFmk",
+   "rating": 4,
+   "type": "Fine sand",
+   "length": "400 m",
+   "depth": "Shallow — calm bay",
+   "facing": "East-facing — enclosed bay, sheltered",
+   "facilities": "Basic: small taverna, limited sunbeds. Remote — long winding road access.",
+   "desc": "The most remote and peaceful beach on Sifnos — a sandy cove in a deep bay on the west coast. The long drive keeps it quiet. A small taverna, calm water and beautiful surroundings.",
+   "commons": null,
+   "lat": 36.9311,
+   "lng": 24.6928,
+   "name_el": "Παραλία Βαθύ",
+   "desc_el": "Η πιο απομακρυσμένη και ειρηνική παραλία της Σίφνου — ένας αμμώδης κόλπος σε βαθύ όρμο της δυτικής ακτής. Ο μακρύς δρόμος την κρατά ήσυχη. Μια μικρή ταβέρνα, ήρεμα νερά και όμορφο περιβάλλον.",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Ρηχά — ήρεμος κόλπος",
+   "facing_el": "Ανατολικό προσανατολισμό — κλειστός κόλπος, προστατευμένος",
+   "facilities_el": "Βασικές: μικρή ταβέρνα, περιορισμένες ξαπλώστρες. Απομακρυσμένη — μακρύς φιδογυριστός δρόμος.",
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1787344296/%CE%B2%CE%B1%CE%B8%CF%85_2_rbs2ib.jpg"
+  }
+ ],
+ "name_el": "Σίφνος",
+ "name_accusative_el": "Σίφνο",
+ "name_genitive_el": "Σίφνου",
+ "gender_el": "f",
+ "subtitle_el": "Το γκουρμέ κυκλαδίτικο νησί — κεραμική, ρεβιθάδα και το καλύτερο φαγητό του αρχιπελάγους",
+ "intro_el": "Η Σίφνος έχει φήμη εντελώς δυσανάλογη με το μέγεθός της — το καλύτερο φαγητό των Κυκλάδων, μια παράδοση κεραμικής που πηγαίνει πίσω 4000 χρόνια, μια σειρά από όμορφα βενετσιάνικα χωριά, και εξαιρετικές παραλίες. Η σιγοβρασμένη ρεβιθάδα (μαγειρεμένη μια νύχτα σε κεραμικό σκεύος στον φούρνο του χωριού) είναι το τοπικό πιάτο. Το νησί ανταμείβει την αργή ταξιδιωτική εμπειρία — περπάτησε το παλιό δίκτυο μονοπατιών με μουλάρια μεταξύ των χωριών αντί να οδηγήσεις.",
+ "specialties": [
+  {
+   "name": "Mastelo",
+   "name_el": "Μαστέλο",
+   "desc": "Lamb or goat slow-cooked in a clay pot (the mastelo) with red wine and dill, traditionally for Easter. Found year-round at To Steki in Apollonia and most village tavernas.",
+   "desc_el": "Αρνί ή κατσίκι σιγομαγειρεμένο σε πήλινο σκεύος (μαστέλο) με κόκκινο κρασί και άνηθο, παραδοσιακά για το Πάσχα. Όλο τον χρόνο στο Στέκι στην Απολλωνία και στις περισσότερες ταβέρνες."
+  },
+  {
+   "name": "Revithada",
+   "name_el": "Ρεβιθάδα",
+   "desc": "Chickpea stew slow-baked overnight in a clay pot in the village wood-fired oven. A Sunday tradition. Available at most island tavernas; best in Artemonas and Kastro.",
+   "desc_el": "Ρεβίθια στιφάδο σιγοψημένα όλη νύχτα σε πήλινο σκεύος στον ξυλόφουρνο του χωριού. Παράδοση Κυριακής. Στις περισσότερες ταβέρνες· καλύτερα στον Αρτεμώνα και στο Κάστρο."
+  },
+  {
+   "name": "Manoura cheese",
+   "name_el": "Μανούρα",
+   "desc": "Hard aged Sifnian cheese rolled in wine sediment, giving a purple rind. Sharp and salty. Buy at any village shop or the cooperative in Apollonia.",
+   "desc_el": "Σκληρή ξινομανούρα τυλιγμένη σε τρυγία, με μωβ φλούδα. Πικάντικη και αλμυρή. Σε κάθε χωριάτικο μαγαζί ή στον συνεταιρισμό στην Απολλωνία."
+  },
+  {
+   "name": "Ammoudaki almond cookies",
+   "name_el": "Αμυγδαλωτά Σίφνου",
+   "desc": "Soft almond cookies dusted with rose water and powdered sugar. The Theodorou family bakery in Artemonas is the classic source.",
+   "desc_el": "Μαλακά αμυγδαλωτά αρωματισμένα με ροδόνερο και ζάχαρη άχνη. Ο φούρνος της οικογένειας Θεοδώρου στον Αρτεμώνα είναι η κλασική αναφορά."
+  }
+ ],
+ "crafts": [
+  {
+   "name": "Pottery",
+   "name_el": "Κεραμική",
+   "desc": "Sifnos has been producing pottery for 5,000 years and is still doing it. The mastelo clay pot itself is a souvenir worth taking home. Workshops in Vathy and Kamares; the Apollonia pottery has the broadest selection.",
+   "desc_el": "Η Σίφνος παράγει κεραμικά εδώ και 5.000 χρόνια και συνεχίζει. Το ίδιο το μαστέλο είναι αναμνηστικό που αξίζει. Εργαστήρια σε Βαθύ και Καμάρες· το κεραμοποιείο στην Απολλωνία έχει την πιο ευρεία γκάμα."
+  }
+ ],
+ "festivals": [
+  {
+   "name": "Panagia Chrysopigi",
+   "name_el": "Παναγία Χρυσοπηγή",
+   "when": "Pentecost — 20 June 2027",
+   "when_el": "Πεντηκοστή — 20 Ιουνίου 2027",
+   "desc": "Sifnos's biggest festival, at the cliff-top monastery. The icon is paraded; tavernas serve free chickpea stew and lamb to all comers.",
+   "desc_el": "Το μεγαλύτερο πανηγύρι του νησιού, στο μοναστήρι πάνω στον γκρεμό. Η εικόνα περιφέρεται· οι ταβέρνες σερβίρουν δωρεάν ρεβιθάδα και αρνί σε όλους.",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Cyclades_Sifnos_Panagia_Chrisopigi_-_panoramio.jpg",
+   "photo_credit": {
+    "artist": "rene boulay",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Cyclades_Sifnos_Panagia_Chrisopigi_-_panoramio.jpg",
+    "source": "Wikimedia Commons"
+   }
+  },
+  {
+   "name": "Profitis Ilias",
+   "name_el": "Προφήτη Ηλία",
+   "when": "20 July",
+   "when_el": "20 Ιουλίου",
+   "desc": "Pilgrimage on foot to the highest point of the island (680m), where a small chapel sits on the summit. Locals walk up before dawn.",
+   "desc_el": "Πεζοπορία στην ψηλότερη κορυφή του νησιού (680μ), όπου βρίσκεται μικρό εκκλησάκι. Οι ντόπιοι ανεβαίνουν πριν την αυγή.",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Profitis_Ilias_Sifnos.JPG/1920px-Profitis_Ilias_Sifnos.JPG",
+   "photo_credit": {
+    "artist": "/ Evelin123 at Greek Wikipedia",
+    "license": "CC BY-SA 3.0 gr",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/gr/deed.en",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Profitis_Ilias_Sifnos.JPG",
+    "source": "Wikimedia Commons"
+   }
+  }
+ ],
+ "getting_there": {
+  "pills": [
+   "⛵ Piraeus 2.5–5h",
+   "€38–55"
+  ],
+  "pills_el": [
+   "⛵ Πειραιάς 2.5–5h",
+   "€38–55"
+  ],
+  "summary": "No airport. Ferries dock at Kamares on the west coast (5km from Apollonia). Seajets fast ferry from Piraeus ~2.5h, conventional ~5h, daily year-round.",
+  "summary_el": "Χωρίς αεροδρόμιο. Τα πλοία δένουν στις Καμάρες στη δυτική ακτή (5 χλμ. από την Απολλωνία). Seajets γρήγορο από Πειραιά ~2.5 ώρες, συμβατικό ~5 ώρες, καθημερινά όλο τον χρόνο.",
+  "tip": "Same Western Cyclades line as Serifos, Milos, Kimolos — easy to combine.",
+  "tip_el": "Ίδια γραμμή Δυτικών Κυκλάδων με Σέριφο, Μήλο, Κίμωλο — εύκολος συνδυασμός."
+ },
+ "beaches_intro": {
+  "en": "The best beach in Sifnos is **Platis Gialos** — a long stretch of fine sand on the south coast, sheltered from the meltemi, shallow and warm, with the island's best tavernas at the back. It's the obvious top pick and the most popular beach on the island, but the bay is large enough to absorb the crowds and the food is genuinely good.\n\nIf you want something more photogenic, **Apokofto** sits directly below the white Chrysopigi monastery on its rocky peninsula — the most-photographed beach in the Cyclades, and rightly so. It's smaller and less equipped than Platis Gialos, but the setting is extraordinary.\n\nFor solitude, **Vathy** is the answer: a remote sandy cove in a deep west-coast bay, reached by a long winding road that keeps the crowds out. Calm water, one small taverna, almost nobody.\n\nBelow: the full beach detail for each, with facilities, depth, and exposure to wind.",
+  "el": "Η καλύτερη παραλία της Σίφνου είναι ο **Πλατύς Γιαλός** — μακρά λωρίδα λεπτής άμμου στη νότια ακτή, προστατευμένη από το μελτέμι, ρηχή και ζεστή, με τις καλύτερες ταβέρνες του νησιού στο πίσω μέρος. Είναι η προφανής πρώτη επιλογή και η πιο δημοφιλής παραλία, αλλά ο κόλπος είναι αρκετά μεγάλος ώστε να απορροφά τον κόσμο και το φαγητό πραγματικά καλό.\n\nΑν θέλεις κάτι πιο φωτογενές, ο **Αποκοφτός** βρίσκεται ακριβώς κάτω από τη λευκή μονή της Χρυσοπηγής στη βραχώδη χερσόνησό της — η πιο φωτογραφημένη παραλία των Κυκλάδων, και δικαίως. Είναι μικρότερη και λιγότερο οργανωμένη από τον Πλατύ Γιαλό, αλλά το σκηνικό είναι εξαιρετικό.\n\nΓια ησυχία, το **Βαθύ** είναι η απάντηση: απομακρυσμένος αμμώδης κόλπος στη δυτική ακτή, με μακρύ φιδογυριστό δρόμο που κρατά τα πλήθη μακριά. Ήρεμα νερά, μια μικρή ταβέρνα, σχεδόν κανείς.\n\nΠαρακάτω: όλες οι λεπτομέρειες για κάθε παραλία, με υποδομές, βάθος και έκθεση στον άνεμο."
+ },
+ "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783277165/%CF%83%CE%B9%CF%86%CE%BD%CE%BF%CF%82_ulwp62.jpg"
 }
