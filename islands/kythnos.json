@@ -1,381 +1,381 @@
 {
-  "key": "kythnos",
-  "name": "Kythnos",
-  "intro": "Kythnos is the first Cycladic island you reach from the Athens Riviera, yet it remains one of the least visited. It has no airport, one main ferry link, and a population of just 1,500. The draw: 99 beaches, ancient thermal springs that have drawn bathers for 2,000 years, and an absolutely pristine double-ended beach at Kolona that looks photoshopped.",
+ "key": "kythnos",
+ "name": "Kythnos",
+ "intro": "Kythnos is the first Cycladic island you reach from the Athens Riviera, yet it remains one of the least visited. It has no airport, one main ferry link, and a population of just 1,500. The draw: 99 beaches, ancient thermal springs that have drawn bathers for 2,000 years, and an absolutely pristine double-ended beach at Kolona that looks photoshopped.",
+ "subtitle": "Thermal springs, empty beaches, and the magical Kolona",
+ "when_to_visit": {
+  "summary": "Kythnos has hot springs (Loutra), the Katafyki cave, and strong Athenian-weekender traffic. Less spectacular than Serifos or Sifnos but cheap and accessible. Best in May, June and September.",
+  "summary_el": "Η Κύθνος έχει ιαματικές πηγές (Λουτρά), το σπήλαιο Καταφύκι και έντονη κίνηση Αθηναίων το σαββατοκύριακο. Λιγότερο εντυπωσιακή από τη Σέριφο ή τη Σίφνο, αλλά φθηνή και προσβάσιμη. Καλύτερα τον Μάιο, τον Ιούνιο και τον Σεπτέμβριο.",
+  "months": [
+   {
+    "tag": "ok",
+    "why": "Loutra, year-round",
+    "why_el": "Λουτρά όλο τον χρόνο"
+   },
+   {
+    "tag": "ok",
+    "why": "Cold, springs",
+    "why_el": "Κρύο, Λουτρά"
+   },
+   {
+    "tag": "great",
+    "why": "Mild, springs",
+    "why_el": "Ήπιο, ιαματικά"
+   },
+   {
+    "tag": "great",
+    "why": "Easter, Athenian",
+    "why_el": "Πάσχα, Αθηναϊκά ΣΚ"
+   },
+   {
+    "tag": "perfect",
+    "why": "Sea warm",
+    "why_el": "Θάλ. ζεσταίνει"
+   },
+   {
+    "tag": "perfect",
+    "why": "Warm sea, before",
+    "why_el": "Πριν τον φόρτο"
+   },
+   {
+    "tag": "ok",
+    "why": "Hot, weekends very",
+    "why_el": "Ζέστη, γεμάτα ΣΚ"
+   },
+   {
+    "tag": "avoid",
+    "why": "Peak Athenian boats",
+    "why_el": "Κορύφωση αθηναϊκών"
+   },
+   {
+    "tag": "perfect",
+    "why": "Best — warm sea",
+    "why_el": "Καλύτερος — θάλασσα"
+   },
+   {
+    "tag": "great",
+    "why": "Last swims+springs",
+    "why_el": "Τελευταία μπάνια"
+   },
+   {
+    "tag": "ok",
+    "why": "Springs+hiking",
+    "why_el": "Ιαματικά, πεζοπ."
+   },
+   {
+    "tag": "ok",
+    "why": "Springs, quiet",
+    "why_el": "Ιαματικά, ήσυχα"
+   }
+  ]
+ },
+ "itinerary": {
+  "title": "2-day Itinerary for Kythnos",
   "subtitle": "Thermal springs, empty beaches, and the magical Kolona",
-  "when_to_visit": {
-    "summary": "Kythnos has hot springs (Loutra), the Katafyki cave, and strong Athenian-weekender traffic. Less spectacular than Serifos or Sifnos but cheap and accessible. Best in May, June and September.",
-    "summary_el": "Η Κύθνος έχει ιαματικές πηγές (Λουτρά), το σπήλαιο Καταφύκι και έντονη κίνηση Αθηναίων το σαββατοκύριακο. Λιγότερο εντυπωσιακή από τη Σέριφο ή τη Σίφνο, αλλά φθηνή και προσβάσιμη. Καλύτερα τον Μάιο, τον Ιούνιο και τον Σεπτέμβριο.",
-    "months": [
-      {
-        "tag": "ok",
-        "why": "Loutra, year-round",
-        "why_el": "Λουτρά όλο τον χρόνο"
-      },
-      {
-        "tag": "ok",
-        "why": "Cold, springs",
-        "why_el": "Κρύο, Λουτρά"
-      },
-      {
-        "tag": "great",
-        "why": "Mild, springs",
-        "why_el": "Ήπιο, ιαματικά"
-      },
-      {
-        "tag": "great",
-        "why": "Easter, Athenian",
-        "why_el": "Πάσχα, Αθηναϊκά ΣΚ"
-      },
-      {
-        "tag": "perfect",
-        "why": "Sea warm",
-        "why_el": "Θάλ. ζεσταίνει"
-      },
-      {
-        "tag": "perfect",
-        "why": "Warm sea, before",
-        "why_el": "Πριν τον φόρτο"
-      },
-      {
-        "tag": "ok",
-        "why": "Hot, weekends very",
-        "why_el": "Ζέστη, γεμάτα ΣΚ"
-      },
-      {
-        "tag": "avoid",
-        "why": "Peak Athenian boats",
-        "why_el": "Κορύφωση αθηναϊκών"
-      },
-      {
-        "tag": "perfect",
-        "why": "Best — warm sea",
-        "why_el": "Καλύτερος — θάλασσα"
-      },
-      {
-        "tag": "great",
-        "why": "Last swims+springs",
-        "why_el": "Τελευταία μπάνια"
-      },
-      {
-        "tag": "ok",
-        "why": "Springs+hiking",
-        "why_el": "Ιαματικά, πεζοπ."
-      },
-      {
-        "tag": "ok",
-        "why": "Springs, quiet",
-        "why_el": "Ιαματικά, ήσυχα"
+  "days": [
+   {
+    "day": 1,
+    "title": "Chora & Thermal Springs",
+    "km": 20,
+    "drive_mins": 45,
+    "overnight": "Loutra",
+    "color": "#0B8FAC",
+    "stops": [
+     {
+      "name": "Merichas (port)",
+      "lat": 37.3889023,
+      "lng": 24.3941566,
+      "type": "harbour",
+      "time": "10:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJL_QGBbgJohQRq8Z3K8ormHk",
+      "desc": "Small ferry port with a horseshoe sandy beach and tavernas on the waterfront. Most arrivals dock here mid-morning, rent a car or scooter on the spot, and head out the same hour — there's almost nothing to keep you in Merichas itself.",
+      "name_el": "Μέριχας (Λιμάνι)",
+      "desc_el": "Μικρό λιμάνι πλοίων με πεταλοειδή αμμώδη παραλία και ταβέρνες στο παραλιακό. Οι περισσότερες αφίξεις γίνονται μέσα του πρωινού· νοικιάζεις αυτοκίνητο ή σκούτερ επιτόπου και φεύγεις την ίδια ώρα — ελάχιστα πράγματα σε κρατούν στον Μέριχα.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Merichas_Kythnos_3_Greece_2009.jpg",
+      "photo_credit": {
+       "artist": "An. Antoniou",
+       "license": "CC BY-SA 3.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Merichas_Kythnos_3_Greece_2009.jpg",
+       "source": "Wikimedia Commons"
       }
-    ]
-  },
-  "itinerary": {
-    "title": "2-day Itinerary for Kythnos",
-    "subtitle": "Thermal springs, empty beaches, and the magical Kolona",
-    "days": [
-      {
-        "day": 1,
-        "title": "Chora & Thermal Springs",
-        "km": 20,
-        "drive_mins": 45,
-        "overnight": "Loutra",
-        "color": "#0B8FAC",
-        "stops": [
-          {
-            "name": "Merichas (port)",
-            "lat": 37.3889023,
-            "lng": 24.3941566,
-            "type": "harbour",
-            "time": "10:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJL_QGBbgJohQRq8Z3K8ormHk",
-            "desc": "Small ferry port with a horseshoe sandy beach and tavernas on the waterfront. Most arrivals dock here mid-morning, rent a car or scooter on the spot, and head out the same hour — there's almost nothing to keep you in Merichas itself.",
-            "name_el": "Μέριχας (Λιμάνι)",
-            "desc_el": "Μικρό λιμάνι πλοίων με πεταλοειδή αμμώδη παραλία και ταβέρνες στο παραλιακό. Οι περισσότερες αφίξεις γίνονται μέσα του πρωινού· νοικιάζεις αυτοκίνητο ή σκούτερ επιτόπου και φεύγεις την ίδια ώρα — ελάχιστα πράγματα σε κρατούν στον Μέριχα.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Merichas_Kythnos_3_Greece_2009.jpg",
-            "photo_credit": {
-              "artist": "An. Antoniou",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Merichas_Kythnos_3_Greece_2009.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Chora (Messaria)",
-            "lat": 37.4158,
-            "lng": 24.4285,
-            "type": "village",
-            "time": "11:30",
-            "wiki": "https://www.google.com/maps/search/Chora+(Messaria)+Kythnos",
-            "desc": "Main inland village — maze of narrow whitewashed lanes with the marble church of Agia Triada at the centre. Walk the main artery end-to-end, then get lost in the side streets; the lanes are too narrow for cars, which is why the Chora has stayed exactly as it was.",
-            "name_el": "Χώρα (Μεσσαριά)",
-            "desc_el": "Το κύριο εσωτερικό χωριό — λαβύρινθος στενών ασπρισμένων δρόμων, με τον μαρμάρινο ναό της Αγίας Τριάδας στο κέντρο. Περπάτα τον κεντρικό άξονα από άκρη σε άκρη, μετά χάσου στα στενά· οι δρόμοι είναι πολύ στενοί για αυτοκίνητα, γι' αυτό και η Χώρα έχει μείνει όπως ήταν.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/%CE%97_%CF%80%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1_%CE%9A%CE%BF%CE%BB%CF%8E%CE%BD%CE%B1_%CF%84%CE%B7%CF%82_%CE%9A%CF%8D%CE%B8%CE%BD%CE%BF%CF%85_%28tombolo%29.jpg/1920px-%CE%97_%CF%80%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1_%CE%9A%CE%BF%CE%BB%CF%8E%CE%BD%CE%B1_%CF%84%CE%B7%CF%82_%CE%9A%CF%8D%CE%B8%CE%BD%CE%BF%CF%85_%28tombolo%29.jpg",
-            "photo_credit": {
-              "artist": "OikEnvGR",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:%CE%97_%CF%80%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1_%CE%9A%CE%BF%CE%BB%CF%8E%CE%BD%CE%B1_%CF%84%CE%B7%CF%82_%CE%9A%CF%8D%CE%B8%CE%BD%CE%BF%CF%85_(tombolo).jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Katafyki Cave",
-            "lat": 37.4253,
-            "lng": 24.4365,
-            "type": "museum",
-            "time": "13:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJYa3GEiAKohQRv0MwH6mWWQE",
-            "desc": "Old iron mine turned geological attraction in the island's interior. Short guided tours in summer take you through chambers carved into the rock — bring a light layer, it's cool inside. The mine fed Kythnos' economy for decades and the entry chambers still have rusted tools where the workers left them.",
-            "name_el": "Σπηλιά Καταφύκι",
-            "desc_el": "Παλιό σιδηρωρυχείο μετατραπέν σε γεωλογικό αξιοθέατο στο εσωτερικό του νησιού. Σύντομες ξεναγήσεις το καλοκαίρι σε οδηγούν σε θαλάμους σκαμμένους στον βράχο — πάρε μαζί ελαφρύ ρούχο, μέσα έχει δροσιά. Το ορυχείο τροφοδότησε την οικονομία της Κύθνου για δεκαετίες· οι θάλαμοι εισόδου έχουν ακόμα σκουριασμένα εργαλεία όπως τα άφησαν οι εργάτες.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Katafyki_Cave%2C_Dryopida%2C_Kythnos%2C_190380.jpg/1920px-Katafyki_Cave%2C_Dryopida%2C_Kythnos%2C_190380.jpg",
-            "photo_credit": {
-              "artist": "Zde",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Katafyki_Cave,_Dryopida,_Kythnos,_190380.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Loutra Thermal Baths",
-            "lat": 37.4482,
-            "lng": 24.4352,
-            "type": "village",
-            "time": "17:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJI8LP11QJohQRGBTC1P0xHGE",
-            "desc": "Ancient thermal springs (52°C) — bathed in since antiquity, housed in a 19th-century spa hotel. Day passes available.",
-            "name_el": "Ιαματικά Λουτρά",
-            "desc_el": "Αρχαίες ιαματικές πηγές (52°C) — χρησιμοποιούνται από την αρχαιότητα, στεγάζονται σε λουτρικό ξενοδοχείο του 19ου αιώνα. Διαθέσιμα ημερήσια εισιτήρια."
-          }
-        ],
-        "title_el": "Χώρα & Ιαματικά Λουτρά",
-        "overnight_el": "Λουτρά",
-        "food": [
-          {
-            "meal": "Dinner",
-            "meal_el": "Δείπνο",
-            "area": "Loutra & Chora",
-            "area_el": "Λουτρά & Χώρα",
-            "desc": "<a href=\"https://www.google.com/maps/search/Karnagio+Loutra+Kythnos\" target=\"_blank\" rel=\"noopener\">Karnagio</a> sits by the port at Loutra. Up in Chora, <a href=\"https://www.google.com/maps/search/Psipsina+Chora+Kythnos\" target=\"_blank\" rel=\"noopener\">Psipsina</a> is the quiet fish tavern — shrimp, fried anchovies, fava.",
-            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Karnagio+Loutra+Kythnos\" target=\"_blank\" rel=\"noopener\">Καρνάγιο</a> βρίσκεται δίπλα στο λιμάνι στα Λουτρά. Πάνω στη Χώρα, το <a href=\"https://www.google.com/maps/search/Psipsina+Chora+Kythnos\" target=\"_blank\" rel=\"noopener\">Ψιψίνα</a> είναι η ήσυχη ψαροταβέρνα — γαρίδες, γαύρος τηγανητός, φάβα.",
-            "after": "Loutra Thermal Baths"
-          }
-        ]
-      },
-      {
-        "day": 2,
-        "title": "Kolona & Beaches",
-        "km": 15,
-        "drive_mins": 40,
-        "overnight": "Departure",
-        "color": "#3D8B6F",
-        "stops": [
-          {
-            "name": "Kolona Beach",
-            "lat": 37.4138983,
-            "lng": 24.3788452,
-            "type": "beach",
-            "time": "10:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJHcUMbcgJohQRGH-7Czd8hAs",
-            "desc": "The famous double beach — a sand spit connecting the main island to the tiny Agios Loukas islet. Swim in two sides at once. Arrive early to beat the crowds.",
-            "name_el": "Παραλία Κολώνα",
-            "desc_el": "Η διάσημη διπλή παραλία — αμμώδης λωρίδα που συνδέει το κύριο νησί με τη μικροσκοπική νησίδα του Αγίου Λουκά. Κολύμπα σε δύο πλευρές ταυτόχρονα. Φτάσε νωρίς για να προλάβεις τα πλήθη.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Fykiada_beach_near_Kolona%2C_Kythnos.jpg/1920px-Fykiada_beach_near_Kolona%2C_Kythnos.jpg",
-            "photo_credit": {
-              "artist": "FocalPoint",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Fykiada_beach_near_Kolona,_Kythnos.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Apokrousi Beach",
-            "lat": 37.4425,
-            "lng": 24.3916,
-            "type": "beach",
-            "time": "13:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJff1mzA4JohQRjEPySpvbMxw",
-            "desc": "Larger sandy bay adjacent to Kolona, separated by just the famous sandbar. Usually less crowded than Kolona itself but with the same crystal-clear water and a small canteen for shade and coffee. The walk between the two beaches takes under five minutes.",
-            "name_el": "Παραλία Αποκρούσι",
-            "desc_el": "Μεγαλύτερος αμμώδης κόλπος δίπλα στην Κολώνα, τους χωρίζει μόνο η περίφημη αμμωτή λωρίδα. Συνήθως λιγότερο πολυσύχναστη από την Κολώνα αλλά με τα ίδια κρυστάλλινα νερά και μικρή καντίνα για σκιά και καφέ. Το περπάτημα ανάμεσα στις δύο παραλίες είναι κάτω από πέντε λεπτά.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Apokrousi_beach_Kythnos_2018.jpg/1920px-Apokrousi_beach_Kythnos_2018.jpg",
-            "photo_credit": {
-              "artist": "FocalPoint",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Apokrousi_beach_Kythnos_2018.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Dryopida",
-            "lat": 37.3829981,
-            "lng": 24.4309843,
-            "type": "village",
-            "time": "16:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJa3Fib6SgmBQRQAm74iy9AAU",
-            "desc": "Red-tiled roofs (unusual in the Cyclades) and a tiny folk museum. Lunch at one of the two village tavernas.",
-            "name_el": "Δρυοπίδα",
-            "desc_el": "Κεραμοσκεπές (ασυνήθιστες στις Κυκλάδες) και μικροσκοπικό λαογραφικό μουσείο. Μεσημεριανό σε μία από τις δύο ταβέρνες του χωριού.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Katafyki_Cave%2C_Dryopida%2C_Kythnos%2C_190380.jpg/1920px-Katafyki_Cave%2C_Dryopida%2C_Kythnos%2C_190380.jpg",
-            "photo_credit": {
-              "artist": "Zde",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Katafyki_Cave,_Dryopida,_Kythnos,_190380.jpg",
-              "source": "Wikimedia Commons"
-            }
-          }
-        ],
-        "title_el": "Κολώνα & Παραλίες",
-        "overnight_el": "Αναχώρηση"
+     },
+     {
+      "name": "Chora (Messaria)",
+      "lat": 37.4158,
+      "lng": 24.4285,
+      "type": "village",
+      "time": "11:30",
+      "wiki": "https://www.google.com/maps/search/Chora+(Messaria)+Kythnos",
+      "desc": "Main inland village — maze of narrow whitewashed lanes with the marble church of Agia Triada at the centre. Walk the main artery end-to-end, then get lost in the side streets; the lanes are too narrow for cars, which is why the Chora has stayed exactly as it was.",
+      "name_el": "Χώρα (Μεσσαριά)",
+      "desc_el": "Το κύριο εσωτερικό χωριό — λαβύρινθος στενών ασπρισμένων δρόμων, με τον μαρμάρινο ναό της Αγίας Τριάδας στο κέντρο. Περπάτα τον κεντρικό άξονα από άκρη σε άκρη, μετά χάσου στα στενά· οι δρόμοι είναι πολύ στενοί για αυτοκίνητα, γι' αυτό και η Χώρα έχει μείνει όπως ήταν.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/%CE%97_%CF%80%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1_%CE%9A%CE%BF%CE%BB%CF%8E%CE%BD%CE%B1_%CF%84%CE%B7%CF%82_%CE%9A%CF%8D%CE%B8%CE%BD%CE%BF%CF%85_%28tombolo%29.jpg/1920px-%CE%97_%CF%80%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1_%CE%9A%CE%BF%CE%BB%CF%8E%CE%BD%CE%B1_%CF%84%CE%B7%CF%82_%CE%9A%CF%8D%CE%B8%CE%BD%CE%BF%CF%85_%28tombolo%29.jpg",
+      "photo_credit": {
+       "artist": "OikEnvGR",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:%CE%97_%CF%80%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1_%CE%9A%CE%BF%CE%BB%CF%8E%CE%BD%CE%B1_%CF%84%CE%B7%CF%82_%CE%9A%CF%8D%CE%B8%CE%BD%CE%BF%CF%85_(tombolo).jpg",
+       "source": "Wikimedia Commons"
       }
+     },
+     {
+      "name": "Katafyki Cave",
+      "lat": 37.4253,
+      "lng": 24.4365,
+      "type": "museum",
+      "time": "13:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJYa3GEiAKohQRv0MwH6mWWQE",
+      "desc": "Old iron mine turned geological attraction in the island's interior. Short guided tours in summer take you through chambers carved into the rock — bring a light layer, it's cool inside. The mine fed Kythnos' economy for decades and the entry chambers still have rusted tools where the workers left them.",
+      "name_el": "Σπηλιά Καταφύκι",
+      "desc_el": "Παλιό σιδηρωρυχείο μετατραπέν σε γεωλογικό αξιοθέατο στο εσωτερικό του νησιού. Σύντομες ξεναγήσεις το καλοκαίρι σε οδηγούν σε θαλάμους σκαμμένους στον βράχο — πάρε μαζί ελαφρύ ρούχο, μέσα έχει δροσιά. Το ορυχείο τροφοδότησε την οικονομία της Κύθνου για δεκαετίες· οι θάλαμοι εισόδου έχουν ακόμα σκουριασμένα εργαλεία όπως τα άφησαν οι εργάτες.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Katafyki_Cave%2C_Dryopida%2C_Kythnos%2C_190380.jpg/1920px-Katafyki_Cave%2C_Dryopida%2C_Kythnos%2C_190380.jpg",
+      "photo_credit": {
+       "artist": "Zde",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Katafyki_Cave,_Dryopida,_Kythnos,_190380.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Loutra Thermal Baths",
+      "lat": 37.4482,
+      "lng": 24.4352,
+      "type": "village",
+      "time": "17:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJI8LP11QJohQRGBTC1P0xHGE",
+      "desc": "Ancient thermal springs (52°C) — bathed in since antiquity, housed in a 19th-century spa hotel. Day passes available.",
+      "name_el": "Ιαματικά Λουτρά",
+      "desc_el": "Αρχαίες ιαματικές πηγές (52°C) — χρησιμοποιούνται από την αρχαιότητα, στεγάζονται σε λουτρικό ξενοδοχείο του 19ου αιώνα. Διαθέσιμα ημερήσια εισιτήρια."
+     }
     ],
-    "title_el": "Πρόγραμμα 2 Ημερών στην Κύθνο",
-    "subtitle_el": "Ιαματικά λουτρά, άδειες παραλίες και η μαγική Κολώνα"
-  },
-  "beaches": [
-    {
-      "name": "Kolona",
+    "title_el": "Χώρα & Ιαματικά Λουτρά",
+    "overnight_el": "Λουτρά",
+    "food": [
+     {
+      "meal": "Dinner",
+      "meal_el": "Δείπνο",
+      "area": "Loutra & Chora",
+      "area_el": "Λουτρά & Χώρα",
+      "desc": "<a href=\"https://www.google.com/maps/search/Karnagio+Loutra+Kythnos\" target=\"_blank\" rel=\"noopener\">Karnagio</a> sits by the port at Loutra. Up in Chora, <a href=\"https://www.google.com/maps/search/Psipsina+Chora+Kythnos\" target=\"_blank\" rel=\"noopener\">Psipsina</a> is the quiet fish tavern — shrimp, fried anchovies, fava.",
+      "desc_el": "Το <a href=\"https://www.google.com/maps/search/Karnagio+Loutra+Kythnos\" target=\"_blank\" rel=\"noopener\">Καρνάγιο</a> βρίσκεται δίπλα στο λιμάνι στα Λουτρά. Πάνω στη Χώρα, το <a href=\"https://www.google.com/maps/search/Psipsina+Chora+Kythnos\" target=\"_blank\" rel=\"noopener\">Ψιψίνα</a> είναι η ήσυχη ψαροταβέρνα — γαρίδες, γαύρος τηγανητός, φάβα.",
+      "after": "Loutra Thermal Baths"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "title": "Kolona & Beaches",
+    "km": 15,
+    "drive_mins": 40,
+    "overnight": "Departure",
+    "color": "#3D8B6F",
+    "stops": [
+     {
+      "name": "Kolona Beach",
       "lat": 37.4138983,
       "lng": 24.3788452,
-      "type": "Fine white sand",
-      "length": "150 m sandbar",
-      "depth": "Shallow on both sides",
-      "facing": "Double-sided",
-      "facilities": "One canteen in summer, no umbrellas",
+      "type": "beach",
+      "time": "10:00",
       "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJHcUMbcgJohQRGH-7Czd8hAs",
-      "desc": "Kythnos' icon beach. A narrow white sandbar connecting the island to a small rocky islet — you can swim simultaneously on two different sides.",
-      "name_el": "Κολώνα",
-      "type_el": "Λεπτή λευκή άμμος",
-      "depth_el": "Ρηχή και στις δύο πλευρές",
-      "facing_el": "Αμφίπλευρη",
-      "facilities_el": "Μία καντίνα το καλοκαίρι, χωρίς ομπρέλες",
-      "desc_el": "Η εμβληματική παραλία της Κύθνου. Μια στενή λευκή αμμολωρίδα που συνδέει το νησί με μικρή βραχώδη νησίδα — μπορείς να κολυμπήσεις ταυτόχρονα σε δύο διαφορετικές πλευρές.",
+      "desc": "The famous double beach — a sand spit connecting the main island to the tiny Agios Loukas islet. Swim in two sides at once. Arrive early to beat the crowds.",
+      "name_el": "Παραλία Κολώνα",
+      "desc_el": "Η διάσημη διπλή παραλία — αμμώδης λωρίδα που συνδέει το κύριο νησί με τη μικροσκοπική νησίδα του Αγίου Λουκά. Κολύμπα σε δύο πλευρές ταυτόχρονα. Φτάσε νωρίς για να προλάβεις τα πλήθη.",
       "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Fykiada_beach_near_Kolona%2C_Kythnos.jpg/1920px-Fykiada_beach_near_Kolona%2C_Kythnos.jpg",
       "photo_credit": {
-        "artist": "FocalPoint",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Fykiada_beach_near_Kolona,_Kythnos.jpg",
-        "source": "Wikimedia Commons"
+       "artist": "FocalPoint",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Fykiada_beach_near_Kolona,_Kythnos.jpg",
+       "source": "Wikimedia Commons"
       }
-    },
-    {
-      "name": "Apokrousi",
+     },
+     {
+      "name": "Apokrousi Beach",
       "lat": 37.4425,
       "lng": 24.3916,
-      "type": "Fine sand",
-      "length": "400 m",
-      "depth": "Gradual",
-      "facing": "Northwest",
-      "facilities": "Beach bar, umbrellas",
+      "type": "beach",
+      "time": "13:00",
       "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJff1mzA4JohQRjEPySpvbMxw",
-      "desc": "Longer sandy beach right next to Kolona. More space, still very blue water.",
-      "name_el": "Αποκρούσι",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Σταδιακή",
-      "facing_el": "Βορειοδυτικά",
-      "facilities_el": "Beach bar, ομπρέλες",
-      "desc_el": "Μακρύτερη αμμώδης παραλία ακριβώς δίπλα στην Κολώνα. Περισσότερος χώρος, ακόμα πολύ μπλε νερά.",
+      "desc": "Larger sandy bay adjacent to Kolona, separated by just the famous sandbar. Usually less crowded than Kolona itself but with the same crystal-clear water and a small canteen for shade and coffee. The walk between the two beaches takes under five minutes.",
+      "name_el": "Παραλία Αποκρούσι",
+      "desc_el": "Μεγαλύτερος αμμώδης κόλπος δίπλα στην Κολώνα, τους χωρίζει μόνο η περίφημη αμμωτή λωρίδα. Συνήθως λιγότερο πολυσύχναστη από την Κολώνα αλλά με τα ίδια κρυστάλλινα νερά και μικρή καντίνα για σκιά και καφέ. Το περπάτημα ανάμεσα στις δύο παραλίες είναι κάτω από πέντε λεπτά.",
       "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Apokrousi_beach_Kythnos_2018.jpg/1920px-Apokrousi_beach_Kythnos_2018.jpg",
       "photo_credit": {
-        "artist": "FocalPoint",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Apokrousi_beach_Kythnos_2018.jpg",
-        "source": "Wikimedia Commons"
+       "artist": "FocalPoint",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Apokrousi_beach_Kythnos_2018.jpg",
+       "source": "Wikimedia Commons"
       }
-    },
-    {
-      "name": "Episkopi",
-      "lat": 37.3807,
-      "lng": 24.4134,
-      "type": "Sand",
-      "length": "300 m",
-      "depth": "Shallow",
-      "facing": "South — protected",
-      "facilities": "Taverna, rooms",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJVZZJgKMJohQRxnrRDeLm98k",
-      "desc": "Long sandy south coast beach. Local favorite, calm water, great for children.",
-      "name_el": "Επισκοπή",
-      "type_el": "Άμμος",
-      "depth_el": "Ρηχή",
-      "facing_el": "Νότια — προστατευμένη",
-      "facilities_el": "Ταβέρνα, δωμάτια",
-      "desc_el": "Μακριά αμμώδης παραλία της νότιας ακτής. Αγαπημένη των ντόπιων, ήρεμα νερά, εξαιρετική για παιδιά.",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Episkopi_beach%2C_Kythnos_2018.jpg/1920px-Episkopi_beach%2C_Kythnos_2018.jpg",
+     },
+     {
+      "name": "Dryopida",
+      "lat": 37.3829981,
+      "lng": 24.4309843,
+      "type": "village",
+      "time": "16:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJa3Fib6SgmBQRQAm74iy9AAU",
+      "desc": "Red-tiled roofs (unusual in the Cyclades) and a tiny folk museum. Lunch at one of the two village tavernas.",
+      "name_el": "Δρυοπίδα",
+      "desc_el": "Κεραμοσκεπές (ασυνήθιστες στις Κυκλάδες) και μικροσκοπικό λαογραφικό μουσείο. Μεσημεριανό σε μία από τις δύο ταβέρνες του χωριού.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Katafyki_Cave%2C_Dryopida%2C_Kythnos%2C_190380.jpg/1920px-Katafyki_Cave%2C_Dryopida%2C_Kythnos%2C_190380.jpg",
       "photo_credit": {
-        "artist": "FocalPoint",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Episkopi_beach,_Kythnos_2018.jpg",
-        "source": "Wikimedia Commons"
+       "artist": "Zde",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Katafyki_Cave,_Dryopida,_Kythnos,_190380.jpg",
+       "source": "Wikimedia Commons"
       }
-    }
+     }
+    ],
+    "title_el": "Κολώνα & Παραλίες",
+    "overnight_el": "Αναχώρηση"
+   }
   ],
-  "name_el": "Κύθνος",
-  "name_accusative_el": "Κύθνο",
-  "name_genitive_el": "Κύθνου",
-  "gender_el": "f",
-  "subtitle_el": "Ιαματικά λουτρά, άδειες παραλίες και η μαγική Κολώνα",
-  "intro_el": "Η Κύθνος είναι το πρώτο κυκλαδίτικο νησί που συναντάς από την Αθηναϊκή Ριβιέρα, αλλά παραμένει ένα από τα λιγότερο επισκεπτόμενα. Δεν έχει αεροδρόμιο, μία κύρια πλοϊκή σύνδεση, και πληθυσμό μόλις 1.500. Η έλξη: 99 παραλίες, αρχαία ιαματικά λουτρά που προσελκύουν λουόμενους εδώ και 2.000 χρόνια, και μια απολύτως ανέπαφη αμφίπλευρη παραλία στην Κολώνα που φαίνεται φωτοσοπαρισμένη.",
-  "suited_for": {
-    "good": [
-      "Travellers who want the Cyclades without the crowds — Kythnos is a short hop from Athens yet barely visited",
-      "Anyone drawn to natural thermal springs and a genuinely uncommercialised beach scene",
-      "Walkers and quiet-beach hunters happy to drive to find an empty cove"
-    ],
-    "good_el": [
-      "Ταξιδιώτες που θέλουν τις Κυκλάδες χωρίς πλήθος — η Κύθνος είναι κοντά στην Αθήνα αλλά ελάχιστα επισκέψιμη",
-      "Όσους τραβούν τα φυσικά ιαματικά λουτρά και μια αυθεντικά μη εμπορευματοποιημένη παραλιακή σκηνή",
-      "Περιπατητές και κυνηγούς ήσυχης παραλίας, πρόθυμους να οδηγήσουν για μια άδεια κρυφή ακτή"
-    ],
-    "skip": [
-      "If you want nightlife, beach bars and a buzzing scene — Kythnos is deliberately quiet",
-      "If you won't rent a car or scooter; the best beaches need wheels to reach"
-    ],
-    "skip_el": [
-      "Αν θέλεις νυχτερινή ζωή, beach bars και ζωντανή σκηνή — η Κύθνος είναι σκόπιμα ήσυχη",
-      "Αν δεν νοικιάσεις αυτοκίνητο ή σκούτερ· οι καλύτερες παραλίες θέλουν τροχούς"
-    ]
+  "title_el": "Πρόγραμμα 2 Ημερών στην Κύθνο",
+  "subtitle_el": "Ιαματικά λουτρά, άδειες παραλίες και η μαγική Κολώνα"
+ },
+ "beaches": [
+  {
+   "name": "Kolona",
+   "lat": 37.4138983,
+   "lng": 24.3788452,
+   "type": "Fine white sand",
+   "length": "150 m sandbar",
+   "depth": "Shallow on both sides",
+   "facing": "Double-sided",
+   "facilities": "One canteen in summer, no umbrellas",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJHcUMbcgJohQRGH-7Czd8hAs",
+   "desc": "Kythnos' icon beach. A narrow white sandbar connecting the island to a small rocky islet — you can swim simultaneously on two different sides.",
+   "name_el": "Κολώνα",
+   "type_el": "Λεπτή λευκή άμμος",
+   "depth_el": "Ρηχή και στις δύο πλευρές",
+   "facing_el": "Αμφίπλευρη",
+   "facilities_el": "Μία καντίνα το καλοκαίρι, χωρίς ομπρέλες",
+   "desc_el": "Η εμβληματική παραλία της Κύθνου. Μια στενή λευκή αμμολωρίδα που συνδέει το νησί με μικρή βραχώδη νησίδα — μπορείς να κολυμπήσεις ταυτόχρονα σε δύο διαφορετικές πλευρές.",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Fykiada_beach_near_Kolona%2C_Kythnos.jpg/1920px-Fykiada_beach_near_Kolona%2C_Kythnos.jpg",
+   "photo_credit": {
+    "artist": "FocalPoint",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Fykiada_beach_near_Kolona,_Kythnos.jpg",
+    "source": "Wikimedia Commons"
+   }
   },
-  "getting_there": {
-    "pills": [
-      "⛵ Piraeus/Lavrio 2–3h",
-      "€20–35"
-    ],
-    "pills_el": [
-      "⛵ Πειραιάς/Λαύριο 2–3h",
-      "€20–35"
-    ],
-    "summary": "No airport. Ferries from both Piraeus and Lavrio dock at Merichas (the main port). Conventional ferry ~2.5–3h, daily.",
-    "summary_el": "Χωρίς αεροδρόμιο. Πλοία από Πειραιά και Λαύριο δένουν στον Μέριχα (κύριο λιμάνι). Συμβατικό πλοίο ~2.5–3 ώρες, καθημερινά.",
-    "tip": "Lavrio is closer to the airport than Piraeus is — save 30 minutes if you fly in.",
-    "tip_el": "Το Λαύριο είναι πιο κοντά στο αεροδρόμιο από τον Πειραιά — γλυτώνεις 30 λεπτά αν έρχεσαι αεροπορικώς."
+  {
+   "name": "Apokrousi",
+   "lat": 37.4425,
+   "lng": 24.3916,
+   "type": "Fine sand",
+   "length": "400 m",
+   "depth": "Gradual",
+   "facing": "Northwest",
+   "facilities": "Beach bar, umbrellas",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJff1mzA4JohQRjEPySpvbMxw",
+   "desc": "Longer sandy beach right next to Kolona. More space, still very blue water.",
+   "name_el": "Αποκρούσι",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Σταδιακή",
+   "facing_el": "Βορειοδυτικά",
+   "facilities_el": "Beach bar, ομπρέλες",
+   "desc_el": "Μακρύτερη αμμώδης παραλία ακριβώς δίπλα στην Κολώνα. Περισσότερος χώρος, ακόμα πολύ μπλε νερά.",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Apokrousi_beach_Kythnos_2018.jpg/1920px-Apokrousi_beach_Kythnos_2018.jpg",
+   "photo_credit": {
+    "artist": "FocalPoint",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Apokrousi_beach_Kythnos_2018.jpg",
+    "source": "Wikimedia Commons"
+   }
   },
-  "specialties": [
-    {
-      "name": "Sfougato",
-      "name_el": "Σφουγγάτο",
-      "desc": "Kythnos' signature dish — a savoury herb-and-cheese pie made with local soft cheese (touloumotyri), eggs, parsley, mint and a thin pastry crust. Served at most family-run tavernas, especially in Chora and Loutra. Each kitchen has its own ratio of cheese to herbs.",
-      "desc_el": "Το χαρακτηριστικό πιάτο της Κύθνου — αλμυρή πίτα με βότανα και τυρί, με ντόπιο τουλουμοτύρι, αυγά, μαϊντανό, δυόσμο και λεπτό φύλλο. Σερβίρεται σε οικογενειακές ταβέρνες, ιδίως σε Χώρα και Λουτρά. Κάθε κουζίνα έχει τη δική της αναλογία τυριού και βοτάνων."
-    },
-    {
-      "name": "Touloumotyri",
-      "name_el": "Τουλουμοτύρι",
-      "desc": "Soft sheep's-milk cheese matured in goatskin (touloumi). Tangy, slightly piquant, denser than feta. Bought direct from village dairies or asked for at any taverna — it goes into the sfougato, on top of fresh bread, or simply with olive oil and oregano.",
-      "desc_el": "Μαλακό πρόβειο τυρί που ωριμάζει σε τουλούμι. Έντονη γεύση, ελαφρώς πικάντικη, πυκνότερη υφή από φέτα. Αγοράζεται απευθείας από τα τυροκομεία των χωριών ή ζητείται σε κάθε ταβέρνα — πάει στο σφουγγάτο, πάνω σε φρέσκο ψωμί, ή απλά με ελαιόλαδο και ρίγανη."
-    },
-    {
-      "name": "Thermal-spring lemonade",
-      "name_el": "Λεμονάδα Λουτρών",
-      "desc": "A summer-only treat at the cafés in Loutra, made with lemons from the nearby groves and the village's spring water. The water makes the difference — slightly mineral, which sharpens the lemon. Served with a sprig of garden mint.",
-      "desc_el": "Καλοκαιρινή απόλαυση στα καφέ των Λουτρών, με λεμόνια από τους κοντινούς λεμονόκηπους και το νερό των πηγών του χωριού. Το νερό κάνει τη διαφορά — ελαφρώς μεταλλικό, τονίζει το λεμόνι. Σερβίρεται με κλωνάρι φρέσκο δυόσμο."
-    }
+  {
+   "name": "Episkopi",
+   "lat": 37.3807,
+   "lng": 24.4134,
+   "type": "Sand",
+   "length": "300 m",
+   "depth": "Shallow",
+   "facing": "South — protected",
+   "facilities": "Taverna, rooms",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJVZZJgKMJohQRxnrRDeLm98k",
+   "desc": "Long sandy south coast beach. Local favorite, calm water, great for children.",
+   "name_el": "Επισκοπή",
+   "type_el": "Άμμος",
+   "depth_el": "Ρηχή",
+   "facing_el": "Νότια — προστατευμένη",
+   "facilities_el": "Ταβέρνα, δωμάτια",
+   "desc_el": "Μακριά αμμώδης παραλία της νότιας ακτής. Αγαπημένη των ντόπιων, ήρεμα νερά, εξαιρετική για παιδιά.",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Episkopi_beach%2C_Kythnos_2018.jpg/1920px-Episkopi_beach%2C_Kythnos_2018.jpg",
+   "photo_credit": {
+    "artist": "FocalPoint",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Episkopi_beach,_Kythnos_2018.jpg",
+    "source": "Wikimedia Commons"
+   }
+  }
+ ],
+ "name_el": "Κύθνος",
+ "name_accusative_el": "Κύθνο",
+ "name_genitive_el": "Κύθνου",
+ "gender_el": "f",
+ "subtitle_el": "Ιαματικά λουτρά, άδειες παραλίες και η μαγική Κολώνα",
+ "intro_el": "Η Κύθνος είναι το πρώτο κυκλαδίτικο νησί που συναντάς από την Αθηναϊκή Ριβιέρα, αλλά παραμένει ένα από τα λιγότερο επισκεπτόμενα. Δεν έχει αεροδρόμιο, μία κύρια ακτοπλοϊκή σύνδεση, και πληθυσμό μόλις 1.500. Η έλξη: 99 παραλίες, αρχαία ιαματικά λουτρά που προσελκύουν λουόμενους εδώ και 2.000 χρόνια, και μια απολύτως ανέγγιχτη διπλή παραλία στην Κολώνα που μοιάζει επεξεργασμένη σε υπολογιστή.",
+ "suited_for": {
+  "good": [
+   "Travellers who want the Cyclades without the crowds — Kythnos is a short hop from Athens yet barely visited",
+   "Anyone drawn to natural thermal springs and a genuinely uncommercialised beach scene",
+   "Walkers and quiet-beach hunters happy to drive to find an empty cove"
   ],
-  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783277161/%CE%BA%CF%85%CE%B8%CE%BD%CE%BF%CF%82_mq6gnv.jpg"
+  "good_el": [
+   "Ταξιδιώτες που θέλουν τις Κυκλάδες χωρίς πλήθος — η Κύθνος είναι κοντά στην Αθήνα αλλά ελάχιστα επισκέψιμη",
+   "Όσους τραβούν τα φυσικά ιαματικά λουτρά και μια αυθεντικά μη εμπορευματοποιημένη παραλιακή σκηνή",
+   "Περιπατητές και κυνηγούς ήσυχης παραλίας, πρόθυμους να οδηγήσουν για μια άδεια κρυφή ακτή"
+  ],
+  "skip": [
+   "If you want nightlife, beach bars and a buzzing scene — Kythnos is deliberately quiet",
+   "If you won't rent a car or scooter; the best beaches need wheels to reach"
+  ],
+  "skip_el": [
+   "Αν θέλεις νυχτερινή ζωή, beach bars και ζωντανή σκηνή — η Κύθνος είναι σκόπιμα ήσυχη",
+   "Αν δεν νοικιάσεις αυτοκίνητο ή σκούτερ· οι καλύτερες παραλίες θέλουν τροχούς"
+  ]
+ },
+ "getting_there": {
+  "pills": [
+   "⛵ Piraeus/Lavrio 2–3h",
+   "€20–35"
+  ],
+  "pills_el": [
+   "⛵ Πειραιάς/Λαύριο 2–3h",
+   "€20–35"
+  ],
+  "summary": "No airport. Ferries from both Piraeus and Lavrio dock at Merichas (the main port). Conventional ferry ~2.5–3h, daily.",
+  "summary_el": "Χωρίς αεροδρόμιο. Πλοία από Πειραιά και Λαύριο δένουν στον Μέριχα (κύριο λιμάνι). Συμβατικό πλοίο ~2.5–3 ώρες, καθημερινά.",
+  "tip": "Lavrio is closer to the airport than Piraeus is — save 30 minutes if you fly in.",
+  "tip_el": "Το Λαύριο είναι πιο κοντά στο αεροδρόμιο από τον Πειραιά — γλυτώνεις 30 λεπτά αν έρχεσαι αεροπορικώς."
+ },
+ "specialties": [
+  {
+   "name": "Sfougato",
+   "name_el": "Σφουγγάτο",
+   "desc": "Kythnos' signature dish — a savoury herb-and-cheese pie made with local soft cheese (touloumotyri), eggs, parsley, mint and a thin pastry crust. Served at most family-run tavernas, especially in Chora and Loutra. Each kitchen has its own ratio of cheese to herbs.",
+   "desc_el": "Το χαρακτηριστικό πιάτο της Κύθνου — αλμυρή πίτα με βότανα και τυρί, με ντόπιο τουλουμοτύρι, αυγά, μαϊντανό, δυόσμο και λεπτό φύλλο. Σερβίρεται σε οικογενειακές ταβέρνες, ιδίως σε Χώρα και Λουτρά. Κάθε κουζίνα έχει τη δική της αναλογία τυριού και βοτάνων."
+  },
+  {
+   "name": "Touloumotyri",
+   "name_el": "Τουλουμοτύρι",
+   "desc": "Soft sheep's-milk cheese matured in goatskin (touloumi). Tangy, slightly piquant, denser than feta. Bought direct from village dairies or asked for at any taverna — it goes into the sfougato, on top of fresh bread, or simply with olive oil and oregano.",
+   "desc_el": "Μαλακό πρόβειο τυρί που ωριμάζει σε τουλούμι. Έντονη γεύση, ελαφρώς πικάντικη, πυκνότερη υφή από φέτα. Αγοράζεται απευθείας από τα τυροκομεία των χωριών ή ζητείται σε κάθε ταβέρνα — πάει στο σφουγγάτο, πάνω σε φρέσκο ψωμί, ή απλά με ελαιόλαδο και ρίγανη."
+  },
+  {
+   "name": "Thermal-spring lemonade",
+   "name_el": "Λεμονάδα Λουτρών",
+   "desc": "A summer-only treat at the cafés in Loutra, made with lemons from the nearby groves and the village's spring water. The water makes the difference — slightly mineral, which sharpens the lemon. Served with a sprig of garden mint.",
+   "desc_el": "Καλοκαιρινή απόλαυση στα καφέ των Λουτρών, με λεμόνια από τους κοντινούς λεμονόκηπους και το νερό των πηγών του χωριού. Το νερό κάνει τη διαφορά — ελαφρώς μεταλλικό, τονίζει το λεμόνι. Σερβίρεται με κλωνάρι φρέσκο δυόσμο."
+  }
+ ],
+ "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783277161/%CE%BA%CF%85%CE%B8%CE%BD%CE%BF%CF%82_mq6gnv.jpg"
 }
