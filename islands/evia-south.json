@@ -1,447 +1,447 @@
 {
- "key": "evia-south",
- "name": "Evia (South)",
- "name_el": "Εύβοια (Νότια)",
- "name_accusative_el": "Εύβοια (Νότια)",
- "name_genitive_el": "Εύβοιας (Νότιας)",
- "gender_el": "f",
- "subtitle": "Karystos, the Dragon Houses, Mt Ochi and the Dimosari Gorge — south Evia is the wild end",
- "subtitle_el": "Κάρυστος, τα Δρακόσπιτα, το Όρος Όχη και το Φαράγγι Δημοσάρη — η νότια Εύβοια είναι η άγρια άκρη",
- "intro": "South Evia is the island's most dramatic third — Mt Ochi (1,398m) rising sharply from the sea, the prehistoric \"Dragon Houses\" stone monuments at the summit, the Dimosari Gorge cutting north to south, and Karystos as the base — a low-key Aegean town with a Venetian castle. The water is warmer here than the rest of Evia, the beaches are sandier, and the road network is gloriously underdeveloped. Reach south Evia from Athens via the Marmari ferry (1h crossing from Rafina) — much faster than driving via the Chalkida bridge and down the length of the island.",
- "intro_el": "Η νότια Εύβοια είναι το πιο επιβλητικό κομμάτι του νησιού — η Όχη (1.398 μ.) ξεπροβάλλει απότομα από τη θάλασσα, τα προϊστορικά \"Δρακόσπιτα\" στην κορυφή, το Φαράγγι Δημοσάρη που κόβει το νησί από βορρά σε νότο, και η Κάρυστος ως βάση — ήσυχη αιγαιοπελαγίτικη πόλη με βενετσιάνικο κάστρο. Τα νερά εδώ είναι πιο ζεστά από την υπόλοιπη Εύβοια, οι παραλίες πιο αμμώδεις, και το οδικό δίκτυο ευτυχώς υπανάπτυκτο. Φτάνεις από την Αθήνα με το πλοίο για το Μαρμάρι (μία ώρα από τη Ραφήνα) — πολύ πιο γρήγορα απ’ ό,τι οδικώς μέσω Χαλκίδας.",
- "when_to_visit": {
-  "summary": "Southern Evia means Karystos and Mt Ochi — the Dragon Houses (drakospita), Castello Rosso, the Dimosari gorge. Drier and rockier than the north, with strong winds in winter. Best May-October. Karystos itself is sleepy off-season but never closes; the mountain hiking is great year-round if you bring proper kit.",
-  "summary_el": "Η νότια Εύβοια σημαίνει Κάρυστος και όρος Όχη — τα Δρακόσπιτα, το Castello Rosso, το φαράγγι Δημοσάρη. Πιο ξηρή και βραχώδης από τον βορρά, με δυνατούς ανέμους τον χειμώνα. Καλύτερα Μάιο–Οκτώβριο. Η ίδια η Κάρυστος είναι νυσταγμένη εκτός σεζόν αλλά δεν κλείνει ποτέ· η ορεινή πεζοπορία είναι υπέροχη όλο τον χρόνο αν έχεις τον σωστό εξοπλισμό.",
-  "months": [
-   {
-    "tag": "ok",
-    "why": "Quiet, windy",
-    "why_el": "Ήσυχα, αέρας, Κάρυστος"
-   },
-   {
-    "tag": "ok",
-    "why": "Cold, hiking",
-    "why_el": "Κρύο, πεζοπορία"
-   },
-   {
-    "tag": "great",
-    "why": "Wildflowers, Mt Ochi",
-    "why_el": "Αγριολούλουδα, η Όχη"
-   },
-   {
-    "tag": "great",
-    "why": "Easter, walks",
-    "why_el": "Πάσχα & πεζοπορία"
-   },
-   {
-    "tag": "perfect",
-    "why": "Drakospita",
-    "why_el": "Δρακόσπιτα, ζεσταίνει"
-   },
-   {
-    "tag": "perfect",
-    "why": "Long days, ideal",
-    "why_el": "Ολοήμερο φως"
-   },
-   {
-    "tag": "ok",
-    "why": "Hot, Athens crowd",
-    "why_el": "Ζέστη, ΣΚ Αθηναίοι"
-   },
-   {
-    "tag": "ok",
-    "why": "Peak Greek holidays",
-    "why_el": "2 βδομ. φόρτος"
-   },
-   {
-    "tag": "perfect",
-    "why": "Sweet spot — sea +",
-    "why_el": "Καλύτερος — θάλ."
-   },
-   {
-    "tag": "great",
-    "why": "Hiking ideal",
-    "why_el": "Πεζοπορία+μπάνια"
-   },
-   {
-    "tag": "great",
-    "why": "Quiet, hiking",
-    "why_el": "Ήσυχα, πεζοπορία"
-   },
-   {
-    "tag": "ok",
-    "why": "Cold, windy",
-    "why_el": "Κρύο, αέρας"
-   }
-  ]
- },
- "itinerary": {
-  "title": "3-Day South Evia Itinerary",
-  "title_el": "Δρομολόγιο 3 ημερών — Νότια Εύβοια",
-  "subtitle": "Karystos as your base. The Castello Rosso, the Dragon Houses on Mt Ochi, the full Dimosari Gorge walk, and three of Evia's best beaches.",
-  "subtitle_el": "Με βάση την Κάρυστο. Το Castello Rosso, τα Δρακόσπιτα στην Όχη, η διάβαση του Δημοσάρη, και τρεις από τις καλύτερες παραλίες της Εύβοιας.",
-  "days": [
-   {
-    "day": 1,
-    "title": "Athens → Karystos & Castello Rosso",
-    "title_el": "Αθήνα → Κάρυστος & Castello Rosso",
-    "overnight": "Karystos",
-    "overnight_el": "Κάρυστος",
-    "drive_km": 70,
-    "drive_min": 180,
-    "stops": [
-     {
-      "time": "10:00",
-      "name": "Drive Athens → Rafina → Ferry to Marmari",
-      "lat": 38.04,
-      "lng": 24.336,
-      "type": "arrival",
-      "desc": "30min drive to Rafina, then 1h ferry to Marmari (frequent crossings, takes cars). Marmari to Karystos is another 15 min drive.",
-      "name_el": "Διαδρομή Αθήνα → Ραφήνα → Πλοίο Μαρμάρι",
-      "desc_el": "30λ οδικώς στη Ραφήνα, μετά 1ω πλοίο για Μαρμάρι (συχνά δρομολόγια, παίρνει αυτοκίνητα). Από Μαρμάρι στην Κάρυστο άλλα 15 λεπτά.",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJk1RA_2zToxQRaK9sZVYA23I",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757600/Marmari_01_dwnwgw.jpg",
-      "photo_credit": null
-     },
-     {
-      "time": "16:00",
-      "name": "Castello Rosso (Bourtzi)",
-      "lat": 38.0347163,
-      "lng": 24.4313975,
-      "type": "castle",
-      "desc": "13th-century Venetian-built castle on the hill above Karystos. 30-minute climb up — sunset views over the bay are the reward. The lower 'Bourtzi' tower in town is also worth the 15 minutes.",
-      "name_el": "Castello Rosso (Μπούρτζι)",
-      "desc_el": "Βενετσιάνικο κάστρο του 13ου αιώνα στον λόφο πάνω από την Κάρυστο. 30λ ανάβαση — η θέα στο ηλιοβασίλεμα είναι η ανταμοιβή. Ο πύργος Μπούρτζι κάτω στην πόλη επίσης αξίζει 15 λεπτά.",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJuSMHXq_MoxQRsPgxo-yswJ0",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757599/%CE%BC%CF%80%CE%BF%CF%85%CF%81%CF%84%CE%B6%CE%B9_v5q0jx.jpg",
-      "photo_credit": null
-     },
-     {
-      "time": "18:00",
-      "name": "Agia Paraskevi Beach",
-      "name_el": "Παραλία Αγία Παρασκευή",
-      "type": "beach",
+  "key": "evia-south",
+  "name": "Evia (South)",
+  "name_el": "Εύβοια (Νότια)",
+  "name_accusative_el": "Εύβοια (Νότια)",
+  "name_genitive_el": "Εύβοιας (Νότιας)",
+  "gender_el": "f",
+  "subtitle": "Karystos, the Dragon Houses, Mt Ochi and the Dimosari Gorge — south Evia is the wild end",
+  "subtitle_el": "Κάρυστος, τα Δρακόσπιτα, το Όρος Όχη και το Φαράγγι Δημοσάρη — η νότια Εύβοια είναι η άγρια άκρη",
+  "intro": "South Evia is the island's most dramatic third — Mt Ochi (1,398m) rising sharply from the sea, the prehistoric \"Dragon Houses\" stone monuments at the summit, the Dimosari Gorge cutting north to south, and Karystos as the base — a low-key Aegean town with a Venetian castle. The water is warmer here than the rest of Evia, the beaches are sandier, and the road network is gloriously underdeveloped. Reach south Evia from Athens via the Marmari ferry (1h crossing from Rafina) — much faster than driving via the Chalkida bridge and down the length of the island.",
+  "intro_el": "Η νότια Εύβοια είναι το πιο επιβλητικό κομμάτι του νησιού — η Όχη (1.398 μ.) ξεπροβάλλει απότομα από τη θάλασσα, τα προϊστορικά \"Δρακόσπιτα\" στην κορυφή, το Φαράγγι Δημοσάρη που κόβει το νησί από βορρά σε νότο, και η Κάρυστος ως βάση — ήσυχη αιγαιοπελαγίτικη πόλη με βενετσιάνικο κάστρο. Τα νερά εδώ είναι πιο ζεστά από την υπόλοιπη Εύβοια, οι παραλίες πιο αμμώδεις, και το οδικό δίκτυο ευτυχώς υπανάπτυκτο. Φτάνεις από την Αθήνα με το πλοίο για το Μαρμάρι (μία ώρα από τη Ραφήνα) — πολύ πιο γρήγορα απ’ ό,τι οδικώς μέσω Χαλκίδας.",
+  "when_to_visit": {
+    "summary": "Southern Evia means Karystos and Mt Ochi — the Dragon Houses (drakospita), Castello Rosso, the Dimosari gorge. Drier and rockier than the north, with strong winds in winter. Best May-October. Karystos itself is sleepy off-season but never closes; the mountain hiking is great year-round if you bring proper kit.",
+    "summary_el": "Η νότια Εύβοια σημαίνει Κάρυστος και όρος Όχη — τα Δρακόσπιτα, το Castello Rosso, το φαράγγι Δημοσάρη. Πιο ξηρή και βραχώδης από τον βορρά, με δυνατούς ανέμους τον χειμώνα. Καλύτερα Μάιο–Οκτώβριο. Η ίδια η Κάρυστος είναι νυσταγμένη εκτός σεζόν αλλά δεν κλείνει ποτέ· η ορεινή πεζοπορία είναι υπέροχη όλο τον χρόνο αν έχεις τον σωστό εξοπλισμό.",
+    "months": [
+      {
+        "tag": "ok",
+        "why": "Quiet, windy",
+        "why_el": "Ήσυχα, αέρας, Κάρυστος"
+      },
+      {
+        "tag": "ok",
+        "why": "Cold, hiking",
+        "why_el": "Κρύο, πεζοπορία"
+      },
+      {
+        "tag": "great",
+        "why": "Wildflowers, Mt Ochi",
+        "why_el": "Αγριολούλουδα, η Όχη"
+      },
+      {
+        "tag": "great",
+        "why": "Easter, walks",
+        "why_el": "Πάσχα & πεζοπορία"
+      },
+      {
+        "tag": "perfect",
+        "why": "Drakospita",
+        "why_el": "Δρακόσπιτα, ζεσταίνει"
+      },
+      {
+        "tag": "perfect",
+        "why": "Long days, ideal",
+        "why_el": "Ολοήμερο φως"
+      },
+      {
+        "tag": "ok",
+        "why": "Hot, Athens crowd",
+        "why_el": "Ζέστη, ΣΚ Αθηναίοι"
+      },
+      {
+        "tag": "ok",
+        "why": "Peak Greek holidays",
+        "why_el": "2 βδομ. φόρτος"
+      },
+      {
+        "tag": "perfect",
+        "why": "Sweet spot — sea +",
+        "why_el": "Καλύτερος — θάλ."
+      },
+      {
+        "tag": "great",
+        "why": "Hiking ideal",
+        "why_el": "Πεζοπορία+μπάνια"
+      },
+      {
+        "tag": "great",
+        "why": "Quiet, hiking",
+        "why_el": "Ήσυχα, πεζοπορία"
+      },
+      {
+        "tag": "ok",
+        "why": "Cold, windy",
+        "why_el": "Κρύο, αέρας"
+      }
+    ]
+  },
+  "itinerary": {
+    "title": "3-Day South Evia Itinerary",
+    "title_el": "Πρόγραμμα 3 Ημερών — Νότια Εύβοια",
+    "subtitle": "Karystos as your base. The Castello Rosso, the Dragon Houses on Mt Ochi, the full Dimosari Gorge walk, and three of Evia's best beaches.",
+    "subtitle_el": "Με βάση την Κάρυστο. Το Castello Rosso, τα Δρακόσπιτα στην Όχη, η διάβαση του Δημοσάρη, και τρεις από τις καλύτερες παραλίες της Εύβοιας.",
+    "days": [
+      {
+        "day": 1,
+        "title": "Athens → Karystos & Castello Rosso",
+        "title_el": "Αθήνα → Κάρυστος & Castello Rosso",
+        "overnight": "Karystos",
+        "overnight_el": "Κάρυστος",
+        "drive_km": 70,
+        "drive_min": 180,
+        "stops": [
+          {
+            "time": "10:00",
+            "name": "Drive Athens → Rafina → Ferry to Marmari",
+            "lat": 38.04,
+            "lng": 24.336,
+            "type": "arrival",
+            "desc": "30min drive to Rafina, then 1h ferry to Marmari (frequent crossings, takes cars). Marmari to Karystos is another 15 min drive.",
+            "name_el": "Διαδρομή Αθήνα → Ραφήνα → Πλοίο Μαρμάρι",
+            "desc_el": "30λ οδικώς στη Ραφήνα, μετά 1ω πλοίο για Μαρμάρι (συχνά δρομολόγια, παίρνει αυτοκίνητα). Από Μαρμάρι στην Κάρυστο άλλα 15 λεπτά.",
+            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJk1RA_2zToxQRaK9sZVYA23I",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757600/Marmari_01_dwnwgw.jpg",
+            "photo_credit": null
+          },
+          {
+            "time": "16:00",
+            "name": "Castello Rosso (Bourtzi)",
+            "lat": 38.0347163,
+            "lng": 24.4313975,
+            "type": "castle",
+            "desc": "13th-century Venetian-built castle on the hill above Karystos. 30-minute climb up — sunset views over the bay are the reward. The lower 'Bourtzi' tower in town is also worth the 15 minutes.",
+            "name_el": "Castello Rosso (Μπούρτζι)",
+            "desc_el": "Βενετσιάνικο κάστρο του 13ου αιώνα στον λόφο πάνω από την Κάρυστο. 30λ ανάβαση — η θέα στο ηλιοβασίλεμα είναι η ανταμοιβή. Ο πύργος Μπούρτζι κάτω στην πόλη επίσης αξίζει 15 λεπτά.",
+            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJuSMHXq_MoxQRsPgxo-yswJ0",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757599/%CE%BC%CF%80%CE%BF%CF%85%CF%81%CF%84%CE%B6%CE%B9_v5q0jx.jpg",
+            "photo_credit": null
+          },
+          {
+            "time": "18:00",
+            "name": "Agia Paraskevi Beach",
+            "name_el": "Παραλία Αγία Παρασκευή",
+            "type": "beach",
+            "lat": 38.018,
+            "lng": 24.413,
+            "wiki": "https://www.google.com/maps/search/?api=1&query=Agia+Paraskevi+Beach+Karystos",
+            "desc": "The Karystos town beach — fine sand, calm shallow water, walking distance from the dinner spot. After the climb up to Castello Rosso, an unhurried late-afternoon swim feels well earned. Locals and visitors mix here without the busy energy of southern Aegean beaches.",
+            "desc_el": "Η παραλία της πόλης του Καρύστου — λεπτή άμμος, ήρεμα ρηχά νερά, σε απόσταση περπατήματος από το μέρος του δείπνου. Μετά την ανηφόρα στο Castello Rosso, ένα αργό απογευματινό μπάνιο νιώθεται καλά κερδισμένο. Ντόπιοι και επισκέπτες ανακατεύονται εδώ χωρίς την έντονη ενέργεια των παραλιών του νότιου Αιγαίου.",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784758443/%CE%B1%CE%B3%CE%B9%CE%B1_%CF%80%CE%B1%CF%81%CE%B1%CF%83%CE%BA%CE%B5%CF%85%CE%B7_w9fqzg.jpg",
+            "photo_credit": null
+          }
+        ],
+        "color": "#1B4F8A",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Karystos (seafront)",
+            "area_el": "Κάρυστος",
+            "desc": "<a href=\"https://www.google.com/maps/search/Cavo+Doro+Karystos\" target=\"_blank\" rel=\"noopener\">Cavo D'Oro</a> sits right on the Karystos harbour, tables almost in the water.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Cavo+Doro+Karystos\" target=\"_blank\" rel=\"noopener\">Cavo D'Oro</a> βρίσκεται πάνω στο λιμάνι της Καρύστου, με τραπέζια σχεδόν μέσα στο νερό.",
+            "after": "Drive Athens → Rafina → Ferry to Marmari"
+          },
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Karystos",
+            "area_el": "Κάρυστος",
+            "desc": "<a href=\"https://www.google.com/maps/search/To+Rema+Karystos\" target=\"_blank\" rel=\"noopener\">To Rema</a> is the family-run traditional taverna just off the harbour — huge, generous servings.",
+            "desc_el": "Το <a href=\"https://www.google.com/maps/search/To+Rema+Karystos\" target=\"_blank\" rel=\"noopener\">To Rema</a> είναι η οικογενειακή παραδοσιακή ταβέρνα λίγο έξω από το λιμάνι — τεράστιες, γενναιόδωρες μερίδες.",
+            "after": "Agia Paraskevi Beach"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Mt Ochi & the Dragon Houses",
+        "title_el": "Όρος Όχη & Δρακόσπιτα",
+        "overnight": "Karystos",
+        "overnight_el": "Κάρυστος",
+        "drive_km": 60,
+        "drive_min": 240,
+        "stops": [
+          {
+            "time": "08:30",
+            "name": "Drive to the Mt Ochi trailhead (Mili village)",
+            "lat": 38.066,
+            "lng": 24.421,
+            "type": "village",
+            "desc": "30min drive northeast to Mili — the village at the foot of Mt Ochi where the trail begins. Park, fill water bottles at the village spring.",
+            "name_el": "Διαδρομή στην αρχή μονοπατιού Όχης (Μύλοι)",
+            "desc_el": "30λ οδικώς ΒΑ στους Μύλους — το χωριό στους πρόποδες της Όχης απ' όπου ξεκινάει το μονοπάτι. Παρκάρισμα, γέμισμα παγουριών στη βρύση.",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757597/%CE%BC%CF%85%CE%BB%CE%BF%CE%B9_kvtadc.jpg",
+            "photo_credit": null
+          },
+          {
+            "time": "10:00",
+            "name": "Hike Mt Ochi → Dragon Houses",
+            "lat": 38.084,
+            "lng": 24.466,
+            "type": "ruin",
+            "desc": "3-hour hike to the summit (1,398m). The reward is the prehistoric Drakospita — massive stone structures of unknown origin from ~600 BC. Views across to Andros and the open Aegean.",
+            "name_el": "Πεζοπορία Όχη → Δρακόσπιτα",
+            "desc_el": "3 ώρες πεζοπορία στην κορυφή (1.398μ). Η ανταμοιβή είναι τα προϊστορικά Δρακόσπιτα — τεράστιες πέτρινες κατασκευές αγνώστου προελεύσεως από ~600 π.Χ. Θέα ως την Άνδρο και το ανοιχτό Αιγαίο.",
+            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJrTzaTx_RoxQRSzhUaUcCB5o",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757598/%CE%B4%CF%81%CE%B1%CE%BA%CE%BF%CF%83%CF%80%CE%B9%CF%84%CE%B1_jjkti5.jpg",
+            "photo_credit": null
+          },
+          {
+            "time": "16:30",
+            "name": "Agios Dimitrios Beach",
+            "lat": 38.1420708699537,
+            "lng": 24.447662872403605,
+            "type": "beach",
+            "desc": "Come down off Mt Ochi and drive out to Agios Dimitrios — a long sweep of sand on the exposed east coast, under the ridgeline wind farms. Wide open and often brushed by the meltemi: glorious on a calm day, dramatic when it blows. Remote and barely organised, so carry water — the reward is space and quiet after the climb.",
+            "name_el": "Παραλία Άγιος Δημήτριος",
+            "desc_el": "Κατέβα από την Όχη και οδήγησε ως τον Άγιο Δημήτριο — μια μακριά αμμουδιά στην εκτεθειμένη ανατολική ακτή, κάτω από τα αιολικά πάρκα της κορυφογραμμής. Ανοιχτή και συχνά με μελτέμι: υπέροχη με άπνοια, εντυπωσιακή όταν φυσάει. Απομακρυσμένη και ελάχιστα οργανωμένη — φέρε νερό· η ανταμοιβή είναι χώρος και ησυχία μετά την ανάβαση.",
+            "wiki": "https://www.google.com/maps/search/Agios+Dimitrios+Beach+Evia",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757592/%CE%B1%CE%B3%CE%B9%CE%BF%CF%82_%CE%B4%CE%B7%CE%BC%CE%B7%CF%84%CF%81%CE%B9%CE%BF%CF%82_kudqyo.jpg",
+            "photo_credit": null
+          }
+        ],
+        "color": "#C0522A",
+        "food": [
+          {
+            "meal": "Lunch",
+            "meal_el": "Μεσημεριανό",
+            "area": "Mili village",
+            "area_el": "Μύλοι",
+            "desc": "Back at the <a href=\"https://www.google.com/maps/search/Mili+Karystos+Evia\" target=\"_blank\" rel=\"noopener\">Mili</a> trailhead — whatever the family has cooked that day, under the plane trees.",
+            "desc_el": "Πίσω στην αφετηρία στους <a href=\"https://www.google.com/maps/search/Mili+Karystos+Evia\" target=\"_blank\" rel=\"noopener\">Μύλους</a> — ό,τι έχει μαγειρέψει η οικογένεια εκείνη τη μέρα, κάτω από τα πλατάνια.",
+            "after": "Hike Mt Ochi → Dragon Houses"
+          },
+          {
+            "meal": "Dinner",
+            "meal_el": "Δείπνο",
+            "area": "Karystos (marina)",
+            "area_el": "Κάρυστος",
+            "desc": "At the marina end of town, <a href=\"https://www.google.com/maps/search/Mosxokarido+Karystos\" target=\"_blank\" rel=\"noopener\">Mosxokarido</a> on the <a href=\"https://www.google.com/maps/search/Karystos+waterfront\" target=\"_blank\" rel=\"noopener\">Karystos waterfront</a> does a varied menu right by the water.",
+            "desc_el": "Στην άκρη της μαρίνας, το <a href=\"https://www.google.com/maps/search/Mosxokarido+Karystos\" target=\"_blank\" rel=\"noopener\">Μοσχοκάρυδο</a> στην <a href=\"https://www.google.com/maps/search/Karystos+waterfront\" target=\"_blank\" rel=\"noopener\">παραλία της Καρύστου</a> κάνει ποικίλο μενού πάνω στο νερό.",
+            "after": "Kallianos Beach (or rest)"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Dimosari Gorge & Departure",
+        "title_el": "Φαράγγι Δημοσάρη & Αναχώρηση",
+        "overnight": null,
+        "overnight_el": null,
+        "drive_km": 90,
+        "drive_min": 240,
+        "stops": [
+          {
+            "time": "09:00",
+            "name": "Drive to Lenosaioi village (Dimosari trailhead)",
+            "lat": 38.085,
+            "lng": 24.397,
+            "type": "village",
+            "desc": "40min drive northeast through the mountains to Lenosaioi — the village where the gorge walk starts. Or hire a 4x4 transfer; the locals know.",
+            "name_el": "Διαδρομή στους Λενοσαίους (αρχή Δημοσάρη)",
+            "desc_el": "40λ οδικώς ΒΑ μέσα από τα βουνά στους Λενοσαίους — το χωριό απ' όπου ξεκινάει η διαδρομή του φαραγγιού. Ή νοίκιασε 4x4 transfer· οι ντόπιοι ξέρουν.",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757595/faraggi_ydxlu6.jpg",
+            "photo_credit": null
+          },
+          {
+            "time": "10:00",
+            "name": "Walk Dimosari Gorge",
+            "lat": 38.078,
+            "lng": 24.42,
+            "type": "nature",
+            "desc": "3-hour walk through one of Greece’s prettiest gorges — running water year-round, plane trees, small natural pools to swim in along the way. Ends at Kallianou beach. It’s a <a href=\"https://el.wikiloc.com/oreibasia-diadromes/pharaggi-demosare-kallianos-75620079\" target=\"_blank\" rel=\"noopener\">one-way route</a>, so plan how you’ll get back: the trailhead and the beach are far apart by road, so arrange a lift, taxi or second car — you can’t simply walk back to where you parked.",
+            "name_el": "Διάβαση Φαραγγιού Δημοσάρη",
+            "desc_el": "3 ώρες διάβαση μέσα από ένα από τα πιο όμορφα φαράγγια της Ελλάδας — τρεχούμενα νερά όλο τον χρόνο, πλατάνια, μικρές φυσικές πισίνες για μπάνιο. Καταλήγει στην Καλλιανού. Είναι <a href=\"https://el.wikiloc.com/oreibasia-diadromes/pharaggi-demosare-kallianos-75620079\" target=\"_blank\" rel=\"noopener\">διαδρομή μονής κατεύθυνσης</a>, οπότε οργάνωσε την επιστροφή: η αρχή του μονοπατιού και η παραλία απέχουν πολύ οδικώς, οπότε κανόνισε μεταφορά, ταξί ή δεύτερο αυτοκίνητο — δεν γυρίζεις με τα πόδια εκεί που πάρκαρες.",
+            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJWYr7ZQDJoxQRug5-2700bAA",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757596/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B1%CF%81%CE%B7_bsjgl0.webp",
+            "photo_credit": null
+          },
+          {
+            "time": "13:30",
+            "name": "Lunch & swim — Kallianou Beach",
+            "lat": 38.1411,
+            "lng": 24.4798,
+            "type": "beach",
+            "desc": "The gorge spits you out at one of the wildest beaches on the island — rocks, clear water, no development. Two seasonal canteens for cold beer and grilled fish.",
+            "name_el": "Μεσημεριανό & μπάνιο — Καλλιανού",
+            "desc_el": "Το φαράγγι σε βγάζει σε μία από τις πιο άγριες παραλίες του νησιού — βράχια, διαφανή νερά, χωρίς ανάπτυξη. Δύο εποχιακές καντίνες για κρύα μπίρα και ψητό ψάρι.",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757597/%CE%BA%CE%B1%CE%BB%CE%BB%CE%B9%CE%B1%CE%BD%CE%BF%CF%82_nspgtj.jpg",
+            "photo_credit": null
+          },
+          {
+            "time": "17:00",
+            "name": "Drive back to Marmari → Ferry → Athens",
+            "lat": 38.04,
+            "lng": 24.336,
+            "type": "departure",
+            "desc": "1h drive back, 1h ferry to Rafina, 30min drive to Athens. Total ~3h door to door. Book the ferry in advance for summer weekends.",
+            "name_el": "Επιστροφή Μαρμάρι → Πλοίο → Αθήνα",
+            "desc_el": "1ω οδικώς πίσω, 1ω πλοίο στη Ραφήνα, 30λ Αθήνα. Σύνολο ~3ω. Κλείσε εισιτήριο πλοίου από πριν για καλοκαιρινά Σαββατοκύριακα.",
+            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785604155/marmari_2_vkqc0q.jpg",
+            "photo_credit": null
+          }
+        ],
+        "color": "#5A7A3A"
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Agia Paraskevi (Karystos)",
       "lat": 38.018,
       "lng": 24.413,
-      "wiki": "https://www.google.com/maps/search/?api=1&query=Agia+Paraskevi+Beach+Karystos",
-      "desc": "The Karystos town beach — fine sand, calm shallow water, walking distance from the dinner spot. After the climb up to Castello Rosso, an unhurried late-afternoon swim feels well earned. Locals and visitors mix here without the busy energy of southern Aegean beaches.",
-      "desc_el": "Η παραλία της πόλης του Καρύστου — λεπτή άμμος, ήρεμα ρηχά νερά, σε απόσταση περπατήματος από το μέρος του δείπνου. Μετά την ανηφόρα στο Castello Rosso, ένα αργό απογευματινό μπάνιο νιώθεται καλά κερδισμένο. Ντόπιοι και επισκέπτες ανακατεύονται εδώ χωρίς την έντονη ενέργεια των παραλιών του νότιου Αιγαίου.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784758443/%CE%B1%CE%B3%CE%B9%CE%B1_%CF%80%CE%B1%CF%81%CE%B1%CF%83%CE%BA%CE%B5%CF%85%CE%B7_w9fqzg.jpg",
-      "photo_credit": null
-     }
-    ],
-    "color": "#1B4F8A",
-    "food": [
-     {
-      "meal": "Lunch",
-      "meal_el": "Μεσημεριανό",
-      "area": "Karystos (seafront)",
-      "area_el": "Κάρυστος",
-      "desc": "<a href=\"https://www.google.com/maps/search/Cavo+Doro+Karystos\" target=\"_blank\" rel=\"noopener\">Cavo D'Oro</a> sits right on the Karystos harbour, tables almost in the water.",
-      "desc_el": "Το <a href=\"https://www.google.com/maps/search/Cavo+Doro+Karystos\" target=\"_blank\" rel=\"noopener\">Cavo D'Oro</a> βρίσκεται πάνω στο λιμάνι της Καρύστου, με τραπέζια σχεδόν μέσα στο νερό.",
-      "after": "Drive Athens → Rafina → Ferry to Marmari"
-     },
-     {
-      "meal": "Dinner",
-      "meal_el": "Δείπνο",
-      "area": "Karystos",
-      "area_el": "Κάρυστος",
-      "desc": "<a href=\"https://www.google.com/maps/search/To+Rema+Karystos\" target=\"_blank\" rel=\"noopener\">To Rema</a> is the family-run traditional taverna just off the harbour — huge, generous servings.",
-      "desc_el": "Το <a href=\"https://www.google.com/maps/search/To+Rema+Karystos\" target=\"_blank\" rel=\"noopener\">To Rema</a> είναι η οικογενειακή παραδοσιακή ταβέρνα λίγο έξω από το λιμάνι — τεράστιες, γενναιόδωρες μερίδες.",
-      "after": "Agia Paraskevi Beach"
-     }
-    ]
-   },
-   {
-    "day": 2,
-    "title": "Mt Ochi & the Dragon Houses",
-    "title_el": "Όρος Όχη & Δρακόσπιτα",
-    "overnight": "Karystos",
-    "overnight_el": "Κάρυστος",
-    "drive_km": 60,
-    "drive_min": 240,
-    "stops": [
-     {
-      "time": "08:30",
-      "name": "Drive to the Mt Ochi trailhead (Mili village)",
-      "lat": 38.066,
-      "lng": 24.421,
-      "type": "village",
-      "desc": "30min drive northeast to Mili — the village at the foot of Mt Ochi where the trail begins. Park, fill water bottles at the village spring.",
-      "name_el": "Διαδρομή στην αρχή μονοπατιού Όχης (Μύλοι)",
-      "desc_el": "30λ οδικώς ΒΑ στους Μύλους — το χωριό στους πρόποδες της Όχης απ' όπου ξεκινάει το μονοπάτι. Παρκάρισμα, γέμισμα παγουριών στη βρύση.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757597/%CE%BC%CF%85%CE%BB%CE%BF%CE%B9_kvtadc.jpg",
-      "photo_credit": null
-     },
-     {
-      "time": "10:00",
-      "name": "Hike Mt Ochi → Dragon Houses",
-      "lat": 38.084,
-      "lng": 24.466,
-      "type": "ruin",
-      "desc": "3-hour hike to the summit (1,398m). The reward is the prehistoric Drakospita — massive stone structures of unknown origin from ~600 BC. Views across to Andros and the open Aegean.",
-      "name_el": "Πεζοπορία Όχη → Δρακόσπιτα",
-      "desc_el": "3 ώρες πεζοπορία στην κορυφή (1.398μ). Η ανταμοιβή είναι τα προϊστορικά Δρακόσπιτα — τεράστιες πέτρινες κατασκευές αγνώστου προελεύσεως από ~600 π.Χ. Θέα ως την Άνδρο και το ανοιχτό Αιγαίο.",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJrTzaTx_RoxQRSzhUaUcCB5o",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757598/%CE%B4%CF%81%CE%B1%CE%BA%CE%BF%CF%83%CF%80%CE%B9%CF%84%CE%B1_jjkti5.jpg",
-      "photo_credit": null
-     },
-     {
-      "time": "16:30",
-      "name": "Agios Dimitrios Beach",
-      "lat": 38.1420708699537,
-      "lng": 24.447662872403605,
-      "type": "beach",
-      "desc": "Come down off Mt Ochi and drive out to Agios Dimitrios — a long sweep of sand on the exposed east coast, under the ridgeline wind farms. Wide open and often brushed by the meltemi: glorious on a calm day, dramatic when it blows. Remote and barely organised, so carry water — the reward is space and quiet after the climb.",
-      "name_el": "Παραλία Άγιος Δημήτριος",
-      "desc_el": "Κατέβα από την Όχη και οδήγησε ως τον Άγιο Δημήτριο — μια μακριά αμμουδιά στην εκτεθειμένη ανατολική ακτή, κάτω από τα αιολικά πάρκα της κορυφογραμμής. Ανοιχτή και συχνά με μελτέμι: υπέροχη με άπνοια, εντυπωσιακή όταν φυσάει. Απομακρυσμένη και ελάχιστα οργανωμένη — φέρε νερό· η ανταμοιβή είναι χώρος και ησυχία μετά την ανάβαση.",
-      "wiki": "https://www.google.com/maps/search/Agios+Dimitrios+Beach+Evia",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757592/%CE%B1%CE%B3%CE%B9%CE%BF%CF%82_%CE%B4%CE%B7%CE%BC%CE%B7%CF%84%CF%81%CE%B9%CE%BF%CF%82_kudqyo.jpg",
-      "photo_credit": null
-     }
-    ],
-    "color": "#C0522A",
-    "food": [
-     {
-      "meal": "Lunch",
-      "meal_el": "Μεσημεριανό",
-      "area": "Mili village",
-      "area_el": "Μύλοι",
-      "desc": "Back at the <a href=\"https://www.google.com/maps/search/Mili+Karystos+Evia\" target=\"_blank\" rel=\"noopener\">Mili</a> trailhead — whatever the family has cooked that day, under the plane trees.",
-      "desc_el": "Πίσω στην αφετηρία στους <a href=\"https://www.google.com/maps/search/Mili+Karystos+Evia\" target=\"_blank\" rel=\"noopener\">Μύλους</a> — ό,τι έχει μαγειρέψει η οικογένεια εκείνη τη μέρα, κάτω από τα πλατάνια.",
-      "after": "Hike Mt Ochi → Dragon Houses"
-     },
-     {
-      "meal": "Dinner",
-      "meal_el": "Δείπνο",
-      "area": "Karystos (marina)",
-      "area_el": "Κάρυστος",
-      "desc": "At the marina end of town, <a href=\"https://www.google.com/maps/search/Mosxokarido+Karystos\" target=\"_blank\" rel=\"noopener\">Mosxokarido</a> on the <a href=\"https://www.google.com/maps/search/Karystos+waterfront\" target=\"_blank\" rel=\"noopener\">Karystos waterfront</a> does a varied menu right by the water.",
-      "desc_el": "Στην άκρη της μαρίνας, το <a href=\"https://www.google.com/maps/search/Mosxokarido+Karystos\" target=\"_blank\" rel=\"noopener\">Μοσχοκάρυδο</a> στην <a href=\"https://www.google.com/maps/search/Karystos+waterfront\" target=\"_blank\" rel=\"noopener\">παραλία της Καρύστου</a> κάνει ποικίλο μενού πάνω στο νερό.",
-      "after": "Kallianos Beach (or rest)"
-     }
-    ]
-   },
-   {
-    "day": 3,
-    "title": "Dimosari Gorge & Departure",
-    "title_el": "Φαράγγι Δημοσάρη & Αναχώρηση",
-    "overnight": null,
-    "overnight_el": null,
-    "drive_km": 90,
-    "drive_min": 240,
-    "stops": [
-     {
-      "time": "09:00",
-      "name": "Drive to Lenosaioi village (Dimosari trailhead)",
-      "lat": 38.085,
-      "lng": 24.397,
-      "type": "village",
-      "desc": "40min drive northeast through the mountains to Lenosaioi — the village where the gorge walk starts. Or hire a 4x4 transfer; the locals know.",
-      "name_el": "Διαδρομή στους Λενοσαίους (αρχή Δημοσάρη)",
-      "desc_el": "40λ οδικώς ΒΑ μέσα από τα βουνά στους Λενοσαίους — το χωριό απ' όπου ξεκινάει η διαδρομή του φαραγγιού. Ή νοίκιασε 4x4 transfer· οι ντόπιοι ξέρουν.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757595/faraggi_ydxlu6.jpg",
-      "photo_credit": null
-     },
-     {
-      "time": "10:00",
-      "name": "Walk Dimosari Gorge",
-      "lat": 38.078,
-      "lng": 24.42,
-      "type": "nature",
-      "desc": "3-hour walk through one of Greece’s prettiest gorges — running water year-round, plane trees, small natural pools to swim in along the way. Ends at Kallianou beach. It’s a <a href=\"https://el.wikiloc.com/oreibasia-diadromes/pharaggi-demosare-kallianos-75620079\" target=\"_blank\" rel=\"noopener\">one-way route</a>, so plan how you’ll get back: the trailhead and the beach are far apart by road, so arrange a lift, taxi or second car — you can’t simply walk back to where you parked.",
-      "name_el": "Διάβαση Φαραγγιού Δημοσάρη",
-      "desc_el": "3 ώρες διάβαση μέσα από ένα από τα πιο όμορφα φαράγγια της Ελλάδας — τρεχούμενα νερά όλο τον χρόνο, πλατάνια, μικρές φυσικές πισίνες για μπάνιο. Καταλήγει στην Καλλιανού. Είναι <a href=\"https://el.wikiloc.com/oreibasia-diadromes/pharaggi-demosare-kallianos-75620079\" target=\"_blank\" rel=\"noopener\">διαδρομή μονής κατεύθυνσης</a>, οπότε οργάνωσε την επιστροφή: η αρχή του μονοπατιού και η παραλία απέχουν πολύ οδικώς, οπότε κανόνισε μεταφορά, ταξί ή δεύτερο αυτοκίνητο — δεν γυρίζεις με τα πόδια εκεί που πάρκαρες.",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJWYr7ZQDJoxQRug5-2700bAA",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757596/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B1%CF%81%CE%B7_bsjgl0.webp",
-      "photo_credit": null
-     },
-     {
-      "time": "13:30",
-      "name": "Lunch & swim — Kallianou Beach",
+      "type": "sandy",
+      "type_el": "Άμμος",
+      "name_el": "Αγία Παρασκευή Καρύστου",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ-2-grqszohQRHDR-ZzEb1mc",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784758505/agia_paraskevi_2_tkrn3i.jpg",
+      "photo_credit": null,
+      "desc": "The 1.5km town beach of Karystos — fine sand, shallow water and the Venetian Bourtzi tower as a backdrop. Fully organised with sunbeds, cafés and tavernas along the front, and by far the easiest beach to reach in south Evia. The gentle counterpoint to the wild coves further out.",
+      "desc_el": "Η αμμώδης παραλία 1,5 χλμ. της Καρύστου — ψιλή άμμος, ρηχά νερά και ο βενετσιάνικος πύργος Μπούρτζι για φόντο. Πλήρως οργανωμένη με ξαπλώστρες, καφέ και ταβέρνες, και μακράν η πιο εύκολα προσβάσιμη παραλία της νότιας Εύβοιας. Το ήπιο αντίβαρο στους άγριους όρμους πιο πέρα.",
+      "rating": 4,
+      "length": "1.5 km",
+      "depth": "Shallow — gradual sandy entry",
+      "depth_el": "Ρηχό — σταδιακή αμμώδης είσοδος",
+      "facing": "South-facing — Karystos bay",
+      "facing_el": "Νότια — κόλπος Καρύστου",
+      "facilities": "Fully organised: sunbeds, beach bars, cafés and tavernas along the front; easy parking, walkable from Karystos town.",
+      "facilities_el": "Πλήρως οργανωμένη: ξαπλώστρες, beach bars, καφέ και ταβέρνες στο μέτωπο· εύκολο πάρκινγκ, με τα πόδια από την Κάρυστο."
+    },
+    {
+      "name": "Kallianou Beach",
       "lat": 38.1411,
       "lng": 24.4798,
-      "type": "beach",
-      "desc": "The gorge spits you out at one of the wildest beaches on the island — rocks, clear water, no development. Two seasonal canteens for cold beer and grilled fish.",
-      "name_el": "Μεσημεριανό & μπάνιο — Καλλιανού",
-      "desc_el": "Το φαράγγι σε βγάζει σε μία από τις πιο άγριες παραλίες του νησιού — βράχια, διαφανή νερά, χωρίς ανάπτυξη. Δύο εποχιακές καντίνες για κρύα μπίρα και ψητό ψάρι.",
+      "type": "pebbly",
+      "type_el": "Βότσαλο",
+      "name_el": "Παραλία Καλλιανού",
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757597/%CE%BA%CE%B1%CE%BB%CE%BB%CE%B9%CE%B1%CE%BD%CE%BF%CF%82_nspgtj.jpg",
-      "photo_credit": null
-     },
-     {
-      "time": "17:00",
-      "name": "Drive back to Marmari → Ferry → Athens",
-      "lat": 38.04,
-      "lng": 24.336,
-      "type": "departure",
-      "desc": "1h drive back, 1h ferry to Rafina, 30min drive to Athens. Total ~3h door to door. Book the ferry in advance for summer weekends.",
-      "name_el": "Επιστροφή Μαρμάρι → Πλοίο → Αθήνα",
-      "desc_el": "1ω οδικώς πίσω, 1ω πλοίο στη Ραφήνα, 30λ Αθήνα. Σύνολο ~3ω. Κλείσε εισιτήριο πλοίου από πριν για καλοκαιρινά Σαββατοκύριακα.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785604155/marmari_2_vkqc0q.jpg",
-      "photo_credit": null
-     }
+      "photo_credit": null,
+      "desc": "The wild mouth of the Dimosari Gorge — pebbles, deep clear water and no development at all. You reach it on foot down the gorge or by 4x4 on a rough track, and there's nothing here but the sea, so bring everything. One of the many south-Evia beaches that make you work for them.",
+      "desc_el": "Η άγρια εκβολή του φαραγγιού του Δημοσάρη — βότσαλο, βαθιά διάφανα νερά και καμία απολύτως ανάπτυξη. Φτάνεις πεζή μέσα από το φαράγγι ή με 4x4 σε χωματόδρομο, και δεν υπάρχει τίποτα πέρα από τη θάλασσα — φέρε τα πάντα. Μία από τις πολλές παραλίες της νότιας Εύβοιας που σε βάζουν να κοπιάσεις.",
+      "rating": 5,
+      "length": "300 m",
+      "depth": "Deep — drops off quickly, very clear",
+      "depth_el": "Βαθύ — απότομη κλίση, πολύ διαυγές",
+      "facing": "East-facing — gorge mouth",
+      "facing_el": "Ανατολική — εκβολή φαραγγιού",
+      "facilities": "None — no shade, water or canteen. Reached on foot down the Dimosari Gorge or by 4x4 on a rough track.",
+      "facilities_el": "Καμία παροχή — χωρίς σκιά, νερό ή καντίνα. Πρόσβαση πεζή μέσα από το φαράγγι του Δημοσάρη ή με 4x4 σε χωματόδρομο."
+    },
+    {
+      "name": "Marmari Beach",
+      "lat": 38.0491517,
+      "lng": 24.3217397,
+      "type": "sandy",
+      "type_el": "Άμμος",
+      "name_el": "Παραλία Μαρμαρίου",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJgd0YZ8nSoxQRq3I7-Jh4wvU",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757593/%CE%BC%CE%B1%CF%81%CE%BC%CE%B1%CF%81%CE%B9_%CF%80%CE%B1%CF%81%CE%B1%CE%BB%CE%B9%CE%B1_oz85fl.jpg",
+      "photo_credit": null,
+      "desc": "The sandy beach right by Marmari's ferry port — handy for a swim before or after the Rafina crossing. Calm, shallow, kid-friendly water with a few cafés steps away. The convenient one, not the spectacular one.",
+      "desc_el": "Η αμμώδης παραλία δίπλα στο λιμάνι του Μαρμαρίου — βολική για μπάνιο πριν ή μετά το πλοίο από/προς Ραφήνα. Ήρεμα, ρηχά, οικογενειακά νερά με λίγα καφέ δίπλα. Η βολική επιλογή, όχι η εντυπωσιακή.",
+      "rating": 4,
+      "length": "400 m",
+      "depth": "Shallow — calm, kid-friendly",
+      "depth_el": "Ρηχό — ήρεμο, οικογενειακό",
+      "facing": "Southwest-facing",
+      "facing_el": "Νοτιοδυτική",
+      "facilities": "Organised: sunbeds and cafés; steps from the ferry port and parking.",
+      "facilities_el": "Οργανωμένη: ξαπλώστρες και καφέ· δίπλα στο λιμάνι και στο πάρκινγκ."
+    },
+    {
+      "name": "Livadi Beach",
+      "name_el": "Παραλία Λιβάδι",
+      "rating": 5,
+      "type": "sandy",
+      "type_el": "Αμμουδιά",
+      "lat": 37.987625543980826,
+      "lng": 24.556237940691872,
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757595/%CE%BB%CE%B9%CE%B2%CE%B1%CE%B4%CE%B9_xcrao0.avif",
+      "photo_credit": null,
+      "desc": "A long, open sand beach on the wild southeast coast below Platanistos, deep in the remote Kafireas (Cavo d'Oro) corner. Undeveloped and often deserted, reached only by a long drive on rough roads — bring your own shade, water and food. South Evia hides dozens of beaches like this: superb, but you earn them.",
+      "desc_el": "Μακριά, ανοιχτή αμμουδιά στη άγρια νοτιοανατολική ακτή κάτω από τον Πλατανιστό, βαθιά στην απομακρυσμένη γωνιά του Καφηρέα (Κάβο Ντόρο). Χωρίς ανάπτυξη και συχνά έρημη, προσβάσιμη μόνο με μεγάλη διαδρομή σε χωματόδρομους — φέρε σκιά, νερό και φαγητό. Η νότια Εύβοια κρύβει δεκάδες τέτοιες παραλίες: εξαιρετικές, αλλά τις κερδίζεις.",
+      "length": "600 m",
+      "depth": "Shallow to medium — clear open water",
+      "depth_el": "Ρηχό έως μέτριο — διαυγή ανοιχτά νερά",
+      "facing": "East-facing — open Aegean",
+      "facing_el": "Ανατολική — ανοιχτό Αιγαίο",
+      "facilities": "None — undeveloped. Long drive on rough roads below Platanistos; bring shade, water and food.",
+      "facilities_el": "Καμία παροχή — χωρίς ανάπτυξη. Μεγάλη διαδρομή σε χωματόδρομους κάτω από τον Πλατανιστό· φέρε σκιά, νερό και φαγητό."
+    },
+    {
+      "name": "Potami Beach",
+      "name_el": "Παραλία Ποτάμι",
+      "rating": 5,
+      "type": "sand & pebble",
+      "type_el": "Άμμος & βότσαλο",
+      "lat": 38.00639259656225,
+      "lng": 24.567087952642538,
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757593/%CF%80%CE%BF%CF%84%CE%B1%CE%BC%CE%B9_sj2vou.jpg",
+      "photo_credit": null,
+      "desc": "Sand-and-pebble beach at a river mouth (potami = river) in the far southeast near Platanistos, where the stream meets the sea in cold-fresh, crystal water. No facilities whatsoever, and the unpaved approach keeps it empty even in August. Remote in the best way.",
+      "desc_el": "Παραλία με άμμο και βότσαλο στην εκβολή ποταμού στα βαθιά νοτιοανατολικά, κοντά στον Πλατανιστό, εκεί που το ρέμα συναντά τη θάλασσα σε δροσερά, κρυστάλλινα νερά. Καμία υποδομή, και ο χωματόδρομος την κρατά άδεια ακόμη και τον Αύγουστο. Απομακρυσμένη με τον καλύτερο τρόπο.",
+      "length": "250 m",
+      "depth": "Medium — cool and fresh where the stream meets the sea",
+      "depth_el": "Μέτριο — δροσερό στην εκβολή του ρέματος",
+      "facing": "Southeast-facing",
+      "facing_el": "Νοτιοανατολική",
+      "facilities": "None — unpaved approach, no services at all.",
+      "facilities_el": "Καμία παροχή — χωματόδρομος, καμία υποδομή."
+    },
+    {
+      "name": "Agios Dimitrios Beach",
+      "name_el": "Παραλία Άγιος Δημήτριος",
+      "type": "sandy",
+      "type_el": "Αμμουδιά",
+      "lat": 38.1420708699537,
+      "lng": 24.447662872403605,
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757592/%CE%B1%CE%B3%CE%B9%CE%BF%CF%82_%CE%B4%CE%B7%CE%BC%CE%B7%CF%84%CF%81%CE%B9%CE%BF%CF%82_kudqyo.jpg",
+      "photo_credit": null,
+      "desc": "A long sandy beach on the exposed east coast beneath the Kafireas wind farms. Wide open and often wind-brushed by the meltemi — magnificent on a calm day, wild when it blows. Remote and lightly organised at best, and part of the string of hard-to-reach beaches that make this coast special.",
+      "desc_el": "Μακριά αμμουδιά στην εκτεθειμένη ανατολική ακτή κάτω από τα αιολικά πάρκα του Καφηρέα. Ανοιχτή και συχνά με μελτέμι — υπέροχη με άπνοια, άγρια όταν φυσάει. Απομακρυσμένη και στην καλύτερη περίπτωση ελαφρώς οργανωμένη, μέρος της σειράς δύσκολα προσβάσιμων παραλιών που κάνουν ξεχωριστή αυτή την ακτή.",
+      "rating": 5,
+      "length": "800 m",
+      "depth": "Shallow — gradual sandy entry",
+      "depth_el": "Ρηχό — σταδιακή αμμώδης είσοδος",
+      "facing": "East-facing — exposed to the meltemi",
+      "facing_el": "Ανατολική — εκτεθειμένη στο μελτέμι",
+      "facilities": "Minimal — a seasonal canteen at most; remote, below the ridgeline wind farms.",
+      "facilities_el": "Ελάχιστες παροχές — το πολύ μια εποχιακή καντίνα· απομακρυσμένη, κάτω από τα αιολικά της κορυφογραμμής."
+    },
+    {
+      "name": "Giannitsi Beach",
+      "name_el": "Παραλία Γιαννίτσι",
+      "rating": 5,
+      "type": "sandy",
+      "type_el": "Αμμουδιά",
+      "lat": 38.15879730032784,
+      "lng": 24.397395930161785,
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757592/%CE%B3%CE%B9%CE%B1%CE%BD%CE%BD%CE%B9%CF%84%CF%83%CE%B9_xrc8ie.jpg",
+      "photo_credit": null,
+      "desc": "A broad sweep of fine sand by the hamlet of Giannitsi on the east coast — turquoise water, a wild backdrop and minimal facilities. Among the best beaches in south Evia, and like most of them, a commitment to reach: the last stretch is unpaved.",
+      "desc_el": "Πλατιά αμμουδιά με ψιλή άμμο δίπλα στον οικισμό Γιαννίτσι στην ανατολική ακτή — τιρκουάζ νερά, άγριο τοπίο και ελάχιστες υποδομές. Από τις καλύτερες της νότιας Εύβοιας, και όπως οι περισσότερες, θέλει δέσμευση για να φτάσεις: το τελευταίο κομμάτι είναι χωματόδρομος.",
+      "length": "500 m",
+      "depth": "Shallow to medium — turquoise water",
+      "depth_el": "Ρηχό έως μέτριο — τιρκουάζ νερά",
+      "facing": "East-facing",
+      "facing_el": "Ανατολική",
+      "facilities": "Minimal — a seasonal canteen at most; the last stretch of road is unpaved.",
+      "facilities_el": "Ελάχιστες παροχές — το πολύ μια εποχιακή καντίνα· το τελευταίο κομμάτι του δρόμου είναι χωματόδρομος."
+    }
+  ],
+  "getting_there": {
+    "pills": [
+      "⛵ Rafina ferry 1h",
+      "🚗 Drive 30min Athens → Rafina"
     ],
-    "color": "#5A7A3A"
-   }
-  ]
- },
- "beaches": [
-  {
-   "name": "Agia Paraskevi (Karystos)",
-   "lat": 38.018,
-   "lng": 24.413,
-   "type": "sandy",
-   "type_el": "Άμμος",
-   "name_el": "Αγία Παρασκευή Καρύστου",
-   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ-2-grqszohQRHDR-ZzEb1mc",
-   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784758505/agia_paraskevi_2_tkrn3i.jpg",
-   "photo_credit": null,
-   "desc": "The 1.5km town beach of Karystos — fine sand, shallow water and the Venetian Bourtzi tower as a backdrop. Fully organised with sunbeds, cafés and tavernas along the front, and by far the easiest beach to reach in south Evia. The gentle counterpoint to the wild coves further out.",
-   "desc_el": "Η αμμώδης παραλία 1,5 χλμ. της Καρύστου — ψιλή άμμος, ρηχά νερά και ο βενετσιάνικος πύργος Μπούρτζι για φόντο. Πλήρως οργανωμένη με ξαπλώστρες, καφέ και ταβέρνες, και μακράν η πιο εύκολα προσβάσιμη παραλία της νότιας Εύβοιας. Το ήπιο αντίβαρο στους άγριους όρμους πιο πέρα.",
-   "rating": 4,
-   "length": "1.5 km",
-   "depth": "Shallow — gradual sandy entry",
-   "depth_el": "Ρηχό — σταδιακή αμμώδης είσοδος",
-   "facing": "South-facing — Karystos bay",
-   "facing_el": "Νότια — κόλπος Καρύστου",
-   "facilities": "Fully organised: sunbeds, beach bars, cafés and tavernas along the front; easy parking, walkable from Karystos town.",
-   "facilities_el": "Πλήρως οργανωμένη: ξαπλώστρες, beach bars, καφέ και ταβέρνες στο μέτωπο· εύκολο πάρκινγκ, με τα πόδια από την Κάρυστο."
+    "pills_el": [
+      "⛵ Πλοίο Ραφήνας 1h",
+      "🚗 Οδικώς 30λ Αθήνα → Ραφήνα"
+    ],
+    "summary": "South Evia is reached from Rafina (30 min east of Athens) via the Marmari ferry — frequent daily crossings, ~1 hour, takes cars. Karystos is a 15-minute drive from Marmari port. The Chalkida route is much slower (3+ hours of internal driving).",
+    "summary_el": "Η νότια Εύβοια προσεγγίζεται από Ραφήνα (30λ ανατολικά Αθήνας) με το πλοίο Μαρμαρίου — συχνά καθημερινά δρομολόγια, ~1 ώρα, παίρνει αυτοκίνητα. Από το λιμάνι Μαρμαρίου στην Κάρυστο 15 λεπτά. Η διαδρομή Χαλκίδας είναι πολύ πιο αργή (3ω+ εσωτερικής οδήγησης).",
+    "tip": "Book the ferry in advance for summer weekends — Athenians flood Karystos and the boat sells out.",
+    "tip_el": "Κλείσε πλοίο από πριν για καλοκαιρινά Σαββατοκύριακα — οι Αθηναίοι ξεχύνονται στην Κάρυστο και το πλοίο γεμίζει."
   },
-  {
-   "name": "Kallianou Beach",
-   "lat": 38.1411,
-   "lng": 24.4798,
-   "type": "pebbly",
-   "type_el": "Βότσαλο",
-   "name_el": "Παραλία Καλλιανού",
-   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757597/%CE%BA%CE%B1%CE%BB%CE%BB%CE%B9%CE%B1%CE%BD%CE%BF%CF%82_nspgtj.jpg",
-   "photo_credit": null,
-   "desc": "The wild mouth of the Dimosari Gorge — pebbles, deep clear water and no development at all. You reach it on foot down the gorge or by 4x4 on a rough track, and there's nothing here but the sea, so bring everything. One of the many south-Evia beaches that make you work for them.",
-   "desc_el": "Η άγρια εκβολή του φαραγγιού του Δημοσάρη — βότσαλο, βαθιά διάφανα νερά και καμία απολύτως ανάπτυξη. Φτάνεις πεζή μέσα από το φαράγγι ή με 4x4 σε χωματόδρομο, και δεν υπάρχει τίποτα πέρα από τη θάλασσα — φέρε τα πάντα. Μία από τις πολλές παραλίες της νότιας Εύβοιας που σε βάζουν να κοπιάσεις.",
-   "rating": 5,
-   "length": "300 m",
-   "depth": "Deep — drops off quickly, very clear",
-   "depth_el": "Βαθύ — απότομη κλίση, πολύ διαυγές",
-   "facing": "East-facing — gorge mouth",
-   "facing_el": "Ανατολική — εκβολή φαραγγιού",
-   "facilities": "None — no shade, water or canteen. Reached on foot down the Dimosari Gorge or by 4x4 on a rough track.",
-   "facilities_el": "Καμία παροχή — χωρίς σκιά, νερό ή καντίνα. Πρόσβαση πεζή μέσα από το φαράγγι του Δημοσάρη ή με 4x4 σε χωματόδρομο."
-  },
-  {
-   "name": "Marmari Beach",
-   "lat": 38.0491517,
-   "lng": 24.3217397,
-   "type": "sandy",
-   "type_el": "Άμμος",
-   "name_el": "Παραλία Μαρμαρίου",
-   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJgd0YZ8nSoxQRq3I7-Jh4wvU",
-   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757593/%CE%BC%CE%B1%CF%81%CE%BC%CE%B1%CF%81%CE%B9_%CF%80%CE%B1%CF%81%CE%B1%CE%BB%CE%B9%CE%B1_oz85fl.jpg",
-   "photo_credit": null,
-   "desc": "The sandy beach right by Marmari's ferry port — handy for a swim before or after the Rafina crossing. Calm, shallow, kid-friendly water with a few cafés steps away. The convenient one, not the spectacular one.",
-   "desc_el": "Η αμμώδης παραλία δίπλα στο λιμάνι του Μαρμαρίου — βολική για μπάνιο πριν ή μετά το πλοίο από/προς Ραφήνα. Ήρεμα, ρηχά, οικογενειακά νερά με λίγα καφέ δίπλα. Η βολική επιλογή, όχι η εντυπωσιακή.",
-   "rating": 4,
-   "length": "400 m",
-   "depth": "Shallow — calm, kid-friendly",
-   "depth_el": "Ρηχό — ήρεμο, οικογενειακό",
-   "facing": "Southwest-facing",
-   "facing_el": "Νοτιοδυτική",
-   "facilities": "Organised: sunbeds and cafés; steps from the ferry port and parking.",
-   "facilities_el": "Οργανωμένη: ξαπλώστρες και καφέ· δίπλα στο λιμάνι και στο πάρκινγκ."
-  },
-  {
-   "name": "Livadi Beach",
-   "name_el": "Παραλία Λιβάδι",
-   "rating": 5,
-   "type": "sandy",
-   "type_el": "Αμμουδιά",
-   "lat": 37.987625543980826,
-   "lng": 24.556237940691872,
-   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757595/%CE%BB%CE%B9%CE%B2%CE%B1%CE%B4%CE%B9_xcrao0.avif",
-   "photo_credit": null,
-   "desc": "A long, open sand beach on the wild southeast coast below Platanistos, deep in the remote Kafireas (Cavo d'Oro) corner. Undeveloped and often deserted, reached only by a long drive on rough roads — bring your own shade, water and food. South Evia hides dozens of beaches like this: superb, but you earn them.",
-   "desc_el": "Μακριά, ανοιχτή αμμουδιά στη άγρια νοτιοανατολική ακτή κάτω από τον Πλατανιστό, βαθιά στην απομακρυσμένη γωνιά του Καφηρέα (Κάβο Ντόρο). Χωρίς ανάπτυξη και συχνά έρημη, προσβάσιμη μόνο με μεγάλη διαδρομή σε χωματόδρομους — φέρε σκιά, νερό και φαγητό. Η νότια Εύβοια κρύβει δεκάδες τέτοιες παραλίες: εξαιρετικές, αλλά τις κερδίζεις.",
-   "length": "600 m",
-   "depth": "Shallow to medium — clear open water",
-   "depth_el": "Ρηχό έως μέτριο — διαυγή ανοιχτά νερά",
-   "facing": "East-facing — open Aegean",
-   "facing_el": "Ανατολική — ανοιχτό Αιγαίο",
-   "facilities": "None — undeveloped. Long drive on rough roads below Platanistos; bring shade, water and food.",
-   "facilities_el": "Καμία παροχή — χωρίς ανάπτυξη. Μεγάλη διαδρομή σε χωματόδρομους κάτω από τον Πλατανιστό· φέρε σκιά, νερό και φαγητό."
-  },
-  {
-   "name": "Potami Beach",
-   "name_el": "Παραλία Ποτάμι",
-   "rating": 5,
-   "type": "sand & pebble",
-   "type_el": "Άμμος & βότσαλο",
-   "lat": 38.00639259656225,
-   "lng": 24.567087952642538,
-   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757593/%CF%80%CE%BF%CF%84%CE%B1%CE%BC%CE%B9_sj2vou.jpg",
-   "photo_credit": null,
-   "desc": "Sand-and-pebble beach at a river mouth (potami = river) in the far southeast near Platanistos, where the stream meets the sea in cold-fresh, crystal water. No facilities whatsoever, and the unpaved approach keeps it empty even in August. Remote in the best way.",
-   "desc_el": "Παραλία με άμμο και βότσαλο στην εκβολή ποταμού στα βαθιά νοτιοανατολικά, κοντά στον Πλατανιστό, εκεί που το ρέμα συναντά τη θάλασσα σε δροσερά, κρυστάλλινα νερά. Καμία υποδομή, και ο χωματόδρομος την κρατά άδεια ακόμη και τον Αύγουστο. Απομακρυσμένη με τον καλύτερο τρόπο.",
-   "length": "250 m",
-   "depth": "Medium — cool and fresh where the stream meets the sea",
-   "depth_el": "Μέτριο — δροσερό στην εκβολή του ρέματος",
-   "facing": "Southeast-facing",
-   "facing_el": "Νοτιοανατολική",
-   "facilities": "None — unpaved approach, no services at all.",
-   "facilities_el": "Καμία παροχή — χωματόδρομος, καμία υποδομή."
-  },
-  {
-   "name": "Agios Dimitrios Beach",
-   "name_el": "Παραλία Άγιος Δημήτριος",
-   "type": "sandy",
-   "type_el": "Αμμουδιά",
-   "lat": 38.1420708699537,
-   "lng": 24.447662872403605,
-   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757592/%CE%B1%CE%B3%CE%B9%CE%BF%CF%82_%CE%B4%CE%B7%CE%BC%CE%B7%CF%84%CF%81%CE%B9%CE%BF%CF%82_kudqyo.jpg",
-   "photo_credit": null,
-   "desc": "A long sandy beach on the exposed east coast beneath the Kafireas wind farms. Wide open and often wind-brushed by the meltemi — magnificent on a calm day, wild when it blows. Remote and lightly organised at best, and part of the string of hard-to-reach beaches that make this coast special.",
-   "desc_el": "Μακριά αμμουδιά στην εκτεθειμένη ανατολική ακτή κάτω από τα αιολικά πάρκα του Καφηρέα. Ανοιχτή και συχνά με μελτέμι — υπέροχη με άπνοια, άγρια όταν φυσάει. Απομακρυσμένη και στην καλύτερη περίπτωση ελαφρώς οργανωμένη, μέρος της σειράς δύσκολα προσβάσιμων παραλιών που κάνουν ξεχωριστή αυτή την ακτή.",
-   "rating": 5,
-   "length": "800 m",
-   "depth": "Shallow — gradual sandy entry",
-   "depth_el": "Ρηχό — σταδιακή αμμώδης είσοδος",
-   "facing": "East-facing — exposed to the meltemi",
-   "facing_el": "Ανατολική — εκτεθειμένη στο μελτέμι",
-   "facilities": "Minimal — a seasonal canteen at most; remote, below the ridgeline wind farms.",
-   "facilities_el": "Ελάχιστες παροχές — το πολύ μια εποχιακή καντίνα· απομακρυσμένη, κάτω από τα αιολικά της κορυφογραμμής."
-  },
-  {
-   "name": "Giannitsi Beach",
-   "name_el": "Παραλία Γιαννίτσι",
-   "rating": 5,
-   "type": "sandy",
-   "type_el": "Αμμουδιά",
-   "lat": 38.15879730032784,
-   "lng": 24.397395930161785,
-   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784757592/%CE%B3%CE%B9%CE%B1%CE%BD%CE%BD%CE%B9%CF%84%CF%83%CE%B9_xrc8ie.jpg",
-   "photo_credit": null,
-   "desc": "A broad sweep of fine sand by the hamlet of Giannitsi on the east coast — turquoise water, a wild backdrop and minimal facilities. Among the best beaches in south Evia, and like most of them, a commitment to reach: the last stretch is unpaved.",
-   "desc_el": "Πλατιά αμμουδιά με ψιλή άμμο δίπλα στον οικισμό Γιαννίτσι στην ανατολική ακτή — τιρκουάζ νερά, άγριο τοπίο και ελάχιστες υποδομές. Από τις καλύτερες της νότιας Εύβοιας, και όπως οι περισσότερες, θέλει δέσμευση για να φτάσεις: το τελευταίο κομμάτι είναι χωματόδρομος.",
-   "length": "500 m",
-   "depth": "Shallow to medium — turquoise water",
-   "depth_el": "Ρηχό έως μέτριο — τιρκουάζ νερά",
-   "facing": "East-facing",
-   "facing_el": "Ανατολική",
-   "facilities": "Minimal — a seasonal canteen at most; the last stretch of road is unpaved.",
-   "facilities_el": "Ελάχιστες παροχές — το πολύ μια εποχιακή καντίνα· το τελευταίο κομμάτι του δρόμου είναι χωματόδρομος."
-  }
- ],
- "getting_there": {
-  "pills": [
-   "⛵ Rafina ferry 1h",
-   "🚗 Drive 30min Athens → Rafina"
-  ],
-  "pills_el": [
-   "⛵ Πλοίο Ραφήνας 1h",
-   "🚗 Οδικώς 30λ Αθήνα → Ραφήνα"
-  ],
-  "summary": "South Evia is reached from Rafina (30 min east of Athens) via the Marmari ferry — frequent daily crossings, ~1 hour, takes cars. Karystos is a 15-minute drive from Marmari port. The Chalkida route is much slower (3+ hours of internal driving).",
-  "summary_el": "Η νότια Εύβοια προσεγγίζεται από Ραφήνα (30λ ανατολικά Αθήνας) με το πλοίο Μαρμαρίου — συχνά καθημερινά δρομολόγια, ~1 ώρα, παίρνει αυτοκίνητα. Από το λιμάνι Μαρμαρίου στην Κάρυστο 15 λεπτά. Η διαδρομή Χαλκίδας είναι πολύ πιο αργή (3ω+ εσωτερικής οδήγησης).",
-  "tip": "Book the ferry in advance for summer weekends — Athenians flood Karystos and the boat sells out.",
-  "tip_el": "Κλείσε πλοίο από πριν για καλοκαιρινά Σαββατοκύριακα — οι Αθηναίοι ξεχύνονται στην Κάρυστο και το πλοίο γεμίζει."
- },
- "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783273251/south_evia_mizhut.jpg"
+  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783273251/south_evia_mizhut.jpg"
 }
