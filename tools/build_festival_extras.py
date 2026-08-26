@@ -147,7 +147,7 @@ def header_nav(lang, toggle_href, active='festivals'):
     <nav class="top-nav" id="main-nav">
       <a href="{p}#compare">{L('Compare', 'Σύγκριση')}</a>
       <a href="{p}#match"{' class="active"' if active == 'match' else ''}>{L('Match Me', 'Βρες το Νησί σου')}</a>
-      <a href="{p}trip-cost/">{L('Budget', 'Μπάτζετ')}</a>
+      <a href="{p}trip-cost/">{L('Budget', 'Κόστος')}</a>
       <a href="{p}#hopping">{L('Ferries &amp; Hopping', 'Πλοία &amp; Νησοπορία')}</a>
       <a href="{p}festivals/"{' class="active"' if active == 'festivals' else ''}>{L('Festivals', 'Γιορτές')}</a>
       <a href="{p}#data">{L('Islands Data', 'Στοιχεία Νησιών')}</a>

@@ -1801,7 +1801,7 @@ def render_body(key, data, meta, lang='en'):
     <dt>{'Length' if lang=='en' else 'Μήκος'}</dt><dd>{blen}</dd>
     <dt>{'Depth' if lang=='en' else 'Βάθος'}</dt><dd>{bdepth}</dd>
     <dt>{'Wind protection' if lang=='en' else 'Προστασία από αέρα'}</dt><dd>{bfacing}</dd>
-    <dt>{'Facilities' if lang=='en' else 'Υποδομές'}</dt><dd>{bfac}</dd>
+    <dt>{'Facilities' if lang=='en' else 'Παροχές'}</dt><dd>{bfac}</dd>
   </dl>
 </article>''')
         beaches_html = f'<section class="seo-beaches"><h2>{heading}</h2>{intro_html}{"".join(beach_blocks)}</section>'
@@ -2674,7 +2674,7 @@ def generate_ferries_page(island_keys):
             'ferries':   ('Ferries',   'Πλοία'),
             'hopping':   ('Ferries & Hopping', 'Πλοία & Νησοπορία'),
             'match':     ('Match Me', 'Βρες το Νησί σου'),
-            'tripcost':  ('Budget', 'Μπάτζετ'),
+            'tripcost':  ('Budget', 'Κόστος'),
             'shortlist': ('⭐ My Shortlist', '⭐ Η Λίστα μου'),
             'mission':   ('Mission',   'Στόχος'),
             'privacy':   ('Privacy',   'Απόρρητο'),
@@ -3321,7 +3321,7 @@ def generate_festivals_page(island_keys):
             '    <nav class="top-nav" id="main-nav">\n'
             '      <a href="/' + ('el/' if is_el else '') + '#compare">' + ('Σύγκριση' if is_el else 'Compare') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#match">' + ('Βρες το Νησί σου' if is_el else 'Match Me') + '</a>\n'
-            '      <a href="/' + ('el/' if is_el else '') + 'trip-cost/">' + ('Μπάτζετ' if is_el else 'Budget') + '</a>\n'
+            '      <a href="/' + ('el/' if is_el else '') + 'trip-cost/">' + ('Κόστος' if is_el else 'Budget') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#hopping">' + ('Πλοία & Νησοπορία' if is_el else 'Ferries & Hopping') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + 'festivals/" class="active">' + ('Γιορτές' if is_el else 'Festivals') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#data">' + ('Στοιχεία Νησιών' if is_el else 'Islands Data') + '</a>\n'

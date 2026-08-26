@@ -258,7 +258,7 @@ STR = {
         'swap_save': 'κερδίζεις', 'swap_more': 'επιπλέον', 'swap_apply': 'Αλλαγή', 'swap_instead': 'αντί για',
         'swap_overall': 'συνολικά', 'swap_beach': 'παραλίες',
         'footer_privacy': 'Απόρρητο', 'footer_mission': 'Στόχος', 'footer_lang': 'English',
-        'nav': [('/el/#compare', 'Σύγκριση'), ('/el/#match', 'Βρες το Νησί σου'), ('/el/trip-cost/', 'Μπάτζετ', True),
+        'nav': [('/el/#compare', 'Σύγκριση'), ('/el/#match', 'Βρες το Νησί σου'), ('/el/trip-cost/', 'Κόστος', True),
                 ('/el/#hopping', 'Πλοία & Νησοπορία'), ('/el/festivals/', 'Γιορτές'),
                 ('/el/#data', 'Στοιχεία Νησιών'), ('/el/#mission', 'Στόχος'), ('/el/#shortlist', '⭐ Η Λίστα μου')],
     },
@@ -302,7 +302,7 @@ def render_page(lang, meta, data):
 
     schema = json.dumps({
         '@context': 'https://schema.org', '@type': 'WebApplication',
-        'name': 'Greek Island Budget Planner' if not is_el else 'Μπάτζετ Ταξιδιού στα Ελληνικά Νησιά',
+        'name': 'Greek Island Budget Planner' if not is_el else 'Κόστος Ταξιδιού στα Ελληνικά Νησιά',
         'url': url, 'applicationCategory': 'TravelApplication',
         'operatingSystem': 'Web',
         'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'EUR'},

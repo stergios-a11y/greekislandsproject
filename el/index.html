@@ -119,7 +119,7 @@
       <nav class="top-nav" id="main-nav">
         <a href="#" id="nav-compare" data-i18n="nav.compare">Σύγκριση</a>
         <a href="#" id="nav-match" data-i18n="nav.match">Βρες το Νησί σου</a>
-        <a href="/el/trip-cost/" id="nav-tripcost" data-i18n="nav.tripcost">Μπάτζετ</a>
+        <a href="/el/trip-cost/" id="nav-tripcost" data-i18n="nav.tripcost">Κόστος</a>
         <a href="#" id="nav-hopping" data-i18n="nav.hopping">Πλοία &amp; Νησοπορία</a>
         <a href="/el/festivals/" id="nav-festivals" data-i18n="nav.festivals">Γιορτές</a>
         <a href="#" id="nav-data" data-i18n="nav.data">Στοιχεία Νησιών</a>
@@ -210,8 +210,8 @@
         <option value="hist" data-i18n="filter.culture">🏛️ Πολιτισμός</option>
         <option value="night" data-i18n="filter.night">🍷 Νυχτερινή ζωή</option>
         <option value="access" data-i18n="filter.access">🚢 Πρόσβαση</option>
-        <option value="afford" data-i18n="filter.afford">💸 Προσιτή τιμή</option>
-        <option value="car_need" data-i18n="filter.car">🚗 Χρησιμότητα οχήματος</option>
+        <option value="afford" data-i18n="filter.afford">💸 Οικονομικά</option>
+        <option value="car_need" data-i18n="filter.car">🚗 Εξάρτηση από αυτοκίνητο</option>
       </select></span>
         <span class="mf-divider"></span>
         <button id="vibe-filter-btn" class="vibe-filter-btn" onclick="toggleVibePanel()" aria-expanded="false" aria-label="Φίλτρα νησιών" data-i18n-aria-label="a11y.vibe_filters">
@@ -292,7 +292,7 @@
           <th data-col="night" class="th-dim" data-i18n="data.col.night">Νύχτα ↕</th>
           <th data-col="access" class="th-dim" data-i18n="data.col.access">Πρόσβαση ↕</th>
           <th data-col="afford" class="th-dim" data-i18n="data.col.afford">Τιμή ↕</th>
-          <th data-col="car_need" class="th-dim" data-i18n="data.col.car" title="1 = δεν χρειάζεται, 5 = απαραίτητο" data-i18n-title="a11y.car_scale">🚗 Χρησιμότητα οχήματος ↕</th>
+          <th data-col="car_need" class="th-dim" data-i18n="data.col.car" title="1 = δεν χρειάζεται, 5 = απαραίτητο" data-i18n-title="a11y.car_scale">🚗 Εξάρτηση από αυτοκίνητο ↕</th>
           <th data-col="days" class="th-main" data-i18n="data.col.days">Μέρες ↕</th>
           <th data-col="has_airport" class="th-main" data-i18n="data.col.airport" title="Εμπορικό αεροδρόμιο στο νησί" data-i18n-title="a11y.has_airport">✈ Αεροδρόμιο ↕</th>
           <th data-col="area" class="th-main" data-i18n="data.col.area">Έκταση (km²) ↕</th>
@@ -308,7 +308,7 @@
     <p class="compare-intro" data-i18n="compare.intro">Επίλεξε δύο νησιά για σύγκριση.</p>
     <div class="compare-selectors">
       <select id="compare-select-a"><option value="" data-i18n="compare.optionA">— Νησί Α —</option></select>
-      <span class="vs-label" data-i18n="compare.vs">εναντίον</span>
+      <span class="vs-label" data-i18n="compare.vs">ή</span>
       <select id="compare-select-b"><option value="" data-i18n="compare.optionB">— Νησί Β —</option></select>
     </div>
     <div id="compare-container">
@@ -643,8 +643,8 @@
               <div class="rating-item"><span class="rating-label" data-i18n="sidebar.culture">Πολιτισμός &amp; Ιστορία</span><div class="stars-outer"><div id="star-hist" class="stars-inner"></div></div><span class="rating-val" id="val-hist"></span></div>
               <div class="rating-item"><span class="rating-label" data-i18n="sidebar.night">Νυχτερινή ζωή</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div><span class="rating-val" id="val-night"></span></div>
               <div class="rating-item"><span class="rating-label" data-i18n="sidebar.access">Ευκολία Πρόσβασης</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div><span class="rating-val" id="val-access"></span></div>
-              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.afford">Προσιτή τιμή</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div><span class="rating-val" id="val-afford"></span></div>
-              <div class="rating-item rating-item-car" title="" id="rating-item-car"><span class="rating-label" data-i18n="sidebar.car">Χρησιμότητα οχήματος</span><span class="rating-val" id="val-car"></span></div>
+              <div class="rating-item"><span class="rating-label" data-i18n="sidebar.afford">Οικονομικά</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div><span class="rating-val" id="val-afford"></span></div>
+              <div class="rating-item rating-item-car" title="" id="rating-item-car"><span class="rating-label" data-i18n="sidebar.car">Εξάρτηση από αυτοκίνητο</span><span class="rating-val" id="val-car"></span></div>
             </div>
             <div class="blueprint-divider"></div>
             <div id="sidebar-stats" class="blueprint-stats">
