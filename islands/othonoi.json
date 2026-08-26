@@ -1,188 +1,188 @@
 {
-  "key": "othonoi",
-  "name": "Othonoi",
-  "subtitle": "The westernmost speck of Greece — Calypso's cave and empty bays off Corfu",
-  "intro": "Othonoi is the largest and most westerly of the Diapontia islands, northwest of Corfu — in fact the westernmost point of Greece. Legend ties it to Calypso and the cave where she is said to have kept Odysseus. It has a working harbour village (Ammos), a scatter of hamlets in the green interior, and a strong emigrant history to New York and Italy that you still hear in the accents and see in the shuttered mansions. Beaches are white-pebble and often deserted; the ferry from Corfu is long, so most who come stay a night or two.",
-  "when_to_visit": {
-    "summary": "A summer island: rooms and tavernas run roughly late May to September. June and September give warm water and empty bays; July–August bring Greek-Italian families and the handful of rooms fill. Winter service is minimal.",
-    "summary_el": "Καλοκαιρινό νησί: δωμάτια και ταβέρνες λειτουργούν περίπου τέλη Μαΐου με Σεπτέμβριο. Ιούνιος και Σεπτέμβριος έχουν ζεστά νερά και άδειους όρμους· Ιούλιο–Αύγουστο έρχονται ελληνοϊταλικές οικογένειες και τα λίγα δωμάτια γεμίζουν. Τον χειμώνα τα δρομολόγια ελάχιστα.",
-    "months": [
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Σχεδόν όλα κλειστά",
-        "limited": true
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Σκελετός υπηρεσιών",
-        "limited": true
-      },
-      {
-        "tag": "avoid",
-        "why": "Few ferries",
-        "why_el": "Λίγα πλοία",
-        "limited": true
-      },
-      {
-        "tag": "ok",
-        "why": "Awakening",
-        "why_el": "Ήσυχα, πρώτες αφίξεις",
-        "limited": true
-      },
-      {
-        "tag": "great",
-        "why": "Sea warming",
-        "why_el": "Κολυμπιέται πια"
-      },
-      {
-        "tag": "perfect",
-        "why": "Warm, near-empty",
-        "why_el": "Ζεστά, σχεδόν άδεια"
-      },
-      {
-        "tag": "great",
-        "why": "Hot, calm",
-        "why_el": "Ζέστη, ήσυχα"
-      },
-      {
-        "tag": "ok",
-        "why": "Peak Greeks, busy",
-        "why_el": "Αιχμή Ελλήνων"
-      },
-      {
-        "tag": "perfect",
-        "why": "Best — peaceful",
-        "why_el": "Καλύτερος — ζεστά"
-      },
-      {
-        "tag": "ok",
-        "why": "Season ending",
-        "why_el": "Κλείνουν σιγά"
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Μόνο ντόπιοι",
-        "limited": true
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season, thin",
-        "why_el": "Χειμώνας, ελάχιστα",
-        "limited": true
-      }
-    ]
-  },
-  "itinerary": {
-    "title": "1-Day Othonoi Itinerary",
-    "subtitle": "Ammos harbour village, Aspri Ammos beach and the Calypso cave.",
-    "days": [
-      {
-        "day": 1,
-        "title": "Harbour, Cave & White Bays",
-        "color": "#0B8FAC",
-        "km": 6,
-        "drive_mins": 40,
-        "overnight": "Ammos (Othonoi)",
-        "stops": [
-          {
-            "name": "Ammos (harbour village)",
-            "lat": 39.84126747442995,
-            "lng": 19.405368669947997,
-            "type": "harbour",
-            "time": "11:00",
-            "wiki": "https://www.google.com/maps/search/Ammos%20%28harbour%20village%29%20Othonoi",
-            "desc": "The port and main village, with a pebble beach right along the front, a few tavernas and rooms, and the ferry quay. Everything on Othonoi radiates from here.",
-            "name_el": "Άμμος (Λιμανοχώρι)",
-            "desc_el": "Το λιμάνι και κύριο χωριό, με βοτσαλωτή παραλία στο μέτωπο, λίγες ταβέρνες και δωμάτια, και την προβλήτα του πλοίου. Τα πάντα στους Οθωνούς ξεκινούν από εδώ.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784240375/%CE%BB%CE%B9%CE%BC%CE%B1%CE%BD%CE%B9_u3t0ie.jpg"
-          },
-          {
-            "name": "Aspri Ammos beach",
-            "lat": 39.842236520426916,
-            "lng": 19.383421999035566,
-            "type": "beach",
-            "time": "12:30",
-            "wiki": "https://www.google.com/maps/search/Aspri%20Ammos%20beach%20Othonoi",
-            "desc": "A bright white-pebble bay on the exposed southwest coast, backed by pale cliffs — the island's showpiece beach. Reached by footpath or a short boat trip; bring shade.",
-            "name_el": "Παραλία Άσπρη Άμμος",
-            "desc_el": "Ένας κάτασπρος βοτσαλωτός όρμος στη δυτική ακτή, με ανοιχτόχρωμους βράχους από πίσω — η ομορφότερη παραλία του νησιού. Πρόσβαση με μονοπάτι ή σύντομη βαρκάδα· πάρε σκιά.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784240684/%CE%B1%CF%83%CF%80%CF%81%CE%B7_%CE%B1%CE%BC%CE%BC%CE%BF%CF%83_2_gjv7zp.jpg"
-          },
-          {
-            "name": "Calypso Cave",
-            "lat": 39.84195666662084,
-            "lng": 19.378352389812136,
-            "type": "nature",
-            "time": "14:00",
-            "wiki": "https://www.google.com/maps/search/Calypso%20Cave%20Othonoi",
-            "desc": "A sea cave on the wild southwest shore tied by legend to the nymph Calypso and Odysseus. Best seen from a small boat; the surrounding water is a deep, clear blue.",
-            "name_el": "Σπηλιά της Καλυψώς",
-            "desc_el": "Μια θαλάσσια σπηλιά στη άγρια νοτιοδυτική ακτή, δεμένη με τον μύθο της Καλυψώς και του Οδυσσέα. Καλύτερα από βαρκάκι· τα νερά γύρω βαθιά και διάφανα.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784240374/%CF%83%CF%80%CE%B7%CE%BB%CE%B9%CE%B1_%CE%BA%CE%B1%CE%BB%CF%85%CF%88%CF%89%CF%82_xcz8k9.jpg"
-          }
-        ],
-        "title_el": "Λιμάνι, Σπηλιά & Λευκοί Όρμοι",
-        "overnight_el": "Άμμος (Οθωνοί)",
-        "food": [
-          {
-            "meal": "Lunch",
-            "meal_el": "Μεσημεριανό",
-            "area": "Ammos",
-            "area_el": "Άμμος",
-            "desc": "Tavernas along the Ammos waterfront serve fresh fish, Corfiot dishes like pastitsada and sofrito, and local wine. A few reopen only for the summer; the fish is whatever the boats brought in.",
-            "desc_el": "Οι ταβέρνες στο μέτωπο της Άμμου σερβίρουν φρέσκο ψάρι, κερκυραϊκά πιάτα όπως παστιτσάδα και σοφρίτο, και ντόπιο κρασί. Κάποιες ανοίγουν μόνο το καλοκαίρι· το ψάρι είναι ό,τι έφεραν οι βάρκες.",
-            "after": "Ammos (harbour village)"
-          }
-        ]
-      }
-    ],
-    "title_el": "Πρόγραμμα 1 Ημέρας — Οθωνοί",
-    "subtitle_el": "Το λιμανοχώρι Άμμος, η παραλία Άσπρη Άμμος και η σπηλιά της Καλυψώς."
-  },
-  "beaches": [
-    {
-      "name": "Aspri Ammos",
-      "wiki": "https://www.google.com/maps/search/Aspri%20Ammos%20Othonoi",
-      "rating": 4,
-      "type": "White pebble",
-      "length": "200 m",
-      "depth": "Deep — clear",
-      "facing": "Southwest-facing — exposed",
-      "facilities": "None — bring everything.",
-      "desc": "The signature beach of Othonoi — brilliant white pebbles under pale cliffs on the exposed west coast, usually near-empty. No facilities; reached on foot or by boat.",
-      "commons": null,
+ "key": "othonoi",
+ "name": "Othonoi",
+ "subtitle": "The westernmost speck of Greece — Calypso's cave and empty bays off Corfu",
+ "intro": "Othonoi is the largest and most westerly of the Diapontia islands, northwest of Corfu — in fact the westernmost point of Greece. Legend ties it to Calypso and the cave where she is said to have kept Odysseus. It has a working harbour village (Ammos), a scatter of hamlets in the green interior, and a strong emigrant history to New York and Italy that you still hear in the accents and see in the shuttered mansions. Beaches are white-pebble and often deserted; the ferry from Corfu is long, so most who come stay a night or two.",
+ "when_to_visit": {
+  "summary": "A summer island: rooms and tavernas run roughly late May to September. June and September give warm water and empty bays; July–August bring Greek-Italian families and the handful of rooms fill. Winter service is minimal.",
+  "summary_el": "Καλοκαιρινό νησί: δωμάτια και ταβέρνες λειτουργούν περίπου τέλη Μαΐου με Σεπτέμβριο. Ιούνιος και Σεπτέμβριος έχουν ζεστά νερά και άδειους όρμους· Ιούλιο–Αύγουστο έρχονται ελληνοϊταλικές οικογένειες και τα λίγα δωμάτια γεμίζουν. Τον χειμώνα τα δρομολόγια ελάχιστα.",
+  "months": [
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Σχεδόν όλα κλειστά",
+    "limited": true
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Σκελετός υπηρεσιών",
+    "limited": true
+   },
+   {
+    "tag": "avoid",
+    "why": "Few ferries",
+    "why_el": "Λίγα πλοία",
+    "limited": true
+   },
+   {
+    "tag": "ok",
+    "why": "Awakening",
+    "why_el": "Ήσυχα, πρώτες αφίξεις",
+    "limited": true
+   },
+   {
+    "tag": "great",
+    "why": "Sea warming",
+    "why_el": "Κολυμπιέται πια"
+   },
+   {
+    "tag": "perfect",
+    "why": "Warm, near-empty",
+    "why_el": "Ζεστά, σχεδόν άδεια"
+   },
+   {
+    "tag": "great",
+    "why": "Hot, calm",
+    "why_el": "Ζέστη, ήσυχα"
+   },
+   {
+    "tag": "ok",
+    "why": "Peak Greeks, busy",
+    "why_el": "Αιχμή Ελλήνων"
+   },
+   {
+    "tag": "perfect",
+    "why": "Best — peaceful",
+    "why_el": "Καλύτερος — ζεστά"
+   },
+   {
+    "tag": "ok",
+    "why": "Season ending",
+    "why_el": "Κλείνουν σιγά"
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Μόνο ντόπιοι",
+    "limited": true
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season, thin",
+    "why_el": "Χειμώνας, ελάχιστα",
+    "limited": true
+   }
+  ]
+ },
+ "itinerary": {
+  "title": "1-Day Othonoi Itinerary",
+  "subtitle": "Ammos harbour village, Aspri Ammos beach and the Calypso cave.",
+  "days": [
+   {
+    "day": 1,
+    "title": "Harbour, Cave & White Bays",
+    "color": "#0B8FAC",
+    "km": 6,
+    "drive_mins": 40,
+    "overnight": "Ammos (Othonoi)",
+    "stops": [
+     {
+      "name": "Ammos (harbour village)",
+      "lat": 39.84126747442995,
+      "lng": 19.405368669947997,
+      "type": "harbour",
+      "time": "11:00",
+      "wiki": "https://www.google.com/maps/search/Ammos%20%28harbour%20village%29%20Othonoi",
+      "desc": "The port and main village, with a pebble beach right along the front, a few tavernas and rooms, and the ferry quay. Everything on Othonoi radiates from here.",
+      "name_el": "Άμμος (Λιμανοχώρι)",
+      "desc_el": "Το λιμάνι και κύριο χωριό, με βοτσαλωτή παραλία στο μέτωπο, λίγες ταβέρνες και δωμάτια, και την προβλήτα του πλοίου. Τα πάντα στους Οθωνούς ξεκινούν από εδώ.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784240375/%CE%BB%CE%B9%CE%BC%CE%B1%CE%BD%CE%B9_u3t0ie.jpg"
+     },
+     {
+      "name": "Aspri Ammos beach",
       "lat": 39.842236520426916,
       "lng": 19.383421999035566,
-      "name_el": "Άσπρη Άμμος",
-      "type_el": "Λευκό βότσαλο",
-      "depth_el": "Βαθιά — διάφανα",
-      "facing_el": "Νοτιοδυτικά — εκτεθειμένη",
-      "facilities_el": "Καμία — πάρε ό,τι χρειάζεσαι.",
-      "desc_el": "Η κορυφαία παραλία των Οθωνών — λαμπερά λευκά βότσαλα κάτω από ανοιχτόχρωμους βράχους στη δυτική ακτή, συνήθως σχεδόν άδεια. Χωρίς υποδομές· πρόσβαση πεζή ή με βάρκα.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784240375/%CE%B1%CF%83%CF%80%CF%81%CE%B7_%CE%B1%CE%BC%CE%BC%CE%BF%CF%83_bzdjei.jpg"
-    }
+      "type": "beach",
+      "time": "12:30",
+      "wiki": "https://www.google.com/maps/search/Aspri%20Ammos%20beach%20Othonoi",
+      "desc": "A bright white-pebble bay on the exposed southwest coast, backed by pale cliffs — the island's showpiece beach. Reached by footpath or a short boat trip; bring shade.",
+      "name_el": "Παραλία Άσπρη Άμμος",
+      "desc_el": "Ένας κάτασπρος βοτσαλωτός όρμος στη δυτική ακτή, με ανοιχτόχρωμους βράχους από πίσω — η ομορφότερη παραλία του νησιού. Πρόσβαση με μονοπάτι ή σύντομη βαρκάδα· πάρε σκιά.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784240684/%CE%B1%CF%83%CF%80%CF%81%CE%B7_%CE%B1%CE%BC%CE%BC%CE%BF%CF%83_2_gjv7zp.jpg"
+     },
+     {
+      "name": "Calypso Cave",
+      "lat": 39.84195666662084,
+      "lng": 19.378352389812136,
+      "type": "nature",
+      "time": "14:00",
+      "wiki": "https://www.google.com/maps/search/Calypso%20Cave%20Othonoi",
+      "desc": "A sea cave on the wild southwest shore tied by legend to the nymph Calypso and Odysseus. Best seen from a small boat; the surrounding water is a deep, clear blue.",
+      "name_el": "Σπηλιά της Καλυψώς",
+      "desc_el": "Μια θαλάσσια σπηλιά στη άγρια νοτιοδυτική ακτή, δεμένη με τον μύθο της Καλυψώς και του Οδυσσέα. Καλύτερα από βαρκάκι· τα νερά γύρω βαθιά και διάφανα.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784240374/%CF%83%CF%80%CE%B7%CE%BB%CE%B9%CE%B1_%CE%BA%CE%B1%CE%BB%CF%85%CF%88%CF%89%CF%82_xcz8k9.jpg"
+     }
+    ],
+    "title_el": "Λιμάνι, Σπηλιά & Λευκοί Όρμοι",
+    "overnight_el": "Άμμος (Οθωνοί)",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Ammos",
+      "area_el": "Άμμος",
+      "desc": "Tavernas along the Ammos waterfront serve fresh fish, Corfiot dishes like pastitsada and sofrito, and local wine. A few reopen only for the summer; the fish is whatever the boats brought in.",
+      "desc_el": "Οι ταβέρνες στο μέτωπο της Άμμου σερβίρουν φρέσκο ψάρι, κερκυραϊκά πιάτα όπως παστιτσάδα και σοφρίτο, και ντόπιο κρασί. Κάποιες ανοίγουν μόνο το καλοκαίρι· το ψάρι είναι ό,τι έφεραν οι βάρκες.",
+      "after": "Ammos (harbour village)"
+     }
+    ]
+   }
   ],
-  "name_el": "Οθωνοί",
-  "name_accusative_el": "Οθωνούς",
-  "gender_el": "m",
-  "subtitle_el": "Το δυτικότερο σημείο της Ελλάδας — η σπηλιά της Καλυψώς και άδειοι όρμοι δυτικά της Κέρκυρας",
-  "intro_el": "Οι Οθωνοί είναι ο μεγαλύτερος και δυτικότερος από τα Διαπόντια νησιά, βορειοδυτικά της Κέρκυρας — στην πραγματικότητα το δυτικότερο σημείο της Ελλάδας. Ο μύθος τους συνδέει με την Καλυψώ και τη σπηλιά όπου λέγεται πως κράτησε τον Οδυσσέα. Έχουν ένα λιμανοχώρι (Άμμος), διάσπαρτους οικισμούς στο πράσινο εσωτερικό και έντονη ιστορία μετανάστευσης προς Νέα Υόρκη και Ιταλία που ακούγεται ακόμη στις προφορές. Οι παραλίες είναι λευκά βότσαλα και συχνά έρημες· το πλοίο από Κέρκυρα είναι μακρύ, οπότε οι περισσότεροι μένουν μια-δυο νύχτες.",
-  "getting_there": {
-    "pills": [
-      "⛵ from Corfu (Ag. Stefanos)",
-      "€10–18"
-    ],
-    "pills_el": [
-      "⛵ από Κέρκυρα (Άγ. Στέφανος)",
-      "€10–18"
-    ],
-    "summary": "No airport. Small passenger ferries run from Agios Stefanos in northwest Corfu several times a week in summer, calling at Erikousa and Mathraki en route — the full trip can take up to 4 hours. Book ahead in August.",
-    "summary_el": "Χωρίς αεροδρόμιο. Μικρά επιβατικά πλοία ξεκινούν από τον Άγιο Στέφανο στη ΒΔ Κέρκυρα αρκετές φορές την εβδομάδα το καλοκαίρι, πιάνοντας Ερείκουσα και Μαθράκι στη διαδρομή — όλη η διαδρομή έως 4 ώρες. Κλείσε θέση τον Αύγουστο.",
-    "tip": "The Corfu crossing is long and weather-dependent — plan an overnight rather than a day trip.",
-    "tip_el": "Η διαδρομή από Κέρκυρα είναι μακριά και εξαρτάται από τον καιρό — προτίμησε διανυκτέρευση αντί για ημερήσια."
-  },
-  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783292655/%CE%BF%CE%B8%CF%89%CE%BD%CE%BF%CE%B9_zxmofl.jpg"
+  "title_el": "Πρόγραμμα 1 Ημέρας — Οθωνοί",
+  "subtitle_el": "Το λιμανοχώρι Άμμος, η παραλία Άσπρη Άμμος και η σπηλιά της Καλυψώς."
+ },
+ "beaches": [
+  {
+   "name": "Aspri Ammos",
+   "wiki": "https://www.google.com/maps/search/Aspri%20Ammos%20Othonoi",
+   "rating": 4,
+   "type": "White pebble",
+   "length": "200 m",
+   "depth": "Deep — clear",
+   "facing": "Southwest-facing — exposed",
+   "facilities": "None — bring everything.",
+   "desc": "The signature beach of Othonoi — brilliant white pebbles under pale cliffs on the exposed west coast, usually near-empty. No facilities; reached on foot or by boat.",
+   "commons": null,
+   "lat": 39.842236520426916,
+   "lng": 19.383421999035566,
+   "name_el": "Άσπρη Άμμος",
+   "type_el": "Λευκό βότσαλο",
+   "depth_el": "Βαθιά — διάφανα",
+   "facing_el": "Νοτιοδυτικά — εκτεθειμένη",
+   "facilities_el": "Καμία παροχή — πάρε ό,τι χρειάζεσαι.",
+   "desc_el": "Η κορυφαία παραλία των Οθωνών — λαμπερά λευκά βότσαλα κάτω από ανοιχτόχρωμους βράχους στη δυτική ακτή, συνήθως σχεδόν άδεια. Χωρίς υποδομές· πρόσβαση πεζή ή με βάρκα.",
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784240375/%CE%B1%CF%83%CF%80%CF%81%CE%B7_%CE%B1%CE%BC%CE%BC%CE%BF%CF%83_bzdjei.jpg"
+  }
+ ],
+ "name_el": "Οθωνοί",
+ "name_accusative_el": "Οθωνούς",
+ "gender_el": "m",
+ "subtitle_el": "Το δυτικότερο σημείο της Ελλάδας — η σπηλιά της Καλυψώς και άδειοι όρμοι δυτικά της Κέρκυρας",
+ "intro_el": "Οι Οθωνοί είναι ο μεγαλύτερος και δυτικότερος από τα Διαπόντια νησιά, βορειοδυτικά της Κέρκυρας — στην πραγματικότητα το δυτικότερο σημείο της Ελλάδας. Ο μύθος τους συνδέει με την Καλυψώ και τη σπηλιά όπου λέγεται πως κράτησε τον Οδυσσέα. Έχουν ένα λιμανοχώρι (Άμμος), διάσπαρτους οικισμούς στο πράσινο εσωτερικό και έντονη ιστορία μετανάστευσης προς Νέα Υόρκη και Ιταλία που ακούγεται ακόμη στις προφορές. Οι παραλίες είναι λευκά βότσαλα και συχνά έρημες· το πλοίο από Κέρκυρα είναι μακρύ, οπότε οι περισσότεροι μένουν μια-δυο νύχτες.",
+ "getting_there": {
+  "pills": [
+   "⛵ from Corfu (Ag. Stefanos)",
+   "€10–18"
+  ],
+  "pills_el": [
+   "⛵ από Κέρκυρα (Άγ. Στέφανος)",
+   "€10–18"
+  ],
+  "summary": "No airport. Small passenger ferries run from Agios Stefanos in northwest Corfu several times a week in summer, calling at Erikousa and Mathraki en route — the full trip can take up to 4 hours. Book ahead in August.",
+  "summary_el": "Χωρίς αεροδρόμιο. Μικρά επιβατικά πλοία ξεκινούν από τον Άγιο Στέφανο στη ΒΔ Κέρκυρα αρκετές φορές την εβδομάδα το καλοκαίρι, πιάνοντας Ερείκουσα και Μαθράκι στη διαδρομή — όλη η διαδρομή έως 4 ώρες. Κλείσε θέση τον Αύγουστο.",
+  "tip": "The Corfu crossing is long and weather-dependent — plan an overnight rather than a day trip.",
+  "tip_el": "Η διαδρομή από Κέρκυρα είναι μακριά και εξαρτάται από τον καιρό — προτίμησε διανυκτέρευση αντί για ημερήσια."
+ },
+ "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783292655/%CE%BF%CE%B8%CF%89%CE%BD%CE%BF%CE%B9_zxmofl.jpg"
 }

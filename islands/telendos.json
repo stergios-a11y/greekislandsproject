@@ -1,184 +1,184 @@
 {
-  "key": "telendos",
-  "name": "Telendos",
-  "subtitle": "A car-free pyramid off Kalymnos — climbing, sunsets and waterfront tavernas",
-  "intro": "Telendos is the dramatic pyramid of rock that rises straight out of the sea off Myrties on Kalymnos — split from its parent island by an earthquake in AD 554. A ten-minute caïque crosses the channel to a single tiny settlement strung along the waterfront, entirely car-free. It is beloved by rock climbers and divers, dotted with early-Christian and Byzantine ruins, and famous for the sunset light on the Kalymnos mountains opposite. Days here are simple: a swim off the rocks, a walk to a quiet cove, a long dinner by the water.",
-  "when_to_visit": {
-    "summary": "Tavernas and rooms run from spring to autumn; climbers come as early as March and as late as November when it is too hot to climb elsewhere. Midsummer is warm and lively; May, June, September and October are ideal for walking and climbing.",
-    "summary_el": "Ταβέρνες και δωμάτια λειτουργούν από την άνοιξη ως το φθινόπωρο· οι αναρριχητές έρχονται από Μάρτιο έως Νοέμβριο, όταν αλλού έχει πολλή ζέστη. Το κατακαλόκαιρο ζεστό και ζωντανό· Μάιος, Ιούνιος, Σεπτέμβριος και Οκτώβριος ιδανικοί για περπάτημα και αναρρίχηση.",
-    "months": [
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Σχεδόν όλα κλειστά",
-        "limited": true
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Σκελετός υπηρεσιών",
-        "limited": true
-      },
-      {
-        "tag": "avoid",
-        "why": "Few ferries",
-        "why_el": "Λίγα πλοία",
-        "limited": true
-      },
-      {
-        "tag": "ok",
-        "why": "Awakening",
-        "why_el": "Ήσυχα, πρώτες αφίξεις",
-        "limited": true
-      },
-      {
-        "tag": "great",
-        "why": "Sea warming",
-        "why_el": "Κολυμπιέται πια"
-      },
-      {
-        "tag": "perfect",
-        "why": "Warm, near-empty",
-        "why_el": "Ζεστά, ήσυχα, φως"
-      },
-      {
-        "tag": "great",
-        "why": "Hot, calm",
-        "why_el": "Ζέστη, ήσυχα"
-      },
-      {
-        "tag": "ok",
-        "why": "Peak Greeks, busy",
-        "why_el": "Αιχμή Ελλήνων"
-      },
-      {
-        "tag": "perfect",
-        "why": "Best — peaceful",
-        "why_el": "Καλύτερος — ζεστά"
-      },
-      {
-        "tag": "ok",
-        "why": "Season ending",
-        "why_el": "Κλείνουν σιγά"
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Μόνο ντόπιοι",
-        "limited": true
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season, thin",
-        "why_el": "Χειμώνας, ελάχιστα",
-        "limited": true
-      }
-    ]
-  },
-  "itinerary": {
-    "title": "1-Day Telendos Itinerary",
-    "subtitle": "The car-free waterfront, Hochlakas beach and the sunset over Kalymnos.",
-    "days": [
-      {
-        "day": 1,
-        "title": "Waterfront, a Cove & the Sunset",
-        "color": "#0B8FAC",
-        "km": 6,
-        "drive_mins": 40,
-        "overnight": "Telendos village",
-        "stops": [
-          {
-            "name": "Telendos village",
-            "lat": 36.9955,
-            "lng": 26.927,
-            "type": "harbour",
-            "time": "10:00",
-            "wiki": "https://www.google.com/maps/search/Telendos%20village%20Telendos",
-            "desc": "A single lane of tavernas, rooms and cats along the water, facing Kalymnos across the strait. No cars, no traffic — just the caïque coming and going every half hour.",
-            "name_el": "Χωριό Τέλενδου",
-            "desc_el": "Ένας μοναδικός δρόμος με ταβέρνες, δωμάτια και γάτες κατά μήκος του νερού, με θέα στην Κάλυμνο απέναντι. Χωρίς αυτοκίνητα, χωρίς κίνηση — μόνο το καΐκι που πάει κι έρχεται κάθε μισή ώρα."
-          },
-          {
-            "name": "Hochlakas beach",
-            "lat": 36.9975,
-            "lng": 26.925,
-            "type": "beach",
-            "time": "11:30",
-            "wiki": "https://www.google.com/maps/search/Hochlakas%20beach%20Telendos",
-            "desc": "A pebble-and-shingle beach a short walk from the quay on the west side, with clear deep water good for snorkelling and a taverna behind. The best spot to watch the day soften into sunset.",
-            "name_el": "Παραλία Χοχλάκας",
-            "desc_el": "Μια βοτσαλωτή παραλία σε σύντομη απόσταση από την προβλήτα, στη δυτική πλευρά, με καθαρά βαθιά νερά για snorkelling και ταβέρνα από πίσω. Το καλύτερο σημείο για να δεις τη μέρα να γλυκαίνει σε ηλιοβασίλεμα."
-          },
-          {
-            "name": "Early-Christian ruins & Ave Maria",
-            "lat": 36.999,
-            "lng": 26.9285,
-            "type": "nature",
-            "time": "17:00",
-            "wiki": "https://www.google.com/maps/search/Early-Christian%20ruins%20%26%20Ave%20Maria%20Telendos",
-            "desc": "Scattered ruins of a Byzantine monastery and early-Christian basilica sit above the village, an easy walk up. From here the light on Kalymnos at sunset is the island's signature view.",
-            "name_el": "Παλαιοχριστιανικά ερείπια & Άβε Μαρία",
-            "desc_el": "Διάσπαρτα ερείπια βυζαντινού μοναστηριού και παλαιοχριστιανικής βασιλικής πάνω από το χωριό, με εύκολο ανηφορικό περπάτημα. Από εδώ το φως στην Κάλυμνο το ηλιοβασίλεμα είναι η υπογραφή του νησιού."
-          }
-        ],
-        "title_el": "Παραλία, ένας Όρμος & το Ηλιοβασίλεμα",
-        "overnight_el": "Χωριό Τέλενδου",
-        "food": [
-          {
-            "meal": "Lunch",
-            "meal_el": "Μεσημεριανό",
-            "area": "Telendos waterfront",
-            "area_el": "Παραλία Τέλενδου",
-            "desc": "A string of waterfront tavernas serve Kalymnian specialities — mermitzeli pasta, sea urchin, octopus stew — with the ferry lights of Myrties twinkling across the water. Fish is landed daily; sunset tables fill first.",
-            "desc_el": "Μια σειρά από ταβέρνες στο κύμα σερβίρουν καλυμνιώτικες σπεσιαλιτέ — μερμιτζέλι, αχινούς, χταποδοστιφάδο — με τα φώτα των Μυρτιών να τρεμοπαίζουν απέναντι. Το ψάρι έρχεται καθημερινά· τα τραπέζια του ηλιοβασιλέματος γεμίζουν πρώτα.",
-            "after": "Hochlakas beach"
-          }
-        ]
-      }
-    ],
-    "title_el": "Πρόγραμμα 1 Ημέρας — Τέλενδος",
-    "subtitle_el": "Η παραλία χωρίς αυτοκίνητα, η παραλία Χοχλάκας και το ηλιοβασίλεμα πάνω από την Κάλυμνο."
-  },
-  "beaches": [
-    {
-      "name": "Hochlakas",
-      "wiki": "https://www.google.com/maps/search/Hochlakas%20Telendos",
-      "rating": 3,
-      "type": "Pebble & shingle",
-      "length": "120 m",
-      "depth": "Deep — clear",
-      "facing": "West-facing — sunset",
-      "facilities": "Taverna behind; some shade.",
-      "desc": "Telendos's main swim — clear, deep water off pebbles, excellent for snorkelling, with a taverna at the back and the best sunset seat on the island.",
-      "commons": null,
+ "key": "telendos",
+ "name": "Telendos",
+ "subtitle": "A car-free pyramid off Kalymnos — climbing, sunsets and waterfront tavernas",
+ "intro": "Telendos is the dramatic pyramid of rock that rises straight out of the sea off Myrties on Kalymnos — split from its parent island by an earthquake in AD 554. A ten-minute caïque crosses the channel to a single tiny settlement strung along the waterfront, entirely car-free. It is beloved by rock climbers and divers, dotted with early-Christian and Byzantine ruins, and famous for the sunset light on the Kalymnos mountains opposite. Days here are simple: a swim off the rocks, a walk to a quiet cove, a long dinner by the water.",
+ "when_to_visit": {
+  "summary": "Tavernas and rooms run from spring to autumn; climbers come as early as March and as late as November when it is too hot to climb elsewhere. Midsummer is warm and lively; May, June, September and October are ideal for walking and climbing.",
+  "summary_el": "Ταβέρνες και δωμάτια λειτουργούν από την άνοιξη ως το φθινόπωρο· οι αναρριχητές έρχονται από Μάρτιο έως Νοέμβριο, όταν αλλού έχει πολλή ζέστη. Το κατακαλόκαιρο ζεστό και ζωντανό· Μάιος, Ιούνιος, Σεπτέμβριος και Οκτώβριος ιδανικοί για περπάτημα και αναρρίχηση.",
+  "months": [
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Σχεδόν όλα κλειστά",
+    "limited": true
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Σκελετός υπηρεσιών",
+    "limited": true
+   },
+   {
+    "tag": "avoid",
+    "why": "Few ferries",
+    "why_el": "Λίγα πλοία",
+    "limited": true
+   },
+   {
+    "tag": "ok",
+    "why": "Awakening",
+    "why_el": "Ήσυχα, πρώτες αφίξεις",
+    "limited": true
+   },
+   {
+    "tag": "great",
+    "why": "Sea warming",
+    "why_el": "Κολυμπιέται πια"
+   },
+   {
+    "tag": "perfect",
+    "why": "Warm, near-empty",
+    "why_el": "Ζεστά, ήσυχα, φως"
+   },
+   {
+    "tag": "great",
+    "why": "Hot, calm",
+    "why_el": "Ζέστη, ήσυχα"
+   },
+   {
+    "tag": "ok",
+    "why": "Peak Greeks, busy",
+    "why_el": "Αιχμή Ελλήνων"
+   },
+   {
+    "tag": "perfect",
+    "why": "Best — peaceful",
+    "why_el": "Καλύτερος — ζεστά"
+   },
+   {
+    "tag": "ok",
+    "why": "Season ending",
+    "why_el": "Κλείνουν σιγά"
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Μόνο ντόπιοι",
+    "limited": true
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season, thin",
+    "why_el": "Χειμώνας, ελάχιστα",
+    "limited": true
+   }
+  ]
+ },
+ "itinerary": {
+  "title": "1-Day Telendos Itinerary",
+  "subtitle": "The car-free waterfront, Hochlakas beach and the sunset over Kalymnos.",
+  "days": [
+   {
+    "day": 1,
+    "title": "Waterfront, a Cove & the Sunset",
+    "color": "#0B8FAC",
+    "km": 6,
+    "drive_mins": 40,
+    "overnight": "Telendos village",
+    "stops": [
+     {
+      "name": "Telendos village",
+      "lat": 36.9955,
+      "lng": 26.927,
+      "type": "harbour",
+      "time": "10:00",
+      "wiki": "https://www.google.com/maps/search/Telendos%20village%20Telendos",
+      "desc": "A single lane of tavernas, rooms and cats along the water, facing Kalymnos across the strait. No cars, no traffic — just the caïque coming and going every half hour.",
+      "name_el": "Χωριό Τέλενδου",
+      "desc_el": "Ένας μοναδικός δρόμος με ταβέρνες, δωμάτια και γάτες κατά μήκος του νερού, με θέα στην Κάλυμνο απέναντι. Χωρίς αυτοκίνητα, χωρίς κίνηση — μόνο το καΐκι που πάει κι έρχεται κάθε μισή ώρα."
+     },
+     {
+      "name": "Hochlakas beach",
       "lat": 36.9975,
       "lng": 26.925,
-      "name_el": "Χοχλάκας",
-      "type_el": "Βότσαλο",
-      "depth_el": "Βαθιά — διάφανα",
-      "facing_el": "Δυτικά — ηλιοβασίλεμα",
-      "facilities_el": "Ταβέρνα πίσω· λίγη σκιά.",
-      "desc_el": "Το κύριο κολύμπι του Τέλενδου — καθαρά, βαθιά νερά σε βότσαλο, εξαιρετικά για snorkelling, με ταβέρνα πίσω και την καλύτερη θέση για ηλιοβασίλεμα στο νησί."
-    }
+      "type": "beach",
+      "time": "11:30",
+      "wiki": "https://www.google.com/maps/search/Hochlakas%20beach%20Telendos",
+      "desc": "A pebble-and-shingle beach a short walk from the quay on the west side, with clear deep water good for snorkelling and a taverna behind. The best spot to watch the day soften into sunset.",
+      "name_el": "Παραλία Χοχλάκας",
+      "desc_el": "Μια βοτσαλωτή παραλία σε σύντομη απόσταση από την προβλήτα, στη δυτική πλευρά, με καθαρά βαθιά νερά για snorkelling και ταβέρνα από πίσω. Το καλύτερο σημείο για να δεις τη μέρα να γλυκαίνει σε ηλιοβασίλεμα."
+     },
+     {
+      "name": "Early-Christian ruins & Ave Maria",
+      "lat": 36.999,
+      "lng": 26.9285,
+      "type": "nature",
+      "time": "17:00",
+      "wiki": "https://www.google.com/maps/search/Early-Christian%20ruins%20%26%20Ave%20Maria%20Telendos",
+      "desc": "Scattered ruins of a Byzantine monastery and early-Christian basilica sit above the village, an easy walk up. From here the light on Kalymnos at sunset is the island's signature view.",
+      "name_el": "Παλαιοχριστιανικά ερείπια & Άβε Μαρία",
+      "desc_el": "Διάσπαρτα ερείπια βυζαντινού μοναστηριού και παλαιοχριστιανικής βασιλικής πάνω από το χωριό, με εύκολο ανηφορικό περπάτημα. Από εδώ το φως στην Κάλυμνο το ηλιοβασίλεμα είναι η υπογραφή του νησιού."
+     }
+    ],
+    "title_el": "Παραλία, ένας Όρμος & το Ηλιοβασίλεμα",
+    "overnight_el": "Χωριό Τέλενδου",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Telendos waterfront",
+      "area_el": "Παραλία Τέλενδου",
+      "desc": "A string of waterfront tavernas serve Kalymnian specialities — mermitzeli pasta, sea urchin, octopus stew — with the ferry lights of Myrties twinkling across the water. Fish is landed daily; sunset tables fill first.",
+      "desc_el": "Μια σειρά από ταβέρνες στο κύμα σερβίρουν καλυμνιώτικες σπεσιαλιτέ — μερμιτζέλι, αχινούς, χταποδοστιφάδο — με τα φώτα των Μυρτιών να τρεμοπαίζουν απέναντι. Το ψάρι έρχεται καθημερινά· τα τραπέζια του ηλιοβασιλέματος γεμίζουν πρώτα.",
+      "after": "Hochlakas beach"
+     }
+    ]
+   }
   ],
-  "name_el": "Τέλενδος",
-  "name_accusative_el": "Τέλενδο",
-  "gender_el": "m",
-  "subtitle_el": "Μια πυραμίδα χωρίς αυτοκίνητα απέναντι από την Κάλυμνο — αναρρίχηση, ηλιοβασιλέματα και ταβέρνες στο κύμα",
-  "intro_el": "Ο Τέλενδος είναι η επιβλητική πυραμίδα βράχου που υψώνεται μέσα από τη θάλασσα απέναντι από τους Μύρτιες της Καλύμνου — αποκόπηκε από το μητρικό νησί σε σεισμό το 554 μ.Χ. Ένα δεκάλεπτο καΐκι διασχίζει το κανάλι σε έναν μοναδικό μικρό οικισμό κατά μήκος της παραλίας, εντελώς χωρίς αυτοκίνητα. Αγαπημένος των αναρριχητών και των δυτών, γεμάτος παλαιοχριστιανικά και βυζαντινά ερείπια, φημισμένος για το φως του ηλιοβασιλέματος στα βουνά της Καλύμνου απέναντι. Οι μέρες εδώ είναι απλές: βουτιά από τα βράχια, βόλτα σε έναν ήσυχο όρμο, μακρύ δείπνο δίπλα στο νερό.",
-  "getting_there": {
-    "pills": [
-      "⛵ 10 min from Myrties, Kalymnos",
-      "€2–4"
-    ],
-    "pills_el": [
-      "⛵ 10 λεπτά από Μύρτιες, Κάλυμνο",
-      "€2–4"
-    ],
-    "summary": "No airport. A small caïque shuttles across from Myrties on Kalymnos every 30–60 minutes from morning to late evening, all year — a ten-minute crossing. Reach Kalymnos itself by ferry from Kos, Rhodes or Piraeus.",
-    "summary_el": "Χωρίς αεροδρόμιο. Ένα μικρό καΐκι κάνει το πέρασμα από τους Μύρτιες της Καλύμνου κάθε 30–60 λεπτά, από το πρωί ως αργά το βράδυ, όλο τον χρόνο — δεκάλεπτη διαδρομή. Στην ίδια την Κάλυμνο φτάνεις με πλοίο από Κω, Ρόδο ή Πειραιά.",
-    "tip": "Stay over — Telendos empties of day-trippers by evening and the sunset is the whole point.",
-    "tip_el": "Διανυκτέρευσε — ο Τέλενδος αδειάζει από τους ημερήσιους το βράδυ και το ηλιοβασίλεμα είναι όλο το νόημα."
-  },
-  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783292655/%CF%84%CE%B5%CE%BB%CE%B5%CE%BD%CE%B4%CE%BF%CF%82_kh1chc.jpg"
+  "title_el": "Πρόγραμμα 1 Ημέρας — Τέλενδος",
+  "subtitle_el": "Η παραλία χωρίς αυτοκίνητα, η παραλία Χοχλάκας και το ηλιοβασίλεμα πάνω από την Κάλυμνο."
+ },
+ "beaches": [
+  {
+   "name": "Hochlakas",
+   "wiki": "https://www.google.com/maps/search/Hochlakas%20Telendos",
+   "rating": 3,
+   "type": "Pebble & shingle",
+   "length": "120 m",
+   "depth": "Deep — clear",
+   "facing": "West-facing — sunset",
+   "facilities": "Taverna behind; some shade.",
+   "desc": "Telendos's main swim — clear, deep water off pebbles, excellent for snorkelling, with a taverna at the back and the best sunset seat on the island.",
+   "commons": null,
+   "lat": 36.9975,
+   "lng": 26.925,
+   "name_el": "Χοχλάκας",
+   "type_el": "Βότσαλο",
+   "depth_el": "Βαθιά — διάφανα",
+   "facing_el": "Δυτικά — ηλιοβασίλεμα",
+   "facilities_el": "Ταβέρνα πίσω· λίγη σκιά.",
+   "desc_el": "Το κύριο κολύμπι του Τέλενδου — καθαρά, βαθιά νερά σε βότσαλο, εξαιρετικά για snorkelling, με ταβέρνα πίσω και την καλύτερη θέση για ηλιοβασίλεμα στο νησί."
+  }
+ ],
+ "name_el": "Τέλενδος",
+ "name_accusative_el": "Τέλενδο",
+ "gender_el": "m",
+ "subtitle_el": "Μια πυραμίδα χωρίς αυτοκίνητα απέναντι από την Κάλυμνο — αναρρίχηση, ηλιοβασιλέματα και ταβέρνες στο κύμα",
+ "intro_el": "Ο Τέλενδος είναι η επιβλητική πυραμίδα βράχου που υψώνεται μέσα από τη θάλασσα απέναντι από τους Μύρτιες της Καλύμνου — αποκόπηκε από το μητρικό νησί σε σεισμό το 554 μ.Χ. Ένα δεκάλεπτο καΐκι διασχίζει το στενό σε έναν μοναδικό μικρό οικισμό κατά μήκος της παραλίας, εντελώς χωρίς αυτοκίνητα. Αγαπημένος των αναρριχητών και των δυτών, γεμάτος παλαιοχριστιανικά και βυζαντινά ερείπια, φημισμένος για το φως του ηλιοβασιλέματος στα βουνά της Καλύμνου απέναντι. Οι μέρες εδώ είναι απλές: βουτιά από τα βράχια, βόλτα σε έναν ήσυχο όρμο, μακρύ δείπνο δίπλα στο νερό.",
+ "getting_there": {
+  "pills": [
+   "⛵ 10 min from Myrties, Kalymnos",
+   "€2–4"
+  ],
+  "pills_el": [
+   "⛵ 10 λεπτά από Μύρτιες, Κάλυμνο",
+   "€2–4"
+  ],
+  "summary": "No airport. A small caïque shuttles across from Myrties on Kalymnos every 30–60 minutes from morning to late evening, all year — a ten-minute crossing. Reach Kalymnos itself by ferry from Kos, Rhodes or Piraeus.",
+  "summary_el": "Χωρίς αεροδρόμιο. Ένα μικρό καΐκι κάνει το πέρασμα από τους Μύρτιες της Καλύμνου κάθε 30–60 λεπτά, από το πρωί ως αργά το βράδυ, όλο τον χρόνο — δεκάλεπτη διαδρομή. Στην ίδια την Κάλυμνο φτάνεις με πλοίο από Κω, Ρόδο ή Πειραιά.",
+  "tip": "Stay over — Telendos empties of day-trippers by evening and the sunset is the whole point.",
+  "tip_el": "Διανυκτέρευσε — ο Τέλενδος αδειάζει από τους ημερήσιους το βράδυ και το ηλιοβασίλεμα είναι όλο το νόημα."
+ },
+ "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783292655/%CF%84%CE%B5%CE%BB%CE%B5%CE%BD%CE%B4%CE%BF%CF%82_kh1chc.jpg"
 }

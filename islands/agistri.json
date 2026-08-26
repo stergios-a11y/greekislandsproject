@@ -1,251 +1,251 @@
 {
-  "key": "agistri",
-  "name": "Agistri",
-  "name_el": "Αγκίστρι",
-  "name_accusative_el": "Αγκίστρι",
-  "name_genitive_el": "Αγκιστρίου",
-  "gender_el": "n",
-  "subtitle": "55 minutes from Piraeus — pine forests to the sea, ice-blue Aponissos and the easiest island escape from Athens",
-  "subtitle_el": "55 λεπτά από τον Πειραιά — πευκόφυτη ακτή, παγωμένο μπλε στην Απονήσσο και η ευκολότερη νησιωτική απόδραση από την Αθήνα",
-  "intro": "Agistri is what every Athenian recommends to a visitor short on time — 55 minutes from Piraeus on the Flying Dolphin, a Saronic Gulf island where pine forests run all the way to the water and the beaches are good enough that no one feels short-changed. The two ports are Skala (busier, faster ferries) and Megalochori (the more traditional capital). The headline beach is Aponissos on the southwest coast — a tiny island connected by a footbridge to the main island, with water people will tell you looks photoshopped. One day works for a swim and dinner; two days lets you reach the wilder west coast.",
-  "intro_el": "Το Αγκίστρι είναι αυτό που κάθε Αθηναίος προτείνει σε επισκέπτη με λίγο χρόνο — 55 λεπτά από τον Πειραιά με Flying Dolphin, ένα νησί του Σαρωνικού όπου τα δάση πεύκων φτάνουν μέχρι το νερό και οι παραλίες είναι αρκετά καλές ώστε κανείς να μη νιώθει αδικημένος. Τα δύο λιμάνια είναι η Σκάλα (πιο πολυσύχναστο, ταχύπλοα) και ο Μεγαλοχώρι (η πιο παραδοσιακή πρωτεύουσα). Η κύρια παραλία είναι η Απονήσσος στη νοτιοδυτική ακτή — ένα μικρό νησάκι συνδεδεμένο με γέφυρα με το κύριο νησί, με νερά που θα σου πουν ότι μοιάζουν με photoshop. Μία μέρα φτάνει για μπάνιο και δείπνο· δύο μέρες σε φτάνουν στη δυτική ακτή.",
-  "when_to_visit": {
-    "summary": "Agistri is a tiny island next to Aegina — pine forests, clear water, three settlements. Quieter than its neighbours; the Athenian weekend crowd here is mostly families. Open year-round but most things shut Nov-Mar. Best June and September. Weekday in shoulder season is the dream.",
-    "summary_el": "Η Αγκίστρι είναι ένα μικροσκοπικό νησί δίπλα στην Αίγινα — πευκοδάση, καθαρά νερά, τρεις οικισμοί. Πιο ήσυχο από τους γείτονές του· το αθηναϊκό σαββατοκύριακο εδώ είναι κυρίως οικογένειες. Ανοιχτό όλο τον χρόνο, αλλά τα περισσότερα κλείνουν Νοέμβριο–Μάρτιο. Καλύτερα Ιούνιο και Σεπτέμβριο. Μια καθημερινή εκτός σεζόν είναι το όνειρο.",
-    "months": [
-      {
-        "tag": "ok",
-        "why": "Mild, quiet",
-        "why_el": "Ήπιο, κλειστά",
-        "limited": true
-      },
-      {
-        "tag": "ok",
-        "why": "Cold, quiet",
-        "why_el": "Κρύο, ήσυχα",
-        "limited": true
-      },
-      {
-        "tag": "great",
-        "why": "Pines, mild",
-        "why_el": "Πεύκα πράσινα, ήπιο",
-        "limited": true
-      },
-      {
-        "tag": "great",
-        "why": "Easter, awakening",
-        "why_el": "Πάσχα, οικογένειες"
-      },
-      {
-        "tag": "perfect",
-        "why": "Swimmable, calm",
-        "why_el": "Θάλασσα μπάνιο, ήσυχα"
-      },
-      {
-        "tag": "perfect",
-        "why": "Long days, quiet",
-        "why_el": "Μεγάλες μέρες, ήσυχα"
-      },
-      {
-        "tag": "ok",
-        "why": "Hot, weekend",
-        "why_el": "Ζέστη, οικογένειες ΣΚ"
-      },
-      {
-        "tag": "ok",
-        "why": "Peak weekends",
-        "why_el": "Κορύφωση ΣΚ"
-      },
-      {
-        "tag": "perfect",
-        "why": "Best — sea warm",
-        "why_el": "Καλύτερος — ζεστά"
-      },
-      {
-        "tag": "great",
-        "why": "Late swims, calm",
-        "why_el": "Τελευταία βουτιά"
-      },
-      {
-        "tag": "ok",
-        "why": "Mild, closing",
-        "why_el": "Ήπιο, κλείνει"
-      },
-      {
-        "tag": "ok",
-        "why": "Quiet, locals",
-        "why_el": "Ήσυχα",
-        "limited": true
-      }
-    ]
-  },
-  "itinerary": {
-    "title": "1-Day Agistri Itinerary",
-    "subtitle": "Skala in the morning, Aponissos for the swim, Megalochori for sunset.",
-    "days": [
-      {
-        "day": 1,
-        "title": "Skala, Aponissos & Megalochori",
-        "color": "#1B4F8A",
-        "stops": [
-          {
-            "name": "Skala Port",
-            "name_el": "Λιμάνι Σκάλας",
-            "lat": 37.7081,
-            "lng": 23.355,
-            "type": "village",
-            "wiki": "https://www.google.com/maps/search/Skala+Port+Agistri",
-            "desc": "The busier of the two ports, where most car ferries dock. Café-lined waterfront, the long sandy Skala Beach right next to the harbour, and the local bus that runs to Megalochori and Aponissos.",
-            "desc_el": "Το πιο πολυσύχναστο από τα δύο λιμάνια, όπου δένουν τα περισσότερα οχηματαγωγά. Παραλιακή με καφέ, η μακριά αμμώδης παραλία Σκάλας ακριβώς δίπλα στο λιμάνι, και το τοπικό λεωφορείο που πάει σε Μεγαλοχώρι και Απονήσσο.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1778777852/skala_port_gjgogq.jpg",
-            "photo_credit": {
-              "artist": "Kaethe17",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Agistri-cinema-2022.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Skala Beach",
-            "name_el": "Παραλία Σκάλας",
-            "lat": 37.710445509288455,
-            "lng": 23.36422649509855,
-            "type": "beach",
-            "desc": "Long sandy town beach with shallow water and the most facilities on the island — sunbeds, beach bars, water sports, family-friendly. Popular with Athenian day-trippers, busy in summer.",
-            "desc_el": "Μακριά αμμώδης παραλία της πόλης με ρηχά νερά και τις περισσότερες υπηρεσίες του νησιού — ξαπλώστρες, beach bars, θαλάσσια σπορ, οικογενειακή. Δημοφιλής στους Αθηναίους ημερήσιους εκδρομείς, πολυσύχναστη το καλοκαίρι.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1778777852/skala_beach_e5y8xz.jpg",
-            "photo_credit": {
-              "artist": "BlogJordan",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:BlogJordan_Agii-Anargyri_Skala-Agistri_Greece.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Aponissos Beach & Islet",
-            "name_el": "Παραλία & Νησάκι Απονήσσος",
-            "lat": 37.68469137806961,
-            "lng": 23.32171087793652,
-            "type": "beach",
-            "desc": "8km southwest, on the wild side of the island. Take the bus from Skala or Megalochori (about 20 min). A small uninhabited islet connected to Agistri by a footbridge, with crystal turquoise water on both sides. €5 entry includes a sunbed and a soft drink. The signature swim of the island.",
-            "desc_el": "8 χλμ νοτιοδυτικά, στην άγρια πλευρά του νησιού. Πάρε το λεωφορείο από Σκάλα ή Μεγαλοχώρι (περίπου 20 λεπτά). Ένα μικρό ακατοίκητο νησάκι συνδεδεμένο με το Αγκίστρι με γέφυρα, με κρυστάλλινα τιρκουάζ νερά και στις δύο πλευρές. 5€ είσοδος περιλαμβάνει ξαπλώστρα και αναψυκτικό. Το κύριο μπάνιο του νησιού.",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJqeKWyIEtoBQRJYNHrJEolgo",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1778777852/aponhsos_s0b0em.webp"
-          },
-          {
-            "name": "Lekani Saltwater Lake",
-            "name_el": "Λίμνη Λεκάνι",
-            "lat": 37.68354844236338,
-            "lng": 23.329362915670316,
-            "type": "viewpoint",
-            "desc": "Between Limenaria village and Aponissos — a small saltwater lake surrounded by wetland. Migratory birds in spring (kingfishers, wagtails). Walking paths around the perimeter. Quiet and unmarked; nobody else there.",
-            "desc_el": "Ανάμεσα στο χωριό Λιμενάρια και την Απονήσσο — μια μικρή λίμνη αλμυρού νερού περιτριγυρισμένη από υγρότοπο. Αποδημητικά πουλιά την άνοιξη (αλκυόνες, σουσουράδες). Μονοπάτια γύρω από την περίμετρο. Ήσυχη και ασήμαντη· κανένας άλλος εκεί.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785272918/%CE%BB%CE%B5%CE%BA%CE%B1%CE%BD%CE%B7_r7dpaa.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Megalochori (Capital)",
-            "name_el": "Μεγαλοχώρι (Πρωτεύουσα)",
-            "lat": 37.71091169663067,
-            "lng": 23.346845492332662,
-            "type": "village",
-            "desc": "The traditional capital — quieter than Skala, with stone houses, the 1885 Cathedral of Zoodochos Pigi, and a small archaeological collection. Walk the seaside pedestrian path back to Skala (1.5km, 15 minutes) at sunset.",
-            "desc_el": "Η παραδοσιακή πρωτεύουσα — πιο ήσυχη από τη Σκάλα, με πέτρινα σπίτια, τη Μητρόπολη Ζωοδόχου Πηγής (1885), και μια μικρή αρχαιολογική συλλογή. Περπάτησε τον παραλιακό πεζόδρομο πίσω στη Σκάλα (1,5 χλμ, 15 λεπτά) στο ηλιοβασίλεμα.",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJYQuK1PwsoBQR5QbRwKtXPzQ",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1778777852/megalochori_ff2ccj.jpg"
-          }
-        ],
-        "title_el": "Σκάλα, Απονήσος & Μεγαλοχώρι",
-        "km": 8,
-        "drive_mins": 25,
-        "food": [
-          {
-            "meal": "Lunch",
-            "meal_el": "Μεσημεριανό",
-            "area": "Skala",
-            "area_el": "Σκάλα",
-            "desc": "<a href=\"https://www.google.com/maps/search/Alter+Ego+Agistri+Skala\" target=\"_blank\" rel=\"noopener\">Alter Ego</a> in Skala runs from breakfast through dinner — a reliable all-day stop.",
-            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Alter+Ego+Agistri+Skala\" target=\"_blank\" rel=\"noopener\">Alter Ego</a> στη Σκάλα δουλεύει από το πρωινό ως το δείπνο — ένα σταθερό ολοήμερο στέκι.",
-            "after": "Skala Beach"
-          },
-          {
-            "meal": "Dinner",
-            "meal_el": "Δείπνο",
-            "area": "Skala",
-            "area_el": "Σκάλα",
-            "desc": "<a href=\"https://www.google.com/maps/search/Agistri+Club+Restaurant\" target=\"_blank\" rel=\"noopener\">Agistri Club</a> is the hilltop restaurant just outside Skala, with sweeping sunset views.",
-            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Agistri+Club+Restaurant\" target=\"_blank\" rel=\"noopener\">Agistri Club</a> είναι το εστιατόριο στον λόφο έξω από τη Σκάλα, με απέραντη θέα στο ηλιοβασίλεμα.",
-            "after": "Megalochori (Capital)"
-          }
-        ]
-      }
-    ],
-    "title_el": "Πρόγραμμα 1 Ημέρας στο Αγκίστρι",
-    "subtitle_el": "Σκάλα το πρωί, Απονήσος για κολύμπι, Μεγαλοχώρι για ηλιοβασίλεμα."
-  },
-  "beaches": [
-    {
-      "name": "Dragonera Beach",
-      "name_el": "Παραλία Δραγονέρα",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ5_zozl8soBQRSsxpp_2ku4w",
-      "rating": 4,
-      "type": "Fine pebble",
-      "type_el": "Λεπτό βότσαλο",
-      "length": "200 m",
-      "depth": "Medium — clear, deep enough to swim properly",
-      "depth_el": "Μέτριο — διαυγές, αρκετά βαθύ για κανονικό κολύμπι",
-      "facing": "West-facing — pine-shaded backdrop",
-      "facing_el": "Δυτική — φόντο σκιερό από πεύκα",
-      "facilities": "Light: a small canteen, sunbeds with straw umbrellas, free camping permitted at the back.",
-      "facilities_el": "Ελαφριές: μικρή καντίνα, ξαπλώστρες με αχυρένιες ομπρέλες, επιτρέπεται το ελεύθερο camping στο πίσω μέρος.",
-      "desc": "3km southwest of Megalochori on the west coast — quieter than Skala, surrounded by pine forest right down to the water. Free camping is permitted at the back. View across to Kyra islet. The escape from the day-tripper crowd.",
-      "desc_el": "3 χλμ νοτιοδυτικά του Μεγαλοχωρίου στη δυτική ακτή — πιο ήσυχη από τη Σκάλα, περιτριγυρισμένη από πευκοδάσος μέχρι το νερό. Επιτρέπεται το ελεύθερο camping στο πίσω μέρος. Θέα προς το νησάκι Κυρά. Η απόδραση από τα πλήθη των ημερήσιων εκδρομέων.",
-      "lat": 37.697177854898825,
-      "lng": 23.33216638137433,
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1778777852/dragonera_tfacjn.jpg"
-    },
-    {
-      "name": "Halikiada Beach",
-      "name_el": "Παραλία Χαλικιάδα",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJmeKL79AsoBQRj8s_aIH1G0U",
-      "rating": 4,
-      "type": "White pebble",
-      "type_el": "Λευκό βότσαλο",
-      "length": "150 m",
-      "depth": "Medium to deep",
-      "depth_el": "Μέτριο έως βαθύ",
-      "facing": "Northeast-facing",
-      "facing_el": "Βορειοανατολική",
-      "facilities": "None — accessible by 30-min steep walk through pine forest from Skala. Nudist-friendly.",
-      "facilities_el": "Καμία — προσβάσιμη με απότομη πεζοπορία 30 λεπτών μέσα από πευκοδάσος από τη Σκάλα. Φιλική προς γυμνιστές.",
-      "desc": "Wild pebble cove reached only by a forest trail from Skala — pine trees down to the white pebbles, completely undeveloped. Nudist-friendly and almost always quiet. The reward for a 30-minute walk.",
-      "desc_el": "Άγριος κολπίσκος με βότσαλο, προσβάσιμος μόνο με μονοπάτι μέσα από δάσος από τη Σκάλα — πεύκα μέχρι τα λευκά βότσαλα, εντελώς ανέγγιχτη. Φιλική προς γυμνιστές και σχεδόν πάντα ήσυχη. Η ανταμοιβή μιας πεζοπορίας 30 λεπτών.",
-      "lat": 37.70076518869375,
-      "lng": 23.37265783412954,
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/2/22/Agistri_Halikiada.jpg",
+ "key": "agistri",
+ "name": "Agistri",
+ "name_el": "Αγκίστρι",
+ "name_accusative_el": "Αγκίστρι",
+ "name_genitive_el": "Αγκιστρίου",
+ "gender_el": "n",
+ "subtitle": "55 minutes from Piraeus — pine forests to the sea, ice-blue Aponissos and the easiest island escape from Athens",
+ "subtitle_el": "55 λεπτά από τον Πειραιά — πευκόφυτη ακτή, παγωμένο μπλε στην Απονήσσο και η ευκολότερη νησιωτική απόδραση από την Αθήνα",
+ "intro": "Agistri is what every Athenian recommends to a visitor short on time — 55 minutes from Piraeus on the Flying Dolphin, a Saronic Gulf island where pine forests run all the way to the water and the beaches are good enough that no one feels short-changed. The two ports are Skala (busier, faster ferries) and Megalochori (the more traditional capital). The headline beach is Aponissos on the southwest coast — a tiny island connected by a footbridge to the main island, with water people will tell you looks photoshopped. One day works for a swim and dinner; two days lets you reach the wilder west coast.",
+ "intro_el": "Το Αγκίστρι είναι αυτό που κάθε Αθηναίος προτείνει σε επισκέπτη με λίγο χρόνο — 55 λεπτά από τον Πειραιά με Flying Dolphin, ένα νησί του Σαρωνικού όπου τα δάση πεύκων φτάνουν μέχρι το νερό και οι παραλίες είναι αρκετά καλές ώστε κανείς να μη νιώθει αδικημένος. Τα δύο λιμάνια είναι η Σκάλα (πιο πολυσύχναστο, ταχύπλοα) και ο Μεγαλοχώρι (η πιο παραδοσιακή πρωτεύουσα). Η κύρια παραλία είναι η Απονήσσος στη νοτιοδυτική ακτή — ένα μικρό νησάκι συνδεδεμένο με γέφυρα με το κύριο νησί, με νερά που θα σου πουν ότι μοιάζουν με photoshop. Μία μέρα φτάνει για μπάνιο και δείπνο· δύο μέρες σε φτάνουν στη δυτική ακτή.",
+ "when_to_visit": {
+  "summary": "Agistri is a tiny island next to Aegina — pine forests, clear water, three settlements. Quieter than its neighbours; the Athenian weekend crowd here is mostly families. Open year-round but most things shut Nov-Mar. Best June and September. Weekday in shoulder season is the dream.",
+  "summary_el": "Η Αγκίστρι είναι ένα μικροσκοπικό νησί δίπλα στην Αίγινα — πευκοδάση, καθαρά νερά, τρεις οικισμοί. Πιο ήσυχο από τους γείτονές του· το αθηναϊκό σαββατοκύριακο εδώ είναι κυρίως οικογένειες. Ανοιχτό όλο τον χρόνο, αλλά τα περισσότερα κλείνουν Νοέμβριο–Μάρτιο. Καλύτερα Ιούνιο και Σεπτέμβριο. Μια καθημερινή εκτός σεζόν είναι το όνειρο.",
+  "months": [
+   {
+    "tag": "ok",
+    "why": "Mild, quiet",
+    "why_el": "Ήπιο, κλειστά",
+    "limited": true
+   },
+   {
+    "tag": "ok",
+    "why": "Cold, quiet",
+    "why_el": "Κρύο, ήσυχα",
+    "limited": true
+   },
+   {
+    "tag": "great",
+    "why": "Pines, mild",
+    "why_el": "Πεύκα πράσινα, ήπιο",
+    "limited": true
+   },
+   {
+    "tag": "great",
+    "why": "Easter, awakening",
+    "why_el": "Πάσχα, οικογένειες"
+   },
+   {
+    "tag": "perfect",
+    "why": "Swimmable, calm",
+    "why_el": "Θάλασσα μπάνιο, ήσυχα"
+   },
+   {
+    "tag": "perfect",
+    "why": "Long days, quiet",
+    "why_el": "Μεγάλες μέρες, ήσυχα"
+   },
+   {
+    "tag": "ok",
+    "why": "Hot, weekend",
+    "why_el": "Ζέστη, οικογένειες ΣΚ"
+   },
+   {
+    "tag": "ok",
+    "why": "Peak weekends",
+    "why_el": "Κορύφωση ΣΚ"
+   },
+   {
+    "tag": "perfect",
+    "why": "Best — sea warm",
+    "why_el": "Καλύτερος — ζεστά"
+   },
+   {
+    "tag": "great",
+    "why": "Late swims, calm",
+    "why_el": "Τελευταία βουτιά"
+   },
+   {
+    "tag": "ok",
+    "why": "Mild, closing",
+    "why_el": "Ήπιο, κλείνει"
+   },
+   {
+    "tag": "ok",
+    "why": "Quiet, locals",
+    "why_el": "Ήσυχα",
+    "limited": true
+   }
+  ]
+ },
+ "itinerary": {
+  "title": "1-Day Agistri Itinerary",
+  "subtitle": "Skala in the morning, Aponissos for the swim, Megalochori for sunset.",
+  "days": [
+   {
+    "day": 1,
+    "title": "Skala, Aponissos & Megalochori",
+    "color": "#1B4F8A",
+    "stops": [
+     {
+      "name": "Skala Port",
+      "name_el": "Λιμάνι Σκάλας",
+      "lat": 37.7081,
+      "lng": 23.355,
+      "type": "village",
+      "wiki": "https://www.google.com/maps/search/Skala+Port+Agistri",
+      "desc": "The busier of the two ports, where most car ferries dock. Café-lined waterfront, the long sandy Skala Beach right next to the harbour, and the local bus that runs to Megalochori and Aponissos.",
+      "desc_el": "Το πιο πολυσύχναστο από τα δύο λιμάνια, όπου δένουν τα περισσότερα οχηματαγωγά. Παραλιακή με καφέ, η μακριά αμμώδης παραλία Σκάλας ακριβώς δίπλα στο λιμάνι, και το τοπικό λεωφορείο που πάει σε Μεγαλοχώρι και Απονήσσο.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1778777852/skala_port_gjgogq.jpg",
       "photo_credit": {
-        "artist": "Lichinga",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Agistri_Halikiada.jpg",
-        "source": "Wikimedia Commons"
+       "artist": "Kaethe17",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Agistri-cinema-2022.jpg",
+       "source": "Wikimedia Commons"
       }
-    }
+     },
+     {
+      "name": "Skala Beach",
+      "name_el": "Παραλία Σκάλας",
+      "lat": 37.710445509288455,
+      "lng": 23.36422649509855,
+      "type": "beach",
+      "desc": "Long sandy town beach with shallow water and the most facilities on the island — sunbeds, beach bars, water sports, family-friendly. Popular with Athenian day-trippers, busy in summer.",
+      "desc_el": "Μακριά αμμώδης παραλία της πόλης με ρηχά νερά και τις περισσότερες υπηρεσίες του νησιού — ξαπλώστρες, beach bars, θαλάσσια σπορ, οικογενειακή. Δημοφιλής στους Αθηναίους ημερήσιους εκδρομείς, πολυσύχναστη το καλοκαίρι.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1778777852/skala_beach_e5y8xz.jpg",
+      "photo_credit": {
+       "artist": "BlogJordan",
+       "license": "CC BY-SA 3.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:BlogJordan_Agii-Anargyri_Skala-Agistri_Greece.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Aponissos Beach & Islet",
+      "name_el": "Παραλία & Νησάκι Απονήσσος",
+      "lat": 37.68469137806961,
+      "lng": 23.32171087793652,
+      "type": "beach",
+      "desc": "8km southwest, on the wild side of the island. Take the bus from Skala or Megalochori (about 20 min). A small uninhabited islet connected to Agistri by a footbridge, with crystal turquoise water on both sides. €5 entry includes a sunbed and a soft drink. The signature swim of the island.",
+      "desc_el": "8 χλμ νοτιοδυτικά, στην άγρια πλευρά του νησιού. Πάρε το λεωφορείο από Σκάλα ή Μεγαλοχώρι (περίπου 20 λεπτά). Ένα μικρό ακατοίκητο νησάκι συνδεδεμένο με το Αγκίστρι με γέφυρα, με κρυστάλλινα τιρκουάζ νερά και στις δύο πλευρές. 5€ είσοδος περιλαμβάνει ξαπλώστρα και αναψυκτικό. Το κύριο μπάνιο του νησιού.",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJqeKWyIEtoBQRJYNHrJEolgo",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1778777852/aponhsos_s0b0em.webp"
+     },
+     {
+      "name": "Lekani Saltwater Lake",
+      "name_el": "Λίμνη Λεκάνι",
+      "lat": 37.68354844236338,
+      "lng": 23.329362915670316,
+      "type": "viewpoint",
+      "desc": "Between Limenaria village and Aponissos — a small saltwater lake surrounded by wetland. Migratory birds in spring (kingfishers, wagtails). Walking paths around the perimeter. Quiet and unmarked; nobody else there.",
+      "desc_el": "Ανάμεσα στο χωριό Λιμενάρια και την Απονήσσο — μια μικρή λίμνη αλμυρού νερού περιτριγυρισμένη από υγρότοπο. Αποδημητικά πουλιά την άνοιξη (αλκυόνες, σουσουράδες). Μονοπάτια γύρω από την περίμετρο. Ήσυχη και ασήμαντη· κανένας άλλος εκεί.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785272918/%CE%BB%CE%B5%CE%BA%CE%B1%CE%BD%CE%B7_r7dpaa.jpg",
+      "photo_credit": null
+     },
+     {
+      "name": "Megalochori (Capital)",
+      "name_el": "Μεγαλοχώρι (Πρωτεύουσα)",
+      "lat": 37.71091169663067,
+      "lng": 23.346845492332662,
+      "type": "village",
+      "desc": "The traditional capital — quieter than Skala, with stone houses, the 1885 Cathedral of Zoodochos Pigi, and a small archaeological collection. Walk the seaside pedestrian path back to Skala (1.5km, 15 minutes) at sunset.",
+      "desc_el": "Η παραδοσιακή πρωτεύουσα — πιο ήσυχη από τη Σκάλα, με πέτρινα σπίτια, τη Μητρόπολη Ζωοδόχου Πηγής (1885), και μια μικρή αρχαιολογική συλλογή. Περπάτησε τον παραλιακό πεζόδρομο πίσω στη Σκάλα (1,5 χλμ, 15 λεπτά) στο ηλιοβασίλεμα.",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJYQuK1PwsoBQR5QbRwKtXPzQ",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1778777852/megalochori_ff2ccj.jpg"
+     }
+    ],
+    "title_el": "Σκάλα, Απονήσος & Μεγαλοχώρι",
+    "km": 8,
+    "drive_mins": 25,
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Skala",
+      "area_el": "Σκάλα",
+      "desc": "<a href=\"https://www.google.com/maps/search/Alter+Ego+Agistri+Skala\" target=\"_blank\" rel=\"noopener\">Alter Ego</a> in Skala runs from breakfast through dinner — a reliable all-day stop.",
+      "desc_el": "Το <a href=\"https://www.google.com/maps/search/Alter+Ego+Agistri+Skala\" target=\"_blank\" rel=\"noopener\">Alter Ego</a> στη Σκάλα δουλεύει από το πρωινό ως το δείπνο — ένα σταθερό ολοήμερο στέκι.",
+      "after": "Skala Beach"
+     },
+     {
+      "meal": "Dinner",
+      "meal_el": "Δείπνο",
+      "area": "Skala",
+      "area_el": "Σκάλα",
+      "desc": "<a href=\"https://www.google.com/maps/search/Agistri+Club+Restaurant\" target=\"_blank\" rel=\"noopener\">Agistri Club</a> is the hilltop restaurant just outside Skala, with sweeping sunset views.",
+      "desc_el": "Το <a href=\"https://www.google.com/maps/search/Agistri+Club+Restaurant\" target=\"_blank\" rel=\"noopener\">Agistri Club</a> είναι το εστιατόριο στον λόφο έξω από τη Σκάλα, με απέραντη θέα στο ηλιοβασίλεμα.",
+      "after": "Megalochori (Capital)"
+     }
+    ]
+   }
   ],
-  "getting_there": {
-    "pills": [
-      "⛵ Piraeus 1h fast",
-      "€15–20"
-    ],
-    "pills_el": [
-      "⛵ Πειραιάς 1 ώρα γρήγορο",
-      "€15–20"
-    ],
-    "summary": "No airport. Direct fast ferry from Piraeus, ~1h. Also reachable from Aegina via 10-minute shuttle.",
-    "summary_el": "Χωρίς αεροδρόμιο. Απευθείας γρήγορο πλοίο από Πειραιά, ~1 ώρα. Επίσης από Αίγινα με 10-λεπτη σύνδεση.",
-    "tip": "Easier than Aegina to find a quiet beach — half the visitors.",
-    "tip_el": "Πιο εύκολα από Αίγινα να βρεις ήσυχη παραλία — οι μισοί επισκέπτες."
+  "title_el": "Πρόγραμμα 1 Ημέρας στο Αγκίστρι",
+  "subtitle_el": "Σκάλα το πρωί, Απονήσος για κολύμπι, Μεγαλοχώρι για ηλιοβασίλεμα."
+ },
+ "beaches": [
+  {
+   "name": "Dragonera Beach",
+   "name_el": "Παραλία Δραγονέρα",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ5_zozl8soBQRSsxpp_2ku4w",
+   "rating": 4,
+   "type": "Fine pebble",
+   "type_el": "Λεπτό βότσαλο",
+   "length": "200 m",
+   "depth": "Medium — clear, deep enough to swim properly",
+   "depth_el": "Μέτριο — διαυγές, αρκετά βαθύ για κανονικό κολύμπι",
+   "facing": "West-facing — pine-shaded backdrop",
+   "facing_el": "Δυτική — φόντο σκιερό από πεύκα",
+   "facilities": "Light: a small canteen, sunbeds with straw umbrellas, free camping permitted at the back.",
+   "facilities_el": "Λιγοστές παροχές: μικρή καντίνα, ξαπλώστρες με αχυρένιες ομπρέλες, επιτρέπεται το ελεύθερο camping στο πίσω μέρος.",
+   "desc": "3km southwest of Megalochori on the west coast — quieter than Skala, surrounded by pine forest right down to the water. Free camping is permitted at the back. View across to Kyra islet. The escape from the day-tripper crowd.",
+   "desc_el": "3 χλμ νοτιοδυτικά του Μεγαλοχωρίου στη δυτική ακτή — πιο ήσυχη από τη Σκάλα, περιτριγυρισμένη από πευκοδάσος μέχρι το νερό. Επιτρέπεται το ελεύθερο camping στο πίσω μέρος. Θέα προς το νησάκι Κυρά. Η απόδραση από τα πλήθη των ημερήσιων εκδρομέων.",
+   "lat": 37.697177854898825,
+   "lng": 23.33216638137433,
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1778777852/dragonera_tfacjn.jpg"
+  },
+  {
+   "name": "Halikiada Beach",
+   "name_el": "Παραλία Χαλικιάδα",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJmeKL79AsoBQRj8s_aIH1G0U",
+   "rating": 4,
+   "type": "White pebble",
+   "type_el": "Λευκό βότσαλο",
+   "length": "150 m",
+   "depth": "Medium to deep",
+   "depth_el": "Μέτριο έως βαθύ",
+   "facing": "Northeast-facing",
+   "facing_el": "Βορειοανατολική",
+   "facilities": "None — accessible by 30-min steep walk through pine forest from Skala. Nudist-friendly.",
+   "facilities_el": "Καμία παροχή — προσβάσιμη με απότομη πεζοπορία 30 λεπτών μέσα από πευκοδάσος από τη Σκάλα. Φιλική προς γυμνιστές.",
+   "desc": "Wild pebble cove reached only by a forest trail from Skala — pine trees down to the white pebbles, completely undeveloped. Nudist-friendly and almost always quiet. The reward for a 30-minute walk.",
+   "desc_el": "Άγριος κολπίσκος με βότσαλο, προσβάσιμος μόνο με μονοπάτι μέσα από δάσος από τη Σκάλα — πεύκα μέχρι τα λευκά βότσαλα, εντελώς ανέγγιχτη. Φιλική προς γυμνιστές και σχεδόν πάντα ήσυχη. Η ανταμοιβή μιας πεζοπορίας 30 λεπτών.",
+   "lat": 37.70076518869375,
+   "lng": 23.37265783412954,
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/2/22/Agistri_Halikiada.jpg",
+   "photo_credit": {
+    "artist": "Lichinga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Agistri_Halikiada.jpg",
+    "source": "Wikimedia Commons"
+   }
   }
+ ],
+ "getting_there": {
+  "pills": [
+   "⛵ Piraeus 1h fast",
+   "€15–20"
+  ],
+  "pills_el": [
+   "⛵ Πειραιάς 1 ώρα γρήγορο",
+   "€15–20"
+  ],
+  "summary": "No airport. Direct fast ferry from Piraeus, ~1h. Also reachable from Aegina via 10-minute shuttle.",
+  "summary_el": "Χωρίς αεροδρόμιο. Απευθείας γρήγορο πλοίο από Πειραιά, ~1 ώρα. Επίσης από Αίγινα με 10-λεπτη σύνδεση.",
+  "tip": "Easier than Aegina to find a quiet beach — half the visitors.",
+  "tip_el": "Πιο εύκολα από Αίγινα να βρεις ήσυχη παραλία — οι μισοί επισκέπτες."
+ }
 }

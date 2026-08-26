@@ -1,380 +1,380 @@
 {
-  "key": "skiathos",
-  "name": "Skiathos",
-  "subtitle": "The party Sporade — pine forests, turquoise water and 60 beaches",
-  "intro": "Skiathos is tiny — 12km long — but packs in 60 beaches, dense pine forest running to the water's edge, and the liveliest nightlife in the Sporades. Koukounaries is one of the finest sandy beaches in Greece. The old town is genuinely attractive. Planes land metres above the beach at the runway — a spectacle in itself. Come here for beaches and nightlife, not culture.",
-  "when_to_visit": {
-    "summary": "Skiathos has 60 beaches and an international airport — which means cheap flights from northern Europe and matching crowds. The pine forests come right down to the sand. Best May-October; June and September are sweet spots. Mid-July through August is package-tourism peak; Koukounaries beach is a battle.",
-    "summary_el": "Η Σκιάθος έχει 60 παραλίες και διεθνές αεροδρόμιο — που σημαίνει φθηνές πτήσεις από τη βόρεια Ευρώπη και ανάλογο κόσμο. Τα πευκοδάση κατεβαίνουν ως την άμμο. Καλύτερα Μάιο–Οκτώβριο, ιδανικά Ιούνιο και Σεπτέμβριο. Από τα μέσα Ιουλίου ως τον Αύγουστο είναι η κορύφωση του οργανωμένου τουρισμού· η παραλία Κουκουναριές είναι μάχη.",
-    "months": [
-      {
-        "tag": "avoid",
-        "why": "Off-season, rainy",
-        "why_el": "Μόνο ντόπιοι, βροχερά"
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Σκελετός υπηρεσιών"
-      },
-      {
-        "tag": "ok",
-        "why": "Pines green",
-        "why_el": "Πεύκα πράσινα"
-      },
-      {
-        "tag": "great",
-        "why": "Easter, awakening",
-        "why_el": "Πάσχα, ανοίγουν"
-      },
-      {
-        "tag": "great",
-        "why": "Beaches yours",
-        "why_el": "Θάλ., άδειες"
-      },
-      {
-        "tag": "perfect",
-        "why": "Charters starting, pine-forest beaches still uncrowded, Old Port nightlife warming up. The best balance for a small island that fills fast.",
-        "why_el": "Τα τσάρτερ αρχίζουν, οι πευκόφυτες παραλίες ακόμα άδειες, η νυχτερινή ζωή του Παλαιού Λιμένα ζεσταίνεται. Η καλύτερη ισορροπία για ένα μικρό νησί που γεμίζει γρήγορα."
-      },
-      {
-        "tag": "great",
-        "why": "Hot, packages starting in earnest. Koukounaries and Banana beaches crowded by 10am; the Old Port bars loud till dawn. Skiathos in summer mode, not yet peak.",
-        "why_el": "Ζέστη, τα πακέτα αρχίζουν για τα καλά. Οι Κουκουναριές και η Μπανάνα γεμίζουν μέχρι τις 10 το πρωί· τα μπαρ του Παλαιού Λιμένα θορυβώδη μέχρι χάραμα. Η Σκιάθος σε καλοκαιρινή λειτουργία, όχι ακόμα peak."
-      },
-      {
-        "tag": "great",
-        "why": "Peak — every beach crowded by mid-morning, Old Port chaos every night, prices at maximum. Skiathos is small (12 km long); crowds are felt everywhere. Book everything weeks ahead.",
-        "why_el": "Κορύφωση — κάθε παραλία γεμάτη μέχρι μέσα του πρωινού, χάος στο Παλαιό Λιμάνι κάθε νύχτα, τιμές στο μέγιστο. Η Σκιάθος είναι μικρή (12 χλμ.)· το πλήθος γίνεται αισθητό παντού. Κρατήσεις εβδομάδες πριν."
-      },
-      {
-        "tag": "perfect",
-        "why": "Charters winding down, beaches breathing, Old Port still lively but no longer suffocating. Best swim conditions, mellow vibe through the end of the month.",
-        "why_el": "Τα τσάρτερ αραιώνουν, οι παραλίες ξεσφίγγουν, ο Παλαιός Λιμένας ακόμα ζωντανός αλλά όχι πια ασφυκτικός. Καλύτερες συνθήκες κολύμβησης, χαλαρή διάθεση μέχρι το τέλος του μήνα."
-      },
-      {
-        "tag": "great",
-        "why": "Last swims",
-        "why_el": "Τελευταία βουτιά"
-      },
-      {
-        "tag": "ok",
-        "why": "Season ending, mild",
-        "why_el": "Για χειμώνα"
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Σκελετός υπηρεσιών"
-      }
-    ]
-  },
-  "itinerary": {
-    "title": "3-Day Skiathos Itinerary",
-    "subtitle": "Beach-hopping by boat, the old town lanes, Koukounaries lagoon and the monastery of Evangelistria.",
-    "days": [
-      {
-        "day": 1,
-        "title": "Skiathos Town & the East",
-        "color": "#1B4F8A",
-        "km": 15,
-        "drive_mins": 20,
-        "overnight": "Skiathos Town",
-        "stops": [
-          {
-            "name": "Skiathos Town",
-            "lat": 39.1626627,
-            "lng": 23.4909759,
-            "type": "city",
-            "time": "09:00",
-            "wiki": "https://www.google.com/maps/search/Skiathos+Town",
-            "desc": "The most attractive town in the Sporades — two hills, a Venetian castle, pine-shaded lanes and a bustling harbour. Walk the Papadiamantis Street and have breakfast at the old port.",
-            "name_el": "Πόλη Σκιάθου",
-            "desc_el": "Η πιο ελκυστική πόλη των Σποράδων — δύο λόφοι, ένα βενετσιάνικο κάστρο, πεύκο-σκιασμένα δρομάκια και ένα γεμάτο λιμάνι. Περπάτησε την οδό Παπαδιαμάντη και πάρε πρωινό στο παλιό λιμάνι.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884814/skiathos_town_t6n09u.jpg"
-          },
-          {
-            "name": "Bourtzi Fortress",
-            "lat": 39.16082,
-            "lng": 23.4911,
-            "type": "castle",
-            "time": "10:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ-chSIFrnphQRrxy86VTYc34",
-            "desc": "Small Venetian fortress on a pine-wooded islet in the harbour mouth. Walk across the causeway for views over the town and the channel.",
-            "name_el": "Φρούριο Μπούρτζι",
-            "desc_el": "Μικρό βενετσιάνικο φρούριο σε πευκόφυτη νησίδα στο στόμιο του λιμανιού. Περπάτησε το προστατευτικό μονοπάτι για θέες στην πόλη και το κανάλι.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884816/bourtzi_s1rcos.jpg"
-          },
-          {
-            "name": "Evangelistria Monastery",
-            "lat": 39.1902661,
-            "lng": 23.4803255,
-            "type": "church",
-            "time": "11:00",
-            "wiki": "https://www.google.com/maps/search/Evangelistria+Monastery+Skiathos",
-            "desc": "18th-century monastery in the pine forest above the town — the first Greek flag was raised here in 1807. Beautiful setting, small museum, excellent views.",
-            "name_el": "Μονή Ευαγγελίστριας",
-            "desc_el": "Μονή του 18ου αιώνα μέσα στο πευκοδάσος πάνω από την πόλη — εδώ υψώθηκε η πρώτη ελληνική σημαία το 1807. Όμορφο σκηνικό, μικρό μουσείο, εξαιρετικές θέες.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884813/evangelistria_c7whq7.jpg"
-          },
-          {
-            "name": "Koukounaries Beach",
-            "lat": 39.1487289,
-            "lng": 23.401937,
-            "type": "beach",
-            "time": "14:30",
-            "wiki": "https://www.google.com/maps/search/Koukounaries+Beach+Skiathos",
-            "desc": "One of the finest beaches in Greece — 1.2km of golden sand framed by a dense pine forest and a protected lagoon behind it. Arrive by 14:00 for a sunbed. The lagoon behind is a protected wetland.",
-            "name_el": "Παραλία Κουκουναριές",
-            "desc_el": "Μία από τις καλύτερες παραλίες της Ελλάδας — 1,2 χλμ χρυσής άμμου πλαισιωμένης από πυκνό πευκοδάσος και μια προστατευμένη λιμνοθάλασσα πίσω. Φτάσε μέχρι τις 14:00 για ξαπλώστρα. Η λιμνοθάλασσα πίσω είναι προστατευμένος υγρότοπος.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884811/koukounaries_1_alxha7.webp"
-          },
-          {
-            "name": "Dinner in Skiathos Town",
-            "name_el": "Δείπνο στη Χώρα Σκιάθου",
-            "lat": 39.1627,
-            "lng": 23.491,
-            "type": "city",
-            "time": "20:00",
-            "wiki": null,
-            "desc": "Drive back along the south coast road from Koukounaries to Skiathos Town (about 25 minutes). The harbour at twilight is the social heart of the island — find a table at one of the seafront tavernas, or wander the narrow lanes above Bourtzi.",
-            "desc_el": "Επιστροφή κατά μήκος του νότιου παραλιακού δρόμου από τις Κουκουναριές στη Χώρα (περίπου 25 λεπτά). Το λιμάνι στο σούρουπο είναι το κοινωνικό κέντρο του νησιού — βρες ένα τραπέζι σε μία από τις ταβέρνες της παραλίας ή περιπλανήσου στα στενά πάνω από το Μπούρτζι."
-          }
-        ],
-        "title_el": "Χώρα Σκιάθου & η Ανατολή",
-        "overnight_el": "Χώρα Σκιάθου",
-        "nightlife": "Skiathos Town packs a real scene into a small grid. Start at <a href=\"https://www.google.com/maps/search/Rock+and+Roll+Bar+Skiathos\" target=\"_blank\" rel=\"noopener\">Rock 'n' Roll Bar</a> on the Old Port steps (cushions on the cobbles, sea in front), swing by <a href=\"https://www.google.com/maps/search/Kentavros+Bar+Skiathos\" target=\"_blank\" rel=\"noopener\">Kentavros</a> off Papadiamantis for blues and proper cocktails, then hit <a href=\"https://www.google.com/maps/search/Bar+Street+Polytechniou+Skiathos\" target=\"_blank\" rel=\"noopener\">'Bar Street' (Polytechniou)</a> — Spartacus, Admiral Benbow and the rest — which runs late.",
-        "nightlife_el": "Η Χώρα της Σκιάθου χωράει μια αληθινή σκηνή σε λίγα στενά. Ξεκίνα στο <a href=\"https://www.google.com/maps/search/Rock+and+Roll+Bar+Skiathos\" target=\"_blank\" rel=\"noopener\">Rock 'n' Roll Bar</a> στα σκαλιά του Παλιού Λιμανιού (μαξιλάρες στα βότσαλα, θάλασσα μπροστά), πέρνα από το <a href=\"https://www.google.com/maps/search/Kentavros+Bar+Skiathos\" target=\"_blank\" rel=\"noopener\">Kentavros</a> πιο πέρα από την Παπαδιαμάντη για μπλουζ και σωστά κοκτέιλ, και μετά χτύπα το <a href=\"https://www.google.com/maps/search/Bar+Street+Polytechniou+Skiathos\" target=\"_blank\" rel=\"noopener\">«Bar Street» (Πολυτεχνείου)</a> — Spartacus, Admiral Benbow και τα υπόλοιπα — που τραβάει ως αργά.",
-        "food": [
-          {
-            "meal": "Dinner",
-            "meal_el": "Δείπνο",
-            "area": "Skiathos Town",
-            "area_el": "Χώρα Σκιάθου",
-            "desc": "<a href=\"https://www.google.com/maps/search/Marmita+Skiathos+Town\" target=\"_blank\" rel=\"noopener\">Marmita</a> is the imaginative, well-priced gastronomic pick; <a href=\"https://www.google.com/maps/search/Mesogia+Skiathos+Town\" target=\"_blank\" rel=\"noopener\">Mesogia</a> is the oldest taverna in town (100+ years) in the Plakes quarter; <a href=\"https://www.google.com/maps/search/Windmill+Restaurant+Skiathos\" target=\"_blank\" rel=\"noopener\">The Windmill</a> sits in an 1880 windmill at the highest point for the view.",
-            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Marmita+Skiathos+Town\" target=\"_blank\" rel=\"noopener\">Marmita</a> είναι η ευφάνταστη, καλότιμη γαστρονομική επιλογή· η <a href=\"https://www.google.com/maps/search/Mesogia+Skiathos+Town\" target=\"_blank\" rel=\"noopener\">Μεσόγεια</a> είναι η παλαιότερη ταβέρνα της πόλης (100+ χρόνια) στις Πλάκες· ο <a href=\"https://www.google.com/maps/search/Windmill+Restaurant+Skiathos\" target=\"_blank\" rel=\"noopener\">Windmill</a> σε ανεμόμυλο του 1880 στο ψηλότερο σημείο για τη θέα.",
-            "after": "Return to Skiathos Town"
-          }
-        ]
-      },
-      {
-        "day": 2,
-        "title": "Beach Boat Tour",
-        "color": "#C0522A",
-        "km": 5,
-        "drive_mins": 10,
-        "overnight": "Skiathos Town",
-        "stops": [
-          {
-            "name": "Old Port — Boat Departure",
-            "lat": 39.16082,
-            "lng": 23.4911,
-            "type": "harbour",
-            "time": "09:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJL5dHc1rnphQRLCLEYIDWuvg",
-            "desc": "Full-day boat tour around the island — the only way to reach the best beaches on the north coast. Boats depart from the old port daily in summer.",
-            "name_el": "Παλιό Λιμάνι — Αναχώρηση με Καραβάκι",
-            "desc_el": "Ημερήσια εκδρομή με βάρκα γύρω από το νησί — ο μόνος τρόπος να φτάσεις στις καλύτερες παραλίες της βόρειας ακτής. Οι βάρκες αναχωρούν από το παλιό λιμάνι καθημερινά το καλοκαίρι."
-          },
-          {
-            "name": "Lalaria Beach",
-            "lat": 39.207095,
-            "lng": 23.4779003,
-            "type": "beach",
-            "time": "11:00",
-            "wiki": "https://www.google.com/maps/search/Lalaria+Beach+Skiathos",
-            "desc": "The most dramatic beach in the Sporades — white oval pebbles under sheer white limestone cliffs with a natural rock arch. Accessible only by boat. Crystal clear water.",
-            "name_el": "Παραλία Λαλάρια",
-            "desc_el": "Η πιο δραματική παραλία των Σποράδων — λευκά ωοειδή βότσαλα κάτω από κάθετους λευκούς ασβεστολιθικούς γκρεμούς με φυσική βραχώδη αψίδα. Προσβάσιμη μόνο με βάρκα. Κρυστάλλινα νερά.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884809/lalaria_2_uevfsf.jpg"
-          },
-          {
-            "name": "Blue Cave (Skotini Spilia)",
-            "lat": 39.2033,
-            "lng": 23.4417,
-            "type": "nature",
-            "time": "12:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJj3XzrdLmphQRhlArj16mXcY",
-            "desc": "Sea cave on the north coast where the water glows blue from the sunlight refraction. Swim in from the boat.",
-            "name_el": "Γαλάζια Σπηλιά (Σκοτεινή Σπηλιά)",
-            "desc_el": "Θαλάσσια σπηλιά στη βόρεια ακτή όπου τα νερά λάμπουν μπλε από τη διάθλαση του ηλιακού φωτός. Κολύμπησε μέσα από τη βάρκα.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884808/blue_cave_gnwsdw.jpg"
-          },
-          {
-            "name": "Kastro (Abandoned Town)",
-            "lat": 39.2102881,
-            "lng": 23.460598,
-            "type": "castle",
-            "time": "14:00",
-            "wiki": "https://www.google.com/maps/search/Kastro+(Abandoned+Town)+Skiathos",
-            "desc": "The abandoned medieval capital of Skiathos on a sea cliff — the entire population moved to the current town in 1829. Ruins of 300 houses and 22 churches. Boat stop with a short hike up.",
-            "name_el": "Κάστρο (Εγκαταλελειμμένη Πόλη)",
-            "desc_el": "Η εγκαταλελειμμένη μεσαιωνική πρωτεύουσα της Σκιάθου σε θαλάσσιο γκρεμό — ολόκληρος ο πληθυσμός μετακινήθηκε στη σημερινή πόλη το 1829. Ερείπια 300 σπιτιών και 22 εκκλησιών. Στάση με βάρκα και σύντομη πεζοπορία.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783885152/kastro11_k6bxpx.jpg"
-          },
-          {
-            "name": "Dinner in Skiathos Town",
-            "name_el": "Δείπνο στη Χώρα Σκιάθου",
-            "lat": 39.1627,
-            "lng": 23.491,
-            "type": "harbour",
-            "time": "18:30",
-            "wiki": null,
-            "desc": "Boat returns to the Old Port in late afternoon (about 90 min from the Kastro side). Cocktails at one of the harbour bars are the natural end to a full day on the water — the seafront restaurants here are good for early dinners.",
-            "desc_el": "Το σκάφος επιστρέφει στο Παλαιό Λιμάνι αργά το απόγευμα (περίπου 90 λεπτά από την πλευρά του Κάστρου). Κοκτέιλ σε ένα από τα μπαρ του λιμανιού είναι το φυσικό τέλος μιας γεμάτης μέρας στη θάλασσα — τα παραλιακά εστιατόρια εδώ είναι καλά για πρώιμο δείπνο."
-          }
-        ],
-        "title_el": "Περιήγηση Παραλιών με Σκάφος",
-        "overnight_el": "Χώρα Σκιάθου",
-        "nightlife": "Another town night, eased in with sunset drinks on the Old Port before Bar Street fills up. For a quieter one, the bars out toward the Bourtzi headland keep things mellow.",
-        "nightlife_el": "Άλλη μια βραδιά στη Χώρα, με ζέσταμα στο ηλιοβασίλεμα στο Παλιό Λιμάνι πριν γεμίσει το Bar Street. Για κάτι πιο ήσυχο, τα μπαρ προς το Μπούρτζι κρατούν χαλαρό κλίμα."
-      },
-      {
-        "day": 3,
-        "title": "West Beaches & Departure",
-        "color": "#5A7A3A",
-        "km": 20,
-        "drive_mins": 25,
-        "overnight": null,
-        "stops": [
-          {
-            "name": "Banana Beach",
-            "lat": 39.1473554,
-            "lng": 23.3923991,
-            "type": "beach",
-            "time": "09:30",
-            "wiki": null,
-            "desc": "Two beaches side by side west of Koukounaries — Big Banana (organised, lively) and Little Banana (clothing-optional, quieter). Both have clear, shallow water.",
-            "name_el": "Παραλία Μπανάνα",
-            "desc_el": "Δύο παραλίες δίπλα-δίπλα δυτικά των Κουκουναριών — Μεγάλη Μπανάνα (οργανωμένη, ζωντανή) και Μικρή Μπανάνα (προαιρετικού ντυσίματος, πιο ήσυχη). Και οι δύο έχουν διαυγή, ρηχά νερά.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884806/banana_2_tc4uqi.jpg"
-          },
-          {
-            "name": "Agia Eleni Beach",
-            "lat": 39.1538234,
-            "lng": 23.3914636,
-            "type": "beach",
-            "time": "12:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJxQl1s43fphQRWirtJRY7RAE",
-            "desc": "Wild, sandy north-coast beach accessible via a path through pine forest. Far quieter than the south coast beaches, excellent water.",
-            "name_el": "Παραλία Αγία Ελένη",
-            "desc_el": "Άγρια, αμμώδης παραλία της βόρειας ακτής προσβάσιμη με μονοπάτι μέσα από πευκοδάσος. Πολύ πιο ήσυχη από τις παραλίες της νότιας ακτής, εξαιρετικά νερά.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884805/agia_eleni_uvkgxc.jpg"
-          },
-          {
-            "name": "Skiathos Town — Departure",
-            "lat": 39.1617,
-            "lng": 23.4917,
-            "type": "harbour",
-            "time": "16:00",
-            "wiki": null,
-            "desc": "Ferry to Volos, Thessaloniki or the other Sporades. The runway is right next to the town port — watch planes land metres overhead from the waterfront.",
-            "name_el": "Πόλη Σκιάθου — Αναχώρηση",
-            "desc_el": "Πλοίο προς Βόλο, Θεσσαλονίκη ή τις άλλες Σποράδες. Ο διάδρομος είναι ακριβώς δίπλα στο λιμάνι της πόλης — παρακολούθησε αεροπλάνα να προσγειώνονται μέτρα από πάνω από την προκυμαία."
-          }
-        ],
-        "title_el": "Δυτικές Παραλίες & Αναχώρηση"
-      }
-    ],
-    "title_el": "Πρόγραμμα 3 Ημερών στη Σκιάθο",
-    "subtitle_el": "Κυνήγι παραλιών με σκάφος, τα στενά της παλιάς πόλης, η λιμνοθάλασσα των Κουκουναριών και η Μονή της Ευαγγελίστριας."
-  },
-  "beaches": [
-    {
+ "key": "skiathos",
+ "name": "Skiathos",
+ "subtitle": "The party Sporade — pine forests, turquoise water and 60 beaches",
+ "intro": "Skiathos is tiny — 12km long — but packs in 60 beaches, dense pine forest running to the water's edge, and the liveliest nightlife in the Sporades. Koukounaries is one of the finest sandy beaches in Greece. The old town is genuinely attractive. Planes land metres above the beach at the runway — a spectacle in itself. Come here for beaches and nightlife, not culture.",
+ "when_to_visit": {
+  "summary": "Skiathos has 60 beaches and an international airport — which means cheap flights from northern Europe and matching crowds. The pine forests come right down to the sand. Best May-October; June and September are sweet spots. Mid-July through August is package-tourism peak; Koukounaries beach is a battle.",
+  "summary_el": "Η Σκιάθος έχει 60 παραλίες και διεθνές αεροδρόμιο — που σημαίνει φθηνές πτήσεις από τη βόρεια Ευρώπη και ανάλογο κόσμο. Τα πευκοδάση κατεβαίνουν ως την άμμο. Καλύτερα Μάιο–Οκτώβριο, ιδανικά Ιούνιο και Σεπτέμβριο. Από τα μέσα Ιουλίου ως τον Αύγουστο είναι η κορύφωση του οργανωμένου τουρισμού· η παραλία Κουκουναριές είναι μάχη.",
+  "months": [
+   {
+    "tag": "avoid",
+    "why": "Off-season, rainy",
+    "why_el": "Μόνο ντόπιοι, βροχερά"
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Σκελετός υπηρεσιών"
+   },
+   {
+    "tag": "ok",
+    "why": "Pines green",
+    "why_el": "Πεύκα πράσινα"
+   },
+   {
+    "tag": "great",
+    "why": "Easter, awakening",
+    "why_el": "Πάσχα, ανοίγουν"
+   },
+   {
+    "tag": "great",
+    "why": "Beaches yours",
+    "why_el": "Θάλ., άδειες"
+   },
+   {
+    "tag": "perfect",
+    "why": "Charters starting, pine-forest beaches still uncrowded, Old Port nightlife warming up. The best balance for a small island that fills fast.",
+    "why_el": "Τα τσάρτερ αρχίζουν, οι πευκόφυτες παραλίες ακόμα άδειες, η νυχτερινή ζωή του Παλαιού Λιμένα ζεσταίνεται. Η καλύτερη ισορροπία για ένα μικρό νησί που γεμίζει γρήγορα."
+   },
+   {
+    "tag": "great",
+    "why": "Hot, packages starting in earnest. Koukounaries and Banana beaches crowded by 10am; the Old Port bars loud till dawn. Skiathos in summer mode, not yet peak.",
+    "why_el": "Ζέστη, τα πακέτα αρχίζουν για τα καλά. Οι Κουκουναριές και η Μπανάνα γεμίζουν μέχρι τις 10 το πρωί· τα μπαρ του Παλαιού Λιμένα θορυβώδη μέχρι χάραμα. Η Σκιάθος σε καλοκαιρινή λειτουργία, όχι ακόμα peak."
+   },
+   {
+    "tag": "great",
+    "why": "Peak — every beach crowded by mid-morning, Old Port chaos every night, prices at maximum. Skiathos is small (12 km long); crowds are felt everywhere. Book everything weeks ahead.",
+    "why_el": "Κορύφωση — κάθε παραλία γεμάτη μέχρι μέσα του πρωινού, χάος στο Παλαιό Λιμάνι κάθε νύχτα, τιμές στο μέγιστο. Η Σκιάθος είναι μικρή (12 χλμ.)· το πλήθος γίνεται αισθητό παντού. Κρατήσεις εβδομάδες πριν."
+   },
+   {
+    "tag": "perfect",
+    "why": "Charters winding down, beaches breathing, Old Port still lively but no longer suffocating. Best swim conditions, mellow vibe through the end of the month.",
+    "why_el": "Τα τσάρτερ αραιώνουν, οι παραλίες ξεσφίγγουν, ο Παλαιός Λιμένας ακόμα ζωντανός αλλά όχι πια ασφυκτικός. Καλύτερες συνθήκες κολύμβησης, χαλαρή διάθεση μέχρι το τέλος του μήνα."
+   },
+   {
+    "tag": "great",
+    "why": "Last swims",
+    "why_el": "Τελευταία βουτιά"
+   },
+   {
+    "tag": "ok",
+    "why": "Season ending, mild",
+    "why_el": "Για χειμώνα"
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Σκελετός υπηρεσιών"
+   }
+  ]
+ },
+ "itinerary": {
+  "title": "3-Day Skiathos Itinerary",
+  "subtitle": "Beach-hopping by boat, the old town lanes, Koukounaries lagoon and the monastery of Evangelistria.",
+  "days": [
+   {
+    "day": 1,
+    "title": "Skiathos Town & the East",
+    "color": "#1B4F8A",
+    "km": 15,
+    "drive_mins": 20,
+    "overnight": "Skiathos Town",
+    "stops": [
+     {
+      "name": "Skiathos Town",
+      "lat": 39.1626627,
+      "lng": 23.4909759,
+      "type": "city",
+      "time": "09:00",
+      "wiki": "https://www.google.com/maps/search/Skiathos+Town",
+      "desc": "The most attractive town in the Sporades — two hills, a Venetian castle, pine-shaded lanes and a bustling harbour. Walk the Papadiamantis Street and have breakfast at the old port.",
+      "name_el": "Πόλη Σκιάθου",
+      "desc_el": "Η πιο ελκυστική πόλη των Σποράδων — δύο λόφοι, ένα βενετσιάνικο κάστρο, πεύκο-σκιασμένα δρομάκια και ένα γεμάτο λιμάνι. Περπάτησε την οδό Παπαδιαμάντη και πάρε πρωινό στο παλιό λιμάνι.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884814/skiathos_town_t6n09u.jpg"
+     },
+     {
+      "name": "Bourtzi Fortress",
+      "lat": 39.16082,
+      "lng": 23.4911,
+      "type": "castle",
+      "time": "10:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ-chSIFrnphQRrxy86VTYc34",
+      "desc": "Small Venetian fortress on a pine-wooded islet in the harbour mouth. Walk across the causeway for views over the town and the channel.",
+      "name_el": "Φρούριο Μπούρτζι",
+      "desc_el": "Μικρό βενετσιάνικο φρούριο σε πευκόφυτη νησίδα στο στόμιο του λιμανιού. Περπάτησε το προστατευτικό μονοπάτι για θέες στην πόλη και το στενό.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884816/bourtzi_s1rcos.jpg"
+     },
+     {
+      "name": "Evangelistria Monastery",
+      "lat": 39.1902661,
+      "lng": 23.4803255,
+      "type": "church",
+      "time": "11:00",
+      "wiki": "https://www.google.com/maps/search/Evangelistria+Monastery+Skiathos",
+      "desc": "18th-century monastery in the pine forest above the town — the first Greek flag was raised here in 1807. Beautiful setting, small museum, excellent views.",
+      "name_el": "Μονή Ευαγγελίστριας",
+      "desc_el": "Μονή του 18ου αιώνα μέσα στο πευκοδάσος πάνω από την πόλη — εδώ υψώθηκε η πρώτη ελληνική σημαία το 1807. Όμορφο σκηνικό, μικρό μουσείο, εξαιρετικές θέες.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884813/evangelistria_c7whq7.jpg"
+     },
+     {
       "name": "Koukounaries Beach",
-      "wiki": "https://www.google.com/maps/search/Koukounaries+Beach+Skiathos",
-      "rating": 5,
-      "type": "Fine golden sand",
-      "length": "1.2 km",
-      "depth": "Shallow — very gradual, safe for children",
-      "facing": "South-facing — sheltered by the pine forest, calm water",
-      "facilities": "Fully organised: sunbeds, beach bars, water sports, tavernas. Protected lagoon behind.",
-      "desc": "Consistently ranked one of the best beaches in Greece — fine golden sand framed by dense umbrella pine forest, with a crystal-clear lagoon behind it. Arrive early for a sunbed. The pine trees provide natural shade that no other Cycladic beach can offer.",
-      "commons": "Koukounaries_beach_Skiathos.jpg",
       "lat": 39.1487289,
       "lng": 23.401937,
+      "type": "beach",
+      "time": "14:30",
+      "wiki": "https://www.google.com/maps/search/Koukounaries+Beach+Skiathos",
+      "desc": "One of the finest beaches in Greece — 1.2km of golden sand framed by a dense pine forest and a protected lagoon behind it. Arrive by 14:00 for a sunbed. The lagoon behind is a protected wetland.",
       "name_el": "Παραλία Κουκουναριές",
-      "desc_el": "Σταθερά κατατάσσεται ως μία από τις καλύτερες παραλίες της Ελλάδας — λεπτή χρυσή άμμος πλαισιωμένη από πυκνό πευκοδάσος, με μια κρυστάλλινη λιμνοθάλασσα πίσω. Φτάσε νωρίς για ξαπλώστρα. Τα πεύκα παρέχουν φυσική σκιά που καμία άλλη κυκλαδίτικη παραλία δεν προσφέρει.",
-      "type_el": "Λεπτή χρυσή άμμος",
-      "depth_el": "Ρηχά — πολύ σταδιακά, ασφαλές για παιδιά",
-      "facing_el": "Νότιο προσανατολισμό — προστατευμένη από το πευκοδάσος, ήρεμα νερά",
-      "facilities_el": "Πλήρως οργανωμένη: ξαπλώστρες, beach bars, θαλάσσια σπορ, ταβέρνες. Προστατευμένη λιμνοθάλασσα πίσω.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884815/koukounaries_2_ny1bg1.jpg"
-    },
-    {
+      "desc_el": "Μία από τις καλύτερες παραλίες της Ελλάδας — 1,2 χλμ χρυσής άμμου πλαισιωμένης από πυκνό πευκοδάσος και μια προστατευμένη λιμνοθάλασσα πίσω. Φτάσε μέχρι τις 14:00 για ξαπλώστρα. Η λιμνοθάλασσα πίσω είναι προστατευμένος υγρότοπος.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884811/koukounaries_1_alxha7.webp"
+     },
+     {
+      "name": "Dinner in Skiathos Town",
+      "name_el": "Δείπνο στη Χώρα Σκιάθου",
+      "lat": 39.1627,
+      "lng": 23.491,
+      "type": "city",
+      "time": "20:00",
+      "wiki": null,
+      "desc": "Drive back along the south coast road from Koukounaries to Skiathos Town (about 25 minutes). The harbour at twilight is the social heart of the island — find a table at one of the seafront tavernas, or wander the narrow lanes above Bourtzi.",
+      "desc_el": "Επιστροφή κατά μήκος του νότιου παραλιακού δρόμου από τις Κουκουναριές στη Χώρα (περίπου 25 λεπτά). Το λιμάνι στο σούρουπο είναι το κοινωνικό κέντρο του νησιού — βρες ένα τραπέζι σε μία από τις ταβέρνες της παραλίας ή περιπλανήσου στα στενά πάνω από το Μπούρτζι."
+     }
+    ],
+    "title_el": "Χώρα Σκιάθου & η Ανατολή",
+    "overnight_el": "Χώρα Σκιάθου",
+    "nightlife": "Skiathos Town packs a real scene into a small grid. Start at <a href=\"https://www.google.com/maps/search/Rock+and+Roll+Bar+Skiathos\" target=\"_blank\" rel=\"noopener\">Rock 'n' Roll Bar</a> on the Old Port steps (cushions on the cobbles, sea in front), swing by <a href=\"https://www.google.com/maps/search/Kentavros+Bar+Skiathos\" target=\"_blank\" rel=\"noopener\">Kentavros</a> off Papadiamantis for blues and proper cocktails, then hit <a href=\"https://www.google.com/maps/search/Bar+Street+Polytechniou+Skiathos\" target=\"_blank\" rel=\"noopener\">'Bar Street' (Polytechniou)</a> — Spartacus, Admiral Benbow and the rest — which runs late.",
+    "nightlife_el": "Η Χώρα της Σκιάθου χωράει μια αληθινή σκηνή σε λίγα στενά. Ξεκίνα στο <a href=\"https://www.google.com/maps/search/Rock+and+Roll+Bar+Skiathos\" target=\"_blank\" rel=\"noopener\">Rock 'n' Roll Bar</a> στα σκαλιά του Παλιού Λιμανιού (μαξιλάρες στα βότσαλα, θάλασσα μπροστά), πέρνα από το <a href=\"https://www.google.com/maps/search/Kentavros+Bar+Skiathos\" target=\"_blank\" rel=\"noopener\">Kentavros</a> πιο πέρα από την Παπαδιαμάντη για μπλουζ και σωστά κοκτέιλ, και μετά χτύπα το <a href=\"https://www.google.com/maps/search/Bar+Street+Polytechniou+Skiathos\" target=\"_blank\" rel=\"noopener\">«Bar Street» (Πολυτεχνείου)</a> — Spartacus, Admiral Benbow και τα υπόλοιπα — που τραβάει ως αργά.",
+    "food": [
+     {
+      "meal": "Dinner",
+      "meal_el": "Δείπνο",
+      "area": "Skiathos Town",
+      "area_el": "Χώρα Σκιάθου",
+      "desc": "<a href=\"https://www.google.com/maps/search/Marmita+Skiathos+Town\" target=\"_blank\" rel=\"noopener\">Marmita</a> is the imaginative, well-priced gastronomic pick; <a href=\"https://www.google.com/maps/search/Mesogia+Skiathos+Town\" target=\"_blank\" rel=\"noopener\">Mesogia</a> is the oldest taverna in town (100+ years) in the Plakes quarter; <a href=\"https://www.google.com/maps/search/Windmill+Restaurant+Skiathos\" target=\"_blank\" rel=\"noopener\">The Windmill</a> sits in an 1880 windmill at the highest point for the view.",
+      "desc_el": "Το <a href=\"https://www.google.com/maps/search/Marmita+Skiathos+Town\" target=\"_blank\" rel=\"noopener\">Marmita</a> είναι η ευφάνταστη, καλότιμη γαστρονομική επιλογή· η <a href=\"https://www.google.com/maps/search/Mesogia+Skiathos+Town\" target=\"_blank\" rel=\"noopener\">Μεσόγεια</a> είναι η παλαιότερη ταβέρνα της πόλης (100+ χρόνια) στις Πλάκες· ο <a href=\"https://www.google.com/maps/search/Windmill+Restaurant+Skiathos\" target=\"_blank\" rel=\"noopener\">Windmill</a> σε ανεμόμυλο του 1880 στο ψηλότερο σημείο για τη θέα.",
+      "after": "Return to Skiathos Town"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "title": "Beach Boat Tour",
+    "color": "#C0522A",
+    "km": 5,
+    "drive_mins": 10,
+    "overnight": "Skiathos Town",
+    "stops": [
+     {
+      "name": "Old Port — Boat Departure",
+      "lat": 39.16082,
+      "lng": 23.4911,
+      "type": "harbour",
+      "time": "09:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJL5dHc1rnphQRLCLEYIDWuvg",
+      "desc": "Full-day boat tour around the island — the only way to reach the best beaches on the north coast. Boats depart from the old port daily in summer.",
+      "name_el": "Παλιό Λιμάνι — Αναχώρηση με Καραβάκι",
+      "desc_el": "Ημερήσια εκδρομή με βάρκα γύρω από το νησί — ο μόνος τρόπος να φτάσεις στις καλύτερες παραλίες της βόρειας ακτής. Οι βάρκες αναχωρούν από το παλιό λιμάνι καθημερινά το καλοκαίρι."
+     },
+     {
       "name": "Lalaria Beach",
-      "wiki": "https://www.google.com/maps/search/Lalaria+Beach+Skiathos",
-      "rating": 5,
-      "type": "White oval pebbles",
-      "length": "400 m",
-      "depth": "Deep — crystal clear, cold water",
-      "facing": "North-facing — accessible only by boat",
-      "facilities": "None — boat access only from Skiathos Town (45 min).",
-      "desc": "The most spectacular beach in the Sporades — white oval pebbles beneath sheer white limestone cliffs with a natural arch. The boat journey along the dramatic north coast is half the experience. Unmissable.",
-      "commons": null,
       "lat": 39.207095,
       "lng": 23.4779003,
+      "type": "beach",
+      "time": "11:00",
+      "wiki": "https://www.google.com/maps/search/Lalaria+Beach+Skiathos",
+      "desc": "The most dramatic beach in the Sporades — white oval pebbles under sheer white limestone cliffs with a natural rock arch. Accessible only by boat. Crystal clear water.",
       "name_el": "Παραλία Λαλάρια",
-      "desc_el": "Η πιο εντυπωσιακή παραλία των Σποράδων — λευκά ωοειδή βότσαλα κάτω από κάθετους λευκούς ασβεστολιθικούς γκρεμούς με φυσική αψίδα. Το ταξίδι με βάρκα κατά μήκος της δραματικής βόρειας ακτής είναι το μισό της εμπειρίας. Αναπόφευκτη.",
-      "type_el": "Λευκά ωοειδή βότσαλα",
-      "depth_el": "Βαθιά — κρυστάλλινα, κρύα νερά",
-      "facing_el": "Βόρειο προσανατολισμό — προσβάσιμη μόνο με βάρκα",
-      "facilities_el": "Καμία — πρόσβαση μόνο με βάρκα από την Πόλη της Σκιάθου (45 λεπτά).",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884811/lalaria_1_wrxxku.jpg"
-    },
-    {
-      "name": "Banana Beach",
+      "desc_el": "Η πιο δραματική παραλία των Σποράδων — λευκά ωοειδή βότσαλα κάτω από κάθετους λευκούς ασβεστολιθικούς γκρεμούς με φυσική βραχώδη αψίδα. Προσβάσιμη μόνο με βάρκα. Κρυστάλλινα νερά.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884809/lalaria_2_uevfsf.jpg"
+     },
+     {
+      "name": "Blue Cave (Skotini Spilia)",
+      "lat": 39.2033,
+      "lng": 23.4417,
+      "type": "nature",
+      "time": "12:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJj3XzrdLmphQRhlArj16mXcY",
+      "desc": "Sea cave on the north coast where the water glows blue from the sunlight refraction. Swim in from the boat.",
+      "name_el": "Γαλάζια Σπηλιά (Σκοτεινή Σπηλιά)",
+      "desc_el": "Θαλάσσια σπηλιά στη βόρεια ακτή όπου τα νερά λάμπουν μπλε από τη διάθλαση του ηλιακού φωτός. Κολύμπησε μέσα από τη βάρκα.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884808/blue_cave_gnwsdw.jpg"
+     },
+     {
+      "name": "Kastro (Abandoned Town)",
+      "lat": 39.2102881,
+      "lng": 23.460598,
+      "type": "castle",
+      "time": "14:00",
+      "wiki": "https://www.google.com/maps/search/Kastro+(Abandoned+Town)+Skiathos",
+      "desc": "The abandoned medieval capital of Skiathos on a sea cliff — the entire population moved to the current town in 1829. Ruins of 300 houses and 22 churches. Boat stop with a short hike up.",
+      "name_el": "Κάστρο (Εγκαταλελειμμένη Πόλη)",
+      "desc_el": "Η εγκαταλελειμμένη μεσαιωνική πρωτεύουσα της Σκιάθου σε θαλάσσιο γκρεμό — ολόκληρος ο πληθυσμός μετακινήθηκε στη σημερινή πόλη το 1829. Ερείπια 300 σπιτιών και 22 εκκλησιών. Στάση με βάρκα και σύντομη πεζοπορία.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783885152/kastro11_k6bxpx.jpg"
+     },
+     {
+      "name": "Dinner in Skiathos Town",
+      "name_el": "Δείπνο στη Χώρα Σκιάθου",
+      "lat": 39.1627,
+      "lng": 23.491,
+      "type": "harbour",
+      "time": "18:30",
       "wiki": null,
-      "rating": 4,
-      "type": "Fine sand",
-      "length": "600 m (two beaches)",
-      "depth": "Shallow — calm water",
-      "facing": "South-facing — sheltered",
-      "facilities": "Big Banana: fully organised. Little Banana: basic, clothing-optional.",
-      "desc": "Two contrasting beaches side by side — lively and organised on one side, quiet and naturist on the other. Both have good clear water. The pine forest backdrop makes them more attractive than the typical resort beach.",
-      "commons": null,
+      "desc": "Boat returns to the Old Port in late afternoon (about 90 min from the Kastro side). Cocktails at one of the harbour bars are the natural end to a full day on the water — the seafront restaurants here are good for early dinners.",
+      "desc_el": "Το σκάφος επιστρέφει στο Παλαιό Λιμάνι αργά το απόγευμα (περίπου 90 λεπτά από την πλευρά του Κάστρου). Κοκτέιλ σε ένα από τα μπαρ του λιμανιού είναι το φυσικό τέλος μιας γεμάτης μέρας στη θάλασσα — τα παραλιακά εστιατόρια εδώ είναι καλά για πρώιμο δείπνο."
+     }
+    ],
+    "title_el": "Περιήγηση Παραλιών με Σκάφος",
+    "overnight_el": "Χώρα Σκιάθου",
+    "nightlife": "Another town night, eased in with sunset drinks on the Old Port before Bar Street fills up. For a quieter one, the bars out toward the Bourtzi headland keep things mellow.",
+    "nightlife_el": "Άλλη μια βραδιά στη Χώρα, με ζέσταμα στο ηλιοβασίλεμα στο Παλιό Λιμάνι πριν γεμίσει το Bar Street. Για κάτι πιο ήσυχο, τα μπαρ προς το Μπούρτζι κρατούν χαλαρό κλίμα."
+   },
+   {
+    "day": 3,
+    "title": "West Beaches & Departure",
+    "color": "#5A7A3A",
+    "km": 20,
+    "drive_mins": 25,
+    "overnight": null,
+    "stops": [
+     {
+      "name": "Banana Beach",
       "lat": 39.1473554,
       "lng": 23.3923991,
+      "type": "beach",
+      "time": "09:30",
+      "wiki": null,
+      "desc": "Two beaches side by side west of Koukounaries — Big Banana (organised, lively) and Little Banana (clothing-optional, quieter). Both have clear, shallow water.",
       "name_el": "Παραλία Μπανάνα",
-      "desc_el": "Δύο αντιθετικές παραλίες δίπλα-δίπλα — ζωντανή και οργανωμένη από τη μία πλευρά, ήσυχη και γυμνιστική από την άλλη. Και οι δύο έχουν καλά διαυγή νερά. Το φόντο του πευκοδάσους τις κάνει πιο ελκυστικές από μια τυπική παραλία θερέτρου.",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Ρηχά — ήρεμα νερά",
-      "facing_el": "Νότιο προσανατολισμό — προστατευμένη",
-      "facilities_el": "Μεγάλη Μπανάνα: πλήρως οργανωμένη. Μικρή Μπανάνα: βασική, προαιρετικού ντυσίματος.",
+      "desc_el": "Δύο παραλίες δίπλα-δίπλα δυτικά των Κουκουναριών — Μεγάλη Μπανάνα (οργανωμένη, ζωντανή) και Μικρή Μπανάνα (ελεύθερη για γυμνιστές, πιο ήσυχη). Και οι δύο έχουν διαυγή, ρηχά νερά.",
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884806/banana_2_tc4uqi.jpg"
-    }
+     },
+     {
+      "name": "Agia Eleni Beach",
+      "lat": 39.1538234,
+      "lng": 23.3914636,
+      "type": "beach",
+      "time": "12:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJxQl1s43fphQRWirtJRY7RAE",
+      "desc": "Wild, sandy north-coast beach accessible via a path through pine forest. Far quieter than the south coast beaches, excellent water.",
+      "name_el": "Παραλία Αγία Ελένη",
+      "desc_el": "Άγρια, αμμώδης παραλία της βόρειας ακτής προσβάσιμη με μονοπάτι μέσα από πευκοδάσος. Πολύ πιο ήσυχη από τις παραλίες της νότιας ακτής, εξαιρετικά νερά.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884805/agia_eleni_uvkgxc.jpg"
+     },
+     {
+      "name": "Skiathos Town — Departure",
+      "lat": 39.1617,
+      "lng": 23.4917,
+      "type": "harbour",
+      "time": "16:00",
+      "wiki": null,
+      "desc": "Ferry to Volos, Thessaloniki or the other Sporades. The runway is right next to the town port — watch planes land metres overhead from the waterfront.",
+      "name_el": "Πόλη Σκιάθου — Αναχώρηση",
+      "desc_el": "Πλοίο προς Βόλο, Θεσσαλονίκη ή τις άλλες Σποράδες. Ο διάδρομος είναι ακριβώς δίπλα στο λιμάνι της πόλης — παρακολούθησε αεροπλάνα να προσγειώνονται μέτρα από πάνω από την προκυμαία."
+     }
+    ],
+    "title_el": "Δυτικές Παραλίες & Αναχώρηση"
+   }
   ],
-  "name_el": "Σκιάθος",
-  "name_accusative_el": "Σκιάθο",
-  "name_genitive_el": "Σκιάθου",
-  "gender_el": "f",
-  "subtitle_el": "Η Σποράδα του πάρτι — πευκοδάση, τιρκουάζ νερά και 60 παραλίες",
-  "intro_el": "Η Σκιάθος είναι μικροσκοπική — 12 χλμ μήκος — αλλά συμπυκνώνει 60 παραλίες, πυκνό πευκοδάσος που φτάνει μέχρι το νερό, και την πιο ζωντανή νυχτερινή ζωή των Σποράδων. Οι Κουκουναριές είναι από τις καλύτερες αμμώδεις παραλίες της Ελλάδας. Η παλιά πόλη είναι γνήσια ελκυστική. Τα αεροπλάνα προσγειώνονται μέτρα πάνω από την παραλία στον διάδρομο — θέαμα από μόνο του. Έλα εδώ για παραλίες και νυχτερινή ζωή, όχι για πολιτισμό.",
-  "getting_there": {
-    "pills": [
-      "✈ Airport (intl charter)",
-      "⛵ Volos 2–3h",
-      "€20–35"
-    ],
-    "pills_el": [
-      "✈ Αεροδρόμιο (charter)",
-      "⛵ Βόλος 2–3h",
-      "€20–35"
-    ],
-    "summary": "International airport with summer charters from Europe. No Piraeus ferry — reach Skiathos from Volos or Agios Konstantinos (mainland, ~3h drive from Athens). Frequent ferries.",
-    "summary_el": "Διεθνές αεροδρόμιο με καλοκαιρινές charter από Ευρώπη. Χωρίς πλοίο από Πειραιά — προσέγγιση από Βόλο ή Άγιο Κωνσταντίνο (ηπειρωτική, ~3 ώρες από Αθήνα). Συχνά πλοία.",
-    "tip": "Direct charter from London/Manchester is the fastest option — skip Athens.",
-    "tip_el": "Απευθείας charter από Λονδίνο/Μάντσεστερ είναι η πιο γρήγορη επιλογή — παρακάμπτεις την Αθήνα."
+  "title_el": "Πρόγραμμα 3 Ημερών στη Σκιάθο",
+  "subtitle_el": "Κυνήγι παραλιών με σκάφος, τα στενά της παλιάς πόλης, η λιμνοθάλασσα των Κουκουναριών και η Μονή της Ευαγγελίστριας."
+ },
+ "beaches": [
+  {
+   "name": "Koukounaries Beach",
+   "wiki": "https://www.google.com/maps/search/Koukounaries+Beach+Skiathos",
+   "rating": 5,
+   "type": "Fine golden sand",
+   "length": "1.2 km",
+   "depth": "Shallow — very gradual, safe for children",
+   "facing": "South-facing — sheltered by the pine forest, calm water",
+   "facilities": "Fully organised: sunbeds, beach bars, water sports, tavernas. Protected lagoon behind.",
+   "desc": "Consistently ranked one of the best beaches in Greece — fine golden sand framed by dense umbrella pine forest, with a crystal-clear lagoon behind it. Arrive early for a sunbed. The pine trees provide natural shade that no other Cycladic beach can offer.",
+   "commons": "Koukounaries_beach_Skiathos.jpg",
+   "lat": 39.1487289,
+   "lng": 23.401937,
+   "name_el": "Παραλία Κουκουναριές",
+   "desc_el": "Σταθερά κατατάσσεται ως μία από τις καλύτερες παραλίες της Ελλάδας — λεπτή χρυσή άμμος πλαισιωμένη από πυκνό πευκοδάσος, με μια κρυστάλλινη λιμνοθάλασσα πίσω. Φτάσε νωρίς για ξαπλώστρα. Τα πεύκα παρέχουν φυσική σκιά που καμία άλλη κυκλαδίτικη παραλία δεν προσφέρει.",
+   "type_el": "Λεπτή χρυσή άμμος",
+   "depth_el": "Ρηχά — πολύ σταδιακά, ασφαλές για παιδιά",
+   "facing_el": "Νότιος προσανατολισμός — προστατευμένη από το πευκοδάσος, ήρεμα νερά",
+   "facilities_el": "Πλήρως οργανωμένη: ξαπλώστρες, beach bars, θαλάσσια σπορ, ταβέρνες. Προστατευμένη λιμνοθάλασσα πίσω.",
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884815/koukounaries_2_ny1bg1.jpg"
   },
-  "festivals": [
-    {
-      "name": "Bourtzi summer festival",
-      "name_el": "Καλοκαιρινό Φεστιβάλ Μπούρτζι",
-      "when": "July and August",
-      "when_el": "Ιούλιος και Αύγουστος",
-      "desc": "On the pine-covered Bourtzi peninsula between the two harbours — a former fortress, now a cultural centre — Skiathos stages a summer of open-air theatre, concerts, film and shadow-puppet (Karagiozis) nights. It takes its name from a story by Alexandros Papadiamantis, the island's great writer, who is honoured here. Free or low-cost, and walkable from town.",
-      "desc_el": "Στην πευκόφυτη χερσόνησο του Μπούρτζι ανάμεσα στα δύο λιμάνια — παλιό φρούριο, σήμερα πολιτιστικό κέντρο — η Σκιάθος στήνει ένα καλοκαίρι με υπαίθριο θέατρο, συναυλίες, σινεμά και βραδιές Καραγκιόζη. Πήρε το όνομά του από διήγημα του Αλέξανδρου Παπαδιαμάντη, του μεγάλου συγγραφέα του νησιού, που τιμάται εδώ. Δωρεάν ή φθηνό, και με τα πόδια από την πόλη."
-    }
+  {
+   "name": "Lalaria Beach",
+   "wiki": "https://www.google.com/maps/search/Lalaria+Beach+Skiathos",
+   "rating": 5,
+   "type": "White oval pebbles",
+   "length": "400 m",
+   "depth": "Deep — crystal clear, cold water",
+   "facing": "North-facing — accessible only by boat",
+   "facilities": "None — boat access only from Skiathos Town (45 min).",
+   "desc": "The most spectacular beach in the Sporades — white oval pebbles beneath sheer white limestone cliffs with a natural arch. The boat journey along the dramatic north coast is half the experience. Unmissable.",
+   "commons": null,
+   "lat": 39.207095,
+   "lng": 23.4779003,
+   "name_el": "Παραλία Λαλάρια",
+   "desc_el": "Η πιο εντυπωσιακή παραλία των Σποράδων — λευκά ωοειδή βότσαλα κάτω από κάθετους λευκούς ασβεστολιθικούς γκρεμούς με φυσική αψίδα. Το ταξίδι με βάρκα κατά μήκος της δραματικής βόρειας ακτής είναι το μισό της εμπειρίας. Αναπόφευκτη.",
+   "type_el": "Λευκά ωοειδή βότσαλα",
+   "depth_el": "Βαθιά — κρυστάλλινα, κρύα νερά",
+   "facing_el": "Βόρειος προσανατολισμός — προσβάσιμη μόνο με βάρκα",
+   "facilities_el": "Καμία παροχή — πρόσβαση μόνο με βάρκα από την Πόλη της Σκιάθου (45 λεπτά).",
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884811/lalaria_1_wrxxku.jpg"
+  },
+  {
+   "name": "Banana Beach",
+   "wiki": null,
+   "rating": 4,
+   "type": "Fine sand",
+   "length": "600 m (two beaches)",
+   "depth": "Shallow — calm water",
+   "facing": "South-facing — sheltered",
+   "facilities": "Big Banana: fully organised. Little Banana: basic, clothing-optional.",
+   "desc": "Two contrasting beaches side by side — lively and organised on one side, quiet and naturist on the other. Both have good clear water. The pine forest backdrop makes them more attractive than the typical resort beach.",
+   "commons": null,
+   "lat": 39.1473554,
+   "lng": 23.3923991,
+   "name_el": "Παραλία Μπανάνα",
+   "desc_el": "Δύο αντιθετικές παραλίες δίπλα-δίπλα — ζωντανή και οργανωμένη από τη μία πλευρά, ήσυχη και γυμνιστική από την άλλη. Και οι δύο έχουν καλά διαυγή νερά. Το φόντο του πευκοδάσους τις κάνει πιο ελκυστικές από μια τυπική παραλία θερέτρου.",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Ρηχά — ήρεμα νερά",
+   "facing_el": "Νότιος προσανατολισμός — προστατευμένη",
+   "facilities_el": "Μεγάλη Μπανάνα: πλήρως οργανωμένη. Μικρή Μπανάνα: βασική, ελεύθερη για γυμνιστές.",
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783884806/banana_2_tc4uqi.jpg"
+  }
+ ],
+ "name_el": "Σκιάθος",
+ "name_accusative_el": "Σκιάθο",
+ "name_genitive_el": "Σκιάθου",
+ "gender_el": "f",
+ "subtitle_el": "Η Σποράδα του πάρτι — πευκοδάση, τιρκουάζ νερά και 60 παραλίες",
+ "intro_el": "Η Σκιάθος είναι μικροσκοπική — 12 χλμ μήκος — αλλά συμπυκνώνει 60 παραλίες, πυκνό πευκοδάσος που φτάνει μέχρι το νερό, και την πιο ζωντανή νυχτερινή ζωή των Σποράδων. Οι Κουκουναριές είναι από τις καλύτερες αμμώδεις παραλίες της Ελλάδας. Η παλιά πόλη είναι γνήσια ελκυστική. Τα αεροπλάνα προσγειώνονται μέτρα πάνω από την παραλία στον διάδρομο — θέαμα από μόνο του. Έλα εδώ για παραλίες και νυχτερινή ζωή, όχι για πολιτισμό.",
+ "getting_there": {
+  "pills": [
+   "✈ Airport (intl charter)",
+   "⛵ Volos 2–3h",
+   "€20–35"
   ],
-  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783273251/skiathos_desyug.jpg"
+  "pills_el": [
+   "✈ Αεροδρόμιο (charter)",
+   "⛵ Βόλος 2–3h",
+   "€20–35"
+  ],
+  "summary": "International airport with summer charters from Europe. No Piraeus ferry — reach Skiathos from Volos or Agios Konstantinos (mainland, ~3h drive from Athens). Frequent ferries.",
+  "summary_el": "Διεθνές αεροδρόμιο με καλοκαιρινές charter από Ευρώπη. Χωρίς πλοίο από Πειραιά — προσέγγιση από Βόλο ή Άγιο Κωνσταντίνο (ηπειρωτική, ~3 ώρες από Αθήνα). Συχνά πλοία.",
+  "tip": "Direct charter from London/Manchester is the fastest option — skip Athens.",
+  "tip_el": "Απευθείας charter από Λονδίνο/Μάντσεστερ είναι η πιο γρήγορη επιλογή — παρακάμπτεις την Αθήνα."
+ },
+ "festivals": [
+  {
+   "name": "Bourtzi summer festival",
+   "name_el": "Καλοκαιρινό Φεστιβάλ Μπούρτζι",
+   "when": "July and August",
+   "when_el": "Ιούλιος και Αύγουστος",
+   "desc": "On the pine-covered Bourtzi peninsula between the two harbours — a former fortress, now a cultural centre — Skiathos stages a summer of open-air theatre, concerts, film and shadow-puppet (Karagiozis) nights. It takes its name from a story by Alexandros Papadiamantis, the island's great writer, who is honoured here. Free or low-cost, and walkable from town.",
+   "desc_el": "Στην πευκόφυτη χερσόνησο του Μπούρτζι ανάμεσα στα δύο λιμάνια — παλιό φρούριο, σήμερα πολιτιστικό κέντρο — η Σκιάθος στήνει ένα καλοκαίρι με υπαίθριο θέατρο, συναυλίες, σινεμά και βραδιές Καραγκιόζη. Πήρε το όνομά του από διήγημα του Αλέξανδρου Παπαδιαμάντη, του μεγάλου συγγραφέα του νησιού, που τιμάται εδώ. Δωρεάν ή φθηνό, και με τα πόδια από την πόλη."
+  }
+ ],
+ "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783273251/skiathos_desyug.jpg"
 }

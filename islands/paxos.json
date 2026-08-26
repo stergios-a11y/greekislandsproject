@@ -1,371 +1,371 @@
 {
-  "key": "paxos",
-  "name": "Paxos",
-  "intro": "Paxos is a tiny emerald island just south of Corfu — 19 km², 2,300 residents, blanketed in ancient olive groves that produce some of Greece's finest oil. The island has no airport, only ferries from Corfu, and just three tiny harbor villages. This is sailing-and-swimming Greece, with water so clear that boats appear to float on air. Offshore lies Antipaxos, home to the most translucent water in the Ionian.",
+ "key": "paxos",
+ "name": "Paxos",
+ "intro": "Paxos is a tiny emerald island just south of Corfu — 19 km², 2,300 residents, blanketed in ancient olive groves that produce some of Greece's finest oil. The island has no airport, only ferries from Corfu, and just three tiny harbor villages. This is sailing-and-swimming Greece, with water so clear that boats appear to float on air. Offshore lies Antipaxos, home to the most translucent water in the Ionian.",
+ "subtitle": "Emerald olive groves and the Ionian's clearest water",
+ "when_to_visit": {
+  "summary": "Paxos is an Italian-clientele island — small, olive-grove dense, blue caves on the west coast. Open May-October. June and September are sweet spots. The British/Italian sailing crowd dominates July-August and prices reflect it. Antipaxos beach (15 minutes by boat) is essential.",
+  "summary_el": "Οι Παξοί είναι νησί ιταλικού κοινού — μικροί, πυκνοί σε ελαιώνες, με γαλάζιες σπηλιές στη δυτική ακτή. Ανοιχτοί Μάιο–Οκτώβριο, ιδανικά Ιούνιο και Σεπτέμβριο. Το βρετανικό/ιταλικό κοινό της ιστιοπλοΐας κυριαρχεί Ιούλιο–Αύγουστο και οι τιμές το δείχνουν. Η παραλία των Αντίπαξων (15 λεπτά με βάρκα) είναι απαραίτητη.",
+  "months": [
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Εκτός σεζόν, βροχές"
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Μόνο ντόπιοι"
+   },
+   {
+    "tag": "ok",
+    "why": "Closed, mild",
+    "why_el": "Σχεδόν κλειστοί"
+   },
+   {
+    "tag": "great",
+    "why": "Easter, awakening",
+    "why_el": "Πάσχα, ζωντανεύει"
+   },
+   {
+    "tag": "great",
+    "why": "Sea warm",
+    "why_el": "Θάλασσα ζεσταίνει"
+   },
+   {
+    "tag": "perfect",
+    "why": "Before yachts",
+    "why_el": "Ζεστά, πριν τα γιοτ"
+   },
+   {
+    "tag": "ok",
+    "why": "Yachts arrive",
+    "why_el": "Ιταλοί/Άγγλοι με γιοτ"
+   },
+   {
+    "tag": "avoid",
+    "why": "Peak chaos, pricy",
+    "why_el": "Χάος, ακριβά"
+   },
+   {
+    "tag": "perfect",
+    "why": "Best — warm",
+    "why_el": "Καλύτερος — ζεστά"
+   },
+   {
+    "tag": "great",
+    "why": "Last swims",
+    "why_el": "Τελευταία βουτιά"
+   },
+   {
+    "tag": "avoid",
+    "why": "Season ending",
+    "why_el": "Κλείνουν"
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Μόνο ντόπιοι"
+   }
+  ]
+ },
+ "itinerary": {
+  "title": "2-day Itinerary for Paxos",
   "subtitle": "Emerald olive groves and the Ionian's clearest water",
-  "when_to_visit": {
-    "summary": "Paxos is an Italian-clientele island — small, olive-grove dense, blue caves on the west coast. Open May-October. June and September are sweet spots. The British/Italian sailing crowd dominates July-August and prices reflect it. Antipaxos beach (15 minutes by boat) is essential.",
-    "summary_el": "Οι Παξοί είναι νησί ιταλικού κοινού — μικροί, πυκνοί σε ελαιώνες, με γαλάζιες σπηλιές στη δυτική ακτή. Ανοιχτοί Μάιο–Οκτώβριο, ιδανικά Ιούνιο και Σεπτέμβριο. Το βρετανικό/ιταλικό κοινό της ιστιοπλοΐας κυριαρχεί Ιούλιο–Αύγουστο και οι τιμές το δείχνουν. Η παραλία των Αντίπαξων (15 λεπτά με βάρκα) είναι απαραίτητη.",
-    "months": [
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Εκτός σεζόν, βροχές"
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Μόνο ντόπιοι"
-      },
-      {
-        "tag": "ok",
-        "why": "Closed, mild",
-        "why_el": "Σχεδόν κλειστοί"
-      },
-      {
-        "tag": "great",
-        "why": "Easter, awakening",
-        "why_el": "Πάσχα, ζωντανεύει"
-      },
-      {
-        "tag": "great",
-        "why": "Sea warm",
-        "why_el": "Θάλασσα ζεσταίνει"
-      },
-      {
-        "tag": "perfect",
-        "why": "Before yachts",
-        "why_el": "Ζεστά, πριν τα γιοτ"
-      },
-      {
-        "tag": "ok",
-        "why": "Yachts arrive",
-        "why_el": "Ιταλοί/Άγγλοι με γιοτ"
-      },
-      {
-        "tag": "avoid",
-        "why": "Peak chaos, pricy",
-        "why_el": "Χάος, ακριβά"
-      },
-      {
-        "tag": "perfect",
-        "why": "Best — warm",
-        "why_el": "Καλύτερος — ζεστά"
-      },
-      {
-        "tag": "great",
-        "why": "Last swims",
-        "why_el": "Τελευταία βουτιά"
-      },
-      {
-        "tag": "avoid",
-        "why": "Season ending",
-        "why_el": "Κλείνουν"
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Μόνο ντόπιοι"
+  "days": [
+   {
+    "day": 1,
+    "title": "Gaios & the East Coast",
+    "km": 10,
+    "drive_mins": 25,
+    "overnight": "Gaios",
+    "color": "#0B8FAC",
+    "stops": [
+     {
+      "name": "Gaios (port)",
+      "lat": 39.198,
+      "lng": 20.186,
+      "type": "harbour",
+      "time": "10:00",
+      "wiki": "https://www.google.com/maps/search/Gaios+(port)+Paxos",
+      "desc": "Main village on the east coast. Sheltered natural harbor formed by two offshore islets. Pastel Venetian-style buildings ring the quay.",
+      "name_el": "Γάιος (Λιμάνι)",
+      "desc_el": "Το κύριο χωριό στην ανατολική ακτή. Προστατευμένο φυσικό λιμάνι που σχηματίζεται από δύο υπεράκτιες νησίδες. Παστέλ κτίρια ενετικού στυλ περικυκλώνουν την προκυμαία.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Gaios_harbour_in_Paxi.jpg",
+      "photo_credit": {
+       "artist": "",
+       "license": "CC BY-SA 2.5",
+       "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Gaios_harbour_in_Paxi.jpg",
+       "source": "Wikimedia Commons"
       }
-    ]
-  },
-  "itinerary": {
-    "title": "2-day Itinerary for Paxos",
-    "subtitle": "Emerald olive groves and the Ionian's clearest water",
-    "days": [
-      {
-        "day": 1,
-        "title": "Gaios & the East Coast",
-        "km": 10,
-        "drive_mins": 25,
-        "overnight": "Gaios",
-        "color": "#0B8FAC",
-        "stops": [
-          {
-            "name": "Gaios (port)",
-            "lat": 39.198,
-            "lng": 20.186,
-            "type": "harbour",
-            "time": "10:00",
-            "wiki": "https://www.google.com/maps/search/Gaios+(port)+Paxos",
-            "desc": "Main village on the east coast. Sheltered natural harbor formed by two offshore islets. Pastel Venetian-style buildings ring the quay.",
-            "name_el": "Γάιος (Λιμάνι)",
-            "desc_el": "Το κύριο χωριό στην ανατολική ακτή. Προστατευμένο φυσικό λιμάνι που σχηματίζεται από δύο υπεράκτιες νησίδες. Παστέλ κτίρια ενετικού στυλ περικυκλώνουν την προκυμαία.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Gaios_harbour_in_Paxi.jpg",
-            "photo_credit": {
-              "artist": "",
-              "license": "CC BY-SA 2.5",
-              "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Gaios_harbour_in_Paxi.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Agios Nikolaos islet",
-            "lat": 39.2014,
-            "lng": 20.1864,
-            "type": "church",
-            "time": "11:30",
-            "wiki": null,
-            "desc": "Tiny islet at the mouth of Gaios harbour, crowned by Venetian fort ruins and a small chapel. The 5-minute rowboat crossing from the quay costs almost nothing; the views back at Gaios from the fort walls are the best on the island.",
-            "name_el": "Νησίδα Άγιος Νικόλαος",
-            "desc_el": "Μικροσκοπική νησίδα στο στόμα του λιμανιού του Γάιου, στεφανωμένη με ερείπια ενετικού οχυρού και μικρό εκκλησάκι. Η πεντάλεπτη διαδρομή με βαρκούλα από την προκυμαία κοστίζει ελάχιστα· η θέα προς τον Γάιο από τα τείχη του οχυρού είναι η καλύτερη του νησιού.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Agios_Nikolaos_in_Agios_Nikolaos_6073246.JPG/1920px-Agios_Nikolaos_in_Agios_Nikolaos_6073246.JPG",
-            "photo_credit": {
-              "artist": "C messier",
-              "license": "CC0",
-              "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Agios_Nikolaos_in_Agios_Nikolaos_6073246.JPG",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Mongonissi Beach",
-            "lat": 39.1822,
-            "lng": 20.2059,
-            "type": "beach",
-            "time": "16:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJp06MkOuNXBMRZwlHYHoiMuA",
-            "desc": "Sheltered sandy bay at the southern tip, 4 km from Gaios on a narrow road. The calmest swimming on Paxos — protected from wind on all sides — and a couple of small tavernas at the back of the beach for grilled octopus and a cold beer.",
-            "name_el": "Παραλία Μογγονήσι",
-            "desc_el": "Προστατευμένος αμμώδης κόλπος στο νότιο άκρο, 4 χλμ από τον Γάιο σε στενό δρόμο. Το πιο ήρεμο κολύμπι στους Παξούς — προφυλαγμένος από κάθε άνεμο — και δύο μικρές ταβέρνες στο πίσω μέρος της παραλίας για ψητό χταπόδι και κρύα μπύρα."
-          }
-        ],
-        "title_el": "Γάιος & η Ανατολική Ακτή",
-        "overnight_el": "Γάιος",
-        "nightlife": "Tiny Paxos is mellow lounge bars, not clubs. The <a href=\"https://www.google.com/maps/search/Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Gaios</a> waterfront is the scene — <a href=\"https://www.google.com/maps/search/Old+Harbor+Bar+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Old Harbor Bar</a> for cocktails and meze over the water, Capriccio for something more polished. There's exactly one club, <a href=\"https://www.google.com/maps/search/Diana+Club+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Diana</a>, with the occasional band or DJ.",
-        "nightlife_el": "Οι μικροί Παξοί είναι χαλαρά lounge bars, όχι clubs. Η προκυμαία του <a href=\"https://www.google.com/maps/search/Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Γάιου</a> είναι η σκηνή — <a href=\"https://www.google.com/maps/search/Old+Harbor+Bar+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Old Harbor Bar</a> για κοκτέιλ και μεζέ πάνω από το νερό, Capriccio για κάτι πιο φροντισμένο. Υπάρχει ακριβώς ένα club, το <a href=\"https://www.google.com/maps/search/Diana+Club+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Diana</a>, με καμιά μπάντα ή DJ πού και πού.",
-        "food": [
-          {
-            "meal": "Lunch",
-            "meal_el": "Μεσημεριανό",
-            "area": "Gaios",
-            "area_el": "Γάιος",
-            "desc": "<a href=\"https://www.google.com/maps/search/Volcano+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Volcano</a> is the seafood taverna on the Gaios main square, tables spilling toward the water.",
-            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Volcano+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Volcano</a> είναι η ψαροταβέρνα στην κεντρική πλατεία του Γάιου, με τραπέζια ως το νερό.",
-            "after": "Agios Nikolaos islet"
-          },
-          {
-            "meal": "Dinner",
-            "meal_el": "Δείπνο",
-            "area": "Gaios",
-            "area_el": "Γάιος",
-            "desc": "<a href=\"https://www.google.com/maps/search/Taka+Taka+Mam+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Taka Taka Mam</a> is the tiny family-run spot with tables tucked into a lemon garden.",
-            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Taka+Taka+Mam+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Taka Taka Mam</a> είναι το μικρό οικογενειακό στέκι με τραπέζια σε έναν κήπο με λεμονιές.",
-            "after": "Mongonissi Beach"
-          }
-        ]
-      },
-      {
-        "day": 2,
-        "title": "West Coast Cliffs & Antipaxos",
-        "km": 25,
-        "drive_mins": 60,
-        "overnight": "Departure",
-        "color": "#3D8B6F",
-        "stops": [
-          {
-            "name": "Lakka",
-            "lat": 39.2346,
-            "lng": 20.1357,
-            "type": "harbour",
-            "time": "10:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJXaFG2BKSXBMRZaHBhMGe9GI",
-            "desc": "Prettiest village on Paxos — tiny horseshoe harbor at the northern tip. Great for swimming right from the quay.",
-            "name_el": "Λάκκα",
-            "desc_el": "Το πιο όμορφο χωριό των Παξών — μικροσκοπικό πεταλοειδές λιμάνι στο βόρειο άκρο. Εξαιρετικό για κολύμπι κατευθείαν από την προκυμαία.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Lakka_rocky_coast_DSC06120.jpg/1920px-Lakka_rocky_coast_DSC06120.jpg",
-            "photo_credit": {
-              "artist": "Jess Stubenbord",
-              "license": "CC0",
-              "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Lakka_rocky_coast_DSC06120.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Erimitis Cliffs",
-            "lat": 39.208920591726155,
-            "lng": 20.14301496952754,
-            "type": "beach",
-            "time": "11:30",
-            "wiki": "https://www.google.com/maps/place/%CE%A0%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1+%CE%95%CF%81%CE%B7%CE%BC%CE%AF%CF%84%CE%B7%CF%82/@39.2036419,20.1444959,2152m/data=!3m1!1e3!4m14!1m7!3m6!1s0x135c8d6211767e7d:0x5289f55655fd656!2sErimitis+Bar+%26+Restaurant!8m2!3d39.2053254!4d20.1436173!16s%2Fg%2F1tdjfdlv!3m5!1s0x135c8d7d1efec7c7:0x399d9c84cbdef9da!8m2!3d39.2090073!4d20.1430979!16s%2Fg%2F1q67sdpbq?entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D",
-            "desc": "Dramatic white limestone cliffs on the west coast, dropping straight into deep blue water. Walk the well-marked cliff path from Lakka for the best vantages; the late-afternoon light turns the cliffs gold. Bring water and sturdy shoes.",
-            "name_el": "Γκρεμοί Ερημίτης",
-            "desc_el": "Δραματικοί λευκοί ασβεστολιθικοί γκρεμοί στη δυτική ακτή, που πέφτουν κάθετα σε βαθύ μπλε νερό. Περπάτα το καλά σηματοδοτημένο μονοπάτι των γκρεμών από τη Λάκκα για τις καλύτερες θέες· το όψιμο απογευματινό φως χρυσώνει τους βράχους. Πάρε νερό και γερά παπούτσια."
-          },
-          {
-            "name": "Longos",
-            "lat": 39.2259,
-            "lng": 20.1606,
-            "type": "village",
-            "time": "13:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJZUTsnpeNXBMRFZ2Vc3_2HMQ",
-            "desc": "Tiny fishing village halfway down the east coast — three tavernas, a soap factory turned ruin, a curve of pebble beach. Lunch at O Gios with views over the bay; ask for the fish soup if the boats came in the night before.",
-            "name_el": "Λόγγος",
-            "desc_el": "Μικροσκοπικό ψαροχώρι στη μέση της ανατολικής ακτής — τρεις ταβέρνες, ένα εργοστάσιο σαπουνιού σε ερείπια, μια καμπύλη βότσαλης παραλίας. Μεσημεριανό στο Ο Γιος με θέα στον κόλπο· ζήτησε ψαρόσουπα αν μπήκαν τα καΐκια το προηγούμενο βράδυ.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Longos_Paxoi.jpg",
-            "photo_credit": {
-              "artist": "Wolfymoza",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Longos_Paxoi.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Antipaxos boat trip (Voutoumi)",
-            "lat": 39.1578,
-            "lng": 20.2275,
-            "type": "beach",
-            "time": "15:30",
-            "wiki": "https://www.google.com/maps/search/Antipaxos+boat+trip+(Voutoumi)",
-            "desc": "Day boat from Gaios (15 min). Voutoumi and Vrika beaches have water so clear and blue you won't believe the photos.",
-            "name_el": "Εκδρομή με Σκάφος στους Αντίπαξους (Βουτούμι)",
-            "desc_el": "Ημερήσιο σκάφος από τον Γάιο (15 λεπτά). Οι παραλίες Βουτούμι και Βρίκα έχουν νερά τόσο διαυγή και μπλε που δεν θα πιστέψεις τις φωτογραφίες.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Antipaxos%2C_view_from_the_southern_tip_of_Paxos-1.jpg/1920px-Antipaxos%2C_view_from_the_southern_tip_of_Paxos-1.jpg",
-            "photo_credit": {
-              "artist": "Mushushu",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Antipaxos,_view_from_the_southern_tip_of_Paxos-1.jpg",
-              "source": "Wikimedia Commons"
-            }
-          }
-        ],
-        "title_el": "Γκρεμοί Δυτικής Ακτής & Αντίπαξοι",
-        "overnight_el": "Αναχώρηση",
-        "food": [
-          {
-            "meal": "Lunch",
-            "meal_el": "Μεσημεριανό",
-            "area": "Loggos",
-            "area_el": "Λογγός",
-            "desc": "The harbour tavernas at <a href=\"https://www.google.com/maps/search/Loggos+Paxos\" target=\"_blank\" rel=\"noopener\">Loggos</a> line a tiny, postcard bay — fresh fish and a slow lunch before the Antipaxos boat.",
-            "desc_el": "Οι ταβέρνες του λιμανιού στον <a href=\"https://www.google.com/maps/search/Loggos+Paxos\" target=\"_blank\" rel=\"noopener\">Λογγό</a> είναι πάνω σε έναν μικροσκοπικό, καρτ-ποστάλ όρμο — φρέσκο ψάρι κι ένα χαλαρό μεσημεριανό πριν το καΐκι για τους Αντίπαξους.",
-            "after": "Longos"
-          }
-        ]
+     },
+     {
+      "name": "Agios Nikolaos islet",
+      "lat": 39.2014,
+      "lng": 20.1864,
+      "type": "church",
+      "time": "11:30",
+      "wiki": null,
+      "desc": "Tiny islet at the mouth of Gaios harbour, crowned by Venetian fort ruins and a small chapel. The 5-minute rowboat crossing from the quay costs almost nothing; the views back at Gaios from the fort walls are the best on the island.",
+      "name_el": "Νησίδα Άγιος Νικόλαος",
+      "desc_el": "Μικροσκοπική νησίδα στο στόμα του λιμανιού του Γάιου, στεφανωμένη με ερείπια ενετικού οχυρού και μικρό εκκλησάκι. Η πεντάλεπτη διαδρομή με βαρκούλα από την προκυμαία κοστίζει ελάχιστα· η θέα προς τον Γάιο από τα τείχη του οχυρού είναι η καλύτερη του νησιού.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Agios_Nikolaos_in_Agios_Nikolaos_6073246.JPG/1920px-Agios_Nikolaos_in_Agios_Nikolaos_6073246.JPG",
+      "photo_credit": {
+       "artist": "C messier",
+       "license": "CC0",
+       "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Agios_Nikolaos_in_Agios_Nikolaos_6073246.JPG",
+       "source": "Wikimedia Commons"
       }
-    ],
-    "title_el": "Πρόγραμμα 2 Ημερών στους Παξούς",
-    "subtitle_el": "Σμαραγδένιοι ελαιώνες και τα πιο διαυγή νερά του Ιονίου"
-  },
-  "beaches": [
-    {
-      "name": "Voutoumi (Antipaxos)",
-      "lat": 39.1578,
-      "lng": 20.2275,
-      "type": "White pebbles",
-      "length": "400 m",
-      "depth": "Moderate, crystal clear",
-      "facing": "Northeast — protected",
-      "facilities": "Two tavernas on cliff above",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJYfi13lPzXBMREgzaFrOcsLs",
-      "desc": "Famous for the clearest water in the Ionian. Reached by boat from Gaios.",
-      "name_el": "Βουτούμι (Αντίπαξοι)",
-      "type_el": "Λευκά βότσαλα",
-      "depth_el": "Μέτρια, κρυστάλλινα",
-      "facing_el": "Βορειοανατολικά — προστατευμένη",
-      "facilities_el": "Δύο ταβέρνες στον γκρεμό από πάνω",
-      "desc_el": "Διάσημη για τα πιο διαυγή νερά του Ιονίου. Προσβάσιμη με σκάφος από τον Γάιο."
-    },
-    {
-      "name": "Vrika (Antipaxos)",
-      "lat": 39.1612,
-      "lng": 20.223,
-      "type": "Fine sand",
-      "length": "150 m",
-      "depth": "Shallow",
-      "facing": "North — protected",
-      "facilities": "One taverna",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJd0O4e03zXBMRY8CaFiENrRs",
-      "desc": "Smaller sandy beach on Antipaxos. Gradual entry, family-friendly, stunning color.",
-      "name_el": "Βρίκα (Αντίπαξοι)",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Ρηχή",
-      "facing_el": "Βόρεια — προστατευμένη",
-      "facilities_el": "Μία ταβέρνα",
-      "desc_el": "Μικρότερη αμμώδης παραλία στους Αντίπαξους. Σταδιακή είσοδος, κατάλληλη για οικογένειες, εντυπωσιακό χρώμα."
-    },
-    {
-      "name": "Mongonissi",
+     },
+     {
+      "name": "Mongonissi Beach",
       "lat": 39.1822,
       "lng": 20.2059,
-      "type": "Sand",
-      "length": "100 m",
-      "depth": "Very shallow",
-      "facing": "South — fully protected",
-      "facilities": "Beach bar, umbrellas",
+      "type": "beach",
+      "time": "16:00",
       "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJp06MkOuNXBMRZwlHYHoiMuA",
-      "desc": "Paxos' only true sandy beach on the main island. Very calm, great for young kids.",
-      "name_el": "Μογγονήσι",
-      "type_el": "Άμμος",
-      "depth_el": "Πολύ ρηχή",
-      "facing_el": "Νότια — απόλυτα προστατευμένη",
-      "facilities_el": "Beach bar, ομπρέλες",
-      "desc_el": "Η μοναδική πραγματική αμμώδης παραλία στο κύριο νησί των Παξών. Πολύ ήρεμη, εξαιρετική για μικρά παιδιά."
-    }
-  ],
-  "name_el": "Παξοί",
-  "name_accusative_el": "Παξούς",
-  "name_genitive_el": "Παξών",
-  "gender_el": "plm",
-  "subtitle_el": "Σμαραγδένιοι ελαιώνες και τα πιο διαυγή νερά του Ιονίου",
-  "intro_el": "Οι Παξοί είναι ένα μικροσκοπικό σμαραγδένιο νησί ακριβώς νότια από την Κέρκυρα — 19 χλμ², 2.300 κάτοικοι, καλυμμένο σε αιωνόβιους ελαιώνες που παράγουν μερικό από το καλύτερο λάδι της Ελλάδας. Το νησί δεν έχει αεροδρόμιο, μόνο πλοία από την Κέρκυρα, και μόνο τρία μικροσκοπικά λιμενικά χωριά. Αυτή είναι η Ελλάδα του ιστιοπλόου και του κολυμβητή, με νερά τόσο διαυγή που τα σκάφη φαίνονται να επιπλέουν στον αέρα. Απέναντι βρίσκονται οι Αντίπαξοι, σπίτι των πιο διαφανών νερών του Ιονίου.",
-  "suited_for": {
-    "good": [
-      "Couples and sailors after clear water, olive-grove walks and slow dinners by tiny harbours",
-      "Anyone who wants the Ionian's most translucent swimming without Corfu's crowds",
-      "Travellers happy with three small villages and no need for a car"
+      "desc": "Sheltered sandy bay at the southern tip, 4 km from Gaios on a narrow road. The calmest swimming on Paxos — protected from wind on all sides — and a couple of small tavernas at the back of the beach for grilled octopus and a cold beer.",
+      "name_el": "Παραλία Μογγονήσι",
+      "desc_el": "Προστατευμένος αμμώδης κόλπος στο νότιο άκρο, 4 χλμ από τον Γάιο σε στενό δρόμο. Το πιο ήρεμο κολύμπι στους Παξούς — προφυλαγμένος από κάθε άνεμο — και δύο μικρές ταβέρνες πίσω από την παραλία για ψητό χταπόδι και κρύα μπύρα."
+     }
     ],
-    "good_el": [
-      "Ζευγάρια και ιστιοπλόους που θέλουν καθαρά νερά, περιπάτους σε ελαιώνες και αργά δείπνα σε μικρά λιμανάκια",
-      "Όσους θέλουν τα πιο διάφανα νερά του Ιονίου χωρίς το πλήθος της Κέρκυρας",
-      "Ταξιδιώτες που αρκούνται σε τρία μικρά χωριά και δεν χρειάζονται αυτοκίνητο"
-    ],
-    "skip": [
-      "If you need an airport or a quick trip — Paxos is reached only by ferry, via Corfu or the mainland",
-      "If you want big resorts, lively nightlife or a wide choice of beaches"
-    ],
-    "skip_el": [
-      "Αν χρειάζεσαι αεροδρόμιο ή γρήγορη μετάβαση — οι Παξοί προσεγγίζονται μόνο ακτοπλοϊκώς, μέσω Κέρκυρας ή ηπείρου",
-      "Αν θέλεις μεγάλα resorts, ζωντανή νυχτερινή ζωή ή μεγάλη ποικιλία παραλιών"
+    "title_el": "Γάιος & η Ανατολική Ακτή",
+    "overnight_el": "Γάιος",
+    "nightlife": "Tiny Paxos is mellow lounge bars, not clubs. The <a href=\"https://www.google.com/maps/search/Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Gaios</a> waterfront is the scene — <a href=\"https://www.google.com/maps/search/Old+Harbor+Bar+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Old Harbor Bar</a> for cocktails and meze over the water, Capriccio for something more polished. There's exactly one club, <a href=\"https://www.google.com/maps/search/Diana+Club+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Diana</a>, with the occasional band or DJ.",
+    "nightlife_el": "Οι μικροί Παξοί είναι χαλαρά lounge bars, όχι clubs. Η προκυμαία του <a href=\"https://www.google.com/maps/search/Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Γάιου</a> είναι η σκηνή — <a href=\"https://www.google.com/maps/search/Old+Harbor+Bar+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Old Harbor Bar</a> για κοκτέιλ και μεζέ πάνω από το νερό, Capriccio για κάτι πιο φροντισμένο. Υπάρχει ακριβώς ένα club, το <a href=\"https://www.google.com/maps/search/Diana+Club+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Diana</a>, με καμιά μπάντα ή DJ πού και πού.",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Gaios",
+      "area_el": "Γάιος",
+      "desc": "<a href=\"https://www.google.com/maps/search/Volcano+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Volcano</a> is the seafood taverna on the Gaios main square, tables spilling toward the water.",
+      "desc_el": "Το <a href=\"https://www.google.com/maps/search/Volcano+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Volcano</a> είναι η ψαροταβέρνα στην κεντρική πλατεία του Γάιου, με τραπέζια ως το νερό.",
+      "after": "Agios Nikolaos islet"
+     },
+     {
+      "meal": "Dinner",
+      "meal_el": "Δείπνο",
+      "area": "Gaios",
+      "area_el": "Γάιος",
+      "desc": "<a href=\"https://www.google.com/maps/search/Taka+Taka+Mam+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Taka Taka Mam</a> is the tiny family-run spot with tables tucked into a lemon garden.",
+      "desc_el": "Το <a href=\"https://www.google.com/maps/search/Taka+Taka+Mam+Gaios+Paxos\" target=\"_blank\" rel=\"noopener\">Taka Taka Mam</a> είναι το μικρό οικογενειακό στέκι με τραπέζια σε έναν κήπο με λεμονιές.",
+      "after": "Mongonissi Beach"
+     }
     ]
-  },
-  "getting_there": {
-    "pills": [
-      "⛵ via Corfu 1h",
-      "€10–15"
+   },
+   {
+    "day": 2,
+    "title": "West Coast Cliffs & Antipaxos",
+    "km": 25,
+    "drive_mins": 60,
+    "overnight": "Departure",
+    "color": "#3D8B6F",
+    "stops": [
+     {
+      "name": "Lakka",
+      "lat": 39.2346,
+      "lng": 20.1357,
+      "type": "harbour",
+      "time": "10:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJXaFG2BKSXBMRZaHBhMGe9GI",
+      "desc": "Prettiest village on Paxos — tiny horseshoe harbor at the northern tip. Great for swimming right from the quay.",
+      "name_el": "Λάκκα",
+      "desc_el": "Το πιο όμορφο χωριό των Παξών — μικροσκοπικό πεταλοειδές λιμάνι στο βόρειο άκρο. Εξαιρετικό για κολύμπι κατευθείαν από την προκυμαία.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Lakka_rocky_coast_DSC06120.jpg/1920px-Lakka_rocky_coast_DSC06120.jpg",
+      "photo_credit": {
+       "artist": "Jess Stubenbord",
+       "license": "CC0",
+       "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Lakka_rocky_coast_DSC06120.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Erimitis Cliffs",
+      "lat": 39.208920591726155,
+      "lng": 20.14301496952754,
+      "type": "beach",
+      "time": "11:30",
+      "wiki": "https://www.google.com/maps/place/%CE%A0%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1+%CE%95%CF%81%CE%B7%CE%BC%CE%AF%CF%84%CE%B7%CF%82/@39.2036419,20.1444959,2152m/data=!3m1!1e3!4m14!1m7!3m6!1s0x135c8d6211767e7d:0x5289f55655fd656!2sErimitis+Bar+%26+Restaurant!8m2!3d39.2053254!4d20.1436173!16s%2Fg%2F1tdjfdlv!3m5!1s0x135c8d7d1efec7c7:0x399d9c84cbdef9da!8m2!3d39.2090073!4d20.1430979!16s%2Fg%2F1q67sdpbq?entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D",
+      "desc": "Dramatic white limestone cliffs on the west coast, dropping straight into deep blue water. Walk the well-marked cliff path from Lakka for the best vantages; the late-afternoon light turns the cliffs gold. Bring water and sturdy shoes.",
+      "name_el": "Γκρεμοί Ερημίτης",
+      "desc_el": "Δραματικοί λευκοί ασβεστολιθικοί γκρεμοί στη δυτική ακτή, που πέφτουν κάθετα σε βαθύ μπλε νερό. Περπάτα το καλά σηματοδοτημένο μονοπάτι των γκρεμών από τη Λάκκα για τις καλύτερες θέες· το όψιμο απογευματινό φως χρυσώνει τους βράχους. Πάρε νερό και γερά παπούτσια."
+     },
+     {
+      "name": "Longos",
+      "lat": 39.2259,
+      "lng": 20.1606,
+      "type": "village",
+      "time": "13:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJZUTsnpeNXBMRFZ2Vc3_2HMQ",
+      "desc": "Tiny fishing village halfway down the east coast — three tavernas, a soap factory turned ruin, a curve of pebble beach. Lunch at O Gios with views over the bay; ask for the fish soup if the boats came in the night before.",
+      "name_el": "Λόγγος",
+      "desc_el": "Μικροσκοπικό ψαροχώρι στη μέση της ανατολικής ακτής — τρεις ταβέρνες, ένα εργοστάσιο σαπουνιού σε ερείπια, μια καμπύλη βότσαλης παραλίας. Μεσημεριανό στο Ο Γιος με θέα στον κόλπο· ζήτησε ψαρόσουπα αν μπήκαν τα καΐκια το προηγούμενο βράδυ.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Longos_Paxoi.jpg",
+      "photo_credit": {
+       "artist": "Wolfymoza",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Longos_Paxoi.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Antipaxos boat trip (Voutoumi)",
+      "lat": 39.1578,
+      "lng": 20.2275,
+      "type": "beach",
+      "time": "15:30",
+      "wiki": "https://www.google.com/maps/search/Antipaxos+boat+trip+(Voutoumi)",
+      "desc": "Day boat from Gaios (15 min). Voutoumi and Vrika beaches have water so clear and blue you won't believe the photos.",
+      "name_el": "Εκδρομή με Σκάφος στους Αντίπαξους (Βουτούμι)",
+      "desc_el": "Ημερήσιο σκάφος από τον Γάιο (15 λεπτά). Οι παραλίες Βουτούμι και Βρίκα έχουν νερά τόσο διαυγή και μπλε που δεν θα πιστέψεις τις φωτογραφίες.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Antipaxos%2C_view_from_the_southern_tip_of_Paxos-1.jpg/1920px-Antipaxos%2C_view_from_the_southern_tip_of_Paxos-1.jpg",
+      "photo_credit": {
+       "artist": "Mushushu",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Antipaxos,_view_from_the_southern_tip_of_Paxos-1.jpg",
+       "source": "Wikimedia Commons"
+      }
+     }
     ],
-    "pills_el": [
-      "⛵ μέσω Κέρκυρας 1 ώρα",
-      "€10–15"
-    ],
-    "summary": "No airport. Reach Paxos via Corfu (daily summer ferry, ~1h) or from mainland (Igoumenitsa, Patras). The smaller, quieter Ionian sister.",
-    "summary_el": "Χωρίς αεροδρόμιο. Προσέγγιση μέσω Κέρκυρας (καθημερινό καλοκαιρινό πλοίο, ~1 ώρα) ή από ηπειρωτική (Ηγουμενίτσα, Πάτρα). Το μικρότερο, πιο ήσυχο ιόνιο.",
-    "tip": "Ferry from Corfu via Antipaxos and Blue Caves — make the journey part of the trip.",
-    "tip_el": "Πλοίο από Κέρκυρα μέσω Αντίπαξων και Γαλάζιων Σπηλιών — κάνε τη διαδρομή μέρος του ταξιδιού."
-  },
-  "specialties": [
-    {
-      "name": "Paxos extra-virgin olive oil",
-      "name_el": "Παρθένο ελαιόλαδο Παξών",
-      "desc": "The island is essentially a single vast olive grove — over 200,000 trees, many over 500 years old. The oil is fruity, low-acid, and milder than mainland Greek oils. Bottled by small producers; buy direct from the press in Gaios or from the family stalls at the harbour market.",
-      "desc_el": "Το νησί είναι ουσιαστικά ένας τεράστιος ελαιώνας — πάνω από 200.000 δέντρα, πολλά άνω των 500 ετών. Το λάδι είναι φρουτώδες, χαμηλής οξύτητας, πιο ήπιο από τα ηπειρωτικά. Εμφιαλώνεται από μικρούς παραγωγούς· αγόρασε απευθείας από το ελαιοτριβείο στον Γάιο ή από τους οικογενειακούς πάγκους στην αγορά του λιμανιού."
-    },
-    {
-      "name": "Bourdeto",
-      "name_el": "Μπουρδέτο",
-      "desc": "Ionian fish stew, made on Paxos with scorpionfish, garlic, sweet paprika and a slow simmer. The colour is deep red; the heat is restrained on Paxos compared to the Corfu version. Served at most tavernas — best at the family places in Lakka.",
-      "desc_el": "Ιόνια ψαρόσουπα, στους Παξούς με σκορπιό, σκόρδο, γλυκιά πάπρικα και αργό βράσιμο. Το χρώμα είναι βαθύ κόκκινο· η καυτερότητα είναι συγκρατημένη στους Παξούς σε σχέση με την κερκυραϊκή εκδοχή. Σερβίρεται στις περισσότερες ταβέρνες — η καλύτερη στα οικογενειακά της Λάκκας."
-    },
-    {
-      "name": "Local kumquat liqueur",
-      "name_el": "Λικέρ κουμκουάτ",
-      "desc": "Sweet bright-orange liqueur made from the small citrus fruit grown on Paxos and Corfu. Often served after dinner as a digestif, sometimes mixed with sparkling water. A small bottle is the classic ferry-home gift.",
-      "desc_el": "Γλυκό πορτοκαλί λικέρ από το μικρό κίτρινο εσπεριδοειδές που καλλιεργείται στους Παξούς και την Κέρκυρα. Σερβίρεται μετά το δείπνο ως χωνευτικό, μερικές φορές με ανθρακούχο νερό. Ένα μικρό μπουκάλι είναι το κλασικό δώρο για το γυρισμό με το πλοίο."
-    }
+    "title_el": "Γκρεμοί Δυτικής Ακτής & Αντίπαξοι",
+    "overnight_el": "Αναχώρηση",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Loggos",
+      "area_el": "Λογγός",
+      "desc": "The harbour tavernas at <a href=\"https://www.google.com/maps/search/Loggos+Paxos\" target=\"_blank\" rel=\"noopener\">Loggos</a> line a tiny, postcard bay — fresh fish and a slow lunch before the Antipaxos boat.",
+      "desc_el": "Οι ταβέρνες του λιμανιού στον <a href=\"https://www.google.com/maps/search/Loggos+Paxos\" target=\"_blank\" rel=\"noopener\">Λογγό</a> είναι πάνω σε έναν μικροσκοπικό, καρτ-ποστάλ όρμο — φρέσκο ψάρι κι ένα χαλαρό μεσημεριανό πριν το καΐκι για τους Αντίπαξους.",
+      "after": "Longos"
+     }
+    ]
+   }
   ],
-  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783273547/%CF%80%CE%B1%CE%BE%CE%BF%CE%B9_o3g7yv.jpg"
+  "title_el": "Πρόγραμμα 2 Ημερών στους Παξούς",
+  "subtitle_el": "Σμαραγδένιοι ελαιώνες και τα πιο διαυγή νερά του Ιονίου"
+ },
+ "beaches": [
+  {
+   "name": "Voutoumi (Antipaxos)",
+   "lat": 39.1578,
+   "lng": 20.2275,
+   "type": "White pebbles",
+   "length": "400 m",
+   "depth": "Moderate, crystal clear",
+   "facing": "Northeast — protected",
+   "facilities": "Two tavernas on cliff above",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJYfi13lPzXBMREgzaFrOcsLs",
+   "desc": "Famous for the clearest water in the Ionian. Reached by boat from Gaios.",
+   "name_el": "Βουτούμι (Αντίπαξοι)",
+   "type_el": "Λευκά βότσαλα",
+   "depth_el": "Μέτρια, κρυστάλλινα",
+   "facing_el": "Βορειοανατολικά — προστατευμένη",
+   "facilities_el": "Δύο ταβέρνες στον γκρεμό από πάνω",
+   "desc_el": "Διάσημη για τα πιο διαυγή νερά του Ιονίου. Προσβάσιμη με σκάφος από τον Γάιο."
+  },
+  {
+   "name": "Vrika (Antipaxos)",
+   "lat": 39.1612,
+   "lng": 20.223,
+   "type": "Fine sand",
+   "length": "150 m",
+   "depth": "Shallow",
+   "facing": "North — protected",
+   "facilities": "One taverna",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJd0O4e03zXBMRY8CaFiENrRs",
+   "desc": "Smaller sandy beach on Antipaxos. Gradual entry, family-friendly, stunning color.",
+   "name_el": "Βρίκα (Αντίπαξοι)",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Ρηχή",
+   "facing_el": "Βόρεια — προστατευμένη",
+   "facilities_el": "Μία ταβέρνα",
+   "desc_el": "Μικρότερη αμμώδης παραλία στους Αντίπαξους. Σταδιακή είσοδος, κατάλληλη για οικογένειες, εντυπωσιακό χρώμα."
+  },
+  {
+   "name": "Mongonissi",
+   "lat": 39.1822,
+   "lng": 20.2059,
+   "type": "Sand",
+   "length": "100 m",
+   "depth": "Very shallow",
+   "facing": "South — fully protected",
+   "facilities": "Beach bar, umbrellas",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJp06MkOuNXBMRZwlHYHoiMuA",
+   "desc": "Paxos' only true sandy beach on the main island. Very calm, great for young kids.",
+   "name_el": "Μογγονήσι",
+   "type_el": "Άμμος",
+   "depth_el": "Πολύ ρηχή",
+   "facing_el": "Νότια — απόλυτα προστατευμένη",
+   "facilities_el": "Beach bar, ομπρέλες",
+   "desc_el": "Η μοναδική πραγματική αμμώδης παραλία στο κύριο νησί των Παξών. Πολύ ήρεμη, εξαιρετική για μικρά παιδιά."
+  }
+ ],
+ "name_el": "Παξοί",
+ "name_accusative_el": "Παξούς",
+ "name_genitive_el": "Παξών",
+ "gender_el": "plm",
+ "subtitle_el": "Σμαραγδένιοι ελαιώνες και τα πιο διαυγή νερά του Ιονίου",
+ "intro_el": "Οι Παξοί είναι ένα μικροσκοπικό σμαραγδένιο νησί ακριβώς νότια από την Κέρκυρα — 19 χλμ², 2.300 κάτοικοι, καλυμμένο σε αιωνόβιους ελαιώνες που παράγουν μερικό από το καλύτερο λάδι της Ελλάδας. Το νησί δεν έχει αεροδρόμιο, μόνο πλοία από την Κέρκυρα, και μόνο τρία μικροσκοπικά λιμενικά χωριά. Αυτή είναι η Ελλάδα του ιστιοπλόου και του κολυμβητή, με νερά τόσο διαυγή που τα σκάφη φαίνονται να επιπλέουν στον αέρα. Απέναντι βρίσκονται οι Αντίπαξοι, σπίτι των πιο διαφανών νερών του Ιονίου.",
+ "suited_for": {
+  "good": [
+   "Couples and sailors after clear water, olive-grove walks and slow dinners by tiny harbours",
+   "Anyone who wants the Ionian's most translucent swimming without Corfu's crowds",
+   "Travellers happy with three small villages and no need for a car"
+  ],
+  "good_el": [
+   "Ζευγάρια και ιστιοπλόους που θέλουν καθαρά νερά, περιπάτους σε ελαιώνες και αργά δείπνα σε μικρά λιμανάκια",
+   "Όσους θέλουν τα πιο διάφανα νερά του Ιονίου χωρίς το πλήθος της Κέρκυρας",
+   "Ταξιδιώτες που αρκούνται σε τρία μικρά χωριά και δεν χρειάζονται αυτοκίνητο"
+  ],
+  "skip": [
+   "If you need an airport or a quick trip — Paxos is reached only by ferry, via Corfu or the mainland",
+   "If you want big resorts, lively nightlife or a wide choice of beaches"
+  ],
+  "skip_el": [
+   "Αν χρειάζεσαι αεροδρόμιο ή γρήγορη μετάβαση — οι Παξοί προσεγγίζονται μόνο ακτοπλοϊκώς, μέσω Κέρκυρας ή ηπείρου",
+   "Αν θέλεις μεγάλα resorts, ζωντανή νυχτερινή ζωή ή μεγάλη ποικιλία παραλιών"
+  ]
+ },
+ "getting_there": {
+  "pills": [
+   "⛵ via Corfu 1h",
+   "€10–15"
+  ],
+  "pills_el": [
+   "⛵ μέσω Κέρκυρας 1 ώρα",
+   "€10–15"
+  ],
+  "summary": "No airport. Reach Paxos via Corfu (daily summer ferry, ~1h) or from mainland (Igoumenitsa, Patras). The smaller, quieter Ionian sister.",
+  "summary_el": "Χωρίς αεροδρόμιο. Προσέγγιση μέσω Κέρκυρας (καθημερινό καλοκαιρινό πλοίο, ~1 ώρα) ή από ηπειρωτική (Ηγουμενίτσα, Πάτρα). Το μικρότερο, πιο ήσυχο ιόνιο.",
+  "tip": "Ferry from Corfu via Antipaxos and Blue Caves — make the journey part of the trip.",
+  "tip_el": "Πλοίο από Κέρκυρα μέσω Αντίπαξων και Γαλάζιων Σπηλιών — κάνε τη διαδρομή μέρος του ταξιδιού."
+ },
+ "specialties": [
+  {
+   "name": "Paxos extra-virgin olive oil",
+   "name_el": "Παρθένο ελαιόλαδο Παξών",
+   "desc": "The island is essentially a single vast olive grove — over 200,000 trees, many over 500 years old. The oil is fruity, low-acid, and milder than mainland Greek oils. Bottled by small producers; buy direct from the press in Gaios or from the family stalls at the harbour market.",
+   "desc_el": "Το νησί είναι ουσιαστικά ένας τεράστιος ελαιώνας — πάνω από 200.000 δέντρα, πολλά άνω των 500 ετών. Το λάδι είναι φρουτώδες, χαμηλής οξύτητας, πιο ήπιο από τα ηπειρωτικά. Εμφιαλώνεται από μικρούς παραγωγούς· αγόρασε απευθείας από το ελαιοτριβείο στον Γάιο ή από τους οικογενειακούς πάγκους στην αγορά του λιμανιού."
+  },
+  {
+   "name": "Bourdeto",
+   "name_el": "Μπουρδέτο",
+   "desc": "Ionian fish stew, made on Paxos with scorpionfish, garlic, sweet paprika and a slow simmer. The colour is deep red; the heat is restrained on Paxos compared to the Corfu version. Served at most tavernas — best at the family places in Lakka.",
+   "desc_el": "Ιόνια ψαρόσουπα, στους Παξούς με σκορπιό, σκόρδο, γλυκιά πάπρικα και αργό βράσιμο. Το χρώμα είναι βαθύ κόκκινο· η καυτερότητα είναι συγκρατημένη στους Παξούς σε σχέση με την κερκυραϊκή εκδοχή. Σερβίρεται στις περισσότερες ταβέρνες — η καλύτερη στα οικογενειακά της Λάκκας."
+  },
+  {
+   "name": "Local kumquat liqueur",
+   "name_el": "Λικέρ κουμκουάτ",
+   "desc": "Sweet bright-orange liqueur made from the small citrus fruit grown on Paxos and Corfu. Often served after dinner as a digestif, sometimes mixed with sparkling water. A small bottle is the classic ferry-home gift.",
+   "desc_el": "Γλυκό πορτοκαλί λικέρ από το μικρό κίτρινο εσπεριδοειδές που καλλιεργείται στους Παξούς και την Κέρκυρα. Σερβίρεται μετά το δείπνο ως χωνευτικό, μερικές φορές με ανθρακούχο νερό. Ένα μικρό μπουκάλι είναι το κλασικό δώρο για το γυρισμό με το πλοίο."
+  }
+ ],
+ "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783273547/%CF%80%CE%B1%CE%BE%CE%BF%CE%B9_o3g7yv.jpg"
 }

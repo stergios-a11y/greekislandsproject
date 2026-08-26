@@ -1,297 +1,297 @@
 {
-  "key": "leipsoi",
-  "name": "Leipsoi",
-  "name_el": "Λειψοί",
-  "name_accusative_el": "Λειψούς",
-  "name_genitive_el": "Λειψών",
-  "gender_el": "plm",
-  "subtitle": "A miniature archipelago between Patmos and Leros — 24 islets, wine tradition, turquoise Platis Gialos and a chapel for every family",
-  "subtitle_el": "Ένα μικρογραφικό αρχιπέλαγος ανάμεσα σε Πάτμο και Λέρο — 24 νησίδες, παράδοση οινοποιίας, τιρκουάζ Πλατύς Γιαλός και ένα εκκλησάκι για κάθε οικογένεια",
-  "intro": "Leipsoi (also Lipsi) is a miniature archipelago — one main 17 km² inhabited island and 24 smaller islets, all Natura 2000-protected, all circling around the single village that shares the island's name. The harbour is classic Aegean postcard: whitewashed cubes, blue doors and shutters, fishing boats bobbing against the quay, church bells on the hour. The locals say there's a chapel for every family on the island; the Panagia tou Harou church contains a rare icon of the Virgin Mary holding the crucified Christ. Wine is a real tradition here — the annual August festival is the island's biggest event. A single day is enough to see the highlights; longer and you're there for the silence.",
-  "intro_el": "Οι Λειψοί είναι ένα μικρογραφικό αρχιπέλαγος — ένα κύριο κατοικημένο νησί 17 τ.χλμ. και 24 μικρότερες νησίδες, όλες προστατευμένες από το Natura 2000, όλες περιφερόμενες γύρω από το μοναδικό χωριό που μοιράζεται το όνομα του νησιού. Το λιμάνι είναι κλασική αιγαιοπελαγίτικη καρτ ποστάλ: ασβεστωμένοι κύβοι, γαλάζιες πόρτες και παραθυρόφυλλα, αλιευτικά που κλυδωνίζονται στην προβλήτα, καμπάνες εκκλησιών κάθε ώρα. Οι ντόπιοι λένε ότι υπάρχει ένα εκκλησάκι για κάθε οικογένεια στο νησί· η εκκλησία Παναγία του Χάρου περιλαμβάνει μια σπάνια εικόνα της Παναγίας που κρατά τον σταυρωμένο Χριστό. Το κρασί είναι αληθινή παράδοση εδώ — το ετήσιο φεστιβάλ του Αυγούστου είναι η μεγαλύτερη εκδήλωση του νησιού. Μια μέρα φτάνει για τα κύρια· παραπάνω και είσαι εκεί για τη σιωπή.",
-  "when_to_visit": {
-    "summary": "Leipsoi is the small island next to Patmos — sleepy, beach-fringed, almost no scene. Open June-September. June and September are sweetest. The wine festival in mid-August is the only event that brings real crowds. The 30+ uninhabited islets around Leipsoi are a snorkel/boat-day paradise.",
-    "summary_el": "Οι Λειψοί είναι το μικρό νησί δίπλα στην Πάτμο — νυσταγμένο, γεμάτο παραλίες, σχεδόν χωρίς σκηνικό. Ανοιχτοί Ιούνιο–Σεπτέμβριο, πιο γλυκοί Ιούνιο και Σεπτέμβριο. Η γιορτή του κρασιού στα μέσα Αυγούστου είναι το μόνο γεγονός που φέρνει πραγματικό κόσμο. Οι 30+ ακατοίκητες νησίδες γύρω από τους Λειψούς είναι παράδεισος για μάσκα και βαρκάδες.",
-    "months": [
-      {
-        "tag": "avoid",
-        "why": "Few ferries",
-        "why_el": "Εκτός σεζόν",
-        "limited": true
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Σχεδόν όλα κλειστά",
-        "limited": true
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Εκτός σεζόν",
-        "limited": true
-      },
-      {
-        "tag": "ok",
-        "why": "Easter quiet",
-        "why_el": "Ήσυχο Πάσχα",
-        "limited": true
-      },
-      {
-        "tag": "great",
-        "why": "Awakening, warming",
-        "why_el": "Πρώτες αφίξεις"
-      },
-      {
-        "tag": "perfect",
-        "why": "Warm, calm, sleepy",
-        "why_el": "Ζεστά, νυσταγμένα"
-      },
-      {
-        "tag": "great",
-        "why": "Hot, calm",
-        "why_el": "Ζέστη, ήσυχα"
-      },
-      {
-        "tag": "ok",
-        "why": "Wine festival, busy",
-        "why_el": "Γιορτή κρασιού"
-      },
-      {
-        "tag": "perfect",
-        "why": "Best — peaceful",
-        "why_el": "Καλύτερος — ήσυχα"
-      },
-      {
-        "tag": "avoid",
-        "why": "Last week busy",
-        "why_el": "Τελευταία βδομάδα"
-      },
-      {
-        "tag": "avoid",
-        "why": "Few ferries",
-        "why_el": "Σε χειμερία νάρκη",
-        "limited": true
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Σε χειμερία νάρκη",
-        "limited": true
-      }
-    ]
-  },
-  "itinerary": {
-    "title": "1-Day Leipsoi Itinerary",
-    "subtitle": "Chora in the morning, Platis Gialos and Katsadia for swims, sunset drinks at the harbour.",
-    "days": [
-      {
-        "day": 1,
-        "title": "Chora, Platis Gialos & Katsadia",
-        "color": "#1B4F8A",
-        "stops": [
-          {
-            "name": "Lipsi Town (Chora)",
-            "name_el": "Λιψοί (Χώρα)",
-            "lat": 37.29463,
-            "lng": 26.767901,
-            "type": "village",
-            "wiki": "https://www.google.com/maps/search/Lipsi+Town+(Chora)+Leipsoi",
-            "desc": "The only proper settlement — classic Aegean harbour with whitewashed cubes, blue doors, fishing boats, a slab-paved waterfront. Start at the Ecclesiastical and Folk Museum in the centre: 16th-17th century icons, gold-woven vestments, a 4th-century BC marble ionic pillar head. Panagia tou Harou church just above holds the unusual icon of the Virgin with the crucified Christ.",
-            "desc_el": "Ο μόνος κανονικός οικισμός — κλασικό αιγαιοπελαγίτικο λιμάνι με ασβεστωμένους κύβους, γαλάζιες πόρτες, αλιευτικά σκάφη, μια πλακόστρωτη παραλιακή. Ξεκίνα από το Εκκλησιαστικό και Λαογραφικό Μουσείο στο κέντρο: εικόνες του 16ου-17ου αιώνα, χρυσοκέντητα άμφια, μαρμάρινο ιωνικό κιονόκρανο του 4ου αιώνα π.Χ. Η εκκλησία Παναγία του Χάρου ακριβώς από πάνω φιλοξενεί την ασυνήθιστη εικόνα της Παναγίας με τον σταυρωμένο Χριστό.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784755550/%CF%87%CF%89%CF%81%CE%B1_w33xck.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Lipsi Winery",
-            "name_el": "Οινοποιείο Λειψών",
-            "lat": 37.29463,
-            "lng": 26.767901,
-            "type": "village",
-            "desc": "Family-owned winery next to the main village — produces Aposperitis (red) and Ageriko (white). Lipsi has a real wine tradition going back centuries; the August Wine Festival is the biggest event on the island calendar. Tastings by appointment.",
-            "desc_el": "Οικογενειακό οινοποιείο δίπλα στο κύριο χωριό — παράγει Αποσπερίτη (κόκκινο) και Αγέρικο (λευκό). Οι Λειψοί έχουν αληθινή παράδοση οινοποιίας αιώνων· το Φεστιβάλ Κρασιού του Αυγούστου είναι η μεγαλύτερη εκδήλωση του ημερολογίου του νησιού. Γευσιγνωσίες κατόπιν ραντεβού.",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJLVqSUCG4vRQRbACVoUM6K7c",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784755550/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%B9%CE%BF_atfqtc.webp",
-            "photo_credit": null
-          },
-          {
-            "name": "Platis Gialos Beach",
-            "name_el": "Παραλία Πλατύς Γιαλός",
-            "lat": 37.3164,
-            "lng": 26.7444,
-            "type": "beach",
-            "desc": "3.5km northwest of Chora — considered by many the most beautiful beach in the entire Dodecanese. Turquoise shallow lagoon with tamarisks, family-friendly, a single taverna behind the trees. Ducks live on the beach. Bus runs from Chora in summer.",
-            "desc_el": "3,5 χλμ βορειοδυτικά της Χώρας — θεωρείται από πολλούς η ομορφότερη παραλία όλων των Δωδεκανήσων. Τιρκουάζ ρηχή λιμνοθάλασσα με αλμυρίκια, οικογενειακή, μία μόνο ταβέρνα πίσω από τα δέντρα. Πάπιες ζουν στην παραλία. Λεωφορείο από τη Χώρα το καλοκαίρι.",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJK1j2F3u3vRQRiX0Dw5gAiZU",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785269200/%CF%80%CE%BB%CE%B1%CF%84%CF%85%CF%83_%CE%B3%CE%B9%CE%B1%CE%BB%CE%BF%CF%83_ksekhh.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Moschato Bay",
-            "name_el": "Κόλπος Μοσχάτο",
-            "lat": 37.3175,
-            "lng": 26.7508,
-            "type": "beach",
-            "desc": "Small detour over the headland from Platis Gialos. Less-visited cove with sparkling water and a single tavern/bar. The escape when Platis Gialos feels too popular (which isn't often).",
-            "desc_el": "Μικρή παράκαμψη πάνω από το ακρωτήρι από τον Πλατύ Γιαλό. Λιγότερο επισκέψιμος κολπίσκος με λαμπερά νερά και μία ταβέρνα/μπαρ. Η απόδραση όταν ο Πλατύς Γιαλός φαίνεται πολυσύχναστος (που δεν είναι συχνά).",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785269200/%CE%BC%CE%BF%CF%83%CF%87%CE%B1%CF%84%CE%BF_oqekff.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Katsadia Beach",
-            "name_el": "Παραλία Κατσάδια",
-            "lat": 37.2856,
-            "lng": 26.7675,
-            "type": "beach",
-            "desc": "3km southeast of Chora — sheltered sandy cove with big trees for shade, shallow water. Two tavernas, Christo's and Dilaila Bar-Café, both right on the sand. Many small adjacent coves, some nudist. Yachts often anchor in the bay.",
-            "desc_el": "3 χλμ νοτιοανατολικά της Χώρας — προστατευμένος αμμώδης κολπίσκος με μεγάλα δέντρα για σκιά, ρηχά νερά. Δύο ταβέρνες, του Χρίστου και το Dilaila Bar-Café, και οι δύο ακριβώς πάνω στην άμμο. Πολλοί μικροί διπλανοί κολπίσκοι, κάποιοι γυμνιστικοί. Τα γιοτ αγκυροβολούν συχνά στον κόλπο.",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJsSSCOD64vRQR8Ja-tYOEkMI",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784755549/%CE%BA%CE%B1%CF%84%CF%83%CE%B1%CE%B4%CE%B9%CE%B1_mbdjwb.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Monodendri (The Lone Tree)",
-            "name_el": "Μονόδενδρι (Το Μοναδικό Δέντρο)",
-            "lat": 37.2990122,
-            "lng": 26.7921138,
-            "type": "beach",
-            "desc": "White-pebble beach at the eastern tip of the island, named after a single juniper tree growing out of the rock — grown from seeds carried on the wind from Africa. Reached by 45-minute walk from Chora or dirt road. Nudist-friendly, rarely more than a handful of people.",
-            "desc_el": "Λευκή βότσαλη παραλία στο ανατολικό άκρο του νησιού, ονομασμένη από ένα μόνο δέντρο αρκεύθου που φυτρώνει από τον βράχο — μεγάλωσε από σπόρους που έφερε ο άνεμος από την Αφρική. Προσβάσιμη με 45λεπτη πεζοπορία από τη Χώρα ή με χωματόδρομο. Φιλική προς γυμνιστές, σπάνια πάνω από μια χούφτα άτομα.",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJXd5lof63vRQRVg8ee1xkEoI",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784755550/%CE%BC%CE%BF%CE%BD%CE%BF%CE%B4%CE%B5%CE%BD%CE%B4%CF%81%CE%B9_cywdhh.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Sunset at the Harbour",
-            "name_el": "Ηλιοβασίλεμα στο Λιμάνι",
-            "lat": 37.2972,
-            "lng": 26.7628,
-            "type": "village",
-            "desc": "Back in Chora for dinner. Seaside tavernas with fishing boats moored two metres away. Local specialities: octopus in red wine, stuffed eggplants, lamb kaldereta. Pair with Aposperitis red from the winery.",
-            "desc_el": "Πίσω στη Χώρα για δείπνο. Παραθαλάσσιες ταβέρνες με αλιευτικά σκάφη δεμένα δύο μέτρα μακριά. Τοπικές σπεσιαλιτέ: χταπόδι κρασάτο, παπουτσάκια, αρνί καλντερέτα. Συνδύασε με Αποσπερίτη κόκκινο από το οινοποιείο.",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJLVqSUCG4vRQRbACVoUM6K7c",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785269325/%CE%B7%CE%BB%CE%B9%CE%BF%CE%B2%CE%B1%CF%83%CE%B9%CE%BB%CE%B5%CE%BC%CE%B1_pon2jb.jpg",
-            "photo_credit": null
-          }
-        ],
-        "title_el": "Χώρα, Πλατύς Γιαλός & Κατσαδιά",
-        "km": 8,
-        "drive_mins": 20,
-        "food": [
-          {
-            "meal": "Dinner",
-            "meal_el": "Δείπνο",
-            "area": "Lipsi Chora",
-            "area_el": "Χώρα Λειψών",
-            "desc": "<a href=\"https://www.google.com/maps/search/Manolis+Tastes+Lipsi\" target=\"_blank\" rel=\"noopener\">Manolis Tastes</a> is the island's most refined table — creative Greek plates overlooking the harbour; the other harbour tavernas keep it classic.",
-            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Manolis+Tastes+Lipsi\" target=\"_blank\" rel=\"noopener\">Manolis Tastes</a> είναι το πιο εκλεπτυσμένο τραπέζι του νησιού — δημιουργικά ελληνικά πιάτα με θέα στο λιμάνι· οι υπόλοιπες ταβέρνες του λιμανιού μένουν κλασικές.",
-            "after": "Sunset at the Harbour"
-          }
-        ]
-      }
-    ],
-    "title_el": "Πρόγραμμα 1 Ημέρας στους Λειψούς",
-    "subtitle_el": "Χώρα το πρωί, Πλατύς Γιαλός και Κατσαδιά για μπάνια, ποτά ηλιοβασιλέματος στο λιμάνι."
-  },
-  "beaches": [
-    {
+ "key": "leipsoi",
+ "name": "Leipsoi",
+ "name_el": "Λειψοί",
+ "name_accusative_el": "Λειψούς",
+ "name_genitive_el": "Λειψών",
+ "gender_el": "plm",
+ "subtitle": "A miniature archipelago between Patmos and Leros — 24 islets, wine tradition, turquoise Platis Gialos and a chapel for every family",
+ "subtitle_el": "Ένα μικρογραφικό αρχιπέλαγος ανάμεσα σε Πάτμο και Λέρο — 24 νησίδες, παράδοση οινοποιίας, τιρκουάζ Πλατύς Γιαλός και ένα εκκλησάκι για κάθε οικογένεια",
+ "intro": "Leipsoi (also Lipsi) is a miniature archipelago — one main 17 km² inhabited island and 24 smaller islets, all Natura 2000-protected, all circling around the single village that shares the island's name. The harbour is classic Aegean postcard: whitewashed cubes, blue doors and shutters, fishing boats bobbing against the quay, church bells on the hour. The locals say there's a chapel for every family on the island; the Panagia tou Harou church contains a rare icon of the Virgin Mary holding the crucified Christ. Wine is a real tradition here — the annual August festival is the island's biggest event. A single day is enough to see the highlights; longer and you're there for the silence.",
+ "intro_el": "Οι Λειψοί είναι ένα μικρογραφικό αρχιπέλαγος — ένα κύριο κατοικημένο νησί 17 τ.χλμ. και 24 μικρότερες νησίδες, όλες προστατευμένες από το Natura 2000, όλες περιφερόμενες γύρω από το μοναδικό χωριό που μοιράζεται το όνομα του νησιού. Το λιμάνι είναι κλασική αιγαιοπελαγίτικη καρτ ποστάλ: ασβεστωμένοι κύβοι, γαλάζιες πόρτες και παραθυρόφυλλα, αλιευτικά που κλυδωνίζονται στην προβλήτα, καμπάνες εκκλησιών κάθε ώρα. Οι ντόπιοι λένε ότι υπάρχει ένα εκκλησάκι για κάθε οικογένεια στο νησί· η εκκλησία Παναγία του Χάρου περιλαμβάνει μια σπάνια εικόνα της Παναγίας που κρατά τον σταυρωμένο Χριστό. Το κρασί είναι αληθινή παράδοση εδώ — το ετήσιο φεστιβάλ του Αυγούστου είναι η μεγαλύτερη εκδήλωση του νησιού. Μια μέρα φτάνει για τα κύρια· παραπάνω και είσαι εκεί για τη σιωπή.",
+ "when_to_visit": {
+  "summary": "Leipsoi is the small island next to Patmos — sleepy, beach-fringed, almost no scene. Open June-September. June and September are sweetest. The wine festival in mid-August is the only event that brings real crowds. The 30+ uninhabited islets around Leipsoi are a snorkel/boat-day paradise.",
+  "summary_el": "Οι Λειψοί είναι το μικρό νησί δίπλα στην Πάτμο — νυσταγμένο, γεμάτο παραλίες, σχεδόν χωρίς σκηνικό. Ανοιχτοί Ιούνιο–Σεπτέμβριο, πιο γλυκοί Ιούνιο και Σεπτέμβριο. Η γιορτή του κρασιού στα μέσα Αυγούστου είναι το μόνο γεγονός που φέρνει πραγματικό κόσμο. Οι 30+ ακατοίκητες νησίδες γύρω από τους Λειψούς είναι παράδεισος για μάσκα και βαρκάδες.",
+  "months": [
+   {
+    "tag": "avoid",
+    "why": "Few ferries",
+    "why_el": "Εκτός σεζόν",
+    "limited": true
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Σχεδόν όλα κλειστά",
+    "limited": true
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Εκτός σεζόν",
+    "limited": true
+   },
+   {
+    "tag": "ok",
+    "why": "Easter quiet",
+    "why_el": "Ήσυχο Πάσχα",
+    "limited": true
+   },
+   {
+    "tag": "great",
+    "why": "Awakening, warming",
+    "why_el": "Πρώτες αφίξεις"
+   },
+   {
+    "tag": "perfect",
+    "why": "Warm, calm, sleepy",
+    "why_el": "Ζεστά, νυσταγμένα"
+   },
+   {
+    "tag": "great",
+    "why": "Hot, calm",
+    "why_el": "Ζέστη, ήσυχα"
+   },
+   {
+    "tag": "ok",
+    "why": "Wine festival, busy",
+    "why_el": "Γιορτή κρασιού"
+   },
+   {
+    "tag": "perfect",
+    "why": "Best — peaceful",
+    "why_el": "Καλύτερος — ήσυχα"
+   },
+   {
+    "tag": "avoid",
+    "why": "Last week busy",
+    "why_el": "Τελευταία βδομάδα"
+   },
+   {
+    "tag": "avoid",
+    "why": "Few ferries",
+    "why_el": "Σε χειμερία νάρκη",
+    "limited": true
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Σε χειμερία νάρκη",
+    "limited": true
+   }
+  ]
+ },
+ "itinerary": {
+  "title": "1-Day Leipsoi Itinerary",
+  "subtitle": "Chora in the morning, Platis Gialos and Katsadia for swims, sunset drinks at the harbour.",
+  "days": [
+   {
+    "day": 1,
+    "title": "Chora, Platis Gialos & Katsadia",
+    "color": "#1B4F8A",
+    "stops": [
+     {
+      "name": "Lipsi Town (Chora)",
+      "name_el": "Λιψοί (Χώρα)",
+      "lat": 37.29463,
+      "lng": 26.767901,
+      "type": "village",
+      "wiki": "https://www.google.com/maps/search/Lipsi+Town+(Chora)+Leipsoi",
+      "desc": "The only proper settlement — classic Aegean harbour with whitewashed cubes, blue doors, fishing boats, a slab-paved waterfront. Start at the Ecclesiastical and Folk Museum in the centre: 16th-17th century icons, gold-woven vestments, a 4th-century BC marble ionic pillar head. Panagia tou Harou church just above holds the unusual icon of the Virgin with the crucified Christ.",
+      "desc_el": "Ο μόνος κανονικός οικισμός — κλασικό αιγαιοπελαγίτικο λιμάνι με ασβεστωμένους κύβους, γαλάζιες πόρτες, αλιευτικά σκάφη, μια πλακόστρωτη παραλιακή. Ξεκίνα από το Εκκλησιαστικό και Λαογραφικό Μουσείο στο κέντρο: εικόνες του 16ου-17ου αιώνα, χρυσοκέντητα άμφια, μαρμάρινο ιωνικό κιονόκρανο του 4ου αιώνα π.Χ. Η εκκλησία Παναγία του Χάρου ακριβώς από πάνω φιλοξενεί την ασυνήθιστη εικόνα της Παναγίας με τον σταυρωμένο Χριστό.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784755550/%CF%87%CF%89%CF%81%CE%B1_w33xck.jpg",
+      "photo_credit": null
+     },
+     {
+      "name": "Lipsi Winery",
+      "name_el": "Οινοποιείο Λειψών",
+      "lat": 37.29463,
+      "lng": 26.767901,
+      "type": "village",
+      "desc": "Family-owned winery next to the main village — produces Aposperitis (red) and Ageriko (white). Lipsi has a real wine tradition going back centuries; the August Wine Festival is the biggest event on the island calendar. Tastings by appointment.",
+      "desc_el": "Οικογενειακό οινοποιείο δίπλα στο κύριο χωριό — παράγει Αποσπερίτη (κόκκινο) και Αγέρικο (λευκό). Οι Λειψοί έχουν αληθινή παράδοση οινοποιίας αιώνων· το Φεστιβάλ Κρασιού του Αυγούστου είναι η μεγαλύτερη εκδήλωση του ημερολογίου του νησιού. Γευσιγνωσίες κατόπιν ραντεβού.",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJLVqSUCG4vRQRbACVoUM6K7c",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784755550/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%B9%CE%BF_atfqtc.webp",
+      "photo_credit": null
+     },
+     {
       "name": "Platis Gialos Beach",
       "name_el": "Παραλία Πλατύς Γιαλός",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJK1j2F3u3vRQRiX0Dw5gAiZU",
-      "rating": 5,
-      "type": "Fine sand",
-      "type_el": "Λεπτή άμμος",
-      "length": "200 m",
-      "depth": "Shallow lagoon — wade-deep for most of the bay",
-      "depth_el": "Ρηχή λιμνοθάλασσα — μέχρι το γόνατο για το μεγαλύτερο μέρος του κόλπου",
-      "facing": "Northeast-facing — sheltered from northern winds",
-      "facing_el": "Βορειοανατολική — προστατευμένη από τους βόρειους ανέμους",
-      "facilities": "Light: one family-run taverna behind the tamarisks, some sunbeds. Bus from Chora (3.5km).",
-      "facilities_el": "Ελαφριές: μία οικογενειακή ταβέρνα πίσω από τα αλμυρίκια, κάποιες ξαπλώστρες. Λεωφορείο από τη Χώρα (3,5 χλμ).",
-      "desc": "The signature beach of Leipsoi — turquoise lagoon-shallow water, fine sand, tamarisk shade. Often called the most beautiful beach in the Dodecanese. Family-friendly, always warm, and the resident ducks make it memorable. The one beach you can't miss.",
-      "desc_el": "Η κύρια παραλία των Λειψών — τιρκουάζ λιμνοθάλασσα ρηχά νερά, λεπτή άμμος, σκιά αλμυρικιών. Συχνά αποκαλείται η ομορφότερη παραλία των Δωδεκανήσων. Οικογενειακή, πάντα ζεστή, και οι μόνιμες πάπιες την κάνουν αξιομνημόνευτη. Η μία παραλία που δεν μπορείς να χάσεις.",
       "lat": 37.3164,
       "lng": 26.7444,
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785269200/%CF%80%CE%BB%CE%B1%CF%84%CF%85%CF%82_%CE%B3%CF%85%CE%B1%CE%BB%CE%BF%CF%82_2_o2kret.jpg",
+      "type": "beach",
+      "desc": "3.5km northwest of Chora — considered by many the most beautiful beach in the entire Dodecanese. Turquoise shallow lagoon with tamarisks, family-friendly, a single taverna behind the trees. Ducks live on the beach. Bus runs from Chora in summer.",
+      "desc_el": "3,5 χλμ βορειοδυτικά της Χώρας — θεωρείται από πολλούς η ομορφότερη παραλία όλων των Δωδεκανήσων. Τιρκουάζ ρηχή λιμνοθάλασσα με αλμυρίκια, οικογενειακή, μία μόνο ταβέρνα πίσω από τα δέντρα. Πάπιες ζουν στην παραλία. Λεωφορείο από τη Χώρα το καλοκαίρι.",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJK1j2F3u3vRQRiX0Dw5gAiZU",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785269200/%CF%80%CE%BB%CE%B1%CF%84%CF%85%CF%83_%CE%B3%CE%B9%CE%B1%CE%BB%CE%BF%CF%83_ksekhh.jpg",
       "photo_credit": null
-    },
-    {
+     },
+     {
+      "name": "Moschato Bay",
+      "name_el": "Κόλπος Μοσχάτο",
+      "lat": 37.3175,
+      "lng": 26.7508,
+      "type": "beach",
+      "desc": "Small detour over the headland from Platis Gialos. Less-visited cove with sparkling water and a single tavern/bar. The escape when Platis Gialos feels too popular (which isn't often).",
+      "desc_el": "Μικρή παράκαμψη πάνω από το ακρωτήρι από τον Πλατύ Γιαλό. Λιγότερο επισκέψιμος κολπίσκος με λαμπερά νερά και μία ταβέρνα/μπαρ. Η απόδραση όταν ο Πλατύς Γιαλός φαίνεται πολυσύχναστος (που δεν είναι συχνά).",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785269200/%CE%BC%CE%BF%CF%83%CF%87%CE%B1%CF%84%CE%BF_oqekff.jpg",
+      "photo_credit": null
+     },
+     {
       "name": "Katsadia Beach",
       "name_el": "Παραλία Κατσάδια",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJsSSCOD64vRQR8Ja-tYOEkMI",
-      "rating": 5,
-      "type": "Fine sand",
-      "type_el": "Λεπτή άμμος",
-      "length": "150 m",
-      "depth": "Shallow",
-      "depth_el": "Ρηχό",
-      "facing": "South-facing — wind-sheltered",
-      "facing_el": "Νότια — προστατευμένη από άνεμο",
-      "facilities": "Two tavernas right on the sand (Christo's, Dilaila), big trees for natural shade, yachts anchor in the bay.",
-      "facilities_el": "Δύο ταβέρνες ακριβώς στην άμμο (του Χρίστου, Dilaila), μεγάλα δέντρα για φυσική σκιά, γιοτ αγκυροβολούν στον κόλπο.",
-      "desc": "South-coast sandy cove sheltered by hills and tamarisks — calm shallow water, small adjacent coves (some nudist), two tavernas where the food is the kind of homemade Greek cooking the island is quietly known for. Many consider it even better than Platis Gialos.",
-      "desc_el": "Νότιος αμμώδης κολπίσκος προστατευμένος από λόφους και αλμυρίκια — ήρεμα ρηχά νερά, μικροί διπλανοί κολπίσκοι (κάποιοι γυμνιστικοί), δύο ταβέρνες όπου το φαγητό είναι το είδος σπιτικής ελληνικής κουζίνας για το οποίο το νησί είναι αθόρυβα γνωστό. Πολλοί τη θεωρούν καλύτερη από τον Πλατύ Γιαλό.",
       "lat": 37.2856,
       "lng": 26.7675,
+      "type": "beach",
+      "desc": "3km southeast of Chora — sheltered sandy cove with big trees for shade, shallow water. Two tavernas, Christo's and Dilaila Bar-Café, both right on the sand. Many small adjacent coves, some nudist. Yachts often anchor in the bay.",
+      "desc_el": "3 χλμ νοτιοανατολικά της Χώρας — προστατευμένος αμμώδης κολπίσκος με μεγάλα δέντρα για σκιά, ρηχά νερά. Δύο ταβέρνες, του Χρίστου και το Dilaila Bar-Café, και οι δύο ακριβώς πάνω στην άμμο. Πολλοί μικροί διπλανοί κολπίσκοι, κάποιοι γυμνιστικοί. Τα γιοτ αγκυροβολούν συχνά στον κόλπο.",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJsSSCOD64vRQR8Ja-tYOEkMI",
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784755549/%CE%BA%CE%B1%CF%84%CF%83%CE%B1%CE%B4%CE%B9%CE%B1_mbdjwb.jpg",
       "photo_credit": null
-    },
-    {
-      "name": "Monodendri Beach",
-      "name_el": "Παραλία Μονόδενδρι",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJXd5lof63vRQRVg8ee1xkEoI",
-      "rating": 4,
-      "type": "White pebble",
-      "type_el": "Λευκό βότσαλο",
-      "length": "100 m",
-      "depth": "Medium — clear",
-      "depth_el": "Μέτριο — διαυγές",
-      "facing": "East-facing",
-      "facing_el": "Ανατολική",
-      "facilities": "None. 45-minute walk from Chora or dirt road access. Nudist-friendly.",
-      "facilities_el": "Καμία. 45 λεπτά πεζοπορίας από τη Χώρα ή πρόσβαση με χωματόδρομο. Φιλική προς γυμνιστές.",
-      "desc": "The island's most distinctive beach — white pebbles, aquamarine water, and a single juniper tree growing from a rock that gave the beach its name (seeds carried on wind from Africa, according to legend). Hard to reach, worth the effort, almost always empty.",
-      "desc_el": "Η πιο χαρακτηριστική παραλία του νησιού — λευκά βότσαλα, γαλαζωπά νερά, και ένα μόνο δέντρο αρκεύθου που φυτρώνει από έναν βράχο και έδωσε στην παραλία το όνομά της (σπόροι από άνεμο από την Αφρική, κατά το μύθο). Δύσκολη πρόσβαση, αξίζει την προσπάθεια, σχεδόν πάντα άδεια.",
+     },
+     {
+      "name": "Monodendri (The Lone Tree)",
+      "name_el": "Μονόδενδρι (Το Μοναδικό Δέντρο)",
       "lat": 37.2990122,
       "lng": 26.7921138,
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784755550/%CE%BC%CE%BF%CE%BD%CE%BF%CE%B4%CE%B5%CE%BD%CE%B4%CF%81%CE%B9_2_sfmf9b.jpg",
+      "type": "beach",
+      "desc": "White-pebble beach at the eastern tip of the island, named after a single juniper tree growing out of the rock — grown from seeds carried on the wind from Africa. Reached by 45-minute walk from Chora or dirt road. Nudist-friendly, rarely more than a handful of people.",
+      "desc_el": "Λευκή βότσαλη παραλία στο ανατολικό άκρο του νησιού, ονομασμένη από ένα μόνο δέντρο αρκεύθου που φυτρώνει από τον βράχο — μεγάλωσε από σπόρους που έφερε ο άνεμος από την Αφρική. Προσβάσιμη με 45λεπτη πεζοπορία από τη Χώρα ή με χωματόδρομο. Φιλική προς γυμνιστές, σπάνια πάνω από μια χούφτα άτομα.",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJXd5lof63vRQRVg8ee1xkEoI",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784755550/%CE%BC%CE%BF%CE%BD%CE%BF%CE%B4%CE%B5%CE%BD%CE%B4%CF%81%CE%B9_cywdhh.jpg",
       "photo_credit": null
-    },
-    {
-      "name": "Kambos Beach",
-      "name_el": "Παραλία Κάμπος",
-      "wiki": null,
-      "rating": 4,
-      "type": "Sand",
-      "type_el": "Άμμος",
-      "length": "250 m",
-      "depth": "Shallow — gradual",
-      "depth_el": "Ρηχό — σταδιακό",
-      "facing": "West-facing — sunset views",
-      "facing_el": "Δυτική — θέα στο ηλιοβασίλεμα",
-      "facilities": "Light: some tavernas at the edge, tamarisk shade. 15-minute walk from Chora.",
-      "facilities_el": "Ελαφριές: κάποιες ταβέρνες στην άκρη, σκιά αλμυρικιών. 15 λεπτά πεζοπορίας από τη Χώρα.",
-      "desc": "The longest beach near Chora — easy walk from town. Sandy, calm, with tavernas at the edge. Less famous than Platis Gialos or Katsadia but more convenient, and with genuine sunset views over the open sea.",
-      "desc_el": "Η μακρύτερη παραλία κοντά στη Χώρα — εύκολη απόσταση με τα πόδια από την πόλη. Αμμώδης, ήρεμη, με ταβέρνες στην άκρη. Λιγότερο διάσημη από τον Πλατύ Γιαλό ή την Κατσάδια αλλά πιο βολική, και με αληθινή θέα ηλιοβασιλέματος στην ανοιχτή θάλασσα.",
-      "lat": 37.2988841,
-      "lng": 26.7585754,
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273214/%CE%BA%CE%B1%CE%BC%CF%80%CE%BF%CF%82_u3qk51.jpg",
+     },
+     {
+      "name": "Sunset at the Harbour",
+      "name_el": "Ηλιοβασίλεμα στο Λιμάνι",
+      "lat": 37.2972,
+      "lng": 26.7628,
+      "type": "village",
+      "desc": "Back in Chora for dinner. Seaside tavernas with fishing boats moored two metres away. Local specialities: octopus in red wine, stuffed eggplants, lamb kaldereta. Pair with Aposperitis red from the winery.",
+      "desc_el": "Πίσω στη Χώρα για δείπνο. Παραθαλάσσιες ταβέρνες με αλιευτικά σκάφη δεμένα δύο μέτρα μακριά. Τοπικές σπεσιαλιτέ: χταπόδι κρασάτο, παπουτσάκια, αρνί καλντερέτα. Συνδύασε με Αποσπερίτη κόκκινο από το οινοποιείο.",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJLVqSUCG4vRQRbACVoUM6K7c",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785269325/%CE%B7%CE%BB%CE%B9%CE%BF%CE%B2%CE%B1%CF%83%CE%B9%CE%BB%CE%B5%CE%BC%CE%B1_pon2jb.jpg",
       "photo_credit": null
-    }
+     }
+    ],
+    "title_el": "Χώρα, Πλατύς Γιαλός & Κατσαδιά",
+    "km": 8,
+    "drive_mins": 20,
+    "food": [
+     {
+      "meal": "Dinner",
+      "meal_el": "Δείπνο",
+      "area": "Lipsi Chora",
+      "area_el": "Χώρα Λειψών",
+      "desc": "<a href=\"https://www.google.com/maps/search/Manolis+Tastes+Lipsi\" target=\"_blank\" rel=\"noopener\">Manolis Tastes</a> is the island's most refined table — creative Greek plates overlooking the harbour; the other harbour tavernas keep it classic.",
+      "desc_el": "Το <a href=\"https://www.google.com/maps/search/Manolis+Tastes+Lipsi\" target=\"_blank\" rel=\"noopener\">Manolis Tastes</a> είναι το πιο εκλεπτυσμένο τραπέζι του νησιού — δημιουργικά ελληνικά πιάτα με θέα στο λιμάνι· οι υπόλοιπες ταβέρνες του λιμανιού μένουν κλασικές.",
+      "after": "Sunset at the Harbour"
+     }
+    ]
+   }
   ],
-  "getting_there": {
-    "pills": [
-      "⛵ via Patmos 30min",
-      "€8–12"
-    ],
-    "pills_el": [
-      "⛵ μέσω Πάτμου 30λ",
-      "€8–12"
-    ],
-    "summary": "No airport. Reach Leipsoi via Patmos — daily summer hydrofoil takes ~30 minutes. Direct Piraeus ferries exist on the Dodecanese line but are slow.",
-    "summary_el": "Χωρίς αεροδρόμιο. Προσέγγιση μέσω Πάτμου — καθημερινό καλοκαιρινό υδροπτέρυγο σε ~30 λεπτά. Υπάρχουν απευθείας από Πειραιά στη γραμμή Δωδεκανήσων αλλά αργά.",
-    "tip": "Stay overnight — the day-trippers from Patmos clear out by 5pm.",
-    "tip_el": "Διανυκτέρευσε — οι εκδρομείς από την Πάτμο φεύγουν μέχρι τις 5μμ."
+  "title_el": "Πρόγραμμα 1 Ημέρας στους Λειψούς",
+  "subtitle_el": "Χώρα το πρωί, Πλατύς Γιαλός και Κατσαδιά για μπάνια, ποτά ηλιοβασιλέματος στο λιμάνι."
+ },
+ "beaches": [
+  {
+   "name": "Platis Gialos Beach",
+   "name_el": "Παραλία Πλατύς Γιαλός",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJK1j2F3u3vRQRiX0Dw5gAiZU",
+   "rating": 5,
+   "type": "Fine sand",
+   "type_el": "Λεπτή άμμος",
+   "length": "200 m",
+   "depth": "Shallow lagoon — wade-deep for most of the bay",
+   "depth_el": "Ρηχή λιμνοθάλασσα — μέχρι το γόνατο για το μεγαλύτερο μέρος του κόλπου",
+   "facing": "Northeast-facing — sheltered from northern winds",
+   "facing_el": "Βορειοανατολική — προστατευμένη από τους βόρειους ανέμους",
+   "facilities": "Light: one family-run taverna behind the tamarisks, some sunbeds. Bus from Chora (3.5km).",
+   "facilities_el": "Λιγοστές παροχές: μία οικογενειακή ταβέρνα πίσω από τα αλμυρίκια, κάποιες ξαπλώστρες. Λεωφορείο από τη Χώρα (3,5 χλμ).",
+   "desc": "The signature beach of Leipsoi — turquoise lagoon-shallow water, fine sand, tamarisk shade. Often called the most beautiful beach in the Dodecanese. Family-friendly, always warm, and the resident ducks make it memorable. The one beach you can't miss.",
+   "desc_el": "Η κύρια παραλία των Λειψών — τιρκουάζ λιμνοθάλασσα ρηχά νερά, λεπτή άμμος, σκιά αλμυρικιών. Συχνά αποκαλείται η ομορφότερη παραλία των Δωδεκανήσων. Οικογενειακή, πάντα ζεστή, και οι μόνιμες πάπιες την κάνουν αξιομνημόνευτη. Η μία παραλία που δεν μπορείς να χάσεις.",
+   "lat": 37.3164,
+   "lng": 26.7444,
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785269200/%CF%80%CE%BB%CE%B1%CF%84%CF%85%CF%82_%CE%B3%CF%85%CE%B1%CE%BB%CE%BF%CF%82_2_o2kret.jpg",
+   "photo_credit": null
   },
-  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783276003/leipsoi_hazadg.webp"
+  {
+   "name": "Katsadia Beach",
+   "name_el": "Παραλία Κατσάδια",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJsSSCOD64vRQR8Ja-tYOEkMI",
+   "rating": 5,
+   "type": "Fine sand",
+   "type_el": "Λεπτή άμμος",
+   "length": "150 m",
+   "depth": "Shallow",
+   "depth_el": "Ρηχό",
+   "facing": "South-facing — wind-sheltered",
+   "facing_el": "Νότια — προστατευμένη από άνεμο",
+   "facilities": "Two tavernas right on the sand (Christo's, Dilaila), big trees for natural shade, yachts anchor in the bay.",
+   "facilities_el": "Δύο ταβέρνες ακριβώς στην άμμο (του Χρίστου, Dilaila), μεγάλα δέντρα για φυσική σκιά, γιοτ αγκυροβολούν στον κόλπο.",
+   "desc": "South-coast sandy cove sheltered by hills and tamarisks — calm shallow water, small adjacent coves (some nudist), two tavernas where the food is the kind of homemade Greek cooking the island is quietly known for. Many consider it even better than Platis Gialos.",
+   "desc_el": "Νότιος αμμώδης κολπίσκος προστατευμένος από λόφους και αλμυρίκια — ήρεμα ρηχά νερά, μικροί διπλανοί κολπίσκοι (κάποιοι γυμνιστικοί), δύο ταβέρνες όπου το φαγητό είναι το είδος σπιτικής ελληνικής κουζίνας για το οποίο το νησί είναι αθόρυβα γνωστό. Πολλοί τη θεωρούν καλύτερη από τον Πλατύ Γιαλό.",
+   "lat": 37.2856,
+   "lng": 26.7675,
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784755549/%CE%BA%CE%B1%CF%84%CF%83%CE%B1%CE%B4%CE%B9%CE%B1_mbdjwb.jpg",
+   "photo_credit": null
+  },
+  {
+   "name": "Monodendri Beach",
+   "name_el": "Παραλία Μονόδενδρι",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJXd5lof63vRQRVg8ee1xkEoI",
+   "rating": 4,
+   "type": "White pebble",
+   "type_el": "Λευκό βότσαλο",
+   "length": "100 m",
+   "depth": "Medium — clear",
+   "depth_el": "Μέτριο — διαυγές",
+   "facing": "East-facing",
+   "facing_el": "Ανατολική",
+   "facilities": "None. 45-minute walk from Chora or dirt road access. Nudist-friendly.",
+   "facilities_el": "Καμία παροχή. 45 λεπτά πεζοπορίας από τη Χώρα ή πρόσβαση με χωματόδρομο. Φιλική προς γυμνιστές.",
+   "desc": "The island's most distinctive beach — white pebbles, aquamarine water, and a single juniper tree growing from a rock that gave the beach its name (seeds carried on wind from Africa, according to legend). Hard to reach, worth the effort, almost always empty.",
+   "desc_el": "Η πιο χαρακτηριστική παραλία του νησιού — λευκά βότσαλα, γαλαζωπά νερά, και ένα μόνο δέντρο αρκεύθου που φυτρώνει από έναν βράχο και έδωσε στην παραλία το όνομά της (σπόροι από άνεμο από την Αφρική, κατά το μύθο). Δύσκολη πρόσβαση, αξίζει την προσπάθεια, σχεδόν πάντα άδεια.",
+   "lat": 37.2990122,
+   "lng": 26.7921138,
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1784755550/%CE%BC%CE%BF%CE%BD%CE%BF%CE%B4%CE%B5%CE%BD%CE%B4%CF%81%CE%B9_2_sfmf9b.jpg",
+   "photo_credit": null
+  },
+  {
+   "name": "Kambos Beach",
+   "name_el": "Παραλία Κάμπος",
+   "wiki": null,
+   "rating": 4,
+   "type": "Sand",
+   "type_el": "Άμμος",
+   "length": "250 m",
+   "depth": "Shallow — gradual",
+   "depth_el": "Ρηχό — σταδιακό",
+   "facing": "West-facing — sunset views",
+   "facing_el": "Δυτική — θέα στο ηλιοβασίλεμα",
+   "facilities": "Light: some tavernas at the edge, tamarisk shade. 15-minute walk from Chora.",
+   "facilities_el": "Λιγοστές παροχές: κάποιες ταβέρνες στην άκρη, σκιά αλμυρικιών. 15 λεπτά πεζοπορίας από τη Χώρα.",
+   "desc": "The longest beach near Chora — easy walk from town. Sandy, calm, with tavernas at the edge. Less famous than Platis Gialos or Katsadia but more convenient, and with genuine sunset views over the open sea.",
+   "desc_el": "Η μακρύτερη παραλία κοντά στη Χώρα — εύκολη απόσταση με τα πόδια από την πόλη. Αμμώδης, ήρεμη, με ταβέρνες στην άκρη. Λιγότερο διάσημη από τον Πλατύ Γιαλό ή την Κατσάδια αλλά πιο βολική, και με αληθινή θέα ηλιοβασιλέματος στην ανοιχτή θάλασσα.",
+   "lat": 37.2988841,
+   "lng": 26.7585754,
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273214/%CE%BA%CE%B1%CE%BC%CF%80%CE%BF%CF%82_u3qk51.jpg",
+   "photo_credit": null
+  }
+ ],
+ "getting_there": {
+  "pills": [
+   "⛵ via Patmos 30min",
+   "€8–12"
+  ],
+  "pills_el": [
+   "⛵ μέσω Πάτμου 30λ",
+   "€8–12"
+  ],
+  "summary": "No airport. Reach Leipsoi via Patmos — daily summer hydrofoil takes ~30 minutes. Direct Piraeus ferries exist on the Dodecanese line but are slow.",
+  "summary_el": "Χωρίς αεροδρόμιο. Προσέγγιση μέσω Πάτμου — καθημερινό καλοκαιρινό υδροπτέρυγο σε ~30 λεπτά. Υπάρχουν απευθείας από Πειραιά στη γραμμή Δωδεκανήσων αλλά αργά.",
+  "tip": "Stay overnight — the day-trippers from Patmos clear out by 5pm.",
+  "tip_el": "Διανυκτέρευσε — οι εκδρομείς από την Πάτμο φεύγουν μέχρι τις 5μμ."
+ },
+ "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783276003/leipsoi_hazadg.webp"
 }

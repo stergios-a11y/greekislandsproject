@@ -1,469 +1,469 @@
 {
-  "key": "kos",
-  "name": "Kos",
-  "subtitle": "Hippocrates's island — long sandy beaches, Roman ruins and bicycles everywhere",
-  "intro": "Kos was the birthplace of Hippocrates, the father of medicine, and home to the extraordinary Asklepion medical sanctuary. Today it's the second most popular Dodecanese island after Rhodes — flat enough that locals and tourists get around by bicycle, with the longest continuous stretch of sandy beach in the Aegean. The Italian-era architecture (1912-1943) gives the main town a distinctive Mediterranean colonial feel.",
-  "when_to_visit": {
-    "summary": "Kos is the package-tourism Dodecanese — stunning beaches and the Asklepieion, but the all-inclusives dominate July-August. May-June and September-October are when independent travellers can have it. Cycling is great year-round — flat, beach roads, mild winters. The 2017 earthquake left visible damage in Kos Town that's still being repaired.",
-    "summary_el": "Η Κως είναι το Δωδεκάνησο του οργανωμένου τουρισμού — εκπληκτικές παραλίες και το Ασκληπιείο, αλλά τα all-inclusive κυριαρχούν Ιούλιο–Αύγουστο. Μάιος–Ιούνιος και Σεπτέμβριος–Οκτώβριος είναι όταν μπορεί να την έχει ο ανεξάρτητος ταξιδιώτης. Το ποδήλατο είναι τέλειο όλο τον χρόνο — επίπεδο έδαφος, παραλιακοί δρόμοι, ήπιοι χειμώνες. Ο σεισμός του 2017 άφησε ορατές ζημιές στην πόλη της Κω που ακόμη επισκευάζονται.",
-    "months": [
-      {
-        "tag": "ok",
-        "why": "Quiet, mild",
-        "why_el": "Ήσυχη, ήπιο"
-      },
-      {
-        "tag": "ok",
-        "why": "Mild, cycling great",
-        "why_el": "Ήπιο, ποδήλατο"
-      },
-      {
-        "tag": "great",
-        "why": "Wildflowers",
-        "why_el": "Αγριολούλουδα"
-      },
-      {
-        "tag": "great",
-        "why": "Easter, sea warming",
-        "why_el": "Πάσχα, θάλασσα"
-      },
-      {
-        "tag": "perfect",
-        "why": "Swimmable, cycling",
-        "why_el": "Μπάνιο, ήρεμα"
-      },
-      {
-        "tag": "perfect",
-        "why": "Warm enough for swimming, package crowds not yet at maximum, the bicycle paths and the Asklepion walkable in daylight without melting.",
-        "why_el": "Αρκετά ζεστά για κολύμπι, το πλήθος των πακέτων όχι ακόμα στο μέγιστο, οι ποδηλατόδρομοι και το Ασκληπιείο βατά τη μέρα χωρίς να λιώνεις."
-      },
-      {
-        "tag": "great",
-        "why": "Hot, charter season at peak. Tigaki, Kardamena and Mastichari get crowded; Kos Town busy day and night. The hilltop villages (Zia, Pyli) stay calm.",
-        "why_el": "Ζέστη, η σεζόν τσάρτερ στο μέγιστο. Το Τιγκάκι, η Καρδάμενα και το Μαστιχάρι γεμίζουν· η Πόλη πολυσύχναστη μέρα και νύχτα. Τα ορεινά χωριά (Ζια, Πυλί) μένουν ήρεμα."
-      },
-      {
-        "tag": "great",
-        "why": "Peak package season — coastal resorts at maximum occupancy, beaches crowded, but the island is large enough that the inland and the southwest coast stay breathable. Heat often punishing.",
-        "why_el": "Κορύφωση πακέτων — τα παραθαλάσσια θέρετρα γεμάτα, οι παραλίες γεμάτες, αλλά το νησί είναι αρκετά μεγάλο που το εσωτερικό και η νοτιοδυτική ακτή παραμένουν αναπνεύσιμα. Η ζέστη συχνά αφόρητη."
-      },
-      {
-        "tag": "perfect",
-        "why": "Calmer second half, sea at peak warmth, Old Town and Asklepion at their best in the cooler late-day light. Package charters thinning by week three.",
-        "why_el": "Πιο ήρεμο β' μισό, η θάλασσα στο μέγιστο, η Παλιά Πόλη και το Ασκληπιείο στα καλύτερά τους στο πιο δροσερό φως του απογεύματος. Τα τσάρτερ αραιώνουν στην τρίτη εβδομάδα."
-      },
-      {
-        "tag": "great",
-        "why": "Last swims, cycling",
-        "why_el": "Τελευταία μπάνια"
-      },
-      {
-        "tag": "great",
-        "why": "Mild, quiet",
-        "why_el": "Ήπιο, μνημεία άδεια"
-      },
-      {
-        "tag": "ok",
-        "why": "Quiet, locals",
-        "why_el": "Ήσυχη, μόνο ντόπιοι"
-      }
-    ]
-  },
-  "itinerary": {
-    "title": "4-Day Kos Itinerary",
-    "subtitle": "Kos Town and the Asklepion, the Italian-era harbour, the best beaches of the south coast, and the mountain village of Zia.",
-    "days": [
-      {
-        "day": 1,
-        "title": "Kos Town & the Asklepion",
-        "color": "#1B4F8A",
-        "km": 15,
-        "drive_mins": 25,
-        "overnight": "Kos Town",
-        "stops": [
-          {
-            "name": "Kos Town",
-            "lat": 36.8939,
-            "lng": 27.2881,
-            "type": "city",
-            "time": "09:00",
-            "wiki": "https://www.google.com/maps/search/Kos+Town",
-            "desc": "The main town — a mix of Italian colonial architecture, Ottoman mosques and ancient Greek ruins. Rent a bicycle at the harbour — the town is perfectly flat and best explored on wheels.",
-            "name_el": "Πόλη Κω",
-            "desc_el": "Η κύρια πόλη — μείγμα ιταλικής αποικιακής αρχιτεκτονικής, οθωμανικών τζαμιών και αρχαίων ελληνικών ερειπίων. Νοίκιασε ποδήλατο στο λιμάνι — η πόλη είναι τελείως επίπεδη και εξερευνάται καλύτερα στους τροχούς.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273927/%CE%BA%CF%89%CF%82_%CF%80%CE%BF%CE%BB%CE%B7_nivhvw.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Hippocrates Plane Tree",
-            "lat": 36.8947,
-            "lng": 27.2889,
-            "type": "nature",
-            "time": "10:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJsTfW2N8OvhQRnrK6AU88EXA",
-            "desc": "A 500-year-old plane tree in the harbour square, traditionally said to be where Hippocrates taught medicine 2400 years ago. The actual tree is younger but the site is authentic.",
-            "name_el": "Πλάτανος του Ιπποκράτη",
-            "desc_el": "Ένας 500χρονος πλάτανος στην πλατεία του λιμανιού, που παραδοσιακά λέγεται ότι είναι το μέρος όπου ο Ιπποκράτης δίδασκε ιατρική πριν 2400 χρόνια. Το πραγματικό δέντρο είναι νεότερο αλλά ο χώρος είναι αυθεντικός.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273931/%CF%80%CE%BB%CE%B1%CF%84%CE%B1%CE%BD%CE%BF%CF%82_ylhpvt.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Kos Castle (Neratzia)",
-            "lat": 36.8944,
-            "lng": 27.2922,
-            "type": "castle",
-            "time": "11:00",
-            "wiki": "https://www.google.com/maps/search/Kos+Castle+(Neratzia)",
-            "desc": "15th-century Knights of St John fortress at the harbour entrance. Recently reopened after earthquake damage. Walk the walls for views over the harbour and Turkey opposite.",
-            "name_el": "Κάστρο Κω (Νερατζιά)",
-            "desc_el": "Φρούριο των Ιωαννιτών Ιπποτών του 15ου αιώνα στην είσοδο του λιμανιού. Πρόσφατα ξανάνοιξε μετά από σεισμικές ζημιές. Περπάτησε τα τείχη για θέες στο λιμάνι και την Τουρκία απέναντι.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273926/%CE%BA%CE%B1%CF%83%CF%84%CF%81%CE%BF_oomqco.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Asklepion of Kos",
-            "lat": 36.8958364,
-            "lng": 27.2881629,
-            "type": "museum",
-            "time": "13:30",
-            "wiki": "https://www.google.com/maps/search/Asklepion+of+Kos",
-            "desc": "The most important ancient medical sanctuary in the Greek world — three terraces of temples and healing facilities where Hippocratic medicine was taught. Extraordinary views over the town and Turkey. 4km from the town, accessible by bicycle or mini-train.",
-            "name_el": "Ασκληπιείο Κω",
-            "desc_el": "Το σημαντικότερο αρχαίο ιατρικό ιερό του ελληνικού κόσμου — τρία επίπεδα ναών και θεραπευτικών εγκαταστάσεων όπου διδασκόταν η Ιπποκρατική ιατρική. Εξαιρετικές θέες στην πόλη και την Τουρκία. 4 χλμ από την πόλη, προσβάσιμο με ποδήλατο ή μίνι τρένο.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273921/%CE%B1%CF%83%CE%BA%CE%BB%CE%B7%CF%80%CE%B9%CE%B5%CE%B9%CE%BF_k2vbug.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Lambi Beach",
-            "lat": 36.9139,
-            "lng": 27.2769,
-            "type": "beach",
-            "time": "16:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ03iKosQOvhQRbrfmuYMTArA",
-            "desc": "The closest beach to Kos Town — long sandy stretch 2km north of the town. Calm, shallow water and all facilities.",
-            "name_el": "Παραλία Λάμπη",
-            "desc_el": "Η πιο κοντινή παραλία στην πόλη της Κω — μακριά αμμώδης έκταση 2 χλμ βόρεια της πόλης. Ήρεμα, ρηχά νερά και όλες οι ανέσεις.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273927/%CE%BB%CE%B1%CE%BC%CF%80%CE%B7_2_ewxqov.jpg",
-            "photo_credit": null
-          }
-        ],
-        "title_el": "Πόλη της Κω & Ασκληπιείο",
-        "overnight_el": "Πόλη της Κω",
-        "nightlife": "Kos Town's <a href=\"https://www.google.com/maps/search/Bar+Street+Nafklirou+Kos\" target=\"_blank\" rel=\"noopener\">Bar Street (Nafklirou)</a> is the engine — a pedestrian lane from Plane Tree Square to Liberty Square that turns into a wall of clubs and bars after midnight, packed with a young European crowd from June to September. Hip-hop, EDM and Greek pop; beers 4–6€.",
-        "nightlife_el": "Η <a href=\"https://www.google.com/maps/search/Bar+Street+Nafklirou+Kos\" target=\"_blank\" rel=\"noopener\">Bar Street (Ναυκλήρου)</a> στην πόλη της Κω είναι η μηχανή — ένας πεζόδρομος από την Πλατεία του Πλατάνου ως την Πλατεία Ελευθερίας που μετά τα μεσάνυχτα γίνεται ένας τοίχος από clubs και μπαρ, γεμάτος νεαρό ευρωπαϊκό κοινό από Ιούνιο ως Σεπτέμβριο. Hip-hop, EDM και ελληνικά· μπύρες 4–6€.",
-        "food": [
-          {
-            "meal": "Dinner",
-            "meal_el": "Δείπνο",
-            "area": "Kos Town",
-            "area_el": "Πόλη της Κω",
-            "desc": "<a href=\"https://www.google.com/maps/search/Elia+Restaurant+Kos+Town\" target=\"_blank\" rel=\"noopener\">Elia</a> in a restored 1890 Old Town building does refined Greek meze; <a href=\"https://www.google.com/maps/search/Barbouni+Kos+Town\" target=\"_blank\" rel=\"noopener\">Barbouni</a> is the cool seaside spot for fresh fish. Up in mountain Zia, <a href=\"https://www.google.com/maps/search/Oromedon+Zia+Kos\" target=\"_blank\" rel=\"noopener\">Oromedon</a> is the family taverna worth the drive — local recipes, goat baked with greens, and the island's best sunset. Under €40 a head.",
-            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Elia+Restaurant+Kos+Town\" target=\"_blank\" rel=\"noopener\">Elia</a> σε αναπαλαιωμένο κτίριο του 1890 στην Παλιά Πόλη κάνει εκλεπτυσμένους ελληνικούς μεζέδες· το <a href=\"https://www.google.com/maps/search/Barbouni+Kos+Town\" target=\"_blank\" rel=\"noopener\">Barbouni</a> είναι το κουλ παραθαλάσσιο σημείο για φρέσκο ψάρι. Στην ορεινή Ζιά, ο <a href=\"https://www.google.com/maps/search/Oromedon+Zia+Kos\" target=\"_blank\" rel=\"noopener\">Ωρομέδων</a> είναι η οικογενειακή ταβέρνα που αξίζει τη διαδρομή — τοπικές συνταγές, κατσικάκι με χόρτα στον ξυλόφουρνο και το καλύτερο ηλιοβασίλεμα του νησιού. Κάτω από €40 το άτομο.",
-            "after": "Lambi Beach"
-          }
-        ]
-      },
-      {
-        "day": 2,
-        "title": "South Coast Beaches",
-        "color": "#C0522A",
-        "km": 40,
-        "drive_mins": 50,
-        "overnight": "Kos Town",
-        "stops": [
-          {
-            "name": "Paradise Beach",
-            "lat": 36.7597,
-            "lng": 27.0062,
-            "type": "beach",
-            "time": "09:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJmxYapaEClhQRhu5ykVp8Z3U",
-            "desc": "The most famous beach on Kos — fine sand, crystal clear water with natural volcanic gas bubbles in the seabed. Popular but large enough to absorb the crowds.",
-            "name_el": "Παραλία Παραδείσου",
-            "desc_el": "Η πιο διάσημη παραλία της Κω — λεπτή άμμος, κρυστάλλινα νερά με φυσικές ηφαιστειακές φυσαλίδες αερίου στον βυθό. Δημοφιλής αλλά αρκετά μεγάλη ώστε να απορροφά τα πλήθη.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273930/%CF%80%CE%B1%CF%81%CE%B1%CE%B4%CE%B5%CE%B9%CF%83%CE%BF%CF%82_wzu4qp.jpg",
-            "photo_credit": null,
-            "drive": "≈35 min southwest of Kos Town",
-            "drive_el": "≈35 λεπτά νοτιοδυτικά της Πόλης της Κω"
-          },
-          {
-            "name": "Agios Stefanos & Kastri Islet",
-            "lat": 36.7783,
-            "lng": 27.0817,
-            "type": "church",
-            "time": "12:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJR1mPu0UdlhQR5ZPrNdrI7ws",
-            "desc": "Early Christian basilica ruins on the beach, with the tiny islet of Kastri just offshore — you can swim across to visit the small chapel at the top. One of the most photogenic spots on the island.",
-            "name_el": "Άγιος Στέφανος & Νησάκι Κάστρι",
-            "desc_el": "Ερείπια παλαιοχριστιανικής βασιλικής στην παραλία, με το μικροσκοπικό νησάκι Κάστρι ακριβώς απέναντι — μπορείς να κολυμπήσεις και να επισκεφτείς το μικρό εκκλησάκι στην κορυφή. Ένα από τα πιο φωτογενή σημεία του νησιού.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273926/%CE%BA%CE%B1%CF%83%CF%84%CF%81%CE%B9_b90oyz.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Camel Beach",
-            "lat": 36.7644,
-            "lng": 27.095,
-            "type": "beach",
-            "time": "15:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJLUFhqzAdlhQRlZoIfgp83kQ",
-            "desc": "Sandy cove with distinctive rock formations — much quieter than Paradise Beach, with water of the same quality. Reached by a short path from the road.",
-            "name_el": "Παραλία Καμήλας",
-            "desc_el": "Αμμώδης κόλπος με χαρακτηριστικούς βραχώδεις σχηματισμούς — πολύ πιο ήσυχος από την παραλία Παραδείσου, με νερά της ίδιας ποιότητας. Προσβάσιμη με σύντομο μονοπάτι από τον δρόμο.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273922/%CE%BA%CE%B1%CE%BC%CE%B7%CE%BB%CE%B1_ofzgus.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Drive back to Kos Town",
-            "lat": 36.8958,
-            "lng": 27.2882,
-            "type": "harbour",
-            "time": "20:30",
-            "wiki": null,
-            "desc": "Long drive east from Kefalos (about 50 minutes back to Kos Town). The harbour comes alive at dinner time — fish tavernas at the marina, Italian-influenced trattorias near the castle, and the harbour walk under the lit-up Nerantzia walls.",
-            "name_el": "Επιστροφή στην Κω",
-            "desc_el": "Μεγάλη διαδρομή από την Κέφαλο (περίπου 50 λεπτά πίσω στην Κω). Το λιμάνι ζωντανεύει την ώρα του δείπνου — ψαροταβέρνες στη μαρίνα, ιταλόπληκτες τρατορίες κοντά στο κάστρο και η παραλιακή κάτω από τα φωτισμένα τείχη της Νεραντζιάς."
-          }
-        ],
-        "title_el": "Παραλίες της Νότιας Ακτής",
-        "overnight_el": "Πόλη της Κω",
-        "food": [
-          {
-            "meal": "Lunch",
-            "meal_el": "Μεσημεριανό",
-            "area": "Kefalos",
-            "area_el": "Κέφαλος",
-            "desc": "<a href=\"https://www.google.com/maps/search/Limionas+Fish+Restaurant+Kos\" target=\"_blank\" rel=\"noopener\">Limionas</a> is a panoramic fish taverna on Limionas bay below Kefalos; up in <a href=\"https://www.google.com/maps/search/Kefalos+village+Kos\" target=\"_blank\" rel=\"noopener\">Kefalos village</a> the traditional tavernas do hearty island cooking.",
-            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Limionas+Fish+Restaurant+Kos\" target=\"_blank\" rel=\"noopener\">Limionas</a> είναι πανοραμική ψαροταβέρνα στον όρμο Λιμιώνα κάτω από τον Κέφαλο· πάνω στο <a href=\"https://www.google.com/maps/search/Kefalos+village+Kos\" target=\"_blank\" rel=\"noopener\">χωριό Κέφαλος</a> οι παραδοσιακές ταβέρνες κάνουν χορταστικό νησιώτικο φαγητό.",
-            "after": "Agios Stefanos & Kastri Islet"
-          }
-        ]
-      },
-      {
-        "day": 3,
-        "title": "Zia & the Mountain Interior",
-        "color": "#5A7A3A",
-        "km": 30,
-        "drive_mins": 45,
-        "overnight": "Kos Town",
-        "stops": [
-          {
-            "name": "Zia Village",
-            "lat": 36.8461069,
-            "lng": 27.2049495,
-            "type": "village",
-            "time": "10:00",
-            "wiki": "https://www.google.com/maps/search/Zia+Village+Kos",
-            "desc": "Mountain village at 350m altitude — the best views on the island, with Turkey visible across the strait. The sunset here is one of the best in the Dodecanese. Traditional weavers still work in the village.",
-            "name_el": "Χωριό Ζιά",
-            "desc_el": "Ορεινό χωριό στα 350 μέτρα υψόμετρο — οι καλύτερες θέες του νησιού, με την Τουρκία ορατή απέναντι από το στενό. Το ηλιοβασίλεμα εδώ είναι από τα καλύτερα των Δωδεκανήσων. Παραδοσιακοί υφαντές ακόμα δουλεύουν στο χωριό.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273922/%CE%B6%CE%B9%CE%B1_anixc3.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Dikaios Mountain",
-            "lat": 36.84,
-            "lng": 27.2267,
-            "type": "nature",
-            "time": "11:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJX7eBiqcHvhQR5TauadioIqw",
-            "desc": "The highest peak on Kos (846m). Short hike from Zia for extraordinary views over the whole island, the Dodecanese, and the Turkish coast.",
-            "name_el": "Όρος Δίκαιος",
-            "desc_el": "Η ψηλότερη κορυφή της Κω (846 μ). Σύντομη πεζοπορία από τη Ζιά για εξαιρετικές θέες σε όλο το νησί, τα Δωδεκάνησα και τις τουρκικές ακτές.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273922/%CE%B4%CE%B9%CE%BA%CE%B1%CE%B9%CE%BF%CF%82_yuvnek.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Asfendiou Villages",
-            "lat": 36.8617,
-            "lng": 27.195,
-            "type": "village",
-            "time": "13:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJd1Ja7LcHvhQRilptaU_zoj0",
-            "desc": "Cluster of traditional villages on the slopes below Zia — Evangelistria, Lagoudi, Asomatos. Rarely visited by tourists. Lunch at one of the village tavernas.",
-            "name_el": "Χωριά Ασφενδιού",
-            "desc_el": "Σύμπλεγμα παραδοσιακών χωριών στις πλαγιές κάτω από τη Ζιά — Ευαγγελίστρια, Λαγούδι, Ασώματος. Σπάνια επισκέπτονται από τουρίστες. Μεσημεριανό σε μία από τις ταβέρνες των χωριών.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273922/%CE%B1%CF%83%CF%86%CE%B5%CE%BD%CE%B4%CE%B9%CE%BF%CF%85_oqjd2m.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Tigaki Salt Pan & Beach",
-            "lat": 36.8606,
-            "lng": 27.1406,
-            "type": "beach",
-            "time": "16:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJkU_spFL9vRQR-wYdyW1cKU8",
-            "desc": "Flamingo wetlands beside a long north-coast sandy beach. Birdwatching and swimming combined. Sunset is good here.",
-            "name_el": "Αλυκές & Παραλία Τιγκάκι",
-            "desc_el": "Υγρότοπος με φλαμίνγκο δίπλα σε μακριά αμμώδη παραλία της βόρειας ακτής. Παρατήρηση πουλιών και μπάνιο σε συνδυασμό. Το ηλιοβασίλεμα εδώ είναι καλό.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273921/%CE%B1%CE%BB%CF%85%CE%BA%CE%B5%CF%82_fg2l6k.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Drive back to Kos Town",
-            "lat": 36.8958,
-            "lng": 27.2882,
-            "type": "harbour",
-            "time": "19:30",
-            "wiki": null,
-            "desc": "Drive back from the salt pans (about 30 minutes). Last evening on Kos — the harbour-side Plane Tree of Hippocrates is a classic photo spot, and the cafés on Akti Miaouli stay buzzing late.",
-            "name_el": "Επιστροφή στην Κω",
-            "desc_el": "Επιστροφή από τις αλυκές (περίπου 30 λεπτά). Τελευταίο βράδυ στην Κω — ο Πλάτανος του Ιπποκράτη στο λιμάνι είναι κλασικό φωτογραφικό σημείο, και οι καφετέριες στην Ακτή Μιαούλη μένουν ζωηρές ως αργά."
-          }
-        ],
-        "title_el": "Ζια & το Ορεινό Εσωτερικό",
-        "overnight_el": "Πόλη της Κω"
-      },
-      {
-        "day": 4,
-        "title": "Nisyros Day Trip & Departure",
-        "color": "#C4962A",
-        "km": 10,
-        "drive_mins": 15,
-        "overnight": null,
-        "stops": [
-          {
-            "name": "Kardamena Port",
-            "lat": 36.7811,
-            "lng": 27.1389,
-            "type": "harbour",
-            "time": "08:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJyZOT3kX-vRQRvxBEcQOcFYg",
-            "desc": "Depart by boat to Nisyros — the volcanic island 20km south. Day cruises give you 5 hours on Nisyros to visit the active volcano crater.",
-            "name_el": "Λιμάνι Καρδάμαινας",
-            "desc_el": "Αναχώρηση με σκάφος για τη Νίσυρο — το ηφαιστειογενές νησί 20 χλμ νότια. Οι ημερήσιες κρουαζιέρες σου δίνουν 5 ώρες στη Νίσυρο για να επισκεφτείς τον ενεργό ηφαιστειακό κρατήρα.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273926/%CE%BA%CE%B1%CF%81%CE%B4%CE%B1%CE%BC%CE%B1%CE%B9%CE%BD%CE%B1_rbstdp.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Nisyros Volcano Crater",
-            "lat": 36.585,
-            "lng": 27.155,
-            "type": "nature",
-            "time": "10:30",
-            "wiki": "https://www.google.com/maps/search/Nisyros+Volcano+Crater+Kos",
-            "desc": "Walk down into the active volcanic crater — steam vents, yellow sulphur deposits and the smell of hot rock. One of the most unusual excursions in the Greek islands.",
-            "name_el": "Κρατήρας Ηφαιστείου Νισύρου",
-            "desc_el": "Κατέβα μέσα στον ενεργό ηφαιστειακό κρατήρα — εξαερισμοί ατμού, κίτρινες αποθέσεις θείου και η μυρωδιά του καυτού βράχου. Μία από τις πιο ασυνήθιστες εκδρομές στα ελληνικά νησιά.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273922/%CE%B7%CF%86%CE%B1%CE%B9%CF%83%CF%84%CE%B9%CE%BF_%CE%BD%CE%B9%CF%83%CF%85%CF%81%CE%BF%CF%82_pqixv3.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Kos Airport/Port — Departure",
-            "lat": 36.8939,
-            "lng": 27.2881,
-            "type": "harbour",
-            "time": "18:00",
-            "wiki": null,
-            "desc": "Return to Kos for ferry or flight. Kos has an international airport with flights to most major European cities.",
-            "name_el": "Αεροδρόμιο/Λιμάνι Κω — Αναχώρηση",
-            "desc_el": "Επιστροφή στην Κω για πλοίο ή πτήση. Η Κως έχει διεθνές αεροδρόμιο με πτήσεις προς τις περισσότερες μεγάλες ευρωπαϊκές πόλεις."
-          }
-        ],
-        "title_el": "Ημερήσια Εκδρομή στη Νίσυρο & Αναχώρηση"
-      }
+ "key": "kos",
+ "name": "Kos",
+ "subtitle": "Hippocrates's island — long sandy beaches, Roman ruins and bicycles everywhere",
+ "intro": "Kos was the birthplace of Hippocrates, the father of medicine, and home to the extraordinary Asklepion medical sanctuary. Today it's the second most popular Dodecanese island after Rhodes — flat enough that locals and tourists get around by bicycle, with the longest continuous stretch of sandy beach in the Aegean. The Italian-era architecture (1912-1943) gives the main town a distinctive Mediterranean colonial feel.",
+ "when_to_visit": {
+  "summary": "Kos is the package-tourism Dodecanese — stunning beaches and the Asklepieion, but the all-inclusives dominate July-August. May-June and September-October are when independent travellers can have it. Cycling is great year-round — flat, beach roads, mild winters. The 2017 earthquake left visible damage in Kos Town that's still being repaired.",
+  "summary_el": "Η Κως είναι το Δωδεκάνησο του οργανωμένου τουρισμού — εκπληκτικές παραλίες και το Ασκληπιείο, αλλά τα all-inclusive κυριαρχούν Ιούλιο–Αύγουστο. Μάιος–Ιούνιος και Σεπτέμβριος–Οκτώβριος είναι όταν μπορεί να την έχει ο ανεξάρτητος ταξιδιώτης. Το ποδήλατο είναι τέλειο όλο τον χρόνο — επίπεδο έδαφος, παραλιακοί δρόμοι, ήπιοι χειμώνες. Ο σεισμός του 2017 άφησε ορατές ζημιές στην πόλη της Κω που ακόμη επισκευάζονται.",
+  "months": [
+   {
+    "tag": "ok",
+    "why": "Quiet, mild",
+    "why_el": "Ήσυχη, ήπιο"
+   },
+   {
+    "tag": "ok",
+    "why": "Mild, cycling great",
+    "why_el": "Ήπιο, ποδήλατο"
+   },
+   {
+    "tag": "great",
+    "why": "Wildflowers",
+    "why_el": "Αγριολούλουδα"
+   },
+   {
+    "tag": "great",
+    "why": "Easter, sea warming",
+    "why_el": "Πάσχα, θάλασσα"
+   },
+   {
+    "tag": "perfect",
+    "why": "Swimmable, cycling",
+    "why_el": "Μπάνιο, ήρεμα"
+   },
+   {
+    "tag": "perfect",
+    "why": "Warm enough for swimming, package crowds not yet at maximum, the bicycle paths and the Asklepion walkable in daylight without melting.",
+    "why_el": "Αρκετά ζεστά για κολύμπι, το πλήθος των πακέτων όχι ακόμα στο μέγιστο, οι ποδηλατόδρομοι και το Ασκληπιείο βατά τη μέρα χωρίς να λιώνεις."
+   },
+   {
+    "tag": "great",
+    "why": "Hot, charter season at peak. Tigaki, Kardamena and Mastichari get crowded; Kos Town busy day and night. The hilltop villages (Zia, Pyli) stay calm.",
+    "why_el": "Ζέστη, η σεζόν τσάρτερ στο μέγιστο. Το Τιγκάκι, η Καρδάμενα και το Μαστιχάρι γεμίζουν· η Πόλη πολυσύχναστη μέρα και νύχτα. Τα ορεινά χωριά (Ζια, Πυλί) μένουν ήρεμα."
+   },
+   {
+    "tag": "great",
+    "why": "Peak package season — coastal resorts at maximum occupancy, beaches crowded, but the island is large enough that the inland and the southwest coast stay breathable. Heat often punishing.",
+    "why_el": "Κορύφωση πακέτων — τα παραθαλάσσια θέρετρα γεμάτα, οι παραλίες γεμάτες, αλλά το νησί είναι αρκετά μεγάλο που το εσωτερικό και η νοτιοδυτική ακτή παραμένουν αναπνεύσιμα. Η ζέστη συχνά αφόρητη."
+   },
+   {
+    "tag": "perfect",
+    "why": "Calmer second half, sea at peak warmth, Old Town and Asklepion at their best in the cooler late-day light. Package charters thinning by week three.",
+    "why_el": "Πιο ήρεμο β' μισό, η θάλασσα στο μέγιστο, η Παλιά Πόλη και το Ασκληπιείο στα καλύτερά τους στο πιο δροσερό φως του απογεύματος. Τα τσάρτερ αραιώνουν στην τρίτη εβδομάδα."
+   },
+   {
+    "tag": "great",
+    "why": "Last swims, cycling",
+    "why_el": "Τελευταία μπάνια"
+   },
+   {
+    "tag": "great",
+    "why": "Mild, quiet",
+    "why_el": "Ήπιο, μνημεία άδεια"
+   },
+   {
+    "tag": "ok",
+    "why": "Quiet, locals",
+    "why_el": "Ήσυχη, μόνο ντόπιοι"
+   }
+  ]
+ },
+ "itinerary": {
+  "title": "4-Day Kos Itinerary",
+  "subtitle": "Kos Town and the Asklepion, the Italian-era harbour, the best beaches of the south coast, and the mountain village of Zia.",
+  "days": [
+   {
+    "day": 1,
+    "title": "Kos Town & the Asklepion",
+    "color": "#1B4F8A",
+    "km": 15,
+    "drive_mins": 25,
+    "overnight": "Kos Town",
+    "stops": [
+     {
+      "name": "Kos Town",
+      "lat": 36.8939,
+      "lng": 27.2881,
+      "type": "city",
+      "time": "09:00",
+      "wiki": "https://www.google.com/maps/search/Kos+Town",
+      "desc": "The main town — a mix of Italian colonial architecture, Ottoman mosques and ancient Greek ruins. Rent a bicycle at the harbour — the town is perfectly flat and best explored on wheels.",
+      "name_el": "Πόλη Κω",
+      "desc_el": "Η κύρια πόλη — μείγμα ιταλικής αποικιακής αρχιτεκτονικής, οθωμανικών τζαμιών και αρχαίων ελληνικών ερειπίων. Νοίκιασε ποδήλατο στο λιμάνι — η πόλη είναι τελείως επίπεδη και εξερευνάται καλύτερα στους τροχούς.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273927/%CE%BA%CF%89%CF%82_%CF%80%CE%BF%CE%BB%CE%B7_nivhvw.jpg",
+      "photo_credit": null
+     },
+     {
+      "name": "Hippocrates Plane Tree",
+      "lat": 36.8947,
+      "lng": 27.2889,
+      "type": "nature",
+      "time": "10:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJsTfW2N8OvhQRnrK6AU88EXA",
+      "desc": "A 500-year-old plane tree in the harbour square, traditionally said to be where Hippocrates taught medicine 2400 years ago. The actual tree is younger but the site is authentic.",
+      "name_el": "Πλάτανος του Ιπποκράτη",
+      "desc_el": "Ένας 500χρονος πλάτανος στην πλατεία του λιμανιού, που παραδοσιακά λέγεται ότι είναι το μέρος όπου ο Ιπποκράτης δίδασκε ιατρική πριν 2400 χρόνια. Το πραγματικό δέντρο είναι νεότερο αλλά ο χώρος είναι αυθεντικός.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273931/%CF%80%CE%BB%CE%B1%CF%84%CE%B1%CE%BD%CE%BF%CF%82_ylhpvt.jpg",
+      "photo_credit": null
+     },
+     {
+      "name": "Kos Castle (Neratzia)",
+      "lat": 36.8944,
+      "lng": 27.2922,
+      "type": "castle",
+      "time": "11:00",
+      "wiki": "https://www.google.com/maps/search/Kos+Castle+(Neratzia)",
+      "desc": "15th-century Knights of St John fortress at the harbour entrance. Recently reopened after earthquake damage. Walk the walls for views over the harbour and Turkey opposite.",
+      "name_el": "Κάστρο Κω (Νερατζιά)",
+      "desc_el": "Φρούριο των Ιωαννιτών Ιπποτών του 15ου αιώνα στην είσοδο του λιμανιού. Πρόσφατα ξανάνοιξε μετά από σεισμικές ζημιές. Περπάτησε τα τείχη για θέες στο λιμάνι και την Τουρκία απέναντι.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273926/%CE%BA%CE%B1%CF%83%CF%84%CF%81%CE%BF_oomqco.jpg",
+      "photo_credit": null
+     },
+     {
+      "name": "Asklepion of Kos",
+      "lat": 36.8958364,
+      "lng": 27.2881629,
+      "type": "museum",
+      "time": "13:30",
+      "wiki": "https://www.google.com/maps/search/Asklepion+of+Kos",
+      "desc": "The most important ancient medical sanctuary in the Greek world — three terraces of temples and healing facilities where Hippocratic medicine was taught. Extraordinary views over the town and Turkey. 4km from the town, accessible by bicycle or mini-train.",
+      "name_el": "Ασκληπιείο Κω",
+      "desc_el": "Το σημαντικότερο αρχαίο ιατρικό ιερό του ελληνικού κόσμου — τρία επίπεδα ναών και θεραπευτικών εγκαταστάσεων όπου διδασκόταν η Ιπποκρατική ιατρική. Εξαιρετικές θέες στην πόλη και την Τουρκία. 4 χλμ από την πόλη, προσβάσιμο με ποδήλατο ή μίνι τρένο.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273921/%CE%B1%CF%83%CE%BA%CE%BB%CE%B7%CF%80%CE%B9%CE%B5%CE%B9%CE%BF_k2vbug.jpg",
+      "photo_credit": null
+     },
+     {
+      "name": "Lambi Beach",
+      "lat": 36.9139,
+      "lng": 27.2769,
+      "type": "beach",
+      "time": "16:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ03iKosQOvhQRbrfmuYMTArA",
+      "desc": "The closest beach to Kos Town — long sandy stretch 2km north of the town. Calm, shallow water and all facilities.",
+      "name_el": "Παραλία Λάμπη",
+      "desc_el": "Η πιο κοντινή παραλία στην πόλη της Κω — μακριά αμμώδης έκταση 2 χλμ βόρεια της πόλης. Ήρεμα, ρηχά νερά και όλες οι ανέσεις.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273927/%CE%BB%CE%B1%CE%BC%CF%80%CE%B7_2_ewxqov.jpg",
+      "photo_credit": null
+     }
     ],
-    "title_el": "Πρόγραμμα 4 Ημερών στην Κω",
-    "subtitle_el": "Η Πόλη της Κω και το Ασκληπιείο, το ιταλικής εποχής λιμάνι, οι καλύτερες παραλίες της νότιας ακτής, και το ορεινό χωριό Ζια."
-  },
-  "beaches": [
-    {
+    "title_el": "Πόλη της Κω & Ασκληπιείο",
+    "overnight_el": "Πόλη της Κω",
+    "nightlife": "Kos Town's <a href=\"https://www.google.com/maps/search/Bar+Street+Nafklirou+Kos\" target=\"_blank\" rel=\"noopener\">Bar Street (Nafklirou)</a> is the engine — a pedestrian lane from Plane Tree Square to Liberty Square that turns into a wall of clubs and bars after midnight, packed with a young European crowd from June to September. Hip-hop, EDM and Greek pop; beers 4–6€.",
+    "nightlife_el": "Η <a href=\"https://www.google.com/maps/search/Bar+Street+Nafklirou+Kos\" target=\"_blank\" rel=\"noopener\">Bar Street (Ναυκλήρου)</a> στην πόλη της Κω είναι η μηχανή — ένας πεζόδρομος από την Πλατεία του Πλατάνου ως την Πλατεία Ελευθερίας που μετά τα μεσάνυχτα γίνεται ένας τοίχος από clubs και μπαρ, γεμάτος νεαρό ευρωπαϊκό κοινό από Ιούνιο ως Σεπτέμβριο. Hip-hop, EDM και ελληνικά· μπύρες 4–6€.",
+    "food": [
+     {
+      "meal": "Dinner",
+      "meal_el": "Δείπνο",
+      "area": "Kos Town",
+      "area_el": "Πόλη της Κω",
+      "desc": "<a href=\"https://www.google.com/maps/search/Elia+Restaurant+Kos+Town\" target=\"_blank\" rel=\"noopener\">Elia</a> in a restored 1890 Old Town building does refined Greek meze; <a href=\"https://www.google.com/maps/search/Barbouni+Kos+Town\" target=\"_blank\" rel=\"noopener\">Barbouni</a> is the cool seaside spot for fresh fish. Up in mountain Zia, <a href=\"https://www.google.com/maps/search/Oromedon+Zia+Kos\" target=\"_blank\" rel=\"noopener\">Oromedon</a> is the family taverna worth the drive — local recipes, goat baked with greens, and the island's best sunset. Under €40 a head.",
+      "desc_el": "Το <a href=\"https://www.google.com/maps/search/Elia+Restaurant+Kos+Town\" target=\"_blank\" rel=\"noopener\">Elia</a> σε αναπαλαιωμένο κτίριο του 1890 στην Παλιά Πόλη κάνει εκλεπτυσμένους ελληνικούς μεζέδες· το <a href=\"https://www.google.com/maps/search/Barbouni+Kos+Town\" target=\"_blank\" rel=\"noopener\">Barbouni</a> είναι το κουλ παραθαλάσσιο σημείο για φρέσκο ψάρι. Στην ορεινή Ζιά, ο <a href=\"https://www.google.com/maps/search/Oromedon+Zia+Kos\" target=\"_blank\" rel=\"noopener\">Ωρομέδων</a> είναι η οικογενειακή ταβέρνα που αξίζει τη διαδρομή — τοπικές συνταγές, κατσικάκι με χόρτα στον ξυλόφουρνο και το καλύτερο ηλιοβασίλεμα του νησιού. Κάτω από €40 το άτομο.",
+      "after": "Lambi Beach"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "title": "South Coast Beaches",
+    "color": "#C0522A",
+    "km": 40,
+    "drive_mins": 50,
+    "overnight": "Kos Town",
+    "stops": [
+     {
       "name": "Paradise Beach",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJmxYapaEClhQRhu5ykVp8Z3U",
-      "rating": 5,
-      "type": "Fine sand",
-      "length": "700 m",
-      "depth": "Shallow — gradual entry, natural volcanic gas bubbles in the sand",
-      "facing": "South-facing — sheltered bay, warm water",
-      "facilities": "Fully organised: sunbeds, water sports, beach bars, restaurants. Gas bubbles in the seabed are unique and harmless.",
-      "desc": "The finest beach on Kos — fine golden sand and crystal clear turquoise water, with the unique feature of natural volcanic gas bubbling up through the seabed in parts. Popular but long enough to feel uncrowded. Arrive by 11am for the best sunbeds.",
-      "commons": null,
       "lat": 36.7597,
       "lng": 27.0062,
+      "type": "beach",
+      "time": "09:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJmxYapaEClhQRhu5ykVp8Z3U",
+      "desc": "The most famous beach on Kos — fine sand, crystal clear water with natural volcanic gas bubbles in the seabed. Popular but large enough to absorb the crowds.",
       "name_el": "Παραλία Παραδείσου",
-      "desc_el": "Η καλύτερη παραλία της Κω — λεπτή χρυσή άμμος και κρυστάλλινα τιρκουάζ νερά, με το μοναδικό χαρακτηριστικό φυσικών ηφαιστειακών αερίων που αναβλύζουν μέσα από τον βυθό σε σημεία. Δημοφιλής αλλά αρκετά μακριά ώστε να μην αισθάνεται πολυσύχναστη. Φτάσε μέχρι τις 11:00 για τις καλύτερες ξαπλώστρες.",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Ρηχά — σταδιακή είσοδος, φυσικές ηφαιστειακές φυσαλίδες αερίου στην άμμο",
-      "facing_el": "Νότιο προσανατολισμό — προστατευμένος κόλπος, ζεστά νερά",
-      "facilities_el": "Πλήρως οργανωμένη: ξαπλώστρες, θαλάσσια σπορ, beach bars, εστιατόρια. Οι φυσαλίδες αερίου στον βυθό είναι μοναδικές και ακίνδυνες.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273929/%CF%80%CE%B1%CF%81%CE%B1%CE%B4%CE%B5%CE%B9%CF%83%CE%BF%CF%82_2_wtppne.jpg",
-      "photo_credit": null
-    },
-    {
-      "name": "Agios Stefanos Beach",
+      "desc_el": "Η πιο διάσημη παραλία της Κω — λεπτή άμμος, κρυστάλλινα νερά με φυσικές ηφαιστειακές φυσαλίδες αερίου στον βυθό. Δημοφιλής αλλά αρκετά μεγάλη ώστε να αντέχει τον κόσμο.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273930/%CF%80%CE%B1%CF%81%CE%B1%CE%B4%CE%B5%CE%B9%CF%83%CE%BF%CF%82_wzu4qp.jpg",
+      "photo_credit": null,
+      "drive": "≈35 min southwest of Kos Town",
+      "drive_el": "≈35 λεπτά νοτιοδυτικά της Πόλης της Κω"
+     },
+     {
+      "name": "Agios Stefanos & Kastri Islet",
+      "lat": 36.7783,
+      "lng": 27.0817,
+      "type": "church",
+      "time": "12:00",
       "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJR1mPu0UdlhQR5ZPrNdrI7ws",
-      "rating": 5,
-      "type": "Fine sand",
-      "length": "300 m",
-      "depth": "Shallow to medium",
-      "facing": "South-facing — sheltered cove with Kastri islet offshore",
-      "facilities": "Good: sunbeds, taverna, parking. Swim out to Kastri islet (200m) to visit the chapel.",
-      "desc": "The most picturesque beach on Kos — early Christian basilica ruins directly on the sand, and the tiny islet of Kastri with a chapel just offshore. You can swim across to the islet. The combination of archaeology, swimming and setting is unmatched on the island.",
-      "commons": null,
-      "lat": 36.7525814,
-      "lng": 26.9887865,
-      "name_el": "Παραλία Αγίου Στεφάνου",
-      "desc_el": "Η πιο γραφική παραλία της Κω — ερείπια παλαιοχριστιανικής βασιλικής ακριβώς στην άμμο, και το μικροσκοπικό νησάκι Κάστρι με ένα εκκλησάκι ακριβώς απέναντι. Μπορείς να κολυμπήσεις στο νησάκι. Ο συνδυασμός αρχαιολογίας, κολύμβησης και σκηνικού είναι ασύγκριτος στο νησί.",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Ρηχά έως μέτρια",
-      "facing_el": "Νότιο προσανατολισμό — προστατευμένος κόλπος με το νησάκι Κάστρι απέναντι",
-      "facilities_el": "Καλές: ξαπλώστρες, ταβέρνα, parking. Κολύμπησε στο νησάκι Κάστρι (200 μ) για να επισκεφτείς το εκκλησάκι.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785274889/%CF%80%CE%B1%CF%81%CE%B1%CE%BB%CE%B9%CE%B1_%CE%B1%CE%B3%CE%B9%CE%BF%CF%82_%CF%83%CF%84%CE%B5%CF%86%CE%B1%CE%BD%CE%BF%CF%82_pkdgf0.jpg",
+      "desc": "Early Christian basilica ruins on the beach, with the tiny islet of Kastri just offshore — you can swim across to visit the small chapel at the top. One of the most photogenic spots on the island.",
+      "name_el": "Άγιος Στέφανος & Νησάκι Κάστρι",
+      "desc_el": "Ερείπια παλαιοχριστιανικής βασιλικής στην παραλία, με το μικροσκοπικό νησάκι Κάστρι ακριβώς απέναντι — μπορείς να κολυμπήσεις και να επισκεφτείς το μικρό εκκλησάκι στην κορυφή. Ένα από τα πιο φωτογενή σημεία του νησιού.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273926/%CE%BA%CE%B1%CF%83%CF%84%CF%81%CE%B9_b90oyz.jpg",
       "photo_credit": null
-    },
-    {
-      "name": "Tigaki Beach",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJoX_60hoIvhQRMwNRKLntjj8",
-      "rating": 4,
-      "type": "Fine sand",
-      "length": "10 km",
-      "depth": "Very shallow — gradual, safe for children",
-      "facing": "North-facing — occasional winds",
-      "facilities": "Good: sunbeds, water sports, bicycle path all along. Flamingo wetland behind the beach.",
-      "desc": "The longest beach on Kos — 10km of fine sand along the north coast. A cycle path runs the full length, making it the perfect place to combine cycling with beach-hopping. Flamingos visit the salt pan behind the beach in spring.",
-      "commons": null,
-      "lat": 36.8865497,
-      "lng": 27.1878177,
-      "name_el": "Παραλία Τιγκάκι",
-      "desc_el": "Η μακρύτερη παραλία της Κω — 10 χλμ λεπτής άμμου κατά μήκος της βόρειας ακτής. Ποδηλατοδρόμος τρέχει σε όλο το μήκος, καθιστώντας την τέλεια για συνδυασμό ποδηλασίας και επισκέψεων σε παραλίες. Φλαμίνγκο επισκέπτονται τις αλυκές πίσω από την παραλία την άνοιξη.",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Πολύ ρηχά — σταδιακά, ασφαλές για παιδιά",
-      "facing_el": "Βόρειο προσανατολισμό — περιστασιακοί άνεμοι",
-      "facilities_el": "Καλές: ξαπλώστρες, θαλάσσια σπορ, ποδηλατοδρόμος σε όλο το μήκος. Υγρότοπος με φλαμίνγκο πίσω από την παραλία.",
+     },
+     {
+      "name": "Camel Beach",
+      "lat": 36.7644,
+      "lng": 27.095,
+      "type": "beach",
+      "time": "15:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJLUFhqzAdlhQRlZoIfgp83kQ",
+      "desc": "Sandy cove with distinctive rock formations — much quieter than Paradise Beach, with water of the same quality. Reached by a short path from the road.",
+      "name_el": "Παραλία Καμήλας",
+      "desc_el": "Αμμώδης κόλπος με χαρακτηριστικούς βραχώδεις σχηματισμούς — πολύ πιο ήσυχος από την παραλία Παραδείσου, με νερά της ίδιας ποιότητας. Προσβάσιμη με σύντομο μονοπάτι από τον δρόμο.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273922/%CE%BA%CE%B1%CE%BC%CE%B7%CE%BB%CE%B1_ofzgus.jpg",
+      "photo_credit": null
+     },
+     {
+      "name": "Drive back to Kos Town",
+      "lat": 36.8958,
+      "lng": 27.2882,
+      "type": "harbour",
+      "time": "20:30",
+      "wiki": null,
+      "desc": "Long drive east from Kefalos (about 50 minutes back to Kos Town). The harbour comes alive at dinner time — fish tavernas at the marina, Italian-influenced trattorias near the castle, and the harbour walk under the lit-up Nerantzia walls.",
+      "name_el": "Επιστροφή στην Κω",
+      "desc_el": "Μεγάλη διαδρομή από την Κέφαλο (περίπου 50 λεπτά πίσω στην Κω). Το λιμάνι ζωντανεύει την ώρα του δείπνου — ψαροταβέρνες στη μαρίνα, ιταλόπληκτες τρατορίες κοντά στο κάστρο και η παραλιακή κάτω από τα φωτισμένα τείχη της Νεραντζιάς."
+     }
+    ],
+    "title_el": "Παραλίες της Νότιας Ακτής",
+    "overnight_el": "Πόλη της Κω",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Kefalos",
+      "area_el": "Κέφαλος",
+      "desc": "<a href=\"https://www.google.com/maps/search/Limionas+Fish+Restaurant+Kos\" target=\"_blank\" rel=\"noopener\">Limionas</a> is a panoramic fish taverna on Limionas bay below Kefalos; up in <a href=\"https://www.google.com/maps/search/Kefalos+village+Kos\" target=\"_blank\" rel=\"noopener\">Kefalos village</a> the traditional tavernas do hearty island cooking.",
+      "desc_el": "Το <a href=\"https://www.google.com/maps/search/Limionas+Fish+Restaurant+Kos\" target=\"_blank\" rel=\"noopener\">Limionas</a> είναι πανοραμική ψαροταβέρνα στον όρμο Λιμιώνα κάτω από τον Κέφαλο· πάνω στο <a href=\"https://www.google.com/maps/search/Kefalos+village+Kos\" target=\"_blank\" rel=\"noopener\">χωριό Κέφαλος</a> οι παραδοσιακές ταβέρνες κάνουν χορταστικό νησιώτικο φαγητό.",
+      "after": "Agios Stefanos & Kastri Islet"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "title": "Zia & the Mountain Interior",
+    "color": "#5A7A3A",
+    "km": 30,
+    "drive_mins": 45,
+    "overnight": "Kos Town",
+    "stops": [
+     {
+      "name": "Zia Village",
+      "lat": 36.8461069,
+      "lng": 27.2049495,
+      "type": "village",
+      "time": "10:00",
+      "wiki": "https://www.google.com/maps/search/Zia+Village+Kos",
+      "desc": "Mountain village at 350m altitude — the best views on the island, with Turkey visible across the strait. The sunset here is one of the best in the Dodecanese. Traditional weavers still work in the village.",
+      "name_el": "Χωριό Ζιά",
+      "desc_el": "Ορεινό χωριό στα 350 μέτρα υψόμετρο — οι καλύτερες θέες του νησιού, με την Τουρκία ορατή απέναντι από το στενό. Το ηλιοβασίλεμα εδώ είναι από τα καλύτερα των Δωδεκανήσων. Παραδοσιακοί υφαντές ακόμα δουλεύουν στο χωριό.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273922/%CE%B6%CE%B9%CE%B1_anixc3.jpg",
+      "photo_credit": null
+     },
+     {
+      "name": "Dikaios Mountain",
+      "lat": 36.84,
+      "lng": 27.2267,
+      "type": "nature",
+      "time": "11:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJX7eBiqcHvhQR5TauadioIqw",
+      "desc": "The highest peak on Kos (846m). Short hike from Zia for extraordinary views over the whole island, the Dodecanese, and the Turkish coast.",
+      "name_el": "Όρος Δίκαιος",
+      "desc_el": "Η ψηλότερη κορυφή της Κω (846 μ). Σύντομη πεζοπορία από τη Ζιά για εξαιρετικές θέες σε όλο το νησί, τα Δωδεκάνησα και τις τουρκικές ακτές.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273922/%CE%B4%CE%B9%CE%BA%CE%B1%CE%B9%CE%BF%CF%82_yuvnek.jpg",
+      "photo_credit": null
+     },
+     {
+      "name": "Asfendiou Villages",
+      "lat": 36.8617,
+      "lng": 27.195,
+      "type": "village",
+      "time": "13:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJd1Ja7LcHvhQRilptaU_zoj0",
+      "desc": "Cluster of traditional villages on the slopes below Zia — Evangelistria, Lagoudi, Asomatos. Rarely visited by tourists. Lunch at one of the village tavernas.",
+      "name_el": "Χωριά Ασφενδιού",
+      "desc_el": "Σύμπλεγμα παραδοσιακών χωριών στις πλαγιές κάτω από τη Ζιά — Ευαγγελίστρια, Λαγούδι, Ασώματος. Σπάνια επισκέπτονται από τουρίστες. Μεσημεριανό σε μία από τις ταβέρνες των χωριών.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273922/%CE%B1%CF%83%CF%86%CE%B5%CE%BD%CE%B4%CE%B9%CE%BF%CF%85_oqjd2m.jpg",
+      "photo_credit": null
+     },
+     {
+      "name": "Tigaki Salt Pan & Beach",
+      "lat": 36.8606,
+      "lng": 27.1406,
+      "type": "beach",
+      "time": "16:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJkU_spFL9vRQR-wYdyW1cKU8",
+      "desc": "Flamingo wetlands beside a long north-coast sandy beach. Birdwatching and swimming combined. Sunset is good here.",
+      "name_el": "Αλυκές & Παραλία Τιγκάκι",
+      "desc_el": "Υγρότοπος με φλαμίνγκο δίπλα σε μακριά αμμώδη παραλία της βόρειας ακτής. Παρατήρηση πουλιών και μπάνιο σε συνδυασμό. Το ηλιοβασίλεμα εδώ είναι καλό.",
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273921/%CE%B1%CE%BB%CF%85%CE%BA%CE%B5%CF%82_fg2l6k.jpg",
       "photo_credit": null
-    }
+     },
+     {
+      "name": "Drive back to Kos Town",
+      "lat": 36.8958,
+      "lng": 27.2882,
+      "type": "harbour",
+      "time": "19:30",
+      "wiki": null,
+      "desc": "Drive back from the salt pans (about 30 minutes). Last evening on Kos — the harbour-side Plane Tree of Hippocrates is a classic photo spot, and the cafés on Akti Miaouli stay buzzing late.",
+      "name_el": "Επιστροφή στην Κω",
+      "desc_el": "Επιστροφή από τις αλυκές (περίπου 30 λεπτά). Τελευταίο βράδυ στην Κω — ο Πλάτανος του Ιπποκράτη στο λιμάνι είναι κλασικό φωτογραφικό σημείο, και οι καφετέριες στην Ακτή Μιαούλη μένουν ζωηρές ως αργά."
+     }
+    ],
+    "title_el": "Ζια & το Ορεινό Εσωτερικό",
+    "overnight_el": "Πόλη της Κω"
+   },
+   {
+    "day": 4,
+    "title": "Nisyros Day Trip & Departure",
+    "color": "#C4962A",
+    "km": 10,
+    "drive_mins": 15,
+    "overnight": null,
+    "stops": [
+     {
+      "name": "Kardamena Port",
+      "lat": 36.7811,
+      "lng": 27.1389,
+      "type": "harbour",
+      "time": "08:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJyZOT3kX-vRQRvxBEcQOcFYg",
+      "desc": "Depart by boat to Nisyros — the volcanic island 20km south. Day cruises give you 5 hours on Nisyros to visit the active volcano crater.",
+      "name_el": "Λιμάνι Καρδάμαινας",
+      "desc_el": "Αναχώρηση με σκάφος για τη Νίσυρο — το ηφαιστειογενές νησί 20 χλμ νότια. Οι ημερήσιες κρουαζιέρες σου δίνουν 5 ώρες στη Νίσυρο για να επισκεφτείς τον ενεργό ηφαιστειακό κρατήρα.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273926/%CE%BA%CE%B1%CF%81%CE%B4%CE%B1%CE%BC%CE%B1%CE%B9%CE%BD%CE%B1_rbstdp.jpg",
+      "photo_credit": null
+     },
+     {
+      "name": "Nisyros Volcano Crater",
+      "lat": 36.585,
+      "lng": 27.155,
+      "type": "nature",
+      "time": "10:30",
+      "wiki": "https://www.google.com/maps/search/Nisyros+Volcano+Crater+Kos",
+      "desc": "Walk down into the active volcanic crater — steam vents, yellow sulphur deposits and the smell of hot rock. One of the most unusual excursions in the Greek islands.",
+      "name_el": "Κρατήρας Ηφαιστείου Νισύρου",
+      "desc_el": "Κατέβα μέσα στον ενεργό ηφαιστειακό κρατήρα — εξαερισμοί ατμού, κίτρινες αποθέσεις θείου και η μυρωδιά του καυτού βράχου. Μία από τις πιο ασυνήθιστες εκδρομές στα ελληνικά νησιά.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273922/%CE%B7%CF%86%CE%B1%CE%B9%CF%83%CF%84%CE%B9%CE%BF_%CE%BD%CE%B9%CF%83%CF%85%CF%81%CE%BF%CF%82_pqixv3.jpg",
+      "photo_credit": null
+     },
+     {
+      "name": "Kos Airport/Port — Departure",
+      "lat": 36.8939,
+      "lng": 27.2881,
+      "type": "harbour",
+      "time": "18:00",
+      "wiki": null,
+      "desc": "Return to Kos for ferry or flight. Kos has an international airport with flights to most major European cities.",
+      "name_el": "Αεροδρόμιο/Λιμάνι Κω — Αναχώρηση",
+      "desc_el": "Επιστροφή στην Κω για πλοίο ή πτήση. Η Κως έχει διεθνές αεροδρόμιο με πτήσεις προς τις περισσότερες μεγάλες ευρωπαϊκές πόλεις."
+     }
+    ],
+    "title_el": "Ημερήσια Εκδρομή στη Νίσυρο & Αναχώρηση"
+   }
   ],
-  "name_el": "Κως",
-  "name_accusative_el": "Κω",
-  "name_genitive_el": "Κω",
-  "gender_el": "f",
-  "subtitle_el": "Το νησί του Ιπποκράτη — μακριές αμμουδιές, ρωμαϊκά ερείπια και ποδήλατα παντού",
-  "intro_el": "Η Κως ήταν η γενέτειρα του Ιπποκράτη, του πατέρα της ιατρικής, και σπίτι του εξαιρετικού Ασκληπιείου, του ιατρικού ιερού. Σήμερα είναι το δεύτερο πιο δημοφιλές νησί των Δωδεκανήσων μετά τη Ρόδο — αρκετά επίπεδο ώστε ντόπιοι και τουρίστες να μετακινούνται με ποδήλατο, με τη μεγαλύτερη συνεχή έκταση αμμώδους παραλίας στο Αιγαίο. Η ιταλικής εποχής αρχιτεκτονική (1912-1943) δίνει στην κύρια πόλη μια διακριτή μεσογειακή αποικιακή αίσθηση.",
-  "getting_there": {
-    "pills": [
-      "✈ Airport (intl)",
-      "⛵ Piraeus 11–14h",
-      "€50–160"
-    ],
-    "pills_el": [
-      "✈ Αεροδρόμιο (διεθνές)",
-      "⛵ Πειραιάς 11–14h",
-      "€50–160"
-    ],
-    "summary": "International airport with heavy summer charters — Aegean, Sky Express, Ryanair. Ferries from Piraeus dock at Kos Town port (Blue Star overnight). Mastichari port handles only the Kalymnos shuttle.",
-    "summary_el": "Διεθνές αεροδρόμιο με πολλές καλοκαιρινές charters — Aegean, Sky Express, Ryanair. Τα πλοία από Πειραιά δένουν στο λιμάνι Κω (Blue Star νυχτερινό). Το Μαστιχάρι εξυπηρετεί μόνο τη γραμμή Καλύμνου.",
-    "tip": "Daily summer ferry to Bodrum (Turkey) takes 30 minutes — make it a side trip.",
-    "tip_el": "Καθημερινό καλοκαιρινό πλοίο προς Μπόντρουμ Τουρκίας 30 λεπτά — ιδανικό για εκδρομή."
+  "title_el": "Πρόγραμμα 4 Ημερών στην Κω",
+  "subtitle_el": "Η Πόλη της Κω και το Ασκληπιείο, το ιταλικής εποχής λιμάνι, οι καλύτερες παραλίες της νότιας ακτής, και το ορεινό χωριό Ζια."
+ },
+ "beaches": [
+  {
+   "name": "Paradise Beach",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJmxYapaEClhQRhu5ykVp8Z3U",
+   "rating": 5,
+   "type": "Fine sand",
+   "length": "700 m",
+   "depth": "Shallow — gradual entry, natural volcanic gas bubbles in the sand",
+   "facing": "South-facing — sheltered bay, warm water",
+   "facilities": "Fully organised: sunbeds, water sports, beach bars, restaurants. Gas bubbles in the seabed are unique and harmless.",
+   "desc": "The finest beach on Kos — fine golden sand and crystal clear turquoise water, with the unique feature of natural volcanic gas bubbling up through the seabed in parts. Popular but long enough to feel uncrowded. Arrive by 11am for the best sunbeds.",
+   "commons": null,
+   "lat": 36.7597,
+   "lng": 27.0062,
+   "name_el": "Παραλία Παραδείσου",
+   "desc_el": "Η καλύτερη παραλία της Κω — λεπτή χρυσή άμμος και κρυστάλλινα τιρκουάζ νερά, με το μοναδικό χαρακτηριστικό φυσικών ηφαιστειακών αερίων που αναβλύζουν μέσα από τον βυθό σε σημεία. Δημοφιλής αλλά αρκετά μακριά ώστε να μην αισθάνεται πολυσύχναστη. Φτάσε μέχρι τις 11:00 για τις καλύτερες ξαπλώστρες.",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Ρηχά — σταδιακή είσοδος, φυσικές ηφαιστειακές φυσαλίδες αερίου στην άμμο",
+   "facing_el": "Νότιος προσανατολισμός — προστατευμένος κόλπος, ζεστά νερά",
+   "facilities_el": "Πλήρως οργανωμένη: ξαπλώστρες, θαλάσσια σπορ, beach bars, εστιατόρια. Οι φυσαλίδες αερίου στον βυθό είναι μοναδικές και ακίνδυνες.",
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273929/%CF%80%CE%B1%CF%81%CE%B1%CE%B4%CE%B5%CE%B9%CF%83%CE%BF%CF%82_2_wtppne.jpg",
+   "photo_credit": null
   },
-  "festivals": [
-    {
-      "name": "Hippokrateia (cultural festival)",
-      "name_el": "Ιπποκράτεια",
-      "when": "July through August",
-      "when_el": "Ιούλιο με Αύγουστο",
-      "desc": "Annual cultural festival named after the island's most famous son. Open-air concerts, theatre, the symbolic re-reading of the Hippocratic Oath at the Asklepieion archaeological site. Major draws are the dance performances and ancient drama productions in atmospheric settings.",
-      "desc_el": "Ετήσιο πολιτιστικό φεστιβάλ που τιμά τον πιο διάσημο γιο του νησιού. Υπαίθριες συναυλίες, θέατρο, συμβολική απαγγελία του Όρκου του Ιπποκράτη στο Ασκληπιείο. Κυρίαρχες οι παραστάσεις χορού και αρχαίου δράματος."
-    }
+  {
+   "name": "Agios Stefanos Beach",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJR1mPu0UdlhQR5ZPrNdrI7ws",
+   "rating": 5,
+   "type": "Fine sand",
+   "length": "300 m",
+   "depth": "Shallow to medium",
+   "facing": "South-facing — sheltered cove with Kastri islet offshore",
+   "facilities": "Good: sunbeds, taverna, parking. Swim out to Kastri islet (200m) to visit the chapel.",
+   "desc": "The most picturesque beach on Kos — early Christian basilica ruins directly on the sand, and the tiny islet of Kastri with a chapel just offshore. You can swim across to the islet. The combination of archaeology, swimming and setting is unmatched on the island.",
+   "commons": null,
+   "lat": 36.7525814,
+   "lng": 26.9887865,
+   "name_el": "Παραλία Αγίου Στεφάνου",
+   "desc_el": "Η πιο γραφική παραλία της Κω — ερείπια παλαιοχριστιανικής βασιλικής ακριβώς στην άμμο, και το μικροσκοπικό νησάκι Κάστρι με ένα εκκλησάκι ακριβώς απέναντι. Μπορείς να κολυμπήσεις στο νησάκι. Ο συνδυασμός αρχαιολογίας, κολύμβησης και σκηνικού είναι ασύγκριτος στο νησί.",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Ρηχά έως μέτρια",
+   "facing_el": "Νότιος προσανατολισμός — προστατευμένος κόλπος με το νησάκι Κάστρι απέναντι",
+   "facilities_el": "Καλές παροχές: ξαπλώστρες, ταβέρνα, parking. Κολύμπησε στο νησάκι Κάστρι (200 μ) για να επισκεφτείς το εκκλησάκι.",
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785274889/%CF%80%CE%B1%CF%81%CE%B1%CE%BB%CE%B9%CE%B1_%CE%B1%CE%B3%CE%B9%CE%BF%CF%82_%CF%83%CF%84%CE%B5%CF%86%CE%B1%CE%BD%CE%BF%CF%82_pkdgf0.jpg",
+   "photo_credit": null
+  },
+  {
+   "name": "Tigaki Beach",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJoX_60hoIvhQRMwNRKLntjj8",
+   "rating": 4,
+   "type": "Fine sand",
+   "length": "10 km",
+   "depth": "Very shallow — gradual, safe for children",
+   "facing": "North-facing — occasional winds",
+   "facilities": "Good: sunbeds, water sports, bicycle path all along. Flamingo wetland behind the beach.",
+   "desc": "The longest beach on Kos — 10km of fine sand along the north coast. A cycle path runs the full length, making it the perfect place to combine cycling with beach-hopping. Flamingos visit the salt pan behind the beach in spring.",
+   "commons": null,
+   "lat": 36.8865497,
+   "lng": 27.1878177,
+   "name_el": "Παραλία Τιγκάκι",
+   "desc_el": "Η μακρύτερη παραλία της Κω — 10 χλμ λεπτής άμμου κατά μήκος της βόρειας ακτής. Ποδηλατοδρόμος τρέχει σε όλο το μήκος, καθιστώντας την τέλεια για συνδυασμό ποδηλασίας και επισκέψεων σε παραλίες. Φλαμίνγκο επισκέπτονται τις αλυκές πίσω από την παραλία την άνοιξη.",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Πολύ ρηχά — σταδιακά, ασφαλές για παιδιά",
+   "facing_el": "Βόρειος προσανατολισμός — περιστασιακοί άνεμοι",
+   "facilities_el": "Καλές παροχές: ξαπλώστρες, θαλάσσια σπορ, ποδηλατοδρόμος σε όλο το μήκος. Υγρότοπος με φλαμίνγκο πίσω από την παραλία.",
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785273921/%CE%B1%CE%BB%CF%85%CE%BA%CE%B5%CF%82_fg2l6k.jpg",
+   "photo_credit": null
+  }
+ ],
+ "name_el": "Κως",
+ "name_accusative_el": "Κω",
+ "name_genitive_el": "Κω",
+ "gender_el": "f",
+ "subtitle_el": "Το νησί του Ιπποκράτη — μακριές αμμουδιές, ρωμαϊκά ερείπια και ποδήλατα παντού",
+ "intro_el": "Η Κως ήταν η γενέτειρα του Ιπποκράτη, του πατέρα της ιατρικής, και σπίτι του εξαιρετικού Ασκληπιείου, του ιατρικού ιερού. Σήμερα είναι το δεύτερο πιο δημοφιλές νησί των Δωδεκανήσων μετά τη Ρόδο — αρκετά επίπεδο ώστε ντόπιοι και τουρίστες να μετακινούνται με ποδήλατο, με τη μεγαλύτερη συνεχή έκταση αμμώδους παραλίας στο Αιγαίο. Η ιταλικής εποχής αρχιτεκτονική (1912-1943) δίνει στην κύρια πόλη μια διακριτή μεσογειακή αποικιακή αίσθηση.",
+ "getting_there": {
+  "pills": [
+   "✈ Airport (intl)",
+   "⛵ Piraeus 11–14h",
+   "€50–160"
   ],
-  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783276002/kos_bjicbi.avif"
+  "pills_el": [
+   "✈ Αεροδρόμιο (διεθνές)",
+   "⛵ Πειραιάς 11–14h",
+   "€50–160"
+  ],
+  "summary": "International airport with heavy summer charters — Aegean, Sky Express, Ryanair. Ferries from Piraeus dock at Kos Town port (Blue Star overnight). Mastichari port handles only the Kalymnos shuttle.",
+  "summary_el": "Διεθνές αεροδρόμιο με πολλές καλοκαιρινές charters — Aegean, Sky Express, Ryanair. Τα πλοία από Πειραιά δένουν στο λιμάνι Κω (Blue Star νυχτερινό). Το Μαστιχάρι εξυπηρετεί μόνο τη γραμμή Καλύμνου.",
+  "tip": "Daily summer ferry to Bodrum (Turkey) takes 30 minutes — make it a side trip.",
+  "tip_el": "Καθημερινό καλοκαιρινό πλοίο προς Μπόντρουμ Τουρκίας 30 λεπτά — ιδανικό για εκδρομή."
+ },
+ "festivals": [
+  {
+   "name": "Hippokrateia (cultural festival)",
+   "name_el": "Ιπποκράτεια",
+   "when": "July through August",
+   "when_el": "Ιούλιο με Αύγουστο",
+   "desc": "Annual cultural festival named after the island's most famous son. Open-air concerts, theatre, the symbolic re-reading of the Hippocratic Oath at the Asklepieion archaeological site. Major draws are the dance performances and ancient drama productions in atmospheric settings.",
+   "desc_el": "Ετήσιο πολιτιστικό φεστιβάλ που τιμά τον πιο διάσημο γιο του νησιού. Υπαίθριες συναυλίες, θέατρο, συμβολική απαγγελία του Όρκου του Ιπποκράτη στο Ασκληπιείο. Κυρίαρχες οι παραστάσεις χορού και αρχαίου δράματος."
+  }
+ ],
+ "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783276002/kos_bjicbi.avif"
 }

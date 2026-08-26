@@ -1,637 +1,637 @@
 {
-  "key": "corfu",
-  "name": "Corfu",
-  "subtitle": "Ionian emerald — palaces, olive groves and turquoise coves",
-  "intro": "Corfu is the greenest island in Greece — a landscape of ancient olive groves, Venetian hill towns and Ionian sea that shifts from turquoise to deep cobalt depending on the light. It was the only part of Greece never occupied by the Ottomans, which gives it a uniquely Venetian and British colonial character. The old town is a UNESCO World Heritage Site. The west coast has the finest sandy beaches in the Ionian islands.",
-  "when_to_visit": {
-    "summary": "Corfu has weather closer to Italy than the Aegean — wetter, greener, no Meltemi. April-May is wildflower season; June and September are the sweet spots. Avoid mid-July to mid-August unless you specifically want the British package crowd. Easter on Corfu is one of the most spectacular in Greece — the pot-throwing on Holy Saturday morning is unforgettable.",
-    "summary_el": "Η Κέρκυρα έχει καιρό πιο κοντινό στην Ιταλία παρά στο Αιγαίο — πιο υγρό, πιο πράσινο, χωρίς μελτέμι. Ο Απρίλιος–Μάιος είναι εποχή αγριολούλουδων· ο Ιούνιος και ο Σεπτέμβριος είναι οι ιδανικές στιγμές. Απόφυγε τα μέσα Ιουλίου ως τα μέσα Αυγούστου, εκτός αν θες ειδικά το βρετανικό οργανωμένο κοινό. Το Πάσχα στην Κέρκυρα είναι από τα πιο εντυπωσιακά της Ελλάδας — το σπάσιμο των μπότηδων το πρωί του Μεγάλου Σαββάτου δεν ξεχνιέται.",
-    "months": [
-      {
-        "tag": "ok",
-        "why": "Old Town alive",
-        "why_el": "Παλιά Πόλη, βροχή"
-      },
-      {
-        "tag": "ok",
-        "why": "Carnival, wet",
-        "why_el": "Καρναβάλι, ήπιο, υγρό"
-      },
-      {
-        "tag": "great",
-        "why": "Wildflowers",
-        "why_el": "Αγριολούλουδα, πράσινα"
-      },
-      {
-        "tag": "great",
-        "why": "Easter — pot smash",
-        "why_el": "Πάσχα, μπότηδες"
-      },
-      {
-        "tag": "perfect",
-        "why": "Sea warming",
-        "why_el": "Θάλασσα ζεσταίνει"
-      },
-      {
-        "tag": "perfect",
-        "why": "Long daylight, sea warming up, the green interior at its peak before summer heat fades it. Corfu Town busy in the evenings but not yet packed.",
-        "why_el": "Μεγάλη μέρα, η θάλασσα ζεσταίνεται, το πράσινο εσωτερικό στο peak πριν η ζέστη του καλοκαιριού το ξεθωριάσει. Η Πόλη πολυσύχναστη το βράδυ αλλά όχι ακόμα ασφυκτική."
-      },
-      {
-        "tag": "great",
-        "why": "Hot summer, British and German charter season in full swing. The south coast resorts (Kavos especially) get raucous; the north and the olive-grove interior stay much calmer.",
-        "why_el": "Ζεστό καλοκαίρι, στη μέση η σεζόν τσάρτερ από Βρετανία και Γερμανία. Τα θέρετρα της νότιας ακτής (κυρίως ο Κάβος) γίνονται φασαριόζικα· ο βορράς και ο εσωτερικός ελαιώνας μένουν πολύ πιο ήρεμα."
-      },
-      {
-        "tag": "great",
-        "why": "Peak season — Corfu Town busy all day, popular beaches like Paleokastritsa crowded by mid-morning, prices at maximum. Inland villages remain genuinely quiet — Corfu is big enough to escape.",
-        "why_el": "Κορύφωση — η Πόλη γεμάτη όλη μέρα, οι δημοφιλείς παραλίες όπως η Παλαιοκαστρίτσα γεμίζουν μέχρι μέσα του πρωινού, τιμές στο μέγιστο. Τα μεσογειακά χωριά μένουν πραγματικά ήσυχα — η Κέρκυρα είναι αρκετά μεγάλη για να ξεφύγεις."
-      },
-      {
-        "tag": "perfect",
-        "why": "The Ionian at its best — sea warm, light golden, the August intensity easing. Charters thinning out, prices softening, the green landscape rebounding from the heat.",
-        "why_el": "Το Ιόνιο στα καλύτερά του — ζεστή θάλασσα, χρυσό φως, η ένταση του Αυγούστου ηρεμεί. Τα τσάρτερ αραιώνουν, οι τιμές μαλακώνουν, το πράσινο τοπίο ξαναζωντανεύει από τη ζέστη."
-      },
-      {
-        "tag": "great",
-        "why": "Last swims",
-        "why_el": "Τελευταία μπάνια"
-      },
-      {
-        "tag": "great",
-        "why": "Old Town, mild",
-        "why_el": "Ήπιο, Παλιά Πόλη"
-      },
-      {
-        "tag": "ok",
-        "why": "Old Town, rain",
-        "why_el": "Παλιά Πόλη ζωντανή"
-      }
-    ]
-  },
-  "itinerary": {
-    "title": "5-Day Corfu Itinerary",
-    "subtitle": "From the UNESCO old town and Achilleion Palace to the cliffs of Paleokastritsa, the love channel of Sidari, and the golden sweep of Glyfada.",
-    "days": [
-      {
-        "day": 1,
-        "title": "Corfu Old Town",
-        "color": "#1B4F8A",
-        "km": 10,
-        "drive_mins": 20,
-        "overnight": "Corfu Town",
-        "stops": [
-          {
-            "name": "Old Fortress Corfu",
-            "lat": 39.6235,
-            "lng": 19.9275,
-            "type": "castle",
-            "time": "09:00",
-            "wiki": "https://www.google.com/maps/search/Old+Fortress+Corfu",
-            "desc": "16th-century Venetian fortress on a rocky promontory — the symbol of Corfu. The views from the lighthouse tower over the old town and the Albanian coast are extraordinary.",
-            "name_el": "Παλαιό Φρούριο Κέρκυρας",
-            "desc_el": "Βενετσιάνικο φρούριο του 16ου αιώνα σε βραχώδες ακρωτήρι — το σύμβολο της Κέρκυρας. Η θέα από τον πύργο του φάρου στην παλιά πόλη και την αλβανική ακτή είναι εκπληκτική.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883650/old_fortress_corfu_agfwjc.jpg"
-          },
-          {
-            "name": "Liston Promenade",
-            "lat": 39.6239,
-            "lng": 19.9237,
-            "type": "city",
-            "time": "10:30",
-            "wiki": "https://www.google.com/maps/search/Liston+Promenade+Corfu",
-            "desc": "The elegant arcaded promenade modelled on the Rue de Rivoli in Paris, built during French occupation. The best coffee in Corfu, overlooking the Spianada — the largest square in the Balkans.",
-            "name_el": "Λιστόν",
-            "desc_el": "Η κομψή στοά της προκυμαίας, χτισμένη με πρότυπο τη Rue de Rivoli στο Παρίσι κατά τη γαλλική κατοχή. Ο καλύτερος καφές της Κέρκυρας, με θέα στη Σπιανάδα — τη μεγαλύτερη πλατεία στα Βαλκάνια.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883650/liston_promenade_azmfmb.jpg"
-          },
-          {
-            "name": "Corfu Old Town (UNESCO)",
-            "lat": 39.6232,
-            "lng": 19.9226,
-            "type": "museum",
-            "time": "11:30",
-            "wiki": "https://www.google.com/maps/search/Corfu+Old+Town+(UNESCO)",
-            "desc": "UNESCO-listed old town — narrow Venetian lanes called kantounia, Byzantine churches, and the extraordinary Museum of Asian Art (the finest in the Balkans). Allow 2 hours.",
-            "name_el": "Παλιά Πόλη Κέρκυρας (UNESCO)",
-            "desc_el": "Παλιά πόλη χαρακτηρισμένη από την UNESCO — στενά βενετσιάνικα δρομάκια που λέγονται καντούνια, βυζαντινές εκκλησίες, και το εξαιρετικό Μουσείο Ασιατικής Τέχνης (το καλύτερο στα Βαλκάνια). Υπολόγισε 2 ώρες.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883650/corfu_old_town_k6hhnp.webp"
-          },
-          {
-            "name": "New Fortress",
-            "lat": 39.6246,
-            "lng": 19.9174,
-            "type": "castle",
-            "time": "16:00",
-            "wiki": "https://www.google.com/maps/search/New+Fortress+Corfu",
-            "desc": "16th-century Venetian fortress on the hill above the new port. Labyrinthine underground passages and excellent views. Far fewer visitors than the Old Fortress.",
-            "name_el": "Νέο Φρούριο",
-            "desc_el": "Βενετσιάνικο φρούριο του 16ου αιώνα στον λόφο πάνω από το νέο λιμάνι. Λαβυρινθώδη υπόγεια περάσματα και εξαιρετική θέα. Πολύ λιγότεροι επισκέπτες από το Παλαιό Φρούριο.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883650/new_fortress_b393wj.jpg"
-          },
-          {
-            "name": "Kanoni & Mouse Island",
-            "lat": 39.5844,
-            "lng": 19.914,
-            "type": "church",
-            "time": "17:30",
-            "wiki": "https://www.google.com/maps/search/Kanoni+&+Mouse+Island+Corfu",
-            "desc": "The most photographed spot in Corfu — a tiny church on a rocky islet in the Halikiopoulou Lagoon. The causeway and the planes landing over the lagoon make for a surreal and memorable scene.",
-            "name_el": "Κανόνι & Ποντικονήσι",
-            "desc_el": "Το πιο φωτογραφημένο σημείο της Κέρκυρας — ένα μικροσκοπικό εκκλησάκι σε βραχώδη νησίδα στη λιμνοθάλασσα Χαλικιοπούλου. Ο μώλος και τα αεροπλάνα που προσγειώνονται πάνω από τη λιμνοθάλασσα δημιουργούν ένα σουρεαλιστικό και αξέχαστο σκηνικό.",
-            "photo": "",
-            "photo_credit": null
-          },
-          {
-            "name": "Aperitifs on the Liston",
-            "lat": 39.6235,
-            "lng": 19.9275,
-            "type": "city",
-            "time": "20:30",
-            "wiki": null,
-            "desc": "Short drive back to Corfu Town (about 10 minutes from Kanoni). Aperitifs at one of the Liston cafés are a Corfiote ritual — the arcade was built by the French to mimic Paris's Rue de Rivoli.",
-            "name_el": "Απεριτίφ στο Λιστόν",
-            "desc_el": "Σύντομη διαδρομή πίσω στην Πόλη (περίπου 10 λεπτά από το Κανόνι). Απεριτίφ σε ένα από τα καφέ του Λιστόν είναι κερκυραϊκή τελετουργία — η στοά χτίστηκε από τους Γάλλους για να μιμηθεί την Rue de Rivoli των Παρισίων."
-          }
-        ],
-        "title_el": "Παλιά Πόλη Κέρκυρας",
-        "overnight_el": "Κέρκυρα Πόλη",
-        "nightlife": "Corfu Town does evenings in layers. Aperitivo under the arches of the <a href=\"https://www.google.com/maps/search/Liston+Corfu\" target=\"_blank\" rel=\"noopener\">Liston</a> as the sun drops, cocktails up at the <a href=\"https://www.google.com/maps/search/Cavalieri+Roof+Garden+Corfu\" target=\"_blank\" rel=\"noopener\">Cavalieri Roof Garden</a> over the rooftops, then the medieval Campiello alleys — <a href=\"https://www.google.com/maps/search/Mikro+Cafe+Corfu\" target=\"_blank\" rel=\"noopener\">Mikro Cafe</a> in its courtyard — for something more intimate. Clubs sit further north on the main road if you want them.",
-        "nightlife_el": "Η πόλη της Κέρκυρας ζει το βράδυ σε στρώσεις. Απεριτίφ κάτω από τις καμάρες του <a href=\"https://www.google.com/maps/search/Liston+Corfu\" target=\"_blank\" rel=\"noopener\">Liston</a> καθώς πέφτει ο ήλιος, κοκτέιλ πάνω στο <a href=\"https://www.google.com/maps/search/Cavalieri+Roof+Garden+Corfu\" target=\"_blank\" rel=\"noopener\">Cavalieri Roof Garden</a> με θέα τις στέγες, και μετά τα μεσαιωνικά σοκάκια του Καμπιέλο — το <a href=\"https://www.google.com/maps/search/Mikro+Cafe+Corfu\" target=\"_blank\" rel=\"noopener\">Mikro Cafe</a> στην αυλή του — για κάτι πιο προσωπικό. Τα clubs είναι πιο βόρεια στον κεντρικό δρόμο αν τα θες.",
-        "food": [
-          {
-            "meal": "Lunch",
-            "meal_el": "Μεσημεριανό",
-            "area": "Corfu Town",
-            "area_el": "Πόλη Κέρκυρας",
-            "desc": "Lunch in the Old Town. <a href=\"https://www.google.com/maps/search/To+Dimarchio+Corfu+Town\" target=\"_blank\" rel=\"noopener\">To Dimarchio</a> sits on the Town Hall square for classic Corfiot dishes (pastitsada, sofrito). <a href=\"https://www.google.com/maps/search/Rex+Corfu+Town\" target=\"_blank\" rel=\"noopener\">Rex</a>, just off the Liston and going since 1932, is the grand old institution. The island's benchmark taverna is <a href=\"https://www.google.com/maps/search/Klimataria+Bellos+Benitses+Corfu\" target=\"_blank\" rel=\"noopener\">Klimataria tou Bellou</a> at Benitses — Nikos and Lily Bellou cooking Corfiot classics, the bianco and the bourdeto above all, for under €25 a head, open year-round.",
-            "desc_el": "Μεσημεριανό στην Παλιά Πόλη. Το <a href=\"https://www.google.com/maps/search/To+Dimarchio+Corfu+Town\" target=\"_blank\" rel=\"noopener\">To Dimarchio</a> βρίσκεται στην πλατεία του Δημαρχείου για κλασικά κερκυραϊκά πιάτα (παστιτσάδα, σοφρίτο). Το <a href=\"https://www.google.com/maps/search/Rex+Corfu+Town\" target=\"_blank\" rel=\"noopener\">Rex</a>, δίπλα στο Λιστόν και από το 1932, είναι ο μεγάλος παλιός θεσμός. Η κορυφαία ταβέρνα του νησιού είναι η <a href=\"https://www.google.com/maps/search/Klimataria+Bellos+Benitses+Corfu\" target=\"_blank\" rel=\"noopener\">Κληματαριά του Μπέλλου</a> στις Μπενίτσες — ο Νίκος και η Λίλυ Μπέλλου μαγειρεύουν κερκυραϊκά κλασικά, μπιάνκο και μπουρδέτο πάνω απ' όλα, κάτω από €25 το άτομο, ανοιχτά όλο τον χρόνο.",
-            "after": "Corfu Old Town (UNESCO)"
-          }
-        ]
-      },
-      {
-        "day": 2,
-        "title": "Achilleion & the South",
-        "color": "#C0522A",
-        "km": 55,
-        "drive_mins": 65,
-        "overnight": "Corfu Town",
-        "stops": [
-          {
-            "name": "Achilleion Palace",
-            "lat": 39.5628,
-            "lng": 19.9043,
-            "type": "museum",
-            "time": "09:30",
-            "wiki": "https://www.google.com/maps/search/Achilleion+Palace+Corfu",
-            "desc": "Extraordinary neoclassical palace built by Empress Elisabeth of Austria (Sisi) in 1890, later owned by Kaiser Wilhelm II. The terraced gardens and statues of Achilles are magnificent.",
-            "name_el": "Αχίλλειο",
-            "desc_el": "Εξαιρετικό νεοκλασικό παλάτι χτισμένο από την αυτοκράτειρα Ελισάβετ της Αυστρίας (Σίσι) το 1890, αργότερα ιδιοκτησία του Κάιζερ Γουλιέλμου Β'. Οι κλιμακωτοί κήποι και τα αγάλματα του Αχιλλέα είναι μεγαλειώδη.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Corfu_Achilleion_R05.jpg/1920px-Corfu_Achilleion_R05.jpg",
-            "photo_credit": {
-              "artist": "Marc Ryckaert (MJJR)",
-              "license": "CC BY 3.0",
-              "license_url": "https://creativecommons.org/licenses/by/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Corfu_Achilleion_R05.jpg",
-              "source": "Wikimedia Commons"
-            },
-            "drive": "≈20 min south of Corfu Town",
-            "drive_el": "≈20 λεπτά νότια της Πόλης"
-          },
-          {
-            "name": "Benitses Village",
-            "lat": 39.5422,
-            "lng": 19.9144,
-            "type": "village",
-            "time": "11:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJe3BB9IhfWxMRxK0Am3INW4c",
-            "desc": "Traditional fishing village that was Corfu's first tourist resort in the 1970s. It has returned to its quiet roots. Roman baths and a small aquarium are worth a stop.",
-            "name_el": "Χωριό Μπενίτσες",
-            "desc_el": "Παραδοσιακό ψαροχώρι που ήταν το πρώτο τουριστικό θέρετρο της Κέρκυρας τη δεκαετία του 1970. Έχει επιστρέψει στις ήσυχες ρίζες του. Τα ρωμαϊκά λουτρά και ένα μικρό ενυδρείο αξίζουν μια στάση.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/benitses_kuxmu8.jpg"
-          },
-          {
-            "name": "Kavos Beach",
-            "lat": 39.3832,
-            "lng": 20.1145,
-            "type": "beach",
-            "time": "13:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJxW8WQB-bXBMRd9wM1ju_FsM",
-            "desc": "Long sandy beach at the southern tip of Corfu. Calm, shallow, warm water. The resort behind it is geared toward young people and nightlife — the beach itself is excellent.",
-            "name_el": "Παραλία Κάβος",
-            "desc_el": "Μακριά αμμώδης παραλία στο νότιο άκρο της Κέρκυρας. Ήρεμα, ρηχά, ζεστά νερά. Το θέρετρο πίσω της είναι προσανατολισμένο στους νέους και τη νυχτερινή ζωή — η ίδια η παραλία είναι εξαιρετική.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/kavos_beach_svrjho.jpg"
-          },
-          {
-            "name": "Arkoudilas Beach",
-            "lat": 39.3664,
-            "lng": 20.1004,
-            "type": "beach",
-            "time": "16:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJqx1eQ4abXBMR1EtMyEGimzM",
-            "desc": "Wild, empty sandy beach in a protected nature reserve near the south tip. No facilities, no development — just sand, sea and olive groves. One of the hidden gems of the south.",
-            "name_el": "Παραλία Αρκουδίλας",
-            "desc_el": "Άγρια, άδεια αμμώδης παραλία σε προστατευμένο φυσικό καταφύγιο κοντά στο νότιο άκρο. Χωρίς υπηρεσίες, χωρίς ανάπτυξη — μόνο άμμος, θάλασσα και ελαιώνες. Ένα από τα κρυμμένα διαμάντια του νότου.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/arkoudilas_xeeoaf.jpg"
-          },
-          {
-            "name": "Sunset in Corfu Town",
-            "lat": 39.6235,
-            "lng": 19.9275,
-            "type": "city",
-            "time": "20:30",
-            "wiki": null,
-            "desc": "Long drive back from the southern tip (about 1 hour to Corfu Town). The eastern coast road in evening light is a fitting end to the day.",
-            "name_el": "Ηλιοβασίλεμα στην Πόλη",
-            "desc_el": "Μεγάλη διαδρομή επιστροφής από τη νότια άκρη (περίπου 1 ώρα στην Πόλη). Ο ανατολικός παραλιακός δρόμος στο βραδινό φως είναι ταιριαστό κλείσιμο για τη μέρα."
-          }
-        ],
-        "title_el": "Αχίλλειο & ο Νότος",
-        "overnight_el": "Κέρκυρα Πόλη"
-      },
-      {
-        "day": 3,
-        "title": "Paleokastritsa — The Jewel of Corfu",
-        "color": "#5A7A3A",
-        "km": 50,
-        "drive_mins": 55,
-        "overnight": "Paleokastritsa",
-        "stops": [
-          {
-            "name": "Paleokastritsa Monastery",
-            "lat": 39.6695,
-            "lng": 19.7016,
-            "type": "church",
-            "time": "09:00",
-            "wiki": "https://www.google.com/maps/search/Paleokastritsa+Monastery+Corfu",
-            "desc": "13th-century monastery perched on a headland above the bays. Small museum of icons and ecclesiastical objects. Extraordinary views over the turquoise coves below.",
-            "name_el": "Μοναστήρι Παλαιοκαστρίτσας",
-            "desc_el": "Μοναστήρι του 13ου αιώνα γκρεμισμένο σε ακρωτήρι πάνω από τους κόλπους. Μικρό μουσείο εικόνων και εκκλησιαστικών αντικειμένων. Εκπληκτική θέα στους τιρκουάζ κολπίσκους από κάτω.",
-            "photo": "",
-            "photo_credit": null,
-            "drive": "≈45 min from Corfu Town",
-            "drive_el": "≈45 λεπτά από την Πόλη"
-          },
-          {
-            "name": "Paleokastritsa Beach",
-            "lat": 39.6722,
-            "lng": 19.7034,
-            "type": "beach",
-            "time": "10:00",
-            "wiki": "https://www.google.com/maps/search/Paleokastritsa+Beach+Corfu",
-            "desc": "Six coves of extraordinary clarity, emerald water and dramatic cliff scenery — the most beautiful coastline in Corfu. Rent a small boat to explore the sea caves and hidden coves inaccessible by land.",
-            "name_el": "Παραλία Παλαιοκαστρίτσας",
-            "desc_el": "Έξι κολπίσκοι εξαιρετικής διαύγειας, σμαραγδένια νερά και εντυπωσιακό βραχώδες σκηνικό — η ομορφότερη ακτή της Κέρκυρας. Νοίκιασε μικρή βάρκα για να εξερευνήσεις τις θαλάσσιες σπηλιές και τους κρυφούς κολπίσκους που είναι απρόσιτοι από τη στεριά.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883650/palaiokastritsa_kq8d7m.webp"
-          },
-          {
-            "name": "Angelokastro",
-            "lat": 39.6782,
-            "lng": 19.6866,
-            "type": "castle",
-            "time": "13:30",
-            "wiki": "https://www.google.com/maps/search/Angelokastro+Corfu",
-            "desc": "13th-century Byzantine castle on a sheer sea cliff — the most dramatic castle site in the Ionian islands. Views north along the entire Albanian and Greek coastline.",
-            "name_el": "Αγγελόκαστρο",
-            "desc_el": "Βυζαντινό κάστρο του 13ου αιώνα σε κατακόρυφο θαλάσσιο γκρεμό — το πιο εντυπωσιακό κάστρο των Επτανήσων. Θέα βόρεια σε όλη την αλβανική και ελληνική ακτογραμμή.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883650/angelokastro_wvpa7a.jpg"
-          },
-          {
-            "name": "Agios Georgios Beach (North)",
-            "lat": 39.7169,
-            "lng": 19.6833,
-            "type": "beach",
-            "time": "15:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJRYPAv_JRWxMRf05Hhz2HDRw",
-            "desc": "Long, sandy north Corfu beach with far fewer crowds than Paleokastritsa. Clear water, some waves, and spectacular sunset views. The village has good tavernas.",
-            "name_el": "Παραλία Αγίου Γεωργίου (Βόρεια)",
-            "desc_el": "Μακριά, αμμώδης βόρεια παραλία της Κέρκυρας με πολύ λιγότερα πλήθη από την Παλαιοκαστρίτσα. Καθαρά νερά, κάποια κύματα και εντυπωσιακή θέα στο ηλιοβασίλεμα. Το χωριό έχει καλές ταβέρνες."
-          },
-          {
-            "name": "Porto Timoni",
-            "lat": 39.72,
-            "lng": 19.6604,
-            "type": "beach",
-            "time": "17:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJBaXRm0VTWxMRoOpym-Gm45A",
-            "desc": "A stunning double bay accessible only on foot (45-min hike). Two beaches side by side facing opposite directions — the most photographed spot on the island after Kanoni.",
-            "name_el": "Πόρτο Τιμόνι",
-            "desc_el": "Ένας εκπληκτικός διπλός κόλπος προσβάσιμος μόνο με τα πόδια (45λεπτη πεζοπορία). Δύο παραλίες δίπλα-δίπλα στραμμένες σε αντίθετες κατευθύνσεις — το πιο φωτογραφημένο σημείο του νησιού μετά το Κανόνι.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/porto_timoni_jvgp7k.webp"
-          },
-          {
-            "name": "Dinner in Paleokastritsa",
-            "lat": 39.6695,
-            "lng": 19.7016,
-            "type": "city",
-            "time": "20:00",
-            "wiki": null,
-            "desc": "Drive back to your Paleokastritsa hotel (about 30 minutes from Afionas). The bay's tavernas — La Grotta or Akron — are favourites for sunset dinners with the monastery floodlit above.",
-            "name_el": "Δείπνο στην Παλαιοκαστρίτσα",
-            "desc_el": "Επιστροφή στο ξενοδοχείο σου στην Παλαιοκαστρίτσα (περίπου 30 λεπτά από τον Αφιώνα). Οι ταβέρνες του κόλπου — La Grotta ή Άκρον — είναι αγαπημένες για βραδινό ηλιοβασιλέματος με το μοναστήρι φωτισμένο πάνω."
-          }
-        ],
-        "title_el": "Παλαιοκαστρίτσα — Το Κόσμημα της Κέρκυρας",
-        "overnight_el": "Παλαιοκαστρίτσα"
-      },
-      {
-        "day": 4,
-        "title": "Sidari & Canal d'Amour",
-        "color": "#C4962A",
-        "km": 45,
-        "drive_mins": 55,
-        "overnight": "Sidari",
-        "stops": [
-          {
-            "name": "Roda Beach",
-            "lat": 39.7962,
-            "lng": 19.7792,
-            "type": "beach",
-            "time": "09:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJYyZunNBFWxMRlNyqKMLTf-Y",
-            "desc": "Long sandy north-coast beach — calm, shallow, family-friendly. One of the best beaches on the north coast with good facilities and a lovely village behind it.",
-            "name_el": "Παραλία Ρόδα",
-            "desc_el": "Μακριά αμμώδης παραλία της βόρειας ακτής — ήρεμη, ρηχή, οικογενειακή. Μία από τις καλύτερες παραλίες της βόρειας ακτής με καλές υπηρεσίες και ένα όμορφο χωριό πίσω της.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/roda_beach_oxrrud.avif",
-            "drive": "≈40 min to the north coast",
-            "drive_el": "≈40 λεπτά στη βόρεια ακτή"
-          },
-          {
-            "name": "Canal d'Amour",
-            "lat": 39.7971,
-            "lng": 19.698,
-            "type": "beach",
-            "time": "11:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJTT_DF8NOWxMRJtdLCVO2eMg",
-            "desc": "The most famous spot in Sidari — dramatic sandstone cliffs carved into channels and caves by centuries of sea erosion. Local legend says couples who swim through the channel together will marry. Unique and unmissable.",
-            "name_el": "Κανάλι του Έρωτα",
-            "desc_el": "Το πιο διάσημο σημείο στο Σιδάρι — εντυπωσιακοί αμμολιθικοί βράχοι σκαλισμένοι σε κανάλια και σπηλιές από αιώνες θαλάσσιας διάβρωσης. Η τοπική παράδοση λέει ότι όσα ζευγάρια κολυμπήσουν μαζί μέσα από το κανάλι θα παντρευτούν. Μοναδικό και αδιαπραγμάτευτο.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/canal_d_amour_kctzjr.webp"
-          },
-          {
-            "name": "Sidari Beach",
-            "lat": 39.7932,
-            "lng": 19.7084,
-            "type": "beach",
-            "time": "13:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJQ6cmBN5OWxMRVgRSGp7nZww",
-            "desc": "Long sandy beach adjoining the canal d'Amour. Golden sand, gently shelving into the sea. Good for children. The resort behind it is lively with restaurants and bars.",
-            "name_el": "Παραλία Σιδάρι",
-            "desc_el": "Μακριά αμμώδης παραλία δίπλα στο Κανάλι του Έρωτα. Χρυσή άμμος, ήπια κλίση προς τη θάλασσα. Καλή για παιδιά. Το θέρετρο πίσω της είναι ζωντανό με εστιατόρια και μπαρ.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/sidari_lxbifc.jpg"
-          },
-          {
-            "name": "Acharavi Beach",
-            "lat": 39.793,
-            "lng": 19.8194,
-            "type": "beach",
-            "time": "15:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJRYi9zYRGWxMRmlluJ14sYcQ",
-            "desc": "Long, wide, sandy beach that never gets overcrowded. Shallow and calm — the best family beach on the north coast. A local favourite rather than a tourist hub.",
-            "name_el": "Παραλία Αχαράβης",
-            "desc_el": "Μακριά, πλατιά, αμμώδης παραλία που δεν γεμίζει ποτέ υπερβολικά. Ρηχή και ήρεμη — η καλύτερη οικογενειακή παραλία της βόρειας ακτής. Αγαπημένη των ντόπιων μάλλον παρά τουριστικός κόμβος.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/acharavi_cliikx.jpg"
-          },
-          {
-            "name": "Dinner in Sidari",
-            "lat": 39.7932,
-            "lng": 19.7084,
-            "type": "city",
-            "time": "20:00",
-            "wiki": null,
-            "desc": "Short drive back to your Sidari base (about 15 minutes from Acharavi). The promenade comes alive in the evening with families and tavernas serving fresh fish straight off the boats.",
-            "name_el": "Δείπνο στο Σιδάρι",
-            "desc_el": "Σύντομη διαδρομή στη βάση σου στο Σιδάρι (περίπου 15 λεπτά από την Αχαράβη). Ο παραλιακός γεμίζει το βράδυ με οικογένειες και ταβέρνες που σερβίρουν φρέσκο ψάρι κατευθείαν από τα καΐκια."
-          }
-        ],
-        "title_el": "Σιδάρι & Κανάλι της Αγάπης",
-        "overnight_el": "Σιδάρι",
-        "nightlife": "Sidari is the resort night — open-air bars playing everything from EDM to pop, easy and unpretentious. <a href=\"https://www.google.com/maps/search/Mojitos+Bar+Sidari+Corfu\" target=\"_blank\" rel=\"noopener\">Mojitos Bar</a> does cocktails, live music and karaoke. Cheaper drinks than the capital and a younger, holiday crowd.",
-        "nightlife_el": "Το Σιδάρι είναι η βραδιά resort — υπαίθρια μπαρ που παίζουν από EDM ως pop, χαλαρά και ανεπιτήδευτα. Το <a href=\"https://www.google.com/maps/search/Mojitos+Bar+Sidari+Corfu\" target=\"_blank\" rel=\"noopener\">Mojitos Bar</a> έχει κοκτέιλ, ζωντανή μουσική και καραόκε. Φθηνότερα ποτά από την πόλη και πιο νεανικό, τουριστικό κοινό."
-      },
-      {
-        "day": 5,
-        "title": "Glyfada & the West Coast",
-        "color": "#7B5EA7",
-        "km": 40,
-        "drive_mins": 45,
-        "overnight": null,
-        "stops": [
-          {
-            "name": "Glyfada Beach",
-            "lat": 39.5917,
-            "lng": 19.8085,
-            "type": "beach",
-            "time": "09:30",
-            "wiki": "https://www.google.com/maps/search/Glyfada+Beach+Corfu",
-            "desc": "Widely regarded as the most beautiful sandy beach in Corfu — a broad golden bay framed by green hills, with calm Ionian water. Arrive early for a sunbed. Water sports, beach bars, good facilities.",
-            "name_el": "Παραλία Γλυφάδας",
-            "desc_el": "Θεωρείται ευρέως η ομορφότερη αμμώδης παραλία της Κέρκυρας — ένας πλατύς χρυσός κόλπος πλαισιωμένος από πράσινους λόφους, με ήρεμα νερά του Ιονίου. Φτάσε νωρίς για ξαπλώστρα. Θαλάσσια σπορ, beach bars, καλές υπηρεσίες.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Glyfada_Beach_on_the_island_of_Corfu%2C_Greece_%2847818444242%29.jpg",
-            "photo_credit": {
-              "artist": "dronepicr",
-              "license": "CC BY 2.0",
-              "license_url": "https://creativecommons.org/licenses/by/2.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Glyfada_Beach_on_the_island_of_Corfu,_Greece_(47818444242).jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Mirtiotissa Beach",
-            "lat": 39.5957,
-            "lng": 19.7992,
-            "type": "beach",
-            "time": "12:00",
-            "wiki": "https://www.google.com/maps/search/Mirtiotissa+Beach+Corfu",
-            "desc": "A stunning hidden beach accessible only via a steep 30-minute walk through olive groves. Almost deserted despite its beauty. Lawrence Durrell called it the most beautiful beach in the world.",
-            "name_el": "Παραλία Μυρτιώτισσας",
-            "desc_el": "Μια εκπληκτική κρυφή παραλία προσβάσιμη μόνο μέσω απότομης πεζοπορίας 30 λεπτών μέσα από ελαιώνες. Σχεδόν έρημη παρά την ομορφιά της. Ο Λώρενς Ντάρελ την αποκάλεσε την ομορφότερη παραλία του κόσμου.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/myrtiotissa_t3iqjd.jpg"
-          },
-          {
-            "name": "Agios Gordios Beach",
-            "lat": 39.5472,
-            "lng": 19.8494,
-            "type": "beach",
-            "time": "14:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJG_c3NVSnXBMRJTQBW9oR2W8",
-            "desc": "A wide, dramatic sandy beach backed by green cliffs and a rocky pinnacle. One of the most scenic beaches on the island, with a long stretch of sand and good facilities.",
-            "name_el": "Παραλία Αγίου Γορδίου",
-            "desc_el": "Μια πλατιά, εντυπωσιακή αμμώδης παραλία πλαισιωμένη από πράσινους γκρεμούς και βραχώδη κορυφή. Μία από τις πιο γραφικές παραλίες του νησιού, με μακριά έκταση άμμου και καλές υπηρεσίες.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883648/agios_gordios_ehopdo.jpg"
-          }
-        ],
-        "title_el": "Γλυφάδα & η Δυτική Ακτή",
-        "food": [
-          {
-            "meal": "Dinner",
-            "meal_el": "Δείπνο",
-            "area": "Corfu Town",
-            "area_el": "Πόλη Κέρκυρας",
-            "desc": "A farewell dinner in the Old Town. <a href=\"https://www.google.com/maps/search/Venetian+Well+Corfu+Town\" target=\"_blank\" rel=\"noopener\">The Venetian Well</a> on a hidden square is the island's finest — Corfiot-Mediterranean cooking and a serious wine list (book ahead). <a href=\"https://www.google.com/maps/search/Rex+Corfu+Town\" target=\"_blank\" rel=\"noopener\">Rex</a> is the classic alternative near the Liston.",
-            "desc_el": "Αποχαιρετιστήριο δείπνο στην Παλιά Πόλη. Το <a href=\"https://www.google.com/maps/search/Venetian+Well+Corfu+Town\" target=\"_blank\" rel=\"noopener\">The Venetian Well</a> σε μια κρυμμένη πλατεία είναι το καλύτερο του νησιού — κερκυραϊκή-μεσογειακή κουζίνα και σοβαρή λίστα κρασιών (κράτηση εκ των προτέρων). Το <a href=\"https://www.google.com/maps/search/Rex+Corfu+Town\" target=\"_blank\" rel=\"noopener\">Rex</a> είναι η κλασική εναλλακτική κοντά στο Λιστόν.",
-            "after": "Agios Gordios Beach"
-          }
-        ]
-      }
+ "key": "corfu",
+ "name": "Corfu",
+ "subtitle": "Ionian emerald — palaces, olive groves and turquoise coves",
+ "intro": "Corfu is the greenest island in Greece — a landscape of ancient olive groves, Venetian hill towns and Ionian sea that shifts from turquoise to deep cobalt depending on the light. It was the only part of Greece never occupied by the Ottomans, which gives it a uniquely Venetian and British colonial character. The old town is a UNESCO World Heritage Site. The west coast has the finest sandy beaches in the Ionian islands.",
+ "when_to_visit": {
+  "summary": "Corfu has weather closer to Italy than the Aegean — wetter, greener, no Meltemi. April-May is wildflower season; June and September are the sweet spots. Avoid mid-July to mid-August unless you specifically want the British package crowd. Easter on Corfu is one of the most spectacular in Greece — the pot-throwing on Holy Saturday morning is unforgettable.",
+  "summary_el": "Η Κέρκυρα έχει καιρό πιο κοντινό στην Ιταλία παρά στο Αιγαίο — πιο υγρό, πιο πράσινο, χωρίς μελτέμι. Ο Απρίλιος–Μάιος είναι εποχή αγριολούλουδων· ο Ιούνιος και ο Σεπτέμβριος είναι οι ιδανικές στιγμές. Απόφυγε τα μέσα Ιουλίου ως τα μέσα Αυγούστου, εκτός αν θες ειδικά το βρετανικό οργανωμένο κοινό. Το Πάσχα στην Κέρκυρα είναι από τα πιο εντυπωσιακά της Ελλάδας — το σπάσιμο των μπότηδων το πρωί του Μεγάλου Σαββάτου δεν ξεχνιέται.",
+  "months": [
+   {
+    "tag": "ok",
+    "why": "Old Town alive",
+    "why_el": "Παλιά Πόλη, βροχή"
+   },
+   {
+    "tag": "ok",
+    "why": "Carnival, wet",
+    "why_el": "Καρναβάλι, ήπιο, υγρό"
+   },
+   {
+    "tag": "great",
+    "why": "Wildflowers",
+    "why_el": "Αγριολούλουδα, πράσινα"
+   },
+   {
+    "tag": "great",
+    "why": "Easter — pot smash",
+    "why_el": "Πάσχα, μπότηδες"
+   },
+   {
+    "tag": "perfect",
+    "why": "Sea warming",
+    "why_el": "Θάλασσα ζεσταίνει"
+   },
+   {
+    "tag": "perfect",
+    "why": "Long daylight, sea warming up, the green interior at its peak before summer heat fades it. Corfu Town busy in the evenings but not yet packed.",
+    "why_el": "Μεγάλη μέρα, η θάλασσα ζεσταίνεται, το πράσινο εσωτερικό στο peak πριν η ζέστη του καλοκαιριού το ξεθωριάσει. Η Πόλη πολυσύχναστη το βράδυ αλλά όχι ακόμα ασφυκτική."
+   },
+   {
+    "tag": "great",
+    "why": "Hot summer, British and German charter season in full swing. The south coast resorts (Kavos especially) get raucous; the north and the olive-grove interior stay much calmer.",
+    "why_el": "Ζεστό καλοκαίρι, στη μέση η σεζόν τσάρτερ από Βρετανία και Γερμανία. Τα θέρετρα της νότιας ακτής (κυρίως ο Κάβος) γίνονται φασαριόζικα· ο βορράς και ο εσωτερικός ελαιώνας μένουν πολύ πιο ήρεμα."
+   },
+   {
+    "tag": "great",
+    "why": "Peak season — Corfu Town busy all day, popular beaches like Paleokastritsa crowded by mid-morning, prices at maximum. Inland villages remain genuinely quiet — Corfu is big enough to escape.",
+    "why_el": "Κορύφωση — η Πόλη γεμάτη όλη μέρα, οι δημοφιλείς παραλίες όπως η Παλαιοκαστρίτσα γεμίζουν μέχρι μέσα του πρωινού, τιμές στο μέγιστο. Τα μεσογειακά χωριά μένουν πραγματικά ήσυχα — η Κέρκυρα είναι αρκετά μεγάλη για να ξεφύγεις."
+   },
+   {
+    "tag": "perfect",
+    "why": "The Ionian at its best — sea warm, light golden, the August intensity easing. Charters thinning out, prices softening, the green landscape rebounding from the heat.",
+    "why_el": "Το Ιόνιο στα καλύτερά του — ζεστή θάλασσα, χρυσό φως, η ένταση του Αυγούστου ηρεμεί. Τα τσάρτερ αραιώνουν, οι τιμές μαλακώνουν, το πράσινο τοπίο ξαναζωντανεύει από τη ζέστη."
+   },
+   {
+    "tag": "great",
+    "why": "Last swims",
+    "why_el": "Τελευταία μπάνια"
+   },
+   {
+    "tag": "great",
+    "why": "Old Town, mild",
+    "why_el": "Ήπιο, Παλιά Πόλη"
+   },
+   {
+    "tag": "ok",
+    "why": "Old Town, rain",
+    "why_el": "Παλιά Πόλη ζωντανή"
+   }
+  ]
+ },
+ "itinerary": {
+  "title": "5-Day Corfu Itinerary",
+  "subtitle": "From the UNESCO old town and Achilleion Palace to the cliffs of Paleokastritsa, the love channel of Sidari, and the golden sweep of Glyfada.",
+  "days": [
+   {
+    "day": 1,
+    "title": "Corfu Old Town",
+    "color": "#1B4F8A",
+    "km": 10,
+    "drive_mins": 20,
+    "overnight": "Corfu Town",
+    "stops": [
+     {
+      "name": "Old Fortress Corfu",
+      "lat": 39.6235,
+      "lng": 19.9275,
+      "type": "castle",
+      "time": "09:00",
+      "wiki": "https://www.google.com/maps/search/Old+Fortress+Corfu",
+      "desc": "16th-century Venetian fortress on a rocky promontory — the symbol of Corfu. The views from the lighthouse tower over the old town and the Albanian coast are extraordinary.",
+      "name_el": "Παλαιό Φρούριο Κέρκυρας",
+      "desc_el": "Βενετσιάνικο φρούριο του 16ου αιώνα σε βραχώδες ακρωτήρι — το σύμβολο της Κέρκυρας. Η θέα από τον πύργο του φάρου στην παλιά πόλη και την αλβανική ακτή είναι εκπληκτική.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883650/old_fortress_corfu_agfwjc.jpg"
+     },
+     {
+      "name": "Liston Promenade",
+      "lat": 39.6239,
+      "lng": 19.9237,
+      "type": "city",
+      "time": "10:30",
+      "wiki": "https://www.google.com/maps/search/Liston+Promenade+Corfu",
+      "desc": "The elegant arcaded promenade modelled on the Rue de Rivoli in Paris, built during French occupation. The best coffee in Corfu, overlooking the Spianada — the largest square in the Balkans.",
+      "name_el": "Λιστόν",
+      "desc_el": "Η κομψή στοά της προκυμαίας, χτισμένη με πρότυπο τη Rue de Rivoli στο Παρίσι κατά τη γαλλική κατοχή. Ο καλύτερος καφές της Κέρκυρας, με θέα στη Σπιανάδα — τη μεγαλύτερη πλατεία στα Βαλκάνια.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883650/liston_promenade_azmfmb.jpg"
+     },
+     {
+      "name": "Corfu Old Town (UNESCO)",
+      "lat": 39.6232,
+      "lng": 19.9226,
+      "type": "museum",
+      "time": "11:30",
+      "wiki": "https://www.google.com/maps/search/Corfu+Old+Town+(UNESCO)",
+      "desc": "UNESCO-listed old town — narrow Venetian lanes called kantounia, Byzantine churches, and the extraordinary Museum of Asian Art (the finest in the Balkans). Allow 2 hours.",
+      "name_el": "Παλιά Πόλη Κέρκυρας (UNESCO)",
+      "desc_el": "Παλιά πόλη χαρακτηρισμένη από την UNESCO — στενά βενετσιάνικα δρομάκια που λέγονται καντούνια, βυζαντινές εκκλησίες, και το εξαιρετικό Μουσείο Ασιατικής Τέχνης (το καλύτερο στα Βαλκάνια). Υπολόγισε 2 ώρες.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883650/corfu_old_town_k6hhnp.webp"
+     },
+     {
+      "name": "New Fortress",
+      "lat": 39.6246,
+      "lng": 19.9174,
+      "type": "castle",
+      "time": "16:00",
+      "wiki": "https://www.google.com/maps/search/New+Fortress+Corfu",
+      "desc": "16th-century Venetian fortress on the hill above the new port. Labyrinthine underground passages and excellent views. Far fewer visitors than the Old Fortress.",
+      "name_el": "Νέο Φρούριο",
+      "desc_el": "Βενετσιάνικο φρούριο του 16ου αιώνα στον λόφο πάνω από το νέο λιμάνι. Λαβυρινθώδη υπόγεια περάσματα και εξαιρετική θέα. Πολύ λιγότεροι επισκέπτες από το Παλαιό Φρούριο.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883650/new_fortress_b393wj.jpg"
+     },
+     {
+      "name": "Kanoni & Mouse Island",
+      "lat": 39.5844,
+      "lng": 19.914,
+      "type": "church",
+      "time": "17:30",
+      "wiki": "https://www.google.com/maps/search/Kanoni+&+Mouse+Island+Corfu",
+      "desc": "The most photographed spot in Corfu — a tiny church on a rocky islet in the Halikiopoulou Lagoon. The causeway and the planes landing over the lagoon make for a surreal and memorable scene.",
+      "name_el": "Κανόνι & Ποντικονήσι",
+      "desc_el": "Το πιο φωτογραφημένο σημείο της Κέρκυρας — ένα μικροσκοπικό εκκλησάκι σε βραχώδη νησίδα στη λιμνοθάλασσα Χαλικιοπούλου. Ο μώλος και τα αεροπλάνα που προσγειώνονται πάνω από τη λιμνοθάλασσα δημιουργούν ένα σουρεαλιστικό και αξέχαστο σκηνικό.",
+      "photo": "",
+      "photo_credit": null
+     },
+     {
+      "name": "Aperitifs on the Liston",
+      "lat": 39.6235,
+      "lng": 19.9275,
+      "type": "city",
+      "time": "20:30",
+      "wiki": null,
+      "desc": "Short drive back to Corfu Town (about 10 minutes from Kanoni). Aperitifs at one of the Liston cafés are a Corfiote ritual — the arcade was built by the French to mimic Paris's Rue de Rivoli.",
+      "name_el": "Απεριτίφ στο Λιστόν",
+      "desc_el": "Σύντομη διαδρομή πίσω στην Πόλη (περίπου 10 λεπτά από το Κανόνι). Απεριτίφ σε ένα από τα καφέ του Λιστόν είναι κερκυραϊκή τελετουργία — η στοά χτίστηκε από τους Γάλλους για να μιμηθεί την Rue de Rivoli των Παρισίων."
+     }
     ],
-    "title_el": "Πρόγραμμα 5 Ημερών στην Κέρκυρα",
-    "subtitle_el": "Από την παλιά πόλη της UNESCO και το Αχίλλειο ως τους γκρεμούς της Παλαιοκαστρίτσας, το Κανάλι της Αγάπης στα Σιδάρι, και τη χρυσή λωρίδα της Γλυφάδας."
-  },
-  "beaches": [
-    {
+    "title_el": "Παλιά Πόλη Κέρκυρας",
+    "overnight_el": "Κέρκυρα Πόλη",
+    "nightlife": "Corfu Town does evenings in layers. Aperitivo under the arches of the <a href=\"https://www.google.com/maps/search/Liston+Corfu\" target=\"_blank\" rel=\"noopener\">Liston</a> as the sun drops, cocktails up at the <a href=\"https://www.google.com/maps/search/Cavalieri+Roof+Garden+Corfu\" target=\"_blank\" rel=\"noopener\">Cavalieri Roof Garden</a> over the rooftops, then the medieval Campiello alleys — <a href=\"https://www.google.com/maps/search/Mikro+Cafe+Corfu\" target=\"_blank\" rel=\"noopener\">Mikro Cafe</a> in its courtyard — for something more intimate. Clubs sit further north on the main road if you want them.",
+    "nightlife_el": "Η πόλη της Κέρκυρας ζει το βράδυ σε στρώσεις. Απεριτίφ κάτω από τις καμάρες του <a href=\"https://www.google.com/maps/search/Liston+Corfu\" target=\"_blank\" rel=\"noopener\">Liston</a> καθώς πέφτει ο ήλιος, κοκτέιλ πάνω στο <a href=\"https://www.google.com/maps/search/Cavalieri+Roof+Garden+Corfu\" target=\"_blank\" rel=\"noopener\">Cavalieri Roof Garden</a> με θέα τις στέγες, και μετά τα μεσαιωνικά σοκάκια του Καμπιέλο — το <a href=\"https://www.google.com/maps/search/Mikro+Cafe+Corfu\" target=\"_blank\" rel=\"noopener\">Mikro Cafe</a> στην αυλή του — για κάτι πιο προσωπικό. Τα clubs είναι πιο βόρεια στον κεντρικό δρόμο αν τα θες.",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Corfu Town",
+      "area_el": "Πόλη Κέρκυρας",
+      "desc": "Lunch in the Old Town. <a href=\"https://www.google.com/maps/search/To+Dimarchio+Corfu+Town\" target=\"_blank\" rel=\"noopener\">To Dimarchio</a> sits on the Town Hall square for classic Corfiot dishes (pastitsada, sofrito). <a href=\"https://www.google.com/maps/search/Rex+Corfu+Town\" target=\"_blank\" rel=\"noopener\">Rex</a>, just off the Liston and going since 1932, is the grand old institution. The island's benchmark taverna is <a href=\"https://www.google.com/maps/search/Klimataria+Bellos+Benitses+Corfu\" target=\"_blank\" rel=\"noopener\">Klimataria tou Bellou</a> at Benitses — Nikos and Lily Bellou cooking Corfiot classics, the bianco and the bourdeto above all, for under €25 a head, open year-round.",
+      "desc_el": "Μεσημεριανό στην Παλιά Πόλη. Το <a href=\"https://www.google.com/maps/search/To+Dimarchio+Corfu+Town\" target=\"_blank\" rel=\"noopener\">To Dimarchio</a> βρίσκεται στην πλατεία του Δημαρχείου για κλασικά κερκυραϊκά πιάτα (παστιτσάδα, σοφρίτο). Το <a href=\"https://www.google.com/maps/search/Rex+Corfu+Town\" target=\"_blank\" rel=\"noopener\">Rex</a>, δίπλα στο Λιστόν και από το 1932, είναι ο μεγάλος παλιός θεσμός. Η κορυφαία ταβέρνα του νησιού είναι η <a href=\"https://www.google.com/maps/search/Klimataria+Bellos+Benitses+Corfu\" target=\"_blank\" rel=\"noopener\">Κληματαριά του Μπέλλου</a> στις Μπενίτσες — ο Νίκος και η Λίλυ Μπέλλου μαγειρεύουν κερκυραϊκά κλασικά, μπιάνκο και μπουρδέτο πάνω απ' όλα, κάτω από €25 το άτομο, ανοιχτά όλο τον χρόνο.",
+      "after": "Corfu Old Town (UNESCO)"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "title": "Achilleion & the South",
+    "color": "#C0522A",
+    "km": 55,
+    "drive_mins": 65,
+    "overnight": "Corfu Town",
+    "stops": [
+     {
+      "name": "Achilleion Palace",
+      "lat": 39.5628,
+      "lng": 19.9043,
+      "type": "museum",
+      "time": "09:30",
+      "wiki": "https://www.google.com/maps/search/Achilleion+Palace+Corfu",
+      "desc": "Extraordinary neoclassical palace built by Empress Elisabeth of Austria (Sisi) in 1890, later owned by Kaiser Wilhelm II. The terraced gardens and statues of Achilles are magnificent.",
+      "name_el": "Αχίλλειο",
+      "desc_el": "Εξαιρετικό νεοκλασικό παλάτι χτισμένο από την αυτοκράτειρα Ελισάβετ της Αυστρίας (Σίσι) το 1890, αργότερα ιδιοκτησία του Κάιζερ Γουλιέλμου Β'. Οι κλιμακωτοί κήποι και τα αγάλματα του Αχιλλέα είναι μεγαλειώδη.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Corfu_Achilleion_R05.jpg/1920px-Corfu_Achilleion_R05.jpg",
+      "photo_credit": {
+       "artist": "Marc Ryckaert (MJJR)",
+       "license": "CC BY 3.0",
+       "license_url": "https://creativecommons.org/licenses/by/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Corfu_Achilleion_R05.jpg",
+       "source": "Wikimedia Commons"
+      },
+      "drive": "≈20 min south of Corfu Town",
+      "drive_el": "≈20 λεπτά νότια της Πόλης"
+     },
+     {
+      "name": "Benitses Village",
+      "lat": 39.5422,
+      "lng": 19.9144,
+      "type": "village",
+      "time": "11:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJe3BB9IhfWxMRxK0Am3INW4c",
+      "desc": "Traditional fishing village that was Corfu's first tourist resort in the 1970s. It has returned to its quiet roots. Roman baths and a small aquarium are worth a stop.",
+      "name_el": "Χωριό Μπενίτσες",
+      "desc_el": "Παραδοσιακό ψαροχώρι που ήταν το πρώτο τουριστικό θέρετρο της Κέρκυρας τη δεκαετία του 1970. Έχει επιστρέψει στις ήσυχες ρίζες του. Τα ρωμαϊκά λουτρά και ένα μικρό ενυδρείο αξίζουν μια στάση.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/benitses_kuxmu8.jpg"
+     },
+     {
+      "name": "Kavos Beach",
+      "lat": 39.3832,
+      "lng": 20.1145,
+      "type": "beach",
+      "time": "13:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJxW8WQB-bXBMRd9wM1ju_FsM",
+      "desc": "Long sandy beach at the southern tip of Corfu. Calm, shallow, warm water. The resort behind it is geared toward young people and nightlife — the beach itself is excellent.",
+      "name_el": "Παραλία Κάβος",
+      "desc_el": "Μακριά αμμώδης παραλία στο νότιο άκρο της Κέρκυρας. Ήρεμα, ρηχά, ζεστά νερά. Το θέρετρο πίσω της είναι προσανατολισμένο στους νέους και τη νυχτερινή ζωή — η ίδια η παραλία είναι εξαιρετική.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/kavos_beach_svrjho.jpg"
+     },
+     {
+      "name": "Arkoudilas Beach",
+      "lat": 39.3664,
+      "lng": 20.1004,
+      "type": "beach",
+      "time": "16:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJqx1eQ4abXBMR1EtMyEGimzM",
+      "desc": "Wild, empty sandy beach in a protected nature reserve near the south tip. No facilities, no development — just sand, sea and olive groves. One of the hidden gems of the south.",
+      "name_el": "Παραλία Αρκουδίλας",
+      "desc_el": "Άγρια, άδεια αμμώδης παραλία σε προστατευμένο φυσικό καταφύγιο κοντά στο νότιο άκρο. Χωρίς υπηρεσίες, χωρίς ανάπτυξη — μόνο άμμος, θάλασσα και ελαιώνες. Ένα από τα κρυμμένα διαμάντια του νότου.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/arkoudilas_xeeoaf.jpg"
+     },
+     {
+      "name": "Sunset in Corfu Town",
+      "lat": 39.6235,
+      "lng": 19.9275,
+      "type": "city",
+      "time": "20:30",
+      "wiki": null,
+      "desc": "Long drive back from the southern tip (about 1 hour to Corfu Town). The eastern coast road in evening light is a fitting end to the day.",
+      "name_el": "Ηλιοβασίλεμα στην Πόλη",
+      "desc_el": "Μεγάλη διαδρομή επιστροφής από τη νότια άκρη (περίπου 1 ώρα στην Πόλη). Ο ανατολικός παραλιακός δρόμος στο βραδινό φως είναι ταιριαστό κλείσιμο για τη μέρα."
+     }
+    ],
+    "title_el": "Αχίλλειο & ο Νότος",
+    "overnight_el": "Κέρκυρα Πόλη"
+   },
+   {
+    "day": 3,
+    "title": "Paleokastritsa — The Jewel of Corfu",
+    "color": "#5A7A3A",
+    "km": 50,
+    "drive_mins": 55,
+    "overnight": "Paleokastritsa",
+    "stops": [
+     {
+      "name": "Paleokastritsa Monastery",
+      "lat": 39.6695,
+      "lng": 19.7016,
+      "type": "church",
+      "time": "09:00",
+      "wiki": "https://www.google.com/maps/search/Paleokastritsa+Monastery+Corfu",
+      "desc": "13th-century monastery perched on a headland above the bays. Small museum of icons and ecclesiastical objects. Extraordinary views over the turquoise coves below.",
+      "name_el": "Μοναστήρι Παλαιοκαστρίτσας",
+      "desc_el": "Μοναστήρι του 13ου αιώνα γκρεμισμένο σε ακρωτήρι πάνω από τους κόλπους. Μικρό μουσείο εικόνων και εκκλησιαστικών αντικειμένων. Εκπληκτική θέα στους τιρκουάζ κολπίσκους από κάτω.",
+      "photo": "",
+      "photo_credit": null,
+      "drive": "≈45 min from Corfu Town",
+      "drive_el": "≈45 λεπτά από την Πόλη"
+     },
+     {
       "name": "Paleokastritsa Beach",
-      "wiki": "https://www.google.com/maps/search/Paleokastritsa+Beach+Corfu",
-      "rating": 5,
-      "type": "Sand and fine pebble mix",
-      "length": "6 coves, each 100-300m",
-      "depth": "Medium to deep — rocky seabed, exceptional water clarity",
-      "facing": "Various — six coves facing different directions, always one sheltered from the wind",
-      "facilities": "Well organised: sunbeds, beach bars, boat and kayak hire, tavernas. Monastery above.",
-      "desc": "The most dramatic coastline in Corfu — six emerald coves carved into limestone cliffs, with a Byzantine monastery on the headland above. The water is extraordinarily clear and cold. Rent a small boat to discover the sea caves and hidden beaches inaccessible from land.",
-      "commons": "Paleokastritsa_Corfu.jpg",
       "lat": 39.6722,
       "lng": 19.7034,
+      "type": "beach",
+      "time": "10:00",
+      "wiki": "https://www.google.com/maps/search/Paleokastritsa+Beach+Corfu",
+      "desc": "Six coves of extraordinary clarity, emerald water and dramatic cliff scenery — the most beautiful coastline in Corfu. Rent a small boat to explore the sea caves and hidden coves inaccessible by land.",
       "name_el": "Παραλία Παλαιοκαστρίτσας",
-      "type_el": "Άμμος και λεπτό βότσαλο",
-      "depth_el": "Μέτριο έως βαθύ — βραχώδης βυθός, εξαιρετική διαύγεια νερού",
-      "facing_el": "Διάφορες — έξι κολπίσκοι σε διαφορετικές κατευθύνσεις, πάντα ένας προστατευμένος από τον αέρα",
-      "facilities_el": "Καλά οργανωμένη: ξαπλώστρες, beach bars, ενοικίαση βάρκας και kayak, ταβέρνες. Μοναστήρι από πάνω.",
-      "desc_el": "Η πιο εντυπωσιακή ακτή της Κέρκυρας — έξι σμαραγδένιοι κολπίσκοι σκαλισμένοι σε ασβεστολιθικούς βράχους, με βυζαντινό μοναστήρι στο ακρωτήρι από πάνω. Τα νερά είναι εξαιρετικά διαυγή και κρύα. Νοίκιασε μικρή βάρκα για να ανακαλύψεις τις θαλάσσιες σπηλιές και τις κρυφές παραλίες που είναι απρόσιτες από τη στεριά.",
+      "desc_el": "Έξι κολπίσκοι εξαιρετικής διαύγειας, σμαραγδένια νερά και εντυπωσιακό βραχώδες σκηνικό — η ομορφότερη ακτή της Κέρκυρας. Νοίκιασε μικρή βάρκα για να εξερευνήσεις τις θαλάσσιες σπηλιές και τους κρυφούς κολπίσκους που είναι απρόσιτοι από τη στεριά.",
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883650/palaiokastritsa_kq8d7m.webp"
-    },
-    {
-      "name": "Glyfada Beach",
-      "wiki": "https://www.google.com/maps/search/Glyfada+Beach+Corfu",
-      "rating": 5,
-      "type": "Fine golden sand",
-      "length": "1 km",
-      "depth": "Shallow to medium — gradual sandy entry, safe for families",
-      "facing": "West-facing — beautiful sunsets, good swimming throughout the day",
-      "facilities": "Well organised: sunbeds, umbrellas, water sports, beach bars, restaurant, parking.",
-      "desc": "The finest sandy beach in Corfu — a broad golden bay framed by green hills, with the warm Ionian Sea. Consistently clear, calm water. Glyfada hits the sweet spot between beautiful setting, good facilities and manageable crowds.",
-      "commons": "Glyfada_beach_Corfu.jpg",
-      "lat": 39.5917,
-      "lng": 19.8085,
-      "name_el": "Παραλία Γλυφάδας",
-      "type_el": "Λεπτή χρυσή άμμος",
-      "depth_el": "Ρηχό έως μέτριο — σταδιακή είσοδος, ασφαλής για οικογένειες",
-      "facing_el": "Δυτική — όμορφα ηλιοβασιλέματα, καλό κολύμπι όλη τη μέρα",
-      "facilities_el": "Καλά οργανωμένη: ξαπλώστρες, ομπρέλες, θαλάσσια σπορ, beach bars, εστιατόριο, parking.",
-      "desc_el": "Η καλύτερη αμμώδης παραλία της Κέρκυρας — ένας πλατύς χρυσός κόλπος πλαισιωμένος από πράσινους λόφους, με τη ζεστή θάλασσα του Ιονίου. Σταθερά καθαρά, ήρεμα νερά. Η Γλυφάδα συνδυάζει τέλεια όμορφο σκηνικό, καλές υπηρεσίες και διαχειρίσιμα πλήθη.",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Glyfada_Beach_on_the_island_of_Corfu%2C_Greece_%2847818444242%29.jpg",
-      "photo_credit": {
-        "artist": "dronepicr",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Glyfada_Beach_on_the_island_of_Corfu,_Greece_(47818444242).jpg",
-        "source": "Wikimedia Commons"
-      }
-    },
-    {
-      "name": "Canal d'Amour",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJTT_DF8NOWxMRJtdLCVO2eMg",
-      "rating": 5,
-      "type": "Coarse sand",
-      "length": "Several small channels and coves",
-      "depth": "Shallow to medium — sheltered by sandstone cliffs",
-      "facing": "North-facing — the cliffs provide shelter from south winds",
-      "facilities": "Moderate: some sunbeds, beach bars nearby. Gets very busy in summer.",
-      "desc": "Unlike any beach in Greece — sandstone cliffs sculpted into channels, arches and caves by millennia of sea erosion. The narrow channel (canal) is the focal point. Swim through it with someone you love — local legend guarantees marriage follows. The surrounding rock formations are extraordinary.",
-      "commons": null,
-      "lat": 39.7971,
-      "lng": 19.698,
-      "name_el": "Κανάλι του Έρωτα",
-      "type_el": "Χονδρή άμμος",
-      "depth_el": "Ρηχό έως μέτριο — προστατευμένο από τους αμμολιθικούς βράχους",
-      "facing_el": "Βόρεια — οι βράχοι προσφέρουν προστασία από νότιους ανέμους",
-      "facilities_el": "Μέτριες: κάποιες ξαπλώστρες, beach bars κοντά. Γεμίζει πολύ το καλοκαίρι.",
-      "desc_el": "Δεν μοιάζει με καμιά άλλη παραλία της Ελλάδας — αμμολιθικοί βράχοι λαξευμένοι σε κανάλια, αψίδες και σπηλιές από χιλιετίες θαλάσσιας διάβρωσης. Το στενό κανάλι είναι το επίκεντρο. Κολύμπησέ το με κάποιον που αγαπάς — η τοπική παράδοση εγγυάται ότι ακολουθεί γάμος. Οι γύρω βραχώδεις σχηματισμοί είναι εκπληκτικοί.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/canal_d_amour_kctzjr.webp"
-    },
-    {
-      "name": "Mirtiotissa Beach",
-      "wiki": "https://www.google.com/maps/search/Mirtiotissa+Beach+Corfu",
-      "rating": 4,
-      "type": "Fine sand",
-      "length": "300 m",
-      "depth": "Medium — clear Ionian water, some rocks at edges",
-      "facing": "West-facing — dramatic cliff setting, sunset views",
-      "facilities": "Basic: one small beach café. Access via steep 30-minute walk only — no vehicles.",
-      "desc": "Lawrence Durrell called it the most beautiful beach in the world in Prospero's Cell. A hidden sandy cove beneath towering cliffs, reachable only on foot. The walk keeps it uncrowded. The combination of complete seclusion and extraordinary setting makes it worth every step.",
-      "commons": null,
-      "lat": 39.5957,
-      "lng": 19.7992,
-      "name_el": "Παραλία Μυρτιώτισσας",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Μέτριο — διαυγή νερά Ιονίου, κάποιοι βράχοι στις άκρες",
-      "facing_el": "Δυτική — εντυπωσιακό σκηνικό γκρεμού, θέα στο ηλιοβασίλεμα",
-      "facilities_el": "Στοιχειώδεις: ένα μικρό beach café. Πρόσβαση μόνο μέσω απότομης πεζοπορίας 30 λεπτών — χωρίς οχήματα.",
-      "desc_el": "Ο Λώρενς Ντάρελ την αποκάλεσε την ομορφότερη παραλία του κόσμου στον Πρόσπερο. Ένας κρυφός αμμώδης κολπίσκος κάτω από επιβλητικούς γκρεμούς, προσβάσιμος μόνο με τα πόδια. Η πεζοπορία την κρατάει χωρίς πλήθη. Ο συνδυασμός απόλυτης απομόνωσης και εξαιρετικού σκηνικού την κάνει να αξίζει κάθε βήμα.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/myrtiotissa_t3iqjd.jpg"
-    },
-    {
+     },
+     {
+      "name": "Angelokastro",
+      "lat": 39.6782,
+      "lng": 19.6866,
+      "type": "castle",
+      "time": "13:30",
+      "wiki": "https://www.google.com/maps/search/Angelokastro+Corfu",
+      "desc": "13th-century Byzantine castle on a sheer sea cliff — the most dramatic castle site in the Ionian islands. Views north along the entire Albanian and Greek coastline.",
+      "name_el": "Αγγελόκαστρο",
+      "desc_el": "Βυζαντινό κάστρο του 13ου αιώνα σε κατακόρυφο θαλάσσιο γκρεμό — το πιο εντυπωσιακό κάστρο των Επτανήσων. Θέα βόρεια σε όλη την αλβανική και ελληνική ακτογραμμή.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883650/angelokastro_wvpa7a.jpg"
+     },
+     {
+      "name": "Agios Georgios Beach (North)",
+      "lat": 39.7169,
+      "lng": 19.6833,
+      "type": "beach",
+      "time": "15:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJRYPAv_JRWxMRf05Hhz2HDRw",
+      "desc": "Long, sandy north Corfu beach with far fewer crowds than Paleokastritsa. Clear water, some waves, and spectacular sunset views. The village has good tavernas.",
+      "name_el": "Παραλία Αγίου Γεωργίου (Βόρεια)",
+      "desc_el": "Μακριά, αμμώδης βόρεια παραλία της Κέρκυρας με πολύ λιγότερα πλήθη από την Παλαιοκαστρίτσα. Καθαρά νερά, κάποια κύματα και εντυπωσιακή θέα στο ηλιοβασίλεμα. Το χωριό έχει καλές ταβέρνες."
+     },
+     {
       "name": "Porto Timoni",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJBaXRm0VTWxMRoOpym-Gm45A",
-      "rating": 4,
-      "type": "Pebble",
-      "length": "Two beaches, each 150m",
-      "depth": "Medium — clear turquoise water, rocky seabed",
-      "facing": "Double bay — one north-facing, one south-facing, always one sheltered",
-      "facilities": "None — completely unorganised. Access only via 45-minute hike from Afionas village.",
-      "desc": "The most photographed spot in Corfu after Kanoni — a double bay where two beaches face in opposite directions, separated by a narrow rocky headland. The hike from Afionas is steep but the view from the top before you descend is among the best in the Ionian islands.",
-      "commons": null,
       "lat": 39.72,
       "lng": 19.6604,
+      "type": "beach",
+      "time": "17:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJBaXRm0VTWxMRoOpym-Gm45A",
+      "desc": "A stunning double bay accessible only on foot (45-min hike). Two beaches side by side facing opposite directions — the most photographed spot on the island after Kanoni.",
       "name_el": "Πόρτο Τιμόνι",
-      "type_el": "Βότσαλο",
-      "depth_el": "Μέτριο — διαυγή τιρκουάζ νερά, βραχώδης βυθός",
-      "facing_el": "Διπλός κόλπος — ένας βόρειος, ένας νότιος, πάντα ένας προστατευμένος",
-      "facilities_el": "Καμία — εντελώς ανοργάνωτη. Πρόσβαση μόνο μέσω 45λεπτης πεζοπορίας από το χωριό Αφιώνα.",
-      "desc_el": "Το πιο φωτογραφημένο σημείο της Κέρκυρας μετά το Κανόνι — ένας διπλός κόλπος όπου δύο παραλίες είναι στραμμένες σε αντίθετες κατευθύνσεις, χωρισμένες από ένα στενό βραχώδες ακρωτήρι. Η πεζοπορία από τον Αφιώνα είναι απότομη αλλά η θέα από την κορυφή πριν κατέβεις είναι ανάμεσα στις καλύτερες των Επτανήσων.",
+      "desc_el": "Ένας εκπληκτικός διπλός κόλπος προσβάσιμος μόνο με τα πόδια (45λεπτη πεζοπορία). Δύο παραλίες δίπλα-δίπλα στραμμένες σε αντίθετες κατευθύνσεις — το πιο φωτογραφημένο σημείο του νησιού μετά το Κανόνι.",
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/porto_timoni_jvgp7k.webp"
-    }
+     },
+     {
+      "name": "Dinner in Paleokastritsa",
+      "lat": 39.6695,
+      "lng": 19.7016,
+      "type": "city",
+      "time": "20:00",
+      "wiki": null,
+      "desc": "Drive back to your Paleokastritsa hotel (about 30 minutes from Afionas). The bay's tavernas — La Grotta or Akron — are favourites for sunset dinners with the monastery floodlit above.",
+      "name_el": "Δείπνο στην Παλαιοκαστρίτσα",
+      "desc_el": "Επιστροφή στο ξενοδοχείο σου στην Παλαιοκαστρίτσα (περίπου 30 λεπτά από τον Αφιώνα). Οι ταβέρνες του κόλπου — La Grotta ή Άκρον — είναι αγαπημένες για βραδινό ηλιοβασιλέματος με το μοναστήρι φωτισμένο πάνω."
+     }
+    ],
+    "title_el": "Παλαιοκαστρίτσα — Το Κόσμημα της Κέρκυρας",
+    "overnight_el": "Παλαιοκαστρίτσα"
+   },
+   {
+    "day": 4,
+    "title": "Sidari & Canal d'Amour",
+    "color": "#C4962A",
+    "km": 45,
+    "drive_mins": 55,
+    "overnight": "Sidari",
+    "stops": [
+     {
+      "name": "Roda Beach",
+      "lat": 39.7962,
+      "lng": 19.7792,
+      "type": "beach",
+      "time": "09:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJYyZunNBFWxMRlNyqKMLTf-Y",
+      "desc": "Long sandy north-coast beach — calm, shallow, family-friendly. One of the best beaches on the north coast with good facilities and a lovely village behind it.",
+      "name_el": "Παραλία Ρόδα",
+      "desc_el": "Μακριά αμμώδης παραλία της βόρειας ακτής — ήρεμη, ρηχή, οικογενειακή. Μία από τις καλύτερες παραλίες της βόρειας ακτής με καλές υπηρεσίες και ένα όμορφο χωριό πίσω της.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/roda_beach_oxrrud.avif",
+      "drive": "≈40 min to the north coast",
+      "drive_el": "≈40 λεπτά στη βόρεια ακτή"
+     },
+     {
+      "name": "Canal d'Amour",
+      "lat": 39.7971,
+      "lng": 19.698,
+      "type": "beach",
+      "time": "11:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJTT_DF8NOWxMRJtdLCVO2eMg",
+      "desc": "The most famous spot in Sidari — dramatic sandstone cliffs carved into channels and caves by centuries of sea erosion. Local legend says couples who swim through the channel together will marry. Unique and unmissable.",
+      "name_el": "Κανάλι του Έρωτα",
+      "desc_el": "Το πιο διάσημο σημείο στο Σιδάρι — εντυπωσιακοί αμμολιθικοί βράχοι σκαλισμένοι σε κανάλια και σπηλιές από αιώνες θαλάσσιας διάβρωσης. Η τοπική παράδοση λέει ότι όσα ζευγάρια κολυμπήσουν μαζί μέσα από το κανάλι θα παντρευτούν. Μοναδικό και αδιαπραγμάτευτο.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/canal_d_amour_kctzjr.webp"
+     },
+     {
+      "name": "Sidari Beach",
+      "lat": 39.7932,
+      "lng": 19.7084,
+      "type": "beach",
+      "time": "13:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJQ6cmBN5OWxMRVgRSGp7nZww",
+      "desc": "Long sandy beach adjoining the canal d'Amour. Golden sand, gently shelving into the sea. Good for children. The resort behind it is lively with restaurants and bars.",
+      "name_el": "Παραλία Σιδάρι",
+      "desc_el": "Μακριά αμμώδης παραλία δίπλα στο Κανάλι του Έρωτα. Χρυσή άμμος, ήπια κλίση προς τη θάλασσα. Καλή για παιδιά. Το θέρετρο πίσω της είναι ζωντανό με εστιατόρια και μπαρ.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/sidari_lxbifc.jpg"
+     },
+     {
+      "name": "Acharavi Beach",
+      "lat": 39.793,
+      "lng": 19.8194,
+      "type": "beach",
+      "time": "15:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJRYi9zYRGWxMRmlluJ14sYcQ",
+      "desc": "Long, wide, sandy beach that never gets overcrowded. Shallow and calm — the best family beach on the north coast. A local favourite rather than a tourist hub.",
+      "name_el": "Παραλία Αχαράβης",
+      "desc_el": "Μακριά, πλατιά, αμμώδης παραλία που δεν γεμίζει ποτέ υπερβολικά. Ρηχή και ήρεμη — η καλύτερη οικογενειακή παραλία της βόρειας ακτής. Αγαπημένη των ντόπιων μάλλον παρά τουριστικός κόμβος.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/acharavi_cliikx.jpg"
+     },
+     {
+      "name": "Dinner in Sidari",
+      "lat": 39.7932,
+      "lng": 19.7084,
+      "type": "city",
+      "time": "20:00",
+      "wiki": null,
+      "desc": "Short drive back to your Sidari base (about 15 minutes from Acharavi). The promenade comes alive in the evening with families and tavernas serving fresh fish straight off the boats.",
+      "name_el": "Δείπνο στο Σιδάρι",
+      "desc_el": "Σύντομη διαδρομή στη βάση σου στο Σιδάρι (περίπου 15 λεπτά από την Αχαράβη). Ο παραλιακός γεμίζει το βράδυ με οικογένειες και ταβέρνες που σερβίρουν φρέσκο ψάρι κατευθείαν από τα καΐκια."
+     }
+    ],
+    "title_el": "Σιδάρι & Κανάλι της Αγάπης",
+    "overnight_el": "Σιδάρι",
+    "nightlife": "Sidari is the resort night — open-air bars playing everything from EDM to pop, easy and unpretentious. <a href=\"https://www.google.com/maps/search/Mojitos+Bar+Sidari+Corfu\" target=\"_blank\" rel=\"noopener\">Mojitos Bar</a> does cocktails, live music and karaoke. Cheaper drinks than the capital and a younger, holiday crowd.",
+    "nightlife_el": "Το Σιδάρι είναι η βραδιά resort — υπαίθρια μπαρ που παίζουν από EDM ως pop, χαλαρά και ανεπιτήδευτα. Το <a href=\"https://www.google.com/maps/search/Mojitos+Bar+Sidari+Corfu\" target=\"_blank\" rel=\"noopener\">Mojitos Bar</a> έχει κοκτέιλ, ζωντανή μουσική και καραόκε. Φθηνότερα ποτά από την πόλη και πιο νεανικό, τουριστικό κοινό."
+   },
+   {
+    "day": 5,
+    "title": "Glyfada & the West Coast",
+    "color": "#7B5EA7",
+    "km": 40,
+    "drive_mins": 45,
+    "overnight": null,
+    "stops": [
+     {
+      "name": "Glyfada Beach",
+      "lat": 39.5917,
+      "lng": 19.8085,
+      "type": "beach",
+      "time": "09:30",
+      "wiki": "https://www.google.com/maps/search/Glyfada+Beach+Corfu",
+      "desc": "Widely regarded as the most beautiful sandy beach in Corfu — a broad golden bay framed by green hills, with calm Ionian water. Arrive early for a sunbed. Water sports, beach bars, good facilities.",
+      "name_el": "Παραλία Γλυφάδας",
+      "desc_el": "Θεωρείται ευρέως η ομορφότερη αμμώδης παραλία της Κέρκυρας — ένας πλατύς χρυσός κόλπος πλαισιωμένος από πράσινους λόφους, με ήρεμα νερά του Ιονίου. Φτάσε νωρίς για ξαπλώστρα. Θαλάσσια σπορ, beach bars, καλές υπηρεσίες.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Glyfada_Beach_on_the_island_of_Corfu%2C_Greece_%2847818444242%29.jpg",
+      "photo_credit": {
+       "artist": "dronepicr",
+       "license": "CC BY 2.0",
+       "license_url": "https://creativecommons.org/licenses/by/2.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Glyfada_Beach_on_the_island_of_Corfu,_Greece_(47818444242).jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Mirtiotissa Beach",
+      "lat": 39.5957,
+      "lng": 19.7992,
+      "type": "beach",
+      "time": "12:00",
+      "wiki": "https://www.google.com/maps/search/Mirtiotissa+Beach+Corfu",
+      "desc": "A stunning hidden beach accessible only via a steep 30-minute walk through olive groves. Almost deserted despite its beauty. Lawrence Durrell called it the most beautiful beach in the world.",
+      "name_el": "Παραλία Μυρτιώτισσας",
+      "desc_el": "Μια εκπληκτική κρυφή παραλία προσβάσιμη μόνο μέσω απότομης πεζοπορίας 30 λεπτών μέσα από ελαιώνες. Σχεδόν έρημη παρά την ομορφιά της. Ο Λώρενς Ντάρελ την αποκάλεσε την ομορφότερη παραλία του κόσμου.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/myrtiotissa_t3iqjd.jpg"
+     },
+     {
+      "name": "Agios Gordios Beach",
+      "lat": 39.5472,
+      "lng": 19.8494,
+      "type": "beach",
+      "time": "14:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJG_c3NVSnXBMRJTQBW9oR2W8",
+      "desc": "A wide, dramatic sandy beach backed by green cliffs and a rocky pinnacle. One of the most scenic beaches on the island, with a long stretch of sand and good facilities.",
+      "name_el": "Παραλία Αγίου Γορδίου",
+      "desc_el": "Μια πλατιά, εντυπωσιακή αμμώδης παραλία πλαισιωμένη από πράσινους γκρεμούς και βραχώδη κορυφή. Μία από τις πιο γραφικές παραλίες του νησιού, με μακριά έκταση άμμου και καλές υπηρεσίες.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883648/agios_gordios_ehopdo.jpg"
+     }
+    ],
+    "title_el": "Γλυφάδα & η Δυτική Ακτή",
+    "food": [
+     {
+      "meal": "Dinner",
+      "meal_el": "Δείπνο",
+      "area": "Corfu Town",
+      "area_el": "Πόλη Κέρκυρας",
+      "desc": "A farewell dinner in the Old Town. <a href=\"https://www.google.com/maps/search/Venetian+Well+Corfu+Town\" target=\"_blank\" rel=\"noopener\">The Venetian Well</a> on a hidden square is the island's finest — Corfiot-Mediterranean cooking and a serious wine list (book ahead). <a href=\"https://www.google.com/maps/search/Rex+Corfu+Town\" target=\"_blank\" rel=\"noopener\">Rex</a> is the classic alternative near the Liston.",
+      "desc_el": "Αποχαιρετιστήριο δείπνο στην Παλιά Πόλη. Το <a href=\"https://www.google.com/maps/search/Venetian+Well+Corfu+Town\" target=\"_blank\" rel=\"noopener\">The Venetian Well</a> σε μια κρυμμένη πλατεία είναι το καλύτερο του νησιού — κερκυραϊκή-μεσογειακή κουζίνα και σοβαρή λίστα κρασιών (κράτηση εκ των προτέρων). Το <a href=\"https://www.google.com/maps/search/Rex+Corfu+Town\" target=\"_blank\" rel=\"noopener\">Rex</a> είναι η κλασική εναλλακτική κοντά στο Λιστόν.",
+      "after": "Agios Gordios Beach"
+     }
+    ]
+   }
   ],
-  "name_el": "Κέρκυρα",
-  "name_accusative_el": "Κέρκυρα",
-  "name_genitive_el": "Κέρκυρας",
-  "gender_el": "f",
-  "subtitle_el": "Ιόνιο σμαράγδι — παλάτια, ελαιώνες και τιρκουάζ κολπίσκοι",
-  "intro_el": "Η Κέρκυρα είναι το πιο πράσινο νησί της Ελλάδας — ένα τοπίο από αρχαίους ελαιώνες, βενετσιάνικες ορεινές πόλεις και Ιόνια θάλασσα που μεταβάλλεται από τιρκουάζ σε βαθύ κοβάλτιο ανάλογα με το φως. Ήταν το μόνο τμήμα της Ελλάδας που δεν κατακτήθηκε ποτέ από τους Οθωμανούς, πράγμα που της δίνει έναν μοναδικό βενετσιάνικο και βρετανικό αποικιακό χαρακτήρα. Η παλιά πόλη είναι Μνημείο Παγκόσμιας Πολιτιστικής Κληρονομιάς της UNESCO. Η δυτική ακτή έχει τις καλύτερες αμμώδεις παραλίες του Ιονίου.",
-  "getting_there": {
-    "pills": [
-      "✈ Airport (intl)",
-      "⛵ Igoumenitsa 1.5h",
-      "€11–18"
-    ],
-    "pills_el": [
-      "✈ Αεροδρόμιο (διεθνές)",
-      "⛵ Ηγουμενίτσα 1.5h",
-      "€11–18"
-    ],
-    "summary": "Major international airport — Aegean, Sky Express, Ryanair, EasyJet, charters. No Piraeus ferry — reach Corfu via Igoumenitsa (mainland NW) by frequent shuttle, or fly direct. Italy ferries also available (Bari, Ancona, Venice).",
-    "summary_el": "Μεγάλο διεθνές αεροδρόμιο — Aegean, Sky Express, Ryanair, EasyJet, charters. Δεν υπάρχει πλοίο από Πειραιά — προσέγγιση μέσω Ηγουμενίτσας (ηπειρωτική ΒΔ) με συχνή σύνδεση, ή απευθείας πτήση. Πλοία και από Ιταλία (Μπάρι, Ανκόνα, Βενετία).",
-    "tip": "Direct flight is fastest. Italy ferry routes are great if you are coming overland from Europe.",
-    "tip_el": "Η απευθείας πτήση είναι πιο γρήγορη. Οι γραμμές Ιταλίας ιδανικές αν έρχεσαι οδικώς από Ευρώπη."
+  "title_el": "Πρόγραμμα 5 Ημερών στην Κέρκυρα",
+  "subtitle_el": "Από την παλιά πόλη της UNESCO και το Αχίλλειο ως τους γκρεμούς της Παλαιοκαστρίτσας, το Κανάλι της Αγάπης στα Σιδάρι, και τη χρυσή λωρίδα της Γλυφάδας."
+ },
+ "beaches": [
+  {
+   "name": "Paleokastritsa Beach",
+   "wiki": "https://www.google.com/maps/search/Paleokastritsa+Beach+Corfu",
+   "rating": 5,
+   "type": "Sand and fine pebble mix",
+   "length": "6 coves, each 100-300m",
+   "depth": "Medium to deep — rocky seabed, exceptional water clarity",
+   "facing": "Various — six coves facing different directions, always one sheltered from the wind",
+   "facilities": "Well organised: sunbeds, beach bars, boat and kayak hire, tavernas. Monastery above.",
+   "desc": "The most dramatic coastline in Corfu — six emerald coves carved into limestone cliffs, with a Byzantine monastery on the headland above. The water is extraordinarily clear and cold. Rent a small boat to discover the sea caves and hidden beaches inaccessible from land.",
+   "commons": "Paleokastritsa_Corfu.jpg",
+   "lat": 39.6722,
+   "lng": 19.7034,
+   "name_el": "Παραλία Παλαιοκαστρίτσας",
+   "type_el": "Άμμος και λεπτό βότσαλο",
+   "depth_el": "Μέτριο έως βαθύ — βραχώδης βυθός, εξαιρετική διαύγεια νερού",
+   "facing_el": "Διάφορες — έξι κολπίσκοι σε διαφορετικές κατευθύνσεις, πάντα ένας προστατευμένος από τον αέρα",
+   "facilities_el": "Καλά οργανωμένη: ξαπλώστρες, beach bars, ενοικίαση βάρκας και kayak, ταβέρνες. Μοναστήρι από πάνω.",
+   "desc_el": "Η πιο εντυπωσιακή ακτή της Κέρκυρας — έξι σμαραγδένιοι κολπίσκοι σκαλισμένοι σε ασβεστολιθικούς βράχους, με βυζαντινό μοναστήρι στο ακρωτήρι από πάνω. Τα νερά είναι εξαιρετικά διαυγή και κρύα. Νοίκιασε μικρή βάρκα για να ανακαλύψεις τις θαλάσσιες σπηλιές και τις κρυφές παραλίες που είναι απρόσιτες από τη στεριά.",
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883650/palaiokastritsa_kq8d7m.webp"
   },
-  "festivals": [
-    {
-      "name": "Botides (pot smashing)",
-      "name_el": "Μπότηδες",
-      "when": "Holy Saturday at 11am — 1 May 2027",
-      "when_el": "Μεγάλο Σάββατο 11π.μ. — 1 Μαΐου 2027",
-      "desc": "At exactly 11am on Holy Saturday, signaling the First Resurrection, residents throw large clay water-filled pots from their balconies onto Liston Square below. The crash of thousands of pots, accompanied by philharmonic bands, is meant to drive away evil. Adopted from the Venetians. Arrive by 9am for a viewing spot.",
-      "desc_el": "Στις 11 ακριβώς το πρωί του Μεγάλου Σαββάτου, σημαδεύοντας την Πρώτη Ανάσταση, οι κάτοικοι ρίχνουν μεγάλα πήλινα πιθάρια γεμάτα νερό από τα μπαλκόνια τους στη Λιστόν. Ο κρότος, μαζί με τις φιλαρμονικές, διώχνει το κακό. Παράδοση από τους Ενετούς. Φτάσε νωρίς (9π.μ.) για θέση."
-    },
-    {
-      "name": "First Sunday of August (Saint Spyridon procession)",
-      "name_el": "Λιτανεία Αγίου Σπυρίδωνα — Πρώτη Κυριακή Αυγούστου",
-      "when": "First Sunday of August",
-      "when_el": "Πρώτη Κυριακή του Αυγούστου",
-      "desc": "One of four annual processions of the relics of Saint Spyridon, patron of Corfu. The casket is carried through the old town accompanied by all three philharmonic orchestras. The August one commemorates deliverance from a 1716 Ottoman siege.",
-      "desc_el": "Μία από τις τέσσερις ετήσιες λιτανείες του Αγίου Σπυρίδωνα, προστάτη της Κέρκυρας. Η λάρνακα μεταφέρεται στην παλιά πόλη με τις τρεις φιλαρμονικές. Η αυγουστιάτικη θυμίζει τη σωτηρία από την οθωμανική πολιορκία του 1716."
-    }
+  {
+   "name": "Glyfada Beach",
+   "wiki": "https://www.google.com/maps/search/Glyfada+Beach+Corfu",
+   "rating": 5,
+   "type": "Fine golden sand",
+   "length": "1 km",
+   "depth": "Shallow to medium — gradual sandy entry, safe for families",
+   "facing": "West-facing — beautiful sunsets, good swimming throughout the day",
+   "facilities": "Well organised: sunbeds, umbrellas, water sports, beach bars, restaurant, parking.",
+   "desc": "The finest sandy beach in Corfu — a broad golden bay framed by green hills, with the warm Ionian Sea. Consistently clear, calm water. Glyfada hits the sweet spot between beautiful setting, good facilities and manageable crowds.",
+   "commons": "Glyfada_beach_Corfu.jpg",
+   "lat": 39.5917,
+   "lng": 19.8085,
+   "name_el": "Παραλία Γλυφάδας",
+   "type_el": "Λεπτή χρυσή άμμος",
+   "depth_el": "Ρηχό έως μέτριο — σταδιακή είσοδος, ασφαλής για οικογένειες",
+   "facing_el": "Δυτική — όμορφα ηλιοβασιλέματα, καλό κολύμπι όλη τη μέρα",
+   "facilities_el": "Καλά οργανωμένη: ξαπλώστρες, ομπρέλες, θαλάσσια σπορ, beach bars, εστιατόριο, parking.",
+   "desc_el": "Η καλύτερη αμμώδης παραλία της Κέρκυρας — ένας πλατύς χρυσός κόλπος πλαισιωμένος από πράσινους λόφους, με τη ζεστή θάλασσα του Ιονίου. Σταθερά καθαρά, ήρεμα νερά. Η Γλυφάδα συνδυάζει τέλεια όμορφο σκηνικό, καλές υπηρεσίες και διαχειρίσιμα πλήθη.",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Glyfada_Beach_on_the_island_of_Corfu%2C_Greece_%2847818444242%29.jpg",
+   "photo_credit": {
+    "artist": "dronepicr",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Glyfada_Beach_on_the_island_of_Corfu,_Greece_(47818444242).jpg",
+    "source": "Wikimedia Commons"
+   }
+  },
+  {
+   "name": "Canal d'Amour",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJTT_DF8NOWxMRJtdLCVO2eMg",
+   "rating": 5,
+   "type": "Coarse sand",
+   "length": "Several small channels and coves",
+   "depth": "Shallow to medium — sheltered by sandstone cliffs",
+   "facing": "North-facing — the cliffs provide shelter from south winds",
+   "facilities": "Moderate: some sunbeds, beach bars nearby. Gets very busy in summer.",
+   "desc": "Unlike any beach in Greece — sandstone cliffs sculpted into channels, arches and caves by millennia of sea erosion. The narrow channel (canal) is the focal point. Swim through it with someone you love — local legend guarantees marriage follows. The surrounding rock formations are extraordinary.",
+   "commons": null,
+   "lat": 39.7971,
+   "lng": 19.698,
+   "name_el": "Κανάλι του Έρωτα",
+   "type_el": "Χονδρή άμμος",
+   "depth_el": "Ρηχό έως μέτριο — προστατευμένο από τους αμμολιθικούς βράχους",
+   "facing_el": "Βόρεια — οι βράχοι προσφέρουν προστασία από νότιους ανέμους",
+   "facilities_el": "Μέτριες παροχές: κάποιες ξαπλώστρες, beach bars κοντά. Γεμίζει πολύ το καλοκαίρι.",
+   "desc_el": "Δεν μοιάζει με καμιά άλλη παραλία της Ελλάδας — αμμολιθικοί βράχοι λαξευμένοι σε κανάλια, αψίδες και σπηλιές από χιλιετίες θαλάσσιας διάβρωσης. Το στενό κανάλι είναι το επίκεντρο. Κολύμπησέ το με κάποιον που αγαπάς — η τοπική παράδοση εγγυάται ότι ακολουθεί γάμος. Οι γύρω βραχώδεις σχηματισμοί είναι εκπληκτικοί.",
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/canal_d_amour_kctzjr.webp"
+  },
+  {
+   "name": "Mirtiotissa Beach",
+   "wiki": "https://www.google.com/maps/search/Mirtiotissa+Beach+Corfu",
+   "rating": 4,
+   "type": "Fine sand",
+   "length": "300 m",
+   "depth": "Medium — clear Ionian water, some rocks at edges",
+   "facing": "West-facing — dramatic cliff setting, sunset views",
+   "facilities": "Basic: one small beach café. Access via steep 30-minute walk only — no vehicles.",
+   "desc": "Lawrence Durrell called it the most beautiful beach in the world in Prospero's Cell. A hidden sandy cove beneath towering cliffs, reachable only on foot. The walk keeps it uncrowded. The combination of complete seclusion and extraordinary setting makes it worth every step.",
+   "commons": null,
+   "lat": 39.5957,
+   "lng": 19.7992,
+   "name_el": "Παραλία Μυρτιώτισσας",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Μέτριο — διαυγή νερά Ιονίου, κάποιοι βράχοι στις άκρες",
+   "facing_el": "Δυτική — εντυπωσιακό σκηνικό γκρεμού, θέα στο ηλιοβασίλεμα",
+   "facilities_el": "Στοιχειώδεις παροχές: ένα μικρό beach café. Πρόσβαση μόνο μέσω απότομης πεζοπορίας 30 λεπτών — χωρίς οχήματα.",
+   "desc_el": "Ο Λώρενς Ντάρελ την αποκάλεσε την ομορφότερη παραλία του κόσμου στον Πρόσπερο. Ένας κρυφός αμμώδης κολπίσκος κάτω από επιβλητικούς γκρεμούς, προσβάσιμος μόνο με τα πόδια. Η πεζοπορία την κρατάει χωρίς πλήθη. Ο συνδυασμός απόλυτης απομόνωσης και εξαιρετικού σκηνικού την κάνει να αξίζει κάθε βήμα.",
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/myrtiotissa_t3iqjd.jpg"
+  },
+  {
+   "name": "Porto Timoni",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJBaXRm0VTWxMRoOpym-Gm45A",
+   "rating": 4,
+   "type": "Pebble",
+   "length": "Two beaches, each 150m",
+   "depth": "Medium — clear turquoise water, rocky seabed",
+   "facing": "Double bay — one north-facing, one south-facing, always one sheltered",
+   "facilities": "None — completely unorganised. Access only via 45-minute hike from Afionas village.",
+   "desc": "The most photographed spot in Corfu after Kanoni — a double bay where two beaches face in opposite directions, separated by a narrow rocky headland. The hike from Afionas is steep but the view from the top before you descend is among the best in the Ionian islands.",
+   "commons": null,
+   "lat": 39.72,
+   "lng": 19.6604,
+   "name_el": "Πόρτο Τιμόνι",
+   "type_el": "Βότσαλο",
+   "depth_el": "Μέτριο — διαυγή τιρκουάζ νερά, βραχώδης βυθός",
+   "facing_el": "Διπλός κόλπος — ένας βόρειος, ένας νότιος, πάντα ένας προστατευμένος",
+   "facilities_el": "Καμία παροχή — εντελώς ανοργάνωτη. Πρόσβαση μόνο μέσω 45λεπτης πεζοπορίας από το χωριό Αφιώνα.",
+   "desc_el": "Το πιο φωτογραφημένο σημείο της Κέρκυρας μετά το Κανόνι — ένας διπλός κόλπος όπου δύο παραλίες είναι στραμμένες σε αντίθετες κατευθύνσεις, χωρισμένες από ένα στενό βραχώδες ακρωτήρι. Η πεζοπορία από τον Αφιώνα είναι απότομη αλλά η θέα από την κορυφή πριν κατέβεις είναι ανάμεσα στις καλύτερες των Επτανήσων.",
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/porto_timoni_jvgp7k.webp"
+  }
+ ],
+ "name_el": "Κέρκυρα",
+ "name_accusative_el": "Κέρκυρα",
+ "name_genitive_el": "Κέρκυρας",
+ "gender_el": "f",
+ "subtitle_el": "Ιόνιο σμαράγδι — παλάτια, ελαιώνες και τιρκουάζ κολπίσκοι",
+ "intro_el": "Η Κέρκυρα είναι το πιο πράσινο νησί της Ελλάδας — ένα τοπίο από αρχαίους ελαιώνες, βενετσιάνικες ορεινές πόλεις και Ιόνια θάλασσα που μεταβάλλεται από τιρκουάζ σε βαθύ κοβάλτιο ανάλογα με το φως. Ήταν το μόνο τμήμα της Ελλάδας που δεν κατακτήθηκε ποτέ από τους Οθωμανούς, πράγμα που της δίνει έναν μοναδικό βενετσιάνικο και βρετανικό αποικιακό χαρακτήρα. Η παλιά πόλη είναι Μνημείο Παγκόσμιας Πολιτιστικής Κληρονομιάς της UNESCO. Η δυτική ακτή έχει τις καλύτερες αμμώδεις παραλίες του Ιονίου.",
+ "getting_there": {
+  "pills": [
+   "✈ Airport (intl)",
+   "⛵ Igoumenitsa 1.5h",
+   "€11–18"
   ],
-  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783273547/%CE%BA%CE%B5%CF%81%CE%BA%CF%85%CF%81%CE%B1_d9ehab.jpg"
+  "pills_el": [
+   "✈ Αεροδρόμιο (διεθνές)",
+   "⛵ Ηγουμενίτσα 1.5h",
+   "€11–18"
+  ],
+  "summary": "Major international airport — Aegean, Sky Express, Ryanair, EasyJet, charters. No Piraeus ferry — reach Corfu via Igoumenitsa (mainland NW) by frequent shuttle, or fly direct. Italy ferries also available (Bari, Ancona, Venice).",
+  "summary_el": "Μεγάλο διεθνές αεροδρόμιο — Aegean, Sky Express, Ryanair, EasyJet, charters. Δεν υπάρχει πλοίο από Πειραιά — προσέγγιση μέσω Ηγουμενίτσας (ηπειρωτική ΒΔ) με συχνή σύνδεση, ή απευθείας πτήση. Πλοία και από Ιταλία (Μπάρι, Ανκόνα, Βενετία).",
+  "tip": "Direct flight is fastest. Italy ferry routes are great if you are coming overland from Europe.",
+  "tip_el": "Η απευθείας πτήση είναι πιο γρήγορη. Οι γραμμές Ιταλίας ιδανικές αν έρχεσαι οδικώς από Ευρώπη."
+ },
+ "festivals": [
+  {
+   "name": "Botides (pot smashing)",
+   "name_el": "Μπότηδες",
+   "when": "Holy Saturday at 11am — 1 May 2027",
+   "when_el": "Μεγάλο Σάββατο 11π.μ. — 1 Μαΐου 2027",
+   "desc": "At exactly 11am on Holy Saturday, signaling the First Resurrection, residents throw large clay water-filled pots from their balconies onto Liston Square below. The crash of thousands of pots, accompanied by philharmonic bands, is meant to drive away evil. Adopted from the Venetians. Arrive by 9am for a viewing spot.",
+   "desc_el": "Στις 11 ακριβώς το πρωί του Μεγάλου Σαββάτου, σημαδεύοντας την Πρώτη Ανάσταση, οι κάτοικοι ρίχνουν μεγάλα πήλινα πιθάρια γεμάτα νερό από τα μπαλκόνια τους στη Λιστόν. Ο κρότος, μαζί με τις φιλαρμονικές, διώχνει το κακό. Παράδοση από τους Ενετούς. Φτάσε νωρίς (9π.μ.) για θέση."
+  },
+  {
+   "name": "First Sunday of August (Saint Spyridon procession)",
+   "name_el": "Λιτανεία Αγίου Σπυρίδωνα — Πρώτη Κυριακή Αυγούστου",
+   "when": "First Sunday of August",
+   "when_el": "Πρώτη Κυριακή του Αυγούστου",
+   "desc": "One of four annual processions of the relics of Saint Spyridon, patron of Corfu. The casket is carried through the old town accompanied by all three philharmonic orchestras. The August one commemorates deliverance from a 1716 Ottoman siege.",
+   "desc_el": "Μία από τις τέσσερις ετήσιες λιτανείες του Αγίου Σπυρίδωνα, προστάτη της Κέρκυρας. Η λάρνακα μεταφέρεται στην παλιά πόλη με τις τρεις φιλαρμονικές. Η αυγουστιάτικη θυμίζει τη σωτηρία από την οθωμανική πολιορκία του 1716."
+  }
+ ],
+ "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783273547/%CE%BA%CE%B5%CF%81%CE%BA%CF%85%CF%81%CE%B1_d9ehab.jpg"
 }

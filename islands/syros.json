@@ -1,483 +1,483 @@
 {
-  "key": "syros",
-  "name": "Syros",
-  "intro": "Syros is the administrative capital of the Cyclades — and it looks nothing like one. Ermoupoli, its pastel neoclassical harbor town, was once Greece's busiest port and the city still feels grand, cultured, lived-in. This is a year-round working island, not a seasonal resort. You come here for the architecture, the opera house, the marble-paved squares, and the best rembetiko music in Greece.",
+ "key": "syros",
+ "name": "Syros",
+ "intro": "Syros is the administrative capital of the Cyclades — and it looks nothing like one. Ermoupoli, its pastel neoclassical harbor town, was once Greece's busiest port and the city still feels grand, cultured, lived-in. This is a year-round working island, not a seasonal resort. You come here for the architecture, the opera house, the marble-paved squares, and the best rembetiko music in Greece.",
+ "subtitle": "The neoclassical capital of the Cyclades",
+ "when_to_visit": {
+  "summary": "Syros is the Cyclades capital — it lives year-round, unlike most of its siblings. Ermoupoli's neoclassical buildings and the rebetiko scene make winter visits viable. For the full experience including swimming, target May, June, September. Easter in Ano Syros is unique with its Catholic and Orthodox communities.",
+  "summary_el": "Η Σύρος είναι η πρωτεύουσα των Κυκλάδων — ζει όλο τον χρόνο, σε αντίθεση με τα περισσότερα αδέλφια της. Τα νεοκλασικά της Ερμούπολης και η σκηνή του ρεμπέτικου κάνουν βιώσιμη ακόμη και τη χειμωνιάτικη επίσκεψη. Για την πλήρη εμπειρία, με μπάνιο, στόχευσε Μάιο, Ιούνιο, Σεπτέμβριο. Το Πάσχα στην Άνω Σύρο είναι μοναδικό, με την καθολική και την ορθόδοξη κοινότητα μαζί.",
+  "months": [
+   {
+    "tag": "ok",
+    "why": "City alive, sea cold",
+    "why_el": "Πόλη ζωντανή"
+   },
+   {
+    "tag": "ok",
+    "why": "Apokries carnival",
+    "why_el": "Απόκριες carnival"
+   },
+   {
+    "tag": "great",
+    "why": "Mild, museums and",
+    "why_el": "Ήπιο, μουσεία και"
+   },
+   {
+    "tag": "great",
+    "why": "Easter, both faiths",
+    "why_el": "Πάσχα, 2 δόγματα"
+   },
+   {
+    "tag": "perfect",
+    "why": "Sea warming",
+    "why_el": "Ερμούπολη peak"
+   },
+   {
+    "tag": "perfect",
+    "why": "Long days, ideal",
+    "why_el": "Πολύ φως, θάλασσα"
+   },
+   {
+    "tag": "great",
+    "why": "Hot, city has shade",
+    "why_el": "Ζέστη, η πόλη δίνει"
+   },
+   {
+    "tag": "ok",
+    "why": "Hot, festivals",
+    "why_el": "Ζέστη, φεστιβάλ"
+   },
+   {
+    "tag": "perfect",
+    "why": "Best — warm",
+    "why_el": "Καλύτερος — ζεστά"
+   },
+   {
+    "tag": "great",
+    "why": "City, sea warm",
+    "why_el": "Πόλη ζωντανή"
+   },
+   {
+    "tag": "great",
+    "why": "City pleasures",
+    "why_el": "Ήπιο, ζωή στην πόλη"
+   },
+   {
+    "tag": "ok",
+    "why": "Quiet, but city",
+    "why_el": "Ήσυχα, αλλά πόλη"
+   }
+  ]
+ },
+ "itinerary": {
+  "title": "3-day Itinerary for Syros",
   "subtitle": "The neoclassical capital of the Cyclades",
-  "when_to_visit": {
-    "summary": "Syros is the Cyclades capital — it lives year-round, unlike most of its siblings. Ermoupoli's neoclassical buildings and the rebetiko scene make winter visits viable. For the full experience including swimming, target May, June, September. Easter in Ano Syros is unique with its Catholic and Orthodox communities.",
-    "summary_el": "Η Σύρος είναι η πρωτεύουσα των Κυκλάδων — ζει όλο τον χρόνο, σε αντίθεση με τα περισσότερα αδέλφια της. Τα νεοκλασικά της Ερμούπολης και η σκηνή του ρεμπέτικου κάνουν βιώσιμη ακόμη και τη χειμωνιάτικη επίσκεψη. Για την πλήρη εμπειρία, με μπάνιο, στόχευσε Μάιο, Ιούνιο, Σεπτέμβριο. Το Πάσχα στην Άνω Σύρο είναι μοναδικό, με την καθολική και την ορθόδοξη κοινότητα μαζί.",
-    "months": [
-      {
-        "tag": "ok",
-        "why": "City alive, sea cold",
-        "why_el": "Πόλη ζωντανή"
-      },
-      {
-        "tag": "ok",
-        "why": "Apokries carnival",
-        "why_el": "Απόκριες carnival"
-      },
-      {
-        "tag": "great",
-        "why": "Mild, museums and",
-        "why_el": "Ήπιο, μουσεία και"
-      },
-      {
-        "tag": "great",
-        "why": "Easter, both faiths",
-        "why_el": "Πάσχα, 2 δόγματα"
-      },
-      {
-        "tag": "perfect",
-        "why": "Sea warming",
-        "why_el": "Ερμούπολη peak"
-      },
-      {
-        "tag": "perfect",
-        "why": "Long days, ideal",
-        "why_el": "Πολύ φως, θάλασσα"
-      },
-      {
-        "tag": "great",
-        "why": "Hot, city has shade",
-        "why_el": "Ζέστη, η πόλη δίνει"
-      },
-      {
-        "tag": "ok",
-        "why": "Hot, festivals",
-        "why_el": "Ζέστη, φεστιβάλ"
-      },
-      {
-        "tag": "perfect",
-        "why": "Best — warm",
-        "why_el": "Καλύτερος — ζεστά"
-      },
-      {
-        "tag": "great",
-        "why": "City, sea warm",
-        "why_el": "Πόλη ζωντανή"
-      },
-      {
-        "tag": "great",
-        "why": "City pleasures",
-        "why_el": "Ήπιο, ζωή στην πόλη"
-      },
-      {
-        "tag": "ok",
-        "why": "Quiet, but city",
-        "why_el": "Ήσυχα, αλλά πόλη"
-      }
-    ]
-  },
-  "itinerary": {
-    "title": "3-day Itinerary for Syros",
-    "subtitle": "The neoclassical capital of the Cyclades",
-    "days": [
-      {
-        "day": 1,
-        "title": "Ermoupoli & Ano Syros",
-        "km": 12,
-        "drive_mins": 30,
-        "overnight": "Ermoupoli",
-        "color": "#0B8FAC",
-        "stops": [
-          {
-            "name": "Miaouli Square",
-            "lat": 37.4439,
-            "lng": 24.944,
-            "type": "city",
-            "time": "09:30",
-            "wiki": "https://www.google.com/maps/search/Miaouli+Square+Syros",
-            "desc": "Grand central square of Ermoupoli with marble pavement and the 19th-century Town Hall designed by Ernst Ziller. The heart of the city — cafés ring the square, locals do their evening volta here, and the entire neoclassical plan of Ermoupoli radiates outward from this point. Stop for a coffee and watch the city pass.",
-            "name_el": "Πλατεία Μιαούλη",
-            "desc_el": "Μεγαλοπρεπής κεντρική πλατεία της Ερμούπολης με μαρμάρινο πεζοδρόμιο και το Δημαρχείο του 19ου αιώνα σε σχέδιο του Ερνστ Τσίλερ. Η καρδιά της πόλης — καφέ περιβάλλουν την πλατεία, οι ντόπιοι κάνουν τη βραδινή τους βόλτα εδώ, και ολόκληρο το νεοκλασικό σχέδιο της Ερμούπολης ξεκινάει από αυτό το σημείο. Σταμάτα για καφέ και δες την πόλη να περνά.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/View_of_Ermoupoli_%28Syros_island%29_from_a_ferry_boat_3.jpg/1920px-View_of_Ermoupoli_%28Syros_island%29_from_a_ferry_boat_3.jpg",
-            "photo_credit": {
-              "artist": "Leeturtle",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:View_of_Ermoupoli_(Syros_island)_from_a_ferry_boat_3.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Apollon Theater",
-            "lat": 37.4443,
-            "lng": 24.9428,
-            "type": "museum",
-            "time": "10:30",
-            "wiki": "https://www.google.com/maps/search/Apollon+Theater+Syros",
-            "desc": "Miniature replica of Milan's La Scala — the first opera house in modern Greece, opened 1864. Still functioning: the season runs through summer with chamber operas, recitals, and dance. The interior is worth seeing even when nothing's on; daytime guided tours are short but excellent.",
-            "name_el": "Θέατρο Απόλλων",
-            "desc_el": "Μινιατούρα αντίγραφο της La Scala του Μιλάνου — η πρώτη όπερα της σύγχρονης Ελλάδας, που άνοιξε το 1864. Λειτουργεί ακόμα: η σεζόν τρέχει όλο το καλοκαίρι με όπερες δωματίου, ρεσιτάλ και χορό. Το εσωτερικό αξίζει ακόμα και όταν δεν παίζει τίποτα· οι ξεναγήσεις την ημέρα είναι σύντομες αλλά εξαιρετικές.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Apollon_Theater%2C_stairwell.JPG/1920px-Apollon_Theater%2C_stairwell.JPG",
-            "photo_credit": {
-              "artist": "Zacharias Mitzelos",
-              "license": "CC0",
-              "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Apollon_Theater,_stairwell.JPG",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Ano Syros (climb)",
-            "lat": 37.4496,
-            "lng": 24.9392,
-            "type": "village",
-            "time": "12:00",
-            "wiki": "https://www.google.com/maps/search/Ano+Syros+(climb)",
-            "desc": "Medieval Catholic settlement perched above Ermoupoli. Steep climb, stunning views. Visit St George cathedral at the top.",
-            "name_el": "Άνω Σύρος (ανάβαση)",
-            "desc_el": "Μεσαιωνικός καθολικός οικισμός σκαρφαλωμένος πάνω από την Ερμούπολη. Απότομη ανάβαση, συγκλονιστικές θέες. Επισκέψου τον καθεδρικό του Αγίου Γεωργίου στην κορυφή.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/View_of_Ermoupoli_from_Ano_Syros_2.jpg/1920px-View_of_Ermoupoli_from_Ano_Syros_2.jpg",
-            "photo_credit": {
-              "artist": "Leeturtle",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:View_of_Ermoupoli_from_Ano_Syros_2.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "time": "15:30",
-            "name": "Galissas Beach",
-            "name_el": "Παραλία Γαλησσά",
-            "type": "beach",
-            "lat": 37.421,
-            "lng": 24.8775,
-            "wiki": "https://www.google.com/maps/search/?api=1&query=Galissas+Beach+Syros",
-            "desc": "A short drive west of Ermoupoli drops you at Galissas — the closest substantial beach to the capital and the natural afternoon break before returning for the neoclassical Vaporia neighbourhood at sunset. Sheltered horseshoe bay, golden sand, family-friendly water, and a handful of beach tavernas. Less famous than the south-coast beaches that fill Day 2, but ideal for a quick swim built into a city day.",
-            "desc_el": "Σύντομη οδική απόσταση δυτικά της Ερμούπολης σε αφήνει στον Γαλησσά — την πιο κοντινή σημαντική παραλία στην πρωτεύουσα και τη φυσική απογευματινή στάση πριν την επιστροφή στη νεοκλασική γειτονιά Βαπόρια για το ηλιοβασίλεμα. Προφυλαγμένος κόλπος σε σχήμα πετάλου, χρυσαφένια άμμος, νερά φιλικά προς οικογένειες, και μια χούφτα παραλιακές ταβέρνες. Λιγότερο διάσημη από τις παραλίες της νότιας ακτής που γεμίζουν τη Μέρα 2, αλλά ιδανική για ένα γρήγορο μπάνιο ενσωματωμένο σε μια ημέρα στην πόλη."
-          },
-          {
-            "name": "Vaporia Neighborhood",
-            "lat": 37.4426,
-            "lng": 24.9461,
-            "type": "city",
-            "time": "17:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJmVS7eACJohQRwqEbjbMo_YM",
-            "desc": "Neoclassical sea-captains' district of pastel mansions that drop straight into the sea. Swim right off the rocks here.",
-            "name_el": "Συνοικία Βαπόρια",
-            "desc_el": "Νεοκλασική συνοικία πλοιάρχων με παστέλ αρχοντικά που πέφτουν κατευθείαν στη θάλασσα. Κολύμπα ακριβώς από τους βράχους εδώ."
-          },
-          {
-            "name": "Agios Nikolaos (sunset)",
-            "lat": 37.4421,
-            "lng": 24.9469,
-            "type": "church",
-            "time": "19:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJr1bxUVOIohQRoDt7Ez3hib0",
-            "desc": "Grand blue-domed church on the hill above Ermoupoli — the best sunset view in the city, looking out across the harbour and the upper Ano Syros. Walk up through the old streets behind the Town Hall; the climb takes 15 minutes. The courtyard is open until late.",
-            "name_el": "Άγιος Νικόλαος (ηλιοβασίλεμα)",
-            "desc_el": "Μεγαλοπρεπής εκκλησία με γαλάζιο τρούλο στον λόφο πάνω από την Ερμούπολη — η καλύτερη θέα ηλιοβασιλέματος της πόλης, βλέποντας τον λιμένα και την επάνω Άνω Σύρο. Ανέβα από τα παλιά στενά πίσω από το Δημαρχείο· η ανάβαση διαρκεί 15 λεπτά. Η αυλή είναι ανοιχτή μέχρι αργά."
-          }
-        ],
-        "title_el": "Ερμούπολη & Άνω Σύρος",
-        "overnight_el": "Ερμούπολη",
-        "nightlife": "Ermoupoli's nightlife is elegant rather than wild — fitting for the grand old capital of the Cyclades. Drinks around <a href=\"https://www.google.com/maps/search/Miaouli+Square+Ermoupoli+Syros\" target=\"_blank\" rel=\"noopener\">Miaouli Square</a> and the lanes off it: <a href=\"https://www.google.com/maps/search/MouSouTou+Syros\" target=\"_blank\" rel=\"noopener\">MouSouTou</a> for cocktails (and its own gin), tucked-away <a href=\"https://www.google.com/maps/search/Kouchico+Syros\" target=\"_blank\" rel=\"noopener\">Kouchico</a> for craft drinks, and the 1924 grande dame <a href=\"https://www.google.com/maps/search/Aktaion+Ermoupoli+Syros\" target=\"_blank\" rel=\"noopener\">Aktaion</a> for live-music nights. Rembetiko, the island's signature, surfaces in the tavernas of Ano Syros.",
-        "nightlife_el": "Η νυχτερινή ζωή της Ερμούπολης είναι κομψή παρά ξέφρενη — ταιριάζει στη μεγάλη παλιά πρωτεύουσα των Κυκλάδων. Ποτά γύρω από την <a href=\"https://www.google.com/maps/search/Miaouli+Square+Ermoupoli+Syros\" target=\"_blank\" rel=\"noopener\">Πλατεία Μιαούλη</a> και τα στενά της: <a href=\"https://www.google.com/maps/search/MouSouTou+Syros\" target=\"_blank\" rel=\"noopener\">MouSouTou</a> για κοκτέιλ (και δικό του τζιν), το κρυμμένο <a href=\"https://www.google.com/maps/search/Kouchico+Syros\" target=\"_blank\" rel=\"noopener\">Kouchico</a> για craft ποτά, και η γκραντ νταμ του 1924 <a href=\"https://www.google.com/maps/search/Aktaion+Ermoupoli+Syros\" target=\"_blank\" rel=\"noopener\">Aktaion</a> για βραδιές ζωντανής μουσικής. Το ρεμπέτικο, η υπογραφή του νησιού, ακούγεται στις ταβέρνες της Άνω Σύρου.",
-        "food": [
-          {
-            "meal": "Lunch",
-            "meal_el": "Μεσημεριανό",
-            "area": "Ano Syros",
-            "area_el": "Άνω Σύρος",
-            "desc": "<a href=\"https://www.google.com/maps/search/Lilis+Ano+Syros\" target=\"_blank\" rel=\"noopener\">Lilis</a> has a panoramic terrace and rembetiko heritage; <a href=\"https://www.google.com/maps/search/Plakostroto+Ano+Syros\" target=\"_blank\" rel=\"noopener\">Plakostroto</a> nearby pairs Syrian meze with the same rooftop views.",
-            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Lilis+Ano+Syros\" target=\"_blank\" rel=\"noopener\">Lilis</a> έχει πανοραμική βεράντα και ρεμπέτικη κληρονομιά· το <a href=\"https://www.google.com/maps/search/Plakostroto+Ano+Syros\" target=\"_blank\" rel=\"noopener\">Plakostroto</a> δίπλα συνδυάζει συριανούς μεζέδες με την ίδια θέα από ψηλά.",
-            "after": "Ano Syros (climb)"
-          }
-        ]
-      },
-      {
-        "day": 2,
-        "title": "South Coast Beaches",
-        "km": 30,
-        "drive_mins": 60,
-        "overnight": "Ermoupoli",
-        "color": "#3D8B6F",
-        "stops": [
-          {
-            "name": "Galissas",
-            "lat": 37.421009,
-            "lng": 24.8775037,
-            "type": "beach",
-            "time": "10:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJzZxg3zR9ohQRMOP23F2yJI0",
-            "desc": "Long sandy bay on the west coast, the most popular family beach on Syros. Many tavernas, shallow water for children, and the place where locals from Ermoupoli come on weekends. The road from the city is winding but only takes 20 minutes by bus or scooter.",
-            "name_el": "Γαλησσάς",
-            "desc_el": "Μακρύς αμμώδης κόλπος στη δυτική ακτή, η πιο δημοφιλής οικογενειακή παραλία της Σύρου. Πολλές ταβέρνες, ρηχά νερά για παιδιά, και το μέρος όπου έρχονται οι ντόπιοι της Ερμούπολης τα σαββατοκύριακα. Ο δρόμος από την πόλη είναι ελικοειδής αλλά διαρκεί μόλις 20 λεπτά με λεωφορείο ή σκούτερ.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Galissas_Syros.jpg/1920px-Galissas_Syros.jpg",
-            "photo_credit": {
-              "artist": "FocalPoint",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Galissas_Syros.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Finikas",
-            "lat": 37.398377,
-            "lng": 24.8780685,
-            "type": "beach",
-            "time": "13:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJjwMjQWt9ohQRoI6ALJpKr1s",
-            "desc": "Chic fishing village turned beach community on the south coast, with a small harbour, a sandy beach, and a string of waterfront tavernas. Lunch at one of them — the seafood is straight off the boats, and the bill is noticeably more reasonable than the equivalent at Galissas or Vari.",
-            "name_el": "Φοίνικας",
-            "desc_el": "Κομψό αλιευτικό χωριό-παραλία στη νότια ακτή, με μικρό λιμάνι, αμμώδη παραλία, και σειρά ψαροταβέρνων στην προκυμαία. Μεσημεριανό σε μία από αυτές — τα θαλασσινά είναι κατευθείαν από τα καΐκια, και ο λογαριασμός είναι αισθητά πιο λογικός από το αντίστοιχο στο Γαλησσά ή στο Βάρη.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Finikas_%28Foinikas%29%2C_Syros%2C_Greece_15.jpg/1920px-Finikas_%28Foinikas%29%2C_Syros%2C_Greece_15.jpg",
-            "photo_credit": {
-              "artist": "Sgroey",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Finikas_(Foinikas),_Syros,_Greece_15.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Poseidonia (Della Grazia)",
-            "lat": 37.3903657,
-            "lng": 24.8873192,
-            "type": "village",
-            "time": "15:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ2VFdds59ohQRu-OZwUaO534",
-            "desc": "Aristocratic summer village of late 19th-century neoclassical villas, built by Ermoupoli's shipping families as their seaside retreats. Walk through for the architecture — the streets are quiet outside July and August. The village beach is small and pebbly, more about the setting than the swim.",
-            "name_el": "Ποσειδωνία (Ντελαγκράτσια)",
-            "desc_el": "Αριστοκρατικό θερινό χωριό με νεοκλασικές επαύλεις του τέλους του 19ου αιώνα, χτισμένες από τις εφοπλιστικές οικογένειες της Ερμούπολης ως παραθεριστικά καταφύγια. Περπάτα για την αρχιτεκτονική — οι δρόμοι είναι ήσυχοι εκτός Ιουλίου και Αυγούστου. Η παραλία του χωριού είναι μικρή και βότσαλη, περισσότερο για το σκηνικό παρά για το κολύμπι."
-          },
-          {
-            "name": "Vari Beach",
-            "lat": 37.3971761,
-            "lng": 24.9462694,
-            "type": "beach",
-            "time": "17:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJc1PIY8mHohQRHkLuYtVLscg",
-            "desc": "Horseshoe bay with shallow water — the warmest beach on Syros, sheltered from wind on three sides and protected by an islet at the entrance. Family-friendly and never genuinely cold even early in the season. The hamlet behind has a couple of tavernas and not much else.",
-            "name_el": "Παραλία Βάρης",
-            "desc_el": "Κόλπος σε σχήμα πετάλου με ρηχά νερά — η πιο ζεστή παραλία της Σύρου, προστατευμένη από άνεμο από τρεις πλευρές και προστατευμένη από νησίδα στην είσοδο. Φιλική σε οικογένειες και ποτέ πραγματικά κρύα ακόμα και νωρίς στη σεζόν. Ο μικρός οικισμός πίσω έχει δύο ταβέρνες και τίποτα άλλο."
-          },
-          {
-            "name": "Dinner in Ermoupoli",
-            "lat": 37.4418,
-            "lng": 24.9404,
-            "type": "city",
-            "time": "20:00",
-            "wiki": null,
-            "desc": "Drive back to Ermoupoli (about 15 minutes from Vari). The Apollon Theatre and Miaouli Square come alive after dark — Syros has more \"Saturday night\" energy than most Cyclades.",
-            "name_el": "Δείπνο στην Ερμούπολη",
-            "desc_el": "Επιστροφή στην Ερμούπολη (περίπου 15 λεπτά από το Βάρη). Το Απόλλων και η πλατεία Μιαούλη ζωντανεύουν μετά το σκοτάδι — η Σύρος έχει περισσότερη ενέργεια από τα περισσότερα Κυκλαδονήσια."
-          }
-        ],
-        "title_el": "Παραλίες της Νότιας Ακτής",
-        "overnight_el": "Ερμούπολη"
-      },
-      {
-        "day": 3,
-        "title": "North Syros & Rembetiko",
-        "km": 35,
-        "drive_mins": 80,
-        "overnight": "Departure",
-        "color": "#C4962A",
-        "stops": [
-          {
-            "name": "Kini",
-            "lat": 37.4461269,
-            "lng": 24.9002573,
-            "type": "village",
-            "time": "10:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJY19pxJxiohQRNZc17ljRXaI",
-            "desc": "Fishing village on the west coast with a long sandy beach and an active small fleet still bringing in the catch each morning. The best sunsets on Syros — west-facing, with the islets of Gyaros and Andros silhouetted on the horizon. Half a dozen tavernas line the beach.",
-            "name_el": "Κίνι",
-            "desc_el": "Αλιευτικό χωριό στη δυτική ακτή με μακρά αμμώδη παραλία και έναν ενεργό μικρό στόλο που πιάνει ακόμα ψαριά κάθε πρωί. Τα καλύτερα ηλιοβασιλέματα της Σύρου — δυτικός προσανατολισμός, με τις νησίδες της Γυάρου και της Άνδρου σιλουέτες στον ορίζοντα. Έξι ταβέρνες κατά μήκος της παραλίας.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Kini_Syros_1.jpg/1920px-Kini_Syros_1.jpg",
-            "photo_credit": {
-              "artist": "FocalPoint",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Kini_Syros_1.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Delfini Beach",
-            "lat": 37.4661,
-            "lng": 24.8878,
-            "type": "beach",
-            "time": "12:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ09ghifBjohQRL_3vBCAKqSg",
-            "desc": "Quiet beach north of Kini, reached on a short dirt road. Pebble bottom with crystal water; no facilities, no canteens, no shade — bring everything. The locals' alternative when Kini gets busy on weekends. Walk-in entry, gets deep quickly.",
-            "name_el": "Παραλία Δελφίνι",
-            "desc_el": "Ήσυχη παραλία βόρεια του Κινιού, με πρόσβαση από σύντομο χωματόδρομο. Βότσαλο βυθός με κρυστάλλινα νερά· καμία υποδομή, καμία καντίνα, καμία σκιά — πάρε τα πάντα μαζί. Η εναλλακτική των ντόπιων όταν το Κινί γεμίζει το Σαββατοκύριακο. Είσοδος με τα πόδια, βαθαίνει γρήγορα.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Delfini_beach_Syros_1.jpg/1920px-Delfini_beach_Syros_1.jpg",
-            "photo_credit": {
-              "artist": "FocalPoint",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Delfini_beach_Syros_1.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Ermoupoli — Rembetiko Evening",
-            "lat": 37.4439,
-            "lng": 24.944,
-            "type": "city",
-            "time": "21:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJtY2dhVKIohQRP58nUfzdJV8",
-            "desc": "Syros is the birthplace of Markos Vamvakaris, the \"patriarch of rembetiko.\" Live bouzouki at Rembetiki Istoria in the port until late.",
-            "name_el": "Ερμούπολη — Βραδιά Ρεμπέτικου",
-            "desc_el": "Η Σύρος είναι η γενέτειρα του Μάρκου Βαμβακάρη, του \"πατριάρχη του ρεμπέτικου\". Ζωντανό μπουζούκι στο Ρεμπέτικη Ιστορία στο λιμάνι μέχρι αργά."
-          }
-        ],
-        "title_el": "Βόρεια Σύρος & Ρεμπέτικο",
-        "overnight_el": "Αναχώρηση",
-        "food": [
-          {
-            "meal": "Lunch",
-            "meal_el": "Μεσημεριανό",
-            "area": "Kini & Ermoupoli",
-            "area_el": "Κίνι & Ερμούπολη",
-            "desc": "<a href=\"https://www.google.com/maps/search/Allou+Yialou+Kini+Syros\" target=\"_blank\" rel=\"noopener\">Allou Yialou</a> in Kini does fresh catch by the water. In town, <a href=\"https://www.google.com/maps/search/Tsipouradiko+tis+Mirsinis+Ermoupoli\" target=\"_blank\" rel=\"noopener\">Tsipouradiko tis Mirsinis</a> is the waterfront spot for meze and tsipouro.",
-            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Allou+Yialou+Kini+Syros\" target=\"_blank\" rel=\"noopener\">Allou Yialou</a> στο Κίνι κάνει φρέσκο ψάρι δίπλα στο νερό. Στην πόλη, το <a href=\"https://www.google.com/maps/search/Tsipouradiko+tis+Mirsinis+Ermoupoli\" target=\"_blank\" rel=\"noopener\">Τσιπουράδικο της Μυρσίνης</a> είναι το παραθαλάσσιο σημείο για μεζέ και τσίπουρο.",
-            "after": "Delfini Beach"
-          }
-        ]
-      }
-    ],
-    "title_el": "Πρόγραμμα 3 Ημερών στη Σύρο",
-    "subtitle_el": "Η νεοκλασική πρωτεύουσα των Κυκλάδων"
-  },
-  "beaches": [
-    {
-      "name": "Kini Beach",
-      "lat": 37.4461269,
-      "lng": 24.9002573,
-      "type": "Fine sand",
-      "length": "500 m",
-      "depth": "Gradual",
-      "facing": "West — famous for sunsets",
-      "facilities": "Good: tavernas, umbrellas, water sports",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJY19pxJxiohQRNZc17ljRXaI",
-      "desc": "The sunset beach of Syros. Long sandy bay with western exposure and an arc of tavernas.",
-      "name_el": "Παραλία Κινιού",
-      "desc_el": "Η παραλία του ηλιοβασιλέματος της Σύρου. Μακρύς αμμώδης κόλπος με δυτική έκθεση και μια σειρά από ταβέρνες.",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Σταδιακή",
-      "facing_el": "Δυτικά — διάσημη για ηλιοβασιλέματα",
-      "facilities_el": "Καλές: ταβέρνες, ομπρέλες, θαλάσσια σπορ",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Kini_beach%2C_Syros.jpg/1920px-Kini_beach%2C_Syros.jpg",
+  "days": [
+   {
+    "day": 1,
+    "title": "Ermoupoli & Ano Syros",
+    "km": 12,
+    "drive_mins": 30,
+    "overnight": "Ermoupoli",
+    "color": "#0B8FAC",
+    "stops": [
+     {
+      "name": "Miaouli Square",
+      "lat": 37.4439,
+      "lng": 24.944,
+      "type": "city",
+      "time": "09:30",
+      "wiki": "https://www.google.com/maps/search/Miaouli+Square+Syros",
+      "desc": "Grand central square of Ermoupoli with marble pavement and the 19th-century Town Hall designed by Ernst Ziller. The heart of the city — cafés ring the square, locals do their evening volta here, and the entire neoclassical plan of Ermoupoli radiates outward from this point. Stop for a coffee and watch the city pass.",
+      "name_el": "Πλατεία Μιαούλη",
+      "desc_el": "Μεγαλοπρεπής κεντρική πλατεία της Ερμούπολης με μαρμάρινο πεζοδρόμιο και το Δημαρχείο του 19ου αιώνα σε σχέδιο του Ερνστ Τσίλερ. Η καρδιά της πόλης — καφέ περιβάλλουν την πλατεία, οι ντόπιοι κάνουν τη βραδινή τους βόλτα εδώ, και ολόκληρο το νεοκλασικό σχέδιο της Ερμούπολης ξεκινάει από αυτό το σημείο. Σταμάτα για καφέ και δες την πόλη να περνά.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/View_of_Ermoupoli_%28Syros_island%29_from_a_ferry_boat_3.jpg/1920px-View_of_Ermoupoli_%28Syros_island%29_from_a_ferry_boat_3.jpg",
       "photo_credit": {
-        "artist": "Silva.1994",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Kini_beach,_Syros.jpg",
-        "source": "Wikimedia Commons"
+       "artist": "Leeturtle",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:View_of_Ermoupoli_(Syros_island)_from_a_ferry_boat_3.jpg",
+       "source": "Wikimedia Commons"
       }
-    },
-    {
+     },
+     {
+      "name": "Apollon Theater",
+      "lat": 37.4443,
+      "lng": 24.9428,
+      "type": "museum",
+      "time": "10:30",
+      "wiki": "https://www.google.com/maps/search/Apollon+Theater+Syros",
+      "desc": "Miniature replica of Milan's La Scala — the first opera house in modern Greece, opened 1864. Still functioning: the season runs through summer with chamber operas, recitals, and dance. The interior is worth seeing even when nothing's on; daytime guided tours are short but excellent.",
+      "name_el": "Θέατρο Απόλλων",
+      "desc_el": "Μινιατούρα αντίγραφο της La Scala του Μιλάνου — η πρώτη όπερα της σύγχρονης Ελλάδας, που άνοιξε το 1864. Λειτουργεί ακόμα: η σεζόν τρέχει όλο το καλοκαίρι με όπερες δωματίου, ρεσιτάλ και χορό. Το εσωτερικό αξίζει ακόμα και όταν δεν παίζει τίποτα· οι ξεναγήσεις την ημέρα είναι σύντομες αλλά εξαιρετικές.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Apollon_Theater%2C_stairwell.JPG/1920px-Apollon_Theater%2C_stairwell.JPG",
+      "photo_credit": {
+       "artist": "Zacharias Mitzelos",
+       "license": "CC0",
+       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Apollon_Theater,_stairwell.JPG",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Ano Syros (climb)",
+      "lat": 37.4496,
+      "lng": 24.9392,
+      "type": "village",
+      "time": "12:00",
+      "wiki": "https://www.google.com/maps/search/Ano+Syros+(climb)",
+      "desc": "Medieval Catholic settlement perched above Ermoupoli. Steep climb, stunning views. Visit St George cathedral at the top.",
+      "name_el": "Άνω Σύρος (ανάβαση)",
+      "desc_el": "Μεσαιωνικός καθολικός οικισμός σκαρφαλωμένος πάνω από την Ερμούπολη. Απότομη ανάβαση, συγκλονιστικές θέες. Επισκέψου τον καθεδρικό του Αγίου Γεωργίου στην κορυφή.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/View_of_Ermoupoli_from_Ano_Syros_2.jpg/1920px-View_of_Ermoupoli_from_Ano_Syros_2.jpg",
+      "photo_credit": {
+       "artist": "Leeturtle",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:View_of_Ermoupoli_from_Ano_Syros_2.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "time": "15:30",
+      "name": "Galissas Beach",
+      "name_el": "Παραλία Γαλησσά",
+      "type": "beach",
+      "lat": 37.421,
+      "lng": 24.8775,
+      "wiki": "https://www.google.com/maps/search/?api=1&query=Galissas+Beach+Syros",
+      "desc": "A short drive west of Ermoupoli drops you at Galissas — the closest substantial beach to the capital and the natural afternoon break before returning for the neoclassical Vaporia neighbourhood at sunset. Sheltered horseshoe bay, golden sand, family-friendly water, and a handful of beach tavernas. Less famous than the south-coast beaches that fill Day 2, but ideal for a quick swim built into a city day.",
+      "desc_el": "Σύντομη οδική απόσταση δυτικά της Ερμούπολης σε αφήνει στον Γαλησσά — την πιο κοντινή σημαντική παραλία στην πρωτεύουσα και τη φυσική απογευματινή στάση πριν την επιστροφή στη νεοκλασική γειτονιά Βαπόρια για το ηλιοβασίλεμα. Προφυλαγμένος κόλπος σε σχήμα πετάλου, χρυσαφένια άμμος, νερά φιλικά προς οικογένειες, και μια χούφτα παραλιακές ταβέρνες. Λιγότερο διάσημη από τις παραλίες της νότιας ακτής που γεμίζουν τη Μέρα 2, αλλά ιδανική για ένα γρήγορο μπάνιο ενσωματωμένο σε μια ημέρα στην πόλη."
+     },
+     {
+      "name": "Vaporia Neighborhood",
+      "lat": 37.4426,
+      "lng": 24.9461,
+      "type": "city",
+      "time": "17:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJmVS7eACJohQRwqEbjbMo_YM",
+      "desc": "Neoclassical sea-captains' district of pastel mansions that drop straight into the sea. Swim right off the rocks here.",
+      "name_el": "Συνοικία Βαπόρια",
+      "desc_el": "Νεοκλασική συνοικία πλοιάρχων με παστέλ αρχοντικά που πέφτουν κατευθείαν στη θάλασσα. Κολύμπα ακριβώς από τους βράχους εδώ."
+     },
+     {
+      "name": "Agios Nikolaos (sunset)",
+      "lat": 37.4421,
+      "lng": 24.9469,
+      "type": "church",
+      "time": "19:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJr1bxUVOIohQRoDt7Ez3hib0",
+      "desc": "Grand blue-domed church on the hill above Ermoupoli — the best sunset view in the city, looking out across the harbour and the upper Ano Syros. Walk up through the old streets behind the Town Hall; the climb takes 15 minutes. The courtyard is open until late.",
+      "name_el": "Άγιος Νικόλαος (ηλιοβασίλεμα)",
+      "desc_el": "Μεγαλοπρεπής εκκλησία με γαλάζιο τρούλο στον λόφο πάνω από την Ερμούπολη — η καλύτερη θέα ηλιοβασιλέματος της πόλης, βλέποντας τον λιμένα και την επάνω Άνω Σύρο. Ανέβα από τα παλιά στενά πίσω από το Δημαρχείο· η ανάβαση διαρκεί 15 λεπτά. Η αυλή είναι ανοιχτή μέχρι αργά."
+     }
+    ],
+    "title_el": "Ερμούπολη & Άνω Σύρος",
+    "overnight_el": "Ερμούπολη",
+    "nightlife": "Ermoupoli's nightlife is elegant rather than wild — fitting for the grand old capital of the Cyclades. Drinks around <a href=\"https://www.google.com/maps/search/Miaouli+Square+Ermoupoli+Syros\" target=\"_blank\" rel=\"noopener\">Miaouli Square</a> and the lanes off it: <a href=\"https://www.google.com/maps/search/MouSouTou+Syros\" target=\"_blank\" rel=\"noopener\">MouSouTou</a> for cocktails (and its own gin), tucked-away <a href=\"https://www.google.com/maps/search/Kouchico+Syros\" target=\"_blank\" rel=\"noopener\">Kouchico</a> for craft drinks, and the 1924 grande dame <a href=\"https://www.google.com/maps/search/Aktaion+Ermoupoli+Syros\" target=\"_blank\" rel=\"noopener\">Aktaion</a> for live-music nights. Rembetiko, the island's signature, surfaces in the tavernas of Ano Syros.",
+    "nightlife_el": "Η νυχτερινή ζωή της Ερμούπολης είναι κομψή παρά ξέφρενη — ταιριάζει στη μεγάλη παλιά πρωτεύουσα των Κυκλάδων. Ποτά γύρω από την <a href=\"https://www.google.com/maps/search/Miaouli+Square+Ermoupoli+Syros\" target=\"_blank\" rel=\"noopener\">Πλατεία Μιαούλη</a> και τα στενά της: <a href=\"https://www.google.com/maps/search/MouSouTou+Syros\" target=\"_blank\" rel=\"noopener\">MouSouTou</a> για κοκτέιλ (και δικό του τζιν), το κρυμμένο <a href=\"https://www.google.com/maps/search/Kouchico+Syros\" target=\"_blank\" rel=\"noopener\">Kouchico</a> για craft ποτά, και η γκραντ νταμ του 1924 <a href=\"https://www.google.com/maps/search/Aktaion+Ermoupoli+Syros\" target=\"_blank\" rel=\"noopener\">Aktaion</a> για βραδιές ζωντανής μουσικής. Το ρεμπέτικο, η υπογραφή του νησιού, ακούγεται στις ταβέρνες της Άνω Σύρου.",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Ano Syros",
+      "area_el": "Άνω Σύρος",
+      "desc": "<a href=\"https://www.google.com/maps/search/Lilis+Ano+Syros\" target=\"_blank\" rel=\"noopener\">Lilis</a> has a panoramic terrace and rembetiko heritage; <a href=\"https://www.google.com/maps/search/Plakostroto+Ano+Syros\" target=\"_blank\" rel=\"noopener\">Plakostroto</a> nearby pairs Syrian meze with the same rooftop views.",
+      "desc_el": "Το <a href=\"https://www.google.com/maps/search/Lilis+Ano+Syros\" target=\"_blank\" rel=\"noopener\">Lilis</a> έχει πανοραμική βεράντα και ρεμπέτικη κληρονομιά· το <a href=\"https://www.google.com/maps/search/Plakostroto+Ano+Syros\" target=\"_blank\" rel=\"noopener\">Plakostroto</a> δίπλα συνδυάζει συριανούς μεζέδες με την ίδια θέα από ψηλά.",
+      "after": "Ano Syros (climb)"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "title": "South Coast Beaches",
+    "km": 30,
+    "drive_mins": 60,
+    "overnight": "Ermoupoli",
+    "color": "#3D8B6F",
+    "stops": [
+     {
       "name": "Galissas",
       "lat": 37.421009,
       "lng": 24.8775037,
-      "type": "Fine sand",
-      "length": "600 m",
-      "depth": "Shallow",
-      "facing": "West",
-      "facilities": "Full: hotels, restaurants, watersports",
+      "type": "beach",
+      "time": "10:00",
       "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJzZxg3zR9ohQRMOP23F2yJI0",
-      "desc": "Syros' biggest beach. Lively, family-friendly, well-developed. Great for all ages.",
+      "desc": "Long sandy bay on the west coast, the most popular family beach on Syros. Many tavernas, shallow water for children, and the place where locals from Ermoupoli come on weekends. The road from the city is winding but only takes 20 minutes by bus or scooter.",
       "name_el": "Γαλησσάς",
-      "desc_el": "Η μεγαλύτερη παραλία της Σύρου. Ζωντανή, οικογενειακή, καλά ανεπτυγμένη. Εξαιρετική για όλες τις ηλικίες.",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Ρηχά",
-      "facing_el": "Δυτικά",
-      "facilities_el": "Πλήρεις: ξενοδοχεία, εστιατόρια, θαλάσσια σπορ",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/View_from_chapel_of_Ag._Pakou%2C_Ialyssos%2C_Galissas%2C_Syros%2C_180281.jpg/1920px-View_from_chapel_of_Ag._Pakou%2C_Ialyssos%2C_Galissas%2C_Syros%2C_180281.jpg",
+      "desc_el": "Μακρύς αμμώδης κόλπος στη δυτική ακτή, η πιο δημοφιλής οικογενειακή παραλία της Σύρου. Πολλές ταβέρνες, ρηχά νερά για παιδιά, και το μέρος όπου έρχονται οι ντόπιοι της Ερμούπολης τα σαββατοκύριακα. Ο δρόμος από την πόλη είναι ελικοειδής αλλά διαρκεί μόλις 20 λεπτά με λεωφορείο ή σκούτερ.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Galissas_Syros.jpg/1920px-Galissas_Syros.jpg",
       "photo_credit": {
-        "artist": "Zde",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:View_from_chapel_of_Ag._Pakou,_Ialyssos,_Galissas,_Syros,_180281.jpg",
-        "source": "Wikimedia Commons"
+       "artist": "FocalPoint",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Galissas_Syros.jpg",
+       "source": "Wikimedia Commons"
       }
-    },
-    {
-      "name": "Vari",
+     },
+     {
+      "name": "Finikas",
+      "lat": 37.398377,
+      "lng": 24.8780685,
+      "type": "beach",
+      "time": "13:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJjwMjQWt9ohQRoI6ALJpKr1s",
+      "desc": "Chic fishing village turned beach community on the south coast, with a small harbour, a sandy beach, and a string of waterfront tavernas. Lunch at one of them — the seafood is straight off the boats, and the bill is noticeably more reasonable than the equivalent at Galissas or Vari.",
+      "name_el": "Φοίνικας",
+      "desc_el": "Κομψό αλιευτικό χωριό-παραλία στη νότια ακτή, με μικρό λιμάνι, αμμώδη παραλία, και σειρά ψαροταβέρνων στην προκυμαία. Μεσημεριανό σε μία από αυτές — τα θαλασσινά είναι κατευθείαν από τα καΐκια, και ο λογαριασμός είναι αισθητά πιο λογικός από το αντίστοιχο στο Γαλησσά ή στο Βάρη.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Finikas_%28Foinikas%29%2C_Syros%2C_Greece_15.jpg/1920px-Finikas_%28Foinikas%29%2C_Syros%2C_Greece_15.jpg",
+      "photo_credit": {
+       "artist": "Sgroey",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Finikas_(Foinikas),_Syros,_Greece_15.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Poseidonia (Della Grazia)",
+      "lat": 37.3903657,
+      "lng": 24.8873192,
+      "type": "village",
+      "time": "15:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ2VFdds59ohQRu-OZwUaO534",
+      "desc": "Aristocratic summer village of late 19th-century neoclassical villas, built by Ermoupoli's shipping families as their seaside retreats. Walk through for the architecture — the streets are quiet outside July and August. The village beach is small and pebbly, more about the setting than the swim.",
+      "name_el": "Ποσειδωνία (Ντελαγκράτσια)",
+      "desc_el": "Αριστοκρατικό θερινό χωριό με νεοκλασικές επαύλεις του τέλους του 19ου αιώνα, χτισμένες από τις εφοπλιστικές οικογένειες της Ερμούπολης ως παραθεριστικά καταφύγια. Περπάτα για την αρχιτεκτονική — οι δρόμοι είναι ήσυχοι εκτός Ιουλίου και Αυγούστου. Η παραλία του χωριού είναι μικρή και βότσαλη, περισσότερο για το σκηνικό παρά για το κολύμπι."
+     },
+     {
+      "name": "Vari Beach",
       "lat": 37.3971761,
       "lng": 24.9462694,
-      "type": "Fine sand",
-      "length": "400 m",
-      "depth": "Very shallow",
-      "facing": "South — protected",
-      "facilities": "Good: tavernas, umbrellas",
+      "type": "beach",
+      "time": "17:00",
       "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJc1PIY8mHohQRHkLuYtVLscg",
-      "desc": "Protected horseshoe bay with the calmest, warmest water on Syros. Ideal for kids.",
-      "name_el": "Βάρη",
-      "desc_el": "Προστατευμένος κόλπος σε σχήμα πετάλου με τα πιο ήρεμα, ζεστά νερά της Σύρου. Ιδανική για παιδιά.",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Πολύ ρηχά",
-      "facing_el": "Νότια — προστατευμένη",
-      "facilities_el": "Καλές: ταβέρνες, ομπρέλες"
-    }
-  ],
-  "name_el": "Σύρος",
-  "name_accusative_el": "Σύρο",
-  "name_genitive_el": "Σύρου",
-  "gender_el": "f",
-  "subtitle_el": "Η νεοκλασική πρωτεύουσα των Κυκλάδων",
-  "intro_el": "Η Σύρος είναι η διοικητική πρωτεύουσα των Κυκλάδων — και δεν μοιάζει καθόλου με νησί. Η Ερμούπολη, η παστέλ νεοκλασική λιμενική πόλη της, ήταν κάποτε το πιο πολυσύχναστο λιμάνι της Ελλάδας και η πόλη ακόμα νιώθεις μεγαλοπρεπής, καλλιεργημένη, ζωντανή. Αυτό είναι ένα νησί που δουλεύει όλο τον χρόνο, όχι ένα εποχιακό θέρετρο. Έρχεσαι εδώ για την αρχιτεκτονική, την όπερα, τις μαρμαρόστρωτες πλατείες και τον καλύτερο ρεμπέτικο της Ελλάδας.",
-  "suited_for": {
-    "good": [
-      "Travellers who want architecture, culture and a real year-round town rather than a resort",
-      "Anyone drawn to Ermoupoli's neoclassical grandeur, its opera house and rembetiko music",
-      "Visitors who like a Cycladic hub with easy onward ferries to Tinos and Mykonos"
+      "desc": "Horseshoe bay with shallow water — the warmest beach on Syros, sheltered from wind on three sides and protected by an islet at the entrance. Family-friendly and never genuinely cold even early in the season. The hamlet behind has a couple of tavernas and not much else.",
+      "name_el": "Παραλία Βάρης",
+      "desc_el": "Κόλπος σε σχήμα πετάλου με ρηχά νερά — η πιο ζεστή παραλία της Σύρου, προστατευμένη από άνεμο από τρεις πλευρές και προστατευμένη από νησίδα στην είσοδο. Φιλική σε οικογένειες και ποτέ πραγματικά κρύα ακόμα και νωρίς στη σεζόν. Ο μικρός οικισμός πίσω έχει δύο ταβέρνες και τίποτα άλλο."
+     },
+     {
+      "name": "Dinner in Ermoupoli",
+      "lat": 37.4418,
+      "lng": 24.9404,
+      "type": "city",
+      "time": "20:00",
+      "wiki": null,
+      "desc": "Drive back to Ermoupoli (about 15 minutes from Vari). The Apollon Theatre and Miaouli Square come alive after dark — Syros has more \"Saturday night\" energy than most Cyclades.",
+      "name_el": "Δείπνο στην Ερμούπολη",
+      "desc_el": "Επιστροφή στην Ερμούπολη (περίπου 15 λεπτά από το Βάρη). Το Απόλλων και η πλατεία Μιαούλη ζωντανεύουν μετά το σκοτάδι — η Σύρος έχει περισσότερη ενέργεια από τα περισσότερα Κυκλαδονήσια."
+     }
     ],
-    "good_el": [
-      "Ταξιδιώτες που θέλουν αρχιτεκτονική, πολιτισμό και μια πραγματική πόλη όλο τον χρόνο, όχι θέρετρο",
-      "Όσους τραβά η νεοκλασική μεγαλοπρέπεια της Ερμούπολης, το θέατρό της και το ρεμπέτικο",
-      "Επισκέπτες που τους αρέσει ένας κυκλαδίτικος κόμβος με εύκολες συνδέσεις προς Τήνο και Μύκονο"
+    "title_el": "Παραλίες της Νότιας Ακτής",
+    "overnight_el": "Ερμούπολη"
+   },
+   {
+    "day": 3,
+    "title": "North Syros & Rembetiko",
+    "km": 35,
+    "drive_mins": 80,
+    "overnight": "Departure",
+    "color": "#C4962A",
+    "stops": [
+     {
+      "name": "Kini",
+      "lat": 37.4461269,
+      "lng": 24.9002573,
+      "type": "village",
+      "time": "10:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJY19pxJxiohQRNZc17ljRXaI",
+      "desc": "Fishing village on the west coast with a long sandy beach and an active small fleet still bringing in the catch each morning. The best sunsets on Syros — west-facing, with the islets of Gyaros and Andros silhouetted on the horizon. Half a dozen tavernas line the beach.",
+      "name_el": "Κίνι",
+      "desc_el": "Αλιευτικό χωριό στη δυτική ακτή με μακριά αμμώδη παραλία και έναν ενεργό μικρό στόλο που πιάνει ακόμα ψαριά κάθε πρωί. Τα καλύτερα ηλιοβασιλέματα της Σύρου — δυτικός προσανατολισμός, με τις νησίδες της Γυάρου και της Άνδρου σιλουέτες στον ορίζοντα. Έξι ταβέρνες κατά μήκος της παραλίας.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Kini_Syros_1.jpg/1920px-Kini_Syros_1.jpg",
+      "photo_credit": {
+       "artist": "FocalPoint",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Kini_Syros_1.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Delfini Beach",
+      "lat": 37.4661,
+      "lng": 24.8878,
+      "type": "beach",
+      "time": "12:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ09ghifBjohQRL_3vBCAKqSg",
+      "desc": "Quiet beach north of Kini, reached on a short dirt road. Pebble bottom with crystal water; no facilities, no canteens, no shade — bring everything. The locals' alternative when Kini gets busy on weekends. Walk-in entry, gets deep quickly.",
+      "name_el": "Παραλία Δελφίνι",
+      "desc_el": "Ήσυχη παραλία βόρεια του Κινιού, με πρόσβαση από σύντομο χωματόδρομο. Βότσαλο βυθός με κρυστάλλινα νερά· καμία υποδομή, καμία καντίνα, καμία σκιά — πάρε τα πάντα μαζί. Η εναλλακτική των ντόπιων όταν το Κινί γεμίζει το Σαββατοκύριακο. Είσοδος με τα πόδια, βαθαίνει γρήγορα.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Delfini_beach_Syros_1.jpg/1920px-Delfini_beach_Syros_1.jpg",
+      "photo_credit": {
+       "artist": "FocalPoint",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Delfini_beach_Syros_1.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Ermoupoli — Rembetiko Evening",
+      "lat": 37.4439,
+      "lng": 24.944,
+      "type": "city",
+      "time": "21:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJtY2dhVKIohQRP58nUfzdJV8",
+      "desc": "Syros is the birthplace of Markos Vamvakaris, the \"patriarch of rembetiko.\" Live bouzouki at Rembetiki Istoria in the port until late.",
+      "name_el": "Ερμούπολη — Βραδιά Ρεμπέτικου",
+      "desc_el": "Η Σύρος είναι η γενέτειρα του Μάρκου Βαμβακάρη, του \"πατριάρχη του ρεμπέτικου\". Ζωντανό μπουζούκι στο Ρεμπέτικη Ιστορία στο λιμάνι μέχρι αργά."
+     }
     ],
-    "skip": [
-      "If your priority is beaches — Syros has decent ones but they're not the reason to come",
-      "If you want a sleepy, switched-off island; Ermoupoli is busy and urban"
-    ],
-    "skip_el": [
-      "Αν προτεραιότητά σου είναι οι παραλίες — η Σύρος έχει καλές αλλά δεν είναι ο λόγος να έρθεις",
-      "Αν θέλεις ένα νυσταγμένο, αποσυνδεδεμένο νησί· η Ερμούπολη είναι πολυσύχναστη και αστική"
+    "title_el": "Βόρεια Σύρος & Ρεμπέτικο",
+    "overnight_el": "Αναχώρηση",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Kini & Ermoupoli",
+      "area_el": "Κίνι & Ερμούπολη",
+      "desc": "<a href=\"https://www.google.com/maps/search/Allou+Yialou+Kini+Syros\" target=\"_blank\" rel=\"noopener\">Allou Yialou</a> in Kini does fresh catch by the water. In town, <a href=\"https://www.google.com/maps/search/Tsipouradiko+tis+Mirsinis+Ermoupoli\" target=\"_blank\" rel=\"noopener\">Tsipouradiko tis Mirsinis</a> is the waterfront spot for meze and tsipouro.",
+      "desc_el": "Το <a href=\"https://www.google.com/maps/search/Allou+Yialou+Kini+Syros\" target=\"_blank\" rel=\"noopener\">Allou Yialou</a> στο Κίνι κάνει φρέσκο ψάρι δίπλα στο νερό. Στην πόλη, το <a href=\"https://www.google.com/maps/search/Tsipouradiko+tis+Mirsinis+Ermoupoli\" target=\"_blank\" rel=\"noopener\">Τσιπουράδικο της Μυρσίνης</a> είναι το παραθαλάσσιο σημείο για μεζέ και τσίπουρο.",
+      "after": "Delfini Beach"
+     }
     ]
-  },
-  "getting_there": {
-    "pills": [
-      "⛵ Piraeus 2–4h",
-      "€30–50"
-    ],
-    "pills_el": [
-      "⛵ Πειραιάς 2–4h",
-      "€30–50"
-    ],
-    "summary": "Small domestic airport (Olympic). Capital of the Cyclades — Ermoupoli is a real working town. Ferries dock at Ermoupoli port. Major hub on the Eastern Cyclades line — frequent connections to Tinos and Mykonos.",
-    "summary_el": "Μικρό αεροδρόμιο εσωτερικού (Olympic). Πρωτεύουσα Κυκλάδων — η Ερμούπολη είναι αληθινή λειτουργική πόλη. Τα πλοία δένουν στο λιμάνι Ερμούπολης. Κόμβος της γραμμής Ανατολικών Κυκλάδων — συχνές συνδέσεις με Τήνο και Μύκονο.",
-    "tip": "Syros runs year-round — you can visit in November and the town still works.",
-    "tip_el": "Η Σύρος λειτουργεί όλο τον χρόνο — μπορείς να πας Νοέμβριο και η πόλη δουλεύει κανονικά."
-  },
-  "specialties": [
-    {
-      "name": "Loukoumia",
-      "name_el": "Λουκούμια Σύρου",
-      "desc": "Syros has been making loukoumia (Greek-style Turkish delight) since 1832, when the first refugees from Chios brought the recipe. Soft, fragrant — usually rose or mastic — dusted with icing sugar. A box of loukoumia is the classic ferry-home gift. Sykia and Stamatopoulou are the historic makers in Ermoupoli.",
-      "desc_el": "Η Σύρος φτιάχνει λουκούμια από το 1832, όταν οι πρώτοι πρόσφυγες από τη Χίο έφεραν τη συνταγή. Μαλακά, αρωματικά — συνήθως τριαντάφυλλο ή μαστίχα — πασπαλισμένα με ζάχαρη άχνη. Ένα κουτί λουκούμια είναι το κλασικό δώρο για το πλοίο. Συκιά και Σταματοπούλου είναι οι ιστορικοί παραγωγοί στην Ερμούπολη."
-    },
-    {
-      "name": "Halvadopita",
-      "name_el": "Χαλβαδόπιτα",
-      "desc": "A thin, sweet wafer of nougat (mostly honey, egg-white, almonds) pressed between two communion-wafer crackers — invented on Syros in the 19th century. Sold by street vendors at Miaouli Square; one is a snack, two are dinner.",
-      "desc_el": "Λεπτή, γλυκιά φέτα νουγκά (κυρίως μέλι, ασπράδι αυγού, αμύγδαλο) ανάμεσα σε δύο όστιες — εφεύρεση της Σύρου του 19ου αιώνα. Πωλείται από πλανόδιους στην πλατεία Μιαούλη· μία είναι σνακ, δύο είναι δείπνο."
-    },
-    {
-      "name": "San Michalis cheese",
-      "name_el": "Σαν Μιχάλης",
-      "desc": "Hard cow's-milk cheese matured for at least three months, with a sharp, peppery, parmesan-like profile. PDO since 1996. Eaten grated over pasta, or thinly sliced with a glass of cold local white. Found in the dairies of Ano Syros and at the Saturday farmers' market in Ermoupoli.",
-      "desc_el": "Σκληρό τυρί από αγελαδινό γάλα που ωριμάζει τουλάχιστον τρεις μήνες, με έντονη, πιπεράτη γεύση παρόμοια με παρμεζάνα. Π.Ο.Π. από το 1996. Τρώγεται τριμμένο πάνω από ζυμαρικά, ή σε λεπτές φέτες με ένα ποτήρι κρύο τοπικό λευκό. Βρίσκεται στα τυροκομεία της Άνω Σύρου και στη λαϊκή του Σαββάτου στην Ερμούπολη."
-    }
+   }
   ],
-  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783277166/%CF%83%CF%85%CF%81%CE%BF%CF%82_anwqh4.jpg"
+  "title_el": "Πρόγραμμα 3 Ημερών στη Σύρο",
+  "subtitle_el": "Η νεοκλασική πρωτεύουσα των Κυκλάδων"
+ },
+ "beaches": [
+  {
+   "name": "Kini Beach",
+   "lat": 37.4461269,
+   "lng": 24.9002573,
+   "type": "Fine sand",
+   "length": "500 m",
+   "depth": "Gradual",
+   "facing": "West — famous for sunsets",
+   "facilities": "Good: tavernas, umbrellas, water sports",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJY19pxJxiohQRNZc17ljRXaI",
+   "desc": "The sunset beach of Syros. Long sandy bay with western exposure and an arc of tavernas.",
+   "name_el": "Παραλία Κινιού",
+   "desc_el": "Η παραλία του ηλιοβασιλέματος της Σύρου. Μακρύς αμμώδης κόλπος με δυτική έκθεση και μια σειρά από ταβέρνες.",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Σταδιακή",
+   "facing_el": "Δυτικά — διάσημη για ηλιοβασιλέματα",
+   "facilities_el": "Καλές παροχές: ταβέρνες, ομπρέλες, θαλάσσια σπορ",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Kini_beach%2C_Syros.jpg/1920px-Kini_beach%2C_Syros.jpg",
+   "photo_credit": {
+    "artist": "Silva.1994",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Kini_beach,_Syros.jpg",
+    "source": "Wikimedia Commons"
+   }
+  },
+  {
+   "name": "Galissas",
+   "lat": 37.421009,
+   "lng": 24.8775037,
+   "type": "Fine sand",
+   "length": "600 m",
+   "depth": "Shallow",
+   "facing": "West",
+   "facilities": "Full: hotels, restaurants, watersports",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJzZxg3zR9ohQRMOP23F2yJI0",
+   "desc": "Syros' biggest beach. Lively, family-friendly, well-developed. Great for all ages.",
+   "name_el": "Γαλησσάς",
+   "desc_el": "Η μεγαλύτερη παραλία της Σύρου. Ζωντανή, οικογενειακή, καλά ανεπτυγμένη. Εξαιρετική για όλες τις ηλικίες.",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Ρηχά",
+   "facing_el": "Δυτικά",
+   "facilities_el": "Πλήρεις παροχές: ξενοδοχεία, εστιατόρια, θαλάσσια σπορ",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/View_from_chapel_of_Ag._Pakou%2C_Ialyssos%2C_Galissas%2C_Syros%2C_180281.jpg/1920px-View_from_chapel_of_Ag._Pakou%2C_Ialyssos%2C_Galissas%2C_Syros%2C_180281.jpg",
+   "photo_credit": {
+    "artist": "Zde",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:View_from_chapel_of_Ag._Pakou,_Ialyssos,_Galissas,_Syros,_180281.jpg",
+    "source": "Wikimedia Commons"
+   }
+  },
+  {
+   "name": "Vari",
+   "lat": 37.3971761,
+   "lng": 24.9462694,
+   "type": "Fine sand",
+   "length": "400 m",
+   "depth": "Very shallow",
+   "facing": "South — protected",
+   "facilities": "Good: tavernas, umbrellas",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJc1PIY8mHohQRHkLuYtVLscg",
+   "desc": "Protected horseshoe bay with the calmest, warmest water on Syros. Ideal for kids.",
+   "name_el": "Βάρη",
+   "desc_el": "Προστατευμένος κόλπος σε σχήμα πετάλου με τα πιο ήρεμα, ζεστά νερά της Σύρου. Ιδανική για παιδιά.",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Πολύ ρηχά",
+   "facing_el": "Νότια — προστατευμένη",
+   "facilities_el": "Καλές παροχές: ταβέρνες, ομπρέλες"
+  }
+ ],
+ "name_el": "Σύρος",
+ "name_accusative_el": "Σύρο",
+ "name_genitive_el": "Σύρου",
+ "gender_el": "f",
+ "subtitle_el": "Η νεοκλασική πρωτεύουσα των Κυκλάδων",
+ "intro_el": "Η Σύρος είναι η διοικητική πρωτεύουσα των Κυκλάδων — και δεν μοιάζει καθόλου με νησί. Η Ερμούπολη, η παστέλ νεοκλασική λιμενική πόλη της, ήταν κάποτε το πιο πολυσύχναστο λιμάνι της Ελλάδας και η πόλη ακόμα νιώθεις μεγαλοπρεπής, καλλιεργημένη, ζωντανή. Αυτό είναι ένα νησί που δουλεύει όλο τον χρόνο, όχι ένα εποχιακό θέρετρο. Έρχεσαι εδώ για την αρχιτεκτονική, την όπερα, τις μαρμαρόστρωτες πλατείες και τον καλύτερο ρεμπέτικο της Ελλάδας.",
+ "suited_for": {
+  "good": [
+   "Travellers who want architecture, culture and a real year-round town rather than a resort",
+   "Anyone drawn to Ermoupoli's neoclassical grandeur, its opera house and rembetiko music",
+   "Visitors who like a Cycladic hub with easy onward ferries to Tinos and Mykonos"
+  ],
+  "good_el": [
+   "Ταξιδιώτες που θέλουν αρχιτεκτονική, πολιτισμό και μια πραγματική πόλη όλο τον χρόνο, όχι θέρετρο",
+   "Όσους τραβά η νεοκλασική μεγαλοπρέπεια της Ερμούπολης, το θέατρό της και το ρεμπέτικο",
+   "Επισκέπτες που τους αρέσει ένας κυκλαδίτικος κόμβος με εύκολες συνδέσεις προς Τήνο και Μύκονο"
+  ],
+  "skip": [
+   "If your priority is beaches — Syros has decent ones but they're not the reason to come",
+   "If you want a sleepy, switched-off island; Ermoupoli is busy and urban"
+  ],
+  "skip_el": [
+   "Αν προτεραιότητά σου είναι οι παραλίες — η Σύρος έχει καλές αλλά δεν είναι ο λόγος να έρθεις",
+   "Αν θέλεις ένα νυσταγμένο, αποσυνδεδεμένο νησί· η Ερμούπολη είναι πολυσύχναστη και αστική"
+  ]
+ },
+ "getting_there": {
+  "pills": [
+   "⛵ Piraeus 2–4h",
+   "€30–50"
+  ],
+  "pills_el": [
+   "⛵ Πειραιάς 2–4h",
+   "€30–50"
+  ],
+  "summary": "Small domestic airport (Olympic). Capital of the Cyclades — Ermoupoli is a real working town. Ferries dock at Ermoupoli port. Major hub on the Eastern Cyclades line — frequent connections to Tinos and Mykonos.",
+  "summary_el": "Μικρό αεροδρόμιο εσωτερικού (Olympic). Πρωτεύουσα Κυκλάδων — η Ερμούπολη είναι αληθινή λειτουργική πόλη. Τα πλοία δένουν στο λιμάνι Ερμούπολης. Κόμβος της γραμμής Ανατολικών Κυκλάδων — συχνές συνδέσεις με Τήνο και Μύκονο.",
+  "tip": "Syros runs year-round — you can visit in November and the town still works.",
+  "tip_el": "Η Σύρος λειτουργεί όλο τον χρόνο — μπορείς να πας Νοέμβριο και η πόλη δουλεύει κανονικά."
+ },
+ "specialties": [
+  {
+   "name": "Loukoumia",
+   "name_el": "Λουκούμια Σύρου",
+   "desc": "Syros has been making loukoumia (Greek-style Turkish delight) since 1832, when the first refugees from Chios brought the recipe. Soft, fragrant — usually rose or mastic — dusted with icing sugar. A box of loukoumia is the classic ferry-home gift. Sykia and Stamatopoulou are the historic makers in Ermoupoli.",
+   "desc_el": "Η Σύρος φτιάχνει λουκούμια από το 1832, όταν οι πρώτοι πρόσφυγες από τη Χίο έφεραν τη συνταγή. Μαλακά, αρωματικά — συνήθως τριαντάφυλλο ή μαστίχα — πασπαλισμένα με ζάχαρη άχνη. Ένα κουτί λουκούμια είναι το κλασικό δώρο για το πλοίο. Συκιά και Σταματοπούλου είναι οι ιστορικοί παραγωγοί στην Ερμούπολη."
+  },
+  {
+   "name": "Halvadopita",
+   "name_el": "Χαλβαδόπιτα",
+   "desc": "A thin, sweet wafer of nougat (mostly honey, egg-white, almonds) pressed between two communion-wafer crackers — invented on Syros in the 19th century. Sold by street vendors at Miaouli Square; one is a snack, two are dinner.",
+   "desc_el": "Λεπτή, γλυκιά φέτα νουγκά (κυρίως μέλι, ασπράδι αυγού, αμύγδαλο) ανάμεσα σε δύο όστιες — εφεύρεση της Σύρου του 19ου αιώνα. Πωλείται από πλανόδιους στην πλατεία Μιαούλη· μία είναι σνακ, δύο είναι δείπνο."
+  },
+  {
+   "name": "San Michalis cheese",
+   "name_el": "Σαν Μιχάλης",
+   "desc": "Hard cow's-milk cheese matured for at least three months, with a sharp, peppery, parmesan-like profile. PDO since 1996. Eaten grated over pasta, or thinly sliced with a glass of cold local white. Found in the dairies of Ano Syros and at the Saturday farmers' market in Ermoupoli.",
+   "desc_el": "Σκληρό τυρί από αγελαδινό γάλα που ωριμάζει τουλάχιστον τρεις μήνες, με έντονη, πιπεράτη γεύση παρόμοια με παρμεζάνα. Π.Ο.Π. από το 1996. Τρώγεται τριμμένο πάνω από ζυμαρικά, ή σε λεπτές φέτες με ένα ποτήρι κρύο τοπικό λευκό. Βρίσκεται στα τυροκομεία της Άνω Σύρου και στη λαϊκή του Σαββάτου στην Ερμούπολη."
+  }
+ ],
+ "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783277166/%CF%83%CF%85%CF%81%CE%BF%CF%82_anwqh4.jpg"
 }

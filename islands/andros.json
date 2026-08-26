@@ -1,480 +1,480 @@
 {
-  "key": "andros",
-  "name": "Andros",
-  "intro": "Andros is the northernmost and second-largest Cycladic island, but it feels like nowhere else in the Cyclades. Spring-fed streams, oak forests, and stone-paved hiking trails make it more Tuscan than Aegean. The main town, Chora, is elegantly neoclassical — home to the largest contemporary art museum in the Aegean. Serious hikers come for the Andros Route, a 100 km trail across the island.",
+ "key": "andros",
+ "name": "Andros",
+ "intro": "Andros is the northernmost and second-largest Cycladic island, but it feels like nowhere else in the Cyclades. Spring-fed streams, oak forests, and stone-paved hiking trails make it more Tuscan than Aegean. The main town, Chora, is elegantly neoclassical — home to the largest contemporary art museum in the Aegean. Serious hikers come for the Andros Route, a 100 km trail across the island.",
+ "subtitle": "Hiking trails, oak forests, and neoclassical Chora",
+ "when_to_visit": {
+  "summary": "Andros is the Cyclades island that doesn't feel like the Cyclades — green, watered, hiking trails everywhere. Swim May through October; hike March through November. The Andros Marathon walks (organized hiking events) run May and October. Avoid August only if you dislike crowds; Athens summer-house traffic is intense.",
+  "summary_el": "Η Άνδρος είναι το κυκλαδίτικο νησί που δεν μοιάζει με Κυκλάδες — πράσινη, με νερά, μονοπάτια πεζοπορίας παντού. Κολύμπι από τον Μάιο ως τον Οκτώβριο· πεζοπορία από τον Μάρτιο ως τον Νοέμβριο. Οι οργανωμένες πεζοπορίες (Andros Routes) γίνονται Μάιο και Οκτώβριο. Απόφυγε τον Αύγουστο μόνο αν δεν αντέχεις τον κόσμο· η κίνηση από τα εξοχικά των Αθηναίων είναι έντονη.",
+  "months": [
+   {
+    "tag": "ok",
+    "why": "Green, hiking only",
+    "why_el": "Πράσινο, μόνο"
+   },
+   {
+    "tag": "ok",
+    "why": "Cold, hiking",
+    "why_el": "Κρύο, πεζοπορία"
+   },
+   {
+    "tag": "great",
+    "why": "Hiking heaven",
+    "why_el": "Πεζοπορία peak"
+   },
+   {
+    "tag": "great",
+    "why": "Easter, walks, mild",
+    "why_el": "Πάσχα & μονοπάτια"
+   },
+   {
+    "tag": "perfect",
+    "why": "Andros Routes",
+    "why_el": "Andros Routes"
+   },
+   {
+    "tag": "perfect",
+    "why": "Long days, warm",
+    "why_el": "Ολοήμερο φως"
+   },
+   {
+    "tag": "ok",
+    "why": "Hot, Athenians",
+    "why_el": "Ζέστη, Αθηναίοι"
+   },
+   {
+    "tag": "avoid",
+    "why": "Athens summer-house",
+    "why_el": "Φόρτος εξοχικών"
+   },
+   {
+    "tag": "perfect",
+    "why": "Best — sea+walks",
+    "why_el": "Καλύτερος — ήρεμα"
+   },
+   {
+    "tag": "great",
+    "why": "Hiking+last swims",
+    "why_el": "Πεζοπορία, τελευταία"
+   },
+   {
+    "tag": "ok",
+    "why": "Hiking only",
+    "why_el": "Μόνο πεζοπορία"
+   },
+   {
+    "tag": "ok",
+    "why": "Quiet, Christmas",
+    "why_el": "Ήσυχα, Χριστούγεννα"
+   }
+  ]
+ },
+ "itinerary": {
+  "title": "3-day Itinerary for Andros",
   "subtitle": "Hiking trails, oak forests, and neoclassical Chora",
-  "when_to_visit": {
-    "summary": "Andros is the Cyclades island that doesn't feel like the Cyclades — green, watered, hiking trails everywhere. Swim May through October; hike March through November. The Andros Marathon walks (organized hiking events) run May and October. Avoid August only if you dislike crowds; Athens summer-house traffic is intense.",
-    "summary_el": "Η Άνδρος είναι το κυκλαδίτικο νησί που δεν μοιάζει με Κυκλάδες — πράσινη, με νερά, μονοπάτια πεζοπορίας παντού. Κολύμπι από τον Μάιο ως τον Οκτώβριο· πεζοπορία από τον Μάρτιο ως τον Νοέμβριο. Οι οργανωμένες πεζοπορίες (Andros Routes) γίνονται Μάιο και Οκτώβριο. Απόφυγε τον Αύγουστο μόνο αν δεν αντέχεις τον κόσμο· η κίνηση από τα εξοχικά των Αθηναίων είναι έντονη.",
-    "months": [
-      {
-        "tag": "ok",
-        "why": "Green, hiking only",
-        "why_el": "Πράσινο, μόνο"
-      },
-      {
-        "tag": "ok",
-        "why": "Cold, hiking",
-        "why_el": "Κρύο, πεζοπορία"
-      },
-      {
-        "tag": "great",
-        "why": "Hiking heaven",
-        "why_el": "Πεζοπορία peak"
-      },
-      {
-        "tag": "great",
-        "why": "Easter, walks, mild",
-        "why_el": "Πάσχα & μονοπάτια"
-      },
-      {
-        "tag": "perfect",
-        "why": "Andros Routes",
-        "why_el": "Andros Routes"
-      },
-      {
-        "tag": "perfect",
-        "why": "Long days, warm",
-        "why_el": "Ολοήμερο φως"
-      },
-      {
-        "tag": "ok",
-        "why": "Hot, Athenians",
-        "why_el": "Ζέστη, Αθηναίοι"
-      },
-      {
-        "tag": "avoid",
-        "why": "Athens summer-house",
-        "why_el": "Φόρτος εξοχικών"
-      },
-      {
-        "tag": "perfect",
-        "why": "Best — sea+walks",
-        "why_el": "Καλύτερος — ήρεμα"
-      },
-      {
-        "tag": "great",
-        "why": "Hiking+last swims",
-        "why_el": "Πεζοπορία, τελευταία"
-      },
-      {
-        "tag": "ok",
-        "why": "Hiking only",
-        "why_el": "Μόνο πεζοπορία"
-      },
-      {
-        "tag": "ok",
-        "why": "Quiet, Christmas",
-        "why_el": "Ήσυχα, Χριστούγεννα"
-      }
-    ]
-  },
-  "itinerary": {
-    "title": "3-day Itinerary for Andros",
-    "subtitle": "Hiking trails, oak forests, and neoclassical Chora",
-    "days": [
-      {
-        "day": 1,
-        "title": "Chora & the East",
-        "km": 20,
-        "drive_mins": 40,
-        "overnight": "Chora",
-        "color": "#0B8FAC",
-        "stops": [
-          {
-            "name": "Andros Town (Chora)",
-            "lat": 37.8379,
-            "lng": 24.9452,
-            "type": "city",
-            "time": "10:00",
-            "wiki": "https://www.google.com/maps/search/Andros+Town+(Chora)",
-            "desc": "Neoclassical sea-captains' town on a narrow promontory between two beaches. The marble-paved main street runs from the inland square down to the sea, lined with grand 19th-century mansions, the Maritime Museum, and the Tourlitis Lighthouse visible offshore. Walk it slowly — every doorway is worth a look.",
-            "name_el": "Χώρα Άνδρου",
-            "desc_el": "Νεοκλασική πόλη καπεταναίων σε στενό ακρωτήρι ανάμεσα σε δύο παραλίες. Ο μαρμαροστρωμένος κεντρικός δρόμος κατεβαίνει από την εσωτερική πλατεία ως τη θάλασσα, με μεγαλοπρεπή αρχοντικά του 19ου αιώνα, το Ναυτικό Μουσείο και τον φάρο της Τουρλίτη ορατό στη θάλασσα. Περπάτα τον αργά — κάθε πόρτα αξίζει μια ματιά.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Andros_town.JPG/1920px-Andros_town.JPG",
-            "photo_credit": {
-              "artist": "Vassilis Kyrtatas",
-              "license": "Public domain",
-              "license_url": "",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Andros_town.JPG",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Goulandris Museum of Contemporary Art",
-            "lat": 37.8383,
-            "lng": 24.9434,
-            "type": "museum",
-            "time": "11:30",
-            "wiki": "https://www.google.com/maps/search/Goulandris+Museum+of+Contemporary+Art+Andros",
-            "desc": "Major contemporary art museum, founded by the Goulandris shipping family — the Aegean's most ambitious. Hosts world-class summer exhibitions that bring busloads of Athenians; the permanent collection has Modigliani, Picasso, Giacometti, and the museum's pride, sculptures by local-born Michalis Tombros. Check what's on before you go.",
-            "name_el": "Μουσείο Σύγχρονης Τέχνης Γουλανδρή",
-            "desc_el": "Σημαντικό μουσείο σύγχρονης τέχνης, ιδρυμένο από την εφοπλιστική οικογένεια Γουλανδρή — το πιο φιλόδοξο του Αιγαίου. Φιλοξενεί καλοκαιρινές εκθέσεις παγκόσμιας κλάσης που φέρνουν λεωφορεία Αθηναίων· η μόνιμη συλλογή έχει Μοντιλιάνι, Πικάσο, Τζιακομέτι, και την υπερηφάνεια του μουσείου, γλυπτά του ντόπιου Μιχάλη Τόμπρου. Δες τι παίζει πριν πας.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Basil_%26_Elise_Goulandris_Museum_of_Modern_Art.jpg/1920px-Basil_%26_Elise_Goulandris_Museum_of_Modern_Art.jpg",
-            "photo_credit": {
-              "artist": "Tolisr",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Basil_%26_Elise_Goulandris_Museum_of_Modern_Art.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Archaeological Museum",
-            "lat": 37.838,
-            "lng": 24.9449,
-            "type": "museum",
-            "time": "12:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJJ64U4g__ohQR72QQaeqI2k8",
-            "desc": "Small but excellent archaeological museum, home to the famous Hermes of Andros — a Roman copy of a 4th-century BC original found on the island. The museum sits a short walk from the main square in the lower Chora; allow 30-40 minutes.",
-            "name_el": "Αρχαιολογικό Μουσείο",
-            "desc_el": "Μικρό αλλά εξαιρετικό αρχαιολογικό μουσείο, σπίτι του διάσημου Ερμή της Άνδρου — ρωμαϊκό αντίγραφο πρωτότυπου του 4ου π.Χ. αιώνα που βρέθηκε στο νησί. Το μουσείο είναι λίγα λεπτά περπάτημα από την κεντρική πλατεία στην κάτω Χώρα· υπολόγισε 30-40 λεπτά.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/AM_Andros_090591.jpg/1920px-AM_Andros_090591.jpg",
-            "photo_credit": {
-              "artist": "Zde",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:AM_Andros_090591.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Paraporti Beach",
-            "lat": 37.8362,
-            "lng": 24.9416,
-            "type": "beach",
-            "time": "17:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ0anf_xr_ohQRz-ZjkRNh8FU",
-            "desc": "Sandy beach right below Chora — walk down the cliff stairs and you're on the sand in five minutes. Family-friendly, calm water sheltered by the headland, and a single seasonal canteen for coffee and ice cream. The contrast between the neoclassical town above and the beach below is the postcard image of Andros.",
-            "name_el": "Παραλία Παραπόρτι",
-            "desc_el": "Αμμώδης παραλία ακριβώς κάτω από τη Χώρα — κατέβα τη σκάλα του γκρεμού και είσαι στην άμμο σε πέντε λεπτά. Φιλική σε οικογένειες, ήρεμα νερά προστατευμένα από το ακρωτήρι, και μία εποχιακή καντίνα για καφέ και παγωτό. Η αντίθεση ανάμεσα στη νεοκλασική πόλη πάνω και στην παραλία κάτω είναι η καρτ-ποστάλ της Άνδρου."
-          }
-        ],
-        "title_el": "Χώρα & η Ανατολή",
-        "overnight_el": "Χώρα",
-        "nightlife": "Andros Chora is small but surprisingly switched-on. <a href=\"https://www.google.com/maps/search/Moomba+Afterlight+Andros+Chora\" target=\"_blank\" rel=\"noopener\">Moomba Afterlight</a> is the open-air cocktail spot over the marina; <a href=\"https://www.google.com/maps/search/Skyline+Bar+Andros\" target=\"_blank\" rel=\"noopener\">Skyline</a> does drinks from a rooftop over the town lights; and <a href=\"https://www.google.com/maps/search/Andros+Club+Chora\" target=\"_blank\" rel=\"noopener\">Andros Club</a> is the proper late-night dance floor when the shipowners' kids are home for summer.",
-        "nightlife_el": "Η Χώρα της Άνδρου είναι μικρή αλλά απρόσμενα ζωντανή. Το <a href=\"https://www.google.com/maps/search/Moomba+Afterlight+Andros+Chora\" target=\"_blank\" rel=\"noopener\">Moomba Afterlight</a> είναι το υπαίθριο cocktail σημείο πάνω από τη μαρίνα· το <a href=\"https://www.google.com/maps/search/Skyline+Bar+Andros\" target=\"_blank\" rel=\"noopener\">Skyline</a> σερβίρει ποτά από ταράτσα πάνω από τα φώτα της πόλης· και το <a href=\"https://www.google.com/maps/search/Andros+Club+Chora\" target=\"_blank\" rel=\"noopener\">Andros Club</a> είναι η κανονική πίστα όταν τα παιδιά των εφοπλιστών είναι πίσω για το καλοκαίρι.",
-        "food": [
-          {
-            "meal": "Lunch",
-            "meal_el": "Μεσημεριανό",
-            "area": "Chora & Batsi",
-            "area_el": "Χώρα & Μπατσί",
-            "desc": "<a href=\"https://www.google.com/maps/search/Nonnas+Andros+Chora\" target=\"_blank\" rel=\"noopener\">Nonna's</a> in Andros Town (Chora) is the reliable favourite. Over in Batsi, <a href=\"https://www.google.com/maps/search/Stamatis+Batsi+Andros\" target=\"_blank\" rel=\"noopener\">Stamatis</a> has run the port since 1965, and waterside <a href=\"https://www.google.com/maps/search/Mi+Se+Meli+Batsi+Andros\" target=\"_blank\" rel=\"noopener\">Mi Se Meli</a> is the romantic pick.",
-            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Nonnas+Andros+Chora\" target=\"_blank\" rel=\"noopener\">Nonna's</a> στη Χώρα της Άνδρου είναι το σταθερό αγαπημένο. Στο Μπατσί, ο <a href=\"https://www.google.com/maps/search/Stamatis+Batsi+Andros\" target=\"_blank\" rel=\"noopener\">Σταμάτης</a> κρατάει το λιμάνι από το 1965, και το παραθαλάσσιο <a href=\"https://www.google.com/maps/search/Mi+Se+Meli+Batsi+Andros\" target=\"_blank\" rel=\"noopener\">Mi Se Meli</a> είναι η ρομαντική επιλογή.",
-            "after": "Archaeological Museum"
-          }
-        ]
-      },
-      {
-        "day": 2,
-        "title": "Hiking & Waterfalls",
-        "km": 35,
-        "drive_mins": 80,
-        "overnight": "Chora",
-        "color": "#3D8B6F",
-        "stops": [
-          {
-            "name": "Apikia",
-            "lat": 37.8492824,
-            "lng": 24.90888,
-            "type": "village",
-            "time": "09:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJGyREvX7_ohQRAavKjnI1Ci4",
-            "desc": "Mountain village 6 km inland from Chora, in a green valley fed by springs. The famous Sariza springs bottle Andros' drinking water — you can drink straight from the public fountain, and the locals do, daily. Stop at a kafenio for a coffee made with that water; the difference is real.",
-            "name_el": "Απίκια",
-            "desc_el": "Ορεινό χωριό 6 χλμ στο εσωτερικό από τη Χώρα, σε καταπράσινη κοιλάδα που τροφοδοτείται από πηγές. Οι περίφημες πηγές Σαρίζα εμφιαλώνουν το πόσιμο νερό της Άνδρου — μπορείς να πιεις απευθείας από τη δημόσια βρύση, και οι ντόπιοι το κάνουν, καθημερινά. Σταμάτα σε καφενείο για καφέ με αυτό το νερό· η διαφορά είναι πραγματική.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Andros_island%2C_Apikia_village_in_the_background.jpg/1920px-Andros_island%2C_Apikia_village_in_the_background.jpg",
-            "photo_credit": {
-              "artist": "Ioannis Fakis",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Andros_island,_Apikia_village_in_the_background.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Pythara Waterfalls",
-            "lat": 37.8483599,
-            "lng": 24.9088332,
-            "type": "waterfall",
-            "time": "10:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJa1GuhS7_ohQRVZCFMl0cs5g",
-            "desc": "Natural pools fed by waterfalls, reached on a 15-minute walk through dense oak forest from Apikia. The trail is shaded all the way and even in August stays cool. The pools themselves are cold enough that a full swim takes nerve — most people just sit on the rocks with their feet in. Worth it.",
-            "name_el": "Καταρράκτες Πυθάρας",
-            "desc_el": "Φυσικές πισίνες που τροφοδοτούνται από καταρράκτες, με 15 λεπτά πεζοπορία μέσα από πυκνό δρυοδάσος από τα Απίκια. Το μονοπάτι είναι σκιερό όλη τη διαδρομή και ακόμα και τον Αύγουστο διατηρείται δροσερό. Οι πισίνες είναι αρκετά κρύες ώστε ένα κανονικό μπάνιο θέλει κουράγιο — οι περισσότεροι κάθονται στα βράχια με τα πόδια μέσα. Αξίζει."
-          },
-          {
-            "name": "Ano Mesaria",
-            "lat": 37.7995,
-            "lng": 24.8739,
-            "type": "village",
-            "time": "13:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJb9uweVr_ohQRXAxeyiiZ63c",
-            "desc": "Village in the heart of the island with the 12th-century Byzantine Taxiarches church — frescoes inside have been restored but kept their colour. The kafenio on the main square is the gathering point of the village; sit under the plane tree, order a frappé and a tiropita, and listen.",
-            "name_el": "Άνω Μεσαριά",
-            "desc_el": "Χωριό στην καρδιά του νησιού με τη βυζαντινή εκκλησία των Ταξιαρχών του 12ου αιώνα — οι τοιχογραφίες μέσα έχουν αναστηλωθεί αλλά διατηρούν το χρώμα τους. Το καφενείο στην κεντρική πλατεία είναι το σημείο συνάντησης του χωριού· κάτσε κάτω από τον πλάτανο, παράγγειλε φραπέ και τυρόπιτα, και άκου."
-          },
-          {
-            "name": "Agios Nikolaos Monastery",
-            "lat": 37.8143,
-            "lng": 24.8414,
-            "type": "church",
-            "time": "15:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJO9PC4er_ohQRt8oQP2Vvk0k",
-            "desc": "Fortified monastery with views over the Paleopolis valley, where Andros' ancient capital once stood.",
-            "name_el": "Μονή Αγίου Νικολάου",
-            "desc_el": "Οχυρωμένο μοναστήρι με θέες πάνω στην κοιλάδα της Παλαιόπολης, όπου κάποτε στεκόταν η αρχαία πρωτεύουσα της Άνδρου."
-          },
-          {
-            "name": "Batsi (sunset)",
-            "lat": 37.8595,
-            "lng": 24.7852,
-            "type": "village",
-            "time": "18:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJD9N96MFTohQRfvtx_cFsWSw",
-            "desc": "West coast port village with a curved sandy bay and a lively summer evening scene. Dinner on the waterfront, then a walk along the promenade — Batsi is where Andros lets its hair down, with the island's only real concentration of bars. Half the visitors stay here and never see the Chora.",
-            "name_el": "Μπατσί (Ηλιοβασίλεμα)",
-            "desc_el": "Λιμενικό χωριό της δυτικής ακτής με καμπυλωτό αμμώδη κόλπο και ζωντανή καλοκαιρινή βραδινή σκηνή. Δείπνο στο παραλιακό, μετά βόλτα στην προκυμαία — ο Μπατσί είναι εκεί όπου η Άνδρος χαλαρώνει, με τη μόνη πραγματική συγκέντρωση μπαρ του νησιού. Οι μισοί επισκέπτες μένουν εδώ και δεν βλέπουν ποτέ τη Χώρα."
-          },
-          {
-            "name": "Drive back to Chora",
-            "lat": 37.838,
-            "lng": 24.9391,
-            "type": "city",
-            "time": "20:30",
-            "wiki": null,
-            "desc": "Drive back across the island (about 40 minutes from Batsi). Andros Chora's marble-paved streets and waterfront mansions glow in the evening — try a quiet seafront taverna for dinner.",
-            "name_el": "Επιστροφή στη Χώρα",
-            "desc_el": "Διαδρομή επιστροφής διασχίζοντας το νησί (περίπου 40 λεπτά από τους Μπατσί). Τα μαρμαρόστρωτα δρομάκια της Χώρας και τα αρχοντικά της παραλίας λάμπουν το βράδυ — διάλεξε ήσυχη ψαροταβέρνα για δείπνο."
-          }
-        ],
-        "title_el": "Πεζοπορία & Καταρράκτες",
-        "overnight_el": "Χώρα"
-      },
-      {
-        "day": 3,
-        "title": "West Coast",
-        "km": 45,
-        "drive_mins": 90,
-        "overnight": "Departure",
-        "color": "#C4962A",
-        "stops": [
-          {
-            "name": "Gavrio (port)",
-            "lat": 37.8844,
-            "lng": 24.7393,
-            "type": "harbour",
-            "time": "09:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJw-uyyWdSohQRT4F-bmmGbGc",
-            "desc": "The main ferry port, on the northwest coast. Small but functional with a couple of cafés, a bakery, and the bus stop for Chora. A kafenio at the corner of the waterfront serves the best frappé on the island — the right starting point if you're catching an early ferry.",
-            "name_el": "Γαύριο (Λιμάνι)",
-            "desc_el": "Το κύριο λιμάνι, στη βορειοδυτική ακτή. Μικρό αλλά λειτουργικό με δύο καφέ, έναν φούρνο και τη στάση λεωφορείου για τη Χώρα. Ένα καφενείο στη γωνία του παραλιακού σερβίρει τον καλύτερο φραπέ του νησιού — το σωστό σημείο εκκίνησης αν πιάνεις πρωινό πλοίο.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Gavrio%2C_bay%2C_%28Andros%29_090728.jpg/1920px-Gavrio%2C_bay%2C_%28Andros%29_090728.jpg",
-            "photo_credit": {
-              "artist": "Zde",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Gavrio,_bay,_(Andros)_090728.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Tourlitis Lighthouse viewpoint",
-            "lat": 37.8392,
-            "lng": 24.95,
-            "type": "beach",
-            "time": "11:00",
-            "wiki": "https://www.google.com/maps/search/Tourlitis+Lighthouse+viewpoint+Andros",
-            "desc": "The only lighthouse in the world built on a sea-rock — a thin stone tower rising from a wave-battered islet a few hundred metres off the Chora headland. Best photographed from the Chora waterfront at golden hour, when the rock catches the light against the dark sea.",
-            "name_el": "Θέα στον Φάρο Τουρλίτη",
-            "desc_el": "Ο μοναδικός φάρος στον κόσμο χτισμένος πάνω σε θαλάσσιο βράχο — λεπτός πέτρινος πύργος που υψώνεται από μια νησίδα που μαστιγώνουν τα κύματα, λίγες εκατοντάδες μέτρα ανοιχτά από το ακρωτήρι της Χώρας. Καλύτερη φωτογράφιση από το παραλιακό της Χώρας στη χρυσή ώρα, όταν ο βράχος πιάνει το φως πάνω στην σκούρα θάλασσα.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Tourlitis_lighthouse%2C_Andros.jpg",
-            "photo_credit": {
-              "artist": "/ Apostolispontikas at Greek Wikipedia",
-              "license": "Public domain",
-              "license_url": "",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Tourlitis_lighthouse,_Andros.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Stenies",
-            "lat": 37.8550053,
-            "lng": 24.9275485,
-            "type": "village",
-            "time": "12:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJA_wp3KH_ohQRai1OYBlcJ0E",
-            "desc": "Lush green sea-captains' village 5 km from Chora, set in a wooded valley with running streams — completely unlike a Cycladic landscape. The neoclassical mansions were built by Andros shipowners returning from Constantinople and Odessa in the 19th century; many are still occupied by their descendants.",
-            "name_el": "Στένιες",
-            "desc_el": "Καταπράσινο χωριό καπεταναίων 5 χλμ από τη Χώρα, σε δασώδη κοιλάδα με ρυάκια — εντελώς ξένο προς το κυκλαδίτικο τοπίο. Τα νεοκλασικά αρχοντικά χτίστηκαν από εφοπλιστές της Άνδρου που γύριζαν από την Κωνσταντινούπολη και την Οδησσό τον 19ο αιώνα· πολλά τα κατοικούν ακόμα οι απόγονοί τους.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Stenies_village_in_Andros_island%2C_Greece_-_panoramio.jpg",
-            "photo_credit": {
-              "artist": "G Da",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Stenies_village_in_Andros_island,_Greece_-_panoramio.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Gialia Beach",
-            "lat": 37.8659,
-            "lng": 24.9528,
-            "type": "beach",
-            "time": "14:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJt0DECKb_ohQR22qOZcNcP6o",
-            "desc": "Quiet pebble beach below Stenies, with stunning clear water and the kind of stillness you get when a beach has no road access. Reach it via a 20-minute path from the village; bring everything (no canteens, no tavernas). The water is deep close to shore — good for swimming, not for small children.",
-            "name_el": "Παραλία Γιάλια",
-            "desc_el": "Ήσυχη βότσαλη παραλία κάτω από τις Στένιες, με εντυπωσιακά διαυγή νερά και την ησυχία που πετυχαίνεις όταν μια παραλία δεν έχει δρόμο. Πρόσβαση με μονοπάτι 20 λεπτών από το χωριό· πάρε τα πάντα μαζί (καμία καντίνα, καμία ταβέρνα). Το νερό βαθαίνει γρήγορα — καλό για κολύμπι, όχι για μικρά παιδιά."
-          }
-        ],
-        "title_el": "Δυτική Ακτή",
-        "overnight_el": "Αναχώρηση"
-      }
-    ],
-    "title_el": "Πρόγραμμα 3 Ημερών στην Άνδρο",
-    "subtitle_el": "Μονοπάτια πεζοπορίας, δρύινα δάση και νεοκλασική Χώρα"
-  },
-  "beaches": [
-    {
-      "name": "Chrissi Ammos",
-      "lat": 37.877,
-      "lng": 24.7561,
-      "type": "Golden sand",
-      "length": "800 m",
-      "depth": "Gradual",
-      "facing": "Southwest — protected",
-      "facilities": "Good: tavernas, umbrellas, watersports",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJiXbyU0xSohQR1W-qKqOQB6Q",
-      "desc": "Andros' most famous beach. Fine golden sand, excellent amenities, perfect for families.",
-      "name_el": "Χρυσή Άμμος",
-      "type_el": "Χρυσή άμμος",
-      "depth_el": "Σταδιακή",
-      "facing_el": "Νοτιοδυτικά — προστατευμένη",
-      "facilities_el": "Καλές: ταβέρνες, ομπρέλες, watersports",
-      "desc_el": "Η πιο διάσημη παραλία της Άνδρου. Λεπτή χρυσή άμμος, εξαιρετικές υποδομές, τέλεια για οικογένειες."
-    },
-    {
-      "name": "Achla Beach",
-      "lat": 37.894023,
-      "lng": 24.9513921,
-      "type": "Coarse sand",
-      "length": "300 m",
-      "depth": "Moderate",
-      "facing": "East — exposed",
-      "facilities": "Natural — no facilities",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJm4UbSC0AoxQRwpfti4A3nMA",
-      "desc": "Remote northeast beach reached only by boat or rough dirt track. Emerald green water fed by a stream.",
-      "name_el": "Παραλία Άχλα",
-      "type_el": "Χονδρή άμμος",
-      "depth_el": "Μέτρια",
-      "facing_el": "Ανατολικά — εκτεθειμένη",
-      "facilities_el": "Φυσική — καμία υποδομή",
-      "desc_el": "Απομακρυσμένη βορειοανατολική παραλία προσβάσιμη μόνο με βάρκα ή δύσβατο χωματόδρομο. Σμαραγδοπράσινα νερά τροφοδοτούμενα από ρέμα."
-    },
-    {
-      "name": "Vitali Beach",
-      "lat": 37.937202,
-      "lng": 24.8252127,
-      "type": "Large pebbles",
-      "length": "250 m",
-      "depth": "Deep quickly",
-      "facing": "North — exposed to meltemi",
-      "facilities": "Simple taverna",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ8ae31ZWroxQRwyi0S1rv8sc",
-      "desc": "Dramatic northern pebble cove with crystal water. A taverna on the beach serves ouzo at sunset.",
-      "name_el": "Παραλία Βιτάλι",
-      "type_el": "Μεγάλα βότσαλα",
-      "depth_el": "Βαθαίνει γρήγορα",
-      "facing_el": "Βόρεια — εκτεθειμένη στο μελτέμι",
-      "facilities_el": "Απλή ταβέρνα",
-      "desc_el": "Δραματικός βόρειος βότσαλος κόλπος με κρυστάλλινα νερά. Μια ταβέρνα στην παραλία σερβίρει ούζο στο ηλιοβασίλεμα.",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Andros_Beach.jpg/1920px-Andros_Beach.jpg",
+  "days": [
+   {
+    "day": 1,
+    "title": "Chora & the East",
+    "km": 20,
+    "drive_mins": 40,
+    "overnight": "Chora",
+    "color": "#0B8FAC",
+    "stops": [
+     {
+      "name": "Andros Town (Chora)",
+      "lat": 37.8379,
+      "lng": 24.9452,
+      "type": "city",
+      "time": "10:00",
+      "wiki": "https://www.google.com/maps/search/Andros+Town+(Chora)",
+      "desc": "Neoclassical sea-captains' town on a narrow promontory between two beaches. The marble-paved main street runs from the inland square down to the sea, lined with grand 19th-century mansions, the Maritime Museum, and the Tourlitis Lighthouse visible offshore. Walk it slowly — every doorway is worth a look.",
+      "name_el": "Χώρα Άνδρου",
+      "desc_el": "Νεοκλασική πόλη καπεταναίων σε στενό ακρωτήρι ανάμεσα σε δύο παραλίες. Ο μαρμαροστρωμένος κεντρικός δρόμος κατεβαίνει από την εσωτερική πλατεία ως τη θάλασσα, με μεγαλοπρεπή αρχοντικά του 19ου αιώνα, το Ναυτικό Μουσείο και τον φάρο της Τουρλίτη ορατό στη θάλασσα. Περπάτα τον αργά — κάθε πόρτα αξίζει μια ματιά.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Andros_town.JPG/1920px-Andros_town.JPG",
       "photo_credit": {
-        "artist": "Theanatomica at English Wikipedia",
-        "license": "Public domain",
-        "license_url": "",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Andros_Beach.jpg",
-        "source": "Wikimedia Commons"
+       "artist": "Vassilis Kyrtatas",
+       "license": "Public domain",
+       "license_url": "",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Andros_town.JPG",
+       "source": "Wikimedia Commons"
       }
-    }
-  ],
-  "name_el": "Άνδρος",
-  "name_accusative_el": "Άνδρο",
-  "name_genitive_el": "Άνδρου",
-  "gender_el": "f",
-  "subtitle_el": "Μονοπάτια πεζοπορίας, δρύινα δάση και νεοκλασική Χώρα",
-  "intro_el": "Η Άνδρος είναι το βορειότερο και δεύτερο μεγαλύτερο κυκλαδίτικο νησί, αλλά μοιάζει πουθενά αλλού στις Κυκλάδες. Ρέματα με πηγαίο νερό, δρύινα δάση και πετρόστρωτα μονοπάτια πεζοπορίας την κάνουν πιο τοσκανική παρά αιγαιακή. Η κύρια πόλη, η Χώρα, είναι κομψά νεοκλασική — σπίτι του μεγαλύτερου μουσείου σύγχρονης τέχνης στο Αιγαίο. Σοβαροί πεζοπόροι έρχονται για τη Διαδρομή της Άνδρου, ένα μονοπάτι 100 χλμ που διασχίζει το νησί.",
-  "suited_for": {
-    "good": [
-      "Hikers — the 100 km Andros Route crosses streams, oak forest and stone-paved trails",
-      "Travellers who want a green, almost Tuscan island unlike the rest of the Cyclades",
-      "Anyone who likes a cultured base — neoclassical Chora has the Aegean's largest modern-art museum"
+     },
+     {
+      "name": "Goulandris Museum of Contemporary Art",
+      "lat": 37.8383,
+      "lng": 24.9434,
+      "type": "museum",
+      "time": "11:30",
+      "wiki": "https://www.google.com/maps/search/Goulandris+Museum+of+Contemporary+Art+Andros",
+      "desc": "Major contemporary art museum, founded by the Goulandris shipping family — the Aegean's most ambitious. Hosts world-class summer exhibitions that bring busloads of Athenians; the permanent collection has Modigliani, Picasso, Giacometti, and the museum's pride, sculptures by local-born Michalis Tombros. Check what's on before you go.",
+      "name_el": "Μουσείο Σύγχρονης Τέχνης Γουλανδρή",
+      "desc_el": "Σημαντικό μουσείο σύγχρονης τέχνης, ιδρυμένο από την εφοπλιστική οικογένεια Γουλανδρή — το πιο φιλόδοξο του Αιγαίου. Φιλοξενεί καλοκαιρινές εκθέσεις παγκόσμιας κλάσης που φέρνουν λεωφορεία Αθηναίων· η μόνιμη συλλογή έχει Μοντιλιάνι, Πικάσο, Τζιακομέτι, και την υπερηφάνεια του μουσείου, γλυπτά του ντόπιου Μιχάλη Τόμπρου. Δες τι παίζει πριν πας.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Basil_%26_Elise_Goulandris_Museum_of_Modern_Art.jpg/1920px-Basil_%26_Elise_Goulandris_Museum_of_Modern_Art.jpg",
+      "photo_credit": {
+       "artist": "Tolisr",
+       "license": "CC BY-SA 3.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Basil_%26_Elise_Goulandris_Museum_of_Modern_Art.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Archaeological Museum",
+      "lat": 37.838,
+      "lng": 24.9449,
+      "type": "museum",
+      "time": "12:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJJ64U4g__ohQR72QQaeqI2k8",
+      "desc": "Small but excellent archaeological museum, home to the famous Hermes of Andros — a Roman copy of a 4th-century BC original found on the island. The museum sits a short walk from the main square in the lower Chora; allow 30-40 minutes.",
+      "name_el": "Αρχαιολογικό Μουσείο",
+      "desc_el": "Μικρό αλλά εξαιρετικό αρχαιολογικό μουσείο, σπίτι του διάσημου Ερμή της Άνδρου — ρωμαϊκό αντίγραφο πρωτότυπου του 4ου π.Χ. αιώνα που βρέθηκε στο νησί. Το μουσείο είναι λίγα λεπτά περπάτημα από την κεντρική πλατεία στην κάτω Χώρα· υπολόγισε 30-40 λεπτά.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/AM_Andros_090591.jpg/1920px-AM_Andros_090591.jpg",
+      "photo_credit": {
+       "artist": "Zde",
+       "license": "CC BY-SA 3.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:AM_Andros_090591.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Paraporti Beach",
+      "lat": 37.8362,
+      "lng": 24.9416,
+      "type": "beach",
+      "time": "17:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ0anf_xr_ohQRz-ZjkRNh8FU",
+      "desc": "Sandy beach right below Chora — walk down the cliff stairs and you're on the sand in five minutes. Family-friendly, calm water sheltered by the headland, and a single seasonal canteen for coffee and ice cream. The contrast between the neoclassical town above and the beach below is the postcard image of Andros.",
+      "name_el": "Παραλία Παραπόρτι",
+      "desc_el": "Αμμώδης παραλία ακριβώς κάτω από τη Χώρα — κατέβα τη σκάλα του γκρεμού και είσαι στην άμμο σε πέντε λεπτά. Φιλική σε οικογένειες, ήρεμα νερά προστατευμένα από το ακρωτήρι, και μία εποχιακή καντίνα για καφέ και παγωτό. Η αντίθεση ανάμεσα στη νεοκλασική πόλη πάνω και στην παραλία κάτω είναι η καρτ-ποστάλ της Άνδρου."
+     }
     ],
-    "good_el": [
-      "Πεζοπόρους — η διαδρομή Andros Route 100 χλμ. διασχίζει ρυάκια, δρυοδάση και πέτρινα μονοπάτια",
-      "Ταξιδιώτες που θέλουν ένα πράσινο, σχεδόν τοσκανικό νησί, διαφορετικό από τις υπόλοιπες Κυκλάδες",
-      "Όσους αρέσει μια καλλιεργημένη βάση — η νεοκλασική Χώρα έχει το μεγαλύτερο μουσείο σύγχρονης τέχνης του Αιγαίου"
-    ],
-    "skip": [
-      "If you depend on Piraeus — Andros sails only from Rafina",
-      "If you want everything close together; the port and the lively southeast are 35 km apart"
-    ],
-    "skip_el": [
-      "Αν εξαρτάσαι από τον Πειραιά — η Άνδρος έχει δρομολόγια μόνο από τη Ραφήνα",
-      "Αν θέλεις τα πάντα κοντά· το λιμάνι και ο ζωντανός νοτιοανατολικός είναι 35 χλμ. μακριά"
+    "title_el": "Χώρα & η Ανατολή",
+    "overnight_el": "Χώρα",
+    "nightlife": "Andros Chora is small but surprisingly switched-on. <a href=\"https://www.google.com/maps/search/Moomba+Afterlight+Andros+Chora\" target=\"_blank\" rel=\"noopener\">Moomba Afterlight</a> is the open-air cocktail spot over the marina; <a href=\"https://www.google.com/maps/search/Skyline+Bar+Andros\" target=\"_blank\" rel=\"noopener\">Skyline</a> does drinks from a rooftop over the town lights; and <a href=\"https://www.google.com/maps/search/Andros+Club+Chora\" target=\"_blank\" rel=\"noopener\">Andros Club</a> is the proper late-night dance floor when the shipowners' kids are home for summer.",
+    "nightlife_el": "Η Χώρα της Άνδρου είναι μικρή αλλά απρόσμενα ζωντανή. Το <a href=\"https://www.google.com/maps/search/Moomba+Afterlight+Andros+Chora\" target=\"_blank\" rel=\"noopener\">Moomba Afterlight</a> είναι το υπαίθριο cocktail σημείο πάνω από τη μαρίνα· το <a href=\"https://www.google.com/maps/search/Skyline+Bar+Andros\" target=\"_blank\" rel=\"noopener\">Skyline</a> σερβίρει ποτά από ταράτσα πάνω από τα φώτα της πόλης· και το <a href=\"https://www.google.com/maps/search/Andros+Club+Chora\" target=\"_blank\" rel=\"noopener\">Andros Club</a> είναι η κανονική πίστα όταν τα παιδιά των εφοπλιστών είναι πίσω για το καλοκαίρι.",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Chora & Batsi",
+      "area_el": "Χώρα & Μπατσί",
+      "desc": "<a href=\"https://www.google.com/maps/search/Nonnas+Andros+Chora\" target=\"_blank\" rel=\"noopener\">Nonna's</a> in Andros Town (Chora) is the reliable favourite. Over in Batsi, <a href=\"https://www.google.com/maps/search/Stamatis+Batsi+Andros\" target=\"_blank\" rel=\"noopener\">Stamatis</a> has run the port since 1965, and waterside <a href=\"https://www.google.com/maps/search/Mi+Se+Meli+Batsi+Andros\" target=\"_blank\" rel=\"noopener\">Mi Se Meli</a> is the romantic pick.",
+      "desc_el": "Το <a href=\"https://www.google.com/maps/search/Nonnas+Andros+Chora\" target=\"_blank\" rel=\"noopener\">Nonna's</a> στη Χώρα της Άνδρου είναι το σταθερό αγαπημένο. Στο Μπατσί, ο <a href=\"https://www.google.com/maps/search/Stamatis+Batsi+Andros\" target=\"_blank\" rel=\"noopener\">Σταμάτης</a> κρατάει το λιμάνι από το 1965, και το παραθαλάσσιο <a href=\"https://www.google.com/maps/search/Mi+Se+Meli+Batsi+Andros\" target=\"_blank\" rel=\"noopener\">Mi Se Meli</a> είναι η ρομαντική επιλογή.",
+      "after": "Archaeological Museum"
+     }
     ]
-  },
-  "specialties": [
-    {
-      "name": "Fourtalia",
-      "name_el": "Φουρτάλια",
-      "desc": "Andriotic omelette with potatoes, local sausage, and wild fennel — heartier than the Tinian version. Try at Nonna's in Chora or the village tavernas of Apoikia.",
-      "desc_el": "Ανδριώτικη ομελέτα με πατάτες, τοπικό λουκάνικο και άγριο μάραθο — πιο γερό φαγητό από την τηνιακή. Στη Νόννα στη Χώρα ή σε ταβέρνες της Αποικίας."
-    },
-    {
-      "name": "Sariza spring water",
-      "name_el": "Νερό Σάριζα",
-      "desc": "Greece's most famous bottled spring water comes from Apoikia. You can drink it directly from the public tap in the village. Bring an empty bottle.",
-      "desc_el": "Το πιο διάσημο εμφιαλωμένο νερό της Ελλάδας από την Αποικία. Μπορείς να γεμίσεις απευθείας από τη βρύση στο χωριό. Πάρε ένα άδειο μπουκάλι."
-    },
-    {
-      "name": "Kaltsounia",
-      "name_el": "Καλτσούνια",
-      "desc": "Sweet cheese pies — small fried pastries filled with fresh cheese and honey. A breakfast or dessert specialty. Best at the kafeneia of Apoikia and Aprovato.",
-      "desc_el": "Γλυκές τυρόπιτες — μικρά τηγανητά πιτάκια γεμάτα φρέσκο τυρί και μέλι. Πρωινό ή επιδόρπιο. Καλύτερα στα καφενεία της Αποικίας και του Αμολόχου."
-    },
-    {
-      "name": "Amygdalota",
-      "name_el": "Αμυγδαλωτά",
-      "desc": "Dense almond cookies with rose water — Andriotic in style, slightly different from the Hydraiotika. Sold at every bakery in Chora.",
-      "desc_el": "Πυκνά αμυγδαλωτά με ροδόνερο — ανδριώτικου τύπου, διαφέρει ελαφρώς από τα υδραίικα. Σε κάθε φούρνο στη Χώρα."
-    }
-  ],
-  "festivals": [
-    {
-      "name": "Panagia of Panachrantou",
-      "name_el": "Παναγία της Παναχράντου",
-      "when": "15 August",
-      "when_el": "15 Αυγούστου",
-      "desc": "Pilgrimage to the cliff-top monastery above Korthi. The icon is revered for healing properties; villages across the island send delegations.",
-      "desc_el": "Προσκύνημα στο μοναστήρι πάνω από το Κόρθι. Η εικόνα τιμάται για τις θαυματουργές ιδιότητες· χωριά από όλο το νησί στέλνουν αντιπροσωπείες."
-    }
-  ],
-  "getting_there": {
-    "pills": [
-      "⛵ Rafina 2h",
-      "€18–35"
+   },
+   {
+    "day": 2,
+    "title": "Hiking & Waterfalls",
+    "km": 35,
+    "drive_mins": 80,
+    "overnight": "Chora",
+    "color": "#3D8B6F",
+    "stops": [
+     {
+      "name": "Apikia",
+      "lat": 37.8492824,
+      "lng": 24.90888,
+      "type": "village",
+      "time": "09:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJGyREvX7_ohQRAavKjnI1Ci4",
+      "desc": "Mountain village 6 km inland from Chora, in a green valley fed by springs. The famous Sariza springs bottle Andros' drinking water — you can drink straight from the public fountain, and the locals do, daily. Stop at a kafenio for a coffee made with that water; the difference is real.",
+      "name_el": "Απίκια",
+      "desc_el": "Ορεινό χωριό 6 χλμ στο εσωτερικό από τη Χώρα, σε καταπράσινη κοιλάδα που τροφοδοτείται από πηγές. Οι περίφημες πηγές Σαρίζα εμφιαλώνουν το πόσιμο νερό της Άνδρου — μπορείς να πιεις απευθείας από τη δημόσια βρύση, και οι ντόπιοι το κάνουν, καθημερινά. Σταμάτα σε καφενείο για καφέ με αυτό το νερό· η διαφορά είναι πραγματική.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Andros_island%2C_Apikia_village_in_the_background.jpg/1920px-Andros_island%2C_Apikia_village_in_the_background.jpg",
+      "photo_credit": {
+       "artist": "Ioannis Fakis",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Andros_island,_Apikia_village_in_the_background.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Pythara Waterfalls",
+      "lat": 37.8483599,
+      "lng": 24.9088332,
+      "type": "waterfall",
+      "time": "10:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJa1GuhS7_ohQRVZCFMl0cs5g",
+      "desc": "Natural pools fed by waterfalls, reached on a 15-minute walk through dense oak forest from Apikia. The trail is shaded all the way and even in August stays cool. The pools themselves are cold enough that a full swim takes nerve — most people just sit on the rocks with their feet in. Worth it.",
+      "name_el": "Καταρράκτες Πυθάρας",
+      "desc_el": "Φυσικές πισίνες που τροφοδοτούνται από καταρράκτες, με 15 λεπτά πεζοπορία μέσα από πυκνό δρυοδάσος από τα Απίκια. Το μονοπάτι είναι σκιερό όλη τη διαδρομή και ακόμα και τον Αύγουστο διατηρείται δροσερό. Οι πισίνες είναι αρκετά κρύες ώστε ένα κανονικό μπάνιο θέλει κουράγιο — οι περισσότεροι κάθονται στα βράχια με τα πόδια μέσα. Αξίζει."
+     },
+     {
+      "name": "Ano Mesaria",
+      "lat": 37.7995,
+      "lng": 24.8739,
+      "type": "village",
+      "time": "13:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJb9uweVr_ohQRXAxeyiiZ63c",
+      "desc": "Village in the heart of the island with the 12th-century Byzantine Taxiarches church — frescoes inside have been restored but kept their colour. The kafenio on the main square is the gathering point of the village; sit under the plane tree, order a frappé and a tiropita, and listen.",
+      "name_el": "Άνω Μεσαριά",
+      "desc_el": "Χωριό στην καρδιά του νησιού με τη βυζαντινή εκκλησία των Ταξιαρχών του 12ου αιώνα — οι τοιχογραφίες μέσα έχουν αναστηλωθεί αλλά διατηρούν το χρώμα τους. Το καφενείο στην κεντρική πλατεία είναι το σημείο συνάντησης του χωριού· κάτσε κάτω από τον πλάτανο, παράγγειλε φραπέ και τυρόπιτα, και άκου."
+     },
+     {
+      "name": "Agios Nikolaos Monastery",
+      "lat": 37.8143,
+      "lng": 24.8414,
+      "type": "church",
+      "time": "15:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJO9PC4er_ohQRt8oQP2Vvk0k",
+      "desc": "Fortified monastery with views over the Paleopolis valley, where Andros' ancient capital once stood.",
+      "name_el": "Μονή Αγίου Νικολάου",
+      "desc_el": "Οχυρωμένο μοναστήρι με θέες πάνω στην κοιλάδα της Παλαιόπολης, όπου κάποτε στεκόταν η αρχαία πρωτεύουσα της Άνδρου."
+     },
+     {
+      "name": "Batsi (sunset)",
+      "lat": 37.8595,
+      "lng": 24.7852,
+      "type": "village",
+      "time": "18:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJD9N96MFTohQRfvtx_cFsWSw",
+      "desc": "West coast port village with a curved sandy bay and a lively summer evening scene. Dinner on the waterfront, then a walk along the promenade — Batsi is where Andros lets its hair down, with the island's only real concentration of bars. Half the visitors stay here and never see the Chora.",
+      "name_el": "Μπατσί (Ηλιοβασίλεμα)",
+      "desc_el": "Λιμενικό χωριό της δυτικής ακτής με καμπυλωτό αμμώδη κόλπο και ζωντανή καλοκαιρινή βραδινή σκηνή. Δείπνο στο παραλιακό, μετά βόλτα στην προκυμαία — ο Μπατσί είναι εκεί όπου η Άνδρος χαλαρώνει, με τη μόνη πραγματική συγκέντρωση μπαρ του νησιού. Οι μισοί επισκέπτες μένουν εδώ και δεν βλέπουν ποτέ τη Χώρα."
+     },
+     {
+      "name": "Drive back to Chora",
+      "lat": 37.838,
+      "lng": 24.9391,
+      "type": "city",
+      "time": "20:30",
+      "wiki": null,
+      "desc": "Drive back across the island (about 40 minutes from Batsi). Andros Chora's marble-paved streets and waterfront mansions glow in the evening — try a quiet seafront taverna for dinner.",
+      "name_el": "Επιστροφή στη Χώρα",
+      "desc_el": "Διαδρομή επιστροφής διασχίζοντας το νησί (περίπου 40 λεπτά από τους Μπατσί). Τα μαρμαρόστρωτα δρομάκια της Χώρας και τα αρχοντικά της παραλίας λάμπουν το βράδυ — διάλεξε ήσυχη ψαροταβέρνα για δείπνο."
+     }
     ],
-    "pills_el": [
-      "⛵ Ραφήνα 2 ώρες",
-      "€18–35"
+    "title_el": "Πεζοπορία & Καταρράκτες",
+    "overnight_el": "Χώρα"
+   },
+   {
+    "day": 3,
+    "title": "West Coast",
+    "km": 45,
+    "drive_mins": 90,
+    "overnight": "Departure",
+    "color": "#C4962A",
+    "stops": [
+     {
+      "name": "Gavrio (port)",
+      "lat": 37.8844,
+      "lng": 24.7393,
+      "type": "harbour",
+      "time": "09:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJw-uyyWdSohQRT4F-bmmGbGc",
+      "desc": "The main ferry port, on the northwest coast. Small but functional with a couple of cafés, a bakery, and the bus stop for Chora. A kafenio at the corner of the waterfront serves the best frappé on the island — the right starting point if you're catching an early ferry.",
+      "name_el": "Γαύριο (Λιμάνι)",
+      "desc_el": "Το κύριο λιμάνι, στη βορειοδυτική ακτή. Μικρό αλλά λειτουργικό με δύο καφέ, έναν φούρνο και τη στάση λεωφορείου για τη Χώρα. Ένα καφενείο στη γωνία του παραλιακού σερβίρει τον καλύτερο φραπέ του νησιού — το σωστό σημείο εκκίνησης αν πιάνεις πρωινό πλοίο.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Gavrio%2C_bay%2C_%28Andros%29_090728.jpg/1920px-Gavrio%2C_bay%2C_%28Andros%29_090728.jpg",
+      "photo_credit": {
+       "artist": "Zde",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Gavrio,_bay,_(Andros)_090728.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Tourlitis Lighthouse viewpoint",
+      "lat": 37.8392,
+      "lng": 24.95,
+      "type": "beach",
+      "time": "11:00",
+      "wiki": "https://www.google.com/maps/search/Tourlitis+Lighthouse+viewpoint+Andros",
+      "desc": "The only lighthouse in the world built on a sea-rock — a thin stone tower rising from a wave-battered islet a few hundred metres off the Chora headland. Best photographed from the Chora waterfront at golden hour, when the rock catches the light against the dark sea.",
+      "name_el": "Θέα στον Φάρο Τουρλίτη",
+      "desc_el": "Ο μοναδικός φάρος στον κόσμο χτισμένος πάνω σε θαλάσσιο βράχο — λεπτός πέτρινος πύργος που υψώνεται από μια νησίδα που μαστιγώνουν τα κύματα, λίγες εκατοντάδες μέτρα ανοιχτά από το ακρωτήρι της Χώρας. Καλύτερη φωτογράφιση από το παραλιακό της Χώρας στη χρυσή ώρα, όταν ο βράχος πιάνει το φως πάνω στην σκούρα θάλασσα.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Tourlitis_lighthouse%2C_Andros.jpg",
+      "photo_credit": {
+       "artist": "/ Apostolispontikas at Greek Wikipedia",
+       "license": "Public domain",
+       "license_url": "",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Tourlitis_lighthouse,_Andros.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Stenies",
+      "lat": 37.8550053,
+      "lng": 24.9275485,
+      "type": "village",
+      "time": "12:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJA_wp3KH_ohQRai1OYBlcJ0E",
+      "desc": "Lush green sea-captains' village 5 km from Chora, set in a wooded valley with running streams — completely unlike a Cycladic landscape. The neoclassical mansions were built by Andros shipowners returning from Constantinople and Odessa in the 19th century; many are still occupied by their descendants.",
+      "name_el": "Στένιες",
+      "desc_el": "Καταπράσινο χωριό καπεταναίων 5 χλμ από τη Χώρα, σε δασώδη κοιλάδα με ρυάκια — εντελώς ξένο προς το κυκλαδίτικο τοπίο. Τα νεοκλασικά αρχοντικά χτίστηκαν από εφοπλιστές της Άνδρου που γύριζαν από την Κωνσταντινούπολη και την Οδησσό τον 19ο αιώνα· πολλά τα κατοικούν ακόμα οι απόγονοί τους.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Stenies_village_in_Andros_island%2C_Greece_-_panoramio.jpg",
+      "photo_credit": {
+       "artist": "G Da",
+       "license": "CC BY-SA 3.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Stenies_village_in_Andros_island,_Greece_-_panoramio.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Gialia Beach",
+      "lat": 37.8659,
+      "lng": 24.9528,
+      "type": "beach",
+      "time": "14:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJt0DECKb_ohQR22qOZcNcP6o",
+      "desc": "Quiet pebble beach below Stenies, with stunning clear water and the kind of stillness you get when a beach has no road access. Reach it via a 20-minute path from the village; bring everything (no canteens, no tavernas). The water is deep close to shore — good for swimming, not for small children.",
+      "name_el": "Παραλία Γιάλια",
+      "desc_el": "Ήσυχη βότσαλη παραλία κάτω από τις Στένιες, με εντυπωσιακά διαυγή νερά και την ησυχία που πετυχαίνεις όταν μια παραλία δεν έχει δρόμο. Πρόσβαση με μονοπάτι 20 λεπτών από το χωριό· πάρε τα πάντα μαζί (καμία καντίνα, καμία ταβέρνα). Το νερό βαθαίνει γρήγορα — καλό για κολύμπι, όχι για μικρά παιδιά."
+     }
     ],
-    "summary": "No airport, no ferry from Piraeus. Andros is served exclusively from Rafina (1h east of Athens by car/bus). Ferries dock at Gavrio on the northwest coast — 35km from the lively southeast.",
-    "summary_el": "Χωρίς αεροδρόμιο, χωρίς πλοίο από Πειραιά. Η Άνδρος εξυπηρετείται αποκλειστικά από Ραφήνα (1 ώρα ανατολικά της Αθήνας). Τα πλοία δένουν στο Γαύριο στη βορειοδυτική ακτή — 35 χλμ. από τα ζωντανά ΝΑ.",
-    "tip": "KTEL bus from Athens (Mavromateon terminal) goes straight to Rafina port — no need to drive.",
-    "tip_el": "Το ΚΤΕΛ από Αθήνα (Μαυρομματαίον) πάει κατευθείαν στο λιμάνι Ραφήνας — δεν χρειάζεται αυτοκίνητο."
+    "title_el": "Δυτική Ακτή",
+    "overnight_el": "Αναχώρηση"
+   }
+  ],
+  "title_el": "Πρόγραμμα 3 Ημερών στην Άνδρο",
+  "subtitle_el": "Μονοπάτια πεζοπορίας, δρύινα δάση και νεοκλασική Χώρα"
+ },
+ "beaches": [
+  {
+   "name": "Chrissi Ammos",
+   "lat": 37.877,
+   "lng": 24.7561,
+   "type": "Golden sand",
+   "length": "800 m",
+   "depth": "Gradual",
+   "facing": "Southwest — protected",
+   "facilities": "Good: tavernas, umbrellas, watersports",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJiXbyU0xSohQR1W-qKqOQB6Q",
+   "desc": "Andros' most famous beach. Fine golden sand, excellent amenities, perfect for families.",
+   "name_el": "Χρυσή Άμμος",
+   "type_el": "Χρυσή άμμος",
+   "depth_el": "Σταδιακή",
+   "facing_el": "Νοτιοδυτικά — προστατευμένη",
+   "facilities_el": "Καλές παροχές: ταβέρνες, ομπρέλες, watersports",
+   "desc_el": "Η πιο διάσημη παραλία της Άνδρου. Λεπτή χρυσή άμμος, εξαιρετικές υποδομές, τέλεια για οικογένειες."
   },
-  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783277169/andros_nk3pmn.jpg"
+  {
+   "name": "Achla Beach",
+   "lat": 37.894023,
+   "lng": 24.9513921,
+   "type": "Coarse sand",
+   "length": "300 m",
+   "depth": "Moderate",
+   "facing": "East — exposed",
+   "facilities": "Natural — no facilities",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJm4UbSC0AoxQRwpfti4A3nMA",
+   "desc": "Remote northeast beach reached only by boat or rough dirt track. Emerald green water fed by a stream.",
+   "name_el": "Παραλία Άχλα",
+   "type_el": "Χονδρή άμμος",
+   "depth_el": "Μέτρια",
+   "facing_el": "Ανατολικά — εκτεθειμένη",
+   "facilities_el": "Φυσική — καμία υποδομή",
+   "desc_el": "Απομακρυσμένη βορειοανατολική παραλία προσβάσιμη μόνο με βάρκα ή δύσβατο χωματόδρομο. Σμαραγδοπράσινα νερά τροφοδοτούμενα από ρέμα."
+  },
+  {
+   "name": "Vitali Beach",
+   "lat": 37.937202,
+   "lng": 24.8252127,
+   "type": "Large pebbles",
+   "length": "250 m",
+   "depth": "Deep quickly",
+   "facing": "North — exposed to meltemi",
+   "facilities": "Simple taverna",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ8ae31ZWroxQRwyi0S1rv8sc",
+   "desc": "Dramatic northern pebble cove with crystal water. A taverna on the beach serves ouzo at sunset.",
+   "name_el": "Παραλία Βιτάλι",
+   "type_el": "Μεγάλα βότσαλα",
+   "depth_el": "Βαθαίνει γρήγορα",
+   "facing_el": "Βόρεια — εκτεθειμένη στο μελτέμι",
+   "facilities_el": "Απλή ταβέρνα",
+   "desc_el": "Δραματικός βόρειος βότσαλος κόλπος με κρυστάλλινα νερά. Μια ταβέρνα στην παραλία σερβίρει ούζο στο ηλιοβασίλεμα.",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Andros_Beach.jpg/1920px-Andros_Beach.jpg",
+   "photo_credit": {
+    "artist": "Theanatomica at English Wikipedia",
+    "license": "Public domain",
+    "license_url": "",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Andros_Beach.jpg",
+    "source": "Wikimedia Commons"
+   }
+  }
+ ],
+ "name_el": "Άνδρος",
+ "name_accusative_el": "Άνδρο",
+ "name_genitive_el": "Άνδρου",
+ "gender_el": "f",
+ "subtitle_el": "Μονοπάτια πεζοπορίας, δρύινα δάση και νεοκλασική Χώρα",
+ "intro_el": "Η Άνδρος είναι το βορειότερο και δεύτερο μεγαλύτερο κυκλαδίτικο νησί, αλλά μοιάζει πουθενά αλλού στις Κυκλάδες. Ρέματα με πηγαίο νερό, δρύινα δάση και πετρόστρωτα μονοπάτια πεζοπορίας την κάνουν πιο τοσκανική παρά αιγαιακή. Η κύρια πόλη, η Χώρα, είναι κομψά νεοκλασική — σπίτι του μεγαλύτερου μουσείου σύγχρονης τέχνης στο Αιγαίο. Σοβαροί πεζοπόροι έρχονται για τη Διαδρομή της Άνδρου, ένα μονοπάτι 100 χλμ που διασχίζει το νησί.",
+ "suited_for": {
+  "good": [
+   "Hikers — the 100 km Andros Route crosses streams, oak forest and stone-paved trails",
+   "Travellers who want a green, almost Tuscan island unlike the rest of the Cyclades",
+   "Anyone who likes a cultured base — neoclassical Chora has the Aegean's largest modern-art museum"
+  ],
+  "good_el": [
+   "Πεζοπόρους — η διαδρομή Andros Route 100 χλμ. διασχίζει ρυάκια, δρυοδάση και πέτρινα μονοπάτια",
+   "Ταξιδιώτες που θέλουν ένα πράσινο, σχεδόν τοσκανικό νησί, διαφορετικό από τις υπόλοιπες Κυκλάδες",
+   "Όσους αρέσει μια καλλιεργημένη βάση — η νεοκλασική Χώρα έχει το μεγαλύτερο μουσείο σύγχρονης τέχνης του Αιγαίου"
+  ],
+  "skip": [
+   "If you depend on Piraeus — Andros sails only from Rafina",
+   "If you want everything close together; the port and the lively southeast are 35 km apart"
+  ],
+  "skip_el": [
+   "Αν εξαρτάσαι από τον Πειραιά — η Άνδρος έχει δρομολόγια μόνο από τη Ραφήνα",
+   "Αν θέλεις τα πάντα κοντά· το λιμάνι και ο ζωντανός νοτιοανατολικός είναι 35 χλμ. μακριά"
+  ]
+ },
+ "specialties": [
+  {
+   "name": "Fourtalia",
+   "name_el": "Φουρτάλια",
+   "desc": "Andriotic omelette with potatoes, local sausage, and wild fennel — heartier than the Tinian version. Try at Nonna's in Chora or the village tavernas of Apoikia.",
+   "desc_el": "Ανδριώτικη ομελέτα με πατάτες, τοπικό λουκάνικο και άγριο μάραθο — πιο γερό φαγητό από την τηνιακή. Στη Νόννα στη Χώρα ή σε ταβέρνες της Αποικίας."
+  },
+  {
+   "name": "Sariza spring water",
+   "name_el": "Νερό Σάριζα",
+   "desc": "Greece's most famous bottled spring water comes from Apoikia. You can drink it directly from the public tap in the village. Bring an empty bottle.",
+   "desc_el": "Το πιο διάσημο εμφιαλωμένο νερό της Ελλάδας από την Αποικία. Μπορείς να γεμίσεις απευθείας από τη βρύση στο χωριό. Πάρε ένα άδειο μπουκάλι."
+  },
+  {
+   "name": "Kaltsounia",
+   "name_el": "Καλτσούνια",
+   "desc": "Sweet cheese pies — small fried pastries filled with fresh cheese and honey. A breakfast or dessert specialty. Best at the kafeneia of Apoikia and Aprovato.",
+   "desc_el": "Γλυκές τυρόπιτες — μικρά τηγανητά πιτάκια γεμάτα φρέσκο τυρί και μέλι. Πρωινό ή επιδόρπιο. Καλύτερα στα καφενεία της Αποικίας και του Αμολόχου."
+  },
+  {
+   "name": "Amygdalota",
+   "name_el": "Αμυγδαλωτά",
+   "desc": "Dense almond cookies with rose water — Andriotic in style, slightly different from the Hydraiotika. Sold at every bakery in Chora.",
+   "desc_el": "Πυκνά αμυγδαλωτά με ροδόνερο — ανδριώτικου τύπου, διαφέρει ελαφρώς από τα υδραίικα. Σε κάθε φούρνο στη Χώρα."
+  }
+ ],
+ "festivals": [
+  {
+   "name": "Panagia of Panachrantou",
+   "name_el": "Παναγία της Παναχράντου",
+   "when": "15 August",
+   "when_el": "15 Αυγούστου",
+   "desc": "Pilgrimage to the cliff-top monastery above Korthi. The icon is revered for healing properties; villages across the island send delegations.",
+   "desc_el": "Προσκύνημα στο μοναστήρι πάνω από το Κόρθι. Η εικόνα τιμάται για τις θαυματουργές ιδιότητες· χωριά από όλο το νησί στέλνουν αντιπροσωπείες."
+  }
+ ],
+ "getting_there": {
+  "pills": [
+   "⛵ Rafina 2h",
+   "€18–35"
+  ],
+  "pills_el": [
+   "⛵ Ραφήνα 2 ώρες",
+   "€18–35"
+  ],
+  "summary": "No airport, no ferry from Piraeus. Andros is served exclusively from Rafina (1h east of Athens by car/bus). Ferries dock at Gavrio on the northwest coast — 35km from the lively southeast.",
+  "summary_el": "Χωρίς αεροδρόμιο, χωρίς πλοίο από Πειραιά. Η Άνδρος εξυπηρετείται αποκλειστικά από Ραφήνα (1 ώρα ανατολικά της Αθήνας). Τα πλοία δένουν στο Γαύριο στη βορειοδυτική ακτή — 35 χλμ. από τα ζωντανά ΝΑ.",
+  "tip": "KTEL bus from Athens (Mavromateon terminal) goes straight to Rafina port — no need to drive.",
+  "tip_el": "Το ΚΤΕΛ από Αθήνα (Μαυρομματαίον) πάει κατευθείαν στο λιμάνι Ραφήνας — δεν χρειάζεται αυτοκίνητο."
+ },
+ "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783277169/andros_nk3pmn.jpg"
 }

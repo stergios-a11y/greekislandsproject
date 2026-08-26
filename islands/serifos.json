@@ -1,451 +1,451 @@
 {
-  "key": "serifos",
-  "name": "Serifos",
-  "intro": "Serifos is the wildest of the western Cyclades — stark, treeless, and topped by one of the most dramatic villages in Greece: Chora climbs up a volcanic cone like a staircase of white cubes. Iron mining gave the island prosperity until 1963; now abandoned mines and rusted piers give the coastline a post-industrial beauty. The beaches are empty, the villages stuck in time.",
+ "key": "serifos",
+ "name": "Serifos",
+ "intro": "Serifos is the wildest of the western Cyclades — stark, treeless, and topped by one of the most dramatic villages in Greece: Chora climbs up a volcanic cone like a staircase of white cubes. Iron mining gave the island prosperity until 1963; now abandoned mines and rusted piers give the coastline a post-industrial beauty. The beaches are empty, the villages stuck in time.",
+ "subtitle": "Dramatic white Chora and empty west coast beaches",
+ "when_to_visit": {
+  "summary": "Serifos is for people who think Sifnos has gotten too popular. Sparse, raw, dramatic. Open-water swimmers love it. Best in late June and September — July-August is hot and the Meltemi makes some beaches unusable. Almost everything closes by mid-October.",
+  "summary_el": "Η Σέριφος είναι για όσους θεωρούν ότι η Σίφνος έγινε πολύ δημοφιλής. Αραιή, ακατέργαστη, δραματική. Οι κολυμβητές ανοιχτής θάλασσας τη λατρεύουν. Καλύτερα στα τέλη Ιουνίου και τον Σεπτέμβριο — ο Ιούλιος–Αύγουστος έχει ζέστη και το μελτέμι αχρηστεύει κάποιες παραλίες. Σχεδόν τα πάντα κλείνουν ως τα μέσα Οκτωβρίου.",
+  "months": [
+   {
+    "tag": "avoid",
+    "why": "Off-season, raw",
+    "why_el": "Σε χειμερία νάρκη"
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Εκτός σεζόν"
+   },
+   {
+    "tag": "ok",
+    "why": "Quiet",
+    "why_el": "Ησυχία, κρύα θάλασσα"
+   },
+   {
+    "tag": "great",
+    "why": "Easter, walks",
+    "why_el": "Πάσχα & πεζοπορία"
+   },
+   {
+    "tag": "great",
+    "why": "Empty, sea warming",
+    "why_el": "Άδεια, θάλασσα"
+   },
+   {
+    "tag": "perfect",
+    "why": "Warm, dramatic light",
+    "why_el": "Ζεστή θάλασσα"
+   },
+   {
+    "tag": "ok",
+    "why": "Meltemi, N closed",
+    "why_el": "Ζέστη, μελτέμι βόρεια"
+   },
+   {
+    "tag": "avoid",
+    "why": "Meltemi peak",
+    "why_el": "Κορύφωση μελτεμιού"
+   },
+   {
+    "tag": "perfect",
+    "why": "Best — emptier, warm",
+    "why_el": "Καλύτερος — άδεια"
+   },
+   {
+    "tag": "great",
+    "why": "Still swimmable",
+    "why_el": "Ακόμα μπάνιο αρχές"
+   },
+   {
+    "tag": "ok",
+    "why": "Wrapping up fast",
+    "why_el": "Κλείνει γρήγορα"
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Εκτός σεζόν"
+   }
+  ]
+ },
+ "itinerary": {
+  "title": "3-day Itinerary for Serifos",
   "subtitle": "Dramatic white Chora and empty west coast beaches",
-  "when_to_visit": {
-    "summary": "Serifos is for people who think Sifnos has gotten too popular. Sparse, raw, dramatic. Open-water swimmers love it. Best in late June and September — July-August is hot and the Meltemi makes some beaches unusable. Almost everything closes by mid-October.",
-    "summary_el": "Η Σέριφος είναι για όσους θεωρούν ότι η Σίφνος έγινε πολύ δημοφιλής. Αραιή, ακατέργαστη, δραματική. Οι κολυμβητές ανοιχτής θάλασσας τη λατρεύουν. Καλύτερα στα τέλη Ιουνίου και τον Σεπτέμβριο — ο Ιούλιος–Αύγουστος έχει ζέστη και το μελτέμι αχρηστεύει κάποιες παραλίες. Σχεδόν τα πάντα κλείνουν ως τα μέσα Οκτωβρίου.",
-    "months": [
-      {
-        "tag": "avoid",
-        "why": "Off-season, raw",
-        "why_el": "Σε χειμερία νάρκη"
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Εκτός σεζόν"
-      },
-      {
-        "tag": "ok",
-        "why": "Quiet",
-        "why_el": "Ησυχία, κρύα θάλασσα"
-      },
-      {
-        "tag": "great",
-        "why": "Easter, walks",
-        "why_el": "Πάσχα & πεζοπορία"
-      },
-      {
-        "tag": "great",
-        "why": "Empty, sea warming",
-        "why_el": "Άδεια, θάλασσα"
-      },
-      {
-        "tag": "perfect",
-        "why": "Warm, dramatic light",
-        "why_el": "Ζεστή θάλασσα"
-      },
-      {
-        "tag": "ok",
-        "why": "Meltemi, N closed",
-        "why_el": "Ζέστη, μελτέμι βόρεια"
-      },
-      {
-        "tag": "avoid",
-        "why": "Meltemi peak",
-        "why_el": "Κορύφωση μελτεμιού"
-      },
-      {
-        "tag": "perfect",
-        "why": "Best — emptier, warm",
-        "why_el": "Καλύτερος — άδεια"
-      },
-      {
-        "tag": "great",
-        "why": "Still swimmable",
-        "why_el": "Ακόμα μπάνιο αρχές"
-      },
-      {
-        "tag": "ok",
-        "why": "Wrapping up fast",
-        "why_el": "Κλείνει γρήγορα"
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Εκτός σεζόν"
+  "days": [
+   {
+    "day": 1,
+    "title": "Chora & Livadi",
+    "km": 10,
+    "drive_mins": 25,
+    "overnight": "Chora",
+    "color": "#0B8FAC",
+    "stops": [
+     {
+      "name": "Livadi (port)",
+      "lat": 37.1422561,
+      "lng": 24.5161582,
+      "type": "harbour",
+      "time": "10:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJz60U5Xi9mBQRWtrZZwbi8Yk",
+      "desc": "Main port and the only real village on the coast. Small but lively in summer, with tavernas, ice cream and a few music bars along the bay. Most accommodation, car rentals, and the bus stop for the Chora are all within a five-minute walk of where you step off the ferry.",
+      "name_el": "Λιβάδι (λιμάνι)",
+      "desc_el": "Κύριο λιμάνι και το μοναδικό πραγματικό χωριό στην ακτή. Μικρό αλλά ζωντανό το καλοκαίρι, με ταβέρνες, παγωτό και λίγα μουσικά μπαρ κατά μήκος του κόλπου. Τα περισσότερα καταλύματα, οι ενοικιάσεις αυτοκινήτων και η στάση λεωφορείου για τη Χώρα είναι όλα σε πέντε λεπτά από το σημείο που κατεβαίνεις από το πλοίο.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/%CE%9B%CE%B9%CE%B2%CE%AC%CE%B4%CE%B9_%CE%A3%CE%B5%CF%81%CE%AF%CF%86%CE%BF%CF%85_9446.jpg/1920px-%CE%9B%CE%B9%CE%B2%CE%AC%CE%B4%CE%B9_%CE%A3%CE%B5%CF%81%CE%AF%CF%86%CE%BF%CF%85_9446.jpg",
+      "photo_credit": {
+       "artist": "C messier",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:%CE%9B%CE%B9%CE%B2%CE%AC%CE%B4%CE%B9_%CE%A3%CE%B5%CF%81%CE%AF%CF%86%CE%BF%CF%85_9446.jpg",
+       "source": "Wikimedia Commons"
       }
-    ]
-  },
-  "itinerary": {
-    "title": "3-day Itinerary for Serifos",
-    "subtitle": "Dramatic white Chora and empty west coast beaches",
-    "days": [
-      {
-        "day": 1,
-        "title": "Chora & Livadi",
-        "km": 10,
-        "drive_mins": 25,
-        "overnight": "Chora",
-        "color": "#0B8FAC",
-        "stops": [
-          {
-            "name": "Livadi (port)",
-            "lat": 37.1422561,
-            "lng": 24.5161582,
-            "type": "harbour",
-            "time": "10:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJz60U5Xi9mBQRWtrZZwbi8Yk",
-            "desc": "Main port and the only real village on the coast. Small but lively in summer, with tavernas, ice cream and a few music bars along the bay. Most accommodation, car rentals, and the bus stop for the Chora are all within a five-minute walk of where you step off the ferry.",
-            "name_el": "Λιβάδι (λιμάνι)",
-            "desc_el": "Κύριο λιμάνι και το μοναδικό πραγματικό χωριό στην ακτή. Μικρό αλλά ζωντανό το καλοκαίρι, με ταβέρνες, παγωτό και λίγα μουσικά μπαρ κατά μήκος του κόλπου. Τα περισσότερα καταλύματα, οι ενοικιάσεις αυτοκινήτων και η στάση λεωφορείου για τη Χώρα είναι όλα σε πέντε λεπτά από το σημείο που κατεβαίνεις από το πλοίο.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/%CE%9B%CE%B9%CE%B2%CE%AC%CE%B4%CE%B9_%CE%A3%CE%B5%CF%81%CE%AF%CF%86%CE%BF%CF%85_9446.jpg/1920px-%CE%9B%CE%B9%CE%B2%CE%AC%CE%B4%CE%B9_%CE%A3%CE%B5%CF%81%CE%AF%CF%86%CE%BF%CF%85_9446.jpg",
-            "photo_credit": {
-              "artist": "C messier",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:%CE%9B%CE%B9%CE%B2%CE%AC%CE%B4%CE%B9_%CE%A3%CE%B5%CF%81%CE%AF%CF%86%CE%BF%CF%85_9446.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Livadakia Beach",
-            "lat": 37.143,
-            "lng": 24.5165,
-            "type": "beach",
-            "time": "11:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJVQfY8YK9mBQRCX-jB1QQESU",
-            "desc": "Sandy beach a five-minute walk south of Livadi. Family-friendly with tamarisk shade and two reliable tavernas right behind the sand. Shallow water makes it good for children, but exposed to the meltemi when it blows from the north.",
-            "name_el": "Παραλία Λιβαδάκια",
-            "desc_el": "Αμμώδης παραλία πέντε λεπτά νότια του Λιβαδιού. Οικογενειακή με σκιά αλμυρικιών και δύο σταθερές ταβέρνες ακριβώς πίσω από την άμμο. Τα ρηχά νερά την κάνουν καλή για παιδιά, αλλά εκτεθειμένη όταν φυσάει μελτέμι από βορρά.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Serifos_%28beach_Livadakia%29.jpg/1920px-Serifos_%28beach_Livadakia%29.jpg",
-            "photo_credit": {
-              "artist": "G-Lignum",
-              "license": "CC0",
-              "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Serifos_(beach_Livadakia).jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Chora (Upper Village)",
-            "lat": 37.1541,
-            "lng": 24.5069,
-            "type": "village",
-            "time": "16:00",
-            "wiki": "https://www.google.com/maps/search/Chora+(Upper+Village)+Serifos",
-            "desc": "White-cubed village crowning a pyramid-shaped hill. The climb from the bus stop is steep but magical at dusk.",
-            "name_el": "Χώρα (Άνω Χωριό)",
-            "desc_el": "Λευκοκύβινο χωριό που στεφανώνει έναν πυραμιδοειδή λόφο. Η ανάβαση από τη στάση του λεωφορείου είναι απότομη αλλά μαγική στο σούρουπο.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780175791/%CF%83%CE%B5%CF%81%CE%B9%CF%86%CE%BF%CF%82_%CF%87%CF%89%CF%81%CE%B1_iaotzi.jpg",
-            "photo_credit": {
-              "artist": "C messier",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:%CE%86%CE%B3%CE%B9%CE%BF%CF%82_%CE%9A%CF%89%CE%BD%CF%83%CF%84%CE%B1%CE%BD%CF%84%CE%AF%CE%BD%CE%BF%CF%82,_%CE%A3%CE%AD%CF%81%CE%B9%CF%86%CE%BF%CF%82_9441.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Chora Castle ruins",
-            "lat": 37.1556,
-            "lng": 24.5073,
-            "type": "castle",
-            "time": "18:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJd8BTJGy9mBQRbPCSbu4DjdI",
-            "desc": "At the top of Chora — Venetian-era ruins on a rock that crowns the whole island. 360° views over the Aegean at sunset, with Sifnos and Kythnos visible on clear evenings. The climb up from the lower Chora takes 15 minutes; go before sunset and stay for it.",
-            "name_el": "Ερείπια Κάστρου Χώρας",
-            "desc_el": "Στην κορυφή της Χώρας — ερείπια από την ενετική εποχή σε βράχο που στεφανώνει όλο το νησί. 360° θέες πάνω από το Αιγαίο στο ηλιοβασίλεμα, με τη Σίφνο και την Κύθνο ορατές σε καθαρά βράδια. Η ανάβαση από την κάτω Χώρα διαρκεί 15 λεπτά· πήγαινε λίγο πριν τη δύση και μείνε για το ηλιοβασίλεμα.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780175791/%CE%BA%CE%B1%CF%83%CF%84%CF%81%CE%BF_mys1vf.jpg"
-          }
-        ],
-        "title_el": "Χώρα & Λιβάδι",
-        "overnight_el": "Χώρα",
-        "food": [
-          {
-            "meal": "Dinner",
-            "meal_el": "Δείπνο",
-            "area": "Chora",
-            "area_el": "Χώρα",
-            "desc": "<a href=\"https://www.google.com/maps/search/Stou+Stratou+Serifos+Chora\" target=\"_blank\" rel=\"noopener\">Stou Stratou</a> on the main square of Chora — mezes and mains with the sunset over the port below.",
-            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Stou+Stratou+Serifos+Chora\" target=\"_blank\" rel=\"noopener\">Στου Στράτου</a> στην κεντρική πλατεία της Χώρας — μεζέδες και κυρίως πιάτα με το ηλιοβασίλεμα πάνω από το λιμάνι.",
-            "after": "Chora Castle ruins"
-          }
-        ]
-      },
-      {
-        "day": 2,
-        "title": "Northern Coast & Mines",
-        "km": 30,
-        "drive_mins": 70,
-        "overnight": "Chora",
-        "color": "#3D8B6F",
-        "stops": [
-          {
-            "name": "Megalo Livadi",
-            "lat": 37.1406007,
-            "lng": 24.432806,
-            "type": "harbour",
-            "time": "10:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJU4lXBHW8mBQR7GmvPTeOm98",
-            "desc": "Abandoned mining harbor on the west coast. Eerie industrial ruins and a pebble beach. The 1916 miners' strike monument is here.",
-            "name_el": "Μεγάλο Λιβάδι",
-            "desc_el": "Εγκαταλελειμμένο λιμάνι εξόρυξης στη δυτική ακτή. Απόκοσμα βιομηχανικά ερείπια και βότσαλη παραλία. Το μνημείο της απεργίας των μεταλλωρύχων του 1916 είναι εδώ.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780175791/%CE%BC%CE%B5%CE%B3%CE%B1%CE%BB%CE%BF_%CE%BB%CE%B9%CE%B2%CE%B1%CE%B4%CE%B9_vlpz4e.jpg",
-            "photo_credit": {
-              "artist": "The original uploader was Αχρήστης at Greek Wikipedia.",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Megalo_Livadi.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Koutalas Beach",
-            "lat": 37.1221,
-            "lng": 24.4706,
-            "type": "beach",
-            "time": "12:00",
-            "wiki": null,
-            "desc": "Long sandy bay on the south coast, reached by a winding road through the abandoned mining villages. Peaceful, excellent water clarity, virtually no infrastructure — bring everything you need. The remains of the old ore-loading pier are still visible at one end.",
-            "name_el": "Παραλία Κουταλά",
-            "desc_el": "Μακρύς αμμώδης κόλπος στη νότια ακτή, με πρόσβαση από ελικοειδή δρόμο μέσα από τα εγκαταλελειμμένα μεταλλωρυχικά χωριά. Ειρηνικός, εξαιρετική διαύγεια νερών, σχεδόν καθόλου υποδομές — πάρε μαζί ό,τι χρειάζεσαι. Τα ερείπια της παλιάς προβλήτας φόρτωσης ορυκτών είναι ακόμα ορατά στη μία άκρη.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780175791/%CE%BA%CE%BF%CF%85%CF%84%CE%B1%CE%BB%CE%B1_amai3c.jpg"
-          },
-          {
-            "name": "Mega Chorio (abandoned)",
-            "lat": 37.1765,
-            "lng": 24.47,
-            "type": "village",
-            "time": "15:00",
-            "wiki": null,
-            "desc": "Semi-abandoned mining village in the island's interior. Tall narrow stone houses, an empty schoolyard, the wind through the windows. A few year-round residents remain. The walk through takes ten minutes and shows you exactly what 'a Cycladic island after the mines closed' looks like.",
-            "name_el": "Μέγα Χωριό (εγκαταλελειμμένο)",
-            "desc_el": "Ημι-εγκαταλελειμμένο μεταλλωρυχικό χωριό στο εσωτερικό του νησιού. Ψηλά στενά πέτρινα σπίτια, μια άδεια σχολική αυλή, ο άνεμος στα παράθυρα. Λίγοι κάτοικοι μένουν όλο τον χρόνο. Το περπάτημα διαρκεί δέκα λεπτά και σου δείχνει ακριβώς πώς μοιάζει «ένα κυκλαδίτικο νησί μετά το κλείσιμο των ορυχείων»."
-          },
-          {
-            "name": "Panagia",
-            "lat": 37.1701,
-            "lng": 24.4809,
-            "type": "village",
-            "time": "16:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJj88_x6WimBQR6-AW7uZfIAY",
-            "desc": "Quiet village with one of the oldest churches in the Cyclades — the 10th-century Byzantine basilica of Panagia is built into the structure of an older temple, with marble columns from antiquity visible inside. A custodian opens it most mornings; ask at the kafenio.",
-            "name_el": "Παναγιά",
-            "desc_el": "Ήσυχο χωριό με μία από τις αρχαιότερες εκκλησίες των Κυκλάδων — η βυζαντινή βασιλική της Παναγίας του 10ου αιώνα είναι χτισμένη πάνω σε δομή αρχαίου ναού, με αρχαία μαρμάρινα κομμάτια ορατά μέσα. Ένας φύλακας την ανοίγει τα περισσότερα πρωινά· ρώτα στο καφενείο.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/%CE%A0%CE%B1%CE%BD%CE%B1%CE%B3%CE%B9%CE%AC_%CE%A3%CE%B5%CF%81%CE%AF%CF%86%CE%BF%CF%85_1929.jpg/1920px-%CE%A0%CE%B1%CE%BD%CE%B1%CE%B3%CE%B9%CE%AC_%CE%A3%CE%B5%CF%81%CE%AF%CF%86%CE%BF%CF%85_1929.jpg",
-            "photo_credit": {
-              "artist": "C messier",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:%CE%A0%CE%B1%CE%BD%CE%B1%CE%B3%CE%B9%CE%AC_%CE%A3%CE%B5%CF%81%CE%AF%CF%86%CE%BF%CF%85_1929.jpg",
-              "source": "Wikimedia Commons"
-            }
-          }
-        ],
-        "title_el": "Βόρεια Ακτή & Ορυχεία",
-        "overnight_el": "Χώρα",
-        "food": [
-          {
-            "meal": "Dinner",
-            "meal_el": "Δείπνο",
-            "area": "Serifos",
-            "area_el": "Σέριφος",
-            "desc": "<a href=\"https://www.google.com/maps/search/Seriani+Serifos\" target=\"_blank\" rel=\"noopener\">Seriani</a> does modern Serifos cooking with island produce.",
-            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Seriani+Serifos\" target=\"_blank\" rel=\"noopener\">Σεριάνι</a> κάνει μοντέρνα σεριφιώτικη κουζίνα με ντόπια προϊόντα.",
-            "after": "Panagia"
-          }
-        ]
-      },
-      {
-        "day": 3,
-        "title": "East Coast Beaches",
-        "km": 25,
-        "drive_mins": 60,
-        "overnight": "Departure",
-        "color": "#C4962A",
-        "stops": [
-          {
-            "name": "Psili Ammos",
-            "lat": 37.1611683,
-            "lng": 24.5226862,
-            "type": "beach",
-            "time": "10:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJeZLRCl-9mBQRN1cfDutl1_g",
-            "desc": "The most photogenic beach on Serifos — golden sand, turquoise water, perfectly arced bay backed by tamarisk trees. There's one taverna behind the beach for grilled fish and a cold beer. Get here by mid-morning in August; by lunch it fills up.",
-            "name_el": "Ψιλή Άμμος",
-            "desc_el": "Η πιο φωτογενής παραλία της Σερίφου — χρυσή άμμος, τιρκουάζ νερά, τέλεια καμπυλωτός κόλπος με αλμυρίκια στο πίσω μέρος. Υπάρχει μία ταβέρνα πίσω από την παραλία για ψητά ψάρια και κρύα μπύρα. Πήγαινε μέχρι μέσα του πρωινού τον Αύγουστο· μέχρι το μεσημέρι γεμίζει.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780175790/%CF%88%CE%B9%CE%BB%CE%B7_%CE%B1%CE%BC%CE%BC%CE%BF%CF%82_huqsyf.jpg",
-            "photo_credit": {
-              "artist": "C messier",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:%CE%A8%CE%B9%CE%BB%CE%AE_%CE%86%CE%BC%CE%BC%CE%BF%CF%82,_%CE%A3%CE%AD%CF%81%CE%B9%CF%86%CE%BF%CF%82_1967.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Agios Sostis",
-            "lat": 37.1533,
-            "lng": 24.5385,
-            "type": "beach",
-            "time": "12:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJQ-Hqlt2XmBQRC_MQDvWwe00",
-            "desc": "Small sandy cove with a whitewashed church on the rocky headland — the church gives the beach its name. Reach via dirt track from Psili Ammos, ten minutes' walk. Very few people; bring shade, there's none here.",
-            "name_el": "Άγιος Σώστης",
-            "desc_el": "Μικρός αμμώδης κολπίσκος με ασβεστωμένο εκκλησάκι στο βραχώδες ακρωτήρι — η εκκλησία δίνει το όνομα στην παραλία. Πρόσβαση από χωματόδρομο από την Ψιλή Άμμο, δέκα λεπτά πεζοπορία. Πολύ λίγοι άνθρωποι· πάρε μαζί σκιά, εδώ δεν υπάρχει.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780175790/%CE%B1%CE%B3%CE%B9%CE%BF%CF%82_%CF%83%CF%89%CF%83%CF%84%CE%B7%CF%82_p7bljn.jpg",
-            "photo_credit": {
-              "artist": "An. Antoniou",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:A@a_from_agios_sostis_serifos_greece_-_panoramio.jpg",
-              "source": "Wikimedia Commons"
-            }
-          }
-        ],
-        "title_el": "Παραλίες της Ανατολικής Ακτής",
-        "overnight_el": "Αναχώρηση",
-        "food": [
-          {
-            "meal": "Lunch",
-            "meal_el": "Μεσημεριανό",
-            "area": "Agios Sostis",
-            "area_el": "Άγιος Σώστης",
-            "desc": "<a href=\"https://www.google.com/maps/search/Takis+Serifos+Agios+Sostis\" target=\"_blank\" rel=\"noopener\">Takis</a> is the beach taverna at Agios Sostis for fresh fish before the boat.",
-            "desc_el": "Ο <a href=\"https://www.google.com/maps/search/Takis+Serifos+Agios+Sostis\" target=\"_blank\" rel=\"noopener\">Τάκης</a> είναι η ταβέρνα της παραλίας στον Άγιο Σώστη για φρέσκο ψάρι πριν το πλοίο.",
-            "after": "Agios Sostis"
-          }
-        ]
+     },
+     {
+      "name": "Livadakia Beach",
+      "lat": 37.143,
+      "lng": 24.5165,
+      "type": "beach",
+      "time": "11:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJVQfY8YK9mBQRCX-jB1QQESU",
+      "desc": "Sandy beach a five-minute walk south of Livadi. Family-friendly with tamarisk shade and two reliable tavernas right behind the sand. Shallow water makes it good for children, but exposed to the meltemi when it blows from the north.",
+      "name_el": "Παραλία Λιβαδάκια",
+      "desc_el": "Αμμώδης παραλία πέντε λεπτά νότια του Λιβαδιού. Οικογενειακή με σκιά αλμυρικιών και δύο σταθερές ταβέρνες ακριβώς πίσω από την άμμο. Τα ρηχά νερά την κάνουν καλή για παιδιά, αλλά εκτεθειμένη όταν φυσάει μελτέμι από βορρά.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Serifos_%28beach_Livadakia%29.jpg/1920px-Serifos_%28beach_Livadakia%29.jpg",
+      "photo_credit": {
+       "artist": "G-Lignum",
+       "license": "CC0",
+       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Serifos_(beach_Livadakia).jpg",
+       "source": "Wikimedia Commons"
       }
+     },
+     {
+      "name": "Chora (Upper Village)",
+      "lat": 37.1541,
+      "lng": 24.5069,
+      "type": "village",
+      "time": "16:00",
+      "wiki": "https://www.google.com/maps/search/Chora+(Upper+Village)+Serifos",
+      "desc": "White-cubed village crowning a pyramid-shaped hill. The climb from the bus stop is steep but magical at dusk.",
+      "name_el": "Χώρα (Άνω Χωριό)",
+      "desc_el": "Λευκοκύβινο χωριό που στεφανώνει έναν πυραμιδοειδή λόφο. Η ανάβαση από τη στάση του λεωφορείου είναι απότομη αλλά μαγική στο σούρουπο.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780175791/%CF%83%CE%B5%CF%81%CE%B9%CF%86%CE%BF%CF%82_%CF%87%CF%89%CF%81%CE%B1_iaotzi.jpg",
+      "photo_credit": {
+       "artist": "C messier",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:%CE%86%CE%B3%CE%B9%CE%BF%CF%82_%CE%9A%CF%89%CE%BD%CF%83%CF%84%CE%B1%CE%BD%CF%84%CE%AF%CE%BD%CE%BF%CF%82,_%CE%A3%CE%AD%CF%81%CE%B9%CF%86%CE%BF%CF%82_9441.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Chora Castle ruins",
+      "lat": 37.1556,
+      "lng": 24.5073,
+      "type": "castle",
+      "time": "18:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJd8BTJGy9mBQRbPCSbu4DjdI",
+      "desc": "At the top of Chora — Venetian-era ruins on a rock that crowns the whole island. 360° views over the Aegean at sunset, with Sifnos and Kythnos visible on clear evenings. The climb up from the lower Chora takes 15 minutes; go before sunset and stay for it.",
+      "name_el": "Ερείπια Κάστρου Χώρας",
+      "desc_el": "Στην κορυφή της Χώρας — ερείπια από την ενετική εποχή σε βράχο που στεφανώνει όλο το νησί. 360° θέες πάνω από το Αιγαίο στο ηλιοβασίλεμα, με τη Σίφνο και την Κύθνο ορατές σε καθαρά βράδια. Η ανάβαση από την κάτω Χώρα διαρκεί 15 λεπτά· πήγαινε λίγο πριν τη δύση και μείνε για το ηλιοβασίλεμα.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780175791/%CE%BA%CE%B1%CF%83%CF%84%CF%81%CE%BF_mys1vf.jpg"
+     }
     ],
-    "title_el": "Πρόγραμμα 3 Ημερών στη Σέριφο",
-    "subtitle_el": "Δραματική λευκή Χώρα και οι άδειες παραλίες της δυτικής ακτής"
-  },
-  "beaches": [
-    {
+    "title_el": "Χώρα & Λιβάδι",
+    "overnight_el": "Χώρα",
+    "food": [
+     {
+      "meal": "Dinner",
+      "meal_el": "Δείπνο",
+      "area": "Chora",
+      "area_el": "Χώρα",
+      "desc": "<a href=\"https://www.google.com/maps/search/Stou+Stratou+Serifos+Chora\" target=\"_blank\" rel=\"noopener\">Stou Stratou</a> on the main square of Chora — mezes and mains with the sunset over the port below.",
+      "desc_el": "Το <a href=\"https://www.google.com/maps/search/Stou+Stratou+Serifos+Chora\" target=\"_blank\" rel=\"noopener\">Στου Στράτου</a> στην κεντρική πλατεία της Χώρας — μεζέδες και κυρίως πιάτα με το ηλιοβασίλεμα πάνω από το λιμάνι.",
+      "after": "Chora Castle ruins"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "title": "Northern Coast & Mines",
+    "km": 30,
+    "drive_mins": 70,
+    "overnight": "Chora",
+    "color": "#3D8B6F",
+    "stops": [
+     {
+      "name": "Megalo Livadi",
+      "lat": 37.1406007,
+      "lng": 24.432806,
+      "type": "harbour",
+      "time": "10:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJU4lXBHW8mBQR7GmvPTeOm98",
+      "desc": "Abandoned mining harbor on the west coast. Eerie industrial ruins and a pebble beach. The 1916 miners' strike monument is here.",
+      "name_el": "Μεγάλο Λιβάδι",
+      "desc_el": "Εγκαταλελειμμένο λιμάνι εξόρυξης στη δυτική ακτή. Απόκοσμα βιομηχανικά ερείπια και βότσαλη παραλία. Το μνημείο της απεργίας των μεταλλωρύχων του 1916 είναι εδώ.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780175791/%CE%BC%CE%B5%CE%B3%CE%B1%CE%BB%CE%BF_%CE%BB%CE%B9%CE%B2%CE%B1%CE%B4%CE%B9_vlpz4e.jpg",
+      "photo_credit": {
+       "artist": "The original uploader was Αχρήστης at Greek Wikipedia.",
+       "license": "CC BY-SA 3.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Megalo_Livadi.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Koutalas Beach",
+      "lat": 37.1221,
+      "lng": 24.4706,
+      "type": "beach",
+      "time": "12:00",
+      "wiki": null,
+      "desc": "Long sandy bay on the south coast, reached by a winding road through the abandoned mining villages. Peaceful, excellent water clarity, virtually no infrastructure — bring everything you need. The remains of the old ore-loading pier are still visible at one end.",
+      "name_el": "Παραλία Κουταλά",
+      "desc_el": "Μακρύς αμμώδης κόλπος στη νότια ακτή, με πρόσβαση από ελικοειδή δρόμο μέσα από τα εγκαταλελειμμένα μεταλλωρυχικά χωριά. Ειρηνικός, εξαιρετική διαύγεια νερών, σχεδόν καθόλου υποδομές — πάρε μαζί ό,τι χρειάζεσαι. Τα ερείπια της παλιάς προβλήτας φόρτωσης ορυκτών είναι ακόμα ορατά στη μία άκρη.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780175791/%CE%BA%CE%BF%CF%85%CF%84%CE%B1%CE%BB%CE%B1_amai3c.jpg"
+     },
+     {
+      "name": "Mega Chorio (abandoned)",
+      "lat": 37.1765,
+      "lng": 24.47,
+      "type": "village",
+      "time": "15:00",
+      "wiki": null,
+      "desc": "Semi-abandoned mining village in the island's interior. Tall narrow stone houses, an empty schoolyard, the wind through the windows. A few year-round residents remain. The walk through takes ten minutes and shows you exactly what 'a Cycladic island after the mines closed' looks like.",
+      "name_el": "Μέγα Χωριό (εγκαταλελειμμένο)",
+      "desc_el": "Ημι-εγκαταλελειμμένο μεταλλωρυχικό χωριό στο εσωτερικό του νησιού. Ψηλά στενά πέτρινα σπίτια, μια άδεια σχολική αυλή, ο άνεμος στα παράθυρα. Λίγοι κάτοικοι μένουν όλο τον χρόνο. Το περπάτημα διαρκεί δέκα λεπτά και σου δείχνει ακριβώς πώς μοιάζει «ένα κυκλαδίτικο νησί μετά το κλείσιμο των ορυχείων»."
+     },
+     {
+      "name": "Panagia",
+      "lat": 37.1701,
+      "lng": 24.4809,
+      "type": "village",
+      "time": "16:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJj88_x6WimBQR6-AW7uZfIAY",
+      "desc": "Quiet village with one of the oldest churches in the Cyclades — the 10th-century Byzantine basilica of Panagia is built into the structure of an older temple, with marble columns from antiquity visible inside. A custodian opens it most mornings; ask at the kafenio.",
+      "name_el": "Παναγιά",
+      "desc_el": "Ήσυχο χωριό με μία από τις αρχαιότερες εκκλησίες των Κυκλάδων — η βυζαντινή βασιλική της Παναγίας του 10ου αιώνα είναι χτισμένη πάνω σε δομή αρχαίου ναού, με αρχαία μαρμάρινα κομμάτια ορατά μέσα. Ένας φύλακας την ανοίγει τα περισσότερα πρωινά· ρώτα στο καφενείο.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/%CE%A0%CE%B1%CE%BD%CE%B1%CE%B3%CE%B9%CE%AC_%CE%A3%CE%B5%CF%81%CE%AF%CF%86%CE%BF%CF%85_1929.jpg/1920px-%CE%A0%CE%B1%CE%BD%CE%B1%CE%B3%CE%B9%CE%AC_%CE%A3%CE%B5%CF%81%CE%AF%CF%86%CE%BF%CF%85_1929.jpg",
+      "photo_credit": {
+       "artist": "C messier",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:%CE%A0%CE%B1%CE%BD%CE%B1%CE%B3%CE%B9%CE%AC_%CE%A3%CE%B5%CF%81%CE%AF%CF%86%CE%BF%CF%85_1929.jpg",
+       "source": "Wikimedia Commons"
+      }
+     }
+    ],
+    "title_el": "Βόρεια Ακτή & Ορυχεία",
+    "overnight_el": "Χώρα",
+    "food": [
+     {
+      "meal": "Dinner",
+      "meal_el": "Δείπνο",
+      "area": "Serifos",
+      "area_el": "Σέριφος",
+      "desc": "<a href=\"https://www.google.com/maps/search/Seriani+Serifos\" target=\"_blank\" rel=\"noopener\">Seriani</a> does modern Serifos cooking with island produce.",
+      "desc_el": "Το <a href=\"https://www.google.com/maps/search/Seriani+Serifos\" target=\"_blank\" rel=\"noopener\">Σεριάνι</a> κάνει μοντέρνα σεριφιώτικη κουζίνα με ντόπια προϊόντα.",
+      "after": "Panagia"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "title": "East Coast Beaches",
+    "km": 25,
+    "drive_mins": 60,
+    "overnight": "Departure",
+    "color": "#C4962A",
+    "stops": [
+     {
       "name": "Psili Ammos",
       "lat": 37.1611683,
       "lng": 24.5226862,
-      "type": "Fine sand",
-      "length": "250 m",
-      "depth": "Shallow",
-      "facing": "East — protected",
-      "facilities": "Two tavernas, umbrellas",
+      "type": "beach",
+      "time": "10:00",
       "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJeZLRCl-9mBQRN1cfDutl1_g",
-      "desc": "The postcard beach of Serifos. Voted among Greece's top beaches multiple times.",
+      "desc": "The most photogenic beach on Serifos — golden sand, turquoise water, perfectly arced bay backed by tamarisk trees. There's one taverna behind the beach for grilled fish and a cold beer. Get here by mid-morning in August; by lunch it fills up.",
       "name_el": "Ψιλή Άμμος",
-      "desc_el": "Η εμβληματική παραλία της Σερίφου. Επανειλημμένα ψηφισμένη στις κορυφαίες παραλίες της Ελλάδας.",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Ρηχά",
-      "facing_el": "Ανατολικά — προστατευμένη",
-      "facilities_el": "Δύο ταβέρνες, ομπρέλες",
+      "desc_el": "Η πιο φωτογενής παραλία της Σερίφου — χρυσή άμμος, τιρκουάζ νερά, τέλεια καμπυλωτός κόλπος με αλμυρίκια στο πίσω μέρος. Υπάρχει μία ταβέρνα πίσω από την παραλία για ψητά ψάρια και κρύα μπύρα. Πήγαινε μέχρι μέσα του πρωινού τον Αύγουστο· μέχρι το μεσημέρι γεμίζει.",
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780175790/%CF%88%CE%B9%CE%BB%CE%B7_%CE%B1%CE%BC%CE%BC%CE%BF%CF%82_huqsyf.jpg",
       "photo_credit": {
-        "artist": "C messier",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:%CE%A8%CE%B9%CE%BB%CE%AE_%CE%86%CE%BC%CE%BC%CE%BF%CF%82,_%CE%A3%CE%AD%CF%81%CE%B9%CF%86%CE%BF%CF%82_1967.jpg",
-        "source": "Wikimedia Commons"
+       "artist": "C messier",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:%CE%A8%CE%B9%CE%BB%CE%AE_%CE%86%CE%BC%CE%BC%CE%BF%CF%82,_%CE%A3%CE%AD%CF%81%CE%B9%CF%86%CE%BF%CF%82_1967.jpg",
+       "source": "Wikimedia Commons"
       }
-    },
-    {
-      "name": "Livadakia",
-      "lat": 37.143,
-      "lng": 24.5165,
-      "type": "Fine sand",
-      "length": "250 m",
-      "depth": "Gradual",
-      "facing": "South — protected",
-      "facilities": "Full: tavernas, umbrellas, rooms",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJVQfY8YK9mBQRCX-jB1QQESU",
-      "desc": "Family-friendly main beach, 5 min walk from the port. Shaded by tamarisk trees.",
-      "name_el": "Λιβαδάκια",
-      "desc_el": "Η οικογενειακή κύρια παραλία, 5 λεπτά με τα πόδια από το λιμάνι. Σκιά από αλμυρίκια.",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Σταδιακή",
-      "facing_el": "Νότια — προστατευμένη",
-      "facilities_el": "Πλήρεις: ταβέρνες, ομπρέλες, δωμάτια",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Serifos_%28beach_Livadakia%29.jpg/1920px-Serifos_%28beach_Livadakia%29.jpg",
+     },
+     {
+      "name": "Agios Sostis",
+      "lat": 37.1533,
+      "lng": 24.5385,
+      "type": "beach",
+      "time": "12:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJQ-Hqlt2XmBQRC_MQDvWwe00",
+      "desc": "Small sandy cove with a whitewashed church on the rocky headland — the church gives the beach its name. Reach via dirt track from Psili Ammos, ten minutes' walk. Very few people; bring shade, there's none here.",
+      "name_el": "Άγιος Σώστης",
+      "desc_el": "Μικρός αμμώδης κολπίσκος με ασβεστωμένο εκκλησάκι στο βραχώδες ακρωτήρι — η εκκλησία δίνει το όνομα στην παραλία. Πρόσβαση από χωματόδρομο από την Ψιλή Άμμο, δέκα λεπτά πεζοπορία. Πολύ λίγοι άνθρωποι· πάρε μαζί σκιά, εδώ δεν υπάρχει.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780175790/%CE%B1%CE%B3%CE%B9%CE%BF%CF%82_%CF%83%CF%89%CF%83%CF%84%CE%B7%CF%82_p7bljn.jpg",
       "photo_credit": {
-        "artist": "G-Lignum",
-        "license": "CC0",
-        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Serifos_(beach_Livadakia).jpg",
-        "source": "Wikimedia Commons"
+       "artist": "An. Antoniou",
+       "license": "CC BY-SA 3.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:A@a_from_agios_sostis_serifos_greece_-_panoramio.jpg",
+       "source": "Wikimedia Commons"
       }
-    },
-    {
-      "name": "Agios Ioannis",
-      "lat": 37.1727,
-      "lng": 24.5393,
-      "type": "Coarse sand & pebbles",
-      "length": "400 m",
-      "depth": "Moderate",
-      "facing": "East — exposed",
-      "facilities": "One taverna, umbrellas",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJGb5fjVi9mBQR6rP9OKCx-tM",
-      "desc": "Wide, wild northeast coast beach. Striking views, few crowds.",
-      "name_el": "Άγιος Ιωάννης",
-      "desc_el": "Φαρδιά, άγρια παραλία της βορειοανατολικής ακτής. Εντυπωσιακές θέες, λίγος κόσμος.",
-      "type_el": "Χονδρή άμμος και βότσαλα",
-      "depth_el": "Μέτρια",
-      "facing_el": "Ανατολικά — εκτεθειμένη",
-      "facilities_el": "Μία ταβέρνα, ομπρέλες",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780175790/%CE%B1%CE%B3%CE%B9%CE%BF%CF%82_%CE%B9%CF%89%CE%B1%CE%BD%CE%BD%CE%B7%CF%82_xa9hzv.jpg"
-    }
-  ],
-  "name_el": "Σέριφος",
-  "name_accusative_el": "Σέριφο",
-  "name_genitive_el": "Σερίφου",
-  "gender_el": "f",
-  "subtitle_el": "Δραματική λευκή Χώρα και άδειες παραλίες δυτικής ακτής",
-  "intro_el": "Η Σέριφος είναι το πιο άγριο νησί των δυτικών Κυκλάδων — γυμνή, χωρίς δέντρα, και στεφανωμένη από ένα από τα πιο δραματικά χωριά της Ελλάδας: η Χώρα ανεβαίνει έναν ηφαιστειακό κώνο σαν σκάλα από λευκούς κύβους. Η εξόρυξη σιδήρου έδωσε στο νησί ευημερία μέχρι το 1963· τώρα εγκαταλελειμμένα ορυχεία και σκουριασμένες προβλήτες δίνουν στην ακτογραμμή μια μετα-βιομηχανική ομορφιά. Οι παραλίες είναι άδειες, τα χωριά κολλημένα στον χρόνο.",
-  "suited_for": {
-    "good": [
-      "Travellers who want one of the most dramatic Choras in the Cyclades and empty beaches below it",
-      "Anyone drawn to raw, treeless landscapes and the rust-and-stone beauty of old iron mines",
-      "Independent visitors happy to explore a quiet island slightly off the tourist track"
+     }
     ],
-    "good_el": [
-      "Ταξιδιώτες που θέλουν μία από τις πιο εντυπωσιακές Χώρες των Κυκλάδων και άδειες παραλίες από κάτω",
-      "Όσους τραβά το τραχύ, άδεντρο τοπίο και η ομορφιά από σκουριά και πέτρα των παλιών μεταλλείων",
-      "Ανεξάρτητους επισκέπτες που χαίρονται να εξερευνούν ένα ήσυχο νησί λίγο εκτός τουριστικού δρόμου"
-    ],
-    "skip": [
-      "If you want polished resorts and a full calendar of organised activities",
-      "If steep walks up to the Chora are a problem — Serifos is built on a volcanic cone"
-    ],
-    "skip_el": [
-      "Αν θέλεις γυαλισμένα resorts και γεμάτο πρόγραμμα οργανωμένων δραστηριοτήτων",
-      "Αν οι απότομες ανηφόρες προς τη Χώρα είναι πρόβλημα — η Σέριφος είναι χτισμένη σε ηφαιστειακό κώνο"
+    "title_el": "Παραλίες της Ανατολικής Ακτής",
+    "overnight_el": "Αναχώρηση",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Agios Sostis",
+      "area_el": "Άγιος Σώστης",
+      "desc": "<a href=\"https://www.google.com/maps/search/Takis+Serifos+Agios+Sostis\" target=\"_blank\" rel=\"noopener\">Takis</a> is the beach taverna at Agios Sostis for fresh fish before the boat.",
+      "desc_el": "Ο <a href=\"https://www.google.com/maps/search/Takis+Serifos+Agios+Sostis\" target=\"_blank\" rel=\"noopener\">Τάκης</a> είναι η ταβέρνα της παραλίας στον Άγιο Σώστη για φρέσκο ψάρι πριν το πλοίο.",
+      "after": "Agios Sostis"
+     }
     ]
-  },
-  "getting_there": {
-    "pills": [
-      "⛵ Piraeus 2–4h",
-      "€32–50"
-    ],
-    "pills_el": [
-      "⛵ Πειραιάς 2–4h",
-      "€32–50"
-    ],
-    "summary": "No airport. Ferries dock at Livadi (the port). Seajets fast ferry from Piraeus ~2h, conventional ~4h, daily in summer.",
-    "summary_el": "Χωρίς αεροδρόμιο. Τα πλοία δένουν στο Λιβάδι (το λιμάνι). Seajets γρήγορο από Πειραιά ~2 ώρες, συμβατικό ~4 ώρες, καθημερινά το καλοκαίρι.",
-    "tip": "Same Western Cyclades line as Sifnos and Milos — pair two for one trip.",
-    "tip_el": "Ίδια γραμμή Δυτικών Κυκλάδων με Σίφνο και Μήλο — συνδύασε δύο σε ένα ταξίδι."
-  },
-  "specialties": [
-    {
-      "name": "Revithada",
-      "name_el": "Ρεβιθάδα",
-      "desc": "The classic Cycladic chickpea stew, but Serifos claims the original — slow-cooked overnight in a sealed clay pot in a wood-fired oven. Just chickpeas, olive oil, onion, a bay leaf, salt. Traditionally Sunday lunch; some tavernas now serve it daily in summer. Stou Stratou and Takis are reliable.",
-      "desc_el": "Το κλασικό κυκλαδίτικο ρεβιθόσουπο, αλλά η Σέριφος διεκδικεί την αυθεντικότητα — ψήνεται όλη τη νύχτα σε σφραγισμένο πήλινο σε ξυλόφουρνο. Μόνο ρεβίθια, ελαιόλαδο, κρεμμύδι, δαφνόφυλλο, αλάτι. Παραδοσιακά κυριακάτικο μεσημεριανό· κάποιες ταβέρνες το σερβίρουν καθημερινά το καλοκαίρι. Στου Στράτου και Τάκης είναι αξιόπιστα."
-    },
-    {
-      "name": "Marathotiganites",
-      "name_el": "Μαραθοτηγανίτες",
-      "desc": "Wild-fennel fritters — small savoury patties of foraged fennel fronds, flour, and onion, fried golden. Eaten as meze with ouzo or as a side. Common in spring when the fennel is young; less so by August.",
-      "desc_el": "Τηγανίτες με άγριο μάραθο — μικρές αλμυρές πιτούλες με μαραθόφυλλα, αλεύρι και κρεμμύδι, τηγανισμένες χρυσές. Τρώγονται ως μεζές με ούζο ή ως συνοδευτικό. Συνηθισμένες την άνοιξη όταν ο μάραθος είναι τρυφερός· λιγότερο μέχρι τον Αύγουστο."
-    },
-    {
-      "name": "Manoura cheese",
-      "name_el": "Μανούρα",
-      "desc": "Hard sheep's-milk cheese aged in wine lees — the rind takes on a pinkish-purple colour from the wine. Sharp, salty, dense, slightly fruity. Sliced thin with bread, or grated over warm dishes. Asked for by name at the village shops in Chora.",
-      "desc_el": "Σκληρό πρόβειο τυρί που ωριμάζει σε στέμφυλα κρασιού — η κρούστα παίρνει ροζ-μωβ χρώμα από το κρασί. Έντονο, αλμυρό, πυκνό, ελαφρώς φρουτώδες. Σε λεπτές φέτες με ψωμί, ή τριμμένο πάνω σε ζεστά πιάτα. Ζητείται με το όνομά της στα μαγαζιά της Χώρας."
-    }
+   }
   ],
-  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783277165/%CF%83%CE%B5%CF%81%CE%B9%CF%86%CE%BF%CF%83_ijreqj.jpg"
+  "title_el": "Πρόγραμμα 3 Ημερών στη Σέριφο",
+  "subtitle_el": "Δραματική λευκή Χώρα και οι άδειες παραλίες της δυτικής ακτής"
+ },
+ "beaches": [
+  {
+   "name": "Psili Ammos",
+   "lat": 37.1611683,
+   "lng": 24.5226862,
+   "type": "Fine sand",
+   "length": "250 m",
+   "depth": "Shallow",
+   "facing": "East — protected",
+   "facilities": "Two tavernas, umbrellas",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJeZLRCl-9mBQRN1cfDutl1_g",
+   "desc": "The postcard beach of Serifos. Voted among Greece's top beaches multiple times.",
+   "name_el": "Ψιλή Άμμος",
+   "desc_el": "Η εμβληματική παραλία της Σερίφου. Επανειλημμένα ψηφισμένη στις κορυφαίες παραλίες της Ελλάδας.",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Ρηχά",
+   "facing_el": "Ανατολικά — προστατευμένη",
+   "facilities_el": "Δύο ταβέρνες, ομπρέλες",
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780175790/%CF%88%CE%B9%CE%BB%CE%B7_%CE%B1%CE%BC%CE%BC%CE%BF%CF%82_huqsyf.jpg",
+   "photo_credit": {
+    "artist": "C messier",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:%CE%A8%CE%B9%CE%BB%CE%AE_%CE%86%CE%BC%CE%BC%CE%BF%CF%82,_%CE%A3%CE%AD%CF%81%CE%B9%CF%86%CE%BF%CF%82_1967.jpg",
+    "source": "Wikimedia Commons"
+   }
+  },
+  {
+   "name": "Livadakia",
+   "lat": 37.143,
+   "lng": 24.5165,
+   "type": "Fine sand",
+   "length": "250 m",
+   "depth": "Gradual",
+   "facing": "South — protected",
+   "facilities": "Full: tavernas, umbrellas, rooms",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJVQfY8YK9mBQRCX-jB1QQESU",
+   "desc": "Family-friendly main beach, 5 min walk from the port. Shaded by tamarisk trees.",
+   "name_el": "Λιβαδάκια",
+   "desc_el": "Η οικογενειακή κύρια παραλία, 5 λεπτά με τα πόδια από το λιμάνι. Σκιά από αλμυρίκια.",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Σταδιακή",
+   "facing_el": "Νότια — προστατευμένη",
+   "facilities_el": "Πλήρεις παροχές: ταβέρνες, ομπρέλες, δωμάτια",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Serifos_%28beach_Livadakia%29.jpg/1920px-Serifos_%28beach_Livadakia%29.jpg",
+   "photo_credit": {
+    "artist": "G-Lignum",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Serifos_(beach_Livadakia).jpg",
+    "source": "Wikimedia Commons"
+   }
+  },
+  {
+   "name": "Agios Ioannis",
+   "lat": 37.1727,
+   "lng": 24.5393,
+   "type": "Coarse sand & pebbles",
+   "length": "400 m",
+   "depth": "Moderate",
+   "facing": "East — exposed",
+   "facilities": "One taverna, umbrellas",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJGb5fjVi9mBQR6rP9OKCx-tM",
+   "desc": "Wide, wild northeast coast beach. Striking views, few crowds.",
+   "name_el": "Άγιος Ιωάννης",
+   "desc_el": "Φαρδιά, άγρια παραλία της βορειοανατολικής ακτής. Εντυπωσιακές θέες, λίγος κόσμος.",
+   "type_el": "Χονδρή άμμος και βότσαλα",
+   "depth_el": "Μέτρια",
+   "facing_el": "Ανατολικά — εκτεθειμένη",
+   "facilities_el": "Μία ταβέρνα, ομπρέλες",
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780175790/%CE%B1%CE%B3%CE%B9%CE%BF%CF%82_%CE%B9%CF%89%CE%B1%CE%BD%CE%BD%CE%B7%CF%82_xa9hzv.jpg"
+  }
+ ],
+ "name_el": "Σέριφος",
+ "name_accusative_el": "Σέριφο",
+ "name_genitive_el": "Σερίφου",
+ "gender_el": "f",
+ "subtitle_el": "Δραματική λευκή Χώρα και άδειες παραλίες δυτικής ακτής",
+ "intro_el": "Η Σέριφος είναι το πιο άγριο νησί των δυτικών Κυκλάδων — γυμνή, χωρίς δέντρα, και στεφανωμένη από ένα από τα πιο δραματικά χωριά της Ελλάδας: η Χώρα ανεβαίνει έναν ηφαιστειακό κώνο σαν σκάλα από λευκούς κύβους. Η εξόρυξη σιδήρου έδωσε στο νησί ευημερία μέχρι το 1963· τώρα εγκαταλελειμμένα ορυχεία και σκουριασμένες προβλήτες δίνουν στην ακτογραμμή μια μετα-βιομηχανική ομορφιά. Οι παραλίες είναι άδειες, τα χωριά κολλημένα στον χρόνο.",
+ "suited_for": {
+  "good": [
+   "Travellers who want one of the most dramatic Choras in the Cyclades and empty beaches below it",
+   "Anyone drawn to raw, treeless landscapes and the rust-and-stone beauty of old iron mines",
+   "Independent visitors happy to explore a quiet island slightly off the tourist track"
+  ],
+  "good_el": [
+   "Ταξιδιώτες που θέλουν μία από τις πιο εντυπωσιακές Χώρες των Κυκλάδων και άδειες παραλίες από κάτω",
+   "Όσους τραβά το τραχύ, άδεντρο τοπίο και η ομορφιά από σκουριά και πέτρα των παλιών μεταλλείων",
+   "Ανεξάρτητους επισκέπτες που χαίρονται να εξερευνούν ένα ήσυχο νησί λίγο εκτός τουριστικού δρόμου"
+  ],
+  "skip": [
+   "If you want polished resorts and a full calendar of organised activities",
+   "If steep walks up to the Chora are a problem — Serifos is built on a volcanic cone"
+  ],
+  "skip_el": [
+   "Αν θέλεις γυαλισμένα resorts και γεμάτο πρόγραμμα οργανωμένων δραστηριοτήτων",
+   "Αν οι απότομες ανηφόρες προς τη Χώρα είναι πρόβλημα — η Σέριφος είναι χτισμένη σε ηφαιστειακό κώνο"
+  ]
+ },
+ "getting_there": {
+  "pills": [
+   "⛵ Piraeus 2–4h",
+   "€32–50"
+  ],
+  "pills_el": [
+   "⛵ Πειραιάς 2–4h",
+   "€32–50"
+  ],
+  "summary": "No airport. Ferries dock at Livadi (the port). Seajets fast ferry from Piraeus ~2h, conventional ~4h, daily in summer.",
+  "summary_el": "Χωρίς αεροδρόμιο. Τα πλοία δένουν στο Λιβάδι (το λιμάνι). Seajets γρήγορο από Πειραιά ~2 ώρες, συμβατικό ~4 ώρες, καθημερινά το καλοκαίρι.",
+  "tip": "Same Western Cyclades line as Sifnos and Milos — pair two for one trip.",
+  "tip_el": "Ίδια γραμμή Δυτικών Κυκλάδων με Σίφνο και Μήλο — συνδύασε δύο σε ένα ταξίδι."
+ },
+ "specialties": [
+  {
+   "name": "Revithada",
+   "name_el": "Ρεβιθάδα",
+   "desc": "The classic Cycladic chickpea stew, but Serifos claims the original — slow-cooked overnight in a sealed clay pot in a wood-fired oven. Just chickpeas, olive oil, onion, a bay leaf, salt. Traditionally Sunday lunch; some tavernas now serve it daily in summer. Stou Stratou and Takis are reliable.",
+   "desc_el": "Το κλασικό κυκλαδίτικο ρεβιθόσουπο, αλλά η Σέριφος διεκδικεί την αυθεντικότητα — ψήνεται όλη τη νύχτα σε σφραγισμένο πήλινο σε ξυλόφουρνο. Μόνο ρεβίθια, ελαιόλαδο, κρεμμύδι, δαφνόφυλλο, αλάτι. Παραδοσιακά κυριακάτικο μεσημεριανό· κάποιες ταβέρνες το σερβίρουν καθημερινά το καλοκαίρι. Στου Στράτου και Τάκης είναι αξιόπιστα."
+  },
+  {
+   "name": "Marathotiganites",
+   "name_el": "Μαραθοτηγανίτες",
+   "desc": "Wild-fennel fritters — small savoury patties of foraged fennel fronds, flour, and onion, fried golden. Eaten as meze with ouzo or as a side. Common in spring when the fennel is young; less so by August.",
+   "desc_el": "Τηγανίτες με άγριο μάραθο — μικρές αλμυρές πιτούλες με μαραθόφυλλα, αλεύρι και κρεμμύδι, τηγανισμένες χρυσές. Τρώγονται ως μεζές με ούζο ή ως συνοδευτικό. Συνηθισμένες την άνοιξη όταν ο μάραθος είναι τρυφερός· λιγότερο μέχρι τον Αύγουστο."
+  },
+  {
+   "name": "Manoura cheese",
+   "name_el": "Μανούρα",
+   "desc": "Hard sheep's-milk cheese aged in wine lees — the rind takes on a pinkish-purple colour from the wine. Sharp, salty, dense, slightly fruity. Sliced thin with bread, or grated over warm dishes. Asked for by name at the village shops in Chora.",
+   "desc_el": "Σκληρό πρόβειο τυρί που ωριμάζει σε στέμφυλα κρασιού — η κρούστα παίρνει ροζ-μωβ χρώμα από το κρασί. Έντονο, αλμυρό, πυκνό, ελαφρώς φρουτώδες. Σε λεπτές φέτες με ψωμί, ή τριμμένο πάνω σε ζεστά πιάτα. Ζητείται με το όνομά της στα μαγαζιά της Χώρας."
+  }
+ ],
+ "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783277165/%CF%83%CE%B5%CF%81%CE%B9%CF%86%CE%BF%CF%83_ijreqj.jpg"
 }

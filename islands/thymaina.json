@@ -1,184 +1,184 @@
 {
-  "key": "thymaina",
-  "name": "Thymaina",
-  "subtitle": "A working fishing island in the Fournoi archipelago — off-grid coves near Ikaria",
-  "intro": "Thymaina lies just west of Fournoi in the archipelago between Ikaria and Samos — a rugged little island that remains, above all, a working fishing community rather than a resort. Its two hamlets (the port settlement and Keramidou) are connected by a handful of steep lanes; the coast is a series of quiet pebble coves reached on foot or by boat. There is a school, a couple of tavernas, and a strong sense of everyday island life carrying on regardless of tourism. It rewards travellers who like their islands genuinely undiscovered.",
-  "when_to_visit": {
-    "summary": "A summer island reached via Fournoi — tavernas and rooms are busiest July to September, when Greek families and a few walkers arrive. June and September are calm and warm; outside summer, life is entirely local and boats are scarce.",
-    "summary_el": "Καλοκαιρινό νησί με πρόσβαση μέσω Φούρνων — ταβέρνες και δωμάτια πιο γεμάτα Ιούλιο με Σεπτέμβριο, όταν έρχονται ελληνικές οικογένειες και λίγοι περιπατητές. Ιούνιος και Σεπτέμβριος ήρεμοι και ζεστοί· εκτός καλοκαιριού η ζωή είναι εντελώς ντόπια και τα καΐκια σπάνια.",
-    "months": [
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Σχεδόν όλα κλειστά",
-        "limited": true
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Σκελετός υπηρεσιών",
-        "limited": true
-      },
-      {
-        "tag": "avoid",
-        "why": "Few ferries",
-        "why_el": "Λίγα πλοία",
-        "limited": true
-      },
-      {
-        "tag": "ok",
-        "why": "Awakening",
-        "why_el": "Ήσυχα, πρώτες αφίξεις",
-        "limited": true
-      },
-      {
-        "tag": "great",
-        "why": "Sea warming",
-        "why_el": "Κολυμπιέται πια"
-      },
-      {
-        "tag": "perfect",
-        "why": "Warm, near-empty",
-        "why_el": "Ζεστά, σχεδόν άδεια"
-      },
-      {
-        "tag": "great",
-        "why": "Hot, calm",
-        "why_el": "Ζέστη, ήσυχα"
-      },
-      {
-        "tag": "ok",
-        "why": "Peak Greeks, busy",
-        "why_el": "Αιχμή Ελλήνων"
-      },
-      {
-        "tag": "perfect",
-        "why": "Best — peaceful",
-        "why_el": "Καλύτερος — ζεστά"
-      },
-      {
-        "tag": "ok",
-        "why": "Season ending",
-        "why_el": "Κλείνουν σιγά"
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Μόνο ντόπιοι",
-        "limited": true
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season, thin",
-        "why_el": "Χειμώνας, ελάχιστα",
-        "limited": true
-      }
-    ]
-  },
-  "itinerary": {
-    "title": "1-Day Thymaina Itinerary",
-    "subtitle": "The fishing port, the hamlet of Keramidou, and a swim in a quiet cove.",
-    "days": [
-      {
-        "day": 1,
-        "title": "Port, Keramidou & a Cove Swim",
-        "color": "#0B8FAC",
-        "km": 6,
-        "drive_mins": 40,
-        "overnight": "Thymaina port",
-        "stops": [
-          {
-            "name": "Thymaina port",
-            "lat": 37.5995,
-            "lng": 26.447,
-            "type": "harbour",
-            "time": "10:30",
-            "wiki": "https://www.google.com/maps/search/Thymaina%20port%20Thymaina",
-            "desc": "The main settlement gathers around a working fishing harbour — caïques, nets drying, a couple of tavernas and a kafeneio. The small ferry from Fournoi ties up here.",
-            "name_el": "Λιμάνι Θύμαινας",
-            "desc_el": "Ο κύριος οικισμός μαζεύεται γύρω από ένα ζωντανό ψαρολίμανο — καΐκια, δίχτυα να στεγνώνουν, δυο ταβέρνες κι ένα καφενείο. Το μικρό φεριμπότ από τους Φούρνους δένει εδώ."
-          },
-          {
-            "name": "Keramidou",
-            "lat": 37.606,
-            "lng": 26.436,
-            "type": "village",
-            "time": "12:00",
-            "wiki": "https://www.google.com/maps/search/Keramidou%20Thymaina",
-            "desc": "The second hamlet, a cluster of houses on the slopes with long views to Ikaria. A short, steep walk from the port through terraced hillsides — the whole island opens up along the way.",
-            "name_el": "Κεραμειδού",
-            "desc_el": "Ο δεύτερος οικισμός, μια συστάδα σπιτιών στις πλαγιές με μακρινή θέα στην Ικαρία. Σύντομο, απότομο περπάτημα από το λιμάνι μέσα από πεζούλες — όλο το νησί ανοίγεται στη διαδρομή."
-          },
-          {
-            "name": "Agios Nikolaos cove",
-            "lat": 37.594,
-            "lng": 26.452,
-            "type": "beach",
-            "time": "14:00",
-            "wiki": "https://www.google.com/maps/search/Agios%20Nikolaos%20cove%20Thymaina",
-            "desc": "One of several quiet pebble coves along the sheltered coast, with clear water and no facilities. Reach it on foot or ask a fisherman for a lift by boat.",
-            "name_el": "Λιμανάκι Άγιος Νικόλαος",
-            "desc_el": "Ένα από τα πολλά ήσυχα βοτσαλωτά λιμανάκια στη προστατευμένη ακτή, με καθαρά νερά και χωρίς υποδομές. Πήγαινε πεζή ή ζήτα από κάποιον ψαρά να σε πάει με τη βάρκα."
-          }
-        ],
-        "title_el": "Λιμάνι, Κεραμειδού & Βουτιά σε Λιμανάκι",
-        "overnight_el": "Λιμάνι Θύμαινας",
-        "food": [
-          {
-            "meal": "Lunch",
-            "meal_el": "Μεσημεριανό",
-            "area": "Thymaina port",
-            "area_el": "Λιμάνι Θύμαινας",
-            "desc": "A couple of tavernas at the port cook whatever the boats land — fish, sea urchin, wild greens and the local Fournoi lobster pasta when it's about. Simple, cheap, and as fresh as it gets.",
-            "desc_el": "Δυο ταβέρνες στο λιμάνι μαγειρεύουν ό,τι φέρνουν οι βάρκες — ψάρι, αχινούς, άγρια χόρτα και την αστακομακαρονάδα των Φούρνων όταν υπάρχει. Απλά, φθηνά, και όσο φρέσκα γίνεται.",
-            "after": "Thymaina port"
-          }
-        ]
-      }
-    ],
-    "title_el": "Πρόγραμμα 1 Ημέρας — Θύμαινα",
-    "subtitle_el": "Το ψαρολίμανο, ο οικισμός Κεραμειδού και μια βουτιά σε ήσυχο λιμανάκι."
-  },
-  "beaches": [
-    {
+ "key": "thymaina",
+ "name": "Thymaina",
+ "subtitle": "A working fishing island in the Fournoi archipelago — off-grid coves near Ikaria",
+ "intro": "Thymaina lies just west of Fournoi in the archipelago between Ikaria and Samos — a rugged little island that remains, above all, a working fishing community rather than a resort. Its two hamlets (the port settlement and Keramidou) are connected by a handful of steep lanes; the coast is a series of quiet pebble coves reached on foot or by boat. There is a school, a couple of tavernas, and a strong sense of everyday island life carrying on regardless of tourism. It rewards travellers who like their islands genuinely undiscovered.",
+ "when_to_visit": {
+  "summary": "A summer island reached via Fournoi — tavernas and rooms are busiest July to September, when Greek families and a few walkers arrive. June and September are calm and warm; outside summer, life is entirely local and boats are scarce.",
+  "summary_el": "Καλοκαιρινό νησί με πρόσβαση μέσω Φούρνων — ταβέρνες και δωμάτια πιο γεμάτα Ιούλιο με Σεπτέμβριο, όταν έρχονται ελληνικές οικογένειες και λίγοι περιπατητές. Ιούνιος και Σεπτέμβριος ήρεμοι και ζεστοί· εκτός καλοκαιριού η ζωή είναι εντελώς ντόπια και τα καΐκια σπάνια.",
+  "months": [
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Σχεδόν όλα κλειστά",
+    "limited": true
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Σκελετός υπηρεσιών",
+    "limited": true
+   },
+   {
+    "tag": "avoid",
+    "why": "Few ferries",
+    "why_el": "Λίγα πλοία",
+    "limited": true
+   },
+   {
+    "tag": "ok",
+    "why": "Awakening",
+    "why_el": "Ήσυχα, πρώτες αφίξεις",
+    "limited": true
+   },
+   {
+    "tag": "great",
+    "why": "Sea warming",
+    "why_el": "Κολυμπιέται πια"
+   },
+   {
+    "tag": "perfect",
+    "why": "Warm, near-empty",
+    "why_el": "Ζεστά, σχεδόν άδεια"
+   },
+   {
+    "tag": "great",
+    "why": "Hot, calm",
+    "why_el": "Ζέστη, ήσυχα"
+   },
+   {
+    "tag": "ok",
+    "why": "Peak Greeks, busy",
+    "why_el": "Αιχμή Ελλήνων"
+   },
+   {
+    "tag": "perfect",
+    "why": "Best — peaceful",
+    "why_el": "Καλύτερος — ζεστά"
+   },
+   {
+    "tag": "ok",
+    "why": "Season ending",
+    "why_el": "Κλείνουν σιγά"
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Μόνο ντόπιοι",
+    "limited": true
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season, thin",
+    "why_el": "Χειμώνας, ελάχιστα",
+    "limited": true
+   }
+  ]
+ },
+ "itinerary": {
+  "title": "1-Day Thymaina Itinerary",
+  "subtitle": "The fishing port, the hamlet of Keramidou, and a swim in a quiet cove.",
+  "days": [
+   {
+    "day": 1,
+    "title": "Port, Keramidou & a Cove Swim",
+    "color": "#0B8FAC",
+    "km": 6,
+    "drive_mins": 40,
+    "overnight": "Thymaina port",
+    "stops": [
+     {
+      "name": "Thymaina port",
+      "lat": 37.5995,
+      "lng": 26.447,
+      "type": "harbour",
+      "time": "10:30",
+      "wiki": "https://www.google.com/maps/search/Thymaina%20port%20Thymaina",
+      "desc": "The main settlement gathers around a working fishing harbour — caïques, nets drying, a couple of tavernas and a kafeneio. The small ferry from Fournoi ties up here.",
+      "name_el": "Λιμάνι Θύμαινας",
+      "desc_el": "Ο κύριος οικισμός μαζεύεται γύρω από ένα ζωντανό ψαρολίμανο — καΐκια, δίχτυα να στεγνώνουν, δυο ταβέρνες κι ένα καφενείο. Το μικρό φεριμπότ από τους Φούρνους δένει εδώ."
+     },
+     {
+      "name": "Keramidou",
+      "lat": 37.606,
+      "lng": 26.436,
+      "type": "village",
+      "time": "12:00",
+      "wiki": "https://www.google.com/maps/search/Keramidou%20Thymaina",
+      "desc": "The second hamlet, a cluster of houses on the slopes with long views to Ikaria. A short, steep walk from the port through terraced hillsides — the whole island opens up along the way.",
+      "name_el": "Κεραμειδού",
+      "desc_el": "Ο δεύτερος οικισμός, μια συστάδα σπιτιών στις πλαγιές με μακρινή θέα στην Ικαρία. Σύντομο, απότομο περπάτημα από το λιμάνι μέσα από πεζούλες — όλο το νησί ανοίγεται στη διαδρομή."
+     },
+     {
       "name": "Agios Nikolaos cove",
-      "wiki": "https://www.google.com/maps/search/Agios%20Nikolaos%20cove%20Thymaina",
-      "rating": 3,
-      "type": "Pebble",
-      "length": "60 m",
-      "depth": "Deep — clear",
-      "facing": "East-facing — sheltered",
-      "facilities": "None — bring everything.",
-      "desc": "A quiet, clear-water pebble cove on Thymaina's sheltered coast — one of several small swimming spots reached on foot or by boat, with no facilities and rarely another soul.",
-      "commons": null,
       "lat": 37.594,
       "lng": 26.452,
+      "type": "beach",
+      "time": "14:00",
+      "wiki": "https://www.google.com/maps/search/Agios%20Nikolaos%20cove%20Thymaina",
+      "desc": "One of several quiet pebble coves along the sheltered coast, with clear water and no facilities. Reach it on foot or ask a fisherman for a lift by boat.",
       "name_el": "Λιμανάκι Άγιος Νικόλαος",
-      "type_el": "Βότσαλο",
-      "depth_el": "Βαθιά — διάφανα",
-      "facing_el": "Ανατολικά — προστατευμένο",
-      "facilities_el": "Καμία — πάρε ό,τι χρειάζεσαι.",
-      "desc_el": "Ένα ήσυχο, καθαρό βοτσαλωτό λιμανάκι στη προστατευμένη ακτή της Θύμαινας — ένα από τα πολλά μικρά σημεία για κολύμπι με πρόσβαση πεζή ή με βάρκα, χωρίς υποδομές και σπάνια με άλλη ψυχή."
-    }
+      "desc_el": "Ένα από τα πολλά ήσυχα βοτσαλωτά λιμανάκια στη προστατευμένη ακτή, με καθαρά νερά και χωρίς υποδομές. Πήγαινε πεζή ή ζήτα από κάποιον ψαρά να σε πάει με τη βάρκα."
+     }
+    ],
+    "title_el": "Λιμάνι, Κεραμειδού & Βουτιά σε Λιμανάκι",
+    "overnight_el": "Λιμάνι Θύμαινας",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Thymaina port",
+      "area_el": "Λιμάνι Θύμαινας",
+      "desc": "A couple of tavernas at the port cook whatever the boats land — fish, sea urchin, wild greens and the local Fournoi lobster pasta when it's about. Simple, cheap, and as fresh as it gets.",
+      "desc_el": "Δυο ταβέρνες στο λιμάνι μαγειρεύουν ό,τι φέρνουν οι βάρκες — ψάρι, αχινούς, άγρια χόρτα και την αστακομακαρονάδα των Φούρνων όταν υπάρχει. Απλά, φθηνά, και όσο φρέσκα γίνεται.",
+      "after": "Thymaina port"
+     }
+    ]
+   }
   ],
-  "name_el": "Θύμαινα",
-  "name_accusative_el": "Θύμαινα",
-  "gender_el": "f",
-  "subtitle_el": "Ένα ζωντανό ψαρονήσι στο σύμπλεγμα των Φούρνων — απόμερα λιμανάκια κοντά στην Ικαρία",
-  "intro_el": "Η Θύμαινα βρίσκεται ακριβώς δυτικά των Φούρνων, στο σύμπλεγμα ανάμεσα σε Ικαρία και Σάμο — ένα τραχύ μικρό νησί που παραμένει, πάνω απ' όλα, μια ζωντανή ψαράδικη κοινότητα κι όχι θέρετρο. Οι δύο οικισμοί του (το λιμάνι και η Κεραμειδού) συνδέονται με λίγα απότομα δρομάκια· η ακτή είναι μια σειρά από ήσυχα βοτσαλωτά λιμανάκια με πρόσβαση πεζή ή με βάρκα. Υπάρχει σχολείο, δυο ταβέρνες και μια έντονη αίσθηση καθημερινής νησιώτικης ζωής που συνεχίζεται ανεξάρτητα από τον τουρισμό. Ανταμείβει όσους θέλουν τα νησιά τους πραγματικά ανεξερεύνητα.",
-  "getting_there": {
-    "pills": [
-      "⛵ 10 min from Fournoi",
-      "€3–6"
-    ],
-    "pills_el": [
-      "⛵ 10 λεπτά από Φούρνους",
-      "€3–6"
-    ],
-    "summary": "No airport. A small local ferry crosses from Fournoi to Thymaina in about 10 minutes, several times a week; reach Fournoi itself by ferry from Ikaria, Samos or Piraeus. Off-season crossings are infrequent.",
-    "summary_el": "Χωρίς αεροδρόμιο. Ένα μικρό τοπικό φεριμπότ κάνει το πέρασμα από τους Φούρνους στη Θύμαινα σε περίπου 10 λεπτά, αρκετές φορές την εβδομάδα· στους ίδιους τους Φούρνους φτάνεις με πλοίο από Ικαρία, Σάμο ή Πειραιά. Εκτός σεζόν τα δρομολόγια αραιά.",
-    "tip": "Combine with Fournoi — Thymaina is a short hop and the two share the same ferry world.",
-    "tip_el": "Συνδύασέ τη με τους Φούρνους — η Θύμαινα είναι ένα μικρό πέρασμα και μοιράζονται τον ίδιο κόσμο πλοίων."
-  },
-  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783292762/%CE%B8%CF%85%CE%BC%CE%B1%CE%B9%CE%BD%CE%B1_uqfv2o.jpg"
+  "title_el": "Πρόγραμμα 1 Ημέρας — Θύμαινα",
+  "subtitle_el": "Το ψαρολίμανο, ο οικισμός Κεραμειδού και μια βουτιά σε ήσυχο λιμανάκι."
+ },
+ "beaches": [
+  {
+   "name": "Agios Nikolaos cove",
+   "wiki": "https://www.google.com/maps/search/Agios%20Nikolaos%20cove%20Thymaina",
+   "rating": 3,
+   "type": "Pebble",
+   "length": "60 m",
+   "depth": "Deep — clear",
+   "facing": "East-facing — sheltered",
+   "facilities": "None — bring everything.",
+   "desc": "A quiet, clear-water pebble cove on Thymaina's sheltered coast — one of several small swimming spots reached on foot or by boat, with no facilities and rarely another soul.",
+   "commons": null,
+   "lat": 37.594,
+   "lng": 26.452,
+   "name_el": "Λιμανάκι Άγιος Νικόλαος",
+   "type_el": "Βότσαλο",
+   "depth_el": "Βαθιά — διάφανα",
+   "facing_el": "Ανατολικά — προστατευμένο",
+   "facilities_el": "Καμία παροχή — πάρε ό,τι χρειάζεσαι.",
+   "desc_el": "Ένα ήσυχο, καθαρό βοτσαλωτό λιμανάκι στη προστατευμένη ακτή της Θύμαινας — ένα από τα πολλά μικρά σημεία για κολύμπι με πρόσβαση πεζή ή με βάρκα, χωρίς υποδομές και σπάνια με άλλη ψυχή."
+  }
+ ],
+ "name_el": "Θύμαινα",
+ "name_accusative_el": "Θύμαινα",
+ "gender_el": "f",
+ "subtitle_el": "Ένα ζωντανό ψαρονήσι στο σύμπλεγμα των Φούρνων — απόμερα λιμανάκια κοντά στην Ικαρία",
+ "intro_el": "Η Θύμαινα βρίσκεται ακριβώς δυτικά των Φούρνων, στο σύμπλεγμα ανάμεσα σε Ικαρία και Σάμο — ένα τραχύ μικρό νησί που παραμένει, πάνω απ' όλα, μια ζωντανή ψαράδικη κοινότητα κι όχι θέρετρο. Οι δύο οικισμοί του (το λιμάνι και η Κεραμειδού) συνδέονται με λίγα απότομα δρομάκια· η ακτή είναι μια σειρά από ήσυχα βοτσαλωτά λιμανάκια με πρόσβαση πεζή ή με βάρκα. Υπάρχει σχολείο, δυο ταβέρνες και μια έντονη αίσθηση καθημερινής νησιώτικης ζωής που συνεχίζεται ανεξάρτητα από τον τουρισμό. Ανταμείβει όσους θέλουν τα νησιά τους πραγματικά ανεξερεύνητα.",
+ "getting_there": {
+  "pills": [
+   "⛵ 10 min from Fournoi",
+   "€3–6"
+  ],
+  "pills_el": [
+   "⛵ 10 λεπτά από Φούρνους",
+   "€3–6"
+  ],
+  "summary": "No airport. A small local ferry crosses from Fournoi to Thymaina in about 10 minutes, several times a week; reach Fournoi itself by ferry from Ikaria, Samos or Piraeus. Off-season crossings are infrequent.",
+  "summary_el": "Χωρίς αεροδρόμιο. Ένα μικρό τοπικό φεριμπότ κάνει το πέρασμα από τους Φούρνους στη Θύμαινα σε περίπου 10 λεπτά, αρκετές φορές την εβδομάδα· στους ίδιους τους Φούρνους φτάνεις με πλοίο από Ικαρία, Σάμο ή Πειραιά. Εκτός σεζόν τα δρομολόγια αραιά.",
+  "tip": "Combine with Fournoi — Thymaina is a short hop and the two share the same ferry world.",
+  "tip_el": "Συνδύασέ τη με τους Φούρνους — η Θύμαινα είναι ένα μικρό πέρασμα και μοιράζονται τον ίδιο κόσμο πλοίων."
+ },
+ "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783292762/%CE%B8%CF%85%CE%BC%CE%B1%CE%B9%CE%BD%CE%B1_uqfv2o.jpg"
 }

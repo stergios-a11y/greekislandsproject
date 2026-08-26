@@ -1,752 +1,752 @@
 {
-  "key": "heraklion",
-  "name": "Crete (Heraklion)",
-  "subtitle": "Knossos, Minoan civilisation and the heart of the greatest island",
-  "intro": "Heraklion is where Crete's extraordinary history hits hardest. The Palace of Knossos — the largest Bronze Age archaeological site in Greece — sits just 5km from the city centre, and the Heraklion Archaeological Museum holds the world's finest collection of Minoan art. The city itself is underrated: a working Cretan capital with exceptional food, a Venetian fortress and one of the liveliest market streets in Greece.",
-  "when_to_visit": {
-    "summary": "Heraklion is a working city with Knossos as its anchor — the city itself lives year-round, the antiquities never close. June and September are the windows: warm sea, manageable crowds at Knossos, festival season. July-August at Knossos is genuinely awful — go at 8am or wait until October. The Heraklion Summer Festival (Jun-Sep) brings concerts and theatre to the Koules fortress.",
-    "summary_el": "Το Ηράκλειο είναι μια ζωντανή πόλη με αγκυροβόλιο την Κνωσό — η πόλη ζει όλο τον χρόνο, οι αρχαιότητες δεν κλείνουν ποτέ. Ο Ιούνιος και ο Σεπτέμβριος είναι οι ιδανικές στιγμές: ζεστή θάλασσα, διαχειρίσιμος κόσμος στην Κνωσό, σεζόν φεστιβάλ. Ιούλιος–Αύγουστος στην Κνωσό είναι πραγματικά απαίσια — πήγαινε στις 8 το πρωί ή περίμενε τον Οκτώβριο. Το Καλοκαιρινό Φεστιβάλ Ηρακλείου (Ιούνιος–Σεπτέμβριος) φέρνει συναυλίες και θέατρο στο φρούριο Κούλε.",
-    "months": [
-      {
-        "tag": "ok",
-        "why": "Knossos quiet",
-        "why_el": "Πόλη ζωντανή, Κνωσσός"
-      },
-      {
-        "tag": "ok",
-        "why": "Mild, museums",
-        "why_el": "Ήπιο, μουσεία"
-      },
-      {
-        "tag": "great",
-        "why": "Knossos, blooming",
-        "why_el": "Κνωσσός ευχάριστη"
-      },
-      {
-        "tag": "great",
-        "why": "Easter, Knossos",
-        "why_el": "Πάσχα, Κνωσσός"
-      },
-      {
-        "tag": "great",
-        "why": "Knossos, calm",
-        "why_el": "Ζεσταίνει, Κνωσσός"
-      },
-      {
-        "tag": "perfect",
-        "why": "Festivals start",
-        "why_el": "Ζεστή θάλασσα"
-      },
-      {
-        "tag": "ok",
-        "why": "Knossos and the Archaeological Museum are still the point — but the heat is real (often 35°C+). Visit Knossos at opening (8am) or sunset; the museum is air-conditioned.",
-        "why_el": "Η Κνωσός και το Αρχαιολογικό Μουσείο είναι ακόμα ο λόγος — αλλά η ζέστη είναι πραγματική (συχνά 35°C+). Επίσκεψη Κνωσού στο άνοιγμα (8:00) ή ηλιοβασίλεμα· το μουσείο έχει κλιματισμό."
-      },
-      {
-        "tag": "ok",
-        "why": "Hottest month — Knossos punishing under midday sun. Worth it for what's here (the museum holds the world's best Minoan collection), but plan around the heat.",
-        "why_el": "Πιο ζεστός μήνας — η Κνωσός εξαντλητική κάτω από τον μεσημεριάτικο ήλιο. Αξίζει για ό,τι υπάρχει εδώ (το μουσείο έχει την καλύτερη μινωική συλλογή στον κόσμο), αλλά οργάνωσε γύρω από τη ζέστη."
-      },
-      {
-        "tag": "perfect",
-        "why": "Knossos breathes",
-        "why_el": "Κνωσσός αναπνέει"
-      },
-      {
-        "tag": "great",
-        "why": "Last swims, museums",
-        "why_el": "Τελευταία μπάνια"
-      },
-      {
-        "tag": "great",
-        "why": "Mild, museums",
-        "why_el": "Ήπιο, μουσεία, ντόπιοι"
-      },
-      {
-        "tag": "ok",
-        "why": "City alive",
-        "why_el": "Πόλη ζωντανή τον"
-      }
-    ]
-  },
-  "itinerary": {
-    "title": "5-Day Heraklion Itinerary",
-    "subtitle": "Ancient Minoans at Knossos, the wine villages of Archanes, the high mountain plateau of Lasithi and the dramatic south coast at Matala — the full range of central Crete.",
-    "days": [
-      {
-        "day": 1,
-        "title": "Heraklion City",
-        "color": "#1B4F8A",
-        "km": 10,
-        "drive_mins": 20,
-        "overnight": "Heraklion",
-        "stops": [
-          {
-            "name": "Koules Fortress",
-            "lat": 35.3446,
-            "lng": 25.1369,
-            "type": "castle",
-            "time": "09:00",
-            "wiki": "https://www.google.com/maps/search/Koules+Fortress+Crete+Heraklion",
-            "desc": "16th-century Venetian sea fortress at the entrance to Heraklion harbour. Excellent views from the battlements over the old port.",
-            "name_el": "Φρούριο Κούλες",
-            "desc_el": "Βενετσιάνικο θαλασσινό φρούριο του 16ου αιώνα στην είσοδο του λιμανιού του Ηρακλείου. Εξαιρετική θέα από τις επάλξεις προς το παλιό λιμάνι.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg/1920px-Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg",
-            "photo_credit": {
-              "artist": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but ple...",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Heraklion Archaeological Museum",
-            "lat": 35.339,
-            "lng": 25.1371,
-            "type": "museum",
-            "time": "10:00",
-            "wiki": "https://www.google.com/maps/search/Heraklion+Archaeological+Museum+Crete+Heraklion",
-            "desc": "The finest collection of Minoan art in the world. The Snake Goddess figurines, the Phaistos Disc, and the Bull-leaping fresco are unmissable. Allow 2 hours minimum.",
-            "name_el": "Αρχαιολογικό Μουσείο Ηρακλείου",
-            "desc_el": "Η καλύτερη συλλογή Μινωικής τέχνης στον κόσμο. Τα ειδώλια της Θεάς των Όφεων, ο Δίσκος της Φαιστού και η τοιχογραφία των Ταυροκαθαψίων είναι αδιαπραγμάτευτα. Υπολόγισε τουλάχιστον 2 ώρες.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Sarcophagus_archmus_Heraklion.jpg/1920px-Sarcophagus_archmus_Heraklion.jpg",
-            "photo_credit": {
-              "artist": "Jebulon",
-              "license": "CC0",
-              "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Sarcophagus_archmus_Heraklion.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "1866 Market Street",
-            "lat": 35.3384,
-            "lng": 25.1331,
-            "type": "city",
-            "time": "12:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJrxOYYwJbmhQRvGPXT1maOjk",
-            "desc": "Heraklion's covered market street — the best street food in Crete. Try kalitsounia (cheese pastries), dakos, and fresh honey from local producers.",
-            "name_el": "Οδός 1866 — Αγορά",
-            "desc_el": "Η σκεπαστή αγορά του Ηρακλείου — το καλύτερο street food της Κρήτης. Δοκίμασε καλιτσούνια, ντάκο και φρέσκο μέλι από ντόπιους παραγωγούς."
-          },
-          {
-            "name": "Venetian Walls & Martinengo Bastion",
-            "lat": 35.3321,
-            "lng": 25.1298,
-            "type": "castle",
-            "time": "16:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJQ62wMYZZmhQRn6YDFMIiQxM",
-            "desc": "Walk the 16th-century Venetian walls that surround the old city. El Greco is buried at the Martinengo Bastion — a quiet, little-visited corner of the city.",
-            "name_el": "Ενετικά Τείχη & Προμαχώνας Μαρτινέγκο",
-            "desc_el": "Περπάτησε στα βενετσιάνικα τείχη του 16ου αιώνα που περιβάλλουν την παλιά πόλη. Ο Ελ Γκρέκο είναι θαμμένος στον Προμαχώνα Μαρτινέγκο — μια ήσυχη, λίγο επισκέψιμη γωνιά της πόλης."
-          },
-          {
-            "time": "17:30",
-            "name": "Agia Pelagia Beach (sunset swim)",
-            "name_el": "Παραλία Αγία Πελαγία (απογευματινό μπάνιο)",
-            "type": "beach",
-            "lat": 35.4057,
-            "lng": 25.0184,
-            "wiki": "https://www.google.com/maps/search/?api=1&query=Agia+Pelagia+Beach+Crete",
-            "desc": "A short drive west of Heraklion drops you into a sheltered horseshoe bay — fine sand, exceptionally calm water, and a string of low-key tavernas above the beach. After a heavy archaeology morning, the swim resets the day before heading back for dinner. The west-facing aspect gives a slow sunset over the bay.",
-            "desc_el": "Σύντομη οδική απόσταση δυτικά του Ηρακλείου σε αφήνει σε έναν προφυλαγμένο κόλπο σε σχήμα πετάλου — λεπτή άμμος, εξαιρετικά ήρεμα νερά, και μια σειρά χαλαρών ταβέρνων πάνω από την παραλία. Μετά από ένα βαρύ αρχαιολογικό πρωινό, το μπάνιο επαναφέρει την ημέρα πριν την επιστροφή για δείπνο. Ο δυτικός προσανατολισμός χαρίζει ένα αργό ηλιοβασίλεμα πάνω από τον κόλπο."
-          }
-        ],
-        "title_el": "Πόλη του Ηρακλείου",
-        "overnight_el": "Ηράκλειο",
-        "nightlife": "Heraklion's nightlife is local and year-round, clustered in the pedestrian lanes off the centre. <a href=\"https://www.google.com/maps/search/Korai+Street+Heraklion\" target=\"_blank\" rel=\"noopener\">Korai</a> is the packed one — bars indoors and out, music from rock to laïka — with quieter <a href=\"https://www.google.com/maps/search/Chandakos+Street+Heraklion\" target=\"_blank\" rel=\"noopener\">Chandakos</a> alongside; for a view, the rooftop <a href=\"https://www.google.com/maps/search/Pairidaeza+Heraklion\" target=\"_blank\" rel=\"noopener\">Pairidaeza</a>. A real-city night, not a tourist strip.",
-        "nightlife_el": "Η νυχτερινή ζωή του Ηρακλείου είναι ντόπια και ολοχρονίς, μαζεμένη στους πεζόδρομους γύρω από το κέντρο. Η <a href=\"https://www.google.com/maps/search/Korai+Street+Heraklion\" target=\"_blank\" rel=\"noopener\">Κοραή</a> είναι η γεμάτη — μπαρ μέσα κι έξω, μουσική από ροκ ως λαϊκά — με την πιο ήσυχη <a href=\"https://www.google.com/maps/search/Chandakos+Street+Heraklion\" target=\"_blank\" rel=\"noopener\">Χάνδακος</a> δίπλα· για θέα, το rooftop <a href=\"https://www.google.com/maps/search/Pairidaeza+Heraklion\" target=\"_blank\" rel=\"noopener\">Pairidaeza</a>. Βραδιά πραγματικής πόλης, όχι τουριστικού δρόμου.",
-        "food": [
-          {
-            "meal": "Lunch",
-            "meal_el": "Μεσημεριανό",
-            "area": "Heraklion",
-            "area_el": "Ηράκλειο",
-            "desc": "<a href=\"https://www.google.com/maps/search/Peskesi+Heraklion\" target=\"_blank\" rel=\"noopener\">Peskesi</a> is the standout — Cretan heritage cooking in a restored mansion, named #1 for Greek & Regional cuisine at the 2019 Restaurant100 awards and Best Organic Restaurant in Europe in 2025 (book ahead). For seafront seafood, <a href=\"https://www.google.com/maps/search/Ippokampos+Heraklion\" target=\"_blank\" rel=\"noopener\">Ippokampos</a> is the beloved ouzeri. Out of town, <a href=\"https://www.google.com/maps/search/Logari+Kato+Gouves+Heraklion\" target=\"_blank\" rel=\"noopener\">Logari</a> at Kato Gouves is an old metochi turned taverna on the wooded banks of the Aposelemis — tables under olive trees, disarmingly plain Cretan cooking, €25–35.",
-            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Peskesi+Heraklion\" target=\"_blank\" rel=\"noopener\">Peskesi</a> είναι η κορυφαία επιλογή — κρητική κουζίνα κληρονομιάς σε αναπαλαιωμένο αρχοντικό, Νο1 στην ελληνική & τοπική κουζίνα στα Restaurant100 του 2019 και Καλύτερο Οργανικό Εστιατόριο της Ευρώπης το 2025 (κλείσε τραπέζι). Για θαλασσινά στην ακτή, το <a href=\"https://www.google.com/maps/search/Ippokampos+Heraklion\" target=\"_blank\" rel=\"noopener\">Ippokampos</a> είναι το αγαπημένο ουζερί. Έξω από την πόλη, το <a href=\"https://www.google.com/maps/search/Logari+Kato+Gouves+Heraklion\" target=\"_blank\" rel=\"noopener\">Λογάρι</a> στις Κάτω Γούβες είναι ένα παλιό μετόχι που έγινε ταβέρνα, στις δασωμένες όχθες του Αποσελέμη — τραπέζια κάτω από ελιές, αφοπλιστικά απλή κρητική κουζίνα, €25–35.",
-            "after": "1866 Market Street"
-          }
-        ]
-      },
-      {
-        "day": 2,
-        "title": "Knossos & Archanes",
-        "color": "#C0522A",
-        "km": 25,
-        "drive_mins": 35,
-        "overnight": "Heraklion",
-        "stops": [
-          {
-            "name": "Palace of Knossos",
-            "lat": 35.298,
-            "lng": 25.1628,
-            "type": "museum",
-            "time": "08:30",
-            "wiki": "https://www.google.com/maps/search/Palace+of+Knossos+Crete+Heraklion",
-            "desc": "The largest Bronze Age palace in the Aegean — home of the Minoan civilisation and the mythical labyrinth of the Minotaur. Go early to beat the crowds and the heat. Allow 2 hours.",
-            "name_el": "Ανάκτορο της Κνωσού",
-            "desc_el": "Το μεγαλύτερο ανάκτορο της Εποχής του Χαλκού στο Αιγαίο — η έδρα του Μινωικού πολιτισμού και ο μυθικός λαβύρινθος του Μινώταυρου. Πήγαινε νωρίς για να αποφύγεις τα πλήθη και τη ζέστη. Υπολόγισε 2 ώρες.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Knossos_in_Crete_west_court.jpg/1920px-Knossos_in_Crete_west_court.jpg",
-            "photo_credit": {
-              "artist": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but ple...",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Knossos_in_Crete_west_court.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Archanes Village",
-            "lat": 35.2353,
-            "lng": 25.1593,
-            "type": "village",
-            "time": "11:30",
-            "wiki": "https://www.google.com/maps/search/Archanes+Village+Crete+Heraklion",
-            "desc": "One of the most beautiful villages in Crete — immaculately preserved Minoan and Venetian architecture. Excellent tavernas and a small but excellent local archaeological museum.",
-            "name_el": "Χωριό Αρχάνες",
-            "desc_el": "Ένα από τα ομορφότερα χωριά της Κρήτης — άριστα διατηρημένη Μινωική και Βενετσιάνικη αρχιτεκτονική. Εξαιρετικές ταβέρνες και ένα μικρό αλλά εξαιρετικό τοπικό αρχαιολογικό μουσείο.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/%CE%91%CF%81%CF%87%CE%AC%CE%BD%CE%B5%CF%82_7928.jpg/1920px-%CE%91%CF%81%CF%87%CE%AC%CE%BD%CE%B5%CF%82_7928.jpg",
-            "photo_credit": {
-              "artist": "C messier",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:%CE%91%CF%81%CF%87%CE%AC%CE%BD%CE%B5%CF%82_7928.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Minoan Cemetery of Fourni",
-            "lat": 35.2461,
-            "lng": 25.1587,
-            "type": "nature",
-            "time": "13:00",
-            "wiki": null,
-            "desc": "The most important Minoan cemetery in Crete, just above Archanes. Rarely visited and atmospheric — a quiet counterpoint to the busy Knossos.",
-            "name_el": "Μινωικό Νεκροταφείο Φουρνί",
-            "desc_el": "Το σημαντικότερο Μινωικό νεκροταφείο της Κρήτης, λίγο πάνω από τις Αρχάνες. Σπάνια επισκέψιμο και ατμοσφαιρικό — μια ήσυχη αντίστιξη στην πολύβουη Κνωσό."
-          },
-          {
-            "name": "Peza Wine Village",
-            "lat": 35.2092,
-            "lng": 25.1972,
-            "type": "village",
-            "time": "15:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJd_uc9dv1mhQRgr7j9FpnlPQ",
-            "desc": "Heraklion produces some of the finest wine in Greece. Stop at a local winery for a tasting of Kotsifali and Mandilari — the great Cretan reds.",
-            "name_el": "Αμπελοχώρι Πεζά",
-            "desc_el": "Το Ηράκλειο παράγει μερικά από τα καλύτερα κρασιά της Ελλάδας. Σταμάτησε σε ένα τοπικό οινοποιείο για γευσιγνωσία Κοτσιφαλιού και Μανδηλαριάς — τα μεγάλα κρητικά κόκκινα."
-          },
-          {
-            "name": "Dinner in Heraklion",
-            "lat": 35.339,
-            "lng": 25.1371,
-            "type": "city",
-            "time": "19:30",
-            "wiki": null,
-            "desc": "Drive back to Heraklion (about 25 minutes from Peza). Dinner in the old town — the area around Lions Square (Liontaria) is busy until late.",
-            "name_el": "Δείπνο στο Ηράκλειο",
-            "desc_el": "Επιστροφή στο Ηράκλειο (περίπου 25 λεπτά από την Πεζά). Δείπνο στην παλιά πόλη — η περιοχή γύρω από τα Λιοντάρια ζει μέχρι αργά."
-          }
-        ],
-        "title_el": "Κνωσός & Αρχάνες",
-        "overnight_el": "Ηράκλειο"
-      },
-      {
-        "day": 3,
-        "title": "Lasithi Plateau & Dikteon Cave",
-        "color": "#C4962A",
-        "km": 65,
-        "drive_mins": 80,
-        "overnight": "Heraklion",
-        "stops": [
-          {
-            "name": "Lasithi Plateau",
-            "lat": 35.1498,
-            "lng": 25.497,
-            "type": "nature",
-            "time": "09:30",
-            "wiki": "https://www.google.com/maps/search/Lasithi+Plateau+Crete+Heraklion",
-            "desc": "High mountain plateau at 840m, ringed by peaks. Dotted with windmills, apple orchards and traditional villages. Drive the perimeter road for the best views.",
-            "name_el": "Οροπέδιο Λασιθίου",
-            "desc_el": "Ορεινό οροπέδιο στα 840 μέτρα, περιτριγυρισμένο από κορυφές. Διάστικτο με ανεμόμυλους, μηλεώνες και παραδοσιακά χωριά. Οδήγησε τον περιφερειακό δρόμο για την καλύτερη θέα.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/478_Crete_Panorama_14.09.2012.jpg/1920px-478_Crete_Panorama_14.09.2012.jpg",
-            "photo_credit": {
-              "artist": "Max Ryazanov",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:478_Crete_Panorama_14.09.2012.jpg",
-              "source": "Wikimedia Commons"
-            },
-            "drive": "≈1 hr from Heraklion",
-            "drive_el": "≈1 ώρα από το Ηράκλειο"
-          },
-          {
-            "name": "Dikteon Cave",
-            "lat": 35.1629,
-            "lng": 25.445,
-            "type": "nature",
-            "time": "11:00",
-            "wiki": "https://www.google.com/maps/search/Dikteon+Cave+Crete+Heraklion",
-            "desc": "According to Greek mythology, the birthplace of Zeus. A spectacular stalactite and stalagmite cave — one of the most important religious sites of ancient Crete.",
-            "name_el": "Δικταίο Άντρο",
-            "desc_el": "Σύμφωνα με την ελληνική μυθολογία, ο τόπος γέννησης του Δία. Ένα εντυπωσιακό σπήλαιο με σταλακτίτες και σταλαγμίτες — ένας από τους σημαντικότερους θρησκευτικούς χώρους της αρχαίας Κρήτης.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Cave_Dikti12%28js%29.jpg/1920px-Cave_Dikti12%28js%29.jpg",
-            "photo_credit": {
-              "artist": "Jerzy Strzelecki",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Cave_Dikti12(js).jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Kritsa Village",
-            "lat": 35.1567,
-            "lng": 25.6442,
-            "type": "village",
-            "time": "14:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJmyeli5R_mhQRtoRsu_Tqfrs",
-            "desc": "One of the most beautiful mountain villages in Crete, famous for its woven textiles. The Byzantine church of Panagia Kera has the finest frescoes on the island.",
-            "name_el": "Χωριό Κριτσά",
-            "desc_el": "Ένα από τα ομορφότερα ορεινά χωριά της Κρήτης, διάσημο για τα υφαντά του. Η βυζαντινή εκκλησία της Παναγίας Κεράς έχει τις καλύτερες τοιχογραφίες του νησιού.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/View_of_Kritsa.jpg/1920px-View_of_Kritsa.jpg",
-            "photo_credit": {
-              "artist": "Bernard Gagnon",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:View_of_Kritsa.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Malia Beach",
-            "lat": 35.2902,
-            "lng": 25.461,
-            "type": "beach",
-            "time": "16:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJU5-u_85kmhQRPlX6zNKE4ow",
-            "desc": "Long sandy beach on the north coast with a lively resort behind it. Good for a late afternoon swim before returning to Heraklion.",
-            "name_el": "Παραλία Μάλια",
-            "desc_el": "Μακριά αμμώδης παραλία στη βόρεια ακτή με ένα ζωντανό θέρετρο πίσω της. Καλή για ένα απογευματινό μπάνιο πριν την επιστροφή στο Ηράκλειο.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Crete%2C_Malia_beach_2019_b.jpg/1920px-Crete%2C_Malia_beach_2019_b.jpg",
-            "photo_credit": {
-              "artist": "Cayambe",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Crete,_Malia_beach_2019_b.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Evening in Heraklion old town",
-            "lat": 35.339,
-            "lng": 25.1371,
-            "type": "city",
-            "time": "20:00",
-            "wiki": null,
-            "desc": "Drive back to Heraklion (about 45 minutes on the new motorway from Malia). After a full day of mountain plateau and coast, the buzz of the old town is a welcome contrast.",
-            "name_el": "Βράδυ στην παλιά πόλη του Ηρακλείου",
-            "desc_el": "Επιστροφή στο Ηράκλειο (περίπου 45 λεπτά με τον νέο αυτοκινητόδρομο από τα Μάλια). Μετά μια γεμάτη μέρα στο οροπέδιο και στην ακτή, η ζωή της παλιάς πόλης είναι ευπρόσδεκτη αντίθεση."
-          }
-        ],
-        "title_el": "Οροπέδιο Λασιθίου & Δικταίο Άντρο",
-        "overnight_el": "Ηράκλειο"
-      },
-      {
-        "day": 4,
-        "title": "South to Matala — Phaistos & Red Beach",
-        "color": "#5A7A3A",
-        "km": 80,
-        "drive_mins": 90,
-        "overnight": "Matala",
-        "stops": [
-          {
-            "name": "Phaistos Palace",
-            "lat": 35.0517,
-            "lng": 24.8119,
-            "type": "museum",
-            "time": "09:30",
-            "wiki": "https://www.google.com/maps/search/Phaistos+Palace+Crete+Heraklion",
-            "desc": "Second-largest Minoan palace after Knossos, with the added bonus of extraordinary views over the Messara plain and the White Mountains. Far less crowded than Knossos.",
-            "name_el": "Ανάκτορο της Φαιστού",
-            "desc_el": "Το δεύτερο μεγαλύτερο Μινωικό ανάκτορο μετά την Κνωσό, με το επιπλέον προτέρημα της εξαιρετικής θέας στην πεδιάδα της Μεσαράς και τα Λευκά Όρη. Πολύ λιγότερο πολυσύχναστο από την Κνωσό.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Mount_Ida_chain_Messara_plain_from_Phaistos_Crete_Greece.jpg/1920px-Mount_Ida_chain_Messara_plain_from_Phaistos_Crete_Greece.jpg",
-            "photo_credit": {
-              "artist": "Jebulon",
-              "license": "CC0",
-              "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Mount_Ida_chain_Messara_plain_from_Phaistos_Crete_Greece.jpg",
-              "source": "Wikimedia Commons"
-            },
-            "drive": "≈1 hr south of Heraklion",
-            "drive_el": "≈1 ώρα νότια του Ηρακλείου"
-          },
-          {
-            "name": "Matala Beach",
-            "lat": 34.994,
-            "lng": 24.7497,
-            "type": "beach",
-            "time": "12:00",
-            "wiki": "https://www.google.com/maps/search/Matala+Beach+Crete+Heraklion",
-            "desc": "Famous beach with Roman-era cave dwellings carved into the red cliffs — occupied by hippies in the 1960s and 70s, with Joni Mitchell among the residents. Sandy beach, good swimming.",
-            "name_el": "Παραλία Μάταλα",
-            "desc_el": "Διάσημη παραλία με ρωμαϊκές κατοικίες-σπηλιές σκαλισμένες στους κόκκινους βράχους — κατοικήθηκαν από χίπις τις δεκαετίες του 1960 και 1970, με τη Joni Mitchell ανάμεσα στους ένοικους. Αμμώδης παραλία, καλό μπάνιο."
-          },
-          {
-            "name": "Red Beach Matala",
-            "lat": 34.9896,
-            "lng": 24.7491,
-            "type": "beach",
-            "time": "14:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:EiZSZWQgQmVhY2ggVHJhaWwsIE1hdGFsYSA3MDIgMDAsIEdyZWVjZSIuKiwKFAoSCVlSgPWRIpsUEU8vJTUg4rbMEhQKEgl3LfVGjyKbFBHXwLQW0VR4SA",
-            "desc": "20-minute walk over the headland from Matala brings you to a dramatic red-cliffed nudist beach only accessible on foot. Worth the effort for solitude.",
-            "name_el": "Κόκκινη Παραλία Μάταλας",
-            "desc_el": "Πεζοπορία 20 λεπτών πάνω από το ακρωτήριο των Μάταλων σε φέρνει σε μια εντυπωσιακή κόκκινη παραλία γυμνιστών, προσβάσιμη μόνο με τα πόδια. Αξίζει τον κόπο για τη μοναξιά.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/4/40/Matala_-_Red_Beach_-_Hippo.jpg",
-            "photo_credit": {
-              "artist": "Andree Stephan",
-              "license": "CC BY 3.0",
-              "license_url": "https://creativecommons.org/licenses/by/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Matala_-_Red_Beach_-_Hippo.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Agia Galini",
-            "lat": 35.0963,
-            "lng": 24.6884,
-            "type": "harbour",
-            "time": "19:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ2T-carcQmxQRED-64iy9AAU",
-            "desc": "Picturesque fishing village 35 minutes west of Matala — the best sunset and seafood combo on this stretch of coast. Drive over for dinner at one of the harbour tavernas, then back to Matala for the night.",
-            "name_el": "Αγία Γαλήνη",
-            "desc_el": "Γραφικό ψαροχώρι 35 λεπτά δυτικά από τα Μάταλα — ο καλύτερος συνδυασμός ηλιοβασιλέματος και ψαρικών στην περιοχή. Πήγαινε για δείπνο σε ταβέρνα στο λιμάνι, και επιστροφή στα Μάταλα για διανυκτέρευση.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Agia_Galini_harbour_in_Crete%2C_Greece_004.jpg/1920px-Agia_Galini_harbour_in_Crete%2C_Greece_004.jpg",
-            "photo_credit": {
-              "artist": "Moonik",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Agia_Galini_harbour_in_Crete,_Greece_004.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Late dinner in Matala",
-            "lat": 34.994,
-            "lng": 24.7497,
-            "type": "city",
-            "time": "21:00",
-            "wiki": null,
-            "desc": "Drive back to Matala (about 15 minutes from Agia Galini). The bohemian-era taverns are open late; the bay is quiet by this hour.",
-            "name_el": "Αργό δείπνο στα Μάταλα",
-            "desc_el": "Επιστροφή στα Μάταλα (περίπου 15 λεπτά από την Αγία Γαλήνη). Οι ταβέρνες με τη φήμη της εποχής των χίπις λειτουργούν μέχρι αργά· ο κόλπος είναι ήσυχος αυτή την ώρα."
-          }
-        ],
-        "title_el": "Νότια στα Μάταλα — Φαιστός & Κόκκινη Παραλία",
-        "overnight_el": "Μάταλα",
-        "nightlife": "Matala trades on its hippie past. The little beach town fills its handful of bars after dinner, and on warm nights the crowd drifts down to <a href=\"https://www.google.com/maps/search/Matala+Beach+Crete\" target=\"_blank\" rel=\"noopener\">Matala Beach</a> itself, under the famous caves. Low-key and barefoot — if you're here in late June, the free Matala Beach Festival takes it up several notches.",
-        "nightlife_el": "Τα Μάταλα ζουν με το χίπικο παρελθόν τους. Η μικρή παραλιακή πόλη γεμίζει τα λίγα μπαρ της μετά το φαγητό, και τις ζεστές νύχτες ο κόσμος κατεβαίνει στην ίδια την <a href=\"https://www.google.com/maps/search/Matala+Beach+Crete\" target=\"_blank\" rel=\"noopener\">Matala Beach</a>, κάτω από τις περίφημες σπηλιές. Χαλαρά και ξυπόλυτα — αν είσαι εδώ τέλη Ιουνίου, το δωρεάν Matala Beach Festival το ανεβάζει κατακόρυφα."
-      },
-      {
-        "day": 5,
-        "title": "Matala Morning, Gortyna & Departure",
-        "title_el": "Πρωινό στα Μάταλα, Γόρτυνα & Αναχώρηση",
-        "color": "#7B5EA7",
-        "km": 75,
-        "drive_mins": 90,
-        "overnight": null,
-        "overnight_el": null,
-        "stops": [
-          {
-            "name": "Matala Beach",
-            "name_el": "Παραλία Μάταλα",
-            "time": "08:30",
-            "type": "beach",
-            "desc": "Last morning swim before the crowds arrive — the cave-pocked cliff is at its best in the early light. Coffee on the beach, then north.",
-            "desc_el": "Τελευταίο πρωινό μπάνιο πριν έρθει ο κόσμος — οι βραχώδεις σπηλιές δείχνουν καλύτερα στο πρωινό φως. Καφές στην παραλία, και μετά βόρεια.",
-            "lat": 34.994,
-            "lng": 24.7497,
-            "wiki": "https://www.google.com/maps/search/Matala+Beach+Crete+Heraklion",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Matala_beach_cliff_Crete_Greece.jpg/1920px-Matala_beach_cliff_Crete_Greece.jpg",
-            "photo_credit": {
-              "artist": "Jebulon",
-              "license": "CC0",
-              "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Matala_beach_cliff_Crete_Greece.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Gortyna",
-            "name_el": "Γόρτυνα",
-            "time": "11:00",
-            "type": "ruin",
-            "desc": "Roman capital of Crete and one of the great archaeological sites of the island. The Code of Gortyn, carved in stone here in the 5th century BC, is the oldest written law code in Europe. Less visited than Knossos, equally substantial — and right on the road back to Heraklion.",
-            "desc_el": "Η ρωμαϊκή πρωτεύουσα της Κρήτης και ένας από τους σημαντικότερους αρχαιολογικούς χώρους του νησιού. Ο Νόμος της Γόρτυνας, χαραγμένος σε πέτρα τον 5ο αιώνα π.Χ., είναι ο αρχαιότερος γραπτός νομικός κώδικας της Ευρώπης. Λιγότερο επισκέψιμη από την Κνωσό, εξίσου ουσιαστική — και στη διαδρομή της επιστροφής προς το Ηράκλειο.",
-            "lat": 35.0626,
-            "lng": 24.947,
-            "wiki": "https://www.google.com/maps/search/Gortyna+Crete+Heraklion",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/%CE%A0%CF%81%CE%B1%CE%B9%CF%84%CF%8E%CF%81%CE%B9%CE%BF_1714.jpg/1920px-%CE%A0%CF%81%CE%B1%CE%B9%CF%84%CF%8E%CF%81%CE%B9%CE%BF_1714.jpg",
-            "photo_credit": {
-              "artist": "C messier",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:%CE%A0%CF%81%CE%B1%CE%B9%CF%84%CF%8E%CF%81%CE%B9%CE%BF_1714.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Heraklion — Departure",
-            "name_el": "Ηράκλειο — Αναχώρηση",
-            "time": "16:00",
-            "type": "departure",
-            "desc": "Return to Heraklion for ferry or flight. The airport is east of the city; the port is in the centre. Final coffee at Lions Square if time allows.",
-            "desc_el": "Επιστροφή στο Ηράκλειο για πλοίο ή αεροπλάνο. Το αεροδρόμιο είναι ανατολικά της πόλης· το λιμάνι στο κέντρο. Τελευταίος καφές στην πλατεία Λεόντων αν προλαβαίνεις.",
-            "lat": 35.3395,
-            "lng": 25.1761,
-            "wiki": "https://www.google.com/maps/search/Heraklion+Crete+Heraklion",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg/1920px-Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg",
-            "photo_credit": {
-              "artist": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but ple...",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg",
-              "source": "Wikimedia Commons"
-            }
-          }
-        ],
-        "food": [
-          {
-            "meal": "Lunch",
-            "meal_el": "Μεσημεριανό",
-            "area": "Vori / Heraklion",
-            "area_el": "Βώροι / Ηράκλειο",
-            "desc": "A last Cretan lunch. The village of Vori near Phaistos has honest tavernas, or eat back in Heraklion before your flight at <a href=\"https://www.google.com/maps/search/Peskesi+Heraklion\" target=\"_blank\" rel=\"noopener\">Peskesi</a> or seafront <a href=\"https://www.google.com/maps/search/Ippokampos+Heraklion\" target=\"_blank\" rel=\"noopener\">Ippokampos</a>.",
-            "desc_el": "Ένα τελευταίο κρητικό μεσημεριανό. Το χωριό Βώροι κοντά στη Φαιστό έχει τίμιες ταβέρνες, ή φάε πίσω στο Ηράκλειο πριν την πτήση στο <a href=\"https://www.google.com/maps/search/Peskesi+Heraklion\" target=\"_blank\" rel=\"noopener\">Peskesi</a> ή στο παραθαλάσσιο <a href=\"https://www.google.com/maps/search/Ippokampos+Heraklion\" target=\"_blank\" rel=\"noopener\">Ippokampos</a>.",
-            "after": "Gortyna"
-          }
-        ]
-      }
-    ],
-    "title_el": "Πρόγραμμα 5 Ημερών στο Ηράκλειο",
-    "subtitle_el": "Αρχαίοι Μινωίτες στην Κνωσό, τα οινοχώρια των Αρχανών, το ορεινό οροπέδιο του Λασιθίου και η εντυπωσιακή νότια ακτή στα Μάταλα — όλη η ποικιλία της κεντρικής Κρήτης."
-  },
-  "beaches": [
-    {
-      "name": "Matala Beach",
-      "wiki": "https://www.google.com/maps/search/Matala+Beach+Crete+Heraklion",
-      "rating": 5,
-      "type": "Fine sand",
-      "length": "600 m",
-      "depth": "Medium — good swimming, rocky cliffs on both sides",
-      "facing": "West-facing — warm afternoon sun, calm water",
-      "facilities": "Well organised: sunbeds, tavernas, cafes. The famous cave dwellings in the red cliffs are accessible daily.",
-      "desc": "One of the most atmospheric beaches in Greece — red sandstone cliffs riddled with Roman cave dwellings, where hippies including Joni Mitchell lived in the 1960s. Fine sand, warm water and a relaxed village immediately behind it.",
-      "commons": "Matala_beach_Crete.jpg",
-      "lat": 34.994,
-      "lng": 24.7497,
-      "name_el": "Παραλία Μάταλα",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Μέτριο — καλό μπάνιο, βραχώδεις όχθες και στις δύο πλευρές",
-      "facing_el": "Δυτική — ζεστός απογευματινός ήλιος, ήρεμα νερά",
-      "facilities_el": "Καλά οργανωμένη: ξαπλώστρες, ταβέρνες, καφέ. Οι διάσημες κατοικίες-σπηλιές στους κόκκινους βράχους είναι προσβάσιμες καθημερινά.",
-      "desc_el": "Μία από τις πιο ατμοσφαιρικές παραλίες της Ελλάδας — κόκκινοι αμμολιθικοί βράχοι γεμάτοι ρωμαϊκές σπηλιές-κατοικίες, όπου χίπις συμπεριλαμβανομένης της Joni Mitchell έζησαν τη δεκαετία του 1960. Λεπτή άμμος, ζεστά νερά και χαλαρή ατμόσφαιρα.",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Matala_beach_cliff_Crete_Greece.jpg/1920px-Matala_beach_cliff_Crete_Greece.jpg",
+ "key": "heraklion",
+ "name": "Crete (Heraklion)",
+ "subtitle": "Knossos, Minoan civilisation and the heart of the greatest island",
+ "intro": "Heraklion is where Crete's extraordinary history hits hardest. The Palace of Knossos — the largest Bronze Age archaeological site in Greece — sits just 5km from the city centre, and the Heraklion Archaeological Museum holds the world's finest collection of Minoan art. The city itself is underrated: a working Cretan capital with exceptional food, a Venetian fortress and one of the liveliest market streets in Greece.",
+ "when_to_visit": {
+  "summary": "Heraklion is a working city with Knossos as its anchor — the city itself lives year-round, the antiquities never close. June and September are the windows: warm sea, manageable crowds at Knossos, festival season. July-August at Knossos is genuinely awful — go at 8am or wait until October. The Heraklion Summer Festival (Jun-Sep) brings concerts and theatre to the Koules fortress.",
+  "summary_el": "Το Ηράκλειο είναι μια ζωντανή πόλη με αγκυροβόλιο την Κνωσό — η πόλη ζει όλο τον χρόνο, οι αρχαιότητες δεν κλείνουν ποτέ. Ο Ιούνιος και ο Σεπτέμβριος είναι οι ιδανικές στιγμές: ζεστή θάλασσα, διαχειρίσιμος κόσμος στην Κνωσό, σεζόν φεστιβάλ. Ιούλιος–Αύγουστος στην Κνωσό είναι πραγματικά απαίσια — πήγαινε στις 8 το πρωί ή περίμενε τον Οκτώβριο. Το Καλοκαιρινό Φεστιβάλ Ηρακλείου (Ιούνιος–Σεπτέμβριος) φέρνει συναυλίες και θέατρο στο φρούριο Κούλε.",
+  "months": [
+   {
+    "tag": "ok",
+    "why": "Knossos quiet",
+    "why_el": "Πόλη ζωντανή, Κνωσσός"
+   },
+   {
+    "tag": "ok",
+    "why": "Mild, museums",
+    "why_el": "Ήπιο, μουσεία"
+   },
+   {
+    "tag": "great",
+    "why": "Knossos, blooming",
+    "why_el": "Κνωσσός ευχάριστη"
+   },
+   {
+    "tag": "great",
+    "why": "Easter, Knossos",
+    "why_el": "Πάσχα, Κνωσσός"
+   },
+   {
+    "tag": "great",
+    "why": "Knossos, calm",
+    "why_el": "Ζεσταίνει, Κνωσσός"
+   },
+   {
+    "tag": "perfect",
+    "why": "Festivals start",
+    "why_el": "Ζεστή θάλασσα"
+   },
+   {
+    "tag": "ok",
+    "why": "Knossos and the Archaeological Museum are still the point — but the heat is real (often 35°C+). Visit Knossos at opening (8am) or sunset; the museum is air-conditioned.",
+    "why_el": "Η Κνωσός και το Αρχαιολογικό Μουσείο είναι ακόμα ο λόγος — αλλά η ζέστη είναι πραγματική (συχνά 35°C+). Επίσκεψη Κνωσού στο άνοιγμα (8:00) ή ηλιοβασίλεμα· το μουσείο έχει κλιματισμό."
+   },
+   {
+    "tag": "ok",
+    "why": "Hottest month — Knossos punishing under midday sun. Worth it for what's here (the museum holds the world's best Minoan collection), but plan around the heat.",
+    "why_el": "Πιο ζεστός μήνας — η Κνωσός εξαντλητική κάτω από τον μεσημεριάτικο ήλιο. Αξίζει για ό,τι υπάρχει εδώ (το μουσείο έχει την καλύτερη μινωική συλλογή στον κόσμο), αλλά οργάνωσε γύρω από τη ζέστη."
+   },
+   {
+    "tag": "perfect",
+    "why": "Knossos breathes",
+    "why_el": "Κνωσσός αναπνέει"
+   },
+   {
+    "tag": "great",
+    "why": "Last swims, museums",
+    "why_el": "Τελευταία μπάνια"
+   },
+   {
+    "tag": "great",
+    "why": "Mild, museums",
+    "why_el": "Ήπιο, μουσεία, ντόπιοι"
+   },
+   {
+    "tag": "ok",
+    "why": "City alive",
+    "why_el": "Πόλη ζωντανή τον"
+   }
+  ]
+ },
+ "itinerary": {
+  "title": "5-Day Heraklion Itinerary",
+  "subtitle": "Ancient Minoans at Knossos, the wine villages of Archanes, the high mountain plateau of Lasithi and the dramatic south coast at Matala — the full range of central Crete.",
+  "days": [
+   {
+    "day": 1,
+    "title": "Heraklion City",
+    "color": "#1B4F8A",
+    "km": 10,
+    "drive_mins": 20,
+    "overnight": "Heraklion",
+    "stops": [
+     {
+      "name": "Koules Fortress",
+      "lat": 35.3446,
+      "lng": 25.1369,
+      "type": "castle",
+      "time": "09:00",
+      "wiki": "https://www.google.com/maps/search/Koules+Fortress+Crete+Heraklion",
+      "desc": "16th-century Venetian sea fortress at the entrance to Heraklion harbour. Excellent views from the battlements over the old port.",
+      "name_el": "Φρούριο Κούλες",
+      "desc_el": "Βενετσιάνικο θαλασσινό φρούριο του 16ου αιώνα στην είσοδο του λιμανιού του Ηρακλείου. Εξαιρετική θέα από τις επάλξεις προς το παλιό λιμάνι.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg/1920px-Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg",
       "photo_credit": {
-        "artist": "Jebulon",
-        "license": "CC0",
-        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Matala_beach_cliff_Crete_Greece.jpg",
-        "source": "Wikimedia Commons"
+       "artist": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but ple...",
+       "license": "CC BY-SA 3.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg",
+       "source": "Wikimedia Commons"
       }
-    },
-    {
-      "name": "Voulisma Beach",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJfcqAt7qAkBQRs9HNH28FV0E",
-      "rating": 5,
-      "type": "Fine golden sand",
-      "length": "800 m",
-      "depth": "Shallow to medium — clean, clear water",
-      "facing": "Northeast-facing — sheltered by hills, very calm",
-      "facilities": "Fully organised: sunbeds, water sports, beach bar, taverna, parking.",
-      "desc": "Widely regarded as one of the best beaches in eastern Crete near Istro. Long, wide, golden sand with extraordinarily clear water. Less famous than the west coast beaches, which means far fewer crowds even in high summer.",
-      "commons": null,
-      "lat": 35.1253,
-      "lng": 25.7444,
-      "name_el": "Παραλία Βουλίσμα",
-      "type_el": "Λεπτή χρυσή άμμος",
-      "depth_el": "Ρηχά έως μέτρια — καθαρά, διαυγή νερά",
-      "facing_el": "Βορειοανατολική — προστατευμένη από λόφους, πολύ ήρεμη",
-      "facilities_el": "Πλήρως οργανωμένη: ξαπλώστρες, θαλάσσια σπορ, beach bar, ταβέρνα, parking.",
-      "desc_el": "Θεωρείται ευρέως μία από τις καλύτερες παραλίες της ανατολικής Κρήτης κοντά στο Ίστρο. Μακριά, πλατιά, χρυσή άμμος με εξαιρετικά καθαρά νερά. Λιγότερο διάσημη από τις δυτικές παραλίες, που σημαίνει πολύ λιγότερα πλήθη.",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Voulisma_Beach%2C_Istro%2C_Crete.JPG/1920px-Voulisma_Beach%2C_Istro%2C_Crete.JPG",
+     },
+     {
+      "name": "Heraklion Archaeological Museum",
+      "lat": 35.339,
+      "lng": 25.1371,
+      "type": "museum",
+      "time": "10:00",
+      "wiki": "https://www.google.com/maps/search/Heraklion+Archaeological+Museum+Crete+Heraklion",
+      "desc": "The finest collection of Minoan art in the world. The Snake Goddess figurines, the Phaistos Disc, and the Bull-leaping fresco are unmissable. Allow 2 hours minimum.",
+      "name_el": "Αρχαιολογικό Μουσείο Ηρακλείου",
+      "desc_el": "Η καλύτερη συλλογή Μινωικής τέχνης στον κόσμο. Τα ειδώλια της Θεάς των Όφεων, ο Δίσκος της Φαιστού και η τοιχογραφία των Ταυροκαθαψίων είναι αδιαπραγμάτευτα. Υπολόγισε τουλάχιστον 2 ώρες.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Sarcophagus_archmus_Heraklion.jpg/1920px-Sarcophagus_archmus_Heraklion.jpg",
       "photo_credit": {
-        "artist": "ArtemiyPavlov",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Voulisma_Beach,_Istro,_Crete.JPG",
-        "source": "Wikimedia Commons"
+       "artist": "Jebulon",
+       "license": "CC0",
+       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Sarcophagus_archmus_Heraklion.jpg",
+       "source": "Wikimedia Commons"
       }
-    },
-    {
-      "name": "Malia Beach",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJU5-u_85kmhQRPlX6zNKE4ow",
-      "rating": 4,
-      "type": "Sand and fine pebble mix",
-      "length": "3 km",
-      "depth": "Shallow — very gradual entry, excellent for families",
-      "facing": "North-facing — protected from south winds, some afternoon wind",
-      "facilities": "Fully developed resort beach: every facility available. Lively but can feel crowded in peak season.",
-      "desc": "A long north-coast beach backed by the resort of Malia. Not the most beautiful setting but excellent for families — long, shallow, calm water. The Minoan Palace of Malia is just 3km away, making it a good base for combining beach and archaeology.",
-      "commons": null,
-      "lat": 35.2902,
-      "lng": 25.461,
-      "name_el": "Παραλία Μάλια",
-      "type_el": "Άμμος και λεπτό βότσαλο",
-      "depth_el": "Ρηχά — πολύ σταδιακή είσοδος, ιδανική για οικογένειες",
-      "facing_el": "Βόρεια — προστατευμένη από νότιους ανέμους, λίγος απογευματινός αέρας",
-      "facilities_el": "Πλήρως ανεπτυγμένη παραλία θερέτρου: κάθε υπηρεσία διαθέσιμη. Ζωντανή αλλά μπορεί να φαίνεται γεμάτη στην αιχμή της σεζόν.",
-      "desc_el": "Μια μακριά παραλία της βόρειας ακτής με το θέρετρο της Μάλιας πίσω της. Δεν είναι το ομορφότερο τοπίο αλλά εξαιρετική για οικογένειες — μακριά, ρηχά, ήρεμα νερά. Το Μινωικό Ανάκτορο της Μάλιας είναι μόλις 3 χλμ μακριά.",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Crete%2C_Malia_beach_2019_b.jpg/1920px-Crete%2C_Malia_beach_2019_b.jpg",
-      "photo_credit": {
-        "artist": "Cayambe",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Crete,_Malia_beach_2019_b.jpg",
-        "source": "Wikimedia Commons"
-      }
-    },
-    {
-      "name": "Agia Pelagia Beach",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJgz3ySZlRmhQRnSMSaVlLy_Y",
-      "rating": 4,
-      "type": "Fine sand",
-      "length": "400 m",
-      "depth": "Shallow — sheltered bay, no waves",
-      "facing": "North-facing — enclosed bay, calm at all times",
-      "facilities": "Good: sunbeds, beach bars, several hotels immediately behind beach.",
-      "desc": "A sheltered sandy cove in a natural harbour 20km west of Heraklion. One of the best organised and cleanest beaches near the capital, with calm water suitable for families and those wanting facilities close to the city.",
-      "commons": null,
+     },
+     {
+      "name": "1866 Market Street",
+      "lat": 35.3384,
+      "lng": 25.1331,
+      "type": "city",
+      "time": "12:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJrxOYYwJbmhQRvGPXT1maOjk",
+      "desc": "Heraklion's covered market street — the best street food in Crete. Try kalitsounia (cheese pastries), dakos, and fresh honey from local producers.",
+      "name_el": "Οδός 1866 — Αγορά",
+      "desc_el": "Η σκεπαστή αγορά του Ηρακλείου — το καλύτερο street food της Κρήτης. Δοκίμασε καλιτσούνια, ντάκο και φρέσκο μέλι από ντόπιους παραγωγούς."
+     },
+     {
+      "name": "Venetian Walls & Martinengo Bastion",
+      "lat": 35.3321,
+      "lng": 25.1298,
+      "type": "castle",
+      "time": "16:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJQ62wMYZZmhQRn6YDFMIiQxM",
+      "desc": "Walk the 16th-century Venetian walls that surround the old city. El Greco is buried at the Martinengo Bastion — a quiet, little-visited corner of the city.",
+      "name_el": "Ενετικά Τείχη & Προμαχώνας Μαρτινέγκο",
+      "desc_el": "Περπάτησε στα βενετσιάνικα τείχη του 16ου αιώνα που περιβάλλουν την παλιά πόλη. Ο Ελ Γκρέκο είναι θαμμένος στον Προμαχώνα Μαρτινέγκο — μια ήσυχη, λίγο επισκέψιμη γωνιά της πόλης."
+     },
+     {
+      "time": "17:30",
+      "name": "Agia Pelagia Beach (sunset swim)",
+      "name_el": "Παραλία Αγία Πελαγία (απογευματινό μπάνιο)",
+      "type": "beach",
       "lat": 35.4057,
       "lng": 25.0184,
-      "name_el": "Παραλία Αγίας Πελαγίας",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Ρηχά — προστατευμένος κόλπος, χωρίς κύματα",
-      "facing_el": "Βόρεια — κλειστός κόλπος, ήρεμα ανά πάσα στιγμή",
-      "facilities_el": "Καλές: ξαπλώστρες, beach bars, αρκετά ξενοδοχεία ακριβώς πίσω από την παραλία.",
-      "desc_el": "Ένας προστατευμένος αμμώδης κόλπος σε φυσικό λιμάνι 20 χλμ δυτικά του Ηρακλείου. Μία από τις καλύτερα οργανωμένες και πιο καθαρές παραλίες κοντά στην πρωτεύουσα, με ήρεμα νερά κατάλληλα για οικογένειες και όσους θέλουν υπηρεσίες.",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Agia_Pelagia%2C_Crete_%2836328987176%29.jpg/1920px-Agia_Pelagia%2C_Crete_%2836328987176%29.jpg",
-      "photo_credit": {
-        "artist": "Karel Macalik from Prague, Czech republic",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Agia_Pelagia,_Crete_(36328987176).jpg",
-        "source": "Wikimedia Commons"
-      }
-    },
-    {
-      "name": "Lendas Beach",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJabIFmJ7fmhQRV-Ok3dLVm4Q",
-      "rating": 4,
-      "type": "Pebble and sand mix",
-      "length": "500 m",
-      "depth": "Medium to deep — rocky seabed, excellent visibility",
-      "facing": "South-facing — sheltered from north winds, warm water",
-      "facilities": "Basic: small taverna, simple rooms to rent. Primitive and peaceful.",
-      "desc": "A remote south-coast beach reached via a dramatic mountain road near Cape Lithinon. Completely unspoiled, rarely visited by tourists, and strikingly beautiful. The area was an important ancient healing sanctuary. Worth the long drive for those seeking solitude.",
-      "commons": null,
-      "lat": 34.9301,
-      "lng": 24.9227,
-      "name_el": "Παραλία Λέντα",
-      "type_el": "Βότσαλο και άμμος",
-      "depth_el": "Μέτρια έως βαθιά — βραχώδης βυθός, εξαιρετική ορατότητα",
-      "facing_el": "Νότια — προστατευμένη από βόρειους ανέμους, ζεστά νερά",
-      "facilities_el": "Στοιχειώδεις: μικρή ταβέρνα, απλά δωμάτια προς ενοικίαση. Πρωτόγονη και ήσυχη.",
-      "desc_el": "Μια απομακρυσμένη παραλία της νότιας ακτής που προσεγγίζεται μέσω ενός εντυπωσιακού ορεινού δρόμου κοντά στο Ακρωτήριο Λίθινο. Εντελώς ανέγγιχτη, σπάνια επισκέπτεται από τουρίστες, και εκπληκτικά όμορφη. Η περιοχή ήταν ένα σημαντικό αρχαίο θεραπευτικό κέντρο.",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Dytiko_05.jpg/1920px-Dytiko_05.jpg",
-      "photo_credit": {
-        "artist": "Olaf Tausch",
-        "license": "CC BY 3.0",
-        "license_url": "https://creativecommons.org/licenses/by/3.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Dytiko_05.jpg",
-        "source": "Wikimedia Commons"
-      }
-    }
-  ],
-  "name_el": "Κρήτη (Ηράκλειο)",
-  "name_accusative_el": "Κρήτη (Ηράκλειο)",
-  "name_genitive_el": "Κρήτης (Ηρακλείου)",
-  "gender_el": "f",
-  "subtitle_el": "Κνωσός, Μινωικός πολιτισμός και η καρδιά του μεγαλύτερου νησιού",
-  "intro_el": "Το Ηράκλειο είναι το σημείο όπου η εξαιρετική ιστορία της Κρήτης χτυπάει πιο δυνατά. Το Ανάκτορο της Κνωσού — ο μεγαλύτερος αρχαιολογικός χώρος της Εποχής του Χαλκού στην Ελλάδα — βρίσκεται μόλις 5 χλμ από το κέντρο της πόλης, και το Αρχαιολογικό Μουσείο Ηρακλείου φιλοξενεί την καλύτερη συλλογή Μινωικής τέχνης στον κόσμο. Η ίδια η πόλη υποτιμάται: μια ζωντανή κρητική πρωτεύουσα με εξαιρετικό φαγητό, βενετσιάνικο φρούριο και μία από τις πιο πολύβουες αγορές της Ελλάδας.",
-  "specialties": [
-    {
-      "name": "Dakos",
-      "name_el": "Ντάκος",
-      "desc": "Hard barley rusk topped with grated tomato, mizithra cheese, olive oil and oregano. The Cretan tapas. Found everywhere — best at no-frills village tavernas.",
-      "desc_el": "Σκληρό κριθαρένιο παξιμάδι με τριμμένη ντομάτα, μυζήθρα, ελαιόλαδο και ρίγανη. Το κρητικό μεζεδάκι. Παντού — καλύτερο σε απλές χωριάτικες ταβέρνες.",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/9/95/Koukouvagia.jpg",
-      "photo_credit": {
-        "artist": "Frente",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Koukouvagia.jpg",
-        "source": "Wikimedia Commons"
-      }
-    },
-    {
-      "name": "Cretan raki/tsikoudia",
-      "name_el": "Ρακή Κρήτης (τσικουδιά)",
-      "desc": "Pomace-distilled spirit served everywhere as a welcome and farewell. Each village has its own. Buy at any small shop or distillery; supermarket versions are inferior.",
-      "desc_el": "Απόσταγμα από στέμφυλα, σερβίρεται παντού ως υποδοχή και αποχαιρετισμός. Κάθε χωριό έχει το δικό του. Σε μικρά μαγαζιά ή αποστακτήρια· οι εκδοχές σούπερ μάρκετ είναι κατώτερες."
-    },
-    {
-      "name": "Graviera Kritis",
-      "name_el": "Γραβιέρα Κρήτης",
-      "desc": "PDO hard sheep's-milk cheese, the most famous Cretan cheese. Buy direct from village producers in Anogeia or Zaros for top quality.",
-      "desc_el": "Σκληρή πρόβεια γραβιέρα Π.Ο.Π., το πιο διάσημο κρητικό τυρί. Απευθείας από παραγωγούς σε Ανώγεια και Ζαρό για κορυφαία ποιότητα."
-    },
-    {
-      "name": "Bougatsa Kritis",
-      "name_el": "Μπουγάτσα Κρήτης",
-      "desc": "Cretan cheese pie eaten for breakfast — flaky pastry, fresh creamy mizithra, dusted with sugar and cinnamon. Kirkor in Heraklion's Lions Square is the institution.",
-      "desc_el": "Κρητική μπουγάτσα για πρωινό — τραγανή ζύμη, φρέσκια κρεμώδης μυζήθρα, με ζάχαρη και κανέλα. Ο Κίρκορ στην πλατεία Λιονταριών είναι ο θεσμός."
-    }
-  ],
-  "crafts": [
-    {
-      "name": "Cretan knife (machairi)",
-      "name_el": "Κρητικό μαχαίρι",
-      "desc": "Traditional shepherd's knife with engraved verse. Custom-made in Heraklion's old craft shops on Daedalou street. Genuine ones are expensive but heritage-grade.",
-      "desc_el": "Παραδοσιακό κρητικό μαχαίρι με χαραγμένη μαντινάδα. Παραγγελία σε παλιά εργαστήρια στην οδό Δαιδάλου του Ηρακλείου. Τα γνήσια είναι ακριβά αλλά κληρονομιά."
-    }
-  ],
-  "festivals": [
-    {
-      "name": "Wine festival of Daphnes",
-      "name_el": "Γιορτή Κρασιού Δαφνών",
-      "when": "Mid-August",
-      "when_el": "Μέσα Αυγούστου",
-      "desc": "Wine festival in the village of Daphnes, the heart of Heraklion's wine country. Tastings of local Liatiko, Vidiano, Mandilari. Dates vary; check the village municipality.",
-      "desc_el": "Γιορτή κρασιού στο χωριό Δαφνές, στην καρδιά του οινικού Ηρακλείου. Γευσιγνωσίες τοπικών Λιάτικου, Βιδιανού, Μανδηλαριάς. Οι ημερομηνίες αλλάζουν."
-    }
-  ],
-  "getting_there": {
-    "pills": [
-      "✈ Airport (intl)",
-      "⛵ Piraeus 8–9h overnight",
-      "€40–120"
+      "wiki": "https://www.google.com/maps/search/?api=1&query=Agia+Pelagia+Beach+Crete",
+      "desc": "A short drive west of Heraklion drops you into a sheltered horseshoe bay — fine sand, exceptionally calm water, and a string of low-key tavernas above the beach. After a heavy archaeology morning, the swim resets the day before heading back for dinner. The west-facing aspect gives a slow sunset over the bay.",
+      "desc_el": "Σύντομη οδική απόσταση δυτικά του Ηρακλείου σε αφήνει σε έναν προφυλαγμένο κόλπο σε σχήμα πετάλου — λεπτή άμμος, εξαιρετικά ήρεμα νερά, και μια σειρά χαλαρών ταβέρνων πάνω από την παραλία. Μετά από ένα βαρύ αρχαιολογικό πρωινό, το μπάνιο επαναφέρει την ημέρα πριν την επιστροφή για δείπνο. Ο δυτικός προσανατολισμός χαρίζει ένα αργό ηλιοβασίλεμα πάνω από τον κόλπο."
+     }
     ],
-    "pills_el": [
-      "✈ Αεροδρόμιο (διεθνές)",
-      "⛵ Πειραιάς 8–9h νυχτερινό",
-      "€40–120"
+    "title_el": "Πόλη του Ηρακλείου",
+    "overnight_el": "Ηράκλειο",
+    "nightlife": "Heraklion's nightlife is local and year-round, clustered in the pedestrian lanes off the centre. <a href=\"https://www.google.com/maps/search/Korai+Street+Heraklion\" target=\"_blank\" rel=\"noopener\">Korai</a> is the packed one — bars indoors and out, music from rock to laïka — with quieter <a href=\"https://www.google.com/maps/search/Chandakos+Street+Heraklion\" target=\"_blank\" rel=\"noopener\">Chandakos</a> alongside; for a view, the rooftop <a href=\"https://www.google.com/maps/search/Pairidaeza+Heraklion\" target=\"_blank\" rel=\"noopener\">Pairidaeza</a>. A real-city night, not a tourist strip.",
+    "nightlife_el": "Η νυχτερινή ζωή του Ηρακλείου είναι ντόπια και ολοχρονίς, μαζεμένη στους πεζόδρομους γύρω από το κέντρο. Η <a href=\"https://www.google.com/maps/search/Korai+Street+Heraklion\" target=\"_blank\" rel=\"noopener\">Κοραή</a> είναι η γεμάτη — μπαρ μέσα κι έξω, μουσική από ροκ ως λαϊκά — με την πιο ήσυχη <a href=\"https://www.google.com/maps/search/Chandakos+Street+Heraklion\" target=\"_blank\" rel=\"noopener\">Χάνδακος</a> δίπλα· για θέα, το rooftop <a href=\"https://www.google.com/maps/search/Pairidaeza+Heraklion\" target=\"_blank\" rel=\"noopener\">Pairidaeza</a>. Βραδιά πραγματικής πόλης, όχι τουριστικού δρόμου.",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Heraklion",
+      "area_el": "Ηράκλειο",
+      "desc": "<a href=\"https://www.google.com/maps/search/Peskesi+Heraklion\" target=\"_blank\" rel=\"noopener\">Peskesi</a> is the standout — Cretan heritage cooking in a restored mansion, named #1 for Greek & Regional cuisine at the 2019 Restaurant100 awards and Best Organic Restaurant in Europe in 2025 (book ahead). For seafront seafood, <a href=\"https://www.google.com/maps/search/Ippokampos+Heraklion\" target=\"_blank\" rel=\"noopener\">Ippokampos</a> is the beloved ouzeri. Out of town, <a href=\"https://www.google.com/maps/search/Logari+Kato+Gouves+Heraklion\" target=\"_blank\" rel=\"noopener\">Logari</a> at Kato Gouves is an old metochi turned taverna on the wooded banks of the Aposelemis — tables under olive trees, disarmingly plain Cretan cooking, €25–35.",
+      "desc_el": "Το <a href=\"https://www.google.com/maps/search/Peskesi+Heraklion\" target=\"_blank\" rel=\"noopener\">Peskesi</a> είναι η κορυφαία επιλογή — κρητική κουζίνα κληρονομιάς σε αναπαλαιωμένο αρχοντικό, Νο1 στην ελληνική & τοπική κουζίνα στα Restaurant100 του 2019 και Καλύτερο Οργανικό Εστιατόριο της Ευρώπης το 2025 (κλείσε τραπέζι). Για θαλασσινά στην ακτή, το <a href=\"https://www.google.com/maps/search/Ippokampos+Heraklion\" target=\"_blank\" rel=\"noopener\">Ippokampos</a> είναι το αγαπημένο ουζερί. Έξω από την πόλη, το <a href=\"https://www.google.com/maps/search/Logari+Kato+Gouves+Heraklion\" target=\"_blank\" rel=\"noopener\">Λογάρι</a> στις Κάτω Γούβες είναι ένα παλιό μετόχι που έγινε ταβέρνα, στις δασωμένες όχθες του Αποσελέμη — τραπέζια κάτω από ελιές, αφοπλιστικά απλή κρητική κουζίνα, €25–35.",
+      "after": "1866 Market Street"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "title": "Knossos & Archanes",
+    "color": "#C0522A",
+    "km": 25,
+    "drive_mins": 35,
+    "overnight": "Heraklion",
+    "stops": [
+     {
+      "name": "Palace of Knossos",
+      "lat": 35.298,
+      "lng": 25.1628,
+      "type": "museum",
+      "time": "08:30",
+      "wiki": "https://www.google.com/maps/search/Palace+of+Knossos+Crete+Heraklion",
+      "desc": "The largest Bronze Age palace in the Aegean — home of the Minoan civilisation and the mythical labyrinth of the Minotaur. Go early to beat the crowds and the heat. Allow 2 hours.",
+      "name_el": "Ανάκτορο της Κνωσού",
+      "desc_el": "Το μεγαλύτερο ανάκτορο της Εποχής του Χαλκού στο Αιγαίο — η έδρα του Μινωικού πολιτισμού και ο μυθικός λαβύρινθος του Μινώταυρου. Πήγαινε νωρίς για να αποφύγεις τα πλήθη και τη ζέστη. Υπολόγισε 2 ώρες.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Knossos_in_Crete_west_court.jpg/1920px-Knossos_in_Crete_west_court.jpg",
+      "photo_credit": {
+       "artist": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but ple...",
+       "license": "CC BY-SA 3.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Knossos_in_Crete_west_court.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Archanes Village",
+      "lat": 35.2353,
+      "lng": 25.1593,
+      "type": "village",
+      "time": "11:30",
+      "wiki": "https://www.google.com/maps/search/Archanes+Village+Crete+Heraklion",
+      "desc": "One of the most beautiful villages in Crete — immaculately preserved Minoan and Venetian architecture. Excellent tavernas and a small but excellent local archaeological museum.",
+      "name_el": "Χωριό Αρχάνες",
+      "desc_el": "Ένα από τα ομορφότερα χωριά της Κρήτης — άριστα διατηρημένη Μινωική και Βενετσιάνικη αρχιτεκτονική. Εξαιρετικές ταβέρνες και ένα μικρό αλλά εξαιρετικό τοπικό αρχαιολογικό μουσείο.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/%CE%91%CF%81%CF%87%CE%AC%CE%BD%CE%B5%CF%82_7928.jpg/1920px-%CE%91%CF%81%CF%87%CE%AC%CE%BD%CE%B5%CF%82_7928.jpg",
+      "photo_credit": {
+       "artist": "C messier",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:%CE%91%CF%81%CF%87%CE%AC%CE%BD%CE%B5%CF%82_7928.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Minoan Cemetery of Fourni",
+      "lat": 35.2461,
+      "lng": 25.1587,
+      "type": "nature",
+      "time": "13:00",
+      "wiki": null,
+      "desc": "The most important Minoan cemetery in Crete, just above Archanes. Rarely visited and atmospheric — a quiet counterpoint to the busy Knossos.",
+      "name_el": "Μινωικό Νεκροταφείο Φουρνί",
+      "desc_el": "Το σημαντικότερο Μινωικό νεκροταφείο της Κρήτης, λίγο πάνω από τις Αρχάνες. Σπάνια επισκέψιμο και ατμοσφαιρικό — μια ήσυχη αντίστιξη στην πολύβουη Κνωσό."
+     },
+     {
+      "name": "Peza Wine Village",
+      "lat": 35.2092,
+      "lng": 25.1972,
+      "type": "village",
+      "time": "15:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJd_uc9dv1mhQRgr7j9FpnlPQ",
+      "desc": "Heraklion produces some of the finest wine in Greece. Stop at a local winery for a tasting of Kotsifali and Mandilari — the great Cretan reds.",
+      "name_el": "Αμπελοχώρι Πεζά",
+      "desc_el": "Το Ηράκλειο παράγει μερικά από τα καλύτερα κρασιά της Ελλάδας. Σταμάτησε σε ένα τοπικό οινοποιείο για γευσιγνωσία Κοτσιφαλιού και Μανδηλαριάς — τα μεγάλα κρητικά κόκκινα."
+     },
+     {
+      "name": "Dinner in Heraklion",
+      "lat": 35.339,
+      "lng": 25.1371,
+      "type": "city",
+      "time": "19:30",
+      "wiki": null,
+      "desc": "Drive back to Heraklion (about 25 minutes from Peza). Dinner in the old town — the area around Lions Square (Liontaria) is busy until late.",
+      "name_el": "Δείπνο στο Ηράκλειο",
+      "desc_el": "Επιστροφή στο Ηράκλειο (περίπου 25 λεπτά από την Πεζά). Δείπνο στην παλιά πόλη — η περιοχή γύρω από τα Λιοντάρια ζει μέχρι αργά."
+     }
     ],
-    "summary": "Largest airport in Crete — Aegean, Sky Express, Ryanair, EasyJet, charters. Overnight ferries from Piraeus (Minoan, Anek), evening departures, daily year-round. €40–70 deck, €70–120 cabin.",
-    "summary_el": "Το μεγαλύτερο αεροδρόμιο της Κρήτης — Aegean, Sky Express, Ryanair, EasyJet, charters. Νυχτερινά πλοία από Πειραιά (Minoan, Anek), βραδινές αναχωρήσεις, καθημερινά όλο τον χρόνο. €40–70 κατάστρωμα, €70–120 καμπίνα.",
-    "tip": "Cabin recommended on the overnight — budget around the same as a flight, sleep there.",
-    "tip_el": "Η καμπίνα συστήνεται στο νυχτερινό — κοστίζει όσο πτήση, αλλά κοιμάσαι εκεί."
+    "title_el": "Κνωσός & Αρχάνες",
+    "overnight_el": "Ηράκλειο"
+   },
+   {
+    "day": 3,
+    "title": "Lasithi Plateau & Dikteon Cave",
+    "color": "#C4962A",
+    "km": 65,
+    "drive_mins": 80,
+    "overnight": "Heraklion",
+    "stops": [
+     {
+      "name": "Lasithi Plateau",
+      "lat": 35.1498,
+      "lng": 25.497,
+      "type": "nature",
+      "time": "09:30",
+      "wiki": "https://www.google.com/maps/search/Lasithi+Plateau+Crete+Heraklion",
+      "desc": "High mountain plateau at 840m, ringed by peaks. Dotted with windmills, apple orchards and traditional villages. Drive the perimeter road for the best views.",
+      "name_el": "Οροπέδιο Λασιθίου",
+      "desc_el": "Ορεινό οροπέδιο στα 840 μέτρα, περιτριγυρισμένο από κορυφές. Διάστικτο με ανεμόμυλους, μηλεώνες και παραδοσιακά χωριά. Οδήγησε τον περιφερειακό δρόμο για την καλύτερη θέα.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/478_Crete_Panorama_14.09.2012.jpg/1920px-478_Crete_Panorama_14.09.2012.jpg",
+      "photo_credit": {
+       "artist": "Max Ryazanov",
+       "license": "CC BY-SA 3.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:478_Crete_Panorama_14.09.2012.jpg",
+       "source": "Wikimedia Commons"
+      },
+      "drive": "≈1 hr from Heraklion",
+      "drive_el": "≈1 ώρα από το Ηράκλειο"
+     },
+     {
+      "name": "Dikteon Cave",
+      "lat": 35.1629,
+      "lng": 25.445,
+      "type": "nature",
+      "time": "11:00",
+      "wiki": "https://www.google.com/maps/search/Dikteon+Cave+Crete+Heraklion",
+      "desc": "According to Greek mythology, the birthplace of Zeus. A spectacular stalactite and stalagmite cave — one of the most important religious sites of ancient Crete.",
+      "name_el": "Δικταίο Άντρο",
+      "desc_el": "Σύμφωνα με την ελληνική μυθολογία, ο τόπος γέννησης του Δία. Ένα εντυπωσιακό σπήλαιο με σταλακτίτες και σταλαγμίτες — ένας από τους σημαντικότερους θρησκευτικούς χώρους της αρχαίας Κρήτης.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Cave_Dikti12%28js%29.jpg/1920px-Cave_Dikti12%28js%29.jpg",
+      "photo_credit": {
+       "artist": "Jerzy Strzelecki",
+       "license": "CC BY-SA 3.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Cave_Dikti12(js).jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Kritsa Village",
+      "lat": 35.1567,
+      "lng": 25.6442,
+      "type": "village",
+      "time": "14:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJmyeli5R_mhQRtoRsu_Tqfrs",
+      "desc": "One of the most beautiful mountain villages in Crete, famous for its woven textiles. The Byzantine church of Panagia Kera has the finest frescoes on the island.",
+      "name_el": "Χωριό Κριτσά",
+      "desc_el": "Ένα από τα ομορφότερα ορεινά χωριά της Κρήτης, διάσημο για τα υφαντά του. Η βυζαντινή εκκλησία της Παναγίας Κεράς έχει τις καλύτερες τοιχογραφίες του νησιού.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/View_of_Kritsa.jpg/1920px-View_of_Kritsa.jpg",
+      "photo_credit": {
+       "artist": "Bernard Gagnon",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:View_of_Kritsa.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Malia Beach",
+      "lat": 35.2902,
+      "lng": 25.461,
+      "type": "beach",
+      "time": "16:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJU5-u_85kmhQRPlX6zNKE4ow",
+      "desc": "Long sandy beach on the north coast with a lively resort behind it. Good for a late afternoon swim before returning to Heraklion.",
+      "name_el": "Παραλία Μάλια",
+      "desc_el": "Μακριά αμμώδης παραλία στη βόρεια ακτή με ένα ζωντανό θέρετρο πίσω της. Καλή για ένα απογευματινό μπάνιο πριν την επιστροφή στο Ηράκλειο.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Crete%2C_Malia_beach_2019_b.jpg/1920px-Crete%2C_Malia_beach_2019_b.jpg",
+      "photo_credit": {
+       "artist": "Cayambe",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Crete,_Malia_beach_2019_b.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Evening in Heraklion old town",
+      "lat": 35.339,
+      "lng": 25.1371,
+      "type": "city",
+      "time": "20:00",
+      "wiki": null,
+      "desc": "Drive back to Heraklion (about 45 minutes on the new motorway from Malia). After a full day of mountain plateau and coast, the buzz of the old town is a welcome contrast.",
+      "name_el": "Βράδυ στην παλιά πόλη του Ηρακλείου",
+      "desc_el": "Επιστροφή στο Ηράκλειο (περίπου 45 λεπτά με τον νέο αυτοκινητόδρομο από τα Μάλια). Μετά μια γεμάτη μέρα στο οροπέδιο και στην ακτή, η ζωή της παλιάς πόλης είναι ευπρόσδεκτη αντίθεση."
+     }
+    ],
+    "title_el": "Οροπέδιο Λασιθίου & Δικταίο Άντρο",
+    "overnight_el": "Ηράκλειο"
+   },
+   {
+    "day": 4,
+    "title": "South to Matala — Phaistos & Red Beach",
+    "color": "#5A7A3A",
+    "km": 80,
+    "drive_mins": 90,
+    "overnight": "Matala",
+    "stops": [
+     {
+      "name": "Phaistos Palace",
+      "lat": 35.0517,
+      "lng": 24.8119,
+      "type": "museum",
+      "time": "09:30",
+      "wiki": "https://www.google.com/maps/search/Phaistos+Palace+Crete+Heraklion",
+      "desc": "Second-largest Minoan palace after Knossos, with the added bonus of extraordinary views over the Messara plain and the White Mountains. Far less crowded than Knossos.",
+      "name_el": "Ανάκτορο της Φαιστού",
+      "desc_el": "Το δεύτερο μεγαλύτερο Μινωικό ανάκτορο μετά την Κνωσό, με το επιπλέον προτέρημα της εξαιρετικής θέας στην πεδιάδα της Μεσαράς και τα Λευκά Όρη. Πολύ λιγότερο πολυσύχναστο από την Κνωσό.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Mount_Ida_chain_Messara_plain_from_Phaistos_Crete_Greece.jpg/1920px-Mount_Ida_chain_Messara_plain_from_Phaistos_Crete_Greece.jpg",
+      "photo_credit": {
+       "artist": "Jebulon",
+       "license": "CC0",
+       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Mount_Ida_chain_Messara_plain_from_Phaistos_Crete_Greece.jpg",
+       "source": "Wikimedia Commons"
+      },
+      "drive": "≈1 hr south of Heraklion",
+      "drive_el": "≈1 ώρα νότια του Ηρακλείου"
+     },
+     {
+      "name": "Matala Beach",
+      "lat": 34.994,
+      "lng": 24.7497,
+      "type": "beach",
+      "time": "12:00",
+      "wiki": "https://www.google.com/maps/search/Matala+Beach+Crete+Heraklion",
+      "desc": "Famous beach with Roman-era cave dwellings carved into the red cliffs — occupied by hippies in the 1960s and 70s, with Joni Mitchell among the residents. Sandy beach, good swimming.",
+      "name_el": "Παραλία Μάταλα",
+      "desc_el": "Διάσημη παραλία με ρωμαϊκές κατοικίες-σπηλιές σκαλισμένες στους κόκκινους βράχους — κατοικήθηκαν από χίπις τις δεκαετίες του 1960 και 1970, με τη Joni Mitchell ανάμεσα στους ένοικους. Αμμώδης παραλία, καλό μπάνιο."
+     },
+     {
+      "name": "Red Beach Matala",
+      "lat": 34.9896,
+      "lng": 24.7491,
+      "type": "beach",
+      "time": "14:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:EiZSZWQgQmVhY2ggVHJhaWwsIE1hdGFsYSA3MDIgMDAsIEdyZWVjZSIuKiwKFAoSCVlSgPWRIpsUEU8vJTUg4rbMEhQKEgl3LfVGjyKbFBHXwLQW0VR4SA",
+      "desc": "20-minute walk over the headland from Matala brings you to a dramatic red-cliffed nudist beach only accessible on foot. Worth the effort for solitude.",
+      "name_el": "Κόκκινη Παραλία Μάταλας",
+      "desc_el": "Πεζοπορία 20 λεπτών πάνω από το ακρωτήριο των Μάταλων σε φέρνει σε μια εντυπωσιακή κόκκινη παραλία γυμνιστών, προσβάσιμη μόνο με τα πόδια. Αξίζει τον κόπο για τη μοναξιά.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/4/40/Matala_-_Red_Beach_-_Hippo.jpg",
+      "photo_credit": {
+       "artist": "Andree Stephan",
+       "license": "CC BY 3.0",
+       "license_url": "https://creativecommons.org/licenses/by/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Matala_-_Red_Beach_-_Hippo.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Agia Galini",
+      "lat": 35.0963,
+      "lng": 24.6884,
+      "type": "harbour",
+      "time": "19:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ2T-carcQmxQRED-64iy9AAU",
+      "desc": "Picturesque fishing village 35 minutes west of Matala — the best sunset and seafood combo on this stretch of coast. Drive over for dinner at one of the harbour tavernas, then back to Matala for the night.",
+      "name_el": "Αγία Γαλήνη",
+      "desc_el": "Γραφικό ψαροχώρι 35 λεπτά δυτικά από τα Μάταλα — ο καλύτερος συνδυασμός ηλιοβασιλέματος και ψαρικών στην περιοχή. Πήγαινε για δείπνο σε ταβέρνα στο λιμάνι, και επιστροφή στα Μάταλα για διανυκτέρευση.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Agia_Galini_harbour_in_Crete%2C_Greece_004.jpg/1920px-Agia_Galini_harbour_in_Crete%2C_Greece_004.jpg",
+      "photo_credit": {
+       "artist": "Moonik",
+       "license": "CC BY-SA 3.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Agia_Galini_harbour_in_Crete,_Greece_004.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Late dinner in Matala",
+      "lat": 34.994,
+      "lng": 24.7497,
+      "type": "city",
+      "time": "21:00",
+      "wiki": null,
+      "desc": "Drive back to Matala (about 15 minutes from Agia Galini). The bohemian-era taverns are open late; the bay is quiet by this hour.",
+      "name_el": "Αργό δείπνο στα Μάταλα",
+      "desc_el": "Επιστροφή στα Μάταλα (περίπου 15 λεπτά από την Αγία Γαλήνη). Οι ταβέρνες με τη φήμη της εποχής των χίπις λειτουργούν μέχρι αργά· ο κόλπος είναι ήσυχος αυτή την ώρα."
+     }
+    ],
+    "title_el": "Νότια στα Μάταλα — Φαιστός & Κόκκινη Παραλία",
+    "overnight_el": "Μάταλα",
+    "nightlife": "Matala trades on its hippie past. The little beach town fills its handful of bars after dinner, and on warm nights the crowd drifts down to <a href=\"https://www.google.com/maps/search/Matala+Beach+Crete\" target=\"_blank\" rel=\"noopener\">Matala Beach</a> itself, under the famous caves. Low-key and barefoot — if you're here in late June, the free Matala Beach Festival takes it up several notches.",
+    "nightlife_el": "Τα Μάταλα ζουν με το χίπικο παρελθόν τους. Η μικρή παραλιακή πόλη γεμίζει τα λίγα μπαρ της μετά το φαγητό, και τις ζεστές νύχτες ο κόσμος κατεβαίνει στην ίδια την <a href=\"https://www.google.com/maps/search/Matala+Beach+Crete\" target=\"_blank\" rel=\"noopener\">Matala Beach</a>, κάτω από τις περίφημες σπηλιές. Χαλαρά και ξυπόλυτα — αν είσαι εδώ τέλη Ιουνίου, το δωρεάν Matala Beach Festival το ανεβάζει κατακόρυφα."
+   },
+   {
+    "day": 5,
+    "title": "Matala Morning, Gortyna & Departure",
+    "title_el": "Πρωινό στα Μάταλα, Γόρτυνα & Αναχώρηση",
+    "color": "#7B5EA7",
+    "km": 75,
+    "drive_mins": 90,
+    "overnight": null,
+    "overnight_el": null,
+    "stops": [
+     {
+      "name": "Matala Beach",
+      "name_el": "Παραλία Μάταλα",
+      "time": "08:30",
+      "type": "beach",
+      "desc": "Last morning swim before the crowds arrive — the cave-pocked cliff is at its best in the early light. Coffee on the beach, then north.",
+      "desc_el": "Τελευταίο πρωινό μπάνιο πριν έρθει ο κόσμος — οι βραχώδεις σπηλιές δείχνουν καλύτερα στο πρωινό φως. Καφές στην παραλία, και μετά βόρεια.",
+      "lat": 34.994,
+      "lng": 24.7497,
+      "wiki": "https://www.google.com/maps/search/Matala+Beach+Crete+Heraklion",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Matala_beach_cliff_Crete_Greece.jpg/1920px-Matala_beach_cliff_Crete_Greece.jpg",
+      "photo_credit": {
+       "artist": "Jebulon",
+       "license": "CC0",
+       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Matala_beach_cliff_Crete_Greece.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Gortyna",
+      "name_el": "Γόρτυνα",
+      "time": "11:00",
+      "type": "ruin",
+      "desc": "Roman capital of Crete and one of the great archaeological sites of the island. The Code of Gortyn, carved in stone here in the 5th century BC, is the oldest written law code in Europe. Less visited than Knossos, equally substantial — and right on the road back to Heraklion.",
+      "desc_el": "Η ρωμαϊκή πρωτεύουσα της Κρήτης και ένας από τους σημαντικότερους αρχαιολογικούς χώρους του νησιού. Ο Νόμος της Γόρτυνας, χαραγμένος σε πέτρα τον 5ο αιώνα π.Χ., είναι ο αρχαιότερος γραπτός νομικός κώδικας της Ευρώπης. Λιγότερο επισκέψιμη από την Κνωσό, εξίσου ουσιαστική — και στη διαδρομή της επιστροφής προς το Ηράκλειο.",
+      "lat": 35.0626,
+      "lng": 24.947,
+      "wiki": "https://www.google.com/maps/search/Gortyna+Crete+Heraklion",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/%CE%A0%CF%81%CE%B1%CE%B9%CF%84%CF%8E%CF%81%CE%B9%CE%BF_1714.jpg/1920px-%CE%A0%CF%81%CE%B1%CE%B9%CF%84%CF%8E%CF%81%CE%B9%CE%BF_1714.jpg",
+      "photo_credit": {
+       "artist": "C messier",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:%CE%A0%CF%81%CE%B1%CE%B9%CF%84%CF%8E%CF%81%CE%B9%CE%BF_1714.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Heraklion — Departure",
+      "name_el": "Ηράκλειο — Αναχώρηση",
+      "time": "16:00",
+      "type": "departure",
+      "desc": "Return to Heraklion for ferry or flight. The airport is east of the city; the port is in the centre. Final coffee at Lions Square if time allows.",
+      "desc_el": "Επιστροφή στο Ηράκλειο για πλοίο ή αεροπλάνο. Το αεροδρόμιο είναι ανατολικά της πόλης· το λιμάνι στο κέντρο. Τελευταίος καφές στην πλατεία Λεόντων αν προλαβαίνεις.",
+      "lat": 35.3395,
+      "lng": 25.1761,
+      "wiki": "https://www.google.com/maps/search/Heraklion+Crete+Heraklion",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg/1920px-Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg",
+      "photo_credit": {
+       "artist": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but ple...",
+       "license": "CC BY-SA 3.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Venetian_Fortress_in_Heraklion_Crete_NE_side.jpg",
+       "source": "Wikimedia Commons"
+      }
+     }
+    ],
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Vori / Heraklion",
+      "area_el": "Βώροι / Ηράκλειο",
+      "desc": "A last Cretan lunch. The village of Vori near Phaistos has honest tavernas, or eat back in Heraklion before your flight at <a href=\"https://www.google.com/maps/search/Peskesi+Heraklion\" target=\"_blank\" rel=\"noopener\">Peskesi</a> or seafront <a href=\"https://www.google.com/maps/search/Ippokampos+Heraklion\" target=\"_blank\" rel=\"noopener\">Ippokampos</a>.",
+      "desc_el": "Ένα τελευταίο κρητικό μεσημεριανό. Το χωριό Βώροι κοντά στη Φαιστό έχει τίμιες ταβέρνες, ή φάε πίσω στο Ηράκλειο πριν την πτήση στο <a href=\"https://www.google.com/maps/search/Peskesi+Heraklion\" target=\"_blank\" rel=\"noopener\">Peskesi</a> ή στο παραθαλάσσιο <a href=\"https://www.google.com/maps/search/Ippokampos+Heraklion\" target=\"_blank\" rel=\"noopener\">Ippokampos</a>.",
+      "after": "Gortyna"
+     }
+    ]
+   }
+  ],
+  "title_el": "Πρόγραμμα 5 Ημερών στο Ηράκλειο",
+  "subtitle_el": "Αρχαίοι Μινωίτες στην Κνωσό, τα οινοχώρια των Αρχανών, το ορεινό οροπέδιο του Λασιθίου και η εντυπωσιακή νότια ακτή στα Μάταλα — όλη η ποικιλία της κεντρικής Κρήτης."
+ },
+ "beaches": [
+  {
+   "name": "Matala Beach",
+   "wiki": "https://www.google.com/maps/search/Matala+Beach+Crete+Heraklion",
+   "rating": 5,
+   "type": "Fine sand",
+   "length": "600 m",
+   "depth": "Medium — good swimming, rocky cliffs on both sides",
+   "facing": "West-facing — warm afternoon sun, calm water",
+   "facilities": "Well organised: sunbeds, tavernas, cafes. The famous cave dwellings in the red cliffs are accessible daily.",
+   "desc": "One of the most atmospheric beaches in Greece — red sandstone cliffs riddled with Roman cave dwellings, where hippies including Joni Mitchell lived in the 1960s. Fine sand, warm water and a relaxed village immediately behind it.",
+   "commons": "Matala_beach_Crete.jpg",
+   "lat": 34.994,
+   "lng": 24.7497,
+   "name_el": "Παραλία Μάταλα",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Μέτριο — καλό μπάνιο, βραχώδεις όχθες και στις δύο πλευρές",
+   "facing_el": "Δυτική — ζεστός απογευματινός ήλιος, ήρεμα νερά",
+   "facilities_el": "Καλά οργανωμένη: ξαπλώστρες, ταβέρνες, καφέ. Οι διάσημες κατοικίες-σπηλιές στους κόκκινους βράχους είναι προσβάσιμες καθημερινά.",
+   "desc_el": "Μία από τις πιο ατμοσφαιρικές παραλίες της Ελλάδας — κόκκινοι αμμολιθικοί βράχοι γεμάτοι ρωμαϊκές σπηλιές-κατοικίες, όπου χίπις συμπεριλαμβανομένης της Joni Mitchell έζησαν τη δεκαετία του 1960. Λεπτή άμμος, ζεστά νερά και χαλαρή ατμόσφαιρα.",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Matala_beach_cliff_Crete_Greece.jpg/1920px-Matala_beach_cliff_Crete_Greece.jpg",
+   "photo_credit": {
+    "artist": "Jebulon",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Matala_beach_cliff_Crete_Greece.jpg",
+    "source": "Wikimedia Commons"
+   }
   },
-  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783274944/crete_heraklio_qbpjqr.jpg"
+  {
+   "name": "Voulisma Beach",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJfcqAt7qAkBQRs9HNH28FV0E",
+   "rating": 5,
+   "type": "Fine golden sand",
+   "length": "800 m",
+   "depth": "Shallow to medium — clean, clear water",
+   "facing": "Northeast-facing — sheltered by hills, very calm",
+   "facilities": "Fully organised: sunbeds, water sports, beach bar, taverna, parking.",
+   "desc": "Widely regarded as one of the best beaches in eastern Crete near Istro. Long, wide, golden sand with extraordinarily clear water. Less famous than the west coast beaches, which means far fewer crowds even in high summer.",
+   "commons": null,
+   "lat": 35.1253,
+   "lng": 25.7444,
+   "name_el": "Παραλία Βουλίσμα",
+   "type_el": "Λεπτή χρυσή άμμος",
+   "depth_el": "Ρηχά έως μέτρια — καθαρά, διαυγή νερά",
+   "facing_el": "Βορειοανατολική — προστατευμένη από λόφους, πολύ ήρεμη",
+   "facilities_el": "Πλήρως οργανωμένη: ξαπλώστρες, θαλάσσια σπορ, beach bar, ταβέρνα, parking.",
+   "desc_el": "Θεωρείται ευρέως μία από τις καλύτερες παραλίες της ανατολικής Κρήτης κοντά στο Ίστρο. Μακριά, πλατιά, χρυσή άμμος με εξαιρετικά καθαρά νερά. Λιγότερο διάσημη από τις δυτικές παραλίες, που σημαίνει πολύ λιγότερα πλήθη.",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Voulisma_Beach%2C_Istro%2C_Crete.JPG/1920px-Voulisma_Beach%2C_Istro%2C_Crete.JPG",
+   "photo_credit": {
+    "artist": "ArtemiyPavlov",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Voulisma_Beach,_Istro,_Crete.JPG",
+    "source": "Wikimedia Commons"
+   }
+  },
+  {
+   "name": "Malia Beach",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJU5-u_85kmhQRPlX6zNKE4ow",
+   "rating": 4,
+   "type": "Sand and fine pebble mix",
+   "length": "3 km",
+   "depth": "Shallow — very gradual entry, excellent for families",
+   "facing": "North-facing — protected from south winds, some afternoon wind",
+   "facilities": "Fully developed resort beach: every facility available. Lively but can feel crowded in peak season.",
+   "desc": "A long north-coast beach backed by the resort of Malia. Not the most beautiful setting but excellent for families — long, shallow, calm water. The Minoan Palace of Malia is just 3km away, making it a good base for combining beach and archaeology.",
+   "commons": null,
+   "lat": 35.2902,
+   "lng": 25.461,
+   "name_el": "Παραλία Μάλια",
+   "type_el": "Άμμος και λεπτό βότσαλο",
+   "depth_el": "Ρηχά — πολύ σταδιακή είσοδος, ιδανική για οικογένειες",
+   "facing_el": "Βόρεια — προστατευμένη από νότιους ανέμους, λίγος απογευματινός αέρας",
+   "facilities_el": "Πλήρως ανεπτυγμένη παραλία θερέτρου: κάθε υπηρεσία διαθέσιμη. Ζωντανή αλλά μπορεί να φαίνεται γεμάτη στην αιχμή της σεζόν.",
+   "desc_el": "Μια μακριά παραλία της βόρειας ακτής με το θέρετρο της Μάλιας πίσω της. Δεν είναι το ομορφότερο τοπίο αλλά εξαιρετική για οικογένειες — μακριά, ρηχά, ήρεμα νερά. Το Μινωικό Ανάκτορο της Μάλιας είναι μόλις 3 χλμ μακριά.",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Crete%2C_Malia_beach_2019_b.jpg/1920px-Crete%2C_Malia_beach_2019_b.jpg",
+   "photo_credit": {
+    "artist": "Cayambe",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Crete,_Malia_beach_2019_b.jpg",
+    "source": "Wikimedia Commons"
+   }
+  },
+  {
+   "name": "Agia Pelagia Beach",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJgz3ySZlRmhQRnSMSaVlLy_Y",
+   "rating": 4,
+   "type": "Fine sand",
+   "length": "400 m",
+   "depth": "Shallow — sheltered bay, no waves",
+   "facing": "North-facing — enclosed bay, calm at all times",
+   "facilities": "Good: sunbeds, beach bars, several hotels immediately behind beach.",
+   "desc": "A sheltered sandy cove in a natural harbour 20km west of Heraklion. One of the best organised and cleanest beaches near the capital, with calm water suitable for families and those wanting facilities close to the city.",
+   "commons": null,
+   "lat": 35.4057,
+   "lng": 25.0184,
+   "name_el": "Παραλία Αγίας Πελαγίας",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Ρηχά — προστατευμένος κόλπος, χωρίς κύματα",
+   "facing_el": "Βόρεια — κλειστός κόλπος, ήρεμα ανά πάσα στιγμή",
+   "facilities_el": "Καλές παροχές: ξαπλώστρες, beach bars, αρκετά ξενοδοχεία ακριβώς πίσω από την παραλία.",
+   "desc_el": "Ένας προστατευμένος αμμώδης κόλπος σε φυσικό λιμάνι 20 χλμ δυτικά του Ηρακλείου. Μία από τις καλύτερα οργανωμένες και πιο καθαρές παραλίες κοντά στην πρωτεύουσα, με ήρεμα νερά κατάλληλα για οικογένειες και όσους θέλουν υπηρεσίες.",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Agia_Pelagia%2C_Crete_%2836328987176%29.jpg/1920px-Agia_Pelagia%2C_Crete_%2836328987176%29.jpg",
+   "photo_credit": {
+    "artist": "Karel Macalik from Prague, Czech republic",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Agia_Pelagia,_Crete_(36328987176).jpg",
+    "source": "Wikimedia Commons"
+   }
+  },
+  {
+   "name": "Lendas Beach",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJabIFmJ7fmhQRV-Ok3dLVm4Q",
+   "rating": 4,
+   "type": "Pebble and sand mix",
+   "length": "500 m",
+   "depth": "Medium to deep — rocky seabed, excellent visibility",
+   "facing": "South-facing — sheltered from north winds, warm water",
+   "facilities": "Basic: small taverna, simple rooms to rent. Primitive and peaceful.",
+   "desc": "A remote south-coast beach reached via a dramatic mountain road near Cape Lithinon. Completely unspoiled, rarely visited by tourists, and strikingly beautiful. The area was an important ancient healing sanctuary. Worth the long drive for those seeking solitude.",
+   "commons": null,
+   "lat": 34.9301,
+   "lng": 24.9227,
+   "name_el": "Παραλία Λέντα",
+   "type_el": "Βότσαλο και άμμος",
+   "depth_el": "Μέτρια έως βαθιά — βραχώδης βυθός, εξαιρετική ορατότητα",
+   "facing_el": "Νότια — προστατευμένη από βόρειους ανέμους, ζεστά νερά",
+   "facilities_el": "Στοιχειώδεις παροχές: μικρή ταβέρνα, απλά δωμάτια προς ενοικίαση. Πρωτόγονη και ήσυχη.",
+   "desc_el": "Μια απομακρυσμένη παραλία της νότιας ακτής που προσεγγίζεται μέσω ενός εντυπωσιακού ορεινού δρόμου κοντά στο Ακρωτήριο Λίθινο. Εντελώς ανέγγιχτη, σπάνια επισκέπτεται από τουρίστες, και εκπληκτικά όμορφη. Η περιοχή ήταν ένα σημαντικό αρχαίο θεραπευτικό κέντρο.",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Dytiko_05.jpg/1920px-Dytiko_05.jpg",
+   "photo_credit": {
+    "artist": "Olaf Tausch",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Dytiko_05.jpg",
+    "source": "Wikimedia Commons"
+   }
+  }
+ ],
+ "name_el": "Κρήτη (Ηράκλειο)",
+ "name_accusative_el": "Κρήτη (Ηράκλειο)",
+ "name_genitive_el": "Κρήτης (Ηρακλείου)",
+ "gender_el": "f",
+ "subtitle_el": "Κνωσός, Μινωικός πολιτισμός και η καρδιά του μεγαλύτερου νησιού",
+ "intro_el": "Το Ηράκλειο είναι το σημείο όπου η εξαιρετική ιστορία της Κρήτης χτυπάει πιο δυνατά. Το Ανάκτορο της Κνωσού — ο μεγαλύτερος αρχαιολογικός χώρος της Εποχής του Χαλκού στην Ελλάδα — βρίσκεται μόλις 5 χλμ από το κέντρο της πόλης, και το Αρχαιολογικό Μουσείο Ηρακλείου φιλοξενεί την καλύτερη συλλογή Μινωικής τέχνης στον κόσμο. Η ίδια η πόλη υποτιμάται: μια ζωντανή κρητική πρωτεύουσα με εξαιρετικό φαγητό, βενετσιάνικο φρούριο και μία από τις πιο πολύβουες αγορές της Ελλάδας.",
+ "specialties": [
+  {
+   "name": "Dakos",
+   "name_el": "Ντάκος",
+   "desc": "Hard barley rusk topped with grated tomato, mizithra cheese, olive oil and oregano. The Cretan tapas. Found everywhere — best at no-frills village tavernas.",
+   "desc_el": "Σκληρό κριθαρένιο παξιμάδι με τριμμένη ντομάτα, μυζήθρα, ελαιόλαδο και ρίγανη. Το κρητικό μεζεδάκι. Παντού — καλύτερο σε απλές χωριάτικες ταβέρνες.",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/9/95/Koukouvagia.jpg",
+   "photo_credit": {
+    "artist": "Frente",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Koukouvagia.jpg",
+    "source": "Wikimedia Commons"
+   }
+  },
+  {
+   "name": "Cretan raki/tsikoudia",
+   "name_el": "Ρακή Κρήτης (τσικουδιά)",
+   "desc": "Pomace-distilled spirit served everywhere as a welcome and farewell. Each village has its own. Buy at any small shop or distillery; supermarket versions are inferior.",
+   "desc_el": "Απόσταγμα από στέμφυλα, σερβίρεται παντού ως υποδοχή και αποχαιρετισμός. Κάθε χωριό έχει το δικό του. Σε μικρά μαγαζιά ή αποστακτήρια· οι εκδοχές σούπερ μάρκετ είναι κατώτερες."
+  },
+  {
+   "name": "Graviera Kritis",
+   "name_el": "Γραβιέρα Κρήτης",
+   "desc": "PDO hard sheep's-milk cheese, the most famous Cretan cheese. Buy direct from village producers in Anogeia or Zaros for top quality.",
+   "desc_el": "Σκληρή πρόβεια γραβιέρα Π.Ο.Π., το πιο διάσημο κρητικό τυρί. Απευθείας από παραγωγούς σε Ανώγεια και Ζαρό για κορυφαία ποιότητα."
+  },
+  {
+   "name": "Bougatsa Kritis",
+   "name_el": "Μπουγάτσα Κρήτης",
+   "desc": "Cretan cheese pie eaten for breakfast — flaky pastry, fresh creamy mizithra, dusted with sugar and cinnamon. Kirkor in Heraklion's Lions Square is the institution.",
+   "desc_el": "Κρητική μπουγάτσα για πρωινό — τραγανή ζύμη, φρέσκια κρεμώδης μυζήθρα, με ζάχαρη και κανέλα. Ο Κίρκορ στην πλατεία Λιονταριών είναι ο θεσμός."
+  }
+ ],
+ "crafts": [
+  {
+   "name": "Cretan knife (machairi)",
+   "name_el": "Κρητικό μαχαίρι",
+   "desc": "Traditional shepherd's knife with engraved verse. Custom-made in Heraklion's old craft shops on Daedalou street. Genuine ones are expensive but heritage-grade.",
+   "desc_el": "Παραδοσιακό κρητικό μαχαίρι με χαραγμένη μαντινάδα. Παραγγελία σε παλιά εργαστήρια στην οδό Δαιδάλου του Ηρακλείου. Τα γνήσια είναι ακριβά αλλά κληρονομιά."
+  }
+ ],
+ "festivals": [
+  {
+   "name": "Wine festival of Daphnes",
+   "name_el": "Γιορτή Κρασιού Δαφνών",
+   "when": "Mid-August",
+   "when_el": "Μέσα Αυγούστου",
+   "desc": "Wine festival in the village of Daphnes, the heart of Heraklion's wine country. Tastings of local Liatiko, Vidiano, Mandilari. Dates vary; check the village municipality.",
+   "desc_el": "Γιορτή κρασιού στο χωριό Δαφνές, στην καρδιά του οινικού Ηρακλείου. Γευσιγνωσίες τοπικών Λιάτικου, Βιδιανού, Μανδηλαριάς. Οι ημερομηνίες αλλάζουν."
+  }
+ ],
+ "getting_there": {
+  "pills": [
+   "✈ Airport (intl)",
+   "⛵ Piraeus 8–9h overnight",
+   "€40–120"
+  ],
+  "pills_el": [
+   "✈ Αεροδρόμιο (διεθνές)",
+   "⛵ Πειραιάς 8–9h νυχτερινό",
+   "€40–120"
+  ],
+  "summary": "Largest airport in Crete — Aegean, Sky Express, Ryanair, EasyJet, charters. Overnight ferries from Piraeus (Minoan, Anek), evening departures, daily year-round. €40–70 deck, €70–120 cabin.",
+  "summary_el": "Το μεγαλύτερο αεροδρόμιο της Κρήτης — Aegean, Sky Express, Ryanair, EasyJet, charters. Νυχτερινά πλοία από Πειραιά (Minoan, Anek), βραδινές αναχωρήσεις, καθημερινά όλο τον χρόνο. €40–70 κατάστρωμα, €70–120 καμπίνα.",
+  "tip": "Cabin recommended on the overnight — budget around the same as a flight, sleep there.",
+  "tip_el": "Η καμπίνα συστήνεται στο νυχτερινό — κοστίζει όσο πτήση, αλλά κοιμάσαι εκεί."
+ },
+ "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783274944/crete_heraklio_qbpjqr.jpg"
 }

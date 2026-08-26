@@ -1,371 +1,371 @@
 {
-  "key": "spetses",
-  "name": "Spetses",
-  "subtitle": "The horse-drawn Saronic island — Bouboulina, mansions and pine-fringed beaches",
-  "intro": "Spetses is the elegant Saronic island — no cars in the old town, horse-drawn carriages instead of taxis, and a cluster of 19th-century mansions around the harbour built by sea captains made wealthy in the Greek War of Independence. Laskarina Bouboulina, the female admiral who led the Greek fleet against the Ottomans, was born here. The island is almost entirely covered in Aleppo pines running down to the coast.",
-  "when_to_visit": {
-    "summary": "Spetses is the dressy Saronic — old yachting families, the Anargyrios School, horse-drawn carriages instead of cars in the chora. Open year-round but the action is May-October. The Armata reenactment on the second weekend of September (the 1822 sea battle) is the island's biggest event. Easter is local but lovely.",
-    "summary_el": "Οι Σπέτσες είναι ο κομψός Σαρωνικός — παλιές οικογένειες της ιστιοπλοΐας, η Σχολή Αναργυρείου, άμαξες με άλογα αντί για αυτοκίνητα στη Χώρα. Ανοιχτές όλο τον χρόνο, αλλά η κίνηση είναι Μάιο–Οκτώβριο. Η αναπαράσταση των Αρμάτων το δεύτερο σαββατοκύριακο του Σεπτεμβρίου (η ναυμαχία του 1822) είναι το μεγαλύτερο γεγονός του νησιού. Το Πάσχα είναι τοπικό αλλά υπέροχο.",
-    "months": [
-      {
-        "tag": "ok",
-        "why": "Mild, weekend",
-        "why_el": "Ήπιο, ΣΚ Αθηναίοι"
-      },
-      {
-        "tag": "ok",
-        "why": "Mild, walks",
-        "why_el": "Ήπιο, σχολή ανοιχτή"
-      },
-      {
-        "tag": "great",
-        "why": "Wildflowers, calm",
-        "why_el": "Αγριολούλουδα"
-      },
-      {
-        "tag": "great",
-        "why": "Easter, mild",
-        "why_el": "Πάσχα, ζωντανεύει"
-      },
-      {
-        "tag": "perfect",
-        "why": "Sea warming, mellow",
-        "why_el": "Ζεσταίνει σιγά σιγά"
-      },
-      {
-        "tag": "perfect",
-        "why": "Long days, ideal",
-        "why_el": "Ολοήμερο φως"
-      },
-      {
-        "tag": "ok",
-        "why": "Hot, weekend yachts",
-        "why_el": "Ζέστη, γιοτ ΣΚ"
-      },
-      {
-        "tag": "avoid",
-        "why": "Peak yachts, chaotic",
-        "why_el": "Κορύφωση γιοτ"
-      },
-      {
-        "tag": "perfect",
-        "why": "Best — Armata",
-        "why_el": "Αρμάτα, ζεστά"
-      },
-      {
-        "tag": "great",
-        "why": "Sea warm, evenings",
-        "why_el": "Τελευταία μπάνια"
-      },
-      {
-        "tag": "great",
-        "why": "Mild, alive weekends",
-        "why_el": "Ήπιο, ΣΚ"
-      },
-      {
-        "tag": "ok",
-        "why": "Mild, weekends",
-        "why_el": "Ήπιο, ΣΚ"
-      }
-    ]
-  },
-  "itinerary": {
-    "title": "2-Day Spetses Itinerary",
-    "subtitle": "Dapia harbour, Bouboulina's house, the coastal path around the island and the best pine-fringed beaches.",
-    "days": [
-      {
-        "day": 1,
-        "title": "Dapia Harbour & Mansions",
-        "color": "#1B4F8A",
-        "km": 8,
-        "drive_mins": 15,
-        "overnight": "Spetses Town",
-        "stops": [
-          {
-            "name": "Dapia Harbour",
-            "lat": 37.2683,
-            "lng": 23.155,
-            "type": "harbour",
-            "time": "09:00",
-            "wiki": "https://www.google.com/maps/search/Dapia+Harbour+Spetses",
-            "desc": "The main harbour — cannons pointing out to sea and horse-drawn carriages at the quayside. No cars in the old town. Have coffee at one of the harbour cafés.",
-            "name_el": "Λιμάνι Ντάπια",
-            "desc_el": "Το κύριο λιμάνι — κανόνια προς τη θάλασσα και άμαξες στην προκυμαία. Χωρίς αυτοκίνητα στην παλιά πόλη. Πάρε καφέ σε ένα από τα καφέ του λιμανιού.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/20190512_203_spetses.jpg/1920px-20190512_203_spetses.jpg",
-            "photo_credit": {
-              "artist": "Jean Housen",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:20190512_203_spetses.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Bouboulina's Museum",
-            "lat": 37.2717,
-            "lng": 23.1567,
-            "type": "museum",
-            "time": "10:00",
-            "wiki": "https://www.google.com/maps/search/Bouboulina's+Museum+Spetses",
-            "desc": "The mansion of Laskarina Bouboulina, the female admiral who commanded a Greek fleet in the War of Independence. Guided tours include her remarkable personal story. One of the most interesting small museums in Greece.",
-            "name_el": "Μουσείο Μπουμπουλίνας",
-            "desc_el": "Το αρχοντικό της Λασκαρίνας Μπουμπουλίνας, της γυναίκας ναυάρχου που διοικούσε ελληνικό στόλο στην Επανάσταση. Οι ξεναγήσεις περιλαμβάνουν την αξιοσημείωτη προσωπική της ιστορία. Ένα από τα πιο ενδιαφέροντα μικρά μουσεία της Ελλάδας.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Laskarina_Bouboulina.jpg",
-            "photo_credit": {
-              "artist": "Donald1972",
-              "license": "CC0",
-              "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Laskarina_Bouboulina.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Spetses Mexis Museum",
-            "lat": 37.2667,
-            "lng": 23.1533,
-            "type": "museum",
-            "time": "11:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJucsKy_y8nxQR5NXIbq_AFxw",
-            "desc": "The Archaeological Museum in the mansion of Hadjigiannis Mexis, the first governor of Spetses. Local archaeology, shipping history and the preserved head of Bouboulina.",
-            "name_el": "Μουσείο Μέξη Σπετσών",
-            "desc_el": "Το Αρχαιολογικό Μουσείο στο αρχοντικό του Χατζηγιάννη Μέξη, του πρώτου κυβερνήτη των Σπετσών. Τοπική αρχαιολογία, ναυτική ιστορία και το διατηρημένο κρανίο της Μπουμπουλίνας."
-          },
-          {
-            "name": "Agia Marina Beach",
-            "lat": 37.2526806,
-            "lng": 23.1633658,
-            "type": "beach",
-            "time": "14:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJkyN6Pum8nxQRCzoECJ1N9o8",
-            "desc": "The closest beach to the town — a short pebble beach with good facilities and very clear water. 20 minutes walk or 5 minutes by horse-drawn carriage.",
-            "name_el": "Παραλία Αγίας Μαρίνας",
-            "desc_el": "Η πιο κοντινή παραλία στην πόλη — μια σύντομη βότσαλη παραλία με καλές ανέσεις και πολύ διαυγή νερά. 20 λεπτά με τα πόδια ή 5 λεπτά με άμαξα."
-          }
-        ],
-        "title_el": "Λιμάνι Ντάπια & Αρχοντικά",
-        "overnight_el": "Χώρα Σπετσών",
-        "nightlife": "No cars, so the night is a stroll. It starts around the <a href=\"https://www.google.com/maps/search/Dapia+Spetses\" target=\"_blank\" rel=\"noopener\">Dapia</a> harbour and the lanes toward Agios Mamas — <a href=\"https://www.google.com/maps/search/Bikini+Cocktail+Bar+Spetses\" target=\"_blank\" rel=\"noopener\">Bikini Cocktail Bar</a> near the old harbour for creative cocktails, <a href=\"https://www.google.com/maps/search/Spetsa+Bar+Spetses\" target=\"_blank\" rel=\"noopener\">Spetsa Bar</a> for 60s–70s vinyl and a wall of whiskies. Refined and low-key rather than loud.",
-        "nightlife_el": "Χωρίς αυτοκίνητα, η βραδιά είναι μια βόλτα. Ξεκινάει γύρω από το λιμάνι της <a href=\"https://www.google.com/maps/search/Dapia+Spetses\" target=\"_blank\" rel=\"noopener\">Ντάπιας</a> και τα σοκάκια προς τον Άγιο Μάμα — <a href=\"https://www.google.com/maps/search/Bikini+Cocktail+Bar+Spetses\" target=\"_blank\" rel=\"noopener\">Bikini Cocktail Bar</a> κοντά στο παλιό λιμάνι για δημιουργικά κοκτέιλ, <a href=\"https://www.google.com/maps/search/Spetsa+Bar+Spetses\" target=\"_blank\" rel=\"noopener\">Spetsa Bar</a> για βινύλια των 60s–70s και έναν τοίχο από ουίσκι. Εκλεπτυσμένα και χαλαρά, όχι δυνατά.",
-        "food": [
-          {
-            "meal": "Dinner",
-            "meal_el": "Δείπνο",
-            "area": "Old Harbour",
-            "area_el": "Παλιό Λιμάνι",
-            "desc": "<a href=\"https://www.google.com/maps/search/Patralis+Spetses\" target=\"_blank\" rel=\"noopener\">Patralis</a> on Kounoupitsa has served seafood for 80+ years from its waterside veranda; <a href=\"https://www.google.com/maps/search/Orloff+Spetses\" target=\"_blank\" rel=\"noopener\">Orloff</a> in the Old Harbour (an 1802 building) is the upscale table — whole fish deboned at your table.",
-            "desc_el": "Ο <a href=\"https://www.google.com/maps/search/Patralis+Spetses\" target=\"_blank\" rel=\"noopener\">Πατραλής</a> στην Κουνουπίτσα σερβίρει θαλασσινά πάνω από 80 χρόνια από τη βεράντα του δίπλα στο νερό· το <a href=\"https://www.google.com/maps/search/Orloff+Spetses\" target=\"_blank\" rel=\"noopener\">Orloff</a> στο Παλιό Λιμάνι (κτίριο του 1802) είναι το αναβαθμισμένο τραπέζι — ολόκληρο ψάρι που το καθαρίζουν στο τραπέζι σου.",
-            "after": "Agia Marina Beach"
-          }
-        ]
-      },
-      {
-        "day": 2,
-        "title": "The Coastal Loop",
-        "color": "#C0522A",
-        "km": 28,
-        "drive_mins": 60,
-        "overnight": null,
-        "stops": [
-          {
-            "name": "Anargyrios School",
-            "lat": 37.2733305,
-            "lng": 23.1442031,
-            "type": "museum",
-            "time": "09:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ82s1cqq9nxQRsSzCrS8GtuM",
-            "desc": "The grand neoclassical boarding school where John Fowles taught in the 1950s — the setting for his novel The Magus. The building is visible from the coast road, a beautiful sight.",
-            "name_el": "Σχολή Αναργυρίου",
-            "desc_el": "Το μεγαλοπρεπές νεοκλασικό οικοτροφείο όπου δίδαξε ο Τζον Φάουλς τη δεκαετία του 1950 — το σκηνικό του μυθιστορήματος του \"Ο Μάγος\". Το κτίριο είναι ορατό από τον παραλιακό δρόμο, όμορφο θέαμα.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Spetses_7.JPG/1920px-Spetses_7.JPG",
-            "photo_credit": {
-              "artist": "Qweasdqwe",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Spetses_7.JPG",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Zogeria Beach",
-            "lat": 37.2776185,
-            "lng": 23.1000828,
-            "type": "beach",
-            "time": "11:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJsw1XGiu8nxQRJX4Au8BRdzg",
-            "desc": "The finest beach on Spetses — a pine-fringed pebble bay on the west coast with extraordinary water clarity. Accessible by the coastal road bus, water taxi or bicycle. One of the best pine-forest beaches in the Saronic.",
-            "name_el": "Παραλία Ζογεριάς",
-            "desc_el": "Η καλύτερη παραλία των Σπετσών — ένας βότσαλος κόλπος με πεύκα στη δυτική ακτή με εξαιρετική διαύγεια νερών. Προσβάσιμη με το παραλιακό λεωφορείο, θαλάσσιο ταξί ή ποδήλατο. Μία από τις καλύτερες παραλίες πευκοδάσους του Σαρωνικού.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Myrtoan_Sea_at_Zogeria_Beach_on_Spetses%2C_Greece_%2848759815133%29.jpg/1920px-Myrtoan_Sea_at_Zogeria_Beach_on_Spetses%2C_Greece_%2848759815133%29.jpg",
-            "photo_credit": {
-              "artist": "dronepicr",
-              "license": "CC BY 2.0",
-              "license_url": "https://creativecommons.org/licenses/by/2.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Myrtoan_Sea_at_Zogeria_Beach_on_Spetses,_Greece_(48759815133).jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Xylokeriza Beach",
-            "lat": 37.2353,
-            "lng": 23.145,
-            "type": "beach",
-            "time": "13:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJQUPdmQy9nxQRw7yizDSs9C8",
-            "desc": "Long pine-backed pebble beach on the south coast — calm, clear water and a good taverna. Less developed than Agia Marina.",
-            "name_el": "Παραλία Ξυλοκερίζας",
-            "desc_el": "Μακρά βότσαλη παραλία με πεύκα στη νότια ακτή — ήρεμα, διαυγή νερά και καλή ταβέρνα. Λιγότερο ανεπτυγμένη από την Αγία Μαρίνα."
-          },
-          {
-            "name": "Spetses Town — Departure",
-            "lat": 37.2683,
-            "lng": 23.155,
-            "type": "harbour",
-            "time": "16:30",
-            "wiki": null,
-            "desc": "Ferry to Piraeus, Hydra or the Argolid coast (Kosta, 10 minutes across the strait).",
-            "name_el": "Πόλη Σπετσών — Αναχώρηση",
-            "desc_el": "Πλοίο προς Πειραιά, Ύδρα ή τις ακτές της Αργολίδας (Κόστα, 10 λεπτά απέναντι από το στενό)."
-          }
-        ],
-        "title_el": "Ο Παράκτιος Γύρος"
-      }
-    ],
-    "title_el": "Πρόγραμμα 2 Ημερών στις Σπέτσες",
-    "subtitle_el": "Λιμάνι Ντάπια, το σπίτι της Μπουμπουλίνας, το παράκτιο μονοπάτι γύρω από το νησί και οι καλύτερες πευκόφυτες παραλίες."
-  },
-  "beaches": [
-    {
-      "name": "Zogeria Beach",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJsw1XGiu8nxQRJX4Au8BRdzg",
-      "rating": 5,
-      "type": "Pebble",
-      "length": "200 m",
-      "depth": "Medium — crystal clear Aegean water",
-      "facing": "West-facing — sheltered bay",
-      "facilities": "Basic: one small taverna. Pine trees provide natural shade.",
-      "desc": "The finest beach on Spetses — a pine-fringed pebble bay on the west coast with extraordinary water clarity. The setting is unusually natural and unspoiled for the Saronic. Accessible by the island bus, water taxi or bicycle along the coastal road.",
-      "commons": null,
-      "lat": 37.2776185,
-      "lng": 23.1000828,
-      "name_el": "Παραλία Ζογεριάς",
-      "desc_el": "Η καλύτερη παραλία των Σπετσών — ένας βότσαλος κόλπος με πεύκα στη δυτική ακτή με εξαιρετική διαύγεια νερών. Το σκηνικό είναι ασυνήθιστα φυσικό και ανέγγιχτο για τον Σαρωνικό. Προσβάσιμη με το λεωφορείο του νησιού, θαλάσσιο ταξί ή ποδήλατο στον παραλιακό δρόμο.",
-      "type_el": "Βότσαλο",
-      "depth_el": "Μέτρια — κρυστάλλινα αιγαιοπελαγίτικα νερά",
-      "facing_el": "Δυτικό προσανατολισμό — προστατευμένος κόλπος",
-      "facilities_el": "Βασικές: μία μικρή ταβέρνα. Τα πεύκα παρέχουν φυσική σκιά.",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Myrtoan_Sea_at_Zogeria_Beach_on_Spetses%2C_Greece_%2848759815133%29.jpg/1920px-Myrtoan_Sea_at_Zogeria_Beach_on_Spetses%2C_Greece_%2848759815133%29.jpg",
+ "key": "spetses",
+ "name": "Spetses",
+ "subtitle": "The horse-drawn Saronic island — Bouboulina, mansions and pine-fringed beaches",
+ "intro": "Spetses is the elegant Saronic island — no cars in the old town, horse-drawn carriages instead of taxis, and a cluster of 19th-century mansions around the harbour built by sea captains made wealthy in the Greek War of Independence. Laskarina Bouboulina, the female admiral who led the Greek fleet against the Ottomans, was born here. The island is almost entirely covered in Aleppo pines running down to the coast.",
+ "when_to_visit": {
+  "summary": "Spetses is the dressy Saronic — old yachting families, the Anargyrios School, horse-drawn carriages instead of cars in the chora. Open year-round but the action is May-October. The Armata reenactment on the second weekend of September (the 1822 sea battle) is the island's biggest event. Easter is local but lovely.",
+  "summary_el": "Οι Σπέτσες είναι ο κομψός Σαρωνικός — παλιές οικογένειες της ιστιοπλοΐας, η Σχολή Αναργυρείου, άμαξες με άλογα αντί για αυτοκίνητα στη Χώρα. Ανοιχτές όλο τον χρόνο, αλλά η κίνηση είναι Μάιο–Οκτώβριο. Η αναπαράσταση των Αρμάτων το δεύτερο σαββατοκύριακο του Σεπτεμβρίου (η ναυμαχία του 1822) είναι το μεγαλύτερο γεγονός του νησιού. Το Πάσχα είναι τοπικό αλλά υπέροχο.",
+  "months": [
+   {
+    "tag": "ok",
+    "why": "Mild, weekend",
+    "why_el": "Ήπιο, ΣΚ Αθηναίοι"
+   },
+   {
+    "tag": "ok",
+    "why": "Mild, walks",
+    "why_el": "Ήπιο, σχολή ανοιχτή"
+   },
+   {
+    "tag": "great",
+    "why": "Wildflowers, calm",
+    "why_el": "Αγριολούλουδα"
+   },
+   {
+    "tag": "great",
+    "why": "Easter, mild",
+    "why_el": "Πάσχα, ζωντανεύει"
+   },
+   {
+    "tag": "perfect",
+    "why": "Sea warming, mellow",
+    "why_el": "Ζεσταίνει σιγά σιγά"
+   },
+   {
+    "tag": "perfect",
+    "why": "Long days, ideal",
+    "why_el": "Ολοήμερο φως"
+   },
+   {
+    "tag": "ok",
+    "why": "Hot, weekend yachts",
+    "why_el": "Ζέστη, γιοτ ΣΚ"
+   },
+   {
+    "tag": "avoid",
+    "why": "Peak yachts, chaotic",
+    "why_el": "Κορύφωση γιοτ"
+   },
+   {
+    "tag": "perfect",
+    "why": "Best — Armata",
+    "why_el": "Αρμάτα, ζεστά"
+   },
+   {
+    "tag": "great",
+    "why": "Sea warm, evenings",
+    "why_el": "Τελευταία μπάνια"
+   },
+   {
+    "tag": "great",
+    "why": "Mild, alive weekends",
+    "why_el": "Ήπιο, ΣΚ"
+   },
+   {
+    "tag": "ok",
+    "why": "Mild, weekends",
+    "why_el": "Ήπιο, ΣΚ"
+   }
+  ]
+ },
+ "itinerary": {
+  "title": "2-Day Spetses Itinerary",
+  "subtitle": "Dapia harbour, Bouboulina's house, the coastal path around the island and the best pine-fringed beaches.",
+  "days": [
+   {
+    "day": 1,
+    "title": "Dapia Harbour & Mansions",
+    "color": "#1B4F8A",
+    "km": 8,
+    "drive_mins": 15,
+    "overnight": "Spetses Town",
+    "stops": [
+     {
+      "name": "Dapia Harbour",
+      "lat": 37.2683,
+      "lng": 23.155,
+      "type": "harbour",
+      "time": "09:00",
+      "wiki": "https://www.google.com/maps/search/Dapia+Harbour+Spetses",
+      "desc": "The main harbour — cannons pointing out to sea and horse-drawn carriages at the quayside. No cars in the old town. Have coffee at one of the harbour cafés.",
+      "name_el": "Λιμάνι Ντάπια",
+      "desc_el": "Το κύριο λιμάνι — κανόνια προς τη θάλασσα και άμαξες στην προκυμαία. Χωρίς αυτοκίνητα στην παλιά πόλη. Πάρε καφέ σε ένα από τα καφέ του λιμανιού.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/20190512_203_spetses.jpg/1920px-20190512_203_spetses.jpg",
       "photo_credit": {
-        "artist": "dronepicr",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Myrtoan_Sea_at_Zogeria_Beach_on_Spetses,_Greece_(48759815133).jpg",
-        "source": "Wikimedia Commons"
+       "artist": "Jean Housen",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:20190512_203_spetses.jpg",
+       "source": "Wikimedia Commons"
       }
-    },
-    {
-      "name": "Xylokeriza Beach",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJQUPdmQy9nxQRw7yizDSs9C8",
-      "rating": 4,
-      "type": "Pebble and fine sand",
-      "length": "400 m",
-      "depth": "Shallow — calm water",
-      "facing": "South-facing — sheltered, pine shade",
-      "facilities": "Good: sunbeds, taverna, easy bicycle access from the town.",
-      "desc": "A long pine-backed beach on the south coast — one of the best for spending a full day. Pine trees run to the water's edge and the small taverna has outstanding grilled fish.",
-      "commons": null,
-      "lat": 37.2353,
-      "lng": 23.145,
-      "name_el": "Παραλία Ξυλοκερίζας",
-      "desc_el": "Μια μακρά παραλία με πεύκα στη νότια ακτή — από τις καλύτερες για να περάσεις ολόκληρη μέρα. Τα πεύκα φτάνουν μέχρι το νερό και η μικρή ταβέρνα έχει εξαιρετικό ψητό ψάρι.",
-      "type_el": "Βότσαλο και λεπτή άμμος",
-      "depth_el": "Ρηχά — ήρεμα νερά",
-      "facing_el": "Νότιο προσανατολισμό — προστατευμένη, σκιά πεύκου",
-      "facilities_el": "Καλές: ξαπλώστρες, ταβέρνα, εύκολη πρόσβαση με ποδήλατο από την πόλη."
-    },
-    {
+     },
+     {
+      "name": "Bouboulina's Museum",
+      "lat": 37.2717,
+      "lng": 23.1567,
+      "type": "museum",
+      "time": "10:00",
+      "wiki": "https://www.google.com/maps/search/Bouboulina's+Museum+Spetses",
+      "desc": "The mansion of Laskarina Bouboulina, the female admiral who commanded a Greek fleet in the War of Independence. Guided tours include her remarkable personal story. One of the most interesting small museums in Greece.",
+      "name_el": "Μουσείο Μπουμπουλίνας",
+      "desc_el": "Το αρχοντικό της Λασκαρίνας Μπουμπουλίνας, της γυναίκας ναυάρχου που διοικούσε ελληνικό στόλο στην Επανάσταση. Οι ξεναγήσεις περιλαμβάνουν την αξιοσημείωτη προσωπική της ιστορία. Ένα από τα πιο ενδιαφέροντα μικρά μουσεία της Ελλάδας.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Laskarina_Bouboulina.jpg",
+      "photo_credit": {
+       "artist": "Donald1972",
+       "license": "CC0",
+       "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Laskarina_Bouboulina.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Spetses Mexis Museum",
+      "lat": 37.2667,
+      "lng": 23.1533,
+      "type": "museum",
+      "time": "11:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJucsKy_y8nxQR5NXIbq_AFxw",
+      "desc": "The Archaeological Museum in the mansion of Hadjigiannis Mexis, the first governor of Spetses. Local archaeology, shipping history and the preserved head of Bouboulina.",
+      "name_el": "Μουσείο Μέξη Σπετσών",
+      "desc_el": "Το Αρχαιολογικό Μουσείο στο αρχοντικό του Χατζηγιάννη Μέξη, του πρώτου κυβερνήτη των Σπετσών. Τοπική αρχαιολογία, ναυτική ιστορία και το διατηρημένο κρανίο της Μπουμπουλίνας."
+     },
+     {
       "name": "Agia Marina Beach",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJkyN6Pum8nxQRCzoECJ1N9o8",
-      "rating": 4,
-      "type": "Fine pebble",
-      "length": "150 m",
-      "depth": "Shallow — good swimming",
-      "facing": "East-facing — sheltered bay",
-      "facilities": "Good: sunbeds, beach bar, easy access from town.",
-      "desc": "The town beach — closest to Spetses Town and most convenient. 20 minutes walk or 5 by horse-drawn carriage. Clear water and good facilities.",
-      "commons": null,
       "lat": 37.2526806,
       "lng": 23.1633658,
+      "type": "beach",
+      "time": "14:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJkyN6Pum8nxQRCzoECJ1N9o8",
+      "desc": "The closest beach to the town — a short pebble beach with good facilities and very clear water. 20 minutes walk or 5 minutes by horse-drawn carriage.",
       "name_el": "Παραλία Αγίας Μαρίνας",
-      "desc_el": "Η παραλία της πόλης — η πιο κοντινή στην Πόλη των Σπετσών και η πιο βολική. 20 λεπτά με τα πόδια ή 5 με άμαξα. Διαυγή νερά και καλές ανέσεις.",
-      "type_el": "Λεπτό βότσαλο",
-      "depth_el": "Ρηχά — καλή κολύμβηση",
-      "facing_el": "Ανατολικό προσανατολισμό — προστατευμένος κόλπος",
-      "facilities_el": "Καλές: ξαπλώστρες, beach bar, εύκολη πρόσβαση από την πόλη."
-    }
-  ],
-  "name_el": "Σπέτσες",
-  "name_accusative_el": "Σπέτσες",
-  "name_genitive_el": "Σπετσών",
-  "gender_el": "plf",
-  "subtitle_el": "Το Σαρωνικό νησί των αμαξών — Μπουμπουλίνα, αρχοντικά και παραλίες με πεύκα",
-  "intro_el": "Οι Σπέτσες είναι το κομψό νησί του Σαρωνικού — χωρίς αυτοκίνητα στην παλιά πόλη, άμαξες αντί για ταξί, και ένα σύμπλεγμα αρχοντικών του 19ου αιώνα γύρω από το λιμάνι χτισμένα από πλοίαρχους που πλούτισαν στην Ελληνική Επανάσταση. Η Λασκαρίνα Μπουμπουλίνα, η γυναίκα ναύαρχος που ηγήθηκε του ελληνικού στόλου κατά των Οθωμανών, γεννήθηκε εδώ. Το νησί είναι σχεδόν εξ ολοκλήρου καλυμμένο από χαλέπιο πεύκο που κατεβαίνει μέχρι την ακτή.",
-  "suited_for": {
-    "good": [
-      "Travellers who like a car-free old town with horse-drawn carriages and grand sea-captain mansions",
-      "Couples and families after pine-fringed beaches a quick catamaran from Athens",
-      "Anyone combining island time with a Peloponnese road trip — the Kosta shuttle is 10 minutes"
+      "desc_el": "Η πιο κοντινή παραλία στην πόλη — μια σύντομη βότσαλη παραλία με καλές ανέσεις και πολύ διαυγή νερά. 20 λεπτά με τα πόδια ή 5 λεπτά με άμαξα."
+     }
     ],
-    "good_el": [
-      "Ταξιδιώτες που τους αρέσει μια παλιά πόλη χωρίς αυτοκίνητα, με άμαξες και αρχοντικά καπεταναίων",
-      "Ζευγάρια και οικογένειες που θέλουν πευκόφυτες παραλίες με γρήγορο καταμαράν από την Αθήνα",
-      "Όσους συνδυάζουν το νησί με ταξίδι στην Πελοπόννησο — το πέρασμα από την Κόστα είναι 10 λεπτά"
-    ],
-    "skip": [
-      "If you want a remote, undiscovered island — Spetses is polished and popular",
-      "If a quiet budget trip is the goal; the island leans upmarket"
-    ],
-    "skip_el": [
-      "Αν θέλεις ένα απομονωμένο, ανακάλυπτο νησί — οι Σπέτσες είναι γυαλισμένες και δημοφιλείς",
-      "Αν στόχος είναι ένα ήσυχο, οικονομικό ταξίδι· το νησί κλίνει προς το ακριβό"
+    "title_el": "Λιμάνι Ντάπια & Αρχοντικά",
+    "overnight_el": "Χώρα Σπετσών",
+    "nightlife": "No cars, so the night is a stroll. It starts around the <a href=\"https://www.google.com/maps/search/Dapia+Spetses\" target=\"_blank\" rel=\"noopener\">Dapia</a> harbour and the lanes toward Agios Mamas — <a href=\"https://www.google.com/maps/search/Bikini+Cocktail+Bar+Spetses\" target=\"_blank\" rel=\"noopener\">Bikini Cocktail Bar</a> near the old harbour for creative cocktails, <a href=\"https://www.google.com/maps/search/Spetsa+Bar+Spetses\" target=\"_blank\" rel=\"noopener\">Spetsa Bar</a> for 60s–70s vinyl and a wall of whiskies. Refined and low-key rather than loud.",
+    "nightlife_el": "Χωρίς αυτοκίνητα, η βραδιά είναι μια βόλτα. Ξεκινάει γύρω από το λιμάνι της <a href=\"https://www.google.com/maps/search/Dapia+Spetses\" target=\"_blank\" rel=\"noopener\">Ντάπιας</a> και τα σοκάκια προς τον Άγιο Μάμα — <a href=\"https://www.google.com/maps/search/Bikini+Cocktail+Bar+Spetses\" target=\"_blank\" rel=\"noopener\">Bikini Cocktail Bar</a> κοντά στο παλιό λιμάνι για δημιουργικά κοκτέιλ, <a href=\"https://www.google.com/maps/search/Spetsa+Bar+Spetses\" target=\"_blank\" rel=\"noopener\">Spetsa Bar</a> για βινύλια των 60s–70s και έναν τοίχο από ουίσκι. Εκλεπτυσμένα και χαλαρά, όχι δυνατά.",
+    "food": [
+     {
+      "meal": "Dinner",
+      "meal_el": "Δείπνο",
+      "area": "Old Harbour",
+      "area_el": "Παλιό Λιμάνι",
+      "desc": "<a href=\"https://www.google.com/maps/search/Patralis+Spetses\" target=\"_blank\" rel=\"noopener\">Patralis</a> on Kounoupitsa has served seafood for 80+ years from its waterside veranda; <a href=\"https://www.google.com/maps/search/Orloff+Spetses\" target=\"_blank\" rel=\"noopener\">Orloff</a> in the Old Harbour (an 1802 building) is the upscale table — whole fish deboned at your table.",
+      "desc_el": "Ο <a href=\"https://www.google.com/maps/search/Patralis+Spetses\" target=\"_blank\" rel=\"noopener\">Πατραλής</a> στην Κουνουπίτσα σερβίρει θαλασσινά πάνω από 80 χρόνια από τη βεράντα του δίπλα στο νερό· το <a href=\"https://www.google.com/maps/search/Orloff+Spetses\" target=\"_blank\" rel=\"noopener\">Orloff</a> στο Παλιό Λιμάνι (κτίριο του 1802) είναι το αναβαθμισμένο τραπέζι — ολόκληρο ψάρι που το καθαρίζουν στο τραπέζι σου.",
+      "after": "Agia Marina Beach"
+     }
     ]
-  },
-  "specialties": [
-    {
-      "name": "Spetsiota fish",
-      "name_el": "Ψάρι Σπετσιώτα",
-      "desc": "Whole fish baked with tomato, parsley, garlic, and breadcrumbs — invented on Spetses, now found across Greece but tastes best where it began. Try at Patralis on the harbour.",
-      "desc_el": "Ολόκληρο ψάρι ψημένο με ντομάτα, μαϊντανό, σκόρδο και τριμμένη φρυγανιά — εφεύρεση των Σπετσών, τώρα παντού στην Ελλάδα αλλά καλύτερο εδώ που γεννήθηκε. Στον Πατραλή στο λιμάνι."
-    },
-    {
-      "name": "Amygdalota of Spetses",
-      "name_el": "Αμυγδαλωτά Σπετσών",
-      "desc": "Slightly different from the Hydraiotika — flatter, drier, more pronounced rosewater. Sold at the bakery in the Dapia.",
-      "desc_el": "Ελαφρώς διαφορετικά από τα υδραίικα — πιο επίπεδα, πιο στεγνά, με πιο έντονη γεύση ροδόνερου. Στον φούρνο της Ντάπιας."
-    }
-  ],
-  "festivals": [
-    {
-      "name": "Armata",
-      "name_el": "Αρμάτα",
-      "when": "Weekend nearest 8 September",
-      "when_el": "Σαββατοκύριακο πιο κοντά στις 8 Σεπτεμβρίου",
-      "desc": "The single most spectacular naval festival in Greece. Reenacts the 1822 Battle of Spetses — a wooden replica of the Ottoman flagship is set ablaze in the harbour, with fireworks. Hundreds of thousands attend; book accommodation months ahead.",
-      "desc_el": "Το πιο εντυπωσιακό ναυτικό φεστιβάλ στην Ελλάδα. Αναπαράσταση της Ναυμαχίας των Σπετσών (1822) — ξύλινο αντίγραφο της οθωμανικής ναυαρχίδας πυρπολείται στο λιμάνι, με πυροτεχνήματα. Εκατοντάδες χιλιάδες έρχονται· κράτηση μήνες πριν."
-    }
-  ],
-  "getting_there": {
-    "pills": [
-      "⛵ Piraeus 2h fast",
-      "€30–40"
+   },
+   {
+    "day": 2,
+    "title": "The Coastal Loop",
+    "color": "#C0522A",
+    "km": 28,
+    "drive_mins": 60,
+    "overnight": null,
+    "stops": [
+     {
+      "name": "Anargyrios School",
+      "lat": 37.2733305,
+      "lng": 23.1442031,
+      "type": "museum",
+      "time": "09:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ82s1cqq9nxQRsSzCrS8GtuM",
+      "desc": "The grand neoclassical boarding school where John Fowles taught in the 1950s — the setting for his novel The Magus. The building is visible from the coast road, a beautiful sight.",
+      "name_el": "Σχολή Αναργυρίου",
+      "desc_el": "Το μεγαλοπρεπές νεοκλασικό οικοτροφείο όπου δίδαξε ο Τζον Φάουλς τη δεκαετία του 1950 — το σκηνικό του μυθιστορήματος του \"Ο Μάγος\". Το κτίριο είναι ορατό από τον παραλιακό δρόμο, όμορφο θέαμα.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Spetses_7.JPG/1920px-Spetses_7.JPG",
+      "photo_credit": {
+       "artist": "Qweasdqwe",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Spetses_7.JPG",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Zogeria Beach",
+      "lat": 37.2776185,
+      "lng": 23.1000828,
+      "type": "beach",
+      "time": "11:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJsw1XGiu8nxQRJX4Au8BRdzg",
+      "desc": "The finest beach on Spetses — a pine-fringed pebble bay on the west coast with extraordinary water clarity. Accessible by the coastal road bus, water taxi or bicycle. One of the best pine-forest beaches in the Saronic.",
+      "name_el": "Παραλία Ζογεριάς",
+      "desc_el": "Η καλύτερη παραλία των Σπετσών — ένας βότσαλος κόλπος με πεύκα στη δυτική ακτή με εξαιρετική διαύγεια νερών. Προσβάσιμη με το παραλιακό λεωφορείο, θαλάσσιο ταξί ή ποδήλατο. Μία από τις καλύτερες παραλίες πευκοδάσους του Σαρωνικού.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Myrtoan_Sea_at_Zogeria_Beach_on_Spetses%2C_Greece_%2848759815133%29.jpg/1920px-Myrtoan_Sea_at_Zogeria_Beach_on_Spetses%2C_Greece_%2848759815133%29.jpg",
+      "photo_credit": {
+       "artist": "dronepicr",
+       "license": "CC BY 2.0",
+       "license_url": "https://creativecommons.org/licenses/by/2.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Myrtoan_Sea_at_Zogeria_Beach_on_Spetses,_Greece_(48759815133).jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Xylokeriza Beach",
+      "lat": 37.2353,
+      "lng": 23.145,
+      "type": "beach",
+      "time": "13:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJQUPdmQy9nxQRw7yizDSs9C8",
+      "desc": "Long pine-backed pebble beach on the south coast — calm, clear water and a good taverna. Less developed than Agia Marina.",
+      "name_el": "Παραλία Ξυλοκερίζας",
+      "desc_el": "Μακρά βότσαλη παραλία με πεύκα στη νότια ακτή — ήρεμα, διαυγή νερά και καλή ταβέρνα. Λιγότερο ανεπτυγμένη από την Αγία Μαρίνα."
+     },
+     {
+      "name": "Spetses Town — Departure",
+      "lat": 37.2683,
+      "lng": 23.155,
+      "type": "harbour",
+      "time": "16:30",
+      "wiki": null,
+      "desc": "Ferry to Piraeus, Hydra or the Argolid coast (Kosta, 10 minutes across the strait).",
+      "name_el": "Πόλη Σπετσών — Αναχώρηση",
+      "desc_el": "Πλοίο προς Πειραιά, Ύδρα ή τις ακτές της Αργολίδας (Κόστα, 10 λεπτά απέναντι από το στενό)."
+     }
     ],
-    "pills_el": [
-      "⛵ Πειραιάς 2h γρήγορο",
-      "€30–40"
-    ],
-    "summary": "No airport. Fast catamaran from Piraeus, ~2h. Also reachable from Kosta on the Peloponnese (~10 min shuttle) — useful if combining with road trips.",
-    "summary_el": "Χωρίς αεροδρόμιο. Γρήγορο καταμαράν από Πειραιά, ~2 ώρες. Επίσης από Κόστα στην Πελοπόννησο (~10 λεπτά σύνδεση) — χρήσιμο αν συνδυάζεις με οδικό ταξίδι.",
-    "tip": "Cars restricted on the island — leave the rental in Kosta and take the shuttle.",
-    "tip_el": "Αυτοκίνητα περιορισμένα στο νησί — άφησε το ενοικιαζόμενο στην Κόστα και πάρε σύνδεση."
+    "title_el": "Ο Παράκτιος Γύρος"
+   }
+  ],
+  "title_el": "Πρόγραμμα 2 Ημερών στις Σπέτσες",
+  "subtitle_el": "Λιμάνι Ντάπια, το σπίτι της Μπουμπουλίνας, το παράκτιο μονοπάτι γύρω από το νησί και οι καλύτερες πευκόφυτες παραλίες."
+ },
+ "beaches": [
+  {
+   "name": "Zogeria Beach",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJsw1XGiu8nxQRJX4Au8BRdzg",
+   "rating": 5,
+   "type": "Pebble",
+   "length": "200 m",
+   "depth": "Medium — crystal clear Aegean water",
+   "facing": "West-facing — sheltered bay",
+   "facilities": "Basic: one small taverna. Pine trees provide natural shade.",
+   "desc": "The finest beach on Spetses — a pine-fringed pebble bay on the west coast with extraordinary water clarity. The setting is unusually natural and unspoiled for the Saronic. Accessible by the island bus, water taxi or bicycle along the coastal road.",
+   "commons": null,
+   "lat": 37.2776185,
+   "lng": 23.1000828,
+   "name_el": "Παραλία Ζογεριάς",
+   "desc_el": "Η καλύτερη παραλία των Σπετσών — ένας βότσαλος κόλπος με πεύκα στη δυτική ακτή με εξαιρετική διαύγεια νερών. Το σκηνικό είναι ασυνήθιστα φυσικό και ανέγγιχτο για τον Σαρωνικό. Προσβάσιμη με το λεωφορείο του νησιού, θαλάσσιο ταξί ή ποδήλατο στον παραλιακό δρόμο.",
+   "type_el": "Βότσαλο",
+   "depth_el": "Μέτρια — κρυστάλλινα αιγαιοπελαγίτικα νερά",
+   "facing_el": "Δυτικός προσανατολισμός — προστατευμένος κόλπος",
+   "facilities_el": "Βασικές παροχές: μία μικρή ταβέρνα. Τα πεύκα παρέχουν φυσική σκιά.",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Myrtoan_Sea_at_Zogeria_Beach_on_Spetses%2C_Greece_%2848759815133%29.jpg/1920px-Myrtoan_Sea_at_Zogeria_Beach_on_Spetses%2C_Greece_%2848759815133%29.jpg",
+   "photo_credit": {
+    "artist": "dronepicr",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Myrtoan_Sea_at_Zogeria_Beach_on_Spetses,_Greece_(48759815133).jpg",
+    "source": "Wikimedia Commons"
+   }
   },
-  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783275558/spetses_idnsrx.jpg"
+  {
+   "name": "Xylokeriza Beach",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJQUPdmQy9nxQRw7yizDSs9C8",
+   "rating": 4,
+   "type": "Pebble and fine sand",
+   "length": "400 m",
+   "depth": "Shallow — calm water",
+   "facing": "South-facing — sheltered, pine shade",
+   "facilities": "Good: sunbeds, taverna, easy bicycle access from the town.",
+   "desc": "A long pine-backed beach on the south coast — one of the best for spending a full day. Pine trees run to the water's edge and the small taverna has outstanding grilled fish.",
+   "commons": null,
+   "lat": 37.2353,
+   "lng": 23.145,
+   "name_el": "Παραλία Ξυλοκερίζας",
+   "desc_el": "Μια μακριά παραλία με πεύκα στη νότια ακτή — από τις καλύτερες για να περάσεις ολόκληρη μέρα. Τα πεύκα φτάνουν μέχρι το νερό και η μικρή ταβέρνα έχει εξαιρετικό ψητό ψάρι.",
+   "type_el": "Βότσαλο και λεπτή άμμος",
+   "depth_el": "Ρηχά — ήρεμα νερά",
+   "facing_el": "Νότιος προσανατολισμός — προστατευμένη, σκιά πεύκου",
+   "facilities_el": "Καλές παροχές: ξαπλώστρες, ταβέρνα, εύκολη πρόσβαση με ποδήλατο από την πόλη."
+  },
+  {
+   "name": "Agia Marina Beach",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJkyN6Pum8nxQRCzoECJ1N9o8",
+   "rating": 4,
+   "type": "Fine pebble",
+   "length": "150 m",
+   "depth": "Shallow — good swimming",
+   "facing": "East-facing — sheltered bay",
+   "facilities": "Good: sunbeds, beach bar, easy access from town.",
+   "desc": "The town beach — closest to Spetses Town and most convenient. 20 minutes walk or 5 by horse-drawn carriage. Clear water and good facilities.",
+   "commons": null,
+   "lat": 37.2526806,
+   "lng": 23.1633658,
+   "name_el": "Παραλία Αγίας Μαρίνας",
+   "desc_el": "Η παραλία της πόλης — η πιο κοντινή στην Πόλη των Σπετσών και η πιο βολική. 20 λεπτά με τα πόδια ή 5 με άμαξα. Διαυγή νερά και καλές ανέσεις.",
+   "type_el": "Λεπτό βότσαλο",
+   "depth_el": "Ρηχά — καλή κολύμβηση",
+   "facing_el": "Ανατολικός προσανατολισμός — προστατευμένος κόλπος",
+   "facilities_el": "Καλές παροχές: ξαπλώστρες, beach bar, εύκολη πρόσβαση από την πόλη."
+  }
+ ],
+ "name_el": "Σπέτσες",
+ "name_accusative_el": "Σπέτσες",
+ "name_genitive_el": "Σπετσών",
+ "gender_el": "plf",
+ "subtitle_el": "Το Σαρωνικό νησί των αμαξών — Μπουμπουλίνα, αρχοντικά και παραλίες με πεύκα",
+ "intro_el": "Οι Σπέτσες είναι το κομψό νησί του Σαρωνικού — χωρίς αυτοκίνητα στην παλιά πόλη, άμαξες αντί για ταξί, και ένα σύμπλεγμα αρχοντικών του 19ου αιώνα γύρω από το λιμάνι χτισμένα από πλοίαρχους που πλούτισαν στην Ελληνική Επανάσταση. Η Λασκαρίνα Μπουμπουλίνα, η γυναίκα ναύαρχος που ηγήθηκε του ελληνικού στόλου κατά των Οθωμανών, γεννήθηκε εδώ. Το νησί είναι σχεδόν εξ ολοκλήρου καλυμμένο από χαλέπιο πεύκο που κατεβαίνει μέχρι την ακτή.",
+ "suited_for": {
+  "good": [
+   "Travellers who like a car-free old town with horse-drawn carriages and grand sea-captain mansions",
+   "Couples and families after pine-fringed beaches a quick catamaran from Athens",
+   "Anyone combining island time with a Peloponnese road trip — the Kosta shuttle is 10 minutes"
+  ],
+  "good_el": [
+   "Ταξιδιώτες που τους αρέσει μια παλιά πόλη χωρίς αυτοκίνητα, με άμαξες και αρχοντικά καπεταναίων",
+   "Ζευγάρια και οικογένειες που θέλουν πευκόφυτες παραλίες με γρήγορο καταμαράν από την Αθήνα",
+   "Όσους συνδυάζουν το νησί με ταξίδι στην Πελοπόννησο — το πέρασμα από την Κόστα είναι 10 λεπτά"
+  ],
+  "skip": [
+   "If you want a remote, undiscovered island — Spetses is polished and popular",
+   "If a quiet budget trip is the goal; the island leans upmarket"
+  ],
+  "skip_el": [
+   "Αν θέλεις ένα απομονωμένο, ανακάλυπτο νησί — οι Σπέτσες είναι γυαλισμένες και δημοφιλείς",
+   "Αν στόχος είναι ένα ήσυχο, οικονομικό ταξίδι· το νησί κλίνει προς το ακριβό"
+  ]
+ },
+ "specialties": [
+  {
+   "name": "Spetsiota fish",
+   "name_el": "Ψάρι Σπετσιώτα",
+   "desc": "Whole fish baked with tomato, parsley, garlic, and breadcrumbs — invented on Spetses, now found across Greece but tastes best where it began. Try at Patralis on the harbour.",
+   "desc_el": "Ολόκληρο ψάρι ψημένο με ντομάτα, μαϊντανό, σκόρδο και τριμμένη φρυγανιά — εφεύρεση των Σπετσών, τώρα παντού στην Ελλάδα αλλά καλύτερο εδώ που γεννήθηκε. Στον Πατραλή στο λιμάνι."
+  },
+  {
+   "name": "Amygdalota of Spetses",
+   "name_el": "Αμυγδαλωτά Σπετσών",
+   "desc": "Slightly different from the Hydraiotika — flatter, drier, more pronounced rosewater. Sold at the bakery in the Dapia.",
+   "desc_el": "Ελαφρώς διαφορετικά από τα υδραίικα — πιο επίπεδα, πιο στεγνά, με πιο έντονη γεύση ροδόνερου. Στον φούρνο της Ντάπιας."
+  }
+ ],
+ "festivals": [
+  {
+   "name": "Armata",
+   "name_el": "Αρμάτα",
+   "when": "Weekend nearest 8 September",
+   "when_el": "Σαββατοκύριακο πιο κοντά στις 8 Σεπτεμβρίου",
+   "desc": "The single most spectacular naval festival in Greece. Reenacts the 1822 Battle of Spetses — a wooden replica of the Ottoman flagship is set ablaze in the harbour, with fireworks. Hundreds of thousands attend; book accommodation months ahead.",
+   "desc_el": "Το πιο εντυπωσιακό ναυτικό φεστιβάλ στην Ελλάδα. Αναπαράσταση της Ναυμαχίας των Σπετσών (1822) — ξύλινο αντίγραφο της οθωμανικής ναυαρχίδας πυρπολείται στο λιμάνι, με πυροτεχνήματα. Εκατοντάδες χιλιάδες έρχονται· κράτηση μήνες πριν."
+  }
+ ],
+ "getting_there": {
+  "pills": [
+   "⛵ Piraeus 2h fast",
+   "€30–40"
+  ],
+  "pills_el": [
+   "⛵ Πειραιάς 2h γρήγορο",
+   "€30–40"
+  ],
+  "summary": "No airport. Fast catamaran from Piraeus, ~2h. Also reachable from Kosta on the Peloponnese (~10 min shuttle) — useful if combining with road trips.",
+  "summary_el": "Χωρίς αεροδρόμιο. Γρήγορο καταμαράν από Πειραιά, ~2 ώρες. Επίσης από Κόστα στην Πελοπόννησο (~10 λεπτά σύνδεση) — χρήσιμο αν συνδυάζεις με οδικό ταξίδι.",
+  "tip": "Cars restricted on the island — leave the rental in Kosta and take the shuttle.",
+  "tip_el": "Αυτοκίνητα περιορισμένα στο νησί — άφησε το ενοικιαζόμενο στην Κόστα και πάρε σύνδεση."
+ },
+ "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783275558/spetses_idnsrx.jpg"
 }

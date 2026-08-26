@@ -1,657 +1,657 @@
 {
-  "key": "zakynthos",
-  "name": "Zakynthos",
-  "subtitle": "Navagio shipwreck, turtle beaches and the Ionian's wildest scenery",
-  "intro": "Zakynthos punches above its weight for scenery. Navagio — the shipwreck beach enclosed by sheer white cliffs — is the most photographed beach in Greece. The island is also the main nesting ground for loggerhead sea turtles in the Mediterranean, with Laganas Bay protected as a national marine park. Beyond the tourist resorts, the north and west of the island are dramatic and wild.",
-  "when_to_visit": {
-    "summary": "Zakynthos has the iconic Shipwreck Beach (Navagio) and Caretta-Caretta turtles (Laganas Bay). The package tourism in Laganas is intense in August — avoid that whole strip. Best May-September if you base yourself in the north or the Vassilikos peninsula. The Caretta nesting season runs May-October; respectful boat tours are worth it.",
-    "summary_el": "Η Ζάκυνθος έχει την εμβληματική παραλία του Ναυαγίου και τις χελώνες Caretta-Caretta (στον κόλπο του Λαγανά). Ο οργανωμένος τουρισμός στον Λαγανά είναι έντονος τον Αύγουστο — απόφυγε όλη εκείνη τη ζώνη. Καλύτερα Μάιο–Σεπτέμβριο αν έχεις βάση τον βορρά ή τη χερσόνησο του Βασιλικού. Η περίοδος γέννας της Caretta κρατάει Μάιο–Οκτώβριο· οι βαρκάδες με σεβασμό αξίζουν.",
-    "months": [
-      {
-        "tag": "ok",
-        "why": "Quiet, mild",
-        "why_el": "Ήσυχα, βροχή"
-      },
-      {
-        "tag": "ok",
-        "why": "Mild, no swimming",
-        "why_el": "Ήπιο"
-      },
-      {
-        "tag": "great",
-        "why": "Wildflowers",
-        "why_el": "Αγριολούλουδα, ανθίζει"
-      },
-      {
-        "tag": "great",
-        "why": "Easter, mild",
-        "why_el": "Πάσχα, ησυχία"
-      },
-      {
-        "tag": "perfect",
-        "why": "Caretta nests",
-        "why_el": "Θάλασσα, Caretta"
-      },
-      {
-        "tag": "perfect",
-        "why": "Sea warming, Navagio still photographable without queueing for boats, Laganas not yet in full party mode. The honest best month for the island.",
-        "why_el": "Η θάλασσα ζεσταίνεται, το Ναυάγιο φωτογραφίζεται ακόμα χωρίς ουρά για βάρκες, ο Λαγανάς όχι ακόμα σε πλήρη πάρτι σεζόν. Ο πραγματικά καλύτερος μήνας."
-      },
-      {
-        "tag": "great",
-        "why": "Hot summer, Laganas starts its party season properly. Navagio crowded mid-day — go at sunrise for the photo. Resorts elsewhere full but functional.",
-        "why_el": "Ζεστό καλοκαίρι, ο Λαγανάς ξεκινάει τη σεζόν του στα καλά. Το Ναυάγιο γεμάτο μεσημεριάτικα — πήγαινε χαράματα για τη φωτογραφία. Τα άλλα θέρετρα γεμάτα αλλά λειτουργικά."
-      },
-      {
-        "tag": "great",
-        "why": "Peak of Laganas — loud, drunk, young. Navagio packed all day, boats queueing for the photo spot. Other resorts (Tsilivi, Alykes) busy but tamer. The east coast villages stay quiet.",
-        "why_el": "Κορύφωση Λαγανά — θόρυβος, μέθη, νεολαία. Το Ναυάγιο γεμάτο όλη μέρα, βάρκες σε ουρά για τη φωτογραφική στιγμή. Τα άλλα θέρετρα (Τσιλιβή, Αλυκές) πολυσύχναστα αλλά πιο μετρημένα. Τα ανατολικά χωριά μένουν ήσυχα."
-      },
-      {
-        "tag": "perfect",
-        "why": "Sea at peak, Laganas calming down, turtle nesting in full swing on the protected beaches. The reward month after the August chaos.",
-        "why_el": "Η θάλασσα στο μέγιστο, ο Λαγανάς ηρεμεί, η ωοτοκία των χελωνών σε πλήρη εξέλιξη στις προστατευμένες παραλίες. Ο μήνας-ανταμοιβή μετά το χάος του Αυγούστου."
-      },
-      {
-        "tag": "great",
-        "why": "Last swims",
-        "why_el": "Νερό ζεστό, δροσιά"
-      },
-      {
-        "tag": "great",
-        "why": "Mild, olives, quiet",
-        "why_el": "Ήπιο, ελιές, ήσυχα"
-      },
-      {
-        "tag": "ok",
-        "why": "Mild, locals",
-        "why_el": "Ήπιο"
-      }
-    ]
-  },
-  "itinerary": {
-    "title": "4-Day Zakynthos Itinerary",
-    "subtitle": "From the Venetian capital to the sea caves of Keri, the turtle beaches of Laganas and the unmissable Navagio shipwreck.",
-    "days": [
-      {
-        "day": 1,
-        "title": "Zakynthos Town & the East",
-        "color": "#1B4F8A",
-        "km": 20,
-        "drive_mins": 25,
-        "overnight": "Zakynthos Town",
-        "stops": [
-          {
-            "name": "Zakynthos Town",
-            "lat": 37.7867,
-            "lng": 20.9002,
-            "type": "city",
-            "time": "09:00",
-            "wiki": "https://www.google.com/maps/search/Zakynthos+Town",
-            "desc": "Rebuilt after the 1953 earthquake in Venetian style. Walk the waterfront, visit the Byzantine Museum with its rescued frescoes, and climb to Bochali castle for views over the bay.",
-            "name_el": "Πόλη Ζακύνθου",
-            "desc_el": "Ξαναχτισμένη μετά τον σεισμό του 1953 σε βενετσιάνικο στυλ. Περπάτησε την προκυμαία, επισκέψου το Βυζαντινό Μουσείο με τις διασωθείσες τοιχογραφίες του, και ανέβα στο κάστρο του Μπόχαλι για θέες πάνω από τον κόλπο.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Zakynthos_City_waterfront_houses_%28Strada_marina%29_and_Bochali_Hill%2C_Greece_01.jpg/1920px-Zakynthos_City_waterfront_houses_%28Strada_marina%29_and_Bochali_Hill%2C_Greece_01.jpg",
-            "photo_credit": {
-              "artist": "Christaras A",
-              "license": "CC BY 3.0",
-              "license_url": "https://creativecommons.org/licenses/by/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Zakynthos_City_waterfront_houses_(Strada_marina)_and_Bochali_Hill,_Greece_01.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Bochali Castle",
-            "lat": 37.7897,
-            "lng": 20.8921,
-            "type": "castle",
-            "time": "10:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJM-yIkdJHZxMRuJQuJowIrMw",
-            "desc": "Venetian castle above the town with panoramic views over Zakynthos harbour, the Ionian Sea and the Peloponnese mainland. The ruins are extensive and free to enter.",
-            "name_el": "Κάστρο Μπόχαλι",
-            "desc_el": "Βενετσιάνικο κάστρο πάνω από την πόλη με πανοραμικές θέες πάνω από το λιμάνι της Ζακύνθου, το Ιόνιο Πέλαγος και την Πελοπόννησο. Τα ερείπια είναι εκτεταμένα και η είσοδος δωρεάν."
-          },
-          {
-            "name": "Byzantine Museum",
-            "lat": 37.7873,
-            "lng": 20.8996,
-            "type": "museum",
-            "time": "11:30",
-            "wiki": "https://www.google.com/maps/search/Byzantine+Museum+Zakynthos",
-            "desc": "Outstanding collection of Byzantine and post-Byzantine icons and frescoes rescued from churches destroyed in the 1953 earthquake. One of the finest Byzantine collections in Greece.",
-            "name_el": "Βυζαντινό Μουσείο",
-            "desc_el": "Εξαιρετική συλλογή βυζαντινών και μεταβυζαντινών εικόνων και τοιχογραφιών διασωθεισών από εκκλησίες που καταστράφηκαν στον σεισμό του 1953. Μία από τις καλύτερες βυζαντινές συλλογές της Ελλάδας.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Byzantine_Museum_%E2%80%93_Zakynthos_%E2%80%93_Greek_%E2%80%93_01.jpg/1920px-Byzantine_Museum_%E2%80%93_Zakynthos_%E2%80%93_Greek_%E2%80%93_01.jpg",
-            "photo_credit": {
-              "artist": "Maesi64",
-              "license": "CC0",
-              "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Byzantine_Museum_%E2%80%93_Zakynthos_%E2%80%93_Greek_%E2%80%93_01.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Tsilivi Beach",
-            "lat": 37.8166,
-            "lng": 20.8689,
-            "type": "beach",
-            "time": "16:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJHwFayGlGZxMRdDD77zR5EbE",
-            "desc": "Sandy family beach on the east coast near the town. Calm, shallow, well organised. Good for a first-day swim.",
-            "name_el": "Παραλία Τσιλιβί",
-            "desc_el": "Αμμώδης οικογενειακή παραλία στην ανατολική ακτή κοντά στην πόλη. Ήρεμη, ρηχή, καλά οργανωμένη. Καλή για μπάνιο της πρώτης μέρας.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Tsilivi_Beach_%2C_Mango_Beach_Bar_-_panoramio.jpg/1920px-Tsilivi_Beach_%2C_Mango_Beach_Bar_-_panoramio.jpg",
-            "photo_credit": {
-              "artist": "KrauS",
-              "license": "CC BY 3.0",
-              "license_url": "https://creativecommons.org/licenses/by/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Tsilivi_Beach_,_Mango_Beach_Bar_-_panoramio.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Dinner in Zakynthos Town",
-            "lat": 37.7867,
-            "lng": 20.9002,
-            "type": "city",
-            "time": "20:30",
-            "wiki": null,
-            "desc": "Short drive back to Zakynthos Town (about 10 minutes). Solomos Square is the evening gathering spot — perfect for a stroll along the seafront before dinner.",
-            "name_el": "Δείπνο στη Ζάκυνθο",
-            "desc_el": "Σύντομη διαδρομή στη Ζάκυνθο (περίπου 10 λεπτά). Η πλατεία Σολωμού είναι το βραδινό σημείο συνάντησης — τέλεια για μια βόλτα στην παραλία πριν το δείπνο."
-          }
-        ],
-        "title_el": "Χώρα Ζακύνθου & η Ανατολή",
-        "overnight_el": "Ζάκυνθος",
-        "nightlife": "Zakynthos Town is the grown-up alternative to Laganas. The bars around <a href=\"https://www.google.com/maps/search/Agios+Markos+Square+Zakynthos\" target=\"_blank\" rel=\"noopener\">Agios Markos Square</a> — <a href=\"https://www.google.com/maps/search/Base+Bar+Zakynthos\" target=\"_blank\" rel=\"noopener\">Base</a> and <a href=\"https://www.google.com/maps/search/Cul+de+Sac+Zakynthos\" target=\"_blank\" rel=\"noopener\">Cul de Sac</a> — are where locals drink; up on <a href=\"https://www.google.com/maps/search/Bochali+Zakynthos\" target=\"_blank\" rel=\"noopener\">Bohali</a> hill, tavernas serve kantades serenades over the town lights.",
-        "nightlife_el": "Η πόλη της Ζακύνθου είναι η πιο ώριμη εναλλακτική του Λαγανά. Τα μπαρ γύρω από την <a href=\"https://www.google.com/maps/search/Agios+Markos+Square+Zakynthos\" target=\"_blank\" rel=\"noopener\">Πλατεία Αγίου Μάρκου</a> — <a href=\"https://www.google.com/maps/search/Base+Bar+Zakynthos\" target=\"_blank\" rel=\"noopener\">Base</a> και <a href=\"https://www.google.com/maps/search/Cul+de+Sac+Zakynthos\" target=\"_blank\" rel=\"noopener\">Cul de Sac</a> — είναι εκεί που πίνουν οι ντόπιοι· πάνω στο <a href=\"https://www.google.com/maps/search/Bochali+Zakynthos\" target=\"_blank\" rel=\"noopener\">Μπόχαλη</a>, ταβέρνες με καντάδες και θέα τα φώτα της πόλης.",
-        "food": [
-          {
-            "meal": "Lunch",
-            "meal_el": "Μεσημεριανό",
-            "area": "Zakynthos Town",
-            "area_el": "Πόλη Ζακύνθου",
-            "desc": "<a href=\"https://www.google.com/maps/search/Malanos+Zakynthos\" target=\"_blank\" rel=\"noopener\">Malanos</a> is the beloved old-school taverna — barrel wine, grills and Zakynthian dishes at honest prices. For a special dinner instead, <a href=\"https://www.google.com/maps/search/Prosilio+Zakynthos+Town\" target=\"_blank\" rel=\"noopener\">Prosilio</a> by Solomos Square is the island's fine-dining garden. Away from the resorts, <a href=\"https://www.google.com/maps/search/Ampelostrates+Kiliomenos+Zakynthos\" target=\"_blank\" rel=\"noopener\">Ampelostrates</a> at Kiliomenos is a farm taverna in a clearing 16 km inland — the Maroudas family cook their own produce, the tsigaridopites and the sartsa beef. €25–30, open all year.",
-            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Malanos+Zakynthos\" target=\"_blank\" rel=\"noopener\">Malanos</a> είναι η αγαπημένη παλιακή ταβέρνα — βαρελίσιο κρασί, ψητά και ζακυνθινά πιάτα σε τίμιες τιμές. Για ένα ξεχωριστό δείπνο, το <a href=\"https://www.google.com/maps/search/Prosilio+Zakynthos+Town\" target=\"_blank\" rel=\"noopener\">Prosilio</a> δίπλα στην Πλατεία Σολωμού είναι ο κήπος fine dining του νησιού. Μακριά από τα τουριστικά, οι <a href=\"https://www.google.com/maps/search/Ampelostrates+Kiliomenos+Zakynthos\" target=\"_blank\" rel=\"noopener\">Αμπελοστράτες</a> στον Κοιλιωμένο είναι αγροτική ταβέρνα σε ξέφωτο, 16 χλμ. από την πόλη — η οικογένεια Μαρούδα μαγειρεύει δικά της προϊόντα, τσιγαριδόπιτες και μοσχάρι σάρτσα. €25–30, ανοιχτά όλο τον χρόνο.",
-            "after": "Byzantine Museum"
-          }
-        ]
-      },
-      {
-        "day": 2,
-        "title": "Laganas & the Turtle Bays",
-        "color": "#C0522A",
-        "km": 35,
-        "drive_mins": 40,
-        "overnight": "Zakynthos Town",
-        "stops": [
-          {
-            "name": "Laganas Beach",
-            "lat": 37.725,
-            "lng": 20.8681,
-            "type": "beach",
-            "time": "09:00",
-            "wiki": "https://www.google.com/maps/search/Laganas+Beach+Zakynthos",
-            "desc": "Long sandy beach and the main nesting area for loggerhead sea turtles in the Mediterranean. Part of the National Marine Park. Do not go on the beach after dark from June-August — turtles are nesting.",
-            "name_el": "Παραλία Λαγανά",
-            "desc_el": "Μακρά αμμώδης παραλία και κύρια περιοχή φωλιάσματος των χελωνών Caretta caretta στη Μεσόγειο. Μέρος του Εθνικού Θαλάσσιου Πάρκου. Μην πας στην παραλία μετά το σκοτάδι από τον Ιούνιο έως τον Αύγουστο — οι χελώνες φωλιάζουν.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Beach_in_Laganas%2C_Zakynthos%2C_Greece.jpg/1920px-Beach_in_Laganas%2C_Zakynthos%2C_Greece.jpg",
-            "photo_credit": {
-              "artist": "Σαλαμούρας Σπύρος",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Beach_in_Laganas,_Zakynthos,_Greece.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "National Marine Park",
-            "lat": 37.69,
-            "lng": 20.88,
-            "type": "nature",
-            "time": "10:30",
-            "wiki": "https://www.google.com/maps/search/National+Marine+Park+Zakynthos",
-            "desc": "The oldest marine park in Greece, protecting the turtle nesting grounds. Boat trips from Laganas allow you to watch turtles swimming in the bay — operators must keep distance.",
-            "name_el": "Εθνικό Θαλάσσιο Πάρκο",
-            "desc_el": "Το παλαιότερο θαλάσσιο πάρκο της Ελλάδας, προστατεύει τους τόπους φωλιάσματος των χελωνών. Βαρκάδες από τον Λαγανά σου επιτρέπουν να παρακολουθήσεις τις χελώνες να κολυμπούν στον κόλπο — οι επιχειρήσεις πρέπει να κρατούν απόσταση.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/National_Marine_Park_of_Zakynthos_3.jpeg/1920px-National_Marine_Park_of_Zakynthos_3.jpeg",
-            "photo_credit": {
-              "artist": "Newklear007",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:National_Marine_Park_of_Zakynthos_3.jpeg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Keri Village",
-            "lat": 37.6786,
-            "lng": 20.8077,
-            "type": "village",
-            "time": "13:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJL9W-3ow7ZxMRXb9dcu4ZRHs",
-            "desc": "Traditional village at the southern tip with a lighthouse and extraordinary views of the sea caves below. Lunch at the village taverna.",
-            "name_el": "Χωριό Κερί",
-            "desc_el": "Παραδοσιακό χωριό στο νότιο άκρο με φάρο και εξαιρετικές θέες στις θαλάσσιες σπηλιές κάτω. Μεσημεριανό στην ταβέρνα του χωριού.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Keri_majakas.jpg/1920px-Keri_majakas.jpg",
-            "photo_credit": {
-              "artist": "Andrus Uuetalu",
-              "license": "CC BY-SA 3.0 ee",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0/ee/deed.en",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Keri_majakas.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Keri Sea Caves",
-            "lat": 37.6483,
-            "lng": 20.8402,
-            "type": "nature",
-            "time": "15:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJQ--dzaQ7ZxMRwfjjd_pGiHo",
-            "desc": "Dramatic sea caves and arches at the southernmost point of Zakynthos. Boat trips from Keri harbour take you through the caves and to the Blue Cave for swimming.",
-            "name_el": "Θαλάσσιες Σπηλιές Κερίου",
-            "desc_el": "Δραματικές θαλάσσιες σπηλιές και αψίδες στο νοτιότερο σημείο της Ζακύνθου. Βαρκάδες από το λιμάνι του Κερίου σε μεταφέρουν μέσα από τις σπηλιές και στη Γαλάζια Σπηλιά για κολύμπι."
-          },
-          {
-            "name": "Marathonisi Turtle Island",
-            "lat": 37.6835,
-            "lng": 20.87,
-            "type": "nature",
-            "time": "17:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJuRAC1Y85ZxMRrNy7VHmjCPs",
-            "desc": "Small uninhabited island in Laganas Bay — one of the main turtle nesting beaches. Day trips by boat allow you to swim near the island. No landing on the beach.",
-            "name_el": "Νησί Χελωνών Μαραθονήσι",
-            "desc_el": "Μικρό ακατοίκητο νησί στον κόλπο Λαγανά — μία από τις κύριες παραλίες φωλιάσματος χελωνών. Ημερήσιες εκδρομές με βάρκα σου επιτρέπουν να κολυμπήσεις κοντά στο νησί. Χωρίς αποβίβαση στην παραλία.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Turtle_Island_%2821662194631%29.jpg/1920px-Turtle_Island_%2821662194631%29.jpg",
-            "photo_credit": {
-              "artist": "Tony Hisgett from Birmingham, UK",
-              "license": "CC BY 2.0",
-              "license_url": "https://creativecommons.org/licenses/by/2.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Turtle_Island_(21662194631).jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Dinner in Zakynthos Town",
-            "lat": 37.7867,
-            "lng": 20.9002,
-            "type": "city",
-            "time": "20:30",
-            "wiki": null,
-            "desc": "Drive back from the Keri/Laganas area to Zakynthos Town (about 30 minutes). After a day with the turtles, the waterfront tavernas serve up the freshest seafood.",
-            "name_el": "Δείπνο στη Ζάκυνθο",
-            "desc_el": "Επιστροφή από την περιοχή Κερί/Λαγανά στη Ζάκυνθο (περίπου 30 λεπτά). Μετά μια μέρα με τις χελώνες, οι ταβέρνες της παραλίας σερβίρουν τα πιο φρέσκα θαλασσινά."
-          }
-        ],
-        "title_el": "Λαγανάς & οι Κόλποι των Χελωνών",
-        "overnight_el": "Ζάκυνθος",
-        "nightlife": "This is the big one. The <a href=\"https://www.google.com/maps/search/Laganas+Strip+Zakynthos\" target=\"_blank\" rel=\"noopener\">Laganas Strip</a> is a kilometre of full-on clubs — <a href=\"https://www.google.com/maps/search/Rescue+Club+Zante\" target=\"_blank\" rel=\"noopener\">Rescue</a> (the island's biggest, 2,000 capacity), 30-year institution <a href=\"https://www.google.com/maps/search/Cherry+Bay+Zante\" target=\"_blank\" rel=\"noopener\">Cherry Bay</a>, and <a href=\"https://www.google.com/maps/search/Zeros+Club+Zante\" target=\"_blank\" rel=\"noopener\">Zeros</a> for foam parties. Commercial, loud, and exactly what it promises; nothing starts before midnight.",
-        "nightlife_el": "Αυτή είναι η μεγάλη βραδιά. Ο <a href=\"https://www.google.com/maps/search/Laganas+Strip+Zakynthos\" target=\"_blank\" rel=\"noopener\">Strip του Λαγανά</a> είναι ένα χιλιόμετρο γεμάτο clubs — <a href=\"https://www.google.com/maps/search/Rescue+Club+Zante\" target=\"_blank\" rel=\"noopener\">Rescue</a> (το μεγαλύτερο του νησιού, χωρητικότητα 2.000), το 30χρονο <a href=\"https://www.google.com/maps/search/Cherry+Bay+Zante\" target=\"_blank\" rel=\"noopener\">Cherry Bay</a>, και το <a href=\"https://www.google.com/maps/search/Zeros+Club+Zante\" target=\"_blank\" rel=\"noopener\">Zeros</a> για foam parties. Εμπορικό, δυνατό, ακριβώς αυτό που υπόσχεται· τίποτα δεν αρχίζει πριν τα μεσάνυχτα."
-      },
-      {
-        "day": 3,
-        "title": "Navagio Shipwreck",
-        "color": "#5A7A3A",
-        "km": 45,
-        "drive_mins": 55,
-        "overnight": "Zakynthos Town",
-        "stops": [
-          {
-            "name": "Navagio Viewpoint",
-            "lat": 37.8618,
-            "lng": 20.6256,
-            "type": "nature",
-            "time": "09:00",
-            "wiki": "https://www.google.com/maps/search/Navagio+Viewpoint+Zakynthos",
-            "desc": "The most spectacular viewpoint in the Ionian — a sheer 200m drop to the shipwreck beach enclosed by white cliffs. Go early for perfect light and fewer people. Fencing at the edge — don't lean over.",
-            "name_el": "Σημείο Θέασης Ναυαγίου",
-            "desc_el": "Το πιο εντυπωσιακό σημείο θέασης στο Ιόνιο — κάθετη πτώση 200 μέτρων στην παραλία του ναυαγίου περικλεισμένη από λευκούς γκρεμούς. Πήγαινε νωρίς για τέλειο φως και λιγότερο κόσμο. Φράχτη στην άκρη — μη σκύβεις.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Navagio_beach_Zakynthos_3.jpg/1920px-Navagio_beach_Zakynthos_3.jpg",
-            "photo_credit": {
-              "artist": "kallerna",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Navagio_beach_Zakynthos_3.jpg",
-              "source": "Wikimedia Commons"
-            },
-            "drive": "≈40 min north of Zakynthos Town",
-            "drive_el": "≈40 λεπτά βόρεια της πόλης"
-          },
-          {
-            "name": "Navagio Shipwreck Beach",
-            "lat": 37.8595,
-            "lng": 20.6249,
-            "type": "beach",
-            "time": "10:30",
-            "wiki": "https://www.google.com/maps/search/Navagio+Shipwreck+Beach+Zakynthos",
-            "desc": "Greece's most photographed beach — the rusting wreck of the Panagiotis (stranded 1980) on white sand between sheer white cliffs. Accessible only by boat from Porto Vromi or Agios Nikolaos (20 min). Gets very crowded — go before noon.",
-            "name_el": "Παραλία Ναυαγίου",
-            "desc_el": "Η πιο φωτογραφημένη παραλία της Ελλάδας — το σκουριασμένο ναυάγιο του Παναγιώτη (προσάραξε το 1980) σε λευκή άμμο μεταξύ κάθετων λευκών γκρεμών. Προσβάσιμη μόνο με βάρκα από το Πόρτο Βρώμη ή τον Άγιο Νικόλαο (20 λεπτά). Γεμίζει πολύ — πήγαινε πριν το μεσημέρι.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Navagio_beach_Zakynthos_3.jpg/1920px-Navagio_beach_Zakynthos_3.jpg",
-            "photo_credit": {
-              "artist": "kallerna",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Navagio_beach_Zakynthos_3.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Blue Caves",
-            "lat": 37.9303,
-            "lng": 20.7053,
-            "type": "nature",
-            "time": "13:30",
-            "wiki": "https://www.google.com/maps/search/Blue+Caves+Zakynthos",
-            "desc": "Sea caves at Cape Skinari where sunlight refracting through the turquoise water turns the caves an electric blue. Boat trips from Agios Nikolaos. The colour is best on sunny mornings.",
-            "name_el": "Γαλάζιες Σπηλιές",
-            "desc_el": "Θαλάσσιες σπηλιές στο Ακρωτήριο Σκινάρι όπου το φως του ήλιου διαθλώμενο μέσα από τα τιρκουάζ νερά κάνει τις σπηλιές να λάμπουν ηλεκτρικό μπλε. Βαρκάδες από τον Άγιο Νικόλαο. Το χρώμα είναι καλύτερο σε ηλιόλουστα πρωινά.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Wik6_Zakynthos_Blue_Caves.jpg/1920px-Wik6_Zakynthos_Blue_Caves.jpg",
-            "photo_credit": {
-              "artist": "Ρένια Χατζηλευτέρη",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Wik6_Zakynthos_Blue_Caves.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Volimes Village",
-            "lat": 37.8746,
-            "lng": 20.6582,
-            "type": "village",
-            "time": "16:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJD4AhBNZrZxMRetej0rLy5Fg",
-            "desc": "Traditional mountain village in the north of the island. Honey, textiles and local produce sold from the roadside. The best local products on the island come from here.",
-            "name_el": "Χωριό Βολίμες",
-            "desc_el": "Παραδοσιακό ορεινό χωριό στον βορρά του νησιού. Μέλι, υφαντά και τοπικά προϊόντα πωλούνται στους δρόμους. Τα καλύτερα τοπικά προϊόντα του νησιού έρχονται από εδώ.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Zakynthos_flora_%2835914063705%29.jpg",
-            "photo_credit": {
-              "artist": "David Short from Windsor, UK",
-              "license": "CC BY 2.0",
-              "license_url": "https://creativecommons.org/licenses/by/2.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Zakynthos_flora_(35914063705).jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Mountain road back to Zakynthos Town",
-            "lat": 37.7867,
-            "lng": 20.9002,
-            "type": "city",
-            "time": "21:00",
-            "wiki": null,
-            "desc": "Drive back from Volimes to Zakynthos Town (about 1 hour through the central mountain road). The route passes through pretty villages — stop at Anafonitria monastery if there's daylight.",
-            "name_el": "Ορεινός δρόμος πίσω στη Ζάκυνθο",
-            "desc_el": "Επιστροφή από τα Βολίμες στη Ζάκυνθο (περίπου 1 ώρα μέσω του κεντρικού ορεινού δρόμου). Η διαδρομή περνά από όμορφα χωριά — σταματήστε στο μοναστήρι Αναφωνήτριας αν έχει ακόμα φως."
-          }
-        ],
-        "title_el": "Ναυάγιο",
-        "overnight_el": "Ζάκυνθος",
-        "nightlife": "An easier night after Laganas: sunset drinks up at <a href=\"https://www.google.com/maps/search/Bochali+Zakynthos\" target=\"_blank\" rel=\"noopener\">Bohali</a> over the bay, then a long dinner in town. Save what's left of you for the road tomorrow.",
-        "nightlife_el": "Πιο χαλαρή βραδιά μετά τον Λαγανά: ποτό στο ηλιοβασίλεμα πάνω στο <a href=\"https://www.google.com/maps/search/Bochali+Zakynthos\" target=\"_blank\" rel=\"noopener\">Μπόχαλη</a> με θέα τον κόλπο, και μετά μακρύ δείπνο στην πόλη. Κράτα δυνάμεις για τον δρόμο αύριο."
-      },
-      {
-        "day": 4,
-        "title": "West Coast & Departure",
-        "color": "#C4962A",
-        "km": 40,
-        "drive_mins": 50,
-        "overnight": null,
-        "stops": [
-          {
-            "name": "Xigia Beach",
-            "lat": 37.8678,
-            "lng": 20.7351,
-            "type": "beach",
-            "time": "09:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJJyOZwiFCZxMRoAbk8Jib040",
-            "desc": "Small pebble beach where natural sulphur springs bubble up through the seabed — the water has a slightly warm, mineral quality. Unusual and memorable.",
-            "name_el": "Παραλία Ξίγια",
-            "desc_el": "Μικρή βότσαλη παραλία όπου φυσικές πηγές θείου αναβλύζουν από τον βυθό — τα νερά έχουν ελαφρώς ζεστή, μεταλλική ποιότητα. Ασυνήθιστη και αξιομνημόνευτη.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Xigia_sulfur_beach.jpg/1920px-Xigia_sulfur_beach.jpg",
-            "photo_credit": {
-              "artist": "kallerna",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Xigia_sulfur_beach.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Makris Gialos Beach",
-            "lat": 37.8783,
-            "lng": 20.726,
-            "type": "beach",
-            "time": "11:00",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJhwAJJBJCZxMR9CuyWOSbsKA",
-            "desc": "Long sandy west-coast beach — less busy than the east coast resorts, with clearer water and better scenery.",
-            "name_el": "Παραλία Μακρύς Γιαλός",
-            "desc_el": "Μακρά αμμώδης παραλία της δυτικής ακτής — λιγότερο πολυσύχναστη από τα θέρετρα της ανατολικής ακτής, με καθαρότερα νερά και καλύτερα τοπία."
-          },
-          {
-            "name": "Alykes Beach",
-            "lat": 37.8406,
-            "lng": 20.7739,
-            "type": "beach",
-            "time": "13:30",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJEWmUMG5BZxMRBTSY4Z6hsgI",
-            "desc": "Long sandy beach with salt lakes behind it — the name means 'salt pans'. Calm water, family-friendly, and one of the better beaches near the resort strip.",
-            "name_el": "Παραλία Αλυκές",
-            "desc_el": "Μακρά αμμώδης παραλία με αλυκές πίσω — το όνομα σημαίνει \"αλυκές\". Ήρεμα νερά, οικογενειακή, και μία από τις καλύτερες παραλίες κοντά στη ζώνη θερέτρων.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Tavern_at_Alykes_Beach%2C_Zakynthos%2C_Greece_01.jpg/1920px-Tavern_at_Alykes_Beach%2C_Zakynthos%2C_Greece_01.jpg",
-            "photo_credit": {
-              "artist": "Christaras A",
-              "license": "CC BY-SA 3.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Tavern_at_Alykes_Beach,_Zakynthos,_Greece_01.jpg",
-              "source": "Wikimedia Commons"
-            }
-          },
-          {
-            "name": "Zakynthos Town — Departure",
-            "lat": 37.7541,
-            "lng": 20.8864,
-            "type": "city",
-            "time": "16:00",
-            "wiki": null,
-            "desc": "Return to Zakynthos Town for ferry or flight. Final coffee at the waterfront Plateia Solomou.",
-            "name_el": "Πόλη Ζακύνθου — Αναχώρηση",
-            "desc_el": "Επιστροφή στην Πόλη της Ζακύνθου για πλοίο ή πτήση. Τελευταίος καφές στην παραλιακή Πλατεία Σολωμού."
-          }
-        ],
-        "title_el": "Δυτική Ακτή & Αναχώρηση"
-      }
-    ],
-    "title_el": "Πρόγραμμα 4 Ημερών στη Ζάκυνθο",
-    "subtitle_el": "Από την ενετική πρωτεύουσα ως τις θαλάσσιες σπηλιές του Κερίου, τις παραλίες των χελωνών στον Λαγανά και το αξέχαστο Ναυάγιο."
-  },
-  "beaches": [
-    {
-      "name": "Navagio (Shipwreck Beach)",
-      "wiki": "https://www.google.com/maps/search/Navagio+(Shipwreck+Beach)+Zakynthos",
-      "rating": 5,
-      "type": "Fine white sand",
-      "length": "300 m",
-      "depth": "Shallow to medium — but cold, deep water beyond the sand",
-      "facing": "East-facing — enclosed by cliffs, always sheltered",
-      "facilities": "None on the beach itself. Access only by boat from Porto Vromi or Agios Nikolaos (20 min).",
-      "desc": "The most iconic beach in Greece — the rusting hulk of the Panagiotis cargo ship stranded in 1980, sitting on white sand enclosed by 200m white limestone cliffs. No road access. No facilities. Just the wreck, the sand and the extraordinary blue water. Every visitor to Zakynthos must see it.",
-      "commons": "Navagio_beach_Zakynthos.jpg",
-      "lat": 37.8595,
-      "lng": 20.6249,
-      "name_el": "Ναυάγιο (Shipwreck Beach)",
-      "desc_el": "Η πιο εμβληματική παραλία της Ελλάδας — το σκουριασμένο κουφάρι του φορτηγού Παναγιώτη που προσάραξε το 1980, καθισμένο σε λευκή άμμο περικλεισμένη από λευκούς ασβεστολιθικούς γκρεμούς 200 μέτρων. Χωρίς πρόσβαση με δρόμο. Χωρίς ανέσεις. Μόνο το ναυάγιο, η άμμος και τα εξαιρετικά γαλάζια νερά. Κάθε επισκέπτης της Ζακύνθου πρέπει να τη δει.",
-      "type_el": "Λεπτή λευκή άμμος",
-      "depth_el": "Ρηχά έως μέτρια — αλλά κρύα, βαθιά νερά πέρα από την άμμο",
-      "facing_el": "Ανατολικό προσανατολισμό — περικλεισμένη από γκρεμούς, πάντα προστατευμένη",
-      "facilities_el": "Καμία στην ίδια την παραλία. Πρόσβαση μόνο με βάρκα από το Πόρτο Βρώμη ή τον Άγιο Νικόλαο (20 λεπτά).",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Navagio_beach_Zakynthos_3.jpg/1920px-Navagio_beach_Zakynthos_3.jpg",
+ "key": "zakynthos",
+ "name": "Zakynthos",
+ "subtitle": "Navagio shipwreck, turtle beaches and the Ionian's wildest scenery",
+ "intro": "Zakynthos punches above its weight for scenery. Navagio — the shipwreck beach enclosed by sheer white cliffs — is the most photographed beach in Greece. The island is also the main nesting ground for loggerhead sea turtles in the Mediterranean, with Laganas Bay protected as a national marine park. Beyond the tourist resorts, the north and west of the island are dramatic and wild.",
+ "when_to_visit": {
+  "summary": "Zakynthos has the iconic Shipwreck Beach (Navagio) and Caretta-Caretta turtles (Laganas Bay). The package tourism in Laganas is intense in August — avoid that whole strip. Best May-September if you base yourself in the north or the Vassilikos peninsula. The Caretta nesting season runs May-October; respectful boat tours are worth it.",
+  "summary_el": "Η Ζάκυνθος έχει την εμβληματική παραλία του Ναυαγίου και τις χελώνες Caretta-Caretta (στον κόλπο του Λαγανά). Ο οργανωμένος τουρισμός στον Λαγανά είναι έντονος τον Αύγουστο — απόφυγε όλη εκείνη τη ζώνη. Καλύτερα Μάιο–Σεπτέμβριο αν έχεις βάση τον βορρά ή τη χερσόνησο του Βασιλικού. Η περίοδος γέννας της Caretta κρατάει Μάιο–Οκτώβριο· οι βαρκάδες με σεβασμό αξίζουν.",
+  "months": [
+   {
+    "tag": "ok",
+    "why": "Quiet, mild",
+    "why_el": "Ήσυχα, βροχή"
+   },
+   {
+    "tag": "ok",
+    "why": "Mild, no swimming",
+    "why_el": "Ήπιο"
+   },
+   {
+    "tag": "great",
+    "why": "Wildflowers",
+    "why_el": "Αγριολούλουδα, ανθίζει"
+   },
+   {
+    "tag": "great",
+    "why": "Easter, mild",
+    "why_el": "Πάσχα, ησυχία"
+   },
+   {
+    "tag": "perfect",
+    "why": "Caretta nests",
+    "why_el": "Θάλασσα, Caretta"
+   },
+   {
+    "tag": "perfect",
+    "why": "Sea warming, Navagio still photographable without queueing for boats, Laganas not yet in full party mode. The honest best month for the island.",
+    "why_el": "Η θάλασσα ζεσταίνεται, το Ναυάγιο φωτογραφίζεται ακόμα χωρίς ουρά για βάρκες, ο Λαγανάς όχι ακόμα σε πλήρη πάρτι σεζόν. Ο πραγματικά καλύτερος μήνας."
+   },
+   {
+    "tag": "great",
+    "why": "Hot summer, Laganas starts its party season properly. Navagio crowded mid-day — go at sunrise for the photo. Resorts elsewhere full but functional.",
+    "why_el": "Ζεστό καλοκαίρι, ο Λαγανάς ξεκινάει τη σεζόν του στα καλά. Το Ναυάγιο γεμάτο μεσημεριάτικα — πήγαινε χαράματα για τη φωτογραφία. Τα άλλα θέρετρα γεμάτα αλλά λειτουργικά."
+   },
+   {
+    "tag": "great",
+    "why": "Peak of Laganas — loud, drunk, young. Navagio packed all day, boats queueing for the photo spot. Other resorts (Tsilivi, Alykes) busy but tamer. The east coast villages stay quiet.",
+    "why_el": "Κορύφωση Λαγανά — θόρυβος, μέθη, νεολαία. Το Ναυάγιο γεμάτο όλη μέρα, βάρκες σε ουρά για τη φωτογραφική στιγμή. Τα άλλα θέρετρα (Τσιλιβή, Αλυκές) πολυσύχναστα αλλά πιο μετρημένα. Τα ανατολικά χωριά μένουν ήσυχα."
+   },
+   {
+    "tag": "perfect",
+    "why": "Sea at peak, Laganas calming down, turtle nesting in full swing on the protected beaches. The reward month after the August chaos.",
+    "why_el": "Η θάλασσα στο μέγιστο, ο Λαγανάς ηρεμεί, η ωοτοκία των χελωνών σε πλήρη εξέλιξη στις προστατευμένες παραλίες. Ο μήνας-ανταμοιβή μετά το χάος του Αυγούστου."
+   },
+   {
+    "tag": "great",
+    "why": "Last swims",
+    "why_el": "Νερό ζεστό, δροσιά"
+   },
+   {
+    "tag": "great",
+    "why": "Mild, olives, quiet",
+    "why_el": "Ήπιο, ελιές, ήσυχα"
+   },
+   {
+    "tag": "ok",
+    "why": "Mild, locals",
+    "why_el": "Ήπιο"
+   }
+  ]
+ },
+ "itinerary": {
+  "title": "4-Day Zakynthos Itinerary",
+  "subtitle": "From the Venetian capital to the sea caves of Keri, the turtle beaches of Laganas and the unmissable Navagio shipwreck.",
+  "days": [
+   {
+    "day": 1,
+    "title": "Zakynthos Town & the East",
+    "color": "#1B4F8A",
+    "km": 20,
+    "drive_mins": 25,
+    "overnight": "Zakynthos Town",
+    "stops": [
+     {
+      "name": "Zakynthos Town",
+      "lat": 37.7867,
+      "lng": 20.9002,
+      "type": "city",
+      "time": "09:00",
+      "wiki": "https://www.google.com/maps/search/Zakynthos+Town",
+      "desc": "Rebuilt after the 1953 earthquake in Venetian style. Walk the waterfront, visit the Byzantine Museum with its rescued frescoes, and climb to Bochali castle for views over the bay.",
+      "name_el": "Πόλη Ζακύνθου",
+      "desc_el": "Ξαναχτισμένη μετά τον σεισμό του 1953 σε βενετσιάνικο στυλ. Περπάτησε την προκυμαία, επισκέψου το Βυζαντινό Μουσείο με τις διασωθείσες τοιχογραφίες του, και ανέβα στο κάστρο του Μπόχαλι για θέες πάνω από τον κόλπο.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Zakynthos_City_waterfront_houses_%28Strada_marina%29_and_Bochali_Hill%2C_Greece_01.jpg/1920px-Zakynthos_City_waterfront_houses_%28Strada_marina%29_and_Bochali_Hill%2C_Greece_01.jpg",
       "photo_credit": {
-        "artist": "kallerna",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Navagio_beach_Zakynthos_3.jpg",
-        "source": "Wikimedia Commons"
+       "artist": "Christaras A",
+       "license": "CC BY 3.0",
+       "license_url": "https://creativecommons.org/licenses/by/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Zakynthos_City_waterfront_houses_(Strada_marina)_and_Bochali_Hill,_Greece_01.jpg",
+       "source": "Wikimedia Commons"
       }
-    },
-    {
+     },
+     {
+      "name": "Bochali Castle",
+      "lat": 37.7897,
+      "lng": 20.8921,
+      "type": "castle",
+      "time": "10:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJM-yIkdJHZxMRuJQuJowIrMw",
+      "desc": "Venetian castle above the town with panoramic views over Zakynthos harbour, the Ionian Sea and the Peloponnese mainland. The ruins are extensive and free to enter.",
+      "name_el": "Κάστρο Μπόχαλι",
+      "desc_el": "Βενετσιάνικο κάστρο πάνω από την πόλη με πανοραμικές θέες πάνω από το λιμάνι της Ζακύνθου, το Ιόνιο Πέλαγος και την Πελοπόννησο. Τα ερείπια είναι εκτεταμένα και η είσοδος δωρεάν."
+     },
+     {
+      "name": "Byzantine Museum",
+      "lat": 37.7873,
+      "lng": 20.8996,
+      "type": "museum",
+      "time": "11:30",
+      "wiki": "https://www.google.com/maps/search/Byzantine+Museum+Zakynthos",
+      "desc": "Outstanding collection of Byzantine and post-Byzantine icons and frescoes rescued from churches destroyed in the 1953 earthquake. One of the finest Byzantine collections in Greece.",
+      "name_el": "Βυζαντινό Μουσείο",
+      "desc_el": "Εξαιρετική συλλογή βυζαντινών και μεταβυζαντινών εικόνων και τοιχογραφιών διασωθεισών από εκκλησίες που καταστράφηκαν στον σεισμό του 1953. Μία από τις καλύτερες βυζαντινές συλλογές της Ελλάδας.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Byzantine_Museum_%E2%80%93_Zakynthos_%E2%80%93_Greek_%E2%80%93_01.jpg/1920px-Byzantine_Museum_%E2%80%93_Zakynthos_%E2%80%93_Greek_%E2%80%93_01.jpg",
+      "photo_credit": {
+       "artist": "Maesi64",
+       "license": "CC0",
+       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Byzantine_Museum_%E2%80%93_Zakynthos_%E2%80%93_Greek_%E2%80%93_01.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Tsilivi Beach",
+      "lat": 37.8166,
+      "lng": 20.8689,
+      "type": "beach",
+      "time": "16:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJHwFayGlGZxMRdDD77zR5EbE",
+      "desc": "Sandy family beach on the east coast near the town. Calm, shallow, well organised. Good for a first-day swim.",
+      "name_el": "Παραλία Τσιλιβί",
+      "desc_el": "Αμμώδης οικογενειακή παραλία στην ανατολική ακτή κοντά στην πόλη. Ήρεμη, ρηχή, καλά οργανωμένη. Καλή για μπάνιο της πρώτης μέρας.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Tsilivi_Beach_%2C_Mango_Beach_Bar_-_panoramio.jpg/1920px-Tsilivi_Beach_%2C_Mango_Beach_Bar_-_panoramio.jpg",
+      "photo_credit": {
+       "artist": "KrauS",
+       "license": "CC BY 3.0",
+       "license_url": "https://creativecommons.org/licenses/by/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Tsilivi_Beach_,_Mango_Beach_Bar_-_panoramio.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Dinner in Zakynthos Town",
+      "lat": 37.7867,
+      "lng": 20.9002,
+      "type": "city",
+      "time": "20:30",
+      "wiki": null,
+      "desc": "Short drive back to Zakynthos Town (about 10 minutes). Solomos Square is the evening gathering spot — perfect for a stroll along the seafront before dinner.",
+      "name_el": "Δείπνο στη Ζάκυνθο",
+      "desc_el": "Σύντομη διαδρομή στη Ζάκυνθο (περίπου 10 λεπτά). Η πλατεία Σολωμού είναι το βραδινό σημείο συνάντησης — τέλεια για μια βόλτα στην παραλία πριν το δείπνο."
+     }
+    ],
+    "title_el": "Χώρα Ζακύνθου & η Ανατολή",
+    "overnight_el": "Ζάκυνθος",
+    "nightlife": "Zakynthos Town is the grown-up alternative to Laganas. The bars around <a href=\"https://www.google.com/maps/search/Agios+Markos+Square+Zakynthos\" target=\"_blank\" rel=\"noopener\">Agios Markos Square</a> — <a href=\"https://www.google.com/maps/search/Base+Bar+Zakynthos\" target=\"_blank\" rel=\"noopener\">Base</a> and <a href=\"https://www.google.com/maps/search/Cul+de+Sac+Zakynthos\" target=\"_blank\" rel=\"noopener\">Cul de Sac</a> — are where locals drink; up on <a href=\"https://www.google.com/maps/search/Bochali+Zakynthos\" target=\"_blank\" rel=\"noopener\">Bohali</a> hill, tavernas serve kantades serenades over the town lights.",
+    "nightlife_el": "Η πόλη της Ζακύνθου είναι η πιο ώριμη εναλλακτική του Λαγανά. Τα μπαρ γύρω από την <a href=\"https://www.google.com/maps/search/Agios+Markos+Square+Zakynthos\" target=\"_blank\" rel=\"noopener\">Πλατεία Αγίου Μάρκου</a> — <a href=\"https://www.google.com/maps/search/Base+Bar+Zakynthos\" target=\"_blank\" rel=\"noopener\">Base</a> και <a href=\"https://www.google.com/maps/search/Cul+de+Sac+Zakynthos\" target=\"_blank\" rel=\"noopener\">Cul de Sac</a> — είναι εκεί που πίνουν οι ντόπιοι· πάνω στο <a href=\"https://www.google.com/maps/search/Bochali+Zakynthos\" target=\"_blank\" rel=\"noopener\">Μπόχαλη</a>, ταβέρνες με καντάδες και θέα τα φώτα της πόλης.",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Zakynthos Town",
+      "area_el": "Πόλη Ζακύνθου",
+      "desc": "<a href=\"https://www.google.com/maps/search/Malanos+Zakynthos\" target=\"_blank\" rel=\"noopener\">Malanos</a> is the beloved old-school taverna — barrel wine, grills and Zakynthian dishes at honest prices. For a special dinner instead, <a href=\"https://www.google.com/maps/search/Prosilio+Zakynthos+Town\" target=\"_blank\" rel=\"noopener\">Prosilio</a> by Solomos Square is the island's fine-dining garden. Away from the resorts, <a href=\"https://www.google.com/maps/search/Ampelostrates+Kiliomenos+Zakynthos\" target=\"_blank\" rel=\"noopener\">Ampelostrates</a> at Kiliomenos is a farm taverna in a clearing 16 km inland — the Maroudas family cook their own produce, the tsigaridopites and the sartsa beef. €25–30, open all year.",
+      "desc_el": "Το <a href=\"https://www.google.com/maps/search/Malanos+Zakynthos\" target=\"_blank\" rel=\"noopener\">Malanos</a> είναι η αγαπημένη παλιακή ταβέρνα — βαρελίσιο κρασί, ψητά και ζακυνθινά πιάτα σε τίμιες τιμές. Για ένα ξεχωριστό δείπνο, το <a href=\"https://www.google.com/maps/search/Prosilio+Zakynthos+Town\" target=\"_blank\" rel=\"noopener\">Prosilio</a> δίπλα στην Πλατεία Σολωμού είναι ο κήπος fine dining του νησιού. Μακριά από τα τουριστικά, οι <a href=\"https://www.google.com/maps/search/Ampelostrates+Kiliomenos+Zakynthos\" target=\"_blank\" rel=\"noopener\">Αμπελοστράτες</a> στον Κοιλιωμένο είναι αγροτική ταβέρνα σε ξέφωτο, 16 χλμ. από την πόλη — η οικογένεια Μαρούδα μαγειρεύει δικά της προϊόντα, τσιγαριδόπιτες και μοσχάρι σάρτσα. €25–30, ανοιχτά όλο τον χρόνο.",
+      "after": "Byzantine Museum"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "title": "Laganas & the Turtle Bays",
+    "color": "#C0522A",
+    "km": 35,
+    "drive_mins": 40,
+    "overnight": "Zakynthos Town",
+    "stops": [
+     {
       "name": "Laganas Beach",
-      "wiki": "https://www.google.com/maps/search/Laganas+Beach+Zakynthos",
-      "rating": 5,
-      "type": "Fine golden sand",
-      "length": "9 km",
-      "depth": "Shallow — very gradual, perfect for families",
-      "facing": "South-facing — calm, warm water",
-      "facilities": "Fully developed resort beach. National Marine Park restrictions apply — no boats after 19:00, no beach access after dark June-August (turtle nesting).",
-      "desc": "The longest beach in the Ionian islands and the most important loggerhead turtle nesting site in the Mediterranean. A unique combination — excellent swimming and sunbathing by day, turtle nesting by night. The marine park rules are strictly enforced.",
-      "commons": null,
       "lat": 37.725,
       "lng": 20.8681,
+      "type": "beach",
+      "time": "09:00",
+      "wiki": "https://www.google.com/maps/search/Laganas+Beach+Zakynthos",
+      "desc": "Long sandy beach and the main nesting area for loggerhead sea turtles in the Mediterranean. Part of the National Marine Park. Do not go on the beach after dark from June-August — turtles are nesting.",
       "name_el": "Παραλία Λαγανά",
-      "desc_el": "Η μακρύτερη παραλία των Επτανήσων και η σημαντικότερη περιοχή φωλιάσματος χελωνών Caretta caretta στη Μεσόγειο. Μοναδικός συνδυασμός — εξαιρετική κολύμβηση και ηλιοθεραπεία την ημέρα, φώλιασμα χελωνών τη νύχτα. Οι κανόνες του θαλάσσιου πάρκου εφαρμόζονται αυστηρά.",
-      "type_el": "Λεπτή χρυσή άμμος",
-      "depth_el": "Ρηχά — πολύ σταδιακά, τέλεια για οικογένειες",
-      "facing_el": "Νότιο προσανατολισμό — ήρεμα, ζεστά νερά",
-      "facilities_el": "Πλήρως ανεπτυγμένη παραλία θερέτρου. Ισχύουν περιορισμοί Εθνικού Θαλάσσιου Πάρκου — χωρίς σκάφη μετά τις 19:00, χωρίς πρόσβαση στην παραλία μετά το σκοτάδι Ιούνιο-Αύγουστο (φώλιασμα χελωνών).",
+      "desc_el": "Μακρά αμμώδης παραλία και κύρια περιοχή φωλιάσματος των χελωνών Caretta caretta στη Μεσόγειο. Μέρος του Εθνικού Θαλάσσιου Πάρκου. Μην πας στην παραλία μετά το σκοτάδι από τον Ιούνιο έως τον Αύγουστο — οι χελώνες φωλιάζουν.",
       "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Beach_in_Laganas%2C_Zakynthos%2C_Greece.jpg/1920px-Beach_in_Laganas%2C_Zakynthos%2C_Greece.jpg",
       "photo_credit": {
-        "artist": "Σαλαμούρας Σπύρος",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Beach_in_Laganas,_Zakynthos,_Greece.jpg",
-        "source": "Wikimedia Commons"
+       "artist": "Σαλαμούρας Σπύρος",
+       "license": "CC BY-SA 3.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Beach_in_Laganas,_Zakynthos,_Greece.jpg",
+       "source": "Wikimedia Commons"
       }
-    },
-    {
-      "name": "Gerakas Beach",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJj06U65s3ZxMRu3nX9KS_rVQ",
-      "rating": 4,
-      "type": "Fine sand",
-      "length": "600 m",
-      "depth": "Shallow — calm, clear water",
-      "facing": "South-facing — warm, sheltered",
-      "facilities": "Basic: small café, some sunbeds. Beach closes at sunset (turtle nesting area).",
-      "desc": "A beautiful sandy beach at the southeastern tip of Zakynthos, one of the most important turtle nesting beaches in Greece. Clear, calm water and a dramatic headland setting. The beach closes at sunset from June onwards — turtles have priority.",
-      "commons": null,
-      "lat": 37.7093,
-      "lng": 20.9863,
-      "name_el": "Παραλία Γέρακα",
-      "desc_el": "Μια όμορφη αμμώδης παραλία στο νοτιοανατολικό άκρο της Ζακύνθου, μία από τις σημαντικότερες παραλίες φωλιάσματος χελωνών στην Ελλάδα. Διαυγή, ήρεμα νερά και δραματικό σκηνικό ακρωτηρίου. Η παραλία κλείνει στο ηλιοβασίλεμα από τον Ιούνιο — οι χελώνες έχουν προτεραιότητα.",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Ρηχά — ήρεμα, διαυγή νερά",
-      "facing_el": "Νότιο προσανατολισμό — ζεστή, προστατευμένη",
-      "facilities_el": "Βασικές: μικρό café, κάποιες ξαπλώστρες. Η παραλία κλείνει στο ηλιοβασίλεμα (περιοχή φωλιάσματος χελωνών).",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/White_Sandstone_Mountains_Gerakas_4.jpg/1920px-White_Sandstone_Mountains_Gerakas_4.jpg",
+     },
+     {
+      "name": "National Marine Park",
+      "lat": 37.69,
+      "lng": 20.88,
+      "type": "nature",
+      "time": "10:30",
+      "wiki": "https://www.google.com/maps/search/National+Marine+Park+Zakynthos",
+      "desc": "The oldest marine park in Greece, protecting the turtle nesting grounds. Boat trips from Laganas allow you to watch turtles swimming in the bay — operators must keep distance.",
+      "name_el": "Εθνικό Θαλάσσιο Πάρκο",
+      "desc_el": "Το παλαιότερο θαλάσσιο πάρκο της Ελλάδας, προστατεύει τους τόπους φωλιάσματος των χελωνών. Βαρκάδες από τον Λαγανά σου επιτρέπουν να παρακολουθήσεις τις χελώνες να κολυμπούν στον κόλπο — οι επιχειρήσεις πρέπει να κρατούν απόσταση.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/National_Marine_Park_of_Zakynthos_3.jpeg/1920px-National_Marine_Park_of_Zakynthos_3.jpeg",
       "photo_credit": {
-        "artist": "kallerna",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:White_Sandstone_Mountains_Gerakas_4.jpg",
-        "source": "Wikimedia Commons"
+       "artist": "Newklear007",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:National_Marine_Park_of_Zakynthos_3.jpeg",
+       "source": "Wikimedia Commons"
       }
-    },
-    {
-      "name": "Porto Zoro Beach",
+     },
+     {
+      "name": "Keri Village",
+      "lat": 37.6786,
+      "lng": 20.8077,
+      "type": "village",
+      "time": "13:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJL9W-3ow7ZxMRXb9dcu4ZRHs",
+      "desc": "Traditional village at the southern tip with a lighthouse and extraordinary views of the sea caves below. Lunch at the village taverna.",
+      "name_el": "Χωριό Κερί",
+      "desc_el": "Παραδοσιακό χωριό στο νότιο άκρο με φάρο και εξαιρετικές θέες στις θαλάσσιες σπηλιές κάτω. Μεσημεριανό στην ταβέρνα του χωριού.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Keri_majakas.jpg/1920px-Keri_majakas.jpg",
+      "photo_credit": {
+       "artist": "Andrus Uuetalu",
+       "license": "CC BY-SA 3.0 ee",
+       "license_url": "https://creativecommons.org/licenses/by-sa/3.0/ee/deed.en",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Keri_majakas.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Keri Sea Caves",
+      "lat": 37.6483,
+      "lng": 20.8402,
+      "type": "nature",
+      "time": "15:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJQ--dzaQ7ZxMRwfjjd_pGiHo",
+      "desc": "Dramatic sea caves and arches at the southernmost point of Zakynthos. Boat trips from Keri harbour take you through the caves and to the Blue Cave for swimming.",
+      "name_el": "Θαλάσσιες Σπηλιές Κερίου",
+      "desc_el": "Δραματικές θαλάσσιες σπηλιές και αψίδες στο νοτιότερο σημείο της Ζακύνθου. Βαρκάδες από το λιμάνι του Κερίου σε μεταφέρουν μέσα από τις σπηλιές και στη Γαλάζια Σπηλιά για κολύμπι."
+     },
+     {
+      "name": "Marathonisi Turtle Island",
+      "lat": 37.6835,
+      "lng": 20.87,
+      "type": "nature",
+      "time": "17:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJuRAC1Y85ZxMRrNy7VHmjCPs",
+      "desc": "Small uninhabited island in Laganas Bay — one of the main turtle nesting beaches. Day trips by boat allow you to swim near the island. No landing on the beach.",
+      "name_el": "Νησί Χελωνών Μαραθονήσι",
+      "desc_el": "Μικρό ακατοίκητο νησί στον κόλπο Λαγανά — μία από τις κύριες παραλίες φωλιάσματος χελωνών. Ημερήσιες εκδρομές με βάρκα σου επιτρέπουν να κολυμπήσεις κοντά στο νησί. Χωρίς αποβίβαση στην παραλία.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Turtle_Island_%2821662194631%29.jpg/1920px-Turtle_Island_%2821662194631%29.jpg",
+      "photo_credit": {
+       "artist": "Tony Hisgett from Birmingham, UK",
+       "license": "CC BY 2.0",
+       "license_url": "https://creativecommons.org/licenses/by/2.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Turtle_Island_(21662194631).jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Dinner in Zakynthos Town",
+      "lat": 37.7867,
+      "lng": 20.9002,
+      "type": "city",
+      "time": "20:30",
       "wiki": null,
-      "rating": 4,
-      "type": "Fine sand and pebble",
-      "length": "400 m",
-      "depth": "Medium — clear water, some rocks",
-      "facing": "East-facing — calm Ionian water",
-      "facilities": "Good: sunbeds, beach bar, taverna nearby.",
-      "desc": "One of the best beaches on the east coast — clear turquoise water, organised facilities and far fewer crowds than the main resort beaches. The rocks at each end are good for snorkelling.",
-      "commons": null,
-      "lat": 37.7396,
-      "lng": 20.9597,
-      "name_el": "Παραλία Πόρτο Ζόρο",
-      "desc_el": "Μία από τις καλύτερες παραλίες της ανατολικής ακτής — διαυγή τιρκουάζ νερά, οργανωμένες ανέσεις και πολύ λιγότερα πλήθη από τις κύριες παραλίες θερέτρων. Τα βράχια σε κάθε άκρη είναι καλά για snorkelling.",
-      "type_el": "Λεπτή άμμος και βότσαλο",
-      "depth_el": "Μέτρια — διαυγή νερά, κάποια βράχια",
-      "facing_el": "Ανατολικό προσανατολισμό — ήρεμα ιόνια νερά",
-      "facilities_el": "Καλές: ξαπλώστρες, beach bar, ταβέρνα κοντά."
-    },
-    {
-      "name": "Banana Beach (Agios Nikolaos)",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ8fvv2xw2ZxMRZ-5_H6mLs_g",
-      "rating": 4,
-      "type": "Fine sand",
-      "length": "1 km",
-      "depth": "Shallow — safe for children",
-      "facing": "East-facing — calm, warm",
-      "facilities": "Fully organised: sunbeds, water sports, beach bars, showers.",
-      "desc": "Zakynthos's most popular family beach — long, sandy, shallow and well-organised. The banana boat and water sports make it lively. Not the most beautiful setting on the island but excellent for families with young children.",
-      "commons": null,
-      "lat": 37.7291,
-      "lng": 20.9789,
-      "name_el": "Παραλία Μπανάνα (Άγιος Νικόλαος)",
-      "desc_el": "Η πιο δημοφιλής οικογενειακή παραλία της Ζακύνθου — μακρά, αμμώδης, ρηχή και καλά οργανωμένη. Το banana boat και τα θαλάσσια σπορ την κάνουν ζωντανή. Όχι το ομορφότερο σκηνικό στο νησί αλλά εξαιρετική για οικογένειες με μικρά παιδιά.",
-      "type_el": "Λεπτή άμμος",
-      "depth_el": "Ρηχά — ασφαλές για παιδιά",
-      "facing_el": "Ανατολικό προσανατολισμό — ήρεμα, ζεστά",
-      "facilities_el": "Πλήρως οργανωμένη: ξαπλώστρες, θαλάσσια σπορ, beach bars, ντους."
-    }
-  ],
-  "name_el": "Ζάκυνθος",
-  "name_accusative_el": "Ζάκυνθο",
-  "name_genitive_el": "Ζακύνθου",
-  "gender_el": "f",
-  "subtitle_el": "Ναυάγιο, παραλίες χελωνών και τα πιο άγρια τοπία του Ιονίου",
-  "intro_el": "Η Ζάκυνθος ξεπερνά το βάρος της σε τοπία. Το Ναυάγιο — η παραλία του ναυαγίου περικλεισμένη από κάθετους λευκούς γκρεμούς — είναι η πιο φωτογραφημένη παραλία της Ελλάδας. Το νησί είναι επίσης ο κύριος τόπος φωλιάσματος των χελωνών Caretta caretta στη Μεσόγειο, με τον κόλπο Λαγανά προστατευμένο ως εθνικό θαλάσσιο πάρκο. Πέρα από τα τουριστικά θέρετρα, ο βορράς και η δύση του νησιού είναι δραματικά και άγρια.",
-  "specialties": [
-    {
-      "name": "Mandolato of Zakynthos",
-      "name_el": "Μαντολάτο Ζακύνθου",
-      "desc": "The Zakynthian version of the Ionian almond-honey nougat — many consider this the original of all Ionian mandolato. Buy at the central market in Zakynthos town.",
-      "desc_el": "Η ζακυνθινή εκδοχή του ιονικού μαντολάτου — πολλοί το θεωρούν το πρωτότυπο όλων των ιονικών μαντολάτων. Στην κεντρική αγορά της Χώρας."
-    },
-    {
-      "name": "Pastitsada Zakynthou",
-      "name_el": "Παστιτσάδα Ζακύνθου",
-      "desc": "Slow-cooked rooster (or beef) in spiced tomato sauce, served over thick pasta. Different from the Corfu version — sweeter, with more cinnamon. Find at island tavernas.",
-      "desc_el": "Σιγομαγειρεμένος κόκορας (ή μοσχαράκι) σε ντομάτα με μπαχάρια, σερβίρεται με χοντρά ζυμαρικά. Διαφέρει από την κερκυραϊκή — πιο γλυκιά, με περισσότερη κανέλα. Σε ταβέρνες του νησιού."
-    },
-    {
-      "name": "Ladotyri",
-      "name_el": "Λαδοτύρι",
-      "desc": "Hard sheep's-milk cheese aged in olive oil — Zakynthian specialty. Sharp, salty, eaten with bread or grated over pasta.",
-      "desc_el": "Σκληρό πρόβειο τυρί ωριμασμένο σε ελαιόλαδο — ζακυνθινή σπεσιαλιτέ. Πικάντικο, αλμυρό, με ψωμί ή τριμμένο πάνω σε ζυμαρικά."
-    }
-  ],
-  "festivals": [
-    {
-      "name": "Saint Dionysios",
-      "name_el": "Άγιος Διονύσιος",
-      "when": "24 August (and 17 December)",
-      "when_el": "24 Αυγούστου (και 17 Δεκεμβρίου)",
-      "desc": "Patron saint of Zakynthos. Procession of his relics from his church through the streets of Zakynthos town. The August event coincides with peak season; the December one is for locals.",
-      "desc_el": "Προστάτης άγιος της Ζακύνθου. Λιτανεία των λειψάνων του από τον ναό μέσα από τους δρόμους της Χώρας. Η αυγουστιάτικη γιορτή συμπίπτει με την αιχμή της σεζόν· η δεκεμβριανή είναι για τους ντόπιους.",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Saint_Dionysios_Cathedral_%E2%80%93_Zakynthos_%E2%80%93_Greek_%E2%80%93_01.jpg/1920px-Saint_Dionysios_Cathedral_%E2%80%93_Zakynthos_%E2%80%93_Greek_%E2%80%93_01.jpg",
+      "desc": "Drive back from the Keri/Laganas area to Zakynthos Town (about 30 minutes). After a day with the turtles, the waterfront tavernas serve up the freshest seafood.",
+      "name_el": "Δείπνο στη Ζάκυνθο",
+      "desc_el": "Επιστροφή από την περιοχή Κερί/Λαγανά στη Ζάκυνθο (περίπου 30 λεπτά). Μετά μια μέρα με τις χελώνες, οι ταβέρνες της παραλίας σερβίρουν τα πιο φρέσκα θαλασσινά."
+     }
+    ],
+    "title_el": "Λαγανάς & οι Κόλποι των Χελωνών",
+    "overnight_el": "Ζάκυνθος",
+    "nightlife": "This is the big one. The <a href=\"https://www.google.com/maps/search/Laganas+Strip+Zakynthos\" target=\"_blank\" rel=\"noopener\">Laganas Strip</a> is a kilometre of full-on clubs — <a href=\"https://www.google.com/maps/search/Rescue+Club+Zante\" target=\"_blank\" rel=\"noopener\">Rescue</a> (the island's biggest, 2,000 capacity), 30-year institution <a href=\"https://www.google.com/maps/search/Cherry+Bay+Zante\" target=\"_blank\" rel=\"noopener\">Cherry Bay</a>, and <a href=\"https://www.google.com/maps/search/Zeros+Club+Zante\" target=\"_blank\" rel=\"noopener\">Zeros</a> for foam parties. Commercial, loud, and exactly what it promises; nothing starts before midnight.",
+    "nightlife_el": "Αυτή είναι η μεγάλη βραδιά. Ο <a href=\"https://www.google.com/maps/search/Laganas+Strip+Zakynthos\" target=\"_blank\" rel=\"noopener\">Strip του Λαγανά</a> είναι ένα χιλιόμετρο γεμάτο clubs — <a href=\"https://www.google.com/maps/search/Rescue+Club+Zante\" target=\"_blank\" rel=\"noopener\">Rescue</a> (το μεγαλύτερο του νησιού, χωρητικότητα 2.000), το 30χρονο <a href=\"https://www.google.com/maps/search/Cherry+Bay+Zante\" target=\"_blank\" rel=\"noopener\">Cherry Bay</a>, και το <a href=\"https://www.google.com/maps/search/Zeros+Club+Zante\" target=\"_blank\" rel=\"noopener\">Zeros</a> για foam parties. Εμπορικό, δυνατό, ακριβώς αυτό που υπόσχεται· τίποτα δεν αρχίζει πριν τα μεσάνυχτα."
+   },
+   {
+    "day": 3,
+    "title": "Navagio Shipwreck",
+    "color": "#5A7A3A",
+    "km": 45,
+    "drive_mins": 55,
+    "overnight": "Zakynthos Town",
+    "stops": [
+     {
+      "name": "Navagio Viewpoint",
+      "lat": 37.8618,
+      "lng": 20.6256,
+      "type": "nature",
+      "time": "09:00",
+      "wiki": "https://www.google.com/maps/search/Navagio+Viewpoint+Zakynthos",
+      "desc": "The most spectacular viewpoint in the Ionian — a sheer 200m drop to the shipwreck beach enclosed by white cliffs. Go early for perfect light and fewer people. Fencing at the edge — don't lean over.",
+      "name_el": "Σημείο Θέασης Ναυαγίου",
+      "desc_el": "Το πιο εντυπωσιακό σημείο θέασης στο Ιόνιο — κάθετη πτώση 200 μέτρων στην παραλία του ναυαγίου περικλεισμένη από λευκούς γκρεμούς. Πήγαινε νωρίς για τέλειο φως και λιγότερο κόσμο. Φράχτη στην άκρη — μη σκύβεις.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Navagio_beach_Zakynthos_3.jpg/1920px-Navagio_beach_Zakynthos_3.jpg",
       "photo_credit": {
-        "artist": "Maesi64",
-        "license": "CC BY 3.0",
-        "license_url": "https://creativecommons.org/licenses/by/3.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Saint_Dionysios_Cathedral_%E2%80%93_Zakynthos_%E2%80%93_Greek_%E2%80%93_01.jpg",
-        "source": "Wikimedia Commons"
+       "artist": "kallerna",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Navagio_beach_Zakynthos_3.jpg",
+       "source": "Wikimedia Commons"
+      },
+      "drive": "≈40 min north of Zakynthos Town",
+      "drive_el": "≈40 λεπτά βόρεια της πόλης"
+     },
+     {
+      "name": "Navagio Shipwreck Beach",
+      "lat": 37.8595,
+      "lng": 20.6249,
+      "type": "beach",
+      "time": "10:30",
+      "wiki": "https://www.google.com/maps/search/Navagio+Shipwreck+Beach+Zakynthos",
+      "desc": "Greece's most photographed beach — the rusting wreck of the Panagiotis (stranded 1980) on white sand between sheer white cliffs. Accessible only by boat from Porto Vromi or Agios Nikolaos (20 min). Gets very crowded — go before noon.",
+      "name_el": "Παραλία Ναυαγίου",
+      "desc_el": "Η πιο φωτογραφημένη παραλία της Ελλάδας — το σκουριασμένο ναυάγιο του Παναγιώτη (προσάραξε το 1980) σε λευκή άμμο μεταξύ κάθετων λευκών γκρεμών. Προσβάσιμη μόνο με βάρκα από το Πόρτο Βρώμη ή τον Άγιο Νικόλαο (20 λεπτά). Γεμίζει πολύ — πήγαινε πριν το μεσημέρι.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Navagio_beach_Zakynthos_3.jpg/1920px-Navagio_beach_Zakynthos_3.jpg",
+      "photo_credit": {
+       "artist": "kallerna",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Navagio_beach_Zakynthos_3.jpg",
+       "source": "Wikimedia Commons"
       }
-    }
+     },
+     {
+      "name": "Blue Caves",
+      "lat": 37.9303,
+      "lng": 20.7053,
+      "type": "nature",
+      "time": "13:30",
+      "wiki": "https://www.google.com/maps/search/Blue+Caves+Zakynthos",
+      "desc": "Sea caves at Cape Skinari where sunlight refracting through the turquoise water turns the caves an electric blue. Boat trips from Agios Nikolaos. The colour is best on sunny mornings.",
+      "name_el": "Γαλάζιες Σπηλιές",
+      "desc_el": "Θαλάσσιες σπηλιές στο Ακρωτήριο Σκινάρι όπου το φως του ήλιου διαθλώμενο μέσα από τα τιρκουάζ νερά κάνει τις σπηλιές να λάμπουν ηλεκτρικό μπλε. Βαρκάδες από τον Άγιο Νικόλαο. Το χρώμα είναι καλύτερο σε ηλιόλουστα πρωινά.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Wik6_Zakynthos_Blue_Caves.jpg/1920px-Wik6_Zakynthos_Blue_Caves.jpg",
+      "photo_credit": {
+       "artist": "Ρένια Χατζηλευτέρη",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Wik6_Zakynthos_Blue_Caves.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Volimes Village",
+      "lat": 37.8746,
+      "lng": 20.6582,
+      "type": "village",
+      "time": "16:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJD4AhBNZrZxMRetej0rLy5Fg",
+      "desc": "Traditional mountain village in the north of the island. Honey, textiles and local produce sold from the roadside. The best local products on the island come from here.",
+      "name_el": "Χωριό Βολίμες",
+      "desc_el": "Παραδοσιακό ορεινό χωριό στον βορρά του νησιού. Μέλι, υφαντά και τοπικά προϊόντα πωλούνται στους δρόμους. Τα καλύτερα τοπικά προϊόντα του νησιού έρχονται από εδώ.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Zakynthos_flora_%2835914063705%29.jpg",
+      "photo_credit": {
+       "artist": "David Short from Windsor, UK",
+       "license": "CC BY 2.0",
+       "license_url": "https://creativecommons.org/licenses/by/2.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Zakynthos_flora_(35914063705).jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Mountain road back to Zakynthos Town",
+      "lat": 37.7867,
+      "lng": 20.9002,
+      "type": "city",
+      "time": "21:00",
+      "wiki": null,
+      "desc": "Drive back from Volimes to Zakynthos Town (about 1 hour through the central mountain road). The route passes through pretty villages — stop at Anafonitria monastery if there's daylight.",
+      "name_el": "Ορεινός δρόμος πίσω στη Ζάκυνθο",
+      "desc_el": "Επιστροφή από τα Βολίμες στη Ζάκυνθο (περίπου 1 ώρα μέσω του κεντρικού ορεινού δρόμου). Η διαδρομή περνά από όμορφα χωριά — σταματήστε στο μοναστήρι Αναφωνήτριας αν έχει ακόμα φως."
+     }
+    ],
+    "title_el": "Ναυάγιο",
+    "overnight_el": "Ζάκυνθος",
+    "nightlife": "An easier night after Laganas: sunset drinks up at <a href=\"https://www.google.com/maps/search/Bochali+Zakynthos\" target=\"_blank\" rel=\"noopener\">Bohali</a> over the bay, then a long dinner in town. Save what's left of you for the road tomorrow.",
+    "nightlife_el": "Πιο χαλαρή βραδιά μετά τον Λαγανά: ποτό στο ηλιοβασίλεμα πάνω στο <a href=\"https://www.google.com/maps/search/Bochali+Zakynthos\" target=\"_blank\" rel=\"noopener\">Μπόχαλη</a> με θέα τον κόλπο, και μετά μακρύ δείπνο στην πόλη. Κράτα δυνάμεις για τον δρόμο αύριο."
+   },
+   {
+    "day": 4,
+    "title": "West Coast & Departure",
+    "color": "#C4962A",
+    "km": 40,
+    "drive_mins": 50,
+    "overnight": null,
+    "stops": [
+     {
+      "name": "Xigia Beach",
+      "lat": 37.8678,
+      "lng": 20.7351,
+      "type": "beach",
+      "time": "09:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJJyOZwiFCZxMRoAbk8Jib040",
+      "desc": "Small pebble beach where natural sulphur springs bubble up through the seabed — the water has a slightly warm, mineral quality. Unusual and memorable.",
+      "name_el": "Παραλία Ξίγια",
+      "desc_el": "Μικρή βότσαλη παραλία όπου φυσικές πηγές θείου αναβλύζουν από τον βυθό — τα νερά έχουν ελαφρώς ζεστή, μεταλλική ποιότητα. Ασυνήθιστη και αξιομνημόνευτη.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Xigia_sulfur_beach.jpg/1920px-Xigia_sulfur_beach.jpg",
+      "photo_credit": {
+       "artist": "kallerna",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Xigia_sulfur_beach.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Makris Gialos Beach",
+      "lat": 37.8783,
+      "lng": 20.726,
+      "type": "beach",
+      "time": "11:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJhwAJJBJCZxMR9CuyWOSbsKA",
+      "desc": "Long sandy west-coast beach — less busy than the east coast resorts, with clearer water and better scenery.",
+      "name_el": "Παραλία Μακρύς Γιαλός",
+      "desc_el": "Μακρά αμμώδης παραλία της δυτικής ακτής — λιγότερο πολυσύχναστη από τα θέρετρα της ανατολικής ακτής, με καθαρότερα νερά και καλύτερα τοπία."
+     },
+     {
+      "name": "Alykes Beach",
+      "lat": 37.8406,
+      "lng": 20.7739,
+      "type": "beach",
+      "time": "13:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJEWmUMG5BZxMRBTSY4Z6hsgI",
+      "desc": "Long sandy beach with salt lakes behind it — the name means 'salt pans'. Calm water, family-friendly, and one of the better beaches near the resort strip.",
+      "name_el": "Παραλία Αλυκές",
+      "desc_el": "Μακρά αμμώδης παραλία με αλυκές πίσω — το όνομα σημαίνει \"αλυκές\". Ήρεμα νερά, οικογενειακή, και μία από τις καλύτερες παραλίες κοντά στη ζώνη θερέτρων.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Tavern_at_Alykes_Beach%2C_Zakynthos%2C_Greece_01.jpg/1920px-Tavern_at_Alykes_Beach%2C_Zakynthos%2C_Greece_01.jpg",
+      "photo_credit": {
+       "artist": "Christaras A",
+       "license": "CC BY-SA 3.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Tavern_at_Alykes_Beach,_Zakynthos,_Greece_01.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
+      "name": "Zakynthos Town — Departure",
+      "lat": 37.7541,
+      "lng": 20.8864,
+      "type": "city",
+      "time": "16:00",
+      "wiki": null,
+      "desc": "Return to Zakynthos Town for ferry or flight. Final coffee at the waterfront Plateia Solomou.",
+      "name_el": "Πόλη Ζακύνθου — Αναχώρηση",
+      "desc_el": "Επιστροφή στην Πόλη της Ζακύνθου για πλοίο ή πτήση. Τελευταίος καφές στην παραλιακή Πλατεία Σολωμού."
+     }
+    ],
+    "title_el": "Δυτική Ακτή & Αναχώρηση"
+   }
   ],
-  "getting_there": {
-    "pills": [
-      "✈ Airport (intl charter)",
-      "⛵ Kyllini 1h",
-      "€10–14"
-    ],
-    "pills_el": [
-      "✈ Αεροδρόμιο (charter)",
-      "⛵ Κυλλήνη 1 ώρα",
-      "€10–14"
-    ],
-    "summary": "Heavy summer charter airport — Aegean, Sky Express, Ryanair, charters from across Europe. No Piraeus ferry — reach Zakynthos via Kyllini (Peloponnese, ~3h drive from Athens). Frequent crossings.",
-    "summary_el": "Πολύ ενεργό αεροδρόμιο charter — Aegean, Sky Express, Ryanair, charters από όλη την Ευρώπη. Δεν υπάρχει πλοίο από Πειραιά — προσέγγιση μέσω Κυλλήνης (Πελοπόννησος, ~3 ώρες από Αθήνα). Συχνά δρομολόγια.",
-    "tip": "Ryanair runs cheap direct flights from London/Manchester in summer — check before booking via Athens.",
-    "tip_el": "Η Ryanair έχει φθηνές απευθείας από Λονδίνο/Μάντσεστερ το καλοκαίρι — δες πριν κλείσεις μέσω Αθήνας."
+  "title_el": "Πρόγραμμα 4 Ημερών στη Ζάκυνθο",
+  "subtitle_el": "Από την ενετική πρωτεύουσα ως τις θαλάσσιες σπηλιές του Κερίου, τις παραλίες των χελωνών στον Λαγανά και το αξέχαστο Ναυάγιο."
+ },
+ "beaches": [
+  {
+   "name": "Navagio (Shipwreck Beach)",
+   "wiki": "https://www.google.com/maps/search/Navagio+(Shipwreck+Beach)+Zakynthos",
+   "rating": 5,
+   "type": "Fine white sand",
+   "length": "300 m",
+   "depth": "Shallow to medium — but cold, deep water beyond the sand",
+   "facing": "East-facing — enclosed by cliffs, always sheltered",
+   "facilities": "None on the beach itself. Access only by boat from Porto Vromi or Agios Nikolaos (20 min).",
+   "desc": "The most iconic beach in Greece — the rusting hulk of the Panagiotis cargo ship stranded in 1980, sitting on white sand enclosed by 200m white limestone cliffs. No road access. No facilities. Just the wreck, the sand and the extraordinary blue water. Every visitor to Zakynthos must see it.",
+   "commons": "Navagio_beach_Zakynthos.jpg",
+   "lat": 37.8595,
+   "lng": 20.6249,
+   "name_el": "Ναυάγιο (Shipwreck Beach)",
+   "desc_el": "Η πιο εμβληματική παραλία της Ελλάδας — το σκουριασμένο κουφάρι του φορτηγού Παναγιώτη που προσάραξε το 1980, καθισμένο σε λευκή άμμο περικλεισμένη από λευκούς ασβεστολιθικούς γκρεμούς 200 μέτρων. Χωρίς πρόσβαση με δρόμο. Χωρίς ανέσεις. Μόνο το ναυάγιο, η άμμος και τα εξαιρετικά γαλάζια νερά. Κάθε επισκέπτης της Ζακύνθου πρέπει να τη δει.",
+   "type_el": "Λεπτή λευκή άμμος",
+   "depth_el": "Ρηχά έως μέτρια — αλλά κρύα, βαθιά νερά πέρα από την άμμο",
+   "facing_el": "Ανατολικός προσανατολισμός — περικλεισμένη από γκρεμούς, πάντα προστατευμένη",
+   "facilities_el": "Καμία στην ίδια την παραλία. Πρόσβαση μόνο με βάρκα από το Πόρτο Βρώμη ή τον Άγιο Νικόλαο (20 λεπτά).",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Navagio_beach_Zakynthos_3.jpg/1920px-Navagio_beach_Zakynthos_3.jpg",
+   "photo_credit": {
+    "artist": "kallerna",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Navagio_beach_Zakynthos_3.jpg",
+    "source": "Wikimedia Commons"
+   }
   },
-  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783273546/%CE%B6%CE%B1%CE%BA%CF%85%CE%BD%CE%B8%CE%BF%CF%82_mk5ayg.jpg"
+  {
+   "name": "Laganas Beach",
+   "wiki": "https://www.google.com/maps/search/Laganas+Beach+Zakynthos",
+   "rating": 5,
+   "type": "Fine golden sand",
+   "length": "9 km",
+   "depth": "Shallow — very gradual, perfect for families",
+   "facing": "South-facing — calm, warm water",
+   "facilities": "Fully developed resort beach. National Marine Park restrictions apply — no boats after 19:00, no beach access after dark June-August (turtle nesting).",
+   "desc": "The longest beach in the Ionian islands and the most important loggerhead turtle nesting site in the Mediterranean. A unique combination — excellent swimming and sunbathing by day, turtle nesting by night. The marine park rules are strictly enforced.",
+   "commons": null,
+   "lat": 37.725,
+   "lng": 20.8681,
+   "name_el": "Παραλία Λαγανά",
+   "desc_el": "Η μακρύτερη παραλία των Επτανήσων και η σημαντικότερη περιοχή φωλιάσματος χελωνών Caretta caretta στη Μεσόγειο. Μοναδικός συνδυασμός — εξαιρετική κολύμβηση και ηλιοθεραπεία την ημέρα, φώλιασμα χελωνών τη νύχτα. Οι κανόνες του θαλάσσιου πάρκου εφαρμόζονται αυστηρά.",
+   "type_el": "Λεπτή χρυσή άμμος",
+   "depth_el": "Ρηχά — πολύ σταδιακά, τέλεια για οικογένειες",
+   "facing_el": "Νότιος προσανατολισμός — ήρεμα, ζεστά νερά",
+   "facilities_el": "Πλήρως ανεπτυγμένη παραλία θερέτρου. Ισχύουν περιορισμοί Εθνικού Θαλάσσιου Πάρκου — χωρίς σκάφη μετά τις 19:00, χωρίς πρόσβαση στην παραλία μετά το σκοτάδι Ιούνιο-Αύγουστο (φώλιασμα χελωνών).",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Beach_in_Laganas%2C_Zakynthos%2C_Greece.jpg/1920px-Beach_in_Laganas%2C_Zakynthos%2C_Greece.jpg",
+   "photo_credit": {
+    "artist": "Σαλαμούρας Σπύρος",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Beach_in_Laganas,_Zakynthos,_Greece.jpg",
+    "source": "Wikimedia Commons"
+   }
+  },
+  {
+   "name": "Gerakas Beach",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJj06U65s3ZxMRu3nX9KS_rVQ",
+   "rating": 4,
+   "type": "Fine sand",
+   "length": "600 m",
+   "depth": "Shallow — calm, clear water",
+   "facing": "South-facing — warm, sheltered",
+   "facilities": "Basic: small café, some sunbeds. Beach closes at sunset (turtle nesting area).",
+   "desc": "A beautiful sandy beach at the southeastern tip of Zakynthos, one of the most important turtle nesting beaches in Greece. Clear, calm water and a dramatic headland setting. The beach closes at sunset from June onwards — turtles have priority.",
+   "commons": null,
+   "lat": 37.7093,
+   "lng": 20.9863,
+   "name_el": "Παραλία Γέρακα",
+   "desc_el": "Μια όμορφη αμμώδης παραλία στο νοτιοανατολικό άκρο της Ζακύνθου, μία από τις σημαντικότερες παραλίες φωλιάσματος χελωνών στην Ελλάδα. Διαυγή, ήρεμα νερά και δραματικό σκηνικό ακρωτηρίου. Η παραλία κλείνει στο ηλιοβασίλεμα από τον Ιούνιο — οι χελώνες έχουν προτεραιότητα.",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Ρηχά — ήρεμα, διαυγή νερά",
+   "facing_el": "Νότιος προσανατολισμός — ζεστή, προστατευμένη",
+   "facilities_el": "Βασικές παροχές: μικρό café, κάποιες ξαπλώστρες. Η παραλία κλείνει στο ηλιοβασίλεμα (περιοχή φωλιάσματος χελωνών).",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/White_Sandstone_Mountains_Gerakas_4.jpg/1920px-White_Sandstone_Mountains_Gerakas_4.jpg",
+   "photo_credit": {
+    "artist": "kallerna",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:White_Sandstone_Mountains_Gerakas_4.jpg",
+    "source": "Wikimedia Commons"
+   }
+  },
+  {
+   "name": "Porto Zoro Beach",
+   "wiki": null,
+   "rating": 4,
+   "type": "Fine sand and pebble",
+   "length": "400 m",
+   "depth": "Medium — clear water, some rocks",
+   "facing": "East-facing — calm Ionian water",
+   "facilities": "Good: sunbeds, beach bar, taverna nearby.",
+   "desc": "One of the best beaches on the east coast — clear turquoise water, organised facilities and far fewer crowds than the main resort beaches. The rocks at each end are good for snorkelling.",
+   "commons": null,
+   "lat": 37.7396,
+   "lng": 20.9597,
+   "name_el": "Παραλία Πόρτο Ζόρο",
+   "desc_el": "Μία από τις καλύτερες παραλίες της ανατολικής ακτής — διαυγή τιρκουάζ νερά, οργανωμένες ανέσεις και πολύ λιγότερα πλήθη από τις κύριες παραλίες θερέτρων. Τα βράχια σε κάθε άκρη είναι καλά για snorkelling.",
+   "type_el": "Λεπτή άμμος και βότσαλο",
+   "depth_el": "Μέτρια — διαυγή νερά, κάποια βράχια",
+   "facing_el": "Ανατολικός προσανατολισμός — ήρεμα ιόνια νερά",
+   "facilities_el": "Καλές παροχές: ξαπλώστρες, beach bar, ταβέρνα κοντά."
+  },
+  {
+   "name": "Banana Beach (Agios Nikolaos)",
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ8fvv2xw2ZxMRZ-5_H6mLs_g",
+   "rating": 4,
+   "type": "Fine sand",
+   "length": "1 km",
+   "depth": "Shallow — safe for children",
+   "facing": "East-facing — calm, warm",
+   "facilities": "Fully organised: sunbeds, water sports, beach bars, showers.",
+   "desc": "Zakynthos's most popular family beach — long, sandy, shallow and well-organised. The banana boat and water sports make it lively. Not the most beautiful setting on the island but excellent for families with young children.",
+   "commons": null,
+   "lat": 37.7291,
+   "lng": 20.9789,
+   "name_el": "Παραλία Μπανάνα (Άγιος Νικόλαος)",
+   "desc_el": "Η πιο δημοφιλής οικογενειακή παραλία της Ζακύνθου — μακριά, αμμώδης, ρηχή και καλά οργανωμένη. Το banana boat και τα θαλάσσια σπορ την κάνουν ζωντανή. Όχι το ομορφότερο σκηνικό στο νησί αλλά εξαιρετική για οικογένειες με μικρά παιδιά.",
+   "type_el": "Λεπτή άμμος",
+   "depth_el": "Ρηχά — ασφαλές για παιδιά",
+   "facing_el": "Ανατολικός προσανατολισμός — ήρεμα, ζεστά",
+   "facilities_el": "Πλήρως οργανωμένη: ξαπλώστρες, θαλάσσια σπορ, beach bars, ντους."
+  }
+ ],
+ "name_el": "Ζάκυνθος",
+ "name_accusative_el": "Ζάκυνθο",
+ "name_genitive_el": "Ζακύνθου",
+ "gender_el": "f",
+ "subtitle_el": "Ναυάγιο, παραλίες χελωνών και τα πιο άγρια τοπία του Ιονίου",
+ "intro_el": "Η Ζάκυνθος ξεπερνά το βάρος της σε τοπία. Το Ναυάγιο — η παραλία του ναυαγίου περικλεισμένη από κάθετους λευκούς γκρεμούς — είναι η πιο φωτογραφημένη παραλία της Ελλάδας. Το νησί είναι επίσης ο κύριος τόπος φωλιάσματος των χελωνών Caretta caretta στη Μεσόγειο, με τον κόλπο Λαγανά προστατευμένο ως εθνικό θαλάσσιο πάρκο. Πέρα από τα τουριστικά θέρετρα, ο βορράς και η δύση του νησιού είναι δραματικά και άγρια.",
+ "specialties": [
+  {
+   "name": "Mandolato of Zakynthos",
+   "name_el": "Μαντολάτο Ζακύνθου",
+   "desc": "The Zakynthian version of the Ionian almond-honey nougat — many consider this the original of all Ionian mandolato. Buy at the central market in Zakynthos town.",
+   "desc_el": "Η ζακυνθινή εκδοχή του ιονικού μαντολάτου — πολλοί το θεωρούν το πρωτότυπο όλων των ιονικών μαντολάτων. Στην κεντρική αγορά της Χώρας."
+  },
+  {
+   "name": "Pastitsada Zakynthou",
+   "name_el": "Παστιτσάδα Ζακύνθου",
+   "desc": "Slow-cooked rooster (or beef) in spiced tomato sauce, served over thick pasta. Different from the Corfu version — sweeter, with more cinnamon. Find at island tavernas.",
+   "desc_el": "Σιγομαγειρεμένος κόκορας (ή μοσχαράκι) σε ντομάτα με μπαχάρια, σερβίρεται με χοντρά ζυμαρικά. Διαφέρει από την κερκυραϊκή — πιο γλυκιά, με περισσότερη κανέλα. Σε ταβέρνες του νησιού."
+  },
+  {
+   "name": "Ladotyri",
+   "name_el": "Λαδοτύρι",
+   "desc": "Hard sheep's-milk cheese aged in olive oil — Zakynthian specialty. Sharp, salty, eaten with bread or grated over pasta.",
+   "desc_el": "Σκληρό πρόβειο τυρί ωριμασμένο σε ελαιόλαδο — ζακυνθινή σπεσιαλιτέ. Πικάντικο, αλμυρό, με ψωμί ή τριμμένο πάνω σε ζυμαρικά."
+  }
+ ],
+ "festivals": [
+  {
+   "name": "Saint Dionysios",
+   "name_el": "Άγιος Διονύσιος",
+   "when": "24 August (and 17 December)",
+   "when_el": "24 Αυγούστου (και 17 Δεκεμβρίου)",
+   "desc": "Patron saint of Zakynthos. Procession of his relics from his church through the streets of Zakynthos town. The August event coincides with peak season; the December one is for locals.",
+   "desc_el": "Προστάτης άγιος της Ζακύνθου. Λιτανεία των λειψάνων του από τον ναό μέσα από τους δρόμους της Χώρας. Η αυγουστιάτικη γιορτή συμπίπτει με την αιχμή της σεζόν· η δεκεμβριανή είναι για τους ντόπιους.",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Saint_Dionysios_Cathedral_%E2%80%93_Zakynthos_%E2%80%93_Greek_%E2%80%93_01.jpg/1920px-Saint_Dionysios_Cathedral_%E2%80%93_Zakynthos_%E2%80%93_Greek_%E2%80%93_01.jpg",
+   "photo_credit": {
+    "artist": "Maesi64",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Saint_Dionysios_Cathedral_%E2%80%93_Zakynthos_%E2%80%93_Greek_%E2%80%93_01.jpg",
+    "source": "Wikimedia Commons"
+   }
+  }
+ ],
+ "getting_there": {
+  "pills": [
+   "✈ Airport (intl charter)",
+   "⛵ Kyllini 1h",
+   "€10–14"
+  ],
+  "pills_el": [
+   "✈ Αεροδρόμιο (charter)",
+   "⛵ Κυλλήνη 1 ώρα",
+   "€10–14"
+  ],
+  "summary": "Heavy summer charter airport — Aegean, Sky Express, Ryanair, charters from across Europe. No Piraeus ferry — reach Zakynthos via Kyllini (Peloponnese, ~3h drive from Athens). Frequent crossings.",
+  "summary_el": "Πολύ ενεργό αεροδρόμιο charter — Aegean, Sky Express, Ryanair, charters από όλη την Ευρώπη. Δεν υπάρχει πλοίο από Πειραιά — προσέγγιση μέσω Κυλλήνης (Πελοπόννησος, ~3 ώρες από Αθήνα). Συχνά δρομολόγια.",
+  "tip": "Ryanair runs cheap direct flights from London/Manchester in summer — check before booking via Athens.",
+  "tip_el": "Η Ryanair έχει φθηνές απευθείας από Λονδίνο/Μάντσεστερ το καλοκαίρι — δες πριν κλείσεις μέσω Αθήνας."
+ },
+ "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783273546/%CE%B6%CE%B1%CE%BA%CF%85%CE%BD%CE%B8%CE%BF%CF%82_mk5ayg.jpg"
 }

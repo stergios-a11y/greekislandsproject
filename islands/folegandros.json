@@ -1,490 +1,490 @@
 {
-  "key": "folegandros",
-  "name": "Folegandros",
-  "subtitle": "The clifftop Cyclades — no cars, no crowds, the finest village square in Greece",
-  "intro": "Folegandros is the Cyclades as they were 30 years ago. The island is 19 square kilometers, has a population of 765, one main road, no airport, and three villages that together contain every restaurant, hotel, and bar you'll need. Chora, the capital, perches on a 200-meter cliff and is one of the most beautiful villages in Greece — a medieval Kastro surrounded by four interconnected car-free squares, each with its own atmosphere. There are no chain stores, no clubs, and essentially no nightlife beyond late dinners that turn into long conversations. The beaches are all either reached by boat or by walking — no car can drive directly to any of them. This is the island for travelers who've already done Mykonos and Santorini and want something radically quieter. Best May-June and September; August is still calm by Cyclades standards but Chora gets busy.",
-  "when_to_visit": {
-    "summary": "Small, beautiful, and genuinely doesn't get peak-Mykonos crowded even in August. Late May through June is heaven — wildflowers on the Chora cliff walk. September is also wonderful. Easter is small but moving in such a tiny community.",
-    "summary_el": "Μικρή, πανέμορφη, και πραγματικά δεν γεμίζει σαν Μύκονος ούτε τον Αύγουστο. Από τα τέλη Μαΐου ως τον Ιούνιο είναι παράδεισος — αγριολούλουδα στο μονοπάτι του γκρεμού προς τη Χώρα. Κι ο Σεπτέμβριος είναι υπέροχος. Το Πάσχα είναι μικρό αλλά συγκινητικό σε μια τόσο μικρή κοινότητα.",
-    "months": [
-      {
-        "tag": "avoid",
-        "why": "Off-season, rough",
-        "why_el": "Εκτός σεζόν, ταραγμένη",
-        "limited": true
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Μόνο ντόπιοι",
-        "limited": true
-      },
-      {
-        "tag": "ok",
-        "why": "Hiking, sea cold",
-        "why_el": "Μόνο πεζοπορία",
-        "limited": true
-      },
-      {
-        "tag": "great",
-        "why": "Wildflowers",
-        "why_el": "Αγριολούλουδα, Πάσχα",
-        "limited": true
-      },
-      {
-        "tag": "perfect",
-        "why": "Cliff walks, warming",
-        "why_el": "Πεζοπορίες γκρεμό"
-      },
-      {
-        "tag": "perfect",
-        "why": "Ideal, peaceful",
-        "why_el": "Ζεστή, ιδανικό"
-      },
-      {
-        "tag": "great",
-        "why": "Hot, never overcrowd",
-        "why_el": "Ζέστη, δεν υπερφορτώνε"
-      },
-      {
-        "tag": "ok",
-        "why": "Busiest weeks",
-        "why_el": "Κόσμος, χαλαρά"
-      },
-      {
-        "tag": "perfect",
-        "why": "Best — golden",
-        "why_el": "Καλύτερος — ζεστά"
-      },
-      {
-        "tag": "great",
-        "why": "Last warm swims",
-        "why_el": "Τελευταία μπάνια"
-      },
-      {
-        "tag": "ok",
-        "why": "Closing",
-        "why_el": "Σχεδόν όλα κλείνουν",
-        "limited": true
-      },
-      {
-        "tag": "avoid",
-        "why": "Off-season",
-        "why_el": "Σχεδόν όλα κλειστά",
-        "limited": true
-      }
-    ]
-  },
-  "itinerary": {
-    "title": "3-Day Folegandros Itinerary",
-    "subtitle": "The clifftop Chora, the church of Panagia, the beach at Angali and the wild west coast.",
-    "days": [
-      {
-        "day": 1,
-        "stops": [
-          {
-            "name": "Karavostasi Port",
-            "name_el": "Λιμάνι Καραβοστάσι",
-            "desc": "Ferries land at this small harbor with one beach, five restaurants, a mini market. Shuttle bus up to Chora runs with every boat (15 min, €2). If you're staying in Chora, leave luggage here — the bus takes them separately in summer. Dal Capo is the only restaurant worth eating at in Karavostasi itself — traditional Greek, good fish, honest prices.",
-            "desc_el": "Τα πλοία φτάνουν σε αυτό το μικρό λιμάνι με μία παραλία, πέντε εστιατόρια, ένα μίνι μάρκετ. Το λεωφορείο ανεβαίνει στη Χώρα με κάθε πλοίο (15 λεπτά, 2€). Αν μένεις στη Χώρα, άφησε τις αποσκευές εδώ — το λεωφορείο τις μεταφέρει χωριστά το καλοκαίρι. Το Dal Capo είναι το μόνο εστιατόριο που αξίζει στο ίδιο το Καραβοστάσι — παραδοσιακό ελληνικό, καλό ψάρι, τίμιες τιμές.",
-            "lat": 36.6157,
-            "lng": 24.9495,
-            "time": "09:00",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601950/%CE%BA%CE%B1%CF%81%CE%B1%CE%B2%CE%BF%CF%83%CF%84%CE%B1%CF%83%CE%B9_rz2gmh.jpg",
-            "photo_credit": {
-              "artist": "Zde",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Karavostasis,_church_and_port,_Folegandros,_153355.jpg",
-              "source": "Wikimedia Commons"
-            },
-            "type": "harbour",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJRfe1xSZVmBQRoGfCdC-9AAo"
-          },
-          {
-            "name": "Chora (Folegandros Town)",
-            "name_el": "Χώρα (Πόλη Φολεγάνδρου)",
-            "desc": "One of the genuinely great preserved village centers in Greece — not a curated tourist site but a lived-in medieval village with power cables running along stone walls. Four car-free squares connect through narrow alleys. Start at Plateia Maroula (buses arrive here), walk toward the Kastro, pass through Plateia Pounta (the sunset square), end at Plateia Kontarini with its two ancient plane trees. Every square has cafés; wander until you find the one that fits your mood.",
-            "desc_el": "Ένα από τα γνήσια σπουδαία διατηρημένα χωριά της Ελλάδας — όχι ένας επιμελημένος τουριστικός τόπος αλλά ένα ζωντανό μεσαιωνικό χωριό με καλώδια ρεύματος κατά μήκος πέτρινων τοίχων. Τέσσερις πλατείες χωρίς αυτοκίνητα συνδέονται μέσω στενών δρομακιών. Ξεκίνα από την Πλατεία Μαρούλα (τα λεωφορεία φτάνουν εδώ), περπάτα προς το Κάστρο, πέρασε από την Πλατεία Πούντα (η πλατεία του ηλιοβασιλέματος), κατέληξε στην Πλατεία Κονταρίνη με τα δύο αρχαία πλατάνια της. Κάθε πλατεία έχει καφέ· περιπλανήσου μέχρι να βρεις αυτή που ταιριάζει στη διάθεσή σου.",
-            "lat": 36.6287,
-            "lng": 24.9207,
-            "time": "11:00",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601950/%CF%87%CF%89%CF%81%CE%B1_j9pxfo.jpg",
-            "photo_credit": {
-              "artist": "ru:User:Digr",
-              "license": "Public domain",
-              "license_url": "",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Folegandros-Chora.jpg",
-              "source": "Wikimedia Commons"
-            },
-            "type": "village",
-            "wiki": "https://www.google.com/maps/search/Chora+(Folegandros+Town)"
-          },
-          {
-            "name": "Kastro (medieval quarter)",
-            "name_el": "Κάστρο (μεσαιωνικό τετράγωνο)",
-            "desc": "The oldest part of Chora — a 13th-century Venetian stronghold where the houses themselves formed the defensive wall. You can still see this architecture: contiguous blocks with no gaps, small windows to the outside, interior doors opening into alleys. Whitewashed over centuries until it gleams. Walk through at sunset when cats come out and the stone glows orange. One tiny ouzo bar occasionally opens in here — good if you catch it.",
-            "desc_el": "Το παλαιότερο τμήμα της Χώρας — ένα βενετσιάνικο οχυρό του 13ου αιώνα όπου τα ίδια τα σπίτια σχημάτιζαν το αμυντικό τείχος. Ακόμα βλέπεις αυτή την αρχιτεκτονική: συνεχόμενα τετράγωνα χωρίς κενά, μικρά παράθυρα προς τα έξω, εσωτερικές πόρτες που ανοίγουν σε δρομάκια. Ασβεστωμένο επί αιώνες μέχρι να λάμπει. Περπάτα μέσα στο ηλιοβασίλεμα όταν βγαίνουν οι γάτες και η πέτρα λάμπει πορτοκαλί. Ένα μικροσκοπικό ουζερί ανοίγει περιστασιακά εδώ — καλό αν το πιάσεις.",
-            "lat": 36.6287,
-            "lng": 24.9207,
-            "time": "13:30",
-            "type": "castle",
-            "wiki": "https://www.google.com/maps/search/Kastro+(medieval+quarter)+Folegandros",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601949/%CE%BA%CE%B1%CF%83%CF%84%CF%81%CE%BF_krqwvi.webp",
-            "photo_credit": null
-          },
-          {
-            "name": "Church of Panagia (hilltop)",
-            "name_el": "Εκκλησία της Παναγίας",
-            "desc": "A 15-minute zigzag path from Chora climbs to this whitewashed church on the cliff above town — 200 meters straight down to the sea. The view is the reason people come. Go at sunset: the cliff catches the last light, Chora below glows, the Aegean stretches to the horizon. Bring water, wear grippy shoes (path is polished in places). The church itself is usually locked; the view is the point.",
-            "desc_el": "Μια 15λεπτη ζιγκζάγκ διαδρομή από τη Χώρα σκαρφαλώνει σε αυτήν την ασβεστωμένη εκκλησία στον γκρεμό πάνω από την πόλη — 200 μέτρα κατευθείαν κάτω στη θάλασσα. Η θέα είναι ο λόγος που έρχεται ο κόσμος. Πήγαινε στο ηλιοβασίλεμα: ο γκρεμός πιάνει το τελευταίο φως, η Χώρα από κάτω λάμπει, το Αιγαίο απλώνεται στον ορίζοντα. Φέρε νερό, φόρεσε παπούτσια με καλή πρόσφυση (το μονοπάτι είναι γλιστερό σε σημεία). Η ίδια η εκκλησία είναι συνήθως κλειστή· η θέα είναι το θέμα.",
-            "lat": 36.6302,
-            "lng": 24.9256,
-            "time": "16:00",
-            "type": "church",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJF4IsgWtVmBQR42xC8wMR2RM",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601949/%CE%B5%CE%BA%CE%BA%CE%BB%CE%B7%CF%83%CE%B9%CE%B1_%CF%80%CE%B1%CE%BD%CE%B1%CE%B3%CE%B9%CE%B1%CF%82_tvmzqd.jpg",
-            "photo_credit": null
-          },
-          {
-            "time": "17:00",
-            "name": "Agali Beach (sunset swim)",
-            "name_el": "Παραλία Αγκάλη (απογευματινό μπάνιο)",
-            "type": "beach",
-            "lat": 36.6307,
-            "lng": 24.8944,
-            "wiki": "https://www.google.com/maps/search/?api=1&query=Agali+Beach+Folegandros",
-            "desc": "A 15-minute drive west of Chora drops you at Agali — the most accessible of Folegandros's beaches and the natural late-afternoon swim. Small bay, fine sand, calm water, a handful of relaxed tavernas above the beach if you want a cold drink before heading back up for dinner. The contemplative pace fits the island.",
-            "desc_el": "Σύντομη οδική απόσταση 15 λεπτών δυτικά της Χώρας σε αφήνει στην Αγκάλη — την πιο προσβάσιμη από τις παραλίες της Φολεγάνδρου και το φυσικό απογευματινό μπάνιο. Μικρός κόλπος, λεπτή άμμος, ήρεμα νερά, και μια χούφτα χαλαρές ταβέρνες πάνω από την παραλία αν θέλεις ένα δροσερό ποτό πριν επιστρέψεις πάνω για δείπνο. Ο στοχαστικός ρυθμός ταιριάζει στο νησί.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601949/%CE%B1%CE%B3%CE%BA%CE%B1%CE%BB%CE%B7_2_u7q2z3.jpg",
-            "photo_credit": null
-          }
-        ],
-        "overnight": "Chora",
-        "overnight_el": "Χώρα",
-        "title": "Chora, Kastro & Panagia",
-        "title_el": "Χώρα, Κάστρο & Παναγία",
-        "km": 6,
-        "drive_mins": 10,
-        "color": "#1B4F8A",
-        "nightlife": "No clubs here — Folegandros's night is its linked Chora squares, bars spilling onto the flagstones. <a href=\"https://www.google.com/maps/search/Astarti+Bar+Folegandros\" target=\"_blank\" rel=\"noopener\">Astarti</a> on the main square is the institution (Greek tunes, rembetika and its famous hot rakomelo); <a href=\"https://www.google.com/maps/search/El+Greco+Folegandros\" target=\"_blank\" rel=\"noopener\">El Greco</a> is the bohemian late one; <a href=\"https://www.google.com/maps/search/Beez+Cocktail+Bar+Folegandros\" target=\"_blank\" rel=\"noopener\">Beez</a> does serious cocktails to soul and reggae. Wandering between them is the night.",
-        "nightlife_el": "Χωρίς clubs εδώ — η νύχτα της Φολεγάνδρου είναι οι συνδεδεμένες πλατείες της Χώρας, με τα μπαρ να ξεχύνονται στις πλάκες. Το <a href=\"https://www.google.com/maps/search/Astarti+Bar+Folegandros\" target=\"_blank\" rel=\"noopener\">Astarti</a> στην κεντρική πλατεία είναι ο θεσμός (ελληνικά, ρεμπέτικα και το περίφημο ζεστό ρακόμελο)· το <a href=\"https://www.google.com/maps/search/El+Greco+Folegandros\" target=\"_blank\" rel=\"noopener\">El Greco</a> είναι το μποέμ ξενύχτι· το <a href=\"https://www.google.com/maps/search/Beez+Cocktail+Bar+Folegandros\" target=\"_blank\" rel=\"noopener\">Beez</a> κάνει σοβαρά κοκτέιλ σε soul και reggae. Η βόλτα ανάμεσά τους είναι η βραδιά.",
-        "food": [
-          {
-            "meal": "Dinner",
-            "meal_el": "Δείπνο",
-            "area": "Chora",
-            "area_el": "Χώρα",
-            "desc": "<a href=\"https://www.google.com/maps/search/Blue+Cuisine+Folegandros\" target=\"_blank\" rel=\"noopener\">Blue Cuisine</a> is the island's most refined table — creative modern Greek on a Chora terrace. For traditional, <a href=\"https://www.google.com/maps/search/Pounta+Folegandros\" target=\"_blank\" rel=\"noopener\">Pounta</a> has cooked Folegandros home recipes since 1963.",
-            "desc_el": "Το <a href=\"https://www.google.com/maps/search/Blue+Cuisine+Folegandros\" target=\"_blank\" rel=\"noopener\">Blue Cuisine</a> είναι το πιο εκλεπτυσμένο τραπέζι του νησιού — δημιουργική μοντέρνα ελληνική κουζίνα σε βεράντα της Χώρας. Για παραδοσιακά, το <a href=\"https://www.google.com/maps/search/Pounta+Folegandros\" target=\"_blank\" rel=\"noopener\">Pounta</a> μαγειρεύει σπιτικές συνταγές της Φολεγάνδρου από το 1963.",
-            "after": "Agali Beach (sunset swim)"
-          }
-        ]
-      },
-      {
-        "day": 2,
-        "stops": [
-          {
-            "name": "Agali Beach",
-            "name_el": "Παραλία Αγκάλη",
-            "desc": "The largest accessible beach on the island and the only one you can drive to (sort of — the road ends in a small parking lot). Fine sand, shallow clear water, west-facing so it catches sunset. Two good tavernas directly on the sand — Pasithea is the standout. Stay at Blue Sand Boutique Hotel if you want beach-access; otherwise Agali fills up with boat-arrivals by 11am. Best before 10 or after 5pm.",
-            "desc_el": "Η μεγαλύτερη προσβάσιμη παραλία του νησιού και η μόνη στην οποία μπορείς να φτάσεις με αυτοκίνητο (κάπως — ο δρόμος τελειώνει σε μικρό parking). Λεπτή άμμος, ρηχά διαυγή νερά, δυτικός προσανατολισμός άρα πιάνει το ηλιοβασίλεμα. Δύο καλές ταβέρνες κατευθείαν στην άμμο — το Pasithea είναι το καλύτερο. Μείνε στο Blue Sand Boutique Hotel αν θες πρόσβαση παραλίας· αλλιώς η Αγκάλη γεμίζει από αφίξεις με βάρκα μέχρι τις 11πμ. Καλύτερα πριν τις 10 ή μετά τις 5μμ.",
-            "lat": 36.6307,
-            "lng": 24.8944,
-            "time": "09:00",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601949/%CE%B1%CE%B3%CE%BA%CE%B1%CE%BB%CE%B7_nf6ezi.jpg",
-            "photo_credit": {
-              "artist": "Irini Papalexi",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:View_of_Agali_Beach.jpg",
-              "source": "Wikimedia Commons"
-            },
-            "type": "beach",
-            "wiki": "https://www.google.com/maps/search/Agali+Beach+Folegandros"
-          },
-          {
-            "name": "Agios Nikolaos Beach (walk from Agali)",
-            "name_el": "Παραλία Αγίου Νικολάου",
-            "desc": "A 20-minute walk around the cliff from Agali, or a €5 water-taxi ride. Much quieter than Agali. Crystal-clear water over a sandy bottom; the bay is protected. Two tiny tavernas on the beach — Papalagi Seafood is the one locals recommend (order the melitzanosalata). Coming back, the path is easier if you go via the small chapel uphill rather than along the rocks.",
-            "desc_el": "Μία 20λεπτη πεζοπορία γύρω από τον γκρεμό από την Αγκάλη, ή μια διαδρομή με θαλάσσιο ταξί 5€. Πολύ πιο ήσυχη από την Αγκάλη. Κρυστάλλινα νερά πάνω σε αμμώδη βυθό· ο κόλπος είναι προστατευμένος. Δύο μικροσκοπικές ταβέρνες στην παραλία — το Papalagi Seafood είναι αυτό που συστήνουν οι ντόπιοι (παράγγειλε τη μελιτζανοσαλάτα). Επιστρέφοντας, το μονοπάτι είναι πιο εύκολο αν πας μέσω του μικρού εκκλησιδίου στην ανηφόρα παρά κατά μήκος των βράχων.",
-            "lat": 36.632,
-            "lng": 24.891,
-            "time": "11:00",
-            "type": "beach",
-            "wiki": "https://www.google.com/maps/search/Agios+Nikolaos+Beach+(walk+from+Agali)+Folegandros",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601949/%CE%B1%CE%B3%CE%B9%CE%BF%CF%82_%CE%BD%CE%B9%CE%BA%CE%BF%CE%BB%CE%B1%CE%BF%CF%82_bi9ex0.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Ano Meria village",
-            "name_el": "Χωριό Άνω Μεριά",
-            "desc": "The island's second village — 6km north of Chora, spread thinly over terraced hillsides. This is the agricultural Folegandros: stone-walled fields, scattered farmhouses, a few tavernas. The Ecological and Folklore Museum (in a preserved farmhouse) is small but excellent — shows how islanders lived on rain cisterns and terraced barley until the 1970s. Far fewer tourists; almost no one spends the night here.",
-            "desc_el": "Το δεύτερο χωριό του νησιού — 6 χλμ βόρεια της Χώρας, απλωμένο αραιά πάνω σε αναβαθμισμένες πλαγιές. Αυτή είναι η αγροτική Φολέγανδρος: χωράφια με πέτρινους τοίχους, σκόρπιες αγροικίες, μερικές ταβέρνες. Το Οικολογικό και Λαογραφικό Μουσείο (σε διατηρημένη αγροικία) είναι μικρό αλλά εξαιρετικό — δείχνει πώς ζούσαν οι νησιώτες με στέρνες βρόχινου νερού και αναβαθμισμένο κριθάρι μέχρι τη δεκαετία του 1970. Πολύ λιγότεροι τουρίστες· σχεδόν κανείς δεν διανυκτερεύει εδώ.",
-            "lat": 36.6437,
-            "lng": 24.8833,
-            "time": "15:30",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ano_Meria_on_Folegandros%2C_15M6593.jpg/1920px-Ano_Meria_on_Folegandros%2C_15M6593.jpg",
-            "photo_credit": {
-              "artist": "Zde",
-              "license": "CC BY-SA 4.0",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-              "page_url": "https://commons.wikimedia.org/wiki/File:Ano_Meria_on_Folegandros,_15M6593.jpg",
-              "source": "Wikimedia Commons"
-            },
-            "type": "village",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJdVIONKP_mBQRfP6rlu57nBU"
-          },
-          {
-            "name": "Dinner in Chora",
-            "lat": 36.6287,
-            "lng": 24.9207,
-            "type": "city",
-            "time": "20:30",
-            "wiki": null,
-            "desc": "Drive back from Ano Meria to Chora (about 10 minutes). After a day on the trails, dinner in the Kastro's lit-up squares is the perfect ending.",
-            "name_el": "Δείπνο στη Χώρα",
-            "desc_el": "Επιστροφή από την Άνω Μεριά στη Χώρα (περίπου 10 λεπτά). Μετά μια μέρα στα μονοπάτια, δείπνο στις φωτισμένες πλατείες του Κάστρου είναι το τέλειο τελείωμα.",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601948/%CE%94%CE%B5%CE%B9%CC%81%CF%80%CE%BD%CE%BF_%CF%83%CF%84%CE%B7_%CE%A7%CF%89%CC%81%CF%81%CE%B1_nssua4.jpg",
-            "photo_credit": null
-          }
-        ],
-        "overnight": "Chora",
-        "overnight_el": "Χώρα",
-        "title": "Agali, Agios Nikolaos & Ano Meria",
-        "title_el": "Αγκάλη, Άγιος Νικόλαος & Άνω Μεριά",
-        "km": 25,
-        "drive_mins": 40,
-        "color": "#C0522A",
-        "food": [
-          {
-            "meal": "Lunch",
-            "meal_el": "Μεσημεριανό",
-            "area": "Sinandisi (Ano Meria, since 1920)",
-            "area_el": "Συνάντηση (Άνω Μεριά, από το 1920)",
-            "desc": "A taverna run by the same family since 1920, on the edge of Ano Meria with a massive shaded veranda looking south over the Cretan Sea. Signature dish: handmade matsata pasta with slow-cooked rooster, served large enough for two. Also kalasouna (local cheese pie with wild herbs), ampelofasoula (beans with vine leaves). Free yogurt with marinated grapes comes at the end. This is the authentic Folegandros meal.",
-            "desc_el": "Μια ταβέρνα που διαχειρίζεται η ίδια οικογένεια από το 1920, στην άκρη της Άνω Μεριάς με τεράστια σκιασμένη βεράντα κοιτώντας νότια στο Κρητικό Πέλαγος. Πιάτο υπογραφής: χειροποίητη ματσάτα με κόκορα σιγομαγειρεμένο, σερβιριζόμενο αρκετά μεγάλο για δύο. Επίσης καλασούνα (τοπική τυρόπιτα με άγρια χόρτα), αμπελοφάσουλα. Δωρεάν γιαούρτι με μαριναρισμένα σταφύλια έρχεται στο τέλος. Αυτό είναι το αυθεντικό φολεγανδρίτικο γεύμα.",
-            "after": "Agios Nikolaos Beach (walk from Agali)"
-          }
-        ]
-      },
-      {
-        "day": 3,
-        "stops": [
-          {
-            "name": "Katergo Beach (boat or hike)",
-            "name_el": "Παραλία Κατεργό",
-            "desc": "The most beautiful beach on the island and one of the finest in the Cyclades. Accessible only by a 30-minute hike from Livadi (moderate, brings you over a ridge and down) or a 10-minute boat ride from Karavostasi port (€10 return). Fine pebbles, crystal turquoise water, vertical grey cliffs backing it. No shade, no facilities — bring water, food, umbrella. Strong currents sometimes, swim within the bay. Plan half a day here.",
-            "desc_el": "Η ομορφότερη παραλία του νησιού και μία από τις καλύτερες των Κυκλάδων. Προσβάσιμη μόνο με 30λεπτη πεζοπορία από το Λιβάδι (μέτρια, περνά πάνω από μια κορυφογραμμή και κατεβαίνει) ή 10λεπτη διαδρομή με βάρκα από το λιμάνι του Καραβοστασιού (10€ με επιστροφή). Λεπτά βότσαλα, κρυστάλλινα τιρκουάζ νερά, κάθετοι γκρίζοι γκρεμοί πίσω. Χωρίς σκιά, χωρίς ανέσεις — φέρε νερό, φαγητό, ομπρέλα. Περιστασιακά ισχυρά ρεύματα, κολύμπα εντός του κόλπου. Σχεδίασε μισή μέρα εδώ.",
-            "lat": 36.5952,
-            "lng": 24.9496,
-            "time": "09:30",
-            "type": "beach",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJoWvy1dWqmRQRfABEi9xk5hk",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601948/%CE%BA%CE%B1%CF%84%CE%B5%CF%81%CE%B3%CE%BF_ofnrnt.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Livadaki Beach (remote hike or boat)",
-            "name_el": "Παραλία Λιβαδάκι",
-            "desc": "The island's most hidden beach — 45 minutes of steep hiking from Ano Meria, or by boat from Agali (€15 return). Turquoise-green water, white pebbles, dramatic cliffs, and an unusual mineral backdrop (salt and sulfur formations). Excellent snorkeling. Sometimes completely empty. Bring everything; no amenities. For hikers, the Aspropounta Lighthouse is a worthwhile detour on the way.",
-            "desc_el": "Η πιο κρυμμένη παραλία του νησιού — 45 λεπτά απότομης πεζοπορίας από την Άνω Μεριά, ή με βάρκα από την Αγκάλη (15€ με επιστροφή). Τιρκουάζ-πράσινα νερά, λευκά βότσαλα, δραματικοί γκρεμοί, και ένα ασυνήθιστο ορυκτό σκηνικό (σχηματισμοί άλατος και θείου). Εξαιρετικό snorkelling. Μερικές φορές εντελώς άδεια. Φέρε τα πάντα· καμία ανέση. Για πεζοπόρους, ο φάρος της Ασπροπούντας είναι αξιόλογη παράκαμψη στον δρόμο.",
-            "lat": 36.6362,
-            "lng": 24.8593,
-            "time": "13:00",
-            "type": "beach",
-            "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ-_UGp8v_mBQRYBB4rk3u2nw",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601948/%CE%BB%CE%B9%CE%B2%CE%B1%CE%B4%CE%B1%CE%BA%CE%B9_hspqnt.jpg",
-            "photo_credit": null
-          },
-          {
-            "name": "Karavostasi — Departure",
-            "name_el": "Καραβοστάσι — Αναχώρηση",
-            "desc": "Back to the small port for the ferry. Folegandros connects to Piraeus, Santorini, Milos, Sikinos, Ios, and onward through the small Cyclades. Summer ferry schedule is dense; off-season is limited to 3-4 per week. Wait for your boat at the port café with a final glass of local vinsanto.",
-            "desc_el": "Επιστροφή στο μικρό λιμάνι για το πλοίο. Η Φολέγανδρος συνδέεται με Πειραιά, Σαντορίνη, Μήλο, Σίκινο, Ίο, και παρακάτω μέσω των μικρών Κυκλάδων. Το καλοκαιρινό πρόγραμμα πλοίων είναι πυκνό· εκτός σεζόν περιορίζεται σε 3-4 την εβδομάδα. Περίμενε το πλοίο σου στο λιμενικό café με ένα τελευταίο ποτήρι τοπικό vinsanto.",
-            "lat": 36.6157,
-            "lng": 24.9495,
-            "time": "16:30",
-            "type": "departure",
-            "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601948/%CE%BA%CE%B1%CF%81%CE%B1%CE%B2%CE%BF%CF%83%CF%84%CE%B1%CF%83%CE%B9_%CE%B1%CE%BD%CE%B1%CF%87%CF%89%CF%81%CE%B7%CF%83%CE%B7_ocmm4i.jpg",
-            "photo_credit": null
-          }
-        ],
-        "overnight": null,
-        "overnight_el": null,
-        "title": "Katergo, Livadaki & Departure",
-        "title_el": "Κάτεργο, Λιβαδάκι & Αναχώρηση",
-        "km": 12,
-        "drive_mins": 20,
-        "color": "#5A7A3A"
-      }
-    ],
-    "title_el": "Πρόγραμμα 3 Ημερών στη Φολέγανδρο",
-    "subtitle_el": "Η Χώρα πάνω στον γκρεμό, η εκκλησία της Παναγίας, η παραλία στην Αγκάλη και η άγρια δυτική ακτή."
-  },
-  "beaches": [
-    {
-      "name": "Katergo Beach",
-      "name_el": "Παραλία Κατεργό",
-      "desc": "The island's signature beach — fine pebbles, dazzlingly clear turquoise water, vertical grey cliffs dropping straight into the bay. Reached only by 30-min hike from Livadi or 10-min boat from Karavostasi (€10 return). No facilities, no shade — bring everything. Strong currents on windy days; swim within the bay. The scale and bareness of the cliffs make it feel genuinely remote even in August.",
-      "desc_el": "Η παραλία-σήμα κατατεθέν του νησιού — λεπτά βότσαλα, εκτυφλωτικά διαυγή τιρκουάζ νερά, κάθετοι γκρίζοι γκρεμοί πέφτοντας κατευθείαν στον κόλπο. Προσβάσιμη μόνο με 30λεπτη πεζοπορία από το Λιβάδι ή 10λεπτη διαδρομή με βάρκα από το Καραβοστάσι (10€ με επιστροφή). Καμία ανέση, καμία σκιά — φέρε τα πάντα. Ισχυρά ρεύματα σε ανεμώδεις μέρες· κολύμπα εντός του κόλπου. Η κλίμακα και η γύμνια των γκρεμών την κάνουν να αισθάνεσαι γνήσια απομακρυσμένη ακόμα και τον Αύγουστο.",
-      "type": "Fine pale pebbles",
-      "type_el": "Λεπτά ανοιχτόχρωμα βότσαλα",
-      "depth": "Deep quickly, crystal clear",
-      "depth_el": "Βαθαίνει γρήγορα, κρυστάλλινα",
-      "facing": "South-southwest — calm most days, can have currents",
-      "facing_el": "Νοτιοδυτικά — ήρεμη τις περισσότερες μέρες, μπορεί να έχει ρεύματα",
-      "facilities": "None. Bring water, shade, food. 30-min hike or €10 boat return.",
-      "facilities_el": "Καμία. Φέρε νερό, σκιά, φαγητό. 30 λεπτά πεζοπορία ή 10€ βάρκα με επιστροφή.",
-      "lat": 36.5983,
-      "lng": 24.9472,
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601948/%CE%BA%CE%B1%CF%84%CE%B5%CF%81%CE%B3%CE%BF_2_cfx7qi.webp",
+ "key": "folegandros",
+ "name": "Folegandros",
+ "subtitle": "The clifftop Cyclades — no cars, no crowds, the finest village square in Greece",
+ "intro": "Folegandros is the Cyclades as they were 30 years ago. The island is 19 square kilometers, has a population of 765, one main road, no airport, and three villages that together contain every restaurant, hotel, and bar you'll need. Chora, the capital, perches on a 200-meter cliff and is one of the most beautiful villages in Greece — a medieval Kastro surrounded by four interconnected car-free squares, each with its own atmosphere. There are no chain stores, no clubs, and essentially no nightlife beyond late dinners that turn into long conversations. The beaches are all either reached by boat or by walking — no car can drive directly to any of them. This is the island for travelers who've already done Mykonos and Santorini and want something radically quieter. Best May-June and September; August is still calm by Cyclades standards but Chora gets busy.",
+ "when_to_visit": {
+  "summary": "Small, beautiful, and genuinely doesn't get peak-Mykonos crowded even in August. Late May through June is heaven — wildflowers on the Chora cliff walk. September is also wonderful. Easter is small but moving in such a tiny community.",
+  "summary_el": "Μικρή, πανέμορφη, και πραγματικά δεν γεμίζει σαν Μύκονος ούτε τον Αύγουστο. Από τα τέλη Μαΐου ως τον Ιούνιο είναι παράδεισος — αγριολούλουδα στο μονοπάτι του γκρεμού προς τη Χώρα. Κι ο Σεπτέμβριος είναι υπέροχος. Το Πάσχα είναι μικρό αλλά συγκινητικό σε μια τόσο μικρή κοινότητα.",
+  "months": [
+   {
+    "tag": "avoid",
+    "why": "Off-season, rough",
+    "why_el": "Εκτός σεζόν, ταραγμένη",
+    "limited": true
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Μόνο ντόπιοι",
+    "limited": true
+   },
+   {
+    "tag": "ok",
+    "why": "Hiking, sea cold",
+    "why_el": "Μόνο πεζοπορία",
+    "limited": true
+   },
+   {
+    "tag": "great",
+    "why": "Wildflowers",
+    "why_el": "Αγριολούλουδα, Πάσχα",
+    "limited": true
+   },
+   {
+    "tag": "perfect",
+    "why": "Cliff walks, warming",
+    "why_el": "Πεζοπορίες γκρεμό"
+   },
+   {
+    "tag": "perfect",
+    "why": "Ideal, peaceful",
+    "why_el": "Ζεστή, ιδανικό"
+   },
+   {
+    "tag": "great",
+    "why": "Hot, never overcrowd",
+    "why_el": "Ζέστη, δεν υπερφορτώνε"
+   },
+   {
+    "tag": "ok",
+    "why": "Busiest weeks",
+    "why_el": "Κόσμος, χαλαρά"
+   },
+   {
+    "tag": "perfect",
+    "why": "Best — golden",
+    "why_el": "Καλύτερος — ζεστά"
+   },
+   {
+    "tag": "great",
+    "why": "Last warm swims",
+    "why_el": "Τελευταία μπάνια"
+   },
+   {
+    "tag": "ok",
+    "why": "Closing",
+    "why_el": "Σχεδόν όλα κλείνουν",
+    "limited": true
+   },
+   {
+    "tag": "avoid",
+    "why": "Off-season",
+    "why_el": "Σχεδόν όλα κλειστά",
+    "limited": true
+   }
+  ]
+ },
+ "itinerary": {
+  "title": "3-Day Folegandros Itinerary",
+  "subtitle": "The clifftop Chora, the church of Panagia, the beach at Angali and the wild west coast.",
+  "days": [
+   {
+    "day": 1,
+    "stops": [
+     {
+      "name": "Karavostasi Port",
+      "name_el": "Λιμάνι Καραβοστάσι",
+      "desc": "Ferries land at this small harbor with one beach, five restaurants, a mini market. Shuttle bus up to Chora runs with every boat (15 min, €2). If you're staying in Chora, leave luggage here — the bus takes them separately in summer. Dal Capo is the only restaurant worth eating at in Karavostasi itself — traditional Greek, good fish, honest prices.",
+      "desc_el": "Τα πλοία φτάνουν σε αυτό το μικρό λιμάνι με μία παραλία, πέντε εστιατόρια, ένα μίνι μάρκετ. Το λεωφορείο ανεβαίνει στη Χώρα με κάθε πλοίο (15 λεπτά, 2€). Αν μένεις στη Χώρα, άφησε τις αποσκευές εδώ — το λεωφορείο τις μεταφέρει χωριστά το καλοκαίρι. Το Dal Capo είναι το μόνο εστιατόριο που αξίζει στο ίδιο το Καραβοστάσι — παραδοσιακό ελληνικό, καλό ψάρι, τίμιες τιμές.",
+      "lat": 36.6157,
+      "lng": 24.9495,
+      "time": "09:00",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601950/%CE%BA%CE%B1%CF%81%CE%B1%CE%B2%CE%BF%CF%83%CF%84%CE%B1%CF%83%CE%B9_rz2gmh.jpg",
       "photo_credit": {
-        "artist": "rene boulay",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Cyclades_Folegandros_Katergo_Plage_-_panoramio.jpg",
-        "source": "Wikimedia Commons"
+       "artist": "Zde",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Karavostasis,_church_and_port,_Folegandros,_153355.jpg",
+       "source": "Wikimedia Commons"
       },
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJoWvy1dWqmRQRfABEi9xk5hk"
-    },
-    {
-      "name": "Agali Beach",
-      "name_el": "Παραλία Αγκάλη",
-      "desc": "The island's only car-accessible beach (the road ends at a small lot above the sand). Fine sand, shallow water, and two tavernas that work directly off the beach — Pasithea is the local-recommended one. West-facing so it catches sunset. The most 'organized' beach on Folegandros, which here means some umbrellas and a few dozen visitors, not resort-scale development. Fills with day-trippers 11am-4pm; arrive before or after.",
-      "desc_el": "Η μόνη παραλία του νησιού προσβάσιμη με αυτοκίνητο (ο δρόμος τελειώνει σε μικρό χώρο πάνω από την άμμο). Λεπτή άμμος, ρηχά νερά, και δύο ταβέρνες που λειτουργούν κατευθείαν στην παραλία — το Pasithea είναι το προτεινόμενο από τους ντόπιους. Δυτικός προσανατολισμός άρα πιάνει το ηλιοβασίλεμα. Η πιο 'οργανωμένη' παραλία της Φολεγάνδρου, που εδώ σημαίνει κάποιες ομπρέλες και μερικές δεκάδες επισκέπτες, όχι ανάπτυξη σε κλίμακα θέρετρου. Γεμίζει με ημερήσιους επισκέπτες 11πμ-4μμ· έλα πριν ή μετά.",
-      "type": "Fine sand",
-      "type_el": "Λεπτή άμμος",
-      "depth": "Gradual shallow entry",
-      "depth_el": "Σταδιακή ρηχή είσοδος",
-      "facing": "West — sunset-facing",
-      "facing_el": "Δυτικά — ηλιοβασίλεμα",
-      "facilities": "Moderate: 2 tavernas (Pasithea recommended), umbrellas for rent, shuttle to Chora",
-      "facilities_el": "Μέτριες: 2 ταβέρνες (Pasithea προτεινόμενη), ομπρέλες προς ενοικίαση, shuttle στη Χώρα",
+      "type": "harbour",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJRfe1xSZVmBQRoGfCdC-9AAo"
+     },
+     {
+      "name": "Chora (Folegandros Town)",
+      "name_el": "Χώρα (Πόλη Φολεγάνδρου)",
+      "desc": "One of the genuinely great preserved village centers in Greece — not a curated tourist site but a lived-in medieval village with power cables running along stone walls. Four car-free squares connect through narrow alleys. Start at Plateia Maroula (buses arrive here), walk toward the Kastro, pass through Plateia Pounta (the sunset square), end at Plateia Kontarini with its two ancient plane trees. Every square has cafés; wander until you find the one that fits your mood.",
+      "desc_el": "Ένα από τα γνήσια σπουδαία διατηρημένα χωριά της Ελλάδας — όχι ένας επιμελημένος τουριστικός τόπος αλλά ένα ζωντανό μεσαιωνικό χωριό με καλώδια ρεύματος κατά μήκος πέτρινων τοίχων. Τέσσερις πλατείες χωρίς αυτοκίνητα συνδέονται μέσω στενών δρομακιών. Ξεκίνα από την Πλατεία Μαρούλα (τα λεωφορεία φτάνουν εδώ), περπάτα προς το Κάστρο, πέρασε από την Πλατεία Πούντα (η πλατεία του ηλιοβασιλέματος), κατέληξε στην Πλατεία Κονταρίνη με τα δύο αρχαία πλατάνια της. Κάθε πλατεία έχει καφέ· περιπλανήσου μέχρι να βρεις αυτή που ταιριάζει στη διάθεσή σου.",
+      "lat": 36.6287,
+      "lng": 24.9207,
+      "time": "11:00",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601950/%CF%87%CF%89%CF%81%CE%B1_j9pxfo.jpg",
+      "photo_credit": {
+       "artist": "ru:User:Digr",
+       "license": "Public domain",
+       "license_url": "",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Folegandros-Chora.jpg",
+       "source": "Wikimedia Commons"
+      },
+      "type": "village",
+      "wiki": "https://www.google.com/maps/search/Chora+(Folegandros+Town)"
+     },
+     {
+      "name": "Kastro (medieval quarter)",
+      "name_el": "Κάστρο (μεσαιωνικό τετράγωνο)",
+      "desc": "The oldest part of Chora — a 13th-century Venetian stronghold where the houses themselves formed the defensive wall. You can still see this architecture: contiguous blocks with no gaps, small windows to the outside, interior doors opening into alleys. Whitewashed over centuries until it gleams. Walk through at sunset when cats come out and the stone glows orange. One tiny ouzo bar occasionally opens in here — good if you catch it.",
+      "desc_el": "Το παλαιότερο τμήμα της Χώρας — ένα βενετσιάνικο οχυρό του 13ου αιώνα όπου τα ίδια τα σπίτια σχημάτιζαν το αμυντικό τείχος. Ακόμα βλέπεις αυτή την αρχιτεκτονική: συνεχόμενα τετράγωνα χωρίς κενά, μικρά παράθυρα προς τα έξω, εσωτερικές πόρτες που ανοίγουν σε δρομάκια. Ασβεστωμένο επί αιώνες μέχρι να λάμπει. Περπάτα μέσα στο ηλιοβασίλεμα όταν βγαίνουν οι γάτες και η πέτρα λάμπει πορτοκαλί. Ένα μικροσκοπικό ουζερί ανοίγει περιστασιακά εδώ — καλό αν το πιάσεις.",
+      "lat": 36.6287,
+      "lng": 24.9207,
+      "time": "13:30",
+      "type": "castle",
+      "wiki": "https://www.google.com/maps/search/Kastro+(medieval+quarter)+Folegandros",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601949/%CE%BA%CE%B1%CF%83%CF%84%CF%81%CE%BF_krqwvi.webp",
+      "photo_credit": null
+     },
+     {
+      "name": "Church of Panagia (hilltop)",
+      "name_el": "Εκκλησία της Παναγίας",
+      "desc": "A 15-minute zigzag path from Chora climbs to this whitewashed church on the cliff above town — 200 meters straight down to the sea. The view is the reason people come. Go at sunset: the cliff catches the last light, Chora below glows, the Aegean stretches to the horizon. Bring water, wear grippy shoes (path is polished in places). The church itself is usually locked; the view is the point.",
+      "desc_el": "Μια 15λεπτη ζιγκζάγκ διαδρομή από τη Χώρα σκαρφαλώνει σε αυτήν την ασβεστωμένη εκκλησία στον γκρεμό πάνω από την πόλη — 200 μέτρα κατευθείαν κάτω στη θάλασσα. Η θέα είναι ο λόγος που έρχεται ο κόσμος. Πήγαινε στο ηλιοβασίλεμα: ο γκρεμός πιάνει το τελευταίο φως, η Χώρα από κάτω λάμπει, το Αιγαίο απλώνεται στον ορίζοντα. Φέρε νερό, φόρεσε παπούτσια με καλή πρόσφυση (το μονοπάτι είναι γλιστερό σε σημεία). Η ίδια η εκκλησία είναι συνήθως κλειστή· η θέα είναι το θέμα.",
+      "lat": 36.6302,
+      "lng": 24.9256,
+      "time": "16:00",
+      "type": "church",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJF4IsgWtVmBQR42xC8wMR2RM",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601949/%CE%B5%CE%BA%CE%BA%CE%BB%CE%B7%CF%83%CE%B9%CE%B1_%CF%80%CE%B1%CE%BD%CE%B1%CE%B3%CE%B9%CE%B1%CF%82_tvmzqd.jpg",
+      "photo_credit": null
+     },
+     {
+      "time": "17:00",
+      "name": "Agali Beach (sunset swim)",
+      "name_el": "Παραλία Αγκάλη (απογευματινό μπάνιο)",
+      "type": "beach",
       "lat": 36.6307,
       "lng": 24.8944,
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/View_of_Agali_Beach.jpg/1920px-View_of_Agali_Beach.jpg",
+      "wiki": "https://www.google.com/maps/search/?api=1&query=Agali+Beach+Folegandros",
+      "desc": "A 15-minute drive west of Chora drops you at Agali — the most accessible of Folegandros's beaches and the natural late-afternoon swim. Small bay, fine sand, calm water, a handful of relaxed tavernas above the beach if you want a cold drink before heading back up for dinner. The contemplative pace fits the island.",
+      "desc_el": "Σύντομη οδική απόσταση 15 λεπτών δυτικά της Χώρας σε αφήνει στην Αγκάλη — την πιο προσβάσιμη από τις παραλίες της Φολεγάνδρου και το φυσικό απογευματινό μπάνιο. Μικρός κόλπος, λεπτή άμμος, ήρεμα νερά, και μια χούφτα χαλαρές ταβέρνες πάνω από την παραλία αν θέλεις ένα δροσερό ποτό πριν επιστρέψεις πάνω για δείπνο. Ο στοχαστικός ρυθμός ταιριάζει στο νησί.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601949/%CE%B1%CE%B3%CE%BA%CE%B1%CE%BB%CE%B7_2_u7q2z3.jpg",
+      "photo_credit": null
+     }
+    ],
+    "overnight": "Chora",
+    "overnight_el": "Χώρα",
+    "title": "Chora, Kastro & Panagia",
+    "title_el": "Χώρα, Κάστρο & Παναγία",
+    "km": 6,
+    "drive_mins": 10,
+    "color": "#1B4F8A",
+    "nightlife": "No clubs here — Folegandros's night is its linked Chora squares, bars spilling onto the flagstones. <a href=\"https://www.google.com/maps/search/Astarti+Bar+Folegandros\" target=\"_blank\" rel=\"noopener\">Astarti</a> on the main square is the institution (Greek tunes, rembetika and its famous hot rakomelo); <a href=\"https://www.google.com/maps/search/El+Greco+Folegandros\" target=\"_blank\" rel=\"noopener\">El Greco</a> is the bohemian late one; <a href=\"https://www.google.com/maps/search/Beez+Cocktail+Bar+Folegandros\" target=\"_blank\" rel=\"noopener\">Beez</a> does serious cocktails to soul and reggae. Wandering between them is the night.",
+    "nightlife_el": "Χωρίς clubs εδώ — η νύχτα της Φολεγάνδρου είναι οι συνδεδεμένες πλατείες της Χώρας, με τα μπαρ να ξεχύνονται στις πλάκες. Το <a href=\"https://www.google.com/maps/search/Astarti+Bar+Folegandros\" target=\"_blank\" rel=\"noopener\">Astarti</a> στην κεντρική πλατεία είναι ο θεσμός (ελληνικά, ρεμπέτικα και το περίφημο ζεστό ρακόμελο)· το <a href=\"https://www.google.com/maps/search/El+Greco+Folegandros\" target=\"_blank\" rel=\"noopener\">El Greco</a> είναι το μποέμ ξενύχτι· το <a href=\"https://www.google.com/maps/search/Beez+Cocktail+Bar+Folegandros\" target=\"_blank\" rel=\"noopener\">Beez</a> κάνει σοβαρά κοκτέιλ σε soul και reggae. Η βόλτα ανάμεσά τους είναι η βραδιά.",
+    "food": [
+     {
+      "meal": "Dinner",
+      "meal_el": "Δείπνο",
+      "area": "Chora",
+      "area_el": "Χώρα",
+      "desc": "<a href=\"https://www.google.com/maps/search/Blue+Cuisine+Folegandros\" target=\"_blank\" rel=\"noopener\">Blue Cuisine</a> is the island's most refined table — creative modern Greek on a Chora terrace. For traditional, <a href=\"https://www.google.com/maps/search/Pounta+Folegandros\" target=\"_blank\" rel=\"noopener\">Pounta</a> has cooked Folegandros home recipes since 1963.",
+      "desc_el": "Το <a href=\"https://www.google.com/maps/search/Blue+Cuisine+Folegandros\" target=\"_blank\" rel=\"noopener\">Blue Cuisine</a> είναι το πιο εκλεπτυσμένο τραπέζι του νησιού — δημιουργική μοντέρνα ελληνική κουζίνα σε βεράντα της Χώρας. Για παραδοσιακά, το <a href=\"https://www.google.com/maps/search/Pounta+Folegandros\" target=\"_blank\" rel=\"noopener\">Pounta</a> μαγειρεύει σπιτικές συνταγές της Φολεγάνδρου από το 1963.",
+      "after": "Agali Beach (sunset swim)"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "stops": [
+     {
+      "name": "Agali Beach",
+      "name_el": "Παραλία Αγκάλη",
+      "desc": "The largest accessible beach on the island and the only one you can drive to (sort of — the road ends in a small parking lot). Fine sand, shallow clear water, west-facing so it catches sunset. Two good tavernas directly on the sand — Pasithea is the standout. Stay at Blue Sand Boutique Hotel if you want beach-access; otherwise Agali fills up with boat-arrivals by 11am. Best before 10 or after 5pm.",
+      "desc_el": "Η μεγαλύτερη προσβάσιμη παραλία του νησιού και η μόνη στην οποία μπορείς να φτάσεις με αυτοκίνητο (κάπως — ο δρόμος τελειώνει σε μικρό parking). Λεπτή άμμος, ρηχά διαυγή νερά, δυτικός προσανατολισμός άρα πιάνει το ηλιοβασίλεμα. Δύο καλές ταβέρνες κατευθείαν στην άμμο — το Pasithea είναι το καλύτερο. Μείνε στο Blue Sand Boutique Hotel αν θες πρόσβαση παραλίας· αλλιώς η Αγκάλη γεμίζει από αφίξεις με βάρκα μέχρι τις 11πμ. Καλύτερα πριν τις 10 ή μετά τις 5μμ.",
+      "lat": 36.6307,
+      "lng": 24.8944,
+      "time": "09:00",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601949/%CE%B1%CE%B3%CE%BA%CE%B1%CE%BB%CE%B7_nf6ezi.jpg",
       "photo_credit": {
-        "artist": "Irini Papalexi",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:View_of_Agali_Beach.jpg",
-        "source": "Wikimedia Commons"
+       "artist": "Irini Papalexi",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:View_of_Agali_Beach.jpg",
+       "source": "Wikimedia Commons"
       },
+      "type": "beach",
       "wiki": "https://www.google.com/maps/search/Agali+Beach+Folegandros"
-    },
-    {
-      "name": "Agios Nikolaos Beach",
+     },
+     {
+      "name": "Agios Nikolaos Beach (walk from Agali)",
       "name_el": "Παραλία Αγίου Νικολάου",
-      "desc": "A 20-min walk around the cliff from Agali, or €5 water-taxi. Much quieter because of the minor effort required. Sand and small pebbles, sheltered bay, crystal-clear water. Two tiny tavernas on the sand — Papalagi Seafood is the locals' pick (order the eggplant dip melitzanosalata). Better swimming than Agali in our view — the water is slightly cleaner without the boat traffic.",
-      "desc_el": "Μια 20λεπτη πεζοπορία γύρω από τον γκρεμό από την Αγκάλη, ή 5€ θαλάσσιο ταξί. Πολύ πιο ήσυχη λόγω της μικρής προσπάθειας που απαιτείται. Άμμος και μικρά βότσαλα, προστατευμένος κόλπος, κρυστάλλινα νερά. Δύο μικροσκοπικές ταβέρνες στην άμμο — το Papalagi Seafood είναι η επιλογή των ντόπιων (παράγγειλε τη μελιτζανοσαλάτα). Κατά τη γνώμη μας καλύτερη κολύμβηση από την Αγκάλη — το νερό είναι ελαφρώς καθαρότερο χωρίς την κίνηση από βάρκες.",
-      "type": "Mixed sand and small pebbles",
-      "type_el": "Μείγμα άμμου και μικρών βότσαλων",
-      "depth": "Shallow then gradual deepening",
-      "depth_el": "Ρηχά μετά σταδιακό βάθεμα",
-      "facing": "West-southwest — sheltered",
-      "facing_el": "Δυτικά-νοτιοδυτικά — προστατευμένη",
-      "facilities": "Basic: 2 small tavernas (Papalagi Seafood recommended), no loungers",
-      "facilities_el": "Βασικές: 2 μικρές ταβέρνες (Papalagi Seafood προτεινόμενο), χωρίς ξαπλώστρες",
+      "desc": "A 20-minute walk around the cliff from Agali, or a €5 water-taxi ride. Much quieter than Agali. Crystal-clear water over a sandy bottom; the bay is protected. Two tiny tavernas on the beach — Papalagi Seafood is the one locals recommend (order the melitzanosalata). Coming back, the path is easier if you go via the small chapel uphill rather than along the rocks.",
+      "desc_el": "Μία 20λεπτη πεζοπορία γύρω από τον γκρεμό από την Αγκάλη, ή μια διαδρομή με θαλάσσιο ταξί 5€. Πολύ πιο ήσυχη από την Αγκάλη. Κρυστάλλινα νερά πάνω σε αμμώδη βυθό· ο κόλπος είναι προστατευμένος. Δύο μικροσκοπικές ταβέρνες στην παραλία — το Papalagi Seafood είναι αυτό που συστήνουν οι ντόπιοι (παράγγειλε τη μελιτζανοσαλάτα). Επιστρέφοντας, το μονοπάτι είναι πιο εύκολο αν πας μέσω του μικρού εκκλησιδίου στην ανηφόρα παρά κατά μήκος των βράχων.",
       "lat": 36.632,
       "lng": 24.891,
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Cyclades_Folegandros_Angali_Agios_Nikolaos_Plage_Tamaris_-_panoramio.jpg",
-      "photo_credit": {
-        "artist": "rene boulay",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Cyclades_Folegandros_Angali_Agios_Nikolaos_Plage_Tamaris_-_panoramio.jpg",
-        "source": "Wikimedia Commons"
-      },
-      "wiki": "https://www.google.com/maps/search/Agios+Nikolaos+Beach+Folegandros"
-    },
-    {
-      "name": "Livadaki Beach",
-      "name_el": "Παραλία Λιβαδάκι",
-      "desc": "The most hidden beach on Folegandros — reached by a 45-min steep hike from Ano Meria or a boat from Agali (€15 return). Turquoise-green water, white pebbles, unusual salt-and-sulfur mineral formations in the surrounding rocks making this a snorkeling highlight. Sometimes you'll be the only person here. The Aspropounta lighthouse above makes a worthwhile extension for hikers.",
-      "desc_el": "Η πιο κρυμμένη παραλία στη Φολέγανδρο — προσβάσιμη με 45λεπτη απότομη πεζοπορία από την Άνω Μεριά ή με βάρκα από την Αγκάλη (15€ με επιστροφή). Τιρκουάζ-πράσινα νερά, λευκά βότσαλα, ασυνήθιστοι σχηματισμοί άλατος και θείου στα γύρω βράχια που την κάνουν κορύφωση για snorkelling. Μερικές φορές θα είσαι ο μόνος εκεί. Ο φάρος της Ασπροπούντας πιο πάνω είναι αξιόλογη προέκταση για πεζοπόρους.",
-      "type": "White pebbles with mineral rock formations",
-      "type_el": "Λευκά βότσαλα με σχηματισμούς ορυκτών",
-      "depth": "Deep quickly, excellent clarity",
-      "depth_el": "Βαθαίνει γρήγορα, εξαιρετική διαύγεια",
-      "facing": "Southwest — sheltered",
-      "facing_el": "Νοτιοδυτικά — προστατευμένη",
-      "facilities": "None whatsoever. 45-min hike or €15 boat. Exceptional snorkeling.",
-      "facilities_el": "Καμία απολύτως. 45 λεπτά πεζοπορία ή 15€ βάρκα. Εξαιρετικό snorkelling.",
-      "lat": 36.645,
+      "time": "11:00",
+      "type": "beach",
+      "wiki": "https://www.google.com/maps/search/Agios+Nikolaos+Beach+(walk+from+Agali)+Folegandros",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601949/%CE%B1%CE%B3%CE%B9%CE%BF%CF%82_%CE%BD%CE%B9%CE%BA%CE%BF%CE%BB%CE%B1%CE%BF%CF%82_bi9ex0.jpg",
+      "photo_credit": null
+     },
+     {
+      "name": "Ano Meria village",
+      "name_el": "Χωριό Άνω Μεριά",
+      "desc": "The island's second village — 6km north of Chora, spread thinly over terraced hillsides. This is the agricultural Folegandros: stone-walled fields, scattered farmhouses, a few tavernas. The Ecological and Folklore Museum (in a preserved farmhouse) is small but excellent — shows how islanders lived on rain cisterns and terraced barley until the 1970s. Far fewer tourists; almost no one spends the night here.",
+      "desc_el": "Το δεύτερο χωριό του νησιού — 6 χλμ βόρεια της Χώρας, απλωμένο αραιά πάνω σε αναβαθμισμένες πλαγιές. Αυτή είναι η αγροτική Φολέγανδρος: χωράφια με πέτρινους τοίχους, σκόρπιες αγροικίες, μερικές ταβέρνες. Το Οικολογικό και Λαογραφικό Μουσείο (σε διατηρημένη αγροικία) είναι μικρό αλλά εξαιρετικό — δείχνει πώς ζούσαν οι νησιώτες με στέρνες βρόχινου νερού και αναβαθμισμένο κριθάρι μέχρι τη δεκαετία του 1970. Πολύ λιγότεροι τουρίστες· σχεδόν κανείς δεν διανυκτερεύει εδώ.",
+      "lat": 36.6437,
       "lng": 24.8833,
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601948/%CE%BB%CE%B9%CE%B2%CE%B1%CE%B4%CE%B1%CE%BA%CE%B9_2_pevjjs.jpg",
+      "time": "15:30",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ano_Meria_on_Folegandros%2C_15M6593.jpg/1920px-Ano_Meria_on_Folegandros%2C_15M6593.jpg",
       "photo_credit": {
-        "artist": "Etienne O. Dallaire",
-        "license": "CC BY 4.0",
-        "license_url": "https://creativecommons.org/licenses/by/4.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Paralia_Livadaki_Beach,_Folegandros,_Greece.jpg",
-        "source": "Wikimedia Commons"
+       "artist": "Zde",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Ano_Meria_on_Folegandros,_15M6593.jpg",
+       "source": "Wikimedia Commons"
       },
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ-_UGp8v_mBQRYBB4rk3u2nw"
-    }
-  ],
-  "name_el": "Φολέγανδρος",
-  "name_accusative_el": "Φολέγανδρο",
-  "name_genitive_el": "Φολέγανδρου",
-  "gender_el": "f",
-  "subtitle_el": "Οι Κυκλάδες του γκρεμού — χωρίς αυτοκίνητα, χωρίς πλήθη, η καλύτερη πλατεία χωριού στην Ελλάδα",
-  "intro_el": "Η Φολέγανδρος είναι οι Κυκλάδες όπως ήταν πριν 30 χρόνια. Το νησί είναι 19 τετραγωνικά χιλιόμετρα, έχει πληθυσμό 765, έναν κεντρικό δρόμο, χωρίς αεροδρόμιο, και τρία χωριά που μαζί περιέχουν κάθε εστιατόριο, ξενοδοχείο, και μπαρ που θα χρειαστείς. Η Χώρα, η πρωτεύουσα, είναι σκαρφαλωμένη σε γκρεμό 200 μέτρων και είναι ένα από τα ομορφότερα χωριά της Ελλάδας — ένα μεσαιωνικό Κάστρο περιτριγυρισμένο από τέσσερις αλληλοσυνδεόμενες πλατείες χωρίς αυτοκίνητα, κάθε μία με τη δική της ατμόσφαιρα. Δεν υπάρχουν αλυσίδες, δεν υπάρχουν clubs, και ουσιαστικά δεν υπάρχει νυχτερινή ζωή πέρα από αργά δείπνα που εξελίσσονται σε μακρές συζητήσεις. Στις παραλίες φτάνεις είτε με βάρκα είτε με τα πόδια — κανένα αυτοκίνητο δεν μπορεί να φτάσει κατευθείαν σε καμία. Αυτό είναι το νησί για ταξιδιώτες που έχουν ήδη κάνει Μύκονο και Σαντορίνη και θέλουν κάτι ριζικά πιο ήσυχο. Καλύτερα Μάιο-Ιούνιο και Σεπτέμβριο· ο Αύγουστος είναι ακόμα ήρεμος με κυκλαδίτικα μέτρα αλλά η Χώρα έχει κίνηση.",
-  "specialties": [
-    {
-      "name": "Matsata",
-      "name_el": "Ματσάτα",
-      "desc": "Hand-rolled fresh pasta, traditionally served with rooster or rabbit stew. Authentic versions at To Pounta in Ano Meria and the village tavernas there.",
-      "desc_el": "Χειροποίητα φρέσκα ζυμαρικά, παραδοσιακά με κοκκινιστό κόκορα ή κουνέλι. Αυθεντικά στο Πουντού στην Άνω Μεριά και στις ταβέρνες του χωριού."
-    },
-    {
-      "name": "Souroto cheese",
-      "name_el": "Σούροτο",
-      "desc": "Soft fresh cheese in brine, eaten with bread, drizzled with honey, or in cheese pies. Found at the village shop in Ano Meria.",
-      "desc_el": "Φρέσκο μαλακό τυρί σε άρμη, με ψωμί, μέλι ή σε τυρόπιτες. Στο χωριάτικο μαγαζί στην Άνω Μεριά."
-    },
-    {
-      "name": "Karpouzenia",
-      "name_el": "Καρπουζένια",
-      "desc": "Watermelon and Souroto cheese pies, fried — uniquely Folegandrian. Sweet, salty, peculiar. Try in summer when watermelons are at peak.",
-      "desc_el": "Καρπουζένια — πίτες με καρπούζι και Σούροτο, τηγανητές, μοναδικά φολεγανδρίτικες. Γλυκές, αλμυρές, ιδιαίτερες. Το καλοκαίρι όταν τα καρπούζια είναι στην ώρα τους."
-    }
-  ],
-  "festivals": [
-    {
-      "name": "Panagia of Folegandros",
-      "name_el": "Παναγία της Φολεγάνδρου",
-      "when": "Easter Monday + 6 days (3–9 May 2027)",
-      "when_el": "Δευτέρα Πάσχα + 6 ημέρες (3–9 Μαΐου 2027)",
-      "desc": "The icon of the Panagia is carried from house to house across the island for the week after Easter — a procession unique to Folegandros, with locals hosting the icon overnight in turn.",
-      "desc_el": "Η εικόνα της Παναγίας περιφέρεται από σπίτι σε σπίτι σε όλο το νησί την εβδομάδα μετά το Πάσχα — λιτανεία μοναδική στη Φολέγανδρο, με τους ντόπιους να φιλοξενούν την εικόνα διανυκτέρευσης με τη σειρά.",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Panagia_of_Folegandros%2C_153275.jpg/1920px-Panagia_of_Folegandros%2C_153275.jpg",
-      "photo_credit": {
-        "artist": "Zde",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Panagia_of_Folegandros,_153275.jpg",
-        "source": "Wikimedia Commons"
-      }
-    }
-  ],
-  "getting_there": {
-    "pills": [
-      "⛵ Piraeus 4–9h",
-      "€40–60"
+      "type": "village",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJdVIONKP_mBQRfP6rlu57nBU"
+     },
+     {
+      "name": "Dinner in Chora",
+      "lat": 36.6287,
+      "lng": 24.9207,
+      "type": "city",
+      "time": "20:30",
+      "wiki": null,
+      "desc": "Drive back from Ano Meria to Chora (about 10 minutes). After a day on the trails, dinner in the Kastro's lit-up squares is the perfect ending.",
+      "name_el": "Δείπνο στη Χώρα",
+      "desc_el": "Επιστροφή από την Άνω Μεριά στη Χώρα (περίπου 10 λεπτά). Μετά μια μέρα στα μονοπάτια, δείπνο στις φωτισμένες πλατείες του Κάστρου είναι το τέλειο τελείωμα.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601948/%CE%94%CE%B5%CE%B9%CC%81%CF%80%CE%BD%CE%BF_%CF%83%CF%84%CE%B7_%CE%A7%CF%89%CC%81%CF%81%CE%B1_nssua4.jpg",
+      "photo_credit": null
+     }
     ],
-    "pills_el": [
-      "⛵ Πειραιάς 4–9h",
-      "€40–60"
+    "overnight": "Chora",
+    "overnight_el": "Χώρα",
+    "title": "Agali, Agios Nikolaos & Ano Meria",
+    "title_el": "Αγκάλη, Άγιος Νικόλαος & Άνω Μεριά",
+    "km": 25,
+    "drive_mins": 40,
+    "color": "#C0522A",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Sinandisi (Ano Meria, since 1920)",
+      "area_el": "Συνάντηση (Άνω Μεριά, από το 1920)",
+      "desc": "A taverna run by the same family since 1920, on the edge of Ano Meria with a massive shaded veranda looking south over the Cretan Sea. Signature dish: handmade matsata pasta with slow-cooked rooster, served large enough for two. Also kalasouna (local cheese pie with wild herbs), ampelofasoula (beans with vine leaves). Free yogurt with marinated grapes comes at the end. This is the authentic Folegandros meal.",
+      "desc_el": "Μια ταβέρνα που διαχειρίζεται η ίδια οικογένεια από το 1920, στην άκρη της Άνω Μεριάς με τεράστια σκιασμένη βεράντα κοιτώντας νότια στο Κρητικό Πέλαγος. Πιάτο υπογραφής: χειροποίητη ματσάτα με κόκορα σιγομαγειρεμένο, σερβιριζόμενο αρκετά μεγάλο για δύο. Επίσης καλασούνα (τοπική τυρόπιτα με άγρια χόρτα), αμπελοφάσουλα. Δωρεάν γιαούρτι με μαριναρισμένα σταφύλια έρχεται στο τέλος. Αυτό είναι το αυθεντικό φολεγανδρίτικο γεύμα.",
+      "after": "Agios Nikolaos Beach (walk from Agali)"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "stops": [
+     {
+      "name": "Katergo Beach (boat or hike)",
+      "name_el": "Παραλία Κατεργό",
+      "desc": "The most beautiful beach on the island and one of the finest in the Cyclades. Accessible only by a 30-minute hike from Livadi (moderate, brings you over a ridge and down) or a 10-minute boat ride from Karavostasi port (€10 return). Fine pebbles, crystal turquoise water, vertical grey cliffs backing it. No shade, no facilities — bring water, food, umbrella. Strong currents sometimes, swim within the bay. Plan half a day here.",
+      "desc_el": "Η ομορφότερη παραλία του νησιού και μία από τις καλύτερες των Κυκλάδων. Προσβάσιμη μόνο με 30λεπτη πεζοπορία από το Λιβάδι (μέτρια, περνά πάνω από μια κορυφογραμμή και κατεβαίνει) ή 10λεπτη διαδρομή με βάρκα από το λιμάνι του Καραβοστασιού (10€ με επιστροφή). Λεπτά βότσαλα, κρυστάλλινα τιρκουάζ νερά, κάθετοι γκρίζοι γκρεμοί πίσω. Χωρίς σκιά, χωρίς ανέσεις — φέρε νερό, φαγητό, ομπρέλα. Περιστασιακά ισχυρά ρεύματα, κολύμπα εντός του κόλπου. Σχεδίασε μισή μέρα εδώ.",
+      "lat": 36.5952,
+      "lng": 24.9496,
+      "time": "09:30",
+      "type": "beach",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJoWvy1dWqmRQRfABEi9xk5hk",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601948/%CE%BA%CE%B1%CF%84%CE%B5%CF%81%CE%B3%CE%BF_ofnrnt.jpg",
+      "photo_credit": null
+     },
+     {
+      "name": "Livadaki Beach (remote hike or boat)",
+      "name_el": "Παραλία Λιβαδάκι",
+      "desc": "The island's most hidden beach — 45 minutes of steep hiking from Ano Meria, or by boat from Agali (€15 return). Turquoise-green water, white pebbles, dramatic cliffs, and an unusual mineral backdrop (salt and sulfur formations). Excellent snorkeling. Sometimes completely empty. Bring everything; no amenities. For hikers, the Aspropounta Lighthouse is a worthwhile detour on the way.",
+      "desc_el": "Η πιο κρυμμένη παραλία του νησιού — 45 λεπτά απότομης πεζοπορίας από την Άνω Μεριά, ή με βάρκα από την Αγκάλη (15€ με επιστροφή). Τιρκουάζ-πράσινα νερά, λευκά βότσαλα, δραματικοί γκρεμοί, και ένα ασυνήθιστο ορυκτό σκηνικό (σχηματισμοί άλατος και θείου). Εξαιρετικό snorkelling. Μερικές φορές εντελώς άδεια. Φέρε τα πάντα· καμία ανέση. Για πεζοπόρους, ο φάρος της Ασπροπούντας είναι αξιόλογη παράκαμψη στον δρόμο.",
+      "lat": 36.6362,
+      "lng": 24.8593,
+      "time": "13:00",
+      "type": "beach",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ-_UGp8v_mBQRYBB4rk3u2nw",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601948/%CE%BB%CE%B9%CE%B2%CE%B1%CE%B4%CE%B1%CE%BA%CE%B9_hspqnt.jpg",
+      "photo_credit": null
+     },
+     {
+      "name": "Karavostasi — Departure",
+      "name_el": "Καραβοστάσι — Αναχώρηση",
+      "desc": "Back to the small port for the ferry. Folegandros connects to Piraeus, Santorini, Milos, Sikinos, Ios, and onward through the small Cyclades. Summer ferry schedule is dense; off-season is limited to 3-4 per week. Wait for your boat at the port café with a final glass of local vinsanto.",
+      "desc_el": "Επιστροφή στο μικρό λιμάνι για το πλοίο. Η Φολέγανδρος συνδέεται με Πειραιά, Σαντορίνη, Μήλο, Σίκινο, Ίο, και παρακάτω μέσω των μικρών Κυκλάδων. Το καλοκαιρινό πρόγραμμα πλοίων είναι πυκνό· εκτός σεζόν περιορίζεται σε 3-4 την εβδομάδα. Περίμενε το πλοίο σου στο λιμενικό café με ένα τελευταίο ποτήρι τοπικό vinsanto.",
+      "lat": 36.6157,
+      "lng": 24.9495,
+      "time": "16:30",
+      "type": "departure",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601948/%CE%BA%CE%B1%CF%81%CE%B1%CE%B2%CE%BF%CF%83%CF%84%CE%B1%CF%83%CE%B9_%CE%B1%CE%BD%CE%B1%CF%87%CF%89%CF%81%CE%B7%CF%83%CE%B7_ocmm4i.jpg",
+      "photo_credit": null
+     }
     ],
-    "summary": "No airport. Ferries dock at Karavostasi on the east coast, 4km below Chora. Fast ferry from Piraeus ~4h, conventional ~9h (with stops). Daily in summer.",
-    "summary_el": "Χωρίς αεροδρόμιο. Τα πλοία δένουν στο Καραβοστάσι στην ανατολική ακτή, 4 χλμ. κάτω από τη Χώρα. Γρήγορο από Πειραιά ~4 ώρες, συμβατικό ~9 ώρες (με στάσεις). Καθημερινά το καλοκαίρι.",
-    "tip": "The Western Cyclades line connects Folegandros to Sikinos, Ios, Santorini, Milos — perfect for island-hopping.",
-    "tip_el": "Η γραμμή Δυτικών Κυκλάδων συνδέει τη Φολέγανδρο με Σίκινο, Ίο, Σαντορίνη, Μήλο — ιδανική για island-hopping.",
-    "detailed": {
-      "en": "Folegandros has no airport. Reaching it means taking a ferry, and the practical question is which one and from where.\n\n**From Athens.** Ferries leave from Piraeus port. The fast catamarans (SeaJets, Golden Star) take roughly 4 hours and cost €55–70 in high season. The conventional ferries (Zante Ferries, Anek) take 8–10 hours via multiple Cycladic stops and cost €38–48. In summer there is at least one daily fast ferry from Piraeus; the slower boats run 3–5 times per week. Booking 2–3 weeks ahead in July–August is sensible — boats sell out around Greek holiday weekends. Outside the peak season, sailings drop to 3–4 per week total, and in deep winter (December–February) you may have just 2 weekly conventional ferries.\n\n**From Santorini.** If you're already flying into Greece, flying to Santorini and ferrying onward is often faster than going via Athens. The Santorini–Folegandros leg takes about 45 minutes by fast ferry and runs 2–4 times daily from May through October. Cost is around €25–35. This is the route most international visitors actually use.\n\n**From other islands.** Folegandros sits on the Western Cyclades ferry line, which means easy connections to Milos, Sikinos, Ios, and Sifnos. Milos–Folegandros takes about 1.5–2 hours; Ios is just 30–45 minutes away. This makes island-hopping itineraries that include Folegandros genuinely practical, unlike some of the more isolated Cyclades.\n\n**When you arrive.** Ferries dock at Karavostasi, a small port on the east coast. Chora — the main village where most accommodation is — sits 4 km uphill. A KTEL bus meets every arriving ferry and runs the short trip up to Chora; taxis also wait at the port. Don't try to walk it with luggage. If you've booked accommodation in Chora, expect to be at your room within 30 minutes of stepping off the boat.\n\n**Practical note.** Folegandros is one of the easier small Cyclades to reach, but it is still subject to weather cancellations, especially in shoulder season when northerly winds (the meltemi in summer, winter storms otherwise) can stop ferries for a day or two. If your travel dates are tight, give yourself a buffer day at the end.",
-      "el": "Η Φολέγανδρος δεν έχει αεροδρόμιο. Η πρόσβαση γίνεται αποκλειστικά με πλοίο, και το πρακτικό ερώτημα είναι από πού και με ποιο.\n\n**Από την Αθήνα.** Τα πλοία αναχωρούν από το λιμάνι του Πειραιά. Τα ταχύπλοα (SeaJets, Golden Star) κάνουν περίπου 4 ώρες και κοστίζουν €55–70 σε υψηλή περίοδο. Τα συμβατικά πλοία (Zante Ferries, Anek) κάνουν 8–10 ώρες με ενδιάμεσες στάσεις και κοστίζουν €38–48. Το καλοκαίρι υπάρχει τουλάχιστον ένα ταχύπλοο καθημερινά· τα συμβατικά πλοία 3–5 φορές την εβδομάδα. Κρατήσεις 2–3 εβδομάδες νωρίτερα τον Ιούλιο–Αύγουστο είναι λογικές — γεμίζουν στα ελληνικά τριήμερα. Εκτός σεζόν τα δρομολόγια πέφτουν σε 3–4 την εβδομάδα συνολικά, και τον χειμώνα (Δεκέμβριος–Φεβρουάριος) μπορεί να έχεις μόνο 2 εβδομαδιαία συμβατικά.\n\n**Από τη Σαντορίνη.** Αν πετάς ήδη προς Ελλάδα, το να πετάξεις στη Σαντορίνη και να συνεχίσεις με πλοίο είναι συχνά πιο γρήγορο από το να πας μέσω Αθήνας. Η διαδρομή Σαντορίνη–Φολέγανδρος είναι περίπου 45 λεπτά με ταχύπλοο και γίνεται 2–4 φορές ημερησίως από Μάιο έως Οκτώβριο. Κόστος γύρω στα €25–35. Είναι η διαδρομή που χρησιμοποιούν στην πραγματικότητα οι περισσότεροι ξένοι επισκέπτες.\n\n**Από άλλα νησιά.** Η Φολέγανδρος βρίσκεται στη γραμμή των Δυτικών Κυκλάδων, που σημαίνει εύκολες συνδέσεις με Μήλο, Σίκινο, Ίο και Σίφνο. Μήλος–Φολέγανδρος γύρω στις 1.5–2 ώρες· η Ίος μόλις 30–45 λεπτά. Αυτό κάνει τα island-hopping που περιλαμβάνουν Φολέγανδρο πραγματικά πρακτικά, σε αντίθεση με κάποιες πιο απομονωμένες Κυκλάδες.\n\n**Όταν φτάνεις.** Τα πλοία δένουν στο Καραβοστάσι, μικρό λιμάνι στην ανατολική ακτή. Η Χώρα — το κύριο χωριό όπου βρίσκονται τα περισσότερα καταλύματα — είναι 4 χλμ. ανηφορικά. Λεωφορείο του ΚΤΕΛ περιμένει κάθε πλοίο και κάνει τη σύντομη διαδρομή στη Χώρα· υπάρχουν και ταξί. Μην το επιχειρήσεις με αποσκευές με τα πόδια. Αν έχεις κάνει κράτηση στη Χώρα, υπολόγισε να είσαι στο δωμάτιο μέσα σε 30 λεπτά από την αποβίβαση.\n\n**Πρακτική σημείωση.** Η Φολέγανδρος είναι από τις πιο εύκολες μικρές Κυκλάδες στην πρόσβαση, αλλά παραμένει ευάλωτη σε ακυρώσεις από καιρό, ειδικά στην shoulder season όταν οι βόρειοι άνεμοι (μελτέμι το καλοκαίρι, χειμερινές καταιγίδες αλλιώς) μπορεί να σταματήσουν τα πλοία για μία–δύο μέρες. Αν έχεις σφιχτές ημερομηνίες, άσε ένα buffer day στο τέλος."
-    }
+    "overnight": null,
+    "overnight_el": null,
+    "title": "Katergo, Livadaki & Departure",
+    "title_el": "Κάτεργο, Λιβαδάκι & Αναχώρηση",
+    "km": 12,
+    "drive_mins": 20,
+    "color": "#5A7A3A"
+   }
+  ],
+  "title_el": "Πρόγραμμα 3 Ημερών στη Φολέγανδρο",
+  "subtitle_el": "Η Χώρα πάνω στον γκρεμό, η εκκλησία της Παναγίας, η παραλία στην Αγκάλη και η άγρια δυτική ακτή."
+ },
+ "beaches": [
+  {
+   "name": "Katergo Beach",
+   "name_el": "Παραλία Κατεργό",
+   "desc": "The island's signature beach — fine pebbles, dazzlingly clear turquoise water, vertical grey cliffs dropping straight into the bay. Reached only by 30-min hike from Livadi or 10-min boat from Karavostasi (€10 return). No facilities, no shade — bring everything. Strong currents on windy days; swim within the bay. The scale and bareness of the cliffs make it feel genuinely remote even in August.",
+   "desc_el": "Η παραλία-σήμα κατατεθέν του νησιού — λεπτά βότσαλα, εκτυφλωτικά διαυγή τιρκουάζ νερά, κάθετοι γκρίζοι γκρεμοί πέφτοντας κατευθείαν στον κόλπο. Προσβάσιμη μόνο με 30λεπτη πεζοπορία από το Λιβάδι ή 10λεπτη διαδρομή με βάρκα από το Καραβοστάσι (10€ με επιστροφή). Καμία ανέση, καμία σκιά — φέρε τα πάντα. Ισχυρά ρεύματα σε ανεμώδεις μέρες· κολύμπα εντός του κόλπου. Η κλίμακα και η γύμνια των γκρεμών την κάνουν να αισθάνεσαι γνήσια απομακρυσμένη ακόμα και τον Αύγουστο.",
+   "type": "Fine pale pebbles",
+   "type_el": "Λεπτά ανοιχτόχρωμα βότσαλα",
+   "depth": "Deep quickly, crystal clear",
+   "depth_el": "Βαθαίνει γρήγορα, κρυστάλλινα",
+   "facing": "South-southwest — calm most days, can have currents",
+   "facing_el": "Νοτιοδυτικά — ήρεμη τις περισσότερες μέρες, μπορεί να έχει ρεύματα",
+   "facilities": "None. Bring water, shade, food. 30-min hike or €10 boat return.",
+   "facilities_el": "Καμία παροχή. Φέρε νερό, σκιά, φαγητό. 30 λεπτά πεζοπορία ή 10€ βάρκα με επιστροφή.",
+   "lat": 36.5983,
+   "lng": 24.9472,
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601948/%CE%BA%CE%B1%CF%84%CE%B5%CF%81%CE%B3%CE%BF_2_cfx7qi.webp",
+   "photo_credit": {
+    "artist": "rene boulay",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Cyclades_Folegandros_Katergo_Plage_-_panoramio.jpg",
+    "source": "Wikimedia Commons"
+   },
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJoWvy1dWqmRQRfABEi9xk5hk"
   },
-  "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783277633/%CF%86%CE%BF%CE%BB%CE%B5%CE%B3%CE%B1%CE%BD%CE%B4%CF%81%CE%BF%CF%82_yncp02.jpg"
+  {
+   "name": "Agali Beach",
+   "name_el": "Παραλία Αγκάλη",
+   "desc": "The island's only car-accessible beach (the road ends at a small lot above the sand). Fine sand, shallow water, and two tavernas that work directly off the beach — Pasithea is the local-recommended one. West-facing so it catches sunset. The most 'organized' beach on Folegandros, which here means some umbrellas and a few dozen visitors, not resort-scale development. Fills with day-trippers 11am-4pm; arrive before or after.",
+   "desc_el": "Η μόνη παραλία του νησιού προσβάσιμη με αυτοκίνητο (ο δρόμος τελειώνει σε μικρό χώρο πάνω από την άμμο). Λεπτή άμμος, ρηχά νερά, και δύο ταβέρνες που λειτουργούν κατευθείαν στην παραλία — το Pasithea είναι το προτεινόμενο από τους ντόπιους. Δυτικός προσανατολισμός άρα πιάνει το ηλιοβασίλεμα. Η πιο 'οργανωμένη' παραλία της Φολεγάνδρου, που εδώ σημαίνει κάποιες ομπρέλες και μερικές δεκάδες επισκέπτες, όχι ανάπτυξη σε κλίμακα θέρετρου. Γεμίζει με ημερήσιους επισκέπτες 11πμ-4μμ· έλα πριν ή μετά.",
+   "type": "Fine sand",
+   "type_el": "Λεπτή άμμος",
+   "depth": "Gradual shallow entry",
+   "depth_el": "Σταδιακή ρηχή είσοδος",
+   "facing": "West — sunset-facing",
+   "facing_el": "Δυτικά — ηλιοβασίλεμα",
+   "facilities": "Moderate: 2 tavernas (Pasithea recommended), umbrellas for rent, shuttle to Chora",
+   "facilities_el": "Μέτριες παροχές: 2 ταβέρνες (Pasithea προτεινόμενη), ομπρέλες προς ενοικίαση, shuttle στη Χώρα",
+   "lat": 36.6307,
+   "lng": 24.8944,
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/View_of_Agali_Beach.jpg/1920px-View_of_Agali_Beach.jpg",
+   "photo_credit": {
+    "artist": "Irini Papalexi",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:View_of_Agali_Beach.jpg",
+    "source": "Wikimedia Commons"
+   },
+   "wiki": "https://www.google.com/maps/search/Agali+Beach+Folegandros"
+  },
+  {
+   "name": "Agios Nikolaos Beach",
+   "name_el": "Παραλία Αγίου Νικολάου",
+   "desc": "A 20-min walk around the cliff from Agali, or €5 water-taxi. Much quieter because of the minor effort required. Sand and small pebbles, sheltered bay, crystal-clear water. Two tiny tavernas on the sand — Papalagi Seafood is the locals' pick (order the eggplant dip melitzanosalata). Better swimming than Agali in our view — the water is slightly cleaner without the boat traffic.",
+   "desc_el": "Μια 20λεπτη πεζοπορία γύρω από τον γκρεμό από την Αγκάλη, ή 5€ θαλάσσιο ταξί. Πολύ πιο ήσυχη λόγω της μικρής προσπάθειας που απαιτείται. Άμμος και μικρά βότσαλα, προστατευμένος κόλπος, κρυστάλλινα νερά. Δύο μικροσκοπικές ταβέρνες στην άμμο — το Papalagi Seafood είναι η επιλογή των ντόπιων (παράγγειλε τη μελιτζανοσαλάτα). Κατά τη γνώμη μας καλύτερη κολύμβηση από την Αγκάλη — το νερό είναι ελαφρώς καθαρότερο χωρίς την κίνηση από βάρκες.",
+   "type": "Mixed sand and small pebbles",
+   "type_el": "Μείγμα άμμου και μικρών βότσαλων",
+   "depth": "Shallow then gradual deepening",
+   "depth_el": "Ρηχά μετά σταδιακό βάθεμα",
+   "facing": "West-southwest — sheltered",
+   "facing_el": "Δυτικά-νοτιοδυτικά — προστατευμένη",
+   "facilities": "Basic: 2 small tavernas (Papalagi Seafood recommended), no loungers",
+   "facilities_el": "Βασικές παροχές: 2 μικρές ταβέρνες (Papalagi Seafood προτεινόμενο), χωρίς ξαπλώστρες",
+   "lat": 36.632,
+   "lng": 24.891,
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Cyclades_Folegandros_Angali_Agios_Nikolaos_Plage_Tamaris_-_panoramio.jpg",
+   "photo_credit": {
+    "artist": "rene boulay",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Cyclades_Folegandros_Angali_Agios_Nikolaos_Plage_Tamaris_-_panoramio.jpg",
+    "source": "Wikimedia Commons"
+   },
+   "wiki": "https://www.google.com/maps/search/Agios+Nikolaos+Beach+Folegandros"
+  },
+  {
+   "name": "Livadaki Beach",
+   "name_el": "Παραλία Λιβαδάκι",
+   "desc": "The most hidden beach on Folegandros — reached by a 45-min steep hike from Ano Meria or a boat from Agali (€15 return). Turquoise-green water, white pebbles, unusual salt-and-sulfur mineral formations in the surrounding rocks making this a snorkeling highlight. Sometimes you'll be the only person here. The Aspropounta lighthouse above makes a worthwhile extension for hikers.",
+   "desc_el": "Η πιο κρυμμένη παραλία στη Φολέγανδρο — προσβάσιμη με 45λεπτη απότομη πεζοπορία από την Άνω Μεριά ή με βάρκα από την Αγκάλη (15€ με επιστροφή). Τιρκουάζ-πράσινα νερά, λευκά βότσαλα, ασυνήθιστοι σχηματισμοί άλατος και θείου στα γύρω βράχια που την κάνουν κορύφωση για snorkelling. Μερικές φορές θα είσαι ο μόνος εκεί. Ο φάρος της Ασπροπούντας πιο πάνω είναι αξιόλογη προέκταση για πεζοπόρους.",
+   "type": "White pebbles with mineral rock formations",
+   "type_el": "Λευκά βότσαλα με σχηματισμούς ορυκτών",
+   "depth": "Deep quickly, excellent clarity",
+   "depth_el": "Βαθαίνει γρήγορα, εξαιρετική διαύγεια",
+   "facing": "Southwest — sheltered",
+   "facing_el": "Νοτιοδυτικά — προστατευμένη",
+   "facilities": "None whatsoever. 45-min hike or €15 boat. Exceptional snorkeling.",
+   "facilities_el": "Απολύτως καμία παροχή. 45 λεπτά πεζοπορία ή 15€ βάρκα. Εξαιρετικό snorkelling.",
+   "lat": 36.645,
+   "lng": 24.8833,
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601948/%CE%BB%CE%B9%CE%B2%CE%B1%CE%B4%CE%B1%CE%BA%CE%B9_2_pevjjs.jpg",
+   "photo_credit": {
+    "artist": "Etienne O. Dallaire",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Paralia_Livadaki_Beach,_Folegandros,_Greece.jpg",
+    "source": "Wikimedia Commons"
+   },
+   "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ-_UGp8v_mBQRYBB4rk3u2nw"
+  }
+ ],
+ "name_el": "Φολέγανδρος",
+ "name_accusative_el": "Φολέγανδρο",
+ "name_genitive_el": "Φολέγανδρου",
+ "gender_el": "f",
+ "subtitle_el": "Οι Κυκλάδες του γκρεμού — χωρίς αυτοκίνητα, χωρίς πλήθη, η καλύτερη πλατεία χωριού στην Ελλάδα",
+ "intro_el": "Η Φολέγανδρος είναι οι Κυκλάδες όπως ήταν πριν 30 χρόνια. Το νησί είναι 19 τετραγωνικά χιλιόμετρα, έχει πληθυσμό 765, έναν κεντρικό δρόμο, χωρίς αεροδρόμιο, και τρία χωριά που μαζί περιέχουν κάθε εστιατόριο, ξενοδοχείο, και μπαρ που θα χρειαστείς. Η Χώρα, η πρωτεύουσα, είναι σκαρφαλωμένη σε γκρεμό 200 μέτρων και είναι ένα από τα ομορφότερα χωριά της Ελλάδας — ένα μεσαιωνικό Κάστρο περιτριγυρισμένο από τέσσερις αλληλοσυνδεόμενες πλατείες χωρίς αυτοκίνητα, κάθε μία με τη δική της ατμόσφαιρα. Δεν υπάρχουν αλυσίδες, δεν υπάρχουν clubs, και ουσιαστικά δεν υπάρχει νυχτερινή ζωή πέρα από αργά δείπνα που εξελίσσονται σε μακρές συζητήσεις. Στις παραλίες φτάνεις είτε με βάρκα είτε με τα πόδια — κανένα αυτοκίνητο δεν μπορεί να φτάσει κατευθείαν σε καμία. Αυτό είναι το νησί για ταξιδιώτες που έχουν ήδη κάνει Μύκονο και Σαντορίνη και θέλουν κάτι ριζικά πιο ήσυχο. Καλύτερα Μάιο-Ιούνιο και Σεπτέμβριο· ο Αύγουστος είναι ακόμα ήρεμος με κυκλαδίτικα μέτρα αλλά η Χώρα έχει κίνηση.",
+ "specialties": [
+  {
+   "name": "Matsata",
+   "name_el": "Ματσάτα",
+   "desc": "Hand-rolled fresh pasta, traditionally served with rooster or rabbit stew. Authentic versions at To Pounta in Ano Meria and the village tavernas there.",
+   "desc_el": "Χειροποίητα φρέσκα ζυμαρικά, παραδοσιακά με κοκκινιστό κόκορα ή κουνέλι. Αυθεντικά στο Πουντού στην Άνω Μεριά και στις ταβέρνες του χωριού."
+  },
+  {
+   "name": "Souroto cheese",
+   "name_el": "Σούροτο",
+   "desc": "Soft fresh cheese in brine, eaten with bread, drizzled with honey, or in cheese pies. Found at the village shop in Ano Meria.",
+   "desc_el": "Φρέσκο μαλακό τυρί σε άρμη, με ψωμί, μέλι ή σε τυρόπιτες. Στο χωριάτικο μαγαζί στην Άνω Μεριά."
+  },
+  {
+   "name": "Karpouzenia",
+   "name_el": "Καρπουζένια",
+   "desc": "Watermelon and Souroto cheese pies, fried — uniquely Folegandrian. Sweet, salty, peculiar. Try in summer when watermelons are at peak.",
+   "desc_el": "Καρπουζένια — πίτες με καρπούζι και Σούροτο, τηγανητές, μοναδικά φολεγανδρίτικες. Γλυκές, αλμυρές, ιδιαίτερες. Το καλοκαίρι όταν τα καρπούζια είναι στην ώρα τους."
+  }
+ ],
+ "festivals": [
+  {
+   "name": "Panagia of Folegandros",
+   "name_el": "Παναγία της Φολεγάνδρου",
+   "when": "Easter Monday + 6 days (3–9 May 2027)",
+   "when_el": "Δευτέρα Πάσχα + 6 ημέρες (3–9 Μαΐου 2027)",
+   "desc": "The icon of the Panagia is carried from house to house across the island for the week after Easter — a procession unique to Folegandros, with locals hosting the icon overnight in turn.",
+   "desc_el": "Η εικόνα της Παναγίας περιφέρεται από σπίτι σε σπίτι σε όλο το νησί την εβδομάδα μετά το Πάσχα — λιτανεία μοναδική στη Φολέγανδρο, με τους ντόπιους να φιλοξενούν την εικόνα διανυκτέρευσης με τη σειρά.",
+   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Panagia_of_Folegandros%2C_153275.jpg/1920px-Panagia_of_Folegandros%2C_153275.jpg",
+   "photo_credit": {
+    "artist": "Zde",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Panagia_of_Folegandros,_153275.jpg",
+    "source": "Wikimedia Commons"
+   }
+  }
+ ],
+ "getting_there": {
+  "pills": [
+   "⛵ Piraeus 4–9h",
+   "€40–60"
+  ],
+  "pills_el": [
+   "⛵ Πειραιάς 4–9h",
+   "€40–60"
+  ],
+  "summary": "No airport. Ferries dock at Karavostasi on the east coast, 4km below Chora. Fast ferry from Piraeus ~4h, conventional ~9h (with stops). Daily in summer.",
+  "summary_el": "Χωρίς αεροδρόμιο. Τα πλοία δένουν στο Καραβοστάσι στην ανατολική ακτή, 4 χλμ. κάτω από τη Χώρα. Γρήγορο από Πειραιά ~4 ώρες, συμβατικό ~9 ώρες (με στάσεις). Καθημερινά το καλοκαίρι.",
+  "tip": "The Western Cyclades line connects Folegandros to Sikinos, Ios, Santorini, Milos — perfect for island-hopping.",
+  "tip_el": "Η γραμμή Δυτικών Κυκλάδων συνδέει τη Φολέγανδρο με Σίκινο, Ίο, Σαντορίνη, Μήλο — ιδανική για island-hopping.",
+  "detailed": {
+   "en": "Folegandros has no airport. Reaching it means taking a ferry, and the practical question is which one and from where.\n\n**From Athens.** Ferries leave from Piraeus port. The fast catamarans (SeaJets, Golden Star) take roughly 4 hours and cost €55–70 in high season. The conventional ferries (Zante Ferries, Anek) take 8–10 hours via multiple Cycladic stops and cost €38–48. In summer there is at least one daily fast ferry from Piraeus; the slower boats run 3–5 times per week. Booking 2–3 weeks ahead in July–August is sensible — boats sell out around Greek holiday weekends. Outside the peak season, sailings drop to 3–4 per week total, and in deep winter (December–February) you may have just 2 weekly conventional ferries.\n\n**From Santorini.** If you're already flying into Greece, flying to Santorini and ferrying onward is often faster than going via Athens. The Santorini–Folegandros leg takes about 45 minutes by fast ferry and runs 2–4 times daily from May through October. Cost is around €25–35. This is the route most international visitors actually use.\n\n**From other islands.** Folegandros sits on the Western Cyclades ferry line, which means easy connections to Milos, Sikinos, Ios, and Sifnos. Milos–Folegandros takes about 1.5–2 hours; Ios is just 30–45 minutes away. This makes island-hopping itineraries that include Folegandros genuinely practical, unlike some of the more isolated Cyclades.\n\n**When you arrive.** Ferries dock at Karavostasi, a small port on the east coast. Chora — the main village where most accommodation is — sits 4 km uphill. A KTEL bus meets every arriving ferry and runs the short trip up to Chora; taxis also wait at the port. Don't try to walk it with luggage. If you've booked accommodation in Chora, expect to be at your room within 30 minutes of stepping off the boat.\n\n**Practical note.** Folegandros is one of the easier small Cyclades to reach, but it is still subject to weather cancellations, especially in shoulder season when northerly winds (the meltemi in summer, winter storms otherwise) can stop ferries for a day or two. If your travel dates are tight, give yourself a buffer day at the end.",
+   "el": "Η Φολέγανδρος δεν έχει αεροδρόμιο. Η πρόσβαση γίνεται αποκλειστικά με πλοίο, και το πρακτικό ερώτημα είναι από πού και με ποιο.\n\n**Από την Αθήνα.** Τα πλοία αναχωρούν από το λιμάνι του Πειραιά. Τα ταχύπλοα (SeaJets, Golden Star) κάνουν περίπου 4 ώρες και κοστίζουν €55–70 σε υψηλή περίοδο. Τα συμβατικά πλοία (Zante Ferries, Anek) κάνουν 8–10 ώρες με ενδιάμεσες στάσεις και κοστίζουν €38–48. Το καλοκαίρι υπάρχει τουλάχιστον ένα ταχύπλοο καθημερινά· τα συμβατικά πλοία 3–5 φορές την εβδομάδα. Κρατήσεις 2–3 εβδομάδες νωρίτερα τον Ιούλιο–Αύγουστο είναι λογικές — γεμίζουν στα ελληνικά τριήμερα. Εκτός σεζόν τα δρομολόγια πέφτουν σε 3–4 την εβδομάδα συνολικά, και τον χειμώνα (Δεκέμβριος–Φεβρουάριος) μπορεί να έχεις μόνο 2 εβδομαδιαία συμβατικά.\n\n**Από τη Σαντορίνη.** Αν πετάς ήδη προς Ελλάδα, το να πετάξεις στη Σαντορίνη και να συνεχίσεις με πλοίο είναι συχνά πιο γρήγορο από το να πας μέσω Αθήνας. Η διαδρομή Σαντορίνη–Φολέγανδρος είναι περίπου 45 λεπτά με ταχύπλοο και γίνεται 2–4 φορές ημερησίως από Μάιο έως Οκτώβριο. Κόστος γύρω στα €25–35. Είναι η διαδρομή που χρησιμοποιούν στην πραγματικότητα οι περισσότεροι ξένοι επισκέπτες.\n\n**Από άλλα νησιά.** Η Φολέγανδρος βρίσκεται στη γραμμή των Δυτικών Κυκλάδων, που σημαίνει εύκολες συνδέσεις με Μήλο, Σίκινο, Ίο και Σίφνο. Μήλος–Φολέγανδρος γύρω στις 1.5–2 ώρες· η Ίος μόλις 30–45 λεπτά. Αυτό κάνει τα island-hopping που περιλαμβάνουν Φολέγανδρο πραγματικά πρακτικά, σε αντίθεση με κάποιες πιο απομονωμένες Κυκλάδες.\n\n**Όταν φτάνεις.** Τα πλοία δένουν στο Καραβοστάσι, μικρό λιμάνι στην ανατολική ακτή. Η Χώρα — το κύριο χωριό όπου βρίσκονται τα περισσότερα καταλύματα — είναι 4 χλμ. ανηφορικά. Λεωφορείο του ΚΤΕΛ περιμένει κάθε πλοίο και κάνει τη σύντομη διαδρομή στη Χώρα· υπάρχουν και ταξί. Μην το επιχειρήσεις με αποσκευές με τα πόδια. Αν έχεις κάνει κράτηση στη Χώρα, υπολόγισε να είσαι στο δωμάτιο μέσα σε 30 λεπτά από την αποβίβαση.\n\n**Πρακτική σημείωση.** Η Φολέγανδρος είναι από τις πιο εύκολες μικρές Κυκλάδες στην πρόσβαση, αλλά παραμένει ευάλωτη σε ακυρώσεις από καιρό, ειδικά στην shoulder season όταν οι βόρειοι άνεμοι (μελτέμι το καλοκαίρι, χειμερινές καταιγίδες αλλιώς) μπορεί να σταματήσουν τα πλοία για μία–δύο μέρες. Αν έχεις σφιχτές ημερομηνίες, άσε ένα buffer day στο τέλος."
+  }
+ },
+ "hero_photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783277633/%CF%86%CE%BF%CE%BB%CE%B5%CE%B3%CE%B1%CE%BD%CE%B4%CF%81%CE%BF%CF%82_yncp02.jpg"
 }
