@@ -162,7 +162,7 @@ const ISLAND_CLUSTERS = {
     "score": 4.1,
     "days": 4,
     "why": "These are hopping islands, not destinations. Based in Lefkada with a boat or the local ferries, the three of them together make one of the best low-key weeks in Greece.",
-    "why_el": "Είναι νησιά για νησοπορία, όχι προορισμοί. Με βάση τη Λευκάδα και βάρκα ή τα τοπικά φέρι, τα τρία μαζί δίνουν μια από τις καλύτερες χαλαρές εβδομάδες στην Ελλάδα.",
+    "why_el": "Είναι νησιά για νησοπορία, όχι προορισμοί. Με βάση τη Λευκάδα και βάρκα ή τα τοπικά πλοία, τα τρία μαζί δίνουν μια από τις καλύτερες χαλαρές εβδομάδες στην Ελλάδα.",
     "name_el_gen": "του Εσωτερικού Ιονίου",
     "roles": {
       "kastos": {
@@ -243,7 +243,7 @@ const ISLAND_CLUSTERS = {
     "score": 3.9,
     "days": 3,
     "why": "Thymaina only makes sense as part of Fournoi, and Fournoi makes most sense as an add-on to Ikaria or Samos. Together it is one of the least-visited corners of the Aegean.",
-    "why_el": "Η Θύμαινα βγάζει νόημα μόνο μαζί με τους Φούρνους, και οι Φούρνοι κυρίως ως προέκταση της Ικαρίας ή της Σάμου. Μαζί είναι μια από τις λιγότερο επισκέψιμες γωνιές του Αιγαίου.",
+    "why_el": "Η Θύμαινα βγάζει νόημα μόνο μαζί με τους Φούρνους, και οι Φούρνοι κυρίως ως προέκταση της Ικαρίας ή της Σάμου. Μαζί είναι μια από τις γωνιές με τους λιγότερους επισκέπτες του Αιγαίου.",
     "name_el_gen": "του συμπλέγματος Φούρνων",
     "roles": {
       "fournoi": {
@@ -1211,7 +1211,7 @@ const HOMEPAGE_EXCERPTS = {
   },
   milos: {
     en: 'Called the most beautiful island in Greece — volcanic geology, lunar rock at Sarakiniko, white pumice at Kleftiko.',
-    el: 'Έχει χαρακτηριστεί το ομορφότερο νησί της Ελλάδας — ηφαιστειακή γεωλογία, σεληνιακοί βράχοι στο Σαρακήνικο, λευκή κίσσηρης στο Κλέφτικο.'
+    el: 'Έχει χαρακτηριστεί το ομορφότερο νησί της Ελλάδας — ηφαιστειακή γεωλογία, σεληνιακοί βράχοι στο Σαρακήνικο, λευκή κίσηρη στο Κλέφτικο.'
   },
   santorini: {
     en: 'Not primarily a beach island — come for the caldera, the architecture, the wine and the sunsets.',
@@ -1404,7 +1404,7 @@ async function renderWhatsOnStrip() {
   let festLink = '';
   if (festivalCount > 0) {
     const label = lang === 'el'
-      ? `Και οι ${festivalCount} γιορτές του μήνα →`
+      ? `Όλες οι ${festivalCount} γιορτές του μήνα →`
       : `All ${festivalCount} festivals this month →`;
     festLink = `<a class="bp-fest-more" href="${festPath}">${label}</a>`;
   }
@@ -1416,11 +1416,11 @@ async function renderWhatsOnStrip() {
   //   - >12 perfects: "Underrated picks for <month>" (peak season, diversified)
   let perfectLabel;
   if (perfectIslands.length === 0) {
-    perfectLabel = lang === 'el' ? `Καλά για ${monthLabel}` : `Best in ${monthLabel}`;
+    perfectLabel = lang === 'el' ? `Τα καλύτερα τον ${monthLabel}` : `Best in ${monthLabel}`;
   } else if (perfectIslands.length < 4) {
-    perfectLabel = lang === 'el' ? `Ιδανικά τον ${monthLabel}` : `Best for ${monthLabel}`;
+    perfectLabel = lang === 'el' ? `Οι κορυφαίες επιλογές τον ${monthLabel}` : `Best for ${monthLabel}`;
   } else if (perfectIslands.length > 12) {
-    perfectLabel = lang === 'el' ? `Αξιόλογες επιλογές τον ${monthLabel}` : `Underrated picks for ${monthLabel}`;
+    perfectLabel = lang === 'el' ? `Υποτιμημένες επιλογές τον ${monthLabel}` : `Underrated picks for ${monthLabel}`;
   } else {
     perfectLabel = lang === 'el' ? `Ιδανικά τον ${monthLabel}` : `Perfect in ${monthLabel}`;
   }
@@ -2501,7 +2501,7 @@ function scoreVerdict(s) {
   if (s >= 4.5) return el ? 'Κορυφαίο' : 'Exceptional';
   if (s >= 4.0) return el ? 'Εξαιρετικό' : 'Excellent';
   if (s >= 3.5) return el ? 'Πολύ καλό' : 'Very good';
-  if (s >= 3.0) return el ? 'Στέρεη επιλογή' : 'Solid choice';
+  if (s >= 3.0) return el ? 'Σταθερή επιλογή' : 'Solid choice';
   if (s >= 2.5) return el ? 'Αξιοπρεπές' : 'Decent';
   return el ? 'Εξειδικευμένο' : 'Niche';
 }
@@ -2827,7 +2827,7 @@ function buildAudienceSections(data) {
     families:   ['for families',           'για οικογένειες'],
     couples:    ['for couples',            'για ζευγάρια'],
     hikers:     ['for hikers',             'για πεζοπόρους'],
-    solo:       ['for solo travelers',     'για μοναχικούς ταξιδιώτες'],
+    solo:       ['for solo travelers',     'για όσους ταξιδεύουν μόνοι'],
     foodies:    ['for foodies',            'για καλοφαγάδες'],
     first_time: ['for first-time visitors','για πρώτη επίσκεψη'],
   };
@@ -3103,7 +3103,7 @@ function buildWhenToVisitSection(data) {
     return sorted.map(i => monthAbbr[i]).join(', ');
   };
   const tagLabels = lang === 'el'
-    ? { perfect: 'Τέλεια', great: 'Καλά', ok: 'Μέτρια', avoid: 'Απόφυγε' }
+    ? { perfect: 'Άριστο', great: 'Καλό', ok: 'ΟΚ', avoid: 'Απόφυγε' }
     : { perfect: 'Best', great: 'Great', ok: 'OK', avoid: 'Avoid' };
   const highlightOrder = ['perfect', 'great', 'ok', 'avoid'];
   const highlightHtml = highlightOrder
@@ -5464,9 +5464,9 @@ const ITINERARIES = [
     duration: '10 days',
     duration_el: '10 μέρες',
     vibe: 'Beach & culture, away from crowds',
-    vibe_el: 'Παραλία & πολιτισμός, μακριά από πλήθη',
+    vibe_el: 'Παραλία & πολιτισμός, μακριά από τον πολύ κόσμο',
     description: 'The lesser-known Cyclades — Milos for its moon-landscape beaches, Sifnos for food, Folegandros for cliff views. All the water clarity of Santorini, none of the crowds.',
-    description_el: 'Οι λιγότερο γνωστές Κυκλάδες — Μήλος για σεληνιακές παραλίες, Σίφνος για φαγητό, Φολέγανδρος για βραχώδεις θέες. Όλη η διαύγεια της Σαντορίνης, χωρίς το πλήθος.',
+    description_el: 'Οι λιγότερο γνωστές Κυκλάδες — Μήλος για σεληνιακές παραλίες, Σίφνος για φαγητό, Φολέγανδρος για θέα από τον γκρεμό. Όλη η διαύγεια της Σαντορίνης, χωρίς το πλήθος.',
     stops: ['piraeus', 'milos', 'sifnos', 'folegandros', 'piraeus'],
     breakdown: [
       { from: 'Athens', from_el: 'Αθήνα', nights: 1, via: 'Fly in', via_el: 'Πτήση εισόδου' },
@@ -5487,9 +5487,9 @@ const ITINERARIES = [
     stops: ['piraeus', 'aegina', 'poros', 'hydra', 'piraeus'],
     breakdown: [
       { from: 'Athens', from_el: 'Αθήνα', nights: 3, via: 'Fly in · Acropolis, museums', via_el: 'Πτήση εισόδου · Ακρόπολη, μουσεία' },
-      { from: 'Aegina', from_el: 'Αίγινα', nights: 1, via: 'Hydrofoil (40 min)', via_el: 'Δελφίνι (40 λεπτά)' },
-      { from: 'Poros', from_el: 'Πόρος', nights: 1, via: 'Hydrofoil (~1 hr)', via_el: 'Δελφίνι (~1 ώρα)' },
-      { from: 'Hydra', from_el: 'Ύδρα', nights: 2, via: 'Hydrofoil (~30 min from Poros)', via_el: 'Δελφίνι (~30 λεπτά από Πόρο)' },
+      { from: 'Aegina', from_el: 'Αίγινα', nights: 1, via: 'Hydrofoil (40 min)', via_el: 'Ιπτάμενο δελφίνι (40 λεπτά)' },
+      { from: 'Poros', from_el: 'Πόρος', nights: 1, via: 'Hydrofoil (~1 hr)', via_el: 'Ιπτάμενο δελφίνι (~1 ώρα)' },
+      { from: 'Hydra', from_el: 'Ύδρα', nights: 2, via: 'Hydrofoil (~30 min from Poros)', via_el: 'Ιπτάμενο δελφίνι (~30 λεπτά από Πόρο)' },
     ]
   },
   {
@@ -5517,7 +5517,7 @@ const ITINERARIES = [
     vibe: 'Off-grid, simple, beachy',
     vibe_el: 'Εκτός δικτύου, απλό, παραλιακό',
     description: 'The tiny islands the Express Skopelitis connects — places where life hasn' + "'" + 't changed much in decades. Perfect beaches, no resorts, basic tavernas, total peace.',
-    description_el: 'Τα μικρά νησιά που συνδέει ο Εξπρές Σκοπελίτης — μέρη όπου η ζωή δεν έχει αλλάξει εδώ και δεκαετίες. Υπέροχες παραλίες, ούτε ένα ρεσόρτ, ταβερνάκια, απόλυτη ηρεμία.',
+    description_el: 'Τα μικρά νησιά που συνδέει ο Εξπρές Σκοπελίτης — μέρη όπου η ζωή δεν έχει αλλάξει εδώ και δεκαετίες. Υπέροχες παραλίες, ούτε ένα θέρετρο, ταβερνάκια, απόλυτη ηρεμία.',
     stops: ['naxos', 'koufonisia', 'amorgos'],
     breakdown: [
       { from: 'Naxos', from_el: 'Νάξος', nights: 3, via: 'Fast ferry from Piraeus (3.5 hrs)', via_el: 'Ταχύπλοο από Πειραιά (3,5 ώρες)' },
@@ -5552,7 +5552,7 @@ const ITINERARIES = [
     vibe: 'Two extraordinary islands',
     vibe_el: 'Δύο εξαιρετικά νησιά',
     description: 'The two most photogenic islands in Greece paired together — Santorini for the caldera, Milos for the lunar beaches. Very different, both unmissable.',
-    description_el: 'Τα δύο πιο φωτογενή νησιά της Ελλάδας μαζί — Σαντορίνη για την καλντέρα, Μήλος για τις σεληνιακές παραλίες. Πολύ διαφορετικά, και τα δύο αναντικατάστατα.',
+    description_el: 'Τα δύο πιο φωτογενή νησιά της Ελλάδας μαζί — Σαντορίνη για την καλντέρα, Μήλος για τις σεληνιακές παραλίες. Πολύ διαφορετικά, και τα δύο αξίζουν.',
     stops: ['santorini', 'milos'],
     breakdown: [
       { from: 'Athens', from_el: 'Αθήνα', nights: 1, via: 'Fly in', via_el: 'Πτήση εισόδου' },
@@ -5566,7 +5566,7 @@ const ITINERARIES = [
     duration: '7 days',
     duration_el: '7 μέρες',
     vibe: 'Easy pair, one flight',
-    vibe_el: 'Εύκολο ζεύγος, μια πτήση',
+    vibe_el: 'Εύκολος συνδυασμός, μία πτήση',
     description: 'The simplest Dodecanese combination — fly into Rhodes, three nights in the old town, then a quick ferry to Symi for three nights in the painted harbour. One flight, one ferry.',
     description_el: 'Ο πιο απλός συνδυασμός Δωδεκανήσων — πτήση στη Ρόδο, τρία βράδια στην παλιά πόλη, μετά γρήγορο πλοίο στη Σύμη για τρία βράδια στο πολύχρωμο λιμάνι. Μία πτήση, ένα πλοίο.',
     stops: ['rhodes', 'symi'],
@@ -5583,27 +5583,27 @@ const ITINERARIES = [
     vibe: 'Pine forests, green coastline',
     vibe_el: 'Πευκοδάση, καταπράσινες ακτές',
     description: 'The Sporades — an entirely different kind of Aegean island. Pine forest running to the sea, no whitewashed cubes, lush green hills. Alonnisos is the heart of the National Marine Park, where monk seals live. Very different from anything in the Cyclades.',
-    description_el: 'Οι Σποράδες — εντελώς διαφορετικό είδος νησιού Αιγαίου. Πευκοδάση που κατεβαίνουν στη θάλασσα, καθόλου κυβάκια λευκά, κατάπρασινοι λόφοι. Η Αλόννησος είναι το κέντρο του Θαλάσσιου Πάρκου, όπου ζουν οι φώκιες μοναχούς. Πολύ διαφορετικό από οτιδήποτε στις Κυκλάδες.',
+    description_el: 'Οι Σποράδες — εντελώς διαφορετικό είδος νησιού Αιγαίου. Πευκοδάση που κατεβαίνουν στη θάλασσα, χωρίς λευκά κυβικά σπίτια, καταπράσινοι λόφοι. Η Αλόννησος είναι το κέντρο του Θαλάσσιου Πάρκου, όπου ζει η μεσογειακή φώκια. Πολύ διαφορετικό από οτιδήποτε στις Κυκλάδες.',
     stops: ['skiathos', 'skopelos', 'alonnisos'],
     breakdown: [
       { from: 'Skiathos', from_el: 'Σκιάθος', nights: 3, via: 'Fly direct · sandy beaches, lively town', via_el: 'Απευθείας πτήση · αμμουδιές, ζωντανή πόλη' },
       { from: 'Skopelos', from_el: 'Σκόπελος', nights: 3, via: 'Frequent ferries (~1 hr) · Mamma Mia filming location', via_el: 'Συχνά πλοία (~1 ώρα) · τοποθεσία γυρισμάτων Mamma Mia' },
-      { from: 'Alonnisos', from_el: 'Αλόννησος', nights: 3, via: 'Ferry from Skopelos (~30 min) · marine park, snorkelling', via_el: 'Πλοίο από Σκόπελο (~30 λεπτά) · θαλάσσιο πάρκο, κατάδυση' },
+      { from: 'Alonnisos', from_el: 'Αλόννησος', nights: 3, via: 'Ferry from Skopelos (~30 min) · marine park, snorkelling', via_el: 'Πλοίο από Σκόπελο (~30 λεπτά) · θαλάσσιο πάρκο, snorkelling' },
     ]
   },
   {
     title: 'Ultimate Off the Beaten Path',
-    title_el: 'Η Απόλυτη Εκτός Πεπατημένης',
+    title_el: 'Η Απόλυτη Εκτός Πεπατημένης Διαδρομή',
     duration: '7 days',
     duration_el: '7 μέρες',
     vibe: 'True island isolation',
     vibe_el: 'Πραγματική νησιωτική απομόνωση',
     description: 'For travellers who have already done Santorini and Mykonos. Lemnos is Greece' + "'" + 's underrated northern island — long empty beaches, wine traditions, military history. Agios Efstratios has 270 residents, no cars, black volcanic sand beaches and the oak forest of the Aegean. No crowds because no one comes.',
-    description_el: 'Για ταξιδιώτες που έχουν ήδη επισκεφτεί Σαντορίνη και Μύκονο. Η Λήμνος είναι το υποτιμημένο βόρειο νησί της Ελλάδας — μακριές άδειες παραλίες, παραδόσεις κρασιού, στρατιωτική ιστορία. Ο Άγιος Ευστράτιος έχει 270 κατοίκους, κανένα αυτοκίνητο, μαύρες ηφαιστειακές παραλίες και το δάσος βελανιδιάς του Αιγαίου. Ούτε ένα πλήθος γιατί δεν έρχεται κανείς.',
+    description_el: 'Για ταξιδιώτες που έχουν ήδη επισκεφτεί Σαντορίνη και Μύκονο. Η Λήμνος είναι το υποτιμημένο βόρειο νησί της Ελλάδας — μακριές άδειες παραλίες, οινική παράδοση, στρατιωτική ιστορία. Ο Άγιος Ευστράτιος έχει 270 κατοίκους, κανένα αυτοκίνητο, μαύρες ηφαιστειακές παραλίες και το μοναδικό δάσος από βελανιδιές στο Αιγαίο. Καθόλου κόσμος, γιατί δεν έρχεται κανείς.',
     stops: ['lemnos', 'agios-efstratios'],
     breakdown: [
       { from: 'Athens', from_el: 'Αθήνα', nights: 1, via: 'Fly in', via_el: 'Πτήση εισόδου' },
-      { from: 'Lemnos', from_el: 'Λήμνος', nights: 4, via: 'Fly direct (~1 hr) · beaches, wine villages', via_el: 'Απευθείας πτήση (~1 ώρα) · παραλίες, χωριά κρασιού' },
+      { from: 'Lemnos', from_el: 'Λήμνος', nights: 4, via: 'Fly direct (~1 hr) · beaches, wine villages', via_el: 'Απευθείας πτήση (~1 ώρα) · παραλίες, κρασοχώρια' },
       { from: 'Agios Efstratios', from_el: 'Άγιος Ευστράτιος', nights: 2, via: 'Ferry from Lemnos (~2-3 hrs) · true isolation', via_el: 'Πλοίο από Λήμνο (~2-3 ώρες) · πραγματική απομόνωση' },
     ]
   },
@@ -5682,7 +5682,7 @@ const FOREIGN_PORTS = {
     lat: 39.3095, lng: 26.6930,
     rating: 4,
     context: 'Beautiful old Greek-Ottoman town with preserved 19th-century stone houses. Base for day trips to ancient Pergamon.',
-    context_el: 'Όμορφη παλιά ελληνοτουρκική πόλη με διατηρημένες πέτρινες κατοικίες του 19ου αιώνα. Βάση για εκδρομές στην αρχαία Πέργαμο.',
+    context_el: 'Όμορφη παλιά ελληνο-οθωμανική πόλη με διατηρημένα πέτρινα σπίτια του 19ου αιώνα. Βάση για εκδρομές στην αρχαία Πέργαμο.',
   },
   'cesme': {
     name: 'Çeşme', name_el: 'Τσεσμές',
@@ -5690,7 +5690,7 @@ const FOREIGN_PORTS = {
     lat: 38.3236, lng: 26.3042,
     rating: 3,
     context: 'Upscale beach resort with an Ottoman fortress, thermal springs, and some of the best windsurfing in the Aegean. Lively but touristy in summer.',
-    context_el: 'Κοσμοπολίτικο θέρετρο με οθωμανικό κάστρο, ιαματικές πηγές, και από το καλύτερο windsurfing του Αιγαίου. Ζωντανό αλλά τουριστικό το καλοκαίρι.',
+    context_el: 'Πολυτελές παραλιακό θέρετρο με οθωμανικό κάστρο, ιαματικές πηγές, και από το καλύτερο windsurfing του Αιγαίου. Ζωντανό αλλά τουριστικό το καλοκαίρι.',
   },
   'kusadasi': {
     name: 'Kuşadası', name_el: 'Κουσάντασι',
@@ -5698,7 +5698,7 @@ const FOREIGN_PORTS = {
     lat: 37.8600, lng: 27.2561,
     rating: 4,
     context: 'Main gateway to Ephesus (18 km inland) — one of the most important ancient cities in the world. The town itself is packed with cruise-ship crowds.',
-    context_el: 'Η κύρια πύλη για την Έφεσο (18 χλμ εσωτερικά) — μία από τις σημαντικότερες αρχαίες πόλεις στον κόσμο. Η ίδια η πόλη γεμάτη κρουαζιερόπλοια.',
+    context_el: 'Η κύρια πύλη για την Έφεσο (18 χλμ στην ενδοχώρα) — μία από τις σημαντικότερες αρχαίες πόλεις στον κόσμο. Η ίδια η πόλη είναι γεμάτη κόσμο από τα κρουαζιερόπλοια.',
   },
   'seferihisar': {
     name: 'Seferihisar', name_el: 'Σεφέριχισαρ',
@@ -5706,7 +5706,7 @@ const FOREIGN_PORTS = {
     lat: 38.1962, lng: 26.8379,
     rating: 3,
     context: 'Turkey\'s first official "Slow Food" town. Beautiful Sigacik marina, a restored citadel, and the ruins of ancient Teos nearby.',
-    context_el: 'Η πρώτη επίσημη "Slow Food" πόλη της Τουρκίας. Όμορφη μαρίνα Sigacik, αναπαλαιωμένη ακρόπολη, και τα ερείπια της αρχαίας Τέω κοντά.',
+    context_el: 'Η πρώτη επίσημη "Slow Food" πόλη της Τουρκίας. Όμορφη η μαρίνα του Sigacik, αναπαλαιωμένο κάστρο, και τα ερείπια της αρχαίας Τέω κοντά.',
   },
   'bodrum': {
     name: 'Bodrum', name_el: 'Μπόντρουμ',
@@ -5730,7 +5730,7 @@ const FOREIGN_PORTS = {
     lat: 36.8550, lng: 28.2700,
     rating: 3,
     context: 'Large resort town with a pretty harbor and pine-wooded bay. Best used as a gateway to the Dalyan mud baths or the Lycian coast.',
-    context_el: 'Μεγάλο θέρετρο με γραφικό λιμάνι και πευκόφυτο κόλπο. Καλύτερη χρήση ως πύλη για τις λουτροθεραπείες Dalyan ή την ακτή της Λυκίας.',
+    context_el: 'Μεγάλο θέρετρο με γραφικό λιμάνι και πευκόφυτο κόλπο. Χρησιμεύει καλύτερα ως πύλη για τα λασπόλουτρα του Dalyan ή την ακτή της Λυκίας.',
   },
   'fethiye': {
     name: 'Fethiye', name_el: 'Φετχιγιέ',
@@ -5738,7 +5738,7 @@ const FOREIGN_PORTS = {
     lat: 36.6214, lng: 29.1128,
     rating: 5,
     context: 'Stunning harbor town and gateway to Ölüdeniz lagoon — one of the most photographed beaches in the world — and the 540 km Lycian Way hiking trail.',
-    context_el: 'Εκπληκτική παραλιακή πόλη και πύλη για τη λιμνοθάλασσα Ölüdeniz — μία από τις πιο φωτογραφημένες παραλίες στον κόσμο — και το μονοπάτι Lycian Way.',
+    context_el: 'Εκπληκτική παραλιακή πόλη και πύλη για τη λιμνοθάλασσα Ölüdeniz — μία από τις πιο φωτογραφημένες παραλίες στον κόσμο — και το μονοπάτι Lycian Way, 540 χλμ.',
   },
   'kas': {
     name: 'Kaş', name_el: 'Κας',
@@ -5746,7 +5746,7 @@ const FOREIGN_PORTS = {
     lat: 36.2020, lng: 29.6420,
     rating: 5,
     context: 'Charming bohemian Lycian town with Greek-style architecture, reachable only by winding coastal road. Incredible diving and paragliding. Kastellorizo visible from the harbor.',
-    context_el: 'Γοητευτική μποέμικη Λυκιακή πόλη με ελληνικού τύπου αρχιτεκτονική, προσβάσιμη μόνο μέσω κυκλικού παραλιακού δρόμου. Εκπληκτικές καταδύσεις και paragliding. Το Καστελλόριζο φαίνεται από το λιμάνι.',
+    context_el: 'Γοητευτική μποέμικη λυκιακή πόλη με ελληνικού τύπου αρχιτεκτονική, προσβάσιμη μόνο μέσω ελικοειδούς παραλιακού δρόμου. Εκπληκτικές καταδύσεις και paragliding. Το Καστελλόριζο φαίνεται από το λιμάνι.',
   },
   'datca': {
     name: 'Datça', name_el: 'Ντατσά',
@@ -5769,7 +5769,7 @@ const INTERNATIONAL_ROUTES = [
     price: '€15–€25',
     operators: 'Finikas Lines · Ionian Seaways · Albania Luxury Ferries',
     note: 'Day trip to Butrint UNESCO ruins or Ksamil beaches. No rental cars allowed on the crossing.',
-    note_el: 'Μονοήμερη για τα ερείπια UNESCO της Βουθρωτής ή τις παραλίες του Ξαμίλ. Δεν επιτρέπονται τα ενοικιαζόμενα αυτοκίνητα στο πέρασμα.',
+    note_el: 'Μονοήμερη εκδρομή για τα ερείπια UNESCO της Βουθρωτής ή τις παραλίες του Ξαμίλ. Δεν επιτρέπονται τα ενοικιαζόμενα αυτοκίνητα στη διαδρομή.',
   },
   // Lesvos ↔ Ayvalık
   {
@@ -5793,7 +5793,7 @@ const INTERNATIONAL_ROUTES = [
     price: '€25–€35',
     operators: 'ERTURK · Miniotis Lines · Turyol',
     note: 'Çeşme is a resort town 85 km from İzmir — continue by bus/train to Ephesus.',
-    note_el: 'Το Çeşme είναι τουριστικό θέρετρο, 85 χλμ από τη Σμύρνη — συνεχίστε με λεωφορείο στην Έφεσο.',
+    note_el: 'Το Çeşme είναι τουριστικό θέρετρο, 85 χλμ από τη Σμύρνη — συνέχισε με λεωφορείο στην Έφεσο.',
   },
   // Samos ↔ Kuşadası
   {
@@ -5837,7 +5837,7 @@ const INTERNATIONAL_ROUTES = [
     country: 'Turkey', country_el: 'Τουρκία',
     duration: '30 min', duration_el: '30 λεπτά',
     frequency: 'low',
-    frequency_label: 'Seasonal — check before booking', frequency_label_el: 'Εποχιακό — ελέγξτε πριν κλείσετε',
+    frequency_label: 'Seasonal — check before booking', frequency_label_el: 'Εποχιακό — έλεγξε πριν κλείσεις',
     price: '€21',
     operators: 'Bodrum Express Lines',
     note: 'Smaller port than Bodrum, reaches the quieter Bodrum peninsula villages.',
@@ -6176,7 +6176,7 @@ const QUIZ_QUESTIONS = [
     question: 'What kind of trip are you planning?',
     question_el: 'Τι είδους ταξίδι σχεδιάζεις;',
     options: ['Solo adventure', 'Couple getaway', 'Family vacation', 'Friend group'],
-    options_el: ['Μόνος/-η περιπέτεια', 'Ζευγάρι', 'Οικογενειακές διακοπές', 'Παρέα φίλων'],
+    options_el: ['Ταξίδι μόνος/-η', 'Ζευγάρι', 'Οικογενειακές διακοπές', 'Παρέα φίλων'],
     icons: ['🎒', '💞', '👨‍👩‍👧', '🍻']
   },
   {
@@ -6198,9 +6198,9 @@ const QUIZ_QUESTIONS = [
   {
     id: 'budget',
     question: 'What is your budget level?',
-    question_el: 'Ποιο είναι το μπάτζετ σου;',
+    question_el: 'Ποιος είναι ο προϋπολογισμός σου;',
     options: ['Budget (backpacker)', 'Mid-range', 'Splurge-ready', 'No limit'],
-    options_el: ['Οικονομικό', 'Μεσαίο', 'Γενναιόδωρο', 'Χωρίς όριο'],
+    options_el: ['Οικονομικό', 'Μεσαίο', 'Άνετος προϋπολογισμός', 'Χωρίς όριο'],
     icons: ['🎒', '🙂', '✨', '🥂']
   },
   {
@@ -6209,7 +6209,7 @@ const QUIZ_QUESTIONS = [
     question_el: 'Κοσμοπολίτικο ή ήσυχο;',
     options: ['Cosmopolitan — bars, boutiques, be seen', 'Lively, but not a scene',
               'Local and low-key', 'Solitude — barely anyone'],
-    options_el: ['Κοσμοπολίτικο — μπαρ, βιτρίνες, κόσμος', 'Ζωντανό, χωρίς επίδειξη',
+    options_el: ['Κοσμοπολίτικο — μπαρ, μπουτίκ, να σε δουν', 'Ζωντανό, χωρίς επίδειξη',
                  'Ήσυχο και ντόπιο', 'Μοναξιά — σχεδόν κανείς'],
     icons: ['🥂', '🎶', '🫒', '🏝']
   },
@@ -6539,7 +6539,7 @@ function computeQuizResults() {
   const ctaAff = document.getElementById('cta-affiliate');
   if (ctaAff) ctaAff.style.display = '';
   const dimLabels = (CURRENT_LANG === 'el')
-    ? ['Παραλία', 'Πολιτισμός', 'Νυχτερινή ζωή', 'Προσιτή τιμή']
+    ? ['Παραλία', 'Πολιτισμός', 'Νυχτερινή ζωή', 'Οικονομικά']
     : ['Beach', 'Culture', 'Nightlife', 'Affordability'];
   const dimLabel = dimLabels[A.priority] || (CURRENT_LANG === 'el' ? 'Συνολικά' : 'Overall');
   const driveOnSet = new Set(['lefkada','evia-north','evia-central','evia-south',
