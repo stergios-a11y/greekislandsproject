@@ -169,6 +169,16 @@ const UI_TEXT = {
   'detail.group': { en: 'Group:', el: 'Ομάδα:' },
   'detail.suggestedstay': { en: 'Suggested stay:', el: 'Συνιστώμενη παραμονή:' },
   'detail.beaches': { en: 'Top Beaches', el: 'Καλύτερες Παραλίες' },
+  // Section jump-bar on island pages. Deliberately short: these are chips in a
+  // sticky row, not headings — "Πρόγραμμα" has to survive next to five others
+  // on a 375px screen.
+  'secnav.overview':  { en: 'Overview',    el: 'Επισκόπηση' },
+  'secnav.getting':   { en: 'Getting there', el: 'Πώς πας' },
+  'secnav.when':      { en: 'When to go',  el: 'Πότε' },
+  'secnav.itinerary': { en: 'Itinerary',   el: 'Πρόγραμμα' },
+  'secnav.beaches':   { en: 'Beaches',     el: 'Παραλίες' },
+  'secnav.local':     { en: 'Local',       el: 'Τοπικά' },
+  'secnav.similar':   { en: 'Similar',     el: 'Παρόμοια' },
   'detail.beach': { en: 'Beach', el: 'Παραλία' },
   'detail.itinerary': { en: 'Itinerary', el: 'Πρόγραμμα' },
   'detail.alldays': { en: 'All days', el: 'Όλες οι μέρες' },

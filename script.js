@@ -2469,6 +2469,9 @@ async function renderIslandPage(key) {
       } catch(e) { /* non-fatal */ }
       guide.innerHTML = buildIslandPage(data, key);
       relocateHeroToSlot(key);
+      // Build after layout settles: the bar measures section heights to decide
+      // which ones are real, and a 0-height section would be skipped.
+      requestAnimationFrame(() => setTimeout(buildSectionNav, 60));
       setTimeout(() => initItineraryMap(data.itinerary.days, data.beaches || []), 80);
       if (data.beaches) setTimeout(() => loadBeachPhotos(data.beaches), 150);
       return;
@@ -2505,6 +2508,7 @@ async function renderIslandPage(key) {
       <p style="margin-top:10px"><a href="#" onclick="window._addCmpNav('${key}')">${t('fallback.compare_link')}</a></p>
     </div>`;
   relocateHeroToSlot(key);
+  requestAnimationFrame(() => setTimeout(buildSectionNav, 60));
 }
 
 
@@ -6848,3 +6852,134 @@ function computeQuizResults() {
   // where document-level delegation can be unreliable) can trigger the lightbox.
   window.openLightbox = open;
 })();
+
+
+/* ============================================================
+   SECTION JUMP-BAR (island pages)
+
+   An island page is 12–15 screens on a phone. Beaches sit around screen 11
+   even though the page title leads with them, and there was no way to reach
+   anything without scrolling the whole thing. This builds a sticky row of
+   chips from the sections that actually rendered — small islands have no
+   festivals block, some have no beaches — so it never links to nothing.
+
+   It reads the DOM rather than the island JSON on purpose: whatever is on the
+   page is what the bar offers, which means new sections don't need to be
+   registered here twice.
+============================================================ */
+const SECNAV_SECTIONS = [
+  { id: 'sec-overview',  sel: '.itin-island-intro',     key: 'secnav.overview'  },
+  { id: 'sec-getting',   sel: '.itin-getting-there',    key: 'secnav.getting'   },
+  { id: 'sec-when',      sel: '.wtv-section',           key: 'secnav.when'      },
+  { id: 'sec-itinerary', sel: '.itin-days',             key: 'secnav.itinerary' },
+  { id: 'sec-beaches',   sel: '.itin-beaches-section',  key: 'secnav.beaches'   },
+  { id: 'sec-local',     sel: '.local-section',         key: 'secnav.local'     },
+  { id: 'sec-similar',   sel: '.similar-section',       key: 'secnav.similar'   },
+];
+
+function secnavIsVisible(el) {
+  if (!el) return false;
+  for (let n = el; n && n !== document.body; n = n.parentElement) {
+    if (getComputedStyle(n).display === 'none') return false;
+  }
+  const r = el.getBoundingClientRect();
+  return r.width > 0 && r.height > 24;
+}
+
+// The site header is sticky at top:0, so anchors must land below it or the
+// heading ends up hidden underneath. Height changes with viewport width.
+function secnavOffset() {
+  const hdr = document.querySelector('nav.seo-nav');
+  const hdrH = hdr ? hdr.getBoundingClientRect().height : 0;
+  const bar = document.getElementById('secnav');
+  const barH = bar ? bar.getBoundingClientRect().height : 0;
+  return Math.round(hdrH + barH + 8);
+}
+
+function buildSectionNav() {
+  // .detail-grid lays out: hero, action bar, main, sidebar. The bar belongs
+  // after the hero and the Book/Rent buttons — a jump list above the hero would
+  // ask the reader to navigate a page they haven't seen yet — and it spans both
+  // grid columns so it lines up with the hero rather than the narrow text column.
+  const grid = document.querySelector('#view-detail .detail-grid');
+  const main = grid && grid.querySelector(':scope > .detail-main');
+  if (!grid || !main) return;
+
+  const old = document.getElementById('secnav');
+  if (old) { if (old._detach) old._detach(); old.remove(); }
+
+  // Scope to #view-detail and take the first *visible* match: the prerendered
+  // #seo-fallback carries a second copy of some of these (a hidden .wtv-section,
+  // for one), and querySelector would hand back the hidden one and stop there.
+  const pick = (sel) => [...document.querySelectorAll('#view-detail ' + sel)]
+    .find(secnavIsVisible) || null;
+  const present = SECNAV_SECTIONS
+    .map(s => ({ ...s, el: pick(s.sel) }))
+    .filter(s => s.el);
+
+  // Two chips is a row of buttons, not navigation — not worth the sticky space.
+  if (present.length < 3) return;
+
+  present.forEach(s => { if (!s.el.id) s.el.id = s.id; });
+
+  const bar = document.createElement('nav');
+  bar.id = 'secnav';
+  bar.className = 'secnav';
+  bar.setAttribute('aria-label', CURRENT_LANG === 'el' ? 'Ενότητες σελίδας' : 'Page sections');
+  bar.innerHTML = '<div class="secnav-track">' + present.map(s =>
+    `<a class="secnav-chip" href="#${s.el.id}" data-target="${s.el.id}">${t(s.key)}</a>`
+  ).join('') + '</div>';
+
+  grid.insertBefore(bar, main);
+  const hdr = document.querySelector('nav.seo-nav');
+  bar.style.top = (hdr ? Math.round(hdr.getBoundingClientRect().height) : 0) + 'px';
+
+  // scrollIntoView + scroll-margin-top rather than window.scrollTo(y): on this
+  // layout the scrolling element is <body>, not the window, so manual maths
+  // silently did nothing. The browser finds the right scroller either way, and
+  // scroll-margin-top keeps the heading clear of the sticky header + this bar.
+  const clearance = secnavOffset() + 10;
+  present.forEach(s => { s.el.style.scrollMarginTop = clearance + 'px'; });
+  bar.querySelectorAll('.secnav-chip').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.getElementById(a.dataset.target);
+      if (!target) return;
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', '#' + a.dataset.target);
+    });
+  });
+
+  // Highlight whichever section the reader is in. A scroll handler rather than
+  // IntersectionObserver: the IO version needs a detection band (rootMargin) that
+  // is only ~80px tall on short viewports, so sections shorter than the band can
+  // slip through without ever firing. This is O(7) per frame and always correct —
+  // the active chip is simply the last section whose top has passed under the bar.
+  const marks = present.map(s => s.el);
+  let raf = 0, lastActive = null;
+  const syncActive = () => {
+    raf = 0;
+    const line = (window.scrollY || document.documentElement.scrollTop) + secnavOffset() + 40;
+    let current = marks[0];
+    for (const el of marks) {
+      if (el.getBoundingClientRect().top + (window.scrollY || document.documentElement.scrollTop) <= line) current = el;
+    }
+    if (current === lastActive) return;
+    lastActive = current;
+    bar.querySelectorAll('.secnav-chip').forEach(a =>
+      a.classList.toggle('is-active', a.dataset.target === current.id));
+    // Keep the active chip in view on phones, where the row scrolls sideways.
+    const track = bar.querySelector('.secnav-track');
+    const chip = bar.querySelector('.secnav-chip.is-active');
+    if (chip && track.scrollWidth > track.clientWidth) {
+      const c = chip.getBoundingClientRect(), tr = track.getBoundingClientRect();
+      if (c.left < tr.left || c.right > tr.right) {
+        track.scrollTo({ left: Math.max(0, chip.offsetLeft - 16), behavior: 'smooth' });
+      }
+    }
+  };
+  const onScroll = () => { if (!raf) raf = requestAnimationFrame(syncActive); };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  bar._detach = () => window.removeEventListener('scroll', onScroll);
+  syncActive();
+}
