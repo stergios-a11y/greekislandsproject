@@ -963,10 +963,10 @@ def build_faq(key, data, meta, lang='en'):
         if lang == 'el':
             q = f'Πόσες μέρες χρειάζομαι {gr_in(data)};'
             day_word = 'μέρα' if days_int == 1 else 'μέρες'
-            a = f'Συνιστούμε {days_int} {day_word} για να δείτε τα κύρια αξιοθέατα χωρίς βιασύνη.'
+            a = f'Συνιστούμε {days_int} {day_word} για να δεις τα κύρια αξιοθέατα χωρίς βιασύνη.'
         else:
             q = f'How many days do I need in {name}?'
-            a = f'We suggest {days_int} days to cover the main highlights without rushing.'
+            a = f'We suggest {days_int} {"day" if days_int == 1 else "days"} to cover the main highlights without rushing.'
         qas.append((q, a))
 
     # Q3: How to get there
@@ -1855,7 +1855,10 @@ def render_body(key, data, meta, lang='en'):
         if meta.get('pop'):
             chips.append(f'<span class="isl-chip">👥 {int(meta["pop"]):,}</span>')
         if meta.get('days'):
-            chips.append(f'<span class="isl-chip">🗓 {int(meta["days"])} {"μέρες" if lang == "el" else "days"}</span>')
+            _d = int(meta["days"])
+            # 23 islands are 1-day trips, so the plural is not cosmetic here.
+            _dw = ('μέρα' if _d == 1 else 'μέρες') if lang == 'el' else ('day' if _d == 1 else 'days')
+            chips.append(f'<span class="isl-chip">🗓 {_d} {_dw}</span>')
         if meta.get('has_airport'):
             chips.append(f'<span class="isl-chip">✈ {"Αεροδρόμιο" if lang == "el" else "Airport"}</span>')
         car_lbl = CAR_LABELS['el' if lang == 'el' else 'en'][round(meta['car_need'])] if meta.get('car_need') else ''
