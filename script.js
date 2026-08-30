@@ -394,7 +394,7 @@ const DAY_COLOR_RAMP = ['#0B8FAC', '#E8522A', '#3D8B6F', '#C98A00', '#7A5FA0', '
    The key is public either way — it ships in this file, like every
    client-side map key. CARTO scopes them per customer, not per domain.
 ------------------------------------------------------------ */
-const CARTO_KEY = 'cb1_2l21_1_d292f89e1479e60b5daf76fb';
+const CARTO_KEY = '';
 
 const withKey = (url) => CARTO_KEY ? url + '?key=' + encodeURIComponent(CARTO_KEY) : url;
 
@@ -2705,7 +2705,7 @@ function buildIslandPage(data, key) {
       <div class="itin-day-header" style="border-left:4px solid ${d.color}">
         <div class="itin-day-header-main">
           <span class="itin-day-label" style="color:${d.color}">${t("detail.day")} ${d.day}</span>
-          <span class="itin-day-title">${pickLang(d, "title")}</span>
+          <h3 class="itin-day-title" style="display:inline;margin:0;line-height:inherit">${pickLang(d, "title")}</h3>
           ${driveInfo}
         </div>
         ${overnightHtml}
@@ -2731,7 +2731,7 @@ function buildIslandPage(data, key) {
         <div class="beach-rank-name">
           <div class="beach-rank">${i + 1}</div>
           <div class="beach-name-stars">
-            <div class="beach-name">${nameHtml}</div>
+            <h3 class="beach-name" style="margin-top:0;line-height:inherit">${nameHtml}</h3>
             <div class="beach-ratings-row">
               <div class="beach-rating-block">
                 <span class="beach-rating-label">${t("detail.editorial")}</span>
@@ -3010,7 +3010,7 @@ function buildGettingThereSection(data) {
 
     return `
       <section class="itin-getting-there">
-        <h3 class="itin-getting-there-title">${escHtml(heading)}</h3>
+        <h2 class="itin-getting-there-title">${escHtml(heading)}</h2>
         ${pillHtml}
         ${htmlParas}
       </section>`;
@@ -3069,7 +3069,7 @@ function buildGettingThereSection(data) {
 
   return `
     <section class="itin-getting-there">
-      <h3 class="itin-getting-there-title">${escHtml(title)}</h3>
+      <h2 class="itin-getting-there-title">${escHtml(title)}</h2>
       ${pillHtml}
       ${leadHtml}
       ${moreBlock}
@@ -3238,7 +3238,7 @@ function buildWhenToVisitSection(data) {
   const tapHint = lang === 'el' ? 'Πάτα έναν μήνα για λεπτομέρειες' : 'Tap a month for details';
   return `
     <details class="wtv-section" open>
-      <summary class="wtv-title">${t('wtv.title')}</summary>
+      <summary class="wtv-title"><h2 style="margin:0;font:inherit;color:inherit">${t('wtv.title')}</h2></summary>
       ${summaryHtml}
       ${highlightsBar}
       <div class="wtv-ribbon-wrap">
@@ -3465,7 +3465,7 @@ function buildSimilarIslandsSection(key) {
     </a>`;
   }).join('');
   return `<section class="similar-section">
-    <h3 class="similar-title">${t('similar.title')}</h3>
+    <h2 class="similar-title">${t('similar.title')}</h2>
     <p class="similar-intro">${t('similar.intro')}</p>
     <div class="similar-grid">${cards}</div>
   </section>`;
@@ -3508,13 +3508,13 @@ function buildLocalSection(data) {
 
   const block = (title, items, icon) => items.length ? `
     <div class="local-block">
-      <h4 class="local-heading"><span class="local-icon">${icon}</span>${title}</h4>
+      <h3 class="local-heading"><span class="local-icon">${icon}</span>${title}</h3>
       <div class="local-items">${items.map(renderItem).join('')}</div>
     </div>` : '';
 
   return `
     <div class="local-section">
-      <h3 class="local-section-title">${t('local.section_title')}</h3>
+      <h2 class="local-section-title">${t('local.section_title')}</h2>
       ${block(t('local.specialties'), specs, '🍽')}
       ${block(t('local.crafts'), crafts, '🧵')}
       ${block(t('local.festivals'), fests, '🎉')}

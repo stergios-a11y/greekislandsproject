@@ -570,7 +570,11 @@
       // Hand off only once the SPA has actually populated the island name
       // — that's the signal that renderIslandPage() finished.
       if (detail && nameEl && nameEl.textContent.trim()) {
-        document.getElementById('seo-fallback').style.display = 'none';
+        // Remove rather than hide: hiding leaves a second <h1> and a full
+        // duplicate of the page text in the DOM. This only runs after the
+        // SPA has confirmed it rendered, so no-JS visitors keep the fallback.
+        var _fb = document.getElementById('seo-fallback');
+        if (_fb) _fb.remove();
         detail.style.display = '';
         // Override the back button to go to the actual homepage URL,
         // not just push a hash on the current path (which would re-trigger).
