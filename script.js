@@ -394,7 +394,7 @@ const DAY_COLOR_RAMP = ['#0B8FAC', '#E8522A', '#3D8B6F', '#C98A00', '#7A5FA0', '
    The key is public either way — it ships in this file, like every
    client-side map key. CARTO scopes them per customer, not per domain.
 ------------------------------------------------------------ */
-const CARTO_KEY = '';
+const CARTO_KEY = 'cb1_2l21_1_d292f89e1479e60b5daf76fb';
 
 const withKey = (url) => CARTO_KEY ? url + '?key=' + encodeURIComponent(CARTO_KEY) : url;
 
