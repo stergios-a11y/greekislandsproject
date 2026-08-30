@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-08-27';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-08-30';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -356,27 +356,83 @@ function parseHash() {
 
 /* ============================================================
    MAP TILES — switch between light and dark tiles based on theme.
-   Both light and dark use CARTO basemaps: Voyager (light) is a clean,
-   modern travel-site map with soft teal water that matches our brand
-   palette; dark_matter is its visual counterpart. Both are free, no
-   API key, and share the same `{s}.basemaps.cartocdn.com` CDN with
-   subdomains a/b/c/d.
+
+   Light is CARTO Voyager: a clean, modern travel-site map with soft teal
+   water that matches our brand palette, and it still serves without a key.
+
+   Dark used to be CARTO dark_all on the same CDN. That endpoint now returns
+   an "API KEY REQUIRED" watermark tile instead of map data — and it returns
+   it with HTTP 200 and a valid 256x256 PNG, so Leaflet fires no `tileerror`
+   and nothing looks broken to the code. The map just goes blank. Only
+   `rastertiles/voyager` is still keyless; `dark_all` and `light_all` are not.
+
+   Dark is therefore Esri's World Dark Gray Canvas, which needs no key and is
+   the same provider we already use for the satellite layer. Two differences
+   to keep in mind:
+     - Esri tile paths are {z}/{y}/{x}, not {z}/{x}/{y}.
+     - The Dark Gray basemap has no labels baked in (CARTO's did), so the
+       matching Reference layer is drawn on top — the same base+labels pair
+       the satellite "hybrid" already uses.
+     - It only has tiles to z16. Past that Esri serves a near-white "no data"
+       tile, which in dark mode is worse than useless, so maxNativeZoom caps
+       requests at 16 and lets Leaflet upscale beyond that.
 ============================================================ */
 // On-brand day-route ramp: distinct but harmonious colors drawn from the site
 // palette, used for itinerary day buttons / cards / map routes by day index.
 const DAY_COLOR_RAMP = ['#0B8FAC', '#E8522A', '#3D8B6F', '#C98A00', '#7A5FA0', '#076880'];
 
+/* ------------------------------------------------------------
+   ↓↓↓  THE ONE LINE TO EDIT  ↓↓↓
+   Paste the CARTO basemap key between the quotes. Get one free at
+   https://carto.com/basemaps/apikey — no account, no card, no trial;
+   5 million tile requests a month.
+
+   Empty  → dark mode falls back to Esri Dark Gray (keyless, works today).
+   Filled → both themes use CARTO, which is the palette this site was
+            designed around, and the light map stops being one policy
+            change away from the same watermark that broke dark.
+   The key is public either way — it ships in this file, like every
+   client-side map key. CARTO scopes them per customer, not per domain.
+------------------------------------------------------------ */
+const CARTO_KEY = 'cb1_2l21_1_d292f89e1479e60b5daf76fb';
+
+const withKey = (url) => CARTO_KEY ? url + '?key=' + encodeURIComponent(CARTO_KEY) : url;
+
+// CARTO Voyager — the light basemap this site's palette was built around.
+// Keyless today, but it lives in the same retiring raster service as the
+// dark style that already broke, so a key future-proofs it.
+const LIGHT_TILE_URL = withKey('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png');
+// CARTO's free tier is explicitly in exchange for visible attribution, and
+// their terms want both credits linked — not just named.
+const CARTO_ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>';
+const LIGHT_TILE_ATTRIBUTION = CARTO_ATTRIBUTION;
+
+// Dark: CARTO dark_all when a key is present, else Esri World Dark Gray Canvas.
+const ESRI_DARK_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}';
+const DARK_LABELS_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}';
+const ESRI_DARK_ATTRIBUTION = 'Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors';
+const DARK_TILE_URL = CARTO_KEY
+  ? withKey('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png')
+  : ESRI_DARK_URL;
+const DARK_TILE_ATTRIBUTION = CARTO_KEY ? CARTO_ATTRIBUTION : ESRI_DARK_ATTRIBUTION;
+// Esri's dark canvas ships without place names and stops at z16; CARTO's
+// dark_all has labels baked in and goes deeper, so neither applies with a key.
+const DARK_NEEDS_LABELS = !CARTO_KEY;
+const DARK_TILE_MAX_NATIVE_ZOOM = CARTO_KEY ? 20 : 16;
+
+function isDarkTheme() {
+  return document.documentElement.classList.contains('dark');
+}
+
 function getMapTileUrl() {
-  const isDark = document.documentElement.classList.contains('dark');
-  return isDark
-    ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'
-    : 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png';
+  return isDarkTheme() ? DARK_TILE_URL : LIGHT_TILE_URL;
 }
 
 function getMapTileAttribution() {
-  // Same attribution string for both themes — CARTO requires both
-  // OpenStreetMap (source data) and CARTO (style/tiles) to be credited.
-  return '© OpenStreetMap contributors © CARTO';
+  // Credit whoever is actually serving the tiles right now — without a key the
+  // two themes are different providers, so one combined string would be wrong
+  // half the time.
+  return isDarkTheme() ? DARK_TILE_ATTRIBUTION : LIGHT_TILE_ATTRIBUTION;
 }
 
 // Esri World Imagery — satellite, no API key required, free for non-commercial use
@@ -392,12 +448,22 @@ function addThemeAwareTiles(map, options = {}) {
   const isDark = document.documentElement.classList.contains('dark');
   const maxZoom = options.maxZoom || 18;
 
-  // Map (theme-aware) layer. CARTO uses 4 subdomains (a/b/c/d) for both
-  // Voyager and dark_matter — keeps tile requests spread across them.
+  // Map (theme-aware) layer. The {s} placeholder is only used by the CARTO
+  // (light) URL; Esri serves from a single host and simply ignores it.
   const mapLayer = L.tileLayer(getMapTileUrl(), {
     attribution: options.attribution || getMapTileAttribution(),
     maxZoom: maxZoom,
+    maxNativeZoom: isDark ? Math.min(DARK_TILE_MAX_NATIVE_ZOOM, maxZoom) : maxZoom,
     subdomains: 'abcd',
+  });
+
+  // Dark-only labels overlay. Esri's Dark Gray basemap ships without place
+  // names, so this rides on top of it; in light mode Voyager already has its
+  // own labels and this layer stays off the map entirely.
+  const mapLabels = L.tileLayer(DARK_LABELS_URL, {
+    maxZoom: maxZoom,
+    maxNativeZoom: DARK_TILE_MAX_NATIVE_ZOOM,
+    pane: 'overlayPane',
   });
 
   // Hybrid satellite: Esri imagery + Esri labels/boundaries overlay
@@ -420,6 +486,14 @@ function addThemeAwareTiles(map, options = {}) {
 
   // Default layer: 'satellite' opt-in per map (island itineraries), else Map.
   if (options.defaultLayer === 'satellite') satLayer.addTo(map); else mapLayer.addTo(map);
+  if (isDark && DARK_NEEDS_LABELS && map.hasLayer(mapLayer)) mapLabels.addTo(map);
+
+  // The dark labels belong to the "Map" base layer, not to the map itself —
+  // switching to Satellite (which has its own labels) must take them away.
+  map.on('baselayerchange', e => {
+    if (e.layer === mapLayer && isDarkTheme() && DARK_NEEDS_LABELS) mapLabels.addTo(map);
+    else map.removeLayer(mapLabels);
+  });
 
   // Layer control (top-right) — user can toggle in-session, but we don't remember the choice
   let layerControl = null;
@@ -431,17 +505,41 @@ function addThemeAwareTiles(map, options = {}) {
     }).addTo(map);
   }
 
-  _activeMapEntries.push({ map, mapLayer, satLayer, options, labelMap, labelSat, layerControl });
+  _activeMapEntries.push({
+    map, mapLayer, mapLabels, satLayer, options, labelMap, labelSat, layerControl,
+    attribution: options.attribution || getMapTileAttribution(),
+  });
   return mapLayer;
 }
 
 function swapAllTiles() {
-  // Theme changed — point the existing "map" layer at the new theme's tiles.
+  // Theme changed — point the existing "map" layer at the new theme's tiles,
+  // add or drop the dark-only labels overlay, and re-credit the new provider.
   // (Satellite layer is theme-independent, no change needed.)
-  const isDark = document.documentElement.classList.contains('dark');
+  const isDark = isDarkTheme();
+  const nextUrl = getMapTileUrl();
   _activeMapEntries.forEach(entry => {
-    entry.mapLayer.options.subdomains = isDark ? 'abcd' : 'abc';
-    entry.mapLayer.setUrl(getMapTileUrl());
+    const maxZoom = (entry.options && entry.options.maxZoom) || 18;
+    // Esri stops at z16; without this the map goes white past that in dark mode.
+    entry.mapLayer.options.maxNativeZoom = isDark
+      ? Math.min(DARK_TILE_MAX_NATIVE_ZOOM, maxZoom)
+      : maxZoom;
+    entry.mapLayer.setUrl(nextUrl);
+
+    // Labels only in dark, and only while the "Map" base layer is showing.
+    if (isDark && DARK_NEEDS_LABELS && entry.map.hasLayer(entry.mapLayer)) entry.mapLabels.addTo(entry.map);
+    else entry.map.removeLayer(entry.mapLabels);
+
+    // Swap the credit line. Maps given an explicit attribution keep theirs.
+    if (!(entry.options && entry.options.attribution) && entry.map.attributionControl) {
+      const next = getMapTileAttribution();
+      if (next !== entry.attribution) {
+        entry.map.attributionControl.removeAttribution(entry.attribution);
+        entry.map.attributionControl.addAttribution(next);
+        entry.mapLayer.options.attribution = next;
+        entry.attribution = next;
+      }
+    }
   });
 }
 
@@ -5933,9 +6031,11 @@ function renderInternationalMap() {
   if (typeof addThemeAwareTiles === 'function') {
     addThemeAwareTiles(map, { attribution: '© OpenStreetMap · CARTO' });
   } else {
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    // Fallback only. light_all is also behind an API key now — Voyager is the
+    // one CARTO raster style still served without one.
+    L.tileLayer(LIGHT_TILE_URL, {
       subdomains: 'abcd',
-      attribution: '© OpenStreetMap · CARTO',
+      attribution: LIGHT_TILE_ATTRIBUTION,
     }).addTo(map);
   }
 
