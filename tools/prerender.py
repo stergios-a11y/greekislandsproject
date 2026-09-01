@@ -1140,7 +1140,7 @@ def build_structured_data(key, data, meta, lang='en'):
             "@context": "https://schema.org",
             "@type": "TouristTrip",
             "name": (f"{len(days)}-day {name} itinerary" if lang == 'en'
-                     else f"Δρομολόγιο {el_days(len(days))} — {name}"),
+                     else f"Πρόγραμμα {el_days(len(days))} — {name}"),
             "description": pick(data.get('itinerary', {}), 'subtitle', lang) or truncate_at_word(intro_plain, 200),
             "itinerary": {
                 "@type": "ItemList",
@@ -1166,7 +1166,7 @@ def build_structured_data(key, data, meta, lang='en'):
         "author": {
             "@type": "Person",
             "name": "Stergios Gousios",
-            "url": SITE_URL + ('/' if lang == 'en' else '/el/') + 'mission/',
+            "url": SITE_URL + ('/' if lang == 'en' else '/el/') + '#mission',
         },
         "publisher": {
             "@type": "Organization",
@@ -1677,7 +1677,7 @@ def render_body(key, data, meta, lang='en'):
     # Itinerary section
     itinerary_html = ''
     if days_count:
-        heading = f'{days_count}-day itinerary for {name}' if lang == 'en' else f'Δρομολόγιο {el_days(days_count)} — {name}'
+        heading = f'{days_count}-day itinerary for {name}' if lang == 'en' else f'Πρόγραμμα {el_days(days_count)} — {name}'
         day_blocks = []
         for day in data['itinerary']['days']:
             day_num = day.get('day', 1)

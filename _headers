@@ -1,3 +1,9 @@
+# Security headers (Cloudflare adds Referrer-Policy and X-Content-Type-Options itself).
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Frame-Options: DENY
+  Permissions-Policy: geolocation=(), camera=(), microphone=()
+
 # Cloudflare Pages cache rules.
 # App logic revalidates every load so deploys show up immediately (no stale JS/CSS).
 # NOTE: Pages serves the homepage at "/" (and redirects /index.html to /),

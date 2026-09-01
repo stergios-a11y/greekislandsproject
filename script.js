@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-08-30';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-09-01';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -1248,13 +1248,21 @@ function heroSrc(url) {
   if (m) return m[1] + '/thumb/' + m[2] + '/' + m[3] + '/' + m[4] + '/1280px-' + m[4];
   return url;
 }
+let HERO_PHOTOS_PROMISE = null;
 async function loadHeroPhotos() {
   if (HERO_PHOTOS && Object.keys(HERO_PHOTOS).length) return HERO_PHOTOS;
-  try {
-    const r = await fetch('/hero-photos.json', { cache: 'default' });
-    if (r.ok) HERO_PHOTOS = await r.json();
-  } catch (e) { console.warn('hero-photos fetch failed', e); }
-  return HERO_PHOTOS;
+  // Share one in-flight request: three callers fire at boot before the first
+  // response lands, which used to mean three identical fetches.
+  if (!HERO_PHOTOS_PROMISE) {
+    HERO_PHOTOS_PROMISE = (async () => {
+      try {
+        const r = await fetch('/hero-photos.json', { cache: 'default' });
+        if (r.ok) HERO_PHOTOS = await r.json();
+      } catch (e) { console.warn('hero-photos fetch failed', e); }
+      return HERO_PHOTOS;
+    })();
+  }
+  return HERO_PHOTOS_PROMISE;
 }
 
 function renderHomeFeatured() {
@@ -4144,8 +4152,9 @@ function setupCompare() {
   if (compareSelection[1]) selB.value = compareSelection[1];
   selA.addEventListener('change', () => { compareSelection[0] = selA.value || null; renderCompareView(); });
   selB.addEventListener('change', () => { compareSelection[1] = selB.value || null; renderCompareView(); });
-  // Initial render so the chart appears immediately on page load
-  renderCompareView();
+  // No initial render here: showView('compare') renders when the view is
+  // actually opened. Rendering at boot pulled vs_verdicts.json (1.2 MB),
+  // vs_faqs.json and two island JSONs into a hidden view on every page load.
 }
 
 function addToCompare(key) {
