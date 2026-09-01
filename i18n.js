@@ -34,7 +34,7 @@ const UI_TEXT = {
 
   // Hero / homepage
   'hero.title': { en: 'Find your perfect Greek island', el: 'Βρες το ιδανικό σου ελληνικό νησί' },
-  'hero.sub': { en: '83 islands scored across beaches, culture, nightlife, access and affordability. Click any circle to explore.', el: '83 νησιά βαθμολογημένα σε παραλίες, πολιτισμό, νυχτερινή ζωή, πρόσβαση και προσιτή τιμή. Πάτα οποιοδήποτε σημείο για εξερεύνηση.' },
+  'hero.sub': { en: '88 islands scored across beaches, culture, nightlife, access and affordability. Click any circle to explore.', el: '88 νησιά βαθμολογημένα σε παραλίες, πολιτισμό, νυχτερινή ζωή, πρόσβαση και προσιτή τιμή. Πάτα οποιοδήποτε σημείο για εξερεύνηση.' },
   'hero.tagline': { en: 'The Greek Island Decision Engine', el: 'Ο οδηγός για το ελληνικό νησί που σου ταιριάζει' },
   'hero.dismiss': { en: 'Got it', el: 'Έγινε' },
   'hero.stat.islands': { en: 'Islands', el: 'Νησιά' },
@@ -360,7 +360,7 @@ const UI_TEXT = {
 
   // Section 1 — Why this site exists
   'mission.why.title': { en: 'Why this site exists', el: 'Γιατί υπάρχει αυτή η σελίδα' },
-  'mission.why.p1': { en: 'Aegean Blueprint covers 83 Greek islands across 88 guides — Crete and Evia are each split by region, because one page cannot do either of them justice. Most guides try to cover all of them, and end up saying nothing useful about any. AI-generated lists read like they were written by someone who has never tasted a tomato.', el: 'Το Aegean Blueprint καλύπτει 83 ελληνικά νησιά σε 88 οδηγούς — η Κρήτη και η Εύβοια χωρίζονται ανά περιοχή, γιατί μια σελίδα δεν τις καλύπτει σωστά. Οι περισσότεροι οδηγοί τα καλύπτουν όλα — και καταλήγουν να μη λένε τίποτα χρήσιμο για κανένα. Οι λίστες από AI διαβάζονται σαν να τις έγραψε άνθρωπος που δεν έχει δοκιμάσει ποτέ ντομάτα.' },
+  'mission.why.p1': { en: 'Aegean Blueprint covers 88 Greek islands — Crete and Evia are each split by region, because one page cannot do either of them justice. Most guides try to cover all of them, and end up saying nothing useful about any. AI-generated lists read like they were written by someone who has never tasted a tomato.', el: 'Το Aegean Blueprint καλύπτει 88 ελληνικά νησιά — η Κρήτη και η Εύβοια χωρίζονται ανά περιοχή, γιατί μια σελίδα δεν τις καλύπτει σωστά. Οι περισσότεροι οδηγοί τα καλύπτουν όλα — και καταλήγουν να μη λένε τίποτα χρήσιμο για κανένα. Οι λίστες από AI διαβάζονται σαν να τις έγραψε άνθρωπος που δεν έχει δοκιμάσει ποτέ ντομάτα.' },
   'mission.why.quote': { en: "This site is for people who don't want choices. They want the gist, without the fluff.", el: 'Αυτή η σελίδα είναι για ανθρώπους που δεν θέλουν επιλογές. Θέλουν την ουσία, χωρίς περιττά.' },
   'mission.why.p2': { en: 'Each island page gives you a short, opinionated list: the beaches worth your time, one mapped itinerary of 2 to 5 days, and the two or three tavernas I would actually send you to. Not twenty options ranked by affiliate payout — a selection someone has to stand behind.', el: 'Κάθε σελίδα νησιού δίνει μια σύντομη λίστα με άποψη: τις παραλίες που αξίζουν, ένα χαρτογραφημένο πρόγραμμα 2 έως 5 ημερών, και τις δύο-τρεις ταβέρνες που θα σου πρότεινα όντως. Όχι είκοσι επιλογές ταξινομημένες κατά affiliate προμήθεια — μια επιλογή που κάποιος πρέπει να υπερασπιστεί.' },
 
@@ -393,7 +393,7 @@ const UI_TEXT = {
   // Sources
   'mission.sources.title': { en: 'Where the information comes from', el: 'Από πού έρχονται οι πληροφορίες' },
   'mission.sources.visited.t': { en: 'Personal visits.', el: 'Προσωπικές επισκέψεις.' },
-  'mission.sources.visited.d': { en: ' 50+ of the 83 islands, most more than once.', el: ' 50+ από τα 83 νησιά, τα περισσότερα παραπάνω από μία φορές.' },
+  'mission.sources.visited.d': { en: ' 50+ of the 88 islands, most more than once.', el: ' 50+ από τα 88 νησιά, τα περισσότερα παραπάνω από μία φορές.' },
   'mission.sources.local.t': { en: 'Local contacts.', el: 'Ντόπιες γνωριμίες.' },
   'mission.sources.local.d': { en: ' Friends and family who live or summer on specific islands. Kalymnos, Ikaria, Lemnos, Skyros — when I call someone who lives there, their answer beats any guidebook.', el: ' Φίλοι και συγγενείς που ζουν ή παραθερίζουν σε συγκεκριμένα νησιά. Κάλυμνος, Ικαρία, Λήμνος, Σκύρος — όταν παίρνω τηλέφωνο σε κάποιον που ζει εκεί, η απάντησή του μετράει περισσότερο από κάθε οδηγό.' },
   'mission.sources.official.t': { en: 'Official data.', el: 'Επίσημες πηγές.' },

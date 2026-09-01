@@ -66,13 +66,13 @@ def build(lang, names):
         title = f'Ποιο ελληνικό νησί σού ταιριάζει; Quiz 60 δευτ. ({YEAR})'
         desc = 'Οκτώ γρήγορες ερωτήσεις — παραλίες, κόστος, πόσο χρόνο έχεις — και παίρνεις τα νησιά που σού ταιριάζουν, με βαθμολογίες.'
         h1 = 'Ποιο ελληνικό νησί σού ταιριάζει;'
-        intro = ('Υπάρχουν 83 κατοικημένα νησιά και οι περισσότεροι οδηγοί σού λένε «όλα υπέροχα». Εδώ κάθε νησί έχει ειλικρινή βαθμολογία σε παραλίες, πολιτισμό, νυχτερινή ζωή, πρόσβαση και τιμές — '
+        intro = ('Αυτό το site βαθμολογεί 88 νησιά, και οι περισσότεροι οδηγοί σού λένε «όλα υπέροχα». Εδώ κάθε νησί έχει ειλικρινή βαθμολογία σε παραλίες, πολιτισμό, νυχτερινή ζωή, πρόσβαση και τιμές — '
                  'οπότε το ταίριασμα γίνεται με πραγματικά κριτήρια, όχι με διαφημιστικά.')
         cta_label, cta_small = 'Κάνε το quiz', '~60 δευτερόλεπτα · 3 προτάσεις με βαθμολογία'
         cta_href = '/el/#match'
         or_h2 = 'Ή ξεκίνα από αυτό που ψάχνεις'
         how_h2 = 'Πώς δουλεύει το quiz'
-        how = ('<p>Απαντάς σε λίγες γρήγορες ερωτήσεις — τι σημασία έχουν για σένα οι παραλίες, το κόστος, η νυχτερινή ζωή, ο ρυθμός του ταξιδιού — και ο αλγόριθμος συγκρίνει τις απαντήσεις σου με τις βαθμολογίες και των 83 νησιών. '
+        how = ('<p>Απαντάς σε λίγες γρήγορες ερωτήσεις — τι σημασία έχουν για σένα οι παραλίες, το κόστος, η νυχτερινή ζωή, ο ρυθμός του ταξιδιού — και ο αλγόριθμος συγκρίνει τις απαντήσεις σου με τις βαθμολογίες και των 88 νησιών. '
                'Παίρνεις τα 3 καλύτερα ταιριάσματα, με τους βαθμούς τους, και από εκεί ο πλήρης οδηγός κάθε νησιού: πρόγραμμα ημερών, παραλίες, πού να φας.</p>'
                '<p>Οι βαθμολογίες δεν βγαίνουν από αλγόριθμο ούτε από το TripAdvisor — είναι η κρίση ενός ανθρώπου που έχει πάει στα περισσότερα, εξηγημένη δημόσια στη σελίδα <a href="/el/#mission" style="color:#076880">Στόχος</a>. '
                f'Και όταν διαλέξεις, το <a href="/el/trip-cost/" style="color:#076880">Κόστος</a> σού δείχνει τι θα κοστίσει το ταξίδι — ενημερωμένο για το {YEAR}.</p>')
@@ -80,13 +80,13 @@ def build(lang, names):
         title = f'Which Greek Island Should You Visit? 60-Second Quiz ({YEAR})'
         desc = 'Eight quick questions — beaches, budget, how long you have — and you get the islands that actually fit, scored and ranked.'
         h1 = 'Which Greek island should you visit?'
-        intro = ('There are 83 inhabited islands and most guides call all of them wonderful. Here, every island carries an honest score across beaches, culture, nightlife, access and price — '
+        intro = ('This site scores 88 islands, and most guides call all of them wonderful. Here, every island carries an honest score across beaches, culture, nightlife, access and price — '
                  'so the matching runs on real criteria, not marketing copy.')
         cta_label, cta_small = 'Take the quiz', '~60 seconds · 3 scored matches'
         cta_href = '/#match'
         or_h2 = 'Or start from what you want'
         how_h2 = 'How the quiz works'
-        how = ('<p>You answer a few quick questions — how much beaches matter, your budget, whether nightlife is a feature or a bug, the pace you travel at — and the matcher compares your answers against the scores of all 83 islands. '
+        how = ('<p>You answer a few quick questions — how much beaches matter, your budget, whether nightlife is a feature or a bug, the pace you travel at — and the matcher compares your answers against the scores of all 88 islands. '
                'You get your 3 best matches with their numbers, and from there each island’s full guide: day plan, beaches, where to eat.</p>'
                '<p>The scores aren’t computed by an algorithm or scraped from TripAdvisor — they’re one person’s informed judgment, explained openly on the <a href="/#mission" style="color:#076880">Mission</a> page. '
                f'And once you’ve picked, the <a href="/trip-cost/" style="color:#076880">Budget planner</a> shows what the trip will actually cost — updated for {YEAR}.</p>')

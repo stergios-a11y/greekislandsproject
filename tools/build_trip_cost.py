@@ -123,7 +123,7 @@ STR = {
     'en': {
         'lang': 'en', 'base': '/', 'other': '/el/trip-cost/', 'lang_label': 'EL',
         'title': 'Greek Island Trip Cost: Ferries, Rooms, Car, Food',
-        'desc': 'Build your island route and get an honest cost estimate: ferry fares, room prices by month, car hire, food — for all 83 Greek islands. No fake precision.',
+        'desc': 'Build your island route and get an honest cost estimate: ferry fares, room prices by month, car hire, food — for all 88 Greek islands. No fake precision.',
         'h1': 'What will your island trip cost?',
         'sub': 'Six quick questions and you get an honest estimate — ferry fares from real distances, room prices for your actual dates, no fake precision. Start with one island; add more if you are hopping.',
         'when_who': 'When & who', 'travellers': 'Travellers',
