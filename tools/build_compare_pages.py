@@ -49,18 +49,19 @@ def _resolve_root():
 
 ROOT = _resolve_root()
 SITE_URL = 'https://aegeanblueprint.com'
-ASSET_V = 102
-
-# style.css has its own version; using ASSET_V here meant compare pages asked
-# for a different ?v= of the same stylesheet than every other page.
-def _style_v():
+# All three asset versions are read from index.html so every generator asks
+# for the same ?v= as the homepage. (Compare pages used to hard-code 102/41 and
+# drifted: Sep 2026 audit found i18n.js?v=41 on 166 pages vs 42 elsewhere.)
+def _asset_v(name, default=1):
     try:
-        return int(re.search(r'style\.css\?v=(\d+)', (ROOT / 'index.html').read_text(encoding='utf-8')).group(1))
+        return int(re.search(name + r'\?v=(\d+)', (ROOT / 'index.html').read_text(encoding='utf-8')).group(1))
     except Exception:
-        return ASSET_V
+        return default
 
 
-STYLE_V = _style_v()
+ASSET_V = _asset_v(r'script\.js', 102)
+STYLE_V = _asset_v(r'style\.css', ASSET_V)
+I18N_V = _asset_v(r'i18n\.js', 42)
 
 from datetime import date as _date
 YEAR = _date.today().year
@@ -1115,7 +1116,7 @@ window.__INITIAL_COMPARE_PAIR = {init_pair};
 </script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-<script src="/i18n.js?v=41"></script>
+<script src="/i18n.js?v={I18N_V}"></script>
 <script src="/script.js?v={ASSET_V}"></script>
 </body>
 </html>
@@ -1517,7 +1518,7 @@ def render_hub_page(lang, valid_pairs):
   </div>
 </footer>
 
-<script src="/i18n.js?v=41"></script>
+<script src="/i18n.js?v={I18N_V}"></script>
 <script>
   (function() {{
     var btn = document.getElementById("menu-toggle-btn");

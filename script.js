@@ -52,7 +52,6 @@ const ISLANDS_DATA = {
   "mykonos":      { name:"Mykonos",          lat:37.45, lng:25.37, beach:4.3, hist:3.0, night:5.0, access:4.8, afford:1.0, car_need:4.0, has_airport:true, total:4.3, area:85,    pop:10100,   days:3, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:true },
   "corfu":        { name:"Corfu",            lat:39.62, lng:19.86, beach:3.9, hist:4.8, night:4.2, access:4.7, afford:3.2, car_need:4.0, has_airport:true, total:4.2, area:593,   pop:102000,  days:5, island_group:"Ionian", drama:false, hiking:false, springs:false, chora:false, sailing:true },
 
-
   "hydra":        { name:"Hydra",            lat:37.34, lng:23.48, beach:2.2, hist:4.2, night:3.8, access:4.2, afford:1.8, car_need:1.0, has_airport:false, total:4.0, area:52,    pop:2700,    days:2, island_group:"Saronic", drama:false, hiking:false, springs:false, chora:false, sailing:true },
   "folegandros":  { name:"Folegandros",      lat:36.630, lng:24.900, beach:3.9, hist:3.8, night:3.5, access:2.8, afford:2.2, car_need:3.0, has_airport:false, total:4.0, area:32,    pop:765,     days:3, island_group:"Cyclades", drama:true, hiking:false, springs:false, chora:true, sailing:false },
   "koufonisia":   { name:"Koufonisia",       lat:36.945, lng:25.6, beach:5.0, hist:2.0, night:4.0, access:3.0, afford:3.0, car_need:1.0, has_airport:false, total:4.0, area:26,    pop:399,     days:3, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:false },
@@ -319,10 +318,6 @@ function scoreToColor(s) {
   if (s >= 3.0) return '#C4962A'; // gold/yellow
   return '#C0522A';               // red/terracotta
 }
-function haversineApprox(a, b) {
-  const dlat = a.lat - b.lat, dlng = a.lng - b.lng;
-  return Math.sqrt(dlat * dlat + dlng * dlng);
-}
 function fmt(n, d = 1) { return Number(n).toFixed(d); }
 function fmtNum(n) { return Number(n).toLocaleString(); }
 
@@ -352,7 +347,6 @@ function parseHash() {
   if (hash.startsWith('island/')) return { view: 'island', param: hash.replace('island/', '') };
   return { view: VIEW_HASH_MAP[hash] || 'home', param: null };
 }
-
 
 /* ============================================================
    MAP TILES — switch between light and dark tiles based on theme.
@@ -543,7 +537,6 @@ function swapAllTiles() {
   });
 }
 
-
 /* ============================================================
    GA4 page views for the in-app views.
    The router changes a hash fragment (#compare, #data, …) and GA4 strips
@@ -668,7 +661,6 @@ function showView(view, param) {
   }
 }
 
-function handleNav(view, param) { navigateTo(view, param); }
 window._openDetail = (key) => navigateTo('island', key);
 window._addCmpNav = function(key) { addToCompare(key); navigateTo('compare'); };
 
@@ -798,7 +790,6 @@ document.addEventListener('keydown', (e) => {
 window.openFeedback = openFeedback;
 window.closeFeedback = closeFeedback;
 window.submitFeedback = submitFeedback;
-
 
 function copyIslandLink() {
   const url = 'https://aegeanblueprint.com/' + window.location.hash;
@@ -1214,14 +1205,6 @@ async function initHomeHero() {
   }
 }
 
-function scrollToHomeContent() {
-  const el = document.getElementById('home-content');
-  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-function scrollToHomeTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
 let HERO_PHOTOS = {};
 // Downsize a hero photo URL to a small thumbnail for map/card popups so hovering
 // stays light. Cloudinary takes a w_/h_ transform; Wikimedia thumb URLs take a
@@ -1264,78 +1247,6 @@ async function loadHeroPhotos() {
   }
   return HERO_PHOTOS_PROMISE;
 }
-
-function renderHomeFeatured() {
-  const grid = document.getElementById('home-featured-grid');
-  if (!grid) return;
-  const lang = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
-
-  const cards = HOMEPAGE_FEATURED.map(item => {
-    const meta = (typeof ISLANDS_DATA !== 'undefined') ? ISLANDS_DATA[item.key] : null;
-    if (!meta) return '';
-    const name = (lang === 'el' && typeof ISLAND_NAMES_EL !== 'undefined' && ISLAND_NAMES_EL[item.key])
-      ? ISLAND_NAMES_EL[item.key]
-      : meta.name;
-    const score = (typeof meta.total === 'number') ? meta.total.toFixed(1) : '';
-    const tag = lang === 'el' ? item.tagEl : item.tagEn;
-    // Excerpt comes from the per-island JSON's intro field. Since we don't
-    // pre-load all 78 JSONs on the homepage, we use a short hardcoded excerpt
-    // pulled from each intro's first sentence (curated below for brevity).
-    const excerpt = (HOMEPAGE_EXCERPTS[item.key] || {})[lang] || '';
-    const href = (lang === 'el' ? '/el/island/' : '/island/') + item.key + '/';
-    const hero = HERO_PHOTOS[item.key] || {};
-    const grp = (typeof groupName === 'function') ? groupName(meta.island_group) : (meta.island_group || '');
-    const photoImg = hero.url
-      ? `<img class="hfc-photo" src="${hero.url}" alt="${name}" loading="lazy" onerror="this.closest('.hfc-media').classList.add('hfc-nophoto')">`
-      : '';
-    return `
-      <a class="home-featured-card" href="${href}">
-        <div class="hfc-media${hero.url ? '' : ' hfc-nophoto'}" data-initial="${name.charAt(0)}">
-          ${photoImg}
-          <span class="hfc-scrim"></span>
-          <span class="hfc-score">${score}<small>/5</small></span>
-          ${grp ? `<span class="hfc-group">${grp}</span>` : ''}
-        </div>
-        <div class="hfc-body">
-          <span class="home-featured-card-name">${name}</span>
-          <p class="home-featured-card-excerpt">${excerpt}</p>
-          <span class="home-featured-card-tag" data-tag-key="${item.key}" data-tag-label="${tag}"></span>
-        </div>
-      </a>`;
-  }).filter(Boolean).join('');
-
-  grid.innerHTML = cards;
-}
-
-/* Excerpts for the featured grid. One sentence per island, EN + EL.
-   Drawn from each island's own intro field in islands/*.json — kept
-   in sync there. When changing an intro, update here too. */
-const HOMEPAGE_EXCERPTS = {
-  folegandros: {
-    en: 'The Cyclades as they were 30 years ago — 19 square kilometres, 765 people, no airport, three villages.',
-    el: 'Οι Κυκλάδες όπως ήταν πριν 30 χρόνια — 19 τετραγωνικά χιλιόμετρα, 765 κάτοικοι, χωρίς αεροδρόμιο, τρία χωριά.'
-  },
-  milos: {
-    en: 'Called the most beautiful island in Greece — volcanic geology, lunar rock at Sarakiniko, white pumice at Kleftiko.',
-    el: 'Έχει χαρακτηριστεί το ομορφότερο νησί της Ελλάδας — ηφαιστειακή γεωλογία, σεληνιακοί βράχοι στο Σαρακήνικο, λευκή κίσηρη στο Κλέφτικο.'
-  },
-  santorini: {
-    en: 'Not primarily a beach island — come for the caldera, the architecture, the wine and the sunsets.',
-    el: 'Δεν είναι κυρίως νησί παραλιών — έλα για την καλντέρα, την αρχιτεκτονική, το κρασί και τα ηλιοβασιλέματα.'
-  },
-  hydra: {
-    en: 'Bans all motor vehicles — move on foot, by donkey, or by water taxi. The most peaceful town in the Saronic.',
-    el: 'Απαγορεύει τα μηχανοκίνητα οχήματα — με τα πόδια, με γαϊδούρι, ή θαλάσσιο ταξί. Η πιο ήσυχη πόλη στον Σαρωνικό.'
-  },
-  symi: {
-    en: 'The most photographed harbour in Greece — an amphitheatre of ochre, yellow, terracotta and blue mansions.',
-    el: 'Το πιο φωτογραφημένο λιμάνι της Ελλάδας — αμφιθέατρο νεοκλασικών αρχοντικών σε ώχρα, κίτρινο, τερακότα και μπλε.'
-  },
-  naxos: {
-    en: 'The largest and most self-sufficient Cycladic island — mountain interior, marble quarries, the finest sandy beaches.',
-    el: 'Το μεγαλύτερο και πιο αυτάρκες νησί των Κυκλάδων — ορεινό εσωτερικό, λατομεία μαρμάρου, οι καλύτερες αμμώδεις παραλίες.'
-  },
-};
 
 /* ============================================================
    "What's on now" home strip
@@ -1726,7 +1637,6 @@ function setupMap() {
   const searchInput = document.getElementById('islandSearch');
   if (searchInput) searchInput.addEventListener('input', filterIslands);
 }
-
 
 /* ============================================================
    SATELLITE CLUSTERS ON THE MAIN MAP
@@ -2518,7 +2428,6 @@ async function renderIslandPage(key) {
   relocateHeroToSlot(key);
   requestAnimationFrame(() => setTimeout(buildSectionNav, 60));
 }
-
 
 /* Dual score, rendered as two chips rather than a sentence — the solo score
    stays honest and visible, the route score explains what the island really is.
@@ -3912,7 +3821,6 @@ function toggleDimensions() {
 }
 window.toggleDimensions = toggleDimensions;
 
-
 /* ============================================================
    SHORTLIST — save favourite islands to localStorage
 ============================================================ */
@@ -4026,7 +3934,6 @@ window.removeFromShortlist = removeFromShortlist;
 window.clearShortlist = clearShortlist;
 window.navigateTo = navigateTo;
 
-
 /* ============================================================
    BEACH COMMUNITY VOTING — stored in localStorage
 ============================================================ */
@@ -4083,11 +3990,6 @@ function carNeedHtml(score) {
     return `<a class="car-need-pill car-need-link" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored" style="${style};text-decoration:none;cursor:pointer" title="${rentHint} · ${scaleHint} (${n}/5)">${inner}<span class="car-need-go" aria-hidden="true">↗</span></a>`;
   }
   return `<span class="car-need-pill" style="${style}" title="${scaleHint} (${n}/5)">${inner}</span>`;
-}
-
-function barHtml(val, max, color) {
-  const pct = Math.min(100, Math.round((val / max) * 100));
-  return `<div class="table-bar-wrap"><div class="table-bar-fill" style="width:${pct}%;background:${color}"></div><span class="table-bar-label">${fmtNum(val)}</span></div>`;
 }
 
 function barStackedHtml(val, max, color) {
@@ -4548,9 +4450,6 @@ function renderCompareCards(iA, iB) {
 /* ============================================================
    HOPPING
 ============================================================ */
-function setupHopping() {}
-
-
 
 /* ============================================================
    FERRY ROUTES MAP — 15 most popular Greek ferry connections
@@ -4837,8 +4736,6 @@ const FERRY_GRAPH = [
   { a: 'paros', b: 'sifnos', dur: 105, freq: 'low', plo: 14, phi: 22, note: "few/week" },
   { a: 'paros', b: 'serifos', dur: 135, freq: 'low', plo: 16, phi: 24, note: "few/week" },
 ];
-
-
 
 // Multi-stop visual polylines for the ferry map. These represent ferries that make
 // multiple stops on the same route (e.g. Volos→Skiathos→Skopelos→Alonnisos is one boat).
@@ -5278,16 +5175,6 @@ const EXTRA_PORTS = {
   'donousa': { name: 'Donousa', lat: 36.107, lng: 25.817 },
 };
 
-function getPortCoords(key, useRhodesPort) {
-  if (key === 'piraeus') return PIRAEUS;
-  if (key === 'rhodes' && useRhodesPort) {
-    return { ...ISLANDS_DATA['rhodes'], lat: RHODES_PORT.lat, lng: RHODES_PORT.lng };
-  }
-  if (ISLANDS_DATA[key]) return ISLANDS_DATA[key];
-  if (EXTRA_PORTS[key]) return EXTRA_PORTS[key];
-  return null;
-}
-
 // Active frequency filters for the ferry map (set of 'high','med','low')
 const FERRY_MAP_FILTERS = new Set(['high', 'med', 'low']);
 let ferryMapInstance = null;
@@ -5546,7 +5433,6 @@ function toggleFerryMapFilter(freq) {
   });
   renderFerryMap();
 }
-
 
 /* ============================================================
    SUGGESTED ITINERARIES — curated multi-island routes
@@ -6638,7 +6524,6 @@ function renderQuizMovement(climbers, answered) {
   el.classList.add('on');
 }
 
-
 function computeQuizResults() {
   const ctx = scoreIslandsFromAnswers(quizAnswers);
   const { A, priority, budgetMod, scenePref, seasonIdx, seasonMonths, transportPref, tripDays } = ctx;
@@ -6861,7 +6746,6 @@ function computeQuizResults() {
   // where document-level delegation can be unreliable) can trigger the lightbox.
   window.openLightbox = open;
 })();
-
 
 /* ============================================================
    SECTION JUMP-BAR (island pages)
