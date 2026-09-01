@@ -525,6 +525,11 @@ TITLE_OVERRIDES.update({
         'Μύκονος ή Πάρος {y}: Ίδια Νυχτερινή Ζωή, Μισή Τιμή'),
 })
 
+def _close(text):
+    # A description that ends on a dropped ';' clause should end on a full stop.
+    return text[:-1].rstrip() + '.' if text.endswith(';') else text
+
+
 def fit_description(text, limit=158, floor=115):
     """Keep a meta description inside Google's snippet budget.
 
@@ -546,15 +551,21 @@ def fit_description(text, limit=158, floor=115):
         parts = parts[:-1]
     joined = ' '.join(parts)
     if len(joined) <= limit:
-        return joined
+        return _close(joined)
     # Single overlong sentence: cut at the last clause boundary that still
     # leaves something substantial, and close it cleanly.
+    # Only clause boundaries — cutting at a space produced fragments like
+    # "...choosing the right island for." (18 pages, Sep 2026 audit).
     window = joined[:limit - 1]
-    for sep in ('—', ';', ',', ' '):
+    for sep in ('—', ';'):
         idx = window.rfind(sep)
         if idx >= floor:
             return window[:idx].rstrip(' ,;—-·') + '.'
-    return window.rstrip(' ,;—-·') + '.'
+    # No clause boundary: drop the last sentence even if that goes under floor.
+    parts = re.split(r'(?<=[.!?;])\s+', joined)
+    if len(parts) > 1:
+        return _close(' '.join(parts[:-1]))
+    return window[:window.rfind(' ')].rstrip(' ,;—-·') + '…'
 
 
 VERDICTS = json.loads((ROOT / 'vs_verdicts.json').read_text(encoding='utf-8'))
@@ -594,6 +605,23 @@ def parse_pair_key(pk):
 def slug_for_pair(a, b):
     a, b = sorted([a, b])
     return f'{a}-vs-{b}'
+
+def render_breadcrumb_jsonld(lang, name_a, name_b, page_url):
+    home = f'{SITE_URL}/el/' if lang == 'el' else f'{SITE_URL}/'
+    hub = f'{SITE_URL}/el/compare/' if lang == 'el' else f'{SITE_URL}/compare/'
+    schema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+            {'@type': 'ListItem', 'position': 1, 'name': 'Αρχική' if lang == 'el' else 'Home', 'item': home},
+            {'@type': 'ListItem', 'position': 2, 'name': 'Σύγκριση' if lang == 'el' else 'Compare', 'item': hub},
+            {'@type': 'ListItem', 'position': 3,
+             'name': f'{name_a} ή {name_b}' if lang == 'el' else f'{name_a} vs {name_b}', 'item': page_url},
+        ]
+    }
+    return ('<script type="application/ld+json">'
+            + json.dumps(schema, ensure_ascii=False, separators=(',', ':'))
+            + '</script>')
 
 def render_faq_jsonld(faqs):
     if not faqs:
@@ -828,9 +856,8 @@ def render_page(pair_key, lang):
         if _od:
             page_desc = _od[0]
         else:
-            page_desc = (f'{name_a} vs {name_b} — side-by-side comparison of beaches, '
-                         f'culture, nightlife, access, and price. Practical recommendations '
-                         f'for choosing the right island for your trip.')
+            page_desc = (f'{name_a} vs {name_b} — beaches, culture, nightlife, access '
+                         f'and price compared side by side, with a clear pick for your trip.')
         page_desc = fit_description(page_desc)
         h1_text = f'{name_a} vs {name_b}'
         subtitle = 'Side-by-side comparison — beaches, culture, atmosphere, and the practical question of which one suits your trip.'
@@ -846,9 +873,8 @@ def render_page(pair_key, lang):
         if _od:
             page_desc = _od[1]
         else:
-            page_desc = (f'{name_a} ή {name_b} — αναλυτική σύγκριση παραλιών, πολιτισμού, '
-                         f'νυχτερινής ζωής, πρόσβασης και τιμών. Πρακτικές συμβουλές για '
-                         f'να επιλέξεις το σωστό νησί για το ταξίδι σου.')
+            page_desc = (f'{name_a} ή {name_b} — παραλίες, πολιτισμός, νυχτερινή ζωή, πρόσβαση '
+                         f'και τιμές σε σύγκριση, με καθαρή πρόταση για το ταξίδι σου.')
         page_desc = fit_description(page_desc)
         h1_text = f'{name_a} ή {name_b}'
         subtitle = 'Λεπτομερής σύγκριση — παραλίες, πολιτισμός, ατμόσφαιρα, και η πρακτική επιλογή του νησιού που ταιριάζει στο ταξίδι σου.'
@@ -859,7 +885,7 @@ def render_page(pair_key, lang):
     el_url = f'{SITE_URL}/el/compare/{slug}/'
     canonical = el_url if lang == 'el' else en_url
 
-    faq_jsonld = render_faq_jsonld(faqs)
+    faq_jsonld = render_breadcrumb_jsonld(lang, name_a, name_b, canonical) + render_faq_jsonld(faqs)
 
     if verdict_html or faqs:
         prerendered_verdict = (
@@ -1147,20 +1173,28 @@ def update_sitemap(slugs):
 
     entries = []
     # Hub pages first (higher priority than individual comparisons)
+    def alt(en_path, el_path):
+        # Same en/el/x-default triple prerender.py emits for every other page.
+        return (f'<xhtml:link rel="alternate" hreflang="en" href="{SITE_URL}{en_path}"/>'
+                f'<xhtml:link rel="alternate" hreflang="el" href="{SITE_URL}{el_path}"/>'
+                f'<xhtml:link rel="alternate" hreflang="x-default" href="{SITE_URL}{en_path}"/>')
     for path in ('/compare/', '/el/compare/'):
         entries.append(
             f'<url><loc>{SITE_URL}{path}</loc>'
             f'<lastmod>{today}</lastmod>'
             f'<changefreq>weekly</changefreq>'
-            f'<priority>0.7</priority></url>'
+            f'<priority>0.7</priority>'
+            + alt('/compare/', '/el/compare/') + '</url>'
         )
     for slug in sorted(slugs):
-        for path in (f'/compare/{slug}/', f'/el/compare/{slug}/'):
+        en_p, el_p = f'/compare/{slug}/', f'/el/compare/{slug}/'
+        for path in (en_p, el_p):
             entries.append(
                 f'<url><loc>{SITE_URL}{path}</loc>'
                 f'<lastmod>{today}</lastmod>'
                 f'<changefreq>monthly</changefreq>'
-                f'<priority>0.6</priority></url>'
+                f'<priority>0.6</priority>'
+                + alt(en_p, el_p) + '</url>'
             )
     block = START + '\n  ' + '\n  '.join(entries) + '\n  ' + END
 
