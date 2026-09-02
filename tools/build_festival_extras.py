@@ -416,9 +416,8 @@ def patch_sitemap(pairs):
 
 
 def main():
-    fests, names = collect()
-    pairs = build_month_hubs(fests, names)
-    pairs += build_ikaria()
+    # Month hubs moved to tools/build_festivals.py (festivals.json-driven).
+    pairs = build_ikaria()
     n = patch_sitemap(pairs)
     print(f'✓ Festival extras: {len(pairs)} page pairs ({len(pairs) * 2} pages), {n} sitemap entries added')
 

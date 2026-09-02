@@ -6685,3 +6685,8 @@ html.dark .leaflet-control-scale-line {
 @media (prefers-reduced-motion: reduce) {
   .secnav-track { scroll-behavior: auto; }
 }
+
+/* "All N festivals →" link under the island page's festival block (static + SPA). */
+.local-more, .seo-local-more { margin: 10px 0 0; font-size: 14px; font-weight: 700; }
+.local-more a, .seo-local-more a { color: var(--aegean-dark); text-decoration: none; }
+.local-more a:hover, .seo-local-more a:hover { text-decoration: underline; }

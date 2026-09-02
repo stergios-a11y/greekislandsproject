@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-09-01';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-09-02';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -686,6 +686,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Featured cards use per-island hero photos from a small manifest. Render once
   // now (fallback initials) and re-render after the manifest loads (with photos).
   try {
+    fetch('/festivals-index.json').then(r => r.ok ? r.json() : {}).then(j => { FESTIVAL_INDEX = j || {}; }).catch(() => {});
     loadHeroPhotos().then(function () {
       try { refreshQuizLiveThumbs(); } catch (_) {}
     });
@@ -1206,6 +1207,7 @@ async function initHomeHero() {
 }
 
 let HERO_PHOTOS = {};
+let FESTIVAL_INDEX = {};  // island -> festival count, from /festivals-index.json (built by tools/build_festivals.py)
 // Downsize a hero photo URL to a small thumbnail for map/card popups so hovering
 // stays light. Cloudinary takes a w_/h_ transform; Wikimedia thumb URLs take a
 // smaller pixel width. Anything else is returned unchanged.
@@ -3439,6 +3441,7 @@ function buildLocalSection(data) {
       ${block(t('local.specialties'), specs, '🍽')}
       ${block(t('local.crafts'), crafts, '🧵')}
       ${block(t('local.festivals'), fests, '🎉')}
+      ${FESTIVAL_INDEX[data.key] ? `<p class="local-more"><a href="${(typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? '/el' : ''}/festivals/${data.key}/">${t('local.festivals_all').replace('{n}', FESTIVAL_INDEX[data.key])}</a></p>` : ''}
     </div>`;
 }
 

@@ -148,6 +148,7 @@ const UI_TEXT = {
   'local.specialties': { en: 'Local Specialties', el: 'Τοπικά Προϊόντα' },
   'local.crafts': { en: 'Crafts & Souvenirs', el: 'Χειροτεχνία & Αναμνηστικά' },
   'local.festivals': { en: 'Festivals & Events', el: 'Πανηγύρια & Εκδηλώσεις' },
+  'local.festivals_all': { en: 'All {n} festivals & panigiria, with dates →', el: 'Όλα τα {n} πανηγύρια & γιορτές, με ημερομηνίες →' },
   'wtv.title': { en: 'Best time to visit', el: 'Καλύτερη εποχή να πας' },
 
   // Detail sidebar

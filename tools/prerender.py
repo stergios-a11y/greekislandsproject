@@ -701,6 +701,26 @@ LOCAL_I18N = {
     },
 }
 
+_FEST_INDEX = None
+def festivals_page_link(key, lang):
+    """'All N festivals on X ->' when tools/build_festivals.py made an island page."""
+    global _FEST_INDEX
+    if _FEST_INDEX is None:
+        # Read festivals.json directly (not festivals-index.json) so the link is
+        # right on the first build: build_festivals.py runs after prerender.
+        try:
+            _fj = json.loads((ROOT / 'festivals.json').read_text(encoding='utf-8'))
+            _FEST_INDEX = {k: len(v) for k, v in _fj.items() if len(v) >= 3}
+        except Exception:
+            _FEST_INDEX = {}
+    n = _FEST_INDEX.get(key)
+    if not n:
+        return ''
+    href = ('/el' if lang == 'el' else '') + f'/festivals/{key}/'
+    label = f'Όλα τα {n} πανηγύρια & γιορτές, με ημερομηνίες →' if lang == 'el' else f'All {n} festivals & panigiria, with dates →'
+    return f'<p class="seo-local-more"><a href="{href}">{label}</a></p>'
+
+
 def build_local_html(data, lang='en'):
     """Mirror script.js buildLocalSection. Empty string if no local content."""
     specs = data.get('specialties') or []
@@ -754,6 +774,7 @@ def build_local_html(data, lang='en'):
         block(labels['specialties'], specs, '🍽')
         + block(labels['crafts'], crafts, '🧵')
         + block(labels['festivals'], fests, '🎉')
+        + festivals_page_link(data.get('key'), lang)
     )
     return (
         f'<section class="seo-local">'
@@ -2907,8 +2928,8 @@ def main():
     print(f'✓ hero-photos.json regenerated')
 
     # Build the festivals calendar page (static HTML, EN + EL)
-    n_fests = generate_festivals_page(keys)
-    print(f'✓ festivals/ page regenerated ({n_fests} festivals)')
+    # /festivals/ is built by tools/build_festivals.py from festivals.json
+    # (village-level inventory, movable-feast engine, .ics). Not here any more.
 
     # Build the ferries hub page (static HTML, EN + EL)
     n_routes = generate_ferries_page(keys)
