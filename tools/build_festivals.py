@@ -261,7 +261,6 @@ CSS = '''<style>
 .fv-dir{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px}
 .fv-dir a{display:flex;justify-content:space-between;gap:8px;padding:10px 12px;border:1px solid var(--border,#EAE4DC);border-radius:10px;background:var(--white,#fff);text-decoration:none;color:var(--ink,#1A2332);font-weight:700;font-size:14px}
 .fv-dir a span{color:var(--ink-3,#637080);font-weight:600}
-.fv-dir a.dim{color:var(--ink-3,#637080);font-weight:600}
 .fv-note{font-size:13.5px;color:var(--ink-3,#637080);line-height:1.55;max-width:760px;margin:26px 0 0;padding-top:14px;border-top:1px dashed var(--border-2,#D8CEC2)}
 .fv-cta{display:inline-block;font-size:13px;font-weight:800;color:var(--aegean-dark,#076880);text-decoration:none;background:var(--aegean-pale,#E8F7FB);border-radius:999px;padding:7px 14px;margin:0 8px 8px 0}
 .fv-noresults{display:none;padding:24px;text-align:center;color:var(--ink-3,#637080)}
@@ -425,10 +424,7 @@ def build_hub(flat, names, heroes):
         for k in sorted(per_island, key=lambda k: names[k][1 if is_el else 0]):
             cnt = len(per_island[k])
             nm = esc(names[k][1 if is_el else 0])
-            if cnt >= 3:
-                dir_items.append(f'<a href="{p}/festivals/{k}/">{nm}<span>{cnt}</span></a>')
-            else:
-                dir_items.append(f'<a class="dim" href="{p}/island/{k}/#local">{nm}<span>{cnt}</span></a>')
+            dir_items.append(f'<a href="{p}/festivals/{k}/">{nm}<span>{cnt}</span></a>')
         directory = (f'<section class="fv-section" id="islands"><h2>{L(lang, "By island", "Ανά νησί")} <small>{len(per_island)}</small></h2>'
                      f'<div class="fv-dir">{"".join(dir_items)}</div></section>')
         ikaria = (f'<a class="fv-cta" href="{p}/festivals/ikaria-panigiria/">{L(lang, "The panigiria of Ikaria — the long read →", "Τα πανηγύρια της Ικαρίας — το μεγάλο άρθρο →")}</a>'
@@ -513,16 +509,27 @@ def build_months(flat, names, heroes):
     return pairs
 
 
+def _tbl_village(f, is_el):
+    v = f.get('village_el') if is_el and f.get('village_el') else f.get('village', '')
+    nm = f.get('name_el') if is_el and f.get('name_el') else f['name']
+    if not v or v.lower() in nm.lower():
+        return ''
+    return f' <span class="fv-village">· {esc(v)}</span>'
+
+
 def build_islands(flat, names, heroes):
     pairs = []
     per = {}
     for f in flat:
         per.setdefault(f['island'], []).append(f)
     for k, fs in per.items():
-        if len(fs) < 3:
-            continue
+        # Every island with at least one festival gets a page, so the hub's
+        # island directory always leads somewhere. Under 3 entries is thin:
+        # noindex,follow and kept out of the sitemap.
+        thin = len(fs) < 3
         en_path, el_path = f'/festivals/{k}/', f'/el/festivals/{k}/'
-        pairs.append((en_path, el_path))
+        if not thin:
+            pairs.append((en_path, el_path))
         exact = [f for f in fs if f['exact']]
         months = sorted({f['months'][0] for f in fs})
         villages = sorted({f.get('village') for f in fs if f.get('village')})
@@ -536,7 +543,7 @@ def build_islands(flat, names, heroes):
                                          f.get('type') == 'panigiri', f.get('confidence') == 'high', len(f.get('desc', ''))))
             if is_el:
                 gen = GEN_EL.get(k) or ''
-                title = (f'Πανηγύρια {gen} {SEASON_YEAR}: {n} γιορτές με ημερομηνίες & χωριά' if gen
+                title = (f'Πανηγύρια {gen} {SEASON_YEAR}: {n} {"γιορτή" if n == 1 else "γιορτές"} με ημερομηνίες & χωριά' if gen
                          else f'Πανηγύρια & γιορτές — {nm} {SEASON_YEAR}: {n} με ημερομηνίες & χωριά')
                 desc = (f'Όλα τα πανηγύρια και οι γιορτές {gen_with_article(k, nm) or ("στο νησί " + nm)} για το {SEASON_YEAR}: {n} καταχωρήσεις με ημερομηνία, '
                         f'χωριό και τι γίνεται, {span}. Με προσθήκη στο ημερολόγιο.')
@@ -544,14 +551,14 @@ def build_islands(flat, names, heroes):
                 lede = (f'{n} πανηγύρια και γιορτές, {span}' + (f', σε {len(villages)} χωριά' if len(villages) > 1 else '') +
                         f'. Το μεγάλο: {esc(big.get("name_el") or big["name"])} ({esc(big["when_el"])}). Οι ημερομηνίες είναι υπολογισμένες για το {SEASON_YEAR}.')
             else:
-                title = f'{nm} Festivals {SEASON_YEAR}: {n} Panigiria with Dates & Villages'
+                title = f'{nm} Festivals {SEASON_YEAR}: {n} {"Panigiri" if n == 1 else "Panigiria"} with Dates & Villages'
                 desc = f'Every panigiri and festival on {nm} in {SEASON_YEAR}: {n} entries with date, village and what happens, {span}. Add any of them to your calendar.'
                 h1 = f'{esc(nm)} festivals &amp; panigiria, {SEASON_YEAR}'
                 lede = (f'{n} feasts and festivals, {span}' + (f', across {len(villages)} villages' if len(villages) > 1 else '') +
                         f'. The big one: {esc(big["name"])} ({esc(big["when_en"])}). Dates are computed for {SEASON_YEAR}.')
             # calendar table (exact only), then full cards
             rows = ''.join(f'<tr><td>{esc(f["when_el"] if is_el else f["when_en"])}</td><td><a href="#{f["slug"]}">{esc((f.get("name_el") if is_el and f.get("name_el") else f["name"]))}</a>'
-                           + (f' <span class="fv-village">· {esc(f.get("village_el") if is_el and f.get("village_el") else f.get("village", ""))}</span>' if f.get('village') else '') + '</td></tr>'
+                           + _tbl_village(f, is_el) + '</td></tr>'
                            for f in sorted(exact, key=lambda f: f['sort']))
             table = f'<table class="fv-cal">{rows}</table>' if rows else ''
             ctas = (f'<a class="fv-cta" href="/festivals/ics/{k}.ics" download>{L(lang, "＋ All to calendar (.ics)", "＋ Όλα στο ημερολόγιο (.ics)")}</a>'
@@ -565,7 +572,8 @@ def build_islands(flat, names, heroes):
                     + f'<div class="fv-grid">{cards}</div>' + note(lang)
                     + f'<p style="margin-top:18px"><a class="fv-cta" href="{p}/festivals/">{L(lang, "← All island festivals", "← Όλες οι γιορτές των νησιών")}</a></p></main>')
             html = (page_head(title, desc, en_path, el_path, lang)
-                    .replace('</head>', CSS + breadcrumb_jsonld(lang, [(L(lang, 'Home', 'Αρχική'), p + '/'), (L(lang, 'Festivals', 'Γιορτές'), p + '/festivals/'), (nm, p + en_path)])
+                    .replace('</head>', ('<meta name="robots" content="noindex,follow">\n' if thin else '')
+                             + CSS + breadcrumb_jsonld(lang, [(L(lang, 'Home', 'Αρχική'), p + '/'), (L(lang, 'Festivals', 'Γιορτές'), p + '/festivals/'), (nm, p + en_path)])
                              + event_jsonld(fs, names, lang, heroes) + '</head>')
                     + header_nav(lang, en_path if is_el else el_path)
                     + body + FILTER_JS + footer(lang, en_path, el_path))
@@ -675,7 +683,7 @@ def main():
     ip, counts = build_islands(flat, names, heroes)
     pairs += ip
     n_ics = build_ics(flat, names)
-    (ROOT / 'festivals-index.json').write_text(json.dumps({k: v for k, v in counts.items() if v >= 3}, separators=(',', ':')), encoding='utf-8')
+    (ROOT / 'festivals-index.json').write_text(json.dumps(counts, separators=(',', ':')), encoding='utf-8')
     n_sm = patch_sitemap(pairs)
     print(f'✓ Festivals: {len(flat)} festivals, season {SEASON_YEAR}; {len(pairs)} page pairs, {len(ip)} island pages, {n_ics} .ics, {n_sm} sitemap entries')
 

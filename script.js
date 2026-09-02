@@ -3436,7 +3436,7 @@ function buildLocalSection(data) {
     </div>` : '';
 
   return `
-    <div class="local-section">
+    <div class="local-section" id="local">
       <h2 class="local-section-title">${t('local.section_title')}</h2>
       ${block(t('local.specialties'), specs, '🍽')}
       ${block(t('local.crafts'), crafts, '🧵')}

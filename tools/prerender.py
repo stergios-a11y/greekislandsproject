@@ -706,11 +706,8 @@ def festivals_page_link(key, lang):
     """'All N festivals on X ->' when tools/build_festivals.py made an island page."""
     global _FEST_INDEX
     if _FEST_INDEX is None:
-        # Read festivals.json directly (not festivals-index.json) so the link is
-        # right on the first build: build_festivals.py runs after prerender.
         try:
-            _fj = json.loads((ROOT / 'festivals.json').read_text(encoding='utf-8'))
-            _FEST_INDEX = {k: len(v) for k, v in _fj.items() if len(v) >= 3}
+            _FEST_INDEX = json.loads((ROOT / 'festivals-index.json').read_text(encoding='utf-8'))
         except Exception:
             _FEST_INDEX = {}
     n = _FEST_INDEX.get(key)
@@ -777,7 +774,7 @@ def build_local_html(data, lang='en'):
         + festivals_page_link(data.get('key'), lang)
     )
     return (
-        f'<section class="seo-local">'
+        f'<section class="seo-local" id="local">'
         f'<h2>{esc(labels["section_title"])}</h2>'
         f'{inner}'
         f'</section>'
