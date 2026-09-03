@@ -563,12 +563,22 @@ function swapAllTiles() {
     const maxZoom = (entry.options && entry.options.maxZoom) || 18;
     // Esri stops at z16; without this the map goes white past that in dark mode.
     entry.mapLayer.options.maxNativeZoom = mapMaxNativeZoom(maxZoom);
-    entry.mapLayer.setUrl(nextUrl);
+    // setUrl() redraws via GridLayer.redraw(), which in Leaflet 1.9 takes
+    // map.getZoom() unrounded — with zoomSnap: 0.5 the home map sits at 7.5
+    // and every tile request became /dark_all/7.5/x/y.png (a blank 200 PNG),
+    // so the map went blind on every theme toggle. Swap the URL without a
+    // redraw, then re-add the layer: addTo() goes through _setView, which
+    // rounds the tile zoom properly.
+    entry.mapLayer.setUrl(nextUrl, true);
+    if (entry.map.hasLayer(entry.mapLayer)) {
+      entry.map.removeLayer(entry.mapLayer);
+      entry.mapLayer.addTo(entry.map);
+    }
 
     // Labels only on Esri canvases, and only while the "Map" base layer is showing.
-    entry.mapLabels.setUrl(getLabelsUrl());
+    entry.mapLabels.setUrl(getLabelsUrl(), true);   // no redraw — same fractional-zoom trap
+    entry.map.removeLayer(entry.mapLabels);
     if (mapNeedsLabels() && entry.map.hasLayer(entry.mapLayer)) entry.mapLabels.addTo(entry.map);
-    else entry.map.removeLayer(entry.mapLabels);
 
     // Swap the credit line. Maps given an explicit attribution keep theirs.
     if (!(entry.options && entry.options.attribution) && entry.map.attributionControl) {
