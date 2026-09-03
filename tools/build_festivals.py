@@ -150,10 +150,6 @@ def card(f, names, lang, show_island=True, heading='h3'):
             if rn['start']:
                 date_attrs += f' data-start-now="{rn["start"].isoformat()}" data-end-now="{rn["end"].isoformat()}"'
     actions = []
-    if f['start']:
-        actions.append(f'<a class="fv-act" href="/festivals/ics/{f["island"]}/{f["slug"]}.ics" download>'
-                       f'{L(lang, "＋ Calendar (.ics)", "＋ Ημερολόγιο (.ics)")}</a>')
-        actions.append(f'<a class="fv-act" href="{esc(gcal_link(f, lang, names))}" target="_blank" rel="noopener">Google</a>')
     if f.get('source'):
         actions.append(f'<a class="fv-act fv-src" href="{esc(f["source"])}" target="_blank" rel="noopener nofollow">'
                        f'{L(lang, "source", "πηγή")}</a>')
@@ -264,6 +260,13 @@ CSS = '''<style>
 .fv-note{font-size:13.5px;color:var(--ink-3,#637080);line-height:1.55;max-width:760px;margin:26px 0 0;padding-top:14px;border-top:1px dashed var(--border-2,#D8CEC2)}
 .fv-cta{display:inline-block;font-size:13px;font-weight:800;color:var(--aegean-dark,#076880);text-decoration:none;background:var(--aegean-pale,#E8F7FB);border-radius:999px;padding:7px 14px;margin:0 8px 8px 0}
 .fv-noresults{display:none;padding:24px;text-align:center;color:var(--ink-3,#637080)}
+.fv-pick{background:var(--aegean-pale,#E8F7FB);border:1px solid var(--aegean-light,#C8EEF5);border-radius:14px;padding:18px 20px;margin:0 0 26px}
+.fv-pick label{display:block;font-family:var(--serif,Georgia),serif;font-size:22px;font-weight:700;margin:0 0 10px}
+.fv-pick-row{display:flex;gap:8px;flex-wrap:wrap}
+.fv-pick select{flex:1;min-width:220px;font:inherit;font-size:16px;padding:10px 12px;border:1px solid var(--border-2,#D8CEC2);border-radius:10px;background:var(--white,#fff);color:inherit}
+.fv-pick button{font:inherit;font-size:15px;font-weight:800;padding:10px 18px;border:none;border-radius:10px;background:var(--aegean,#0B8FAC);color:#fff;cursor:pointer}
+.fv-pick-hint{margin:8px 0 0;font-size:13px;color:var(--ink-3,#637080)}
+html.dark .fv-pick{background:#0A2A35;border-color:#1E3244}
 .fv-cal{width:100%;border-collapse:collapse;font-size:14px;margin:0 0 24px}
 .fv-cal td{padding:8px 10px 8px 0;border-bottom:1px dashed var(--border-2,#D8CEC2);vertical-align:top}
 .fv-cal td:first-child{white-space:nowrap;font-weight:800;color:#C6421F;width:150px}
@@ -306,6 +309,8 @@ FILTER_JS = r'''<script>
     list.slice(0,9).forEach(function(p){var cl=p[1].cloneNode(true);cl.classList.remove('is-hidden');cl.removeAttribute('id');var t=document.createElement('span');t.className='fv-tag'+(p[0]<=now?'':' next');t.textContent=p[0]<=now?soon.getAttribute('data-now'):soon.getAttribute('data-next');cl.querySelector('.fv-top').appendChild(t);soonGrid.appendChild(cl);});
     if(soonGrid.children.length)soon.hidden=false;
   }
+  var pick=q('#fv-pick'),go=q('#fv-pick-go');
+  if(pick){var jump=function(){if(pick.value)location.href=pick.value;};pick.addEventListener('change',jump);if(go)go.addEventListener('click',jump);}
   var h=location.hash&&document.getElementById(location.hash.slice(1));if(h)h.style.outline='2px solid var(--aegean,#0B8FAC)';
 })();
 </script>'''
@@ -327,6 +332,20 @@ def controls(lang, fs, names, with_island=True):
             f'<button type="button" class="fv-clear" id="fv-clear">{L(lang, "Clear", "Καθαρισμός")}</button>'
             f'<span class="fv-count"><span id="fv-count">{len(fs)}</span> {L(lang, "shown", "εμφανίζονται")}</span></div>'
             f'<p class="fv-noresults" id="fv-noresults">{L(lang, "Nothing matches these filters.", "Τίποτα δεν ταιριάζει με τα φίλτρα.")}</p>')
+
+
+def island_picker(lang, per_island, names):
+    """The first question on the hub: which island are you going to? Picking one
+    goes straight to /festivals/<island>/ — people plan around the island they
+    booked, not around festivals scattered across Greece."""
+    is_el = lang == 'el'
+    p = '/el' if is_el else ''
+    keys = sorted(per_island, key=lambda k: names[k][1 if is_el else 0])
+    opts = ''.join(f'<option value="{p}/festivals/{k}/">{esc(names[k][1 if is_el else 0])} ({len(per_island[k])})</option>' for k in keys)
+    return (f'<section class="fv-pick"><label for="fv-pick">{L(lang, "Which island are you going to?", "Σε ποιο νησί πας;")}</label>'
+            f'<div class="fv-pick-row"><select id="fv-pick"><option value="">{L(lang, "Choose an island…", "Διάλεξε νησί…")}</option>{opts}</select>'
+            f'<button type="button" id="fv-pick-go">{L(lang, "Show its festivals", "Δες τις γιορτές του")}</button></div>'
+            f'<p class="fv-pick-hint">{L(lang, "Every feast, panigiri and festival on that island for " + str(SEASON_YEAR) + ", by date.", "Κάθε πανηγύρι και γιορτή στο νησί για το " + str(SEASON_YEAR) + ", με ημερομηνία.")}</p></section>')
 
 
 def soon_block(lang):
@@ -431,11 +450,14 @@ def build_hub(flat, names, heroes):
                   f'<a class="fv-cta" href="{p}/festivals/august/">{L(lang, "August: " + str(counts.get(8, 0)) + " feasts →", "Αύγουστος: " + str(counts.get(8, 0)) + " πανηγύρια →")}</a>')
         stats = (f'<div class="fv-stats"><span><b>{n}</b> {L(lang, "festivals", "γιορτές")}</span><span><b>{len(per_island)}</b> {L(lang, "islands", "νησιά")}</span>'
                  f'<span><b>{exact}</b> {L(lang, "with exact dates", "με ακριβή ημερομηνία")}</span><span><b>{sum(1 for f in flat if (f.get("type") or "") == "panigiri")}</b> {L(lang, "village panigiria", "πανηγύρια χωριών")}</span></div>')
-        body = (f'<main class="fv-page"><h1>{h1}</h1><p class="fv-lede">{lede}</p>{stats}{ikaria}'
-                + month_strip(lang, counts, hub=True)
+        picker = island_picker(lang, per_island, names)
+        body = (f'<main class="fv-page"><h1>{h1}</h1><p class="fv-lede">{lede}</p>{stats}'
+                + picker + directory
+                + f'<section class="fv-section" id="bymonth"><h2>{L(lang, "Or browse by month", "Ή ανά μήνα")}</h2>'
+                + month_strip(lang, counts, hub=True) + ikaria + '</section>'
                 + soon_block(lang)
-                + controls(lang, flat, names)
-                + ''.join(sections) + directory + note(lang) + '</main>')
+                + controls(lang, flat, names, with_island=False)
+                + ''.join(sections) + note(lang) + '</main>')
         top = [f for f in flat if f.get('verified') and f['exact']]
         html = (page_head(title, desc, '/festivals/', '/el/festivals/', lang)
                 .replace('</head>', CSS + breadcrumb_jsonld(lang, [(L(lang, 'Home', 'Αρχική'), p + '/'), (L(lang, 'Festivals', 'Γιορτές'), p + '/festivals/')])
@@ -496,7 +518,7 @@ def build_months(flat, names, heroes):
                 parts.append(card(f, names, lang))
             if cur is not None:
                 parts.append('</div>')
-            ics = f'<a class="fv-cta" href="/festivals/ics/month-{slug}.ics" download>{L(lang, "＋ Whole month to calendar", "＋ Όλος ο μήνας στο ημερολόγιο")}</a>'
+            ics = ''
             body = (f'<main class="fv-page"><h1>{h1}</h1><p class="fv-lede">{lede}</p>'
                     + month_strip(lang, counts, active=m) + ics + controls(lang, mf, names)
                     + ''.join(parts) + note(lang) + '</main>')
@@ -561,8 +583,7 @@ def build_islands(flat, names, heroes):
                            + _tbl_village(f, is_el) + '</td></tr>'
                            for f in sorted(exact, key=lambda f: f['sort']))
             table = f'<table class="fv-cal">{rows}</table>' if rows else ''
-            ctas = (f'<a class="fv-cta" href="/festivals/ics/{k}.ics" download>{L(lang, "＋ All to calendar (.ics)", "＋ Όλα στο ημερολόγιο (.ics)")}</a>'
-                    f'<a class="fv-cta" href="{p}/island/{k}/">{L(lang, "Full " + nm + " guide →", "Ο πλήρης οδηγός →")}</a>'
+            ctas = (f'<a class="fv-cta" href="{p}/island/{k}/">{L(lang, "Full " + nm + " guide →", "Ο πλήρης οδηγός →")}</a>'
                     f'<a class="fv-cta" href="{p}/trip-cost/?i={k}%3A4&m=aug">{L(lang, "What would the trip cost? →", "Πόσο κοστίζει το ταξίδι; →")}</a>')
             if k == 'ikaria':
                 ctas += f'<a class="fv-cta" href="{p}/festivals/ikaria-panigiria/">{L(lang, "How an Ikarian panigiri works →", "Πώς λειτουργεί ένα ικαριώτικο πανηγύρι →")}</a>'
@@ -682,7 +703,7 @@ def main():
     pairs += build_months(flat, names, heroes)
     ip, counts = build_islands(flat, names, heroes)
     pairs += ip
-    n_ics = build_ics(flat, names)
+    n_ics = 0   # .ics export dropped (Sep 2026): nobody used it and it added 3 MB to every deploy
     (ROOT / 'festivals-index.json').write_text(json.dumps(counts, separators=(',', ':')), encoding='utf-8')
     n_sm = patch_sitemap(pairs)
     print(f'✓ Festivals: {len(flat)} festivals, season {SEASON_YEAR}; {len(pairs)} page pairs, {len(ip)} island pages, {n_ics} .ics, {n_sm} sitemap entries')
