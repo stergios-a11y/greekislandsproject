@@ -4680,7 +4680,7 @@ const FERRY_GRAPH = [
   { a: 'leros', b: 'leipsoi', dur: 30, freq: 'med', plo: 6, phi: 10, note: "most days" },
   { a: 'leros', b: 'patmos', dur: 60, freq: 'high', plo: 10, phi: 16, note: "daily" },
   { a: 'lesvos', b: 'lemnos', dur: 360, freq: 'low', plo: 22, phi: 35, note: "2/week" },
-  { a: 'milos', b: 'kimolos', dur: 30, freq: 'high', plo: 4, phi: 8, note: "daily" },
+  { a: 'milos', b: 'kimolos', dur: 30, freq: 'high', plo: 4, phi: 8, note: "several daily from Pollonia" },
   { a: 'mykonos', b: 'santorini', dur: 150, freq: 'high', plo: 35, phi: 65, note: "daily" },
   { a: 'naxos', b: 'amorgos', dur: 180, freq: 'med', plo: 16, phi: 28, note: "daily" },
   { a: 'naxos', b: 'ios', dur: 90, freq: 'high', plo: 18, phi: 28, note: "daily" },

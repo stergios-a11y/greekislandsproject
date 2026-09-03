@@ -267,6 +267,8 @@ CSS = '''<style>
 .fv-pick button{font:inherit;font-size:15px;font-weight:800;padding:10px 18px;border:none;border-radius:10px;background:var(--aegean,#0B8FAC);color:#fff;cursor:pointer}
 .fv-pick-hint{margin:8px 0 0;font-size:13px;color:var(--ink-3,#637080)}
 html.dark .fv-pick{background:#0A2A35;border-color:#1E3244}
+.fv-nearby-list{margin:0;padding:0 0 0 18px;font-size:15px;line-height:1.7}
+.fv-nearby-list a{font-weight:800;color:var(--aegean-dark,#076880);text-decoration:none}
 .fv-cal{width:100%;border-collapse:collapse;font-size:14px;margin:0 0 24px}
 .fv-cal td{padding:8px 10px 8px 0;border-bottom:1px dashed var(--border-2,#D8CEC2);vertical-align:top}
 .fv-cal td:first-child{white-space:nowrap;font-weight:800;color:#C6421F;width:150px}
@@ -332,6 +334,44 @@ def controls(lang, fs, names, with_island=True):
             f'<button type="button" class="fv-clear" id="fv-clear">{L(lang, "Clear", "Καθαρισμός")}</button>'
             f'<span class="fv-count"><span id="fv-count">{len(fs)}</span> {L(lang, "shown", "εμφανίζονται")}</span></div>'
             f'<p class="fv-noresults" id="fv-noresults">{L(lang, "Nothing matches these filters.", "Τίποτα δεν ταιριάζει με τα φίλτρα.")}</p>')
+
+
+def load_hops():
+    """Neighbours you can realistically visit for an evening panigiri and get
+    back from: from script.js FERRY_GRAPH, only links under an hour with
+    several sailings a day. One boat a day ('daily') does not count — there is
+    no way home after the dancing."""
+    js = (ROOT / 'script.js').read_text(encoding='utf-8')
+    m = re.search(r"\nconst FERRY_GRAPH = \[\n(.*?)\n\];", js, re.S)
+    hops = {}
+    if not m:
+        return hops
+    for a, b, dur, freq, note in re.findall(r"\{ a: '([^']+)', b: '([^']+)', dur: (\d+), freq: '(\w+)'.*?note: \"([^\"]*)\"", m.group(1)):
+        dur = int(dur)
+        if freq != 'high' or dur > 60 or not re.search(r'multiple|every|frequent|hourly|shuttle|30 ?min|\d\+?/day|per day|several', note, re.I):
+            continue
+        hops.setdefault(a, []).append((b, dur, note))
+        hops.setdefault(b, []).append((a, dur, note))
+    return hops
+
+
+def nearby_block(k, lang, per_island, names, hops):
+    is_el = lang == 'el'
+    p = '/el' if is_el else ''
+    items = []
+    for other, dur, note in sorted(hops.get(k, []), key=lambda x: x[1]):
+        if other not in per_island:
+            continue
+        n = len(per_island[other])
+        nm = esc(names[other][1 if is_el else 0])
+        freq = esc(note) if not is_el else 'πολλά δρομολόγια τη μέρα'
+        items.append(f'<li><a href="{p}/festivals/{other}/">{nm}</a> — {dur} {L(lang, "min by ferry", "λεπτά με το πλοίο")}, {freq} · '
+                     f'{n} {L(lang, "festival" if n == 1 else "festivals", "γιορτή" if n == 1 else "γιορτές")}</li>')
+    if not items:
+        return ''
+    return (f'<section class="fv-section fv-nearby"><h2>{L(lang, "Close enough for an evening", "Αρκετά κοντά για ένα βράδυ")}</h2>'
+            f'<p class="fv-lede">{L(lang, "Islands with a frequent ferry under an hour away — a panigiri there is a realistic night out. Always check the last boat back; it is usually before the dancing ends.", "Νησιά με συχνό πλοίο κάτω από μία ώρα — ένα πανηγύρι εκεί είναι ρεαλιστική βραδινή έξοδος. Δες πάντα το τελευταίο πλοίο επιστροφής· συνήθως φεύγει πριν τελειώσει ο χορός.")}</p>'
+            f'<ul class="fv-nearby-list">{"".join(items)}</ul></section>')
 
 
 def island_picker(lang, per_island, names):
@@ -542,6 +582,7 @@ def _tbl_village(f, is_el):
 def build_islands(flat, names, heroes):
     pairs = []
     per = {}
+    HOPS = load_hops()
     for f in flat:
         per.setdefault(f['island'], []).append(f)
     for k, fs in per.items():
@@ -590,7 +631,7 @@ def build_islands(flat, names, heroes):
             cards = ''.join(card(f, names, lang, show_island=False, heading='h2') for f in sorted(fs, key=lambda f: f['sort']))
             body = (f'<main class="fv-page"><h1>{h1}</h1><p class="fv-lede">{lede}</p>{ctas}{table}'
                     + soon_block(lang) + controls(lang, fs, names, with_island=False)
-                    + f'<div class="fv-grid">{cards}</div>' + note(lang)
+                    + f'<div class="fv-grid">{cards}</div>' + nearby_block(k, lang, per, names, HOPS) + note(lang)
                     + f'<p style="margin-top:18px"><a class="fv-cta" href="{p}/festivals/">{L(lang, "← All island festivals", "← Όλες οι γιορτές των νησιών")}</a></p></main>')
             html = (page_head(title, desc, en_path, el_path, lang)
                     .replace('</head>', ('<meta name="robots" content="noindex,follow">\n' if thin else '')
