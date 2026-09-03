@@ -707,7 +707,10 @@ def festivals_page_link(key, lang):
     global _FEST_INDEX
     if _FEST_INDEX is None:
         try:
-            _FEST_INDEX = json.loads((ROOT / 'festivals-index.json').read_text(encoding='utf-8'))
+            # festivals.json, not festivals-index.json: build_festivals.py runs
+            # after prerender, so the index would lag one build on a fresh clone.
+            _fj = json.loads((ROOT / 'festivals.json').read_text(encoding='utf-8'))
+            _FEST_INDEX = {k: len(v) for k, v in _fj.items() if v}
         except Exception:
             _FEST_INDEX = {}
     n = _FEST_INDEX.get(key)

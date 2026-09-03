@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-09-02';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-09-03';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -409,24 +409,65 @@ const DARK_TILE_URL = CARTO_KEY
   ? withKey('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png')
   : ESRI_DARK_URL;
 const DARK_TILE_ATTRIBUTION = CARTO_KEY ? CARTO_ATTRIBUTION : ESRI_DARK_ATTRIBUTION;
-// Esri's dark canvas ships without place names and stops at z16; CARTO's
-// dark_all has labels baked in and goes deeper, so neither applies with a key.
-const DARK_NEEDS_LABELS = !CARTO_KEY;
-const DARK_TILE_MAX_NATIVE_ZOOM = CARTO_KEY ? 20 : 16;
 
 function isDarkTheme() {
   return document.documentElement.classList.contains('dark');
 }
 
+/* CARTO fallback.
+   CARTO has failed twice without any signal: once by returning an
+   "API KEY REQUIRED" watermark as a valid 200 PNG, once by tiles simply not
+   arriving (the map stayed the flat sea colour). Leaflet only reports the
+   second kind (tileerror). So: (1) count tileerrors per map and bail after
+   three; (2) on load, fetch one land tile and one open-sea tile and compare
+   bytes — the watermark placeholder is the same image for every z/x/y, so
+   identical bytes mean CARTO is not serving a map. Either way every map
+   switches to Esri's keyless Light/Dark Gray canvas + Reference labels. */
+let CARTO_DOWN = false;
+const ESRI_LIGHT_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}';
+const LIGHT_LABELS_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}';
+
+function usingEsri() { return CARTO_DOWN || (isDarkTheme() && !CARTO_KEY); }
+
 function getMapTileUrl() {
+  if (usingEsri()) return isDarkTheme() ? ESRI_DARK_URL : ESRI_LIGHT_URL;
   return isDarkTheme() ? DARK_TILE_URL : LIGHT_TILE_URL;
 }
 
 function getMapTileAttribution() {
-  // Credit whoever is actually serving the tiles right now — without a key the
-  // two themes are different providers, so one combined string would be wrong
-  // half the time.
-  return isDarkTheme() ? DARK_TILE_ATTRIBUTION : LIGHT_TILE_ATTRIBUTION;
+  // Credit whoever is actually serving the tiles right now.
+  return usingEsri() ? ESRI_DARK_ATTRIBUTION : CARTO_ATTRIBUTION;
+}
+
+// Esri's canvases ship without place names and stop at z16.
+function mapNeedsLabels() { return usingEsri(); }
+function getLabelsUrl() { return isDarkTheme() ? DARK_LABELS_URL : LIGHT_LABELS_URL; }
+function mapMaxNativeZoom(maxZoom) { return usingEsri() ? Math.min(16, maxZoom) : maxZoom; }
+
+function cartoFallback(reason) {
+  if (CARTO_DOWN) return;
+  CARTO_DOWN = true;
+  console.warn('CARTO tiles unavailable (' + reason + ') — switching maps to Esri');
+  try { swapAllTiles(); } catch (e) { console.warn('swapAllTiles', e); }
+}
+
+function cartoCanary() {
+  if (CARTO_DOWN || !window.fetch) return;
+  // z8 land tile over Thessaloniki vs. z8 open-sea tile south of Rhodes.
+  const land = withKey('https://a.basemaps.cartocdn.com/rastertiles/voyager/8/145/98.png');
+  const sea  = withKey('https://b.basemaps.cartocdn.com/rastertiles/voyager/8/147/103.png');
+  const get = (u) => fetch(u, { mode: 'cors', cache: 'no-store' }).then(r => {
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.arrayBuffer();
+  });
+  Promise.all([get(land), get(sea)]).then(([a, b]) => {
+    if (a.byteLength === b.byteLength) {
+      const x = new Uint8Array(a), y = new Uint8Array(b);
+      let same = true;
+      for (let i = 0; i < x.length; i += 7) { if (x[i] !== y[i]) { same = false; break; } }
+      if (same) cartoFallback('watermark placeholder');
+    }
+  }).catch(e => cartoFallback(e && e.message ? e.message : 'fetch failed'));
 }
 
 // Esri World Imagery — satellite, no API key required, free for non-commercial use
@@ -447,16 +488,22 @@ function addThemeAwareTiles(map, options = {}) {
   const mapLayer = L.tileLayer(getMapTileUrl(), {
     attribution: options.attribution || getMapTileAttribution(),
     maxZoom: maxZoom,
-    maxNativeZoom: isDark ? Math.min(DARK_TILE_MAX_NATIVE_ZOOM, maxZoom) : maxZoom,
+    maxNativeZoom: mapMaxNativeZoom(maxZoom),
     subdomains: 'abcd',
+  });
+  // Three failed tiles on one map = the provider is down, not a flaky tile.
+  let tileErrors = 0;
+  mapLayer.on('tileerror', () => {
+    if (usingEsri()) return;
+    if (++tileErrors >= 3) cartoFallback('tileerror x' + tileErrors);
   });
 
   // Dark-only labels overlay. Esri's Dark Gray basemap ships without place
   // names, so this rides on top of it; in light mode Voyager already has its
   // own labels and this layer stays off the map entirely.
-  const mapLabels = L.tileLayer(DARK_LABELS_URL, {
+  const mapLabels = L.tileLayer(getLabelsUrl(), {
     maxZoom: maxZoom,
-    maxNativeZoom: DARK_TILE_MAX_NATIVE_ZOOM,
+    maxNativeZoom: 16,
     pane: 'overlayPane',
   });
 
@@ -480,12 +527,12 @@ function addThemeAwareTiles(map, options = {}) {
 
   // Default layer: 'satellite' opt-in per map (island itineraries), else Map.
   if (options.defaultLayer === 'satellite') satLayer.addTo(map); else mapLayer.addTo(map);
-  if (isDark && DARK_NEEDS_LABELS && map.hasLayer(mapLayer)) mapLabels.addTo(map);
+  if (mapNeedsLabels() && map.hasLayer(mapLayer)) mapLabels.addTo(map);
 
   // The dark labels belong to the "Map" base layer, not to the map itself —
   // switching to Satellite (which has its own labels) must take them away.
   map.on('baselayerchange', e => {
-    if (e.layer === mapLayer && isDarkTheme() && DARK_NEEDS_LABELS) mapLabels.addTo(map);
+    if (e.layer === mapLayer && mapNeedsLabels()) mapLabels.addTo(map);
     else map.removeLayer(mapLabels);
   });
 
@@ -515,13 +562,12 @@ function swapAllTiles() {
   _activeMapEntries.forEach(entry => {
     const maxZoom = (entry.options && entry.options.maxZoom) || 18;
     // Esri stops at z16; without this the map goes white past that in dark mode.
-    entry.mapLayer.options.maxNativeZoom = isDark
-      ? Math.min(DARK_TILE_MAX_NATIVE_ZOOM, maxZoom)
-      : maxZoom;
+    entry.mapLayer.options.maxNativeZoom = mapMaxNativeZoom(maxZoom);
     entry.mapLayer.setUrl(nextUrl);
 
-    // Labels only in dark, and only while the "Map" base layer is showing.
-    if (isDark && DARK_NEEDS_LABELS && entry.map.hasLayer(entry.mapLayer)) entry.mapLabels.addTo(entry.map);
+    // Labels only on Esri canvases, and only while the "Map" base layer is showing.
+    entry.mapLabels.setUrl(getLabelsUrl());
+    if (mapNeedsLabels() && entry.map.hasLayer(entry.mapLayer)) entry.mapLabels.addTo(entry.map);
     else entry.map.removeLayer(entry.mapLabels);
 
     // Swap the credit line. Maps given an explicit attribution keep theirs.
@@ -687,6 +733,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // now (fallback initials) and re-render after the manifest loads (with photos).
   try {
     fetch('/festivals-index.json').then(r => r.ok ? r.json() : {}).then(j => { FESTIVAL_INDEX = j || {}; }).catch(() => {});
+    try { cartoCanary(); } catch (e) { console.warn('cartoCanary', e); }
     loadHeroPhotos().then(function () {
       try { refreshQuizLiveThumbs(); } catch (_) {}
     });
