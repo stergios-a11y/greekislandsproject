@@ -641,6 +641,13 @@ function sync(){{
   try{{localStorage.setItem('tc-state',JSON.stringify(state));}}catch(e){{}}
   const i=state.trip.map(t=>t.k+':'+t.n+(t.v?':'+t.v:'')+(t.b?':b':'')).join(',');
   history.replaceState(null,'','?i='+i+'&m='+state.month+'&pax='+state.pax+'&tier='+state.tier+(state.fly?'&fly=1':'')+(state.own?'&veh=own':'')+(state.date?'&d='+state.date:''));
+  // One trip_cost_run per finished estimate (debounced): which islands people
+  // actually price, for how long, in which month, at which tier.
+  try{{clearTimeout(window._tcEv);window._tcEv=setTimeout(function(){{
+    if(typeof gtag!=='function'||!state.trip.length)return;
+    gtag('event','trip_cost_run',{{islands:state.trip.map(t=>t.k).join(','),
+      nights:state.trip.reduce((a,t)=>a+(t.n||0),0),stops:state.trip.length,
+      month:state.month,tier:state.tier,pax:state.pax}});}},1200);}}catch(e){{}}
 }}
 
 // per-tier room price for an island in the selected month

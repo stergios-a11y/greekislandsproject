@@ -312,7 +312,9 @@ FILTER_JS = r'''<script>
     if(soonGrid.children.length)soon.hidden=false;
   }
   var pick=q('#fv-pick'),go=q('#fv-pick-go');
-  if(pick){var jump=function(){if(pick.value)location.href=pick.value;};pick.addEventListener('change',jump);if(go)go.addEventListener('click',jump);}
+  if(pick){var jump=function(){if(!pick.value)return;
+    try{if(typeof gtag==='function')gtag('event','festival_island_pick',{island:pick.value.replace(/.*\/festivals\/([^/]+)\/.*/,'$1')});}catch(e){}
+    location.href=pick.value;};pick.addEventListener('change',jump);if(go)go.addEventListener('click',jump);}
   var h=location.hash&&document.getElementById(location.hash.slice(1));if(h)h.style.outline='2px solid var(--aegean,#0B8FAC)';
 })();
 </script>'''

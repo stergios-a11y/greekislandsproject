@@ -208,11 +208,24 @@
       "drive_el": "≈30 λεπτά βόρεια του Βαθέος"
      },
      {
+      "time": "12:00",
+      "name": "Polis Beach",
+      "name_el": "Παραλία Πόλις",
+      "type": "beach",
+      "lat": 38.4472,
+      "lng": 20.6339,
+      "wiki": "https://www.google.com/maps/search/?api=1&query=Polis+Beach+Ithaca",
+      "desc": "The swim stop for this day, 1.2 km downhill from Stavros: white pebbles under pines, poplars and cypresses that grow right to the water, and a canteen with sunbeds. The bay faces west and stays calm in almost any wind, which is why the fishing boats moor here. On the north side is the Cave of Loizos, where a 2nd-century BC offering inscribed \"With the blessing of Odysseus\" was found — it is in the Stavros museum you have just walked through. The ruins of a sunken settlement lie on the seabed; bring a mask.",
+      "desc_el": "Η στάση για μπάνιο της ημέρας, 1,2 χλμ. κατηφορικά από τον Σταυρό: άσπρα βότσαλα κάτω από πεύκα, λεύκες και κυπαρίσσια που φτάνουν ως το νερό, και μια καντίνα με ξαπλώστρες. Ο κόλπος βλέπει δυτικά και μένει ήρεμος σχεδόν με κάθε καιρό, γι' αυτό δένουν εδώ τα ψαροκάικα. Στη βόρεια πλευρά είναι η σπηλιά του Λοΐζου, όπου βρέθηκε αφιέρωμα του 2ου αιώνα π.Χ. με την επιγραφή «Ευχήν Οδυσσεί» — βρίσκεται στο μουσείο του Σταυρού απ' όπου μόλις πέρασες. Στον βυθό διακρίνονται τα ερείπια βυθισμένου οικισμού· πάρε μάσκα.",
+      "drive": "≈5 min downhill from Stavros",
+      "drive_el": "≈5 λεπτά κατηφορικά από τον Σταυρό"
+     },
+     {
       "name": "Frikes",
       "lat": 38.4584443,
       "lng": 20.6635442,
       "type": "harbour",
-      "time": "12:30",
+      "time": "14:00",
       "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJrXxXZjS-XRMRtV2XCW4aRVs",
       "desc": "Tiny fishing harbour in the north with a handful of tavernas at the waterfront. Lunch here — the grilled octopus and local wine are excellent.",
       "name_el": "Φρίκες",
@@ -231,7 +244,7 @@
       "lat": 38.44,
       "lng": 20.7133,
       "type": "harbour",
-      "time": "15:00",
+      "time": "16:00",
       "wiki": "https://www.google.com/maps/search/Kioni+Ithaca",
       "desc": "The most beautiful village in Ithaca — a miniature harbour of coloured houses and three windmills on the hillside. Swim in the bay, dinner at a waterfront taverna. Stay overnight.",
       "name_el": "Κιόνι",
@@ -244,17 +257,6 @@
        "page_url": "https://commons.wikimedia.org/wiki/File:Ithaca_-_Kioni_-_panoramio.jpg",
        "source": "Wikimedia Commons"
       }
-     },
-     {
-      "time": "18:00",
-      "name": "Filiatro Beach (swim stop)",
-      "name_el": "Παραλία Φιλιατρό (στάση μπάνιου)",
-      "type": "beach",
-      "lat": 38.3717,
-      "lng": 20.7419,
-      "wiki": "https://www.google.com/maps/search/?api=1&query=Filiatro+Beach+Ithaca",
-      "desc": "On the drive back from Kioni to Vathy, Filiatro is the natural break — a sheltered pebble-and-sand beach in a quiet wooded cove, perfect for an unwinding swim after a day of northern villages. Less famous than Gidaki but easier to reach by car, with shade from the surrounding trees.",
-      "desc_el": "Στον δρόμο της επιστροφής από τον Κιόνι προς τον Βαθύ, ο Φιλιατρό είναι η φυσική στάση — μια προφυλαγμένη παραλία με βότσαλο και άμμο σε ένα ήσυχο δασωμένο κολπίσκο, ιδανική για ένα χαλαρωτικό μπάνιο μετά από μια μέρα στα βόρεια χωριά. Λιγότερο διάσημη από το Γιδάκι αλλά πιο εύκολη στην πρόσβαση οδικώς, με σκιά από τα γύρω δέντρα."
      },
      {
       "name": "Dinner in Vathy",

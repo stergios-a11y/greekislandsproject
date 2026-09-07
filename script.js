@@ -635,6 +635,49 @@ function trackView(view, param) {
   } catch (_) { /* analytics must never break navigation */ }
 }
 
+/* One delegated listener for every outbound click, so new affiliate buttons
+   are tracked automatically instead of needing their own handler. Partner
+   links (booking.com, discovercars, ferry operators) fire affiliate_click with
+   the island in context; anything else off-site fires outbound_click. */
+const AFFILIATE_HOSTS = ['booking.com', 'discovercars.com', 'ferryhopper.com', 'ferryscanner.com'];
+
+function setupOutboundTracking() {
+  document.addEventListener('click', (e) => {
+    const a = e.target && e.target.closest && e.target.closest('a[href^="http"]');
+    if (!a) return;
+    let host = '';
+    try { host = new URL(a.href).hostname.replace(/^www\./, ''); } catch (_) { return; }
+    if (host === window.location.hostname) return;
+    const partner = AFFILIATE_HOSTS.find(h => host === h || host.endsWith('.' + h));
+    const where = a.closest('[class*="beach"]') ? 'beach'
+      : a.closest('[class*="itin"], [class*="stop"]') ? 'itinerary'
+      : a.closest('[class*="hero"], .isl-hero-chips') ? 'hero'
+      : a.closest('#cta-affiliate') ? 'cta_bar' : 'other';
+    track(partner ? 'affiliate_click' : 'outbound_click', {
+      partner: partner || host,
+      island: currentIslandKey || '',
+      placement: where,
+      link_text: (a.textContent || '').trim().slice(0, 60),
+    });
+  }, true);
+}
+
+/* Custom GA4 events.
+   Search Console tells us what happens BEFORE the click; these tell us what
+   happens after. Every call is fire-and-forget and wrapped — analytics must
+   never break the page. Event names are snake_case (GA4 convention) and each
+   carries the island key where one applies, so the reports can be read per
+   island rather than as one blob. */
+function track(name, params) {
+  if (typeof gtag !== 'function') return;
+  try { gtag('event', name, params || {}); } catch (_) {}
+}
+
+// Sections already seen on the island page currently open, so section_view
+// fires once per section per island rather than on every scroll tick.
+let _seenSections = new Set();
+let _seenSectionsFor = null;
+
 function navigateTo(view, param) {
   const hash = view === 'home' ? '#map' : view === 'island' ? `#island/${param}` : `#${view}`;
   if (window.location.hash !== hash) history.pushState({ view, param }, '', hash);
@@ -750,6 +793,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } catch(e) { console.warn('heroPhotos', e); }
   try { setupTable(); } catch(e) { console.warn('setupTable', e); }
   try { setupCompare(); } catch(e) { console.warn('setupCompare', e); }
+  try { setupOutboundTracking(); } catch(e) { console.warn('outbound', e); }
   const vd = document.getElementById('version-display');
   if (vd) vd.textContent = `Aegean Blueprint ${VERSION}`;
   clearTimeout(hardFallback);
@@ -1037,6 +1081,7 @@ function setupLanguageToggle() {
         btn.setAttribute('aria-expanded', 'false');
         return;
       }
+      track('lang_switch', { to: targetLang, from: CURRENT_LANG, view: (window.location.hash || '#map').slice(1) });
       const currentHash = window.location.hash;
       if (targetLang === 'el') {
         window.location.href = '/el/' + currentHash;
@@ -3904,8 +3949,10 @@ function toggleShortlist() {
   const idx = list.indexOf(currentIslandKey);
   if (idx >= 0) {
     list.splice(idx, 1);
+    track('shortlist_remove', { island: currentIslandKey, size: list.length });
   } else {
     list.push(currentIslandKey);
+    track('shortlist_add', { island: currentIslandKey, size: list.length + 1 });
   }
   saveShortlist(list);
   updateShortlistButton();
@@ -4112,8 +4159,12 @@ function setupCompare() {
   // Apply current compareSelection (defaults: mykonos + santorini) to the dropdowns
   if (compareSelection[0]) selA.value = compareSelection[0];
   if (compareSelection[1]) selB.value = compareSelection[1];
-  selA.addEventListener('change', () => { compareSelection[0] = selA.value || null; renderCompareView(); });
-  selB.addEventListener('change', () => { compareSelection[1] = selB.value || null; renderCompareView(); });
+  const trackPair = () => {
+    const [a, b] = compareSelection;
+    if (a && b) track('compare_pair', { pair: [a, b].slice().sort().join('__'), island_a: a, island_b: b });
+  };
+  selA.addEventListener('change', () => { compareSelection[0] = selA.value || null; renderCompareView(); trackPair(); });
+  selB.addEventListener('change', () => { compareSelection[1] = selB.value || null; renderCompareView(); trackPair(); });
   // No initial render here: showView('compare') renders when the view is
   // actually opened. Rendering at boot pulled vs_verdicts.json (1.2 MB),
   // vs_faqs.json and two island JSONs into a hidden view on every page load.
@@ -6586,6 +6637,7 @@ function renderQuizMovement(climbers, answered) {
 
 function computeQuizResults() {
   const ctx = scoreIslandsFromAnswers(quizAnswers);
+  try { track('quiz_complete', { top_island: (ctx.scored[0] || {}).key || '', answers: quizAnswers.filter(a => a !== undefined).length }); } catch (_) {}
   const { A, priority, budgetMod, scenePref, seasonIdx, seasonMonths, transportPref, tripDays } = ctx;
   const scored = ctx.scored.slice(0, 6);
   const container = document.getElementById('quiz-container');
@@ -6919,6 +6971,13 @@ function buildSectionNav() {
     }
     if (current === lastActive) return;
     lastActive = current;
+    // How far down the page do readers actually get? This is what decides
+    // whether beaches should sit above the itinerary.
+    if (_seenSectionsFor !== currentIslandKey) { _seenSections = new Set(); _seenSectionsFor = currentIslandKey; }
+    if (!_seenSections.has(current.id)) {
+      _seenSections.add(current.id);
+      track('section_view', { section: current.id.replace(/^sec-/, ''), island: currentIslandKey || '', order: _seenSections.size });
+    }
     bar.querySelectorAll('.secnav-chip').forEach(a =>
       a.classList.toggle('is-active', a.dataset.target === current.id));
     // Keep the active chip in view on phones, where the row scrolls sideways.
