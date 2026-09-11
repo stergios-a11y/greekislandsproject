@@ -332,5 +332,25 @@
  "why_score": {
   "el": "Γιατί 3.2: πραγματικά χαμηλές τιμές — αλλά η πρόσβαση είναι δύσκολη και είναι πολύ ήσυχο μετά το δείπνο.",
   "en": "Why 3.2: genuinely low prices — but getting there is awkward and it is very quiet after dinner."
+ },
+ "suited_for": {
+  "good": [
+   "Seafood travellers — the fishing fleet lands maybe the freshest seafood you will eat in Greece",
+   "Anyone happy with beaches that have no facilities — Kasidi is fine white sand, undeveloped and almost always empty",
+   "Travellers curious about antiquity in odd places — Petrokopio's shore is marble debris from the quarry that supplied Miletus and Ephesus"
+  ],
+  "good_el": [
+   "Όσους ταξιδεύουν για θαλασσινά — ο στόλος των ψαράδων βγάζει ίσως τα πιο φρέσκα θαλασσινά που θα φας στην Ελλάδα",
+   "Όσους δεν τους πειράζουν παραλίες χωρίς υποδομές — το Κασίδι έχει ψιλή λευκή άμμο, αδόμητο και σχεδόν πάντα άδειο",
+   "Ταξιδιώτες που ψάχνουν αρχαιότητα σε παράξενα μέρη — η ακτή στο Πετροκοπιό είναι μάρμαρα από το λατομείο που τροφοδότησε Μίλητο και Έφεσο"
+  ],
+  "skip": [
+   "If you want any kind of evening scene — Fournoi is very quiet after dinner",
+   "If you want easy access — there is no airport; you come via Ikaria or Samos, or 10–13 hours from Piraeus"
+  ],
+  "skip_el": [
+   "Αν θέλεις έστω και λίγη βραδινή σκηνή — οι Φούρνοι είναι πολύ ήσυχοι μετά το δείπνο",
+   "Αν θέλεις εύκολη πρόσβαση — δεν υπάρχει αεροδρόμιο· πας μέσω Ικαρίας ή Σάμου, ή 10–13 ώρες από τον Πειραιά"
+  ]
  }
 }
