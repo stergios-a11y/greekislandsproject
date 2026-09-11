@@ -7042,6 +7042,9 @@ function buildSectionNav() {
   // slip through without ever firing. This is O(7) per frame and always correct —
   // the active chip is simply the last section whose top has passed under the bar.
   const marks = present.map(s => s.el);
+  // Two sections keep an id of their own (itin-days-container, local), so the
+  // DOM id is not a stable analytics name. Report the canonical key instead.
+  const SECNAV_NAME = new Map(present.map(s => [s.el, s.id.replace(/^sec-/, '')]));
   let raf = 0, lastActive = null;
   const syncActive = () => {
     raf = 0;
@@ -7057,7 +7060,7 @@ function buildSectionNav() {
     if (_seenSectionsFor !== currentIslandKey) { _seenSections = new Set(); _seenSectionsFor = currentIslandKey; }
     if (!_seenSections.has(current.id)) {
       _seenSections.add(current.id);
-      track('section_view', { section: current.id.replace(/^sec-/, ''), island: currentIslandKey || '', order: _seenSections.size });
+      track('section_view', { section: SECNAV_NAME.get(current) || current.id, island: currentIslandKey || '', order: _seenSections.size });
     }
     bar.querySelectorAll('.secnav-chip').forEach(a =>
       a.classList.toggle('is-active', a.dataset.target === current.id));
