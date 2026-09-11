@@ -6690,3 +6690,27 @@ html.dark .leaflet-control-scale-line {
 .local-more, .seo-local-more { margin: 10px 0 0; font-size: 14px; font-weight: 700; }
 .local-more a, .seo-local-more a { color: var(--aegean-dark); text-decoration: none; }
 .local-more a:hover, .seo-local-more a:hover { text-decoration: underline; }
+
+/* --- Why this score + provenance (review fixes 2 & 3) ------------------- */
+.blueprint-why {
+  margin: 8px 0 10px;
+  font-size: .855rem;
+  line-height: 1.45;
+  color: var(--ink-2);
+  border-left: 3px solid var(--aegean);
+  padding-left: 9px;
+}
+.island-visited {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--olive, #6b7f4b);
+}
+.island-visited .iv-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--olive, #6b7f4b);
+  flex: none;
+}

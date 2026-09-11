@@ -62,26 +62,27 @@
 <p>Aegean Blueprint is a travel guide to the Greek islands, written and maintained by Stergios Gousios in Athens, Greece. It's a personal project, not a company.</p>
 
 <h2>What data this site collects</h2>
-<p>Almost nothing directly. The site has no signup, no login, no comments, and no contact form. You can use the entire site without identifying yourself.</p>
+<p>Almost nothing directly. The site has no signup, no login and no comments. There is a feedback form, but it does not send anything to a server: it assembles the text into a message and hands it to your own email program, which you then choose to send or discard. Nothing you type into it reaches this site. Apart from emailing me, you can use the entire site without identifying yourself.</p>
 <p>Two narrow exceptions:</p>
 <ul>
   <li><strong>Local storage in your browser.</strong> Your language choice (English / Greek) and your dark-mode preference are saved in your browser's <code>localStorage</code> so the site remembers them on your next visit. This data never leaves your device.</li>
-  <li><strong>Server logs.</strong> The site is hosted on GitHub Pages, which keeps standard web-server logs (IP address, browser type, pages visited). I don't see or process these logs.</li>
+  <li><strong>Server logs.</strong> The site is hosted on Cloudflare Pages, which keeps standard web-server logs (IP address, browser type, pages visited). I don't see or process these logs.</li>
 </ul>
 
 <h2>Cookies and third-party services</h2>
 <p>The site uses the following third parties, each of which may set cookies or collect data according to their own privacy policies:</p>
 <ul>
-  <li><strong>Google AdSense</strong> — shows ads. Google and its partners may use cookies to serve ads based on your prior visits to this site or other sites. You can opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google's Ads Settings</a>. EU/UK visitors will see a consent banner before personalized ads are served.</li>
+  <li><strong>Google AdSense</strong> — shows ads. Google and its partners may use cookies to serve ads based on your prior visits to this site or other sites. You can opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google's Ads Settings</a>. EU/UK visitors are shown Google's certified consent platform before personalized ads are served, and can change that choice at any time using the link below.</li>
   <li><strong>Google Analytics 4</strong> — measures aggregate traffic so the author can see which islands and pages are most read. Google may set cookies to distinguish unique visits. IP addresses are anonymized at the edge before being processed. You can opt out by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out browser add-on</a>.</li>
   <li><strong>Google Fonts</strong> — serves the Nunito and Nunito Sans typefaces. When your browser fetches the fonts, Google sees your IP address and User-Agent. Google states this data is logged briefly for security and not used for advertising profiles.</li>
   <li><strong>Cloudinary</strong> — hosts images. Standard CDN logs only.</li>
-  <li><strong>OpenStreetMap / Leaflet</strong> — provides map tiles when you view the map. OpenStreetMap's <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">privacy policy</a> applies to tile requests.</li>
+  <li><strong>CARTO</strong> — serves the map tiles (drawn from <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> data) when you open a map. If CARTO is unreachable the map falls back to Esri/ArcGIS tiles. Either provider sees your IP address for the tiles your browser requests.</li>
 </ul>
 <p>The site does not use any other tracking pixel beyond what's listed above.</p>
+<p id="cookie-prefs-wrap" hidden>Ads and their consent choices are handled by Google's certified consent platform. <a href="#" id="cookie-prefs-link">Manage your cookie preferences</a>.</p>
 
 <h2>Affiliate links</h2>
-<p>Some pages may contain occasional affiliate links — for example to a hotel booking site. If you click through and make a purchase, this site may earn a small commission at no extra cost to you. Recommendations are not chosen because of affiliate payouts; they're chosen because they're the picks the author would actually make. This is stated openly on the mission page.</p>
+<p>Some pages carry affiliate links — currently ferry tickets (Ferryhopper, Ferryscanner), car hire (DiscoverCars) and accommodation (Booking.com). If you click through and make a booking, this site may earn a small commission at no extra cost to you. Recommendations are not chosen because of affiliate payouts; they're chosen because they're the picks the author would actually make. This is stated openly on the mission page.</p>
 
 <h2>Your rights (GDPR / UK GDPR)</h2>
 <p>If you're in the EU, the UK, or another jurisdiction with comparable rules, you have the right to:</p>
@@ -102,7 +103,7 @@
 <h2>Contact</h2>
 <p>For privacy questions or any other reason, email: <a href="mailto:stergiosgousios@gmail.com">stergiosgousios@gmail.com</a></p>
 
-<p class="updated">Last updated: 10 May 2026</p>
+<p class="updated">Last updated: 11 September 2026</p>
 
 </div>
 
@@ -111,5 +112,25 @@
   <a href="/privacy/">Privacy</a>
   <a href="/el/privacy/">Απόρρητο</a>
 </footer>
+<script>
+(function () {
+  var wrap = document.getElementById('cookie-prefs-wrap');
+  var link = document.getElementById('cookie-prefs-link');
+  if (!wrap || !link) return;
+  function open(e) {
+    if (e) e.preventDefault();
+    if (window.googlefc && window.googlefc.showRevocationMessage) {
+      window.googlefc.showRevocationMessage();
+    } else if (window.__tcfapi) {
+      window.__tcfapi('displayConsentUi', 2, function () {});
+    }
+  }
+  function check(tries) {
+    if (window.googlefc || window.__tcfapi) { wrap.hidden = false; link.addEventListener('click', open); return; }
+    if (tries > 0) setTimeout(function () { check(tries - 1); }, 400);
+  }
+  check(10);
+})();
+</script>
 </body>
 </html>

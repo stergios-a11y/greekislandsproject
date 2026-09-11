@@ -68,6 +68,8 @@
   .seo-lastupdated time { color: inherit; }
   .seo-lastupdated strong { font-weight: 600; font-style: normal; color: var(--ink-2, #333); }
   .seo-intro p { font-size: var(--text-sub, 18px); }
+  .seo-why { margin: 6px 0 0; font-size: .95em; color: var(--ink-2, #5a6472); border-left: 3px solid var(--aegean, #0B8FAC); padding-left: 9px; }
+  .seo-visited { margin: 6px 0 0; font-size: .85em; font-weight: 600; color: var(--olive, #6b7f4b); }
   .seo-suited {
     display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;
   }
@@ -341,6 +343,7 @@
   <div class="seo-header seo-header-under">
     <p class="seo-subtitle">Το γενουατικό κάστρο, τα μεσαιωνικά μαστιχοχώρια, η Νέα Μονή και οι ηφαιστειακές παραλίες του νότου.</p>
     <p class="seo-rating">Συνολική βαθμολογία: <strong>3.6/5</strong> · 842 km² · 51000 κάτοικοι</p>
+<p class="seo-why">Γιατί 3.6: πραγματικά χαμηλές τιμές και σπουδαία ιστορία και αρχιτεκτονική — αλλά οι παραλίες είναι το πιο αδύναμο σημείο του.</p>
     <p class="seo-lastupdated"><time datetime="2026-09-10">Ενημερώθηκε: <strong>10/Σεπ/2026</strong></time></p>
   </div>
   <section class="seo-intro">
@@ -491,6 +494,7 @@
               <span class="blueprint-verdict-sub" id="blueprint-verdict-sub"></span>
             </div>
           </div>
+          <p class="blueprint-why" id="blueprint-why" hidden></p>
           <a href="#how-we-score" onclick="navMission(event)" class="how-we-score-link" data-i18n="scoring.howlink">πώς βαθμολογούμε</a>
           <div class="rating-list">
             <div class="rating-item"><span class="rating-label" data-i18n="sidebar.beach">Παραλίες</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div><span class="rating-val" id="val-beach"></span></div>

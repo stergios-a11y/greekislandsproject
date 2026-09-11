@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-09-10';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-09-11';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -2489,6 +2489,34 @@ async function renderIslandPage(key) {
           }
         }
       } catch(e) { /* non-fatal */ }
+
+      // "Why this score" — turns the ring from an opinion into a decision.
+      // Source of truth is why_score.json, folded into the island JSON at build
+      // time by tools/review/02_render.py, so this costs no extra request.
+      const _whyBox = document.getElementById('blueprint-why');
+      if (_whyBox) {
+        const _wl = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
+        const _wtxt = (data.why_score && data.why_score[_wl]) || '';
+        _whyBox.textContent = _wtxt;
+        _whyBox.hidden = !_wtxt;
+      }
+      // Provenance. Only islands that carry provenance.visited say anything —
+      // absence must never read as "not visited".
+      const _prov = document.getElementById('island-visited');
+      if (_prov) _prov.remove();
+      const _vis = data.provenance && data.provenance.visited;
+      if (_vis) {
+        const _vl = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
+        const _stampEl = document.getElementById('island-lastupdated')
+                      || document.getElementById('island-meta-info');
+        if (_stampEl) {
+          const _b = document.createElement('div');
+          _b.id = 'island-visited';
+          _b.className = 'island-visited';
+          _b.innerHTML = '<span class="iv-dot" aria-hidden="true"></span>' + visitedLabel(_vis, _vl);
+          _stampEl.parentNode.insertBefore(_b, _stampEl.nextSibling);
+        }
+      }
       guide.innerHTML = buildIslandPage(data, key);
       relocateHeroToSlot(key);
       // Build after layout settles: the bar measures section heights to decide
@@ -2619,6 +2647,26 @@ function relocateHeroToSlot(key) {
 
 /* Short qualitative label for the overall score, shown beside the Blueprint
    score ring (e.g. 3.8 → "Very good"). EN/EL. */
+/* Provenance stamp: "2025-06" -> "Visited by the author · June 2025".
+   Year-only ("2025") is accepted and renders without a month. */
+function visitedLabel(v, lang) {
+  const MON_EN = ['January','February','March','April','May','June',
+                  'July','August','September','October','November','December'];
+  const MON_EL = ['Ιανουάριο','Φεβρουάριο','Μάρτιο','Απρίλιο','Μάιο','Ιούνιο',
+                  'Ιούλιο','Αύγουστο','Σεπτέμβριο','Οκτώβριο','Νοέμβριο','Δεκέμβριο'];
+  const m = String(v).match(/^(\d{4})(?:-(\d{2}))?$/);
+  if (!m) return '';
+  const year = m[1];
+  const mi = m[2] ? parseInt(m[2], 10) - 1 : null;
+  const when = (mi != null && mi >= 0 && mi < 12)
+    ? (lang === 'el' ? MON_EL[mi] + ' ' + year : MON_EN[mi] + ' ' + year)
+    : year;
+  return lang === 'el'
+    ? 'Το έχω επισκεφθεί · ' + when
+    : 'Visited by the author · ' + when;
+}
+window.visitedLabel = visitedLabel;
+
 function scoreVerdict(s) {
   const el = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
   if (s >= 4.5) return el ? 'Κορυφαίο' : 'Exceptional';

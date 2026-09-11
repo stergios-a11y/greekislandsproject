@@ -1466,6 +1466,13 @@ def render_body(key, data, meta, lang='en'):
         if _cp:
             rating_text = rating_text + '\n' + _cp
 
+    # "Why this score" — the one sentence that turns the ring into a decision.
+    # Written by tools/review/gen_why_score.py, folded into the island JSON by
+    # tools/review/02_render.py.
+    _why = (data.get('why_score') or {}).get('el' if lang == 'el' else 'en')
+    if _why:
+        rating_text = rating_text + f'\n<p class="seo-why">{esc(_why)}</p>'
+
     # Last-updated line — signals to readers (and Google) that the guide is
     # actively maintained. Pulled from git log (committer date) on the
     # underlying JSON file, so edits to itinerary/beaches/specialties show
@@ -1492,6 +1499,26 @@ def render_body(key, data, meta, lang='en'):
         )
     else:
         last_updated_html = ''
+
+    # Provenance. Only islands that declare provenance.visited say anything —
+    # silence must never read as "not visited".
+    _vis = (data.get('provenance') or {}).get('visited')
+    if _vis:
+        _mEN = ['January', 'February', 'March', 'April', 'May', 'June',
+                'July', 'August', 'September', 'October', 'November', 'December']
+        _mEL = ['Ιανουάριο', 'Φεβρουάριο', 'Μάρτιο', 'Απρίλιο', 'Μάιο', 'Ιούνιο',
+                'Ιούλιο', 'Αύγουστο', 'Σεπτέμβριο', 'Οκτώβριο', 'Νοέμβριο', 'Δεκέμβριο']
+        _parts = str(_vis).split('-')
+        _yr = _parts[0]
+        _when = _yr
+        if len(_parts) > 1 and _parts[1].isdigit() and 1 <= int(_parts[1]) <= 12:
+            _mi = int(_parts[1]) - 1
+            _when = f'{(_mEL if lang == "el" else _mEN)[_mi]} {_yr}'
+        _lbl = 'Το έχω επισκεφθεί' if lang == 'el' else 'Visited by the author'
+        last_updated_html = (
+            f'<p class="seo-visited">{_lbl} · <strong>{esc(_when)}</strong></p>\n    '
+            + last_updated_html
+        )
 
     # "Good for / Maybe skip if" orientation block — renders between the
     # intro and getting-there if the island has a suited_for field. Two short
@@ -2057,6 +2084,8 @@ def render_page(key, data, meta, lang='en'):
   .seo-lastupdated time {{ color: inherit; }}
   .seo-lastupdated strong {{ font-weight: 600; font-style: normal; color: var(--ink-2, #333); }}
   .seo-intro p {{ font-size: var(--text-sub, 18px); }}
+  .seo-why {{ margin: 6px 0 0; font-size: .95em; color: var(--ink-2, #5a6472); border-left: 3px solid var(--aegean, #0B8FAC); padding-left: 9px; }}
+  .seo-visited {{ margin: 6px 0 0; font-size: .85em; font-weight: 600; color: var(--olive, #6b7f4b); }}
   .seo-suited {{
     display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;
   }}
@@ -2381,6 +2410,7 @@ def render_page(key, data, meta, lang='en'):
               <span class="blueprint-verdict-sub" id="blueprint-verdict-sub"></span>
             </div>
           </div>
+          <p class="blueprint-why" id="blueprint-why" hidden></p>
           <a href="#how-we-score" onclick="navMission(event)" class="how-we-score-link" data-i18n="scoring.howlink">{'how we score' if lang == 'en' else 'πώς βαθμολογούμε'}</a>
           <div class="rating-list">
             <div class="rating-item"><span class="rating-label" data-i18n="sidebar.beach">{'Beach Quality' if lang == 'en' else 'Παραλίες'}</span><div class="stars-outer"><div id="star-beach" class="stars-inner"></div></div><span class="rating-val" id="val-beach"></span></div>
