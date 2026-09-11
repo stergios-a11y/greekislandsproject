@@ -177,6 +177,7 @@ STR = {
         'li_insurance': 'Travel insurance', 'ins_days': 'days',
         'total': 'Total (excl. flights)', 'pp': 'per person',
         'cta_ferry': '🚢 Book ferries', 'cta_car': '🚗 Get the car',
+        'aff_note': 'Affiliate links — they support this guide and cost you nothing.',
         'assume': '<b>How we estimate:</b> economy ferry fares from real route distances · room prices for a decent double in {month} · one taverna meal + breakfast/snacks per day · car only where you toggled it. Museums, sunbeds and cocktails are yours.',
         'honest': 'Every figure is a typical price, not a quote — expect real prices roughly ±20% either side, set by ferry companies and hotels, not us. Book early for July–August; ferries sell out.',
         'guide': 'guide →',
@@ -248,6 +249,7 @@ STR = {
         'li_insurance': 'Ταξιδιωτική ασφάλεια', 'ins_days': 'μέρες',
         'total': 'Σύνολο (χωρίς αεροπορικά)', 'pp': 'ανά άτομο',
         'cta_ferry': '🚢 Κράτηση πλοίων', 'cta_car': '🚗 Κλείσε αυτοκίνητο',
+        'aff_note': 'Affiliate σύνδεσμοι — στηρίζουν αυτόν τον οδηγό χωρίς κόστος για εσένα.',
         'assume': '<b>Πώς υπολογίζουμε:</b> οικονομικά ναύλα από πραγματικές αποστάσεις · τιμές για ένα καλό δίκλινο τον {month} · ένα γεύμα ταβέρνας + πρωινό/σνακ τη μέρα · αυτοκίνητο μόνο όπου το ενεργοποίησες. Μουσεία, ξαπλώστρες και κοκτέιλ δικά σου.',
         'honest': 'Κάθε ποσό είναι τυπική τιμή, όχι προσφορά — οι πραγματικές τιμές κινούνται περίπου ±20%, και τις ορίζουν ακτοπλοϊκές και ξενοδοχεία, όχι εμείς. Για Ιούλιο–Αύγουστο κλείσε νωρίς· τα πλοία εξαντλούνται.',
         'guide': 'οδηγός →',
@@ -291,7 +293,7 @@ def render_page(lang, meta, data):
         'estimate', 'li_ferries', 'li_legs', 'li_pax', 'book_ferry', 'li_rooms', 'central',
         'li_car', 'days', 'book_car', 'li_fuel', 'li_boat', 'boat_rec', 'li_food', 'food_s',
         'li_esim', 'esim_s', 'book_esim', 'li_insurance', 'ins_days', 'total', 'pp',
-        'cta_ferry', 'cta_car',
+        'cta_ferry', 'cta_car', 'aff_note',
         'li_vehicle', 'li_flights', 'total_fly', 'veh_none', 'veh_moto', 'veh_car', 'add_far', 'from_port', 'ionian_gate_s',
         'li_carferry', 'carferry_s', 'li_legs', 'empty_trip',
         'assume', 'honest', 'guide', 'remove', 'book_room',
@@ -402,7 +404,9 @@ def render_page(lang, meta, data):
 .tc-assume{{margin-top:14px;background:rgba(232,247,251,.9);border-radius:12px;padding:11px 13px;font-size:11.5px;color:var(--ink-2,#2E3D50);line-height:1.55}}
 .tc-assume b{{color:#076880}}
 .tc-honest{{margin-top:10px;font-size:11px;color:var(--ink-4,#A0ADB8);font-style:italic;line-height:1.5}}
-.tc-ctas{{display:flex;gap:8px;margin-top:14px}}
+.tc-ctas{{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}}
+.tc-ctas .aff-note{{flex-basis:100%;width:100%;margin:6px 0 0;font-size:.72rem;line-height:1.35;text-align:center;color:#8a939f}}
+.tc-ctas .aff-note a{{color:inherit;text-decoration:underline}}
 .tc-cta{{flex:1;text-align:center;border-radius:12px;padding:11px 8px;font-family:'Nunito',sans-serif;font-weight:800;font-size:13.5px;text-decoration:none}}
 .tc-cta.f{{background:#E8522A;color:#fff}}
 .tc-cta.c{{background:#0B8FAC;color:#fff}}
@@ -788,6 +792,7 @@ function render(){{
     <div class="tc-ctas">
       <a class="tc-cta f" href="https://www.ferryhopper.com/${{LANG==='el'?'el/':'en/'}}" target="_blank" rel="noopener sponsored">${{T.cta_ferry}}</a>
       <a class="tc-cta c" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">${{T.cta_car}}</a>
+      <p class="aff-note"><a href="${{LANG==='el'?'/el/privacy/#affiliate':'/privacy/#affiliate'}}">${{T.aff_note}}</a></p>
     </div>
     <div class="tc-assume">${{T.assume.replace('{{month}}',T.months[state.month])}}</div>
     <div class="tc-honest">${{T.honest}}</div>`;

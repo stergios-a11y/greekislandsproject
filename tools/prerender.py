@@ -2387,6 +2387,7 @@ def render_page(key, data, meta, lang='en'):
       <div class="detail-actionbar">
         <a class="ferry-btn" id="detail-ferry-btn" target="_blank" rel="noopener" data-i18n="detail.bookferry">{'🚢 Book ferry tickets' if lang == 'en' else '🚢 Κράτηση πλοίου'}</a>
         <a class="car-btn" id="detail-car-btn" target="_blank" rel="noopener sponsored" data-i18n="detail.rentcar">{'🚗 Rent a car' if lang == 'en' else '🚗 Ενοικίαση αυτοκινήτου'}</a>
+        <p class="aff-note" data-i18n="affiliate.note"><a href="{'/privacy/#affiliate' if lang == 'en' else '/el/privacy/#affiliate'}">{'Affiliate links — they support this guide and cost you nothing.' if lang == 'en' else 'Affiliate σύνδεσμοι — στηρίζουν αυτόν τον οδηγό χωρίς κόστος για εσένα.'}</a></p>
         <span class="actionbar-spacer"></span>
         <button class="glass-ic-solid" id="detail-print-btn" onclick="printIsland()" title="{'Print' if lang == 'en' else 'Εκτύπωση'}" aria-label="{'Print' if lang == 'en' else 'Εκτύπωση'}">🖨</button>
       </div>
@@ -2855,7 +2856,7 @@ def generate_ferries_page(island_keys):
             f'  <div class="ferry-nav"><span class="ferry-nav-label">{esc(port_subtitle)}</span>{port_nav}</div>\n'
             + '\n'.join(port_sections) +
             f'\n  <div class="ferry-footer"><p>{booking_intro}{ferryhopper_link}</p><p style="margin-top: 12px;">{crosslink_text}</p></div>\n'
-            '<div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored">' + ('🚢 Κράτηση εισιτηρίων' if is_el else '🚢 Book ferry tickets') + '</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">' + ('🚗 Ενοικίαση αυτοκινήτου' if is_el else '🚗 Rent a car') + '</a></div>\n'
+            '<div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored">' + ('🚢 Κράτηση εισιτηρίων' if is_el else '🚢 Book ferry tickets') + '</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">' + ('🚗 Ενοικίαση αυτοκινήτου' if is_el else '🚗 Rent a car') + '</a>' + ('<p class="aff-note" data-i18n="affiliate.note"><a href="/el/privacy/#affiliate">Affiliate σύνδεσμοι — στηρίζουν αυτόν τον οδηγό χωρίς κόστος για εσένα.</a></p>' if is_el else '<p class="aff-note" data-i18n="affiliate.note"><a href="/privacy/#affiliate">Affiliate links — they support this guide and cost you nothing.</a></p>') + '</div>\n'
             '</main>\n'
             # /ferries/ was the one page type with no footer at all — so no
             # privacy link and nowhere to reach the photo credits from.
@@ -3417,7 +3418,7 @@ def generate_festivals_page(island_keys):
             + filter_html + '\n'
             '  ' + ''.join(month_blocks) + '\n'
             '</main>\n'
-            '<div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored">' + ('🚢 Κράτηση εισιτηρίων' if is_el else '🚢 Book ferry tickets') + '</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">' + ('🚗 Ενοικίαση αυτοκινήτου' if is_el else '🚗 Rent a car') + '</a></div>\n'
+            '<div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored">' + ('🚢 Κράτηση εισιτηρίων' if is_el else '🚢 Book ferry tickets') + '</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">' + ('🚗 Ενοικίαση αυτοκινήτου' if is_el else '🚗 Rent a car') + '</a>' + ('<p class="aff-note" data-i18n="affiliate.note"><a href="/el/privacy/#affiliate">Affiliate σύνδεσμοι — στηρίζουν αυτόν τον οδηγό χωρίς κόστος για εσένα.</a></p>' if is_el else '<p class="aff-note" data-i18n="affiliate.note"><a href="/privacy/#affiliate">Affiliate links — they support this guide and cost you nothing.</a></p>') + '</div>\n'
             '<footer style="text-align:center;padding:24px 16px;font-size:13px;color:#888;border-top:1px solid #e5e5e5;margin-top:40px;">\n'
             f'  <p style="margin:0;">© {COPYRIGHT_YEAR} Aegean Blueprint · <a href="' + ('/el/privacy/' if is_el else '/privacy/') + '" style="color:#888;text-decoration:none;">' + ('Απόρρητο' if is_el else 'Privacy') + '</a> · <a href="' + ('/el/credits/' if is_el else '/credits/') + '" style="color:#888;text-decoration:none;">' + ('Πηγές φωτογραφιών' if is_el else 'Photo credits') + '</a></p>\n'
             '</footer>\n'

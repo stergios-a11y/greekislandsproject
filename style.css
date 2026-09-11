@@ -6714,3 +6714,17 @@ html.dark .leaflet-control-scale-line {
   background: var(--olive, #6b7f4b);
   flex: none;
 }
+
+/* --- Affiliate disclosure at the point of action (review fix 5) --------- */
+.aff-note {
+  flex-basis: 100%;
+  width: 100%;
+  margin: 6px 0 0;
+  font-size: .72rem;
+  line-height: 1.35;
+  color: var(--ink-3, #8a939f);
+}
+.aff-note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.aff-note a:hover { color: var(--aegean); }
+.cta-affiliate .aff-note { text-align: center; margin-top: 4px; }
+.tc-ctas .aff-note { text-align: center; }
