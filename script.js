@@ -333,13 +333,13 @@ function parseHash() {
   // First check URL path — supports the pre-rendered SEO pages at /island/{key}/
   const path = window.location.pathname.replace(/^\/el\//, '/').replace(/\/$/, '');
   const pathMatch = path.match(/^\/island\/([a-z-]+)$/);
-  if (pathMatch) return { view: 'island', param: pathMatch[1] };
+  if (pathMatch) return { view: 'island', param: pathMatch[1], fromPath: true };
 
   // Pre-rendered comparison pages at /compare/{a}-vs-{b}/ — the slug carries
   // both island keys; the boot logic uses them to pre-select compareSelection
   // before renderCompareView runs. The 'pair' shape is [keyA, keyB].
   const cmpMatch = path.match(/^\/compare\/([a-z-]+)-vs-([a-z-]+)$/);
-  if (cmpMatch) return { view: 'compare', param: { pair: [cmpMatch[1], cmpMatch[2]] } };
+  if (cmpMatch) return { view: 'compare', param: { pair: [cmpMatch[1], cmpMatch[2]] }, fromPath: true };
 
   // Fall back to hash routing (the SPA's native navigation)
   const hash = window.location.hash.replace('#', '').trim();
@@ -799,11 +799,14 @@ document.addEventListener('DOMContentLoaded', () => {
   clearTimeout(hardFallback);
   dismissLoading();
   try {
-    const { view, param } = parseHash();
+    const { view, param, fromPath } = parseHash();
     showView(view, param);
-    // Deep link into a specific view: gtag('config') logged the landing URL as
-    // "/", so send the view itself too. Home needs nothing — already counted.
-    if (view && view !== 'home') trackView(view, param);
+    // Hash deep link (/#compare): gtag('config') logged the landing URL as "/",
+    // so send the view itself too. A PATH route (/island/x/, /compare/a-vs-b/) is
+    // a real URL that gtag('config') already logged — sending it again logged
+    // every compare visit a second time as a phantom "/app/compare" hit with no
+    // engagement, which became 21% of all pageviews. Home needs nothing either.
+    if (view && view !== 'home' && !fromPath) trackView(view, param);
   }
   catch(e) { showView('home', null); }
 });
@@ -7029,12 +7032,15 @@ function buildSectionNav() {
     bar.querySelectorAll('.secnav-chip').forEach(a =>
       a.classList.toggle('is-active', a.dataset.target === current.id));
     // Keep the active chip in view on phones, where the row scrolls sideways.
-    const track = bar.querySelector('.secnav-track');
+    // Named trackEl, not track: a `const track` here shadows the global
+    // track() for the WHOLE block, so the section_view call above it threw
+    // a temporal-dead-zone ReferenceError and took the whole bar down.
+    const trackEl = bar.querySelector('.secnav-track');
     const chip = bar.querySelector('.secnav-chip.is-active');
-    if (chip && track.scrollWidth > track.clientWidth) {
-      const c = chip.getBoundingClientRect(), tr = track.getBoundingClientRect();
+    if (chip && trackEl.scrollWidth > trackEl.clientWidth) {
+      const c = chip.getBoundingClientRect(), tr = trackEl.getBoundingClientRect();
       if (c.left < tr.left || c.right > tr.right) {
-        track.scrollTo({ left: Math.max(0, chip.offsetLeft - 16), behavior: 'smooth' });
+        trackEl.scrollTo({ left: Math.max(0, chip.offsetLeft - 16), behavior: 'smooth' });
       }
     }
   };
