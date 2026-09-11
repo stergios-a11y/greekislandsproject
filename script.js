@@ -811,6 +811,16 @@ document.addEventListener('DOMContentLoaded', () => {
   catch(e) { showView('home', null); }
 });
 
+// Images can finish laying out after the retry window closes; one more go
+// once everything has loaded costs nothing and cannot double-build (the
+// function removes any existing #secnav first).
+window.addEventListener('load', () => {
+  if (!document.getElementById('secnav')) {
+    secnavRetryReset();
+    try { buildSectionNav(); } catch (_) {}
+  }
+});
+
 window.addEventListener('popstate', () => {
   try { const { view, param } = parseHash(); showView(view, param); trackView(view, param); }
   catch(e) { showView('home', null); }
@@ -2524,6 +2534,7 @@ async function renderIslandPage(key) {
       relocateHeroToSlot(key);
       // Build after layout settles: the bar measures section heights to decide
       // which ones are real, and a 0-height section would be skipped.
+      secnavRetryReset();
       requestAnimationFrame(() => setTimeout(buildSectionNav, 60));
       setTimeout(() => initItineraryMap(data.itinerary.days, data.beaches || []), 80);
       if (data.beaches) setTimeout(() => loadBeachPhotos(data.beaches), 150);
@@ -6952,6 +6963,22 @@ function secnavOffset() {
   return Math.round(hdrH + barH + 8);
 }
 
+/* buildSectionNav measures section heights, so it can only run once the island
+   HTML has actually been laid out. Rather than guess a delay, every bail-out
+   schedules another attempt and the first success cancels the chain. */
+let _secnavRetry = 0;
+let _secnavTimer = 0;
+function secnavRetryReset() {
+  _secnavRetry = 0;
+  if (_secnavTimer) { clearTimeout(_secnavTimer); _secnavTimer = 0; }
+}
+function secnavRetryLater() {
+  if (_secnavTimer) { clearTimeout(_secnavTimer); _secnavTimer = 0; }
+  if (_secnavRetry >= 12) return;
+  _secnavRetry++;
+  _secnavTimer = setTimeout(buildSectionNav, 150);
+}
+
 function buildSectionNav() {
   // .detail-grid lays out: hero, action bar, main, sidebar. The bar belongs
   // after the hero and the Book/Rent buttons — a jump list above the hero would
@@ -6959,7 +6986,7 @@ function buildSectionNav() {
   // grid columns so it lines up with the hero rather than the narrow text column.
   const grid = document.querySelector('#view-detail .detail-grid');
   const main = grid && grid.querySelector(':scope > .detail-main');
-  if (!grid || !main) return;
+  if (!grid || !main) { secnavRetryLater(); return; }
 
   const old = document.getElementById('secnav');
   if (old) { if (old._detach) old._detach(); old.remove(); }
@@ -6974,7 +7001,10 @@ function buildSectionNav() {
     .filter(s => s.el);
 
   // Two chips is a row of buttons, not navigation — not worth the sticky space.
-  if (present.length < 3) return;
+  // Under three, the sections are probably just not laid out yet — try again
+  // shortly rather than leaving the page without its jump list.
+  if (present.length < 3) { secnavRetryLater(); return; }
+  secnavRetryReset();
 
   present.forEach(s => { if (!s.el.id) s.el.id = s.id; });
 
