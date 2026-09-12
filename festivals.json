@@ -978,7 +978,8 @@
    "village": "Asi Gonia",
    "village_el": "Ασή Γωνιά",
    "date": {
-    "fixed": "04-23"
+    "fixed": "04-23",
+    "if_before_easter": "easter_monday"
    },
    "eve": false,
    "duration_days": 1,
@@ -1215,7 +1216,7 @@
    "name": "Rouketopolemos (Rocket War)",
    "name_el": "Ρουκετοπόλεμος",
    "date": {
-    "fixed": "05-01"
+    "movable": "holy_saturday"
    },
    "eve": false,
    "duration_days": 1,
@@ -1403,7 +1404,7 @@
    "name": "Botides (pot smashing)",
    "name_el": "Μπότηδες",
    "date": {
-    "fixed": "05-01"
+    "movable": "holy_saturday"
    },
    "eve": false,
    "duration_days": 1,
@@ -2127,7 +2128,8 @@
    "name": "Panagia of Folegandros",
    "name_el": "Παναγία της Φολεγάνδρου",
    "date": {
-    "fixed": "05-03"
+    "movable": "easter",
+    "offset": 1
    },
    "eve": false,
    "duration_days": 7,
@@ -3531,7 +3533,8 @@
    "village": "Agios Georgios",
    "village_el": "Άγιος Γεώργιος",
    "date": {
-    "fixed": "04-23"
+    "fixed": "04-23",
+    "if_before_easter": "easter_monday"
    },
    "eve": false,
    "duration_days": 1,
@@ -4680,7 +4683,8 @@
    "village": "Pyli",
    "village_el": "Πυλί",
    "date": {
-    "fixed": "04-23"
+    "fixed": "04-23",
+    "if_before_easter": "easter_monday"
    },
    "eve": true,
    "duration_days": 1,
@@ -4793,7 +4797,8 @@
    "village": "Pano Koufonisi (Chora)",
    "village_el": "Πάνω Κουφονήσι (Χώρα)",
    "date": {
-    "fixed": "04-23"
+    "fixed": "04-23",
+    "if_before_easter": "easter_monday"
    },
    "eve": false,
    "duration_days": 1,
@@ -6236,7 +6241,8 @@
    "village": "Spartochori",
    "village_el": "Σπαρτοχώρι",
    "date": {
-    "fixed": "04-23"
+    "fixed": "04-23",
+    "if_before_easter": "easter_monday"
    },
    "eve": false,
    "duration_days": 1,
@@ -6608,7 +6614,8 @@
    "village": "Potamia",
    "village_el": "Ποταμιά",
    "date": {
-    "fixed": "04-23"
+    "fixed": "04-23",
+    "if_before_easter": "easter_monday"
    },
    "eve": false,
    "duration_days": 1,
@@ -7267,7 +7274,8 @@
    "name": "Easter (Holy Week)",
    "name_el": "Πάσχα (Μεγάλη Εβδομάδα)",
    "date": {
-    "fixed": "04-26"
+    "movable": "easter",
+    "offset": -6
    },
    "eve": false,
    "duration_days": 1,
@@ -7282,7 +7290,7 @@
    "name": "Niptiras (Holy Thursday foot-washing)",
    "name_el": "Νιπτήρας (Μεγάλη Πέμπτη)",
    "date": {
-    "fixed": "04-29"
+    "movable": "holy_thursday"
    },
    "eve": false,
    "duration_days": 1,
@@ -9203,7 +9211,8 @@
    "village": "Koukounaries",
    "village_el": "Κουκουναριές",
    "date": {
-    "fixed": "04-23"
+    "fixed": "04-23",
+    "if_before_easter": "easter_monday"
    },
    "eve": false,
    "duration_days": 1,
@@ -9453,7 +9462,8 @@
    "name": "Skyrian Carnival (Apokries)",
    "name_el": "Αποκριές Σκύρου",
    "date": {
-    "fixed": "03-13"
+    "movable": "easter",
+    "offset": -50
    },
    "eve": false,
    "duration_days": 2,
@@ -9575,7 +9585,8 @@
    "village": "Skyros Chora",
    "village_el": "Χώρα Σκύρου",
    "date": {
-    "fixed": "04-23"
+    "fixed": "04-23",
+    "if_before_easter": "easter_monday"
    },
    "eve": true,
    "duration_days": 2,

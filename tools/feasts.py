@@ -66,6 +66,14 @@ def resolve(d, year, eve=False, duration_days=1):
             start = date(year, int(mm), int(dd))
         except ValueError:
             return {'start': None, 'end': None, 'months': [int(mm)], 'exact': False}
+        # Orthodox transfer rule: a fixed feast that would fall before Pascha is
+        # kept after it instead. Agios Georgios (23 April) is the case that shows
+        # up in panigiria — it moves to Easter Monday whenever Easter is later.
+        _tgt = d.get('if_before_easter')
+        if _tgt:
+            _easter = orthodox_easter(year)
+            if start < _easter:
+                start = _easter + timedelta(days=MOVABLE_OFFSETS.get(_tgt, 1))
     elif 'movable' in d:
         base = orthodox_easter(year)
         off = d.get('offset')
