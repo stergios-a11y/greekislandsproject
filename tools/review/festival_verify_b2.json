@@ -1,0 +1,1008 @@
+{
+ "kefalonia": [
+  {
+   "i": 7,
+   "verdict": "confirmed",
+   "source2": "https://kefalonitis.com/ekdiloseis/panigyri-agias-annas-lakithra-24-07-2026/",
+   "confidence": "high",
+   "note": "Kefalonitis.com event listing 'Πανηγύρι Αγίας Άννας @Λακήθρα [24.07.2026]' — traditional Agia Anna panigiri in Lakithra on the evening of Friday 24 July (21:30, Bourmboulis orchestra), i.e. the eve of the 25 July feast; matches stored 07-25 with eve:true."
+  },
+  {
+   "i": 8,
+   "verdict": "confirmed",
+   "source2": "https://www.kefaloniapress.gr/events/article/886389/faraklata-to-megalo-panigyri-tis-agias-paraskeyis/",
+   "confidence": "high",
+   "note": "Kefaloniapress: 'Σάββατο 25 Ιουλίου στην Αγία Παρασκευή στα Φαρακλάτα' — the big Faraklata panigiri is held on the evening of 25 July, the eve of the 26 July feast; matches stored 07-26 with eve:true."
+  }
+ ],
+ "chios": [
+  {
+   "i": 0,
+   "verdict": "confirmed",
+   "source2": "https://www.gummastic.gr/el/mastixa-chiou/paradosiaki-kalliergia",
+   "confidence": "medium",
+   "note": "Chios Gum Mastic Growers Association (the producers' cooperative): kentima (incision) July–August, first collection 'μετά τις 15 Αυγούστου', second/final collection 'μετά τις 15 Σεπτεμβρίου' and on into the autumn — i.e. the harvest season runs mid-August through October, consistent with the stored months 8-10. Season, not a dated event."
+  },
+  {
+   "i": 1,
+   "verdict": "confirmed",
+   "source2": "https://www.chios.gr/rouketopolemos/",
+   "confidence": "high",
+   "note": "Municipality of Chios (Δήμος Χίου) page: Rouketopolemos takes place on Μ. Σάββατο (Holy Saturday) at the midnight Resurrection in Vrontados, between the parishes of Agios Markos and Panagia Erithiani. Confirms movable=holy_saturday and the location."
+  },
+  {
+   "i": 8,
+   "verdict": "confirmed",
+   "source2": "https://www.allovergreece.com/Events/49/en",
+   "confidence": "medium",
+   "note": "AllOverGreece Chios feast calendar lists 23 August, 'the Feast of the Nine days of the Virgin' celebrated simultaneously in Pyrgi, Viki, Agios Galas and Potamia — confirms date 23 August and Potamia as one of the villages, independently of astraparis.gr."
+  },
+  {
+   "i": 9,
+   "verdict": "corrected",
+   "source2": "https://www.alithia.gr/koinonia/tin-tetarti-sto-panigyri-toy-agioy-stefanoy-sto-nisaki-tis-elatas",
+   "confidence": "high",
+   "fix": {
+    "duration_days": 2
+   },
+   "note": "Alithia (Chios) gives Wed 1 August: swim race from Agia Irini to the islet, caiques carrying pilgrims to the evening service and glenti till morning; Thu 2 August: Divine Liturgy at Agios Stefanos. Discoverchios.gr calls it explicitly a '2ήμερο πανηγύρι' with boats from Agia Irini and Limenas Mesta. Date (08-02) and village (Elata) confirmed; only the duration is wrong — it is a two-day feast, not one."
+  }
+ ],
+ "skopelos": [
+  {
+   "i": 0,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "Searched in Greek and English for a Skopelos 'Mamma Mia' programme (Δήμος Σκοπέλου, cultural associations, Visit Thessaly, local news) — nothing establishes a dated festival. What exists is commercial: year-round Mamma Mia bus/boat tours to Agios Ioannis sto Kastri (skopelostours.com, GetYourGuide) and the chapel's own visitor pages. No independent source can confirm a festival date because there is no festival; the entry is an informal phenomenon. Note also the stored type is 'religious', which is wrong for this entry, and months [6,9] omits 7 and 8."
+  }
+ ],
+ "thasos": [
+  {
+   "i": 2,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "Looked for the Limenas 'Fires of Ai-Giannis'/Klidonas and the Skala Marion St John feast in: Δήμος Θάσου event archive (thassos.gr/event — same organisation as the recorded source, so excluded), go-thassos.gr 'Θρησκεία & Πίστη' feast list and its events.go-thassos.gr 2026 programme, thassos-view.com and thassos-island.gr village pages, kavalanews.gr (incl. its Πολιτιστικός Σύλλογος Μαριών tag, which carries only Tsiknopempti / Clean Monday / bean-soup events). Nothing dates a 23-24 June Klidonas event at Limenas or Skala Marion; go-thassos's Thasos feast list does not include it. Only generic national articles about the Klidonas custom on 23-24 June were found, which the brief excludes."
+  },
+  {
+   "i": 3,
+   "verdict": "confirmed",
+   "source2": "https://greece.terrabook.com/el/thassos/page/agios-ioannis-thasios/",
+   "confidence": "medium",
+   "note": "Terrabook's Thasos guide on Agios Ioannis Thasios (a 17th-c. saint born in Maries): his church stands in Maries and is commemorated twice — 20 December (his martyrdom, 1652) and 11 July (the church's founding), the latter 'observed with a major festival'. Confirms the 10-11 July eve+feast panigiri at Maries."
+  },
+  {
+   "i": 4,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "Searched for a Transfiguration panigiri at (old) Kallirachi on 6 August in: go-thassos.gr feast list (which records Transfiguration for Sotiras, and Agia Marina 17/7 and Agios Nikolaos 6/12 for Kallirachi, but no 6 August Kallirachi entry), thassos-view.com and discover-thassos.com Kallirachi pages, kavalanews.gr Kallirachi cultural-association coverage (dance festival only, no date for a Metamorfosi panigiri), events.go-thassos.gr. No independent source confirms the 6 August Kallirachi feast or the 7 August Skala Kallirachi harbour concert."
+  }
+ ],
+ "symi": [
+  {
+   "i": 2,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "Searched for an Agios Panteleimon feast at Nanou in: Ιερά Μητρόπολις Σύμης, Τήλου, Χάλκης και Καστελλορίζου (imsymis.gr announcements and monastery pages) and Orthodoxia News Agency coverage of that Metropolis — the only Symi Agios Panteleimon they document is the parish church in Ano Chora/Chorio, celebrated 27 July by the Metropolitan, not a monastery at Nanou. Symi panigiri listings (gnoristetinellada.gr, symi.travelfind.gr) list Agia Marina, Nimos, Panormitis etc. but nothing at Nanou. The village attribution may be wrong; no independent source found either way."
+  },
+  {
+   "i": 3,
+   "verdict": "confirmed",
+   "source2": "https://www.gnoristetinellada.gr/paradosi/ethima/5248-symi-oi-paradoseis-sto-nisi-ton-trion-xariton",
+   "confidence": "medium",
+   "note": "Gnoriste tin Ellada's survey of Symi customs lists '17 Ιουλίου της Αγίας Μαρίνας στο ομώνυμο νησάκι' — Agia Marina on 17 July on the islet of the same name; same listing reproduced at symi.travelfind.gr. Confirms date and location, independently of allovergreece."
+  },
+  {
+   "i": 4,
+   "verdict": "confirmed",
+   "source2": "https://www.gnoristetinellada.gr/paradosi/ethima/5248-symi-oi-paradoseis-sto-nisi-ton-trion-xariton",
+   "confidence": "medium",
+   "note": "Same listing: '24 Αυγούστου Παναγιά Υπακοή στον Νίμο και Παναγιά Αληθινή' — the Panagia Ypakoi feast on the islet of Nimos on 24 August, matching the stored 08-24 with eve:true (boats on the 23rd) and the Ypakoi/Alithini chapels named in the description."
+  }
+ ],
+ "skiathos": [
+  {
+   "i": 0,
+   "verdict": "confirmed",
+   "source2": "https://www.traveldailynews.gr/toyristikoi-foreis/ellinikoi/politistikes-ekdiloseis-sto-dimo-skiathoy/",
+   "confidence": "medium",
+   "note": "Report on the Δήμος Σκιάθου summer cultural programme: events, concerts and theatre through July and August, with the flagship Sardine Festival on 15 August at 21:00 at the entrance to the Bourtzi peninsula (municipal food and wine, Skiathos Women's Association dancers). Confirms a municipal open-air summer programme centred on Bourtzi across July-August; the Δήμος Σκιάθου cultural-events page (n-skiathos.gr) likewise lists July/August Bourtzi events."
+  },
+  {
+   "i": 5,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "Searched for the revived Zoodochos Pigi (Bright Friday) panigiri in Skiathos Town in: Δήμος Σκιάθου site (n-skiathos.gr press releases and cultural events), Greek searches for 'Σκιάθος Ζωοδόχου Πηγής πανηγύρι/αναβίωση', and Magnesia regional news. Only skiathoslife.gr (the recorded source) reports it; everything else returned Zoodochos Pigi panigiria elsewhere in Greece. The movable dating (Friday of Bright Week = Easter +5) is itself correct, but no independent source confirms the Skiathos event."
+  }
+ ],
+ "agistri": [
+  {
+   "i": 0,
+   "verdict": "confirmed",
+   "source2": "https://www.saronic-islands.com/el/agistri.panigyria-ethima",
+   "confidence": "medium",
+   "note": "Saronic-islands.com 'Πανηγύρια & Έθιμα – Αγκίστρι' lists Agioi Anargyroi at Skala on 1 July, at the white church with the blue dome. Confirms date and village independently of greeka.com."
+  },
+  {
+   "i": 1,
+   "verdict": "confirmed",
+   "source2": "https://www.saronic-islands.com/el/agistri.panigyria-ethima",
+   "confidence": "medium",
+   "note": "Same listing: Agia Kyriaki at Limenaria on 7 July, described as a large festival in the seaside square. Confirms date and village. (Δήμος Αγκιστρίου's own Limenaria page confirms the church of Agia Kyriaki there but gives no date.)"
+  },
+  {
+   "i": 2,
+   "verdict": "confirmed",
+   "source2": "https://www.saronic-islands.com/el/agistri.panigyria-ethima",
+   "confidence": "medium",
+   "note": "Same listing: Panagia at Metochi on 15 August, reached on foot. Confirms date and village."
+  }
+ ],
+ "ammouliani": [
+  {
+   "i": 0,
+   "verdict": "corrected",
+   "source2": "https://www.metalleiachalkidikis.gr/blog/2024/09/metalleiachalkidikis-iammoulianipanigyrizei/",
+   "confidence": "medium",
+   "fix": {
+    "date": {
+     "approx": "Saturday-Sunday on or after 14 September (the Exaltation-of-the-Cross weekend)",
+     "months": [
+      9
+     ]
+    }
+   },
+   "note": "The rule is wrong, not the month: the feast falls on the first Saturday-Sunday ON OR AFTER 14 September, not the weekend AFTER 14 September. In 2024 it was held on Saturday 14 September itself ('Το Σάββατο 14 Σεπτεμβρίου Πανηγυρίζουμε την Παναγία Στυλαρινή και αμέσως μετά στήνουμε γλέντι στην Αμμουλιανή'), which the stored wording would have pushed to 21-22 September. Consistent with Sat 15 September 2018 (diakonima.gr/romfea: 'το απόγευμα του Σαββάτου, 15ης Σεπτεμβρίου') and 16-17 September 2023. Village and two-day eve+feast shape confirmed."
+  },
+  {
+   "i": 1,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "Searched for the Agios Nikolaos patronal feast on Ammouliani in: Ιερά Μητρόπολις Ιερισσού, Αγίου Όρους και Αρδαμερίου (im-ierissou.gr), romfea.gr and halkidikinews.gr (both of which cover only the 2022 thyranoixia of the restored historic church, with no feast-day programme), Δήμος Αριστοτέλη, and Greek searches for a 5-6 December vespers/liturgy/harbour blessing there. Only generic 6-December saint's-day articles turned up, which the brief excludes. The church and its restoration are well documented; the panigiri itself is not."
+  }
+ ],
+ "amorgos": [
+  {
+   "i": 6,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "No independent source anywhere lists an Ai-Giannis panigiri at Vroutsi on 28-29 Aug. Checked amorgos-island.gr (official island portal panigiria page), amorgos-news.gr 'Ta panigiria tis kardias mas', vigla-amorgos.com summer festival calendar (which lists Kolofana/Kato Meria 25/07 and Tholaria 31/08 but nothing for Vroutsi), greeka Amorgos festivals, plus Greek searches on 'Βρούτσης/Βρούτση + πανηγύρι' and 'Αποτομή Κεφαλής Προδρόμου + Κάτω Μεριά'. Only saint's-day-in-general pages came back."
+  }
+ ],
+ "skyros": [
+  {
+   "i": 0,
+   "verdict": "corrected",
+   "source2": "https://www.skyros.gr/activities/carnival/",
+   "confidence": "high",
+   "fix": {
+    "duration_days": 3
+   },
+   "note": "Municipality of Skyros: the carnival runs through the four weeks of Triodion and peaks 'το τελευταίο Σάββατο-Κυριακή της Αποκριάς, το τριήμερο της Καθαράς Δευτέρας' — the Trata at midday on the last carnival Sunday (22 Feb 2026) and the main Geros dancing in the central square all day on Clean Monday. The stored 2-day window from Easter-50 (Sat-Sun) stops before Clean Monday (Easter-48), which is the biggest day; duration_days should be 3."
+  },
+  {
+   "i": 7,
+   "verdict": "confirmed",
+   "source2": "https://www.evima.gr/eidiseis-evvoia/skyros-giortazei-simera-to-nisi-o-poliouchos-agios-georgios/",
+   "confidence": "high",
+   "note": "eVima (Evia/Skyros regional news, independent of ekklisiaonline): the island celebrates its patron Agios Georgios on 23 April at the Holy Monastery of Agios Georgios at the top of the Chora next to the castle, with the customary icon procession and a Doxology — a procession rather than a tavla panigiri, exactly as stored."
+  }
+ ],
+ "evia-north": [
+  {
+   "i": 2,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "No independent source for a mid-July Fish Festival on Limni harbour. Checked egnomi.gr July 2026 island-wide culture listing, eviaportal.gr Limni-Mantoudi-Agia Anna news feed, opsevias.gr (Federation of Evia Cultural Associations), limnievias.gr, nolimnis.gr and Greek searches on 'Γιορτή Ψαριού + Λίμνη'. Related finding: the 'Στερεά Ελλάδα… Πάρε μια γεύση' gastronomy festival that the desc places on 23-24 July was actually held in Limni on 17-18 Aug 2026 (eviaportal.gr) / advertised by the Evia Chamber as 28-29 Aug — so that half of the description is wrong too, but it is a different event from the fish festival."
+  },
+  {
+   "i": 3,
+   "verdict": "confirmed",
+   "source2": "https://www.eviatop.eu/2026/08/blog-post_3907.html",
+   "confidence": "high",
+   "note": "Evia Top (regional news, independent of the municipality): 'Μια ξεχωριστή Ναυτική Βραδιά στο Ελύμνιο διοργανώνεται το Σάββατο 15 Αυγούστου, στη Λίμνη Ευβοίας', 22:00, organised by the Nautical Club of Limni (Ν.Ο.Λ.) with the Limni municipal community — sailing boats, lights and fireworks on the harbour. Date and village both agree."
+  },
+  {
+   "i": 4,
+   "verdict": "confirmed",
+   "source2": "https://www.egnomi.gr/article/17732/giorti_elias_stis_robies.html",
+   "confidence": "medium",
+   "note": "Evoiki Gnomi (regional news, independent of malian.gov.gr): the Olive Festival in Rovies is organised by the Πολιτιστικός Σύλλογος Ροβιών and was held 'το Σάββατο 20 Αυγούστου' with dance groups and music until the early hours. evias-filoi.gr separately confirms it is a recurring August event in Rovies ('διοργανώνονταν τον Αύγουστο μήνα η Γιορτή Ελιάς'). Village, organiser and the late-August window agree; the report is from an earlier edition, so medium rather than high."
+  },
+  {
+   "i": 5,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "No independent dated source for a Profitis Ilias panigiri at Drymona. voriaevia.net's Drymona page confirms the village has a Ιερός Ναός Προφήτη Ηλία but gives no festival date; egnomi.gr July 2026 listing, eviaportal.gr Drymona page and opsevias.gr have nothing. Church dedication alone is not a date, so not counted as confirmation."
+  },
+  {
+   "i": 6,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "No independent source for a 6 August Metamorfosi panigiri at Mantoudi. Checked egnomi.gr August 2026 listing (which has a 6 Aug jazz concert at Kalimerianos and a Karystos play, nothing in Mantoudi), eviaportal.gr, mantoudinews.gr, opsevias.gr, and Greek searches on 'Μαντούδι + Μεταμόρφωση Σωτήρος + πανηγύρι'. Only generic 6-August saint's-day pages."
+  },
+  {
+   "i": 7,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "No independent dated source for the Papades Panagia panigiri. voriaevia.net's Papades page confirms the village's church is the Κοίμηση της Θεοτόκου (so 15 Aug is plausibly its feast) but gives no date or event; egnomi.gr August 2026 listing has a 14 Aug panigiri at Koutoumoula, not Papades; opsevias.gr and eviaonline's Panagia vigil programme gave nothing usable (the latter returned 403). Dedication without a dated event is not a confirmation."
+  }
+ ],
+ "kasos": [
+  {
+   "i": 0,
+   "verdict": "confirmed",
+   "source2": "https://kasos-heroicisland.gr/olokaytoma-i-n-kasoy-2026/",
+   "confidence": "high",
+   "note": "Municipality of Kasos, 'Ολοκαύτωμα Η.Ν. Κάσου 2026': a four-day memorial programme whose events 'κορυφώθηκαν την 7η Ιουνίου' with the divine liturgy and the official ceremony at the church of Agios Spyridon; Dimokratiki tis Rodou reports the same 202nd-anniversary four-day programme culminating on 7 June (https://www.dimokratiki.gr/11-06-2026/se-klima-sygkinisis-ke-yperifanias-kylise-to-tetraimero-mnimis-ke-timis-gia-tin-202i-epetio-apo-to-olokaftoma-tis-i-n-kasou/). 7 June is correct as the fixed date; the programme in practice spans the surrounding days."
+  },
+  {
+   "i": 5,
+   "verdict": "confirmed",
+   "source2": "https://tourism.kasos-heroicisland.gr/project/panigyria/",
+   "confidence": "medium",
+   "note": "Official Kasos municipal tourism panigyria calendar lists '12 Δεκεμβρίου του Αγίου Σπυρίδωνα' among the island's panigiria — date confirmed, and the municipality's own Holocaust programme places the church of Agios Spyridon in Fry. The page does not itself name the village, hence medium."
+  }
+ ],
+ "kalymnos": [
+  {
+   "i": 2,
+   "verdict": "corrected",
+   "source2": "https://kalymnos-news.gr/2026/08/%CE%B1%CF%81%CE%B3%CE%B9%CE%BD%CF%8E%CE%BD%CF%84%CE%B1-%CE%B7-%CF%80%CE%B1%CE%BD%CE%B1%CE%B3%CE%B9%CE%AC-%CE%B3%CE%B1%CE%BB%CE%B1%CF%84%CE%B9%CE%B1%CE%BD%CE%AE-%CE%B5%CF%80%CE%AD%CF%83%CF%84%CF%81/",
+   "confidence": "medium",
+   "fix": {
+    "date": {
+     "approx": "late August, after the Dormition — vespers and glendi at the mountain chapel when the icon goes back up (21-22 Aug 2026; glendi 27 Aug in other years)",
+     "months": [
+      8
+     ]
+    },
+    "duration_days": 2
+   },
+   "note": "The event at the Galatiani chapel is NOT on the eve of 15 August. Kalymnos-news (Aug 2026): the icon is carried back up to the mountain chapel with a procession at 17:30 on Friday 21 August, followed by the panigiriko vespers and liturgy there, and returns to the Arginonta parish church early on Saturday 22 August. Palmos Kalymnou separately advertises 'το καθιερωμένο Γλέντι-Πανηγύρι στην αυλή της Παναγίας Γαλατιανής Αργινωντών' with violin, lyra, food and drink on Tuesday 27 August. On 15 August itself the liturgy is in the Arginonta village church, not at the chapel. Wrong field: date (and hence the 'eve of 15 August' framing in the description). Also note this is the Kalymnian custom of the icon's ascent around the apodosis of the Dormition (23 Aug), not a Dekapentavgoustos alternative. Second corroborating URL: https://www.palmoskalymnou.gr/%CF%84%CE%BF-%CF%80%CE%B1%CF%81%CE%B1%CE%B4%CE%BF%CF%83%CE%B9%CE%B1%CE%BA%CF%8C-%CE%B3%CE%BB%CE%AD%CE%BD%CF%84%CE%B9-%CF%83%CF%84%CE%B7%CE%BD-%CF%80%CE%B1%CE%BD%CE%B1%CE%B3%CE%AF%CE%B1-%CE%B3%CE%B1/"
+  },
+  {
+   "i": 4,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "Plenty of sources on Klidonas as a national custom on 23-24 June, but nothing Kalymnos-specific and dated. Checked kalymnos-news.gr, palmoskalymnou.gr, the Dodecanese/Kalymnos traditions page at aigaio.dev.edu.uoc.gr (robots-blocked), and Greek and English searches pairing Κάλυμνος/Πόθια with Κλήδονας and φωτιές του Αϊ-Γιάννη. A generic Klidonas article is not evidence that Pothia and Myrties do it, so I did not count one."
+  }
+ ],
+ "alonnisos": [
+  {
+   "i": 2,
+   "verdict": "confirmed",
+   "source2": "https://www.emakedonia.gr/i-psaradiki-vradia-stin-alonniso-823839",
+   "confidence": "high",
+   "note": "Makedonia (Thessaloniki daily, independent of sporadesnews): the Psaradiki Vradia was held at Votsi harbour, Alonnisos, on 29 August 2026, organised by the municipality with mayor Panagiotis Anagnostou — fish, local dishes and music by the boats. 29 Aug 2026 is the last Saturday of August, matching the stored approx."
+  },
+  {
+   "i": 4,
+   "verdict": "confirmed",
+   "source2": "https://skiathoslife.gr/224616/Panhgyrizei-to-erhmonhsi-twn-B-Sporadwn-Kyra-Panagia-Deite-pote-and-pws-mporeite-na-pareyretheite.html",
+   "confidence": "high",
+   "note": "Skiathos Life (independent of vimaorthodoxias): 'το Σάββατο 31 Αυγούστου θα τελεστεί ο Πανηγυρικός Εσπερινός ενώ, την Κυριακή 1 Σεπτεμβρίου θα τελεστεί η Πανηγυρική Θεία Λειτουργία' at the monastery on Kyra Panagia, with places on the pilgrim boats to be booked in advance. Confirms the weekend around 1 September, eve + 2 days. Worth flagging for the desc: the monastery is dedicated to the Nativity of the Theotokos (8 Sept per monastiria.gr) yet keeps its panigiri on the 31 Aug-1 Sept weekend, so the stored approx is right and the 'Nativity' wording is not a date."
+  }
+ ],
+ "psara": [
+  {
+   "i": 0,
+   "verdict": "confirmed",
+   "source2": "https://hellenicnavy.gr/202i-epeteios-olokaftomatos-psaron/",
+   "confidence": "high",
+   "note": "Hellenic Navy (official): 'Το Σάββατο 27 και την Κυριακή 28 Ιουνίου 2026 διοργανώθηκαν από το Δήμο Ψαρών οι εκδηλώσεις μνήμης για την 202η Επέτειο από το Ολοκαύτωμα.' 28 June 2026 is the last Sunday of June, so the stored 'last Sunday of June' rule holds; the programme in practice spans the Saturday too."
+  },
+  {
+   "i": 1,
+   "verdict": "confirmed",
+   "source2": "https://www.dimospsaron.gr/culture/ethima/",
+   "confidence": "high",
+   "note": "Municipality of Psara, customs page: on 31 July the young people of the village set out at midnight on the roughly three-hour walk to the monastery to fetch the icon of the Panagia and carry it back down, arriving at dawn — 'μια από τις ωραιότερες [νύχτες] της ζωής τους'. Date and island match exactly."
+  },
+  {
+   "i": 2,
+   "verdict": "confirmed",
+   "source2": "https://www.dimospsaron.gr/culture/ethima/",
+   "confidence": "high",
+   "note": "Municipality of Psara: the Dormition is kept with special solemnity at the monastery on 14 August — after the vespers the church serves chickpeas to the fasting pilgrims, then a small panigiri at the threshing floor organised by the Psarian Brotherhood. Exactly the eve-of-15-August, 2-day pattern stored."
+  },
+  {
+   "i": 3,
+   "verdict": "confirmed",
+   "source2": "https://www.dimospsaron.gr/culture/ethima/",
+   "confidence": "medium",
+   "note": "Municipality of Psara confirms the customs and the village: masked 'μπούλες' with 'αυτοσχέδιες μεταμφιέσεις' go from house to house on the Saturdays and Sundays of Triodion and on Tsiknopempti, and the revived 'αλάνι' sets tables in circles in the big square with men and women separated, for eating, singing and dancing. It does not pin the alani to the final carnival Sunday specifically — the stored Easter-49 is consistent but not independently dated, hence medium; the municipality's wording also implies the boules run across the whole Triodion rather than one day."
+  }
+ ],
+ "othonoi": [
+  {
+   "i": 1,
+   "verdict": "confirmed",
+   "source2": "https://othonoi.org/en",
+   "confidence": "medium",
+   "note": "The island's own portal lists 'Summer Festival & Beach Party in Othoni | August 14-15' — 'traditional festival with live music, local food and a festive atmosphere'. Date and island agree with the stored 15 August panigiri. Two caveats keeping this at medium: the listing spans 14-15 August, so the stored eve:false / duration_days:1 may understate it, and the portal is a community/tourism site rather than a municipality, association or Metropolis page. Searches for Corfu Metropolis (Κερκύρας, Παξών και Διαποντίων Νήσων) or Diapontia municipal programmes naming Othonoi returned nothing."
+  }
+ ],
+ "ios": [
+  {
+   "i": 0,
+   "verdict": "confirmed",
+   "source2": "https://www.allovergreece.com/Event/Descr/9/8/el",
+   "confidence": "medium",
+   "note": "States the «Ομήρεια» are held on Ios «κάθε Μάιο» (every May) as UNESCO-auspices cultural events; listing start date 1 May. Municipality site (ios.gr) has no Omiria page — its own branded 'Ios Festival' is a separate August event (25-30 Aug 2026), so Omiria was checked independently."
+  },
+  {
+   "i": 3,
+   "verdict": "confirmed",
+   "source2": "https://ios.infotouch.gr/el/events/weekly/traditional_festivals",
+   "confidence": "medium",
+   "note": "Lists «Πανηγύρι της Μερσινιάς προς τιμή της Θεοτόκου» on 21 August at Mersinia; ios.travelfind.gr independently gives 21 August, Theotokos, Mersinia. Both agree with the stored 08-21 + eve."
+  },
+  {
+   "i": 6,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "No independent source found for a 6 December panigiri at the Agios Nikolaos chapel at Koumbara. Checked Δήμος Ιητών (ios.gr), ios.infotouch.gr and ios.travelfind.gr panigiria lists (both list only Jun/Aug/Sep feasts, no December entry and no Koumbara), Greek searches on «Κουμπάρα Ίος Άγιος Νικόλαος», and Metropolis-of-Thira news. Only generic 6 December saint's-day pages surfaced."
+  }
+ ],
+ "anafi": [
+  {
+   "i": 0,
+   "verdict": "confirmed",
+   "source2": "https://www.orthodoxianewsagency.gr/mitropolitiko_ergo/%CE%B9-%CE%BC-%CE%B8%CE%AE%CF%81%CE%B1%CF%82-%CE%B1%CE%BC%CE%BF%CF%81%CE%B3%CE%BF%CF%8D-%CE%BA%CE%B1%CE%B9-%CE%BD%CE%AE%CF%83%CF%89%CE%BD/i-anafi-timise-tin-panagia-tin-kalamiotissa/",
+   "confidence": "high",
+   "note": "Metropolis of Thira, Amorgos and Islands report: festal Orthros and Divine Liturgy at the Monastery of Panagia Kalamiotissa on the morning of Tuesday 8 September 2026 (Nativity of the Theotokos), with the icon procession. Consistent with the stored 09-07 + duration_days 2 covering the overnight ascent on the 7th into the feast on the 8th."
+  },
+  {
+   "i": 3,
+   "verdict": "confirmed",
+   "source2": "https://www.exploring-greece.gr/el/show/52641/:ttd/PLATIA-AGIU-NIKOLAU",
+   "confidence": "medium",
+   "note": "Independently confirms the parish/metropolitan church of Agios Nikolaos stands on the main square at the western edge of Anafi's Chora, fixing village and dedication (hence the 6 December feast); Orthodox Times/Orthodoxia also report Metropolis services at the «Ναός Αγίου Νικολάου Ανάφης». No independent source found for the cultural-association communal meal itself."
+  }
+ ],
+ "syros": [
+  {
+   "i": 0,
+   "verdict": "corrected",
+   "source2": "https://www.syros-agenda.gr/anaviosi-tou-afanisti-tou-klidona-sta-kaminia-syrou-2/",
+   "confidence": "high",
+   "fix": {
+    "village": "Kaminia",
+    "village_el": "Καμίνια"
+   },
+   "note": "Wrong village. Syros Agenda and Naxos Times both place the Klidonas/Afanistis revival at Kaminia (Καμίνια), organised by the Cultural Association of Kaminia in its courtyard, on the evening of Tuesday 23 June 2026 at 20:30 — the date (23-24 June, eve) is right. No Klidonas event appears in any Chroussa programme (syros-agenda Chroussa tag and its 2023/2024 Chroussa summer listings start in July), and nothing ties the custom to the old Faneromeni school."
+  },
+  {
+   "i": 4,
+   "verdict": "confirmed",
+   "source2": "https://episkopisyrou.gr/tag/kini/",
+   "confidence": "high",
+   "note": "Catholic Diocese of Syros parish page for Kini: Πανηγυρικός Εσπερινός Wed 14/8 20:00, Divine Liturgy Thu 15/8 08:30 for the Dormition — exactly the stored 08-15 + eve + duration_days 2, and it confirms the Catholic parish detail. The 15 August island evening at Kini is separately reported by Cyclades24 and Syros Agenda. The Fotarida custom itself is not independently attested."
+  }
+ ],
+ "andros": [
+  {
+   "i": 0,
+   "verdict": "confirmed",
+   "source2": "https://andros.gr/gr/component/tags/tag/%CE%BC%CE%BF%CE%BD%CE%B7-%CF%80%CE%B1%CE%BD%CE%B1%CF%87%CF%81%CE%B1%CE%BD%CF%84%CE%BF%CF%85.html",
+   "confidence": "high",
+   "note": "Municipality of Andros: the Panachrantou monastery «celebrates on 27 July (Agios Panteleimon) as well as on 15 August». Stored 08-15 confirmed; note the monastery has a second feast on 27 July that the entry does not cover."
+  },
+  {
+   "i": 3,
+   "verdict": "corrected",
+   "source2": "https://www.androsfilm.gr/2026/07/20/filoproodos-omilos-to-gavrio-2026/",
+   "confidence": "medium",
+   "fix": {
+    "date": {
+     "approx": "late July to late August",
+     "months": [
+      7,
+      8
+     ]
+    }
+   },
+   "note": "Wrong date window (and the 10-day duration). The Gavriotika are a scattered programme run by the Filoproodos Omilos «To Gavrio» across a month, not the first ten days of August: androsfilm.gr gives 30 July - 29 August 2026 (main island glenti with the Andriotic wedding re-enactment on 18 August), and Andros Secrets' 2022 programme gives 30 July - 17 August. duration_days 10 should not be read as a contiguous run; no kakavia night appears in either programme."
+  },
+  {
+   "i": 4,
+   "verdict": "confirmed",
+   "source2": "https://www.e-panigiria.gr/%CF%80%CE%B1%CE%BD%CE%B7%CE%B3%CF%8D%CF%81%CE%B9-%CF%83%CF%84%CE%B7%CE%BD-%CE%AC%CF%81%CE%BD%CE%B7-%CE%AC%CE%BD%CE%B4%CF%81%CE%BF%CF%85/",
+   "confidence": "medium",
+   "note": "Dated listing for «Πανηγύρι στην Άρνη Άνδρου» on 6 August; local Andros news (enandro.gr) repeatedly covers the Arni panigiri as the island's biggest, «Του Σωτήρος στην Άρνη». Agrees with stored 08-06 + eve (5-6 August) at Arni."
+  },
+  {
+   "i": 7,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "No independent source found for an Agios Fanourios panigiri at Ormos Korthiou on 26-27 August. Checked Δήμος Άνδρου (andros.gr), enandro.gr, androsfilm.gr ΠΑΝΗΓΥΡΙΑ ΑΝΔΡΟΥ tag (lists Korthi-area Aidonia 1-2 Aug and others, no Fanourios), cycladeslive.gr, aegeancuisine.gr and Greek searches on «Άγιος Φανούριος Κόρθι/Όρμος Κορθίου». Only generic 27 August Agios Fanourios/fanouropita pages surfaced."
+  },
+  {
+   "i": 9,
+   "verdict": "corrected",
+   "source2": "https://cycladeslive.gr/andros-panigyri-agias-sofias-vitaliou/",
+   "confidence": "high",
+   "fix": {
+    "name": "Panigiri of Agia Sofia, Vitali",
+    "name_el": "Πανηγύρι Αγίας Σοφίας Βιταλίου",
+    "date": {
+     "fixed": "09-17"
+    }
+   },
+   "note": "Wrong name and date. Vitali's panigiri is Agia Sofia, not the Nativity of the Virgin: Cyclades Live announces the «Πανηγύρι Αγίας Σοφίας Βιταλίου» for the feast of Agia Sofia (17 September), 20:00 at the old municipal school of Vitali, free entry; enandro.gr also runs «Η Αγία Σοφία στο Βιτάλι». Village Vitali is right; 09-08 should be 09-17."
+  }
+ ],
+ "halki": [
+  {
+   "i": 2,
+   "verdict": "confirmed",
+   "source2": "https://www.tanea.gr/2026/09/08/lifearts/culture/festival-mousikis-xalkis-dimitris-kremastinos-apo-8-eos-12-septemvriou-pente-vradies-afieromenes-stis-mousikes-rizes/",
+   "confidence": "high",
+   "note": "Ta Nea (and Dimokratiki tis Rodou, efsyn, SKAI) give the 5th Halki Music Festival «Dimitris Kremastinos» as 8-12 September 2026, five nights on the theme «Μουσικές Ρίζες» — matches the stored second-week-of-September, 5-day entry. Venues named are the Kremastinos house, the harbour edge and the church of Agios Nikolaos, i.e. Halki's single village (Nimborio/Emporio). Programme is ERT's Contemporary Music Orchestra and guests rather than the Athens State Orchestra as an ensemble (one soloist is its principal clarinet)."
+  },
+  {
+   "i": 3,
+   "verdict": "corrected",
+   "source2": "https://www.rodiaki.gr/index.php/article/532750/23-23-ioylioy-h-psyxh-ths-xalkhs-me-fwnh-mantolinoy",
+   "confidence": "medium",
+   "fix": {
+    "date": {
+     "approx": "22-23 July, 2 nights",
+     "months": [
+      7
+     ]
+    }
+   },
+   "note": "Date off by one day. I Rodiaki (Rhodes regional daily) headlines «22 & 23 Ιουλίου» for the Halki mandolin evenings: night one on the steps of Agios Nikolaos, night two on the harbour — village and 2-night duration are right, but the stored 21-22 July should be 22-23 July. Based on the dated 2025 programme; no 2026 announcement located."
+  }
+ ],
+ "koufonisia": [
+  {
+   "i": 2,
+   "verdict": "confirmed",
+   "source2": "https://koufonisia.gr/ekklisia-tou-profiti-ilia/",
+   "confidence": "medium",
+   "note": "Local island portal koufonisia.gr on the chapel of Profitis Ilias, in the Profitis Ilias area of Pano Koufonisi: «Ανήμερα του Προφήτη Ηλία, 20 Ιουλίου» the faithful gather for an evening service with refreshments offered. Matches the stored 07-20 + eve and the village."
+  }
+ ],
+ "tilos": [
+  {
+   "i": 1,
+   "verdict": "confirmed",
+   "source2": "https://ellinismos.gr/istoria-ellinismoy/topikes-istories/tilos/",
+   "confidence": "high",
+   "note": "Ellinismos.gr: the Koupa dance is held on 28 July, the day after the Agios Panteleimon feast (25-27 July), in the main square of Megalo Chorio, the lead dancer holding a cup of money that passes to the next contributor. grvisit.com independently places the same custom on 28 July at the Taxiarchis church. Confirms date, village and the Taxiarchis venue."
+  }
+ ],
+ "iraklia": [
+  {
+   "i": 0,
+   "verdict": "confirmed",
+   "source2": "https://www.in2greece.com/english/places/summer/islands/iraklia.htm",
+   "confidence": "high",
+   "note": "In2Greece: «on April 23 the traditional celebration in honor of Saint George takes place in the village of Saint George»; Greeka independently gives the same — 23 April in Agios Georgios village. Base date and village verified (the Easter-Monday transfer rule not assessed, as instructed)."
+  },
+  {
+   "i": 1,
+   "verdict": "confirmed",
+   "source2": "https://www.greeka.com/cyclades/iraklia/festivals/",
+   "confidence": "high",
+   "note": "Greeka: «The feast day of the Virgin Mary on 15th of August is the largest celebration in Iraklia which takes place in Panagia village»; In2Greece independently gives 15 August in the village of Panagia. Matches stored 08-15 + eve + duration_days 2 (14-15 August)."
+  },
+  {
+   "i": 3,
+   "verdict": "confirmed",
+   "source2": "https://www.in2greece.com/english/places/summer/islands/iraklia.htm",
+   "confidence": "medium",
+   "note": "In2Greece: «on November 9 the traditional feast in honor of Agios Nektarios takes place in the church of Agios Nektarios in the village of Panagia» — consistent with the stored 11-08 + eve + duration_days 2 spanning 8-9 November, and it confirms the Agios Nektarios / Panagia village pairing. The Taxiarches (8 November) half of the entry is not independently attested, and Greeka gives Agios Nektarios as 16 November, which contradicts the saint's fixed 9 November commemoration and looks like a Greeka error."
+  }
+ ],
+ "pserimos": [
+  {
+   "i": 0,
+   "verdict": "confirmed",
+   "source2": "https://kalymnos-news.gr/2026/08/%CE%B4%CE%B5%CE%BA%CE%B1%CF%80%CE%B5%CE%BD%CF%84%CE%B1%CF%8D%CE%B3%CE%BF%CF%85%CF%83%CF%84%CE%BF%CF%82-%CF%83%CF%84%CE%B7%CE%BD-%CE%BA%CE%AC%CE%BB%CF%85%CE%BC%CE%BD%CE%BF-%CE%BF%CE%B9-%CF%80%CE%B1/",
+   "confidence": "medium",
+   "note": "Kalymnos-news.gr (Kalymnos local news, the municipality Pserimos belongs to), in G. Chatzitheodorou's survey of the island's Dormition panigiria, lists the «Παναγία Ψεριμιώτισσα» among the churches celebrating on 15 August and singles out the Pserimos feast as the one where the slaughtering of lambs survives. Confirms 15 August at Pserimos's single settlement (Avlakia); the village name itself is not spelled out in the source."
+  }
+ ],
+ "chania": [
+  {
+   "i": 0,
+   "verdict": "confirmed",
+   "source2": "https://www.inewsgr.com/364/to-programma-ton-ekdiloseon-tis-85is-epeteiou-tis-machis-tis-kritis-sta-chania.htm",
+   "confidence": "medium",
+   "note": "Official Chania programme for the 85th anniversary runs 17-24 May 2026, including the Souda Allied cemetery ceremony (Sat 23 May) and village memorials (Paleochora, Sfakia, Kissamos, Kantanos); an earlier year ran 20-26 May, so 'Late May' / month 5 holds, though the week can start as early as 17 May."
+  },
+  {
+   "i": 3,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "No independent source puts an Agia Paraskevi panigiri at Vamos on 25-26 July. Checked GTP's Chania festival list (which places the 26 July Agia Paraskevi feast at Kalyves, not Vamos), the Vamos village site's own 'local festivals' page (lists Klidonas, Dekapentavgoustos, Sotiras at Xirosterni, Ai-Giannis Rigologos at Vafes/Douliana - no Agia Paraskevi), the Municipality of Apokoronas summer cultural programme via Haniotika Nea (Vamos appears on 22 July only; 'Agia Paraskevi' there is the Kalyves beautification society), and pamepanigiria.gr. Village looks wrong - the Apokoronas Agia Paraskevi church and feast appear to be at Kalyves - but no positive source was found to correct it with."
+  },
+  {
+   "i": 6,
+   "verdict": "confirmed",
+   "source2": "https://www.ertnews.gr/perifereiakoi-stathmoi/chania/ta-panigyria-toy-dekapentaygoystoy-sto-nomo-chanion/",
+   "confidence": "high",
+   "note": "ERT Chania's Dekapentavgoustos panigiria list has 'Giorti kreatotourtas sta MESKLA' on 14 August (eve of the Dormition); a local blog announcement independently says 'rendezvous on the eve of the Panagia (14 August) at Meskla'."
+  }
+ ],
+ "patmos": [
+  {
+   "i": 0,
+   "verdict": "confirmed",
+   "source2": "https://aegeanews.gr/news/ekklisia/474289/monadiki-teleti-tou-ierou-niptira-stin-patmo/",
+   "confidence": "high",
+   "note": "Regional news on Patmos Holy Week: the Monastery of Saint John stages the Niptiras on Holy Thursday before an 'impenetrable crowd' of pilgrims 'from all parts of Greece'; ceremony and place match, and the movable Holy Week anchor is correct."
+  },
+  {
+   "i": 1,
+   "verdict": "confirmed",
+   "source2": "https://orthodoxia.info/news/%CF%80%CE%AC%CF%84%CE%BC%CE%BF%CF%82-%CF%83%CF%84%CE%B7%CE%BD-%CF%80%CE%BB%CE%B1%CF%84%CE%B5%CE%AF%CE%B1-%CF%84%CE%BF%CF%85-%CE%BD%CE%B7%CF%83%CE%B9%CE%BF%CF%8D-%CE%B7-%CE%B1%CE%BD%CE%B1%CF%80%CE%B1/",
+   "confidence": "high",
+   "note": "Orthodoxia.info: on Megali Pempti (Holy Thursday) twelve priests and monks process from the monastery to the square in Chora for the open-air re-enactment of the Niptiras; a second outlet (AegeaNews) adds that the abbot washes the twelve monks' feet with rose water in the appointed Chora square. Movable Holy Thursday anchor correct."
+  },
+  {
+   "i": 4,
+   "verdict": "confirmed",
+   "source2": "https://patmos.travelfind.gr/el/info/events/panigyria-tis-patmoy",
+   "confidence": "medium",
+   "note": "'Stis 27 Iouliou, tou Agiou Panteleimona, ginetai giorti sto nisi Chiliomodi' - 27 July on the Chiliomodi islet, with the gathering starting the evening before; the islet is confirmed as an uninhabited rock off Patmos by the municipality's own description page (patmos.gov.gr)."
+  },
+  {
+   "i": 5,
+   "verdict": "confirmed",
+   "source2": "https://patmos.travelfind.gr/el/info/events/panigyria-tis-patmoy",
+   "confidence": "medium",
+   "note": "24 September at the small church on the islet of Agia Thekla opposite Agriolivado; 'the boats with locals and visitors arrive early on the eve' for the evening service - date, village and eve flag all match. Municipality page confirms Agia Thekla as an islet of Patmos."
+  }
+ ],
+ "lasithi": [
+  {
+   "i": 0,
+   "verdict": "corrected",
+   "source2": "https://sitia.gr/inhabitant/cultural-events/cornareia/",
+   "confidence": "high",
+   "fix": {
+    "date": {
+     "approx": "Early June through the end of August",
+     "months": [
+      6,
+      7,
+      8
+     ]
+    }
+   },
+   "note": "Wrong window (date). The Municipality of Sitia's own page says Kornaria 'starts in early June and lasts until the end of August'; local press reports Kornaria 2026 opening on 30 May. Stored 'early July through mid-August' / months [7,8] misses June and the second half of August."
+  },
+  {
+   "i": 12,
+   "verdict": "confirmed",
+   "source2": "https://www.anatolh.com/2022/12/05/telestike-esperinos-ston-vyzantino-nao-tou-agiou-nikolaou/",
+   "confidence": "high",
+   "note": "Anatoli (Lasithi daily) reports vespers held on the evening of 5 December at the Byzantine church of Agios Nikolaos at Katholiko (the headland chapel that named the town), with the municipality-announced patronal programme culminating on 6 December; matches 12-06 with eve and 2 days."
+  }
+ ],
+ "samothrace": [
+  {
+   "i": 4,
+   "verdict": "confirmed",
+   "source2": "https://www.evros24.gr/panigyri-panagias-kamariotissas-sam/",
+   "confidence": "high",
+   "note": "Evros24: 'Kathe chrono, ti Pempti tis Diakainisimou Evdomados' - every year on Thursday of Bright Week (Thursday after Easter, 24 April 2025), vespers on the eve, festal liturgy with the Metropolitan of Alexandroupoli, a re-enactment of the icon's arrival at the harbour and a procession through Kamariotissa. Confirms easter+4 and the village."
+  }
+ ],
+ "nisyros": [
+  {
+   "i": 3,
+   "verdict": "confirmed",
+   "source2": "https://www.visitnisyros.gr/el/panigiria",
+   "confidence": "high",
+   "note": "Official Nisyros panigiria page: 'Stis 20 kai 21 Iouniou ginetai eortasmos pros timin tou Agiou Nikita pou einai kai o Poliouchos tou nisiou' - 20-21 June, Mandraki, island patron; matches 06-21 with eve and 2 days."
+  },
+  {
+   "i": 4,
+   "verdict": "confirmed",
+   "source2": "https://www.visitnisyros.gr/el/panigiria",
+   "confidence": "high",
+   "note": "Same official page: '7-8 Noemvriou, sto chorio Emporeios ginetai panigiri stin eorti tou Archangelou Michail', and separately Emporios on 8 September for the Nativity of the Virgin - both details of the entry confirmed."
+  }
+ ],
+ "spetses": [
+  {
+   "i": 0,
+   "verdict": "corrected",
+   "source2": "https://spetses.gov.gr/el/festival-armata",
+   "confidence": "high",
+   "fix": {
+    "date": {
+     "approx": "Saturday of the week of 8 September (festival runs late August to mid-September)",
+     "months": [
+      9
+     ]
+    }
+   },
+   "note": "Wrong date model. The Municipality of Spetses' Armata 2026 programme runs 28 August - 13 September: 8 September carries only the festal liturgy of Panagia Armata (07:00), while the naval-battle re-enactment and burning of the flagship is on Saturday 12 September at 20:30. Storing it as fixed 09-08, duration 1, sends visitors on the wrong night; the spectacle is on the Saturday of that week, as the entry's own 'when' text already said."
+  },
+  {
+   "i": 2,
+   "verdict": "confirmed",
+   "source2": "https://spetses.gov.gr/eimai-episkeptis-5973/churches/",
+   "confidence": "high",
+   "note": "Municipality of Spetses churches page: Agia Paraskevi (the beach church) celebrates 26 July, and on the night before 'the beach is flooded by campers who spend the night under the starry sky after a traditional feast' - confirms 07-26 with eve at Agia Paraskevi beach."
+  },
+  {
+   "i": 3,
+   "verdict": "confirmed",
+   "source2": "https://spetses.gov.gr/eimai-episkeptis-5973/churches/",
+   "confidence": "medium",
+   "note": "Same municipal churches page gives Agia Marina's feast day as 17 July at the Agia Marina chapel; it confirms date and village but says nothing about the eve vespers, so the eve flag is unverified (not contradicted)."
+  },
+  {
+   "i": 4,
+   "verdict": "confirmed",
+   "source2": "https://orthodoxia.info/news/oi-spetses-timisan-toys-prostates/",
+   "confidence": "high",
+   "note": "Orthodoxia.info: the Church of the Saints in Spetses town kept the two days of 2 and 3 February - Great Festal Vespers on the evening of the 2nd, hierarchical liturgy on the 3rd - for the three Spetsiot neomartyrs Nikolaos, Ioannis and Stamatios. Matches 02-03 with eve and 2 days."
+  },
+  {
+   "i": 5,
+   "verdict": "confirmed",
+   "source2": "https://www.saronicmagazine.gr/saronikos/spetses/102254-me-lamprotita-kai-kataniksi-o-eortasmos-ton-agion-panton-stis-spetses",
+   "confidence": "high",
+   "note": "Saronic Magazine: All Saints was kept at the Spetses monastery over the two days 6-7 June 2026 - 7 June 2026 is the Sunday after Pentecost (Orthodox Easter 12 April 2026 + 56), so the movable easter+56 anchor and the eve flag are correct; topoguide independently notes the monastery of Agioi Pantes celebrates on the (movable) feast of All Saints."
+  }
+ ],
+ "schoinoussa": [
+  {
+   "i": 0,
+   "verdict": "confirmed",
+   "source2": "https://www.orthodoxianewsagency.gr/mitropoleis/%CE%B9-%CE%BC-%CE%B8%CE%AE%CF%81%CE%B1%CF%82-%CE%B1%CE%BC%CE%BF%CF%81%CE%B3%CE%BF%CF%8D-%CE%BA%CE%B1%CE%B9-%CE%BD%CE%AE%CF%83%CF%89%CE%BD/evdomada-panigyreon-sti-sxoinousa/",
+   "confidence": "high",
+   "note": "Metropolis of Thera, Amorgos and the Islands: Wednesday 25 March 2026, festal liturgy at the Holy Church of the Annunciation in Mesaria, Schinoussa, followed by a procession through the streets and the school parade; e-kyklades independently lists 25 March at Messaria with parade, school play and food."
+  },
+  {
+   "i": 1,
+   "verdict": "corrected",
+   "source2": "https://www.orthodoxianewsagency.gr/mitropoleis/%CE%B9-%CE%BC-%CE%B8%CE%AE%CF%81%CE%B1%CF%82-%CE%B1%CE%BC%CE%BF%CF%81%CE%B3%CE%BF%CF%8D-%CE%BA%CE%B1%CE%B9-%CE%BD%CE%AE%CF%83%CF%89%CE%BD/evdomada-panigyreon-sti-sxoinousa/",
+   "confidence": "high",
+   "fix": {
+    "date": {
+     "movable": "easter",
+     "offset": -15
+    },
+    "duration_days": 2,
+    "name": "Panigiri of Panagia Akathi (Saturday of the Akathist), Chora",
+    "name_el": "Πανηγύρι Παναγίας Ακαθής (Σάββατο του Ακαθίστου), Χώρα Σχοινούσας"
+   },
+   "note": "Wrong date - a movable feast stored as fixed. The island's panigiri for Panagia Akathi follows the Friday of the Akathist Hymn in Great Lent, not the Dormition: the Metropolis reports Friday-Saturday 27-28 March 2026 (Akathist and festal vespers on Friday, matins, liturgy and the icon carried through the alleys of Chora on Saturday, with the festival foods blessed). Orthodox Easter 2026 is 12 April, so Saturday = easter-15 with the eve on the Friday (easter-16). The Orthodox Synaxaristis and e-kyklades/golden-greece independently date it to 'the day after the last Friday of the Salutations'. There is a separate 15 August Dormition gathering on Schinoussa, but the parish church holding the Akathi icon is dedicated to the Entrance of the Theotokos, and the Akathi panigiri is the spring one."
+  },
+  {
+   "i": 2,
+   "verdict": "corrected",
+   "source2": "https://golden-greece.gr/islands/kyklades/skoinousa/culture",
+   "confidence": "medium",
+   "fix": {
+    "village": "Pharos (lighthouse chapel)",
+    "village_el": "Φάρος"
+   },
+   "note": "Wrong village. Date 6 December is right, but the panigiri is not held in Mersini: 'To Panigiri tou Agiou Nikolaou, stis 6 Dekemvriou, sto xokklisi tou Farou' - at the lighthouse chapel, with caiques ferrying people there from the harbour and salt cod with skordalia served in the churchyard; e-kyklades says the same. Mersini is where the boats leave from, not where the feast is."
+  }
+ ],
+ "evia-central": [
+  {
+   "i": 1,
+   "verdict": "corrected",
+   "source2": "https://visit-kimi-aliveri.gr/festivals/ta-paniguria-toi-augoustou-ston-dimo-kimis-aliveriou/",
+   "confidence": "high",
+   "fix": {
+    "date": {
+     "fixed": "08-16"
+    }
+   },
+   "note": "Municipality of Kymi-Aliveri tourism portal lists '16 Αυγούστου στα Βίταλα'; eviatime.gr reports the 16th Fig Festival on Wed 16 Aug 2023 and eviakosmos.gr the 15th on Tue 16 Aug 2022 — the festival is on the fixed date 16 August, not 'Sunday around 16 August' (16 Aug 2024 was a Friday, so the stored source's own claim is self-inconsistent)."
+  },
+  {
+   "i": 4,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "Only independent source found is the Kymi-Aliveri municipality portal's August list, which gives '2 Αυγούστου στους Γιάννηδες' (2 Aug 2024 was a Friday) — this contradicts both the stored 'first Saturday of August' and the Transfiguration (6 Aug) attribution, but it is a single-year listing so I will not assert a corrected value. Searched evianews, eviatime, eviakosmos, visit-kimi-aliveri.gr festival announcements 2024/2025, Greek queries on Γιάννηδες + κεσκέκι + πανηγύρι. Date should be treated as unverified."
+  }
+ ],
+ "tinos": [
+  {
+   "i": 0,
+   "verdict": "confirmed",
+   "source2": "https://www.religiousgreece.gr/en/attractions/church-evangelistria-panagia-tis-tinou",
+   "confidence": "high",
+   "note": "Religious Greece (Ministry of Tourism/Culture religious-tourism portal) lists 25 March (Annunciation) as one of the four feast days of the Evangelistria church, Tinos; greeka.com agrees (litanies and services in Chora on 25 March). Caveat for the editors: the description's claim that the icon was discovered on this day is wrong — both sources date the finding of the icon to 30 January 1823 (kept as a separate feast on 30 January)."
+  },
+  {
+   "i": 1,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "No independent dated source found for the Falatados carnival parade. Looked at tinostoday.gr (search and tag pages blocked by robots), cyclades24.gr, infotinos.com (domain not resolving), greeka.com Tinos festivals page (carnival not covered), and Greek queries on 'Καρναβάλι Φαλατάδου' / αποκριά Τήνος. The stored offset -49 corresponds correctly to Tyrinis (last Sunday of Carnival), but that is reasoning, not a second source."
+  },
+  {
+   "i": 2,
+   "verdict": "confirmed",
+   "source2": "https://kantam.gr/panagia-i-vrysiotissa/",
+   "confidence": "high",
+   "note": "The Catholic Archdiocese of Naxos-Tinos-Mykonos-Andros states the spring feast at Vrysi has been held on the first Sunday of May since 1912, with the icon carried in procession from the parish church in Tarampados and a blessing of drivers and vehicles. cyclades24.gr independently reports the 2022 keeping: procession on the eve, Sat 30 April, three liturgies on Sunday 1 May (the first Sunday of May). Village and rule both match; note a Saturday-evening vespers exists, so eve:true / duration_days:2 would arguably be more accurate."
+  }
+ ],
+ "kythira": [
+  {
+   "i": 0,
+   "verdict": "confirmed",
+   "source2": "https://kythera.news/iera-mitropolis-kythiron-prosklisis-programma-eortis-panagias-myrtidiotissis/",
+   "confidence": "high",
+   "note": "Official invitation and programme of the Holy Metropolis of Kythira and Antikythira (carried by kythera.news): vespers Saturday 23 September 19:00, hierarchical liturgy and procession of the icon around the Myrtidia monastery grounds on Sunday 24 September, the feast day. Fixed 09-24 confirmed; because of the great vespers the night before, eve:true / duration_days:2 would be defensible."
+  },
+  {
+   "i": 2,
+   "verdict": "confirmed",
+   "source2": "https://www.kythiraika.gr/ekdiloseis-politistikoy-syllogoy-potamoy-kalokairi-2023/",
+   "confidence": "high",
+   "note": "Kythiraika (Κυθηραϊκή Αδελφότητα, independent of the municipality) publishes the Potamos cultural association programme: '15.08, από τις 21.00 – ΠΛΑΤΕΙΑ ΠΟΤΑΜΟΥ', dance until morning, ticketed. Also corroborated by cantina.protothema.gr ('Στον παραδοσιακό οικισμό του Ποταμού το δεκαπενταύγουστο γίνεται το μεγάλο πανηγύρι')."
+  },
+  {
+   "i": 4,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "The only sources found for the 6 August dance at Avlemonas harbour are municipality-run and therefore not independent of the stored kythira.gr PDF: destinationkythira.gr and kythira.gr/diaskedasi are both © Δήμος Κυθήρων. Searched kythera.news and kythiraika.gr site searches for Αυλέμονας (only road/tourism news), kithera.gr summer round-up (no calendar), cantina.protothema.gr island festival round-up (Kythira covered but Avlemonas not mentioned), avlemonas-kythira.com (robots blocked)."
+  }
+ ],
+ "folegandros": [
+  {
+   "i": 0,
+   "verdict": "corrected",
+   "source2": "https://www.travel.gr/food_and_drink/food-culture/ta-kerasmata-tis-periforas-tis-keras-t/",
+   "confidence": "high",
+   "fix": {
+    "date": {
+     "movable": "easter",
+     "offset": 0
+    },
+    "duration_days": 3
+   },
+   "note": "The procession of the Kera/Panagia starts on Easter Sunday itself (midday/afternoon, icon brought down from the Kastro church), not Easter Monday, and lasts three days, ending Bright Tuesday evening: Sunday Chora, Monday Ano Meria, Tuesday Petousis/Livadi/Karavostasi and back. travel.gr and livetotravelandtaste.com both describe the Sunday start and the Bright Tuesday return; greeka.com also calls it a three-day custom. So offset 1 → 0 and duration_days 7 → 3. (Already correctly modelled as Easter-movable — the error is in offset and duration, not the movable flag.)"
+  },
+  {
+   "i": 1,
+   "verdict": "confirmed",
+   "source2": "https://cantina.protothema.gr/otineo/ekdiloseis/giortes-kai-panigyria-kai-afto-to-kalo/",
+   "confidence": "high",
+   "note": "Protothema's Folegandros festival programme: '16/7: Γιορτή Αγίας Μαρίνας στην Αγκάλη (Ώρα έναρξης 20:00)' — the eve of the 17 July feast at Agali, exactly as stored (fixed 07-17, eve:true)."
+  },
+  {
+   "i": 4,
+   "verdict": "corrected",
+   "source2": "https://livetotravelandtaste.com/2019/08/19/7737/",
+   "confidence": "medium",
+   "fix": {
+    "date": {
+     "fixed": "08-23"
+    }
+   },
+   "note": "Two independent organisations put the Kaikokakavia on 23 August, not 21: livetotravelandtaste.com ('η Γιορτή Καϊκοκακαβιάς θα πραγματοποιηθεί αύριο, 23 Αυγούστου', published 19 Aug 2019) and the protothema programme ('23/8: Γιορτή Καϊκοκακαβιά με παραδοσιακή μουσική στην Καραβοστάση'). The stored 21 August appears only on the municipality's own folegandros.gr page."
+  },
+  {
+   "i": 5,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "One independent source found — the protothema Folegandros programme, '29/8: Γιορτή Αγροσουρωτοξυνοτύρι στην Άνω Μεριά (Δημοτικό Σχολείο)' — which disagrees with the stored 28 August (folegandros.gr). A single one-year listing is not enough to move the date, but 28 August should be treated as unverified and 29 August is the likelier value. No other coverage found (searched the Greek festival name, Ano Meria, souroto/matsata queries; panigyri.art blocked)."
+  },
+  {
+   "i": 6,
+   "verdict": "confirmed",
+   "source2": "https://cantina.protothema.gr/otineo/ekdiloseis/giortes-kai-panigyria-kai-afto-to-kalo/",
+   "confidence": "high",
+   "note": "Protothema programme: '13/9: Γιορτή του Σταυρού στη Χώρα (Πλατεία Αγ. Νικολάου)' — the eve of the 14 September Exaltation, in the square named in the description. Matches fixed 09-14, eve:true."
+  },
+  {
+   "i": 7,
+   "verdict": "confirmed",
+   "source2": "https://www.folegandros.gr/en/customs-festivals/",
+   "confidence": "medium",
+   "note": "Independent of the stored e-kyklades page: the municipality's own customs-and-festivals page says 'Every July, the Folegandros Feasts enliven the Kastro streets, the Karavostassis port and Ano Meria', and protothema confirms the programme runs from July through October across those three locations. Month and villages confirmed; exact dates genuinely vary year to year, as the entry already says."
+  }
+ ],
+ "evia-south": [
+  {
+   "i": 0,
+   "verdict": "confirmed",
+   "source2": "https://dimoskarystou.gr/city/news/",
+   "confidence": "high",
+   "note": "Municipality of Karystos events news: on 15 August the Community Association of Stoupaioi holds its traditional panigiri at the Stoupaioi primary school from 21:00, and the Cultural Association of Tsakaioi its traditional festival at the Tsakaioi primary school from 21:00. Both villages, the date and the schoolyard venues match the entry."
+  },
+  {
+   "i": 1,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "The Municipality of Karystos lists the Marmari harbour event (Αθλητικός Όμιλος Μαρμαρίου, 'Καλοκαιρινή μουσική βραδιά', Λιμάνι Μαρμαρίου 21:00) on 15 August 2026, not 16 August, and lists nothing for 16 August; the stored evianews source has it on 16 August 2025. It is a club-organised music night rather than a saint's feast and the date evidently moves, so the stored fixed 08-16 is not independently confirmed and no single corrected date can be asserted. Also checked e-karystos.gr and GTP's Evia festivals listing."
+  },
+  {
+   "i": 2,
+   "verdict": "confirmed",
+   "source2": "https://www.orthodoxianewsagency.gr/mitropolitiko_ergo/%ce%b9-%ce%bc-%ce%ba%ce%b1%cf%81%cf%85%cf%83%cf%84%ce%af%ce%b1%cf%82-%ce%ba%ce%b1%ce%b9-%cf%83%ce%ba%cf%8d%cf%81%ce%bf%cf%85/i-panigyri-tou-ierou-naou-agion-konstantinou-kai-elenis-sta-nea-styra-karystou/",
+   "confidence": "high",
+   "note": "Orthodoxia News Agency (Metropolis of Karystia and Skyros section), independent of the stored ekklisiaonline piece, reports the panigiri of the church of Agioi Konstantinos kai Eleni at Nea Styra, Karystos on 21 May 2025, with a further report on the same feast there on 22 May 2024 and an earlier hierarchical concelebration in May 2021 — confirming the annual 20-21 May keeping with episcopal vespers and liturgy."
+  }
+ ],
+ "fournoi": [
+  {
+   "i": 4,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "No source independent of the stored fourni.gov.gr cultural calendar (which does list 'Πανηγύρι Ταξιαρχών' at Kamari on 8 November and Agios Minas on 11 November). Searched the Holy Metropolis of Samos, Ikaria and Fournoi (imsamou.gr site search), ikariaki.gr, and Greek queries combining Φούρνοι / Καμάρι / Ταξιαρχών / Νοεμβρίου. Nothing dated and specific. Fournoi is very small and the feast is off-season."
+  }
+ ],
+ "arki": [
+  {
+   "i": 0,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "No independent dated source for the 23 August 'enniamera' Panagia panigiri on Arki. Searched patmos-island.com events, English and Greek Wikipedia on Arkoi/Αρκιοί, greeka's Dodecanese pages, and Greek queries on Αρκιοί / πανηγύρι / εννιάμερα. Only the stored patmosweb.gr customs page covers it. Population ~40; nothing else is published."
+  }
+ ],
+ "telendos": [
+  {
+   "i": 0,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "No independent source for a Dormition feast on Telendos itself. The Metropolis of Leros, Kalymnos and Astypalaia site (imlka.gr) could not be reached (robots/DNS), greeka's Kalymnos festivals page confirms 15 August on Kalymnos but mentions Telendos only for the climbing festival, and Greek queries on Τέλενδος / Παναγία / 15 Αυγούστου returned nothing dated. Only the stored tatakis.com blog post covers it."
+  }
+ ],
+ "lefkada": [
+  {
+   "i": 7,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "Searched Δήμος Λευκάδας site (lefkada.gov.gr, 37 Nikiana hits, none about a panigiri), the lefkada-ionio.gr Lefkada festival calendar (lists the 2026 summer programme but no Nikiana Sotiros entry), greeka's Lefkada festivals page and mylefkada.gr (unreachable). Only lefkadatoday.gr — the source already on file — covers it, with two dated announcements (6 Aug 2025 and 6 Aug 2026); same outlet, so not independent."
+  },
+  {
+   "i": 8,
+   "verdict": "confirmed",
+   "source2": "https://www.lefkadatoday.gr/panigyrizei-to-iero-parekklisio-toy-agioy-panteleimonos-stis-alykes-karyoton/",
+   "confidence": "medium",
+   "note": "lefkadatoday.gr (independent of lefkada-ionio.gr) carries dated announcements for the chapel of Agios Panteleimon at Alykes Karyoton in 2026 (pub. 23/07/26), 2024 ('Γιορτή Αγίου Παντελεήμονα στις Αλυκές Καρυωτών', pub. 21/07/24) and 2019 (pub. 24/07/19) — village and feast confirmed; article bodies would not load, so the eve/27-July split rests on the saint's day, hence medium."
+  },
+  {
+   "i": 10,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "lefkadatoday.gr search for 'Αντζούση' returns only road/beach infrastructure stories about Άγιος Ιωάννης Ατζούση, no feast announcement; greeka's Lefkada festivals page does not list it; mylefkada.gr and lefkadapress.gr unreachable; orthodoxianewsagency.gr has nothing. Only aromalefkadas.gr (the recorded source) covers it."
+  }
+ ],
+ "lesvos": [
+  {
+   "i": 0,
+   "verdict": "corrected",
+   "source2": "https://www.lesvospost.com/2019/06/2019-2806-0107.html",
+   "confidence": "high",
+   "fix": {
+    "village": "Agia Paraskevi",
+    "village_el": "Αγία Παρασκευή",
+    "date": {
+     "approx": "Friday to Monday, late June to mid July (announced annually)",
+     "months": [
+      6,
+      7
+     ]
+    },
+    "duration_days": 4
+   },
+   "note": "The 'Πανηγύρι του Ταύρου' at Agia Paraskevi is a four-day Friday–Monday festival organised by the Αγροτικός Σύλλογος 'Η Πρόοδος' (founded 1915): 2017 30/6–3/7, 2018 29/6–2/7, 2019 28/6–1/7, 2014 4–7/7, 2015 17–20/7. The bull is paraded on the Friday, the kiskek blessed and shared after the Sunday liturgy, horse races Sunday afternoon. So it is neither 20 June nor tied to Pentecost/Whitsun (2018 Pentecost was 27 May, festival 29 June; 2019 Pentecost 16 June, festival 28 June), and it is 4 days not 1; village was also null and should be Agia Paraskevi."
+  },
+  {
+   "i": 1,
+   "verdict": "confirmed",
+   "source2": "https://lesvosnews.gr/lesviako-kalokeri-2017-analytika-olo-to-programma-ton-politistikon-ke-kallitechnikon-ekdiloseon/",
+   "confidence": "medium",
+   "note": "Λεσβιακό Καλοκαίρι 2017 programme (lesvosnews.gr): 'Παρασκευή 28 έως Κυριακή 30 Ιουλίου: Τριήμερος εορτασμός για την 37η Γιορτή Ούζου' — late July confirmed, and a 37th edition in 2017 confirms the 1981 start. Note it is a three-day celebration, so duration_days 1 understates it (a second, two-day ouzo celebration on 29–30 July is listed separately, presumably Plomari)."
+  },
+  {
+   "i": 4,
+   "verdict": "confirmed",
+   "source2": "https://lesvosnews.gr/i-lesvos-tima-ti-chari-tis-panagias-tis-chiliades-pistoi-syrreoyn-se-agiaso-kai-petra-vinteo/",
+   "confidence": "high",
+   "note": "lesvosnews.gr (independent of lesvospost.com), published 14 Aug 2019: thousands of faithful converge on Agiasos and Petra for the Dormition; a further report of 15 Aug 2017 describes the veneration of the miraculous icon at Agiaso and Petra. Village and 15 August (with the eve) confirmed."
+  },
+  {
+   "i": 8,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "Searched lesvosnews.gr for 'Πελόπη' (only the village's three-day Agios Loukas feast on 10–12 June turns up) and for 'Προφήτη Ηλία άλογα' (the horse-dancing Profitis Ilias panigiri reported is at Vatera, 21 July 2016); emprosnet.gr returns 403 and stonisi.gr has no usable search. No independent source for a three-day 18–20 July horse panigiri at Pelopi; only lesvospost.com, the recorded source, says so."
+  },
+  {
+   "i": 10,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "Searched lesvosnews.gr for 'Αγίας Άννας Καλλονής' (nothing) and 'Σκάλα Καλλονής ταύρος' (nothing); the Λεσβιακό Καλοκαίρι 2017 programme lists only the Skala Kallonis sardine festival (11–13 August 2017), not an Agia Anna panigiri. emprosnet.gr 403, stonisi.gr search unusable. Only lesvospost.com, the recorded source, covers it."
+  }
+ ],
+ "hydra": [
+  {
+   "i": 0,
+   "verdict": "confirmed",
+   "source2": "https://www.greeka.com/saronic/hydra/festivals/",
+   "confidence": "medium",
+   "note": "greeka: the Miaoulia festival is 'held at the end of June to commemorate the burning of the Ottoman fleet by Hydraian sailors' — consistent with the stored 'last weekend of June'. Δήμος Ύδρας (hydra.gov.gr) was not fetchable, so no municipal programme with the exact weekend; travel-reference grade, hence medium."
+  },
+  {
+   "i": 4,
+   "verdict": "confirmed",
+   "source2": "https://www.orthodoxianewsagency.gr/ieres-mones/i-panigyri-tis-i-m-genesiou-theotokou-zourvas-stin-ydra/",
+   "confidence": "high",
+   "note": "Orthodoxia News Agency (independent of ekklisiaonline.gr) reports 'Η πανήγυρη της Ι.Μ. Γενεσίου Θεοτόκου Ζούρβας στην Ύδρα' on 08.09.2026, with matching reports on 08.09.2023 and 09.09.2024 — monastery, village and the 8 September feast (with eve) confirmed."
+  },
+  {
+   "i": 5,
+   "verdict": "confirmed",
+   "source2": "https://www.orthodoxianewsagency.gr/ieres-mones/eorti-i-m-agias-eypraksias-stin-ydra/",
+   "confidence": "high",
+   "note": "Orthodoxia News Agency (independent of ekklisiaonline.gr), 'Εορτή Ι.Μ. Αγίας Ευπραξίας στην Ύδρα', published 25.07.2024 — confirms the monastery above Hydra town keeps 25 July, i.e. the vigil on the eve of the 24th."
+  }
+ ],
+ "salamis": [
+  {
+   "i": 1,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "Δήμος Σαλαμίνας (salamina.gr) lists 'Αγ. Μηνάς (Μητρόπολις)' only as a sight and its Greek-path page is blocked; searches for 'πολιούχου' and 'Αγίου Μηνά' on the municipal site returned nothing dated. orthodoxianewsagency.gr has only a Jan 2020 visit by the Metropolitan of Larissa to the church, not a feast report; romfea.gr returned 520; the Metropolis of Megara and Salamis site could not be located (imms.gr is Nafpaktos, immegaron.gr does not resolve); greeka's Salamina festivals page failed to load. Only ekklisiaonline.gr, the recorded source, documents the 11 November panigiri."
+  }
+ ],
+ "poros": [
+  {
+   "i": 1,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "Δήμος Πόρου (poros.gr homepage and its ekdilwseis events list) makes no mention of Κλήδονας or Άι-Γιάννης fires on 23/24 June; in2greece page 404s and saronicmagazine.com is now an unrelated domain. Only greeka.com, the recorded source, describes it."
+  },
+  {
+   "i": 2,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "poros.gr/ekdilwseis.html does show 'Γιορτή Λεμονιάς 17-31/7/25', matching the stored value, but that is the recorded source (same municipality site). No independent outlet found: saronicmagazine.com is a defunct/unrelated domain and no Argolida/Trizinia outlet was reachable through the fetcher."
+  },
+  {
+   "i": 5,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "poros.gr's events list names 'Poros Poseidonia 2026' but gives no dates, and it is the same municipality as the recorded source poseidonia.poros.gr. Running media (runningnews.gr, advendure.com, dromeis.gr) were all unreachable (robots/TLS failures), so the mid-May weekend and the 16–17 May 2026 first edition remain single-sourced."
+  }
+ ],
+ "meganisi": [
+  {
+   "i": 1,
+   "verdict": "confirmed",
+   "source2": "https://www.lefkadatoday.gr/me-lamprotita-eortastike-kai-fetos-i-mnimi-ton-protokoryfaion-apostolon-petroy-kai-payloy-ston-oikismo-katomerioy/",
+   "confidence": "high",
+   "note": "lefkadatoday.gr (independent of mylefkada.gr), published 29 June 2020: 'Με λαμπρότητα εορτάστηκε και φέτος η μνήμη των Πρωτοκορυφαίων Αποστόλων Πέτρου και Παύλου στον οικισμό Κατωμερίου' — 29 June and the village Katomeri, Meganisi, confirmed."
+  },
+  {
+   "i": 3,
+   "verdict": "confirmed",
+   "source2": "https://www.orthodoxianewsagency.gr/mitropolitiko_ergo/%ce%b9-%ce%bc-%ce%bb%ce%b5%cf%85%ba%ce%ac%ce%b4%ce%bf%cf%82-%ce%ba%ce%b1%ce%b9-%ce%b9%ce%b8%ce%ac%ce%ba%ce%b7%cf%82/oi-g-xairetismoi-ston-iero-enoriako-nao-agiou-georgiou-spartoxoriou-meganisiou/",
+   "confidence": "medium",
+   "note": "Metropolis of Lefkada and Ithaki via Orthodoxia News Agency (23.03.2025) confirms the parish church of Spartochori, Meganisi is the Ιερός Ενοριακός Ναός Αγίου Γεωργίου — so the dedication, village and hence the 23 April base date stand. No independent dated report of the feast itself was found (mylefkada.gr, the recorded source, is the only one), so medium."
+  }
+ ],
+ "sikinos": [
+  {
+   "i": 0,
+   "verdict": "confirmed",
+   "source2": "https://www.greeka.com/cyclades/sikinos/festivals/",
+   "confidence": "medium",
+   "note": "greeka: 'the festival for the Dormition of the Virgin Mary on August 15th' is among the island's celebrations — the Chora church above the village is Panagia Pantanassa. Travel-reference grade only, hence medium; no municipal or Metropolis page was reachable (imthiras.gr search returns nothing for Σίκινος)."
+  },
+  {
+   "i": 2,
+   "verdict": "unconfirmable",
+   "confidence": "medium",
+   "note": "Searched the Metropolis of Thera, Amorgos and the Islands (imthiras.gr — no results for Σίκινος), koinignomi.gr and cyclades24.gr (no Sikinos panigiri coverage), and greeka's Sikinos festivals page (lists 15 August, 6 August and 14 September, not 20 July). Only sikinos.gr, the recorded municipal source, documents the Profitis Ilias panigiri."
+  }
+ ]
+}
