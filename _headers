@@ -28,6 +28,8 @@
 # Generated data — revalidate so island content updates promptly.
 /hero-photos.json
   Cache-Control: public, max-age=0, must-revalidate
+/cost-hints.json
+  Cache-Control: public, max-age=0, must-revalidate
 /whats-on.json
   Cache-Control: public, max-age=0, must-revalidate
 

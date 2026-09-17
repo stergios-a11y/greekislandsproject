@@ -929,6 +929,36 @@ window.openFeedback = openFeedback;
 window.closeFeedback = closeFeedback;
 window.submitFeedback = submitFeedback;
 
+/* Action-bar cost pill: '≈ €1,190 · 4 days for 2 →' instead of 'Cost for 4
+   days'. The figure comes from cost-hints.json, written by prerender.py with
+   the calculator's own arithmetic and rounding at its defaults (June, mid
+   tier, 2 people, no hire car, ferry there and back), so the pill shows
+   exactly the total the reader will see after clicking. The static
+   island pages carry the same text already; this keeps it right after
+   in-app navigation to another island. */
+let _costHints = null;
+function loadCostHints() {
+  if (_costHints) return _costHints;
+  _costHints = fetch('/cost-hints.json', { cache: 'force-cache' })
+    .then(r => r.ok ? r.json() : {})
+    .catch(() => ({}));
+  return _costHints;
+}
+function fmtEur(n) {
+  const s = String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return CURRENT_LANG === 'el' ? s.replace(/,/g, '.') : s;
+}
+function setCostPillHint(btn, key) {
+  loadCostHints().then(h => {
+    const x = h && h[key];
+    if (!x || currentIslandKey !== key) return;
+    const days = x.d === 1 ? t('detail.tripcost.day1') : t('detail.tripcost.dayn').replace('{d}', x.d);
+    btn.textContent = t('detail.tripcost.hint').replace('{total}', fmtEur(x.total)).replace('{days}', days);
+    btn.title = t('detail.tripcost.title');
+    btn.dataset.total = x.total; btn.dataset.d = x.d;
+  });
+}
+
 function copyIslandLink() {
   // Island pages live at /island/<key>/ (and /el/island/...), so the hash
   // is empty there and this used to copy the homepage. Prefer the page's
@@ -2455,6 +2485,7 @@ async function renderIslandPage(key) {
     // which showed up as 200+ 'Page with redirect' URLs in Search Console.
     costBtn.href = `${CURRENT_LANG === 'el' ? '/el' : ''}/trip-cost/?i=${key}%3A${d}`;
     costBtn.textContent = t('detail.tripcost').replace('{d}', d);
+    setCostPillHint(costBtn, key);
   }
   
   // Set ferry booking link based on island

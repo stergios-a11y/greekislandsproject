@@ -116,6 +116,11 @@ const UI_TEXT = {
   'detail.bookferry': { en: '🚢 Book ferry tickets', el: '🚢 Κράτηση' },
   'detail.rentcar': { en: '🚗 Rent a car', el: '🚗 Ενοικίαση αυτοκινήτου' },
   'detail.tripcost': { en: '💶 Cost for {d} days', el: '💶 Κόστος για {d} μέρες' },
+  // Action-bar pill with the estimate baked in. {days} is already localised.
+  'detail.tripcost.hint':  { en: '💶 ≈ €{total} · {days} for 2 →', el: '💶 ≈ €{total} · {days} για 2 →' },
+  'detail.tripcost.title': { en: 'June, mid-range, 2 people, ferry from Piraeus — change any of it in the calculator', el: 'Ιούνιος, μεσαία κατηγορία, 2 άτομα, με πλοίο από τον Πειραιά — άλλαξέ τα στον υπολογιστή' },
+  'detail.tripcost.day1':  { en: '1 day', el: '1 μέρα' },
+  'detail.tripcost.dayn':  { en: '{d} days', el: '{d} μέρες' },
   'similar.title': { en: 'Islands like this one', el: 'Παρόμοια νησιά' },
   'similar.intro': { en: 'Based on character, vibe, and ferry-region.', el: 'Βάσει χαρακτήρα και περιοχής.' },
   'group.cyclades':  { en: 'Cyclades',     el: 'Κυκλάδες' },

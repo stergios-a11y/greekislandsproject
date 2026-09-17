@@ -2017,6 +2017,102 @@ def render_body(key, data, meta, lang='en'):
 # ---------------------------------------------------------------------
 # Page shell
 # ---------------------------------------------------------------------
+# --- cost hint for the action-bar pill ---------------------------------------
+# The exact figure /trip-cost/ shows at its defaults (June, mid tier, 2
+# people, the island's own day count, no hire car, ferry there and back from
+# the gateway port) — same arithmetic, same rounding — so the pill and the
+# calculator can never disagree. Baked into the static page so the number is
+# there before JS runs, and written to cost-hints.json so the SPA shows the
+# identical figure on in-app navigation.
+_COSTS = None
+def _costs():
+    global _COSTS
+    if _COSTS is None:
+        try:
+            _COSTS = json.loads((ROOT / 'costs.json').read_text(encoding='utf-8'))
+        except Exception:
+            _COSTS = {'_meta': {}, 'islands': {}}
+    return _COSTS
+
+
+_GATES = {'Piraeus': (37.942, 23.646), 'Volos': (39.362, 22.942)}
+
+
+def _haversine(a, b):
+    R = 6371.0
+    d = math.pi / 180
+    dlat = (b[0] - a[0]) * d
+    dlng = (b[1] - a[1]) * d
+    h = math.sin(dlat / 2) ** 2 + math.cos(a[0] * d) * math.cos(b[0] * d) * math.sin(dlng / 2) ** 2
+    return 2 * R * math.asin(math.sqrt(h))
+
+
+def _nm_fare_mid(km):
+    """Mirrors nmFare() in the calculator; returns the midpoint it charges."""
+    nm = km / 1.852
+    lo = min(85, max(7, round(7 + 0.33 * nm)))
+    hi = min(120, max(12, round(12 + 0.55 * nm)))
+    return (lo + hi) / 2.0
+
+
+def _rnd(n):
+    """Mirrors rnd() in the calculator."""
+    return round(n / 5) * 5 if n < 100 else round(n / 10) * 10
+
+
+def cost_hint(key, meta):
+    c = _costs()
+    isl = (c.get('islands') or {}).get(key)
+    m = c.get('_meta') or {}
+    if not isl or not isl.get('room') or not isl['room'].get('mid') or not isl.get('meal_pp_mid'):
+        return None
+    d = max(1, int(round(meta.get('days') or 3)))
+    pax = 2
+    sr = (m.get('season_room') or {}).get('jun', 0.85)
+    # Rooms: the calculator's default is no hire car; on islands that need
+    # one (car_need >= 4) it applies a 'carless central' room premium.
+    mult = float(m.get('carless_central_premium') or 1.2) if ((meta.get('car_need') or 0) >= 4 and isl.get('car_day')) else 1.0
+    rooms = isl['room']['mid'] * sr * d * mult
+    meals = isl['meal_pp_mid'] * pax * d
+    # Ferries: mainland -> island -> mainland, two legs at the midpoint fare.
+    g = meta.get('group') or ''
+    if g == 'Ionian':
+        leg = (15 + 40) / 2.0
+    else:
+        gate = _GATES['Volos'] if g == 'Sporades' else _GATES['Piraeus']
+        if meta.get('lat') is None or meta.get('lng') is None:
+            return None
+        leg = _nm_fare_mid(_haversine(gate, (meta['lat'], meta['lng'])))
+    ferries = leg * pax * 2
+    total = _rnd(ferries + rooms + meals)
+    return {'d': d, 'total': int(round(total))}
+
+
+def _fmt_eur(n, lang):
+    s = f'{n:,}'
+    return s.replace(',', '.') if lang == 'el' else s
+
+
+def cost_pill_html(key, meta, lang):
+    h = cost_hint(key, meta)
+    d0 = max(1, int(round(meta.get('days') or 3)))
+    href = f"{'/el' if lang == 'el' else ''}/trip-cost/?i={key}%3A{d0}"
+    onclick = f"track('cost_click',{{island:'{key}'}})"
+    if not h:
+        label = (f'💶 Κόστος για {d0} μέρες' if lang == 'el' else f'💶 Cost for {d0} days')
+        return f'<a class="cost-btn" id="detail-cost-btn" href="{href}" onclick="{onclick}">{label}</a>'
+    if lang == 'el':
+        days = '1 μέρα' if h['d'] == 1 else f"{h['d']} μέρες"
+        label = f"💶 ≈ €{_fmt_eur(h['total'], 'el')} · {days} για 2 →"
+        title = 'Ιούνιος, μεσαία κατηγορία, 2 άτομα, με πλοίο από τον Πειραιά — άλλαξέ τα στον υπολογιστή'
+    else:
+        days = '1 day' if h['d'] == 1 else f"{h['d']} days"
+        label = f"💶 ≈ €{_fmt_eur(h['total'], 'en')} · {days} for 2 →"
+        title = 'June, mid-range, 2 people, ferry from Piraeus — change any of it in the calculator'
+    return (f'<a class="cost-btn" id="detail-cost-btn" href="{href}" title="{title}" '
+            f'onclick="{onclick}" data-total="{h["total"]}" data-d="{h["d"]}">{label}</a>')
+
+
 def render_page(key, data, meta, lang='en'):
     _hero_url, _ = find_hero_image(data)
     """Full HTML document for one island."""
@@ -2428,6 +2524,7 @@ def render_page(key, data, meta, lang='en'):
       <div class="detail-actionbar">
         <a class="ferry-btn" id="detail-ferry-btn" target="_blank" rel="noopener" data-i18n="detail.bookferry">{'🚢 Book ferry tickets' if lang == 'en' else '🚢 Κράτηση πλοίου'}</a>
         <a class="car-btn" id="detail-car-btn" target="_blank" rel="noopener sponsored" data-i18n="detail.rentcar">{'🚗 Rent a car' if lang == 'en' else '🚗 Ενοικίαση αυτοκινήτου'}</a>
+        {cost_pill_html(key, meta, lang)}
         <p class="aff-note" data-i18n="affiliate.note"><a href="{'/privacy/#affiliate' if lang == 'en' else '/el/privacy/#affiliate'}">{'Affiliate links — they support this guide and cost you nothing.' if lang == 'en' else 'Affiliate σύνδεσμοι — στηρίζουν αυτόν τον οδηγό χωρίς κόστος για εσένα.'}</a></p>
         <span class="actionbar-spacer"></span>
         <button class="glass-ic-solid" id="detail-print-btn" onclick="printIsland()" title="{'Print' if lang == 'en' else 'Εκτύπωση'}" aria-label="{'Print' if lang == 'en' else 'Εκτύπωση'}">🖨</button>
@@ -2485,7 +2582,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=42"></script>
-<script src="{asset_prefix}script.js?v=112"></script>
+<script src="{asset_prefix}script.js?v=113"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
@@ -2964,6 +3061,11 @@ def main():
 
     # Bump BUILD_DATE in script.js so the "Last updated" footer stamp is fresh
     bump_build_date()
+
+    # Cost hints for the SPA's action-bar pill (same numbers as the static pages).
+    _hints = {k: h for k in sorted(ISLAND_META) for h in [cost_hint(k, ISLAND_META[k])] if h}
+    (ROOT / 'cost-hints.json').write_text(json.dumps(_hints, separators=(',', ':')), encoding='utf-8')
+    print(f'  cost-hints.json: {len(_hints)} islands')
 
     count = 0
     keys = []
