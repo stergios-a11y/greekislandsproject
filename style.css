@@ -1234,6 +1234,11 @@ html.dark .planner-disclaimer { background: rgba(11, 143, 172, 0.10); }
 @media (max-width: 600px) { .detail-hero-wrap, #island-hero-slot { min-height: 320px; } }
 .detail-actionbar { grid-column: 1 / -1; }
 .detail-grid > .detail-main { grid-column: 1; min-width: 0; }
+/* Every full-width grid item needs min-width:0 too: the section jump-bar's
+   chip row is ~710px of nowrap chips, and as a grid item with the default
+   min-width:auto it forced the whole page to that width on phones (the
+   track's overflow-x:auto never got a chance to scroll). Sep 2026. */
+.detail-grid > * { min-width: 0; }
 .detail-grid > .detail-sidebar { grid-column: 2; }
 
 /* Full-width hero fills the wrap edge-to-edge (wrap carries the rounding/shadow) */
@@ -2012,10 +2017,13 @@ html.dark .itin-day-btn.active {
   display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 10px 0 0; padding: 9px 0 0;
   border-top: 1px dashed var(--border); font-size: 11.5px; color: var(--ink-3);
 }
-.bc-legend > span { display: inline-flex; align-items: center; gap: 4px; }
+/* Plain inline, not inline-flex: with <b> runs inside, inline-flex turned
+   every text run into a flex item that could not wrap, and the Greek legend
+   pushed phones to 545px wide. */
+.bc-legend > span { display: inline; }
 .bc-legend b { color: var(--ink-1); font-weight: 700; }
-.bc-legend i { font-style: normal; display: inline-block; width: 9px; height: 9px; border-radius: 2px; }
-.bc-legend .bc-compass { width: 26px; height: 30px; flex: 0 0 26px; }
+.bc-legend i { font-style: normal; display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 2px; vertical-align: -1px; }
+.bc-legend .bc-compass { display: inline-block; vertical-align: middle; width: 26px; height: 30px; margin-right: 3px; }
 .bc-legend-note { flex-basis: 100%; color: var(--ink-4); }
 .bc-credit { margin: 6px 2px 0; font-size: 11px; color: var(--ink-4); line-height: 1.5; }
 .bc-credit[hidden] { display: none; }
@@ -6691,6 +6699,8 @@ html.dark .leaflet-control-scale-line {
    height changes with viewport width. On phones the chip row scrolls
    horizontally rather than wrapping to two lines and eating the screen. */
 .secnav {
+  min-width: 0;
+  max-width: 100%;
   position: sticky;
   grid-column: 1 / -1;          /* span main + sidebar, like the hero above it */
   z-index: 900;                 /* under the site header (1000) */
