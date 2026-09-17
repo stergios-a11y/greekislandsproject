@@ -1899,30 +1899,136 @@ html.dark .itin-day-btn.active {
   flex-direction: column;
   gap: 14px;
 }
+
+/* ============================================================
+   COMPACT BEACH CARD (Sep 2026) — photo beside the text, specs as
+   chips, detail behind "More", wind as a compass + one instruction.
+============================================================ */
 .beach-card {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
+  display: flex;
   transition: border-color 0.15s;
 }
 .beach-card:hover { border-color: var(--aegean-light); }
-.beach-photo-wrap {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  background: var(--marble-2);
+.bc-photo {
   position: relative;
+  flex: 0 0 190px;
+  align-self: stretch;
+  min-height: 150px;
+  background: var(--marble-2);
+  overflow: hidden;
 }
-.beach-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.bc-photo .beach-photo {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
   transition: transform 0.3s ease;
 }
-.beach-card:hover .beach-photo { transform: scale(1.03); }
+.beach-card:hover .bc-photo .beach-photo { transform: scale(1.04); }
+.bc-rank {
+  position: absolute; top: 8px; left: 8px;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: rgba(26,35,50,0.82); color: #fff;
+  font-family: var(--serif); font-weight: 700; font-size: 13px;
+  display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(2px);
+}
+.bc-rank-bare { position: static; margin: 12px 0 0 12px; flex: 0 0 24px; }
+/* Stars: solid dark pill, filled in coral, unfilled at 30% white so the
+   two can never be confused, and the number spelled out beside them. */
+.bc-rate {
+  position: absolute; bottom: 7px; left: 7px;
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3.5px 8px 3.5px 7px; border-radius: 99px;
+  background: rgba(14,20,30,0.86); backdrop-filter: blur(3px);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+.bc-rate .s { font-size: 12.5px; letter-spacing: 0.5px; line-height: 1; color: #FF8A6B; text-shadow: 0 1px 1px rgba(0,0,0,0.5); }
+.bc-rate .s .off { color: rgba(255,255,255,0.3); }
+.bc-rate .n { font-family: var(--serif); font-size: 11.5px; font-weight: 700; color: #fff; line-height: 1; padding-left: 5px; border-left: 1px solid rgba(255,255,255,0.25); }
+.bc-body { flex: 1; min-width: 0; padding: 12px 15px 13px; display: flex; flex-direction: column; gap: 7px; }
+.bc-head { display: flex; align-items: baseline; gap: 9px; flex-wrap: wrap; }
+.bc-name { font-family: var(--serif); font-size: 16.5px; font-weight: 700; color: var(--ink); margin: 0; line-height: 1.2; }
+.beach-name-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(0,0,0,0.18); text-underline-offset: 2px; }
+.beach-name-link:hover { color: var(--aegean); text-decoration-color: var(--aegean); }
+.bc-tag {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  padding: 2.5px 8px; border-radius: 99px;
+  background: var(--terra-pale); color: var(--terracotta); white-space: nowrap;
+}
+.bc-lead { margin: 0; font-size: 14.5px; line-height: 1.5; color: var(--ink-1); font-weight: 600; }
+.bc-rest { margin: 0; font-size: 13.5px; line-height: 1.6; color: var(--ink-3); display: none; }
+.beach-card.open .bc-rest { display: block; }
+.bc-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: auto; padding-top: 2px; }
+.bc-live-slot { display: contents; }
+.bc-chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 12px; line-height: 1; padding: 5px 9px; border-radius: 99px;
+  background: var(--marble-2); color: var(--ink-2); border: 1px solid transparent;
+  white-space: nowrap; cursor: help;
+}
+.bc-chip i { font-style: normal; opacity: 0.85; font-size: 12px; }
+.bc-chip.now-bad { background: #FDECE6; color: #B23A17; border-color: #F6CDBE; font-weight: 700; }
+.bc-chip.now-ok  { background: var(--olive-pale); color: #26624E; border-color: #cfe8dd; font-weight: 700; }
+.bc-livedot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex: 0 0 6px; animation: bc-pulse 2s infinite; }
+@keyframes bc-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+.bc-chip.bc-wind {
+  flex-basis: 100%; white-space: normal; line-height: 1.35; border-radius: 9px;
+  padding: 5px 10px 5px 6px; gap: 8px; font-size: 12.5px; cursor: default;
+  background: #FFF5E0; color: #6B4A00; border-color: #F3E2BD;
+}
+.bc-compass { flex: 0 0 30px; width: 30px; height: 35px; display: block; }
+.bc-chip.bc-wind .bc-compass { flex: 0 0 50px; width: 50px; height: 58px; margin: -3px 0; }
+.bc-more {
+  align-self: flex-start; background: none; border: none; padding: 2px 0 0; margin: 0;
+  cursor: pointer; font-family: var(--sans); font-size: 12.5px; font-weight: 700; color: var(--aegean-dark);
+}
+.bc-more:hover { text-decoration: underline; }
+.bc-windy { font-weight: 700; color: var(--aegean-dark); text-decoration: none; border-bottom: 1px solid rgba(11,143,172,0.35); margin-left: 6px; white-space: nowrap; }
+/* live strip */
+.bc-live {
+  display: flex; align-items: center; gap: 13px; flex-wrap: wrap;
+  padding: 11px 15px; margin: 0 0 14px;
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  background: var(--white); box-shadow: var(--shadow-sm);
+}
+.bc-live[hidden] { display: none; }
+.bc-live-arrow { flex: 0 0 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 19px; }
+.bc-live-main { min-width: 0; }
+.bc-live-k { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--ink-4); margin-bottom: 2px; }
+.bc-live-v { font-size: 15px; font-weight: 700; line-height: 1.25; }
+.bc-live-sea { font-size: 12px; color: var(--ink-3); margin-top: 1px; }
+.bc-live-src { margin-left: auto; font-size: 11.5px; color: var(--ink-4); text-align: right; }
+.bc-bftbar { display: flex; gap: 2px; margin-top: 5px; }
+.bc-bftbar span { width: 13px; height: 6px; border-radius: 2px; background: var(--ink-5); position: relative; }
+.bc-bftbar span.cur::after { content: ''; position: absolute; left: 50%; top: -5px; transform: translateX(-50%); border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid var(--ink-1); }
+/* legend + credit */
+.bc-legend {
+  display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 10px 0 0; padding: 9px 0 0;
+  border-top: 1px dashed var(--border); font-size: 11.5px; color: var(--ink-3);
+}
+.bc-legend > span { display: inline-flex; align-items: center; gap: 4px; }
+.bc-legend b { color: var(--ink-1); font-weight: 700; }
+.bc-legend i { font-style: normal; display: inline-block; width: 9px; height: 9px; border-radius: 2px; }
+.bc-legend .bc-compass { width: 26px; height: 30px; flex: 0 0 26px; }
+.bc-legend-note { flex-basis: 100%; color: var(--ink-4); }
+.bc-credit { margin: 6px 2px 0; font-size: 11px; color: var(--ink-4); line-height: 1.5; }
+.bc-credit[hidden] { display: none; }
+.bc-credit a { color: inherit; text-decoration: underline; text-decoration-color: rgba(0,0,0,0.18); }
+/* dark mode: the hard-coded chip tints go muted */
+html.dark .bc-chip.now-bad { background: #3A1A12; color: #FFB199; border-color: #5A2A1C; }
+html.dark .bc-chip.now-ok  { background: #0F2A20; color: #8FD9B8; border-color: #1F4A38; }
+html.dark .bc-chip.bc-wind { background: #2A2210; color: #F2D89A; border-color: #4A3A18; }
+html.dark .bc-compass text { fill: #E8ECF2; }
+@media (max-width: 600px) {
+  .beach-card { flex-direction: column; }
+  .bc-photo { flex: 0 0 auto; width: 100%; height: 150px; min-height: 0; }
+  .bc-body { padding: 12px 14px 14px; }
+  .bc-live-src { margin-left: 0; text-align: left; flex-basis: 100%; }
+}
 
 /* Photo credit — tiny info badge that expands on click to show full
    CC attribution. Sits in bottom-right of any positioned photo container.
@@ -2117,70 +2223,7 @@ html.dark .itin-day-btn.active {
     max-height: 80vh;
   }
 }
-.beach-card-body {
-  padding: 16px 20px 18px;
-}
-.beach-rank-name {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
-}
-.beach-rank {
-  font-family: var(--serif);
-  font-size: var(--text-section); font-weight: 600;
-  color: var(--aegean-light);
-  flex-shrink: 0; width: 32px;
-}
-.beach-name-stars { flex: 1; }
-.beach-stars {
-  font-size: var(--text-body);
-  color: var(--gold);
-  letter-spacing: 1px;
-  margin-top: 2px;
-}
-.beach-name {
-  font-family: var(--serif);
-  font-size: var(--text-body); font-weight: 600;
-  color: var(--ink); margin-bottom: 6px;
-}
-.beach-name-link {
-  color: var(--ink);
-  text-decoration: underline;
-  text-decoration-color: rgba(0,0,0,0.2);
-  text-underline-offset: 2px;
-}
-.beach-name-link:hover { color: var(--aegean); text-decoration-color: var(--aegean); }
-.beach-desc {
-  font-size: var(--text-meta); color: var(--ink-3);
-  line-height: 1.65; margin: 0 0 12px;
-}
-.beach-specs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px 16px;
-}
-.beach-spec {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-}
-.beach-spec-full {
-  grid-column: 1 / -1;
-}
-.beach-spec-label {
-  font-size: var(--text-tiny); font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.5px;
-  color: var(--ink-4);
-}
-.beach-spec-val {
-  font-size: var(--text-meta); color: var(--ink-2);
-  line-height: 1.4;
-}
 @media (max-width: 600px) {
-  .beach-card { flex-direction: column; gap: 8px; }
-  .beach-rank { font-size: var(--text-sub); }
-  .beach-specs { grid-template-columns: 1fr; }
   .itin-beaches-section { margin: 24px 0 0; }
   .itin-day-filter { padding: 10px 12px; gap: 6px; }
   .itin-day-btn { font-size: var(--text-tiny); padding: 5px 10px; }
@@ -2671,28 +2714,6 @@ html.dark .whats-on-chip:hover { border-color: var(--aegean); }
 }
 
 /* Beach community voting */
-.beach-ratings-row {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  margin-top: 4px;
-}
-.beach-rating-block {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-.beach-rating-label {
-  font-size: var(--text-tiny);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--ink-4);
-}
-@media (max-width: 600px) {
-  .beach-ratings-row { gap: 10px; }
-}
 
 .footer-copy {
   font-size: var(--text-meta);

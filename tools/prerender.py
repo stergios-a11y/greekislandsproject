@@ -448,6 +448,43 @@ _FACING_ABBREV = {'n': 'north', 'ne': 'northeast', 'e': 'east', 'se': 'southeast
                   'north-northwest': 'northwest', 'nnw': 'northwest',
                   'west-northwest': 'northwest', 'wnw': 'northwest'}
 
+# --- wind rule, mirrors beachWindRule() in script.js -------------------------
+# The exposed arc is geometry (90 degrees centred on the facing direction);
+# the Beaufort threshold is a judgement: 4 on open coast, 5 in a bay.
+_BEACH_DIRS = ['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW']
+_BEACH_DIR_WORDS = {
+    'en': {'N':'north','NNE':'north-northeast','NE':'northeast','ENE':'east-northeast','E':'east',
+           'ESE':'east-southeast','SE':'southeast','SSE':'south-southeast','S':'south','SSW':'south-southwest',
+           'SW':'southwest','WSW':'west-southwest','W':'west','WNW':'west-northwest','NW':'northwest','NNW':'north-northwest'},
+    'el': {'N':'βόρεια','NNE':'βόρεια-βορειοανατολικά','NE':'βορειοανατολικά','ENE':'ανατολικά-βορειοανατολικά',
+           'E':'ανατολικά','ESE':'ανατολικά-νοτιοανατολικά','SE':'νοτιοανατολικά','SSE':'νότια-νοτιοανατολικά',
+           'S':'νότια','SSW':'νότια-νοτιοδυτικά','SW':'νοτιοδυτικά','WSW':'δυτικά-νοτιοδυτικά','W':'δυτικά',
+           'WNW':'δυτικά-βορειοδυτικά','NW':'βορειοδυτικά','NNW':'βόρεια-βορειοδυτικά'},
+}
+_BEACH_BEARING = {'north':0,'northeast':45,'east':90,'southeast':135,'south':180,'southwest':225,'west':270,'northwest':315,
+                  'n':0,'ne':45,'e':90,'se':135,'s':180,'sw':225,'w':270,'nw':315}
+
+
+def beach_wind_rule(b, lang='en'):
+    """'Avoid visiting when the wind blows from the X to Y at over N Bft', or ''."""
+    f = str(b.get('facing') or '')
+    m = re.search(r'\b(north[- ]?east|north[- ]?west|south[- ]?east|south[- ]?west|north|south|east|west|NE|NW|SE|SW|N|S|E|W)\b', f, re.I)
+    if not m:
+        return ''
+    deg = _BEACH_BEARING.get(re.sub(r'[- ]', '', m.group(1).lower()))
+    if deg is None:
+        return ''
+    exposed = re.search(r'exposed|open to|unprotected|windy', f, re.I)
+    sheltered = (not exposed) and re.search(r'shelter|protected|in a (bay|cove)|cove|bay', f, re.I)
+    thr = 5 if sheltered else 4
+    name = lambda d: _BEACH_DIRS[round(((d % 360) + 360) % 360 / 22.5) % 16]
+    words = _BEACH_DIR_WORDS['el' if lang == 'el' else 'en']
+    lo, hi = words[name(deg - 45)], words[name(deg + 45)]
+    if lang == 'el':
+        return f'Απόφυγε την επίσκεψη όταν ο άνεμος φυσάει από {lo} έως {hi} με πάνω από {thr} μποφόρ'
+    return f'Avoid visiting when the wind blows from the {lo} to {hi} at over {thr} Bft'
+
+
 def interpret_facing(raw_facing, lang, ionian=False):
     """Turn a beach `facing` value into a traveler-friendly wind-protection
     sentence. Mirrors interpretFacing() in i18n.js. See that function for
@@ -1834,8 +1871,12 @@ def render_body(key, data, meta, lang='en'):
             btype = esc(pick(b, 'type', lang))
             blen = esc(pick(b, 'length', lang))
             bdepth = esc(pick(b, 'depth', lang))
-            bfacing = esc(interpret_facing(pick(b, 'facing', lang), lang,
-                                            ionian=(meta.get('group') == 'Ionian')))
+            # The wind row is the same instruction the SPA shows; the older
+            # meltemi sentence follows it so the fallback loses nothing.
+            _rule = beach_wind_rule(b, lang)
+            _old = interpret_facing(pick(b, 'facing', lang), lang,
+                                    ionian=(meta.get('group') == 'Ionian'))
+            bfacing = esc(_rule + ('. ' if _rule and _old else '') + _old)
             bfac = esc(pick(b, 'facilities', lang))
             bimg = seo_photo_html(b.get('photo'), pick(b, 'name', lang),
                                   credit=b.get('photo_credit'))
@@ -1848,7 +1889,7 @@ def render_body(key, data, meta, lang='en'):
     <dt>{'Type' if lang=='en' else 'Τύπος'}</dt><dd>{btype}</dd>
     <dt>{'Length' if lang=='en' else 'Μήκος'}</dt><dd>{blen}</dd>
     <dt>{'Depth' if lang=='en' else 'Βάθος'}</dt><dd>{bdepth}</dd>
-    <dt>{'Wind protection' if lang=='en' else 'Προστασία από αέρα'}</dt><dd>{bfacing}</dd>
+    <dt>{'Wind' if lang=='en' else 'Άνεμος'}</dt><dd>{bfacing}</dd>
     <dt>{'Facilities' if lang=='en' else 'Παροχές'}</dt><dd>{bfac}</dd>
   </dl>
 </article>''')
@@ -2444,7 +2485,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=42"></script>
-<script src="{asset_prefix}script.js?v=109"></script>
+<script src="{asset_prefix}script.js?v=110"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.

@@ -2715,7 +2715,7 @@ function buildIslandPage(data, key) {
       const timeHtml = s.time ? `<span class="itin-stop-time">${s.time}</span>` : '';
       const hasPhoto = !!s.photo;
       const photoHtml = hasPhoto
-        ? `<div class="itin-stop-photo-wrap">${buildLightboxImg(s.photo, s.name, s.photo_credit, 'itin-stop-photo', 'onerror="this.parentElement.style.display=\'none\'"')}${buildPhotoCredit(s.photo_credit)}</div>`
+        ? `<div class="itin-stop-photo-wrap">${buildLightboxImg(s.photo, s.name, s.photo_credit, 'itin-stop-photo', 'onerror="this.style.display=\'none\'"')}${buildPhotoCredit(s.photo_credit)}</div>`
         : '';
       return `<div class="itin-stop${hasPhoto ? ' has-photo' : ''}">
         <div class="itin-stop-num" style="background:${d.color}">${i + 1}</div>
@@ -2803,38 +2803,42 @@ function buildIslandPage(data, key) {
   }).join('');
 
   const beachCards = (data.beaches || []).map((b, i) => {
+    const esc = (v) => String(v == null ? '' : v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     const nameHtml = b.wiki
       ? `<a href="${b.wiki}" target="_blank" rel="noopener" class="beach-name-link">${pickLang(b, "name")}</a>`
       : pickLang(b, "name");
-    const photoId = `beach-photo-${i}`;
-    // Support direct photo URL (Cloudinary, Unsplash etc) OR Wikimedia commons filename
+    const rating = b.rating || 4;
     const photoHtml = b.photo
-      ? `<div class="beach-photo-wrap">${buildLightboxImg(b.photo, b.name, b.photo_credit, 'beach-photo', 'onerror="this.parentElement.parentElement.style.display=\'none\'"')}${buildPhotoCredit(b.photo_credit)}</div>`
+      ? `<div class="bc-photo">${buildLightboxImg(b.photo, b.name, b.photo_credit, 'beach-photo', 'onerror="this.style.display=\'none\'"')}${buildPhotoCredit(b.photo_credit)}` +
+        `<div class="bc-rank">${i + 1}</div>` +
+        `<div class="bc-rate" title="${t('beach.rating')}: ${rating}/5"><span class="s">${'★'.repeat(rating)}<span class="off">${'★'.repeat(5 - rating)}</span></span><span class="n">${rating}/5</span></div></div>`
+      : `<div class="bc-rank bc-rank-bare">${i + 1}</div>`;
+    const [lead, rest] = beachSplitDesc(pickLang(b, "desc"));
+    const tag = beachTag(b);
+    const w = beachWindRule(b);
+    const chips = [
+      ['⛱', beachChipShort(pickLang(b, "type"), 26), pickLang(b, "type")],
+      ['↔', beachLengthChip(pickLang(b, "length")), pickLang(b, "length")],
+      ['〰', beachDepthChip(pickLang(b, "depth")), pickLang(b, "depth")]
+    ].filter(c => c[1]).map(c => `<span class="bc-chip" title="${esc(c[2])}"><i>${c[0]}</i>${esc(c[1])}</span>`).join('');
+    const windRow = w
+      ? `<span class="bc-chip bc-wind" title="${esc(w.tip)}">${beachCompassSvg(w.deg)}<span>${esc(w.text)}</span></span>`
+      : `<span class="bc-chip" title="${esc(pickLang(b, "facing"))}"><i>➤</i>${esc(beachChipShort(pickLang(b, "facing"), 30))}</span>`;
+    const facilities = pickLang(b, "facilities");
+    const moreHtml = (rest || facilities || (w && w.boat))
+      ? `<p class="bc-rest">${esc(rest)}` +
+          (w && w.boat ? `<br><br><b>${esc(t('beach.tag.boat'))}.</b> ${esc(t('beach.boatnote'))}` : '') +
+          (facilities ? `<br><br><b>${esc(t('beach.facilities'))}.</b> ${esc(facilities)}` : '') +
+        `</p><button type="button" class="bc-more" onclick="toggleBeachMore(this)">${t('beach.more')} ▾</button>`
       : '';
     const beachId = (currentIslandKey + '_' + b.name).replace(/[^a-z0-9]/gi, '_').toLowerCase();
-    return `<div class="beach-card">
+    return `<div class="beach-card" data-beach="${beachId}">
       ${photoHtml}
-      <div class="beach-card-body">
-        <div class="beach-rank-name">
-          <div class="beach-rank">${i + 1}</div>
-          <div class="beach-name-stars">
-            <h3 class="beach-name" style="margin-top:0;line-height:inherit">${nameHtml}</h3>
-            <div class="beach-ratings-row">
-              <div class="beach-rating-block">
-                <span class="beach-rating-label">${t("detail.editorial")}</span>
-                <div class="beach-stars">${'\u2605'.repeat(b.rating || 4)}${'\u2606'.repeat(5 - (b.rating || 4))}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="beach-desc">${pickLang(b, "desc")}</p>
-        <div class="beach-specs">
-          <div class="beach-spec"><span class="beach-spec-label">${t("detail.spec.type")}</span><span class="beach-spec-val">${pickLang(b, "type")}</span></div>
-          <div class="beach-spec"><span class="beach-spec-label">${t("detail.spec.length")}</span><span class="beach-spec-val">${pickLang(b, "length")}</span></div>
-          <div class="beach-spec"><span class="beach-spec-label">${t("detail.spec.depth")}</span><span class="beach-spec-val">${pickLang(b, "depth")}</span></div>
-          <div class="beach-spec"><span class="beach-spec-label">${t("detail.spec.wind")}</span><span class="beach-spec-val">${interpretFacing(pickLang(b, "facing"), CURRENT_LANG, (ISLANDS_DATA[key]||{}).island_group)}</span></div>
-          <div class="beach-spec beach-spec-full"><span class="beach-spec-label">${t("detail.spec.facilities")}</span><span class="beach-spec-val">${pickLang(b, "facilities")}</span></div>
-        </div>
+      <div class="bc-body">
+        <div class="bc-head"><h3 class="bc-name">${nameHtml}</h3>${tag ? `<span class="bc-tag">${esc(tag)}</span>` : ''}</div>
+        <p class="bc-lead">${esc(lead)}</p>
+        <div class="bc-chips"><span class="bc-live-slot">${beachLiveChipHtml(beachLiveVerdict(b, _beachLive))}</span>${chips}${windRow}</div>
+        ${moreHtml}
       </div>
     </div>`;
   }).join('');
@@ -2897,15 +2901,26 @@ function buildIslandPage(data, key) {
       beachHeading = `Best beach in ${islandName(currentIslandKey)}`;
     }
   }
+  const _bc = beachIslandCentroid(data);
+  const windyHref = _bc ? `https://www.windy.com/?${_bc.lat.toFixed(3)},${_bc.lng.toFixed(3)},9` : 'https://www.windy.com/';
   const beachSection = beachCards ? `
     <div class="itin-beaches-section">
       <div class="itin-beaches-header">
         <h2 class="itin-beaches-title">${beachHeading}</h2>
-        <p class="itin-beaches-sub">${t("detail.beaches.sub")}</p>
+        <p class="itin-beaches-sub">${t("detail.beaches.sub")} <a class="bc-windy" href="${windyHref}" target="_blank" rel="noopener" onclick="track('wind_map_click',{island:currentIslandKey||''})">${t('beach.wind.map')}</a></p>
       </div>
       ${beachesIntroHtml}
-      <div class="itin-beaches-list">${beachCards}</div>
+      <div class="bc-live" id="beach-live" hidden></div>
+      <div class="itin-beaches-list" id="beach-list">${beachCards}</div>
+      <div class="bc-legend">
+        <span>${beachCompassSvg(0)} ${t('beach.legend.compass')}</span>
+        <span><i style="background:#2E9E6A"></i><i style="background:#F0A500"></i><i style="background:#E8802A"></i><i style="background:#E8522A"></i> ${t('beach.legend.bft')}</span>
+        <span>${t('beach.legend.live')}</span>
+        <span class="bc-legend-note">${t('beach.legend.note')}</span>
+      </div>
+      <p class="bc-credit" id="beach-live-credit" hidden>${t('beach.wind.credit')}</p>
     </div>` : '';
+  if (beachCards) setTimeout(() => loadBeachLive(data), 0);
 
   // Immersive hero: the photo carries the island name, score, tagline and quick
   // facts (replaces the old teal banner + separate photo). Falls back gracefully
@@ -2965,6 +2980,231 @@ function buildIslandPage(data, key) {
       ${buildLocalSection(data)}
       ${buildSimilarIslandsSection(key)}
     </div>`;
+}
+
+/* ============================================================================
+   COMPACT BEACH CARD + WIND (Sep 2026)
+   Replaces the 200px photo band + five stacked label/value rows. Photo sits
+   beside the text, the specs become chips, everything past the first
+   sentence goes behind "More", and the wind line becomes an instruction:
+   a compass with one arrow on the worst direction and the sentence
+   "Avoid visiting when the wind blows from the X to Y at over N Bft".
+
+   The exposed arc is geometry: a beach takes wind from the 90 degrees it
+   faces. It is derived from the English `facing` field every beach carries.
+   The Beaufort threshold is a judgement (4 Bft open coast, 5 in a bay) and
+   the legend says so once.
+============================================================================ */
+const BEACH_DIRS = ['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW'];
+const BEACH_DIR_WORDS = {
+  en: { N:'north', NNE:'north-northeast', NE:'northeast', ENE:'east-northeast', E:'east', ESE:'east-southeast',
+        SE:'southeast', SSE:'south-southeast', S:'south', SSW:'south-southwest', SW:'southwest', WSW:'west-southwest',
+        W:'west', WNW:'west-northwest', NW:'northwest', NNW:'north-northwest' },
+  el: { N:'βόρεια', NNE:'βόρεια-βορειοανατολικά', NE:'βορειοανατολικά', ENE:'ανατολικά-βορειοανατολικά', E:'ανατολικά',
+        ESE:'ανατολικά-νοτιοανατολικά', SE:'νοτιοανατολικά', SSE:'νότια-νοτιοανατολικά', S:'νότια',
+        SSW:'νότια-νοτιοδυτικά', SW:'νοτιοδυτικά', WSW:'δυτικά-νοτιοδυτικά', W:'δυτικά', WNW:'δυτικά-βορειοδυτικά',
+        NW:'βορειοδυτικά', NNW:'βόρεια-βορειοδυτικά' }
+};
+// Standard Beaufort sea descriptions, not invented. Greek names are the
+// ones the Hellenic met service and every port authority use.
+const BEACH_BFT = [
+  { en:['Calm','Glassy. Nothing moving.'],                                   el:['Άπνοια','Λάδι. Τίποτα δεν κουνιέται.'],                                  c:'#2E9E6A' },
+  { en:['Calm','Barely a ripple.'],                                          el:['Σχεδόν άπνοια','Μόλις που ρυτιδώνει.'],                                  c:'#2E9E6A' },
+  { en:['Light','Small wavelets. Perfect swimming.'],                        el:['Ασθενής','Μικρά κυματάκια. Ιδανικά για μπάνιο.'],                        c:'#4FAE7E' },
+  { en:['Light','Occasional white crest. Still easy.'],                      el:['Λεπτός','Πού και πού λευκή κορυφή. Ακόμα εύκολα.'],                      c:'#7CBB6B' },
+  { en:['Breezy','Regular whitecaps. Loose sand starts to blow.'],           el:['Μέτριος','Τακτικά προβατάκια. Αρχίζει να σηκώνεται άμμος.'],             c:'#F0A500' },
+  { en:['Fresh','Whitecaps everywhere, spray. Umbrellas start going over.'], el:['Λαμπρός','Προβατάκια παντού, ψεκασμός. Πέφτουν ομπρέλες.'],             c:'#E8802A' },
+  { en:['Strong','Large waves, constant spray. Small boats stay in port.'],  el:['Ισχυρός','Μεγάλα κύματα, συνεχής ψεκασμός. Οι βάρκες μένουν μέσα.'],    c:'#E8522A' },
+  { en:['Near gale','Sea heaps up, foam blown in streaks. Not a beach day.'],el:['Σφοδρός','Η θάλασσα φουσκώνει, αφρός σε λωρίδες. Όχι μέρα για παραλία.'],c:'#C6421F' },
+  { en:['Gale','Nobody is swimming.'],                                       el:['Θυελλώδης','Κανείς δεν κολυμπάει.'],                                     c:'#9E2D12' }
+];
+function beachBft(ms) {
+  const L = [0.5, 1.6, 3.4, 5.5, 8.0, 10.8, 13.9, 17.2];
+  for (let i = 0; i < L.length; i++) if (ms < L[i]) return i;
+  return 8;
+}
+function beachBftInfo(f) {
+  const row = BEACH_BFT[Math.min(Math.max(f, 0), 8)];
+  const lang = CURRENT_LANG === 'el' ? 'el' : 'en';
+  return { word: row[lang][0], sea: row[lang][1], color: row.c };
+}
+function beachDirName(deg) { return BEACH_DIRS[Math.round((((deg % 360) + 360) % 360) / 22.5) % 16]; }
+function beachDirWord(abbr) { return (BEACH_DIR_WORDS[CURRENT_LANG === 'el' ? 'el' : 'en'] || BEACH_DIR_WORDS.en)[abbr] || abbr; }
+
+// Bearing from the English `facing` field (always present; the Greek one
+// says the same thing in words this parser does not need to know).
+function beachBearing(b) {
+  const f = String(b.facing || '');
+  const m = f.match(/\b(north[- ]?east|north[- ]?west|south[- ]?east|south[- ]?west|north|south|east|west|NE|NW|SE|SW|N|S|E|W)\b/i);
+  if (!m) return null;
+  const k = m[1].toLowerCase().replace(/[- ]/g, '');
+  const map = { north:0, northeast:45, east:90, southeast:135, south:180, southwest:225, west:270, northwest:315,
+                n:0, ne:45, e:90, se:135, s:180, sw:225, w:270, nw:315 };
+  return (k in map) ? map[k] : null;
+}
+function beachWindRule(b) {
+  const deg = beachBearing(b);
+  if (deg === null) return null;
+  const f = String(b.facing || '');
+  // 'best on calm days' describes the fix, not the shelter: match shelter
+  // words only, and let an explicit 'exposed' win.
+  const exposed = /exposed|open to|unprotected|windy/i.test(f);
+  const sheltered = !exposed && /shelter|protected|in a (bay|cove)|cove|bay/i.test(f);
+  const thr = sheltered ? 5 : 4;
+  const lo = beachDirName(deg - 45), hi = beachDirName(deg + 45), mid = beachDirName(deg);
+  const fill = (s) => s.replace('{lo}', beachDirWord(lo)).replace('{hi}', beachDirWord(hi))
+                       .replace('{mid}', beachDirWord(mid)).replace('{n}', String(thr));
+  return {
+    deg, thr, lo, hi, mid,
+    text: fill(t('beach.avoid')),
+    tip: fill(t('beach.avoid.tip')),
+    boat: /by boat/i.test(f + ' ' + (b.facilities || ''))
+  };
+}
+// One arrow on the worst direction flying into the beach. Red = the 90
+// degrees it faces (what the sentence says). Amber = 45 either side. Green
+// = the rest, arriving over the land. N outside the ring so it never
+// collides with the arrow.
+function beachCompassSvg(deg) {
+  const pt = (a, r) => { const rad = (a - 90) * Math.PI / 180; return [14 + r * Math.cos(rad), 14 + r * Math.sin(rad)]; };
+  const band = (a1, a2, ro, ri, fill) => {
+    const o1 = pt(a1, ro), o2 = pt(a2, ro), i1 = pt(a1, ri), i2 = pt(a2, ri), big = (a2 - a1) > 180 ? 1 : 0;
+    return `<path d="M${o1[0].toFixed(2)} ${o1[1].toFixed(2)} A${ro} ${ro} 0 ${big} 1 ${o2[0].toFixed(2)} ${o2[1].toFixed(2)} L${i2[0].toFixed(2)} ${i2[1].toFixed(2)} A${ri} ${ri} 0 ${big} 0 ${i1[0].toFixed(2)} ${i1[1].toFixed(2)} Z" fill="${fill}"/>`;
+  };
+  const ro = 12.2, ri = 7.6;
+  return `<svg class="bc-compass" viewBox="0 -4.5 28 32.5" aria-hidden="true">` +
+    band(deg + 90, deg + 270, ro, ri, '#7CBB6B') +
+    band(deg - 90, deg - 45, ro, ri, '#F2C14E') + band(deg + 45, deg + 90, ro, ri, '#F2C14E') +
+    band(deg - 45, deg + 45, ro, ri, '#E8522A') +
+    `<g transform="rotate(${deg} 14 14)">` +
+      `<path d="M14 1.6 L14 8.2" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>` +
+      `<path d="M14 1.6 L14 8.2" stroke="#8E2A0F" stroke-width="1.7" stroke-linecap="round"/>` +
+      `<path d="M10.9 6.6 L14 11.2 L17.1 6.6 Z" fill="#fff"/><path d="M11.7 7.0 L14 10.4 L16.3 7.0 Z" fill="#8E2A0F"/>` +
+    `</g>` +
+    `<circle cx="14" cy="14" r="2.7" fill="#E9C99A" stroke="#B08A55" stroke-width=".8"/>` +
+    `<text x="14" y="-0.4" text-anchor="middle" font-size="5.5" font-weight="800" fill="#1A2332" font-family="sans-serif">N</text>` +
+    `</svg>`;
+}
+// Chip text = the value up to its first dash, colon or full stop. Every
+// value in the corpus front-loads the answer and qualifies after.
+function beachChipShort(v, cap) {
+  if (!v) return '';
+  let s = String(v).split(/\s*[—:;·]\s*|\.\s|,\s|\s+–\s+/)[0].trim();
+  s = s.replace(/-facing$/i, '').replace(/^Fine\s+/i, '').replace(/^Λεπτή\s+/i, '');
+  s = s.replace(/\s+(at the foot of|under|framed by|backed by|over|στη βάση|κάτω από)\b.*$/i, '');
+  if (s.length > 24) s = s.split(/\s+(and|και)\s+/)[0];
+  cap = cap || 26;
+  if (s.length > cap) s = s.slice(0, cap - 1).replace(/[\s,]+$/, '') + '…';
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+function beachLengthChip(v) {
+  // No \b after the unit: without the u flag \b treats Greek letters as
+  // non-word characters, so '300 μ.' never matched.
+  const m = String(v || '').match(/(\d[\d.,]*)\s*(km|χλμ|metres|meters|m|μ)(?![a-zα-ωά-ώ])/i);
+  if (!m) return '';
+  const km = /km|χλμ/i.test(m[2]);
+  return m[1] + ' ' + (km ? (CURRENT_LANG === 'el' ? 'χλμ' : 'km') : (CURRENT_LANG === 'el' ? 'μ.' : 'm'));
+}
+function beachDepthChip(v) {
+  const s = String(v || '').split(/\s*[—:,;·]\s*|\.\s/)[0].trim();
+  if (/^drops?\b|shelves|steep|βαθαίνει απότομα/i.test(s)) return CURRENT_LANG === 'el' ? 'Απότομο βάθος' : 'Steep drop';
+  const m = s.match(/^(very\s+)?(shallow|deep|shelving)\b/i);
+  if (m) return m[0].charAt(0).toUpperCase() + m[0].slice(1).toLowerCase();
+  return beachChipShort(s, 16);
+}
+function beachTag(b) {
+  const f = (b.facilities || '') + ' ' + (b.facing || '');
+  if (/only by boat|by boat/i.test(f)) return t('beach.tag.boat');
+  if (/rope|ladder/i.test(f)) return t('beach.tag.rope');
+  if (/^organised/i.test(b.facilities || '')) return t('beach.tag.org');
+  if (/^none\b/i.test(b.facilities || '')) return t('beach.tag.none');
+  return '';
+}
+function beachSplitDesc(d) {
+  const parts = String(d || '').split(/(?<=[.!?;])\s+/);
+  return [parts[0] || '', parts.slice(1).join(' ')];
+}
+function toggleBeachMore(btn) {
+  const card = btn.closest('.beach-card');
+  if (!card) return;
+  const open = card.classList.toggle('open');
+  btn.innerHTML = open ? `${t('beach.less')} ▴` : `${t('beach.more')} ▾`;
+  if (open) track('beach_expand', { island: currentIslandKey || '', beach: card.getAttribute('data-beach') || '' });
+}
+
+/* ---- live wind -------------------------------------------------------------
+   /api/wind is a Cloudflare Pages Function (functions/api/wind.js) that
+   proxies MET Norway with an identifying User-Agent and caches 30 minutes
+   at the edge. The client validates the shape, because on a deployment
+   without Functions the SPA fallback would answer that URL with HTML.
+   Nothing renders until real data arrives: the static rule stands alone. */
+let _beachLive = null;
+function beachIslandCentroid(data) {
+  const pts = (data.beaches || []).filter(b => typeof b.lat === 'number' && typeof b.lng === 'number');
+  if (!pts.length) return null;
+  const lat = pts.reduce((a, b) => a + b.lat, 0) / pts.length;
+  const lng = pts.reduce((a, b) => a + b.lng, 0) / pts.length;
+  return { lat: Math.round(lat * 100) / 100, lng: Math.round(lng * 100) / 100 };
+}
+function beachLiveVerdict(b, live) {
+  const w = beachWindRule(b);
+  if (!live || !w) return null;
+  const diff = Math.abs((((live.deg - w.deg) % 360) + 540) % 360 - 180);
+  const onshore = diff <= 45;
+  const force = beachBft(live.ms);
+  return { bad: onshore && force >= w.thr, onshore, force, thr: w.thr, from: beachDirWord(beachDirName(live.deg)) };
+}
+function beachLiveChipHtml(v) {
+  if (!v) return '';
+  const info = beachBftInfo(v.force);
+  const fill = (s) => s.replace('{from}', v.from).replace('{n}', String(v.force)).replace('{word}', info.word.toLowerCase())
+                       .replace('{sea}', info.sea).replace('{thr}', String(v.thr));
+  const tip = v.bad ? fill(t('beach.live.tip.bad')) : (v.onshore ? fill(t('beach.live.tip.on')) : fill(t('beach.live.tip.off')));
+  return `<span class="bc-chip ${v.bad ? 'now-bad' : 'now-ok'}" title="${tip.replace(/"/g, '&quot;')}"><span class="bc-livedot"></span>${v.bad ? t('beach.live.chop') : t('beach.live.flat')}</span>`;
+}
+function renderBeachLive(live, data) {
+  const strip = document.getElementById('beach-live');
+  const credit = document.getElementById('beach-live-credit');
+  if (!strip) return;
+  if (!live) { strip.hidden = true; if (credit) credit.hidden = true; return; }
+  const f = beachBft(live.ms), info = beachBftInfo(f), from = beachDirName(live.deg);
+  const when = new Date(live.t);
+  const hhmm = isNaN(when) ? '' : when.toUTCString().slice(17, 22);
+  let bar = '';
+  for (let i = 0; i <= 8; i++) {
+    const on = i <= f, bi = beachBftInfo(i);
+    bar += `<span class="${on ? 'f ' : ''}${i === f ? 'cur' : ''}" style="${on ? 'background:' + bi.color : ''}" title="${i} Bft — ${bi.sea.replace(/"/g, '&quot;')}"></span>`;
+  }
+  strip.innerHTML =
+    `<div class="bc-live-arrow" style="transform:rotate(${live.deg + 180}deg);background:${info.color}22;color:${info.color}" title="${beachDirWord(from)}">➤</div>` +
+    `<div class="bc-live-main"><div class="bc-live-k">${t('beach.wind.title').replace('{island}', islandName(currentIslandKey))}</div>` +
+      `<div class="bc-live-v" style="color:${info.color}">${from} <span class="bc-bft-word">${f} Bft · ${info.word}</span></div>` +
+      `<div class="bc-live-sea">${info.sea}</div><div class="bc-bftbar">${bar}</div></div>` +
+    `<div class="bc-live-src">${hhmm ? t('beach.wind.forecast').replace('{t}', hhmm) : ''}</div>`;
+  strip.hidden = false;
+  if (credit) credit.hidden = false;
+  // Re-render the live chips in place.
+  document.querySelectorAll('#beach-list .beach-card').forEach((card, i) => {
+    const b = (data.beaches || [])[i]; if (!b) return;
+    const slot = card.querySelector('.bc-live-slot'); if (!slot) return;
+    slot.innerHTML = beachLiveChipHtml(beachLiveVerdict(b, live));
+  });
+  track('wind_live', { island: currentIslandKey || '', bft: f });
+}
+function loadBeachLive(data) {
+  _beachLive = null;
+  const c = beachIslandCentroid(data);
+  if (!c || !window.fetch) return;
+  const key = currentIslandKey || '';
+  fetch(`/api/wind?i=${encodeURIComponent(key)}&lat=${c.lat}&lon=${c.lng}`, { headers: { 'Accept': 'application/json' } })
+    .then(r => (r.ok && /json/i.test(r.headers.get('content-type') || '')) ? r.json() : null)
+    .then(j => {
+      if (!j || typeof j.deg !== 'number' || typeof j.ms !== 'number') return;
+      if (currentIslandKey !== key) return;   // navigated away meanwhile
+      _beachLive = j;
+      renderBeachLive(j, data);
+    })
+    .catch(() => {});
 }
 
 /* Renders the "Good for / Skip if" orientation block. Two short lists that
