@@ -1623,7 +1623,9 @@ function renderMapRail(keys, label, photos, lang) {
   function setCollapsed(off) {
     rail.hidden = off;
     svg.style.display = off ? 'none' : '';
-    pill.style.display = off ? '' : 'none';
+    // The pill's stylesheet default is display:none, so clearing the inline
+    // style never showed it - once collapsed there was no way back.
+    pill.style.display = off ? 'inline-block' : 'none';
     railDots.forEach(d => d.setStyle({ fillOpacity: off ? 0 : 1, opacity: off ? 0 : 1 }));
     localStorage.setItem('bp-rail-off', off ? '1' : '0');
     if (!off) drawRailLeaders();
@@ -2715,7 +2717,7 @@ function buildIslandPage(data, key) {
       const timeHtml = s.time ? `<span class="itin-stop-time">${s.time}</span>` : '';
       const hasPhoto = !!s.photo;
       const photoHtml = hasPhoto
-        ? `<div class="itin-stop-photo-wrap">${buildLightboxImg(s.photo, s.name, s.photo_credit, 'itin-stop-photo', 'onerror="this.style.display=\'none\'"')}${buildPhotoCredit(s.photo_credit)}</div>`
+        ? `<div class="itin-stop-photo-wrap">${buildLightboxImg(s.photo, s.name, s.photo_credit, 'itin-stop-photo', 'onerror="this.parentElement.style.display=\'none\'"')}${buildPhotoCredit(s.photo_credit)}</div>`
         : '';
       return `<div class="itin-stop${hasPhoto ? ' has-photo' : ''}">
         <div class="itin-stop-num" style="background:${d.color}">${i + 1}</div>
@@ -2812,7 +2814,12 @@ function buildIslandPage(data, key) {
       ? `<div class="bc-photo">${buildLightboxImg(b.photo, b.name, b.photo_credit, 'beach-photo', 'onerror="this.style.display=\'none\'"')}${buildPhotoCredit(b.photo_credit)}` +
         `<div class="bc-rank">${i + 1}</div>` +
         `<div class="bc-rate" title="${t('beach.rating')}: ${rating}/5"><span class="s">${'★'.repeat(rating)}<span class="off">${'★'.repeat(5 - rating)}</span></span><span class="n">${rating}/5</span></div></div>`
-      : `<div class="bc-rank bc-rank-bare">${i + 1}</div>`;
+      : '';
+    // No photo: the rank and the stars have nowhere to sit, so they go in
+    // the title row instead - same pill, on ink instead of on the photo.
+    const inlineRank = b.photo ? '' : `<span class="bc-rank bc-rank-inline">${i + 1}</span>`;
+    const inlineRate = b.photo ? '' :
+      `<span class="bc-rate bc-rate-inline" title="${t('beach.rating')}: ${rating}/5"><span class="s">${'★'.repeat(rating)}<span class="off">${'★'.repeat(5 - rating)}</span></span><span class="n">${rating}/5</span></span>`;
     const [lead, rest] = beachSplitDesc(pickLang(b, "desc"));
     const tag = beachTag(b);
     const w = beachWindRule(b);
@@ -2835,7 +2842,7 @@ function buildIslandPage(data, key) {
     return `<div class="beach-card" data-beach="${beachId}">
       ${photoHtml}
       <div class="bc-body">
-        <div class="bc-head"><h3 class="bc-name">${nameHtml}</h3>${tag ? `<span class="bc-tag">${esc(tag)}</span>` : ''}</div>
+        <div class="bc-head">${inlineRank}<h3 class="bc-name">${nameHtml}</h3>${inlineRate}${tag ? `<span class="bc-tag">${esc(tag)}</span>` : ''}</div>
         <p class="bc-lead">${esc(lead)}</p>
         <div class="bc-chips"><span class="bc-live-slot">${beachLiveChipHtml(beachLiveVerdict(b, _beachLive))}</span>${chips}${windRow}</div>
         ${moreHtml}

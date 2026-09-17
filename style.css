@@ -1936,7 +1936,7 @@ html.dark .itin-day-btn.active {
   display: flex; align-items: center; justify-content: center;
   backdrop-filter: blur(2px);
 }
-.bc-rank-bare { position: static; margin: 12px 0 0 12px; flex: 0 0 24px; }
+
 /* Stars: solid dark pill, filled in coral, unfilled at 30% white so the
    two can never be confused, and the number spelled out beside them. */
 .bc-rate {
@@ -1949,8 +1949,11 @@ html.dark .itin-day-btn.active {
 .bc-rate .s { font-size: 12.5px; letter-spacing: 0.5px; line-height: 1; color: #FF8A6B; text-shadow: 0 1px 1px rgba(0,0,0,0.5); }
 .bc-rate .s .off { color: rgba(255,255,255,0.3); }
 .bc-rate .n { font-family: var(--serif); font-size: 11.5px; font-weight: 700; color: #fff; line-height: 1; padding-left: 5px; border-left: 1px solid rgba(255,255,255,0.25); }
+/* No photo: rank + stars sit in the title row instead (must follow .bc-rank/.bc-rate). */
+.bc-rank-inline { position: static; width: 22px; height: 22px; font-size: 12px; flex: 0 0 22px; }
+.bc-rate-inline { position: static; background: var(--ink-1); box-shadow: none; backdrop-filter: none; }
 .bc-body { flex: 1; min-width: 0; padding: 12px 15px 13px; display: flex; flex-direction: column; gap: 7px; }
-.bc-head { display: flex; align-items: baseline; gap: 9px; flex-wrap: wrap; }
+.bc-head { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
 .bc-name { font-family: var(--serif); font-size: 16.5px; font-weight: 700; color: var(--ink); margin: 0; line-height: 1.2; }
 .beach-name-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(0,0,0,0.18); text-underline-offset: 2px; }
 .beach-name-link:hover { color: var(--aegean); text-decoration-color: var(--aegean); }
@@ -6238,6 +6241,11 @@ html.dark .map-mode-toast { background: #EEF2F5; color: #171C24; }
 /* ============ Map pick rail (month's picks as polaroids, desktop) ============ */
 .rail-svg { position: absolute; inset: 0; z-index: 640; pointer-events: none; transition: opacity .2s; }
 .pick-rail { position: absolute; right: 18px; top: 74px; z-index: 650; display: flex; flex-direction: column; gap: 12px; width: 148px; }
+/* `display:flex` above outranks the UA's [hidden]{display:none}, so the X
+   button set hidden=true and nothing happened - while the leader SVG and
+   the gold dots DID hide, which read as "the dotted lines are gone". One
+   rule fixes both. */
+.pick-rail[hidden] { display: none; }
 .bp-rail-head { background: rgba(255,251,245,.96); backdrop-filter: blur(8px); border-radius: 13px; padding: 8px 12px; box-shadow: 0 6px 24px rgba(26,35,50,.22); display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .bp-rail-head b { font-family: 'Alegreya', serif; font-size: 14px; color: var(--ink-1, #1A2332); line-height: 1.2; }
 .bp-rail-x { border: 0; background: transparent; color: var(--ink-4, #A0ADB8); font-size: 14px; cursor: pointer; padding: 2px 4px; flex-shrink: 0; }
