@@ -526,6 +526,72 @@ TITLE_OVERRIDES.update({
         'Μύκονος ή Πάρος {y}: Ίδια Νυχτερινή Ζωή, Μισή Τιμή'),
 })
 
+# --- or/vs test result + hook rewrite, Sep 2026 ------------------------------
+# 28 days of GSC, fully post-test (19 Aug - 15 Sep), reproducing the salt-hash
+# assignment exactly:
+#     "or" arm  41 pages  16,932 impr  351 clicks  2.07% CTR  pos 5.75
+#     "vs" arm  41 pages  20,750 impr  481 clicks  2.32% CTR  pos 5.51
+# -0.25pp for "or", z = -1.61 (not significant), and position-adjusted against
+# the site's own CTR-by-position curve "or" indexes 65.7 against "vs" 70.3.
+# No effect worth keeping, so the experiment is retired and every English title
+# goes back to the house connector.
+#
+# The same export answered a question the test wasn't asking. Classifying every
+# compare title by hook style and indexing against predicted CTR:
+#     question hook     17 pages  11,025 impr  2.52% CTR  index  80
+#     generic promise   13 pages   5,007 impr  3.48% CTR  index 122
+#     declarative       14 pages  12,911 impr  1.60% CTR  index  48
+#     names the winner   2 pages   6,486 impr  1.40% CTR  index  40
+# A title that settles the question in the SERP removes the reason to click.
+# Rule from here: pose the choice, never name the winner in the title. The
+# rewrites below cover the twelve pages losing the most clicks against their
+# position, plus the two worst indices in the corpus.
+TITLE_OVERRIDES.update({
+    ('chania', 'rethymno'): (
+        'Chania vs Rethymno {y}: Beaches or Quiet Old Town?',
+        'Χανιά ή Ρέθυμνο {y}: Παραλίες ή Ήσυχη Παλιά Πόλη;'),
+    ('corfu', 'rhodes'): (
+        'Corfu vs Rhodes {y}: Which Old Town Wins?',
+        'Κέρκυρα ή Ρόδος {y}: Ποια Παλιά Πόλη Κερδίζει;'),
+    ('kefalonia', 'lefkada'): (
+        'Kefalonia vs Lefkada {y}: An Honest, Scored Comparison',
+        'Κεφαλονιά ή Λευκάδα {y}: Ειλικρινής Σύγκριση με Βαθμολογίες'),
+    ('kos', 'rhodes'): (
+        'Kos vs Rhodes {y}: Medieval City or Easy Beaches?',
+        'Κως ή Ρόδος {y}: Μεσαιωνική Πόλη ή Εύκολες Παραλίες;'),
+    ('kefalonia', 'zakynthos'): (
+        'Kefalonia vs Zakynthos {y}: Quiet Coves or Party Coast?',
+        'Κεφαλονιά ή Ζάκυνθος {y}: Ήσυχοι Όρμοι ή Πάρτι;'),
+    ('corfu', 'kefalonia'): (
+        'Corfu vs Kefalonia {y}: Culture or Coastline?',
+        'Κέρκυρα ή Κεφαλονιά {y}: Πολιτισμός ή Ακτογραμμή;'),
+    ('corfu', 'lefkada'): (
+        'Corfu vs Lefkada {y}: Old Town or the Beach Wall?',
+        'Κέρκυρα ή Λευκάδα {y}: Παλιά Πόλη ή Τείχος Παραλιών;'),
+    ('naxos', 'santorini'): (
+        'Naxos vs Santorini {y}: Which One Is Worth the Money?',
+        'Νάξος ή Σαντορίνη {y}: Ποιο Αξίζει τα Λεφτά;'),
+    ('aegina', 'hydra'): (
+        'Aegina vs Hydra {y}: Which Day Trip Is Worth It?',
+        'Αίγινα ή Ύδρα {y}: Ποια Ημερήσια Εκδρομή Αξίζει;'),
+    ('milos', 'naxos'): (
+        'Milos vs Naxos {y}: An Honest, Scored Comparison',
+        'Μήλος ή Νάξος {y}: Ειλικρινής Σύγκριση με Βαθμολογίες'),
+    ('rhodes', 'santorini'): (
+        'Rhodes vs Santorini {y}: Which Suits Your Week?',
+        'Ρόδος ή Σαντορίνη {y}: Ποιο Ταιριάζει στην Εβδομάδα σου;'),
+    ('mykonos', 'rhodes'): (
+        'Mykonos vs Rhodes {y}: Party or Old Town?',
+        'Μύκονος ή Ρόδος {y}: Πάρτι ή Παλιά Πόλη;'),
+    # index 14 and 20 — the two worst in the corpus, both declarative.
+    ('chania', 'heraklion'): (
+        'Chania vs Heraklion {y}: Which Crete Base Is Better?',
+        'Χανιά ή Ηράκλειο {y}: Ποια Βάση στην Κρήτη Είναι Καλύτερη;'),
+    ('ios', 'mykonos'): (
+        'Ios vs Mykonos {y}: Which Party Island Is Worth It?',
+        'Ίος ή Μύκονος {y}: Ποιο Νησί για Πάρτι Αξίζει;'),
+})
+
 def _close(text):
     # A description that ends on a dropped ';' clause should end on a full stop.
     return text[:-1].rstrip() + '.' if text.endswith(';') else text
@@ -789,7 +855,10 @@ def _or_group_set():
 
 
 def in_or_group(a, b):
-    return '__'.join(sorted([a, b])) in _or_group_set()
+    # Experiment retired Sep 2026 — see the result block above. Kept as a
+    # no-op so phrase_pair() still normalises any override written in the
+    # 'A or B {y}? hook' form back to the house connector.
+    return False
 
 
 def phrase_pair(title, name_a, name_b, use_or):
