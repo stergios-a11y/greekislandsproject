@@ -2948,6 +2948,12 @@ function buildIslandPage(data, key) {
       ${buildAudienceSections(data)}
       ${gettingThereHtml}
       ${buildWhenToVisitSection(data)}
+      ${/* Beaches sit above the itinerary, not below it. GA4 section_view for
+           Sep 2026: the day-by-day itinerary is long enough that only ~26% of
+           island-page readers ever reached the beaches block, while beaches are
+           what the GSC queries actually ask for ('best beach in <island>').
+           Moving it ahead of the day filter puts the answer before the plan. */''}
+      ${beachSection}
       <div class="itin-day-filter">
         <button class="itin-day-btn active" data-day="all" onclick="filterItinDay('all')" style="border-color:var(--ink-2);color:var(--ink-1)"><span style="color:inherit">${t("detail.alldays")}</span></button>
         ${dayBtns}
@@ -2956,7 +2962,6 @@ function buildIslandPage(data, key) {
         <div id="itin-map"></div>
       </div>
       <div class="itin-days" id="itin-days-container">${dayCards}</div>
-      ${beachSection}
       ${buildLocalSection(data)}
       ${buildSimilarIslandsSection(key)}
     </div>`;
@@ -6938,8 +6943,8 @@ const SECNAV_SECTIONS = [
   { id: 'sec-overview',  sel: '.itin-island-intro',     key: 'secnav.overview'  },
   { id: 'sec-getting',   sel: '.itin-getting-there',    key: 'secnav.getting'   },
   { id: 'sec-when',      sel: '.wtv-section',           key: 'secnav.when'      },
-  { id: 'sec-itinerary', sel: '.itin-days',             key: 'secnav.itinerary' },
   { id: 'sec-beaches',   sel: '.itin-beaches-section',  key: 'secnav.beaches'   },
+  { id: 'sec-itinerary', sel: '.itin-days',             key: 'secnav.itinerary' },
   { id: 'sec-local',     sel: '.local-section',         key: 'secnav.local'     },
   { id: 'sec-similar',   sel: '.similar-section',       key: 'secnav.similar'   },
 ];
