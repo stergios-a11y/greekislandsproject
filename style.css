@@ -1936,7 +1936,6 @@ html.dark .itin-day-btn.active {
   display: flex; align-items: center; justify-content: center;
   backdrop-filter: blur(2px);
 }
-
 /* Stars: solid dark pill, filled in coral, unfilled at 30% white so the
    two can never be confused, and the number spelled out beside them. */
 .bc-rate {
@@ -3573,9 +3572,36 @@ html.dark .top-nav.open {
   }
   
   /* Hide stops we filtered out — make sure all show in print */
-  .stop-card[style*="display: none"] {
+  .stop-card[style*="display: none"],
+  .itin-day-card[style*="display: none"] {
     display: block !important;
   }
+
+  /* --- Sep 2026 print pass, from a real Save-as-PDF of Ammouliani --- */
+  /* The hero is a CSS background image; browsers drop those in print
+     unless told not to. The page opened with a blank grey box. */
+  .isl-hero, .isl-hero-scrim, .bc-chip, .bc-rate, .bc-rank, .bc-tag, .bc-wind {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .isl-hero { min-height: 280px; break-inside: avoid; }
+  /* A PDF has no "More" button: print every beach card expanded. */
+  .beach-card .bc-rest { display: block !important; }
+  .bc-more { display: none !important; }
+  /* Live wind is a snapshot that is stale the moment the PDF is saved —
+     leave it out, keep the standing rule. Same for the live legend line. */
+  .bc-live, .bc-credit, .bc-live-slot, .bc-legend-live, .bc-windy,
+  .itin-day-filter, .wtv-caption, .secnav, #secnav, .bp-rail-pill, .seo-nav {
+    display: none !important;
+  }
+  .bc-photo { flex-basis: 150px; }
+  .bc-chip { border: 1px solid #ddd; }
+  /* Google Maps place-id URLs are noise on paper. */
+  a[href*="google.com/maps"]:after,
+  a[href*="windy.com"]:after,
+  a[href*="api.met.no"]:after,
+  a[href*="creativecommons.org"]:after,
+  .beach-name-link:after { content: "" !important; }
 }
 
 /* ============================================================

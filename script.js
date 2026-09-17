@@ -826,11 +826,34 @@ window.addEventListener('popstate', () => {
   catch(e) { showView('home', null); }
 });
 
-function printIsland() {
-  // Use the browser's native print -> Save as PDF dialog
-  // The print stylesheet (in style.css) strips nav, maps, and buttons.
-  window.print();
+// Lazy images that have not scrolled into view are not in the PDF. Before
+// printing, switch every image in the detail view to eager and wait for
+// them (capped at 4 s so a dead CDN cannot block the dialog). The print
+// stylesheet expands the beach cards and drops the live wind.
+function prepareForPrint() {
+  const root = document.getElementById('view-detail') || document;
+  const imgs = [...root.querySelectorAll('img')];
+  const pending = [];
+  imgs.forEach(img => {
+    if (img.loading === 'lazy') img.loading = 'eager';
+    if (img.decoding) img.decoding = 'sync';
+    if (!img.complete || img.naturalWidth === 0) {
+      pending.push(new Promise(res => { img.addEventListener('load', res, { once: true }); img.addEventListener('error', res, { once: true }); }));
+    }
+  });
+  return Promise.race([Promise.all(pending), new Promise(res => setTimeout(res, 4000))]);
 }
+let _printing = false;
+function printIsland() {
+  if (_printing) return;
+  _printing = true;
+  track('print', { island: currentIslandKey || '' });
+  prepareForPrint().then(() => { window.print(); }).finally(() => { _printing = false; });
+}
+// Cmd/Ctrl+P bypasses the button: eager the images on beforeprint too.
+// The dialog opens synchronously so this cannot wait, but it does mean a
+// second print (or a cancel and retry) has everything loaded.
+window.addEventListener('beforeprint', () => { prepareForPrint(); });
 
 window.printIsland = printIsland;
 
@@ -907,7 +930,16 @@ window.closeFeedback = closeFeedback;
 window.submitFeedback = submitFeedback;
 
 function copyIslandLink() {
-  const url = 'https://aegeanblueprint.com/' + window.location.hash;
+  // Island pages live at /island/<key>/ (and /el/island/...), so the hash
+  // is empty there and this used to copy the homepage. Prefer the page's
+  // canonical URL; fall back to the current path.
+  // Built from the island key rather than read from <link rel=canonical>,
+  // because SPA navigation pushes '#island/<key>' on top of whatever path
+  // the page was opened at, and the canonical tag is not rewritten.
+  const url = currentIslandKey
+    ? `https://aegeanblueprint.com${CURRENT_LANG === 'el' ? '/el' : ''}/island/${currentIslandKey}/`
+    : (location.origin + location.pathname + location.hash);
+  track('share_copy', { island: currentIslandKey || '' });
   navigator.clipboard.writeText(url).then(() => {
     const btn = document.getElementById('detail-share-btn');
     if (btn) {
@@ -2922,7 +2954,7 @@ function buildIslandPage(data, key) {
       <div class="bc-legend">
         <span>${beachCompassSvg(0)} ${t('beach.legend.compass')}</span>
         <span><i style="background:#2E9E6A"></i><i style="background:#F0A500"></i><i style="background:#E8802A"></i><i style="background:#E8522A"></i> ${t('beach.legend.bft')}</span>
-        <span>${t('beach.legend.live')}</span>
+        <span class="bc-legend-live">${t('beach.legend.live')}</span>
         <span class="bc-legend-note">${t('beach.legend.note')}</span>
       </div>
       <p class="bc-credit" id="beach-live-credit" hidden>${t('beach.wind.credit')}</p>
