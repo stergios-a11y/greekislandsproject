@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-09-17';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-09-20';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -2980,15 +2980,14 @@ function buildIslandPage(data, key) {
         <p class="itin-beaches-sub">${t("detail.beaches.sub")} <a class="bc-windy" href="${windyHref}" target="_blank" rel="noopener" onclick="track('wind_map_click',{island:currentIslandKey||''})">${t('beach.wind.map')}</a></p>
       </div>
       ${beachesIntroHtml}
-      <div class="bc-live" id="beach-live" hidden></div>
-      <div class="itin-beaches-list" id="beach-list">${beachCards}</div>
-      <div class="bc-legend">
-        <span>${beachCompassSvg(0)} ${t('beach.legend.compass')}</span>
-        <span><i style="background:#2E9E6A"></i><i style="background:#F0A500"></i><i style="background:#E8802A"></i><i style="background:#E8522A"></i> ${t('beach.legend.bft')}</span>
-        <span class="bc-legend-live">${t('beach.legend.live')}</span>
-        <span class="bc-legend-note">${t('beach.legend.note')}</span>
+      <div class="bc-windbox">
+        <div class="bc-live" id="beach-live" hidden></div>
+        <div class="bc-key" title="${t('beach.key.note')}">
+          <span>${beachCompassSvg(0)} ${t('beach.key.compass')}</span>
+          <span class="bc-key-live">${t('beach.key.live')}</span>
+        </div>
       </div>
-      <p class="bc-credit" id="beach-live-credit" hidden>${t('beach.wind.credit')}</p>
+      <div class="itin-beaches-list" id="beach-list">${beachCards}</div>
     </div>` : '';
   if (beachCards) setTimeout(() => loadBeachLive(data), 0);
 
@@ -3234,25 +3233,17 @@ function beachLiveChipHtml(v) {
 }
 function renderBeachLive(live, data) {
   const strip = document.getElementById('beach-live');
-  const credit = document.getElementById('beach-live-credit');
   if (!strip) return;
-  if (!live) { strip.hidden = true; if (credit) credit.hidden = true; return; }
+  if (!live) { strip.hidden = true; return; }
   const f = beachBft(live.ms), info = beachBftInfo(f), from = beachDirName(live.deg);
   const when = new Date(live.t);
   const hhmm = isNaN(when) ? '' : when.toUTCString().slice(17, 22);
-  let bar = '';
-  for (let i = 0; i <= 8; i++) {
-    const on = i <= f, bi = beachBftInfo(i);
-    bar += `<span class="${on ? 'f ' : ''}${i === f ? 'cur' : ''}" style="${on ? 'background:' + bi.color : ''}" title="${i} Bft — ${bi.sea.replace(/"/g, '&quot;')}"></span>`;
-  }
   strip.innerHTML =
     `<div class="bc-live-arrow" style="transform:rotate(${live.deg + 180}deg);background:${info.color}22;color:${info.color}" title="${beachDirWord(from)}">➤</div>` +
     `<div class="bc-live-main"><div class="bc-live-k">${t('beach.wind.title').replace('{island}', islandName(currentIslandKey))}</div>` +
-      `<div class="bc-live-v" style="color:${info.color}">${from} <span class="bc-bft-word">${f} Bft · ${info.word}</span></div>` +
-      `<div class="bc-live-sea">${info.sea}</div><div class="bc-bftbar">${bar}</div></div>` +
-    `<div class="bc-live-src">${hhmm ? t('beach.wind.forecast').replace('{t}', hhmm) : ''}</div>`;
+      `<div class="bc-live-v" style="color:${info.color}">${from} <span class="bc-bft-word">${f} Bft · ${info.word}</span> <span class="bc-live-sea">— ${info.sea}</span></div></div>` +
+    `<div class="bc-live-src">${hhmm ? t('beach.wind.forecast').replace('{t}', hhmm) + ' · ' : ''}${t('beach.wind.credit')}</div>`;
   strip.hidden = false;
-  if (credit) credit.hidden = false;
   // Re-render the live chips in place.
   document.querySelectorAll('#beach-list .beach-card').forEach((card, i) => {
     const b = (data.beaches || [])[i]; if (!b) return;

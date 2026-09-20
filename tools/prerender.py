@@ -2036,6 +2036,10 @@ def _costs():
 
 
 _GATES = {'Piraeus': (37.942, 23.646), 'Volos': (39.362, 22.942)}
+# Islands with their own mainland port (no Piraeus/Volos sailing) — keep in
+# step with LOCAL_PORTS in tools/build_trip_cost.py.
+_LOCAL_PORT_FARES = {'ammouliani': (3, 5), 'thasos': (4, 7), 'samothrace': (12, 18),
+                     'evia-north': (3, 5), 'evia-central': (0, 0), 'evia-south': (8, 12)}
 
 
 def _haversine(a, b):
@@ -2075,8 +2079,12 @@ def cost_hint(key, meta):
     rooms = isl['room']['mid'] * sr * d * mult
     meals = isl['meal_pp_mid'] * pax * d
     # Ferries: mainland -> island -> mainland, two legs at the midpoint fare.
+    # Mirrors LOCAL_PORTS / gateOf() in build_trip_cost.py.
     g = meta.get('group') or ''
-    if g == 'Ionian':
+    if key in _LOCAL_PORT_FARES:
+        lo_, hi_ = _LOCAL_PORT_FARES[key]
+        leg = (lo_ + hi_) / 2.0
+    elif g == 'Ionian':
         leg = (15 + 40) / 2.0
     else:
         gate = _GATES['Volos'] if g == 'Sporades' else _GATES['Piraeus']
@@ -2582,7 +2590,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=42"></script>
-<script src="{asset_prefix}script.js?v=113"></script>
+<script src="{asset_prefix}script.js?v=114"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.

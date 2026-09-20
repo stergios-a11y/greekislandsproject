@@ -1995,39 +1995,27 @@ html.dark .itin-day-btn.active {
 }
 .bc-more:hover { text-decoration: underline; }
 .bc-windy { font-weight: 700; color: var(--aegean-dark); text-decoration: none; border-bottom: 1px solid rgba(11,143,172,0.35); margin-left: 6px; white-space: nowrap; }
-/* live strip */
-.bc-live {
-  display: flex; align-items: center; gap: 13px; flex-wrap: wrap;
-  padding: 11px 15px; margin: 0 0 14px;
+/* live wind + key: one box above the list */
+.bc-windbox {
+  margin: 0 0 14px; padding: 10px 14px;
   border: 1px solid var(--border); border-radius: var(--radius-lg);
   background: var(--white); box-shadow: var(--shadow-sm);
 }
+.bc-live { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding-bottom: 9px; margin-bottom: 8px; border-bottom: 1px dashed var(--border); }
 .bc-live[hidden] { display: none; }
-.bc-live-arrow { flex: 0 0 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 19px; }
-.bc-live-main { min-width: 0; }
-.bc-live-k { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--ink-4); margin-bottom: 2px; }
-.bc-live-v { font-size: 15px; font-weight: 700; line-height: 1.25; }
-.bc-live-sea { font-size: 12px; color: var(--ink-3); margin-top: 1px; }
-.bc-live-src { margin-left: auto; font-size: 11.5px; color: var(--ink-4); text-align: right; }
-.bc-bftbar { display: flex; gap: 2px; margin-top: 5px; }
-.bc-bftbar span { width: 13px; height: 6px; border-radius: 2px; background: var(--ink-5); position: relative; }
-.bc-bftbar span.cur::after { content: ''; position: absolute; left: 50%; top: -5px; transform: translateX(-50%); border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid var(--ink-1); }
-/* legend + credit */
-.bc-legend {
-  display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 10px 0 0; padding: 9px 0 0;
-  border-top: 1px dashed var(--border); font-size: 11.5px; color: var(--ink-3);
-}
-/* Plain inline, not inline-flex: with <b> runs inside, inline-flex turned
-   every text run into a flex item that could not wrap, and the Greek legend
-   pushed phones to 545px wide. */
-.bc-legend > span { display: inline; }
-.bc-legend b { color: var(--ink-1); font-weight: 700; }
-.bc-legend i { font-style: normal; display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 2px; vertical-align: -1px; }
-.bc-legend .bc-compass { display: inline-block; vertical-align: middle; width: 26px; height: 30px; margin-right: 3px; }
-.bc-legend-note { flex-basis: 100%; color: var(--ink-4); }
-.bc-credit { margin: 6px 2px 0; font-size: 11px; color: var(--ink-4); line-height: 1.5; }
-.bc-credit[hidden] { display: none; }
-.bc-credit a { color: inherit; text-decoration: underline; text-decoration-color: rgba(0,0,0,0.18); }
+.bc-live-arrow { flex: 0 0 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 17px; }
+.bc-live-main { min-width: 0; flex: 1 1 200px; }
+.bc-live-k { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--ink-4); margin-bottom: 1px; }
+.bc-live-v { font-size: 15px; font-weight: 700; line-height: 1.3; }
+.bc-live-sea { font-size: 12.5px; font-weight: 400; color: var(--ink-3); }
+.bc-live-src { font-size: 11px; color: var(--ink-4); text-align: right; line-height: 1.4; }
+.bc-live-src a { color: inherit; text-decoration: underline; text-decoration-color: rgba(0,0,0,0.18); }
+.bc-key { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 11.5px; color: var(--ink-3); line-height: 1.6; }
+.bc-key > span { display: inline; }
+.bc-key b { color: var(--ink-1); font-weight: 700; }
+.bc-key i { font-style: normal; display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 3px; vertical-align: -1px; }
+.bc-key i.r { background: #E8522A; } .bc-key i.a { background: #F2C14E; } .bc-key i.g { background: #7CBB6B; }
+.bc-key .bc-compass { display: inline-block; vertical-align: middle; width: 24px; height: 28px; margin-right: 2px; }
 /* dark mode: the hard-coded chip tints go muted */
 html.dark .bc-chip.now-bad { background: #3A1A12; color: #FFB199; border-color: #5A2A1C; }
 html.dark .bc-chip.now-ok  { background: #0F2A20; color: #8FD9B8; border-color: #1F4A38; }
@@ -2037,7 +2025,7 @@ html.dark .bc-compass text { fill: #E8ECF2; }
   .beach-card { flex-direction: column; }
   .bc-photo { flex: 0 0 auto; width: 100%; height: 150px; min-height: 0; }
   .bc-body { padding: 12px 14px 14px; }
-  .bc-live-src { margin-left: 0; text-align: left; flex-basis: 100%; }
+  .bc-live-src { text-align: left; flex-basis: 100%; }
 }
 
 /* Photo credit — tiny info badge that expands on click to show full
@@ -3598,7 +3586,7 @@ html.dark .top-nav.open {
   .bc-more { display: none !important; }
   /* Live wind is a snapshot that is stale the moment the PDF is saved —
      leave it out, keep the standing rule. Same for the live legend line. */
-  .bc-live, .bc-credit, .bc-live-slot, .bc-legend-live, .bc-windy,
+  .bc-live, .bc-live-slot, .bc-key-live, .bc-windy,
   .itin-day-filter, .wtv-caption, .secnav, #secnav, .bp-rail-pill, .seo-nav {
     display: none !important;
   }

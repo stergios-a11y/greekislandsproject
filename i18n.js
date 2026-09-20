@@ -233,15 +233,13 @@ const UI_TEXT = {
   'beach.wind.title':  { en: 'Wind at {island} now', el: 'Άνεμος στη {island} τώρα' },
   'beach.wind.forecast': { en: 'Forecast {t} UTC', el: 'Πρόγνωση {t} UTC' },
   'beach.wind.map':    { en: 'Live wind map ↗', el: 'Ζωντανός χάρτης ανέμων ↗' },
-  'beach.wind.credit': { en: 'Wind data <a href="https://api.met.no/" target="_blank" rel="noopener">MET Norway</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>',
-                         el: 'Δεδομένα ανέμου <a href="https://api.met.no/" target="_blank" rel="noopener">MET Norway</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>' },
-  'beach.legend.compass': { en: 'The <b>arrow</b> is the worst wind, blowing onto the beach (the dot). <b>Red</b> = wind from there makes it rough, <b>amber</b> = some chop, <b>green</b> = fine. N is up.',
-                            el: 'Το <b>βέλος</b> είναι ο χειρότερος άνεμος, που φυσάει πάνω στην παραλία (η κουκκίδα). <b>Κόκκινο</b> = άνεμος από εκεί τη φουρτουνιάζει, <b>πορτοκαλί</b> = λίγο κύμα, <b>πράσινο</b> = εντάξει. Ο Βορράς επάνω.' },
-  'beach.legend.bft':  { en: '0–3 Bft calm · 4 breezy · 5 fresh · 6+ rough', el: '0–3 μποφόρ ήρεμα · 4 μέτριος · 5 λαμπρός · 6+ φουρτούνα' },
-  'beach.legend.live': { en: '🏊 <b>Flat water now</b> / 🌊 <b>Choppy now</b> = today’s wind checked against this beach',
-                         el: '🏊 <b>Ήρεμα νερά τώρα</b> / 🌊 <b>Κύμα τώρα</b> = ο σημερινός άνεμος ελεγμένος για αυτή την παραλία' },
-  'beach.legend.note': { en: 'Wind limits are our judgement from how each beach sits, not measurements. In July and August the meltemi blows from the north to northeast for days at a time — south-facing beaches are the usual answer.',
-                         el: 'Τα όρια ανέμου είναι δική μας εκτίμηση από το πώς «κάθεται» κάθε παραλία, όχι μετρήσεις. Ιούλιο και Αύγουστο το μελτέμι φυσάει από βόρεια έως βορειοανατολικά για μέρες — οι νότιες παραλίες είναι η συνηθισμένη απάντηση.' },
+  'beach.wind.credit': { en: '<a href="https://api.met.no/" target="_blank" rel="noopener">MET Norway</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>',
+                         el: '<a href="https://api.met.no/" target="_blank" rel="noopener">MET Norway</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>' },
+  // One-line key under the live strip (Sep 2026: replaced a four-line legend).
+  'beach.key.compass': { en: '<b>Arrow</b> = worst wind for that beach · <i class="r"></i>rough · <i class="a"></i>some chop · <i class="g"></i>fine',
+                         el: '<b>Βέλος</b> = ο χειρότερος άνεμος για κάθε παραλία · <i class="r"></i>φουρτούνα · <i class="a"></i>λίγο κύμα · <i class="g"></i>εντάξει' },
+  'beach.key.live':    { en: '🏊 / 🌊 = today’s wind, checked against each beach', el: '🏊 / 🌊 = ο σημερινός άνεμος, ελεγμένος για κάθε παραλία' },
+  'beach.key.note':    { en: 'Wind limits are our judgement from how each beach sits, not measurements.', el: 'Τα όρια ανέμου είναι δική μας εκτίμηση από το πώς κάθεται κάθε παραλία, όχι μετρήσεις.' },
 
   // Footer
   'footer.copyright': { en: '\u00A9 ' + new Date().getFullYear() + ' Aegean Blueprint', el: '\u00A9 ' + new Date().getFullYear() + ' Aegean Blueprint' },

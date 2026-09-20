@@ -99,6 +99,16 @@
 .tc-cta.f{background:#E8522A;color:#fff}
 .tc-cta.c{background:#0B8FAC;color:#fff}
 @media(max-width:900px){.tc-grid{grid-template-columns:1fr}.tc-sum{position:static}.tc-add{margin-left:0}}
+/* Sep 2026: on phones the total sat below five cards and two ferry rows.
+   A fixed bar keeps the answer on screen while the controls are used. */
+.tc-stick{display:none;position:fixed;left:0;right:0;bottom:0;z-index:900;background:var(--card-bg,#fff);
+  border-top:1px solid var(--border,#EAE4DC);box-shadow:0 -6px 24px rgba(26,35,50,.12);padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+  align-items:center;gap:12px;text-decoration:none}
+.tc-stick .k{font-family:'Nunito',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-4,#A0ADB8)}
+.tc-stick .v{font-family:'Nunito',sans-serif;font-weight:800;font-size:22px;color:#076880;line-height:1.1}
+.tc-stick .s{font-size:12px;color:var(--ink-3,#637080)}
+.tc-stick .go{margin-left:auto;font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;color:#fff;background:#0B8FAC;border-radius:999px;padding:9px 14px;white-space:nowrap}
+@media(max-width:900px){.tc-stick.on{display:flex} .tc-stick.on.seen{display:none} body{padding-bottom:84px}}
 .seo-footer{font-size:13px;color:var(--ink-3,#637080)}
 .seo-footer a{color:#0B8FAC;text-decoration:none}
 /* --- Aug 2026: six-step flow --- */
@@ -224,6 +234,7 @@
     </div>
 
     <div class="tc-sum" id="tc-summary"></div>
+    <a class="tc-stick" id="tc-stick" href="#tc-summary"><span><span class="k">Η εκτίμησή σου</span><br><span class="v" id="tc-stick-v"></span> <span class="s" id="tc-stick-s"></span></span><span class="go">Ανάλυση ↓</span></a>
   </div>
 </main>
 
@@ -248,6 +259,18 @@ function haversine(a,b){const R=6371,d=Math.PI/180;const dLat=(b.lat-a.lat)*d,dL
   const h=Math.sin(dLat/2)**2+Math.cos(a.lat*d)*Math.cos(b.lat*d)*Math.sin(dLng/2)**2;return 2*R*Math.asin(Math.sqrt(h));}
 function nmFare(km){const nm=km/1.852;
   return [Math.min(85,Math.max(7,Math.round(7+0.33*nm))),Math.min(120,Math.max(12,Math.round(12+0.55*nm)))];}
+// Islands reached from their own mainland port, not Piraeus or Volos. Before
+// this (Sep 2026) Ammouliani was charged a Piraeus-distance fare of ~€45 pp
+// for what is a 15-minute, €3.50 crossing from Tripiti. Typical economy
+// passenger fares, one way, per person.
+const LOCAL_PORTS={
+  'ammouliani':  {f:[3,5],   en:'Tripiti (Halkidiki)',            el:'Τρυπητή (Χαλκιδική)'},
+  'thasos':      {f:[4,7],   en:'Keramoti (Kavala)',              el:'Κεραμωτή (Καβάλα)'},
+  'samothrace':  {f:[12,18], en:'Alexandroupoli',                 el:'Αλεξανδρούπολη'},
+  'evia-north':  {f:[3,5],   en:'Arkitsa → Aidipsos',             el:'Αρκίτσα → Αιδηψός'},
+  'evia-central':{f:[0,0],   en:'by road (Chalkida bridge)',      el:'οδικώς (γέφυρα Χαλκίδας)'},
+  'evia-south':  {f:[8,12],  en:'Rafina → Marmari',               el:'Ραφήνα → Μαρμάρι'}
+};
 function gateOf(k){const g=ISL[k].g;
   if(g==='Sporades')return GATES.Volos;
   if(g==='Ionian')return null; // local mainland port, priced flat
@@ -256,7 +279,8 @@ function gateOf(k){const g=ISL[k].g;
 function legInfo(a,b){
   const isl=a==='M'?b:a, other=a==='M'?a:b;
   if(a==='M'||b==='M'){
-    const k=a==='M'?b:a, gate=gateOf(k);
+    const k=a==='M'?b:a, lp=LOCAL_PORTS[k], gate=gateOf(k);
+    if(lp)return{f:lp.f,label:lp[LANG],fly:false};
     if(!gate)return{f:[15,40],label:T.ionian_gate,fly:false};
     const f=nmFare(haversine(gate,ISL[k]));
     const fly=ISL[k].air&&f[1]>=60;
@@ -265,8 +289,8 @@ function legInfo(a,b){
   if(ISL[a].g===ISL[b].g){return{f:nmFare(haversine(ISL[a],ISL[b])),label:null,fly:false};}
   // cross-group: via mainland = two legs
   const ga=gateOf(a),gb=gateOf(b);
-  const fa=ga?nmFare(haversine(ga,ISL[a])):[15,40];
-  const fb=gb?nmFare(haversine(gb,ISL[b])):[15,40];
+  const fa=LOCAL_PORTS[a]?LOCAL_PORTS[a].f:(ga?nmFare(haversine(ga,ISL[a])):[15,40]);
+  const fb=LOCAL_PORTS[b]?LOCAL_PORTS[b].f:(gb?nmFare(haversine(gb,ISL[b])):[15,40]);
   const f=[fa[0]+fb[0],fa[1]+fb[1]];
   return{f:f,label:T.via_mainland,fly:(ISL[a].air&&ISL[b].air)};
 }
@@ -373,6 +397,7 @@ function render(){
     document.getElementById('tc-quick').innerHTML=['santorini','milos','naxos']
       .map(k=>`<button class="tc-addbtn" data-add="${k}">+ ${iname(k)}</button>`).join(' ');
     document.getElementById('tc-summary').innerHTML=`<h2>${T.estimate}</h2><div class="tc-ss">${T.empty_trip}</div>`;
+    {const st=document.getElementById('tc-stick');if(st)st.classList.remove('on');}
     sync();return;
   }
   const first=state.trip[0].k,last=state.trip[state.trip.length-1].k;
@@ -432,7 +457,7 @@ function render(){
   let fsum=0;const legs=[...(flyIn?[]:[['M',first]]),...state.trip.slice(0,-1).map((t,i)=>[t.k,state.trip[i+1].k]),...(flyOut?[]:[[last,'M']])];
   legs.forEach(([a,b])=>{fsum+=mid(legInfo(a,b).f)*state.pax;});
   if(legs.length){
-    const portOf=k=>{const g=gateOf(k);return g?g[LANG]:T.ionian_gate_s;};
+    const portOf=k=>{if(LOCAL_PORTS[k])return LOCAL_PORTS[k][LANG];const g=gateOf(k);return g?g[LANG]:T.ionian_gate_s;};
     const ports=[...new Set(legs.filter(([a,b])=>a==='M'||b==='M').map(([a,b])=>portOf(a==='M'?b:a)))];
     const portsTxt=ports.length?`${T.from_port} ${ports.join(' & ')} · `:'';
     li+=line('⛴',T.li_ferries,`${portsTxt}${legs.length} ${T.li_legs} × ${state.pax} ${T.li_pax}`,fsum,T.book_ferry,'https://www.ferryhopper.com/'+(LANG==='el'?'el/':'en/'));tot+=fsum;}
@@ -491,6 +516,11 @@ function render(){
     </div>
     <div class="tc-assume">${T.assume.replace('{month}',T.months[state.month])}</div>
     <div class="tc-honest">${T.honest}</div>`;
+  {const st=document.getElementById('tc-stick');if(st){st.classList.add('on');
+    // Hide the bar while the full estimate itself is on screen.
+    if(!window._tcIO&&window.IntersectionObserver){window._tcIO=new IntersectionObserver(es=>{es.forEach(e=>st.classList.toggle('seen',e.isIntersecting));},{threshold:0.15});window._tcIO.observe(document.getElementById('tc-summary'));}
+    document.getElementById('tc-stick-v').textContent=eur(rnd(tot));
+    document.getElementById('tc-stick-s').textContent=`${state.pax} ${T.li_pax} · ${nightsTotal} ${T.nights}`;}}
   sync();
 }
 
