@@ -2897,7 +2897,7 @@ function buildIslandPage(data, key) {
     ].filter(c => c[1]).map(c => `<span class="bc-chip" title="${esc(c[2])}"><i>${c[0]}</i>${esc(c[1])}</span>`).join('');
     const lv0 = beachLiveVerdict(b, _beachLive);
     const windRow = w
-      ? `<span class="bc-chip bc-wind${lv0 && lv0.bad ? ' is-bad' : ''}" data-face="${w.deg}" title="${esc(w.tip)}">${beachCompassSvg(w.deg, _beachLive ? _beachLive.deg : undefined, lv0 ? lv0.force : 0)}<span>${esc(w.text)}</span></span>`
+      ? `<span class="bc-chip bc-wind${lv0 && lv0.bad ? ' is-bad' : ''}" data-face="${w.deg}" title="${esc(w.tip)}">${beachCompassSvg(w.deg, _beachLive ? _beachLive.deg : undefined, lv0 ? lv0.force : 0)}<span>${esc(w.text)}<small class="bc-wind-now"${_beachLive ? '' : ' hidden'}>${t('beach.wind.arrow')}</small></span></span>`
       : `<span class="bc-chip" title="${esc(pickLang(b, "facing"))}"><i>➤</i>${esc(beachChipShort(pickLang(b, "facing"), 30))}</span>`;
     const facilities = pickLang(b, "facilities");
     const moreHtml = (rest || facilities || (w && w.boat))
@@ -2988,7 +2988,6 @@ function buildIslandPage(data, key) {
       <div class="bc-windbox">
         <div class="bc-live" id="beach-live" hidden></div>
         <div class="bc-key" title="${t('beach.key.note')}">
-          <span>${beachCompassSvg(0, 22, 5)} ${t('beach.key.compass')}</span>
           <span class="bc-key-live">${t('beach.key.bft')}</span>
         </div>
       </div>
@@ -3283,6 +3282,8 @@ function renderBeachLive(live, data) {
       const svg = row.querySelector('.bc-compass');
       if (svg) svg.outerHTML = beachCompassSvg(Number(row.dataset.face), live.deg, f);
       row.classList.toggle('is-bad', !!(v && v.bad));
+      const nowNote = row.querySelector('.bc-wind-now');
+      if (nowNote) nowNote.hidden = false;
     }
   });
   track('wind_live', { island: currentIslandKey || '', bft: f });
