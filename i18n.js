@@ -236,9 +236,10 @@ const UI_TEXT = {
   'beach.wind.credit': { en: '<a href="https://api.met.no/" target="_blank" rel="noopener">MET Norway</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>',
                          el: '<a href="https://api.met.no/" target="_blank" rel="noopener">MET Norway</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>' },
   // One-line key under the live strip (Sep 2026: replaced a four-line legend).
-  'beach.key.compass': { en: '<b>Arrow</b> = worst wind for that beach · <i class="r"></i>rough · <i class="a"></i>some chop · <i class="g"></i>fine',
-                         el: '<b>Βέλος</b> = ο χειρότερος άνεμος για κάθε παραλία · <i class="r"></i>φουρτούνα · <i class="a"></i>λίγο κύμα · <i class="g"></i>εντάξει' },
-  'beach.key.live':    { en: '🏊 / 🌊 = today’s wind, checked against each beach', el: '🏊 / 🌊 = ο σημερινός άνεμος, ελεγμένος για κάθε παραλία' },
+  'beach.key.compass': { en: '<b>Red</b> = wind from these directions makes this beach rough · <b>blue arrow</b> = the wind right now',
+                         el: '<b>Κόκκινο</b> = άνεμος από αυτές τις κατευθύνσεις φουρτουνιάζει την παραλία · <b>μπλε βέλος</b> = ο άνεμος τώρα' },
+  'beach.key.bft':     { en: '<i class="w1"></i>0–3 Bft calm · <i class="w2"></i>4–5 breezy · <i class="w3"></i>6+ rough  ·  🏊 / 🌊 = today’s wind, checked against each beach',
+                         el: '<i class="w1"></i>0–3 Bft ήρεμα · <i class="w2"></i>4–5 φυσάει · <i class="w3"></i>6+ φουρτούνα  ·  🏊 / 🌊 = ο σημερινός άνεμος, ελεγμένος για κάθε παραλία' },
   'beach.key.note':    { en: 'Wind limits are our judgement from how each beach sits, not measurements.', el: 'Τα όρια ανέμου είναι δική μας εκτίμηση από το πώς κάθεται κάθε παραλία, όχι μετρήσεις.' },
 
   // Footer

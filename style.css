@@ -1985,8 +1985,11 @@ html.dark .itin-day-btn.active {
 .bc-chip.bc-wind {
   flex-basis: 100%; white-space: normal; line-height: 1.35; border-radius: 9px;
   padding: 5px 10px 5px 6px; gap: 8px; font-size: 12.5px; cursor: default;
-  background: #FFF5E0; color: #6B4A00; border-color: #F3E2BD;
+  background: var(--marble-2); color: var(--ink-2); border-color: var(--border);
 }
+/* live wind is inside this beach's red arc right now */
+.bc-chip.bc-wind.is-bad { background: #FDECE6; color: #7A2A12; border-color: #F6CDBE; }
+html.dark .bc-chip.bc-wind.is-bad { background: #3A1A12; color: #FFB199; border-color: #5A2A1C; }
 .bc-compass { flex: 0 0 30px; width: 30px; height: 35px; display: block; }
 .bc-chip.bc-wind .bc-compass { flex: 0 0 50px; width: 50px; height: 58px; margin: -3px 0; }
 .bc-more {
@@ -2014,12 +2017,11 @@ html.dark .itin-day-btn.active {
 .bc-key > span { display: inline; }
 .bc-key b { color: var(--ink-1); font-weight: 700; }
 .bc-key i { font-style: normal; display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 3px; vertical-align: -1px; }
-.bc-key i.r { background: #E8522A; } .bc-key i.a { background: #F2C14E; } .bc-key i.g { background: #7CBB6B; }
+.bc-key i.w1 { background: #BFE3EE; } .bc-key i.w2 { background: #4FB3CF; } .bc-key i.w3 { background: #0B6E8A; }
 .bc-key .bc-compass { display: inline-block; vertical-align: middle; width: 24px; height: 28px; margin-right: 2px; }
 /* dark mode: the hard-coded chip tints go muted */
 html.dark .bc-chip.now-bad { background: #3A1A12; color: #FFB199; border-color: #5A2A1C; }
 html.dark .bc-chip.now-ok  { background: #0F2A20; color: #8FD9B8; border-color: #1F4A38; }
-html.dark .bc-chip.bc-wind { background: #2A2210; color: #F2D89A; border-color: #4A3A18; }
 html.dark .bc-compass text { fill: #E8ECF2; }
 @media (max-width: 600px) {
   .beach-card { flex-direction: column; }
