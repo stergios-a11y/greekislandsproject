@@ -939,7 +939,11 @@ window.submitFeedback = submitFeedback;
 let _costHints = null;
 function loadCostHints() {
   if (_costHints) return _costHints;
-  _costHints = fetch('/cost-hints.json', { cache: 'force-cache' })
+  // 'no-cache' = always revalidate. The first version used 'force-cache',
+  // which told the browser to keep serving its old copy regardless of the
+  // server's max-age=0 — so after the Ammouliani fare fix the static page
+  // said €340 and the SPA immediately overwrote it with a stale €610.
+  _costHints = fetch('/cost-hints.json', { cache: 'no-cache' })
     .then(r => r.ok ? r.json() : {})
     .catch(() => ({}));
   return _costHints;
