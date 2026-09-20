@@ -1136,6 +1136,12 @@ def build_structured_data(key, data, meta, lang='en'):
             "@type": "Country",
             "name": "Greece"
         },
+        "hasPart": {
+            "@type": "TouristTrip",
+            "name": (f'{name} in {len((data.get("itinerary") or {}).get("days") or [])} days' if lang == 'en'
+                     else f'{name}: πρόγραμμα {len((data.get("itinerary") or {}).get("days") or [])} ημερών'),
+            "url": (f'{SITE_URL}/island/{key}/itinerary/' if lang == 'en' else f'{SITE_URL}/el/island/{key}/programma/'),
+        },
     }
     # NOTE: aggregateRating is NOT valid on TouristDestination per schema.org.
     # Google Search Console flags it as "Invalid object type for field <parent_node>".
@@ -1842,7 +1848,10 @@ def render_body(key, data, meta, lang='en'):
   {eatdrink_html}
 </section>''')
 
-        itinerary_html = f'<section class="seo-itinerary"><h2>{heading}</h2>{"".join(day_blocks)}</section>'
+        _it_href = f'/el/island/{key}/programma/' if lang == 'el' else f'/island/{key}/itinerary/'
+        _it_link = (f'<p class="seo-itin-link"><a href="{_it_href}">'
+                    f'{"Read the day-by-day plan on its own page →" if lang == "en" else "Δες το πρόγραμμα μέρα με τη μέρα σε δική του σελίδα →"}</a></p>')
+        itinerary_html = f'<section class="seo-itinerary"><h2>{heading}</h2>{_it_link}{"".join(day_blocks)}</section>'
 
     # Beaches section
     beaches_html = ''
@@ -1881,7 +1890,7 @@ def render_body(key, data, meta, lang='en'):
             bimg = seo_photo_html(b.get('photo'), pick(b, 'name', lang),
                                   credit=b.get('photo_credit'))
             beach_blocks.append(f'''
-<article class="seo-beach">
+<article class="seo-beach" id="{re.sub(r'[^a-z0-9]', '_', f'{key}_{b.get("name") or ""}', flags=re.I).lower()}">
   <h3>{bname}</h3>
   {bimg}
   <p>{bdesc}</p>
@@ -2590,7 +2599,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=42"></script>
-<script src="{asset_prefix}script.js?v=117"></script>
+<script src="{asset_prefix}script.js?v=118"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.

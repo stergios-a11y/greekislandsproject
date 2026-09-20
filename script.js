@@ -2907,7 +2907,7 @@ function buildIslandPage(data, key) {
         `</p><button type="button" class="bc-more" onclick="toggleBeachMore(this)">${t('beach.more')} ▾</button>`
       : '';
     const beachId = (currentIslandKey + '_' + b.name).replace(/[^a-z0-9]/gi, '_').toLowerCase();
-    return `<div class="beach-card" data-beach="${beachId}">
+    return `<div class="beach-card" id="${beachId}" data-beach="${beachId}">
       ${photoHtml}
       <div class="bc-body">
         <div class="bc-head">${inlineRank}<h3 class="bc-name">${nameHtml}</h3>${inlineRate}${tag ? `<span class="bc-tag">${esc(tag)}</span>` : ''}</div>
@@ -3029,6 +3029,7 @@ function buildIslandPage(data, key) {
     <div class="itin-wrapper">
       ${islHero}
       <h2 class="itin-section-title">${pickLang(itin, "title")}</h2>
+      <p class="itin-standalone"><a href="${CURRENT_LANG === 'el' ? '/el/island/' + key + '/programma/' : '/island/' + key + '/itinerary/'}">${CURRENT_LANG === 'el' ? 'Δες το πρόγραμμα μέρα με τη μέρα σε δική του σελίδα →' : 'Read the day-by-day plan on its own page →'}</a></p>
       <p class="itin-section-sub">${pickLang(itin, "subtitle")}</p>
       ${introHtml}
       ${clusterBlockHtml(key)}

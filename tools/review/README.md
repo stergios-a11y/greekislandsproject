@@ -17,7 +17,7 @@ python3 tools/review/05_apply_visited.py  # fold visited.json into islands/*.jso
 Then the usual chain:
 
 ```
-for f in build_costs build_trip_cost og prerender build_compare_pages \
+for f in build_costs build_trip_cost og prerender build_itineraries build_compare_pages \
          build_festival_extras build_festivals build_match_page build_collections; do
   python3 tools/$f.py || echo "FAIL $f"
 done
