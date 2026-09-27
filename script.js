@@ -1653,6 +1653,9 @@ function renderMapRail(keys, label, photos, lang) {
   if (!keys.length) return;
   const meta = (typeof ISLANDS_DATA !== 'undefined') ? ISLANDS_DATA : {};
   const collapsed = localStorage.getItem('bp-rail-off') === '1';
+  // Stack the cards north-to-south so the leader lines run roughly parallel
+  // instead of crossing (the rail sits on the right edge, cards in a column).
+  keys = keys.filter(k => meta[k]).sort((a, b) => meta[b].lat - meta[a].lat);
 
   // gold dots at real coordinates (once)
   railDots.forEach(d => mapInstance.removeLayer(d));
