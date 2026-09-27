@@ -136,7 +136,7 @@ STR = {
         'own_car': '🚗 Bringing my own car', 'own_car_s': '— vehicle fare on every ferry leg, no hire car',
         'skip_tr': 'Transport already booked — leave ferries and flights out of the total',
         'not_counted': 'not counted',
-        'lbl_around': 'Get around', 'veh_walk': '🚶 Walk', 'veh_scoot': '🛵 Scooter', 'veh_hire': '🚗 Hire car', 'veh_ownc': '🚗 Own car',
+        'lbl_around': 'Get around', 'veh_walk': '🚶 Walk', 'veh_scoot': '🛵 Scooter', 'veh_hire': '🚗 Hire car', 'veh_ownc': '🚙 Own car', 'veh_ownc_t': 'Bring my own car on the ferry — applies to the whole trip',
         'when_who': 'When & who', 'travellers': 'Travellers',
         's1': 'When do you leave?', 's1_s': 'exact start date — prices and ferry legs follow it',
         's2': 'How many of you?', 's3': 'What kind of trip?',
@@ -219,7 +219,7 @@ STR = {
         'own_car': '🚗 Φέρνω το αυτοκίνητό μου', 'own_car_s': '— ναύλος οχήματος σε κάθε σκέλος, χωρίς ενοικίαση',
         'skip_tr': 'Έχω ήδη εισιτήρια — άφησε πλοία και πτήσεις εκτός συνόλου',
         'not_counted': 'δεν μετράει',
-        'lbl_around': 'Μετακίνηση', 'veh_walk': '🚶 Πεζός', 'veh_scoot': '🛵 Σκούτερ', 'veh_hire': '🚗 Ενοικίαση', 'veh_ownc': '🚗 Δικό μου αυτοκίνητο',
+        'lbl_around': 'Μετακίνηση', 'veh_walk': '🚶 Πεζός', 'veh_scoot': '🛵 Σκούτερ', 'veh_hire': '🚗 Ενοικίαση', 'veh_ownc': '🚙 Δικό μου', 'veh_ownc_t': 'Φέρνω το αυτοκίνητό μου με το πλοίο — ισχύει για όλο το ταξίδι',
         'when_who': 'Πότε & ποιοι', 'travellers': 'Ταξιδιώτες',
         's1': 'Πότε φεύγεις;', 's1_s': 'ακριβής ημερομηνία — οι τιμές και τα δρομολόγια την ακολουθούν',
         's2': 'Πόσοι είστε;', 's3': 'Τι είδους ταξίδι;',
@@ -321,7 +321,7 @@ def render_page(lang, meta, data):
         'assume', 'honest', 'guide', 'remove', 'book_room',
         'swaps_title', 'swaps_sub', 'swap_save', 'swap_more', 'swap_apply', 'swap_instead', 'swap_overall', 'swap_beach',
         'tier_budget', 'tier_mid', 'tier_comfort',
-        'not_counted', 'veh_walk', 'veh_scoot', 'veh_hire', 'veh_ownc', 'lbl_around', 'gt_fly_off', 'gt_fly_s', 'exact_link', 'exact_close',
+        'not_counted', 'veh_walk', 'veh_scoot', 'veh_hire', 'veh_ownc', 'veh_ownc_t', 'lbl_around', 'gt_fly_off', 'gt_fly_s', 'exact_link', 'exact_close',
     )}
     js_t['months'] = t['months']
 
@@ -463,15 +463,12 @@ def render_page(lang, meta, data):
 .tc-gopt input{{accent-color:#0B8FAC;margin-right:4px}}
 .tc-gopt small{{display:block;margin:3px 0 0 22px;color:var(--ink-4,#A0ADB8);font-size:12px;font-weight:600}}
 .tc-gopt.off{{opacity:.55}}
-.tc-gopt:not(.on) .tc-subopt{{display:none}}   /* the own-car toggle exists only under Ferry */
-.tc-subopt{{margin:8px 0 0 22px;padding:6px 10px;border-left:2px solid #C8EEF5}}
-.tc-subopt .tc-sw{{color:var(--ink-2,#2E3D50)}}
-.tc-subopt .tc-sw small{{font-weight:600;color:var(--ink-4,#A0ADB8)}}
 .tc-seg button{{font-size:12.5px;font-weight:700;padding:5px 10px;color:var(--ink-3,#637080)}}
 .tc-seg button.on{{color:#076880}}
-.tc-vlbl{{display:inline-flex;align-items:center;gap:8px}}
+.tc-vlbl{{display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;max-width:100%}}
+.tc-vlbl .tc-seg{{flex-wrap:wrap;border-radius:14px;max-width:100%}}
+@media(max-width:480px){{.tc-card{{flex-wrap:wrap}}.tc-card img{{width:64px;height:64px}}.tc-vlbl{{display:flex;width:100%}}.tc-vlbl .tc-seg{{display:grid;grid-template-columns:1fr 1fr;width:100%}}.tc-seg button{{padding:6px 8px;font-size:12px;text-align:center}}}}
 .tc-vlbl>small{{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-4,#A0ADB8)}}
-.tc-own{{font-size:12.5px;font-weight:700;color:#076880;background:rgba(232,247,251,.9);border-radius:999px;padding:6px 12px}}
 .tc-li.nc .amt{{text-decoration:line-through;color:var(--ink-4,#A0ADB8)}}
 .tc-li.nc .lbl small b{{color:#C6421F;font-weight:800}}
 .tc-tot{{margin-top:0;margin-bottom:2px}}
@@ -555,9 +552,7 @@ def render_page(lang, meta, data):
         <div class="tc-gtwrap">
           <div class="tc-subl">{t['lbl_gt']}</div>
           <div class="tc-gt" id="tc-gt">
-            <label class="tc-gopt on" data-gt="ferry"><input type="radio" name="tc-gt" value="ferry" checked> <b>{t['gt_ferry']}</b><small>{t['gt_ferry_s']}</small>
-              <div class="tc-subopt"><span class="tc-sw" id="tc-own"><span class="s"></span> <b>{t['own_car']}</b> <small>{t['own_car_s']}</small></span></div>
-            </label>
+            <label class="tc-gopt on" data-gt="ferry"><input type="radio" name="tc-gt" value="ferry" checked> <b>{t['gt_ferry']}</b><small>{t['gt_ferry_s']}</small></label>
             <label class="tc-gopt" data-gt="fly"><input type="radio" name="tc-gt" value="fly"> <b>{t['gt_fly']}</b><small id="tc-fly-s">{t['gt_fly_s']}</small></label>
           </div>
           <div class="tc-advrow" style="margin-top:12px">
@@ -729,7 +724,6 @@ function render(){{
   document.querySelectorAll('#tc-tiers .tc-chip').forEach(c=>c.classList.toggle('on',c.dataset.t===state.tier));
   document.getElementById('tc-noneu').classList.toggle('on',state.nonEU);
   document.getElementById('tc-skip').classList.toggle('on',state.skip);
-  document.getElementById('tc-own').classList.toggle('on',state.own);
   {{const f0=state.trip[0],l0=state.trip[state.trip.length-1];
    const canFly=!!(state.trip.length&&(ISL[f0.k].air||ISL[l0.k].air));
    document.querySelectorAll('#tc-gt .tc-gopt').forEach(o=>{{const fly=o.dataset.gt==='fly';
@@ -765,7 +759,7 @@ function render(){{
         <div class="tc-cs">${{T.rooms_per_night}} ${{eur(rnd(rn))}}${{T.per_night}} · ${{ld?fmtD(ld[0])+' – '+fmtD(ld[1]):T.months[state.month]}} · <a href="${{bookUrl(i)}}" target="_blank" rel="noopener sponsored" style="color:#076880;font-weight:700;text-decoration:none">${{T.book_room}}</a></div>
         <div class="tc-cc">
           <span class="tc-n"><button data-a="n-" data-i="${{i}}">−</button> ${{t.n}} ${{t.n===1?T.night:T.nights}} <button data-a="n+" data-i="${{i}}">+</button></span>
-          ${{(isl.car&&!state.own)?`<span class="tc-vlbl"><small>${{T.lbl_around}}</small><span class="tc-seg"><button class="${{!t.v?'on':''}}" data-a="veh" data-v="" data-i="${{i}}">${{T.veh_walk}}</button><button class="${{t.v==='m'?'on':''}}" data-a="veh" data-v="m" data-i="${{i}}">${{T.veh_scoot}}</button><button class="${{t.v==='c'?'on':''}}" data-a="veh" data-v="c" data-i="${{i}}">${{T.veh_hire}}</button></span></span>`:(isl.car&&state.own?`<span class="tc-own">${{T.veh_ownc}}</span>`:'')}}
+          ${{isl.car?`<span class="tc-vlbl"><small>${{T.lbl_around}}</small><span class="tc-seg"><button class="${{(!t.v&&!state.own)?'on':''}}" data-a="veh" data-v="" data-i="${{i}}">${{T.veh_walk}}</button><button class="${{(t.v==='m'&&!state.own)?'on':''}}" data-a="veh" data-v="m" data-i="${{i}}">${{T.veh_scoot}}</button><button class="${{(t.v==='c'&&!state.own)?'on':''}}" data-a="veh" data-v="c" data-i="${{i}}">${{T.veh_hire}}</button><button class="${{state.own?'on':''}}" data-a="veh" data-v="own" data-i="${{i}}" title="${{T.veh_ownc_t}}">${{T.veh_ownc}}</button></span></span>`:''}}
           ${{isl.boat?`<span class="tc-sw ${{t.b?'on':''}}" data-a="boat" data-i="${{i}}"><span class="s"></span> ${{T.boat_day}} <small>€${{isl.boat.pp}} pp</small></span>`:''}}
         </div>
         ${{(!state.own&&!t.v&&isl.cn>=4&&isl.car)?`<div class="tc-warn">${{T.carless_note.replace('{{n}}',iname(t.k)).replace('{{p}}',Math.round((CFG.carless_central_premium-1)*100))}}</div>`:''}}
@@ -920,9 +914,8 @@ document.getElementById('tc-date').addEventListener('change',e=>{{const v=e.targ
 document.getElementById('tc-tiers').addEventListener('click',e=>{{const c=e.target.closest('.tc-chip');if(c){{state.tier=c.dataset.t;render();}}}});
 document.getElementById('tc-noneu').addEventListener('click',()=>{{state.nonEU=!state.nonEU;render();}});
 document.getElementById('tc-skip').addEventListener('click',()=>{{state.skip=!state.skip;render();}});
-// Getting there: Ferry (with the own-car toggle nested inside it) or Fly.
+// Getting there: Ferry or Fly. Own car lives in each island's vehicle row (trip-wide).
 document.getElementById('tc-gt').addEventListener('click',e=>{{
-  if(e.target.closest('#tc-own')){{e.preventDefault();state.own=!state.own;if(state.own)state.fly=false;render();return;}}
   const o=e.target.closest('.tc-gopt');if(!o)return;
   if(o.dataset.gt==='fly'){{if(o.classList.contains('off'))return;state.fly=true;state.own=false;}}else state.fly=false;
   render();}});
@@ -932,7 +925,7 @@ document.getElementById('tc-route').addEventListener('click',e=>{{
   const el=e.target.closest('[data-a]');if(!el)return;const i=+el.dataset.i,t=state.trip[i];
   if(el.dataset.a==='n-')t.n=Math.max(1,t.n-1);
   else if(el.dataset.a==='n+')t.n=Math.min(14,t.n+1);
-  else if(el.dataset.a==='veh')t.v=el.dataset.v;
+  else if(el.dataset.a==='veh'){{if(el.dataset.v==='own'){{state.own=true;state.fly=false;}}else{{state.own=false;t.v=el.dataset.v;}}}}
   else if(el.dataset.a==='boat')t.b=!t.b;
   else if(el.dataset.a==='rm')state.trip.splice(i,1);
   render();}});
