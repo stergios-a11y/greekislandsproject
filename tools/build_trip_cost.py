@@ -125,7 +125,18 @@ STR = {
         'title': 'Greek Island Trip Cost: Ferries, Rooms, Car, Food',
         'desc': 'Build your island route and get an honest cost estimate: ferry fares, room prices by month, car hire, food — for all 88 Greek islands. No fake precision.',
         'h1': 'What will your island trip cost?',
-        'sub': 'Six quick questions and you get an honest estimate — ferry fares from real distances, room prices for your actual dates, no fake precision. Start with one island; add more if you are hopping.',
+        'sub': 'An honest estimate for your route — real ferry distances, typical room and taverna prices, no fake precision. Adjust anything below and it updates.',
+        'your_trip': '🗺 Your trip', 'your_trip_s': 'tap ✕ to remove an island',
+        'settings': '⚙️ Trip settings', 'lbl_month': 'Month', 'lbl_trav': 'Travellers', 'lbl_style': 'Style',
+        'exact_link': '📅 Exact dates instead ▾', 'exact_close': '📅 Month only ▴',
+        'lbl_gt': 'Getting there',
+        'gt_ferry': '⛴ Ferry', 'gt_ferry_s': 'passenger fares from the mainland ports',
+        'gt_fly': '✈ Fly where possible', 'gt_fly_s': 'airport islands get the flight fare, the rest stay on the ferry · no car option',
+        'gt_fly_off': 'no airport on your first or last island — ferry only',
+        'own_car': '🚗 Bringing my own car', 'own_car_s': '— vehicle fare on every ferry leg, no hire car',
+        'skip_tr': 'Transport already booked — leave ferries and flights out of the total',
+        'not_counted': 'not counted',
+        'lbl_around': 'Get around', 'veh_walk': '🚶 Walk', 'veh_scoot': '🛵 Scooter', 'veh_hire': '🚗 Hire car', 'veh_ownc': '🚗 Own car',
         'when_who': 'When & who', 'travellers': 'Travellers',
         's1': 'When do you leave?', 's1_s': 'exact start date — prices and ferry legs follow it',
         's2': 'How many of you?', 's3': 'What kind of trip?',
@@ -197,7 +208,18 @@ STR = {
         'title': 'Κόστος Ταξιδιού στα Νησιά: Πλοία, Δωμάτια, Αυτοκίνητο',
         'desc': 'Φτιάξε τη διαδρομή σου και δες μια ειλικρινή εκτίμηση κόστους: εισιτήρια πλοίων, δωμάτια ανά μήνα, ενοικίαση αυτοκινήτου, φαγητό — και για τα 88 νησιά.',
         'h1': 'Πόσο θα κοστίσει το ταξίδι σου στα νησιά;',
-        'sub': 'Έξι γρήγορες ερωτήσεις και έχεις μια ειλικρινή εκτίμηση — ναύλα από πραγματικές αποστάσεις, τιμές δωματίων για τις δικές σου ημερομηνίες, χωρίς ψεύτικη ακρίβεια. Ξεκίνα με ένα νησί και πρόσθεσε κι άλλα αν κάνεις νησοπορία.',
+        'sub': 'Μια ειλικρινής εκτίμηση για τη διαδρομή σου — πραγματικές αποστάσεις πλοίων, τυπικές τιμές δωματίων και ταβέρνας, χωρίς ψεύτικη ακρίβεια. Άλλαξε ό,τι θέλεις παρακάτω και ενημερώνεται.',
+        'your_trip': '🗺 Το ταξίδι σου', 'your_trip_s': 'πάτα ✕ για να αφαιρέσεις νησί',
+        'settings': '⚙️ Ρυθμίσεις ταξιδιού', 'lbl_month': 'Μήνας', 'lbl_trav': 'Ταξιδιώτες', 'lbl_style': 'Στυλ',
+        'exact_link': '📅 Ακριβείς ημερομηνίες ▾', 'exact_close': '📅 Μόνο μήνας ▴',
+        'lbl_gt': 'Πώς πας',
+        'gt_ferry': '⛴ Πλοίο', 'gt_ferry_s': 'εισιτήρια επιβατών από τα λιμάνια της στεριάς',
+        'gt_fly': '✈ Αεροπορικώς όπου γίνεται', 'gt_fly_s': 'τα νησιά με αεροδρόμιο χρεώνονται πτήση, τα υπόλοιπα πλοίο · χωρίς επιλογή αυτοκινήτου',
+        'gt_fly_off': 'χωρίς αεροδρόμιο στο πρώτο ή στο τελευταίο νησί — μόνο πλοίο',
+        'own_car': '🚗 Φέρνω το αυτοκίνητό μου', 'own_car_s': '— ναύλος οχήματος σε κάθε σκέλος, χωρίς ενοικίαση',
+        'skip_tr': 'Έχω ήδη εισιτήρια — άφησε πλοία και πτήσεις εκτός συνόλου',
+        'not_counted': 'δεν μετράει',
+        'lbl_around': 'Μετακίνηση', 'veh_walk': '🚶 Πεζός', 'veh_scoot': '🛵 Σκούτερ', 'veh_hire': '🚗 Ενοικίαση', 'veh_ownc': '🚗 Δικό μου αυτοκίνητο',
         'when_who': 'Πότε & ποιοι', 'travellers': 'Ταξιδιώτες',
         's1': 'Πότε φεύγεις;', 's1_s': 'ακριβής ημερομηνία — οι τιμές και τα δρομολόγια την ακολουθούν',
         's2': 'Πόσοι είστε;', 's3': 'Τι είδους ταξίδι;',
@@ -299,6 +321,7 @@ def render_page(lang, meta, data):
         'assume', 'honest', 'guide', 'remove', 'book_room',
         'swaps_title', 'swaps_sub', 'swap_save', 'swap_more', 'swap_apply', 'swap_instead', 'swap_overall', 'swap_beach',
         'tier_budget', 'tier_mid', 'tier_comfort',
+        'not_counted', 'veh_walk', 'veh_scoot', 'veh_hire', 'veh_ownc', 'lbl_around', 'gt_fly_off', 'gt_fly_s', 'exact_link', 'exact_close',
     )}
     js_t['months'] = t['months']
 
@@ -415,7 +438,9 @@ def render_page(lang, meta, data):
    A fixed bar keeps the answer on screen while the controls are used. */
 .tc-stick{{display:none;position:fixed;left:0;right:0;bottom:0;z-index:900;background:var(--card-bg,#fff);
   border-top:1px solid var(--border,#EAE4DC);box-shadow:0 -6px 24px rgba(26,35,50,.12);padding:10px 16px calc(10px + env(safe-area-inset-bottom));
-  align-items:center;gap:12px;text-decoration:none}}
+  align-items:center;gap:12px;text-decoration:none;box-sizing:border-box;width:100%;max-width:100vw}}
+.tc-stick>span:first-child{{min-width:0;flex:1 1 auto}}
+.tc-stick .go{{flex:0 0 auto}}
 .tc-stick .k{{font-family:'Nunito',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-4,#A0ADB8)}}
 .tc-stick .v{{font-family:'Nunito',sans-serif;font-weight:800;font-size:22px;color:#076880;line-height:1.1}}
 .tc-stick .s{{font-size:12px;color:var(--ink-3,#637080)}}
@@ -423,15 +448,34 @@ def render_page(lang, meta, data):
 @media(max-width:900px){{.tc-stick.on{{display:flex}} .tc-stick.on.seen{{display:none}} body{{padding-bottom:84px}}}}
 .seo-footer{{font-size:13px;color:var(--ink-3,#637080)}}
 .seo-footer a{{color:#0B8FAC;text-decoration:none}}
-/* --- Aug 2026: six-step flow --- */
-.tc-step-c{{border:1.5px solid var(--line,#DFE6EC);border-radius:16px;background:var(--card,#fff);padding:16px 18px;margin:0 0 12px}}
-.tc-step-c[hidden]{{display:none!important}}
-.tc-step-c>h3,.tc-step-c>summary{{margin:0 0 12px;font-size:16px;font-weight:800;display:flex;align-items:center;gap:10px;flex-wrap:wrap;list-style:none;cursor:default}}
-.tc-step-c>summary{{cursor:pointer;margin-bottom:0}}
-.tc-step-c>summary::-webkit-details-marker{{display:none}}
-.tc-step-c[open]>summary{{margin-bottom:12px}}
-.tc-step-c>h3>i,.tc-step-c>summary>i{{font-style:normal;flex:none;width:24px;height:24px;border-radius:50%;background:#0B8FAC;color:#fff;font-size:13px;display:inline-flex;align-items:center;justify-content:center}}
-.tc-step-c>h3>small,.tc-step-c>summary>small{{flex:1 1 100%;font-size:12.5px;font-weight:600;color:var(--ink-4,#A0ADB8);margin-left:34px}}
+.tc-h{{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;font-size:15px!important;letter-spacing:0!important;text-transform:none!important;color:var(--ink-1,#1A2332)!important}}
+.tc-h small{{margin-left:auto;font-size:12px;font-weight:600;color:var(--ink-4,#A0ADB8)}}
+.tc-addrow{{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px;position:relative}}
+.tc-grid>div{{min-width:0}}
+.tc-addrow .tc-f-isl{{flex:1 1 200px;max-width:100%}}
+.tc-srow-top{{gap:18px 26px;align-items:flex-start}}
+.tc-daterow{{margin-top:8px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}}
+.tc-date[hidden]{{display:none}}
+.tc-gtwrap{{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line,#E4EBF0)}}
+.tc-gt{{display:flex;flex-direction:column;gap:8px}}
+.tc-gopt{{display:block;border:1.5px solid rgba(26,35,50,.13);border-radius:12px;padding:10px 12px;background:var(--card-bg,#fff);font-size:13.5px;color:var(--ink-2,#2E3D50);cursor:pointer}}
+.tc-gopt.on{{border-color:#0B8FAC;background:rgba(200,238,245,.35)}}
+.tc-gopt input{{accent-color:#0B8FAC;margin-right:4px}}
+.tc-gopt small{{display:block;margin:3px 0 0 22px;color:var(--ink-4,#A0ADB8);font-size:12px;font-weight:600}}
+.tc-gopt.off{{opacity:.55}}
+.tc-gopt:not(.on) .tc-subopt{{display:none}}   /* the own-car toggle exists only under Ferry */
+.tc-subopt{{margin:8px 0 0 22px;padding:6px 10px;border-left:2px solid #C8EEF5}}
+.tc-subopt .tc-sw{{color:var(--ink-2,#2E3D50)}}
+.tc-subopt .tc-sw small{{font-weight:600;color:var(--ink-4,#A0ADB8)}}
+.tc-seg button{{font-size:12.5px;font-weight:700;padding:5px 10px;color:var(--ink-3,#637080)}}
+.tc-seg button.on{{color:#076880}}
+.tc-vlbl{{display:inline-flex;align-items:center;gap:8px}}
+.tc-vlbl>small{{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-4,#A0ADB8)}}
+.tc-own{{font-size:12.5px;font-weight:700;color:#076880;background:rgba(232,247,251,.9);border-radius:999px;padding:6px 12px}}
+.tc-li.nc .amt{{text-decoration:line-through;color:var(--ink-4,#A0ADB8)}}
+.tc-li.nc .lbl small b{{color:#C6421F;font-weight:800}}
+.tc-tot{{margin-top:0;margin-bottom:2px}}
+.tc-pp{{margin-bottom:12px}}
 .tc-srow{{display:flex;gap:14px;align-items:center;flex-wrap:wrap}}
 .tc-date{{font:inherit;font-size:15px;font-weight:700;padding:10px 12px;border:1.5px solid var(--line,#DFE6EC);border-radius:12px;background:var(--card,#fff);color:inherit}}
 .tc-link{{font:inherit;font-size:13.5px;font-weight:700;color:#0B8FAC;background:none;border:0;cursor:pointer;text-decoration:underline;padding:0}}
@@ -467,75 +511,63 @@ def render_page(lang, meta, data):
 
   <div class="tc-grid">
     <div>
-      <!-- Six steps, revealed as you go. Aug 2026: the controls used to sit in
-           four simultaneous blocks; now each answer opens the next question. -->
-      <section class="tc-step-c" data-step="1">
-        <h3><i>1</i>{t['s1']}<small>{t['s1_s']}</small></h3>
-        <div class="tc-srow">
-          <input type="date" id="tc-date" class="tc-date">
-          <button class="tc-link" id="tc-unsure">{t['unsure']}</button>
-        </div>
-        <div class="tc-chips" id="tc-months" hidden>{months_html}</div>
-      </section>
-
-      <section class="tc-step-c" data-step="2" hidden>
-        <h3><i>2</i>{t['s2']}</h3>
-        <div class="tc-step"><button id="tc-pax-minus">−</button><span id="tc-pax">2</span><button id="tc-pax-plus">+</button></div>
-      </section>
-
-      <section class="tc-step-c" data-step="3" hidden>
-        <h3><i>3</i>{t['s3']}</h3>
-        <div class="tc-chips" id="tc-tiers">
-          <span class="tc-chip" data-t="budget">{t['tier_budget']}<br><small>{t['tier_budget_s']}</small></span>
-          <span class="tc-chip on" data-t="mid">{t['tier_mid']}<br><small>{t['tier_mid_s']}</small></span>
-          <span class="tc-chip" data-t="comfort">{t['tier_comfort']}<br><small>{t['tier_comfort_s']}</small></span>
-        </div>
-      </section>
-
-      <section class="tc-step-c" data-step="4" hidden>
-        <h3><i>4</i>{t['s4']}<small>{t['s4_s']}</small></h3>
-        <div class="tc-f tc-f-isl">
-          <input class="tc-search" id="tc-island" placeholder="{t['add_ph']}" autocomplete="off">
-          <div class="tc-sug" id="tc-isug"></div>
-        </div>
-        <div id="tc-arrwrap" hidden>
-          <div class="tc-subl">{t['arrive_q']}</div>
-          <div class="tc-chips" id="tc-arr">
-            <span class="tc-chip on" data-arr="ferry">{t['arr_ferry']}<br><small>{t['arr_ferry_s']}</small></span>
-            <span class="tc-chip" data-arr="fly">{t['arr_fly']}<br><small>{t['arr_fly_s']}</small></span>
+      <!-- Sep 2026: two cards instead of six revealed steps. The estimate is
+           on screen before anyone answers anything (deep links from the
+           island pages arrive with the island and nights set), so every
+           gate between the visitor and the number was cost with no benefit.
+           Controls that only apply in some cases appear only then. -->
+      <section class="tc-ctrl tc-trip">
+        <h3 class="tc-h">{t['your_trip']}<small>{t['your_trip_s']}</small></h3>
+        <div id="tc-route"></div>
+        <div class="tc-addrow">
+          <span class="tc-subl" style="margin:0">{t['add_island']}</span>
+          <span id="tc-quick"></span>
+          <div class="tc-f tc-f-isl">
+            <input class="tc-search" id="tc-search" placeholder="{t['add_ph']}" autocomplete="off">
+            <div class="tc-sug" id="tc-sug"></div>
           </div>
-          <div class="tc-note" id="tc-flynote" hidden>{t['fly_off']}</div>
-        </div>
-      </section>
-
-      <div id="tc-route"></div>
-
-      <section class="tc-step-c" data-step="5" hidden>
-        <h3><i>5</i>{t['s5']}<small>{t['s5_s']}</small></h3>
-        <span id="tc-quick"></span>
-        <div class="tc-f tc-f-isl" style="margin-top:10px">
-          <input class="tc-search" id="tc-search" placeholder="{t['add_ph']}" autocomplete="off">
-          <div class="tc-sug" id="tc-sug"></div>
         </div>
       </section>
 
       <div id="tc-swaps"></div>
 
-      <details class="tc-adv tc-step-c" id="tc-adv" data-step="6" hidden>
-        <summary><i>6</i>{t['s6']} <small>{t['s6_s']}</small></summary>
-        <div class="tc-advbody">
-          <div class="tc-subl">{t['veh_default']}</div>
-          <div class="tc-chips" id="tc-veh">
-            <span class="tc-chip" data-veh="own">{t['veh_own']}<br><small>{t['veh_own_s']}</small></span>
-            <span class="tc-chip" data-veh="car">{t['veh_rentcar']}</span>
-            <span class="tc-chip" data-veh="moto">{t['veh_rentmoto']}</span>
-            <span class="tc-chip" data-veh="none">{t['veh_none2']}</span>
+      <section class="tc-ctrl tc-settings">
+        <h3 class="tc-h">{t['settings']}</h3>
+        <div class="tc-srow tc-srow-top">
+          <div>
+            <div class="tc-subl">{t['lbl_month']}</div>
+            <div class="tc-chips" id="tc-months">{months_html}</div>
+            <div class="tc-daterow"><button class="tc-link" id="tc-exact">{t['exact_link']}</button><input type="date" id="tc-date" class="tc-date" hidden></div>
           </div>
-          <div class="tc-advrow">
+          <div>
+            <div class="tc-subl">{t['lbl_trav']}</div>
+            <div class="tc-step"><button id="tc-pax-minus">−</button><span id="tc-pax">2</span><button id="tc-pax-plus">+</button></div>
+          </div>
+          <div>
+            <div class="tc-subl">{t['lbl_style']}</div>
+            <div class="tc-chips" id="tc-tiers">
+              <span class="tc-chip" data-t="budget">{t['tier_budget']}<br><small>{t['tier_budget_s']}</small></span>
+              <span class="tc-chip on" data-t="mid">{t['tier_mid']}<br><small>{t['tier_mid_s']}</small></span>
+              <span class="tc-chip" data-t="comfort">{t['tier_comfort']}<br><small>{t['tier_comfort_s']}</small></span>
+            </div>
+          </div>
+        </div>
+        <div class="tc-gtwrap">
+          <div class="tc-subl">{t['lbl_gt']}</div>
+          <div class="tc-gt" id="tc-gt">
+            <label class="tc-gopt on" data-gt="ferry"><input type="radio" name="tc-gt" value="ferry" checked> <b>{t['gt_ferry']}</b><small>{t['gt_ferry_s']}</small>
+              <div class="tc-subopt"><span class="tc-sw" id="tc-own"><span class="s"></span> <b>{t['own_car']}</b> <small>{t['own_car_s']}</small></span></div>
+            </label>
+            <label class="tc-gopt" data-gt="fly"><input type="radio" name="tc-gt" value="fly"> <b>{t['gt_fly']}</b><small id="tc-fly-s">{t['gt_fly_s']}</small></label>
+          </div>
+          <div class="tc-advrow" style="margin-top:12px">
+            <span class="tc-sw" id="tc-skip"><span class="s"></span> {t['skip_tr']}</span>
+          </div>
+          <div class="tc-advrow" style="margin-top:8px">
             <span class="tc-sw" id="tc-noneu"><span class="s"></span> {t['noneu']} <small style="font-weight:600;color:var(--ink-4,#A0ADB8)">{t['noneu_small']}</small></span>
           </div>
         </div>
-      </details>
+      </section>
     </div>
 
     <div class="tc-sum" id="tc-summary"></div>
@@ -619,6 +651,9 @@ function flightFare(k){{const nm=haversine(GATES.Piraeus,ISL[k])/1.852;return Ma
 const eur=n=>'€'+Math.round(n).toLocaleString(LANG==='el'?'el-GR':'en-GB');
 const rnd=n=>n<100?Math.round(n/5)*5:Math.round(n/10)*10;
 const mid=f=>(f[0]+f[1])/2;
+// Own car on the ferry: vehicle fee ≈ 2.3× the passenger fare, clamped to
+// real-world car-deck pricing (short hop ≥ €25, long haul ≤ €130).
+const carFee=f=>Math.min(130,Math.max(25,mid(f)*2.3));
 // ---- exact dates (optional): per-island check-in/out derived from nights ----
 const MKEYS=['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
 const isoD=d=>{{const p=n=>String(n).padStart(2,'0');return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate());}};
@@ -641,7 +676,7 @@ function stayCost(k,i,v){{const isl=ISL[k],n=state.trip[i].n,mk=monthAt(i);
 function fitsExcept(i,k){{return state.trip.every((t,j)=>j===i||pairOK(t.k,k));}}
 
 // ---------------- state ----------------
-let state={{step:1,month:'jun',date:null,pax:2,tier:'mid',nonEU:false,fly:false,own:false,trip:[]}};
+let state={{month:'jun',date:null,pax:2,tier:'mid',nonEU:false,fly:false,own:false,skip:false,trip:[]}};
 // URL params: ?i=milos:4:c:b,ios:3&m=aug&pax=2&tier=mid
 (function(){{
   const q=new URLSearchParams(location.search);
@@ -649,7 +684,7 @@ let state={{step:1,month:'jun',date:null,pax:2,tier:'mid',nonEU:false,fly:false,
   if(q.get('i')){{
     const trip=q.get('i').split(',').map(s=>{{const p=s.split(':');
       return ISL[p[0]]?{{k:p[0],n:Math.min(14,Math.max(1,parseInt(p[1])||3)),v:p.includes('c')?'c':(p.includes('m')?'m':''),b:p.includes('b')}}:null;}}).filter(Boolean);
-    if(trip.length){{state.trip=trip;state.step=6;}}
+    if(trip.length){{state.trip=trip;}}
   }}
   if(q.get('m')&&CFG.season_room[q.get('m')])state.month=q.get('m');
   if(q.get('pax'))state.pax=Math.min(8,Math.max(1,parseInt(q.get('pax'))||2));
@@ -662,13 +697,15 @@ let state={{step:1,month:'jun',date:null,pax:2,tier:'mid',nonEU:false,fly:false,
   state.trip=(state.trip||[]).filter(t=>ISL[t.k]);
   if(q.get('fly')==='1')state.fly=true;
   if(q.get('veh')==='own'){{state.own=true;state.fly=false;}}
-  state.fly=!!state.fly;state.own=!!state.own;if(state.own)state.fly=false;
+  if(q.get('skip')==='1')state.skip=true;
+  state.fly=!!state.fly;state.own=!!state.own;state.skip=!!state.skip;if(state.own)state.fly=false;
+  delete state.step;
   state.trip.forEach(t=>{{if(t.v===undefined)t.v=t.c?'c':'';delete t.c;}});
 }})();
 function sync(){{
   try{{localStorage.setItem('tc-state',JSON.stringify(state));}}catch(e){{}}
   const i=state.trip.map(t=>t.k+':'+t.n+(t.v?':'+t.v:'')+(t.b?':b':'')).join(',');
-  history.replaceState(null,'','?i='+i+'&m='+state.month+'&pax='+state.pax+'&tier='+state.tier+(state.fly?'&fly=1':'')+(state.own?'&veh=own':'')+(state.date?'&d='+state.date:''));
+  history.replaceState(null,'','?i='+i+'&m='+state.month+'&pax='+state.pax+'&tier='+state.tier+(state.fly?'&fly=1':'')+(state.own?'&veh=own':'')+(state.skip?'&skip=1':'')+(state.date?'&d='+state.date:''));
   // One trip_cost_run per finished estimate (debounced): which islands people
   // actually price, for how long, in which month, at which tier.
   try{{clearTimeout(window._tcEv);window._tcEv=setTimeout(function(){{
@@ -685,15 +722,20 @@ function mealDay(k){{const m=ISL[k].meal;return state.tier==='budget'?m*CFG.meal
 // ---------------- render ----------------
 function render(){{
   document.getElementById('tc-pax').textContent=state.pax;
-  if(typeof syncSteps==='function')syncSteps();
   const _di=document.getElementById('tc-date');if(_di&&_di.value!==(state.date||''))_di.value=state.date||'';
+  {{const ex=document.getElementById('tc-exact');if(ex){{ex.textContent=state.date?T.exact_close:T.exact_link;}}
+   if(_di&&state.date)_di.hidden=false;}}
   document.querySelectorAll('#tc-months .tc-chip').forEach(c=>c.classList.toggle('on',c.dataset.m===state.month));
   document.querySelectorAll('#tc-tiers .tc-chip').forEach(c=>c.classList.toggle('on',c.dataset.t===state.tier));
   document.getElementById('tc-noneu').classList.toggle('on',state.nonEU);
-  const allV=v=>state.trip.every(t=>!ISL[t.k].car||t.v===v)&&state.trip.some(t=>ISL[t.k].car);
-  document.querySelectorAll('#tc-arr .tc-chip').forEach(c=>c.classList.toggle('on',(c.dataset.arr==='fly')===state.fly));
-  document.querySelectorAll('#tc-veh .tc-chip').forEach(c=>{{const v=c.dataset.veh;
-    c.classList.toggle('on', v==='own'?state.own : (!state.own&&(v==='car'?allV('c'):v==='moto'?allV('m'):allV(''))));}});
+  document.getElementById('tc-skip').classList.toggle('on',state.skip);
+  document.getElementById('tc-own').classList.toggle('on',state.own);
+  {{const f0=state.trip[0],l0=state.trip[state.trip.length-1];
+   const canFly=!!(state.trip.length&&(ISL[f0.k].air||ISL[l0.k].air));
+   document.querySelectorAll('#tc-gt .tc-gopt').forEach(o=>{{const fly=o.dataset.gt==='fly';
+     o.classList.toggle('on',fly===state.fly);o.classList.toggle('off',fly&&!canFly);
+     const r=o.querySelector('input');if(r)r.checked=(fly===state.fly);}});
+   const fs=document.getElementById('tc-fly-s');if(fs)fs.textContent=canFly?T.gt_fly_s:T.gt_fly_off;}}
 
   const sR=CFG.season_room[state.month],sC=CFG.season_car[state.month];
   let h='';
@@ -707,13 +749,11 @@ function render(){{
   }}
   const first=state.trip[0].k,last=state.trip[state.trip.length-1].k;
   const flyIn=state.fly&&!state.own&&ISL[first].air,flyOut=state.fly&&!state.own&&ISL[last].air;
-  const flyChip=document.querySelector('#tc-arr [data-arr="fly"]');
-  if(flyChip)flyChip.style.opacity=(state.own||!(ISL[first].air||ISL[last].air))?'0.45':'1';
   if(flyIn){{
     h+=`<div class="tc-leg"><span class="l">✈</span> ${{GATES.Piraeus[LANG].replace(/\s*\(.*\)/,'')}} (ATH) — ${{T.departure}}<span class="fp">€${{rnd(flightFare(first))}} pp</span></div>`;
   }}else{{
     const dep=legInfo('M',first);
-    h+=`<div class="tc-leg"><span class="l">🛳</span> ${{dep.label||''}} — ${{T.departure}} ${{(dep.fly&&!state.own)?'<span class="hint">'+T.fly_hint+'</span>':''}}<span class="fp">€${{rnd(mid(dep.f))}} pp</span></div>`;
+    h+=`<div class="tc-leg"><span class="l">🛳</span> ${{dep.label||''}} — ${{T.departure}} ${{(dep.fly&&!state.own)?'<span class="hint">'+T.fly_hint+'</span>':''}}<span class="fp">€${{rnd(mid(dep.f))}} pp${{state.own?' + 🚗 €'+Math.round(carFee(dep.f)):''}}</span></div>`;
   }}
   state.trip.forEach((t,i)=>{{
     const isl=ISL[t.k],rn=roomNight(t.k,i),ld=legDates(i);
@@ -725,7 +765,7 @@ function render(){{
         <div class="tc-cs">${{T.rooms_per_night}} ${{eur(rnd(rn))}}${{T.per_night}} · ${{ld?fmtD(ld[0])+' – '+fmtD(ld[1]):T.months[state.month]}} · <a href="${{bookUrl(i)}}" target="_blank" rel="noopener sponsored" style="color:#076880;font-weight:700;text-decoration:none">${{T.book_room}}</a></div>
         <div class="tc-cc">
           <span class="tc-n"><button data-a="n-" data-i="${{i}}">−</button> ${{t.n}} ${{t.n===1?T.night:T.nights}} <button data-a="n+" data-i="${{i}}">+</button></span>
-          ${{(isl.car&&!state.own)?`<span class="tc-seg"><button class="${{!t.v?'on':''}}" data-a="veh" data-v="" data-i="${{i}}" title="${{T.veh_none}}">🚶</button><button class="${{t.v==='m'?'on':''}}" data-a="veh" data-v="m" data-i="${{i}}" title="${{T.veh_moto}}">🛵</button><button class="${{t.v==='c'?'on':''}}" data-a="veh" data-v="c" data-i="${{i}}" title="${{T.veh_car}}">🚗</button></span>`:''}}
+          ${{(isl.car&&!state.own)?`<span class="tc-vlbl"><small>${{T.lbl_around}}</small><span class="tc-seg"><button class="${{!t.v?'on':''}}" data-a="veh" data-v="" data-i="${{i}}">${{T.veh_walk}}</button><button class="${{t.v==='m'?'on':''}}" data-a="veh" data-v="m" data-i="${{i}}">${{T.veh_scoot}}</button><button class="${{t.v==='c'?'on':''}}" data-a="veh" data-v="c" data-i="${{i}}">${{T.veh_hire}}</button></span></span>`:(isl.car&&state.own?`<span class="tc-own">${{T.veh_ownc}}</span>`:'')}}
           ${{isl.boat?`<span class="tc-sw ${{t.b?'on':''}}" data-a="boat" data-i="${{i}}"><span class="s"></span> ${{T.boat_day}} <small>€${{isl.boat.pp}} pp</small></span>`:''}}
         </div>
         ${{(!state.own&&!t.v&&isl.cn>=4&&isl.car)?`<div class="tc-warn">${{T.carless_note.replace('{{n}}',iname(t.k)).replace('{{p}}',Math.round((CFG.carless_central_premium-1)*100))}}</div>`:''}}
@@ -734,13 +774,13 @@ function render(){{
     </div>`;
     const next=state.trip[i+1];
     if(next){{const li=legInfo(t.k,next.k);
-      h+=`<div class="tc-leg"><span class="l">⛴</span> ${{T.ferry_to}} ${{iname(next.k)}}${{li.label?' <small>('+li.label+')</small>':''}} ${{(li.fly&&!state.own)?'<span class="hint">'+T.fly_hint+'</span>':''}}<span class="fp">€${{rnd(mid(li.f))}} pp</span></div>`;}}
+      h+=`<div class="tc-leg"><span class="l">⛴</span> ${{T.ferry_to}} ${{iname(next.k)}}${{li.label?' <small>('+li.label+')</small>':''}} ${{(li.fly&&!state.own)?'<span class="hint">'+T.fly_hint+'</span>':''}}<span class="fp">€${{rnd(mid(li.f))}} pp${{state.own?' + 🚗 €'+Math.round(carFee(li.f)):''}}</span></div>`;}}
   }});
   if(flyOut){{
     h+=`<div class="tc-leg"><span class="l">✈</span> ${{T.back_to}} ${{GATES.Piraeus[LANG].replace(/\s*\(.*\)/,'')}} (ATH)<span class="fp">€${{rnd(flightFare(last))}} pp</span></div>`;
   }}else{{
     const ret=legInfo(last,'M');
-    h+=`<div class="tc-leg"><span class="l">🛳</span> ${{T.back_to}} ${{ret.label||''}}<span class="fp">€${{rnd(mid(ret.f))}} pp</span></div>`;
+    h+=`<div class="tc-leg"><span class="l">🛳</span> ${{T.back_to}} ${{ret.label||''}}<span class="fp">€${{rnd(mid(ret.f))}} pp${{state.own?' + 🚗 €'+Math.round(carFee(ret.f)):''}}</span></div>`;
   }}
   document.getElementById('tc-route').innerHTML=h;
   renderSwaps();
@@ -757,7 +797,8 @@ function render(){{
   // ---------------- totals (single typical figures) ----------------
   const nightsTotal=state.trip.reduce((a,t)=>a+t.n,0);
   let tot=0,li='';
-  const line=(ic,lbl,small,amt,book,url)=>`<div class="tc-li"><span>${{ic}}</span><span class="lbl">${{lbl}}<small>${{small}}</small></span><span class="amt">${{eur(rnd(amt))}}</span>${{book?`<a class="bk" href="${{url}}" target="_blank" rel="noopener sponsored">${{book}}</a>`:''}}</div>`;
+  const line=(ic,lbl,small,amt,book,url,nc)=>`<div class="tc-li${{nc?' nc':''}}"><span>${{ic}}</span><span class="lbl">${{lbl}}<small>${{nc?'<b>'+T.not_counted+'</b> · ':''}}${{small}}</small></span><span class="amt">${{eur(rnd(amt))}}</span>${{book?`<a class="bk" href="${{url}}" target="_blank" rel="noopener sponsored">${{book}}</a>`:''}}</div>`;
+  const SK=state.skip;  // transport already booked: keep the lines, leave them out of the total
   // ferries
   let fsum=0;const legs=[...(flyIn?[]:[['M',first]]),...state.trip.slice(0,-1).map((t,i)=>[t.k,state.trip[i+1].k]),...(flyOut?[]:[[last,'M']])];
   legs.forEach(([a,b])=>{{fsum+=mid(legInfo(a,b).f)*state.pax;}});
@@ -765,9 +806,9 @@ function render(){{
     const portOf=k=>{{if(LOCAL_PORTS[k])return LOCAL_PORTS[k][LANG];const g=gateOf(k);return g?g[LANG]:T.ionian_gate_s;}};
     const ports=[...new Set(legs.filter(([a,b])=>a==='M'||b==='M').map(([a,b])=>portOf(a==='M'?b:a)))];
     const portsTxt=ports.length?`${{T.from_port}} ${{ports.join(' & ')}} · `:'';
-    li+=line('⛴',T.li_ferries,`${{portsTxt}}${{legs.length}} ${{T.li_legs}} × ${{state.pax}} ${{T.li_pax}}`,fsum,T.book_ferry,'https://www.ferryhopper.com/'+(LANG==='el'?'el/':'en/'));tot+=fsum;}}
+    li+=line('⛴',T.li_ferries,`${{portsTxt}}${{legs.length}} ${{T.li_legs}} × ${{state.pax}} ${{T.li_pax}}`,fsum,SK?null:T.book_ferry,'https://www.ferryhopper.com/'+(LANG==='el'?'el/':'en/'),SK);if(!SK)tot+=fsum;}}
   if(flyIn||flyOut){{const fl=((flyIn?flightFare(first):0)+(flyOut?flightFare(last):0))*state.pax;
-    li+=line('✈',T.li_flights,`${{(flyIn?1:0)+(flyOut?1:0)}} × ${{state.pax}} ${{T.li_pax}}`,fl,null);tot+=fl;}}
+    li+=line('✈',T.li_flights,`${{(flyIn?1:0)+(flyOut?1:0)}} × ${{state.pax}} ${{T.li_pax}}`,fl,null,null,SK);if(!SK)tot+=fl;}}
   // rooms
   let rsum=0;
   state.trip.forEach((t,i)=>{{const rn=roomNight(t.k,i);
@@ -780,9 +821,8 @@ function render(){{
     // Your own car rides every ferry leg. Vehicle fee ≈ 2.3× the passenger fare,
     // clamped to real-world car-deck pricing (short hop ≥ €25, long haul ≤ €130).
     const carLegs=[['M',first],...state.trip.slice(0,-1).map((t,i)=>[t.k,state.trip[i+1].k]),[last,'M']];
-    const carFee=f=>Math.min(130,Math.max(25,mid(f)*2.3));
     const cfSum=carLegs.reduce((a,[x,y])=>a+carFee(legInfo(x,y).f),0);
-    li+=line('🚙',T.li_carferry,`${{T.carferry_s}} ${{carLegs.length}} ${{T.li_legs}}`,cfSum,null);tot+=cfSum;
+    li+=line('🚙',T.li_carferry,`${{T.carferry_s}} ${{carLegs.length}} ${{T.li_legs}}`,cfSum,null,null,SK);if(!SK)tot+=cfSum;
     const fuel=nightsTotal*CFG.fuel_per_day;
     li+=line('⛽',T.li_fuel,`€${{CFG.fuel_per_day}}/${{LANG==='el'?'μέρα':'day'}} × ${{nightsTotal}} ${{T.days}}`,fuel,null);tot+=fuel;
   }}else{{
@@ -811,16 +851,15 @@ function render(){{
   document.getElementById('tc-summary').innerHTML=`
     <h2>${{T.estimate}}</h2>
     <div class="tc-ss">${{state.pax}} ${{T.li_pax}} · ${{nightsTotal}} ${{T.nights}} · ${{whenTxt}} · ${{({{budget:T.tier_budget,mid:T.tier_mid,comfort:T.tier_comfort}})[state.tier]}}</div>
-    ${{li}}
     <div class="tc-tot"><span class="t1">${{state.fly?T.total_fly:T.total}}</span><span class="amt">${{eur(rnd(tot))}}</span></div>
     <div class="tc-pp">${{eur(rnd(tot/state.pax))}} ${{T.pp}}</div>
+    ${{li}}
     <div class="tc-ctas">
       <a class="tc-cta f" href="https://www.ferryhopper.com/${{LANG==='el'?'el/':'en/'}}" target="_blank" rel="noopener sponsored">${{T.cta_ferry}}</a>
       <a class="tc-cta c" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">${{T.cta_car}}</a>
       <p class="aff-note"><a href="${{LANG==='el'?'/el/privacy/#affiliate':'/privacy/#affiliate'}}">${{T.aff_note}}</a></p>
     </div>
-    <div class="tc-assume">${{T.assume.replace('{{month}}',T.months[state.month])}}</div>
-    <div class="tc-honest">${{T.honest}}</div>`;
+    <details class="tc-assume"><summary style="cursor:pointer;font-weight:800;color:#076880">${{T.assume.split('</b>')[0].replace('<b>','')}}</summary><div style="margin-top:6px">${{T.assume.split('</b>')[1]||''}}</div><div class="tc-honest">${{T.honest}}</div></details>`;
   {{const st=document.getElementById('tc-stick');if(st){{st.classList.add('on');
     // Hide the bar while the full estimate itself is on screen.
     if(!window._tcIO&&window.IntersectionObserver){{window._tcIO=new IntersectionObserver(es=>{{es.forEach(e=>st.classList.toggle('seen',e.isIntersecting));}},{{threshold:0.15}});window._tcIO.observe(document.getElementById('tc-summary'));}}
@@ -870,20 +909,22 @@ function renderSwaps(){{
 }}
 
 // ---------------- events ----------------
-document.getElementById('tc-months').addEventListener('click',e=>{{const c=e.target.closest('.tc-chip');if(c){{state.month=c.dataset.m;state.date=null;openStep(4);render();}}}});
+document.getElementById('tc-months').addEventListener('click',e=>{{const c=e.target.closest('.tc-chip');if(c){{state.month=c.dataset.m;state.date=null;render();}}}});
+document.getElementById('tc-exact').addEventListener('click',()=>{{const d=document.getElementById('tc-date');
+  if(state.date){{state.date=null;d.hidden=true;render();return;}}
+  d.hidden=!d.hidden;if(!d.hidden)d.focus();}});
 document.getElementById('tc-date').addEventListener('change',e=>{{const v=e.target.value;
   state.date=/^\d{{4}}-\d{{2}}-\d{{2}}$/.test(v)?v:null;
-  if(state.date)openStep(4);
   const ts=tripStart();if(ts){{const mk=MKEYS[ts.getMonth()];if(CFG.season_room[mk])state.month=mk;}}
   render();}});
 document.getElementById('tc-tiers').addEventListener('click',e=>{{const c=e.target.closest('.tc-chip');if(c){{state.tier=c.dataset.t;render();}}}});
 document.getElementById('tc-noneu').addEventListener('click',()=>{{state.nonEU=!state.nonEU;render();}});
-document.getElementById('tc-arr').addEventListener('click',e=>{{const c=e.target.closest('.tc-chip');if(!c)return;
-  if(c.dataset.arr==='fly'){{if(state.own)return;state.fly=true;}}else state.fly=false;render();}});
-document.getElementById('tc-veh').addEventListener('click',e=>{{const c=e.target.closest('.tc-chip');if(!c)return;
-  const v=c.dataset.veh;
-  if(v==='own'){{state.own=!state.own;if(state.own)state.fly=false;}}
-  else{{state.own=false;state.trip.forEach(t=>{{if(ISL[t.k].car)t.v=(v==='car'?'c':v==='moto'?'m':'');}});}}
+document.getElementById('tc-skip').addEventListener('click',()=>{{state.skip=!state.skip;render();}});
+// Getting there: Ferry (with the own-car toggle nested inside it) or Fly.
+document.getElementById('tc-gt').addEventListener('click',e=>{{
+  if(e.target.closest('#tc-own')){{e.preventDefault();state.own=!state.own;if(state.own)state.fly=false;render();return;}}
+  const o=e.target.closest('.tc-gopt');if(!o)return;
+  if(o.dataset.gt==='fly'){{if(o.classList.contains('off'))return;state.fly=true;state.own=false;}}else state.fly=false;
   render();}});
 document.getElementById('tc-pax-minus').addEventListener('click',()=>{{state.pax=Math.max(1,state.pax-1);render();}});
 document.getElementById('tc-pax-plus').addEventListener('click',()=>{{state.pax=Math.min(8,state.pax+1);render();}});
@@ -922,57 +963,8 @@ sIn.addEventListener('input',renderSug);
 sIn.addEventListener('focus',renderSug);
 sUl.addEventListener('click',e=>{{const d=e.target.closest('[data-k]');if(!d)return;
   state.trip.push({{k:d.dataset.k,n:3,v:'',b:false}});sIn.value='';sUl.style.display='none';render();}});
-document.addEventListener('click',e=>{{if(!e.target.closest('.tc-add'))sUl.style.display='none';}});
+document.addEventListener('click',e=>{{if(!e.target.closest('.tc-addrow'))sUl.style.display='none';}});
 
-// ---------------- six-step flow ----------------
-// Each answer opens the next question. Steps never re-hide once opened, so
-// going back to change something is always possible.
-function openStep(n){{
-  if(n>state.step)state.step=Math.min(6,n);
-  syncSteps();
-}}
-function syncSteps(){{
-  if(!state.trip.length&&state.step>4)state.step=4;
-  if(state.trip.length&&state.step<6)state.step=6;
-  const mc=document.getElementById('tc-months');
-  if(mc&&!state.date&&state.step>1)mc.hidden=false;
-  document.querySelectorAll('.tc-step-c').forEach(el=>{{
-    el.hidden = (+el.dataset.step) > state.step;
-  }});
-  const aw=document.getElementById('tc-arrwrap');
-  if(aw)aw.hidden=!state.trip.length;
-  const isl=document.getElementById('tc-island');
-  if(isl&&document.activeElement!==isl)isl.value=state.trip[0]?iname(state.trip[0].k):'';
-  const note=document.getElementById('tc-flynote');
-  if(note){{
-    const f=state.trip[0],l=state.trip[state.trip.length-1];
-    const noAir=!state.trip.length||(!ISL[f.k].air&&!ISL[l.k].air);
-    note.hidden=!(noAir&&!state.own);
-  }}
-}}
-document.getElementById('tc-unsure').addEventListener('click',()=>{{
-  document.getElementById('tc-months').hidden=false;
-  document.getElementById('tc-date').value='';state.date=null;openStep(4);render();}});
-
-// island picker — sets or replaces the first stop
-const iIn=document.getElementById('tc-island'),iUl=document.getElementById('tc-isug');
-function renderISug(){{
-  const q=iIn.value.trim().toLowerCase();
-  const keys=Object.keys(ISL).filter(k=>iname(k).toLowerCase().includes(q)).slice(0,8);
-  iUl.innerHTML=keys.map(k=>`<div data-k="${{k}}">${{iname(k)}}</div>`).join('');
-  iUl.style.display=keys.length?'block':'none';
-}}
-iIn.addEventListener('input',renderISug);
-iIn.addEventListener('focus',()=>{{iIn.select();renderISug();}});
-iUl.addEventListener('click',e=>{{const d=e.target.closest('[data-k]');if(!d)return;
-  const k=d.dataset.k;
-  // Default nights come from the island's own suggested stay.
-  const n=state.trip[0]?state.trip[0].n:(ISL[k].days||3);
-  state.trip[0]={{k:k,n:n,v:'',b:false}};
-  iUl.style.display='none';iIn.blur();openStep(5);render();}});
-document.addEventListener('click',e=>{{if(!e.target.closest('#tc-island,#tc-isug'))iUl.style.display='none';}});
-
-syncSteps();
 render();
 </script>
 </body>
