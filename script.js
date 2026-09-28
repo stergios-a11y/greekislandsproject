@@ -6719,12 +6719,12 @@ const QUIZ_QUESTIONS = [
     question: 'What kind of trip are you planning?',
     question_el: 'Τι είδους ταξίδι σχεδιάζεις;',
     options: ['Solo adventure', 'Couple getaway', 'Family vacation', 'Friend group'],
-    options_el: ['Ταξίδι μόνος/-η', 'Ζευγάρι', 'Οικογενειακές διακοπές', 'Παρέα φίλων'],
+    options_el: ['Μόνος/-η μου', 'Ζευγάρι', 'Οικογένεια', 'Παρέα φίλων'],
     icons: ['🎒', '💞', '👨‍👩‍👧', '🍻'],
     why: 'Who you are with changes everything — a couple wants a chora at sunset, a family wants a shallow beach and a car.',
-    why_el: 'Με ποιον πας αλλάζει τα πάντα — το ζευγάρι θέλει χώρα στο ηλιοβασίλεμα, η οικογένεια ρηχή παραλία και αυτοκίνητο.',
+    why_el: 'Με ποιον πας αλλάζει τα πάντα — το ζευγάρι θέλει Χώρα με ηλιοβασίλεμα, η οικογένεια ρηχή παραλία και αυτοκίνητο.',
     subs: ['hiking, hostels, ferries on a whim', 'romantic villages, quiet coves', 'sandy beaches, short ferries, a car', 'nightlife, boat days, big tables'],
-    subs_el: ['πεζοπορία, hostel, πλοίο της στιγμής', 'ρομαντικά χωριά, ήσυχοι κολπίσκοι', 'αμμουδιές, κοντινά πλοία, αυτοκίνητο', 'νυχτερινή ζωή, βαρκάδες, μεγάλα τραπέζια'],
+    subs_el: ['πεζοπορία, hostel, πλοίο της στιγμής', 'ρομαντικά χωριά, ήσυχοι κολπίσκοι', 'αμμουδιές, σύντομα δρομολόγια, αυτοκίνητο', 'νυχτερινή ζωή, βαρκάδες, μεγάλα τραπέζια'],
     photo: 'milos'
   },
   {
@@ -6796,7 +6796,7 @@ const QUIZ_QUESTIONS = [
     why: 'The meltemi, the sea temperature and the ferry timetable all change with the month.',
     why_el: 'Το μελτέμι, η θερμοκρασία της θάλασσας και τα δρομολόγια αλλάζουν με τον μήνα.',
     subs: ['wildflowers, cool sea, empty', 'hot, busy, everything open', 'warm sea, thinner crowds', 'locals only, some ferries stop'],
-    subs_el: ['αγριολούλουδα, κρύα θάλασσα, άδεια', 'ζέστη, κόσμος, όλα ανοιχτά', 'ζεστή θάλασσα, λιγότερος κόσμος', 'μόνο ντόπιοι, λιγότερα πλοία'],
+    subs_el: ['αγριολούλουδα, κρύα θάλασσα, ησυχία', 'ζέστη, κόσμος, όλα ανοιχτά', 'ζεστή θάλασσα, λιγότερος κόσμος', 'μόνο ντόπιοι, λιγότερα δρομολόγια'],
     photo: 'sifnos'
   },
   {
@@ -6804,7 +6804,7 @@ const QUIZ_QUESTIONS = [
     question: 'How are you getting there?',
     question_el: 'Πώς φτάνεις στο νησί;',
     options: ['By car', 'Ferry — up to 5 hours', 'Ferry — any length', 'Fly in'],
-    options_el: ['Με το αυτοκίνητό μου', 'Πλοίο — έως 5 ώρες', 'Πλοίο — όσο χρειαστεί', 'Αεροπλάνο'],
+    options_el: ['Με το αυτοκίνητό μου', 'Πλοίο — έως 5 ώρες', 'Πλοίο — όσες ώρες κι αν είναι', 'Αεροπλάνο'],
     icons: ['🚗', '⛴', '🛳', '✈️'],
     why: 'Crete is a 9-hour sail from Piraeus but a 50-minute flight. Access is half the decision.',
     why_el: 'Η Κρήτη είναι 9 ώρες πλοίο από τον Πειραιά αλλά 50 λεπτά πτήση. Η πρόσβαση είναι η μισή απόφαση.',
@@ -6817,7 +6817,7 @@ const QUIZ_QUESTIONS = [
     question: 'Will you have a car on the island?',
     question_el: 'Θα έχεις αυτοκίνητο στο νησί;',
     options: ['Yes, I want to rent one', 'No, I prefer walking / public transport'],
-    options_el: ['Ναι, θα νοικιάσω', 'Όχι, προτιμώ περπάτημα / ΜΜΜ'],
+    options_el: ['Ναι, θα νοικιάσω', 'Όχι, με τα πόδια ή το λεωφορείο'],
     icons: ['🚗', '🚶'],
     why: 'On Naxos you need one; on Hydra there are none. Some islands only work one way.',
     why_el: 'Στη Νάξο το χρειάζεσαι· στην Ύδρα δεν υπάρχουν. Κάποια νησιά δουλεύουν μόνο με έναν τρόπο.',
@@ -7167,10 +7167,21 @@ function computeQuizResults() {
   const driveOnSet = new Set(['lefkada','evia-north','evia-central','evia-south',
     'thasos','corfu','kefalonia','zakynthos','salamis','poros','aegina','agistri',
     'spetses','hydra','elafonisos','kythira','ithaca','ammouliani']);
+  // Greek needs adjective/noun agreement, so the lead reason is a whole
+  // phrase per dimension rather than "Top" + label ("Κορυφαία πολιτισμός").
+  const EL_LEAD = {
+    0: ['Κορυφαίες παραλίες', 'Πολύ καλές παραλίες'],
+    1: ['Πλούσια ιστορία και πολιτισμός', 'Αξιόλογη ιστορία και πολιτισμός'],
+    2: ['Έντονη νυχτερινή ζωή', 'Καλή νυχτερινή ζωή'],
+    3: ['Πολύ οικονομικό', 'Οικονομικό'],
+  };
+  const leadPhrase = (tier) => (CURRENT_LANG === 'el')
+    ? ((EL_LEAD[A.priority] || ['Κορυφαίο συνολικά', 'Πολύ καλό συνολικά'])[tier])
+    : `${t(tier === 0 ? 'quiz.why.top' : 'quiz.why.strong')} ${dimLabel.toLowerCase()}`;
   const whyText = (island) => {
     const reasons = [];
-    if (island[priority] >= 4.5) reasons.push(`${t('quiz.why.top')} ${dimLabel.toLowerCase()} (${fmt(island[priority])})`);
-    else if (island[priority] >= 3.8) reasons.push(`${t('quiz.why.strong')} ${dimLabel.toLowerCase()} (${fmt(island[priority])})`);
+    if (island[priority] >= 4.5) reasons.push(`${leadPhrase(0)} (${fmt(island[priority])})`);
+    else if (island[priority] >= 3.8) reasons.push(`${leadPhrase(1)} (${fmt(island[priority])})`);
     // Don't restate the dimension the user already picked as their priority:
     // with 'Affordability' chosen this produced "Top affordability (4.5) · Very
     // affordable" on every card. Same trap for nightlife and the scene reason.
