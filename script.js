@@ -7039,6 +7039,7 @@ function scoreIslandsFromAnswers(quizAnswers) {
    scorer as the final results, so what you watch climbing is the real ranking,
    not a decorative animation. */
 let quizPrevRanks = null;
+let quizSeenKeys = {};   // ever shown on the board this run — a returning island is not 'new'
 
 /* hero-photos.json is fetched without blocking first paint, so the board's
    first render happens while HERO_PHOTOS is still empty and every row shows an
@@ -7083,7 +7084,7 @@ function renderQuizLiveBoard() {
     let move = '';
     if (quizPrevRanks) {
       const was = quizPrevRanks[isl.key];
-      if (was === undefined) { move = '<span class="ql-move ql-new">' + t('quiz.live.new') + '</span>'; climbers.push(nm); }
+      if (was === undefined) { move = '<span class="ql-move ' + (quizSeenKeys[isl.key] ? 'ql-up">▲' : 'ql-new">' + t('quiz.live.new')) + '</span>'; climbers.push(nm); }
       else if (was > idx) { move = '<span class="ql-move ql-up">▲ ' + (was - idx) + '</span>'; climbers.push(nm); }
       else if (was < idx) { move = '<span class="ql-move ql-down">▼ ' + (idx - was) + '</span>'; }
     }
@@ -7092,8 +7093,8 @@ function renderQuizLiveBoard() {
       ? '<img class="ql-thumb" src="' + thumbUrl(hero.url) + '" alt="" loading="lazy">'
       : '<span class="ql-thumb ql-nophoto">' + nm.charAt(0) + '</span>';
     return '<li class="ql-row' + (idx === 0 ? ' ql-top' : '') + '" data-key="' + isl.key + '">'
-         + '<span class="ql-rank">' + (idx + 1) + '</span>'
-         + '<span class="ql-card">' + thumb
+         + '<span class="ql-card">'
+         + '<span class="ql-rank">' + (idx + 1) + '</span>' + thumb
          + '<span class="ql-name">' + nm + (grp ? '<small>' + grp + '</small>' : '') + '</span>'
          + move + '</span>'
          + '</li>';
@@ -7127,6 +7128,7 @@ function renderQuizLiveBoard() {
 
   renderQuizMovement(climbers, answered);
   quizPrevRanks = rankNow;
+  scored.forEach(function (isl) { quizSeenKeys[isl.key] = true; });
 }
 
 /* One plain sentence explaining the reshuffle the answer just caused. */
@@ -7193,7 +7195,7 @@ function computeQuizResults() {
     return `<div class="result-island-card" data-key="${island.key}">${thumb}<div class="result-info"><div class="result-name">${nm}</div><div class="result-why">${whyText(island)}</div></div></div>`;
   }).join('')}<div class="quiz-retake-row"><button class="quiz-retake-btn">${t('match.retake')}</button></div>`;
   results.querySelectorAll('.result-island-card').forEach(card => { card.addEventListener('click', () => navigateTo('island', card.dataset.key)); });
-  results.querySelector('.quiz-retake-btn').addEventListener('click', () => { quizAnswers = {}; quizStep = 0; quizPrevRanks = null;
+  results.querySelector('.quiz-retake-btn').addEventListener('click', () => { quizAnswers = {}; quizStep = 0; quizPrevRanks = null; quizSeenKeys = {};
     const cb = document.getElementById('cta-affiliate'); if (cb) cb.style.display = 'none';
     renderQuizStep(); });
 }
