@@ -6980,7 +6980,10 @@ function scoreIslandsFromAnswers(quizAnswers) {
     // under that means you spend the trip travelling, not being there.
     if (tripDays !== undefined && i.days) {
       const over = i.days - tripDays;
-      if (over > 0) s -= over * 1.1;
+      // 1.1/day let Crete (5 days) survive a 2-3 day trip on its base score
+      // alone. Make the shortfall decisive: steeper per day, plus a cliff
+      // once the island wants two or more days you do not have.
+      if (over > 0) s -= over * 2.0 + (over >= 2 ? 2.5 : 0);
       // Short trips also punish anything slow to reach.
       if (tripDays <= 3) s += (i.access - 3) * 0.5;
       // Long trips on a one-beach island run out of road.
