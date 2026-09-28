@@ -91,20 +91,26 @@ const UI_TEXT = {
   'filter.night': { en: '🍷 Nightlife', el: '🍷 Νυχτερινή ζωή' },
   'filter.access': { en: '🚢 Access', el: '🚢 Πρόσβαση' },
   'filter.afford': { en: '💸 Affordability', el: '💸 Προσιτή τιμή' },
-  'filter.car': { en: '🚗 Car reliance', el: '🚗 Εξάρτηση από αυτοκίνητο' },
+  'filter.car': { en: '🚶 Car-free', el: '🚶 Χωρίς αυτοκίνητο' },
   // Dimension labels (for radar chart, bars, columns)
   'dim.beach': { en: 'Beach', el: 'Παραλία' },
   'dim.culture': { en: 'Culture', el: 'Πολιτισμός' },
   'dim.night': { en: 'Nightlife', el: 'Νυχτερινή ζωή' },
   'dim.access': { en: 'Access', el: 'Πρόσβαση' },
   'dim.afford': { en: 'Affordability', el: 'Οικονομικά' },
-  'dim.car': { en: 'Car reliance', el: 'Εξάρτηση από αυτοκίνητο' },
-  'dim.car.hint': { en: 'Car reliance: 1 = not needed, 3 = useful, 5 = essential', el: 'Εξάρτηση από αυτοκίνητο: 1 = δεν χρειάζεται, 3 = χρήσιμο, 5 = απαραίτητο' },
+  'dim.car': { en: 'Car-free', el: 'Χωρίς αυτοκίνητο' },
+  'dim.car.hint': { en: 'Car-free: 5 = no car needed, 3 = buses cover the basics, 1 = car essential', el: 'Χωρίς αυτοκίνητο: 5 = δεν χρειάζεται, 3 = τα λεωφορεία καλύπτουν τα βασικά, 1 = απαραίτητο' },
   'car.none': { en: 'Not needed', el: 'Δεν χρειάζεται' },
   'car.helpful': { en: 'Optional', el: 'Προαιρετικό' },
   'car.useful': { en: 'Useful', el: 'Χρήσιμο' },
   'car.recommended': { en: 'Recommended', el: 'Συνιστάται' },
   'car.essential': { en: 'Essential', el: 'Απαραίτητο' },
+  // Car-free scale (5 = best) — the user-facing twin of car.* above
+  'carfree.5': { en: 'Fully car-free', el: 'Χωρίς αυτοκίνητο' },
+  'carfree.4': { en: 'Mostly car-free', el: 'Σχεδόν χωρίς αυτοκίνητο' },
+  'carfree.3': { en: 'Buses cover the basics', el: 'Τα λεωφορεία καλύπτουν τα βασικά' },
+  'carfree.2': { en: 'Car recommended', el: 'Συνιστάται αυτοκίνητο' },
+  'carfree.1': { en: 'Car essential', el: 'Απαραίτητο αυτοκίνητο' },
 
   // Detail page buttons
   'detail.back': { en: '← Back to Map', el: '← Χάρτης' },
@@ -164,7 +170,7 @@ const UI_TEXT = {
   'sidebar.night': { en: 'Night Life', el: 'Νυχτερινή ζωή' },
   'sidebar.access': { en: 'Access Ease', el: 'Ευκολία Πρόσβασης' },
   'sidebar.afford': { en: 'Affordability', el: 'Οικονομικά' },
-  'sidebar.car': { en: 'Car reliance', el: 'Εξάρτηση από αυτοκίνητο' },
+  'sidebar.car': { en: 'Car-free', el: 'Χωρίς αυτοκίνητο' },
   'tooltip.overall': { en: 'Overall', el: 'Συνολικά' },
   'tooltip.recommended': { en: 'recommended', el: 'συνιστώμενες' },
   'tooltip.click': { en: 'Click to explore →', el: 'Πάτα για εξερεύνηση →' },
@@ -260,7 +266,7 @@ const UI_TEXT = {
   'data.col.night': { en: 'Night ↕', el: 'Νύχτα ↕' },
   'data.col.access': { en: 'Access ↕', el: 'Πρόσβαση ↕' },
   'data.col.afford': { en: 'Affordability ↕', el: 'Οικονομικά ↕' },
-  'data.col.car': { en: '🚗 Car reliance ↕', el: '🚗 Εξάρτηση από αυτοκίνητο ↕' },
+  'data.col.car': { en: '🚶 Car-free ↕', el: '🚶 Χωρίς αυτοκίνητο ↕' },
   'data.col.days': { en: 'Days ↕', el: 'Μέρες ↕' },
   'data.col.area': { en: 'Area (km²) ↕', el: 'Έκταση (τ.χλμ.) ↕' },
   'data.col.pop': { en: 'Population ↕', el: 'Πληθυσμός ↕' },
@@ -452,7 +458,7 @@ const UI_TEXT = {
 
   // Rubric
   'mission.rubric.title': { en: 'The rubric', el: 'Η κλίμακα' },
-  'mission.rubric.intro': { en: "Five rated dimensions, each scored 1 to 5, plus a sixth number for car reliance — a fact, not a quality score. Here's what those numbers actually mean.", el: 'Πέντε βαθμολογημένες διαστάσεις, κάθε μία από 1 έως 5, συν έναν έκτο αριθμό για την εξάρτηση από αυτοκίνητο — στοιχείο πληροφορίας, όχι ποιότητας. Να τι σημαίνουν πραγματικά αυτοί οι αριθμοί.' },
+  'mission.rubric.intro': { en: 'Five rated dimensions, each scored 1 to 5, plus a sixth number for how well the island works without a car — a practical fact, but pointing the same way: 5 is best. Here\'s what those numbers actually mean.', el: 'Πέντε βαθμολογημένες διαστάσεις, κάθε μία από 1 έως 5, συν έναν έκτο αριθμό για το πόσο καλά λειτουργεί το νησί χωρίς αυτοκίνητο — πρακτικό στοιχείο, αλλά με την ίδια φορά: το 5 είναι το καλύτερο. Να τι σημαίνουν οι αριθμοί.' },
 
   'mission.rubric.beach.name': { en: 'Beach', el: 'Παραλία' },
   'mission.rubric.beach.desc': { en: 'How good the swimming is.', el: 'Πόσο καλό είναι το μπάνιο.' },
@@ -484,11 +490,11 @@ const UI_TEXT = {
   'mission.rubric.afford.3': { en: 'Normal Greek-island pricing.', el: 'Κανονικές τιμές ελληνικού νησιού.' },
   'mission.rubric.afford.1': { en: 'Mykonos/Santorini territory. Dinner alone can clear €200.', el: 'Επίπεδο Μυκόνου/Σαντορίνης. Μόνο το δείπνο ξεπερνά τα 200€.' },
 
-  'mission.rubric.car.name': { en: 'Car reliance', el: 'Εξάρτηση από αυτοκίνητο' },
-  'mission.rubric.car.desc': { en: 'Practical fact, not a quality score. How much a car shapes the trip.', el: 'Πρακτικό στοιχείο, όχι βαθμολογία ποιότητας. Πόσο διαμορφώνει το ταξίδι το αυτοκίνητο.' },
-  'mission.rubric.car.5': { en: 'Essential. The island only opens up if you drive. Crete, Naxos, Lefkada.', el: 'Απαραίτητο. Το νησί ανοίγεται μόνο με αυτοκίνητο. Κρήτη, Νάξος, Λευκάδα.' },
-  'mission.rubric.car.3': { en: 'Useful but not required. Buses cover the basics; a car opens up beaches.', el: 'Χρήσιμο αλλά όχι απαραίτητο. Τα λεωφορεία καλύπτουν τα βασικά· το αυτοκίνητο ανοίγει παραλίες.' },
-  'mission.rubric.car.1': { en: 'Not needed. You walk or take the local bus. Hydra, Koufonisia.', el: 'Δεν χρειάζεται. Πας με τα πόδια ή με το τοπικό λεωφορείο. Ύδρα, Κουφονήσια.' },
+  'mission.rubric.car.name': { en: 'Car-free', el: 'Χωρίς αυτοκίνητο' },
+  'mission.rubric.car.desc': { en: 'How well the island works without a car. Not needing one is less money and less hassle, so 5 is best.', el: 'Πόσο καλά λειτουργεί το νησί χωρίς αυτοκίνητο. Το να μην το χρειάζεσαι σημαίνει λιγότερα έξοδα και λιγότερη φασαρία, γι\' αυτό το 5 είναι το καλύτερο.' },
+  'mission.rubric.car.5': { en: 'Fully car-free. You walk or take the local bus. Hydra, Koufonisia, Symi.', el: 'Πλήρως χωρίς αυτοκίνητο. Πας με τα πόδια ή με το τοπικό λεωφορείο. Ύδρα, Κουφονήσια, Σύμη.' },
+  'mission.rubric.car.3': { en: 'Buses cover the basics; a car opens up beaches. Useful, not required.', el: 'Τα λεωφορεία καλύπτουν τα βασικά· το αυτοκίνητο ανοίγει παραλίες. Χρήσιμο, όχι απαραίτητο.' },
+  'mission.rubric.car.1': { en: 'A car is essential. The island only opens up if you drive. Crete, Naxos, Lefkada.', el: 'Το αυτοκίνητο είναι απαραίτητο. Το νησί ανοίγεται μόνο αν οδηγείς. Κρήτη, Νάξος, Λευκάδα.' },
 
   // Overall
   'mission.overall.title': { en: 'The overall number', el: 'Ο συνολικός αριθμός' },
@@ -543,7 +549,7 @@ const UI_TEXT = {
   'home.map_jump': { en: 'See all 88 islands, rated', el: 'Δες και τα 88 νησιά με βαθμολογία' },
   'a11y.switch_language': { en: 'Switch language', el: 'Αλλαγή γλώσσας' },
   'a11y.toggle_dark': { en: 'Toggle dark mode', el: 'Εναλλαγή σκοτεινής λειτουργίας' },
-  'a11y.car_scale': { en: '1 = not needed, 5 = essential', el: '1 = δεν χρειάζεται, 5 = απαραίτητο' },
+  'a11y.car_scale': { en: '5 = fully car-free, 1 = car essential', el: '5 = χωρίς αυτοκίνητο, 1 = απαραίτητο' },
   'a11y.has_airport': { en: 'Commercial airport on the island', el: 'Εμπορικό αεροδρόμιο στο νησί' },
   'a11y.how_to_use': { en: 'How to use this site', el: 'Πώς να χρησιμοποιήσεις αυτόν τον ιστότοπο' },
   'a11y.send_feedback': { en: 'Send feedback', el: 'Αποστολή σχολίων' },

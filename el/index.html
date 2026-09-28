@@ -211,7 +211,7 @@
         <option value="night" data-i18n="filter.night">🍷 Νυχτερινή ζωή</option>
         <option value="access" data-i18n="filter.access">🚢 Πρόσβαση</option>
         <option value="afford" data-i18n="filter.afford">💸 Οικονομικά</option>
-        <option value="car_need" data-i18n="filter.car">🚗 Εξάρτηση από αυτοκίνητο</option>
+        <option value="car_need" data-i18n="filter.car">🚶 Χωρίς αυτοκίνητο</option>
       </select></span>
         <span class="mf-divider"></span>
         <button id="vibe-filter-btn" class="vibe-filter-btn" onclick="toggleVibePanel()" aria-expanded="false" aria-label="Φίλτρα νησιών" data-i18n-aria-label="a11y.vibe_filters">
@@ -286,7 +286,7 @@
           <th data-col="night" class="th-dim" data-i18n="data.col.night">Νύχτα ↕</th>
           <th data-col="access" class="th-dim" data-i18n="data.col.access">Πρόσβαση ↕</th>
           <th data-col="afford" class="th-dim" data-i18n="data.col.afford">Τιμή ↕</th>
-          <th data-col="car_need" class="th-dim" data-i18n="data.col.car" title="1 = δεν χρειάζεται, 5 = απαραίτητο" data-i18n-title="a11y.car_scale">🚗 Εξάρτηση από αυτοκίνητο ↕</th>
+          <th data-col="car_free" class="th-dim" data-i18n="data.col.car" title="5 = χωρίς αυτοκίνητο, 1 = απαραίτητο" data-i18n-title="a11y.car_scale">🚶 Χωρίς αυτοκίνητο ↕</th>
           <th data-col="days" class="th-main" data-i18n="data.col.days">Μέρες ↕</th>
           <th data-col="has_airport" class="th-main" data-i18n="data.col.airport" title="Εμπορικό αεροδρόμιο στο νησί" data-i18n-title="a11y.has_airport">✈ Αεροδρόμιο ↕</th>
           <th data-col="area" class="th-main" data-i18n="data.col.area">Έκταση (km²) ↕</th>
@@ -483,7 +483,7 @@
 
         <!-- Rubric sub-section -->
         <h3 class="mission-subsection-title" data-i18n="mission.rubric.title">Η κλίμακα</h3>
-        <p class="mission-para mission-rubric-intro" data-i18n="mission.rubric.intro">Πέντε διαστάσεις. Κάθε μία βαθμολογείται 1 έως 5. Να τι σημαίνουν πραγματικά αυτοί οι αριθμοί.</p>
+        <p class="mission-para mission-rubric-intro" data-i18n="mission.rubric.intro">Πέντε βαθμολογημένες διαστάσεις, κάθε μία από 1 έως 5, συν έναν έκτο αριθμό για το πόσο καλά λειτουργεί το νησί χωρίς αυτοκίνητο — πρακτικό στοιχείο, αλλά με την ίδια φορά: το 5 είναι το καλύτερο. Να τι σημαίνουν οι αριθμοί.</p>
 
         <div class="mission-rubric-grid">
 
@@ -549,6 +549,19 @@
               <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-5">5</span><span data-i18n="mission.rubric.afford.5">Γνήσια φθηνά. Ικαρία, Σαμοθράκη, Λήμνος.</span></div>
               <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-3">3</span><span data-i18n="mission.rubric.afford.3">Κανονικές τιμές ελληνικού νησιού.</span></div>
               <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-1">1</span><span data-i18n="mission.rubric.afford.1">Επίπεδο Μυκόνου/Σαντορίνης. Μόνο το δείπνο ξεπερνά τα 200€.</span></div>
+            </div>
+          </div>
+
+          <div class="mission-rubric-card mission-rubric-card--car">
+            <div class="mission-rubric-head">
+              <span class="mission-rubric-icon">🚶</span>
+              <span class="mission-rubric-name" data-i18n="mission.rubric.car.name">Χωρίς αυτοκίνητο</span>
+            </div>
+            <p class="mission-rubric-desc" data-i18n="mission.rubric.car.desc">Πόσο καλά λειτουργεί το νησί χωρίς αυτοκίνητο. Το να μην το χρειάζεσαι σημαίνει λιγότερα έξοδα και λιγότερη φασαρία, γι' αυτό το 5 είναι το καλύτερο.</p>
+            <div class="mission-rubric-anchors">
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-5">5</span><span data-i18n="mission.rubric.car.5">Πλήρως χωρίς αυτοκίνητο. Πας με τα πόδια ή με το τοπικό λεωφορείο. Ύδρα, Κουφονήσια, Σύμη.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-3">3</span><span data-i18n="mission.rubric.car.3">Τα λεωφορεία καλύπτουν τα βασικά· το αυτοκίνητο ανοίγει παραλίες. Χρήσιμο, όχι απαραίτητο.</span></div>
+              <div class="mission-rubric-anchor"><span class="mission-rubric-score mrs-1">1</span><span data-i18n="mission.rubric.car.1">Το αυτοκίνητο είναι απαραίτητο. Το νησί ανοίγεται μόνο αν οδηγείς. Κρήτη, Νάξος, Λευκάδα.</span></div>
             </div>
           </div>
 
@@ -637,7 +650,7 @@
               <div class="rating-item"><span class="rating-label" data-i18n="sidebar.night">Νυχτερινή ζωή</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div><span class="rating-val" id="val-night"></span></div>
               <div class="rating-item"><span class="rating-label" data-i18n="sidebar.access">Ευκολία Πρόσβασης</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div><span class="rating-val" id="val-access"></span></div>
               <div class="rating-item"><span class="rating-label" data-i18n="sidebar.afford">Οικονομικά</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div><span class="rating-val" id="val-afford"></span></div>
-              <div class="rating-item rating-item-car" title="" id="rating-item-car"><span class="rating-label" data-i18n="sidebar.car">Εξάρτηση από αυτοκίνητο</span><span class="rating-val" id="val-car"></span></div>
+              <div class="rating-item rating-item-car" title="" id="rating-item-car"><span class="rating-label" data-i18n="sidebar.car">Χωρίς αυτοκίνητο</span><span class="rating-val" id="val-car"></span></div>
             </div>
             <div class="blueprint-divider"></div>
             <div id="sidebar-stats" class="blueprint-stats">
@@ -693,8 +706,8 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-  <script src="/i18n.js?v=45"></script>
-  <script src="/script.js?v=129"></script>
+  <script src="/i18n.js?v=46"></script>
+  <script src="/script.js?v=130"></script>
 <!-- SEO_ISLAND_LIST_START -->
 <nav class="visually-hidden" aria-label="Όλα τα νησιά">
   <h2>Όλα τα νησιά</h2>

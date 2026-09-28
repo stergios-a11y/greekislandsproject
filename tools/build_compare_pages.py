@@ -487,7 +487,7 @@ DESC_OVERRIDES.update({
         'Το Λασίθι υπερτερεί 4.0 έναντι 3.8 σε παραλίες και δικό του αεροδρόμιο· το Ρέθυμνο έχει την '
         'καλύτερα διατηρημένη παλιά πόλη της Κρήτης (πολιτισμός 4.5 έναντι 3.5) και κοστίζει λιγότερο.'),
     ('agistri', 'hydra'): (
-        'Both score 1.0 for car reliance, and diverge from there. Hydra wins 4.0 to 3.4 on the harbour '
+        'Both are fully car-free (5/5), and diverge from there. Hydra wins 4.0 to 3.4 on the harbour '
         'and culture; Agistri has far better beaches (3.5 vs 2.2) at less than half the price.',
         'Και τα δύο 1.0 στην ανάγκη οχήματος, και μετά αποκλίνουν. Η Ύδρα κερδίζει 4.0 έναντι 3.4 με '
         'το λιμάνι και τον πολιτισμό· το Αγκίστρι έχει πολύ καλύτερες παραλίες με το μισό κόστος.'),

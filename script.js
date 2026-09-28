@@ -38,7 +38,7 @@ const ISLANDS_DATA = {
   "kefalonia":    { name:"Kefalonia",        lat:38.2266, lng:20.5749, beach:4.7, hist:3.2, night:3.2, access:3.5, afford:3.8, car_need:5.0, has_airport:true, total:4.1, area:773,   pop:35800,   days:5, island_group:"Ionian", drama:false, hiking:true, springs:false, chora:false, sailing:true },
   "zakynthos":    { name:"Zakynthos",        lat:37.7875, lng:20.7748, beach:4.8, hist:2.5, night:4.5, access:3.7, afford:3.5, car_need:4.0, has_airport:true, total:4.1, area:405,   pop:40700,   days:4, island_group:"Ionian", drama:false, hiking:false, springs:false, chora:false, sailing:false },
   "kythira":      { name:"Kythira",          lat:36.2529, lng:22.9847, beach:4.2, hist:4.5, night:2.5, access:2.5, afford:3.8, car_need:5.0, has_airport:true, total:3.8, area:279,   pop:3973,    days:4, island_group:"Ionian", drama:false, hiking:true, springs:false, chora:false, sailing:false },
-  "antikythera": { name:"Antikythera",      lat:35.8651, lng:23.3083, beach:3.5, hist:4.5, night:1.0, access:1.0, afford:3.5, car_need:2.5, has_airport:false, total:3.0, area:20,    pop:40,      days:1, island_group:"Ionian", drama:false, hiking:true, springs:false, chora:false, sailing:false },
+  "antikythera": { name:"Antikythera",      lat:35.8651, lng:23.3083, beach:3.5, hist:4.5, night:1.0, access:1.0, afford:3.5, car_need:1.5, has_airport:false, total:3.0, area:20,    pop:40,      days:1, island_group:"Ionian", drama:false, hiking:true, springs:false, chora:false, sailing:false },
   "elafonisos":   { name:"Elafonisos",       lat:36.4854, lng:22.9600, beach:5.0, hist:2.0, night:2.5, access:2.5, afford:3.8, car_need:1.0, has_airport:false, total:4.0, area:19,    pop:1041,    days:2, island_group:"Other", drama:false, hiking:false, springs:false, chora:false, sailing:false },
   "paros":        { name:"Paros",            lat:37.0625, lng:25.1959, beach:5.0, hist:3.8, night:5.0, access:4.5, afford:2.2, car_need:3.0, has_airport:true, total:4.1, area:196,   pop:13700,   days:3, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:true },
   "chania":       { name:"Crete (Chania)",   lat:35.32, lng:23.9, beach:5.0, hist:4.7, night:4.0, access:4.5, afford:3.4, car_need:5.0, has_airport:true, total:4.8, area:2376,  pop:108000,  days:5, island_group:"Crete", drama:false, hiking:true, springs:false, chora:false, sailing:false },
@@ -106,7 +106,7 @@ const ISLANDS_DATA = {
   "tilos":        { name:"Tilos",            lat:36.4280, lng:27.3629, beach:3.8, hist:3.5, night:2.0, access:2.2, afford:4.2, car_need:3.0, has_airport:false, total:3.5, area:61,    pop:746,     days:2, island_group:"Dodecanese", drama:false, hiking:true, springs:false, chora:false, sailing:false },
   "leipsoi":      { name:"Leipsoi",          lat:37.3021, lng:26.7533, beach:4.0, hist:3.0, night:2.0, access:2.5, afford:4.5, car_need:2.0, has_airport:false, total:3.4, area:16,    pop:790,     days:1, island_group:"Dodecanese", drama:false, hiking:false, springs:false, chora:false, sailing:false },
   "halki":        { name:"Halki",            lat:36.2291, lng:27.5683, beach:3.8, hist:4.0, night:2.0, access:2.5, afford:4.0, car_need:3.0, has_airport:false, total:3.6, area:28,    pop:478,     days:2, island_group:"Dodecanese", drama:false, hiking:false, springs:false, chora:true, sailing:false },
-  "ammouliani":   { name:"Ammouliani",       lat:40.3271, lng:23.9099, beach:4.5, hist:2.0, night:3.0, access:3.0, afford:4.0, car_need:2.0, has_airport:false, total:3.5, area:4,     pop:547,     days:2, island_group:"Other", drama:false, hiking:false, springs:false, chora:false, sailing:false },
+  "ammouliani":   { name:"Ammouliani",       lat:40.3271, lng:23.9099, beach:4.5, hist:2.0, night:3.0, access:3.0, afford:4.0, car_need:1.0, has_airport:false, total:3.5, area:4,     pop:547,     days:2, island_group:"Other", drama:false, hiking:false, springs:false, chora:false, sailing:false },
   "salamis":      { name:"Salamis",          lat:37.9404, lng:23.4823, beach:2.0, hist:3.5, night:3.0, access:4.5, afford:4.5, car_need:3.0, has_airport:false, total:2.8, area:95,    pop:39283,   days:1, island_group:"Saronic", drama:false, hiking:false, springs:false, chora:false, sailing:false },
   "therasia":     { name:"Therasia",         lat:36.445, lng:25.335, beach:3.0, hist:3.5, night:1.5, access:3.0, afford:3.5, car_need:1.0, has_airport:false, total:3.1, area:9,     pop:319,     days:1, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:false },
   "schoinoussa":  { name:"Schoinoussa",      lat:36.87, lng:25.51, beach:4.5, hist:2.0, night:2.5, access:2.5, afford:3.8, car_need:1.0, has_airport:false, total:3.4, area:8,     pop:227,     days:2, island_group:"Cyclades", drama:false, hiking:false, springs:false, chora:false, sailing:false },
@@ -288,6 +288,14 @@ let itinMarkerLayers = {};
 let itinBeachMarkers = [];
 
 const SCORE_DIMS = ['beach', 'hist', 'night', 'access', 'afford', 'car_need'];
+/* Car-free score: the user-facing, higher-is-better twin of car_need.
+   car_need (1 = no car needed … 5 = essential) stays the stored fact and keeps
+   driving the filters, quiz weights and cost model; everything that DISPLAYS a
+   number shows car_free = 6 − car_need, so 5 is best like the other five. */
+function carFreeScore(x) { const v = Number(x); return isNaN(v) ? undefined : Math.round((6 - Math.min(5, Math.max(1, v))) * 10) / 10; }
+// ISLANDS (the table's array) is a spread copy made above, so patch both.
+Object.values(ISLANDS_DATA).forEach(i => { if (i.car_need != null) i.car_free = carFreeScore(i.car_need); });
+ISLANDS.forEach(i => { if (i.car_need != null) i.car_free = carFreeScore(i.car_need); });
 // For the compare page we exclude car_need from the chart/histogram — it's shown below as a label
 const COMPARE_DIMS = ['beach', 'hist', 'night', 'access', 'afford'];
 
@@ -296,7 +304,7 @@ function getDimLabels() {
   return [t('dim.beach'), t('dim.culture'), t('dim.night'), t('dim.access'), t('dim.afford'), t('dim.car')];
 }
 // Back-compat constant (recomputed on language change)
-let DIM_LABELS = ['Beach', 'Culture', 'Nightlife', 'Access', 'Affordability', 'Car needed'];
+let DIM_LABELS = ['Beach', 'Culture', 'Nightlife', 'Access', 'Affordability', 'Car-free'];
 const SCORE_COLORS = {
   beach: '#1B4F8A', hist: '#5A7A3A', night: '#C0522A', access: '#C4962A', afford: '#7B5EA7', car_need: '#6B7280',
 };
@@ -2018,7 +2026,7 @@ function drawClusterSpokes() {
 }
 
 function getDisplayScore(island) {
-  const modeMap = { overall:'total', beach:'beach', hist:'hist', night:'night', access:'access', afford:'afford', car_need:'car_need' };
+  const modeMap = { overall:'total', beach:'beach', hist:'hist', night:'night', access:'access', afford:'afford', car_need:'car_free' };
   return island[modeMap[currentMapMode] || 'total'];
 }
 
@@ -4500,12 +4508,12 @@ function carNeedCompactHtml(score) {
   // Used inside the data table — keep the number visible (users sort by it)
   // but always pair it with the text label so direction is unambiguous.
   if (score == null || isNaN(score)) return '<span style="color:var(--ink-4)">—</span>';
-  const n = Math.round(score);
-  const keys = ['', 'car.none', 'car.helpful', 'car.useful', 'car.recommended', 'car.essential'];
+  const cf = carFreeScore(score), n = Math.round(cf);   // shown as car-free, 5 = best
+  const keys = ['', 'carfree.1', 'carfree.2', 'carfree.3', 'carfree.4', 'carfree.5'];
   const label = (typeof t === 'function' && keys[n]) ? t(keys[n]) : '';
-  const colors = ['', '#6B7280', '#8B8B8B', '#A58A3A', '#D17A2B', '#C0522A'];
+  const colors = ['', '#C0522A', '#D17A2B', '#A58A3A', '#4CAF50', '#1B5E20'];
   const col = colors[n] || '#888';
-  return `<span class="car-compact-pill" style="background:${col}20;color:${col};border:1px solid ${col}40">${n} · ${label}</span>`;
+  return `<span class="car-compact-pill" style="background:${col}20;color:${col};border:1px solid ${col}40">${cf.toFixed(1)} · ${label}</span>`;
 }
 
 function carNeedHtml(score) {
@@ -4514,11 +4522,12 @@ function carNeedHtml(score) {
   // shows ONLY the text label, no visible number. The numeric score lives
   // in the title attribute for accessibility / power users.
   if (score == null || isNaN(score)) return '<span style="color:var(--ink-4)">—</span>';
-  const n = Math.round(score);
-  const keys = ['', 'car.none', 'car.helpful', 'car.useful', 'car.recommended', 'car.essential'];
-  const label = (typeof t === 'function' && keys[n]) ? t(keys[n]) : '';
-  const colors = ['', '#6B7280', '#8B8B8B', '#A58A3A', '#D17A2B', '#C0522A'];
-  const col = colors[n] || '#888';
+  const n = Math.round(score);                       // car_need 1..5
+  const cf = Math.round(carFreeScore(score));        // car-free 5..1 (what the user sees)
+  const keys = ['', 'carfree.1', 'carfree.2', 'carfree.3', 'carfree.4', 'carfree.5'];
+  const label = (typeof t === 'function' && keys[cf]) ? t(keys[cf]) : '';
+  const colors = ['', '#C0522A', '#D17A2B', '#A58A3A', '#4CAF50', '#1B5E20'];
+  const col = colors[cf] || '#888';
   const scaleHint = (typeof t === 'function') ? t('dim.car.hint') : '';
   const style = `background:${col}20;color:${col};border:1px solid ${col}40`;
   const inner = `<span class="car-need-icon">🚗</span><span class="car-need-label">${label}</span>`;
@@ -4527,7 +4536,7 @@ function carNeedHtml(score) {
   // there makes no sense (matches the hidden Rent-a-car button).
   if (n > 1) {
     const rentHint = (typeof t === 'function') ? t('detail.rentcar') : 'Rent a car';
-    return `<a class="car-need-pill car-need-link" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored" style="${style};text-decoration:none;cursor:pointer" title="${rentHint} · ${scaleHint} (${n}/5)">${inner}<span class="car-need-go" aria-hidden="true">↗</span></a>`;
+    return `<a class="car-need-pill car-need-link" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored" style="${style};text-decoration:none;cursor:pointer" title="${rentHint} · ${scaleHint} (${cf}/5)">${inner}<span class="car-need-go" aria-hidden="true">↗</span></a>`;
   }
   return `<span class="car-need-pill" style="${style}" title="${scaleHint} (${n}/5)">${inner}</span>`;
 }
