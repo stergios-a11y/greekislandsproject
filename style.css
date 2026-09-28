@@ -265,6 +265,7 @@ header {
 #site-logo {
   width: 48px;
   height: 48px;
+  border-radius: 50%;   /* the dark-mode tint behind it must follow the circle, not box it */
   display: block;
   transition: opacity 0.2s;
 }

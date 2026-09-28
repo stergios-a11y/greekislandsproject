@@ -20,10 +20,28 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://aegeanblueprint.com/og/naxos.jpg">
 <link rel="icon" href="/logo-hero.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/style.css?v=72">
+<link rel="stylesheet" href="/style.css?v=73">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Greek Island Budget Planner", "url": "https://aegeanblueprint.com/trip-cost/", "applicationCategory": "TravelApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}}</script>
 <style>
 .tc-page{max-width:1120px;margin:0 auto;padding:0 22px 60px;font-family:'Nunito Sans',sans-serif}
+/* Dark theme: cards and chips on the site's dark surfaces. --card-bg was never
+   defined, so every var(--card-bg,#fff) fell back to white under light text. */
+html.dark .tc-page,html.dark .tc-stick{--card-bg:#1F2530;--line:rgba(255,255,255,.12);--card:#1F2530}
+html.dark .tc-chip,html.dark .tc-gopt,html.dark .tc-search{border-color:rgba(255,255,255,.14)}
+html.dark .tc-chip.on,html.dark .tc-gopt.on{border-color:#22C0E0;background:rgba(34,192,224,.12);color:#EEF2F5}
+html.dark .tc-step,html.dark .tc-seg,html.dark .tc-assume,html.dark .tc-addbtn{background:rgba(255,255,255,.07)}
+html.dark .tc-step button,html.dark .tc-seg button.on{background:#283040;color:#60D8F0;box-shadow:none}
+html.dark .tc-seg button{color:#8898A8}html.dark .tc-seg button.on{color:#60D8F0}
+html.dark .tc-n button{border-color:rgba(255,255,255,.14);background:#283040;color:#60D8F0}
+html.dark .tc-sw .s{background:rgba(255,255,255,.18)}
+html.dark .tc-li{border-bottom-color:rgba(255,255,255,.1)}
+html.dark .tc-addbtn{border-color:#22C0E0;color:#60D8F0}
+html.dark .tc-own{background:rgba(255,255,255,.08);color:#60D8F0}
+html.dark .tc-sug div:hover{background:#283040}
+html.dark .tc-cta.c{background:#0B8FAC}
+html.dark .tc-vlbl>small,html.dark .tc-subl{color:#8898A8}
+html.dark .tc-cn a,html.dark .tc-cs a,html.dark .tc-assume summary,html.dark .tc-exact,html.dark .tc-swap-b{color:#60D8F0}
+html.dark .tc-swap-b{border-color:#60D8F0}
 .tc-head{margin:30px 0 6px}
 .tc-head h1{font-family:'Alegreya',serif;font-weight:800;font-size:34px;margin:0}
 .tc-head p{color:var(--ink-3,#637080);font-size:14.5px;margin-top:6px;max-width:680px}
