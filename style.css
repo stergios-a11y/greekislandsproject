@@ -283,6 +283,7 @@ header {
 }
 .top-nav a {
   padding: 7px 13px;
+  white-space: nowrap;   /* never break a label mid-way; the Greek nav was wrapping to two lines at any width */
   font-size: var(--text-meta); font-weight: 500; font-family: var(--sans);
   color: rgba(255,255,255,0.7);
   text-decoration: none;
@@ -1433,7 +1434,10 @@ html.dark .why-feat-num { color: var(--marble-3); }
 /* ----------------------------------------------------------
    RESPONSIVE
 ---------------------------------------------------------- */
-@media (max-width: 860px) {
+/* Header collapses to the drawer below 1140px: with eight labels that never
+   wrap, the Greek nav needs ~1000px; between 861 and 1140 it used to spill
+   past the language button. Layout rules stay on the 860px breakpoint. */
+@media (max-width: 1140px) {
   .top-nav { display: none; }
   .top-nav.open {
     display: flex; flex-direction: column;
@@ -1456,6 +1460,8 @@ html.dark .why-feat-num { color: var(--marble-3); }
     color: rgba(255,255,255,0.65);
   }
   .menu-toggle { display: flex; }
+}
+@media (max-width: 860px) {
   .detail-grid     { grid-template-columns: 1fr; }
   .detail-grid > .detail-main, .detail-grid > .detail-sidebar { grid-column: 1 / -1; }
   .compare-cards   { grid-template-columns: 1fr; }
@@ -6842,6 +6848,9 @@ html.dark .leaflet-control-scale-line {
   html.dark .map-foot a { color: var(--aegean); }
 }
 @media (max-width: 840px) { .map-foot { display: none; } }
+@media (min-width: 841px) and (max-width: 1320px) {
+  html[lang="el"] #view-home .bp-alt-lead { display: none; }
+}
 @media (min-width: 841px) and (max-width: 1180px) {
   #view-home .bp-hero-inner { grid-template-columns: 220px minmax(260px, 1fr) auto; gap: 0 16px; padding: 0 20px; }
   #view-home .bp-hero-sub, #view-home .bp-hero-eyebrow, #view-home .bp-alt-lead { display: none; }
@@ -6959,3 +6968,15 @@ body:not([data-view="mission"]) #feedback-btn { display: none !important; }
 html.dark .mf-layer-btn { background: rgba(255,255,255,.12); }
 .mf-layer-divider { width: 1px; height: 20px; background: rgba(26,35,50,.16); flex: 0 0 auto; }
 @media (max-width: 840px) { .mf-layer-btn, .mf-layer-divider { display: none; } }
+/* Header nav: labels never wrap; on narrower desktops tighten spacing
+   instead (Greek labels are ~35% longer than English). */
+@media (min-width: 1141px) and (max-width: 1400px) {
+  .top-nav a { padding: 7px 9px; }
+  html[lang="el"] .top-nav a { padding: 7px 7px; font-size: 12.5px; }
+  html[lang="el"] #brand-text { font-size: 16px; }
+}
+@media (min-width: 1141px) and (max-width: 1180px) {
+  .top-nav a { padding: 7px 7px; font-size: 12.5px; }
+  html[lang="el"] .top-nav a { padding: 7px 5px; font-size: 12px; }
+  html[lang="el"] .top-nav .shortlist-count { display: none; }
+}
