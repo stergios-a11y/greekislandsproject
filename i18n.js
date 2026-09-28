@@ -29,7 +29,7 @@ const UI_TEXT = {
   'nav.international': { en: 'International', el: 'Διεθνώς' },
   'nav.match': { en: 'Match Me', el: 'Βρες το Νησί σου' },
   'nav.shortlist': { en: '⭐ My Shortlist', el: '⭐ Η Λίστα μου' },
-  'nav.mission': { en: 'Mission', el: 'Στόχος' },
+  'nav.mission': { en: 'About', el: 'Σχετικά' },
   'nav.privacy': { en: 'Privacy', el: 'Απόρρητο' },
 
   // Hero / homepage
@@ -399,7 +399,7 @@ const UI_TEXT = {
   'shortlist.dim.night': { en: 'Night', el: 'Νυχτερινή' },
 
   // Mission page
-  'mission.title': { en: 'Mission', el: 'Στόχος' },
+  'mission.title': { en: 'About', el: 'Σχετικά' },
   'mission.tagline': { en: 'For travellers who want to live the holiday, not plan it.', el: 'Για ταξιδιώτες που θέλουν να ζήσουν τις διακοπές, όχι να τις σχεδιάσουν.' },
 
   // Section 1 — Why this site exists
@@ -506,7 +506,7 @@ const UI_TEXT = {
 
   // Disagree
   'mission.disagree.title': { en: 'Think I got one wrong?', el: 'Πιστεύεις πως κάτι λείπει ή είναι λάθος;' },
-  'mission.disagree.text': { en: 'Hit the <strong>💬 Feedback</strong> button at the bottom right of any page and pick <em>"Suggest a rating correction."</em> Explain what you\'d change and why. If you make a good case, I\'ll update the number. The five dimensions and the reasoning stay in the open.', el: 'Πάτα το κουμπί <strong>💬 Σχόλια</strong> κάτω δεξιά σε οποιαδήποτε σελίδα και διάλεξε <em>«Πρόταση διόρθωσης βαθμολογίας»</em>. Εξήγησε τι θα άλλαζες και γιατί. Αν έχω παραλείψει ένα σημαντικό σημείο ή έχω βαθμολογήσει λάθος, η σελίδα διορθώνεται. Έχει συμβεί ήδη αρκετές φορές.' },
+  'mission.disagree.text': { en: 'This is the one page with a <strong>💬 Feedback</strong> button, bottom right. Pick <em>"Suggest a rating correction,"</em> say what you\'d change and why. If you make a good case, I\'ll update the number. The five dimensions and the reasoning stay in the open.', el: 'Το κουμπί <strong>💬 Σχόλια</strong> υπάρχει μόνο σε αυτή τη σελίδα, κάτω δεξιά. Διάλεξε <em>«Πρόταση διόρθωσης βαθμολογίας»</em> και εξήγησε τι θα άλλαζες και γιατί. Αν έχω παραλείψει ένα σημαντικό σημείο ή έχω βαθμολογήσει λάθος, η σελίδα διορθώνεται. Έχει συμβεί ήδη αρκετές φορές.' },
 
   'scoring.howlink': { en: 'how we score', el: 'πώς βαθμολογώ' },
   'feedback.topic.suggestion': { en: '💡 Suggestion or feature idea', el: '💡 Πρόταση ή ιδέα' },

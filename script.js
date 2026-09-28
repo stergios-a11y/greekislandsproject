@@ -613,7 +613,7 @@ function swapAllTiles() {
 const GA_VIEW_TITLES = {
   home: 'Map', data: 'Islands Data', compare: 'Compare', hopping: 'Ferries & Hopping',
   international: 'International Routes', match: 'Match Me', shortlist: 'My Shortlist',
-  mission: 'Mission',
+  mission: 'About',
 };
 function gaViewPath(view, param) {
   const pre = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? '/el' : '';
@@ -732,6 +732,7 @@ function showView(view, param) {
   if (helpBtn) helpBtn.style.display = (view === 'home') ? '' : 'none';
   // Lock body scroll when on home view (map shouldn't be scrollable)
   document.body.classList.toggle('home-view-active', view === 'home');
+  document.body.dataset.view = view;   // the feedback FAB shows only on the About page (CSS)
   if (nav && nav.classList.contains('open')) nav.classList.remove('open');
   if (view === 'home' && mapInstance) setTimeout(() => mapInstance.invalidateSize(), 100);
   if (view === 'hopping') { setTimeout(renderHopping, 50); setTimeout(renderFerryPlanner, 50); }

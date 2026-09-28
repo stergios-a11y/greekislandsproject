@@ -6944,3 +6944,5 @@ html.dark #view-match .quiz-option, html.dark #view-match .quiz-live { color: #1
   .mq-credit { bottom: 8px; left: 10px; }
   #view-match .quiz-step-label { white-space: nowrap; }
 }
+/* Feedback FAB lives on the About page only (body[data-view] is set by switchView) */
+body:not([data-view="mission"]) #feedback-btn { display: none !important; }

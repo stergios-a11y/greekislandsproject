@@ -2599,7 +2599,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=42"></script>
-<script src="{asset_prefix}script.js?v=122"></script>
+<script src="{asset_prefix}script.js?v=123"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
@@ -2893,7 +2893,7 @@ def generate_ferries_page(island_keys):
             'match':     ('Match Me', 'Βρες το Νησί σου'),
             'tripcost':  ('Budget', 'Κόστος'),
             'shortlist': ('⭐ My Shortlist', '⭐ Η Λίστα μου'),
-            'mission':   ('Mission',   'Στόχος'),
+            'mission':   ('About',     'Σχετικά'),
             'privacy':   ('Privacy',   'Απόρρητο'),
         }
         def navlbl(k):
@@ -3547,7 +3547,7 @@ def generate_festivals_page(island_keys):
             '      <a href="/' + ('el/' if is_el else '') + '#hopping">' + ('Πλοία & Νησοπορία' if is_el else 'Ferries & Hopping') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + 'festivals/" class="active">' + ('Γιορτές' if is_el else 'Festivals') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#data">' + ('Στοιχεία Νησιών' if is_el else 'Islands Data') + '</a>\n'
-            '      <a href="/' + ('el/' if is_el else '') + '#mission">' + ('Στόχος' if is_el else 'Mission') + '</a>\n'
+            '      <a href="/' + ('el/' if is_el else '') + '#mission">' + ('Σχετικά' if is_el else 'About') + '</a>\n'
             '      <a href="/' + ('el/' if is_el else '') + '#shortlist">' + ('⭐ Η Λίστα μου' if is_el else '⭐ My Shortlist') + '</a>\n'
             '    </nav>\n'
             '    <a class="lang-toggle-static" href="' + ('/festivals/' if is_el else '/el/festivals/') + '" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;">'

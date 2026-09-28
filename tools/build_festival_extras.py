@@ -160,7 +160,7 @@ def header_nav(lang, toggle_href, active='festivals'):
       <a href="{p}#hopping">{L('Ferries &amp; Hopping', 'Πλοία &amp; Νησοπορία')}</a>
       <a href="{p}festivals/"{' class="active"' if active == 'festivals' else ''}>{L('Festivals', 'Γιορτές')}</a>
       <a href="{p}#data">{L('Islands Data', 'Στοιχεία Νησιών')}</a>
-      <a href="{p}#mission">{L('Mission', 'Στόχος')}</a>
+      <a href="{p}#mission">{L('About', 'Σχετικά')}</a>
       <a href="{p}#shortlist">{L('⭐ My Shortlist', '⭐ Η Λίστα μου')}</a>
     </nav>
     <a class="lang-toggle-static" href="{toggle_href}" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;"><span style="margin-right: 4px;">🌐</span>{'EN' if lang == 'el' else 'EL'}</a>

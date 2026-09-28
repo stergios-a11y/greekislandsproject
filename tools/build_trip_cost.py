@@ -198,10 +198,10 @@ STR = {
         'swaps_title': '💡 Smart swaps', 'swaps_sub': 'Same region, better value — based on this site\u2019s scores and your current settings.',
         'swap_save': 'save', 'swap_more': 'spend', 'swap_apply': 'Swap', 'swap_instead': 'instead of',
         'swap_overall': 'overall', 'swap_beach': 'beaches',
-        'footer_privacy': 'Privacy', 'footer_mission': 'Mission', 'footer_lang': 'Ελληνικά',
+        'footer_privacy': 'Privacy', 'footer_mission': 'About', 'footer_lang': 'Ελληνικά',
         'nav': [('/#compare', 'Compare'), ('/#match', 'Match Me'), ('/trip-cost/', 'Budget', True),
                 ('/#hopping', 'Ferries & Hopping'), ('/festivals/', 'Festivals'),
-                ('/#data', 'Islands Data'), ('/#mission', 'Mission'), ('/#shortlist', '⭐ My Shortlist')],
+                ('/#data', 'Islands Data'), ('/#mission', 'About'), ('/#shortlist', '⭐ My Shortlist')],
     },
     'el': {
         'lang': 'el', 'base': '/el/', 'other': '/trip-cost/', 'lang_label': 'EN',
@@ -281,10 +281,10 @@ STR = {
         'swaps_title': '💡 Έξυπνες εναλλαγές', 'swaps_sub': 'Ίδια περιοχή, καλύτερη σχέση — βάσει των βαθμολογιών του site και των επιλογών σου.',
         'swap_save': 'κερδίζεις', 'swap_more': 'επιπλέον', 'swap_apply': 'Αλλαγή', 'swap_instead': 'αντί για',
         'swap_overall': 'συνολικά', 'swap_beach': 'παραλίες',
-        'footer_privacy': 'Απόρρητο', 'footer_mission': 'Στόχος', 'footer_lang': 'English',
+        'footer_privacy': 'Απόρρητο', 'footer_mission': 'Σχετικά', 'footer_lang': 'English',
         'nav': [('/el/#compare', 'Σύγκριση'), ('/el/#match', 'Βρες το Νησί σου'), ('/el/trip-cost/', 'Κόστος', True),
                 ('/el/#hopping', 'Πλοία & Νησοπορία'), ('/el/festivals/', 'Γιορτές'),
-                ('/el/#data', 'Στοιχεία Νησιών'), ('/el/#mission', 'Στόχος'), ('/el/#shortlist', '⭐ Η Λίστα μου')],
+                ('/el/#data', 'Στοιχεία Νησιών'), ('/el/#mission', 'Σχετικά'), ('/el/#shortlist', '⭐ Η Λίστα μου')],
     },
 }
 
