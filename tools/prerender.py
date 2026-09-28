@@ -2216,7 +2216,7 @@ def render_page(key, data, meta, lang='en'):
 <script type="application/ld+json">{schema_json}</script>
 
 <!-- SPA assets — load the same CSS as the main site so the SEO body blends visually -->
-<link rel="stylesheet" href="{asset_prefix}style.css?v=73">
+<link rel="stylesheet" href="{asset_prefix}style.css?v=74">
 <style>
   /* Minimal SEO body styling — these elements exist only in pre-rendered pages */
   .seo-island-content {{
@@ -2487,6 +2487,7 @@ def render_page(key, data, meta, lang='en'):
       <a href="{(f'/el/island/{key}/' if lang == 'en' else f'/island/{key}/')}" class="seo-nav-lang">
         🌐 {'EL' if lang == 'en' else 'EN'}
       </a>
+      <button type="button" class="dark-mode-toggle dm-static" aria-label="Toggle dark mode" onclick="var h=document.documentElement,d=!h.classList.contains('dark');h.classList.toggle('dark',d);try{{localStorage.setItem('darkMode',d)}}catch(e){{}}"></button>
     </div>
   </div>
 </nav>
@@ -2935,7 +2936,7 @@ def generate_ferries_page(island_keys):
             f'<meta property="og:url" content="{url}">\n'
             f'<meta property="og:locale" content="{"el_GR" if is_el else "en_US"}">\n'
             '<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>\n'
-            '<link rel="stylesheet" href="/style.css?v=73">\n'
+            '<link rel="stylesheet" href="/style.css?v=74">\n'
             '<style>\n'
             '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--sans, system-ui), sans-serif; margin: 0; }\n'
             '  .ferry-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }\n'
@@ -3005,6 +3006,7 @@ def generate_ferries_page(island_keys):
             f'      <a href="/{"el/" if is_el else ""}#shortlist">{navlbl("shortlist")}</a>\n'
             '    </nav>\n'
             f'    <a class="lang-toggle-static" href="{"/ferries/" if is_el else "/el/ferries/"}" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;">'
+            '    <button type="button" class="dark-mode-toggle dm-static" aria-label="Toggle dark mode" onclick="var h=document.documentElement,d=!h.classList.contains(\'dark\');h.classList.toggle(\'dark\',d);try{localStorage.setItem(\'darkMode\',d)}catch(e){}"></button>\n'
             f'<span style="margin-right: 4px;">🌐</span>{"EN" if is_el else "EL"}</a>\n'
             '  </div>\n'
             '</header>\n'
@@ -3470,7 +3472,7 @@ def generate_festivals_page(island_keys):
             # Otherwise users who enabled dark mode on the home page would briefly
             # flash the light theme on this page. Tiny inline script — no JS file needed.
             '<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>\n'
-            '<link rel="stylesheet" href="/style.css?v=73">\n'
+            '<link rel="stylesheet" href="/style.css?v=74">\n'
             '<style>\n'
             '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--sans, system-ui), sans-serif; margin: 0; }\n'
             '  .fest-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }\n'
@@ -3551,6 +3553,7 @@ def generate_festivals_page(island_keys):
             '      <a href="/' + ('el/' if is_el else '') + '#shortlist">' + ('⭐ Η Λίστα μου' if is_el else '⭐ My Shortlist') + '</a>\n'
             '    </nav>\n'
             '    <a class="lang-toggle-static" href="' + ('/festivals/' if is_el else '/el/festivals/') + '" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;">'
+            '    <button type="button" class="dark-mode-toggle dm-static" aria-label="Toggle dark mode" onclick="var h=document.documentElement,d=!h.classList.contains(\'dark\');h.classList.toggle(\'dark\',d);try{localStorage.setItem(\'darkMode\',d)}catch(e){}"></button>\n'
             '<span style="margin-right: 4px;">🌐</span>' + ('EN' if is_el else 'EL') + '</a>\n'
             '  </div>\n'
             '</header>\n'

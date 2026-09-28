@@ -515,6 +515,7 @@ html.dark .tc-swap-b{{border-color:#60D8F0}}
       {nav_html}
     </nav>
     <a class="lang-toggle-static" href="{t['other']}" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;"><span style="margin-right: 4px;">🌐</span>{t['lang_label']}</a>
+    <button type="button" class="dark-mode-toggle dm-static" aria-label="Toggle dark mode" onclick="var h=document.documentElement,d=!h.classList.contains('dark');h.classList.toggle('dark',d);try{{localStorage.setItem('darkMode',d)}}catch(e){{}}"></button>
   </div>
 </header>
 

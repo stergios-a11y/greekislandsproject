@@ -164,6 +164,7 @@ def header_nav(lang, toggle_href, active='festivals'):
       <a href="{p}#shortlist">{L('⭐ My Shortlist', '⭐ Η Λίστα μου')}</a>
     </nav>
     <a class="lang-toggle-static" href="{toggle_href}" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;"><span style="margin-right: 4px;">🌐</span>{'EN' if lang == 'el' else 'EL'}</a>
+    <button type="button" class="dark-mode-toggle dm-static" aria-label="Toggle dark mode" onclick="var h=document.documentElement,d=!h.classList.contains('dark');h.classList.toggle('dark',d);try{{localStorage.setItem('darkMode',d)}}catch(e){{}}"></button>
   </div>
 </header>
 <script>document.getElementById("menu-toggle-btn").addEventListener("click",function(){{var n=document.getElementById("main-nav");n.classList.toggle("open");this.classList.toggle("open");}});</script>'''
