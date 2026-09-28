@@ -2216,7 +2216,7 @@ def render_page(key, data, meta, lang='en'):
 <script type="application/ld+json">{schema_json}</script>
 
 <!-- SPA assets — load the same CSS as the main site so the SEO body blends visually -->
-<link rel="stylesheet" href="{asset_prefix}style.css?v=74">
+<link rel="stylesheet" href="{asset_prefix}style.css?v=75">
 <style>
   /* Minimal SEO body styling — these elements exist only in pre-rendered pages */
   .seo-island-content {{
@@ -2936,7 +2936,7 @@ def generate_ferries_page(island_keys):
             f'<meta property="og:url" content="{url}">\n'
             f'<meta property="og:locale" content="{"el_GR" if is_el else "en_US"}">\n'
             '<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>\n'
-            '<link rel="stylesheet" href="/style.css?v=74">\n'
+            '<link rel="stylesheet" href="/style.css?v=75">\n'
             '<style>\n'
             '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--sans, system-ui), sans-serif; margin: 0; }\n'
             '  .ferry-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }\n'
@@ -3472,7 +3472,7 @@ def generate_festivals_page(island_keys):
             # Otherwise users who enabled dark mode on the home page would briefly
             # flash the light theme on this page. Tiny inline script — no JS file needed.
             '<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>\n'
-            '<link rel="stylesheet" href="/style.css?v=74">\n'
+            '<link rel="stylesheet" href="/style.css?v=75">\n'
             '<style>\n'
             '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--sans, system-ui), sans-serif; margin: 0; }\n'
             '  .fest-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }\n'

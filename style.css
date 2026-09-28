@@ -6943,7 +6943,15 @@ html.dark .leaflet-control-scale-line {
 #view-match #quiz-results { max-width: 760px; }
 #view-match .quiz-retake-btn { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.35); color: #fff; }
 #view-match .quiz-retake-btn:hover { background: rgba(255,255,255,.25); }
-html.dark #view-match .quiz-option, html.dark #view-match .quiz-live { color: #1A2332; }
+/* The quiz panel and tiles carry their own colours in both themes: tiles are
+   dark glass (white text), the board is a white card (dark text) — the theme's
+   ink tokens must not leak in. */
+#view-match .quiz-option, html.dark #view-match .quiz-option { color: #fff; }
+#view-match .quiz-live, html.dark #view-match .quiz-live { color: #1A2332; }
+#view-match .ql-head, html.dark #view-match .ql-head { color: #1A2332; }
+#view-match .ql-head small, #view-match .ql-foot, html.dark #view-match .ql-head small, html.dark #view-match .ql-foot { color: #637080; }
+html.dark #view-match .ql-rank { color: #1A2332; background: rgba(255,255,255,.92); }
+html.dark #view-match .ql-top .ql-rank { color: #fff; background: #E8522A; }
 @media (max-width: 1100px) {
   #view-match { padding: 28px 24px 40px; }
   #view-match .match-grid { grid-template-columns: minmax(0, 1fr) 320px; gap: 28px; }
