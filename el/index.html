@@ -160,6 +160,7 @@
         </form>
           <div class="bp-hero-suggest" id="bp-hero-suggest" hidden></div>
         </div>
+        <p class="bp-decide-alt"><span class="bp-alt-lead">Δεν ξέρεις από πού να ξεκινήσεις;</span> <button type="button" class="bp-linkbtn" onclick="navigateTo('match')">Κάνε το quiz του ενός λεπτού →</button></p>
       </div>
       <a class="bp-hero-credit" id="bp-hero-credit" href="#"></a>
     </section>
@@ -185,8 +186,7 @@
           <p>Πλοία, δωμάτια, αυτοκίνητο και φαγητό για τις δικές σου ημερομηνίες — ειλικρινής εκτίμηση και μετά κράτηση.</p>
           <span class="go">Υπολόγισε το κόστος →</span>
         </button>
-      </div>
-      <p class="bp-decide-alt">Δεν ξέρεις από πού να ξεκινήσεις; <button type="button" class="bp-linkbtn" onclick="navigateTo('match')">Κάνε το quiz του ενός λεπτού →</button></p>      <button type="button" class="bp-mobile-cta" onclick="navigateTo('compare')"><span data-i18n="home.compare_cta">⇄  Σύγκρινε δύο νησιά</span><span class="bp-mobile-cta-go" aria-hidden="true">→</span></button>
+      </div>      <button type="button" class="bp-mobile-cta" onclick="navigateTo('compare')"><span data-i18n="home.compare_cta">⇄  Σύγκρινε δύο νησιά</span><span class="bp-mobile-cta-go" aria-hidden="true">→</span></button>
     </div>
 
 
@@ -246,16 +246,8 @@
 
       <svg id="rail-svg" class="rail-svg" aria-hidden="true"></svg>
       <aside class="pick-rail" id="pick-rail" hidden></aside>
+      <div class="map-foot" aria-hidden="false"><span data-i18n="footer.copyright">© 2026 Aegean Blueprint</span> · <a href="/el/privacy/">Απόρρητο</a> · <a href="/el/credits/">Πηγές φωτογραφιών</a></div>
       <button type="button" class="map-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Πάνω">↑ Πάνω</button>
-      <div class="map-legend">
-        <div class="map-legend-title">Οι κύκλοι δείχνουν: <b id="legend-mode">Συνολικά</b></div>
-        <div class="map-legend-row"><span class="map-legend-dot" style="background:#1B5E20;width:18px;height:18px"></span><span>4.5+ Κορυφαία</span></div>
-        <div class="map-legend-row"><span class="map-legend-dot" style="background:#4CAF50;width:16px;height:16px"></span><span>3.8–4.5 Εξαιρετικά</span></div>
-        <div class="map-legend-row"><span class="map-legend-dot" style="background:#8FAE3C;width:14px;height:14px"></span><span>3.5–3.8 Πολύ καλά</span></div>
-        <div class="map-legend-row"><span class="map-legend-dot" style="background:#C4962A;width:13px;height:13px"></span><span>3.0–3.5 Καλά</span></div>
-        <div class="map-legend-row"><span class="map-legend-dot" style="background:#C0522A;width:11px;height:11px"></span><span>Κάτω από 3.0</span></div>
-        <div class="map-legend-hint">Circle size = score · Click to explore</div>
-      </div>
     </div>
 
     <section class="home-content" id="home-content">
@@ -702,7 +694,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="/i18n.js?v=42"></script>
-  <script src="/script.js?v=120"></script>
+  <script src="/script.js?v=121"></script>
 <!-- SEO_ISLAND_LIST_START -->
 <nav class="visually-hidden" aria-label="Όλα τα νησιά">
   <h2>Όλα τα νησιά</h2>

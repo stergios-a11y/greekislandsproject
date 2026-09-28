@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-09-27';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-09-28';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -1279,6 +1279,9 @@ function adjustMapHeightToStrip() {
    The map captures mouse-wheel events, so these button-triggered jumps
    are the reliable way to move between the two. */
 function scrollToMainMap() {
+  // Desktop home is one fixed screen: the map is already in view, and
+  // scrollIntoView would drag the band off the top even with overflow hidden.
+  if (window.matchMedia('(min-width: 841px)').matches && document.body.classList.contains('home-view-active')) return;
   const m = document.getElementById('main-map');
   if (m) m.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
@@ -1364,6 +1367,8 @@ async function initHomeHero() {
   const bgsWrap = document.getElementById('bp-hero-bgs');
   const credit = document.getElementById('bp-hero-credit');
   if (!bgsWrap || keys.length === 0) return;
+  // Desktop band has no photo — don't fetch five hero images for nothing.
+  if (window.matchMedia('(min-width: 841px)').matches) return;
   const isEl = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
   bgsWrap.innerHTML = keys.map((k, i) =>
     `<div class="bp-hero-bg${i === 0 ? ' on' : ''}" style="background-image:url('${heroSrc(photos[k].url)}')"></div>`
@@ -1725,6 +1730,7 @@ function drawRailLeaders() {
   svg.innerHTML = [...rail.querySelectorAll('.bp-pol')].map(card => {
     const k = card.dataset.k;
     const meta = ISLANDS_DATA[k];
+    if (card.offsetParent === null) return '';   // card hidden on short viewports
     if (!meta || !bounds.contains([meta.lat, meta.lng])) return '';
     const pt = mapInstance.latLngToContainerPoint([meta.lat, meta.lng]);
     const cr = card.getBoundingClientRect();
@@ -1777,13 +1783,13 @@ function setupMap() {
      on small screens; desktop keeps the tighter framing it was tuned with. */
   const _small = window.matchMedia('(max-width: 840px)').matches;
   mapInstance = L.map('main-map', {
-    zoomControl: true, scrollWheelZoom: false,
+    zoomControl: true, scrollWheelZoom: !_small,   // desktop home is fixed: wheel = zoom
     minZoom: _small ? 5 : 6, maxZoom: 14, zoomSnap: 0.5,
     maxBounds: GREECE_BOUNDS, maxBoundsViscosity: _small ? 0.25 : 0.85 });
   // Default view hugs the Greek islands (Corfu→Kastellorizo, Crete→Thasos)
   // instead of the padded maxBounds — no half-screen of Italy/Turkey/sea.
   mapInstance.fitBounds(L.latLngBounds(L.latLng(34.6, 19.4), L.latLng(41.1, 28.4)),
-    _small ? { padding: [18, 18] } : {});
+    _small ? { padding: [18, 18] } : { paddingTopLeft: [0, 64], paddingBottomRight: [0, 24] });   // keep Thasos out from under the filter bar
   addThemeAwareTiles(mapInstance, { maxZoom: 14 });
   L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(mapInstance);
 
@@ -1791,7 +1797,7 @@ function setupMap() {
   // off above); Ctrl/Cmd + scroll zooms at the cursor. A brief hint teaches it.
   const mapEl = document.getElementById('main-map');
   let hintTimer = null;
-  mapEl.addEventListener('wheel', (e) => {
+  if (_small) mapEl.addEventListener('wheel', (e) => {
     if (e.ctrlKey || e.metaKey) {
       e.preventDefault();
       const dir = e.deltaY < 0 ? 1 : -1;
