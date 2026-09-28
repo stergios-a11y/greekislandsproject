@@ -536,6 +536,7 @@ const UI_TEXT = {
   'quiz.move.and': { en: 'and', el: 'και' },
   'quiz.move.single': { en: 'just moved up.', el: 'μόλις ανέβηκε.' },
   'quiz.move.plural': { en: 'just moved up.', el: 'μόλις ανέβηκαν.' },
+  'quiz.move.none': { en: 'No change — the top five hold their places.', el: 'Καμία αλλαγή — η πεντάδα κρατάει τις θέσεις της.' },
   'quiz.why.scene': { en: 'a real scene', el: 'Έντονη κοσμική ζωή' },
   'quiz.why.fits': { en: 'fits your {n} days', el: 'Χωράει στις {n} μέρες σου' },
   'home.compare_cta': { en: '⇄  Compare two islands', el: '⇄  Σύγκρινε δύο νησιά' },

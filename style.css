@@ -6980,3 +6980,7 @@ html.dark .mf-layer-btn { background: rgba(255,255,255,.12); }
   html[lang="el"] .top-nav a { padding: 7px 5px; font-size: 12px; }
   html[lang="el"] .top-nav .shortlist-count { display: none; }
 }
+/* Board pulse when an answer leaves the top five unchanged */
+@keyframes qlhold { 0% { box-shadow: 0 20px 50px rgba(0,0,0,.35); } 35% { box-shadow: 0 20px 50px rgba(0,0,0,.35), 0 0 0 4px rgba(232,82,42,.55); } 100% { box-shadow: 0 20px 50px rgba(0,0,0,.35); } }
+#view-match .quiz-live.ql-hold { animation: qlhold .7s ease; }
+@media (prefers-reduced-motion: reduce) { #view-match .quiz-live.ql-hold { animation: none; } }

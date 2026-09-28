@@ -7135,7 +7135,16 @@ function renderQuizLiveBoard() {
 function renderQuizMovement(climbers, answered) {
   const el = document.getElementById('quiz-movement');
   if (!el) return;
-  if (!answered || !climbers.length) { el.textContent = ''; el.classList.remove('on'); return; }
+  if (!answered) { el.textContent = ''; el.classList.remove('on'); return; }
+  if (!climbers.length) {
+    // Some questions (trip length, season) rarely reshuffle the top five —
+    // say so, and pulse the board, or the answer looks like it did nothing.
+    const box = document.getElementById('quiz-live');
+    if (box) { box.classList.remove('ql-hold'); void box.offsetWidth; box.classList.add('ql-hold'); }
+    el.textContent = t('quiz.move.none');
+    el.classList.remove('on'); void el.offsetWidth; el.classList.add('on');
+    return;
+  }
   const names = climbers.slice(0, 3);
   const list = names.length > 1
     ? names.slice(0, -1).join(', ') + ' ' + t('quiz.move.and') + ' ' + names[names.length - 1]
