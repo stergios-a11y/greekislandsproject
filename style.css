@@ -6946,3 +6946,13 @@ html.dark #view-match .quiz-option, html.dark #view-match .quiz-live { color: #1
 }
 /* Feedback FAB lives on the About page only (body[data-view] is set by switchView) */
 body:not([data-view="mission"]) #feedback-btn { display: none !important; }
+
+/* Map ⇄ Satellite toggle in the home filter bar (desktop/tablet). On phones the
+   bar has no room, so the Leaflet layers control stays. */
+.mf-layer-btn { flex: 0 0 auto; width: 34px; height: 34px; border: 0; border-radius: 999px; background: var(--aegean-pale, #E8F7FB);
+  color: var(--ink-1); font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform .15s, background .15s; }
+.mf-layer-btn:hover { transform: scale(1.06); background: var(--aegean-light, #C8EEF5); }
+.mf-layer-btn[aria-pressed="true"] { background: var(--aegean-dark, #076880); }
+html.dark .mf-layer-btn { background: rgba(255,255,255,.12); }
+.mf-layer-divider { width: 1px; height: 20px; background: rgba(26,35,50,.16); flex: 0 0 auto; }
+@media (max-width: 840px) { .mf-layer-btn, .mf-layer-divider { display: none; } }

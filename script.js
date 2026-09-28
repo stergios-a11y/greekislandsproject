@@ -553,6 +553,24 @@ function addThemeAwareTiles(map, options = {}) {
   return mapLayer;
 }
 
+/* Home map: Map ⇄ Satellite from the filter bar (desktop). Same layers the
+   Leaflet control would switch; firing baselayerchange keeps the dark-mode
+   labels logic in sync. */
+function toggleHomeBaseLayer() {
+  const entry = _activeMapEntries.find(e => e.map === mapInstance);
+  const btn = document.getElementById('mf-layer-btn');
+  if (!entry || !btn) return;
+  const toSat = !entry.map.hasLayer(entry.satLayer);
+  const off = toSat ? entry.mapLayer : entry.satLayer, on = toSat ? entry.satLayer : entry.mapLayer;
+  entry.map.removeLayer(off); on.addTo(entry.map);
+  entry.map.fire('baselayerchange', { layer: on, name: toSat ? entry.labelSat : entry.labelMap });
+  btn.setAttribute('aria-pressed', toSat ? 'true' : 'false');
+  btn.textContent = toSat ? '🗺' : '🛰';
+  btn.title = toSat ? entry.labelMap : entry.labelSat;
+  try { track('map_layer', { layer: toSat ? 'satellite' : 'map' }); } catch (_) {}
+}
+window.toggleHomeBaseLayer = toggleHomeBaseLayer;
+
 function swapAllTiles() {
   // Theme changed — point the existing "map" layer at the new theme's tiles,
   // add or drop the dark-only labels overlay, and re-credit the new provider.
@@ -1791,7 +1809,7 @@ function setupMap() {
   // instead of the padded maxBounds — no half-screen of Italy/Turkey/sea.
   mapInstance.fitBounds(L.latLngBounds(L.latLng(34.6, 19.4), L.latLng(41.1, 28.4)),
     _small ? { padding: [18, 18] } : { paddingTopLeft: [0, 64], paddingBottomRight: [0, 24] });   // keep Thasos out from under the filter bar
-  addThemeAwareTiles(mapInstance, { maxZoom: 14 });
+  addThemeAwareTiles(mapInstance, { maxZoom: 14, hideLayerControl: !_small });   // desktop: Map/Satellite lives in the filter bar
   L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(mapInstance);
 
   // Google-embed wheel behavior: plain scroll scrolls the page (wheel zoom is
