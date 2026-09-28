@@ -6701,7 +6701,12 @@ const QUIZ_QUESTIONS = [
     question_el: 'Τι είδους ταξίδι σχεδιάζεις;',
     options: ['Solo adventure', 'Couple getaway', 'Family vacation', 'Friend group'],
     options_el: ['Ταξίδι μόνος/-η', 'Ζευγάρι', 'Οικογενειακές διακοπές', 'Παρέα φίλων'],
-    icons: ['🎒', '💞', '👨‍👩‍👧', '🍻']
+    icons: ['🎒', '💞', '👨‍👩‍👧', '🍻'],
+    why: 'Who you are with changes everything — a couple wants a chora at sunset, a family wants a shallow beach and a car.',
+    why_el: 'Με ποιον πας αλλάζει τα πάντα — το ζευγάρι θέλει χώρα στο ηλιοβασίλεμα, η οικογένεια ρηχή παραλία και αυτοκίνητο.',
+    subs: ['hiking, hostels, ferries on a whim', 'romantic villages, quiet coves', 'sandy beaches, short ferries, a car', 'nightlife, boat days, big tables'],
+    subs_el: ['πεζοπορία, hostel, πλοίο της στιγμής', 'ρομαντικά χωριά, ήσυχοι κολπίσκοι', 'αμμουδιές, κοντινά πλοία, αυτοκίνητο', 'νυχτερινή ζωή, βαρκάδες, μεγάλα τραπέζια'],
+    photo: 'milos'
   },
   {
     id: 'duration',
@@ -6709,7 +6714,12 @@ const QUIZ_QUESTIONS = [
     question_el: 'Πόσο χρόνο έχεις;',
     options: ['2–3 days', '4–5 days', 'About a week', '10 days or more'],
     options_el: ['2–3 μέρες', '4–5 μέρες', 'Περίπου μια εβδομάδα', '10 μέρες ή περισσότερες'],
-    icons: ['⚡', '🗓', '🌅', '🧳']
+    icons: ['⚡', '🗓', '🌅', '🧳'],
+    why: 'A big island needs a week; a two-night trip wants somewhere close to Athens with one ferry.',
+    why_el: 'Ένα μεγάλο νησί θέλει μια εβδομάδα· για δύο βράδια θέλεις κάτι κοντά στην Αθήνα με ένα πλοίο.',
+    subs: ['one island, near a port', 'one island, or two close ones', 'two or three islands', 'a proper island-hop'],
+    subs_el: ['ένα νησί, κοντά σε λιμάνι', 'ένα νησί, ή δύο κοντινά', 'δύο ή τρία νησιά', 'κανονικό island hopping'],
+    photo: 'folegandros'
   },
   {
     id: 'priority',
@@ -6717,7 +6727,12 @@ const QUIZ_QUESTIONS = [
     question_el: 'Τι σε ενδιαφέρει περισσότερο;',
     options: ['Beaches & swimming', 'History & culture', 'Nightlife & food', 'Peace & nature'],
     options_el: ['Παραλίες & μπάνιο', 'Ιστορία & πολιτισμός', 'Νυχτερινή ζωή & φαγητό', 'Ηρεμία & φύση'],
-    icons: ['🏖', '🏛', '🍷', '🌿']
+    icons: ['🏖', '🏛', '🍷', '🌿'],
+    why: 'Every island is scored on all four. This decides which score counts double.',
+    why_el: 'Κάθε νησί βαθμολογείται και στα τέσσερα. Εδώ αποφασίζεις ποια βαθμολογία μετράει διπλά.',
+    subs: ['the water is the holiday', 'castles, temples, old towns', 'bars, tavernas, a scene', 'trails, silence, stars'],
+    subs_el: ['η θάλασσα είναι οι διακοπές', 'κάστρα, ναοί, παλιές πόλεις', 'μπαρ, ταβέρνες, κόσμος', 'μονοπάτια, ησυχία, αστέρια'],
+    photo: 'naxos'
   },
   {
     id: 'budget',
@@ -6725,7 +6740,12 @@ const QUIZ_QUESTIONS = [
     question_el: 'Ποιος είναι ο προϋπολογισμός σου;',
     options: ['Budget (backpacker)', 'Mid-range', 'Splurge-ready', 'No limit'],
     options_el: ['Οικονομικό', 'Μεσαίο', 'Άνετος προϋπολογισμός', 'Χωρίς όριο'],
-    icons: ['🎒', '🙂', '✨', '🥂']
+    icons: ['🎒', '🙂', '✨', '🥂'],
+    why: 'Rooms on Mykonos cost three times what they do on Ikaria. The score for affordability moves with this.',
+    why_el: 'Το δωμάτιο στη Μύκονο κοστίζει τριπλάσια από την Ικαρία. Η βαθμολογία οικονομίας κινείται ανάλογα.',
+    subs: ['rooms under €60, tavernas', 'nice rooms, a hire car', 'a boutique hotel, a boat day', 'wherever is best, whatever it costs'],
+    subs_el: ['δωμάτια κάτω από €60, ταβέρνες', 'καλά δωμάτια, ενοικίαση αυτοκινήτου', 'boutique ξενοδοχείο, βαρκάδα', 'ό,τι καλύτερο, όσο κι αν κοστίζει'],
+    photo: 'skopelos'
   },
   {
     id: 'scene',
@@ -6735,7 +6755,12 @@ const QUIZ_QUESTIONS = [
               'Local and low-key', 'Solitude — barely anyone'],
     options_el: ['Κοσμοπολίτικο — μπαρ, μπουτίκ, να σε δουν', 'Ζωντανό, χωρίς επίδειξη',
                  'Ήσυχο και ντόπιο', 'Μοναξιά — σχεδόν κανείς'],
-    icons: ['🥂', '🎶', '🫒', '🏝']
+    icons: ['🥂', '🎶', '🫒', '🏝'],
+    why: 'Nightlife and crowds go together. This is where Mykonos and Anafi part ways.',
+    why_el: 'Νυχτερινή ζωή και κόσμος πάνε μαζί. Εδώ χωρίζουν οι δρόμοι Μυκόνου και Ανάφης.',
+    subs: ['Mykonos, Paros, Santorini', 'Naxos, Skiathos, Rhodes', 'Sifnos, Kythnos, Lemnos', 'Anafi, Sikinos, Gavdos'],
+    subs_el: ['Μύκονος, Πάρος, Σαντορίνη', 'Νάξος, Σκιάθος, Ρόδος', 'Σίφνος, Κύθνος, Λήμνος', 'Ανάφη, Σίκινος, Γαύδος'],
+    photo: 'kythira'
   },
   {
     id: 'month',
@@ -6748,7 +6773,12 @@ const QUIZ_QUESTIONS = [
     // inside it.
     options: ['Spring (Apr–May)', 'High summer (Jun–Aug)', 'Early autumn (Sep–Oct)', 'Off season (Nov–Mar)'],
     options_el: ['Άνοιξη (Απρ–Μάι)', 'Καρδιά καλοκαιριού (Ιουν–Αυγ)', 'Αρχές φθινοπώρου (Σεπ–Οκτ)', 'Εκτός σεζόν (Νοε–Μαρ)'],
-    icons: ['🌸', '☀️', '🍇', '🌧']
+    icons: ['🌸', '☀️', '🍇', '🌧'],
+    why: 'The meltemi, the sea temperature and the ferry timetable all change with the month.',
+    why_el: 'Το μελτέμι, η θερμοκρασία της θάλασσας και τα δρομολόγια αλλάζουν με τον μήνα.',
+    subs: ['wildflowers, cool sea, empty', 'hot, busy, everything open', 'warm sea, thinner crowds', 'locals only, some ferries stop'],
+    subs_el: ['αγριολούλουδα, κρύα θάλασσα, άδεια', 'ζέστη, κόσμος, όλα ανοιχτά', 'ζεστή θάλασσα, λιγότερος κόσμος', 'μόνο ντόπιοι, λιγότερα πλοία'],
+    photo: 'sifnos'
   },
   {
     id: 'transport',
@@ -6756,7 +6786,12 @@ const QUIZ_QUESTIONS = [
     question_el: 'Πώς φτάνεις στο νησί;',
     options: ['By car', 'Ferry — up to 5 hours', 'Ferry — any length', 'Fly in'],
     options_el: ['Με το αυτοκίνητό μου', 'Πλοίο — έως 5 ώρες', 'Πλοίο — όσο χρειαστεί', 'Αεροπλάνο'],
-    icons: ['🚗', '⛴', '🛳', '✈️']
+    icons: ['🚗', '⛴', '🛳', '✈️'],
+    why: 'Crete is a 9-hour sail from Piraeus but a 50-minute flight. Access is half the decision.',
+    why_el: 'Η Κρήτη είναι 9 ώρες πλοίο από τον Πειραιά αλλά 50 λεπτά πτήση. Η πρόσβαση είναι η μισή απόφαση.',
+    subs: ['drive to the port, ferry it over', 'Saronic, Cyclades, Sporades', 'anywhere the boats go', 'only islands with an airport'],
+    subs_el: ['οδηγάς μέχρι το λιμάνι, το περνάς με το πλοίο', 'Σαρωνικός, Κυκλάδες, Σποράδες', 'όπου πάνε τα πλοία', 'μόνο νησιά με αεροδρόμιο'],
+    photo: 'symi'
   },
   {
     id: 'car',
@@ -6764,7 +6799,12 @@ const QUIZ_QUESTIONS = [
     question_el: 'Θα έχεις αυτοκίνητο στο νησί;',
     options: ['Yes, I want to rent one', 'No, I prefer walking / public transport'],
     options_el: ['Ναι, θα νοικιάσω', 'Όχι, προτιμώ περπάτημα / ΜΜΜ'],
-    icons: ['🚗', '🚶']
+    icons: ['🚗', '🚶'],
+    why: 'On Naxos you need one; on Hydra there are none. Some islands only work one way.',
+    why_el: 'Στη Νάξο το χρειάζεσαι· στην Ύδρα δεν υπάρχουν. Κάποια νησιά δουλεύουν μόνο με έναν τρόπο.',
+    subs: ['bigger islands, remote beaches', 'small islands, one good town'],
+    subs_el: ['μεγαλύτερα νησιά, απόμερες παραλίες', 'μικρά νησιά, μία καλή πόλη'],
+    photo: 'paros'
   },
 ];
 let quizAnswers = {};
@@ -6789,11 +6829,15 @@ function renderQuizStep() {
   const isMonthPicker = !!q.month_picker;
 
   // Options HTML — month picker gets a compact 4-col grid
+  const subs = (CURRENT_LANG === 'el' && q.subs_el) ? q.subs_el : (q.subs || []);
+  const why = pickLang(q, 'why') || '';
   const optionsHtml = isMonthPicker
     ? `<div class="quiz-options quiz-month-grid">${options.map((opt, i) => `<button class="quiz-option quiz-month-btn ${quizAnswers[quizStep] === i ? 'selected' : ''}" data-idx="${i}">${opt}</button>`).join('')}</div>`
-    : `<div class="quiz-options">${options.map((opt, i) => `<button class="quiz-option ${quizAnswers[quizStep] === i ? 'selected' : ''}" data-idx="${i}">${q.icons && q.icons[i] ? `<span class="quiz-opt-ic" aria-hidden="true">${q.icons[i]}</span>` : ''}<span class="quiz-opt-tx">${opt}</span></button>`).join('')}</div>`;
+    : `<div class="quiz-options">${options.map((opt, i) => `<button class="quiz-option ${quizAnswers[quizStep] === i ? 'selected' : ''}" data-idx="${i}">${q.icons && q.icons[i] ? `<span class="quiz-opt-ic" aria-hidden="true">${q.icons[i]}</span>` : ''}<span class="quiz-opt-tx"><b>${opt}</b>${subs[i] ? `<small>${subs[i]}</small>` : ''}</span></button>`).join('')}</div>`;
 
-  container.innerHTML = `<div class="quiz-progress">${QUIZ_QUESTIONS.map((_, i) => `<div class="quiz-dot ${i < quizStep ? 'done' : i === quizStep ? 'current' : ''}"></div>`).join('')}<span class="quiz-step-label">${quizStep + 1} / ${QUIZ_QUESTIONS.length}</span></div><div class="quiz-card quiz-card-entering quiz-card-from-${quizDirection > 0 ? 'right' : 'left'}"><div class="quiz-question">${questionText}</div>${optionsHtml}${quizStep > 0 ? `<div class="quiz-nav-back"><button class="quiz-back-btn">← ${backLabel}</button></div>` : ''}</div>`;
+  const n = QUIZ_QUESTIONS.length, stepLabel = t('quiz.step').replace('{n}', quizStep + 1).replace('{total}', n);
+  container.innerHTML = `<div class="quiz-progress"><span class="quiz-step-label">${stepLabel}</span><span class="quiz-bar"><i style="width:${Math.round((quizStep + 1) / n * 100)}%"></i></span>${QUIZ_QUESTIONS.map((_, i) => `<div class="quiz-dot ${i < quizStep ? 'done' : i === quizStep ? 'current' : ''}"></div>`).join('')}</div><div class="quiz-card quiz-card-entering quiz-card-from-${quizDirection > 0 ? 'right' : 'left'}"><div class="quiz-question">${questionText}</div>${why ? `<p class="quiz-why">${why}</p>` : ''}${optionsHtml}<div class="quiz-nav-back">${quizStep > 0 ? `<button class="quiz-back-btn">← ${backLabel}</button>` : ''}<button class="quiz-skip-btn">${t('quiz.skip')} →</button></div></div>`;
+  setQuizBackdrop(q.photo);
 
   // Trigger animation: remove entering class after one frame so transition fires
   requestAnimationFrame(() => {
@@ -6818,6 +6862,36 @@ function renderQuizStep() {
   const backBtn = container.querySelector('.quiz-back-btn');
   if (backBtn) backBtn.addEventListener('click', () => {
     if (quizStep > 0) { quizDirection = -1; quizStep--; renderQuizStep(); }
+  });
+  // Skip = no answer for this question; the scorer already tolerates gaps.
+  const skipBtn = container.querySelector('.quiz-skip-btn');
+  if (skipBtn) skipBtn.addEventListener('click', () => {
+    delete quizAnswers[quizStep];
+    if (quizStep < QUIZ_QUESTIONS.length - 1) { quizDirection = 1; quizStep++; renderQuizStep(); }
+    else computeQuizResults();
+  });
+}
+
+/* Full-bleed island photo behind the quiz — one per question, from the same
+   hero set the island pages use. Credit links to the island. */
+function setQuizBackdrop(key) {
+  const bg = document.getElementById('mq-bg');
+  if (!bg) return;
+  loadHeroPhotos().then(photos => {
+    const p = key && photos[key];
+    const img = bg.querySelector('.mq-bg-img');
+    const credit = document.getElementById('mq-credit');
+    if (!p || !p.url || !img) return;
+    const next = document.createElement('div');
+    next.className = 'mq-bg-img';
+    next.style.backgroundImage = `url('${heroSrc(p.url)}')`;
+    bg.insertBefore(next, img);
+    requestAnimationFrame(() => { next.classList.add('on'); img.classList.remove('on'); });
+    setTimeout(() => { if (img.parentNode) img.parentNode.removeChild(img); }, 900);
+    if (credit) {
+      credit.textContent = '📷 ' + islandName(key);
+      credit.href = ((typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? '/el/island/' : '/island/') + key + '/';
+    }
   });
 }
 
@@ -6994,21 +7068,23 @@ function renderQuizLiveBoard() {
       else if (was > idx) { move = '<span class="ql-move ql-up">▲ ' + (was - idx) + '</span>'; climbers.push(nm); }
       else if (was < idx) { move = '<span class="ql-move ql-down">▼ ' + (idx - was) + '</span>'; }
     }
+    const grp = (typeof groupName === 'function' && ISLANDS_DATA[isl.key]) ? groupName(ISLANDS_DATA[isl.key].island_group) : '';
     const thumb = hero.url
       ? '<img class="ql-thumb" src="' + thumbUrl(hero.url) + '" alt="" loading="lazy">'
       : '<span class="ql-thumb ql-nophoto">' + nm.charAt(0) + '</span>';
-    return '<li class="ql-row" data-key="' + isl.key + '">'
+    return '<li class="ql-row' + (idx === 0 ? ' ql-top' : '') + '" data-key="' + isl.key + '">'
          + '<span class="ql-rank">' + (idx + 1) + '</span>'
-         + thumb
-         + '<span class="ql-name">' + nm + '</span>'
-         + move
+         + '<span class="ql-card">' + thumb
+         + '<span class="ql-name">' + nm + (grp ? '<small>' + grp + '</small>' : '') + '</span>'
+         + move + '</span>'
          + '</li>';
   }).join('');
 
   box.hidden = false;
   box.innerHTML = '<div class="ql-head">' + t('quiz.live.title')
     + '<small>' + (answered ? t('quiz.live.sub') : t('quiz.live.sub0')) + '</small></div>'
-    + '<ol class="ql-list">' + rows + '</ol>';
+    + '<ol class="ql-list">' + rows + '</ol>'
+    + (answered < QUIZ_QUESTIONS.length ? '<div class="ql-foot">' + t('quiz.live.foot') + '</div>' : '');
 
   // FLIP step 2 — put each row back where it was, then let CSS carry it home.
   box.querySelectorAll('.ql-row').forEach(function (r) {
@@ -7051,7 +7127,7 @@ function renderQuizMovement(climbers, answered) {
 
 function computeQuizResults() {
   const ctx = scoreIslandsFromAnswers(quizAnswers);
-  try { track('quiz_complete', { top_island: (ctx.scored[0] || {}).key || '', answers: quizAnswers.filter(a => a !== undefined).length }); } catch (_) {}
+  try { track('quiz_complete', { top_island: (ctx.scored[0] || {}).key || '', answers: Object.keys(quizAnswers).length }); } catch (_) {}
   const { A, priority, budgetMod, scenePref, seasonIdx, seasonMonths, transportPref, tripDays } = ctx;
   const scored = ctx.scored.slice(0, 6);
   const container = document.getElementById('quiz-container');
@@ -7060,6 +7136,7 @@ function computeQuizResults() {
   container.style.display = 'none'; results.style.display = '';
   const liveBox = document.getElementById('quiz-live');
   if (liveBox) liveBox.hidden = true;
+  const mv = document.getElementById('quiz-movement'); if (mv) { mv.textContent = ''; mv.classList.remove('on'); }
   const ctaAff = document.getElementById('cta-affiliate');
   if (ctaAff) ctaAff.style.display = '';
   const dimLabels = (CURRENT_LANG === 'el')
