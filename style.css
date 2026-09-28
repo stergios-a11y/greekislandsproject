@@ -6820,10 +6820,11 @@ html.dark .leaflet-control-scale-line {
   #view-home .bp-hero-search-wrap { grid-column: 2; grid-row: 1 / span 2; max-width: 600px; width: 100%; margin: 0 auto; }
   #view-home .bp-hero-search { box-shadow: 0 4px 16px rgba(0,0,0,.18); padding: 5px 5px 5px 18px; }
   #view-home .bp-hero-search button { padding: 9px 20px; }
-  #view-home .bp-decide-alt { grid-column: 3; grid-row: 1 / span 2; margin: 0; color: #fff; white-space: nowrap;
+  #view-home .bp-decide-alt { grid-column: 3; grid-row: 1 / span 2; margin: 0; color: #fff; white-space: nowrap; cursor: pointer;
     background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28); border-radius: 999px; padding: 8px 14px; font-size: 13px; font-weight: 700; }
   #view-home .bp-decide-alt .bp-linkbtn { color: #fff; font-weight: 800; }
-  #view-home .bp-decide-alt .bp-linkbtn:hover { color: #FFD4D4; }
+  #view-home .bp-decide-alt:hover { background: rgba(255,255,255,.24); border-color: rgba(255,255,255,.5); }
+  #view-home .bp-decide-alt:hover .bp-linkbtn { color: #FFD4D4; }
   /* cards stay in the DOM (indexable copy) but take no space */
   #view-home .bp-home-wrap { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); padding: 0; margin: -1px; }
   #view-home #main-map {
