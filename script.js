@@ -339,7 +339,18 @@ const VIEW_HASH_MAP = {
 };
 
 function parseHash() {
-  // First check URL path — supports the pre-rendered SEO pages at /island/{key}/
+  const hash = window.location.hash.replace('#', '').trim();
+  // An explicit hash wins over the page path: on a static /island/x/ page the
+  // SPA navigates by hash, so a reload of /island/naxos/#island/paros must
+  // restore Paros, and /island/naxos/#compare must restore compare — the
+  // path used to win and silently put the first island back.
+  if (hash) {
+    if (hash.startsWith('island/')) return { view: 'island', param: hash.replace('island/', '') };
+    const hc = hash.match(/^compare\/([a-z-]+)-vs-([a-z-]+)$/);
+    if (hc) return { view: 'compare', param: { pair: [hc[1], hc[2]] } };
+    if (VIEW_HASH_MAP[hash]) return { view: VIEW_HASH_MAP[hash], param: null };
+  }
+  // Then the URL path — the pre-rendered SEO pages at /island/{key}/
   const path = window.location.pathname.replace(/^\/el\//, '/').replace(/\/$/, '');
   const pathMatch = path.match(/^\/island\/([a-z-]+)$/);
   if (pathMatch) return { view: 'island', param: pathMatch[1], fromPath: true };
@@ -350,11 +361,7 @@ function parseHash() {
   const cmpMatch = path.match(/^\/compare\/([a-z-]+)-vs-([a-z-]+)$/);
   if (cmpMatch) return { view: 'compare', param: { pair: [cmpMatch[1], cmpMatch[2]] }, fromPath: true };
 
-  // Fall back to hash routing (the SPA's native navigation)
-  const hash = window.location.hash.replace('#', '').trim();
-  if (!hash) return { view: 'home', param: null };
-  if (hash.startsWith('island/')) return { view: 'island', param: hash.replace('island/', '') };
-  return { view: VIEW_HASH_MAP[hash] || 'home', param: null };
+  return { view: 'home', param: null };
 }
 
 /* ============================================================
@@ -706,6 +713,20 @@ let _seenSections = new Set();
 let _seenSectionsFor = null;
 
 function navigateTo(view, param) {
+  const present = document.getElementById(view === 'island' ? 'view-detail' : `view-${view}`);
+  if (!present) {
+    // Static pages (island guides, compare pairs) don't carry the other views;
+    // hiding the current one with nothing to show left a blank page. Jump to
+    // the real URL instead, carrying the compare pair along when there is one.
+    const base = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? '/el/' : '/';
+    let href;
+    if (view === 'island') href = `${base}island/${param}/`;
+    else if (view === 'home') href = base;
+    else if (view === 'compare' && compareSelection[0] && compareSelection[1]) href = `${base}#compare/${compareSelection[0]}-vs-${compareSelection[1]}`;
+    else href = `${base}#${view}`;
+    window.location.href = href;
+    return;
+  }
   const hash = view === 'home' ? '#map' : view === 'island' ? `#island/${param}` : `#${view}`;
   if (window.location.hash !== hash) history.pushState({ view, param }, '', hash);
   showView(view, param);

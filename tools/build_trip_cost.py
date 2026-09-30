@@ -179,7 +179,7 @@ STR = {
         'estimate': 'Your trip estimate',
         'li_ferries': 'Ferries', 'li_legs': 'legs', 'li_pax': 'pax', 'book_ferry': 'Book on Ferryhopper →',
         'from_port': 'from', 'ionian_gate_s': 'local mainland port',
-        'li_rooms': 'Rooms', 'central': '(central)', 'rooms_word': 'rooms (two per room)',
+        'li_rooms': 'Rooms', 'central': '(central)', 'rooms_word': 'rooms (two per room)', 'by_road': 'by road', 'no_car_note': 'Visitors\' cars are not allowed on {isl} — park at the mainland port; no vehicle fare or fuel counted here.',
         'li_car': 'Car', 'days': 'days', 'book_car': 'Compare on Discover Cars →',
         'li_vehicle': 'Vehicle hire', 'li_flights': 'Domestic flights', 'total_fly': 'Total (excl. int’l flights)',
         'veh_none': 'On foot / bus', 'veh_moto': 'Scooter / ATV', 'veh_car': 'Car',
@@ -262,7 +262,7 @@ STR = {
         'estimate': 'Η εκτίμηση του ταξιδιού σου',
         'li_ferries': 'Πλοία', 'li_legs': 'διαδρομές', 'li_pax': 'άτομα', 'book_ferry': 'Κράτηση στο Ferryhopper →',
         'from_port': 'από', 'ionian_gate_s': 'τοπικό λιμάνι στεριάς',
-        'li_rooms': 'Δωμάτια', 'central': '(κεντρικό)', 'rooms_word': 'δωμάτια (δύο ανά δωμάτιο)',
+        'li_rooms': 'Δωμάτια', 'central': '(κεντρικό)', 'rooms_word': 'δωμάτια (δύο ανά δωμάτιο)', 'by_road': 'οδικώς', 'no_car_note': '{isl}: δεν επιτρέπονται αυτοκίνητα επισκεπτών — παρκάρεις στο λιμάνι της στεριάς· δεν υπολογίζεται ναύλος οχήματος ή καύσιμα εδώ.',
         'li_car': 'Αυτοκίνητο', 'days': 'μέρες', 'book_car': 'Σύγκριση στο Discover Cars →',
         'li_vehicle': 'Ενοικίαση οχήματος', 'li_flights': 'Πτήσεις εσωτερικού', 'total_fly': 'Σύνολο (χωρίς διεθνείς πτήσεις)',
         'veh_none': 'Πεζή / λεωφορείο', 'veh_moto': 'Μηχανάκι / ATV', 'veh_car': 'Αυτοκίνητο',
@@ -312,7 +312,7 @@ def render_page(lang, meta, data):
     js_t = {k: t[k] for k in (
         'departure', 'back_to', 'ferry_to', 'via_mainland', 'fly_hint', 'ionian_gate',
         'nights', 'night', 'car', 'boat_day', 'rooms_per_night', 'per_night', 'carless_note',
-        'estimate', 'li_ferries', 'li_legs', 'li_pax', 'book_ferry', 'li_rooms', 'central', 'rooms_word',
+        'estimate', 'li_ferries', 'li_legs', 'li_pax', 'book_ferry', 'li_rooms', 'central', 'rooms_word', 'by_road', 'no_car_note',
         'li_car', 'days', 'book_car', 'li_fuel', 'li_boat', 'boat_rec', 'li_food', 'food_s',
         'li_esim', 'esim_s', 'book_esim', 'li_insurance', 'ins_days', 'total', 'pp',
         'cta_ferry', 'cta_car', 'aff_note',
@@ -488,6 +488,7 @@ html.dark .tc-swap-b{{border-color:#60D8F0}}
 @media(max-width:480px){{.tc-card{{flex-wrap:wrap}}.tc-card img{{width:64px;height:64px}}.tc-vlbl{{display:flex;width:100%}}.tc-vlbl .tc-seg{{display:grid;grid-template-columns:1fr 1fr;width:100%}}.tc-seg button{{padding:6px 8px;font-size:12px;text-align:center}}}}
 .tc-vlbl>small{{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-4,#A0ADB8)}}
 .tc-li.nc .amt{{text-decoration:line-through;color:var(--ink-4,#A0ADB8)}}
+.tc-nocar{{display:block;width:100%;font-size:12px;font-weight:700;color:#C6421F;margin:2px 0 4px}}
 .tc-li.nc .lbl small b{{color:#C6421F;font-weight:800}}
 .tc-tot{{margin-top:0;margin-bottom:2px}}
 .tc-pp{{margin-bottom:12px}}
@@ -620,8 +621,15 @@ const LOCAL_PORTS={{
   'samothrace':  {{f:[12,18], en:'Alexandroupoli',                 el:'Αλεξανδρούπολη'}},
   'evia-north':  {{f:[3,5],   en:'Arkitsa → Aidipsos',             el:'Αρκίτσα → Αιδηψός'}},
   'evia-central':{{f:[0,0],   en:'by road (Chalkida bridge)',      el:'οδικώς (γέφυρα Χαλκίδας)'}},
-  'evia-south':  {{f:[8,12],  en:'Rafina → Marmari',               el:'Ραφήνα → Μαρμάρι'}}
+  'evia-south':  {{f:[8,12],  en:'Rafina → Marmari',               el:'Ραφήνα → Μαρμάρι'}},
+  'lefkada':     {{f:[0,0],   en:'by road (Lefkada causeway)',     el:'οδικώς (πλωτή γέφυρα Λευκάδας)'}}
 }};
+// A leg whose fare is zero is a road link (bridge/causeway): no ferry, no car
+// deck, no vehicle fee. Islands that do not admit visitors' cars: your car
+// stays at the mainland port, so no car-ferry fee for legs into them and no
+// fuel for the nights there.
+const isRoad=f=>!!f&&f[1]===0;
+const NO_CAR={{hydra:1,spetses:1}};
 function gateOf(k){{const g=ISL[k].g;
   if(g==='Sporades')return GATES.Volos;
   if(g==='Ionian')return null; // local mainland port, priced flat
@@ -667,7 +675,8 @@ const rnd=n=>n<100?Math.round(n/5)*5:Math.round(n/10)*10;
 const mid=f=>(f[0]+f[1])/2;
 // Own car on the ferry: vehicle fee ≈ 2.3× the passenger fare, clamped to
 // real-world car-deck pricing (short hop ≥ €25, long haul ≤ €130).
-const carFee=f=>Math.min(130,Math.max(25,mid(f)*2.3));
+const carFee=f=>isRoad(f)?0:Math.min(130,Math.max(25,mid(f)*2.3));
+const fareTxt=f=>isRoad(f)?'🚗 '+T.by_road:'€'+rnd(mid(f))+' pp';
 // ---- exact dates (optional): per-island check-in/out derived from nights ----
 const MKEYS=['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
 const isoD=d=>{{const p=n=>String(n).padStart(2,'0');return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate());}};
@@ -769,7 +778,7 @@ function render(){{
     h+=`<div class="tc-leg"><span class="l">✈</span> ${{GATES.Piraeus[LANG].replace(/\s*\(.*\)/,'')}} (ATH) — ${{T.departure}}<span class="fp">€${{rnd(flightFare(first))}} pp</span></div>`;
   }}else{{
     const dep=legInfo('M',first);
-    h+=`<div class="tc-leg"><span class="l">🛳</span> ${{dep.label||''}} — ${{T.departure}} ${{(dep.fly&&!state.own)?'<span class="hint">'+T.fly_hint+'</span>':''}}<span class="fp">€${{rnd(mid(dep.f))}} pp${{state.own?' + 🚗 €'+Math.round(carFee(dep.f)):''}}</span></div>`;
+    h+=`<div class="tc-leg"><span class="l">🛳</span> ${{dep.label||''}} — ${{T.departure}} ${{(dep.fly&&!state.own)?'<span class="hint">'+T.fly_hint+'</span>':''}}<span class="fp">${{fareTxt(dep.f)}}${{(state.own&&carFee(dep.f)&&!NO_CAR[first])?' + 🚗 €'+Math.round(carFee(dep.f)):''}}</span></div>`;
   }}
   state.trip.forEach((t,i)=>{{
     const isl=ISL[t.k],rn=roomNight(t.k,i),ld=legDates(i);
@@ -781,6 +790,7 @@ function render(){{
         <div class="tc-cs">${{T.rooms_per_night}} ${{eur(rnd(rn))}}${{T.per_night}} · ${{ld?fmtD(ld[0])+' – '+fmtD(ld[1]):T.months[state.month]}} · <a href="${{bookUrl(i)}}" target="_blank" rel="noopener sponsored" style="color:#076880;font-weight:700;text-decoration:none">${{T.book_room}}</a></div>
         <div class="tc-cc">
           <span class="tc-n"><button data-a="n-" data-i="${{i}}">−</button> ${{t.n}} ${{t.n===1?T.night:T.nights}} <button data-a="n+" data-i="${{i}}">+</button></span>
+          ${{(state.own&&NO_CAR[t.k])?`<span class="tc-nocar">🚫 ${{T.no_car_note.replace('{{isl}}',iname(t.k))}}</span>`:''}}
           ${{isl.car?`<span class="tc-vlbl"><small>${{T.lbl_around}}</small><span class="tc-seg"><button class="${{(!t.v&&!state.own)?'on':''}}" data-a="veh" data-v="" data-i="${{i}}">${{T.veh_walk}}</button><button class="${{(t.v==='m'&&!state.own)?'on':''}}" data-a="veh" data-v="m" data-i="${{i}}">${{T.veh_scoot}}</button><button class="${{(t.v==='c'&&!state.own)?'on':''}}" data-a="veh" data-v="c" data-i="${{i}}">${{T.veh_hire}}</button><button class="${{state.own?'on':''}}" data-a="veh" data-v="own" data-i="${{i}}" title="${{T.veh_ownc_t}}">${{T.veh_ownc}}</button></span></span>`:''}}
           ${{isl.boat?`<span class="tc-sw ${{t.b?'on':''}}" data-a="boat" data-i="${{i}}"><span class="s"></span> ${{T.boat_day}} <small>€${{isl.boat.pp}} pp</small></span>`:''}}
         </div>
@@ -790,13 +800,13 @@ function render(){{
     </div>`;
     const next=state.trip[i+1];
     if(next){{const li=legInfo(t.k,next.k);
-      h+=`<div class="tc-leg"><span class="l">⛴</span> ${{T.ferry_to}} ${{iname(next.k)}}${{li.label?' <small>('+li.label+')</small>':''}} ${{(li.fly&&!state.own)?'<span class="hint">'+T.fly_hint+'</span>':''}}<span class="fp">€${{rnd(mid(li.f))}} pp${{state.own?' + 🚗 €'+Math.round(carFee(li.f)):''}}</span></div>`;}}
+      h+=`<div class="tc-leg"><span class="l">⛴</span> ${{T.ferry_to}} ${{iname(next.k)}}${{li.label?' <small>('+li.label+')</small>':''}} ${{(li.fly&&!state.own)?'<span class="hint">'+T.fly_hint+'</span>':''}}<span class="fp">${{fareTxt(li.f)}}${{(state.own&&carFee(li.f)&&!NO_CAR[next.k]&&!NO_CAR[t.k])?' + 🚗 €'+Math.round(carFee(li.f)):''}}</span></div>`;}}
   }});
   if(flyOut){{
     h+=`<div class="tc-leg"><span class="l">✈</span> ${{T.back_to}} ${{GATES.Piraeus[LANG].replace(/\s*\(.*\)/,'')}} (ATH)<span class="fp">€${{rnd(flightFare(last))}} pp</span></div>`;
   }}else{{
     const ret=legInfo(last,'M');
-    h+=`<div class="tc-leg"><span class="l">🛳</span> ${{T.back_to}} ${{ret.label||''}}<span class="fp">€${{rnd(mid(ret.f))}} pp${{state.own?' + 🚗 €'+Math.round(carFee(ret.f)):''}}</span></div>`;
+    h+=`<div class="tc-leg"><span class="l">🛳</span> ${{T.back_to}} ${{ret.label||''}}<span class="fp">${{fareTxt(ret.f)}}${{(state.own&&carFee(ret.f)&&!NO_CAR[last])?' + 🚗 €'+Math.round(carFee(ret.f)):''}}</span></div>`;
   }}
   document.getElementById('tc-route').innerHTML=h;
   renderSwaps();
@@ -822,7 +832,7 @@ function render(){{
     const portOf=k=>{{if(LOCAL_PORTS[k])return LOCAL_PORTS[k][LANG];const g=gateOf(k);return g?g[LANG]:T.ionian_gate_s;}};
     const ports=[...new Set(legs.filter(([a,b])=>a==='M'||b==='M').map(([a,b])=>portOf(a==='M'?b:a)))];
     const portsTxt=ports.length?`${{T.from_port}} ${{ports.join(' & ')}} · `:'';
-    li+=line('⛴',T.li_ferries,`${{portsTxt}}${{legs.length}} ${{T.li_legs}} × ${{state.pax}} ${{T.li_pax}}`,fsum,SK?null:T.book_ferry,'https://www.ferryhopper.com/'+(LANG==='el'?'el/':'en/'),SK);if(!SK)tot+=fsum;}}
+    if(fsum>0){{li+=line('⛴',T.li_ferries,`${{portsTxt}}${{legs.length}} ${{T.li_legs}} × ${{state.pax}} ${{T.li_pax}}`,fsum,SK?null:T.book_ferry,'https://www.ferryhopper.com/'+(LANG==='el'?'el/':'en/'),SK);if(!SK)tot+=fsum;}}}}
   if(flyIn||flyOut){{const fl=((flyIn?flightFare(first):0)+(flyOut?flightFare(last):0))*state.pax;
     li+=line('✈',T.li_flights,`${{(flyIn?1:0)+(flyOut?1:0)}} × ${{state.pax}} ${{T.li_pax}}`,fl,null,null,SK);if(!SK)tot+=fl;}}
   // rooms
@@ -837,10 +847,12 @@ function render(){{
     // Your own car rides every ferry leg. Vehicle fee ≈ 2.3× the passenger fare,
     // clamped to real-world car-deck pricing (short hop ≥ €25, long haul ≤ €130).
     const carLegs=[['M',first],...state.trip.slice(0,-1).map((t,i)=>[t.k,state.trip[i+1].k]),[last,'M']];
-    const cfSum=carLegs.reduce((a,[x,y])=>a+carFee(legInfo(x,y).f),0);
-    li+=line('🚙',T.li_carferry,`${{T.carferry_s}} ${{carLegs.length}} ${{T.li_legs}}`,cfSum,null,null,SK);if(!SK)tot+=cfSum;
-    const fuel=nightsTotal*CFG.fuel_per_day;
-    li+=line('⛽',T.li_fuel,`€${{CFG.fuel_per_day}}/${{LANG==='el'?'μέρα':'day'}} × ${{nightsTotal}} ${{T.days}}`,fuel,null);tot+=fuel;
+    const paidLegs=carLegs.filter(([x,y])=>!NO_CAR[x]&&!NO_CAR[y]&&carFee(legInfo(x,y).f)>0);
+    const cfSum=paidLegs.reduce((a,[x,y])=>a+carFee(legInfo(x,y).f),0);
+    if(paidLegs.length){{li+=line('🚙',T.li_carferry,`${{T.carferry_s}} ${{paidLegs.length}} ${{T.li_legs}}`,cfSum,null,null,SK);if(!SK)tot+=cfSum;}}
+    const fuelNights=state.trip.reduce((a,t)=>a+(NO_CAR[t.k]?0:t.n),0);
+    const fuel=fuelNights*CFG.fuel_per_day;
+    if(fuel){{li+=line('⛽',T.li_fuel,`€${{CFG.fuel_per_day}}/${{LANG==='el'?'μέρα':'day'}} × ${{fuelNights}} ${{T.days}}`,fuel,null);tot+=fuel;}}
   }}else{{
   let csum=0,cd=0,fuelSum=0;
   state.trip.forEach((t,i)=>{{if(t.v&&ISL[t.k].car){{csum+=ISL[t.k].car*seas(CFG.season_car,monthAt(i))*(t.v==='m'?(CFG.moto_factor||0.55):1)*t.n;cd+=t.n;

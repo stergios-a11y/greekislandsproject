@@ -2048,7 +2048,8 @@ _GATES = {'Piraeus': (37.942, 23.646), 'Volos': (39.362, 22.942)}
 # Islands with their own mainland port (no Piraeus/Volos sailing) — keep in
 # step with LOCAL_PORTS in tools/build_trip_cost.py.
 _LOCAL_PORT_FARES = {'ammouliani': (3, 5), 'thasos': (4, 7), 'samothrace': (12, 18),
-                     'evia-north': (3, 5), 'evia-central': (0, 0), 'evia-south': (8, 12)}
+                     'evia-north': (3, 5), 'evia-central': (0, 0), 'evia-south': (8, 12),
+                     'lefkada': (0, 0)}   # causeway: by road, no ferry
 
 
 def _haversine(a, b):
@@ -2600,7 +2601,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=46"></script>
-<script src="{asset_prefix}script.js?v=133"></script>
+<script src="{asset_prefix}script.js?v=134"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
