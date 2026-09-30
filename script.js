@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-09-28';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-09-30';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -335,6 +335,7 @@ function fmtNum(n) { return Number(n).toLocaleString(); }
 const VIEW_HASH_MAP = {
   '': 'home', 'map': 'home', 'data': 'data', 'compare': 'compare',
   'hopping': 'hopping', 'international': 'international', 'match': 'match', 'mission': 'mission',
+  'shortlist': 'shortlist',   // was missing: a shared /#shortlist link landed on the homepage
 };
 
 function parseHash() {
@@ -6926,6 +6927,17 @@ function setQuizBackdrop(key) {
 /* Scores every island from however many answers exist so far.
    Every lookup below already degrades safely when an answer is undefined,
    which is what lets the live leaderboard run from question one. */
+/* Peace & nature, 1-5, derived from what the data already knows: the quieter
+   the nightlife the better, plus real hiking, dramatic landscape and a small
+   population. Anafi/Sikinos/Gavdos land near 5, Mykonos/Ios near 1. */
+function natureScore(i) {
+  let n = 1.5 + (5 - (i.night || 3)) * 0.45;        // 1.5 (night 5) … 3.3 (night 1)
+  if (i.hiking) n += 1.0;
+  if (i.drama) n += 0.6;
+  if (i.springs) n += 0.3;
+  if ((i.pop || 0) < 2000) n += 0.3; else if ((i.pop || 0) < 8000) n += 0.2;
+  return Math.round(Math.min(5, Math.max(1, n)) * 10) / 10;
+}
 function scoreIslandsFromAnswers(quizAnswers) {
   // Answers are keyed by question id, not by position. Inserting a question
   // used to shift every index in this function and silently rescore the whole
@@ -6935,7 +6947,11 @@ function scoreIslandsFromAnswers(quizAnswers) {
     if (quizAnswers[i] !== undefined) A[q.id] = quizAnswers[i];
   });
 
-  const priorityDims = ['beach', 'hist', 'night', 'afford'];
+  // Q3 answers: beaches / history / nightlife / peace & nature. The fourth
+  // used to map to 'afford' — someone asking for nature was scored on price.
+  // 'nature' is a derived 1-5 score (see natureScore) so it can be used like
+  // the stored dimensions everywhere below.
+  const priorityDims = ['beach', 'hist', 'night', 'nature'];
   const priority = priorityDims[A.priority] || 'total';
   const budgetMod = [2, 0.5, -0.5, -2][A.budget] || 0;
   const scenePref = A.scene;
@@ -6954,7 +6970,8 @@ function scoreIslandsFromAnswers(quizAnswers) {
     'thasos','corfu','kefalonia','zakynthos','salamis','poros','aegina','agistri',
     'spetses','hydra','elafonisos','kythira','ithaca','ammouliani']);
 
-  const scored = ISLANDS.map(i => {
+  const scored = ISLANDS.map(i0 => {
+    const i = i0.nature == null ? { ...i0, nature: natureScore(i0) } : i0;
     let s = i[priority] * 2.5 + i.total * 1.5;
     if (budgetMod > 0) s += budgetMod * i.afford;
     else if (budgetMod < 0) s += Math.abs(budgetMod) * (5 - i.afford);
@@ -7182,8 +7199,8 @@ function computeQuizResults() {
   const ctaAff = document.getElementById('cta-affiliate');
   if (ctaAff) ctaAff.style.display = '';
   const dimLabels = (CURRENT_LANG === 'el')
-    ? ['Παραλία', 'Πολιτισμός', 'Νυχτερινή ζωή', 'Οικονομικά']
-    : ['Beach', 'Culture', 'Nightlife', 'Affordability'];
+    ? ['Παραλία', 'Πολιτισμός', 'Νυχτερινή ζωή', 'Ηρεμία και φύση']
+    : ['Beach', 'Culture', 'Nightlife', 'Peace & nature'];
   const dimLabel = dimLabels[A.priority] || (CURRENT_LANG === 'el' ? 'Συνολικά' : 'Overall');
   const driveOnSet = new Set(['lefkada','evia-north','evia-central','evia-south',
     'thasos','corfu','kefalonia','zakynthos','salamis','poros','aegina','agistri',
@@ -7194,7 +7211,7 @@ function computeQuizResults() {
     0: ['Κορυφαίες παραλίες', 'Πολύ καλές παραλίες'],
     1: ['Πλούσια ιστορία και πολιτισμός', 'Αξιόλογη ιστορία και πολιτισμός'],
     2: ['Έντονη νυχτερινή ζωή', 'Καλή νυχτερινή ζωή'],
-    3: ['Πολύ οικονομικό', 'Οικονομικό'],
+    3: ['Απόλυτη ηρεμία και φύση', 'Ήσυχο, με φύση'],
   };
   const leadPhrase = (tier) => (CURRENT_LANG === 'el')
     ? ((EL_LEAD[A.priority] || ['Κορυφαίο συνολικά', 'Πολύ καλό συνολικά'])[tier])
@@ -7207,7 +7224,7 @@ function computeQuizResults() {
     // with 'Affordability' chosen this produced "Top affordability (4.5) · Very
     // affordable" on every card. Same trap for nightlife and the scene reason.
     if (budgetMod > 0 && island.afford >= 4 && priority !== 'afford') reasons.push(t('quiz.why.affordable'));
-    if (scenePref >= 2 && island.pop < 5000) reasons.push(t('quiz.why.lowcrowds'));
+    if (scenePref >= 2 && island.pop < 5000 && priority !== 'nature') reasons.push(t('quiz.why.lowcrowds'));
     if (scenePref === 0 && island.night >= 4.5 && priority !== 'night') reasons.push(t('quiz.why.scene'));
     if (tripDays !== undefined && island.days && island.days <= tripDays) reasons.push(t('quiz.why.fits').replace('{n}', island.days));
     if (seasonIdx !== undefined && WTV_TAGS[island.key]) {

@@ -179,7 +179,7 @@ STR = {
         'estimate': 'Your trip estimate',
         'li_ferries': 'Ferries', 'li_legs': 'legs', 'li_pax': 'pax', 'book_ferry': 'Book on Ferryhopper →',
         'from_port': 'from', 'ionian_gate_s': 'local mainland port',
-        'li_rooms': 'Rooms', 'central': '(central)',
+        'li_rooms': 'Rooms', 'central': '(central)', 'rooms_word': 'rooms (two per room)',
         'li_car': 'Car', 'days': 'days', 'book_car': 'Compare on Discover Cars →',
         'li_vehicle': 'Vehicle hire', 'li_flights': 'Domestic flights', 'total_fly': 'Total (excl. int’l flights)',
         'veh_none': 'On foot / bus', 'veh_moto': 'Scooter / ATV', 'veh_car': 'Car',
@@ -262,7 +262,7 @@ STR = {
         'estimate': 'Η εκτίμηση του ταξιδιού σου',
         'li_ferries': 'Πλοία', 'li_legs': 'διαδρομές', 'li_pax': 'άτομα', 'book_ferry': 'Κράτηση στο Ferryhopper →',
         'from_port': 'από', 'ionian_gate_s': 'τοπικό λιμάνι στεριάς',
-        'li_rooms': 'Δωμάτια', 'central': '(κεντρικό)',
+        'li_rooms': 'Δωμάτια', 'central': '(κεντρικό)', 'rooms_word': 'δωμάτια (δύο ανά δωμάτιο)',
         'li_car': 'Αυτοκίνητο', 'days': 'μέρες', 'book_car': 'Σύγκριση στο Discover Cars →',
         'li_vehicle': 'Ενοικίαση οχήματος', 'li_flights': 'Πτήσεις εσωτερικού', 'total_fly': 'Σύνολο (χωρίς διεθνείς πτήσεις)',
         'veh_none': 'Πεζή / λεωφορείο', 'veh_moto': 'Μηχανάκι / ATV', 'veh_car': 'Αυτοκίνητο',
@@ -312,7 +312,7 @@ def render_page(lang, meta, data):
     js_t = {k: t[k] for k in (
         'departure', 'back_to', 'ferry_to', 'via_mainland', 'fly_hint', 'ionian_gate',
         'nights', 'night', 'car', 'boat_day', 'rooms_per_night', 'per_night', 'carless_note',
-        'estimate', 'li_ferries', 'li_legs', 'li_pax', 'book_ferry', 'li_rooms', 'central',
+        'estimate', 'li_ferries', 'li_legs', 'li_pax', 'book_ferry', 'li_rooms', 'central', 'rooms_word',
         'li_car', 'days', 'book_car', 'li_fuel', 'li_boat', 'boat_rec', 'li_food', 'food_s',
         'li_esim', 'esim_s', 'book_esim', 'li_insurance', 'ins_days', 'total', 'pp',
         'cta_ferry', 'cta_car', 'aff_note',
@@ -677,13 +677,13 @@ function legDates(i){{const d0=tripStart();if(d0===null||!state.trip[i])return n
   const a=new Date(d0);a.setDate(a.getDate()+off);const b=new Date(a);b.setDate(b.getDate()+state.trip[i].n);return[a,b];}}
 function monthAt(i){{const ld=legDates(i);return ld?MKEYS[ld[0].getMonth()]:state.month;}}
 const fmtD=d=>d.toLocaleDateString(LANG==='el'?'el-GR':'en-GB',{{day:'numeric',month:'short'}});
-function bookUrl(i){{const t=state.trip[i];let u='https://www.booking.com/searchresults.html?ss='+encodeURIComponent(ISL[t.k].n+', Greece')+'&group_adults='+state.pax+'&no_rooms=1&group_children=0';
+function bookUrl(i){{const t=state.trip[i];let u='https://www.booking.com/searchresults.html?ss='+encodeURIComponent(ISL[t.k].n+', Greece')+'&group_adults='+state.pax+'&no_rooms='+roomsFor(state.pax)+'&group_children=0';
   const ld=legDates(i);if(ld)u+='&checkin='+isoD(ld[0])+'&checkout='+isoD(ld[1]);return u;}}
 // ---- smart swaps: on-island spend (rooms+food+vehicle) for a candidate at a stop ----
 function stayCost(k,i,v){{const isl=ISL[k],n=state.trip[i].n,mk=monthAt(i);
   const rn=isl.room[state.tier]*seas(CFG.season_room,mk);
   const mult=(!state.own&&!v&&isl.cn>=4&&isl.car)?CFG.carless_central_premium:1;
-  let c=rn*n*mult + mealDay(k)*state.pax*n;
+  let c=rn*n*mult*roomsFor(state.pax) + mealDay(k)*state.pax*n;
   if(!state.own&&v&&isl.car){{c+=isl.car*seas(CFG.season_car,mk)*(v==='m'?(CFG.moto_factor||0.55):1)*n;
     c+=(v==='m'?Math.round(CFG.fuel_per_day*0.4):CFG.fuel_per_day)*n;}}
   return c;}}
@@ -731,6 +731,9 @@ function sync(){{
 
 // per-tier room price for an island in the selected month
 function roomNight(k,i){{return ISL[k].room[state.tier]*seas(CFG.season_room,i===undefined?state.month:monthAt(i));}}
+// Two travellers per double room; 3 pax = 2 rooms, 8 pax = 4. Applied to the
+// rooms line, smart swaps and the Booking link (no_rooms) alike.
+function roomsFor(p){{return Math.max(1,Math.ceil((p||1)/2));}}
 function mealDay(k){{const m=ISL[k].meal;return state.tier==='budget'?m*CFG.meal_budget:state.tier==='comfort'?m*CFG.meal_comfort:m;}}
 
 // ---------------- render ----------------
@@ -826,8 +829,8 @@ function render(){{
   let rsum=0;
   state.trip.forEach((t,i)=>{{const rn=roomNight(t.k,i);
     const mult=(!state.own&&!t.v&&ISL[t.k].cn>=4&&ISL[t.k].car)?CFG.carless_central_premium:1;
-    rsum+=rn*t.n*mult;}});
-  li+=line('🛏',`${{T.li_rooms}} — ${{nightsTotal}} ${{T.nights}}`,state.trip.map(t=>`${{iname(t.k)}} ${{t.n}}${{(!state.own&&!t.v&&ISL[t.k].cn>=4&&ISL[t.k].car)?' '+T.central:''}}`).join(' · '),rsum,state.trip.length===1?T.book_room:null,state.trip.length===1?bookUrl(0):null);
+    rsum+=rn*t.n*mult*roomsFor(state.pax);}});
+  li+=line('🛏',`${{T.li_rooms}} — ${{nightsTotal}} ${{T.nights}}${{roomsFor(state.pax)>1?' · '+roomsFor(state.pax)+' '+T.rooms_word:''}}`,state.trip.map(t=>`${{iname(t.k)}} ${{t.n}}${{(!state.own&&!t.v&&ISL[t.k].cn>=4&&ISL[t.k].car)?' '+T.central:''}}`).join(' · '),rsum,state.trip.length===1?T.book_room:null,state.trip.length===1?bookUrl(0):null);
   tot+=rsum;
   // car + fuel
   if(state.own){{
@@ -872,7 +875,7 @@ function render(){{
       <a class="tc-cta c" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">${{T.cta_car}}</a>
       <p class="aff-note"><a href="${{LANG==='el'?'/el/privacy/#affiliate':'/privacy/#affiliate'}}">${{T.aff_note}}</a></p>
     </div>
-    <details class="tc-assume"><summary style="cursor:pointer;font-weight:800;color:#076880">${{T.assume.split('</b>')[0].replace('<b>','')}}</summary><div style="margin-top:6px">${{T.assume.split('</b>')[1]||''}}</div><div class="tc-honest">${{T.honest}}</div></details>`;
+    <details class="tc-assume"><summary style="cursor:pointer;font-weight:800;color:#076880">${{T.assume.split('</b>')[0].replace('<b>','')}}</summary><div style="margin-top:6px">${{(T.assume.split('</b>')[1]||'').replace('{{month}}',T.months[state.month])}}</div><div class="tc-honest">${{T.honest}}</div></details>`;
   {{const st=document.getElementById('tc-stick');if(st){{st.classList.add('on');
     // Hide the bar while the full estimate itself is on screen.
     if(!window._tcIO&&window.IntersectionObserver){{window._tcIO=new IntersectionObserver(es=>{{es.forEach(e=>st.classList.toggle('seen',e.isIntersecting));}},{{threshold:0.15}});window._tcIO.observe(document.getElementById('tc-summary'));}}
