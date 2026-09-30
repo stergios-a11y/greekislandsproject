@@ -6822,12 +6822,20 @@ html.dark .leaflet-control-scale-line {
   body.home-view-active #site-footer { display: none; }
   #view-home .bp-hero { min-height: 0; height: var(--home-band-height); display: block; overflow: visible;
     background: linear-gradient(180deg, #0A5266 0%, #076880 100%); }
-  #view-home .bp-hero-bgs, #view-home .bp-hero-scrim, #view-home .bp-hero-credit { display: none; }
-  #view-home .bp-hero-inner { max-width: none; height: 100%; padding: 0 32px; text-align: left;
+  /* Photo strip: one hero photo per visit, darkened at both ends where the
+     text and quiz sit, lighter in the middle behind the white search box. */
+  #view-home .bp-hero-bgs { display: block; }
+  #view-home .bp-hero-bg { background-position: center 55%; }
+  #view-home .bp-hero-scrim { display: block; background: linear-gradient(90deg, rgba(6,30,40,.9) 0%, rgba(6,30,40,.55) 32%, rgba(6,30,40,.35) 55%, rgba(6,30,40,.75) 100%); }
+  #view-home .bp-hero-credit { display: inline-block; top: auto; bottom: 6px; right: 12px; font-size: 10.5px; padding: 2px 9px; }
+  #view-home .bp-hero-title, #view-home .bp-hero-sub { text-shadow: 0 1px 12px rgba(0,0,0,.45); }
+  /* Held to the header's width: on wide screens the title and quiz used to
+     drift to the far edges with an empty middle. */
+  #view-home .bp-hero-inner { max-width: 1240px; margin: 0 auto; height: 100%; padding: 0 20px; text-align: left;
     display: grid; grid-template-columns: 340px minmax(360px, 1fr) auto; grid-template-rows: auto auto; align-items: center; align-content: center; gap: 0 24px; }
   #view-home .bp-hero-eyebrow { display: none; }   /* decoration; the Greek one runs to two lines */
-  #view-home .bp-hero-title { font-size: 23px; line-height: 1.08; text-shadow: none; grid-column: 1; }
-  #view-home .bp-hero-sub { font-size: 12px; line-height: 1.3; margin: 3px 0 0; max-width: none; text-shadow: none; grid-column: 1;
+  #view-home .bp-hero-title { font-size: 23px; line-height: 1.08; grid-column: 1; }
+  #view-home .bp-hero-sub { font-size: 12px; line-height: 1.3; margin: 3px 0 0; max-width: none; grid-column: 1;
     display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   #view-home .bp-hero-search-wrap { grid-column: 2; grid-row: 1 / span 2; max-width: 600px; width: 100%; margin: 0 auto; }
   #view-home .bp-hero-search { box-shadow: 0 4px 16px rgba(0,0,0,.18); padding: 5px 5px 5px 18px; }
@@ -6856,6 +6864,10 @@ html.dark .leaflet-control-scale-line {
 @media (max-width: 840px) { .map-foot { display: none; } }
 @media (min-width: 841px) and (max-width: 1320px) {
   html[lang="el"] #view-home .bp-alt-lead { display: none; }
+}
+/* Band is held to 1240px, so the lead-in always crowds the search: pill says it alone */
+@media (min-width: 841px) {
+  #view-home .bp-alt-lead { display: none; }
 }
 @media (min-width: 841px) and (max-width: 1180px) {
   #view-home .bp-hero-inner { grid-template-columns: 220px minmax(260px, 1fr) auto; gap: 0 16px; padding: 0 20px; }

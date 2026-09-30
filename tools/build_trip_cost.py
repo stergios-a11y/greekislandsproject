@@ -714,6 +714,7 @@ let state={{month:'jun',date:null,pax:2,tier:'mid',nonEU:false,fly:false,own:fal
   if(['budget','mid','comfort'].includes(q.get('tier')))state.tier=q.get('tier');
   if(state.date&&!/^\d{{4}}-\d{{2}}-\d{{2}}$/.test(state.date))state.date=null;
   if(/^\d{{4}}-\d{{2}}-\d{{2}}$/.test(q.get('d')||''))state.date=q.get('d');
+  if(q.get('noneu')==='1')state.nonEU=true;
   {{const ts=tripStart();if(!ts||ts<new Date(Date.now()-864e5))state.date=null;
    else{{const mk=MKEYS[ts.getMonth()];if(CFG.season_room[mk])state.month=mk;}}}}
   if(!CFG.season_room[state.month])state.month='jun';
@@ -728,7 +729,7 @@ let state={{month:'jun',date:null,pax:2,tier:'mid',nonEU:false,fly:false,own:fal
 function sync(){{
   try{{localStorage.setItem('tc-state',JSON.stringify(state));}}catch(e){{}}
   const i=state.trip.map(t=>t.k+':'+t.n+(t.v?':'+t.v:'')+(t.b?':b':'')).join(',');
-  history.replaceState(null,'','?i='+i+'&m='+state.month+'&pax='+state.pax+'&tier='+state.tier+(state.fly?'&fly=1':'')+(state.own?'&veh=own':'')+(state.skip?'&skip=1':'')+(state.date?'&d='+state.date:''));
+  history.replaceState(null,'','?i='+i+'&m='+state.month+'&pax='+state.pax+'&tier='+state.tier+(state.fly?'&fly=1':'')+(state.own?'&veh=own':'')+(state.skip?'&skip=1':'')+(state.nonEU?'&noneu=1':'')+(state.date?'&d='+state.date:''));
   // One trip_cost_run per finished estimate (debounced): which islands people
   // actually price, for how long, in which month, at which tier.
   try{{clearTimeout(window._tcEv);window._tcEv=setTimeout(function(){{

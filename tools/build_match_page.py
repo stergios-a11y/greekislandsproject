@@ -73,7 +73,7 @@ def build(lang, names):
         or_h2 = 'Ή ξεκίνα από αυτό που ψάχνεις'
         how_h2 = 'Πώς δουλεύει το quiz'
         how = ('<p>Απαντάς σε λίγες γρήγορες ερωτήσεις — τι σημασία έχουν για σένα οι παραλίες, το κόστος, η νυχτερινή ζωή, ο ρυθμός του ταξιδιού — και ο αλγόριθμος συγκρίνει τις απαντήσεις σου με τις βαθμολογίες και των 88 νησιών. '
-               'Παίρνεις τα 3 καλύτερα ταιριάσματα, με τους βαθμούς τους, και από εκεί ο πλήρης οδηγός κάθε νησιού: πρόγραμμα ημερών, παραλίες, πού να φας.</p>'
+               'Παίρνεις τα 6 καλύτερα ταιριάσματα, με τους βαθμούς τους, και από εκεί ο πλήρης οδηγός κάθε νησιού: πρόγραμμα ημερών, παραλίες, πού να φας.</p>'
                '<p>Οι βαθμολογίες δεν βγαίνουν από αλγόριθμο ούτε από το TripAdvisor — είναι η κρίση ενός ανθρώπου που έχει πάει στα περισσότερα, εξηγημένη δημόσια στη σελίδα <a href="/el/#mission" style="color:#076880">Σχετικά</a>. '
                f'Και όταν διαλέξεις, το <a href="/el/trip-cost/" style="color:#076880">Κόστος</a> σού δείχνει τι θα κοστίσει το ταξίδι — ενημερωμένο για το {YEAR}.</p>')
     else:
@@ -82,12 +82,12 @@ def build(lang, names):
         h1 = 'Which Greek island should you visit?'
         intro = ('This site scores 88 islands, and most guides call all of them wonderful. Here, every island carries an honest score across beaches, culture, nightlife, access and price — '
                  'so the matching runs on real criteria, not marketing copy.')
-        cta_label, cta_small = 'Take the quiz', '~60 seconds · 3 scored matches'
+        cta_label, cta_small = 'Take the quiz', '~60 seconds · 6 scored matches'
         cta_href = '/#match'
         or_h2 = 'Or start from what you want'
         how_h2 = 'How the quiz works'
         how = ('<p>You answer a few quick questions — how much beaches matter, your budget, whether nightlife is a feature or a bug, the pace you travel at — and the matcher compares your answers against the scores of all 88 islands. '
-               'You get your 3 best matches with their numbers, and from there each island’s full guide: day plan, beaches, where to eat.</p>'
+               'You get your 6 best matches with their numbers, and from there each island’s full guide: day plan, beaches, where to eat.</p>'
                '<p>The scores aren’t computed by an algorithm or scraped from TripAdvisor — they’re one person’s informed judgment, explained openly on the <a href="/#mission" style="color:#076880">About</a> page. '
                f'And once you’ve picked, the <a href="/trip-cost/" style="color:#076880">Budget planner</a> shows what the trip will actually cost — updated for {YEAR}.</p>')
 

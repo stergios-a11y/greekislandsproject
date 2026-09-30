@@ -67,6 +67,45 @@ def bump_build_date():
     else:
         print('  [info] BUILD_DATE not changed (already current or marker missing)')
 
+
+def sync_wtv_tags():
+    """Regenerate WTV_TAGS in script.js from islands/*.json when_to_visit.months.
+
+    WTV_TAGS drives the map's 'Good now'/'Ideal now' filters, the quiz season
+    scoring and the compare month strip; the island page shows the JSON. The
+    two were hand-maintained copies and had drifted on 51 island-months
+    (Chania 'great' in July on its page, 'ok' in the quiz). The JSON, with
+    its per-month reasons, is the authored source; this makes the copy exact.
+    """
+    import json as _json, re as _re
+    from pathlib import Path as _Path
+    root = _Path(__file__).resolve().parent.parent
+    sp = root / 'script.js'
+    tagv = {'avoid': 0, 'ok': 1, 'great': 2, 'perfect': 3}
+    rows = []
+    for f in sorted((root / 'islands').glob('*.json')):
+        try:
+            j = _json.loads(f.read_text())
+        except Exception:
+            continue
+        months = (j.get('when_to_visit') or {}).get('months') or []
+        if len(months) != 12:
+            continue
+        vals = [tagv.get(str(m.get('tag', '')).lower(), 1) for m in months]
+        rows.append(f'  "{f.stem}": [{", ".join(str(v) for v in vals)}],')
+    if not rows:
+        return
+    block = 'const WTV_TAGS = {\n' + '\n'.join(rows) + '\n};'
+    src = sp.read_text()
+    new_src, n = _re.subn(r'const WTV_TAGS = \{[\s\S]*?\n\};', block, src, count=1)
+    if n and new_src != src:
+        sp.write_text(new_src)
+        print(f'✓ WTV_TAGS synced from islands/*.json ({len(rows)} islands)')
+    elif n:
+        print('  [info] WTV_TAGS already in sync')
+    else:
+        print('  [warn] WTV_TAGS block not found in script.js')
+
 import re
 import html
 import unicodedata
@@ -2217,7 +2256,7 @@ def render_page(key, data, meta, lang='en'):
 <script type="application/ld+json">{schema_json}</script>
 
 <!-- SPA assets — load the same CSS as the main site so the SEO body blends visually -->
-<link rel="stylesheet" href="{asset_prefix}style.css?v=75">
+<link rel="stylesheet" href="{asset_prefix}style.css?v=76">
 <style>
   /* Minimal SEO body styling — these elements exist only in pre-rendered pages */
   .seo-island-content {{
@@ -2601,7 +2640,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=46"></script>
-<script src="{asset_prefix}script.js?v=134"></script>
+<script src="{asset_prefix}script.js?v=136"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
@@ -2937,7 +2976,7 @@ def generate_ferries_page(island_keys):
             f'<meta property="og:url" content="{url}">\n'
             f'<meta property="og:locale" content="{"el_GR" if is_el else "en_US"}">\n'
             '<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>\n'
-            '<link rel="stylesheet" href="/style.css?v=75">\n'
+            '<link rel="stylesheet" href="/style.css?v=76">\n'
             '<style>\n'
             '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--sans, system-ui), sans-serif; margin: 0; }\n'
             '  .ferry-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }\n'
@@ -3081,6 +3120,7 @@ def main():
 
     # Bump BUILD_DATE in script.js so the "Last updated" footer stamp is fresh
     bump_build_date()
+    sync_wtv_tags()
 
     # Cost hints for the SPA's action-bar pill (same numbers as the static pages).
     _hints = {k: h for k in sorted(ISLAND_META) for h in [cost_hint(k, ISLAND_META[k])] if h}
@@ -3473,7 +3513,7 @@ def generate_festivals_page(island_keys):
             # Otherwise users who enabled dark mode on the home page would briefly
             # flash the light theme on this page. Tiny inline script — no JS file needed.
             '<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>\n'
-            '<link rel="stylesheet" href="/style.css?v=75">\n'
+            '<link rel="stylesheet" href="/style.css?v=76">\n'
             '<style>\n'
             '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--sans, system-ui), sans-serif; margin: 0; }\n'
             '  .fest-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }\n'

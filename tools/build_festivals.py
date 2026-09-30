@@ -128,7 +128,7 @@ def type_badge(f, lang):
     return f'<span class="fv-type fv-type-{esc(t)}">{esc(lab)}</span>'
 
 
-def card(f, names, lang, show_island=True, heading='h3'):
+def card(f, names, lang, show_island=True, heading='h3', id_prefix=''):
     is_el = lang == 'el'
     name = f.get('name_el') if is_el and f.get('name_el') else f['name']
     desc = f.get('desc_el') if is_el and f.get('desc_el') else f.get('desc', '')
@@ -159,7 +159,7 @@ def card(f, names, lang, show_island=True, heading='h3'):
     photo = ''
     if f.get('photo'):
         photo = f'<img class="fv-photo" src="{esc(f["photo"])}" alt="{esc(name)}" loading="lazy">'
-    return (f'<article class="fv-card" id="{esc(f["slug"])}" data-island="{f["island"]}" data-type="{esc(f.get("type") or "other")}"'
+    return (f'<article class="fv-card" id="{id_prefix}{esc(f["slug"])}" data-island="{f["island"]}" data-type="{esc(f.get("type") or "other")}"'
             f' data-months="{",".join(str(m) for m in f["months"])}"{date_attrs}>'
             f'{photo}<div class="fv-body">'
             f'<div class="fv-top">{island_line}{type_badge(f, lang)}{unverified}</div>'
@@ -557,7 +557,7 @@ def build_months(flat, names, heroes):
                         parts.append('</div>')
                     parts.append(f'<h2 class="fv-day">{esc(daylab)}</h2><div class="fv-grid">')
                     cur = key
-                parts.append(card(f, names, lang))
+                parts.append(card(f, names, lang, id_prefix=f['island'] + '-'))   # month pages mix islands: slugs alone can collide
             if cur is not None:
                 parts.append('</div>')
             ics = ''
