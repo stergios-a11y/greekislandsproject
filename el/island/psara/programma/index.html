@@ -69,7 +69,9 @@
 .it-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:14px 16px}
 .it-card h4{font-size:11px;letter-spacing:.7px;text-transform:uppercase;color:var(--ink-4);margin:0 0 8px;font-weight:800}
 .it-card small{display:block;margin-top:6px;font-size:11.5px;color:var(--ink-3)}
-.it-map{height:220px;border-radius:10px;background:#dfeef3}
+.it-mapwrap{margin:18px 0 22px}.it-map{height:400px;border-radius:14px;background:#dfeef3;box-shadow:var(--shadow-sm)}
+.it-maplegend{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:8px;font-size:12.5px;font-weight:700;color:var(--ink-2)}.it-maplegend i{display:inline-block;width:14px;height:5px;border-radius:3px;margin-right:6px;vertical-align:middle}.it-maplegend small{margin-left:auto;color:var(--ink-4);font-weight:600}
+@media(max-width:820px){.it-map{height:300px}}
 .it-btns{display:flex;flex-direction:column;gap:8px}
 .it-btn{display:block;text-align:center;padding:10px;border-radius:999px;font-weight:800;font-size:13.5px;text-decoration:none;color:#fff}
 .it-btn.f{background:var(--terracotta)}.it-btn.c{background:var(--aegean)}.it-btn.k{background:var(--aegean-dark)}
@@ -115,12 +117,12 @@
 <div class="it-grid"><div>
 <p class="it-lede">1 μέρα στα Ψαρά, μέρα με τη μέρα: τι βλέπεις, με τι σειρά, πόσο οδηγείς και πού κοιμάσαι. Βάση: Στο χωριό. Γίνεται χωρίς αυτοκίνητο.</p>
 <div class="it-bstrip"><b>🏖 Παραλίες σε αυτό το πρόγραμμα:</b> <a href="/el/island/psara/#psara_limnos_beach">Παραλία Λήμνος</a> <span>— κάθε μία οδηγεί στην κάρτα της, με τον κανόνα ανέμου και τις σημερινές συνθήκες. <a href="/el/island/psara/#sec-beaches">Και οι 2, με κατάταξη →</a></span></div>
+<section class="it-mapwrap"><div id="it-map" class="it-map"></div><div class="it-maplegend"><span><i style="background:#1B4F8A"></i>Ημέρα 1</span><small>~10 km</small></div></section>
 <section class="it-day" id="day-1" style="--c:#1B4F8A"><div class="it-dh"><span class="it-n">ΜΕΡΑ 1</span><h2>Μαύρη Ράχη &amp; το Χωριό</h2><span class="it-meta">10 km · 20 min <span class="it-sleep">🌙 Ύπνος: Στο χωριό</span></span></div><div class="it-stop"><div class="it-t">09:30</div><div><h3><a href="https://www.google.com/maps/search/Harbour+Arrival+Psara" target="_blank" rel="noopener">Άφιξη στο Λιμάνι</a></h3><p>Άφιξη στο μικροσκοπικό λιμάνι της νότιας ακτής. Το χωριό είναι ακριβώς από πάνω — χαμηλά πέτρινα σπίτια, μπλε παντζούρια, εκπληκτικά λίγοι άνθρωποι. Τα πλοία για τα Ψαρά είναι αραιά (λίγες φορές την εβδομάδα από τη Χίο).</p></div><img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Psara-Black-Ridge-01.jpg" alt="Άφιξη στο Λιμάνι" loading="lazy" width="128" height="86"></div><div class="it-stop"><div class="it-t">10:30</div><div><h3><a href="https://www.google.com/maps/search/Black+Ridge+Monument+Psara" target="_blank" rel="noopener">Μνημείο Μαύρης Ράχης</a></h3><p>Η θέση της έκρηξης του Ιουνίου 1824 που έσβησε την ελληνική παρουσία στα Ψαρά. Το μνημείο στην κορυφή φέρει χαραγμένο το διάσημο επίγραμμα του Σολωμού. Ένας από τους πιο στοιχειωμένους ιστορικούς χώρους της Ελλάδας. Η ανάβαση από το χωριό παίρνει 40 λεπτά και οι θέες πάνω από το Αιγαίο είναι αχανείς.</p></div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Gysis_Nikolaos_After_the_destruction_of_Psara.jpg/1920px-Gysis_Nikolaos_After_the_destruction_of_Psara.jpg" alt="Μνημείο Μαύρης Ράχης" loading="lazy" width="128" height="86"></div><div class="it-stop"><div class="it-t">12:00</div><div><h3><a href="https://www.google.com/maps/place/?q=place_id:ChIJt6PEx_6xpBQRnWDveGzpj5g" target="_blank" rel="noopener">Εκκλησία Αγίου Νικολάου</a></h3><p>Η κύρια εκκλησία του χωριού — φιλοξενεί λείψανα και εικόνες που σώθηκαν κατά την καταστροφή του 1824. Η ίδια η εκκλησία ξαναχτίστηκε τον 19ο αιώνα.</p></div><span class="it-nophoto"></span></div><div class="it-stop"><div class="it-t">15:30</div><div><h3><a href="https://www.google.com/maps/place/?q=place_id:ChIJt6PEx_6xpBQRnWDveGzpj5g" target="_blank" rel="noopener">Παραλία Λήμνος</a> <a class="it-bchip" href="/el/island/psara/#psara_limnos_beach">🏖 κάρτα παραλίας · άνεμος &amp; συνθήκες →</a></h3><p>Η καλύτερη παραλία των Ψαρών — μαύρα βότσαλα, κρυστάλλινα νερά, μια χούφτα ξαπλώστρες και ένα μόνο beach bar. Ο δυτικός προσανατολισμός την κάνει μία από τις καλύτερες παραλίες ηλιοβασιλέματος του ΒΑ Αιγαίου.</p></div><span class="it-nophoto"></span></div><div class="it-stop"><div class="it-t">18:00</div><div><h3><a href="https://www.google.com/maps/place/?q=place_id:ChIJt6PEx_6xpBQRnWDveGzpj5g" target="_blank" rel="noopener">Αναχώρηση</a></h3><p>Πλοίο πίσω στη Χίο (~3-4 ώρες) ή στον Πειραιά μέσω άλλων νησιών. Οι περισσότεροι επισκέπτες συνδυάζουν τα Ψαρά με τη Χίο ή τη Λέσβο.</p></div><span class="it-nophoto"></span></div><div class="it-foodwrap"><div class="it-food"><b>🍽 Μεσημεριανό · Λιμάνι</b> Τρεις μικρές ταβέρνες δουλεύουν στο <a href="https://www.google.com/maps/search/Psara+harbour+Chios" target="_blank" rel="noopener noreferrer">λιμάνι των Ψαρών</a>, μαγειρεύοντας ό,τι φέρνουν τα καΐκια — απλά, φρέσκα, χωρίς βιασύνη.</div></div></section>
 <section class="it-faq"><h2>Πρακτικές ερωτήσεις</h2><details open><summary>Φτάνουν 1 μέρες στα Ψαρά;</summary><p>Ναι, για πρώτη επίσκεψη. Το πρόγραμμα καλύπτει τα βασικά με ρυθμό που αφήνει χρόνο για θάλασσα. Με μία μέρα παραπάνω, πρόσθεσε μια ήσυχη μέρα σε παραλία χωρίς μετακινήσεις.</p></details><details><summary>Χρειάζομαι αυτοκίνητο στα Ψαρά;</summary><p>Όχι. Το πρόγραμμα γίνεται με τα πόδια, βάρκες και το τοπικό λεωφορείο.</p></details><details><summary>Πού να μείνω στα Ψαρά;</summary><p>Το πρόγραμμα κοιμάται σε Στο χωριό.</p></details></section>
 <p class="it-back"><a href="/el/island/psara/">← Πίσω στον πλήρη οδηγό των Ψαρών</a></p>
 </div>
 <aside class="it-side">
-  <div class="it-card"><h4>Χάρτης διαδρομής</h4><div id="it-map" class="it-map"></div><small>1 μέρες · ~10 km</small></div>
   <div class="it-card it-btns"><a class="it-btn f" href="https://www.ferryhopper.com/el/" target="_blank" rel="noopener sponsored">🚢 Κράτηση πλοίου</a><a class="it-btn c" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">🚗 Ενοικίαση αυτοκινήτου</a><a class="it-btn k" href="javascript:window.print()">🖨 Εκτύπωση</a>
   <p class="aff-note"><a href="/el/privacy/#affiliate">Affiliate σύνδεσμοι — στηρίζουν αυτόν τον οδηγό χωρίς κόστος για εσένα.</a></p></div>
   <div class="it-card"><h4>Από τον οδηγό των Ψαρών</h4><div class="it-links"><a href="/el/island/psara/#sec-beaches">Παραλίες των Ψαρών →</a><a href="/el/island/psara/#sec-when">Πότε να πας →</a><a href="/el/island/psara/#sec-getting">Πώς πας →</a><a href="/el/island/psara/">Πλήρης οδηγός των Ψαρών →</a></div></div>
@@ -130,15 +132,45 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
-  var D=[{"d": 1, "c": "#1B4F8A", "p": [[38.5411, 25.5603, "Άφιξη στο Λιμάνι"], [38.5567, 25.5614, "Μνημείο Μαύρης Ράχης"], [38.5408, 25.5614, "Εκκλησία Αγίου Νικολάου"], [38.5489, 25.5347, "Παραλία Λήμνος"], [38.5411, 25.5603, "Αναχώρηση"]]}];
+  var D=[{"d": 1, "c": "#1B4F8A", "t": "Μαύρη Ράχη & το Χωριό", "p": [[38.5411, 25.5603, "Άφιξη στο Λιμάνι", "harbour", "Άφιξη στο μικροσκοπικό λιμάνι της νότιας ακτής. Το χωριό είναι ακριβώς από πάνω — χαμηλά πέτρινα σπίτια, μπλε παντζούρια, εκπληκτικά λίγοι άνθρωποι. Τα πλοία γι"], [38.5567, 25.5614, "Μνημείο Μαύρης Ράχης", "castle", "Η θέση της έκρηξης του Ιουνίου 1824 που έσβησε την ελληνική παρουσία στα Ψαρά. Το μνημείο στην κορυφή φέρει χαραγμένο το διάσημο επίγραμμα του Σολωμού. Ένας από"], [38.5408, 25.5614, "Εκκλησία Αγίου Νικολάου", "church", "Η κύρια εκκλησία του χωριού — φιλοξενεί λείψανα και εικόνες που σώθηκαν κατά την καταστροφή του 1824. Η ίδια η εκκλησία ξαναχτίστηκε τον 19ο αιώνα."], [38.5489, 25.5347, "Παραλία Λήμνος", "beach", "Η καλύτερη παραλία των Ψαρών — μαύρα βότσαλα, κρυστάλλινα νερά, μια χούφτα ξαπλώστρες και ένα μόνο beach bar. Ο δυτικός προσανατολισμός την κάνει μία από τις κα"], [38.5411, 25.5603, "Αναχώρηση", "harbour", "Πλοίο πίσω στη Χίο (~3-4 ώρες) ή στον Πειραιά μέσω άλλων νησιών. Οι περισσότεροι επισκέπτες συνδυάζουν τα Ψαρά με τη Χίο ή τη Λέσβο."]]}];
   var el=document.getElementById('it-map'); if(!el||!window.L) return;
-  var map=L.map(el,{scrollWheelZoom:false,attributionControl:false});
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key=cb1_2l21_1_d292f89e1479e60b5daf76fb",{subdomains:'abcd',maxZoom:18}).addTo(map);
+  var map=L.map(el,{scrollWheelZoom:false,attributionControl:true,zoomSnap:0.5});
+  // Same layers as the island page: Esri imagery + reference labels ("Satellite"), CARTO voyager ("Map")
+  var sat=L.layerGroup([L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:17,attribution:'Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics'}),
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:17})]);
+  var road=L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key=cb1_2l21_1_d292f89e1479e60b5daf76fb",{subdomains:'abcd',maxZoom:18,attribution:'© CARTO © OpenStreetMap'});
+  sat.addTo(map); L.control.layers({'Δορυφόρος':sat,'Χάρτης':road},null,{position:'topright'}).addTo(map);
+  L.control.scale({imperial:false,position:'bottomleft'}).addTo(map);
+  var EMO={beach:'🏖️',village:'🏘',harbour:'⚓',city:'🏙',museum:'🏛️',restaurant:'🍽',nature:'🌿',castle:'🏰',church:'⛪',viewpoint:'🔭',ruin:'🏛',departure:'🚢',monastery:'☧',arrival:'🚢',spa:'♨️',winery:'🍷',distillery:'🥃',waterfall:'💧',airport:'✈️',port:'⛴️'};
+  var EMOJI_ZOOM=10, markers=[], lines=[];   // a notch lower than the island page: this map is narrower, so islands fit at ~10.5
+  function icon(type,color,mode,n){
+    if(mode==='dot') return L.divIcon({className:'custom-marker',html:'<div style="width:10px;height:10px;border-radius:50%;background:'+color+';border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4)"></div>',iconSize:[14,14],iconAnchor:[7,7]});
+    var badge='<span style="position:absolute;top:-3px;right:-3px;background:'+color+';color:#fff;font:800 12px/1 system-ui,sans-serif;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4)">'+n+'</span>';
+    return L.divIcon({className:'custom-marker',html:'<div style="position:relative;font-size:22px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5));width:32px;height:32px;display:flex;align-items:center;justify-content:center">'+(EMO[type]||'📍')+badge+'</div>',iconSize:[32,32],iconAnchor:[16,16]});
+  }
+  function mode(){return map.getZoom()>=EMOJI_ZOOM?'emoji':'dot';}
+  function osrm(ll){
+    if(ll.length<2) return Promise.resolve(ll);
+    var q=ll.map(function(p){return p[1]+','+p[0];}).join(';');
+    return fetch('https://router.project-osrm.org/route/v1/driving/'+q+'?overview=full&geometries=geojson').then(function(r){return r.json();})
+      .then(function(j){return (j.routes&&j.routes[0])?j.routes[0].geometry.coordinates.map(function(c){return [c[1],c[0]];}):ll;}).catch(function(){return ll;});
+  }
+  function restyle(){var z=map.getZoom(),w=Math.max(2,Math.min(5,(z-6)*0.65)),N=Math.max(1,D.length),cyc=Math.max(14,w*4),dash=(cyc/2).toFixed(1)+', '+(cyc/2).toFixed(1);
+    lines.forEach(function(o){o.pl.setStyle({weight:w,dashArray:dash,dashOffset:((cyc/N)*o.i).toFixed(1),lineCap:'butt'});});}
   var all=[];
-  D.forEach(function(d){var ll=d.p.map(function(p){return [p[0],p[1]];}); all=all.concat(ll);
-    if(ll.length>1) L.polyline(ll,{color:d.c,weight:3,opacity:.85,dashArray:'6 5'}).addTo(map);
-    d.p.forEach(function(p,i){L.circleMarker([p[0],p[1]],{radius:6,color:'#fff',weight:2,fillColor:d.c,fillOpacity:1}).addTo(map).bindTooltip('D'+d.d+'.'+(i+1)+' '+p[2]);});});
-  if(all.length) map.fitBounds(all,{padding:[18,18]});
+  D.forEach(function(d,di){
+    var ll=d.p.map(function(p){return [p[0],p[1]];}); all=all.concat(ll);
+    d.p.forEach(function(p,i){
+      var m=L.marker([p[0],p[1]],{icon:icon(p[3],d.c,mode(),i+1)}).addTo(map)
+        .bindPopup('<div style="min-width:180px;font-family:sans-serif"><div style="font-size:10px;font-weight:700;color:'+d.c+';text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px">Ημέρα '+d.d+' · Στάση '+(i+1)+'</div><strong>'+p[2]+'</strong>'+(p[4]?'<div style="font-size:12px;color:#555;margin-top:4px">'+p[4]+'</div>':'')+'</div>');
+      m._t=p[3]; m._c=d.c; m._n=i+1; markers.push(m);
+    });
+    osrm(ll).then(function(route){ if(route.length>1){ var pl=L.polyline(route,{color:d.c,weight:4,opacity:.9,lineJoin:'round'}).addTo(map); lines.push({pl:pl,i:di}); restyle(); } });
+  });
+  var last='dot';   // markers were built before the map had a zoom, so they start as dots
+  function refresh(){restyle(); var md=mode(); if(md===last) return; last=md; markers.forEach(function(m){m.setIcon(icon(m._t,m._c,md,m._n));});}
+  if(all.length) map.fitBounds(all,{padding:[30,30]});
+  refresh(); map.on('zoomend',refresh);
   var bar=document.getElementById('it-bar'), links=[].slice.call(bar.querySelectorAll('a[href^="#day-"]'));
   var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
   function mark(){var y=window.scrollY+140, cur=0; secs.forEach(function(s,i){if(s&&s.offsetTop<=y) cur=i;}); links.forEach(function(a,i){a.classList.toggle('on',i===cur);});}

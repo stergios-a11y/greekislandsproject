@@ -69,7 +69,9 @@
 .it-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:14px 16px}
 .it-card h4{font-size:11px;letter-spacing:.7px;text-transform:uppercase;color:var(--ink-4);margin:0 0 8px;font-weight:800}
 .it-card small{display:block;margin-top:6px;font-size:11.5px;color:var(--ink-3)}
-.it-map{height:220px;border-radius:10px;background:#dfeef3}
+.it-mapwrap{margin:18px 0 22px}.it-map{height:400px;border-radius:14px;background:#dfeef3;box-shadow:var(--shadow-sm)}
+.it-maplegend{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:8px;font-size:12.5px;font-weight:700;color:var(--ink-2)}.it-maplegend i{display:inline-block;width:14px;height:5px;border-radius:3px;margin-right:6px;vertical-align:middle}.it-maplegend small{margin-left:auto;color:var(--ink-4);font-weight:600}
+@media(max-width:820px){.it-map{height:300px}}
 .it-btns{display:flex;flex-direction:column;gap:8px}
 .it-btn{display:block;text-align:center;padding:10px;border-radius:999px;font-weight:800;font-size:13.5px;text-decoration:none;color:#fff}
 .it-btn.f{background:var(--terracotta)}.it-btn.c{background:var(--aegean)}.it-btn.k{background:var(--aegean-dark)}
@@ -115,12 +117,12 @@
 <div class="it-grid"><div>
 <p class="it-lede">1 μέρα στον Καστό, μέρα με τη μέρα: τι βλέπεις, με τι σειρά, πόσο οδηγείς και πού κοιμάσαι. Βάση: Χωριό Καστού. Γίνεται χωρίς αυτοκίνητο.</p>
 
+<section class="it-mapwrap"><div id="it-map" class="it-map"></div><div class="it-maplegend"><span><i style="background:#0B8FAC"></i>Ημέρα 1</span><small>~6 km</small></div></section>
 <section class="it-day" id="day-1" style="--c:#0B8FAC"><div class="it-dh"><span class="it-n">ΜΕΡΑ 1</span><h2>Λιμάνι, Ανεμόμυλος &amp; Ένας Ήσυχος Όρμος</h2><span class="it-meta">6 km · 40 min <span class="it-sleep">🌙 Ύπνος: Χωριό Καστού</span></span></div><div class="it-stop"><div class="it-t">09:00</div><div><h3><a href="https://www.google.com/maps/search/Mytikas+Aitoloakarnania" target="_blank" rel="noopener">Νοίκιασε βάρκα στον Μύτικα</a></h3><p>Ο καλύτερος τρόπος για αυτά τα νησιά είναι να ξεχάσεις τα δρομολόγια και να οδηγήσεις μόνος. Η <a href="https://nemorentaboat.gr/" target="_blank" rel="noopener noreferrer">Nemo Rent a Boat</a> και άλλοι στην προκυμαία του Μύτικα νοικιάζουν μικρές βάρκες με εξωλέμβια γύρω στα <strong>100€ τη μέρα</strong>, συν περίπου <strong>50€</strong> βενζίνη — και <strong>δεν χρειάζεται δίπλωμα σκάφους</strong>, αρκεί το δίπλωμα αυτοκινήτου. Οι αποστάσεις είναι μικρές, οπότε με πρωινή αναχώρηση και άπνοια προλαβαίνεις Κάλαμο, Καστό και μια σειρά από έρημους όρμους μέσα σε μία μέρα. Πρόσεχε τον αέρα: το απόγευμα σηκώνεται, οπότε γύρνα νωρίτερα. Το να πλέεις με δική σου βάρκα ανάμεσα στα νησιά είναι αυτό που θα θυμάσαι από το ταξίδι.</p></div><img src="https://res.cloudinary.com/dothbs5hs/image/upload/w_256,h_172,c_fill,g_auto,q_auto,f_auto/v1785187824/%CE%BC%CF%85%CF%84%CE%B9%CE%BA%CE%B1%CF%83_wnk7cd.jpg" alt="Νοίκιασε βάρκα στον Μύτικα" loading="lazy" width="128" height="86"></div><div class="it-stop"><div class="it-t">11:00</div><div><h3><a href="https://www.google.com/maps/search/Kastos%20harbour%20%26%20village%20Kastos" target="_blank" rel="noopener">Λιμάνι &amp; Χωριό Καστού</a></h3><p>Ο μοναδικός οικισμός ανηφορίζει από ένα μικρό λιμάνι όπου δένουν πρύμα τα σκάφη. Δυο ταβέρνες, μια εκκλησία, ένα μαγαζί, κι ένα πέτρινο μονοπάτι αντί για δρόμο — όλη η «κίνηση» του νησιού.</p></div><img src="https://res.cloudinary.com/dothbs5hs/image/upload/w_256,h_172,c_fill,g_auto,q_auto,f_auto/v1785186370/%CE%BA%CE%B1%CF%83%CF%84%CE%BF%CF%82_%CE%BB%CE%B9%CE%BC%CE%B1%CE%BD%CE%B9_afqwc7.webp" alt="Λιμάνι &amp; Χωριό Καστού" loading="lazy" width="128" height="86"></div><div class="it-stop"><div class="it-t">12:30</div><div><h3><a href="https://www.google.com/maps/search/The%20Windmill%20Kastos" target="_blank" rel="noopener">Ο Ανεμόμυλος</a></h3><p>Ένας αναστηλωμένος πέτρινος ανεμόμυλος στη ράχη νότια του χωριού, με εύκολο περπάτημα μέσα από ελαιώνες με θάλασσα κι από τις δύο μεριές. Μία από τις κλασικές θέες του Εσωτερικού Ιονίου.</p></div><img src="https://res.cloudinary.com/dothbs5hs/image/upload/w_256,h_172,c_fill,g_auto,q_auto,f_auto/v1785186370/%CE%B1%CE%BD%CE%B5%CE%BC%CE%BF%CE%BC%CF%85%CE%BB%CE%BF%CF%82_fmxolr.jpg" alt="Ο Ανεμόμυλος" loading="lazy" width="128" height="86"></div><div class="it-stop"><div class="it-t">14:00</div><div><h3><a href="https://www.google.com/maps/search/Sarakiniko%20bay%20Kastos" target="_blank" rel="noopener">Όρμος Σαρακίνικο</a></h3><p>Ένας προστατευμένος βοτσαλωτός όρμος στα νότια, αγαπημένο αραξοβόλι με νερά τόσο καθαρά που βλέπεις την άγκυρα στον πάτο. Πρόσβαση πεζή ή με βαρκάκι· χωρίς υποδομές.</p></div><img src="https://res.cloudinary.com/dothbs5hs/image/upload/w_256,h_172,c_fill,g_auto,q_auto,f_auto/v1785186370/%CF%83%CE%B1%CF%81%CE%B1%CE%BA%CE%B9%CE%BD%CE%B9%CE%BA%CE%BF_jzb3jm.jpg" alt="Όρμος Σαρακίνικο" loading="lazy" width="128" height="86"></div><div class="it-stop"><div class="it-t">16:00</div><div><h3><a href="https://www.google.com/maps/search/Atokos+island+beach" target="_blank" rel="noopener">Ατοκός — μπάνιο με τα αγριογούρουνα</a></h3><p>Αν η θάλασσα είναι λάδι, συνέχισε ως τον <strong>Ατοκό</strong>, το ακατοίκητο νησί νοτιοδυτικά του Καστού. Η παραλία του είναι από τις πιο παράξενες και ωραίες στην Ελλάδα: κολυμπάς και τα <strong>αγριογούρουνα</strong> του νησιού κατεβαίνουν δίπλα σου στην ακροθαλασσιά. Δεν υπάρχει τίποτα άλλο — ούτε νερό, ούτε σκιά, ούτε κόσμος, ούτε σήμα. Φέρε ό,τι χρειάζεσαι, και επιχείρησε το πέρασμα μόνο με απόλυτη άπνοια.</p></div><img src="https://res.cloudinary.com/dothbs5hs/image/upload/w_256,h_172,c_fill,g_auto,q_auto,f_auto/c_fill,w_640,h_620/c_pad,w_1280,h_620,g_west,b_rgb:ffffff/l_atokos_xjadzr,c_fill,w_640,h_620/fl_layer_apply,g_east/v1785187171/atokos2_gjprv0.jpg" alt="Ατοκός — μπάνιο με τα αγριογούρουνα" loading="lazy" width="128" height="86"></div><div class="it-foodwrap"><div class="it-food"><b>🍽 Μεσημεριανό · Λιμάνι Καστού</b> Δυο-τρεις ταβέρνες στο λιμάνι μαγειρεύουν για τον βραδινό κόσμο των σκαφών — ψητό ψάρι, κατσίκι, ελιές και λάδι από τους ελαιώνες που περπάτησες. Τα μενού σύντομα κι αλλάζουν με το ψάρι της ημέρας.</div></div></section>
 <section class="it-faq"><h2>Πρακτικές ερωτήσεις</h2><details open><summary>Φτάνουν 1 μέρες στον Καστό;</summary><p>Ναι, για πρώτη επίσκεψη. Το πρόγραμμα καλύπτει τα βασικά με ρυθμό που αφήνει χρόνο για θάλασσα. Με μία μέρα παραπάνω, πρόσθεσε μια ήσυχη μέρα σε παραλία χωρίς μετακινήσεις.</p></details><details><summary>Χρειάζομαι αυτοκίνητο στον Καστό;</summary><p>Όχι. Το πρόγραμμα γίνεται με τα πόδια, βάρκες και το τοπικό λεωφορείο.</p></details><details><summary>Πού να μείνω στον Καστό;</summary><p>Το πρόγραμμα κοιμάται σε Χωριό Καστού.</p></details></section>
 <p class="it-back"><a href="/el/island/kastos/">← Πίσω στον πλήρη οδηγό του Καστός</a></p>
 </div>
 <aside class="it-side">
-  <div class="it-card"><h4>Χάρτης διαδρομής</h4><div id="it-map" class="it-map"></div><small>1 μέρες · ~6 km</small></div>
   <div class="it-card it-btns"><a class="it-btn f" href="https://www.ferryhopper.com/el/" target="_blank" rel="noopener sponsored">🚢 Κράτηση πλοίου</a><a class="it-btn c" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">🚗 Ενοικίαση αυτοκινήτου</a><a class="it-btn k" href="javascript:window.print()">🖨 Εκτύπωση</a>
   <p class="aff-note"><a href="/el/privacy/#affiliate">Affiliate σύνδεσμοι — στηρίζουν αυτόν τον οδηγό χωρίς κόστος για εσένα.</a></p></div>
   <div class="it-card"><h4>Από τον οδηγό του Καστός</h4><div class="it-links"><a href="/el/island/kastos/#sec-beaches">Παραλίες του Καστός →</a><a href="/el/island/kastos/#sec-when">Πότε να πας →</a><a href="/el/island/kastos/#sec-getting">Πώς πας →</a><a href="/el/island/kastos/">Πλήρης οδηγός του Καστός →</a></div></div>
@@ -130,15 +132,45 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
-  var D=[{"d": 1, "c": "#0B8FAC", "p": [[38.669152184866526, 20.947928569345382, "Νοίκιασε βάρκα στον Μύτικα"], [38.56802082063725, 20.91099243226486, "Λιμάνι & Χωριό Καστού"], [38.56682803492279, 20.912728825683, "Ο Ανεμόμυλος"], [38.56387926241061, 20.90256416625084, "Όρμος Σαρακίνικο"], [38.483533890778965, 20.81966078346176, "Ατοκός — μπάνιο με τα αγριογούρουνα"]]}];
+  var D=[{"d": 1, "c": "#0B8FAC", "t": "Λιμάνι, Ανεμόμυλος & Ένας Ήσυχος Όρμος", "p": [[38.669152184866526, 20.947928569345382, "Νοίκιασε βάρκα στον Μύτικα", "arrival", "Ο καλύτερος τρόπος για αυτά τα νησιά είναι να ξεχάσεις τα δρομολόγια και να οδηγήσεις μόνος. Η <a href=\"https://nemorentaboat.gr/\" target=\"_blank\" rel=\"noopener"], [38.56802082063725, 20.91099243226486, "Λιμάνι & Χωριό Καστού", "harbour", "Ο μοναδικός οικισμός ανηφορίζει από ένα μικρό λιμάνι όπου δένουν πρύμα τα σκάφη. Δυο ταβέρνες, μια εκκλησία, ένα μαγαζί, κι ένα πέτρινο μονοπάτι αντί για δρόμο "], [38.56682803492279, 20.912728825683, "Ο Ανεμόμυλος", "nature", "Ένας αναστηλωμένος πέτρινος ανεμόμυλος στη ράχη νότια του χωριού, με εύκολο περπάτημα μέσα από ελαιώνες με θάλασσα κι από τις δύο μεριές. Μία από τις κλασικές θ"], [38.56387926241061, 20.90256416625084, "Όρμος Σαρακίνικο", "beach", "Ένας προστατευμένος βοτσαλωτός όρμος στα νότια, αγαπημένο αραξοβόλι με νερά τόσο καθαρά που βλέπεις την άγκυρα στον πάτο. Πρόσβαση πεζή ή με βαρκάκι· χωρίς υποδ"], [38.483533890778965, 20.81966078346176, "Ατοκός — μπάνιο με τα αγριογούρουνα", "beach", "Αν η θάλασσα είναι λάδι, συνέχισε ως τον <strong>Ατοκό</strong>, το ακατοίκητο νησί νοτιοδυτικά του Καστού. Η παραλία του είναι από τις πιο παράξενες και ωραίες"]]}];
   var el=document.getElementById('it-map'); if(!el||!window.L) return;
-  var map=L.map(el,{scrollWheelZoom:false,attributionControl:false});
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key=cb1_2l21_1_d292f89e1479e60b5daf76fb",{subdomains:'abcd',maxZoom:18}).addTo(map);
+  var map=L.map(el,{scrollWheelZoom:false,attributionControl:true,zoomSnap:0.5});
+  // Same layers as the island page: Esri imagery + reference labels ("Satellite"), CARTO voyager ("Map")
+  var sat=L.layerGroup([L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:17,attribution:'Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics'}),
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:17})]);
+  var road=L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key=cb1_2l21_1_d292f89e1479e60b5daf76fb",{subdomains:'abcd',maxZoom:18,attribution:'© CARTO © OpenStreetMap'});
+  sat.addTo(map); L.control.layers({'Δορυφόρος':sat,'Χάρτης':road},null,{position:'topright'}).addTo(map);
+  L.control.scale({imperial:false,position:'bottomleft'}).addTo(map);
+  var EMO={beach:'🏖️',village:'🏘',harbour:'⚓',city:'🏙',museum:'🏛️',restaurant:'🍽',nature:'🌿',castle:'🏰',church:'⛪',viewpoint:'🔭',ruin:'🏛',departure:'🚢',monastery:'☧',arrival:'🚢',spa:'♨️',winery:'🍷',distillery:'🥃',waterfall:'💧',airport:'✈️',port:'⛴️'};
+  var EMOJI_ZOOM=10, markers=[], lines=[];   // a notch lower than the island page: this map is narrower, so islands fit at ~10.5
+  function icon(type,color,mode,n){
+    if(mode==='dot') return L.divIcon({className:'custom-marker',html:'<div style="width:10px;height:10px;border-radius:50%;background:'+color+';border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4)"></div>',iconSize:[14,14],iconAnchor:[7,7]});
+    var badge='<span style="position:absolute;top:-3px;right:-3px;background:'+color+';color:#fff;font:800 12px/1 system-ui,sans-serif;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4)">'+n+'</span>';
+    return L.divIcon({className:'custom-marker',html:'<div style="position:relative;font-size:22px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5));width:32px;height:32px;display:flex;align-items:center;justify-content:center">'+(EMO[type]||'📍')+badge+'</div>',iconSize:[32,32],iconAnchor:[16,16]});
+  }
+  function mode(){return map.getZoom()>=EMOJI_ZOOM?'emoji':'dot';}
+  function osrm(ll){
+    if(ll.length<2) return Promise.resolve(ll);
+    var q=ll.map(function(p){return p[1]+','+p[0];}).join(';');
+    return fetch('https://router.project-osrm.org/route/v1/driving/'+q+'?overview=full&geometries=geojson').then(function(r){return r.json();})
+      .then(function(j){return (j.routes&&j.routes[0])?j.routes[0].geometry.coordinates.map(function(c){return [c[1],c[0]];}):ll;}).catch(function(){return ll;});
+  }
+  function restyle(){var z=map.getZoom(),w=Math.max(2,Math.min(5,(z-6)*0.65)),N=Math.max(1,D.length),cyc=Math.max(14,w*4),dash=(cyc/2).toFixed(1)+', '+(cyc/2).toFixed(1);
+    lines.forEach(function(o){o.pl.setStyle({weight:w,dashArray:dash,dashOffset:((cyc/N)*o.i).toFixed(1),lineCap:'butt'});});}
   var all=[];
-  D.forEach(function(d){var ll=d.p.map(function(p){return [p[0],p[1]];}); all=all.concat(ll);
-    if(ll.length>1) L.polyline(ll,{color:d.c,weight:3,opacity:.85,dashArray:'6 5'}).addTo(map);
-    d.p.forEach(function(p,i){L.circleMarker([p[0],p[1]],{radius:6,color:'#fff',weight:2,fillColor:d.c,fillOpacity:1}).addTo(map).bindTooltip('D'+d.d+'.'+(i+1)+' '+p[2]);});});
-  if(all.length) map.fitBounds(all,{padding:[18,18]});
+  D.forEach(function(d,di){
+    var ll=d.p.map(function(p){return [p[0],p[1]];}); all=all.concat(ll);
+    d.p.forEach(function(p,i){
+      var m=L.marker([p[0],p[1]],{icon:icon(p[3],d.c,mode(),i+1)}).addTo(map)
+        .bindPopup('<div style="min-width:180px;font-family:sans-serif"><div style="font-size:10px;font-weight:700;color:'+d.c+';text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px">Ημέρα '+d.d+' · Στάση '+(i+1)+'</div><strong>'+p[2]+'</strong>'+(p[4]?'<div style="font-size:12px;color:#555;margin-top:4px">'+p[4]+'</div>':'')+'</div>');
+      m._t=p[3]; m._c=d.c; m._n=i+1; markers.push(m);
+    });
+    osrm(ll).then(function(route){ if(route.length>1){ var pl=L.polyline(route,{color:d.c,weight:4,opacity:.9,lineJoin:'round'}).addTo(map); lines.push({pl:pl,i:di}); restyle(); } });
+  });
+  var last='dot';   // markers were built before the map had a zoom, so they start as dots
+  function refresh(){restyle(); var md=mode(); if(md===last) return; last=md; markers.forEach(function(m){m.setIcon(icon(m._t,m._c,md,m._n));});}
+  if(all.length) map.fitBounds(all,{padding:[30,30]});
+  refresh(); map.on('zoomend',refresh);
   var bar=document.getElementById('it-bar'), links=[].slice.call(bar.querySelectorAll('a[href^="#day-"]'));
   var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
   function mark(){var y=window.scrollY+140, cur=0; secs.forEach(function(s,i){if(s&&s.offsetTop<=y) cur=i;}); links.forEach(function(a,i){a.classList.toggle('on',i===cur);});}
