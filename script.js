@@ -572,17 +572,22 @@ function addThemeAwareTiles(map, options = {}) {
 /* Home map: Map ⇄ Satellite from the filter bar (desktop). Same layers the
    Leaflet control would switch; firing baselayerchange keeps the dark-mode
    labels logic in sync. */
-function toggleHomeBaseLayer() {
+function _syncLayerSeg(isSat) {
+  document.querySelectorAll('#mf-layer-seg .mf-seg').forEach(b => {
+    const on = (b.dataset.layer === 'sat') === isSat;
+    b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+}
+function toggleHomeBaseLayer(target) {
   const entry = _activeMapEntries.find(e => e.map === mapInstance);
-  const btn = document.getElementById('mf-layer-btn');
-  if (!entry || !btn) return;
-  const toSat = !entry.map.hasLayer(entry.satLayer);
+  if (!entry) return;
+  const isSat = entry.map.hasLayer(entry.satLayer);
+  const toSat = target ? target === 'sat' : !isSat;
+  if (toSat === isSat) { _syncLayerSeg(isSat); return; }
   const off = toSat ? entry.mapLayer : entry.satLayer, on = toSat ? entry.satLayer : entry.mapLayer;
   entry.map.removeLayer(off); on.addTo(entry.map);
   entry.map.fire('baselayerchange', { layer: on, name: toSat ? entry.labelSat : entry.labelMap });
-  btn.setAttribute('aria-pressed', toSat ? 'true' : 'false');
-  btn.textContent = toSat ? '🗺' : '🛰';
-  btn.title = toSat ? entry.labelMap : entry.labelSat;
+  _syncLayerSeg(toSat);
   try { track('map_layer', { layer: toSat ? 'satellite' : 'map' }); } catch (_) {}
 }
 window.toggleHomeBaseLayer = toggleHomeBaseLayer;

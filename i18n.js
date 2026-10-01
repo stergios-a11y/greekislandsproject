@@ -202,6 +202,7 @@ const UI_TEXT = {
   'common.booking_aria': { en: 'Search this hotel on Booking.com', el: 'Αναζήτηση ξενοδοχείου στο Booking.com' },
   'map.layer.map': { en: 'Map', el: 'Χάρτης' },
   'map.layer.satellite': { en: 'Satellite', el: 'Δορυφόρος' },
+  'map.layer.group': { en: 'Map style', el: 'Στυλ χάρτη' },
   'getting_there.title': { en: 'Getting there', el: 'Πώς θα φτάσεις' },
   'getting_there.tip': { en: 'Tip', el: 'Συμβουλή' },
   'detail.editorial': { en: 'Editorial', el: 'Η άποψή μας' },
