@@ -1248,7 +1248,14 @@ function setupDarkMode() {
   function paint() {
     const isDark = root.classList.contains('dark');
     if (btn) {
-      btn.textContent = isDark ? '☀' : '☾';
+      if (btn.classList.contains('in-nav')) {
+        const el = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+        btn.innerHTML = `<span class="dm-label"><span aria-hidden="true">🌙</span> ${el ? 'Σκούρο θέμα' : 'Dark mode'}</span><span class="dm-switch" aria-hidden="true"><span></span></span>`;
+        btn.setAttribute('role', 'switch');
+        btn.setAttribute('aria-checked', isDark ? 'true' : 'false');
+      } else {
+        btn.textContent = isDark ? '☀' : '☾';
+      }
       btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
     }
   }
@@ -1272,7 +1279,7 @@ function setupDarkMode() {
   // contested to spend a slot on something most people never touch.
   if (window.matchMedia('(max-width: 840px)').matches) {
     const nav = document.getElementById('main-nav');
-    if (nav) { btn.classList.add('in-nav'); nav.appendChild(btn); }
+    if (nav) { btn.classList.add('in-nav'); nav.appendChild(btn); paint(); }
   }
 
   btn.addEventListener('click', () => {
@@ -1704,7 +1711,31 @@ async function renderWhatsOnStrip() {
    dotted leader lines to their gold dots. Desktop only.
 ============================================================ */
 let railDots = [];
+function _fillPickBand(band, keys, label, photos, lang) {
+  const meta = (typeof ISLANDS_DATA !== 'undefined') ? ISLANDS_DATA : {};
+  keys = keys.filter(k => meta[k]).sort((a, b) => meta[a].lng - meta[b].lng);
+  try { railDots.forEach(d => mapInstance.removeLayer(d)); } catch (_) {}
+  railDots = [];
+  const base = lang === 'el' ? '/el/island/' : '/island/';
+  band.innerHTML = `<div class="bp-picks-head">📅 ${escapeHtml(label)}</div><div class="bp-picks-row">` +
+    keys.map(k => {
+      const photo = photos[k] && photos[k].url ? thumbUrl(photos[k].url) : '';
+      return `<a class="bp-pick" data-k="${k}" href="${base}${k}/">${photo ? `<img src="${photo}" alt="" loading="lazy">` : ''}<span>${escapeHtml(islandName(k))}</span></a>`;
+    }).join('') + '</div>';
+  band.hidden = false;
+  band.querySelectorAll('.bp-pick').forEach(a => {
+    a.addEventListener('click', () => { try { track('pick_click', { island: a.dataset.k, placement: window.matchMedia('(max-width: 840px)').matches ? 'band_mobile' : 'band' }); } catch (_) {} });
+  });
+  return keys;
+}
+
 function renderMapRail(keys, label, photos, lang) {
+  // Phones: same photo tiles, swipeable, in the hero. No map rail.
+  if (window.matchMedia('(max-width: 840px)').matches) {
+    const b = document.getElementById('bp-picks');
+    if (b && keys.length) _fillPickBand(b, keys, label, photos, lang);
+    return;
+  }
   const rail = document.getElementById('pick-rail');
   const svg = document.getElementById('rail-svg');
   if (!rail || !svg || typeof mapInstance === 'undefined' || !mapInstance) return;
@@ -1716,19 +1747,7 @@ function renderMapRail(keys, label, photos, lang) {
   // no side rail.
   const band = document.getElementById('bp-picks');
   if (band) {
-    keys = keys.filter(k => meta[k]).sort((a, b) => meta[a].lng - meta[b].lng);
-    railDots.forEach(d => mapInstance.removeLayer(d));
-    railDots = [];
-    const base = lang === 'el' ? '/el/island/' : '/island/';
-    band.innerHTML = `<div class="bp-picks-head">📅 ${escapeHtml(label)}</div><div class="bp-picks-row">` +
-      keys.map(k => {
-        const photo = photos[k] && photos[k].url ? thumbUrl(photos[k].url) : '';
-        return `<a class="bp-pick" data-k="${k}" href="${base}${k}/">${photo ? `<img src="${photo}" alt="" loading="lazy">` : ''}<span>${escapeHtml(islandName(k))}</span></a>`;
-      }).join('') + '</div>';
-    band.hidden = false;
-    band.querySelectorAll('.bp-pick').forEach(a => {
-      a.addEventListener('click', () => { try { track('pick_click', { island: a.dataset.k, placement: 'band' }); } catch (_) {} });
-    });
+    _fillPickBand(band, keys, label, photos, lang);
     rail.hidden = true; svg.style.display = 'none';
     return;
   }
