@@ -1712,18 +1712,13 @@ function renderMapRail(keys, label, photos, lang) {
   if (!keys.length) return;
   const meta = (typeof ISLANDS_DATA !== 'undefined') ? ISLANDS_DATA : {};
   // Desktop: the picks live in the band above the map as photo tiles, west to
-  // east, each linked to its guide. The island's dot on the map gets a gold
-  // ring; hovering a tile enlarges it. No leader lines, no side rail.
+  // east, each linked to its guide. No rings on the map, no leader lines,
+  // no side rail.
   const band = document.getElementById('bp-picks');
   if (band) {
     keys = keys.filter(k => meta[k]).sort((a, b) => meta[a].lng - meta[b].lng);
     railDots.forEach(d => mapInstance.removeLayer(d));
-    railDots = keys.map(k => {
-      const d = L.circleMarker([meta[k].lat, meta[k].lng], { radius: 16, color: '#C4962A', weight: 2.5, fill: false, pane: 'markerPane', interactive: false })
-        .addTo(mapInstance);
-      d._railKey = k;
-      return d;
-    });
+    railDots = [];
     const base = lang === 'el' ? '/el/island/' : '/island/';
     band.innerHTML = `<div class="bp-picks-head">📅 ${escapeHtml(label)}</div><div class="bp-picks-row">` +
       keys.map(k => {
@@ -1732,9 +1727,6 @@ function renderMapRail(keys, label, photos, lang) {
       }).join('') + '</div>';
     band.hidden = false;
     band.querySelectorAll('.bp-pick').forEach(a => {
-      const dot = railDots.find(d => d._railKey === a.dataset.k);
-      a.addEventListener('mouseenter', () => { if (dot) dot.setStyle({ weight: 4 }).setRadius(22); });
-      a.addEventListener('mouseleave', () => { if (dot) dot.setStyle({ weight: 2.5 }).setRadius(16); });
       a.addEventListener('click', () => { try { track('pick_click', { island: a.dataset.k, placement: 'band' }); } catch (_) {} });
     });
     rail.hidden = true; svg.style.display = 'none';
