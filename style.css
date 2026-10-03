@@ -7159,3 +7159,22 @@ html.dark .ab3-disagree { background: rgba(96,216,240,.08); border-left-color: #
   #dark-mode-btn.in-nav[aria-checked="true"] .dm-switch > span { transform: translateX(18px); }
   html.dark #dark-mode-btn.in-nav { background: rgba(255,255,255,.06); }
 }
+
+/* ===== QUIZ BAR (desktop band) — same width as the search box ===== */
+@media (min-width: 841px) {
+  #view-home .bp-decide-alt { display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    justify-self: stretch; width: 100%; box-sizing: border-box; margin: 10px 0 0; padding: 7px 14px;
+    border-radius: 10px; background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.22);
+    color: #fff; white-space: nowrap; cursor: pointer; transition: background .15s, border-color .15s; }
+  #view-home .bp-decide-alt:hover { background: rgba(255,255,255,.18); border-color: rgba(255,255,255,.36); }
+  #view-home .bp-decide-alt .bp-linkbtn { color: #fff; font-weight: 800; text-decoration: none; }
+  #view-home .bp-decide-alt:hover .bp-linkbtn { color: #FFD4D4; }
+  #view-home .bp-decide-alt:focus-visible { outline: 2px solid #8FD8EA; outline-offset: 2px; }
+}
+@media (min-width: 1241px) {
+  html[lang="el"] #view-home .bp-decide-alt .bp-alt-lead { display: inline; }
+  html[lang="el"] #view-home .bp-decide-alt { font-size: 12px; padding: 7px 12px; }
+}
+@media (min-width: 841px) and (max-width: 1240px) {
+  #view-home .bp-decide-alt { justify-content: center; }
+}
