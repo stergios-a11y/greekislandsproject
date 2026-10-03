@@ -5187,6 +5187,7 @@ const SIDE_PORTS = {
   'poros-kef':          { island: 'kefalonia', name: 'Poros (Kefalonia)',          name_el: 'Πόρος (Κεφαλονιά)',          lat: 38.151, lng: 20.776 },
   'agios-nikolaos-zak': { island: 'zakynthos', name: 'Agios Nikolaos (Zakynthos)', name_el: 'Άγιος Νικόλαος (Ζάκυνθος)',  lat: 37.904, lng: 20.709 },
   'pisaetos':           { island: 'ithaca',    name: 'Pisaetos (Ithaca)',          name_el: 'Πισαετός (Ιθάκη)',           lat: 38.391, lng: 20.652 },
+  'kamiros-skala':      { island: 'rhodes',    name: 'Kamiros Skala (Rhodes)',     name_el: 'Σκάλα Καμείρου (Ρόδος)',     lat: 36.272, lng: 27.826 },
   'pollonia':           { island: 'milos',     name: 'Pollonia (Milos)',           name_el: 'Πολλώνια (Μήλος)',           lat: 36.762, lng: 24.528 },
 };
 
@@ -5327,7 +5328,7 @@ const FERRY_GRAPH = [
   { a: 'rafina', b: 'naxos', dur: 225, freq: 'med', plo: 35, phi: 55, note: "fast daily summer" },
   { a: 'rafina', b: 'paros', dur: 195, freq: 'med', plo: 32, phi: 50, note: "fast daily summer" },
   { a: 'rafina', b: 'tinos', dur: 165, freq: 'high', plo: 22, phi: 35, note: "multiple daily" },
-  { a: 'rhodes', b: 'halki', dur: 60, freq: 'high', plo: 10, phi: 18, note: "daily small ferry" },
+  { a: 'rhodes', b: 'halki', dur: 75, freq: 'med', plo: 10, phi: 16, note: "daily small ferry from Kamiros Skala (west Rhodes); a few a week from Rhodes town", ap: 'kamiros-skala' },
   { a: 'rhodes', b: 'karpathos', dur: 240, freq: 'med', plo: 22, phi: 38, note: "most days" },
   { a: 'rhodes', b: 'kastellorizo', dur: 180, freq: 'low', plo: 18, phi: 30, note: "3-4/week" },
   { a: 'rhodes', b: 'kos', dur: 150, freq: 'high', plo: 22, phi: 38, note: "daily Dodekanisos Express" },
@@ -5407,8 +5408,9 @@ const FERRY_VISUAL_LINES = [
   { stops: ['rhodes', 'karpathos', 'kasos', 'sitia', 'heraklion'],           freq: 'low' },
   // Sporades
   { stops: ['volos', 'skiathos', 'skopelos', 'alonnisos'],                   freq: 'high' },
+  { stops: ['agios-konstantinos', 'skiathos', 'skopelos', 'alonnisos'],      freq: 'med' },
   // Ionian
-  { stops: ['patras', 'kefalonia', 'ithaca'],                                freq: 'med' },
+  { stops: ['patras', 'kefalonia', 'ithaca'],                                freq: 'med', sides: true },
 ];
 
 // Direct edges never drawn on the network map (duplicates of another edge).
@@ -5917,9 +5919,9 @@ function renderFerryMap() {
 
   // Frequency styling — distinct visual tiers
   const freqStyle = {
-    high: { color: '#076880', weight: 2.4, opacity: 0.78, dashArray: null },
-    med:  { color: '#0B8FAC', weight: 1.9, opacity: 0.62, dashArray: null },
-    low:  { color: '#C4962A', weight: 1.6, opacity: 0.65, dashArray: null },
+    high: { color: '#14A8C8', weight: 3.0, opacity: 0.9,  dashArray: null },
+    med:  { color: '#7B88E0', weight: 2.0, opacity: 0.85, dashArray: null },
+    low:  { color: '#D4A033', weight: 1.7, opacity: 0.85, dashArray: '5 5' },
   };
 
   // Overview: draw the sequential lines first, then each remaining direct edge
@@ -5951,11 +5953,12 @@ function renderFerryMap() {
     }
     return Infinity;
   };
-  const segCoords = (a, b, n) => {
-    const { pa, pb, sa, sb } = ferrySegEnds(a, b);
+  const segCoords = (a, b, n, useSides = true) => {
+    let { pa, pb, sa, sb } = ferrySegEnds(a, b);
+    if (!useSides) { pa = getFerryPortCoords(a); pb = getFerryPortCoords(b); sa = sb = null; }
     if (!pa || !pb) return null;
-    if (sa) sidePortsUsed.add(sa);
-    if (sb) sidePortsUsed.add(sb);
+    if (sa) sidePortsUsed.add(sa); else drawnPorts.add(a);
+    if (sb) sidePortsUsed.add(sb); else drawnPorts.add(b);
     return curvedRouteCoords(pa.lat, pa.lng, pb.lat, pb.lng, n);
   };
   const edgeTooltip = (edge) => {
@@ -5973,9 +5976,9 @@ function renderFerryMap() {
       color: style.color,
       weight: FERRY_FOCUS_PORT ? style.weight + 0.6 : style.weight,
       opacity: FERRY_FOCUS_PORT ? Math.min(style.opacity + 0.2, 1) : style.opacity,
+      dashArray: style.dashArray,
       smoothFactor: 1.2,
     }).addTo(ferryMapLayer).bindTooltip(edgeTooltip(edge), { sticky: true, opacity: 1, className: 'island-tooltip' });
-    drawnPorts.add(edge.a); drawnPorts.add(edge.b);
     return true;
   };
 
@@ -5986,20 +5989,23 @@ function renderFerryMap() {
       drawEdge(edge);
     });
   } else {
+    const sameBoat = new Set();
     FERRY_VISUAL_LINES.forEach(line => {
       if (!FERRY_MAP_FILTERS.has(line.freq)) return;
+      line.stops.forEach((x, i) => line.stops.slice(i + 1).forEach(y => sameBoat.add([x, y].sort().join('~'))));
       const coords = [];
       for (let i = 0; i < line.stops.length - 1; i++) {
-        const seg = segCoords(line.stops[i], line.stops[i + 1], 10);
+        const seg = segCoords(line.stops[i], line.stops[i + 1], 10, !!line.sides);
         if (!seg) continue;
-        coords.push(...(coords.length ? seg.slice(1) : seg));
+        const last = coords[coords.length - 1];
+        const joined = last && Math.abs(last[0] - seg[0][0]) < 1e-9 && Math.abs(last[1] - seg[0][1]) < 1e-9;
+        coords.push(...(joined ? seg.slice(1) : seg));
         link(line.stops[i], line.stops[i + 1]);
-        drawnPorts.add(line.stops[i]); drawnPorts.add(line.stops[i + 1]);
       }
       if (coords.length < 2) return;
       const style = freqStyle[line.freq] || freqStyle.low;
       const stopsLabel = line.stops.map(k => ferryPortDisplayName(k)).join(' → ');
-      L.polyline(coords, { color: style.color, weight: style.weight + 0.4, opacity: style.opacity, smoothFactor: 1.2 })
+      L.polyline(coords, { color: style.color, weight: style.weight + 0.4, opacity: style.opacity, dashArray: style.dashArray, smoothFactor: 1.2 })
         .addTo(ferryMapLayer)
         .bindTooltip(`<strong>${ferryPortDisplayName(line.stops[0])} → ${ferryPortDisplayName(line.stops[line.stops.length - 1])}</strong><br>` +
           `<span style="font-size:11px;color:var(--ink-3)">${stopsLabel}</span>`, { sticky: true, opacity: 1, className: 'island-tooltip' });
@@ -6011,8 +6017,7 @@ function renderFerryMap() {
       .filter(x => x.d < Infinity)
       .sort((x, y) => x.d - y.d)
       .forEach(({ e, d }) => {
-        drawnPorts.add(e.a); drawnPorts.add(e.b);
-        if (FERRY_VISUAL_EDGE_SET.has([e.a, e.b].sort().join('~'))) return;   // same boat as a drawn line
+        if (sameBoat.has([e.a, e.b].sort().join('~'))) return;   // same boat as a drawn line
         // Routes from a side harbour are a genuinely different crossing: always draw.
         if (!e.ap && !e.bp && netDist(e.a, e.b, d * DETOUR) <= d * DETOUR) return;   // the lines already cover it
         if (drawEdge(e)) link(e.a, e.b);

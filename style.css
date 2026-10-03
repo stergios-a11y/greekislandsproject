@@ -7178,3 +7178,8 @@ html.dark .ab3-disagree { background: rgba(96,216,240,.08); border-left-color: #
 @media (min-width: 841px) and (max-width: 1240px) {
   #view-home .bp-decide-alt { justify-content: center; }
 }
+
+/* ===== FERRY COLOURS v2 — one hue per frequency, matching the map ===== */
+.ferry-legend-line.ferry-freq-high, .ferry-freq-high .ferry-filter-line { border-top-color: #14A8C8; border-top-width: 3px; border-top-style: solid; }
+.ferry-legend-line.ferry-freq-med,  .ferry-freq-med .ferry-filter-line  { border-top-color: #7B88E0; border-top-width: 2.5px; border-top-style: solid; }
+.ferry-legend-line.ferry-freq-low,  .ferry-freq-low .ferry-filter-line  { border-top-color: #D4A033; border-top-width: 2px; border-top-style: dashed; }
