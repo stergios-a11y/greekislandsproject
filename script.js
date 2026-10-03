@@ -5099,11 +5099,11 @@ const RHODES_PORT = { lat: 36.451, lng: 28.227 };
 const ISLAND_FERRY_PORTS = {
   'aegina': { lat: 37.745, lng: 23.43 },
   'agathonisi': { lat: 37.464, lng: 26.989 },
-  'agios-efstratios': { lat: 39.51, lng: 24.998 },
-  'agistri': { lat: 37.7, lng: 23.347 },
-  'alonnisos': { lat: 39.149, lng: 23.857 },
+  'agios-efstratios': { lat: 39.535, lng: 24.990 },
+  'agistri': { lat: 37.705, lng: 23.352 },
+  'alonnisos': { lat: 39.142, lng: 23.865 },
   'ammouliani': { lat: 40.335, lng: 23.920 },
-  'amorgos': { lat: 36.835, lng: 25.882 },
+  'amorgos': { lat: 36.830, lng: 25.867 },
   'anafi': { lat: 36.355, lng: 25.766 },
   'andros': { lat: 37.881, lng: 24.738 },
   'antiparos': { lat: 37.041, lng: 25.084 },
@@ -5111,24 +5111,24 @@ const ISLAND_FERRY_PORTS = {
   'chania': { lat: 35.491, lng: 24.08 },
   'chios': { lat: 38.371, lng: 26.137 },
   'corfu': { lat: 39.624, lng: 19.92 },
-  'donousa': { lat: 37.105, lng: 25.812 },
+  'donousa': { lat: 37.098, lng: 25.811 },
   'elafonisos': { lat: 36.499, lng: 22.978 },
   'evia-central': { lat: 38.464, lng: 23.598 },
   'evia-north': { lat: 38.901, lng: 23.04 },
-  'evia-south': { lat: 38.084, lng: 24.297 },
-  'folegandros': { lat: 36.612, lng: 24.913 },
+  'evia-south': { lat: 38.055, lng: 24.316 },
+  'folegandros': { lat: 36.617, lng: 24.946 },
   'fournoi': { lat: 37.594, lng: 26.5 },
   'gavdos': { lat: 34.844, lng: 24.124 },
   'halki': { lat: 36.224, lng: 27.617 },
   'heraklion': { lat: 35.342, lng: 25.155 },
   'hydra': { lat: 37.349, lng: 23.466 },
-  'ikaria': { lat: 37.62, lng: 26.213 },
+  'ikaria': { lat: 37.612, lng: 26.293 },
   'ios': { lat: 36.722, lng: 25.282 },
   'iraklia': { lat: 36.846, lng: 25.469 },
   'ithaca': { lat: 38.364, lng: 20.718 },
   'kalymnos': { lat: 36.948, lng: 26.989 },
   'karpathos': { lat: 35.508, lng: 27.213 },
-  'kasos': { lat: 35.408, lng: 26.926 },
+  'kasos': { lat: 35.418, lng: 26.926 },
   'kastellorizo': { lat: 36.144, lng: 29.594 },
   'kea': { lat: 37.659, lng: 24.318 },
   'kefalonia': { lat: 38.252, lng: 20.643 },
@@ -5136,18 +5136,18 @@ const ISLAND_FERRY_PORTS = {
   'kos': { lat: 36.893, lng: 27.288 },
   'koufonisia': { lat: 36.937, lng: 25.594 },
   'kythira': { lat: 36.270, lng: 23.079 },
-  'kythnos': { lat: 37.388, lng: 24.408 },
+  'kythnos': { lat: 37.391, lng: 24.397 },
   'lasithi': { lat: 35.197, lng: 25.722 },
   'lefkada': { lat: 38.700, lng: 20.713 },
   'leipsoi': { lat: 37.301, lng: 26.762 },
   'lemnos': { lat: 39.876, lng: 25.067 },
-  'leros': { lat: 37.139, lng: 26.802 },
+  'leros': { lat: 37.131, lng: 26.849 },
   'lesvos': { lat: 39.108, lng: 26.554 },
   'meganisi': { lat: 38.658, lng: 20.755 },
-  'milos': { lat: 36.737, lng: 24.435 },
+  'milos': { lat: 36.726, lng: 24.446 },
   'mykonos': { lat: 37.446, lng: 25.328 },
   'naxos': { lat: 37.106, lng: 25.378 },
-  'nisyros': { lat: 36.378, lng: 27.143 },
+  'nisyros': { lat: 36.615, lng: 27.136 },
   'oinousses': { lat: 38.518, lng: 26.22 },
   'paros': { lat: 37.084, lng: 25.15 },
   'patmos': { lat: 37.31, lng: 26.554 },
@@ -5156,7 +5156,7 @@ const ISLAND_FERRY_PORTS = {
   'psara': { lat: 38.534, lng: 25.561 },
   'rethymno': { lat: 35.367, lng: 24.487 },
   'rhodes': { lat: 36.451, lng: 28.227 },
-  'salamis': { lat: 37.943, lng: 23.523 },
+  'salamis': { lat: 37.955, lng: 23.532 },
   'samos': { lat: 37.751, lng: 26.978 },
   'samothrace': { lat: 40.481, lng: 25.473 },
   'santorini': { lat: 36.413, lng: 25.43 },
@@ -5171,7 +5171,7 @@ const ISLAND_FERRY_PORTS = {
   'symi': { lat: 36.617, lng: 27.842 },
   'syros': { lat: 37.444, lng: 24.943 },
   'thasos': { lat: 40.776, lng: 24.713 },
-  'therasia': { lat: 36.431, lng: 25.355 },
+  'therasia': { lat: 36.426, lng: 25.350 },
   'tilos': { lat: 36.418, lng: 27.378 },
   'tinos': { lat: 37.539, lng: 25.162 },
   'zakynthos': { lat: 37.787, lng: 20.898 },
@@ -5180,14 +5180,14 @@ const ISLAND_FERRY_PORTS = {
 // Secondary harbours some routes really use (drawn on the ferry map instead of
 // the island's main port). Planner nodes stay the island itself.
 const SIDE_PORTS = {
-  'mesta':              { island: 'chios',     name: 'Mesta (Chios)',              name_el: 'Μεστά (Χίος)',               lat: 38.272, lng: 25.918 },
+  'mesta':              { island: 'chios',     name: 'Mesta (Chios)',              name_el: 'Μεστά (Χίος)',               lat: 38.290, lng: 25.910 },
   'vasiliki':           { island: 'lefkada',   name: 'Vasiliki (Lefkada)',         name_el: 'Βασιλική (Λευκάδα)',         lat: 38.629, lng: 20.609 },
   'fiskardo':           { island: 'kefalonia', name: 'Fiskardo (Kefalonia)',       name_el: 'Φισκάρδο (Κεφαλονιά)',       lat: 38.460, lng: 20.577 },
   'pesada':             { island: 'kefalonia', name: 'Pesada (Kefalonia)',         name_el: 'Πεσσάδα (Κεφαλονιά)',        lat: 38.103, lng: 20.571 },
   'poros-kef':          { island: 'kefalonia', name: 'Poros (Kefalonia)',          name_el: 'Πόρος (Κεφαλονιά)',          lat: 38.151, lng: 20.776 },
   'agios-nikolaos-zak': { island: 'zakynthos', name: 'Agios Nikolaos (Zakynthos)', name_el: 'Άγιος Νικόλαος (Ζάκυνθος)',  lat: 37.904, lng: 20.709 },
   'pisaetos':           { island: 'ithaca',    name: 'Pisaetos (Ithaca)',          name_el: 'Πισαετός (Ιθάκη)',           lat: 38.391, lng: 20.652 },
-  'pounta-paros':       { island: 'paros',     name: 'Pounta (Paros)',             name_el: 'Πούντα (Πάρος)',             lat: 37.031, lng: 25.100 },
+  'pounta-paros':       { island: 'paros',     name: 'Pounta (Paros)',             name_el: 'Πούντα (Πάρος)',             lat: 37.030, lng: 25.098 },
   'kamiros-skala':      { island: 'rhodes',    name: 'Kamiros Skala (Rhodes)',     name_el: 'Σκάλα Καμείρου (Ρόδος)',     lat: 36.272, lng: 27.826 },
   'pollonia':           { island: 'milos',     name: 'Pollonia (Milos)',           name_el: 'Πολλώνια (Μήλος)',           lat: 36.762, lng: 24.528 },
 };
@@ -5898,9 +5898,26 @@ function ferryPortDisplayName(key) {
   return key;
 }
 
+// Sea routes around the islands, precomputed by tools/build_ferry_paths.py.
+// Until the file arrives (or if it fails) segments are drawn as gentle curves.
+let FERRY_SEA_PATHS = null, _ferrySeaLoading = false;
+const _fk = (p, q) => `${p.lat.toFixed(4)},${p.lng.toFixed(4)}|${q.lat.toFixed(4)},${q.lng.toFixed(4)}`;
+function ferrySeaPath(pa, pb) {
+  if (!FERRY_SEA_PATHS) return null;
+  const f = FERRY_SEA_PATHS[_fk(pa, pb)];
+  if (f) return f;
+  const r = FERRY_SEA_PATHS[_fk(pb, pa)];
+  return r ? r.slice().reverse() : null;
+}
+
 function renderFerryMap() {
   const mapEl = document.getElementById('ferry-map');
   if (!mapEl) return;
+  if (!FERRY_SEA_PATHS && !_ferrySeaLoading) {
+    _ferrySeaLoading = true;
+    fetch('/ferry-paths.json').then(r => r.ok ? r.json() : null)
+      .then(j => { if (j) { FERRY_SEA_PATHS = j; renderFerryMap(); } }).catch(() => {});
+  }
 
   // First time: create map + persistent controls
   if (!mapEl._map) {
@@ -5960,7 +5977,7 @@ function renderFerryMap() {
     if (!pa || !pb) return null;
     if (sa) sidePortsUsed.add(sa); else drawnPorts.add(a);
     if (sb) sidePortsUsed.add(sb); else drawnPorts.add(b);
-    return curvedRouteCoords(pa.lat, pa.lng, pb.lat, pb.lng, n);
+    return ferrySeaPath(pa, pb) || curvedRouteCoords(pa.lat, pa.lng, pb.lat, pb.lng, n);
   };
   const edgeTooltip = (edge) => {
     const fromName = ferryPortDisplayName(edge.a);
