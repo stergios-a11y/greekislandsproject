@@ -53,6 +53,8 @@ LINES.slice().sort((x, y) => rank[x.freq] - rank[y.freq]).forEach(l => {
   for (let i = 0; i < l.stops.length - 1; i++) segs.push(ends(l.stops[i], l.stops[i + 1], !!l.sides)); });
 G.slice().sort((x, y) => rank[x.freq] - rank[y.freq]).forEach(e => {
   segs.push(ends(e.a, e.b, true)); segs.push(ends(e.a, e.b, false)); });
+const IR = grab('INTERNATIONAL_ROUTES', '[', ']') || [], FP = grab('FOREIGN_PORTS', '{', '}') || {};
+IR.forEach(r => { const a = port(r.from), b = FP[r.to]; if (a && b) segs.push([[a.lat, a.lng], [b.lat, b.lng]]); });
 console.log(JSON.stringify(segs.filter(Boolean)));
 """
 

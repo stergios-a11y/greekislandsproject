@@ -7180,6 +7180,16 @@ html.dark .ab3-disagree { background: rgba(96,216,240,.08); border-left-color: #
 }
 
 /* ===== FERRY COLOURS v2 — one hue per frequency, matching the map ===== */
-.ferry-legend-line.ferry-freq-high, .ferry-freq-high .ferry-filter-line { border-top-color: #14A8C8; border-top-width: 4px; border-top-style: solid; }
-.ferry-legend-line.ferry-freq-med,  .ferry-freq-med .ferry-filter-line  { border-top-color: rgba(20,168,200,.7); border-top-width: 2.5px; border-top-style: solid; }
-.ferry-legend-line.ferry-freq-low,  .ferry-freq-low .ferry-filter-line  { border-top-color: rgba(20,168,200,.6); border-top-width: 1.5px; border-top-style: dashed; }
+
+
+/* ===== FERRY LINES v3 + ACROSS THE BORDER ===== */
+.ferry-legend-line.ferry-freq-high, .ferry-freq-high .ferry-filter-line { border-top: 3px solid #055A6E; }
+.ferry-legend-line.ferry-freq-med,  .ferry-freq-med .ferry-filter-line  { border-top: 2.5px solid #5CC3DA; }
+.ferry-legend-line.ferry-freq-low,  .ferry-freq-low .ferry-filter-line  { border-top: 2px dashed #5CC3DA; }
+html.dark .ferry-legend-line.ferry-freq-high, html.dark .ferry-freq-high .ferry-filter-line { border-top-color: #46D6F2; }
+html.dark .ferry-legend-line.ferry-freq-med,  html.dark .ferry-freq-med .ferry-filter-line,
+html.dark .ferry-legend-line.ferry-freq-low,  html.dark .ferry-freq-low .ferry-filter-line  { border-top-color: #3D98AD; }
+.ferry-intl-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; border: 2px solid #055A6E; background: transparent; }
+html.dark .ferry-intl-dot { border-color: #46D6F2; }
+.ferry-intl-btn:not(.active) .ferry-intl-dot { opacity: .4; }
+.across-border { scroll-margin-top: 80px; }

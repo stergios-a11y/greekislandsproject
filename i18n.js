@@ -348,6 +348,8 @@ const UI_TEXT = {
   'hopping.pricetrip': { en: '💶 What does this trip cost? →', el: '💶 Πόσο κοστίζει αυτό το ταξίδι; →' },
 
   // International Escapes page
+  'intl2.title': { en: 'Across the border', el: 'Πέρα από τα σύνορα' },
+  'intl2.chip': { en: 'Across the border', el: 'Πέρα από τα σύνορα' },
   'international.title': { en: '🌍 International Escapes', el: '🌍 Διεθνείς Αποδράσεις' },
   'international.intro': { en: "Greek islands are closer to foreign shores than you think. From Corfu, Albania is 30 minutes away. From the east Aegean, Turkey is a short ferry across. Here are the proven international ferry connections from Greek islands — a different kind of island-hopping.", el: 'Τα ελληνικά νησιά είναι πιο κοντά σε ξένες ακτές απ\'όσο νομίζεις. Από την Κέρκυρα, η Αλβανία απέχει 30 λεπτά. Από το Ανατολικό Αιγαίο, η Τουρκία είναι σύντομη διαδρομή. Εδώ είναι οι αξιόπιστες διεθνείς συνδέσεις πλοίων από ελληνικά νησιά — ένα διαφορετικό είδος νησοπορίας.' },
   'international.legend.daily': { en: 'Daily (multiple crossings per day)', el: 'Καθημερινά (πολλά δρομολόγια)' },

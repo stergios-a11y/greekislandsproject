@@ -92,7 +92,7 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="preload" as="image" href="https://res.cloudinary.com/dothbs5hs/image/upload/w_1280,h_560,c_fill,q_auto,f_auto/v1783273547/%CE%BA%CF%85%CE%B8%CE%B7%CF%81%CE%B1_vuwxno.jpg" fetchpriority="high">
-  <link rel="stylesheet" href="/style.css?v=83">
+  <link rel="stylesheet" href="/style.css?v=84">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9298260273942245" crossorigin="anonymous"></script>
   <script>
     /* Desktop-only ads: on viewports below 900px, replace adsbygoogle.push
@@ -355,31 +355,22 @@
         <span class="ferry-filter-line"></span>
         <span data-i18n="hopping.legend.low">Λίγα/εβδομάδα</span>
       </button>
+      <button class="ferry-filter-btn ferry-intl-btn active" id="ferry-intl-btn" onclick="toggleFerryIntl()">
+        <span class="ferry-intl-dot" aria-hidden="true"></span>
+        <span data-i18n="intl2.chip">Πέρα από τα σύνορα</span>
+      </button>
     </div>
+    <section id="across-border" class="across-border">
+      <h2 style="margin-top:40px" data-i18n="intl2.title">Πέρα από τα σύνορα</h2>
+      <p class="hopping-intro"><span data-i18n="international.intro">Τα ελληνικά νησιά είναι πιο κοντά σε ξένες ακτές απ'όσο νομίζεις. Από την Κέρκυρα, η Αλβανία απέχει 30 λεπτά. Από το Ανατολικό Αιγαίο, η Τουρκία είναι σύντομη διαδρομή. Εδώ είναι οι αξιόπιστες διεθνείς συνδέσεις πλοίων από ελληνικά νησιά — ένα διαφορετικό είδος νησοπορίας.</span></p>
+      <div class="intl-prebook-notice" data-i18n="international.prebook">💡 <strong>Δεν χρειάζεται προκράτηση.</strong> Για όλες τις παρακάτω διαδρομές, μπορείς να αγοράσεις το εισιτήριο επί τόπου στο λιμάνι την ίδια μέρα. Το καλοκαίρι έχει κίνηση — έλα 60–90 λεπτά πριν την αναχώρηση για να εξασφαλίσεις θέση.</div>
+      <div id="international-list"></div>
+    </section>
     <h2 style="margin-top:40px" data-i18n="hopping.itineraries">Προτεινόμενες Διαδρομές</h2>
     <p class="hopping-intro" data-i18n="hopping.itin.intro">Δέκα επιλεγμένες διαδρομές πολλαπλών νησιών — από την κλασική διαδρομή των Κυκλάδων μέχρι την ήσυχη απόδραση στις Μικρές Κυκλάδες. Όλες χρησιμοποιούν πραγματικές συνδέσεις πλοίων.</p>
     <div id="hopping-list"></div>
   </main>
 
-  <main id="view-international" class="view-section content-page" style="display:none;">
-    <div class="hopping-header">
-      <h2 data-i18n="international.title">🌍 Διεθνείς Αποδράσεις</h2>
-      <p class="hopping-intro"><span data-i18n="international.intro">Τα ελληνικά νησιά είναι πιο κοντά σε ξένες ακτές απ'όσο νομίζεις. Από την Κέρκυρα, η Αλβανία απέχει 30 λεπτά. Από το Ανατολικό Αιγαίο, η Τουρκία είναι σύντομη διαδρομή. Εδώ είναι οι αξιόπιστες διεθνείς συνδέσεις πλοίων από ελληνικά νησιά — ένα διαφορετικό είδος νησοπορίας.</span></p>
-      <div class="intl-prebook-notice" data-i18n="international.prebook">💡 <strong>Δεν χρειάζεται προκράτηση.</strong> Για όλες τις παρακάτω διαδρομές, μπορείς να αγοράσεις το εισιτήριο επί τόπου στο λιμάνι την ίδια μέρα. Το καλοκαίρι έχει κίνηση — έλα 60–90 λεπτά πριν την αναχώρηση για να εξασφαλίσεις θέση.</div>
-    </div>
-    <div class="planner-btn-group" style="display:flex;gap:10px;flex-wrap:wrap;margin:0 0 20px">
-      <a class="ferry-btn ferry-btn-prominent" href="https://www.ferryhopper.com/en/" target="_blank" rel="noopener" data-i18n="detail.bookferry">🚢 Κράτηση</a>
-      <a class="car-btn ferry-btn-prominent" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored" data-i18n="detail.rentcar">🚗 Ενοικίαση αυτοκινήτου</a>
-    <p class="aff-note" data-i18n="affiliate.note"><a href="/el/privacy/#affiliate">Affiliate σύνδεσμοι — στηρίζουν αυτόν τον οδηγό χωρίς κόστος για εσένα.</a></p></div>
-    <div id="international-map" style="height:560px;border-radius:16px;overflow:hidden;margin-bottom:20px;"></div>
-    <div class="ferry-legend">
-      <span class="ferry-legend-item"><span class="ferry-legend-line ferry-freq-high"></span><span data-i18n="international.legend.daily">Καθημερινά (πολλά δρομολόγια)</span></span>
-      <span class="ferry-legend-item"><span class="ferry-legend-line ferry-freq-med"></span><span data-i18n="international.legend.frequent">Συχνά το καλοκαίρι (4-7/εβδ)</span></span>
-      <span class="ferry-legend-item"><span class="ferry-legend-line ferry-freq-low"></span><span data-i18n="international.legend.seasonal">Εποχιακό / περιορισμένο</span></span>
-    </div>
-    <h2 style="margin-top:40px" data-i18n="international.routes.title">Όλες οι Διαδρομές</h2>
-    <div id="international-list"></div>
-  </main>
 
   <main id="view-match" class="view-section content-page" style="display:none;">
     <div class="mq-bg" id="mq-bg" aria-hidden="true"><div class="mq-bg-img"></div></div>
@@ -580,8 +571,8 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-  <script src="/i18n.js?v=49"></script>
-  <script src="/script.js?v=146"></script>
+  <script src="/i18n.js?v=50"></script>
+  <script src="/script.js?v=147"></script>
 <!-- SEO_ISLAND_LIST_START -->
 <nav class="visually-hidden" aria-label="Όλα τα νησιά">
   <h2>Όλα τα νησιά</h2>

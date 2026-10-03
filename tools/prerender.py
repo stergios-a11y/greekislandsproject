@@ -2256,7 +2256,7 @@ def render_page(key, data, meta, lang='en'):
 <script type="application/ld+json">{schema_json}</script>
 
 <!-- SPA assets — load the same CSS as the main site so the SEO body blends visually -->
-<link rel="stylesheet" href="{asset_prefix}style.css?v=83">
+<link rel="stylesheet" href="{asset_prefix}style.css?v=84">
 <style>
   /* Minimal SEO body styling — these elements exist only in pre-rendered pages */
   .seo-island-content {{
@@ -2639,8 +2639,8 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="{asset_prefix}i18n.js?v=49"></script>
-<script src="{asset_prefix}script.js?v=146"></script>
+<script src="{asset_prefix}i18n.js?v=50"></script>
+<script src="{asset_prefix}script.js?v=147"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
@@ -2709,6 +2709,59 @@ def render_page(key, data, meta, lang='en'):
 # ---------------------------------------------------------------------
 # Main generation loop
 # ---------------------------------------------------------------------
+def _load_intl_routes():
+    """INTERNATIONAL_ROUTES + FOREIGN_PORTS out of script.js (via node), or None."""
+    import subprocess
+    js = r"""
+const s = require('fs').readFileSync(process.argv[1], 'utf8');
+function grab(n, o, c) { const i = s.indexOf('const ' + n + ' = '); let j = s.indexOf(o, i), d = 0, k = j;
+  for (; k < s.length; k++) { if (s[k] === o) d++; else if (s[k] === c && --d === 0) break; }
+  return eval('(' + s.slice(j, k + 1) + ')'); }
+console.log(JSON.stringify({ routes: grab('INTERNATIONAL_ROUTES', '[', ']'), ports: grab('FOREIGN_PORTS', '{', '}') }));
+"""
+    try:
+        out = subprocess.run(['node', '-e', js, str(ROOT / 'script.js')], capture_output=True, text=True, check=True)
+        return json.loads(out.stdout)
+    except Exception as e:
+        print(f'  ⚠  international routes not read ({e}); /ferries/ ships without them')
+        return None
+
+
+def _intl_section(intl, lang, island_link):
+    is_el = lang == 'el'
+    pick = lambda o, k: (o.get(k + '_el') or o.get(k)) if is_el else o.get(k)
+    rows = []
+    for r in intl['routes']:
+        fp = intl['ports'].get(r['to'])
+        if not fp:
+            continue
+        flag = '🇦🇱' if r['country'] == 'Albania' else '🇹🇷'
+        rows.append(
+            '<tr>'
+            f'<td class="ferry-dest">{island_link(r["from"], lang)} ↔ {flag} {esc(pick(fp, "name"))}</td>'
+            f'<td>{esc(pick(r, "duration"))}</td>'
+            f'<td>{esc(pick(r, "frequency_label"))}</td>'
+            f'<td>{esc(r["price"])}</td>'
+            f'<td class="ferry-note">{esc(pick(r, "note"))}</td>'
+            '</tr>')
+    if not rows:
+        return ''
+    if is_el:
+        h, lead = 'Πέρα από τα σύνορα', ('Από την Κέρκυρα η Αλβανία απέχει μισή ώρα· από τα νησιά του ανατολικού Αιγαίου '
+                                         'η τουρκική ακτή είναι λίγο πιο πέρα. Εισιτήρια συνήθως επί τόπου, την ίδια μέρα — έχε μαζί διαβατήριο.')
+        heads = ('Διαδρομή', 'Διάρκεια', 'Συχνότητα', 'Τιμή', 'Σημείωση')
+    else:
+        h, lead = 'Across the border', ('From Corfu, Albania is half an hour away; from the east Aegean islands the Turkish coast '
+                                        'is a short hop. Tickets are usually bought at the port on the day — bring your passport.')
+        heads = ('Route', 'Duration', 'Frequency', 'Price', 'Notes')
+    return ('\n<section class="ferry-port" id="across-border">'
+            f'<h2>{h}</h2><p class="ferry-intro" style="font-size:15px">{lead}</p>'
+            '<div class="ferry-table-wrap"><table class="ferry-table"><colgroup>'
+            '<col class="ferry-col-dest"><col class="ferry-col-dur"><col class="ferry-col-freq"><col class="ferry-col-price"><col class="ferry-col-note">'
+            '</colgroup><thead><tr>' + ''.join(f'<th>{x}</th>' for x in heads) + '</tr></thead>'
+            f'<tbody>{"".join(rows)}</tbody></table></div></section>')
+
+
 def generate_ferries_page(island_keys):
     """Build a static ferries hub page (EN + EL) at /ferries/index.html.
 
@@ -2918,7 +2971,11 @@ def generate_ferries_page(island_keys):
                 port_nav_items.append(
                     f'<a href="#port-{port}">{esc(PORT_LABELS[port][lang])}</a>'
                 )
+        intl = _load_intl_routes()
+        if intl:
+            port_nav_items.append('<a href="#across-border">' + ('Πέρα από τα σύνορα' if lang == 'el' else 'Across the border') + '</a>')
         port_nav = ' · '.join(port_nav_items)
+        intl_section = _intl_section(intl, lang, island_link) if intl else ''
 
         url_en = f'{SITE_URL}/ferries/'
         url_el = f'{SITE_URL}/el/ferries/'
@@ -2976,7 +3033,7 @@ def generate_ferries_page(island_keys):
             f'<meta property="og:url" content="{url}">\n'
             f'<meta property="og:locale" content="{"el_GR" if is_el else "en_US"}">\n'
             '<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>\n'
-            '<link rel="stylesheet" href="/style.css?v=83">\n'
+            '<link rel="stylesheet" href="/style.css?v=84">\n'
             '<style>\n'
             '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--sans, system-ui), sans-serif; margin: 0; }\n'
             '  .ferry-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }\n'
@@ -3054,7 +3111,7 @@ def generate_ferries_page(island_keys):
             f'  <h1>{esc(title.rsplit(" | ", 1)[0])}</h1>\n'
             f'  <p class="ferry-intro">{intro}</p>\n'
             f'  <div class="ferry-nav"><span class="ferry-nav-label">{esc(port_subtitle)}</span>{port_nav}</div>\n'
-            + '\n'.join(port_sections) +
+            + '\n'.join(port_sections) + intl_section +
             f'\n  <div class="ferry-footer"><p>{booking_intro}{ferryhopper_link}</p><p style="margin-top: 12px;">{crosslink_text}</p></div>\n'
             '<div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored">' + ('🚢 Κράτηση εισιτηρίων' if is_el else '🚢 Book ferry tickets') + '</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">' + ('🚗 Ενοικίαση αυτοκινήτου' if is_el else '🚗 Rent a car') + '</a>' + ('<p class="aff-note" data-i18n="affiliate.note"><a href="/el/privacy/#affiliate">Affiliate σύνδεσμοι — στηρίζουν αυτόν τον οδηγό χωρίς κόστος για εσένα.</a></p>' if is_el else '<p class="aff-note" data-i18n="affiliate.note"><a href="/privacy/#affiliate">Affiliate links — they support this guide and cost you nothing.</a></p>') + '</div>\n'
             '</main>\n'
@@ -3513,7 +3570,7 @@ def generate_festivals_page(island_keys):
             # Otherwise users who enabled dark mode on the home page would briefly
             # flash the light theme on this page. Tiny inline script — no JS file needed.
             '<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>\n'
-            '<link rel="stylesheet" href="/style.css?v=83">\n'
+            '<link rel="stylesheet" href="/style.css?v=84">\n'
             '<style>\n'
             '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--sans, system-ui), sans-serif; margin: 0; }\n'
             '  .fest-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }\n'

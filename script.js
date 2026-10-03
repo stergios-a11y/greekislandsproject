@@ -718,6 +718,7 @@ let _seenSections = new Set();
 let _seenSectionsFor = null;
 
 function navigateTo(view, param) {
+  if (view === 'international') { navigateTo('hopping'); scrollToAcrossBorder(); return; }
   const present = document.getElementById(view === 'island' ? 'view-detail' : `view-${view}`);
   if (!present) {
     // Static pages (island guides, compare pairs) don't carry the other views;
@@ -751,6 +752,7 @@ function navMission(event) {
 window.navMission = navMission;
 
 function showView(view, param) {
+  if (view === 'international') { view = 'hopping'; scrollToAcrossBorder(); }
   const homeControls = document.getElementById('home-controls');
   ['home','data','compare','hopping','international','match','shortlist','mission','detail'].forEach(v => {
     const el = document.getElementById(`view-${v}`);
@@ -788,8 +790,7 @@ function showView(view, param) {
   document.body.dataset.view = view;   // the feedback FAB shows only on the About page (CSS)
   if (nav && nav.classList.contains('open')) nav.classList.remove('open');
   if (view === 'home' && mapInstance) setTimeout(() => mapInstance.invalidateSize(), 100);
-  if (view === 'hopping') { setTimeout(renderHopping, 50); setTimeout(renderFerryPlanner, 50); }
-  if (view === 'international') setTimeout(renderInternational, 50);
+  if (view === 'hopping') { setTimeout(renderHopping, 50); setTimeout(renderFerryPlanner, 50); setTimeout(renderInternationalList, 50); }
   if (view === 'match') setupQuizIfNeeded();
   if (view === 'shortlist') renderShortlist();
   if (view === 'compare') {
@@ -1264,6 +1265,7 @@ function setupDarkMode() {
     paint();
     try { if (radarChartInstance) renderRadarChart(); } catch (_) {}
     try { swapAllTiles(); } catch (_) {}
+    try { if (ferryMapInstance) renderFerryMap(); } catch (_) {}
   }
 
   // Live-follow the OS while no manual choice is stored — this is what makes
@@ -5923,7 +5925,7 @@ function renderFerryMap() {
   if (!mapEl._map) {
     ferryMapInstance = L.map('ferry-map', {
       zoomControl: true, minZoom: 6, maxZoom: 10,
-      maxBounds: [[34.5, 19.0], [41.0, 29.5]], maxBoundsViscosity: 0.85
+      maxBounds: [[34.5, 19.0], [41.0, 30.0]], maxBoundsViscosity: 0.85
     }).setView([37.5, 25.2], 7);
     mapEl._map = ferryMapInstance;
     addThemeAwareTiles(ferryMapInstance, { maxZoom: 10 });
@@ -5936,11 +5938,13 @@ function renderFerryMap() {
   ferryMapLayer = L.layerGroup().addTo(ferryMapInstance);
 
   // Frequency styling — distinct visual tiers
+  const _ferryDark = (typeof isDarkTheme === 'function') && isDarkTheme();
   const freqStyle = {
-    // One colour; busier routes are thicker and stronger, like roads on a map.
-    high: { color: '#14A8C8', weight: 3.6, opacity: 0.95, dashArray: null },
-    med:  { color: '#14A8C8', weight: 2.1, opacity: 0.7,  dashArray: null },
-    low:  { color: '#14A8C8', weight: 1.4, opacity: 0.6,  dashArray: '4 5' },
+    // One hue; busier routes are higher-contrast (and a touch thicker):
+    // dark teal on the light basemap, bright teal on the dark one.
+    high: { color: _ferryDark ? '#46D6F2' : '#055A6E', weight: 2.6, opacity: 1,    dashArray: null },
+    med:  { color: _ferryDark ? '#3D98AD' : '#5CC3DA', weight: 2.0, opacity: 0.95, dashArray: null },
+    low:  { color: _ferryDark ? '#3D98AD' : '#5CC3DA', weight: 1.5, opacity: 0.9,  dashArray: '4 5' },
   };
 
   // Overview: draw the sequential lines first, then each remaining direct edge
@@ -6045,6 +6049,34 @@ function renderFerryMap() {
       });
   }
 
+  // Across the border: island ↔ Albanian / Turkish port. Same line language;
+  // the foreign side is a hollow dot that scrolls to the section below.
+  if (FERRY_SHOW_INTL && typeof INTERNATIONAL_ROUTES !== 'undefined') {
+    const foreignUsed = new Set();
+    INTERNATIONAL_ROUTES.forEach(r => {
+      if (!FERRY_MAP_FILTERS.has(r.frequency)) return;
+      if (FERRY_FOCUS_PORT && r.from !== FERRY_FOCUS_PORT) return;
+      const pa = getFerryPortCoords(r.from), fp = FOREIGN_PORTS[r.to];
+      if (!pa || !fp) return;
+      const coords = ferrySeaPath(pa, fp) || curvedRouteCoords(pa.lat, pa.lng, fp.lat, fp.lng, 12);
+      const style = freqStyle[r.frequency] || freqStyle.low;
+      L.polyline(coords, { color: style.color, weight: style.weight, opacity: style.opacity, dashArray: style.dashArray, smoothFactor: 1.2 })
+        .addTo(ferryMapLayer)
+        .bindTooltip(`<strong>${ferryPortDisplayName(r.from)} ↔ ${pickLang(fp, 'name')}</strong> · ${pickLang(fp, 'country')}<br>` +
+          `<span style="font-size:11px;color:var(--ink-3)">⏱ ${pickLang(r, 'duration')} · ${pickLang(r, 'frequency_label')} · ${r.price}</span>`,
+          { sticky: true, opacity: 1, className: 'island-tooltip' });
+      drawnPorts.add(r.from); foreignUsed.add(r.to);
+    });
+    foreignUsed.forEach(k => {
+      const fp = FOREIGN_PORTS[k];
+      const flag = fp.country === 'Albania' ? '🇦🇱' : '🇹🇷';
+      L.circleMarker([fp.lat, fp.lng], { radius: 5, color: freqStyle.high.color, weight: 2, fill: true, fillColor: '#fff', fillOpacity: 0.01 })
+        .addTo(ferryMapLayer)
+        .bindTooltip(`<strong>${flag} ${pickLang(fp, 'name')}</strong>, ${pickLang(fp, 'country')}`, { direction: 'top', opacity: 1, className: 'island-tooltip' })
+        .on('click', scrollToAcrossBorder);
+    });
+  }
+
   // Side harbours actually used by a drawn route: small dots, same colour as islands.
   sidePortsUsed.forEach(k => {
     const sp = SIDE_PORTS[k];
@@ -6099,6 +6131,20 @@ function renderFerryMap() {
 }
 
 let FERRY_FOCUS_PORT = null;
+let FERRY_SHOW_INTL = true;
+function toggleFerryIntl() {
+  FERRY_SHOW_INTL = !FERRY_SHOW_INTL;
+  const b = document.getElementById('ferry-intl-btn');
+  if (b) b.classList.toggle('active', FERRY_SHOW_INTL);
+  renderFerryMap();
+}
+window.toggleFerryIntl = toggleFerryIntl;
+function scrollToAcrossBorder() {
+  setTimeout(() => {
+    const el = document.getElementById('across-border');
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 350);
+}
 
 function updateFerryFocusBanner() {
   const banner = document.getElementById('ferry-focus-banner');
@@ -6418,7 +6464,7 @@ const FOREIGN_PORTS = {
   'seferihisar': {
     name: 'Seferihisar', name_el: 'Σεφέριχισαρ',
     country: 'Turkey', country_el: 'Τουρκία',
-    lat: 38.1962, lng: 26.8379,
+    lat: 38.197, lng: 26.786,
     rating: 3,
     context: 'Turkey\'s first official "Slow Food" town. Beautiful Sigacik marina, a restored citadel, and the ruins of ancient Teos nearby.',
     context_el: 'Η πρώτη επίσημη "Slow Food" πόλη της Τουρκίας. Όμορφη η μαρίνα του Sigacik, αναπαλαιωμένο κάστρο, και τα ερείπια της αρχαίας Τέω κοντά.',
