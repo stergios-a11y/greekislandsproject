@@ -48,10 +48,11 @@ const ends = (a, b, sides) => {
   }
   return pa && pb ? [[pa.lat, pa.lng], [pb.lat, pb.lng]] : null;
 };
-const segs = [];
-G.forEach(e => { segs.push(ends(e.a, e.b, true)); segs.push(ends(e.a, e.b, false)); });
-LINES.forEach(l => { for (let i = 0; i < l.stops.length - 1; i++) {
-  segs.push(ends(l.stops[i], l.stops[i + 1], !!l.sides)); } });
+const segs = [], rank = { high: 0, med: 1, low: 2 };
+LINES.slice().sort((x, y) => rank[x.freq] - rank[y.freq]).forEach(l => {
+  for (let i = 0; i < l.stops.length - 1; i++) segs.push(ends(l.stops[i], l.stops[i + 1], !!l.sides)); });
+G.slice().sort((x, y) => rank[x.freq] - rank[y.freq]).forEach(e => {
+  segs.push(ends(e.a, e.b, true)); segs.push(ends(e.a, e.b, false)); });
 console.log(JSON.stringify(segs.filter(Boolean)));
 """
 
@@ -70,7 +71,7 @@ def main():
     water = lab == sea_id
     dist_land = ndimage.distance_transform_edt(water)               # in cells
     # Stay a little off the coast where there is room; mid-channel otherwise.
-    cost = np.where(water, 1.0 + 3.0 * np.clip(1.0 - dist_land / 5.0, 0, 1), -1.0)
+    cost = np.where(water, 1.0 + 2.0 * np.clip(1.0 - dist_land / 3.0, 0, 1), -1.0)
     _, (nr, nc) = ndimage.distance_transform_edt(~water, return_indices=True)
 
     out = subprocess.run(['node', '-e', NODE, str(ROOT / 'script.js')], capture_output=True, text=True, check=True)
@@ -84,41 +85,68 @@ def main():
         r = int((N0 - lat) / RES); c = int((lng - W0) / RES)
         return nr[r, c], nc[r, c]          # nearest open-water cell
     def ll(rc):
-        return [round(N0 - (rc[0] + 0.5) * RES, 4), round(W0 + (rc[1] + 0.5) * RES, 4)]
-    def clear(a, b):
-        n = int(max(abs(a[0] - b[0]), abs(a[1] - b[1])) * 2) + 2
-        rr = np.linspace(a[0], b[0], n).round().astype(int); cc = np.linspace(a[1], b[1], n).round().astype(int)
-        return bool(np.all(water[rr, cc]))
+        return [round(float(N0 - (rc[0] + 0.5) * RES), 4), round(float(W0 + (rc[1] + 0.5) * RES), 4)]
+    dist_water = ndimage.distance_transform_edt(~water)          # 0 on water, cells inland otherwise
+    used = np.zeros_like(water)
+    # Near a port, sailing along an already-drawn route is cheaper, so routes
+    # leave a harbour as one trunk and branch further out. Out at sea, no pull.
+    REUSE, NEAR = 0.6, 30            # cost factor; radius in cells (~12 km)
+    near_port = np.zeros_like(water)
+    for p_, q_ in todo.values():
+        for la, ln in (p_, q_):
+            near_port[int((N0 - la) / RES), int((ln - W0) / RES)] = True
+    near_port = ndimage.distance_transform_edt(~near_port) <= NEAR
+
+    def on_water(pts, slack=1.5):
+        rr = np.clip(np.round([p[0] for p in pts]).astype(int), 0, land.shape[0] - 1)
+        cc = np.clip(np.round([p[1] for p in pts]).astype(int), 0, land.shape[1] - 1)
+        return bool(np.all(dist_water[rr, cc] <= slack))
+
+    def simplify(pts, tol=0.35):
+        keep = [0, len(pts) - 1]; stack = [(0, len(pts) - 1)]
+        P = np.asarray(pts, float)
+        while stack:
+            i, j = stack.pop()
+            if j <= i + 1: continue
+            a, b = P[i], P[j]; d = b - a; L = np.hypot(*d) or 1e-9
+            seg = P[i + 1:j]
+            dist = np.abs(d[0] * (seg[:, 1] - a[1]) - d[1] * (seg[:, 0] - a[0])) / L
+            k = int(np.argmax(dist))
+            if dist[k] > tol:
+                keep.append(i + 1 + k); stack += [(i, i + 1 + k), (i + 1 + k, j)]
+        return [pts[i] for i in sorted(set(keep))]
 
     paths = {}
     for k, (p, q) in todo.items():
         s, e = cell(*p), cell(*q)
         r0, r1 = max(min(s[0], e[0]) - 250, 0), min(max(s[0], e[0]) + 250, land.shape[0])
         c0, c1 = max(min(s[1], e[1]) - 250, 0), min(max(s[1], e[1]) + 250, land.shape[1])
-        m = MCP_Geometric(cost[r0:r1, c0:c1], fully_connected=True)
+        sub = cost[r0:r1, c0:c1]
+        sub = np.where(used[r0:r1, c0:c1] & near_port[r0:r1, c0:c1] & (sub > 0), sub * REUSE, sub)
+        m = MCP_Geometric(sub, fully_connected=True)
         ls, le = (s[0] - r0, s[1] - c0), (e[0] - r0, e[1] - c0)
         m.find_costs([ls], [le])
         try:
             tr = [(r + r0, c + c0) for r, c in m.traceback(le)]
         except Exception:
             print('  no sea path', k); continue
-        # string-pull: keep only the turning points
-        pts = [tr[0]]; i = 0
-        while i < len(tr) - 1:
-            j = len(tr) - 1
-            while j > i + 1 and not clear(tr[i], tr[j]): j -= 1
-            pts.append(tr[j]); i = j
-        # Chaikin smoothing, up to three rounds, each kept only if it stays on water
-        cur = pts
-        for _ in range(3):
-            sm = [cur[0]]
-            for a, b in zip(cur, cur[1:]):
-                sm += [(0.75 * a[0] + 0.25 * b[0], 0.75 * a[1] + 0.25 * b[1]),
-                       (0.25 * a[0] + 0.75 * b[0], 0.25 * a[1] + 0.75 * b[1])]
-            sm.append(cur[-1])
-            if not all(clear(a, b) for a, b in zip(sm, sm[1:])): break
-            cur = sm
-        poly = [ll(x) for x in cur]
+        rr = np.array([t[0] for t in tr], float); cc = np.array([t[1] for t in tr], float)
+        used[rr.astype(int), cc.astype(int)] = True
+        # Smooth the grid path into a curve: the widest Gaussian that keeps it at sea.
+        best = list(zip(rr, cc))
+        for sigma in (7, 5, 3.5, 2):
+            if len(tr) < 4: break
+            sr = ndimage.gaussian_filter1d(rr, sigma, mode='nearest')
+            sc = ndimage.gaussian_filter1d(cc, sigma, mode='nearest')
+            # fade the smoothing out towards both ends so a route leaves and
+            # reaches its harbour along the real channel (no hooks at the port)
+            n = len(rr); idx = np.arange(n); T = 2.0 * sigma
+            w = np.clip(np.minimum(idx, n - 1 - idx) / T, 0, 1)
+            sr = w * sr + (1 - w) * rr; sc = w * sc + (1 - w) * cc
+            cand = list(zip(sr, sc))
+            if on_water(cand):
+                best = cand; break
+        poly = [ll(x) for x in simplify(best)]
         paths[k] = [[round(p[0], 4), round(p[1], 4)]] + poly + [[round(q[0], 4), round(q[1], 4)]]
     (ROOT / 'ferry-paths.json').write_text(json.dumps(paths, separators=(',', ':')))
     print(f'ferry-paths.json: {len(paths)} segments')
