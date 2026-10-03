@@ -5937,9 +5937,10 @@ function renderFerryMap() {
 
   // Frequency styling — distinct visual tiers
   const freqStyle = {
-    high: { color: '#14A8C8', weight: 3.0, opacity: 0.9,  dashArray: null },
-    med:  { color: '#7B88E0', weight: 2.0, opacity: 0.85, dashArray: null },
-    low:  { color: '#D4A033', weight: 1.7, opacity: 0.85, dashArray: '5 5' },
+    // One colour; busier routes are thicker and stronger, like roads on a map.
+    high: { color: '#14A8C8', weight: 3.6, opacity: 0.95, dashArray: null },
+    med:  { color: '#14A8C8', weight: 2.1, opacity: 0.7,  dashArray: null },
+    low:  { color: '#14A8C8', weight: 1.4, opacity: 0.6,  dashArray: '4 5' },
   };
 
   // Overview: draw the sequential lines first, then each remaining direct edge
