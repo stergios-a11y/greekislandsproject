@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-10-01';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-10-03';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -5177,6 +5177,19 @@ const ISLAND_FERRY_PORTS = {
   'zakynthos': { lat: 37.787, lng: 20.898 },
 };
 
+// Secondary harbours some routes really use (drawn on the ferry map instead of
+// the island's main port). Planner nodes stay the island itself.
+const SIDE_PORTS = {
+  'mesta':              { island: 'chios',     name: 'Mesta (Chios)',              name_el: 'Μεστά (Χίος)',               lat: 38.272, lng: 25.918 },
+  'vasiliki':           { island: 'lefkada',   name: 'Vasiliki (Lefkada)',         name_el: 'Βασιλική (Λευκάδα)',         lat: 38.629, lng: 20.609 },
+  'fiskardo':           { island: 'kefalonia', name: 'Fiskardo (Kefalonia)',       name_el: 'Φισκάρδο (Κεφαλονιά)',       lat: 38.460, lng: 20.577 },
+  'pesada':             { island: 'kefalonia', name: 'Pesada (Kefalonia)',         name_el: 'Πεσσάδα (Κεφαλονιά)',        lat: 38.103, lng: 20.571 },
+  'poros-kef':          { island: 'kefalonia', name: 'Poros (Kefalonia)',          name_el: 'Πόρος (Κεφαλονιά)',          lat: 38.151, lng: 20.776 },
+  'agios-nikolaos-zak': { island: 'zakynthos', name: 'Agios Nikolaos (Zakynthos)', name_el: 'Άγιος Νικόλαος (Ζάκυνθος)',  lat: 37.904, lng: 20.709 },
+  'pisaetos':           { island: 'ithaca',    name: 'Pisaetos (Ithaca)',          name_el: 'Πισαετός (Ιθάκη)',           lat: 38.391, lng: 20.652 },
+  'pollonia':           { island: 'milos',     name: 'Pollonia (Milos)',           name_el: 'Πολλώνια (Μήλος)',           lat: 36.762, lng: 24.528 },
+};
+
 const FERRY_GRAPH = [
   { a: 'aegina', b: 'agistri', dur: 15, freq: 'high', plo: 3, phi: 5, note: "multiple daily" },
   { a: 'aegina', b: 'poros', dur: 60, freq: 'high', plo: 10, phi: 16, note: "multiple daily" },
@@ -5193,7 +5206,7 @@ const FERRY_GRAPH = [
   { a: 'astypalaia', b: 'kos', dur: 240, freq: 'low', plo: 18, phi: 28, note: "3-4/week" },
   { a: 'chios', b: 'lesvos', dur: 180, freq: 'med', plo: 18, phi: 28, note: "6/week" },
   { a: 'chios', b: 'oinousses', dur: 60, freq: 'high', plo: 4, phi: 8, note: "daily small ferry" },
-  { a: 'chios', b: 'psara', dur: 240, freq: 'low', plo: 10, phi: 18, note: "2-3/week" },
+  { a: 'chios', b: 'psara', dur: 90, freq: 'med', plo: 10, phi: 16, note: "mostly from Mesta port (SW Chios); a few sailings a week from Chios town", ap: 'mesta' },
   { a: 'chios', b: 'samos', dur: 240, freq: 'low', plo: 18, phi: 28, note: "3-4/week" },
   { a: 'corfu', b: 'paxos', dur: 90, freq: 'med', plo: 14, phi: 22, note: "4-5/week summer" },
   { a: 'donousa', b: 'amorgos', dur: 60, freq: 'med', plo: 8, phi: 14, note: "Skopelitis to Aegiali" },
@@ -5220,8 +5233,8 @@ const FERRY_GRAPH = [
   { a: 'karpathos', b: 'kasos', dur: 60, freq: 'med', plo: 8, phi: 14, note: "4-5/week" },
   { a: 'kasos', b: 'rhodes', dur: 300, freq: 'low', plo: 22, phi: 38, note: "2-3/week" },
   { a: 'kavala', b: 'thasos', dur: 80, freq: 'high', plo: 7, phi: 12, note: "every 1-2h, also Keramoti 35min" },
-  { a: 'kefalonia', b: 'ithaca', dur: 30, freq: 'high', plo: 4, phi: 7, note: "multiple daily" },
-  { a: 'kefalonia', b: 'zakynthos', dur: 90, freq: 'low', plo: 12, phi: 18, note: "summer-only via Pesada" },
+  { a: 'kefalonia', b: 'ithaca', dur: 30, freq: 'high', plo: 4, phi: 7, note: "Sami to Pisaetos, multiple daily", bp: 'pisaetos' },
+  { a: 'kefalonia', b: 'zakynthos', dur: 90, freq: 'low', plo: 12, phi: 18, note: "summer-only, Pesada to Agios Nikolaos", ap: 'pesada', bp: 'agios-nikolaos-zak' },
   { a: 'keramoti', b: 'thasos', dur: 35, freq: 'high', plo: 4, phi: 7, note: "every 30-60min" },
   { a: 'kos', b: 'kalymnos', dur: 45, freq: 'high', plo: 8, phi: 14, note: "daily catamaran + Mastichari shuttle" },
   { a: 'kos', b: 'leros', dur: 90, freq: 'high', plo: 12, phi: 20, note: "daily" },
@@ -5229,7 +5242,7 @@ const FERRY_GRAPH = [
   { a: 'kos', b: 'patmos', dur: 150, freq: 'high', plo: 18, phi: 28, note: "daily" },
   { a: 'koufonisia', b: 'amorgos', dur: 75, freq: 'med', plo: 10, phi: 16, note: "Skopelitis" },
   { a: 'koufonisia', b: 'donousa', dur: 60, freq: 'med', plo: 6, phi: 12, note: "Skopelitis" },
-  { a: 'kyllini', b: 'kefalonia', dur: 90, freq: 'high', plo: 11, phi: 18, note: "to Poros, multiple daily" },
+  { a: 'kyllini', b: 'kefalonia', dur: 90, freq: 'high', plo: 11, phi: 18, note: "to Poros, multiple daily", bp: 'poros-kef' },
   { a: 'kyllini', b: 'zakynthos', dur: 60, freq: 'high', plo: 9, phi: 15, note: "multiple daily" },
   { a: 'kymi', b: 'skyros', dur: 90, freq: 'med', plo: 12, phi: 22, note: "2/day" },
   { a: 'kythnos', b: 'kea', dur: 90, freq: 'low', plo: 8, phi: 14, note: "2-3/week" },
@@ -5237,7 +5250,7 @@ const FERRY_GRAPH = [
   { a: 'lavrio', b: 'kea', dur: 60, freq: 'high', plo: 10, phi: 16, note: "multiple daily" },
   { a: 'lavrio', b: 'kythnos', dur: 150, freq: 'med', plo: 16, phi: 24, note: "daily" },
   { a: 'lefkada', b: 'ithaca', dur: 75, freq: 'med', plo: 10, phi: 16, note: "summer" },
-  { a: 'lefkada', b: 'kefalonia', dur: 90, freq: 'med', plo: 10, phi: 16, note: "from Vassiliki to Fiskardo, summer" },
+  { a: 'lefkada', b: 'kefalonia', dur: 90, freq: 'med', plo: 10, phi: 16, note: "from Vasiliki to Fiskardo, summer", ap: 'vasiliki', bp: 'fiskardo' },
   { a: 'lefkada', b: 'meganisi', dur: 25, freq: 'high', plo: 4, phi: 7, note: "multiple daily from Nydri" },
   { a: 'leipsoi', b: 'agathonisi', dur: 60, freq: 'low', plo: 8, phi: 12, note: "2-3/week" },
   { a: 'lemnos', b: 'agios-efstratios', dur: 150, freq: 'low', plo: 8, phi: 14, note: "2-3/week" },
@@ -5245,7 +5258,7 @@ const FERRY_GRAPH = [
   { a: 'leros', b: 'leipsoi', dur: 30, freq: 'med', plo: 6, phi: 10, note: "most days" },
   { a: 'leros', b: 'patmos', dur: 60, freq: 'high', plo: 10, phi: 16, note: "daily" },
   { a: 'lesvos', b: 'lemnos', dur: 360, freq: 'low', plo: 22, phi: 35, note: "2/week" },
-  { a: 'milos', b: 'kimolos', dur: 30, freq: 'high', plo: 4, phi: 8, note: "several daily from Pollonia" },
+  { a: 'milos', b: 'kimolos', dur: 30, freq: 'high', plo: 4, phi: 8, note: "several daily from Pollonia", ap: 'pollonia' },
   { a: 'mykonos', b: 'santorini', dur: 150, freq: 'high', plo: 35, phi: 65, note: "daily" },
   { a: 'naxos', b: 'amorgos', dur: 180, freq: 'med', plo: 16, phi: 28, note: "daily" },
   { a: 'naxos', b: 'ios', dur: 90, freq: 'high', plo: 18, phi: 28, note: "daily" },
@@ -5261,7 +5274,7 @@ const FERRY_GRAPH = [
   { a: 'patmos', b: 'ikaria', dur: 120, freq: 'med', plo: 14, phi: 22, note: "most days" },
   { a: 'patmos', b: 'leipsoi', dur: 30, freq: 'high', plo: 5, phi: 9, note: "multiple daily summer" },
   { a: 'patmos', b: 'samos', dur: 105, freq: 'med', plo: 14, phi: 22, note: "most days" },
-  { a: 'patras', b: 'ithaca', dur: 210, freq: 'med', plo: 14, phi: 22, note: "to Pisaetos, daily" },
+  { a: 'patras', b: 'ithaca', dur: 210, freq: 'med', plo: 14, phi: 22, note: "to Pisaetos, daily", bp: 'pisaetos' },
   { a: 'patras', b: 'kefalonia', dur: 180, freq: 'med', plo: 14, phi: 22, note: "to Sami, daily" },
   { a: 'perama', b: 'salamis', dur: 15, freq: 'high', plo: 1, phi: 2, note: "every 15min" },
   { a: 'piraeus', b: 'aegina', dur: 60, freq: 'high', plo: 10, phi: 15, note: "Hellenic Seaways, Saronic Ferries · multiple daily" },
@@ -5368,38 +5381,38 @@ const FERRY_GRAPH = [
 // individual edges between consecutive stops are skipped to avoid double-drawing.
 // Pathfinding is unaffected — the FERRY_GRAPH still contains all individual edges.
 const FERRY_VISUAL_LINES = [
-  // Sporades — Volos hop
-  { stops: ['volos', 'skiathos', 'skopelos', 'alonnisos'],                  freq: 'high' },
-  { stops: ['agios-konstantinos', 'skiathos', 'skopelos', 'alonnisos'],     freq: 'med' },
-  // Saronic chain
-  { stops: ['piraeus', 'aegina', 'poros', 'hydra', 'spetses'],              freq: 'high' },
-  // Cyclades from Athens — Rafina lines
-  { stops: ['rafina', 'andros', 'tinos', 'mykonos'],                        freq: 'high' },
-  // Cyclades from Athens — Lavrio (West Cyclades short hop)
-  { stops: ['lavrio', 'kea', 'kythnos'],                                    freq: 'high' },
-  // Western Cyclades — Piraeus chain (the same boat: Piraeus → Kythnos → Serifos → Sifnos → Milos)
-  { stops: ['piraeus', 'kythnos', 'serifos', 'sifnos', 'milos'],            freq: 'high' },
-  // Folegandros via Milos
-  { stops: ['piraeus', 'milos', 'folegandros'],                             freq: 'med' },
-  // Eastern Cyclades — Piraeus → Syros → Tinos → Mykonos
-  { stops: ['piraeus', 'syros', 'tinos', 'mykonos'],                        freq: 'high' },
-  // Central Cyclades — Piraeus → Paros → Naxos
-  { stops: ['piraeus', 'paros', 'naxos'],                                   freq: 'high' },
-  // Santorini line — Piraeus → Naxos → Ios → Santorini → Anafi
-  { stops: ['piraeus', 'naxos', 'ios', 'santorini', 'anafi'],               freq: 'high' },
-  // Small Cyclades (Express Skopelitis)
-  { stops: ['naxos', 'iraklia', 'schoinoussa', 'koufonisia', 'donousa', 'amorgos'],   freq: 'low' },
-  // Astypalaia via Amorgos
-  { stops: ['piraeus', 'amorgos', 'astypalaia'],                            freq: 'low' },
-  // NE Aegean — Piraeus → Chios → Lesvos overnight
-  { stops: ['piraeus', 'chios', 'lesvos'],                                  freq: 'med' },
-  // Eastern Aegean — Piraeus → Mykonos → Ikaria → Samos
-  { stops: ['piraeus', 'mykonos', 'ikaria', 'samos'],                       freq: 'med' },
-  // Dodecanese Blue Star — Piraeus → Kalymnos → Kos → Rhodes (the iconic SE Aegean run)
-  { stops: ['piraeus', 'kalymnos', 'kos', 'rhodes'],                        freq: 'med' },
-  // Karpathos / Kasos line from Rhodes
-  { stops: ['rhodes', 'karpathos', 'kasos'],                                freq: 'low' },
+  // Saronic
+  { stops: ['piraeus', 'aegina', 'agistri'],                                 freq: 'high' },
+  { stops: ['piraeus', 'poros', 'hydra', 'spetses'],                         freq: 'high' },
+  // Western Cyclades
+  { stops: ['lavrio', 'kea', 'kythnos'],                                     freq: 'high' },
+  { stops: ['piraeus', 'kythnos', 'serifos', 'sifnos', 'milos', 'kimolos'],  freq: 'high' },
+  { stops: ['milos', 'folegandros', 'sikinos', 'ios', 'santorini'],          freq: 'med' },
+  // Central and eastern Cyclades
+  { stops: ['piraeus', 'syros', 'tinos', 'mykonos'],                         freq: 'high' },
+  { stops: ['rafina', 'andros', 'tinos', 'mykonos'],                         freq: 'high' },
+  { stops: ['piraeus', 'paros', 'naxos', 'ios', 'santorini', 'anafi'],       freq: 'high' },
+  { stops: ['naxos', 'iraklia', 'schoinoussa', 'koufonisia', 'donousa', 'amorgos'], freq: 'low' },
+  { stops: ['naxos', 'amorgos', 'astypalaia'],                               freq: 'low' },
+  // Crete
+  { stops: ['piraeus', 'heraklion'],                                         freq: 'high' },
+  { stops: ['santorini', 'heraklion'],                                       freq: 'high' },
+  // NE Aegean
+  { stops: ['piraeus', 'chios', 'lesvos', 'lemnos', 'kavala'],               freq: 'med' },
+  { stops: ['mykonos', 'ikaria', 'fournoi', 'samos'],                        freq: 'med' },
+  // Dodecanese
+  { stops: ['piraeus', 'patmos', 'leros', 'kalymnos', 'kos', 'rhodes'],      freq: 'med' },
+  { stops: ['samos', 'agathonisi', 'patmos', 'leipsoi', 'leros'],           freq: 'med' },
+  { stops: ['kos', 'nisyros', 'tilos', 'symi', 'rhodes'],                    freq: 'low' },
+  { stops: ['rhodes', 'karpathos', 'kasos', 'sitia', 'heraklion'],           freq: 'low' },
+  // Sporades
+  { stops: ['volos', 'skiathos', 'skopelos', 'alonnisos'],                   freq: 'high' },
+  // Ionian
+  { stops: ['patras', 'kefalonia', 'ithaca'],                                freq: 'med' },
 ];
+
+// Direct edges never drawn on the network map (duplicates of another edge).
+const FERRY_MAP_HIDE = new Set(['piraeus~salamis', 'andros~piraeus']);
 
 // Helper: returns a Set of "a~b" keys (sorted) for every pair of stops on the
 // SAME visual polyline. Used to skip drawing direct edges that would otherwise
@@ -5853,7 +5866,28 @@ function getFerryPortCoords(key) {
   return null;
 }
 
+function _ferryEdge(a, b) {
+  return FERRY_GRAPH.find(e => (e.a === a && e.b === b) || (e.a === b && e.b === a));
+}
+// Where a segment a→b really starts/ends (side harbour if the edge says so).
+function ferrySegEnds(a, b) {
+  const e = _ferryEdge(a, b);
+  let pa = getFerryPortCoords(a), pb = getFerryPortCoords(b), sa = null, sb = null;
+  if (e) {
+    const atA = e.a === a ? e.ap : e.bp, atB = e.a === a ? e.bp : e.ap;
+    if (atA && SIDE_PORTS[atA]) { pa = SIDE_PORTS[atA]; sa = atA; }
+    if (atB && SIDE_PORTS[atB]) { pb = SIDE_PORTS[atB]; sb = atB; }
+  }
+  return { pa, pb, sa, sb };
+}
+function _kmBetween(p, q) {
+  const r = Math.PI / 180, dLat = (q.lat - p.lat) * r, dLng = (q.lng - p.lng) * r;
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(p.lat * r) * Math.cos(q.lat * r) * Math.sin(dLng / 2) ** 2;
+  return 12742 * Math.asin(Math.sqrt(h));
+}
+
 function ferryPortDisplayName(key) {
+  if (SIDE_PORTS[key]) return CURRENT_LANG === 'el' ? SIDE_PORTS[key].name_el : SIDE_PORTS[key].name;
   if (MAINLAND_PORTS[key]) {
     return CURRENT_LANG === 'el' ? MAINLAND_PORTS[key].name_el : MAINLAND_PORTS[key].name;
   }
@@ -5888,82 +5922,110 @@ function renderFerryMap() {
     low:  { color: '#C4962A', weight: 1.6, opacity: 0.65, dashArray: null },
   };
 
-  // Draw all edges in FERRY_GRAPH that pass the filter.
-  // If FERRY_FOCUS_PORT is set, only render edges touching that port.
-  // Skip edges that are part of a visual polyline — those get drawn separately below.
+  // Overview: draw the sequential lines first, then each remaining direct edge
+  // (shortest first) only if the lines drawn so far don't already connect its
+  // two ends with a short detour — a greedy spanner. Focus mode (a port clicked)
+  // still shows every direct connection of that port.
   const drawnPorts = new Set();
-  FERRY_GRAPH.forEach(edge => {
-    if (!FERRY_MAP_FILTERS.has(edge.freq)) return;
-    if (FERRY_FOCUS_PORT && edge.a !== FERRY_FOCUS_PORT && edge.b !== FERRY_FOCUS_PORT) return;
-    // Skip if this edge is a consecutive-stop pair inside a visual polyline
-    const edgeKey = [edge.a, edge.b].sort().join('~');
-    if (!FERRY_FOCUS_PORT && FERRY_VISUAL_EDGE_SET.has(edgeKey)) {
-      // Still record the ports so markers render
-      drawnPorts.add(edge.a);
-      drawnPorts.add(edge.b);
-      return;
+  const sidePortsUsed = new Set();
+  const net = {};                                    // drawn network for the detour test
+  const link = (a, b) => {
+    const pa = getFerryPortCoords(a), pb = getFerryPortCoords(b);
+    if (!pa || !pb) return;
+    const d = _kmBetween(pa, pb);
+    (net[a] = net[a] || []).push([b, d]); (net[b] = net[b] || []).push([a, d]);
+  };
+  const netDist = (from, to, cap) => {
+    const dist = { [from]: 0 }, done = new Set(), q = [[0, from]];
+    while (q.length) {
+      q.sort((x, y) => x[0] - y[0]);
+      const [d, n] = q.shift();
+      if (done.has(n)) continue;
+      if (n === to) return d;
+      if (d > cap) return Infinity;
+      done.add(n);
+      (net[n] || []).forEach(([m, w]) => {
+        const nd = d + w;
+        if (nd < (dist[m] ?? Infinity)) { dist[m] = nd; q.push([nd, m]); }
+      });
     }
-    const from = getFerryPortCoords(edge.a);
-    const to   = getFerryPortCoords(edge.b);
-    if (!from || !to) return;
-
-    const coords = curvedRouteCoords(from.lat, from.lng, to.lat, to.lng);
-    const style  = freqStyle[edge.freq] || freqStyle.low;
-    const line = L.polyline(coords, {
+    return Infinity;
+  };
+  const segCoords = (a, b, n) => {
+    const { pa, pb, sa, sb } = ferrySegEnds(a, b);
+    if (!pa || !pb) return null;
+    if (sa) sidePortsUsed.add(sa);
+    if (sb) sidePortsUsed.add(sb);
+    return curvedRouteCoords(pa.lat, pa.lng, pb.lat, pb.lng, n);
+  };
+  const edgeTooltip = (edge) => {
+    const fromName = ferryPortDisplayName(edge.a);
+    const toName   = ferryPortDisplayName(edge.b);
+    return `<strong>${fromName} ↔ ${toName}</strong><br>` +
+      `<span style="font-size:11px;color:var(--ink-3)">⏱ ${formatDuration(edge.dur)} · ${t(`planner.freq.${edge.freq}`)} · €${edge.plo}–${edge.phi}</span><br>` +
+      `<span style="font-size:11px;color:var(--ink-3)">${edge.note}</span>`;
+  };
+  const drawEdge = (edge) => {
+    const coords = segCoords(edge.a, edge.b, 12);
+    if (!coords) return false;
+    const style = freqStyle[edge.freq] || freqStyle.low;
+    L.polyline(coords, {
       color: style.color,
       weight: FERRY_FOCUS_PORT ? style.weight + 0.6 : style.weight,
       opacity: FERRY_FOCUS_PORT ? Math.min(style.opacity + 0.2, 1) : style.opacity,
-      dashArray: style.dashArray,
       smoothFactor: 1.2,
-    }).addTo(ferryMapLayer);
+    }).addTo(ferryMapLayer).bindTooltip(edgeTooltip(edge), { sticky: true, opacity: 1, className: 'island-tooltip' });
+    drawnPorts.add(edge.a); drawnPorts.add(edge.b);
+    return true;
+  };
 
-    const fromName = ferryPortDisplayName(edge.a);
-    const toName   = ferryPortDisplayName(edge.b);
-    const durLabel = formatDuration(edge.dur);
-    const freqLabel = t(`planner.freq.${edge.freq}`);
-    const tooltip = `<strong>${fromName} ↔ ${toName}</strong><br>` +
-      `<span style="font-size:11px;color:var(--ink-3)">⏱ ${durLabel} · ${freqLabel} · €${edge.plo}–${edge.phi}</span><br>` +
-      `<span style="font-size:11px;color:var(--ink-3)">${edge.note}</span>`;
-    line.bindTooltip(tooltip, { sticky: true, opacity: 1, className: 'island-tooltip' });
-
-    drawnPorts.add(edge.a);
-    drawnPorts.add(edge.b);
-  });
-
-  // Draw each visual polyline as one continuous curved path
-  if (!FERRY_FOCUS_PORT) {
+  if (FERRY_FOCUS_PORT) {
+    FERRY_GRAPH.forEach(edge => {
+      if (!FERRY_MAP_FILTERS.has(edge.freq)) return;
+      if (edge.a !== FERRY_FOCUS_PORT && edge.b !== FERRY_FOCUS_PORT) return;
+      drawEdge(edge);
+    });
+  } else {
     FERRY_VISUAL_LINES.forEach(line => {
       if (!FERRY_MAP_FILTERS.has(line.freq)) return;
       const coords = [];
       for (let i = 0; i < line.stops.length - 1; i++) {
-        const a = getFerryPortCoords(line.stops[i]);
-        const b = getFerryPortCoords(line.stops[i + 1]);
-        if (!a || !b) continue;
-        const segment = curvedRouteCoords(a.lat, a.lng, b.lat, b.lng, 10);
-        if (i === 0) coords.push(...segment);
-        else coords.push(...segment.slice(1));     // skip duplicate start point
-        drawnPorts.add(line.stops[i]);
-        drawnPorts.add(line.stops[i + 1]);
+        const seg = segCoords(line.stops[i], line.stops[i + 1], 10);
+        if (!seg) continue;
+        coords.push(...(coords.length ? seg.slice(1) : seg));
+        link(line.stops[i], line.stops[i + 1]);
+        drawnPorts.add(line.stops[i]); drawnPorts.add(line.stops[i + 1]);
       }
       if (coords.length < 2) return;
       const style = freqStyle[line.freq] || freqStyle.low;
-      const polyline = L.polyline(coords, {
-        color: style.color,
-        weight: style.weight + 0.4,           // slightly thicker so multi-stop reads as one route
-        opacity: style.opacity,
-        dashArray: style.dashArray,
-        smoothFactor: 1.2,
-      }).addTo(ferryMapLayer);
-      const firstName = ferryPortDisplayName(line.stops[0]);
-      const lastName  = ferryPortDisplayName(line.stops[line.stops.length - 1]);
-      const stopsLabel = line.stops.map(s => ferryPortDisplayName(s)).join(' → ');
-      polyline.bindTooltip(
-        `<strong>${firstName} → ${lastName}</strong><br>` +
-        `<span style="font-size:11px;color:var(--ink-3)">${stopsLabel}</span>`,
-        { sticky: true, opacity: 1, className: 'island-tooltip' }
-      );
+      const stopsLabel = line.stops.map(k => ferryPortDisplayName(k)).join(' → ');
+      L.polyline(coords, { color: style.color, weight: style.weight + 0.4, opacity: style.opacity, smoothFactor: 1.2 })
+        .addTo(ferryMapLayer)
+        .bindTooltip(`<strong>${ferryPortDisplayName(line.stops[0])} → ${ferryPortDisplayName(line.stops[line.stops.length - 1])}</strong><br>` +
+          `<span style="font-size:11px;color:var(--ink-3)">${stopsLabel}</span>`, { sticky: true, opacity: 1, className: 'island-tooltip' });
     });
+    const DETOUR = 1.5;
+    FERRY_GRAPH
+      .filter(e => FERRY_MAP_FILTERS.has(e.freq) && !FERRY_MAP_HIDE.has([e.a, e.b].sort().join('~')))
+      .map(e => { const pa = getFerryPortCoords(e.a), pb = getFerryPortCoords(e.b); return { e, d: pa && pb ? _kmBetween(pa, pb) : Infinity }; })
+      .filter(x => x.d < Infinity)
+      .sort((x, y) => x.d - y.d)
+      .forEach(({ e, d }) => {
+        drawnPorts.add(e.a); drawnPorts.add(e.b);
+        if (FERRY_VISUAL_EDGE_SET.has([e.a, e.b].sort().join('~'))) return;   // same boat as a drawn line
+        // Routes from a side harbour are a genuinely different crossing: always draw.
+        if (!e.ap && !e.bp && netDist(e.a, e.b, d * DETOUR) <= d * DETOUR) return;   // the lines already cover it
+        if (drawEdge(e)) link(e.a, e.b);
+      });
   }
+
+  // Side harbours actually used by a drawn route: small dots, same colour as islands.
+  sidePortsUsed.forEach(k => {
+    const sp = SIDE_PORTS[k];
+    L.circleMarker([sp.lat, sp.lng], { radius: 3.5, color: '#076880', fillColor: '#0B8FAC', fillOpacity: 0.95, weight: 1.2 })
+      .addTo(ferryMapLayer)
+      .bindTooltip(`<strong>${ferryPortDisplayName(k)}</strong>`, { direction: 'top', opacity: 1, className: 'island-tooltip' });
+  });
 
   // Port markers — different size/colour for mainland vs island.
   // In focus mode: drawnPorts holds the focused port + its neighbours; also render
