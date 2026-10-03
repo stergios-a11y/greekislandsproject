@@ -7209,3 +7209,14 @@ html.dark .fp-name { color: #f1f1f1; text-shadow: 0 0 3px #000, 0 0 3px #000, 0 
 /* legend chip for the border routes: same badge, smaller */
 .ferry-intl-dot { width: 18px; height: 12px; border-radius: 3px; border: 0; background: #E30A17; }
 html.dark .ferry-intl-dot { background: #E30A17; }
+
+/* ===== FOREIGN PORT BADGES v2 — quieter terracotta ===== */
+.fp-badge { width: 22px; height: 15px; border-radius: 4px; font-size: 9px; border: 1px solid #D69A8E;
+  background: #FBEEEB; color: #A4483A; box-shadow: 0 1px 2px rgba(0,0,0,.12); }
+.fp-tr, .fp-al { background: #FBEEEB; color: #A4483A; }
+.fp-name { left: 26px; top: 0; font-size: 11px; font-weight: 600; color: #8A4136; }
+.fp-name-left { left: auto; right: 26px; }
+html.dark .fp-badge { background: rgba(214,154,142,.18); border-color: rgba(214,154,142,.55); color: #EBB3A7; box-shadow: none; }
+html.dark .fp-name { color: #EBB3A7; }
+.ferry-intl-dot { width: 16px; height: 11px; border-radius: 3px; background: #FBEEEB; border: 1px solid #D69A8E; }
+html.dark .ferry-intl-dot { background: rgba(214,154,142,.18); border-color: rgba(214,154,142,.55); }

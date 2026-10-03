@@ -6077,7 +6077,7 @@ function renderFerryMap() {
         icon: L.divIcon({
           className: 'fp-badge-wrap',
           html: `<span class="fp-badge fp-${code.toLowerCase()}">${code}</span><span class="fp-name${k === 'turgutreis' ? ' fp-name-left' : ''}">${escapeHtml(pickLang(fp, 'name'))}</span>`,
-          iconSize: [26, 18], iconAnchor: [13, 9],
+          iconSize: [22, 15], iconAnchor: [11, 8],
         }),
         keyboard: false,
       })
@@ -6141,7 +6141,7 @@ function renderFerryMap() {
 }
 
 let FERRY_FOCUS_PORT = null;
-let FERRY_SHOW_INTL = true;
+let FERRY_SHOW_INTL = false;   // off by default; the chip or #international turns it on
 function toggleFerryIntl() {
   if (FERRY_SHOW_INTL && FERRY_MAP_FILTERS.size === 0) return;   // keep one chip on
   FERRY_SHOW_INTL = !FERRY_SHOW_INTL;
@@ -6151,6 +6151,12 @@ function toggleFerryIntl() {
 }
 window.toggleFerryIntl = toggleFerryIntl;
 function scrollToAcrossBorder() {
+  if (!FERRY_SHOW_INTL) {
+    FERRY_SHOW_INTL = true;
+    const b = document.getElementById('ferry-intl-btn');
+    if (b) b.classList.add('active');
+    setTimeout(() => { try { if (ferryMapInstance) renderFerryMap(); } catch (_) {} }, 120);
+  }
   setTimeout(() => {
     const el = document.getElementById('across-border');
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
