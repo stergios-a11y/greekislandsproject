@@ -5929,6 +5929,9 @@ function renderFerryMap() {
     }).setView([37.5, 25.2], 7);
     mapEl._map = ferryMapInstance;
     addThemeAwareTiles(ferryMapInstance, { maxZoom: 10 });
+    // foreign-port names only once there is room for them
+    const _zoomClass = () => mapEl.classList.toggle('ferry-zoom-lo', ferryMapInstance.getZoom() < 8);
+    ferryMapInstance.on('zoomend', _zoomClass); _zoomClass();
     L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(ferryMapInstance);
 
   }
@@ -6069,7 +6072,15 @@ function renderFerryMap() {
     foreignUsed.forEach(k => {
       const fp = FOREIGN_PORTS[k];
       const flag = fp.country === 'Albania' ? '🇦🇱' : '🇹🇷';
-      L.circleMarker([fp.lat, fp.lng], { radius: 5, color: freqStyle.high.color, weight: 2, fill: true, fillColor: '#fff', fillOpacity: 0.01 })
+      const code = fp.country === 'Albania' ? 'AL' : 'TR';
+      L.marker([fp.lat, fp.lng], {
+        icon: L.divIcon({
+          className: 'fp-badge-wrap',
+          html: `<span class="fp-badge fp-${code.toLowerCase()}">${code}</span><span class="fp-name${k === 'turgutreis' ? ' fp-name-left' : ''}">${escapeHtml(pickLang(fp, 'name'))}</span>`,
+          iconSize: [26, 18], iconAnchor: [13, 9],
+        }),
+        keyboard: false,
+      })
         .addTo(ferryMapLayer)
         .bindTooltip(`<strong>${flag} ${pickLang(fp, 'name')}</strong>, ${pickLang(fp, 'country')}`, { direction: 'top', opacity: 1, className: 'island-tooltip' })
         .on('click', scrollToAcrossBorder);

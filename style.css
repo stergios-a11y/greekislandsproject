@@ -7193,3 +7193,19 @@ html.dark .ferry-legend-line.ferry-freq-low,  html.dark .ferry-freq-low .ferry-f
 html.dark .ferry-intl-dot { border-color: #46D6F2; }
 .ferry-intl-btn:not(.active) .ferry-intl-dot { opacity: .4; }
 .across-border { scroll-margin-top: 80px; }
+
+/* ===== FOREIGN PORT BADGES (ferry map) ===== */
+.fp-badge-wrap { background: none; border: 0; }
+.fp-badge { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 18px; border-radius: 5px;
+  font: 800 10.5px/1 var(--sans, system-ui), sans-serif; letter-spacing: .04em; border: 1.5px solid #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.35); cursor: pointer; }
+.fp-tr { background: #E30A17; color: #fff; }
+.fp-al { background: #E41E20; color: #111; }
+.fp-name { position: absolute; left: 30px; top: 1px; white-space: nowrap; font: 700 11.5px/16px var(--sans, system-ui), sans-serif;
+  color: #1a2332; text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff; pointer-events: none; }
+html.dark .fp-name { color: #f1f1f1; text-shadow: 0 0 3px #000, 0 0 3px #000, 0 0 3px #000; }
+.fp-name-left { left: auto; right: 30px; }
+.ferry-zoom-lo .fp-name { display: none; }
+/* legend chip for the border routes: same badge, smaller */
+.ferry-intl-dot { width: 18px; height: 12px; border-radius: 3px; border: 0; background: #E30A17; }
+html.dark .ferry-intl-dot { background: #E30A17; }
