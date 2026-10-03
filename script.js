@@ -6054,8 +6054,7 @@ function renderFerryMap() {
   if (FERRY_SHOW_INTL && typeof INTERNATIONAL_ROUTES !== 'undefined') {
     const foreignUsed = new Set();
     INTERNATIONAL_ROUTES.forEach(r => {
-      if (!FERRY_MAP_FILTERS.has(r.frequency)) return;
-      if (FERRY_FOCUS_PORT && r.from !== FERRY_FOCUS_PORT) return;
+      if (FERRY_FOCUS_PORT && r.from !== FERRY_FOCUS_PORT) return;   // own chip, not filtered by frequency
       const pa = getFerryPortCoords(r.from), fp = FOREIGN_PORTS[r.to];
       if (!pa || !fp) return;
       const coords = ferrySeaPath(pa, fp) || curvedRouteCoords(pa.lat, pa.lng, fp.lat, fp.lng, 12);
@@ -6133,6 +6132,7 @@ function renderFerryMap() {
 let FERRY_FOCUS_PORT = null;
 let FERRY_SHOW_INTL = true;
 function toggleFerryIntl() {
+  if (FERRY_SHOW_INTL && FERRY_MAP_FILTERS.size === 0) return;   // keep one chip on
   FERRY_SHOW_INTL = !FERRY_SHOW_INTL;
   const b = document.getElementById('ferry-intl-btn');
   if (b) b.classList.toggle('active', FERRY_SHOW_INTL);
@@ -6187,12 +6187,13 @@ function clearFerryFocus() {
 // Toggle a frequency on/off and redraw
 function toggleFerryMapFilter(freq) {
   if (FERRY_MAP_FILTERS.has(freq)) {
-    if (FERRY_MAP_FILTERS.size === 1) return; // never go to zero
+    // never switch everything off: the border chip counts as a category too
+    if (FERRY_MAP_FILTERS.size === 1 && !FERRY_SHOW_INTL) return;
     FERRY_MAP_FILTERS.delete(freq);
   } else {
     FERRY_MAP_FILTERS.add(freq);
   }
-  document.querySelectorAll('.ferry-filter-btn').forEach(btn => {
+  document.querySelectorAll('.ferry-filter-btn[data-freq]').forEach(btn => {
     btn.classList.toggle('active', FERRY_MAP_FILTERS.has(btn.dataset.freq));
   });
   renderFerryMap();
