@@ -5171,7 +5171,7 @@ const ISLAND_FERRY_PORTS = {
   'symi': { lat: 36.617, lng: 27.842 },
   'syros': { lat: 37.444, lng: 24.943 },
   'thasos': { lat: 40.776, lng: 24.713 },
-  'therasia': { lat: 36.426, lng: 25.378 },
+  'therasia': { lat: 36.431, lng: 25.355 },
   'tilos': { lat: 36.418, lng: 27.378 },
   'tinos': { lat: 37.539, lng: 25.162 },
   'zakynthos': { lat: 37.787, lng: 20.898 },
@@ -5259,7 +5259,7 @@ const FERRY_GRAPH = [
   { a: 'leros', b: 'leipsoi', dur: 30, freq: 'med', plo: 6, phi: 10, note: "most days" },
   { a: 'leros', b: 'patmos', dur: 60, freq: 'high', plo: 10, phi: 16, note: "daily" },
   { a: 'lesvos', b: 'lemnos', dur: 360, freq: 'low', plo: 22, phi: 35, note: "2/week" },
-  { a: 'milos', b: 'kimolos', dur: 30, freq: 'high', plo: 4, phi: 8, note: "several daily from Pollonia", ap: 'pollonia' },
+  { a: 'milos', b: 'kimolos', dur: 30, freq: 'high', plo: 4, phi: 8, note: "several daily from Pollonia" },
   { a: 'mykonos', b: 'santorini', dur: 150, freq: 'high', plo: 35, phi: 65, note: "daily" },
   { a: 'naxos', b: 'amorgos', dur: 180, freq: 'med', plo: 16, phi: 28, note: "daily" },
   { a: 'naxos', b: 'ios', dur: 90, freq: 'high', plo: 18, phi: 28, note: "daily" },
@@ -5308,7 +5308,7 @@ const FERRY_GRAPH = [
   { a: 'piraeus', b: 'naxos', dur: 300, freq: 'high', plo: 38, phi: 55, note: "Blue Star, SeaJets · multiple daily" },
   { a: 'piraeus', b: 'paros', dur: 240, freq: 'high', plo: 36, phi: 55, note: "Blue Star, SeaJets · multiple daily" },
   { a: 'piraeus', b: 'patmos', dur: 540, freq: 'med', plo: 42, phi: 65, note: "daily Blue Star" },
-  { a: 'piraeus', b: 'poros', dur: 90, freq: 'high', plo: 14, phi: 22, note: "multiple daily" },
+  { a: 'piraeus', b: 'poros', dur: 150, freq: 'high', plo: 14, phi: 22, note: "via Aegina and Methana, multiple daily" },
   { a: 'piraeus', b: 'rhodes', dur: 960, freq: 'med', plo: 55, phi: 180, note: "daily, 13-18h" },
   { a: 'piraeus', b: 'salamis', dur: 15, freq: 'high', plo: 1, phi: 2, note: "from Perama, very frequent" },
   { a: 'piraeus', b: 'samos', dur: 720, freq: 'med', plo: 42, phi: 70, note: "overnight" },
@@ -5384,7 +5384,8 @@ const FERRY_GRAPH = [
 const FERRY_VISUAL_LINES = [
   // Saronic
   { stops: ['piraeus', 'aegina', 'agistri'],                                 freq: 'high' },
-  { stops: ['piraeus', 'poros', 'hydra', 'spetses'],                         freq: 'high' },
+  { stops: ['piraeus', 'aegina', 'poros'],                                   freq: 'high' },
+  { stops: ['piraeus', 'hydra', 'spetses'],                                  freq: 'high' },
   // Western Cyclades
   { stops: ['lavrio', 'kea', 'kythnos'],                                     freq: 'high' },
   { stops: ['piraeus', 'kythnos', 'serifos', 'sifnos', 'milos', 'kimolos'],  freq: 'high' },
