@@ -5187,6 +5187,7 @@ const SIDE_PORTS = {
   'poros-kef':          { island: 'kefalonia', name: 'Poros (Kefalonia)',          name_el: 'Πόρος (Κεφαλονιά)',          lat: 38.151, lng: 20.776 },
   'agios-nikolaos-zak': { island: 'zakynthos', name: 'Agios Nikolaos (Zakynthos)', name_el: 'Άγιος Νικόλαος (Ζάκυνθος)',  lat: 37.904, lng: 20.709 },
   'pisaetos':           { island: 'ithaca',    name: 'Pisaetos (Ithaca)',          name_el: 'Πισαετός (Ιθάκη)',           lat: 38.391, lng: 20.652 },
+  'pounta-paros':       { island: 'paros',     name: 'Pounta (Paros)',             name_el: 'Πούντα (Πάρος)',             lat: 37.031, lng: 25.100 },
   'kamiros-skala':      { island: 'rhodes',    name: 'Kamiros Skala (Rhodes)',     name_el: 'Σκάλα Καμείρου (Ρόδος)',     lat: 36.272, lng: 27.826 },
   'pollonia':           { island: 'milos',     name: 'Pollonia (Milos)',           name_el: 'Πολλώνια (Μήλος)',           lat: 36.762, lng: 24.528 },
 };
@@ -5250,24 +5251,23 @@ const FERRY_GRAPH = [
   { a: 'kythnos', b: 'serifos', dur: 60, freq: 'med', plo: 8, phi: 14, note: "most days" },
   { a: 'lavrio', b: 'kea', dur: 60, freq: 'high', plo: 10, phi: 16, note: "multiple daily" },
   { a: 'lavrio', b: 'kythnos', dur: 150, freq: 'med', plo: 16, phi: 24, note: "daily" },
-  { a: 'lefkada', b: 'ithaca', dur: 75, freq: 'med', plo: 10, phi: 16, note: "summer" },
   { a: 'lefkada', b: 'kefalonia', dur: 90, freq: 'med', plo: 10, phi: 16, note: "from Vasiliki to Fiskardo, summer", ap: 'vasiliki', bp: 'fiskardo' },
   { a: 'lefkada', b: 'meganisi', dur: 25, freq: 'high', plo: 4, phi: 7, note: "multiple daily from Nydri" },
   { a: 'leipsoi', b: 'agathonisi', dur: 60, freq: 'low', plo: 8, phi: 12, note: "2-3/week" },
-  { a: 'lemnos', b: 'agios-efstratios', dur: 150, freq: 'low', plo: 8, phi: 14, note: "2-3/week" },
+  { a: 'lemnos', b: 'agios-efstratios', dur: 150, freq: 'med', plo: 8, phi: 14, note: "daily in summer" },
   { a: 'lemnos', b: 'kavala', dur: 360, freq: 'low', plo: 22, phi: 35, note: "2-3/week" },
   { a: 'leros', b: 'leipsoi', dur: 30, freq: 'med', plo: 6, phi: 10, note: "most days" },
   { a: 'leros', b: 'patmos', dur: 60, freq: 'high', plo: 10, phi: 16, note: "daily" },
   { a: 'lesvos', b: 'lemnos', dur: 360, freq: 'low', plo: 22, phi: 35, note: "2/week" },
-  { a: 'milos', b: 'kimolos', dur: 30, freq: 'high', plo: 4, phi: 8, note: "several daily from Pollonia" },
+  { a: 'milos', b: 'kimolos', dur: 30, freq: 'high', plo: 4, phi: 8, note: "several daily from Pollonia", ap: 'pollonia' },
   { a: 'mykonos', b: 'santorini', dur: 150, freq: 'high', plo: 35, phi: 65, note: "daily" },
   { a: 'naxos', b: 'amorgos', dur: 180, freq: 'med', plo: 16, phi: 28, note: "daily" },
   { a: 'naxos', b: 'ios', dur: 90, freq: 'high', plo: 18, phi: 28, note: "daily" },
-  { a: 'naxos', b: 'iraklia', dur: 90, freq: 'med', plo: 10, phi: 16, note: "Skopelitis, 6/week" },
+  { a: 'naxos', b: 'iraklia', dur: 90, freq: 'med', plo: 10, phi: 16, note: "Express Skopelitis, daily in summer" },
   { a: 'naxos', b: 'mykonos', dur: 90, freq: 'high', plo: 22, phi: 35, note: "daily" },
   { a: 'naxos', b: 'santorini', dur: 120, freq: 'high', plo: 28, phi: 50, note: "daily" },
   { a: 'neapoli', b: 'kythira', dur: 60, freq: 'high', plo: 12, phi: 18, note: "multiple daily" },
-  { a: 'paros', b: 'antiparos', dur: 10, freq: 'high', plo: 1, phi: 2, note: "continuous shuttle" },
+  { a: 'paros', b: 'antiparos', dur: 10, freq: 'high', plo: 1, phi: 2, note: "car ferry from Pounta every 30-60 min; small boats from Parikia", ap: 'pounta-paros' },
   { a: 'paros', b: 'ios', dur: 90, freq: 'high', plo: 18, phi: 28, note: "daily" },
   { a: 'paros', b: 'mykonos', dur: 45, freq: 'high', plo: 18, phi: 30, note: "multiple daily" },
   { a: 'paros', b: 'naxos', dur: 30, freq: 'high', plo: 8, phi: 14, note: "shortest major hop, 8+/day" },
@@ -5343,7 +5343,7 @@ const FERRY_GRAPH = [
   { a: 'santorini', b: 'therasia', dur: 20, freq: 'high', plo: 3, phi: 5, note: "small boats from Ammoudi/Athinios" },
   { a: 'schoinoussa', b: 'koufonisia', dur: 30, freq: 'med', plo: 4, phi: 8, note: "Skopelitis" },
   { a: 'serifos', b: 'sifnos', dur: 45, freq: 'high', plo: 8, phi: 14, note: "daily" },
-  { a: 'sfakia', b: 'gavdos', dur: 150, freq: 'low', plo: 14, phi: 22, note: "3-5/week summer only" },
+  { a: 'sfakia', b: 'gavdos', dur: 120, freq: 'med', plo: 14, phi: 22, note: "daily in summer from Chora Sfakion; a few a week from Paleochora" },
   { a: 'sifnos', b: 'kimolos', dur: 60, freq: 'med', plo: 10, phi: 16, note: "most days" },
   { a: 'sifnos', b: 'milos', dur: 75, freq: 'high', plo: 12, phi: 20, note: "daily" },
   { a: 'sikinos', b: 'ios', dur: 60, freq: 'med', plo: 8, phi: 14, note: "most days" },
@@ -5394,7 +5394,7 @@ const FERRY_VISUAL_LINES = [
   { stops: ['piraeus', 'syros', 'tinos', 'mykonos'],                         freq: 'high' },
   { stops: ['rafina', 'andros', 'tinos', 'mykonos'],                         freq: 'high' },
   { stops: ['piraeus', 'paros', 'naxos', 'ios', 'santorini', 'anafi'],       freq: 'high' },
-  { stops: ['naxos', 'iraklia', 'schoinoussa', 'koufonisia', 'donousa', 'amorgos'], freq: 'low' },
+  { stops: ['naxos', 'iraklia', 'schoinoussa', 'koufonisia', 'donousa', 'amorgos'], freq: 'med' },
   { stops: ['naxos', 'amorgos', 'astypalaia'],                               freq: 'low' },
   // Crete
   { stops: ['piraeus', 'heraklion'],                                         freq: 'high' },
@@ -5406,7 +5406,7 @@ const FERRY_VISUAL_LINES = [
   { stops: ['piraeus', 'patmos', 'leros', 'kalymnos', 'kos', 'rhodes'],      freq: 'med' },
   { stops: ['samos', 'agathonisi', 'patmos', 'leipsoi', 'leros'],           freq: 'med' },
   { stops: ['kos', 'nisyros', 'tilos', 'symi', 'rhodes'],                    freq: 'low' },
-  { stops: ['rhodes', 'karpathos', 'kasos', 'sitia', 'heraklion'],           freq: 'low' },
+  { stops: ['rhodes', 'karpathos', 'kasos', 'sitia'],                        freq: 'low' },
   // Sporades
   { stops: ['volos', 'skiathos', 'skopelos', 'alonnisos'],                   freq: 'high' },
   { stops: ['agios-konstantinos', 'skiathos', 'skopelos', 'alonnisos'],      freq: 'med' },
@@ -5990,10 +5990,10 @@ function renderFerryMap() {
       drawEdge(edge);
     });
   } else {
-    const sameBoat = new Set();
+    const sameBoat = new Map();   // pair -> drawn with side harbours?
     FERRY_VISUAL_LINES.forEach(line => {
       if (!FERRY_MAP_FILTERS.has(line.freq)) return;
-      line.stops.forEach((x, i) => line.stops.slice(i + 1).forEach(y => sameBoat.add([x, y].sort().join('~'))));
+      line.stops.forEach((x, i) => line.stops.slice(i + 1).forEach(y => sameBoat.set([x, y].sort().join('~'), !!line.sides)));
       const coords = [];
       for (let i = 0; i < line.stops.length - 1; i++) {
         const seg = segCoords(line.stops[i], line.stops[i + 1], 10, !!line.sides);
@@ -6018,7 +6018,9 @@ function renderFerryMap() {
       .filter(x => x.d < Infinity)
       .sort((x, y) => x.d - y.d)
       .forEach(({ e, d }) => {
-        if (sameBoat.has([e.a, e.b].sort().join('~'))) return;   // same boat as a drawn line
+        const sbKey = [e.a, e.b].sort().join('~');
+        // same boat as a drawn line - unless this edge leaves from a different harbour
+        if (sameBoat.has(sbKey) && (!(e.ap || e.bp) || sameBoat.get(sbKey))) return;
         // Routes from a side harbour are a genuinely different crossing: always draw.
         if (!e.ap && !e.bp && netDist(e.a, e.b, d * DETOUR) <= d * DETOUR) return;   // the lines already cover it
         if (drawEdge(e)) link(e.a, e.b);
