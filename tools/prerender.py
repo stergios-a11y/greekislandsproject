@@ -2518,7 +2518,7 @@ def render_page(key, data, meta, lang='en'):
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}market-data.js?v={_market.version()}"></script>
 <script src="{asset_prefix}i18n.js?v=50"></script>
-<script src="{asset_prefix}script.js?v=152"></script>
+<script src="{asset_prefix}script.js?v=153"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.

@@ -156,6 +156,18 @@ html.dark {
      home view. Subtracted from map height so the map ends at the viewport
      bottom and the "About this site" button stays visible. */
   --whats-on-strip-height: 0px;
+
+  /* Aliases for token names older rules still use. They were never defined, so e.g.
+     the dark-mode language menu (--dark-card) rendered transparent. */
+  --bg:         transparent;   /* was undefined = transparent; kept so the page pattern shows through */
+  --dark-card:  var(--white);
+  --tile-bg:    var(--primary-pale);
+  --sand:       var(--surface-2);
+  --amber:      var(--score-mid);
+  --display:    var(--font-display);
+  --text-h2:    var(--text-section);
+  --text-micro: var(--text-tiny);
+  --shadow-lg:  0 12px 32px rgba(26,35,50,0.18);
 }
 
 /* Mobile type scale — narrower screens get smaller hero/section sizes */
@@ -3848,7 +3860,7 @@ html.dark .top-nav.open {
   min-width: 140px;
   padding: 4px 0;
   display: none;
-  z-index: 3000;
+  z-index: 10001;   /* above .top-nav.open (10000) on mobile */
 }
 .lang-menu.open { display: block; }
 .lang-option {
@@ -6933,6 +6945,7 @@ html.dark .leaflet-control-scale-line {
 #view-match .quiz-back-btn:hover, .quiz-skip-btn:hover { color: #fff; background: none; }
 #view-match .quiz-movement { color: #FFD4C2; }
 /* front-runners */
+html.dark #view-match .quiz-live { background: rgba(31,37,48,.97); }
 #view-match .quiz-live { background: rgba(255,255,255,.97); border: 0; border-radius: 20px; padding: 18px 18px 12px; box-shadow: 0 20px 50px rgba(0,0,0,.35); top: 84px; }
 #view-match .ql-head { font-size: 19px; }
 #view-match .ql-head small { margin: 2px 0 12px; }
@@ -6964,10 +6977,13 @@ html.dark .leaflet-control-scale-line {
    dark glass (white text), the board is a white card (dark text) — the theme's
    ink tokens must not leak in. */
 #view-match .quiz-option, html.dark #view-match .quiz-option { color: #fff; }
-#view-match .quiz-live, html.dark #view-match .quiz-live { color: #1A2332; }
-#view-match .ql-head, html.dark #view-match .ql-head { color: #1A2332; }
-#view-match .ql-head small, #view-match .ql-foot, html.dark #view-match .ql-head small, html.dark #view-match .ql-foot { color: #637080; }
-html.dark #view-match .ql-rank { color: #1A2332; background: rgba(255,255,255,.92); }
+#view-match .quiz-live { color: #1A2332; }
+#view-match .ql-head { color: #1A2332; }
+#view-match .ql-head small, #view-match .ql-foot { color: #637080; }
+/* Dark mode: the front-runners panel goes dark too (was forced white). */
+html.dark #view-match .quiz-live, html.dark #view-match .ql-head { color: #EEF2F5; }
+html.dark #view-match .ql-head small, html.dark #view-match .ql-foot { color: #8898A8; }
+html.dark #view-match .ql-rank { color: #EEF2F5; background: rgba(23,28,36,.92); }
 html.dark #view-match .ql-top .ql-rank { color: #fff; background: #E8522A; }
 @media (max-width: 1100px) {
   #view-match { padding: 28px 24px 40px; }

@@ -955,6 +955,8 @@ function setupNav() {
 function toggleMenu() {
   const nav = document.getElementById('main-nav');
   if (nav) nav.classList.toggle('open');
+  const lm = document.getElementById('lang-menu');   // one open menu at a time
+  if (lm) lm.classList.remove('open');
 }
 
 function setupLanguageToggle() {
@@ -981,6 +983,12 @@ function setupLanguageToggle() {
     e.stopPropagation();
     const isOpen = menu.classList.toggle('open');
     btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    if (isOpen) {   // close the mobile page menu so the language list isn't hidden under it
+      const nav = document.getElementById('main-nav');
+      const mt = document.getElementById('menu-toggle-btn');
+      if (nav) nav.classList.remove('open');
+      if (mt) mt.classList.remove('open');
+    }
   });
 
   // Handle option selection
