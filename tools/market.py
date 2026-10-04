@@ -144,8 +144,24 @@ def version():
     return hashlib.md5(JS_OUT.read_bytes()).hexdigest()[:8] if JS_OUT.exists() else '0'
 
 
+def sync_theme():
+    """Copy markets/<market>/theme.css into style.css between the THEME markers."""
+    src = MDIR / 'theme.css'
+    if not src.exists():
+        return
+    css = ROOT / 'style.css'
+    s = css.read_text(encoding='utf-8')
+    a, b = s.index('/* THEME:BEGIN'), s.index('/* THEME:END */')
+    a = s.index('\n', a) + 1
+    new = s[:a] + src.read_text(encoding='utf-8') + s[b:]
+    if new != s:
+        css.write_text(new, encoding='utf-8')
+        print(f'✓ style.css theme block synced from markets/{MARKET}/theme.css — bump style.css?v=')
+
+
 def write_js():
     """Write market-data.js (only if changed) and point index.html at the new version."""
+    sync_theme()
     js = render_js()
     old = JS_OUT.read_text(encoding='utf-8') if JS_OUT.exists() else None
     if js != old:

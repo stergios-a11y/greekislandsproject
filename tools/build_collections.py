@@ -45,7 +45,7 @@ CSS = '''<style>
 .cx-body{flex:1 1 auto;min-width:0}
 .cx-name{font-weight:800;font-size:16px;margin:0 0 3px}
 .cx-name a{color:var(--ink-1,#1A2332);text-decoration:none}
-.cx-name a:hover{color:var(--aegean-dark,#076880)}
+.cx-name a:hover{color:var(--primary-dark,#076880)}
 .cx-why{font-size:14px;color:var(--ink-3,#637080);line-height:1.55;margin:0}
 .cx-facts{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
 .cx-fact{font-size:12px;font-weight:700;background:var(--sand,#FAF6EF);

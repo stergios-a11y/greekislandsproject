@@ -45,9 +45,9 @@ VISITED_BLOCK = '''
 '''
 
 CSS_LINE = ('  .seo-why {{ margin: 6px 0 0; font-size: .95em; color: var(--ink-2, #5a6472); '
-            'border-left: 3px solid var(--aegean, #0B8FAC); padding-left: 9px; }}\n'
+            'border-left: 3px solid var(--primary, #0B8FAC); padding-left: 9px; }}\n'
             '  .seo-visited {{ margin: 6px 0 0; font-size: .85em; font-weight: 600; '
-            'color: var(--olive, #6b7f4b); }}\n')
+            'color: var(--secondary, #6b7f4b); }}\n')
 
 def main():
     s = P.read_text(encoding='utf-8')

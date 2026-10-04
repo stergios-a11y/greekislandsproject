@@ -137,7 +137,7 @@ CSS = """
   font-size: .855rem;
   line-height: 1.45;
   color: var(--ink-2);
-  border-left: 3px solid var(--aegean);
+  border-left: 3px solid var(--primary);
   padding-left: 9px;
 }
 .island-visited {
@@ -147,11 +147,11 @@ CSS = """
   margin-top: 4px;
   font-size: .78rem;
   font-weight: 600;
-  color: var(--olive, #6b7f4b);
+  color: var(--secondary, #6b7f4b);
 }
 .island-visited .iv-dot {
   width: 7px; height: 7px; border-radius: 50%;
-  background: var(--olive, #6b7f4b);
+  background: var(--secondary, #6b7f4b);
   flex: none;
 }
 """

@@ -2196,12 +2196,12 @@ def render_page(key, data, meta, lang='en'):
 <script type="application/ld+json">{schema_json}</script>
 
 <!-- SPA assets — load the same CSS as the main site so the SEO body blends visually -->
-<link rel="stylesheet" href="{asset_prefix}style.css?v=86">
+<link rel="stylesheet" href="{asset_prefix}style.css?v=87">
 <style>
   /* Minimal SEO body styling — these elements exist only in pre-rendered pages */
   .seo-island-content {{
     max-width: 900px; margin: 40px auto; padding: 24px;
-    font-family: var(--sans, sans-serif); color: var(--ink-1, #111);
+    font-family: var(--font-body, sans-serif); color: var(--ink-1, #111);
     line-height: 1.65;
   }}
   .seo-island-content h1 {{
@@ -2218,8 +2218,8 @@ def render_page(key, data, meta, lang='en'):
   .seo-lastupdated time {{ color: inherit; }}
   .seo-lastupdated strong {{ font-weight: 600; font-style: normal; color: var(--ink-2, #333); }}
   .seo-intro p {{ font-size: var(--text-sub, 18px); }}
-  .seo-why {{ margin: 6px 0 0; font-size: .95em; color: var(--ink-2, #5a6472); border-left: 3px solid var(--aegean, #0B8FAC); padding-left: 9px; }}
-  .seo-visited {{ margin: 6px 0 0; font-size: .85em; font-weight: 600; color: var(--olive, #6b7f4b); }}
+  .seo-why {{ margin: 6px 0 0; font-size: .95em; color: var(--ink-2, #5a6472); border-left: 3px solid var(--primary, #0B8FAC); padding-left: 9px; }}
+  .seo-visited {{ margin: 6px 0 0; font-size: .85em; font-weight: 600; color: var(--secondary, #6b7f4b); }}
   .seo-suited {{
     display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;
   }}
@@ -2247,14 +2247,14 @@ def render_page(key, data, meta, lang='en'):
   .seo-itinerary, .seo-beaches, .seo-related, .seo-compare, .seo-getting-there, .seo-local, .seo-audience {{ margin-top: 36px; }}
   .seo-itinerary h2, .seo-beaches h2, .seo-related h2, .seo-compare h2, .seo-getting-there h2, .seo-local h2, .seo-audience h2 {{
     font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 16px;
-    border-bottom: 2px solid var(--aegean, #0B8FAC); padding-bottom: 6px;
+    border-bottom: 2px solid var(--primary, #0B8FAC); padding-bottom: 6px;
   }}
   .seo-gt-pills {{
     display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px;
   }}
   .seo-gt-pill {{
     background: rgba(11,143,172,0.08);
-    color: var(--aegean, #0B8FAC);
+    color: var(--primary, #0B8FAC);
     font-size: var(--text-tiny, 12px);
     font-weight: 600;
     padding: 3px 10px;
@@ -2271,14 +2271,14 @@ def render_page(key, data, meta, lang='en'):
     margin: 0;
     padding: 8px 12px;
     background: rgba(11,143,172,0.04);
-    border-left: 3px solid var(--aegean, #0B8FAC);
+    border-left: 3px solid var(--primary, #0B8FAC);
     border-radius: 0 4px 4px 0;
     font-size: var(--text-small, 14px);
     color: var(--ink-2, #333);
     font-style: italic;
     line-height: 1.5;
   }}
-  .seo-gt-tip strong {{ font-style: normal; color: var(--aegean, #0B8FAC); }}
+  .seo-gt-tip strong {{ font-style: normal; color: var(--primary, #0B8FAC); }}
   /* Detailed getting_there paragraphs (when getting_there.detailed is present).
      Inline **strong** acts as subheaders inside the prose. */
   .seo-getting-there p {{
@@ -2360,7 +2360,7 @@ def render_page(key, data, meta, lang='en'):
     font-size: var(--text-small, 14px); color: var(--ink-2, #333);
     line-height: 1.5; margin: 0;
   }}
-  .seo-related a, .seo-compare a {{ color: var(--aegean, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }}
+  .seo-related a, .seo-compare a {{ color: var(--primary, #0B8FAC); text-decoration: none; font-weight: 600; margin: 0 2px; }}
   .seo-compare-more {{ margin-top: 8px; font-size: 14px; }}
   .seo-collections {{ margin: 10px 0 0; font-size: 14px; }}
   .seo-photo-wrap {{ position: relative; display: inline-block; max-width: 100%; line-height: 0; }}
@@ -2380,12 +2380,12 @@ def render_page(key, data, meta, lang='en'):
   .seo-nav-inner {{
     max-width: 1280px; margin: 0 auto; padding: 14px 24px;
     display: flex; justify-content: space-between; align-items: center;
-    font-family: var(--sans, sans-serif);
+    font-family: var(--font-body, sans-serif);
   }}
   .seo-nav-brand {{
     display: flex; align-items: center; gap: 12px;
     text-decoration: none; color: #fff; font-weight: 700;
-    font-family: var(--serif, Georgia, serif);
+    font-family: var(--font-ui, Georgia, serif);
     font-size: 20px;
   }}
   .seo-nav-brand img {{
@@ -2418,7 +2418,7 @@ def render_page(key, data, meta, lang='en'):
   .seo-cta-box {{
     max-width: 900px; margin: 40px auto; padding: 28px 24px;
     background: linear-gradient(135deg, rgba(11,143,172,0.08), rgba(11,143,172,0.02));
-    border-radius: 14px; text-align: center; font-family: var(--sans, sans-serif);
+    border-radius: 14px; text-align: center; font-family: var(--font-body, sans-serif);
   }}
   .seo-cta-box h3 {{ font-family: var(--display, serif); font-size: var(--text-section, 24px); margin: 0 0 8px; color: #111; }}
   .seo-cta-box p {{ color: #555; margin: 0 0 20px; }}
@@ -2434,7 +2434,7 @@ def render_page(key, data, meta, lang='en'):
   .seo-footer {{
     max-width: 900px; margin: 40px auto 20px; padding: 20px 24px;
     border-top: 1px solid #e5e5e5; text-align: center;
-    color: #777; font-size: var(--text-meta, 13px); font-family: var(--sans, sans-serif);
+    color: #777; font-size: var(--text-meta, 13px); font-family: var(--font-body, sans-serif);
   }}
   .seo-footer a {{ color: #0B8FAC; text-decoration: none; }}
   .seo-footer p {{ margin: 4px 0; }}
@@ -2538,8 +2538,8 @@ def render_page(key, data, meta, lang='en'):
           <div class="blueprint-eyebrow" data-i18n="detail.ratings">{'Blueprint Ratings' if lang == 'en' else 'Βαθμολογίες'}</div>
           <div class="blueprint-scorerow">
             <svg class="blueprint-ring" viewBox="0 0 70 70" width="62" height="62" aria-hidden="true">
-              <circle cx="35" cy="35" r="30" fill="none" stroke="var(--marble-2)" stroke-width="7"></circle>
-              <circle id="blueprint-ring-fill" cx="35" cy="35" r="30" fill="none" stroke="var(--aegean)" stroke-width="7" stroke-linecap="round" stroke-dasharray="188.5" stroke-dashoffset="188.5" transform="rotate(-90 35 35)"></circle>
+              <circle cx="35" cy="35" r="30" fill="none" stroke="var(--surface-2)" stroke-width="7"></circle>
+              <circle id="blueprint-ring-fill" cx="35" cy="35" r="30" fill="none" stroke="var(--primary)" stroke-width="7" stroke-linecap="round" stroke-dasharray="188.5" stroke-dashoffset="188.5" transform="rotate(-90 35 35)"></circle>
               <text id="blueprint-ring-num" x="35" y="41" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="19" fill="var(--ink-1)">–</text>
             </svg>
             <div class="blueprint-verdict">
@@ -2968,18 +2968,18 @@ def generate_ferries_page(island_keys):
             f'<meta property="og:url" content="{url}">\n'
             f'<meta property="og:locale" content="{"el_GR" if is_el else "en_US"}">\n'
             '<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>\n'
-            '<link rel="stylesheet" href="/style.css?v=86">\n'
+            '<link rel="stylesheet" href="/style.css?v=87">\n'
             '<style>\n'
-            '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--sans, system-ui), sans-serif; margin: 0; }\n'
+            '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--font-body, system-ui), sans-serif; margin: 0; }\n'
             '  .ferry-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }\n'
-            '  .ferry-page > h1 { font-family: var(--serif, Georgia), serif; font-size: 36px; margin: 0 0 8px; }\n'
+            '  .ferry-page > h1 { font-family: var(--font-ui, Georgia), serif; font-size: 36px; margin: 0 0 8px; }\n'
             '  .ferry-intro { font-size: 17px; color: var(--ink-1, #444); line-height: 1.55; margin: 0 0 24px; max-width: 760px; }\n'
-            '  .ferry-nav { background: var(--marble, #f6f4ee); padding: 12px 16px; border-radius: 12px; font-size: 14px; margin-bottom: 32px; line-height: 1.8; }\n'
+            '  .ferry-nav { background: var(--surface, #f6f4ee); padding: 12px 16px; border-radius: 12px; font-size: 14px; margin-bottom: 32px; line-height: 1.8; }\n'
             '  .ferry-nav-label { display: block; font-weight: 700; color: var(--ink-2, #333); margin-bottom: 4px; }\n'
-            '  .ferry-nav a { color: var(--aegean-dark, #076880); text-decoration: none; font-weight: 600; }\n'
+            '  .ferry-nav a { color: var(--primary-dark, #076880); text-decoration: none; font-weight: 600; }\n'
             '  .ferry-nav a:hover { text-decoration: underline; }\n'
             '  .ferry-port { margin-bottom: 40px; }\n'
-            '  .ferry-port h2 { font-family: var(--serif, Georgia), serif; font-size: 26px; margin: 0 0 16px; padding-bottom: 6px; border-bottom: 2px solid var(--aegean, #0B8FAC); }\n'
+            '  .ferry-port h2 { font-family: var(--font-ui, Georgia), serif; font-size: 26px; margin: 0 0 16px; padding-bottom: 6px; border-bottom: 2px solid var(--primary, #0B8FAC); }\n'
             '  .ferry-table-wrap { overflow-x: auto; }\n'
             '  /* table-layout: fixed + explicit column widths ensures all tables\n'
             '     across port sections share the same column proportions, regardless\n'
@@ -2992,16 +2992,16 @@ def generate_ferries_page(island_keys):
             '  .ferry-table col.ferry-col-freq  { width: 14%; }\n'
             '  .ferry-table col.ferry-col-price { width: 12%; }\n'
             '  .ferry-table col.ferry-col-note  { width: 37%; }\n'
-            '  .ferry-table thead th { text-align: left; padding: 10px 12px; background: var(--marble, #f6f4ee); color: var(--ink-2, #333); font-weight: 700; border-bottom: 2px solid var(--border, #e5e1d8); white-space: nowrap; }\n'
+            '  .ferry-table thead th { text-align: left; padding: 10px 12px; background: var(--surface, #f6f4ee); color: var(--ink-2, #333); font-weight: 700; border-bottom: 2px solid var(--border, #e5e1d8); white-space: nowrap; }\n'
             '  .ferry-table tbody td { padding: 10px 12px; border-bottom: 1px solid var(--border, #eee); vertical-align: top; word-wrap: break-word; overflow-wrap: break-word; }\n'
-            '  .ferry-table tbody tr:hover { background: var(--aegean-pale, rgba(11,143,172,0.05)); }\n'
-            '  .ferry-table a { color: var(--aegean-dark, #076880); font-weight: 600; text-decoration: none; }\n'
+            '  .ferry-table tbody tr:hover { background: var(--primary-pale, rgba(11,143,172,0.05)); }\n'
+            '  .ferry-table a { color: var(--primary-dark, #076880); font-weight: 600; text-decoration: none; }\n'
             '  .ferry-table a:hover { text-decoration: underline; }\n'
             '  .ferry-dest { font-weight: 600; }\n'
             '  .ferry-note { color: var(--ink-3, #888); font-size: 13px; }\n'
-            '  .ferry-footer { background: var(--marble, #f6f4ee); padding: 20px 24px; border-radius: 12px; font-size: 15px; line-height: 1.6; color: var(--ink-1, #444); margin-top: 32px; }\n'
+            '  .ferry-footer { background: var(--surface, #f6f4ee); padding: 20px 24px; border-radius: 12px; font-size: 15px; line-height: 1.6; color: var(--ink-1, #444); margin-top: 32px; }\n'
             '  .ferry-footer p { margin: 0; }\n'
-            '  .ferry-footer a { color: var(--aegean-dark, #076880); font-weight: 600; }\n'
+            '  .ferry-footer a { color: var(--primary-dark, #076880); font-weight: 600; }\n'
             '  @media (max-width: 600px) {\n'
             '    .ferry-page { padding: 20px 16px 48px; }\n'
             '    .ferry-page > h1 { font-size: 28px; }\n'
@@ -3503,25 +3503,25 @@ def generate_festivals_page(island_keys):
             # Otherwise users who enabled dark mode on the home page would briefly
             # flash the light theme on this page. Tiny inline script — no JS file needed.
             '<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>\n'
-            '<link rel="stylesheet" href="/style.css?v=86">\n'
+            '<link rel="stylesheet" href="/style.css?v=87">\n'
             '<style>\n'
-            '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--sans, system-ui), sans-serif; margin: 0; }\n'
+            '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--font-body, system-ui), sans-serif; margin: 0; }\n'
             '  .fest-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }\n'
-            '  .fest-page > h1 { font-family: var(--serif, Georgia), serif; font-size: 36px; margin: 0 0 8px; }\n'
+            '  .fest-page > h1 { font-family: var(--font-ui, Georgia), serif; font-size: 36px; margin: 0 0 8px; }\n'
             '  .fest-intro { font-size: 17px; color: var(--ink-1, #444); line-height: 1.5; margin: 0 0 24px; max-width: 720px; }\n'
-            '  .fest-nav { background: var(--marble, #f6f4ee); padding: 12px 16px; border-radius: 12px; font-size: 14px; margin-bottom: 32px; }\n'
-            '  .fest-nav a { color: var(--aegean-dark, #076880); text-decoration: none; font-weight: 600; }\n'
+            '  .fest-nav { background: var(--surface, #f6f4ee); padding: 12px 16px; border-radius: 12px; font-size: 14px; margin-bottom: 32px; }\n'
+            '  .fest-nav a { color: var(--primary-dark, #076880); text-decoration: none; font-weight: 600; }\n'
             '  .fest-nav a:hover { text-decoration: underline; }\n'
             '  .fest-month { margin-bottom: 40px; }\n'
-            '  .fest-month-heading { font-family: var(--serif, Georgia), serif; font-size: 26px; margin: 0 0 16px; padding-bottom: 6px; border-bottom: 2px solid var(--aegean, #0B8FAC); }\n'
+            '  .fest-month-heading { font-family: var(--font-ui, Georgia), serif; font-size: 26px; margin: 0 0 16px; padding-bottom: 6px; border-bottom: 2px solid var(--primary, #0B8FAC); }\n'
             '  .fest-month-count { color: var(--ink-3, #888); font-weight: 400; font-size: 16px; }\n'
             '  .fest-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }\n'
             '  .fest-card { display: flex; gap: 14px; padding: 16px; background: var(--white, #fff); border: 1px solid var(--border, #e5e1d8); border-radius: 12px; }\n'
             '  .fest-photo { width: 96px; height: 96px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }\n'
             '  .fest-text { flex: 1; min-width: 0; }\n'
-            '  .fest-island { font-size: 13px; font-weight: 600; color: var(--aegean-dark, #076880); text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; }\n'
+            '  .fest-island { font-size: 13px; font-weight: 600; color: var(--primary-dark, #076880); text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; }\n'
             '  .fest-island:hover { text-decoration: underline; }\n'
-            '  .fest-name { font-family: var(--serif, Georgia), serif; font-size: 18px; margin: 4px 0; line-height: 1.25; }\n'
+            '  .fest-name { font-family: var(--font-ui, Georgia), serif; font-size: 18px; margin: 4px 0; line-height: 1.25; }\n'
             '  .fest-when { font-size: 13px; color: var(--accent, #FF6B6B); font-weight: 600; margin: 0 0 8px; }\n'
             '  .fest-desc { font-size: 14px; color: var(--ink-1, #555); line-height: 1.5; margin: 0; }\n'
             '  @media (max-width: 600px) {\n'
@@ -3536,10 +3536,10 @@ def generate_festivals_page(island_keys):
             '  .fest-controls { display:flex; flex-wrap:wrap; gap:10px; margin:0 0 28px; align-items:center; }\n'
             '  .fest-controls select, .fest-controls input { font:inherit; font-size:14px; padding:8px 12px; border:1px solid var(--border,#e5e1d8); border-radius:10px; background:var(--white,#fff); color:inherit; }\n'
             '  .fest-controls input { flex:1; min-width:160px; }\n'
-            '  .fest-clear { cursor:pointer; border:none; background:none; color:var(--aegean-dark,#076880); font-weight:600; font-size:13px; padding:8px; }\n'
+            '  .fest-clear { cursor:pointer; border:none; background:none; color:var(--primary-dark,#076880); font-weight:600; font-size:13px; padding:8px; }\n'
             '  .fest-soon { margin:0 0 36px; }\n'
-            '  .fest-soon > h2 { font-family:var(--serif,Georgia),serif; font-size:22px; margin:0 0 14px; }\n'
-            '  .fest-soon-tag { display:block; width:fit-content; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; color:#fff; background:var(--aegean,#0B8FAC); border-radius:999px; padding:2px 9px; margin:0 0 8px; }\n'
+            '  .fest-soon > h2 { font-family:var(--font-ui,Georgia),serif; font-size:22px; margin:0 0 14px; }\n'
+            '  .fest-soon-tag { display:block; width:fit-content; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; color:#fff; background:var(--primary,#0B8FAC); border-radius:999px; padding:2px 9px; margin:0 0 8px; }\n'
             '  .fest-soon-tag.next { background:var(--ink-3,#888); }\n'
             '  .fest-card { transition:transform .12s ease, box-shadow .12s ease; }\n'
             '  .fest-card:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,.10); }\n'

@@ -1030,7 +1030,7 @@ def render_page(pair_key, lang):
   .compare-related {
     margin-top: 32px;
     padding-top: 24px;
-    border-top: 1px solid var(--marble-3, #e0e0e0);
+    border-top: 1px solid var(--surface-3, #e0e0e0);
   }
   .compare-related-heading {
     font-family: var(--display, Georgia, serif);
@@ -1048,15 +1048,15 @@ def render_page(pair_key, lang):
     align-items: center;
     justify-content: space-between;
     padding: 14px 16px;
-    background: var(--marble, #fafafa);
-    border: 1px solid var(--marble-3, #e0e0e0);
+    background: var(--surface, #fafafa);
+    border: 1px solid var(--surface-3, #e0e0e0);
     border-radius: 8px;
     text-decoration: none;
     color: var(--ink-1, #222);
     transition: background 0.15s, border-color 0.15s;
   }
   .compare-related-card:hover {
-    background: var(--marble-2, #f0f0f0);
+    background: var(--surface-2, #f0f0f0);
     border-color: var(--ink-3, #999);
   }
   .compare-related-pair {
@@ -1462,7 +1462,7 @@ def render_hub_page(lang, valid_pairs):
     font-size: var(--text-h2, 22px);
     margin: 0 0 14px;
     color: var(--ink-1, #222);
-    border-bottom: 1px solid var(--marble-3, #e0e0e0);
+    border-bottom: 1px solid var(--surface-3, #e0e0e0);
     padding-bottom: 6px;
   }
   .hub-section-count {
@@ -1481,15 +1481,15 @@ def render_hub_page(lang, valid_pairs):
     align-items: center;
     gap: 8px;
     padding: 14px 16px;
-    background: var(--marble, #fff);
-    border: 1px solid var(--marble-3, #e0e0e0);
+    background: var(--surface, #fff);
+    border: 1px solid var(--surface-3, #e0e0e0);
     border-radius: 8px;
     text-decoration: none;
     color: var(--ink-1, #222);
     transition: background 0.15s, border-color 0.15s, transform 0.15s;
   }
   .hub-card:hover {
-    background: var(--marble-2, #f0f0f0);
+    background: var(--surface-2, #f0f0f0);
     border-color: var(--ink-3, #999);
     transform: translateY(-1px);
   }
@@ -1505,8 +1505,8 @@ def render_hub_page(lang, valid_pairs):
     margin: 0 4px;
   }
   .hub-card-tag {
-    color: var(--aegean-dark, #076880);
-    background: var(--aegean-light, #C8EEF5);
+    color: var(--primary-dark, #076880);
+    background: var(--primary-light, #C8EEF5);
     flex-shrink: 0;
     font-size: 10.5px;
     font-weight: 800;

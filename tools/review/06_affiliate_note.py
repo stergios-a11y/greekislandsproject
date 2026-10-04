@@ -68,7 +68,7 @@ CSS = """
   color: var(--ink-3, #8a939f);
 }
 .aff-note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
-.aff-note a:hover { color: var(--aegean); }
+.aff-note a:hover { color: var(--primary); }
 .cta-affiliate .aff-note { text-align: center; margin-top: 4px; }
 .tc-ctas .aff-note { text-align: center; }
 """

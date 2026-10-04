@@ -31,18 +31,18 @@
 <meta property="og:url" content="https://aegeanblueprint.com/el/ferries/">
 <meta property="og:locale" content="el_GR">
 <script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>
-<link rel="stylesheet" href="/style.css?v=86">
+<link rel="stylesheet" href="/style.css?v=87">
 <style>
-  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--sans, system-ui), sans-serif; margin: 0; }
+  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--font-body, system-ui), sans-serif; margin: 0; }
   .ferry-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }
-  .ferry-page > h1 { font-family: var(--serif, Georgia), serif; font-size: 36px; margin: 0 0 8px; }
+  .ferry-page > h1 { font-family: var(--font-ui, Georgia), serif; font-size: 36px; margin: 0 0 8px; }
   .ferry-intro { font-size: 17px; color: var(--ink-1, #444); line-height: 1.55; margin: 0 0 24px; max-width: 760px; }
-  .ferry-nav { background: var(--marble, #f6f4ee); padding: 12px 16px; border-radius: 12px; font-size: 14px; margin-bottom: 32px; line-height: 1.8; }
+  .ferry-nav { background: var(--surface, #f6f4ee); padding: 12px 16px; border-radius: 12px; font-size: 14px; margin-bottom: 32px; line-height: 1.8; }
   .ferry-nav-label { display: block; font-weight: 700; color: var(--ink-2, #333); margin-bottom: 4px; }
-  .ferry-nav a { color: var(--aegean-dark, #076880); text-decoration: none; font-weight: 600; }
+  .ferry-nav a { color: var(--primary-dark, #076880); text-decoration: none; font-weight: 600; }
   .ferry-nav a:hover { text-decoration: underline; }
   .ferry-port { margin-bottom: 40px; }
-  .ferry-port h2 { font-family: var(--serif, Georgia), serif; font-size: 26px; margin: 0 0 16px; padding-bottom: 6px; border-bottom: 2px solid var(--aegean, #0B8FAC); }
+  .ferry-port h2 { font-family: var(--font-ui, Georgia), serif; font-size: 26px; margin: 0 0 16px; padding-bottom: 6px; border-bottom: 2px solid var(--primary, #0B8FAC); }
   .ferry-table-wrap { overflow-x: auto; }
   /* table-layout: fixed + explicit column widths ensures all tables
      across port sections share the same column proportions, regardless
@@ -55,16 +55,16 @@
   .ferry-table col.ferry-col-freq  { width: 14%; }
   .ferry-table col.ferry-col-price { width: 12%; }
   .ferry-table col.ferry-col-note  { width: 37%; }
-  .ferry-table thead th { text-align: left; padding: 10px 12px; background: var(--marble, #f6f4ee); color: var(--ink-2, #333); font-weight: 700; border-bottom: 2px solid var(--border, #e5e1d8); white-space: nowrap; }
+  .ferry-table thead th { text-align: left; padding: 10px 12px; background: var(--surface, #f6f4ee); color: var(--ink-2, #333); font-weight: 700; border-bottom: 2px solid var(--border, #e5e1d8); white-space: nowrap; }
   .ferry-table tbody td { padding: 10px 12px; border-bottom: 1px solid var(--border, #eee); vertical-align: top; word-wrap: break-word; overflow-wrap: break-word; }
-  .ferry-table tbody tr:hover { background: var(--aegean-pale, rgba(11,143,172,0.05)); }
-  .ferry-table a { color: var(--aegean-dark, #076880); font-weight: 600; text-decoration: none; }
+  .ferry-table tbody tr:hover { background: var(--primary-pale, rgba(11,143,172,0.05)); }
+  .ferry-table a { color: var(--primary-dark, #076880); font-weight: 600; text-decoration: none; }
   .ferry-table a:hover { text-decoration: underline; }
   .ferry-dest { font-weight: 600; }
   .ferry-note { color: var(--ink-3, #888); font-size: 13px; }
-  .ferry-footer { background: var(--marble, #f6f4ee); padding: 20px 24px; border-radius: 12px; font-size: 15px; line-height: 1.6; color: var(--ink-1, #444); margin-top: 32px; }
+  .ferry-footer { background: var(--surface, #f6f4ee); padding: 20px 24px; border-radius: 12px; font-size: 15px; line-height: 1.6; color: var(--ink-1, #444); margin-top: 32px; }
   .ferry-footer p { margin: 0; }
-  .ferry-footer a { color: var(--aegean-dark, #076880); font-weight: 600; }
+  .ferry-footer a { color: var(--primary-dark, #076880); font-weight: 600; }
   @media (max-width: 600px) {
     .ferry-page { padding: 20px 16px 48px; }
     .ferry-page > h1 { font-size: 28px; }
