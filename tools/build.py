@@ -6,7 +6,8 @@
 
 Order: validate → prerender (island pages, homepage blocks, sitemap, market-data.js,
 theme sync) → optional page families, each only if the market enables the feature in
-markets/<market>/market.json "features" (missing = on). Stops at the first failure.
+markets/<market>/market.json "features" (missing = on) → smoke test (static).
+Stops at the first failure. Browser smoke test: python3 tools/smoke.py --browser
 """
 import os
 import subprocess
@@ -30,6 +31,7 @@ STEPS = [
     ('collections', 'build_collections'),
     ('trip_cost', 'build_costs'),
     ('trip_cost', 'build_trip_cost'),
+    (None, 'smoke'),          # static checks of every page in the sitemap
 ]
 
 

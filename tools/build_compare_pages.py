@@ -629,13 +629,16 @@ def fit_description(text, limit=158, floor=115):
     # Only clause boundaries — cutting at a space produced fragments like
     # "...choosing the right island for." (18 pages, Sep 2026 audit).
     window = joined[:limit - 1]
-    for sep in ('—', ';'):
+    # Greek writes its semicolon as the ano teleia «·» (U+0387, often typed as U+00B7);
+    # without it Greek descriptions fell through to the sentence drop below and
+    # shipped as just "Ισοπαλία στο 4.2." (found by tools/smoke.py, Oct 2026).
+    for sep in ('—', ';', '\u0387', '·'):
         idx = window.rfind(sep)
         if idx >= floor:
-            return window[:idx].rstrip(' ,;—-·') + '.'
-    # No clause boundary: drop the last sentence even if that goes under floor.
+            return window[:idx].rstrip(' ,;—-·\u0387') + '.'
+    # No clause boundary: drop the last sentence — unless that leaves a stub.
     parts = re.split(r'(?<=[.!?;])\s+', joined)
-    if len(parts) > 1:
+    if len(parts) > 1 and len(' '.join(parts[:-1])) >= floor // 2:
         return _close(' '.join(parts[:-1]))
     return window[:window.rfind(' ')].rstrip(' ,;—-·') + '…'
 
