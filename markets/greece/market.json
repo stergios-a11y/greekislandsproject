@@ -5,13 +5,17 @@
       "label": "EN",
       "name": "English",
       "prefix": "",
-      "default": true
+      "default": true,
+      "flag": "🇬🇧",
+      "og_locale": "en_US"
     },
     {
       "code": "el",
       "label": "ΕΛ",
       "name": "Ελληνικά",
-      "prefix": "/el"
+      "prefix": "/el",
+      "flag": "🇬🇷",
+      "og_locale": "el_GR"
     }
   ],
   "brand": {
@@ -26,7 +30,8 @@
     "theme_color": "#0B8FAC",
     "logo": "/logo-hero.svg",
     "og_image": "/og-image.png",
-    "head_extra": "<script async data-cfasync=\"false\" data-noptimize=\"1\" data-no-defer=\"1\" src=\"https://emrldtp.com/NTUxOTU3.js?t=551957\"></script>"
+    "head_extra": "<script async data-cfasync=\"false\" data-noptimize=\"1\" data-no-defer=\"1\" src=\"https://emrldtp.com/NTUxOTU3.js?t=551957\"></script>",
+    "loading_logo": "/logo.svg"
   },
   "nav": [
     {
@@ -34,7 +39,8 @@
       "label": {
         "en": "Compare",
         "el": "Σύγκριση"
-      }
+      },
+      "dom_id": "nav-compare"
     },
     {
       "href": "#match",
@@ -42,21 +48,25 @@
       "label": {
         "en": "Match Me",
         "el": "Βρες το Νησί σου"
-      }
+      },
+      "dom_id": "nav-match"
     },
     {
       "href": "trip-cost/",
       "label": {
         "en": "Budget",
         "el": "Κόστος"
-      }
+      },
+      "dom_id": "nav-tripcost",
+      "id": "tripcost"
     },
     {
       "href": "#hopping",
       "label": {
         "en": "Ferries &amp; Hopping",
         "el": "Πλοία &amp; Νησοπορία"
-      }
+      },
+      "dom_id": "nav-hopping"
     },
     {
       "href": "festivals/",
@@ -64,27 +74,49 @@
       "label": {
         "en": "Festivals",
         "el": "Γιορτές"
-      }
+      },
+      "dom_id": "nav-festivals"
     },
     {
       "href": "#data",
       "label": {
         "en": "Islands Data",
         "el": "Στοιχεία Νησιών"
-      }
+      },
+      "dom_id": "nav-data"
     },
     {
       "href": "#mission",
       "label": {
         "en": "About",
         "el": "Σχετικά"
-      }
+      },
+      "dom_id": "nav-mission"
     },
     {
       "href": "#shortlist",
       "label": {
         "en": "⭐ My Shortlist",
         "el": "⭐ Η Λίστα μου"
+      },
+      "dom_id": "nav-shortlist"
+    }
+  ],
+  "footer_links": [
+    {
+      "href": "privacy/",
+      "i18n": "footer.privacy",
+      "label": {
+        "en": "Privacy",
+        "el": "Απόρρητο"
+      }
+    },
+    {
+      "href": "credits/",
+      "i18n": "footer.credits",
+      "label": {
+        "en": "Photo credits",
+        "el": "Πηγές φωτογραφιών"
       }
     }
   ]

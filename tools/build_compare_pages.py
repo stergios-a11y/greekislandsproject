@@ -29,6 +29,7 @@ import re
 from pathlib import Path
 
 import market as _market  # noqa: E402  (tools/ is on sys.path)
+import shell  # noqa: E402
 
 def _resolve_root():
     candidates = []
@@ -1081,73 +1082,10 @@ def render_page(pair_key, lang):
 
     og_image = f'{SITE_URL}/og-image.png'
 
-    html = f'''<!DOCTYPE html>
-<html lang="{'el' if lang == 'el' else 'en'}">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>window.localStorage&&document.documentElement.classList.toggle("dark",localStorage.getItem("darkMode")===null?window.matchMedia("(prefers-color-scheme: dark)").matches:localStorage.getItem("darkMode")==="true")</script>
-<title>{esc(page_title)}</title>
-<meta name="description" content="{esc(page_desc)}">
-<meta name="theme-color" content="#0B8FAC">
-<link rel="canonical" href="{canonical}">
-{_market.hreflang(dict(en=en_url, el=el_url))}
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta property="og:type" content="website">
-<meta property="og:title" content="{esc(page_title)}">
-<meta property="og:description" content="{esc(page_desc)}">
-<meta property="og:image" content="{og_image}">
-<meta property="og:url" content="{canonical}">
-<meta property="og:locale" content="{og_locale}">
-<meta property="og:site_name" content="Aegean Blueprint">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{esc(page_title)}">
-<meta name="twitter:description" content="{esc(page_desc)}">
-<meta name="twitter:image" content="{og_image}">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-FMFWLRM2J9');</script>
-<script>if(localStorage.getItem("darkMode")==="true"){{document.documentElement.classList.add("dark");}}</script>
-<link rel="stylesheet" href="/style.css?v={STYLE_V}">
-<style>{page_css}</style>
-{faq_jsonld}
-<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>
-</head>
-<body>
-
-<div id="loading-overlay" style="display:none;">
-  <div class="loading-inner">
-    <img src="/logo.svg" alt="Aegean Blueprint logo" id="loading-logo">
-    <div class="loading-spinner"></div>
-    <p>Loading…</p>
-  </div>
-</div>
-
-<header>
-  <div class="header-content">
-    <a href="{home_url}" class="logo-wrapper">
-      <img src="/logo-hero.svg" id="site-logo" alt="Aegean Blueprint logo">
-      <span id="brand-text"><span class="brand-word">Aegean</span> <span class="brand-word">Blueprint</span></span>
-    </a>
-    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>
-    <nav class="top-nav" id="main-nav">
-        {nav_html}
-    </nav>
-    <div class="lang-dropdown" id="lang-dropdown">
-      <button class="lang-toggle" id="lang-toggle-btn" aria-label="Switch language" aria-haspopup="true" aria-expanded="false">
-        <span class="lang-globe">🌐</span>
-        <span class="lang-current" id="lang-current">{'EL' if lang == 'el' else 'EN'}</span>
-        <span class="lang-caret">▾</span>
-      </button>
-      <div class="lang-menu" id="lang-menu" role="menu">
-        <a href="#" class="lang-option" data-lang="en" role="menuitem"><span class="lang-option-flag">🇬🇧</span> English</a>
-        <a href="#" class="lang-option" data-lang="el" role="menuitem"><span class="lang-option-flag">🇬🇷</span> Ελληνικά</a>
-      </div>
-    </div>
-    <button class="dark-mode-toggle" id="dark-mode-btn" aria-label="Toggle dark mode">☾</button>
-  </div>
-</header>
+    top = (shell.page_head(page_title, page_desc, {'en': en_url, 'el': el_url}, lang, STYLE_V,
+                           extra=f'<style>{page_css}</style>\n{faq_jsonld}')
+           + '\n' + shell.app_header(lang))
+    html = f'''{top}
 
 <main id="view-compare" class="view-section content-page">
   <h1 class="vs-page-h1">{esc(h1_text)}</h1>
@@ -1173,12 +1111,7 @@ def render_page(pair_key, lang):
   </div>
 </main>
 
-<div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored" data-i18n="detail.bookferry">🚢 Book ferry tickets</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored" data-i18n="detail.rentcar">🚗 Rent a car</a><p class="aff-note" data-i18n="affiliate.note"><a href="/privacy/#affiliate">Affiliate links — they support this guide and cost you nothing.</a></p></div>
-<footer id="site-footer">
-  <div class="footer-line">
-    <span class="footer-copy" data-i18n="footer.copyright">© {YEAR} Aegean Blueprint</span> · {privacy_link}<span class="footer-updated" id="footer-updated"></span>
-  </div>
-</footer>
+{shell.app_footer(lang, YEAR)}
 
 <script>
 window.__INITIAL_COMPARE_PAIR = {init_pair};
@@ -1523,52 +1456,10 @@ def render_hub_page(lang, valid_pairs):
 
     og_image = f'{SITE_URL}/og-image.png'
 
-    html = f'''<!DOCTYPE html>
-<html lang="{'el' if lang == 'el' else 'en'}">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>window.localStorage&&document.documentElement.classList.toggle("dark",localStorage.getItem("darkMode")===null?window.matchMedia("(prefers-color-scheme: dark)").matches:localStorage.getItem("darkMode")==="true")</script>
-<title>{esc(page_title)}</title>
-<meta name="description" content="{esc(page_desc)}">
-<meta name="theme-color" content="#0B8FAC">
-<link rel="canonical" href="{canonical}">
-{_market.hreflang(dict(en=en_url, el=el_url))}
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta property="og:type" content="website">
-<meta property="og:title" content="{esc(page_title)}">
-<meta property="og:description" content="{esc(page_desc)}">
-<meta property="og:image" content="{og_image}">
-<meta property="og:url" content="{canonical}">
-<meta property="og:locale" content="{og_locale}">
-<meta property="og:site_name" content="Aegean Blueprint">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-FMFWLRM2J9');</script>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v={STYLE_V}">
-<style>{page_css}</style>
-<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>
-</head>
-<body>
-<header>
-  <div class="header-content">
-    <a class="logo-wrapper" href="{'/el/' if lang == 'el' else '/'}" style="text-decoration: none;">
-      <img src="/logo-hero.svg" id="site-logo" alt="Aegean Blueprint logo">
-      <span id="brand-text"><span class="brand-word">Aegean</span> <span class="brand-word">Blueprint</span></span>
-    </a>
-    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>
-    <nav class="top-nav" id="main-nav">
-        {nav_html}
-    </nav>
-    <a class="lang-toggle-static" href="{'/compare/' if lang == 'el' else '/el/compare/'}" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;"><span style="margin-right: 4px;">🌐</span>{'EN' if lang == 'el' else 'EL'}</a>
-    <button type="button" class="dark-mode-toggle dm-static" aria-label="Toggle dark mode" onclick="var h=document.documentElement,d=!h.classList.contains('dark');h.classList.toggle('dark',d);try{{localStorage.setItem('darkMode',d)}}catch(e){{}}"></button>
-  </div>
-</header>
+    top = (shell.page_head(page_title, page_desc, {'en': en_url, 'el': el_url}, lang, STYLE_V,
+                           extra=f'<style>{page_css}</style>')
+           + '\n' + shell.site_header(lang, (en_url if lang == "el" else el_url)[len(SITE_URL):], active=""))
+    html = f'''{top}
 
 <main class="hub-main">
   <div class="hub-hero">
@@ -1578,20 +1469,9 @@ def render_hub_page(lang, valid_pairs):
   {''.join(sections_html)}
 </main>
 
-<div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored" data-i18n="detail.bookferry">🚢 Book ferry tickets</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored" data-i18n="detail.rentcar">🚗 Rent a car</a><p class="aff-note" data-i18n="affiliate.note"><a href="/privacy/#affiliate">Affiliate links — they support this guide and cost you nothing.</a></p></div>
-<footer id="site-footer">
-  <div class="footer-line">
-    <span class="footer-copy" data-i18n="footer.copyright">© {YEAR} Aegean Blueprint</span> · {privacy_link}<span class="footer-updated" id="footer-updated"></span>
-  </div>
-</footer>
+{shell.app_footer(lang, YEAR)}
 
 <script src="/i18n.js?v={I18N_V}"></script>
-<script>
-  (function() {{
-    var btn = document.getElementById("menu-toggle-btn");
-    if (btn) btn.addEventListener("click", function() {{ document.getElementById("main-nav").classList.toggle("open"); }});
-  }})();
-</script>
 </body>
 </html>
 '''

@@ -1,0 +1,24 @@
+<body>
+
+<div id="loading-overlay" style="display:none;">
+  <div class="loading-inner">
+    <img src="{{loading_logo}}" alt="{{site_name}} logo" id="loading-logo">
+    <div class="loading-spinner"></div>
+    <p>Loading…</p>
+  </div>
+</div>
+
+<header>
+  <div class="header-content">
+    <a href="{{home}}" class="logo-wrapper">
+      <img src="{{logo}}" id="site-logo" alt="{{site_name}} logo">
+      <span id="brand-text">{{brand_html}}</span>
+    </a>
+    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>
+    <nav class="top-nav" id="main-nav">
+{{nav}}
+    </nav>
+{{lang_dropdown}}
+    <button class="dark-mode-toggle" id="dark-mode-btn" aria-label="Toggle dark mode">☾</button>
+  </div>
+</header>
