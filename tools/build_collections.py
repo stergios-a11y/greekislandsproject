@@ -21,6 +21,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+import market as _market  # noqa: E402  (tools/ is on sys.path)
+
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_festival_extras import (  # noqa: E402
     ROOT, SITE_URL, esc, page_head, header_nav, FOOTER, patch_sitemap,
@@ -434,7 +436,7 @@ def main():
     gnames = greek_names()
     photos = hero_photos()
     credits = collect_credits()
-    for lang in ('en', 'el'):
+    for lang in _market.langs():
         build_quiet(lang, meta, gnames, photos)
         build_diapontia(lang, meta, gnames, photos)
         n_photos, n_people = build_credits(lang, credits)

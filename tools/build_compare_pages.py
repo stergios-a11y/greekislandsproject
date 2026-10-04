@@ -28,6 +28,8 @@ import json
 import re
 from pathlib import Path
 
+import market as _market  # noqa: E402  (tools/ is on sys.path)
+
 def _resolve_root():
     candidates = []
     try:
@@ -1089,9 +1091,7 @@ def render_page(pair_key, lang):
 <meta name="description" content="{esc(page_desc)}">
 <meta name="theme-color" content="#0B8FAC">
 <link rel="canonical" href="{canonical}">
-<link rel="alternate" hreflang="en" href="{en_url}">
-<link rel="alternate" hreflang="el" href="{el_url}">
-<link rel="alternate" hreflang="x-default" href="{en_url}">
+{_market.hreflang(dict(en=en_url, el=el_url))}
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -1246,9 +1246,7 @@ def update_sitemap(slugs):
     # Hub pages first (higher priority than individual comparisons)
     def alt(en_path, el_path):
         # Same en/el/x-default triple prerender.py emits for every other page.
-        return (f'<xhtml:link rel="alternate" hreflang="en" href="{SITE_URL}{en_path}"/>'
-                f'<xhtml:link rel="alternate" hreflang="el" href="{SITE_URL}{el_path}"/>'
-                f'<xhtml:link rel="alternate" hreflang="x-default" href="{SITE_URL}{en_path}"/>')
+        return _market.hreflang(dict(en=SITE_URL + en_path, el=SITE_URL + el_path), kind='xhtml', sep='')
     for path in ('/compare/', '/el/compare/'):
         entries.append(
             f'<url><loc>{SITE_URL}{path}</loc>'
@@ -1535,9 +1533,7 @@ def render_hub_page(lang, valid_pairs):
 <meta name="description" content="{esc(page_desc)}">
 <meta name="theme-color" content="#0B8FAC">
 <link rel="canonical" href="{canonical}">
-<link rel="alternate" hreflang="en" href="{en_url}">
-<link rel="alternate" hreflang="el" href="{el_url}">
-<link rel="alternate" hreflang="x-default" href="{en_url}">
+{_market.hreflang(dict(en=en_url, el=el_url))}
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">

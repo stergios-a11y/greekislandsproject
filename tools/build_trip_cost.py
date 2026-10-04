@@ -19,6 +19,8 @@ import sys
 from datetime import date as _date
 from pathlib import Path
 
+import market as _market  # noqa: E402  (tools/ is on sys.path)
+
 # Footer copyright. Was the literal "2026" — which would have disagreed with
 # the auto-rolling year in every page title from 1 January onward.
 _COPY_YEAR = _date.today().year
@@ -342,9 +344,7 @@ def render_page(lang, meta, data):
 <meta name="theme-color" content="#0B8FAC">
 <meta name="author" content="Stergios Gousios">
 <link rel="canonical" href="{url}">
-<link rel="alternate" hreflang="en" href="{url_en}">
-<link rel="alternate" hreflang="el" href="{url_el}">
-<link rel="alternate" hreflang="x-default" href="{url_en}">
+{_market.hreflang(dict(en=url_en, el=url_el))}
 <meta property="og:title" content="{t['h1']}">
 <meta property="og:description" content="{t['desc']}">
 <meta property="og:url" content="{url}">

@@ -963,8 +963,14 @@ function setupLanguageToggle() {
   const currentLabel = document.getElementById('lang-current');
   if (!btn || !menu) return;
 
+  // Languages come from the market config (market-data.js). One language: no switcher at all.
+  const langs = (typeof MARKET_LANGS !== 'undefined' && MARKET_LANGS.length) ? MARKET_LANGS
+    : [{ code: 'en', label: 'EN' }, { code: 'el', label: 'ΕΛ' }];
+  if (langs.length < 2) { (document.getElementById('lang-dropdown') || btn).style.display = 'none'; return; }
+  const labels = Object.fromEntries(langs.map(l => [l.code, l.label]));
+  menu.querySelectorAll('.lang-option').forEach(a => { if (!labels[a.dataset.lang]) a.remove(); });
+
   // Set current lang label and mark active option
-  const labels = { en: 'EN', el: 'ΕΛ' };
   if (currentLabel) currentLabel.textContent = labels[CURRENT_LANG] || 'EN';
   menu.querySelectorAll('.lang-option').forEach(a => {
     if (a.dataset.lang === CURRENT_LANG) a.classList.add('active');

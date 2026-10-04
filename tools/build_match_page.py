@@ -14,6 +14,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+import market as _market  # noqa: E402  (tools/ is on sys.path)
+
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_festival_extras import ROOT, SITE_URL, esc, page_head, header_nav, FOOTER, patch_sitemap  # noqa: E402
 
@@ -127,7 +129,7 @@ def build(lang, names):
 
 def main():
     names = island_names()
-    for lang in ('en', 'el'):
+    for lang in _market.langs():
         build(lang, names)
     n = patch_sitemap([('/match/', '/el/match/')])
     print(f'✓ Match landing built: /match/ + /el/match/ ({n} sitemap entries added)')

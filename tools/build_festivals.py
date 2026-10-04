@@ -22,6 +22,8 @@ import re
 import sys
 from datetime import date, timedelta
 from pathlib import Path
+
+import market as _market  # noqa: E402  (tools/ is on sys.path)
 from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -449,7 +451,7 @@ def build_hub(flat, names, heroes):
     for f in flat:
         per_island.setdefault(f['island'], []).append(f)
     exact = sum(1 for f in flat if f['exact'])
-    for lang in ('en', 'el'):
+    for lang in _market.langs():
         is_el = lang == 'el'
         n = len(flat)
         if is_el:
@@ -522,7 +524,7 @@ def build_months(flat, names, heroes):
         slug = MONTH_SLUG[m]
         en_path, el_path = f'/festivals/{slug}/', f'/el/festivals/{slug}/'
         pairs.append((en_path, el_path))
-        for lang in ('en', 'el'):
+        for lang in _market.langs():
             is_el = lang == 'el'
             p = '/el' if is_el else ''
             lab = MONTHS_EL_NOM[m - 1] if is_el else MONTHS_EN[m - 1]
@@ -598,7 +600,7 @@ def build_islands(flat, names, heroes):
         exact = [f for f in fs if f['exact']]
         months = sorted({f['months'][0] for f in fs})
         villages = sorted({f.get('village') for f in fs if f.get('village')})
-        for lang in ('en', 'el'):
+        for lang in _market.langs():
             is_el = lang == 'el'
             p = '/el' if is_el else ''
             nm = names[k][1 if is_el else 0]
@@ -715,14 +717,13 @@ def patch_sitemap(pairs):
         if en == '/festivals/':
             continue   # prerender already lists the hub
         pr = '0.7' if en.count('/') == 3 else '0.6'
-        for path in (en, el):
+        alts = _market.hreflang(dict(en=SITE_URL + en, el=SITE_URL + el), kind='xhtml', sep='')
+        for path in _market.per_lang(dict(en=en, el=el)):
             blocks.append(f'  <url><loc>{SITE_URL}{path}</loc><lastmod>{today}</lastmod><priority>{pr}</priority>'
-                          f'<xhtml:link rel="alternate" hreflang="en" href="{SITE_URL}{en}"/>'
-                          f'<xhtml:link rel="alternate" hreflang="el" href="{SITE_URL}{el}"/>'
-                          f'<xhtml:link rel="alternate" hreflang="x-default" href="{SITE_URL}{en}"/></url>')
+                          f'{alts}</url>')
     block = START + '\n' + '\n'.join(blocks) + '\n  ' + END
     # Drop any stale copies of these URLs (older builders appended month hubs at the end).
-    ours = {SITE_URL + path for en, el in pairs for path in (en, el) if en != '/festivals/'}
+    ours = {SITE_URL + path for en, el in pairs for path in _market.per_lang(dict(en=en, el=el)) if en != '/festivals/'}
     def _keep(m):
         loc = re.search(r'<loc>(.*?)</loc>', m.group(0))
         return '' if (loc and loc.group(1) in ours) else m.group(0)

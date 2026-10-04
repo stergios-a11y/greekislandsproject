@@ -23,6 +23,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+import market as _market  # noqa: E402  (tools/ is on sys.path)
+
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'tools'))
 
@@ -486,11 +488,10 @@ def update_sitemap(keys):
     rows = []
     for k in sorted(keys):
         en, el = f'/island/{k}/itinerary/', f'/el/island/{k}/programma/'
-        for path in (en, el):
+        alts = _market.hreflang(dict(en=SITE_URL + en, el=SITE_URL + el), kind='xhtml', sep='')
+        for path in _market.per_lang(dict(en=en, el=el)):
             rows.append(f'  <url><loc>{SITE_URL}{path}</loc><lastmod>{TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>'
-                        f'<xhtml:link rel="alternate" hreflang="en" href="{SITE_URL}{en}"/>'
-                        f'<xhtml:link rel="alternate" hreflang="el" href="{SITE_URL}{el}"/>'
-                        f'<xhtml:link rel="alternate" hreflang="x-default" href="{SITE_URL}{en}"/></url>')
+                        f'{alts}</url>')
     block = START + '\n' + '\n'.join(rows) + '\n  ' + END
     if START in xml:
         xml = re.sub(re.escape(START) + r'.*?' + re.escape(END), block, xml, count=1, flags=re.DOTALL)

@@ -2164,9 +2164,7 @@ def render_page(key, data, meta, lang='en'):
 <meta property="article:modified_time" content="{modified_date}">
 <link rel="canonical" href="{url}">
 {f'<link rel="preload" as="image" href="{esc(hero_src_1280(_hero_url))}" fetchpriority="high">' if _hero_url else ''}
-<link rel="alternate" hreflang="en" href="{url_en}">
-<link rel="alternate" hreflang="el" href="{url_el}">
-<link rel="alternate" hreflang="x-default" href="{url_en}">
+{_market.hreflang(dict(en=url_en, el=url_el))}
 <link rel="icon" href="{asset_prefix}favicon.ico" sizes="any">
 <link rel="icon" href="{asset_prefix}favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" sizes="32x32" href="{asset_prefix}favicon-32.png">
@@ -2583,7 +2581,7 @@ def render_page(key, data, meta, lang='en'):
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}market-data.js?v={_market.version()}"></script>
 <script src="{asset_prefix}i18n.js?v=50"></script>
-<script src="{asset_prefix}script.js?v=151"></script>
+<script src="{asset_prefix}script.js?v=152"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
@@ -2807,7 +2805,7 @@ def generate_ferries_page(island_keys):
 
     # Build the page for each language
     island_count = len(island_keys)
-    for lang in ['en', 'el']:
+    for lang in _market.langs():
         is_el = (lang == 'el')
         if is_el:
             title = 'Πλοία από Αθήνα προς τα Νησιά: Όλες οι Διαδρομές'
@@ -2949,9 +2947,7 @@ def generate_ferries_page(island_keys):
             '<meta name="theme-color" content="#0B8FAC">\n'
             '<meta name="author" content="Stergios Gousios">\n'
             f'<link rel="canonical" href="{url}">\n'
-            f'<link rel="alternate" hreflang="en" href="{url_en}">\n'
-            f'<link rel="alternate" hreflang="el" href="{url_el}">\n'
-            f'<link rel="alternate" hreflang="x-default" href="{url_en}">\n'
+            + _market.hreflang(dict(en=url_en, el=url_el), sep='\n') + '\n'
             '<link rel="icon" href="/favicon.ico" sizes="any">\n'
             '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
             '<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">\n'
@@ -3296,7 +3292,7 @@ def generate_festivals_page(island_keys):
                       'Αύγουστος','Σεπτέμβριος','Οκτώβριος','Νοέμβριος','Δεκέμβριος']
 
     island_count = len(island_keys)
-    for lang in ['en', 'el']:
+    for lang in _market.langs():
         is_el = (lang == 'el')
         month_names = MONTH_NAMES_EL if is_el else MONTH_NAMES_EN
         if is_el:
@@ -3483,9 +3479,7 @@ def generate_festivals_page(island_keys):
             '<meta name="theme-color" content="#0B8FAC">\n'
             '<meta name="author" content="Stergios Gousios">\n'
             '<link rel="canonical" href="' + url + '">\n'
-            '<link rel="alternate" hreflang="en" href="' + SITE_URL + '/festivals/">\n'
-            '<link rel="alternate" hreflang="el" href="' + SITE_URL + '/el/festivals/">\n'
-            '<link rel="alternate" hreflang="x-default" href="' + SITE_URL + '/festivals/">\n'
+            + _market.hreflang(dict(en=SITE_URL + '/festivals/', el=SITE_URL + '/el/festivals/')) + '\n'
             '<link rel="icon" href="/favicon.ico" sizes="any">\n'
             '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
             '<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">\n'
@@ -3839,27 +3833,17 @@ def generate_sitemap(island_keys):
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">')
 
     def add_url_pair(en_path, el_path, priority, lastmod):
-        """Emit two <url> entries (one EN, one EL) with reciprocal hreflang alternates."""
-        url_en = f'{SITE_URL}{en_path}'
-        url_el = f'{SITE_URL}{el_path}'
-        # English entry
-        lines.append('  <url>')
-        lines.append(f'    <loc>{url_en}</loc>')
-        lines.append(f'    <lastmod>{lastmod}</lastmod>')
-        lines.append(f'    <priority>{priority}</priority>')
-        lines.append(f'    <xhtml:link rel="alternate" hreflang="en" href="{url_en}"/>')
-        lines.append(f'    <xhtml:link rel="alternate" hreflang="el" href="{url_el}"/>')
-        lines.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{url_en}"/>')
-        lines.append('  </url>')
-        # Greek entry — its OWN entry, with its OWN <loc>
-        lines.append('  <url>')
-        lines.append(f'    <loc>{url_el}</loc>')
-        lines.append(f'    <lastmod>{lastmod}</lastmod>')
-        lines.append(f'    <priority>{priority}</priority>')
-        lines.append(f'    <xhtml:link rel="alternate" hreflang="en" href="{url_en}"/>')
-        lines.append(f'    <xhtml:link rel="alternate" hreflang="el" href="{url_el}"/>')
-        lines.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{url_en}"/>')
-        lines.append('  </url>')
+        """One <url> entry per market language (each its OWN <loc>), with reciprocal hreflang alternates."""
+        urls = {'en': f'{SITE_URL}{en_path}', 'el': f'{SITE_URL}{el_path}'}
+        alts = _market.hreflang(urls, kind='xhtml', indent='    ')
+        for loc in _market.per_lang(urls):
+            lines.append('  <url>')
+            lines.append(f'    <loc>{loc}</loc>')
+            lines.append(f'    <lastmod>{lastmod}</lastmod>')
+            lines.append(f'    <priority>{priority}</priority>')
+            if alts:
+                lines.append(alts)
+            lines.append('  </url>')
 
     # Static homepages (EN + EL)
     for en_path, el_path, prio, lastmod in static_pages:

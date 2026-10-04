@@ -17,6 +17,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+import market as _market  # noqa: E402  (tools/ is on sys.path)
+
 ROOT = Path(__file__).resolve().parent.parent
 
 # Asset versions are read from index.html at build time. They used to be
@@ -122,9 +124,7 @@ def page_head(title, desc, path_en, path_el, lang):
 <meta name="theme-color" content="#0B8FAC">
 <meta name="author" content="Stergios Gousios">
 <link rel="canonical" href="{url}">
-<link rel="alternate" hreflang="en" href="{SITE_URL}{path_en}">
-<link rel="alternate" hreflang="el" href="{SITE_URL}{path_el}">
-<link rel="alternate" hreflang="x-default" href="{SITE_URL}{path_en}">
+{_market.hreflang(dict(en=SITE_URL + path_en, el=SITE_URL + path_el))}
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
@@ -255,7 +255,7 @@ def build_month_hubs(fests, names):
         slug, en, el, el_acc = MONTHS[mnum - 1]
         yr = hub_year(mnum)
         flist = sorted(flist, key=lambda f: f.get('when', ''))
-        for lang in ('en', 'el'):
+        for lang in _market.langs():
             is_el = lang == 'el'
             path_en, path_el = f'/festivals/{slug}/', f'/el/festivals/{slug}/'
             n = len(flist)
@@ -360,7 +360,7 @@ IKARIA_EL = f'''
 
 
 def build_ikaria():
-    for lang in ('en', 'el'):
+    for lang in _market.langs():
         is_el = lang == 'el'
         path_en, path_el = '/festivals/ikaria-panigiria/', '/el/festivals/ikaria-panigiria/'
         yr = hub_year(8)  # the big panigiria are in August
@@ -404,12 +404,11 @@ def patch_sitemap(pairs):
     for en, el in pairs:
         if SITE_URL + en in sm:
             continue
-        for path, other in ((en, el), (el, en)):
+        alts = _market.hreflang(dict(en=SITE_URL + en, el=SITE_URL + el), kind='xhtml', indent='    ')
+        for path in _market.per_lang(dict(en=en, el=el)):
             blocks.append(
                 f'  <url>\n    <loc>{SITE_URL}{path}</loc>\n    <lastmod>{today}</lastmod>\n    <priority>0.6</priority>\n'
-                f'    <xhtml:link rel="alternate" hreflang="en" href="{SITE_URL}{en}"/>\n'
-                f'    <xhtml:link rel="alternate" hreflang="el" href="{SITE_URL}{el}"/>\n'
-                f'    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE_URL}{en}"/>\n  </url>')
+                + (alts + '\n' if alts else '') + '  </url>')
     if blocks:
         sm = sm.replace('</urlset>', '\n'.join(blocks) + '\n</urlset>')
         sm_path.write_text(sm, encoding='utf-8')
