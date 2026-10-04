@@ -66,7 +66,8 @@
         "en": "Ferries &amp; Hopping",
         "el": "Πλοία &amp; Νησοπορία"
       },
-      "dom_id": "nav-hopping"
+      "dom_id": "nav-hopping",
+      "id": "hopping"
     },
     {
       "href": "festivals/",
@@ -119,5 +120,42 @@
         "el": "Πηγές φωτογραφιών"
       }
     }
-  ]
+  ],
+  "seo_nav": [
+    {
+      "href": "#data",
+      "label": {
+        "en": "All Islands",
+        "el": "Όλα τα Νησιά"
+      }
+    },
+    {
+      "href": "#compare",
+      "label": {
+        "en": "Compare",
+        "el": "Σύγκριση"
+      }
+    },
+    {
+      "href": "#match",
+      "label": {
+        "en": "Quiz",
+        "el": "Quiz"
+      }
+    }
+  ],
+  "strings": {
+    "aff_ferry": {
+      "en": "🚢 Book ferry tickets",
+      "el": "🚢 Κράτηση εισιτηρίων"
+    },
+    "aff_car": {
+      "en": "🚗 Rent a car",
+      "el": "🚗 Ενοικίαση αυτοκινήτου"
+    },
+    "aff_note": {
+      "en": "Affiliate links — they support this guide and cost you nothing.",
+      "el": "Affiliate σύνδεσμοι — στηρίζουν αυτόν τον οδηγό χωρίς κόστος για εσένα."
+    }
+  }
 }

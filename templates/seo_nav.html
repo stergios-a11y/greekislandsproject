@@ -1,0 +1,13 @@
+<nav class="seo-nav">
+  <div class="seo-nav-inner">
+    <a href="{{home}}" class="seo-nav-brand">
+      <img src="{{logo}}" alt="{{site_name}}" width="40" height="40">
+      <span>{{site_name}}</span>
+    </a>
+    <div class="seo-nav-links">
+{{links}}
+{{lang_link}}
+      <button type="button" class="dark-mode-toggle dm-static" aria-label="Toggle dark mode" onclick="var h=document.documentElement,d=!h.classList.contains('dark');h.classList.toggle('dark',d);try{localStorage.setItem('darkMode',d)}catch(e){}"></button>
+    </div>
+  </div>
+</nav>

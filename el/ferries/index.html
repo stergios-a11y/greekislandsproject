@@ -3,8 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FMFWLRM2J9');</script>
 <script>window.localStorage&&document.documentElement.classList.toggle("dark",localStorage.getItem("darkMode")===null?window.matchMedia("(prefers-color-scheme: dark)").matches:localStorage.getItem("darkMode")==="true")</script>
 <title>Πλοία από Αθήνα προς τα Νησιά: Όλες οι Διαδρομές</title>
 <meta name="description" content="Πλοία από Πειραιά, Ραφήνα και Λαύριο προς 88 νησιά. Διάρκεια, συχνότητα, τιμές. Ενημερωμένος οδηγός για το 2026.">
@@ -23,15 +21,33 @@
 <meta name="apple-mobile-web-app-title" content="Aegean Blueprint">
 <link rel="manifest" href="/site.webmanifest">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://aegeanblueprint.com/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://aegeanblueprint.com/og-image.png">
 <meta property="og:title" content="Πλοία από Αθήνα προς τα Νησιά: Όλες οι Διαδρομές">
 <meta property="og:description" content="Πλοία από Πειραιά, Ραφήνα και Λαύριο προς 88 νησιά. Διάρκεια, συχνότητα, τιμές. Ενημερωμένος οδηγός για το 2026.">
 <meta property="og:url" content="https://aegeanblueprint.com/el/ferries/">
+<meta property="og:image" content="https://aegeanblueprint.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Aegean Blueprint">
 <meta property="og:locale" content="el_GR">
-<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Πλοία από Αθήνα προς τα Νησιά: Όλες οι Διαδρομές">
+<meta name="twitter:description" content="Πλοία από Πειραιά, Ραφήνα και Λαύριο προς 88 νησιά. Διάρκεια, συχνότητα, τιμές. Ενημερωμένος οδηγός για το 2026.">
+<meta name="twitter:image" content="https://aegeanblueprint.com/og-image.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FMFWLRM2J9');</script>
 <link rel="stylesheet" href="/style.css?v=87">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9298260273942245" crossorigin="anonymous"></script>
+<script>
+  /* Desktop-only ads: suppress on viewports below 900px. */
+  (function(){
+    if (window.matchMedia('(max-width: 899.98px)').matches) {
+      window.adsbygoogle = window.adsbygoogle || [];
+      window.adsbygoogle.push = function(){};
+    }
+  })();
+</script>
+<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>
 <style>
   body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--font-body, system-ui), sans-serif; margin: 0; }
   .ferry-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }
@@ -77,11 +93,6 @@
   html.dark .ferry-table tbody tr:hover { background: rgba(11,143,172,0.12); }
   html.dark .ferry-nav, html.dark .ferry-footer { background: #2a2a2a; }
 </style>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9298260273942245" crossorigin="anonymous"></script>
-<script>
-  (function(){ if (window.matchMedia('(max-width: 899.98px)').matches) { window.adsbygoogle = window.adsbygoogle || []; window.adsbygoogle.push = function(){}; } })();
-</script>
-<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>
 </head>
 <body>
 <header>
@@ -92,19 +103,20 @@
     </a>
     <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>
     <nav class="top-nav" id="main-nav">
-      <a href="/el/#compare">Σύγκριση</a>
-      <a href="/el/#match">Βρες το Νησί σου</a>
-      <a href="/el/trip-cost/">Κόστος</a>
-      <a href="/el/#hopping" class="active">Πλοία & Νησοπορία</a>
-      <a href="/el/festivals/">Γιορτές</a>
-      <a href="/el/#data">Στοιχεία Νησιών</a>
-      <a href="/el/#mission">Σχετικά</a>
-      <a href="/el/#shortlist">⭐ Η Λίστα μου</a>
+      <a href="/el/#compare" id="nav-compare">Σύγκριση</a>
+      <a href="/el/#match" id="nav-match">Βρες το Νησί σου</a>
+      <a href="/el/trip-cost/" id="nav-tripcost">Κόστος</a>
+      <a href="/el/#hopping" id="nav-hopping" class="active">Πλοία &amp; Νησοπορία</a>
+      <a href="/el/festivals/" id="nav-festivals">Γιορτές</a>
+      <a href="/el/#data" id="nav-data">Στοιχεία Νησιών</a>
+      <a href="/el/#mission" id="nav-mission">Σχετικά</a>
+      <a href="/el/#shortlist" id="nav-shortlist">⭐ Η Λίστα μου</a>
     </nav>
-    <a class="lang-toggle-static" href="/ferries/" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;">    <button type="button" class="dark-mode-toggle dm-static" aria-label="Toggle dark mode" onclick="var h=document.documentElement,d=!h.classList.contains('dark');h.classList.toggle('dark',d);try{localStorage.setItem('darkMode',d)}catch(e){}"></button>
-<span style="margin-right: 4px;">🌐</span>EN</a>
+    <a class="lang-toggle-static" href="/ferries/" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;"><span style="margin-right: 4px;">🌐</span>EN</a>
+    <button type="button" class="dark-mode-toggle dm-static" aria-label="Toggle dark mode" onclick="var h=document.documentElement,d=!h.classList.contains('dark');h.classList.toggle('dark',d);try{localStorage.setItem('darkMode',d)}catch(e){}"></button>
   </div>
 </header>
+<script>document.getElementById("menu-toggle-btn").addEventListener("click",function(){var n=document.getElementById("main-nav");n.classList.toggle("open");this.classList.toggle("open");});</script>
 <main class="ferry-page">
   <h1>Πλοία από Αθήνα προς τα Νησιά: Όλες οι Διαδρομές</h1>
   <p class="ferry-intro">Σχεδόν όλα τα νησιά του Αιγαίου και του Ιονίου είναι προσβάσιμα με πλοίο από την Αθήνα — αλλά το λιμάνι έναρξης κάνει μεγάλη διαφορά. Ο <strong>Πειραιάς</strong> εξυπηρετεί τα περισσότερα Κυκλάδες, Δωδεκάνησα, Κρήτη και την υπόλοιπη Ελλάδα — είναι το μεγάλο λιμάνι, με μεγαλύτερες ουρές και πιο αργές διαδρομές. Η <strong>Ραφήνα</strong> είναι μικρότερη, γρηγορότερη για τις βόρειες Κυκλάδες (Άνδρος, Τήνος, Μύκονος, Πάρος, Νάξος). Το <strong>Λαύριο</strong> εξυπηρετεί λίγες αλλά συγκεκριμένες προορισμούς (Κέα, Κύθνος και την οδηγική σύνδεση προς τις βόρειες Κυκλάδες).</p>
@@ -122,14 +134,10 @@
 <section class="ferry-port" id="port-neapoli"><h2>Νεάπολη (Βοιών)</h2><div class="ferry-table-wrap"><table class="ferry-table"><colgroup><col class="ferry-col-dest"><col class="ferry-col-dur"><col class="ferry-col-freq"><col class="ferry-col-price"><col class="ferry-col-note"></colgroup><thead><tr><th>Προορισμός</th><th>Διάρκεια</th><th>Συχνότητα</th><th>Τιμή (€)</th><th>Σημείωση</th></tr></thead><tbody><tr><td class="ferry-dest"><a href="/el/island/kythira/">Kythira</a></td><td>1h</td><td>Καθημερινά+</td><td>€12-18</td><td class="ferry-note">multiple daily</td></tr></tbody></table></div></section>
 <section class="ferry-port" id="across-border"><h2>Πέρα από τα σύνορα</h2><p class="ferry-intro" style="font-size:15px">Από την Κέρκυρα η Αλβανία απέχει μισή ώρα· από τα νησιά του ανατολικού Αιγαίου η τουρκική ακτή είναι λίγο πιο πέρα. Εισιτήρια συνήθως επί τόπου, την ίδια μέρα — έχε μαζί διαβατήριο.</p><div class="ferry-table-wrap"><table class="ferry-table"><colgroup><col class="ferry-col-dest"><col class="ferry-col-dur"><col class="ferry-col-freq"><col class="ferry-col-price"><col class="ferry-col-note"></colgroup><thead><tr><th>Διαδρομή</th><th>Διάρκεια</th><th>Συχνότητα</th><th>Τιμή</th><th>Σημείωση</th></tr></thead><tbody><tr><td class="ferry-dest"><a href="/el/island/corfu/">Corfu</a> ↔ 🇦🇱 Αγ. Σαράντα</td><td>30–90 λεπτά</td><td>Έως 30 ημερησίως το καλοκαίρι</td><td>€15–€25</td><td class="ferry-note">Μονοήμερη εκδρομή για τα ερείπια UNESCO της Βουθρωτής ή τις παραλίες του Ξαμίλ. Δεν επιτρέπονται τα ενοικιαζόμενα αυτοκίνητα στη διαδρομή.</td></tr><tr><td class="ferry-dest"><a href="/el/island/lesvos/">Lesvos</a> ↔ 🇹🇷 Αϊβαλί</td><td>90 λεπτά</td><td>Καθημερινά το καλοκαίρι</td><td>€25–€45</td><td class="ferry-note">Το πλησιέστερο λιμάνι στην αρχαία Πέργαμο και στην Αιολική ακτή.</td></tr><tr><td class="ferry-dest"><a href="/el/island/chios/">Chios</a> ↔ 🇹🇷 Τσεσμές</td><td>45 λεπτά</td><td>Πολλά ημερησίως το καλοκαίρι</td><td>€25–€35</td><td class="ferry-note">Το Çeşme είναι τουριστικό θέρετρο, 85 χλμ από τη Σμύρνη — συνέχισε με λεωφορείο στην Έφεσο.</td></tr><tr><td class="ferry-dest"><a href="/el/island/samos/">Samos</a> ↔ 🇹🇷 Κουσάντασι</td><td>90 λεπτά</td><td>Καθημερινά το καλοκαίρι</td><td>€35–€55</td><td class="ferry-note">Το Κουσάντασι είναι η πύλη για την Έφεσο — από τους σημαντικότερους αρχαιολογικούς χώρους.</td></tr><tr><td class="ferry-dest"><a href="/el/island/samos/">Samos</a> ↔ 🇹🇷 Σεφέριχισαρ</td><td>60 λεπτά</td><td>~7 εβδομαδιαίως το καλοκαίρι</td><td>€30</td><td class="ferry-note">Πιο πρόσφατη διαδρομή. Το Seferihisar είναι slow-food πόλη, ιδανική για γαστρονομικά ταξίδια.</td></tr><tr><td class="ferry-dest"><a href="/el/island/kos/">Kos</a> ↔ 🇹🇷 Μπόντρουμ</td><td>30 λεπτά</td><td>Πολλά ημερησίως το καλοκαίρι</td><td>€25–€45</td><td class="ferry-note">Η συντομότερη διαδρομή Ελλάδας-Τουρκίας. Το Μπόντρουμ έχει το Κάστρο του Αγίου Πέτρου και τα ερείπια της Αλικαρνασσού.</td></tr><tr><td class="ferry-dest"><a href="/el/island/kos/">Kos</a> ↔ 🇹🇷 Τουργκούτ</td><td>30 λεπτά</td><td>Εποχιακό — έλεγξε πριν κλείσεις</td><td>€21</td><td class="ferry-note">Μικρότερο λιμάνι από το Μπόντρουμ, οδηγεί στα πιο ήσυχα χωριά της χερσονήσου.</td></tr><tr><td class="ferry-dest"><a href="/el/island/rhodes/">Rhodes</a> ↔ 🇹🇷 Μαρμαρίς</td><td>50 λεπτά (ιπτάμενο) – 2 ώρες</td><td>5-7 δρομολόγια ανά εβδομάδα</td><td>€45–€65</td><td class="ferry-note">Το Μαρμαρίς είναι τουριστικό θέρετρο με ωραία παλιά πόλη και εύκολη πρόσβαση στη Λυκιακή ακτή.</td></tr><tr><td class="ferry-dest"><a href="/el/island/rhodes/">Rhodes</a> ↔ 🇹🇷 Φετχιγιέ</td><td>1 ώρα 40 λεπτά</td><td>1-2 ημερησίως το καλοκαίρι</td><td>€35–€55</td><td class="ferry-note">Το Fethiye είναι η είσοδος στο μονοπάτι Lycian Way και στην παραλία Ölüdeniz.</td></tr><tr><td class="ferry-dest"><a href="/el/island/rhodes/">Rhodes</a> ↔ 🇹🇷 Μπόντρουμ</td><td>2 ώρες</td><td>3-5 ανά εβδομάδα το καλοκαίρι</td><td>€55</td><td class="ferry-note">Εποχιακή διαδρομή — μόνο το καλοκαίρι.</td></tr><tr><td class="ferry-dest"><a href="/el/island/symi/">Symi</a> ↔ 🇹🇷 Ντατσά</td><td>1,5 ώρα</td><td>2-3 ανά εβδομάδα το καλοκαίρι</td><td>€45</td><td class="ferry-note">Το Datça είναι ήρεμη χερσόνησος που οδηγεί στην αρχαία πόλη Κνίδο.</td></tr><tr><td class="ferry-dest"><a href="/el/island/kastellorizo/">Kastellorizo</a> ↔ 🇹🇷 Κας</td><td>20 λεπτά</td><td>Καθημερινά το καλοκαίρι</td><td>€20–€35</td><td class="ferry-note">Η συντομότερη και μία από τις παλιότερες διαδρομές. Το Καστελλόριζο βρίσκεται ακριβώς απέναντι από την τουρκική ακτή.</td></tr></tbody></table></div></section>
   <div class="ferry-footer"><p><strong>Κρατήσεις:</strong> Για τις περισσότερες διαδρομές μπορείς να αγοράσεις εισιτήριο επί τόπου στο λιμάνι την ίδια μέρα. Το καλοκαίρι έχει κίνηση — έλα 60-90 λεπτά πριν την αναχώρηση. Για κράτηση online συνιστούμε το <a href="https://www.ferryhopper.com/" target="_blank" rel="noopener">Ferryhopper</a>.</p><p style="margin-top: 12px;">Σχεδιάζεις διαδρομή πολλαπλών νησιών; Δες τον <a href="/el/#hopping">διαδραστικό χάρτη και σχεδιαστή διαδρομών</a> και τις <a href="/el/#hopping">προτεινόμενες διαδρομές νησοπορίας</a>.</p></div>
-<div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored">🚢 Κράτηση εισιτηρίων</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">🚗 Ενοικίαση αυτοκινήτου</a><p class="aff-note" data-i18n="affiliate.note"><a href="/el/privacy/#affiliate">Affiliate σύνδεσμοι — στηρίζουν αυτόν τον οδηγό χωρίς κόστος για εσένα.</a></p></div>
+<div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored" data-i18n="detail.bookferry">🚢 Κράτηση εισιτηρίων</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored" data-i18n="detail.rentcar">🚗 Ενοικίαση αυτοκινήτου</a><p class="aff-note" data-i18n="affiliate.note"><a href="/el/privacy/#affiliate">Affiliate σύνδεσμοι — στηρίζουν αυτόν τον οδηγό χωρίς κόστος για εσένα.</a></p></div>
 </main>
-<footer style="text-align:center;padding:24px 16px;font-size:13px;color:#888;border-top:1px solid #e5e5e5;margin-top:40px;">
-  <p style="margin:0;">© 2026 Aegean Blueprint · <a href="/el/privacy/" style="color:#888;text-decoration:none;">Απόρρητο</a> · <a href="/el/credits/" style="color:#888;text-decoration:none;">Πηγές φωτογραφιών</a></p>
+<footer class="seo-footer" style="max-width:1000px;margin:0 auto;padding:24px 22px;font-size:13px;color:#637080">
+  <p>© 2026 Aegean Blueprint · <a href="/ferries/" style="color:#076880;text-decoration:none">English</a> · <a href="/el/privacy/" style="color:#076880;text-decoration:none">Απόρρητο</a> · <a href="/el/credits/" style="color:#076880;text-decoration:none">Πηγές φωτογραφιών</a></p>
 </footer>
-<script>
-  /* Mobile hamburger toggle */
-  document.getElementById("menu-toggle-btn").addEventListener("click", function(){ document.getElementById("main-nav").classList.toggle("open"); });
-</script>
 </body>
 </html>

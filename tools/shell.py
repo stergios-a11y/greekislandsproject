@@ -21,8 +21,17 @@ def template(name):
     raise FileNotFoundError(f'template {name} not found in {[str(d) for d in TPL_DIRS]}')
 
 
+_LINE_PH = re.compile(r'^([ \t]*)\{\{\s*(\w+)\s*\}\}[ \t]*\n', re.M)
+
+
 def render(_tpl, **kw):
-    return _PH.sub(lambda m: str(kw[m.group(1)]), template(_tpl))
+    """Fill {{name}} placeholders. A placeholder alone on its line that renders empty
+    removes the whole line (no stray blank lines for optional blocks)."""
+    def line(m):
+        v = str(kw[m.group(2)])
+        return '' if v == '' else m.group(1) + v + '\n'
+    text = _LINE_PH.sub(line, template(_tpl) + '\n').rstrip('\n')
+    return _PH.sub(lambda m: str(kw[m.group(1)]), text)
 
 
 def esc(s):
@@ -55,16 +64,20 @@ def lang_info(code):
     return next(l for l in M.languages() if l['code'] == code)
 
 
-def page_head(title, desc, urls, lang, style_v, og_title=None, og_image=None, extra='', close=True):
+def page_head(title, desc, urls, lang, style_v, og_title=None, og_image=None, extra='', close=True,
+              analytics_tag=True, ads=False, early=''):
     """<!DOCTYPE> … <head> contents. urls = {lang: absolute url} for this page in every language.
     close=False leaves </head> to the caller (pages that append their own <style>)."""
     b = brand()
-    out = render('page_head.html', lang=lang, title=esc(title), desc=esc(desc), url=urls[lang],
+    out = render('page_head.html', lang=lang, title=esc(title), desc=esc(desc), url=urls[lang], early=early,
                  hreflang=M.hreflang(urls), theme_color=b['theme_color'], author=b['author'],
                  og_title=esc(og_title if og_title is not None else title),
                  og_image=og_image or b['site_url'] + b['og_image'],
                  og_locale=lang_info(lang).get('og_locale', lang), site_name=b['site_name'],
-                 analytics=analytics(), style_v=style_v, extra=extra, head_extra=b.get('head_extra', ''))
+                 og_locale_alt='\n'.join(f'<meta property="og:locale:alternate" content="{l.get("og_locale", l["code"])}">'
+                                         for l in M.languages() if l['code'] != lang and l['code'] in urls),
+                 analytics=analytics() if analytics_tag else '', style_v=style_v, extra=extra,
+                 ads=optional('partials/ads_head.html') if ads else '', head_extra=b.get('head_extra', ''))
     return out + '\n</head>' if close else out
 
 
@@ -111,9 +124,28 @@ def footer_links(lang):
                              label=label(f['label'], lang)) for f in M.config().get('footer_links', []))
 
 
-def app_footer(lang, year):
+def strings(lang):
+    """Market UI strings (market.json "strings") for one language."""
+    return {k: label(v, lang) for k, v in M.config().get('strings', {}).items()}
+
+
+def affiliate_cta(lang):
+    return optional('partials/affiliate_cta.html', home=M.lang_prefix(lang) + '/', **strings(lang))
+
+
+def seo_nav(lang, alt_href):
+    """Compact top bar of the island pages."""
+    b = brand()
     home = M.lang_prefix(lang) + '/'
-    return render('app_footer.html', affiliate_cta=optional('partials/affiliate_cta.html', home=home),
+    links = '\n'.join(render('partials/seo_nav_link.html', href=home + i['href'], label=label(i['label'], lang))
+                      for i in M.config().get('seo_nav', []))
+    others = [c for c in M.langs() if c != lang]
+    ll = render('partials/seo_nav_lang.html', href=alt_href, label=others[0].upper()) if others else ''
+    return render('seo_nav.html', home=home, logo=b['logo'], site_name=b['site_name'], links=links, lang_link=ll)
+
+
+def app_footer(lang, year):
+    return render('app_footer.html', affiliate_cta=affiliate_cta(lang),
                   year=year, site_name=brand()['site_name'], links=footer_links(lang))
 
 

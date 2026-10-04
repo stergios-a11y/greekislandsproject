@@ -82,6 +82,7 @@ import html
 import sys as _sys_m
 _sys_m.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
 import market as _market
+import shell
 import unicodedata
 from pathlib import Path
 
@@ -92,7 +93,9 @@ OUT_EL = ROOT / 'el' / 'island'
 SITEMAP_PATH = ROOT / 'sitemap.xml'
 
 SITE_URL = _market.config()['brand']['site_url']
-SITE_NAME = 'Aegean Blueprint'
+SITE_NAME = shell.brand()['site_name']
+STYLE_V = re.search(r'style\.css\?v=(\d+)', (Path(__file__).resolve().parent.parent / 'index.html').read_text(encoding='utf-8')).group(1)
+GA_ID = shell.brand().get('ga_id', '')
 
 # ---------------------------------------------------------------------
 # Pull the Greek name map directly from i18n.js so we keep one source
@@ -2150,53 +2153,17 @@ def render_page(key, data, meta, lang='en'):
     # is reflected in the article:modified_time meta (used by Google for E-E-A-T).
     modified_date = file_lastmod(ISLANDS_DIR / f'{key}.json')
 
-    return f'''<!DOCTYPE html>
-<html lang="{html_lang}">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>window.localStorage&&document.documentElement.classList.toggle("dark",localStorage.getItem("darkMode")===null?window.matchMedia("(prefers-color-scheme: dark)").matches:localStorage.getItem("darkMode")==="true")</script>
-<title>{esc(title)}</title>
-<meta name="description" content="{esc(description)}">
-<meta name="theme-color" content="#0B8FAC">
-<meta name="author" content="Stergios Gousios">
-<meta property="article:author" content="Stergios Gousios">
-<meta property="article:modified_time" content="{modified_date}">
-<link rel="canonical" href="{url}">
-{f'<link rel="preload" as="image" href="{esc(hero_src_1280(_hero_url))}" fetchpriority="high">' if _hero_url else ''}
-{_market.hreflang(dict(en=url_en, el=url_el))}
-<link rel="icon" href="{asset_prefix}favicon.ico" sizes="any">
-<link rel="icon" href="{asset_prefix}favicon.svg" type="image/svg+xml">
-<link rel="icon" type="image/png" sizes="32x32" href="{asset_prefix}favicon-32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="{asset_prefix}favicon-96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="{asset_prefix}favicon-16.png">
-<link rel="apple-touch-icon" href="{asset_prefix}apple-touch-icon.png">
-<meta name="apple-mobile-web-app-title" content="Aegean Blueprint">
-<link rel="manifest" href="{asset_prefix}site.webmanifest">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="{esc(title)}">
-<meta property="og:description" content="{esc(description)}">
-<meta property="og:url" content="{url}">
-<meta property="og:image" content="{SITE_URL}/og/{key}.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:site_name" content="{SITE_NAME}">
-<meta property="og:locale" content="{og_locale}">
-<meta property="og:locale:alternate" content="{('el_GR' if lang=='en' else 'en_US')}">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{esc(title)}">
-<meta name="twitter:description" content="{esc(description)}">
-<meta name="twitter:image" content="{SITE_URL}/og/{key}.jpg">
-
-<!-- Structured data -->
-<script type="application/ld+json">{schema_json}</script>
-
-<!-- SPA assets — load the same CSS as the main site so the SEO body blends visually -->
-<link rel="stylesheet" href="{asset_prefix}style.css?v=87">
+    _alt_path = f'/el/island/{key}/' if lang == 'en' else f'/island/{key}/'
+    # Hero preload stays near the top of <head> (LCP image).
+    _early = (f'<meta property="article:author" content="{esc(shell.brand()["author"])}">\n'
+              f'<meta property="article:modified_time" content="{modified_date}">'
+              + (f'\n<link rel="preload" as="image" href="{esc(hero_src_1280(_hero_url))}" fetchpriority="high">' if _hero_url else ''))
+    _extra = f'<script type="application/ld+json">{schema_json}</script>'
+    # Analytics for island pages loads deferred at the end of <body> (below), not in <head>.
+    _head = shell.page_head(title, description, {'en': url_en, 'el': url_el}, lang, STYLE_V,
+                            og_image=f'{SITE_URL}/og/{key}.jpg', extra=_extra, early=_early,
+                            analytics_tag=False, ads=True, close=False)
+    return f'''{_head}
 <style>
   /* Minimal SEO body styling — these elements exist only in pre-rendered pages */
   .seo-island-content {{
@@ -2439,38 +2406,10 @@ def render_page(key, data, meta, lang='en'):
   .seo-footer a {{ color: #0B8FAC; text-decoration: none; }}
   .seo-footer p {{ margin: 4px 0; }}
 </style>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9298260273942245" crossorigin="anonymous"></script>
-<script>
-  /* Desktop-only ads: suppress on viewports below 900px. */
-  (function(){{
-    if (window.matchMedia('(max-width: 899.98px)').matches) {{
-      window.adsbygoogle = window.adsbygoogle || [];
-      window.adsbygoogle.push = function(){{}};
-    }}
-  }})();
-</script>
-<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>
 </head>
 <body data-island-key="{key}" data-lang="{lang}">
 
-<!-- Top navigation bar — teal banner matching the main SPA header -->
-<nav class="seo-nav">
-  <div class="seo-nav-inner">
-    <a href="{('/' if lang == 'en' else '/el/')}" class="seo-nav-brand">
-      <img src="/logo-hero.svg" alt="Aegean Blueprint" width="40" height="40">
-      <span>Aegean Blueprint</span>
-    </a>
-    <div class="seo-nav-links">
-      <a href="{('/' if lang == 'en' else '/el/')}#data">{'All Islands' if lang == 'en' else 'Όλα τα Νησιά'}</a>
-      <a href="{('/' if lang == 'en' else '/el/')}#compare">{'Compare' if lang == 'en' else 'Σύγκριση'}</a>
-      <a href="{('/' if lang == 'en' else '/el/')}#match">{'Quiz' if lang == 'en' else 'Quiz'}</a>
-      <a href="{(f'/el/island/{key}/' if lang == 'en' else f'/island/{key}/')}" class="seo-nav-lang">
-        🌐 {'EL' if lang == 'en' else 'EN'}
-      </a>
-      <button type="button" class="dark-mode-toggle dm-static" aria-label="Toggle dark mode" onclick="var h=document.documentElement,d=!h.classList.contains('dark');h.classList.toggle('dark',d);try{{localStorage.setItem('darkMode',d)}}catch(e){{}}"></button>
-    </div>
-  </div>
-</nav>
+{shell.seo_nav(lang, _alt_path)}
 
 <!-- The page now hydrates into the full SPA experience. The SEO content
      below (#seo-fallback) is what crawlers see; once the SPA boots, it
@@ -2493,9 +2432,7 @@ def render_page(key, data, meta, lang='en'):
 </div>
 
 <!-- Footer -->
-<footer class="seo-footer">
-  <p>© {COPYRIGHT_YEAR} Aegean Blueprint · <a href="{('/el/island/' if lang == 'en' else '/island/')}{key}/">{'Ελληνικά' if lang == 'en' else 'English'}</a> · <a href="{'/privacy/' if lang == 'en' else '/el/privacy/'}">{'Privacy' if lang == 'en' else 'Απόρρητο'}</a> · <a href="{'/credits/' if lang == 'en' else '/el/credits/'}">{'Photo credits' if lang == 'en' else 'Πηγές φωτογραφιών'}</a></p>
-</footer>
+{shell.static_footer(lang, _alt_path, COPYRIGHT_YEAR)}
 </div><!-- /#seo-fallback -->
 
 <!-- SPA view-detail skeleton — populated by script.js renderIslandPage(),
@@ -2631,7 +2568,7 @@ def render_page(key, data, meta, lang='en'):
 (function() {{
   var s = document.createElement('script');
   s.async = true;
-  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9';
+  s.src = 'https://www.googletagmanager.com/gtag/js?id={GA_ID}';
   document.head.appendChild(s);
   window.dataLayer = window.dataLayer || [];
   // Assigned to window, not declared: this snippet runs inside an IIFE, so a
@@ -2639,7 +2576,7 @@ def render_page(key, data, meta, lang='en'):
   // gtag — which is exactly how affiliate_click and section_view went missing.
   window.gtag = window.gtag || function(){{ dataLayer.push(arguments); }};
   gtag('js', new Date());
-  gtag('config', 'G-FMFWLRM2J9');
+  gtag('config', '{GA_ID}');
 }})();
 </script>
 
@@ -2935,40 +2872,7 @@ def generate_ferries_page(island_keys):
             return nav_label_map[k][1 if is_el else 0]
 
         html_out = (
-            '<!DOCTYPE html>\n'
-            f'<html lang="{"el" if is_el else "en"}">\n'
-            '<head>\n'
-            '<meta charset="UTF-8">\n'
-            '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
-            '<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>\n<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag(\'js\',new Date());gtag(\'config\',\'G-FMFWLRM2J9\');</script>\n'
-            '<script>window.localStorage&&document.documentElement.classList.toggle("dark",localStorage.getItem("darkMode")===null?window.matchMedia("(prefers-color-scheme: dark)").matches:localStorage.getItem("darkMode")==="true")</script>\n'
-            f'<title>{esc(title)}</title>\n'
-            f'<meta name="description" content="{esc(description)}">\n'
-            '<meta name="theme-color" content="#0B8FAC">\n'
-            '<meta name="author" content="Stergios Gousios">\n'
-            f'<link rel="canonical" href="{url}">\n'
-            + _market.hreflang(dict(en=url_en, el=url_el), sep='\n') + '\n'
-            '<link rel="icon" href="/favicon.ico" sizes="any">\n'
-            '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
-            '<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">\n'
-            '<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">\n'
-            '<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">\n'
-            '<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n'
-            '<meta name="apple-mobile-web-app-title" content="Aegean Blueprint">\n'
-            '<link rel="manifest" href="/site.webmanifest">\n'
-            '<meta property="og:type" content="website">\n'
-            # /ferries/ and /festivals/ build their own <head> rather than using the
-            # shared helper, and both shipped with no og:image — so every social share
-            # of the two biggest non-island pages rendered without a card image.
-            '<meta property="og:image" content="https://aegeanblueprint.com/og-image.png">\n'
-            '<meta name="twitter:card" content="summary_large_image">\n'
-            '<meta name="twitter:image" content="https://aegeanblueprint.com/og-image.png">\n'
-            f'<meta property="og:title" content="{esc(title)}">\n'
-            f'<meta property="og:description" content="{esc(description)}">\n'
-            f'<meta property="og:url" content="{url}">\n'
-            f'<meta property="og:locale" content="{"el_GR" if is_el else "en_US"}">\n'
-            '<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>\n'
-            '<link rel="stylesheet" href="/style.css?v=87">\n'
+            shell.page_head(title, description, {'en': url_en, 'el': url_el}, lang, STYLE_V, ads=True, close=False) + '\n'
             '<style>\n'
             '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--font-body, system-ui), sans-serif; margin: 0; }\n'
             '  .ferry-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }\n'
@@ -3014,58 +2918,19 @@ def generate_ferries_page(island_keys):
             '  html.dark .ferry-table tbody tr:hover { background: rgba(11,143,172,0.12); }\n'
             '  html.dark .ferry-nav, html.dark .ferry-footer { background: #2a2a2a; }\n'
             '</style>\n'
-            '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9298260273942245" crossorigin="anonymous"></script>\n'
-            '<script>\n'
-            '  (function(){ if (window.matchMedia(\'(max-width: 899.98px)\').matches) { window.adsbygoogle = window.adsbygoogle || []; window.adsbygoogle.push = function(){}; } })();\n'
-            '</script>\n'
-            '<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>\n'
-            '</head>\n<body>\n'
-            '<header>\n'
-            '  <div class="header-content">\n'
-            f'    <a class="logo-wrapper" href="/{"el/" if is_el else ""}" style="text-decoration: none;">\n'
-            '      <img src="/logo-hero.svg" id="site-logo" alt="Aegean Blueprint logo">\n'
-            '      <span id="brand-text"><span class="brand-word">Aegean</span> <span class="brand-word">Blueprint</span></span>\n'
-            '    </a>\n'
-            '    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>\n'
-            '    <nav class="top-nav" id="main-nav">\n'
-            f'      <a href="/{"el/" if is_el else ""}#compare">{navlbl("compare")}</a>\n'
-            f'      <a href="/{"el/" if is_el else ""}#match">{navlbl("match")}</a>\n'
-            f'      <a href="/{"el/" if is_el else ""}trip-cost/">{navlbl("tripcost")}</a>\n'
-            f'      <a href="/{"el/" if is_el else ""}#hopping" class="active">{navlbl("hopping")}</a>\n'
-            f'      <a href="/{"el/" if is_el else ""}festivals/">{navlbl("festivals")}</a>\n'
-            f'      <a href="/{"el/" if is_el else ""}#data">{navlbl("data")}</a>\n'
-            f'      <a href="/{"el/" if is_el else ""}#mission">{navlbl("mission")}</a>\n'
-            f'      <a href="/{"el/" if is_el else ""}#shortlist">{navlbl("shortlist")}</a>\n'
-            '    </nav>\n'
-            f'    <a class="lang-toggle-static" href="{"/ferries/" if is_el else "/el/ferries/"}" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;">'
-            '    <button type="button" class="dark-mode-toggle dm-static" aria-label="Toggle dark mode" onclick="var h=document.documentElement,d=!h.classList.contains(\'dark\');h.classList.toggle(\'dark\',d);try{localStorage.setItem(\'darkMode\',d)}catch(e){}"></button>\n'
-            f'<span style="margin-right: 4px;">🌐</span>{"EN" if is_el else "EL"}</a>\n'
-            '  </div>\n'
-            '</header>\n'
+            '</head>\n'
+            + shell.site_header(lang, '/ferries/' if is_el else '/el/ferries/', active='hopping') + '\n'
             '<main class="ferry-page">\n'
             f'  <h1>{esc(title.rsplit(" | ", 1)[0])}</h1>\n'
             f'  <p class="ferry-intro">{intro}</p>\n'
             f'  <div class="ferry-nav"><span class="ferry-nav-label">{esc(port_subtitle)}</span>{port_nav}</div>\n'
             + '\n'.join(port_sections) + intl_section +
             f'\n  <div class="ferry-footer"><p>{booking_intro}{ferryhopper_link}</p><p style="margin-top: 12px;">{crosslink_text}</p></div>\n'
-            '<div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored">' + ('🚢 Κράτηση εισιτηρίων' if is_el else '🚢 Book ferry tickets') + '</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">' + ('🚗 Ενοικίαση αυτοκινήτου' if is_el else '🚗 Rent a car') + '</a>' + ('<p class="aff-note" data-i18n="affiliate.note"><a href="/el/privacy/#affiliate">Affiliate σύνδεσμοι — στηρίζουν αυτόν τον οδηγό χωρίς κόστος για εσένα.</a></p>' if is_el else '<p class="aff-note" data-i18n="affiliate.note"><a href="/privacy/#affiliate">Affiliate links — they support this guide and cost you nothing.</a></p>') + '</div>\n'
+            + shell.affiliate_cta(lang) + '\n'
             '</main>\n'
             # /ferries/ was the one page type with no footer at all — so no
             # privacy link and nowhere to reach the photo credits from.
-            '<footer style="text-align:center;padding:24px 16px;font-size:13px;color:#888;'
-            'border-top:1px solid #e5e5e5;margin-top:40px;">\n'
-            f'  <p style="margin:0;">© {COPYRIGHT_YEAR} Aegean Blueprint · <a href="'
-            + ('/el/privacy/' if is_el else '/privacy/')
-            + '" style="color:#888;text-decoration:none;">'
-            + ('Απόρρητο' if is_el else 'Privacy')
-            + '</a> · <a href="' + ('/el/credits/' if is_el else '/credits/')
-            + '" style="color:#888;text-decoration:none;">'
-            + ('Πηγές φωτογραφιών' if is_el else 'Photo credits') + '</a></p>\n'
-            '</footer>\n'
-            '<script>\n'
-            '  /* Mobile hamburger toggle */\n'
-            '  document.getElementById("menu-toggle-btn").addEventListener("click", function(){ document.getElementById("main-nav").classList.toggle("open"); });\n'
-            '</script>\n'
+            + shell.static_footer(lang, '/ferries/' if is_el else '/el/ferries/', COPYRIGHT_YEAR) + '\n'
             '</body>\n</html>\n'
         )
 
@@ -3250,384 +3115,6 @@ def inject_homepage_seo_links(island_keys):
     upsert(ROOT / 'index.html', 'en')
     upsert(ROOT / 'el' / 'index.html', 'el')
     return len(island_keys)
-
-
-def generate_festivals_page(island_keys):
-    """Build a 12-month festival calendar page (EN + EL) at /festivals/index.html.
-    Static HTML — festivals don't change often, and the page is a real SEO surface
-    for queries like 'greek island festivals 2027' or 'panigiri august'.
-    """
-    # Collect all festivals across islands
-    all_fests = []
-    for key in island_keys:
-        json_path = ISLANDS_DIR / f'{key}.json'
-        try:
-            d = json.loads(json_path.read_text())
-        except Exception:
-            continue
-        _isl_hero_url, _ = find_hero_image(d)
-        _isl_hero = hero_src_1280(_isl_hero_url) if _isl_hero_url else ''
-        for fest in (d.get('festivals') or []):
-            if not isinstance(fest, dict): continue
-            months = sorted(parse_when_to_months(fest.get('when', '')))
-            all_fests.append({
-                'island': key,
-                'island_hero': _isl_hero,
-                'name': fest.get('name', ''),
-                'name_el': fest.get('name_el') or fest.get('name', ''),
-                'when': fest.get('when', ''),
-                'when_el': fest.get('when_el') or fest.get('when', ''),
-                'desc': fest.get('desc', ''),
-                'desc_el': fest.get('desc_el') or fest.get('desc', ''),
-                'photo': fest.get('photo', ''),
-                'months': months,
-                'sort_key': months[0] if months else 13,
-            })
-
-    all_fests.sort(key=lambda f: (f['sort_key'], f['name']))
-
-    MONTH_NAMES_EN = ['January','February','March','April','May','June','July',
-                      'August','September','October','November','December']
-    MONTH_NAMES_EL = ['Ιανουάριος','Φεβρουάριος','Μάρτιος','Απρίλιος','Μάιος','Ιούνιος','Ιούλιος',
-                      'Αύγουστος','Σεπτέμβριος','Οκτώβριος','Νοέμβριος','Δεκέμβριος']
-
-    island_count = len(island_keys)
-    for lang in _market.langs():
-        is_el = (lang == 'el')
-        month_names = MONTH_NAMES_EL if is_el else MONTH_NAMES_EN
-        if is_el:
-            # CTR pass Aug 2026: this hub is the site's largest single pool of
-            # impressions (13,675 in 28 days) at 1.71% CTR, position 8.6. The
-            # old title ended in "αναλυτικό ημερολόγιο" plus a brand suffix
-            # that pushed it to 77 chars — the promise got truncated away.
-            title = f'Πανηγύρια & Γιορτές Νησιών {datetime.now().year}: Όλες οι Ημερομηνίες'
-            intro = (f'Θρησκευτικές γιορτές, πανηγύρια και παραδοσιακές εκδηλώσεις σε όλα τα {island_count} ελληνικά νησιά. '
-                     'Για τις κινητές γιορτές, οι ημερομηνίες είναι ρυθμισμένες για το 2027. '
-                     'Το ημερολόγιο είναι ο καλύτερος τρόπος να σχεδιάσεις ταξίδι γύρω από κάτι συγκεκριμένο.')
-            # Self-contained meta description (≤160 chars). Don't slice `intro` —
-            # it's body copy and slicing truncates mid-sentence.
-            meta_desc = (f'Κάθε πανηγύρι και θρησκευτική γιορτή σε {island_count} ελληνικά νησιά, ανά ημερομηνία — '
-                         'ποιο νησί, τι γίνεται, και πώς να πας. Το πιο αυθεντικό κομμάτι κάθε νησιού.')
-            h1 = 'Γιορτές & Πανηγύρια — Ημερολόγιο'
-        else:
-            title = f'Greek Island Festivals {datetime.now().year}: Every Panigiri, by Date'
-            intro = (f'Religious feasts, panigiria, and traditional celebrations across all {island_count} Greek islands. '
-                     'Dates pinned to 2027 where movable. The calendar is the single best way to plan a trip '
-                     'around something specific — most of these festivals are the deepest-rooted experiences '
-                     'an island offers.')
-            # Self-contained meta description (≤160 chars).
-            meta_desc = (f'Every panigiri and religious feast across {island_count} Greek islands, by date — which island, '
-                         'what actually happens, and how to join in. The deepest way to plan a trip.')
-            h1 = f'Greek Island Festivals {datetime.now().year} — full calendar'
-
-        url = f'{SITE_URL}/' + ('el/' if is_el else '') + 'festivals/'
-
-        # Build month sections
-        month_blocks = []
-        for m in range(1, 13):
-            # Show each festival only in its EARLIEST month — multi-month festivals
-            # (e.g. Apokries spanning Feb-Mar) used to appear twice. Now they appear
-            # in their first month only, with their date string showing the full span.
-            month_fests = [f for f in all_fests if f['months'] and f['months'][0] == m]
-            if not month_fests:
-                continue
-            heading = month_names[m - 1]
-            cards = []
-            for f in month_fests:
-                if is_el:
-                    island_name = GREEK_NAMES.get(f['island'], ISLAND_META.get(f['island'], {}).get('name', f['island']))
-                else:
-                    island_name = ISLAND_META.get(f['island'], {}).get('name', f['island'])
-                island_href = '/' + ('el/' if is_el else '') + 'island/' + f['island'] + '/'
-                fest_name = f['name_el'] if is_el else f['name']
-                when_text = f['when_el'] if is_el else f['when']
-                desc_text = f['desc_el'] if is_el else f['desc']
-
-                photo_src = f.get('photo') or f.get('image') or ''
-                photo_html = ''
-                if photo_src:
-                    photo_html = '<img class="fest-photo" src="' + esc(photo_src) + '" alt="' + esc(fest_name) + '" loading="lazy">'
-
-                months_attr = ','.join(str(m) for m in f['months'])
-                card_html = (
-                    '<article class="fest-card" data-island="' + esc(f['island']) + '" data-months="' + months_attr + '">'
-                    + photo_html
-                    + '<div class="fest-text">'
-                    + '<a class="fest-island" href="' + island_href + '">' + esc(island_name) + '</a>'
-                    + '<h3 class="fest-name">' + esc(fest_name) + '</h3>'
-                    + '<p class="fest-when">' + esc(when_text) + '</p>'
-                    + '<p class="fest-desc">' + esc(desc_text) + '</p>'
-                    + '</div></article>'
-                )
-                cards.append(card_html)
-
-            section_html = (
-                '<section class="fest-month" id="month-' + str(m) + '">'
-                + '<h2 class="fest-month-heading">' + heading
-                + ' <span class="fest-month-count">(' + str(len(month_fests)) + ')</span></h2>'
-                + '<div class="fest-cards">' + ''.join(cards) + '</div>'
-                + '</section>'
-            )
-            month_blocks.append(section_html)
-
-        # Quick-jump links — count matches the earliest-month-only display logic
-        nav_links = []
-        for m in range(1, 13):
-            count = sum(1 for f in all_fests if f['months'] and f['months'][0] == m)
-            if count > 0:
-                short_name = month_names[m - 1][:3]
-                nav_links.append('<a href="#month-' + str(m) + '">' + short_name + ' (' + str(count) + ')</a>')
-        nav_html = ' · '.join(nav_links)
-
-        # --- Festivals UX: filters + "happening now & soon" ---
-        L_month  = 'Μήνας' if is_el else 'Month'
-        L_island = 'Νησί' if is_el else 'Island'
-        L_all    = 'Όλα' if is_el else 'All'
-        L_clear  = 'Καθαρισμός' if is_el else 'Clear'
-        L_soon   = 'Τώρα & προσεχώς' if is_el else 'Happening now & soon'
-        L_this   = 'Αυτόν τον μήνα' if is_el else 'This month'
-        L_next   = 'Τον επόμενο μήνα' if is_el else 'Next month'
-        L_none   = 'Καμία γιορτή δεν ταιριάζει με τα φίλτρα.' if is_el else 'No festivals match these filters.'
-
-        _isl_names = {}
-        for _f in all_fests:
-            if is_el:
-                _isl_names[_f['island']] = GREEK_NAMES.get(_f['island'], ISLAND_META.get(_f['island'], {}).get('name', _f['island']))
-            else:
-                _isl_names[_f['island']] = ISLAND_META.get(_f['island'], {}).get('name', _f['island'])
-        # Greek-aware collation for the island filter dropdown.
-        _island_options = sorted(_isl_names.items(), key=lambda kv: gr_sort_key(kv[1]))
-        _present_months = sorted({m for f in all_fests for m in f['months']})
-        _month_opts = ''.join('<option value="' + str(m) + '">' + month_names[m-1] + '</option>' for m in _present_months)
-        _island_opts = ''.join('<option value="' + k + '">' + esc(nm) + '</option>' for k, nm in _island_options)
-
-        filter_html = (
-            '<div class="fest-controls">'
-            + '<select id="fest-f-month" aria-label="' + esc(L_month) + '"><option value="">' + esc(L_month) + ': ' + esc(L_all) + '</option>' + _month_opts + '</select>'
-            + '<select id="fest-f-island" aria-label="' + esc(L_island) + '"><option value="">' + esc(L_island) + ': ' + esc(L_all) + '</option>' + _island_opts + '</select>'
-            + '<button type="button" class="fest-clear" id="fest-f-clear">' + esc(L_clear) + '</button>'
-            + '</div>'
-            + '<section class="fest-soon" id="fest-soon" hidden><h2>' + esc(L_soon) + '</h2><div class="fest-cards" id="fest-soon-cards"></div></section>'
-            + '<p class="fest-noresults" id="fest-noresults">' + esc(L_none) + '</p>'
-        )
-
-        soon_script = (
-            '<script>\n(function(){\n'
-            '  var monthSel=document.getElementById("fest-f-month"),islandSel=document.getElementById("fest-f-island"),clearBtn=document.getElementById("fest-f-clear"),noRes=document.getElementById("fest-noresults");\n'
-            '  var sections=[].slice.call(document.querySelectorAll(".fest-month"));\n'
-            '  var cards=[].slice.call(document.querySelectorAll(".fest-month .fest-card"));\n'
-            '  function apply(){var m=monthSel.value,isl=islandSel.value,any=false;\n'
-            '    cards.forEach(function(c){var okM=!m||(","+c.getAttribute("data-months")+",").indexOf(","+m+",")>-1;var okI=!isl||c.getAttribute("data-island")===isl;var show=okM&&okI;c.classList.toggle("is-hidden",!show);if(show)any=true;});\n'
-            '    sections.forEach(function(s){s.classList.toggle("is-hidden",s.querySelectorAll(".fest-card:not(.is-hidden)").length===0);});\n'
-            '    noRes.style.display=any?"none":"block";}\n'
-            '  monthSel.addEventListener("change",apply);islandSel.addEventListener("change",apply);\n'
-            '  clearBtn.addEventListener("click",function(){monthSel.value="";islandSel.value="";apply();});\n'
-            '  var now=new Date(),cm=now.getMonth()+1,nm=cm===12?1:cm+1,picked=[];\n'
-            '  var soon=document.getElementById("fest-soon"),soonCards=document.getElementById("fest-soon-cards");\n'
-            '  function pick(month,tagText,tagClass){cards.forEach(function(c){if(picked.indexOf(c)>-1)return;if((","+c.getAttribute("data-months")+",").indexOf(","+month+",")>-1){picked.push(c);var clone=c.cloneNode(true);clone.classList.remove("is-hidden");var tag=document.createElement("span");tag.className="fest-soon-tag "+tagClass;tag.textContent=tagText;var txt=clone.querySelector(".fest-text");if(txt)txt.insertBefore(tag,txt.firstChild);soonCards.appendChild(clone);}});}\n'
-            '  pick(cm,' + json.dumps(L_this, ensure_ascii=False) + ',"this");pick(nm,' + json.dumps(L_next, ensure_ascii=False) + ',"next");\n'
-            '  if(soonCards.children.length>0)soon.hidden=false;\n'
-            '})();\n</script>\n'
-        )
-        # --- end Festivals UX block ---
-
-        # Event structured data (schema.org) — one Event per festival with a parseable date.
-        _events = []
-        for _f in all_fests:
-            _start, _end = festival_iso_dates(_f['when'])
-            if not _start:
-                continue
-            if is_el:
-                _iname = GREEK_NAMES.get(_f['island'], ISLAND_META.get(_f['island'], {}).get('name', _f['island']))
-                _fname = _f['name_el'] or _f['name']
-                _fdesc = strip_html(_f['desc_el'] or _f['desc'])
-            else:
-                _iname = ISLAND_META.get(_f['island'], {}).get('name', _f['island'])
-                _fname = _f['name']
-                _fdesc = strip_html(_f['desc'])
-            _ev = {
-                "@context": "https://schema.org",
-                "@type": "Event",
-                "name": _fname,
-                "startDate": _start,
-                "eventStatus": "https://schema.org/EventScheduled",
-                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-                "location": {"@type": "Place", "name": f"{_iname}, Greece",
-                             "address": {"@type": "PostalAddress", "addressLocality": _iname, "addressCountry": "GR"}},
-                "description": truncate_at_word(_fdesc, 280),
-                "url": SITE_URL + ('/el/island/' if is_el else '/island/') + _f['island'] + '/',
-            }
-            # endDate: explicit range end when parseable, otherwise the event is
-            # single-day so it ends the day it starts (GSC 'missing endDate').
-            _ev["endDate"] = _end or _start
-            # image: festival's own photo, else the island's hero photo
-            # (GSC 'missing image' — a real photo of the place the event happens).
-            _img = _f.get('photo') or _f.get('island_hero')
-            if _img:
-                _ev["image"] = _img
-            _events.append(_ev)
-        schema_html = ('<script type="application/ld+json">' + json.dumps(_events, ensure_ascii=False) + '</script>\n') if _events else ''
-
-        page_html = (
-            '<!DOCTYPE html>\n<html lang="' + lang + '">\n<head>\n'
-            '<meta charset="UTF-8">\n'
-            '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
-            '<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>\n<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag(\'js\',new Date());gtag(\'config\',\'G-FMFWLRM2J9\');</script>\n'
-            '<script>window.localStorage&&document.documentElement.classList.toggle("dark",localStorage.getItem("darkMode")===null?window.matchMedia("(prefers-color-scheme: dark)").matches:localStorage.getItem("darkMode")==="true")</script>\n'
-            '<title>' + esc(title) + '</title>\n'
-            '<meta name="description" content="' + esc(meta_desc) + '">\n'
-            '<meta name="theme-color" content="#0B8FAC">\n'
-            '<meta name="author" content="Stergios Gousios">\n'
-            '<link rel="canonical" href="' + url + '">\n'
-            + _market.hreflang(dict(en=SITE_URL + '/festivals/', el=SITE_URL + '/el/festivals/')) + '\n'
-            '<link rel="icon" href="/favicon.ico" sizes="any">\n'
-            '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
-            '<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">\n'
-            '<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">\n'
-            '<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">\n'
-            '<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n'
-            '<meta name="apple-mobile-web-app-title" content="Aegean Blueprint">\n'
-            '<link rel="manifest" href="/site.webmanifest">\n'
-            '<meta property="og:type" content="website">\n'
-            # /ferries/ and /festivals/ build their own <head> rather than using the
-            # shared helper, and both shipped with no og:image — so every social share
-            # of the two biggest non-island pages rendered without a card image.
-            '<meta property="og:image" content="https://aegeanblueprint.com/og-image.png">\n'
-            '<meta name="twitter:card" content="summary_large_image">\n'
-            '<meta name="twitter:image" content="https://aegeanblueprint.com/og-image.png">\n'
-            '<meta property="og:title" content="' + esc(title) + '">\n'
-            '<meta property="og:description" content="' + esc(meta_desc) + '">\n'
-            '<meta property="og:url" content="' + url + '">\n'
-            '<meta property="og:locale" content="' + ('el_GR' if is_el else 'en_US') + '">\n'
-            # Apply dark mode preference from localStorage BEFORE stylesheet loads.
-            # Otherwise users who enabled dark mode on the home page would briefly
-            # flash the light theme on this page. Tiny inline script — no JS file needed.
-            '<script>if(localStorage.getItem("darkMode")==="true"){document.documentElement.classList.add("dark");}</script>\n'
-            '<link rel="stylesheet" href="/style.css?v=87">\n'
-            '<style>\n'
-            '  body { background: var(--bg, #fff); color: var(--ink, #222); font-family: var(--font-body, system-ui), sans-serif; margin: 0; }\n'
-            '  .fest-page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }\n'
-            '  .fest-page > h1 { font-family: var(--font-ui, Georgia), serif; font-size: 36px; margin: 0 0 8px; }\n'
-            '  .fest-intro { font-size: 17px; color: var(--ink-1, #444); line-height: 1.5; margin: 0 0 24px; max-width: 720px; }\n'
-            '  .fest-nav { background: var(--surface, #f6f4ee); padding: 12px 16px; border-radius: 12px; font-size: 14px; margin-bottom: 32px; }\n'
-            '  .fest-nav a { color: var(--primary-dark, #076880); text-decoration: none; font-weight: 600; }\n'
-            '  .fest-nav a:hover { text-decoration: underline; }\n'
-            '  .fest-month { margin-bottom: 40px; }\n'
-            '  .fest-month-heading { font-family: var(--font-ui, Georgia), serif; font-size: 26px; margin: 0 0 16px; padding-bottom: 6px; border-bottom: 2px solid var(--primary, #0B8FAC); }\n'
-            '  .fest-month-count { color: var(--ink-3, #888); font-weight: 400; font-size: 16px; }\n'
-            '  .fest-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }\n'
-            '  .fest-card { display: flex; gap: 14px; padding: 16px; background: var(--white, #fff); border: 1px solid var(--border, #e5e1d8); border-radius: 12px; }\n'
-            '  .fest-photo { width: 96px; height: 96px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }\n'
-            '  .fest-text { flex: 1; min-width: 0; }\n'
-            '  .fest-island { font-size: 13px; font-weight: 600; color: var(--primary-dark, #076880); text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; }\n'
-            '  .fest-island:hover { text-decoration: underline; }\n'
-            '  .fest-name { font-family: var(--font-ui, Georgia), serif; font-size: 18px; margin: 4px 0; line-height: 1.25; }\n'
-            '  .fest-when { font-size: 13px; color: var(--accent, #FF6B6B); font-weight: 600; margin: 0 0 8px; }\n'
-            '  .fest-desc { font-size: 14px; color: var(--ink-1, #555); line-height: 1.5; margin: 0; }\n'
-            '  @media (max-width: 600px) {\n'
-            '    .fest-page { padding: 20px 16px 48px; }\n'
-            '    .fest-page > h1 { font-size: 28px; }\n'
-            '    .fest-card { flex-direction: column; }\n'
-            '    .fest-photo { width: 100%; height: 160px; }\n'
-            '  }\n'
-            '  html.dark body { background: #1a1a1a; color: #eee; }\n'
-            '  html.dark .fest-card { background: #2a2a2a; border-color: #444; }\n'
-            '  html.dark .fest-nav { background: #333; }\n'
-            '  .fest-controls { display:flex; flex-wrap:wrap; gap:10px; margin:0 0 28px; align-items:center; }\n'
-            '  .fest-controls select, .fest-controls input { font:inherit; font-size:14px; padding:8px 12px; border:1px solid var(--border,#e5e1d8); border-radius:10px; background:var(--white,#fff); color:inherit; }\n'
-            '  .fest-controls input { flex:1; min-width:160px; }\n'
-            '  .fest-clear { cursor:pointer; border:none; background:none; color:var(--primary-dark,#076880); font-weight:600; font-size:13px; padding:8px; }\n'
-            '  .fest-soon { margin:0 0 36px; }\n'
-            '  .fest-soon > h2 { font-family:var(--font-ui,Georgia),serif; font-size:22px; margin:0 0 14px; }\n'
-            '  .fest-soon-tag { display:block; width:fit-content; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; color:#fff; background:var(--primary,#0B8FAC); border-radius:999px; padding:2px 9px; margin:0 0 8px; }\n'
-            '  .fest-soon-tag.next { background:var(--ink-3,#888); }\n'
-            '  .fest-card { transition:transform .12s ease, box-shadow .12s ease; }\n'
-            '  .fest-card:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,.10); }\n'
-            '  .fest-noresults { display:none; padding:24px; text-align:center; color:var(--ink-3,#888); font-size:15px; }\n'
-            '  .fest-month.is-hidden, .fest-card.is-hidden { display:none !important; }\n'
-            '  html.dark .fest-controls select, html.dark .fest-controls input { background:#2a2a2a; border-color:#444; color:#eee; }\n'
-            '</style>\n'
-            '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9298260273942245" crossorigin="anonymous"></script>\n'
-            '<script>\n'
-            '  /* Desktop-only ads: suppress on viewports below 900px. */\n'
-            '  (function(){\n'
-            '    if (window.matchMedia(\'(max-width: 899.98px)\').matches) {\n'
-            '      window.adsbygoogle = window.adsbygoogle || [];\n'
-            '      window.adsbygoogle.push = function(){};\n'
-            '    }\n'
-            '  })();\n'
-            '</script>\n'
-            + schema_html
-            + '<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>\n'
-            + '</head>\n<body>\n'
-            # Match the main-site header exactly. Same classes, same CSS in style.css.
-            # Difference: nav links go to /index.html#hash so they switch SPA view on
-            # the home page, festivals link is real (active here), language toggle is
-            # a single tappable EN/EL link rather than the SPA dropdown (no JS available).
-            '<header>\n'
-            '  <div class="header-content">\n'
-            '    <a class="logo-wrapper" href="/' + ('el/' if is_el else '') + '" style="text-decoration: none;">\n'
-            '      <img src="/logo-hero.svg" id="site-logo" alt="Aegean Blueprint logo">\n'
-            '      <span id="brand-text"><span class="brand-word">Aegean</span> <span class="brand-word">Blueprint</span></span>\n'
-            '    </a>\n'
-            # Hamburger — needed for mobile, since style.css hides .top-nav under 860px.
-            # Without it the nav disappears with no way to open it. JS handler below.
-            '    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>\n'
-            '    <nav class="top-nav" id="main-nav">\n'
-            '      <a href="/' + ('el/' if is_el else '') + '#compare">' + ('Σύγκριση' if is_el else 'Compare') + '</a>\n'
-            '      <a href="/' + ('el/' if is_el else '') + '#match">' + ('Βρες το Νησί σου' if is_el else 'Match Me') + '</a>\n'
-            '      <a href="/' + ('el/' if is_el else '') + 'trip-cost/">' + ('Κόστος' if is_el else 'Budget') + '</a>\n'
-            '      <a href="/' + ('el/' if is_el else '') + '#hopping">' + ('Πλοία & Νησοπορία' if is_el else 'Ferries & Hopping') + '</a>\n'
-            '      <a href="/' + ('el/' if is_el else '') + 'festivals/" class="active">' + ('Γιορτές' if is_el else 'Festivals') + '</a>\n'
-            '      <a href="/' + ('el/' if is_el else '') + '#data">' + ('Στοιχεία Νησιών' if is_el else 'Islands Data') + '</a>\n'
-            '      <a href="/' + ('el/' if is_el else '') + '#mission">' + ('Σχετικά' if is_el else 'About') + '</a>\n'
-            '      <a href="/' + ('el/' if is_el else '') + '#shortlist">' + ('⭐ Η Λίστα μου' if is_el else '⭐ My Shortlist') + '</a>\n'
-            '    </nav>\n'
-            '    <a class="lang-toggle-static" href="' + ('/festivals/' if is_el else '/el/festivals/') + '" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;">'
-            '    <button type="button" class="dark-mode-toggle dm-static" aria-label="Toggle dark mode" onclick="var h=document.documentElement,d=!h.classList.contains(\'dark\');h.classList.toggle(\'dark\',d);try{localStorage.setItem(\'darkMode\',d)}catch(e){}"></button>\n'
-            '<span style="margin-right: 4px;">🌐</span>' + ('EN' if is_el else 'EL') + '</a>\n'
-            '  </div>\n'
-            '</header>\n'
-            # Tiny inline script to wire the hamburger. Mirrors the toggleMenu() function
-            # in script.js so the festivals page works without loading the full SPA bundle.
-            '<script>\n'
-            '  (function(){\n'
-            '    var btn = document.getElementById("menu-toggle-btn");\n'
-            '    var nav = document.getElementById("main-nav");\n'
-            '    if (btn && nav) {\n'
-            '      btn.addEventListener("click", function(){\n'
-            '        nav.classList.toggle("open");\n'
-            '        btn.classList.toggle("open");\n'
-            '      });\n'
-            '    }\n'
-            '  })();\n'
-            '</script>\n'
-            '<main class="fest-page">\n'
-            '  <h1>' + h1 + '</h1>\n'
-            '  <p class="fest-intro">' + esc(intro) + '</p>\n'
-            '  <nav class="fest-nav">' + nav_html + '</nav>\n'
-            + ('  <p class="fest-nav" style="margin-top:-20px">'
-               + ('Ανά μήνα: ' if is_el else 'By month: ')
-               + ' · '.join(f'<a href="/{"el/" if is_el else ""}festivals/{slug}/">{el_n if is_el else en_n}</a>'
-                            for slug, en_n, el_n in [('may','May','Μάιος'),('june','June','Ιούνιος'),('july','July','Ιούλιος'),('august','August','Αύγουστος'),('september','September','Σεπτέμβριος')])
-               + ' &nbsp;·&nbsp; <a href="/' + ('el/' if is_el else '') + 'festivals/ikaria-panigiria/"><strong>'
-               + ('Τα πανηγύρια της Ικαρίας →' if is_el else 'The panigiria of Ikaria →') + '</strong></a></p>\n')
-            + filter_html + '\n'
-            '  ' + ''.join(month_blocks) + '\n'
-            '</main>\n'
-            '<div class="cta-affiliate"><a class="ferry-btn" href="https://www.ferryhopper.com/" target="_blank" rel="noopener sponsored">' + ('🚢 Κράτηση εισιτηρίων' if is_el else '🚢 Book ferry tickets') + '</a><a class="car-btn" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">' + ('🚗 Ενοικίαση αυτοκινήτου' if is_el else '🚗 Rent a car') + '</a>' + ('<p class="aff-note" data-i18n="affiliate.note"><a href="/el/privacy/#affiliate">Affiliate σύνδεσμοι — στηρίζουν αυτόν τον οδηγό χωρίς κόστος για εσένα.</a></p>' if is_el else '<p class="aff-note" data-i18n="affiliate.note"><a href="/privacy/#affiliate">Affiliate links — they support this guide and cost you nothing.</a></p>') + '</div>\n'
-            '<footer style="text-align:center;padding:24px 16px;font-size:13px;color:#888;border-top:1px solid #e5e5e5;margin-top:40px;">\n'
-            f'  <p style="margin:0;">© {COPYRIGHT_YEAR} Aegean Blueprint · <a href="' + ('/el/privacy/' if is_el else '/privacy/') + '" style="color:#888;text-decoration:none;">' + ('Απόρρητο' if is_el else 'Privacy') + '</a> · <a href="' + ('/el/credits/' if is_el else '/credits/') + '" style="color:#888;text-decoration:none;">' + ('Πηγές φωτογραφιών' if is_el else 'Photo credits') + '</a></p>\n'
-            '</footer>\n'
-            + soon_script
-            + '</body>\n</html>'
-        )
-
-        out_dir = ROOT / ('el/festivals' if is_el else 'festivals')
-        out_dir.mkdir(parents=True, exist_ok=True)
-        (out_dir / 'index.html').write_text(page_html, encoding='utf-8')
-
-    return len(all_fests)
 
 
 def generate_whats_on_index(island_keys):
