@@ -89,33 +89,33 @@
     "stops": [
      {
       "name": "Thymaina port",
-      "lat": 37.5995,
-      "lng": 26.447,
+      "lat": 37.58245,
+      "lng": 26.45363,
       "type": "harbour",
       "time": "10:30",
-      "wiki": "https://www.google.com/maps/search/Thymaina%20port%20Thymaina",
+      "wiki": "https://www.google.com/maps/search/?api=1&query=37.58245,26.45363",
       "desc": "The main settlement gathers around a working fishing harbour — caïques, nets drying, a couple of tavernas and a kafeneio. The small ferry from Fournoi ties up here.",
       "name_el": "Λιμάνι Θύμαινας",
       "desc_el": "Ο κύριος οικισμός μαζεύεται γύρω από ένα ζωντανό ψαρολίμανο — καΐκια, δίχτυα να στεγνώνουν, δυο ταβέρνες κι ένα καφενείο. Το μικρό φεριμπότ από τους Φούρνους δένει εδώ."
      },
      {
       "name": "Keramidou",
-      "lat": 37.606,
-      "lng": 26.436,
+      "lat": 37.57447,
+      "lng": 26.45392,
       "type": "village",
       "time": "12:00",
-      "wiki": "https://www.google.com/maps/search/Keramidou%20Thymaina",
+      "wiki": "https://www.google.com/maps/search/?api=1&query=37.57447,26.45392",
       "desc": "The second hamlet, a cluster of houses on the slopes with long views to Ikaria. A short, steep walk from the port through terraced hillsides — the whole island opens up along the way.",
       "name_el": "Κεραμειδού",
       "desc_el": "Ο δεύτερος οικισμός, μια συστάδα σπιτιών στις πλαγιές με μακρινή θέα στην Ικαρία. Σύντομο, απότομο περπάτημα από το λιμάνι μέσα από πεζούλες — όλο το νησί ανοίγεται στη διαδρομή."
      },
      {
       "name": "Agios Nikolaos cove",
-      "lat": 37.594,
-      "lng": 26.452,
+      "lat": 37.59948,
+      "lng": 26.43768,
       "type": "beach",
       "time": "14:00",
-      "wiki": "https://www.google.com/maps/search/Agios%20Nikolaos%20cove%20Thymaina",
+      "wiki": "https://www.google.com/maps/search/?api=1&query=37.59948,26.43768",
       "desc": "One of several quiet pebble coves along the sheltered coast, with clear water and no facilities. Reach it on foot or ask a fisherman for a lift by boat.",
       "name_el": "Λιμανάκι Άγιος Νικόλαος",
       "desc_el": "Ένα από τα πολλά ήσυχα βοτσαλωτά λιμανάκια στην προστατευμένη ακτή, με καθαρά νερά και χωρίς υποδομές. Πήγαινε πεζή ή ζήτα από κάποιον ψαρά να σε πάει με τη βάρκα."
@@ -142,7 +142,7 @@
  "beaches": [
   {
    "name": "Agios Nikolaos cove",
-   "wiki": "https://www.google.com/maps/search/Agios%20Nikolaos%20cove%20Thymaina",
+   "wiki": "https://www.google.com/maps/search/?api=1&query=37.59948,26.43768",
    "rating": 3,
    "type": "Pebble",
    "length": "60 m",
@@ -151,8 +151,8 @@
    "facilities": "None — bring everything.",
    "desc": "A quiet, clear-water pebble cove on Thymaina's sheltered coast — one of several small swimming spots reached on foot or by boat, with no facilities and rarely another soul.",
    "commons": null,
-   "lat": 37.594,
-   "lng": 26.452,
+   "lat": 37.59948,
+   "lng": 26.43768,
    "name_el": "Λιμανάκι Άγιος Νικόλαος",
    "type_el": "Βότσαλο",
    "depth_el": "Βαθιά — διάφανα",
