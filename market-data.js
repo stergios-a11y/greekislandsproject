@@ -443,7 +443,10 @@ const SIDE_PORTS = {
   "pisaetos": {"island": "ithaca", "name": "Pisaetos (Ithaca)", "name_el": "Πισαετός (Ιθάκη)", "lat": 38.391, "lng": 20.652},
   "pounta-paros": {"island": "paros", "name": "Pounta (Paros)", "name_el": "Πούντα (Πάρος)", "lat": 37.03, "lng": 25.098},
   "kamiros-skala": {"island": "rhodes", "name": "Kamiros Skala (Rhodes)", "name_el": "Σκάλα Καμείρου (Ρόδος)", "lat": 36.272, "lng": 27.826},
-  "pollonia": {"island": "milos", "name": "Pollonia (Milos)", "name_el": "Πολλώνια (Μήλος)", "lat": 36.762, "lng": 24.528}
+  "pollonia": {"island": "milos", "name": "Pollonia (Milos)", "name_el": "Πολλώνια (Μήλος)", "lat": 36.762, "lng": 24.528},
+  "agios-stefanos-cfu": {"island": "corfu", "name": "Agios Stefanos (Corfu)", "name_el": "Άγιος Στέφανος (Κέρκυρα)", "lat": 39.757, "lng": 19.642},
+  "myrties": {"island": "kalymnos", "name": "Myrties (Kalymnos)", "name_el": "Μυρτιές (Κάλυμνος)", "lat": 36.996, "lng": 26.936},
+  "mastichari": {"island": "kos", "name": "Mastichari (Kos)", "name_el": "Μαστιχάρι (Κως)", "lat": 36.851, "lng": 27.077}
 };
 const FERRY_GRAPH = [
   {"a": "aegina", "b": "agistri", "dur": 15, "freq": "high", "plo": 3, "phi": 5, "note": "multiple daily"},
@@ -626,7 +629,23 @@ const FERRY_GRAPH = [
   {"a": "paros", "b": "milos", "dur": 165, "freq": "med", "plo": 18, "phi": 28, "note": "most days summer"},
   {"a": "naxos", "b": "milos", "dur": 180, "freq": "low", "plo": 18, "phi": 28, "note": "few/week summer"},
   {"a": "paros", "b": "sifnos", "dur": 105, "freq": "low", "plo": 14, "phi": 22, "note": "few/week"},
-  {"a": "paros", "b": "serifos", "dur": 135, "freq": "low", "plo": 16, "phi": 24, "note": "few/week"}
+  {"a": "paros", "b": "serifos", "dur": 135, "freq": "low", "plo": 16, "phi": 24, "note": "few/week"},
+  {"a": "corfu", "b": "erikousa", "dur": 75, "freq": "med", "plo": 8, "phi": 16, "ap": "agios-stefanos-cfu", "note": "summer boats from Agios Stefanos most days; Kerkyra Lines from Corfu Town 3/week"},
+  {"a": "erikousa", "b": "mathraki", "dur": 40, "freq": "low", "plo": 4, "phi": 8, "note": "same Diapontia boats, few/week"},
+  {"a": "mathraki", "b": "othonoi", "dur": 40, "freq": "low", "plo": 4, "phi": 8, "note": "same Diapontia boats, few/week"},
+  {"a": "corfu", "b": "othonoi", "dur": 190, "freq": "low", "plo": 11, "phi": 18, "note": "Kerkyra Lines from Corfu Town 3/week, via Erikousa and Mathraki"},
+  {"a": "mytikas", "b": "kalamos", "dur": 25, "freq": "med", "plo": 4, "phi": 8, "note": "local boat most days in summer"},
+  {"a": "kalamos", "b": "kastos", "dur": 45, "freq": "low", "plo": 5, "phi": 10, "note": "same local boat, few/week"},
+  {"a": "mytikas", "b": "kastos", "dur": 75, "freq": "low", "plo": 6, "phi": 10, "note": "via Kalamos, few/week"},
+  {"a": "kalymnos", "b": "telendos", "dur": 10, "freq": "high", "plo": 2, "phi": 4, "ap": "myrties", "note": "caique from Myrties every 30–60 min, all year"},
+  {"a": "kos", "b": "pserimos", "dur": 30, "freq": "med", "plo": 4, "phi": 10, "ap": "mastichari", "note": "daily boats from Mastichari in summer"},
+  {"a": "kalymnos", "b": "pserimos", "dur": 50, "freq": "med", "plo": 6, "phi": 12, "note": "daily excursion boats in summer"},
+  {"a": "leipsoi", "b": "arki", "dur": 45, "freq": "low", "plo": 8, "phi": 22, "note": "Dodekanisos Pride 2/week + local boats in summer"},
+  {"a": "patmos", "b": "arki", "dur": 60, "freq": "low", "plo": 8, "phi": 15, "note": "few/week, summer day boats"},
+  {"a": "arki", "b": "agathonisi", "dur": 45, "freq": "low", "plo": 6, "phi": 12, "note": "few/week"},
+  {"a": "fournoi", "b": "thymaina", "dur": 10, "freq": "med", "plo": 3, "phi": 6, "note": "local boat several times a week"},
+  {"a": "kythira", "b": "antikythera", "dur": 150, "freq": "low", "plo": 7, "phi": 15, "note": "Triton Ferries 1–2/week, often cancelled by weather"},
+  {"a": "antikythera", "b": "kissamos", "dur": 120, "freq": "low", "plo": 8, "phi": 15, "note": "Triton Ferries 1–2/week, often cancelled by weather"}
 ];
 const FERRY_VISUAL_LINES = [
   {"stops": ["piraeus", "aegina", "agistri"], "freq": "high"},
@@ -650,7 +669,10 @@ const FERRY_VISUAL_LINES = [
   {"stops": ["rhodes", "karpathos", "kasos", "sitia"], "freq": "low"},
   {"stops": ["volos", "skiathos", "skopelos", "alonnisos"], "freq": "high"},
   {"stops": ["agios-konstantinos", "skiathos", "skopelos", "alonnisos"], "freq": "med"},
-  {"stops": ["patras", "kefalonia", "ithaca"], "freq": "med", "sides": true}
+  {"stops": ["patras", "kefalonia", "ithaca"], "freq": "med", "sides": true},
+  {"stops": ["corfu", "erikousa", "mathraki", "othonoi"], "freq": "low", "sides": true},
+  {"stops": ["mytikas", "kalamos", "kastos"], "freq": "low"},
+  {"stops": ["kythira", "antikythera", "kissamos"], "freq": "low"}
 ];
 const FERRY_MAP_HIDE = new Set(["piraeus~salamis", "andros~piraeus"]);
 const MAINLAND_PORTS = {
@@ -676,7 +698,9 @@ const MAINLAND_PORTS = {
   "sitia": {"name": "Sitia (Crete)", "name_el": "Σητεία (Κρήτη)", "lat": 35.207, "lng": 26.107, "onIsland": true},
   "aidipsos": {"name": "Loutra Aidipsou (Evia)", "name_el": "Λουτρά Αιδηψού (Εύβοια)", "lat": 38.86, "lng": 23.043, "onIsland": true},
   "nea-styra": {"name": "Nea Styra (Evia)", "name_el": "Νέα Στύρα (Εύβοια)", "lat": 38.18, "lng": 24.208, "onIsland": true},
-  "souda": {"name": "Souda (Chania)", "name_el": "Σούδα (Χανιά)", "lat": 35.491, "lng": 24.08, "onIsland": true}
+  "souda": {"name": "Souda (Chania)", "name_el": "Σούδα (Χανιά)", "lat": 35.491, "lng": 24.08, "onIsland": true},
+  "mytikas": {"name": "Mytikas", "name_el": "Μύτικας", "lat": 38.665, "lng": 20.946},
+  "kissamos": {"name": "Kissamos (Crete)", "name_el": "Κίσσαμος (Κρήτη)", "lat": 35.517, "lng": 23.634, "onIsland": true}
 };
 const FERRYHOPPER_SLUGS = {
   "lasithi": "agios-nikolaos",
