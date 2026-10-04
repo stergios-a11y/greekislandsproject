@@ -66,7 +66,7 @@ def beach_id(key, name):
 def thumb(url, w=256, h=172):
     if not url or 'cloudinary.com' not in url or '/upload/' not in url:
         return url
-    return url.replace('/upload/', f'/upload/w_{w},h_{h},c_fill,g_auto,q_auto,f_auto/', 1)
+    return url.replace('/upload/', f'/upload/w_{w},h_{h},c_fill,g_auto,e_improve:outdoor,e_vibrance:20,e_sharpen:60,q_auto,f_auto/', 1)
 
 
 def el_at(data):

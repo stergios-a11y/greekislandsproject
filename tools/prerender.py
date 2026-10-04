@@ -886,7 +886,7 @@ def content_img_640(url):
         return url
     if 'res.cloudinary.com' in url:
         return re.sub(r'/upload/(?:[^/]*/)?v(\d+)/',
-                      r'/upload/w_640,h_420,c_fill,q_auto,f_auto/v\1/', url)
+                      r'/upload/w_640,h_420,c_fill,e_improve:outdoor,e_vibrance:20,e_sharpen:60,q_auto,f_auto/v\1/', url)
     if '/thumb/' in url:
         return re.sub(r'/\d+px-', '/640px-', url)
     m = re.match(r'^(https?://upload\.wikimedia\.org/wikipedia/[a-z]+)/([0-9a-f])/([0-9a-f]{2})/([^/]+)$', url)
@@ -951,7 +951,7 @@ def hero_src_1280(url):
         return url
     if 'res.cloudinary.com' in url:
         return re.sub(r'/upload/(?:[^/]*/)?v(\d+)/',
-                      r'/upload/w_1280,h_560,c_fill,q_auto,f_auto/v\1/', url)
+                      r'/upload/w_1280,h_560,c_fill,e_improve:outdoor,e_vibrance:20,e_sharpen:60,q_auto,f_auto/v\1/', url)
     # Wikimedia only serves FIXED thumb widths; 1280 is the hero bucket.
     if '/thumb/' in url:
         return re.sub(r'/\d+px-', '/1280px-', url)
@@ -2640,7 +2640,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}i18n.js?v=50"></script>
-<script src="{asset_prefix}script.js?v=150"></script>
+<script src="{asset_prefix}script.js?v=151"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.

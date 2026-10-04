@@ -79,7 +79,7 @@ def thumb(url):
         return ''
     if '/image/upload/' in url:
         return re.sub(r'/image/upload/(?:[a-zA-Z]+_[^/]+/)?',
-                      '/image/upload/w_300,h_240,c_fill,g_auto,q_auto,f_auto/', url, count=1)
+                      '/image/upload/w_300,h_240,c_fill,g_auto,e_improve:outdoor,e_vibrance:20,e_sharpen:60,q_auto,f_auto/', url, count=1)
     return url  # non-Cloudinary (e.g. Wikimedia) — use as-is
 
 

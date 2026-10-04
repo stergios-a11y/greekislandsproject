@@ -115,7 +115,7 @@ def thumb(url):
         return ''
     if 'res.cloudinary.com' in url:
         return re.sub(r'/upload/(?:[^/]*/)?v(\d+)/',
-                      r'/upload/w_520,h_300,c_fill,g_auto,q_auto,f_auto/v\1/', url)
+                      r'/upload/w_520,h_300,c_fill,g_auto,e_improve:outdoor,e_vibrance:20,e_sharpen:60,q_auto,f_auto/v\1/', url)
     return url
 
 

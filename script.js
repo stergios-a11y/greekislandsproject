@@ -1463,7 +1463,7 @@ let FESTIVAL_INDEX = {};  // island -> festival count, from /festivals-index.jso
 function thumbUrl(url) {
   if (!url) return url;
   if (url.indexOf('res.cloudinary.com') > -1)
-    return url.replace(/\/upload\/(?:[^/]*\/)?v(\d+)\//, '/upload/w_500,h_300,c_fill,q_auto,f_auto/v$1/');
+    return url.replace(/\/upload\/(?:[^/]*\/)?v(\d+)\//, '/upload/w_500,h_300,c_fill,e_improve:outdoor,e_vibrance:20,e_sharpen:60,q_auto,f_auto/v$1/');
   // Wikimedia only serves a FIXED set of thumbnail widths (20,40,60,120,250,
   // 330,500,960,1280,1920,3840); any other size is rejected (400). 500 is the
   // right small bucket. Handle both /thumb/ URLs and originals.
@@ -1476,7 +1476,7 @@ function thumbUrl(url) {
 function heroSrc(url) {
   if (!url) return url;
   if (url.indexOf('res.cloudinary.com') > -1)
-    return url.replace(/\/upload\/(?:[^/]*\/)?v(\d+)\//, '/upload/w_1280,h_560,c_fill,q_auto,f_auto/v$1/');
+    return url.replace(/\/upload\/(?:[^/]*\/)?v(\d+)\//, '/upload/w_1280,h_560,c_fill,e_improve:outdoor,e_vibrance:20,e_sharpen:60,q_auto,f_auto/v$1/');
   if (url.indexOf('/thumb/') > -1) return url.replace(/\/\d+px-/, '/1280px-');
   var m = url.match(/^(https?:\/\/upload\.wikimedia\.org\/wikipedia\/[a-z]+)\/([0-9a-f])\/([0-9a-f]{2})\/([^/]+)$/);
   if (m) return m[1] + '/thumb/' + m[2] + '/' + m[3] + '/' + m[4] + '/1280px-' + m[4];
