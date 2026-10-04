@@ -2518,7 +2518,7 @@ def render_page(key, data, meta, lang='en'):
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}market-data.js?v={_market.version()}"></script>
 <script src="{asset_prefix}i18n.js?v=50"></script>
-<script src="{asset_prefix}script.js?v=153"></script>
+<script src="{asset_prefix}script.js?v=154"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
@@ -2588,21 +2588,9 @@ def render_page(key, data, meta, lang='en'):
 # Main generation loop
 # ---------------------------------------------------------------------
 def _load_intl_routes():
-    """INTERNATIONAL_ROUTES + FOREIGN_PORTS out of script.js (via node), or None."""
-    import subprocess
-    js = r"""
-const s = require('fs').readFileSync(process.argv[1], 'utf8');
-function grab(n, o, c) { const i = s.indexOf('const ' + n + ' = '); let j = s.indexOf(o, i), d = 0, k = j;
-  for (; k < s.length; k++) { if (s[k] === o) d++; else if (s[k] === c && --d === 0) break; }
-  return eval('(' + s.slice(j, k + 1) + ')'); }
-console.log(JSON.stringify({ routes: grab('INTERNATIONAL_ROUTES', '[', ']'), ports: grab('FOREIGN_PORTS', '{', '}') }));
-"""
-    try:
-        out = subprocess.run(['node', '-e', js, str(ROOT / 'script.js')], capture_output=True, text=True, check=True)
-        return json.loads(out.stdout)
-    except Exception as e:
-        print(f'  ⚠  international routes not read ({e}); /ferries/ ships without them')
-        return None
+    """International routes + foreign ports from the market's ferries.json, or None."""
+    f = _market.ferries()
+    return {'routes': f['international_routes'], 'ports': f['foreign_ports']} if f.get('international_routes') else None
 
 
 def _intl_section(intl, lang, island_link):
@@ -2651,28 +2639,11 @@ def generate_ferries_page(island_keys):
     queries like "ferries from Athens to Greek islands" and needs to be a
     real indexable URL, not a `#hash`. Same approach as /festivals/.
     """
-    # Parse FERRY_GRAPH out of script.js. Each entry looks like:
-    #   { a: 'piraeus', b: 'mykonos', dur: 285, freq: 'high', plo: 30, phi: 65, note: "..." },
-    script_path = ROOT / 'script.js'
-    script_text = script_path.read_text(encoding='utf-8')
-    graph_block_match = re.search(r'const FERRY_GRAPH = \[([\s\S]+?)\n\];', script_text)
-    if not graph_block_match:
-        print('  ⚠  Could not find FERRY_GRAPH in script.js — skipping ferries page')
-        return 0
-    block = graph_block_match.group(1)
-    routes = []
-    # Each route line:  { a: 'piraeus', b: 'mykonos', dur: 285, freq: 'high', plo: 30, phi: 65, note: "..." }
-    for m in re.finditer(
-        r"\{\s*a:\s*'([^']+)',\s*b:\s*'([^']+)',\s*dur:\s*(\d+),\s*freq:\s*'(\w+)',\s*plo:\s*(\d+),\s*phi:\s*(\d+)(?:,\s*note:\s*\"([^\"]*)\")?",
-        block
-    ):
-        routes.append({
-            'a': m.group(1), 'b': m.group(2),
-            'dur': int(m.group(3)),
-            'freq': m.group(4),
-            'plo': int(m.group(5)), 'phi': int(m.group(6)),
-            'note': m.group(7) or '',
-        })
+    # Route graph from the market's ferries.json (same entries the app's planner uses).
+    routes = [{'a': e['a'], 'b': e['b'], 'dur': int(e['dur']), 'freq': e['freq'],
+               'plo': int(e['plo']), 'phi': int(e['phi']), 'note': e.get('note') or ''}
+              for e in _market.ferries().get('graph', [])
+              if all(k in e for k in ('a', 'b', 'dur', 'freq', 'plo', 'phi'))]
     if not routes:
         print('  ⚠  FERRY_GRAPH parsed empty — skipping ferries page')
         return 0

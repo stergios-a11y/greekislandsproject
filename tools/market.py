@@ -36,6 +36,39 @@ def destinations():
     return _load('destinations.json')
 
 
+def ferries():
+    """Ferry network + hopping content (markets/<market>/ferries.json); {} when the market has none."""
+    if 'ferries.json' not in _cache:
+        p = MDIR / 'ferries.json'
+        _cache['ferries.json'] = json.loads(p.read_text(encoding='utf-8')) if p.exists() and feature('ferries') else {}
+    return _cache['ferries.json']
+
+
+# ferries.json key -> constant name script.js uses, and its empty value
+FERRY_CONSTS = [
+    ('island_ports', 'ISLAND_FERRY_PORTS', {}), ('side_ports', 'SIDE_PORTS', {}),
+    ('graph', 'FERRY_GRAPH', []), ('visual_lines', 'FERRY_VISUAL_LINES', []),
+    ('map_hide', 'FERRY_MAP_HIDE', []), ('mainland_ports', 'MAINLAND_PORTS', {}),
+    ('ferryhopper_slugs', 'FERRYHOPPER_SLUGS', {}), ('extra_ports', 'EXTRA_PORTS', {}),
+    ('foreign_ports', 'FOREIGN_PORTS', {}), ('international_routes', 'INTERNATIONAL_ROUTES', []),
+    ('itineraries', 'ITINERARIES', []),
+]
+
+
+def _ferry_js():
+    f = ferries()
+    out = []
+    for key, name, empty in FERRY_CONSTS:
+        v = f.get(key, empty)
+        if key == 'map_hide':
+            out.append(f'const {name} = new Set({json.dumps(v, ensure_ascii=False)});')
+        elif isinstance(v, list):
+            out.append(f'const {name} = [\n' + ',\n'.join('  ' + json.dumps(x, ensure_ascii=False) for x in v) + '\n];')
+        else:
+            out.append(f'const {name} = {_obj_lines(v)};')
+    return '\n'.join(out) + '\n'
+
+
 def clusters():
     return _load('clusters.json')
 
@@ -143,6 +176,7 @@ def render_js():
         f'const HOMEPAGE_FEATURED = {json.dumps(h["featured"], ensure_ascii=False, indent=2)};\n'
         f'const HOME_HERO_KEYS = {json.dumps(h["hero_keys"], ensure_ascii=False)};\n'
         f'const WTV_TAGS = {_obj_lines(wtv_tags())};\n'
+        + _ferry_js()
     )
 
 

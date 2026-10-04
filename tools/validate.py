@@ -190,6 +190,38 @@ else:
     if undefined:
         warn('style.css uses undefined tokens (fall back to browser defaults): ' + ', '.join('--' + u for u in undefined))
 
+# ---- ferries ---------------------------------------------------------------------------------
+if M.feature('ferries'):
+    if not (M.MDIR / 'ferries.json').exists():
+        err(f'feature "ferries" is on but markets/{M.MARKET}/ferries.json is missing')
+    else:
+        f = M.ferries()
+        nodes = set(dests) | set(f.get('mainland_ports', {})) | set(f.get('extra_ports', {}))
+        sides = f.get('side_ports', {})
+        for e in f.get('graph', []):
+            for end in ('a', 'b'):
+                if e.get(end) not in nodes:
+                    err(f'ferries.json: route {e.get("a")}–{e.get("b")}: unknown port "{e.get(end)}"')
+            for sp in ('ap', 'bp'):
+                if e.get(sp) and e[sp] not in sides:
+                    err(f'ferries.json: route {e.get("a")}–{e.get("b")}: unknown side port "{e[sp]}"')
+            if not (num(e.get('dur')) and e.get('freq') in ('high', 'med', 'low')):
+                err(f'ferries.json: route {e.get("a")}–{e.get("b")}: needs numeric dur and freq high/med/low')
+        for line in f.get('visual_lines', []):
+            for k in line.get('stops', []):
+                if k not in nodes:
+                    err(f'ferries.json: map line stop "{k}" is not a port')
+        for k in f.get('island_ports', {}):
+            if k not in dests:
+                warn(f'ferries.json: island_ports has "{k}", not a destination')
+        fps = f.get('foreign_ports', {})
+        for r in f.get('international_routes', []):
+            if r.get('from') not in nodes or r.get('to') not in fps:
+                err(f'ferries.json: international route {r.get("from")}→{r.get("to")} has an unknown end')
+        unreached = [k for k in dests if not any(k in (e['a'], e['b']) for e in f.get('graph', []))]
+        if unreached:
+            warn(f'{len(unreached)} destinations have no ferry route: ' + ', '.join(unreached[:12]))
+
 # ---- report ------------------------------------------------------------------------------------
 strict = '--strict' in sys.argv
 print(f'Validate market "{M.MARKET}": {len(dests)} destinations, languages {"/".join(codes)}')

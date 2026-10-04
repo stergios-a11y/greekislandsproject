@@ -342,15 +342,14 @@ def controls(lang, fs, names, with_island=True):
 
 def load_hops():
     """Neighbours you can realistically visit for an evening panigiri and get
-    back from: from script.js FERRY_GRAPH, only links under an hour with
+    back from: from the market's ferry graph, only links under an hour with
     several sailings a day. One boat a day ('daily') does not count — there is
     no way home after the dancing."""
-    js = (ROOT / 'script.js').read_text(encoding='utf-8')
-    m = re.search(r"\nconst FERRY_GRAPH = \[\n(.*?)\n\];", js, re.S)
     hops = {}
-    if not m:
-        return hops
-    for a, b, dur, freq, note in re.findall(r"\{ a: '([^']+)', b: '([^']+)', dur: (\d+), freq: '(\w+)'.*?note: \"([^\"]*)\"", m.group(1)):
+    for e in _market.ferries().get('graph', []):
+        a, b, dur, freq, note = e['a'], e['b'], e['dur'], e['freq'], e.get('note')
+        if note is None:
+            continue
         dur = int(dur)
         if freq != 'high' or dur > 60 or not re.search(r'multiple|every|frequent|hourly|shuttle|30 ?min|\d\+?/day|per day|several', note, re.I):
             continue
