@@ -24,6 +24,8 @@
   Cache-Control: public, max-age=0, must-revalidate
 /i18n.js
   Cache-Control: public, max-age=0, must-revalidate
+/market-data.js
+  Cache-Control: public, max-age=0, must-revalidate
 
 # Generated data — revalidate so island content updates promptly.
 /hero-photos.json

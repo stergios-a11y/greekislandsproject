@@ -206,26 +206,14 @@ def draw_score_pill(draw, x, y, score, font, fill, fg, padding=18, radius=20):
 # Render one OG image
 # ----------------------------------------------------------------------
 def get_island_meta(key):
-    """Read script.js to get score + group + name fallback for the island."""
-    # Cache ISLANDS_DATA parse on first call
+    """Score + group + name for the card, from markets/<market>/destinations.json."""
     if not hasattr(get_island_meta, '_cache'):
-        import re
-        text = (ROOT / 'script.js').read_text()
-        m = re.search(r'const ISLANDS_DATA\s*=\s*\{([\s\S]*?)\};', text)
-        if not m:
-            get_island_meta._cache = {}
-        else:
-            cache = {}
-            entry_re = re.compile(
-                r'"([a-z0-9-]+)"\s*:\s*\{\s*name\s*:\s*"([^"]+)"[^}]*?total\s*:\s*([\d.]+)[^}]*?island_group\s*:\s*"([^"]+)"'
-            )
-            for m2 in entry_re.finditer(m.group(1)):
-                cache[m2.group(1)] = {
-                    'name': m2.group(2),
-                    'total': float(m2.group(3)),
-                    'group': m2.group(4),
-                }
-            get_island_meta._cache = cache
+        import sys
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import market
+        get_island_meta._cache = {
+            k: {'name': d.get('name', k), 'total': float(d.get('total') or 0), 'group': d.get('island_group', '')}
+            for k, d in market.destinations().items() if d.get('total') is not None and d.get('island_group')}
     return get_island_meta._cache.get(key, {})
 
 # ----------------------------------------------------------------------

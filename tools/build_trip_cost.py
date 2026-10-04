@@ -3,7 +3,7 @@
 
 Data sources:
   - costs.json            room/meal/car/boat values per island + pricing rules (_meta)
-  - script.js             ISLANDS_DATA: lat/lng, island_group, car_need, has_airport
+  - markets/<market>/destinations.json: lat/lng, island_group, car_need, has_airport
   - islands/*.json        name_el + hero_photo (thumbnails)
 
 Ferry fares are estimated from real inter-island distances (haversine),
@@ -47,25 +47,21 @@ SITE_URL = 'https://aegeanblueprint.com'
 
 
 def parse_islands_data():
-    """Extract lat/lng/group/car_need/has_airport/name from script.js ISLANDS_DATA."""
-    s = (ROOT / 'script.js').read_text(encoding='utf-8')
-    start = s.index('const ISLANDS_DATA = {')
-    end = s.index('\n};', start)
-    block = s[start:end]
+    """Destination fields from markets/<market>/destinations.json."""
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import market
     out = {}
-    for m in re.finditer(r'"([a-z-]+)":\s*\{([^}]+)\}', block):
-        key, body = m.group(1), m.group(2)
+    for key, d in market.destinations().items():
         def f(name, cast=float):
-            mm = re.search(name + r':\s*([\d.]+)', body)
-            return cast(mm.group(1)) if mm else None
-        name = re.search(r'name:"([^"]+)"', body)
-        group = re.search(r'island_group:"([^"]+)"', body)
+            v = d.get(name)
+            return cast(v) if isinstance(v, (int, float)) and not isinstance(v, bool) else None
         out[key] = {
-            'name': name.group(1) if name else key.title(),
+            'name': d.get('name') or key.title(),
             'lat': f('lat'), 'lng': f('lng'),
             'car_need': f('car_need') or 0,
-            'air': 'has_airport:true' in body.replace(' ', ''),
-            'group': group.group(1) if group else '',
+            'air': d.get('has_airport') is True,
+            'group': d.get('island_group', ''),
             'beach': f('beach') or 0, 'hist': f('hist') or 0, 'night': f('night') or 0,
             'access': f('access') or 0, 'total': f('total') or 0,
             'days': f('days', int) or 3,

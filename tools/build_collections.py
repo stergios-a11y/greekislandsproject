@@ -70,32 +70,25 @@ CSS = '''<style>
 
 
 def load_meta():
-    """Island stats parsed from script.js's ISLANDS_DATA."""
-    js = (ROOT / 'script.js').read_text(encoding='utf-8')
-    start = js.index('const ISLANDS_DATA =')
-    end = js.index('\n};', start) + 3
-    block = js[start:end]
+    """Destination stats from markets/<market>/destinations.json."""
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import market
     out = {}
-    for m in re.finditer(r'"([a-z-]+)":\s*\{([^}]+)\}', block):
-        key, body = m.group(1), m.group(2)
-
+    for key, d in market.destinations().items():
         def num(name):
-            mm = re.search(name + r':\s*([\d.]+)', body)
-            return float(mm.group(1)) if mm else None
-
-        nm = re.search(r'name:"([^"]+)"', body)
-        grp = re.search(r'island_group:"([^"]+)"', body)
+            v = d.get(name)
+            return float(v) if isinstance(v, (int, float)) and not isinstance(v, bool) else None
         out[key] = {
-            'name': nm.group(1) if nm else key.title(),
-            'group': grp.group(1) if grp else '',
+            'name': d.get('name') or key.title(),
+            'group': d.get('island_group', ''),
             'night': num('night') or 0, 'pop': num('pop') or 0,
             'beach': num('beach') or 0, 'total': num('total') or 0,
             'car_need': num('car_need') or 0, 'access': num('access') or 0,
             'area': num('area') or 0, 'days': int(num('days') or 3),
-            'hiking': 'hiking:true' in body.replace(' ', ''),
+            'hiking': d.get('hiking') is True,
         }
     return out
-
 
 def greek_names():
     out = {}

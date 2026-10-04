@@ -24,7 +24,7 @@ W0, N0, RES = 18.8, 41.8, 0.004
 
 NODE = r"""
 const fs = require('fs');
-const s = fs.readFileSync(process.argv[1], 'utf8');
+const s = fs.readFileSync(process.argv[1], 'utf8') + ';' + fs.readFileSync(process.argv[2], 'utf8');
 function grab(name, open, close) {
   const i = s.indexOf('const ' + name + ' = ');
   if (i < 0) return null;
@@ -76,7 +76,7 @@ def main():
     cost = np.where(water, 1.0 + 2.0 * np.clip(1.0 - dist_land / 3.0, 0, 1), -1.0)
     _, (nr, nc) = ndimage.distance_transform_edt(~water, return_indices=True)
 
-    out = subprocess.run(['node', '-e', NODE, str(ROOT / 'script.js')], capture_output=True, text=True, check=True)
+    out = subprocess.run(['node', '-e', NODE, str(ROOT / 'script.js'), str(ROOT / 'market-data.js')], capture_output=True, text=True, check=True)
     segs = json.loads(out.stdout)
     todo = {}
     for p, q in segs:

@@ -20,7 +20,7 @@ The earlier teardown (commit 02e1f3b4) was driven by the OLD static pages
 looking visually different from the SPA. This rebuild guarantees identical
 appearance by reusing the same shell — only the URL changes.
 
-Reads:  vs_verdicts.json, vs_faqs.json, island metadata in script.js
+Reads:  vs_verdicts.json, vs_faqs.json, markets/<market>/destinations.json
 Writes: compare/<slug>/index.html, el/compare/<slug>/index.html
 """
 import hashlib
@@ -62,6 +62,8 @@ def _asset_v(name, default=1):
 ASSET_V = _asset_v(r'script\.js', 102)
 STYLE_V = _asset_v(r'style\.css', ASSET_V)
 I18N_V = _asset_v(r'i18n\.js', 42)
+_mv = re.search(r'market-data\.js\?v=([0-9a-z]+)', (ROOT / 'index.html').read_text(encoding='utf-8'))
+MARKET_V = _mv.group(1) if _mv else '0'
 
 from datetime import date as _date
 YEAR = _date.today().year
@@ -640,14 +642,12 @@ FAQS_PATH = ROOT / 'vs_faqs.json'
 FAQS = json.loads(FAQS_PATH.read_text(encoding='utf-8')) if FAQS_PATH.exists() else {}
 
 def load_island_meta():
-    js = (ROOT / 'script.js').read_text(encoding='utf-8')
-    meta = {}
-    for m in re.finditer(
-        r'^\s*"([a-z-]+)"\s*:\s*\{\s*name\s*:\s*"([^"]+)"[^}]*island_group\s*:\s*"([^"]+)"',
-        js, re.MULTILINE
-    ):
-        meta[m.group(1)] = {'name': m.group(2), 'group': m.group(3)}
-    return meta
+    """Name + group for every destination, from markets/<market>/destinations.json."""
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import market
+    return {k: {'name': d['name'], 'group': d['island_group']}
+            for k, d in market.destinations().items() if d.get('name') and d.get('island_group')}
 
 def load_island_names_el():
     js = (ROOT / 'i18n.js').read_text(encoding='utf-8')
@@ -1185,6 +1185,7 @@ window.__INITIAL_COMPARE_PAIR = {init_pair};
 </script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="/market-data.js?v={MARKET_V}"></script>
 <script src="/i18n.js?v={I18N_V}"></script>
 <script src="/script.js?v={ASSET_V}"></script>
 </body>
