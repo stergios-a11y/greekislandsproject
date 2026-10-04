@@ -99,6 +99,12 @@ def lang_prefix(code):
     return next((l.get('prefix', '') for l in languages() if l['code'] == code), '')
 
 
+
+def feature(name):
+    """Is an optional page family on for this market? (market.json "features"; missing = on)"""
+    return bool(config().get('features', {}).get(name, True))
+
+
 def per_lang(values):
     """{code: value} -> [value, ...] for the market's languages, in config order."""
     return [values[c] for c in langs() if c in values]
@@ -131,6 +137,7 @@ def render_js():
         '   Edit the JSON and rebuild; changes made here are overwritten. */\n'
         f'const MARKET_KEY = {json.dumps(MARKET)};\n'
         f'const MARKET_LANGS = {json.dumps(languages(), ensure_ascii=False)};\n'
+        f'const MARKET_FEATURES = {json.dumps(config().get("features", {}))};\n'
         f'const ISLANDS_DATA = {_obj_lines(destinations())};\n'
         f'const ISLAND_CLUSTERS = {json.dumps(clusters(), ensure_ascii=False, indent=2)};\n'
         f'const HOMEPAGE_FEATURED = {json.dumps(h["featured"], ensure_ascii=False, indent=2)};\n'

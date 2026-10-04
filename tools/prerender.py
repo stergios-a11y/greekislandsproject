@@ -3026,8 +3026,9 @@ def main():
     # (village-level inventory, movable-feast engine, .ics). Not here any more.
 
     # Build the ferries hub page (static HTML, EN + EL)
-    n_routes = generate_ferries_page(keys)
-    print(f'✓ ferries/ page regenerated ({n_routes} routes)')
+    if _market.feature('ferries'):
+        n_routes = generate_ferries_page(keys)
+        print(f'✓ ferries/ page regenerated ({n_routes} routes)')
 
     # Regenerate sitemap LAST — needs other generators to have run first.
     generate_sitemap(keys)

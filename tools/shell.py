@@ -89,6 +89,8 @@ def nav_html(lang, active=''):
     home = M.lang_prefix(lang) + '/'
     out = []
     for item in M.config()['nav']:
+        if item.get('feature') and not M.feature(item['feature']):
+            continue
         out.append(render('partials/nav_link.html', href=home + item['href'],
                           id_attr=f' id="{item["dom_id"]}"' if item.get('dom_id') else '',
                           active=' class="active"' if active and item.get('id') == active else '',
@@ -138,7 +140,8 @@ def seo_nav(lang, alt_href):
     b = brand()
     home = M.lang_prefix(lang) + '/'
     links = '\n'.join(render('partials/seo_nav_link.html', href=home + i['href'], label=label(i['label'], lang))
-                      for i in M.config().get('seo_nav', []))
+                      for i in M.config().get('seo_nav', [])
+                      if not i.get('feature') or M.feature(i['feature']))
     others = [c for c in M.langs() if c != lang]
     ll = render('partials/seo_nav_lang.html', href=alt_href, label=others[0].upper()) if others else ''
     return render('seo_nav.html', home=home, logo=b['logo'], site_name=b['site_name'], links=links, lang_link=ll)

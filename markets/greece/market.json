@@ -40,7 +40,8 @@
         "en": "Compare",
         "el": "Σύγκριση"
       },
-      "dom_id": "nav-compare"
+      "dom_id": "nav-compare",
+      "feature": "compare"
     },
     {
       "href": "#match",
@@ -49,7 +50,8 @@
         "en": "Match Me",
         "el": "Βρες το Νησί σου"
       },
-      "dom_id": "nav-match"
+      "dom_id": "nav-match",
+      "feature": "match"
     },
     {
       "href": "trip-cost/",
@@ -58,7 +60,8 @@
         "el": "Κόστος"
       },
       "dom_id": "nav-tripcost",
-      "id": "tripcost"
+      "id": "tripcost",
+      "feature": "trip_cost"
     },
     {
       "href": "#hopping",
@@ -67,7 +70,8 @@
         "el": "Πλοία &amp; Νησοπορία"
       },
       "dom_id": "nav-hopping",
-      "id": "hopping"
+      "id": "hopping",
+      "feature": "ferries"
     },
     {
       "href": "festivals/",
@@ -76,7 +80,8 @@
         "en": "Festivals",
         "el": "Γιορτές"
       },
-      "dom_id": "nav-festivals"
+      "dom_id": "nav-festivals",
+      "feature": "festivals"
     },
     {
       "href": "#data",
@@ -134,14 +139,16 @@
       "label": {
         "en": "Compare",
         "el": "Σύγκριση"
-      }
+      },
+      "feature": "compare"
     },
     {
       "href": "#match",
       "label": {
         "en": "Quiz",
         "el": "Quiz"
-      }
+      },
+      "feature": "match"
     }
   ],
   "strings": {
@@ -157,5 +164,14 @@
       "en": "Affiliate links — they support this guide and cost you nothing.",
       "el": "Affiliate σύνδεσμοι — στηρίζουν αυτόν τον οδηγό χωρίς κόστος για εσένα."
     }
+  },
+  "features": {
+    "ferries": true,
+    "festivals": true,
+    "trip_cost": true,
+    "compare": true,
+    "itineraries": true,
+    "collections": true,
+    "match": true
   }
 }
