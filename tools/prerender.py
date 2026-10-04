@@ -730,7 +730,7 @@ def festivals_page_link(key, lang):
         try:
             # festivals.json, not festivals-index.json: build_festivals.py runs
             # after prerender, so the index would lag one build on a fresh clone.
-            _fj = json.loads((ROOT / 'festivals.json').read_text(encoding='utf-8'))
+            _fj = json.loads((_market.MDIR / 'festivals.json').read_text(encoding='utf-8'))
             _FEST_INDEX = {k: len(v) for k, v in _fj.items() if v}
         except Exception:
             _FEST_INDEX = {}

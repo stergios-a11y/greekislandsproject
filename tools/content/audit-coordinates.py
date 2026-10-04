@@ -28,7 +28,7 @@ import urllib.parse
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 ISLANDS_DIR = ROOT / 'islands'
 RESULTS_PATH = ROOT / 'audit-results.json'
 USER_AGENT = 'aegeanblueprint-audit/1.0 (https://aegeanblueprint.com)'

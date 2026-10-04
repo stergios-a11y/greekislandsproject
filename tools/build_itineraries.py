@@ -10,7 +10,7 @@ where the plan is the fourth section down. This page answers that query in
 its own title, first sentence and heading structure. Nothing new is written:
 days, stops, times, photos, drives, overnight bases and eat & drink all come
 from islands/<key>.json. The lede and the three planning questions are
-generated from the data, with hand overrides in tools/itinerary_overrides.json.
+generated from the data, with hand overrides in markets/<market>/itinerary_overrides.json.
 
 The island page keeps its itinerary section (linked from here as 'Full
 guide'); beaches, when-to-visit and getting-there stay there too, so the two
@@ -36,7 +36,7 @@ from build_compare_pages import fit_description                          # noqa:
 YEAR = date.today().year
 TODAY = date.today().isoformat()
 OVERRIDES = {}
-_ov = ROOT / 'tools' / 'itinerary_overrides.json'
+_ov = _market.MDIR / 'itinerary_overrides.json'
 if _ov.exists():
     OVERRIDES = json.loads(_ov.read_text(encoding='utf-8'))
 

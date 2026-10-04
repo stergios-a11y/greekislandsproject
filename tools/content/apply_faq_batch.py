@@ -2,7 +2,7 @@
 """Splice FAQ-only batches into vs_faqs.json. Usage: apply_faqs.py faqs.json"""
 import json,sys
 from pathlib import Path
-ROOT=Path(__file__).resolve().parent.parent
+ROOT=Path(__file__).resolve().parents[2]
 b=json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
 fp=ROOT/'vs_faqs.json'; v=json.loads((ROOT/'vs_verdicts.json').read_text(encoding='utf-8'))
 f=json.loads(fp.read_text(encoding='utf-8'))

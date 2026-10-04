@@ -7,7 +7,7 @@ find a route over water around the islands, simplify it, and write
 ferry-paths.json  { "lat,lng|lat,lng": [[lat, lng], ...] }.
 The map falls back to a gentle curve for any segment missing from the file.
 
-Land mask: tools/data/aegean_land.npz — OSM land polygons (via @geo-maps/
+Land mask: markets/<market>/land.npz — OSM land polygons (via @geo-maps/
 earth-lands-10m, ODbL) rasterised at 0.004° over 18.8–30.2°E, 34.2–41.8°N.
 
 Needs numpy, scipy, scikit-image and node (to read the data out of script.js).
@@ -15,6 +15,8 @@ Run it whenever ports, edges or lines change:  python3 tools/build_ferry_paths.p
 """
 import json, subprocess, sys
 from pathlib import Path
+
+import market as _market  # noqa: E402
 import numpy as np
 from scipy import ndimage
 from skimage.graph import MCP_Geometric
@@ -62,8 +64,8 @@ def key(p, q):
     return f"{p[0]:.4f},{p[1]:.4f}|{q[0]:.4f},{q[1]:.4f}"
 
 def main():
-    land = np.unpackbits(np.load(ROOT / 'tools/data/aegean_land.npz')['bits'])
-    shape = tuple(np.load(ROOT / 'tools/data/aegean_land.npz')['shape'])
+    land = np.unpackbits(np.load(_market.MDIR / 'land.npz')['bits'])
+    shape = tuple(np.load(_market.MDIR / 'land.npz')['shape'])
     land = land[:shape[0] * shape[1]].reshape(shape).astype(bool)
     water = ~land
     # Keep only the open sea: harbour basins and lakes cut off by breakwaters at

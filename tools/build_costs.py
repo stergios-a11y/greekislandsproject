@@ -15,6 +15,8 @@ change once, all 88 islands follow. Season surge applies to rooms AND cars.
 import csv, json, sys
 from pathlib import Path
 
+import market as _market  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 
 def load_rules():
@@ -23,7 +25,7 @@ def load_rules():
     months = ['apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct']
     meta = {'baseline': 'July; single typical values per island in costs.csv. '
                         'All multipliers come from cost-rules.csv.'}
-    with open(ROOT / 'cost-rules.csv', newline='', encoding='utf-8-sig') as f:
+    with open(_market.MDIR / 'cost-rules.csv', newline='', encoding='utf-8-sig') as f:
         for row in csv.DictReader(f):
             rule = row['rule'].strip()
             if not rule:
@@ -46,7 +48,7 @@ def num(v):
     return float(v) if '.' in v else int(v)
 
 def main():
-    src = ROOT / 'costs.csv'
+    src = _market.MDIR / 'costs.csv'
     out = ROOT / 'costs.json'
     islands = {}
     errors = []

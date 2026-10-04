@@ -10,7 +10,7 @@
 #
 # Runtime data that MUST stay deployed (fetched by script.js): islands/*.json,
 # vs_verdicts.json, vs_faqs.json, whats-on.json, hero-photos.json,
-# festivals-index.json. Build-only inputs are excluded below.
+# festivals-index.json. Build-only inputs live in tools/, markets/ and templates/.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 rm -rf dist && mkdir dist
@@ -20,10 +20,7 @@ tar -cf - \
   --exclude=./.gitignore \
   --exclude=./tools \
   --exclude=./markets --exclude=./templates \
-  --exclude=./costs.csv \
-  --exclude=./cost-rules.csv \
   --exclude=./costs.json \
-  --exclude=./festivals.json \
   --exclude='./*.md' \
   --exclude='*/__pycache__' \
   . | tar -xf - -C dist

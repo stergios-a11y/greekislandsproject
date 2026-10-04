@@ -50,7 +50,7 @@ import uuid
 from collections import OrderedDict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 ISLANDS = ROOT / 'islands'
 RENDER_W, RENDER_H = 640, 420          # must match content_img_640() in prerender.py
 

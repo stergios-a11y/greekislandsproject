@@ -2,7 +2,7 @@
 """Append researched beaches to islands/<key>.json. Usage: apply_beaches.py new_beaches.json"""
 import json,sys
 from pathlib import Path
-ROOT=Path(__file__).resolve().parent.parent
+ROOT=Path(__file__).resolve().parents[2]
 b=json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
 for isl,new in b.items():
     p=ROOT/'islands'/f'{isl}.json'; d=json.loads(p.read_text(encoding='utf-8'))

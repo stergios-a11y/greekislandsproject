@@ -75,7 +75,7 @@ def L(lang, en, el):
 
 # --------------------------------------------------------------------------- data
 def load():
-    fests = json.loads((ROOT / 'festivals.json').read_text(encoding='utf-8'))
+    fests = json.loads((_market.MDIR / 'festivals.json').read_text(encoding='utf-8'))
     names, heroes = {}, {}
     for p in sorted((ROOT / 'islands').glob('*.json')):
         d = json.loads(p.read_text(encoding='utf-8'))
