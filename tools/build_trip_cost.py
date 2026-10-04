@@ -42,7 +42,7 @@ def _asset_versions():
 
 STYLE_V, SCRIPT_V = _asset_versions()
 
-SITE_URL = 'https://aegeanblueprint.com'
+SITE_URL = _market.config()['brand']['site_url']
 
 
 # ---------------------------------------------------------------- data

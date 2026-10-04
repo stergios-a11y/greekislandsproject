@@ -18,6 +18,7 @@ from datetime import date
 from pathlib import Path
 
 import market as _market  # noqa: E402  (tools/ is on sys.path)
+import shell  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -36,7 +37,7 @@ def _asset_versions():
 
 STYLE_V, SCRIPT_V = _asset_versions()
 
-SITE_URL = 'https://aegeanblueprint.com'
+SITE_URL = _market.config()['brand']['site_url']
 
 YEAR = date.today().year
 
@@ -49,7 +50,7 @@ def hub_year(month):
     today = date.today()
     return today.year if month >= today.month else today.year + 1
 
-TP_SCRIPT = '<script async data-cfasync="false" data-noptimize="1" data-no-defer="1" src="https://emrldtp.com/NTUxOTU3.js?t=551957"></script>'
+TP_SCRIPT = shell.brand().get('head_extra', '')
 
 MONTHS = [
     ('january', 'January', 'Ιανουάριος', 'τον Ιανουάριο'),
@@ -112,71 +113,14 @@ def collect():
 
 
 def page_head(title, desc, path_en, path_el, lang):
-    url = SITE_URL + (path_el if lang == 'el' else path_en)
-    return f'''<!DOCTYPE html>
-<html lang="{lang}">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>window.localStorage&&document.documentElement.classList.toggle("dark",localStorage.getItem("darkMode")===null?window.matchMedia("(prefers-color-scheme: dark)").matches:localStorage.getItem("darkMode")==="true")</script>
-<title>{esc(title)}</title>
-<meta name="description" content="{esc(desc)}">
-<meta name="theme-color" content="#0B8FAC">
-<meta name="author" content="Stergios Gousios">
-<link rel="canonical" href="{url}">
-{_market.hreflang(dict(en=SITE_URL + path_en, el=SITE_URL + path_el))}
-<meta property="og:title" content="{esc(title)}">
-<meta property="og:description" content="{esc(desc)}">
-<meta property="og:url" content="{url}">
-<meta property="og:type" content="website">
-<meta property="og:image" content="{SITE_URL}/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="{SITE_URL}/og-image.png">
-<link rel="icon" href="/logo-hero.svg" type="image/svg+xml">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-FMFWLRM2J9');</script>
-<link rel="stylesheet" href="/style.css?v={STYLE_V}">
-{TP_SCRIPT}
-</head>'''
+    return shell.page_head(title, desc, {'en': SITE_URL + path_en, 'el': SITE_URL + path_el}, lang, STYLE_V)
 
 
 def header_nav(lang, toggle_href, active='festivals'):
-    p = '/el/' if lang == 'el' else '/'
-    L = (lambda en, el: el if lang == 'el' else en)
-    return f'''<body>
-<header>
-  <div class="header-content">
-    <a class="logo-wrapper" href="{p}" style="text-decoration: none;">
-      <img src="/logo-hero.svg" id="site-logo" alt="Aegean Blueprint logo">
-      <span id="brand-text"><span class="brand-word">Aegean</span> <span class="brand-word">Blueprint</span></span>
-    </a>
-    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>
-    <nav class="top-nav" id="main-nav">
-      <a href="{p}#compare">{L('Compare', 'Σύγκριση')}</a>
-      <a href="{p}#match"{' class="active"' if active == 'match' else ''}>{L('Match Me', 'Βρες το Νησί σου')}</a>
-      <a href="{p}trip-cost/">{L('Budget', 'Κόστος')}</a>
-      <a href="{p}#hopping">{L('Ferries &amp; Hopping', 'Πλοία &amp; Νησοπορία')}</a>
-      <a href="{p}festivals/"{' class="active"' if active == 'festivals' else ''}>{L('Festivals', 'Γιορτές')}</a>
-      <a href="{p}#data">{L('Islands Data', 'Στοιχεία Νησιών')}</a>
-      <a href="{p}#mission">{L('About', 'Σχετικά')}</a>
-      <a href="{p}#shortlist">{L('⭐ My Shortlist', '⭐ Η Λίστα μου')}</a>
-    </nav>
-    <a class="lang-toggle-static" href="{toggle_href}" style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 13px; white-space: nowrap;"><span style="margin-right: 4px;">🌐</span>{'EN' if lang == 'el' else 'EL'}</a>
-    <button type="button" class="dark-mode-toggle dm-static" aria-label="Toggle dark mode" onclick="var h=document.documentElement,d=!h.classList.contains('dark');h.classList.toggle('dark',d);try{{localStorage.setItem('darkMode',d)}}catch(e){{}}"></button>
-  </div>
-</header>
-<script>document.getElementById("menu-toggle-btn").addEventListener("click",function(){{var n=document.getElementById("main-nav");n.classList.toggle("open");this.classList.toggle("open");}});</script>'''
+    return shell.site_header(lang, toggle_href, active)
 
 
-FOOTER = '''<footer class="seo-footer" style="max-width:1000px;margin:0 auto;padding:24px 22px;font-size:13px;color:#637080">
-  <p>© {copyright_year} Aegean Blueprint · <a href="{lang_link}" style="color:#076880;text-decoration:none">{lang_label}</a> · <a href="{privacy}" style="color:#076880;text-decoration:none">{privacy_label}</a> · <a href="{credits}" style="color:#076880;text-decoration:none">{credits_label}</a></p>
-</footer>
-</body>
-</html>'''
-
-FOOTER = FOOTER.replace('{copyright_year}', str(YEAR))
+FOOTER = shell.footer(YEAR)
 
 
 BUDGET_MONTH = {4: 'apr', 5: 'may', 6: 'jun', 7: 'jul', 8: 'aug', 9: 'sep', 10: 'oct'}

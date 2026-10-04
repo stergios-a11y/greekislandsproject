@@ -91,7 +91,7 @@ OUT_EN = ROOT / 'island'
 OUT_EL = ROOT / 'el' / 'island'
 SITEMAP_PATH = ROOT / 'sitemap.xml'
 
-SITE_URL = 'https://aegeanblueprint.com'
+SITE_URL = _market.config()['brand']['site_url']
 SITE_NAME = 'Aegean Blueprint'
 
 # ---------------------------------------------------------------------

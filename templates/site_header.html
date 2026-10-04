@@ -1,0 +1,16 @@
+<body>
+<header>
+  <div class="header-content">
+    <a class="logo-wrapper" href="{{home}}" style="text-decoration: none;">
+      <img src="{{logo}}" id="site-logo" alt="{{site_name}} logo">
+      <span id="brand-text">{{brand_html}}</span>
+    </a>
+    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>
+    <nav class="top-nav" id="main-nav">
+{{nav}}
+    </nav>
+{{lang_toggle}}
+    <button type="button" class="dark-mode-toggle dm-static" aria-label="Toggle dark mode" onclick="var h=document.documentElement,d=!h.classList.contains('dark');h.classList.toggle('dark',d);try{localStorage.setItem('darkMode',d)}catch(e){}"></button>
+  </div>
+</header>
+<script>document.getElementById("menu-toggle-btn").addEventListener("click",function(){var n=document.getElementById("main-nav");n.classList.toggle("open");this.classList.toggle("open");});</script>

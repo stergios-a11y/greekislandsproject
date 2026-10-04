@@ -13,5 +13,79 @@
       "name": "Ελληνικά",
       "prefix": "/el"
     }
+  ],
+  "brand": {
+    "site_name": "Aegean Blueprint",
+    "brand_words": [
+      "Aegean",
+      "Blueprint"
+    ],
+    "site_url": "https://aegeanblueprint.com",
+    "author": "Stergios Gousios",
+    "ga_id": "G-FMFWLRM2J9",
+    "theme_color": "#0B8FAC",
+    "logo": "/logo-hero.svg",
+    "og_image": "/og-image.png",
+    "head_extra": "<script async data-cfasync=\"false\" data-noptimize=\"1\" data-no-defer=\"1\" src=\"https://emrldtp.com/NTUxOTU3.js?t=551957\"></script>"
+  },
+  "nav": [
+    {
+      "href": "#compare",
+      "label": {
+        "en": "Compare",
+        "el": "Σύγκριση"
+      }
+    },
+    {
+      "href": "#match",
+      "id": "match",
+      "label": {
+        "en": "Match Me",
+        "el": "Βρες το Νησί σου"
+      }
+    },
+    {
+      "href": "trip-cost/",
+      "label": {
+        "en": "Budget",
+        "el": "Κόστος"
+      }
+    },
+    {
+      "href": "#hopping",
+      "label": {
+        "en": "Ferries &amp; Hopping",
+        "el": "Πλοία &amp; Νησοπορία"
+      }
+    },
+    {
+      "href": "festivals/",
+      "id": "festivals",
+      "label": {
+        "en": "Festivals",
+        "el": "Γιορτές"
+      }
+    },
+    {
+      "href": "#data",
+      "label": {
+        "en": "Islands Data",
+        "el": "Στοιχεία Νησιών"
+      }
+    },
+    {
+      "href": "#mission",
+      "label": {
+        "en": "About",
+        "el": "Σχετικά"
+      }
+    },
+    {
+      "href": "#shortlist",
+      "label": {
+        "en": "⭐ My Shortlist",
+        "el": "⭐ Η Λίστα μου"
+      }
+    }
   ]
 }

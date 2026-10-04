@@ -19,7 +19,7 @@ tar -cf - \
   --exclude=./.git \
   --exclude=./.gitignore \
   --exclude=./tools \
-  --exclude=./markets \
+  --exclude=./markets --exclude=./templates \
   --exclude=./costs.csv \
   --exclude=./cost-rules.csv \
   --exclude=./costs.json \
