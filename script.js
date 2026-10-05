@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-10-04';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-10-05';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -1514,7 +1514,7 @@ function renderMapRail(keys, label, photos, lang) {
   // Phones: same photo tiles, swipeable, in the hero. No map rail.
   if (window.matchMedia('(max-width: 840px)').matches) {
     const b = document.getElementById('bp-picks');
-    if (b && keys.length) _fillPickBand(b, keys, label, photos, lang);
+    if (b && keys.length) _fillPickBand(b, keys.slice(0, 3), label, photos, lang);   // three that fit, no sideways scroll
     return;
   }
   const rail = document.getElementById('pick-rail');
@@ -1658,7 +1658,7 @@ function setupMap() {
      on small screens; desktop keeps the tighter framing it was tuned with. */
   const _small = window.matchMedia('(max-width: 840px)').matches;
   mapInstance = L.map('main-map', {
-    zoomControl: true, scrollWheelZoom: !_small,   // desktop home is fixed: wheel = zoom
+    zoomControl: !_small, scrollWheelZoom: !_small,   // desktop home is fixed: wheel = zoom; phones pinch, no +/- buttons
     minZoom: _small ? 5 : 6, maxZoom: 14, zoomSnap: 0.5,
     maxBounds: GREECE_BOUNDS, maxBoundsViscosity: _small ? 0.25 : 0.85 });
   // Default view hugs the Greek islands (Corfu→Kastellorizo, Crete→Thasos)
@@ -3967,6 +3967,49 @@ function poiDivIcon(type, color, mode, dayNum) {
 /* ============================================================
    OSRM ROAD ROUTING
 ============================================================ */
+function itinRoutePieces(ll, boat) {
+  // Road route for an itinerary day, split where the trip is really by boat:
+  // a stop flagged "by boat", a stop the road router can't reach (snaps >500 m away),
+  // or a leg whose road detour is >4x the straight distance (e.g. via the mainland).
+  function hav(a, b) {
+    var t = Math.PI / 180, dLa = (b[0] - a[0]) * t, dLo = (b[1] - a[1]) * t;
+    var x = Math.sin(dLa / 2) * Math.sin(dLa / 2) + Math.cos(a[0] * t) * Math.cos(b[0] * t) * Math.sin(dLo / 2) * Math.sin(dLo / 2);
+    return 12742000 * Math.asin(Math.sqrt(x));
+  }
+  function osrm(pts) {
+    if (pts.length < 2) return Promise.resolve(null);
+    var q = pts.map(function (p) { return p[1] + ',' + p[0]; }).join(';');
+    return fetch('https://router.project-osrm.org/route/v1/driving/' + q + '?overview=full&geometries=geojson')
+      .then(function (r) { return r.json(); }).catch(function () { return null; });
+  }
+  function line(j, pts) {
+    return (j && j.routes && j.routes[0]) ? j.routes[0].geometry.coordinates.map(function (c) { return [c[1], c[0]]; }) : pts;
+  }
+  return osrm(ll).then(function (j) {
+    var ok = j && j.routes && j.routes[0] && j.waypoints, sea = [];
+    for (var i = 0; i < ll.length - 1; i++) {
+      var s = !!(boat && boat[i + 1]);
+      if (!s && ok) {
+        var leg = j.routes[0].legs[i].distance;
+        s = j.waypoints[i].distance > 500 || j.waypoints[i + 1].distance > 500 || leg > 4 * hav(ll[i], ll[i + 1]) + 3000;
+      }
+      sea.push(s);
+    }
+    if (sea.indexOf(true) < 0) return [{ c: line(j, ll), sea: false }];
+    var out = [], runs = [], run = [ll[0]];
+    for (var k = 0; k < sea.length; k++) {
+      if (sea[k]) {
+        if (run.length > 1) runs.push(run);
+        out.push({ c: [ll[k], ll[k + 1]], sea: true });
+        run = [ll[k + 1]];
+      } else run.push(ll[k + 1]);
+    }
+    if (run.length > 1) runs.push(run);
+    return Promise.all(runs.map(function (r) { return osrm(r).then(function (jj) { return { c: line(jj, r), sea: false }; }); }))
+      .then(function (land) { return out.concat(land); });
+  });
+}
+
 async function fetchOSRMRoute(coords) {
   const coordStr = coords.map(c => `${c[1]},${c[0]}`).join(';');
   const url = `https://router.project-osrm.org/route/v1/driving/${coordStr}?overview=full&geometries=geojson`;
@@ -4034,19 +4077,19 @@ async function initItineraryMap(days, beaches = []) {
     itinRouteLayers[day.day] = [];
     itinMarkerLayers[day.day] = [];
 
-    const coords = day.stops.filter(hasPin).map(s => [s.lat, s.lng]);
-    const rawRoute = await fetchOSRMRoute(coords);
-    // Thin the dense OSRM path (~40m tolerance) before drawing so the offset
-    // lines stay smooth instead of lumpy at every little road wiggle.
-    const routeCoords = simplifyPath(rawRoute, 0.0004);
-
-    // Lines stay exactly on the road. Overlapping days are distinguished by a
-    // staggered dash pattern applied in restyleItinRoutes() (zoom-responsive),
-    // so no geometry is moved off the road (which previously caused curls).
-    const polyline = L.polyline(routeCoords, {
-      color: day.color, weight: 5, opacity: 0.9, lineJoin: 'round'
-    }).addTo(itineraryMapInstance);
-    itinRouteLayers[day.day].push(polyline);
+    const pinned = day.stops.filter(hasPin);
+    const pieces = await itinRoutePieces(pinned.map(s => [s.lat, s.lng]), pinned.map(s => s.by === 'boat'));
+    // Road legs: thin the dense OSRM path (~40m tolerance) so lines stay smooth.
+    // Overlapping days are told apart by a staggered dash (restyleItinRoutes), so
+    // no geometry is moved off the road. Boat legs: a dotted line across the sea.
+    for (const pc of pieces) {
+      const pl = pc.sea
+        ? L.polyline(pc.c, { color: day.color, weight: 3, opacity: 0.85, dashArray: '1 9', lineCap: 'round' })
+        : L.polyline(simplifyPath(pc.c, 0.0004), { color: day.color, weight: 5, opacity: 0.9, lineJoin: 'round' });
+      pl._sea = pc.sea;
+      pl.addTo(itineraryMapInstance);
+      itinRouteLayers[day.day].push(pl);
+    }
 
     day.stops.forEach((stop, i) => {
       if (!hasPin(stop)) return;   // no pin requested for this stop
@@ -4159,6 +4202,7 @@ async function initItineraryMap(days, beaches = []) {
     days.forEach((d, idx) => {
       const dashOffset = ((cycle / N) * idx).toFixed(1);
       (itinRouteLayers[d.day] || []).forEach(pl => {
+        if (pl._sea) { pl.setStyle({ weight: Math.max(2, weight - 1) }); return; }   // boat legs keep their dots
         pl.setStyle({ weight, dashArray: dash, dashOffset, lineCap: 'butt' });
       });
     });

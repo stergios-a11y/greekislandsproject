@@ -634,9 +634,9 @@ const FERRY_GRAPH = [
   {"a": "erikousa", "b": "mathraki", "dur": 40, "freq": "low", "plo": 4, "phi": 8, "note": "same Diapontia boats, few/week"},
   {"a": "mathraki", "b": "othonoi", "dur": 40, "freq": "low", "plo": 4, "phi": 8, "note": "same Diapontia boats, few/week"},
   {"a": "corfu", "b": "othonoi", "dur": 190, "freq": "low", "plo": 11, "phi": 18, "note": "Kerkyra Lines from Corfu Town 3/week, via Erikousa and Mathraki"},
-  {"a": "mytikas", "b": "kalamos", "dur": 25, "freq": "med", "plo": 4, "phi": 8, "note": "local boat most days in summer"},
-  {"a": "kalamos", "b": "kastos", "dur": 45, "freq": "low", "plo": 5, "phi": 10, "note": "same local boat, few/week"},
-  {"a": "mytikas", "b": "kastos", "dur": 75, "freq": "low", "plo": 6, "phi": 10, "note": "via Kalamos, few/week"},
+  {"a": "mytikas", "b": "kalamos", "dur": 25, "freq": "med", "plo": 4, "phi": 8, "note": "local ferry daily"},
+  {"a": "kalamos", "b": "kastos", "dur": 45, "freq": "med", "plo": 5, "phi": 10, "note": "same local ferry, daily"},
+  {"a": "mytikas", "b": "kastos", "dur": 75, "freq": "med", "plo": 6, "phi": 10, "note": "local ferry daily, via Kalamos"},
   {"a": "kalymnos", "b": "telendos", "dur": 10, "freq": "high", "plo": 2, "phi": 4, "ap": "myrties", "note": "caique from Myrties every 30–60 min, all year"},
   {"a": "kos", "b": "pserimos", "dur": 30, "freq": "med", "plo": 4, "phi": 10, "ap": "mastichari", "note": "daily boats from Mastichari in summer"},
   {"a": "kalymnos", "b": "pserimos", "dur": 50, "freq": "med", "plo": 6, "phi": 12, "note": "daily excursion boats in summer"},
@@ -671,7 +671,7 @@ const FERRY_VISUAL_LINES = [
   {"stops": ["agios-konstantinos", "skiathos", "skopelos", "alonnisos"], "freq": "med"},
   {"stops": ["patras", "kefalonia", "ithaca"], "freq": "med", "sides": true},
   {"stops": ["corfu", "erikousa", "mathraki", "othonoi"], "freq": "low", "sides": true},
-  {"stops": ["mytikas", "kalamos", "kastos"], "freq": "low"},
+  {"stops": ["mytikas", "kalamos", "kastos"], "freq": "med"},
   {"stops": ["kythira", "antikythera", "kissamos"], "freq": "low"}
 ];
 const FERRY_MAP_HIDE = new Set(["piraeus~salamis", "andros~piraeus"]);

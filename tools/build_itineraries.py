@@ -308,7 +308,8 @@ def render(key, data, meta, lang):
 
     # map data
     pts = [{'d': d['day'], 'c': d.get('color') or DAY_COLORS[i % len(DAY_COLORS)], 't': pick(d, 'title', lang) or '',
-            'p': [[s['lat'], s['lng'], pick(s, 'name', lang), s.get('type') or 'village', (pick(s, 'desc', lang) or '')[:160]]
+            'p': [[s['lat'], s['lng'], pick(s, 'name', lang), s.get('type') or 'village', (pick(s, 'desc', lang) or '')[:160],
+                   1 if s.get('by') == 'boat' else 0]
                   for s in d.get('stops') or [] if s.get('lat') and s.get('lng')]}
            for i, d in enumerate(days)]
 
@@ -390,6 +391,48 @@ def render(key, data, meta, lang):
     return L.divIcon({{className:'custom-marker',html:'<div style="position:relative;font-size:22px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5));width:32px;height:32px;display:flex;align-items:center;justify-content:center">'+(EMO[type]||'📍')+badge+'</div>',iconSize:[32,32],iconAnchor:[16,16]}});
   }}
   function mode(){{return map.getZoom()>=EMOJI_ZOOM?'emoji':'dot';}}
+function itinRoutePieces(ll, boat) {{
+  // Road route for an itinerary day, split where the trip is really by boat:
+  // a stop flagged "by boat", a stop the road router can't reach (snaps >500 m away),
+  // or a leg whose road detour is >4x the straight distance (e.g. via the mainland).
+  function hav(a, b) {{
+    var t = Math.PI / 180, dLa = (b[0] - a[0]) * t, dLo = (b[1] - a[1]) * t;
+    var x = Math.sin(dLa / 2) * Math.sin(dLa / 2) + Math.cos(a[0] * t) * Math.cos(b[0] * t) * Math.sin(dLo / 2) * Math.sin(dLo / 2);
+    return 12742000 * Math.asin(Math.sqrt(x));
+  }}
+  function osrm(pts) {{
+    if (pts.length < 2) return Promise.resolve(null);
+    var q = pts.map(function (p) {{ return p[1] + ',' + p[0]; }}).join(';');
+    return fetch('https://router.project-osrm.org/route/v1/driving/' + q + '?overview=full&geometries=geojson')
+      .then(function (r) {{ return r.json(); }}).catch(function () {{ return null; }});
+  }}
+  function line(j, pts) {{
+    return (j && j.routes && j.routes[0]) ? j.routes[0].geometry.coordinates.map(function (c) {{ return [c[1], c[0]]; }}) : pts;
+  }}
+  return osrm(ll).then(function (j) {{
+    var ok = j && j.routes && j.routes[0] && j.waypoints, sea = [];
+    for (var i = 0; i < ll.length - 1; i++) {{
+      var s = !!(boat && boat[i + 1]);
+      if (!s && ok) {{
+        var leg = j.routes[0].legs[i].distance;
+        s = j.waypoints[i].distance > 500 || j.waypoints[i + 1].distance > 500 || leg > 4 * hav(ll[i], ll[i + 1]) + 3000;
+      }}
+      sea.push(s);
+    }}
+    if (sea.indexOf(true) < 0) return [{{ c: line(j, ll), sea: false }}];
+    var out = [], runs = [], run = [ll[0]];
+    for (var k = 0; k < sea.length; k++) {{
+      if (sea[k]) {{
+        if (run.length > 1) runs.push(run);
+        out.push({{ c: [ll[k], ll[k + 1]], sea: true }});
+        run = [ll[k + 1]];
+      }} else run.push(ll[k + 1]);
+    }}
+    if (run.length > 1) runs.push(run);
+    return Promise.all(runs.map(function (r) {{ return osrm(r).then(function (jj) {{ return {{ c: line(jj, r), sea: false }}; }}); }}))
+      .then(function (land) {{ return out.concat(land); }});
+  }});
+}}
   function osrm(ll){{
     if(ll.length<2) return Promise.resolve(ll);
     var q=ll.map(function(p){{return p[1]+','+p[0];}}).join(';');
@@ -406,7 +449,10 @@ def render(key, data, meta, lang):
         .bindPopup('<div style="min-width:180px;font-family:sans-serif"><div style="font-size:10px;font-weight:700;color:'+d.c+';text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px">{L(lang,'Day','Ημέρα')} '+d.d+' · {L(lang,'Stop','Στάση')} '+(i+1)+'</div><strong>'+p[2]+'</strong>'+(p[4]?'<div style="font-size:12px;color:#555;margin-top:4px">'+p[4]+'</div>':'')+'</div>');
       m._t=p[3]; m._c=d.c; m._n=i+1; markers.push(m);
     }});
-    osrm(ll).then(function(route){{ if(route.length>1){{ var pl=L.polyline(route,{{color:d.c,weight:4,opacity:.9,lineJoin:'round'}}).addTo(map); lines.push({{pl:pl,i:di}}); restyle(); }} }});
+    itinRoutePieces(ll, d.p.map(function(p){{return p[5];}})).then(function(ps){{ ps.forEach(function(pc){{
+      if(pc.c.length<2) return;
+      var pl=L.polyline(pc.c, pc.sea?{{color:d.c,weight:3,opacity:.85,dashArray:'1 9',lineCap:'round'}}:{{color:d.c,weight:4,opacity:.9,lineJoin:'round'}}).addTo(map);
+      if(!pc.sea) lines.push({{pl:pl,i:di}}); }}); restyle(); }});
   }});
   var last='dot';   // markers were built before the map had a zoom, so they start as dots
   function refresh(){{restyle(); var md=mode(); if(md===last) return; last=md; markers.forEach(function(m){{m.setIcon(icon(m._t,m._c,md,m._n));}});}}

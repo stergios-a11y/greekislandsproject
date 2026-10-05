@@ -1497,8 +1497,8 @@ html.dark .why-feat-num { color: var(--surface-3); }
 }
 @media (max-width: 540px) {
   #main-map { min-height: 300px; }
-  .compare-selectors { flex-direction: column; }
-  .compare-selectors select { width: 100%; }
+  .compare-selectors { flex-wrap: nowrap; gap: 6px; }   /* both islands on one line */
+  .compare-selectors select { min-width: 0; padding: 10px 8px; }
   .why-stats       { grid-template-columns: 1fr; }
   .why-philosophy  { grid-template-columns: 1fr; }
   .phil-step       { border-right: none; }
@@ -7241,3 +7241,18 @@ html.dark .fp-badge { background: rgba(214,154,142,.18); border-color: rgba(214,
 html.dark .fp-name { color: #EBB3A7; }
 .ferry-intl-dot { width: 16px; height: 11px; border-radius: 3px; background: #FBEEEB; border: 1px solid #D69A8E; }
 html.dark .ferry-intl-dot { background: rgba(214,154,142,.18); border-color: rgba(214,154,142,.55); }
+
+/* ===== MOBILE FIXES Oct 2026 ===== */
+@media (max-width: 840px) {
+  /* Home: island-group filter dropped on phones (ranking + Filters stay) */
+  #home-controls #group-select, #home-controls #group-select + .mf-divider { display: none; }
+  /* "Best for <month>": three tiles that fit, no sideways scroll */
+  #view-home .bp-picks-row { overflow: visible; scroll-snap-type: none; gap: 8px; }
+  #view-home .bp-pick { flex: 1 1 0; min-width: 0; }
+  #view-home .bp-pick span { right: 7px; font-size: 12px; line-height: 1.15; }
+  /* Match Me: rank badge beside the name, not on top of it */
+  #view-match .ql-rank { top: auto; bottom: 12px; left: 10px; }
+  #view-match .ql-name { left: 40px; right: 8px; }
+}
+/* Quiz results, dark mode: dark number on the light-cyan circle */
+html.dark .result-rank { color: #06232C; }
