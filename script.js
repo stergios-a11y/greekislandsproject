@@ -1854,7 +1854,22 @@ function makeSatelliteIcon(score, dimmed, clusters) {
     iconSize: [box, box], iconAnchor: [box / 2, box / 2],
   });
 }
-/* Dotted spokes gateway → members, drawn only in the branched state. */
+/* Is this island currently drawn on the home map (search box + island-group filter)?
+   Spokes must follow it: searching "kastos" used to leave Lefkada's spokes behind. */
+function _shownOnMap(key) {
+  const isl = (typeof ISLANDS_DATA !== 'undefined') ? ISLANDS_DATA[key] : null;
+  if (!isl) return false;
+  const term = ((document.getElementById('islandSearch')?.value || document.getElementById('bp-hero-search')?.value) || '').toLowerCase();
+  if (term) {
+    const en = (isl.name || '').toLowerCase();
+    const el = (typeof ISLAND_NAMES_EL !== 'undefined' && ISLAND_NAMES_EL[key]) ? ISLAND_NAMES_EL[key].toLowerCase() : '';
+    if (!en.includes(term) && !el.includes(term)) return false;
+  }
+  return _passesGroupFilter(key);
+}
+
+/* Dotted spokes gateway → members, drawn only in the branched state,
+   and only between islands that are both on the map right now. */
 function drawClusterSpokes() {
   clusterSpokes.forEach(l => mapInstance.removeLayer(l));
   clusterSpokes = [];
@@ -1863,9 +1878,9 @@ function drawClusterSpokes() {
   const meta = ISLANDS_DATA || {};
   Object.values(ISLAND_CLUSTERS).forEach(c => {
     const g = meta[c.gateway];
-    if (!g) return;
+    if (!g || !_shownOnMap(c.gateway)) return;
     (c.members || []).forEach(k => {
-      if (!meta[k]) return;
+      if (!meta[k] || !_shownOnMap(k)) return;
       clusterSpokes.push(L.polyline([[g.lat, g.lng], [meta[k].lat, meta[k].lng]], {
         color: scoreToColor(g.total), weight: 1.6, opacity: 0.45, interactive: false, pane: 'overlayPane',
       }).addTo(mapInstance));
