@@ -7256,3 +7256,11 @@ html.dark .ferry-intl-dot { background: rgba(214,154,142,.18); border-color: rgb
 }
 /* Quiz results, dark mode: dark number on the light-cyan circle */
 html.dark .result-rank { color: #06232C; }
+
+/* Desktop home: hero band content lines up with the header — same 1280px width and
+   24px gutters, so the title starts under the logo and the last photo tile ends
+   under the dark-mode button. */
+@media (min-width: 841px) {
+  #view-home .bp-hero-inner { max-width: 1280px; padding: 0 24px; }
+  #view-home .bp-pick { max-width: none; }
+}
