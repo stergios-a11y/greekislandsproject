@@ -36,7 +36,7 @@
 <meta name="twitter:image" content="https://aegeanblueprint.com/og-image.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFWLRM2J9"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FMFWLRM2J9');</script>
-<link rel="stylesheet" href="/style.css?v=91">
+<link rel="stylesheet" href="/style.css?v=92">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9298260273942245" crossorigin="anonymous"></script>
 <script>
   /* Desktop-only ads: suppress on viewports below 900px. */
@@ -101,7 +101,7 @@
       <img src="/logo-hero.svg" id="site-logo" alt="Aegean Blueprint logo">
       <span id="brand-text"><span class="brand-word">Aegean</span> <span class="brand-word">Blueprint</span></span>
     </a>
-    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>
+    <button type="button" class="menu-toggle" id="menu-toggle-btn" aria-label="Menu" aria-controls="main-nav" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="top-nav" id="main-nav">
       <a href="/el/#compare" id="nav-compare">Σύγκριση</a>
       <a href="/el/#match" id="nav-match">Βρες το Νησί σου</a>
@@ -116,7 +116,7 @@
     <button type="button" class="dark-mode-toggle dm-static" aria-label="Toggle dark mode" onclick="var h=document.documentElement,d=!h.classList.contains('dark');h.classList.toggle('dark',d);try{localStorage.setItem('darkMode',d)}catch(e){}"></button>
   </div>
 </header>
-<script>document.getElementById("menu-toggle-btn").addEventListener("click",function(){var n=document.getElementById("main-nav");n.classList.toggle("open");this.classList.toggle("open");});</script>
+<script>document.getElementById("menu-toggle-btn").addEventListener("click",function(){var n=document.getElementById("main-nav"),o=n.classList.toggle("open");this.classList.toggle("open",o);this.setAttribute("aria-expanded",o?"true":"false");});</script>
 <main class="ferry-page">
   <h1>Πλοία από Αθήνα προς τα Νησιά: Όλες οι Διαδρομές</h1>
   <p class="ferry-intro">Σχεδόν όλα τα νησιά του Αιγαίου και του Ιονίου είναι προσβάσιμα με πλοίο από την Αθήνα — αλλά το λιμάνι έναρξης κάνει μεγάλη διαφορά. Ο <strong>Πειραιάς</strong> εξυπηρετεί τα περισσότερα Κυκλάδες, Δωδεκάνησα, Κρήτη και την υπόλοιπη Ελλάδα — είναι το μεγάλο λιμάνι, με μεγαλύτερες ουρές και πιο αργές διαδρομές. Η <strong>Ραφήνα</strong> είναι μικρότερη, γρηγορότερη για τις βόρειες Κυκλάδες (Άνδρος, Τήνος, Μύκονος, Πάρος, Νάξος). Το <strong>Λαύριο</strong> εξυπηρετεί λίγες αλλά συγκεκριμένες προορισμούς (Κέα, Κύθνος και την οδηγική σύνδεση προς τις βόρειες Κυκλάδες).</p>

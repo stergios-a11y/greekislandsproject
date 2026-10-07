@@ -954,7 +954,11 @@ function setupNav() {
 
 function toggleMenu() {
   const nav = document.getElementById('main-nav');
-  if (nav) nav.classList.toggle('open');
+  if (nav) {
+    const open = nav.classList.toggle('open');
+    const mt = document.getElementById('menu-toggle-btn');
+    if (mt) mt.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
   const lm = document.getElementById('lang-menu');   // one open menu at a time
   if (lm) lm.classList.remove('open');
 }
@@ -987,7 +991,7 @@ function setupLanguageToggle() {
       const nav = document.getElementById('main-nav');
       const mt = document.getElementById('menu-toggle-btn');
       if (nav) nav.classList.remove('open');
-      if (mt) mt.classList.remove('open');
+      if (mt) { mt.classList.remove('open'); mt.setAttribute('aria-expanded', 'false'); }
     }
   });
 
@@ -1184,7 +1188,17 @@ async function initHomeHero() {
       } catch (_) {}
     });
     input.addEventListener('focus', renderSug);
-    input.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSug(); });
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeSug();
+      else if (e.key === 'ArrowDown' && sug && !sug.hidden) { const f = sug.querySelector('.bp-sug-item'); if (f) { e.preventDefault(); f.focus(); } }
+    });
+    // ↑/↓ move through the suggestions, ↑ from the first returns to the box, Esc closes.
+    sug.addEventListener('keydown', (e) => {
+      const items = [...sug.querySelectorAll('.bp-sug-item')], i = items.indexOf(document.activeElement);
+      if (e.key === 'ArrowDown' && i < items.length - 1) { e.preventDefault(); items[i + 1].focus(); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); (i > 0 ? items[i - 1] : input).focus(); }
+      else if (e.key === 'Escape') { closeSug(); input.focus(); }
+    });
     document.addEventListener('click', (e) => { if (!e.target.closest('.bp-hero-search-wrap')) closeSug(); });
   }
   if (form) form.addEventListener('submit', function (e) {
@@ -6328,10 +6342,10 @@ function renderQuizLiveBoard() {
       ? '<img class="ql-thumb" src="' + thumbUrl(hero.url) + '" alt="" loading="lazy">'
       : '<span class="ql-thumb ql-nophoto">' + nm.charAt(0) + '</span>';
     return '<li class="ql-row' + (idx === 0 ? ' ql-top' : '') + '" data-key="' + isl.key + '">'
-         + '<span class="ql-card">'
+         + '<a class="ql-card" href="' + (CURRENT_LANG === 'el' ? '/el' : '') + '/island/' + isl.key + '/">'
          + '<span class="ql-rank">' + (idx + 1) + '</span>' + thumb
          + '<span class="ql-name">' + nm + (grp ? '<small>' + grp + '</small>' : '') + '</span>'
-         + move + '</span>'
+         + move + '</a>'
          + '</li>';
   }).join('');
 
@@ -6358,7 +6372,10 @@ function renderQuizLiveBoard() {
   });
 
   box.querySelectorAll('.ql-row').forEach(function (r) {
-    r.addEventListener('click', function () { navigateTo('island', r.dataset.key); });
+    r.addEventListener('click', function (e) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;   // new tab: let the link work
+      e.preventDefault(); navigateTo('island', r.dataset.key);
+    });
   });
 
   renderQuizMovement(climbers, answered);
@@ -6447,9 +6464,12 @@ function computeQuizResults() {
     const nm = islandName(island.key);
     const hero = HERO_PHOTOS[island.key] || {};
     const thumb = `<div class="result-thumb${hero.url ? '' : ' result-nophoto'}" data-initial="${nm.charAt(0)}">${hero.url ? `<img src="${thumbUrl(hero.url)}" alt="${nm}" loading="lazy" onerror="this.closest('.result-thumb').classList.add('result-nophoto')">` : ''}<span class="result-rank">${idx + 1}</span></div>`;
-    return `<div class="result-island-card" data-key="${island.key}">${thumb}<div class="result-info"><div class="result-name">${nm}</div><div class="result-why">${whyText(island)}</div></div></div>`;
+    return `<a class="result-island-card" data-key="${island.key}" href="${CURRENT_LANG === 'el' ? '/el' : ''}/island/${island.key}/">${thumb}<div class="result-info"><div class="result-name">${nm}</div><div class="result-why">${whyText(island)}</div></div></a>`;
   }).join('')}<div class="quiz-retake-row"><button class="quiz-retake-btn">${t('match.retake')}</button></div>`;
-  results.querySelectorAll('.result-island-card').forEach(card => { card.addEventListener('click', () => navigateTo('island', card.dataset.key)); });
+  results.querySelectorAll('.result-island-card').forEach(card => { card.addEventListener('click', (e) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;   // new tab: let the link work
+    e.preventDefault(); navigateTo('island', card.dataset.key);
+  }); });
   results.querySelector('.quiz-retake-btn').addEventListener('click', () => { quizAnswers = {}; quizStep = 0; quizPrevRanks = null; quizSeenKeys = {};
     const cb = document.getElementById('cta-affiliate'); if (cb) cb.style.display = 'none';
     renderQuizStep(); });

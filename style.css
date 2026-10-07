@@ -348,6 +348,7 @@ html.dark .dm-static::after { content: '☀'; }
 .menu-toggle {
   display: none; flex-direction: column; gap: 5px;
   cursor: pointer; padding: 6px; margin-left: auto;
+  background: none; border: 0; border-radius: 6px; font: inherit;   /* now a <button> */
 }
 .menu-toggle span {
   display: block; width: 22px; height: 2px;
@@ -7267,3 +7268,8 @@ html.dark .result-rank { color: #06232C; }
 
 /* Ferry planner: sailing vs connection time under the total (review AB-04) */
 .planner-stat-sub { display: block; margin-top: 3px; font-size: var(--text-tiny); color: var(--ink-3); line-height: 1.3; }
+
+/* ===== KEYBOARD ACCESS Oct 2026 — quiz cards are links now ===== */
+a.ql-card, a.result-island-card { text-decoration: none; color: inherit; }
+a.result-island-card { display: flex; }
+a.ql-card:focus-visible, a.result-island-card:focus-visible, .bp-sug-item:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }

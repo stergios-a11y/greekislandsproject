@@ -5,7 +5,7 @@
       <img src="{{logo}}" id="site-logo" alt="{{site_name}} logo">
       <span id="brand-text">{{brand_html}}</span>
     </a>
-    <div class="menu-toggle" id="menu-toggle-btn"><span></span><span></span><span></span></div>
+    <button type="button" class="menu-toggle" id="menu-toggle-btn" aria-label="Menu" aria-controls="main-nav" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="top-nav" id="main-nav">
 {{nav}}
     </nav>
@@ -13,4 +13,4 @@
     <button type="button" class="dark-mode-toggle dm-static" aria-label="Toggle dark mode" onclick="var h=document.documentElement,d=!h.classList.contains('dark');h.classList.toggle('dark',d);try{localStorage.setItem('darkMode',d)}catch(e){}"></button>
   </div>
 </header>
-<script>document.getElementById("menu-toggle-btn").addEventListener("click",function(){var n=document.getElementById("main-nav");n.classList.toggle("open");this.classList.toggle("open");});</script>
+<script>document.getElementById("menu-toggle-btn").addEventListener("click",function(){var n=document.getElementById("main-nav"),o=n.classList.toggle("open");this.classList.toggle("open",o);this.setAttribute("aria-expanded",o?"true":"false");});</script>

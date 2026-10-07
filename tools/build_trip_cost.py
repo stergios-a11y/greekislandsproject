@@ -309,7 +309,7 @@ def render_page(lang, meta, data):
         for item in t['nav']
     )
     months_html = ''.join(
-        f'<span class="tc-chip{" on" if m == "jun" else ""}" data-m="{m}">{name}</span>'
+        f'<button type="button" class="tc-chip{" on" if m == "jun" else ""}" data-m="{m}" aria-pressed="{"true" if m == "jun" else "false"}">{name}</button>'
         for m, name in t['months'].items()
     )
 
@@ -357,7 +357,7 @@ html.dark .tc-sw .s{{background:rgba(255,255,255,.18)}}
 html.dark .tc-li{{border-bottom-color:rgba(255,255,255,.1)}}
 html.dark .tc-addbtn{{border-color:#22C0E0;color:#60D8F0}}
 html.dark .tc-own{{background:rgba(255,255,255,.08);color:#60D8F0}}
-html.dark .tc-sug div:hover{{background:#283040}}
+html.dark .tc-sug button:hover,html.dark .tc-sug button:focus-visible{{background:#283040}}
 html.dark .tc-cta.c{{background:#0B8FAC}}
 html.dark .tc-vlbl>small,html.dark .tc-subl{{color:#8898A8}}
 html.dark .tc-cn a,html.dark .tc-cs a,html.dark .tc-assume summary,html.dark .tc-exact,html.dark .tc-swap-b{{color:#60D8F0}}
@@ -413,8 +413,10 @@ html.dark .tc-swap-b{{border-color:#60D8F0}}
 .tc-addbtn{{border:1.5px dashed #0B8FAC;background:rgba(232,247,251,.9);color:#076880;border-radius:999px;padding:6px 14px;font-weight:800;font-size:12.5px;cursor:pointer}}
 .tc-search{{border:1.5px solid rgba(26,35,50,.15);border-radius:999px;padding:7px 14px;font-size:13px;font-family:inherit;min-width:170px;background:var(--card-bg,#fff);color:var(--ink-1,#1A2332)}}
 .tc-sug{{position:absolute;top:100%;left:0;margin-top:6px;background:var(--card-bg,#fff);border-radius:12px;box-shadow:0 10px 30px rgba(26,35,50,.25);z-index:50;min-width:230px;max-height:260px;overflow:auto;display:none}}
-.tc-sug div{{padding:9px 14px;font-size:13.5px;font-weight:700;cursor:pointer;color:var(--ink-1,#1A2332)}}
-.tc-sug div:hover{{background:rgba(200,238,245,.5)}}
+.tc-sug div,.tc-sug button{{display:block;width:100%;text-align:left;background:none;border:0;font:inherit;padding:9px 14px;font-size:13.5px;font-weight:700;cursor:pointer;color:var(--ink-1,#1A2332)}}
+.tc-sug button:hover,.tc-sug button:focus-visible{{background:rgba(200,238,245,.5)}}
+.tc-chip,.tc-sw{{font-family:inherit;line-height:inherit}}
+button.tc-sw{{background:none;border:0;padding:0;text-align:left}}
 .tc-sum{{background:var(--card-bg,#fff);border-radius:18px;box-shadow:0 10px 34px rgba(26,35,50,.14);padding:20px;position:sticky;top:16px}}
 .tc-sum h2{{font-family:'Alegreya',serif;font-weight:800;font-size:21px;margin:0 0 2px;color:var(--ink-1,#1A2332)}}
 .tc-ss{{font-size:12px;color:var(--ink-3,#637080);margin-bottom:14px}}
@@ -528,14 +530,14 @@ html.dark .tc-swap-b{{border-color:#60D8F0}}
           </div>
           <div>
             <div class="tc-subl">{t['lbl_trav']}</div>
-            <div class="tc-step"><button id="tc-pax-minus">−</button><span id="tc-pax">2</span><button id="tc-pax-plus">+</button></div>
+            <div class="tc-step"><button type="button" id="tc-pax-minus" aria-label="{'Λιγότεροι ταξιδιώτες' if lang == 'el' else 'Fewer travellers'}">−</button><span id="tc-pax" aria-live="polite">2</span><button type="button" id="tc-pax-plus" aria-label="{'Περισσότεροι ταξιδιώτες' if lang == 'el' else 'More travellers'}">+</button></div>
           </div>
           <div>
             <div class="tc-subl">{t['lbl_style']}</div>
             <div class="tc-chips" id="tc-tiers">
-              <span class="tc-chip" data-t="budget">{t['tier_budget']}<br><small>{t['tier_budget_s']}</small></span>
-              <span class="tc-chip on" data-t="mid">{t['tier_mid']}<br><small>{t['tier_mid_s']}</small></span>
-              <span class="tc-chip" data-t="comfort">{t['tier_comfort']}<br><small>{t['tier_comfort_s']}</small></span>
+              <button type="button" class="tc-chip" data-t="budget" aria-pressed="false">{t['tier_budget']}<br><small>{t['tier_budget_s']}</small></button>
+              <button type="button" class="tc-chip on" data-t="mid" aria-pressed="true">{t['tier_mid']}<br><small>{t['tier_mid_s']}</small></button>
+              <button type="button" class="tc-chip" data-t="comfort" aria-pressed="false">{t['tier_comfort']}<br><small>{t['tier_comfort_s']}</small></button>
             </div>
           </div>
         </div>
@@ -546,10 +548,10 @@ html.dark .tc-swap-b{{border-color:#60D8F0}}
             <label class="tc-gopt" data-gt="fly"><input type="radio" name="tc-gt" value="fly"> <b>{t['gt_fly']}</b><small id="tc-fly-s">{t['gt_fly_s']}</small></label>
           </div>
           <div class="tc-advrow" style="margin-top:12px">
-            <span class="tc-sw" id="tc-skip"><span class="s"></span> {t['skip_tr']}</span>
+            <button type="button" role="switch" aria-checked="false" class="tc-sw" id="tc-skip"><span class="s" aria-hidden="true"></span> {t['skip_tr']}</button>
           </div>
           <div class="tc-advrow" style="margin-top:8px">
-            <span class="tc-sw" id="tc-noneu"><span class="s"></span> {t['noneu']} <small style="font-weight:600;color:var(--ink-4,#A0ADB8)">{t['noneu_small']}</small></span>
+            <button type="button" role="switch" aria-checked="false" class="tc-sw" id="tc-noneu"><span class="s" aria-hidden="true"></span> {t['noneu']} <small style="font-weight:600;color:var(--ink-4,#A0ADB8)">{t['noneu_small']}</small></button>
           </div>
         </div>
       </section>
@@ -785,10 +787,10 @@ function render(){{
         <div class="tc-cn">${{iname(t.k)}}<a href="${{guide}}">${{T.guide}}</a></div>
         <div class="tc-cs">${{T.rooms_per_night}} ${{eur(rnd(rn))}}${{T.per_night}} · ${{ld?fmtD(ld[0])+' – '+fmtD(ld[1]):T.months[state.month]}} · <a href="${{bookUrl(i)}}" target="_blank" rel="noopener sponsored" style="color:#076880;font-weight:700;text-decoration:none">${{T.book_room}}</a></div>
         <div class="tc-cc">
-          <span class="tc-n"><button data-a="n-" data-i="${{i}}">−</button> ${{t.n}} ${{t.n===1?T.night:T.nights}} <button data-a="n+" data-i="${{i}}">+</button></span>
+          <span class="tc-n"><button type="button" data-a="n-" data-i="${{i}}" aria-label="${{(LANG==='el'?'Μία νύχτα λιγότερη: ':'One night fewer: ')+iname(t.k)}}">−</button> ${{t.n}} ${{t.n===1?T.night:T.nights}} <button type="button" data-a="n+" data-i="${{i}}" aria-label="${{(LANG==='el'?'Μία νύχτα ακόμα: ':'One more night: ')+iname(t.k)}}">+</button></span>
           ${{(state.own&&NO_CAR[t.k])?`<span class="tc-nocar">🚫 ${{T.no_car_note.replace('{{isl}}',iname(t.k))}}</span>`:''}}
           ${{isl.car?`<span class="tc-vlbl"><small>${{T.lbl_around}}</small><span class="tc-seg"><button class="${{(!t.v&&!state.own)?'on':''}}" data-a="veh" data-v="" data-i="${{i}}">${{T.veh_walk}}</button><button class="${{(t.v==='m'&&!state.own)?'on':''}}" data-a="veh" data-v="m" data-i="${{i}}">${{T.veh_scoot}}</button><button class="${{(t.v==='c'&&!state.own)?'on':''}}" data-a="veh" data-v="c" data-i="${{i}}">${{T.veh_hire}}</button><button class="${{state.own?'on':''}}" data-a="veh" data-v="own" data-i="${{i}}" title="${{T.veh_ownc_t}}">${{T.veh_ownc}}</button></span></span>`:''}}
-          ${{isl.boat?`<span class="tc-sw ${{t.b?'on':''}}" data-a="boat" data-i="${{i}}"><span class="s"></span> ${{T.boat_day}} <small>€${{isl.boat.pp}} pp</small></span>`:''}}
+          ${{isl.boat?`<button type="button" role="switch" aria-checked="${{t.b?'true':'false'}}" class="tc-sw ${{t.b?'on':''}}" data-a="boat" data-i="${{i}}"><span class="s" aria-hidden="true"></span> ${{T.boat_day}} <small>€${{isl.boat.pp}} pp</small></button>`:''}}
         </div>
         ${{(!state.own&&!t.v&&isl.cn>=4&&isl.car)?`<div class="tc-warn">${{T.carless_note.replace('{{n}}',iname(t.k)).replace('{{p}}',Math.round((CFG.carless_central_premium-1)*100))}}</div>`:''}}
       </div>
@@ -980,16 +982,31 @@ function renderSug(){{
   hits=q
     ?hits.sort((a,b)=>((norm(iname(a)).startsWith(q)?0:1)-(norm(iname(b)).startsWith(q)?0:1))||distTo(a)-distTo(b))
     :hits.sort((a,b)=>distTo(a)-distTo(b)||iname(a).localeCompare(iname(b), LANG));
-  let html=hits.map(k=>`<div data-k="${{k}}">${{iname(k)}} <small style="color:var(--ink-4,#A0ADB8)">${{ISL[k].g}}</small></div>`).join('');
+  let html=hits.map(k=>`<button type="button" data-k="${{k}}">${{iname(k)}} <small style="color:var(--ink-4,#A0ADB8)">${{ISL[k].g}}</small></button>`).join('');
   if(raw.length&&!hits.length)html=`<div style="cursor:default;color:var(--ink-4,#A0ADB8);font-weight:600;font-size:12px">${{T.add_far}}</div>`;
   sUl.innerHTML=html;
   sUl.style.display=html?'block':'none';
 }}
 sIn.addEventListener('input',renderSug);
 sIn.addEventListener('focus',renderSug);
+// Keyboard: ↓ into the list, ↑/↓ through it, Enter in the box adds the first match, Esc closes.
+sIn.addEventListener('keydown',e=>{{const f=sUl.querySelector('[data-k]');
+  if(e.key==='ArrowDown'&&f){{e.preventDefault();f.focus();}}
+  else if(e.key==='Enter'&&f&&sIn.value.trim()){{e.preventDefault();f.click();}}
+  else if(e.key==='Escape')sUl.style.display='none';}});
+sUl.addEventListener('keydown',e=>{{const it=[...sUl.querySelectorAll('[data-k]')],i=it.indexOf(document.activeElement);
+  if(e.key==='ArrowDown'&&i<it.length-1){{e.preventDefault();it[i+1].focus();}}
+  else if(e.key==='ArrowUp'){{e.preventDefault();(i>0?it[i-1]:sIn).focus();}}
+  else if(e.key==='Escape'){{sUl.style.display='none';sIn.focus();}}}});
 sUl.addEventListener('click',e=>{{const d=e.target.closest('[data-k]');if(!d)return;
   state.trip.push({{k:d.dataset.k,n:3,v:'',b:false}});sIn.value='';sUl.style.display='none';render();}});
 document.addEventListener('click',e=>{{if(!e.target.closest('.tc-addrow'))sUl.style.display='none';}});
+
+// Screen readers: chips report pressed, switches report on/off — synced after every render.
+const _renderView=render;
+render=function(){{_renderView();
+  document.querySelectorAll('.tc-chip').forEach(c=>c.setAttribute('aria-pressed',c.classList.contains('on')?'true':'false'));
+  document.querySelectorAll('.tc-sw').forEach(c=>c.setAttribute('aria-checked',c.classList.contains('on')?'true':'false'));}};
 
 render();
 </script>
