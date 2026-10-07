@@ -2310,6 +2310,9 @@ let currentIslandKey = '';
 
 async function renderIslandPage(key) {
   currentIslandKey = key;
+  // The static island page swaps its readable guide for this view only once
+  // data-ready names this island (set below, after the full guide rendered).
+  { const vd = document.getElementById('view-detail'); if (vd) vd.dataset.ready = ''; }
   setTimeout(updateShortlistButton, 50);
   const island = ISLANDS_DATA[key];
   if (!island) return;
@@ -2505,6 +2508,7 @@ async function renderIslandPage(key) {
       }
       guide.innerHTML = buildIslandPage(data, key);
       relocateHeroToSlot(key);
+      { const vd = document.getElementById('view-detail'); if (vd) vd.dataset.ready = key; }
       // Build after layout settles: the bar measures section heights to decide
       // which ones are real, and a 0-height section would be skipped.
       secnavRetryReset();
@@ -4517,8 +4521,16 @@ function setupCompare() {
     const [a, b] = compareSelection;
     if (a && b) track('compare_pair', { pair: [a, b].slice().sort().join('__'), island_a: a, island_b: b });
   };
-  selA.addEventListener('change', () => { compareSelection[0] = selA.value || null; renderCompareView(); trackPair(); });
-  selB.addEventListener('change', () => { compareSelection[1] = selB.value || null; renderCompareView(); trackPair(); });
+  // Keep the pair in the URL so refresh, share and back restore what is on screen.
+  // replaceState: changing islands shouldn't stack history entries.
+  const syncUrl = () => {
+    const [a, b] = compareSelection;
+    if (!a || !b) return;
+    const h = `#compare/${a}-vs-${b}`;
+    if (location.hash !== h) { try { history.replaceState(history.state, '', location.pathname + location.search + h); } catch (_) {} }
+  };
+  selA.addEventListener('change', () => { compareSelection[0] = selA.value || null; renderCompareView(); trackPair(); syncUrl(); });
+  selB.addEventListener('change', () => { compareSelection[1] = selB.value || null; renderCompareView(); trackPair(); syncUrl(); });
   // No initial render here: showView('compare') renders when the view is
   // actually opened. Rendering at boot pulled vs_verdicts.json (1.2 MB),
   // vs_faqs.json and two island JSONs into a hidden view on every page load.

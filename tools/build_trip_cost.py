@@ -674,16 +674,22 @@ function tripStart(){{if(!state.date)return null;const d=new Date(state.date+'T1
 function legDates(i){{const d0=tripStart();if(d0===null||!state.trip[i])return null;let off=0;for(let j=0;j<i;j++)off+=state.trip[j].n;
   const a=new Date(d0);a.setDate(a.getDate()+off);const b=new Date(a);b.setDate(b.getDate()+state.trip[i].n);return[a,b];}}
 function monthAt(i){{const ld=legDates(i);return ld?MKEYS[ld[0].getMonth()]:state.month;}}
+// Average season factor over the actual nights of stop i (exact dates), else the chosen month's.
+function seasAt(tbl,i){{const ld=legDates(i);if(!ld)return seas(tbl,monthAt(i));
+  let s=0,n=0;const d=new Date(ld[0]);while(d<ld[1]){{s+=seas(tbl,MKEYS[d.getMonth()]);n++;d.setDate(d.getDate()+1);}}
+  return n?s/n:seas(tbl,monthAt(i));}}
+// Vehicles needed for the party: a scooter carries 2, a car 5.
+const vehQty=v=>v==='m'?Math.ceil(state.pax/2):Math.ceil(state.pax/5);
 const fmtD=d=>d.toLocaleDateString(LANG==='el'?'el-GR':'en-GB',{{day:'numeric',month:'short'}});
 function bookUrl(i){{const t=state.trip[i];let u='https://www.booking.com/searchresults.html?ss='+encodeURIComponent(ISL[t.k].n+', Greece')+'&group_adults='+state.pax+'&no_rooms='+roomsFor(state.pax)+'&group_children=0';
   const ld=legDates(i);if(ld)u+='&checkin='+isoD(ld[0])+'&checkout='+isoD(ld[1]);return u;}}
 // ---- smart swaps: on-island spend (rooms+food+vehicle) for a candidate at a stop ----
-function stayCost(k,i,v){{const isl=ISL[k],n=state.trip[i].n,mk=monthAt(i);
-  const rn=isl.room[state.tier]*seas(CFG.season_room,mk);
+function stayCost(k,i,v){{const isl=ISL[k],n=state.trip[i].n;
+  const rn=isl.room[state.tier]*seasAt(CFG.season_room,i);
   const mult=(!state.own&&!v&&isl.cn>=4&&isl.car)?CFG.carless_central_premium:1;
   let c=rn*n*mult*roomsFor(state.pax) + mealDay(k)*state.pax*n;
-  if(!state.own&&v&&isl.car){{c+=isl.car*seas(CFG.season_car,mk)*(v==='m'?(CFG.moto_factor||0.55):1)*n;
-    c+=(v==='m'?Math.round(CFG.fuel_per_day*0.4):CFG.fuel_per_day)*n;}}
+  if(!state.own&&v&&isl.car){{const q=vehQty(v);c+=isl.car*seasAt(CFG.season_car,i)*(v==='m'?(CFG.moto_factor||0.55):1)*n*q;
+    c+=(v==='m'?Math.round(CFG.fuel_per_day*0.4):CFG.fuel_per_day)*n*q;}}
   return c;}}
 function fitsExcept(i,k){{return state.trip.every((t,j)=>j===i||pairOK(t.k,k));}}
 
@@ -729,7 +735,7 @@ function sync(){{
 }}
 
 // per-tier room price for an island in the selected month
-function roomNight(k,i){{return ISL[k].room[state.tier]*seas(CFG.season_room,i===undefined?state.month:monthAt(i));}}
+function roomNight(k,i){{return ISL[k].room[state.tier]*(i===undefined?seas(CFG.season_room,state.month):seasAt(CFG.season_room,i));}}
 // Two travellers per double room; 3 pax = 2 rooms, 8 pax = 4. Applied to the
 // rooms line, smart swaps and the Booking link (no_rooms) alike.
 function roomsFor(p){{return Math.max(1,Math.ceil((p||1)/2));}}
@@ -848,9 +854,9 @@ function render(){{
     if(fuel){{li+=line('⛽',T.li_fuel,`€${{CFG.fuel_per_day}}/${{LANG==='el'?'μέρα':'day'}} × ${{fuelNights}} ${{T.days}}`,fuel,null);tot+=fuel;}}
   }}else{{
   let csum=0,cd=0,fuelSum=0;
-  state.trip.forEach((t,i)=>{{if(t.v&&ISL[t.k].car){{csum+=ISL[t.k].car*seas(CFG.season_car,monthAt(i))*(t.v==='m'?(CFG.moto_factor||0.55):1)*t.n;cd+=t.n;
-    fuelSum+=(t.v==='m'?Math.round(CFG.fuel_per_day*0.4):CFG.fuel_per_day)*t.n;}}}});
-  if(cd){{li+=line('🚗',`${{T.li_vehicle}} — ${{cd}} ${{T.days}}`,state.trip.filter(t=>t.v&&ISL[t.k].car).map(t=>iname(t.k)+' '+(t.v==='m'?'🛵':'🚗')).join(' · '),csum,T.book_car,'https://www.discovercars.com/?a_aid=antaran2');tot+=csum;
+  state.trip.forEach((t,i)=>{{if(t.v&&ISL[t.k].car){{const q=vehQty(t.v);csum+=ISL[t.k].car*seasAt(CFG.season_car,i)*(t.v==='m'?(CFG.moto_factor||0.55):1)*t.n*q;cd+=t.n;
+    fuelSum+=(t.v==='m'?Math.round(CFG.fuel_per_day*0.4):CFG.fuel_per_day)*t.n*q;}}}});
+  if(cd){{li+=line('🚗',`${{T.li_vehicle}} — ${{cd}} ${{T.days}}`,state.trip.filter(t=>t.v&&ISL[t.k].car).map(t=>iname(t.k)+' '+(vehQty(t.v)>1?vehQty(t.v)+'× ':'')+(t.v==='m'?'🛵':'🚗')).join(' · '),csum,T.book_car,'https://www.discovercars.com/?a_aid=antaran2');tot+=csum;
     li+=line('⛽',T.li_fuel,`🚗 €${{CFG.fuel_per_day}} · 🛵 €${{Math.round(CFG.fuel_per_day*0.4)}} /${{LANG==='el'?'μέρα':'day'}}`,fuelSum,null);tot+=fuelSum;}}
   }}
   // boat days
