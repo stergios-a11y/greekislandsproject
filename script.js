@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-10-05';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-10-07';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -4543,47 +4543,34 @@ function addToCompare(key) {
 // 'a__b' (alphabetical pair). Verdicts contain editorial HTML;
 // FAQs contain {q, a} arrays per language and become an accordion below
 // the verdict prose.
-let VS_VERDICTS_CACHE = null;
-let VS_FAQS_CACHE = null;
-async function loadVsVerdicts() {
-  if (VS_VERDICTS_CACHE) return VS_VERDICTS_CACHE;
-  try {
-    const res = await fetch('/vs_verdicts.json');
-    if (res.ok) {
-      VS_VERDICTS_CACHE = await res.json();
-      return VS_VERDICTS_CACHE;
-    }
-  } catch(e) { /* file not deployed yet — fail silently */ }
-  VS_VERDICTS_CACHE = {};  // empty so we don't retry
-  return VS_VERDICTS_CACHE;
-}
-async function loadVsFaqs() {
-  if (VS_FAQS_CACHE) return VS_FAQS_CACHE;
-  try {
-    const res = await fetch('/vs_faqs.json');
-    if (res.ok) {
-      VS_FAQS_CACHE = await res.json();
-      return VS_FAQS_CACHE;
-    }
-  } catch(e) { /* file optional — fail silently */ }
-  VS_FAQS_CACHE = {};
-  return VS_FAQS_CACHE;
+// Oct 2026: one small file per curated pair (/compare-data/<a>__<b>.json, built by
+// tools/build_compare_pages.py) instead of the whole 2.2 MB verdict + FAQ corpus.
+// Pairs without curated copy simply 404 → no verdict section.
+let _compareRenderSeq = 0;     // bumps on every pair change; late responses for older pairs are dropped
+const _pairDataCache = {};
+function loadPairData(pairKey) {
+  if (!(pairKey in _pairDataCache)) {
+    _pairDataCache[pairKey] = fetch('/compare-data/' + pairKey + '.json')
+      .then(r => (r.ok ? r.json() : null)).catch(() => null);
+  }
+  return _pairDataCache[pairKey];
 }
 
 // Render the editorial verdict block (if one exists for this pair).
 // Called by renderCompareView after the cards have rendered. Also pulls the
 // matching FAQ accordion from vs_faqs.json when available, since the FAQ
 // is part of the same "verdict + supporting Q&A" section for SEO purposes.
-async function renderCompareVerdict(iA, iB) {
+async function renderCompareVerdict(iA, iB, seq) {
   const el = document.getElementById('compare-verdict');
   if (!el) return;
-  const [verdicts, faqsAll] = await Promise.all([loadVsVerdicts(), loadVsFaqs()]);
   const sortedPair = [iA.key, iB.key].sort();
   const pairKey = sortedPair[0] + '__' + sortedPair[1];
-  const entry = verdicts[pairKey];
+  const pd = await loadPairData(pairKey);
+  if (seq !== undefined && seq !== _compareRenderSeq) return;   // a newer pair is on screen
+  const entry = pd && pd.verdict;
   const lang = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
   const html = entry ? (entry[lang] || entry['en'] || '') : '';
-  const faqList = (faqsAll[pairKey] && faqsAll[pairKey][lang]) ? faqsAll[pairKey][lang] : [];
+  const faqList = (pd && pd.faqs && pd.faqs[lang]) ? pd.faqs[lang] : [];
   // Nothing curated → hide the section entirely.
   if (!html && !faqList.length) {
     el.style.display = 'none';
@@ -4620,9 +4607,12 @@ async function renderCompareView() {
   }
   if (placeholder) placeholder.style.display = 'none';
   if (content) content.style.display = '';
+  // Each render takes a ticket; whatever resolves after a newer pair was chosen is
+  // dropped, so a slow response can't paint the wrong islands (review AB-05).
+  const seq = ++_compareRenderSeq;
   renderRadarChart(iA, iB);
   renderCompareCards(iA, iB);
-  renderCompareVerdict(iA, iB);  // editorial paragraph for curated pairs
+  renderCompareVerdict(iA, iB, seq);  // editorial paragraph for curated pairs
 
   // Fetch full island JSONs for WTV + beach data (non-blocking — render static parts first)
   let jsonA = null, jsonB = null;
@@ -4634,6 +4624,7 @@ async function renderCompareView() {
     if (resA.ok) jsonA = await resA.json();
     if (resB.ok) jsonB = await resB.json();
   } catch(e) {}
+  if (seq !== _compareRenderSeq) return;   // the visitor picked another pair meanwhile
 
   renderCompareWTV(iA, iB, jsonA, jsonB);
   fillCompareCardDetails(iA, iB, jsonA, jsonB);
@@ -5001,61 +4992,50 @@ const FERRY_ADJ = buildFerryAdj();
 // — encourages direct routes; transfer cost reflects waiting at port
 const TRANSFER_PENALTY = 90;
 
-// Find the best route from A to B (by total duration including transfer wait).
-// Returns { hops: [...edges], totalMin, transfers, totalPriceLo, totalPriceHi } or null.
-// Limits to max 2 transfers (3 hops) to keep results practical.
-function findFerryRoute(fromKey, toKey) {
-  if (!fromKey || !toKey || fromKey === toKey) return null;
-  if (!FERRY_ADJ[fromKey]) return null;
-
-  // Dijkstra-ish but with hop limit
-  const MAX_HOPS = 3;
-  const best = {};                  // key → minimum cost found so far
+// One search serves both the destination list and the chosen route, so the two
+// can never disagree (Oct 2026 review: the list used to drop 100 reachable pairs).
+// Best arrival per port within FERRY_MAX_HOPS boats, ranked by sailing time plus a
+// connection allowance per change of boat. A state is pruned only when another state
+// at that port is at least as good on BOTH cost and boats used.
+const FERRY_MAX_HOPS = 3;
+const _ferrySearchCache = {};
+function ferrySearch(fromKey) {
+  if (_ferrySearchCache[fromKey]) return _ferrySearchCache[fromKey];
+  const arrivals = {};
+  if (!FERRY_ADJ[fromKey]) return arrivals;
+  const states = {};
   const queue = [{ node: fromKey, cost: 0, path: [], hops: 0 }];
-  let bestSolution = null;
-
   while (queue.length) {
-    queue.sort((a, b) => a.cost - b.cost);
+    queue.sort((x, y) => x.cost - y.cost);
     const cur = queue.shift();
-    if (cur.node === toKey) {
-      if (!bestSolution || cur.cost < bestSolution.cost) {
-        bestSolution = cur;
-      }
-      continue;
-    }
-    if (cur.hops >= MAX_HOPS) continue;
-    // Prune only against a state that is at least as good on BOTH cost and
-    // hops. Keying on cost alone let a cheap 3-hop arrival at a port kill a
-    // dearer 1-hop arrival that still had hops left to reach the destination
-    // (Heraklion → Piraeus → Kythnos → Kea came back as "no route").
-    const seen = best[cur.node] || (best[cur.node] = []);
+    if (cur.node !== fromKey && !arrivals[cur.node]) arrivals[cur.node] = cur;   // cheapest first
+    if (cur.hops >= FERRY_MAX_HOPS) continue;
+    const seen = states[cur.node] || (states[cur.node] = []);
     if (seen.some(st => st.hops <= cur.hops && st.cost <= cur.cost)) continue;
     seen.push({ hops: cur.hops, cost: cur.cost });
-    const edges = FERRY_ADJ[cur.node] || [];
-    for (const edge of edges) {
-      if (cur.path.some(h => h.to === edge.to)) continue; // no loops
-      const transferCost = cur.hops > 0 ? TRANSFER_PENALTY : 0;
-      const next = {
-        node: edge.to,
-        cost: cur.cost + edge.dur + transferCost,
-        path: [...cur.path, edge],
-        hops: cur.hops + 1,
-      };
-      queue.push(next);
+    for (const edge of FERRY_ADJ[cur.node] || []) {
+      if (edge.to === fromKey || cur.path.some(h => h.to === edge.to)) continue;   // no loops
+      queue.push({ node: edge.to, cost: cur.cost + edge.dur + (cur.hops > 0 ? TRANSFER_PENALTY : 0),
+                   path: [...cur.path, edge], hops: cur.hops + 1 });
     }
   }
+  return (_ferrySearchCache[fromKey] = arrivals);
+}
 
-  if (!bestSolution) return null;
-  const hops = bestSolution.path;
-  const totalMin = hops.reduce((s, h) => s + h.dur, 0);
-  const totalPriceLo = hops.reduce((s, h) => s + h.plo, 0);
-  const totalPriceHi = hops.reduce((s, h) => s + h.phi, 0);
+// Best route A → B. totalMin = sailing + connection allowance (what the list shows);
+// sailMin = time on the water only.
+function findFerryRoute(fromKey, toKey) {
+  if (!fromKey || !toKey || fromKey === toKey) return null;
+  const best = ferrySearch(fromKey)[toKey];
+  if (!best) return null;
+  const hops = best.path;
   return {
     hops,
-    totalMin,
+    totalMin: best.cost,
+    sailMin: hops.reduce((s, h) => s + h.dur, 0),
     transfers: hops.length - 1,
-    totalPriceLo,
-    totalPriceHi,
+    totalPriceLo: hops.reduce((s, h) => s + h.plo, 0),
+    totalPriceHi: hops.reduce((s, h) => s + h.phi, 0),
   };
 }
 
@@ -5085,27 +5065,12 @@ function allFerryPorts() {
   return { mainland, islands };
 }
 
-// Compute all reachable destinations from a node, returning {key: bestDurationMin}.
-// Uses simple BFS-ish exploration with hop limit so we get realistic destinations.
-function reachableFrom(fromKey, maxHops = 3) {
-  if (!FERRY_ADJ[fromKey]) return {};
-  const best = { [fromKey]: 0 };
-  const queue = [{ node: fromKey, cost: 0, hops: 0 }];
-  while (queue.length) {
-    queue.sort((a, b) => a.cost - b.cost);
-    const cur = queue.shift();
-    if (cur.hops >= maxHops) continue;
-    for (const edge of FERRY_ADJ[cur.node] || []) {
-      const xfer = cur.hops > 0 ? TRANSFER_PENALTY : 0;
-      const newCost = cur.cost + edge.dur + xfer;
-      if (best[edge.to] === undefined || newCost < best[edge.to]) {
-        best[edge.to] = newCost;
-        queue.push({ node: edge.to, cost: newCost, hops: cur.hops + 1 });
-      }
-    }
-  }
-  delete best[fromKey];
-  return best;
+// Every destination the route finder can reach from a port: {key: totalMin}.
+function reachableFrom(fromKey) {
+  const out = {};
+  const arr = ferrySearch(fromKey);
+  Object.keys(arr).forEach(k => { out[k] = arr[k].cost; });
+  return out;
 }
 
 // Render the planner panel (called on demand from the hopping view)
@@ -5180,7 +5145,8 @@ function refreshDestinationDropdown() {
   const islandDests   = entries.filter(e => ISLANDS_DATA[e.k]);
 
   const formatOption = (e) => {
-    const durLabel = formatDuration(Math.round(e.cost));
+    const multi = (ferrySearch(plannerState.from)[e.k] || {}).hops > 1;
+    const durLabel = (multi ? '~' : '') + formatDuration(Math.round(e.cost));
     return `<option value="${e.k}">${e.name} · ${durLabel}</option>`;
   };
 
@@ -5243,8 +5209,9 @@ function runPlannerSearch() {
   result.innerHTML = `
     <div class="planner-summary">
       <div class="planner-summary-stat">
-        <span class="planner-stat-num">${formatDuration(route.totalMin)}</span>
+        <span class="planner-stat-num">${route.transfers ? '~' : ''}${formatDuration(route.totalMin)}</span>
         <span class="planner-stat-lbl">${t('planner.totaltime')}</span>
+        ${route.transfers ? `<span class="planner-stat-sub">⛵ ${formatDuration(route.sailMin)} ${t('planner.sailing')} + ~${formatDuration(route.totalMin - route.sailMin)} ${t('planner.connections')}</span>` : ''}
       </div>
       <div class="planner-summary-stat">
         <span class="planner-stat-num">${transferText}</span>
@@ -6130,6 +6097,39 @@ function natureScore(i) {
   if ((i.pop || 0) < 2000) n += 0.3; else if ((i.pop || 0) < 8000) n += 0.2;
   return Math.round(Math.min(5, Math.max(1, n)) * 10) / 10;
 }
+/* Hard constraints from the quiz's transport answer. They filter rather than score,
+   because the option text promises them: "Fly in" = only islands with an airport;
+   "Ferry — up to 5 hours" = only islands within 5 h (sailing + connections) of a
+   mainland port. Lefkada and Evia are reached by road and always qualify. */
+const QUIZ_ROAD_LINKED = new Set(['lefkada', 'evia-north', 'evia-central', 'evia-south']);
+let _ferryFromMainland = null;
+function ferryMinutesFromMainland() {
+  if (_ferryFromMainland) return _ferryFromMainland;
+  const dist = {}, q = [];
+  Object.keys(MAINLAND_PORTS).forEach(k => {
+    if (!MAINLAND_PORTS[k].onIsland && FERRY_ADJ[k]) { dist[k] = 0; q.push([k, 0]); }
+  });
+  while (q.length) {
+    q.sort((a, b) => a[1] - b[1]);
+    const [n, d] = q.shift();
+    if (d > dist[n]) continue;
+    for (const e of FERRY_ADJ[n] || []) {
+      const nd = d + e.dur + (d > 0 ? TRANSFER_PENALTY : 0);
+      if (dist[e.to] === undefined || nd < dist[e.to]) { dist[e.to] = nd; q.push([e.to, nd]); }
+    }
+  }
+  return (_ferryFromMainland = dist);
+}
+function quizEligible(i, transportPref) {
+  if (transportPref === 3) return !!i.has_airport;
+  if (transportPref === 1) {
+    if (QUIZ_ROAD_LINKED.has(i.key)) return true;
+    const m = ferryMinutesFromMainland()[i.key];
+    return m !== undefined && m <= 300;
+  }
+  return true;
+}
+
 function scoreIslandsFromAnswers(quizAnswers) {
   // Answers are keyed by question id, not by position. Inserting a question
   // used to shift every index in this function and silently rescore the whole
@@ -6251,7 +6251,7 @@ function scoreIslandsFromAnswers(quizAnswers) {
     }
 
     return { ...i, matchScore: s };
-  }).sort((a, b) => b.matchScore - a.matchScore);
+  }).filter(i => quizEligible(i, transportPref)).sort((a, b) => b.matchScore - a.matchScore);
   return { scored, A, priority, budgetMod, scenePref, seasonIdx, seasonMonths, transportPref, tripDays };
 }
 

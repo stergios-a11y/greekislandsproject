@@ -1511,7 +1511,24 @@ def cleanup_leftover_dirs(current_slugs):
     return removed
 
 
+def write_pair_data():
+    """compare-data/<a>__<b>.json — the verdict + FAQs of one curated pair, which is all the
+    app needs for a comparison (it used to download the whole 2.2 MB corpus)."""
+    out = ROOT / 'compare-data'
+    out.mkdir(exist_ok=True)
+    keys = sorted(set(VERDICTS) | set(FAQS))
+    changed = 0
+    for pk in keys:
+        body = json.dumps({'verdict': VERDICTS.get(pk), 'faqs': FAQS.get(pk)}, ensure_ascii=False, separators=(',', ':'))
+        f = out / f'{pk}.json'
+        if not f.exists() or f.read_text(encoding='utf-8') != body:
+            f.write_text(body, encoding='utf-8')
+            changed += 1
+    print(f'✓ compare-data: {len(keys)} pair files ({changed} written)')
+
+
 def main():
+    write_pair_data()
     pair_keys = sorted(VERDICTS.keys())
     valid_pairs = []
     skipped = []

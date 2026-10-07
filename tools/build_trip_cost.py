@@ -45,6 +45,12 @@ STYLE_V, SCRIPT_V = _asset_versions()
 
 SITE_URL = _market.config()['brand']['site_url']
 
+# Shared with the ferry planner: real routes and their fares, mainland port names, and which
+# destinations are regions of one landmass (joined by road, never by ferry).
+FERRY_EDGES = [[e['a'], e['b'], e['plo'], e['phi']] for e in _market.ferries().get('graph', [])]
+PORT_NAMES = {k: [v['name'], v.get('name_el') or v['name']] for k, v in _market.ferries().get('mainland_ports', {}).items()}
+LANDMASS = {k: lm for lm, keys in _market.config().get('landmasses', {}).items() for k in keys}
+
 
 # ---------------------------------------------------------------- data
 
@@ -178,7 +184,7 @@ STR = {
         'estimate': 'Your trip estimate',
         'li_ferries': 'Ferries', 'li_legs': 'legs', 'li_pax': 'pax', 'book_ferry': 'Book on Ferryhopper →',
         'from_port': 'from', 'ionian_gate_s': 'local mainland port',
-        'li_rooms': 'Rooms', 'central': '(central)', 'rooms_word': 'rooms (two per room)', 'by_road': 'by road', 'no_car_note': 'Visitors\' cars are not allowed on {isl} — park at the mainland port; no vehicle fare or fuel counted here.',
+        'li_rooms': 'Rooms', 'central': '(central)', 'rooms_word': 'rooms (two per room)', 'by_road': 'by road', 'road_to': 'By road to', 'road_note': 'same island — drive or KTEL bus', 'li_bus': 'Buses between regions', 'via': 'via', 'est_fare': 'estimate', 'no_car_note': 'Visitors\' cars are not allowed on {isl} — park at the mainland port; no vehicle fare or fuel counted here.',
         'li_car': 'Car', 'days': 'days', 'book_car': 'Compare on Discover Cars →',
         'li_vehicle': 'Vehicle hire', 'li_flights': 'Domestic flights', 'total_fly': 'Total (excl. int’l flights)',
         'veh_none': 'On foot / bus', 'veh_moto': 'Scooter / ATV', 'veh_car': 'Car',
@@ -261,7 +267,7 @@ STR = {
         'estimate': 'Η εκτίμηση του ταξιδιού σου',
         'li_ferries': 'Πλοία', 'li_legs': 'διαδρομές', 'li_pax': 'άτομα', 'book_ferry': 'Κράτηση στο Ferryhopper →',
         'from_port': 'από', 'ionian_gate_s': 'τοπικό λιμάνι στεριάς',
-        'li_rooms': 'Δωμάτια', 'central': '(κεντρικό)', 'rooms_word': 'δωμάτια (δύο ανά δωμάτιο)', 'by_road': 'οδικώς', 'no_car_note': '{isl}: δεν επιτρέπονται αυτοκίνητα επισκεπτών — παρκάρεις στο λιμάνι της στεριάς· δεν υπολογίζεται ναύλος οχήματος ή καύσιμα εδώ.',
+        'li_rooms': 'Δωμάτια', 'central': '(κεντρικό)', 'rooms_word': 'δωμάτια (δύο ανά δωμάτιο)', 'by_road': 'οδικώς', 'road_to': 'Οδικώς προς', 'road_note': 'ίδιο νησί — με αυτοκίνητο ή ΚΤΕΛ', 'li_bus': 'Λεωφορεία μεταξύ περιοχών', 'via': 'μέσω', 'est_fare': 'εκτίμηση', 'no_car_note': '{isl}: δεν επιτρέπονται αυτοκίνητα επισκεπτών — παρκάρεις στο λιμάνι της στεριάς· δεν υπολογίζεται ναύλος οχήματος ή καύσιμα εδώ.',
         'li_car': 'Αυτοκίνητο', 'days': 'μέρες', 'book_car': 'Σύγκριση στο Discover Cars →',
         'li_vehicle': 'Ενοικίαση οχήματος', 'li_flights': 'Πτήσεις εσωτερικού', 'total_fly': 'Σύνολο (χωρίς διεθνείς πτήσεις)',
         'veh_none': 'Πεζή / λεωφορείο', 'veh_moto': 'Μηχανάκι / ATV', 'veh_car': 'Αυτοκίνητο',
@@ -311,7 +317,7 @@ def render_page(lang, meta, data):
     js_t = {k: t[k] for k in (
         'departure', 'back_to', 'ferry_to', 'via_mainland', 'fly_hint', 'ionian_gate',
         'nights', 'night', 'car', 'boat_day', 'rooms_per_night', 'per_night', 'carless_note',
-        'estimate', 'li_ferries', 'li_legs', 'li_pax', 'book_ferry', 'li_rooms', 'central', 'rooms_word', 'by_road', 'no_car_note',
+        'estimate', 'li_ferries', 'li_legs', 'li_pax', 'book_ferry', 'li_rooms', 'central', 'rooms_word', 'by_road', 'no_car_note', 'road_to', 'road_note', 'li_bus', 'via', 'est_fare',
         'li_car', 'days', 'book_car', 'li_fuel', 'li_boat', 'boat_rec', 'li_food', 'food_s',
         'li_esim', 'esim_s', 'book_esim', 'li_insurance', 'ins_days', 'total', 'pp',
         'cta_ferry', 'cta_car', 'aff_note',
@@ -564,6 +570,9 @@ const T={json.dumps(js_t, ensure_ascii=False)};
 const CFG={json.dumps({k: meta[k] for k in ('season_room', 'season_car', 'range_lo', 'range_hi', 'meal_budget', 'meal_comfort', 'carless_central_premium', 'fuel_per_day', 'moto_factor')})};
 const ISL={json.dumps(data, ensure_ascii=False, separators=(',', ':'))};
 const QUICK=['santorini','milos','ios','folegandros','sifnos'];
+const FG={json.dumps(FERRY_EDGES)};
+const PORTN={json.dumps(PORT_NAMES, ensure_ascii=False)};
+const LANDMASS={json.dumps(LANDMASS)};
 const GATES={{'Piraeus':{{lat:37.942,lng:23.646,en:'Piraeus (Athens)',el:'Πειραιάς (Αθήνα)'}},'Volos':{{lat:39.362,lng:22.942,en:'Volos / Ag. Konstantinos',el:'Βόλος / Αγ. Κωνσταντίνος'}}}};
 
 // ---------------- model ----------------
@@ -595,6 +604,21 @@ function gateOf(k){{const g=ISL[k].g;
   if(g==='Sporades')return GATES.Volos;
   if(g==='Ionian')return null; // local mainland port, priced flat
   return GATES.Piraeus;}}
+// Ferry graph shared with the planner: cheapest fare path between two stops (≤3 boats).
+const FADJ={{}};FG.forEach(([a,b,lo,hi])=>{{(FADJ[a]=FADJ[a]||[]).push([b,lo,hi]);(FADJ[b]=FADJ[b]||[]).push([a,lo,hi]);}});
+const pname=k=>ISL[k]?iname(k):(PORTN[k]?PORTN[k][LANG==='el'?1:0]:k);
+function graphFare(a,b){{
+  if(!FADJ[a]||!FADJ[b])return null;
+  const q=[[a,0,0,[a],[0,0]]];
+  while(q.length){{q.sort((x,y)=>x[1]-y[1]);const [n,c,h,path,f]=q.shift();
+    if(n===b){{const via=path.slice(1,-1).map(pname);return{{f:f,via:via.length?via.join(', '):null}};}}
+    if(h>=3)continue;
+    for(const [to,lo,hi] of FADJ[n]){{if(!path.includes(to))q.push([to,c+(lo+hi)/2,h+1,path.concat(to),[f[0]+lo,f[1]+hi]]);}}
+  }}
+  return null;
+}}
+// Regions of one landmass (Crete, Evia) are joined by road: KTEL bus estimate per person.
+const busFare=(a,b)=>Math.max(5,Math.round(haversine(ISL[a],ISL[b])*1.3*0.09));
 // fare between two points of the trip; 'M' = mainland start/end
 function legInfo(a,b){{
   const isl=a==='M'?b:a, other=a==='M'?a:b;
@@ -606,7 +630,11 @@ function legInfo(a,b){{
     const fly=ISL[k].air&&f[1]>=60;
     return{{f:f,label:gate[LANG],fly:fly}};
   }}
-  if(ISL[a].g===ISL[b].g){{return{{f:nmFare(haversine(ISL[a],ISL[b])),label:null,fly:false}};}}
+  if(LANDMASS[a]&&LANDMASS[a]===LANDMASS[b])return{{f:[0,0],road:true,bus:busFare(a,b),label:T.road_note,fly:false}};
+  const gf=graphFare(a,b);
+  if(gf)return{{f:gf.f,label:gf.via?T.via+' '+gf.via:null,fly:!!(ISL[a].air&&ISL[b].air&&gf.f[1]>=60)}};
+  // No modelled route: distance-based estimate, labelled as such.
+  if(ISL[a].g===ISL[b].g){{return{{f:nmFare(haversine(ISL[a],ISL[b])),label:T.est_fare,fly:false}};}}
   // cross-group: via mainland = two legs
   const ga=gateOf(a),gb=gateOf(b);
   const fa=LOCAL_PORTS[a]?LOCAL_PORTS[a].f:(ga?nmFare(haversine(ga,ISL[a])):[15,40]);
@@ -762,7 +790,7 @@ function render(){{
     </div>`;
     const next=state.trip[i+1];
     if(next){{const li=legInfo(t.k,next.k);
-      h+=`<div class="tc-leg"><span class="l">⛴</span> ${{T.ferry_to}} ${{iname(next.k)}}${{li.label?' <small>('+li.label+')</small>':''}} ${{(li.fly&&!state.own)?'<span class="hint">'+T.fly_hint+'</span>':''}}<span class="fp">${{fareTxt(li.f)}}${{(state.own&&carFee(li.f)&&!NO_CAR[next.k]&&!NO_CAR[t.k])?' + 🚗 €'+Math.round(carFee(li.f)):''}}</span></div>`;}}
+      h+=li.road?`<div class="tc-leg"><span class="l">🚗</span> ${{T.road_to}} ${{iname(next.k)}} <small>(${{li.label}})</small><span class="fp">${{state.own?T.by_road:'🚌 €'+li.bus+' pp'}}</span></div>`:`<div class="tc-leg"><span class="l">⛴</span> ${{T.ferry_to}} ${{iname(next.k)}}${{li.label?' <small>('+li.label+')</small>':''}} ${{(li.fly&&!state.own)?'<span class="hint">'+T.fly_hint+'</span>':''}}<span class="fp">${{fareTxt(li.f)}}${{(state.own&&carFee(li.f)&&!NO_CAR[next.k]&&!NO_CAR[t.k])?' + 🚗 €'+Math.round(carFee(li.f)):''}}</span></div>`;}}
   }});
   if(flyOut){{
     h+=`<div class="tc-leg"><span class="l">✈</span> ${{T.back_to}} ${{GATES.Piraeus[LANG].replace(/\s*\(.*\)/,'')}} (ATH)<span class="fp">€${{rnd(flightFare(last))}} pp</span></div>`;
@@ -794,7 +822,10 @@ function render(){{
     const portOf=k=>{{if(LOCAL_PORTS[k])return LOCAL_PORTS[k][LANG];const g=gateOf(k);return g?g[LANG]:T.ionian_gate_s;}};
     const ports=[...new Set(legs.filter(([a,b])=>a==='M'||b==='M').map(([a,b])=>portOf(a==='M'?b:a)))];
     const portsTxt=ports.length?`${{T.from_port}} ${{ports.join(' & ')}} · `:'';
-    if(fsum>0){{li+=line('⛴',T.li_ferries,`${{portsTxt}}${{legs.length}} ${{T.li_legs}} × ${{state.pax}} ${{T.li_pax}}`,fsum,SK?null:T.book_ferry,'https://www.ferryhopper.com/'+(LANG==='el'?'el/':'en/'),SK);if(!SK)tot+=fsum;}}}}
+    if(fsum>0){{li+=line('⛴',T.li_ferries,`${{portsTxt}}${{legs.filter(([a,b])=>!legInfo(a,b).road).length}} ${{T.li_legs}} × ${{state.pax}} ${{T.li_pax}}`,fsum,SK?null:T.book_ferry,'https://www.ferryhopper.com/'+(LANG==='el'?'el/':'en/'),SK);if(!SK)tot+=fsum;}}}}
+  {{const rl=legs.filter(([a,b])=>a!=='M'&&b!=='M'&&legInfo(a,b).road);
+   if(rl.length&&!state.own){{const bs=rl.reduce((x,[a,b])=>x+legInfo(a,b).bus,0)*state.pax;
+     li+=line('🚌',T.li_bus,`${{rl.length}} ${{T.li_legs}} × ${{state.pax}} ${{T.li_pax}}`,bs,null,null,SK);if(!SK)tot+=bs;}}}}
   if(flyIn||flyOut){{const fl=((flyIn?flightFare(first):0)+(flyOut?flightFare(last):0))*state.pax;
     li+=line('✈',T.li_flights,`${{(flyIn?1:0)+(flyOut?1:0)}} × ${{state.pax}} ${{T.li_pax}}`,fl,null,null,SK);if(!SK)tot+=fl;}}
   // rooms

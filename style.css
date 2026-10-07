@@ -7264,3 +7264,6 @@ html.dark .result-rank { color: #06232C; }
   #view-home .bp-hero-inner { max-width: 1280px; padding: 0 24px; }
   #view-home .bp-pick { max-width: none; }
 }
+
+/* Ferry planner: sailing vs connection time under the total (review AB-04) */
+.planner-stat-sub { display: block; margin-top: 3px; font-size: var(--text-tiny); color: var(--ink-3); line-height: 1.3; }

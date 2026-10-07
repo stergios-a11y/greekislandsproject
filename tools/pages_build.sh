@@ -13,6 +13,8 @@
 # festivals-index.json. Build-only inputs live in tools/, markets/ and templates/.
 set -euo pipefail
 cd "$(dirname "$0")/.."
+# Refuse to package a broken build (static checks of every sitemap page).
+if command -v python3 >/dev/null 2>&1; then python3 tools/smoke.py; fi
 rm -rf dist && mkdir dist
 tar -cf - \
   --exclude=./dist \
@@ -20,6 +22,7 @@ tar -cf - \
   --exclude=./.gitignore \
   --exclude=./tools \
   --exclude=./markets --exclude=./templates \
+  --exclude=./vs_verdicts.json --exclude=./vs_faqs.json \
   --exclude=./costs.json \
   --exclude='./*.md' \
   --exclude='*/__pycache__' \

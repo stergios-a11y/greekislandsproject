@@ -173,5 +173,39 @@
     "itineraries": true,
     "collections": true,
     "match": true
+  },
+  "landmasses": {
+    "crete": [
+      "chania",
+      "rethymno",
+      "heraklion",
+      "lasithi"
+    ],
+    "evia": [
+      "evia-north",
+      "evia-central",
+      "evia-south"
+    ]
+  },
+  "link_exclusions": {
+    "naxos": [
+      "halki"
+    ],
+    "kefalonia": [
+      "poros"
+    ],
+    "lefkada": [
+      "poros",
+      "milos"
+    ],
+    "anafi": [
+      "kalamos"
+    ],
+    "ios": [
+      "kalamos"
+    ],
+    "evia-central": [
+      "kalamos"
+    ]
   }
 }

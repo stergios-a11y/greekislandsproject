@@ -326,6 +326,8 @@ const UI_TEXT = {
   'planner.onetransfer': { en: '1 transfer', el: '1 ανταπόκριση' },
   'planner.transfers':   { en: 'transfers', el: 'ανταποκρίσεις' },
   'planner.totaltime':   { en: 'Total time', el: 'Συνολικός χρόνος' },
+  'planner.sailing':     { en: 'at sea', el: 'ταξίδι' },
+  'planner.connections': { en: 'for connections', el: 'για ανταποκρίσεις' },
   'planner.routetype':   { en: 'Route', el: 'Διαδρομή' },
   'planner.totalprice':  { en: 'Approx. price', el: 'Περ. τιμή' },
   'planner.book':        { en: 'Book this trip on Ferryhopper', el: 'Κράτηση στο Ferryhopper' },
@@ -360,7 +362,7 @@ const UI_TEXT = {
   'international.country.turkey': { en: 'Turkey', el: 'Τουρκία' },
   'international.destination.worth': { en: 'worth the trip?', el: 'αξίζει το ταξίδι;' },
   'international.schedule.btn': { en: 'See schedules', el: 'Δες δρομολόγια' },
-  'international.prebook': { en: '💡 <strong>No need to pre-book.</strong> For all routes below, you can buy your ferry ticket on the spot at the port on the same day. Summer is busier — arrive 60–90 min before departure to secure your seat.', el: '💡 <strong>Δεν χρειάζεται προκράτηση.</strong> Για όλες τις παρακάτω διαδρομές, μπορείς να αγοράσεις το εισιτήριο επί τόπου στο λιμάνι την ίδια μέρα. Το καλοκαίρι έχει κίνηση — έλα 60–90 λεπτά πριν την αναχώρηση για να εξασφαλίσεις θέση.' },
+  'international.prebook': { en: '💡 <strong>Usually no need to pre-book.</strong> On most routes below you can buy your ticket at the port on the day, if seats remain and the operator allows it — bring your passport. In July–August book ahead or arrive 60–90 min early.', el: '💡 <strong>Συνήθως δεν χρειάζεται προκράτηση.</strong> Στις περισσότερες παρακάτω διαδρομές αγοράζεις εισιτήριο στο λιμάνι την ίδια μέρα, αν υπάρχουν θέσεις και το επιτρέπει η εταιρεία — έχε μαζί το διαβατήριο. Ιούλιο–Αύγουστο κλείσε από πριν ή έλα 60–90 λεπτά νωρίτερα.' },
 
   // Match Me / Quiz
   'filter.vibes': { en: 'Filters', el: 'Φίλτρα' },

@@ -1425,6 +1425,10 @@ def auto_link_islands(html_text, current_key, lang='en'):
         # in future if we add e.g. "Crete" which appears as both an island and a region.
         candidates.append((k, name))
 
+    # Local namesakes (Halki village on Naxos, Poros port on Kefalonia…) are listed per
+    # page in market.json "link_exclusions" — those mentions are not the island.
+    skip = set(_market.config().get('link_exclusions', {}).get(current_key, []))
+    candidates = [(k, n) for k, n in candidates if k not in skip]
     candidates.sort(key=lambda x: -len(x[1]))
 
     # Track which keys we've already linked so each destination gets at most ONE link
@@ -1459,7 +1463,9 @@ def auto_link_islands(html_text, current_key, lang='en'):
             if k in linked:
                 continue
             # Word-boundary match, case-sensitive (island names are proper nouns)
-            pattern = r'\b' + re.escape(name) + r'\b'
+            # …and "Kalamos Beach", "Mount Kalamos" are places on this island, not islands.
+            pattern = (r'(?<!Mount )(?<!Mt\. )\b' + re.escape(name)
+                       + r'\b(?! [Bb]each| [Bb]ay| [Vv]illage| [Hh]arbour)')
             m = re.search(pattern, new_part)
             if m:
                 # Replace ONLY the first occurrence
@@ -2517,8 +2523,8 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}market-data.js?v={_market.version()}"></script>
-<script src="{asset_prefix}i18n.js?v=50"></script>
-<script src="{asset_prefix}script.js?v=156"></script>
+<script src="{asset_prefix}i18n.js?v=51"></script>
+<script src="{asset_prefix}script.js?v=157"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
