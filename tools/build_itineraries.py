@@ -238,7 +238,7 @@ def render(key, data, meta, lang):
         chips.append(f'🛏 {L(lang, "Base", "Βάση")}: {" · ".join(base_list[:2])}')
     chips += pills[:2]
     if months:
-        chips.append(f'📅 {L(lang, "Best", "Καλύτερα")} {months}')
+        chips.append(f'☀️ {L(lang, "Best", "Καλύτερα")} {months}')
     chips_html = ''.join(f'<span class="it-chip">{esc(c)}</span>' for c in chips)
     if beaches:
         chips_html += f'<a class="it-chip it-chip-go" href="{guide}#sec-beaches">🏖 {len(beaches)} {L(lang, "beaches, ranked", "παραλίες, με κατάταξη")} →</a>'

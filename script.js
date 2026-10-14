@@ -1513,7 +1513,7 @@ function _fillPickBand(band, keys, label, photos, lang) {
   try { railDots.forEach(d => mapInstance.removeLayer(d)); } catch (_) {}
   railDots = [];
   const base = lang === 'el' ? '/el/island/' : '/island/';
-  band.innerHTML = `<div class="bp-picks-head">📅 ${escapeHtml(label)}</div><div class="bp-picks-row">` +
+  band.innerHTML = `<div class="bp-picks-head"><svg class="ico-cal" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> ${escapeHtml(label)}</div><div class="bp-picks-row">` +
     keys.map(k => {
       const photo = photos[k] && photos[k].url ? thumbUrl(photos[k].url) : '';
       return `<a class="bp-pick" data-k="${k}" href="${base}${k}/">${photo ? `<img src="${photo}" alt="" loading="lazy">` : ''}<span>${escapeHtml(islandName(k))}</span></a>`;
@@ -1573,13 +1573,13 @@ function renderMapRail(keys, label, photos, lang) {
     </div>`;
   }).join('');
   rail.innerHTML = `
-    <div class="bp-rail-head"><b>📅 ${escapeHtml(label)}</b>
+    <div class="bp-rail-head"><b><svg class="ico-cal" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> ${escapeHtml(label)}</b>
       <button class="bp-rail-x" title="${hideTitle}" aria-label="${hideTitle}">✕</button></div>
     ${cards}`;
   const pill = document.createElement('button');
   pill.className = 'bp-rail-pill';
   pill.id = 'bp-rail-pill';
-  pill.textContent = '📅 ' + label;
+  pill.innerHTML = '<svg class="ico-cal" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> ' + escapeHtml(label);
   const old = document.getElementById('bp-rail-pill');
   if (old) old.remove();
   rail.parentElement.appendChild(pill);
@@ -6826,12 +6826,14 @@ function setupMobileHome() {
   document.body.classList.add('mh-on');
 
   // ---- top: search button + this month's picks
-  const month = new Date().toLocaleString(isEl ? 'el-GR' : 'en-GB', { month: 'short' });
+  // The site's own month names, not the phone's date formatting (some phones
+  // printed "17 Oct" here, which read like a random date).
+  const month = (t('months.short') || '').split(',')[new Date().getMonth()] || '';
   const top = document.createElement('div');
   top.className = 'mh-top'; top.id = 'mh-top';
   top.innerHTML = `<button type="button" class="mh-search" aria-haspopup="dialog" aria-controls="mh-panel">`
     + `<span aria-hidden="true">🔍</span><span class="mh-search-t">${L('Find your Greek island…', 'Βρες το νησί σου…')}</span></button>`
-    + `<div class="mh-picks"><span class="mh-month">📅 ${escapeHtml(month)}</span></div>`;
+    + `<div class="mh-picks"><span class="mh-month"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>${escapeHtml(L('Best in ' + month, 'Κορυφαία ' + month))}</span></div>`;
   const picks = document.getElementById('bp-picks');
   if (picks) top.querySelector('.mh-picks').appendChild(picks);   // still filled by renderMapRail()
   map.appendChild(top);
@@ -6846,6 +6848,9 @@ function setupMobileHome() {
     + `<button type="button" class="mh-filter" aria-label="${L('Filters', 'Φίλτρα')}">⚙<span class="mh-count" hidden></span></button>`
     + `<button type="button" class="mh-cmp" aria-label="${L('Compare two islands', 'Σύγκρινε δύο νησιά')}">⇄</button>`;
   map.appendChild(bar);
+  // These sit inside the Leaflet map: stop touches/clicks/wheel reaching it, otherwise
+  // a swipe on the picks row drags the map instead of scrolling the row.
+  if (window.L && L.DomEvent) [top, bar].forEach(el => { L.DomEvent.disableClickPropagation(el); L.DomEvent.disableScrollPropagation(el); });
   const rank = bar.querySelector('.mh-rank');
   if (vs) {
     rank.value = vs.value;

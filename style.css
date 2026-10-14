@@ -7304,7 +7304,10 @@ body.mh-panel-open { overflow: hidden; }
   #view-home .mh-top > * { pointer-events: auto; }
   #view-home .mh-search { display: flex; align-items: center; gap: 10px; width: 100%; height: 46px; padding: 0 16px; border: 0; border-radius: 999px;
     background: var(--white); color: var(--ink-3); font: 600 15px var(--font-body); text-align: left; cursor: pointer; box-shadow: 0 4px 16px rgba(26,35,50,.2); }
-  #view-home .mh-picks { display: flex; gap: 6px; margin-top: 8px; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px; }
+  /* Swipe sideways when the picks don't fit (small phones); a soft fade on the right says "more". */
+  #view-home .mh-picks { display: flex; gap: 6px; margin-top: 8px; overflow-x: auto; overscroll-behavior-x: contain; touch-action: pan-x;
+    scrollbar-width: none; padding: 0 24px 4px 0; margin-right: -10px;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); }
   #view-home .mh-picks::-webkit-scrollbar { display: none; }
   #view-home .mh-picks .bp-picks, #view-home .mh-picks .bp-picks-row { display: contents; margin: 0; padding: 0; }
   #view-home .mh-picks .bp-picks[hidden], #view-home .mh-picks .bp-picks-head { display: none; }
@@ -7314,7 +7317,7 @@ body.mh-panel-open { overflow: hidden; }
   #view-home .mh-month { padding: 0 11px; color: var(--primary-dark); }
   #view-home .mh-picks .bp-pick::after { display: none; }
   #view-home .mh-picks .bp-pick img { position: static; inset: auto; width: 24px; height: 24px; border-radius: 50%; object-fit: cover; }
-  #view-home .mh-picks .bp-pick span { position: static; color: inherit; font-size: 12px; line-height: 1; text-shadow: none; }
+  #view-home .mh-picks .bp-pick span { position: static; color: inherit; font-size: 12px; line-height: 1; text-shadow: none; white-space: nowrap; }
 
   #view-home .mh-bar { position: absolute; left: 10px; right: 10px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 1001;
     display: flex; align-items: center; gap: 6px; padding: 5px; border-radius: 999px; background: var(--white); box-shadow: 0 6px 22px rgba(26,35,50,.25); }
@@ -7328,3 +7331,6 @@ body.mh-panel-open { overflow: hidden; }
     background: var(--warm); color: #fff; font: 800 10px/16px var(--font-ui); }
   #view-home #main-map .vibe-panel { top: auto; bottom: calc(66px + env(safe-area-inset-bottom)); max-height: calc(100% - 150px); overflow-y: auto; }
 }
+
+/* Calendar icon without a printed date (the 📅 emoji shows "JUL 17" / "17", which read as a real date). */
+.ico-cal { display: inline-block; vertical-align: -2px; flex: none; }
