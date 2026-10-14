@@ -1,7 +1,7 @@
 'use strict';
 
 const VERSION = 'v4.0';
-const BUILD_DATE = '2026-10-07';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-10-14';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -609,6 +609,7 @@ document.addEventListener('DOMContentLoaded', () => {
   try { setupVibePanelDismiss(); } catch(e) { console.warn('vibeDismiss', e); }
   try { setupPillPinning(); } catch(e) { console.warn('pillPin', e); }
   try { setupMapJump(); } catch(e) { console.warn('mapJump', e); }
+  try { setupMobileHome(); } catch(e) { console.warn('mobileHome', e); }
   // Featured cards use per-island hero photos from a small manifest. Render once
   // now (fallback initials) and re-render after the manifest loads (with photos).
   try {
@@ -6806,4 +6807,107 @@ function buildSectionNav() {
   window.addEventListener('scroll', onScroll, { passive: true });
   bar._detach = () => window.removeEventListener('scroll', onScroll);
   syncActive();
+}
+
+/* ============================================================
+   MOBILE HOME (≤840px) — one screen, no page scroll (Oct 2026).
+   The map fills the view. A search button and this month's picks float at
+   the top; quiz · ranking · filters · compare sit in a bar at the bottom,
+   where the thumb is. Search opens a full-screen island list grouped by
+   region — the keyboard only appears if you tap "Type a name".
+============================================================ */
+function _mhNorm(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+function setupMobileHome() {
+  if (!window.matchMedia('(max-width: 840px)').matches) return;
+  const map = document.getElementById('main-map');
+  if (!map || document.getElementById('mh-top')) return;
+  const isEl = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+  const L = (en, el) => (isEl ? el : en);
+  document.body.classList.add('mh-on');
+
+  // ---- top: search button + this month's picks
+  const month = new Date().toLocaleString(isEl ? 'el-GR' : 'en-GB', { month: 'short' });
+  const top = document.createElement('div');
+  top.className = 'mh-top'; top.id = 'mh-top';
+  top.innerHTML = `<button type="button" class="mh-search" aria-haspopup="dialog" aria-controls="mh-panel">`
+    + `<span aria-hidden="true">🔍</span><span class="mh-search-t">${L('Find your Greek island…', 'Βρες το νησί σου…')}</span></button>`
+    + `<div class="mh-picks"><span class="mh-month">📅 ${escapeHtml(month)}</span></div>`;
+  const picks = document.getElementById('bp-picks');
+  if (picks) top.querySelector('.mh-picks').appendChild(picks);   // still filled by renderMapRail()
+  map.appendChild(top);
+
+  // ---- bottom bar: quiz · ranking · filters · compare
+  const vs = document.getElementById('vibe-select');
+  const bar = document.createElement('div');
+  bar.className = 'mh-bar'; bar.id = 'mh-bar';
+  bar.setAttribute('role', 'toolbar'); bar.setAttribute('aria-label', L('Map tools', 'Εργαλεία χάρτη'));
+  bar.innerHTML = `<button type="button" class="mh-quiz">🎯 ${L('60-sec quiz', 'Quiz 60″')}</button>`
+    + `<select class="mh-rank" aria-label="${escapeHtml((vs && vs.getAttribute('aria-label')) || 'Rank')}">${vs ? vs.innerHTML : ''}</select>`
+    + `<button type="button" class="mh-filter" aria-label="${L('Filters', 'Φίλτρα')}">⚙<span class="mh-count" hidden></span></button>`
+    + `<button type="button" class="mh-cmp" aria-label="${L('Compare two islands', 'Σύγκρινε δύο νησιά')}">⇄</button>`;
+  map.appendChild(bar);
+  const rank = bar.querySelector('.mh-rank');
+  if (vs) {
+    rank.value = vs.value;
+    rank.addEventListener('change', () => { vs.value = rank.value; vs.dispatchEvent(new Event('change', { bubbles: true })); });
+  }
+  bar.querySelector('.mh-quiz').addEventListener('click', () => navigateTo('match'));
+  bar.querySelector('.mh-cmp').addEventListener('click', () => navigateTo('compare'));
+  bar.querySelector('.mh-filter').addEventListener('click', (e) => { e.stopPropagation(); if (typeof toggleVibePanel === 'function') toggleVibePanel(); });
+  const srcCount = document.getElementById('vibe-filter-count'), dstCount = bar.querySelector('.mh-count');
+  const syncCount = () => { if (!srcCount) return; const n = srcCount.textContent.trim(); dstCount.textContent = n; dstCount.hidden = !n || srcCount.style.display === 'none'; };
+  if (srcCount) { new MutationObserver(syncCount).observe(srcCount, { childList: true, characterData: true, subtree: true, attributes: true }); syncCount(); }
+
+  // ---- island list panel (no keyboard until "Type a name" is tapped)
+  const groups = {};
+  Object.keys(ISLANDS_DATA).forEach(k => { const g = ISLANDS_DATA[k].island_group || ''; (groups[g] = groups[g] || []).push(k); });
+  const base = isEl ? '/el/island/' : '/island/';
+  const elName = k => (typeof ISLAND_NAMES_EL !== 'undefined' && ISLAND_NAMES_EL[k]) || '';
+  const panel = document.createElement('div');
+  panel.className = 'mh-panel'; panel.id = 'mh-panel'; panel.hidden = true;
+  panel.setAttribute('role', 'dialog'); panel.setAttribute('aria-modal', 'true'); panel.setAttribute('aria-label', L('All islands', 'Όλα τα νησιά'));
+  panel.innerHTML = `<div class="mh-ph"><input type="search" class="mh-q" placeholder="${L('Type a name…', 'Γράψε όνομα…')}" aria-label="${L('Type an island name', 'Γράψε όνομα νησιού')}" enterkeyhint="search" autocomplete="off" autocapitalize="off" spellcheck="false">`
+    + `<button type="button" class="mh-x" aria-label="${L('Close', 'Κλείσιμο')}">✕</button></div>`
+    + `<div class="mh-list">` + Object.keys(groups).sort((a, b) => cmpName(groupName(a), groupName(b))).map(g =>
+        `<section class="mh-g"><h3>${escapeHtml(groupName(g))}</h3>` + groups[g].sort((a, b) => cmpName(islandName(a), islandName(b))).map(k =>
+          `<a class="mh-i" href="${base}${k}/" data-k="${k}" data-n="${escapeHtml(_mhNorm(islandName(k) + ' ' + (ISLANDS_DATA[k].name || '') + ' ' + elName(k)))}">`
+          + `<span>${escapeHtml(islandName(k))}</span><b style="background:${scoreToColor(ISLANDS_DATA[k].total)}">${fmt(ISLANDS_DATA[k].total)}</b></a>`).join('')
+        + `</section>`).join('') + `</div>`;
+  document.body.appendChild(panel);
+  const q = panel.querySelector('.mh-q'), openBtn = top.querySelector('.mh-search');
+  const close = () => { panel.hidden = true; document.body.classList.remove('mh-panel-open'); q.blur(); openBtn.focus(); };
+  openBtn.addEventListener('click', () => {
+    panel.hidden = false; document.body.classList.add('mh-panel-open');
+    panel.querySelector('.mh-x').focus();   // a button, so no keyboard pops up
+    try { track('home_search_open', {}); } catch (_) {}
+  });
+  panel.querySelector('.mh-x').addEventListener('click', close);
+  panel.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  q.addEventListener('input', () => {
+    const v = _mhNorm(q.value.trim());
+    panel.querySelectorAll('.mh-g').forEach(sec => {
+      let any = false;
+      sec.querySelectorAll('.mh-i').forEach(a => { const hit = !v || a.dataset.n.includes(v); a.classList.toggle('is-hidden', !hit); any = any || hit; });
+      sec.classList.toggle('is-empty', !any);
+    });
+  });
+  q.addEventListener('keydown', e => {
+    if (e.key === 'Enter') { const f = panel.querySelector('.mh-i:not(.is-hidden)'); if (f) { e.preventDefault(); f.click(); } }
+  });
+  panel.querySelector('.mh-list').addEventListener('click', e => {
+    const a = e.target.closest('.mh-i'); if (!a) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault();
+    try { track('home_search_pick', { island: a.dataset.k, via: q.value.trim() ? 'typed' : 'list' }); } catch (_) {}
+    panel.hidden = true; document.body.classList.remove('mh-panel-open'); q.value = ''; q.dispatchEvent(new Event('input'));
+    navigateTo('island', a.dataset.k);
+  });
+
+  // ---- the map now owns the whole screen: refit around the floating controls
+  setTimeout(() => {
+    if (typeof mapInstance === 'undefined' || !mapInstance) return;
+    mapInstance.invalidateSize();
+    mapInstance.fitBounds(L_bounds(), { paddingTopLeft: [8, 104], paddingBottomRight: [8, 70] });
+  }, 60);
+  function L_bounds() { return window.L.latLngBounds(window.L.latLng(34.6, 19.4), window.L.latLng(41.1, 28.4)); }
 }
