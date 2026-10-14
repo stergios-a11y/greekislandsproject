@@ -2524,7 +2524,7 @@ def render_page(key, data, meta, lang='en'):
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}market-data.js?v={_market.version()}"></script>
 <script src="{asset_prefix}i18n.js?v=51"></script>
-<script src="{asset_prefix}script.js?v=162"></script>
+<script src="{asset_prefix}script.js?v=163"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
@@ -3128,8 +3128,15 @@ def generate_whats_on_index(island_keys):
                 'months': sorted(parse_when_to_months(when)),
             })
 
+        # The island's own one-line reason for each good month (shown in the phone's
+        # "Best in <month>" sheet). Only perfect/great months, to keep the file small.
+        why = {str(i+1): [m.get('why', ''), m.get('why_el', '') or m.get('why', '')]
+               for i, m in enumerate(wtv_months)
+               if isinstance(m, dict) and m.get('tag') in ('perfect', 'great') and m.get('why')}
+
         if perfect or great or festivals:
             entry = {}
+            if why:        entry['why'] = why
             if perfect:    entry['perfect'] = perfect
             if great:      entry['great'] = great
             if festivals:  entry['festivals'] = festivals

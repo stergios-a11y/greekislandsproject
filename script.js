@@ -1316,6 +1316,7 @@ async function renderWhatsOnStrip() {
   }
 
   const month = new Date().getMonth() + 1;   // 1-12
+  _whatsOn = data; _whatsOnMonth = month;   // the phone's "Best in" sheet reads the reasons
   const lang = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? 'el' : 'en';
   const monthNamesEN = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   const monthNamesEL = ['Ιανουάριο','Φεβρουάριο','Μάρτιο','Απρίλιο','Μάιο','Ιούνιο','Ιούλιο','Αύγουστο','Σεπτέμβριο','Οκτώβριο','Νοέμβριο','Δεκέμβριο'];
@@ -1528,8 +1529,8 @@ function _fillPickBand(band, keys, label, photos, lang) {
 function renderMapRail(keys, label, photos, lang) {
   // Phones: same photo tiles, swipeable, in the hero. No map rail.
   if (window.matchMedia('(max-width: 840px)').matches) {
-    const b = document.getElementById('bp-picks');
-    if (b && keys.length) _fillPickBand(b, keys.slice(0, 3), label, photos, lang);   // three that fit, no sideways scroll
+    // One "Best in <month>" button on the map; the picks open in a sheet (setupMobileHome).
+    if (keys.length) { _mhPicks = { keys: keys.slice(0, 3), label, photos, lang }; _mhRenderPicks(); }
     return;
   }
   const rail = document.getElementById('pick-rail');
@@ -6817,6 +6818,87 @@ function buildSectionNav() {
    region — the keyboard only appears if you tap "Type a name".
 ============================================================ */
 function _mhNorm(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+let _whatsOn = null, _whatsOnMonth = 0;   // whats-on.json + month it was read for
+let _mhPicks = null;                       // phones: { keys, label, photos, lang } from renderMapRail
+const _MH_CAL = '<svg class="ico-cal" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>';
+
+function _mhRenderPicks() {
+  const btn = document.querySelector('#mh-top .mh-best');
+  if (!btn || !_mhPicks || !_mhPicks.keys.length) return;
+  const { keys, photos, lang } = _mhPicks;
+  btn.querySelector('.mh-best-n').textContent = lang === 'el' ? `· ${keys.length} επιλογές` : `· ${keys.length} picks`;
+  btn.querySelector('.mh-best-th').innerHTML = keys.map(k => {
+    const u = photos[k] && photos[k].url ? thumbUrl(photos[k].url) : '';
+    return u ? `<img src="${u}" alt="" loading="lazy">` : '';
+  }).join('');
+  btn.hidden = false;
+  if (!btn._wired) { btn._wired = true; btn.addEventListener('click', _mhOpenBest); }
+}
+
+function _mhOpenBest() {
+  if (!_mhPicks) return;
+  const { keys, label, photos, lang } = _mhPicks;
+  const isEl = lang === 'el', tr = (en, el) => (isEl ? el : en);
+  const base = isEl ? '/el/island/' : '/island/';
+  const m = _whatsOnMonth || (new Date().getMonth() + 1);
+  const opener = document.querySelector('#mh-top .mh-best');
+  let wrap = document.getElementById('mh-best');
+  if (!wrap) { wrap = document.createElement('div'); wrap.id = 'mh-best'; wrap.className = 'mh-sheet-wrap'; document.body.appendChild(wrap); }
+  const cards = keys.filter(k => ISLANDS_DATA[k]).map((k, i) => {
+    const d = ISLANDS_DATA[k], w = (_whatsOn && _whatsOn[k]) || {};
+    const why = w.why && w.why[m] ? w.why[m][isEl ? 1 : 0] : '';
+    const tag = (w.perfect || []).includes(m) ? tr('Ideal month', 'Ιδανικός μήνας')
+              : (w.great || []).includes(m) ? tr('Great month', 'Πολύ καλός μήνας') : '';
+    const u = photos[k] && photos[k].url ? thumbUrl(photos[k].url) : '';
+    return `<a class="mh-bc" href="${base}${k}/" data-k="${k}">`
+      + `<span class="mh-bc-img">${u ? `<img src="${u}" alt="" loading="lazy">` : ''}<b>${i + 1}</b></span>`
+      + `<span class="mh-bc-b"><span class="mh-bc-n">${escapeHtml(islandName(k))}</span>`
+      + `<span class="mh-bc-g">${escapeHtml(groupName(d.island_group))} <i style="background:${scoreToColor(d.total)}">${fmt(d.total)}</i></span>`
+      + (why || tag ? `<span class="mh-bc-w">${tag ? `<em>${escapeHtml(tag)}</em>` : ''}${tag && why ? ' · ' : ''}${escapeHtml(why)}</span>` : '')
+      + `<span class="mh-bc-go">${tr('Open guide →', 'Δες τον οδηγό →')}</span></span></a>`;
+  }).join('');
+  wrap.innerHTML = `<div class="mh-dim"></div>`
+    + `<div class="mh-sheet" role="dialog" aria-modal="true" aria-labelledby="mh-best-h"><div class="mh-grab" aria-hidden="true"></div>`
+    + `<div class="mh-sh"><h2 id="mh-best-h">${_MH_CAL} ${escapeHtml(label)}</h2><button type="button" class="mh-x" aria-label="${tr('Close', 'Κλείσιμο')}">✕</button></div>`
+    + `<p class="mh-sub">${tr('Picked from each island’s month-by-month guide', 'Από τον οδηγό κάθε νησιού, μήνα-μήνα')}</p>`
+    + `<div class="mh-bcs">${cards}</div>`
+    + `<div class="mh-sf"><button type="button" class="mh-sf-map">${tr('Show on map', 'Δες στον χάρτη')}</button>`
+    + (keys.length > 1 ? `<button type="button" class="mh-sf-cmp">${tr('Compare top 2', 'Σύγκρινε τα 2 πρώτα')}</button>` : '')
+    + `</div></div>`;
+  wrap.hidden = false; document.body.classList.add('mh-panel-open');
+  const close = (refocus = true) => { wrap.hidden = true; document.body.classList.remove('mh-panel-open'); if (refocus && opener) opener.focus(); };
+  wrap.querySelector('.mh-x').focus();
+  wrap.querySelector('.mh-dim').addEventListener('click', () => close());
+  wrap.querySelector('.mh-x').addEventListener('click', () => close());
+  wrap.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  wrap.querySelectorAll('.mh-bc').forEach(a => a.addEventListener('click', e => {
+    try { track('pick_click', { island: a.dataset.k, placement: 'best_sheet' }); } catch (_) {}
+    if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault(); close(false); navigateTo('island', a.dataset.k);
+  }));
+  wrap.querySelector('.mh-sf-map').addEventListener('click', () => {
+    close(false);
+    try { track('best_sheet_map', {}); } catch (_) {}
+    if (typeof mapInstance === 'undefined' || !mapInstance) return;
+    const ks = keys.filter(k => ISLANDS_DATA[k]);
+    try { railDots.forEach(d => mapInstance.removeLayer(d)); } catch (_) {}
+    railDots = ks.map((k, i) => window.L.circleMarker([ISLANDS_DATA[k].lat, ISLANDS_DATA[k].lng],
+        { radius: 9, color: '#fff', weight: 3, fillColor: '#C4962A', fillOpacity: 1, pane: 'markerPane' })
+      .addTo(mapInstance)
+      .bindTooltip(`${i + 1}. ${islandName(k)}`, { permanent: true, direction: 'top', offset: [0, -8], className: 'mh-best-tip' })
+      .on('click', () => navigateTo('island', k)));
+    mapInstance.fitBounds(window.L.latLngBounds(ks.map(k => [ISLANDS_DATA[k].lat, ISLANDS_DATA[k].lng])),
+      { paddingTopLeft: [50, 150], paddingBottomRight: [50, 100], maxZoom: 8 });
+  });
+  const cmp = wrap.querySelector('.mh-sf-cmp');
+  if (cmp) cmp.addEventListener('click', () => {
+    close(false);
+    try { track('best_sheet_compare', { a: keys[0], b: keys[1] }); } catch (_) {}
+    navigateTo('compare', { pair: [keys[0], keys[1]] });
+  });
+  try { track('best_sheet_open', { n: keys.length }); } catch (_) {}
+}
+
 function setupMobileHome() {
   if (!window.matchMedia('(max-width: 840px)').matches) return;
   const map = document.getElementById('main-map');
@@ -6833,10 +6915,11 @@ function setupMobileHome() {
   top.className = 'mh-top'; top.id = 'mh-top';
   top.innerHTML = `<button type="button" class="mh-search" aria-haspopup="dialog" aria-controls="mh-panel">`
     + `<span aria-hidden="true">🔍</span><span class="mh-search-t">${L('Find your Greek island…', 'Βρες το νησί σου…')}</span></button>`
-    + `<div class="mh-picks"><span class="mh-month"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>${escapeHtml(L('Best in ' + month, 'Κορυφαία ' + month))}</span></div>`;
-  const picks = document.getElementById('bp-picks');
-  if (picks) top.querySelector('.mh-picks').appendChild(picks);   // still filled by renderMapRail()
+    + `<div class="mh-picks"><button type="button" class="mh-best" aria-haspopup="dialog" aria-controls="mh-best" hidden>${_MH_CAL}`
+    + `<span class="mh-best-t">${escapeHtml(L('Best in ' + month, 'Κορυφαία ' + month))}</span><span class="mh-best-n"></span>`
+    + `<span class="mh-best-th" aria-hidden="true"></span><span class="mh-best-go" aria-hidden="true">›</span></button></div>`;
   map.appendChild(top);
+  _mhRenderPicks();   // if renderMapRail already ran
 
   // ---- bottom bar: quiz · ranking · filters · compare
   const vs = document.getElementById('vibe-select');
@@ -6844,18 +6927,50 @@ function setupMobileHome() {
   bar.className = 'mh-bar'; bar.id = 'mh-bar';
   bar.setAttribute('role', 'toolbar'); bar.setAttribute('aria-label', L('Map tools', 'Εργαλεία χάρτη'));
   bar.innerHTML = `<button type="button" class="mh-quiz">🎯 ${L('60-sec quiz', 'Quiz 60″')}</button>`
-    + `<select class="mh-rank" aria-label="${escapeHtml((vs && vs.getAttribute('aria-label')) || 'Rank')}">${vs ? vs.innerHTML : ''}</select>`
-    + `<button type="button" class="mh-filter" aria-label="${L('Filters', 'Φίλτρα')}">⚙<span class="mh-count" hidden></span></button>`
+    + `<button type="button" class="mh-filter" aria-haspopup="dialog" aria-controls="vibe-panel"><span class="mh-f-i" aria-hidden="true">⚙</span>`
+    + `<span class="mh-f-t"><b>${L('Filters', 'Φίλτρα')}</b><small class="mh-f-r"></small></span><span class="mh-count" hidden></span></button>`
     + `<button type="button" class="mh-cmp" aria-label="${L('Compare two islands', 'Σύγκρινε δύο νησιά')}">⇄</button>`;
   map.appendChild(bar);
   // These sit inside the Leaflet map: stop touches/clicks/wheel reaching it, otherwise
   // a swipe on the picks row drags the map instead of scrolling the row.
-  if (window.L && L.DomEvent) [top, bar].forEach(el => { L.DomEvent.disableClickPropagation(el); L.DomEvent.disableScrollPropagation(el); });
-  const rank = bar.querySelector('.mh-rank');
-  if (vs) {
-    rank.value = vs.value;
-    rank.addEventListener('change', () => { vs.value = rank.value; vs.dispatchEvent(new Event('change', { bubbles: true })); });
+  // (window.L: inside this function L is the language helper.)
+  if (window.L && window.L.DomEvent) [top, bar].forEach(el => { window.L.DomEvent.disableClickPropagation(el); window.L.DomEvent.disableScrollPropagation(el); });
+  // ---- Filter sheet: "Rank islands by" on top (it used to be an unexplained "Overall ▾" in the bar)
+  const vp = document.getElementById('vibe-panel');
+  const rankText = () => { const o = vs && vs.selectedOptions[0]; return o ? o.textContent.replace(/^[^\p{L}\p{N}]+/u, '').trim() : ''; };
+  if (vp && vs && !vp.querySelector('.mh-vp-head')) {
+    const head = document.createElement('div');
+    head.className = 'mh-vp-head';
+    head.innerHTML = `<div class="mh-sh"><h2>${L('Filters', 'Φίλτρα')}</h2><button type="button" class="mh-x" aria-label="${L('Close', 'Κλείσιμο')}">✕</button></div>`
+      + `<p class="mh-sec">${L('Rank islands by', 'Κατάταξη νησιών κατά')}</p>`
+      + `<p class="mh-sub">${L('Sets the order and the pin colours on the map', 'Ορίζει τη σειρά και τα χρώματα στον χάρτη')}</p>`
+      + `<div class="mh-seg" role="radiogroup" aria-label="${L('Rank islands by', 'Κατάταξη νησιών κατά')}">`
+      + [...vs.options].map(o => `<button type="button" role="radio" data-v="${o.value}" aria-checked="false">${escapeHtml(o.textContent.trim())}</button>`).join('')
+      + `</div><p class="mh-sec">${L('Only show islands that are', 'Δείξε μόνο νησιά που είναι')}</p>`;
+    vp.insertBefore(head, vp.firstChild);
+    head.querySelector('.mh-x').addEventListener('click', e => { e.stopPropagation(); closeVibePanel(); });
+    head.querySelector('.mh-seg').addEventListener('click', e => {
+      const b = e.target.closest('button[data-v]'); if (!b) return;
+      e.stopPropagation();
+      vs.value = b.dataset.v; vs.dispatchEvent(new Event('change', { bubbles: true }));
+    });
+    const foot = vp.querySelector('.vibe-panel-footer');
+    if (foot) {
+      const done = document.createElement('button');
+      done.type = 'button'; done.className = 'mh-done';
+      foot.appendChild(done);
+      done.addEventListener('click', e => { e.stopPropagation(); closeVibePanel(); });
+      const mc = document.getElementById('vibe-match-count');
+      const syncDone = () => { const n = mc && (mc.textContent.match(/\d+/) || [])[0]; done.textContent = n ? L(`Show ${n} islands`, `Δείξε ${n} νησιά`) : L('Done', 'Τέλος'); };
+      if (mc) new MutationObserver(syncDone).observe(mc, { childList: true, characterData: true, subtree: true });
+      syncDone();
+    }
   }
+  const syncRank = () => {
+    bar.querySelector('.mh-f-r').textContent = L('Ranked: ', 'Κατάταξη: ') + rankText();
+    if (vp) vp.querySelectorAll('.mh-seg button').forEach(b => b.setAttribute('aria-checked', b.dataset.v === vs.value ? 'true' : 'false'));
+  };
+  if (vs) { vs.addEventListener('change', syncRank); syncRank(); }
   bar.querySelector('.mh-quiz').addEventListener('click', () => navigateTo('match'));
   bar.querySelector('.mh-cmp').addEventListener('click', () => navigateTo('compare'));
   bar.querySelector('.mh-filter').addEventListener('click', (e) => { e.stopPropagation(); if (typeof toggleVibePanel === 'function') toggleVibePanel(); });
