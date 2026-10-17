@@ -7471,3 +7471,8 @@ html.dark .leaflet-container .leaflet-control-attribution { background: rgba(10,
   #view-match.mq-live .quiz-option:hover { background: rgba(8,30,40,.78); border-color: rgba(255,255,255,.16); }
   #view-match.mq-live .quiz-option.selected:hover { background: rgba(232,82,42,.3); border-color: var(--warm, #E8522A); }
 }
+
+/* Filtered-out islands on the home map: small faint dots, no number. */
+.custom-marker.mk-dot { background: none; border: 0; }
+.mk-dot-i { display: block; width: 8px; height: 8px; margin: .5px; border-radius: 50%; background: #7A8692; border: 1px solid rgba(255,255,255,.85); box-sizing: border-box; }
+html.dark .mk-dot-i { background: #8C98A5; border-color: rgba(0,0,0,.4); }

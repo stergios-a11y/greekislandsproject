@@ -1896,9 +1896,9 @@ function drawClusterSpokes() {
   const meta = ISLANDS_DATA || {};
   Object.values(ISLAND_CLUSTERS).forEach(c => {
     const g = meta[c.gateway];
-    if (!g || !_shownOnMap(c.gateway)) return;
+    if (!g || !_shownOnMap(c.gateway) || !satPasses(c.gateway)) return;
     (c.members || []).forEach(k => {
-      if (!meta[k] || !_shownOnMap(k)) return;
+      if (!meta[k] || !_shownOnMap(k) || !satPasses(k)) return;   // no spoke to a filtered-out dot
       clusterSpokes.push(L.polyline([[g.lat, g.lng], [meta[k].lat, meta[k].lng]], {
         color: scoreToColor(g.total), weight: 1.6, opacity: 0.45, interactive: false, pane: 'overlayPane',
       }).addTo(mapInstance));
@@ -1912,6 +1912,8 @@ function getDisplayScore(island) {
 }
 
 function makeMarkerIcon(score, dimmed) {
+  // Filtered out: a small faint dot keeps the archipelago's shape without competing with the matches.
+  if (dimmed) return L.divIcon({ className: 'custom-marker mk-dot', html: '<i class="mk-dot-i"></i>', iconSize: [9, 9], iconAnchor: [4.5, 4.5] });
   const color = dimmed ? DIM_FILL : scoreToColor(score);
   const size = Math.round(20 + score * 2);
   const textColor = dimmed ? DIM_TEXT : '#fff';
@@ -1951,11 +1953,11 @@ function renderMapMarkers() {
     const carWords = ['', t('car.none'), t('car.helpful'), t('car.useful'), t('car.recommended'), t('car.essential')];
     const carLabel = carWords[Math.round(island.car_need || 0)] || '—';
     const marker = L.marker([island.lat, island.lng], {
-      icon: _gates.length ? makeSatelliteIcon(score, !vibeMatch, _gates) : makeMarkerIcon(score, !vibeMatch),
+      icon: (_gates.length && clusterHasMatch(island.key, _gates)) ? makeSatelliteIcon(score, !vibeMatch, _gates) : makeMarkerIcon(score, !vibeMatch),
       // A cluster stays fully opaque if ANY of its islands matches; the core and
       // each moon are then dimmed individually inside makeSatelliteIcon().
       opacity: (_gates.length ? clusterHasMatch(island.key, _gates) : vibeMatch) ? 1 : DIM_OPACITY,
-      zIndexOffset: _gates.length ? 400 : 0 })
+      zIndexOffset: (_gates.length && clusterHasMatch(island.key, _gates)) ? 400 : (vibeMatch ? 0 : -500) })
       .addTo(mapInstance)
       .bindTooltip(`
         <div class="island-tooltip-inner">
@@ -2023,6 +2025,7 @@ function closeVibePanel() {
   if (!panel || panel.style.display === 'none') return;
   panel.style.display = 'none';
   btn && btn.setAttribute('aria-expanded', 'false');
+  if (_vibeFitPending) _vibeFit();
 }
 
 /* The filter panel used to stay open until you pressed the button again, so it
@@ -2145,6 +2148,33 @@ function toggleVibeTag(filter) {
   }
   updateVibeMatchCount();
   renderMapMarkers();
+  _vibeFitSoon();
+}
+
+/* Few matches: fly the map to them (animated); back out when filters clear or widen.
+   On phones the filter sheet covers the map, so the flight waits for it to close. */
+let _vibeZoomed = false, _vibeFitPending = false;
+const VIBE_FIT_MAX = 15;
+function _vibeFit() {
+  _vibeFitPending = false;
+  if (typeof mapInstance === 'undefined' || !mapInstance || typeof L === 'undefined') return;
+  const hits = activeVibeFilters.size ? ISLANDS.filter(i => islandPassesVibeFilters(i) && _shownOnMap(i.key)) : [];
+  const animate = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const small = window.matchMedia('(max-width: 840px)').matches;
+  if (hits.length && hits.length < VIBE_FIT_MAX) {
+    mapInstance.flyToBounds(L.latLngBounds(hits.map(i => [i.lat, i.lng])), Object.assign({ maxZoom: 9, duration: 0.8, animate },
+      small ? { paddingTopLeft: [30, 130], paddingBottomRight: [30, 80] } : { paddingTopLeft: [60, 110], paddingBottomRight: [60, 40] }));
+    _vibeZoomed = true;
+  } else if (_vibeZoomed) {
+    mapInstance.flyToBounds(L.latLngBounds(L.latLng(34.6, 19.4), L.latLng(41.1, 28.4)), Object.assign({ duration: 0.8, animate },
+      small ? { paddingTopLeft: [8, 104], paddingBottomRight: [8, 70] } : { paddingTopLeft: [0, 64], paddingBottomRight: [0, 24] }));
+    _vibeZoomed = false;
+  }
+}
+function _vibeFitSoon() {
+  const p = document.getElementById('vibe-panel');
+  if (window.matchMedia('(max-width: 840px)').matches && p && p.style.display !== 'none') { _vibeFitPending = true; return; }
+  _vibeFit();
 }
 
 function clearVibeFilters() {
@@ -2156,6 +2186,7 @@ function clearVibeFilters() {
   if (countBadge) { countBadge.textContent = ''; countBadge.style.display = 'none'; }
   updateVibeMatchCount();
   renderMapMarkers();
+  _vibeFitSoon();
 }
 
 function updateVibeMatchCount() {
