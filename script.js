@@ -7029,7 +7029,30 @@ function setupMobileHome() {
   bar.querySelector('.mh-filter').addEventListener('click', (e) => { e.stopPropagation(); if (typeof toggleVibePanel === 'function') toggleVibePanel(); });
   const srcCount = document.getElementById('vibe-filter-count'), dstCount = bar.querySelector('.mh-count');
   const syncCount = () => { if (!srcCount) return; const n = srcCount.textContent.trim(); dstCount.textContent = n; dstCount.hidden = !n || srcCount.style.display === 'none'; };
-  if (srcCount) { new MutationObserver(syncCount).observe(srcCount, { childList: true, characterData: true, subtree: true, attributes: true }); syncCount(); }
+  // ---- active filters as removable chips above the Filters pill (one tap to drop one, or all)
+  const chips = document.createElement('div');
+  chips.className = 'mh-chips'; chips.id = 'mh-chips'; chips.hidden = true;
+  chips.setAttribute('aria-label', L('Active filters', 'Ενεργά φίλτρα'));
+  map.appendChild(chips);
+  if (window.L && window.L.DomEvent) { window.L.DomEvent.disableClickPropagation(chips); window.L.DomEvent.disableScrollPropagation(chips); }
+  const renderChips = () => {
+    const act = [...activeVibeFilters];
+    chips.hidden = !act.length;
+    if (!act.length) { chips.innerHTML = ''; return; }
+    // "Clear all" leads, so it's on screen even when the chips overflow sideways.
+    chips.innerHTML = (act.length > 1 ? `<button type="button" class="mh-chip mh-chip-all">${L('Clear all', 'Καθαρισμός')}</button>` : '') + act.map(f => {
+      const tag = document.querySelector(`#vibe-panel .vibe-tag[data-filter="${f}"]`);
+      const label = tag ? tag.textContent.trim().replace(/\s+/g, ' ') : f;
+      return `<button type="button" class="mh-chip" data-f="${f}" aria-label="${escapeHtml(L('Remove filter: ', 'Αφαίρεση φίλτρου: ') + label)}">${escapeHtml(label)} <b aria-hidden="true">✕</b></button>`;
+    }).join('');
+  };
+  chips.addEventListener('click', e => {
+    const b = e.target.closest('.mh-chip'); if (!b) return;
+    if (b.classList.contains('mh-chip-all')) { try { track('filter_chip_clear', { n: activeVibeFilters.size }); } catch (_) {} clearVibeFilters(); }
+    else { try { track('filter_chip_remove', { filter: b.dataset.f }); } catch (_) {} toggleVibeTag(b.dataset.f); }
+    renderChips();
+  });
+  if (srcCount) { new MutationObserver(() => { syncCount(); renderChips(); }).observe(srcCount, { childList: true, characterData: true, subtree: true, attributes: true }); syncCount(); renderChips(); }
 
   // ---- map style: 🗺 | 🛰 (replaces Leaflet's layers box, which read as a blank white square)
   const lay = document.createElement('div');

@@ -7534,3 +7534,18 @@ html.dark .mk-dot-i { background: #8C98A5; border-color: rgba(0,0,0,.4); }
 /* Filtered-out main island inside a satellite cluster: same small dot as other filtered islands. */
 .sat-core.sat-core-dot { border-width: 1px !important; box-shadow: none !important; background: #7A8692 !important; }
 html.dark .sat-core.sat-core-dot { background: #8C98A5 !important; }
+
+/* Phone home: active filter chips above the Filters row. */
+@media (max-width: 840px) {
+  #view-home .mh-chips { position: absolute; left: 0; right: 0; bottom: calc(72px + env(safe-area-inset-bottom)); z-index: 1001;
+    display: flex; gap: 6px; padding: 0 10px 4px; overflow-x: auto; scrollbar-width: none; }
+  /* centred when they fit, scrollable from the first chip when they don't (justify-content:center would clip the left) */
+  #view-home .mh-chip:first-child { margin-left: auto; } #view-home .mh-chip:last-child { margin-right: auto; }
+  #view-home .mh-chips::-webkit-scrollbar { display: none; }
+  #view-home .mh-chips[hidden] { display: none; }
+  #view-home .mh-chip { flex: none; height: 32px; padding: 0 10px 0 12px; border: 0; border-radius: 999px; background: var(--primary-dark, #076880); color: #fff;
+    font: 700 12.5px var(--font-ui); white-space: nowrap; cursor: pointer; box-shadow: 0 3px 10px rgba(26,35,50,.25); display: inline-flex; align-items: center; gap: 6px; }
+  #view-home .mh-chip b { font-size: 11px; opacity: .8; }
+  #view-home .mh-chip .ico-cal { width: 12px; height: 12px; }
+  #view-home .mh-chip-all { background: var(--white); color: var(--ink-1); padding: 0 12px; }
+}
