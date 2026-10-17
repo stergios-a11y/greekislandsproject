@@ -347,7 +347,7 @@ function addThemeAwareTiles(map, options = {}) {
    Leaflet control would switch; firing baselayerchange keeps the dark-mode
    labels logic in sync. */
 function _syncLayerSeg(isSat) {
-  document.querySelectorAll('#mf-layer-seg .mf-seg').forEach(b => {
+  document.querySelectorAll('#mf-layer-seg .mf-seg, #mh-layer .mf-seg').forEach(b => {
     const on = (b.dataset.layer === 'sat') === isSat;
     b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false');
   });
@@ -1683,7 +1683,7 @@ function setupMap() {
   // instead of the padded maxBounds — no half-screen of Italy/Turkey/sea.
   mapInstance.fitBounds(L.latLngBounds(L.latLng(34.6, 19.4), L.latLng(41.1, 28.4)),
     _small ? { padding: [18, 18] } : { paddingTopLeft: [0, 64], paddingBottomRight: [0, 24] });   // keep Thasos out from under the filter bar
-  addThemeAwareTiles(mapInstance, { maxZoom: 14, hideLayerControl: !_small });   // desktop: Map/Satellite lives in the filter bar
+  addThemeAwareTiles(mapInstance, { maxZoom: 14, hideLayerControl: true });   // desktop: Map/Satellite in the filter bar; phones: the 🗺|🛰 pill (setupMobileHome)
   L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(mapInstance);
 
   // Google-embed wheel behavior: plain scroll scrolls the page (wheel zoom is
@@ -7024,6 +7024,20 @@ function setupMobileHome() {
   const srcCount = document.getElementById('vibe-filter-count'), dstCount = bar.querySelector('.mh-count');
   const syncCount = () => { if (!srcCount) return; const n = srcCount.textContent.trim(); dstCount.textContent = n; dstCount.hidden = !n || srcCount.style.display === 'none'; };
   if (srcCount) { new MutationObserver(syncCount).observe(srcCount, { childList: true, characterData: true, subtree: true, attributes: true }); syncCount(); }
+
+  // ---- map style: 🗺 | 🛰 (replaces Leaflet's layers box, which read as a blank white square)
+  const lay = document.createElement('div');
+  lay.className = 'mh-layer'; lay.id = 'mh-layer';
+  lay.setAttribute('role', 'group'); lay.setAttribute('aria-label', L('Map style', 'Στυλ χάρτη'));
+  lay.innerHTML = `<button type="button" class="mf-seg is-on" data-layer="map" aria-pressed="true" aria-label="${L('Map', 'Χάρτης')}" title="${L('Map', 'Χάρτης')}">🗺</button>`
+    + `<button type="button" class="mf-seg" data-layer="sat" aria-pressed="false" aria-label="${L('Satellite', 'Δορυφόρος')}" title="${L('Satellite', 'Δορυφόρος')}">🛰</button>`;
+  map.appendChild(lay);
+  if (window.L && window.L.DomEvent) { window.L.DomEvent.disableClickPropagation(lay); window.L.DomEvent.disableScrollPropagation(lay); }
+  lay.addEventListener('click', e => { const b = e.target.closest('.mf-seg'); if (b) toggleHomeBaseLayer(b.dataset.layer); });
+  setTimeout(() => {   // reflect the layer the map actually started on
+    const en = (typeof _activeMapEntries !== 'undefined') ? _activeMapEntries.find(x => x.map === mapInstance) : null;
+    if (en) _syncLayerSeg(mapInstance.hasLayer(en.satLayer));
+  }, 0);
 
   // ---- first visit: say what this is (a bare map of numbered circles explained nothing)
   let seen = true;

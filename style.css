@@ -7522,3 +7522,11 @@ html.dark .mk-dot-i { background: #8C98A5; border-color: rgba(0,0,0,.4); }
   #view-match.mq-res > #cta-affiliate .aff-note { flex-basis: 100%; margin: 0; font-size: 10.5px; }
   #view-match.mq-res > #cta-affiliate .aff-note a { color: rgba(255,255,255,.65); }
 }
+
+/* Phone home: map style pill, bottom-right just above the Filters row. */
+@media (max-width: 840px) {
+  #view-home .mh-layer { position: absolute; right: 10px; bottom: calc(72px + env(safe-area-inset-bottom)); z-index: 1001; display: flex; gap: 2px; padding: 3px;
+    border-radius: 999px; background: var(--white); box-shadow: 0 4px 14px rgba(26,35,50,.25); }
+  #view-home .mh-layer .mf-seg { width: 38px; height: 34px; padding: 0; font-size: 17px; line-height: 1; display: flex; align-items: center; justify-content: center; }
+  #view-home .mh-layer .mf-seg:not(.is-on) { opacity: .6; }
+}
