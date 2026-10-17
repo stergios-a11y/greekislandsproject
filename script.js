@@ -6089,7 +6089,7 @@ function renderQuizStep() {
   setQuizBackdrop(q.photo);
   // Phones: the whole step is one screen — Back/Skip ride on the progress row,
   // the front-runners dock at the bottom (CSS, #view-match.mq-live).
-  { const vm = document.getElementById('view-match'); if (vm) vm.classList.add('mq-live'); }
+  { const vm = document.getElementById('view-match'); if (vm) { vm.classList.add('mq-live'); vm.classList.remove('mq-res'); } }
   if (window.matchMedia('(max-width: 840px)').matches) {
     const nb = container.querySelector('.quiz-nav-back'), pr = container.querySelector('.quiz-progress');
     if (nb && pr) pr.appendChild(nb);
@@ -6453,17 +6453,22 @@ function computeQuizResults() {
   const ctx = scoreIslandsFromAnswers(quizAnswers);
   try { track('quiz_complete', { top_island: (ctx.scored[0] || {}).key || '', answers: Object.keys(quizAnswers).length }); } catch (_) {}
   const { A, priority, budgetMod, scenePref, seasonIdx, seasonMonths, transportPref, tripDays } = ctx;
-  const scored = ctx.scored.slice(0, 6);
+  const scored = ctx.scored.slice(0, 5);   // five: fits one phone screen, and a shortlist you can act on
   const container = document.getElementById('quiz-container');
   const results = document.getElementById('quiz-results');
   if (!container || !results) return;
   container.style.display = 'none'; results.style.display = '';
   const liveBox = document.getElementById('quiz-live');
   if (liveBox) liveBox.hidden = true;
-  { const vm = document.getElementById('view-match'); if (vm) vm.classList.remove('mq-live'); }
+  const vmR = document.getElementById('view-match');
+  if (vmR) { vmR.classList.remove('mq-live'); vmR.classList.add('mq-res'); }
   const mv = document.getElementById('quiz-movement'); if (mv) { mv.textContent = ''; mv.classList.remove('on'); }
   const ctaAff = document.getElementById('cta-affiliate');
-  if (ctaAff) ctaAff.style.display = '';
+  if (ctaAff) {
+    ctaAff.style.display = '';
+    // Phones: dock the ferry/car buttons under the results (same screen) instead of below the fold.
+    if (vmR && window.matchMedia('(max-width: 840px)').matches && ctaAff.parentNode !== vmR) vmR.appendChild(ctaAff);
+  }
   const dimLabels = (CURRENT_LANG === 'el')
     ? ['Παραλία', 'Πολιτισμός', 'Νυχτερινή ζωή', 'Ηρεμία και φύση']
     : ['Beach', 'Culture', 'Nightlife', 'Peace & nature'];

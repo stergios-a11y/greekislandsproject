@@ -7476,3 +7476,49 @@ html.dark .leaflet-container .leaflet-control-attribution { background: rgba(10,
 .custom-marker.mk-dot { background: none; border: 0; }
 .mk-dot-i { display: block; width: 8px; height: 8px; margin: .5px; border-radius: 50%; background: #7A8692; border: 1px solid rgba(255,255,255,.85); box-sizing: border-box; }
 html.dark .mk-dot-i { background: #8C98A5; border-color: rgba(0,0,0,.4); }
+
+/* QUIZ RESULTS + DOCK — dark glass (Oct 2026): the white dock and white result cards were the
+   brightest things on a dark photo page. */
+#view-match .result-island-card { background: rgba(8,30,40,.78); border: 1.5px solid rgba(255,255,255,.16); box-shadow: none; color: #fff; }
+#view-match .result-island-card:hover { background: rgba(8,30,40,.9); border-color: rgba(255,255,255,.4); box-shadow: none; }
+#view-match .result-name { color: #fff; }
+#view-match .result-why { color: rgba(255,255,255,.72); }
+#view-match .result-thumb { background: rgba(255,255,255,.12); }
+#view-match .result-thumb.result-nophoto::after { color: #fff; }
+#view-match .result-rank, html.dark #view-match .result-rank { background: #fff; color: #0A5F7A; }
+#view-match .result-island-card:first-of-type .result-rank { background: var(--warm, #E8522A); color: #fff; }
+@media (max-width: 840px) {
+  #view-match.mq-live .quiz-live, html.dark #view-match.mq-live .quiz-live { background: rgba(8,30,40,.9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255,255,255,.14); color: #fff; }
+  #view-match.mq-live .ql-head { color: #fff; }
+  #view-match.mq-live .ql-rank { background: #fff; color: #0A5F7A; }
+  #view-match.mq-live .ql-top .ql-rank { background: var(--warm, #E8522A); color: #fff; }
+
+  /* results: one screen, five cards, actions docked */
+  body:has(#view-match.mq-res) #site-footer { display: none; }
+  #view-match.mq-res { display: flex; flex-direction: column; height: calc(100vh - var(--header-height)); height: calc(100dvh - var(--header-height));
+    min-height: 0; padding: 14px 14px 0; }
+  #view-match.mq-res .mq-credit, #view-match.mq-res .quiz-movement { display: none; }
+  #view-match.mq-res .mq-bg::after { background: linear-gradient(to bottom, rgba(6,25,33,.72), rgba(6,25,33,.86)); }
+  #view-match.mq-res .match-grid { flex: 1; min-height: 0; display: flex; flex-direction: column; align-items: stretch; margin: 0; }
+  #view-match.mq-res .match-col { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding-bottom: 8px; }
+  #view-match.mq-res .quiz-results-header { margin: 0 0 8px; padding: 0; }
+  #view-match.mq-res .quiz-results-title { margin: 0; }
+  #view-match.mq-res .quiz-results-title { font-size: 24px; line-height: 1.15; }
+  #view-match.mq-res .quiz-results-sub { display: none; }   /* the title says it; room for five cards */
+  #view-match.mq-res .result-island-card { gap: 10px; padding: 7px 10px 7px 7px; margin-bottom: 7px; border-radius: 14px; }
+  #view-match.mq-res .result-thumb { width: 52px; height: 52px; border-radius: 10px; }
+  #view-match.mq-res .result-thumb.result-nophoto::after { font-size: 20px; }
+  #view-match.mq-res .result-rank { top: 3px; left: 3px; width: 18px; height: 18px; font-size: 10px; }
+  #view-match.mq-res .result-name { font-size: 15px; font-weight: 800; }
+  #view-match.mq-res .result-why { font-size: 11.5px; line-height: 1.35; margin-top: 2px;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  #view-match.mq-res .quiz-retake-row { margin: 2px 0 0; }
+  #view-match.mq-res .quiz-retake-btn { padding: 7px 16px; font-size: 13px; }
+  #view-match.mq-res > #cta-affiliate { position: relative; z-index: 1; flex: none; margin: 0 -14px; padding: 10px 12px calc(8px + env(safe-area-inset-bottom));
+    gap: 8px; flex-wrap: wrap; justify-content: center; background: rgba(8,30,40,.9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255,255,255,.14); border-radius: 18px 18px 0 0; }
+  #view-match.mq-res > #cta-affiliate .ferry-btn, #view-match.mq-res > #cta-affiliate .car-btn { flex: 1 1 0; text-align: center; padding: 10px 8px; font-size: 13px; margin: 0; }
+  #view-match.mq-res > #cta-affiliate .aff-note { flex-basis: 100%; margin: 0; font-size: 10.5px; }
+  #view-match.mq-res > #cta-affiliate .aff-note a { color: rgba(255,255,255,.65); }
+}
