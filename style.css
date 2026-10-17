@@ -7549,3 +7549,20 @@ html.dark .sat-core.sat-core-dot { background: #8C98A5 !important; }
   #view-home .mh-chip .ico-cal { width: 12px; height: 12px; }
   #view-home .mh-chip-all { background: var(--white); color: var(--ink-1); padding: 0 12px; }
 }
+
+/* PHONE HOME — tidy (Oct 2026): one edge (12px), two heights (48 bars, 36 pills), one shadow. */
+@media (max-width: 840px) {
+  #view-home { --mh-edge: 12px; --mh-sh: 0 4px 16px rgba(26,35,50,.22); }
+  #view-home .mh-top { top: var(--mh-edge); left: var(--mh-edge); right: var(--mh-edge); }
+  #view-home .mh-sbox { height: 48px; box-shadow: var(--mh-sh); }
+  #view-home .mh-sbox .mh-quiz { height: 40px; margin: 4px; }
+  #view-home .mh-picks { margin-top: 8px; }
+  #view-home .mh-best { height: 36px; box-shadow: var(--mh-sh); }
+  #view-home .mh-bar { left: var(--mh-edge); right: var(--mh-edge); transform: none; max-width: none; bottom: calc(16px + env(safe-area-inset-bottom)); gap: 8px; }
+  #view-home .mh-bar .mh-filter { flex: 1 1 auto; justify-content: flex-start; padding: 0 18px; box-shadow: var(--mh-sh); }
+  #view-home .mh-bar .mh-layer { box-shadow: var(--mh-sh); }
+  #view-home .mh-chips { bottom: calc(72px + env(safe-area-inset-bottom)); padding: 0 var(--mh-edge) 4px; }
+  #view-home .mh-chip:first-child, #view-home .mh-chip:last-child { margin-left: 0; margin-right: 0; }
+  #view-home .mh-chip { height: 36px; box-shadow: var(--mh-sh); }
+  #view-home .mh-welcome { left: var(--mh-edge); right: var(--mh-edge); bottom: calc(16px + env(safe-area-inset-bottom)); }
+}
