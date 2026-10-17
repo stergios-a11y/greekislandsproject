@@ -7417,3 +7417,57 @@ body.mh-panel-open { overflow: hidden; }
   background: rgba(255,255,255,.55); color: rgba(20,30,40,.65); border-radius: 4px 0 0 0; }
 .leaflet-container .leaflet-control-attribution a { color: inherit; text-decoration: none; }
 html.dark .leaflet-container .leaflet-control-attribution { background: rgba(10,14,20,.5); color: rgba(255,255,255,.6); }
+
+/* MOBILE QUIZ — one screen (Oct 2026): question + 2x2 answers scroll only if the phone is tiny;
+   the front-runners are a docked row of 5 round photos that reshuffle after each answer. */
+@media (max-width: 840px) {
+  body:has(#view-match.mq-live) #site-footer { display: none; }
+  #view-match.mq-live { display: flex; flex-direction: column; height: calc(100vh - var(--header-height)); height: calc(100dvh - var(--header-height));
+    min-height: 0; padding: 12px 14px 0; }
+  #view-match.mq-live .mq-bg::after { background: linear-gradient(to bottom, rgba(6,25,33,.72), rgba(6,25,33,.86)); }
+  #view-match.mq-live .mq-credit { display: none; }
+  #view-match.mq-live .match-grid { flex: 1; min-height: 0; display: flex; flex-direction: column; align-items: stretch; gap: 10px; margin: 0; }
+  #view-match.mq-live .match-col { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding-bottom: 6px; }
+  #view-match.mq-live .quiz-progress { gap: 10px; margin-bottom: 8px; }
+  #view-match.mq-live .quiz-step-label { font-size: 10.5px; letter-spacing: .08em; white-space: nowrap; }
+  #view-match.mq-live .quiz-bar { flex: 1 1 auto; }
+  #view-match.mq-live .quiz-progress .quiz-nav-back { flex: none; margin: 0; gap: 12px; }
+  #view-match.mq-live .quiz-back-btn, #view-match.mq-live .quiz-skip-btn { font-size: 12px; text-decoration: none; white-space: nowrap; }
+  #view-match.mq-live .quiz-question { font-size: 22px; margin: 0 0 4px; }
+  #view-match.mq-live .quiz-why { font-size: 12.5px; line-height: 1.4; margin: 0 0 12px;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  #view-match.mq-live .quiz-options { grid-template-columns: 1fr 1fr; gap: 8px; }
+  /* Steadier tiles: a more solid glass so every photo reads the same; the pick gets a clear warm tint. */
+  #view-match.mq-live .quiz-option { flex-direction: column; align-items: flex-start; gap: 6px; min-height: 96px; padding: 10px; border-radius: 14px;
+    background: rgba(8,30,40,.78); border: 1.5px solid rgba(255,255,255,.16); box-shadow: none; }
+  #view-match.mq-live .quiz-option.selected { background: rgba(232,82,42,.3); border-color: var(--warm, #E8522A); }
+  #view-match.mq-live .quiz-opt-ic { width: 34px; height: 34px; font-size: 19px; border-radius: 10px; }
+  #view-match.mq-live .quiz-opt-tx b { font-size: 14px; }
+  #view-match.mq-live .quiz-opt-tx small { font-size: 11px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  #view-match.mq-live .quiz-movement { display: none; }
+  /* the dock */
+  #view-match.mq-live .quiz-live { flex: none; position: static; width: auto; max-width: none; align-self: stretch; margin: 0 -14px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    border-radius: 18px 18px 0 0; box-shadow: 0 -8px 24px rgba(0,0,0,.3); }
+  #view-match.mq-live .ql-head { font-size: 13px; margin: 0 0 8px; }
+  #view-match.mq-live .ql-head small, #view-match.mq-live .ql-foot { display: none; }
+  #view-match.mq-live .ql-list { display: flex; gap: 6px; }
+  #view-match.mq-live .ql-row { flex: 1 1 0; min-width: 0; padding: 0; }
+  #view-match.mq-live .ql-card, #view-match.mq-live .ql-top .ql-card { height: auto; display: flex; flex-direction: column; align-items: center; gap: 4px;
+    overflow: visible; background: none; box-shadow: none; color: inherit; text-decoration: none; }
+  #view-match.mq-live .ql-card::after { display: none; }
+  #view-match.mq-live .ql-row:hover .ql-card { transform: none; }
+  #view-match.mq-live .ql-thumb { position: static; width: 46px; height: 46px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.3); }
+  #view-match.mq-live .ql-nophoto { display: flex; align-items: center; justify-content: center; font-size: 18px; color: #fff;
+    background: linear-gradient(135deg, #8ecbd8, #3f8fa3); }
+  #view-match.mq-live .ql-name { position: static; max-width: 100%; color: inherit; text-shadow: none; font-size: 10.5px; font-weight: 700; text-align: center;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #view-match.mq-live .ql-name small { display: none; }
+  #view-match.mq-live .ql-rank { left: calc(50% - 30px); top: -3px; width: 18px; height: 18px; font-size: 10px; }
+  #view-match.mq-live .ql-move { right: calc(50% - 34px); top: -5px; font-size: 9px; padding: 1px 4px; }
+}
+/* Touch: no sticky hover lift/colour after a tap. */
+@media (hover: none) {
+  #view-match .quiz-option:hover { transform: none; }
+  #view-match.mq-live .quiz-option:hover { background: rgba(8,30,40,.78); border-color: rgba(255,255,255,.16); }
+  #view-match.mq-live .quiz-option.selected:hover { background: rgba(232,82,42,.3); border-color: var(--warm, #E8522A); }
+}

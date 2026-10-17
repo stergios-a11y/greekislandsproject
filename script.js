@@ -6056,6 +6056,13 @@ function renderQuizStep() {
   const n = QUIZ_QUESTIONS.length, stepLabel = t('quiz.step').replace('{n}', quizStep + 1).replace('{total}', n);
   container.innerHTML = `<div class="quiz-progress"><span class="quiz-step-label">${stepLabel}</span><span class="quiz-bar"><i style="width:${Math.round((quizStep + 1) / n * 100)}%"></i></span>${QUIZ_QUESTIONS.map((_, i) => `<div class="quiz-dot ${i < quizStep ? 'done' : i === quizStep ? 'current' : ''}"></div>`).join('')}</div><div class="quiz-card quiz-card-entering quiz-card-from-${quizDirection > 0 ? 'right' : 'left'}"><div class="quiz-question">${questionText}</div>${why ? `<p class="quiz-why">${why}</p>` : ''}${optionsHtml}<div class="quiz-nav-back">${quizStep > 0 ? `<button class="quiz-back-btn">← ${backLabel}</button>` : ''}<button class="quiz-skip-btn">${t('quiz.skip')} →</button></div></div>`;
   setQuizBackdrop(q.photo);
+  // Phones: the whole step is one screen — Back/Skip ride on the progress row,
+  // the front-runners dock at the bottom (CSS, #view-match.mq-live).
+  { const vm = document.getElementById('view-match'); if (vm) vm.classList.add('mq-live'); }
+  if (window.matchMedia('(max-width: 840px)').matches) {
+    const nb = container.querySelector('.quiz-nav-back'), pr = container.querySelector('.quiz-progress');
+    if (nb && pr) pr.appendChild(nb);
+  }
 
   // Trigger animation: remove entering class after one frame so transition fires
   requestAnimationFrame(() => {
@@ -6324,7 +6331,7 @@ function renderQuizLiveBoard() {
   // FLIP step 1 — where is every row sitting right now?
   const firstTop = {};
   box.querySelectorAll('.ql-row').forEach(function (r) {
-    firstTop[r.dataset.key] = r.getBoundingClientRect().top;
+    const b = r.getBoundingClientRect(); firstTop[r.dataset.key] = [b.left, b.top];   // 2D: the phone dock is a row
   });
 
   const rankNow = {};
@@ -6363,9 +6370,9 @@ function renderQuizLiveBoard() {
   box.querySelectorAll('.ql-row').forEach(function (r) {
     const was = firstTop[r.dataset.key];
     if (was === undefined) { r.classList.add('ql-enter'); return; }
-    const delta = was - r.getBoundingClientRect().top;
-    if (!delta) return;
-    r.style.transform = 'translateY(' + delta + 'px)';
+    const b = r.getBoundingClientRect(), dx = was[0] - b.left, dy = was[1] - b.top;
+    if (!dx && !dy) return;
+    r.style.transform = 'translate(' + dx + 'px,' + dy + 'px)';
     r.style.transition = 'none';
   });
   if (box.querySelector('.ql-row')) box.offsetHeight;   // force a reflow
@@ -6422,6 +6429,7 @@ function computeQuizResults() {
   container.style.display = 'none'; results.style.display = '';
   const liveBox = document.getElementById('quiz-live');
   if (liveBox) liveBox.hidden = true;
+  { const vm = document.getElementById('view-match'); if (vm) vm.classList.remove('mq-live'); }
   const mv = document.getElementById('quiz-movement'); if (mv) { mv.textContent = ''; mv.classList.remove('on'); }
   const ctaAff = document.getElementById('cta-affiliate');
   if (ctaAff) ctaAff.style.display = '';
