@@ -6985,7 +6985,8 @@ function setupMobileHome() {
   if (window.L && window.L.DomEvent) [top, bar].forEach(el => { window.L.DomEvent.disableClickPropagation(el); window.L.DomEvent.disableScrollPropagation(el); });
   // ---- Filter sheet: "Rank islands by" on top (it used to be an unexplained "Overall ▾" in the bar)
   const vp = document.getElementById('vibe-panel');
-  const rankText = () => { const o = vs && vs.selectedOptions[0]; return o ? o.textContent.replace(/^[^\p{L}\p{N}]+/u, '').trim() : ''; };
+  // Overall reads plain; any other ranking keeps its emoji ("Ranked: 🏖️ Beaches") so it's visible at a glance.
+  const rankText = () => { const o = vs && vs.selectedOptions[0]; if (!o) return ''; const tx = o.textContent.trim(); return o.value === 'overall' ? tx.replace(/^[^\p{L}\p{N}]+/u, '').trim() : tx; };
   if (vp && vs && !vp.querySelector('.mh-vp-head')) {
     const head = document.createElement('div');
     head.className = 'mh-vp-head';
@@ -7031,7 +7032,7 @@ function setupMobileHome() {
   lay.setAttribute('role', 'group'); lay.setAttribute('aria-label', L('Map style', 'Στυλ χάρτη'));
   lay.innerHTML = `<button type="button" class="mf-seg is-on" data-layer="map" aria-pressed="true" aria-label="${L('Map', 'Χάρτης')}" title="${L('Map', 'Χάρτης')}">🗺</button>`
     + `<button type="button" class="mf-seg" data-layer="sat" aria-pressed="false" aria-label="${L('Satellite', 'Δορυφόρος')}" title="${L('Satellite', 'Δορυφόρος')}">🛰</button>`;
-  map.appendChild(lay);
+  bar.appendChild(lay);   // same row as Filters
   if (window.L && window.L.DomEvent) { window.L.DomEvent.disableClickPropagation(lay); window.L.DomEvent.disableScrollPropagation(lay); }
   lay.addEventListener('click', e => { const b = e.target.closest('.mf-seg'); if (b) toggleHomeBaseLayer(b.dataset.layer); });
   setTimeout(() => {   // reflect the layer the map actually started on
