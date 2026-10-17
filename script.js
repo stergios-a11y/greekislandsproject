@@ -1,6 +1,8 @@
 'use strict';
 
 const VERSION = 'v4.0';
+// Map credits without Leaflet's own "Leaflet" prefix (its licence doesn't need it on the map).
+if (typeof L !== 'undefined' && L.Control && L.Control.Attribution) L.Control.Attribution.mergeOptions({ prefix: false });
 const BUILD_DATE = '2026-10-17';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
@@ -192,7 +194,7 @@ const LIGHT_TILE_ATTRIBUTION = CARTO_ATTRIBUTION;
 // Dark: CARTO dark_all when a key is present, else Esri World Dark Gray Canvas.
 const ESRI_DARK_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}';
 const DARK_LABELS_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}';
-const ESRI_DARK_ATTRIBUTION = 'Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors';
+const ESRI_DARK_ATTRIBUTION = '&copy; Esri, HERE, Garmin, <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>';
 const DARK_TILE_URL = CARTO_KEY
   ? withKey('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png')
   : ESRI_DARK_URL;
@@ -260,7 +262,7 @@ function cartoCanary() {
 
 // Esri World Imagery — satellite, no API key required, free for non-commercial use
 const SATELLITE_TILE_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
-const SATELLITE_ATTRIBUTION = 'Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community';
+const SATELLITE_ATTRIBUTION = '© Esri, Maxar, Earthstar Geographics, GIS User Community';
 // Esri Reference labels overlay — adds place names + boundaries on top of satellite imagery (= "Hybrid")
 const SATELLITE_LABELS_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}';
 
@@ -2543,7 +2545,7 @@ async function renderIslandPage(key) {
     if (miniMapInstance) { miniMapInstance.remove(); miniMapInstance = null; }
     miniMapEl.style.height = '220px';
     setTimeout(() => {
-      miniMapInstance = L.map(miniMapEl, { zoomControl: false, attributionControl: false }).setView([island.lat, island.lng], 9);
+      miniMapInstance = L.map(miniMapEl, { zoomControl: false, attributionControl: true }).setView([island.lat, island.lng], 9);
       addThemeAwareTiles(miniMapInstance);
       L.marker([island.lat, island.lng]).addTo(miniMapInstance).bindPopup(islandName(island.key)).openPopup();
     }, 50);
