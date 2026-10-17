@@ -7297,13 +7297,20 @@ body.mh-panel-open { overflow: hidden; }
   body.mh-on #view-home > .bp-hero, body.mh-on #view-home > .bp-home-wrap, body.mh-on #view-home > .bp-season,
   body.mh-on #view-home > .whats-on-strip, body.mh-on #view-home > .bp-map-jump, body.mh-on #view-home > .home-content,
   body.mh-on #home-controls, body.mh-on .map-top-btn { display: none !important; }
-  body.mh-on #view-home #main-map { position: absolute; inset: 0; height: auto !important; min-height: 0; }
+  /* Own layer: the map's floating controls (z 1001) must stay under the header's menus. */
+  body.mh-on #view-home #main-map { position: absolute; inset: 0; height: auto !important; min-height: 0; isolation: isolate; z-index: 0; }
   body.mh-on #main-map .leaflet-bottom { bottom: calc(62px + env(safe-area-inset-bottom)); }
 
   #view-home .mh-top { position: absolute; top: 10px; left: 10px; right: 10px; z-index: 1001; pointer-events: none; }
   #view-home .mh-top > * { pointer-events: auto; }
-  #view-home .mh-search { display: flex; align-items: center; gap: 10px; width: 100%; height: 46px; padding: 0 16px; border: 0; border-radius: 999px;
-    background: var(--white); color: var(--ink-3); font: 600 15px var(--font-body); text-align: left; cursor: pointer; box-shadow: 0 4px 16px rgba(26,35,50,.2); }
+  #view-home .mh-sbox { display: flex; align-items: center; height: 46px; border-radius: 999px; background: var(--white); box-shadow: 0 4px 16px rgba(26,35,50,.2); }
+  #view-home .mh-search { flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px; height: 100%; padding: 0 10px 0 16px; border: 0; border-radius: 999px 0 0 999px;
+    background: transparent; color: var(--ink-3); font: 600 15px var(--font-body); text-align: left; cursor: pointer; }
+  #view-home .mh-search-t { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+  #view-home .mh-st-s { display: none; }
+  #view-home .mh-sbox .mh-quiz { flex: none; height: 38px; margin: 4px; padding: 0 14px; border: 0; border-radius: 999px; background: var(--warm); color: #fff;
+    font: 800 13px var(--font-ui); white-space: nowrap; cursor: pointer; }
+  @media (max-width: 360px) { #view-home .mh-st-l { display: none; } #view-home .mh-st-s { display: inline; } #view-home .mh-search { font-size: 14px; } }
   /* One "Best in <month>" button; the picks open in a sheet. */
   #view-home .mh-picks { display: flex; margin-top: 8px; }
   #view-home .mh-best { display: inline-flex; align-items: center; gap: 6px; max-width: 100%; height: 36px; padding: 0 8px 0 12px; border: 0;
@@ -7316,18 +7323,16 @@ body.mh-panel-open { overflow: hidden; }
   #view-home .mh-best-th img:first-child { margin-left: 0; }
   #view-home .mh-best-go { font-size: 18px; line-height: 1; color: var(--ink-3); }
 
-  #view-home .mh-bar { position: absolute; left: 10px; right: 10px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 1001;
-    display: flex; align-items: center; gap: 6px; padding: 5px; border-radius: 999px; background: var(--white); box-shadow: 0 6px 22px rgba(26,35,50,.25); }
+  /* Just the Filters pill now, centred. */
+  #view-home .mh-bar { position: absolute; left: 50%; right: auto; transform: translateX(-50%); max-width: calc(100% - 20px); bottom: calc(14px + env(safe-area-inset-bottom)); z-index: 1001;
+    display: flex; align-items: center; padding: 0; border-radius: 999px; background: var(--white); box-shadow: 0 6px 22px rgba(26,35,50,.25); }
   #view-home .mh-bar > * { height: 38px; border: 0; border-radius: 999px; cursor: pointer; }
-  #view-home .mh-quiz { flex: none; padding: 0 14px; background: var(--warm); color: #fff; font: 800 13px var(--font-ui); white-space: nowrap; }
-  #view-home .mh-filter { flex: 1; min-width: 0; position: relative; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 0 12px;
-    background: var(--surface-2); color: var(--ink-1); text-align: left; }
+  #view-home .mh-bar .mh-filter { flex: none; height: 48px; min-width: 0; position: relative; display: flex; align-items: center; justify-content: center; gap: 9px; padding: 0 22px;
+    background: transparent; color: var(--ink-1); text-align: left; }
   #view-home .mh-f-i { font-size: 16px; }
   #view-home .mh-f-t { display: flex; flex-direction: column; min-width: 0; line-height: 1.1; }
   #view-home .mh-f-t b { font: 800 13px var(--font-ui); }
   #view-home .mh-f-t small { font: 600 11px var(--font-ui); color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  #view-home .mh-cmp { flex: none; width: 38px; position: relative; font-size: 16px; }
-  #view-home .mh-cmp { background: var(--primary); color: #fff; }
   #view-home .mh-count { position: absolute; top: -4px; right: -4px; min-width: 16px; height: 16px; padding: 0 4px; border-radius: 8px;
     background: var(--warm); color: #fff; font: 800 10px/16px var(--font-ui); }
   /* Filter sheet: rises from the bottom over the bar, ranking first. */
@@ -7343,12 +7348,29 @@ body.mh-panel-open { overflow: hidden; }
     margin: 10px -14px calc(-14px - env(safe-area-inset-bottom)); padding: 10px 14px calc(12px + env(safe-area-inset-bottom)); background: inherit; border-top: 1px solid var(--border); }
   #view-home .vibe-panel .vibe-match-count { display: none; }   /* the button says it */
   @media (max-width: 360px) {
-    #view-home .mh-quiz { padding: 0 10px; font-size: 12px; }
-    #view-home .mh-filter { padding: 0 8px; } #view-home .mh-f-i { display: none; }
   }
   #view-home .vibe-panel .mh-done { margin-left: auto; height: 42px; padding: 0 20px; border: 0; border-radius: 12px; background: var(--primary); color: #fff;
     font: 800 14px var(--font-ui); cursor: pointer; }
 }
+
+/* First-visit welcome card on the phone home. */
+#view-home .mh-welcome { position: absolute; left: 10px; right: 10px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 1003;
+  padding: 16px 16px 14px; border-radius: 18px; background: var(--white); color: var(--ink-1); box-shadow: 0 12px 34px rgba(10,20,30,.35);
+  animation: mhUp .25s ease-out; transition: opacity .2s, transform .2s; }
+#view-home .mh-welcome.is-out { opacity: 0; transform: translateY(20px); }
+#view-home .mh-welcome h2 { margin: 0 34px 6px 0; font: 800 18px/1.2 var(--font-ui); }
+#view-home .mh-welcome p { margin: 0 0 12px; font: 500 13.5px/1.45 var(--font-body); color: var(--ink-2, var(--ink-1)); }
+#view-home .mh-w-x { position: absolute; top: 8px; right: 8px; width: 36px; height: 36px; border: 0; border-radius: 50%; background: transparent; color: var(--ink-3); font-size: 17px; cursor: pointer; }
+#view-home .mh-w-leg { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; font: 600 12.5px var(--font-ui); color: var(--ink-3); }
+#view-home .mh-w-leg b { flex: none; width: 30px; height: 30px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.25);
+  color: #fff; font: 800 11px/26px var(--font-ui); text-align: center; }
+#view-home .mh-w-sw { display: flex; gap: 3px; margin-left: auto; }
+#view-home .mh-w-sw i { width: 12px; height: 12px; border-radius: 50%; }
+#view-home .mh-w-btns { display: flex; gap: 8px; }
+#view-home .mh-w-btns button { flex: 1; min-height: 46px; padding: 6px 8px; border: 0; border-radius: 12px; font: 800 14px/1.2 var(--font-ui); cursor: pointer; }
+#view-home .mh-w-quiz { background: var(--warm); color: #fff; }
+#view-home .mh-w-go { background: var(--surface-2); color: var(--ink-1); box-shadow: inset 0 0 0 1.5px var(--border-2); }
+@media (prefers-reduced-motion: reduce) { #view-home .mh-welcome { animation: none; transition: none; } }
 
 /* Sheets on the phone home: shared head + the "Best in <month>" picks. */
 .mh-sh { display: flex; align-items: center; gap: 10px; }

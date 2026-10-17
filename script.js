@@ -6913,8 +6913,12 @@ function setupMobileHome() {
   const month = (t('months.short') || '').split(',')[new Date().getMonth()] || '';
   const top = document.createElement('div');
   top.className = 'mh-top'; top.id = 'mh-top';
-  top.innerHTML = `<button type="button" class="mh-search" aria-haspopup="dialog" aria-controls="mh-panel">`
-    + `<span aria-hidden="true">🔍</span><span class="mh-search-t">${L('Find your Greek island…', 'Βρες το νησί σου…')}</span></button>`
+  const _nIsl = Object.keys(ISLANDS_DATA).length;
+  // Search and quiz answer the same question ("which island?"): one bar, two ways in.
+  top.innerHTML = `<div class="mh-sbox"><button type="button" class="mh-search" aria-haspopup="dialog" aria-controls="mh-panel">`
+    + `<span aria-hidden="true">🔍</span><span class="mh-search-t"><span class="mh-st-l">${L(`Search ${_nIsl} rated islands…`, `Ψάξε σε ${_nIsl} νησιά…`)}</span>`
+    + `<span class="mh-st-s">${L(`Search ${_nIsl} islands…`, `Ψάξε ${_nIsl} νησιά…`)}</span></span></button>`
+    + `<button type="button" class="mh-quiz" aria-label="${L('60-second island quiz', 'Quiz 60 δευτερολέπτων')}">🎯 Quiz</button></div>`
     + `<div class="mh-picks"><button type="button" class="mh-best" aria-haspopup="dialog" aria-controls="mh-best" hidden>${_MH_CAL}`
     + `<span class="mh-best-t">${escapeHtml(L('Best in ' + month, 'Κορυφαία ' + month))}</span><span class="mh-best-n"></span>`
     + `<span class="mh-best-th" aria-hidden="true"></span><span class="mh-best-go" aria-hidden="true">›</span></button></div>`;
@@ -6926,10 +6930,8 @@ function setupMobileHome() {
   const bar = document.createElement('div');
   bar.className = 'mh-bar'; bar.id = 'mh-bar';
   bar.setAttribute('role', 'toolbar'); bar.setAttribute('aria-label', L('Map tools', 'Εργαλεία χάρτη'));
-  bar.innerHTML = `<button type="button" class="mh-quiz">🎯 ${L('60-sec quiz', 'Quiz 60″')}</button>`
-    + `<button type="button" class="mh-filter" aria-haspopup="dialog" aria-controls="vibe-panel"><span class="mh-f-i" aria-hidden="true">⚙</span>`
-    + `<span class="mh-f-t"><b>${L('Filters', 'Φίλτρα')}</b><small class="mh-f-r"></small></span><span class="mh-count" hidden></span></button>`
-    + `<button type="button" class="mh-cmp" aria-label="${L('Compare two islands', 'Σύγκρινε δύο νησιά')}">⇄</button>`;
+  bar.innerHTML = `<button type="button" class="mh-filter" aria-haspopup="dialog" aria-controls="vibe-panel"><span class="mh-f-i" aria-hidden="true">⚙</span>`
+    + `<span class="mh-f-t"><b>${L('Filters', 'Φίλτρα')}</b><small class="mh-f-r"></small></span><span class="mh-count" hidden></span></button>`;
   map.appendChild(bar);
   // These sit inside the Leaflet map: stop touches/clicks/wheel reaching it, otherwise
   // a swipe on the picks row drags the map instead of scrolling the row.
@@ -6971,12 +6973,44 @@ function setupMobileHome() {
     if (vp) vp.querySelectorAll('.mh-seg button').forEach(b => b.setAttribute('aria-checked', b.dataset.v === vs.value ? 'true' : 'false'));
   };
   if (vs) { vs.addEventListener('change', syncRank); syncRank(); }
-  bar.querySelector('.mh-quiz').addEventListener('click', () => navigateTo('match'));
-  bar.querySelector('.mh-cmp').addEventListener('click', () => navigateTo('compare'));
+  top.querySelector('.mh-quiz').addEventListener('click', () => { try { track('home_quiz_click', { from: 'search_bar' }); } catch (_) {} navigateTo('match'); });
   bar.querySelector('.mh-filter').addEventListener('click', (e) => { e.stopPropagation(); if (typeof toggleVibePanel === 'function') toggleVibePanel(); });
   const srcCount = document.getElementById('vibe-filter-count'), dstCount = bar.querySelector('.mh-count');
   const syncCount = () => { if (!srcCount) return; const n = srcCount.textContent.trim(); dstCount.textContent = n; dstCount.hidden = !n || srcCount.style.display === 'none'; };
   if (srcCount) { new MutationObserver(syncCount).observe(srcCount, { childList: true, characterData: true, subtree: true, attributes: true }); syncCount(); }
+
+  // ---- first visit: say what this is (a bare map of numbered circles explained nothing)
+  let seen = true;
+  try { seen = localStorage.getItem('ab-welcome') === '1'; } catch (_) {}
+  if (!seen) {
+    const sw = [2.8, 3.2, 3.7, 4.2, 4.7].map(v => `<i style="background:${scoreToColor(v)}"></i>`).join('');
+    const card = document.createElement('div');
+    card.className = 'mh-welcome'; card.id = 'mh-welcome';
+    card.setAttribute('role', 'dialog'); card.setAttribute('aria-labelledby', 'mh-welcome-h');
+    card.innerHTML = `<button type="button" class="mh-w-x" aria-label="${L('Close', 'Κλείσιμο')}">✕</button>`
+      + `<h2 id="mh-welcome-h">${L('Every Greek island, rated.', 'Κάθε ελληνικό νησί, βαθμολογημένο.')}</h2>`
+      + `<p>${L('Each circle is an island, scored on beaches, culture, nightlife, cost and how easy it is to reach. Tap one for its full guide.',
+               'Κάθε κύκλος είναι ένα νησί, με βαθμό για παραλίες, πολιτισμό, νυχτερινή ζωή, κόστος και πρόσβαση. Πάτα ένα για τον πλήρη οδηγό.')}</p>`
+      + `<div class="mh-w-leg"><b style="background:${scoreToColor(4.2)}">4.2</b><span>${L('= an island’s score out of 5', '= ο βαθμός του νησιού στα 5')}</span><span class="mh-w-sw" aria-hidden="true">${sw}</span></div>`
+      + `<div class="mh-w-btns"><button type="button" class="mh-w-quiz">🎯 ${L('Find my island', 'Βρες το νησί μου')}</button>`
+      + `<button type="button" class="mh-w-go">${L('Explore the map', 'Εξερεύνησε τον χάρτη')}</button></div>`;
+    map.appendChild(card);
+    if (window.L && window.L.DomEvent) { window.L.DomEvent.disableClickPropagation(card); window.L.DomEvent.disableScrollPropagation(card); }
+    try { track('welcome_shown', {}); } catch (_) {}
+    let gone = false;
+    const bye = (via) => {
+      if (gone) return; gone = true;
+      try { localStorage.setItem('ab-welcome', '1'); } catch (_) {}
+      try { track('welcome_dismiss', { via }); } catch (_) {}
+      card.classList.add('is-out'); setTimeout(() => card.remove(), 200);
+    };
+    card.querySelector('.mh-w-x').addEventListener('click', () => bye('close'));
+    card.querySelector('.mh-w-go').addEventListener('click', () => bye('explore'));
+    card.querySelector('.mh-w-quiz').addEventListener('click', () => { bye('quiz'); navigateTo('match'); });
+    // Using anything else on the screen means they've got it.
+    [top, bar].forEach(el => el.addEventListener('click', () => bye('other'), true));
+    setTimeout(() => { if (typeof mapInstance !== 'undefined' && mapInstance) mapInstance.once('dragstart zoomstart', () => bye('map')); }, 800);
+  }
 
   // ---- island list panel (no keyboard until "Type a name" is tapped)
   const groups = {};
