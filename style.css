@@ -7530,3 +7530,7 @@ html.dark .mk-dot-i { background: #8C98A5; border-color: rgba(0,0,0,.4); }
   #view-home .mh-layer .mf-seg { width: 40px; height: 40px; padding: 0; font-size: 17px; line-height: 1; display: flex; align-items: center; justify-content: center; }
   #view-home .mh-layer .mf-seg:not(.is-on) { opacity: .6; }
 }
+
+/* Filtered-out main island inside a satellite cluster: same small dot as other filtered islands. */
+.sat-core.sat-core-dot { border-width: 1px !important; box-shadow: none !important; background: #7A8692 !important; }
+html.dark .sat-core.sat-core-dot { background: #8C98A5 !important; }

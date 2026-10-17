@@ -1831,11 +1831,14 @@ function clusterHasMatch(gatewayKey, clusters) {
    island itself looks identical to every other island on the map. */
 function makeSatelliteIcon(score, dimmed, clusters) {
   const color = dimmed ? DIM_FILL : scoreToColor(score);
-  const size = Math.round(20 + score * 2), r = size / 2;
+  // Filtered-out main island: the same small dot as any other filtered island; its matching
+  // satellites grow instead, so the match is what you see (the grey numbered core used to stay full size).
+  const size = dimmed ? 8 : Math.round(20 + score * 2), r = size / 2;
   const z = mapInstance ? mapInstance.getZoom() : 6;
   const zf = Math.max(0, Math.min(1, (z - 6) / 2));          // grows a little as you zoom
-  const orbit = r + 4.5 + zf * 5, moon = 3.6 + zf * 1.1;
-  const box = Math.ceil((orbit + moon + 3) * 2), cx = box / 2, cy = box / 2;
+  const moon = 3.6 + zf * 1.1, hit = dimmed ? moon * 1.7 : moon;
+  const orbit = r + (dimmed ? hit + 2 : 4.5) + zf * 5;
+  const box = Math.ceil((orbit + hit + 3) * 2), cx = box / 2, cy = box / 2;
 
   const meta = (typeof ISLANDS_DATA !== 'undefined') ? ISLANDS_DATA : {};
   const gate = clusters[0];
@@ -1849,12 +1852,14 @@ function makeSatelliteIcon(score, dimmed, clusters) {
     // were looking for was hidden inside a dead-looking blob.
     moons.push({ k, a: _satBearing(gm, meta[k]), s: meta[k].total, dim: !satPasses(k) });
   }));
-  moons = _spreadMoons(moons, (moon * 2 + 2.5) / orbit);
+  moons = _spreadMoons(moons, (hit * 2 + 2.5) / orbit);
 
   const dots = moons.map(o => {
     const x = cx + orbit * Math.cos(o.a), y = cy - orbit * Math.sin(o.a);
-    return `<i class="sat-moon" style="left:${(x - moon).toFixed(1)}px;top:${(y - moon).toFixed(1)}px;
-      width:${(moon * 2).toFixed(1)}px;height:${(moon * 2).toFixed(1)}px;
+    const mr = (dimmed && !o.dim) ? hit : moon;
+    const ring = (dimmed && !o.dim) ? 'border:1.5px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.35);box-sizing:border-box;' : '';
+    return `<i class="sat-moon" style="left:${(x - mr).toFixed(1)}px;top:${(y - mr).toFixed(1)}px;
+      width:${(mr * 2).toFixed(1)}px;height:${(mr * 2).toFixed(1)}px;${ring}
       background:${o.dim ? DIM_FILL : scoreToColor(o.s)}"></i>`;
   }).join('');
 
@@ -1863,10 +1868,10 @@ function makeSatelliteIcon(score, dimmed, clusters) {
     html: `<div class="sat-wrap" style="width:${box}px;height:${box}px">
         <svg width="${box}" height="${box}" aria-hidden="true">
           <circle cx="${cx}" cy="${cy}" r="${orbit.toFixed(1)}" fill="none"
-                  stroke="${color}" stroke-width="1.5" opacity=".5"/>
+                  stroke="${color}" stroke-width="1.5" opacity="${dimmed ? '.3' : '.5'}"/>
         </svg>
-        <span class="sat-core" style="left:${cx - r}px;top:${cy - r}px;width:${size}px;height:${size}px;
-          background:${color};color:${dimmed ? DIM_TEXT : '#fff'}">${fmt(score)}</span>
+        <span class="sat-core${dimmed ? ' sat-core-dot' : ''}" style="left:${cx - r}px;top:${cy - r}px;width:${size}px;height:${size}px;
+          background:${color};color:${dimmed ? DIM_TEXT : '#fff'}">${dimmed ? '' : fmt(score)}</span>
         ${dots}
       </div>`,
     iconSize: [box, box], iconAnchor: [box / 2, box / 2],
