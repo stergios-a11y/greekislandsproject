@@ -2793,6 +2793,40 @@ function _compactIslandMobile(root, key) {
     days.insertAdjacentHTML('afterend', `<a class="itin-full-link" href="${isEl ? `/el/island/${key}/programma/` : `/island/${key}/itinerary/`}">🗺 ${L('Full itinerary with map', 'Όλο το πρόγραμμα με χάρτη')} →</a>`);
   }
 
+  // map day filter -> numbered chips on the map (the titles live on the day cards now)
+  const filt = root.querySelector('.itin-day-filter'), mapWrap = root.querySelector('.itin-map-wrap');
+  if (filt && mapWrap && !filt.classList.contains('mc-chips')) {
+    filt.classList.add('mc-chips');
+    filt.setAttribute('role', 'group'); filt.setAttribute('aria-label', L('Show on the map', 'Δείξε στον χάρτη'));
+    filt.querySelectorAll('.itin-day-btn').forEach(b => {
+      const full = b.textContent.trim();
+      b.title = full; b.setAttribute('aria-label', full);
+      const d = b.dataset.day;
+      b.innerHTML = d === 'all' ? `<span>${esc(L('All', 'Όλες'))}</span>` : `<span>${esc(d)}</span>`;
+      if (d !== 'all') b.style.setProperty('--dc', b.style.borderColor || b.style.color || 'var(--ink-1)');
+    });
+    mapWrap.appendChild(filt);
+    if (window.L && window.L.DomEvent) { window.L.DomEvent.disableClickPropagation(filt); window.L.DomEvent.disableScrollPropagation(filt); }
+  }
+
+  // desktop: many beaches -> top 3 + "Show all N"
+  const bl = root.querySelector('#beach-list');
+  if (!phone && bl && bl.children.length > 3 && !root.querySelector('.mc-beach-all')) {
+    const n = bl.children.length;
+    [...bl.children].slice(3).forEach(c => c.classList.add('mc-beach-x'));
+    bl.insertAdjacentHTML('afterend', `<button type="button" class="ids-btn mc-beach-all" aria-expanded="false">${esc(L(`Show all ${n} beaches`, `Δες και τις ${n} παραλίες`))} <span aria-hidden="true">▾</span></button>`);
+    const bb = root.querySelector('.mc-beach-all');
+    bb.addEventListener('click', () => {
+      const open = bb.getAttribute('aria-expanded') !== 'true';
+      bl.querySelectorAll('.mc-beach-x').forEach(c => { c.hidden = !open; });
+      bb.setAttribute('aria-expanded', open ? 'true' : 'false');
+      bb.innerHTML = `${esc(open ? L('Show fewer beaches', 'Λιγότερες παραλίες') : L(`Show all ${n} beaches`, `Δες και τις ${n} παραλίες`))} <span aria-hidden="true">${open ? '▴' : '▾'}</span>`;
+      if (!open) bl.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      try { track('beaches_show_all', { island: key, open }); } catch (_) {}
+    });
+    bl.querySelectorAll('.mc-beach-x').forEach(c => { c.hidden = true; });
+  }
+
   // families / audiences and Local & seasonal: one-line teaser
   const fold = (sec, teaser) => {
     const h = sec.querySelector('h2'); if (!h || sec.querySelector('.mc-sum')) return;
@@ -4061,12 +4095,12 @@ function filterItinDay(day) {
     const allCoords = allKeys.flatMap(d =>
       (itinRouteLayers[d][0]?.getLatLngs() || []).flat()
     );
-    if (allCoords.length) itineraryMapInstance.fitBounds(L.latLngBounds(allCoords), { padding: [30, 30] });
+    if (allCoords.length) itineraryMapInstance.fitBounds(L.latLngBounds(allCoords), { paddingTopLeft: [30, 64], paddingBottomRight: [30, 30] });
   } else {
     const layers = itinRouteLayers[day];
     if (layers && layers[0]) {
       const coords = layers[0].getLatLngs().flat();
-      if (coords.length) itineraryMapInstance.fitBounds(L.latLngBounds(coords), { padding: [50, 50] });
+      if (coords.length) itineraryMapInstance.fitBounds(L.latLngBounds(coords), { paddingTopLeft: [50, 70], paddingBottomRight: [50, 50] });
     }
   }
 }
@@ -4239,7 +4273,7 @@ async function initItineraryMap(days, beaches = []) {
   const stopCoords = days.flatMap(d => d.stops.filter(hasPin).map(s => [s.lat, s.lng]));
   const beachCoords = beaches.filter(b => b.lat && b.lng).map(b => [b.lat, b.lng]);
   const allCoords = [...stopCoords, ...beachCoords];
-  if (allCoords.length) itineraryMapInstance.fitBounds(L.latLngBounds(allCoords), { padding: [30, 30] });
+  if (allCoords.length) itineraryMapInstance.fitBounds(L.latLngBounds(allCoords), { paddingTopLeft: [30, 64], paddingBottomRight: [30, 30] });
 
   for (const day of days) {
     itinRouteLayers[day.day] = [];

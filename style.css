@@ -7615,3 +7615,14 @@ html.dark .sat-core.sat-core-dot { background: #8C98A5 !important; }
 .itin-day-card.is-folded .itin-day-sum { display: block; }
 .itin-open-all { display: block; margin: 12px 0 6px auto; padding: 0; border: 0; background: none; color: var(--primary); font: 700 13.5px var(--font-ui); cursor: pointer; text-decoration: underline; }
 .itin-day-sum { display: none; padding: 0 12px 12px; cursor: pointer; }
+
+/* Island map: day filter as round chips floating on the map (top-right; Leaflet's zoom is top-left). */
+.itin-day-filter.mc-chips { --dc: var(--ink-1); position: absolute; top: 10px; right: 10px; z-index: 1000; display: flex; flex-wrap: nowrap; gap: 6px; padding: 5px;
+  background: color-mix(in srgb, var(--white) 92%, transparent); border: 0; border-radius: 999px; box-shadow: 0 3px 12px rgba(26,35,50,.22); }
+.mc-chips .itin-day-btn { min-width: 32px; height: 32px; padding: 0 10px; border-radius: 999px; border: 2px solid var(--dc, var(--ink-1)) !important;
+  color: var(--dc, var(--ink-1)) !important; background: var(--white); opacity: 1; font: 800 13px var(--font-ui); display: inline-flex; align-items: center; justify-content: center; }
+.mc-chips .itin-day-btn[data-day="all"] { border-color: var(--ink-2) !important; color: var(--ink-1) !important; }
+.mc-chips .itin-day-btn.active, html.dark .mc-chips .itin-day-btn.active { background: var(--dc, var(--ink-1)); color: #fff !important; border-color: var(--dc, var(--ink-1)) !important; }
+.mc-chips .itin-day-btn[data-day="all"].active { background: var(--ink-1); border-color: var(--ink-1) !important; color: var(--white) !important; }
+.mc-chips .itin-day-btn span { color: inherit !important; }
+.mc-beach-all { margin: 12px 0 0; }
