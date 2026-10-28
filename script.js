@@ -2561,6 +2561,7 @@ async function renderIslandPage(key) {
         }
       }
       guide.innerHTML = buildIslandPage(data, key);
+      try { _compactIslandMobile(guide, key); } catch (e) { console.warn('compact', e); }
       relocateHeroToSlot(key);
       { const vd = document.getElementById('view-detail'); if (vd) vd.dataset.ready = key; }
       // Build after layout settles: the bar measures section heights to decide
@@ -2725,6 +2726,74 @@ function scoreVerdict(s) {
 /* ============================================================
    ISLAND PAGE BUILDER — works with any island's JSON
 ============================================================ */
+/* Phones: fold the long parts of the island guide (Oct 2026). The page measured ~20 screens on
+   Naxos, ~40% of it the fully open day-by-day itinerary, which also has its own page. Everything
+   stays in the DOM — folded parts open in place. */
+function _compactIslandMobile(root, key) {
+  if (!root || !window.matchMedia('(max-width: 840px)').matches || root.dataset.compact === key) return;
+  root.dataset.compact = key;
+  const isEl = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+  const L = (en, el) => (isEl ? el : en);
+  const esc = s => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const toggle = (el, on) => { el.classList.toggle('is-folded', !on); el.querySelectorAll('[data-fold-btn]').forEach(b => b.setAttribute('aria-expanded', on ? 'true' : 'false')); };
+
+  // intro: 5 lines + Read more
+  const intro = root.querySelector('.itin-island-intro');
+  if (intro && !intro.querySelector('.mc-more')) {
+    intro.classList.add('mc-clamp');
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'mc-more'; b.textContent = L('Read more', 'Περισσότερα');
+    b.addEventListener('click', () => { intro.classList.remove('mc-clamp'); b.remove(); });
+    intro.appendChild(b);
+    requestAnimationFrame(() => { const p = intro.querySelector('p'); if (p && p.scrollHeight <= p.clientHeight + 2) { intro.classList.remove('mc-clamp'); b.remove(); } });
+  }
+
+  // itinerary days: 1 open, the rest one line each
+  root.querySelectorAll('.itin-day-card').forEach((card, i) => {
+    const head = card.querySelector('.itin-day-header');
+    if (!head || card.querySelector('.itin-day-sum')) return;
+    const names = [...card.querySelectorAll('.itin-stop-name-row')].map(r => (r.firstChild && r.firstChild.textContent || r.textContent).trim()).filter(Boolean);
+    const imgs = [...card.querySelectorAll('img.itin-stop-photo')].map(im => im.getAttribute('src')).filter(Boolean).slice(0, 4);
+    const sum = document.createElement('div');
+    sum.className = 'itin-day-sum';
+    sum.innerHTML = `<div class="ids-names">${esc(names.slice(0, 4).join(' · '))}${names.length > 4 ? ' …' : ''}</div>`
+      + (imgs.length ? `<div class="ids-strip">${imgs.map(s => `<img src="${esc(s)}" alt="" loading="lazy">`).join('')}</div>` : '');
+    head.insertAdjacentElement('afterend', sum);
+    head.setAttribute('data-fold-btn', ''); head.setAttribute('role', 'button'); head.tabIndex = 0;
+    head.insertAdjacentHTML('beforeend', '<span class="mc-chev" aria-hidden="true">▾</span>');
+    const flip = () => { const open = card.classList.contains('is-folded'); toggle(card, open); try { track('itin_day_toggle', { island: key, day: i + 1, open }); } catch (_) {} };
+    head.addEventListener('click', e => { if (e.target.closest('a')) return; flip(); });
+    head.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); } });
+    sum.addEventListener('click', flip);
+    toggle(card, i === 0);
+  });
+  const days = root.querySelector('#itin-days-container');
+  if (days && !root.querySelector('.itin-full-link')) {
+    days.insertAdjacentHTML('afterend', `<a class="itin-full-link" href="${isEl ? `/el/island/${key}/programma/` : `/island/${key}/itinerary/`}">🗺 ${L('Full itinerary with map', 'Όλο το πρόγραμμα με χάρτη')} →</a>`);
+  }
+
+  // families / audiences and Local & seasonal: one-line teaser
+  const fold = (sec, teaser) => {
+    const h = sec.querySelector('h2'); if (!h || sec.querySelector('.mc-sum')) return;
+    sec.classList.add('mc-fold');
+    h.setAttribute('data-fold-btn', ''); h.setAttribute('role', 'button'); h.tabIndex = 0;
+    h.insertAdjacentHTML('beforeend', '<span class="mc-chev" aria-hidden="true">▾</span>');
+    h.insertAdjacentHTML('afterend', `<p class="mc-sum">${esc(teaser)}</p>`);
+    const flip = () => toggle(sec, sec.classList.contains('is-folded'));
+    h.addEventListener('click', flip);
+    h.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); } });
+    sec.querySelector('.mc-sum').addEventListener('click', flip);
+    toggle(sec, false);
+  };
+  root.querySelectorAll('.itin-audience').forEach(sec => {
+    const p = sec.querySelector('p'); let tx = p ? p.textContent.trim() : '';
+    const m = tx.match(/^.{20,140}?[.!;](\s|$)/); tx = m ? m[0].trim() : (tx.length > 120 ? tx.slice(0, 117) + '…' : tx);
+    fold(sec, tx);
+  });
+  const loc = root.querySelector('.local-section');
+  if (loc) fold(loc, [...loc.querySelectorAll('.local-heading')].map(h => h.textContent.replace(/^\W+/u, '').trim()).join(' · '));
+}
+
 function buildIslandPage(data, key) {
   const itin = data.itinerary;
 
@@ -3933,6 +4002,8 @@ async function loadBeachPhotos(beaches) {
 ============================================================ */
 function filterItinDay(day) {
   itinActiveDay = day;
+  // Picking a day opens it if the phone layout had folded it.
+  if (day !== 'all') { const c = document.getElementById(`itin-day-card-${day}`); if (c && c.classList.contains('is-folded')) { c.classList.remove('is-folded'); } }
   document.querySelectorAll('.itin-day-btn').forEach(btn => {
     const isActive = String(btn.dataset.day) === String(day);
     btn.classList.toggle('active', isActive);

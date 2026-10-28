@@ -7566,3 +7566,29 @@ html.dark .sat-core.sat-core-dot { background: #8C98A5 !important; }
   #view-home .mh-chip { height: 36px; box-shadow: var(--mh-sh); }
   #view-home .mh-welcome { left: var(--mh-edge); right: var(--mh-edge); bottom: calc(16px + env(safe-area-inset-bottom)); }
 }
+
+/* ISLAND PAGE — phone compaction (Oct 2026): folded parts open in place; all text stays in the page. */
+@media (max-width: 840px) {
+  .itin-island-intro.mc-clamp p { display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+  .mc-more { margin-top: 4px; padding: 0; border: 0; background: none; color: var(--primary); font: 700 14px var(--font-ui); cursor: pointer; }
+  .itin-day-card .itin-day-header[data-fold-btn] { position: relative; cursor: pointer; padding-right: 34px; }
+  .mc-chev { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--ink-3); font-size: 15px; transition: transform .2s; }
+  [aria-expanded="true"] > .mc-chev { transform: translateY(-50%) rotate(180deg); }
+  .itin-day-sum { display: none; padding: 0 12px 12px; cursor: pointer; }
+  .itin-day-card.is-folded .itin-day-sum { display: block; }
+  .itin-day-card.is-folded > :not(.itin-day-header):not(.itin-day-sum) { display: none !important; }
+  .ids-names { font-size: 12.5px; color: var(--ink-3); line-height: 1.4; }
+  .ids-strip { display: flex; gap: 5px; margin-top: 8px; }
+  .ids-strip img { flex: 1 1 0; min-width: 0; height: 52px; object-fit: cover; border-radius: 8px; }
+  .itin-full-link { display: block; margin: 12px 0 4px; padding: 12px; border-radius: 12px; background: var(--primary-dark); color: #fff !important;
+    text-align: center; font: 800 14px var(--font-ui); text-decoration: none; }
+  .mc-fold > h2[data-fold-btn] { position: relative; cursor: pointer; padding-right: 30px; }
+  .mc-sum { display: none; margin: 4px 0 0; color: var(--ink-3); font-size: 13.5px; line-height: 1.45; cursor: pointer; }
+  .mc-fold.is-folded .mc-sum { display: block; }
+  .mc-fold.is-folded > :not(h2):not(.mc-sum) { display: none !important; }
+  /* beaches: swipe row */
+  #view-detail .itin-beaches-list { display: flex; flex-direction: row; flex-wrap: nowrap; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+    padding-bottom: 6px; scrollbar-width: none; align-items: flex-start; }
+  #view-detail .itin-beaches-list::-webkit-scrollbar { display: none; }
+  #view-detail .itin-beaches-list > * { flex: 0 0 86%; min-width: 0; margin: 0; scroll-snap-align: start; }
+}
