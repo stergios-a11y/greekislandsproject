@@ -2562,6 +2562,10 @@ async function renderIslandPage(key) {
       }
       guide.innerHTML = buildIslandPage(data, key);
       try { _compactIslandMobile(guide, key); } catch (e) { console.warn('compact', e); }
+      loadHeroPhotos().then(ph => guide.querySelectorAll('.similar-card').forEach(c => {
+        const box = c.querySelector('.similar-card-img'), p = ph && ph[c.dataset.k];
+        if (box && !box.firstChild && p && p.url) box.innerHTML = `<img src="${thumbUrl(p.url)}" alt="" loading="lazy">`;
+      })).catch(() => {});
       relocateHeroToSlot(key);
       { const vd = document.getElementById('view-detail'); if (vd) vd.dataset.ready = key; }
       // Build after layout settles: the bar measures section heights to decide
@@ -2730,8 +2734,9 @@ function scoreVerdict(s) {
    Naxos, ~40% of it the fully open day-by-day itinerary, which also has its own page. Everything
    stays in the DOM — folded parts open in place. */
 function _compactIslandMobile(root, key) {
-  if (!root || !window.matchMedia('(max-width: 840px)').matches || root.dataset.compact === key) return;
+  if (!root || root.dataset.compact === key) return;
   root.dataset.compact = key;
+  const phone = window.matchMedia('(max-width: 840px)').matches;
   const isEl = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
   const L = (en, el) => (isEl ? el : en);
   const esc = s => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -2739,7 +2744,7 @@ function _compactIslandMobile(root, key) {
 
   // intro: 5 lines + Read more
   const intro = root.querySelector('.itin-island-intro');
-  if (intro && !intro.querySelector('.mc-more')) {
+  if (phone && intro && !intro.querySelector('.mc-more')) {   // desktop has room for the whole intro
     intro.classList.add('mc-clamp');
     const b = document.createElement('button');
     b.type = 'button'; b.className = 'mc-more'; b.textContent = L('Read more', 'Περισσότερα');
@@ -3919,7 +3924,10 @@ function buildSimilarIslandsSection(key) {
     const m = ISLANDS_DATA[matchKey];
     const reason = similarReasonTags(key, matchKey);
     const score = (m.total || 0).toFixed(1);
-    return `<a class="similar-card" href="#" onclick="navigateTo('island','${matchKey}');return false;">
+    const hero = (typeof HERO_PHOTOS !== 'undefined' && HERO_PHOTOS[matchKey]) || {};
+    const href = ((typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? '/el/island/' : '/island/') + matchKey + '/';
+    return `<a class="similar-card" data-k="${matchKey}" href="${href}" onclick="if(!(event.metaKey||event.ctrlKey||event.shiftKey)){navigateTo('island','${matchKey}');return false;}">
+      <div class="similar-card-img">${hero.url ? `<img src="${thumbUrl(hero.url)}" alt="" loading="lazy">` : ''}</div>
       <div class="similar-card-name">${islandName(matchKey)}</div>
       <div class="similar-card-score">${scoreHtml(score)}</div>
       <div class="similar-card-reason">${reason}</div>
