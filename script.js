@@ -2761,18 +2761,34 @@ function _compactIslandMobile(root, key) {
     const imgs = [...card.querySelectorAll('img.itin-stop-photo')].map(im => im.getAttribute('src')).filter(Boolean).slice(0, 4);
     const sum = document.createElement('div');
     sum.className = 'itin-day-sum';
+    const nStops = card.querySelectorAll('.itin-stop').length;
     sum.innerHTML = `<div class="ids-names">${esc(names.slice(0, 4).join(' · '))}${names.length > 4 ? ' …' : ''}</div>`
-      + (imgs.length ? `<div class="ids-strip">${imgs.map(s => `<img src="${esc(s)}" alt="" loading="lazy">`).join('')}</div>` : '');
+      + (imgs.length ? `<div class="ids-strip">${imgs.map(s => `<img src="${esc(s)}" alt="" loading="lazy">`).join('')}</div>` : '')
+      + `<button type="button" class="ids-btn" data-fold-btn aria-expanded="false">${esc(L(`Show day ${i + 1} schedule · ${nStops} stops`, `Δες το πρόγραμμα της ${i + 1}ης μέρας · ${nStops} στάσεις`))} <span aria-hidden="true">▾</span></button>`;
     head.insertAdjacentElement('afterend', sum);
+    // closing button at the end of an open day, so you don't have to scroll back up
+    card.insertAdjacentHTML('beforeend', `<button type="button" class="ids-btn ids-hide" data-fold-btn aria-expanded="true">${esc(L('Hide schedule', 'Απόκρυψη προγράμματος'))} <span aria-hidden="true">▴</span></button>`);
     head.setAttribute('data-fold-btn', ''); head.setAttribute('role', 'button'); head.tabIndex = 0;
     head.insertAdjacentHTML('beforeend', '<span class="mc-chev" aria-hidden="true">▾</span>');
     const flip = () => { const open = card.classList.contains('is-folded'); toggle(card, open); try { track('itin_day_toggle', { island: key, day: i + 1, open }); } catch (_) {} };
     head.addEventListener('click', e => { if (e.target.closest('a')) return; flip(); });
     head.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); } });
     sum.addEventListener('click', flip);
-    toggle(card, i === 0);
+    card.querySelector('.ids-hide').addEventListener('click', () => { flip(); head.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); });
+    toggle(card, false);   // all days fold: the itinerary reads as a short overview; the map shows every stop
   });
   const days = root.querySelector('#itin-days-container');
+  if (days && days.querySelector('.itin-day-card') && !root.querySelector('.itin-open-all')) {
+    days.insertAdjacentHTML('beforebegin', `<button type="button" class="itin-open-all">${esc(L('Open all days', 'Άνοιγμα όλων των ημερών'))}</button>`);
+    const all = root.querySelector('.itin-open-all');
+    all.addEventListener('click', () => {
+      const cards = [...days.querySelectorAll('.itin-day-card')];
+      const open = cards.some(c => c.classList.contains('is-folded'));
+      cards.forEach(c => toggle(c, open));
+      all.textContent = open ? L('Close all days', 'Κλείσιμο όλων των ημερών') : L('Open all days', 'Άνοιγμα όλων των ημερών');
+      try { track('itin_open_all', { island: key, open }); } catch (_) {}
+    });
+  }
   if (days && !root.querySelector('.itin-full-link')) {
     days.insertAdjacentHTML('afterend', `<a class="itin-full-link" href="${isEl ? `/el/island/${key}/programma/` : `/island/${key}/itinerary/`}">🗺 ${L('Full itinerary with map', 'Όλο το πρόγραμμα με χάρτη')} →</a>`);
   }
