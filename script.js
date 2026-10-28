@@ -3,7 +3,7 @@
 const VERSION = 'v4.0';
 // Map credits without Leaflet's own "Leaflet" prefix (its licence doesn't need it on the map).
 if (typeof L !== 'undefined' && L.Control && L.Control.Attribution) L.Control.Attribution.mergeOptions({ prefix: false });
-const BUILD_DATE = '2026-10-25';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-10-28';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
