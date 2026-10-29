@@ -7626,3 +7626,13 @@ html.dark .sat-core.sat-core-dot { background: #8C98A5 !important; }
 .mc-chips .itin-day-btn[data-day="all"].active { background: var(--ink-1); border-color: var(--ink-1) !important; color: var(--white) !important; }
 .mc-chips .itin-day-btn span { color: inherit !important; }
 .mc-beach-all { margin: 12px 0 0; }
+
+.mc-chips-lab { align-self: center; padding: 0 2px 0 8px; font: 800 12px var(--font-ui); color: var(--ink-3); }
+/* desktop: Good for / Maybe skip if in the sidebar, stacked */
+.detail-sidebar .itin-suited { display: block; margin-top: 16px; }
+.detail-sidebar .itin-suited-col { margin: 0 0 12px; }
+.detail-sidebar .itin-suited-col ul { padding-left: 18px; }
+.detail-sidebar .itin-suited-col li { font-size: 13.5px; line-height: 1.45; margin-bottom: 6px; }
+/* phones: Blueprint block inside the guide */
+#island-guide .blueprint-box { margin: 16px 0; }
+.bp-more { display: block; margin: 8px 0 0; padding: 0; border: 0; background: none; color: var(--primary); font: 700 13.5px var(--font-ui); cursor: pointer; }

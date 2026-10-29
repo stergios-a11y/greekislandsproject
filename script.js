@@ -3,7 +3,7 @@
 const VERSION = 'v4.0';
 // Map credits without Leaflet's own "Leaflet" prefix (its licence doesn't need it on the map).
 if (typeof L !== 'undefined' && L.Control && L.Control.Attribution) L.Control.Attribution.mergeOptions({ prefix: false });
-const BUILD_DATE = '2026-10-28';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-10-29';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -2364,6 +2364,10 @@ let currentIslandKey = '';
 
 async function renderIslandPage(key) {
   currentIslandKey = key;
+  // The Blueprint box lives in the sidebar (index.html); on phones it is moved into the guide, which is
+  // about to be rewritten — put it back first so it isn't destroyed (and drop last island's moved 'Good for').
+  { const bx = document.querySelector('#island-guide .blueprint-box'), sb = document.querySelector('.detail-sidebar'); if (bx && sb) sb.prepend(bx); }
+  document.querySelectorAll('.detail-sidebar .itin-suited').forEach(n => n.remove());
   // The static island page swaps its readable guide for this view only once
   // data-ready names this island (set below, after the full guide rendered).
   { const vd = document.getElementById('view-detail'); if (vd) vd.dataset.ready = ''; }
@@ -2793,6 +2797,23 @@ function _compactIslandMobile(root, key) {
     days.insertAdjacentHTML('afterend', `<a class="itin-full-link" href="${isEl ? `/el/island/${key}/programma/` : `/island/${key}/itinerary/`}">🗺 ${L('Full itinerary with map', 'Όλο το πρόγραμμα με χάρτη')} →</a>`);
   }
 
+  // Blueprint ratings + who it suits, together
+  const suited = root.querySelector('.itin-suited'), box = document.querySelector('.blueprint-box'), side = document.querySelector('.detail-sidebar');
+  if (!phone && suited && side) {
+    side.appendChild(suited);                       // desktop: under the ratings, next to the intro
+  } else if (phone && box) {
+    const anchor = suited || root.querySelector('.itin-island-intro');
+    if (anchor) anchor.insertAdjacentElement('afterend', box);   // phones: scores on the first screens, not the last
+    const stats = box.querySelector('.blueprint-stats'), div = box.querySelector('.blueprint-divider');
+    if (stats && !box.querySelector('.bp-more')) {
+      stats.hidden = true; if (div) div.hidden = true;
+      box.insertAdjacentHTML('beforeend', `<button type="button" class="bp-more" aria-expanded="false">${esc(L('More details', 'Περισσότερα στοιχεία'))} ▾</button>`);
+      const mb = box.querySelector('.bp-more');
+      mb.addEventListener('click', () => { const open = stats.hidden; stats.hidden = !open; if (div) div.hidden = !open; mb.setAttribute('aria-expanded', open ? 'true' : 'false');
+        mb.textContent = (open ? L('Fewer details', 'Λιγότερα στοιχεία') + ' ▴' : L('More details', 'Περισσότερα στοιχεία') + ' ▾'); });
+    }
+  }
+
   // map day filter -> numbered chips on the map (the titles live on the day cards now)
   const filt = root.querySelector('.itin-day-filter'), mapWrap = root.querySelector('.itin-map-wrap');
   if (filt && mapWrap && !filt.classList.contains('mc-chips')) {
@@ -2805,6 +2826,7 @@ function _compactIslandMobile(root, key) {
       b.innerHTML = d === 'all' ? `<span>${esc(L('All', 'Όλες'))}</span>` : `<span>${esc(d)}</span>`;
       if (d !== 'all') b.style.setProperty('--dc', b.style.borderColor || b.style.color || 'var(--ink-1)');
     });
+    filt.insertAdjacentHTML('afterbegin', `<span class="mc-chips-lab" aria-hidden="true">${esc(L('Days:', 'Μέρες:'))}</span>`);
     mapWrap.appendChild(filt);
     if (window.L && window.L.DomEvent) { window.L.DomEvent.disableClickPropagation(filt); window.L.DomEvent.disableScrollPropagation(filt); }
   }
