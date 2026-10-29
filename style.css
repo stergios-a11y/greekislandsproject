@@ -7640,3 +7640,21 @@ html.dark .sat-core.sat-core-dot { background: #8C98A5 !important; }
 /* score badge on the photo */
 .similar-card-img { position: relative; }
 .similar-card-img .similar-card-score { position: absolute; top: 8px; left: 8px; padding: 0 !important; margin: 0; filter: drop-shadow(0 1px 3px rgba(0,0,0,.35)); }
+
+/* fold signalling, round 3: one bold round arrow instead of a full-width button */
+.itin-day-sum .ids-btn { display: none !important; }
+.mc-chev { position: absolute; right: 10px; top: 50%; width: 30px; height: 30px; margin-top: -15px; transform: none; display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; background: var(--primary); color: #fff; font-size: 14px; line-height: 1; box-shadow: 0 2px 6px rgba(11,143,172,.35); transition: transform .2s, background .15s; }
+[aria-expanded="true"] > .mc-chev { transform: rotate(180deg); }
+[data-fold-btn]:hover > .mc-chev { background: var(--primary-dark); }
+.itin-day-card .itin-day-header[data-fold-btn] { padding-right: 52px; }
+.itin-day-card .itin-day-header[data-fold-btn] .itin-day-meta { margin-right: 4px; }
+.ids-hide { display: none; width: auto; margin: 2px 12px 12px auto; padding: 4px 2px; border: 0; background: none; color: var(--primary); font: 700 13px var(--font-ui); }
+.ids-hide:hover { background: none; color: var(--primary-dark); text-decoration: underline; }
+.itin-day-card:not(.is-folded) > .ids-hide { display: flex; }
+/* folded sections read as one card: title + teaser + arrow */
+.mc-fold.is-folded { padding: 12px 14px !important; margin: 14px 0; background: var(--white); border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 1px 4px rgba(26,35,50,.06); }
+.mc-fold.is-folded > h2 { margin: 0 !important; padding: 0 48px 0 0 !important; border: 0 !important; }
+.mc-fold.is-folded > .mc-sum { margin: 4px 48px 0 0; }
+.mc-fold > h2[data-fold-btn] { padding-right: 48px; }
+html.dark .mc-fold.is-folded { background: var(--surface-2); }
