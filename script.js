@@ -2568,7 +2568,7 @@ async function renderIslandPage(key) {
       try { _compactIslandMobile(guide, key); } catch (e) { console.warn('compact', e); }
       loadHeroPhotos().then(ph => guide.querySelectorAll('.similar-card').forEach(c => {
         const box = c.querySelector('.similar-card-img'), p = ph && ph[c.dataset.k];
-        if (box && !box.firstChild && p && p.url) box.innerHTML = `<img src="${thumbUrl(p.url)}" alt="" loading="lazy">`;
+        if (box && !box.querySelector('img') && p && p.url) box.insertAdjacentHTML('afterbegin', `<img src="${thumbUrl(p.url)}" alt="" loading="lazy">`);
       })).catch(() => {});
       relocateHeroToSlot(key);
       { const vd = document.getElementById('view-detail'); if (vd) vd.dataset.ready = key; }
@@ -3999,9 +3999,8 @@ function buildSimilarIslandsSection(key) {
     const hero = (typeof HERO_PHOTOS !== 'undefined' && HERO_PHOTOS[matchKey]) || {};
     const href = ((typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? '/el/island/' : '/island/') + matchKey + '/';
     return `<a class="similar-card" data-k="${matchKey}" href="${href}" onclick="if(!(event.metaKey||event.ctrlKey||event.shiftKey)){navigateTo('island','${matchKey}');return false;}">
-      <div class="similar-card-img">${hero.url ? `<img src="${thumbUrl(hero.url)}" alt="" loading="lazy">` : ''}</div>
+      <div class="similar-card-img">${hero.url ? `<img src="${thumbUrl(hero.url)}" alt="" loading="lazy">` : ''}<div class="similar-card-score">${scoreHtml(score)}</div></div>
       <div class="similar-card-name">${islandName(matchKey)}</div>
-      <div class="similar-card-score">${scoreHtml(score)}</div>
       <div class="similar-card-reason">${reason}</div>
     </a>`;
   }).join('');

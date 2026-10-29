@@ -7636,3 +7636,7 @@ html.dark .sat-core.sat-core-dot { background: #8C98A5 !important; }
 /* phones: Blueprint block inside the guide */
 #island-guide .blueprint-box { margin: 16px 0; }
 .bp-more { display: block; margin: 8px 0 0; padding: 0; border: 0; background: none; color: var(--primary); font: 700 13.5px var(--font-ui); cursor: pointer; }
+
+/* score badge on the photo */
+.similar-card-img { position: relative; }
+.similar-card-img .similar-card-score { position: absolute; top: 8px; left: 8px; padding: 0 !important; margin: 0; filter: drop-shadow(0 1px 3px rgba(0,0,0,.35)); }
