@@ -157,8 +157,8 @@
     "day": 2,
     "title": "Plomari, Ouzo & West to Skala Eresou",
     "color": "#C0522A",
-    "km": 115,
-    "drive_mins": 130,
+    "km": 95,
+    "drive_mins": 110,
     "overnight": "Skala Eresou",
     "stops": [
      {
@@ -174,28 +174,28 @@
       "desc_el": "Πρωινός καφές στην πλατεία και βόλτα στα σοκάκια της παλιάς πόλης. Η πρωτεύουσα του ελληνικού ούζου."
      },
      {
-      "name": "Agiasos",
-      "lat": 39.0821,
-      "lng": 26.3724,
-      "type": "village",
-      "time": "10:00",
-      "wiki": "https://www.google.com/maps/search/Agiasos+Lesvos",
-      "desc": "Charming mountain village with cobbled lanes and a lively carnival tradition. Browse the craft shops.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776895444/agiasos_goaxml.jpg",
-      "name_el": "Αγιάσος",
-      "desc_el": "Παραδοσιακό ορεινό χωριό στις πλαγιές του Ολύμπου. Πλακόστρωτα δρομάκια, προσκυνητές στην εκκλησία της Παναγίας, εργαστήρια κεραμικής."
-     },
-     {
       "name": "Barbayiannis Distillery",
       "lat": 38.9714,
       "lng": 26.3851,
       "type": "distillery",
-      "time": "12:00",
+      "time": "10:00",
       "wiki": "https://www.google.com/maps/search/Barbayiannis+Distillery+Lesvos",
       "desc": "Tour the oldest ouzo distillery in Plomari. Tasting included.",
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776895435/barbayannis_distillery_znovcl.jpg",
       "name_el": "Αποσταγματοποιείο Μπαρμπαγιάννη",
       "desc_el": "Η πιο γνωστή ετικέτα ούζου της Λέσβου. Ξενάγηση στο αποσταγματοποιείο και γευσιγνωσία."
+     },
+     {
+      "name": "Agiasos",
+      "lat": 39.0821,
+      "lng": 26.3724,
+      "type": "village",
+      "time": "12:00",
+      "wiki": "https://www.google.com/maps/search/Agiasos+Lesvos",
+      "desc": "Charming mountain village with cobbled lanes and a lively carnival tradition. Browse the craft shops.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776895444/agiasos_goaxml.jpg",
+      "name_el": "Αγιάσος",
+      "desc_el": "Παραδοσιακό ορεινό χωριό στις πλαγιές του Ολύμπου. Πλακόστρωτα δρομάκια, προσκυνητές στην εκκλησία της Παναγίας, εργαστήρια κεραμικής."
      },
      {
       "name": "Vatera Beach",
@@ -204,10 +204,10 @@
       "type": "beach",
       "time": "16:00",
       "wiki": "https://www.google.com/maps/search/Vatera+Beach+Lesvos",
-      "desc": "8 km of uninterrupted golden sand. Long afternoon swim, then drive west along the southern coast to Skala Eresou — about 50 minutes.",
+      "desc": "8 km of uninterrupted dark, fine pebble. Long afternoon swim, then drive west along the southern coast to Skala Eresou — about 50 minutes.",
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776895439/vatera_f641je.jpg",
       "name_el": "Παραλία Βατερών",
-      "desc_el": "8 χιλιόμετρα συνεχόμενης χρυσής άμμου. Μακρύ απογευματινό μπάνιο, και μετά οδική διαδρομή δυτικά κατά μήκος της νότιας ακτής προς τη Σκάλα Ερεσού — περίπου 50 λεπτά."
+      "desc_el": "8 χιλιόμετρα συνεχόμενου σκούρου, ψιλού βότσαλου. Μακρύ απογευματινό μπάνιο, και μετά οδική διαδρομή δυτικά κατά μήκος της νότιας ακτής προς τη Σκάλα Ερεσού — περίπου 50 λεπτά."
      },
      {
       "name": "Skala Eresou",
@@ -601,12 +601,12 @@
   {
    "name": "Vatera Beach",
    "wiki": "https://www.google.com/maps/search/Vatera+Beach+Lesvos",
-   "type": "Fine golden sand",
+   "type": "Dark fine pebble",
    "length": "8 km",
    "depth": "Medium depth — gradually deepening",
    "facing": "South-facing — sheltered from the prevailing north winds (meltemi)",
    "facilities": "Well-developed: tavernas, sunbeds & umbrellas, showers, parking, accommodation nearby",
-   "desc": "The longest beach on Lesvos — 8 uninterrupted kilometres of golden fine sand. Exceptionally calm water. The best choice for families or those wanting full facilities and space.",
+   "desc": "The longest beach on Lesvos — 8 uninterrupted kilometres of dark, fine pebble. Exceptionally calm water. The best choice for families or those wanting full facilities and space.",
    "lat": 39.0184,
    "lng": 26.2184,
    "commons": "Vatera_Beach_Lesvos.jpg",
@@ -614,8 +614,8 @@
    "rating": 5,
    "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776897264/3_uoqkqy.webp",
    "name_el": "Παραλία Βατερών",
-   "desc_el": "Η μεγαλύτερη παραλία της Λέσβου — 8 αδιάκοπα χιλιόμετρα χρυσής λεπτής άμμου. Εκπληκτικά ρηχά νερά, πολλά εστιατόρια στη σειρά.",
-   "type_el": "Λεπτή χρυσή άμμος",
+   "desc_el": "Η μεγαλύτερη παραλία της Λέσβου — 8 αδιάκοπα χιλιόμετρα σκούρου, ψιλού βότσαλου. Εκπληκτικά ρηχά νερά, πολλά εστιατόρια στη σειρά.",
+   "type_el": "Σκούρο ψιλό βότσαλο",
    "length_el": "8 χλμ",
    "depth_el": "Μέτριο βάθος — βαθαίνει σταδιακά",
    "facing_el": "Νότιος προσανατολισμός — απάνεμη από τον μελτέμι",
@@ -668,7 +668,7 @@
    "facilities_el": "Καλές παροχές: ξαπλώστρες, beach bars, ταβέρνες σε μικρή απόσταση στο χωριό"
   }
  ],
- "intro_el": "Η Λέσβος θέλει έξι μέρες και αυτοκίνητο, και τα ανταποδίδει και τα δύο. Είναι το τρίτο μεγαλύτερο νησί της Ελλάδας — μια γη από αμέτρητους ελαιώνες (καλύπτουν το 30% του νησιού, κάποια δέντρα πάνω από 1.500 ετών), θερμές πηγές και μικρά ορεινά χωριά που αρνούνται να αλλάξουν. Έχει ρυθμό δικό της. Από την ηφαιστειακή δύση και τον Λεπέτυμνο μέχρι τις αλυκές της Σκάλας Πολιχνίτου με τα φλαμίνγκο, και από τη Σαπφώ, γεννημένη στην Ερεσό, μέχρι τον Ελύτη. Ουζερί στο Πλωμάρι και το αποστακτήριο Μπαρμπαγιάννη, το απολιθωμένο δάσος πάνω από τη Σίγρι, το βυζαντινό κάστρο του Μολύβου, σαρδέλες στη Σκάλα Καλλονής, μακριές παραλίες — τα Βατερά έχουν 8 χιλιόμετρα άμμο — που σχεδόν πάντα έχεις για σένα. Μην έρθεις αν δεν οδηγείς ή αν θέλεις κάτι μικρό και κοντινό: το πλοίο από τον Πειραιά είναι νυχτερινό 8–13 ωρών μέσω Χίου, και τον Αύγουστο οι δημοφιλείς παραλίες γεμίζουν μέχρι τις 10 το πρωί. Διάλεξε Ιούνιο ή Σεπτέμβριο. Δεν είναι Σαντορίνη και δεν θέλει να γίνει — έρχεσαι εδώ για τη Λέσβο.",
+ "intro_el": "Η Λέσβος θέλει έξι μέρες και αυτοκίνητο, και τα ανταποδίδει και τα δύο. Είναι το τρίτο μεγαλύτερο νησί της Ελλάδας — μια γη από αμέτρητους ελαιώνες (καλύπτουν το 30% του νησιού, κάποια δέντρα πάνω από 1.500 ετών), θερμές πηγές και μικρά ορεινά χωριά που αρνούνται να αλλάξουν. Έχει ρυθμό δικό της. Από την ηφαιστειακή δύση και τον Λεπέτυμνο μέχρι τις αλυκές της Σκάλας Πολιχνίτου με τα φλαμίνγκο, και από τη Σαπφώ, γεννημένη στην Ερεσό, μέχρι τον Ελύτη. Ουζερί στο Πλωμάρι και το αποστακτήριο Μπαρμπαγιάννη, το απολιθωμένο δάσος πάνω από τη Σίγρι, το βυζαντινό κάστρο του Μολύβου, σαρδέλες στη Σκάλα Καλλονής, μακριές παραλίες — τα Βατερά έχουν 8 χιλιόμετρα ψιλό βότσαλο — που σχεδόν πάντα έχεις για σένα. Μην έρθεις αν δεν οδηγείς ή αν θέλεις κάτι μικρό και κοντινό: το πλοίο από τον Πειραιά είναι νυχτερινό 8–13 ωρών μέσω Χίου, και τον Αύγουστο οι δημοφιλείς παραλίες γεμίζουν μέχρι τις 10 το πρωί. Διάλεξε Ιούνιο ή Σεπτέμβριο. Δεν είναι Σαντορίνη και δεν θέλει να γίνει — έρχεσαι εδώ για τη Λέσβο.",
  "name_el": "Λέσβος",
  "name_accusative_el": "Λέσβο",
  "name_genitive_el": "Λέσβου",

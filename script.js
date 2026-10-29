@@ -2773,7 +2773,7 @@ function _compactIslandMobile(root, key) {
     // closing button at the end of an open day, so you don't have to scroll back up
     card.insertAdjacentHTML('beforeend', `<button type="button" class="ids-btn ids-hide" data-fold-btn aria-expanded="true">${esc(L('Hide schedule', 'Απόκρυψη προγράμματος'))} <span aria-hidden="true">▴</span></button>`);
     head.setAttribute('data-fold-btn', ''); head.setAttribute('role', 'button'); head.tabIndex = 0;
-    head.insertAdjacentHTML('beforeend', '<span class="mc-chev" aria-hidden="true">▾</span>');
+    head.insertAdjacentHTML('beforeend', '<span class="mc-chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>');
     const flip = () => { const open = card.classList.contains('is-folded'); toggle(card, open); try { track('itin_day_toggle', { island: key, day: i + 1, open }); } catch (_) {} };
     head.addEventListener('click', e => { if (e.target.closest('a')) return; flip(); });
     head.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); } });
@@ -2856,7 +2856,7 @@ function _compactIslandMobile(root, key) {
     const h = sec.querySelector('h2'); if (!h || sec.querySelector('.mc-sum')) return;
     sec.classList.add('mc-fold');
     h.setAttribute('data-fold-btn', ''); h.setAttribute('role', 'button'); h.tabIndex = 0;
-    h.insertAdjacentHTML('beforeend', '<span class="mc-chev" aria-hidden="true">▾</span>');
+    h.insertAdjacentHTML('beforeend', '<span class="mc-chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>');
     h.insertAdjacentHTML('afterend', `<p class="mc-sum">${esc(teaser)}</p>`);
     const flip = () => toggle(sec, sec.classList.contains('is-folded'));
     h.addEventListener('click', flip);
