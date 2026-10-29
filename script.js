@@ -2782,7 +2782,7 @@ function _compactIslandMobile(root, key) {
     toggle(card, false);   // all days fold: the itinerary reads as a short overview; the map shows every stop
   });
   const days = root.querySelector('#itin-days-container');
-  if (days && days.querySelector('.itin-day-card') && !root.querySelector('.itin-open-all')) {
+  if (days && days.querySelectorAll('.itin-day-card').length > 1 && !root.querySelector('.itin-open-all')) {   // 'Open all' only when there is more than one day
     days.insertAdjacentHTML('beforebegin', `<button type="button" class="itin-open-all">${esc(L('Open all days', 'Άνοιγμα όλων των ημερών'))}</button>`);
     const all = root.querySelector('.itin-open-all');
     all.addEventListener('click', () => {
@@ -2816,7 +2816,9 @@ function _compactIslandMobile(root, key) {
 
   // map day filter -> numbered chips on the map (the titles live on the day cards now)
   const filt = root.querySelector('.itin-day-filter'), mapWrap = root.querySelector('.itin-map-wrap');
-  if (filt && mapWrap && !filt.classList.contains('mc-chips')) {
+  // One-day islands: nothing to choose between, so no selector.
+  if (filt && filt.querySelectorAll('.itin-day-btn:not([data-day="all"])').length < 2) filt.hidden = true;
+  else if (filt && mapWrap && !filt.classList.contains('mc-chips')) {
     filt.classList.add('mc-chips');
     filt.setAttribute('role', 'group'); filt.setAttribute('aria-label', L('Show on the map', 'Δείξε στον χάρτη'));
     filt.querySelectorAll('.itin-day-btn').forEach(b => {
