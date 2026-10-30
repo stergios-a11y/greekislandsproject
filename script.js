@@ -3,7 +3,7 @@
 const VERSION = 'v4.0';
 // Map credits without Leaflet's own "Leaflet" prefix (its licence doesn't need it on the map).
 if (typeof L !== 'undefined' && L.Control && L.Control.Attribution) L.Control.Attribution.mergeOptions({ prefix: false });
-const BUILD_DATE = '2026-10-29';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-10-30';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -2812,6 +2812,17 @@ function _compactIslandMobile(root, key) {
       mb.addEventListener('click', () => { const open = stats.hidden; stats.hidden = !open; if (div) div.hidden = !open; mb.setAttribute('aria-expanded', open ? 'true' : 'false');
         mb.textContent = (open ? L('Fewer details', 'Λιγότερα στοιχεία') + ' ▴' : L('More details', 'Περισσότερα στοιχεία') + ' ▾'); });
     }
+  }
+
+  // a section head between the beaches and the route map (it used to follow the last beach card directly)
+  const mw = root.querySelector('.itin-map-wrap');
+  if (mw && !root.querySelector('.itin-route-head')) {
+    const nd = root.querySelectorAll('.itin-day-card').length;
+    const title = nd > 1 ? L(`The ${nd}-day route`, `Η διαδρομή σε ${nd} μέρες`) : L('The day on the map', 'Η μέρα στον χάρτη');
+    const sub = nd > 1 ? L('Every stop on the map. Pick a day to see just its route, or open a day below for its schedule.',
+                           'Όλες οι στάσεις στον χάρτη. Διάλεξε μέρα για να δεις μόνο τη δική της διαδρομή, ή άνοιξε μια μέρα παρακάτω για το πρόγραμμα.')
+                       : L('Every stop on the map; open the day below for its schedule.', 'Όλες οι στάσεις στον χάρτη· άνοιξε τη μέρα παρακάτω για το πρόγραμμα.');
+    mw.insertAdjacentHTML('beforebegin', `<div class="itin-route-head"><h2 class="itin-route-title">${esc(title)}</h2><p class="itin-route-sub">${esc(sub)}</p></div>`);
   }
 
   // map day filter -> numbered chips on the map (the titles live on the day cards now)

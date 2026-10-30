@@ -7658,3 +7658,8 @@ html.dark .sat-core.sat-core-dot { background: #8C98A5 !important; }
 .mc-fold.is-folded > .mc-sum { margin: 4px 48px 0 0; }
 .mc-fold > h2[data-fold-btn] { padding-right: 48px; }
 html.dark .mc-fold.is-folded { background: var(--surface-2); }
+
+/* break between the beaches and the itinerary map */
+.itin-route-head { margin: 40px 0 16px; padding-top: 26px; border-top: 1px solid var(--border); }
+.itin-route-title { font-family: var(--font-ui); font-size: var(--text-sub); font-weight: 600; color: var(--ink); margin: 0 0 6px; }
+.itin-route-sub { font-size: var(--text-meta); color: var(--ink-3); margin: 0; }
