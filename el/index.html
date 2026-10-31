@@ -92,7 +92,7 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="preload" as="image" href="https://res.cloudinary.com/dothbs5hs/image/upload/w_1280,h_560,c_fill,q_auto,f_auto/v1783273547/%CE%BA%CF%85%CE%B8%CE%B7%CF%81%CE%B1_vuwxno.jpg" fetchpriority="high">
-  <link rel="stylesheet" href="/style.css?v=122">
+  <link rel="stylesheet" href="/style.css?v=123">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9298260273942245" crossorigin="anonymous"></script>
   <script>
     /* Desktop-only ads: on viewports below 900px, replace adsbygoogle.push
@@ -111,12 +111,13 @@
 
   <header>
     <div class="header-content">
-      <div class="logo-wrapper" id="nav-home">
+      <a class="logo-wrapper" id="nav-home" href="/el/">
         <img src="/logo-hero.svg" id="site-logo" alt="Λογότυπο Aegean Blueprint" data-i18n-alt="a11y.logo_alt">
         <span id="brand-text"><span class="brand-word">Aegean</span> <span class="brand-word">Blueprint</span></span>
-      </div>
+      </a>
       <button type="button" class="menu-toggle" id="menu-toggle-btn" aria-label="Menu" aria-controls="main-nav" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="top-nav" id="main-nav">
+        <a href="/el/" id="nav-map" class="nav-map-m" data-i18n="nav.map">🗺 Χάρτης νησιών</a>
         <a href="#" id="nav-compare" data-i18n="nav.compare">Σύγκριση</a>
         <a href="#" id="nav-match" data-i18n="nav.match">Βρες το Νησί σου</a>
         <a href="/el/trip-cost/" id="nav-tripcost" data-i18n="nav.tripcost">Κόστος</a>
@@ -287,7 +288,7 @@
           <th data-col="night" class="th-dim" data-i18n="data.col.night">Νύχτα ↕</th>
           <th data-col="access" class="th-dim" data-i18n="data.col.access">Πρόσβαση ↕</th>
           <th data-col="afford" class="th-dim" data-i18n="data.col.afford">Τιμή ↕</th>
-          <th data-col="car_free" class="th-dim" data-i18n="data.col.car" title="5 = χωρίς αυτοκίνητο, 1 = απαραίτητο" data-i18n-title="a11y.car_scale">🚶 Χωρίς αυτοκίνητο ↕</th>
+          <th data-col="car_free" class="th-dim" data-i18n="data.col.car" title="Χρειάζεσαι αυτοκίνητο; 5 = δεν χρειάζεται, 1 = απαραίτητο" data-i18n-title="a11y.car_scale">🚗 Αυτοκίνητο ↕</th>
           <th data-col="days" class="th-main" data-i18n="data.col.days">Μέρες ↕</th>
           <th data-col="has_airport" class="th-main" data-i18n="data.col.airport" title="Εμπορικό αεροδρόμιο στο νησί" data-i18n-title="a11y.has_airport">✈ Αεροδρόμιο ↕</th>
           <th data-col="area" class="th-main" data-i18n="data.col.area">Έκταση (km²) ↕</th>
@@ -506,7 +507,7 @@
               <div class="rating-item"><span class="rating-label" data-i18n="sidebar.night">Νυχτερινή ζωή</span><div class="stars-outer"><div id="star-night" class="stars-inner"></div></div><span class="rating-val" id="val-night"></span></div>
               <div class="rating-item"><span class="rating-label" data-i18n="sidebar.access">Ευκολία Πρόσβασης</span><div class="stars-outer"><div id="star-access" class="stars-inner"></div></div><span class="rating-val" id="val-access"></span></div>
               <div class="rating-item"><span class="rating-label" data-i18n="sidebar.afford">Οικονομικά</span><div class="stars-outer"><div id="star-afford" class="stars-inner"></div></div><span class="rating-val" id="val-afford"></span></div>
-              <div class="rating-item rating-item-car" title="" id="rating-item-car"><span class="rating-label" data-i18n="sidebar.car">Χωρίς αυτοκίνητο</span><span class="rating-val" id="val-car"></span></div>
+              <div class="rating-item rating-item-car" title="" id="rating-item-car"><span class="rating-label" data-i18n="sidebar.car">Αυτοκίνητο</span><span class="rating-val" id="val-car"></span></div>
             </div>
             <div class="blueprint-divider"></div>
             <div id="sidebar-stats" class="blueprint-stats">
@@ -563,8 +564,8 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="/market-data.js?v=72cff035"></script>
-  <script src="/i18n.js?v=53"></script>
-  <script src="/script.js?v=189"></script>
+  <script src="/i18n.js?v=55"></script>
+  <script src="/script.js?v=191"></script>
 <!-- SEO_ISLAND_LIST_START -->
 <nav class="visually-hidden" aria-label="Όλα τα νησιά">
   <h2>Όλα τα νησιά</h2>

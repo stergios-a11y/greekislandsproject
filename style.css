@@ -7744,3 +7744,8 @@ html.dark .mc-fold.is-folded { background: var(--surface-2); }
   #view-data .table-hint-row { cursor: default; opacity: 1 !important; border-style: solid; border-color: var(--border) !important;
     background: none !important; transform: none !important; box-shadow: none !important; }
 }
+
+/* Island-map item: only in the collapsed menu, where the small logo is easy to miss */
+.top-nav .nav-map-m { display: none; }
+@media (max-width: 1240px) { .top-nav .nav-map-m { display: block; } }
+a.logo-wrapper, a.logo-wrapper:visited { color: inherit; }

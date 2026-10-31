@@ -939,7 +939,11 @@ function setupNav() {
   };
   Object.entries(navMap).forEach(([btnId, view]) => {
     const el = document.getElementById(btnId);
-    if (el) el.addEventListener('click', (e) => { e.preventDefault(); navigateTo(view); });
+    if (el) el.addEventListener('click', (e) => {
+      // real links (logo, island map) still open in a new tab with cmd/ctrl/shift/middle click
+      if ((e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) && el.getAttribute('href') && el.getAttribute('href') !== '#') return;
+      e.preventDefault(); navigateTo(view);
+    });
   });
   const menuToggle = document.getElementById('menu-toggle-btn');
   if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
@@ -4757,7 +4761,7 @@ function carNeedCompactHtml(score) {
   const label = (typeof t === 'function' && keys[n]) ? t(keys[n]) : '';
   const colors = ['', '#C0522A', '#D17A2B', '#A58A3A', '#4CAF50', '#1B5E20'];
   const col = colors[n] || '#888';
-  return `<span class="car-compact-pill" style="background:${col}20;color:${col};border:1px solid ${col}40">${cf.toFixed(1)} · ${label}</span>`;
+  return `<span class="car-compact-pill" style="background:${col}20;color:${col};border:1px solid ${col}40" title="${n}/5">🚗 ${label}</span>`;
 }
 
 function carNeedHtml(score) {
