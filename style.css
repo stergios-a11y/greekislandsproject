@@ -7750,3 +7750,14 @@ html.dark .mc-fold.is-folded { background: var(--surface-2); }
 .top-nav .nav-map-m { display: none; }
 @media (max-width: 1240px) { .top-nav .nav-map-m { display: block; } }
 a.logo-wrapper, a.logo-wrapper:visited { color: inherit; }
+
+/* Dark mode: --primary / --primary-dark turn into light cyans there, too bright as button fills */
+html.dark .itin-full-link { background: #11576A; color: #E8F7FB !important; }
+html.dark .itin-full-link:hover { background: #156A80; }
+html.dark .mc-chev { background: #156A80; color: #DDF6FC; box-shadow: none; }
+html.dark [data-fold-btn]:hover > .mc-chev { background: #1B7F98; }
+/* grouped-marker popup in dark mode: the stop names were dark ink on a dark popup */
+html.dark .ig-row button { color: #E8EDF2; }
+html.dark .ig-row button:hover { color: #8FE3F5; }
+html.dark .ig-h small { color: #9AA7B4; }
+html.dark .ig-row { border-top-color: rgba(255,255,255,.1); }
