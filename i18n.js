@@ -102,8 +102,8 @@ const UI_TEXT = {
   'dim.car': { en: 'Car-free', el: 'Χωρίς αυτοκίνητο' },
   'dim.car.hint': { en: 'Car: 5 = not needed, 3 = optional (buses cover the basics), 1 = essential', el: 'Αυτοκίνητο: 5 = δεν χρειάζεται, 3 = προαιρετικό (τα λεωφορεία καλύπτουν τα βασικά), 1 = απαραίτητο' },
   'car.none': { en: 'Not needed', el: 'Δεν χρειάζεται' },
-  'car.helpful': { en: 'Optional', el: 'Προαιρετικό' },
-  'car.useful': { en: 'Useful', el: 'Χρήσιμο' },
+  'car.helpful': { en: 'Barely needed', el: 'Σχεδόν περιττό' },
+  'car.useful': { en: 'Optional', el: 'Προαιρετικό' },
   'car.recommended': { en: 'Recommended', el: 'Συνιστάται' },
   'car.essential': { en: 'Essential', el: 'Απαραίτητο' },
   // Car-free scale (5 = best) — the user-facing twin of car.* above

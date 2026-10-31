@@ -915,8 +915,8 @@ GROUP_NAMES_EL = {
 
 # Car-reliance chip labels — mirrors car.* i18n keys (index 1-5 = rounded car_need).
 CAR_LABELS = {
-    'en': ['', 'Not needed', 'Optional', 'Useful', 'Recommended', 'Essential'],
-    'el': ['', 'Δεν χρειάζεται', 'Προαιρετικό', 'Χρήσιμο', 'Συνιστάται', 'Απαραίτητο'],
+    'en': ['', 'Not needed', 'Barely needed', 'Optional', 'Recommended', 'Essential'],
+    'el': ['', 'Δεν χρειάζεται', 'Σχεδόν περιττό', 'Προαιρετικό', 'Συνιστάται', 'Απαραίτητο'],
 }
 
 
@@ -2528,7 +2528,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}market-data.js?v={_market.version()}"></script>
-<script src="{asset_prefix}i18n.js?v=55"></script>
+<script src="{asset_prefix}i18n.js?v=56"></script>
 <script src="{asset_prefix}script.js?v=191"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
