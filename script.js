@@ -3811,9 +3811,9 @@ function buildWhenToVisitSection(data) {
     ? `<div class="wtv-limited-note"><strong>${limitedLabel}:</strong> ${fmtMonthList(limitedIndices)}</div>`
     : '';
 
-  const highlightsBar = highlightHtml
-    ? `<div class="wtv-highlights">${highlightHtml}</div>${limitedLine}`
-    : limitedLine;
+  // The coloured months and the legend already say which months are best; the
+  // "Best: … · Great: …" text line repeated it (Oct 2026). Only the limited-service note stays.
+  const highlightsBar = limitedLine;
 
   const summary = pickLang(w, 'summary') || '';
   const summaryHtml = summary ? `<p class="wtv-summary">${summary}</p>` : '';
