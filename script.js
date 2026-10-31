@@ -5668,7 +5668,7 @@ function renderFerryMap() {
   if (!mapEl) return;
   if (!FERRY_SEA_PATHS && !_ferrySeaLoading) {
     _ferrySeaLoading = true;
-    fetch('/ferry-paths.json?v=2').then(r => r.ok ? r.json() : null)
+    fetch('/ferry-paths.json?v=3').then(r => r.ok ? r.json() : null)
       .then(j => { if (j) { FERRY_SEA_PATHS = j; renderFerryMap(); } }).catch(() => {});
   }
 

@@ -446,6 +446,7 @@ const SIDE_PORTS = {
   "pollonia": {"island": "milos", "name": "Pollonia (Milos)", "name_el": "Πολλώνια (Μήλος)", "lat": 36.762, "lng": 24.528},
   "agios-stefanos-cfu": {"island": "corfu", "name": "Agios Stefanos (Corfu)", "name_el": "Άγιος Στέφανος (Κέρκυρα)", "lat": 39.757, "lng": 19.642},
   "myrties": {"island": "kalymnos", "name": "Myrties (Kalymnos)", "name_el": "Μυρτιές (Κάλυμνος)", "lat": 36.996, "lng": 26.936},
+  "agiokampos": {"island": "evia-north", "name": "Agiokampos (Evia)", "name_el": "Αγιόκαμπος (Εύβοια)", "lat": 38.9355, "lng": 23.0344},
   "mastichari": {"island": "kos", "name": "Mastichari (Kos)", "name_el": "Μαστιχάρι (Κως)", "lat": 36.851, "lng": 27.077}
 };
 const FERRY_GRAPH = [
@@ -460,7 +461,7 @@ const FERRY_GRAPH = [
   {"a": "andros", "b": "syros", "dur": 150, "freq": "med", "plo": 14, "phi": 24, "note": "most days"},
   {"a": "andros", "b": "tinos", "dur": 105, "freq": "high", "plo": 12, "phi": 20, "note": "daily"},
   {"a": "arkitsa", "b": "aidipsos", "dur": 40, "freq": "high", "plo": 5, "phi": 10, "note": "every 1-2h to Loutra Aidipsou"},
-  {"a": "glyfa", "b": "evia-north", "dur": 25, "freq": "high", "plo": 3, "phi": 4, "note": "to Agiokampos, every 30-60 min, takes cars"},
+  {"a": "glyfa", "b": "evia-north", "dur": 25, "freq": "high", "plo": 3, "phi": 4, "note": "to Agiokampos, every 30-60 min, takes cars", "bp": "agiokampos"},
   {"a": "astypalaia", "b": "kalymnos", "dur": 180, "freq": "low", "plo": 14, "phi": 22, "note": "2-3/week"},
   {"a": "astypalaia", "b": "kos", "dur": 240, "freq": "low", "plo": 18, "phi": 28, "note": "3-4/week"},
   {"a": "chios", "b": "lesvos", "dur": 180, "freq": "med", "plo": 18, "phi": 28, "note": "6/week"},
