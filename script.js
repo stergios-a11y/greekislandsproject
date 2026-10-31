@@ -4603,6 +4603,7 @@ function setupTable() {
 function toggleDimensions() {
   const table = document.getElementById('islands-table');
   if (!table) return;
+  if (window.matchMedia('(min-width: 1380px)').matches) return;   // wide screens show scores and stats together
   const isShowing = table.classList.toggle('show-dims');
   const btn = document.getElementById('toggle-dims-btn');
   if (btn) btn.textContent = isShowing ? t('data.hidedims') : t('data.showdims');

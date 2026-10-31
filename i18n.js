@@ -273,7 +273,7 @@ const UI_TEXT = {
   'data.col.pop': { en: 'Population ↕', el: 'Πληθυσμός ↕' },
   'data.col.scores': { en: 'Scores', el: 'Βαθμολογίες' },
   'data.showdims': { en: '📊 Click to reveal all 5 scores →', el: '📊 Πάτα για όλες τις βαθμολογίες →' },
-  'data.hidedims': { en: '📊 Hide scores', el: '📊 Απόκρυψη βαθμολογιών' },
+  'data.hidedims': { en: '📊 Show island stats →', el: '📊 Δες τα στοιχεία των νησιών →' },
   'data.hinttext': { en: 'See the 5 dimensions we rate each island on — beaches, culture, nightlife, access, affordability.', el: 'Δες τις 5 διαστάσεις που βαθμολογούμε σε κάθε νησί — παραλίες, πολιτισμός, νυχτερινή ζωή, πρόσβαση, προσιτή τιμή.' },
 
   // Compare page

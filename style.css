@@ -7734,3 +7734,13 @@ html.dark .mc-fold.is-folded { background: var(--surface-2); }
   .detail-sidebar > :last-child, .detail-sidebar > :last-child > :last-child { margin-bottom: 0; }
   #view-detail .detail-grid { margin-bottom: 24px; }
 }
+
+/* Islands data, wide screens (Oct 2026): scores and stats side by side, no toggle */
+@media (min-width: 1380px) {
+  main#view-data { max-width: 1330px; }
+  #islands-table .th-main, #islands-table .td-main,
+  #islands-table .th-dim, #islands-table .td-dim { display: table-cell !important; }
+  #view-data .toggle-dims-btn { display: none; }
+  #view-data .table-hint-row { cursor: default; opacity: 1 !important; border-style: solid; border-color: var(--border) !important;
+    background: none !important; transform: none !important; box-shadow: none !important; }
+}
