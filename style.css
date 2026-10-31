@@ -7675,3 +7675,28 @@ html.dark .mc-fold.is-folded { background: var(--surface-2); }
 }
 .itin-route-head .itin-section-sub { margin: 0 0 4px; color: var(--ink-2, var(--ink)); font-size: var(--text-small); }
 .itin-route-head .itin-standalone { margin: 8px 0 0; }
+
+/* island 5 + 6 (Oct 2026): one heading style for every section; grouped itinerary markers */
+.itin-section-title, .itin-audience-title, .itin-getting-there-title, .itin-beaches-title, .itin-route-title,
+.local-section-title, .similar-title, .wtv-title {
+  font-family: var(--font-display); font-size: var(--text-section); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: var(--ink);
+}
+.itin-audience-title { border-bottom: 0; padding-bottom: 0; margin-bottom: 8px; }
+.wtv-title h2 { font: inherit; }
+.itin-grp { background: none; border: 0; display: flex; flex-direction: column; align-items: center; }
+.itin-grp .ig-pin { position: relative; width: 40px; height: 40px; box-sizing: border-box; border-radius: 50%; background: #fff; border: 3px solid #1a2332;
+  display: flex; align-items: center; justify-content: center; font-size: 20px; line-height: 1; box-shadow: 0 3px 10px rgba(0,0,0,.35); cursor: pointer; }
+.itin-grp .ig-n { position: absolute; top: -7px; right: -9px; min-width: 18px; height: 18px; padding: 0 5px; box-sizing: border-box; border-radius: 9px;
+  background: #1a2332; color: #fff; border: 2px solid #fff; font: 800 10.5px/14px var(--font-ui); text-align: center; }
+.itin-grp .ig-days { display: flex; width: max-content; align-self: center; gap: 2px; margin-top: -6px; padding: 2px 3px; background: #fff; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.3); position: relative; }
+.itin-grp .ig-days i { width: 15px; height: 15px; border-radius: 50%; color: #fff; font: 800 9.5px/15px var(--font-ui); text-align: center; font-style: normal; }
+.itin-grp .ig-lab { margin-top: 2px; white-space: nowrap; font: 800 11.5px var(--font-ui); color: #1a2332;
+  text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff; pointer-events: none; }
+.ig-pop { font-family: var(--font-ui); }
+.ig-h { font-weight: 800; font-size: 14px; margin: 0 0 6px; }
+.ig-h small { font-weight: 700; font-size: 11px; color: #637080; margin-left: 4px; }
+.ig-row { display: flex; gap: 8px; padding: 5px 0; border-top: 1px solid #eee; }
+.ig-dl { flex: none; width: 52px; padding-top: 3px; font-weight: 800; font-size: 10.5px; text-transform: uppercase; letter-spacing: .03em; }
+.ig-row ul { margin: 0; padding: 0; list-style: none; min-width: 0; }
+.ig-row button { display: block; width: 100%; text-align: left; padding: 2px 0; border: 0; background: none; font: 600 12.5px/1.35 var(--font-ui); color: #1a2332; cursor: pointer; }
+.ig-row button:hover { color: var(--primary); text-decoration: underline; }

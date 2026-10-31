@@ -4128,6 +4128,7 @@ async function loadBeachPhotos(beaches) {
 ============================================================ */
 function filterItinDay(day) {
   itinActiveDay = day;
+  if (window._itinRegroup) setTimeout(() => window._itinRegroup(), 0);
   // Picking a day opens it if the phone layout had folded it.
   if (day !== 'all') { const c = document.getElementById(`itin-day-card-${day}`); if (c && c.classList.contains('is-folded')) { c.classList.remove('is-folded'); } }
   document.querySelectorAll('.itin-day-btn').forEach(btn => {
@@ -4409,6 +4410,7 @@ async function initItineraryMap(days, beaches = []) {
       marker._poiType = iconType;
       marker._poiColor = day.color;
       marker._poiDay = stopNum;
+      marker._poiName = stopName; marker._poiDayKey = day.day; marker._poiDayColor = day.color;
       // Bind direct click handler on lightbox images inside this popup once it opens.
       // Document-level delegation can be intercepted by Leaflet's internal handlers,
       // so direct binding is the most reliable path inside popup content.
@@ -4450,6 +4452,7 @@ async function initItineraryMap(days, beaches = []) {
       .bindPopup(popupHtml);
     marker._poiType = 'beach';
     marker._poiColor = BEACH_COLOR;
+    marker._poiName = name; marker._isBeach = true;
     itinBeachMarkers.push(marker);
   });
 
@@ -4496,6 +4499,76 @@ async function initItineraryMap(days, beaches = []) {
       if (m._poiType) m.setIcon(poiDivIcon(m._poiType, m._poiColor, mode, m._poiDay));
     });
   });
+
+  // Overlapping markers -> one pin (Oct 2026). Most days start or end in the main town, so 5-8
+  // markers used to pile up there and only the top one could be tapped. Markers closer than about a
+  // marker's width merge into a pin with a count, the days' dots and the place name; tapping it lists
+  // the stops by day. Recomputed on every zoom; with one day picked the plain markers show.
+  const map = itineraryMapInstance;
+  let groups = [];
+  const isEl = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+  const esc = s => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  function openMember(m) {
+    const p = L.popup({ autoPanPaddingTopLeft: L.point(12, 72) }).setLatLng(m.getLatLng()).setContent(m.getPopup().getContent()).openOn(map);
+    m.fire('popupopen', { popup: p });
+  }
+  function regroup() {
+    if (map !== itineraryMapInstance) return;
+    groups.forEach(g => map.removeLayer(g)); groups = [];
+    const all = itinActiveDay === 'all';
+    const dayKeys = Object.keys(itinMarkerLayers);
+    const vis = [];
+    dayKeys.forEach(d => (itinMarkerLayers[d] || []).forEach(m => { if (all || String(d) === String(itinActiveDay)) { if (!map.hasLayer(m)) m.addTo(map); vis.push(m); } }));
+    if (all) itinBeachMarkers.forEach(m => { if (!map.hasLayer(m)) m.addTo(map); vis.push(m); });
+    if (!all || vis.length < 2) return;
+    const thr = map.getZoom() >= POI_EMOJI_ZOOM ? 26 : 12;
+    // a beach that is also a day's stop: the stop's marker stands for it
+    for (let i = vis.length - 1; i >= 0; i--) {
+      const m = vis[i]; if (!m._isBeach) continue;
+      const pb = map.latLngToLayerPoint(m.getLatLng());
+      if (vis.some(o => !o._isBeach && map.latLngToLayerPoint(o.getLatLng()).distanceTo(pb) < thr)) { map.removeLayer(m); vis.splice(i, 1); }
+    }
+    const pts = vis.map(m => map.latLngToLayerPoint(m.getLatLng()));
+    const par = vis.map((_, i) => i);
+    const find = i => (par[i] === i ? i : (par[i] = find(par[i])));
+    for (let i = 0; i < vis.length; i++) for (let j = i + 1; j < vis.length; j++) if (pts[i].distanceTo(pts[j]) < thr) par[find(i)] = find(j);
+    const sets = {};
+    vis.forEach((m, i) => (sets[find(i)] = sets[find(i)] || []).push(m));
+    Object.values(sets).filter(s => s.length > 1).forEach(mem => {
+      mem.forEach(m => map.removeLayer(m));
+      const lat = mem.reduce((a, m) => a + m.getLatLng().lat, 0) / mem.length, lng = mem.reduce((a, m) => a + m.getLatLng().lng, 0) / mem.length;
+      const cnt = (arr) => arr.reduce((o, k) => (o[k] = (o[k] || 0) + 1, o), {});
+      const tc = cnt(mem.map(m => m._poiType)); const type = Object.keys(tc).sort((a, b) => tc[b] - tc[a])[0];
+      // 'Dinner in Naxos Town' / 'Back to Molyvos' -> the place itself
+      const place = n => String(n || '').replace(/^(dinner|lunch|sleep|overnight|evening|night|sunset|back|return|arrive|arrival|base|stay)\b.*?\b(in|to|at)\s+/i, '')
+        .replace(/^(δείπνο|βραδινό|φαγητό|διανυκτέρευση|επιστροφή|βράδυ|ηλιοβασίλεμα|άφιξη)\s+(σε|στη|στην|στο|στον|στα|στις|στους)\s+/i, '');
+      const nc = cnt(mem.map(m => place(m._poiName)));
+      let label = Object.keys(nc).sort((a, b) => nc[b] - nc[a])[0];
+      if (nc[label] < 2) { const t = mem.find(m => /^(city|harbour|port|village)$/.test(m._poiType)); label = t ? place(t._poiName) : ''; }
+      const days = [...new Set(mem.filter(m => !m._isBeach).map(m => m._poiDayKey))].sort((a, b) => a - b);
+      const col = d => { const m = mem.find(x => x._poiDayKey === d); return m ? m._poiDayColor : '#0B8FAC'; };
+      const dots = days.map(d => `<i style="background:${col(d)}">${d}</i>`).join('');
+      const html = `<div class="ig-pin">${POI_EMOJIS[type] || '📍'}<span class="ig-n">${mem.length}</span></div>${dots ? `<div class="ig-days">${dots}</div>` : ''}${label ? `<div class="ig-lab">${esc(label)}</div>` : ''}`;
+      const g = L.marker([lat, lng], { icon: L.divIcon({ className: 'itin-grp', html, iconSize: [44, 44], iconAnchor: [22, 22] }), zIndexOffset: 500, keyboard: true, title: label || '' }).addTo(map);
+      const rows = days.map(d => [isEl ? `Ημέρα ${d}` : `Day ${d}`, col(d), mem.filter(m => !m._isBeach && m._poiDayKey === d).sort((a, b) => a._poiDay - b._poiDay)]);
+      const bs = mem.filter(m => m._isBeach); if (bs.length) rows.push([isEl ? 'Παραλίες' : 'Beaches', '#0B8FAC', bs]);
+      const order = rows.flatMap(r => r[2]);
+      const ndays = days.length;
+      const sub = isEl ? `${mem.length} στάσεις${ndays ? ` · ${ndays} ${ndays === 1 ? 'μέρα' : 'μέρες'}` : ''}` : `${mem.length} stops${ndays ? ` · ${ndays} ${ndays === 1 ? 'day' : 'days'}` : ''}`;
+      g.bindPopup(`<div class="ig-pop"><div class="ig-h">${POI_EMOJIS[type] || '📍'} ${esc(label || (isEl ? 'Στάσεις εδώ' : 'Stops here'))} <small>${sub}</small></div>`
+        + rows.map(([lab, c, ms]) => `<div class="ig-row"><span class="ig-dl" style="color:${c}">${lab}</span><ul>${ms.map(m => `<li><button type="button" data-i="${order.indexOf(m)}">${POI_EMOJIS[m._poiType] || '📍'} ${esc(m._poiName)}</button></li>`).join('')}</ul></div>`).join('')
+        + `</div>`, { maxWidth: 280, minWidth: 220, autoPanPaddingTopLeft: L.point(12, 72) });
+      g.on('popupopen', ev => {
+        const el = ev.popup.getElement(); if (!el) return;
+        el.querySelectorAll('button[data-i]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); map.closePopup(); openMember(order[+b.dataset.i]); }));
+        try { track('itin_group_open', { island: currentIslandKey || '', n: mem.length }); } catch (_) {}
+      });
+      groups.push(g);
+    });
+  }
+  window._itinRegroup = regroup;
+  map.on('zoomend', regroup);
+  map.whenReady(() => setTimeout(regroup, 0));
 }
 
 /* ============================================================
