@@ -152,8 +152,11 @@ def main():
                 best = cand; break
         poly = [ll(x) for x in simplify(best)]
         paths[k] = [[round(p[0], 4), round(p[1], 4)]] + poly + [[round(q[0], 4), round(q[1], 4)]]
+    # routes that share a stretch of sea are drawn on one line until they part
+    from snap_ferry_paths import snap_all
+    paths, moved = snap_all(paths)
     (ROOT / 'ferry-paths.json').write_text(json.dumps(paths, separators=(',', ':')))
-    print(f'ferry-paths.json: {len(paths)} segments')
+    print(f'ferry-paths.json: {len(paths)} segments ({moved} points snapped onto shared lines)')
 
 if __name__ == '__main__':
     main()

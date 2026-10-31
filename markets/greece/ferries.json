@@ -106,6 +106,7 @@
     {"a": "andros", "b": "syros", "dur": 150, "freq": "med", "plo": 14, "phi": 24, "note": "most days"},
     {"a": "andros", "b": "tinos", "dur": 105, "freq": "high", "plo": 12, "phi": 20, "note": "daily"},
     {"a": "arkitsa", "b": "aidipsos", "dur": 40, "freq": "high", "plo": 5, "phi": 10, "note": "every 1-2h to Loutra Aidipsou"},
+    {"a": "glyfa", "b": "evia-north", "dur": 25, "freq": "high", "plo": 3, "phi": 4, "note": "to Agiokampos, every 30-60 min, takes cars"},
     {"a": "astypalaia", "b": "kalymnos", "dur": 180, "freq": "low", "plo": 14, "phi": 22, "note": "2-3/week"},
     {"a": "astypalaia", "b": "kos", "dur": 240, "freq": "low", "plo": 18, "phi": 28, "note": "3-4/week"},
     {"a": "chios", "b": "lesvos", "dur": 180, "freq": "med", "plo": 18, "phi": 28, "note": "6/week"},
@@ -190,7 +191,7 @@
     {"a": "piraeus", "b": "donousa", "dur": 540, "freq": "low", "plo": 38, "phi": 55, "note": "via Naxos"},
     {"a": "piraeus", "b": "folegandros", "dur": 360, "freq": "med", "plo": 40, "phi": 60, "note": "daily summer"},
     {"a": "piraeus", "b": "heraklion", "dur": 540, "freq": "high", "plo": 40, "phi": 90, "note": "overnight daily, Minoan/Anek"},
-    {"a": "piraeus", "b": "hydra", "dur": 120, "freq": "high", "plo": 28, "phi": 35, "note": "Flying Cat hydrofoil"},
+    {"a": "piraeus", "b": "hydra", "dur": 120, "freq": "high", "plo": 28, "phi": 35, "note": "Flying Cat hydrofoil via Poros"},
     {"a": "piraeus", "b": "ikaria", "dur": 540, "freq": "med", "plo": 40, "phi": 60, "note": "daily summer"},
     {"a": "piraeus", "b": "ios", "dur": 420, "freq": "high", "plo": 40, "phi": 65, "note": "multiple daily summer"},
     {"a": "piraeus", "b": "iraklia", "dur": 480, "freq": "low", "plo": 38, "phi": 55, "note": "via Naxos, Express Skopelitis"},
@@ -296,7 +297,7 @@
   "visual_lines": [
     {"stops": ["piraeus", "aegina", "agistri"], "freq": "high"},
     {"stops": ["piraeus", "aegina", "poros"], "freq": "high"},
-    {"stops": ["piraeus", "hydra", "spetses"], "freq": "high"},
+    {"stops": ["piraeus", "poros", "hydra", "spetses"], "freq": "high"},
     {"stops": ["lavrio", "kea", "kythnos"], "freq": "high"},
     {"stops": ["piraeus", "kythnos", "serifos", "sifnos", "milos", "kimolos"], "freq": "high"},
     {"stops": ["milos", "folegandros", "sikinos", "ios", "santorini"], "freq": "med"},
@@ -322,7 +323,8 @@
   ],
   "map_hide": [
     "piraeus~salamis",
-    "andros~piraeus"
+    "andros~piraeus",
+    "hydra~piraeus"
   ],
   "mainland_ports": {
     "piraeus": {"name": "Piraeus (Athens)", "name_el": "Πειραιάς (Αθήνα)", "lat": 37.94, "lng": 23.643},
@@ -343,6 +345,7 @@
     "perama": {"name": "Perama (Athens)", "name_el": "Πέραμα (Αθήνα)", "lat": 37.962, "lng": 23.586},
     "agia-marina": {"name": "Agia Marina", "name_el": "Αγία Μαρίνα", "lat": 38.062, "lng": 23.987},
     "arkitsa": {"name": "Arkitsa", "name_el": "Αρκίτσα", "lat": 38.755, "lng": 23.013},
+    "glyfa": {"name": "Glyfa", "name_el": "Γλύφα", "lat": 38.943, "lng": 22.958},
     "sfakia": {"name": "Sfakia (Crete)", "name_el": "Σφακιά (Κρήτη)", "lat": 35.201, "lng": 24.137, "onIsland": true},
     "sitia": {"name": "Sitia (Crete)", "name_el": "Σητεία (Κρήτη)", "lat": 35.207, "lng": 26.107, "onIsland": true},
     "aidipsos": {"name": "Loutra Aidipsou (Evia)", "name_el": "Λουτρά Αιδηψού (Εύβοια)", "lat": 38.86, "lng": 23.043, "onIsland": true},

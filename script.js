@@ -5668,7 +5668,7 @@ function renderFerryMap() {
   if (!mapEl) return;
   if (!FERRY_SEA_PATHS && !_ferrySeaLoading) {
     _ferrySeaLoading = true;
-    fetch('/ferry-paths.json').then(r => r.ok ? r.json() : null)
+    fetch('/ferry-paths.json?v=2').then(r => r.ok ? r.json() : null)
       .then(j => { if (j) { FERRY_SEA_PATHS = j; renderFerryMap(); } }).catch(() => {});
   }
 
@@ -5754,7 +5754,7 @@ function renderFerryMap() {
       weight: FERRY_FOCUS_PORT ? style.weight + 0.6 : style.weight,
       opacity: FERRY_FOCUS_PORT ? Math.min(style.opacity + 0.2, 1) : style.opacity,
       dashArray: style.dashArray,
-      smoothFactor: 1.2,
+      smoothFactor: 0.4,
     }).addTo(ferryMapLayer).bindTooltip(edgeTooltip(edge), { sticky: true, opacity: 1, className: 'island-tooltip' });
     return true;
   };
@@ -5782,7 +5782,7 @@ function renderFerryMap() {
       if (coords.length < 2) return;
       const style = freqStyle[line.freq] || freqStyle.low;
       const stopsLabel = line.stops.map(k => ferryPortDisplayName(k)).join(' → ');
-      L.polyline(coords, { color: style.color, weight: style.weight + 0.4, opacity: style.opacity, dashArray: style.dashArray, smoothFactor: 1.2 })
+      L.polyline(coords, { color: style.color, weight: style.weight + 0.4, opacity: style.opacity, dashArray: style.dashArray, smoothFactor: 0.4 })
         .addTo(ferryMapLayer)
         .bindTooltip(`<strong>${ferryPortDisplayName(line.stops[0])} → ${ferryPortDisplayName(line.stops[line.stops.length - 1])}</strong><br>` +
           `<span style="font-size:11px;color:var(--ink-3)">${stopsLabel}</span>`, { sticky: true, opacity: 1, className: 'island-tooltip' });
@@ -5813,7 +5813,7 @@ function renderFerryMap() {
       if (!pa || !fp) return;
       const coords = ferrySeaPath(pa, fp) || curvedRouteCoords(pa.lat, pa.lng, fp.lat, fp.lng, 12);
       const style = freqStyle[r.frequency] || freqStyle.low;
-      L.polyline(coords, { color: style.color, weight: style.weight, opacity: style.opacity, dashArray: style.dashArray, smoothFactor: 1.2 })
+      L.polyline(coords, { color: style.color, weight: style.weight, opacity: style.opacity, dashArray: style.dashArray, smoothFactor: 0.4 })
         .addTo(ferryMapLayer)
         .bindTooltip(`<strong>${ferryPortDisplayName(r.from)} ↔ ${pickLang(fp, 'name')}</strong> · ${pickLang(fp, 'country')}<br>` +
           `<span style="font-size:11px;color:var(--ink-3)">⏱ ${pickLang(r, 'duration')} · ${pickLang(r, 'frequency_label')} · ${r.price}</span>`,
