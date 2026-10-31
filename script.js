@@ -2737,7 +2737,29 @@ function scoreVerdict(s) {
 /* Phones: fold the long parts of the island guide (Oct 2026). The page measured ~20 screens on
    Naxos, ~40% of it the fully open day-by-day itinerary, which also has its own page. Everything
    stays in the DOM — folded parts open in place. */
+/* Desktop: the Blueprint sidebar stays in view. A sidebar taller than the window gets a negative
+   offset, so it scrolls with the page until its bottom shows and then holds there. */
+function _stickySidebar() {
+  const sb = document.querySelector('.detail-sidebar');
+  if (!sb) return;
+  const set = () => {
+    if (!window.matchMedia('(min-width: 861px)').matches) { sb.style.top = ''; return; }
+    const hh = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 64;
+    const sn = document.getElementById('secnav');
+    const top0 = hh + (sn ? sn.offsetHeight : 0) + 12;
+    sb.style.top = Math.min(top0, window.innerHeight - sb.offsetHeight - 16) + 'px';
+  };
+  set(); setTimeout(set, 400);
+  if (!sb.dataset.sticky) {
+    sb.dataset.sticky = '1';
+    window.addEventListener('resize', set, { passive: true });
+    if (window.ResizeObserver) new ResizeObserver(set).observe(sb);
+  }
+}
 function _compactIslandMobile(root, key) {
+  { const pb = document.getElementById('detail-print-btn'), ha = document.querySelector('.detail-hero-actions');
+    if (pb && ha && pb.parentNode !== ha) { pb.className = 'glass-btn glass-ic'; ha.appendChild(pb); } }
+  try { _stickySidebar(); } catch (_) {}
   if (!root || root.dataset.compact === key) return;
   root.dataset.compact = key;
   const phone = window.matchMedia('(max-width: 840px)').matches;
@@ -2748,13 +2770,21 @@ function _compactIslandMobile(root, key) {
 
   // intro: 5 lines + Read more
   const intro = root.querySelector('.itin-island-intro');
-  if (phone && intro && !intro.querySelector('.mc-more')) {   // desktop has room for the whole intro
+  if (intro && !intro.querySelector('.mc-more')) {
     intro.classList.add('mc-clamp');
     const b = document.createElement('button');
     b.type = 'button'; b.className = 'mc-more'; b.textContent = L('Read more', 'Περισσότερα');
     b.addEventListener('click', () => { intro.classList.remove('mc-clamp'); b.remove(); });
     intro.appendChild(b);
     requestAnimationFrame(() => { const p = intro.querySelector('p'); if (p && p.scrollHeight <= p.clientHeight + 2) { intro.classList.remove('mc-clamp'); b.remove(); } });
+  }
+
+  // the top heading names the page, not the itinerary (that title moves to the route head below)
+  const secT = root.querySelector('.itin-section-title');
+  if (secT && !secT.dataset.glance) {
+    secT.dataset.glance = '1';
+    const nm = (typeof islandName === 'function') ? islandName(key) : key;
+    secT.textContent = L(`${nm} at a glance`, `${nm} με μια ματιά`);
   }
 
   // itinerary days: 1 open, the rest one line each
@@ -2818,11 +2848,15 @@ function _compactIslandMobile(root, key) {
   const mw = root.querySelector('.itin-map-wrap');
   if (mw && !root.querySelector('.itin-route-head')) {
     const nd = root.querySelectorAll('.itin-day-card').length;
-    const title = nd > 1 ? L(`The ${nd}-day route`, `Η διαδρομή σε ${nd} μέρες`) : L('The day on the map', 'Η μέρα στον χάρτη');
+    const title = nd > 1 ? L(`The ${nd}-day itinerary`, `Το πρόγραμμα ${nd} ημερών`) : L('The one-day itinerary', 'Το πρόγραμμα της μίας μέρας');
     const sub = nd > 1 ? L('Every stop on the map. Pick a day to see just its route, or open a day below for its schedule.',
                            'Όλες οι στάσεις στον χάρτη. Διάλεξε μέρα για να δεις μόνο τη δική της διαδρομή, ή άνοιξε μια μέρα παρακάτω για το πρόγραμμα.')
                        : L('Every stop on the map; open the day below for its schedule.', 'Όλες οι στάσεις στον χάρτη· άνοιξε τη μέρα παρακάτω για το πρόγραμμα.');
     mw.insertAdjacentHTML('beforebegin', `<div class="itin-route-head"><h2 class="itin-route-title">${esc(title)}</h2><p class="itin-route-sub">${esc(sub)}</p></div>`);
+    const rh = root.querySelector('.itin-route-head'), rt = rh.querySelector('.itin-route-title');
+    const itSub = root.querySelector('.itin-section-sub'), itLink = root.querySelector('.itin-standalone');
+    if (itLink) rh.appendChild(itLink);
+    if (itSub) { if (itSub.textContent.trim()) rt.insertAdjacentElement('afterend', itSub); else itSub.remove(); }
   }
 
   // map day filter -> numbered chips on the map (the titles live on the day cards now)

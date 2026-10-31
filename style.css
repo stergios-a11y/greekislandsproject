@@ -7663,3 +7663,15 @@ html.dark .mc-fold.is-folded { background: var(--surface-2); }
 .itin-route-head { margin: 40px 0 16px; padding-top: 26px; border-top: 1px solid var(--border); }
 .itin-route-title { font-family: var(--font-ui); font-size: var(--text-sub); font-weight: 600; color: var(--ink); margin: 0 0 6px; }
 .itin-route-sub { font-size: var(--text-meta); color: var(--ink-3); margin: 0; }
+
+/* island fixes 1-4 (Oct 2026) */
+@media (min-width: 841px) { .itin-island-intro.mc-clamp p { -webkit-line-clamp: 6; } }
+@media (min-width: 861px) { .detail-grid > .detail-sidebar { position: sticky; top: 76px; align-self: start; } }
+.detail-actionbar .actionbar-spacer { display: none; }
+.detail-actionbar .aff-note { flex: 1 1 220px; width: auto; margin: 0; text-align: right; }
+@media (max-width: 600px) {
+  .detail-actionbar .aff-note { text-align: left; }
+  .detail-hero-actions #detail-print-btn { display: none; }
+}
+.itin-route-head .itin-section-sub { margin: 0 0 4px; color: var(--ink-2, var(--ink)); font-size: var(--text-small); }
+.itin-route-head .itin-standalone { margin: 8px 0 0; }
