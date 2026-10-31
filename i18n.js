@@ -411,6 +411,11 @@ const UI_TEXT = {
   'shortlist.dim.night': { en: 'Night', el: 'Νυχτερινή' },
 
   // Mission page
+  'about3.eyebrow': { en: 'About Aegean Blueprint', el: 'Σχετικά με το Aegean Blueprint' },
+  'about3.fact1': { en: 'islands rated', el: 'νησιά με βαθμολογία' },
+  'about3.fact2': { en: 'visited myself', el: 'τα έχω επισκεφθεί' },
+  'about3.fact3': { en: 'years of trips', el: 'χρόνια ταξίδια' },
+  'about3.fact4': { en: 'sponsors', el: 'χορηγοί' },
   'about3.hi': { en: 'Hi, I\'m Stergios.', el: 'Γεια, είμαι ο Στέργιος.' },
   'about3.bio': { en: 'Greek, based in Athens, 50+ of these 88 islands visited over 20 years. No sponsors, no influencer deals — what I\'d tell a friend, checked with people who live on the islands.', el: 'Έλληνας, ζω στην Αθήνα, έχω πάει σε 50+ από τα 88 νησιά μέσα σε 20 χρόνια. Χωρίς χορηγούς και συνεργασίες — ό,τι θα έλεγα σε έναν φίλο, ελεγμένο με ανθρώπους που ζουν στα νησιά.' },
   'about3.get.title': { en: 'Each island, kept short', el: 'Κάθε νησί, σύντομα' },

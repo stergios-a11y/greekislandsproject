@@ -7708,3 +7708,29 @@ html.dark .mc-fold.is-folded { background: var(--surface-2); }
   #island-guide .similar-section { padding-bottom: 0; }
   #view-detail .detail-grid { margin-bottom: 88px; }
 }
+
+/* About: introduction in the band + facts row (Oct 2026) */
+#view-mission .why-hero { padding: 36px 24px 32px; text-align: left; }
+.ab3-hero { position: relative; display: flex; gap: 28px; align-items: center; max-width: 720px; margin: 0 auto; }
+.ab3-hero-photo { width: 150px; height: 150px; flex: none; border-radius: 50%; object-fit: cover; border: 4px solid rgba(255,255,255,.9); box-shadow: 0 6px 22px rgba(0,0,0,.25); }
+.ab3-eyebrow { font: 800 12px var(--font-ui); letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.75); margin-bottom: 4px; }
+#view-mission .why-hero .ab3-hi { font-family: var(--font-display); font-size: 36px; font-weight: 700; color: #fff; margin: 0 0 8px; line-height: 1.1; }
+#view-mission .why-hero .ab3-bio { color: rgba(255,255,255,.9); font-size: 16px; line-height: 1.6; margin: 0; }
+.ab3-facts { position: relative; display: flex; max-width: 620px; margin: 26px auto 0; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22); border-radius: 14px; }
+.ab3-facts > div { flex: 1; padding: 10px 6px; text-align: center; color: #fff; }
+.ab3-facts > div + div { border-left: 1px solid rgba(255,255,255,.18); }
+.ab3-facts b { display: block; font: 700 26px/1.1 var(--font-display); }
+.ab3-facts span { font-size: 12.5px; color: rgba(255,255,255,.82); }
+@media (max-width: 640px) {
+  .ab3-hero { flex-direction: column; text-align: center; gap: 14px; }
+  .ab3-hero-photo { width: 120px; height: 120px; }
+  #view-mission .why-hero .ab3-hi { font-size: 28px; }
+  #view-mission .why-hero .ab3-bio { font-size: 15px; }
+  .ab3-facts b { font-size: 21px; }
+  .ab3-facts span { font-size: 11px; }
+}
+/* island page: the sidebar's last card ends level with the last similar card; smaller gap to the footer */
+@media (min-width: 861px) {
+  .detail-sidebar > :last-child, .detail-sidebar > :last-child > :last-child { margin-bottom: 0; }
+  #view-detail .detail-grid { margin-bottom: 24px; }
+}
