@@ -3,7 +3,7 @@
 const VERSION = 'v4.0';
 // Map credits without Leaflet's own "Leaflet" prefix (its licence doesn't need it on the map).
 if (typeof L !== 'undefined' && L.Control && L.Control.Attribution) L.Control.Attribution.mergeOptions({ prefix: false });
-const BUILD_DATE = '2026-10-30';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-10-31';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -3641,8 +3641,11 @@ function buildGettingThereSection(data) {
 
   if (!pillHtml && !leadHtml) return '';
 
-  // If there's collapsed content, render a toggle. Otherwise just the lead.
-  const hasMore = restHtml || tipHtml;
+  // Fold only when the fold hides a real amount (~3 lines); a toggle that reveals one line costs a
+  // click for nothing, so short rests and tips are shown in place.
+  const hiddenLen = (restHtml ? restHtml.replace(/<[^>]+>/g, '').length : 0) + (tip ? String(tip).length + 10 : 0);
+  if (hiddenLen && hiddenLen < 220) { leadHtml += restHtml + tipHtml; restHtml = ''; }
+  const hasMore = hiddenLen >= 220;
   const moreBlock = hasMore
     ? `<div class="itin-gt-more" hidden>${restHtml}${tipHtml}</div>
        <button type="button" class="itin-gt-toggle"

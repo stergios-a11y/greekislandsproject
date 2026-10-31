@@ -7700,3 +7700,11 @@ html.dark .mc-fold.is-folded { background: var(--surface-2); }
 .ig-row ul { margin: 0; padding: 0; list-style: none; min-width: 0; }
 .ig-row button { display: block; width: 100%; text-align: left; padding: 2px 0; border: 0; background: none; font: 600 12.5px/1.35 var(--font-ui); color: #1a2332; cursor: pointer; }
 .ig-row button:hover { color: var(--primary); text-decoration: underline; }
+
+/* desktop: the page ends where the last cards end, so a sticky sidebar that reaches the bottom lines
+   up with them (the 88px of padding under 'Islands like this one' moves below the grid) */
+@media (min-width: 861px) {
+  #island-guide .itin-wrapper { padding-bottom: 0; }
+  #island-guide .similar-section { padding-bottom: 0; }
+  #view-detail .detail-grid { margin-bottom: 88px; }
+}

@@ -1685,6 +1685,11 @@ def render_body(key, data, meta, lang='en'):
         # stays in the DOM at load (full SEO indexing). Only render the
         # <details> if there's actually rest content or a tip to hide.
         more_html = ''
+        # Fold only when it hides a real amount (~3 lines); shorter rests and tips show in place.
+        _hidden = len(re.sub(r'<[^>]+>', '', rest_html)) + (len(tip) + 10 if tip else 0)
+        if 0 < _hidden < 220:
+            lead_html += rest_html + tip_html
+            rest_html = tip_html = ''
         if rest_html or tip_html:
             more_html = (
                 f'<details class="seo-gt-more">'
