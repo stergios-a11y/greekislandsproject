@@ -303,7 +303,7 @@ NEW_STR = {
            'start_p': 'Add your first island, or start from a ready-made trip and change it.',
            'rooms_l': '🛏 Rooms on Booking.com', 'see_prices': 'see prices →', 'guide_l': '📖 {isl} guide', 'open_l': 'open →',
            'cyc_t': 'Tap to change: on foot, scooter or car', 'row_t': 'Tap for boat day, rooms and the guide',
-           'trip_k': 'Your trip', 'boat_avail': 'boat day', 'leg_travel': 'Ferries & transport',
+           'trip_k': 'Your trip', 'boat_avail': 'boat day', 'x_h': 'Add to the estimate', 'x_esim': '📶 eSIM for Greece', 'x_esim_s': '€18 pp · not needed with an EU SIM', 'x_ins': '🛡 Travel insurance', 'x_ins_s': 'about €3 pp a day', 'leg_travel': 'Ferries & transport',
            'p1': 'Cyclades classic', 'p2': 'Small Cyclades', 'p3': 'Easy Saronic', 'p4': 'Dodecanese',
            'mshort': {'apr': 'Apr', 'may': 'May', 'jun': 'Jun', 'jul': 'Jul', 'aug': 'Aug', 'sep': 'Sep', 'oct': 'Oct'}},
     'el': {'more_opts': 'Περισσότερα', 'gt_booked': 'Έχω εισιτήρια', 'gt_ferry_c': '⛴ Πλοίο', 'gt_fly_c': '✈ Αεροπλάνο',
@@ -311,7 +311,7 @@ NEW_STR = {
            'start_p': 'Πρόσθεσε το πρώτο νησί, ή ξεκίνα από ένα έτοιμο ταξίδι και άλλαξέ το.',
            'rooms_l': '🛏 Δωμάτια στο Booking.com', 'see_prices': 'δες τιμές →', 'guide_l': '📖 Οδηγός: {isl}', 'open_l': 'άνοιγμα →',
            'cyc_t': 'Πάτα για αλλαγή: πεζός, σκούτερ ή αυτοκίνητο', 'row_t': 'Πάτα για ημέρα σκάφους, δωμάτια και οδηγό',
-           'trip_k': 'Το ταξίδι σου', 'boat_avail': 'ημέρα σκάφους', 'leg_travel': 'Πλοία & μετακινήσεις',
+           'trip_k': 'Το ταξίδι σου', 'boat_avail': 'ημέρα σκάφους', 'x_h': 'Πρόσθεσε στην εκτίμηση', 'x_esim': '📶 eSIM για την Ελλάδα', 'x_esim_s': '€18 ανά άτομο · δεν χρειάζεται με ευρωπαϊκή SIM', 'x_ins': '🛡 Ταξιδιωτική ασφάλεια', 'x_ins_s': 'περίπου €3 ανά άτομο τη μέρα', 'leg_travel': 'Πλοία & μετακινήσεις',
            'p1': 'Κυκλάδες, η κλασική', 'p2': 'Μικρές Κυκλάδες', 'p3': 'Εύκολος Σαρωνικός', 'p4': 'Δωδεκάνησα',
            'mshort': {'apr': 'Απρ', 'may': 'Μάι', 'jun': 'Ιούν', 'jul': 'Ιούλ', 'aug': 'Αύγ', 'sep': 'Σεπ', 'oct': 'Οκτ'}},
 }
@@ -350,7 +350,7 @@ def render_page(lang, meta, data):
     )}
     js_t['months'] = t['months']
     for _k in ('more_opts', 'gt_booked', 'start_h', 'start_p', 'rooms_l', 'see_prices', 'guide_l', 'open_l', 'cyc_t', 'row_t',
-               'trip_k', 'boat_avail', 'leg_travel', 'p1', 'p2', 'p3', 'p4', 'gt_fly_off'):
+               'trip_k', 'boat_avail', 'leg_travel', 'x_h', 'x_esim', 'x_esim_s', 'x_ins', 'x_ins_s', 'p1', 'p2', 'p3', 'p4', 'gt_fly_off'):
         js_t[_k] = t[_k]
 
     schema = json.dumps({
@@ -524,6 +524,12 @@ button.tc-sw{{background:none;border:0;padding:0;text-align:left}}
 .tc-morebtn{{margin-left:auto;font:inherit;font-size:13px;font-weight:800;color:var(--primary-dark,#076880);background:none;border:0;cursor:pointer;padding:4px 2px;white-space:nowrap}}
 .tc-more{{flex-basis:100%;display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center;padding-top:10px;border-top:1px dashed var(--border,#EAE4DC)}}
 .tc-more[hidden]{{display:none}}
+.tc-xtra{{display:grid;gap:8px;margin:14px 0 4px;padding:12px;border-radius:12px;background:var(--surface,#FFFBF5);border:1px solid var(--border,#EAE4DC)}}
+.tc-xtra .tc-sw{{color:var(--ink-1,#1A2332);font-size:13.5px;align-items:flex-start}}
+.tc-xtra .tc-sw .s{{margin-top:2px}}
+.tc-xtra .tc-sw small{{display:block;font-weight:600;font-size:11.5px;color:var(--ink-4,#A0ADB8)}}
+html.dark .tc-xtra{{background:#1A2029;border-color:rgba(255,255,255,.1)}}
+html.dark .tc-xtra .tc-sw{{color:#EEF2F5}}
 .tc-grid{{margin-top:18px}}
 .tc-side{{position:sticky;top:16px}}.tc-side .tc-sum{{position:static}}
 .tc-trip{{padding:6px 0 12px}}
@@ -598,11 +604,9 @@ html.dark .tc-big{{color:#EEF2F5}}
     <div class="tc-g"><small>{t['lbl_trav']}</small><div class="tc-step"><button type="button" id="tc-pax-minus" aria-label="{'Λιγότεροι ταξιδιώτες' if lang == 'el' else 'Fewer travellers'}">−</button><span id="tc-pax" aria-live="polite">2</span><button type="button" id="tc-pax-plus" aria-label="{'Περισσότεροι ταξιδιώτες' if lang == 'el' else 'More travellers'}">+</button></div></div>
     <div class="tc-g"><small>{t['lbl_style']}</small><div class="tc-chips" id="tc-tiers"><button type="button" class="tc-chip" data-t="budget" title="{t['tier_budget_s']}">{t['tier_budget']}</button><button type="button" class="tc-chip on" data-t="mid" title="{t['tier_mid_s']}">{t['tier_mid']}</button><button type="button" class="tc-chip" data-t="comfort" title="{t['tier_comfort_s']}">{t['tier_comfort']}</button></div></div>
     <div class="tc-g"><small>{t['lbl_gt']}</small><div class="tc-chips" id="tc-gt"><button type="button" class="tc-chip on" data-gt="ferry" title="{t['gt_ferry_s']}">{t['gt_ferry_c']}</button><button type="button" class="tc-chip" data-gt="fly" title="{t['gt_fly_s']}">{t['gt_fly_c']}</button><button type="button" class="tc-chip" data-gt="skip" title="{t['skip_tr']}">{t['gt_booked']}</button></div></div>
-    <button type="button" class="tc-morebtn" id="tc-more-btn" aria-expanded="false" aria-controls="tc-more">{t['more_opts']} ▾</button>
-    <div class="tc-more" id="tc-more" hidden>
+    <div class="tc-more" id="tc-more">
       <div class="tc-daterow" style="margin:0"><button class="tc-link" id="tc-exact">{t['exact_link']}</button><input type="date" id="tc-date" class="tc-date" hidden></div>
       <button type="button" role="switch" aria-checked="false" class="tc-sw" id="tc-own"><span class="s" aria-hidden="true"></span> {t['own_sw']}</button>
-      <button type="button" role="switch" aria-checked="false" class="tc-sw" id="tc-noneu"><span class="s" aria-hidden="true"></span> {t['noneu']} <small style="font-weight:600;color:var(--ink-4,#A0ADB8)">{t['noneu_small']}</small></button>
     </div>
   </div>
 
@@ -764,7 +768,7 @@ function stayCost(k,i,v){{const isl=ISL[k],n=state.trip[i].n;
 function fitsExcept(i,k){{return state.trip.every((t,j)=>j===i||pairOK(t.k,k));}}
 
 // ---------------- state ----------------
-let state={{month:'jun',date:null,pax:2,tier:'mid',nonEU:false,fly:false,own:false,skip:false,trip:[]}};
+let state={{month:'jun',date:null,pax:2,tier:'mid',esim:false,ins:false,fly:false,own:false,skip:false,trip:[]}};
 // URL params: ?i=milos:4:c:b,ios:3&m=aug&pax=2&tier=mid
 (function(){{
   const q=new URLSearchParams(location.search);
@@ -779,7 +783,8 @@ let state={{month:'jun',date:null,pax:2,tier:'mid',nonEU:false,fly:false,own:fal
   if(['budget','mid','comfort'].includes(q.get('tier')))state.tier=q.get('tier');
   if(state.date&&!/^\d{{4}}-\d{{2}}-\d{{2}}$/.test(state.date))state.date=null;
   if(/^\d{{4}}-\d{{2}}-\d{{2}}$/.test(q.get('d')||''))state.date=q.get('d');
-  if(q.get('noneu')==='1')state.nonEU=true;
+  if(q.get('noneu')==='1'||state.nonEU){{state.esim=true;state.ins=true;}}delete state.nonEU;
+  if(q.get('esim')==='1')state.esim=true;if(q.get('ins')==='1')state.ins=true;
   {{const ts=tripStart();if(!ts||ts<new Date(Date.now()-864e5))state.date=null;
    else{{const mk=MKEYS[ts.getMonth()];if(CFG.season_room[mk])state.month=mk;}}}}
   if(!CFG.season_room[state.month])state.month='jun';
@@ -794,7 +799,7 @@ let state={{month:'jun',date:null,pax:2,tier:'mid',nonEU:false,fly:false,own:fal
 function sync(){{
   try{{localStorage.setItem('tc-state',JSON.stringify(state));}}catch(e){{}}
   const i=state.trip.map(t=>t.k+':'+t.n+(t.v?':'+t.v:'')+(t.b?':b':'')).join(',');
-  history.replaceState(null,'','?i='+i+'&m='+state.month+'&pax='+state.pax+'&tier='+state.tier+(state.fly?'&fly=1':'')+(state.own?'&veh=own':'')+(state.skip?'&skip=1':'')+(state.nonEU?'&noneu=1':'')+(state.date?'&d='+state.date:''));
+  history.replaceState(null,'','?i='+i+'&m='+state.month+'&pax='+state.pax+'&tier='+state.tier+(state.fly?'&fly=1':'')+(state.own?'&veh=own':'')+(state.skip?'&skip=1':'')+(state.esim?'&esim=1':'')+(state.ins?'&ins=1':'')+(state.date?'&d='+state.date:''));
   // One trip_cost_run per finished estimate (debounced): which islands people
   // actually price, for how long, in which month, at which tier.
   try{{clearTimeout(window._tcEv);window._tcEv=setTimeout(function(){{
@@ -819,7 +824,6 @@ function render(){{
    if(_di&&state.date)_di.hidden=false;}}
   document.querySelectorAll('#tc-months .tc-chip').forEach(c=>c.classList.toggle('on',c.dataset.m===state.month));
   document.querySelectorAll('#tc-tiers .tc-chip').forEach(c=>c.classList.toggle('on',c.dataset.t===state.tier));
-  document.getElementById('tc-noneu').classList.toggle('on',state.nonEU);
   document.getElementById('tc-own').classList.toggle('on',state.own);
   {{const f0=state.trip[0],l0=state.trip[state.trip.length-1];
    const canFly=!!(state.trip.length&&(ISL[f0.k].air||ISL[l0.k].air));
@@ -944,9 +948,8 @@ function render(){{
   li+=line('🍴',T.li_food,`${{eur(Math.round(mealDay(first)))}} ${{T.food_s}}`,msum,null);
   tot+=msum;
   // non-EU extras
-  if(state.nonEU){{
-    const esim=state.pax*18;li+=line('📶',T.li_esim,`${{state.pax}}× ${{T.esim_s}}`,esim,T.book_esim,'https://yesim.tpx.lt/Sax2vWmP');tot+=esim;
-    const ins=state.pax*(nightsTotal+1)*3;li+=line('🛡',T.li_insurance,`${{state.pax}}× ${{nightsTotal+1}} ${{T.ins_days}}`,ins,null);tot+=ins;}}
+  if(state.esim){{const esim=state.pax*18;li+=line('📶',T.li_esim,`${{state.pax}}× ${{T.esim_s}}`,esim,T.book_esim,'https://yesim.tpx.lt/Sax2vWmP');tot+=esim;}}
+  if(state.ins){{const ins=state.pax*(nightsTotal+1)*3;li+=line('🛡',T.li_insurance,`${{state.pax}}× ${{nightsTotal+1}} ${{T.ins_days}}`,ins,null);tot+=ins;}}
 
   const _ts=tripStart();let whenTxt=T.months[state.month];
   if(_ts){{const _e=new Date(_ts);_e.setDate(_e.getDate()+nightsTotal);whenTxt=fmtD(_ts)+' – '+fmtD(_e);}}
@@ -961,6 +964,9 @@ function render(){{
     <div class="tc-pp2">${{eur(rnd(tot/state.pax))}} ${{T.pp}} · ${{whenTxt}} · ${{({{budget:T.tier_budget,mid:T.tier_mid,comfort:T.tier_comfort}})[state.tier]}}<br><small>${{state.fly?T.total_fly:T.total}}</small></div>
     <div class="tc-stk">${{window._tcStk}}</div><div class="tc-leg2">${{window._tcLeg}}</div>
     ${{li}}
+    <div class="tc-xtra"><div class="tc-k">${{T.x_h}}</div>
+      <button type="button" role="switch" aria-checked="${{state.esim}}" class="tc-sw${{state.esim?' on':''}}" data-x="esim"><span class="s" aria-hidden="true"></span><span>${{T.x_esim}}<small>${{T.x_esim_s}}</small></span></button>
+      <button type="button" role="switch" aria-checked="${{state.ins}}" class="tc-sw${{state.ins?' on':''}}" data-x="ins"><span class="s" aria-hidden="true"></span><span>${{T.x_ins}}<small>${{T.x_ins_s}}</small></span></button></div>
     <div class="tc-ctas">
       <a class="tc-cta f" href="https://www.ferryhopper.com/${{LANG==='el'?'el/':'en/'}}" target="_blank" rel="noopener sponsored">${{T.cta_ferry}}</a>
       <a class="tc-cta c" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">${{T.cta_car}}</a>
@@ -1025,9 +1031,8 @@ document.getElementById('tc-date').addEventListener('change',e=>{{const v=e.targ
   const ts=tripStart();if(ts){{const mk=MKEYS[ts.getMonth()];if(CFG.season_room[mk])state.month=mk;}}
   render();}});
 document.getElementById('tc-tiers').addEventListener('click',e=>{{const c=e.target.closest('.tc-chip');if(c){{state.tier=c.dataset.t;render();}}}});
-document.getElementById('tc-noneu').addEventListener('click',()=>{{state.nonEU=!state.nonEU;render();}});
 document.getElementById('tc-own').addEventListener('click',()=>{{state.own=!state.own;if(state.own)state.fly=false;render();}});
-document.getElementById('tc-more-btn').addEventListener('click',e=>{{const m=document.getElementById('tc-more');m.hidden=!m.hidden;e.currentTarget.setAttribute('aria-expanded',String(!m.hidden));}});
+document.getElementById('tc-summary').addEventListener('click',e=>{{const b=e.target.closest('[data-x]');if(!b)return;const k=b.dataset.x;state[k]=!state[k];render();}});
 document.getElementById('tc-gt').addEventListener('click',e=>{{
   const o=e.target.closest('.tc-chip');if(!o||o.classList.contains('off'))return;
   const g=o.dataset.gt;state.skip=g==='skip';if(g==='fly'){{state.fly=true;state.own=false;}}else if(g==='ferry')state.fly=false;
