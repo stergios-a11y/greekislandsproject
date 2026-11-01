@@ -194,7 +194,7 @@ STR = {
         'total': 'Total (excl. flights)', 'pp': 'per person',
         'cta_ferry': '🚢 Book ferries', 'cta_car': '🚗 Get the car',
         'aff_note': 'Affiliate links — they support this guide and cost you nothing.',
-        'assume': '<b>How we estimate:</b> economy ferry fares from real route distances · room prices for a decent double in {month} · one taverna meal + breakfast/snacks per day · car only where you toggled it. Museums, sunbeds and cocktails are yours.',
+        'assume': '<b>How we estimate:</b> economy ferry fares from real route distances · room prices for a decent double in {month} · breakfast, a light lunch, coffee and a taverna dinner with wine per day · car only where you toggled it. Museums, sunbeds and cocktails are yours.',
         'honest': 'Every figure is a typical price, not a quote — expect real prices roughly ±20% either side, set by ferry companies and hotels, not us. Book early for July–August; ferries sell out.',
         'guide': 'guide →',
         'remove': 'Remove',
@@ -277,7 +277,7 @@ STR = {
         'total': 'Σύνολο (χωρίς αεροπορικά)', 'pp': 'ανά άτομο',
         'cta_ferry': '🚢 Κράτηση πλοίων', 'cta_car': '🚗 Κλείσε αυτοκίνητο',
         'aff_note': 'Affiliate σύνδεσμοι — στηρίζουν αυτόν τον οδηγό χωρίς κόστος για εσένα.',
-        'assume': '<b>Πώς υπολογίζουμε:</b> οικονομικά ναύλα από πραγματικές αποστάσεις · τιμές για ένα καλό δίκλινο τον {month} · ένα γεύμα ταβέρνας + πρωινό/σνακ τη μέρα · αυτοκίνητο μόνο όπου το ενεργοποίησες. Μουσεία, ξαπλώστρες και κοκτέιλ δικά σου.',
+        'assume': '<b>Πώς υπολογίζουμε:</b> οικονομικά ναύλα από πραγματικές αποστάσεις · τιμές για ένα καλό δίκλινο τον {month} · πρωινό, ελαφρύ μεσημεριανό, καφές και βραδινό σε ταβέρνα με κρασί τη μέρα · αυτοκίνητο μόνο όπου το ενεργοποίησες. Μουσεία, ξαπλώστρες και κοκτέιλ δικά σου.',
         'honest': 'Κάθε ποσό είναι τυπική τιμή, όχι προσφορά — οι πραγματικές τιμές κινούνται περίπου ±20%, και τις ορίζουν ακτοπλοϊκές και ξενοδοχεία, όχι εμείς. Για Ιούλιο–Αύγουστο κλείσε νωρίς· τα πλοία εξαντλούνται.',
         'guide': 'οδηγός →',
         'remove': 'Αφαίρεση',
@@ -303,7 +303,7 @@ NEW_STR = {
            'start_p': 'Add your first island, or start from a ready-made trip and change it.',
            'rooms_l': '🛏 Rooms on Booking.com', 'see_prices': 'see prices →', 'guide_l': '📖 {isl} guide', 'open_l': 'open →',
            'cyc_t': 'Tap to change: on foot, scooter or car', 'row_t': 'Tap for boat day, rooms and the guide',
-           'trip_k': 'Your trip', 'boat_avail': 'boat day',
+           'trip_k': 'Your trip', 'boat_avail': 'boat day', 'leg_travel': 'Ferries & transport',
            'p1': 'Cyclades classic', 'p2': 'Small Cyclades', 'p3': 'Easy Saronic', 'p4': 'Dodecanese',
            'mshort': {'apr': 'Apr', 'may': 'May', 'jun': 'Jun', 'jul': 'Jul', 'aug': 'Aug', 'sep': 'Sep', 'oct': 'Oct'}},
     'el': {'more_opts': 'Περισσότερα', 'gt_booked': 'Έχω εισιτήρια', 'gt_ferry_c': '⛴ Πλοίο', 'gt_fly_c': '✈ Αεροπλάνο',
@@ -311,7 +311,7 @@ NEW_STR = {
            'start_p': 'Πρόσθεσε το πρώτο νησί, ή ξεκίνα από ένα έτοιμο ταξίδι και άλλαξέ το.',
            'rooms_l': '🛏 Δωμάτια στο Booking.com', 'see_prices': 'δες τιμές →', 'guide_l': '📖 Οδηγός: {isl}', 'open_l': 'άνοιγμα →',
            'cyc_t': 'Πάτα για αλλαγή: πεζός, σκούτερ ή αυτοκίνητο', 'row_t': 'Πάτα για ημέρα σκάφους, δωμάτια και οδηγό',
-           'trip_k': 'Το ταξίδι σου', 'boat_avail': 'ημέρα σκάφους',
+           'trip_k': 'Το ταξίδι σου', 'boat_avail': 'ημέρα σκάφους', 'leg_travel': 'Πλοία & μετακινήσεις',
            'p1': 'Κυκλάδες, η κλασική', 'p2': 'Μικρές Κυκλάδες', 'p3': 'Εύκολος Σαρωνικός', 'p4': 'Δωδεκάνησα',
            'mshort': {'apr': 'Απρ', 'may': 'Μάι', 'jun': 'Ιούν', 'jul': 'Ιούλ', 'aug': 'Αύγ', 'sep': 'Σεπ', 'oct': 'Οκτ'}},
 }
@@ -350,7 +350,7 @@ def render_page(lang, meta, data):
     )}
     js_t['months'] = t['months']
     for _k in ('more_opts', 'gt_booked', 'start_h', 'start_p', 'rooms_l', 'see_prices', 'guide_l', 'open_l', 'cyc_t', 'row_t',
-               'trip_k', 'boat_avail', 'p1', 'p2', 'p3', 'p4', 'gt_fly_off'):
+               'trip_k', 'boat_avail', 'leg_travel', 'p1', 'p2', 'p3', 'p4', 'gt_fly_off'):
         js_t[_k] = t[_k]
 
     schema = json.dumps({
@@ -552,6 +552,11 @@ button.tc-sw{{background:none;border:0;padding:0;text-align:left}}
 .tc-pp2{{font-size:13px;color:var(--ink-3,#637080);margin-bottom:12px}}
 .tc-stk{{display:flex;height:10px;border-radius:5px;overflow:hidden;margin:0 0 10px;background:var(--border,#EAE4DC)}}
 .tc-stk i{{display:block;height:100%}}
+.tc-leg2{{display:flex;flex-wrap:wrap;gap:4px 12px;margin:-2px 0 10px;font-size:12px;color:var(--ink-3,#637080)}}
+.tc-leg2 span{{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}}
+.tc-leg2 i{{width:9px;height:9px;border-radius:50%;display:inline-block}}
+.tc-leg2 b{{color:var(--ink-1,#1A2332);font-weight:800}}
+html.dark .tc-leg2 b{{color:#EEF2F5}}
 .tc-side #tc-swaps .tc-swaps-box{{background:var(--card-bg,#fff);margin:14px 0 0;box-shadow:0 4px 18px rgba(26,35,50,.06)}}
 .tc-start{{padding:18px 16px 6px}}
 .tc-start h3{{font-family:'Alegreya',serif;font-size:22px;margin:0 0 4px;text-transform:none;letter-spacing:0;color:var(--ink-1,#1A2332)}}
@@ -946,14 +951,15 @@ function render(){{
   const _ts=tripStart();let whenTxt=T.months[state.month];
   if(_ts){{const _e=new Date(_ts);_e.setDate(_e.getDate()+nightsTotal);whenTxt=fmtD(_ts)+' – '+fmtD(_e);}}
   {{const tr=Math.max(0,tot-rsum-msum-csumAll-bsum);
-   const cat=[['#0B8FAC',rsum],['#E8522A',msum],['#3D8B6F',tr],['#C98A00',csumAll],['#8A7AA0',bsum]].filter(x=>x[1]>0);
+   const cat=[['#0B8FAC',rsum,T.li_rooms],['#E8522A',msum,T.li_food],['#3D8B6F',tr,T.leg_travel],['#C98A00',csumAll,T.li_vehicle],['#8A7AA0',bsum,T.li_boat]].filter(x=>x[1]>0);
    const ct=cat.reduce((a,x)=>a+x[1],0)||1;
-   window._tcStk=cat.map(x=>`<i style="width:${{(x[1]/ct*100).toFixed(1)}}%;background:${{x[0]}}"></i>`).join('');}}
+   window._tcStk=cat.map(x=>`<i style="width:${{(x[1]/ct*100).toFixed(1)}}%;background:${{x[0]}}"></i>`).join('');
+   window._tcLeg=cat.map(x=>`<span><i style="background:${{x[0]}}"></i>${{x[2]}} <b>${{Math.round(x[1]/ct*100)}}%</b></span>`).join('');}}
   document.getElementById('tc-summary').innerHTML=`
     <div class="tc-k">${{T.trip_k}} · ${{nightsTotal}} ${{T.nights}} · ${{state.pax}} ${{T.li_pax}}</div>
     <div class="tc-big">${{eur(rnd(tot))}}</div>
     <div class="tc-pp2">${{eur(rnd(tot/state.pax))}} ${{T.pp}} · ${{whenTxt}} · ${{({{budget:T.tier_budget,mid:T.tier_mid,comfort:T.tier_comfort}})[state.tier]}}<br><small>${{state.fly?T.total_fly:T.total}}</small></div>
-    <div class="tc-stk">${{window._tcStk}}</div>
+    <div class="tc-stk">${{window._tcStk}}</div><div class="tc-leg2">${{window._tcLeg}}</div>
     ${{li}}
     <div class="tc-ctas">
       <a class="tc-cta f" href="https://www.ferryhopper.com/${{LANG==='el'?'el/':'en/'}}" target="_blank" rel="noopener sponsored">${{T.cta_ferry}}</a>
