@@ -2528,7 +2528,7 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}market-data.js?v={_market.version()}"></script>
-<script src="{asset_prefix}i18n.js?v=56"></script>
+<script src="{asset_prefix}i18n.js?v=57"></script>
 <script src="{asset_prefix}script.js?v=192"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
@@ -2847,7 +2847,7 @@ def generate_ferries_page(island_keys):
             'ferries':   ('Ferries',   'Πλοία'),
             'hopping':   ('Ferries & Hopping', 'Πλοία & Νησοπορία'),
             'match':     ('Match Me', 'Βρες το Νησί σου'),
-            'tripcost':  ('Budget', 'Κόστος'),
+            'tripcost':  ('Trip cost', 'Κόστος'),
             'shortlist': ('⭐ My Shortlist', '⭐ Η Λίστα μου'),
             'mission':   ('About',     'Σχετικά'),
             'privacy':   ('Privacy',   'Απόρρητο'),

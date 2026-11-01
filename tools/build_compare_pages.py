@@ -994,7 +994,7 @@ def render_page(pair_key, lang):
         nav_items = [
             ('/#compare', 'Compare', 'nav-compare'),
             ('/#match', 'Match Me', 'nav-match'),
-            ('/trip-cost/', 'Budget', 'nav-tripcost'),
+            ('/trip-cost/', 'Trip cost', 'nav-tripcost'),
             ('/#hopping', 'Ferries & Hopping', 'nav-hopping'),
             ('/festivals/', 'Festivals', 'nav-festivals'),
             ('/#data', 'Islands Data', 'nav-data'),
@@ -1361,7 +1361,7 @@ def render_hub_page(lang, valid_pairs):
         nav_items = [
             ('/#compare', 'Compare', 'nav-compare'),
             ('/#match', 'Match Me', 'nav-match'),
-            ('/trip-cost/', 'Budget', 'nav-tripcost'),
+            ('/trip-cost/', 'Trip cost', 'nav-tripcost'),
             ('/#hopping', 'Ferries & Hopping', 'nav-hopping'),
             ('/festivals/', 'Festivals', 'nav-festivals'),
             ('/#data', 'Islands Data', 'nav-data'),

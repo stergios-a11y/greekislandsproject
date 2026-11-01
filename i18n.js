@@ -25,7 +25,7 @@ const UI_TEXT = {
   'nav.festivals': { en: 'Festivals', el: 'Γιορτές' },
   'nav.ferries': { en: 'Ferries', el: 'Πλοία' },
   'nav.hopping': { en: 'Ferries & Hopping', el: 'Πλοία & Νησοπορία' },
-  'nav.tripcost': { en: 'Budget', el: 'Κόστος' },
+  'nav.tripcost': { en: 'Trip cost', el: 'Κόστος' },
   'nav.international': { en: 'International', el: 'Διεθνώς' },
   'nav.match': { en: 'Match Me', el: 'Βρες το Νησί σου' },
   'nav.shortlist': { en: '⭐ My Shortlist', el: '⭐ Η Λίστα μου' },
