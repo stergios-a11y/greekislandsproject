@@ -127,29 +127,11 @@
     }
   ],
   "seo_nav": [
-    {
-      "href": "#data",
-      "label": {
-        "en": "All Islands",
-        "el": "Όλα τα Νησιά"
-      }
-    },
-    {
-      "href": "#compare",
-      "label": {
-        "en": "Compare",
-        "el": "Σύγκριση"
-      },
-      "feature": "compare"
-    },
-    {
-      "href": "#match",
-      "label": {
-        "en": "Quiz",
-        "el": "Quiz"
-      },
-      "feature": "match"
-    }
+    {"href": "#data", "label": {"en": "Islands Data", "el": "Στοιχεία Νησιών"}},
+    {"href": "#compare", "label": {"en": "Compare", "el": "Σύγκριση"}, "feature": "compare"},
+    {"href": "#match", "label": {"en": "Match Me", "el": "Βρες το Νησί σου"}, "feature": "match"},
+    {"href": "trip-cost/", "label": {"en": "Trip cost", "el": "Κόστος"}, "feature": "trip_cost"},
+    {"href": "festivals/", "label": {"en": "Festivals", "el": "Γιορτές"}, "feature": "festivals"}
   ],
   "strings": {
     "aff_ferry": {

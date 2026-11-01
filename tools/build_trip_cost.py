@@ -627,7 +627,7 @@ html.dark .tc-xtra .tc-sw{{color:#EEF2F5}}
 .tc-leg2 i{{width:9px;height:9px;border-radius:50%;display:inline-block}}
 .tc-leg2 b{{color:var(--ink-1,#1A2332);font-weight:800}}
 html.dark .tc-leg2 b{{color:#EEF2F5}}
-.tc-side #tc-swaps .tc-swaps-box{{background:var(--card-bg,#fff);margin:14px 0 0;box-shadow:0 4px 18px rgba(26,35,50,.06)}}
+#tc-swaps .tc-swaps-box{{background:var(--card-bg,#fff);margin:14px 0 0;box-shadow:0 4px 18px rgba(26,35,50,.06)}}
 .tc-start{{padding:18px 16px 6px}}
 .tc-start h3{{font-family:'Alegreya',serif;font-size:22px;margin:0 0 4px;text-transform:none;letter-spacing:0;color:var(--ink-1,#1A2332)}}
 .tc-start p{{margin:0 0 12px;color:var(--ink-3,#637080);font-size:13.5px}}
@@ -684,11 +684,11 @@ html.dark .tc-big{{color:#EEF2F5}}
           <span id="tc-quick"></span>
         </div>
       </section>
+      <div id="tc-swaps"></div>
     </div>
     <div class="tc-side">
       <div class="tc-sec"><b>{t['sec_bud']}</b></div>
       <div class="tc-sum" id="tc-summary"></div>
-      <div id="tc-swaps"></div>
     </div>
     <a class="tc-stick" id="tc-stick" href="#tc-summary"><span><span class="k">{'Your estimate' if lang == 'en' else 'Η εκτίμησή σου'}</span><br><span class="v" id="tc-stick-v"></span> <span class="s" id="tc-stick-s"></span></span><span class="go">{'Breakdown ↓' if lang == 'en' else 'Ανάλυση ↓'}</span></a>
   </div>

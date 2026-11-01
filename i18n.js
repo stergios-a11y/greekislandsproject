@@ -273,9 +273,9 @@ const UI_TEXT = {
   'data.col.area': { en: 'Area (km²) ↕', el: 'Έκταση (τ.χλμ.) ↕' },
   'data.col.pop': { en: 'Population ↕', el: 'Πληθυσμός ↕' },
   'data.col.scores': { en: 'Scores', el: 'Βαθμολογίες' },
-  'data.showdims': { en: '📊 Click to reveal all 5 scores →', el: '📊 Πάτα για όλες τις βαθμολογίες →' },
+  'data.showdims': { en: '📊 Show the 5 scores + car need →', el: '📊 Δες τις 5 βαθμολογίες + αυτοκίνητο →' },
   'data.hidedims': { en: '📊 Show island stats →', el: '📊 Δες τα στοιχεία των νησιών →' },
-  'data.hinttext': { en: 'See the 5 dimensions we rate each island on — beaches, culture, nightlife, access, affordability.', el: 'Δες τις 5 διαστάσεις που βαθμολογούμε σε κάθε νησί — παραλίες, πολιτισμός, νυχτερινή ζωή, πρόσβαση, προσιτή τιμή.' },
+  'data.hinttext': { en: 'The 5 scores we give every island — beaches, culture, nightlife, access, affordability — plus how much you need a car.', el: 'Οι 5 βαθμολογίες κάθε νησιού — παραλίες, πολιτισμός, νυχτερινή ζωή, πρόσβαση, προσιτή τιμή — και πόσο χρειάζεσαι αυτοκίνητο.' },
 
   // Compare page
   'compare.title': { en: 'Compare Islands', el: 'Σύγκριση Νησιών' },
@@ -427,7 +427,7 @@ const UI_TEXT = {
   'about3.get.food.t': { en: '2–3 tavernas', el: '2–3 ταβέρνες' },
   'about3.get.food.d': { en: 'where I\'d take a friend for one night', el: 'εκεί που θα πήγαινα έναν φίλο για ένα βράδυ' },
   'about3.score.title': { en: 'How the scores work', el: 'Πώς βαθμολογώ' },
-  'about3.score.lead': { en: 'Six numbers from 1 to 5, and 5 is always best. My judgment, not a formula — from visits, friends on the islands and official data. The overall leans most on Beach and Culture.', el: 'Έξι βαθμοί από το 1 έως το 5 — το 5 είναι πάντα το καλύτερο. Δική μου κρίση, όχι αλγόριθμος: από επισκέψεις, φίλους στα νησιά και επίσημα στοιχεία. Η συνολική βαθμολογία βαραίνει περισσότερο στις παραλίες και τον πολιτισμό.' },
+  'about3.score.lead': { en: 'Five scores from 1 to 5, plus one practical number for how much you need a car; 5 is always best. My judgment, not a formula — from visits, friends on the islands and official data. The overall leans most on Beach and Culture.', el: 'Πέντε βαθμολογίες από το 1 έως το 5, και ένας πρακτικός αριθμός για το πόσο χρειάζεσαι αυτοκίνητο — το 5 είναι πάντα το καλύτερο. Δική μου κρίση, όχι αλγόριθμος: από επισκέψεις, φίλους στα νησιά και επίσημα στοιχεία. Η συνολική βαθμολογία βαραίνει περισσότερο στις παραλίες και τον πολιτισμό.' },
   'about3.col5': { en: '5 means', el: 'Το 5 σημαίνει' },
   'about3.col1': { en: '1 means', el: 'Το 1 σημαίνει' },
   'about3.beach.5': { en: 'You\'d go for the water — Milos, Elafonisos', el: 'Πας για τα νερά — Μήλος, Ελαφόνησος' },
