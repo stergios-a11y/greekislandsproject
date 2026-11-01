@@ -200,7 +200,7 @@ button.tc-sw{background:none;border:0;padding:0;text-align:left}
 .tc-more[hidden]{display:none}
 
 .tc-set{background:var(--card-bg,#fff);border:1px solid var(--border,#EAE4DC);border-radius:16px;padding:4px 18px;margin:18px 0 0;box-shadow:0 2px 10px rgba(26,35,50,.05)}
-.tc-q{display:grid;grid-template-columns:168px minmax(0,1fr);align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--border,#EAE4DC)}
+.tc-q{display:grid;grid-template-columns:150px minmax(0,1fr);align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--border,#EAE4DC)}
 .tc-q:first-child{border-top:0}
 .tc-q>b{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3,#637080)}
 .tc-c{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
@@ -223,7 +223,9 @@ button.tc-sw{background:none;border:0;padding:0;text-align:left}
 .tc-sec{display:flex;align-items:center;gap:10px;margin:22px 0 8px;flex-wrap:wrap}
 .tc-sec>b{font-family:'Alegreya',serif;font-size:21px;color:var(--ink-1,#1A2332)}
 .tc-sec>small{font-size:12.5px;color:var(--ink-3,#637080)}
-.tc-side .tc-sec,.tc-grid>div>.tc-sec{margin-top:0}
+.tc-side .tc-sec,.tc-grid>div>.tc-sec:first-child{margin-top:0}
+.tc-grid>div>.tc-set+.tc-sec{margin-top:22px}
+.tc-grid .tc-set .tc-chip{padding:6px 10px}
 .tc-set{margin-top:0}
 .tc-num{width:22px;height:22px;border-radius:50%;background:var(--primary,#0B8FAC);color:#fff;font:800 12px/22px var(--font-ui,sans-serif);text-align:center;font-style:normal;display:inline-block;letter-spacing:0;margin-right:8px;flex:none}
 .tc-q>b{display:flex;align-items:center}
@@ -357,6 +359,8 @@ html.dark .tc-big{color:#EEF2F5}
     <p>An honest estimate for your route — real ferry distances, typical room and taverna prices, no fake precision. Adjust anything below and it updates.</p>
   </div>
 
+  <div class="tc-grid">
+    <div>
   <div class="tc-sec"><b>Your trip</b><small>everything here changes the budget</small></div>
   <div class="tc-set" id="tc-bar">
     <div class="tc-q"><b><i class="tc-num">1</i>Travellers</b><div class="tc-c"><div class="tc-step"><button type="button" id="tc-pax-minus" aria-label="Fewer travellers">−</button><span id="tc-pax" aria-live="polite">2</span><button type="button" id="tc-pax-plus" aria-label="More travellers">+</button></div><span class="tc-rl">Rooms</span><div class="tc-step"><button type="button" id="tc-rm-minus" aria-label="−">−</button><span id="tc-rooms" aria-live="polite">1</span><button type="button" id="tc-rm-plus" aria-label="+">+</button></div><span class="tc-hint" id="tc-rhint"></span></div></div>
@@ -365,9 +369,6 @@ html.dark .tc-big{color:#EEF2F5}
     <div class="tc-q"><b><i class="tc-num">4</i>Getting there</b><div class="tc-c tc-chips" id="tc-gt"><button type="button" class="tc-chip on" data-gt="ferry" title="passenger fares from the mainland ports">⛴ Ferry</button><button type="button" class="tc-chip" data-gt="car">🚗 Ferry + my car</button><button type="button" class="tc-chip" data-gt="fly" title="airport islands get the flight fare, the rest stay on the ferry · no car option">✈ Fly</button><button type="button" class="tc-chip" data-gt="skip" title="Transport already booked — leave ferries and flights out of the total">Already booked</button></div></div>
     <div class="tc-q"><b><i class="tc-num">5</i>Extras</b><div class="tc-c tc-chips" id="tc-extras"><button type="button" class="tc-chip tc-tg" data-x="esim" role="switch" aria-checked="false"><i aria-hidden="true"></i>📶 eSIM<small>€18 pp · only for non-EU phones</small></button><button type="button" class="tc-chip tc-tg" data-x="ins" role="switch" aria-checked="false"><i aria-hidden="true"></i>🛡 Travel insurance<small>about €3 pp a day</small></button></div></div>
   </div>
-
-  <div class="tc-grid">
-    <div>
       <div class="tc-sec"><i class="tc-num">6</i><b>Islands</b><small>tap an island for boat day, rooms and the guide</small></div>
       <section class="tc-ctrl tc-trip">
         <div id="tc-route"></div>
@@ -675,7 +676,7 @@ function render(){
   // ---------------- totals (single typical figures) ----------------
   const nightsTotal=state.trip.reduce((a,t)=>a+t.n,0);
   let tot=0,li='',csumAll=0;
-  const GRP={'⛴':'tr','🚌':'tr','✈':'tr','🛏':'rooms','🚗':'car','⛽':'car','🚙':'car','⛵':'boat','🍴':'food','📶':'x','🛡':'x'};
+  const GRP={'⛴':'tr','🚌':'tr','✈':'tr','🛏':'rooms','🚗':'car','⛽':'fuel','🚙':'car','⛵':'boat','🍴':'food','📶':'x','🛡':'x'};
   const line=(ic,lbl,small,amt,book,url,nc)=>`<div class="tc-li${nc?' nc':''}"${nc?'':` data-amt="${amt}" data-g="${GRP[ic]||ic}"`}><span>${ic}</span><span class="lbl">${lbl}<small>${nc?'<b>'+T.not_counted+'</b> · ':''}${small}</small></span><span class="amt">${eur(rnd(amt))}</span>${book?`<a class="bk" href="${url}" target="_blank" rel="noopener sponsored">${book}</a>`:''}</div>`;
   const SK=state.skip;  // transport already booked: keep the lines, leave them out of the total
   // ferries
@@ -747,12 +748,12 @@ function render(){
       <p class="aff-note"><a href="${LANG==='el'?'/el/privacy/#affiliate':'/privacy/#affiliate'}">${T.aff_note}</a></p>
     </div>
     <details class="tc-assume"><summary style="cursor:pointer;font-weight:800;color:#076880">${T.assume.split('</b>')[0].replace('<b>','')}</summary><div style="margin-top:6px">${(T.assume.split('</b>')[1]||'').replace('{month}',T.months[state.month])}</div><div class="tc-honest">${T.honest}</div></details></div>`;
-  {const COL={rooms:'#0B8FAC',food:'#E8522A',tr:'#3D8B6F',car:'#C98A00',boat:'#8A7AA0',x:'#7A8794'};
+  {const COL={rooms:'#0B8FAC',food:'#E8522A',tr:'#3D8B6F',car:'#C98A00',fuel:'#E3B04B',boat:'#8A7AA0',x:'#7A8794'};
    const ls=[...document.querySelectorAll('#tc-summary .tc-li[data-amt]')],sum={},cnt={};
    ls.forEach(l=>{const g=l.dataset.g;sum[g]=(sum[g]||0)+(+l.dataset.amt);cnt[g]=(cnt[g]||0)+1;});
    const seen=new Set();ls.forEach(l=>{const g=l.dataset.g;if(seen.has(g)||!tot)return;seen.add(g);
      const pc=Math.round(sum[g]/tot*100);
-     l.insertAdjacentHTML('beforeend',`<div class="tr"><i style="width:${Math.max(2,pc)}%;background:${COL[g]||'#7A8794'}"></i><em>${pc}%${cnt[g]>1&&g==='car'?' '+T.incl_fuel:''}</em></div>`);});}
+     l.insertAdjacentHTML('beforeend',`<div class="tr"><i style="width:${Math.max(2,pc)}%;background:${COL[g]||'#7A8794'}"></i><em>${pc}%</em></div>`);});}
   {const st=document.getElementById('tc-stick');if(st){st.classList.add('on');
     // Hide the bar while the full estimate itself is on screen.
     if(!window._tcIO&&window.IntersectionObserver){window._tcIO=new IntersectionObserver(es=>{es.forEach(e=>st.classList.toggle('seen',e.isIntersecting));},{threshold:0.15});window._tcIO.observe(document.getElementById('tc-summary'));}
