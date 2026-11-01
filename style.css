@@ -7774,3 +7774,10 @@ html.dark .ig-row { border-top-color: rgba(255,255,255,.1); }
   .itin-day-card .itin-day-header .itin-day-meta { margin: 0; }
   .itin-day-card .itin-day-header[data-fold-btn] > .mc-chev { top: 12px; margin-top: 0; }
 }
+
+/* "Plan this trip" buttons (Compare, Shortlist, Quiz results) */
+.plan-trip-row { grid-column: 1 / -1; margin: 6px 0 16px; }
+.plan-trip-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--warm); color: #fff !important; font: 800 14.5px var(--font-ui); padding: 11px 18px; border-radius: 12px; text-decoration: none; box-shadow: 0 3px 10px rgba(232,82,42,.28); }
+.plan-trip-btn:hover { background: var(--warm-dark); }
+.plan-trip-inline { display: inline-block; margin: 0 8px 8px 0; }
+.compare-cards .plan-trip-row { text-align: center; margin: 4px 0 0; }

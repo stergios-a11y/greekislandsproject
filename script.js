@@ -4666,6 +4666,16 @@ function updateShortlistCount() {
   }
 }
 
+/* "Plan this trip" (Nov 2026): Compare, Shortlist and Quiz hand their islands to Trip cost. */
+function planTripUrl(keys, src) {
+  const p = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? '/el' : '';
+  return p + '/trip-cost/?plan=' + keys.join(',') + '&src=' + src;
+}
+function planTripBtn(keys, src, en, el) {
+  const isEl = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+  return `<div class="plan-trip-row"><a class="plan-trip-btn" href="${planTripUrl(keys, src)}" onclick="event.stopPropagation();try{track('plan_trip',{src:'${src}',n:${keys.length}})}catch(e){}">🧮 ${isEl ? el : en}</a></div>`;
+}
+
 function renderShortlist() {
   const container = document.getElementById('shortlist-container');
   if (!container) return;
@@ -4704,6 +4714,7 @@ function renderShortlist() {
   }).join('');
   
   container.innerHTML = `
+    ${planTripBtn(list.filter(k => ISLANDS_DATA[k]), 'shortlist', 'Plan a trip with these', 'Κόστισε ένα ταξίδι με αυτά')}
     <div class="shortlist-grid">${cards}</div>
     <div style="text-align:center;margin-top:24px">
       <button class="shortlist-clear" onclick="clearShortlist()">${t('shortlist.clearall')}</button>
@@ -5244,7 +5255,8 @@ function renderCompareCards(iA, iB) {
     </div>`;
   };
 
-  container.innerHTML = card(iA) + card(iB);
+  container.innerHTML = card(iA) + card(iB)
+    + planTripBtn([iA.key, iB.key], 'compare', 'Plan these 2 as one trip', 'Κόστισε τα 2 ως ένα ταξίδι');
 }
 
 /* ============================================================
@@ -5897,7 +5909,7 @@ function renderFerryMap() {
 }
 
 let FERRY_FOCUS_PORT = null;
-let FERRY_SHOW_INTL = false;   // off by default; the chip or #international turns it on
+let FERRY_SHOW_INTL = true;   // on by default (Nov 2026); the chip hides them
 function toggleFerryIntl() {
   if (FERRY_SHOW_INTL && FERRY_MAP_FILTERS.size === 0) return;   // keep one chip on
   FERRY_SHOW_INTL = !FERRY_SHOW_INTL;
@@ -6796,7 +6808,7 @@ function computeQuizResults() {
     const hero = HERO_PHOTOS[island.key] || {};
     const thumb = `<div class="result-thumb${hero.url ? '' : ' result-nophoto'}" data-initial="${nm.charAt(0)}">${hero.url ? `<img src="${thumbUrl(hero.url)}" alt="${nm}" loading="lazy" onerror="this.closest('.result-thumb').classList.add('result-nophoto')">` : ''}<span class="result-rank">${idx + 1}</span></div>`;
     return `<a class="result-island-card" data-key="${island.key}" href="${CURRENT_LANG === 'el' ? '/el' : ''}/island/${island.key}/">${thumb}<div class="result-info"><div class="result-name">${nm}</div><div class="result-why">${whyText(island)}</div></div></a>`;
-  }).join('')}<div class="quiz-retake-row"><button class="quiz-retake-btn">${t('match.retake')}</button></div>`;
+  }).join('')}<div class="quiz-retake-row">${planTripBtn(scored.slice(0, 3).map(s => s.key), 'quiz', 'Cost my top 3 as one trip', 'Κόστισε τα 3 πρώτα ως ένα ταξίδι').replace('plan-trip-row', 'plan-trip-row plan-trip-inline')}<button class="quiz-retake-btn">${t('match.retake')}</button></div>`;
   results.querySelectorAll('.result-island-card').forEach(card => { card.addEventListener('click', (e) => {
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;   // new tab: let the link work
     e.preventDefault(); navigateTo('island', card.dataset.key);

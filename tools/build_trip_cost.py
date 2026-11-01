@@ -303,7 +303,7 @@ NEW_STR = {
            'start_p': 'Add your first island, or start from a ready-made trip and change it.',
            'rooms_l': '🛏 Rooms on Booking.com', 'see_prices': 'see prices →', 'guide_l': '📖 {isl} guide', 'open_l': 'open →',
            'cyc_t': 'Tap to change: on foot, scooter or car', 'row_t': 'Tap for boat day, rooms and the guide',
-           'trip_k': 'Your trip', 'boat_avail': 'boat day', 'x_h': 'Add to the estimate', 'sec_trip': 'Your trip', 'sec_trip_s': 'everything here changes the budget', 'sec_isl': 'Islands', 'sec_isl_s': 'tap an island for boat day, rooms and the guide', 'sec_bud': 'Your budget', 'lbl_rooms': 'Rooms', 'lbl_extras': 'Extras', 'x_esim_c': '📶 eSIM', 'x_ins_c': '🛡 Travel insurance', 'incl_fuel': 'incl. fuel', 'p1w': 'person', 'pNw': 'people', 'r1w': 'room', 'rNw': 'rooms', 'triple': 'triple', 'quad': 'quad', 'auto_r': 'two per room', 'eu_roam': 'EU phones work in Greece at no extra charge (EU roaming)', 'lbl_when': 'When', 'w_month': 'Month', 'w_date': 'Start date', 'd_hint': '→ {n} nights, back {d}', 'pax_hint': 'two people share a room', 'gt_car_c': '🚗 Ferry + my car', 'gt_bus': '🚌 Bus', 'gt_mycar': '🚗 My car', 'fast_note': 'fast boats where they run: ~{x}', 'x_esim': '📶 eSIM for Greece', 'x_esim_s': '€18 pp · only for non-EU phones', 'x_ins': '🛡 Travel insurance', 'x_ins_s': 'about €3 pp a day', 'leg_travel': 'Ferries & transport',
+           'trip_k': 'Your trip', 'boat_avail': 'boat day', 'x_h': 'Add to the estimate', 'plan_sep': '{isl}: a separate trip, no ferry links it to this route.', 'plan_other': 'Cost that trip instead →', 'save_isl': '⭐ Save these islands', 'saved_isl': '✓ Saved to your shortlist', 'sec_trip': 'Your trip', 'sec_trip_s': 'everything here changes the budget', 'sec_isl': 'Islands', 'sec_isl_s': 'tap an island for boat day, rooms and the guide', 'sec_bud': 'Your budget', 'lbl_rooms': 'Rooms', 'lbl_extras': 'Extras', 'x_esim_c': '📶 eSIM', 'x_ins_c': '🛡 Travel insurance', 'incl_fuel': 'incl. fuel', 'p1w': 'person', 'pNw': 'people', 'r1w': 'room', 'rNw': 'rooms', 'triple': 'triple', 'quad': 'quad', 'auto_r': 'two per room', 'eu_roam': 'EU phones work in Greece at no extra charge (EU roaming)', 'lbl_when': 'When', 'w_month': 'Month', 'w_date': 'Start date', 'd_hint': '→ {n} nights, back {d}', 'pax_hint': 'two people share a room', 'gt_car_c': '🚗 Ferry + my car', 'gt_bus': '🚌 Bus', 'gt_mycar': '🚗 My car', 'fast_note': 'fast boats where they run: ~{x}', 'x_esim': '📶 eSIM for Greece', 'x_esim_s': '€18 pp · only for non-EU phones', 'x_ins': '🛡 Travel insurance', 'x_ins_s': 'about €3 pp a day', 'leg_travel': 'Ferries & transport',
            'p1': 'Cyclades classic', 'p2': 'Small Cyclades', 'p3': 'Easy Saronic', 'p4': 'Dodecanese',
            'mshort': {'apr': 'Apr', 'may': 'May', 'jun': 'Jun', 'jul': 'Jul', 'aug': 'Aug', 'sep': 'Sep', 'oct': 'Oct'}},
     'el': {'more_opts': 'Περισσότερα', 'gt_booked': 'Έχω εισιτήρια', 'gt_ferry_c': '⛴ Πλοίο', 'gt_fly_c': '✈ Αεροπλάνο',
@@ -311,7 +311,7 @@ NEW_STR = {
            'start_p': 'Πρόσθεσε το πρώτο νησί, ή ξεκίνα από ένα έτοιμο ταξίδι και άλλαξέ το.',
            'rooms_l': '🛏 Δωμάτια στο Booking.com', 'see_prices': 'δες τιμές →', 'guide_l': '📖 Οδηγός: {isl}', 'open_l': 'άνοιγμα →',
            'cyc_t': 'Πάτα για αλλαγή: πεζός, σκούτερ ή αυτοκίνητο', 'row_t': 'Πάτα για ημέρα σκάφους, δωμάτια και οδηγό',
-           'trip_k': 'Το ταξίδι σου', 'boat_avail': 'ημέρα σκάφους', 'x_h': 'Πρόσθεσε στην εκτίμηση', 'sec_trip': 'Το ταξίδι σου', 'sec_trip_s': 'ό,τι αλλάζεις εδώ αλλάζει τον προϋπολογισμό', 'sec_isl': 'Νησιά', 'sec_isl_s': 'πάτα ένα νησί για ημέρα σκάφους, δωμάτια και οδηγό', 'sec_bud': 'Ο προϋπολογισμός σου', 'lbl_rooms': 'Δωμάτια', 'lbl_extras': 'Επιπλέον', 'x_esim_c': '📶 eSIM', 'x_ins_c': '🛡 Ταξιδιωτική ασφάλεια', 'incl_fuel': 'μαζί με καύσιμα', 'p1w': 'άτομο', 'pNw': 'άτομα', 'r1w': 'δωμάτιο', 'rNw': 'δωμάτια', 'triple': 'τρίκλινο', 'quad': 'τετράκλινο', 'auto_r': 'δύο ανά δωμάτιο', 'eu_roam': 'Τα κινητά από χώρες της ΕΕ λειτουργούν στην Ελλάδα χωρίς επιπλέον χρέωση (περιαγωγή ΕΕ)', 'lbl_when': 'Πότε', 'w_month': 'Μήνας', 'w_date': 'Ημερομηνία', 'd_hint': '→ {n} νύχτες, επιστροφή {d}', 'pax_hint': 'δύο άτομα ανά δωμάτιο', 'gt_car_c': '🚗 Πλοίο + το αυτοκίνητό μου', 'gt_bus': '🚌 Λεωφορείο', 'gt_mycar': '🚗 Με το αυτοκίνητο', 'fast_note': 'με ταχύπλοα όπου υπάρχουν: ~{x}', 'x_esim': '📶 eSIM για την Ελλάδα', 'x_esim_s': '€18 ανά άτομο · μόνο για κινητά εκτός ΕΕ', 'x_ins': '🛡 Ταξιδιωτική ασφάλεια', 'x_ins_s': 'περίπου €3 ανά άτομο τη μέρα', 'leg_travel': 'Πλοία & μετακινήσεις',
+           'trip_k': 'Το ταξίδι σου', 'boat_avail': 'ημέρα σκάφους', 'x_h': 'Πρόσθεσε στην εκτίμηση', 'plan_sep': '{isl}: ξεχωριστό ταξίδι, δεν συνδέεται ακτοπλοϊκά με αυτή τη διαδρομή.', 'plan_other': 'Υπολόγισε εκείνο το ταξίδι →', 'save_isl': '⭐ Αποθήκευσε αυτά τα νησιά', 'saved_isl': '✓ Αποθηκεύτηκαν στη λίστα σου', 'sec_trip': 'Το ταξίδι σου', 'sec_trip_s': 'ό,τι αλλάζεις εδώ αλλάζει τον προϋπολογισμό', 'sec_isl': 'Νησιά', 'sec_isl_s': 'πάτα ένα νησί για ημέρα σκάφους, δωμάτια και οδηγό', 'sec_bud': 'Ο προϋπολογισμός σου', 'lbl_rooms': 'Δωμάτια', 'lbl_extras': 'Επιπλέον', 'x_esim_c': '📶 eSIM', 'x_ins_c': '🛡 Ταξιδιωτική ασφάλεια', 'incl_fuel': 'μαζί με καύσιμα', 'p1w': 'άτομο', 'pNw': 'άτομα', 'r1w': 'δωμάτιο', 'rNw': 'δωμάτια', 'triple': 'τρίκλινο', 'quad': 'τετράκλινο', 'auto_r': 'δύο ανά δωμάτιο', 'eu_roam': 'Τα κινητά από χώρες της ΕΕ λειτουργούν στην Ελλάδα χωρίς επιπλέον χρέωση (περιαγωγή ΕΕ)', 'lbl_when': 'Πότε', 'w_month': 'Μήνας', 'w_date': 'Ημερομηνία', 'd_hint': '→ {n} νύχτες, επιστροφή {d}', 'pax_hint': 'δύο άτομα ανά δωμάτιο', 'gt_car_c': '🚗 Πλοίο + το αυτοκίνητό μου', 'gt_bus': '🚌 Λεωφορείο', 'gt_mycar': '🚗 Με το αυτοκίνητο', 'fast_note': 'με ταχύπλοα όπου υπάρχουν: ~{x}', 'x_esim': '📶 eSIM για την Ελλάδα', 'x_esim_s': '€18 ανά άτομο · μόνο για κινητά εκτός ΕΕ', 'x_ins': '🛡 Ταξιδιωτική ασφάλεια', 'x_ins_s': 'περίπου €3 ανά άτομο τη μέρα', 'leg_travel': 'Πλοία & μετακινήσεις',
            'p1': 'Κυκλάδες, η κλασική', 'p2': 'Μικρές Κυκλάδες', 'p3': 'Εύκολος Σαρωνικός', 'p4': 'Δωδεκάνησα',
            'mshort': {'apr': 'Απρ', 'may': 'Μάι', 'jun': 'Ιούν', 'jul': 'Ιούλ', 'aug': 'Αύγ', 'sep': 'Σεπ', 'oct': 'Οκτ'}},
 }
@@ -350,7 +350,7 @@ def render_page(lang, meta, data):
     )}
     js_t['months'] = t['months']
     for _k in ('more_opts', 'gt_booked', 'start_h', 'start_p', 'rooms_l', 'see_prices', 'guide_l', 'open_l', 'cyc_t', 'row_t',
-               'trip_k', 'boat_avail', 'leg_travel', 'x_h', 'eu_roam', 'incl_fuel', 'p1w', 'pNw', 'r1w', 'rNw', 'triple', 'quad', 'auto_r', 'lbl_when', 'w_month', 'w_date', 'd_hint', 'gt_car_c', 'gt_ferry_c', 'gt_bus', 'gt_mycar', 'fast_note', 'x_esim', 'x_esim_s', 'x_ins', 'x_ins_s', 'p1', 'p2', 'p3', 'p4', 'gt_fly_off'):
+               'trip_k', 'boat_avail', 'leg_travel', 'x_h', 'eu_roam', 'plan_sep', 'plan_other', 'save_isl', 'saved_isl', 'incl_fuel', 'p1w', 'pNw', 'r1w', 'rNw', 'triple', 'quad', 'auto_r', 'lbl_when', 'w_month', 'w_date', 'd_hint', 'gt_car_c', 'gt_ferry_c', 'gt_bus', 'gt_mycar', 'fast_note', 'x_esim', 'x_esim_s', 'x_ins', 'x_ins_s', 'p1', 'p2', 'p3', 'p4', 'gt_fly_off'):
         js_t[_k] = t[_k]
 
     schema = json.dumps({
@@ -617,6 +617,11 @@ html.dark .tc-xtra .tc-sw{{color:#EEF2F5}}
 .tc-exp .amt{{margin-left:auto;font-weight:800}}
 .tc-trip .tc-warn{{padding:0 16px 8px 74px;margin:6px 0 0}}
 .tc-trip .tc-addrow{{padding:4px 16px 0;margin-top:10px}}
+.tc-plan{{display:flex;gap:8px 12px;align-items:center;flex-wrap:wrap;background:#FFF6E0;border-bottom:1px solid #F0DFB0;padding:10px 16px;font-size:13.5px;margin:-6px 0 4px}}
+.tc-plan a{{font-weight:800;color:var(--primary-dark,#076880);text-decoration:none;white-space:nowrap}}
+.tc-saverow{{display:flex;justify-content:flex-end;padding:10px 16px 0}}
+.tc-savebtn{{font:inherit;font-size:13px;font-weight:800;color:var(--primary-dark,#076880);background:var(--card-bg,#fff);border:1.5px solid var(--primary,#0B8FAC);border-radius:10px;padding:6px 12px;cursor:pointer}}
+html.dark .tc-plan{{background:#2E2814;border-color:#4A4020}}
 .tc-k{{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3,#637080)}}
 .tc-big{{font-family:'Alegreya',serif;font-weight:800;font-size:44px;line-height:1.05;color:var(--ink-1,#1A2332);margin:4px 0 2px}}
 .tc-pp2{{font-size:13px;color:var(--ink-3,#637080);margin-bottom:12px}}
@@ -683,6 +688,7 @@ html.dark .tc-big{{color:#EEF2F5}}
           </div>
           <span id="tc-quick"></span>
         </div>
+        <div class="tc-saverow"><button type="button" class="tc-savebtn" id="tc-save">{t['save_isl']}</button></div>
       </section>
       <div id="tc-swaps"></div>
     </div>
@@ -831,11 +837,24 @@ function stayCost(k,i,v){{const isl=ISL[k],n=state.trip[i].n;
 function fitsExcept(i,k){{return state.trip.every((t,j)=>j===i||pairOK(t.k,k));}}
 
 // ---------------- state ----------------
+let PLAN_LEFT=[];
 let state={{month:'jun',date:null,pax:2,tier:'mid',esim:false,ins:false,fly:false,own:false,skip:false,trip:[]}};
 // URL params: ?i=milos:4:c:b,ios:3&m=aug&pax=2&tier=mid
 (function(){{
   const q=new URLSearchParams(location.search);
   try{{const saved=localStorage.getItem('tc-state');if(saved&&!q.get('i')){{state=JSON.parse(saved);}}}}catch(e){{}}
+  if(q.get('plan')){{
+    const keys=[...new Set(q.get('plan').split(','))].filter(k=>ISL[k]);
+    // groups that can be one ferry trip; cost the biggest, note the rest
+    const groups=[];keys.forEach(k=>{{const g=groups.find(g=>g.every(x=>pairOK(x,k)));g?g.push(k):groups.push([k]);}});
+    groups.sort((a,b)=>b.length-a.length);
+    const pick=groups[0]||[];PLAN_LEFT=groups.slice(1).flat();
+    // ferry order: start nearest the mainland port, then the nearest next island
+    const gate=k=>gateOf(k)||ISL[k];const left=pick.slice(),ord=[];
+    if(left.length){{left.sort((a,b)=>haversine(gate(a),ISL[a])-haversine(gate(b),ISL[b]));ord.push(left.shift());
+      while(left.length){{const c=ord[ord.length-1];left.sort((a,b)=>haversine(ISL[c],ISL[a])-haversine(ISL[c],ISL[b]));ord.push(left.shift());}}}}
+    state.trip=ord.map(k=>({{k,n:Math.min(14,Math.max(1,ISL[k].days||3)),v:'',b:false}}));
+  }}
   if(q.get('i')){{
     const trip=q.get('i').split(',').map(s=>{{const p=s.split(':');
       return ISL[p[0]]?{{k:p[0],n:Math.min(14,Math.max(1,parseInt(p[1])||3)),v:p.includes('c')?'c':(p.includes('m')?'m':''),b:p.includes('b')}}:null;}}).filter(Boolean);
@@ -963,6 +982,8 @@ function render(){{
     const ret=legInfo(last,'M');
     h+=`<div class="tc-leg"><span class="l">🛳</span> ${{T.back_to}} ${{ret.label||''}}<span class="fp">${{(ret.road&&!state.own&&ret.bus)?'🚌 €'+ret.bus+' pp':fareTxt(ret.f)}}${{(state.own&&carFee(ret.f)&&!NO_CAR[last])?' + 🚗 €'+Math.round(carFee(ret.f)):''}}</span></div>`;
   }}
+  if(PLAN_LEFT.length){{const nm=PLAN_LEFT.map(iname).join(', ');
+    h=`<div class="tc-plan">ℹ️ <span>${{T.plan_sep.replace('{{isl}}','<b>'+nm+'</b>')}}</span><a href="?plan=${{PLAN_LEFT.join(',')}}">${{T.plan_other}}</a></div>`+h;}}
   document.getElementById('tc-route').innerHTML=h;
   renderSwaps();
 
@@ -1121,6 +1142,12 @@ document.getElementById('tc-gt').addEventListener('click',e=>{{
   const o=e.target.closest('.tc-chip');if(!o||o.classList.contains('off'))return;
   const g=o.dataset.gt;state.skip=g==='skip';state.own=g==='car';state.fly=g==='fly';
   render();}});
+document.getElementById('tc-save').addEventListener('click',e=>{{
+  let sl=[];try{{sl=JSON.parse(localStorage.getItem('islandShortlist')||'[]');}}catch(_){{}}
+  state.trip.forEach(t=>{{if(!sl.includes(t.k))sl.push(t.k);}});
+  try{{localStorage.setItem('islandShortlist',JSON.stringify(sl));}}catch(_){{}}
+  e.currentTarget.textContent=T.saved_isl;
+  try{{if(typeof gtag==='function')gtag('event','trip_saved',{{islands:state.trip.map(t=>t.k).join(',')}});}}catch(_){{}}}});
 document.getElementById('tc-pax-minus').addEventListener('click',()=>{{state.pax=Math.max(1,state.pax-1);render();}});
 document.getElementById('tc-pax-plus').addEventListener('click',()=>{{state.pax=Math.min(8,state.pax+1);render();}});
 document.getElementById('tc-route').addEventListener('click',e=>{{
