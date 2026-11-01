@@ -303,7 +303,7 @@ NEW_STR = {
            'start_p': 'Add your first island, or start from a ready-made trip and change it.',
            'rooms_l': '🛏 Rooms on Booking.com', 'see_prices': 'see prices →', 'guide_l': '📖 {isl} guide', 'open_l': 'open →',
            'cyc_t': 'Tap to change: on foot, scooter or car', 'row_t': 'Tap for boat day, rooms and the guide',
-           'trip_k': 'Your trip', 'boat_avail': 'boat day', 'x_h': 'Add to the estimate', 'lbl_when': 'When', 'w_month': 'Month', 'w_date': 'Start date', 'd_hint': '→ {n} nights, back {d}', 'pax_hint': 'two people share a room', 'gt_car_c': '🚗 Ferry + my car', 'gt_bus': '🚌 Bus', 'gt_mycar': '🚗 My car', 'fast_note': 'fast boats where they run: ~{x}', 'x_esim': '📶 eSIM for Greece', 'x_esim_s': '€18 pp · not needed with an EU SIM', 'x_ins': '🛡 Travel insurance', 'x_ins_s': 'about €3 pp a day', 'leg_travel': 'Ferries & transport',
+           'trip_k': 'Your trip', 'boat_avail': 'boat day', 'x_h': 'Add to the estimate', 'eu_roam': 'EU phones work in Greece at no extra charge (EU roaming)', 'lbl_when': 'When', 'w_month': 'Month', 'w_date': 'Start date', 'd_hint': '→ {n} nights, back {d}', 'pax_hint': 'two people share a room', 'gt_car_c': '🚗 Ferry + my car', 'gt_bus': '🚌 Bus', 'gt_mycar': '🚗 My car', 'fast_note': 'fast boats where they run: ~{x}', 'x_esim': '📶 eSIM for Greece', 'x_esim_s': '€18 pp · only for non-EU phones', 'x_ins': '🛡 Travel insurance', 'x_ins_s': 'about €3 pp a day', 'leg_travel': 'Ferries & transport',
            'p1': 'Cyclades classic', 'p2': 'Small Cyclades', 'p3': 'Easy Saronic', 'p4': 'Dodecanese',
            'mshort': {'apr': 'Apr', 'may': 'May', 'jun': 'Jun', 'jul': 'Jul', 'aug': 'Aug', 'sep': 'Sep', 'oct': 'Oct'}},
     'el': {'more_opts': 'Περισσότερα', 'gt_booked': 'Έχω εισιτήρια', 'gt_ferry_c': '⛴ Πλοίο', 'gt_fly_c': '✈ Αεροπλάνο',
@@ -311,7 +311,7 @@ NEW_STR = {
            'start_p': 'Πρόσθεσε το πρώτο νησί, ή ξεκίνα από ένα έτοιμο ταξίδι και άλλαξέ το.',
            'rooms_l': '🛏 Δωμάτια στο Booking.com', 'see_prices': 'δες τιμές →', 'guide_l': '📖 Οδηγός: {isl}', 'open_l': 'άνοιγμα →',
            'cyc_t': 'Πάτα για αλλαγή: πεζός, σκούτερ ή αυτοκίνητο', 'row_t': 'Πάτα για ημέρα σκάφους, δωμάτια και οδηγό',
-           'trip_k': 'Το ταξίδι σου', 'boat_avail': 'ημέρα σκάφους', 'x_h': 'Πρόσθεσε στην εκτίμηση', 'lbl_when': 'Πότε', 'w_month': 'Μήνας', 'w_date': 'Ημερομηνία', 'd_hint': '→ {n} νύχτες, επιστροφή {d}', 'pax_hint': 'δύο άτομα ανά δωμάτιο', 'gt_car_c': '🚗 Πλοίο + αυτοκίνητο', 'gt_bus': '🚌 Λεωφορείο', 'gt_mycar': '🚗 Με το αυτοκίνητο', 'fast_note': 'με ταχύπλοα όπου υπάρχουν: ~{x}', 'x_esim': '📶 eSIM για την Ελλάδα', 'x_esim_s': '€18 ανά άτομο · δεν χρειάζεται με ευρωπαϊκή SIM', 'x_ins': '🛡 Ταξιδιωτική ασφάλεια', 'x_ins_s': 'περίπου €3 ανά άτομο τη μέρα', 'leg_travel': 'Πλοία & μετακινήσεις',
+           'trip_k': 'Το ταξίδι σου', 'boat_avail': 'ημέρα σκάφους', 'x_h': 'Πρόσθεσε στην εκτίμηση', 'eu_roam': 'Τα κινητά από χώρες της ΕΕ λειτουργούν στην Ελλάδα χωρίς επιπλέον χρέωση (περιαγωγή ΕΕ)', 'lbl_when': 'Πότε', 'w_month': 'Μήνας', 'w_date': 'Ημερομηνία', 'd_hint': '→ {n} νύχτες, επιστροφή {d}', 'pax_hint': 'δύο άτομα ανά δωμάτιο', 'gt_car_c': '🚗 Πλοίο + αυτοκίνητο', 'gt_bus': '🚌 Λεωφορείο', 'gt_mycar': '🚗 Με το αυτοκίνητο', 'fast_note': 'με ταχύπλοα όπου υπάρχουν: ~{x}', 'x_esim': '📶 eSIM για την Ελλάδα', 'x_esim_s': '€18 ανά άτομο · μόνο για κινητά εκτός ΕΕ', 'x_ins': '🛡 Ταξιδιωτική ασφάλεια', 'x_ins_s': 'περίπου €3 ανά άτομο τη μέρα', 'leg_travel': 'Πλοία & μετακινήσεις',
            'p1': 'Κυκλάδες, η κλασική', 'p2': 'Μικρές Κυκλάδες', 'p3': 'Εύκολος Σαρωνικός', 'p4': 'Δωδεκάνησα',
            'mshort': {'apr': 'Απρ', 'may': 'Μάι', 'jun': 'Ιούν', 'jul': 'Ιούλ', 'aug': 'Αύγ', 'sep': 'Σεπ', 'oct': 'Οκτ'}},
 }
@@ -350,7 +350,7 @@ def render_page(lang, meta, data):
     )}
     js_t['months'] = t['months']
     for _k in ('more_opts', 'gt_booked', 'start_h', 'start_p', 'rooms_l', 'see_prices', 'guide_l', 'open_l', 'cyc_t', 'row_t',
-               'trip_k', 'boat_avail', 'leg_travel', 'x_h', 'lbl_when', 'w_month', 'w_date', 'd_hint', 'gt_car_c', 'gt_ferry_c', 'gt_bus', 'gt_mycar', 'fast_note', 'x_esim', 'x_esim_s', 'x_ins', 'x_ins_s', 'p1', 'p2', 'p3', 'p4', 'gt_fly_off'):
+               'trip_k', 'boat_avail', 'leg_travel', 'x_h', 'eu_roam', 'lbl_when', 'w_month', 'w_date', 'd_hint', 'gt_car_c', 'gt_ferry_c', 'gt_bus', 'gt_mycar', 'fast_note', 'x_esim', 'x_esim_s', 'x_ins', 'x_ins_s', 'p1', 'p2', 'p3', 'p4', 'gt_fly_off'):
         js_t[_k] = t[_k]
 
     schema = json.dumps({
@@ -986,7 +986,7 @@ function render(){{
   li+=line('🍴',T.li_food,`${{eur(Math.round(mealDay(first)))}} ${{T.food_s}}`,msum,null);
   tot+=msum;
   // non-EU extras
-  if(state.esim){{const esim=state.pax*18;li+=line('📶',T.li_esim,`${{state.pax}}× ${{T.esim_s}}`,esim,T.book_esim,'https://yesim.tpx.lt/Sax2vWmP');tot+=esim;}}
+  if(state.esim){{const esim=state.pax*18;li+=line('📶',T.li_esim,`${{state.pax}}× ${{T.esim_s}}<br>${{T.eu_roam}}`,esim,T.book_esim,'https://yesim.tech/country/greece/');tot+=esim;}}
   if(state.ins){{const ins=state.pax*(nightsTotal+1)*3;li+=line('🛡',T.li_insurance,`${{state.pax}}× ${{nightsTotal+1}} ${{T.ins_days}}`,ins,null);tot+=ins;}}
 
   const _ts=tripStart();let whenTxt=T.months[state.month];
