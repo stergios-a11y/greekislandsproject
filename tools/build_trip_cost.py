@@ -303,7 +303,7 @@ NEW_STR = {
            'start_p': 'Add your first island, or start from a ready-made trip and change it.',
            'rooms_l': '🛏 Rooms on Booking.com', 'see_prices': 'see prices →', 'guide_l': '📖 {isl} guide', 'open_l': 'open →',
            'cyc_t': 'Tap to change: on foot, scooter or car', 'row_t': 'Tap for boat day, rooms and the guide',
-           'trip_k': 'Your trip', 'boat_avail': 'boat day', 'x_h': 'Add to the estimate', 'eu_roam': 'EU phones work in Greece at no extra charge (EU roaming)', 'lbl_when': 'When', 'w_month': 'Month', 'w_date': 'Start date', 'd_hint': '→ {n} nights, back {d}', 'pax_hint': 'two people share a room', 'gt_car_c': '🚗 Ferry + my car', 'gt_bus': '🚌 Bus', 'gt_mycar': '🚗 My car', 'fast_note': 'fast boats where they run: ~{x}', 'x_esim': '📶 eSIM for Greece', 'x_esim_s': '€18 pp · only for non-EU phones', 'x_ins': '🛡 Travel insurance', 'x_ins_s': 'about €3 pp a day', 'leg_travel': 'Ferries & transport',
+           'trip_k': 'Your trip', 'boat_avail': 'boat day', 'x_h': 'Add to the estimate', 'sec_trip': 'Your trip', 'sec_trip_s': 'everything here changes the budget', 'sec_isl': 'Islands', 'sec_isl_s': 'tap an island for boat day, rooms and the guide', 'sec_bud': 'Your budget', 'lbl_rooms': 'Rooms', 'lbl_extras': 'Extras', 'x_esim_c': '📶 eSIM', 'x_ins_c': '🛡 Travel insurance', 'incl_fuel': 'incl. fuel', 'p1w': 'person', 'pNw': 'people', 'r1w': 'room', 'rNw': 'rooms', 'triple': 'triple', 'quad': 'quad', 'auto_r': 'two per room', 'eu_roam': 'EU phones work in Greece at no extra charge (EU roaming)', 'lbl_when': 'When', 'w_month': 'Month', 'w_date': 'Start date', 'd_hint': '→ {n} nights, back {d}', 'pax_hint': 'two people share a room', 'gt_car_c': '🚗 Ferry + my car', 'gt_bus': '🚌 Bus', 'gt_mycar': '🚗 My car', 'fast_note': 'fast boats where they run: ~{x}', 'x_esim': '📶 eSIM for Greece', 'x_esim_s': '€18 pp · only for non-EU phones', 'x_ins': '🛡 Travel insurance', 'x_ins_s': 'about €3 pp a day', 'leg_travel': 'Ferries & transport',
            'p1': 'Cyclades classic', 'p2': 'Small Cyclades', 'p3': 'Easy Saronic', 'p4': 'Dodecanese',
            'mshort': {'apr': 'Apr', 'may': 'May', 'jun': 'Jun', 'jul': 'Jul', 'aug': 'Aug', 'sep': 'Sep', 'oct': 'Oct'}},
     'el': {'more_opts': 'Περισσότερα', 'gt_booked': 'Έχω εισιτήρια', 'gt_ferry_c': '⛴ Πλοίο', 'gt_fly_c': '✈ Αεροπλάνο',
@@ -311,7 +311,7 @@ NEW_STR = {
            'start_p': 'Πρόσθεσε το πρώτο νησί, ή ξεκίνα από ένα έτοιμο ταξίδι και άλλαξέ το.',
            'rooms_l': '🛏 Δωμάτια στο Booking.com', 'see_prices': 'δες τιμές →', 'guide_l': '📖 Οδηγός: {isl}', 'open_l': 'άνοιγμα →',
            'cyc_t': 'Πάτα για αλλαγή: πεζός, σκούτερ ή αυτοκίνητο', 'row_t': 'Πάτα για ημέρα σκάφους, δωμάτια και οδηγό',
-           'trip_k': 'Το ταξίδι σου', 'boat_avail': 'ημέρα σκάφους', 'x_h': 'Πρόσθεσε στην εκτίμηση', 'eu_roam': 'Τα κινητά από χώρες της ΕΕ λειτουργούν στην Ελλάδα χωρίς επιπλέον χρέωση (περιαγωγή ΕΕ)', 'lbl_when': 'Πότε', 'w_month': 'Μήνας', 'w_date': 'Ημερομηνία', 'd_hint': '→ {n} νύχτες, επιστροφή {d}', 'pax_hint': 'δύο άτομα ανά δωμάτιο', 'gt_car_c': '🚗 Πλοίο + αυτοκίνητο', 'gt_bus': '🚌 Λεωφορείο', 'gt_mycar': '🚗 Με το αυτοκίνητο', 'fast_note': 'με ταχύπλοα όπου υπάρχουν: ~{x}', 'x_esim': '📶 eSIM για την Ελλάδα', 'x_esim_s': '€18 ανά άτομο · μόνο για κινητά εκτός ΕΕ', 'x_ins': '🛡 Ταξιδιωτική ασφάλεια', 'x_ins_s': 'περίπου €3 ανά άτομο τη μέρα', 'leg_travel': 'Πλοία & μετακινήσεις',
+           'trip_k': 'Το ταξίδι σου', 'boat_avail': 'ημέρα σκάφους', 'x_h': 'Πρόσθεσε στην εκτίμηση', 'sec_trip': 'Το ταξίδι σου', 'sec_trip_s': 'ό,τι αλλάζεις εδώ αλλάζει τον προϋπολογισμό', 'sec_isl': 'Νησιά', 'sec_isl_s': 'πάτα ένα νησί για ημέρα σκάφους, δωμάτια και οδηγό', 'sec_bud': 'Ο προϋπολογισμός σου', 'lbl_rooms': 'Δωμάτια', 'lbl_extras': 'Επιπλέον', 'x_esim_c': '📶 eSIM', 'x_ins_c': '🛡 Ταξιδιωτική ασφάλεια', 'incl_fuel': 'μαζί με καύσιμα', 'p1w': 'άτομο', 'pNw': 'άτομα', 'r1w': 'δωμάτιο', 'rNw': 'δωμάτια', 'triple': 'τρίκλινο', 'quad': 'τετράκλινο', 'auto_r': 'δύο ανά δωμάτιο', 'eu_roam': 'Τα κινητά από χώρες της ΕΕ λειτουργούν στην Ελλάδα χωρίς επιπλέον χρέωση (περιαγωγή ΕΕ)', 'lbl_when': 'Πότε', 'w_month': 'Μήνας', 'w_date': 'Ημερομηνία', 'd_hint': '→ {n} νύχτες, επιστροφή {d}', 'pax_hint': 'δύο άτομα ανά δωμάτιο', 'gt_car_c': '🚗 Πλοίο + το αυτοκίνητό μου', 'gt_bus': '🚌 Λεωφορείο', 'gt_mycar': '🚗 Με το αυτοκίνητο', 'fast_note': 'με ταχύπλοα όπου υπάρχουν: ~{x}', 'x_esim': '📶 eSIM για την Ελλάδα', 'x_esim_s': '€18 ανά άτομο · μόνο για κινητά εκτός ΕΕ', 'x_ins': '🛡 Ταξιδιωτική ασφάλεια', 'x_ins_s': 'περίπου €3 ανά άτομο τη μέρα', 'leg_travel': 'Πλοία & μετακινήσεις',
            'p1': 'Κυκλάδες, η κλασική', 'p2': 'Μικρές Κυκλάδες', 'p3': 'Εύκολος Σαρωνικός', 'p4': 'Δωδεκάνησα',
            'mshort': {'apr': 'Απρ', 'may': 'Μάι', 'jun': 'Ιούν', 'jul': 'Ιούλ', 'aug': 'Αύγ', 'sep': 'Σεπ', 'oct': 'Οκτ'}},
 }
@@ -350,7 +350,7 @@ def render_page(lang, meta, data):
     )}
     js_t['months'] = t['months']
     for _k in ('more_opts', 'gt_booked', 'start_h', 'start_p', 'rooms_l', 'see_prices', 'guide_l', 'open_l', 'cyc_t', 'row_t',
-               'trip_k', 'boat_avail', 'leg_travel', 'x_h', 'eu_roam', 'lbl_when', 'w_month', 'w_date', 'd_hint', 'gt_car_c', 'gt_ferry_c', 'gt_bus', 'gt_mycar', 'fast_note', 'x_esim', 'x_esim_s', 'x_ins', 'x_ins_s', 'p1', 'p2', 'p3', 'p4', 'gt_fly_off'):
+               'trip_k', 'boat_avail', 'leg_travel', 'x_h', 'eu_roam', 'incl_fuel', 'p1w', 'pNw', 'r1w', 'rNw', 'triple', 'quad', 'auto_r', 'lbl_when', 'w_month', 'w_date', 'd_hint', 'gt_car_c', 'gt_ferry_c', 'gt_bus', 'gt_mycar', 'fast_note', 'x_esim', 'x_esim_s', 'x_ins', 'x_ins_s', 'p1', 'p2', 'p3', 'p4', 'gt_fly_off'):
         js_t[_k] = t[_k]
 
     schema = json.dumps({
@@ -526,7 +526,7 @@ button.tc-sw{{background:none;border:0;padding:0;text-align:left}}
 .tc-more[hidden]{{display:none}}
 
 .tc-set{{background:var(--card-bg,#fff);border:1px solid var(--border,#EAE4DC);border-radius:16px;padding:4px 18px;margin:18px 0 0;box-shadow:0 2px 10px rgba(26,35,50,.05)}}
-.tc-q{{display:grid;grid-template-columns:130px minmax(0,1fr);align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--border,#EAE4DC)}}
+.tc-q{{display:grid;grid-template-columns:168px minmax(0,1fr);align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--border,#EAE4DC)}}
 .tc-q:first-child{{border-top:0}}
 .tc-q>b{{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3,#637080)}}
 .tc-c{{display:flex;flex-wrap:wrap;gap:6px;align-items:center}}
@@ -545,6 +545,33 @@ button.tc-sw{{background:none;border:0;padding:0;text-align:left}}
 .tc-seg2 button.on{{background:var(--card-bg,#fff);color:var(--primary-dark,#076880);box-shadow:0 1px 4px rgba(26,35,50,.2)}}
 .tc-when .tc-date{{font-size:13.5px;padding:6px 10px}}
 #tc-months[hidden],.tc-when .tc-date[hidden]{{display:none!important}}
+
+.tc-sec{{display:flex;align-items:center;gap:10px;margin:22px 0 8px;flex-wrap:wrap}}
+.tc-sec>b{{font-family:'Alegreya',serif;font-size:21px;color:var(--ink-1,#1A2332)}}
+.tc-sec>small{{font-size:12.5px;color:var(--ink-3,#637080)}}
+.tc-side .tc-sec,.tc-grid>div>.tc-sec{{margin-top:0}}
+.tc-set{{margin-top:0}}
+.tc-num{{width:22px;height:22px;border-radius:50%;background:var(--primary,#0B8FAC);color:#fff;font:800 12px/22px var(--font-ui,sans-serif);text-align:center;font-style:normal;display:inline-block;letter-spacing:0;margin-right:8px;flex:none}}
+.tc-q>b{{display:flex;align-items:center}}
+.tc-rl{{font-size:12.5px;font-weight:700;color:var(--ink-2,#2E3D50);margin:0 2px 0 12px}}
+.tc-tg{{display:inline-flex;align-items:center;gap:7px}}
+.tc-tg>i{{width:26px;height:15px;border-radius:8px;background:#d5dbe0;position:relative;display:inline-block;flex:none}}
+.tc-tg>i:after{{content:"";position:absolute;left:2px;top:2px;width:11px;height:11px;border-radius:50%;background:#fff;transition:left .15s}}
+.tc-tg.on>i{{background:#2ec4e6}}.tc-tg.on>i:after{{left:13px}}
+.tc-set .tc-tg small{{font-size:11px;font-weight:600;color:var(--ink-3,#637080);margin-left:2px}}
+.tc-set .tc-tg.on small{{color:#cfd6de}}
+.tc-sum{{padding:0!important;overflow:hidden;box-shadow:0 10px 30px rgba(7,104,128,.18)!important}}
+.tc-bh{{background:linear-gradient(135deg,#076880,#0C3442);color:#fff;padding:16px 20px 18px}}
+.tc-bh .tc-k{{color:#bfe8f2}}
+.tc-bh .tc-big{{color:#fff}}
+.tc-bh .tc-pp2{{color:#d6eef4;margin:0}}.tc-bh .tc-pp2 small{{color:#a9d6e2}}
+.tc-bb{{padding:6px 20px 18px}}
+.tc-li .tr{{grid-column:2/4;display:flex;align-items:center;gap:8px;margin-top:5px}}
+.tc-li .tr i{{display:block;height:6px;border-radius:3px;min-width:4px}}
+.tc-li .tr em{{font-style:normal;font-size:11.5px;font-weight:800;color:var(--ink-3,#637080);white-space:nowrap}}
+html.dark .tc-bh{{background:linear-gradient(135deg,#0C4556,#0A2530)}}
+@media(max-width:640px){{.tc-rl{{margin-left:6px}}.tc-set .tc-tg small{{display:none}}.tc-sec>small{{display:none}}}}
+
 html.dark .tc-set{{background:#1F2530;border-color:rgba(255,255,255,.12)}}
 html.dark .tc-q{{border-top-color:rgba(255,255,255,.08)}}
 html.dark .tc-set .tc-chip.on{{background:#EEF2F5;color:#1A2332;border-color:#EEF2F5}}
@@ -634,15 +661,18 @@ html.dark .tc-big{{color:#EEF2F5}}
     <p>{t['sub']}</p>
   </div>
 
+  <div class="tc-sec"><b>{t['sec_trip']}</b><small>{t['sec_trip_s']}</small></div>
   <div class="tc-set" id="tc-bar">
-    <div class="tc-q"><b>{t['lbl_trav']}</b><div class="tc-c"><div class="tc-step"><button type="button" id="tc-pax-minus" aria-label="{'Λιγότεροι ταξιδιώτες' if lang == 'el' else 'Fewer travellers'}">−</button><span id="tc-pax" aria-live="polite">2</span><button type="button" id="tc-pax-plus" aria-label="{'Περισσότεροι ταξιδιώτες' if lang == 'el' else 'More travellers'}">+</button></div><span class="tc-hint">{t['pax_hint']}</span></div></div>
-    <div class="tc-q"><b>{t['lbl_style']}</b><div class="tc-c tc-chips" id="tc-tiers"><button type="button" class="tc-chip" data-t="budget">{t['tier_budget']}<small>{t['tier_budget_s']}</small></button><button type="button" class="tc-chip on" data-t="mid">{t['tier_mid']}<small>{t['tier_mid_s']}</small></button><button type="button" class="tc-chip" data-t="comfort">{t['tier_comfort']}<small>{t['tier_comfort_s']}</small></button></div></div>
-    <div class="tc-q"><b>{t['lbl_when']}</b><div class="tc-c tc-when"><span class="tc-seg2" id="tc-when"><button type="button" data-w="m" class="on">{t['w_month']}</button><button type="button" data-w="d">{t['w_date']}</button></span><div class="tc-chips" id="tc-months">{months_html}</div><input type="date" id="tc-date" class="tc-date" hidden><span class="tc-hint" id="tc-dhint"></span></div></div>
-    <div class="tc-q"><b>{t['lbl_gt']}</b><div class="tc-c tc-chips" id="tc-gt"><button type="button" class="tc-chip on" data-gt="ferry" title="{t['gt_ferry_s']}">{t['gt_ferry_c']}</button><button type="button" class="tc-chip" data-gt="car">{t['gt_car_c']}</button><button type="button" class="tc-chip" data-gt="fly" title="{t['gt_fly_s']}">{t['gt_fly_c']}</button><button type="button" class="tc-chip" data-gt="skip" title="{t['skip_tr']}">{t['gt_booked']}</button></div></div>
+    <div class="tc-q"><b><i class="tc-num">1</i>{t['lbl_trav']}</b><div class="tc-c"><div class="tc-step"><button type="button" id="tc-pax-minus" aria-label="{'Λιγότεροι ταξιδιώτες' if lang == 'el' else 'Fewer travellers'}">−</button><span id="tc-pax" aria-live="polite">2</span><button type="button" id="tc-pax-plus" aria-label="{'Περισσότεροι ταξιδιώτες' if lang == 'el' else 'More travellers'}">+</button></div><span class="tc-rl">{t['lbl_rooms']}</span><div class="tc-step"><button type="button" id="tc-rm-minus" aria-label="−">−</button><span id="tc-rooms" aria-live="polite">1</span><button type="button" id="tc-rm-plus" aria-label="+">+</button></div><span class="tc-hint" id="tc-rhint"></span></div></div>
+    <div class="tc-q"><b><i class="tc-num">2</i>{t['lbl_style']}</b><div class="tc-c tc-chips" id="tc-tiers"><button type="button" class="tc-chip" data-t="budget">{t['tier_budget']}<small>{t['tier_budget_s']}</small></button><button type="button" class="tc-chip on" data-t="mid">{t['tier_mid']}<small>{t['tier_mid_s']}</small></button><button type="button" class="tc-chip" data-t="comfort">{t['tier_comfort']}<small>{t['tier_comfort_s']}</small></button></div></div>
+    <div class="tc-q"><b><i class="tc-num">3</i>{t['lbl_when']}</b><div class="tc-c tc-when"><span class="tc-seg2" id="tc-when"><button type="button" data-w="m" class="on">{t['w_month']}</button><button type="button" data-w="d">{t['w_date']}</button></span><div class="tc-chips" id="tc-months">{months_html}</div><input type="date" id="tc-date" class="tc-date" hidden><span class="tc-hint" id="tc-dhint"></span></div></div>
+    <div class="tc-q"><b><i class="tc-num">4</i>{t['lbl_gt']}</b><div class="tc-c tc-chips" id="tc-gt"><button type="button" class="tc-chip on" data-gt="ferry" title="{t['gt_ferry_s']}">{t['gt_ferry_c']}</button><button type="button" class="tc-chip" data-gt="car">{t['gt_car_c']}</button><button type="button" class="tc-chip" data-gt="fly" title="{t['gt_fly_s']}">{t['gt_fly_c']}</button><button type="button" class="tc-chip" data-gt="skip" title="{t['skip_tr']}">{t['gt_booked']}</button></div></div>
+    <div class="tc-q"><b><i class="tc-num">5</i>{t['lbl_extras']}</b><div class="tc-c tc-chips" id="tc-extras"><button type="button" class="tc-chip tc-tg" data-x="esim" role="switch" aria-checked="false"><i aria-hidden="true"></i>{t['x_esim_c']}<small>{t['x_esim_s']}</small></button><button type="button" class="tc-chip tc-tg" data-x="ins" role="switch" aria-checked="false"><i aria-hidden="true"></i>{t['x_ins_c']}<small>{t['x_ins_s']}</small></button></div></div>
   </div>
 
   <div class="tc-grid">
     <div>
+      <div class="tc-sec"><i class="tc-num">6</i><b>{t['sec_isl']}</b><small>{t['sec_isl_s']}</small></div>
       <section class="tc-ctrl tc-trip">
         <div id="tc-route"></div>
         <div class="tc-addrow" id="tc-addrow">
@@ -655,6 +685,7 @@ html.dark .tc-big{{color:#EEF2F5}}
       </section>
     </div>
     <div class="tc-side">
+      <div class="tc-sec"><b>{t['sec_bud']}</b></div>
       <div class="tc-sum" id="tc-summary"></div>
       <div id="tc-swaps"></div>
     </div>
@@ -792,7 +823,7 @@ function bookUrl(i){{const t=state.trip[i];let u='https://www.booking.com/search
 function stayCost(k,i,v){{const isl=ISL[k],n=state.trip[i].n;
   const rn=isl.room[state.tier]*seasAt(CFG.season_room,i);
   const mult=(!state.own&&!v&&isl.cn>=4&&isl.car)?CFG.carless_central_premium:1;
-  let c=rn*n*mult*roomsFor(state.pax) + mealDay(k)*state.pax*n;
+  let c=rn*n*mult*roomMult() + mealDay(k)*state.pax*n;
   if(!state.own&&v&&isl.car){{const q=vehQty(v);c+=isl.car*seasAt(CFG.season_car,i)*(v==='m'?(CFG.moto_factor||0.55):1)*n*q;
     c+=(v==='m'?Math.round(CFG.fuel_per_day*0.4):CFG.fuel_per_day)*n*q;}}
   return c;}}
@@ -811,6 +842,7 @@ let state={{month:'jun',date:null,pax:2,tier:'mid',esim:false,ins:false,fly:fals
   }}
   if(q.get('m')&&CFG.season_room[q.get('m')])state.month=q.get('m');
   if(q.get('pax'))state.pax=Math.min(8,Math.max(1,parseInt(q.get('pax'))||2));
+  if(q.get('rooms'))state.rooms=Math.min(8,Math.max(1,parseInt(q.get('rooms'))||0))||null;
   if(['budget','mid','comfort'].includes(q.get('tier')))state.tier=q.get('tier');
   if(state.date&&!/^\d{{4}}-\d{{2}}-\d{{2}}$/.test(state.date))state.date=null;
   if(/^\d{{4}}-\d{{2}}-\d{{2}}$/.test(q.get('d')||''))state.date=q.get('d');
@@ -831,7 +863,7 @@ let DMODE=!!state.date;
 function sync(){{
   try{{localStorage.setItem('tc-state',JSON.stringify(state));}}catch(e){{}}
   const i=state.trip.map(t=>t.k+':'+t.n+(t.v?':'+t.v:'')+(t.b?':b':'')).join(',');
-  history.replaceState(null,'','?i='+i+'&m='+state.month+'&pax='+state.pax+'&tier='+state.tier+(state.fly?'&fly=1':'')+(state.own?'&veh=own':'')+(state.skip?'&skip=1':'')+(state.esim?'&esim=1':'')+(state.ins?'&ins=1':'')+(state.date?'&d='+state.date:''));
+  history.replaceState(null,'','?i='+i+'&m='+state.month+'&pax='+state.pax+'&tier='+state.tier+(state.fly?'&fly=1':'')+(state.own?'&veh=own':'')+(state.skip?'&skip=1':'')+(state.rooms?'&rooms='+state.rooms:'')+(state.esim?'&esim=1':'')+(state.ins?'&ins=1':'')+(state.date?'&d='+state.date:''));
   // One trip_cost_run per finished estimate (debounced): which islands people
   // actually price, for how long, in which month, at which tier.
   try{{clearTimeout(window._tcEv);window._tcEv=setTimeout(function(){{
@@ -845,12 +877,24 @@ function sync(){{
 function roomNight(k,i){{return ISL[k].room[state.tier]*(i===undefined?seas(CFG.season_room,state.month):seasAt(CFG.season_room,i));}}
 // Two travellers per double room; 3 pax = 2 rooms, 8 pax = 4. Applied to the
 // rooms line, smart swaps and the Booking link (no_rooms) alike.
-function roomsFor(p){{return Math.max(1,Math.ceil((p||1)/2));}}
+function roomsFor(p){{return roomsN();}}
+// Rooms follow two-per-room until the visitor sets them (1 to 4 people a room).
+function roomsAuto(){{return Math.max(1,Math.ceil(state.pax/2));}}
+function roomsN(){{const lo=Math.ceil(state.pax/4),hi=state.pax;return state.rooms?Math.min(hi,Math.max(lo,state.rooms)):roomsAuto();}}
+function occs(){{const r=roomsN(),q=Math.floor(state.pax/r),x=state.pax%r;return Array.from({{length:r}},(_,i)=>q+(i<x?1:0));}}
+// price of the party's rooms in double-room units: a triple ~1.3, a quad ~1.5 of a double
+function roomMult(){{return occs().reduce((a,n)=>a+(n<=2?1:n===3?1.3:1.5),0);}}
+const pw=n=>n===1?T.p1w:T.pNw, rw=n=>n===1?T.r1w:T.rNw;
+function roomDesc(){{const o=occs(),mx=Math.max(...o);const kind=mx===3?T.triple:mx===4?T.quad:'';
+  return `${{o.length}} ${{rw(o.length)}}, ${{state.pax}} ${{pw(state.pax)}}${{kind?' ('+kind+')':''}}`;}}
 function mealDay(k){{const m=ISL[k].meal;return state.tier==='budget'?m*CFG.meal_budget:state.tier==='comfort'?m*CFG.meal_comfort:m;}}
 
 // ---------------- render ----------------
 function render(){{
   document.getElementById('tc-pax').textContent=state.pax;
+  {{const r=roomsN();document.getElementById('tc-rooms').textContent=r;
+   document.getElementById('tc-rhint').textContent=state.rooms&&r!==roomsAuto()?roomDesc():T.auto_r;
+   document.querySelectorAll('#tc-extras .tc-tg').forEach(b=>{{const on=!!state[b.dataset.x];b.classList.toggle('on',on);b.setAttribute('aria-checked',String(on));}});}}
   const _di=document.getElementById('tc-date');if(_di&&_di.value!==(state.date||''))_di.value=state.date||'';
   {{const dm=DMODE||!!state.date;
    document.querySelectorAll('#tc-when button').forEach(b=>b.classList.toggle('on',(b.dataset.w==='d')===dm));
@@ -896,7 +940,7 @@ function render(){{
     h+=`<div class="tc-row${{open?' open':''}}">
       <div class="tc-rh" data-a="tog" data-i="${{i}}" role="button" tabindex="0" aria-expanded="${{open}}" title="${{T.row_t}}">
         ${{isl.img?`<img src="${{isl.img}}" alt="" loading="lazy">`:'<i class="ph"></i>'}}
-        <div class="tc-rn"><b>${{iname(t.k)}}<span class="chev" aria-hidden="true">▾</span></b><small>${{eur(rnd(rn))}}${{T.per_night}}${{ld?' · '+fmtD(ld[0])+' – '+fmtD(ld[1]):''}}${{isl.boat?' · <i>'+(t.b?'✓ ':'⛵ ')+T.boat_avail+'</i>':''}}</small></div>
+        <div class="tc-rn"><b>${{iname(t.k)}}<span class="chev" aria-hidden="true">▾</span></b><small>${{eur(rnd(rn*roomMult()))}}${{T.per_night}}${{ld?' · '+fmtD(ld[0])+' – '+fmtD(ld[1]):''}}${{isl.boat?' · <i>'+(t.b?'✓ ':'⛵ ')+T.boat_avail+'</i>':''}}</small></div>
       </div>
       <span class="tc-n"><button type="button" data-a="n-" data-i="${{i}}" aria-label="${{(LANG==='el'?'Μία νύχτα λιγότερη: ':'One night fewer: ')+iname(t.k)}}">−</button><b>${{t.n}}</b><span class="tc-nl">${{t.n===1?T.night:T.nights}}</span><button type="button" data-a="n+" data-i="${{i}}" aria-label="${{(LANG==='el'?'Μία νύχτα ακόμα: ':'One more night: ')+iname(t.k)}}">+</button></span>
       ${{vbtn}}
@@ -933,7 +977,8 @@ function render(){{
   // ---------------- totals (single typical figures) ----------------
   const nightsTotal=state.trip.reduce((a,t)=>a+t.n,0);
   let tot=0,li='',csumAll=0;
-  const line=(ic,lbl,small,amt,book,url,nc)=>`<div class="tc-li${{nc?' nc':''}}"><span>${{ic}}</span><span class="lbl">${{lbl}}<small>${{nc?'<b>'+T.not_counted+'</b> · ':''}}${{small}}</small></span><span class="amt">${{eur(rnd(amt))}}</span>${{book?`<a class="bk" href="${{url}}" target="_blank" rel="noopener sponsored">${{book}}</a>`:''}}</div>`;
+  const GRP={{'⛴':'tr','🚌':'tr','✈':'tr','🛏':'rooms','🚗':'car','⛽':'car','🚙':'car','⛵':'boat','🍴':'food','📶':'x','🛡':'x'}};
+  const line=(ic,lbl,small,amt,book,url,nc)=>`<div class="tc-li${{nc?' nc':''}}"${{nc?'':` data-amt="${{amt}}" data-g="${{GRP[ic]||ic}}"`}}><span>${{ic}}</span><span class="lbl">${{lbl}}<small>${{nc?'<b>'+T.not_counted+'</b> · ':''}}${{small}}</small></span><span class="amt">${{eur(rnd(amt))}}</span>${{book?`<a class="bk" href="${{url}}" target="_blank" rel="noopener sponsored">${{book}}</a>`:''}}</div>`;
   const SK=state.skip;  // transport already booked: keep the lines, leave them out of the total
   // ferries
   let fsum=0;const legs=[...(flyIn?[]:[['M',first]]),...state.trip.slice(0,-1).map((t,i)=>[t.k,state.trip[i+1].k]),...(flyOut?[]:[[last,'M']])];
@@ -944,18 +989,18 @@ function render(){{
     const portsTxt=ports.length?`${{T.from_port}} ${{ports.join(' & ')}} · `:'';
     let fast=0;legs.forEach(([a,b])=>{{const l=legInfo(a,b);if(l.road)return;const m=mid(l.f);fast+=(m>=20?m*1.8:m)*state.pax;}});
     const fastTxt=(fast-fsum>=20)?'<br>⚡ '+T.fast_note.replace('{{x}}',eur(rnd(fast))):'';
-    if(fsum>0){{li+=line('⛴',T.li_ferries,`${{portsTxt}}${{legs.filter(([a,b])=>!legInfo(a,b).road).length}} ${{T.li_legs}} × ${{state.pax}} ${{T.li_pax}}${{fastTxt}}`,fsum,null,null,SK);if(!SK)tot+=fsum;}}}}
+    if(fsum>0){{li+=line('⛴',T.li_ferries,`${{portsTxt}}${{legs.filter(([a,b])=>!legInfo(a,b).road).length}} ${{T.li_legs}} × ${{state.pax}} ${{pw(state.pax)}}${{fastTxt}}`,fsum,null,null,SK);if(!SK)tot+=fsum;}}}}
   {{const rl=legs.filter(([a,b])=>{{const l=legInfo(a,b);return l.road&&l.bus;}});
    if(rl.length&&!state.own){{const bs=rl.reduce((x,[a,b])=>x+legInfo(a,b).bus,0)*state.pax;
-     li+=line('🚌',T.li_bus,`${{rl.length}} ${{T.li_legs}} × ${{state.pax}} ${{T.li_pax}}`,bs,null,null,SK);if(!SK)tot+=bs;}}}}
+     li+=line('🚌',T.li_bus,`${{rl.length}} ${{T.li_legs}} × ${{state.pax}} ${{pw(state.pax)}}`,bs,null,null,SK);if(!SK)tot+=bs;}}}}
   if(flyIn||flyOut){{const fl=((flyIn?flightFare(first):0)+(flyOut?flightFare(last):0))*state.pax;
-    li+=line('✈',T.li_flights,`${{(flyIn?1:0)+(flyOut?1:0)}} × ${{state.pax}} ${{T.li_pax}}`,fl,null,null,SK);if(!SK)tot+=fl;}}
+    li+=line('✈',T.li_flights,`${{(flyIn?1:0)+(flyOut?1:0)}} × ${{state.pax}} ${{pw(state.pax)}}`,fl,null,null,SK);if(!SK)tot+=fl;}}
   // rooms
   let rsum=0;
   state.trip.forEach((t,i)=>{{const rn=roomNight(t.k,i);
     const mult=(!state.own&&!t.v&&ISL[t.k].cn>=4&&ISL[t.k].car)?CFG.carless_central_premium:1;
-    rsum+=rn*t.n*mult*roomsFor(state.pax);}});
-  li+=line('🛏',`${{T.li_rooms}} — ${{nightsTotal}} ${{T.nights}}${{roomsFor(state.pax)>1?' · '+roomsFor(state.pax)+' '+T.rooms_word:''}}`,state.trip.map(t=>`${{iname(t.k)}} ${{t.n}}${{(!state.own&&!t.v&&ISL[t.k].cn>=4&&ISL[t.k].car)?' '+T.central:''}}`).join(' · '),rsum,null,null);
+    rsum+=rn*t.n*mult*roomMult();}});
+  li+=line('🛏',`${{T.li_rooms}} — ${{nightsTotal}} ${{T.nights}}`,roomDesc()+' · '+state.trip.map(t=>`${{iname(t.k)}} ${{t.n}}${{(!state.own&&!t.v&&ISL[t.k].cn>=4&&ISL[t.k].car)?' '+T.central:''}}`).join(' · '),rsum,null,null);
   tot+=rsum;
   // car + fuel
   if(state.own){{
@@ -993,31 +1038,28 @@ function render(){{
   if(_ts){{const _e=new Date(_ts);_e.setDate(_e.getDate()+nightsTotal);whenTxt=fmtD(_ts)+' – '+fmtD(_e);
     document.getElementById('tc-dhint').textContent=T.d_hint.replace('{{n}}',nightsTotal).replace('{{d}}',fmtD(_e));}}
   else if(DMODE)document.getElementById('tc-dhint').textContent='';
-  {{const tr=Math.max(0,tot-rsum-msum-csumAll-bsum);
-   const cat=[['#0B8FAC',rsum,T.li_rooms],['#E8522A',msum,T.li_food],['#3D8B6F',tr,T.leg_travel],['#C98A00',csumAll,T.li_vehicle],['#8A7AA0',bsum,T.li_boat]].filter(x=>x[1]>0);
-   const ct=cat.reduce((a,x)=>a+x[1],0)||1;
-   window._tcStk=cat.map(x=>`<i style="width:${{(x[1]/ct*100).toFixed(1)}}%;background:${{x[0]}}"></i>`).join('');
-   window._tcLeg=cat.map(x=>`<span><i style="background:${{x[0]}}"></i>${{x[2]}} <b>${{Math.round(x[1]/ct*100)}}%</b></span>`).join('');}}
   document.getElementById('tc-summary').innerHTML=`
-    <div class="tc-k">${{T.trip_k}} · ${{nightsTotal}} ${{T.nights}} · ${{state.pax}} ${{T.li_pax}}</div>
+    <div class="tc-bh"><div class="tc-k">${{nightsTotal}} ${{T.nights}} · ${{state.pax}} ${{pw(state.pax)}} · ${{roomsN()}} ${{rw(roomsN())}} · ${{whenTxt}}</div>
     <div class="tc-big">${{eur(rnd(tot))}}</div>
-    <div class="tc-pp2">${{eur(rnd(tot/state.pax))}} ${{T.pp}} · ${{whenTxt}} · ${{({{budget:T.tier_budget,mid:T.tier_mid,comfort:T.tier_comfort}})[state.tier]}}<br><small>${{state.fly?T.total_fly:T.total}}</small></div>
-    <div class="tc-stk">${{window._tcStk}}</div><div class="tc-leg2">${{window._tcLeg}}</div>
-    ${{li}}
-    <div class="tc-xtra"><div class="tc-k">${{T.x_h}}</div>
-      <button type="button" role="switch" aria-checked="${{state.esim}}" class="tc-sw${{state.esim?' on':''}}" data-x="esim"><span class="s" aria-hidden="true"></span><span>${{T.x_esim}}<small>${{T.x_esim_s}}</small></span></button>
-      <button type="button" role="switch" aria-checked="${{state.ins}}" class="tc-sw${{state.ins?' on':''}}" data-x="ins"><span class="s" aria-hidden="true"></span><span>${{T.x_ins}}<small>${{T.x_ins_s}}</small></span></button></div>
+    <div class="tc-pp2">${{eur(rnd(tot/state.pax))}} ${{T.pp}} · ${{({{budget:T.tier_budget,mid:T.tier_mid,comfort:T.tier_comfort}})[state.tier]}}<br><small>${{state.fly?T.total_fly:T.total}}</small></div></div>
+    <div class="tc-bb">${{li}}
     <div class="tc-ctas">
       <a class="tc-cta f" href="https://www.ferryhopper.com/${{LANG==='el'?'el/':'en/'}}" target="_blank" rel="noopener sponsored">${{T.cta_ferry}}</a>
       <a class="tc-cta c" href="https://www.discovercars.com/?a_aid=antaran2" target="_blank" rel="noopener sponsored">${{T.cta_car}}</a>
       <p class="aff-note"><a href="${{LANG==='el'?'/el/privacy/#affiliate':'/privacy/#affiliate'}}">${{T.aff_note}}</a></p>
     </div>
-    <details class="tc-assume"><summary style="cursor:pointer;font-weight:800;color:#076880">${{T.assume.split('</b>')[0].replace('<b>','')}}</summary><div style="margin-top:6px">${{(T.assume.split('</b>')[1]||'').replace('{{month}}',T.months[state.month])}}</div><div class="tc-honest">${{T.honest}}</div></details>`;
+    <details class="tc-assume"><summary style="cursor:pointer;font-weight:800;color:#076880">${{T.assume.split('</b>')[0].replace('<b>','')}}</summary><div style="margin-top:6px">${{(T.assume.split('</b>')[1]||'').replace('{{month}}',T.months[state.month])}}</div><div class="tc-honest">${{T.honest}}</div></details></div>`;
+  {{const COL={{rooms:'#0B8FAC',food:'#E8522A',tr:'#3D8B6F',car:'#C98A00',boat:'#8A7AA0',x:'#7A8794'}};
+   const ls=[...document.querySelectorAll('#tc-summary .tc-li[data-amt]')],sum={{}},cnt={{}};
+   ls.forEach(l=>{{const g=l.dataset.g;sum[g]=(sum[g]||0)+(+l.dataset.amt);cnt[g]=(cnt[g]||0)+1;}});
+   const seen=new Set();ls.forEach(l=>{{const g=l.dataset.g;if(seen.has(g)||!tot)return;seen.add(g);
+     const pc=Math.round(sum[g]/tot*100);
+     l.insertAdjacentHTML('beforeend',`<div class="tr"><i style="width:${{Math.max(2,pc)}}%;background:${{COL[g]||'#7A8794'}}"></i><em>${{pc}}%${{cnt[g]>1&&g==='car'?' '+T.incl_fuel:''}}</em></div>`);}});}}
   {{const st=document.getElementById('tc-stick');if(st){{st.classList.add('on');
     // Hide the bar while the full estimate itself is on screen.
     if(!window._tcIO&&window.IntersectionObserver){{window._tcIO=new IntersectionObserver(es=>{{es.forEach(e=>st.classList.toggle('seen',e.isIntersecting));}},{{threshold:0.15}});window._tcIO.observe(document.getElementById('tc-summary'));}}
     document.getElementById('tc-stick-v').textContent=eur(rnd(tot));
-    document.getElementById('tc-stick-s').textContent=`${{state.pax}} ${{T.li_pax}} · ${{nightsTotal}} ${{T.nights}}`;}}}}
+    document.getElementById('tc-stick-s').textContent=`${{state.pax}} ${{pw(state.pax)}} · ${{nightsTotal}} ${{T.nights}}`;}}}}
   sync();
 }}
 
@@ -1071,7 +1113,9 @@ document.getElementById('tc-date').addEventListener('change',e=>{{const v=e.targ
   const ts=tripStart();if(ts){{const mk=MKEYS[ts.getMonth()];if(CFG.season_room[mk])state.month=mk;}}
   render();}});
 document.getElementById('tc-tiers').addEventListener('click',e=>{{const c=e.target.closest('.tc-chip');if(c){{state.tier=c.dataset.t;render();}}}});
-document.getElementById('tc-summary').addEventListener('click',e=>{{const b=e.target.closest('[data-x]');if(!b)return;const k=b.dataset.x;state[k]=!state[k];render();}});
+document.getElementById('tc-extras').addEventListener('click',e=>{{const b=e.target.closest('[data-x]');if(!b)return;const k=b.dataset.x;state[k]=!state[k];render();}});
+document.getElementById('tc-rm-minus').addEventListener('click',()=>{{state.rooms=Math.max(Math.ceil(state.pax/4),roomsN()-1);render();}});
+document.getElementById('tc-rm-plus').addEventListener('click',()=>{{state.rooms=Math.min(state.pax,roomsN()+1);render();}});
 document.getElementById('tc-gt').addEventListener('click',e=>{{
   const o=e.target.closest('.tc-chip');if(!o||o.classList.contains('off'))return;
   const g=o.dataset.gt;state.skip=g==='skip';state.own=g==='car';state.fly=g==='fly';
