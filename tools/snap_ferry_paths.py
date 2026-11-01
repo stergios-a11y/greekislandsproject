@@ -17,7 +17,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 TOL_KM, STEP_KM, CELL_KM, KEEP_KM = 3.0, 0.4, 3.0, 0.03
 LAT0 = 38.0
-SHORT_KM = 15        # crossings shorter than this (Glyfa-Agiokampos) are never pulled onto another route
+SHORT_KM = 15 
+DETOUR = 0.02    # max extra length a shared line may add (2%)
+BLEND_KM = 3.0   # length of the slanted join onto / off a shared line
+MIN_RUN_KM = 4.0  # a shared stretch shorter than this is not snapped
+       # crossings shorter than this (Glyfa-Agiokampos) are never pulled onto another route
 KX, KY = 111.32 * math.cos(math.radians(LAT0)), 110.57      # km per degree
 
 
@@ -54,32 +58,57 @@ def snap_all(paths):
         for cx in range(int(x0 // CELL_KM), int(x1 // CELL_KM) + 1):
             for cy in range(int(y0 // CELL_KM), int(y1 // CELL_KM) + 1):
                 yield (cx, cy)
-    def nearest(p):
+    def nearest(p, dv=None):
         cx, cy = int(p[0] // CELL_KM), int(p[1] // CELL_KM); best, bd = None, TOL_KM
         for dx in (-1, 0, 1):
             for dy in (-1, 0, 1):
                 for a, b in grid.get((cx + dx, cy + dy), ()):
                     vx, vy = b[0] - a[0], b[1] - a[1]; L2 = vx * vx + vy * vy or 1e-12
+                    # only lines running the same way (within ~30 deg): never grab a crossing route
+                    if dv is not None and abs(vx * dv[0] + vy * dv[1]) < 0.87 * math.sqrt(L2) * (math.hypot(*dv) or 1e-9): continue
                     t = max(0.0, min(1.0, ((p[0] - a[0]) * vx + (p[1] - a[1]) * vy) / L2))
                     q = (a[0] + t * vx, a[1] + t * vy); d = math.dist(p, q)
                     if d < bd: best, bd = q, d
         return best
-    out, moved = {}, 0
+    out, moved, kept_own = {}, 0, 0
     for k, ll in paths.items():
         pts = densify([to_xy(p) for p in ll])
         short = sum(math.dist(a, b) for a, b in zip(pts, pts[1:])) < SHORT_KM   # a short hop keeps its own line
-        snapped = [pts[0]]
-        for p in pts[1:-1]:
-            q = None if short else nearest(p)
-            if q: moved += 1
-            snapped.append(q or p)
-        snapped.append(pts[-1])
+        qs = [None]
+        for i in range(1, len(pts) - 1):
+            d = (pts[i + 1][0] - pts[i - 1][0], pts[i + 1][1] - pts[i - 1][1])
+            qs.append(None if short else nearest(pts[i], d))
+        qs.append(None)
+        # keep only shared stretches of MIN_RUN_KM or more: short grabs only add kinks
+        i = 0
+        while i < len(qs):
+            if qs[i] is None: i += 1; continue
+            j = i
+            while j < len(qs) and qs[j] is not None: j += 1
+            if (j - i) * STEP_KM < MIN_RUN_KM:
+                for u in range(i, j): qs[u] = None
+            i = j
+        # join and leave a shared line on a slant: drop the route's own points within
+        # BLEND_KM before and after each shared run, so there is no sideways step
+        drop = set(); nb = int(BLEND_KM / STEP_KM)
+        for i in range(1, len(qs)):
+            if (qs[i] is None) != (qs[i - 1] is None):
+                rng = range(i, min(i + nb, len(qs) - 1)) if qs[i] is None else range(max(1, i - nb), i)
+                drop.update(u for u in rng if qs[u] is None)
+        snapped = [q or p for u, (p, q) in enumerate(zip(pts, qs)) if u not in drop]
+        moved += sum(q is not None for q in qs)
         snapped = simplify(snapped, KEEP_KM)
+        # sharing a line must not cost a detour: if it makes the route noticeably longer
+        # (or wigglier) than its own sea path, keep the route's own line
+        L = lambda q: sum(math.dist(a, b) for a, b in zip(q, q[1:]))
+        if L(snapped) > L(pts) * (1 + DETOUR):
+            snapped = simplify(pts, KEEP_KM); kept_own += 1
         for a, b in zip(snapped, snapped[1:]):
             for c in cells(a, b): grid.setdefault(c, []).append((a, b))
         res = [to_ll(p) for p in snapped]
         res[0], res[-1] = ll[0], ll[-1]          # harbours exactly as given
         out[k] = res
+    print(f"  {kept_own} routes kept their own line (sharing would add a detour)")
     return out, moved
 
 

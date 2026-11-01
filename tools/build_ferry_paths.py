@@ -94,7 +94,9 @@ def main():
     used = np.zeros_like(water)
     # Near a port, sailing along an already-drawn route is cheaper, so routes
     # leave a harbour as one trunk and branch further out. Out at sea, no pull.
-    REUSE, NEAR = 0.6, 30            # cost factor; radius in cells (~12 km)
+    # Nov 2026: no pull towards earlier routes (it bent lines around the Dodecanese);
+    # snap_ferry_paths.py merges routes that really share a channel.
+    REUSE, NEAR = 1.0, 30
     near_port = np.zeros_like(water)
     for p_, q_ in todo.values():
         for la, ln in (p_, q_):
@@ -136,25 +138,41 @@ def main():
             print('  no sea path', k); continue
         rr = np.array([t[0] for t in tr], float); cc = np.array([t[1] for t in tr], float)
         used[rr.astype(int), cc.astype(int)] = True
-        # Smooth the grid path into a curve: the widest Gaussian that keeps it at sea.
-        best = list(zip(rr, cc))
-        for sigma in (7, 5, 3.5, 2):
-            if len(tr) < 4: break
-            sr = ndimage.gaussian_filter1d(rr, sigma, mode='nearest')
-            sc = ndimage.gaussian_filter1d(cc, sigma, mode='nearest')
-            # fade the smoothing out towards both ends so a route leaves and
-            # reaches its harbour along the real channel (no hooks at the port)
-            n = len(rr); idx = np.arange(n); T = 2.0 * sigma
-            w = np.clip(np.minimum(idx, n - 1 - idx) / T, 0, 1)
-            sr = w * sr + (1 - w) * rr; sc = w * sc + (1 - w) * cc
-            cand = list(zip(sr, sc))
-            if on_water(cand):
-                best = cand; break
-        poly = [ll(x) for x in simplify(best)]
+        # Pull the grid path taut (Nov 2026): from each vertex jump to the farthest later
+        # vertex that is visible across open water (>= ~1 cell from land), so lines run
+        # straight where the sea allows and only turn around islands and headlands.
+        n = len(tr); P = np.stack([rr, cc], 1)
+        def visible(i, j):
+            a, b = P[i], P[j]; m = int(max(abs(b - a))) + 1
+            t = np.linspace(0, 1, m * 2 + 1)
+            pr = np.round(a[0] + (b[0] - a[0]) * t).astype(int); pc = np.round(a[1] + (b[1] - a[1]) * t).astype(int)
+            ok = water[pr, pc] & (dist_land[pr, pc] >= 1.0)
+            ends = (np.arange(len(t)) < 0)   # near the two harbours the channel may be narrow
+            if i == 0: ends |= (t * m <= 4)
+            if j == n - 1: ends |= ((1 - t) * m <= 4)
+            return bool(np.all(ok | (ends & water[pr, pc])))
+        taut = [0]; i = 0
+        while i < n - 1:
+            j = n - 1
+            while j > i + 1 and not visible(i, j):
+                j -= max(1, (j - i) // 12)
+            taut.append(j); i = j
+        best = [tuple(P[k]) for k in taut]
+        # soften the corners a little (Chaikin), only where it stays at sea
+        for _ in range(2):
+            if len(best) < 3: break
+            nb = [best[0]]
+            for a, b in zip(best, best[1:]):
+                nb += [(0.75 * a[0] + 0.25 * b[0], 0.75 * a[1] + 0.25 * b[1]), (0.25 * a[0] + 0.75 * b[0], 0.25 * a[1] + 0.75 * b[1])]
+            nb.append(best[-1])
+            if on_water(nb, slack=0.5): best = nb
+            else: break
+        poly = [ll(x) for x in simplify(best, tol=0.15)]
         paths[k] = [[round(p[0], 4), round(p[1], 4)]] + poly + [[round(q[0], 4), round(q[1], 4)]]
     # routes that share a stretch of sea are drawn on one line until they part
     from snap_ferry_paths import snap_all
-    paths, moved = snap_all(paths)
+    import os
+    paths, moved = (paths, 0) if os.environ.get("NOSNAP") else snap_all(paths)
     (ROOT / 'ferry-paths.json').write_text(json.dumps(paths, separators=(',', ':')))
     print(f'ferry-paths.json: {len(paths)} segments ({moved} points snapped onto shared lines)')
 
