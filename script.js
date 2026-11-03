@@ -1693,7 +1693,7 @@ function setupMap() {
   mapInstance.fitBounds(L.latLngBounds(L.latLng(34.6, 19.4), L.latLng(41.1, 28.4)),
     _small ? { padding: [18, 18] } : { paddingTopLeft: [0, 64], paddingBottomRight: [0, 24] });   // keep Thasos out from under the filter bar
   addThemeAwareTiles(mapInstance, { maxZoom: 14, hideLayerControl: true });   // desktop: Map/Satellite in the filter bar; phones: the 🗺|🛰 pill (setupMobileHome)
-  L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(mapInstance);
+  L.control.scale({ imperial: false, position: 'bottomleft', maxWidth: 150 }).addTo(mapInstance);   // longer bar: the label fits inside the ticks
 
   // Google-embed wheel behavior: plain scroll scrolls the page (wheel zoom is
   // off above); Ctrl/Cmd + scroll zooms at the cursor. A brief hint teaches it.

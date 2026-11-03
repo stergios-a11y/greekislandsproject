@@ -8178,3 +8178,24 @@ html.dark .qz-save { background: #1F2530; border-color: #22C0E0; }
   html.dark .dh-br .leaflet-control-scale-line { border-color: #EEF2F5; color: #EEF2F5; }
   html.dark .dh-chip { color: #60D8F0; }
 }
+
+
+/* DESKTOP HOME tweaks (Nov 2026): scale without a box; compact panel. */
+@media (min-width: 841px) {
+  .dh-br .leaflet-control-scale { background: none; box-shadow: none; border-radius: 0; padding: 0 4px 6px; }
+  .dh-br .leaflet-control-scale-line, html.dark .dh-br .leaflet-control-scale-line { background: none !important; border: 2.5px solid #1A2332 !important; border-top: 0 !important;
+    border-radius: 0; color: #1A2332; font: 800 12.5px var(--font-ui); padding: 0 5px 1px; line-height: 1.25; white-space: nowrap; overflow: visible;
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px #fff, 0 0 8px #fff; box-shadow: none !important;
+    filter: drop-shadow(0 0 1px rgba(255,255,255,.95)) drop-shadow(0 0 2px rgba(255,255,255,.8)); }
+  html.dark .dh-br .leaflet-control-scale-line { border-color: #EEF2F5 !important; color: #EEF2F5; text-shadow: 0 0 2px rgba(0,0,0,.8); filter: none; }
+  html.dark .dh-br .leaflet-control-scale { background: none; }
+  .dh-panel { padding: 12px 12px 10px; border-radius: 16px; }
+  .dh-panel .bp-hero-title { font-size: 19px; margin: 0 2px 8px; }
+  .dh-panel .bp-hero-search { padding: 3px 3px 3px 14px; }
+  .dh-panel .bp-hero-search input { font-size: 14px; }
+  .dh-panel .bp-hero-search button { padding: 8px 16px; font-size: 14px; }
+  .dh-panel .map-filterbar { margin-top: 8px; gap: 6px; }
+  .dh-panel .mf-controls { gap: 6px; }
+  .dh-panel .map-filterbar .filter-select, .dh-panel .mf-group, .dh-panel .map-filterbar .vibe-filter-btn { height: 34px; }
+  @media (max-width: 1180px) { .dh-panel .bp-hero-title { font-size: 18px; } }
+}
