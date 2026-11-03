@@ -7917,3 +7917,108 @@ html.dark .qz-save { background: #1F2530; border-color: #22C0E0; }
   .qz-rc { grid-column: 3 / -1; font-size: 12px; margin-top: -4px; }
   .qz-foot { color: rgba(255,255,255,.75); }
 }
+
+/* MATCH ME v2 — phones (Nov 2026): same light page as desktop. The photo is a short band
+   behind the progress row and the headline (--mq-band, from quizSizeBand); answers are light
+   cards; the dock is a light sheet that also carries the running estimate. */
+.qz-est-m { display: none; }
+@media (max-width: 840px) {
+  #view-match.mq-live, #view-match.mq-res { background: var(--surface, #FFFBF5); }
+  #view-match .mq-bg { bottom: auto; height: var(--mq-band, 150px); transition: height .25s ease; }
+  #view-match.mq-live .mq-bg::after, #view-match.mq-res .mq-bg::after { background: linear-gradient(to top, rgba(6,25,33,.7) 0%, rgba(6,25,33,.35) 75%, rgba(6,25,33,.2) 100%); }
+  #view-match.mq-live .quiz-step-label { color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,.4); }
+  #view-match.mq-live .quiz-bar { background: rgba(255,255,255,.35); }
+  #view-match.mq-live .quiz-back-btn, #view-match.mq-live .quiz-skip-btn { color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,.4); }
+  #view-match.mq-live .quiz-question { text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: 16px; }
+  #view-match.mq-live .quiz-why { color: #5D6B7A; }
+  #view-match.mq-live .quiz-option, #view-match.mq-live .quiz-option:hover { background: #fff; color: #1A2332; border: 1.5px solid #EAE4DC; box-shadow: 0 2px 8px rgba(26,35,50,.05); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  #view-match.mq-live .quiz-option.selected, #view-match.mq-live .quiz-option.selected:hover { background: var(--primary-pale, #E8F7FB); border-color: var(--primary, #0B8FAC); }
+  #view-match.mq-live .quiz-opt-ic { background: #E8F7FB; }
+  #view-match.mq-live .quiz-opt-tx small { color: #637080; }
+  /* the dock: a light sheet; the estimate rides on top of the five photos */
+  #view-match.mq-live .quiz-live, html.dark #view-match.mq-live .quiz-live { background: rgba(255,255,255,.97); color: #1A2332; border-top: 1px solid #EAE4DC; box-shadow: 0 -8px 24px rgba(26,35,50,.12); }
+  #view-match.mq-live .ql-head { color: #1A2332; }
+  #view-match.mq-live .ql-rank { background: #1A2332; color: #fff; }
+  #view-match .qz-trip:has(.qz-est-m) { display: block; padding: 0 0 8px; margin: 0 0 8px; border-bottom: 1px solid #F1ECE5; }
+  #view-match .qz-trip-h, #view-match .qz-trip .qz-chips, #view-match .qz-est, #view-match .qz-est-s { display: none; }
+  #view-match .qz-est-m { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; font: 700 12px var(--font-ui); color: #5D6B7A; }
+  #view-match .qz-est-m span { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #view-match .qz-est-m b { flex: none; font: 900 16px var(--font-ui); color: #1A2332; }
+  /* results */
+  #view-match.mq-res .qz-rhead .quiz-retake-btn { background: rgba(255,255,255,.18); color: #fff; border-color: rgba(255,255,255,.6); }
+  .qz-foot { color: #637080; }
+  #view-match.mq-res > #cta-affiliate { background: rgba(255,255,255,.97); border-top: 1px solid #EAE4DC; box-shadow: 0 -8px 24px rgba(26,35,50,.12); }
+  #view-match.mq-res > #cta-affiliate .aff-note, #view-match.mq-res > #cta-affiliate .aff-note a { color: #637080; }
+  /* dark mode */
+  html.dark #view-match.mq-live, html.dark #view-match.mq-res { background: var(--surface, #171C24); }
+  html.dark #view-match.mq-live .quiz-why, html.dark #view-match.mq-live .quiz-opt-tx small, html.dark .qz-foot { color: #93A1B0; }
+  html.dark #view-match.mq-live .quiz-option, html.dark #view-match.mq-live .quiz-option:hover { background: #1F2530; color: #EEF2F5; border-color: #2E3644; }
+  html.dark #view-match.mq-live .quiz-option.selected, html.dark #view-match.mq-live .quiz-option.selected:hover { background: #0A2A35; border-color: #22C0E0; }
+  html.dark #view-match.mq-live .quiz-opt-ic { background: #0A2A35; }
+  html.dark #view-match.mq-live .quiz-live { background: rgba(31,37,48,.97); color: #EEF2F5; border-top-color: #2E3644; box-shadow: 0 -8px 24px rgba(0,0,0,.35); }
+  html.dark #view-match.mq-live .ql-head, html.dark #view-match .qz-est-m b { color: #EEF2F5; }
+  html.dark #view-match.mq-live .ql-rank { background: #EEF2F5; color: #1A2332; }
+  html.dark #view-match.mq-live .ql-top .ql-rank { background: var(--warm, #E8522A); color: #fff; }
+  html.dark #view-match .qz-trip { border-color: #2E3644; }
+  html.dark #view-match .qz-est-m { color: #93A1B0; }
+  html.dark #view-match.mq-res > #cta-affiliate { background: rgba(31,37,48,.97); border-top-color: #2E3644; }
+  html.dark #view-match.mq-res > #cta-affiliate .aff-note, html.dark #view-match.mq-res > #cta-affiliate .aff-note a { color: #93A1B0; }
+}
+
+
+/* PHONE HOME v3 (Nov 2026): search + Filters in one bar, active filters as chips under it,
+   "Best in <month>" as three equal photo cards (the bar's width), quiz as a pill at the
+   bottom. After the first pan/zoom (.mh-folded) the cards fold into a slim chip and the
+   pill becomes a round 🎯. */
+@media (max-width: 840px) {
+  #view-home .mh-top { display: flex; flex-direction: column; gap: 8px; }
+  #view-home .mh-sbox { padding-right: 4px; }
+  #view-home .mh-search-t { display: flex; flex-direction: column; line-height: 1.15; }
+  #view-home .mh-search-t .mh-f-r { font: 800 11px var(--font-ui); color: var(--primary-dark); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #view-home .mh-sbox .mh-filter { flex: none; position: relative; display: flex; align-items: center; gap: 6px; height: 36px; margin: 0; padding: 0 12px 0 13px;
+    border: 0; border-left: 1px solid var(--border); border-radius: 0 999px 999px 0; background: transparent; color: var(--ink-1); font: 800 13.5px var(--font-ui); cursor: pointer; }
+  #view-home .mh-sbox .mh-f-i { font-size: 15px; }
+  #view-home .mh-sbox .mh-count { position: static; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: var(--primary); color: #fff; font: 800 11px/18px var(--font-ui); text-align: center; }
+  #view-home .mh-sbox .mh-count[hidden] { display: none; }
+  /* chips: under the bar now, left-aligned, scroll sideways */
+  #view-home .mh-top .mh-chips { position: static; padding: 0; margin: 0 calc(-1 * var(--mh-edge, 12px)); padding: 0 var(--mh-edge, 12px); }
+  #view-home .mh-top .mh-chip { height: 32px; background: var(--primary-pale); color: var(--primary-dark); border: 1px solid var(--primary-light); box-shadow: 0 2px 8px rgba(26,35,50,.12); }
+  #view-home .mh-top .mh-chip-all { background: var(--white); color: var(--ink-2, #3A4654); border-color: var(--border); }
+  /* picks: one block, the bar's width, three equal cards */
+  #view-home .mh-picks { display: block; margin: 0; }
+  #view-home .mh-pk { background: color-mix(in srgb, var(--white) 94%, transparent); border-radius: 16px; padding: 7px 7px 8px; box-shadow: var(--mh-sh, 0 4px 16px rgba(26,35,50,.22)); }
+  #view-home .mh-pk[hidden] { display: none; }
+  #view-home .mh-pk-h { display: flex; width: 100%; justify-content: space-between; align-items: center; gap: 8px; padding: 1px 3px 7px; border: 0; background: none;
+    font: 800 13px var(--font-ui); color: var(--primary-dark); cursor: pointer; text-align: left; }
+  #view-home .mh-pk-h > span { display: inline-flex; align-items: center; gap: 6px; }
+  #view-home .mh-pk-h small { flex: none; font: 700 12px var(--font-ui); color: var(--ink-3); }
+  #view-home .mh-pk-g { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+  #view-home .mh-pc { position: relative; display: block; height: 70px; border-radius: 11px; overflow: hidden; background: linear-gradient(135deg, #8ecbd8, #3f8fa3); text-decoration: none; }
+  #view-home .mh-pc img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  #view-home .mh-pc::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.66), rgba(0,0,0,0) 62%); }
+  #view-home .mh-pc i { position: absolute; top: 5px; right: 5px; z-index: 1; min-width: 26px; height: 20px; padding: 0 5px; border-radius: 10px; border: 1.5px solid #fff;
+    color: #fff; font: 800 10.5px/17px var(--font-ui); font-style: normal; text-align: center; }
+  #view-home .mh-pc b { position: absolute; left: 7px; right: 5px; bottom: 5px; z-index: 1; color: #fff; font: 800 13px/1.1 var(--font-ui); text-shadow: 0 1px 4px rgba(0,0,0,.45);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #view-home .mh-pc b small { display: block; font: 700 10px var(--font-ui); opacity: .9; overflow: hidden; text-overflow: ellipsis; }
+  /* slim chip: only when folded */
+  #view-home .mh-picks .mh-best { display: none; }
+  #view-home .mh-top.mh-folded .mh-pk, #view-home .mh-top.mh-filt .mh-pk { display: none; }
+  #view-home .mh-top.mh-folded .mh-best:not([hidden]), #view-home .mh-top.mh-filt .mh-best:not([hidden]) { display: inline-flex; height: 34px; align-self: flex-start; }
+  /* bottom: quiz pill centred, map/satellite on the right */
+  #view-home .mh-bar { left: var(--mh-edge, 12px); right: var(--mh-edge, 12px); justify-content: space-between; pointer-events: none; }
+  #view-home .mh-bar > * { pointer-events: auto; }
+  #view-home .mh-bar .mh-qp { display: inline-flex; align-items: center; gap: 8px; height: 48px; padding: 0 22px; border: 0; border-radius: 999px; background: var(--warm); color: #fff;
+    font: 900 15px var(--font-ui); box-shadow: 0 6px 18px rgba(232,82,42,.4); cursor: pointer; white-space: nowrap; }
+  #view-home .mh-bar .mh-qp small { font-weight: 700; opacity: .9; }
+  #view-home .mh-bar .mh-layer { position: static; margin-left: auto; }
+  #view-home .mh-bar.mh-folded .mh-qp { width: 48px; padding: 0; justify-content: center; font-size: 20px; }
+  #view-home .mh-bar.mh-folded .mh-qp-t { display: none; }
+  /* nothing piles up at the bottom: no pill under the welcome card or a sheet */
+  body:has(#mh-welcome) #view-home .mh-bar .mh-qp,
+  body.mh-vp-open #view-home .mh-bar .mh-qp, body.mh-panel-open #view-home .mh-bar .mh-qp { visibility: hidden; }
+  @media (max-width: 370px) { #view-home .mh-bar:not(.mh-folded) .mh-qp small { display: none; } #view-home .mh-pc b { font-size: 12px; } }
+  html.dark #view-home .mh-pk { background: color-mix(in srgb, #1F2530 94%, transparent); }
+  html.dark #view-home .mh-top .mh-chip { background: #0A2A35; color: #60D8F0; border-color: #154453; }
+  html.dark #view-home .mh-top .mh-chip-all { background: #1F2530; color: #C4CDD6; border-color: #2E3644; }
+}

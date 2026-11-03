@@ -1506,6 +1506,7 @@ async function renderWhatsOnStrip() {
   `;
   season.hidden = false;
 
+  _mhPool = [...new Set([...islandsToShow, ...perfectIslands.slice().sort(byScore), ...greatIslands.slice().sort(byScore)])];
   renderMapRail(islandsToShow.slice(0, 4), perfectLabel, photos, lang);
 }
 
@@ -2024,6 +2025,7 @@ function toggleVibePanel() {
   if (!panel) return;
   const open = panel.style.display === 'none';
   panel.style.display = open ? '' : 'none';
+  document.body.classList.toggle('mh-vp-open', open);
   btn && btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   if (open) updateVibeMatchCount();
 }
@@ -2033,6 +2035,7 @@ function closeVibePanel() {
   const btn   = document.getElementById('vibe-filter-btn');
   if (!panel || panel.style.display === 'none') return;
   panel.style.display = 'none';
+  document.body.classList.remove('mh-vp-open');
   btn && btn.setAttribute('aria-expanded', 'false');
   if (_vibeFitPending) _vibeFit();
 }
@@ -6965,7 +6968,8 @@ function quizTripBox(A, scored) {
     if (tot) {
       const M = QZC._meta, lo = qzRnd(tot * (M.range_lo || 0.85)), hi = qzRnd(tot * (M.range_hi || 1.25));
       est = `<div class="qz-est"><span>${qzL('Rough estimate', 'Πρόχειρη εκτίμηση')}</span><b>${qzEur(lo)}–${fmtEur(hi)}</b></div>`
-        + `<div class="qz-est-s">${qzFor(S.pax)} · ${qzNts(n)} ${qzL('on', 'σε')} ${islandName(top.key)}. ${qzL('Narrows as you answer.', 'Στενεύει όσο απαντάς.')}</div>`;
+        + `<div class="qz-est-s">${qzFor(S.pax)} · ${qzNts(n)} ${qzL('on', 'σε')} ${islandName(top.key)}. ${qzL('Narrows as you answer.', 'Στενεύει όσο απαντάς.')}</div>`
+        + `<div class="qz-est-m"><span>🧳 ${qzFor(S.pax)} · ${qzNts(n)} · ${islandName(top.key)}</span><b>${qzEur(lo)}–${fmtEur(hi)}</b></div>`;
     }
   }
   return `<div class="qz-trip"><div class="qz-trip-h">🧳 ${qzL('Your trip so far', 'Το ταξίδι σου ως τώρα')}</div><div class="qz-chips">${quizChips(A, true)}</div>${est}</div>`;
@@ -6997,11 +7001,12 @@ function quizDecorateOptions() {
    below it is light. The banner ends just under the headline. */
 function quizSizeBand() {
   const vm = document.getElementById('view-match'); if (!vm) return;
-  if (!window.matchMedia('(min-width: 841px)').matches) { vm.style.removeProperty('--mq-band'); return; }
+  // phones too (Nov 2026): the band ends under the headline, the rest of the screen is light
+  const phone = !window.matchMedia('(min-width: 841px)').matches;
   const h = vm.querySelector(vm.classList.contains('mq-res') ? '.qz-rhead' : '.quiz-question');
   if (!h) return;
   const b = h.getBoundingClientRect().bottom - vm.getBoundingClientRect().top;
-  vm.style.setProperty('--mq-band', Math.round(b + 26) + 'px');
+  vm.style.setProperty('--mq-band', Math.round(b + (phone ? 12 : 26)) + 'px');
 }
 window.addEventListener('resize', () => { try { quizSizeBand(); } catch (_) {} });
 
@@ -7475,28 +7480,71 @@ function buildSectionNav() {
 function _mhNorm(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
 let _whatsOn = null, _whatsOnMonth = 0;   // whats-on.json + month it was read for
 let _mhPicks = null;                       // phones: { keys, label, photos, lang } from renderMapRail
+let _mhPool = [];                          // every island tagged good this month, best first (picks follow the filters)
 const _MH_CAL = '<svg class="ico-cal" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>';
 
+/* The three picks, after the active filters (falls back to the month's picks when no
+   island tagged for this month passes them). */
+function _mhPickKeys() {
+  if (!_mhPicks) return [];
+  if (typeof activeVibeFilters === 'undefined' || !activeVibeFilters.size) return _mhPicks.keys;
+  const byKey = {}; ISLANDS.forEach(i => { byKey[i.key] = i; });
+  return _mhPool.filter(k => byKey[k] && islandPassesVibeFilters(byKey[k])).slice(0, 3);
+}
 function _mhRenderPicks() {
-  const btn = document.querySelector('#mh-top .mh-best');
-  if (!btn || !_mhPicks || !_mhPicks.keys.length) return;
-  const { keys, photos, lang } = _mhPicks;
-  btn.querySelector('.mh-best-n').textContent = lang === 'el' ? `· ${keys.length} επιλογές` : `· ${keys.length} picks`;
-  btn.querySelector('.mh-best-th').innerHTML = keys.map(k => {
+  const top = document.getElementById('mh-top');
+  const btn = top && top.querySelector('.mh-best'), blk = top && top.querySelector('.mh-pk');
+  if (!btn || !blk || !_mhPicks || !_mhPicks.keys.length) return;
+  const { photos, lang } = _mhPicks, isEl = lang === 'el', keys = _mhPickKeys();
+  const filtered = typeof activeVibeFilters !== 'undefined' && activeVibeFilters.size > 0;
+  const n = keys.length;
+  const nTxt = isEl ? `${n} επιλογές` : `${n} picks`;
+  // with filters on, the picks shrink to the slim chip (the filtered map is the focus) and follow the filters
+  btn.querySelector('.mh-best-n').textContent = filtered ? (isEl ? `· ${n} με τα φίλτρα` : `· ${n} with your filters`) : '· ' + n;
+  top.classList.toggle('mh-filt', filtered);
+  btn.hidden = !n;
+  blk.hidden = !n;
+  blk.querySelector('.mh-pk-n').textContent = nTxt;
+  const base = isEl ? '/el/island/' : '/island/';
+  blk.querySelector('.mh-pk-g').innerHTML = keys.map(k => {
+    const d = ISLANDS_DATA[k]; if (!d) return '';
     const u = photos[k] && photos[k].url ? thumbUrl(photos[k].url) : '';
-    return u ? `<img src="${u}" alt="" loading="lazy">` : '';
+    return `<a class="mh-pc" href="${base}${k}/" data-k="${k}">${u ? `<img src="${u}" alt="" loading="lazy">` : ''}`
+      + `<i style="background:${scoreToColor(d.total)}">${fmt(d.total)}</i>`
+      + `<b>${escapeHtml(islandName(k))}<small>${escapeHtml(groupName(d.island_group))}</small></b></a>`;
   }).join('');
-  btn.hidden = false;
-  if (!btn._wired) { btn._wired = true; btn.addEventListener('click', _mhOpenBest); }
+  top.classList.toggle('mh-nopicks', !n);
+  if (!blk._wired) {
+    blk._wired = true;
+    blk.querySelector('.mh-pk-h').addEventListener('click', _mhOpenBest);
+    blk.addEventListener('click', e => {
+      const a = e.target.closest('.mh-pc'); if (!a) return;
+      try { track('pick_click', { island: a.dataset.k, placement: 'home_cards' }); } catch (_) {}
+      if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+      e.preventDefault(); navigateTo('island', a.dataset.k);
+    });
+    btn.addEventListener('click', () => {
+      if (top.classList.contains('mh-filt')) { _mhOpenBest(); return; }
+      try { track('picks_unfold', {}); } catch (_) {} _mhFold(false);
+    });
+  }
+}
+/* Explore mode: after the first pan/zoom the photos fold into the slim chip and the quiz
+   pill becomes a round 🎯, for the rest of the visit; the chip brings the photos back. */
+function _mhFold(on) {
+  const top = document.getElementById('mh-top'), bar = document.getElementById('mh-bar');
+  if (top) top.classList.toggle('mh-folded', on);
+  if (bar) bar.classList.toggle('mh-folded', on);
+  try { if (on) sessionStorage.setItem('mh-fold', '1'); } catch (_) {}
 }
 
 function _mhOpenBest() {
   if (!_mhPicks) return;
-  const { keys, label, photos, lang } = _mhPicks;
+  const { label, photos, lang } = _mhPicks, keys = _mhPickKeys();
   const isEl = lang === 'el', tr = (en, el) => (isEl ? el : en);
   const base = isEl ? '/el/island/' : '/island/';
   const m = _whatsOnMonth || (new Date().getMonth() + 1);
-  const opener = document.querySelector('#mh-top .mh-best');
+  const opener = document.querySelector('#mh-top .mh-pk-h');
   let wrap = document.getElementById('mh-best');
   if (!wrap) { wrap = document.createElement('div'); wrap.id = 'mh-best'; wrap.className = 'mh-sheet-wrap'; document.body.appendChild(wrap); }
   const cards = keys.filter(k => ISLANDS_DATA[k]).map((k, i) => {
@@ -7569,14 +7617,19 @@ function setupMobileHome() {
   const top = document.createElement('div');
   top.className = 'mh-top'; top.id = 'mh-top';
   const _nIsl = Object.keys(ISLANDS_DATA).length;
-  // Search and quiz answer the same question ("which island?"): one bar, two ways in.
+  // Search and filters are one control (Nov 2026): find an island by name, or narrow the map.
+  // The quiz moved to a pill at the bottom; it read as the search button here.
   top.innerHTML = `<div class="mh-sbox"><button type="button" class="mh-search" aria-haspopup="dialog" aria-controls="mh-panel">`
-    + `<span aria-hidden="true">🔍</span><span class="mh-search-t"><span class="mh-st-l">${L(`Search ${_nIsl} rated islands…`, `Ψάξε σε ${_nIsl} νησιά…`)}</span>`
-    + `<span class="mh-st-s">${L(`Search ${_nIsl} islands…`, `Ψάξε ${_nIsl} νησιά…`)}</span></span></button>`
-    + `<button type="button" class="mh-quiz" aria-label="${L('60-second island quiz', 'Quiz 60 δευτερολέπτων')}">🎯 Quiz</button></div>`
-    + `<div class="mh-picks"><button type="button" class="mh-best" aria-haspopup="dialog" aria-controls="mh-best" hidden>${_MH_CAL}`
+    + `<span aria-hidden="true">🔍</span><span class="mh-search-t"><span class="mh-st-l">${L(`Search ${_nIsl} islands`, `Ψάξε ${_nIsl} νησιά`)}</span>`
+    + `<small class="mh-f-r"></small></span></button>`
+    + `<button type="button" class="mh-filter" aria-haspopup="dialog" aria-controls="vibe-panel"><span class="mh-f-i" aria-hidden="true">⚙</span>`
+    + `<b>${L('Filters', 'Φίλτρα')}</b><span class="mh-count" hidden></span></button></div>`
+    + `<div class="mh-picks"><div class="mh-pk" hidden><button type="button" class="mh-pk-h" aria-haspopup="dialog" aria-controls="mh-best">`
+    + `<span>${_MH_CAL} ${escapeHtml(L('Best in ' + month, 'Κορυφαία ' + month))}</span><small><span class="mh-pk-n"></span> ›</small></button>`
+    + `<div class="mh-pk-g"></div></div>`
+    + `<button type="button" class="mh-best" hidden>${_MH_CAL}`
     + `<span class="mh-best-t">${escapeHtml(L('Best in ' + month, 'Κορυφαία ' + month))}</span><span class="mh-best-n"></span>`
-    + `<span class="mh-best-th" aria-hidden="true"></span><span class="mh-best-go" aria-hidden="true">›</span></button></div>`;
+    + `<span class="mh-best-go" aria-hidden="true">›</span></button></div>`;
   map.appendChild(top);
   _mhRenderPicks();   // if renderMapRail already ran
 
@@ -7585,8 +7638,8 @@ function setupMobileHome() {
   const bar = document.createElement('div');
   bar.className = 'mh-bar'; bar.id = 'mh-bar';
   bar.setAttribute('role', 'toolbar'); bar.setAttribute('aria-label', L('Map tools', 'Εργαλεία χάρτη'));
-  bar.innerHTML = `<button type="button" class="mh-filter" aria-haspopup="dialog" aria-controls="vibe-panel"><span class="mh-f-i" aria-hidden="true">⚙</span>`
-    + `<span class="mh-f-t"><b>${L('Filters', 'Φίλτρα')}</b><small class="mh-f-r"></small></span><span class="mh-count" hidden></span></button>`;
+  bar.innerHTML = `<button type="button" class="mh-qp" aria-label="${L('Match me: an 8-question island quiz', 'Βρες το νησί σου: quiz 8 ερωτήσεων')}">`
+    + `<span aria-hidden="true">🎯</span><span class="mh-qp-t">${L('Match me', 'Βρες το νησί σου')} <small>· ${L('2 min', '2 λεπτά')}</small></span></button>`;
   map.appendChild(bar);
   // These sit inside the Leaflet map: stop touches/clicks/wheel reaching it, otherwise
   // a swipe on the picks row drags the map instead of scrolling the row.
@@ -7625,19 +7678,19 @@ function setupMobileHome() {
     }
   }
   const syncRank = () => {
-    bar.querySelector('.mh-f-r').textContent = L('Ranked: ', 'Κατάταξη: ') + rankText();
+    top.querySelector('.mh-f-r').textContent = L('Ranked: ', 'Κατάταξη: ') + rankText();
     if (vp) vp.querySelectorAll('.mh-seg button').forEach(b => b.setAttribute('aria-checked', b.dataset.v === vs.value ? 'true' : 'false'));
   };
   if (vs) { vs.addEventListener('change', syncRank); syncRank(); }
-  top.querySelector('.mh-quiz').addEventListener('click', () => { try { track('home_quiz_click', { from: 'search_bar' }); } catch (_) {} navigateTo('match'); });
-  bar.querySelector('.mh-filter').addEventListener('click', (e) => { e.stopPropagation(); if (typeof toggleVibePanel === 'function') toggleVibePanel(); });
-  const srcCount = document.getElementById('vibe-filter-count'), dstCount = bar.querySelector('.mh-count');
+  bar.querySelector('.mh-qp').addEventListener('click', () => { try { track('home_quiz_click', { from: bar.classList.contains('mh-folded') ? 'bottom_round' : 'bottom_pill' }); } catch (_) {} navigateTo('match'); });
+  top.querySelector('.mh-filter').addEventListener('click', (e) => { e.stopPropagation(); if (typeof toggleVibePanel === 'function') toggleVibePanel(); });
+  const srcCount = document.getElementById('vibe-filter-count'), dstCount = top.querySelector('.mh-count');
   const syncCount = () => { if (!srcCount) return; const n = srcCount.textContent.trim(); dstCount.textContent = n; dstCount.hidden = !n || srcCount.style.display === 'none'; };
   // ---- active filters as removable chips above the Filters pill (one tap to drop one, or all)
   const chips = document.createElement('div');
   chips.className = 'mh-chips'; chips.id = 'mh-chips'; chips.hidden = true;
   chips.setAttribute('aria-label', L('Active filters', 'Ενεργά φίλτρα'));
-  map.appendChild(chips);
+  top.insertBefore(chips, top.querySelector('.mh-picks'));
   if (window.L && window.L.DomEvent) { window.L.DomEvent.disableClickPropagation(chips); window.L.DomEvent.disableScrollPropagation(chips); }
   const renderChips = () => {
     const act = [...activeVibeFilters];
@@ -7654,9 +7707,9 @@ function setupMobileHome() {
     const b = e.target.closest('.mh-chip'); if (!b) return;
     if (b.classList.contains('mh-chip-all')) { try { track('filter_chip_clear', { n: activeVibeFilters.size }); } catch (_) {} clearVibeFilters(); }
     else { try { track('filter_chip_remove', { filter: b.dataset.f }); } catch (_) {} toggleVibeTag(b.dataset.f); }
-    renderChips();
+    renderChips(); _mhRenderPicks();
   });
-  if (srcCount) { new MutationObserver(() => { syncCount(); renderChips(); }).observe(srcCount, { childList: true, characterData: true, subtree: true, attributes: true }); syncCount(); renderChips(); }
+  if (srcCount) { new MutationObserver(() => { syncCount(); renderChips(); try { _mhRenderPicks(); } catch (_) {} }).observe(srcCount, { childList: true, characterData: true, subtree: true, attributes: true }); syncCount(); renderChips(); }
 
   // ---- map style: 🗺 | 🛰 (replaces Leaflet's layers box, which read as a blank white square)
   const lay = document.createElement('div');
@@ -7685,7 +7738,7 @@ function setupMobileHome() {
       + `<p>${L('Each circle is an island, scored on beaches, culture, nightlife, cost and how easy it is to reach. Tap one for its full guide.',
                'Κάθε κύκλος είναι ένα νησί, με βαθμό για παραλίες, πολιτισμό, νυχτερινή ζωή, κόστος και πρόσβαση. Πάτα ένα για τον πλήρη οδηγό.')}</p>`
       + `<div class="mh-w-leg"><b style="background:${scoreToColor(4.2)}">4.2</b><span>${L('= an island’s score out of 5', '= ο βαθμός του νησιού στα 5')}</span><span class="mh-w-sw" aria-hidden="true">${sw}</span></div>`
-      + `<div class="mh-w-btns"><button type="button" class="mh-w-quiz">🎯 ${L('Find my island', 'Βρες το νησί μου')}</button>`
+      + `<div class="mh-w-btns"><button type="button" class="mh-w-quiz">🎯 ${L('Match me', 'Βρες το νησί σου')}</button>`
       + `<button type="button" class="mh-w-go">${L('Explore the map', 'Εξερεύνησε τον χάρτη')}</button></div>`;
     map.appendChild(card);
     if (window.L && window.L.DomEvent) { window.L.DomEvent.disableClickPropagation(card); window.L.DomEvent.disableScrollPropagation(card); }
@@ -7750,11 +7803,22 @@ function setupMobileHome() {
     navigateTo('island', a.dataset.k);
   });
 
+  // ---- explore mode: fold the photos away on the first pan / pinch (see _mhFold)
+  let _fold0 = false; try { _fold0 = sessionStorage.getItem('mh-fold') === '1'; } catch (_) {}
+  if (_fold0) _mhFold(true);
+  const mapEl = document.getElementById('main-map');
+  const foldNow = () => { const tp = document.getElementById('mh-top'); if (tp && !tp.classList.contains('mh-folded')) _mhFold(true); };
+  if (mapEl) {
+    mapEl.addEventListener('touchstart', e => { if (e.touches.length > 1) foldNow(); }, { passive: true });
+    mapEl.addEventListener('wheel', foldNow, { passive: true });
+  }
   // ---- the map now owns the whole screen: refit around the floating controls
+  // (top: search + the three photo cards; bottom: the quiz pill, so Crete clears it)
   setTimeout(() => {
     if (typeof mapInstance === 'undefined' || !mapInstance) return;
     mapInstance.invalidateSize();
-    mapInstance.fitBounds(L_bounds(), { paddingTopLeft: [8, 104], paddingBottomRight: [8, 70] });
+    mapInstance.fitBounds(L_bounds(), { paddingTopLeft: [8, _fold0 ? 104 : 190], paddingBottomRight: [8, 84] });
+    mapInstance.on('dragstart', foldNow);
   }, 60);
   function L_bounds() { return window.L.latLngBounds(window.L.latLng(34.6, 19.4), window.L.latLng(41.1, 28.4)); }
 }
