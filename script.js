@@ -6389,10 +6389,8 @@ function renderQuizStep() {
   // Phones: the whole step is one screen — Back/Skip ride on the progress row,
   // the front-runners dock at the bottom (CSS, #view-match.mq-live).
   { const vm = document.getElementById('view-match'); if (vm) { vm.classList.add('mq-live'); vm.classList.remove('mq-res'); } }
-  if (window.matchMedia('(max-width: 840px)').matches) {
-    const nb = container.querySelector('.quiz-nav-back'), pr = container.querySelector('.quiz-progress');
-    if (nb && pr) pr.appendChild(nb);
-  }
+  // (Back/Skip used to ride on the progress row on phones; they collided with the bar.
+  //  Since Nov 2026 they sit under the answers, as on desktop.)
 
   // Trigger animation: remove entering class after one frame so transition fires
   requestAnimationFrame(() => {
@@ -7003,10 +7001,12 @@ function quizSizeBand() {
   const vm = document.getElementById('view-match'); if (!vm) return;
   // phones too (Nov 2026): the band ends under the headline, the rest of the screen is light
   const phone = !window.matchMedia('(min-width: 841px)').matches;
-  const h = vm.querySelector(vm.classList.contains('mq-res') ? '.qz-rhead' : '.quiz-question');
+  // phones: the 'why' line sits on the photo too, so the band ends under it
+  const h = vm.classList.contains('mq-res') ? vm.querySelector('.qz-rhead')
+    : ((phone && vm.querySelector('.quiz-why')) || vm.querySelector('.quiz-question'));
   if (!h) return;
   const b = h.getBoundingClientRect().bottom - vm.getBoundingClientRect().top;
-  vm.style.setProperty('--mq-band', Math.round(b + (phone ? 12 : 26)) + 'px');
+  vm.style.setProperty('--mq-band', Math.round(b + (phone ? 14 : 26)) + 'px');
 }
 window.addEventListener('resize', () => { try { quizSizeBand(); } catch (_) {} });
 

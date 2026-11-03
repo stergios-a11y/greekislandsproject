@@ -8022,3 +8022,37 @@ html.dark .qz-save { background: #1F2530; border-color: #22C0E0; }
   html.dark #view-home .mh-top .mh-chip { background: #0A2A35; color: #60D8F0; border-color: #154453; }
   html.dark #view-home .mh-top .mh-chip-all { background: #1F2530; color: #C4CDD6; border-color: #2E3644; }
 }
+
+
+/* MATCH ME v2.1 phones (Nov 2026): the screen was half empty. Taller photo band (headline +
+   'why' on the photo), answer cards grow to use the height (capped), Back/Skip under them,
+   the movement line back. */
+@media (max-width: 840px) {
+  #view-match.mq-live .match-col { display: flex; flex-direction: column; }
+  #view-match.mq-live #quiz-container { flex: 1 0 auto; display: flex; flex-direction: column; }
+  #view-match.mq-live .quiz-card { flex: 1 0 auto; display: flex; flex-direction: column; }
+  #view-match.mq-live .quiz-progress { margin-bottom: 0; }
+  #view-match.mq-live .quiz-question { margin-top: clamp(28px, 9vh, 96px); font-size: 26px; line-height: 1.12; }
+  #view-match.mq-live .quiz-why { color: rgba(255,255,255,.92); text-shadow: 0 1px 8px rgba(0,0,0,.5); -webkit-line-clamp: 3; margin-bottom: 0; font-size: 13px; }
+  #view-match.mq-live .quiz-options { margin-top: 26px; flex: 1 0 auto; max-height: 340px; grid-auto-rows: minmax(104px, 1fr); }
+  #view-match.mq-live .quiz-option { min-height: 0; justify-content: center; padding: 12px; }
+  #view-match.mq-live .quiz-opt-ic { width: 40px; height: 40px; font-size: 22px; }
+  #view-match.mq-live .quiz-opt-tx b { font-size: 15px; }
+  #view-match.mq-live .quiz-opt-tx small { font-size: 11.5px; }
+  #view-match.mq-live .quiz-nav-back { display: flex; justify-content: space-between; gap: 12px; margin: 14px 2px 0; }
+  #view-match.mq-live .quiz-back-btn, #view-match.mq-live .quiz-skip-btn { color: #5D6B7A; text-shadow: none; font-size: 13.5px; }
+  #view-match.mq-live .quiz-movement { display: block; min-height: 18px; margin: 8px 2px 4px; font-size: 12.5px; color: var(--warm-dark, #C6421F); }
+  html.dark #view-match.mq-live .quiz-back-btn, html.dark #view-match.mq-live .quiz-skip-btn { color: #93A1B0; }
+  html.dark #view-match.mq-live .quiz-movement { color: #F59A7E; }
+  @media (max-height: 760px) {
+    #view-match.mq-live .quiz-question { margin-top: 14px; font-size: 23px; }
+    #view-match.mq-live .quiz-options { margin-top: 16px; grid-auto-rows: minmax(92px, 1fr); }
+  }
+
+  /* phone home: Filters reads as a button, not a label */
+  #view-home .mh-sbox .mh-filter { height: 38px; margin-right: 1px; padding: 0 13px 0 12px; border: 0; border-radius: 999px; background: var(--primary); color: #fff;
+    box-shadow: 0 2px 8px rgba(11,143,172,.35); }
+  #view-home .mh-sbox .mh-count { background: #fff; color: var(--primary-dark); }
+  #view-home .mh-sbox:has(.mh-count:not([hidden])) .mh-filter { background: var(--primary-dark); }
+  html.dark #view-home .mh-sbox .mh-filter { background: #0B8FAC; color: #fff; }
+}
