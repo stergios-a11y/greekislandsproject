@@ -2031,6 +2031,7 @@ function toggleVibePanel() {
   panel.style.display = open ? '' : 'none';
   document.body.classList.toggle('mh-vp-open', open);
   btn && btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  if (!open && _vibeFitPending) _vibeFit();
   if (open) updateVibeMatchCount();
 }
 
@@ -2154,14 +2155,7 @@ function toggleVibeTag(filter) {
   document.querySelectorAll('.vibe-tag').forEach(btn => {
     btn.classList.toggle('active', activeVibeFilters.has(btn.dataset.filter));
   });
-  const clearBtn = document.getElementById('vibe-clear-btn');
-  if (clearBtn) clearBtn.style.display = activeVibeFilters.size ? '' : 'none';
-  // Update badge on filter button
-  const countBadge = document.getElementById('vibe-filter-count');
-  if (countBadge) {
-    countBadge.textContent = activeVibeFilters.size || '';
-    countBadge.style.display = activeVibeFilters.size ? '' : 'none';
-  }
+  _syncFilterBadge();
   updateVibeMatchCount();
   renderMapMarkers();
   _vibeFitSoon();
@@ -2174,7 +2168,7 @@ const VIBE_FIT_MAX = 15;
 function _vibeFit() {
   _vibeFitPending = false;
   if (typeof mapInstance === 'undefined' || !mapInstance || typeof L === 'undefined') return;
-  const hits = activeVibeFilters.size ? ISLANDS.filter(i => islandPassesVibeFilters(i) && _shownOnMap(i.key)) : [];
+  const hits = _filterCount() ? ISLANDS.filter(i => islandPassesVibeFilters(i) && _shownOnMap(i.key)) : [];
   const animate = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const small = window.matchMedia('(max-width: 840px)').matches;
   if (hits.length && hits.length < VIBE_FIT_MAX) {
@@ -2189,17 +2183,15 @@ function _vibeFit() {
 }
 function _vibeFitSoon() {
   const p = document.getElementById('vibe-panel');
-  if (window.matchMedia('(max-width: 840px)').matches && p && p.style.display !== 'none') { _vibeFitPending = true; return; }
+  if (p && p.style.display !== 'none') { _vibeFitPending = true; return; }
   _vibeFit();
 }
 
 function clearVibeFilters() {
   activeVibeFilters.clear();
   document.querySelectorAll('.vibe-tag').forEach(btn => btn.classList.remove('active'));
-  const clearBtn = document.getElementById('vibe-clear-btn');
-  if (clearBtn) clearBtn.style.display = 'none';
-  const countBadge = document.getElementById('vibe-filter-count');
-  if (countBadge) { countBadge.textContent = ''; countBadge.style.display = 'none'; }
+  if (_regionOn()) { currentGroupFilter = 'all'; const gs = document.getElementById('group-select'); if (gs) gs.value = 'all'; }
+  _syncFilterBadge();
   updateVibeMatchCount();
   renderMapMarkers();
   _vibeFitSoon();
@@ -2208,7 +2200,7 @@ function clearVibeFilters() {
 function updateVibeMatchCount() {
   const el = document.getElementById('vibe-match-count');
   if (!el) return;
-  if (!activeVibeFilters.size) { el.textContent = ''; return; }
+  if (!_filterCount()) { el.textContent = ''; return; }
   const n = ISLANDS.filter(i => islandPassesVibeFilters(i)).length;
   const total = ISLANDS.length;
   el.textContent = `${n} / ${total} islands`;
@@ -2264,7 +2256,28 @@ function nowRanked() {
   return _nowRankCache;
 }
 
+/* Filters in force: the vibe tags plus a region (island group) when one is picked. */
+function _regionOn() { return typeof currentGroupFilter !== 'undefined' && currentGroupFilter !== 'all' && !String(currentGroupFilter).startsWith('__'); }
+function _filterCount() { return activeVibeFilters.size + (_regionOn() ? 1 : 0); }
+function _syncFilterBadge() {
+  const n = _filterCount();
+  const clearBtn = document.getElementById('vibe-clear-btn');
+  if (clearBtn) clearBtn.style.display = n ? '' : 'none';
+  const countBadge = document.getElementById('vibe-filter-count');
+  if (countBadge) { countBadge.textContent = n || ''; countBadge.style.display = n ? '' : 'none'; }
+  document.querySelectorAll('#vibe-panel .vibe-region').forEach(b => {
+    const on = b.dataset.g === (_regionOn() ? currentGroupFilter : 'all');
+    b.classList.toggle('active', on); b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+}
+function setRegionFilter(g) {
+  const sel = document.getElementById('group-select');
+  currentGroupFilter = g || 'all';
+  if (sel) sel.value = currentGroupFilter;
+  _syncFilterBadge(); updateVibeMatchCount(); renderMapMarkers(); _vibeFitSoon();
+}
 function islandPassesVibeFilters(island) {
+  if (_regionOn() && island && island.key && !_passesGroupFilter(island.key)) return false;
   if (!activeVibeFilters.size) return true;
   const mo = new Date().getMonth(); // 0-indexed
   for (const f of activeVibeFilters) {
@@ -2361,10 +2374,25 @@ function setupGroupFilter() {
   optNoAir.textContent = t('filter.withoutairport');
   optNoAir.dataset.i18n = 'filter.withoutairport';
   sel.appendChild(optNoAir);
-  sel.addEventListener('change', () => {
-    currentGroupFilter = sel.value;
-    renderMapMarkers();
-  });
+  sel.addEventListener('change', () => { setRegionFilter(sel.value); });
+  // Region chips at the top of the filter sheet (Nov 2026): the dropdown left the bar.
+  const vp = document.getElementById('vibe-panel'), tags = document.getElementById('vibe-tags');
+  if (vp && tags && !vp.querySelector('.vibe-regions')) {
+    const isEl = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+    const wrap = document.createElement('div');
+    wrap.className = 'vibe-regions-wrap';
+    wrap.innerHTML = `<p class="vibe-sec">${isEl ? 'Περιοχή' : 'Region'}</p><div class="vibe-regions">`
+      + `<button type="button" class="vibe-region active" data-g="all" aria-pressed="true">${isEl ? 'Όλες' : 'All'}</button>`
+      + groups.map(g => `<button type="button" class="vibe-region" data-g="${escapeHtml(g)}" aria-pressed="false">${escapeHtml(groupName(g))}</button>`).join('')
+      + `</div><p class="vibe-sec">${isEl ? 'Χαρακτήρας' : 'What the island is like'}</p>`;
+    tags.parentNode.insertBefore(wrap, tags);
+    wrap.addEventListener('click', e => {
+      const b = e.target.closest('.vibe-region'); if (!b) return;
+      e.stopPropagation();
+      try { track('filter_region', { region: b.dataset.g }); } catch (_) {}
+      setRegionFilter(b.dataset.g === (_regionOn() ? currentGroupFilter : '') ? 'all' : b.dataset.g);
+    });
+  }
 }
 
 /* ============================================================
@@ -7491,7 +7519,7 @@ const _MH_CAL = '<svg class="ico-cal" width="14" height="14" viewBox="0 0 24 24"
    island tagged for this month passes them). */
 function _mhPickKeys() {
   if (!_mhPicks) return [];
-  if (typeof activeVibeFilters === 'undefined' || !activeVibeFilters.size) return _mhPicks.keys;
+  if (typeof activeVibeFilters === 'undefined' || !_filterCount()) return _mhPicks.keys;
   const byKey = {}; ISLANDS.forEach(i => { byKey[i.key] = i; });
   return _mhPool.filter(k => byKey[k] && islandPassesVibeFilters(byKey[k])).slice(0, 3);
 }
@@ -7500,7 +7528,7 @@ function _mhRenderPicks() {
   const btn = top && top.querySelector('.mh-best'), blk = top && top.querySelector('.mh-pk');
   if (!btn || !blk || !_mhPicks || !_mhPicks.keys.length) return;
   const { photos, lang } = _mhPicks, isEl = lang === 'el', keys = _mhPickKeys();
-  const filtered = typeof activeVibeFilters !== 'undefined' && activeVibeFilters.size > 0;
+  const filtered = typeof activeVibeFilters !== 'undefined' && _filterCount() > 0;
   const n = keys.length;
   const nTxt = isEl ? `${n} επιλογές` : `${n} picks`;
   // with filters on, the picks shrink to the slim chip (the filtered map is the focus) and follow the filters
@@ -7773,10 +7801,12 @@ function setupMobileHome() {
   if (window.L && window.L.DomEvent) { window.L.DomEvent.disableClickPropagation(chips); window.L.DomEvent.disableScrollPropagation(chips); }
   const renderChips = () => {
     const act = [...activeVibeFilters];
-    chips.hidden = !act.length;
-    if (!act.length) { chips.innerHTML = ''; return; }
+    const reg = _regionOn() ? `<button type="button" class="mh-chip" data-g="1" aria-label="${escapeHtml(L('Remove filter: ', 'Αφαίρεση φίλτρου: ') + groupName(currentGroupFilter))}">📍 ${escapeHtml(groupName(currentGroupFilter))} <b aria-hidden="true">✕</b></button>` : '';
+    const nAll = act.length + (reg ? 1 : 0);
+    chips.hidden = !nAll;
+    if (!nAll) { chips.innerHTML = ''; return; }
     // "Clear all" leads, so it's on screen even when the chips overflow sideways.
-    chips.innerHTML = (act.length > 1 ? `<button type="button" class="mh-chip mh-chip-all">${L('Clear all', 'Καθαρισμός')}</button>` : '') + act.map(f => {
+    chips.innerHTML = (nAll > 1 ? `<button type="button" class="mh-chip mh-chip-all">${L('Clear all', 'Καθαρισμός')}</button>` : '') + reg + act.map(f => {
       const tag = document.querySelector(`#vibe-panel .vibe-tag[data-filter="${f}"]`);
       const label = tag ? tag.textContent.trim().replace(/\s+/g, ' ') : f;
       return `<button type="button" class="mh-chip" data-f="${f}" aria-label="${escapeHtml(L('Remove filter: ', 'Αφαίρεση φίλτρου: ') + label)}">${escapeHtml(label)} <b aria-hidden="true">✕</b></button>`;
@@ -7785,6 +7815,7 @@ function setupMobileHome() {
   chips.addEventListener('click', e => {
     const b = e.target.closest('.mh-chip'); if (!b) return;
     if (b.classList.contains('mh-chip-all')) { try { track('filter_chip_clear', { n: activeVibeFilters.size }); } catch (_) {} clearVibeFilters(); }
+    else if (b.dataset.g) { try { track('filter_chip_remove', { filter: 'region' }); } catch (_) {} setRegionFilter('all'); }
     else { try { track('filter_chip_remove', { filter: b.dataset.f }); } catch (_) {} toggleVibeTag(b.dataset.f); }
     renderChips(); _mhRenderPicks();
   });
@@ -7872,7 +7903,7 @@ function setupMobileHome() {
     return out.join(' · ') || groupName(d.island_group);
   };
   const renderList = () => {
-    const v = _mhNorm(q.value.trim()), filt = activeVibeFilters.size > 0;
+    const v = _mhNorm(q.value.trim()), filt = _filterCount() > 0;
     const hits = ISLANDS.filter(i => ISLANDS_DATA[i.key] && islandPassesVibeFilters(i) && (!v ||
       _mhNorm(islandName(i.key) + ' ' + (ISLANDS_DATA[i.key].name || '') + ' ' + elName(i.key)).includes(v)));
     const gs = {}; hits.forEach(i => { (gs[i.island_group || ''] = gs[i.island_group || ''] || []).push(i); });

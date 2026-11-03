@@ -8199,3 +8199,21 @@ html.dark .qz-save { background: #1F2530; border-color: #22C0E0; }
   .dh-panel .map-filterbar .filter-select, .dh-panel .mf-group, .dh-panel .map-filterbar .vibe-filter-btn { height: 34px; }
   @media (max-width: 1180px) { .dh-panel .bp-hero-title { font-size: 18px; } }
 }
+
+
+/* REGION under Filters (Nov 2026) */
+.vibe-sec { margin: 2px 2px 8px; font: 800 11px var(--font-ui); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+.vibe-regions-wrap + .vibe-tags { margin-top: 0; }
+.vibe-regions { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.vibe-region { border: 1.5px solid var(--border); background: var(--white, #fff); color: var(--ink-1); border-radius: 999px; padding: 6px 12px;
+  font: 700 13px var(--font-ui); cursor: pointer; }
+.vibe-region:hover { border-color: var(--primary); }
+.vibe-region.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+html.dark .vibe-region { background: #1F2530; border-color: #2E3644; color: #EEF2F5; }
+html.dark .vibe-region.active { background: #0B8FAC; border-color: #0B8FAC; color: #fff; }
+.vibe-panel > .vibe-hint { display: none; }
+@media (min-width: 841px) {
+  .dh-panel #group-select { display: none; }
+  .dh-panel .mf-group { flex: 1 1 auto; }
+  .dh-panel .mf-label { display: inline; }
+}
