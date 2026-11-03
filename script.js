@@ -3,7 +3,7 @@
 const VERSION = 'v4.0';
 // Map credits without Leaflet's own "Leaflet" prefix (its licence doesn't need it on the map).
 if (typeof L !== 'undefined' && L.Control && L.Control.Attribution) L.Control.Attribution.mergeOptions({ prefix: false });
-const BUILD_DATE = '2026-11-01';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-11-03';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -6357,7 +6357,8 @@ let quizInitialized = false;
 let quizDirection = 1; // 1 = forward, -1 = back
 
 function setupQuizIfNeeded() {
-  if (!quizInitialized) { quizInitialized = true; renderQuizStep(); }
+  if (!quizInitialized) { quizInitialized = true; renderQuizStep();
+    loadQuizCosts().then(() => { try { quizDecorateOptions(); renderQuizTripBoxOnly(); } catch (_) {} }); }
 }
 
 function renderQuizStep() {
@@ -6409,6 +6410,7 @@ function renderQuizStep() {
     });
   });
   try { renderQuizLiveBoard(); } catch (e) { console.warn('quizLive', e); }
+  try { quizDecorateOptions(); quizSizeBand(); } catch (e) { console.warn('quizV2', e); }
 
   const backBtn = container.querySelector('.quiz-back-btn');
   if (backBtn) backBtn.addEventListener('click', () => {
@@ -6687,7 +6689,7 @@ function renderQuizLiveBoard() {
   }).join('');
 
   box.hidden = false;
-  box.innerHTML = '<div class="ql-head">' + t('quiz.live.title')
+  box.innerHTML = quizTripBox(quizAnswersById(), scoreIslandsFromAnswers(quizAnswers).scored) + '<div class="ql-head">' + t('quiz.live.title')
     + '<small>' + (answered ? t('quiz.live.sub') : t('quiz.live.sub0')) + '</small></div>'
     + '<ol class="ql-list">' + rows + '</ol>'
     + (answered < QUIZ_QUESTIONS.length ? '<div class="ql-foot">' + t('quiz.live.foot') + '</div>' : '');
@@ -6720,6 +6722,14 @@ function renderQuizLiveBoard() {
   scored.forEach(function (isl) { quizSeenKeys[isl.key] = true; });
 }
 
+/* costs.json arrived after the board was drawn: refresh only the trip box. */
+function renderQuizTripBoxOnly() {
+  const box = document.getElementById('quiz-live'), old = box && box.querySelector('.qz-trip');
+  if (!old) return;
+  const tmp = document.createElement('div'); tmp.innerHTML = quizTripBox(quizAnswersById(), scoreIslandsFromAnswers(quizAnswers).scored);
+  old.replaceWith(tmp.firstChild);
+}
+
 /* One plain sentence explaining the reshuffle the answer just caused. */
 function renderQuizMovement(climbers, answered) {
   const el = document.getElementById('quiz-movement');
@@ -6744,7 +6754,259 @@ function renderQuizMovement(climbers, answered) {
   el.classList.add('on');
 }
 
+/* ---- Match Me ⇄ Trip cost (Nov 2026) ------------------------------------
+   The quiz already asks what Trip cost needs (who, how long, budget, when,
+   how you get there, car). These turn the answers into trip settings, cost a
+   single island or an island-hop with the calculator's own arithmetic
+   (costs.json + the ferry graph, same rules as tools/build_trip_cost.py), and
+   build the /trip-cost/ link that opens with everything filled in. Figures
+   are the calculator's defaults for those settings: no boat days, no extras. */
+const QZ_PAX = [1, 2, 4, 4], QZ_ROOMS = [null, null, 1, null];
+const QZ_NIGHTS = [2, 4, 7, 10];
+const QZ_TIER = ['budget', 'mid', 'comfort', 'comfort'];
+const QZ_MONTH = ['may', 'jul', 'sep', 'oct'];
+const QZ_LANDMASS = { chania: 'crete', rethymno: 'crete', heraklion: 'crete', lasithi: 'crete',
+  'evia-north': 'evia', 'evia-central': 'evia', 'evia-south': 'evia' };   // keep in step with market.json landmasses
+const QZ_LOCAL = { ammouliani: [3, 5], thasos: [4, 7], samothrace: [12, 18], 'evia-north': [3, 5],
+  'evia-central': [0, 0, 9], 'evia-south': [8, 12], lefkada: [0, 0, 37] };  // LOCAL_PORTS in build_trip_cost.py: [lo, hi, bus]
+const QZ_NO_CAR = { hydra: 1, spetses: 1 };
+const QZ_GATES = { Piraeus: { lat: 37.942, lng: 23.646 }, Volos: { lat: 39.362, lng: 22.942 } };
+const qzL = (en, el) => (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? el : en;
+let QZC = null, _qzCostsP = null;
+function loadQuizCosts() {
+  if (!_qzCostsP) _qzCostsP = fetch('/costs.json', { cache: 'no-cache' })
+    .then(r => r.ok ? r.json() : null).catch(() => null).then(c => (QZC = c));
+  return _qzCostsP;
+}
+function qzHav(a, b) { const R = 6371, d = Math.PI / 180, dLat = (b.lat - a.lat) * d, dLng = (b.lng - a.lng) * d;
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * d) * Math.cos(b.lat * d) * Math.sin(dLng / 2) ** 2; return 2 * R * Math.asin(Math.sqrt(h)); }
+function qzNm(km) { const nm = km / 1.852;
+  return [Math.min(85, Math.max(7, Math.round(7 + 0.33 * nm))), Math.min(120, Math.max(12, Math.round(12 + 0.55 * nm)))]; }
+const qzMid = f => (f[0] + f[1]) / 2;
+const qzRnd = n => n < 100 ? Math.round(n / 5) * 5 : Math.round(n / 10) * 10;
+function qzGate(k) { const g = ISLANDS_DATA[k].island_group; return g === 'Sporades' ? QZ_GATES.Volos : g === 'Ionian' ? null : QZ_GATES.Piraeus; }
+function qzGraphFare(a, b) {
+  if (!FERRY_ADJ[a] || !FERRY_ADJ[b]) return null;
+  const q = [[a, 0, 0, [a], [0, 0]]];
+  while (q.length) {
+    q.sort((x, y) => x[1] - y[1]); const [n, c, h, path, f] = q.shift();
+    if (n === b) return f;
+    if (h >= 3) continue;
+    for (const e of FERRY_ADJ[n]) if (!path.includes(e.to)) q.push([e.to, c + (e.plo + e.phi) / 2, h + 1, path.concat(e.to), [f[0] + e.plo, f[1] + e.phi]]);
+  }
+  return null;
+}
+// fare of one leg; 'M' = the mainland start / end (legInfo in the calculator)
+function qzLeg(a, b) {
+  const D = ISLANDS_DATA;
+  if (a === 'M' || b === 'M') {
+    const k = a === 'M' ? b : a, lp = QZ_LOCAL[k], g = qzGate(k);
+    if (lp) return { f: [lp[0], lp[1]], road: lp[1] === 0, bus: lp[2] || 0 };
+    if (!g) return { f: [15, 40] };
+    return { f: qzNm(qzHav(g, D[k])) };
+  }
+  if (QZ_LANDMASS[a] && QZ_LANDMASS[a] === QZ_LANDMASS[b]) return { f: [0, 0], road: true, bus: Math.max(5, Math.round(qzHav(D[a], D[b]) * 1.3 * 0.09)) };
+  const gf = qzGraphFare(a, b);
+  if (gf) return { f: gf };
+  if (D[a].island_group === D[b].island_group) return { f: qzNm(qzHav(D[a], D[b])) };
+  const side = k => QZ_LOCAL[k] ? [QZ_LOCAL[k][0], QZ_LOCAL[k][1]] : (qzGate(k) ? qzNm(qzHav(qzGate(k), D[k])) : [15, 40]);
+  const fa = side(a), fb = side(b); return { f: [fa[0] + fb[0], fa[1] + fb[1]] };
+}
+const qzSeas = (tbl, mk) => tbl[mk] !== undefined ? tbl[mk] : Math.min.apply(null, Object.values(tbl));
+function qzRoomMult(pax, rooms) {
+  const r = rooms ? Math.min(pax, Math.max(Math.ceil(pax / 4), rooms)) : Math.max(1, Math.ceil(pax / 2));
+  const q = Math.floor(pax / r), x = pax % r; let m = 0;
+  for (let i = 0; i < r; i++) { const n = q + (i < x ? 1 : 0); m += n <= 2 ? 1 : n === 3 ? 1.3 : 1.5; }
+  return m;
+}
+/* Trip settings from the answers (calculator defaults where unanswered). */
+function quizSettings(A) {
+  return {
+    pax: A.party !== undefined ? QZ_PAX[A.party] : 2,
+    rooms: A.party !== undefined ? QZ_ROOMS[A.party] : null,
+    nights: A.duration !== undefined ? QZ_NIGHTS[A.duration] : null,
+    tier: A.budget !== undefined ? QZ_TIER[A.budget] : 'mid',
+    month: A.month !== undefined ? QZ_MONTH[A.month] : 'jun',
+    own: A.transport === 0, fly: A.transport === 3, hire: A.car === 0,
+  };
+}
+/* Total for a trip [{k, n}] under settings S — the calculator's sum. */
+function quizTripTotal(trip, S) {
+  const C = QZC; if (!C || !C.islands || !trip.length) return null;
+  const M = C._meta, I = C.islands, D = ISLANDS_DATA;
+  if (trip.some(t => !I[t.k] || !I[t.k].room)) return null;
+  const pax = S.pax, rm = qzRoomMult(pax, S.rooms), mk = S.month;
+  const first = trip[0].k, last = trip[trip.length - 1].k;
+  const flyIn = S.fly && !S.own && D[first].has_airport, flyOut = S.fly && !S.own && D[last].has_airport;
+  const legs = [...(flyIn ? [] : [['M', first]]), ...trip.slice(0, -1).map((t, i) => [t.k, trip[i + 1].k]), ...(flyOut ? [] : [[last, 'M']])];
+  let tot = 0;
+  legs.forEach(([a, b]) => { const l = qzLeg(a, b); tot += qzMid(l.f) * pax; if (l.road && l.bus && !S.own) tot += l.bus * pax; });
+  const flight = k => { const nm = qzHav(QZ_GATES.Piraeus, D[k]) / 1.852; return Math.min(120, Math.max(55, Math.round(55 + 0.15 * nm))); };
+  if (flyIn) tot += flight(first) * pax;
+  if (flyOut) tot += flight(last) * pax;
+  const mealF = S.tier === 'budget' ? M.meal_budget : S.tier === 'comfort' ? M.meal_comfort : 1;
+  trip.forEach(t => {
+    const c = I[t.k], v = S.hire && !S.own && c.car_day;
+    const prem = (!S.own && !v && (D[t.k].car_need || 0) >= 4 && c.car_day) ? M.carless_central_premium : 1;
+    tot += c.room[S.tier] * qzSeas(M.season_room, mk) * t.n * prem * rm;
+    tot += c.meal_pp_mid * mealF * pax * t.n;
+    if (v) { const q = Math.ceil(pax / 5); tot += (c.car_day * qzSeas(M.season_car, mk) + M.fuel_per_day) * t.n * q; }
+  });
+  if (S.own) {
+    const carLegs = [['M', first], ...trip.slice(0, -1).map((t, i) => [t.k, trip[i + 1].k]), [last, 'M']];
+    carLegs.forEach(([x, y]) => { if (QZ_NO_CAR[x] || QZ_NO_CAR[y]) return; const f = qzLeg(x, y).f; if (f[1] !== 0) tot += Math.min(130, Math.max(25, qzMid(f) * 2.3)); });
+    tot += trip.reduce((a, t) => a + (QZ_NO_CAR[t.k] ? 0 : t.n), 0) * M.fuel_per_day;
+  }
+  return qzRnd(tot);
+}
+/* Spend per day on the island itself (room, food, hire car) for the party. */
+function quizDayCost(k, S) {
+  const C = QZC; if (!C || !C.islands || !C.islands[k] || !C.islands[k].room) return null;
+  const M = C._meta, c = C.islands[k], v = S.hire && !S.own && c.car_day;
+  const prem = (!S.own && !v && (ISLANDS_DATA[k].car_need || 0) >= 4 && c.car_day) ? M.carless_central_premium : 1;
+  const mealF = S.tier === 'budget' ? M.meal_budget : S.tier === 'comfort' ? M.meal_comfort : 1;
+  let d = c.room[S.tier] * qzSeas(M.season_room, S.month) * prem * qzRoomMult(S.pax, S.rooms) + c.meal_pp_mid * mealF * S.pax;
+  if (v) d += (c.car_day * qzSeas(M.season_car, S.month) + M.fuel_per_day) * Math.ceil(S.pax / 5);
+  return qzRnd(d);
+}
+function quizCostUrl(trip, S) {
+  const p = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el') ? '/el' : '';
+  const I = (QZC && QZC.islands) || {};
+  return p + '/trip-cost/?i=' + trip.map(t => t.k + ':' + t.n + (S.hire && !S.own && I[t.k] && I[t.k].car_day ? ':c' : '')).join(',')
+    + '&m=' + S.month + '&pax=' + S.pax + '&tier=' + S.tier + (S.rooms ? '&rooms=' + S.rooms : '')
+    + (S.fly ? '&fly=1' : '') + (S.own ? '&veh=own' : '') + '&src=quiz';
+}
+const qzEur = n => '€' + fmtEur(n);
+const qzPpl = n => n === 1 ? qzL('1 person', '1 άτομο') : n + ' ' + qzL('people', 'άτομα');
+const qzNts = n => n + ' ' + (n === 1 ? qzL('night', 'νύχτα') : qzL('nights', 'νύχτες'));
+const qzFor = n => qzL('for ', 'για ') + (n === 1 ? qzL('1', '1') : n);
+/* Nights split across stops by how many days each island asks for (min 2). */
+function qzSplit(keys, nights) {
+  const w = keys.map(k => ISLANDS_DATA[k].days || 3), sw = w.reduce((a, b) => a + b, 0);
+  const n = w.map(x => Math.max(2, Math.round(nights * x / sw)));
+  let diff = nights - n.reduce((a, b) => a + b, 0);
+  while (diff !== 0) {
+    const i = diff > 0 ? n.indexOf(Math.max(...n)) : n.indexOf(Math.max(...n.map((x) => x > 2 ? x : -1)));
+    if (i < 0) break; n[i] += diff > 0 ? 1 : -1; diff += diff > 0 ? -1 : 1;
+  }
+  return n;
+}
+function qzDirect(a, b) {
+  if (QZ_LANDMASS[a] && QZ_LANDMASS[a] === QZ_LANDMASS[b]) return { road: true, dur: 0 };
+  const es = (FERRY_ADJ[a] || []).filter(e => e.to === b && e.dur <= 240);
+  return es.length ? { dur: Math.min(...es.map(e => e.dur)) } : null;
+}
+/* Best island-hop from the top of the ranking: stops joined by a direct boat
+   (or road on Crete / Evia), 2 stops for a week, up to 3 for ten days. */
+function quizChain(scored, nights, S) {
+  if (!nights || nights < 6) return null;
+  const pool = scored.slice(0, 8), top = pool[0] && pool[0].key;
+  if (pool.length < 2) return null;
+  const maxStops = nights >= 10 ? 3 : 2, cands = [];
+  const val = arr => arr.reduce((a, i) => a + i.matchScore, 0) / arr.length + (arr.some(i => i.key === top) ? 0.6 : 0) + (arr.length === 3 ? 0.3 : 0);
+  for (let i = 0; i < pool.length; i++) for (let j = 0; j < pool.length; j++) {
+    if (i === j) continue;
+    const a = pool[i], b = pool[j];
+    if (!qzDirect(a.key, b.key)) continue;
+    if (i < j) cands.push([a, b]);
+    if (maxStops === 3) for (let m = 0; m < pool.length; m++) {
+      if (m === i || m === j || m < i) continue;      // a-b-c and c-b-a are the same trip
+      const c = pool[m]; if (qzDirect(b.key, c.key)) cands.push([a, b, c]);
+    }
+  }
+  if (!cands.length) return null;
+  cands.sort((x, y) => val(y) - val(x));
+  let best = cands[0].map(i => i.key);
+  // ferry order: start from the end nearest its mainland port (an airport end first when flying in)
+  const startCost = k => (S.fly ? (ISLANDS_DATA[k].has_airport ? 0 : 1e6) : 0) + (qzGate(k) ? qzHav(qzGate(k), ISLANDS_DATA[k]) : 0);
+  if (startCost(best[best.length - 1]) < startCost(best[0])) best = best.reverse();
+  if (S.fly && !best.some(k => ISLANDS_DATA[k].has_airport)) return null;
+  const n = qzSplit(best, nights);
+  const trip = best.map((k, i) => ({ k, n: n[i] }));
+  const legs = best.slice(0, -1).map((k, i) => qzDirect(k, best[i + 1]));
+  return { trip, legs, islands: best.map(k => scored.find(s => s.key === k)) };
+}
+/* Practical facts for the single-island card: how far, airport, car, days. */
+function qzFacts(k) {
+  const i = ISLANDS_DATA[k], out = [];
+  const m = (typeof ferryMinutesFromMainland === 'function') ? ferryMinutesFromMainland()[k] : undefined;
+  if (QZ_LANDMASS[k] === 'evia' || k === 'lefkada') out.push('🚗 ' + qzL('reached by road', 'οδικώς από την ηπειρωτική'));
+  else if (m !== undefined) out.push('⛴ ' + qzDur(m) + qzL(' from the mainland', ' από την ηπειρωτική'));
+  if (i.has_airport) out.push('✈ ' + qzL('airport', 'αεροδρόμιο'));
+  if ((i.car_need || 0) >= 4) out.push('🚗 ' + qzL('a car helps a lot', 'το αυτοκίνητο βοηθά πολύ'));
+  else if ((i.car_need || 0) <= 2) out.push('🚶 ' + qzL('fine without a car', 'άνετα χωρίς αυτοκίνητο'));
+  if (i.days) out.push('🗓 ' + qzL('best with ', 'ιδανικά ') + i.days + qzL(' days', ' μέρες'));
+  return out.map(x => `<span>${x}</span>`).join('');
+}
+const qzDur = m => { const h = Math.floor(m / 60), mm = Math.round(m % 60); return h ? h + 'h' + (mm ? ' ' + mm + 'm' : '') : mm + 'm'; };
+
+/* Answer chips (live box + results subtitle). */
+const QZ_CHIP_TODO = { party: ['Who?', 'Ποιοι;'], duration: ['How long?', 'Πόσο;'], priority: ['What matters?', 'Τι μετράει;'],
+  budget: ['Budget?', 'Budget;'], scene: ['Vibe?', 'Ατμόσφαιρα;'], month: ['When?', 'Πότε;'], transport: ['Getting there?', 'Πώς πας;'], car: ['Car?', 'Αυτοκίνητο;'] };
+function quizChips(A, withTodo) {
+  const S = quizSettings(A);
+  return QUIZ_QUESTIONS.map(q => {
+    const a = A[q.id], ic = q.icons ? q.icons[a] : '';
+    if (a === undefined) return withTodo ? `<span class="qz-chip todo">${qzL(...QZ_CHIP_TODO[q.id])}</span>` : '';
+    let txt;
+    if (q.id === 'party') txt = qzPpl(S.pax);
+    else if (q.id === 'duration') txt = qzNts(S.nights);
+    else txt = ((CURRENT_LANG === 'el' && q.options_el) ? q.options_el : q.options)[a].split(/\s[—(]/)[0];
+    return `<span class="qz-chip">${ic ? ic + ' ' : ''}${txt}</span>`;
+  }).join('');
+}
+/* "Your trip so far": the answers as trip settings, and a rough total for the
+   current #1 island that narrows as the answers come in. */
+function quizTripBox(A, scored) {
+  const S = quizSettings(A), top = scored[0];
+  let est = '';
+  if (QZC && top && (A.party !== undefined || A.duration !== undefined || A.budget !== undefined)) {
+    const n = S.nights || ISLANDS_DATA[top.key].days || 3, tot = quizTripTotal([{ k: top.key, n }], S);
+    if (tot) {
+      const M = QZC._meta, lo = qzRnd(tot * (M.range_lo || 0.85)), hi = qzRnd(tot * (M.range_hi || 1.25));
+      est = `<div class="qz-est"><span>${qzL('Rough estimate', 'Πρόχειρη εκτίμηση')}</span><b>${qzEur(lo)}–${fmtEur(hi)}</b></div>`
+        + `<div class="qz-est-s">${qzFor(S.pax)} · ${qzNts(n)} ${qzL('on', 'σε')} ${islandName(top.key)}. ${qzL('Narrows as you answer.', 'Στενεύει όσο απαντάς.')}</div>`;
+    }
+  }
+  return `<div class="qz-trip"><div class="qz-trip-h">🧳 ${qzL('Your trip so far', 'Το ταξίδι σου ως τώρα')}</div><div class="qz-chips">${quizChips(A, true)}</div>${est}</div>`;
+}
+function quizAnswersById() {
+  const A = {}; QUIZ_QUESTIONS.forEach((q, i) => { if (quizAnswers[i] !== undefined) A[q.id] = quizAnswers[i]; }); return A;
+}
+/* Real numbers on the options: €/day per person on the budget question,
+   how many islands are left on the transport question. */
+function quizDecorateOptions() {
+  const q = QUIZ_QUESTIONS[quizStep]; if (!q) return;
+  const btns = document.querySelectorAll('#quiz-container .quiz-option');
+  const put = (i, txt) => { const tx = btns[i] && btns[i].querySelector('.quiz-opt-tx'); if (!tx || !txt) return;
+    let em = tx.querySelector('.qz-tag'); if (!em) { em = document.createElement('em'); em.className = 'qz-tag'; tx.appendChild(em); } em.textContent = txt; };
+  if (q.id === 'budget' && QZC && QZC.islands) {
+    const A = quizAnswersById(), mk = A.month !== undefined ? QZ_MONTH[A.month] : 'jun', M = QZC._meta;
+    const pct = (arr, p) => { const s = arr.slice().sort((a, b) => a - b); return s[Math.min(s.length - 1, Math.floor(p * (s.length - 1)))]; };
+    const day = tier => Object.values(QZC.islands).filter(c => c.room && c.room[tier]).map(c =>
+      c.room[tier] * qzSeas(M.season_room, mk) / 2 + c.meal_pp_mid * (tier === 'budget' ? M.meal_budget : tier === 'comfort' ? M.meal_comfort : 1));
+    const pp = qzL(' / day pp', ' / μέρα το άτομο');
+    ['budget', 'mid', 'comfort'].forEach((tier, i) => { const d = day(tier); put(i, '≈ ' + qzEur(qzRnd(pct(d, 0.25))) + '–' + fmtEur(qzRnd(pct(d, 0.75))) + pp); });
+    const dc = day('comfort'); put(3, qzEur(qzRnd(pct(dc, 0.75))) + '+' + pp);
+  }
+  if (q.id === 'transport') {
+    [1, 3].forEach(t => { const n = ISLANDS.filter(i => quizEligible(i, t)).length; put(t, n + ' ' + qzL('islands', 'νησιά')); });
+  }
+}
+/* Desktop: the island photo is a banner behind the question only; the page
+   below it is light. The banner ends just under the headline. */
+function quizSizeBand() {
+  const vm = document.getElementById('view-match'); if (!vm) return;
+  if (!window.matchMedia('(min-width: 841px)').matches) { vm.style.removeProperty('--mq-band'); return; }
+  const h = vm.querySelector(vm.classList.contains('mq-res') ? '.qz-rhead' : '.quiz-question');
+  if (!h) return;
+  const b = h.getBoundingClientRect().bottom - vm.getBoundingClientRect().top;
+  vm.style.setProperty('--mq-band', Math.round(b + 26) + 'px');
+}
+window.addEventListener('resize', () => { try { quizSizeBand(); } catch (_) {} });
+
 function computeQuizResults() {
+  if (!QZC && !computeQuizResults._w) { computeQuizResults._w = 1; loadQuizCosts().then(() => computeQuizResults()); return; }
   const ctx = scoreIslandsFromAnswers(quizAnswers);
   try { track('quiz_complete', { top_island: (ctx.scored[0] || {}).key || '', answers: Object.keys(quizAnswers).length }); } catch (_) {}
   const { A, priority, budgetMod, scenePref, seasonIdx, seasonMonths, transportPref, tripDays } = ctx;
@@ -6803,16 +7065,68 @@ function computeQuizResults() {
     if (!reasons.length) reasons.push(`${t('quiz.why.overall')} ${fmt(island.total)}`);
     return reasons.slice(0, 2).join(' · ');
   };
-  results.innerHTML = `<div class="quiz-results-header"><div class="quiz-results-title">${t('match.results.title')}</div><div class="quiz-results-sub">${t('match.results.sub')}</div></div>${scored.map((island, idx) => {
-    const nm = islandName(island.key);
-    const hero = HERO_PHOTOS[island.key] || {};
-    const thumb = `<div class="result-thumb${hero.url ? '' : ' result-nophoto'}" data-initial="${nm.charAt(0)}">${hero.url ? `<img src="${thumbUrl(hero.url)}" alt="${nm}" loading="lazy" onerror="this.closest('.result-thumb').classList.add('result-nophoto')">` : ''}<span class="result-rank">${idx + 1}</span></div>`;
-    return `<a class="result-island-card" data-key="${island.key}" href="${CURRENT_LANG === 'el' ? '/el' : ''}/island/${island.key}/">${thumb}<div class="result-info"><div class="result-name">${nm}</div><div class="result-why">${whyText(island)}</div></div></a>`;
-  }).join('')}<div class="quiz-retake-row">${planTripBtn(scored.slice(0, 3).map(s => s.key), 'quiz', 'Cost my top 3 as one trip', 'Κόστισε τα 3 πρώτα ως ένα ταξίδι').replace('plan-trip-row', 'plan-trip-row plan-trip-inline')}<button class="quiz-retake-btn">${t('match.retake')}</button></div>`;
-  results.querySelectorAll('.result-island-card').forEach(card => { card.addEventListener('click', (e) => {
-    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;   // new tab: let the link work
-    e.preventDefault(); navigateTo('island', card.dataset.key);
+  // ---- results v2 (Nov 2026): best single island + best island-hop, both costed ----
+  const S = quizSettings(A);
+  const all = ctx.scored, topI = scored[0];
+  const base = CURRENT_LANG === 'el' ? '/el' : '';
+  const photo = (k, cls) => { const h = HERO_PHOTOS[k] || {}; return h.url ? `<img class="${cls}" src="${heroSrc(h.url)}" alt="" loading="lazy">` : ''; };
+  const grp = k => (typeof groupName === 'function' && ISLANDS_DATA[k]) ? groupName(ISLANDS_DATA[k].island_group) : '';
+  const costBox = (trip, extra) => {
+    const tot = quizTripTotal(trip, S), nts = trip.reduce((a, t) => a + t.n, 0);
+    const how = S.own ? qzL('ferry + your car', 'πλοίο + το αυτοκίνητό σου') : S.fly ? qzL('flights', 'πτήσεις') : qzL('ferries', 'πλοία');
+    const sub = `${qzFor(S.pax)} · ${qzNts(nts)} · ${how}${S.hire && !S.own ? ' · ' + qzL('hire car', 'ενοικίαση') : ''}${extra ? ' · ' + extra : ''}`;
+    return `<div class="qz-cost"><div>${tot ? `<b>≈ ${qzEur(tot)}</b>` : ''}<small>${sub}</small></div>`
+      + `<a class="qz-btn" href="${quizCostUrl(trip, S)}" data-src="${trip.length > 1 ? 'quiz_hop' : 'quiz_single'}">🧮 ${qzL('Cost this trip', 'Κόστισε το ταξίδι')}</a></div>`;
+  };
+  const singleTrip = [{ k: topI.key, n: S.nights || ISLANDS_DATA[topI.key].days || 3 }];
+  const chain = quizChain(all, S.nights, S);
+  let cards = `<div class="qz-pick">
+      <a class="qz-img" href="${base}/island/${topI.key}/" data-key="${topI.key}">${photo(topI.key, 'qz-ph')}<span class="qz-badge">🏆 ${qzL('Best single island', 'Το καλύτερο ένα νησί')}</span><h3>${islandName(topI.key)}<small>${grp(topI.key)}</small></h3></a>
+      <div class="qz-in"><p class="qz-why">${whyText(topI)}</p><div class="qz-facts">${qzFacts(topI.key)}</div>${costBox(singleTrip)}</div></div>`;
+  if (chain) {
+    const single = quizTripTotal(singleTrip, S), hopTot = quizTripTotal(chain.trip, S);
+    const diff = (single && hopTot) ? hopTot - single : null;
+    const diffTxt = diff === null || Math.abs(diff) < 20 ? qzL('about the same as one island', 'περίπου όσο ένα νησί')
+      : (diff > 0 ? '+' + qzEur(diff) + qzL(' vs one island', ' από ένα νησί') : qzEur(-diff) + qzL(' less than one island', ' λιγότερα από ένα νησί'));
+    const stops = chain.trip.map((t, i) => {
+      const leg = chain.legs[i];
+      const legH = leg ? `<span class="qz-leg">${leg.road ? '🚗' : '⛴'}<small>${leg.road ? qzL('by road', 'οδικώς') : qzDur(leg.dur)}</small></span>` : '';
+      return `<a class="qz-stop" href="${base}/island/${t.k}/" data-key="${t.k}">${islandName(t.k)}<small>${qzNts(t.n)}</small></a>${legH}`;
+    }).join('');
+    const names = chain.trip.map(t => islandName(t.k));
+    const whys = chain.islands.map(i => `<li><b>${islandName(i.key)}</b> · ${whyText(i)}</li>`).join('');
+    cards += `<div class="qz-pick qz-hop">
+      <div class="qz-img qz-img2">${chain.trip.slice(0, 2).map(t => `<span>${photo(t.k, 'qz-ph')}</span>`).join('')}<span class="qz-badge hop">⛴ ${qzL('Best island-hop', 'Το καλύτερο island hopping')}</span><h3>${names.join(' + ')}<small>${chain.legs.every(l => l.road) ? qzL('one island, two bases, by road', 'ένα νησί, δύο βάσεις, οδικώς') : qzL('direct boats between them', 'απευθείας πλοία μεταξύ τους')}</small></h3></div>
+      <div class="qz-in"><div class="qz-chain">${stops}</div><ul class="qz-whys">${whys}</ul>${costBox(chain.trip, diffTxt)}</div></div>`;
+  }
+  const runners = scored.slice(1).map((isl, idx) => {
+    const d = quizDayCost(isl.key, S);
+    return `<div class="qz-rr" data-key="${isl.key}"><span class="qz-rn">${idx + 2}</span>`
+      + `<a class="qz-rth" href="${base}/island/${isl.key}/" data-key="${isl.key}">${photo(isl.key, '') || '<i></i>'}</a>`
+      + `<a class="qz-rt" href="${base}/island/${isl.key}/" data-key="${isl.key}"><b>${islandName(isl.key)}</b><small>${whyText(isl)}</small></a>`
+      + `<span class="qz-rd">${d ? `≈ ${qzEur(d)}<small>${qzL('a day ', 'τη μέρα ')}${qzFor(S.pax)}</small>` : ''}</span>`
+      + `<a class="qz-rc" href="${base}/#compare/${topI.key}-vs-${isl.key}" data-pair="${topI.key},${isl.key}" title="${islandName(isl.key)} vs ${islandName(topI.key)}">${qzL('Compare', 'Σύγκρινε')} →</a></div>`;
+  }).join('');
+  results.innerHTML = `<div class="qz-rhead"><div><div class="quiz-results-title">${t('match.results.title')}</div><div class="qz-chips qz-chips-res">${quizChips(A, false)}</div></div><button class="quiz-retake-btn">↻ ${t('match.retake')}</button></div>
+    <div class="qz-grid${chain ? '' : ' qz-one'}">${cards}</div>
+    <div class="qz-runners"><div class="qz-rh">${qzL('Also a good match', 'Ταιριάζουν επίσης')}</div>${runners}</div>
+    <div class="qz-foot"><button type="button" class="qz-save">⭐ ${qzL('Save all to my shortlist', 'Αποθήκευσέ τα όλα στη λίστα μου')}</button><span>${qzL('Estimates use our typical room, food and fare prices for your month; Trip cost lets you change everything.', 'Οι εκτιμήσεις βασίζονται σε τυπικές τιμές δωματίων, φαγητού και εισιτηρίων για τον μήνα σου· στο Κόστος ταξιδιού αλλάζεις τα πάντα.')}</span></div>`;
+  results.querySelectorAll('[data-key]').forEach(a => { if (a.tagName !== 'A') return; a.addEventListener('click', (e) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+    e.preventDefault(); navigateTo('island', a.dataset.key);
   }); });
+  results.querySelectorAll('.qz-rc').forEach(a => a.addEventListener('click', (e) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+    e.preventDefault(); navigateTo('compare', { pair: a.dataset.pair.split(',') });
+  }));
+  results.querySelectorAll('.qz-btn').forEach(a => a.addEventListener('click', () => { try { track('plan_trip', { src: a.dataset.src, n: (a.href.match(/i=([^&]*)/) || ['', ''])[1].split(',').length }); } catch (_) {} }));
+  results.querySelector('.qz-save').addEventListener('click', (e) => {
+    const sl = getShortlist(); scored.forEach(i => { if (!sl.includes(i.key)) sl.push(i.key); }); saveShortlist(sl);
+    try { updateShortlistCount(); } catch (_) {}
+    e.currentTarget.textContent = '✓ ' + qzL('Saved to your shortlist', 'Αποθηκεύτηκαν στη λίστα σου'); e.currentTarget.disabled = true;
+    try { track('quiz_saved', { n: scored.length }); } catch (_) {}
+  });
+  quizSizeBand();
   results.querySelector('.quiz-retake-btn').addEventListener('click', () => { quizAnswers = {}; quizStep = 0; quizPrevRanks = null; quizSeenKeys = {};
     const cb = document.getElementById('cta-affiliate'); if (cb) cb.style.display = 'none';
     renderQuizStep(); });
