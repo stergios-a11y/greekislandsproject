@@ -612,6 +612,7 @@ document.addEventListener('DOMContentLoaded', () => {
   try { setupPillPinning(); } catch(e) { console.warn('pillPin', e); }
   try { setupMapJump(); } catch(e) { console.warn('mapJump', e); }
   try { setupMobileHome(); } catch(e) { console.warn('mobileHome', e); }
+  try { setupDesktopHome(); } catch(e) { console.warn('desktopHome', e); }
   // Featured cards use per-island hero photos from a small manifest. Render once
   // now (fallback initials) and re-render after the manifest loads (with photos).
   try {
@@ -1524,9 +1525,12 @@ function _fillPickBand(band, keys, label, photos, lang) {
   band.innerHTML = `<div class="bp-picks-head"><svg class="ico-cal" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> ${escapeHtml(label)}</div><div class="bp-picks-row">` +
     keys.map(k => {
       const photo = photos[k] && photos[k].url ? thumbUrl(photos[k].url) : '';
-      return `<a class="bp-pick" data-k="${k}" href="${base}${k}/">${photo ? `<img src="${photo}" alt="" loading="lazy">` : ''}<span>${escapeHtml(islandName(k))}</span></a>`;
+      return `<a class="bp-pick" data-k="${k}" href="${base}${k}/">${photo ? `<img src="${photo}" alt="" loading="lazy">` : ''}`
+        + `<i class="bp-pick-s" style="background:${scoreToColor(meta[k].total)}">${fmt(meta[k].total)}</i>`
+        + `<span>${escapeHtml(islandName(k))}<small>${escapeHtml(groupName(meta[k].island_group))}</small></span></a>`;
     }).join('') + '</div>';
   band.hidden = false;
+  try { _dhSyncChip(); } catch (_) {}
   band.querySelectorAll('.bp-pick').forEach(a => {
     a.addEventListener('click', () => { try { track('pick_click', { island: a.dataset.k, placement: window.matchMedia('(max-width: 840px)').matches ? 'band_mobile' : 'band' }); } catch (_) {} });
   });
@@ -7600,6 +7604,81 @@ function _mhOpenBest() {
     navigateTo('compare', { pair: [keys[0], keys[1]] });
   });
   try { track('best_sheet_open', { n: keys.length }); } catch (_) {}
+}
+
+/* ============================================================
+   DESKTOP HOME — map first (Nov 2026). Moves the band's parts onto the map:
+   panel (title + search + filter row + filter sheet) top-left, picks right,
+   quiz pill bottom-left, scale + map/satellite + zoom bottom-right.
+============================================================ */
+function _dhFold(on) {
+  document.body.classList.toggle('dh-folded', on);
+  try { if (on) sessionStorage.setItem('dh-fold', '1'); } catch (_) {}
+}
+function _dhSyncChip() {
+  const chip = document.getElementById('dh-chip'), band = document.getElementById('bp-picks');
+  if (!chip || !band) return;
+  const head = band.querySelector('.bp-picks-head');
+  const imgs = [...band.querySelectorAll('.bp-pick img')].slice(0, 4).map(i => `<img src="${i.getAttribute('src')}" alt="">`).join('');
+  chip.innerHTML = (head ? head.innerHTML : '') + `<span class="dh-chip-th" aria-hidden="true">${imgs}</span><span class="dh-chip-go" aria-hidden="true">›</span>`;
+  chip.hidden = band.hidden;
+}
+function setupDesktopHome() {
+  if (!window.matchMedia('(min-width: 841px)').matches) return;
+  const map = document.getElementById('main-map'), hero = document.getElementById('bp-hero');
+  if (!map || !hero || document.getElementById('dh-panel')) return;
+  const isEl = (typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el');
+  const L_ = (en, el) => (isEl ? el : en);
+  const stop = el => { if (window.L && window.L.DomEvent) { window.L.DomEvent.disableClickPropagation(el); window.L.DomEvent.disableScrollPropagation(el); } };
+  document.body.classList.add('dh-on');
+  // panel: title, search, filter row, filter sheet
+  const panel = document.createElement('div');
+  panel.className = 'dh-panel'; panel.id = 'dh-panel';
+  const title = hero.querySelector('.bp-hero-title'), sw = hero.querySelector('.bp-hero-search-wrap');
+  const ctr = document.getElementById('home-controls'), vp = document.getElementById('vibe-panel');
+  if (title) panel.appendChild(title);
+  if (sw) panel.appendChild(sw);
+  if (ctr) panel.appendChild(ctr);
+  if (vp) panel.appendChild(vp);
+  map.appendChild(panel); stop(panel);
+  // picks on the right + the folded chip
+  const band = document.getElementById('bp-picks');
+  const side = document.createElement('div');
+  side.className = 'dh-side'; side.id = 'dh-side';
+  if (band) side.appendChild(band);
+  const chip = document.createElement('button');
+  chip.type = 'button'; chip.className = 'dh-chip'; chip.id = 'dh-chip'; chip.hidden = true;
+  chip.setAttribute('aria-label', L_('Show this month’s picks', 'Δείξε τις επιλογές του μήνα'));
+  side.appendChild(chip);
+  map.appendChild(side); stop(side);
+  chip.addEventListener('click', () => { try { track('picks_unfold', { device: 'desktop' }); } catch (_) {} document.body.classList.remove('dh-folded'); });
+  _dhSyncChip();
+  // quiz pill
+  const qp = document.createElement('button');
+  qp.type = 'button'; qp.className = 'dh-qp'; qp.id = 'dh-qp';
+  qp.setAttribute('aria-label', L_('Match me: an 8-question island quiz', 'Βρες το νησί σου: quiz 8 ερωτήσεων'));
+  qp.innerHTML = `<span aria-hidden="true">🎯</span><span class="dh-qp-t">${L_('Match me', 'Βρες το νησί σου')} <small>· ${L_('2 min', '2 λεπτά')}</small></span>`;
+  map.appendChild(qp); stop(qp);
+  qp.addEventListener('click', () => { try { track('home_quiz_click', { from: document.body.classList.contains('dh-folded') ? 'desktop_round' : 'desktop_pill' }); } catch (_) {} navigateTo('match'); });
+  // bottom-right: scale, map/satellite, zoom
+  const br = document.createElement('div');
+  br.className = 'dh-br'; br.id = 'dh-br';
+  map.appendChild(br); stop(br);
+  const lay = document.getElementById('mf-layer-seg');
+  const move = () => {
+    const sc = map.querySelector('.leaflet-control-scale'), zm = map.querySelector('.leaflet-control-zoom');
+    if (sc && sc.parentNode !== br) br.appendChild(sc);
+    if (lay && lay.parentNode !== br) br.appendChild(lay);
+    if (zm && zm.parentNode !== br) br.appendChild(zm);
+  };
+  move(); setTimeout(move, 400);
+  // explore mode: the first drag or wheel-zoom folds the picks (for the visit)
+  let f0 = false; try { f0 = sessionStorage.getItem('dh-fold') === '1'; } catch (_) {}
+  if (f0) _dhFold(true);
+  const foldNow = () => { if (!document.body.classList.contains('dh-folded')) _dhFold(true); };
+  map.addEventListener('wheel', e => { if (!e.target.closest('.dh-panel, .dh-side, .dh-br')) foldNow(); }, { passive: true });
+  const hook = () => { if (typeof mapInstance !== 'undefined' && mapInstance) { mapInstance.on('dragstart', foldNow); mapInstance.invalidateSize(); } else setTimeout(hook, 200); };
+  hook();
 }
 
 function setupMobileHome() {
