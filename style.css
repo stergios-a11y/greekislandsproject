@@ -8056,3 +8056,45 @@ html.dark .qz-save { background: #1F2530; border-color: #22C0E0; }
   #view-home .mh-sbox:has(.mh-count:not([hidden])) .mh-filter { background: var(--primary-dark); }
   html.dark #view-home .mh-sbox .mh-filter { background: #0B8FAC; color: #fff; }
 }
+
+
+/* SEARCH OR FILTER (Nov 2026): the phone search panel also filters and ranks. */
+@media (max-width: 840px) {
+  .mh-panel { display: flex; flex-direction: column; }
+  .mh-panel[hidden] { display: none; }
+  .mh-panel .mh-scroll { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding-bottom: 12px; }
+  .mh-panel .mh-list { overflow: visible; flex: none; }
+  .mh-qh { display: flex; justify-content: space-between; align-items: baseline; padding: 8px 14px 6px; font: 800 11.5px var(--font-ui); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+  .mh-qclr { border: 0; background: none; font: 800 12.5px var(--font-ui); color: var(--primary-dark); text-transform: none; letter-spacing: 0; cursor: pointer; padding: 0; }
+  .mh-qclr[hidden] { display: none; }
+  .mh-qf { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 12px 6px; }
+  .mh-qc { display: inline-flex; align-items: center; gap: 5px; height: 34px; padding: 0 12px; border-radius: 999px; border: 1.5px solid var(--border); background: var(--white);
+    color: var(--ink-1); font: 800 12.5px var(--font-ui); cursor: pointer; }
+  .mh-qc .ico-cal { width: 13px; height: 13px; }
+  .mh-qc.is-on { background: var(--primary); border-color: var(--primary); color: #fff; }
+  .mh-qmore { border-style: dashed; color: var(--primary-dark); }
+  .mh-qmore.is-on { border-style: solid; }
+  .mh-rk { display: flex; gap: 6px; padding: 0 12px 10px; overflow-x: auto; scrollbar-width: none; }
+  .mh-rk::-webkit-scrollbar { display: none; }
+  .mh-rk button { flex: none; height: 32px; padding: 0 11px; border: 0; border-radius: 9px; background: var(--surface-2, #F3EFE9); color: var(--ink-3); font: 800 12.5px var(--font-ui); cursor: pointer; white-space: nowrap; }
+  .mh-rk button[aria-checked="true"] { background: var(--primary-pale); color: var(--primary-dark); box-shadow: inset 0 0 0 1.5px var(--primary-light); }
+  .mh-cnt { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 14px 2px; border-top: 1px solid var(--border); font: 800 13.5px var(--font-ui); color: var(--ink-1); }
+  .mh-cnt small { font: 700 11.5px var(--font-ui); color: var(--ink-3); }
+  .mh-panel .mh-i { display: flex; align-items: center; gap: 10px; padding: 7px 4px; }
+  .mh-ith { flex: none; width: 44px; height: 34px; border-radius: 8px; overflow: hidden; background: linear-gradient(135deg, #8ecbd8, #3f8fa3); }
+  .mh-ith img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .mh-it { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; text-align: left; line-height: 1.2; }
+  .mh-it b { font: 800 15px var(--font-ui); color: var(--ink-1); }
+  .mh-it small { font: 600 12px var(--font-body); color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .mh-panel .mh-is { flex: none; min-width: 32px; height: 22px; padding: 0 6px; border-radius: 11px; color: #fff; font: 800 11.5px/22px var(--font-ui); text-align: center; }
+  .mh-none { padding: 24px 16px; text-align: center; color: var(--ink-3); font-size: 14px; }
+  .mh-pfoot { flex: none; padding: 10px 12px calc(12px + env(safe-area-inset-bottom)); background: var(--white); border-top: 1px solid var(--border); }
+  .mh-pfoot[hidden] { display: none; }
+  .mh-show { width: 100%; height: 48px; border: 0; border-radius: 12px; background: var(--primary); color: #fff; font: 900 15px var(--font-ui); cursor: pointer; }
+  html.dark .mh-qc { background: #1F2530; border-color: #2E3644; color: #EEF2F5; }
+  html.dark .mh-qc.is-on { background: #0B8FAC; border-color: #0B8FAC; color: #fff; }
+  html.dark .mh-qmore { color: #60D8F0; }
+  html.dark .mh-rk button { background: #1F2530; color: #93A1B0; }
+  html.dark .mh-rk button[aria-checked="true"] { background: #0A2A35; color: #60D8F0; box-shadow: inset 0 0 0 1.5px #154453; }
+  html.dark .mh-pfoot { background: #171C24; }
+}

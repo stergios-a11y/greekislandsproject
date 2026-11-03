@@ -7620,7 +7620,7 @@ function setupMobileHome() {
   // Search and filters are one control (Nov 2026): find an island by name, or narrow the map.
   // The quiz moved to a pill at the bottom; it read as the search button here.
   top.innerHTML = `<div class="mh-sbox"><button type="button" class="mh-search" aria-haspopup="dialog" aria-controls="mh-panel">`
-    + `<span aria-hidden="true">🔍</span><span class="mh-search-t"><span class="mh-st-l">${L(`Search ${_nIsl} islands`, `Ψάξε ${_nIsl} νησιά`)}</span>`
+    + `<span aria-hidden="true">🔍</span><span class="mh-search-t"><span class="mh-st-l">${L('Search or filter islands', 'Αναζήτηση ή φίλτρα')}</span>`
     + `<small class="mh-f-r"></small></span></button>`
     + `<button type="button" class="mh-filter" aria-haspopup="dialog" aria-controls="vibe-panel"><span class="mh-f-i" aria-hidden="true">⚙</span>`
     + `<b>${L('Filters', 'Φίλτρα')}</b><span class="mh-count" hidden></span></button></div>`
@@ -7678,7 +7678,7 @@ function setupMobileHome() {
     }
   }
   const syncRank = () => {
-    top.querySelector('.mh-f-r').textContent = L('Ranked: ', 'Κατάταξη: ') + rankText();
+    top.querySelector('.mh-f-r').textContent = L(`${_nIsl} islands · Ranked: `, `${_nIsl} νησιά · Κατάταξη: `) + rankText();
     if (vp) vp.querySelectorAll('.mh-seg button').forEach(b => b.setAttribute('aria-checked', b.dataset.v === vs.value ? 'true' : 'false'));
   };
   if (vs) { vs.addEventListener('change', syncRank); syncRank(); }
@@ -7766,40 +7766,92 @@ function setupMobileHome() {
   const panel = document.createElement('div');
   panel.className = 'mh-panel'; panel.id = 'mh-panel'; panel.hidden = true;
   panel.setAttribute('role', 'dialog'); panel.setAttribute('aria-modal', 'true'); panel.setAttribute('aria-label', L('All islands', 'Όλα τα νησιά'));
+  // 'Search or filter' (Nov 2026): name search + quick filters + ranking in one panel.
+  const QF = ['good_now', 'car_free', 'budget', 'remote', 'airport'];
+  const tagLabel = f => { const t0 = document.querySelector(`#vibe-panel .vibe-tag[data-filter="${f}"]`); return t0 ? t0.innerHTML.trim() : f; };
+  const nMore = document.querySelectorAll('#vibe-panel .vibe-tag').length - QF.length;
   panel.innerHTML = `<div class="mh-ph"><input type="search" class="mh-q" placeholder="${L('Type a name…', 'Γράψε όνομα…')}" aria-label="${L('Type an island name', 'Γράψε όνομα νησιού')}" enterkeyhint="search" autocomplete="off" autocapitalize="off" spellcheck="false">`
     + `<button type="button" class="mh-x" aria-label="${L('Close', 'Κλείσιμο')}">✕</button></div>`
-    + `<div class="mh-list">` + Object.keys(groups).sort((a, b) => cmpName(groupName(a), groupName(b))).map(g =>
-        `<section class="mh-g"><h3>${escapeHtml(groupName(g))}</h3>` + groups[g].sort((a, b) => cmpName(islandName(a), islandName(b))).map(k =>
-          `<a class="mh-i" href="${base}${k}/" data-k="${k}" data-n="${escapeHtml(_mhNorm(islandName(k) + ' ' + (ISLANDS_DATA[k].name || '') + ' ' + elName(k)))}">`
-          + `<span>${escapeHtml(islandName(k))}</span><b style="background:${scoreToColor(ISLANDS_DATA[k].total)}">${fmt(ISLANDS_DATA[k].total)}</b></a>`).join('')
-        + `</section>`).join('') + `</div>`;
+    + `<div class="mh-scroll"><div class="mh-qh"><span>${L('Quick filters', 'Γρήγορα φίλτρα')}</span><button type="button" class="mh-qclr" hidden>${L('Clear', 'Καθαρισμός')}</button></div>`
+    + `<div class="mh-qf">` + QF.map(f => `<button type="button" class="mh-qc" data-f="${f}" aria-pressed="false">${tagLabel(f)}</button>`).join('')
+    + (nMore > 0 ? `<button type="button" class="mh-qc mh-qmore">＋ ${nMore} ${L('more', 'ακόμη')}</button>` : '') + `</div>`
+    + `<div class="mh-qh"><span>${L('Rank by', 'Κατάταξη κατά')}</span></div>`
+    + `<div class="mh-rk" role="radiogroup">` + (vs ? [...vs.options].map(o => `<button type="button" role="radio" data-v="${o.value}">${escapeHtml(o.textContent.trim())}</button>`).join('') : '') + `</div>`
+    + `<div class="mh-cnt"><b></b><small></small></div><div class="mh-list"></div></div>`
+    + `<div class="mh-pfoot" hidden><button type="button" class="mh-show"></button></div>`;
   document.body.appendChild(panel);
   const q = panel.querySelector('.mh-q'), openBtn = top.querySelector('.mh-search');
+  const byKey = {}; ISLANDS.forEach(i => { byKey[i.key] = i; });
+  const sub = k => {
+    const d = ISLANDS_DATA[k], out = [];
+    const m = (typeof ferryMinutesFromMainland === 'function') ? ferryMinutesFromMainland()[k] : undefined;
+    if (['lefkada', 'evia-north', 'evia-central', 'evia-south'].includes(k)) out.push(L('by road', 'οδικώς'));
+    else if (m !== undefined && m > 0) { const h = Math.floor(m / 60), mm = Math.round(m % 60); out.push('⛴ ' + (h ? h + 'h' + (mm ? ' ' + mm + 'm' : '') : mm + 'm')); }
+    if (d.has_airport) out.push('✈');
+    if ((d.car_need || 0) <= 2) out.push(L('no car needed', 'χωρίς αυτοκίνητο'));
+    else if ((d.car_need || 0) >= 4) out.push(L('car helps', 'θέλει αυτοκίνητο'));
+    return out.join(' · ') || groupName(d.island_group);
+  };
+  const renderList = () => {
+    const v = _mhNorm(q.value.trim()), filt = activeVibeFilters.size > 0;
+    const hits = ISLANDS.filter(i => ISLANDS_DATA[i.key] && islandPassesVibeFilters(i) && (!v ||
+      _mhNorm(islandName(i.key) + ' ' + (ISLANDS_DATA[i.key].name || '') + ' ' + elName(i.key)).includes(v)));
+    const gs = {}; hits.forEach(i => { (gs[i.island_group || ''] = gs[i.island_group || ''] || []).push(i); });
+    const sc = i => Number(getDisplayScore(i)) || 0;
+    const order = Object.keys(gs).sort((a, b) => Math.max(...gs[b].map(sc)) - Math.max(...gs[a].map(sc)));
+    panel.querySelector('.mh-list').innerHTML = order.map(g => `<section class="mh-g"><h3>${escapeHtml(groupName(g))}</h3>`
+      + gs[g].sort((a, b) => sc(b) - sc(a)).map(i => {
+        const h = HERO_PHOTOS[i.key] || {}, u = h.url ? thumbUrl(h.url) : '';
+        return `<a class="mh-i" href="${base}${i.key}/" data-k="${i.key}"><span class="mh-ith">${u ? `<img src="${u}" alt="" loading="lazy">` : ''}</span>`
+          + `<span class="mh-it"><b>${escapeHtml(islandName(i.key))}</b><small>${escapeHtml(sub(i.key))}</small></span>`
+          + `<b class="mh-is" style="background:${scoreToColor(sc(i))}">${fmt(sc(i))}</b></a>`;
+      }).join('') + `</section>`).join('')
+      || `<p class="mh-none">${L('No island matches. Try removing a filter.', 'Κανένα νησί δεν ταιριάζει. Βγάλε ένα φίλτρο.')}</p>`;
+    const n = hits.length;
+    panel.querySelector('.mh-cnt b').textContent = (filt || v) ? L(`${n} ${n === 1 ? 'island matches' : 'islands match'}`, `${n} ${n === 1 ? 'νησί ταιριάζει' : 'νησιά ταιριάζουν'}`) : L(`All ${n} islands`, `Όλα τα ${n} νησιά`);
+    panel.querySelector('.mh-cnt small').textContent = L('best first', 'τα καλύτερα πρώτα');
+    panel.querySelectorAll('.mh-qc[data-f]').forEach(c => { const on = activeVibeFilters.has(c.dataset.f); c.classList.toggle('is-on', on); c.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+    const extra = [...activeVibeFilters].filter(f => !QF.includes(f)).length, more = panel.querySelector('.mh-qmore');
+    if (more) { more.classList.toggle('is-on', extra > 0); more.textContent = extra ? L(`＋ ${extra} more on`, `＋ ${extra} ακόμη`) : `＋ ${nMore} ${L('more', 'ακόμη')}`; }
+    panel.querySelector('.mh-qclr').hidden = !filt;
+    panel.querySelectorAll('.mh-rk button').forEach(bn => bn.setAttribute('aria-checked', vs && bn.dataset.v === vs.value ? 'true' : 'false'));
+    const ft = panel.querySelector('.mh-pfoot'); ft.hidden = !filt || !n;
+    panel.querySelector('.mh-show').textContent = L(`Show ${n} on the map`, `Δείξε ${n} στον χάρτη`);
+  };
   const close = () => { panel.hidden = true; document.body.classList.remove('mh-panel-open'); q.blur(); openBtn.focus(); };
   openBtn.addEventListener('click', () => {
+    renderList();
     panel.hidden = false; document.body.classList.add('mh-panel-open');
     panel.querySelector('.mh-x').focus();   // a button, so no keyboard pops up
     try { track('home_search_open', {}); } catch (_) {}
   });
   panel.querySelector('.mh-x').addEventListener('click', close);
   panel.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
-  q.addEventListener('input', () => {
-    const v = _mhNorm(q.value.trim());
-    panel.querySelectorAll('.mh-g').forEach(sec => {
-      let any = false;
-      sec.querySelectorAll('.mh-i').forEach(a => { const hit = !v || a.dataset.n.includes(v); a.classList.toggle('is-hidden', !hit); any = any || hit; });
-      sec.classList.toggle('is-empty', !any);
-    });
-  });
+  q.addEventListener('input', renderList);
   q.addEventListener('keydown', e => {
-    if (e.key === 'Enter') { const f = panel.querySelector('.mh-i:not(.is-hidden)'); if (f) { e.preventDefault(); f.click(); } }
+    if (e.key === 'Enter') { const f = panel.querySelector('.mh-i'); if (f) { e.preventDefault(); f.click(); } }
+  });
+  panel.querySelector('.mh-qf').addEventListener('click', e => {
+    const c = e.target.closest('.mh-qc'); if (!c) return;
+    if (c.classList.contains('mh-qmore')) { close(); try { track('search_more_filters', {}); } catch (_) {} toggleVibePanel(); return; }
+    try { track('search_quick_filter', { filter: c.dataset.f, on: !activeVibeFilters.has(c.dataset.f) }); } catch (_) {}
+    toggleVibeTag(c.dataset.f); renderList();
+  });
+  panel.querySelector('.mh-qclr').addEventListener('click', () => { clearVibeFilters(); renderList(); });
+  panel.querySelector('.mh-rk').addEventListener('click', e => {
+    const bn = e.target.closest('button[data-v]'); if (!bn || !vs) return;
+    vs.value = bn.dataset.v; vs.dispatchEvent(new Event('change', { bubbles: true })); renderList();
+  });
+  panel.querySelector('.mh-show').addEventListener('click', () => {
+    try { track('search_show_map', { n: activeVibeFilters.size }); } catch (_) {}
+    close(); if (typeof _vibeFit === 'function') setTimeout(_vibeFit, 50);
   });
   panel.querySelector('.mh-list').addEventListener('click', e => {
     const a = e.target.closest('.mh-i'); if (!a) return;
     if (e.metaKey || e.ctrlKey || e.shiftKey) return;
     e.preventDefault();
-    try { track('home_search_pick', { island: a.dataset.k, via: q.value.trim() ? 'typed' : 'list' }); } catch (_) {}
-    panel.hidden = true; document.body.classList.remove('mh-panel-open'); q.value = ''; q.dispatchEvent(new Event('input'));
+    try { track('home_search_pick', { island: a.dataset.k, via: q.value.trim() ? 'typed' : (activeVibeFilters.size ? 'filtered' : 'list') }); } catch (_) {}
+    panel.hidden = true; document.body.classList.remove('mh-panel-open'); q.value = '';
     navigateTo('island', a.dataset.k);
   });
 
