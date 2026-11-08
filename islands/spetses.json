@@ -227,7 +227,18 @@
       "desc_el": "Πλοίο προς Πειραιά, Ύδρα ή τις ακτές της Αργολίδας (Κόστα, 10 λεπτά απέναντι με το πέραμα)."
      }
     ],
-    "title_el": "Ο Παράκτιος Γύρος"
+    "title_el": "Ο Παράκτιος Γύρος",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Zogeria Beach",
+      "area_el": "Παραλία Ζογεριάς",
+      "desc": "Lunch at Zogeria Beach: eat at the taverna there before the next swim.",
+      "desc_el": "Μεσημεριανό εκεί (Παραλία Ζογεριάς): φάε στην ταβέρνα πριν από το επόμενο μπάνιο.",
+      "after": "Zogeria Beach"
+     }
+    ]
    }
   ],
   "title_el": "Πρόγραμμα 2 Ημερών στις Σπέτσες",

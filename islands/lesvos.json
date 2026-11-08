@@ -255,29 +255,29 @@
       "drive_el": "≈45 λεπτά δυτικά της Ερεσού"
      },
      {
-      "name": "Sigri",
-      "lat": 39.2114,
-      "lng": 25.8525,
-      "type": "harbour",
-      "time": "12:30",
-      "wiki": "https://www.google.com/maps/search/Sigri+Lesvos",
-      "desc": "Westernmost village. Lunch at the harbour with fresh fish. Visit the Natural History Museum.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776895436/sigri_wgxpx5.jpg",
-      "name_el": "Σίγρι",
-      "desc_el": "Απομακρυσμένο ψαροχώρι στο δυτικότερο άκρο της Λέσβου. Βενετσιάνικο κάστρο, λίγα ταβερνάκια, θέα στο ανοιχτό Αιγαίο."
-     },
-     {
       "name": "Faneromeni Beach",
       "lat": 39.2415,
       "lng": 25.8623,
       "type": "beach",
-      "time": "14:30",
+      "time": "12:30",
       "wiki": null,
       "desc": "Wild, exposed beach north of Sigri with dramatic cliffs and vivid turquoise water.",
       "photo": "",
       "name_el": "Παραλία Φανερωμένης",
       "desc_el": "Μακριά, σχεδόν άγρια παραλία νότια του Σιγρίου — συχνά θα την έχεις μόνος σου. Χωρίς υποδομές, φέρε ό,τι χρειάζεσαι.",
       "photo_credit": null
+     },
+     {
+      "name": "Sigri",
+      "lat": 39.2114,
+      "lng": 25.8525,
+      "type": "harbour",
+      "time": "14:30",
+      "wiki": "https://www.google.com/maps/search/Sigri+Lesvos",
+      "desc": "Westernmost village. Lunch at the harbour with fresh fish. Visit the Natural History Museum.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1776895436/sigri_wgxpx5.jpg",
+      "name_el": "Σίγρι",
+      "desc_el": "Απομακρυσμένο ψαροχώρι στο δυτικότερο άκρο της Λέσβου. Βενετσιάνικο κάστρο, λίγα ταβερνάκια, θέα στο ανοιχτό Αιγαίο."
      },
      {
       "name": "Skala Eresou",
@@ -293,7 +293,18 @@
      }
     ],
     "title_el": "Σίγρι & Πετρωμένο Δάσος",
-    "overnight_el": "Σκάλα Ερεσού"
+    "overnight_el": "Σκάλα Ερεσού",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Sigri",
+      "area_el": "Σίγρι",
+      "desc": "Fish tavernas on the harbour at Sigri.",
+      "desc_el": "Ψαροταβέρνες στο λιμανάκι του Σιγρίου.",
+      "after": "Sigri"
+     }
+    ]
    },
    {
     "day": 4,

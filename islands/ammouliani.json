@@ -149,7 +149,18 @@
     "overnight": "Ammouliani village",
     "overnight_el": "Χωριό Αμμουλιανής",
     "km": 10,
-    "drive_mins": 20
+    "drive_mins": 20,
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Megali Ammos",
+      "area_el": "Μεγάλη Άμμος",
+      "desc": "Lunch in the village at Megali Ammos, then stay on for the sunset.",
+      "desc_el": "Μεσημεριανό στο χωριό στη Μεγάλη Άμμο και μείνε για το ηλιοβασίλεμα.",
+      "after": "Karagatsia Beach"
+     }
+    ]
    },
    {
     "day": 2,

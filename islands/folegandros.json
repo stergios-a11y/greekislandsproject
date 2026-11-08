@@ -285,19 +285,6 @@
       "photo_credit": null
      },
      {
-      "name": "Livadaki Beach (remote hike or boat)",
-      "name_el": "Παραλία Λιβαδάκι",
-      "desc": "The island's most hidden beach — 45 minutes of steep hiking from Ano Meria, or by boat from Agali (€15 return). Turquoise-green water, white pebbles, dramatic cliffs, and an unusual mineral backdrop (salt and sulfur formations). Excellent snorkeling. Sometimes completely empty. Bring everything; no amenities. For hikers, the Aspropounta Lighthouse is a worthwhile detour on the way.",
-      "desc_el": "Η πιο κρυμμένη παραλία του νησιού — 45 λεπτά απότομης πεζοπορίας από την Άνω Μεριά, ή με βάρκα από την Αγκάλη (15€ με επιστροφή). Τιρκουάζ-πράσινα νερά, λευκά βότσαλα, δραματικοί γκρεμοί, και ένα ασυνήθιστο ορυκτό σκηνικό (σχηματισμοί άλατος και θείου). Εξαιρετικό snorkelling. Μερικές φορές εντελώς άδεια. Φέρε τα πάντα· καμία ανέση. Για πεζοπόρους, ο φάρος της Ασπροπούντας είναι αξιόλογη παράκαμψη στον δρόμο.",
-      "lat": 36.63618,
-      "lng": 24.85925,
-      "time": "13:00",
-      "type": "beach",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJ-_UGp8v_mBQRYBB4rk3u2nw",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601948/%CE%BB%CE%B9%CE%B2%CE%B1%CE%B4%CE%B1%CE%BA%CE%B9_hspqnt.jpg",
-      "photo_credit": null
-     },
-     {
       "name": "Karavostasi — Departure",
       "name_el": "Καραβοστάσι — Αναχώρηση",
       "desc": "Back to the small port for the ferry. Folegandros connects to Piraeus, Santorini, Milos, Sikinos, Ios, and onward through the small Cyclades. Summer ferry schedule is dense; off-season is limited to 3-4 per week. Wait for your boat at the port café with a final glass of local vinsanto.",
@@ -316,7 +303,18 @@
     "title_el": "Κάτεργο, Λιβαδάκι & Αναχώρηση",
     "km": 12,
     "drive_mins": 20,
-    "color": "#5A7A3A"
+    "color": "#5A7A3A",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Karavostasis",
+      "area_el": "Καραβοστάσης",
+      "desc": "Back at Karavostasis, lunch at a harbour taverna before the ferry.",
+      "desc_el": "Πίσω στον Καραβοστάση, μεσημεριανό σε ταβέρνα του λιμανιού πριν από το πλοίο.",
+      "after": "Katergo Beach (boat or hike)"
+     }
+    ]
    }
   ],
   "title_el": "Πρόγραμμα 3 Ημερών στη Φολέγανδρο",

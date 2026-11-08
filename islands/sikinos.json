@@ -224,16 +224,6 @@
       "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJraBhBf9OmBQRFKE0DuVXW7k"
      },
      {
-      "name": "Agios Georgios Beach",
-      "name_el": "Παραλία Αγίου Γεωργίου",
-      "lat": 36.693499,
-      "lng": 25.1660346,
-      "type": "beach",
-      "desc": "Small sandy beach 1km east of Alopronia along the coastal path. A whitewashed chapel above. No facilities. Often empty.",
-      "desc_el": "Μικρή αμμώδης παραλία 1 χλμ ανατολικά της Αλοπρόνοιας στο παραλιακό μονοπάτι. Ένα ασβεστωμένο εκκλησάκι από πάνω. Καμία παροχή. Συχνά άδεια.",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJQwccEUBPmBQRe_VEGw3HZwo"
-     },
-     {
       "name": "Boat to Karra Beach",
       "name_el": "Καραβάκι προς Παραλία Κάρρα",
       "lat": 36.7186,
@@ -258,7 +248,18 @@
     "overnight": null,
     "overnight_el": null,
     "km": 15,
-    "drive_mins": 30
+    "drive_mins": 30,
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Alopronia",
+      "area_el": "Αλοπρόνοια",
+      "desc": "Lunch at a waterfront taverna in Alopronia before the boat to Karra.",
+      "desc_el": "Μεσημεριανό σε ταβέρνα στην παραλία της Αλοπρόνοιας πριν από το καΐκι για την Κάρρα.",
+      "after": "Alopronia Beach"
+     }
+    ]
    }
   ],
   "title_el": "Πρόγραμμα 2 Ημερών στη Σίκινο",

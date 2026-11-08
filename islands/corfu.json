@@ -248,7 +248,18 @@
      }
     ],
     "title_el": "Αχίλλειο & ο Νότος",
-    "overnight_el": "Κέρκυρα Πόλη"
+    "overnight_el": "Κέρκυρα Πόλη",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Kavos",
+      "area_el": "Κάβος",
+      "desc": "Lunch in Kavos, where the tavernas line the beach road.",
+      "desc_el": "Μεσημεριανό στον Κάβο, με ταβέρνες σε όλο τον παραλιακό δρόμο.",
+      "after": "Kavos Beach"
+     }
+    ]
    },
    {
     "day": 3,
@@ -333,7 +344,18 @@
      }
     ],
     "title_el": "Παλαιοκαστρίτσα — Το Κόσμημα της Κέρκυρας",
-    "overnight_el": "Παλαιοκαστρίτσα"
+    "overnight_el": "Παλαιοκαστρίτσα",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Afionas",
+      "area_el": "Αφιώνας",
+      "desc": "Lunch in Afionas, the hill village above Agios Georgios where the path to Porto Timoni starts — the taverna terraces look over both bays.",
+      "desc_el": "Μεσημεριανό στον Αφιώνα, το χωριό πάνω από τον Άγιο Γεώργιο απ’ όπου ξεκινά το μονοπάτι για το Πόρτο Τιμόνι — οι ταράτσες των ταβερνών βλέπουν και τους δύο κόλπους.",
+      "after": "Agios Georgios Beach (North)"
+     }
+    ]
    },
    {
     "day": 4,
@@ -354,20 +376,6 @@
       "name_el": "Παραλία Αχαράβης",
       "desc_el": "Μακριά, πλατιά, αμμώδης παραλία που δεν γεμίζει ποτέ υπερβολικά. Ρηχή και ήρεμη — η καλύτερη οικογενειακή παραλία της βόρειας ακτής. Αγαπημένη των ντόπιων μάλλον παρά τουριστικός κόμβος.",
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/acharavi_cliikx.jpg"
-     },
-     {
-      "name": "Roda Beach",
-      "lat": 39.79279,
-      "lng": 19.80289,
-      "type": "beach",
-      "time": "11:30",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJYyZunNBFWxMRlNyqKMLTf-Y",
-      "desc": "Long sandy north-coast beach — calm, shallow, family-friendly. One of the best beaches on the north coast with good facilities and a lovely village behind it.",
-      "name_el": "Παραλία Ρόδα",
-      "desc_el": "Μακριά αμμώδης παραλία της βόρειας ακτής — ήρεμη, ρηχή, οικογενειακή. Μία από τις καλύτερες παραλίες της βόρειας ακτής με καλές υπηρεσίες και ένα όμορφο χωριό πίσω της.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/roda_beach_oxrrud.avif",
-      "drive": "≈40 min to the north coast",
-      "drive_el": "≈40 λεπτά στη βόρεια ακτή"
      },
      {
       "name": "Sidari Beach & Canal d'Amour",
@@ -396,7 +404,18 @@
     "title_el": "Σιδάρι & Κανάλι της Αγάπης",
     "overnight_el": "Σιδάρι",
     "nightlife": "Sidari is the resort night — open-air bars playing everything from EDM to pop, easy and unpretentious. <a href=\"https://www.google.com/maps/search/Mojitos+Bar+Sidari+Corfu\" target=\"_blank\" rel=\"noopener\">Mojitos Bar</a> does cocktails, live music and karaoke. Cheaper drinks than the capital and a younger, holiday crowd.",
-    "nightlife_el": "Το Σιδάρι είναι η βραδιά resort — υπαίθρια μπαρ που παίζουν από EDM ως pop, χαλαρά και ανεπιτήδευτα. Το <a href=\"https://www.google.com/maps/search/Mojitos+Bar+Sidari+Corfu\" target=\"_blank\" rel=\"noopener\">Mojitos Bar</a> έχει κοκτέιλ, ζωντανή μουσική και καραόκε. Φθηνότερα ποτά από την πόλη και πιο νεανικό, τουριστικό κοινό."
+    "nightlife_el": "Το Σιδάρι είναι η βραδιά resort — υπαίθρια μπαρ που παίζουν από EDM ως pop, χαλαρά και ανεπιτήδευτα. Το <a href=\"https://www.google.com/maps/search/Mojitos+Bar+Sidari+Corfu\" target=\"_blank\" rel=\"noopener\">Mojitos Bar</a> έχει κοκτέιλ, ζωντανή μουσική και καραόκε. Φθηνότερα ποτά από την πόλη και πιο νεανικό, τουριστικό κοινό.",
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Roda",
+      "area_el": "Ρόδα",
+      "desc": "On the way west, lunch on the seafront at Roda.",
+      "desc_el": "Στον δρόμο προς τα δυτικά, μεσημεριανό στην παραλιακή της Ρόδας.",
+      "after": "Acharavi Beach"
+     }
+    ]
    },
    {
     "day": 5,
@@ -448,6 +467,15 @@
       "desc": "A farewell dinner in the Old Town. <a href=\"https://www.google.com/maps/search/Venetian+Well+Corfu+Town\" target=\"_blank\" rel=\"noopener\">The Venetian Well</a> on a hidden square is the island's finest — Corfiot-Mediterranean cooking and a serious wine list (book ahead). <a href=\"https://www.google.com/maps/search/Rex+Corfu+Town\" target=\"_blank\" rel=\"noopener\">Rex</a> is the classic alternative near the Liston.",
       "desc_el": "Αποχαιρετιστήριο δείπνο στην Παλιά Πόλη. <a href=\"https://www.google.com/maps/search/Venetian+Well+Corfu+Town\" target=\"_blank\" rel=\"noopener\">The Venetian Well</a> σε μια κρυμμένη πλατεία είναι το καλύτερο του νησιού — κερκυραϊκή-μεσογειακή κουζίνα και σοβαρή λίστα κρασιών (κράτηση εκ των προτέρων). Το <a href=\"https://www.google.com/maps/search/Rex+Corfu+Town\" target=\"_blank\" rel=\"noopener\">Rex</a> είναι η κλασική εναλλακτική κοντά στο Λιστόν.",
       "after": "Agios Gordios Beach"
+     },
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Glyfada Beach",
+      "area_el": "Παραλία Γλυφάδας",
+      "desc": "Lunch at Glyfada Beach: eat at the taverna there before the next swim.",
+      "desc_el": "Μεσημεριανό εκεί (Παραλία Γλυφάδας): φάε στην ταβέρνα πριν από το επόμενο μπάνιο.",
+      "after": "Glyfada Beach & Mirtiotissa Beach"
      }
     ]
    }

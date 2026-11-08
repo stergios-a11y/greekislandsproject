@@ -231,7 +231,18 @@
     "overnight": null,
     "overnight_el": null,
     "km": 20,
-    "drive_mins": 40
+    "drive_mins": 40,
+    "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Bonatsa Beach",
+      "area_el": "Παραλία Μπονάτσα",
+      "desc": "Lunch at Bonatsa Beach: eat at the taverna there before the next swim.",
+      "desc_el": "Μεσημεριανό εκεί (Παραλία Μπονάτσα): φάε στην ταβέρνα πριν από το επόμενο μπάνιο.",
+      "after": "Ellinika & Mavrospilia Beaches"
+     }
+    ]
    }
   ],
   "title_el": "Πρόγραμμα 2 Ημερών στην Κίμωλο",
