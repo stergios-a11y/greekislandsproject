@@ -363,7 +363,9 @@
       "time": "12:30",
       "wiki": "https://www.google.com/maps/search/Achla+beach+Andros",
       "desc": "The island's finest beach: a long bay of white pebbles under high cliffs, where the Achla stream comes out through plane trees into emerald water, with the chapel of Agios Nikolaos at one end. The road from Vourkoti is dirt and slow — allow about an hour from Chora and drive carefully — or take one of the summer boat trips from Chora. Nothing to buy for most of the year: bring water and food.",
-      "desc_el": "Η ωραιότερη παραλία του νησιού: μεγάλος κόλπος με λευκό βότσαλο κάτω από ψηλά βράχια, όπου το ρέμα της Άχλας βγαίνει μέσα από πλατάνια σε σμαραγδένια νερά, με το εκκλησάκι του Αγίου Νικολάου στη μία άκρη. Ο δρόμος από τη Βουρκωτή είναι χωματόδρομος και αργός — υπολόγισε περίπου μία ώρα από τη Χώρα και οδήγα προσεκτικά — ή πήγαινε με τα καλοκαιρινά καραβάκια από τη Χώρα. Τον περισσότερο χρόνο δεν βρίσκεις τίποτα: πάρε νερό και φαγητό."
+      "desc_el": "Η ωραιότερη παραλία του νησιού: μεγάλος κόλπος με λευκό βότσαλο κάτω από ψηλά βράχια, όπου το ρέμα της Άχλας βγαίνει μέσα από πλατάνια σε σμαραγδένια νερά, με το εκκλησάκι του Αγίου Νικολάου στη μία άκρη. Ο δρόμος από τη Βουρκωτή είναι χωματόδρομος και αργός — υπολόγισε περίπου μία ώρα από τη Χώρα και οδήγα προσεκτικά — ή πήγαινε με τα καλοκαιρινά καραβάκια από τη Χώρα. Τον περισσότερο χρόνο δεν βρίσκεις τίποτα: πάρε νερό και φαγητό.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1794168496/%CE%B1%CF%87%CE%BB%CE%B1_wi8zsf.jpg",
+      "photo_credit": null
      },
      {
       "name": "Gavrio (ferry back)",
@@ -401,7 +403,10 @@
    "depth_el": "Μέτρια",
    "facing_el": "Ανατολικά — προστατευμένη από τα βράχια",
    "facilities_el": "Φυσική — καμία υποδομή",
-   "desc_el": "Η ωραιότερη παραλία της Άνδρου: λευκό βότσαλο, σμαραγδένια νερά, ρέμα μέσα από πλατάνια και το εκκλησάκι του Αγίου Νικολάου. Χωματόδρομος από τη Βουρκωτή, αργός αλλά βατός με προσοχή (περίπου 1 ώρα από τη Χώρα) ή καραβάκια το καλοκαίρι από τη Χώρα."
+   "desc_el": "Η ωραιότερη παραλία της Άνδρου: λευκό βότσαλο, σμαραγδένια νερά, ρέμα μέσα από πλατάνια και το εκκλησάκι του Αγίου Νικολάου. Χωματόδρομος από τη Βουρκωτή, αργός αλλά βατός με προσοχή (περίπου 1 ώρα από τη Χώρα) ή καραβάκια το καλοκαίρι από τη Χώρα.",
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1794168496/%CE%B1%CF%87%CE%BB%CE%B1_wi8zsf.jpg",
+   "photo_credit": null,
+   "rating": 5
   },
   {
    "name": "Zorkos",
@@ -421,7 +426,8 @@
    "desc": "Wide sandy bay with turquoise water on the far northeast, 35 minutes from Gavrio (last stretch a good dirt road). Organised, with a fish taverna; rarely crowded.",
    "desc_el": "Μεγάλος αμμουδερός κόλπος με τιρκουάζ νερά στο βορειοανατολικό άκρο, 35 λεπτά από το Γαύριο (το τελευταίο κομμάτι καλός χωματόδρομος). Οργανωμένος, με ψαροταβέρνα· σπάνια γεμάτος.",
    "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1794168496/%CE%B6%CE%BF%CF%81%CE%BA%CE%BF%CF%82_bxwt48.jpg",
-   "photo_credit": null
+   "photo_credit": null,
+   "rating": 5
   },
   {
    "name": "Gialia",
@@ -446,8 +452,8 @@
   {
    "name": "Apothikes",
    "name_el": "Αποθήκες",
-   "lat": 37.78305,
-   "lng": 24.85151,
+   "lat": 37.783019,
+   "lng": 24.85153,
    "type": "Golden sand",
    "type_el": "Χρυσή άμμος",
    "length": "150 m",
@@ -464,8 +470,8 @@
   {
    "name": "Chalkolimnionas",
    "name_el": "Χαλκολιμνιώνας",
-   "lat": 37.7787,
-   "lng": 24.8566,
+   "lat": 37.793536,
+   "lng": 24.846441,
    "type": "Sand",
    "type_el": "Άμμος",
    "length": "200 m",
