@@ -3071,16 +3071,18 @@ function buildIslandPage(data, key) {
       ? `<a href="${b.wiki}" target="_blank" rel="noopener" class="beach-name-link">${pickLang(b, "name")}</a>`
       : pickLang(b, "name");
     const rating = b.rating || 4;
+    // half stars (Nov 2026): a 3.5 shows three full stars and a half one
+    const _starsHtml = r => { const f = Math.floor(r), h = r - f >= 0.5 ? 1 : 0; return '★'.repeat(f) + (h ? '<span class="half">★</span>' : '') + '<span class="off">' + '★'.repeat(5 - f - h) + '</span>'; };
     const photoHtml = b.photo
       ? `<div class="bc-photo">${buildLightboxImg(b.photo, b.name, b.photo_credit, 'beach-photo', 'onerror="this.style.display=\'none\'"')}${buildPhotoCredit(b.photo_credit)}` +
         `<div class="bc-rank">${i + 1}</div>` +
-        `<div class="bc-rate" title="${t('beach.rating')}: ${rating}/5"><span class="s">${'★'.repeat(rating)}<span class="off">${'★'.repeat(5 - rating)}</span></span><span class="n">${rating}/5</span></div></div>`
+        `<div class="bc-rate" title="${t('beach.rating')}: ${rating}/5"><span class="s">${_starsHtml(rating)}</span><span class="n">${rating}/5</span></div></div>`
       : '';
     // No photo: the rank and the stars have nowhere to sit, so they go in
     // the title row instead - same pill, on ink instead of on the photo.
     const inlineRank = b.photo ? '' : `<span class="bc-rank bc-rank-inline">${i + 1}</span>`;
     const inlineRate = b.photo ? '' :
-      `<span class="bc-rate bc-rate-inline" title="${t('beach.rating')}: ${rating}/5"><span class="s">${'★'.repeat(rating)}<span class="off">${'★'.repeat(5 - rating)}</span></span><span class="n">${rating}/5</span></span>`;
+      `<span class="bc-rate bc-rate-inline" title="${t('beach.rating')}: ${rating}/5"><span class="s">${_starsHtml(rating)}</span><span class="n">${rating}/5</span></span>`;
     const [lead, rest] = beachSplitDesc(pickLang(b, "desc"));
     const tag = beachTag(b);
     const w = beachWindRule(b);

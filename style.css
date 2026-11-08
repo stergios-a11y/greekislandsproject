@@ -8217,3 +8217,6 @@ html.dark .vibe-region.active { background: #0B8FAC; border-color: #0B8FAC; colo
   .dh-panel .mf-group { flex: 1 1 auto; }
   .dh-panel .mf-label { display: inline; }
 }
+
+/* half star in beach ratings (Nov 2026) */
+.bc-rate .s .half { background: linear-gradient(90deg, currentColor 50%, rgba(255,255,255,.3) 50%); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: none; }

@@ -84,7 +84,7 @@
  },
  "itinerary": {
   "title": "1-Day Antikythera Itinerary",
-  "subtitle": "Off the ferry at Potamos, swim at Xeropotamos and Kamarela, walk up to ancient Aegila, dinner of wild goat at Myronas'.",
+  "subtitle": "Off the ferry at Potamos, swim at Xiropotamos and off the rocks at Kamarela, walk up to ancient Aegila, dinner of wild goat at Myronas'.",
   "days": [
    {
     "day": 1,
@@ -100,34 +100,32 @@
       "wiki": "https://www.google.com/maps/search/?api=1&query=35.8822,23.28981",
       "desc": "The only real settlement and the harbour where the ferry ties up. A natural cove with water so clear you can see fish between the moored fishing boats, a handful of houses up the slope, a police station, a doctor, and Myronas' taverna — which is also the mini-market, the post office and the social heart of the island. Every ferry arrival is an event, watched by the same few faces. Most of the island's 20-40 residents live here.",
       "desc_el": "Ο μοναδικός πραγματικός οικισμός και το λιμάνι όπου δένει το πλοίο. Φυσικός κόλπος με νερό τόσο διαυγές που βλέπεις τα ψάρια ανάμεσα στα αγκυροβολημένα καΐκια, λίγα σπίτια στην πλαγιά, αστυνομικό τμήμα, γιατρός, και η ταβέρνα του Μύρωνα — που είναι και μίνι μάρκετ, ταχυδρομείο και η κοινωνική καρδιά του νησιού. Κάθε άφιξη πλοίου είναι γεγονός, που το παρακολουθούν τα ίδια λίγα πρόσωπα. Οι περισσότεροι από τους 20-40 κατοίκους ζουν εδώ.",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Potamos_Antikythira.jpg",
-      "photo_credit": {
-       "artist": "Wikimedia Commons contributor",
-       "license": "CC BY-SA",
-       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-       "page_url": "https://commons.wikimedia.org/wiki/Category:Antikythira",
-       "source": "Wikimedia Commons"
-      }
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1794172606/%CF%80%CE%BF%CF%84%CE%B1%CE%BC%CE%BF%CF%82_fcvfrm.jpg",
+      "photo_credit": null
      },
      {
-      "name": "Xeropotamos Beach",
-      "name_el": "Παραλία Ξεροπόταμος",
+      "name": "Xiropotamos Beach",
+      "name_el": "Παραλία Ξηροπόταμος",
       "lat": 35.8869,
       "lng": 23.2949,
       "type": "beach",
       "desc": "One of the island's few sand beaches, a short distance north of Potamos, framed by verdant rocks and crystal-clear water. It sits close to the ancient fortified city of Aegila (Kastro), so you can combine a swim with the ruins. On an island this exposed, a sheltered swim is precious.",
       "desc_el": "Μία από τις λίγες αμμώδεις παραλίες του νησιού, λίγο βόρεια του Ποταμού, πλαισιωμένη από καταπράσινα βράχια και πεντακάθαρα νερά. Βρίσκεται κοντά στην αρχαία οχυρωμένη πόλη της Αιγίλας (Κάστρο), οπότε συνδυάζεις το μπάνιο με τα ερείπια. Σε ένα νησί τόσο εκτεθειμένο, ένα προστατευμένο μπάνιο είναι πολύτιμο.",
-      "wiki": "https://www.google.com/maps/search/Xeropotamos+beach+Antikythera"
+      "wiki": "https://www.google.com/maps/search/Xeropotamos+beach+Antikythera",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1794172602/%CE%BE%CE%B5%CF%81%CE%BF%CF%80%CE%BF%CF%84%CE%B1%CE%BC%CE%BF%CF%82_2_tr51h6.jpg",
+      "photo_credit": null
      },
      {
-      "name": "Kamarela Beach",
-      "name_el": "Παραλία Καμαρέλα",
+      "name": "Kamarela (rocky coast)",
+      "name_el": "Καμαρέλα (βραχώδης ακτή)",
       "lat": 35.86998,
       "lng": 23.28437,
-      "type": "beach",
-      "desc": "The island's most beautiful beach — a small cove on the west coast with turquoise water and sculpted rock formations, including a natural stone arch. About a 30-minute walk from Potamos: turn at the Charchaliana intersection and follow the dirt road past the helipad. Bring a mask; the underwater rock is the draw. Almost always deserted.",
-      "desc_el": "Η πιο όμορφη παραλία του νησιού — μικρός κολπίσκος στη δυτική ακτή με τιρκουάζ νερά και γλυπτούς βραχοσχηματισμούς, με μια φυσική πέτρινη αψίδα. Περίπου 30 λεπτά με τα πόδια από τον Ποταμό: στρίψε στη διασταύρωση για τα Χαρχαλιανά και ακολούθησε τον χωματόδρομο πέρα από το ελικοδρόμιο. Φέρε μάσκα· ο υποθαλάσσιος βράχος είναι το θέλγητρο. Σχεδόν πάντα έρημη.",
-      "wiki": "https://www.google.com/maps/search/?api=1&query=35.86998,23.28437"
+      "type": "nature",
+      "desc": "Not a beach but a rocky stretch of the west coast with turquoise water and sculpted rock, including a natural stone arch — you swim off the rocks. About a 30-minute walk from Potamos: turn at the Charchaliana intersection and follow the dirt road past the helipad. Bring sea shoes and a mask; the underwater rock is the draw. Almost always deserted.",
+      "desc_el": "Δεν είναι παραλία αλλά βραχώδες κομμάτι της δυτικής ακτής με τιρκουάζ νερά και γλυπτά βράχια, με μια φυσική πέτρινη αψίδα — κολυμπάς από τα βράχια. Περίπου 30 λεπτά με τα πόδια από τον Ποταμό: στρίψε στη διασταύρωση για τα Χαρχαλιανά και ακολούθησε τον χωματόδρομο πέρα από το ελικοδρόμιο. Φέρε παπουτσάκια θαλάσσης και μάσκα· ο υποθαλάσσιος βράχος είναι το θέλγητρο. Σχεδόν πάντα άδεια.",
+      "wiki": "https://www.google.com/maps/search/?api=1&query=35.86998,23.28437",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1794172606/%CE%BA%CE%B1%CE%BC%CE%B1%CF%81%CE%B5%CE%BB%CE%B1_2_wrlkmp.jpg",
+      "photo_credit": null
      },
      {
       "name": "Ancient Aegila (Kastro)",
@@ -137,7 +135,9 @@
       "type": "ruin",
       "desc": "The fortified ancient city on the north of the island, dating to the 4th century BC, once a base for Cilician pirates until Pompey the Great destroyed them. Walls and steps carved into the rock lead up to the acropolis, with the Sanctuary of Apollo nearby — a statue of Apollo found here in 1880 is now in Athens. Active excavations run in summer. A circular hiking route links the ruins with panoramic Aegean views.",
       "desc_el": "Η οχυρωμένη αρχαία πόλη στα βόρεια του νησιού, του 4ου αιώνα π.Χ., κάποτε βάση Κιλίκων πειρατών μέχρι που τους εξόντωσε ο Πομπήιος ο Μέγας. Τείχη και σκαλοπάτια λαξευμένα στον βράχο οδηγούν στην ακρόπολη, με το Ιερό του Απόλλωνα δίπλα — άγαλμα του Απόλλωνα που βρέθηκε εδώ το 1880 είναι σήμερα στην Αθήνα. Ανασκαφές γίνονται το καλοκαίρι. Κυκλική διαδρομή πεζοπορίας συνδέει τα ερείπια με πανοραμική θέα στο Αιγαίο.",
-      "wiki": "https://www.google.com/maps/search/?api=1&query=35.88673,23.29682"
+      "wiki": "https://www.google.com/maps/search/?api=1&query=35.88673,23.29682",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1794172602/%CE%BA%CE%B1%CF%83%CF%84%CF%81%CE%BF_sly14k.jpg",
+      "photo_credit": null
      },
      {
       "name": "Andronikos Watermill",
@@ -147,7 +147,9 @@
       "type": "ruin",
       "desc": "A remarkably preserved two-hundred-year-old watermill near Potamos, built from cut sandstone at the start of the 19th century. Its cistern — capacity 60-70 cubic metres, fed from a nearby spring — is still intact. It usually worked in winter. Five 19th-century windmills are also scattered across the island, relics of a time when more people farmed this rock.",
       "desc_el": "Ένας αξιοσημείωτα διατηρημένος διακοσάχρονος νερόμυλος κοντά στον Ποταμό, χτισμένος από λαξευτό αμμόλιθο στις αρχές του 19ου αιώνα. Η δεξαμενή του — χωρητικότητας 60-70 κυβικών μέτρων, που γέμιζε από κοντινή πηγή — είναι ακόμα άθικτη. Λειτουργούσε συνήθως τον χειμώνα. Πέντε ανεμόμυλοι του 19ου αιώνα είναι επίσης σκορπισμένοι στο νησί, κατάλοιπα μιας εποχής που περισσότεροι άνθρωποι καλλιεργούσαν αυτόν τον βράχο.",
-      "wiki": "https://www.google.com/maps/search/?api=1&query=35.8812,23.2885"
+      "wiki": "https://www.google.com/maps/search/?api=1&query=35.8812,23.2885",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1794172601/%CE%BD%CE%B5%CF%81%CE%BF%CE%BC%CF%85%CE%BB%CE%BF%CF%82_umhwnv.jpg",
+      "photo_credit": null
      }
     ],
     "title_el": "Ποταμός, οι Παραλίες & η Αρχαία Αίγιλα",
@@ -167,33 +169,14 @@
    }
   ],
   "title_el": "Πρόγραμμα 1 Ημέρας στα Αντικύθηρα",
-  "subtitle_el": "Άφιξη με το πλοίο στον Ποταμό, μπάνιο στον Ξεροπόταμο και την Καμαρέλα, ανάβαση στην αρχαία Αίγιλα, δείπνο με αγριοκάτσικο στου Μύρωνα."
+  "subtitle_el": "Άφιξη με το πλοίο στον Ποταμό, μπάνιο στον Ξηροπόταμο και στα βράχια της Καμαρέλας, ανάβαση στην αρχαία Αίγιλα, δείπνο με αγριοκάτσικο στου Μύρωνα."
  },
  "beaches": [
   {
-   "name": "Kamarela Beach",
-   "name_el": "Παραλία Καμαρέλα",
-   "wiki": "https://www.google.com/maps/search/?api=1&query=35.86998,23.28437",
-   "rating": 4,
-   "type": "Pebble cove with rock arch",
-   "type_el": "Βοτσαλωτός κόλπος με πέτρινη αψίδα",
-   "length": "60 m",
-   "depth": "Medium — clear turquoise",
-   "depth_el": "Μέτριο — διαυγές τιρκουάζ",
-   "facing": "East-facing",
-   "facing_el": "Ανατολική",
-   "facilities": "None. 30-minute walk from Potamos via the Charchaliana dirt road past the helipad. Bring water, shade and a mask.",
-   "facilities_el": "Καμία παροχή. 30 λεπτά με τα πόδια από τον Ποταμό μέσω του χωματόδρομου των Χαρχαλιανών πέρα από το ελικοδρόμιο. Φέρε νερό, σκιά και μάσκα.",
-   "desc": "The most beautiful and emblematic beach on Antikythera — a small cove of turquoise water framed by sculpted rock formations, including a natural stone arch you can swim through. The underwater rock and clarity make it a snorkeller's spot. Almost always deserted; the 30-minute walk filters out all but the determined.",
-   "desc_el": "Η πιο όμορφη και εμβληματική παραλία των Αντικυθήρων — μικρός κολπίσκος με τιρκουάζ νερά πλαισιωμένος από γλυπτούς βραχοσχηματισμούς, με μια φυσική πέτρινη αψίδα που μπορείς να κολυμπήσεις μέσα από αυτήν. Ο υποθαλάσσιος βράχος και η διαύγεια την κάνουν σημείο για snorkeling. Σχεδόν πάντα έρημη· η 30λεπτη πεζοπορία φιλτράρει όλους εκτός από τους αποφασισμένους.",
-   "lat": 35.86998,
-   "lng": 23.28437
-  },
-  {
-   "name": "Xeropotamos Beach",
-   "name_el": "Παραλία Ξεροπόταμος",
+   "name": "Xiropotamos Beach",
+   "name_el": "Παραλία Ξηροπόταμος",
    "wiki": "https://www.google.com/maps/search/Xeropotamos+beach+Antikythera",
-   "rating": 4,
+   "rating": 3.5,
    "type": "Sand",
    "type_el": "Άμμος",
    "length": "120 m",
@@ -206,13 +189,36 @@
    "desc": "One of the island's few proper sand beaches, surrounded by green-tinged rock with crystalline water. Its position right next to ancient Aegila makes it the natural pairing of a swim and a walk through the ruins — the best of Antikythera in one short stretch of coast.",
    "desc_el": "Μία από τις λίγες πραγματικά αμμώδεις παραλίες του νησιού, περιτριγυρισμένη από πρασινωπό βράχο με κρυστάλλινο νερό. Η θέση της ακριβώς δίπλα στην αρχαία Αίγιλα την κάνει τον φυσικό συνδυασμό μπάνιου και βόλτας στα ερείπια — το καλύτερο των Αντικυθήρων σε μια μικρή λωρίδα ακτής.",
    "lat": 35.8869,
-   "lng": 23.2949
+   "lng": 23.2949,
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1794172607/%CE%BE%CE%B5%CF%81%CE%BF%CF%80%CE%BF%CF%84%CE%B1%CE%BC%CE%BF%CF%82_qjvhgq.jpg",
+   "photo_credit": null
   },
   {
-   "name": "Halara (Potamos) Beach",
-   "name_el": "Παραλία Χαλάρα (Ποταμός)",
+   "name": "Kamarela (rocky coast)",
+   "name_el": "Καμαρέλα (βραχώδης ακτή)",
+   "wiki": "https://www.google.com/maps/search/?api=1&query=35.86998,23.28437",
+   "rating": 3,
+   "type": "Rocky coast with a rock arch",
+   "type_el": "Βραχώδης ακτή με πέτρινη αψίδα",
+   "length": "—",
+   "depth": "Deep off the rocks — clear",
+   "depth_el": "Βαθύ από τα βράχια — διαυγές",
+   "facing": "East-facing",
+   "facing_el": "Ανατολική",
+   "facilities": "None. 30-minute walk from Potamos via the Charchaliana dirt road past the helipad. Bring water, shade and a mask.",
+   "facilities_el": "Καμία παροχή. 30 λεπτά με τα πόδια από τον Ποταμό μέσω του χωματόδρομου των Χαρχαλιανών πέρα από το ελικοδρόμιο. Φέρε νερό, σκιά και μάσκα.",
+   "desc": "Not a beach: a stretch of rocky shore on the west coast with turquoise water and sculpted rock, including a natural stone arch. You swim off the rocks, so bring sea shoes and a mask; snorkelling is the point. Almost always empty — the 30-minute walk filters out all but the determined.",
+   "desc_el": "Δεν είναι παραλία: βραχώδης ακτή στη δυτική πλευρά με τιρκουάζ νερά και γλυπτά βράχια, με μια φυσική πέτρινη αψίδα. Κολυμπάς από τα βράχια, οπότε φέρε παπουτσάκια θαλάσσης και μάσκα· το snorkelling είναι το θέμα. Σχεδόν πάντα άδεια — η πεζοπορία των 30 λεπτών φιλτράρει όλους εκτός από τους αποφασισμένους.",
+   "lat": 35.86998,
+   "lng": 23.28437,
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1794172609/%CE%BA%CE%B1%CE%BC%CE%B1%CF%81%CE%B5%CE%BB%CE%B1_lvw9ni.webp",
+   "photo_credit": null
+  },
+  {
+   "name": "Chalara (Potamos) Beach",
+   "name_el": "Παραλία Χαλαρά (Ποταμός)",
    "wiki": "https://www.google.com/maps/search/?api=1&query=35.8818,23.2902",
-   "rating": 4,
+   "rating": 2,
    "type": "Sand and pebble",
    "type_el": "Άμμος και βότσαλο",
    "length": "80 m",
@@ -225,7 +231,9 @@
    "desc": "Also called Potamos beach, this is the one you see to the left of the harbour as the ferry pulls in — a narrow strip of sand and pebbles with calm, transparent water. Not the island's most dramatic beach, but the most convenient: you can swim, then walk thirty seconds to the taverna for a frappé.",
    "desc_el": "Λέγεται και παραλία Ποταμού, αυτή που βλέπεις αριστερά από το λιμάνι καθώς μπαίνει το πλοίο — μια στενή λωρίδα άμμου και βότσαλου με ήρεμα, διάφανα νερά. Όχι η πιο εντυπωσιακή παραλία του νησιού, αλλά η πιο βολική: κολυμπάς, μετά περπατάς τριάντα δευτερόλεπτα ως την ταβέρνα για έναν φραπέ.",
    "lat": 35.8818,
-   "lng": 23.2902
+   "lng": 23.2902,
+   "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1794172610/%CF%87%CE%B1%CE%BB%CE%B1%CF%81%CE%B1_g5ylay.jpg",
+   "photo_credit": null
   }
  ],
  "getting_there": {
