@@ -83,7 +83,7 @@
   ]
  },
  "itinerary": {
-  "title": "1-Day Antikythera Itinerary",
+  "title": "Antikythera in 1 day (+1 for the lighthouse walk)",
   "subtitle": "Off the ferry at Potamos, swim at Xiropotamos and off the rocks at Kamarela, walk up to ancient Aegila, dinner of wild goat at Myronas'.",
   "days": [
    {
@@ -166,9 +166,34 @@
       "after": "Andronikos Watermill"
      }
     ]
+   },
+   {
+    "day": 2,
+    "title": "If you stay on: the Apolytares lighthouse walk",
+    "title_el": "Αν μείνεις παραπάνω: πεζοπορία στον φάρο Απολυτάρες",
+    "km": 10,
+    "drive_mins": 0,
+    "overnight": "Potamos",
+    "overnight_el": "Ποταμός",
+    "color": "#3D8B6F",
+    "stops": [
+     {
+      "name": "Apolytares Lighthouse (walk)",
+      "name_el": "Φάρος Απολυτάρες (πεζοπορία)",
+      "lat": 35.82353,
+      "lng": 23.32466,
+      "type": "viewpoint",
+      "time": "07:30",
+      "wiki": "https://www.google.com/maps/search/?api=1&query=35.82353,23.32466",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1794173028/FAROS-apolitara_mhvwec.jpg",
+      "photo_credit": null,
+      "desc": "A full-day walk for a second day: the path runs from Potamos to Cape Apolytares, the southern tip of the island, where a 23-metre stone lighthouse has stood since 1926. Allow about 2.5–3 hours each way. There is no shade and no water on the way — start at first light, carry at least 2–3 litres each, a hat and proper shoes, and tell Myronas' where you're going. Wild, empty country; in spring and autumn watch for migrating birds and Eleonora's falcons.",
+      "desc_el": "Ολοήμερη πεζοπορία για δεύτερη μέρα: το μονοπάτι πάει από τον Ποταμό στο ακρωτήρι Απολυτάρες, το νοτιότερο άκρο του νησιού, όπου στέκει από το 1926 ένας πέτρινος φάρος 23 μέτρων. Υπολόγισε περίπου 2,5–3 ώρες για κάθε κατεύθυνση. Δεν υπάρχει σκιά ούτε νερό στη διαδρομή — ξεκίνα με το πρώτο φως, πάρε τουλάχιστον 2–3 λίτρα ο καθένας, καπέλο και κανονικά παπούτσια, και πες στου Μύρωνα πού πας. Άγριο, έρημο τοπίο· την άνοιξη και το φθινόπωρο πρόσεχε για αποδημητικά πουλιά και μαυροπετρίτες."
+     }
+    ]
    }
   ],
-  "title_el": "Πρόγραμμα 1 Ημέρας στα Αντικύθηρα",
+  "title_el": "Αντικύθηρα σε 1 μέρα (+1 για τον φάρο)",
   "subtitle_el": "Άφιξη με το πλοίο στον Ποταμό, μπάνιο στον Ξηροπόταμο και στα βράχια της Καμαρέλας, ανάβαση στην αρχαία Αίγιλα, δείπνο με αγριοκάτσικο στου Μύρωνα."
  },
  "beaches": [
