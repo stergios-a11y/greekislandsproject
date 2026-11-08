@@ -204,26 +204,13 @@
       "wiki": "https://www.google.com/maps/search/Agali+Beach+Folegandros"
      },
      {
-      "name": "Agios Nikolaos Beach (walk from Agali)",
-      "name_el": "Παραλία Αγίου Νικολάου",
-      "desc": "A 20-minute walk around the cliff from Agali, or a €5 water-taxi ride. Much quieter than Agali. Crystal-clear water over a sandy bottom; the bay is protected. Two tiny tavernas on the beach — Papalagi Seafood is the one locals recommend (order the melitzanosalata). Coming back, the path is easier if you go via the small chapel uphill rather than along the rocks.",
-      "desc_el": "Μία 20λεπτη πεζοπορία γύρω από τον γκρεμό από την Αγκάλη, ή μια διαδρομή με θαλάσσιο ταξί 5€. Πολύ πιο ήσυχη από την Αγκάλη. Κρυστάλλινα νερά πάνω σε αμμώδη βυθό· ο κόλπος είναι προστατευμένος. Δύο μικροσκοπικές ταβέρνες στην παραλία — το Papalagi Seafood είναι αυτό που συστήνουν οι ντόπιοι (παράγγειλε τη μελιτζανοσαλάτα). Επιστρέφοντας, το μονοπάτι είναι πιο εύκολο αν πας μέσω του μικρού εκκλησιδίου στην ανηφόρα παρά κατά μήκος των βράχων.",
-      "lat": 36.63028,
-      "lng": 24.88461,
-      "time": "11:00",
-      "type": "beach",
-      "wiki": "https://www.google.com/maps/search/?api=1&query=36.63028,24.88461",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601949/%CE%B1%CE%B3%CE%B9%CE%BF%CF%82_%CE%BD%CE%B9%CE%BA%CE%BF%CE%BB%CE%B1%CE%BF%CF%82_bi9ex0.jpg",
-      "photo_credit": null
-     },
-     {
       "name": "Ano Meria village",
       "name_el": "Χωριό Άνω Μεριά",
       "desc": "The island's second village — 6km north of Chora, spread thinly over terraced hillsides. This is the agricultural Folegandros: stone-walled fields, scattered farmhouses, a few tavernas. The Ecological and Folklore Museum (in a preserved farmhouse) is small but excellent — shows how islanders lived on rain cisterns and terraced barley until the 1970s. Far fewer tourists; almost no one spends the night here.",
       "desc_el": "Το δεύτερο χωριό του νησιού — 6 χλμ βόρεια της Χώρας, απλωμένο αραιά πάνω σε αναβαθμισμένες πλαγιές. Αυτή είναι η αγροτική Φολέγανδρος: χωράφια με πέτρινους τοίχους, σκόρπιες αγροικίες, μερικές ταβέρνες. Το Οικολογικό και Λαογραφικό Μουσείο (σε διατηρημένη αγροικία) είναι μικρό αλλά εξαιρετικό — δείχνει πώς ζούσαν οι νησιώτες με στέρνες βρόχινου νερού και αναβαθμισμένο κριθάρι μέχρι τη δεκαετία του 1970. Πολύ λιγότεροι τουρίστες· σχεδόν κανείς δεν διανυκτερεύει εδώ.",
       "lat": 36.6437,
       "lng": 24.8833,
-      "time": "15:30",
+      "time": "11:00",
       "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ano_Meria_on_Folegandros%2C_15M6593.jpg/1920px-Ano_Meria_on_Folegandros%2C_15M6593.jpg",
       "photo_credit": {
        "artist": "Zde",
@@ -234,6 +221,19 @@
       },
       "type": "village",
       "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJdVIONKP_mBQRfP6rlu57nBU"
+     },
+     {
+      "name": "Agios Nikolaos Beach (walk from Agali)",
+      "name_el": "Παραλία Αγίου Νικολάου",
+      "desc": "A 20-minute walk around the cliff from Agali, or a €5 water-taxi ride. Much quieter than Agali. Crystal-clear water over a sandy bottom; the bay is protected. Two tiny tavernas on the beach — Papalagi Seafood is the one locals recommend (order the melitzanosalata). Coming back, the path is easier if you go via the small chapel uphill rather than along the rocks.",
+      "desc_el": "Μία 20λεπτη πεζοπορία γύρω από τον γκρεμό από την Αγκάλη, ή μια διαδρομή με θαλάσσιο ταξί 5€. Πολύ πιο ήσυχη από την Αγκάλη. Κρυστάλλινα νερά πάνω σε αμμώδη βυθό· ο κόλπος είναι προστατευμένος. Δύο μικροσκοπικές ταβέρνες στην παραλία — το Papalagi Seafood είναι αυτό που συστήνουν οι ντόπιοι (παράγγειλε τη μελιτζανοσαλάτα). Επιστρέφοντας, το μονοπάτι είναι πιο εύκολο αν πας μέσω του μικρού εκκλησιδίου στην ανηφόρα παρά κατά μήκος των βράχων.",
+      "lat": 36.63028,
+      "lng": 24.88461,
+      "time": "15:30",
+      "type": "beach",
+      "wiki": "https://www.google.com/maps/search/?api=1&query=36.63028,24.88461",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1785601949/%CE%B1%CE%B3%CE%B9%CE%BF%CF%82_%CE%BD%CE%B9%CE%BA%CE%BF%CE%BB%CE%B1%CE%BF%CF%82_bi9ex0.jpg",
+      "photo_credit": null
      },
      {
       "name": "Dinner in Chora",
