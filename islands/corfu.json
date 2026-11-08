@@ -344,11 +344,23 @@
     "overnight": "Sidari",
     "stops": [
      {
+      "name": "Acharavi Beach",
+      "lat": 39.80303,
+      "lng": 19.82419,
+      "type": "beach",
+      "time": "09:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJRYi9zYRGWxMRmlluJ14sYcQ",
+      "desc": "Long, wide, sandy beach that never gets overcrowded. Shallow and calm — the best family beach on the north coast. A local favourite rather than a tourist hub.",
+      "name_el": "Παραλία Αχαράβης",
+      "desc_el": "Μακριά, πλατιά, αμμώδης παραλία που δεν γεμίζει ποτέ υπερβολικά. Ρηχή και ήρεμη — η καλύτερη οικογενειακή παραλία της βόρειας ακτής. Αγαπημένη των ντόπιων μάλλον παρά τουριστικός κόμβος.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/acharavi_cliikx.jpg"
+     },
+     {
       "name": "Roda Beach",
       "lat": 39.79279,
       "lng": 19.80289,
       "type": "beach",
-      "time": "09:30",
+      "time": "11:30",
       "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJYyZunNBFWxMRlNyqKMLTf-Y",
       "desc": "Long sandy north-coast beach — calm, shallow, family-friendly. One of the best beaches on the north coast with good facilities and a lovely village behind it.",
       "name_el": "Παραλία Ρόδα",
@@ -358,23 +370,11 @@
       "drive_el": "≈40 λεπτά στη βόρεια ακτή"
      },
      {
-      "name": "Canal d'Amour",
-      "lat": 39.7971,
-      "lng": 19.698,
-      "type": "beach",
-      "time": "11:30",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJTT_DF8NOWxMRJtdLCVO2eMg",
-      "desc": "The most famous spot in Sidari — dramatic sandstone cliffs carved into channels and caves by centuries of sea erosion. Local legend says couples who swim through the channel together will marry. Unique and unmissable.",
-      "name_el": "Κανάλι του Έρωτα",
-      "desc_el": "Το πιο διάσημο σημείο στο Σιδάρι — εντυπωσιακοί αμμολιθικοί βράχοι σκαλισμένοι σε κανάλια και σπηλιές από αιώνες θαλάσσιας διάβρωσης. Η τοπική παράδοση λέει ότι όσα ζευγάρια κολυμπήσουν μαζί μέσα από το κανάλι θα παντρευτούν. Μοναδικό και αδιαπραγμάτευτο.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/canal_d_amour_kctzjr.webp"
-     },
-     {
       "name": "Sidari Beach",
       "lat": 39.7932,
       "lng": 19.7084,
       "type": "beach",
-      "time": "13:00",
+      "time": "14:00",
       "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJQ6cmBN5OWxMRVgRSGp7nZww",
       "desc": "Long sandy beach adjoining the canal d'Amour. Golden sand, gently shelving into the sea. Good for children. The resort behind it is lively with restaurants and bars.",
       "name_el": "Παραλία Σιδάρι",
@@ -382,16 +382,16 @@
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/sidari_lxbifc.jpg"
      },
      {
-      "name": "Acharavi Beach",
-      "lat": 39.80303,
-      "lng": 19.82419,
+      "name": "Canal d'Amour",
+      "lat": 39.7971,
+      "lng": 19.698,
       "type": "beach",
-      "time": "15:30",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJRYi9zYRGWxMRmlluJ14sYcQ",
-      "desc": "Long, wide, sandy beach that never gets overcrowded. Shallow and calm — the best family beach on the north coast. A local favourite rather than a tourist hub.",
-      "name_el": "Παραλία Αχαράβης",
-      "desc_el": "Μακριά, πλατιά, αμμώδης παραλία που δεν γεμίζει ποτέ υπερβολικά. Ρηχή και ήρεμη — η καλύτερη οικογενειακή παραλία της βόρειας ακτής. Αγαπημένη των ντόπιων μάλλον παρά τουριστικός κόμβος.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/acharavi_cliikx.jpg"
+      "time": "18:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJTT_DF8NOWxMRJtdLCVO2eMg",
+      "desc": "The most famous spot in Sidari — dramatic sandstone cliffs carved into channels and caves by centuries of sea erosion. Local legend says couples who swim through the channel together will marry. Unique and unmissable.",
+      "name_el": "Κανάλι του Έρωτα",
+      "desc_el": "Το πιο διάσημο σημείο στο Σιδάρι — εντυπωσιακοί αμμολιθικοί βράχοι σκαλισμένοι σε κανάλια και σπηλιές από αιώνες θαλάσσιας διάβρωσης. Η τοπική παράδοση λέει ότι όσα ζευγάρια κολυμπήσουν μαζί μέσα από το κανάλι θα παντρευτούν. Μοναδικό και αδιαπραγμάτευτο.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1783883649/canal_d_amour_kctzjr.webp"
      },
      {
       "name": "Dinner in Sidari",

@@ -329,25 +329,6 @@
       }
      },
      {
-      "name": "Klima Village",
-      "lat": 36.7347,
-      "lng": 24.4205,
-      "type": "village",
-      "time": "16:00",
-      "wiki": "https://www.google.com/maps/search/Klima+Village+Milos",
-      "desc": "The most photographed fishing village in the Cyclades — two-storey syrmata with boats at ground level and brightly painted upper rooms. A 15-minute drive from Adamas. Walk the seafront at golden hour.",
-      "name_el": "Χωριό Κλήμα",
-      "desc_el": "Το πιο φωτογραφημένο ψαροχώρι των Κυκλάδων — διώροφα σύρματα με βάρκες σε ισόγειο επίπεδο και έντονα χρωματισμένα πάνω δωμάτια. 15 λεπτά οδικώς από τον Αδάμαντα. Περπάτησε στην προκυμαία τη χρυσή ώρα.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1778713640/%CE%BA%CE%BB%CE%B9%CE%BC%CE%B1_zcbdkd.jpg",
-      "photo_credit": {
-       "artist": "Kosant38 / Kosant38 at Greek Wikipedia",
-       "license": "Public domain",
-       "license_url": "",
-       "page_url": "https://commons.wikimedia.org/wiki/File:Milos_Klima_village.jpg",
-       "source": "Wikimedia Commons"
-      }
-     },
-     {
       "name": "Pollonia",
       "lat": 36.7633,
       "lng": 24.5261,
@@ -401,11 +382,30 @@
     "overnight": null,
     "stops": [
      {
+      "name": "Klima Village",
+      "lat": 36.7347,
+      "lng": 24.4205,
+      "type": "village",
+      "time": "09:00",
+      "wiki": "https://www.google.com/maps/search/Klima+Village+Milos",
+      "desc": "The most photographed fishing village in the Cyclades — two-storey syrmata with boats at ground level and brightly painted upper rooms. A 15-minute drive from Adamas. Walk the seafront at golden hour.",
+      "name_el": "Χωριό Κλήμα",
+      "desc_el": "Το πιο φωτογραφημένο ψαροχώρι των Κυκλάδων — διώροφα σύρματα με βάρκες σε ισόγειο επίπεδο και έντονα χρωματισμένα πάνω δωμάτια. 15 λεπτά οδικώς από τον Αδάμαντα. Περπάτησε στην προκυμαία τη χρυσή ώρα.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1778713640/%CE%BA%CE%BB%CE%B9%CE%BC%CE%B1_zcbdkd.jpg",
+      "photo_credit": {
+       "artist": "Kosant38 / Kosant38 at Greek Wikipedia",
+       "license": "Public domain",
+       "license_url": "",
+       "page_url": "https://commons.wikimedia.org/wiki/File:Milos_Klima_village.jpg",
+       "source": "Wikimedia Commons"
+      }
+     },
+     {
       "name": "Site of the Venus de Milo",
       "lat": 36.7385,
       "lng": 24.4229,
       "type": "museum",
-      "time": "09:30",
+      "time": "10:00",
       "wiki": "https://www.google.com/maps/search/Site+of+the+Venus+de+Milo+Milos",
       "desc": "The exact spot where the 2nd-century BC masterpiece was found in 1820, near the ancient theatre. A replica marks the site. The original is in the Louvre; a cast is in the local museum in Plaka.",
       "name_el": "Τοποθεσία της Αφροδίτης της Μήλου",
@@ -424,7 +424,7 @@
       "lat": 36.7373,
       "lng": 24.4237,
       "type": "church",
-      "time": "10:30",
+      "time": "11:00",
       "wiki": "https://www.google.com/maps/search/Catacombs+of+Milos",
       "desc": "The earliest Christian catacombs outside Rome — 1st-2nd century AD burial galleries carved into the volcanic rock. Guided tours only. Surprisingly moving.",
       "name_el": "Κατακόμβες Μήλου",
@@ -443,7 +443,7 @@
       "lat": 36.6915,
       "lng": 24.4527,
       "type": "beach",
-      "time": "13:00",
+      "time": "13:30",
       "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJewwOoL8gmRQRezP7q9fj8eU",
       "desc": "The longest beach on Milos — a long sandy shore on the east coast near Adamas. Protected from the north winds. Good for families.",
       "name_el": "Παραλία Αχιβαδολίμνη",

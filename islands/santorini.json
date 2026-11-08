@@ -116,18 +116,6 @@
       "name_el": "Μουσείο Προϊστορικής Θήρας"
      },
      {
-      "name": "Vlychada Beach (swim)",
-      "name_el": "Παραλία Βλυχάδα (μπάνιο)",
-      "lat": 36.34,
-      "lng": 25.4311,
-      "type": "beach",
-      "time": "12:00",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJBXiwpYTPmRQRvMP59Ts1a_U",
-      "desc": "Drive south from Fira (~25 min) to Vlychada — Santorini's lunar landscape beach with sculpted ash-grey cliffs from centuries of wind erosion. Far quieter than Red Beach, dark sand, deeper water. Best beach on the island for actually swimming.",
-      "desc_el": "Διαδρομή νότια από τα Φηρά (~25 λεπτά) στη Βλυχάδα — η σεληνιακή παραλία της Σαντορίνης με τους σμιλεμένους σταχτί βράχους από αιώνες διάβρωσης. Πολύ πιο ήσυχη από την Κόκκινη Παραλία, σκούρα άμμος, βαθιά νερά. Η καλύτερη παραλία του νησιού για κανονικό κολύμπι.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1777828899/vlychada-beach_baadcj.jpg"
-     },
-     {
       "name": "Caldera Path — Fira to Imerovigli",
       "lat": 36.4258,
       "lng": 25.4275,
@@ -155,15 +143,6 @@
     "nightlife": "Fira has the island's only real clubs, strung along the caldera edge. Start with cocktails and a house-music crowd at <a href=\"https://www.google.com/maps/search/Tango+Bar+Fira+Santorini\" target=\"_blank\" rel=\"noopener\">Tango</a> (caldera views, open till 4am), dance at <a href=\"https://www.google.com/maps/search/Koo+Club+Fira+Santorini\" target=\"_blank\" rel=\"noopener\">Koo Club</a> or <a href=\"https://www.google.com/maps/search/Enigma+Club+Fira+Santorini\" target=\"_blank\" rel=\"noopener\">Enigma</a>, or keep it cheap and loud at <a href=\"https://www.google.com/maps/search/Two+Brothers+Bar+Fira+Santorini\" target=\"_blank\" rel=\"noopener\">Two Brothers Bar</a>. Imerovigli, where you sleep, is a 10-min taxi back and blissfully quiet.",
     "nightlife_el": "Τα Φηρά έχουν τα μόνα πραγματικά clubs του νησιού, στη σειρά πάνω από την καλντέρα. Ξεκίνα με κοκτέιλ και house στο <a href=\"https://www.google.com/maps/search/Tango+Bar+Fira+Santorini\" target=\"_blank\" rel=\"noopener\">Tango</a> (θέα καλντέρα, ανοιχτά ως τις 4), χόρεψε στο <a href=\"https://www.google.com/maps/search/Koo+Club+Fira+Santorini\" target=\"_blank\" rel=\"noopener\">Koo Club</a> ή το <a href=\"https://www.google.com/maps/search/Enigma+Club+Fira+Santorini\" target=\"_blank\" rel=\"noopener\">Enigma</a>, ή κράτα το φθηνό και δυνατό στο <a href=\"https://www.google.com/maps/search/Two+Brothers+Bar+Fira+Santorini\" target=\"_blank\" rel=\"noopener\">Two Brothers Bar</a>. Το Ημεροβίγλι, όπου κοιμάσαι, είναι 10' με ταξί και απόλυτα ήσυχο.",
     "food": [
-     {
-      "meal": "Lunch",
-      "meal_el": "Μεσημεριανό",
-      "area": "Vlychada",
-      "area_el": "Βλυχάδα",
-      "desc": "Down at the marina in Vlychada. <a href=\"https://www.google.com/maps/search/To+Psaraki+Vlychada+Santorini\" target=\"_blank\" rel=\"noopener\">Το Ψαράκι</a> is the local favourite — fish landed just offshore, simply done, fair prices (booking essential). <a href=\"https://www.google.com/maps/search/Seaside+Santorini+Vlychada\" target=\"_blank\" rel=\"noopener\">Seaside</a> sits right on the black sand for a more polished lunch.",
-      "desc_el": "Κάτω στη μαρίνα της Βλυχάδας. <a href=\"https://www.google.com/maps/search/To+Psaraki+Vlychada+Santorini\" target=\"_blank\" rel=\"noopener\">Το Ψαράκι</a> είναι το αγαπημένο των ντόπιων — ψάρι της ημέρας, απλά μαγειρεμένο, λογικές τιμές (απαραίτητη κράτηση). Το <a href=\"https://www.google.com/maps/search/Seaside+Santorini+Vlychada\" target=\"_blank\" rel=\"noopener\">Seaside</a> είναι πάνω στη μαύρη άμμο για ένα πιο φροντισμένο μεσημεριανό.",
-      "after": "Vlychada Beach (swim)"
-     },
      {
       "meal": "Dinner",
       "meal_el": "Δείπνο",
@@ -327,6 +306,18 @@
       }
      },
      {
+      "name": "Vlychada Beach (swim)",
+      "name_el": "Παραλία Βλυχάδα (μπάνιο)",
+      "lat": 36.34,
+      "lng": 25.4311,
+      "type": "beach",
+      "time": "12:00",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJBXiwpYTPmRQRvMP59Ts1a_U",
+      "desc": "Drive south from Fira (~25 min) to Vlychada — Santorini's lunar landscape beach with sculpted ash-grey cliffs from centuries of wind erosion. Far quieter than Red Beach, dark sand, deeper water. Best beach on the island for actually swimming.",
+      "desc_el": "Διαδρομή νότια από τα Φηρά (~25 λεπτά) στη Βλυχάδα — η σεληνιακή παραλία της Σαντορίνης με τους σμιλεμένους σταχτί βράχους από αιώνες διάβρωσης. Πολύ πιο ήσυχη από την Κόκκινη Παραλία, σκούρα άμμος, βαθιά νερά. Η καλύτερη παραλία του νησιού για κανονικό κολύμπι.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/w_800,q_auto,f_auto/v1777828899/vlychada-beach_baadcj.jpg"
+     },
+     {
       "name": "Akrotiri Archaeological Site",
       "lat": 36.3518,
       "lng": 25.4034,
@@ -377,6 +368,15 @@
      }
     ],
     "food": [
+     {
+      "meal": "Lunch",
+      "meal_el": "Μεσημεριανό",
+      "area": "Vlychada",
+      "area_el": "Βλυχάδα",
+      "desc": "Down at the marina in Vlychada. <a href=\"https://www.google.com/maps/search/To+Psaraki+Vlychada+Santorini\" target=\"_blank\" rel=\"noopener\">Το Ψαράκι</a> is the local favourite — fish landed just offshore, simply done, fair prices (booking essential). <a href=\"https://www.google.com/maps/search/Seaside+Santorini+Vlychada\" target=\"_blank\" rel=\"noopener\">Seaside</a> sits right on the black sand for a more polished lunch.",
+      "desc_el": "Κάτω στη μαρίνα της Βλυχάδας. <a href=\"https://www.google.com/maps/search/To+Psaraki+Vlychada+Santorini\" target=\"_blank\" rel=\"noopener\">Το Ψαράκι</a> είναι το αγαπημένο των ντόπιων — ψάρι της ημέρας, απλά μαγειρεμένο, λογικές τιμές (απαραίτητη κράτηση). Το <a href=\"https://www.google.com/maps/search/Seaside+Santorini+Vlychada\" target=\"_blank\" rel=\"noopener\">Seaside</a> είναι πάνω στη μαύρη άμμο για ένα πιο φροντισμένο μεσημεριανό.",
+      "after": "Vlychada Beach (swim)"
+     },
      {
       "meal": "Lunch",
       "meal_el": "Μεσημεριανό",

@@ -271,11 +271,23 @@
     "overnight": "Nydri",
     "stops": [
      {
+      "name": "Athani Village",
+      "lat": 38.6651586,
+      "lng": 20.5716889,
+      "type": "village",
+      "time": "09:30",
+      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJS5ZcSAexXRMR7Q-5xhT9NfM",
+      "desc": "Tiny clifftop village above Porto Katsiki with spectacular views. The local taverna serves the best food in southern Lefkada — lamb from the hillside farms, local wine.",
+      "name_el": "Χωριό Αθάνι",
+      "desc_el": "Μικροσκοπικό χωριό σε γκρεμό πάνω από το Πόρτο Κατσίκι με εντυπωσιακή θέα. Η τοπική ταβέρνα σερβίρει το καλύτερο φαγητό της νότιας Λευκάδας — αρνί από τα φάρμα του βουνού, τοπικό κρασί.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780778665/%CE%B1%CE%B8%CE%B1%CE%BD%CE%B9_o4gj64.jpg"
+     },
+     {
       "name": "Egremni Beach",
       "lat": 38.6374903,
       "lng": 20.5583877,
       "type": "beach",
-      "time": "09:30",
+      "time": "10:30",
       "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJK-2PC2awXRMRPVDESDXJEeU",
       "desc": "One of the longest and most dramatic beaches in Greece — 1.5km of white pebble beneath sheer white cliffs, accessible only by 350 steps or by boat from Vassiliki. Completely wild and unorganised.",
       "name_el": "Παραλία Εγκρεμνοί",
@@ -289,7 +301,7 @@
       "lat": 38.6011744,
       "lng": 20.5503374,
       "type": "beach",
-      "time": "12:00",
+      "time": "14:00",
       "wiki": "https://www.google.com/maps/search/Porto+Katsiki+Lefkada",
       "desc": "Consistently ranked one of the best beaches in Europe — sheer white limestone cliffs 100m high dropping to turquoise water. Access via 100 steps. Arrive by 11am for a sunbed. Unmissable.",
       "name_el": "Πόρτο Κατσίκι",
@@ -297,18 +309,6 @@
       "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780778665/%CF%80%CE%BF%CF%81%CF%84%CE%BF_%CE%BA%CE%B1%CF%84%CF%83%CE%B9%CE%BA%CE%B9_nk97ke.jpg",
       "drive": "≈45 min southwest of Nydri",
       "drive_el": "≈45 λεπτά νοτιοδυτικά του Νυδριού"
-     },
-     {
-      "name": "Athani Village",
-      "lat": 38.6651586,
-      "lng": 20.5716889,
-      "type": "village",
-      "time": "15:00",
-      "wiki": "https://www.google.com/maps/place/?q=place_id:ChIJS5ZcSAexXRMR7Q-5xhT9NfM",
-      "desc": "Tiny clifftop village above Porto Katsiki with spectacular views. The local taverna serves the best food in southern Lefkada — lamb from the hillside farms, local wine.",
-      "name_el": "Χωριό Αθάνι",
-      "desc_el": "Μικροσκοπικό χωριό σε γκρεμό πάνω από το Πόρτο Κατσίκι με εντυπωσιακή θέα. Η τοπική ταβέρνα σερβίρει το καλύτερο φαγητό της νότιας Λευκάδας — αρνί από τα φάρμα του βουνού, τοπικό κρασί.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1780778665/%CE%B1%CE%B8%CE%B1%CE%BD%CE%B9_o4gj64.jpg"
      },
      {
       "name": "Cape Lefkatas",

@@ -200,32 +200,11 @@
     "overnight": "Rhodes Town",
     "stops": [
      {
-      "name": "Kritinia Castle",
-      "lat": 36.2641,
-      "lng": 27.8089,
-      "type": "castle",
-      "time": "09:00",
-      "wiki": "https://www.google.com/maps/search/Kritinia+Castle+Rhodes",
-      "desc": "Ruined Knights' castle on a hilltop with panoramic sea views toward Turkey. Free entry. Small cafe at the base with wine and honey tastings.",
-      "name_el": "Κάστρο Κρητηνίας",
-      "desc_el": "Ερειπωμένο κάστρο των Ιπποτών σε λόφο με πανοραμική θέα προς την Τουρκία. Δωρεάν είσοδος. Μικρό καφέ στη βάση με γευσιγνωσία κρασιού και μελιού.",
-      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1786658712/%CE%BA%CE%B1%CF%83%CF%84%CF%81%CE%BF_%CE%BA%CF%81%CE%B7%CF%84%CE%B7%CE%BD%CE%B9%CE%B1%CF%82_n1jwpi.jpg",
-      "photo_credit": {
-       "artist": "Hagai Agmon-Snir حچاي اچمون-سنير חגי אגמון-שניר",
-       "license": "CC BY-SA 4.0",
-       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-       "page_url": "https://commons.wikimedia.org/wiki/File:KastroKritiniasRhodesMay112023_12.jpg",
-       "source": "Wikimedia Commons"
-      },
-      "drive": "≈1 hr drive from Rhodes Town",
-      "drive_el": "≈1 ώρα οδήγηση από την Πόλη της Ρόδου"
-     },
-     {
       "name": "Valley of the Butterflies",
       "lat": 36.3394,
       "lng": 28.0597,
       "type": "nature",
-      "time": "10:30",
+      "time": "09:00",
       "wiki": "https://www.google.com/maps/search/Valley+of+the+Butterflies+Rhodes",
       "desc": "Unique valley where thousands of Jersey tiger moths gather in summer on the sweet storax trees. Shaded walks beside streams.",
       "name_el": "Κοιλάδα των Πεταλούδων",
@@ -244,7 +223,7 @@
       "lat": 36.3358,
       "lng": 27.9214,
       "type": "museum",
-      "time": "12:30",
+      "time": "11:00",
       "wiki": "https://www.google.com/maps/search/Ancient+Kamiros+Rhodes",
       "desc": "Ruins of one of the three ancient city-states of Rhodes — temples, stoas and a Hellenistic reservoir. Far less visited than Lindos but equally impressive.",
       "name_el": "Αρχαία Κάμιρος",
@@ -259,11 +238,32 @@
       }
      },
      {
+      "name": "Kritinia Castle",
+      "lat": 36.2641,
+      "lng": 27.8089,
+      "type": "castle",
+      "time": "13:00",
+      "wiki": "https://www.google.com/maps/search/Kritinia+Castle+Rhodes",
+      "desc": "Ruined Knights' castle on a hilltop with panoramic sea views toward Turkey. Free entry. Small cafe at the base with wine and honey tastings.",
+      "name_el": "Κάστρο Κρητηνίας",
+      "desc_el": "Ερειπωμένο κάστρο των Ιπποτών σε λόφο με πανοραμική θέα προς την Τουρκία. Δωρεάν είσοδος. Μικρό καφέ στη βάση με γευσιγνωσία κρασιού και μελιού.",
+      "photo": "https://res.cloudinary.com/dothbs5hs/image/upload/v1786658712/%CE%BA%CE%B1%CF%83%CF%84%CF%81%CE%BF_%CE%BA%CF%81%CE%B7%CF%84%CE%B7%CE%BD%CE%B9%CE%B1%CF%82_n1jwpi.jpg",
+      "photo_credit": {
+       "artist": "Hagai Agmon-Snir حچاي اچمون-سنير חגי אגמון-שניר",
+       "license": "CC BY-SA 4.0",
+       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+       "page_url": "https://commons.wikimedia.org/wiki/File:KastroKritiniasRhodesMay112023_12.jpg",
+       "source": "Wikimedia Commons"
+      },
+      "drive": "≈1 hr drive from Rhodes Town",
+      "drive_el": "≈1 ώρα οδήγηση από την Πόλη της Ρόδου"
+     },
+     {
       "name": "Rhodes Town",
       "lat": 36.4494,
       "lng": 28.2255,
       "type": "city",
-      "time": "17:00",
+      "time": "18:00",
       "wiki": "https://www.google.com/maps/search/Rhodes+Town",
       "desc": "Return to Rhodes Town for the night. Dinner in the Old Town.",
       "name_el": "Πόλη Ρόδου",
@@ -289,7 +289,7 @@
      "area_el": "Οινοχώρι Έμπωνας",
      "desc": "Worth the short inland detour to the wine village of Embonas under Mount Attavyros. <a href=\"https://www.google.com/maps/search/Taverna+Savvas+Embonas+Rhodes\" target=\"_blank\" rel=\"noopener\">Taverna Savvas</a> and <a href=\"https://www.google.com/maps/search/Taverna+Bakis+Embonas+Rhodes\" target=\"_blank\" rel=\"noopener\">Bakis</a> both do great-value spreads of grilled local meat with the village's famous wine; <a href=\"https://www.google.com/maps/search/Maroulakis+Taverna+Embonas+Rhodes\" target=\"_blank\" rel=\"noopener\">Maroulakis</a> is the quieter local favourite off the tour-bus track. Prefer the coast? <a href=\"https://www.google.com/maps/search/Kamiros+Beach+Taverna+Rhodes\" target=\"_blank\" rel=\"noopener\">Kamiros Beach Taverna</a> is right on the route.",
      "desc_el": "Αξίζει η μικρή παράκαμψη στο οινοχώρι Έμπωνας κάτω από τον Αττάβυρο. Η <a href=\"https://www.google.com/maps/search/Taverna+Savvas+Embonas+Rhodes\" target=\"_blank\" rel=\"noopener\">Ταβέρνα Σάββας</a> και ο <a href=\"https://www.google.com/maps/search/Taverna+Bakis+Embonas+Rhodes\" target=\"_blank\" rel=\"noopener\">Μπάκης</a> σερβίρουν πλούσια ψητά ντόπια κρέατα με το ξακουστό κρασί του χωριού σε καλές τιμές· ο <a href=\"https://www.google.com/maps/search/Maroulakis+Taverna+Embonas+Rhodes\" target=\"_blank\" rel=\"noopener\">Μαρουλάκης</a> είναι το πιο ήσυχο, αγαπημένο των ντόπιων. Προτιμάς την ακτή; Η <a href=\"https://www.google.com/maps/search/Kamiros+Beach+Taverna+Rhodes\" target=\"_blank\" rel=\"noopener\">Kamiros Beach Taverna</a> είναι πάνω στη διαδρομή.",
-     "after": "Ancient Kamiros"
+     "after": "Kritinia Castle"
     }
    },
    {
