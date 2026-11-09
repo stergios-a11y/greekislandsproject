@@ -486,6 +486,7 @@ CSS = '''<style>
 .it-bar .it-sp{flex:1}.it-bar a.it-link{color:var(--primary-dark);border-color:var(--primary-light);background:var(--white)}
 .it-bar a.it-cta{background:var(--warm);color:#fff;font-weight:800}
 .it-grid{display:grid;grid-template-columns:1fr 300px;gap:22px;align-items:start}
+.it-grid>*{min-width:0}  /* grid items default to min-width:auto, so the scrolling link bar widened the page on phones */
 @media(max-width:820px){.it-grid{grid-template-columns:1fr}.it-hero h1{font-size:30px}.it-hbody{padding-top:90px}}
 .it-lede{font-size:15.5px;line-height:1.65;color:var(--ink-2);margin:0 0 16px}
 .it-bstrip{background:var(--secondary-pale);border:1px solid #cfe8dd;border-radius:12px;padding:10px 14px;font-size:13.5px;line-height:1.6;margin:0 0 16px;color:var(--ink-2)}
