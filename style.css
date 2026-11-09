@@ -1949,6 +1949,7 @@ html.dark .itin-day-btn.active {
   transition: border-color 0.15s;
 }
 .beach-card:hover { border-color: var(--primary-light); }
+.beach-card[hidden] { display: none; }   /* 'Show all N beaches' folds the list; display:flex used to override [hidden] */
 .beach-card { scroll-margin-top: 150px; }   /* anchors from the itinerary pages land under the sticky bar */
 .itin-standalone, .seo-itin-link { margin: -4px 0 14px; font-size: 13.5px; }
 .itin-standalone a, .seo-itin-link a { color: var(--primary-dark); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(11,143,172,0.35); }
