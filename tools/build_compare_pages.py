@@ -54,7 +54,7 @@ ROOT = _resolve_root()
 SITE_URL = _market.config()['brand']['site_url']
 # All three asset versions are read from index.html so every generator asks
 # for the same ?v= as the homepage. (Compare pages used to hard-code 102/41 and
-# drifted: Sep 2026 audit found i18n.js?v=41 on 166 pages vs 42 elsewhere.)
+# drifted: Sep 2026 audit found i18n.js?v=59 on 166 pages vs 42 elsewhere.)
 def _asset_v(name, default=1):
     try:
         return int(re.search(name + r'\?v=(\d+)', (ROOT / 'index.html').read_text(encoding='utf-8')).group(1))

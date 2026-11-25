@@ -3,7 +3,7 @@
 const VERSION = 'v4.0';
 // Map credits without Leaflet's own "Leaflet" prefix (its licence doesn't need it on the map).
 if (typeof L !== 'undefined' && L.Control && L.Control.Attribution) L.Control.Attribution.mergeOptions({ prefix: false });
-const BUILD_DATE = '2026-11-09';   // Updated by tools/prerender.py on each deploy
+const BUILD_DATE = '2026-11-25';   // Updated by tools/prerender.py on each deploy
 
 // Booking.com affiliate config.
 // Replace BOOKING_AID with your real AID once your booking.com affiliate account
@@ -78,7 +78,7 @@ function getDimLabels() {
   return [t('dim.beach'), t('dim.culture'), t('dim.night'), t('dim.access'), t('dim.afford'), t('dim.car')];
 }
 // Back-compat constant (recomputed on language change)
-let DIM_LABELS = ['Beach', 'Culture', 'Nightlife', 'Access', 'Affordability', 'Car-free'];
+let DIM_LABELS = ['Beach', 'Culture', 'Nightlife', 'Access', 'Affordability', 'Easy without a car'];
 const SCORE_COLORS = {
   beach: '#1B4F8A', hist: '#5A7A3A', night: '#C0522A', access: '#C4962A', afford: '#7B5EA7', car_need: '#6B7280',
 };
@@ -1986,7 +1986,7 @@ function renderMapMarkers() {
             <div class="itt-rating-row"><span class="itt-rating-label">🚢 ${t('dim.access')}</span><span class="itt-rating-bar"><span class="itt-rating-fill itt-fill-access" style="width:${(island.access/5)*100}%"></span></span><span class="itt-rating-val">${fmt(island.access)}</span></div>
             <div class="itt-rating-row"><span class="itt-rating-label">💸 ${t('dim.afford')}</span><span class="itt-rating-bar"><span class="itt-rating-fill itt-fill-afford" style="width:${(island.afford/5)*100}%"></span></span><span class="itt-rating-val">${fmt(island.afford)}</span></div>
           </div>
-          <div class="itt-car">🚗 ${t('dim.car')}: <strong>${carLabel}</strong></div>
+          <div class="itt-car">🚗 ${t('dim.carneed')} <strong>${carLabel}</strong></div>
           ${_gates.length ? `<div class="itt-sat">🛰 <strong>${_gates.reduce((n, c) => n + (c.members || []).length, 0)}</strong> ${t('cluster.satellites')} — ${t('cluster.zoomin')}</div>` : ''}
           ${island.has_airport ? `<div class="itt-airport">✈ <strong>${t('tooltip.hasairport')}</strong></div>` : ''}
           ${island.days ? `<div class="itt-days">⏱ ${island.days} ${t('common.days')} ${t('tooltip.recommended')}</div>` : ''}
@@ -5279,7 +5279,7 @@ function renderCompareCards(iA, iB) {
         </div>
         <div class="compare-meta">${groupName(island.island_group)} · ${fmtNum(island.area)} km² · ${t('compare.pop')}. ${fmtNum(island.pop)}</div>
         <div class="cmp-info-panel">
-          <div class="cmp-info-row"><span class="cmp-info-label">🚗 ${t('dim.car')}</span><span class="cmp-info-val"><strong>${carLabel}</strong></span></div>
+          <div class="cmp-info-row"><span class="cmp-info-label">🚗 ${t('dim.carneed')}</span><span class="cmp-info-val"><strong>${carLabel}</strong></span></div>
           ${airportRow}
           ${daysRow}
         </div>
