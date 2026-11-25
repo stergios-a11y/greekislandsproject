@@ -4065,7 +4065,7 @@ html.dark .cwtv-verdict-warn { background: rgba(194,84,80,0.1); }
   .cwtv-cell { height: 16px; }
   .cwtv-month { font-size: var(--text-micro, 9px); }
   .cwtv-legend { display: none; }
-  .cwtv-labels { min-width: 52px; max-width: 72px; }
+  .cwtv-labels { min-width: 52px; max-width: 86px; }
   .cwtv-label-a, .cwtv-label-b { font-size: var(--text-micro, 10px); height: 16px; }
   .cmp-extra-grid { grid-template-columns: 1fr; }
 }
@@ -8221,3 +8221,20 @@ html.dark .vibe-region.active { background: #0B8FAC; border-color: #0B8FAC; colo
 
 /* half star in beach ratings (Nov 2026) */
 .bc-rate .s .half { background: linear-gradient(90deg, currentColor 50%, rgba(255,255,255,.3) 50%); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: none; }
+
+
+/* VISUAL CONSISTENCY (Nov 2026) */
+/* buttons and form controls used the browser's Arial; the map used Leaflet's Helvetica */
+button, input, select, textarea { font-family: inherit; }
+.leaflet-container { font-family: var(--font-ui, 'Nunito'), system-ui, sans-serif; }
+.leaflet-control-zoom a { font-family: var(--font-ui, 'Nunito'), system-ui, sans-serif; }
+/* long Greek labels: wrap instead of spilling out of their box */
+.toggle-dims-btn { white-space: normal; text-align: center; max-width: 100%; }
+.cwtv-label-a, .cwtv-label-b { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 600px) {
+  .cwtv-month { font-size: 8.5px; letter-spacing: -0.2px; }
+  .ferry-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+
+.cw-short { display: none; }
+@media (max-width: 600px) { .cw-full { display: none; } .cw-short { display: inline; } }

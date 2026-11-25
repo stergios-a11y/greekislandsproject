@@ -140,7 +140,7 @@ const UI_TEXT = {
   'group.neaegean':  { en: 'NE Aegean',    el: 'Β.Α. Αιγαίο' },
   'group.crete':     { en: 'Crete',        el: 'Κρήτη' },
   'group.evia':      { en: 'Evia',         el: 'Εύβοια' },
-  'group.other':     { en: 'Other',        el: 'Άλλα' },
+  'group.other':     { en: 'Other',        el: 'Άλλα νησιά' },
   'detail.copied': { en: '✓ Copied!', el: '✓ Αντιγράφτηκε!' },
 
   // Generic fallback (ghost islands / failed JSON fetch)
@@ -703,6 +703,8 @@ const GROUP_NAMES_EL = {
   'NE Aegean': 'Β.Α. Αιγαίο',
   'Saronic': 'Σαρωνικός',
   'Crete': 'Κρήτη',
+  'Evia': 'Εύβοια',
+  'Other': 'Άλλα νησιά',
 };
 
 // Translation helper functions

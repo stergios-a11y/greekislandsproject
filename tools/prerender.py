@@ -910,7 +910,7 @@ def hero_src_1280(url):
 GROUP_NAMES_EL = {
     'Cyclades': 'Κυκλάδες', 'Dodecanese': 'Δωδεκάνησα', 'Saronic': 'Σαρωνικός',
     'Sporades': 'Σποράδες', 'Ionian': 'Ιόνιο', 'NE Aegean': 'Β.Α. Αιγαίο',
-    'Crete': 'Κρήτη', 'Evia': 'Εύβοια', 'Other': 'Άλλα',
+    'Crete': 'Κρήτη', 'Evia': 'Εύβοια', 'Other': 'Άλλα νησιά',
 }
 
 # Car-reliance chip labels — mirrors car.* i18n keys (index 1-5 = rounded car_need).
@@ -2528,8 +2528,8 @@ def render_page(key, data, meta, lang='en'):
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="{asset_prefix}market-data.js?v={_market.version()}"></script>
-<script src="{asset_prefix}i18n.js?v=59"></script>
-<script src="{asset_prefix}script.js?v=206"></script>
+<script src="{asset_prefix}i18n.js?v=60"></script>
+<script src="{asset_prefix}script.js?v=208"></script>
 <script>
   // Static-page hydration handoff: once script.js loads and renderIslandPage
   // populates view-detail, hide the SEO fallback and show view-detail.
@@ -2894,7 +2894,9 @@ def generate_ferries_page(island_keys):
             '    .ferry-page { padding: 20px 16px 48px; }\n'
             '    .ferry-page > h1 { font-size: 28px; }\n'
             '    .ferry-table thead th, .ferry-table tbody td { padding: 8px 6px; font-size: 13px; }\n'
-            '    .ferry-note { display: none; }\n'  # Notes are hidden on mobile — saves horizontal space.
+            '    .ferry-note { display: none; }\n'
+            '    .ferry-table { table-layout: auto; }\n'  # fixed % columns squeeze 'Συχνότητα'; let headers size the columns
+  # Notes are hidden on mobile — saves horizontal space.
             '  }\n'
             '  html.dark body { background: #1a1a1a; color: #eee; }\n'
             '  html.dark .ferry-table thead th { background: #2a2a2a; border-bottom-color: #444; }\n'

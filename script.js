@@ -4873,7 +4873,8 @@ function renderTable() {
   if (countLabel) countLabel.textContent = `${list.length} islands`;
   const tbody = document.getElementById('islands-table-body');
   if (!tbody) return;
-  tbody.innerHTML = list.map(i => `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="Island" style="font-weight:600">${islandName(i.key)}</td><td data-label="Group" class="td-main"><span class="group-tag">${groupName(i.island_group)}</span></td><td data-label="Rating" class="td-main">${starsHtml(i.total)}</td><td data-label="Beach" class="td-dim">${starsHtml(i.beach)}</td><td data-label="Culture" class="td-dim">${starsHtml(i.hist)}</td><td data-label="Night" class="td-dim">${starsHtml(i.night)}</td><td data-label="Access" class="td-dim">${starsHtml(i.access)}</td><td data-label="Affordability" class="td-dim">${starsHtml(i.afford)}</td><td data-label="Car" class="td-dim td-car" title="${t('dim.car.hint')}">${carNeedCompactHtml(i.car_need)}</td><td data-label="Days" class="td-main" style="font-weight:600;color:var(--primary)">${i.days ? i.days + ' ' + t('common.days') : '—'}</td><td data-label="Airport" class="td-main td-airport">${i.has_airport ? '<span class="airport-yes" title="Commercial airport">✈</span>' : '<span class="airport-no">—</span>'}</td><td data-label="Area (km²)" class="td-main">${barStackedHtml(i.area, 3684, 'var(--primary)')}</td><td data-label="Population" class="td-main">${barStackedHtml(i.pop, 200000, 'var(--secondary)')}</td></tr>`).join('');
+  const _dl = k => String(t(k) || '').replace(/[\s↕]+$/, '').replace(/^\p{Extended_Pictographic}\uFE0F?\s*/u, '');
+  tbody.innerHTML = list.map(i => `<tr data-key="${i.key}" class="table-row-clickable"><td data-label="${_dl('data.col.island')}" style="font-weight:600">${islandName(i.key)}</td><td data-label="${_dl('data.col.group')}" class="td-main"><span class="group-tag">${groupName(i.island_group)}</span></td><td data-label="${_dl('data.col.rating')}" class="td-main">${starsHtml(i.total)}</td><td data-label="${_dl('data.col.beach')}" class="td-dim">${starsHtml(i.beach)}</td><td data-label="${_dl('data.col.culture')}" class="td-dim">${starsHtml(i.hist)}</td><td data-label="${_dl('data.col.night')}" class="td-dim">${starsHtml(i.night)}</td><td data-label="${_dl('data.col.access')}" class="td-dim">${starsHtml(i.access)}</td><td data-label="${_dl('data.col.afford')}" class="td-dim">${starsHtml(i.afford)}</td><td data-label="${_dl('data.col.car')}" class="td-dim td-car" title="${t('dim.car.hint')}">${carNeedCompactHtml(i.car_need)}</td><td data-label="${_dl('data.col.days')}" class="td-main" style="font-weight:600;color:var(--primary)">${i.days ? i.days + ' ' + t('common.days') : '—'}</td><td data-label="${_dl('data.col.airport')}" class="td-main td-airport">${i.has_airport ? '<span class="airport-yes" title="Commercial airport">✈</span>' : '<span class="airport-no">—</span>'}</td><td data-label="${_dl('data.col.area')}" class="td-main">${barStackedHtml(i.area, 3684, 'var(--primary)')}</td><td data-label="${_dl('data.col.pop')}" class="td-main">${barStackedHtml(i.pop, 200000, 'var(--secondary)')}</td></tr>`).join('');
   tbody.querySelectorAll('.table-row-clickable').forEach(row => {
     row.addEventListener('click', () => navigateTo('island', row.dataset.key));
   });
@@ -5085,6 +5086,8 @@ function renderCompareWTV(iA, iB, jsonA, jsonB) {
     overlapMsg = `<div class="cwtv-verdict cwtv-verdict-warn">${t('compare.wtv_no_overlap')}</div>`;
   }
 
+  // phones: 'Crete (Chania)' → 'Chania' in the narrow label column
+  const _cwName = n => { const m = String(n).match(/^(.*?)\s*\((.+)\)$/); return m ? `<span class="cw-full">${n}</span><span class="cw-short">${m[2]}</span>` : n; };
   const nameA = islandName(iA.key);
   const nameB = islandName(iB.key);
 
@@ -5107,9 +5110,9 @@ function renderCompareWTV(iA, iB, jsonA, jsonB) {
     </div>
     <div class="cwtv-wrap">
       <div class="cwtv-labels">
-        <div class="cwtv-label-a">${nameA}</div>
+        <div class="cwtv-label-a">${_cwName(nameA)}</div>
         <div class="cwtv-label-spacer"></div>
-        <div class="cwtv-label-b">${nameB}</div>
+        <div class="cwtv-label-b">${_cwName(nameB)}</div>
       </div>
       <div class="cwtv-grid">${months}</div>
     </div>
@@ -5176,12 +5179,17 @@ function cmpBeachSummary(island, json) {
       }
     }
   });
-  const parts = [...types, ...facings].slice(0, 3);
+  // Greek pages showed these words in English (Nov 2026)
+  const EL = { 'Sandy': 'Άμμος', 'Pebble': 'Βότσαλο', 'Rocky': 'Βράχια', 'sheltered': 'προστατευμένες', 'exposed': 'εκτεθειμένες',
+               'Meltemi-exposed': 'στο μελτέμι', 'NW-breeze exposed': 'στον μαΐστρο' };
+  const isEl = typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el';
+  const parts = [...types, ...facings].slice(0, 3).map(w => (isEl && EL[w]) || w);
   return parts.length ? `<div class="cmp-beach-summary">🏖 ${parts.join(' · ')}</div>` : '';
 }
 
 function cmpTransportPills(island, json) {
-  const pills = (json && json.getting_there && json.getting_there.pills) || [];
+  const gt = (json && json.getting_there) || {};
+  const pills = ((typeof CURRENT_LANG !== 'undefined' && CURRENT_LANG === 'el' && gt.pills_el && gt.pills_el.length) ? gt.pills_el : gt.pills) || [];
   if (!pills.length) return '';
   return `<div class="cmp-transport">${pills.map(p => `<span class="cmp-transport-pill">${p}</span>`).join('')}</div>`;
 }
